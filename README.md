@@ -10,11 +10,11 @@ Live at <https://mercury-admin-map.netlify.app> (public, `noindex`). Locally, op
 - **Flow graph** view: every screen and link in an area, laid out as a graph.
 - Click a screen to open its full screenshot, notes, issues, and where it leads to and comes from. Arrow keys step through a journey.
 - **Audit** tab: 14 patterns that recur across areas come first, then every issue by category and severity. Clicking one highlights the screens where it shows up.
-- Drag to pan; scroll, pinch or Shift+scroll to zoom; F to fit. Zoom in and sharper screenshots load in place of thumbnails.
+- Drag to pan; scroll, pinch or Shift+scroll to zoom; F to fit. Hold **Z** and click to zoom in on that point, or **Z**+**Option** and click to zoom out. Zoom in and sharper screenshots load in place of thumbnails.
 - **Links**: the URL always describes what is on screen, so any view can be shared or bookmarked, and Back/Forward step through selections. Parameters: `view=graph`, `q=<search>`, `journey=`, `issue=` or `pattern=<id>` (highlight), `screen=<nodeId>` (open screen), `lane=<journeyId>` (which journey row that screen sits in), `at=<x>,<y>,<zoom>` (viewport centre in map units; added once you pan or zoom). Example: `?view=graph&journey=home.j-clear-approvals&screen=home.task-invite-review`. Old `#<nodeId>` links still work.
 - **C** centres the selected screen; **Esc** closes the panel, then clears the highlight.
-- Click the screenshot in the panel to view it full screen: click, scroll, pinch or **+**/**−** to zoom, drag or arrow keys to pan, **0** to fit, **Esc** to close. Cmd/Ctrl-click or middle-click opens the image in a new tab. The path under the title opens that page on demo.mercury.com.
-- **Data for agents**: `agent/README.md` (also `llms.txt` at the root) explains the ticket-ready export. It is a black-box audit; findings must be verified against Mercury's internal conventions before anyone files them.
+- Click the screenshot in the panel to view it full screen: click, scroll, pinch or **+**/**−** to zoom, drag or arrow keys to pan, **0** to fit, **Esc** to close. Z+click and Z+Option+click zoom in and out there too. Cmd/Ctrl-click or middle-click opens the image in a new tab. The path under the title opens that page on demo.mercury.com.
+- **Data for agents**: `agent/README.md` (also `llms.txt` at the root) explains the ticket-ready export. Each issue in the screen panel, and the banner while an issue is highlighted, links to its ticket under `agent/tickets/<issue id>.md` ("Agent instructions"). It is a black-box audit; findings must be verified against Mercury's internal conventions before anyone files them.
 
 ## Files
 
