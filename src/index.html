@@ -1,0 +1,55 @@
+<!doctype html>
+<html lang="en">
+<meta charset="utf-8">
+<title>Mercury Admin Map</title>
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="robots" content="noindex, nofollow, noarchive">
+<meta name="description" content="Black-box map of the demo.mercury.com Admin view: screens, journeys and design-system audit findings. Agent-readable data: agent/README.md">
+<!--FONTS-->
+<style>
+<!--STYLE-->
+</style>
+<div class="app">
+  <aside class="side">
+    <div class="brand">
+      <h1>Mercury Admin Map</h1>
+      <p>demo.mercury.com, viewed as Admin. Screens, modals and form states, linked by the action that gets you there. A black-box audit, made without access to Mercury's design system. <a href="agent/README.md">Data for agents</a></p>
+      <div class="stats" id="stats"></div>
+      <div class="seg" role="group" aria-label="Layout">
+        <button id="v-journeys" aria-pressed="true">Journeys</button>
+        <button id="v-graph" aria-pressed="false">Flow graph</button>
+      </div>
+      <div class="search-wrap">
+        <input class="search" id="q" type="search" placeholder="Search screens, URLs, issues" aria-label="Search" autocomplete="off" spellcheck="false">
+        <button class="icon-btn" id="q-clear" type="button" aria-label="Clear search" title="Clear search (Esc)" hidden><svg viewBox="0 0 16 16" width="14" height="14" aria-hidden="true"><path d="M4 4l8 8M12 4l-8 8" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" fill="none"/></svg></button>
+      </div>
+    </div>
+    <div class="tabs" role="tablist">
+      <button role="tab" id="t-j" aria-selected="true">Journeys<span class="count" id="c-j"></span></button>
+      <button role="tab" id="t-s" aria-selected="false">Screens<span class="count" id="c-s"></span></button>
+      <button role="tab" id="t-i" aria-selected="false">Audit<span class="count" id="c-i"></span></button>
+    </div>
+    <div class="list" id="list"></div>
+  </aside>
+  <main class="stage" id="stage">
+    <canvas class="world" id="world" aria-label="Map canvas: drag to pan, scroll to zoom"></canvas>
+    <div class="banner" id="banner" hidden><span id="banner-t"></span><button id="banner-x">Show all</button></div>
+    <div class="hint">Drag to pan · scroll, pinch or Shift+scroll to zoom · click a screen for details · C to center it · F to fit</div>
+    <div class="hud">
+      <canvas class="mini" id="mini" width="440" height="300" aria-label="Minimap"></canvas>
+      <div class="tools">
+        <button id="zin" aria-label="Zoom in">+</button>
+        <div class="z" id="zlabel">100%</div>
+        <button id="zout" aria-label="Zoom out">−</button>
+        <button id="zfit" aria-label="Fit to screen" title="Fit to screen (F)"><svg viewBox="0 0 16 16" width="16" height="16" aria-hidden="true"><path d="M2.5 6V2.5H6M10 2.5h3.5V6M13.5 10v3.5H10M6 13.5H2.5V10" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" fill="none"/></svg></button>
+      </div>
+    </div>
+    <aside class="drawer" id="drawer" hidden></aside>
+  </main>
+</div>
+
+<!--MAP_DATA-->
+<!--MAP_LAYOUT-->
+<script>
+<!--APP-->
+</script>

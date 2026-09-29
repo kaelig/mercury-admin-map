@@ -1,0 +1,2134 @@
+{
+  "area": "billpay",
+  "title": "Bill Pay & Accounting",
+  "nodes": [
+    {
+      "id": "billpay.index",
+      "title": "Bill Pay inbox",
+      "url": "/bill-pay",
+      "image": "screens/billpay/01-index.png",
+      "kind": "page",
+      "note": "Bill Pay landing: summary cards (total outstanding, overdue, due in next 7 days), Inbox / Needs Approval / Scheduled / Paid tabs and the inbox bill table with Review actions."
+    },
+    {
+      "id": "billpay.status-filter",
+      "title": "Status filter menu",
+      "url": "/bill-pay",
+      "image": "screens/billpay/02-status-filter-menu.png",
+      "kind": "menu",
+      "note": "Status dropdown with checkboxes for Overdue, Due next 7, Not due yet and Missing due date."
+    },
+    {
+      "id": "billpay.settings",
+      "title": "Bill Pay settings",
+      "url": "/bill-pay?modal=settings",
+      "image": "screens/billpay/03-settings-modal.png",
+      "kind": "modal",
+      "note": "Settings modal: bill forwarding email with copy button, email alert link and approval rules summary."
+    },
+    {
+      "id": "billpay.settings-bottom",
+      "title": "Bill Pay settings (lower)",
+      "url": "/bill-pay?modal=settings",
+      "image": "screens/billpay/04-settings-modal-bottom.png",
+      "kind": "modal",
+      "note": "Lower half of the settings modal: approval rules, approved senders (19) and accounting sync Connect link."
+    },
+    {
+      "id": "billpay.forwarding-email-edit",
+      "title": "Edit forwarding email",
+      "url": "/bill-pay?modal=settings",
+      "image": "screens/billpay/05-forwarding-email-edit.png",
+      "kind": "form-state",
+      "note": "Forwarding email becomes an input with a fixed @ap.mercury.com suffix and Cancel / Save buttons."
+    },
+    {
+      "id": "billpay.forwarding-email-invalid",
+      "title": "Forwarding email invalid",
+      "url": "/bill-pay?modal=settings",
+      "image": "screens/billpay/06-forwarding-email-invalid.png",
+      "kind": "validation-error",
+      "note": "Invalid local part ('bad name!!') turns the field pink, disables Save and shows 'Please enter a valid email address' only as a tooltip on a warning icon."
+    },
+    {
+      "id": "billpay.forwarding-email-saved",
+      "title": "Settings saved",
+      "url": "/bill-pay?modal=settings",
+      "image": "screens/billpay/07-forwarding-email-saved.png",
+      "kind": "toast",
+      "note": "After Save the new address shows read-only and a 'Settings saved' toast appears at the bottom."
+    },
+    {
+      "id": "billpay.approved-senders-edit",
+      "title": "Edit approved senders",
+      "url": "/bill-pay?modal=settings",
+      "image": "screens/billpay/08-approved-senders-edit.png",
+      "kind": "form-state",
+      "note": "Approved senders expands into an 'Allow bills from' token field of removable email chips."
+    },
+    {
+      "id": "billpay.needs-approval",
+      "title": "Needs Approval tab",
+      "url": "/bill-pay/approvals",
+      "image": "screens/billpay/09-tab-needs-approval.png",
+      "kind": "page",
+      "note": "Approval queue table: due date, send on, status, recipient, negative amount, approvals progress (0 of 2) and requester."
+    },
+    {
+      "id": "billpay.approval-panel",
+      "title": "Approval request panel",
+      "url": "/bill-pay/approvals?requestId=…",
+      "image": "screens/billpay/10-approval-detail.png",
+      "kind": "drawer",
+      "note": "Side panel for a recurring $5,000 request with Review / Approve / Decline buttons and bill metadata."
+    },
+    {
+      "id": "billpay.approval-review",
+      "title": "Review approval",
+      "url": "/send-money/review/approve/payment",
+      "image": "screens/billpay/11-approval-review.png",
+      "kind": "page",
+      "note": "Full-screen review of the recurring payment (schedule preview, delivery estimate, recipient) beside the attached PDF, with Decline / Approve payments."
+    },
+    {
+      "id": "billpay.approval-success",
+      "title": "Payment approved",
+      "url": "/send-money/pay/success",
+      "image": "screens/billpay/12-approval-confirmed.png",
+      "kind": "confirmation",
+      "note": "Confirmation: 'You've approved a recurring ACH payment' with the payment rule summary and Back to Needs Approval."
+    },
+    {
+      "id": "billpay.needs-approval-empty",
+      "title": "Needs Approval empty",
+      "url": "/bill-pay/approvals",
+      "image": "screens/billpay/13-needs-approval-empty.png",
+      "kind": "empty-state",
+      "note": "Empty queue over a blurred skeleton table: 'No pending approvals'."
+    },
+    {
+      "id": "billpay.scheduled",
+      "title": "Scheduled tab",
+      "url": "/bill-pay/scheduled",
+      "image": "screens/billpay/14-tab-scheduled.png",
+      "kind": "page",
+      "note": "Scheduled payments table with due date, send on, status, recipient, amount, account and method."
+    },
+    {
+      "id": "billpay.scheduled-panel",
+      "title": "Scheduled payment panel",
+      "url": "/bill-pay/scheduled?payment=…",
+      "image": "screens/billpay/15-scheduled-detail.png",
+      "kind": "drawer",
+      "note": "Side panel for a scheduled payment with Cancel payment, metadata, line items, notes and attachments."
+    },
+    {
+      "id": "billpay.cancel-payment-confirm",
+      "title": "Cancel payment dialog",
+      "url": "/bill-pay/scheduled?payment=…",
+      "image": "screens/billpay/16-cancel-payment-confirm.png",
+      "kind": "modal",
+      "note": "Confirmation dialog 'Cancel recurring payment' with the payment rule and Go back / Cancel payment."
+    },
+    {
+      "id": "billpay.payment-canceled",
+      "title": "Payment canceled",
+      "url": "/bill-pay/scheduled",
+      "image": "screens/billpay/17-payment-canceled.png",
+      "kind": "toast",
+      "note": "Row removed from Scheduled (count 3 to 2) with a 'Payment canceled' toast."
+    },
+    {
+      "id": "billpay.paid",
+      "title": "Paid tab",
+      "url": "/bill-pay/paid",
+      "image": "screens/billpay/18-tab-paid.png",
+      "kind": "page",
+      "note": "Paid bills table (paid on, recipient, amount, account, method) with a View all link; no filter bar."
+    },
+    {
+      "id": "billpay.paid-transaction",
+      "title": "Paid bill transaction",
+      "url": "/transactions/electronicPayment-0?q=…",
+      "image": "screens/billpay/19-paid-detail.png",
+      "kind": "drawer",
+      "note": "Clicking a paid row leaves Bill Pay for Transactions filtered by 'Has bill', with the transaction drawer open."
+    },
+    {
+      "id": "billpay.bill-panel",
+      "title": "Bill detail panel",
+      "url": "/bill-pay?bill=…",
+      "image": "screens/billpay/20-inbox-bill-panel.png",
+      "kind": "drawer",
+      "note": "Inbox bill side panel: amount, last-updated line, Review / Delete, due date, invoice date, invoice no., added on, sender, notes, email and attachments."
+    },
+    {
+      "id": "billpay.bill-panel-edit",
+      "title": "Bill panel edit mode",
+      "url": "/bill-pay?bill=…",
+      "image": "screens/billpay/21-bill-panel-edit.png",
+      "kind": "form-state",
+      "note": "Clicking a field turns the panel into an inline form (amount, due date, invoice date, invoice no.) with Cancel / Save edits."
+    },
+    {
+      "id": "billpay.bill-due-date-picker",
+      "title": "Due date picker",
+      "url": "/bill-pay?bill=…",
+      "image": "screens/billpay/22-bill-due-date-picker.png",
+      "kind": "popover",
+      "note": "Calendar popover for the due date; it overflows the right edge of the viewport."
+    },
+    {
+      "id": "billpay.bill-edit-amount-error",
+      "title": "Bill amount required",
+      "url": "/bill-pay?bill=…",
+      "image": "screens/billpay/23-bill-edit-empty-amount.png",
+      "kind": "validation-error",
+      "note": "Saving with an empty amount shows inline 'Must be a dollar value.' under a pink-bordered field."
+    },
+    {
+      "id": "billpay.bill-edit-saved",
+      "title": "Bill changes saved",
+      "url": "/bill-pay?bill=…",
+      "image": "screens/billpay/24-bill-edit-saved.png",
+      "kind": "toast",
+      "note": "Panel returns to read mode with the new amount ($350.00) and a 'Changes saved' toast."
+    },
+    {
+      "id": "billpay.pay-recipient-match",
+      "title": "Pay bill: recipient match",
+      "url": "/send-money/pay/recipient-match",
+      "image": "screens/billpay/25-pay-bill-modal.png",
+      "kind": "page",
+      "note": "First step of paying a bill: suggested 'Strong match' recipient, search for another recipient or create one, with the invoice PDF preview on the right."
+    },
+    {
+      "id": "billpay.pay-recipient",
+      "title": "Pay bill: recipient",
+      "url": "/send-money/pay/recipient-details",
+      "image": "screens/billpay/26-pay-bill-recipient.png",
+      "kind": "form-state",
+      "note": "Recipient step: matched recipient card, payment method select and recipient bank details."
+    },
+    {
+      "id": "billpay.pay-method-menu",
+      "title": "Payment method menu",
+      "url": "/send-money/pay/recipient-details",
+      "image": "screens/billpay/27-pay-bill-method-dropdown.png",
+      "kind": "menu",
+      "note": "Payment method dropdown: Real-Time Payment (New), ACH, Wire, International Wire, Check with delivery times."
+    },
+    {
+      "id": "billpay.pay-amount",
+      "title": "Pay bill: amount",
+      "url": "/send-money/pay/amount",
+      "image": "screens/billpay/28-pay-bill-amount.png",
+      "kind": "form-state",
+      "note": "Amount step: recipient gets, send from account, send on date and Repeat this payment toggle."
+    },
+    {
+      "id": "billpay.pay-amount-error",
+      "title": "Pay bill: amount required",
+      "url": "/send-money/pay/amount",
+      "image": "screens/billpay/29-pay-bill-amount-empty-error.png",
+      "kind": "validation-error",
+      "note": "Clearing the amount and pressing Next shows 'Must be a dollar value.' and a 'Flag error?' chip beside the shortened field."
+    },
+    {
+      "id": "billpay.pay-repeat",
+      "title": "Pay bill: repeat on",
+      "url": "/send-money/pay/amount",
+      "image": "screens/billpay/30-pay-bill-repeat-on.png",
+      "kind": "form-state",
+      "note": "Repeat toggle on: 'Send on' becomes 'Start on' and a Repeat frequency select plus Ends (On / After / Never) options appear."
+    },
+    {
+      "id": "billpay.pay-categorization",
+      "title": "Pay bill: categorization",
+      "url": "/send-money/pay/accounting",
+      "image": "screens/billpay/31-pay-bill-categorization.png",
+      "kind": "form-state",
+      "note": "Categorization step with Single / Multiple GL Code segmented control and a GL Code combobox prefilled with '782 - Expense Account'."
+    },
+    {
+      "id": "billpay.pay-multiple-gl",
+      "title": "Pay bill: multiple GL codes",
+      "url": "/send-money/pay/accounting",
+      "image": "screens/billpay/32-pay-bill-multiple-gl.png",
+      "kind": "form-state",
+      "note": "Multiple GL Codes: break line items by amount, per-line item name, unit price and GL code, Add line item and total."
+    },
+    {
+      "id": "billpay.pay-line-items-error",
+      "title": "Pay bill: incomplete line item",
+      "url": "/send-money/pay/accounting",
+      "image": "screens/billpay/33-pay-bill-line-items-error.png",
+      "kind": "validation-error",
+      "note": "An empty second line item blocks Next with 'Please complete all fields'."
+    },
+    {
+      "id": "billpay.pay-details",
+      "title": "Pay bill: details",
+      "url": "/send-money/pay/more-details",
+      "image": "screens/billpay/34-pay-bill-details.png",
+      "kind": "form-state",
+      "note": "Details step: display name, memo, email receipt, include attachments and a Bill details section (invoice number, dates, department, note, attachment)."
+    },
+    {
+      "id": "billpay.pay-review",
+      "title": "Pay bill: review",
+      "url": "/send-money/pay/review",
+      "image": "screens/billpay/35-pay-bill-review.png",
+      "kind": "form-state",
+      "note": "Review step: amount card, ACH delivery estimate, recipient bank details (unmasked) and sending account, with Schedule payment."
+    },
+    {
+      "id": "billpay.pay-success",
+      "title": "Bill payment scheduled",
+      "url": "/send-money/pay/success",
+      "image": "screens/billpay/36-pay-bill-success.png",
+      "kind": "confirmation",
+      "note": "Confirmation 'You've scheduled an ACH payment' with a 1099 document request card and Back to Bill Pay."
+    },
+    {
+      "id": "billpay.inbox-after-payment",
+      "title": "Inbox after paying",
+      "url": "/bill-pay/inbox",
+      "image": "screens/billpay/37-inbox-after-payment.png",
+      "kind": "page",
+      "note": "Back on the inbox the paid Debug LLC bill is still listed as Overdue and Scheduled still shows 3, while the Ops / Payroll balance dropped by $220."
+    },
+    {
+      "id": "billpay.upload-popover",
+      "title": "Upload bill popover",
+      "url": "/bill-pay?modal=payBill",
+      "image": "screens/billpay/38-upload-bill-popover.png",
+      "kind": "popover",
+      "note": "Upload bill opens a popover with the forwarding address (copy) and a drag-and-drop zone for images, PDFs or spreadsheets."
+    },
+    {
+      "id": "billpay.upload-too-small",
+      "title": "Upload rejected",
+      "url": "/bill-pay?modal=payBill",
+      "image": "screens/billpay/39-upload-file-too-small.png",
+      "kind": "toast",
+      "note": "Uploading a file under 1 KB shows an error toast: 'One or more files are too small to upload, minimum 1KB per file.'"
+    },
+    {
+      "id": "billpay.upload-no-match",
+      "title": "Recipient match: none",
+      "url": "/send-money/pay/recipient-match",
+      "image": "screens/billpay/40-upload-recipient-no-match.png",
+      "kind": "page",
+      "note": "After upload the bill is scanned; with no matching recipient the step offers a full-width Create recipient button or a recipient search."
+    },
+    {
+      "id": "billpay.create-recipient",
+      "title": "Create recipient form",
+      "url": "/send-money/pay/create-or-edit-recipient",
+      "image": "screens/billpay/41-create-recipient-form.png",
+      "kind": "form-state",
+      "note": "Create recipient form prefilled from the scanned invoice: person/business, legal name, email, nickname and address."
+    },
+    {
+      "id": "billpay.create-recipient-error",
+      "title": "Create recipient: name required",
+      "url": "/send-money/pay/create-or-edit-recipient",
+      "image": "screens/billpay/42-create-recipient-error.png",
+      "kind": "validation-error",
+      "note": "Empty legal name shows 'Please complete this field' plus a 'Flag error?' chip; the form also has a Title Case 'Request Tax Documents' toggle."
+    },
+    {
+      "id": "billpay.new-recipient-bank",
+      "title": "New recipient bank details",
+      "url": "/send-money/pay/recipient-details",
+      "image": "screens/billpay/43-new-recipient-bank-details.png",
+      "kind": "toast",
+      "note": "'Recipient created' toast; recipient step now asks for routing number (resolves 'Mock ACH Bank'), account number and account type."
+    },
+    {
+      "id": "billpay.upload-amount-ocr",
+      "title": "Amount with OCR highlight",
+      "url": "/send-money/pay/amount",
+      "image": "screens/billpay/44-upload-amount-ocr-highlight.png",
+      "kind": "form-state",
+      "note": "Amount step prefilled with the scanned total; the invoice preview zooms in and highlights $11,600.00."
+    },
+    {
+      "id": "billpay.bulk-select",
+      "title": "Bulk selection bar",
+      "url": "/bill-pay",
+      "image": "screens/billpay/45-bulk-select-all.png",
+      "kind": "form-state",
+      "note": "Selecting all rows shows a floating bar: '3 items selected $13,110.00 total' with Delete and Review."
+    },
+    {
+      "id": "billpay.bulk-delete-confirm",
+      "title": "Delete items dialog",
+      "url": "/bill-pay",
+      "image": "screens/billpay/46-bulk-delete-confirm.png",
+      "kind": "modal",
+      "note": "Confirmation 'Delete items?' with Cancel / Delete 3 items."
+    },
+    {
+      "id": "billpay.inbox-zero",
+      "title": "Inbox zero empty state",
+      "url": "/bill-pay/inbox",
+      "image": "screens/billpay/47-bills-deleted-empty.png",
+      "kind": "empty-state",
+      "note": "After deleting every bill: 'Deleted 3 items' toast and a pixel-font 'All your bills are paid!' card offering the Zero Inbox game."
+    },
+    {
+      "id": "billpay.zero-inbox-game",
+      "title": "Zero Inbox game",
+      "url": "/bill-pay/inbox",
+      "image": "screens/billpay/48-zero-inbox-game.png",
+      "kind": "page",
+      "note": "Easter-egg arcade game replaces the table: how-to-play text, score and a Start button."
+    },
+    {
+      "id": "billpay.row-hover",
+      "title": "Row hover actions",
+      "url": "/bill-pay",
+      "image": "screens/billpay/49-row-hover-actions.png",
+      "kind": "form-state",
+      "note": "Hovering an inbox row replaces 'Last updated' with a trash icon button and a Review button."
+    },
+    {
+      "id": "billpay.delete-bill-confirm",
+      "title": "Delete item dialog",
+      "url": "/bill-pay",
+      "image": "screens/billpay/50-delete-bill-confirm.png",
+      "kind": "modal",
+      "note": "Row trash icon opens 'Delete item?' with Cancel / Delete item."
+    },
+    {
+      "id": "billpay.source-tooltip",
+      "title": "Bill source tooltip",
+      "url": "/bill-pay",
+      "image": "screens/billpay/51-source-tooltip.png",
+      "kind": "popover",
+      "note": "Hovering the envelope avatar shows 'Emailed by demo@mercury.com'."
+    },
+    {
+      "id": "billpay.filter-empty",
+      "title": "Filtered empty state",
+      "url": "/bill-pay",
+      "image": "screens/billpay/52-filter-no-results.png",
+      "kind": "empty-state",
+      "note": "Filter chip 'Missing due date' with Reset; 'No drafts or bills found. Try changing your filters.' over a skeleton table."
+    },
+    {
+      "id": "billpay.request-declined",
+      "title": "Request declined",
+      "url": "/bill-pay/approvals",
+      "image": "screens/billpay/53-request-declined.png",
+      "kind": "toast",
+      "note": "Decline in the approval panel acts immediately: 'Request declined' toast and the queue empties, with no confirmation step."
+    },
+    {
+      "id": "billpay.quick-approve",
+      "title": "Request approved",
+      "url": "/bill-pay/approvals",
+      "image": "screens/billpay/54-quick-approve.png",
+      "kind": "toast",
+      "note": "Approve in the approval panel skips the review page and shows a 'Request approved' toast."
+    },
+    {
+      "id": "billpay.bill-panel-lower",
+      "title": "Bill panel (lower)",
+      "url": "/bill-pay?bill=…",
+      "image": "screens/billpay/55-bill-panel-lower.png",
+      "kind": "drawer",
+      "note": "Scrolled bill panel: sender, notes, forwarded email preview with View Email, attachment and Upload attachment."
+    },
+    {
+      "id": "billpay.accounting-index",
+      "title": "Accounting setup",
+      "url": "/accounting",
+      "image": "screens/billpay/56-accounting-index.png",
+      "kind": "page",
+      "note": "Accounting landing before setup: 'Choose where your books live' with Mercury Books (Start, Learn more) and Sync another software (Connect, Or upload a CSV)."
+    },
+    {
+      "id": "billpay.accounting-upload-csv",
+      "title": "Upload GL codes",
+      "url": "/accounting",
+      "image": "screens/billpay/57-accounting-upload-csv.png",
+      "kind": "modal",
+      "note": "'Upload GL codes' dialog with a CSV drop zone and a disabled Upload button."
+    },
+    {
+      "id": "billpay.accounting-csv-selected",
+      "title": "GL CSV selected",
+      "url": "/accounting",
+      "image": "screens/billpay/58-accounting-csv-selected.png",
+      "kind": "form-state",
+      "note": "The chosen CSV shows as a file chip with Remove, and Upload becomes enabled."
+    },
+    {
+      "id": "billpay.accounting-workbench",
+      "title": "Accounting: Needs Review",
+      "url": "/accounting?q=…notReviewedNotSynced",
+      "image": "screens/billpay/59-accounting-gl-uploaded.png",
+      "kind": "page",
+      "note": "Accounting workbench: All / Needs Review / Ready to Export / Sync Error / Exported tabs, sync error banner, and a table with inline Category and GL Code pickers; 'GL codes added' toast."
+    },
+    {
+      "id": "billpay.accounting-sync-errors",
+      "title": "Accounting: Sync Error",
+      "url": "/accounting?q=…failedToSync",
+      "image": "screens/billpay/60-accounting-sync-error-tab.png",
+      "kind": "page",
+      "note": "Sync Error tab listing three GenPro transactions with warning avatars and a red row edge."
+    },
+    {
+      "id": "billpay.accounting-sync-error-drawer",
+      "title": "Sync error drawer",
+      "url": "/accounting/<txn>?q=…",
+      "image": "screens/billpay/61-accounting-sync-error-drawer.png",
+      "kind": "drawer",
+      "note": "Transaction drawer: 'Sync failed' alert, Sync errored badge, error copy, required GL code, Mark as ready / Exclude and comments."
+    },
+    {
+      "id": "billpay.accounting-settings",
+      "title": "Accounting Settings: GL codes",
+      "url": "/accounting/mapping",
+      "image": "screens/billpay/62-accounting-settings.png",
+      "kind": "page",
+      "note": "Accounting Settings with GL codes / Categorization rules / Automation settings tabs; shows the uploaded GL code file with Edit."
+    },
+    {
+      "id": "billpay.gl-codes-edit",
+      "title": "Edit GL codes",
+      "url": "/accounting/mapping",
+      "image": "screens/billpay/63-gl-codes-edit.png",
+      "kind": "modal",
+      "note": "Edit GL codes dialog: current upload with Remove, a replacement CSV drop zone and Cancel / Save."
+    },
+    {
+      "id": "billpay.categorization-rules",
+      "title": "Categorization rules",
+      "url": "/accounting/mapping/categorization-rules",
+      "image": "screens/billpay/64-categorization-rules.png",
+      "kind": "page",
+      "note": "Ordered rule table (input, condition, outcome, last applied, auto-mark ready) with drag handles, an Invalid rule and Create a rule."
+    },
+    {
+      "id": "billpay.create-rule",
+      "title": "Create rule drawer",
+      "url": "/accounting/mapping/categorization-rules",
+      "image": "screens/billpay/65-create-rule.png",
+      "kind": "drawer",
+      "note": "'Create categorization rule' side panel with empty If / Then selects and a disabled Create button."
+    },
+    {
+      "id": "billpay.rule-input-menu",
+      "title": "Rule input menu",
+      "url": "/accounting/mapping/categorization-rules",
+      "image": "screens/billpay/66-rule-input-menu.png",
+      "kind": "menu",
+      "note": "If dropdown listing inputs (Amount, Bank description, Budget, Card, Counterparty, Customer, Department, Merchant type, Mercury category, Team member) with descriptions."
+    },
+    {
+      "id": "billpay.rule-outcome-menu",
+      "title": "Rule outcome menu",
+      "url": "/accounting/mapping/categorization-rules",
+      "image": "screens/billpay/67-rule-outcome-menu.png",
+      "kind": "menu",
+      "note": "Then dropdown: GL code, Mercury category, Exclude from review."
+    },
+    {
+      "id": "billpay.rule-filled",
+      "title": "Rule form filled",
+      "url": "/accounting/mapping/categorization-rules",
+      "image": "screens/billpay/69-rule-form-filled.png",
+      "kind": "form-state",
+      "note": "Rule 'Bank description has Figma, then GL code Mercury Checking (7772)' with Auto-mark ready to sync on; Create enabled."
+    },
+    {
+      "id": "billpay.rule-created",
+      "title": "Rule created",
+      "url": "/accounting/mapping/categorization-rules",
+      "image": "screens/billpay/70-rule-created.png",
+      "kind": "toast",
+      "note": "New rule 7 appended to the table and a 'Rule created · View rule' toast."
+    },
+    {
+      "id": "billpay.automation-settings",
+      "title": "Automation settings",
+      "url": "/accounting/mapping/automation-settings",
+      "image": "screens/billpay/71-automation-settings.png",
+      "kind": "page",
+      "note": "Automation Settings tab with a single Auto-categorization switch card."
+    },
+    {
+      "id": "billpay.auto-categorization-off",
+      "title": "Auto-categorization off",
+      "url": "/accounting/mapping/automation-settings",
+      "image": "screens/billpay/72-auto-categorization-off.png",
+      "kind": "toast",
+      "note": "Turning the switch off shows 'Auto-categorization disabled' and a 'Provide feedback' popover."
+    },
+    {
+      "id": "billpay.books-signup",
+      "title": "Mercury Books signup",
+      "url": "/books/signup",
+      "image": "screens/billpay/73-mercury-books-start.png",
+      "kind": "page",
+      "note": "Start on Mercury Books switches the sidebar to Books and shows the signup hero with accounting basis, chart of accounts and Try Mercury Books."
+    },
+    {
+      "id": "billpay.accounting-filters",
+      "title": "Accounting filters",
+      "url": "/accounting?q=…",
+      "image": "screens/billpay/74-accounting-filters-menu.png",
+      "kind": "menu",
+      "note": "Filters panel: My Transactions toggle, filter facets (date, keyword, amount, method, category, GL code, …) and a month picker."
+    },
+    {
+      "id": "billpay.accounting-category-menu",
+      "title": "Category picker",
+      "url": "/accounting?q=…",
+      "image": "screens/billpay/75-accounting-category-menu.png",
+      "kind": "menu",
+      "note": "Inline Category combobox open on a row, listing categories and 'Create category'."
+    },
+    {
+      "id": "billpay.accounting-category-set",
+      "title": "Category updated",
+      "url": "/accounting?q=…",
+      "image": "screens/billpay/76-accounting-category-set.png",
+      "kind": "toast",
+      "note": "Row shows the chosen category and a toast 'Category updated. We'll learn from this for similar transactions. Review similar'."
+    },
+    {
+      "id": "billpay.accounting-ready-empty",
+      "title": "Ready to Export empty",
+      "url": "/accounting?q=…reviewedNotSynced",
+      "image": "screens/billpay/77-accounting-ready-to-export.png",
+      "kind": "empty-state",
+      "note": "'No transactions ready to export' with Go to Needs Review and Review Sync Errors buttons; Export is disabled."
+    },
+    {
+      "id": "billpay.accounting-exported",
+      "title": "Accounting: Exported",
+      "url": "/accounting?q=…syncedOrPending",
+      "image": "screens/billpay/78-accounting-exported.png",
+      "kind": "page",
+      "note": "Exported tab with Syncing badges and a Refresh Sync Status button replacing Export."
+    },
+    {
+      "id": "billpay.accounting-columns",
+      "title": "Customize columns",
+      "url": "/accounting?q=…",
+      "image": "screens/billpay/79-accounting-columns-popover.png",
+      "kind": "popover",
+      "note": "Columns popover with locked, draggable and hideable columns and Reset default."
+    },
+    {
+      "id": "billpay.accounting-review-drawer",
+      "title": "Needs review drawer",
+      "url": "/accounting/<txn>?q=…",
+      "image": "screens/billpay/80-accounting-review-drawer.png",
+      "kind": "drawer",
+      "note": "Transaction drawer for a card purchase: Needs review badge, required GL code, comment box and Back / Next navigation."
+    },
+    {
+      "id": "billpay.inbox-sorted",
+      "title": "Inbox sorted by amount",
+      "url": "/bill-pay",
+      "image": "screens/billpay/81-inbox-sorted-amount.png",
+      "kind": "form-state",
+      "note": "Clicking the Amount header sorts bills high to low and shows its chevron; hovering the Overdue card swaps its total for '3 Inbox'."
+    },
+    {
+      "id": "billpay.due-date-tooltip",
+      "title": "Due date tooltip",
+      "url": "/bill-pay",
+      "image": "screens/billpay/82-due-date-tooltip.png",
+      "kind": "popover",
+      "note": "Hovering a year-only due date ('Apr 2025') shows the full date as 'Apr 19 2025' in a tooltip."
+    },
+    {
+      "id": "billpay.approvers-tooltip",
+      "title": "Available approvers tooltip",
+      "url": "/bill-pay/approvals",
+      "image": "screens/billpay/83-approvers-tooltip.png",
+      "kind": "popover",
+      "note": "Hovering '0 of 2' in the Approvals column lists the available approvers (Jane B., Landon S., Mary M.)."
+    },
+    {
+      "id": "billpay.approvals-bulk-select",
+      "title": "Approvals bulk selection",
+      "url": "/bill-pay/approvals",
+      "image": "screens/billpay/84-approvals-bulk-select.png",
+      "kind": "form-state",
+      "note": "Checking a request shows a floating bar: '1 request selected $5,000.00 total' with icon-only decline and approve buttons and Review Request."
+    },
+    {
+      "id": "billpay.approvals-bulk-loading",
+      "title": "Review Request loading",
+      "url": "/bill-pay/approvals",
+      "image": "screens/billpay/85-approvals-bulk-review-loading.png",
+      "kind": "form-state",
+      "note": "After Review Request the bar's buttons disable and the primary button shows a dot loader for 15 to 20 seconds before the review opens."
+    },
+    {
+      "id": "billpay.bulk-approval-review",
+      "title": "Bulk approval review",
+      "url": "/send-money/review/approve/payment",
+      "image": "screens/billpay/86-bulk-approval-review.png",
+      "kind": "page",
+      "note": "Review opened from the bulk bar: 'APPROVAL 1 OF 1' eyebrow, payment rule and schedule, with Decline, Approve and Skip."
+    },
+    {
+      "id": "billpay.decline-confirm",
+      "title": "Decline confirmation",
+      "url": "/send-money/review/approve/payment",
+      "image": "screens/billpay/87-decline-confirm.png",
+      "kind": "modal",
+      "note": "Decline on the review page asks 'Are you sure you want to decline this request?' with Go back / Yes, decline."
+    },
+    {
+      "id": "billpay.bulk-review-skipped",
+      "title": "Bulk review done (skipped)",
+      "url": "/send-money/bulk-approval-review/success",
+      "image": "screens/billpay/88-bulk-review-skipped.png",
+      "kind": "confirmation",
+      "note": "Skipping the only request ends on 'You've reviewed 0 payments' with a $0.00 card and a primary 'Back to needs approval' button."
+    },
+    {
+      "id": "billpay.recipient-search-menu",
+      "title": "Recipient search menu",
+      "url": "/send-money/pay/recipient-match",
+      "image": "screens/billpay/89-recipient-search-menu.png",
+      "kind": "menu",
+      "note": "'Search for another recipient' opens a Recently paid list (Contractor, Domestic Ads, Nutritionist, Lighthouse Properties)."
+    },
+    {
+      "id": "billpay.recipient-search-no-results",
+      "title": "Recipient search, no results",
+      "url": "/send-money/pay/recipient-match",
+      "image": "screens/billpay/90-recipient-search-no-results.png",
+      "kind": "empty-state",
+      "note": "Typing a name with no match closes the list silently; only the 'Adding someone new? Create recipient' link remains."
+    },
+    {
+      "id": "billpay.recipient-card-menu",
+      "title": "Recipient card menu",
+      "url": "/send-money/pay/recipient-details",
+      "image": "screens/billpay/91-recipient-card-menu.png",
+      "kind": "menu",
+      "note": "The ••• button on the recipient card opens Edit recipient details / Pay different recipient."
+    },
+    {
+      "id": "billpay.edit-recipient-details",
+      "title": "Edit recipient details",
+      "url": "/send-money/pay/recipient-details",
+      "image": "screens/billpay/92-edit-recipient-details.png",
+      "kind": "form-state",
+      "note": "Full-screen form over the flow (it also covers the demo banner): person/business, legal name, email, nickname and address, with Go back / Save."
+    },
+    {
+      "id": "billpay.recipient-updated",
+      "title": "Recipient updated",
+      "url": "/send-money/pay/recipient-details",
+      "image": "screens/billpay/93-recipient-updated.png",
+      "kind": "toast",
+      "note": "Save returns to the recipient step with a 'Recipient updated' toast; the card now says 'Last paid on Aug 25, 2026' instead of Sep 24, 2026."
+    },
+    {
+      "id": "billpay.bank-details-edit",
+      "title": "Bank details inline edit",
+      "url": "/send-money/pay/recipient-details",
+      "image": "screens/billpay/94-bank-details-edit.png",
+      "kind": "form-state",
+      "note": "Edit on the bank card expands inline fields: routing number with resolved bank chip (JPMorgan Chase), account number and account type."
+    },
+    {
+      "id": "billpay.routing-number-error",
+      "title": "Routing number error",
+      "url": "/send-money/pay/recipient-details",
+      "image": "screens/billpay/95-routing-number-error.png",
+      "kind": "validation-error",
+      "note": "A 5-digit routing number turns the label and border pink and shows a warning icon with 'Routing # should be a 9-digit number'."
+    },
+    {
+      "id": "billpay.pay-method-check",
+      "title": "Check payment method",
+      "url": "/send-money/pay/recipient-details",
+      "image": "screens/billpay/96-pay-method-check.png",
+      "kind": "form-state",
+      "note": "Choosing Check replaces bank details with a 'Check mailing address' block (country, legal address, suite) and '7-10 business days · No fee'."
+    },
+    {
+      "id": "billpay.send-from-menu",
+      "title": "Send from account menu",
+      "url": "/send-money/pay/amount",
+      "image": "screens/billpay/97-send-from-menu.png",
+      "kind": "menu",
+      "note": "Send from dropdown listing AP, AR, Checking ••0297 and Savings ••7658 with balances."
+    },
+    {
+      "id": "billpay.send-on-date-picker",
+      "title": "Send on date picker",
+      "url": "/send-money/pay/amount",
+      "image": "screens/billpay/98-send-on-date-picker.png",
+      "kind": "popover",
+      "note": "Calendar for Send on: past days disabled, today (25) highlighted, typed input and month arrows at the top."
+    },
+    {
+      "id": "billpay.repeat-frequency-menu",
+      "title": "Repeat frequency menu",
+      "url": "/send-money/pay/amount",
+      "image": "screens/billpay/99-repeat-frequency-menu.png",
+      "kind": "menu",
+      "note": "With Repeat on, the Repeat combobox offers Weekly on Thursday, Monthly on the 24th, Monthly on the last Thursday and Custom."
+    },
+    {
+      "id": "billpay.accounting-all",
+      "title": "Accounting: All tab",
+      "url": "/accounting",
+      "image": "screens/billpay/100-accounting-all.png",
+      "kind": "page",
+      "note": "All tab of the workbench: every transaction with inline Category and GL Code pickers, mark-ready and exclude actions."
+    },
+    {
+      "id": "billpay.accounting-date-menu",
+      "title": "Accounting date filter",
+      "url": "/accounting",
+      "image": "screens/billpay/101-accounting-date-menu.png",
+      "kind": "menu",
+      "note": "Date popover: 'Show transactions for' preset select, From / To inputs and a month grid."
+    },
+    {
+      "id": "billpay.accounting-date-presets",
+      "title": "Date preset list",
+      "url": "/accounting",
+      "image": "screens/billpay/102-date-preset-menu.png",
+      "kind": "menu",
+      "note": "Preset select open: Custom, This week, This month, This year, Last week, Last month, Last 30 / 90 days, Last 6 months."
+    },
+    {
+      "id": "billpay.accounting-date-filtered",
+      "title": "Date filter applied",
+      "url": "/accounting?q=…LastWeek",
+      "image": "screens/billpay/103-date-filter-last-week.png",
+      "kind": "form-state",
+      "note": "A 'Last week' chip with Reset replaces the Date button, but the table still lists Sep 24–25 rows and 1-100 of 1,121."
+    },
+    {
+      "id": "billpay.accounting-gl-menu",
+      "title": "Inline GL code menu",
+      "url": "/accounting",
+      "image": "screens/billpay/104-accounting-gl-code-menu.png",
+      "kind": "menu",
+      "note": "The row GL Code combobox opens a 60-item list upward; it starts at y=9px, above the page chrome."
+    },
+    {
+      "id": "billpay.accounting-gl-set",
+      "title": "GL code set",
+      "url": "/accounting",
+      "image": "screens/billpay/105-accounting-gl-code-set.png",
+      "kind": "form-state",
+      "note": "Row shows '6003 -…' and its Mark as ready button becomes active; no toast confirms the change."
+    },
+    {
+      "id": "billpay.accounting-marked-ready",
+      "title": "Marked as ready",
+      "url": "/accounting",
+      "image": "screens/billpay/106-accounting-marked-ready.png",
+      "kind": "form-state",
+      "note": "Mark as ready turns the row action into a check, Ready to Export gains a count of 1 and the header button reads 'Export (1)'."
+    },
+    {
+      "id": "billpay.accounting-ready-list",
+      "title": "Ready to Export (1)",
+      "url": "/accounting?q=…reviewedNotSynced",
+      "image": "screens/billpay/107-ready-to-export-list.png",
+      "kind": "page",
+      "note": "Ready to Export tab listing the one reviewed transaction, with Export (1) enabled."
+    },
+    {
+      "id": "billpay.accounting-bulk-select",
+      "title": "Accounting bulk selection",
+      "url": "/accounting?q=…reviewedNotSynced",
+      "image": "screens/billpay/108-accounting-bulk-select.png",
+      "kind": "form-state",
+      "note": "Selecting a row slides up a bulk bar (GL Code select, icon actions, clear) that sits partly below the viewport."
+    },
+    {
+      "id": "billpay.rule-invalid-tooltip",
+      "title": "Invalid rule tooltip",
+      "url": "/accounting/mapping/categorization-rules",
+      "image": "screens/billpay/109-invalid-rule-tooltip.png",
+      "kind": "popover",
+      "note": "Hovering the Invalid badge explains the outcome references a deleted GL code or category; row hover also reveals If / has / then chips."
+    },
+    {
+      "id": "billpay.rule-details",
+      "title": "Rule details panel",
+      "url": "/accounting/mapping/categorization-rules?ruleId=…",
+      "image": "screens/billpay/110-rule-details.png",
+      "kind": "drawer",
+      "note": "Clicking a rule opens 'Rule details' (If Bank Description has AWS, then 782 - Expense Account) with Delete rule and Edit."
+    },
+    {
+      "id": "billpay.edit-rule",
+      "title": "Edit categorization rule",
+      "url": "/accounting/mapping/categorization-rules?ruleId=…",
+      "image": "screens/billpay/111-edit-rule.png",
+      "kind": "form-state",
+      "note": "Edit mode of the rule panel: If select 'Bank description' with value AWS and helper text, Then GL code '782 - Expense Account', Auto-mark ready toggle, Cancel / Update and 'Updates will only apply to future transactions.'"
+    },
+    {
+      "id": "billpay.delete-rule-confirm",
+      "title": "Delete rule confirmation",
+      "url": "/accounting/mapping/categorization-rules?ruleId=…",
+      "image": "screens/billpay/112-delete-rule-confirm.png",
+      "kind": "modal",
+      "note": "'Delete categorization rule?' dialog: 'This won’t affect previously categorized transactions.' with Cancel and a destructive 'Yes, delete rule'."
+    },
+    {
+      "id": "billpay.rule-deleted",
+      "title": "Rule deleted",
+      "url": "/accounting/mapping/categorization-rules",
+      "image": "screens/billpay/113-rule-deleted.png",
+      "kind": "toast",
+      "note": "'Rule deleted' toast; the list renumbers to five rules and the hovered row reveals its If / = / < / then connector chips."
+    },
+    {
+      "id": "billpay.feedback-panel",
+      "title": "Bill Pay feedback panel",
+      "url": "/bill-pay",
+      "image": "screens/billpay/114-feedback-panel.png",
+      "kind": "popover",
+      "note": "The Feedback chip next to the title opens a 'Provide feedback' panel bottom-right with a textarea, Cancel and a disabled 'Share feedback' until text is entered."
+    },
+    {
+      "id": "billpay.feedback-sent",
+      "title": "Feedback sent",
+      "url": "/bill-pay",
+      "image": "screens/billpay/115-feedback-sent.png",
+      "kind": "confirmation",
+      "note": "After Share feedback the panel reads 'Thanks for your feedback' / 'We’ll share your thoughts with our product teams…' with a Done button."
+    },
+    {
+      "id": "billpay.forwarding-email-copied",
+      "title": "Forwarding address copied",
+      "url": "/bill-pay",
+      "image": "screens/billpay/116-forwarding-email-copied.png",
+      "kind": "popover",
+      "note": "Clicking the my-company-name@ap.mercury.com pill copies it and shows a 'Copied' tooltip; the hovered Total outstanding card swaps its amount for '3 Inbox · 1 Approval · 3 Scheduled'."
+    },
+    {
+      "id": "billpay.rule-updated",
+      "title": "Rule updated",
+      "url": "/accounting/mapping/categorization-rules?ruleId=…",
+      "image": "screens/billpay/117-rule-updated.png",
+      "kind": "toast",
+      "note": "After Update the panel returns to Rule details ('If Bank Description has AWS Marketplace then 782 - Expense Account'), the row updates and a 'Rule updated' toast shows."
+    }
+  ],
+  "edges": [
+    {
+      "from": "billpay.index",
+      "to": "billpay.status-filter",
+      "label": "Click Status filter"
+    },
+    {
+      "from": "billpay.index",
+      "to": "billpay.settings",
+      "label": "Click settings gear"
+    },
+    {
+      "from": "billpay.settings",
+      "to": "billpay.settings-bottom",
+      "label": "Scroll modal"
+    },
+    {
+      "from": "billpay.settings",
+      "to": "billpay.forwarding-email-edit",
+      "label": "Click Edit on Bill forwarding email"
+    },
+    {
+      "from": "billpay.forwarding-email-edit",
+      "to": "billpay.forwarding-email-invalid",
+      "label": "Type invalid characters"
+    },
+    {
+      "from": "billpay.forwarding-email-invalid",
+      "to": "billpay.forwarding-email-edit",
+      "label": "Fix the address"
+    },
+    {
+      "from": "billpay.forwarding-email-edit",
+      "to": "billpay.forwarding-email-saved",
+      "label": "Click Save"
+    },
+    {
+      "from": "billpay.settings-bottom",
+      "to": "billpay.approved-senders-edit",
+      "label": "Click Edit on Approved senders"
+    },
+    {
+      "from": "billpay.settings-bottom",
+      "to": "settings.index",
+      "label": "Click Edit on Approval rules / Connect accounting sync"
+    },
+    {
+      "from": "billpay.index",
+      "to": "billpay.needs-approval",
+      "label": "Click Needs Approval tab"
+    },
+    {
+      "from": "billpay.needs-approval",
+      "to": "billpay.approval-panel",
+      "label": "Click request row"
+    },
+    {
+      "from": "billpay.approval-panel",
+      "to": "billpay.approval-review",
+      "label": "Click Review"
+    },
+    {
+      "from": "billpay.approval-review",
+      "to": "billpay.approval-success",
+      "label": "Click Approve payments"
+    },
+    {
+      "from": "billpay.approval-success",
+      "to": "billpay.needs-approval-empty",
+      "label": "Click Back to Needs Approval"
+    },
+    {
+      "from": "billpay.index",
+      "to": "billpay.scheduled",
+      "label": "Click Scheduled tab"
+    },
+    {
+      "from": "billpay.scheduled",
+      "to": "billpay.scheduled-panel",
+      "label": "Click scheduled row"
+    },
+    {
+      "from": "billpay.scheduled-panel",
+      "to": "billpay.cancel-payment-confirm",
+      "label": "Click Cancel payment"
+    },
+    {
+      "from": "billpay.cancel-payment-confirm",
+      "to": "billpay.payment-canceled",
+      "label": "Click Cancel payment"
+    },
+    {
+      "from": "billpay.cancel-payment-confirm",
+      "to": "billpay.scheduled-panel",
+      "label": "Click Go back"
+    },
+    {
+      "from": "billpay.index",
+      "to": "billpay.paid",
+      "label": "Click Paid tab"
+    },
+    {
+      "from": "billpay.paid",
+      "to": "billpay.paid-transaction",
+      "label": "Click paid row"
+    },
+    {
+      "from": "billpay.paid-transaction",
+      "to": "transactions.index",
+      "label": "Close drawer"
+    },
+    {
+      "from": "billpay.index",
+      "to": "billpay.bill-panel",
+      "label": "Click inbox bill row"
+    },
+    {
+      "from": "billpay.bill-panel",
+      "to": "billpay.bill-panel-edit",
+      "label": "Click a field value"
+    },
+    {
+      "from": "billpay.bill-panel-edit",
+      "to": "billpay.bill-due-date-picker",
+      "label": "Click Due date input"
+    },
+    {
+      "from": "billpay.bill-panel-edit",
+      "to": "billpay.bill-edit-amount-error",
+      "label": "Clear amount, click Save edits"
+    },
+    {
+      "from": "billpay.bill-edit-amount-error",
+      "to": "billpay.bill-edit-saved",
+      "label": "Enter amount, click Save edits"
+    },
+    {
+      "from": "billpay.bill-panel",
+      "to": "billpay.pay-recipient-match",
+      "label": "Click Review"
+    },
+    {
+      "from": "billpay.bill-edit-saved",
+      "to": "billpay.pay-recipient-match",
+      "label": "Click Review"
+    },
+    {
+      "from": "billpay.pay-recipient-match",
+      "to": "billpay.pay-recipient",
+      "label": "Click Continue with matched recipient"
+    },
+    {
+      "from": "billpay.pay-recipient",
+      "to": "billpay.pay-method-menu",
+      "label": "Open Payment method"
+    },
+    {
+      "from": "billpay.pay-method-menu",
+      "to": "billpay.pay-recipient",
+      "label": "Choose ACH"
+    },
+    {
+      "from": "billpay.pay-recipient",
+      "to": "billpay.pay-amount",
+      "label": "Click Next"
+    },
+    {
+      "from": "billpay.pay-amount",
+      "to": "billpay.pay-amount-error",
+      "label": "Clear amount, click Next"
+    },
+    {
+      "from": "billpay.pay-amount-error",
+      "to": "billpay.pay-amount",
+      "label": "Enter amount"
+    },
+    {
+      "from": "billpay.pay-amount",
+      "to": "billpay.pay-repeat",
+      "label": "Toggle Repeat this payment"
+    },
+    {
+      "from": "billpay.pay-amount",
+      "to": "billpay.pay-categorization",
+      "label": "Click Next"
+    },
+    {
+      "from": "billpay.pay-categorization",
+      "to": "billpay.pay-multiple-gl",
+      "label": "Click Multiple GL Codes"
+    },
+    {
+      "from": "billpay.pay-multiple-gl",
+      "to": "billpay.pay-line-items-error",
+      "label": "Add empty line item, click Next"
+    },
+    {
+      "from": "billpay.pay-multiple-gl",
+      "to": "billpay.pay-categorization",
+      "label": "Click Single GL Code"
+    },
+    {
+      "from": "billpay.pay-categorization",
+      "to": "billpay.pay-details",
+      "label": "Click Next"
+    },
+    {
+      "from": "billpay.pay-details",
+      "to": "billpay.pay-review",
+      "label": "Click Next"
+    },
+    {
+      "from": "billpay.pay-review",
+      "to": "billpay.pay-success",
+      "label": "Click Schedule payment"
+    },
+    {
+      "from": "billpay.pay-success",
+      "to": "billpay.inbox-after-payment",
+      "label": "Click Back to Bill Pay"
+    },
+    {
+      "from": "billpay.index",
+      "to": "billpay.upload-popover",
+      "label": "Click Upload bill"
+    },
+    {
+      "from": "billpay.upload-popover",
+      "to": "billpay.upload-too-small",
+      "label": "Drop a file under 1 KB"
+    },
+    {
+      "from": "billpay.upload-popover",
+      "to": "billpay.upload-no-match",
+      "label": "Drop an invoice PDF"
+    },
+    {
+      "from": "billpay.upload-no-match",
+      "to": "billpay.create-recipient",
+      "label": "Click Create recipient"
+    },
+    {
+      "from": "billpay.create-recipient",
+      "to": "billpay.create-recipient-error",
+      "label": "Clear legal name, click Create recipient"
+    },
+    {
+      "from": "billpay.create-recipient-error",
+      "to": "billpay.new-recipient-bank",
+      "label": "Enter name, click Create recipient"
+    },
+    {
+      "from": "billpay.create-recipient",
+      "to": "billpay.new-recipient-bank",
+      "label": "Click Create recipient"
+    },
+    {
+      "from": "billpay.new-recipient-bank",
+      "to": "billpay.upload-amount-ocr",
+      "label": "Click Next"
+    },
+    {
+      "from": "billpay.upload-amount-ocr",
+      "to": "billpay.pay-categorization",
+      "label": "Click Next"
+    },
+    {
+      "from": "billpay.upload-amount-ocr",
+      "to": "billpay.index",
+      "label": "Close flow (X)"
+    },
+    {
+      "from": "billpay.index",
+      "to": "billpay.bulk-select",
+      "label": "Check select-all"
+    },
+    {
+      "from": "billpay.bulk-select",
+      "to": "billpay.bulk-delete-confirm",
+      "label": "Click Delete"
+    },
+    {
+      "from": "billpay.bulk-delete-confirm",
+      "to": "billpay.inbox-zero",
+      "label": "Click Delete 3 items"
+    },
+    {
+      "from": "billpay.bulk-select",
+      "to": "billpay.pay-recipient-match",
+      "label": "Click Review"
+    },
+    {
+      "from": "billpay.inbox-zero",
+      "to": "billpay.zero-inbox-game",
+      "label": "Click Play Zero Inbox"
+    },
+    {
+      "from": "billpay.index",
+      "to": "billpay.row-hover",
+      "label": "Hover a bill row"
+    },
+    {
+      "from": "billpay.row-hover",
+      "to": "billpay.delete-bill-confirm",
+      "label": "Click trash icon"
+    },
+    {
+      "from": "billpay.row-hover",
+      "to": "billpay.pay-recipient-match",
+      "label": "Click Review"
+    },
+    {
+      "from": "billpay.row-hover",
+      "to": "billpay.source-tooltip",
+      "label": "Hover envelope avatar"
+    },
+    {
+      "from": "billpay.status-filter",
+      "to": "billpay.filter-empty",
+      "label": "Check Missing due date"
+    },
+    {
+      "from": "billpay.filter-empty",
+      "to": "billpay.index",
+      "label": "Click Reset"
+    },
+    {
+      "from": "billpay.approval-panel",
+      "to": "billpay.request-declined",
+      "label": "Click Decline"
+    },
+    {
+      "from": "billpay.approval-panel",
+      "to": "billpay.quick-approve",
+      "label": "Click Approve"
+    },
+    {
+      "from": "billpay.bill-panel",
+      "to": "billpay.bill-panel-lower",
+      "label": "Scroll panel"
+    },
+    {
+      "from": "billpay.index",
+      "to": "payments.index",
+      "label": "Click Send money"
+    },
+    {
+      "from": "billpay.index",
+      "to": "billpay.accounting-index",
+      "label": "Click Accounting in sidebar"
+    },
+    {
+      "from": "billpay.accounting-index",
+      "to": "billpay.accounting-upload-csv",
+      "label": "Click Or upload a CSV"
+    },
+    {
+      "from": "billpay.accounting-upload-csv",
+      "to": "billpay.accounting-csv-selected",
+      "label": "Choose CSV file"
+    },
+    {
+      "from": "billpay.accounting-csv-selected",
+      "to": "billpay.accounting-workbench",
+      "label": "Click Upload"
+    },
+    {
+      "from": "billpay.accounting-index",
+      "to": "billpay.books-signup",
+      "label": "Click Start"
+    },
+    {
+      "from": "billpay.accounting-index",
+      "to": "settings.index",
+      "label": "Click Connect (integrations, before OAuth)"
+    },
+    {
+      "from": "billpay.accounting-workbench",
+      "to": "billpay.accounting-sync-errors",
+      "label": "Click Sync Error tab"
+    },
+    {
+      "from": "billpay.accounting-sync-errors",
+      "to": "billpay.accounting-sync-error-drawer",
+      "label": "Click a row"
+    },
+    {
+      "from": "billpay.accounting-workbench",
+      "to": "billpay.accounting-filters",
+      "label": "Click Filters"
+    },
+    {
+      "from": "billpay.accounting-workbench",
+      "to": "billpay.accounting-category-menu",
+      "label": "Open a Category picker"
+    },
+    {
+      "from": "billpay.accounting-category-menu",
+      "to": "billpay.accounting-category-set",
+      "label": "Choose Software"
+    },
+    {
+      "from": "billpay.accounting-workbench",
+      "to": "billpay.accounting-ready-empty",
+      "label": "Click Ready to Export tab"
+    },
+    {
+      "from": "billpay.accounting-ready-empty",
+      "to": "billpay.accounting-workbench",
+      "label": "Click Go to Needs Review"
+    },
+    {
+      "from": "billpay.accounting-workbench",
+      "to": "billpay.accounting-exported",
+      "label": "Click Exported tab"
+    },
+    {
+      "from": "billpay.accounting-workbench",
+      "to": "billpay.accounting-columns",
+      "label": "Click Customize columns"
+    },
+    {
+      "from": "billpay.accounting-workbench",
+      "to": "billpay.accounting-review-drawer",
+      "label": "Click a row"
+    },
+    {
+      "from": "billpay.accounting-workbench",
+      "to": "billpay.accounting-settings",
+      "label": "Click Settings"
+    },
+    {
+      "from": "billpay.accounting-settings",
+      "to": "billpay.gl-codes-edit",
+      "label": "Click Edit"
+    },
+    {
+      "from": "billpay.accounting-settings",
+      "to": "billpay.categorization-rules",
+      "label": "Click Categorization rules tab"
+    },
+    {
+      "from": "billpay.categorization-rules",
+      "to": "billpay.create-rule",
+      "label": "Click Create a rule"
+    },
+    {
+      "from": "billpay.create-rule",
+      "to": "billpay.rule-input-menu",
+      "label": "Open If select"
+    },
+    {
+      "from": "billpay.rule-input-menu",
+      "to": "billpay.rule-outcome-menu",
+      "label": "Pick Bank description, type value, open Then select"
+    },
+    {
+      "from": "billpay.rule-outcome-menu",
+      "to": "billpay.rule-filled",
+      "label": "Pick GL code and a code"
+    },
+    {
+      "from": "billpay.rule-filled",
+      "to": "billpay.rule-created",
+      "label": "Click Create"
+    },
+    {
+      "from": "billpay.accounting-settings",
+      "to": "billpay.automation-settings",
+      "label": "Click Automation settings tab"
+    },
+    {
+      "from": "billpay.automation-settings",
+      "to": "billpay.auto-categorization-off",
+      "label": "Toggle Auto-categorization off"
+    },
+    {
+      "from": "billpay.index",
+      "to": "billpay.inbox-sorted",
+      "label": "Click Amount column header"
+    },
+    {
+      "from": "billpay.index",
+      "to": "billpay.due-date-tooltip",
+      "label": "Hover a due date"
+    },
+    {
+      "from": "billpay.needs-approval",
+      "to": "billpay.approvers-tooltip",
+      "label": "Hover '0 of 2'"
+    },
+    {
+      "from": "billpay.needs-approval",
+      "to": "billpay.approvals-bulk-select",
+      "label": "Check a request"
+    },
+    {
+      "from": "billpay.approvals-bulk-select",
+      "to": "billpay.approvals-bulk-loading",
+      "label": "Click Review Request"
+    },
+    {
+      "from": "billpay.approvals-bulk-loading",
+      "to": "billpay.bulk-approval-review",
+      "label": "Wait for review to load"
+    },
+    {
+      "from": "billpay.bulk-approval-review",
+      "to": "billpay.decline-confirm",
+      "label": "Click Decline"
+    },
+    {
+      "from": "billpay.decline-confirm",
+      "to": "billpay.bulk-approval-review",
+      "label": "Click Go back"
+    },
+    {
+      "from": "billpay.bulk-approval-review",
+      "to": "billpay.bulk-review-skipped",
+      "label": "Click Skip"
+    },
+    {
+      "from": "billpay.bulk-review-skipped",
+      "to": "billpay.needs-approval",
+      "label": "Click Back to needs approval"
+    },
+    {
+      "from": "billpay.approval-review",
+      "to": "billpay.decline-confirm",
+      "label": "Click Decline"
+    },
+    {
+      "from": "billpay.pay-recipient-match",
+      "to": "billpay.recipient-search-menu",
+      "label": "Focus Search for another recipient"
+    },
+    {
+      "from": "billpay.recipient-search-menu",
+      "to": "billpay.recipient-search-no-results",
+      "label": "Type a name with no match"
+    },
+    {
+      "from": "billpay.recipient-search-no-results",
+      "to": "billpay.create-recipient",
+      "label": "Click Create recipient"
+    },
+    {
+      "from": "billpay.pay-recipient",
+      "to": "billpay.recipient-card-menu",
+      "label": "Click ••• on recipient card"
+    },
+    {
+      "from": "billpay.recipient-card-menu",
+      "to": "billpay.edit-recipient-details",
+      "label": "Click Edit recipient details"
+    },
+    {
+      "from": "billpay.recipient-card-menu",
+      "to": "billpay.pay-recipient-match",
+      "label": "Click Pay different recipient"
+    },
+    {
+      "from": "billpay.edit-recipient-details",
+      "to": "billpay.recipient-updated",
+      "label": "Click Save"
+    },
+    {
+      "from": "billpay.recipient-updated",
+      "to": "billpay.bank-details-edit",
+      "label": "Click Edit on bank details"
+    },
+    {
+      "from": "billpay.pay-recipient",
+      "to": "billpay.bank-details-edit",
+      "label": "Click Edit on bank details"
+    },
+    {
+      "from": "billpay.bank-details-edit",
+      "to": "billpay.routing-number-error",
+      "label": "Enter 5-digit routing number, click Next"
+    },
+    {
+      "from": "billpay.routing-number-error",
+      "to": "billpay.bank-details-edit",
+      "label": "Enter a 9-digit routing number"
+    },
+    {
+      "from": "billpay.pay-method-menu",
+      "to": "billpay.pay-method-check",
+      "label": "Choose Check"
+    },
+    {
+      "from": "billpay.pay-amount",
+      "to": "billpay.send-from-menu",
+      "label": "Open Send from"
+    },
+    {
+      "from": "billpay.pay-amount",
+      "to": "billpay.send-on-date-picker",
+      "label": "Click Send on"
+    },
+    {
+      "from": "billpay.send-on-date-picker",
+      "to": "billpay.pay-amount",
+      "label": "Pick a date"
+    },
+    {
+      "from": "billpay.pay-repeat",
+      "to": "billpay.repeat-frequency-menu",
+      "label": "Open Repeat select"
+    },
+    {
+      "from": "billpay.pay-amount",
+      "to": "billpay.index",
+      "label": "Press Escape (exits flow)"
+    },
+    {
+      "from": "billpay.accounting-workbench",
+      "to": "billpay.accounting-all",
+      "label": "Click All tab"
+    },
+    {
+      "from": "billpay.accounting-all",
+      "to": "billpay.accounting-date-menu",
+      "label": "Click Date"
+    },
+    {
+      "from": "billpay.accounting-date-menu",
+      "to": "billpay.accounting-date-presets",
+      "label": "Open Show transactions for"
+    },
+    {
+      "from": "billpay.accounting-date-presets",
+      "to": "billpay.accounting-date-filtered",
+      "label": "Choose Last week"
+    },
+    {
+      "from": "billpay.accounting-date-filtered",
+      "to": "billpay.accounting-all",
+      "label": "Click Reset"
+    },
+    {
+      "from": "billpay.accounting-all",
+      "to": "billpay.accounting-gl-menu",
+      "label": "Click a row GL Code field"
+    },
+    {
+      "from": "billpay.accounting-gl-menu",
+      "to": "billpay.accounting-gl-set",
+      "label": "Choose 6003"
+    },
+    {
+      "from": "billpay.accounting-gl-set",
+      "to": "billpay.accounting-marked-ready",
+      "label": "Click Mark as ready"
+    },
+    {
+      "from": "billpay.accounting-marked-ready",
+      "to": "billpay.accounting-ready-list",
+      "label": "Click Ready to Export tab"
+    },
+    {
+      "from": "billpay.accounting-ready-list",
+      "to": "billpay.accounting-bulk-select",
+      "label": "Check a row"
+    },
+    {
+      "from": "billpay.categorization-rules",
+      "to": "billpay.rule-invalid-tooltip",
+      "label": "Hover Invalid badge"
+    },
+    {
+      "from": "billpay.categorization-rules",
+      "to": "billpay.rule-details",
+      "label": "Click a rule row"
+    },
+    {
+      "from": "billpay.rule-details",
+      "to": "billpay.edit-rule",
+      "label": "Click Edit"
+    },
+    {
+      "from": "billpay.edit-rule",
+      "to": "billpay.rule-updated",
+      "label": "Change the value, click Update"
+    },
+    {
+      "from": "billpay.rule-updated",
+      "to": "billpay.delete-rule-confirm",
+      "label": "Click Delete rule"
+    },
+    {
+      "from": "billpay.rule-details",
+      "to": "billpay.delete-rule-confirm",
+      "label": "Click Delete rule"
+    },
+    {
+      "from": "billpay.delete-rule-confirm",
+      "to": "billpay.rule-deleted",
+      "label": "Click Yes, delete rule"
+    },
+    {
+      "from": "billpay.edit-rule",
+      "to": "billpay.rule-details",
+      "label": "Click Cancel"
+    },
+    {
+      "from": "billpay.index",
+      "to": "billpay.feedback-panel",
+      "label": "Click Feedback"
+    },
+    {
+      "from": "billpay.feedback-panel",
+      "to": "billpay.feedback-sent",
+      "label": "Type feedback, click Share feedback"
+    },
+    {
+      "from": "billpay.feedback-sent",
+      "to": "billpay.index",
+      "label": "Click Done"
+    },
+    {
+      "from": "billpay.index",
+      "to": "billpay.forwarding-email-copied",
+      "label": "Click the forwarding address pill"
+    }
+  ],
+  "journeys": [
+    {
+      "id": "billpay.j-pay-inbox-bill",
+      "name": "Pay a forwarded bill by ACH",
+      "description": "Review an emailed bill in the inbox, correct its amount and schedule an ACH payment to the matched vendor.",
+      "steps": [
+        "billpay.index",
+        "billpay.bill-panel",
+        "billpay.pay-recipient-match",
+        "billpay.pay-recipient",
+        "billpay.pay-amount",
+        "billpay.pay-categorization",
+        "billpay.pay-details",
+        "billpay.pay-review",
+        "billpay.pay-success",
+        "billpay.inbox-after-payment"
+      ]
+    },
+    {
+      "id": "billpay.j-upload-new-vendor",
+      "name": "Upload a bill from a new vendor",
+      "description": "Upload an invoice PDF, create the vendor from the scanned details and continue to the amount step.",
+      "steps": [
+        "billpay.index",
+        "billpay.upload-popover",
+        "billpay.upload-no-match",
+        "billpay.create-recipient",
+        "billpay.new-recipient-bank",
+        "billpay.upload-amount-ocr",
+        "billpay.pay-categorization"
+      ]
+    },
+    {
+      "id": "billpay.j-approve-request",
+      "name": "Approve a recurring payment request",
+      "description": "Open a pending approval, review the recurring schedule and approve it.",
+      "steps": [
+        "billpay.index",
+        "billpay.needs-approval",
+        "billpay.approval-panel",
+        "billpay.approval-review",
+        "billpay.approval-success",
+        "billpay.needs-approval-empty"
+      ]
+    },
+    {
+      "id": "billpay.j-cancel-scheduled",
+      "name": "Cancel a scheduled bill payment",
+      "description": "Find a scheduled payment and cancel it before it is sent.",
+      "steps": [
+        "billpay.index",
+        "billpay.scheduled",
+        "billpay.scheduled-panel",
+        "billpay.cancel-payment-confirm",
+        "billpay.payment-canceled"
+      ]
+    },
+    {
+      "id": "billpay.j-forwarding-email",
+      "name": "Change the bill forwarding address",
+      "description": "Open Bill Pay settings and change the inbox email that receives forwarded bills.",
+      "steps": [
+        "billpay.index",
+        "billpay.settings",
+        "billpay.forwarding-email-edit",
+        "billpay.forwarding-email-invalid",
+        "billpay.forwarding-email-edit",
+        "billpay.forwarding-email-saved"
+      ]
+    },
+    {
+      "id": "billpay.j-accounting-rules",
+      "name": "Set up GL codes and a categorization rule",
+      "description": "Upload a GL code CSV, then create a rule that maps a bank description to a GL code.",
+      "steps": [
+        "billpay.accounting-index",
+        "billpay.accounting-upload-csv",
+        "billpay.accounting-csv-selected",
+        "billpay.accounting-workbench",
+        "billpay.accounting-settings",
+        "billpay.categorization-rules",
+        "billpay.create-rule",
+        "billpay.rule-input-menu",
+        "billpay.rule-outcome-menu",
+        "billpay.rule-filled"
+      ]
+    },
+    {
+      "id": "billpay.j-maintain-rule",
+      "name": "Update and retire a categorization rule",
+      "description": "Open an existing rule, change its matching text, then delete it once it is no longer needed.",
+      "steps": [
+        "billpay.categorization-rules",
+        "billpay.rule-details",
+        "billpay.edit-rule",
+        "billpay.rule-updated",
+        "billpay.delete-rule-confirm",
+        "billpay.rule-deleted"
+      ]
+    }
+  ],
+  "issues": [
+    {
+      "id": "billpay.i-due-date-format",
+      "title": "Due dates drop the day outside the current year",
+      "detail": "The inbox Due date column shows 'Apr 2025' and 'Dec 2025' for past-year bills but 'Jan 17' for a current-year one; Scheduled shows 'Jun 2027 / May 2027'. The same bill reads 'Apr 19, 2025' in its panel, and the pay flow uses 'Sep 25, 2026'. Month-only dates hide the exact day an overdue bill was due.",
+      "nodeIds": [
+        "billpay.index",
+        "billpay.scheduled",
+        "billpay.bill-panel",
+        "billpay.pay-amount"
+      ],
+      "category": "data-format",
+      "severity": "medium",
+      "evidence": "DOM text of inbox due-date cells: 'Apr 2025', 'Dec 2025', 'Jan 17'; bill panel button 'Due date Apr 19, 2025'; Scheduled cells 'Jun 2027' / 'May 2027'; pay-flow Send on input value 'Sep 25, 2026'."
+    },
+    {
+      "id": "billpay.i-amount-sign",
+      "title": "The same bill amount flips between positive and negative",
+      "detail": "Inbox rows and the bill panel show outstanding bills as positive ('$220.00'), while Needs Approval, Scheduled, Paid and the approval panel show them negative ('−$5,000.00', '−$37.19'). The pay-flow review then shows the same payment positive again ('$220.00').",
+      "nodeIds": [
+        "billpay.index",
+        "billpay.needs-approval",
+        "billpay.approval-panel",
+        "billpay.pay-review",
+        "billpay.scheduled",
+        "billpay.paid"
+      ],
+      "category": "data-format",
+      "severity": "medium",
+      "evidence": "Row text: inbox 'Debug LLC $220.00'; approvals 'Jason Green −$5,000.00'; approval panel '−$5,000.00' (x2); scheduled '−$1.99', '−$37.19'; paid '−$5,250.00'; pay review '$220.00' (34px hero + two 16px rows)."
+    },
+    {
+      "id": "billpay.i-cents-style",
+      "title": "Cents are superscript in tables but flat in cards and review",
+      "detail": "Tables and panels render cents as a smaller raised span ('$220.00' with a 10.95px '.00'), while the summary cards, pay-flow review and success cards, and the recurring schedule print flat cents at full size.",
+      "nodeIds": [
+        "billpay.index",
+        "billpay.bill-panel",
+        "billpay.pay-review",
+        "billpay.pay-success",
+        "billpay.approval-review"
+      ],
+      "category": "typography",
+      "severity": "low",
+      "evidence": "Inbox amount cell markup '<span>$220<span class=_superscript>.00</span></span>', superscript span 10.95px vs 15px dollars; summary card '$22,272.18' is one 15px SPAN; review '$220.00' is one SPAN at 34px and 16px with no cents span."
+    },
+    {
+      "id": "billpay.i-badge-hover-color",
+      "title": "Overdue badge loses its warning color on row hover/selection",
+      "detail": "The orange Overdue badge turns neutral lavender when its row is hovered or selected, so the status color disappears exactly when the user focuses the row.",
+      "nodeIds": [
+        "billpay.bill-panel",
+        "billpay.row-hover"
+      ],
+      "category": "color",
+      "severity": "medium",
+      "evidence": "Hovered row (tr:hover true) badge: color rgb(221,221,229), background rgba(141,164,245,0.28); other rows: color rgb(252,155,111), background rgba(252,155,111,0.2); badge 20px tall, radius 4px, padding 0 8px, text 12px/400 Arcadia Text."
+    },
+    {
+      "id": "billpay.i-date-picker-overflow",
+      "title": "Due date picker overflows the viewport",
+      "detail": "In the bill panel edit mode the calendar popover opens to the right and is clipped: the Saturday column and the next-month arrow sit off screen at 1440px width.",
+      "nodeIds": [
+        "billpay.bill-due-date-picker"
+      ],
+      "category": "layout",
+      "severity": "high",
+      "evidence": "Calendar popup wrapper x=1122, right=1492, width=370; inner calendar x=1146, right=1468; window.innerWidth=1440."
+    },
+    {
+      "id": "billpay.i-validation-patterns",
+      "title": "Four different validation patterns in one area",
+      "detail": "Errors appear as a tooltip-only message on a warning icon (forwarding email), inline 12px text ('Must be a dollar value.', 'Please complete this field'), inline 15px text ('Please complete all fields') and a toast (file too small). The forwarding email error is invisible unless the icon is hovered.",
+      "nodeIds": [
+        "billpay.forwarding-email-invalid",
+        "billpay.bill-edit-amount-error",
+        "billpay.pay-amount-error",
+        "billpay.pay-line-items-error",
+        "billpay.upload-too-small",
+        "billpay.create-recipient-error"
+      ],
+      "category": "component",
+      "severity": "medium",
+      "evidence": "Forwarding email: only a triangle-exclamation icon, 'Please enter a valid email address' appears in the DOM only on hover; bill edit 'Must be a dollar value.' SPAN 12px/18px rgb(252,146,180); recipient 'Please complete this field' SPAN 12px/18px plus a 'Flag error?' chip; line items 'Please complete all fields' SPAN 15px/24px rgb(252,146,180); upload 'One or more files are too small to upload, minimum 1KB per file.' inside _toastContainer."
+    },
+    {
+      "id": "billpay.i-empty-states",
+      "title": "Three unrelated empty-state styles",
+      "detail": "Needs Approval and filtered Inbox use a centered title over a blurred skeleton table, Ready to Export adds two CTA buttons, and an emptied Inbox shows a pixel-font 'All your bills are paid!' card in Silkscreen. The pixel card also says bills are paid when they were deleted.",
+      "nodeIds": [
+        "billpay.needs-approval-empty",
+        "billpay.filter-empty",
+        "billpay.inbox-zero",
+        "billpay.accounting-ready-empty"
+      ],
+      "category": "component",
+      "severity": "medium",
+      "evidence": "Needs Approval empty: H3 'No pending approvals' Arcadia Text 17px/400 white, centered, P 14px rgb(195,195,204) over a blurred skeleton; emptied inbox: H3 'All your bills are paid!' font-family 'Silkscreen, monospace, sans-serif' 17px, letter-spacing -1px, shown right after deleting all 3 bills; Ready to Export empty adds 'Export' and 'Review Sync Errors' buttons."
+    },
+    {
+      "id": "billpay.i-method-names",
+      "title": "Payment method named differently per tab",
+      "detail": "Scheduled uses 'ACH', 'Check', 'Intl. Wire'; Paid uses 'Mercury ACH Payment', 'Check Payment', 'Domestic Wire', 'Intl. Wire'; the payment method dropdown says 'International Wire'.",
+      "nodeIds": [
+        "billpay.scheduled",
+        "billpay.paid",
+        "billpay.pay-method-menu"
+      ],
+      "category": "copy",
+      "severity": "low",
+      "evidence": "Method cells Scheduled: 'Check', 'ACH', 'Intl. Wire'; Paid: 'Mercury ACH Payment', 'Intl. Wire', 'Check Payment', 'Domestic Wire'; Payment method option 'International Wire 1-3 business days'."
+    },
+    {
+      "id": "billpay.i-time-format",
+      "title": "Timestamps use three formats",
+      "detail": "The sync error drawer shows 'Sep 21 at 5:10PM' and 'Sync failed on Sep 22 at 05:10 PM.' one above the other; GL code settings show 'Uploaded at 05:12 PM PDT, Sep 24, 2026' (time first, with zone).",
+      "nodeIds": [
+        "billpay.accounting-sync-error-drawer",
+        "billpay.accounting-settings",
+        "billpay.gl-codes-edit"
+      ],
+      "category": "data-format",
+      "severity": "low",
+      "evidence": "Sync error drawer leaf text 'Sep 21 at 10:08PM' (12px) above 'Sync failed on Sep 22 at 10:08 PM.' (14px); GL codes settings 'Uploaded at 10:11 PM PDT, Sep 24, 2026'."
+    },
+    {
+      "id": "billpay.i-relative-dates",
+      "title": "Same date shown as 'Yesterday' and 'Sep 23' in one panel",
+      "detail": "The approval panel says 'Requested by Alice C. on Sep 23' and lists Invoice date and Added on as 'Yesterday'. The inbox bill panel uses absolute dates ('Added on Sep 14', 'Invoice date Apr 18, 2025').",
+      "nodeIds": [
+        "billpay.approval-panel",
+        "billpay.scheduled-panel",
+        "billpay.bill-panel"
+      ],
+      "category": "data-format",
+      "severity": "low",
+      "evidence": "Approval panel text: 'Requested by Alice C. on Sep 23', 'Invoice date / Yesterday', 'Added on / Yesterday', 'Send on / Oct 3'; bill panel 'Added on / Sep 14', 'Invoice date / Apr 18, 2025'."
+    },
+    {
+      "id": "billpay.i-casing",
+      "title": "Title Case and sentence case mixed for the same labels",
+      "detail": "'Bill Pay settings' vs 'Accounting Settings'; the 'Automation settings' tab opens an 'Automation Settings' heading; the banner button 'Review sync errors' becomes 'Review Sync Errors' on Ready to Export; rule table says 'Bank Description' while the picker says 'Bank description'; Accounting workbench tabs are Title Case ('Needs Review', 'Ready to Export', 'Sync Error') while Accounting Settings tabs are sentence case ('GL codes', 'Categorization rules'); plus 'Refresh Sync Status', 'My Transactions', 'Review Requests' next to 'Request documents'.",
+      "nodeIds": [
+        "billpay.settings",
+        "billpay.accounting-settings",
+        "billpay.automation-settings",
+        "billpay.accounting-ready-empty",
+        "billpay.accounting-workbench",
+        "billpay.categorization-rules",
+        "billpay.rule-input-menu",
+        "billpay.needs-approval",
+        "billpay.pay-success",
+        "billpay.accounting-exported",
+        "billpay.edit-rule"
+      ],
+      "category": "copy",
+      "severity": "low",
+      "evidence": "h2 'Bill Pay settings' vs h1 'Accounting Settings'; tab 'Automation settings' vs h2 'Automation Settings'; button 'Review sync errors' (Needs Review) vs 'Review Sync Errors' (Ready to Export); cell 'Bank Description' vs select value 'Bank description'; tabs 'Needs Review999+' / 'Ready to Export' / 'Sync Error3' vs 'GL codes' / 'Categorization rules' / 'Automation settings'; buttons 'Refresh Sync Status' (Exported), 'Review Requests' (Needs Approval), 'Request documents' (pay success)."
+    },
+    {
+      "id": "billpay.i-ars-currency",
+      "title": "Foreign-currency amount shows a dollar sign",
+      "detail": "An Argentine-peso international wire is displayed as '−$410.40 ARS', mixing the USD symbol with the ARS code.",
+      "nodeIds": [
+        "billpay.scheduled"
+      ],
+      "category": "data-format",
+      "severity": "medium",
+      "evidence": "Scheduled row text 'Jun 2027 May 2027 Not due yet Jean Vallee −$410.40 ARS Ops / Payroll Intl. Wire'."
+    },
+    {
+      "id": "billpay.i-unmasked-account",
+      "title": "Account and routing numbers unmasked on review",
+      "detail": "The recipient step masks bank details ('Account ••6789 · Routing ••0021'), but the review step prints the full account number 158856789 and routing 021000021.",
+      "nodeIds": [
+        "billpay.pay-recipient",
+        "billpay.pay-review"
+      ],
+      "category": "data-format",
+      "severity": "medium",
+      "evidence": "Recipient step text 'Account ••6789 · Routing ••0021'; review section 'Account no. / 158856789', 'Routing no. / 021000021' (the From account on the same page stays masked: 'Checking ••103')."
+    },
+    {
+      "id": "billpay.i-decline-no-confirm",
+      "title": "Decline has no confirmation while other destructive actions do",
+      "detail": "Decline in the approval panel removes the request immediately with only a toast; Cancel payment and Delete each open a confirmation dialog first.",
+      "nodeIds": [
+        "billpay.approval-panel",
+        "billpay.request-declined",
+        "billpay.cancel-payment-confirm",
+        "billpay.delete-bill-confirm",
+        "billpay.bulk-delete-confirm",
+        "billpay.delete-rule-confirm"
+      ],
+      "category": "interaction",
+      "severity": "medium",
+      "evidence": "Clicking 'Decline' in the approval panel: 0 visible [role=dialog], request removed and the tab switches to 'No pending approvals'; bulk Delete opens dialog 'Delete items? … Delete 3 items', rule delete opens 'Delete categorization rule?'."
+    },
+    {
+      "id": "billpay.i-stale-after-pay",
+      "title": "Paid bill stays in the inbox and counts do not update",
+      "detail": "After scheduling the Debug LLC payment the bill stays in the inbox as Overdue, it does not appear in Scheduled (still 3 rows), and summary cards stay at 7 outstanding / $22,272.18 while the Ops / Payroll balance drops by $220. Deleting all three overdue bills leaves the Overdue card at 3 / $13,110.00 and the breakdown still says '3 Inbox'.",
+      "nodeIds": [
+        "billpay.inbox-after-payment",
+        "billpay.inbox-zero",
+        "billpay.payment-canceled"
+      ],
+      "category": "interaction",
+      "severity": "medium",
+      "evidence": "Before: Ops / Payroll $2,023,267.12, row 'Apr 2025 Overdue Debug LLC $220.00'; after 'Back to Bill Pay': balance $2,023,047.12, row still present, 'Scheduled 3' with the same 3 rows, card '7 Total outstanding $22,272.18'. After 'Delete 3 items': inbox empty but cards '6 Total outstanding 3 Inbox · 3 Scheduled', '3 Overdue $13,110.00'."
+    },
+    {
+      "id": "billpay.i-manage-link",
+      "title": "'Manage' link looks like body text",
+      "detail": "In Bill Pay settings the 'Manage' link for email alerts uses the paragraph color with no underline, while the sibling 'Edit' and 'Connect' links are blue.",
+      "nodeIds": [
+        "billpay.settings"
+      ],
+      "category": "a11y",
+      "severity": "medium",
+      "evidence": "'Manage' A: 14px/400 rgb(195,195,204), text-decoration none; sibling 'Edit' (approval rules) and 'Connect' A: 15px/400 rgb(141,164,245)."
+    },
+    {
+      "id": "billpay.i-unlabeled-controls",
+      "title": "Icon buttons and tabs lack accessible names/roles",
+      "detail": "The row trash button has no aria-label or title, and the Inbox / Needs Approval / Scheduled / Paid tabs (and Accounting tabs) are clickable DIVs with no tab role.",
+      "nodeIds": [
+        "billpay.row-hover",
+        "billpay.index",
+        "billpay.accounting-workbench"
+      ],
+      "category": "a11y",
+      "severity": "medium",
+      "evidence": "Row delete button <button class=\"_button_r6b2u_20 _small_r6b2u_72 _destructive_r6b2u_186\"> with aria-label null, title '' and only svg[data-icon=trash][aria-hidden=true]; tabs are DIV with role=null (snapshot 'generic \"Inbox 3\"', 'generic \"Sync Error3\"'); bill edit amount input's only name is its placeholder '0.00'."
+    },
+    {
+      "id": "billpay.i-email-receipt-input",
+      "title": "Email receipt field does not match sibling inputs",
+      "detail": "On the Details step the 'Email receipt to' multi-select is taller, has less left padding and a brighter text color than the inputs above it, so its placeholder is misaligned.",
+      "nodeIds": [
+        "billpay.pay-details"
+      ],
+      "category": "component",
+      "severity": "low",
+      "evidence": "Email receipt combobox: wrapper 42px, input padding-left 4px, color rgb(255,255,255); Invoice/Memo inputs: wrapper 40px, padding-left 12px (or 0 inside a padded wrapper), color rgb(221,221,229)."
+    },
+    {
+      "id": "billpay.i-currency-input-align",
+      "title": "Currency inputs align and format differently",
+      "detail": "The same $220 bill amount is edited in three currency inputs that do not match: the bill panel shows '220.00', the Amount step shows '220' left-aligned, and the line-item Unit price shows '220' right-aligned.",
+      "nodeIds": [
+        "billpay.pay-amount",
+        "billpay.pay-multiple-gl",
+        "billpay.bill-panel-edit"
+      ],
+      "category": "component",
+      "severity": "low",
+      "evidence": "Bill panel edit input[placeholder='0.00'] value '220.00'; Amount step input[name^=amount] value '220', placeholder '0.00', text-align start; line item input[name^=lineitem-amount] value '220', placeholder '0.00', text-align right; all 15px."
+    },
+    {
+      "id": "billpay.i-create-recipient-cta",
+      "title": "Create recipient shown as a link in one state and a button in another",
+      "detail": "With a matched recipient, 'Create recipient' is an underlined inline link; with no match it is a full-width 50px secondary button.",
+      "nodeIds": [
+        "billpay.pay-recipient-match",
+        "billpay.upload-no-match"
+      ],
+      "category": "component",
+      "severity": "low",
+      "evidence": "No-match: BUTTON height 50px, width 560px, radius 8px, background rgba(180,183,200,0.12); matched: BUTTON 20px tall, color rgb(141,164,245), text-decoration underline, font-size 13.3333px (browser default, not the 15px body size)."
+    },
+    {
+      "id": "billpay.i-date-input-label",
+      "title": "Invoice date input labeled as due date",
+      "detail": "In bill edit mode both date inputs use the placeholder/accessible name 'Select due date', including the Invoice date field.",
+      "nodeIds": [
+        "billpay.bill-panel-edit"
+      ],
+      "category": "a11y",
+      "severity": "low",
+      "evidence": "Edit-mode inputs: input[placeholder='Select due date'] value 'Apr 19, 2025' (Due date) and input[placeholder='Select due date'] value 'Apr 18, 2025' (Invoice date); amount input named only by placeholder '0.00'."
+    },
+    {
+      "id": "billpay.i-pay-dialog-name",
+      "title": "Hidden 'Upload an attachment' heading precedes every pay-flow step",
+      "detail": "The drag-and-drop overlay's h2 'Upload an attachment' sits in the accessibility tree on every pay-flow step, before the visible step title, so screen readers announce it as the page's first heading.",
+      "nodeIds": [
+        "billpay.pay-recipient-match",
+        "billpay.pay-amount",
+        "billpay.pay-review"
+      ],
+      "category": "a11y",
+      "severity": "low",
+      "evidence": "Snapshot on /send-money/pay/recipient-match: heading 'Upload an attachment' [level=2] then heading 'Recipient match' [level=1]; the h2 is inside ._fullScreenOverlay with opacity 0 and pointer-events none, no aria-hidden."
+    },
+    {
+      "id": "billpay.i-filter-all-time",
+      "title": "Date filter says 'All time' but shows a start date",
+      "detail": "The Accounting Filters panel shows 'All time' selected while the From field reads 'Jun 17, 2026'.",
+      "nodeIds": [
+        "billpay.accounting-filters"
+      ],
+      "category": "copy",
+      "severity": "low",
+      "evidence": "Filters panel: select value 'All time'; input 'Start date' value 'Jun 17, 2026'; 'End date' value 'Today'."
+    },
+    {
+      "id": "billpay.i-gl-column-truncation",
+      "title": "GL Code column clipped in the accounting table",
+      "detail": "The GL Code picker is cut off by the sticky Actions column, showing '215 - A' and 'Mercur' with no ellipsis.",
+      "nodeIds": [
+        "billpay.accounting-workbench",
+        "billpay.accounting-sync-errors",
+        "billpay.accounting-exported"
+      ],
+      "category": "layout",
+      "severity": "medium",
+      "evidence": "GL Code header left=1258px, width=240px (position static); Actions header left=1330px, width=110px, position sticky, leaving ~72px of GL Code visible; cells read 'Mercur' on the Sync Error tab."
+    },
+    {
+      "id": "billpay.i-sort-icon",
+      "title": "Different sort indicators in Bill Pay and Accounting tables",
+      "detail": "Bill Pay's 'Last updated' header uses a chevron-down, Accounting's 'Date (PDT)' header uses a filled caret.",
+      "nodeIds": [
+        "billpay.index",
+        "billpay.accounting-workbench"
+      ],
+      "category": "iconography",
+      "severity": "low",
+      "evidence": "Bill Pay th 'Last updated' svg data-icon='chevron-down'; Accounting th 'Date (PDT)' svg data-icon='caret-down'."
+    },
+    {
+      "id": "billpay.i-rule-operator-dup",
+      "title": "Amount rules print the comparison operator twice",
+      "detail": "In the rules table each condition has a connector chip ('has', '=', '>') that fades in on hover. Text rules read 'has AWS', but amount rules already prefix the value with the operator, so the row reads '> > $500.00' and '< < $2,000.00' when hovered and in its accessible name.",
+      "nodeIds": [
+        "billpay.categorization-rules",
+        "billpay.rule-deleted"
+      ],
+      "category": "data-format",
+      "severity": "low",
+      "evidence": "Condition cell accessible text 'has AWS', '> > $500.00', '= Facebook < < $2,000.00'; first '>' SPAN sits in ._connectorBadge with opacity 0 (1 on row hover), second '>' is part of the 15px amount text."
+    },
+    {
+      "id": "billpay.i-utc-dates",
+      "title": "Bill Pay shows tomorrow’s date while Accounting shows today",
+      "detail": "With the browser in Pacific time on Sep 24 at 10:11 PM, Bill Pay stamps everything Sep 25 (Last updated, Paid on, default Send on) while Accounting says 'Uploaded at 10:11 PM PDT, Sep 24, 2026' and the recipient card says 'Last paid on Sep 24, 2026'. Bill Pay appears to format dates in UTC without saying so; Accounting labels its column 'Date (PDT)'.",
+      "nodeIds": [
+        "billpay.index",
+        "billpay.paid",
+        "billpay.pay-amount",
+        "billpay.pay-recipient-match",
+        "billpay.accounting-settings"
+      ],
+      "category": "data-format",
+      "severity": "medium",
+      "evidence": "Browser Date(): 'Thu Sep 24 2026 22:11 GMT-0700 (PDT)'; inbox 'Last updated' cells 'Sep 25'; Paid rows 'Sep 25'; Send on input 'Sep 25, 2026'; GL codes 'Uploaded at 10:11 PM PDT, Sep 24, 2026'; recipient match 'Last paid on Sep 24, 2026'."
+    },
+    {
+      "id": "billpay.i-feedback-badge",
+      "title": "Feedback button is built from the status badge",
+      "detail": "The Feedback control next to the Bill Pay title uses the same badge component as the Overdue status (20px, 4px radius, 12px text), while the header actions beside it are 32px pill buttons. It reads as a label, not a button.",
+      "nodeIds": [
+        "billpay.index",
+        "billpay.feedback-panel"
+      ],
+      "category": "component",
+      "severity": "low",
+      "evidence": "Feedback BUTTON height 20px containing SPAN._badge (background rgba(119,190,207,0.2), radius 4px, padding 0 8px) and 12px text; 'Upload bill' BUTTON 32px, radius 9999px, padding 4px 16px 4px 12px, 15px text; Overdue badge 20px, radius 4px, padding 0 8px, 12px."
+    }
+  ],
+  "blocked": []
+}

@@ -1,0 +1,1183 @@
+{
+ "area": "books",
+ "title": "Books",
+ "nodes": [
+  {
+   "id": "books.index",
+   "title": "Books signup",
+   "url": "/books/signup",
+   "image": "screens/books/01-index.png",
+   "kind": "page",
+   "note": "Books landing reached from the Banking/Books toggle: marketing hero, Accounting basis (Cash/Accrual) segmented control, Chart of accounts select, and Try Mercury Books CTA. Sidebar items are dimmed until Books is set up."
+  },
+  {
+   "id": "books.basis-tooltip",
+   "title": "Accounting basis help tooltip",
+   "url": "/books/signup",
+   "image": "screens/books/02-basis-tooltip.png",
+   "kind": "popover",
+   "note": "Hovering the info icon next to Accounting basis explains Cash vs Accrual in two paragraphs."
+  },
+  {
+   "id": "books.coa-dropdown",
+   "title": "Chart of accounts dropdown",
+   "url": "/books/signup",
+   "image": "screens/books/03-coa-dropdown.png",
+   "kind": "menu",
+   "note": "Two options: Default (Recommended) and Import template."
+  },
+  {
+   "id": "books.coa-preview",
+   "title": "Chart of accounts preview",
+   "url": "/books/signup",
+   "image": "screens/books/04-coa-preview.png",
+   "kind": "modal",
+   "note": "Eye icon opens a modal table of the default chart: Ledger code, Ledger account, Type, Subtype, Debit / credit, each sortable, with a copy button on hover."
+  },
+  {
+   "id": "books.setup-transition",
+   "title": "Creating your books",
+   "url": "/books/signup",
+   "image": "screens/books/05-setup-transition.png",
+   "kind": "form-state",
+   "note": "After Try Mercury Books the form fades out to the starfield background with a \"Creating your books\" spinner chip before redirecting to the Books home."
+  },
+  {
+   "id": "books.home-setup-popover",
+   "title": "Books home with setup spotlight",
+   "url": "/books/books-3",
+   "image": "screens/books/06-home-setup-popover.png",
+   "kind": "popover",
+   "note": "First landing on the Books home shows a \"Finish setting up Books\" spotlight anchored to the Finalize setup chip."
+  },
+  {
+   "id": "books.home",
+   "title": "Books home",
+   "url": "/books/books-3",
+   "image": "screens/books/07-home.png",
+   "kind": "page",
+   "note": "Company dashboard after dismissing the spotlight: date range timeline (Jun 25 - Sep 25), Finalize setup chip, Cash / Expenses / Revenue columns with net cash flow, coverage, trend charts and By ledger account breakdowns; header has Add, Search, Keyboard shortcuts and avatar."
+  },
+  {
+   "id": "books.finalize-step1",
+   "title": "Finalize setup 1 of 3: linked accounts",
+   "url": "/books/books-3",
+   "image": "screens/books/08-finalize-setup.png",
+   "kind": "modal",
+   "note": "Add other bank or credit accounts: list of linked external accounts with checkmarks and a + to link more."
+  },
+  {
+   "id": "books.finalize-step2",
+   "title": "Finalize setup: advancing from step 1",
+   "url": "/books/books-3",
+   "image": "screens/books/09-finalize-step2.png",
+   "kind": "form-state",
+   "note": "Right after Next on step 1 the modal keeps showing the linked-accounts list while the Next button turns into a loading pill. Step 2 (Add payment or payroll integrations: Stripe, PayPal, Gusto, each \"Set up on <provider>’s site\") followed; its OAuth tiles were not opened."
+  },
+  {
+   "id": "books.finalize-step3",
+   "title": "Finalize setup: loading step 3",
+   "url": "/books/books-3",
+   "image": "screens/books/10-finalize-step3.png",
+   "kind": "form-state",
+   "note": "Transition into step 3 shows \"Finalize setup 3 of 3\" with an empty body and a three-dot loader before the accountant options appear."
+  },
+  {
+   "id": "books.finalize-invite",
+   "title": "Invite my accountant selected",
+   "url": "/books/books-3",
+   "image": "screens/books/11-invite-accountant.png",
+   "kind": "form-state",
+   "note": "Choosing Invite my accountant reveals a Team member select pre-filled with Xavier Xyloto."
+  },
+  {
+   "id": "books.finalize-done",
+   "title": "Setup complete",
+   "url": "/books/books-3",
+   "image": "screens/books/12-setup-complete.png",
+   "kind": "confirmation",
+   "note": "\"You’re all set - We’ve invited your accountant to your Books workspace.\" while the header still reads Finalize setup 3 of 3 with a spinner."
+  },
+  {
+   "id": "books.add-menu",
+   "title": "Add menu",
+   "url": "/books/books-3",
+   "image": "screens/books/13-add-menu.png",
+   "kind": "menu",
+   "note": "Global Add menu: Journal entry, Invoice, Bill, Rule, Tag; Import: Transactions, Journal entries; plus Account, Ledger account, Customer, Vendor."
+  },
+  {
+   "id": "books.je-create",
+   "title": "Create journal entry drawer",
+   "url": "/books/books-3",
+   "image": "screens/books/14-new-journal-entry.png",
+   "kind": "drawer",
+   "note": "Right drawer with Date, Description and a spreadsheet-style Line items grid (Ledger account, Debit, Credit, Memo, Tags) with two empty lines and totals row."
+  },
+  {
+   "id": "books.je-empty-save",
+   "title": "Journal entry empty-save error",
+   "url": "/books/books-3",
+   "image": "screens/books/15-journal-entry-empty-save.png",
+   "kind": "validation-error",
+   "note": "Saving the blank entry shows a single \"Please complete all required fields.\" line under the grid; no field is marked."
+  },
+  {
+   "id": "books.je-ledger-picker",
+   "title": "Ledger account picker",
+   "url": "/books/books-3",
+   "image": "screens/books/16-je-ledger-picker.png",
+   "kind": "menu",
+   "note": "Editing a Ledger account cell opens a narrow grouped combobox; typing \"Rent\" ranks Other Current Assets first and the exact Rent match last."
+  },
+  {
+   "id": "books.je-date-picker",
+   "title": "Journal entry date picker",
+   "url": "/books/books-3",
+   "image": "screens/books/17-je-date-picker.png",
+   "kind": "popover",
+   "note": "Calendar popover for the Date field, defaulting to Sep 25, 2026."
+  },
+  {
+   "id": "books.je-filled",
+   "title": "Balanced journal entry",
+   "url": "/books/books-3",
+   "image": "screens/books/18-je-filling.png",
+   "kind": "form-state",
+   "note": "Rent debit 1,250.00 and Cash and Cash Equivalents credit 1,250.00, totals balanced."
+  },
+  {
+   "id": "books.je-detail",
+   "title": "Journal entry created",
+   "url": "/books/books-3",
+   "image": "screens/books/19-je-saved.png",
+   "kind": "confirmation",
+   "note": "After Save a \"Successfully created the journal entry\" toast appears and the drawer turns into the read-only entry with edit, delete and duplicate icons."
+  },
+  {
+   "id": "books.command",
+   "title": "Command",
+   "url": "/books/books-3/command",
+   "image": "screens/books/20-command.png",
+   "kind": "page",
+   "note": "AI command page: \"Ask anything about your money\" prompt box with suggestion chips Issue new card and Compare monthly balances."
+  },
+  {
+   "id": "books.transactions",
+   "title": "Transactions",
+   "url": "/books/books-3/transactions",
+   "image": "screens/books/21-transactions.png",
+   "kind": "page",
+   "note": "Tabs All / Bank / Credit card / Payments / Loans, dismissible \"Categorization that keeps up with you\" explainer, Review / Filters / Categorization method controls and a spreadsheet grid (Date, Account, Ledger account, Description, Tags, Amount)."
+  },
+  {
+   "id": "books.invoices",
+   "title": "Invoices",
+   "url": "/books/books-3/invoices",
+   "image": "screens/books/22-invoices.png",
+   "kind": "page",
+   "note": "Warning banner \"You have 3 non-USD invoices that won’t sync to Books…\" with View invoices; grid of invoices with Draft, Overdue, Paid - Needs Action, Cancelled, Processing, Partially Paid, Paid and Open badges."
+  },
+  {
+   "id": "books.customers",
+   "title": "Customers",
+   "url": "/books/books-3/invoices/customers",
+   "image": "screens/books/23-invoices-customers.png",
+   "kind": "page",
+   "note": "Customer list (Name, Email) under Invoices, with Add a customer split button."
+  },
+  {
+   "id": "books.bills",
+   "title": "Bills",
+   "url": "/books/books-3/bills",
+   "image": "screens/books/24-bills.png",
+   "kind": "page",
+   "note": "Bill grid (Bill #, Vendor, Date, Due date, Status, Amount, Outstanding) with Paid, Open, Draft, Cancelled, Partially Paid badges; one bill has an em dash for its number."
+  },
+  {
+   "id": "books.vendors",
+   "title": "Vendors",
+   "url": "/books/books-3/bills/vendors",
+   "image": "screens/books/25-bills-vendors.png",
+   "kind": "page",
+   "note": "Vendor list (Name, Email, Type, Address) with info banner \"Payment recipients automatically appear as vendors in Books.\" and Add a vendor."
+  },
+  {
+   "id": "books.payroll",
+   "title": "Payroll (empty)",
+   "url": "/books/books-3/payroll",
+   "image": "screens/books/26-payroll.png",
+   "kind": "empty-state",
+   "note": "Empty state \"Payroll account will show up here when it's connected\" with Connect payroll CTA, drawn over grey skeleton rows of the pay-run grid."
+  },
+  {
+   "id": "books.journal-entries",
+   "title": "Manual Journal Entries",
+   "url": "/books/books-3/manual-journal-entries",
+   "image": "screens/books/27-manual-journal-entries.png",
+   "kind": "page",
+   "note": "Tabs All / Assets / Liabilities / Equity / Revenues / Expenses; grid with Date created, Date, Description, Debit and Credit ledger account, Amount. The new \"September rent accrual\" entry appears in row 12."
+  },
+  {
+   "id": "books.balance-sheet",
+   "title": "Balance Sheet",
+   "url": "/books/books-3/reports/balance-sheet",
+   "image": "screens/books/28-balance-sheet.png",
+   "kind": "page",
+   "note": "Working capital line chart and stacked asset/liability/equity bars, then Filters, frequency (Monthly), year and month chips over an expandable statement grid ending in Sep MTD."
+  },
+  {
+   "id": "books.profit-loss",
+   "title": "Profit & Loss",
+   "url": "/books/books-3/reports/profit-and-loss",
+   "image": "screens/books/29-profit-and-loss.png",
+   "kind": "page",
+   "note": "Revenue / Expenses / Net profit bars and a monthly P&L grid with Total column."
+  },
+  {
+   "id": "books.cash-flow",
+   "title": "Cash Flow Analysis",
+   "url": "/books/books-3/reports/cash-flow-analysis",
+   "image": "screens/books/30-cash-flow-analysis.png",
+   "kind": "page",
+   "note": "Ending balance line and Movement bars, then a per-account monthly grid starting with Starting Balance."
+  },
+  {
+   "id": "books.general-ledger",
+   "title": "General Ledger",
+   "url": "/books/books-3/reports/general-ledger",
+   "image": "screens/books/31-general-ledger.png",
+   "kind": "page",
+   "note": "This Month filter, grid of Date, Ledger account, Contra accounts, Memo, Vendor / customer, Debit, Credit."
+  },
+  {
+   "id": "books.reconciliation",
+   "title": "Reconciliation",
+   "url": "/books/books-3/reconciliations/source-account-10/reconciliation/ledger-12-2026-8",
+   "image": "screens/books/32-reconciliations.png",
+   "kind": "page",
+   "note": "Opens on Jupiter Checking 4455 (Auto-reconciled) for Aug: month chips with sparkle icons, Reconciled / Ending balance and Difference $0.00, transaction grid with running Balance."
+  },
+  {
+   "id": "books.chart-of-accounts",
+   "title": "Chart of Accounts",
+   "url": "/books/books-3/chart-of-accounts",
+   "image": "screens/books/33-chart-of-accounts.png",
+   "kind": "page",
+   "note": "Tabs All / Assets / Liabilities / Equity / Revenues / Expenses; ledger grid with code, name, type, subtype, Debit / credit, opening balance; linked-bank rows carry a link icon."
+  },
+  {
+   "id": "books.rules",
+   "title": "Rules",
+   "url": "/books/books-3/rules",
+   "image": "screens/books/34-rules.png",
+   "kind": "page",
+   "note": "Ordered categorization rules: Input, Condition, Outcome, Last applied, drag handles; one rule flagged Invalid because its ledger was deleted."
+  },
+  {
+   "id": "books.accounts",
+   "title": "Accounts",
+   "url": "/books/books-3/accounts",
+   "image": "screens/books/35-accounts.png",
+   "kind": "page",
+   "note": "Tabs All / Mercury / Bank / Credit / Payments / Payroll; account list with Auto-synced or Manual account badges and Bank / Credit type."
+  },
+  {
+   "id": "books.books-details",
+   "title": "Books Details",
+   "url": "/books/books-3/books-details",
+   "image": "screens/books/36-books-details.png",
+   "kind": "page",
+   "note": "Settings: Start date Sep 1, 2023, Accounting basis Cash, Close date Aug 25, 2026, Books subscription Free trial, Request to be matched with an accounting partner."
+  },
+  {
+   "id": "books.tags",
+   "title": "Tags",
+   "url": "/books/books-3/tags",
+   "image": "screens/books/37-tags.png",
+   "kind": "page",
+   "note": "Tag list of #Engineering, #Marketing, #Operations, #Product, #Sales in the Department group, all Active."
+  },
+  {
+   "id": "books.rule-create",
+   "title": "Create categorization rule",
+   "url": "/books/books-3/rules",
+   "image": "screens/books/38-create-rule.png",
+   "kind": "drawer",
+   "note": "Drawer with empty If and Then selects. Save renders at opacity 0.4 but is not disabled; clicking it with the form empty does nothing and shows no message."
+  },
+  {
+   "id": "books.rule-condition-menu",
+   "title": "Rule condition menu",
+   "url": "/books/books-3/rules",
+   "image": "screens/books/39-rule-condition-menu.png",
+   "kind": "menu",
+   "note": "If options with helper text: Amount, Description, To/From, Card, Team member, Category."
+  },
+  {
+   "id": "books.rule-ledger-menu",
+   "title": "Rule outcome ledger picker",
+   "url": "/books/books-3/rules",
+   "image": "screens/books/40-rule-ledger-menu.png",
+   "kind": "menu",
+   "note": "Then select filtered by \"Software\", grouped under Expense."
+  },
+  {
+   "id": "books.rule-filled",
+   "title": "Rule filled",
+   "url": "/books/books-3/rules",
+   "image": "screens/books/41-rule-filled.png",
+   "kind": "form-state",
+   "note": "If Description contains Figma, then Software and Subscriptions; helper \"Matches if description contains this text (case-insensitive).\""
+  },
+  {
+   "id": "books.rule-saved",
+   "title": "Rule saved",
+   "url": "/books/books-3/rules",
+   "image": "screens/books/42-rule-saved.png",
+   "kind": "confirmation",
+   "note": "Drawer switches to read-only CATEGORIZATION RULE: If Description has Figma then 54020 - Software and Subscriptions, with edit and delete icons."
+  },
+  {
+   "id": "books.transaction-drawer",
+   "title": "Transaction detail",
+   "url": "/books/books-3/transactions",
+   "image": "screens/books/43-transaction-drawer.png",
+   "kind": "drawer",
+   "note": "$14,934.67 Money out, Transaction / Journal Entry tabs, account, type, date, description, memo, line items and ACH metadata; the grid behind narrows so Ledger cells show \"Un…\" and \"C\"."
+  },
+  {
+   "id": "books.transaction-je-tab",
+   "title": "Transaction journal entry tab",
+   "url": "/books/books-3/transactions",
+   "image": "screens/books/44-transaction-je-tab.png",
+   "kind": "drawer",
+   "note": "Journal Entry tab: Date, Description and a \"Line entries\" debit/credit table (Ops / Payroll credit, Uncategorized Cash Outflow debit)."
+  },
+  {
+   "id": "books.review-menu",
+   "title": "Review filter menu",
+   "url": "/books/books-3/transactions",
+   "image": "screens/books/45-review-menu.png",
+   "kind": "menu",
+   "note": "Review dropdown with To review and Reviewed radio items."
+  },
+  {
+   "id": "books.to-review",
+   "title": "To review filter applied",
+   "url": "/books/books-3/transactions",
+   "image": "screens/books/46-to-review-filtered.png",
+   "kind": "form-state",
+   "note": "Control reads \"To review (7975)\", Filters becomes \"Filters (1)\"; the menu stays open after picking."
+  },
+  {
+   "id": "books.invoice-drawer",
+   "title": "Invoice detail",
+   "url": "/books/books-3/invoices",
+   "image": "screens/books/47-invoice-drawer.png",
+   "kind": "drawer",
+   "note": "INV-OVERDUE-001: Details / Payments / Journal Entries tabs, Overdue badge, amount $4,200.00, dates Aug 11, 2026 and Sep 10, 2026, line items, outstanding balance, attachment dropzone."
+  },
+  {
+   "id": "books.bill-drawer",
+   "title": "Bill detail",
+   "url": "/books/books-3/bills",
+   "image": "screens/books/48-bill-drawer.png",
+   "kind": "drawer",
+   "note": "BILL-001 (Open, $8,250.55): Due date shows \"-\" although the list shows 08/31/2026; line items table has no Amount column value in Total."
+  },
+  {
+   "id": "books.search",
+   "title": "Search or jump to",
+   "url": "/books/books-3",
+   "image": "screens/books/49-search.png",
+   "kind": "modal",
+   "note": "Global search with All / Pages / Accounts / Ledgers / Transactions / Journal entries / Invoices / Bills chips. Query \"rent\" lists three \"Cur-rent\" ledgers, recent items and transactions, but not the Rent ledger."
+  },
+  {
+   "id": "books.shortcuts",
+   "title": "Keyboard shortcuts",
+   "url": "/books/books-3",
+   "image": "screens/books/50-keyboard-shortcuts.png",
+   "kind": "modal",
+   "note": "Searchable shortcut sheet: General (Search everywhere ⌘K, Show keyboard shortcuts ⌘S) and Grid shortcuts."
+  },
+  {
+   "id": "books.tag-create",
+   "title": "Create tag drawer",
+   "url": "/books/books-3/tags",
+   "image": "screens/books/51-create-tag.png",
+   "kind": "drawer",
+   "note": "Create tag: Tag group Department, Tag name field with # prefix."
+  },
+  {
+   "id": "books.tag-empty-save",
+   "title": "Tag empty-save error",
+   "url": "/books/books-3/tags",
+   "image": "screens/books/52-create-tag-empty-save.png",
+   "kind": "validation-error",
+   "note": "Inline error under the field: \"Tag name cannot be empty\" in pink, field outlined."
+  },
+  {
+   "id": "books.tag-created",
+   "title": "Tag created",
+   "url": "/books/books-3/tags",
+   "image": "screens/books/53-tag-created.png",
+   "kind": "toast",
+   "note": "\"Tag created\" toast; #Finance appears in the list and the drawer shows the read-only tag."
+  },
+  {
+   "id": "books.ledger-drawer",
+   "title": "Ledger account detail",
+   "url": "/books/books-3/chart-of-accounts",
+   "image": "screens/books/54-ledger-account-drawer.png",
+   "kind": "drawer",
+   "note": "\"10003 — Citi Checking 9384\": code, account, type, subtype, Debit or credit, Parent (em dash), Opening balance $0.00."
+  },
+  {
+   "id": "books.report-frequency",
+   "title": "Report frequency menu",
+   "url": "/books/books-3/reports/balance-sheet",
+   "image": "screens/books/55-report-frequency-menu.png",
+   "kind": "menu",
+   "note": "Frequency options Annual, Quarterly, Monthly, Custom."
+  },
+  {
+   "id": "books.balance-sheet-quarterly",
+   "title": "Balance Sheet by quarter",
+   "url": "/books/books-3/reports/balance-sheet",
+   "image": "screens/books/56-balance-sheet-quarterly.png",
+   "kind": "page",
+   "note": "Quarterly view: Q1 2026, Q2 2026, Q3 QTD columns and Q1-Q3 chips."
+  },
+  {
+   "id": "books.reconciliation-account-menu",
+   "title": "Reconciliation account picker",
+   "url": "/books/books-3/reconciliations",
+   "image": "screens/books/57-reconciliation-account-menu.png",
+   "kind": "menu",
+   "note": "Searchable account list grouped Bank accounts / Credit cards, each with Auto-reconciled or Not reconciled."
+  },
+  {
+   "id": "books.reconciliation-pending",
+   "title": "Account needing reconciliation",
+   "url": "/books/books-3/reconciliations/source-account-citi-checking",
+   "image": "screens/books/58-reconciliation-not-reconciled.png",
+   "kind": "page",
+   "note": "Citi Checking 9384, Not reconciled: \"Sep 1, 2023 - Now\" with Needs reconciliation badge, Start reconciliation and Import transactions."
+  },
+  {
+   "id": "books.avatar-menu",
+   "title": "Avatar menu",
+   "url": "/books/books-3/reconciliations/source-account-citi-checking",
+   "image": "screens/books/59-avatar-menu.png",
+   "kind": "menu",
+   "note": "Jane Black: Profile, Notifications, Security, Privacy, Perks, Appearance (System default), Log out (not clicked)."
+  },
+  {
+   "id": "books.home-returning",
+   "title": "Books home on return",
+   "url": "/books/books-3?endDate=08-31-2026&startDate=08-01-2026",
+   "image": "screens/books/60-home-returning.png",
+   "kind": "page",
+   "note": "After toggling Banking then Books again, the toggle lands on the dashboard (not signup) with the range reset to \"Last month\" (Aug 1-31); the org switcher now shows a chevron instead of the Pro badge."
+  }
+ ],
+ "edges": [
+  {
+   "from": "home.index",
+   "to": "books.index",
+   "label": "Toggle Books"
+  },
+  {
+   "from": "books.index",
+   "to": "books.basis-tooltip",
+   "label": "Hover Accounting basis info"
+  },
+  {
+   "from": "books.index",
+   "to": "books.coa-dropdown",
+   "label": "Open Chart of accounts"
+  },
+  {
+   "from": "books.index",
+   "to": "books.coa-preview",
+   "label": "Click Preview chart of accounts"
+  },
+  {
+   "from": "books.coa-preview",
+   "to": "books.index",
+   "label": "Close preview"
+  },
+  {
+   "from": "books.index",
+   "to": "books.setup-transition",
+   "label": "Click Try Mercury Books"
+  },
+  {
+   "from": "books.setup-transition",
+   "to": "books.home-setup-popover",
+   "label": "Books created"
+  },
+  {
+   "from": "books.home-setup-popover",
+   "to": "books.home",
+   "label": "Dismiss spotlight"
+  },
+  {
+   "from": "books.home",
+   "to": "books.finalize-step1",
+   "label": "Click Finalize setup"
+  },
+  {
+   "from": "books.finalize-step1",
+   "to": "books.finalize-step2",
+   "label": "Next"
+  },
+  {
+   "from": "books.finalize-step2",
+   "to": "books.finalize-step3",
+   "label": "Next"
+  },
+  {
+   "from": "books.finalize-step3",
+   "to": "books.finalize-invite",
+   "label": "Choose Invite my accountant"
+  },
+  {
+   "from": "books.finalize-invite",
+   "to": "books.finalize-done",
+   "label": "Complete"
+  },
+  {
+   "from": "books.finalize-done",
+   "to": "books.home",
+   "label": "Close"
+  },
+  {
+   "from": "books.home",
+   "to": "books.add-menu",
+   "label": "Click Add"
+  },
+  {
+   "from": "books.add-menu",
+   "to": "books.je-create",
+   "label": "Journal entry"
+  },
+  {
+   "from": "books.je-create",
+   "to": "books.je-empty-save",
+   "label": "Save with no lines"
+  },
+  {
+   "from": "books.je-create",
+   "to": "books.je-ledger-picker",
+   "label": "Edit Ledger account cell"
+  },
+  {
+   "from": "books.je-create",
+   "to": "books.je-date-picker",
+   "label": "Open Date"
+  },
+  {
+   "from": "books.je-ledger-picker",
+   "to": "books.je-filled",
+   "label": "Pick accounts, enter amounts"
+  },
+  {
+   "from": "books.je-date-picker",
+   "to": "books.je-filled",
+   "label": "Pick Sep 24"
+  },
+  {
+   "from": "books.je-filled",
+   "to": "books.je-detail",
+   "label": "Save"
+  },
+  {
+   "from": "books.home",
+   "to": "books.command",
+   "label": "Sidebar: Command"
+  },
+  {
+   "from": "books.home",
+   "to": "books.transactions",
+   "label": "Sidebar: Transactions"
+  },
+  {
+   "from": "books.home",
+   "to": "books.invoices",
+   "label": "Sidebar: Invoices"
+  },
+  {
+   "from": "books.home",
+   "to": "books.bills",
+   "label": "Sidebar: Bills"
+  },
+  {
+   "from": "books.home",
+   "to": "books.payroll",
+   "label": "Sidebar: Payroll"
+  },
+  {
+   "from": "books.home",
+   "to": "books.journal-entries",
+   "label": "Sidebar: Journal Entries"
+  },
+  {
+   "from": "books.home",
+   "to": "books.balance-sheet",
+   "label": "Sidebar: Reports"
+  },
+  {
+   "from": "books.home",
+   "to": "books.reconciliation",
+   "label": "Sidebar: Reconciliation"
+  },
+  {
+   "from": "books.home",
+   "to": "books.chart-of-accounts",
+   "label": "Sidebar: Chart of Accounts"
+  },
+  {
+   "from": "books.home",
+   "to": "books.rules",
+   "label": "Sidebar: Rules"
+  },
+  {
+   "from": "books.home",
+   "to": "books.accounts",
+   "label": "Sidebar: Accounts"
+  },
+  {
+   "from": "books.home",
+   "to": "books.books-details",
+   "label": "Sidebar: Settings"
+  },
+  {
+   "from": "books.invoices",
+   "to": "books.customers",
+   "label": "Sidebar: Customers"
+  },
+  {
+   "from": "books.bills",
+   "to": "books.vendors",
+   "label": "Sidebar: Vendors"
+  },
+  {
+   "from": "books.balance-sheet",
+   "to": "books.profit-loss",
+   "label": "Sidebar: Profit & Loss"
+  },
+  {
+   "from": "books.profit-loss",
+   "to": "books.cash-flow",
+   "label": "Sidebar: Cash Flow Analysis"
+  },
+  {
+   "from": "books.cash-flow",
+   "to": "books.general-ledger",
+   "label": "Sidebar: General Ledger"
+  },
+  {
+   "from": "books.books-details",
+   "to": "books.tags",
+   "label": "Sidebar: Tags"
+  },
+  {
+   "from": "books.je-detail",
+   "to": "books.journal-entries",
+   "label": "Entry listed in Journal Entries"
+  },
+  {
+   "from": "books.rules",
+   "to": "books.rule-create",
+   "label": "Click Create rule"
+  },
+  {
+   "from": "books.rule-create",
+   "to": "books.rule-condition-menu",
+   "label": "Open If select"
+  },
+  {
+   "from": "books.rule-condition-menu",
+   "to": "books.rule-ledger-menu",
+   "label": "Pick Description, type value, open Then"
+  },
+  {
+   "from": "books.rule-ledger-menu",
+   "to": "books.rule-filled",
+   "label": "Pick Software and Subscriptions"
+  },
+  {
+   "from": "books.rule-filled",
+   "to": "books.rule-saved",
+   "label": "Save"
+  },
+  {
+   "from": "books.transactions",
+   "to": "books.transaction-drawer",
+   "label": "Open row"
+  },
+  {
+   "from": "books.transaction-drawer",
+   "to": "books.transaction-je-tab",
+   "label": "Journal Entry tab"
+  },
+  {
+   "from": "books.transactions",
+   "to": "books.review-menu",
+   "label": "Click Review"
+  },
+  {
+   "from": "books.review-menu",
+   "to": "books.to-review",
+   "label": "To review"
+  },
+  {
+   "from": "books.invoices",
+   "to": "books.invoice-drawer",
+   "label": "Open INV-OVERDUE-001"
+  },
+  {
+   "from": "books.bills",
+   "to": "books.bill-drawer",
+   "label": "Open BILL-001"
+  },
+  {
+   "from": "books.home",
+   "to": "books.search",
+   "label": "Click Search"
+  },
+  {
+   "from": "books.home",
+   "to": "books.shortcuts",
+   "label": "Click Keyboard shortcuts"
+  },
+  {
+   "from": "books.home",
+   "to": "books.avatar-menu",
+   "label": "Click avatar"
+  },
+  {
+   "from": "books.tags",
+   "to": "books.tag-create",
+   "label": "Click Create tag"
+  },
+  {
+   "from": "books.tag-create",
+   "to": "books.tag-empty-save",
+   "label": "Save with empty name"
+  },
+  {
+   "from": "books.tag-empty-save",
+   "to": "books.tag-created",
+   "label": "Enter Finance, Save"
+  },
+  {
+   "from": "books.chart-of-accounts",
+   "to": "books.ledger-drawer",
+   "label": "Open 10003 row"
+  },
+  {
+   "from": "books.balance-sheet",
+   "to": "books.report-frequency",
+   "label": "Open frequency select"
+  },
+  {
+   "from": "books.report-frequency",
+   "to": "books.balance-sheet-quarterly",
+   "label": "Quarterly"
+  },
+  {
+   "from": "books.reconciliation",
+   "to": "books.reconciliation-account-menu",
+   "label": "Open account picker"
+  },
+  {
+   "from": "books.reconciliation-account-menu",
+   "to": "books.reconciliation-pending",
+   "label": "Pick Citi Checking 9384"
+  },
+  {
+   "from": "books.home",
+   "to": "home.index",
+   "label": "Toggle Banking"
+  },
+  {
+   "from": "home.index",
+   "to": "books.home-returning",
+   "label": "Toggle Books after setup"
+  },
+  {
+   "from": "books.search",
+   "to": "books.journal-entries",
+   "label": "Open recent item"
+  }
+ ],
+ "journeys": [
+  {
+   "id": "books.j-activate",
+   "name": "Turn on Books",
+   "description": "Switch from Banking to Books, check the default chart of accounts and start Books.",
+   "steps": [
+    "home.index",
+    "books.index",
+    "books.basis-tooltip",
+    "books.coa-preview",
+    "books.setup-transition",
+    "books.home-setup-popover",
+    "books.home"
+   ]
+  },
+  {
+   "id": "books.j-finalize",
+   "name": "Finalize Books setup",
+   "description": "Walk the three-step setup: linked accounts, integrations, accountant invite.",
+   "steps": [
+    "books.home",
+    "books.finalize-step1",
+    "books.finalize-step2",
+    "books.finalize-step3",
+    "books.finalize-invite",
+    "books.finalize-done"
+   ]
+  },
+  {
+   "id": "books.j-journal-entry",
+   "name": "Record a manual journal entry",
+   "description": "Create a balanced rent accrual from the Add menu, hitting the empty-save error first, and find it in the journal.",
+   "steps": [
+    "books.home",
+    "books.add-menu",
+    "books.je-create",
+    "books.je-empty-save",
+    "books.je-ledger-picker",
+    "books.je-date-picker",
+    "books.je-filled",
+    "books.je-detail",
+    "books.journal-entries"
+   ]
+  },
+  {
+   "id": "books.j-review",
+   "name": "Review categorized transactions",
+   "description": "Filter to transactions awaiting review and inspect one transaction and its journal entry.",
+   "steps": [
+    "books.home",
+    "books.transactions",
+    "books.review-menu",
+    "books.to-review",
+    "books.transaction-drawer",
+    "books.transaction-je-tab"
+   ]
+  },
+  {
+   "id": "books.j-rule",
+   "name": "Create a categorization rule",
+   "description": "Route Figma charges to Software and Subscriptions.",
+   "steps": [
+    "books.home",
+    "books.rules",
+    "books.rule-create",
+    "books.rule-condition-menu",
+    "books.rule-ledger-menu",
+    "books.rule-filled",
+    "books.rule-saved"
+   ]
+  },
+  {
+   "id": "books.j-reports",
+   "name": "Read the financial reports",
+   "description": "Move through the four reports and switch the balance sheet to quarterly.",
+   "steps": [
+    "books.home",
+    "books.balance-sheet",
+    "books.report-frequency",
+    "books.balance-sheet-quarterly",
+    "books.profit-loss",
+    "books.cash-flow",
+    "books.general-ledger"
+   ]
+  },
+  {
+   "id": "books.j-reconcile",
+   "name": "Find an account to reconcile",
+   "description": "Switch reconciliation from an auto-reconciled account to one that needs reconciling.",
+   "steps": [
+    "books.home",
+    "books.reconciliation",
+    "books.reconciliation-account-menu",
+    "books.reconciliation-pending"
+   ]
+  },
+  {
+   "id": "books.j-tag",
+   "name": "Create a tag",
+   "description": "Add a Department tag, recovering from the empty-name error.",
+   "steps": [
+    "books.books-details",
+    "books.tags",
+    "books.tag-create",
+    "books.tag-empty-save",
+    "books.tag-created"
+   ]
+  }
+ ],
+ "issues": [
+  {
+   "id": "books.i-bill-due-date",
+   "title": "Bill due date differs between list and detail",
+   "detail": "BILL-001 shows a due date of 08/31/2026 in the Bills grid, but its detail drawer shows no due date. The same bill is past due yet keeps the Open badge, while past-due invoices get Overdue.",
+   "nodeIds": [
+    "books.bills",
+    "books.bill-drawer",
+    "books.invoices"
+   ],
+   "category": "data-format",
+   "severity": "high",
+   "evidence": "Bills row: 'BILL-001 · Debug LLC · 08/31/2026 · 08/31/2026 · Open · 8,250.55'. Drawer field text 'Due date\\n-' (char U+002D). Invoices row: 'INV-OVERDUE-001 · 08/11/2026 · 09/10/2026 · Overdue'."
+  },
+  {
+   "id": "books.i-cmd-s-conflict",
+   "title": "⌘S means both Save and Show keyboard shortcuts",
+   "detail": "The keyboard shortcut sheet assigns ⌘S to Show keyboard shortcuts, while the journal entry, rule and tag drawers advertise ⌘S as Save in their tooltips.",
+   "nodeIds": [
+    "books.shortcuts",
+    "books.je-create",
+    "books.tag-create"
+   ],
+   "category": "interaction",
+   "severity": "medium",
+   "evidence": "Shortcut sheet row 'Show keyboard shortcuts ⌘ S'; drawer tooltip accessible name 'Save Command key Command key S key S'."
+  },
+  {
+   "id": "books.i-fake-disabled-save",
+   "title": "Rule Save looks disabled but is not",
+   "detail": "On an empty Create categorization rule drawer, Save is dimmed like a disabled button, yet it stays enabled for assistive tech and keyboard. Pressing it does nothing and gives no feedback.",
+   "nodeIds": [
+    "books.rule-create"
+   ],
+   "category": "a11y",
+   "severity": "medium",
+   "evidence": "getComputedStyle(Save): opacity '0.4', background-color 'rgb(82, 102, 235)'; button.disabled false; aria-disabled null."
+  },
+  {
+   "id": "books.i-validation-patterns",
+   "title": "Three sibling drawers validate empty forms three ways",
+   "detail": "Journal entry shows one form-level sentence and marks no field. Tag shows an inline field error without a period. Rule shows nothing at all.",
+   "nodeIds": [
+    "books.je-empty-save",
+    "books.tag-empty-save",
+    "books.rule-create"
+   ],
+   "category": "component",
+   "severity": "medium",
+   "evidence": "JE: 'Please complete all required fields.' under the grid. Tag: 'Tag name cannot be empty' (color rgb(252, 146, 180), 12px, weight 400) under the field. Rule: no alert text in the DOM after Save."
+  },
+  {
+   "id": "books.i-ledger-search-ranking",
+   "title": "Exact ledger matches rank below substring matches",
+   "detail": "In the journal entry ledger picker, typing \"Rent\" puts Other Current Assets first and the Rent ledger last. Global search for \"rent\" lists three ledgers that contain \"cur-rent\" and omits Rent.",
+   "nodeIds": [
+    "books.je-ledger-picker",
+    "books.search"
+   ],
+   "category": "interaction",
+   "severity": "medium",
+   "evidence": "Picker options for 'Rent': 'Other Current Assets' [selected], 'Other Non-Current Assets', 'Other Current Liabilities', 'Other Non-Current Liabilities', 'Current Year Earnings', 'Rent'. Search Ledgers group: '15000 - Other Current Assets', '18000 - Other Non-Current Assets', '24900 - Other Current Liabilities'."
+  },
+  {
+   "id": "books.i-date-formats",
+   "title": "Same dates shown in three formats",
+   "detail": "Grids use MM/DD/YYYY, drawers use \"Mon D, YYYY\", and the Rules Last applied column mixes \"Mon D\", MM/DD/YY and \"Never\" in one column.",
+   "nodeIds": [
+    "books.transactions",
+    "books.transaction-drawer",
+    "books.rules",
+    "books.invoice-drawer"
+   ],
+   "category": "data-format",
+   "severity": "medium",
+   "evidence": "Transaction grid '09/27/2026' vs its drawer 'Sep 27, 2026'. Invoice grid '08/11/2026' vs drawer 'Aug 11, 2026'. Rules Last applied cells: 'Sep 25', 'Sep 24', '08/21/25', 'Never'."
+  },
+  {
+   "id": "books.i-money-formats",
+   "title": "Money is formatted differently per surface",
+   "detail": "Amounts drop the currency symbol in grids, show it in drawers and search, round to whole dollars on the dashboard, and use superscript cents in Rules.",
+   "nodeIds": [
+    "books.home",
+    "books.transactions",
+    "books.transaction-drawer",
+    "books.rules",
+    "books.search",
+    "books.journal-entries"
+   ],
+   "category": "data-format",
+   "severity": "medium",
+   "evidence": "Grid '−14,934.67' vs drawer '$14,934.67 Money out'; Journal Entries grid '1,250.00' vs search '$1,250.00'; dashboard 'Rent $519,514'; Rules condition '≥ $100.00' with '.00' raised."
+  },
+  {
+   "id": "books.i-je-default-date",
+   "title": "New journal entries default to tomorrow",
+   "detail": "The Date field of a new journal entry is pre-filled with the UTC date, not the local one. In the evening in the Americas that is tomorrow.",
+   "nodeIds": [
+    "books.je-create",
+    "books.je-date-picker"
+   ],
+   "category": "data-format",
+   "severity": "medium",
+   "evidence": "Browser clock 'Thu Sep 24 2026 21:45:49 GMT-0700'; Date field value 'Sep 25, 2026'; dashboard range label 'Jun 25, 2026 – Tomorrow'."
+  },
+  {
+   "id": "books.i-setup-done-mismatch",
+   "title": "Setup says done while the indicator says 2 of 3",
+   "detail": "After Complete on step 3 the modal says \"You’re all set\" while its header keeps a spinner on \"Finalize setup 3 of 3\" and the chip’s accessible label reports two steps done.",
+   "nodeIds": [
+    "books.finalize-done"
+   ],
+   "category": "data-format",
+   "severity": "medium",
+   "evidence": "Confirmation text '✓ You’re all set' / 'We’ve invited your accountant to your Books workspace.'; header 'Finalize setup 3 of 3'; chip image alt '2 of 3 setup steps complete'."
+  },
+  {
+   "id": "books.i-frequency-aria",
+   "title": "Report frequency listbox marks the wrong option selected",
+   "detail": "With the combobox reading Monthly, the open listbox exposes Annual as the selected option to assistive tech.",
+   "nodeIds": [
+    "books.report-frequency"
+   ],
+   "category": "a11y",
+   "severity": "medium",
+   "evidence": "combobox 'frequency': 'Monthly'; listbox: option 'Annual' [selected], option 'Quarterly', option 'Monthly', option 'Custom'."
+  },
+  {
+   "id": "books.i-canceled-spelling",
+   "title": "Books spells it Cancelled, Banking spells it Canceled",
+   "detail": "Status badges in Books invoices and bills use British \"Cancelled\"; the Banking side uses \"Canceled\" in its toasts, filters and transaction states.",
+   "nodeIds": [
+    "books.invoices",
+    "books.bills",
+    "invoicing.index"
+   ],
+   "category": "copy",
+   "severity": "low",
+   "evidence": "Books badges 'Cancelled' (INV-CANCELLED-001, BILL-CANCELLED-001). Banking invoicing toast 'Item canceled', URL param 'showCanceled=true'."
+  },
+  {
+   "id": "books.i-range-separator",
+   "title": "Same date range uses an en dash and a hyphen",
+   "detail": "The dashboard subtitle and the timeline chip describe the same range with different separators.",
+   "nodeIds": [
+    "books.home"
+   ],
+   "category": "data-format",
+   "severity": "low",
+   "evidence": "Subtitle 'Jun 25, 2026 – Tomorrow' (U+2013); chip 'Jun 25 - Sep 25' (U+002D). Code separators also vary: '10003 — Citi Checking 9384' (drawer title) vs '54020 - Software and Subscriptions' (rule outcome)."
+  },
+  {
+   "id": "books.i-journal-labels",
+   "title": "Journal entries go by four names",
+   "detail": "The same feature is labelled differently in the sidebar, page title, Add menu, create button and search chip.",
+   "nodeIds": [
+    "books.journal-entries",
+    "books.add-menu",
+    "books.search"
+   ],
+   "category": "copy",
+   "severity": "low",
+   "evidence": "Sidebar 'Journal Entries'; h1 'Manual Journal Entries'; Add menu 'Journal entry' / 'Journal entries'; button 'Create journal entry'; search chip 'Journal entries'."
+  },
+  {
+   "id": "books.i-same-concept-labels",
+   "title": "Same fields labelled differently in adjacent views",
+   "detail": "The two tabs of the transaction drawer name the same table differently, and the chart of accounts names the balance side differently in its grid and its drawer.",
+   "nodeIds": [
+    "books.transaction-drawer",
+    "books.transaction-je-tab",
+    "books.ledger-drawer",
+    "books.coa-preview"
+   ],
+   "category": "copy",
+   "severity": "low",
+   "evidence": "Transaction tab 'Line items' vs Journal Entry tab 'Line entries'. Column header 'Debit / credit' vs drawer label 'Debit or credit'. Transactions tab 'Credit card' vs Accounts tab 'Credit'."
+  },
+  {
+   "id": "books.i-create-add-verbs",
+   "title": "Primary buttons mix Create, Add and Add a",
+   "detail": "Each list page names its primary action with a different pattern.",
+   "nodeIds": [
+    "books.invoices",
+    "books.customers",
+    "books.vendors",
+    "books.chart-of-accounts",
+    "books.accounts",
+    "books.rules",
+    "books.tags"
+   ],
+   "category": "copy",
+   "severity": "low",
+   "evidence": "'Create invoice', 'Create bill', 'Create rule', 'Create tag', 'Create journal entry', 'Add a customer', 'Add a vendor', 'Add ledger account', 'Add account'."
+  },
+  {
+   "id": "books.i-toast-copy",
+   "title": "Success toasts use different phrasings",
+   "detail": "Creating a journal entry and creating a tag produce toasts in two styles.",
+   "nodeIds": [
+    "books.je-detail",
+    "books.tag-created"
+   ],
+   "category": "copy",
+   "severity": "low",
+   "evidence": "'Successfully created the journal entry' vs 'Tag created'."
+  },
+  {
+   "id": "books.i-tag-hash",
+   "title": "Tags lose their # outside the Tags page",
+   "detail": "Tags render with a # prefix on the Tags page and in the tag drawer, but without it in the transactions grid.",
+   "nodeIds": [
+    "books.tags",
+    "books.transactions"
+   ],
+   "category": "component",
+   "severity": "low",
+   "evidence": "Tags page chips '#Marketing', '#Product'; transactions Tags cells 'Marketing', 'Product'."
+  },
+  {
+   "id": "books.i-open-badge-color",
+   "title": "Open badge text does not match its tint",
+   "detail": "Paid, Overdue, Active and Auto-synced badges color their text in the badge hue; Open pairs neutral text with a teal tint.",
+   "nodeIds": [
+    "books.invoices",
+    "books.bills"
+   ],
+   "category": "component",
+   "severity": "low",
+   "evidence": "Open: color rgb(221, 221, 229), bg rgba(119, 190, 207, 0.2). Paid: color rgb(119, 197, 153), bg rgba(119, 197, 153, 0.2). Overdue: color rgb(252, 155, 111), bg rgba(252, 155, 111, 0.2). All 12px, radius 4px, padding 0 8px."
+  },
+  {
+   "id": "books.i-payroll-empty-skeleton",
+   "title": "Payroll empty state sits on top of loading skeletons",
+   "detail": "The Payroll page shows its empty-state message and Connect payroll button while skeleton rows keep rendering in the grid behind it, so the page reads as both loading and empty.",
+   "nodeIds": [
+    "books.payroll"
+   ],
+   "category": "component",
+   "severity": "low",
+   "evidence": "Capture 26-payroll.png: grey skeleton bars under 'Pay period st…' headers behind 'Payroll account will show up here when it's connected'."
+  },
+  {
+   "id": "books.i-drawer-truncation",
+   "title": "Opening a drawer truncates grid labels to single letters",
+   "detail": "When a detail drawer opens, the list keeps all columns and truncates them, leaving ledger names unreadable and two dashboard rows both reading \"Other…\".",
+   "nodeIds": [
+    "books.transaction-drawer",
+    "books.je-create"
+   ],
+   "category": "layout",
+   "severity": "low",
+   "evidence": "Transactions Ledger cells 'Un…', 'C', 'I.' with drawer open; dashboard Expenses rows 'Other… $840,660' and 'Other… $629,296' beside the journal entry drawer."
+  }
+ ],
+ "blocked": []
+}

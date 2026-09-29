@@ -1,0 +1,1832 @@
+{
+  "area": "cards",
+  "title": "Cards & Team Spend",
+  "nodes": [
+    {
+      "id": "cards.index",
+      "title": "Cards",
+      "url": "/cards",
+      "image": "screens/cards/01-index.png",
+      "kind": "page",
+      "note": "Card list with Manage/Subscriptions tabs, receipt-policy recommendation banner, Add filter, and a table of physical and virtual cards grouped by cardholder."
+    },
+    {
+      "id": "cards.detail-physical",
+      "title": "Card detail: physical credit card",
+      "url": "/cards/cardid-credit-0i",
+      "image": "screens/cards/02-card-detail-physical.png",
+      "kind": "drawer",
+      "note": "Inline right-hand detail panel for Jane's IO physical credit card: masked card art, Activate physical card CTA, Freeze/Transactions/More actions, budgets, account and billing address."
+    },
+    {
+      "id": "cards.card-revealed",
+      "title": "Card number revealed",
+      "url": "/cards/cardid-credit-0i",
+      "image": "screens/cards/03-card-reveal.png",
+      "kind": "form-state",
+      "note": "Card art after Click to reveal: full PAN 4111 1111 1111 1111, exp 12/99 and CVC 123 shown as click-to-copy buttons."
+    },
+    {
+      "id": "cards.detail-virtual",
+      "title": "Card detail: virtual card with limit",
+      "url": "/cards/cardid-credit-1m",
+      "image": "screens/cards/04-card-detail-virtual.png",
+      "kind": "drawer",
+      "note": "Detail panel for the Facebook ads virtual credit card: spent-this-month progress bar against a $5k limit, merchant restriction, monthly spend limit, account and billing address."
+    },
+    {
+      "id": "cards.spend-details",
+      "title": "Spend limit breakdown",
+      "url": "/cards/cardid-credit-1m",
+      "image": "screens/cards/05-card-spend-details.png",
+      "kind": "form-state",
+      "note": "Show details expanded: monthly spending limit $5,000.00 split into Posted, Pending and Available to spend ($3,500.00 in green)."
+    },
+    {
+      "id": "cards.more-menu",
+      "title": "Card More menu",
+      "url": "/cards/cardid-credit-1m",
+      "image": "screens/cards/06-card-more-menu.png",
+      "kind": "menu",
+      "note": "More dropdown on a virtual card: Edit nickname, Edit limit, Reset PIN, Transfer card, Cancel card (last item clipped by the panel)."
+    },
+    {
+      "id": "cards.edit-limit-modal",
+      "title": "Edit card limits modal",
+      "url": "/cards/cardid-credit-1m",
+      "image": "screens/cards/07-edit-limit-modal.png",
+      "kind": "modal",
+      "note": "Edit card limits dialog showing a scheduled temporary change ($2,000/Month, Sep 27, 2026 - Oct 4, 2026, 'originally $5,000/Month'), Limit type select, Spend limit input and a disabled Save Limit button."
+    },
+    {
+      "id": "cards.limit-type-dropdown",
+      "title": "Limit type dropdown",
+      "url": "/cards/cardid-credit-1m",
+      "image": "screens/cards/08-limit-type-dropdown.png",
+      "kind": "menu",
+      "note": "Open Limit type combobox listing Daily, Weekly, Monthly and Yearly with reset-time descriptions."
+    },
+    {
+      "id": "cards.limit-saved",
+      "title": "Weekly limit saved",
+      "url": "/cards/cardid-credit-1m",
+      "image": "screens/cards/10-limit-saved.png",
+      "kind": "confirmation",
+      "note": "Card panel after saving a Weekly type: header switches to Spent this week and the row reads Weekly spend limit $5,000.00; no toast is shown."
+    },
+    {
+      "id": "cards.edit-limit-error",
+      "title": "Edit limit: empty amount error",
+      "url": "/cards/cardid-credit-1m",
+      "image": "screens/cards/09-edit-limit-empty.png",
+      "kind": "validation-error",
+      "note": "Spend limit cleared and saved: red field border and 'Must be a dollar value.' error, Save Limit disabled."
+    },
+    {
+      "id": "cards.edit-limit-temporary",
+      "title": "Edit limit: temporary change",
+      "url": "/cards/cardid-credit-1m",
+      "image": "screens/cards/11-edit-limit-temporary.png",
+      "kind": "form-state",
+      "note": "Amount set to 2,500 with 'This is a temporary change' checked, revealing From/To date inputs (Sep 24, 2026 - Oct 1, 2026)."
+    },
+    {
+      "id": "cards.limit-temporary-saved",
+      "title": "Temporary limit saved",
+      "url": "/cards/cardid-credit-1m",
+      "image": "screens/cards/12-limit-temporary-saved.png",
+      "kind": "confirmation",
+      "note": "Panel after saving: Weekly spending limit $2,500.00 with a clock icon marking a temporary limit, Available to spend $2,200.00."
+    },
+    {
+      "id": "cards.freeze-confirm",
+      "title": "Freeze card confirmation",
+      "url": "/cards/cardid-credit-1m",
+      "image": "screens/cards/13-freeze-confirm.png",
+      "kind": "modal",
+      "note": "Are you sure you want to freeze this card? dialog with the card summary, a warning that an active Amazon Web Services subscription may be affected, Go back and Freeze card buttons."
+    },
+    {
+      "id": "cards.card-frozen",
+      "title": "Card frozen",
+      "url": "/cards/cardid-credit-1m",
+      "image": "screens/cards/14-card-frozen.png",
+      "kind": "confirmation",
+      "note": "Card frozen: Frozen badge in the list row, dimmed card art with a Frozen dot label, and the Freeze action replaced by a filled Unfreeze button."
+    },
+    {
+      "id": "cards.card-unfrozen",
+      "title": "Card unfrozen",
+      "url": "/cards/cardid-credit-1m",
+      "image": "screens/cards/15-unfreeze.png",
+      "kind": "confirmation",
+      "note": "After clicking Unfreeze the card returns to active immediately with no confirmation dialog or toast; the Freeze button shows a focus/hover pill."
+    },
+    {
+      "id": "cards.edit-nickname",
+      "title": "Change card nickname modal",
+      "url": "/cards/cardid-credit-1m",
+      "image": "screens/cards/16-edit-nickname.png",
+      "kind": "modal",
+      "note": "Change Card Nickname dialog: unlabeled text input with 'Something short but memorable' hint, a clipped card preview, Go back and a disabled Save."
+    },
+    {
+      "id": "cards.nickname-saved",
+      "title": "Nickname saved",
+      "url": "/cards/cardid-credit-1m",
+      "image": "screens/cards/17-nickname-saved.png",
+      "kind": "confirmation",
+      "note": "Card renamed to Meta ads in both the list row and the panel header; no toast."
+    },
+    {
+      "id": "cards.reset-pin",
+      "title": "Change PIN screen",
+      "url": "/cards/cardid-credit-1m/change-pin",
+      "image": "screens/cards/18-reset-pin.png",
+      "kind": "page",
+      "note": "Full-screen takeover titled Credit card •• 3054 with the card art, a CHANGE PIN eyebrow, a large 4-digit PIN input with an inline 'save' return-key button, and a close X (Esc)."
+    },
+    {
+      "id": "cards.reset-pin-error",
+      "title": "Change PIN: too short",
+      "url": "/cards/cardid-credit-1m/change-pin",
+      "image": "screens/cards/19-reset-pin-invalid.png",
+      "kind": "validation-error",
+      "note": "Two digits entered and saved: pink underline and 'Must be 4 digits' error below the PIN input."
+    },
+    {
+      "id": "cards.transfer-card",
+      "title": "Transfer card modal",
+      "url": "/cards/cardid-credit-1m",
+      "image": "screens/cards/20-transfer-card.png",
+      "kind": "modal",
+      "note": "Transfer card? dialog explaining the current cardholder loses access, showing Current cardholder Jane Black (you), a Transfer to team member select, Go back and Transfer."
+    },
+    {
+      "id": "cards.transfer-card-error",
+      "title": "Transfer card: no recipient",
+      "url": "/cards/cardid-credit-1m",
+      "image": "screens/cards/21-transfer-card-error.png",
+      "kind": "validation-error",
+      "note": "Transfer card? dialog submitted without a recipient: pink Transfer to label and border with 'Please complete this field' and a warning icon."
+    },
+    {
+      "id": "cards.transfer-card-dropdown",
+      "title": "Transfer to member list",
+      "url": "/cards/cardid-credit-1m",
+      "image": "screens/cards/22-transfer-card-dropdown.png",
+      "kind": "menu",
+      "note": "Transfer to combobox open, listing team members with name and email (Abigail Kyte, Alice Chen, Anthony Buteo...)."
+    },
+    {
+      "id": "cards.transfer-card-done",
+      "title": "Card transferred",
+      "url": "/cards/cardid-credit-1m",
+      "image": "screens/cards/23-transfer-card-done.png",
+      "kind": "toast",
+      "note": "Card now listed under Alice Chen, panel shows Alice Chen as holder and a 'Card transferred' toast fades in at the bottom."
+    },
+    {
+      "id": "cards.cancel-card-confirm",
+      "title": "Cancel card confirmation",
+      "url": "/cards/cardid-credit-1m",
+      "image": "screens/cards/24-cancel-card.png",
+      "kind": "modal",
+      "note": "Destructive confirmation 'Are you sure you want to cancel this card? This cannot be undone.' with card summary, subscription warning, Go back and a pink destructive Cancel card button."
+    },
+    {
+      "id": "cards.replace-reason",
+      "title": "Replace card: choose reason",
+      "url": "/cards/cardid-credit-0i/replace",
+      "image": "screens/cards/25-order-replacement.png",
+      "kind": "form-state",
+      "note": "Step 1 of the full-screen replacement flow: 'What happened to your card?' with six radio tiles (Lost, Never Received, Stolen, Renewal, Damaged, Other) and Next."
+    },
+    {
+      "id": "cards.replace-address",
+      "title": "Replace card: confirm address",
+      "url": "/cards/cardid-credit-0i/replace",
+      "image": "screens/cards/26-replacement-address.png",
+      "kind": "form-state",
+      "note": "Step 2 'Confirm Shipping Address' showing the company mailing address card with a 'Use a different address' link and Confirm."
+    },
+    {
+      "id": "cards.replace-address-picker",
+      "title": "Where should we ship this card?",
+      "url": "/cards/cardid-credit-0i/replace",
+      "image": "screens/cards/27-replacement-new-address.png",
+      "kind": "modal",
+      "note": "Address chooser dialog with radio cards for company mailing address, personal mailing address (with Edit) and Custom address; Go back and Use address."
+    },
+    {
+      "id": "cards.replace-custom-address",
+      "title": "Enter a custom address",
+      "url": "/cards/cardid-credit-0i/replace",
+      "image": "screens/cards/28-replacement-custom-address.png",
+      "kind": "modal",
+      "note": "Custom address form with an info callout, Country select (United States), Address line 1/2, City, State and ZIP Code."
+    },
+    {
+      "id": "cards.replace-custom-address-error",
+      "title": "Custom address: required fields",
+      "url": "/cards/cardid-credit-0i/replace",
+      "image": "screens/cards/29-replacement-custom-address-error.png",
+      "kind": "validation-error",
+      "note": "Use address with an empty form: Address line 1, City and ZIP show 'Please complete this field', State shows 'Please enter a valid US state.'"
+    },
+    {
+      "id": "cards.replace-done",
+      "title": "Replacement ordered",
+      "url": "/cards/cardid-credit-0i/replace",
+      "image": "screens/cards/30-replacement-done.png",
+      "kind": "confirmation",
+      "note": "Success banner 'Your new card is on the way' plus a 'Check the latest transactions on the card' list of recent ••5555 transactions and a Finish button."
+    },
+    {
+      "id": "cards.filter-menu",
+      "title": "Add filter menu",
+      "url": "/cards",
+      "image": "screens/cards/31-add-filter-menu.png",
+      "kind": "popover",
+      "note": "Two-pane filter popover: categories Type, Status, Cardholder, Budget, Date Created, Spending, Restriction; Type pane with Physical only / Virtual only / Either and account checkboxes."
+    },
+    {
+      "id": "cards.filtered-virtual",
+      "title": "Cards filtered to virtual",
+      "url": "/cards",
+      "image": "screens/cards/32-filter-virtual.png",
+      "kind": "form-state",
+      "note": "Card list with a removable 'Virtual Cards' filter chip, showing only virtual cards including Pending and Agent Card badges; the previously opened physical card panel stays open."
+    },
+    {
+      "id": "cards.subscriptions",
+      "title": "Subscriptions tab",
+      "url": "/subscriptions",
+      "image": "screens/cards/33-subscriptions.png",
+      "kind": "page",
+      "note": "Subscriptions tab under Cards: two promo cards (1.5% cashback merchant cards, curated software stack), Add filter, and a merchant table with Last 30 Day Spend, Payment Method and open/block actions."
+    },
+    {
+      "id": "cards.issue-card",
+      "title": "Create a card form",
+      "url": "/issue-card",
+      "image": "screens/cards/34-issue-card-start.png",
+      "kind": "page",
+      "note": "Full-screen Create a card form: Basics (Cardholder, Card nickname), Type (Credit/Debit, Virtual/Physical radio tiles, optional Agent Card), Spend controls, and a live card preview on the right."
+    },
+    {
+      "id": "cards.issue-card-cardholder",
+      "title": "Cardholder dropdown",
+      "url": "/issue-card",
+      "image": "screens/cards/35-issue-card-cardholder.png",
+      "kind": "menu",
+      "note": "Cardholder combobox open: Invite new team member action followed by team members with emails and an Invited badge."
+    },
+    {
+      "id": "cards.issue-card-error",
+      "title": "Create a card: missing control type",
+      "url": "/issue-card",
+      "image": "screens/cards/36-issue-card-errors.png",
+      "kind": "validation-error",
+      "note": "Create card submitted with nickname cleared and no control type: only Control type errors ('Please complete this field'); nickname is optional and shows placeholder e.g. Lunch Card."
+    },
+    {
+      "id": "cards.issue-card-control-type",
+      "title": "Control type options",
+      "url": "/issue-card",
+      "image": "screens/cards/37-issue-card-control-type.png",
+      "kind": "menu",
+      "note": "Control type combobox open with Existing budgets and Spending limit."
+    },
+    {
+      "id": "cards.issue-card-spending-limit",
+      "title": "Spending limit controls",
+      "url": "/issue-card",
+      "image": "screens/cards/38-issue-card-spending-limit.png",
+      "kind": "form-state",
+      "note": "Spending limit chosen: Merchant controls (None), Limit type (Daily), Daily spending limit $1,000, custom expiration checkbox; preview adds Daily spending limit $1,000 and Expiration date Sep 30, 2031."
+    },
+    {
+      "id": "cards.issue-card-merchant-controls",
+      "title": "Merchant controls options",
+      "url": "/issue-card",
+      "image": "screens/cards/39-issue-card-merchant-controls.png",
+      "kind": "menu",
+      "note": "Merchant controls combobox open: None, Merchant restrictions, Merchant type restrictions, each with a description."
+    },
+    {
+      "id": "cards.issue-card-success",
+      "title": "Card created",
+      "url": "/issue-card",
+      "image": "screens/cards/40-issue-card-success.png",
+      "kind": "confirmation",
+      "note": "You're all set: new virtual card ••0330, 'Your card is activated and ready to use. Go do great things.', Create another and View card details, plus the receipts policy toggle."
+    },
+    {
+      "id": "cards.view-new-card",
+      "title": "View card details after creation",
+      "url": "/cards/cardid-credit-1",
+      "image": "screens/cards/41-view-new-card.png",
+      "kind": "drawer",
+      "note": "View card details lands on the Cards list with the existing AWS billing ••0330 card open, not a new 'Marketing' card; the list has no new row."
+    },
+    {
+      "id": "cards.team-spend",
+      "title": "Team Spend",
+      "url": "/team-spend",
+      "image": "screens/cards/42-team-spend.png",
+      "kind": "page",
+      "note": "Team Spend overview: Budget spend summary ($4,593.84, Last 30 days, stacked bar by budget), Review required card (5 expenses, 1 receipt exception request), Employee budgets / Team members tabs and a budgets table."
+    },
+    {
+      "id": "cards.team-spend-period",
+      "title": "Spend summary period menu",
+      "url": "/team-spend",
+      "image": "screens/cards/43-team-spend-period.png",
+      "kind": "menu",
+      "note": "Budget spend summary period dropdown open: Last 30 days, Last 60 days, Last 90 days."
+    },
+    {
+      "id": "cards.budget-detail",
+      "title": "Budget detail",
+      "url": "/team-spend/budget/budget_5",
+      "image": "screens/cards/44-budget-detail.png",
+      "kind": "page",
+      "note": "Software Subscriptions budget page: breadcrumb, September 2026 cycle navigation, Edit menu and Assign budget, a team member table of current spend vs per-person limit ($227.38 / $250, $0.00 / $500), and a side summary: Total budget ($2,000), $534.11 spent, $250 monthly per employee, allowed merchants GitHub/Figma/Notion/Slack."
+    },
+    {
+      "id": "cards.budget-edit-menu",
+      "title": "Budget Edit menu",
+      "url": "/team-spend/budget/budget_5",
+      "image": "screens/cards/45-budget-edit-menu.png",
+      "kind": "menu",
+      "note": "Edit dropdown on the budget page with Edit and a destructive Archive option (announced as 'Potentially dangerous action: Archive')."
+    },
+    {
+      "id": "cards.budget-edit",
+      "title": "Edit budget",
+      "url": "/team-spend/budget/budget_5/edit",
+      "image": "screens/cards/46-budget-edit.png",
+      "kind": "page",
+      "note": "Full-screen Edit budget form (Name, Icon, Spend limit per person, Repeats, Description, Spend controls, Allowed merchants chips, start/end dates, Category) with a live budget summary card on the right."
+    },
+    {
+      "id": "cards.budget-edit-error",
+      "title": "Edit budget: name required",
+      "url": "/team-spend/budget/budget_5/edit",
+      "image": "screens/cards/48-budget-edit-errors.png",
+      "kind": "validation-error",
+      "note": "Name cleared and Save changes pressed: Name turns pink with 'Please complete this field' (12px/400 rgb(252,146,180) with warning icon), the preview title falls back to 'Budget name', Save changes disabled."
+    },
+    {
+      "id": "cards.budget-saving",
+      "title": "Edit budget saving",
+      "url": "/team-spend/budget/budget_5/edit",
+      "image": "screens/cards/47-budget-saving.png",
+      "kind": "form-state",
+      "note": "Save changes pressed with valid values: the button shows a three-dot loading state and Cancel dims; the app then returns to the budget page with a 'Changes saved' toast."
+    },
+    {
+      "id": "cards.create-budget",
+      "title": "Create a budget",
+      "url": "/team-spend/budget/create",
+      "image": "screens/cards/49-create-budget.png",
+      "kind": "page",
+      "note": "Step 1 of Create a budget: Name, Icon, Spend limit per person ($0), Repeats, Description, Spend controls (Spend limit only), start/end dates, Additional options, with a live preview card."
+    },
+    {
+      "id": "cards.create-budget-errors",
+      "title": "Create budget: required fields",
+      "url": "/team-spend/budget/create",
+      "image": "screens/cards/50-create-budget-errors.png",
+      "kind": "validation-error",
+      "note": "Next with an empty form: Name and Description show 'Please complete this field', Spend limit shows 'Amount must be greater than 0'."
+    },
+    {
+      "id": "cards.create-budget-filled",
+      "title": "Create budget: details filled",
+      "url": "/team-spend/budget/create",
+      "image": "screens/cards/51-create-budget-filled.png",
+      "kind": "form-state",
+      "note": "Name Conference travel, $500 monthly per person and a description entered; preview card updates live."
+    },
+    {
+      "id": "cards.create-budget-assign",
+      "title": "Create budget: assign team",
+      "url": "/team-spend/budget/create",
+      "image": "screens/cards/52-create-budget-assign.png",
+      "kind": "form-state",
+      "note": "Step 2 'Assign Conference travel to your team': searchable member list with checkboxes and a per-person card picker; Save as draft, Back, Next."
+    },
+    {
+      "id": "cards.create-budget-review",
+      "title": "Create budget: review",
+      "url": "/team-spend/budget/create",
+      "image": "screens/cards/53-create-budget-review.png",
+      "kind": "form-state",
+      "note": "Step 3 'Let's review everything' summarising the budget ($500 monthly), 2 assignees and automatic routing, with Back and Create budget."
+    },
+    {
+      "id": "cards.create-budget-done",
+      "title": "Budget published",
+      "url": "/team-spend",
+      "image": "screens/cards/54-create-budget-done.png",
+      "kind": "toast",
+      "note": "Back on Team Spend with Conference travel at the top of the budgets table and a 'Budget published' toast."
+    },
+    {
+      "id": "cards.budget-actions-menu",
+      "title": "Budget row actions menu",
+      "url": "/team-spend",
+      "image": "screens/cards/55-budget-actions-menu.png",
+      "kind": "menu",
+      "note": "Row overflow menu on a budget: View details, Edit budget, Archive budget."
+    },
+    {
+      "id": "cards.team-members",
+      "title": "Team Spend: team members",
+      "url": "/team-spend/team-members",
+      "image": "screens/cards/56-team-members.png",
+      "kind": "page",
+      "note": "Team members tab: Department and Budget filters, search, and a list of people with Name / Budgets / Available / Details columns, budget icons, an add button and available amounts ($92.59, $450, $200, $1,038.35...)."
+    },
+    {
+      "id": "cards.expenses",
+      "title": "Reimbursements: all expenses",
+      "url": "/expenses/all-expenses",
+      "image": "screens/cards/57-expenses.png",
+      "kind": "page",
+      "note": "Reimbursements page with All expenses (5) / My expenses (1) tabs, All / Pending Review segmented filters, Add filter, Export all, and an expense table with status badges, amounts, category, budget, receipt and policy columns."
+    },
+    {
+      "id": "cards.expense-detail",
+      "title": "Expense detail panel",
+      "url": "/expenses/all-expenses?expenseId=expense10",
+      "image": "screens/cards/58-expense-detail.png",
+      "kind": "drawer",
+      "note": "Reimbursement detail for a $16.75 mileage expense (Pending Review): timeline, disabled Approve until a budget is chosen, Decline, More, date/mileage/category and a Reimburse from budget picker."
+    },
+    {
+      "id": "cards.expense-more-menu",
+      "title": "Expense More menu",
+      "url": "/expenses/all-expenses?expenseId=expense10",
+      "image": "screens/cards/59-expense-more-menu.png",
+      "kind": "menu",
+      "note": "More dropdown in the reimbursement panel: Request details and Edit."
+    },
+    {
+      "id": "cards.expense-decline",
+      "title": "Decline reimbursement modal",
+      "url": "/expenses/all-expenses?expenseId=expense10",
+      "image": "screens/cards/60-expense-decline.png",
+      "kind": "modal",
+      "note": "Decline reimbursement? dialog: 'We'll let Jane Black know', a Reason textarea, Cancel and a disabled pink Decline."
+    },
+    {
+      "id": "cards.expense-declined",
+      "title": "Reimbursement declined",
+      "url": "/expenses/all-expenses",
+      "image": "screens/cards/61-expense-declined.png",
+      "kind": "toast",
+      "note": "Row status flips to Declined, All expenses count drops from 5 to 4, and a green-check 'Reimbursement request declined' toast appears."
+    },
+    {
+      "id": "cards.expense-detail-receipt",
+      "title": "Expense with receipt",
+      "url": "/expenses/all-expenses?expenseId=expense3",
+      "image": "screens/cards/62-expense-detail-receipt.png",
+      "kind": "drawer",
+      "note": "Mary Metcalfe's $338.62 Luxury Inn expense: Approve enabled, Date of expense Oct 1, 2024, merchant/category rows and an attached demo-receipt.pdf."
+    },
+    {
+      "id": "cards.expense-approved",
+      "title": "Reimbursement approved",
+      "url": "/expenses/all-expenses",
+      "image": "screens/cards/63-expense-approved.png",
+      "kind": "toast",
+      "note": "Row status changes to Payment Pending, All expenses count drops to 3, toast 'Reimbursement payment approved'."
+    },
+    {
+      "id": "cards.submit-expense",
+      "title": "Submit expense form",
+      "url": "/expenses/draft/expense-draft_50?mode=new",
+      "image": "screens/cards/64-submit-expense.png",
+      "kind": "page",
+      "note": "Full-screen Submit expense step 1: Expense/Mileage toggle, Reimburse from budget, Expense category, receipt drop zone, Amount with currency, Expense date, Merchant, Notes, Participants."
+    },
+    {
+      "id": "cards.submit-expense-errors",
+      "title": "Submit expense: required fields",
+      "url": "/expenses/draft/expense-draft_50?mode=new",
+      "image": "screens/cards/65-submit-expense-errors.png",
+      "kind": "validation-error",
+      "note": "Review pressed with an empty form: Amount shows 'Must be a dollar value.' and Merchant 'Please complete this field'; budget and category are not required."
+    },
+    {
+      "id": "cards.submit-expense-filled",
+      "title": "Submit expense: filled",
+      "url": "/expenses/draft/expense-draft_50?mode=new",
+      "image": "screens/cards/66-submit-expense-filled.png",
+      "kind": "form-state",
+      "note": "Amount $42.50, merchant Blue Bottle Coffee and notes entered; errors cleared."
+    },
+    {
+      "id": "cards.submit-expense-review",
+      "title": "Review expense",
+      "url": "/expenses/draft/expense-draft_50?mode=new",
+      "image": "screens/cards/67-submit-expense-review.png",
+      "kind": "form-state",
+      "note": "Step 2 Review expense: $42.50, a warning that the expense is missing a category, summary rows (Date September 24, 2026, merchant, participants, notes), Back and Submit."
+    },
+    {
+      "id": "cards.submit-expense-done",
+      "title": "Expense submitted",
+      "url": "/expenses/draft/expense-draft_50?mode=new",
+      "image": "screens/cards/68-submit-expense-done.png",
+      "kind": "confirmation",
+      "note": "You've submitted an expense: reimbursement summary card for Blue Bottle Coffee $42.50, email-in tip, Submit another / View expenses, and a 'Reimbursement submitted.' toast."
+    },
+    {
+      "id": "cards.policies",
+      "title": "Spend Policies: card spend",
+      "url": "/team-spend/policies/card-spend",
+      "image": "screens/cards/69-policies-card-spend.png",
+      "kind": "page",
+      "note": "Spend Policies page, Card spend tab: Receipt requirement (over $75, excluded merchants), Notes requirement ($100), Category requirement ($1) and Spend controls (blocked merchants and types), each with Disable and Edit."
+    },
+    {
+      "id": "cards.policy-receipt-edit",
+      "title": "Edit receipt requirement",
+      "url": "/team-spend/policies/card-spend",
+      "image": "screens/cards/70-policy-receipt-edit.png",
+      "kind": "form-state",
+      "note": "Receipt requirement row in inline edit mode: amount input ($75), Merchants to exclude chip picker, Cancel and Save, 'Changes only apply to future transactions'."
+    },
+    {
+      "id": "cards.policy-receipt-error",
+      "title": "Receipt threshold required",
+      "url": "/team-spend/policies/card-spend",
+      "image": "screens/cards/71-policy-receipt-error.png",
+      "kind": "validation-error",
+      "note": "Amount cleared: the input shows a warning icon and a 'Please complete this field' tooltip above it; Save disabled."
+    },
+    {
+      "id": "cards.policy-receipt-saved",
+      "title": "Receipt rule updated",
+      "url": "/team-spend/policies/card-spend",
+      "image": "screens/cards/72-policy-receipt-saved.png",
+      "kind": "confirmation",
+      "note": "Rule saved at $50: the Receipt requirement row now reads 'exceeds $50' and keeps its five excluded merchants; an 'Upload receipts from your inbox' promo popover opens bottom-left."
+    },
+    {
+      "id": "cards.policies-reimbursements",
+      "title": "Spend Policies: reimbursements",
+      "url": "/team-spend/policies/reimbursements",
+      "image": "screens/cards/73-policies-reimbursements.png",
+      "kind": "page",
+      "note": "Reimbursements tab of Spend Policies: receipt ($50), notes ($85), category ($15) requirements marked (Not blocking), a 30-day Timeframe restriction marked (Blocking), and a Self-approval rule with Enable."
+    },
+    {
+      "id": "cards.policy-disable-confirm",
+      "title": "Disable rule confirmation",
+      "url": "/team-spend/policies/reimbursements",
+      "image": "screens/cards/74-policy-disable-confirm.png",
+      "kind": "modal",
+      "note": "Disable rule? dialog: 'You can always enable it again if you wish.' with Go back and a pink 'Yes, disable'."
+    },
+    {
+      "id": "cards.policy-disabled",
+      "title": "Rule disabled",
+      "url": "/team-spend/policies/reimbursements",
+      "image": "screens/cards/75-policy-disabled.png",
+      "kind": "confirmation",
+      "note": "Notes requirement collapses to its title with a single Enable button; no toast."
+    },
+    {
+      "id": "cards.issue-card-physical-debit",
+      "title": "Create a card: physical debit",
+      "url": "/issue-card",
+      "image": "screens/cards/76-issue-card-physical-debit.png",
+      "kind": "form-state",
+      "note": "Debit + Physical selected: a 'Ship physical card to' block appears with the company mailing address and 'Use a different address', a Source account picker (Ops / Payroll ••1038), and the preview switches to a white Physical Debit card named 'Jane Black's Debit Card'."
+    },
+    {
+      "id": "cards.issue-card-ship-address",
+      "title": "Where should we ship this card?",
+      "url": "/issue-card",
+      "image": "screens/cards/77-issue-card-ship-address.png",
+      "kind": "modal",
+      "note": "Shipping address picker over the blurred form: Company mailing address (selected), Your personal mailing address with Edit, Custom address; Go back and Use address."
+    },
+    {
+      "id": "cards.personal-address-edit",
+      "title": "Edit personal mailing address",
+      "url": "/issue-card",
+      "image": "screens/cards/78-personal-address-edit.png",
+      "kind": "modal",
+      "note": "Edit your personal mailing address dialog: info note that edits are saved to your profile, Country (Canada), address lines, City, Province, Postal code; Go back and a disabled Save address."
+    },
+    {
+      "id": "cards.issue-card-agent-card",
+      "title": "Create a card: Agent Card",
+      "url": "/issue-card",
+      "image": "screens/cards/79-issue-card-agent-card.png",
+      "kind": "form-state",
+      "note": "Usage (optional) Agent Card checked: the preview gains an 'Agent Card' usage chip and a 'A Quick Note About Agent Cards' panel explaining API/CLI access for agents."
+    },
+    {
+      "id": "cards.issue-card-existing-budgets",
+      "title": "Create a card: existing budgets",
+      "url": "/issue-card",
+      "image": "screens/cards/80-issue-card-existing-budgets.png",
+      "kind": "form-state",
+      "note": "Control type set to Existing budgets: a Select budgets picker shows 'Jane's current budgets' with three budget icons, mirrored in the preview's Budgets row."
+    },
+    {
+      "id": "cards.subscription-detail",
+      "title": "Subscription detail panel",
+      "url": "/subscriptions",
+      "image": "screens/cards/81-subscription-detail.png",
+      "kind": "drawer",
+      "note": "Clicking the Adyen N.V. row opens a side panel: Last Charged $37.00, Frequency Monthly, Payment Method Jane B. ••4928, a 'Move this subscription to IO to earn 1.5% cashback' tip, and Recent Charges."
+    },
+    {
+      "id": "cards.team-spend-display-options",
+      "title": "Spend summary display options",
+      "url": "/team-spend",
+      "image": "screens/cards/82-team-spend-display-options.png",
+      "kind": "menu",
+      "note": "The ... menu next to the period picker holds a single 'Include non-budget spend' switch (off)."
+    },
+    {
+      "id": "cards.team-spend-non-budget",
+      "title": "Spend summary with non-budget spend",
+      "url": "/team-spend",
+      "image": "screens/cards/83-team-spend-non-budget.png",
+      "kind": "form-state",
+      "note": "With 'Include non-budget spend' on, the summary jumps from $4,593.84 to $790,439.02 and a grey 'Non budget spend' segment fills most of the bar."
+    },
+    {
+      "id": "cards.assign-budget-modal",
+      "title": "Assign budget modal",
+      "url": "/team-spend",
+      "image": "screens/cards/84-assign-budget-modal.png",
+      "kind": "modal",
+      "note": "Assign budget to employees on the Team Lunch row opens 'Assign Team Lunch': Select team members search combobox, Import a CSV list, Cancel and a disabled Assign."
+    },
+    {
+      "id": "cards.assign-budget-members",
+      "title": "Assign budget: member picker",
+      "url": "/team-spend",
+      "image": "screens/cards/85-assign-budget-members.png",
+      "kind": "menu",
+      "note": "Member picker open: Invite new team member, Select All team members, and people already on the budget greyed out with an 'Assigned' tag."
+    },
+    {
+      "id": "cards.assign-budget-error",
+      "title": "Assign budget: no member chosen",
+      "url": "/team-spend",
+      "image": "screens/cards/86-assign-budget-error.png",
+      "kind": "validation-error",
+      "note": "Closing the picker without a choice turns the field pink with 'Add at least one team member or invite'; Assign stays disabled."
+    },
+    {
+      "id": "cards.assign-budget-selected",
+      "title": "Assign budget: member selected",
+      "url": "/team-spend",
+      "image": "screens/cards/87-assign-budget-selected.png",
+      "kind": "form-state",
+      "note": "Abigail Kyte added as a removable chip; the primary button changes from Assign to Next."
+    },
+    {
+      "id": "cards.assign-budget-cards",
+      "title": "Set up budget cards",
+      "url": "/team-spend",
+      "image": "screens/cards/88-assign-budget-cards.png",
+      "kind": "modal",
+      "note": "Step 2 'Set up budget cards': choose the card each member's budget spend comes from (Abigail Kyte -> New virtual credit card); Back and Assign."
+    },
+    {
+      "id": "cards.assign-budget-done",
+      "title": "Budget assigned",
+      "url": "/team-spend",
+      "image": "screens/cards/89-assign-budget-done.png",
+      "kind": "toast",
+      "note": "Back on Team Spend: Team Lunch now shows +17 assignees and 18% spent, with a 'Team Lunch assigned to 1 team member' toast fading in."
+    },
+    {
+      "id": "cards.budget-archive-confirm",
+      "title": "Archive budget confirmation",
+      "url": "/team-spend/budget/budget_5",
+      "image": "screens/cards/90-budget-archive-confirm.png",
+      "kind": "modal",
+      "note": "Archive budget? dialog: 'This will archive Software Subscriptions. Employees will no longer be able to spend from it. You can restore it later.' with Cancel and a pink 'Yes, archive'."
+    },
+    {
+      "id": "cards.policy-spend-controls-edit",
+      "title": "Edit card spend controls",
+      "url": "/team-spend/policies/card-spend",
+      "image": "screens/cards/91-policy-spend-controls-edit.png",
+      "kind": "form-state",
+      "note": "Spend controls rule in inline edit: Block / Allow radio tiles, Merchants to block chips (Amazon Web Services, Facebook, Google, Notion, Github), Merchant types to block (Alcohol and Bars, Gambling), Cancel and Save."
+    },
+    {
+      "id": "cards.policy-merchant-types-menu",
+      "title": "Merchant types picker",
+      "url": "/team-spend/policies/card-spend",
+      "image": "screens/cards/92-policy-merchant-types-menu.png",
+      "kind": "menu",
+      "note": "Merchant types to block dropdown: checkbox list (Advertising, Airlines, Alcohol and Bars checked, Books and Newspapers, Car Rental, Charity...)."
+    },
+    {
+      "id": "cards.policy-spend-controls-saved",
+      "title": "Spend controls saved",
+      "url": "/team-spend/policies/card-spend",
+      "image": "screens/cards/93-policy-spend-controls-saved.png",
+      "kind": "confirmation",
+      "note": "Rule saved without a toast: the Spend controls row now lists Blocked merchant types Alcohol and Bars, Gambling, Airlines."
+    },
+    {
+      "id": "cards.expenses-bulk-select",
+      "title": "Expenses: bulk selection",
+      "url": "/expenses/all-expenses",
+      "image": "screens/cards/94-expenses-bulk-select.png",
+      "kind": "form-state",
+      "note": "Checking one row shows the header checkbox as mixed and a floating bar '1 request selected $16.75 total' with a disabled Approve."
+    },
+    {
+      "id": "cards.expenses-approve-own-blocked",
+      "title": "Approve own expense blocked",
+      "url": "/expenses/all-expenses",
+      "image": "screens/cards/95-expenses-approve-own-blocked.png",
+      "kind": "validation-error",
+      "note": "Hovering the disabled Approve on your own expense shows the tooltip 'Approvers cannot approve their own expenses'."
+    },
+    {
+      "id": "cards.expenses-bulk-approved",
+      "title": "Bulk approval done",
+      "url": "/expenses/all-expenses",
+      "image": "screens/cards/96-expenses-bulk-approved.png",
+      "kind": "toast",
+      "note": "Selecting Mary Metcalfe's Oct 1 request and pressing Approve shows the toast '1 reimbursement payment approved'."
+    },
+    {
+      "id": "cards.my-expenses",
+      "title": "Reimbursements: my expenses",
+      "url": "/expenses/my-expenses",
+      "image": "screens/cards/97-my-expenses.png",
+      "kind": "page",
+      "note": "My expenses tab: a Drafts table (Terminal C Pizzeria, Mileage - 14.5 miles, Cosmic Travel Agency 'Draft - Missing info') with delete/edit icon buttons, and Submitted Expenses filtered to a 'Details requested' chip with Export filtered."
+    },
+    {
+      "id": "cards.reimbursement-settings",
+      "title": "Reimbursement settings",
+      "url": "/expenses/my-expenses",
+      "image": "screens/cards/98-reimbursement-settings.png",
+      "kind": "modal",
+      "note": "Settings dialog: Policy summary (receipt > $50, notes > $85, category > $15, all '(not blocking)'; 30-day submission '(blocking)'), Reimbursable categories chips, Pay reimbursements from Ops / Payroll, Receive reimbursements to Checking ••4321, Done."
+    },
+    {
+      "id": "cards.self-approval-enabled",
+      "title": "Self-approval enabled",
+      "url": "/team-spend/policies/reimbursements",
+      "image": "screens/cards/99-self-approval-enabled.png",
+      "kind": "confirmation",
+      "note": "Clicking Enable on Self-approval flips it on immediately: no confirmation dialog and no toast, the button just becomes a pink Disable."
+    }
+  ],
+  "edges": [
+    {
+      "from": "cards.index",
+      "to": "cards.detail-physical",
+      "label": "Click a card row"
+    },
+    {
+      "from": "cards.detail-physical",
+      "to": "cards.card-revealed",
+      "label": "Click card art (Click to reveal)"
+    },
+    {
+      "from": "cards.index",
+      "to": "cards.detail-virtual",
+      "label": "Click a virtual card row"
+    },
+    {
+      "from": "cards.detail-virtual",
+      "to": "cards.spend-details",
+      "label": "Click Show details"
+    },
+    {
+      "from": "cards.detail-virtual",
+      "to": "cards.more-menu",
+      "label": "Click More"
+    },
+    {
+      "from": "cards.more-menu",
+      "to": "cards.edit-limit-modal",
+      "label": "Click Edit limit"
+    },
+    {
+      "from": "cards.edit-limit-modal",
+      "to": "cards.limit-type-dropdown",
+      "label": "Click Limit type"
+    },
+    {
+      "from": "cards.limit-type-dropdown",
+      "to": "cards.limit-saved",
+      "label": "Choose Weekly, click Save Limit"
+    },
+    {
+      "from": "cards.limit-saved",
+      "to": "cards.edit-limit-error",
+      "label": "More > Edit limit, clear amount, click Save Limit"
+    },
+    {
+      "from": "cards.edit-limit-error",
+      "to": "cards.edit-limit-temporary",
+      "label": "Type 2500, check This is a temporary change"
+    },
+    {
+      "from": "cards.edit-limit-temporary",
+      "to": "cards.limit-temporary-saved",
+      "label": "Click Save Limit"
+    },
+    {
+      "from": "cards.detail-virtual",
+      "to": "cards.freeze-confirm",
+      "label": "Click Freeze"
+    },
+    {
+      "from": "cards.freeze-confirm",
+      "to": "cards.card-frozen",
+      "label": "Click Freeze card"
+    },
+    {
+      "from": "cards.card-frozen",
+      "to": "cards.card-unfrozen",
+      "label": "Click Unfreeze"
+    },
+    {
+      "from": "cards.more-menu",
+      "to": "cards.edit-nickname",
+      "label": "Click Edit nickname"
+    },
+    {
+      "from": "cards.edit-nickname",
+      "to": "cards.nickname-saved",
+      "label": "Type new nickname, click Save"
+    },
+    {
+      "from": "cards.more-menu",
+      "to": "cards.reset-pin",
+      "label": "Click Reset PIN"
+    },
+    {
+      "from": "cards.reset-pin",
+      "to": "cards.reset-pin-error",
+      "label": "Type 2 digits, click save"
+    },
+    {
+      "from": "cards.reset-pin-error",
+      "to": "cards.detail-virtual",
+      "label": "Complete 4 digits, click save (returns to panel, no confirmation)"
+    },
+    {
+      "from": "cards.more-menu",
+      "to": "cards.transfer-card",
+      "label": "Click Transfer card"
+    },
+    {
+      "from": "cards.transfer-card-error",
+      "to": "cards.transfer-card-dropdown",
+      "label": "Open Transfer to"
+    },
+    {
+      "from": "cards.transfer-card-dropdown",
+      "to": "cards.transfer-card-done",
+      "label": "Pick Alice Chen, click Transfer"
+    },
+    {
+      "from": "cards.more-menu",
+      "to": "cards.cancel-card-confirm",
+      "label": "Click Cancel card"
+    },
+    {
+      "from": "cards.cancel-card-confirm",
+      "to": "cards.detail-virtual",
+      "label": "Click Go back"
+    },
+    {
+      "from": "cards.detail-physical",
+      "to": "cards.replace-reason",
+      "label": "More > Order replacement"
+    },
+    {
+      "from": "cards.replace-reason",
+      "to": "cards.replace-address",
+      "label": "Pick Lost, click Next"
+    },
+    {
+      "from": "cards.replace-address",
+      "to": "cards.replace-address-picker",
+      "label": "Click Use a different address"
+    },
+    {
+      "from": "cards.replace-address-picker",
+      "to": "cards.replace-custom-address",
+      "label": "Pick Custom address, click Continue"
+    },
+    {
+      "from": "cards.replace-custom-address",
+      "to": "cards.replace-custom-address-error",
+      "label": "Click Use address with empty fields"
+    },
+    {
+      "from": "cards.replace-custom-address-error",
+      "to": "cards.replace-address",
+      "label": "Go back, pick personal address, Use address"
+    },
+    {
+      "from": "cards.replace-address",
+      "to": "cards.replace-done",
+      "label": "Click Confirm"
+    },
+    {
+      "from": "cards.replace-done",
+      "to": "cards.index",
+      "label": "Click Finish"
+    },
+    {
+      "from": "cards.index",
+      "to": "cards.filter-menu",
+      "label": "Click Add filter"
+    },
+    {
+      "from": "cards.filter-menu",
+      "to": "cards.filtered-virtual",
+      "label": "Choose Virtual only"
+    },
+    {
+      "from": "cards.index",
+      "to": "cards.subscriptions",
+      "label": "Click Subscriptions tab"
+    },
+    {
+      "from": "cards.index",
+      "to": "cards.issue-card",
+      "label": "Click Create card"
+    },
+    {
+      "from": "cards.issue-card",
+      "to": "cards.issue-card-cardholder",
+      "label": "Open Cardholder"
+    },
+    {
+      "from": "cards.issue-card",
+      "to": "cards.issue-card-error",
+      "label": "Clear nickname, click Create card"
+    },
+    {
+      "from": "cards.issue-card-error",
+      "to": "cards.issue-card-control-type",
+      "label": "Open Control type"
+    },
+    {
+      "from": "cards.issue-card-control-type",
+      "to": "cards.issue-card-spending-limit",
+      "label": "Choose Spending limit"
+    },
+    {
+      "from": "cards.issue-card-spending-limit",
+      "to": "cards.issue-card-merchant-controls",
+      "label": "Open Merchant controls"
+    },
+    {
+      "from": "cards.issue-card-merchant-controls",
+      "to": "cards.issue-card-success",
+      "label": "Keep None, click Create card"
+    },
+    {
+      "from": "cards.issue-card-success",
+      "to": "cards.issue-card",
+      "label": "Click Create another"
+    },
+    {
+      "from": "cards.issue-card-success",
+      "to": "cards.view-new-card",
+      "label": "Click View card details"
+    },
+    {
+      "from": "cards.index",
+      "to": "cards.team-spend",
+      "label": "Click Team Spend in sidebar"
+    },
+    {
+      "from": "cards.team-spend",
+      "to": "cards.team-spend-period",
+      "label": "Click Last 30 days"
+    },
+    {
+      "from": "cards.team-spend",
+      "to": "cards.budget-detail",
+      "label": "Click a budget row"
+    },
+    {
+      "from": "cards.budget-detail",
+      "to": "cards.budget-edit-menu",
+      "label": "Click Edit"
+    },
+    {
+      "from": "cards.budget-edit-menu",
+      "to": "cards.budget-edit",
+      "label": "Click Edit"
+    },
+    {
+      "from": "cards.budget-edit",
+      "to": "cards.budget-edit-error",
+      "label": "Clear Name, click Save changes"
+    },
+    {
+      "from": "cards.budget-edit",
+      "to": "cards.budget-saving",
+      "label": "Click Save changes"
+    },
+    {
+      "from": "cards.budget-saving",
+      "to": "cards.budget-detail",
+      "label": "Save completes ('Changes saved' toast)"
+    },
+    {
+      "from": "cards.team-spend",
+      "to": "cards.create-budget",
+      "label": "Click Create budget"
+    },
+    {
+      "from": "cards.create-budget",
+      "to": "cards.create-budget-errors",
+      "label": "Click Next with empty form"
+    },
+    {
+      "from": "cards.create-budget-errors",
+      "to": "cards.create-budget-filled",
+      "label": "Fill name, limit and description"
+    },
+    {
+      "from": "cards.create-budget-filled",
+      "to": "cards.create-budget-assign",
+      "label": "Click Next"
+    },
+    {
+      "from": "cards.create-budget-assign",
+      "to": "cards.create-budget-review",
+      "label": "Select Jane Black and Landon Shepherd, click Next"
+    },
+    {
+      "from": "cards.create-budget-review",
+      "to": "cards.create-budget-done",
+      "label": "Click Create budget"
+    },
+    {
+      "from": "cards.create-budget-done",
+      "to": "cards.budget-actions-menu",
+      "label": "Click the ... Actions button on a budget row"
+    },
+    {
+      "from": "cards.budget-actions-menu",
+      "to": "cards.budget-edit",
+      "label": "Click Edit budget"
+    },
+    {
+      "from": "cards.team-spend",
+      "to": "cards.team-members",
+      "label": "Click Team members tab"
+    },
+    {
+      "from": "cards.team-spend",
+      "to": "cards.expenses",
+      "label": "Click Reimbursements in sidebar"
+    },
+    {
+      "from": "cards.expenses",
+      "to": "cards.expense-detail",
+      "label": "Click an expense row"
+    },
+    {
+      "from": "cards.expense-detail",
+      "to": "cards.expense-more-menu",
+      "label": "Click More"
+    },
+    {
+      "from": "cards.expense-detail",
+      "to": "cards.expense-decline",
+      "label": "Click Decline"
+    },
+    {
+      "from": "cards.expense-decline",
+      "to": "cards.expense-declined",
+      "label": "Enter a reason, click Decline"
+    },
+    {
+      "from": "cards.expense-declined",
+      "to": "cards.expense-detail-receipt",
+      "label": "Click the Oct 1 Mary Metcalfe row"
+    },
+    {
+      "from": "cards.expense-detail-receipt",
+      "to": "cards.expense-approved",
+      "label": "Click Approve"
+    },
+    {
+      "from": "cards.expenses",
+      "to": "cards.submit-expense",
+      "label": "Click Submit expense"
+    },
+    {
+      "from": "cards.submit-expense",
+      "to": "cards.submit-expense-errors",
+      "label": "Click Review with empty form"
+    },
+    {
+      "from": "cards.submit-expense-errors",
+      "to": "cards.submit-expense-filled",
+      "label": "Fill amount, merchant and notes"
+    },
+    {
+      "from": "cards.submit-expense-filled",
+      "to": "cards.submit-expense-review",
+      "label": "Click Review"
+    },
+    {
+      "from": "cards.submit-expense-review",
+      "to": "cards.submit-expense-done",
+      "label": "Click Submit"
+    },
+    {
+      "from": "cards.submit-expense-done",
+      "to": "cards.expenses",
+      "label": "Click View expenses"
+    },
+    {
+      "from": "cards.team-spend",
+      "to": "cards.policies",
+      "label": "Click Policies in sidebar"
+    },
+    {
+      "from": "cards.index",
+      "to": "cards.policies",
+      "label": "Click Policies page link in receipts banner"
+    },
+    {
+      "from": "cards.policies",
+      "to": "cards.policy-receipt-edit",
+      "label": "Click Edit on Receipt requirement"
+    },
+    {
+      "from": "cards.policy-receipt-edit",
+      "to": "cards.policy-receipt-error",
+      "label": "Clear amount, click Save"
+    },
+    {
+      "from": "cards.policy-receipt-error",
+      "to": "cards.policy-receipt-saved",
+      "label": "Type 50, click Save"
+    },
+    {
+      "from": "cards.policies",
+      "to": "cards.policies-reimbursements",
+      "label": "Click Reimbursements tab"
+    },
+    {
+      "from": "cards.policies-reimbursements",
+      "to": "cards.policy-disable-confirm",
+      "label": "Click Disable on Notes requirement"
+    },
+    {
+      "from": "cards.policy-disable-confirm",
+      "to": "cards.policy-disabled",
+      "label": "Click Yes, disable"
+    },
+    {
+      "from": "cards.transfer-card",
+      "to": "cards.transfer-card-error",
+      "label": "Click Transfer with no recipient"
+    },
+    {
+      "from": "cards.issue-card",
+      "to": "cards.issue-card-physical-debit",
+      "label": "Choose Debit and Physical"
+    },
+    {
+      "from": "cards.issue-card-physical-debit",
+      "to": "cards.issue-card-ship-address",
+      "label": "Click Use a different address"
+    },
+    {
+      "from": "cards.issue-card-ship-address",
+      "to": "cards.personal-address-edit",
+      "label": "Click Edit on the personal address"
+    },
+    {
+      "from": "cards.personal-address-edit",
+      "to": "cards.issue-card-ship-address",
+      "label": "Click Go back"
+    },
+    {
+      "from": "cards.issue-card",
+      "to": "cards.issue-card-agent-card",
+      "label": "Check Agent Card"
+    },
+    {
+      "from": "cards.issue-card",
+      "to": "cards.issue-card-existing-budgets",
+      "label": "Control type: Existing budgets"
+    },
+    {
+      "from": "cards.subscriptions",
+      "to": "cards.subscription-detail",
+      "label": "Click a merchant row"
+    },
+    {
+      "from": "cards.team-spend",
+      "to": "cards.team-spend-display-options",
+      "label": "Click ... next to the period"
+    },
+    {
+      "from": "cards.team-spend-display-options",
+      "to": "cards.team-spend-non-budget",
+      "label": "Turn on Include non-budget spend"
+    },
+    {
+      "from": "cards.team-spend",
+      "to": "cards.assign-budget-modal",
+      "label": "Click Assign budget to employees on a row"
+    },
+    {
+      "from": "cards.assign-budget-modal",
+      "to": "cards.assign-budget-members",
+      "label": "Open Select team members"
+    },
+    {
+      "from": "cards.assign-budget-members",
+      "to": "cards.assign-budget-error",
+      "label": "Close the picker with nothing chosen"
+    },
+    {
+      "from": "cards.assign-budget-members",
+      "to": "cards.assign-budget-selected",
+      "label": "Search and pick Abigail Kyte"
+    },
+    {
+      "from": "cards.assign-budget-selected",
+      "to": "cards.assign-budget-cards",
+      "label": "Click Next"
+    },
+    {
+      "from": "cards.assign-budget-cards",
+      "to": "cards.assign-budget-done",
+      "label": "Click Assign"
+    },
+    {
+      "from": "cards.budget-edit-menu",
+      "to": "cards.budget-archive-confirm",
+      "label": "Click Archive"
+    },
+    {
+      "from": "cards.budget-archive-confirm",
+      "to": "cards.budget-detail",
+      "label": "Click Cancel"
+    },
+    {
+      "from": "cards.policies",
+      "to": "cards.policy-spend-controls-edit",
+      "label": "Click Edit on Spend controls"
+    },
+    {
+      "from": "cards.policy-spend-controls-edit",
+      "to": "cards.policy-merchant-types-menu",
+      "label": "Open Merchant types to block"
+    },
+    {
+      "from": "cards.policy-merchant-types-menu",
+      "to": "cards.policy-spend-controls-saved",
+      "label": "Check Airlines, click Save"
+    },
+    {
+      "from": "cards.expenses",
+      "to": "cards.expenses-bulk-select",
+      "label": "Check a row"
+    },
+    {
+      "from": "cards.expenses-bulk-select",
+      "to": "cards.expenses-approve-own-blocked",
+      "label": "Select your own Pending Review expense, hover Approve"
+    },
+    {
+      "from": "cards.expenses-approve-own-blocked",
+      "to": "cards.expenses-bulk-approved",
+      "label": "Select Mary Metcalfe's request, click Approve"
+    },
+    {
+      "from": "cards.expenses",
+      "to": "cards.my-expenses",
+      "label": "Click My expenses tab"
+    },
+    {
+      "from": "cards.my-expenses",
+      "to": "cards.reimbursement-settings",
+      "label": "Click Settings"
+    },
+    {
+      "from": "cards.policies-reimbursements",
+      "to": "cards.self-approval-enabled",
+      "label": "Click Enable on Self-approval"
+    }
+  ],
+  "journeys": [
+    {
+      "id": "cards.j-issue-virtual-card",
+      "name": "Issue a virtual card with a daily limit",
+      "description": "An admin creates a new virtual credit card with a spending limit and no merchant restrictions.",
+      "steps": [
+        "cards.index",
+        "cards.issue-card",
+        "cards.issue-card-error",
+        "cards.issue-card-control-type",
+        "cards.issue-card-spending-limit",
+        "cards.issue-card-merchant-controls",
+        "cards.issue-card-success"
+      ]
+    },
+    {
+      "id": "cards.j-freeze-card",
+      "name": "Freeze and unfreeze a card",
+      "description": "An admin temporarily freezes a virtual card that has an active subscription, then reactivates it.",
+      "steps": [
+        "cards.index",
+        "cards.detail-virtual",
+        "cards.freeze-confirm",
+        "cards.card-frozen",
+        "cards.card-unfrozen"
+      ]
+    },
+    {
+      "id": "cards.j-edit-card-limit",
+      "name": "Change a card's spend limit",
+      "description": "An admin switches a card from a monthly to a weekly limit and then schedules a temporary limit.",
+      "steps": [
+        "cards.index",
+        "cards.detail-virtual",
+        "cards.more-menu",
+        "cards.edit-limit-modal",
+        "cards.limit-type-dropdown",
+        "cards.limit-saved",
+        "cards.edit-limit-error",
+        "cards.edit-limit-temporary",
+        "cards.limit-temporary-saved"
+      ]
+    },
+    {
+      "id": "cards.j-replace-lost-card",
+      "name": "Replace a lost physical card",
+      "description": "An admin reports a physical card lost and ships a replacement to a chosen address.",
+      "steps": [
+        "cards.index",
+        "cards.detail-physical",
+        "cards.replace-reason",
+        "cards.replace-address",
+        "cards.replace-done",
+        "cards.index"
+      ]
+    },
+    {
+      "id": "cards.j-create-budget",
+      "name": "Create a team budget",
+      "description": "An admin sets up a monthly per-person budget and assigns it to two team members.",
+      "steps": [
+        "cards.team-spend",
+        "cards.create-budget",
+        "cards.create-budget-errors",
+        "cards.create-budget-filled",
+        "cards.create-budget-assign",
+        "cards.create-budget-review",
+        "cards.create-budget-done"
+      ]
+    },
+    {
+      "id": "cards.j-reimbursements",
+      "name": "Submit and review reimbursements",
+      "description": "An admin submits their own out-of-pocket expense, then declines one request and approves another.",
+      "steps": [
+        "cards.expenses",
+        "cards.submit-expense",
+        "cards.submit-expense-errors",
+        "cards.submit-expense-filled",
+        "cards.submit-expense-review",
+        "cards.submit-expense-done",
+        "cards.expenses"
+      ]
+    },
+    {
+      "id": "cards.j-assign-budget",
+      "name": "Assign a budget to a team member",
+      "description": "An admin adds a teammate to the Team Lunch budget and picks the card their budget spend comes from.",
+      "steps": [
+        "cards.team-spend",
+        "cards.assign-budget-modal",
+        "cards.assign-budget-members",
+        "cards.assign-budget-selected",
+        "cards.assign-budget-cards",
+        "cards.assign-budget-done"
+      ]
+    }
+  ],
+  "issues": [
+    {
+      "id": "cards.i-modal-dismiss-button",
+      "title": "Card modals use two different dismiss buttons",
+      "detail": "Dialogs in this area use three dismiss treatments. Edit card limits dismisses with a borderless ghost \"Cancel\"; the Freeze, Change Card Nickname, Transfer card and shipping-address dialogs use a filled grey \"Go back\" pill with more padding; Archive budget and Assign budget use the same filled grey pill but label it \"Cancel\". Same role, two labels, two variants.",
+      "nodeIds": [
+        "cards.edit-limit-modal",
+        "cards.freeze-confirm",
+        "cards.edit-nickname",
+        "cards.budget-archive-confirm",
+        "cards.assign-budget-modal"
+      ],
+      "category": "component",
+      "severity": "medium",
+      "evidence": "Edit card limits Cancel: bg rgba(0,0,0,0), padding 4px 24px, 40x97px. Freeze/Nickname Go back: bg rgba(180,183,200,0.12), padding 8px 32px, 40x122px. Archive budget Cancel: bg rgba(180,183,200,0.12), padding 8px 32px, 40x113px. All labels 15px/480 Arcadia Text, radius 9999px."
+    },
+    {
+      "id": "cards.i-modal-title-case",
+      "title": "Modal titles and buttons mix Title Case and sentence case",
+      "detail": "The card More menu says \"Edit nickname\" and \"Edit limit\", but the resulting dialogs are titled \"Change Card Nickname\" (Title Case, different verb) and \"Edit card limits\" (sentence case). The limits primary button is \"Save Limit\" (Title Case) next to \"Cancel\"; the nickname primary is just \"Save\".",
+      "nodeIds": [
+        "cards.more-menu",
+        "cards.edit-nickname",
+        "cards.edit-limit-modal"
+      ],
+      "category": "copy",
+      "severity": "low",
+      "evidence": "Both titles render 19px/400/28px Arcadia Text in white; texts: \"Change Card Nickname\" vs \"Edit card limits\"; buttons \"Save Limit\" vs \"Save\"."
+    },
+    {
+      "id": "cards.i-modal-heading-semantics",
+      "title": "Edit card limits title is not a heading",
+      "detail": "The Change Card Nickname and Freeze dialogs expose their title as an h2, but the Edit card limits dialog renders an identical-looking title in a plain span, so it has no heading role for screen readers.",
+      "nodeIds": [
+        "cards.edit-limit-modal",
+        "cards.edit-nickname"
+      ],
+      "category": "a11y",
+      "severity": "low",
+      "evidence": "Nickname title: <H2> 19px/400/28px 'Change Card Nickname'; Freeze: <H2> 19px/400; Archive budget: <H2> 19px/400; Edit card limits title: <SPAN> 19px/400/28px with no heading role."
+    },
+    {
+      "id": "cards.i-more-menu-clipped",
+      "title": "Card More menu is clipped by the detail panel",
+      "detail": "The More dropdown renders inside the detail panel instead of a portal, so on a virtual card the last item (Cancel card) is cut off by the panel edge and only reachable by scrolling the panel.",
+      "nodeIds": [
+        "cards.more-menu"
+      ],
+      "category": "layout",
+      "severity": "medium",
+      "evidence": "With Show details expanded on the Facebook ads card: menu items span top 661 to Cancel card bottom 922; the panel ancestor ._large_kwlx6_9 has overflow 'hidden auto' and bottom 868, so Cancel card (top 869) sits entirely outside the visible panel."
+    },
+    {
+      "id": "cards.i-replace-flow-column-shift",
+      "title": "Replacement flow content column jumps between steps",
+      "detail": "The full-screen Order replacement flow left-aligns each step at a different x position, so the heading and form jump horizontally as you advance: step 1 \"What happened to your card?\" starts at x=510, step 2 \"Confirm Shipping Address\" at x=566, and the success step heading at x=576 (with the success banner back at 510).",
+      "nodeIds": [
+        "cards.replace-reason",
+        "cards.replace-address",
+        "cards.replace-done"
+      ],
+      "category": "layout",
+      "severity": "medium",
+      "evidence": "Measured left edges at 1440px viewport: step 1 eyebrow/heading x=510, step 2 x=566, step 3 heading x=576 (28px/380 Arcadia Display). Same flow shell and step rail."
+    },
+    {
+      "id": "cards.i-finish-button-size",
+      "title": "Finish button is a smaller variant than the flow primary buttons",
+      "detail": "In the replacement flow, Next and Confirm are 40px-tall primary pills, but the final Finish button drops to a 32px pill with regular weight text, so the last CTA looks secondary.",
+      "nodeIds": [
+        "cards.replace-reason",
+        "cards.replace-done"
+      ],
+      "category": "component",
+      "severity": "low",
+      "evidence": "Finish: 15px/400, padding 4px 16px, height 32px, width 72px, bg rgb(82,102,235). Next/Confirm/Freeze card/Save: 15px/480, 40px tall, padding 8px 32px."
+    },
+    {
+      "id": "cards.i-title-case-steps",
+      "title": "Replacement flow uses Title Case labels",
+      "detail": "The replacement flow uses Title Case for step names and options (\"Choose Reason\", \"Confirm Address\", \"Confirm Shipping Address\", \"Never Received\") while the rest of the card UI uses sentence case (\"Edit card limits\", \"Activate physical card\", \"Where should we ship this card?\"). The same address is called \"Your personal mailing address\" in the picker and \"Your personal address\" on the step.",
+      "nodeIds": [
+        "cards.replace-reason",
+        "cards.replace-address",
+        "cards.replace-address-picker"
+      ],
+      "category": "copy",
+      "severity": "low",
+      "evidence": "Text as rendered: step rail \"Choose Reason\"/\"Confirm Address\", h1 \"Confirm Shipping Address\", radio \"Never Received\"; picker radio \"Your personal mailing address\" vs step card \"Your personal address\"."
+    },
+    {
+      "id": "cards.i-pin-input-one-off",
+      "title": "Change PIN uses a one-off input and error style",
+      "detail": "The Change PIN screen uses a custom 64px-tall input with 38px digits, an attached lowercase \"save\" return-key button and an uppercase letter-spaced eyebrow; its error \"Must be 4 digits\" has no warning icon and is 13px, while every other card form uses 40px fields with 12px errors preceded by a warning triangle.",
+      "nodeIds": [
+        "cards.reset-pin",
+        "cards.reset-pin-error",
+        "cards.transfer-card-error"
+      ],
+      "category": "component",
+      "severity": "medium",
+      "evidence": "PIN input: 38px/360 Arcadia Text, height 64px, bg rgba(180,183,200,0.08), no border; error 13px/400/20px rgb(252,146,180), no svg. Standard field (Transfer to): height 40px, 15px/400, border 1px solid rgba(252,146,180,0.36) on error; error 12px/400/18px rgb(252,146,180) with a warning svg. Eyebrow \"CHANGE PIN\": 12px/480, text-transform uppercase, letter-spacing 1px."
+    },
+    {
+      "id": "cards.i-error-copy",
+      "title": "Validation messages vary in wording and punctuation",
+      "detail": "Required-field errors in the card flows use four different patterns: \"Please complete this field\" (no period), \"Please enter a valid US state.\" (period), \"Must be a dollar value.\" (period) and \"Must be 4 digits\" (no period).",
+      "nodeIds": [
+        "cards.replace-custom-address-error",
+        "cards.edit-limit-error",
+        "cards.reset-pin-error",
+        "cards.transfer-card-error"
+      ],
+      "category": "copy",
+      "severity": "low",
+      "evidence": "Rendered error strings captured from the accessibility tree on each form after submitting empty/invalid input."
+    },
+    {
+      "id": "cards.i-silent-saves",
+      "title": "Card edits give inconsistent success feedback",
+      "detail": "Transferring a card shows a \"Card transferred\" toast, but saving a nickname, saving a limit, freezing, unfreezing and changing the PIN close silently with no toast, so the user has to spot the change in the panel.",
+      "nodeIds": [
+        "cards.transfer-card-done",
+        "cards.nickname-saved",
+        "cards.limit-saved",
+        "cards.card-unfrozen",
+        "cards.policy-spend-controls-saved"
+      ],
+      "category": "interaction",
+      "severity": "medium",
+      "evidence": "After Transfer a 'Card transferred' toast rendered; after saving the nickname 'Facebook ads Q4' the dialog closed and no role=status/alert or toast element contained text. Saving the Spend controls policy also closed without a toast while saving an Edit budget form shows 'Changes saved'."
+    },
+    {
+      "id": "cards.i-subscription-actions-unlabeled",
+      "title": "Subscription row action icons have no accessible name",
+      "detail": "Each Subscriptions row ends with two 32px circular icon controls (open link, block) that have no aria-label, title or text, so screen readers announce them as unnamed link/button.",
+      "nodeIds": [
+        "cards.subscriptions"
+      ],
+      "category": "a11y",
+      "severity": "medium",
+      "evidence": "Adyen N.V. row: <A> 32x32 aria-label=null title=null text=''; <BUTTON> 32x32 aria-label=null title=null text=''; a third <BUTTON> 32x70 with no text or label."
+    },
+    {
+      "id": "cards.i-table-header-case",
+      "title": "Card tables mix header casing and name formats",
+      "detail": "The Manage table uses sentence case headers (\"Spent this month\", \"Cardholder\") and full names (\"Jane Black\"), while the Subscriptions tab on the same page uses Title Case headers (\"Last 30 Day Spend\", \"Payment Method\") and abbreviated names (\"Jane B. ••4928\"). Reimbursements mixes both in one table (\"Team Member\" next to \"Date\", \"Status\", \"Amount\").",
+      "nodeIds": [
+        "cards.index",
+        "cards.subscriptions",
+        "cards.expenses"
+      ],
+      "category": "copy",
+      "severity": "low",
+      "evidence": "Header texts rendered: Manage = Cardholder / Card / Budgets / Spent this month / Type / Account; Subscriptions = Merchant / Last 30 Day Spend / Payment Method / Actions; All expenses = Date / Team Member / Status / Amount / Category / Budget / Receipt / Policy. Name cells: 'Jane Black' vs 'Jane B.'."
+    },
+    {
+      "id": "cards.i-view-new-card-wrong",
+      "title": "View card details opens an existing card, not the one just created",
+      "detail": "After creating a virtual credit card, the success screen shows ••0330 and View card details navigates to /cards/cardid-credit-1, which is the pre-existing AWS billing card (••0330, Software Subscriptions budget). No new row appears in the list, so the confirmation and the destination disagree.",
+      "nodeIds": [
+        "cards.issue-card-success",
+        "cards.view-new-card"
+      ],
+      "category": "interaction",
+      "severity": "medium",
+      "evidence": "After Create card with a $1,000 daily limit, View card details navigated to /cards/cardid-credit-1; the panel header reads 'AWS billing / $1,500.00 / Jane Black'; Jane Black still has 9 rows in the list."
+    },
+    {
+      "id": "cards.i-secondary-button-colors",
+      "title": "Secondary pill buttons use two text colors",
+      "detail": "The filled grey secondary pill appears with grey text as \"Go back\" in card modals but with blue link-colored text as \"Create another\" on the card-created screen. Same background, radius and size, different foreground. The equivalent \"Submit another\" on the expense-submitted screen uses the grey text, so the two success screens disagree.",
+      "nodeIds": [
+        "cards.issue-card-success",
+        "cards.freeze-confirm",
+        "cards.edit-nickname",
+        "cards.submit-expense-done"
+      ],
+      "category": "color",
+      "severity": "low",
+      "evidence": "Create another: label color rgb(141,164,245), bg rgba(180,183,200,0.12), padding 8px 32px, 40px. Go back (Freeze, Nickname): label rgb(221,221,229), same bg/padding/height. Submit another: rgb(221,221,229), same bg/size."
+    },
+    {
+      "id": "cards.i-currency-formats",
+      "title": "Money is formatted four different ways across Cards and Team Spend",
+      "detail": "Tables render amounts with superscript cents ($200.00 weekly, $1,500.00 spent this month), the Team Spend summary uses flat cents at 34px ($4,593.84), the card panel and limit breakdown use flat cents ($5,000.00, $3,500.00), the same panel abbreviates to \"$3.5k available · $5k spend limit\", and the Create a card preview drops cents entirely (\"Daily spending limit $1,000\"). Within single rows the formats also split: budget detail shows \"$183.89 / $250\" (superscript cents, then none) and Team members lists \"$92.59\" next to \"$450\" and \"$200\", and the budget sidebar reads \"Total budget ($2,000)\" above \"$534.11 spent\".",
+      "nodeIds": [
+        "cards.team-spend",
+        "cards.detail-virtual",
+        "cards.spend-details",
+        "cards.issue-card-spending-limit",
+        "cards.index",
+        "cards.budget-detail",
+        "cards.team-members"
+      ],
+      "category": "data-format",
+      "severity": "medium",
+      "evidence": "Table cell: span._superscript_1of3b_35 10.95px inside a 15px cell, top -2.9px. Team Spend summary: 34px '$4,593.84' with no superscript child. Panel button text: '$3.5k available · $5k spend limit'. Create a card preview: 'Daily spending limit $1,000'. Team members Available: $92.59, $450, $200, $1,038.35, $1,200."
+    },
+    {
+      "id": "cards.i-policy-inline-input",
+      "title": "Policy inline edit uses a different input and button size",
+      "detail": "Editing the receipt policy swaps in a filled, underline-style amount input (4px top radius, no border) and 32px Cancel/Save pills with regular weight, while every other form in this area (Edit card limits, Create a card, Edit budget, Submit expense) uses 40px bordered 8px-radius fields and 40px 480-weight buttons.",
+      "nodeIds": [
+        "cards.policy-receipt-edit",
+        "cards.policy-spend-controls-edit",
+        "cards.edit-limit-modal",
+        "cards.budget-edit"
+      ],
+      "category": "component",
+      "severity": "medium",
+      "evidence": "Receipt amount wrapper: 144x30, bg rgba(180,183,200,0.12), radius 4px 4px 0 0, 1px top border only. Receipt and Spend controls Cancel/Save: 32px tall, padding 4px 16px, label 15px/400. Transfer to field: 40px, radius 8px; modal buttons 40px, 15px/480, padding 8px 32px."
+    },
+    {
+      "id": "cards.i-receipt-policy-contradiction",
+      "title": "Receipt policy shows as on and off at the same time",
+      "detail": "The Cards page banner offers a \"Require receipts for card transactions over $75\" switch that is off, and the card-created screen repeats it off, while the Spend Policies page shows the Receipt requirement as active (\"Receipt required if transaction amount exceeds $75\" with a Disable button).",
+      "nodeIds": [
+        "cards.index",
+        "cards.issue-card-success",
+        "cards.policies"
+      ],
+      "category": "interaction",
+      "severity": "medium",
+      "evidence": "Cards: switch \"Require receipts for card transactions over $75\" [checked=false]. Policies: Receipt requirement row renders Disable + Edit buttons and the $75 threshold chip."
+    },
+    {
+      "id": "cards.i-merchant-name-case",
+      "title": "GitHub spelled two ways",
+      "detail": "The Software Subscriptions budget lists the merchant as \"GitHub\" while Spend Policies lists the same merchant as \"Github\" in excluded and blocked merchants, and merchant chips differ in size between the two pages.",
+      "nodeIds": [
+        "cards.budget-detail",
+        "cards.policies"
+      ],
+      "category": "copy",
+      "severity": "low",
+      "evidence": "Budget detail Allowed merchants chip text \"GitHub\"; Policies chips text \"Github\" (two occurrences)."
+    },
+    {
+      "id": "cards.i-policy-error-tooltip",
+      "title": "Policy form shows validation as a tooltip",
+      "detail": "Clearing the receipt threshold shows the error as a dark tooltip above the field with an icon inside the input, while every other form in Cards and Team Spend places a pink warning-icon message below the field.",
+      "nodeIds": [
+        "cards.policy-receipt-error",
+        "cards.edit-limit-error",
+        "cards.create-budget-errors"
+      ],
+      "category": "component",
+      "severity": "low",
+      "evidence": "Policy: 'Please complete this field' renders 13px in rgb(255,255,255) inside a tooltip bubble, not the pink error color. Edit budget and Transfer card: 12px/400 rgb(252,146,180) text with a leading warning svg directly under the field."
+    },
+    {
+      "id": "cards.i-dropdown-menu-density",
+      "title": "Two dropdown menu densities for the same overflow pattern",
+      "detail": "The card panel More menu uses tall, loosely padded rows at 14px, while the budget row Actions menu and the expense More menu use compact 40px rows at 15px. Both are icon + label overflow menus opened from a More / ... button.",
+      "nodeIds": [
+        "cards.more-menu",
+        "cards.budget-actions-menu",
+        "cards.expense-more-menu"
+      ],
+      "category": "component",
+      "severity": "medium",
+      "evidence": "Card More menuitem: height 52px, padding 16px 28px, label 14px/400/20px. Budget row Actions menuitem: height 40px, padding 8px 12px, label 15px/400/24px, radius 4px."
+    },
+    {
+      "id": "cards.i-filter-controls",
+      "title": "Three filter control styles across Cards, Team Spend and Reimbursements",
+      "detail": "Cards uses a filled pill \"Add filter\" button with removable chips; Reimbursements uses a bordered 8px-radius \"Add filter\" next to bordered segmented buttons (All / Pending Review); Team Spend uses bordered 8px-radius dropdown buttons (Status, Active dates, Department, Budget). Same job, three looks.",
+      "nodeIds": [
+        "cards.index",
+        "cards.expenses",
+        "cards.team-spend",
+        "cards.team-members"
+      ],
+      "category": "component",
+      "severity": "medium",
+      "evidence": "Cards Add filter: <button> 32px, radius 9999px, bg rgba(180,183,200,0.12), no border, padding 4px 16px 4px 12px. Team Spend Status filter wrapper: 32px, radius 8px, border 1px solid rgba(180,183,200,0.2), bg rgba(180,183,200,0.08). Reimbursements Add filter: same bordered 8px style as Team Spend."
+    },
+    {
+      "id": "cards.i-expense-status-colors",
+      "title": "Expense status badges use misleading colors and Title Case",
+      "detail": "\"Payment Pending\" renders with the green success badge even though it is a pending state, and \"Declined\" uses the same orange warning badge as a Suspended card while the list already has a pink error badge (\"Action Required\"). Status labels are Title Case (\"Payment Pending\", \"Pending Review\", \"Details Requested\") while card statuses are single words (Frozen, Pending, Suspended).",
+      "nodeIds": [
+        "cards.expenses",
+        "cards.expense-declined",
+        "cards.index"
+      ],
+      "category": "color",
+      "severity": "medium",
+      "evidence": "Payment Pending: ._success, color rgb(119,197,153), bg rgba(119,197,153,0.2). Declined: ._warning, rgb(252,155,111) on rgba(252,155,111,0.2), identical to the Suspended card badge (._warning, same values). Action Required: ._error, rgb(252,146,180) on rgba(252,146,180,0.2). Pending Review / Details Requested: rgb(221,221,229) on rgba(141,164,245,0.2). All radius 4px."
+    },
+    {
+      "id": "cards.i-date-formats",
+      "title": "Dates appear in five formats and lists drop the year",
+      "detail": "The expense lists show dates without a year (\"Sep 23\", \"Oct 1\", \"Jul 5\"), so Oct 1, 2024 rows sit below Sep 2026 rows and look out of order. Elsewhere the same area shows \"Sep 22, 2026\" in the expense panel, \"Sep 22nd at 5:00pm\" in its timeline, \"September 24, 2026\" on the expense review, \"Starts August 10, 2026\" in the budget preview next to a field reading \"Aug 10, 2026\", and \"Sep 27, 2026 - Oct 4, 2026\" in the limit modal.",
+      "nodeIds": [
+        "cards.expenses",
+        "cards.my-expenses",
+        "cards.expense-detail",
+        "cards.submit-expense-review",
+        "cards.budget-saving",
+        "cards.edit-limit-modal"
+      ],
+      "category": "data-format",
+      "severity": "medium",
+      "evidence": "All expenses Date column, rows top to bottom: Sep 23, Sep 23, Sep 21, Sep 21, Sep 21, Sep 20, Oct 1, Oct 1, Oct 1, Oct 1, Jul 5. Edit card limits text: 'From Sep 27, 2026 - Oct 4, 2026'. Edit budget preview: 'Starts August 10, 2026, and never expires'."
+    },
+    {
+      "id": "cards.i-toast-copy",
+      "title": "Toast messages vary in punctuation and wording",
+      "detail": "Toasts in this area mix punctuation, counts and verbs: \"Reimbursement submitted.\" ends with a period, while \"Budget published\", \"Card transferred\", \"Changes saved\", \"Reimbursement request declined\" and \"Team Lunch assigned to 1 team member\" do not. Approving one request from the detail panel says \"Reimbursement payment approved\" but approving one from the bulk bar says \"1 reimbursement payment approved\". \"Budget published\" follows a button labelled \"Create budget\". Declines get the same green check icon as successes.",
+      "nodeIds": [
+        "cards.submit-expense-done",
+        "cards.create-budget-done",
+        "cards.transfer-card-done",
+        "cards.expense-declined",
+        "cards.expense-approved",
+        "cards.expenses-bulk-approved",
+        "cards.assign-budget-done"
+      ],
+      "category": "copy",
+      "severity": "low",
+      "evidence": "Toast text read from role=status after each action and visible in the 2x captures: 'Reimbursement submitted.', 'Budget published', 'Card transferred', 'Reimbursement request declined', 'Changes saved', 'Team Lunch assigned to 1 team member', '1 reimbursement payment approved'. Every toast renders the same green check icon."
+    },
+    {
+      "id": "cards.i-status-case-drift",
+      "title": "Same expense status written in two casings",
+      "detail": "My expenses filters by a chip reading \"Details requested\" (sentence case) while the badge in the table under it reads \"Details Requested\" (Title Case). The page also pairs a \"Drafts\" heading with \"Submitted Expenses\", and the draft badge reads \"Draft - Missing info\".",
+      "nodeIds": [
+        "cards.my-expenses",
+        "cards.expenses"
+      ],
+      "category": "copy",
+      "severity": "low",
+      "evidence": "Rendered strings on /expenses/my-expenses: filter chip 'Details requested', status badge 'Details Requested', section headings 'Drafts' and 'Submitted Expenses', badge 'Draft - Missing info'."
+    },
+    {
+      "id": "cards.i-blocking-case",
+      "title": "Policy qualifiers change case between page and dialog",
+      "detail": "Spend Policies > Reimbursements labels rules \"(Not blocking)\" and \"(Blocking)\"; the Reimbursement settings dialog lists the same rules as \"(not blocking)\" and \"(blocking)\". Card spend rules say \"if transaction amount exceeds\" while reimbursement rules say \"for expenses that exceed\".",
+      "nodeIds": [
+        "cards.policies-reimbursements",
+        "cards.reimbursement-settings",
+        "cards.policies"
+      ],
+      "category": "copy",
+      "severity": "low",
+      "evidence": "Policies page text: 'Receipt required for expenses that exceed $50 (Not blocking)', 'must be submitted within 30 days (Blocking)'. Settings dialog: 'Receipt required for expenses that exceed $50 (not blocking)', 'Expenses must be submitted within 30 days (blocking)'."
+    },
+    {
+      "id": "cards.i-self-approval-no-confirm",
+      "title": "Enabling self-approval skips the confirmation that disabling a rule gets",
+      "detail": "Disabling the Notes requirement asks \"Disable rule?\" with Go back / Yes, disable. Enabling Self-approval, which lets approvers sign off on their own reimbursements, applies instantly with no dialog and no toast; the only feedback is the button turning into Disable.",
+      "nodeIds": [
+        "cards.self-approval-enabled",
+        "cards.policy-disable-confirm",
+        "cards.policies-reimbursements"
+      ],
+      "category": "interaction",
+      "severity": "medium",
+      "evidence": "After clicking Enable: no new role=dialog, no role=status text, and the Self-approval row now renders a single 'Disable' button. Disable on Notes requirement opens a dialog with 'Go back' and 'Yes, disable'."
+    },
+    {
+      "id": "cards.i-non-budget-hyphen",
+      "title": "\"Non-budget\" spelled two ways in one card",
+      "detail": "The display-options switch reads \"Include non-budget spend\" but the legend entry it adds reads \"Non budget spend\" with no hyphen.",
+      "nodeIds": [
+        "cards.team-spend-display-options",
+        "cards.team-spend-non-budget"
+      ],
+      "category": "copy",
+      "severity": "low",
+      "evidence": "Leaf text nodes on /team-spend after toggling: 'Include non-budget spend' (switch label) and 'Non budget spend' (legend)."
+    },
+    {
+      "id": "cards.i-assign-button-relabel",
+      "title": "Assign dialog relabels its primary button mid-flow",
+      "detail": "The Assign budget dialog opens with a disabled \"Assign\" button that turns into \"Next\" once a member is picked, then step 2 shows \"Assign\" again. The button's label changes under the cursor instead of the dialog showing a stable Next on step 1.",
+      "nodeIds": [
+        "cards.assign-budget-modal",
+        "cards.assign-budget-selected",
+        "cards.assign-budget-cards"
+      ],
+      "category": "interaction",
+      "severity": "low",
+      "evidence": "Accessibility tree: dialog 'Assign Team Lunch' buttons Cancel / Assign (disabled) before selection; Cancel / Next after selecting Abigail Kyte; step 2 'Set up budget cards' buttons Back / Assign."
+    }
+  ],
+  "blocked": []
+}

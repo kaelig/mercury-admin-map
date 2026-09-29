@@ -1,0 +1,357 @@
+[
+ {
+  "id": "p-dates",
+  "title": "Dates have no house format",
+  "summary": "Every area writes dates several ways: Sep 29, 09/29/2026, Sep 29, 2026, relative words like Yesterday, and year-less dates outside the current year. Ranges switch between en dash, hyphen and \"to\".",
+  "issueIds": [
+   "accounts.i-date-formats",
+   "accounts.i-range-format",
+   "billpay.i-due-date-format",
+   "billpay.i-time-format",
+   "billpay.i-relative-dates",
+   "books.i-date-formats",
+   "books.i-range-separator",
+   "cards.i-date-formats",
+   "home.i-date-formats",
+   "invoicing.i-date-formats",
+   "payments.i-date-formats",
+   "payments.i-duration-ranges",
+   "settings.i-date-formats",
+   "settings.i-timestamp-formats-personal"
+  ],
+  "areas": [
+   "accounts",
+   "billpay",
+   "books",
+   "cards",
+   "home",
+   "invoicing",
+   "payments",
+   "settings"
+  ]
+ },
+ {
+  "id": "p-money",
+  "title": "Money goes through several different renderers",
+  "summary": "Cents are superscript in some tables and flat in cards and review steps; negatives use three different minus characters; thousands are K or k; foreign amounts get a dollar sign. Each surface seems to pick its own money component.",
+  "issueIds": [
+   "accounts.i-cents-format",
+   "billpay.i-amount-sign",
+   "billpay.i-cents-style",
+   "billpay.i-ars-currency",
+   "billpay.i-currency-input-align",
+   "books.i-money-formats",
+   "cards.i-currency-formats",
+   "home.i-cents-format",
+   "invoicing.i-cents-rendering",
+   "payments.i-cents-rendering",
+   "payments.i-foreign-currency-format",
+   "settings.i-referral-money-and-math",
+   "transactions.i-minus-glyphs",
+   "transactions.i-abbrev-case",
+   "transactions.i-two-money-components",
+   "transactions.i-zero-no-cents"
+  ],
+  "areas": [
+   "accounts",
+   "billpay",
+   "books",
+   "cards",
+   "home",
+   "invoicing",
+   "payments",
+   "settings",
+   "transactions"
+  ]
+ },
+ {
+  "id": "p-case",
+  "title": "Title Case slips into a sentence-case UI",
+  "summary": "The product is mostly sentence case, but dialog titles, buttons, badges and menu items in Title Case sit next to their sentence-case twins, sometimes for the same label.",
+  "issueIds": [
+   "accounts.i-case-mixing",
+   "billpay.i-casing",
+   "cards.i-modal-title-case",
+   "cards.i-title-case-steps",
+   "cards.i-table-header-case",
+   "cards.i-status-case-drift",
+   "home.i-legend-case",
+   "home.i-title-case-ctas",
+   "invoicing.i-title-case",
+   "payments.i-title-case",
+   "settings.i-capitalization",
+   "settings.i-title-case-new-pages",
+   "transactions.i-menu-case",
+   "transactions.i-settings-title-case"
+  ],
+  "areas": [
+   "accounts",
+   "billpay",
+   "cards",
+   "home",
+   "invoicing",
+   "payments",
+   "settings",
+   "transactions"
+  ]
+ },
+ {
+  "id": "p-validation",
+  "title": "Form errors are reported in four different ways",
+  "summary": "Inline red text, tooltips, disabled submit buttons and silent no-ops all appear for the same situation (an empty or invalid required field), and error copy changes voice and punctuation.",
+  "issueIds": [
+   "accounts.i-validation-display",
+   "accounts.i-error-copy",
+   "billpay.i-validation-patterns",
+   "books.i-validation-patterns",
+   "cards.i-pin-input-one-off",
+   "cards.i-error-copy",
+   "cards.i-policy-error-tooltip",
+   "home.i-validation-copy",
+   "payments.i-validation-punctuation",
+   "settings.i-required-copy",
+   "settings.i-submit-disable-rules"
+  ],
+  "areas": [
+   "accounts",
+   "billpay",
+   "books",
+   "cards",
+   "home",
+   "payments",
+   "settings"
+  ]
+ },
+ {
+  "id": "p-buttons",
+  "title": "Same role, different button",
+  "summary": "Back, dismiss, acknowledge and secondary actions switch between components, sizes (32 vs 40px), emphasis and even link vs button inside one flow.",
+  "issueIds": [
+   "accounts.i-secondary-button-style",
+   "accounts.i-dismiss-emphasis",
+   "accounts.i-button-sizes",
+   "billpay.i-create-recipient-cta",
+   "billpay.i-feedback-badge",
+   "cards.i-modal-dismiss-button",
+   "cards.i-finish-button-size",
+   "cards.i-secondary-button-colors",
+   "cards.i-policy-inline-input",
+   "home.i-two-button-systems",
+   "home.i-approval-actions",
+   "invoicing.i-back-button-variants",
+   "invoicing.i-detail-panel-actions",
+   "payments.i-check-deposit-buttons",
+   "payments.i-back-button-variants"
+  ],
+  "areas": [
+   "accounts",
+   "billpay",
+   "cards",
+   "home",
+   "invoicing",
+   "payments"
+  ]
+ },
+ {
+  "id": "p-disabled",
+  "title": "Buttons that look disabled but aren't",
+  "summary": "Primary buttons are dimmed to signal an incomplete form, yet some still submit, some validate and some do nothing. The visual state doesn't predict behaviour.",
+  "issueIds": [
+   "books.i-fake-disabled-save",
+   "home.i-disabled-lookalike",
+   "invoicing.i-fake-disabled-next",
+   "settings.i-submit-disable-rules"
+  ],
+  "areas": [
+   "books",
+   "home",
+   "invoicing",
+   "settings"
+  ]
+ },
+ {
+  "id": "p-badges",
+  "title": "Status colour doesn't carry one meaning",
+  "summary": "The same tint marks unrelated states (one orange for paused, failed, eligible and personal), failures keep success colours, and some statuses are badges only when they go wrong.",
+  "issueIds": [
+   "billpay.i-badge-hover-color",
+   "books.i-open-badge-color",
+   "cards.i-expense-status-colors",
+   "home.i-badge-styles",
+   "home.i-title-case-ctas",
+   "invoicing.i-status-badge-colors",
+   "settings.i-connection-status-display",
+   "settings.i-warning-hue-overloaded",
+   "settings.i-channel-tags-as-status",
+   "transactions.i-failed-green"
+  ],
+  "areas": [
+   "billpay",
+   "books",
+   "cards",
+   "home",
+   "invoicing",
+   "settings",
+   "transactions"
+  ]
+ },
+ {
+  "id": "p-empty",
+  "title": "No shared empty state",
+  "summary": "Empty tables and panels use unrelated layouts, sizes and glyphs (dash, em dash, blank, \"No results\"), sometimes over loading skeletons.",
+  "issueIds": [
+   "billpay.i-empty-states",
+   "books.i-payroll-empty-skeleton",
+   "home.i-empty-states",
+   "home.i-empty-value-dash",
+   "invoicing.i-empty-value-glyph",
+   "invoicing.i-transaction-match-empty",
+   "settings.i-table-type-scale",
+   "transactions.i-empty-state-styles"
+  ],
+  "areas": [
+   "billpay",
+   "books",
+   "home",
+   "invoicing",
+   "settings",
+   "transactions"
+  ]
+ },
+ {
+  "id": "p-destructive",
+  "title": "Destructive actions are confirmed unevenly",
+  "summary": "Canceling asks for confirmation while declining does not; disabling a rule is confirmed but enabling self-approval is not; delete dialogs follow three templates.",
+  "issueIds": [
+   "accounts.i-destructive-confirm",
+   "billpay.i-decline-no-confirm",
+   "cards.i-self-approval-no-confirm",
+   "payments.i-decline-no-confirm",
+   "settings.i-destructive-confirm-copy"
+  ],
+  "areas": [
+   "accounts",
+   "billpay",
+   "cards",
+   "payments",
+   "settings"
+  ]
+ },
+ {
+  "id": "p-feedback",
+  "title": "Success feedback varies",
+  "summary": "Toasts differ in wording and punctuation, some actions end with a full success screen, others with nothing, and a few say things like \"Removed 1 statements\".",
+  "issueIds": [
+   "books.i-toast-copy",
+   "cards.i-silent-saves",
+   "cards.i-toast-copy",
+   "invoicing.i-action-copy",
+   "payments.i-success-screens",
+   "payments.i-toast-copy",
+   "settings.i-toast-punctuation",
+   "settings.i-stale-after-action",
+   "transactions.i-insights-export-silent"
+  ],
+  "areas": [
+   "books",
+   "cards",
+   "invoicing",
+   "payments",
+   "settings",
+   "transactions"
+  ]
+ },
+ {
+  "id": "p-a11y",
+  "title": "Controls and headings without proper semantics",
+  "summary": "Kebab menus, row icons and tabs are unnamed buttons or clickable divs, and modal titles skip heading levels or aren't headings at all, so screen readers announce \"button\" or nothing.",
+  "issueIds": [
+   "accounts.i-heading-levels",
+   "accounts.i-tabs-not-tabs",
+   "accounts.i-safe-form-labels",
+   "billpay.i-unlabeled-controls",
+   "cards.i-modal-heading-semantics",
+   "cards.i-subscription-actions-unlabeled",
+   "home.i-chips-as-menuitems",
+   "invoicing.i-unlabeled-controls",
+   "payments.i-icon-links-a11y",
+   "settings.i-unnamed-row-buttons",
+   "transactions.i-category-name-label",
+   "accounts.i-rule-cards-hidden-period"
+  ],
+  "areas": [
+   "accounts",
+   "billpay",
+   "cards",
+   "home",
+   "invoicing",
+   "payments",
+   "settings",
+   "transactions"
+  ]
+ },
+ {
+  "id": "p-utc",
+  "title": "Dates computed in UTC show up as tomorrow",
+  "summary": "In the evening (Pacific), newly created tokens, journal entries and bills are stamped with tomorrow's date, which suggests UTC is used where local time is expected.",
+  "issueIds": [
+   "billpay.i-utc-dates",
+   "books.i-je-default-date",
+   "settings.i-token-created-tomorrow"
+  ],
+  "areas": [
+   "billpay",
+   "books",
+   "settings"
+  ]
+ },
+ {
+  "id": "p-stale",
+  "title": "Lists don't update after an action",
+  "summary": "Paid bills stay in the inbox, approved tasks stay in Tasks, canceled invoices vanish without totals changing: the UI and its counts drift from the action just taken.",
+  "issueIds": [
+   "billpay.i-stale-after-pay",
+   "home.i-approved-task-lingers",
+   "invoicing.i-cancel-not-reflected",
+   "settings.i-stale-after-action"
+  ],
+  "areas": [
+   "billpay",
+   "home",
+   "invoicing",
+   "settings"
+  ]
+ },
+ {
+  "id": "p-masking",
+  "title": "Account numbers are masked three ways",
+  "summary": "Account numbers show different dot counts, partial masks, or no mask at all on review screens.",
+  "issueIds": [
+   "accounts.i-account-masking",
+   "billpay.i-unmasked-account",
+   "payments.i-masked-numbers"
+  ],
+  "areas": [
+   "accounts",
+   "billpay",
+   "payments"
+  ]
+ },
+ {
+  "id": "p-link-punctuation",
+  "title": "Punctuation inside link text",
+  "summary": "Inline links that end a sentence swallow the sentence's period ('accounting settings.', 'Learn more.', 'View API docs.', 'our Help Center.'), so the period is underlined and clickable. Rule under test: no link text ends with a final period. Related: rule template cards carry an invisible '.' in their accessible names.",
+  "issueIds": [
+   "settings.i-link-trailing-period",
+   "invoicing.i-link-trailing-period",
+   "payments.i-link-trailing-period",
+   "accounts.i-rule-cards-hidden-period"
+  ],
+  "areas": [
+   "accounts",
+   "invoicing",
+   "payments",
+   "settings"
+  ]
+ }
+]

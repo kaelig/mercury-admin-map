@@ -1,0 +1,1766 @@
+{
+ "area": "transactions",
+ "title": "Transactions & Insights",
+ "nodes": [
+  {
+   "id": "transactions.index",
+   "title": "Transactions",
+   "url": "/transactions",
+   "image": "screens/transactions/01-index.png",
+   "kind": "page",
+   "note": "Transactions table (Date, To/From, Amount, Account, Method, Category, Attachment) under a toolbar of Saved views, Filters, Date, Keyword and Amount chips, with month totals."
+  },
+  {
+   "id": "transactions.categorized-tip",
+   "title": "Auto-categorization tip",
+   "url": "/transactions",
+   "image": "screens/transactions/02-categorized-tip.png",
+   "kind": "popover",
+   "note": "First-visit popover over the Category column saying Mercury categorized past transactions, with a View link and close button."
+  },
+  {
+   "id": "transactions.saved-views-menu",
+   "title": "Saved views menu",
+   "url": "/transactions",
+   "image": "screens/transactions/03-saved-views-menu.png",
+   "kind": "menu",
+   "note": "Dropdown listing preset views (My transactions, Monthly money in, Monthly money out, Operating expenses) and Create view."
+  },
+  {
+   "id": "transactions.saved-view-applied",
+   "title": "Saved view applied",
+   "url": "/transactions?q={savedTransactionViewId:monthlyMoneyOut}",
+   "image": "screens/transactions/04-saved-view-monthly-money-out.png",
+   "kind": "page",
+   "note": "Monthly money out view: the chip turns into a filled saved-view pill, Filters (3), Reset and Export filtered replace the default toolbar."
+  },
+  {
+   "id": "transactions.filters-panel",
+   "title": "Filters panel: Date",
+   "url": "/transactions?q={...}",
+   "image": "screens/transactions/05-filters-panel-active.png",
+   "kind": "popover",
+   "note": "Two-pane filter panel with 15 filter tabs (Date, Keyword, Amount, Method, Category, Merchant Type, GL Code, Account, Team Member, Department, Budget, Card, Status, Policy, Attachment); Date tab shows preset, From/To and a month grid."
+  },
+  {
+   "id": "transactions.filter-date-presets",
+   "title": "Date preset dropdown",
+   "url": "/transactions?q={...}",
+   "image": "screens/transactions/06-filter-date-presets.png",
+   "kind": "menu",
+   "note": "Show transactions for combobox open: Custom, This week, This month, This year, Last week/month, Last 30/90 days, Last 6 months, quarters, All time."
+  },
+  {
+   "id": "transactions.filter-amount",
+   "title": "Filters panel: Amount",
+   "url": "/transactions?q={...}",
+   "image": "screens/transactions/07-filter-amount.png",
+   "kind": "popover",
+   "note": "Amount tab with Direction radios (Any/In/Out) and Specific amount, At least, No more than inputs; editing a saved view shows Revert changes and Save."
+  },
+  {
+   "id": "transactions.filter-amount-invalid",
+   "title": "Amount range validation",
+   "url": "/transactions?q={...}",
+   "image": "screens/transactions/08-filter-amount-invalid-range.png",
+   "kind": "validation-error",
+   "note": "At least $1,000 with No more than $100 turns both labels red and shows the tooltip \"Should be greater than 'At least' amount.\""
+  },
+  {
+   "id": "transactions.filter-method",
+   "title": "Filters panel: Method",
+   "url": "/transactions?q={...}",
+   "image": "screens/transactions/09-filter-method.png",
+   "kind": "popover",
+   "note": "Method tab: nested checkboxes for money movement methods (ACH, Cards, Check, Real-Time Payment...) with Select All / Inverse / None."
+  },
+  {
+   "id": "transactions.filter-category",
+   "title": "Filters panel: Category",
+   "url": "/transactions?q={...}",
+   "image": "screens/transactions/10-filter-category.png",
+   "kind": "popover",
+   "note": "Category tab: search, All/Categorized/Uncategorized radios and category checkboxes."
+  },
+  {
+   "id": "transactions.filter-account",
+   "title": "Filters panel: Account",
+   "url": "/transactions?q={...}",
+   "image": "screens/transactions/11-filter-account.png",
+   "kind": "popover",
+   "note": "Account tab: Mercury accounts and Linked accounts checkbox lists, each with Select All."
+  },
+  {
+   "id": "transactions.filter-card",
+   "title": "Filters panel: Card",
+   "url": "/transactions?q={...}",
+   "image": "screens/transactions/12-filter-card.png",
+   "kind": "popover",
+   "note": "Card tab: cardholder search, Your cards and Everyone's cards lists with card nicknames."
+  },
+  {
+   "id": "transactions.filter-status",
+   "title": "Filters panel: Status",
+   "url": "/transactions?q={...}",
+   "image": "screens/transactions/13-filter-status.png",
+   "kind": "popover",
+   "note": "Status tab: Posted, Pending, Failed, Canceled, Blocked checkboxes with descriptions, plus Dispute status radios."
+  },
+  {
+   "id": "transactions.filter-attachment",
+   "title": "Filters panel: Attachment",
+   "url": "/transactions?q={...}",
+   "image": "screens/transactions/14-filter-attachment.png",
+   "kind": "popover",
+   "note": "Attachment tab: All / Has / Does not have radios."
+  },
+  {
+   "id": "transactions.filter-team-member",
+   "title": "Filters panel: Team Member",
+   "url": "/transactions?q={...}",
+   "image": "screens/transactions/15-filter-team-member.png",
+   "kind": "popover",
+   "note": "Team Member tab: search by name or email and an Active member checklist."
+  },
+  {
+   "id": "transactions.save-view-menu",
+   "title": "Save view split menu",
+   "url": "/transactions?q={...}",
+   "image": "screens/transactions/16-save-view-menu.png",
+   "kind": "menu",
+   "note": "Save split button opened on an edited saved view, offering Create New View."
+  },
+  {
+   "id": "transactions.create-view-modal",
+   "title": "Save view modal",
+   "url": "/transactions?q={...}",
+   "image": "screens/transactions/17-create-view-modal.png",
+   "kind": "modal",
+   "note": "Save view dialog listing applied filter chips and an empty Saved view name field; Save stays disabled until a name is typed."
+  },
+  {
+   "id": "transactions.view-saved",
+   "title": "View saved",
+   "url": "/transactions?q={savedTransactionViewId:...}",
+   "image": "screens/transactions/18-view-saved-confirmation.png",
+   "kind": "toast",
+   "note": "New view \"Large payments Q3\" becomes the active chip and a \"View saved\" toast appears."
+  },
+  {
+   "id": "transactions.keyword-no-matches",
+   "title": "Keyword search: no matches",
+   "url": "/transactions",
+   "image": "screens/transactions/19-keyword-no-matches.png",
+   "kind": "empty-state",
+   "note": "Keyword popover with \"Amazon\": \"No matches in last 500 transactions.\" plus a Filter for any matching link."
+  },
+  {
+   "id": "transactions.keyword-suggestions",
+   "title": "Keyword suggestions",
+   "url": "/transactions",
+   "image": "screens/transactions/20-keyword-suggestions.png",
+   "kind": "popover",
+   "note": "Keyword popover with \"Google\" lists matching counterparties as checkboxes (two identical \"Google\" rows)."
+  },
+  {
+   "id": "transactions.table-loading",
+   "title": "Table loading skeleton",
+   "url": "/transactions?q={savedTransactionViewId:operatingExpenses}",
+   "image": "screens/transactions/21-table-loading.png",
+   "kind": "form-state",
+   "note": "Picking the Operating expenses saved view: the toolbar switches to the saved-view pill with Filters (5), Reset and Export filtered while the table shows skeleton rows and the Money out total animates in."
+  },
+  {
+   "id": "transactions.keyword-results",
+   "title": "Keyword filtered results",
+   "url": "/transactions?q={searchTerm:[...]}",
+   "image": "screens/transactions/22-keyword-filtered-results.png",
+   "kind": "page",
+   "note": "After ticking a Google suggestion the chip becomes \"Google x\", Filters (1) and Create view appear, and the table is filtered to Google transactions with Net change/Money in/Money out recomputed."
+  },
+  {
+   "id": "transactions.date-chip",
+   "title": "Date chip dropdown",
+   "url": "/transactions?q={searchTerm:[...]}",
+   "image": "screens/transactions/23-date-chip-dropdown.png",
+   "kind": "popover",
+   "note": "Date toolbar chip opened: preset combobox (All time), From/To fields and 2026 month grid."
+  },
+  {
+   "id": "transactions.group-menu",
+   "title": "Group by menu",
+   "url": "/transactions",
+   "image": "screens/transactions/24-group-menu.png",
+   "kind": "menu",
+   "note": "Group button opens a Group by combobox: To/From, Account, Card, Merchant Type, Category, GL Code, Directionality (In/Out)."
+  },
+  {
+   "id": "transactions.grouped-by-category",
+   "title": "Grouped by category",
+   "url": "/transactions",
+   "image": "screens/transactions/25-grouped-by-category.png",
+   "kind": "page",
+   "note": "Table collapsed into category groups with transaction counts and money in / money out subtotals."
+  },
+  {
+   "id": "transactions.sort-menu",
+   "title": "Sort menu",
+   "url": "/transactions",
+   "image": "screens/transactions/26-sort-menu.png",
+   "kind": "menu",
+   "note": "Sort transactions by popover with field (Date) and order (New to old) dropdowns."
+  },
+  {
+   "id": "transactions.settings-menu",
+   "title": "Table settings menu",
+   "url": "/transactions",
+   "image": "screens/transactions/27-column-settings-menu.png",
+   "kind": "menu",
+   "note": "Settings popover: Show graph toggle, Time zone (PDT) submenu, Manage categories link."
+  },
+  {
+   "id": "transactions.graphs-shown",
+   "title": "Graphs expanded",
+   "url": "/transactions",
+   "image": "screens/transactions/28-graphs-shown.png",
+   "kind": "page",
+   "note": "Summary strip expanded into a cumulative money in/out line chart and a bar chart with a grouping dropdown (Category in this capture), with month-over-month comparison."
+  },
+  {
+   "id": "transactions.export-modal",
+   "title": "Export transactions modal",
+   "url": "/transactions",
+   "image": "screens/transactions/29-export-modal.png",
+   "kind": "modal",
+   "note": "Export transactions dialog: prefilled File name and .csv/.xlsx radios, Cancel and Download."
+  },
+  {
+   "id": "transactions.export-xlsx",
+   "title": "Export as .xlsx",
+   "url": "/transactions",
+   "image": "screens/transactions/30-export-xlsx-selected.png",
+   "kind": "form-state",
+   "note": "Export dialog with .xlsx selected; Download closes the dialog with no confirmation (also with an empty file name)."
+  },
+  {
+   "id": "transactions.bulk-select",
+   "title": "Bulk selection bar",
+   "url": "/transactions",
+   "image": "screens/transactions/31-bulk-select.png",
+   "kind": "form-state",
+   "note": "Three rows checked: header checkbox goes indeterminate and a floating bar shows \"3 selected\", a field picker, value combobox, attach/receipt icons and more."
+  },
+  {
+   "id": "transactions.bulk-more-menu",
+   "title": "Bulk more menu",
+   "url": "/transactions",
+   "image": "screens/transactions/32-bulk-more-menu.png",
+   "kind": "menu",
+   "note": "Bulk bar overflow menu: Export selected, Add comment."
+  },
+  {
+   "id": "transactions.detail-card",
+   "title": "Card transaction detail",
+   "url": "/transactions/credit-incoming2-0",
+   "image": "screens/transactions/33-detail-card.png",
+   "kind": "drawer",
+   "note": "Side panel for a card transaction: title with card nickname, amount, merchant to card timeline, Budget, Category, GL Code fields and a comment composer."
+  },
+  {
+   "id": "transactions.detail-card-lower",
+   "title": "Card detail: notes & attachments",
+   "url": "/transactions/credit-incoming2-0",
+   "image": "screens/transactions/34-detail-card-notes-attachments.png",
+   "kind": "drawer",
+   "note": "Lower part of the card panel: Department, Notes, Attachments dropzone (PDF, PNG, JPEG), Find using Gmail, Bank description."
+  },
+  {
+   "id": "transactions.attachment-toast",
+   "title": "Attachment uploaded toast",
+   "url": "/transactions/credit-incoming2-0",
+   "image": "screens/transactions/35-attachment-uploaded-toast.png",
+   "kind": "toast",
+   "note": "\"Attachment uploaded\" toast; the row's attachment column switches from + to a paperclip."
+  },
+  {
+   "id": "transactions.detail-receipt-attached",
+   "title": "Receipt attached",
+   "url": "/transactions/credit-incoming2-0",
+   "image": "screens/transactions/36-detail-receipt-attached.png",
+   "kind": "confirmation",
+   "note": "Attachments list shows the uploaded receipt with a green check (named receipt.pdf although a PNG was uploaded)."
+  },
+  {
+   "id": "transactions.comment-mention",
+   "title": "Comment @mention picker",
+   "url": "/transactions/credit-incoming2-0",
+   "image": "screens/transactions/37-comment-mention-picker.png",
+   "kind": "menu",
+   "note": "Typing @ in the comment box opens a team member picker (Landon Shepherd, Mary Metcalfe, Alice Chen...)."
+  },
+  {
+   "id": "transactions.comment-posted",
+   "title": "Comment posted",
+   "url": "/transactions/credit-incoming2-0",
+   "image": "screens/transactions/38-comment-posted.png",
+   "kind": "confirmation",
+   "note": "Comments section shows the new comment by Jane Black with the Alice Chen mention highlighted, stamped \"3 minutes ago\"."
+  },
+  {
+   "id": "transactions.detail-more-menu",
+   "title": "Card detail more menu",
+   "url": "/transactions/credit-incoming2-0",
+   "image": "screens/transactions/39-detail-more-menu.png",
+   "kind": "menu",
+   "note": "Panel footer overflow menu for a card transaction: Nickname sender."
+  },
+  {
+   "id": "transactions.detail-ach",
+   "title": "ACH payment detail",
+   "url": "/transactions/electronicPayment-0",
+   "image": "screens/transactions/40-detail-ach.png",
+   "kind": "drawer",
+   "note": "Mercury ACH Payment panel: −$5,250.00 from AP to Lighthouse Properties, Category, GL Code, Department and a \"1 Unread Comment\" jump pill."
+  },
+  {
+   "id": "transactions.detail-ach-comments",
+   "title": "ACH detail: attachments & comments",
+   "url": "/transactions/electronicPayment-0",
+   "image": "screens/transactions/41-detail-ach-comments.png",
+   "kind": "drawer",
+   "note": "ACH panel scrolled to the attached bill, bank description, Mercury-generated receipt and an existing comment thread."
+  },
+  {
+   "id": "transactions.detail-ach-more-menu",
+   "title": "ACH detail more menu",
+   "url": "/transactions/electronicPayment-0",
+   "image": "screens/transactions/42-detail-ach-more-menu.png",
+   "kind": "menu",
+   "note": "Footer overflow menu for an ACH payment: View Recipient, Nickname recipient."
+  },
+  {
+   "id": "transactions.detail-intl-wire",
+   "title": "International wire detail",
+   "url": "/transactions/intlWirePayment-3",
+   "image": "screens/transactions/43-detail-intl-wire.png",
+   "kind": "drawer",
+   "note": "Intl. Wire panel: −$1,010.00 with a Converted to 1,372.30 CAD step (rate and $10 fee) and a copyable tracking link."
+  },
+  {
+   "id": "transactions.detail-wire-in",
+   "title": "Incoming wire detail",
+   "url": "/transactions/incomingDomesticWire-1",
+   "image": "screens/transactions/44-detail-wire-in.png",
+   "kind": "drawer",
+   "note": "Wire In panel: +$244.99 from Deshaun Moore to Ops / Payroll, empty Category, GL Code 318 - Unbilled Receivables."
+  },
+  {
+   "id": "transactions.detail-category-dropdown",
+   "title": "Detail category dropdown",
+   "url": "/transactions/incomingDomesticWire-1",
+   "image": "screens/transactions/45-detail-category-dropdown.png",
+   "kind": "menu",
+   "note": "Category combobox open in the panel listing categories and a Create category action."
+  },
+  {
+   "id": "transactions.create-category-modal",
+   "title": "Create category modal",
+   "url": "/transactions/incomingDomesticWire-1",
+   "image": "screens/transactions/46-create-category-modal.png",
+   "kind": "modal",
+   "note": "Create category dialog: unlabeled name input, visibility checkboxes (Card transactions, Reimbursements, Other) and a disabled Create category button."
+  },
+  {
+   "id": "transactions.category-created",
+   "title": "Category created",
+   "url": "/transactions/incomingDomesticWire-1",
+   "image": "screens/transactions/47-category-created.png",
+   "kind": "toast",
+   "note": "New \"Consulting Income\" category is applied, the panel header shows \"Saved\", and a toast reads \"Category created and applied to transaction\"."
+  },
+  {
+   "id": "transactions.detail-failed",
+   "title": "Failed payment detail",
+   "url": "/transactions/rtp-out-2",
+   "image": "screens/transactions/48-detail-failed-rtp.png",
+   "kind": "drawer",
+   "note": "Real-Time Payment panel for a failed transfer: struck-through amount, red \"Failed\" timestamp and a Failure reason block."
+  },
+  {
+   "id": "transactions.row-category-dropdown",
+   "title": "Row category dropdown",
+   "url": "/transactions",
+   "image": "screens/transactions/49-row-category-dropdown.png",
+   "kind": "menu",
+   "note": "Inline Category combobox in a table row opened, listing categories."
+  },
+  {
+   "id": "transactions.row-category-set",
+   "title": "Row category updated",
+   "url": "/transactions",
+   "image": "screens/transactions/50-row-category-set.png",
+   "kind": "toast",
+   "note": "Row shows the chosen category and a toast \"Category updated. We'll learn from this for similar transactions.\" with Review similar."
+  },
+  {
+   "id": "transactions.match-receipts",
+   "title": "Match receipts popover",
+   "url": "/transactions",
+   "image": "screens/transactions/51-match-receipts.png",
+   "kind": "popover",
+   "note": "Match receipts popover: explanation, receipts@mercury.com address, Match receipts for all transactions toggle and a bulk upload dropzone."
+  },
+  {
+   "id": "transactions.insights",
+   "title": "Insights overview",
+   "url": "/insights/overview",
+   "image": "screens/transactions/52-insights-overview.png",
+   "kind": "page",
+   "note": "Insights dashboard: Saved views, Filters, date range and cashflow chips, timeline scrubber, Net cashflow/Money in/Money out headline, generated trend notes and a combined bar/line chart."
+  },
+  {
+   "id": "transactions.insights-breakdown",
+   "title": "Insights: money in/out breakdown",
+   "url": "/insights/overview",
+   "image": "screens/transactions/53-insights-overview-breakdown.png",
+   "kind": "page",
+   "note": "Below the chart: Money in by Source and Money out by Recipient tables with % of total bars."
+  },
+  {
+   "id": "transactions.insights-breakdown-category",
+   "title": "Breakdown by category",
+   "url": "/insights/overview?moneyInTab=transactionGroupsCustomCategoryKind",
+   "image": "screens/transactions/54-insights-breakdown-category.png",
+   "kind": "page",
+   "note": "Money in card switched to the Category segment, plus a \"Get better insights\" categorize prompt."
+  },
+  {
+   "id": "transactions.insights-cashflow-menu",
+   "title": "Cashflow type menu",
+   "url": "/insights/overview",
+   "image": "screens/transactions/55-insights-cashflow-type-menu.png",
+   "kind": "menu",
+   "note": "All Cashflow chip opened: radio list All Cashflow / Money In / Money Out with examples."
+  },
+  {
+   "id": "transactions.insights-interval-menu",
+   "title": "Interval menu",
+   "url": "/insights/overview",
+   "image": "screens/transactions/56-insights-interval-menu.png",
+   "kind": "menu",
+   "note": "Month dropdown opened: Month / Quarter with a checkmark."
+  },
+  {
+   "id": "transactions.insights-line",
+   "title": "Line chart mode",
+   "url": "/insights/overview?chartMode=line",
+   "image": "screens/transactions/57-insights-line-chart.png",
+   "kind": "page",
+   "note": "Chart switched to line mode with Money In / Money Out series and a Cashflow grouping dropdown."
+  },
+  {
+   "id": "transactions.insights-stacked-bar",
+   "title": "Stacked bar mode",
+   "url": "/insights/overview?chartMode=stackedBar",
+   "image": "screens/transactions/58-insights-stacked-bar.png",
+   "kind": "page",
+   "note": "Stacked bar chart grouped by Category with a legend (Uncategorized, Software, Legal Fees, Travel - Accommodation, Other)."
+  },
+  {
+   "id": "transactions.insights-sankey",
+   "title": "Sankey mode",
+   "url": "/insights/overview?chartMode=sankey",
+   "image": "screens/transactions/59-insights-sankey.png",
+   "kind": "page",
+   "note": "Sankey diagram from sources through Money In ($2.7M) to Expenses and Transfers Out, with Money In: Source and Money Out: Recipient dropdowns."
+  },
+  {
+   "id": "transactions.insights-date-menu",
+   "title": "Insights date range menu",
+   "url": "/insights/overview?chartMode=overview",
+   "image": "screens/transactions/60-insights-date-range-menu.png",
+   "kind": "popover",
+   "note": "Date chip opened: Custom preset, From Jun 17, 2026 / To Today and month grid."
+  },
+  {
+   "id": "transactions.insights-settings-menu",
+   "title": "Insights settings menu",
+   "url": "/insights/overview?chartMode=overview",
+   "image": "screens/transactions/61-insights-settings-menu.png",
+   "kind": "menu",
+   "note": "Sliders icon menu: Settings, Manage categories."
+  },
+  {
+   "id": "transactions.insights-settings-modal",
+   "title": "Insights Settings modal",
+   "url": "/insights/overview?chartMode=overview",
+   "image": "screens/transactions/62-insights-settings-modal.png",
+   "kind": "modal",
+   "note": "Insights Settings: notification link, Runway toggle with 3M/6M/12M timeframe, linked-transfer toggle and a transaction exclusions search table."
+  },
+  {
+   "id": "transactions.insights-filters",
+   "title": "Insights filters panel",
+   "url": "/insights/overview?chartMode=overview",
+   "image": "screens/transactions/63-insights-filters.png",
+   "kind": "popover",
+   "note": "Insights filter panel: Cashflow, Date, Keywords, Method, Category, GL Code, Account, Team Member, Department, Budget, Card, Exclusions."
+  },
+  {
+   "id": "transactions.insights-spending",
+   "title": "Insights: Spending",
+   "url": "/insights/overview?direction=outflow",
+   "image": "screens/transactions/64-insights-spending.png",
+   "kind": "page",
+   "note": "Spending sub-view (/insights/money-out redirects here): Money Out chip, Money out total, Monthly average and a monthly bar chart with an average line."
+  },
+  {
+   "id": "transactions.insights-spending-summary",
+   "title": "Spending summary",
+   "url": "/insights/overview?direction=outflow",
+   "image": "screens/transactions/65-insights-spending-summary.png",
+   "kind": "page",
+   "note": "Spending summary card (Transactions 564, Cards used 18, Fees paid) next to Money out by Recipient."
+  },
+  {
+   "id": "transactions.insights-money-in",
+   "title": "Insights: Money in",
+   "url": "/insights/overview?direction=inflow",
+   "image": "screens/transactions/66-insights-money-in.png",
+   "kind": "page",
+   "note": "Money in sub-view (/insights/money-in redirects here): Money In chip, $1.9M total, Monthly average $477,404 and a monthly bar chart."
+  },
+  {
+   "id": "transactions.insights-money-in-summary",
+   "title": "Money in summary",
+   "url": "/insights/overview?direction=inflow",
+   "image": "screens/transactions/67-insights-money-in-breakdown.png",
+   "kind": "page",
+   "note": "Money in summary (Transactions 545, Invoices 14/19, Credit Cashback, Treasury earnings) next to Money in by Source."
+  },
+  {
+   "id": "transactions.filter-merchant-type",
+   "title": "Filters panel: Merchant Type",
+   "url": "/transactions",
+   "image": "screens/transactions/68-filter-merchant-type.png",
+   "kind": "popover",
+   "note": "Merchant Type tab: search field and a Select All checklist of merchant categories (Advertising, Airlines, Alcohol and Bars, Books and Newspapers...)."
+  },
+  {
+   "id": "transactions.filter-gl-code",
+   "title": "Filters panel: GL Code",
+   "url": "/transactions",
+   "image": "screens/transactions/69-filter-gl-code.png",
+   "kind": "popover",
+   "note": "GL Code tab: search, All Transactions / Categorized / Uncategorized status radios and a GL code checklist (Mercury Checking (7772), 120 - Accounts Receivable, 400 - Inventory...)."
+  },
+  {
+   "id": "transactions.filter-department",
+   "title": "Filters panel: Department",
+   "url": "/transactions",
+   "image": "screens/transactions/70-filter-department.png",
+   "kind": "popover",
+   "note": "Department tab: nested department checklist (Executive, Finance > Accounting / Audit, Product > Design) with Select All."
+  },
+  {
+   "id": "transactions.filter-budget",
+   "title": "Filters panel: Budget",
+   "url": "/transactions",
+   "image": "screens/transactions/71-filter-budget.png",
+   "kind": "popover",
+   "note": "Budget tab: search and an Active budgets checklist with budget icons (Hardware, Learning & Development, Software Subscriptions, Team Lunch)."
+  },
+  {
+   "id": "transactions.filter-policy",
+   "title": "Filters panel: Policy",
+   "url": "/transactions",
+   "image": "screens/transactions/72-filter-policy.png",
+   "kind": "popover",
+   "note": "Policy tab: a single Missing required information checkbox for card transactions missing receipts, notes or categories."
+  },
+  {
+   "id": "transactions.filter-keyword",
+   "title": "Filters panel: Keyword",
+   "url": "/transactions",
+   "image": "screens/transactions/73-filter-keyword-tab.png",
+   "kind": "popover",
+   "note": "Keyword tab inside the filter panel: merchant/recipient search with a Recent list of counterparties tagged Recipient."
+  },
+  {
+   "id": "transactions.time-zone-submenu",
+   "title": "Time zone submenu",
+   "url": "/transactions",
+   "image": "screens/transactions/74-settings-time-zone-submenu.png",
+   "kind": "menu",
+   "note": "Settings menu with the Time zone submenu open: UTC or Local (PDT), Local checked."
+  },
+  {
+   "id": "transactions.row-category-search",
+   "title": "Row category search",
+   "url": "/transactions",
+   "image": "screens/transactions/75-row-category-search.png",
+   "kind": "form-state",
+   "note": "Typing \"Lunch\" in a row's Category combobox filters the list to Lunch Perks with a + Create category action."
+  },
+  {
+   "id": "transactions.review-similar",
+   "title": "Review similar transactions",
+   "url": "/transactions?q={searchTerm:[...],userFacingKinds:[...]}",
+   "image": "screens/transactions/76-review-similar.png",
+   "kind": "page",
+   "note": "Review similar from the category toast filters the table to the same counterparty and method (Stefanie Katz x, Check Payment x, Filters (2)) with Create view."
+  },
+  {
+   "id": "transactions.bulk-field-picker",
+   "title": "Bulk field picker",
+   "url": "/transactions",
+   "image": "screens/transactions/77-bulk-field-picker.png",
+   "kind": "menu",
+   "note": "Two rows selected; the bulk bar's field dropdown lists Category, GL Code and Budget."
+  },
+  {
+   "id": "transactions.bulk-gl-code-values",
+   "title": "Bulk GL code values",
+   "url": "/transactions",
+   "image": "screens/transactions/78-bulk-gl-code-values.png",
+   "kind": "menu",
+   "note": "Bulk bar set to GL Code with its value list open (Mercury Checking (7772), 120 - Accounts Receivable, 400 - Inventory, Printer Paper...)."
+  },
+  {
+   "id": "transactions.bulk-gl-code-applied",
+   "title": "Bulk GL code applied",
+   "url": "/transactions",
+   "image": "screens/transactions/85-bulk-gl-code-applied.png",
+   "kind": "confirmation",
+   "note": "400 - Inventory applied to the selection; a prompt offers \"Apply 400 - Inventory to all future Contractor transactions?\" with Create rule."
+  },
+  {
+   "id": "transactions.insights-saved-views-menu",
+   "title": "Insights saved views menu",
+   "url": "/insights/overview",
+   "image": "screens/transactions/79-insights-saved-views-menu.png",
+   "kind": "menu",
+   "note": "Insights Saved views dropdown: Monthly cashflow, Quarterly spend and + Create view."
+  },
+  {
+   "id": "transactions.insights-quarterly-spend",
+   "title": "Insights: Quarterly spend view",
+   "url": "/insights/overview?savedView=quarterlySpend",
+   "image": "screens/transactions/80-insights-quarterly-spend-view.png",
+   "kind": "page",
+   "note": "Quarterly spend view: pill, Filters (2), Jul 1-Today and Money Out chips with Reset; Money out -$870,358, Monthly average and QoQ change 81.1% over monthly bars with an average line."
+  },
+  {
+   "id": "transactions.insights-compare-menu",
+   "title": "Compare to menu",
+   "url": "/insights/overview",
+   "image": "screens/transactions/81-insights-compare-to-menu.png",
+   "kind": "menu",
+   "note": "With a single month (August 2026) selected, Compare to becomes active and offers No comparison or Previous month."
+  },
+  {
+   "id": "transactions.insights-compare",
+   "title": "Compared to previous month",
+   "url": "/insights/overview",
+   "image": "screens/transactions/82-insights-compare-previous-month.png",
+   "kind": "page",
+   "note": "Previous month comparison: Net cashflow vs. previous month with a 30% delta chip, Money out 81% chip, daily chart with the prior month drawn as a second series and a 2 notable transactions note."
+  },
+  {
+   "id": "transactions.insights-timeline-no-data",
+   "title": "Timeline: no data tooltip",
+   "url": "/insights/overview",
+   "image": "screens/transactions/83-insights-chart-tooltip.png",
+   "kind": "popover",
+   "note": "Hovering a month on the timeline scrubber that has no transactions shows a \"No data available\" tooltip."
+  },
+  {
+   "id": "transactions.insights-exclusions",
+   "title": "Transaction exclusions (empty)",
+   "url": "/insights/overview",
+   "image": "screens/transactions/84-insights-filter-exclusions.png",
+   "kind": "empty-state",
+   "note": "Exclusions in the filter panel opens Insights Settings scrolled to Transaction exclusions: a search field and \"No excluded transactions yet\" over placeholder rows."
+  },
+  {
+   "id": "transactions.insights-exclusion-selected",
+   "title": "Exclusions: transactions selected",
+   "url": "/insights/overview",
+   "image": "screens/transactions/86-insights-exclusion-selected.png",
+   "kind": "form-state",
+   "note": "Searching \"Deli 77\" lists matching transactions; two rows are ticked and Exclude becomes active next to Cancel."
+  },
+  {
+   "id": "transactions.insights-excluded",
+   "title": "Transactions excluded",
+   "url": "/insights/overview",
+   "image": "screens/transactions/87-insights-transactions-excluded.png",
+   "kind": "toast",
+   "note": "The two rows move into the exclusions table, the header reads \"2 transactions excluded\" and a matching toast appears."
+  },
+  {
+   "id": "transactions.insights-exporting",
+   "title": "Insights export in progress",
+   "url": "/insights/overview",
+   "image": "screens/transactions/88-insights-export-in-progress.png",
+   "kind": "form-state",
+   "note": "Clicking Export turns the header button into a loading pill with three dots; the download then finishes with no toast or confirmation."
+  },
+  {
+   "id": "transactions.insights-drilldown",
+   "title": "Breakdown drill-down",
+   "url": "/transactions?q={filters:{date:{start:06-17-2026,end:09-24-2026},searchTerm:[achPullerParty0],directions:outgoing,...}}",
+   "image": "screens/transactions/89-insights-drilldown-transactions.png",
+   "kind": "page",
+   "note": "Clicking GUSTO in Money out by Recipient opens Transactions filtered to Gusto (Payroll): Filters (5), All time and Gusto (Payroll) chips, +3 more, Money out all time -$268,986.75 and 3 transactions."
+  },
+  {
+   "id": "transactions.filter-no-results",
+   "title": "No matching transactions",
+   "url": "/transactions?q={filters:{amount:{exact:12345.67}}}",
+   "image": "screens/transactions/90-filter-no-results.png",
+   "kind": "empty-state",
+   "note": "A Specific amount of $12,345.67 matches nothing: totals drop to $0.00 and the table shows \"No transactions matching those filters. Try adjusting filters or reset.\" under faded placeholder rows."
+  },
+  {
+   "id": "transactions.detail-pending-deposit",
+   "title": "Pending check deposit detail",
+   "url": "/transactions/checkDeposit-pending-100",
+   "image": "screens/transactions/91-detail-pending-check-deposit.png",
+   "kind": "drawer",
+   "note": "Check Deposit panel for a pending $1,000.00 deposit into AP: timeline, front/back check images, Category and GL Code (404 - Inactive GL Code warning)."
+  },
+  {
+   "id": "transactions.detail-note-saved",
+   "title": "Note saved",
+   "url": "/transactions/debit-outgoing2-0",
+   "image": "screens/transactions/92-detail-note-saved.png",
+   "kind": "confirmation",
+   "note": "Editing Notes on a debit card charge and tabbing out shows a green \"Saved\" check in the panel header."
+  },
+  {
+   "id": "transactions.attachment-menu",
+   "title": "Attachment type menu",
+   "url": "/transactions/debit-outgoing2-0",
+   "image": "screens/transactions/93-attachment-menu.png",
+   "kind": "menu",
+   "note": "Chevron next to an attachment opens Receipt / Bill / Other type options and a destructive Remove."
+  },
+  {
+   "id": "transactions.attachment-preview",
+   "title": "Attachment preview",
+   "url": "/transactions/debit-outgoing2-0",
+   "image": "screens/transactions/94-attachment-preview.png",
+   "kind": "modal",
+   "note": "Clicking the attachment name opens a document viewer with page (1 of 3), zoom, Reset, open-in-new-tab and download controls, beside the transaction summary and Close."
+  },
+  {
+   "id": "transactions.delete-view-confirm",
+   "title": "Delete saved view confirmation",
+   "url": "/transactions",
+   "image": "screens/transactions/95-delete-view-confirm.png",
+   "kind": "confirmation",
+   "note": "Trash icon on a saved view asks \"Are you sure you want to delete “Operating expenses”?\" with Cancel and a destructive Delete."
+  },
+  {
+   "id": "transactions.view-deleted",
+   "title": "View deleted toast",
+   "url": "/transactions",
+   "image": "screens/transactions/96-view-deleted.png",
+   "kind": "toast",
+   "note": "After Delete the table returns to the default toolbar and a \"View deleted\" toast offers Undo."
+  },
+  {
+   "id": "transactions.rename-view-modal",
+   "title": "Rename view modal",
+   "url": "/transactions",
+   "image": "screens/transactions/97-rename-view-modal.png",
+   "kind": "modal",
+   "note": "Pencil icon on a saved view opens \"Rename View\" with a New saved view name field (current name as placeholder) and a disabled Save."
+  },
+  {
+   "id": "transactions.view-renamed",
+   "title": "View renamed toast",
+   "url": "/transactions",
+   "image": "screens/transactions/98-view-renamed.png",
+   "kind": "toast",
+   "note": "Saving the new name closes the dialog and shows a \"View renamed\" toast with Undo."
+  },
+  {
+   "id": "transactions.detail-ach-pull",
+   "title": "ACH pull detail",
+   "url": "/transactions/achPull-0",
+   "image": "screens/transactions/99-detail-ach-pull.png",
+   "kind": "drawer",
+   "note": "ACH Pull panel opened from the drill-down: -$90,122.53 from Ops / Payroll to Gusto (Payroll), Category Employee Gifts, GL Code 782 - Expense Account."
+  }
+ ],
+ "edges": [
+  {
+   "from": "home.index",
+   "to": "transactions.index",
+   "label": "Click Transactions in sidebar"
+  },
+  {
+   "from": "transactions.index",
+   "to": "transactions.categorized-tip",
+   "label": "First visit shows tip"
+  },
+  {
+   "from": "transactions.categorized-tip",
+   "to": "transactions.index",
+   "label": "Close tip"
+  },
+  {
+   "from": "transactions.index",
+   "to": "transactions.saved-views-menu",
+   "label": "Click Saved views"
+  },
+  {
+   "from": "transactions.saved-views-menu",
+   "to": "transactions.saved-view-applied",
+   "label": "Choose Monthly money out"
+  },
+  {
+   "from": "transactions.saved-view-applied",
+   "to": "transactions.filters-panel",
+   "label": "Click Filters (3)"
+  },
+  {
+   "from": "transactions.filters-panel",
+   "to": "transactions.filter-date-presets",
+   "label": "Open Show transactions for"
+  },
+  {
+   "from": "transactions.filter-date-presets",
+   "to": "transactions.filters-panel",
+   "label": "Pick Last 90 days"
+  },
+  {
+   "from": "transactions.filters-panel",
+   "to": "transactions.filter-amount",
+   "label": "Click Amount tab"
+  },
+  {
+   "from": "transactions.filter-amount",
+   "to": "transactions.filter-amount-invalid",
+   "label": "Enter At least 1,000 and No more than 100"
+  },
+  {
+   "from": "transactions.filter-amount-invalid",
+   "to": "transactions.filter-amount",
+   "label": "Fix No more than to 50,000"
+  },
+  {
+   "from": "transactions.filter-amount",
+   "to": "transactions.filter-method",
+   "label": "Click Method tab"
+  },
+  {
+   "from": "transactions.filters-panel",
+   "to": "transactions.filter-category",
+   "label": "Click Category tab"
+  },
+  {
+   "from": "transactions.filters-panel",
+   "to": "transactions.filter-account",
+   "label": "Click Account tab"
+  },
+  {
+   "from": "transactions.filters-panel",
+   "to": "transactions.filter-card",
+   "label": "Click Card tab"
+  },
+  {
+   "from": "transactions.filters-panel",
+   "to": "transactions.filter-status",
+   "label": "Click Status tab"
+  },
+  {
+   "from": "transactions.filters-panel",
+   "to": "transactions.filter-attachment",
+   "label": "Click Attachment tab"
+  },
+  {
+   "from": "transactions.filters-panel",
+   "to": "transactions.filter-team-member",
+   "label": "Click Team Member tab"
+  },
+  {
+   "from": "transactions.filter-amount",
+   "to": "transactions.save-view-menu",
+   "label": "Open Save menu"
+  },
+  {
+   "from": "transactions.save-view-menu",
+   "to": "transactions.create-view-modal",
+   "label": "Click Create New View"
+  },
+  {
+   "from": "transactions.create-view-modal",
+   "to": "transactions.view-saved",
+   "label": "Type a name and click Save"
+  },
+  {
+   "from": "transactions.saved-views-menu",
+   "to": "transactions.create-view-modal",
+   "label": "Click Create view"
+  },
+  {
+   "from": "transactions.index",
+   "to": "transactions.keyword-no-matches",
+   "label": "Open Keyword and type a term with no match"
+  },
+  {
+   "from": "transactions.index",
+   "to": "transactions.keyword-suggestions",
+   "label": "Open Keyword and type \"Google\""
+  },
+  {
+   "from": "transactions.keyword-results",
+   "to": "transactions.date-chip",
+   "label": "Click Date chip"
+  },
+  {
+   "from": "transactions.index",
+   "to": "transactions.date-chip",
+   "label": "Click Date chip"
+  },
+  {
+   "from": "transactions.index",
+   "to": "transactions.group-menu",
+   "label": "Click Group icon"
+  },
+  {
+   "from": "transactions.group-menu",
+   "to": "transactions.grouped-by-category",
+   "label": "Choose Category"
+  },
+  {
+   "from": "transactions.grouped-by-category",
+   "to": "transactions.index",
+   "label": "Click Reset"
+  },
+  {
+   "from": "transactions.index",
+   "to": "transactions.sort-menu",
+   "label": "Click Sort icon"
+  },
+  {
+   "from": "transactions.index",
+   "to": "transactions.settings-menu",
+   "label": "Click Settings icon"
+  },
+  {
+   "from": "transactions.index",
+   "to": "transactions.graphs-shown",
+   "label": "Click Show graphs chevron"
+  },
+  {
+   "from": "transactions.settings-menu",
+   "to": "transactions.graphs-shown",
+   "label": "Toggle Show graph"
+  },
+  {
+   "from": "transactions.index",
+   "to": "transactions.export-modal",
+   "label": "Click Export all"
+  },
+  {
+   "from": "transactions.export-modal",
+   "to": "transactions.export-xlsx",
+   "label": "Select .xlsx"
+  },
+  {
+   "from": "transactions.export-xlsx",
+   "to": "transactions.index",
+   "label": "Click Download"
+  },
+  {
+   "from": "transactions.index",
+   "to": "transactions.bulk-select",
+   "label": "Tick row checkboxes"
+  },
+  {
+   "from": "transactions.bulk-select",
+   "to": "transactions.bulk-more-menu",
+   "label": "Click more in bulk bar"
+  },
+  {
+   "from": "transactions.bulk-select",
+   "to": "transactions.index",
+   "label": "Click X in bulk bar"
+  },
+  {
+   "from": "transactions.index",
+   "to": "transactions.detail-card",
+   "label": "Click a card transaction row"
+  },
+  {
+   "from": "transactions.detail-card",
+   "to": "transactions.detail-card-lower",
+   "label": "Scroll panel"
+  },
+  {
+   "from": "transactions.detail-card-lower",
+   "to": "transactions.attachment-toast",
+   "label": "Upload a file"
+  },
+  {
+   "from": "transactions.attachment-toast",
+   "to": "transactions.detail-receipt-attached",
+   "label": "Upload completes"
+  },
+  {
+   "from": "transactions.detail-card-lower",
+   "to": "transactions.detail-receipt-attached",
+   "label": "Drop receipt on Attachments"
+  },
+  {
+   "from": "transactions.detail-receipt-attached",
+   "to": "transactions.comment-mention",
+   "label": "Type a comment with @"
+  },
+  {
+   "from": "transactions.comment-mention",
+   "to": "transactions.comment-posted",
+   "label": "Pick a teammate and press Enter"
+  },
+  {
+   "from": "transactions.detail-card",
+   "to": "transactions.detail-more-menu",
+   "label": "Click ... in panel footer"
+  },
+  {
+   "from": "transactions.detail-card",
+   "to": "transactions.index",
+   "label": "Close panel"
+  },
+  {
+   "from": "transactions.index",
+   "to": "transactions.detail-ach",
+   "label": "Click an ACH payment row"
+  },
+  {
+   "from": "transactions.detail-ach",
+   "to": "transactions.detail-ach-comments",
+   "label": "Click 1 Unread Comment"
+  },
+  {
+   "from": "transactions.detail-ach",
+   "to": "transactions.detail-ach-more-menu",
+   "label": "Click ... in panel footer"
+  },
+  {
+   "from": "transactions.index",
+   "to": "transactions.detail-intl-wire",
+   "label": "Click an Intl. Wire row"
+  },
+  {
+   "from": "transactions.index",
+   "to": "transactions.detail-wire-in",
+   "label": "Click a Wire In row"
+  },
+  {
+   "from": "transactions.detail-wire-in",
+   "to": "transactions.detail-category-dropdown",
+   "label": "Click Category field"
+  },
+  {
+   "from": "transactions.detail-category-dropdown",
+   "to": "transactions.create-category-modal",
+   "label": "Click Create category"
+  },
+  {
+   "from": "transactions.create-category-modal",
+   "to": "transactions.category-created",
+   "label": "Type a name and click Create category"
+  },
+  {
+   "from": "transactions.index",
+   "to": "transactions.detail-failed",
+   "label": "Click a Failed row"
+  },
+  {
+   "from": "transactions.index",
+   "to": "transactions.row-category-dropdown",
+   "label": "Click a row Category combobox"
+  },
+  {
+   "from": "transactions.row-category-dropdown",
+   "to": "transactions.row-category-set",
+   "label": "Choose a category"
+  },
+  {
+   "from": "transactions.index",
+   "to": "transactions.match-receipts",
+   "label": "Click Match receipts"
+  },
+  {
+   "from": "transactions.index",
+   "to": "transactions.insights",
+   "label": "Click Insights in sidebar"
+  },
+  {
+   "from": "transactions.insights",
+   "to": "transactions.insights-breakdown",
+   "label": "Scroll down"
+  },
+  {
+   "from": "transactions.insights-breakdown",
+   "to": "transactions.insights-breakdown-category",
+   "label": "Click Category segment"
+  },
+  {
+   "from": "transactions.insights",
+   "to": "transactions.insights-cashflow-menu",
+   "label": "Click All Cashflow"
+  },
+  {
+   "from": "transactions.insights",
+   "to": "transactions.insights-interval-menu",
+   "label": "Click Month"
+  },
+  {
+   "from": "transactions.insights",
+   "to": "transactions.insights-line",
+   "label": "Click line chart icon"
+  },
+  {
+   "from": "transactions.insights-line",
+   "to": "transactions.insights-stacked-bar",
+   "label": "Click stacked bar icon"
+  },
+  {
+   "from": "transactions.insights-stacked-bar",
+   "to": "transactions.insights-sankey",
+   "label": "Click sankey icon"
+  },
+  {
+   "from": "transactions.insights",
+   "to": "transactions.insights-date-menu",
+   "label": "Click date chip"
+  },
+  {
+   "from": "transactions.insights",
+   "to": "transactions.insights-settings-menu",
+   "label": "Click sliders icon"
+  },
+  {
+   "from": "transactions.insights-settings-menu",
+   "to": "transactions.insights-settings-modal",
+   "label": "Click Settings"
+  },
+  {
+   "from": "transactions.insights",
+   "to": "transactions.insights-filters",
+   "label": "Click Filters"
+  },
+  {
+   "from": "transactions.insights",
+   "to": "transactions.insights-spending",
+   "label": "Open Spending (/insights/money-out)"
+  },
+  {
+   "from": "transactions.insights-cashflow-menu",
+   "to": "transactions.insights-spending",
+   "label": "Choose Money Out"
+  },
+  {
+   "from": "transactions.insights-spending",
+   "to": "transactions.insights-spending-summary",
+   "label": "Scroll down"
+  },
+  {
+   "from": "transactions.insights",
+   "to": "transactions.insights-money-in",
+   "label": "Open Money in (/insights/money-in)"
+  },
+  {
+   "from": "transactions.insights-cashflow-menu",
+   "to": "transactions.insights-money-in",
+   "label": "Choose Money In"
+  },
+  {
+   "from": "transactions.insights-money-in",
+   "to": "transactions.insights-money-in-summary",
+   "label": "Scroll down"
+  },
+  {
+   "from": "transactions.insights-settings-menu",
+   "to": "settings.index",
+   "label": "Click Manage categories"
+  },
+  {
+   "from": "transactions.settings-menu",
+   "to": "settings.index",
+   "label": "Click Manage categories"
+  },
+  {
+   "from": "transactions.keyword-suggestions",
+   "to": "transactions.keyword-results",
+   "label": "Tick a Google suggestion"
+  },
+  {
+   "from": "transactions.saved-views-menu",
+   "to": "transactions.table-loading",
+   "label": "Choose Operating expenses"
+  },
+  {
+   "from": "transactions.table-loading",
+   "to": "transactions.saved-view-applied",
+   "label": "Rows load (same pattern for any saved view)"
+  },
+  {
+   "from": "transactions.filters-panel",
+   "to": "transactions.filter-keyword",
+   "label": "Click Keyword tab"
+  },
+  {
+   "from": "transactions.filters-panel",
+   "to": "transactions.filter-merchant-type",
+   "label": "Click Merchant Type tab"
+  },
+  {
+   "from": "transactions.filters-panel",
+   "to": "transactions.filter-gl-code",
+   "label": "Click GL Code tab"
+  },
+  {
+   "from": "transactions.filters-panel",
+   "to": "transactions.filter-department",
+   "label": "Click Department tab"
+  },
+  {
+   "from": "transactions.filters-panel",
+   "to": "transactions.filter-budget",
+   "label": "Click Budget tab"
+  },
+  {
+   "from": "transactions.filters-panel",
+   "to": "transactions.filter-policy",
+   "label": "Click Policy tab"
+  },
+  {
+   "from": "transactions.settings-menu",
+   "to": "transactions.time-zone-submenu",
+   "label": "Hover Time zone"
+  },
+  {
+   "from": "transactions.row-category-dropdown",
+   "to": "transactions.row-category-search",
+   "label": "Type to search categories"
+  },
+  {
+   "from": "transactions.row-category-search",
+   "to": "transactions.row-category-set",
+   "label": "Choose Lunch Perks"
+  },
+  {
+   "from": "transactions.row-category-set",
+   "to": "transactions.review-similar",
+   "label": "Click Review similar"
+  },
+  {
+   "from": "transactions.bulk-select",
+   "to": "transactions.bulk-field-picker",
+   "label": "Open the field dropdown"
+  },
+  {
+   "from": "transactions.bulk-field-picker",
+   "to": "transactions.bulk-gl-code-values",
+   "label": "Choose GL Code, open values"
+  },
+  {
+   "from": "transactions.bulk-gl-code-values",
+   "to": "transactions.bulk-gl-code-applied",
+   "label": "Choose 400 - Inventory"
+  },
+  {
+   "from": "transactions.insights",
+   "to": "transactions.insights-saved-views-menu",
+   "label": "Click Saved views"
+  },
+  {
+   "from": "transactions.insights-saved-views-menu",
+   "to": "transactions.insights-quarterly-spend",
+   "label": "Choose Quarterly spend"
+  },
+  {
+   "from": "transactions.insights-date-menu",
+   "to": "transactions.insights-compare-menu",
+   "label": "Pick August, open Compare to"
+  },
+  {
+   "from": "transactions.insights-compare-menu",
+   "to": "transactions.insights-compare",
+   "label": "Choose Previous month"
+  },
+  {
+   "from": "transactions.insights",
+   "to": "transactions.insights-timeline-no-data",
+   "label": "Hover an empty month on the timeline"
+  },
+  {
+   "from": "transactions.insights-filters",
+   "to": "transactions.insights-exclusions",
+   "label": "Click Exclusions"
+  },
+  {
+   "from": "transactions.insights-settings-modal",
+   "to": "transactions.insights-exclusions",
+   "label": "Scroll to Transaction exclusions"
+  },
+  {
+   "from": "transactions.insights-exclusions",
+   "to": "transactions.insights-exclusion-selected",
+   "label": "Search Deli 77 and tick rows"
+  },
+  {
+   "from": "transactions.insights-exclusion-selected",
+   "to": "transactions.insights-excluded",
+   "label": "Click Exclude"
+  },
+  {
+   "from": "transactions.insights",
+   "to": "transactions.insights-exporting",
+   "label": "Click Export"
+  },
+  {
+   "from": "transactions.insights-breakdown",
+   "to": "transactions.insights-drilldown",
+   "label": "Click a recipient row"
+  },
+  {
+   "from": "transactions.index",
+   "to": "transactions.filter-no-results",
+   "label": "Set Amount to a value with no matches"
+  },
+  {
+   "from": "transactions.filter-no-results",
+   "to": "transactions.index",
+   "label": "Click reset"
+  },
+  {
+   "from": "transactions.index",
+   "to": "transactions.detail-pending-deposit",
+   "label": "Click a pending check deposit row"
+  },
+  {
+   "from": "transactions.detail-card-lower",
+   "to": "transactions.detail-note-saved",
+   "label": "Edit Notes and tab out"
+  },
+  {
+   "from": "transactions.detail-note-saved",
+   "to": "transactions.attachment-menu",
+   "label": "Click the attachment chevron"
+  },
+  {
+   "from": "transactions.detail-note-saved",
+   "to": "transactions.attachment-preview",
+   "label": "Click the attachment name"
+  },
+  {
+   "from": "transactions.detail-receipt-attached",
+   "to": "transactions.attachment-preview",
+   "label": "Click the attachment name"
+  },
+  {
+   "from": "transactions.saved-views-menu",
+   "to": "transactions.delete-view-confirm",
+   "label": "Click trash on a custom view"
+  },
+  {
+   "from": "transactions.delete-view-confirm",
+   "to": "transactions.view-deleted",
+   "label": "Click Delete"
+  },
+  {
+   "from": "transactions.saved-views-menu",
+   "to": "transactions.rename-view-modal",
+   "label": "Click pencil on a custom view"
+  },
+  {
+   "from": "transactions.rename-view-modal",
+   "to": "transactions.view-renamed",
+   "label": "Type a name and click Save"
+  },
+  {
+   "from": "transactions.index",
+   "to": "transactions.filters-panel",
+   "label": "Click Filters"
+  },
+  {
+   "from": "transactions.insights-drilldown",
+   "to": "transactions.detail-ach-pull",
+   "label": "Click a Gusto (Payroll) row"
+  }
+ ],
+ "journeys": [
+  {
+   "id": "transactions.j-save-view",
+   "name": "Build and save a custom transaction view",
+   "description": "Start from a preset view, narrow it with filters and save it under a new name.",
+   "steps": [
+    "transactions.index",
+    "transactions.saved-views-menu",
+    "transactions.saved-view-applied",
+    "transactions.filters-panel",
+    "transactions.filter-amount",
+    "transactions.save-view-menu",
+    "transactions.create-view-modal",
+    "transactions.view-saved"
+   ]
+  },
+  {
+   "id": "transactions.j-receipt",
+   "name": "Attach a receipt and tag a teammate on a card charge",
+   "description": "Open a card transaction, attach the receipt and ask a teammate about it.",
+   "steps": [
+    "transactions.index",
+    "transactions.detail-card",
+    "transactions.detail-card-lower",
+    "transactions.detail-receipt-attached",
+    "transactions.comment-mention",
+    "transactions.comment-posted"
+   ]
+  },
+  {
+   "id": "transactions.j-categorize-new",
+   "name": "Categorize an incoming wire with a new category",
+   "description": "Open an incoming wire and create a category for it on the spot.",
+   "steps": [
+    "transactions.index",
+    "transactions.detail-wire-in",
+    "transactions.detail-category-dropdown",
+    "transactions.create-category-modal",
+    "transactions.category-created"
+   ]
+  },
+  {
+   "id": "transactions.j-insights-review",
+   "name": "Review cash flow in Insights",
+   "description": "Check the headline numbers, switch chart types and drill into spending.",
+   "steps": [
+    "transactions.index",
+    "transactions.insights",
+    "transactions.insights-line",
+    "transactions.insights-stacked-bar",
+    "transactions.insights-sankey"
+   ]
+  },
+  {
+   "id": "transactions.j-bulk-gl",
+   "name": "Bulk-code transactions to a GL account",
+   "description": "Select several rows, set their GL code in one go and turn it into a rule.",
+   "steps": [
+    "transactions.index",
+    "transactions.bulk-select",
+    "transactions.bulk-field-picker",
+    "transactions.bulk-gl-code-values",
+    "transactions.bulk-gl-code-applied"
+   ]
+  },
+  {
+   "id": "transactions.j-exclude-insights",
+   "name": "Exclude one-off transactions from Insights",
+   "description": "Open Insights settings from the filter panel and exclude transactions that skew the numbers.",
+   "steps": [
+    "transactions.index",
+    "transactions.insights",
+    "transactions.insights-filters",
+    "transactions.insights-exclusions",
+    "transactions.insights-exclusion-selected",
+    "transactions.insights-excluded"
+   ]
+  },
+  {
+   "id": "transactions.j-drilldown",
+   "name": "Trace a top recipient back to its transactions",
+   "description": "From the Insights breakdown, open the transactions behind a recipient and inspect one.",
+   "steps": [
+    "transactions.index",
+    "transactions.insights",
+    "transactions.insights-breakdown",
+    "transactions.insights-drilldown",
+    "transactions.detail-ach-pull"
+   ]
+  }
+ ],
+ "issues": [
+  {
+   "id": "transactions.i-minus-glyphs",
+   "title": "Three different minus characters for negative money",
+   "detail": "Insights trend copy mixes hyphen-minus, en dash and the true minus sign for negative amounts on the same screen, next to headline figures that use U+2212.",
+   "nodeIds": [
+    "transactions.insights",
+    "transactions.insights-spending",
+    "transactions.insights-money-in"
+   ],
+   "category": "data-format",
+   "severity": "medium",
+   "evidence": "Re-measured on /insights/overview (codepoint before the $): \"−$870,358\" U+2212; \"-$2,970.23 YTD\" U+002D; \"-$303k\" U+002D; \"–$45.2k/mo\" U+2013. Table amounts (\"−$1,234.56\") use U+2212. Independently confirmed with the Chrome DevTools MCP: the summary text node (class _bodyDefault_qaod7_40) starts with U+002D, while the KPI \"−$870,358\" (class _titleSecondary_qaod7_20) uses U+2212."
+  },
+  {
+   "id": "transactions.i-abbrev-case",
+   "title": "Inconsistent K/k abbreviations and precision in Insights",
+   "detail": "The same paragraph abbreviates thousands as both \"K\" and \"k\" and switches between abbreviated, whole-dollar and cent precision.",
+   "nodeIds": [
+    "transactions.insights",
+    "transactions.insights-spending",
+    "transactions.insights-money-in"
+   ],
+   "category": "data-format",
+   "severity": "medium",
+   "evidence": "Trend text read via innerText: \"$334.5K\", \"$33.4K\", \"$269.6K\" vs \"–$45.2k/mo\", \"-$303k\"; headline \"$1M\" / \"$1.9M\" vs \"−$870,358\" (no cents) vs \"-$2,970.23\" (cents). Independently confirmed with the Chrome DevTools MCP: one sentence reads \"Spending was -$303k … it was $33.4K\"."
+  },
+  {
+   "id": "transactions.i-two-money-components",
+   "title": "Summary totals and table amounts use different money components",
+   "detail": "On /transactions the Net change / Money in / Money out totals render cents at full size, while every table amount uses superscript cents. Two separate money components with different cent treatment sit on one screen.",
+   "nodeIds": [
+    "transactions.index",
+    "transactions.keyword-results",
+    "transactions.graphs-shown"
+   ],
+   "category": "data-format",
+   "severity": "low",
+   "evidence": "Table amount: div._dollarDisplay_1of3b_3 15px/400 with span._superscript_1of3b_35 \".56\" at 10.95px. Money in total: div._container_7q9r6_1 (animated _digitSlot_7q9r6_11 spans) 19px/400 rgb(119,197,153), no superscript element. DevTools MCP: the Money in/out card shows the same quantity at three precisions: \"$1.9M\" (24px titleSecondary), \"$1,909,616\" (16px total) and \"$1,000,000.00\" (15px rows)."
+  },
+  {
+   "id": "transactions.i-zero-no-cents",
+   "title": "Zero subtotals drop the cents format",
+   "detail": "Grouped view shows zero money-in subtotals as \"$0\" with no cents and larger text, while every sibling subtotal uses superscript cents.",
+   "nodeIds": [
+    "transactions.grouped-by-category"
+   ],
+   "category": "data-format",
+   "severity": "low",
+   "evidence": "Grouped by Category: Legal Fees / Travel - Accommodation / Investments money in render \"$0\" (div._dollarDisplay_1of3b_3, 15px/400, rgb(221,221,229), no superscript span). Software money in renders \"$2,608,874.96\" with span._superscript_1of3b_35 \".96\" at 10.95px."
+  },
+  {
+   "id": "transactions.i-failed-green",
+   "title": "Failed incoming payments still use the money-in green",
+   "detail": "A failed incoming payment is struck through but keeps the positive green used for completed deposits, so it reads as money received. Failed outgoing payments use neutral white.",
+   "nodeIds": [
+    "transactions.index",
+    "transactions.detail-failed"
+   ],
+   "category": "color",
+   "severity": "medium",
+   "evidence": "\"Payment from NASA — Failed $419.00\": _text-money-in_12t49_1, color rgb(119,197,153), same as the successful \"Payment from Acme Corp $200.00\". Failed \"Debug LLC −$450.50\": _text-emphasized_12t49_1, rgb(244,245,249)."
+  },
+  {
+   "id": "transactions.i-menu-case",
+   "title": "Mixed Title Case and sentence case in the same menu",
+   "detail": "The ACH panel overflow menu lists \"View Recipient\" next to \"Nickname recipient\". The card panel menu says \"Nickname sender\". Elsewhere Mercury uses sentence case.",
+   "nodeIds": [
+    "transactions.detail-ach-more-menu",
+    "transactions.detail-more-menu"
+   ],
+   "category": "copy",
+   "severity": "low",
+   "evidence": "ACH panel footer menu items read via [role=menuitem]: \"View Recipient | Nickname recipient\"."
+  },
+  {
+   "id": "transactions.i-money-in-case",
+   "title": "\"Money In\" vs \"Money in\" for the same concept",
+   "detail": "Insights uses Title Case \"Money In\"/\"Money Out\" in the cashflow radio menu, filter chip and chart legend, but sentence case \"Money in\"/\"Money out\" in headings, tabs and the Transactions summary.",
+   "nodeIds": [
+    "transactions.insights-cashflow-menu",
+    "transactions.insights-money-in",
+    "transactions.insights-line",
+    "transactions.insights",
+    "transactions.index"
+   ],
+   "category": "copy",
+   "severity": "low",
+   "evidence": "Cashflow radios: \"All Cashflow | Money In | Money Out\"; page text on /insights/overview contains both \"Money in\"/\"Money out\" (headline labels, sidebar) and \"Money In\"/\"Money Out\" (radios, chip, Sankey node)."
+  },
+  {
+   "id": "transactions.i-settings-title-case",
+   "title": "Title Case dialog titles and buttons among sentence-case siblings",
+   "detail": "\"Insights Settings\", \"Rename View\" and the \"Remove 2 Exclusions\" button use Title Case, while sibling dialogs and buttons use sentence case (\"Export transactions\", \"Save view\", \"Create category\", \"Exclude\"). The headings share one style, so only the casing differs.",
+   "nodeIds": [
+    "transactions.insights-settings-modal",
+    "transactions.rename-view-modal",
+    "transactions.insights-exclusions",
+    "transactions.export-modal",
+    "transactions.create-view-modal",
+    "transactions.create-category-modal"
+   ],
+   "category": "copy",
+   "severity": "low",
+   "evidence": "Headings, all Arcadia Text 19px/400 rgb(255,255,255): SPAN._titleSecondary_qaod7_20 \"Insights Settings\"; H2 \"Rename View\"; _titleSecondary \"Create category\". Exclusions action button after selecting rows: \"Remove 2 Exclusions\" next to \"Cancel\"; before, \"Exclude\"."
+  },
+  {
+   "id": "transactions.i-keyword-plural",
+   "title": "Keyword filter named differently in Transactions and Insights",
+   "detail": "The Transactions filter tab and toolbar chip say \"Keyword\"; the Insights filter panel says \"Keywords\". The two filter panels also have different tab sets and only the Transactions one has a header row with the view summary.",
+   "nodeIds": [
+    "transactions.filters-panel",
+    "transactions.insights-filters"
+   ],
+   "category": "copy",
+   "severity": "low",
+   "evidence": "Insights [role=tab] list: Cashflow, Date, Keywords, Method, Category, GL Code, Account, Team Member, Department, Budget, Card (+ Exclusions button). Transactions tabs: Date, Keyword, Amount, Method, Category, Merchant Type, GL Code, Account, Team Member, Department, Budget, Card, Status, Policy, Attachment."
+  },
+  {
+   "id": "transactions.i-export-button-variant",
+   "title": "Export action styled differently on Transactions and Insights",
+   "detail": "Transactions uses a transparent tertiary \"Export all\" button in the toolbar row. Insights uses a filled secondary \"Export\" pill in the page header.",
+   "nodeIds": [
+    "transactions.index",
+    "transactions.insights"
+   ],
+   "category": "component",
+   "severity": "low",
+   "evidence": "Transactions \"Export all\": _button_r6b2u_20 _small_r6b2u_72 _tertiary_r6b2u_153, background rgba(0,0,0,0). Insights \"Export\": _small_r6b2u_72 _secondary_r6b2u_126, background rgba(180,183,200,0.12). Both 13.33px/360 Arcadia Text, rgb(221,221,229), radius 9999px, padding 4px 16px 4px 12px, 32px tall."
+  },
+  {
+   "id": "transactions.i-dropdown-overlaps-footer",
+   "title": "Panel category dropdown overflows the panel and the comment composer",
+   "detail": "In the transaction side panel the Category listbox runs past the panel's right edge and down onto the sticky comment composer, so \"+ Create category\" sits on top of the \"Add a comment\" field.",
+   "nodeIds": [
+    "transactions.detail-category-dropdown"
+   ],
+   "category": "layout",
+   "severity": "medium",
+   "evidence": "incomingDomesticWire-1, dropdown open: listbox rect x 1056-1432, y 430-680, z-index 4; side panel container (radius 24px) x 988-1412; \"Create category\" option y 658-690; comment composer (contenteditable) y 667-707."
+  },
+  {
+   "id": "transactions.i-receipt-rename",
+   "title": "Uploaded PNG receipt shown as receipt.pdf",
+   "detail": "Uploading receipt.png to a card transaction lists the attachment as \"receipt.pdf\", so the file name and type shown do not match what was uploaded.",
+   "nodeIds": [
+    "transactions.detail-receipt-attached"
+   ],
+   "category": "data-format",
+   "severity": "low",
+   "evidence": "Uploaded a PNG named receipt.png (image/png) through the panel file input on credit-incoming2-0; the Attachments row text reads \"receipt.pdf\"."
+  },
+  {
+   "id": "transactions.i-dup-keyword-suggestions",
+   "title": "Keyword suggestions show indistinguishable duplicates",
+   "detail": "Searching \"Google\" returns two checkbox rows both labeled \"Google\", with nothing to tell them apart (different counterparties behind them).",
+   "nodeIds": [
+    "transactions.keyword-suggestions"
+   ],
+   "category": "copy",
+   "severity": "low",
+   "evidence": "Keyword popover text after typing \"Google\": \"Search results | Google | Google | Filter for any matching ‘Google’\"."
+  },
+  {
+   "id": "transactions.i-keyword-popover-height",
+   "title": "Keyword popover has a fixed tall height",
+   "detail": "The keyword popover stays 400px tall even when it holds one line of \"no matches\" text, leaving a large empty block over the table.",
+   "nodeIds": [
+    "transactions.keyword-no-matches",
+    "transactions.keyword-suggestions"
+   ],
+   "category": "layout",
+   "severity": "low",
+   "evidence": "With \"Amazon\" typed, popover div._menu_14lgn_4 measures 376x400px and holds only the search field, \"No matches in last 500 transactions.\" and one link."
+  },
+  {
+   "id": "transactions.i-export-empty-name",
+   "title": "Export accepts an empty file name",
+   "detail": "Clearing File name and clicking Download closes the dialog with no validation message and no confirmation of the download.",
+   "nodeIds": [
+    "transactions.export-modal",
+    "transactions.export-xlsx"
+   ],
+   "category": "interaction",
+   "severity": "low",
+   "evidence": "File name input value length 0 after clearing; clicking Download removed the Export transactions dialog; no [role=alert] or [role=status] content afterwards."
+  },
+  {
+   "id": "transactions.i-bar-label-truncation",
+   "title": "Bar chart labels truncated to six letters",
+   "detail": "In the Transactions graph and the Insights Sankey, bar and node labels are cut short (\"Ventur…\", \"Milgra…\", \"Milgram Brokera…\"), so bars cannot be identified without hovering.",
+   "nodeIds": [
+    "transactions.graphs-shown",
+    "transactions.insights-sankey"
+   ],
+   "category": "layout",
+   "severity": "low",
+   "evidence": "Transactions graph svg text: \"GenPro | Ventur… | AR | Google | Milgra…\" (earlier capture grouped by Category: \"Softwa…\", \"Uncate…\", \"Venue …\"). Sankey recipient label: \"Milgram Brokera…\"."
+  },
+  {
+   "id": "transactions.i-sankey-total",
+   "title": "Sankey \"Money In\" total disagrees with the headline",
+   "detail": "On the same screen the headline reads Money in $1.9M while the Sankey node reads Money In $2.7M, because the Sankey adds $774K of transfers the headline excludes, and nothing labels the difference.",
+   "nodeIds": [
+    "transactions.insights-sankey",
+    "transactions.insights"
+   ],
+   "category": "data-format",
+   "severity": "medium",
+   "evidence": "Same screen: headline \"Money in $1.9M\"; Sankey center node \"Money In $2.7M\" with an inbound \"Transfers In $774K\" link and an outbound \"Transfers Out −$774K\"."
+  },
+  {
+   "id": "transactions.i-category-name-label",
+   "title": "Create category name field has no label",
+   "detail": "The name input in Create category has no visible label, placeholder or aria-label. Screen readers get an unnamed text field.",
+   "nodeIds": [
+    "transactions.create-category-modal"
+   ],
+   "category": "a11y",
+   "severity": "medium",
+   "evidence": "Create category dialog input: id \"categoryname-mercury-utils-id-135\", placeholder \"\", aria-label null, aria-labelledby null, input.labels empty; heading \"Create category\" 19px/400."
+  },
+  {
+   "id": "transactions.i-drilldown-date-chip",
+   "title": "Drill-down date chip says \"All time\" for a Jun 17–Today range",
+   "detail": "Opening a recipient from the Insights breakdown carries the Insights date range into Transactions, but the chip and the summary label say \"All time\", so the numbers look like lifetime totals.",
+   "nodeIds": [
+    "transactions.insights-drilldown",
+    "transactions.insights-breakdown"
+   ],
+   "category": "data-format",
+   "severity": "medium",
+   "evidence": "URL filter date {start:\"06-17-2026\", end:\"09-24-2026\", dateRangeName:\"CustomDateRange\"}; toolbar chip text \"All time\"; summary \"Money out all time −$268,986.75\"; opening the chip shows preset Custom, From \"Jun 17, 2026\", To \"Today\"."
+  },
+  {
+   "id": "transactions.i-counterparty-name",
+   "title": "Same counterparty named \"GUSTO\" in Insights and \"Gusto (Payroll)\" in Transactions",
+   "detail": "The Insights breakdown and Sankey show the raw uppercase name, while the table, filter chip and detail panel use the nickname, so the drill-down lands on a name the user did not click.",
+   "nodeIds": [
+    "transactions.insights-breakdown",
+    "transactions.insights-sankey",
+    "transactions.insights-drilldown",
+    "transactions.detail-ach-pull"
+   ],
+   "category": "copy",
+   "severity": "low",
+   "evidence": "Insights row innerText \"GUSTO 30.9% −$268,986.75\"; Sankey label \"GUSTO −$269K\"; after clicking, chip \"Gusto (Payroll)\", rows \"Gusto (Payroll)\", panel \"ACH Pull … Gusto (Payroll)\"."
+  },
+  {
+   "id": "transactions.i-empty-state-styles",
+   "title": "Three empty states, three text styles",
+   "detail": "The \"no results\" messages in this area use different sizes, colors and tones, with and without a secondary line.",
+   "nodeIds": [
+    "transactions.filter-no-results",
+    "transactions.insights-exclusions",
+    "transactions.keyword-no-matches"
+   ],
+   "category": "component",
+   "severity": "low",
+   "evidence": "Table: \"No transactions matching those filters\" span._bodyLarge_qaod7_32 17px/400 rgb(255,255,255) + \"Try adjusting filters or reset.\". Exclusions: \"No excluded transactions yet\" _bodyDefault_qaod7_40 15px/400 rgb(221,221,229) + 13px _label rgb(157,157,168) subline. Keyword: \"No matches in last 500 transactions.\" _bodySecondary_qaod7_51 14px/400 rgb(157,157,168), no heading."
+  },
+  {
+   "id": "transactions.i-insights-export-silent",
+   "title": "Insights Export finishes with no confirmation",
+   "detail": "The Insights Export button shows a loading pill, then returns to \"Export\" with no toast or message, while other actions in the area confirm with a toast (\"View saved\", \"View deleted\", \"2 transactions excluded\").",
+   "nodeIds": [
+    "transactions.insights-exporting",
+    "transactions.insights"
+   ],
+   "category": "interaction",
+   "severity": "low",
+   "evidence": "Button _button_r6b2u_20 _secondary_r6b2u_126 shows three-dot loader right after click; 3 s later its innerText is \"Export\" again and no [role=status]/[role=alert] text appears. Same-area toasts: \"View deleted\" + Undo, \"View renamed\" + Undo, \"2 transactions excluded\"."
+  }
+ ],
+ "blocked": []
+}

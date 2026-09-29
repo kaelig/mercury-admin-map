@@ -1,0 +1,2234 @@
+{
+ "area": "settings",
+ "title": "Settings",
+ "nodes": [
+  {
+   "id": "settings.index",
+   "title": "Settings — Company Profile",
+   "url": "/settings/company-profile",
+   "image": "screens/settings/01-company-profile.png",
+   "kind": "page",
+   "note": "Settings landing (/settings redirects here): legal name, DBAs, masked EIN, company name, logo, phone, bill-forwarding email, mailing/legal addresses and card name, each with an Edit link."
+  },
+  {
+   "id": "settings.edit-company-name",
+   "title": "Edit company name modal",
+   "url": "/settings/company-profile?openModal=name",
+   "image": "screens/settings/02-edit-company-name-modal.png",
+   "kind": "modal",
+   "note": "Single-field modal; Update stays disabled until the value changes (clearing the field just keeps it disabled, no error)."
+  },
+  {
+   "id": "settings.company-name-updated",
+   "title": "Company name updated toast",
+   "url": "/settings/company-profile",
+   "image": "screens/settings/03-company-name-updated.png",
+   "kind": "toast",
+   "note": "After Update, page header and sidebar switcher show the new name and a toast confirms 'Your company name has been updated.'"
+  },
+  {
+   "id": "settings.edit-phone-invalid",
+   "title": "Edit phone number — too short",
+   "url": "/settings/company-profile?openModal=phoneNumber",
+   "image": "screens/settings/04-edit-phone-invalid.png",
+   "kind": "validation-error",
+   "note": "Phone modal with country flag picker; submitting '+1 2' shows red label/border and 'Phone number is too short.'"
+  },
+  {
+   "id": "settings.edit-mailing-address",
+   "title": "Edit company mailing address modal",
+   "url": "/settings/company-profile?openModal=mailingAddress",
+   "image": "screens/settings/05-edit-mailing-address.png",
+   "kind": "modal",
+   "note": "Address form: country and state comboboxes, address lines, city, ZIP, a 'Copy from legal address' shortcut, Cancel/Update."
+  },
+  {
+   "id": "settings.mailing-address-zip-error",
+   "title": "Mailing address — invalid ZIP",
+   "url": "/settings/company-profile?openModal=mailingAddress",
+   "image": "screens/settings/06-mailing-address-errors.png",
+   "kind": "validation-error",
+   "note": "Submitting ZIP '12' flags the ZIP field in red with 'Must be a valid 5-digit number' and disables Update."
+  },
+  {
+   "id": "settings.plan-billing",
+   "title": "Plan & Billing",
+   "url": "/settings/plan-and-billing",
+   "image": "screens/settings/07-plan-billing.png",
+   "kind": "page",
+   "note": "Current plan (Mercury Pro, $350/mo) with Manage menu, included features list, and a right rail with Next Bill estimate, Last Paid and relationship-manager note."
+  },
+  {
+   "id": "settings.plan-manage-menu",
+   "title": "Manage plan menu",
+   "url": "/settings/plan-and-billing",
+   "image": "screens/settings/08-plan-manage-menu.png",
+   "kind": "menu",
+   "note": "Manage dropdown with 'View all plans' and a red destructive 'Unsubscribe' item."
+  },
+  {
+   "id": "settings.billing-more-menu",
+   "title": "Billing overflow menu",
+   "url": "/settings/plan-and-billing",
+   "image": "screens/settings/09-billing-more-menu.png",
+   "kind": "menu",
+   "note": "The ••• button on the Next Bill card opens 'Billing history' and 'Payment method'."
+  },
+  {
+   "id": "settings.billing-history",
+   "title": "Documents — Billing history",
+   "url": "/settings/documents/billing-history",
+   "image": "screens/settings/10-billing-history.png",
+   "kind": "page",
+   "note": "Documents & Data page filtered to Billing history: year combobox, table of Mercury Pro subscription invoices with checkbox selection and Download."
+  },
+  {
+   "id": "settings.unsubscribe-confirm",
+   "title": "Cancel subscription confirmation",
+   "url": "/settings/plan-and-billing",
+   "image": "screens/settings/11-unsubscribe-modal.png",
+   "kind": "modal",
+   "note": "'Are you sure you want to cancel your subscription to Mercury Pro?' with loss summary and Nevermind / pink 'Yes, cancel' buttons."
+  },
+  {
+   "id": "settings.choose-plan-monthly",
+   "title": "Choose a Plan — monthly",
+   "url": "/settings/plan-and-billing",
+   "image": "screens/settings/12-view-all-plans.png",
+   "kind": "modal",
+   "note": "Full-width plan comparison modal (Mercury $0, Plus $35, Pro $350 Selected) with Pay monthly/annually segmented control and Contact Sales bar."
+  },
+  {
+   "id": "settings.choose-plan-annual",
+   "title": "Choose a Plan — annual",
+   "url": "/settings/plan-and-billing",
+   "image": "screens/settings/13-plans-annual.png",
+   "kind": "form-state",
+   "note": "Pay annually (-15%) selected: Plus $29.90/Month ($358.80 billed annually), Pro $299/Month ($3,588); both show Upgrade."
+  },
+  {
+   "id": "settings.documents",
+   "title": "Documents & Data — Statements",
+   "url": "/settings/documents",
+   "image": "screens/settings/14-documents.png",
+   "kind": "page",
+   "note": "Documents hub: category chips (All/Accounts/Tax/Legal/Operations), left sub-nav of 13 document types, Statements table filtered by Year and Accounts with Share document / Download."
+  },
+  {
+   "id": "settings.custom-statement",
+   "title": "Generate a custom statement modal",
+   "url": "/settings/documents",
+   "image": "screens/settings/15-custom-statement.png",
+   "kind": "modal",
+   "note": "From/To date fields limited to the current month, account picker with balance, 'not an official statement' note, Cancel/Download."
+  },
+  {
+   "id": "settings.custom-statement-invalid",
+   "title": "Custom statement — date out of range",
+   "url": "/settings/documents",
+   "image": "screens/settings/16-custom-statement-invalid.png",
+   "kind": "validation-error",
+   "note": "From date after today shows 'Please choose a day on or before Sep 24, 2026' with the calendar popover open."
+  },
+  {
+   "id": "settings.manage-shared-docs",
+   "title": "Remove shared document links",
+   "url": "/settings/documents",
+   "image": "screens/settings/17-manage-shared-docs.png",
+   "kind": "modal",
+   "note": "Lists active share links by recipient (rotem@gmail.com — 4 documents, thom@cooley.com — 2) with a Close button; links expire after 30 days."
+  },
+  {
+   "id": "settings.documents-selected",
+   "title": "Statements — rows selected",
+   "url": "/settings/documents",
+   "image": "screens/settings/18-documents-selected.png",
+   "kind": "form-state",
+   "note": "Two statements checked; footer shows '2 documents selected', ZIP file, Share documents and Download."
+  },
+  {
+   "id": "settings.share-documents",
+   "title": "Share documents",
+   "url": "/settings/documents",
+   "image": "screens/settings/19-share-document.png",
+   "kind": "modal",
+   "note": "Full-screen takeover: recipient emails tag input, summary card of the selected statements, sensitivity warning, Back / Share via email."
+  },
+  {
+   "id": "settings.share-documents-error",
+   "title": "Share documents — no recipient",
+   "url": "/settings/documents",
+   "image": "screens/settings/20-share-empty-error.png",
+   "kind": "validation-error",
+   "note": "Full-screen share flow; submitting without recipients shows a pink banner 'Please enter one or more email addresses.' above the field."
+  },
+  {
+   "id": "settings.share-recipient-suggest",
+   "title": "Share documents — recipient suggestions",
+   "url": "/settings/documents",
+   "image": "screens/settings/21-share-recipient-suggestions.png",
+   "kind": "form-state",
+   "note": "Typed email becomes a removable tag and a listbox suggests known contacts (jason@green.com, aliyah@mcmahon.com, jordi@mercury.com)."
+  },
+  {
+   "id": "settings.share-email-sent",
+   "title": "Share documents — Email sent",
+   "url": "/settings/documents",
+   "image": "screens/settings/22-share-success.png",
+   "kind": "confirmation",
+   "note": "'Email sent' confirmation with shared-documents summary and an upsell to invite the accountant as a bookkeeper-style user."
+  },
+  {
+   "id": "settings.categories",
+   "title": "Categories",
+   "url": "/settings/categories",
+   "image": "screens/settings/23-categories.png",
+   "kind": "page",
+   "note": "Custom transaction categories table with Reimbursements / Card spend / Other availability checks and per-row delete and edit icon buttons; Create category button."
+  },
+  {
+   "id": "settings.create-category-row",
+   "title": "Create category — inline row",
+   "url": "/settings/categories",
+   "image": "screens/settings/24-create-category.png",
+   "kind": "form-state",
+   "note": "Create category inserts an editable row at the top (name input, three checkboxes, pink Cancel and blue Save); other rows dim."
+  },
+  {
+   "id": "settings.delete-category-confirm",
+   "title": "Delete category confirmation",
+   "url": "/settings/categories",
+   "image": "screens/settings/25-delete-category.png",
+   "kind": "modal",
+   "note": "'Delete Business Client Meals?' explains past transactions keep the category and the GL mapping rule is deleted; Cancel / Yes, delete."
+  },
+  {
+   "id": "settings.integrations",
+   "title": "Integrations",
+   "url": "/settings/integrations",
+   "image": "screens/settings/26-integrations.png",
+   "kind": "page",
+   "note": "Active card with Integrations / Third party connections tabs (Gmail and Zapier Connected), then 'Browse all integrations' filtered by All/Accounting/Team Management/Other chips."
+  },
+  {
+   "id": "settings.third-party-connections",
+   "title": "Integrations — Third party connections",
+   "url": "/settings/integrations",
+   "image": "screens/settings/27-third-party-connections.png",
+   "kind": "page",
+   "note": "Tab lists Working Capital store connections; AMAZON Store shows a pink 'No connection' badge with a Reconnect button, others plain 'Connected' text."
+  },
+  {
+   "id": "settings.netsuite-step1",
+   "title": "NetSuite setup — Step 1 of 3",
+   "url": "/settings/integrations",
+   "image": "screens/settings/28-netsuite-step1.png",
+   "kind": "modal",
+   "note": "Account mapping: each Mercury account (Treasury, Ops / Payroll, AP, AR, checking, savings, credit) mapped to a NetSuite GL code select."
+  },
+  {
+   "id": "settings.netsuite-gl-dropdown",
+   "title": "NetSuite setup — GL code options",
+   "url": "/settings/integrations",
+   "image": "screens/settings/29-netsuite-gl-dropdown.png",
+   "kind": "menu",
+   "note": "GL code select open with options like Mercury Checking (7772), Mercury Savings (7774), 120 - Accounts Receivable."
+  },
+  {
+   "id": "settings.netsuite-step2",
+   "title": "NetSuite setup — Step 2 of 3",
+   "url": "/settings/integrations",
+   "image": "screens/settings/30-netsuite-step2.png",
+   "kind": "form-state",
+   "note": "Advanced account defaults: Bill pay GL code select; Next stays disabled until a code is chosen."
+  },
+  {
+   "id": "settings.netsuite-step3",
+   "title": "NetSuite setup — Step 3 of 3",
+   "url": "/settings/integrations",
+   "image": "screens/settings/31-netsuite-step3.png",
+   "kind": "form-state",
+   "note": "'When do you want to sync from?' radio choice (today / a past date) with Back and Start sync."
+  },
+  {
+   "id": "settings.netsuite-connected",
+   "title": "NetSuite connected toast",
+   "url": "/settings/integrations",
+   "image": "screens/settings/32-netsuite-synced.png",
+   "kind": "toast",
+   "note": "Back on Integrations, NetSuite leaves the browse list and a toast says 'Your Mercury account is now connected to NetSuite.'"
+  },
+  {
+   "id": "settings.team",
+   "title": "Team",
+   "url": "/settings/users",
+   "image": "screens/settings/33-team.png",
+   "kind": "page",
+   "note": "Team roster table (name/email, Mercury role tag, job title, department, green Active / Invited / Removed status) with All / Needs review / Add filter chips, Roles link and Invite menu."
+  },
+  {
+   "id": "settings.invite-menu",
+   "title": "Invite menu",
+   "url": "/settings/users",
+   "image": "screens/settings/34-invite-menu.png",
+   "kind": "menu",
+   "note": "Invite dropdown: 'Invite a user' and 'Invite multiple users'."
+  },
+  {
+   "id": "settings.invite-details",
+   "title": "Invite a user — User Details",
+   "url": "/settings/users/invite/individual/details",
+   "image": "screens/settings/35-invite-user.png",
+   "kind": "page",
+   "note": "Full-screen stepper (User Details, Assign Role, Review & Send): legal first/last name, email, optional job title and department."
+  },
+  {
+   "id": "settings.invite-details-errors",
+   "title": "Invite a user — required fields",
+   "url": "/settings/users/invite/individual/details",
+   "image": "screens/settings/36-invite-user-errors.png",
+   "kind": "validation-error",
+   "note": "Next with empty form flags first name, last name and email with 'Please complete this field'."
+  },
+  {
+   "id": "settings.invite-job-title",
+   "title": "Invite a user — Job title options",
+   "url": "/settings/users/invite/individual/details",
+   "image": "screens/settings/37-invite-job-title-options.png",
+   "kind": "menu",
+   "note": "Job title combobox open on a long predefined list (Bookkeeper, CFO, Chief Financial Officer (CFO), Controller…)."
+  },
+  {
+   "id": "settings.invite-role",
+   "title": "Invite a user — Assign Role (Employee)",
+   "url": "/settings/users/invite/individual/role",
+   "image": "screens/settings/38-invite-assign-role.png",
+   "kind": "form-state",
+   "note": "Radio cards for 7 roles; Employee preselected and expanded to show its permissions; link to create a new role."
+  },
+  {
+   "id": "settings.role-admin",
+   "title": "Assign Role — Admin",
+   "url": "/settings/users/invite/individual/role",
+   "image": "screens/settings/39-role-admin.png",
+   "kind": "form-state",
+   "note": "Admin selected: Send money, User/Accounts management, Policies and approvals, Recipient management, Access all accounts, +9 more."
+  },
+  {
+   "id": "settings.role-accountant",
+   "title": "Assign Role — Accountant",
+   "url": "/settings/users/invite/individual/role",
+   "image": "screens/settings/40-role-accountant.png",
+   "kind": "form-state",
+   "note": "Accountant selected: Accounting, Download docs and statements, Reimbursement view only, notes and attachments."
+  },
+  {
+   "id": "settings.role-finance-lead",
+   "title": "Assign Role — Finance Lead",
+   "url": "/settings/users/invite/individual/role",
+   "image": "screens/settings/41-role-finance-lead.png",
+   "kind": "form-state",
+   "note": "Finance Lead selected with its non-admin payments/cards/users permission list."
+  },
+  {
+   "id": "settings.role-finance-manager",
+   "title": "Assign Role — Finance Manager",
+   "url": "/settings/users/invite/individual/role",
+   "image": "screens/settings/42-role-finance-manager.png",
+   "kind": "form-state",
+   "note": "Finance Manager selected: ACH authorizations, Accounting, docs, reimbursement submission, notes, Access all accounts."
+  },
+  {
+   "id": "settings.role-money-mover",
+   "title": "Assign Role — Money Mover",
+   "url": "/settings/users/invite/individual/role",
+   "image": "screens/settings/43-role-money-mover.png",
+   "kind": "form-state",
+   "note": "Money Mover selected: Send money, Recipient management, Internal transfers, docs, Access 3 of 7 accounts, +1 more."
+  },
+  {
+   "id": "settings.role-read-only",
+   "title": "Assign Role — Read Only",
+   "url": "/settings/users/invite/individual/role",
+   "image": "screens/settings/44-role-read-only.png",
+   "kind": "form-state",
+   "note": "Read Only selected: Download docs and statements, Reimbursement view only, notes and attachments, Access all accounts."
+  },
+  {
+   "id": "settings.invite-issue-card",
+   "title": "Invite a user — Issue Card",
+   "url": "/settings/users/invite/individual/card",
+   "image": "screens/settings/45-invite-issue-card.png",
+   "kind": "page",
+   "note": "Money Mover adds an Issue Card step: nickname, usage note, Credit/Debit and Virtual/Physical radio tiles, spend controls; 'Or, skip issuing card'."
+  },
+  {
+   "id": "settings.invite-issue-card-error",
+   "title": "Issue Card — control type required",
+   "url": "/settings/users/invite/individual/card",
+   "image": "screens/settings/46-invite-issue-card-errors.png",
+   "kind": "validation-error",
+   "note": "Next without a spend Control type shows 'Please complete this field' under the Control type select."
+  },
+  {
+   "id": "settings.invite-review",
+   "title": "Invite a user — Review & Send",
+   "url": "/settings/users/invite/individual/review",
+   "image": "screens/settings/47-invite-review.png",
+   "kind": "page",
+   "note": "Summary of Riley Park (email, job title) and the Money Mover role with Back / Send invite."
+  },
+  {
+   "id": "settings.invite-sent",
+   "title": "Invite sent",
+   "url": "/settings/users/invite/more",
+   "image": "screens/settings/48-invite-sent.png",
+   "kind": "confirmation",
+   "note": "Full-screen 'Invite sent' page with card-grid illustration, Done inviting / Invite your team; the demo banner is absent here."
+  },
+  {
+   "id": "settings.user-detail",
+   "title": "Team member detail panel",
+   "url": "/settings/users/team-id-3",
+   "image": "screens/settings/49-user-detail.png",
+   "kind": "drawer",
+   "note": "Right-side panel for Alice Chen: role tag, Assign Budget / Edit / Remove, member info, role permissions; the left rail switches from Settings nav to the main Banking nav."
+  },
+  {
+   "id": "settings.edit-member",
+   "title": "Edit member panel",
+   "url": "/settings/users/team-id-3",
+   "image": "screens/settings/50-edit-user.png",
+   "kind": "form-state",
+   "note": "Panel in edit mode: job title select (Other) + free-text title, department combobox, role select and permission toggles."
+  },
+  {
+   "id": "settings.edit-member-dirty",
+   "title": "Edit member — changed, Save enabled",
+   "url": "/settings/users/team-id-3",
+   "image": "screens/settings/51-edit-user-dirty.png",
+   "kind": "form-state",
+   "note": "After changing the job title, the panel footer's Cancel/Save become active (Save was disabled until a change)."
+  },
+  {
+   "id": "settings.member-saved",
+   "title": "Job title updated toast",
+   "url": "/settings/users/team-id-3",
+   "image": "screens/settings/52-user-saved.png",
+   "kind": "toast",
+   "note": "Panel returns to read view showing 'Senior Software Engineer' and a 'Job title updated' toast."
+  },
+  {
+   "id": "settings.roles",
+   "title": "Roles",
+   "url": "/settings/roles",
+   "image": "screens/settings/54-roles.png",
+   "kind": "page",
+   "note": "Team / Roles breadcrumb page listing 7 roles with description, System/Custom type, member avatars and Active / Needs review status; Create role button."
+  },
+  {
+   "id": "settings.create-role",
+   "title": "Create a new role",
+   "url": "/settings/roles/create",
+   "image": "screens/settings/55-create-role.png",
+   "kind": "page",
+   "note": "Full-screen form: template select, role name (28 chars) and description, Mercury Books toggle, grouped permission checkboxes and account access list."
+  },
+  {
+   "id": "settings.create-role-errors",
+   "title": "Create role — name required",
+   "url": "/settings/roles/create",
+   "image": "screens/settings/56-create-role-errors.png",
+   "kind": "validation-error",
+   "note": "Save New Role on an empty form flags Role name with 'Please complete this field'."
+  },
+  {
+   "id": "settings.create-role-account-error",
+   "title": "Create role — account access required",
+   "url": "/settings/roles/create",
+   "image": "screens/settings/57-role-account-error.png",
+   "kind": "validation-error",
+   "note": "With a name but no account ticked, 'Please select at least one checking account.' appears above Account access."
+  },
+  {
+   "id": "settings.role-created",
+   "title": "Role created toast",
+   "url": "/settings/roles",
+   "image": "screens/settings/58-role-created.png",
+   "kind": "toast",
+   "note": "Back on Roles, the new 'AP Clerk' custom role appears and a toast reads 'New role created: AP Clerk'."
+  },
+  {
+   "id": "settings.remove-member-confirm",
+   "title": "Remove member confirmation",
+   "url": "/settings/users/team-id-3",
+   "image": "screens/settings/53-remove-user.png",
+   "kind": "modal",
+   "note": "'Remove Alice?' warns cards will be canceled and 6 subscriptions affected; Go back / pink 'Remove Alice'."
+  },
+  {
+   "id": "settings.departments",
+   "title": "Departments",
+   "url": "/settings/departments",
+   "image": "screens/settings/59-departments.png",
+   "kind": "page",
+   "note": "Department tree (Executive, Finance > Accounting > Audit, Product > Design) with lead avatars; Connect HR system and Add department buttons."
+  },
+  {
+   "id": "settings.advisors",
+   "title": "Advisors",
+   "url": "/settings/users/advisors",
+   "image": "screens/settings/60-users-advisors.png",
+   "kind": "page",
+   "note": "Advisor firms and staff: a Pending approvals card (Pico Accountants access request with Decline / Review) above a table of advisors with firm, advisor role and status."
+  },
+  {
+   "id": "settings.approvals",
+   "title": "Approval Rules — Per-payment",
+   "url": "/settings/approvals",
+   "image": "screens/settings/61-approvals.png",
+   "kind": "page",
+   "note": "Sub-nav (Per-payment, Daily maximum, Dual admin 1); tiered rules by amount (<$100, $100–$250, ≥$250) with required approvers, separation-of-duties toggle and Edit."
+  },
+  {
+   "id": "settings.controls",
+   "title": "Controls — ACH authorization",
+   "url": "/settings/controls",
+   "image": "screens/settings/62-controls.png",
+   "kind": "page",
+   "note": "ACH authorization card (Active badge) explaining debit-vendor allow-listing, the review-expiry behaviour, Edit / Disable / Learn more."
+  },
+  {
+   "id": "settings.controls-edit",
+   "title": "Controls — editing review behaviour",
+   "url": "/settings/controls",
+   "image": "screens/settings/63-controls-edit.png",
+   "kind": "form-state",
+   "note": "Edit turns the sentence into a select ('automatically approve') with Save (left, disabled) and Cancel (right) buttons."
+  },
+  {
+   "id": "settings.approval-policy-edit",
+   "title": "Modify approval policy",
+   "url": "/settings/approvals/edit-policy",
+   "image": "screens/settings/64-approval-rule-edit.png",
+   "kind": "page",
+   "note": "Full-screen editor listing each rule as a card with a ••• menu; footer Cancel / Save."
+  },
+  {
+   "id": "settings.approval-rule-menu",
+   "title": "Approval rule menu",
+   "url": "/settings/approvals/edit-policy",
+   "image": "screens/settings/65-approval-rule-menu.png",
+   "kind": "menu",
+   "note": "Rule ••• menu with Edit rule and Delete rule."
+  },
+  {
+   "id": "settings.approval-rule-editing",
+   "title": "Editing an approval rule",
+   "url": "/settings/approvals/edit-policy",
+   "image": "screens/settings/66-edit-approval-rule.png",
+   "kind": "form-state",
+   "note": "Rule card becomes inline inputs: amount range ($ 0.00 – $ 100), approver multi-select (Any admin), 'Add another approver', Cancel / Save."
+  },
+  {
+   "id": "settings.vault",
+   "title": "Mercury Vault",
+   "url": "/settings/vault",
+   "image": "screens/settings/67-vault.png",
+   "kind": "page",
+   "note": "'1 Vault insight for you' header with FDIC Insurance (Up to $220M), Accounts ($5M) and Treasury (Deposit pending) stats; FDIC card with $5,000,000.00 balance and green 'Up to $220M FDIC insured' tag; Treasury card with 'Transfer in Progress' tag, $231,764.10 and a 60% State Street / 40% Morgan Stanley donut."
+  },
+  {
+   "id": "settings.account-security",
+   "title": "Account Security",
+   "url": "/settings/account-security",
+   "image": "screens/settings/68-account-security.png",
+   "kind": "page",
+   "note": "Suggested actions card (separation of duties, inactive team member, 4 admins missing a passkey) with Run check-in and per-row ⋮ menus, then 'Activity history from all team members' with Filters, a month chip, Export filtered and a date/member/event/source/IP table."
+  },
+  {
+   "id": "settings.security-suggestion-menu",
+   "title": "Suggested action menu",
+   "url": "/settings/account-security",
+   "image": "screens/settings/73-security-suggestion-menu.png",
+   "kind": "menu",
+   "note": "The ⋮ on a suggested action opens 'Mark as resolved' and 'Ignore issue'."
+  },
+  {
+   "id": "settings.run-check-in",
+   "title": "Security check-in running",
+   "url": "/settings/account-security",
+   "image": "screens/settings/74-run-check-in.png",
+   "kind": "toast",
+   "note": "Run check-in disables itself, a tooltip says 'The check-in can take up to two minutes to complete.', the suggestions table turns into skeleton rows and a toast reads 'Security check-in triggered successfully'."
+  },
+  {
+   "id": "settings.security-activity-month",
+   "title": "Activity history month picker",
+   "url": "/settings/account-security",
+   "image": "screens/settings/75-security-activity-filters.png",
+   "kind": "popover",
+   "note": "Clicking the 'September 2026' chip opens a Month range picker with 2025 and 2026 grids; future months (Oct–Dec 2026) are dimmed."
+  },
+  {
+   "id": "settings.tokens",
+   "title": "API Tokens",
+   "url": "/settings/tokens",
+   "image": "screens/settings/69-tokens.png",
+   "kind": "page",
+   "note": "Explainer about role changes limiting token capabilities, a table of three tokens (nickname, Read/Write or Read, last used, created by, created date, whitelisted IPs, ••• actions) and a '+ Create an API token' row."
+  },
+  {
+   "id": "settings.webhooks",
+   "title": "Webhooks — Endpoints",
+   "url": "/settings/webhooks",
+   "image": "screens/settings/76-webhooks.png",
+   "kind": "page",
+   "note": "Explainer with a 'webhooks API documentation' link, Endpoints / Event deliveries tabs and a table of six endpoints (URL, Status badge Active/Paused/Disabled, Events count or 'All events', Created Date). The Disabled row is dimmed to opacity 0.7; the longest URL truncates with an ellipsis. '+ Create webhook' sits top right."
+  },
+  {
+   "id": "settings.webhook-detail",
+   "title": "Webhook endpoint detail panel",
+   "url": "/settings/webhooks?endpoint=whep_01",
+   "image": "screens/settings/77-webhook-detail.png",
+   "kind": "drawer",
+   "note": "Clicking a row narrows the table to URL + Status and opens a side panel: Webhook URL, Status badge, Event subscriptions as monospace chips (transaction.created, transaction.updated, checkingAccount.balance.updated), Last delivery 'Feb 18, 2026 01:14:32', Consecutive failures 0, Created/Updated dates, and View deliveries / Edit / Delete buttons."
+  },
+  {
+   "id": "settings.edit-webhook",
+   "title": "Edit webhook endpoint modal",
+   "url": "/settings/webhooks?endpoint=whep_01",
+   "image": "screens/settings/78-edit-webhook.png",
+   "kind": "modal",
+   "note": "Endpoint URL prefilled, Event types combobox showing '3 selected', an Active switch, Cancel and a disabled 'Save changes'."
+  },
+  {
+   "id": "settings.edit-webhook-invalid",
+   "title": "Edit webhook — invalid URL",
+   "url": "/settings/webhooks?endpoint=whep_01",
+   "image": "screens/settings/79-edit-webhook-invalid-url.png",
+   "kind": "validation-error",
+   "note": "Typing 'not a url' turns the label and border pink with 'Please enter a valid HTTPS URL (e.g. https://example.com/webhook)' (12px, rgb(252,146,180)). A 'Verify endpoint' button appears, and Event types drops its '3 selected' value back to the 'All events' placeholder."
+  },
+  {
+   "id": "settings.delete-webhook-confirm",
+   "title": "Delete endpoint confirmation",
+   "url": "/settings/webhooks?endpoint=whep_01",
+   "image": "screens/settings/80-delete-webhook-confirm.png",
+   "kind": "modal",
+   "note": "'Delete endpoint?' — 'Are you sure you want to delete the endpoint at https://api.acme.com/webhooks/mercury? This action cannot be undone.' with Cancel / Delete."
+  },
+  {
+   "id": "settings.webhook-deliveries",
+   "title": "Webhooks — Event deliveries",
+   "url": "/settings/webhooks?endpoint=whep_01&tab=deliveries",
+   "image": "screens/settings/81-webhook-event-deliveries.png",
+   "kind": "page",
+   "note": "Endpoint picker above a table of delivery attempts: Resource Type, Event (Create/Update), Resource ID (UUID), Status badge (Delivered, Failed, Pending, Sending) and 24-hour Timestamp with seconds. Rows are not in time order."
+  },
+  {
+   "id": "settings.create-webhook",
+   "title": "Create a webhook endpoint modal",
+   "url": "/settings/webhooks",
+   "image": "screens/settings/82-create-webhook.png",
+   "kind": "modal",
+   "note": "Empty Endpoint URL, a disabled 'Verify endpoint' button, Event types combobox (placeholder 'All events'), Cancel and a disabled 'Create endpoint'. Leaving the URL empty and blurring shows no error."
+  },
+  {
+   "id": "settings.create-webhook-http-error",
+   "title": "Create webhook — http URL rejected",
+   "url": "/settings/webhooks",
+   "image": "screens/settings/83-create-webhook-http-error.png",
+   "kind": "validation-error",
+   "note": "An http:// URL shows 'Please enter a valid HTTPS URL (e.g. https://example.com/webhook)'; Create endpoint stays disabled."
+  },
+  {
+   "id": "settings.webhook-verified",
+   "title": "Create webhook — endpoint verified",
+   "url": "/settings/webhooks",
+   "image": "screens/settings/84-webhook-verify-endpoint.png",
+   "kind": "form-state",
+   "note": "After entering an https URL and clicking Verify endpoint, the button is replaced by a green check and 'Verified'. Create endpoint only enables after verification."
+  },
+  {
+   "id": "settings.webhook-event-types",
+   "title": "Event types list",
+   "url": "/settings/webhooks",
+   "image": "screens/settings/85-webhook-event-types.png",
+   "kind": "menu",
+   "note": "Checkbox list grouped under Transactions (transaction.created, transaction.updated) and Account balances (checking/savings/treasury/investment/credit account .balance.updated). The list extends past the bottom of the modal."
+  },
+  {
+   "id": "settings.create-webhook-filled",
+   "title": "Create webhook — ready to submit",
+   "url": "/settings/webhooks",
+   "image": "screens/settings/86-create-webhook-filled.png",
+   "kind": "form-state",
+   "note": "Verified URL, Event types '2 selected', Create endpoint enabled."
+  },
+  {
+   "id": "settings.webhook-signing-secret",
+   "title": "Signing secret modal",
+   "url": "/settings/webhooks",
+   "image": "screens/settings/87-webhook-created.png",
+   "kind": "confirmation",
+   "note": "Create endpoint closes the form and shows 'Signing secret' with 'Copy it now — it will not be shown again.', the secret whsec_mock_… in a monospace block and 'Please copy and save this secret before closing.' The only control besides the block is an X. After closing, the endpoints table still lists the original six rows and no toast appears."
+  },
+  {
+   "id": "settings.webhook-secret-copied",
+   "title": "Signing secret copied",
+   "url": "/settings/webhooks",
+   "image": "screens/settings/88-webhook-secret-copied.png",
+   "kind": "popover",
+   "note": "The secret block is itself an unlabelled button; clicking it outlines the block and shows a 'Copied' tooltip."
+  },
+  {
+   "id": "settings.token-menu",
+   "title": "API token actions menu",
+   "url": "/settings/tokens",
+   "image": "screens/settings/89-token-kebab-menu.png",
+   "kind": "menu",
+   "note": "The ••• button on a token row opens Edit (pencil icon in accent blue) and Delete (trash icon in grey)."
+  },
+  {
+   "id": "settings.edit-token",
+   "title": "Edit API token modal",
+   "url": "/settings/tokens",
+   "image": "screens/settings/90-edit-token.png",
+   "kind": "modal",
+   "note": "Nickname and IP whitelist prefilled ('Token with long IPv6 address', one IPv6 address), helper 'Comma-separated IPs or CIDR ranges. Current IP: 192.168.1.1', Cancel and a disabled 'Update token'. Permissions cannot be edited."
+  },
+  {
+   "id": "settings.edit-token-invalid",
+   "title": "Edit API token — invalid IP",
+   "url": "/settings/tokens",
+   "image": "screens/settings/91-edit-token-errors.png",
+   "kind": "validation-error",
+   "note": "IP whitelist '999.1.1' shows 'Enter a comma-separated list of IPv4/6 addresses or CIDR ranges.' and Update token stays disabled."
+  },
+  {
+   "id": "settings.create-token",
+   "title": "Create an API token modal",
+   "url": "/settings/tokens",
+   "image": "screens/settings/92-create-token.png",
+   "kind": "modal",
+   "note": "Nickname, Permissions combobox, IP whitelist with the current-IP helper, Cancel and an enabled 'Create token'."
+  },
+  {
+   "id": "settings.create-token-errors",
+   "title": "Create API token — empty submit",
+   "url": "/settings/tokens",
+   "image": "screens/settings/93-create-token-errors.png",
+   "kind": "validation-error",
+   "note": "Create token on an empty form flags Nickname and Permissions with 'Please complete this field' (12px, rgb(252,146,180)); IP whitelist is optional."
+  },
+  {
+   "id": "settings.token-permissions",
+   "title": "Token permissions options",
+   "url": "/settings/tokens",
+   "image": "screens/settings/94-token-permissions-options.png",
+   "kind": "menu",
+   "note": "Options: 'Custom Scopes', 'Read and Write', 'Read Only'. The tokens table labels the same levels 'Read/Write' and 'Read'."
+  },
+  {
+   "id": "settings.token-custom-scopes",
+   "title": "Create token — Custom Scopes",
+   "url": "/settings/tokens",
+   "image": "screens/settings/95-token-custom-scopes.png",
+   "kind": "form-state",
+   "note": "Choosing Custom Scopes adds a Scopes combobox ('Select routes for custom token') and the helper 'IP whitelist required for scopes with an asterisk *'."
+  },
+  {
+   "id": "settings.token-scopes-list",
+   "title": "Custom scopes list",
+   "url": "/settings/tokens",
+   "image": "screens/settings/96-token-scopes-list.png",
+   "kind": "menu",
+   "note": "28 Title Case scopes grouped by resource (Accounts, Cards, Categories, Invoices, Recipients, Transactions, Webhooks…); asterisked ones need an IP whitelist and one carries an 'Experimental' tag. The list opens upward, spills out of the modal and its top slides under the demo banner."
+  },
+  {
+   "id": "settings.token-ip-required",
+   "title": "Create token — IP whitelist required",
+   "url": "/settings/tokens",
+   "image": "screens/settings/97-token-ip-required.png",
+   "kind": "validation-error",
+   "note": "With 'Send Money *' selected and no IP, Create token flags IP whitelist with the format message 'Enter a comma-separated list of IPv4/6 addresses or CIDR ranges.' rather than a required-field message."
+  },
+  {
+   "id": "settings.token-created",
+   "title": "API token created",
+   "url": "/settings/tokens",
+   "image": "screens/settings/98-token-created.png",
+   "kind": "confirmation",
+   "note": "'Here is your API token' — 'For security reasons, this is the only time we will display this token to you…', the token string and 'Please copy and save this token before closing.' Closing is an X."
+  },
+  {
+   "id": "settings.tokens-new-row",
+   "title": "API Tokens — new token row",
+   "url": "/settings/tokens",
+   "image": "screens/settings/99-token-list-new-token.png",
+   "kind": "form-state",
+   "note": "The new row reads 'Map audit token | Custom | Tomorrow | mocked@mercury.com | Tomorrow | 1 IP whitelisted' while older rows show absolute dates such as 'May 16, 2019'."
+  },
+  {
+   "id": "settings.delete-token-confirm",
+   "title": "Delete API Token confirmation",
+   "url": "/settings/tokens",
+   "image": "screens/settings/100-delete-token-confirm.png",
+   "kind": "modal",
+   "note": "'Delete API Token' — 'Are you sure you want to delete the API token “Map audit token”? This action cannot be undone.' with Cancel / 'Delete Token'. Confirming removes the row with no toast."
+  },
+  {
+   "id": "settings.my-profile",
+   "title": "Profile — personal details",
+   "url": "/settings/my-profile",
+   "image": "screens/settings/101-my-profile.png",
+   "kind": "page",
+   "note": "h1 is the user's name 'Jane Black' with an outlined 'Admin' tag. Label/value rows with blue 'Edit >' links: Profile picture, Email address, Preferred name, Legal name, Date of birth '01/31/1990' (read-only, info icon), Job title ('Add >'), Phone number, Residential and Mailing addresses."
+  },
+  {
+   "id": "settings.edit-preferred-name",
+   "title": "Edit preferred name modal",
+   "url": "/settings/my-profile",
+   "image": "screens/settings/102-edit-preferred-name.png",
+   "kind": "modal",
+   "note": "Preferred first name / Preferred last name fields with Cancel and 'Update'."
+  },
+  {
+   "id": "settings.preferred-name-updated",
+   "title": "Preferred name updated toast",
+   "url": "/settings/my-profile",
+   "image": "screens/settings/103-preferred-name-updated.png",
+   "kind": "toast",
+   "note": "Update closes the modal, the h1 and row change immediately and a toast reads 'Your preferred name has been updated.'"
+  },
+  {
+   "id": "settings.edit-profile-picture",
+   "title": "Edit profile picture modal",
+   "url": "/settings/my-profile",
+   "image": "screens/settings/104-edit-profile-picture.png",
+   "kind": "modal",
+   "note": "'Images should be at least 256x256 pixels…', current avatar with Remove, a drag-and-drop upload zone ('You may upload one JPEG or PNG file'), Cancel / Save."
+  },
+  {
+   "id": "settings.preferred-name-required",
+   "title": "Preferred name — first name required",
+   "url": "/settings/my-profile",
+   "image": "screens/settings/105-preferred-name-empty-error.png",
+   "kind": "validation-error",
+   "note": "Clearing Preferred first name and pressing Update shows 'This field is required'."
+  },
+  {
+   "id": "settings.add-job-title",
+   "title": "Add job title modal",
+   "url": "/settings/my-profile",
+   "image": "screens/settings/106-add-job-title.png",
+   "kind": "modal",
+   "note": "'Add job title' with a Job title select, helper 'Select the title that most aligns with the person’s role' (third person on your own profile) and Cancel / Save."
+  },
+  {
+   "id": "settings.my-profile-linked",
+   "title": "Profile — linked accounts and receipts",
+   "url": "/settings/my-profile",
+   "image": "screens/settings/107-my-profile-lower.png",
+   "kind": "page",
+   "note": "Further down: Linked profiles (three emails, 'Manage >'), Linked reimbursement bank account, Appearance theme select, Gmail receipt matching with 'Actively scanning' (green) and 'Needs attention' (pink) tags, Receipt forwarding approval banners with Allow / Dismiss and an outlined 'Unverified' tag."
+  },
+  {
+   "id": "settings.my-profile-sms",
+   "title": "Profile — SMS receipt matching",
+   "url": "/settings/my-profile",
+   "image": "screens/settings/108-my-profile-bottom.png",
+   "kind": "page",
+   "note": "Bottom of the page: 'Match receipts for all transactions' switch and SMS receipt matching with a phone field, an 'Opt In' button and consent copy."
+  },
+  {
+   "id": "settings.sms-opted-in",
+   "title": "SMS opt-in toast",
+   "url": "/settings/my-profile",
+   "image": "screens/settings/109-sms-opt-in.png",
+   "kind": "toast",
+   "note": "Opt In swaps the field for 'Texting from +1 (212) 221-2221 / Edit >' and a toast reads 'Opted in to SMS notifications'."
+  },
+  {
+   "id": "settings.notifications",
+   "title": "Notifications",
+   "url": "/settings/notifications",
+   "image": "screens/settings/110-notifications.png",
+   "kind": "page",
+   "note": "'Important Updates' cards (Cash flow, Suspicious activity, Tasks and approvals) each with an 'Edit >' pill and Email / Push channel tags; 'General Updates' is a list of whole-row buttons with channel tags and a chevron."
+  },
+  {
+   "id": "settings.notifications-general",
+   "title": "Notifications — General Updates list",
+   "url": "/settings/notifications",
+   "image": "screens/settings/111-notifications-general.png",
+   "kind": "page",
+   "note": "Lower list: Accounting, Bill pay, Check payments, Collaboration, Credit account, Invoicing, Mercury subscription, Reimbursements, Transfers ('Off' tag) and User management."
+  },
+  {
+   "id": "settings.cash-flow-notifications",
+   "title": "Cash flow notification settings",
+   "url": "/settings/notifications/cashFlow",
+   "image": "screens/settings/112-cash-flow-notifications.png",
+   "kind": "modal",
+   "note": "Email and Push sections of switches: incoming / outgoing transactions that exceed an amount ($1,000 / $500 inputs), End-of-month cash flow digest, Cash flow insights. A secondary 'Done' button closes it."
+  },
+  {
+   "id": "settings.cash-flow-edited",
+   "title": "Cash flow settings — edited",
+   "url": "/settings/notifications/cashFlow",
+   "image": "screens/settings/113-cash-flow-toggled.png",
+   "kind": "form-state",
+   "note": "Turning off Push › Outgoing hides its amount input; the Email incoming threshold accepts '$0' with no validation. Done saves silently, with no toast."
+  },
+  {
+   "id": "settings.transfers-notifications",
+   "title": "Transfers notification settings",
+   "url": "/settings/notifications/transfers",
+   "image": "screens/settings/114-transfers-notifications.png",
+   "kind": "modal",
+   "note": "A single Email switch, 'Updates to auto transfer rules', off by default."
+  },
+  {
+   "id": "settings.transfers-email-on",
+   "title": "Transfers — Email enabled",
+   "url": "/settings/notifications",
+   "image": "screens/settings/115-transfers-email-on.png",
+   "kind": "form-state",
+   "note": "After switching it on and pressing Done, the Transfers row's 'Off' tag becomes an 'Email' tag."
+  },
+  {
+   "id": "settings.personal-security",
+   "title": "Security — passkeys and 2FA",
+   "url": "/settings/security",
+   "image": "screens/settings/116-personal-security.png",
+   "kind": "page",
+   "note": "Personal Security: Passkeys table (Name, Sync status 'Synced' / orange 'Sync eligible', Added on, Most recent activity, Remove), '+ Add passkey' / '+ Add passkey via QR Code', a 'Use passkeys only' upsell card and the 2FA methods table."
+  },
+  {
+   "id": "settings.change-password",
+   "title": "Change Password modal",
+   "url": "/settings/security",
+   "image": "screens/settings/117-change-password.png",
+   "kind": "modal",
+   "note": "'Change Password' heading, Old / New / Repeat New Password fields with show toggles, a pre-ticked 'Log out of all other devices' checkbox, Cancel / 'Change password'."
+  },
+  {
+   "id": "settings.change-password-short",
+   "title": "Change password — too short",
+   "url": "/settings/security",
+   "image": "screens/settings/118-change-password-errors.png",
+   "kind": "validation-error",
+   "note": "Short new passwords flag New and Repeat fields with 'Minimum 10 characters'."
+  },
+  {
+   "id": "settings.change-password-mismatch",
+   "title": "Change password — mismatch",
+   "url": "/settings/security",
+   "image": "screens/settings/119-change-password-mismatch.png",
+   "kind": "validation-error",
+   "note": "Two different 14-character passwords show 'Passwords don’t match' under Repeat New Password."
+  },
+  {
+   "id": "settings.personal-security-lower",
+   "title": "Security — recovery, password, sessions",
+   "url": "/settings/security",
+   "image": "screens/settings/120-personal-security-lower.png",
+   "kind": "page",
+   "note": "2FA methods (YubiKey, '2FA app (Third-party)' with 'Reset or Remove'), '+ Add another verification method', Account recovery (Backup codes 6/8 remaining, grey 'Required' tag, 'Generate New Codes'), Password with 'Change password', and 'Where you’re signed in' with 'Log out other sessions' and per-row 'Sign out'."
+  },
+  {
+   "id": "settings.backup-codes",
+   "title": "Save your new backup codes",
+   "url": "/settings/security",
+   "image": "screens/settings/121-backup-codes.png",
+   "kind": "modal",
+   "note": "Full-screen takeover with an 'esc' close: eight monospace codes, Print / Download / Copy, and a required checkbox 'I’ve saved my backup codes in a secure place' that enables Done."
+  },
+  {
+   "id": "settings.backup-codes-regenerated",
+   "title": "Backup codes regenerated",
+   "url": "/settings/security",
+   "image": "screens/settings/122-backup-codes-done.png",
+   "kind": "confirmation",
+   "note": "Back on the page the row reads 'Backup codes (8/8 remaining)'; Added on and Most recent activity keep their old dates and no toast appears."
+  },
+  {
+   "id": "settings.verify-identity",
+   "title": "Verify your identity first",
+   "url": "/settings/security",
+   "image": "screens/settings/123-add-verification-method.png",
+   "kind": "modal",
+   "note": "'+ Add another verification method' first asks for a backup code (placeholder 'ABCD-EFGH-IJKL-MNOP'), with left-aligned Cancel / Submit, 'Use passkey instead', 'Use 2FA code instead', 'Backup code guide' and 'Unable to log in?'."
+  },
+  {
+   "id": "settings.waiting-security-key",
+   "title": "Waiting for security key",
+   "url": "/settings/security",
+   "image": "screens/settings/124-verify-identity-result.png",
+   "kind": "modal",
+   "note": "Any code (tested 'AAAA-BBBB-CCCC-DDDD') is accepted and the modal becomes a spinner: 'Waiting for security key — Follow browser instructions to complete setup'. The WebAuthn prompt was not pursued."
+  },
+  {
+   "id": "settings.remove-passkey-confirm",
+   "title": "Remove passkey confirmation",
+   "url": "/settings/security",
+   "image": "screens/settings/125-remove-passkey-confirm.png",
+   "kind": "modal",
+   "note": "'Remove passkey' — 'Are you sure you want to remove 1Password? It can’t be used to log in once removed. This cannot be undone.' with Cancel / Remove."
+  },
+  {
+   "id": "settings.referrals",
+   "title": "Referrals",
+   "url": "/settings/referrals",
+   "image": "screens/settings/126-referrals.png",
+   "kind": "page",
+   "note": "Hero card '$250.00 Referral Bonus', 'Why refer someone?', Referral URL with copy icon, 'Invite via email', a tier tracker (Bronze 1 → Platinum 20 referrals) with Applied 7 / Account opened 6 / Total earned $900 tiles, and a referrals table with Kind tags (Business / Personal Banking) and Status badges (Paid, Account Opened, Expired, Applied, Started). Perks, listed under Explore in the sidebar, is an external link to mercury.com/perks and is not mapped."
+  },
+  {
+   "id": "settings.referral-invite",
+   "title": "Share your Mercury Referral modal",
+   "url": "/settings/referrals",
+   "image": "screens/settings/127-referral-invite-email.png",
+   "kind": "modal",
+   "note": "Send to email combobox, an email preview ('Jane Black invited you to join Mercury', '$250.00 Referral Bonus', 'Deposit $10,000 … you’ll get a $250 bonus.', From / Subject) and Cancel / a disabled Confirm."
+  },
+  {
+   "id": "settings.referral-invalid-email",
+   "title": "Referral — invalid email",
+   "url": "/settings/referrals",
+   "image": "screens/settings/128-referral-invalid-email.png",
+   "kind": "validation-error",
+   "note": "Typing 'notanemail' shows a 'Create option \"notanemail\"' row and a pink warning icon whose tooltip reads 'Please submit a valid email'."
+  },
+  {
+   "id": "settings.referral-sent",
+   "title": "Invite sent toast",
+   "url": "/settings/referrals",
+   "image": "screens/settings/129-referral-sent.png",
+   "kind": "toast",
+   "note": "Confirm with a valid address closes the modal and shows 'Invite sent'."
+  },
+  {
+   "id": "settings.panorama",
+   "title": "All Accounts (panorama)",
+   "url": "/panorama",
+   "image": "screens/settings/130-panorama.png",
+   "kind": "page",
+   "note": "Cross-organization view reached from the org switcher's 'All Accounts': 'Set as default view' switch, '6 accounts', Search by name, month stepper 'Sep 2026', Download statements, and a table of organizations with balance, compact in/out money movement ($2M / $35.3M) and an open button. CompConsult is dimmed with a '2FA Reset' tag; Pico Accountants shows 'Advisor Portal'."
+  },
+  {
+   "id": "settings.panorama-statements",
+   "title": "Download Statements modal",
+   "url": "/panorama",
+   "image": "screens/settings/131-panorama-download-statements.png",
+   "kind": "modal",
+   "note": "'Download Statements' with its own month stepper defaulting to 'Aug 2026' (the page shows 'Sep 2026'), a 'Download PDF zip (6 orgs)' row and a primary 'Close'."
+  }
+ ],
+ "edges": [
+  {
+   "from": "settings.index",
+   "to": "settings.edit-company-name",
+   "label": "Click Edit under Company name"
+  },
+  {
+   "from": "settings.edit-company-name",
+   "to": "settings.company-name-updated",
+   "label": "Change name and click Update"
+  },
+  {
+   "from": "settings.index",
+   "to": "settings.edit-phone-invalid",
+   "label": "Click Edit under Phone number, enter a short number, click Update"
+  },
+  {
+   "from": "settings.index",
+   "to": "settings.edit-mailing-address",
+   "label": "Click Edit under Company mailing address"
+  },
+  {
+   "from": "settings.edit-mailing-address",
+   "to": "settings.mailing-address-zip-error",
+   "label": "Enter a 2-digit ZIP and click Update"
+  },
+  {
+   "from": "settings.index",
+   "to": "settings.plan-billing",
+   "label": "Click Plan & Billing in settings sidebar"
+  },
+  {
+   "from": "settings.plan-billing",
+   "to": "settings.plan-manage-menu",
+   "label": "Click Manage"
+  },
+  {
+   "from": "settings.plan-manage-menu",
+   "to": "settings.choose-plan-monthly",
+   "label": "Click View all plans"
+  },
+  {
+   "from": "settings.choose-plan-monthly",
+   "to": "settings.choose-plan-annual",
+   "label": "Click Pay annually"
+  },
+  {
+   "from": "settings.plan-manage-menu",
+   "to": "settings.unsubscribe-confirm",
+   "label": "Click Unsubscribe"
+  },
+  {
+   "from": "settings.unsubscribe-confirm",
+   "to": "settings.plan-billing",
+   "label": "Click Nevermind"
+  },
+  {
+   "from": "settings.plan-billing",
+   "to": "settings.billing-more-menu",
+   "label": "Click ••• on Next Bill card"
+  },
+  {
+   "from": "settings.billing-more-menu",
+   "to": "settings.billing-history",
+   "label": "Click Billing history"
+  },
+  {
+   "from": "settings.index",
+   "to": "settings.documents",
+   "label": "Click Documents in settings sidebar"
+  },
+  {
+   "from": "settings.documents",
+   "to": "settings.custom-statement",
+   "label": "Click Generate a custom statement"
+  },
+  {
+   "from": "settings.custom-statement",
+   "to": "settings.custom-statement-invalid",
+   "label": "Enter a From date after today and click Download"
+  },
+  {
+   "from": "settings.documents",
+   "to": "settings.billing-history",
+   "label": "Click Billing history in documents sub-nav"
+  },
+  {
+   "from": "settings.documents",
+   "to": "settings.manage-shared-docs",
+   "label": "Click Manage shared documents"
+  },
+  {
+   "from": "settings.documents",
+   "to": "settings.documents-selected",
+   "label": "Check statement rows"
+  },
+  {
+   "from": "settings.share-documents",
+   "to": "settings.share-documents-error",
+   "label": "Click Share via email with no recipient"
+  },
+  {
+   "from": "settings.share-documents-error",
+   "to": "settings.share-recipient-suggest",
+   "label": "Type an email and press Enter"
+  },
+  {
+   "from": "settings.share-recipient-suggest",
+   "to": "settings.share-email-sent",
+   "label": "Click Share via email"
+  },
+  {
+   "from": "settings.documents-selected",
+   "to": "settings.share-documents",
+   "label": "Click Share documents"
+  },
+  {
+   "from": "settings.index",
+   "to": "settings.categories",
+   "label": "Click Categories in settings sidebar"
+  },
+  {
+   "from": "settings.categories",
+   "to": "settings.create-category-row",
+   "label": "Click Create category"
+  },
+  {
+   "from": "settings.create-category-row",
+   "to": "settings.categories",
+   "label": "Enter a name and click Save"
+  },
+  {
+   "from": "settings.categories",
+   "to": "settings.delete-category-confirm",
+   "label": "Click the trash icon on a row"
+  },
+  {
+   "from": "settings.delete-category-confirm",
+   "to": "settings.categories",
+   "label": "Click Yes, delete"
+  },
+  {
+   "from": "settings.index",
+   "to": "settings.integrations",
+   "label": "Click Integrations in settings sidebar"
+  },
+  {
+   "from": "settings.integrations",
+   "to": "settings.third-party-connections",
+   "label": "Click Third party connections tab"
+  },
+  {
+   "from": "settings.integrations",
+   "to": "settings.netsuite-step1",
+   "label": "Click the NetSuite row"
+  },
+  {
+   "from": "settings.netsuite-step1",
+   "to": "settings.netsuite-gl-dropdown",
+   "label": "Open the Treasury GL code select"
+  },
+  {
+   "from": "settings.netsuite-gl-dropdown",
+   "to": "settings.netsuite-step2",
+   "label": "Pick a GL code and click Next"
+  },
+  {
+   "from": "settings.netsuite-step2",
+   "to": "settings.netsuite-step3",
+   "label": "Choose a Bill pay GL code and click Next"
+  },
+  {
+   "from": "settings.netsuite-step3",
+   "to": "settings.netsuite-connected",
+   "label": "Click Start sync"
+  },
+  {
+   "from": "settings.index",
+   "to": "settings.team",
+   "label": "Click Team in settings sidebar"
+  },
+  {
+   "from": "settings.team",
+   "to": "settings.invite-menu",
+   "label": "Click Invite"
+  },
+  {
+   "from": "settings.invite-menu",
+   "to": "settings.invite-details",
+   "label": "Click Invite a user"
+  },
+  {
+   "from": "settings.invite-details",
+   "to": "settings.invite-details-errors",
+   "label": "Click Next with empty fields"
+  },
+  {
+   "from": "settings.invite-details",
+   "to": "settings.invite-job-title",
+   "label": "Open Job title select"
+  },
+  {
+   "from": "settings.invite-job-title",
+   "to": "settings.invite-role",
+   "label": "Pick a title, fill name/email, click Next"
+  },
+  {
+   "from": "settings.invite-details-errors",
+   "to": "settings.invite-role",
+   "label": "Fill name and email, click Next"
+  },
+  {
+   "from": "settings.invite-role",
+   "to": "settings.role-admin",
+   "label": "Select Admin"
+  },
+  {
+   "from": "settings.invite-role",
+   "to": "settings.role-accountant",
+   "label": "Select Accountant"
+  },
+  {
+   "from": "settings.invite-role",
+   "to": "settings.role-finance-lead",
+   "label": "Select Finance Lead"
+  },
+  {
+   "from": "settings.invite-role",
+   "to": "settings.role-finance-manager",
+   "label": "Select Finance Manager"
+  },
+  {
+   "from": "settings.invite-role",
+   "to": "settings.role-money-mover",
+   "label": "Select Money Mover"
+  },
+  {
+   "from": "settings.invite-role",
+   "to": "settings.role-read-only",
+   "label": "Select Read Only"
+  },
+  {
+   "from": "settings.role-money-mover",
+   "to": "settings.invite-issue-card",
+   "label": "Click Next"
+  },
+  {
+   "from": "settings.invite-issue-card",
+   "to": "settings.invite-issue-card-error",
+   "label": "Click Next without a control type"
+  },
+  {
+   "from": "settings.invite-issue-card",
+   "to": "settings.invite-review",
+   "label": "Click 'Or, skip issuing card'"
+  },
+  {
+   "from": "settings.invite-review",
+   "to": "settings.invite-sent",
+   "label": "Click Send invite"
+  },
+  {
+   "from": "settings.invite-sent",
+   "to": "settings.team",
+   "label": "Click Done inviting"
+  },
+  {
+   "from": "settings.team",
+   "to": "settings.user-detail",
+   "label": "Click a team member row"
+  },
+  {
+   "from": "settings.user-detail",
+   "to": "settings.edit-member",
+   "label": "Click Edit"
+  },
+  {
+   "from": "settings.edit-member",
+   "to": "settings.edit-member-dirty",
+   "label": "Change Specify job title"
+  },
+  {
+   "from": "settings.edit-member-dirty",
+   "to": "settings.member-saved",
+   "label": "Click Save"
+  },
+  {
+   "from": "settings.team",
+   "to": "settings.roles",
+   "label": "Click Roles"
+  },
+  {
+   "from": "settings.roles",
+   "to": "settings.create-role",
+   "label": "Click Create role"
+  },
+  {
+   "from": "settings.create-role",
+   "to": "settings.create-role-errors",
+   "label": "Click Save New Role with empty form"
+  },
+  {
+   "from": "settings.create-role-errors",
+   "to": "settings.create-role-account-error",
+   "label": "Enter a name, tick Send money, click Save New Role"
+  },
+  {
+   "from": "settings.create-role-account-error",
+   "to": "settings.role-created",
+   "label": "Tick an account and click Save New Role"
+  },
+  {
+   "from": "settings.invite-role",
+   "to": "settings.create-role",
+   "label": "Click 'create a new role'"
+  },
+  {
+   "from": "settings.user-detail",
+   "to": "settings.remove-member-confirm",
+   "label": "Click Remove"
+  },
+  {
+   "from": "settings.remove-member-confirm",
+   "to": "settings.user-detail",
+   "label": "Click Go back"
+  },
+  {
+   "from": "settings.index",
+   "to": "settings.departments",
+   "label": "Click Departments in settings sidebar"
+  },
+  {
+   "from": "settings.index",
+   "to": "settings.advisors",
+   "label": "Click Advisors in settings sidebar"
+  },
+  {
+   "from": "settings.index",
+   "to": "settings.approvals",
+   "label": "Click Approval Rules in settings sidebar"
+  },
+  {
+   "from": "settings.index",
+   "to": "settings.controls",
+   "label": "Click Controls in settings sidebar"
+  },
+  {
+   "from": "settings.controls",
+   "to": "settings.controls-edit",
+   "label": "Click Edit"
+  },
+  {
+   "from": "settings.controls-edit",
+   "to": "settings.controls",
+   "label": "Click Cancel"
+  },
+  {
+   "from": "settings.approvals",
+   "to": "settings.approval-policy-edit",
+   "label": "Click Edit"
+  },
+  {
+   "from": "settings.approval-policy-edit",
+   "to": "settings.approval-rule-menu",
+   "label": "Click ••• on a rule"
+  },
+  {
+   "from": "settings.approval-rule-menu",
+   "to": "settings.approval-rule-editing",
+   "label": "Click Edit rule"
+  },
+  {
+   "from": "settings.index",
+   "to": "settings.vault",
+   "label": "Click Vault in settings sidebar"
+  },
+  {
+   "from": "settings.index",
+   "to": "settings.account-security",
+   "label": "Click Account Security in settings sidebar"
+  },
+  {
+   "from": "settings.account-security",
+   "to": "settings.security-suggestion-menu",
+   "label": "Click ⋮ on a suggested action"
+  },
+  {
+   "from": "settings.account-security",
+   "to": "settings.run-check-in",
+   "label": "Click Run check-in"
+  },
+  {
+   "from": "settings.account-security",
+   "to": "settings.security-activity-month",
+   "label": "Click the month chip above Activity history"
+  },
+  {
+   "from": "settings.index",
+   "to": "settings.tokens",
+   "label": "Click Tokens in settings sidebar"
+  },
+  {
+   "from": "home.index",
+   "to": "settings.index",
+   "label": "Click the settings gear in the top bar"
+  },
+  {
+   "from": "settings.index",
+   "to": "settings.webhooks",
+   "label": "Click Webhooks in settings sidebar"
+  },
+  {
+   "from": "settings.webhooks",
+   "to": "settings.webhook-detail",
+   "label": "Click an endpoint row"
+  },
+  {
+   "from": "settings.webhook-detail",
+   "to": "settings.edit-webhook",
+   "label": "Click Edit"
+  },
+  {
+   "from": "settings.edit-webhook",
+   "to": "settings.edit-webhook-invalid",
+   "label": "Replace the URL with a non-URL and tab away"
+  },
+  {
+   "from": "settings.webhook-detail",
+   "to": "settings.delete-webhook-confirm",
+   "label": "Click Delete"
+  },
+  {
+   "from": "settings.delete-webhook-confirm",
+   "to": "settings.webhook-detail",
+   "label": "Click Cancel"
+  },
+  {
+   "from": "settings.webhook-detail",
+   "to": "settings.webhook-deliveries",
+   "label": "Click View deliveries"
+  },
+  {
+   "from": "settings.webhooks",
+   "to": "settings.webhook-deliveries",
+   "label": "Click the Event deliveries tab"
+  },
+  {
+   "from": "settings.webhooks",
+   "to": "settings.create-webhook",
+   "label": "Click + Create webhook"
+  },
+  {
+   "from": "settings.create-webhook",
+   "to": "settings.create-webhook-http-error",
+   "label": "Enter an http:// URL and tab away"
+  },
+  {
+   "from": "settings.create-webhook-http-error",
+   "to": "settings.webhook-verified",
+   "label": "Switch to https:// and click Verify endpoint"
+  },
+  {
+   "from": "settings.webhook-verified",
+   "to": "settings.webhook-event-types",
+   "label": "Open the Event types combobox"
+  },
+  {
+   "from": "settings.webhook-event-types",
+   "to": "settings.create-webhook-filled",
+   "label": "Tick two event types and close the list"
+  },
+  {
+   "from": "settings.create-webhook-filled",
+   "to": "settings.webhook-signing-secret",
+   "label": "Click Create endpoint"
+  },
+  {
+   "from": "settings.webhook-signing-secret",
+   "to": "settings.webhook-secret-copied",
+   "label": "Click the secret"
+  },
+  {
+   "from": "settings.webhook-secret-copied",
+   "to": "settings.webhooks",
+   "label": "Close the modal"
+  },
+  {
+   "from": "settings.tokens",
+   "to": "settings.token-menu",
+   "label": "Click ••• on a token row"
+  },
+  {
+   "from": "settings.token-menu",
+   "to": "settings.edit-token",
+   "label": "Click Edit"
+  },
+  {
+   "from": "settings.edit-token",
+   "to": "settings.edit-token-invalid",
+   "label": "Enter an invalid IP and click Update token"
+  },
+  {
+   "from": "settings.token-menu",
+   "to": "settings.delete-token-confirm",
+   "label": "Click Delete"
+  },
+  {
+   "from": "settings.delete-token-confirm",
+   "to": "settings.tokens",
+   "label": "Click Delete Token"
+  },
+  {
+   "from": "settings.tokens",
+   "to": "settings.create-token",
+   "label": "Click + Create an API token"
+  },
+  {
+   "from": "settings.create-token",
+   "to": "settings.create-token-errors",
+   "label": "Click Create token with the form empty"
+  },
+  {
+   "from": "settings.create-token-errors",
+   "to": "settings.token-permissions",
+   "label": "Enter a nickname and open Permissions"
+  },
+  {
+   "from": "settings.token-permissions",
+   "to": "settings.token-custom-scopes",
+   "label": "Choose Custom Scopes"
+  },
+  {
+   "from": "settings.token-custom-scopes",
+   "to": "settings.token-scopes-list",
+   "label": "Open the Scopes combobox"
+  },
+  {
+   "from": "settings.token-scopes-list",
+   "to": "settings.token-ip-required",
+   "label": "Pick Send Money * and click Create token without an IP"
+  },
+  {
+   "from": "settings.token-ip-required",
+   "to": "settings.token-created",
+   "label": "Enter an IP and click Create token"
+  },
+  {
+   "from": "settings.token-created",
+   "to": "settings.tokens-new-row",
+   "label": "Close the modal"
+  },
+  {
+   "from": "settings.tokens-new-row",
+   "to": "settings.token-menu",
+   "label": "Click ••• on the new row"
+  },
+  {
+   "from": "settings.index",
+   "to": "settings.my-profile",
+   "label": "Click Profile in settings sidebar"
+  },
+  {
+   "from": "settings.my-profile",
+   "to": "settings.edit-preferred-name",
+   "label": "Click Edit under Preferred name"
+  },
+  {
+   "from": "settings.edit-preferred-name",
+   "to": "settings.preferred-name-updated",
+   "label": "Change the name and click Update"
+  },
+  {
+   "from": "settings.edit-preferred-name",
+   "to": "settings.preferred-name-required",
+   "label": "Clear the first name and click Update"
+  },
+  {
+   "from": "settings.my-profile",
+   "to": "settings.edit-profile-picture",
+   "label": "Click Edit under Profile picture"
+  },
+  {
+   "from": "settings.my-profile",
+   "to": "settings.add-job-title",
+   "label": "Click Add under Job title"
+  },
+  {
+   "from": "settings.my-profile",
+   "to": "settings.my-profile-linked",
+   "label": "Scroll to Linked profiles"
+  },
+  {
+   "from": "settings.my-profile-linked",
+   "to": "settings.my-profile-sms",
+   "label": "Scroll to SMS receipt matching"
+  },
+  {
+   "from": "settings.my-profile-sms",
+   "to": "settings.sms-opted-in",
+   "label": "Click Opt In"
+  },
+  {
+   "from": "settings.index",
+   "to": "settings.notifications",
+   "label": "Click Notifications in settings sidebar"
+  },
+  {
+   "from": "settings.notifications",
+   "to": "settings.notifications-general",
+   "label": "Scroll the General Updates list"
+  },
+  {
+   "from": "settings.notifications",
+   "to": "settings.cash-flow-notifications",
+   "label": "Click Edit on the Cash flow card"
+  },
+  {
+   "from": "settings.cash-flow-notifications",
+   "to": "settings.cash-flow-edited",
+   "label": "Toggle a switch and change a threshold"
+  },
+  {
+   "from": "settings.cash-flow-edited",
+   "to": "settings.notifications",
+   "label": "Click Done"
+  },
+  {
+   "from": "settings.notifications-general",
+   "to": "settings.transfers-notifications",
+   "label": "Click the Transfers row"
+  },
+  {
+   "from": "settings.transfers-notifications",
+   "to": "settings.transfers-email-on",
+   "label": "Switch on the email alert and click Done"
+  },
+  {
+   "from": "settings.index",
+   "to": "settings.personal-security",
+   "label": "Click Security under Personal in settings sidebar"
+  },
+  {
+   "from": "settings.personal-security",
+   "to": "settings.remove-passkey-confirm",
+   "label": "Click Remove on a passkey"
+  },
+  {
+   "from": "settings.personal-security",
+   "to": "settings.personal-security-lower",
+   "label": "Scroll to Account recovery"
+  },
+  {
+   "from": "settings.personal-security-lower",
+   "to": "settings.change-password",
+   "label": "Click Change password"
+  },
+  {
+   "from": "settings.change-password",
+   "to": "settings.change-password-short",
+   "label": "Enter short passwords and submit"
+  },
+  {
+   "from": "settings.change-password-short",
+   "to": "settings.change-password-mismatch",
+   "label": "Enter two different long passwords and submit"
+  },
+  {
+   "from": "settings.personal-security-lower",
+   "to": "settings.backup-codes",
+   "label": "Click Generate New Codes"
+  },
+  {
+   "from": "settings.backup-codes",
+   "to": "settings.backup-codes-regenerated",
+   "label": "Tick the confirmation and click Done"
+  },
+  {
+   "from": "settings.personal-security-lower",
+   "to": "settings.verify-identity",
+   "label": "Click + Add another verification method"
+  },
+  {
+   "from": "settings.verify-identity",
+   "to": "settings.waiting-security-key",
+   "label": "Enter a backup code and click Submit"
+  },
+  {
+   "from": "settings.index",
+   "to": "settings.referrals",
+   "label": "Click Referrals in settings sidebar"
+  },
+  {
+   "from": "settings.referrals",
+   "to": "settings.referral-invite",
+   "label": "Click Invite via email"
+  },
+  {
+   "from": "settings.referral-invite",
+   "to": "settings.referral-invalid-email",
+   "label": "Type an invalid address and press Enter"
+  },
+  {
+   "from": "settings.referral-invalid-email",
+   "to": "settings.referral-sent",
+   "label": "Enter a valid address and click Confirm"
+  },
+  {
+   "from": "home.index",
+   "to": "settings.panorama",
+   "label": "Open the org switcher and click All Accounts"
+  },
+  {
+   "from": "settings.panorama",
+   "to": "settings.panorama-statements",
+   "label": "Click Download statements"
+  }
+ ],
+ "journeys": [
+  {
+   "id": "settings.j-invite-money-mover",
+   "name": "Invite a teammate as a Money Mover",
+   "description": "An admin invites a new finance hire, picks a job title, assigns the Money Mover role, skips card issuance and sends the invite.",
+   "steps": [
+    "settings.team",
+    "settings.invite-menu",
+    "settings.invite-details",
+    "settings.invite-job-title",
+    "settings.invite-role",
+    "settings.role-money-mover",
+    "settings.invite-issue-card",
+    "settings.invite-review",
+    "settings.invite-sent"
+   ]
+  },
+  {
+   "id": "settings.j-create-custom-role",
+   "name": "Create a custom role",
+   "description": "From Team, the admin opens Roles, builds an 'AP Clerk' role, fixes the two validation errors and saves it.",
+   "steps": [
+    "settings.team",
+    "settings.roles",
+    "settings.create-role",
+    "settings.create-role-errors",
+    "settings.create-role-account-error",
+    "settings.role-created"
+   ]
+  },
+  {
+   "id": "settings.j-connect-netsuite",
+   "name": "Connect NetSuite",
+   "description": "The admin maps each Mercury account to a NetSuite GL code, sets the bill pay default, picks a sync start date and starts the sync.",
+   "steps": [
+    "settings.index",
+    "settings.integrations",
+    "settings.netsuite-step1",
+    "settings.netsuite-gl-dropdown",
+    "settings.netsuite-step2",
+    "settings.netsuite-step3",
+    "settings.netsuite-connected"
+   ]
+  },
+  {
+   "id": "settings.j-share-statements",
+   "name": "Email statements to an accountant",
+   "description": "The admin selects statements in Documents, opens the share modal, recovers from the empty-recipient error and sends them.",
+   "steps": [
+    "settings.index",
+    "settings.documents",
+    "settings.documents-selected",
+    "settings.share-documents",
+    "settings.share-documents-error",
+    "settings.share-recipient-suggest",
+    "settings.share-email-sent"
+   ]
+  },
+  {
+   "id": "settings.j-update-member-title",
+   "name": "Update a team member's job title",
+   "description": "The admin opens a member's panel from Team, edits the job title and saves.",
+   "steps": [
+    "settings.team",
+    "settings.user-detail",
+    "settings.edit-member",
+    "settings.edit-member-dirty",
+    "settings.member-saved"
+   ]
+  },
+  {
+   "id": "settings.j-rename-company",
+   "name": "Rename the company",
+   "description": "The admin changes the display company name on Company Profile and sees it update in the header and switcher.",
+   "steps": [
+    "settings.index",
+    "settings.edit-company-name",
+    "settings.company-name-updated"
+   ]
+  },
+  {
+   "id": "settings.j-edit-approval-rule",
+   "name": "Edit a payment approval rule",
+   "description": "The admin opens Approval Rules, enters the policy editor and edits the first amount tier.",
+   "steps": [
+    "settings.index",
+    "settings.approvals",
+    "settings.approval-policy-edit",
+    "settings.approval-rule-menu",
+    "settings.approval-rule-editing"
+   ]
+  },
+  {
+   "id": "settings.j-set-up-api-access",
+   "name": "Set up API access with a scoped token and a webhook",
+   "description": "A developer creates a custom-scoped API token (hitting the empty-form and IP-whitelist errors on the way), then registers an HTTPS webhook endpoint, verifies it, picks event types and copies the one-time signing secret.",
+   "steps": [
+    "settings.index",
+    "settings.tokens",
+    "settings.create-token",
+    "settings.create-token-errors",
+    "settings.token-permissions",
+    "settings.token-custom-scopes",
+    "settings.token-scopes-list",
+    "settings.token-ip-required",
+    "settings.token-created",
+    "settings.tokens-new-row",
+    "settings.webhooks",
+    "settings.create-webhook",
+    "settings.create-webhook-http-error",
+    "settings.webhook-verified",
+    "settings.webhook-event-types",
+    "settings.create-webhook-filled",
+    "settings.webhook-signing-secret",
+    "settings.webhook-secret-copied"
+   ]
+  },
+  {
+   "id": "settings.j-secure-personal-account",
+   "name": "Tidy up personal profile, alerts and sign-in security",
+   "description": "A team member fixes their preferred name, tightens cash flow alerts, then on personal Security tries a new password (too short, then mismatched) and regenerates backup codes.",
+   "steps": [
+    "settings.index",
+    "settings.my-profile",
+    "settings.edit-preferred-name",
+    "settings.preferred-name-updated",
+    "settings.notifications",
+    "settings.cash-flow-notifications",
+    "settings.cash-flow-edited",
+    "settings.personal-security",
+    "settings.personal-security-lower",
+    "settings.change-password",
+    "settings.change-password-short",
+    "settings.change-password-mismatch",
+    "settings.backup-codes",
+    "settings.backup-codes-regenerated"
+   ]
+  }
+ ],
+ "issues": [
+  {
+   "id": "settings.i-toast-punctuation",
+   "title": "Success toasts disagree on punctuation and phrasing",
+   "detail": "Settings success toasts use the same component but two sentence styles: full sentences ending in a period, and terse fragments with no period. One toast adds 'successfully'; another uses a colon label.",
+   "nodeIds": [
+    "settings.company-name-updated",
+    "settings.netsuite-connected",
+    "settings.member-saved",
+    "settings.role-created",
+    "settings.run-check-in",
+    "settings.preferred-name-updated",
+    "settings.sms-opted-in",
+    "settings.referral-sent"
+   ],
+   "category": "copy",
+   "severity": "low",
+   "evidence": "Exact toast strings: \"Your company name has been updated.\" and \"Your Mercury account is now connected to NetSuite.\" (period) vs \"Job title updated\", \"New role created: AP Clerk\" and \"Security check-in triggered successfully\" (no period). Personal settings add \"Your preferred name has been updated.\" (period) vs \"Opted in to SMS notifications\" and \"Invite sent\" (no period)."
+  },
+  {
+   "id": "settings.i-connection-status-display",
+   "title": "Connection status shown as a badge only when it fails",
+   "detail": "On Third party connections, the failed AMAZON Store shows a pink tag with a warning icon, but healthy stores show 'Connected' as plain body text with no tag. Team and Roles show every status, healthy ones included, as a green 'Active' tag, so healthy status looks different here than on sibling tables.",
+   "nodeIds": [
+    "settings.third-party-connections",
+    "settings.team",
+    "settings.roles"
+   ],
+   "category": "component",
+   "severity": "medium",
+   "evidence": "getComputedStyle: 'No connection' tag 12px/400 rgb(252,146,180) on rgba(252,146,180,0.2), radius 4px, padding 0 8px, height 20px. 'Connected' (Third party and Integrations tabs) 15px/400 rgb(255,255,255), no background, radius 0, in a 65px table cell. Team 'Active' tag 12px/400 rgb(119,197,153) on rgba(119,197,153,0.2), radius 4px, padding 0 8px, height 20px."
+  },
+  {
+   "id": "settings.i-date-formats",
+   "title": "Dates use three formats across security and API pages",
+   "detail": "Account Security shows activity timestamps as numeric month/day with no year, the card header as an abbreviated month name, and API Tokens shows full dates with the year. None of the three matches the others.",
+   "nodeIds": [
+    "settings.account-security",
+    "settings.run-check-in",
+    "settings.tokens"
+   ],
+   "category": "data-format",
+   "severity": "medium",
+   "evidence": "Account Security activity cell '09/24 9:11 PM' 15px/400 rgb(255,255,255); header 'Last updated Sep 24' 12px/400 rgb(157,157,168). API Tokens Last used / Created date cells: 'May 16, 2019', 'Mar 14, 2019' 16px/360."
+  },
+  {
+   "id": "settings.i-tokens-truncation",
+   "title": "API Tokens table truncates key columns and wraps another",
+   "detail": "Equal-width columns cut off token nicknames and creator emails with an ellipsis, while 'Whitelisted IPs' wraps '2 IPs whitelisted' onto two lines. That row ends up taller than the rest, and the two values you need to identify a token cannot be read without hovering.",
+   "nodeIds": [
+    "settings.tokens"
+   ],
+   "category": "layout",
+   "severity": "medium",
+   "evidence": "All seven columns render 138px wide; text boxes clip at 106px with text-overflow: ellipsis: 'Token with long IPv6 address' needs 186px, 'My read-write Mercury API token' 214px, 'jane@demo.mercury.com' 175px, 'landon@demo.mercury.com' 193px. Cells 16px/360. '2 IPs whitelisted' wraps onto two lines while '1 IP whitelisted' fits on one."
+  },
+  {
+   "id": "settings.i-heading-nav-mismatch",
+   "title": "Page headings don't match their sidebar labels",
+   "detail": "Several settings pages are titled differently from the sidebar item that opens them, so the selected nav item and the page heading disagree.",
+   "nodeIds": [
+    "settings.tokens",
+    "settings.vault",
+    "settings.index",
+    "settings.my-profile"
+   ],
+   "category": "copy",
+   "severity": "low",
+   "evidence": "Sidebar link texts 'Tokens', 'Vault', 'Company Profile'; resulting h1 texts 'API Tokens', 'Mercury Vault', 'Mercury Demo'. Account Security is the exception: sidebar and h1 both read 'Account Security'. Sidebar 'Profile' opens an h1 reading the user's name, 'Jane Black'."
+  },
+  {
+   "id": "settings.i-capitalization",
+   "title": "Tags and buttons mix Title Case and sentence case",
+   "detail": "Within Vault, two tags on neighbouring cards use different casing. The role editor's primary button is Title Case while the button that opens it is sentence case. A third-party store name is in all caps next to sentence-case siblings.",
+   "nodeIds": [
+    "settings.vault",
+    "settings.roles",
+    "settings.create-role",
+    "settings.third-party-connections"
+   ],
+   "category": "copy",
+   "severity": "low",
+   "evidence": "Vault tags, both 12px/400, radius 4px, padding 0 8px: 'Transfer in Progress' (rgba(141,164,245,0.2) bg) vs 'Up to $220M FDIC insured' (rgba(119,197,153,0.2) bg). /settings/roles button 'Create role' vs /settings/roles/create primary 'Save New Role'. Third party connections: 'AMAZON Store' vs 'Shopify Store 1', 'My Stripe Store'."
+  },
+  {
+   "id": "settings.i-login-verb",
+   "title": "Security events use the verb 'Log in' as a noun",
+   "detail": "The activity history event reads 'Log in failure' (verb form) where the noun 'Login' is meant.",
+   "nodeIds": [
+    "settings.account-security"
+   ],
+   "category": "copy",
+   "severity": "low",
+   "evidence": "Activity history Event column: \"Log in failure\", beside \"Two-factor auth disabled\", \"Password changed\", \"Device forgotten\"."
+  },
+  {
+   "id": "settings.i-token-created-tomorrow",
+   "title": "A token created now shows 'Tomorrow' and a placeholder creator",
+   "detail": "Creating an API token in the evening (US Pacific) adds a row whose Last used and Created date both read 'Tomorrow'. The date looks computed in UTC and printed as a relative word, while every other row uses an absolute date. The creator is 'mocked@mercury.com', not the signed-in user, and the permission reads 'Custom' although the option was 'Custom Scopes'.",
+   "nodeIds": [
+    "settings.tokens-new-row",
+    "settings.token-created",
+    "settings.token-permissions"
+   ],
+   "category": "data-format",
+   "severity": "high",
+   "evidence": "Browser clock via eval: 'Thu Sep 24 2026 21:48:36 GMT-0700 (Pacific Daylight Time)', timeZone America/Los_Angeles. New row: 'Map audit token | Custom | Tomorrow | mocked@mercury.com | Tomorrow | 1 IP whitelisted'. Existing rows: 'May 16, 2019', 'Apr 15, 2019', created by 'jane@demo.mercury.com'."
+  },
+  {
+   "id": "settings.i-webhook-edit-drops-events",
+   "title": "Editing a webhook URL clears its event subscriptions",
+   "detail": "In Edit webhook endpoint, changing the URL resets the Event types combobox from the saved selection to the empty 'All events' placeholder. Someone fixing a typo in the URL either has to re-pick every event or ends up subscribed to all of them.",
+   "nodeIds": [
+    "settings.edit-webhook",
+    "settings.edit-webhook-invalid",
+    "settings.webhook-detail"
+   ],
+   "category": "interaction",
+   "severity": "high",
+   "evidence": "Accessibility snapshot before editing: combobox \"Event types\": 3 selected. After filling the URL field and tabbing away: combobox \"Event types\" with no value, placeholder 'All events', and a new 'Verify endpoint' button. The detail panel lists 3 subscriptions (transaction.created, transaction.updated, checkingAccount.balance.updated)."
+  },
+  {
+   "id": "settings.i-warning-hue-overloaded",
+   "title": "One orange means paused, failed, eligible and personal",
+   "detail": "The same orange tag colour marks a paused endpoint, a failed delivery, a passkey that is merely eligible to sync, and the neutral 'Personal Banking' referral kind. Meanwhile 'Needs attention' uses the pink reserved for form errors. Colour can't tell the reader whether something is broken.",
+   "nodeIds": [
+    "settings.webhooks",
+    "settings.webhook-deliveries",
+    "settings.personal-security",
+    "settings.referrals",
+    "settings.my-profile-linked"
+   ],
+   "category": "color",
+   "severity": "medium",
+   "evidence": "Text / background via getComputedStyle: 'Paused' rgb(252,155,111) / rgba(252,155,111,0.2); 'Failed' rgb(252,155,111) / rgba(252,155,111,0.2); 'Personal Banking' rgb(252,155,111) / rgba(252,155,111,0.2); 'Sync eligible' rgb(252,155,111) text only, 13px. 'Needs attention' rgb(252,146,180) / rgba(252,146,180,0.2), the same pink as validation text rgb(252,146,180)."
+  },
+  {
+   "id": "settings.i-channel-tags-as-status",
+   "title": "Notification channel labels are styled as success statuses",
+   "detail": "On Notifications, the Email and Push labels use the green success badge, and 'Off' uses the neutral badge. These are the tokens used for 'Active', 'Delivered' and 'Paid' on other pages, so a channel name reads like a status.",
+   "nodeIds": [
+    "settings.notifications",
+    "settings.notifications-general",
+    "settings.transfers-email-on"
+   ],
+   "category": "color",
+   "severity": "low",
+   "evidence": "'Email' tag: color rgb(119,197,153), background rgba(119,197,153,0.2), 12px — identical to webhook 'Active'/'Delivered' and referral 'Paid'. 'Off': rgb(221,221,229) on rgba(180,183,200,0.28), identical to webhook 'Disabled' and 'Pending'."
+  },
+  {
+   "id": "settings.i-required-copy",
+   "title": "Required and invalid fields are reported four different ways",
+   "detail": "Empty required fields say 'Please complete this field' in most forms but 'This field is required' on Profile. An empty webhook URL shows nothing and just disables the button. A missing but required IP whitelist reuses the format error. The referral form hides its error in a hover tooltip instead of the inline message every other form uses.",
+   "nodeIds": [
+    "settings.create-token-errors",
+    "settings.preferred-name-required",
+    "settings.create-webhook",
+    "settings.token-ip-required",
+    "settings.referral-invalid-email",
+    "settings.invite-details-errors"
+   ],
+   "category": "component",
+   "severity": "medium",
+   "evidence": "Exact strings: 'Please complete this field' (Create API token, Invite a user, Create role); 'This field is required' (Edit preferred name); 'Enter a comma-separated list of IPv4/6 addresses or CIDR ranges.' for an empty required IP whitelist; tooltip 'Please submit a valid email' on the Send to field. Inline messages are 12px rgb(252,146,180)."
+  },
+  {
+   "id": "settings.i-submit-disable-rules",
+   "title": "Primary buttons disagree on whether to disable or validate",
+   "detail": "'Create token' stays enabled on an empty form and reports errors on click, while 'Create endpoint' stays disabled until the URL is verified and 'Confirm' (referral) until an address is added. Nothing tells the user why the disabled buttons won't respond.",
+   "nodeIds": [
+    "settings.create-token",
+    "settings.create-webhook",
+    "settings.referral-invite",
+    "settings.edit-token"
+   ],
+   "category": "component",
+   "severity": "low",
+   "evidence": "Snapshot on open: button \"Create token\" (enabled); button \"Create endpoint\" [disabled], still disabled with a valid unverified https URL, enabled only after 'Verified'; button \"Confirm\" [disabled]; button \"Update token\" [disabled] until a field changes."
+  },
+  {
+   "id": "settings.i-one-time-secret-pattern",
+   "title": "Three one-time secrets, three different save safeguards",
+   "detail": "The webhook signing secret, the API token and backup codes are all shown once, but they use three different components. Only backup codes offer explicit Copy / Download / Print and block closing until the user confirms. The other two close with an X, and the webhook secret's copy action is an unlabelled button.",
+   "nodeIds": [
+    "settings.webhook-signing-secret",
+    "settings.webhook-secret-copied",
+    "settings.token-created",
+    "settings.backup-codes"
+   ],
+   "category": "component",
+   "severity": "medium",
+   "evidence": "Signing secret: accessible name of the copy control is the secret itself (button \"whsec_mock_dGhp…\"), feedback is a 'Copied' tooltip, close is an X. API token: 'Here is your API token', X close. Backup codes: full-screen, buttons 'Print', 'Download', 'Copy', checkbox 'I’ve saved my backup codes in a secure place' gating a disabled 'Done'."
+  },
+  {
+   "id": "settings.i-destructive-confirm-copy",
+   "title": "Delete confirmations use three templates",
+   "detail": "The three destructive dialogs in API and Security differ in title form, casing, button label, quoting and the 'cannot be undone' sentence. Deleting a token also gives no toast.",
+   "nodeIds": [
+    "settings.delete-webhook-confirm",
+    "settings.delete-token-confirm",
+    "settings.remove-passkey-confirm"
+   ],
+   "category": "copy",
+   "severity": "low",
+   "evidence": "Titles/buttons: 'Delete endpoint?' / 'Delete'; 'Delete API Token' / 'Delete Token'; 'Remove passkey' / 'Remove'. Bodies end 'This action cannot be undone.' (webhook, token) vs 'This cannot be undone.' (passkey). Token name in curly quotes “Map audit token”; webhook URL unquoted."
+  },
+  {
+   "id": "settings.i-timestamp-formats-personal",
+   "title": "Timestamps take four more forms in API and personal pages",
+   "detail": "In addition to the formats already logged, webhooks print 24-hour times with seconds, personal Security drops the year for recent dates but keeps it for older ones in the same column (and shows 12:00 AM on every row), and Profile prints the date of birth numerically.",
+   "nodeIds": [
+    "settings.webhook-detail",
+    "settings.webhook-deliveries",
+    "settings.personal-security",
+    "settings.personal-security-lower",
+    "settings.my-profile"
+   ],
+   "category": "data-format",
+   "severity": "medium",
+   "evidence": "'Feb 18, 2026 01:14:32' (webhook Last delivery / Timestamp); 'Sep 14 at 12:00 AM' and 'Sep 24, 2025 at 12:00 AM' in the same 'Most recent activity' column; Date of birth '01/31/1990'; webhook Created Date 'Nov 2, 2025'."
+  },
+  {
+   "id": "settings.i-table-type-scale",
+   "title": "Settings tables use three body sizes and two empty-cell glyphs",
+   "detail": "Table body text is 16px on API Tokens, 14px on Webhooks and Referrals and 13px on personal Security. Empty cells use a minus sign on Security and an em dash on Referrals. Webhooks writes 'Created Date' where Tokens writes 'Created date'.",
+   "nodeIds": [
+    "settings.tokens",
+    "settings.webhooks",
+    "settings.referrals",
+    "settings.personal-security"
+   ],
+   "category": "typography",
+   "severity": "low",
+   "evidence": "getComputedStyle font-size/weight of a date cell: Tokens 16px/360; Webhooks 'Nov 2, 2025' 14px/400; Referrals 'Mar 4, 2018' 14px/400; Security 'Sep 14 at 12:00 AM' 13px/400. Empty cell characters: U+2212 (Security YubiKey activity) vs U+2014 (Referrals payout). Header strings 'Created Date' (13px) vs 'Created date'."
+  },
+  {
+   "id": "settings.i-referral-money-and-math",
+   "title": "Referrals mixes money formats and its numbers don't add up",
+   "detail": "The same page and email preview write amounts with and without cents and abbreviate $10K next to $10,000. The totals also disagree with the table and the tier track.",
+   "nodeIds": [
+    "settings.referrals",
+    "settings.referral-invite"
+   ],
+   "category": "data-format",
+   "severity": "medium",
+   "evidence": "'$250.00 Referral Bonus', '$250.00 paid on Mar 4, 2018' vs 'You each get $250…', 'the $500 Gold bonus', 'Total earned $900'; 'deposits $10K' vs preview 'Deposit $10,000'. Paid rows total $250.00 + $500.00 = $750, not $900. '4 approved referrals unlock Gold bonus' while the Gold tier reads '10 referrals'."
+  },
+  {
+   "id": "settings.i-sign-out-verbs",
+   "title": "'Log out' and 'Sign out' sit side by side",
+   "detail": "Personal Security uses both verbs for the same action within one section, and switches between 'sign in' and 'log in' across the page and its dialogs.",
+   "nodeIds": [
+    "settings.personal-security-lower",
+    "settings.remove-passkey-confirm",
+    "settings.verify-identity",
+    "settings.change-password"
+   ],
+   "category": "copy",
+   "severity": "low",
+   "evidence": "Section button 'Log out other sessions' above per-row 'Sign out'; checkbox 'Log out of all other devices'; 'Sign in faster…' vs 'It can’t be used to log in once removed' and 'Unable to log in?'."
+  },
+  {
+   "id": "settings.i-title-case-new-pages",
+   "title": "Title Case headings and buttons sit next to sentence-case twins",
+   "detail": "Several new dialogs and buttons use Title Case where the control that opens them, or a sibling label, is sentence case.",
+   "nodeIds": [
+    "settings.change-password",
+    "settings.personal-security-lower",
+    "settings.my-profile-sms",
+    "settings.panorama-statements",
+    "settings.referral-invite",
+    "settings.referrals",
+    "settings.notifications"
+   ],
+   "category": "copy",
+   "severity": "low",
+   "evidence": "'Change password' button opens 'Change Password' with labels 'Old Password', 'New Password', 'Repeat New Password'; 'Download statements' opens 'Download Statements'; 'Generate New Codes'; 'Opt In'; 'Share your Mercury Referral'; section headings 'Important Updates' / 'General Updates'; referral status 'Account Opened' vs stat tile 'Account opened'."
+  },
+  {
+   "id": "settings.i-dialog-actions",
+   "title": "Dialog actions change weight and alignment from one dialog to the next",
+   "detail": "The only action in notification dialogs is a secondary 'Done', while the Download Statements dialog closes with a primary 'Close'. Verify-identity actions sit left while others sit right. In the token menu, Edit's icon is accent blue and Delete's is grey.",
+   "nodeIds": [
+    "settings.cash-flow-notifications",
+    "settings.panorama-statements",
+    "settings.verify-identity",
+    "settings.token-menu"
+   ],
+   "category": "component",
+   "severity": "low",
+   "evidence": "'Done' background rgba(180,183,200,0.12), text rgb(221,221,229), 40px tall; 'Close' background rgb(82,102,235), text rgb(255,255,255). Token menu icon fills: Edit rgb(141,164,245), Delete rgb(112,112,125)."
+  },
+  {
+   "id": "settings.i-unnamed-row-buttons",
+   "title": "API token row menus have no accessible name",
+   "detail": "The ••• buttons on API Tokens expose no text or aria-label, so a screen reader announces three identical unnamed buttons with no token to tell them apart.",
+   "nodeIds": [
+    "settings.tokens",
+    "settings.token-menu"
+   ],
+   "category": "a11y",
+   "severity": "medium",
+   "evidence": "Accessibility snapshot: each token row ends with 'button [expanded=false]' containing 'button' with no name. eval: 11 buttons in the page with empty innerText and no aria-label."
+  },
+  {
+   "id": "settings.i-list-overflow",
+   "title": "Long option lists escape their modal",
+   "detail": "The Scopes list in Create an API token opens upward past the modal and slides under the fixed demo banner, hiding its first options. The webhook Event types list hangs below the modal's bottom edge.",
+   "nodeIds": [
+    "settings.token-scopes-list",
+    "settings.webhook-event-types"
+   ],
+   "category": "layout",
+   "severity": "medium",
+   "evidence": "Screenshot 96: first visible option 'Fetch Account Statements' sits at the banner's lower edge and the Accounts group header is hidden; 28 options total. Screenshot 85: the list's last option 'creditAccount.balance.updated' sits below the modal frame."
+  },
+  {
+   "id": "settings.i-stale-after-action",
+   "title": "Some actions finish without updating the page",
+   "detail": "A newly created webhook endpoint never appears in the list. Regenerating backup codes leaves the Added on and Most recent activity dates unchanged. Referral rows announce themselves as links but do nothing when clicked. Event deliveries are not sorted by time.",
+   "nodeIds": [
+    "settings.webhook-signing-secret",
+    "settings.webhooks",
+    "settings.backup-codes-regenerated",
+    "settings.referrals",
+    "settings.webhook-deliveries"
+   ],
+   "category": "interaction",
+   "severity": "low",
+   "evidence": "Endpoints rows after creating 'https://hooks.demo-startup.com/mercury': the same 6 URLs. Backup codes row after Done: '(8/8 remaining) | Aug 15 at 12:00 AM | Sep 9 at 12:00 AM'. Referrals table text 'This table row is also a link…'; clicking Widgets Inc. leaves URL /settings/referrals with no dialog. Delivery timestamps in row order: Feb 18 01:14:32, Feb 17 17:12:44, Feb 18 00:45:00, Feb 17 17:30:00, Feb 18 04:00:00."
+  },
+  {
+   "id": "settings.i-link-trailing-period",
+   "title": "Sentence-ending periods inside link text",
+   "detail": "Inline links that end a sentence include the sentence's period, so the period is underlined and clickable. On Categories the intro ends 'Map these categories to GL codes in accounting settings.' with the period inside the link; on Approval Rules > Dual admin the 'Learn more.' link after the description includes its period, before the chevron icon.",
+   "nodeIds": [
+    "settings.categories",
+    "home.task-dual-admin"
+   ],
+   "category": "copy",
+   "severity": "low",
+   "evidence": "DOM (2026-09-25): <a href=\"/accounting/mapping/custom-categories\">accounting settings.</a> inside the Categories intro <p>; on /settings/approvals/dualAdmin <span role=\"button\" tabindex=\"0\">Learn more.<svg …></span> inside the Dual admin description (twice: page body and the policy <label>). Found by a DOM sweep of all 210 captured routes for clickable elements whose text ends in punctuation; each candidate judged by Jev (p=0.53 and 0.58 that the period belongs to the sentence, not the label)."
+  }
+ ],
+ "blocked": [
+  "Books product: mapped by a separate agent, not in this manifest.",
+  "Perks (sidebar, under Explore) links to https://mercury.com/perks with target=_blank, outside the demo, so it is not mapped."
+ ]
+}

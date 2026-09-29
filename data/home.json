@@ -1,0 +1,1722 @@
+{
+  "area": "home",
+  "title": "Home & global chrome",
+  "nodes": [
+    {
+      "id": "home.index",
+      "title": "Home dashboard",
+      "url": "/dashboard",
+      "image": "screens/home/01-index.png",
+      "kind": "page",
+      "note": "Welcome header, quick actions (Send/Transfer/Deposit/Request/Upload bill), Mercury balance graph, Accounts, Credit Card, Bill Pay and Invoicing widgets; Try-out panel collapsed to the map launcher."
+    },
+    {
+      "id": "home.try-panel-startup",
+      "title": "Try out Mercury panel: Startup",
+      "url": "/dashboard",
+      "image": "screens/home/02-try-panel-startup.png",
+      "kind": "popover",
+      "note": "Bottom-right onboarding panel with Startup/Ecommerce/Agency/More tabs; Startup lists contractor payments, team invites, cards, vendor details, SAFE."
+    },
+    {
+      "id": "home.try-panel-ecommerce",
+      "title": "Try out panel: Ecommerce tab",
+      "url": "/dashboard",
+      "image": "screens/home/03-try-panel-ecommerce.png",
+      "kind": "popover",
+      "note": "Ecommerce tab of the Try-out panel with commerce-oriented suggested tasks."
+    },
+    {
+      "id": "home.try-panel-agency",
+      "title": "Try out panel: Agency tab",
+      "url": "/dashboard",
+      "image": "screens/home/04-try-panel-agency.png",
+      "kind": "popover",
+      "note": "Agency tab of the Try-out panel with agency-oriented suggested tasks."
+    },
+    {
+      "id": "home.try-panel-more",
+      "title": "Try out panel: More tab",
+      "url": "/dashboard",
+      "image": "screens/home/05-try-panel-more.png",
+      "kind": "popover",
+      "note": "More tab: Make a payment, View transactions, Create a card, Send an invoice, Track tasks; plus 'Understand your data' with Try Command."
+    },
+    {
+      "id": "home.index-money-movement",
+      "title": "Home: Money movement section",
+      "url": "/dashboard",
+      "image": "screens/home/07-index-scrolled-mid.png",
+      "kind": "page",
+      "note": "Scrolled Home showing Money movement (month picker, Money in / Money out top sources, 3-month averages) and the start of the Transactions widget."
+    },
+    {
+      "id": "home.index-transactions",
+      "title": "Home: Transactions widget (Recent)",
+      "url": "/dashboard",
+      "image": "screens/home/08-index-scrolled-bottom.png",
+      "kind": "page",
+      "note": "Transactions widget with Recent/My transactions/Monthly money in/Monthly money out/Operating expenses chips and a 10-row table."
+    },
+    {
+      "id": "home.index-tx-my",
+      "title": "Home: Transactions widget (My transactions)",
+      "url": "/dashboard",
+      "image": "screens/home/09-index-tx-my-transactions.png",
+      "kind": "page",
+      "note": "Same widget filtered to My transactions (Jane B. cards)."
+    },
+    {
+      "id": "home.customize-demo-modal",
+      "title": "Customize the Mercury demo modal",
+      "url": "/dashboard",
+      "image": "screens/home/10-customize-demo-modal.png",
+      "kind": "modal",
+      "note": "Banner link opens a lead form (name, email, company, industry, balance, email opt-in) to get a customized demo link."
+    },
+    {
+      "id": "home.customize-demo-invalid",
+      "title": "Customize demo: validation errors",
+      "url": "/dashboard",
+      "image": "screens/home/11-customize-demo-invalid.png",
+      "kind": "validation-error",
+      "note": "Submitting with an invalid email shows 'Please complete this field' on every field and 'Please submit a valid email'."
+    },
+    {
+      "id": "home.customize-menu",
+      "title": "Customize widgets menu",
+      "url": "/dashboard",
+      "image": "screens/home/12-customize-menu.png",
+      "kind": "menu",
+      "note": "Home Customize menu: Show Dispute Status, Hide Credit Card, Hide Bill Pay, Hide Invoicing, Request feature."
+    },
+    {
+      "id": "home.index-disputes",
+      "title": "Home with Disputes widget",
+      "url": "/dashboard",
+      "image": "screens/home/13-index-dispute-status-shown.png",
+      "kind": "page",
+      "note": "After 'Show Dispute Status' a Disputes carousel widget (1/9) appears and the Credit Card widget moves to a 2-column row."
+    },
+    {
+      "id": "home.balance-table",
+      "title": "Mercury balance: table view",
+      "url": "/dashboard",
+      "image": "screens/home/14-balance-table.png",
+      "kind": "page",
+      "note": "Balance widget in table mode: Total current, Total available, Pending transfers, Pending deposits; toast 'Dispute Status was hidden from home' with Undo."
+    },
+    {
+      "id": "home.date-range-menu",
+      "title": "Balance date range dropdown",
+      "url": "/dashboard",
+      "image": "screens/home/15-date-range-dropdown.png",
+      "kind": "menu",
+      "note": "Date range menu: Last 7/30/90/365 days, Week/Month/Quarter/Year to date."
+    },
+    {
+      "id": "home.balance-365",
+      "title": "Balance graph: Last 365 days",
+      "url": "/dashboard?graphInterval=365d",
+      "image": "screens/home/16-balance-365-days.png",
+      "kind": "page",
+      "note": "Graph re-plotted for a year with month axis labels; URL gains graphInterval=365d."
+    },
+    {
+      "id": "home.accounts-kebab",
+      "title": "Accounts widget menu",
+      "url": "/dashboard?graphInterval=365d",
+      "image": "screens/home/17-accounts-kebab-menu.png",
+      "kind": "menu",
+      "note": "Accounts widget kebab: Statements, Auto transfer rules."
+    },
+    {
+      "id": "home.create-account-modal",
+      "title": "Create account modal",
+      "url": "/dashboard?graphInterval=365d",
+      "image": "screens/home/18-accounts-add.png",
+      "kind": "modal",
+      "note": "'+' on Accounts opens Create account: Checking/Savings radio cards, optional nickname."
+    },
+    {
+      "id": "home.create-account-invalid",
+      "title": "Create account: validation",
+      "url": "/dashboard?graphInterval=365d",
+      "image": "screens/home/19-accounts-add-validation.png",
+      "kind": "validation-error",
+      "note": "Submitting without a type shows 'You must make a selection.'"
+    },
+    {
+      "id": "home.create-account-filled",
+      "title": "Create account: filled",
+      "url": "/dashboard?graphInterval=365d",
+      "image": "screens/home/20-accounts-add-filled.png",
+      "kind": "form-state",
+      "note": "Savings selected and nickname entered, Create account enabled."
+    },
+    {
+      "id": "home.create-account-success",
+      "title": "Account created toast",
+      "url": "/dashboard?graphInterval=365d",
+      "image": "screens/home/21-accounts-add-success.png",
+      "kind": "toast",
+      "note": "Toast 'Your new account is ready to use. View Account'; account count badge goes from +2 to +3."
+    },
+    {
+      "id": "home.credit-card-kebab",
+      "title": "Credit Card widget menu",
+      "url": "/dashboard?graphInterval=365d",
+      "image": "screens/home/22-credit-card-kebab.png",
+      "kind": "menu",
+      "note": "Credit Card widget kebab: Autopay settings, Statements, Hide from Home."
+    },
+    {
+      "id": "home.bill-pay-kebab",
+      "title": "Bill Pay widget menu",
+      "url": "/dashboard?graphInterval=365d",
+      "image": "screens/home/23-bill-pay-kebab.png",
+      "kind": "menu",
+      "note": "Bill Pay widget kebab: Settings, Hide from Home."
+    },
+    {
+      "id": "home.invoicing-kebab",
+      "title": "Invoicing widget menu",
+      "url": "/dashboard?graphInterval=365d",
+      "image": "screens/home/24-invoicing-kebab.png",
+      "kind": "menu",
+      "note": "Invoicing widget kebab: Invoice settings, Hide from Home."
+    },
+    {
+      "id": "home.index-invoicing-hidden",
+      "title": "Home with Invoicing hidden",
+      "url": "/dashboard?graphInterval=365d",
+      "image": "screens/home/25-index-invoicing-hidden.png",
+      "kind": "page",
+      "note": "After 'Hide from Home' the Invoicing widget is gone and Credit Card / Bill Pay reflow to two columns."
+    },
+    {
+      "id": "home.search-open",
+      "title": "Search dialog (empty)",
+      "url": "/dashboard",
+      "image": "screens/home/26-search-open.png",
+      "kind": "modal",
+      "note": "'Search for anything' opens a command palette with category chips (All, Pages, Transactions, Accounts, Cards, Recipients, Statements, Scheduled...) and example queries."
+    },
+    {
+      "id": "home.search-results",
+      "title": "Search results: 'Google'",
+      "url": "/dashboard",
+      "image": "screens/home/27-search-results.png",
+      "kind": "modal",
+      "note": "Typing 'Google' groups matching transactions under each Google counterparty with card, last-4 and date, plus 'Search all transactions for \"Google\"'."
+    },
+    {
+      "id": "home.search-no-results",
+      "title": "Search: no matches",
+      "url": "/dashboard",
+      "image": "screens/home/28-search-no-results.png",
+      "kind": "empty-state",
+      "note": "A nonsense query shows only 'Search all transactions for \"zzqxnothing\"' with no 'no results' message."
+    },
+    {
+      "id": "home.search-card-all",
+      "title": "Search 'card' — All results",
+      "url": "/dashboard",
+      "image": "screens/home/29-search-pages-filter.png",
+      "kind": "modal",
+      "note": "Query 'card' with the All chip: a Pages group (Cards, Create a card, Change password) above Transactions groups (Cards, Card Expenses, Debit Card)."
+    },
+    {
+      "id": "home.move-money-menu",
+      "title": "Move money dropdown",
+      "url": "/dashboard",
+      "image": "screens/home/30-move-money-menu.png",
+      "kind": "menu",
+      "note": "Top-bar Move money menu: Send, Transfer, Deposit, Request, Upload bill."
+    },
+    {
+      "id": "home.private-mode-on",
+      "title": "Private Mode on",
+      "url": "/dashboard",
+      "image": "screens/home/31-private-mode-on.png",
+      "kind": "page",
+      "note": "Eye toggle masks every dollar amount with dots ('$•••••••••', '$••M'); tooltip flips to 'Show dollar amounts'."
+    },
+    {
+      "id": "home.updates-popover",
+      "title": "Updates popover",
+      "url": "/dashboard",
+      "image": "screens/home/32-updates-popover.png",
+      "kind": "popover",
+      "note": "Bell opens Updates with a mark-all-read check and a bare 'No updates' empty state."
+    },
+    {
+      "id": "home.avatar-menu",
+      "title": "Profile menu",
+      "url": "/dashboard",
+      "image": "screens/home/33-avatar-menu.png",
+      "kind": "menu",
+      "note": "Avatar menu: Jane Black / email, Profile, Notifications, Security, Privacy and Perks (external), Appearance, Log out."
+    },
+    {
+      "id": "home.appearance-submenu",
+      "title": "Appearance submenu",
+      "url": "/dashboard",
+      "image": "screens/home/34-avatar-appearance-submenu.png",
+      "kind": "menu",
+      "note": "Appearance flyout: System default (checked), Dark mode, Light mode."
+    },
+    {
+      "id": "home.bookmarks-popover",
+      "title": "Learn about bookmarks popover",
+      "url": "/dashboard",
+      "image": "screens/home/35-bookmarks-popover.png",
+      "kind": "popover",
+      "note": "Bookmarks info icon opens an education popover with an illustration of the 'Add bookmark' icon next to a page title."
+    },
+    {
+      "id": "home.bookmark-hover",
+      "title": "Bookmark hover: reorder handle + remove",
+      "url": "/dashboard",
+      "image": "screens/home/36-bookmark-hover-handles.png",
+      "kind": "form-state",
+      "note": "Hovering a sidebar bookmark reveals a drag handle on the left and an x (Remove bookmark) on the right."
+    },
+    {
+      "id": "home.bookmark-reordered",
+      "title": "Bookmarks reordered",
+      "url": "/dashboard",
+      "image": "screens/home/37-bookmark-reordered.png",
+      "kind": "confirmation",
+      "note": "After dragging the Credit Card handle below Insights, the bookmark list order persists as Ops / Payroll, Bill Pay, Insights, Credit Card."
+    },
+    {
+      "id": "home.org-switcher-menu",
+      "title": "Organization menu",
+      "url": "/dashboard",
+      "image": "screens/home/38-org-switcher-menu.png",
+      "kind": "menu",
+      "note": "'Mercury Demo Pro' menu: All Settings, Team, Documents & Data, Plan & Billing, Referrals (Earn $250), entity switcher, Apply/Link account, Log out."
+    },
+    {
+      "id": "home.viewing-as-menu",
+      "title": "Viewing as Admin dropdown",
+      "url": "/dashboard",
+      "image": "screens/home/39-viewing-as-menu.png",
+      "kind": "menu",
+      "note": "Demo banner role switcher showing the single 'View as Employee' option (not selected)."
+    },
+    {
+      "id": "home.books-toggle",
+      "title": "Banking/Books toggle: Books",
+      "url": "/books/signup",
+      "image": "screens/home/40-books-toggle.png",
+      "kind": "page",
+      "note": "Sidebar toggle switched to Books: sidebar swaps to accounting nav and the page shows the Books signup hero (Books content owned by another area)."
+    },
+    {
+      "id": "home.tasks",
+      "title": "Tasks: Incomplete",
+      "url": "/tasks",
+      "image": "screens/home/41-tasks.png",
+      "kind": "page",
+      "note": "Tasks list with Incomplete/Completed chips and Description / Due by / Received columns; 10 approval and review tasks."
+    },
+    {
+      "id": "home.tasks-row-hover",
+      "title": "Tasks: row hover action",
+      "url": "/tasks?status=incomplete",
+      "image": "screens/home/42-tasks-row-hover.png",
+      "kind": "form-state",
+      "note": "Hovering a task row replaces its date with a blue action link (Approve / View / Review)."
+    },
+    {
+      "id": "home.tasks-completed",
+      "title": "Tasks: Completed (empty)",
+      "url": "/tasks?status=completed",
+      "image": "screens/home/43-tasks-completed.png",
+      "kind": "empty-state",
+      "note": "Completed filter shows Received / Completed on / Completed by columns, ghost skeleton rows and 'No completed tasks'."
+    },
+    {
+      "id": "home.task-overspend",
+      "title": "Task: overspend opens transaction",
+      "url": "/transactions/credit-outgoing0-2",
+      "image": "screens/home/44-task-detail-overspend.png",
+      "kind": "drawer",
+      "note": "The overspend task deep-links to Transactions filtered to My transactions + Hardware budget with the $50.08 Lily's Eatery drawer open; it offers only 'Cancel request', no approve action."
+    },
+    {
+      "id": "home.task-invite-review",
+      "title": "Task: Invite admin review",
+      "url": "/settings/users/review/inviteRevReqId",
+      "image": "screens/home/45-task-detail-team-invite.png",
+      "kind": "page",
+      "note": "Full-screen review of Landon Shepherd's request to invite Bruce Collins as admin, with user info, 2 pending cards, Decline / Confirm changes."
+    },
+    {
+      "id": "home.task-invite-confirmed",
+      "title": "Invite approved, Team list",
+      "url": "/settings/users",
+      "image": "screens/home/46-task-invite-confirmed.png",
+      "kind": "confirmation",
+      "note": "Confirm changes returns to Settings > Team, listing members with role badges."
+    },
+    {
+      "id": "home.task-payment-review",
+      "title": "Task: payment approval review",
+      "url": "/send-money/review/approve/recipient",
+      "image": "screens/home/47-task-payment-approval.png",
+      "kind": "page",
+      "note": "Approval task opens the payment review: $1,042.95 ACH to Jason Green with bank details, source account, memo and a receipt PDF preview."
+    },
+    {
+      "id": "home.command",
+      "title": "Command: empty",
+      "url": "/command",
+      "image": "screens/home/48-command.png",
+      "kind": "page",
+      "note": "'Ask anything about your money' prompt box with suggested prompts Issue new card and Compare monthly balances."
+    },
+    {
+      "id": "home.command-typed",
+      "title": "Command: prompt typed",
+      "url": "/command",
+      "image": "screens/home/49-command-typed.png",
+      "kind": "form-state",
+      "note": "Prompt typed; send arrow enabled and input focused."
+    },
+    {
+      "id": "home.command-thinking",
+      "title": "Command: thinking",
+      "url": "/command",
+      "image": "screens/home/50-command-thinking.png",
+      "kind": "form-state",
+      "note": "After Enter the view becomes a 'New conversation' thread; the user bubble is shown with a timestamp and the input reads 'Esc to cancel' with a stop button."
+    },
+    {
+      "id": "home.command-response",
+      "title": "Command: text answer",
+      "url": "/command",
+      "image": "screens/home/51-command-response.png",
+      "kind": "confirmation",
+      "note": "Mercury AI answers with a collapsible 'Thought process', two paragraphs and copy / like / dislike actions."
+    },
+    {
+      "id": "home.command-thought-process",
+      "title": "Command: thought process expanded",
+      "url": "/command",
+      "image": "screens/home/52-command-thought-process.png",
+      "kind": "form-state",
+      "note": "Expanded 'Thought process' reveals the step 'Evaluating options 2s'."
+    },
+    {
+      "id": "home.command-chart",
+      "title": "Command: chart answer",
+      "url": "/command",
+      "image": "screens/home/53-command-compare-balances.png",
+      "kind": "confirmation",
+      "note": "Suggested prompt 'Compare monthly balances' returns a 'Spending overview' Money In / Money Out bar chart for the last 4 months."
+    },
+    {
+      "id": "home.feedback-panel",
+      "title": "Provide feedback panel",
+      "url": "/dashboard",
+      "image": "screens/home/54-request-feature.png",
+      "kind": "popover",
+      "note": "Customize > Request feature opens a bottom-right 'Provide feedback' panel for Dashboard Home (not submitted, it reaches Mercury staff)."
+    },
+    {
+      "id": "home.account-row-tooltip",
+      "title": "Account row hover breakdown",
+      "url": "/dashboard",
+      "image": "screens/home/55-account-row-tooltip.png",
+      "kind": "popover",
+      "note": "Hovering an account row shows Pending in / Pending out / Available for that account."
+    },
+    {
+      "id": "home.settings-gear-tooltip",
+      "title": "Settings gear tooltip",
+      "url": "/dashboard",
+      "image": "screens/home/56-settings-gear-tooltip.png",
+      "kind": "popover",
+      "note": "Hovering the gear icon shows a 'Settings' tooltip; clicking it navigates to Settings."
+    },
+    {
+      "id": "home.money-movement-prev",
+      "title": "Money movement — previous month",
+      "url": "/dashboard",
+      "image": "screens/home/57-money-movement-prev-month.png",
+      "kind": "page",
+      "note": "Clicking the left arrow switches Money movement to Aug 2026 (Money in $164,236.08, Money out −$272,194.88) and enables the right arrow."
+    },
+    {
+      "id": "home.money-out-tooltip",
+      "title": "Money out info tooltip",
+      "url": "/dashboard",
+      "image": "screens/home/58-money-out-info-tooltip.png",
+      "kind": "popover",
+      "note": "The info icon next to 'Money out' explains it excludes internal transfers and Credit payments."
+    },
+    {
+      "id": "home.tx-monthly-in",
+      "title": "Transactions — Monthly money in",
+      "url": "/dashboard",
+      "image": "screens/home/59-tx-monthly-money-in.png",
+      "kind": "page",
+      "note": "Monthly money in chip lists only incoming card and payment credits (green amounts)."
+    },
+    {
+      "id": "home.tx-monthly-out",
+      "title": "Transactions — Monthly money out",
+      "url": "/dashboard",
+      "image": "screens/home/60-tx-monthly-money-out.png",
+      "kind": "page",
+      "note": "Monthly money out chip lists outgoing transactions for the month."
+    },
+    {
+      "id": "home.tx-operating-expenses",
+      "title": "Transactions — Operating expenses",
+      "url": "/dashboard",
+      "image": "screens/home/61-tx-operating-expenses.png",
+      "kind": "page",
+      "note": "Operating expenses chip lists card and ACH spend from Ops / Payroll."
+    },
+    {
+      "id": "home.tx-sort-menu",
+      "title": "Amount column sort menu",
+      "url": "/dashboard",
+      "image": "screens/home/62-tx-amount-sort-menu.png",
+      "kind": "menu",
+      "note": "Clicking the Amount header opens Low to high / High to low / Clear sort (disabled)."
+    },
+    {
+      "id": "home.tx-sorted",
+      "title": "Transactions sorted by amount",
+      "url": "/dashboard",
+      "image": "screens/home/63-tx-sorted-amount.png",
+      "kind": "page",
+      "note": "After 'High to low' the widget lists Gusto (Payroll) −$90,122.53 first and the header shows a sort icon."
+    },
+    {
+      "id": "home.tx-row-drawer",
+      "title": "Transaction detail from Home",
+      "url": "/transactions/achPull-0",
+      "image": "screens/home/64-tx-row-drawer.png",
+      "kind": "drawer",
+      "note": "Clicking a Home transaction row opens Transactions with the 'Operating expenses' saved view and the ACH Pull detail drawer (category, GL code, department, comments)."
+    },
+    {
+      "id": "home.task-receipt-forwarding",
+      "title": "Task — receipt forwarding",
+      "url": "/settings/my-profile?section=receipt-forwarding",
+      "image": "screens/home/66-task-receipt-forwarding.png",
+      "kind": "page",
+      "note": "'Review pending emails' task jumps to Settings > Profile, Receipt forwarding, with Allow / Dismiss prompts for two addresses."
+    },
+    {
+      "id": "home.task-receipt-exemption",
+      "title": "Task — receipt policy exemption",
+      "url": "/transactions/debit-outgoing1-1",
+      "image": "screens/home/67-task-receipt-exemption.png",
+      "kind": "drawer",
+      "note": "Receipt exemption task opens the Monarch Books drawer with the quoted reason and Reject / Approve exception buttons, plus a 'Receipt required' warning."
+    },
+    {
+      "id": "home.task-category-review",
+      "title": "Task — category review",
+      "url": "/transactions/electronicPayment-1",
+      "image": "screens/home/68-task-category-review.png",
+      "kind": "drawer",
+      "note": "'Review category for your $300.03 Uber Eats transaction' opens a $300.03 Mercury ACH Payment to Domestic Ads, categorized Legal Fees."
+    },
+    {
+      "id": "home.task-recurring-payment",
+      "title": "Task — recurring payment approval",
+      "url": "/send-money/review/approve/payment",
+      "image": "screens/home/69-task-recurring-payment.png",
+      "kind": "page",
+      "note": "Full-screen review of a $5,000.00 monthly payment to Jason Green with schedule (Oct 5, Nov 2, Dec 7), receipt PDF preview and Decline / Approve payments."
+    },
+    {
+      "id": "home.task-daily-maximum",
+      "title": "Task — daily maximum limit",
+      "url": "/settings/approvals/dailyMaximum",
+      "image": "screens/home/70-task-daily-maximum.png",
+      "kind": "page",
+      "note": "Daily maximum limit task lands on Settings > Approval Rules > Daily maximum showing 'No daily maximum currently enabled' and Set up; no pending request is visible."
+    },
+    {
+      "id": "home.task-dual-admin",
+      "title": "Task — dual admin policy",
+      "url": "/settings/approvals/dualAdmin",
+      "image": "screens/home/71-task-dual-admin.png",
+      "kind": "page",
+      "note": "Dual admin task opens Approval Rules > Dual admin with 'Landon S. requested to enable this policy.' and Approve / Decline."
+    },
+    {
+      "id": "home.task-reimbursement",
+      "title": "Task — reimbursement approval",
+      "url": "/expenses/all-expenses?expenseId=expense0",
+      "image": "screens/home/72-task-reimbursement.png",
+      "kind": "drawer",
+      "note": "Reimbursement task opens Team Spend > Reimbursements with the $375.87 Bayside Bistro expense panel: Approve / Decline / More and a 'Missing attachment field.' banner."
+    },
+    {
+      "id": "home.search-pages",
+      "title": "Search — Pages filter",
+      "url": "/dashboard",
+      "image": "screens/home/73-search-pages-chip.png",
+      "kind": "modal",
+      "note": "With 'card' typed, the Pages chip narrows results to three pages: Cards, Create a card, Change password."
+    },
+    {
+      "id": "home.search-cards",
+      "title": "Search — Cards filter",
+      "url": "/dashboard",
+      "image": "screens/home/74-search-cards-chip.png",
+      "kind": "modal",
+      "note": "Cards chip lists matching cards with holder, last four and '$0.00 spent this week'; an 'Agent Card' badge marks one."
+    },
+    {
+      "id": "home.search-filters-scrolled",
+      "title": "Search — filter chips scrolled",
+      "url": "/dashboard",
+      "image": "screens/home/75-search-filters-scrolled.png",
+      "kind": "modal",
+      "note": "The right arrow scrolls the chip row to reveal Scheduled, Approvals, Users and Departments, with a left arrow to go back."
+    },
+    {
+      "id": "home.customize-demo-industry",
+      "title": "Customize demo — Industry menu",
+      "url": "/dashboard",
+      "image": "screens/home/76-customize-demo-industry-menu.png",
+      "kind": "form-state",
+      "note": "Industry combobox open with Startup, Ecommerce, Crypto, Consulting, Investing."
+    },
+    {
+      "id": "home.customize-demo-filled",
+      "title": "Customize demo — filled",
+      "url": "/dashboard",
+      "image": "screens/home/77-customize-demo-filled.png",
+      "kind": "form-state",
+      "note": "All fields filled (Test Reviewer, example.com email, Acme Test Co, Startup, $250,000); Submit at full opacity."
+    },
+    {
+      "id": "home.customize-demo-success",
+      "title": "Customize demo — applied",
+      "url": "/dashboard",
+      "image": "screens/home/78-customize-demo-submitted.png",
+      "kind": "confirmation",
+      "note": "After Submit the modal closes and the demo re-renders as 'Acme Test Co' / 'Welcome, Test' with a $250,000.00 balance; the Try-out panel pops open."
+    },
+    {
+      "id": "home.index-personalized",
+      "title": "Home — personalized demo",
+      "url": "/dashboard",
+      "image": "screens/home/79-index-personalized.png",
+      "kind": "page",
+      "note": "Personalized Home: org name and greeting changed, hero balance $250,000.00, while account rows still total about $2.46M."
+    },
+    {
+      "id": "home.command-issue-card",
+      "title": "Command — Issue new card question 1",
+      "url": "/command",
+      "image": "screens/home/80-command-issue-card.png",
+      "kind": "form-state",
+      "note": "'Issue new card' prompt makes Mercury AI ask 'What spending limit should the card have?' as question 1 of 3 in a question card above the composer; the thought process says it bundled limit, reset period and restrictions into one ask."
+    },
+    {
+      "id": "home.command-question-2",
+      "title": "Command — limit reset question",
+      "url": "/command",
+      "image": "screens/home/81-command-question-2.png",
+      "kind": "form-state",
+      "note": "Question 2 of 3, 'How often should that limit reset?', with numbered Daily / Weekly / Monthly / Yearly options and a '/' free-text option."
+    },
+    {
+      "id": "home.command-restrictions",
+      "title": "Command — restrictions question (3 of 3)",
+      "url": "/command",
+      "image": "screens/home/82-command-restrictions-question.png",
+      "kind": "form-state",
+      "note": "Question 3 of 3 in the same card: 'Any restrictions for the card?', free text with placeholder 'e.g. online only, merchant types, or none'. Command's replies vary by run; in other runs it asks this after a summary card, or skips it."
+    },
+    {
+      "id": "home.command-card-proposal",
+      "title": "Command — Issue debit card proposal",
+      "url": "/command",
+      "image": "screens/home/83-command-card-proposal.png",
+      "kind": "form-state",
+      "note": "Answers are echoed in a summary card, then the 'Issue debit card' proposal: the card has no name, so 'Jane Black' shows as both title and cardholder; $500.00 per month, Virtual Debit, with Make edits / Cancel / Confirm."
+    },
+    {
+      "id": "home.command-card-issued",
+      "title": "Command — Debit card issued",
+      "url": "/command",
+      "image": "screens/home/84-command-card-confirmed.png",
+      "kind": "confirmation",
+      "note": "After Confirm a green 'Debit card issued' card appears, but it names 'Office Card' for Alice Chen, not the card for Jane Black that was proposed, and drops the spend limit row."
+    },
+    {
+      "id": "home.balance-graph-hover",
+      "title": "Balance graph hover",
+      "url": "/dashboard",
+      "image": "screens/home/85-balance-graph-hover.png",
+      "kind": "form-state",
+      "note": "Hovering the graph swaps the header to the point's balance ($212,246.36), date 'September 14, 2026' and daily delta."
+    },
+    {
+      "id": "home.task-payment-approved",
+      "title": "Tasks — payment approved",
+      "url": "/send-money/pay/success",
+      "image": "screens/home/86-task-payment-approved.png",
+      "kind": "confirmation",
+      "note": "Full-page success after 'Approve payment': 'You’ve approved an ACH payment', 'The payment will be sent immediately.', the $1,042.95 Jason Green summary with a receipt download icon, and 'Back to Needs Approval'."
+    },
+    {
+      "id": "home.task-reimbursement-approved",
+      "title": "Tasks — reimbursement approved",
+      "url": "/expenses/all-expenses",
+      "image": "screens/home/87-task-reimbursement-approved.png",
+      "kind": "toast",
+      "note": "Approve in the reimbursement panel closes it and shows a 'Reimbursement payment approved' toast over the Reimbursements list; the $375.87 Jessica Awad expense moves to 'Payment Pending'."
+    }
+  ],
+  "edges": [
+    {
+      "from": "home.index",
+      "to": "home.try-panel-startup",
+      "label": "Click map launcher (bottom right)"
+    },
+    {
+      "from": "home.try-panel-startup",
+      "to": "home.try-panel-ecommerce",
+      "label": "Click Ecommerce tab"
+    },
+    {
+      "from": "home.try-panel-ecommerce",
+      "to": "home.try-panel-agency",
+      "label": "Click Agency tab"
+    },
+    {
+      "from": "home.try-panel-agency",
+      "to": "home.try-panel-more",
+      "label": "Click More tab"
+    },
+    {
+      "from": "home.try-panel-more",
+      "to": "home.index",
+      "label": "Click collapse chevron"
+    },
+    {
+      "from": "home.index",
+      "to": "home.index-money-movement",
+      "label": "Scroll down"
+    },
+    {
+      "from": "home.index-money-movement",
+      "to": "home.index-transactions",
+      "label": "Scroll down"
+    },
+    {
+      "from": "home.index-transactions",
+      "to": "home.index-tx-my",
+      "label": "Click 'My transactions' chip"
+    },
+    {
+      "from": "home.index-transactions",
+      "to": "transactions.index",
+      "label": "Click 'View all'"
+    },
+    {
+      "from": "home.index",
+      "to": "home.customize-demo-modal",
+      "label": "Click 'Customize your experience' in banner"
+    },
+    {
+      "from": "home.customize-demo-modal",
+      "to": "home.customize-demo-invalid",
+      "label": "Enter invalid email, click Submit"
+    },
+    {
+      "from": "home.customize-demo-invalid",
+      "to": "home.index",
+      "label": "Click Cancel"
+    },
+    {
+      "from": "home.index",
+      "to": "home.customize-menu",
+      "label": "Click Customize"
+    },
+    {
+      "from": "home.customize-menu",
+      "to": "home.index-disputes",
+      "label": "Click 'Show Dispute Status'"
+    },
+    {
+      "from": "home.index-disputes",
+      "to": "home.balance-table",
+      "label": "Customize > Hide Dispute Status, then click Balance table toggle"
+    },
+    {
+      "from": "home.index",
+      "to": "home.balance-table",
+      "label": "Click Balance table toggle"
+    },
+    {
+      "from": "home.balance-table",
+      "to": "home.index",
+      "label": "Click Balance graph toggle"
+    },
+    {
+      "from": "home.index",
+      "to": "home.date-range-menu",
+      "label": "Click 'Last 30 days'"
+    },
+    {
+      "from": "home.date-range-menu",
+      "to": "home.balance-365",
+      "label": "Click 'Last 365 days'"
+    },
+    {
+      "from": "home.balance-365",
+      "to": "home.accounts-kebab",
+      "label": "Click Accounts kebab"
+    },
+    {
+      "from": "home.index",
+      "to": "home.accounts-kebab",
+      "label": "Click Accounts kebab"
+    },
+    {
+      "from": "home.accounts-kebab",
+      "to": "accounts.index",
+      "label": "Click Statements"
+    },
+    {
+      "from": "home.index",
+      "to": "home.create-account-modal",
+      "label": "Click '+' on Accounts widget"
+    },
+    {
+      "from": "home.create-account-modal",
+      "to": "home.create-account-invalid",
+      "label": "Click Create account with no type"
+    },
+    {
+      "from": "home.create-account-invalid",
+      "to": "home.create-account-filled",
+      "label": "Select Savings, type nickname"
+    },
+    {
+      "from": "home.create-account-filled",
+      "to": "home.create-account-success",
+      "label": "Click Create account"
+    },
+    {
+      "from": "home.create-account-success",
+      "to": "accounts.index",
+      "label": "Click 'View Account'"
+    },
+    {
+      "from": "home.index",
+      "to": "home.credit-card-kebab",
+      "label": "Click Credit Card widget kebab"
+    },
+    {
+      "from": "home.credit-card-kebab",
+      "to": "cards.index",
+      "label": "Click Autopay settings / Statements"
+    },
+    {
+      "from": "home.index",
+      "to": "home.bill-pay-kebab",
+      "label": "Click Bill Pay widget kebab"
+    },
+    {
+      "from": "home.bill-pay-kebab",
+      "to": "billpay.index",
+      "label": "Click Settings"
+    },
+    {
+      "from": "home.index",
+      "to": "home.invoicing-kebab",
+      "label": "Click Invoicing widget kebab"
+    },
+    {
+      "from": "home.invoicing-kebab",
+      "to": "home.index-invoicing-hidden",
+      "label": "Click 'Hide from Home'"
+    },
+    {
+      "from": "home.index-invoicing-hidden",
+      "to": "home.customize-menu",
+      "label": "Click Customize (Show Invoicing to restore)"
+    },
+    {
+      "from": "home.invoicing-kebab",
+      "to": "invoicing.index",
+      "label": "Click Invoice settings"
+    },
+    {
+      "from": "home.index",
+      "to": "accounts.index",
+      "label": "Click an account row / View all accounts"
+    },
+    {
+      "from": "home.index",
+      "to": "cards.index",
+      "label": "Click Credit Card widget title"
+    },
+    {
+      "from": "home.index",
+      "to": "billpay.index",
+      "label": "Click Bill Pay 'View'"
+    },
+    {
+      "from": "home.index",
+      "to": "invoicing.index",
+      "label": "Click Invoicing 'View'"
+    },
+    {
+      "from": "home.index",
+      "to": "payments.index",
+      "label": "Click Send"
+    },
+    {
+      "from": "home.index",
+      "to": "home.search-open",
+      "label": "Click 'Search for anything' (or Cmd+K)"
+    },
+    {
+      "from": "home.search-open",
+      "to": "home.search-results",
+      "label": "Type 'Google'"
+    },
+    {
+      "from": "home.search-results",
+      "to": "home.search-no-results",
+      "label": "Replace query with gibberish"
+    },
+    {
+      "from": "home.search-no-results",
+      "to": "home.search-card-all",
+      "label": "Type 'card'"
+    },
+    {
+      "from": "home.search-results",
+      "to": "transactions.index",
+      "label": "Click 'View all transactions'"
+    },
+    {
+      "from": "home.search-card-all",
+      "to": "cards.index",
+      "label": "Click Pages > Cards"
+    },
+    {
+      "from": "home.search-open",
+      "to": "home.index",
+      "label": "Press Escape"
+    },
+    {
+      "from": "home.index",
+      "to": "home.move-money-menu",
+      "label": "Click Move money"
+    },
+    {
+      "from": "home.move-money-menu",
+      "to": "payments.index",
+      "label": "Click Send"
+    },
+    {
+      "from": "home.index",
+      "to": "home.private-mode-on",
+      "label": "Click eye icon (Toggle Private Mode)"
+    },
+    {
+      "from": "home.private-mode-on",
+      "to": "home.index",
+      "label": "Click eye icon again"
+    },
+    {
+      "from": "home.index",
+      "to": "home.updates-popover",
+      "label": "Click bell (updates)"
+    },
+    {
+      "from": "home.index",
+      "to": "home.avatar-menu",
+      "label": "Click avatar"
+    },
+    {
+      "from": "home.avatar-menu",
+      "to": "home.appearance-submenu",
+      "label": "Hover/ArrowRight on Appearance"
+    },
+    {
+      "from": "home.avatar-menu",
+      "to": "settings.index",
+      "label": "Click Profile / Notifications / Security"
+    },
+    {
+      "from": "home.index",
+      "to": "settings.index",
+      "label": "Click settings gear"
+    },
+    {
+      "from": "home.index",
+      "to": "home.bookmarks-popover",
+      "label": "Click 'Learn about bookmarks' icon"
+    },
+    {
+      "from": "home.index",
+      "to": "home.bookmark-hover",
+      "label": "Hover a bookmark"
+    },
+    {
+      "from": "home.bookmark-hover",
+      "to": "home.bookmark-reordered",
+      "label": "Drag reorder handle below Insights"
+    },
+    {
+      "from": "home.bookmark-hover",
+      "to": "cards.index",
+      "label": "Click Credit Card bookmark"
+    },
+    {
+      "from": "home.index",
+      "to": "home.org-switcher-menu",
+      "label": "Click 'Mercury Demo Pro'"
+    },
+    {
+      "from": "home.org-switcher-menu",
+      "to": "settings.index",
+      "label": "Click All Settings"
+    },
+    {
+      "from": "home.index",
+      "to": "home.viewing-as-menu",
+      "label": "Click 'Viewing as Admin'"
+    },
+    {
+      "from": "home.index",
+      "to": "home.books-toggle",
+      "label": "Click Books in sidebar toggle"
+    },
+    {
+      "from": "home.books-toggle",
+      "to": "home.index",
+      "label": "Click Banking"
+    },
+    {
+      "from": "home.index",
+      "to": "home.tasks",
+      "label": "Click Tasks in sidebar"
+    },
+    {
+      "from": "home.tasks",
+      "to": "home.tasks-row-hover",
+      "label": "Hover a task row"
+    },
+    {
+      "from": "home.tasks",
+      "to": "home.tasks-completed",
+      "label": "Click Completed"
+    },
+    {
+      "from": "home.tasks-completed",
+      "to": "home.tasks",
+      "label": "Click Incomplete"
+    },
+    {
+      "from": "home.tasks-row-hover",
+      "to": "home.task-overspend",
+      "label": "Click 'Approve' on overspend task"
+    },
+    {
+      "from": "home.task-overspend",
+      "to": "transactions.index",
+      "label": "Close drawer"
+    },
+    {
+      "from": "home.tasks",
+      "to": "home.task-invite-review",
+      "label": "Click team invite task"
+    },
+    {
+      "from": "home.task-invite-review",
+      "to": "home.task-invite-confirmed",
+      "label": "Click Confirm changes"
+    },
+    {
+      "from": "home.task-invite-confirmed",
+      "to": "settings.index",
+      "label": "Stay in Settings > Team"
+    },
+    {
+      "from": "home.tasks",
+      "to": "home.task-payment-review",
+      "label": "Click payment approval task"
+    },
+    {
+      "from": "home.index",
+      "to": "home.command",
+      "label": "Click Command in sidebar"
+    },
+    {
+      "from": "home.try-panel-more",
+      "to": "home.command",
+      "label": "Click Try Command"
+    },
+    {
+      "from": "home.command",
+      "to": "home.command-typed",
+      "label": "Type a prompt"
+    },
+    {
+      "from": "home.command-typed",
+      "to": "home.command-thinking",
+      "label": "Press Enter"
+    },
+    {
+      "from": "home.command-thinking",
+      "to": "home.command-response",
+      "label": "Wait for answer"
+    },
+    {
+      "from": "home.command-response",
+      "to": "home.command-thought-process",
+      "label": "Click 'Thought process'"
+    },
+    {
+      "from": "home.command-response",
+      "to": "home.command",
+      "label": "Click + (New conversation)"
+    },
+    {
+      "from": "home.command",
+      "to": "home.command-chart",
+      "label": "Click 'Compare monthly balances'"
+    },
+    {
+      "from": "home.customize-menu",
+      "to": "home.feedback-panel",
+      "label": "Click Request feature"
+    },
+    {
+      "from": "home.feedback-panel",
+      "to": "home.index",
+      "label": "Click Cancel"
+    },
+    {
+      "from": "home.index",
+      "to": "home.account-row-tooltip",
+      "label": "Hover an account row"
+    },
+    {
+      "from": "home.account-row-tooltip",
+      "to": "accounts.index",
+      "label": "Click the account row"
+    },
+    {
+      "from": "home.index",
+      "to": "home.settings-gear-tooltip",
+      "label": "Hover settings gear"
+    },
+    {
+      "from": "home.settings-gear-tooltip",
+      "to": "settings.index",
+      "label": "Click settings gear"
+    },
+    {
+      "from": "home.index-money-movement",
+      "to": "home.money-movement-prev",
+      "label": "Click previous-month arrow"
+    },
+    {
+      "from": "home.money-movement-prev",
+      "to": "home.index-money-movement",
+      "label": "Click next-month arrow"
+    },
+    {
+      "from": "home.money-movement-prev",
+      "to": "home.money-out-tooltip",
+      "label": "Hover Money out info icon"
+    },
+    {
+      "from": "home.index-transactions",
+      "to": "home.tx-monthly-in",
+      "label": "Click 'Monthly money in'"
+    },
+    {
+      "from": "home.index-transactions",
+      "to": "home.tx-monthly-out",
+      "label": "Click 'Monthly money out'"
+    },
+    {
+      "from": "home.index-transactions",
+      "to": "home.tx-operating-expenses",
+      "label": "Click 'Operating expenses'"
+    },
+    {
+      "from": "home.tx-monthly-in",
+      "to": "home.tx-monthly-out",
+      "label": "Click 'Monthly money out'"
+    },
+    {
+      "from": "home.tx-monthly-out",
+      "to": "home.tx-operating-expenses",
+      "label": "Click 'Operating expenses'"
+    },
+    {
+      "from": "home.tx-operating-expenses",
+      "to": "home.tx-sort-menu",
+      "label": "Click Amount column header"
+    },
+    {
+      "from": "home.tx-sort-menu",
+      "to": "home.tx-sorted",
+      "label": "Click 'High to low'"
+    },
+    {
+      "from": "home.tx-sorted",
+      "to": "home.tx-row-drawer",
+      "label": "Click a transaction row"
+    },
+    {
+      "from": "home.tx-row-drawer",
+      "to": "transactions.index",
+      "label": "Close drawer"
+    },
+    {
+      "from": "home.tasks",
+      "to": "home.task-receipt-forwarding",
+      "label": "Click 'Review pending emails…' task"
+    },
+    {
+      "from": "home.tasks",
+      "to": "home.task-receipt-exemption",
+      "label": "Click receipt policy exemption task"
+    },
+    {
+      "from": "home.tasks",
+      "to": "home.task-category-review",
+      "label": "Click 'Review category…' task"
+    },
+    {
+      "from": "home.tasks",
+      "to": "home.task-recurring-payment",
+      "label": "Click recurring payment approval task"
+    },
+    {
+      "from": "home.tasks",
+      "to": "home.task-daily-maximum",
+      "label": "Click daily maximum limit task"
+    },
+    {
+      "from": "home.tasks",
+      "to": "home.task-dual-admin",
+      "label": "Click dual admin policy task"
+    },
+    {
+      "from": "home.tasks",
+      "to": "home.task-reimbursement",
+      "label": "Click reimbursement approval task"
+    },
+    {
+      "from": "home.task-receipt-forwarding",
+      "to": "settings.index",
+      "label": "Stay in Settings > Profile"
+    },
+    {
+      "from": "home.task-receipt-exemption",
+      "to": "transactions.index",
+      "label": "Close drawer"
+    },
+    {
+      "from": "home.task-category-review",
+      "to": "transactions.index",
+      "label": "Close drawer"
+    },
+    {
+      "from": "home.task-recurring-payment",
+      "to": "payments.index",
+      "label": "Approve payments / close"
+    },
+    {
+      "from": "home.task-daily-maximum",
+      "to": "settings.index",
+      "label": "Stay in Approval Rules"
+    },
+    {
+      "from": "home.task-dual-admin",
+      "to": "settings.index",
+      "label": "Approve / Decline"
+    },
+    {
+      "from": "home.search-open",
+      "to": "home.search-card-all",
+      "label": "Type 'card'"
+    },
+    {
+      "from": "home.search-card-all",
+      "to": "home.search-pages",
+      "label": "Click 'Pages' chip"
+    },
+    {
+      "from": "home.search-pages",
+      "to": "home.search-cards",
+      "label": "Click 'Cards' chip"
+    },
+    {
+      "from": "home.search-cards",
+      "to": "home.search-filters-scrolled",
+      "label": "Click chip-row right arrow"
+    },
+    {
+      "from": "home.search-cards",
+      "to": "cards.index",
+      "label": "Click a card result"
+    },
+    {
+      "from": "home.customize-demo-modal",
+      "to": "home.customize-demo-industry",
+      "label": "Open Industry dropdown"
+    },
+    {
+      "from": "home.customize-demo-industry",
+      "to": "home.customize-demo-filled",
+      "label": "Pick 'Startup' and enter balance"
+    },
+    {
+      "from": "home.customize-demo-filled",
+      "to": "home.customize-demo-success",
+      "label": "Click Submit"
+    },
+    {
+      "from": "home.customize-demo-success",
+      "to": "home.index-personalized",
+      "label": "Close Try-out panel"
+    },
+    {
+      "from": "home.command",
+      "to": "home.command-issue-card",
+      "label": "Click 'Issue new card'"
+    },
+    {
+      "from": "home.command-issue-card",
+      "to": "home.command-question-2",
+      "label": "Enter 500 and submit"
+    },
+    {
+      "from": "home.command-question-2",
+      "to": "home.command-restrictions",
+      "label": "Choose 'Monthly'"
+    },
+    {
+      "from": "home.command-restrictions",
+      "to": "home.command-card-proposal",
+      "label": "Enter 'Software only' and submit"
+    },
+    {
+      "from": "home.command-card-proposal",
+      "to": "home.command-card-issued",
+      "label": "Click Confirm"
+    },
+    {
+      "from": "home.command-card-issued",
+      "to": "cards.index",
+      "label": "Click 'View card'"
+    },
+    {
+      "from": "home.index",
+      "to": "home.balance-graph-hover",
+      "label": "Hover balance graph"
+    },
+    {
+      "from": "home.try-panel-startup",
+      "to": "home.command",
+      "label": "Click 'Try Command'"
+    },
+    {
+      "from": "home.index",
+      "to": "home.index-transactions",
+      "label": "Scroll to the Transactions widget"
+    },
+    {
+      "from": "home.task-payment-review",
+      "to": "home.task-payment-approved",
+      "label": "Click 'Approve payment'"
+    },
+    {
+      "from": "home.task-payment-approved",
+      "to": "payments.index",
+      "label": "Click 'Back to Needs Approval'"
+    },
+    {
+      "from": "home.task-reimbursement",
+      "to": "home.task-reimbursement-approved",
+      "label": "Click Approve"
+    },
+    {
+      "from": "home.task-reimbursement-approved",
+      "to": "home.tasks",
+      "label": "Click Tasks in sidebar (task still listed)"
+    },
+    {
+      "from": "home.task-invite-confirmed",
+      "to": "home.tasks",
+      "label": "Click Tasks in sidebar"
+    }
+  ],
+  "journeys": [
+    {
+      "id": "home.j-open-savings",
+      "name": "Open a new savings account from Home",
+      "description": "Create a nicknamed savings account from the Accounts widget and jump to it.",
+      "steps": [
+        "home.index",
+        "home.create-account-modal",
+        "home.create-account-invalid",
+        "home.create-account-filled",
+        "home.create-account-success",
+        "accounts.index"
+      ]
+    },
+    {
+      "id": "home.j-tailor-dashboard",
+      "name": "Tailor the Home dashboard",
+      "description": "Add the Disputes widget, switch the balance to table view, and hide Invoicing.",
+      "steps": [
+        "home.index",
+        "home.customize-menu",
+        "home.index-disputes",
+        "home.balance-table",
+        "home.index",
+        "home.invoicing-kebab",
+        "home.index-invoicing-hidden"
+      ]
+    },
+    {
+      "id": "home.j-find-transaction",
+      "name": "Find a card or page from global search",
+      "description": "Search from the top bar and narrow results with the category chips.",
+      "steps": [
+        "home.index",
+        "home.search-open",
+        "home.search-card-all",
+        "home.search-pages",
+        "home.search-cards",
+        "cards.index"
+      ]
+    },
+    {
+      "id": "home.j-clear-approvals",
+      "name": "Clear approval tasks",
+      "description": "An admin opens Tasks, approves a pending team invite, returns to Tasks and approves a $1,042.95 contractor payment.",
+      "steps": [
+        "home.index",
+        "home.tasks",
+        "home.task-invite-review",
+        "home.task-invite-confirmed",
+        "home.tasks",
+        "home.task-payment-review",
+        "home.task-payment-approved",
+        "payments.index"
+      ]
+    },
+    {
+      "id": "home.j-ask-command",
+      "name": "Ask Command about cash flow",
+      "description": "Ask Mercury AI a question, read the answer, then run a suggested chart prompt.",
+      "steps": [
+        "home.index",
+        "home.command",
+        "home.command-typed",
+        "home.command-thinking",
+        "home.command-response",
+        "home.command",
+        "home.command-chart"
+      ]
+    },
+    {
+      "id": "home.j-issue-card-command",
+      "name": "Issue a card through Command",
+      "description": "Ask Mercury AI to issue a card, answer its questions and confirm the proposal.",
+      "steps": [
+        "home.index",
+        "home.command",
+        "home.command-issue-card",
+        "home.command-question-2",
+        "home.command-restrictions",
+        "home.command-card-proposal",
+        "home.command-card-issued"
+      ]
+    },
+    {
+      "id": "home.j-review-spend",
+      "name": "Review operating spend from Home",
+      "description": "Filter the Home transactions widget to operating expenses, sort by size and open the biggest item.",
+      "steps": [
+        "home.index",
+        "home.index-transactions",
+        "home.tx-operating-expenses",
+        "home.tx-sort-menu",
+        "home.tx-sorted",
+        "home.tx-row-drawer"
+      ]
+    }
+  ],
+  "issues": [
+    {
+      "id": "home.i-cents-format",
+      "title": "Cents shown three different ways on Home",
+      "detail": "The same widget family mixes superscript cents, inline cents and abbreviated amounts. Accounts rows show '$200,000.00' with superscript cents, but the hover tooltip for that same row shows '$200,000.00' inline; the Disputes widget shows '$3,444.23' inline; the balance table's 'Pending transfers $71,764.10' is inline while its siblings are superscript; the Invoicing widget puts 'Overdue 4 · $950.00' (superscript) next to 'Paid 12 · $6K' and 'Open 12 items · $12.3K' (abbreviated). Search results and the payment review hero ('$1,042.95', 34px Arcadia Display) also drop the superscript used by the Home hero.",
+      "nodeIds": [
+        "home.index",
+        "home.balance-table",
+        "home.index-disputes",
+        "home.account-row-tooltip",
+        "home.search-results",
+        "home.task-payment-review"
+      ],
+      "category": "data-format",
+      "severity": "medium",
+      "evidence": "Accounts row: span._superscript_1of3b_35 (15px parent, 10.95px sup, top -2.9px). Hero: 28px Arcadia Display, sup 20.44px. Pending transfers: 13px, fraction span has no _superscript class. Disputes '$3,444.23 at 3 merchants': plain 12px text node. Search '$1,952.15': 15px, fraction span with empty class. Payment review: span._titleHero_qaod7_12 34px/380 plain text '$1,042.95'."
+    },
+    {
+      "id": "home.i-two-button-systems",
+      "title": "Modal buttons come from two different button components",
+      "detail": "The 'Customize the Mercury demo' modal uses a different button implementation from every other modal, and 'Cancel' is styled three ways across Home dialogs: tinted pill with blue text, transparent text-only, and tinted pill with grey text at a smaller height.",
+      "nodeIds": [
+        "home.customize-demo-modal",
+        "home.create-account-modal",
+        "home.feedback-panel"
+      ],
+      "category": "component",
+      "severity": "medium",
+      "evidence": "Customize demo: classes _button_1rzdg_13 _tertiary_1rzdg_76/_primary_1rzdg_101 _small_1rzdg_88, radius 28px, h40, padding 8px 32px, label 15px/480; Cancel bg rgba(180,183,200,.12) color rgb(141,164,245). Create account: _button_r6b2u_20 _large_r6b2u_88 _tertiary_r6b2u_153, radius 9999px, h40, Cancel bg transparent color rgb(221,221,229). Feedback panel: _button_r6b2u_20 _small_r6b2u_72 _secondary_r6b2u_126, radius 9999px, h32, Cancel bg rgba(180,183,200,.12) color rgb(221,221,229)."
+    },
+    {
+      "id": "home.i-disabled-lookalike",
+      "title": "Dimmed primary buttons are sometimes disabled, sometimes not",
+      "detail": "'Submit', 'Create account' and 'Share feedback' all render at 40% opacity before the form is valid. 'Share feedback' is truly disabled, but 'Submit' and 'Create account' stay clickable and run validation, with no disabled or aria-disabled signal. Identical visuals, two behaviors.",
+      "nodeIds": [
+        "home.customize-demo-modal",
+        "home.create-account-modal",
+        "home.feedback-panel"
+      ],
+      "category": "interaction",
+      "severity": "low",
+      "evidence": "Customize demo Submit: opacity 0.4, disabled=false, aria-disabled null, class _disabled_1rzdg_20. Create account: opacity 0.4, disabled=false, class _appearDisabled_r6b2u_16; click shows 'You must make a selection.'. Share feedback: opacity 0.4, disabled=true, class _appearDisabled_r6b2u_16."
+    },
+    {
+      "id": "home.i-validation-copy",
+      "title": "Validation messages use different voice and punctuation",
+      "detail": "The Customize demo form says 'Please complete this field' / 'Please submit a valid email' (polite, no period) while Create account says 'You must make a selection.' (imperative, trailing period). The Customize form also flags Industry as incomplete while its placeholder 'Startup' reads like a selected value.",
+      "nodeIds": [
+        "home.customize-demo-invalid",
+        "home.create-account-invalid"
+      ],
+      "category": "copy",
+      "severity": "low",
+      "evidence": "Customize demo, empty Submit: six 'Please complete this field' messages, 12px/400 rgb(252,146,180); email 'bad@' gives 'Please submit a valid email'. Industry input role=combobox has placeholder 'Startup' and empty value. Create account error: 'You must make a selection.' 12px rgb(252,146,180), classes _tiny_qaod7_67 _text-error_12t49_1 _defaultErrorMessage_1tnh5_25."
+    },
+    {
+      "id": "home.i-empty-states",
+      "title": "Empty states have no shared pattern",
+      "detail": "Updates shows a lone 13px 'No updates' line; Tasks > Completed shows skeleton ghost rows, a 17px title and 15px body; Search with no matches shows no empty message at all, only a 'Search all transactions' row.",
+      "nodeIds": [
+        "home.updates-popover",
+        "home.tasks-completed",
+        "home.search-no-results"
+      ],
+      "category": "component",
+      "severity": "low",
+      "evidence": "Updates: 'No updates' 13px/400 rgb(221,221,229) under a 17px/400 title. Tasks: 'No completed tasks' 17px/400 #fff + 'You don’t have any completed tasks yet.' 15px/400 rgb(221,221,229) over skeleton rows. Search: only an option 'Search all transactions for \"zzqxnothing\"'."
+    },
+    {
+      "id": "home.i-date-formats",
+      "title": "Same date written three ways in the approval flow",
+      "detail": "The Tasks list shows 'Sep 23', the invite review sentence says 'on Sep 23, 2026', and the payment review shows 'Initiated on September 24, 2026'. Home widgets use 'Sep 29' and chart axes 'Aug 30'. The balance graph hover header says 'September 14, 2026' above an axis labelled 'Sep 14'. Times differ too: transaction drawers print 'Sep 23 at 5:12PM', the reimbursement panel 'Jul 4th at 5:00pm' (ordinal suffix, lowercase pm), and Command bubbles '5:31 PM' (with a space).",
+      "nodeIds": [
+        "home.tasks",
+        "home.task-invite-review",
+        "home.task-payment-review",
+        "home.balance-graph-hover",
+        "home.task-receipt-exemption",
+        "home.task-reimbursement",
+        "home.command-thinking"
+      ],
+      "category": "data-format",
+      "severity": "low",
+      "evidence": "DOM text: Tasks 'Received' cell 'Sep 23'; invite copy '...to Mercury Demo on Sep 23, 2026.'; payment review 'Initiated on' value 'September 24, 2026'. Graph hover header leaf 'September 13, 2026' (varies with pointer) 15px/400 rgb(244,245,249); axis tick 'Sep 14'. Drawer text 'Sep 23 at 5:12PM'; reimbursement panel 'Jul 4th at 5:00pm — by Jessica Awad' with 'Date of expense Jul 5, 2024'; Command timestamp '5:31 PM'."
+    },
+    {
+      "id": "home.i-badge-styles",
+      "title": "Adjacent badges use different treatments",
+      "detail": "On the invite review, the 'Admin' role badge is outlined while the card 'Pending' badges are filled, at the same size and color. The dashboard 'Failed' badge is a third, pink outlined variant.",
+      "nodeIds": [
+        "home.task-invite-review",
+        "home.index-transactions"
+      ],
+      "category": "component",
+      "severity": "low",
+      "evidence": "'Admin': 12px, parent border 1px solid rgba(180,183,200,.2), bg transparent, radius 4px, padding 0 8px. 'Pending': 12px, parent bg rgba(180,183,200,.28), no border, radius 4px, padding 0 8px. Dashboard 'Failed': 12px rgb(252,146,180), border 1px solid rgba(252,146,180,.36), bg transparent, radius 4px."
+    },
+    {
+      "id": "home.i-empty-value-dash",
+      "title": "Empty-value dash rendered in two colors",
+      "detail": "On the invite review, 'Department -' and 'Leading departments -' sit in the same list but the first dash is white and the second grey. Home's Bill Pay 'Due soon -' also uses a bare hyphen rather than an em dash or 'None'.",
+      "nodeIds": [
+        "home.task-invite-review",
+        "home.index"
+      ],
+      "category": "data-format",
+      "severity": "low",
+      "evidence": "Two '-' leaf nodes: rgb(255,255,255) 14px and rgb(157,157,168) 14px."
+    },
+    {
+      "id": "home.i-task-emphasis",
+      "title": "Task descriptions emphasize entities inconsistently",
+      "detail": "Some task rows bold the counterparty ('Jason Green', 'Bruce Collins', 'Monarch Books', 'Jane Black', 'Hardware', 'Jessica Awad', 'The Bayside Bistro') while equivalent entities stay regular ('Landon Shepherd' as subject or requester, 'Uber Eats', 'Alice C.'). Only the Monarch Books row ends with a period.",
+      "nodeIds": [
+        "home.tasks"
+      ],
+      "category": "copy",
+      "severity": "low",
+      "evidence": "Leaf spans at font-weight ≥480 per row: 'Monarch Books'; 'Jane Black'/'Hardware'; 'Bruce Collins'; 'Jason Green' (×2); 'Jessica Awad'/'The Bayside Bistro'. None in the Uber Eats, receipts, daily maximum and dual admin rows. 'Landon Shepherd' and 'Alice C.' at 400. Row 2 text ends 'Monarch Books.'; other rows have no terminal period."
+    },
+    {
+      "id": "home.i-legend-case",
+      "title": "Money In/Money Out casing differs between Command and Home",
+      "detail": "Home's Money movement cards say 'Money in' / 'Money out' (sentence case) but the Command chart legend says 'Money In' / 'Money Out' (title case).",
+      "nodeIds": [
+        "home.command-chart",
+        "home.index-money-movement"
+      ],
+      "category": "copy",
+      "severity": "low",
+      "evidence": "Command legend spans 'Money In' / 'Money Out' 13px rgb(195,195,204); Home headings 'Money in' / 'Money out'."
+    },
+    {
+      "id": "home.i-light-illustration",
+      "title": "Bookmarks popover illustration ignores dark theme",
+      "detail": "In dark mode the bookmarks education popover shows a light-mode screenshot, a bright white block inside a dark popover.",
+      "nodeIds": [
+        "home.bookmarks-popover"
+      ],
+      "category": "color",
+      "severity": "low",
+      "evidence": "img src /icons/bookmarks-education-popover.png 406x228 (single raster, no dark variant); popover bg rgb(23,23,33)."
+    },
+    {
+      "id": "home.i-chips-as-menuitems",
+      "title": "Filter chips, avatar and widget kebabs lack proper semantics",
+      "detail": "The Transactions widget chips and Tasks Incomplete/Completed chips behave like tabs but are exposed as role=menuitem buttons with no tablist or selected state. The avatar menu button and the four widget kebab buttons have no accessible name.",
+      "nodeIds": [
+        "home.index-transactions",
+        "home.tasks",
+        "home.avatar-menu",
+        "home.accounts-kebab"
+      ],
+      "category": "a11y",
+      "severity": "medium",
+      "evidence": "Dashboard: 5 <button role=\"menuitem\"> chips (Recent … Operating expenses), 0 [role=tablist]. Avatar <button aria-haspopup=\"menu\" class=\"_menuButton_ko7ja_21\"> with no aria-label, img alt=\"\". Kebabs: 4× <button aria-haspopup=\"menu\" class=\"… _menuButton_ok3n2_7\"> with no aria-label or text."
+    },
+    {
+      "id": "home.i-private-mode-leak",
+      "title": "Private Mode reveals amount magnitude",
+      "detail": "Masked values keep one dot per digit and keep K/M suffixes, so '$••M', '$•••K' and dot count still disclose the order of magnitude of each balance.",
+      "nodeIds": [
+        "home.private-mode-on"
+      ],
+      "category": "interaction",
+      "severity": "low",
+      "evidence": "Masked text: hero '$•••••••••' (9 dots for $5,216,471.18), AR '$•••' vs Ops '$•••••••••', graph deltas '$••M' / '$•••K', Bill Pay '$••K'."
+    },
+    {
+      "id": "home.i-approval-actions",
+      "title": "Approve/decline actions change order, verb and emphasis per task",
+      "detail": "Each task type ends in a different approval control. Recurring payment: Decline left, 'Approve payments' right, 40px. Dual admin and reimbursement: Approve left, Decline right, 32px. Receipt exemption: 'Reject' (ghost) then 'Approve exception' as a grey secondary button, so the approve action has no primary color. The negative verb switches between Decline and Reject.",
+      "nodeIds": [
+        "home.task-recurring-payment",
+        "home.task-dual-admin",
+        "home.task-reimbursement",
+        "home.task-receipt-exemption"
+      ],
+      "category": "component",
+      "severity": "medium",
+      "evidence": "Recurring payment: Decline x115 / Approve payments x243, both h40 pad 8px 32px; Decline bg rgba(252,146,180,.2) color rgb(252,146,180); Approve bg rgb(82,102,235). Dual admin + reimbursement: Approve (visually first) and Decline h32 pad 4px 16px, _small_r6b2u_72 _primary_ / _destructive_. Receipt exemption: 'Reject' _tertiary_r6b2u_153 bg transparent color rgb(221,221,229); 'Approve exception' _secondary_r6b2u_126 bg rgba(180,183,200,.12) color rgb(221,221,229)."
+    },
+    {
+      "id": "home.i-task-destination-mismatch",
+      "title": "Tasks deep-link to records that don't match the task",
+      "detail": "'Review category for your $300.03 Uber Eats transaction' opens a $300.03 ACH payment to Domestic Ads. 'Approve new daily maximum payment limit' opens a Daily maximum page that says 'No daily maximum currently enabled' with no pending request. 'Approve Jane Black's overspend' lands on a drawer whose only action is 'Cancel request'. In the list, that overspend row's hover link reads 'Approve' while the other six 'Approve …' tasks read 'View'.",
+      "nodeIds": [
+        "home.tasks",
+        "home.task-category-review",
+        "home.task-daily-maximum",
+        "home.task-overspend",
+        "home.tasks-row-hover"
+      ],
+      "category": "copy",
+      "severity": "medium",
+      "evidence": "Task text 'Review category for your $300.03 Uber Eats transaction' → /transactions/electronicPayment-1 drawer: 'Mercury ACH Payment −$300.03 … Domestic Ads'. Daily maximum task → /settings/approvals/dailyMaximum text 'No daily maximum currently enabled' + 'Set up'. Overspend drawer: buttons matching /approv/i = only the budget select ('$2,205.94 over if approved this month'); link 'Cancel request'. Row snapshot: overspend row ends 'Approve', rows 4-9 end 'View'."
+    },
+    {
+      "id": "home.i-command-card-mismatch",
+      "title": "Command confirmation shows a different card than proposed",
+      "detail": "The 'Issue debit card' proposal shows an unnamed card for Jane Black at $500.00 per month. After Confirm, the 'Debit card issued' result names 'Office Card' for Alice Chen and drops the spend limit. The user confirmed one thing and got another.",
+      "nodeIds": [
+        "home.command-card-proposal",
+        "home.command-card-issued"
+      ],
+      "category": "data-format",
+      "severity": "high",
+      "evidence": "Proposal DOM: 'Issue debit card | Jane Black | Jane Black | Spend limit $500.00 per month | Type Virtual Debit'. Result DOM: 'Debit card issued | Office Card | Alice Chen | •••• •••• •••• 1234 | Type Virtual Debit' (no Spend limit row); message 'Set up: a virtual debit card with a $500 monthly limit and software-only restriction.'"
+    },
+    {
+      "id": "home.i-personalized-totals",
+      "title": "Personalized demo balance contradicts account rows",
+      "detail": "After submitting Customize demo with a $250,000 balance, the hero reads $250,000.00 but the Accounts widget still lists Ops / Payroll $2,023,267.12, AP $226,767.82 and Treasury $200,000.00, and the Ops / Payroll bookmark still shows $2,023,267.12. Command's card proposal still names Jane Black while Home greets 'Test'.",
+      "nodeIds": [
+        "home.index-personalized",
+        "home.customize-demo-success"
+      ],
+      "category": "data-format",
+      "severity": "low",
+      "evidence": "After Submit (Test Reviewer, Acme Test Co, $250,000): heading 'Welcome, Test', hero '$250,000.00'; account links 'Treasury $200,000.00', 'Ops / Payroll $2,023,267.12', 'AP $226,767.82', 'AR $0.00'; Ops / Payroll bookmark still '$2,023,267.12'."
+    },
+    {
+      "id": "home.i-approved-task-lingers",
+      "title": "Approved tasks stay in the Tasks list",
+      "detail": "After approving the $1,042.95 Jason Green payment and the $375.87 Jessica Awad reimbursement, both tasks still appear under Incomplete, the sidebar badge still reads 10, and Completed still says 'No completed tasks'. The success screens say the work is done; Tasks disagrees.",
+      "nodeIds": [
+        "home.task-payment-approved",
+        "home.task-reimbursement-approved",
+        "home.tasks",
+        "home.tasks-completed"
+      ],
+      "category": "interaction",
+      "severity": "medium",
+      "evidence": "After approval: /send-money/pay/success heading 'You’ve approved an ACH payment'; toast 'Reimbursement payment approved'. Then /tasks: body text still contains 'Approve $1,042.95 payment to Jason Green' and 'Approve $375.87 reimbursement…', sidebar 'Tasks\\n10'; Completed tab 'No completed tasks' 17px/400."
+    },
+    {
+      "id": "home.i-title-case-ctas",
+      "title": "Title Case creeps into buttons and badges",
+      "detail": "Most CTAs and labels are sentence case ('View all accounts', 'Create account', 'Approve payments', 'Money in'), but the payment success CTA reads 'Back to Needs Approval' and Reimbursements status badges read 'Payment Pending', 'Pending Review', 'Details Requested', 'Action Required' next to the invite review's 'Pending'. Search suggestions list both 'Failed Transaction' and 'Failed transaction', 'Transfer Limit' and 'Transfer limit', 'Prohibited Countries' and 'Prohibited countries'.",
+      "nodeIds": [
+        "home.task-payment-approved",
+        "home.task-reimbursement-approved",
+        "home.task-invite-review",
+        "home.search-open"
+      ],
+      "category": "copy",
+      "severity": "low",
+      "evidence": "Success page button text 'Back to Needs Approval'. Reimbursements list text: 'Payment Pending', 'Pending Review', 'Declined', 'Details Requested', 'Action Required'. Invite review badge 'Pending' 12px, bg rgba(180,183,200,.28), radius 4px. Search option texts: 'Failed Transaction', 'Transfer Limit', 'Prohibited Countries' (15px rgb(195,195,204)) alongside 'Failed transaction', 'Transfer limit', 'Prohibited countries'."
+    }
+  ],
+  "blocked": []
+}

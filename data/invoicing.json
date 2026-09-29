@@ -1,0 +1,1894 @@
+{
+ "area": "invoicing",
+ "title": "Invoicing",
+ "nodes": [
+  {
+   "id": "invoicing.index",
+   "title": "Invoicing",
+   "url": "/invoicing",
+   "image": "screens/invoicing/01-index.png",
+   "kind": "page",
+   "note": "Invoice list with Total open / Overdue / Paid summary cards, Filters/Status/Type filters, Export all, and a sortable table of invoices and payment links."
+  },
+  {
+   "id": "invoicing.index-paid-rows",
+   "title": "Invoice list (processing & paid rows)",
+   "url": "/invoicing",
+   "image": "screens/invoicing/02-index-paid-rows.png",
+   "kind": "page",
+   "note": "Lower part of the invoice table showing Processing and Paid status badges, payment links and recurring series sub-labels (Series complete/canceled)."
+  },
+  {
+   "id": "invoicing.status-filter-menu",
+   "title": "Status filter menu",
+   "url": "/invoicing",
+   "image": "screens/invoicing/03-status-filter-menu.png",
+   "kind": "menu",
+   "note": "Status dropdown with checkbox options Open, Overdue, Scheduled, Active, Processing, Paid, each with a description."
+  },
+  {
+   "id": "invoicing.filtered-overdue",
+   "title": "List filtered to Overdue",
+   "url": "/invoicing?invoiceStatus=overdue",
+   "image": "screens/invoicing/04-filtered-overdue.png",
+   "kind": "form-state",
+   "note": "Table filtered to three overdue invoices, with an 'Overdue x' chip, Filters (1), Reset and 'Export filtered'."
+  },
+  {
+   "id": "invoicing.type-filter-menu",
+   "title": "Type filter menu",
+   "url": "/invoicing",
+   "image": "screens/invoicing/05-type-filter-menu.png",
+   "kind": "menu",
+   "note": "Type dropdown with Payment link, One time invoice and Recurring invoice checkboxes."
+  },
+  {
+   "id": "invoicing.filters-menu",
+   "title": "Filters panel",
+   "url": "/invoicing",
+   "image": "screens/invoicing/06-filters-menu.png",
+   "kind": "menu",
+   "note": "Advanced filter panel with Show canceled toggle and facets (Due Date, Status, Customer, Amount, Invoice Number, Invoice Date, Type, Series ID, Delivery); Due Date facet shows a range picker and month grid."
+  },
+  {
+   "id": "invoicing.create-step1",
+   "title": "Request money: choose type",
+   "url": "/invoicing/create-invoice",
+   "image": "screens/invoicing/07-request-money.png",
+   "kind": "page",
+   "note": "First step of Request money: customer combobox and three options (one-time invoice, recurring series, payment link only) with a live invoice preview on the right."
+  },
+  {
+   "id": "invoicing.create-step1-error",
+   "title": "Request money: customer required",
+   "url": "/invoicing/create-invoice",
+   "image": "screens/invoicing/08-create-step1-next-empty.png",
+   "kind": "validation-error",
+   "note": "Clicking Next with no customer turns the Name field red with 'Please complete this field'."
+  },
+  {
+   "id": "invoicing.create-customer-dropdown",
+   "title": "Customer picker",
+   "url": "/invoicing/create-invoice",
+   "image": "screens/invoicing/09-create-customer-dropdown.png",
+   "kind": "menu",
+   "note": "Customer combobox open: 'Add new customer' action plus the list of existing customers with emails."
+  },
+  {
+   "id": "invoicing.create-customer-selected",
+   "title": "Request money: customer selected",
+   "url": "/invoicing/create-invoice",
+   "image": "screens/invoicing/10-create-customer-selected.png",
+   "kind": "form-state",
+   "note": "Orbital Advisory Partners selected; preview fills in the To address and Next becomes fully opaque."
+  },
+  {
+   "id": "invoicing.create-setup",
+   "title": "Invoice set up",
+   "url": "/invoicing/create-invoice",
+   "image": "screens/invoicing/11-create-invoice-form.png",
+   "kind": "page",
+   "note": "Step 2: customer card with Edit, currency, line items (item/qty/unit price), Add line item, Add sales tax, total, payer memo, attachment and destination account, with Invoice/Payer page/Email preview tabs."
+  },
+  {
+   "id": "invoicing.create-setup-error",
+   "title": "Invoice set up: empty line item",
+   "url": "/invoicing/create-invoice",
+   "image": "screens/invoicing/12-create-form-validation.png",
+   "kind": "validation-error",
+   "note": "Clicking Next with an empty line flags Line item and Unit price with 'Please complete this field'."
+  },
+  {
+   "id": "invoicing.create-catalog-picker",
+   "title": "Line item catalog picker",
+   "url": "/invoicing/create-invoice",
+   "image": "screens/invoicing/13-create-line-item-catalog.png",
+   "kind": "menu",
+   "note": "Focusing a line item opens the catalog list (Add new catalog item plus saved items with prices)."
+  },
+  {
+   "id": "invoicing.create-line-item-typed",
+   "title": "Custom line item typed",
+   "url": "/invoicing/create-invoice",
+   "image": "screens/invoicing/14-create-line-item-typed.png",
+   "kind": "form-state",
+   "note": "Typing a name that is not in the catalog leaves only 'Add new catalog item' in the picker."
+  },
+  {
+   "id": "invoicing.create-line-items-filled",
+   "title": "Line items filled",
+   "url": "/invoicing/create-invoice",
+   "image": "screens/invoicing/15-create-line-items-filled.png",
+   "kind": "form-state",
+   "note": "Two line items (catalog Advisory Retainer and a custom Onboarding workshop x2) plus memo; preview and total update to $7,500.00."
+  },
+  {
+   "id": "invoicing.create-sales-tax",
+   "title": "Sales tax added",
+   "url": "/invoicing/create-invoice",
+   "image": "screens/invoicing/16-create-sales-tax.png",
+   "kind": "form-state",
+   "note": "Add sales tax inserts a Sales tax (%) row; totals split into Subtotal, Tax (8.875%) and Total."
+  },
+  {
+   "id": "invoicing.create-preview-payer",
+   "title": "Preview: Payer page",
+   "url": "/invoicing/create-invoice",
+   "image": "screens/invoicing/17-create-preview-payer-page.png",
+   "kind": "form-state",
+   "note": "Payer page preview tab: browser mock of the hosted pay page with amount, invoice number, memo and Download Invoice."
+  },
+  {
+   "id": "invoicing.create-preview-email",
+   "title": "Preview: Email",
+   "url": "/invoicing/create-invoice",
+   "image": "screens/invoicing/18-create-preview-email.png",
+   "kind": "form-state",
+   "note": "Email preview tab: subject, preview text, to/from headers and the 'You've been sent a new invoice' email body with Pay invoice button."
+  },
+  {
+   "id": "invoicing.create-setup-bottom",
+   "title": "Invoice set up: destination",
+   "url": "/invoicing/create-invoice",
+   "image": "screens/invoicing/19-create-form-bottom.png",
+   "kind": "form-state",
+   "note": "Bottom of step 2: payer memo, Upload attachment, Destination account and 'Use a secure virtual account number' toggle."
+  },
+  {
+   "id": "invoicing.create-destination-menu",
+   "title": "Destination account picker",
+   "url": "/invoicing/create-invoice",
+   "image": "screens/invoicing/20-create-destination-account.png",
+   "kind": "menu",
+   "note": "Destination account dropdown listing Mercury accounts with balances and masked numbers."
+  },
+  {
+   "id": "invoicing.create-details",
+   "title": "Invoice details",
+   "url": "/invoicing/create-invoice",
+   "image": "screens/invoicing/22-create-details.png",
+   "kind": "page",
+   "note": "Step 3: invoice number, PO number, invoice and due dates, service period, accepted payment methods (ACH/wire, Pay with Mercury, international wires, cards via Stripe, ACH debit) and internal set up."
+  },
+  {
+   "id": "invoicing.create-review",
+   "title": "Review and send",
+   "url": "/invoicing/create-invoice",
+   "image": "screens/invoicing/23-create-send-step.png",
+   "kind": "page",
+   "note": "Step 4: amount summary, Email to / CC, Schedule send and Send automated reminders with reminder schedule; Create only (disabled) and Create & send email."
+  },
+  {
+   "id": "invoicing.create-schedule-send",
+   "title": "Review: schedule send on",
+   "url": "/invoicing/create-invoice",
+   "image": "screens/invoicing/24-create-schedule-send.png",
+   "kind": "form-state",
+   "note": "Schedule send toggled on reveals a Send date field (9am ET) and the primary action becomes Create & schedule."
+  },
+  {
+   "id": "invoicing.create-sending",
+   "title": "Creating invoice",
+   "url": "/invoicing/create-invoice",
+   "image": "screens/invoicing/25-create-sending-loading.png",
+   "kind": "form-state",
+   "note": "After clicking Create & send email the primary button turns into a disabled 'Loading...' state."
+  },
+  {
+   "id": "invoicing.create-sent",
+   "title": "Invoice created and sent",
+   "url": "/invoicing/create-invoice",
+   "image": "screens/invoicing/26-create-sent-confirmation.png",
+   "kind": "confirmation",
+   "note": "Success screen: 'Your invoice has been created and sent!', a $7,500.00 summary card for Orbital Advisory Partners due Oct 24, 2026, recipient chip, copyable payment link, Send another invoice / Return to dashboard, and an 'Invoice created and sent!' toast."
+  },
+  {
+   "id": "invoicing.index-loading",
+   "title": "Invoice list loading",
+   "url": "/invoicing?id=…",
+   "image": "screens/invoicing/27-index-loading-skeleton.png",
+   "kind": "page",
+   "note": "Skeleton placeholders for the summary cards and table while the list reloads after Return to dashboard; an 'Invoice not found' error toast shows for the invoice that was just created."
+  },
+  {
+   "id": "invoicing.invoice-detail",
+   "title": "Invoice detail panel",
+   "url": "/invoicing?id=…",
+   "image": "screens/invoicing/28-invoice-detail-new.png",
+   "kind": "drawer",
+   "note": "Right-hand detail panel for the new Orbital invoice: Active badge, $7,500.00, activity timeline with '+ 3 more events', destination account (AR, virtual account number) and Edit / Remind / More actions."
+  },
+  {
+   "id": "invoicing.invoice-detail-events",
+   "title": "Invoice detail: all events",
+   "url": "/invoicing?id=…",
+   "image": "screens/invoicing/29-invoice-detail-events.png",
+   "kind": "drawer",
+   "note": "'+ 3 more events' expands the timeline to show every send, edit and reminder event, with a Collapse events link."
+  },
+  {
+   "id": "invoicing.invoice-more-menu",
+   "title": "Invoice More menu",
+   "url": "/invoicing?id=…",
+   "image": "screens/invoicing/30-invoice-detail-more-menu.png",
+   "kind": "menu",
+   "note": "More menu on the detail panel: Mark as paid, Make a copy, Cancel."
+  },
+  {
+   "id": "invoicing.mark-paid-modal",
+   "title": "Mark as paid modal",
+   "url": "/invoicing?id=…",
+   "image": "screens/invoicing/31-mark-as-paid-modal.png",
+   "kind": "modal",
+   "note": "Mark as paid dialog defaulting to 'In Mercury' with a transaction-match search and an optional email receipt checkbox."
+  },
+  {
+   "id": "invoicing.mark-paid-external",
+   "title": "Mark as paid: externally",
+   "url": "/invoicing?id=…",
+   "image": "screens/invoicing/32-mark-as-paid-externally.png",
+   "kind": "form-state",
+   "note": "Choosing Externally swaps the transaction search for Paid on date and Payment method (Cash) fields."
+  },
+  {
+   "id": "invoicing.mark-paid-submitting",
+   "title": "Mark as paid submitting",
+   "url": "/invoicing?id=…",
+   "image": "screens/invoicing/33-mark-as-paid-submitting.png",
+   "kind": "form-state",
+   "note": "Submitting shows a three-dot loader in the primary button and dims Close."
+  },
+  {
+   "id": "invoicing.invoice-paid",
+   "title": "Invoice marked paid",
+   "url": "/invoicing?id=…",
+   "image": "screens/invoicing/34-invoice-marked-paid.png",
+   "kind": "toast",
+   "note": "Detail panel flips to a green Paid badge with 'Paid on Sep 24 via Cash', Undo paid, and a 'Marked as paid' toast; Paid summary card rises to $82.5K."
+  },
+  {
+   "id": "invoicing.invoice-detail-overdue",
+   "title": "Overdue invoice detail",
+   "url": "/invoicing?id=inv-aphelion-overdue-media",
+   "image": "screens/invoicing/35-invoice-detail-overdue.png",
+   "kind": "drawer",
+   "note": "Detail panel for overdue INV-0007 (Aphelion, $16,500.00) with orange Overdue badge, activity timeline and Edit / Remind / More."
+  },
+  {
+   "id": "invoicing.invoice-detail-lower",
+   "title": "Invoice detail: details & documents",
+   "url": "/invoicing?id=inv-aphelion-overdue-media",
+   "image": "screens/invoicing/36-invoice-detail-lower.png",
+   "kind": "drawer",
+   "note": "Panel scrolled past the actions: Due date, Invoice date, Invoice no., Automated reminders, Recurring, and the invoice payment link field."
+  },
+  {
+   "id": "invoicing.remind-modal",
+   "title": "Send a reminder modal",
+   "url": "/invoicing?id=inv-aphelion-overdue-media",
+   "image": "screens/invoicing/37-remind-modal.png",
+   "kind": "modal",
+   "note": "Confirmation to send a manual reminder even though automated reminders are on, showing the recipient chip, Close and 'Yes, Send Now'."
+  },
+  {
+   "id": "invoicing.reminder-sent",
+   "title": "Reminder sent toast",
+   "url": "/invoicing?id=inv-aphelion-overdue-media",
+   "image": "screens/invoicing/38-reminder-sent-toast.png",
+   "kind": "toast",
+   "note": "'Reminder sent' toast over the list after confirming the manual reminder."
+  },
+  {
+   "id": "invoicing.edit-invoice",
+   "title": "Edit Invoice",
+   "url": "/invoicing/edit-invoice/inv-aphelion-overdue-media",
+   "image": "screens/invoicing/39-edit-invoice.png",
+   "kind": "page",
+   "note": "Edit flow for an existing invoice: customer and currency locked, prefilled catalog line items, memo and destination, with live preview."
+  },
+  {
+   "id": "invoicing.series-index",
+   "title": "Recurring Series",
+   "url": "/invoicing/series",
+   "image": "screens/invoicing/40-series-index.png",
+   "kind": "page",
+   "note": "Table of recurring series (customer, series ID, status, amount, frequency with next date) and a Create series button."
+  },
+  {
+   "id": "invoicing.series-detail",
+   "title": "Series detail",
+   "url": "/invoicing/series/srs-meridian-monthly",
+   "image": "screens/invoicing/41-series-detail.png",
+   "kind": "page",
+   "note": "Full-screen series page for Meridian Consulting: amount, series ID, primary email, invoice activity table, status/frequency/next/ends sidebar, Edit series, copy and delete."
+  },
+  {
+   "id": "invoicing.series-queued-menu",
+   "title": "Queued invoice actions",
+   "url": "/invoicing/series/srs-meridian-monthly",
+   "image": "screens/invoicing/42-series-queued-actions.png",
+   "kind": "menu",
+   "note": "'…' menu on the queued invoice row: Edit queued invoice, Send now, Skip invoice."
+  },
+  {
+   "id": "invoicing.series-skip-modal",
+   "title": "Skip queued invoice modal",
+   "url": "/invoicing/series/srs-meridian-monthly",
+   "image": "screens/invoicing/43-series-skip-invoice-modal.png",
+   "kind": "modal",
+   "note": "Confirmation dialog explaining that the next invoice will be queued automatically, with Close and Skip invoice."
+  },
+  {
+   "id": "invoicing.create-series-step1",
+   "title": "Create series: choose type",
+   "url": "/invoicing/create-invoice",
+   "image": "screens/invoicing/44-create-series-step1.png",
+   "kind": "page",
+   "note": "Create series opens the Request money chooser with 'Create a recurring series' preselected; Astral Creative Co chosen, with a stacked-invoice preview."
+  },
+  {
+   "id": "invoicing.create-series-setup",
+   "title": "Recurring series set up",
+   "url": "/invoicing/create-invoice",
+   "image": "screens/invoicing/45-create-series-setup.png",
+   "kind": "page",
+   "note": "Series step 2: customer card, invoice prefix INV, currency, one line item (Monthly design retainer, $4,000), payer memo, with a stacked-invoice preview showing 'Invoice no. INV-1'."
+  },
+  {
+   "id": "invoicing.create-series-frequency",
+   "title": "Series frequency",
+   "url": "/invoicing/create-invoice",
+   "image": "screens/invoicing/46-create-series-schedule.png",
+   "kind": "page",
+   "note": "Sentence-style frequency step: send first invoice on a date, series ends 'when I cancel', sent 'monthly on the 24th', terms 'due on receipt'."
+  },
+  {
+   "id": "invoicing.create-series-frequency-menu",
+   "title": "Frequency options menu",
+   "url": "/invoicing/create-invoice",
+   "image": "screens/invoicing/47-create-series-frequency-menu.png",
+   "kind": "menu",
+   "note": "Inline dropdown of cadence options: Weekly on Thursday, Monthly on the 24th, Monthly on the last Thursday, Custom."
+  },
+  {
+   "id": "invoicing.create-series-terms-menu",
+   "title": "Payment terms menu",
+   "url": "/invoicing/create-invoice",
+   "image": "screens/invoicing/48-create-series-frequency-set.png",
+   "kind": "menu",
+   "note": "Inline payment-terms dropdown (Due on receipt, Net 30/60/90, Custom) with Net 30 chosen; preview due date moves to 10/24/2026."
+  },
+  {
+   "id": "invoicing.create-series-payment",
+   "title": "Series payment details",
+   "url": "/invoicing/create-invoice",
+   "image": "screens/invoicing/49-create-series-details.png",
+   "kind": "page",
+   "note": "Series step 4: accepted payment methods, destination account and virtual account number toggle."
+  },
+  {
+   "id": "invoicing.create-series-review",
+   "title": "Series review and create",
+   "url": "/invoicing/create-invoice",
+   "image": "screens/invoicing/50-create-series-review.png",
+   "kind": "page",
+   "note": "Review step with series summary (monthly, start Sep 24, Net 30 days, never ends), email/CC, automated reminders and 'Create series and send'."
+  },
+  {
+   "id": "invoicing.create-series-success",
+   "title": "Series created",
+   "url": "/invoicing/create-invoice",
+   "image": "screens/invoicing/51-create-series-success.png",
+   "kind": "confirmation",
+   "note": "'Your recurring series has been created' with the series summary, recipient, Create another series and Return to dashboard."
+  },
+  {
+   "id": "invoicing.series-detail-new",
+   "title": "New series detail",
+   "url": "/invoicing/series/<id>",
+   "image": "screens/invoicing/52-series-detail-new.png",
+   "kind": "page",
+   "note": "Series S-0006 for Astral Creative Co right after creation, showing a single queued invoice INV-34 for Oct 24."
+  },
+  {
+   "id": "invoicing.series-index-after",
+   "title": "Series list with new series",
+   "url": "/invoicing/series",
+   "image": "screens/invoicing/53-series-index-after-create.png",
+   "kind": "page",
+   "note": "Recurring Series list after closing the new series, now including the Astral Creative Co series."
+  },
+  {
+   "id": "invoicing.customers-index",
+   "title": "Customers",
+   "url": "/invoicing/customers",
+   "image": "screens/invoicing/54-customers-index.png",
+   "kind": "page",
+   "note": "Customer table (name, email, last paid you) with unlabeled edit and request icon buttons per row and an Add customer button."
+  },
+  {
+   "id": "invoicing.customer-detail",
+   "title": "Customer detail panel",
+   "url": "/invoicing/customers?customerId=cust-aphelion",
+   "image": "screens/invoicing/55-customer-detail.png",
+   "kind": "drawer",
+   "note": "Right panel for Aphelion Financial Advisors: Edit, Request, Delete, primary email, total sent (2 • $17.3K) and last paid date."
+  },
+  {
+   "id": "invoicing.edit-customer-blocked",
+   "title": "Edit customer blocked",
+   "url": "/invoicing/customers?customerId=cust-aphelion",
+   "image": "screens/invoicing/56-edit-customer.png",
+   "kind": "modal",
+   "note": "Edit is blocked because the customer has a pending payment; dialog offers Go back or View pending payments."
+  },
+  {
+   "id": "invoicing.add-customer",
+   "title": "Add customer",
+   "url": "/invoicing/customers/add-customer",
+   "image": "screens/invoicing/57-add-customer-modal.png",
+   "kind": "page",
+   "note": "Full-screen Add customer form: name, primary email, additional emails, address toggle, with Create customer disabled until valid."
+  },
+  {
+   "id": "invoicing.add-customer-invalid",
+   "title": "Add customer: invalid email",
+   "url": "/invoicing/customers/add-customer",
+   "image": "screens/invoicing/58-add-customer-invalid-email.png",
+   "kind": "validation-error",
+   "note": "Entering 'ap@lumen' turns the email field red with 'Please submit a valid email'."
+  },
+  {
+   "id": "invoicing.add-customer-address",
+   "title": "Add customer: address",
+   "url": "/invoicing/customers/add-customer",
+   "image": "screens/invoicing/59-add-customer-address.png",
+   "kind": "form-state",
+   "note": "Address toggle on reveals country, address lines, city, state and ZIP; Create customer becomes enabled."
+  },
+  {
+   "id": "invoicing.customer-created",
+   "title": "Customer added",
+   "url": "/invoicing/customers?customerId=<id>",
+   "image": "screens/invoicing/60-customer-created.png",
+   "kind": "toast",
+   "note": "New customer Lumen Robotics selected in the list with its detail panel (address, Total sent 0, No payment history) and a 'Customer added' toast."
+  },
+  {
+   "id": "invoicing.delete-customer-modal",
+   "title": "Delete customer modal",
+   "url": "/invoicing/customers?customerId=<id>",
+   "image": "screens/invoicing/61-delete-customer-modal.png",
+   "kind": "modal",
+   "note": "'Delete Lumen Robotics?' confirmation noting payment history is preserved, with Go back and a red Delete customer."
+  },
+  {
+   "id": "invoicing.catalog-index",
+   "title": "Catalog",
+   "url": "/invoicing/catalog",
+   "image": "screens/invoicing/62-catalog-index.png",
+   "kind": "page",
+   "note": "Catalog table of saved items with description, unit price and last updated, plus Add item."
+  },
+  {
+   "id": "invoicing.add-catalog-item",
+   "title": "Add Item",
+   "url": "/invoicing/catalog/add-item",
+   "image": "screens/invoicing/63-add-catalog-item.png",
+   "kind": "page",
+   "note": "Full-screen Add Item form: item name, unit price, optional description; Create item disabled until required fields are filled."
+  },
+  {
+   "id": "invoicing.add-catalog-item-filled",
+   "title": "Add Item filled",
+   "url": "/invoicing/catalog/add-item",
+   "image": "screens/invoicing/64-add-catalog-item-filled.png",
+   "kind": "form-state",
+   "note": "Add Item form completed (Onboarding Workshop, $1,250, description) with Create item enabled."
+  },
+  {
+   "id": "invoicing.catalog-item-created",
+   "title": "Catalog item added",
+   "url": "/invoicing/catalog?productId=<id>",
+   "image": "screens/invoicing/65-catalog-item-created.png",
+   "kind": "toast",
+   "note": "New item highlighted with its detail panel (price, description, last updated, used, last used) and an 'Item added' toast."
+  },
+  {
+   "id": "invoicing.delete-catalog-item-modal",
+   "title": "Delete catalog item modal",
+   "url": "/invoicing/catalog?productId=<id>",
+   "image": "screens/invoicing/66-delete-catalog-item-modal.png",
+   "kind": "modal",
+   "note": "'Delete Onboarding Workshop?' confirmation explaining referencing invoices keep a standalone line item."
+  },
+  {
+   "id": "invoicing.catalog-item-deleted",
+   "title": "Catalog item deleted",
+   "url": "/invoicing/catalog",
+   "image": "screens/invoicing/67-catalog-item-deleted.png",
+   "kind": "toast",
+   "note": "Catalog list without the item and a 'Product deleted' toast."
+  },
+  {
+   "id": "invoicing.settings-general",
+   "title": "Invoice settings: General",
+   "url": "/invoicing/invoice-settings",
+   "image": "screens/invoicing/68-invoice-settings.png",
+   "kind": "page",
+   "note": "Invoice settings General tab: invoice header (company, email, address, phone), integrations (Stripe card payments, Invoicing API) and configuration toggles, with preview."
+  },
+  {
+   "id": "invoicing.settings-branding",
+   "title": "Invoice settings: Branding",
+   "url": "/invoicing/invoice-settings",
+   "image": "screens/invoicing/69-invoice-settings-branding.png",
+   "kind": "page",
+   "note": "Branding tab: six color swatches and company logo display with Manage Logo."
+  },
+  {
+   "id": "invoicing.settings-branding-blue",
+   "title": "Branding: color changed",
+   "url": "/invoicing/invoice-settings",
+   "image": "screens/invoicing/70-invoice-settings-branding-blue.png",
+   "kind": "form-state",
+   "note": "Selecting the blue/teal swatch retints the invoice preview background."
+  },
+  {
+   "id": "invoicing.settings-defaults",
+   "title": "Invoice settings: Defaults",
+   "url": "/invoicing/invoice-settings",
+   "image": "screens/invoicing/71-invoice-settings-defaults.png",
+   "kind": "page",
+   "note": "Defaults tab: default payer memo, default CC emails, and toggles for virtual account numbers and automated reminders."
+  },
+  {
+   "id": "invoicing.settings-saved",
+   "title": "Settings saved",
+   "url": "/invoicing",
+   "image": "screens/invoicing/72-invoice-settings-saved.png",
+   "kind": "toast",
+   "note": "Save returns to the invoice list with a 'Settings saved' toast."
+  },
+  {
+   "id": "invoicing.payment-link-option",
+   "title": "Request money: payment link",
+   "url": "/invoicing/create-invoice",
+   "image": "screens/invoicing/73-payment-link-option.png",
+   "kind": "form-state",
+   "note": "'Request money without an invoice' selected for Vega Compliance Partners; preview switches to the payer page mock."
+  },
+  {
+   "id": "invoicing.payment-link-details",
+   "title": "Payment link details",
+   "url": "/invoicing/create-invoice",
+   "image": "screens/invoicing/74-payment-link-setup.png",
+   "kind": "page",
+   "note": "Payment link step: customer, currency, single amount, memo, attachment, methods and destination, with a Payer page preview."
+  },
+  {
+   "id": "invoicing.payment-link-error",
+   "title": "Payment link: amount required",
+   "url": "/invoicing/create-invoice",
+   "image": "screens/invoicing/75-payment-link-validation.png",
+   "kind": "validation-error",
+   "note": "Clicking Create & send with no amount flags Amount with 'Please complete this field'."
+  },
+  {
+   "id": "invoicing.payment-link-filled",
+   "title": "Payment link filled",
+   "url": "/invoicing/create-invoice",
+   "image": "screens/invoicing/76-payment-link-filled.png",
+   "kind": "form-state",
+   "note": "Amount $2,500 and memo entered; payer preview shows the amount."
+  },
+  {
+   "id": "invoicing.payment-link-sent",
+   "title": "Payment link sent",
+   "url": "/invoicing/create-invoice",
+   "image": "screens/invoicing/77-payment-link-sent.png",
+   "kind": "confirmation",
+   "note": "'Your payment link has been created and sent' with amount, copyable link, Create another request, Return to dashboard and a 'Payment link created!' toast."
+  },
+  {
+   "id": "invoicing.create-due-date-menu",
+   "title": "Due date menu",
+   "url": "/invoicing/create-invoice",
+   "image": "screens/invoicing/90-create-due-date-menu.png",
+   "kind": "menu",
+   "note": "Due date dropdown on Invoice details: Sep 24, 2026 (Due on receipt), Oct 24 (Net 30), Nov 23 (Net 60), Dec 23 (Net 90) and Custom…. The field is empty while the preview already shows Due date 10/24/2026."
+  },
+  {
+   "id": "invoicing.mark-paid-transaction-match",
+   "title": "Transaction match: no results",
+   "url": "/invoicing?id=…",
+   "image": "screens/invoicing/91-mark-paid-transaction-match.png",
+   "kind": "empty-state",
+   "note": "Opening the Transaction match field in Mark as paid shows a Paid on / Paid by / Amount / Payment Method table with a single 'No results' row that overlaps the dialog buttons."
+  },
+  {
+   "id": "invoicing.create-series-ends-menu",
+   "title": "Series end options",
+   "url": "/invoicing/create-invoice",
+   "image": "screens/invoicing/92-create-series-ends-menu.png",
+   "kind": "menu",
+   "note": "Inline 'series ends' dropdown on the Frequency step: On (ends on a specific date), After (choose how many invoices), When I cancel (no end date)."
+  },
+  {
+   "id": "invoicing.create-series-ends-after",
+   "title": "Series ends after N invoices",
+   "url": "/invoicing/create-invoice",
+   "image": "screens/invoicing/93-create-series-ends-after.png",
+   "kind": "form-state",
+   "note": "Choosing After adds an inline count field: 'The recurring invoice series ends after 12 invoices'."
+  },
+  {
+   "id": "invoicing.edit-series",
+   "title": "Edit recurring series",
+   "url": "/invoicing/series/srs-meridian-monthly/edit",
+   "image": "screens/invoicing/94-edit-series.png",
+   "kind": "page",
+   "note": "Edit series flow for Meridian Consulting under an 'Editing Series Template · All future invoices in series will be affected' banner; the invoice prefix is prefilled with the series ID (S-0003) and the preview numbers the next invoice S-0003-4."
+  },
+  {
+   "id": "invoicing.make-a-copy",
+   "title": "Make a copy",
+   "url": "/invoicing/create-invoice?copyInvoiceId=inv-aphelion-overdue-media",
+   "image": "screens/invoicing/95-make-a-copy.png",
+   "kind": "page",
+   "note": "Make a copy from the invoice More menu reopens the Request money chooser with the customer (Aphelion Financial Advisors) prefilled and one-time invoice selected."
+  },
+  {
+   "id": "invoicing.row-selected",
+   "title": "Row selected (bulk actions)",
+   "url": "/invoicing?showCanceled=true",
+   "image": "screens/invoicing/78-row-selected-bulk.png",
+   "kind": "form-state",
+   "note": "Checking a row highlights it and shows a floating bar: '1 item selected · $12,000.00 total', export, cancel (red trash) and a disabled Send reminder; the header action becomes 'Export 1 item'."
+  },
+  {
+   "id": "invoicing.bulk-cancel-modal",
+   "title": "Cancel invoice confirmation",
+   "url": "/invoicing?showCanceled=true",
+   "image": "screens/invoicing/79-bulk-cancel-modal.png",
+   "kind": "modal",
+   "note": "'Cancel invoice for Quasar Design Studio?' confirmation with Close and a red 'Cancel Invoice' button."
+  },
+  {
+   "id": "invoicing.bulk-cancel-done",
+   "title": "Invoice canceled",
+   "url": "/invoicing?showCanceled=true",
+   "image": "screens/invoicing/80-bulk-cancel-done.png",
+   "kind": "toast",
+   "note": "'Item canceled' toast; INV-0014 disappears from the list even though Show canceled is on, and the Total open card still reads $86.3K / 12 Invoices."
+  },
+  {
+   "id": "invoicing.filters-status-facet",
+   "title": "Filters: Status",
+   "url": "/invoicing",
+   "image": "screens/invoicing/81-filters-status-facet.png",
+   "kind": "menu",
+   "note": "Filters panel with the Status facet: Open, Overdue, Scheduled, Active, Processing, Paid checkboxes, each with a description."
+  },
+  {
+   "id": "invoicing.filters-customer-facet",
+   "title": "Filters: Customer",
+   "url": "/invoicing",
+   "image": "screens/invoicing/82-filters-customer-facet.png",
+   "kind": "menu",
+   "note": "Customer facet with a search field and a 'Recent customers' checkbox list."
+  },
+  {
+   "id": "invoicing.filters-amount-facet",
+   "title": "Filters: Amount",
+   "url": "/invoicing",
+   "image": "screens/invoicing/83-filters-amount-facet.png",
+   "kind": "menu",
+   "note": "Amount facet: currency picker plus Specific amount (=), At least (≥) and No more than (≤) inputs."
+  },
+  {
+   "id": "invoicing.filters-series-facet",
+   "title": "Filters: Series ID",
+   "url": "/invoicing",
+   "image": "screens/invoicing/84-filters-series-facet.png",
+   "kind": "menu",
+   "note": "Series ID facet with a search field and 'Recent recurring series' S-0001…S-0005."
+  },
+  {
+   "id": "invoicing.filters-delivery-facet",
+   "title": "Filters: Delivery",
+   "url": "/invoicing",
+   "image": "screens/invoicing/85-filters-delivery-facet.png",
+   "kind": "menu",
+   "note": "Delivery facet with 'Created only' and 'Created and sent' checkboxes."
+  },
+  {
+   "id": "invoicing.show-canceled-on",
+   "title": "Show canceled on",
+   "url": "/invoicing?showCanceled=true",
+   "image": "screens/invoicing/86-show-canceled-on.png",
+   "kind": "form-state",
+   "note": "Show canceled switched on inside Filters: a 'Show canceled ×' chip, Filters (1), Reset and 'Export filtered' appear."
+  },
+  {
+   "id": "invoicing.sorted-by-amount",
+   "title": "Sorted by amount",
+   "url": "/invoicing?column=amount&direction=asc",
+   "image": "screens/invoicing/87-sorted-by-amount.png",
+   "kind": "form-state",
+   "note": "Clicking the Amount header sorts ascending ($750.00 first) and moves the sort arrow from Status to Amount."
+  },
+  {
+   "id": "invoicing.total-open-tooltip",
+   "title": "Total open tooltip",
+   "url": "/invoicing",
+   "image": "screens/invoicing/88-total-open-tooltip.png",
+   "kind": "popover",
+   "note": "Hovering the info icon on Total open: 'Open includes all items that are not paid or canceled.'"
+  },
+  {
+   "id": "invoicing.paid-card-filter",
+   "title": "Paid card filter",
+   "url": "/invoicing?invoiceStatus=paid",
+   "image": "screens/invoicing/89-paid-card-filter.png",
+   "kind": "form-state",
+   "note": "Clicking the Paid summary card outlines it and filters the table to Paid rows with a 'Paid ×' chip."
+  }
+ ],
+ "edges": [
+  {
+   "from": "invoicing.index",
+   "to": "invoicing.index-paid-rows",
+   "label": "Scroll down the table"
+  },
+  {
+   "from": "invoicing.index",
+   "to": "invoicing.status-filter-menu",
+   "label": "Click Status"
+  },
+  {
+   "from": "invoicing.status-filter-menu",
+   "to": "invoicing.filtered-overdue",
+   "label": "Check Overdue"
+  },
+  {
+   "from": "invoicing.index",
+   "to": "invoicing.filtered-overdue",
+   "label": "Click the Overdue summary card"
+  },
+  {
+   "from": "invoicing.filtered-overdue",
+   "to": "invoicing.index",
+   "label": "Click Reset"
+  },
+  {
+   "from": "invoicing.index",
+   "to": "invoicing.type-filter-menu",
+   "label": "Click Type"
+  },
+  {
+   "from": "invoicing.index",
+   "to": "invoicing.filters-menu",
+   "label": "Click Filters"
+  },
+  {
+   "from": "invoicing.index",
+   "to": "invoicing.create-step1",
+   "label": "Click Request money"
+  },
+  {
+   "from": "invoicing.create-step1",
+   "to": "invoicing.create-step1-error",
+   "label": "Click Next with no customer"
+  },
+  {
+   "from": "invoicing.create-step1-error",
+   "to": "invoicing.create-customer-dropdown",
+   "label": "Click the Name combobox"
+  },
+  {
+   "from": "invoicing.create-step1",
+   "to": "invoicing.create-customer-dropdown",
+   "label": "Click the Name combobox"
+  },
+  {
+   "from": "invoicing.create-customer-dropdown",
+   "to": "invoicing.create-customer-selected",
+   "label": "Pick a customer"
+  },
+  {
+   "from": "invoicing.create-customer-selected",
+   "to": "invoicing.create-setup",
+   "label": "Click Next"
+  },
+  {
+   "from": "invoicing.create-setup",
+   "to": "invoicing.create-setup-error",
+   "label": "Click Next with an empty line item"
+  },
+  {
+   "from": "invoicing.create-setup-error",
+   "to": "invoicing.create-catalog-picker",
+   "label": "Click the line item field"
+  },
+  {
+   "from": "invoicing.create-setup",
+   "to": "invoicing.create-catalog-picker",
+   "label": "Click the line item field"
+  },
+  {
+   "from": "invoicing.create-catalog-picker",
+   "to": "invoicing.create-line-item-typed",
+   "label": "Type a custom item name"
+  },
+  {
+   "from": "invoicing.create-line-item-typed",
+   "to": "invoicing.create-line-items-filled",
+   "label": "Enter quantity, unit price and memo"
+  },
+  {
+   "from": "invoicing.create-line-items-filled",
+   "to": "invoicing.create-sales-tax",
+   "label": "Click Add sales tax"
+  },
+  {
+   "from": "invoicing.create-sales-tax",
+   "to": "invoicing.create-preview-payer",
+   "label": "Click the Payer page preview tab"
+  },
+  {
+   "from": "invoicing.create-preview-payer",
+   "to": "invoicing.create-preview-email",
+   "label": "Click the Email preview tab"
+  },
+  {
+   "from": "invoicing.create-preview-email",
+   "to": "invoicing.create-setup-bottom",
+   "label": "Scroll to the bottom of the form"
+  },
+  {
+   "from": "invoicing.create-setup-bottom",
+   "to": "invoicing.create-destination-menu",
+   "label": "Click Destination account"
+  },
+  {
+   "from": "invoicing.create-line-items-filled",
+   "to": "invoicing.create-details",
+   "label": "Click Next"
+  },
+  {
+   "from": "invoicing.create-setup-bottom",
+   "to": "invoicing.create-details",
+   "label": "Click Next"
+  },
+  {
+   "from": "invoicing.create-details",
+   "to": "invoicing.create-review",
+   "label": "Click Next"
+  },
+  {
+   "from": "invoicing.create-review",
+   "to": "invoicing.create-schedule-send",
+   "label": "Toggle Schedule send"
+  },
+  {
+   "from": "invoicing.create-schedule-send",
+   "to": "invoicing.create-review",
+   "label": "Toggle Schedule send off"
+  },
+  {
+   "from": "invoicing.create-review",
+   "to": "invoicing.create-sending",
+   "label": "Click Create & send email"
+  },
+  {
+   "from": "invoicing.create-sending",
+   "to": "invoicing.create-sent",
+   "label": "Wait for the invoice to be created"
+  },
+  {
+   "from": "invoicing.create-sent",
+   "to": "invoicing.index-loading",
+   "label": "Click Return to dashboard"
+  },
+  {
+   "from": "invoicing.create-sent",
+   "to": "invoicing.create-step1",
+   "label": "Click Send another invoice"
+  },
+  {
+   "from": "invoicing.index-loading",
+   "to": "invoicing.invoice-detail",
+   "label": "List loads with the new invoice's detail panel open"
+  },
+  {
+   "from": "invoicing.invoice-detail",
+   "to": "invoicing.invoice-detail-events",
+   "label": "Click + 3 more events"
+  },
+  {
+   "from": "invoicing.invoice-detail-events",
+   "to": "invoicing.invoice-detail",
+   "label": "Click Collapse events"
+  },
+  {
+   "from": "invoicing.invoice-detail",
+   "to": "invoicing.invoice-more-menu",
+   "label": "Click More"
+  },
+  {
+   "from": "invoicing.invoice-more-menu",
+   "to": "invoicing.mark-paid-modal",
+   "label": "Click Mark as paid"
+  },
+  {
+   "from": "invoicing.mark-paid-modal",
+   "to": "invoicing.mark-paid-external",
+   "label": "Select Externally"
+  },
+  {
+   "from": "invoicing.mark-paid-external",
+   "to": "invoicing.mark-paid-submitting",
+   "label": "Click Mark as paid"
+  },
+  {
+   "from": "invoicing.mark-paid-submitting",
+   "to": "invoicing.invoice-paid",
+   "label": "Wait for the update"
+  },
+  {
+   "from": "invoicing.create-step1",
+   "to": "invoicing.index",
+   "label": "Click the X (close)"
+  },
+  {
+   "from": "invoicing.index",
+   "to": "invoicing.invoice-detail-overdue",
+   "label": "Click an overdue invoice row"
+  },
+  {
+   "from": "invoicing.invoice-detail-overdue",
+   "to": "invoicing.invoice-detail-lower",
+   "label": "Scroll the detail panel"
+  },
+  {
+   "from": "invoicing.invoice-detail-overdue",
+   "to": "invoicing.remind-modal",
+   "label": "Click Remind"
+  },
+  {
+   "from": "invoicing.remind-modal",
+   "to": "invoicing.reminder-sent",
+   "label": "Click Yes, Send Now"
+  },
+  {
+   "from": "invoicing.invoice-detail-overdue",
+   "to": "invoicing.edit-invoice",
+   "label": "Click Edit"
+  },
+  {
+   "from": "invoicing.edit-invoice",
+   "to": "invoicing.invoice-detail-overdue",
+   "label": "Click the X (close)"
+  },
+  {
+   "from": "invoicing.index",
+   "to": "invoicing.series-index",
+   "label": "Click Recurring Series in the sidebar"
+  },
+  {
+   "from": "invoicing.series-index",
+   "to": "invoicing.series-detail",
+   "label": "Click a series row"
+  },
+  {
+   "from": "invoicing.series-detail",
+   "to": "invoicing.series-queued-menu",
+   "label": "Click the … on the queued invoice"
+  },
+  {
+   "from": "invoicing.series-queued-menu",
+   "to": "invoicing.series-skip-modal",
+   "label": "Click Skip invoice"
+  },
+  {
+   "from": "invoicing.series-skip-modal",
+   "to": "invoicing.series-detail",
+   "label": "Click Close"
+  },
+  {
+   "from": "invoicing.series-detail",
+   "to": "invoicing.series-index",
+   "label": "Click the X (close)"
+  },
+  {
+   "from": "invoicing.series-index",
+   "to": "invoicing.create-series-step1",
+   "label": "Click Create series"
+  },
+  {
+   "from": "invoicing.create-series-step1",
+   "to": "invoicing.create-series-setup",
+   "label": "Pick a customer and click Next"
+  },
+  {
+   "from": "invoicing.create-series-setup",
+   "to": "invoicing.create-series-frequency",
+   "label": "Add a line item and click Next"
+  },
+  {
+   "from": "invoicing.create-series-frequency",
+   "to": "invoicing.create-series-frequency-menu",
+   "label": "Click the cadence dropdown"
+  },
+  {
+   "from": "invoicing.create-series-frequency-menu",
+   "to": "invoicing.create-series-terms-menu",
+   "label": "Pick Monthly, open payment terms"
+  },
+  {
+   "from": "invoicing.create-series-terms-menu",
+   "to": "invoicing.create-series-payment",
+   "label": "Pick Net 30 and click Next"
+  },
+  {
+   "from": "invoicing.create-series-frequency",
+   "to": "invoicing.create-series-payment",
+   "label": "Click Next"
+  },
+  {
+   "from": "invoicing.create-series-payment",
+   "to": "invoicing.create-series-review",
+   "label": "Click Next"
+  },
+  {
+   "from": "invoicing.create-series-review",
+   "to": "invoicing.create-series-success",
+   "label": "Click Create series and send"
+  },
+  {
+   "from": "invoicing.create-series-success",
+   "to": "invoicing.series-detail-new",
+   "label": "Click Return to dashboard"
+  },
+  {
+   "from": "invoicing.series-detail-new",
+   "to": "invoicing.series-index-after",
+   "label": "Click the X (close)"
+  },
+  {
+   "from": "invoicing.index",
+   "to": "invoicing.customers-index",
+   "label": "Click Customers in the sidebar"
+  },
+  {
+   "from": "invoicing.customers-index",
+   "to": "invoicing.customer-detail",
+   "label": "Click a customer row"
+  },
+  {
+   "from": "invoicing.customer-detail",
+   "to": "invoicing.edit-customer-blocked",
+   "label": "Click Edit (customer with pending payment)"
+  },
+  {
+   "from": "invoicing.edit-customer-blocked",
+   "to": "invoicing.customer-detail",
+   "label": "Click Go back"
+  },
+  {
+   "from": "invoicing.customer-detail",
+   "to": "invoicing.create-step1",
+   "label": "Click Request"
+  },
+  {
+   "from": "invoicing.customers-index",
+   "to": "invoicing.add-customer",
+   "label": "Click Add customer"
+  },
+  {
+   "from": "invoicing.add-customer",
+   "to": "invoicing.add-customer-invalid",
+   "label": "Enter an invalid email"
+  },
+  {
+   "from": "invoicing.add-customer-invalid",
+   "to": "invoicing.add-customer-address",
+   "label": "Fix email, toggle Add customer address, fill address"
+  },
+  {
+   "from": "invoicing.add-customer",
+   "to": "invoicing.add-customer-address",
+   "label": "Toggle Add customer address"
+  },
+  {
+   "from": "invoicing.add-customer-address",
+   "to": "invoicing.customer-created",
+   "label": "Click Create customer"
+  },
+  {
+   "from": "invoicing.customer-created",
+   "to": "invoicing.delete-customer-modal",
+   "label": "Click Delete"
+  },
+  {
+   "from": "invoicing.delete-customer-modal",
+   "to": "invoicing.customer-created",
+   "label": "Click Go back"
+  },
+  {
+   "from": "invoicing.index",
+   "to": "invoicing.catalog-index",
+   "label": "Click Catalog in the sidebar"
+  },
+  {
+   "from": "invoicing.catalog-index",
+   "to": "invoicing.add-catalog-item",
+   "label": "Click Add item"
+  },
+  {
+   "from": "invoicing.add-catalog-item",
+   "to": "invoicing.add-catalog-item-filled",
+   "label": "Fill name, price and description"
+  },
+  {
+   "from": "invoicing.add-catalog-item-filled",
+   "to": "invoicing.catalog-item-created",
+   "label": "Click Create item"
+  },
+  {
+   "from": "invoicing.catalog-item-created",
+   "to": "invoicing.delete-catalog-item-modal",
+   "label": "Click Delete"
+  },
+  {
+   "from": "invoicing.delete-catalog-item-modal",
+   "to": "invoicing.catalog-item-deleted",
+   "label": "Click Delete item"
+  },
+  {
+   "from": "invoicing.index",
+   "to": "invoicing.settings-general",
+   "label": "Click Invoice settings"
+  },
+  {
+   "from": "invoicing.settings-general",
+   "to": "invoicing.settings-branding",
+   "label": "Click the Branding tab"
+  },
+  {
+   "from": "invoicing.settings-branding",
+   "to": "invoicing.settings-branding-blue",
+   "label": "Pick a color swatch"
+  },
+  {
+   "from": "invoicing.settings-branding-blue",
+   "to": "invoicing.settings-defaults",
+   "label": "Click the Defaults tab"
+  },
+  {
+   "from": "invoicing.settings-general",
+   "to": "invoicing.settings-defaults",
+   "label": "Click the Defaults tab"
+  },
+  {
+   "from": "invoicing.settings-defaults",
+   "to": "invoicing.settings-saved",
+   "label": "Click Save"
+  },
+  {
+   "from": "invoicing.create-customer-selected",
+   "to": "invoicing.payment-link-option",
+   "label": "Select Request money without an invoice"
+  },
+  {
+   "from": "invoicing.payment-link-option",
+   "to": "invoicing.payment-link-details",
+   "label": "Click Next"
+  },
+  {
+   "from": "invoicing.payment-link-details",
+   "to": "invoicing.payment-link-error",
+   "label": "Click Create & send with no amount"
+  },
+  {
+   "from": "invoicing.payment-link-error",
+   "to": "invoicing.payment-link-filled",
+   "label": "Enter an amount and memo"
+  },
+  {
+   "from": "invoicing.payment-link-filled",
+   "to": "invoicing.payment-link-sent",
+   "label": "Click Create & send"
+  },
+  {
+   "from": "invoicing.payment-link-sent",
+   "to": "invoicing.index",
+   "label": "Click Return to dashboard"
+  },
+  {
+   "from": "invoicing.create-details",
+   "to": "invoicing.create-due-date-menu",
+   "label": "Click Due date"
+  },
+  {
+   "from": "invoicing.create-due-date-menu",
+   "to": "invoicing.create-details",
+   "label": "Pick Net 30"
+  },
+  {
+   "from": "invoicing.mark-paid-modal",
+   "to": "invoicing.mark-paid-transaction-match",
+   "label": "Click Transaction match"
+  },
+  {
+   "from": "invoicing.mark-paid-transaction-match",
+   "to": "invoicing.mark-paid-external",
+   "label": "Select Externally"
+  },
+  {
+   "from": "invoicing.create-series-frequency",
+   "to": "invoicing.create-series-ends-menu",
+   "label": "Click 'when I cancel'"
+  },
+  {
+   "from": "invoicing.create-series-ends-menu",
+   "to": "invoicing.create-series-ends-after",
+   "label": "Pick After"
+  },
+  {
+   "from": "invoicing.create-series-ends-after",
+   "to": "invoicing.create-series-frequency",
+   "label": "Switch back to When I cancel"
+  },
+  {
+   "from": "invoicing.series-detail",
+   "to": "invoicing.edit-series",
+   "label": "Click Edit series"
+  },
+  {
+   "from": "invoicing.edit-series",
+   "to": "invoicing.series-detail",
+   "label": "Click the X (close)"
+  },
+  {
+   "from": "invoicing.invoice-more-menu",
+   "to": "invoicing.make-a-copy",
+   "label": "Click Make a copy"
+  },
+  {
+   "from": "invoicing.make-a-copy",
+   "to": "invoicing.create-setup",
+   "label": "Click Next"
+  },
+  {
+   "from": "invoicing.index",
+   "to": "invoicing.row-selected",
+   "label": "Check a row"
+  },
+  {
+   "from": "invoicing.row-selected",
+   "to": "invoicing.bulk-cancel-modal",
+   "label": "Click the trash icon (Cancel selected items)"
+  },
+  {
+   "from": "invoicing.bulk-cancel-modal",
+   "to": "invoicing.bulk-cancel-done",
+   "label": "Click Cancel Invoice"
+  },
+  {
+   "from": "invoicing.bulk-cancel-done",
+   "to": "invoicing.index",
+   "label": "Toast dismisses"
+  },
+  {
+   "from": "invoicing.filters-menu",
+   "to": "invoicing.filters-status-facet",
+   "label": "Click the Status tab"
+  },
+  {
+   "from": "invoicing.filters-menu",
+   "to": "invoicing.filters-customer-facet",
+   "label": "Click the Customer tab"
+  },
+  {
+   "from": "invoicing.filters-menu",
+   "to": "invoicing.filters-amount-facet",
+   "label": "Click the Amount tab"
+  },
+  {
+   "from": "invoicing.filters-menu",
+   "to": "invoicing.filters-series-facet",
+   "label": "Click the Series ID tab"
+  },
+  {
+   "from": "invoicing.filters-menu",
+   "to": "invoicing.filters-delivery-facet",
+   "label": "Click the Delivery tab"
+  },
+  {
+   "from": "invoicing.filters-menu",
+   "to": "invoicing.show-canceled-on",
+   "label": "Toggle Show canceled"
+  },
+  {
+   "from": "invoicing.index",
+   "to": "invoicing.sorted-by-amount",
+   "label": "Click the Amount column header"
+  },
+  {
+   "from": "invoicing.index",
+   "to": "invoicing.total-open-tooltip",
+   "label": "Hover the info icon on Total open"
+  },
+  {
+   "from": "invoicing.index",
+   "to": "invoicing.paid-card-filter",
+   "label": "Click the Paid summary card"
+  },
+  {
+   "from": "invoicing.paid-card-filter",
+   "to": "invoicing.index",
+   "label": "Click Reset"
+  }
+ ],
+ "journeys": [
+  {
+   "id": "invoicing.j-send-invoice",
+   "name": "Create and send a one-time invoice",
+   "description": "Bill a customer for catalog and custom line items and email the invoice with a payment link.",
+   "steps": [
+    "invoicing.index",
+    "invoicing.create-step1",
+    "invoicing.create-customer-dropdown",
+    "invoicing.create-customer-selected",
+    "invoicing.create-setup",
+    "invoicing.create-catalog-picker",
+    "invoicing.create-line-item-typed",
+    "invoicing.create-line-items-filled",
+    "invoicing.create-details",
+    "invoicing.create-review"
+   ]
+  },
+  {
+   "id": "invoicing.j-send-and-confirm",
+   "name": "Send an invoice and confirm it went out",
+   "description": "Finish the invoice flow and land on the new invoice's detail panel.",
+   "steps": [
+    "invoicing.create-review",
+    "invoicing.create-sending",
+    "invoicing.create-sent",
+    "invoicing.index-loading",
+    "invoicing.invoice-detail"
+   ]
+  },
+  {
+   "id": "invoicing.j-mark-paid",
+   "name": "Record an external payment",
+   "description": "Mark an invoice paid after receiving cash outside Mercury.",
+   "steps": [
+    "invoicing.invoice-detail",
+    "invoicing.invoice-more-menu",
+    "invoicing.mark-paid-modal",
+    "invoicing.mark-paid-external",
+    "invoicing.mark-paid-submitting",
+    "invoicing.invoice-paid"
+   ]
+  },
+  {
+   "id": "invoicing.j-chase-overdue",
+   "name": "Chase an overdue invoice",
+   "description": "Filter to overdue invoices and send a manual reminder.",
+   "steps": [
+    "invoicing.index",
+    "invoicing.status-filter-menu",
+    "invoicing.filtered-overdue",
+    "invoicing.index",
+    "invoicing.invoice-detail-overdue",
+    "invoicing.remind-modal",
+    "invoicing.reminder-sent"
+   ]
+  },
+  {
+   "id": "invoicing.j-create-series",
+   "name": "Set up a monthly recurring series",
+   "description": "Create a recurring monthly invoice series with Net 30 terms for a customer.",
+   "steps": [
+    "invoicing.series-index",
+    "invoicing.create-series-step1",
+    "invoicing.create-series-setup",
+    "invoicing.create-series-frequency",
+    "invoicing.create-series-payment",
+    "invoicing.create-series-review",
+    "invoicing.create-series-success",
+    "invoicing.series-detail-new"
+   ]
+  },
+  {
+   "id": "invoicing.j-add-customer",
+   "name": "Add a new customer",
+   "description": "Create a customer record with address so it can be invoiced.",
+   "steps": [
+    "invoicing.index",
+    "invoicing.customers-index",
+    "invoicing.add-customer",
+    "invoicing.add-customer-invalid",
+    "invoicing.add-customer-address",
+    "invoicing.customer-created"
+   ]
+  },
+  {
+   "id": "invoicing.j-cancel-invoice",
+   "name": "Cancel an invoice from the list",
+   "description": "Select a scheduled invoice in the table, cancel it from the bulk bar and confirm.",
+   "steps": [
+    "invoicing.index",
+    "invoicing.row-selected",
+    "invoicing.bulk-cancel-modal",
+    "invoicing.bulk-cancel-done"
+   ]
+  }
+ ],
+ "issues": [
+  {
+   "id": "invoicing.i-active-past-due",
+   "title": "Past-due invoices labeled Active",
+   "detail": "Two monthly invoices whose due date has passed show the Active badge, while the Status filter defines Active as 'Unpaid and not overdue' and every other past-due invoice shows Overdue. The summary card counts 3 overdue, so these two are missing from it.",
+   "nodeIds": [
+    "invoicing.index",
+    "invoicing.status-filter-menu"
+   ],
+   "category": "data-format",
+   "severity": "high",
+   "evidence": "List rows: 'Aug 31 · 24 days ago · Active · Meridian Consulting · $2,000.00 · INV-0025' and 'Aug 31 · 24 days ago · Active · Nebula Strategy Group · $7,500.00 · INV-0018'; filter option text 'Active — Unpaid and not overdue'; Overdue card '3 Invoices'."
+  },
+  {
+   "id": "invoicing.i-invoice-number-format",
+   "title": "Invoice numbers mix zero-padded and unpadded formats",
+   "detail": "Seeded invoices use a 4-digit zero-padded number (INV-0033), invoices created in the product get INV-34, a new series previews INV-1, and editing a series switches the prefix to the series ID (S-0003-4). The formats end up side by side in the same table and break sort order.",
+   "nodeIds": [
+    "invoicing.index",
+    "invoicing.create-details",
+    "invoicing.series-detail",
+    "invoicing.create-series-setup",
+    "invoicing.edit-series"
+   ],
+   "category": "data-format",
+   "severity": "medium",
+   "evidence": "Invoice list cells 'INV-0007', 'INV-0013'; Invoice details 'Invoice number' input value 'INV-34'; series detail queued row 'INV-34' above 'INV-0025'; Recurring series set up preview 'Invoice no. INV-1'; Edit recurring series 'Invoice prefix' value 'S-0003', preview 'Invoice no. S-0003-4'."
+  },
+  {
+   "id": "invoicing.i-duplicate-ids",
+   "title": "Same invoice number and payment link reused across different requests",
+   "detail": "INV-34 was assigned to three different documents in one session, and the payment-link slug for the one-time invoice was reused for a later standalone payment link to a different customer.",
+   "nodeIds": [
+    "invoicing.create-sent",
+    "invoicing.series-detail",
+    "invoicing.series-detail-new",
+    "invoicing.payment-link-sent"
+   ],
+   "category": "data-format",
+   "severity": "high",
+   "evidence": "New one-time invoice to Orbital: Invoice number input 'INV-34', success link https://demo.mercury.com/pay/ylk7fnl18bpkfcg9. Meridian series queued row: 'INV-34'. Astral series queued row: 'INV-34'. Vega payment link success: 'https://demo.mercury.com/pay/ylk7fnl18bpkfcg9'."
+  },
+  {
+   "id": "invoicing.i-date-formats",
+   "title": "Five different date formats for the same kind of value",
+   "detail": "Dates appear as 'Sep 24' (tables), 'Sep 24, 2026' (form inputs, reminder schedule, panels), '09/24/2026' (invoice preview terms), 'SEP 24 - CREATED BY' (uppercase activity timeline), and 'Mar 31, 2026' in filter range inputs. The invoice preview is the only place using numeric MM/DD/YYYY.",
+   "nodeIds": [
+    "invoicing.index",
+    "invoicing.create-details",
+    "invoicing.create-line-items-filled",
+    "invoicing.invoice-detail",
+    "invoicing.filters-menu"
+   ],
+   "category": "data-format",
+   "severity": "medium",
+   "evidence": "Invoice list cell 'Sep 24'; Invoice date input value 'Sep 24, 2026'; preview Terms 'Invoice date 09/24/2026 / Due date 10/24/2026'; detail timeline 'SEP 24 - CREATED BY JANE B.'; customer panel 'Sep 2, 2026' vs customer table 'Sep 2'."
+  },
+  {
+   "id": "invoicing.i-cents-rendering",
+   "title": "Currency cents rendered two ways",
+   "detail": "Tables, totals and detail panels render cents as a smaller raised fraction ($16,500.00 with 10.95px cents on 15px), while confirmation screens, invoice previews, the catalog item panel and review summaries render flat '$7,500.00' at one size.",
+   "nodeIds": [
+    "invoicing.index",
+    "invoicing.create-sent",
+    "invoicing.catalog-item-created",
+    "invoicing.create-review",
+    "invoicing.invoice-detail"
+   ],
+   "category": "data-format",
+   "severity": "medium",
+   "evidence": "List amount: whole 15px, fractional span ._fractionalDelimiter_ parent 10.95px. Success screen '$7,500.00' at 34px: innerHTML '$7<span>,</span>500<span><span>.</span>00</span>' with no size change on the fraction. Catalog panel '$1,250.00' plain text."
+  },
+  {
+   "id": "invoicing.i-unit-price-format",
+   "title": "Unit price inputs format differently depending on source",
+   "detail": "A price picked from the catalog shows two decimals, a typed or prefilled price shows none, so two rows of the same line-item table disagree.",
+   "nodeIds": [
+    "invoicing.create-line-items-filled",
+    "invoicing.edit-invoice"
+   ],
+   "category": "data-format",
+   "severity": "low",
+   "evidence": "Invoice set up: row 1 (catalog Advisory Retainer) input value '5,000.00', row 2 (typed) '1,250'. Edit Invoice (catalog-prefilled rows): '12,000' and '4,500'."
+  },
+  {
+   "id": "invoicing.i-fake-disabled-next",
+   "title": "Primary buttons look disabled but are clickable",
+   "detail": "Next renders at 40% opacity until the form is valid, but it is not disabled and clicking it runs validation. Add customer and Add Item use real disabled buttons for the same situation, so the dim style means two different things.",
+   "nodeIds": [
+    "invoicing.create-step1",
+    "invoicing.create-step1-error",
+    "invoicing.create-setup",
+    "invoicing.payment-link-details",
+    "invoicing.add-catalog-item"
+   ],
+   "category": "interaction",
+   "severity": "medium",
+   "evidence": "Request money Next before a customer: opacity 0.4, disabled=false, cursor pointer, bg rgb(82,102,235), padding 8px 28px 8px 32px, 40px; clicking shows 'Please complete this field'. Add Item 'Create item' and Add customer 'Create customer': disabled attribute set."
+  },
+  {
+   "id": "invoicing.i-back-button-variants",
+   "title": "Back button styled two ways within the same flows",
+   "detail": "The Back button is a filled secondary pill on setup/details steps and on the series review step, but a transparent text button on the one-time invoice review step and the payment link step.",
+   "nodeIds": [
+    "invoicing.create-setup",
+    "invoicing.create-review",
+    "invoicing.create-series-review",
+    "invoicing.payment-link-details"
+   ],
+   "category": "component",
+   "severity": "medium",
+   "evidence": "Invoice set up and Invoice details Back: class _secondary_, bg rgba(180,183,200,0.12), padding 8px 32px 8px 28px, 40px. Review and send Back: class _tertiary_, bg rgba(0,0,0,0), same padding and height. Series Review and create Back: bg rgba(180,183,200,0.12)."
+  },
+  {
+   "id": "invoicing.i-payment-method-names",
+   "title": "Payment methods named inconsistently",
+   "detail": "The same payment methods are spelled differently across the builder, the payer page and the invoice PDF preview, often on the same screen.",
+   "nodeIds": [
+    "invoicing.create-details",
+    "invoicing.payment-link-details",
+    "invoicing.edit-invoice",
+    "invoicing.create-step1"
+   ],
+   "category": "copy",
+   "severity": "medium",
+   "evidence": "Invoice details Methods summary: 'Manual Transfer (ACH/Wire), Pay with Mercury, International wires'. Payer page preview headings: 'Manual Transfer', 'International Wire', 'Pay With Mercury'. Invoice preview Pay via: 'Manual transfer, Pay by Mercury' (plus 'ACH Debit' on Edit Invoice)."
+  },
+  {
+   "id": "invoicing.i-title-case",
+   "title": "Title Case headings and buttons among sentence case",
+   "detail": "Most headings and actions use sentence case, but several use Title Case for no reason.",
+   "nodeIds": [
+    "invoicing.edit-invoice",
+    "invoicing.add-catalog-item",
+    "invoicing.remind-modal",
+    "invoicing.settings-general",
+    "invoicing.settings-branding",
+    "invoicing.customer-detail",
+    "invoicing.create-preview-payer",
+    "invoicing.bulk-cancel-modal",
+    "invoicing.mark-paid-transaction-match"
+   ],
+   "category": "copy",
+   "severity": "low",
+   "evidence": "Title Case: 'Edit Invoice' (vs 'Edit recurring series' and 'Invoice set up'), 'Add Item' (vs 'Add customer' and the 'Add item' button that opens it), 'Yes, Send Now', 'Cancel Invoice', 'Set Up' (vs 'Set up Stripe integration'), 'Manage Logo', 'View All' (next to 'View'), 'Download Invoice' (vs 'Pay invoice'), Transaction match column 'Payment Method' next to 'Paid on' / 'Paid by'."
+  },
+  {
+   "id": "invoicing.i-status-badge-colors",
+   "title": "Status badges reuse or drop color inconsistently",
+   "detail": "Active and Processing use the identical 'pearl' badge, so two different states look the same. Overdue and Paid use tinted text, while Active, Processing and Scheduled use neutral text on tinted fills. Series use 'Completed' while the invoice list labels the same series 'Series complete'.",
+   "nodeIds": [
+    "invoicing.index",
+    "invoicing.index-paid-rows",
+    "invoicing.series-index"
+   ],
+   "category": "color",
+   "severity": "medium",
+   "evidence": "Active: bg rgba(141,164,245,0.2), text rgb(221,221,229), class _pearl_. Processing: bg rgba(141,164,245,0.2), text rgb(221,221,229), class _pearl_. Overdue: bg rgba(252,155,111,0.2), text rgb(252,155,111). Paid: bg rgba(119,197,153,0.2), text rgb(119,197,153). Scheduled: bg rgba(119,190,207,0.2), text rgb(221,221,229)."
+  },
+  {
+   "id": "invoicing.i-empty-value-glyph",
+   "title": "Empty values shown with different placeholders",
+   "detail": "The invoice list uses an em dash for missing values, the Customers and Catalog panels use a hyphen, and the customer panel spells it out.",
+   "nodeIds": [
+    "invoicing.index",
+    "invoicing.customers-index",
+    "invoicing.catalog-item-created",
+    "invoicing.customer-created"
+   ],
+   "category": "data-format",
+   "severity": "low",
+   "evidence": "Invoice list payment-link row due date '—' (U+2014, charCode 8212). Customers 'Last paid you' '-' (U+002D, charCode 45). Catalog panel 'Used -'. Customer panel 'Last paid you: No payment history'."
+  },
+  {
+   "id": "invoicing.i-table-overhang",
+   "title": "Customers and Catalog tables overhang the page header",
+   "detail": "The Customers and Catalog tables extend 18px past the right edge of the header action button; the invoice list table aligns with it.",
+   "nodeIds": [
+    "invoicing.customers-index",
+    "invoicing.catalog-index",
+    "invoicing.index"
+   ],
+   "category": "layout",
+   "severity": "low",
+   "evidence": "Customers: table right 1332px, 'Add customer' right 1314px. Catalog: table right 1332px, 'Add item' right 1314px. Invoicing: table right 1314px. Row heights also differ: invoices 66px, customers/catalog 51px, series 97px."
+  },
+  {
+   "id": "invoicing.i-detail-panel-actions",
+   "title": "Detail panels style Edit/Delete differently",
+   "detail": "The customer panel shows Edit and Request as neutral pills with icons and Delete as a red-tinted pill; the catalog item panel shows Edit as a full-width primary blue button and Delete as a neutral pill, both without icons.",
+   "nodeIds": [
+    "invoicing.customer-detail",
+    "invoicing.catalog-item-created"
+   ],
+   "category": "component",
+   "severity": "medium",
+   "evidence": "Customer panel: Edit bg rgba(180,183,200,0.12) + svg, Request same, Delete bg rgba(252,146,180,0.2) color rgb(252,146,180) + svg; all 32px. Catalog panel: Edit bg rgb(82,102,235) class _primary_, 147px wide, no svg; Delete bg rgba(180,183,200,0.12) class _secondary_, no svg."
+  },
+  {
+   "id": "invoicing.i-frequency-controls",
+   "title": "Series Frequency step uses off-system controls",
+   "detail": "The Frequency step uses inline mad-libs dropdowns with a solid FontAwesome caret and a compact 32px date field with 4px corners, while every other form uses 40px fields with 8px corners and outline chevrons.",
+   "nodeIds": [
+    "invoicing.create-series-frequency",
+    "invoicing.create-series-frequency-menu",
+    "invoicing.add-customer"
+   ],
+   "category": "component",
+   "severity": "medium",
+   "evidence": "Frequency dropdown button: bg transparent, 13.33px, icon svg 'fa-caret-down' (data-prefix fas). 'Send your first invoice' date field: height 32px, radius 4px, font 15px. Add customer inputs: height 40px, radius 8px; Additional emails combobox 42px."
+  },
+  {
+   "id": "invoicing.i-filter-popover-height",
+   "title": "Filter popovers are fixed-height with large empty areas",
+   "detail": "The Type filter popover is a fixed 400px tall with three checkboxes (144px of content), leaving about 250px of empty panel over the table. The Status popover also has trailing empty space.",
+   "nodeIds": [
+    "invoicing.type-filter-menu",
+    "invoicing.status-filter-menu"
+   ],
+   "category": "layout",
+   "severity": "low",
+   "evidence": "Type popover: ._menu_ height 400px, width 376px, bg rgb(39,39,53), radius 12px; ._popoverContent_ height 144px."
+  },
+  {
+   "id": "invoicing.i-filter-labels",
+   "title": "Filter labels don't match column names",
+   "detail": "The Filters panel and Type menu name fields and values differently from the table columns they filter.",
+   "nodeIds": [
+    "invoicing.filters-menu",
+    "invoicing.type-filter-menu",
+    "invoicing.index"
+   ],
+   "category": "copy",
+   "severity": "low",
+   "evidence": "Filter facets 'Due Date', 'Invoice Number', 'Invoice Date' vs columns 'Due date', 'Invoice no.', 'Invoice date'. Type menu 'One time invoice' / 'Recurring invoice' vs column values 'One time' / 'Monthly' / 'Quarterly'."
+  },
+  {
+   "id": "invoicing.i-sender-name",
+   "title": "Company shown under two different names",
+   "detail": "The sidebar and full-screen forms identify the business as 'Mercury Demo', but every invoice, email and payer page says it comes from 'Nebula Consulting Group', which is also easy to confuse with customer 'Nebula Strategy Group'.",
+   "nodeIds": [
+    "invoicing.index",
+    "invoicing.create-preview-email",
+    "invoicing.add-customer",
+    "invoicing.settings-general"
+   ],
+   "category": "copy",
+   "severity": "medium",
+   "evidence": "Sidebar org switcher 'Mercury Demo'; Add customer header 'Mercury Demo'; email preview 'From: Mercury on behalf of Nebula Consulting Group'; settings Company name 'Nebula Consulting Group'."
+  },
+  {
+   "id": "invoicing.i-toggle-placement",
+   "title": "Switches placed on opposite sides of their labels",
+   "detail": "In Invoice settings, the Address and Phone number switches sit at the right end of their rows, while the Configurations switches on the same tab and the Defaults switches sit left of their labels.",
+   "nodeIds": [
+    "invoicing.settings-general",
+    "invoicing.settings-defaults"
+   ],
+   "category": "layout",
+   "severity": "low",
+   "evidence": "General tab role=switch left positions: 560, 560, 120, 120, 120 (x in px). Defaults tab: 120, 120. All 40px wide."
+  },
+  {
+   "id": "invoicing.i-escape-discards-draft",
+   "title": "Escape silently discards the invoice draft",
+   "detail": "Inside the full-screen Request money and Create series flows, one Escape keypress exits to the list and throws away everything entered, with no confirmation, even when Escape was meant to close an open dropdown. The same happens on the full-screen series page.",
+   "nodeIds": [
+    "invoicing.create-setup-bottom",
+    "invoicing.create-series-terms-menu",
+    "invoicing.index",
+    "invoicing.series-index"
+   ],
+   "category": "interaction",
+   "severity": "medium",
+   "evidence": "On the series Frequency step with the payment-terms menu open, a single Escape navigated to /invoicing/series and discarded customer, line item and Net 30. On /invoicing/create-invoice step 1, Escape navigated to /invoicing. On /invoicing/series/srs-meridian-monthly Escape returned to /invoicing/series."
+  },
+  {
+   "id": "invoicing.i-unlabeled-controls",
+   "title": "Icon-only controls without accessible names",
+   "detail": "The per-row edit and request buttons in Customers have no text, aria-label or title, and the branding color swatches are announced by internal ids.",
+   "nodeIds": [
+    "invoicing.customers-index",
+    "invoicing.settings-branding"
+   ],
+   "category": "a11y",
+   "severity": "medium",
+   "evidence": "Customers row buttons: aria-label null, title '', textContent '' (class _button_ _small_ _tertiary_). Branding radios exposed as 'white-theme', 'green-theme', 'blue-theme', 'beige-theme', 'orange-theme', 'purple-theme'; the 'white-theme' swatch is dark grey."
+  },
+  {
+   "id": "invoicing.i-series-data-mismatch",
+   "title": "Series list, detail and invoices disagree",
+   "detail": "The same series shows different next dates and amounts depending on where you look, and a new series claims an email went out that its activity doesn't show.",
+   "nodeIds": [
+    "invoicing.series-index",
+    "invoicing.series-detail",
+    "invoicing.series-detail-new",
+    "invoicing.create-series-success",
+    "invoicing.index-paid-rows"
+   ],
+   "category": "data-format",
+   "severity": "medium",
+   "evidence": "Meridian: list 'Next on Oct 1', detail 'Next on Oct 24, 2026'. Solstice S-0005: list $1,200.00, invoices INV-0031/0032 'Monthly · Series canceled' $2,000.00. Astral success: 'We've emailed the first invoice…', detail activity only 'Oct 24 · Queued · INV-34'. Detail 'Updated by Grace Hopper' vs timeline 'CREATED BY JANE B.'."
+  },
+  {
+   "id": "invoicing.i-email-preview-copy",
+   "title": "Email preview shows broken sentences before a due date exists",
+   "detail": "On the setup step the email preview interpolates an empty due date into its copy.",
+   "nodeIds": [
+    "invoicing.create-preview-email"
+   ],
+   "category": "copy",
+   "severity": "low",
+   "evidence": "Preview Text: 'Please review and pay your invoice by' (ends there). Body: 'Nebula Consulting Group has sent you an invoice #INV-34 due on for $8,165.63.'"
+  },
+  {
+   "id": "invoicing.i-action-copy",
+   "title": "Dismiss labels, toasts and confirmations use mixed wording",
+   "detail": "Dialogs dismiss with 'Close' in some places and 'Go back' in others. The catalog calls the same thing 'Item' and 'Product'. Send actions mix '&' and 'and', and success headings mix punctuation.",
+   "nodeIds": [
+    "invoicing.remind-modal",
+    "invoicing.delete-customer-modal",
+    "invoicing.catalog-item-created",
+    "invoicing.catalog-item-deleted",
+    "invoicing.create-sent",
+    "invoicing.create-series-success",
+    "invoicing.bulk-cancel-done"
+   ],
+   "category": "copy",
+   "severity": "low",
+   "evidence": "'Close' in Mark as paid, Send a reminder, Skip queued invoice, Cancel invoice; 'Go back' in Delete customer, Delete item, Add Item. Toasts 'Item added' vs 'Product deleted', 'Item canceled' for an invoice, 'Invoice created and sent!'. Buttons 'Create & send email' vs 'Create series and send'. Headings 'Your invoice has been created and sent!' vs 'Your recurring series has been created'."
+  },
+  {
+   "id": "invoicing.i-series-stat-typography",
+   "title": "Series stat row mixes value sizes",
+   "detail": "On the series detail header, the Amount value is smaller than its sibling Series ID and Primary email values.",
+   "nodeIds": [
+    "invoicing.series-detail",
+    "invoicing.series-detail-new"
+   ],
+   "category": "typography",
+   "severity": "low",
+   "evidence": "Amount value 15px/400, line-height 24px; Series ID 17px/400, 28px; Primary email 17px/400, 28px."
+  },
+  {
+   "id": "invoicing.i-settings-close-overlap",
+   "title": "Settings close button overlaps the preview card",
+   "detail": "In Invoice settings the page close X sits on top of the invoice preview card's top-right corner.",
+   "nodeIds": [
+    "invoicing.settings-general",
+    "invoicing.settings-branding"
+   ],
+   "category": "layout",
+   "severity": "low",
+   "evidence": "Close button rect x 1360–1386, y 102–128; preview card rect x 774–1386, top 110."
+  },
+  {
+   "id": "invoicing.i-catalog-last-updated",
+   "title": "New catalog item shows a past 'Last updated' date",
+   "detail": "An item created today (Sep 24, 2026) shows 'Last updated Sep 19, 2026' in its panel, the same date as every seeded item.",
+   "nodeIds": [
+    "invoicing.catalog-item-created"
+   ],
+   "category": "data-format",
+   "severity": "low",
+   "evidence": "Catalog panel for newly created 'Onboarding Workshop': 'Last updated Sep 19, 2026'; demo date Sep 24, 2026; 'Used -', 'Last used: Item has not been used yet'."
+  },
+  {
+   "id": "invoicing.i-cancel-not-reflected",
+   "title": "Canceled invoice vanishes and totals don't change",
+   "detail": "After cancelling an invoice from the bulk bar, the row disappears even with Show canceled switched on, and the Total open card keeps counting it, although its own tooltip says open excludes canceled items.",
+   "nodeIds": [
+    "invoicing.bulk-cancel-done",
+    "invoicing.show-canceled-on",
+    "invoicing.total-open-tooltip",
+    "invoicing.row-selected"
+   ],
+   "category": "data-format",
+   "severity": "high",
+   "evidence": "Before: Total open '$86.3K · 12 Invoices · 1 Payment link', row 'Oct 24 · Scheduled · Quasar Design Studio · $12,000.00 · INV-0014'. After 'Cancel Invoice' and 'Item canceled' toast at /invoicing?showCanceled=true: no row matches INV-0014, card text still '$86.3K Total open 12 Invoices 1 Payment link'. Tooltip: 'Open includes all items that are not paid or canceled.'"
+  },
+  {
+   "id": "invoicing.i-invoice-not-found-toast",
+   "title": "'Invoice not found' error after creating an invoice",
+   "detail": "Return to dashboard after sending a new invoice lands on the list with the new invoice id, and an error toast says the invoice doesn't exist while the list loads; the detail panel then opens normally.",
+   "nodeIds": [
+    "invoicing.index-loading",
+    "invoicing.invoice-detail",
+    "invoicing.create-sent"
+   ],
+   "category": "interaction",
+   "severity": "medium",
+   "evidence": "URL /invoicing?id=dcc4f347-6215-4d89-b16c-a9b118bf1683 immediately after Return to dashboard; toast text 'Invoice not found' over the skeleton; 2.5s later the panel 'Invoice to Orbital Advisory Partners' with Edit / Remind / More is shown for the same id."
+  },
+  {
+   "id": "invoicing.i-date-field-height",
+   "title": "Date fields use a smaller input than their neighbors",
+   "detail": "In the Mark as paid dialog, the Paid on date field uses the compact inline input (32px, 4px corners) directly above a standard 40px, 8px-corner Payment method dropdown of the same width.",
+   "nodeIds": [
+    "invoicing.mark-paid-external",
+    "invoicing.create-series-frequency"
+   ],
+   "category": "component",
+   "severity": "low",
+   "evidence": "Paid on box: class _inputBox_ _inline_, height 32px, radius 4px, padding 3px 7px, bg rgba(180,183,200,0.08), 720px wide. Payment method: class _input_1ei06_, height 40px, radius 8px 0 0 8px (wrapper 8px), padding 7px 0 7px 12px, 720px wide. Both 15px text."
+  },
+  {
+   "id": "invoicing.i-transaction-match-empty",
+   "title": "Transaction match shows a bare 'No results' over the buttons",
+   "detail": "The Transaction match dropdown in Mark as paid opens a column header row and a single left-aligned 'No results' line with no guidance, and the list overlaps the Close / Mark as paid buttons below it.",
+   "nodeIds": [
+    "invoicing.mark-paid-transaction-match",
+    "invoicing.mark-paid-modal"
+   ],
+   "category": "layout",
+   "severity": "low",
+   "evidence": "Dropdown content: headers 'Paid on', 'Paid by', 'Amount', 'Payment Method'; body 'No results'. The listbox bottom sits over the top of the 'Close' and 'Mark as paid' buttons in the 2x capture (91-mark-paid-transaction-match.png)."
+  },
+  {
+   "id": "invoicing.i-due-date-blank",
+   "title": "Due date field blank while the preview shows a date",
+   "detail": "On Invoice details the Due date field shows no value, yet the live preview already prints a Net 30 due date, so the form and the document disagree until the user picks an option.",
+   "nodeIds": [
+    "invoicing.create-details",
+    "invoicing.create-due-date-menu"
+   ],
+   "category": "data-format",
+   "severity": "low",
+   "evidence": "Due date combobox value '' (empty) with menu options 'Sep 24, 2026 Due on receipt', 'Oct 24, 2026 Net 30'…; preview Terms 'Invoice date 09/24/2026, Due date 10/24/2026'."
+  },
+  {
+   "id": "invoicing.i-link-trailing-period",
+   "title": "'View API docs.' link includes the sentence's period",
+   "detail": "Invoice settings > General, Invoicing API row: the description 'Access the Invoicing API and create automations.' is followed by an inline link whose text is 'View API docs.', period included, so the period is part of the underlined, clickable text.",
+   "nodeIds": [
+    "invoicing.settings-general"
+   ],
+   "category": "copy",
+   "severity": "low",
+   "evidence": "DOM (2026-09-25) on /invoicing/invoice-settings: <a href=\"https://docs.mercury.com/reference/accounts_receivable\" target=\"_blank\">View API docs.</a> inside <span>Access the Invoicing API and create automations. …</span>. Jev p=0.52 that the period belongs outside the link."
+  }
+ ],
+ "blocked": []
+}

@@ -1,0 +1,8 @@
+[
+ {"target":"insights overview","title":"Insights summary text formats money differently from the KPIs above it","category":"data-format","severity":"medium",
+  "detail":"The generated summary on Insights writes negative amounts with an ASCII hyphen (\"-$2,970.23\", \"-$303k\") and mixes lowercase and uppercase thousands suffixes in one sentence (\"-$303k … $33.4K\"). The KPI tiles on the same page use a true minus sign (\"−$870,358\") and uppercase suffixes. Describing spending as a negative number (\"Spending was -$303k\") also reads oddly.",
+  "evidence":"DevTools: summary text node minus char U+002D, class _bodyDefault_qaod7_40; KPI \"−$870,358\" minus char U+2212, class _titleSecondary_qaod7_20. Same page /insights/overview."},
+ {"target":"insights overview","title":"Mixed precision for money within one Insights card","category":"data-format","severity":"low",
+  "detail":"The Money in/out cards show the headline in compact form ($1.9M), the section total in whole dollars ($1,909,616 / $870,358), and each row with cents ($1,000,000.00, $415,133.44). Three precisions for the same quantity in one card.",
+  "evidence":"DevTools text scan on /insights/overview: titleSecondary 24px \"$1.9M\"; 16px total \"$1,909,616\"; 15px rows \"$1,000,000.00\"."}
+]

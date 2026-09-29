@@ -1,0 +1,2269 @@
+{
+ "area": "payments",
+ "title": "Payments: send, transfer, recipients",
+ "nodes": [
+  {
+   "id": "payments.index",
+   "title": "Payments inbox",
+   "url": "/payments",
+   "image": "screens/payments/01-index.png",
+   "kind": "page",
+   "note": "Payments landing: Inbox / Needs Approval / Scheduled / Paid tabs, bill table with Overdue badges, Send money and Upload bill actions."
+  },
+  {
+   "id": "payments.move-money-menu",
+   "title": "Move money menu",
+   "url": "/payments",
+   "image": "screens/payments/02-move-money-menu.png",
+   "kind": "menu",
+   "note": "Global top-bar Move money dropdown: Send, Transfer, Deposit, Request, Upload bill."
+  },
+  {
+   "id": "payments.needs-approval",
+   "title": "Needs Approval tab",
+   "url": "/payments/approvals",
+   "image": "screens/payments/85-payments-needs-approval.png",
+   "kind": "page",
+   "note": "Payments awaiting approval with Send on, status badges (Not due yet, Batch, Queued, Transfer), approvals count and requester."
+  },
+  {
+   "id": "payments.scheduled",
+   "title": "Scheduled tab",
+   "url": "/payments/scheduled",
+   "image": "screens/payments/86-payments-scheduled.png",
+   "kind": "page",
+   "note": "Upcoming scheduled and recurring payments with due date, send-on date, account and method (ACH, Check, Intl. Wire)."
+  },
+  {
+   "id": "payments.status-filter",
+   "title": "Status filter",
+   "url": "/payments/scheduled",
+   "image": "screens/payments/87-payments-status-filter.png",
+   "kind": "popover",
+   "note": "Status filter popover with checkboxes: Overdue, Due next 7, Not due yet, Missing due date."
+  },
+  {
+   "id": "payments.send-start",
+   "title": "Send: how to start",
+   "url": "/send-money/pay/start",
+   "image": "screens/payments/03-send-start.png",
+   "kind": "page",
+   "note": "Full-screen flow entry: upload a bill to pre-fill, or search/select a recipient, create or invite one."
+  },
+  {
+   "id": "payments.send-recipient-search",
+   "title": "Send: recipient search",
+   "url": "/send-money/pay/start",
+   "image": "screens/payments/04-send-recipient-search.png",
+   "kind": "popover",
+   "note": "Recipient search combobox open with matching recipients listed."
+  },
+  {
+   "id": "payments.send-recipient-step",
+   "title": "Send: Recipient step",
+   "url": "/send-money/pay/recipient-details",
+   "image": "screens/payments/05-send-recipient-step.png",
+   "kind": "form-state",
+   "note": "Step 1 of 5: recipient card, address, payment method (ACH) and recipient bank details."
+  },
+  {
+   "id": "payments.send-method-dropdown",
+   "title": "Send: payment method list",
+   "url": "/send-money/pay/recipient-details",
+   "image": "screens/payments/06-send-method-dropdown.png",
+   "kind": "menu",
+   "note": "Payment method listbox: Real-Time Payment (New), ACH, Wire, International Wire, Check with delivery estimates."
+  },
+  {
+   "id": "payments.send-method-check",
+   "title": "Send: Check method",
+   "url": "/send-money/pay/recipient-details",
+   "image": "screens/payments/07-send-method-check.png",
+   "kind": "form-state",
+   "note": "Check selected: bank details replaced by the check mailing address, 7-10 business days."
+  },
+  {
+   "id": "payments.send-method-intl-wire",
+   "title": "Send: International wire currency",
+   "url": "/send-money/pay/recipient-details",
+   "image": "screens/payments/08-send-method-intl-wire.png",
+   "kind": "form-state",
+   "note": "International Wire selected: a Currency picker opens with USD most used and other currencies."
+  },
+  {
+   "id": "payments.send-intl-validation",
+   "title": "Send: currency required",
+   "url": "/send-money/pay/recipient-details",
+   "image": "screens/payments/09-send-intl-validation.png",
+   "kind": "validation-error",
+   "note": "Next with no currency shows 'Please complete this field' under Currency."
+  },
+  {
+   "id": "payments.send-recipient-more-menu",
+   "title": "Send: recipient card menu",
+   "url": "/send-money/pay/recipient-details",
+   "image": "screens/payments/10-send-recipient-more-menu.png",
+   "kind": "menu",
+   "note": "Overflow menu on the recipient card: Edit recipient details, Pay different recipient."
+  },
+  {
+   "id": "payments.send-edit-recipient",
+   "title": "Send: Edit recipient details",
+   "url": "/send-money/pay/recipient-details",
+   "image": "screens/payments/11-send-edit-recipient-drawer.png",
+   "kind": "drawer",
+   "note": "Full-screen overlay to edit recipient profile (person/business, name, email, nickname) and address; covers the demo banner."
+  },
+  {
+   "id": "payments.send-amount",
+   "title": "Send: Amount step",
+   "url": "/send-money/pay/amount",
+   "image": "screens/payments/12-send-amount.png",
+   "kind": "form-state",
+   "note": "Step 2: Recipient gets, Send from account, Send on date, Repeat this payment toggle."
+  },
+  {
+   "id": "payments.send-amount-validation",
+   "title": "Send: amount required",
+   "url": "/send-money/pay/amount",
+   "image": "screens/payments/13-send-amount-validation.png",
+   "kind": "validation-error",
+   "note": "Next with empty amount shows 'Must be a dollar value.' under the field."
+  },
+  {
+   "id": "payments.send-from-dropdown",
+   "title": "Send: Send from accounts",
+   "url": "/send-money/pay/amount",
+   "image": "screens/payments/14-send-from-account-dropdown.png",
+   "kind": "menu",
+   "note": "Account picker listing AP, AR, Checking and Savings with balances."
+  },
+  {
+   "id": "payments.send-date-picker",
+   "title": "Send: Send on calendar",
+   "url": "/send-money/pay/amount",
+   "image": "screens/payments/15-send-date-picker.png",
+   "kind": "popover",
+   "note": "Calendar popover with past dates disabled and next business day selected."
+  },
+  {
+   "id": "payments.send-repeat",
+   "title": "Send: Repeat payment",
+   "url": "/send-money/pay/amount",
+   "image": "screens/payments/16-send-repeat-payment.png",
+   "kind": "form-state",
+   "note": "Repeat on: label becomes Start on; Repeat frequency select and Ends (On / After / Never) appear."
+  },
+  {
+   "id": "payments.send-categorization",
+   "title": "Send: Categorization step",
+   "url": "/send-money/pay/accounting",
+   "image": "screens/payments/17-send-categorization.png",
+   "kind": "form-state",
+   "note": "Step 3: Single vs Multiple GL Codes segmented control with a GL Code select."
+  },
+  {
+   "id": "payments.send-gl-dropdown",
+   "title": "Send: GL code list",
+   "url": "/send-money/pay/accounting",
+   "image": "screens/payments/18-send-gl-code-dropdown.png",
+   "kind": "menu",
+   "note": "GL Code listbox: Mercury Checking (7772), 120 - Accounts Receivable, 400 - Inventory..."
+  },
+  {
+   "id": "payments.send-multiple-gl",
+   "title": "Send: Multiple GL codes",
+   "url": "/send-money/pay/accounting",
+   "image": "screens/payments/19-send-multiple-gl-codes.png",
+   "kind": "form-state",
+   "note": "Multiple GL Codes: break line items by Amount, Add line item, running Total."
+  },
+  {
+   "id": "payments.send-details",
+   "title": "Send: Details step",
+   "url": "/send-money/pay/more-details",
+   "image": "screens/payments/20-send-details.png",
+   "kind": "form-state",
+   "note": "Step 4: display name, memo, email receipt chips, include attachments, collapsed Bill details."
+  },
+  {
+   "id": "payments.send-details-bill",
+   "title": "Send: Bill details open",
+   "url": "/send-money/pay/more-details",
+   "image": "screens/payments/21-send-details-bill-expanded.png",
+   "kind": "form-state",
+   "note": "Bill details accordion open: invoice number, invoice/due dates, department, internal note, attachments."
+  },
+  {
+   "id": "payments.send-review",
+   "title": "Send: Review step",
+   "url": "/send-money/pay/review",
+   "image": "screens/payments/22-send-review.png",
+   "kind": "form-state",
+   "note": "Step 5: amount hero card, ACH delivery estimate, recipient bank and source account summary, Schedule payment."
+  },
+  {
+   "id": "payments.send-submitting",
+   "title": "Send: submitting",
+   "url": "/send-money/pay/review",
+   "image": "screens/payments/23-send-submitting.png",
+   "kind": "form-state",
+   "note": "Schedule payment pressed: primary button shows loading dots and Back is disabled."
+  },
+  {
+   "id": "payments.send-success",
+   "title": "Send: ACH scheduled",
+   "url": "/send-money/pay/success",
+   "image": "screens/payments/24-send-confirmation.png",
+   "kind": "confirmation",
+   "note": "'You've scheduled an ACH payment' with amount card, receipt download, Make another payment, Go to dashboard."
+  },
+  {
+   "id": "payments.transfer-start",
+   "title": "Transfer funds",
+   "url": "/send-money/transfer",
+   "image": "screens/payments/25-transfer-start.png",
+   "kind": "page",
+   "note": "One-time transfer card: amount, Transfer from, Transfer to, Add more details toggle; Auto transfer rule card below."
+  },
+  {
+   "id": "payments.transfer-validation",
+   "title": "Transfer: empty submit",
+   "url": "/send-money/transfer",
+   "image": "screens/payments/26-transfer-validation.png",
+   "kind": "validation-error",
+   "note": "Next with empty form: 'Must be a dollar value.' and two 'Please choose an account' errors."
+  },
+  {
+   "id": "payments.transfer-from-dropdown",
+   "title": "Transfer: from account list",
+   "url": "/send-money/transfer",
+   "image": "screens/payments/27-transfer-from-dropdown.png",
+   "kind": "menu",
+   "note": "Source account list: Treasury, Ops / Payroll, AP, Checking, Savings, external banks, Link a Bank Account."
+  },
+  {
+   "id": "payments.transfer-to-dropdown",
+   "title": "Transfer: to account list",
+   "url": "/send-money/transfer",
+   "image": "screens/payments/28-transfer-to-dropdown.png",
+   "kind": "menu",
+   "note": "Destination list incl. internal accounts and external accounts (Iron Bank, Chase, Capital One)."
+  },
+  {
+   "id": "payments.transfer-more-details",
+   "title": "Transfer: more details",
+   "url": "/send-money/transfer",
+   "image": "screens/payments/29-transfer-more-details.png",
+   "kind": "form-state",
+   "note": "Filled transfer with arrival estimate and Add more details on: Internal note and Attachments."
+  },
+  {
+   "id": "payments.transfer-review",
+   "title": "Review transfer",
+   "url": "/send-money/review/transfer/...",
+   "image": "screens/payments/30-transfer-review.png",
+   "kind": "form-state",
+   "note": "Review: 'Transfer from Ops / Payroll to Treasury', $5,000.00, From/To accounts, internal note, Transfer button and legal copy."
+  },
+  {
+   "id": "payments.transfer-success",
+   "title": "Transfer on the way",
+   "url": "/send-money/review/transfer/...",
+   "image": "screens/payments/31-transfer-success.png",
+   "kind": "confirmation",
+   "note": "'Your transfer is on the way' with arrival window, amount card, Make another transfer, Go to dashboard."
+  },
+  {
+   "id": "payments.deposit",
+   "title": "Add funds",
+   "url": "/add-funds",
+   "image": "screens/payments/32-deposit-options.png",
+   "kind": "page",
+   "note": "Deposit options: Wire Transfer (routing/account numbers, Wire Instructions), Bank Transfer, Check Deposit, Invoice, SAFE Investment."
+  },
+  {
+   "id": "payments.deposit-wire-details",
+   "title": "Payment Details (wire)",
+   "url": "/add-funds/wire",
+   "image": "screens/payments/33-deposit-wire-details.png",
+   "kind": "page",
+   "note": "Wire details step with example-data warning, account picker, Domestic / International accordions, Share and Download as PDF."
+  },
+  {
+   "id": "payments.deposit-domestic-details",
+   "title": "Domestic transfer details",
+   "url": "/add-funds/wire",
+   "image": "screens/payments/34-deposit-domestic-details.png",
+   "kind": "form-state",
+   "note": "Domestic accordion open: beneficiary name, account number, type, address, ABA routing, bank name and address."
+  },
+  {
+   "id": "payments.deposit-bank-transfer",
+   "title": "Deposit: bank transfer",
+   "url": "/send-money/transfer",
+   "image": "screens/payments/35-deposit-bank-transfer.png",
+   "kind": "form-state",
+   "note": "Bank Transfer option opens the Transfer funds form with Transfer to pre-set to Ops / Payroll."
+  },
+  {
+   "id": "payments.deposit-check-start",
+   "title": "Check deposit: getting started",
+   "url": "/add-funds/check/guidelines",
+   "image": "screens/payments/36-deposit-check.png",
+   "kind": "page",
+   "note": "Step 1 of 4: check deposit guidelines with Go back / Got it."
+  },
+  {
+   "id": "payments.deposit-check-details",
+   "title": "Check deposit: details",
+   "url": "/add-funds/check/details",
+   "image": "screens/payments/37-deposit-check-details.png",
+   "kind": "form-state",
+   "note": "Step 2 empty: Amount, From, note, Deposit to; Next disabled until complete."
+  },
+  {
+   "id": "payments.deposit-check-details-filled",
+   "title": "Check deposit: details filled",
+   "url": "/add-funds/check/details",
+   "image": "screens/payments/38-deposit-check-details-filled.png",
+   "kind": "form-state",
+   "note": "Step 2 filled ($1,200 from Acme Customer Co into Ops / Payroll); Next enabled."
+  },
+  {
+   "id": "payments.deposit-check-images",
+   "title": "Check deposit: upload pictures",
+   "url": "/add-funds/check/pictures",
+   "image": "screens/payments/39-deposit-check-images.png",
+   "kind": "form-state",
+   "note": "Step 3: endorsement instructions and an upload zone for the front of the check."
+  },
+  {
+   "id": "payments.deposit-check-rotate",
+   "title": "Upload front of check",
+   "url": "/add-funds/check/pictures",
+   "image": "screens/payments/40-deposit-check-rotate-modal.png",
+   "kind": "modal",
+   "note": "Modal to rotate the uploaded front image horizontally, Cancel / Save."
+  },
+  {
+   "id": "payments.deposit-check-back-modal",
+   "title": "Upload back of check",
+   "url": "/add-funds/check/pictures",
+   "image": "screens/payments/42-deposit-check-back-modal.png",
+   "kind": "modal",
+   "note": "Back-of-check modal with endorsement confirmation checkbox gating Save."
+  },
+  {
+   "id": "payments.deposit-check-images-done",
+   "title": "Check deposit: both images",
+   "url": "/add-funds/check/pictures",
+   "image": "screens/payments/41-deposit-check-images-done.png",
+   "kind": "form-state",
+   "note": "Both check images uploaded as thumbnails; Review button sits below the fold."
+  },
+  {
+   "id": "payments.deposit-check-review",
+   "title": "Review check deposit",
+   "url": "/add-funds/check/review",
+   "image": "screens/payments/43-deposit-check-review.png",
+   "kind": "form-state",
+   "note": "Step 4: amount, Deposit to account, check thumbnails, hold notices, Deposit check."
+  },
+  {
+   "id": "payments.deposit-check-success",
+   "title": "Check deposit submitted",
+   "url": "/add-funds/check/review",
+   "image": "screens/payments/44-deposit-check-success.png",
+   "kind": "confirmation",
+   "note": "'We're reviewing your check deposit' with availability date, info banner and amount card."
+  },
+  {
+   "id": "payments.deposit-safe",
+   "title": "Create a new SAFE",
+   "url": "/safe/create",
+   "image": "screens/payments/45-deposit-safe.png",
+   "kind": "page",
+   "note": "SAFE Investment option: 4-step SAFE flow, step 1 amount, date, destination account, SAFE type."
+  },
+  {
+   "id": "payments.request-start",
+   "title": "Request money",
+   "url": "/invoicing/create-invoice",
+   "image": "screens/payments/46-request-payment.png",
+   "kind": "page",
+   "note": "Move money > Request: pick a customer and compare one-time invoice, recurring series or request without invoice, with live preview."
+  },
+  {
+   "id": "payments.request-validation",
+   "title": "Request: customer required",
+   "url": "/invoicing/create-invoice",
+   "image": "screens/payments/47-request-validation.png",
+   "kind": "validation-error",
+   "note": "Next without customer: 'Please complete this field'; Next looks disabled (40% opacity) yet stays clickable."
+  },
+  {
+   "id": "payments.request-customer-dropdown",
+   "title": "Request: customer list",
+   "url": "/invoicing/create-invoice",
+   "image": "screens/payments/48-request-customer-dropdown.png",
+   "kind": "menu",
+   "note": "Customer combobox with Add new customer and existing customers with emails."
+  },
+  {
+   "id": "payments.request-add-customer",
+   "title": "Request: Add customer",
+   "url": "/invoicing/create-invoice",
+   "image": "screens/payments/49-request-add-customer.png",
+   "kind": "form-state",
+   "note": "Inline Add customer form: name, primary email, additional emails, address toggle."
+  },
+  {
+   "id": "payments.request-link-form",
+   "title": "Payment link details",
+   "url": "/invoicing/create-invoice",
+   "image": "screens/payments/50-request-link-form.png",
+   "kind": "form-state",
+   "note": "Payment link form: customer card, currency, amount, payer memo, methods, destination account, payer page preview."
+  },
+  {
+   "id": "payments.request-success",
+   "title": "Payment link sent",
+   "url": "/invoicing/create-invoice",
+   "image": "screens/payments/51-request-send.png",
+   "kind": "confirmation",
+   "note": "'Your payment link has been created and sent' with amount, copyable link and a 'Payment link created!' toast."
+  },
+  {
+   "id": "payments.recipients",
+   "title": "Recipients",
+   "url": "/payments/recipients",
+   "image": "screens/payments/52-recipients-list.png",
+   "kind": "page",
+   "note": "Recipient table: total paid, last paid, status, tax docs, NDAs, row actions; All / Has Tax Docs / Needs Tax Docs chips."
+  },
+  {
+   "id": "payments.recipients-create-menu",
+   "title": "Create recipient menu",
+   "url": "/payments/recipients",
+   "image": "screens/payments/53-recipients-create-menu.png",
+   "kind": "menu",
+   "note": "Split-button menu: Invite recipient, Bulk invite with CSV."
+  },
+  {
+   "id": "payments.recipient-invite",
+   "title": "Invite recipient",
+   "url": "/payments/recipients/create/request",
+   "image": "screens/payments/54-recipient-invite.png",
+   "kind": "form-state",
+   "note": "Invite form: name, email, payment method specified by recipient or me, display name, notes, tax docs toggle."
+  },
+  {
+   "id": "payments.recipient-invite-validation",
+   "title": "Invite: required fields",
+   "url": "/payments/recipients/create/request",
+   "image": "screens/payments/55-recipient-invite-validation.png",
+   "kind": "validation-error",
+   "note": "Send request empty: 'Please complete this field' under Name and Email."
+  },
+  {
+   "id": "payments.recipient-invite-specified",
+   "title": "Invite: specified by me",
+   "url": "/payments/recipients/create/request",
+   "image": "screens/payments/56-recipient-invite-specified-by-me.png",
+   "kind": "form-state",
+   "note": "Specified by me: possible payment methods chips (ACH, Wire, International Wire, Check)."
+  },
+  {
+   "id": "payments.recipient-invite-sent",
+   "title": "Invite sent toast",
+   "url": "/payments/recipients?recipientOnboardingRequest=...",
+   "image": "screens/payments/57-recipient-invite-sent.png",
+   "kind": "toast",
+   "note": "Back on Recipients with toast 'Priya Raman has been invited to fill out their payment details.'"
+  },
+  {
+   "id": "payments.recipient-create",
+   "title": "Create recipient",
+   "url": "/payments/recipients/new",
+   "image": "screens/payments/58-recipient-create.png",
+   "kind": "form-state",
+   "note": "Manual add: person/business, legal name, email, nickname, Request Tax Documents, address."
+  },
+  {
+   "id": "payments.recipient-create-validation",
+   "title": "Create recipient: errors",
+   "url": "/payments/recipients/new",
+   "image": "screens/payments/59-recipient-create-validation.png",
+   "kind": "validation-error",
+   "note": "Empty submit: 'You must make a selection.' on type and 'Please complete this field' on legal name."
+  },
+  {
+   "id": "payments.recipient-address-autocomplete",
+   "title": "Address autocomplete",
+   "url": "/payments/recipients/new",
+   "image": "screens/payments/60-recipient-address-autocomplete.png",
+   "kind": "popover",
+   "note": "Recipient legal address suggestions; State shows 'Please enter a valid US state.'"
+  },
+  {
+   "id": "payments.recipient-created",
+   "title": "Recipient created",
+   "url": "/payments/recipients?recipient=...",
+   "image": "screens/payments/61-recipient-created.png",
+   "kind": "drawer",
+   "note": "New recipient opens in the side panel with no payment details and a 'Recipient created / Send Payment' toast."
+  },
+  {
+   "id": "payments.recipient-detail",
+   "title": "Recipient detail panel",
+   "url": "/payments/recipients?recipient=...",
+   "image": "screens/payments/62-recipient-detail.png",
+   "kind": "drawer",
+   "note": "Side panel: profile, international wire bank details, payments by year, tax documents upload, action bar."
+  },
+  {
+   "id": "payments.wire-drawdowns",
+   "title": "Wire Drawdowns",
+   "url": "/payments/wire-drawdowns",
+   "image": "screens/payments/63-wire-drawdowns.png",
+   "kind": "page",
+   "note": "Drawdown authorizations table: created on, recipient, withdrawal limit, pay from."
+  },
+  {
+   "id": "payments.wire-drawdown-detail",
+   "title": "Drawdown recipient panel",
+   "url": "/payments/wire-drawdowns",
+   "image": "screens/payments/64-wire-drawdown-detail.png",
+   "kind": "drawer",
+   "note": "Side panel with routing and masked account number, pay from, withdrawal limit, delete and edit."
+  },
+  {
+   "id": "payments.wire-drawdown-create",
+   "title": "Create authorization",
+   "url": "/wire-drawdowns/recipient-details",
+   "image": "screens/payments/65-wire-drawdown-create.png",
+   "kind": "form-state",
+   "note": "Step 1: company type Payroll / Benefits or Custom; Next disabled."
+  },
+  {
+   "id": "payments.wire-drawdown-payroll",
+   "title": "Drawdown: payroll provider",
+   "url": "/wire-drawdowns/recipient-details",
+   "image": "screens/payments/66-wire-drawdown-payroll.png",
+   "kind": "form-state",
+   "note": "Payroll / Benefits chosen: Recipient company select appears; Next enabled."
+  },
+  {
+   "id": "payments.wire-drawdown-validation",
+   "title": "Drawdown: recipient required",
+   "url": "/wire-drawdowns/recipient-details",
+   "image": "screens/payments/67-wire-drawdown-validation.png",
+   "kind": "validation-error",
+   "note": "Next with no company: 'Please choose a recipient.' and Next turns disabled."
+  },
+  {
+   "id": "payments.wire-drawdown-funding",
+   "title": "Drawdown: source account",
+   "url": "/wire-drawdowns/funding-account",
+   "image": "screens/payments/68-wire-drawdown-funding.png",
+   "kind": "empty-state",
+   "note": "Source account select reads 'There are no accounts'; the flow cannot continue in the sandbox."
+  },
+  {
+   "id": "payments.ach-authorizations",
+   "title": "ACH Authorizations",
+   "url": "/payments/authorizations",
+   "image": "screens/payments/69-ach-authorizations.png",
+   "kind": "page",
+   "note": "Authorized ACH debit vendors with authorized-on date, account and transaction limit; Flagged tab."
+  },
+  {
+   "id": "payments.ach-flagged",
+   "title": "Flagged ACH pulls",
+   "url": "/payments/authorizations#flaggedPayments",
+   "image": "screens/payments/70-ach-authorizations-flagged.png",
+   "kind": "page",
+   "note": "Flagged debits with time left to review and reason (Unauthorized vendor, Above transaction limit)."
+  },
+  {
+   "id": "payments.ach-add",
+   "title": "Add ACH authorization",
+   "url": "/payments/authorizations/add",
+   "image": "screens/payments/71-ach-authorization-add.png",
+   "kind": "form-state",
+   "note": "Vendor combobox open: Add new counterparty and recently pulled vendors with ACH Company IDs."
+  },
+  {
+   "id": "payments.ach-add-details",
+   "title": "ACH authorization details",
+   "url": "/payments/authorizations/add",
+   "image": "screens/payments/72-ach-authorization-details.png",
+   "kind": "form-state",
+   "note": "Vendor, ACH Company ID chip, account to pull from, transaction limit toggle, + Add Account."
+  },
+  {
+   "id": "payments.ach-add-review",
+   "title": "Review and authorize",
+   "url": "/payments/authorizations/add",
+   "image": "screens/payments/73-ach-authorization-review.png",
+   "kind": "form-state",
+   "note": "Review vendor, ACH Company ID, account and limit; Authorize."
+  },
+  {
+   "id": "payments.ach-add-success",
+   "title": "ACH list with new vendor",
+   "url": "/payments/authorizations",
+   "image": "screens/payments/74-ach-authorization-success.png",
+   "kind": "confirmation",
+   "note": "Returns to the list with PG&E added; no toast or success message."
+  },
+  {
+   "id": "payments.checkbooks",
+   "title": "Checkbooks",
+   "url": "/checkbooks/hub",
+   "image": "screens/payments/75-checkbooks-hub.png",
+   "kind": "page",
+   "note": "Incoming check payments with review status timers; Settings and Order Checkbook."
+  },
+  {
+   "id": "payments.checkbook-check-detail",
+   "title": "Check payment panel",
+   "url": "/checkbooks/hub/{id}",
+   "image": "screens/payments/76-checkbook-check-detail.png",
+   "kind": "drawer",
+   "note": "Check image, Approve / Reject, check number, date received, time left, memo."
+  },
+  {
+   "id": "payments.checkbook-check-approved",
+   "title": "Check approved",
+   "url": "/checkbooks/hub/{id}",
+   "image": "screens/payments/77-checkbook-check-approved.png",
+   "kind": "confirmation",
+   "note": "Panel after Approve: Processing badge and 'approved on September 24, 2026' banner."
+  },
+  {
+   "id": "payments.checkbook-order",
+   "title": "Order a Checkbook",
+   "url": "/checkbooks/ordering/order",
+   "image": "screens/payments/78-checkbook-order.png",
+   "kind": "form-state",
+   "note": "Account, nickname, start number, check color, shipping address, live check preview."
+  },
+  {
+   "id": "payments.checkbook-order-validation",
+   "title": "Order checkbook: errors",
+   "url": "/checkbooks/ordering/order",
+   "image": "screens/payments/79-checkbook-order-validation.png",
+   "kind": "validation-error",
+   "note": "Next empty: 'Please complete this field' under Account and Checkbook nickname."
+  },
+  {
+   "id": "payments.checkbook-order-review",
+   "title": "Checkbook order review",
+   "url": "/checkbooks/ordering/review",
+   "image": "screens/payments/80-checkbook-order-review.png",
+   "kind": "form-state",
+   "note": "Nickname, account, shipping address, cost Free, authority checkbox gating Confirm."
+  },
+  {
+   "id": "payments.checkbook-order-success",
+   "title": "Checkbook ordered",
+   "url": "/checkbooks/ordering/success",
+   "image": "screens/payments/81-checkbook-order-success.png",
+   "kind": "confirmation",
+   "note": "Centered 'We're getting your checkbook ready' with check preview and Done."
+  },
+  {
+   "id": "payments.taxes",
+   "title": "Taxes: 1099 filing",
+   "url": "/taxes/1099/filing/2026",
+   "image": "screens/payments/82-taxes.png",
+   "kind": "page",
+   "note": "1099 filing: tax year, add recipient, IRS deadline, filing tasks, recipient W-9 status and 1099 totals."
+  },
+  {
+   "id": "payments.taxes-year-menu",
+   "title": "Tax year menu",
+   "url": "/taxes/1099/filing/2026",
+   "image": "screens/payments/83-taxes-year-menu.png",
+   "kind": "menu",
+   "note": "Tax Year dropdown listing 2026 back to 2021."
+  },
+  {
+   "id": "payments.taxes-documents",
+   "title": "Tax Documents",
+   "url": "/taxes/1099/documents",
+   "image": "screens/payments/84-taxes-documents.png",
+   "kind": "page",
+   "note": "Tax document library with W-9/W8-BEN, 1099-NEC, 1099-MISC and other tabs; recipient W-9 files."
+  },
+  {
+   "id": "payments.paid",
+   "title": "Paid tab",
+   "url": "/payments/paid",
+   "image": "screens/payments/88-payments-paid.png",
+   "kind": "page",
+   "note": "Completed payments: Paid on, recipient, amount, account and method (Check Payment, Real-Time Payment, Intl. Wire, Mercury ACH Payment); Failed badge inline."
+  },
+  {
+   "id": "payments.paid-detail",
+   "title": "Paid payment detail",
+   "url": "/transactions",
+   "image": "screens/payments/89-payments-paid-detail.png",
+   "kind": "drawer",
+   "note": "Clicking a Paid row jumps to Transactions with the Check Payment panel open: tracking timeline, memo, check images, comments."
+  },
+  {
+   "id": "payments.approval-detail",
+   "title": "Approval request panel",
+   "url": "/payments/approvals?requestId=...",
+   "image": "screens/payments/96-approval-detail.png",
+   "kind": "drawer",
+   "note": "Needs Approval row panel: amount, requester, Review / Approve / Decline, type, due date, invoice date 'Yesterday', approvals 0 of 2, attached bill PDF."
+  },
+  {
+   "id": "payments.approval-approved",
+   "title": "Request approved",
+   "url": "/payments/approvals",
+   "image": "screens/payments/97-approval-approved-toast.png",
+   "kind": "toast",
+   "note": "Approve from the panel: row leaves the list, count drops 7 to 6, 'Request approved' toast."
+  },
+  {
+   "id": "payments.approval-declined",
+   "title": "Request declined",
+   "url": "/payments/approvals",
+   "image": "screens/payments/98-approval-declined-toast.png",
+   "kind": "toast",
+   "note": "Decline from the panel fires immediately with no confirmation; 'Request declined' toast with a green check."
+  },
+  {
+   "id": "payments.approvals-bulk",
+   "title": "Approvals bulk selection",
+   "url": "/payments/approvals",
+   "image": "screens/payments/99-approvals-bulk-select.png",
+   "kind": "form-state",
+   "note": "Two requests selected: floating bar with count, total, decline, approve and Review Requests."
+  },
+  {
+   "id": "payments.batch-review",
+   "title": "Review batch payment",
+   "url": "/batch-payments/approval",
+   "image": "screens/payments/100-batch-approval-review.png",
+   "kind": "page",
+   "note": "Full-screen reviewer: 'Approval 1 of 2', wire total, from account, send on Tomorrow, batch link, Decline / Approve / Skip, attachment pane."
+  },
+  {
+   "id": "payments.batch-review-next",
+   "title": "Batch review: next item",
+   "url": "/batch-payments/approval",
+   "image": "screens/payments/101-batch-approval-next.png",
+   "kind": "form-state",
+   "note": "After approving the first item: advances to 'Approval 2 of 2' with an 'Approved' toast."
+  },
+  {
+   "id": "payments.batch-success",
+   "title": "Batch approval done",
+   "url": "/send-money/bulk-approval-review/success",
+   "image": "screens/payments/102-batch-approval-success.png",
+   "kind": "confirmation",
+   "note": "'You've reviewed 2 payments', receipts sent, $12,085.90 approved total with View details, Back to needs approval."
+  },
+  {
+   "id": "payments.scheduled-detail",
+   "title": "Scheduled payment panel",
+   "url": "/payments/scheduled?payment=...",
+   "image": "screens/payments/103-scheduled-detail.png",
+   "kind": "drawer",
+   "note": "Recurring CAD payment: amount with USD estimate, requester, Edit / Cancel payment, schedule details, progress 5 of 6, GL code, notes."
+  },
+  {
+   "id": "payments.scheduled-cancel",
+   "title": "Cancel recurring payment",
+   "url": "/payments/scheduled?payment=...",
+   "image": "screens/payments/104-scheduled-cancel-modal.png",
+   "kind": "modal",
+   "note": "Confirmation modal with payment rule, next payment and total, Go back / Cancel payment."
+  },
+  {
+   "id": "payments.scheduled-canceled",
+   "title": "Payment canceled",
+   "url": "/payments/scheduled",
+   "image": "screens/payments/105-scheduled-canceled-toast.png",
+   "kind": "toast",
+   "note": "Payment removed from Scheduled (7 to 6) with 'Payment canceled' toast."
+  },
+  {
+   "id": "payments.scheduled-edit",
+   "title": "Edit scheduled payment",
+   "url": "/payments/scheduled?payment=...",
+   "image": "screens/payments/106-scheduled-edit.png",
+   "kind": "form-state",
+   "note": "Inline edit in the panel: amount, source account, start date, repeat rule (Custom, every 1 month, on day / nth weekday), end, memo; Review enables after a change."
+  },
+  {
+   "id": "payments.scheduled-edit-review",
+   "title": "Review new payment details",
+   "url": "/payments/scheduled?payment=...",
+   "image": "screens/payments/107-scheduled-edit-review.png",
+   "kind": "modal",
+   "note": "Review modal: send-from account, plain-language payment rule, next three dates with amounts, no end date; Cancel / Confirm."
+  },
+  {
+   "id": "payments.scheduled-updated",
+   "title": "Payment(s) updated",
+   "url": "/payments/scheduled?payment=...",
+   "image": "screens/payments/108-scheduled-updated-toast.png",
+   "kind": "toast",
+   "note": "After Confirm: 'Payment(s) updated' toast, new rule in the panel, and every row in the table now shows 'No due date'."
+  },
+  {
+   "id": "payments.settings-modal",
+   "title": "Payments settings",
+   "url": "/payments?modal=settings",
+   "image": "screens/payments/109-payments-settings-modal.png",
+   "kind": "modal",
+   "note": "Gear next to the AP email: bill forwarding email with copy, email alert Manage link, approval rules tiers with Edit."
+  },
+  {
+   "id": "payments.send-method-wire",
+   "title": "Send: domestic Wire",
+   "url": "/send-money/pay/recipient-details",
+   "image": "screens/payments/110-send-method-wire.png",
+   "kind": "form-state",
+   "note": "Payment method Wire (0-1 business days, No fee) asks for routing and account numbers."
+  },
+  {
+   "id": "payments.send-wire-validation",
+   "title": "Send: wire bank details required",
+   "url": "/send-money/pay/recipient-details",
+   "image": "screens/payments/111-send-wire-validation.png",
+   "kind": "validation-error",
+   "note": "Next with empty bank details: 'Routing # should be a 9-digit number', 'Account # should be 4-17 characters'."
+  },
+  {
+   "id": "payments.send-wire-purpose",
+   "title": "Send: Wire purpose",
+   "url": "/send-money/pay/purpose",
+   "image": "screens/payments/112-send-wire-purpose.png",
+   "kind": "menu",
+   "note": "Extra wire-only step: 'Who or what is this payment for?' options Employee, Contractor, Vendor, Landlord, Transferring to subsidiary, Other."
+  },
+  {
+   "id": "payments.send-wire-review",
+   "title": "Send: wire review",
+   "url": "/send-money/pay/review",
+   "image": "screens/payments/113-send-wire-review.png",
+   "kind": "form-state",
+   "note": "Wire review: $500.00 hero, delivery estimate, bank, full account and routing numbers, from account; Schedule wire."
+  },
+  {
+   "id": "payments.send-wire-success",
+   "title": "Send: wire scheduled",
+   "url": "/send-money/pay/success",
+   "image": "screens/payments/114-send-wire-success.png",
+   "kind": "confirmation",
+   "note": "'You've scheduled a wire payment' with receipt download and a 1099 prompt to request the recipient's tax documents by email."
+  },
+  {
+   "id": "payments.recipients-needs-tax-docs",
+   "title": "Recipients: Needs Tax Docs",
+   "url": "/payments/recipients",
+   "image": "screens/payments/90-recipients-needs-tax-docs.png",
+   "kind": "page",
+   "note": "Needs Tax Docs filter chip applied to the recipients table; Export filtered."
+  },
+  {
+   "id": "payments.recipients-filters",
+   "title": "Recipients filter menu",
+   "url": "/payments/recipients",
+   "image": "screens/payments/91-recipients-filters.png",
+   "kind": "popover",
+   "note": "Filter menu: Name, Email, Amount Paid, Year Paid, Date Added, Date Last Paid, Pending Details, Tax Document; name search with Select All."
+  },
+  {
+   "id": "payments.recipients-bulk",
+   "title": "Recipients bulk selection",
+   "url": "/payments/recipients",
+   "image": "screens/payments/92-recipients-bulk-select.png",
+   "kind": "form-state",
+   "note": "Two recipients checked: floating bar with delete, reminder, merge, Request tax docs; header export becomes 'Export 2 Recipients'."
+  },
+  {
+   "id": "payments.recipients-request-tax-docs",
+   "title": "Request tax documents",
+   "url": "/payments/recipients",
+   "image": "screens/payments/93-recipients-request-tax-docs.png",
+   "kind": "modal",
+   "note": "Modal lists eligible recipients with an email picker; 'Get W-9s and W-8BENs from 1 recipient via email.' Close / Send requests."
+  },
+  {
+   "id": "payments.recipients-request-tax-docs-validation",
+   "title": "Request tax docs: email missing",
+   "url": "/payments/recipients",
+   "image": "screens/payments/95-recipients-request-tax-docs-validation.png",
+   "kind": "validation-error",
+   "note": "Recipient without an email: 'Please complete this field' and Send requests disabled."
+  },
+  {
+   "id": "payments.recipients-tax-docs-requested",
+   "title": "Tax documents requested",
+   "url": "/payments/recipients",
+   "image": "screens/payments/94-recipients-tax-docs-requested.png",
+   "kind": "toast",
+   "note": "'Tax documents requested from 1 recipient' toast; Tax docs column shows pending clocks."
+  },
+  {
+   "id": "payments.taxes-edit-filing",
+   "title": "Edit 1099 filing",
+   "url": "/taxes/1099-filing/2026/edit-filing",
+   "image": "screens/payments/115-taxes-edit-filing.png",
+   "kind": "form-state",
+   "note": "Full-screen filing editor: W-9 error banner, Invalid State badge, payee name fields; a '0 transactions selected' bar floats over the form."
+  },
+  {
+   "id": "payments.taxes-payee-drawer",
+   "title": "1099 payee panel",
+   "url": "/taxes/1099/filing/2026?payeeId=...",
+   "image": "screens/payments/116-taxes-payee-drawer.png",
+   "kind": "drawer",
+   "note": "After Done: returns to 1099 Filing with the payee panel open: Tax Year 2026, email, Remove Filing / Edit filing."
+  },
+  {
+   "id": "payments.taxes-request-w9s",
+   "title": "Request W-9s",
+   "url": "/taxes/1099-filing/2026/request-w9s",
+   "image": "screens/payments/117-taxes-request-w9s.png",
+   "kind": "form-state",
+   "note": "Four recipients missing W-9s with email pickers, W-9 status, upload, optional message; bar 'Send 4 requests' / Request w-9s."
+  }
+ ],
+ "edges": [
+  {
+   "from": "home.index",
+   "to": "payments.index",
+   "label": "Click Payments in sidebar"
+  },
+  {
+   "from": "payments.index",
+   "to": "payments.move-money-menu",
+   "label": "Click Move money"
+  },
+  {
+   "from": "payments.index",
+   "to": "payments.send-start",
+   "label": "Click Send money"
+  },
+  {
+   "from": "payments.index",
+   "to": "payments.needs-approval",
+   "label": "Click Needs Approval tab"
+  },
+  {
+   "from": "payments.needs-approval",
+   "to": "payments.scheduled",
+   "label": "Click Scheduled tab"
+  },
+  {
+   "from": "payments.scheduled",
+   "to": "payments.status-filter",
+   "label": "Click Status filter"
+  },
+  {
+   "from": "payments.index",
+   "to": "billpay.index",
+   "label": "Click Upload bill"
+  },
+  {
+   "from": "payments.move-money-menu",
+   "to": "payments.send-start",
+   "label": "Click Send"
+  },
+  {
+   "from": "payments.move-money-menu",
+   "to": "payments.transfer-start",
+   "label": "Click Transfer"
+  },
+  {
+   "from": "payments.move-money-menu",
+   "to": "payments.deposit",
+   "label": "Click Deposit"
+  },
+  {
+   "from": "payments.move-money-menu",
+   "to": "payments.request-start",
+   "label": "Click Request"
+  },
+  {
+   "from": "payments.send-start",
+   "to": "payments.send-recipient-search",
+   "label": "Type in recipient Search"
+  },
+  {
+   "from": "payments.send-recipient-search",
+   "to": "payments.send-recipient-step",
+   "label": "Pick a recipient"
+  },
+  {
+   "from": "payments.send-start",
+   "to": "payments.send-recipient-step",
+   "label": "Click a recently paid recipient"
+  },
+  {
+   "from": "payments.send-start",
+   "to": "payments.recipient-create",
+   "label": "Click Create recipient"
+  },
+  {
+   "from": "payments.send-start",
+   "to": "payments.recipient-invite",
+   "label": "Click Invite recipient"
+  },
+  {
+   "from": "payments.send-recipient-step",
+   "to": "payments.send-method-dropdown",
+   "label": "Open Payment method"
+  },
+  {
+   "from": "payments.send-method-dropdown",
+   "to": "payments.send-method-check",
+   "label": "Choose Check"
+  },
+  {
+   "from": "payments.send-method-dropdown",
+   "to": "payments.send-method-intl-wire",
+   "label": "Choose International Wire"
+  },
+  {
+   "from": "payments.send-method-intl-wire",
+   "to": "payments.send-intl-validation",
+   "label": "Click Next without currency"
+  },
+  {
+   "from": "payments.send-recipient-step",
+   "to": "payments.send-recipient-more-menu",
+   "label": "Click recipient card ... menu"
+  },
+  {
+   "from": "payments.send-recipient-more-menu",
+   "to": "payments.send-edit-recipient",
+   "label": "Click Edit recipient details"
+  },
+  {
+   "from": "payments.send-recipient-more-menu",
+   "to": "payments.send-start",
+   "label": "Click Pay different recipient"
+  },
+  {
+   "from": "payments.send-edit-recipient",
+   "to": "payments.send-recipient-step",
+   "label": "Click Go back / Save"
+  },
+  {
+   "from": "payments.send-recipient-step",
+   "to": "payments.send-amount",
+   "label": "Click Next (ACH)"
+  },
+  {
+   "from": "payments.send-amount",
+   "to": "payments.send-amount-validation",
+   "label": "Click Next with empty amount"
+  },
+  {
+   "from": "payments.send-amount",
+   "to": "payments.send-from-dropdown",
+   "label": "Open Send from"
+  },
+  {
+   "from": "payments.send-from-dropdown",
+   "to": "payments.send-start",
+   "label": "Press Escape (exits the flow)"
+  },
+  {
+   "from": "payments.send-amount",
+   "to": "payments.send-date-picker",
+   "label": "Click Send on"
+  },
+  {
+   "from": "payments.send-amount",
+   "to": "payments.send-repeat",
+   "label": "Toggle Repeat this payment"
+  },
+  {
+   "from": "payments.send-amount",
+   "to": "payments.send-categorization",
+   "label": "Enter amount, click Next"
+  },
+  {
+   "from": "payments.send-categorization",
+   "to": "payments.send-gl-dropdown",
+   "label": "Open GL Code"
+  },
+  {
+   "from": "payments.send-categorization",
+   "to": "payments.send-multiple-gl",
+   "label": "Click Multiple GL Codes"
+  },
+  {
+   "from": "payments.send-gl-dropdown",
+   "to": "payments.send-details",
+   "label": "Pick GL code, click Next"
+  },
+  {
+   "from": "payments.send-categorization",
+   "to": "payments.send-details",
+   "label": "Click Next"
+  },
+  {
+   "from": "payments.send-details",
+   "to": "payments.send-details-bill",
+   "label": "Expand Bill details"
+  },
+  {
+   "from": "payments.send-details",
+   "to": "payments.send-review",
+   "label": "Click Next"
+  },
+  {
+   "from": "payments.send-details-bill",
+   "to": "payments.send-review",
+   "label": "Click Next"
+  },
+  {
+   "from": "payments.send-review",
+   "to": "payments.send-submitting",
+   "label": "Click Schedule payment"
+  },
+  {
+   "from": "payments.send-submitting",
+   "to": "payments.send-success",
+   "label": "Payment scheduled"
+  },
+  {
+   "from": "payments.send-success",
+   "to": "payments.send-start",
+   "label": "Click Make another payment"
+  },
+  {
+   "from": "payments.send-success",
+   "to": "home.index",
+   "label": "Click Go to dashboard"
+  },
+  {
+   "from": "payments.transfer-start",
+   "to": "payments.transfer-validation",
+   "label": "Click Next with empty form"
+  },
+  {
+   "from": "payments.transfer-start",
+   "to": "payments.transfer-from-dropdown",
+   "label": "Open Transfer from"
+  },
+  {
+   "from": "payments.transfer-from-dropdown",
+   "to": "payments.transfer-to-dropdown",
+   "label": "Pick source, open Transfer to"
+  },
+  {
+   "from": "payments.transfer-to-dropdown",
+   "to": "payments.transfer-more-details",
+   "label": "Pick destination, toggle Add more details"
+  },
+  {
+   "from": "payments.transfer-more-details",
+   "to": "payments.transfer-review",
+   "label": "Click Next"
+  },
+  {
+   "from": "payments.transfer-review",
+   "to": "payments.transfer-success",
+   "label": "Click Transfer"
+  },
+  {
+   "from": "payments.transfer-success",
+   "to": "payments.transfer-start",
+   "label": "Click Make another transfer"
+  },
+  {
+   "from": "payments.transfer-success",
+   "to": "home.index",
+   "label": "Click Go to dashboard"
+  },
+  {
+   "from": "payments.transfer-start",
+   "to": "accounts.index",
+   "label": "Click Auto transfer rule"
+  },
+  {
+   "from": "payments.deposit",
+   "to": "payments.deposit-wire-details",
+   "label": "Click View More Details"
+  },
+  {
+   "from": "payments.deposit-wire-details",
+   "to": "payments.deposit-domestic-details",
+   "label": "Expand Domestic Transfer Details"
+  },
+  {
+   "from": "payments.deposit-domestic-details",
+   "to": "payments.deposit",
+   "label": "Click Choose method in stepper"
+  },
+  {
+   "from": "payments.deposit",
+   "to": "payments.deposit-bank-transfer",
+   "label": "Click Bank Transfer"
+  },
+  {
+   "from": "payments.deposit-bank-transfer",
+   "to": "payments.deposit",
+   "label": "Click Back"
+  },
+  {
+   "from": "payments.deposit",
+   "to": "payments.deposit-check-start",
+   "label": "Click Check Deposit"
+  },
+  {
+   "from": "payments.deposit-check-start",
+   "to": "payments.deposit-check-details",
+   "label": "Click Got it"
+  },
+  {
+   "from": "payments.deposit-check-details",
+   "to": "payments.deposit-check-details-filled",
+   "label": "Fill amount, from, account"
+  },
+  {
+   "from": "payments.deposit-check-details-filled",
+   "to": "payments.deposit-check-images",
+   "label": "Click Next"
+  },
+  {
+   "from": "payments.deposit-check-images",
+   "to": "payments.deposit-check-rotate",
+   "label": "Upload front image"
+  },
+  {
+   "from": "payments.deposit-check-rotate",
+   "to": "payments.deposit-check-back-modal",
+   "label": "Save, then upload back image"
+  },
+  {
+   "from": "payments.deposit-check-back-modal",
+   "to": "payments.deposit-check-images-done",
+   "label": "Confirm endorsement, click Save"
+  },
+  {
+   "from": "payments.deposit-check-images-done",
+   "to": "payments.deposit-check-review",
+   "label": "Click Review"
+  },
+  {
+   "from": "payments.deposit-check-review",
+   "to": "payments.deposit-check-success",
+   "label": "Click Deposit check"
+  },
+  {
+   "from": "payments.deposit-check-success",
+   "to": "home.index",
+   "label": "Click Go to dashboard"
+  },
+  {
+   "from": "payments.deposit",
+   "to": "payments.deposit-safe",
+   "label": "Click SAFE Investment"
+  },
+  {
+   "from": "payments.deposit",
+   "to": "invoicing.index",
+   "label": "Click Invoice"
+  },
+  {
+   "from": "payments.request-start",
+   "to": "payments.request-validation",
+   "label": "Click Next without customer"
+  },
+  {
+   "from": "payments.request-start",
+   "to": "payments.request-customer-dropdown",
+   "label": "Open Name combobox"
+  },
+  {
+   "from": "payments.request-customer-dropdown",
+   "to": "payments.request-add-customer",
+   "label": "Click Add new customer"
+  },
+  {
+   "from": "payments.request-add-customer",
+   "to": "payments.request-start",
+   "label": "Click Add customer"
+  },
+  {
+   "from": "payments.request-start",
+   "to": "payments.request-link-form",
+   "label": "Choose Request money without an invoice, click Next"
+  },
+  {
+   "from": "payments.request-link-form",
+   "to": "payments.request-success",
+   "label": "Enter amount, click Create & send"
+  },
+  {
+   "from": "payments.request-success",
+   "to": "payments.request-start",
+   "label": "Click Create another request"
+  },
+  {
+   "from": "payments.request-success",
+   "to": "home.index",
+   "label": "Click Return to dashboard"
+  },
+  {
+   "from": "payments.index",
+   "to": "payments.recipients",
+   "label": "Click Recipients in sidebar"
+  },
+  {
+   "from": "payments.recipients",
+   "to": "payments.recipients-create-menu",
+   "label": "Click Create recipient chevron"
+  },
+  {
+   "from": "payments.recipients-create-menu",
+   "to": "payments.recipient-invite",
+   "label": "Click Invite recipient"
+  },
+  {
+   "from": "payments.recipient-invite",
+   "to": "payments.recipient-invite-validation",
+   "label": "Click Send request empty"
+  },
+  {
+   "from": "payments.recipient-invite",
+   "to": "payments.recipient-invite-specified",
+   "label": "Click Specified by me"
+  },
+  {
+   "from": "payments.recipient-invite-specified",
+   "to": "payments.recipient-invite-sent",
+   "label": "Click Send request"
+  },
+  {
+   "from": "payments.recipient-invite",
+   "to": "payments.recipient-invite-sent",
+   "label": "Fill name + email, click Send request"
+  },
+  {
+   "from": "payments.recipients",
+   "to": "payments.recipient-create",
+   "label": "Click Create recipient"
+  },
+  {
+   "from": "payments.recipient-create",
+   "to": "payments.recipient-create-validation",
+   "label": "Click Create recipient empty"
+  },
+  {
+   "from": "payments.recipient-create",
+   "to": "payments.recipient-address-autocomplete",
+   "label": "Type street in Recipient legal address"
+  },
+  {
+   "from": "payments.recipient-address-autocomplete",
+   "to": "payments.recipient-created",
+   "label": "Pick suggestion, click Create recipient"
+  },
+  {
+   "from": "payments.recipient-create",
+   "to": "payments.recipient-invite",
+   "label": "Click Invite them to fill out their own profile"
+  },
+  {
+   "from": "payments.recipients",
+   "to": "payments.recipient-detail",
+   "label": "Click a recipient row"
+  },
+  {
+   "from": "payments.recipients",
+   "to": "payments.send-recipient-step",
+   "label": "Click row send icon"
+  },
+  {
+   "from": "payments.recipients",
+   "to": "transactions.index",
+   "label": "Click row transactions icon"
+  },
+  {
+   "from": "payments.recipient-created",
+   "to": "payments.send-recipient-step",
+   "label": "Click Send Payment in toast"
+  },
+  {
+   "from": "payments.index",
+   "to": "payments.wire-drawdowns",
+   "label": "Click Wire Drawdowns in sidebar"
+  },
+  {
+   "from": "payments.wire-drawdowns",
+   "to": "payments.wire-drawdown-detail",
+   "label": "Click a drawdown row"
+  },
+  {
+   "from": "payments.wire-drawdowns",
+   "to": "payments.wire-drawdown-create",
+   "label": "Click Create authorization"
+  },
+  {
+   "from": "payments.wire-drawdown-create",
+   "to": "payments.wire-drawdown-payroll",
+   "label": "Choose Payroll / Benefits"
+  },
+  {
+   "from": "payments.wire-drawdown-payroll",
+   "to": "payments.wire-drawdown-validation",
+   "label": "Click Next without company"
+  },
+  {
+   "from": "payments.wire-drawdown-payroll",
+   "to": "payments.wire-drawdown-funding",
+   "label": "Choose Gusto, click Next"
+  },
+  {
+   "from": "payments.index",
+   "to": "payments.ach-authorizations",
+   "label": "Click ACH Authorizations in sidebar"
+  },
+  {
+   "from": "payments.ach-authorizations",
+   "to": "payments.ach-flagged",
+   "label": "Click Flagged tab"
+  },
+  {
+   "from": "payments.ach-authorizations",
+   "to": "payments.ach-add",
+   "label": "Click Add ACH authorization"
+  },
+  {
+   "from": "payments.ach-add",
+   "to": "payments.ach-add-details",
+   "label": "Pick a vendor"
+  },
+  {
+   "from": "payments.ach-add-details",
+   "to": "payments.ach-add-review",
+   "label": "Click Next"
+  },
+  {
+   "from": "payments.ach-add-review",
+   "to": "payments.ach-add-success",
+   "label": "Click Authorize"
+  },
+  {
+   "from": "payments.index",
+   "to": "payments.checkbooks",
+   "label": "Click Checkbooks in sidebar"
+  },
+  {
+   "from": "payments.checkbooks",
+   "to": "payments.checkbook-check-detail",
+   "label": "Click a check row"
+  },
+  {
+   "from": "payments.checkbook-check-detail",
+   "to": "payments.checkbook-check-approved",
+   "label": "Click Approve"
+  },
+  {
+   "from": "payments.checkbooks",
+   "to": "payments.checkbook-order",
+   "label": "Click Order Checkbook"
+  },
+  {
+   "from": "payments.checkbook-order",
+   "to": "payments.checkbook-order-validation",
+   "label": "Click Next empty"
+  },
+  {
+   "from": "payments.checkbook-order",
+   "to": "payments.checkbook-order-review",
+   "label": "Fill account + nickname, click Next"
+  },
+  {
+   "from": "payments.checkbook-order-review",
+   "to": "payments.checkbook-order-success",
+   "label": "Tick authority box, click Confirm"
+  },
+  {
+   "from": "payments.checkbook-order-success",
+   "to": "payments.checkbooks",
+   "label": "Click Done"
+  },
+  {
+   "from": "payments.index",
+   "to": "payments.taxes",
+   "label": "Click Taxes in sidebar"
+  },
+  {
+   "from": "payments.taxes",
+   "to": "payments.taxes-year-menu",
+   "label": "Open Tax Year menu"
+  },
+  {
+   "from": "payments.taxes",
+   "to": "payments.taxes-documents",
+   "label": "Click Tax Documents tab"
+  },
+  {
+   "from": "payments.needs-approval",
+   "to": "payments.paid",
+   "label": "Click Paid tab"
+  },
+  {
+   "from": "payments.paid",
+   "to": "payments.paid-detail",
+   "label": "Click a paid row"
+  },
+  {
+   "from": "payments.needs-approval",
+   "to": "payments.approval-detail",
+   "label": "Click a request row"
+  },
+  {
+   "from": "payments.approval-detail",
+   "to": "payments.approval-approved",
+   "label": "Click Approve"
+  },
+  {
+   "from": "payments.approval-detail",
+   "to": "payments.approval-declined",
+   "label": "Click Decline"
+  },
+  {
+   "from": "payments.needs-approval",
+   "to": "payments.approvals-bulk",
+   "label": "Tick two request checkboxes"
+  },
+  {
+   "from": "payments.approvals-bulk",
+   "to": "payments.batch-review",
+   "label": "Click Review Requests"
+  },
+  {
+   "from": "payments.approval-detail",
+   "to": "payments.batch-review",
+   "label": "Click Review"
+  },
+  {
+   "from": "payments.batch-review",
+   "to": "payments.batch-review-next",
+   "label": "Click Approve"
+  },
+  {
+   "from": "payments.batch-review-next",
+   "to": "payments.batch-success",
+   "label": "Click Approve on the last item"
+  },
+  {
+   "from": "payments.batch-success",
+   "to": "payments.needs-approval",
+   "label": "Click Back to needs approval"
+  },
+  {
+   "from": "payments.scheduled",
+   "to": "payments.scheduled-detail",
+   "label": "Click a scheduled row"
+  },
+  {
+   "from": "payments.scheduled-detail",
+   "to": "payments.scheduled-cancel",
+   "label": "Click Cancel payment"
+  },
+  {
+   "from": "payments.scheduled-cancel",
+   "to": "payments.scheduled-canceled",
+   "label": "Click Cancel payment"
+  },
+  {
+   "from": "payments.scheduled-cancel",
+   "to": "payments.scheduled-detail",
+   "label": "Click Go back"
+  },
+  {
+   "from": "payments.scheduled-detail",
+   "to": "payments.scheduled-edit",
+   "label": "Click Edit"
+  },
+  {
+   "from": "payments.scheduled-edit",
+   "to": "payments.scheduled-edit-review",
+   "label": "Change amount, click Review"
+  },
+  {
+   "from": "payments.scheduled-edit-review",
+   "to": "payments.scheduled-updated",
+   "label": "Click Confirm"
+  },
+  {
+   "from": "payments.index",
+   "to": "payments.settings-modal",
+   "label": "Click settings gear"
+  },
+  {
+   "from": "payments.send-method-dropdown",
+   "to": "payments.send-method-wire",
+   "label": "Choose Wire"
+  },
+  {
+   "from": "payments.send-method-wire",
+   "to": "payments.send-wire-validation",
+   "label": "Click Next with empty bank details"
+  },
+  {
+   "from": "payments.send-method-wire",
+   "to": "payments.send-amount",
+   "label": "Enter routing + account, click Next"
+  },
+  {
+   "from": "payments.send-categorization",
+   "to": "payments.send-wire-purpose",
+   "label": "Click Next (wire)"
+  },
+  {
+   "from": "payments.send-wire-purpose",
+   "to": "payments.send-details",
+   "label": "Pick Vendor, describe goods, click Next"
+  },
+  {
+   "from": "payments.send-details",
+   "to": "payments.send-wire-review",
+   "label": "Click Next (wire)"
+  },
+  {
+   "from": "payments.send-wire-review",
+   "to": "payments.send-wire-success",
+   "label": "Click Schedule wire"
+  },
+  {
+   "from": "payments.send-wire-success",
+   "to": "home.index",
+   "label": "Click Go to dashboard"
+  },
+  {
+   "from": "payments.recipients",
+   "to": "payments.recipients-needs-tax-docs",
+   "label": "Click Needs Tax Docs"
+  },
+  {
+   "from": "payments.recipients-needs-tax-docs",
+   "to": "payments.recipients-filters",
+   "label": "Click filter icon"
+  },
+  {
+   "from": "payments.recipients",
+   "to": "payments.recipients-bulk",
+   "label": "Tick two recipient checkboxes"
+  },
+  {
+   "from": "payments.recipients-bulk",
+   "to": "payments.recipients-request-tax-docs",
+   "label": "Click Request tax docs"
+  },
+  {
+   "from": "payments.recipients-request-tax-docs",
+   "to": "payments.recipients-request-tax-docs-validation",
+   "label": "Select a recipient with no email"
+  },
+  {
+   "from": "payments.recipients-request-tax-docs",
+   "to": "payments.recipients-tax-docs-requested",
+   "label": "Click Send requests"
+  },
+  {
+   "from": "payments.taxes",
+   "to": "payments.taxes-edit-filing",
+   "label": "Click Edit Filing on a task"
+  },
+  {
+   "from": "payments.taxes-edit-filing",
+   "to": "payments.taxes-payee-drawer",
+   "label": "Click Done"
+  },
+  {
+   "from": "payments.taxes",
+   "to": "payments.taxes-request-w9s",
+   "label": "Click Request W-9s"
+  }
+ ],
+ "journeys": [
+  {
+   "id": "payments.j-pay-vendor-ach",
+   "name": "Pay a contractor by ACH",
+   "description": "Schedule a one-time ACH payment to an existing recipient from the Payments page.",
+   "steps": [
+    "payments.index",
+    "payments.send-start",
+    "payments.send-recipient-step",
+    "payments.send-amount",
+    "payments.send-categorization",
+    "payments.send-details",
+    "payments.send-review",
+    "payments.send-submitting",
+    "payments.send-success"
+   ]
+  },
+  {
+   "id": "payments.j-transfer-to-treasury",
+   "name": "Move cash to Treasury",
+   "description": "Transfer idle cash from Ops / Payroll into Treasury.",
+   "steps": [
+    "payments.index",
+    "payments.move-money-menu",
+    "payments.transfer-start",
+    "payments.transfer-from-dropdown",
+    "payments.transfer-to-dropdown",
+    "payments.transfer-more-details",
+    "payments.transfer-review",
+    "payments.transfer-success"
+   ]
+  },
+  {
+   "id": "payments.j-deposit-check",
+   "name": "Deposit a paper check",
+   "description": "Mobile-deposit a customer check into Ops / Payroll.",
+   "steps": [
+    "payments.deposit",
+    "payments.deposit-check-start",
+    "payments.deposit-check-details",
+    "payments.deposit-check-details-filled",
+    "payments.deposit-check-images",
+    "payments.deposit-check-rotate",
+    "payments.deposit-check-back-modal",
+    "payments.deposit-check-images-done",
+    "payments.deposit-check-review",
+    "payments.deposit-check-success"
+   ]
+  },
+  {
+   "id": "payments.j-add-recipient",
+   "name": "Add a new vendor as a recipient",
+   "description": "Create a business recipient by hand, then start paying them.",
+   "steps": [
+    "payments.recipients",
+    "payments.recipient-create",
+    "payments.recipient-address-autocomplete",
+    "payments.recipient-created",
+    "payments.send-recipient-step"
+   ]
+  },
+  {
+   "id": "payments.j-approve-batch",
+   "name": "Approve pending payments in bulk",
+   "description": "An admin clears the approval queue: opens Needs Approval, selects two batch wires, steps through the reviewer and approves both.",
+   "steps": [
+    "payments.index",
+    "payments.needs-approval",
+    "payments.approvals-bulk",
+    "payments.batch-review",
+    "payments.batch-review-next",
+    "payments.batch-success"
+   ]
+  },
+  {
+   "id": "payments.j-edit-recurring",
+   "name": "Change a recurring payment",
+   "description": "An admin updates the amount of a monthly rent payment from the Scheduled tab and confirms the new schedule.",
+   "steps": [
+    "payments.index",
+    "payments.needs-approval",
+    "payments.scheduled",
+    "payments.scheduled-detail",
+    "payments.scheduled-edit",
+    "payments.scheduled-edit-review",
+    "payments.scheduled-updated"
+   ]
+  },
+  {
+   "id": "payments.j-collect-tax-docs",
+   "name": "Collect W-9s from recipients",
+   "description": "Ahead of 1099 season an admin selects recipients and emails them a tax-document request.",
+   "steps": [
+    "payments.recipients",
+    "payments.recipients-bulk",
+    "payments.recipients-request-tax-docs",
+    "payments.recipients-tax-docs-requested"
+   ]
+  }
+ ],
+ "issues": [
+  {
+   "id": "payments.i-date-formats",
+   "title": "Seven date formats across Payments",
+   "detail": "Dates switch format page to page and within one page: month-year only for past due dates ('Apr 2025', 'Dec 2025'), 'Sep 24, 2023' for past years on Wire Drawdowns, 'Sep 24, 2026' with the current year on ACH Authorizations while its own Flagged tab shows 'Sep 25', 'Mar 20, 2024' in the Checkbooks table but 'March 20' and 'September 24, 2026' in the check panel, 'September 24-25, 2026' on transfers, 'Wednesday, September 30th, 2026 at 5:00 PM' on check deposit success, and numeric '2/2/27' on the Taxes IRS deadline badge. Relative words appear next to absolute dates in the same panel: the approval panel says 'Requested by Alice C. on Sep 23' above 'Invoice date Yesterday' (the same day), the scheduled panel says 'on Sep 24' above 'Added on Today', and the batch reviewer shows 'Send on Tomorrow'. The Send recipient card reads 'Last paid on Sep 23, 2026' where the Recipients table shows 'Sep 23'.",
+   "nodeIds": [
+    "payments.index",
+    "payments.wire-drawdowns",
+    "payments.ach-authorizations",
+    "payments.ach-flagged",
+    "payments.checkbooks",
+    "payments.checkbook-check-detail",
+    "payments.checkbook-check-approved",
+    "payments.transfer-more-details",
+    "payments.deposit-check-success",
+    "payments.taxes",
+    "payments.approval-detail",
+    "payments.scheduled-detail",
+    "payments.batch-review",
+    "payments.send-method-wire"
+   ],
+   "category": "data-format",
+   "severity": "high",
+   "evidence": "Rendered text: Payments inbox due dates 'Apr 2025' / 'Jan 17'; ACH list 'Sep 24, 2026' (current year) vs Flagged 'Sep 25' on the same page; check panel 'Date received: March 20' vs table 'Mar 20, 2024'; banner 'approved on September 24, 2026'; check success 'Wednesday, September 30th, 2026 at 5:00 PM' (ordinal); Taxes badge 'IRS Deadline 2/2/27'. Approval panel leaf texts: 'Requested by Alice C. on Sep 23' 14px/400 rgb(195,195,204) and 'Yesterday' 14px/400 rgb(221,221,229) (x2). Scheduled panel: 'Requested by Jane B. on Sep 24' and 'Today'."
+  },
+  {
+   "id": "payments.i-check-deposit-buttons",
+   "title": "Check deposit flow swaps button components mid-flow",
+   "detail": "Steps 1-2 of check deposit use small 32px buttons with a ghost 'Go back'/'Back' and arrow (←/→) icons. Step 3 switches to a different button implementation at 40px with chevrons and a blue Back label. Send and Transfer use 40px buttons with a grey-filled Back and white text.",
+   "nodeIds": [
+    "payments.deposit-check-start",
+    "payments.deposit-check-details",
+    "payments.deposit-check-images",
+    "payments.deposit-check-review",
+    "payments.send-amount"
+   ],
+   "category": "component",
+   "severity": "high",
+   "evidence": "Getting started: 'Go back' class _button_r6b2u_20 _small_r6b2u_72 _tertiary, h 32px, bg transparent, 15px/400; 'Got it' _primary h 32px, padding 4px 12px 4px 16px. Check images: 'Back' class _button-wrapper_1rzdg_13 _tertiary_1rzdg_76 _small_1rzdg_88, h 40px, color rgb(141,164,245). Send Amount: 'Back' h 40px, padding 8px 32px 8px 28px, bg rgba(180,183,200,0.12), color rgb(221,221,229)."
+  },
+  {
+   "id": "payments.i-back-button-variants",
+   "title": "Back button styled five different ways",
+   "detail": "The step-back action changes label, icon and fill from flow to flow: 'Go back' with no icon (Send recipient step, Invite/Create recipient, SAFE), 'Back' with chevron (Send amount onward, Transfer review, ACH), 'Back' with no icon (Transfer form, Wire drawdown), transparent tertiary 'Back' (Request payment link), and blue-text Back (Deposit payment details, check images).",
+   "nodeIds": [
+    "payments.send-recipient-step",
+    "payments.send-amount",
+    "payments.transfer-start",
+    "payments.transfer-review",
+    "payments.request-link-form",
+    "payments.deposit-wire-details",
+    "payments.recipient-invite"
+   ],
+   "category": "component",
+   "severity": "medium",
+   "evidence": "Transfer form Back: padding 8px 32px, 0 svg, color rgb(221,221,229); Send amount Back: padding 8px 32px 8px 28px, 1 svg; Request link Back: class _tertiary_r6b2u_153, bg rgba(0,0,0,0); Deposit Payment Details Back: color rgb(141,164,245), bg rgba(180,183,200,0.12), w 123px."
+  },
+  {
+   "id": "payments.i-disabled-next-patterns",
+   "title": "Four different rules for when Next is disabled",
+   "detail": "Send and Transfer keep Next enabled and show inline errors on click. Check deposit and Order checkbook review hard-disable Next until the form is valid. Request money renders Next at 40% opacity but it still submits and shows errors. Wire drawdown starts disabled, enables after one choice, then disables again after an error.",
+   "nodeIds": [
+    "payments.send-amount-validation",
+    "payments.transfer-validation",
+    "payments.deposit-check-details",
+    "payments.request-validation",
+    "payments.wire-drawdown-create",
+    "payments.wire-drawdown-validation"
+   ],
+   "category": "interaction",
+   "severity": "medium",
+   "evidence": "Request Next: disabled=false, class includes _appearDisabled_r6b2u_16, opacity 0.4, bg rgb(82,102,235). Check details Next: disabled attribute present. Wire drawdown Next: [disabled] on load, enabled after radio, [disabled] again after 'Please choose a recipient.'"
+  },
+  {
+   "id": "payments.i-validation-punctuation",
+   "title": "Validation messages mix trailing periods",
+   "detail": "Inline errors in the same form end with and without periods: Transfer shows 'Must be a dollar value.' above 'Please choose an account'; Create recipient shows 'You must make a selection.' above 'Please complete this field'. The wire bank-details errors use '#' shorthand and no period: 'Routing # should be a 9-digit number', 'Account # should be 4-17 characters'.",
+   "nodeIds": [
+    "payments.transfer-validation",
+    "payments.recipient-create-validation",
+    "payments.send-amount-validation",
+    "payments.send-intl-validation",
+    "payments.wire-drawdown-validation",
+    "payments.recipient-address-autocomplete",
+    "payments.send-wire-validation"
+   ],
+   "category": "copy",
+   "severity": "low",
+   "evidence": "Error text, all 12px/400 rgb(252,146,180): 'Must be a dollar value.', 'You must make a selection.', 'Please choose a recipient.', 'Please enter a valid US state.' vs 'Please complete this field', 'Please choose an account'. Wire errors 12px rgb(252,146,180): 'Routing # should be a 9-digit number', 'Account # should be 4-17 characters'. Re-measured Transfer: 'Must be a dollar value.' / 'Please choose an account'."
+  },
+  {
+   "id": "payments.i-cents-rendering",
+   "title": "Cents shown superscript in some places, inline in others",
+   "detail": "Tables use the money component with superscript cents, but the recipient panel's payments-by-year rows, the Checkbooks table, and the review/success hero amounts print cents inline. The Checkbooks table shows '$1,250.75' inline while its own detail panel shows the same amount with superscript cents. The batch reviewer shows '$6,042.95' with superscript cents, then its success page prints the $12,085.90 total inline; the approvals bulk bar also prints '$12,085.90 total' inline.",
+   "nodeIds": [
+    "payments.recipient-detail",
+    "payments.recipients",
+    "payments.checkbooks",
+    "payments.checkbook-check-detail",
+    "payments.send-review",
+    "payments.transfer-success",
+    "payments.batch-review",
+    "payments.batch-success",
+    "payments.approvals-bulk"
+   ],
+   "category": "data-format",
+   "severity": "medium",
+   "evidence": "Recipients row: <span>$1,205,329<span class=_superscript_1of3b_35>.91</span></span>. Recipient panel: <span>$1,203,984<span class=''>.72</span></span> (no superscript class). Checkbooks cell: plain <span>$1,250.75</span> at 16px. Send review hero: _titleHero span '$250.00', 34px Arcadia Display, no child spans. Batch success: <div class='_titleHero_qaod7_12 ...'>$12,085.90</div> (no child spans). Bulk bar: <span id='bulk-action-island-description' class='_bodySecondary_qaod7_51'>$12,085.90 total</span>."
+  },
+  {
+   "id": "payments.i-success-screens",
+   "title": "Success screens use three layouts",
+   "detail": "Send, Transfer and Check deposit share a left-aligned success page (34px H1 on rgb(16,16,26)). Request money uses a lighter rgb(54,54,68) themeWhite panel with a 28px H2 and says 'Return to dashboard' instead of 'Go to dashboard'. Order checkbook centers everything on a gradient. Adding an ACH authorization shows no confirmation at all. Bulk approval adds a fourth variant: centered column, 34px H1, a single 'Back to needs approval' CTA and no dashboard link.",
+   "nodeIds": [
+    "payments.send-success",
+    "payments.transfer-success",
+    "payments.deposit-check-success",
+    "payments.request-success",
+    "payments.checkbook-order-success",
+    "payments.ach-add-success",
+    "payments.batch-success"
+   ],
+   "category": "component",
+   "severity": "medium",
+   "evidence": "Send/Transfer success: _fullScreenWorkspaceLayout _success bg rgb(16,16,26), H1 34px Arcadia Display 380. Request success: _themeWhite_1x9rh_30 bg rgb(54,54,68), H2 28px. Checkbook success: H1 34px text-align center, background-image linear-gradient(... rgb(42,41,36) 30%). ACH: returns to /payments/authorizations with no toast. Batch success H1 'You've reviewed 2 payments' Arcadia Display 34px/380."
+  },
+  {
+   "id": "payments.i-escape-exits-flow",
+   "title": "Escape on the account picker abandons the payment",
+   "detail": "On the Send Amount step, pressing Escape while the 'Send from' account picker is open closes the whole flow and returns to /send-money/pay/start, discarding the entered amount. Escape on the Payment method listbox one step earlier only closes the list.",
+   "nodeIds": [
+    "payments.send-from-dropdown",
+    "payments.send-amount",
+    "payments.send-method-dropdown"
+   ],
+   "category": "interaction",
+   "severity": "medium",
+   "evidence": "Reproduced twice: URL /send-money/pay/amount, open 'Send from' (4 options), press Escape, URL becomes /send-money/pay/start. Same key on Payment method listbox (8 options) leaves URL at /send-money/pay/recipient-details."
+  },
+  {
+   "id": "payments.i-broken-back",
+   "title": "Back does nothing on deposit Payment Details; SAFE Go back leaves the flow",
+   "detail": "On /add-funds/wire the Back button does not navigate; only the 'Choose method' stepper link returns to deposit options. On Create a new SAFE, 'Go back' goes to /capital/safe instead of /add-funds.",
+   "nodeIds": [
+    "payments.deposit-wire-details",
+    "payments.deposit-domestic-details",
+    "payments.deposit-safe"
+   ],
+   "category": "interaction",
+   "severity": "medium",
+   "evidence": "Clicked Back twice (ref and role lookup): URL stayed https://demo.mercury.com/add-funds/wire?account=party-mercurybankid2. SAFE 'Go back' landed on https://demo.mercury.com/capital/safe."
+  },
+  {
+   "id": "payments.i-form-widths",
+   "title": "Sibling forms use different column widths",
+   "detail": "Full-screen form columns vary with no pattern: Send flow 560px, Create recipient 584px, ACH authorization 522px, Invite recipient and Transfer fields 496px, Check deposit 424px. Create and Invite recipient are sister forms linked to each other yet differ by 88px.",
+   "nodeIds": [
+    "payments.send-amount",
+    "payments.recipient-create",
+    "payments.recipient-invite",
+    "payments.ach-add-details",
+    "payments.deposit-check-details",
+    "payments.transfer-start"
+   ],
+   "category": "layout",
+   "severity": "medium",
+   "evidence": "Measured input container widths: Invite recipient 496px, Create recipient 584px. Rendered column bounds from screenshots: Send 440-1000px (560), ACH add 459-981px (522), Check details 508-932px (424)."
+  },
+  {
+   "id": "payments.i-w8ben-spelling",
+   "title": "W-8BEN spelled three ways",
+   "detail": "The same tax form appears as 'W-9/W-8 BEN' in the Recipients row action, 'W-8BEN' on the Invite toggle and the recipient panel, and 'W-9/W8-BEN' on the Tax Documents tab. The Request tax documents modal says 'W-8BENs', and the Request W-9s button on Taxes is lowercased to 'Request w-9s' under an H1 'Request W-9s'.",
+   "nodeIds": [
+    "payments.recipients",
+    "payments.recipient-invite",
+    "payments.recipient-detail",
+    "payments.taxes-documents",
+    "payments.recipients-request-tax-docs",
+    "payments.taxes-request-w9s"
+   ],
+   "category": "copy",
+   "severity": "low",
+   "evidence": "Accessible names/text: button 'Download W-9/W-8 BEN'; switch 'Require tax documents (W-9 or W-8BEN)'; panel heading 'Tax documents (W-9 or W-8BEN)'; tab 'W-9/W8-BEN'. Button text on /taxes/1099-filing/2026/request-w9s: 'Request w-9s'."
+  },
+  {
+   "id": "payments.i-title-case",
+   "title": "Title Case headings and actions mixed with sentence case",
+   "detail": "Most UI is sentence case, but these are Title Case: 'Request Tax Documents' (Create recipient; the Invite form says 'Require tax documents'), 'Payment Details' next to 'Tax documents' in the same recipient panel, 'Send Payment' toast action, 'View All', 'Order Checkbook' / 'Order a Checkbook', 'Payment Details' and 'View More Details' on Deposit, '+ Add Account', 'Learn More About SAFE Types', and the placeholder 'Recipient Name'. More in this pass: 'Review Requests' on the approvals bar next to 'Request tax docs' on the recipients bar; 'Export 2 Recipients' vs 'Export all' / 'Export filtered'; the 1099 payee panel pairs 'Remove Filing' with 'Edit filing'; the Taxes task list says 'Edit Filing' while every table row says 'Edit filing'; 'Edit Sarah Invalid State's Filing' and 'Payee Details' headings.",
+   "nodeIds": [
+    "payments.recipient-create",
+    "payments.recipient-invite",
+    "payments.recipient-detail",
+    "payments.recipient-created",
+    "payments.checkbooks",
+    "payments.checkbook-order",
+    "payments.deposit",
+    "payments.deposit-wire-details",
+    "payments.ach-add-details",
+    "payments.deposit-safe",
+    "payments.approvals-bulk",
+    "payments.recipients-bulk",
+    "payments.taxes-payee-drawer",
+    "payments.taxes-edit-filing",
+    "payments.taxes"
+   ],
+   "category": "copy",
+   "severity": "low",
+   "evidence": "Recipient panel: 'Payment Details' DIV 15px/400 rgb(244,245,249) and 'Tax documents (W-9 or W-8BEN)' SPAN 15px/400 rgb(244,245,249), identical styling but different casing. '+ Add Account' puts a literal '+' in the label where other add actions use an icon ('Add line item', 'Create recipient'). Buttons on /taxes/1099/filing/2026: 4x 'Edit Filing' + 21x 'Edit filing'. Payee panel: 'Remove Filing' and 'Edit filing', both h32 13.33px, text-transform none. Approvals bar 'Review Requests' h32 13.33px/360 pad 4px 12px 4px 16px; recipients bar 'Request tax docs' h32 13.33px/360 pad 4px 16px."
+  },
+  {
+   "id": "payments.i-status-copy",
+   "title": "Same status and method named differently",
+   "detail": "Recipients call it 'Pending details'; the Scheduled tab calls it 'Details pending'. The Scheduled tab abbreviates 'Intl. Wire' where the payment method list says 'International Wire'. The request preview says 'Pay With Mercury' while the methods list on the same page says 'Pay with Mercury'.",
+   "nodeIds": [
+    "payments.recipients",
+    "payments.scheduled",
+    "payments.send-method-dropdown",
+    "payments.request-link-form"
+   ],
+   "category": "copy",
+   "severity": "low",
+   "evidence": "Badge text 'Pending details' (class _badge_1u6of_4 _pearl) vs 'Details pending'; Method cell 'Intl. Wire'; leaf texts on the Request page: 'Pay with Mercury' and 'Pay With Mercury'."
+  },
+  {
+   "id": "payments.i-duration-ranges",
+   "title": "Business-day ranges punctuated four ways",
+   "detail": "Delivery estimates use a hyphen ('0-1 business days'), an en dash ('Arrives in 1–2 business days.'), words ('Appears in 1 to 5 business days.'), and a spaced hyphen ('1 - 5 business days', '10 - 14 business days').",
+   "nodeIds": [
+    "payments.send-method-dropdown",
+    "payments.deposit",
+    "payments.deposit-check-start",
+    "payments.checkbook-order"
+   ],
+   "category": "data-format",
+   "severity": "low",
+   "evidence": "Rendered strings: send method '0-1 business days'; deposit cards 'Arrives in 1–2 business days.' / 'Appears in 1 to 5 business days.'; check guidelines 'take 1 - 5 business days'; checkbook 'Shipping est. 10 - 14 business days'."
+  },
+  {
+   "id": "payments.i-icon-links-a11y",
+   "title": "Recipient row icon links have no accessible name",
+   "detail": "The send and transactions icons at the end of each Recipients row are anchors with no text, aria-label, title or SVG title, so screen readers announce 'link' only.",
+   "nodeIds": [
+    "payments.recipients"
+   ],
+   "category": "a11y",
+   "severity": "medium",
+   "evidence": "a[href='/send-money/pay/recipient-details']: aria-label null, aria-labelledby null, title null, textContent '', svg <title> none. Snapshot lists them as unnamed 'link' elements."
+  },
+  {
+   "id": "payments.i-quote-glyph",
+   "title": "Wrong closing quote around company name",
+   "detail": "Check deposit instructions and the back-of-check confirmation close “Mercury Demo, Incorporated“ with an opening quote glyph.",
+   "nodeIds": [
+    "payments.deposit-check-images",
+    "payments.deposit-check-back-modal"
+   ],
+   "category": "copy",
+   "severity": "low",
+   "evidence": "Character after 'Incorporated' is U+201C (left double quote) instead of U+201D; the next phrase “For mobile deposit only” closes correctly."
+  },
+  {
+   "id": "payments.i-kv-label-color",
+   "title": "One label in the wire details list is brighter",
+   "detail": "In Domestic Transfer Details, 'Bank Name' renders in the value color while every other label in the list is muted grey.",
+   "nodeIds": [
+    "payments.deposit-domestic-details"
+   ],
+   "category": "color",
+   "severity": "low",
+   "evidence": "'Beneficiary Name' / 'Account Number' labels: 15px/400 rgb(157,157,168); 'Bank Name' label: 15px/400 rgb(221,221,229)."
+  },
+  {
+   "id": "payments.i-overlay-hides-banner",
+   "title": "Some full-screen overlays hide the demo banner",
+   "detail": "Edit recipient details and Order a Checkbook render above the 'Explore the Mercury Demo / Viewing as Admin' banner, while every other full-screen flow sits below it.",
+   "nodeIds": [
+    "payments.send-edit-recipient",
+    "payments.checkbook-order",
+    "payments.checkbook-order-review"
+   ],
+   "category": "layout",
+   "severity": "low",
+   "evidence": "On /checkbooks/ordering/order, elementFromPoint(720,28) returns _rightPanel_j8648_20 (the overlay) instead of the demo banner; the banner is visible at y=0-56 on Send, Transfer and Deposit flows."
+  },
+  {
+   "id": "payments.i-masked-numbers",
+   "title": "Account numbers masked inconsistently",
+   "detail": "Review screens mask account numbers as '••1038', but the Transfer review shows the Treasury destination as a full 'Treasury 3713286', and Send review shows the recipient's full 'Account no. 99990101' after the Recipient step masked it as '••0101'.",
+   "nodeIds": [
+    "payments.transfer-review",
+    "payments.send-review",
+    "payments.send-recipient-step"
+   ],
+   "category": "data-format",
+   "severity": "low",
+   "evidence": "Transfer review: 'Account Ops / Payroll Checking ••1038' vs 'Account Treasury 3713286'. Send: recipient step 'Account ••0101 · Routing ••6789', review 'Account no. 99990101', 'Routing no. 123456789'."
+  },
+  {
+   "id": "payments.i-stepper-heading-mismatch",
+   "title": "Stepper labels differ from page headings",
+   "detail": "Check deposit's stepper says 'Check images' while the page heading says 'Upload pictures'; the wire drawdown stepper says 'Funding account' while the heading says 'Source account'.",
+   "nodeIds": [
+    "payments.deposit-check-images",
+    "payments.wire-drawdown-funding"
+   ],
+   "category": "copy",
+   "severity": "low",
+   "evidence": "Stepper item 'Check images' (active) above H1 'Upload pictures'; stepper 'Funding account' above heading 'Source account'."
+  },
+  {
+   "id": "payments.i-drawdown-no-accounts",
+   "title": "Wire drawdown funding step has no accounts",
+   "detail": "The drawdown flow's Source account select reads 'There are no accounts', so Next cannot proceed, although every other account picker lists Ops / Payroll, AP, AR, Checking and Savings.",
+   "nodeIds": [
+    "payments.wire-drawdown-funding",
+    "payments.send-from-dropdown"
+   ],
+   "category": "interaction",
+   "severity": "medium",
+   "evidence": "combobox 'Source account' value 'There are no accounts'; Next rendered disabled. Send from picker on the same session lists 4+ accounts."
+  },
+  {
+   "id": "payments.i-datepicker-offset",
+   "title": "Date picker popover covers its own field",
+   "detail": "The Send on calendar opens 24px left of the form column and 48px above the field, covering the input it edits.",
+   "nodeIds": [
+    "payments.send-date-picker"
+   ],
+   "category": "layout",
+   "severity": "low",
+   "evidence": "Field container left 440px, top ~508px; popover left 416px, top 460px, width 370px, radius 12px, bg rgb(39,39,53)."
+  },
+  {
+   "id": "payments.i-flagged-row-shift",
+   "title": "Approved row in Flagged table shifts 2px",
+   "detail": "The approved PG&E row replaces the checkbox with a check icon, and its cells shift 2px left of the rows above.",
+   "nodeIds": [
+    "payments.ach-flagged"
+   ],
+   "category": "layout",
+   "severity": "low",
+   "evidence": "'Sep 25' cell left edges: 400px, 400px, 400px, then 398px on the approved row (tops 351/404/457/510)."
+  },
+  {
+   "id": "payments.i-filter-copy",
+   "title": "Status filter label is truncated copy",
+   "detail": "The Payments Status filter offers 'Due next 7' without a unit.",
+   "nodeIds": [
+    "payments.status-filter"
+   ],
+   "category": "copy",
+   "severity": "low",
+   "evidence": "Checkbox labels: 'Overdue', 'Due next 7', 'Not due yet', 'Missing due date'."
+  },
+  {
+   "id": "payments.i-decline-no-confirm",
+   "title": "Declining a payment skips the confirmation that canceling gets",
+   "detail": "Decline in the approval panel removes the request at once and shows a toast with a green success check. Canceling a scheduled payment, a similar destructive action, opens a 'Cancel recurring payment' confirmation modal first. The Decline button is also pink-tinted in the panel but neutral grey in the batch reviewer.",
+   "nodeIds": [
+    "payments.approval-detail",
+    "payments.approval-declined",
+    "payments.scheduled-cancel",
+    "payments.batch-review"
+   ],
+   "category": "interaction",
+   "severity": "high",
+   "evidence": "Clicked Decline on the 'No due date' Jason Green request: Needs Approval count went 6 to 5 with no dialog, toast 'Request declined' with green check. Cancel payment opened dialog 'Cancel recurring payment' with Go back / Cancel payment (bg rgba(252,146,180,0.2), color rgb(252,146,180)). Batch reviewer Decline: bg rgba(180,183,200,0.12)."
+  },
+  {
+   "id": "payments.i-toast-copy",
+   "title": "Approval and update toasts word the same outcome differently",
+   "detail": "Approving from the panel says 'Request approved'; approving in the batch reviewer says 'Approved'. Editing a scheduled payment says 'Payment(s) updated' with a parenthetical plural, while tax requests say 'Tax documents requested from 1 recipient'.",
+   "nodeIds": [
+    "payments.approval-approved",
+    "payments.batch-review-next",
+    "payments.scheduled-updated",
+    "payments.recipients-tax-docs-requested"
+   ],
+   "category": "copy",
+   "severity": "low",
+   "evidence": "Toast strings observed: 'Request approved', 'Approved', 'Request declined', 'Payment canceled', 'Payment(s) updated', 'Tax documents requested from 1 recipient'."
+  },
+  {
+   "id": "payments.i-foreign-currency-format",
+   "title": "Foreign-currency amounts use a dollar sign with a currency suffix",
+   "detail": "Scheduled CAD and ARS payments render as '−$2,646.40 CAD' and '−$410.40 ARS', putting a $ in front of Argentine pesos. The cancel modal for the same CAD payment drops both the minus and the $: '2,646.40 CAD'. The edit review modal for a USD payment keeps both: '−$975.00'.",
+   "nodeIds": [
+    "payments.scheduled",
+    "payments.scheduled-detail",
+    "payments.scheduled-cancel",
+    "payments.scheduled-edit-review"
+   ],
+   "category": "data-format",
+   "severity": "medium",
+   "evidence": "Scheduled rows: '−$2,646.40 CAD', '−$410.40 ARS'. Cancel modal leaf texts: '2,646.40 CAD' (x2). Edit review rows: '−$975.00'."
+  },
+  {
+   "id": "payments.i-edit-wipes-due-dates",
+   "title": "Editing one scheduled payment clears every due date",
+   "detail": "After confirming an amount change on one recurring payment, every row in the Scheduled table loses its due date and switches to a 'No due date' badge. Before the edit the rows showed Nov 1, Dec 1, Apr 2027, Nov 26 and Jun 2027 with 'Not due yet'.",
+   "nodeIds": [
+    "payments.scheduled-updated",
+    "payments.scheduled"
+   ],
+   "category": "data-format",
+   "severity": "high",
+   "evidence": "Table rows after Confirm: '– | Oct 5 | Recurring | No due date | Lighthouse Properties #3431', '– | Oct 30 | No due date | Domestic Ads', '– | Mar 2027 | Recurring | No due date | Nutritionist', ... Before: 'Nov 1 | Oct 1 | Recurring | Not due yet | Lighthouse Properties #3431'."
+  },
+  {
+   "id": "payments.i-recurring-counts",
+   "title": "Recurring payment progress disagrees with its cancel summary",
+   "detail": "The scheduled panel shows Progress '5 of 6' for the weekly CAD payment, but the cancel modal lists one remaining payment and says the rule runs 'until 6 payments are made'. The panel badge says 'Monthly' while the edit form's Repeat field reads 'Custom'.",
+   "nodeIds": [
+    "payments.scheduled-detail",
+    "payments.scheduled-cancel",
+    "payments.scheduled-edit"
+   ],
+   "category": "data-format",
+   "severity": "low",
+   "evidence": "Panel: 'Progress 5 of 6'. Modal: 'Exchange USD to CAD at rates on day of transfer and pay weekly on Thursday until 6 payments are made.', '1 payment total 2,646.40 CAD'. Lighthouse panel badge 'Monthly'; combobox 'Repeat' value 'Custom'."
+  },
+  {
+   "id": "payments.i-tax-request-count",
+   "title": "Tax request modal silently drops selected recipients",
+   "detail": "With two recipients selected, the bar says '2 recipients selected' but the Request tax documents modal says 'from 1 recipient' and lists only Debug LLC, without saying why Nutritionist was left out. A tooltip later reads 'Selection does not include recipients eligible for tax document requests'.",
+   "nodeIds": [
+    "payments.recipients-bulk",
+    "payments.recipients-request-tax-docs",
+    "payments.recipients-tax-docs-requested"
+   ],
+   "category": "copy",
+   "severity": "low",
+   "evidence": "Bar label '2 recipients selected' 15px/400; modal subtitle 'Get W-9s and W-8BENs from 1 recipient via email.'; tooltip text 'Selection does not include recipients eligible for tax document requests'."
+  },
+  {
+   "id": "payments.i-floating-bar-overlap",
+   "title": "Empty bulk-action bar covers the 1099 filing form",
+   "detail": "The Edit filing page shows a fixed '0 transactions selected' bar even with nothing selected, and it sits over the Last name field.",
+   "nodeIds": [
+    "payments.taxes-edit-filing"
+   ],
+   "category": "layout",
+   "severity": "medium",
+   "evidence": "Bar position fixed, top 756px, bottom 840px; Last name input top 830px (viewport 1440x900)."
+  },
+  {
+   "id": "payments.i-link-styling",
+   "title": "Inline 'Manage' link looks like body text",
+   "detail": "In Payments settings, 'Control which email forwarding alerts you receive. Manage' renders Manage in the sentence's grey with no underline, while the Edit actions and the 1099 link elsewhere are blue.",
+   "nodeIds": [
+    "payments.settings-modal",
+    "payments.send-wire-success"
+   ],
+   "category": "color",
+   "severity": "low",
+   "evidence": "'Manage' <a>: color rgb(195,195,204), text-decoration none. 'required to file a 1099' link and 'Edit' render blue in the screenshots."
+  },
+  {
+   "id": "payments.i-link-trailing-period",
+   "title": "'our Help Center.' link includes the sentence's period",
+   "detail": "Check deposit step 1 (guidelines) ends with 'More Questions? Check out our Help Center.' where the link text is 'our Help Center.', period included. The later check deposit steps could not be reached by direct URL during the sweep, so whether the same footer repeats there is unverified.",
+   "nodeIds": [
+    "payments.deposit-check-start"
+   ],
+   "category": "copy",
+   "severity": "low",
+   "evidence": "DOM (2026-09-25) on /add-funds/check/guidelines: <span>More Questions? Check out <span><a href=\"https://support.mercury.com/hc/en-us/articles/28768119163156\" target=\"_blank\">our Help Center.</a></span></span>. Jev p=0.73 that the period belongs outside the link."
+  }
+ ],
+ "blocked": []
+}

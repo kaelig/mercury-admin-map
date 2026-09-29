@@ -1,0 +1,2131 @@
+{
+ "area": "accounts",
+ "title": "Accounts, Treasury & Capital",
+ "nodes": [
+  {
+   "id": "accounts.index",
+   "title": "Accounts — Mercury accounts",
+   "url": "/accounts",
+   "image": "screens/accounts/01-index.png",
+   "kind": "page",
+   "note": "List of all Mercury accounts (credit, treasury, checking, savings) with total available balance, pending deposits/transfers and auto transfer rules column."
+  },
+  {
+   "id": "accounts.add-account-menu",
+   "title": "Add account menu",
+   "url": "/accounts",
+   "image": "screens/accounts/02-add-account-menu.png",
+   "kind": "menu",
+   "note": "Dropdown with Create account, Link bank account and Link Credit account."
+  },
+  {
+   "id": "accounts.create-account",
+   "title": "Create account modal",
+   "url": "/accounts",
+   "image": "screens/accounts/03-create-account.png",
+   "kind": "modal",
+   "note": "Modal to create a new Checking or Savings account with an optional nickname."
+  },
+  {
+   "id": "accounts.create-account-error",
+   "title": "Create account — no type selected",
+   "url": "/accounts",
+   "image": "screens/accounts/04-create-account-validation.png",
+   "kind": "validation-error",
+   "note": "Submitting without a type shows 'You must make a selection.' under the Type radio cards."
+  },
+  {
+   "id": "accounts.create-account-filled",
+   "title": "Create account — filled",
+   "url": "/accounts",
+   "image": "screens/accounts/05-create-account-filled.png",
+   "kind": "form-state",
+   "note": "Checking selected and nickname 'Taxes' entered; Create account button enabled."
+  },
+  {
+   "id": "accounts.create-account-success",
+   "title": "Account created toast",
+   "url": "/accounts",
+   "image": "screens/accounts/06-create-account-success.png",
+   "kind": "toast",
+   "note": "Toast 'Your new account is ready to use.' with a View Account link; new Taxes ••4311 row appears in the list."
+  },
+  {
+   "id": "accounts.linked-accounts",
+   "title": "Linked accounts tab",
+   "url": "/accounts#external-accounts",
+   "image": "screens/accounts/07-linked-accounts.png",
+   "kind": "page",
+   "note": "External bank, credit card and loan accounts with masked account numbers, routing numbers, Transfer split buttons and kebab menus."
+  },
+  {
+   "id": "accounts.auto-transfer-rules",
+   "title": "Auto transfer rules — empty",
+   "url": "/accounts#auto-transfers",
+   "image": "screens/accounts/08-auto-transfer-rules.png",
+   "kind": "empty-state",
+   "note": "Empty state with four rule templates: distribute funds, maintain a target balance, schedule recurring transfers, redirect incoming funds."
+  },
+  {
+   "id": "accounts.create-rule",
+   "title": "Create auto transfer rule — pick type",
+   "url": "/accounts#auto-transfers",
+   "image": "screens/accounts/09-create-rule.png",
+   "kind": "modal",
+   "note": "Modal listing rule types plus a free-text custom rule field with a Generate rule button."
+  },
+  {
+   "id": "accounts.rule-target-balance",
+   "title": "Maintain a target balance form",
+   "url": "/accounts#auto-transfers",
+   "image": "screens/accounts/10-rule-target-balance.png",
+   "kind": "form-state",
+   "note": "Rule form: account, bound (is not exactly / above / below), target amount, supporting account and frequency."
+  },
+  {
+   "id": "accounts.rule-target-balance-error",
+   "title": "Target balance rule — empty submit",
+   "url": "/accounts#auto-transfers",
+   "image": "screens/accounts/11-rule-target-balance-validation.png",
+   "kind": "validation-error",
+   "note": "Clicking Next with an empty form shows inline errors under selects, but the amount error only as an icon with a tooltip."
+  },
+  {
+   "id": "accounts.rule-account-dropdown",
+   "title": "Rule account dropdown",
+   "url": "/accounts#auto-transfers",
+   "image": "screens/accounts/12-rule-account-dropdown.png",
+   "kind": "menu",
+   "note": "Account listbox with balances; Treasury and linked accounts are disabled with \"Unable to maintain target balance\"."
+  },
+  {
+   "id": "accounts.rule-target-balance-filled",
+   "title": "Target balance rule — filled",
+   "url": "/accounts#auto-transfers",
+   "image": "screens/accounts/13-rule-target-balance-filled.png",
+   "kind": "form-state",
+   "note": "AP kept at $50,000 from Ops / Payroll, every business day."
+  },
+  {
+   "id": "accounts.rule-review",
+   "title": "Review auto transfer rule",
+   "url": "/accounts#auto-transfers",
+   "image": "screens/accounts/14-rule-review.png",
+   "kind": "modal",
+   "note": "Plain-language summary of the rule, prefilled nickname \"Maintain AP at $50k\" and authorization copy."
+  },
+  {
+   "id": "accounts.rule-created",
+   "title": "Rule created",
+   "url": "/accounts#auto-transfers",
+   "image": "screens/accounts/15-rule-created.png",
+   "kind": "toast",
+   "note": "Rule list with the new rule card and an \"Auto transfer rule created\" toast."
+  },
+  {
+   "id": "accounts.rule-kebab-menu",
+   "title": "Rule kebab menu",
+   "url": "/accounts#auto-transfers",
+   "image": "screens/accounts/16-rule-kebab-menu.png",
+   "kind": "menu",
+   "note": "Per-rule menu with Edit rule and Remove rule."
+  },
+  {
+   "id": "accounts.rule-removed",
+   "title": "Rule removed",
+   "url": "/accounts#auto-transfers",
+   "image": "screens/accounts/17-rule-removed.png",
+   "kind": "toast",
+   "note": "Remove rule deletes immediately, with no confirmation, and returns to the empty template state with an \"Auto transfer rule removed\" toast."
+  },
+  {
+   "id": "accounts.checking-detail",
+   "title": "Checking account detail",
+   "url": "/accounts/depository/party-mercurybankid2",
+   "image": "screens/accounts/18-checking-detail.png",
+   "kind": "page",
+   "note": "Ops / Payroll checking: available/current balance, Deposit and Transfer actions, routing/account numbers, bank address, Order Checkbook, Documents menu and recent transactions."
+  },
+  {
+   "id": "accounts.account-number-revealed",
+   "title": "Account number revealed",
+   "url": "/accounts/depository/party-mercurybankid2",
+   "image": "screens/accounts/19-account-number-revealed.png",
+   "kind": "form-state",
+   "note": "Clicking the eye icon reveals the full account number 3631271038 and switches to an eye-off icon."
+  },
+  {
+   "id": "accounts.routing-copied",
+   "title": "Routing number copied",
+   "url": "/accounts/depository/party-mercurybankid2",
+   "image": "screens/accounts/20-routing-copied.png",
+   "kind": "popover",
+   "note": "Clicking the routing number copies it and shows a \"Copied\" tooltip."
+  },
+  {
+   "id": "accounts.documents-menu",
+   "title": "Documents menu",
+   "url": "/accounts/depository/party-mercurybankid2",
+   "image": "screens/accounts/21-documents-menu.png",
+   "kind": "menu",
+   "note": "Account Documents dropdown: Statements, Bank Letters, Wire Details."
+  },
+  {
+   "id": "accounts.statements",
+   "title": "Statements (Documents & Data)",
+   "url": "/settings/documents/statements?accountIds=mercurybankid2",
+   "image": "screens/accounts/22-statements.png",
+   "kind": "page",
+   "note": "Monthly statements filtered to Ops / Payroll, with year/account filters, custom statement and shared documents links."
+  },
+  {
+   "id": "accounts.custom-statement",
+   "title": "Generate a custom statement",
+   "url": "/settings/documents/statements?accountIds=mercurybankid2",
+   "image": "screens/accounts/23-custom-statement.png",
+   "kind": "modal",
+   "note": "Date range (From/To) and account picker with a Download button."
+  },
+  {
+   "id": "accounts.statement-export-menu",
+   "title": "Statement export menu",
+   "url": "/settings/documents/statements?accountIds=mercurybankid2",
+   "image": "screens/accounts/24-statement-export-menu.png",
+   "kind": "menu",
+   "note": "Row kebab with QuickBooks CSV and NetSuite CSV exports."
+  },
+  {
+   "id": "accounts.transfer-split-menu",
+   "title": "Transfer split-button menu",
+   "url": "/accounts/depository/party-mercurybankid2",
+   "image": "screens/accounts/25-transfer-split-menu.png",
+   "kind": "menu",
+   "note": "Chevron on the Transfer button opens Transfer in / Transfer out."
+  },
+  {
+   "id": "accounts.add-funds",
+   "title": "Add funds to your accounts",
+   "url": "/add-funds",
+   "image": "screens/accounts/26-deposit.png",
+   "kind": "page",
+   "note": "Full-screen deposit options: wire details for the chosen account, bank transfer, check deposit, invoice, SAFE investment."
+  },
+  {
+   "id": "accounts.credit",
+   "title": "Credit Card account",
+   "url": "/accounts/credit",
+   "image": "screens/accounts/27-credit.png",
+   "kind": "page",
+   "note": "Mercury IO credit: total balance, limit bar, autopay and linked accounts pills, balance chart, monthly cashback/spend summary and activity table."
+  },
+  {
+   "id": "accounts.pay-credit",
+   "title": "Make a credit payment",
+   "url": "/accounts/credit?action=payCredit",
+   "image": "screens/accounts/28-pay-credit.png",
+   "kind": "modal",
+   "note": "Amount prefilled with the full balance and a funding account picker."
+  },
+  {
+   "id": "accounts.pay-credit-review",
+   "title": "Credit payment review",
+   "url": "/accounts/credit?action=payCredit",
+   "image": "screens/accounts/29-pay-credit-review.png",
+   "kind": "modal",
+   "note": "Review step with payment amount, source account, authorization copy and Confirm payment."
+  },
+  {
+   "id": "accounts.pay-credit-error",
+   "title": "Credit payment — amount too high",
+   "url": "/accounts/credit?action=payCredit",
+   "image": "screens/accounts/30-pay-credit-validation.png",
+   "kind": "validation-error",
+   "note": "Amount above the balance shows \"Must be <= $12,505.87\" and disables Review."
+  },
+  {
+   "id": "accounts.pay-credit-success",
+   "title": "Payment applied",
+   "url": "/accounts/credit?action=payCredit",
+   "image": "screens/accounts/31-pay-credit-success.png",
+   "kind": "confirmation",
+   "note": "Success dialog: \"Your payment of $500 has been received\" plus cashback note and All done."
+  },
+  {
+   "id": "accounts.edit-autopay",
+   "title": "Autopay settings",
+   "url": "/accounts/credit?action=editAutopay",
+   "image": "screens/accounts/32-edit-autopay.png",
+   "kind": "modal",
+   "note": "Credit autopay overview: funding account with backup, monthly full-balance rule and a less-than-80%-of-limit rule, each with Edit."
+  },
+  {
+   "id": "accounts.autopay-rule-edit",
+   "title": "Edit recurring autopay",
+   "url": "/accounts/credit?action=editAutopay",
+   "image": "screens/accounts/33-autopay-rule-edit.png",
+   "kind": "modal",
+   "note": "Frequency and day selects, statement payment date and next autopays summary, info note and Save."
+  },
+  {
+   "id": "accounts.autopay-day-select",
+   "title": "Autopay day dropdown",
+   "url": "/accounts/credit?action=editAutopay",
+   "image": "screens/accounts/34-autopay-day-select.png",
+   "kind": "menu",
+   "note": "\"On\" select listing 1st to 31st of the month."
+  },
+  {
+   "id": "accounts.autopay-rule-saving",
+   "title": "Autopay rule saving",
+   "url": "/accounts/credit?action=editAutopay",
+   "image": "screens/accounts/35-autopay-rule-saving.png",
+   "kind": "form-state",
+   "note": "5th of the month chosen; Save shows a loading spinner; next autopays read \"October 22, October 5\"."
+  },
+  {
+   "id": "accounts.autopay-threshold-edit",
+   "title": "Set up limit-based autopay",
+   "url": "/accounts/credit?action=editAutopay",
+   "image": "screens/accounts/36-autopay-threshold-edit.png",
+   "kind": "modal",
+   "note": "Threshold rule editor: % of limit left, maximum daily payment, preview chart and Turn off this rule link."
+  },
+  {
+   "id": "accounts.autopay-threshold-saving",
+   "title": "Limit-based autopay saving",
+   "url": "/accounts/credit?action=editAutopay",
+   "image": "screens/accounts/37-autopay-threshold-saving.png",
+   "kind": "form-state",
+   "note": "Typing 150 is silently truncated to 15%; preview text updates and Save shows a spinner."
+  },
+  {
+   "id": "accounts.autopay-source-edit",
+   "title": "Edit autopay accounts",
+   "url": "/accounts/credit?action=editAutopay",
+   "image": "screens/accounts/38-autopay-source-edit.png",
+   "kind": "modal",
+   "note": "Primary (required) and backup (recommended) autopay account pickers."
+  },
+  {
+   "id": "accounts.treasury",
+   "title": "Treasury account",
+   "url": "/accounts/treasury/party-treasury-id-0",
+   "image": "screens/accounts/39-treasury.png",
+   "kind": "page",
+   "note": "Treasury balance, same-day availability, 70/30 fund allocation, net yield, all-time earnings and an Activity table."
+  },
+  {
+   "id": "accounts.treasury-portfolio",
+   "title": "Treasury — Portfolio tab",
+   "url": "/accounts/treasury/party-treasury-id-0",
+   "image": "screens/accounts/40-treasury-portfolio.png",
+   "kind": "page",
+   "note": "Fund cards for MRGXX and MCRYX with description, ticker, net yield, shares, fund type and prospectus link."
+  },
+  {
+   "id": "accounts.treasury-transfer-menu",
+   "title": "Treasury transfer menu",
+   "url": "/accounts/treasury/party-treasury-id-0",
+   "image": "screens/accounts/41-treasury-transfer-menu.png",
+   "kind": "menu",
+   "note": "Transfer funds split button menu: Transfer in (invest) and Transfer out (withdraw)."
+  },
+  {
+   "id": "accounts.edit-portfolio",
+   "title": "Edit portfolio",
+   "url": "/accounts/treasury/party-treasury-id-0/portfolio/edit",
+   "image": "screens/accounts/42-edit-portfolio.png",
+   "kind": "page",
+   "note": "Full-screen 9-tier slider trading liquidity for yield; Update portfolio disabled until the tier changes."
+  },
+  {
+   "id": "accounts.edit-portfolio-tier5",
+   "title": "Edit portfolio — tier 5",
+   "url": "/accounts/treasury/party-treasury-id-0/portfolio/edit",
+   "image": "screens/accounts/43-edit-portfolio-tier5.png",
+   "kind": "form-state",
+   "note": "Slider moved to a 50/50 split; fund comparison table and enabled Update portfolio."
+  },
+  {
+   "id": "accounts.portfolio-updated",
+   "title": "Portfolio updated",
+   "url": "/accounts/treasury/party-treasury-id-0",
+   "image": "screens/accounts/44-portfolio-update.png",
+   "kind": "toast",
+   "note": "Back on Treasury with a \"Portfolio updated\" toast (allocation card still reads 70/30)."
+  },
+  {
+   "id": "accounts.treasury-transfer-in",
+   "title": "Transfer funds into Treasury",
+   "url": "/send-money/transfer",
+   "image": "screens/accounts/45-treasury-transfer-in.png",
+   "kind": "page",
+   "note": "One-time transfer form with Treasury preset as the destination, plus an Auto transfer rule option."
+  },
+  {
+   "id": "accounts.treasury-transfer-error",
+   "title": "Transfer — empty submit",
+   "url": "/send-money/transfer",
+   "image": "screens/accounts/46-treasury-transfer-validation.png",
+   "kind": "validation-error",
+   "note": "\"Must be a dollar value.\" under Amount and \"Please choose an account\" under Transfer from."
+  },
+  {
+   "id": "accounts.treasury-transfer-review",
+   "title": "Review transfer",
+   "url": "/send-money/review/transfer/party-treasury-id-0/amount/10000.00/party-mercurybankid2",
+   "image": "screens/accounts/47-treasury-transfer-review.png",
+   "kind": "page",
+   "note": "$10,000.00 from Ops / Payroll to Treasury, with authorization and Apex Clearing disclosures."
+  },
+  {
+   "id": "accounts.treasury-transfer-success",
+   "title": "Transfer on the way",
+   "url": "/send-money/success/transfer",
+   "image": "screens/accounts/48-treasury-transfer-success.png",
+   "kind": "confirmation",
+   "note": "\"Your transfer is on the way\" with arrival window, amount card, Make another transfer and Go to dashboard."
+  },
+  {
+   "id": "accounts.treasury-transfer-out",
+   "title": "Withdraw from Treasury",
+   "url": "/send-money/transfer",
+   "image": "screens/accounts/49-treasury-transfer-out.png",
+   "kind": "page",
+   "note": "Same transfer form with Treasury preset as the source."
+  },
+  {
+   "id": "accounts.treasury-statements",
+   "title": "Treasury statements",
+   "url": "/settings/documents/statements?accountIds=party-treasury-id-0",
+   "image": "screens/accounts/50-treasury-documents.png",
+   "kind": "page",
+   "note": "Treasury Documents opens Statements, but the Accounts filter shows \"8 selected\" instead of Treasury only."
+  },
+  {
+   "id": "accounts.financing",
+   "title": "Financing — Working Capital",
+   "url": "/capital/ecommerce",
+   "image": "screens/accounts/51-financing.png",
+   "kind": "page",
+   "note": "Working capital loan: outstanding balance, repayment progress, Edit autopay, loan agreement, upcoming payments and activity."
+  },
+  {
+   "id": "accounts.loan-schedule",
+   "title": "Estimated repayment schedule",
+   "url": "/capital/ecommerce",
+   "image": "screens/accounts/52-loan-schedule.png",
+   "kind": "modal",
+   "note": "Weekly schedule with Failed/Paid/Upcoming badges, principal, fee, total due, paid and ending balance."
+  },
+  {
+   "id": "accounts.loan-autopay",
+   "title": "Loan autopay settings",
+   "url": "/capital/ecommerce",
+   "image": "screens/accounts/53-loan-autopay.png",
+   "kind": "modal",
+   "note": "Primary and \"Back up\" autopay account pickers with Cancel/Confirm."
+  },
+  {
+   "id": "accounts.loan-autopay-saved",
+   "title": "Loan autopay saved",
+   "url": "/capital/ecommerce",
+   "image": "screens/accounts/54-loan-autopay-saved.png",
+   "kind": "page",
+   "note": "Modal closes with no toast or other confirmation; row hover reveals \"View in Transactions\"."
+  },
+  {
+   "id": "accounts.financing-home",
+   "title": "Financing — Home",
+   "url": "/capital",
+   "image": "screens/accounts/55-financing-home.png",
+   "kind": "page",
+   "note": "Cards for SAFE, Working Capital and Venture Debt plus an Explore Options comparison table."
+  },
+  {
+   "id": "accounts.venture-debt",
+   "title": "Financing — Venture Debt",
+   "url": "/capital/venture-debt",
+   "image": "screens/accounts/56-venture-debt.png",
+   "kind": "page",
+   "note": "$5M outstanding, interest-only end date, facility bar, monthly reporting status, advisor contact and activity."
+  },
+  {
+   "id": "accounts.safes",
+   "title": "Financing — SAFEs",
+   "url": "/capital/safe",
+   "image": "screens/accounts/57-safes.png",
+   "kind": "page",
+   "note": "SAFE totals, All/Active/Cancelled/Expired filters and a list of investors with signature and payment progress."
+  },
+  {
+   "id": "accounts.safe-create",
+   "title": "Create a new SAFE — details",
+   "url": "/safe/create",
+   "image": "screens/accounts/58-safe-create.png",
+   "kind": "page",
+   "note": "Step 1 of 4: investment amount and date, destination account and SAFE type."
+  },
+  {
+   "id": "accounts.safe-create-error",
+   "title": "SAFE details — empty submit",
+   "url": "/safe/create",
+   "image": "screens/accounts/59-safe-validation.png",
+   "kind": "validation-error",
+   "note": "\"Please complete this field\" under amount and SAFE type plus a second \"Select a SAFE Type to continue\" warning."
+  },
+  {
+   "id": "accounts.safe-type-dropdown",
+   "title": "SAFE type dropdown",
+   "url": "/safe/create",
+   "image": "screens/accounts/60-safe-type-dropdown.png",
+   "kind": "menu",
+   "note": "Post-money, Pre-money, Most Favored Nation only, Discount only."
+  },
+  {
+   "id": "accounts.safe-company-details",
+   "title": "SAFE — Company details",
+   "url": "/safe/create",
+   "image": "screens/accounts/62-safe-company-details.png",
+   "kind": "form-state",
+   "note": "Step 2: company info pulled from profile, state of governance (Delaware) and beneficial owner signatory."
+  },
+  {
+   "id": "accounts.safe-investor-details",
+   "title": "SAFE — Investor details",
+   "url": "/safe/create",
+   "image": "screens/accounts/63-safe-investor-details.png",
+   "kind": "form-state",
+   "note": "Step 3: investor type, legal name, email, optional address and note."
+  },
+  {
+   "id": "accounts.safe-investor-error",
+   "title": "SAFE investor — invalid email",
+   "url": "/safe/create",
+   "image": "screens/accounts/64-safe-investor-validation.png",
+   "kind": "validation-error",
+   "note": "\"Please submit a valid email\" under Investor email; empty legal name is not flagged."
+  },
+  {
+   "id": "accounts.safe-review",
+   "title": "SAFE — Review",
+   "url": "/safe/create",
+   "image": "screens/accounts/65-safe-review.png",
+   "kind": "page",
+   "note": "Step 4: Post-Money SAFE to Arthur Rock for $250,000.00, valuation cap, generated PDF, CC field and Send SAFE."
+  },
+  {
+   "id": "accounts.safe-sent",
+   "title": "SAFE sent",
+   "url": "/capital/safe?safeRequest=1",
+   "image": "screens/accounts/66-safe-sent.png",
+   "kind": "toast",
+   "note": "Toast \"SAFE sent to Arthur Rock\"; a detail drawer opens for Logan Roy and the list still shows 3 SAFEs."
+  },
+  {
+   "id": "accounts.linked-account-kebab",
+   "title": "Linked account kebab menu",
+   "url": "/accounts#external-accounts",
+   "image": "screens/accounts/67-linked-account-kebab.png",
+   "kind": "menu",
+   "note": "Edit nickname, Edit account type, Unlink account."
+  },
+  {
+   "id": "accounts.linked-transfer-menu",
+   "title": "Linked account Transfer menu",
+   "url": "/accounts#external-accounts",
+   "image": "screens/accounts/68-linked-transfer-menu.png",
+   "kind": "menu",
+   "note": "Transfer in / Transfer out for an external account."
+  },
+  {
+   "id": "accounts.unlink-confirm",
+   "title": "Unlink account confirmation",
+   "url": "/accounts#external-accounts",
+   "image": "screens/accounts/69-unlink-confirm.png",
+   "kind": "modal",
+   "note": "\"Do you want to unlink this account?\" with account summary, Cancel and destructive \"Yes, unlink\"."
+  },
+  {
+   "id": "accounts.unlinked",
+   "title": "Account unlinked",
+   "url": "/accounts#external-accounts",
+   "image": "screens/accounts/70-unlinked.png",
+   "kind": "toast",
+   "note": "Checking ••9876 is removed from the list with a \"Checking ••9876 unlinked\" toast."
+  },
+  {
+   "id": "accounts.savings-detail",
+   "title": "Savings account detail",
+   "url": "/accounts/depository/party-mercurybankid4",
+   "image": "screens/accounts/71-savings-detail.png",
+   "kind": "page",
+   "note": "Savings ••7658: APY 0.001%, balance, routing/account numbers, Documents (no Order Checkbook, no nickname edit)."
+  },
+  {
+   "id": "accounts.nickname-edit",
+   "title": "Inline nickname edit",
+   "url": "/accounts/depository/party-mercurybankid3",
+   "image": "screens/accounts/72-nickname-edit.png",
+   "kind": "form-state",
+   "note": "Clicking the account title turns it into an input with \"Enter to save / Esc to cancel\"."
+  },
+  {
+   "id": "accounts.nickname-saved",
+   "title": "Nickname updated",
+   "url": "/accounts/depository/party-mercurybankid3",
+   "image": "screens/accounts/73-nickname-saved.png",
+   "kind": "toast",
+   "note": "Title reads \"AP / Vendors\" with an \"Account nickname updated\" toast."
+  },
+  {
+   "id": "accounts.link-bank",
+   "title": "Link bank account — account type",
+   "url": "/accounts",
+   "image": "screens/accounts/74-link-bank.png",
+   "kind": "modal",
+   "note": "Demo links a mock \"Iron Bank Checking 1\" immediately (\"Account Linked\" toast) and asks Business or Personal."
+  },
+  {
+   "id": "accounts.link-credit",
+   "title": "Link credit account — account type",
+   "url": "/accounts",
+   "image": "screens/accounts/75-link-credit.png",
+   "kind": "modal",
+   "note": "Link Credit account mock-links \"Chase Freedom Unlimited 1\" immediately and asks Business or Personal, with a Save button and no Cancel."
+  },
+  {
+   "id": "accounts.linked-credit-account",
+   "title": "Linked accounts with new credit card",
+   "url": "/accounts#external-accounts",
+   "image": "screens/accounts/76-linked-credit-account.png",
+   "kind": "page",
+   "note": "After saving, Chase Freedom Unlimited 1 (Personal Credit Card ••7249 – Chase) appears at the bottom of the Linked accounts table; credit rows have no Transfer button."
+  },
+  {
+   "id": "accounts.edit-account-type",
+   "title": "Edit account type",
+   "url": "/accounts#external-accounts",
+   "image": "screens/accounts/77-edit-account-type.png",
+   "kind": "modal",
+   "note": "Kebab > Edit account type opens a Business/Personal radio dialog with Cancel and a disabled Save until the value changes."
+  },
+  {
+   "id": "accounts.edit-account-type-changed",
+   "title": "Edit account type — changed",
+   "url": "/accounts#external-accounts",
+   "image": "screens/accounts/78-account-type-changed.png",
+   "kind": "form-state",
+   "note": "Business selected, Save enabled."
+  },
+  {
+   "id": "accounts.account-type-saved",
+   "title": "Account type updated",
+   "url": "/accounts#external-accounts",
+   "image": "screens/accounts/79-account-type-saved.png",
+   "kind": "toast",
+   "note": "Row subtitle now reads Business Credit Card with an \"Account type successfully updated\" toast."
+  },
+  {
+   "id": "accounts.order-checkbook",
+   "title": "Order a Checkbook",
+   "url": "/checkbooks/ordering/order?accountId=party-mercurybankid2&from=account-details",
+   "image": "screens/accounts/80-order-checkbook.png",
+   "kind": "page",
+   "note": "Full-screen flow opened from + Order Checkbook: account picker, nickname, start number 1001, three check colors, shipping address, with a live check preview and quantity/range/shipping summary."
+  },
+  {
+   "id": "accounts.order-checkbook-error",
+   "title": "Order checkbook — missing nickname",
+   "url": "/checkbooks/ordering/order?accountId=party-mercurybankid2&from=account-details",
+   "image": "screens/accounts/81-order-checkbook-validation.png",
+   "kind": "validation-error",
+   "note": "Next with an empty nickname turns the label pink and shows \"Please complete this field\" under the input."
+  },
+  {
+   "id": "accounts.order-checkbook-filled",
+   "title": "Order checkbook — filled",
+   "url": "/checkbooks/ordering/order?accountId=party-mercurybankid2&from=account-details",
+   "image": "screens/accounts/82-order-checkbook-filled.png",
+   "kind": "form-state",
+   "note": "Nickname \"Payroll Checkbook\" entered and the pink check color selected; the preview recolors."
+  },
+  {
+   "id": "accounts.order-checkbook-review",
+   "title": "Order checkbook — review",
+   "url": "/checkbooks/ordering/review?accountId=party-mercurybankid2&from=account-details",
+   "image": "screens/accounts/83-order-checkbook-review.png",
+   "kind": "page",
+   "note": "Review of nickname, account, shipping address and cost (Free) with an authority checkbox; Confirm stays disabled until it is ticked."
+  },
+  {
+   "id": "accounts.checkbook-ordered",
+   "title": "Checkbook ordered",
+   "url": "/checkbooks/ordering/success?accountId=party-mercurybankid2&from=account-details",
+   "image": "screens/accounts/84-checkbook-ordered.png",
+   "kind": "confirmation",
+   "note": "\"We’re getting your checkbook ready — It should arrive in 10 - 14 business days.\" with a Done button."
+  },
+  {
+   "id": "accounts.checkbooks-hub",
+   "title": "Checkbooks hub (after Done)",
+   "url": "/checkbooks/hub",
+   "image": "screens/accounts/85-checkbooks-hub.png",
+   "kind": "page",
+   "note": "Done lands on Payments > Checkbooks, not back on the account the flow started from (URL carried from=account-details)."
+  },
+  {
+   "id": "accounts.bank-letters",
+   "title": "Bank letters",
+   "url": "/settings/documents/bank-letters?accountIds=mercurybankid2",
+   "image": "screens/accounts/86-bank-letters.png",
+   "kind": "page",
+   "note": "Documents & Data > Bank letters with Ops / Payroll preselected and a floating \"1 document selected / Customize / Download\" bar."
+  },
+  {
+   "id": "accounts.bank-letter-customize",
+   "title": "Custom bank letter editor",
+   "url": "/settings/documents/bank-letters?accountIds=mercurybankid2",
+   "image": "screens/accounts/87-bank-letter-customize.png",
+   "kind": "modal",
+   "note": "Customize opens \"Custom bank letter for Ops / Payroll\": Mercury or Column letterhead, business name and signatory selects, include-in-letter checkboxes (balances, latest statement, secondary routing number, debit card, phone numbers), Cancel and Download."
+  },
+  {
+   "id": "accounts.wire-details",
+   "title": "Wire details",
+   "url": "/settings/documents/wire-details?accountIds=mercurybankid2",
+   "image": "screens/accounts/88-wire-details.png",
+   "kind": "page",
+   "note": "Documents & Data > Wire details with Ops / Payroll preselected and a Download-only selection bar."
+  },
+  {
+   "id": "accounts.rule-distribute",
+   "title": "Distribute funds rule form",
+   "url": "/accounts#auto-transfers",
+   "image": "screens/accounts/89-rule-distribute.png",
+   "kind": "modal",
+   "note": "\"Distribute funds across accounts\": percentage of balance from a starting account to one or more destinations, split bar and frequency."
+  },
+  {
+   "id": "accounts.rule-recurring",
+   "title": "Recurring transfer rule form",
+   "url": "/accounts#auto-transfers",
+   "image": "screens/accounts/90-rule-recurring.png",
+   "kind": "modal",
+   "note": "\"Schedule recurring transfers\": set amount from a starting account to destinations on a frequency. The picker calls it \"Send recurring transfers\"."
+  },
+  {
+   "id": "accounts.rule-redirect",
+   "title": "Redirect incoming funds rule form",
+   "url": "/accounts#auto-transfers",
+   "image": "screens/accounts/91-rule-redirect.png",
+   "kind": "modal",
+   "note": "\"Redirect incoming funds\": percentage of incoming ACH, wire and check deposits swept to destination accounts; no frequency field."
+  },
+  {
+   "id": "accounts.credit-how-limits",
+   "title": "How your IO limit works",
+   "url": "/accounts/credit",
+   "image": "screens/accounts/92-credit-how-limits.png",
+   "kind": "modal",
+   "note": "Explainer with available limit ($40,000), recent limit update, what affects the limit and how repayment works; the \"IO\" in the title renders as a blank gap."
+  },
+  {
+   "id": "accounts.limit-increase",
+   "title": "Request a credit limit increase",
+   "url": "/accounts/credit",
+   "image": "screens/accounts/93-limit-increase.png",
+   "kind": "modal",
+   "note": "Current limit card with Show details, Requested Amount and optional Reason, Cancel and a disabled Request Increase."
+  },
+  {
+   "id": "accounts.limit-increase-error",
+   "title": "Limit increase validation",
+   "url": "/accounts/credit",
+   "image": "screens/accounts/94-limit-increase-validation.png",
+   "kind": "validation-error",
+   "note": "Submitting with no amount shows \"Must be a dollar value.\" under Requested Amount."
+  },
+  {
+   "id": "accounts.limit-increase-sent",
+   "title": "Limit increase requested",
+   "url": "/accounts/credit",
+   "image": "screens/accounts/95-limit-increase-sent.png",
+   "kind": "confirmation",
+   "note": "Same dialog swaps to \"Your IO limit increase request has been received and is currently under review.\" with Done."
+  },
+  {
+   "id": "accounts.credit-limit-details",
+   "title": "Credit balance details expanded",
+   "url": "/accounts/credit",
+   "image": "screens/accounts/96-credit-limit-details.png",
+   "kind": "form-state",
+   "note": "Show details expands total monthly limit, balance, pending and available to spend ($21,248.88, while the bar above rounds to \"$21,249 available\")."
+  },
+  {
+   "id": "accounts.credit-linked-accounts",
+   "title": "Linked accounts for IO limit",
+   "url": "/accounts/credit",
+   "image": "screens/accounts/97-credit-linked-accounts.png",
+   "kind": "modal",
+   "note": "External accounts counted toward the IO limit (Checking ••5231, Capital One) with Exclude all accounts."
+  },
+  {
+   "id": "accounts.treasury-net-return",
+   "title": "Monthly net return breakdown",
+   "url": "/accounts/treasury/party-treasury-id-0",
+   "image": "screens/accounts/98-treasury-net-return.png",
+   "kind": "modal",
+   "note": "\"August 2026 net return\": MCRYX and MRGXX dividends minus the $25 Treasury fee, net $1,284.99, dismissed with a secondary Done."
+  },
+  {
+   "id": "accounts.vd-request-funds",
+   "title": "Venture debt draw: amount",
+   "url": "/capital/venture-debt/draw-funds",
+   "image": "screens/accounts/99-vd-request-funds.png",
+   "kind": "page",
+   "note": "Step 1 of 3 \"How much do you want to borrow?\" with a large $0.00 input, request limit and current monthly payments; Next disabled."
+  },
+  {
+   "id": "accounts.vd-request-calculator",
+   "title": "Venture debt draw: amount entered",
+   "url": "/capital/venture-debt/draw-funds",
+   "image": "screens/accounts/100-vd-request-calculator.png",
+   "kind": "form-state",
+   "note": "$250,000 entered; Next enabled. The payment preview does not change until the Review step."
+  },
+  {
+   "id": "accounts.vd-request-error",
+   "title": "Venture debt draw over limit",
+   "url": "/capital/venture-debt/draw-funds",
+   "image": "screens/accounts/101-vd-request-validation.png",
+   "kind": "validation-error",
+   "note": "$2,000,000 shows \"Request amount may not exceed $1,000,000.00.\" but Next stays enabled."
+  },
+  {
+   "id": "accounts.vd-destination",
+   "title": "Venture debt draw: destination",
+   "url": "/capital/venture-debt/draw-funds",
+   "image": "screens/accounts/102-vd-destination.png",
+   "kind": "form-state",
+   "note": "Step 2 \"Destination of funds\": Deposit In account picker preset to Ops / Payroll, Go back and Next."
+  },
+  {
+   "id": "accounts.vd-review",
+   "title": "Venture debt draw: review",
+   "url": "/capital/venture-debt/draw-funds",
+   "image": "screens/accounts/103-vd-review.png",
+   "kind": "page",
+   "note": "Step 3 Review: $250,000.00, destination and estimated monthly payments, Go back and Request funds."
+  },
+  {
+   "id": "accounts.vd-disbursement-agreement",
+   "title": "Disbursement agreement",
+   "url": "/capital/venture-debt/draw-funds",
+   "image": "screens/accounts/104-vd-disbursement-agreement.png",
+   "kind": "modal",
+   "note": "Representations-and-warranties text dated Sep 24, 2026 with Cancel and Agree."
+  },
+  {
+   "id": "accounts.vd-funds-requested",
+   "title": "Venture debt draw requested",
+   "url": "/capital/venture-debt/draw-funds",
+   "image": "screens/accounts/105-vd-funds-requested.png",
+   "kind": "confirmation",
+   "note": "\"You've requested $250,000 USD from your Venture Debt loan\" with a 1–3 business day window, View loan details and Make Another Request."
+  },
+  {
+   "id": "accounts.vd-draw-pending",
+   "title": "Venture debt with pending draw",
+   "url": "/capital/venture-debt",
+   "image": "screens/accounts/106-vd-draw-pending.png",
+   "kind": "page",
+   "note": "Venture Debt tab now shows a \"Draw Request Pending\" badge and an Activity banner \"A request for drawing $250,000 on your loan is pending\"."
+  },
+  {
+   "id": "accounts.vd-projected-payments",
+   "title": "Projected payments",
+   "url": "/capital/venture-debt",
+   "image": "screens/accounts/107-vd-projected-payments.png",
+   "kind": "modal",
+   "note": "View more next to Next payment opens projected payments from Ops / Payroll: $5,500.00 monthly, then $37,500.00 from Jan 1 2027."
+  },
+  {
+   "id": "accounts.safe-detail",
+   "title": "SAFE detail drawer",
+   "url": "/capital/safe",
+   "image": "screens/accounts/108-safe-detail.png",
+   "kind": "drawer",
+   "note": "Clicking Logan Roy opens a drawer with shareable link, amount, valuation cap, discount, valuation type, pro-rata, MFN and the signed PDF."
+  },
+  {
+   "id": "accounts.safe-filter-cancelled",
+   "title": "SAFEs filtered to Cancelled",
+   "url": "/capital/safe",
+   "image": "screens/accounts/109-safe-filter-cancelled.png",
+   "kind": "empty-state",
+   "note": "Cancelled filter leaves the table headers and \"No SAFE requests match your filters\"; the summary still counts 3 SAFEs."
+  },
+  {
+   "id": "accounts.credit-last-month",
+   "title": "Credit activity: Last Month",
+   "url": "/accounts/credit",
+   "image": "screens/accounts/110-credit-last-month.png",
+   "kind": "form-state",
+   "note": "Clicking \"Last Month\" swaps the table to Aug 30 rows, but the heading still reads \"This month\" and the control still reads \"Last Month\"."
+  },
+  {
+   "id": "accounts.statements-account-filter",
+   "title": "Statements account filter",
+   "url": "/settings/documents/statements?accountIds=mercurybankid2",
+   "image": "screens/accounts/111-statements-account-filter.png",
+   "kind": "menu",
+   "note": "Accounts multi-select: All Accounts, Sweep Statements, each account, and a closed Checking ••4311."
+  },
+  {
+   "id": "accounts.manage-shared-docs",
+   "title": "Remove shared document links",
+   "url": "/settings/documents/statements?accountIds=mercurybankid2",
+   "image": "screens/accounts/112-manage-shared-documents.png",
+   "kind": "modal",
+   "note": "\"Manage shared documents\" opens a dialog titled \"Remove shared document links\" listing recipients and document counts, with Close."
+  },
+  {
+   "id": "accounts.shared-link-selected",
+   "title": "Shared link selected for removal",
+   "url": "/settings/documents/statements?accountIds=mercurybankid2",
+   "image": "screens/accounts/113-shared-link-selected.png",
+   "kind": "form-state",
+   "note": "Ticking rotem@gmail.com turns Close into Cancel and adds a destructive \"Remove access to 1 document link\"."
+  },
+  {
+   "id": "accounts.shared-link-removed",
+   "title": "Shared link removed",
+   "url": "/settings/documents/statements?accountIds=mercurybankid2",
+   "image": "screens/accounts/114-shared-link-removed.png",
+   "kind": "toast",
+   "note": "Toast reads \"Removed 1 statements\" for a link that covered 4 documents."
+  },
+  {
+   "id": "accounts.statement-selected",
+   "title": "Statement selected",
+   "url": "/settings/documents/statements?accountIds=mercurybankid2",
+   "image": "screens/accounts/115-statement-selected.png",
+   "kind": "form-state",
+   "note": "Ticking Aug 2026 shows a floating \"1 document selected\" bar with Share document and Download."
+  },
+  {
+   "id": "accounts.share-statement",
+   "title": "Share statement by email",
+   "url": "/settings/documents/statements?accountIds=mercurybankid2",
+   "image": "screens/accounts/116-share-statement.png",
+   "kind": "modal",
+   "note": "Full-screen share sheet with no title: recipient emails, \"Sharing 1 document\" summary, sensitivity notice, Back and a disabled Share via email."
+  },
+  {
+   "id": "accounts.share-recipient-menu",
+   "title": "Share recipient picker",
+   "url": "/settings/documents/statements?accountIds=mercurybankid2",
+   "image": "screens/accounts/117-share-recipient-menu.png",
+   "kind": "menu",
+   "note": "Recipient combobox lists team emails with checkboxes; its listbox is announced as \"mercury-utils-id-78-label\"."
+  },
+  {
+   "id": "accounts.statement-shared",
+   "title": "Statement shared",
+   "url": "/settings/documents/statements?accountIds=mercurybankid2",
+   "image": "screens/accounts/118-statement-shared.png",
+   "kind": "confirmation",
+   "note": "\"Email sent\" page with the shared document, an Invite-your-accountant upsell and Return to documents & data."
+  }
+ ],
+ "edges": [
+  {
+   "from": "accounts.index",
+   "to": "accounts.add-account-menu",
+   "label": "Click Add account"
+  },
+  {
+   "from": "accounts.add-account-menu",
+   "to": "accounts.create-account",
+   "label": "Click Create account"
+  },
+  {
+   "from": "accounts.create-account",
+   "to": "accounts.create-account-error",
+   "label": "Click Create account with no type"
+  },
+  {
+   "from": "accounts.create-account-error",
+   "to": "accounts.create-account-filled",
+   "label": "Select Checking and type nickname"
+  },
+  {
+   "from": "accounts.create-account-filled",
+   "to": "accounts.create-account-success",
+   "label": "Click Create account"
+  },
+  {
+   "from": "accounts.index",
+   "to": "accounts.linked-accounts",
+   "label": "Click Linked accounts tab"
+  },
+  {
+   "from": "accounts.index",
+   "to": "accounts.auto-transfer-rules",
+   "label": "Click Auto transfer rules tab"
+  },
+  {
+   "from": "accounts.auto-transfer-rules",
+   "to": "accounts.create-rule",
+   "label": "Click Create rule"
+  },
+  {
+   "from": "accounts.create-rule",
+   "to": "accounts.rule-target-balance",
+   "label": "Click Maintain a target balance"
+  },
+  {
+   "from": "accounts.auto-transfer-rules",
+   "to": "accounts.rule-target-balance",
+   "label": "Click Maintain a target account balance card"
+  },
+  {
+   "from": "accounts.rule-target-balance",
+   "to": "accounts.rule-target-balance-error",
+   "label": "Click Next with empty fields"
+  },
+  {
+   "from": "accounts.rule-target-balance-error",
+   "to": "accounts.rule-account-dropdown",
+   "label": "Open Account dropdown"
+  },
+  {
+   "from": "accounts.rule-account-dropdown",
+   "to": "accounts.rule-target-balance-filled",
+   "label": "Pick AP, enter $50,000, supporting account and frequency"
+  },
+  {
+   "from": "accounts.rule-target-balance-filled",
+   "to": "accounts.rule-review",
+   "label": "Click Next"
+  },
+  {
+   "from": "accounts.rule-review",
+   "to": "accounts.rule-created",
+   "label": "Click Create rule"
+  },
+  {
+   "from": "accounts.rule-created",
+   "to": "accounts.rule-kebab-menu",
+   "label": "Click rule kebab"
+  },
+  {
+   "from": "accounts.rule-kebab-menu",
+   "to": "accounts.rule-removed",
+   "label": "Click Remove rule"
+  },
+  {
+   "from": "accounts.index",
+   "to": "accounts.checking-detail",
+   "label": "Click Ops / Payroll row"
+  },
+  {
+   "from": "accounts.checking-detail",
+   "to": "accounts.account-number-revealed",
+   "label": "Click eye icon next to Account number"
+  },
+  {
+   "from": "accounts.account-number-revealed",
+   "to": "accounts.routing-copied",
+   "label": "Click routing number"
+  },
+  {
+   "from": "accounts.checking-detail",
+   "to": "accounts.documents-menu",
+   "label": "Click Documents"
+  },
+  {
+   "from": "accounts.documents-menu",
+   "to": "accounts.statements",
+   "label": "Click Statements"
+  },
+  {
+   "from": "accounts.statements",
+   "to": "accounts.custom-statement",
+   "label": "Click Generate a custom statement"
+  },
+  {
+   "from": "accounts.statements",
+   "to": "accounts.statement-export-menu",
+   "label": "Click row kebab"
+  },
+  {
+   "from": "accounts.checking-detail",
+   "to": "accounts.transfer-split-menu",
+   "label": "Click Transfer chevron"
+  },
+  {
+   "from": "accounts.checking-detail",
+   "to": "accounts.add-funds",
+   "label": "Click Deposit"
+  },
+  {
+   "from": "accounts.index",
+   "to": "accounts.credit",
+   "label": "Click Credit Card row"
+  },
+  {
+   "from": "accounts.credit",
+   "to": "accounts.pay-credit",
+   "label": "Click Pay"
+  },
+  {
+   "from": "accounts.pay-credit",
+   "to": "accounts.pay-credit-review",
+   "label": "Click Review"
+  },
+  {
+   "from": "accounts.pay-credit-review",
+   "to": "accounts.pay-credit-error",
+   "label": "Click Edit and enter amount above balance"
+  },
+  {
+   "from": "accounts.pay-credit-error",
+   "to": "accounts.pay-credit-review",
+   "label": "Enter $500 and click Review"
+  },
+  {
+   "from": "accounts.pay-credit-review",
+   "to": "accounts.pay-credit-success",
+   "label": "Click Confirm payment"
+  },
+  {
+   "from": "accounts.credit",
+   "to": "accounts.edit-autopay",
+   "label": "Click Autopay Oct 22 pill"
+  },
+  {
+   "from": "accounts.index",
+   "to": "accounts.edit-autopay",
+   "label": "Click \"Autopay from Ops / Payroll\" in the Credit Card row"
+  },
+  {
+   "from": "accounts.edit-autopay",
+   "to": "accounts.autopay-rule-edit",
+   "label": "Click Edit on Monthly on the 22nd"
+  },
+  {
+   "from": "accounts.autopay-rule-edit",
+   "to": "accounts.autopay-day-select",
+   "label": "Open On select"
+  },
+  {
+   "from": "accounts.autopay-day-select",
+   "to": "accounts.autopay-rule-saving",
+   "label": "Pick 5th of the month and click Save"
+  },
+  {
+   "from": "accounts.autopay-rule-saving",
+   "to": "accounts.edit-autopay",
+   "label": "Save completes"
+  },
+  {
+   "from": "accounts.edit-autopay",
+   "to": "accounts.autopay-threshold-edit",
+   "label": "Click Edit on Less than 80% of limit left"
+  },
+  {
+   "from": "accounts.autopay-threshold-edit",
+   "to": "accounts.autopay-threshold-saving",
+   "label": "Type 150 and click Save"
+  },
+  {
+   "from": "accounts.autopay-threshold-saving",
+   "to": "accounts.edit-autopay",
+   "label": "Save completes"
+  },
+  {
+   "from": "accounts.edit-autopay",
+   "to": "accounts.autopay-source-edit",
+   "label": "Click Edit on Autopay from"
+  },
+  {
+   "from": "accounts.index",
+   "to": "accounts.treasury",
+   "label": "Click Treasury row"
+  },
+  {
+   "from": "accounts.treasury",
+   "to": "accounts.treasury-portfolio",
+   "label": "Click Portfolio tab"
+  },
+  {
+   "from": "accounts.treasury",
+   "to": "accounts.treasury-transfer-menu",
+   "label": "Click Transfer funds chevron"
+  },
+  {
+   "from": "accounts.treasury",
+   "to": "accounts.edit-portfolio",
+   "label": "Click pencil on allocation card"
+  },
+  {
+   "from": "accounts.edit-portfolio",
+   "to": "accounts.edit-portfolio-tier5",
+   "label": "Drag slider to tier 5"
+  },
+  {
+   "from": "accounts.edit-portfolio-tier5",
+   "to": "accounts.portfolio-updated",
+   "label": "Click Update portfolio"
+  },
+  {
+   "from": "accounts.treasury-transfer-menu",
+   "to": "accounts.treasury-transfer-in",
+   "label": "Click Transfer in"
+  },
+  {
+   "from": "accounts.treasury-transfer-in",
+   "to": "accounts.treasury-transfer-error",
+   "label": "Click Next with empty form"
+  },
+  {
+   "from": "accounts.treasury-transfer-error",
+   "to": "accounts.treasury-transfer-review",
+   "label": "Enter $10,000, pick Ops / Payroll, click Next"
+  },
+  {
+   "from": "accounts.treasury-transfer-review",
+   "to": "accounts.treasury-transfer-success",
+   "label": "Click Transfer"
+  },
+  {
+   "from": "accounts.treasury-transfer-menu",
+   "to": "accounts.treasury-transfer-out",
+   "label": "Click Transfer out"
+  },
+  {
+   "from": "accounts.treasury",
+   "to": "accounts.treasury-statements",
+   "label": "Click Documents"
+  },
+  {
+   "from": "accounts.treasury",
+   "to": "accounts.financing",
+   "label": "Click Financing in sidebar"
+  },
+  {
+   "from": "accounts.financing",
+   "to": "accounts.loan-schedule",
+   "label": "Click View full schedule"
+  },
+  {
+   "from": "accounts.financing",
+   "to": "accounts.loan-autopay",
+   "label": "Click Edit autopay"
+  },
+  {
+   "from": "accounts.loan-autopay",
+   "to": "accounts.loan-autopay-saved",
+   "label": "Click Confirm"
+  },
+  {
+   "from": "accounts.financing",
+   "to": "accounts.financing-home",
+   "label": "Click Home tab"
+  },
+  {
+   "from": "accounts.financing",
+   "to": "accounts.venture-debt",
+   "label": "Click Venture Debt tab"
+  },
+  {
+   "from": "accounts.financing",
+   "to": "accounts.safes",
+   "label": "Click SAFEs tab"
+  },
+  {
+   "from": "accounts.financing-home",
+   "to": "accounts.safe-create",
+   "label": "Click Start now on SAFE card"
+  },
+  {
+   "from": "accounts.safes",
+   "to": "accounts.safe-create",
+   "label": "Click Create new SAFE"
+  },
+  {
+   "from": "accounts.safe-create",
+   "to": "accounts.safe-create-error",
+   "label": "Click Next with empty fields"
+  },
+  {
+   "from": "accounts.safe-create-error",
+   "to": "accounts.safe-type-dropdown",
+   "label": "Enter amount and open SAFE type"
+  },
+  {
+   "from": "accounts.safe-type-dropdown",
+   "to": "accounts.safe-company-details",
+   "label": "Pick Post-money, enter valuation cap, click Next"
+  },
+  {
+   "from": "accounts.safe-company-details",
+   "to": "accounts.safe-investor-details",
+   "label": "Pick Delaware and signatory, click Next"
+  },
+  {
+   "from": "accounts.safe-investor-details",
+   "to": "accounts.safe-investor-error",
+   "label": "Enter invalid email, click Review"
+  },
+  {
+   "from": "accounts.safe-investor-error",
+   "to": "accounts.safe-review",
+   "label": "Enter name and valid email, click Review"
+  },
+  {
+   "from": "accounts.safe-review",
+   "to": "accounts.safe-sent",
+   "label": "Click Send SAFE"
+  },
+  {
+   "from": "accounts.linked-accounts",
+   "to": "accounts.linked-account-kebab",
+   "label": "Click row kebab"
+  },
+  {
+   "from": "accounts.linked-accounts",
+   "to": "accounts.linked-transfer-menu",
+   "label": "Click Transfer on a linked account"
+  },
+  {
+   "from": "accounts.linked-account-kebab",
+   "to": "accounts.unlink-confirm",
+   "label": "Click Unlink account"
+  },
+  {
+   "from": "accounts.unlink-confirm",
+   "to": "accounts.unlinked",
+   "label": "Click Yes, unlink"
+  },
+  {
+   "from": "accounts.index",
+   "to": "accounts.savings-detail",
+   "label": "Click Savings ••7658 row"
+  },
+  {
+   "from": "accounts.index",
+   "to": "accounts.nickname-edit",
+   "label": "Open AP row, click the title"
+  },
+  {
+   "from": "accounts.nickname-edit",
+   "to": "accounts.nickname-saved",
+   "label": "Type new name, press Enter"
+  },
+  {
+   "from": "accounts.add-account-menu",
+   "to": "accounts.link-bank",
+   "label": "Click Link bank account"
+  },
+  {
+   "from": "accounts.index",
+   "to": "accounts.create-rule",
+   "label": "Click Create rule in a row"
+  },
+  {
+   "from": "accounts.checking-detail",
+   "to": "accounts.create-rule",
+   "label": "Click Set up an auto transfer rule"
+  },
+  {
+   "from": "accounts.treasury-transfer-success",
+   "to": "home.index",
+   "label": "Click Go to dashboard"
+  },
+  {
+   "from": "accounts.checking-detail",
+   "to": "transactions.index",
+   "label": "Click View all"
+  },
+  {
+   "from": "accounts.routing-copied",
+   "to": "accounts.documents-menu",
+   "label": "Click Documents"
+  },
+  {
+   "from": "accounts.add-account-menu",
+   "to": "accounts.link-credit",
+   "label": "Click Link Credit account"
+  },
+  {
+   "from": "accounts.link-credit",
+   "to": "accounts.linked-credit-account",
+   "label": "Choose Personal, click Save, open Linked accounts"
+  },
+  {
+   "from": "accounts.linked-credit-account",
+   "to": "accounts.linked-account-kebab",
+   "label": "Click row kebab"
+  },
+  {
+   "from": "accounts.linked-account-kebab",
+   "to": "accounts.edit-account-type",
+   "label": "Click Edit account type"
+  },
+  {
+   "from": "accounts.edit-account-type",
+   "to": "accounts.edit-account-type-changed",
+   "label": "Select Business"
+  },
+  {
+   "from": "accounts.edit-account-type-changed",
+   "to": "accounts.account-type-saved",
+   "label": "Click Save"
+  },
+  {
+   "from": "accounts.checking-detail",
+   "to": "accounts.order-checkbook",
+   "label": "Click + Order Checkbook"
+  },
+  {
+   "from": "accounts.order-checkbook",
+   "to": "accounts.order-checkbook-error",
+   "label": "Click Next with empty nickname"
+  },
+  {
+   "from": "accounts.order-checkbook-error",
+   "to": "accounts.order-checkbook-filled",
+   "label": "Type nickname, pick pink check"
+  },
+  {
+   "from": "accounts.order-checkbook-filled",
+   "to": "accounts.order-checkbook-review",
+   "label": "Click Next"
+  },
+  {
+   "from": "accounts.order-checkbook-review",
+   "to": "accounts.checkbook-ordered",
+   "label": "Tick authority checkbox, click Confirm"
+  },
+  {
+   "from": "accounts.checkbook-ordered",
+   "to": "accounts.checkbooks-hub",
+   "label": "Click Done"
+  },
+  {
+   "from": "accounts.checkbooks-hub",
+   "to": "payments.index",
+   "label": "Payments section"
+  },
+  {
+   "from": "accounts.documents-menu",
+   "to": "accounts.bank-letters",
+   "label": "Click Bank Letters"
+  },
+  {
+   "from": "accounts.bank-letters",
+   "to": "accounts.bank-letter-customize",
+   "label": "Click Customize"
+  },
+  {
+   "from": "accounts.documents-menu",
+   "to": "accounts.wire-details",
+   "label": "Click Wire Details"
+  },
+  {
+   "from": "accounts.bank-letters",
+   "to": "settings.index",
+   "label": "Back to Settings"
+  },
+  {
+   "from": "accounts.create-rule",
+   "to": "accounts.rule-distribute",
+   "label": "Click Distribute funds out"
+  },
+  {
+   "from": "accounts.create-rule",
+   "to": "accounts.rule-recurring",
+   "label": "Click Send recurring transfers"
+  },
+  {
+   "from": "accounts.create-rule",
+   "to": "accounts.rule-redirect",
+   "label": "Click Redirect incoming funds"
+  },
+  {
+   "from": "accounts.credit",
+   "to": "accounts.credit-how-limits",
+   "label": "Click How limits work"
+  },
+  {
+   "from": "accounts.credit",
+   "to": "accounts.limit-increase",
+   "label": "Click Request a limit increase"
+  },
+  {
+   "from": "accounts.limit-increase",
+   "to": "accounts.limit-increase-error",
+   "label": "Click Request Increase with no amount"
+  },
+  {
+   "from": "accounts.limit-increase-error",
+   "to": "accounts.limit-increase-sent",
+   "label": "Enter amount, click Request Increase"
+  },
+  {
+   "from": "accounts.credit",
+   "to": "accounts.credit-limit-details",
+   "label": "Click Show details"
+  },
+  {
+   "from": "accounts.credit",
+   "to": "accounts.credit-linked-accounts",
+   "label": "Click Linked Accounts pill"
+  },
+  {
+   "from": "accounts.credit",
+   "to": "accounts.credit-last-month",
+   "label": "Click Last Month"
+  },
+  {
+   "from": "accounts.treasury",
+   "to": "accounts.treasury-net-return",
+   "label": "Click August net return row"
+  },
+  {
+   "from": "accounts.venture-debt",
+   "to": "accounts.vd-request-funds",
+   "label": "Click Request funds"
+  },
+  {
+   "from": "accounts.vd-request-funds",
+   "to": "accounts.vd-request-error",
+   "label": "Type $2,000,000"
+  },
+  {
+   "from": "accounts.vd-request-error",
+   "to": "accounts.vd-request-calculator",
+   "label": "Correct amount to $250,000"
+  },
+  {
+   "from": "accounts.vd-request-funds",
+   "to": "accounts.vd-request-calculator",
+   "label": "Type $250,000"
+  },
+  {
+   "from": "accounts.vd-request-calculator",
+   "to": "accounts.vd-destination",
+   "label": "Click Next"
+  },
+  {
+   "from": "accounts.vd-destination",
+   "to": "accounts.vd-review",
+   "label": "Click Next"
+  },
+  {
+   "from": "accounts.vd-review",
+   "to": "accounts.vd-disbursement-agreement",
+   "label": "Click Request funds"
+  },
+  {
+   "from": "accounts.vd-disbursement-agreement",
+   "to": "accounts.vd-funds-requested",
+   "label": "Click Agree"
+  },
+  {
+   "from": "accounts.vd-funds-requested",
+   "to": "accounts.vd-draw-pending",
+   "label": "Click View loan details"
+  },
+  {
+   "from": "accounts.vd-draw-pending",
+   "to": "accounts.vd-projected-payments",
+   "label": "Click View more"
+  },
+  {
+   "from": "accounts.venture-debt",
+   "to": "accounts.vd-projected-payments",
+   "label": "Click View more"
+  },
+  {
+   "from": "accounts.safes",
+   "to": "accounts.safe-detail",
+   "label": "Click a SAFE row"
+  },
+  {
+   "from": "accounts.safes",
+   "to": "accounts.safe-filter-cancelled",
+   "label": "Click Cancelled filter"
+  },
+  {
+   "from": "accounts.statements",
+   "to": "accounts.statements-account-filter",
+   "label": "Open Accounts filter"
+  },
+  {
+   "from": "accounts.statements",
+   "to": "accounts.manage-shared-docs",
+   "label": "Click Manage shared documents"
+  },
+  {
+   "from": "accounts.manage-shared-docs",
+   "to": "accounts.shared-link-selected",
+   "label": "Tick a recipient"
+  },
+  {
+   "from": "accounts.shared-link-selected",
+   "to": "accounts.shared-link-removed",
+   "label": "Click Remove access to 1 document link"
+  },
+  {
+   "from": "accounts.statements",
+   "to": "accounts.statement-selected",
+   "label": "Tick a statement row"
+  },
+  {
+   "from": "accounts.statement-selected",
+   "to": "accounts.share-statement",
+   "label": "Click Share document"
+  },
+  {
+   "from": "accounts.share-statement",
+   "to": "accounts.share-recipient-menu",
+   "label": "Open Recipient emails"
+  },
+  {
+   "from": "accounts.share-recipient-menu",
+   "to": "accounts.statement-shared",
+   "label": "Pick jason@green.com, click Share via email"
+  },
+  {
+   "from": "accounts.statement-shared",
+   "to": "accounts.statements",
+   "label": "Click Return to documents & data"
+  },
+  {
+   "from": "accounts.credit-how-limits",
+   "to": "accounts.limit-increase",
+   "label": "Click Got it, then Request a limit increase"
+  },
+  {
+   "from": "home.index",
+   "to": "accounts.index",
+   "label": "Click Accounts in the sidebar"
+  }
+ ],
+ "journeys": [
+  {
+   "id": "accounts.j-open-account",
+   "name": "Open a new checking account",
+   "description": "Create a named checking account for taxes and land on the updated list.",
+   "steps": [
+    "accounts.index",
+    "accounts.add-account-menu",
+    "accounts.create-account",
+    "accounts.create-account-error",
+    "accounts.create-account-filled",
+    "accounts.create-account-success"
+   ]
+  },
+  {
+   "id": "accounts.j-target-balance-rule",
+   "name": "Keep AP topped up with an auto transfer rule",
+   "description": "Set a rule that holds AP at $50,000 from Ops / Payroll every business day.",
+   "steps": [
+    "accounts.index",
+    "accounts.auto-transfer-rules",
+    "accounts.create-rule",
+    "accounts.rule-target-balance",
+    "accounts.rule-target-balance-error",
+    "accounts.rule-account-dropdown",
+    "accounts.rule-target-balance-filled",
+    "accounts.rule-review",
+    "accounts.rule-created"
+   ]
+  },
+  {
+   "id": "accounts.j-pay-credit",
+   "name": "Pay down the credit card",
+   "description": "Make a one-off $500 payment toward the Mercury IO balance from Ops / Payroll.",
+   "steps": [
+    "accounts.index",
+    "accounts.credit",
+    "accounts.pay-credit",
+    "accounts.pay-credit-review",
+    "accounts.pay-credit-success"
+   ]
+  },
+  {
+   "id": "accounts.j-invest-treasury",
+   "name": "Move idle cash into Treasury",
+   "description": "Transfer $10,000 from checking into Treasury and confirm it is on the way.",
+   "steps": [
+    "accounts.index",
+    "accounts.treasury",
+    "accounts.treasury-transfer-menu",
+    "accounts.treasury-transfer-in",
+    "accounts.treasury-transfer-error",
+    "accounts.treasury-transfer-review",
+    "accounts.treasury-transfer-success"
+   ]
+  },
+  {
+   "id": "accounts.j-issue-safe",
+   "name": "Issue a SAFE to an investor",
+   "description": "Create a $250,000 post-money SAFE and send it to an investor for signature.",
+   "steps": [
+    "accounts.financing",
+    "accounts.safes",
+    "accounts.safe-create",
+    "accounts.safe-create-error",
+    "accounts.safe-type-dropdown",
+    "accounts.safe-company-details",
+    "accounts.safe-investor-details",
+    "accounts.safe-investor-error",
+    "accounts.safe-review",
+    "accounts.safe-sent"
+   ]
+  },
+  {
+   "id": "accounts.j-share-account-details",
+   "name": "Send a statement to the accountant",
+   "description": "Reveal and copy account details, then email the August statement to an outside recipient.",
+   "steps": [
+    "accounts.index",
+    "accounts.checking-detail",
+    "accounts.account-number-revealed",
+    "accounts.routing-copied",
+    "accounts.documents-menu",
+    "accounts.statements",
+    "accounts.statement-selected",
+    "accounts.share-statement",
+    "accounts.share-recipient-menu",
+    "accounts.statement-shared"
+   ]
+  },
+  {
+   "id": "accounts.j-draw-venture-debt",
+   "name": "Draw on the venture debt facility",
+   "description": "Request $250,000 from the venture debt loan into Ops / Payroll and confirm it is pending.",
+   "steps": [
+    "accounts.financing",
+    "accounts.venture-debt",
+    "accounts.vd-request-funds",
+    "accounts.vd-request-calculator",
+    "accounts.vd-destination",
+    "accounts.vd-review",
+    "accounts.vd-disbursement-agreement",
+    "accounts.vd-funds-requested",
+    "accounts.vd-draw-pending"
+   ]
+  }
+ ],
+ "issues": [
+  {
+   "id": "accounts.i-cents-format",
+   "title": "Currency cents rendered three different ways",
+   "detail": "The same dollarDisplay component shows cents as superscript on list balances ($226,767.82), as plain inline cents for \"Current\" balances and the credit Total Balance ($12,505.87), and drops cents entirely in SAFE totals ($10,011,000), the payment success copy (\"Your payment of $500\") and limits (\"$5K\"). The credit card balance is superscripted in the Accounts list but not on its own detail page. The credit card header rounds \"$21,249 available\" while Show details lists \"Available to spend $21,248.88\", and the venture debt confirmation drops cents and adds a currency code (\"$250,000 USD\") right after a review screen showing \"$250,000.00\".",
+   "nodeIds": [
+    "accounts.index",
+    "accounts.credit",
+    "accounts.savings-detail",
+    "accounts.checking-detail",
+    "accounts.safes",
+    "accounts.pay-credit-success",
+    "accounts.credit-limit-details",
+    "accounts.vd-funds-requested",
+    "accounts.vd-review"
+   ],
+   "category": "data-format",
+   "severity": "medium",
+   "evidence": "Re-measured 2026-09-24 at 2x: Accounts row $226,767.82 wraps \".82\" in <span class=\"_superscript_1of3b_35\" style=\"wght 500\">; credit Total Balance is a plain <SPAN> \"$12,505.87\" 28px/380 Arcadia Display; SAFE total \"$10,011,000\" <SPAN> 19px/400 Arcadia Text vs table \"$1,000.00\" 15px/400; credit page text \"$21,249 available\" vs \"$21,248.88\" in the details panel."
+  },
+  {
+   "id": "accounts.i-date-formats",
+   "title": "Dates use at least six formats across the area",
+   "detail": "Payment and activity dates switch between \"Sep 24\" (activity tables), \"October 1\" (Upcoming payments), \"Sep 10, 2026\" (repayment schedule), \"Oct 01\" with a zero-padded day (Venture Debt next payment), \"Oct 5, 2026\" (interest-only end), \"Jan 1 2027\" with no comma (projected payments), \"October 22\" (autopay modal), \"Oct 22\" (credit autopay pill) and \"September 24-25, 2026\" (transfer success). On Working Capital the two formats sit side by side and are also styled differently.",
+   "nodeIds": [
+    "accounts.financing",
+    "accounts.loan-schedule",
+    "accounts.venture-debt",
+    "accounts.autopay-rule-saving",
+    "accounts.credit",
+    "accounts.treasury-transfer-success",
+    "accounts.vd-projected-payments",
+    "accounts.vd-draw-pending"
+   ],
+   "category": "data-format",
+   "severity": "high",
+   "evidence": "Working Capital: Upcoming \"October 1\" <SPAN> 15px/400 rgb(195,195,204); Activity \"Sep 24\" <TD> 14px/400 rgb(255,255,255). Venture debt page text \"Next payment Oct 01\" and \"Interest only ends Oct 5, 2026\"; projected payments rows \"Oct 1\" and \"Jan 1 2027\"."
+  },
+  {
+   "id": "accounts.i-range-format",
+   "title": "Time ranges written with en dash, hyphen and \"to\"",
+   "detail": "Settlement windows are written \"1–2 business days\" (en dash) and \"Appears in 1 to 5 business days\" on the same Add funds page, \"0-1 business days\" (hyphen) and \"1 to 2 days\" on Edit portfolio, and \"September 24-25, 2026\" (hyphen) on the transfer success screen. Treasury's net return modal reads \"Net return for August 1-31\" (hyphen) and the venture debt confirmation says \"within 1–3 business days\" (en dash).",
+   "nodeIds": [
+    "accounts.add-funds",
+    "accounts.edit-portfolio-tier5",
+    "accounts.treasury-transfer-success",
+    "accounts.treasury-net-return",
+    "accounts.vd-funds-requested"
+   ],
+   "category": "copy",
+   "severity": "low",
+   "evidence": "Strings read from DOM text: \"Arrives in 1–2 business days.\" / \"Appears in 1 to 5 business days.\" (add-funds); \"take effect in 0-1 business days\" / \"1 to 2 days\" (portfolio edit); \"between September 24-25, 2026.\" (success). Net return modal: \"Net return for August 1-31\"; VD success: \"funds should arrive in your account within 1–3 business days\"."
+  },
+  {
+   "id": "accounts.i-back-labels",
+   "title": "Back/cancel action has five different labels",
+   "detail": "The dismiss-or-previous action is \"Cancel\" (Create account, Unlink, Edit recurring autopay, custom statement, limit increase), \"Back\" (auto transfer rule forms opened from the picker, which say \"Cancel\" when opened from an empty-state card; Transfer funds; Share statement), \"Go back\" (credit payment, Edit autopay accounts, SAFE steps, venture debt draw), \"Go Back\" in Title Case (Edit portfolio) and \"‹ Edit\" (credit payment review). The Remove shared document links dialog even relabels its only button from \"Close\" to \"Cancel\" once a row is ticked.",
+   "nodeIds": [
+    "accounts.create-account",
+    "accounts.rule-review",
+    "accounts.pay-credit",
+    "accounts.autopay-source-edit",
+    "accounts.edit-portfolio",
+    "accounts.pay-credit-review",
+    "accounts.loan-autopay",
+    "accounts.share-statement",
+    "accounts.shared-link-selected",
+    "accounts.vd-destination"
+   ],
+   "category": "copy",
+   "severity": "medium",
+   "evidence": "Accessible button names from snapshots on 2026-09-24: target balance rule \"Back\"/\"Next\"; pay credit \"Go back\"/\"Review\" then \"Edit\"/\"Confirm payment\"; Edit autopay accounts \"Go back\"/\"Save\"; recurring autopay \"Cancel\"/\"Save\"; limit increase \"Cancel\"/\"Request Increase\"; share sheet \"Back\"/\"Share via email\"; shared links dialog \"Close\" → \"Cancel\"."
+  },
+  {
+   "id": "accounts.i-secondary-button-style",
+   "title": "Secondary modal buttons use two visual styles",
+   "detail": "The Cancel button in the Create account modal is a ghost button with no fill, while Cancel in the Unlink modal and Back in the auto transfer rule review are filled tonal pills. Same role, same size, different treatment.",
+   "nodeIds": [
+    "accounts.create-account",
+    "accounts.unlink-confirm",
+    "accounts.rule-review",
+    "accounts.limit-increase",
+    "accounts.vd-disbursement-agreement"
+   ],
+   "category": "component",
+   "severity": "medium",
+   "evidence": "Re-measured 2026-09-24: Create account Cancel <BUTTON> bg rgba(0,0,0,0), color rgb(221,221,229), radius 9999px, padding 8px 32px, height 40px. Unlink Cancel, limit increase Cancel and Disbursement agreement Cancel: bg rgba(180,183,200,0.12), same color, radius, padding and 40px height."
+  },
+  {
+   "id": "accounts.i-modal-title-scale",
+   "title": "Modal titles use two type scales",
+   "detail": "Most modal titles (Create account, Make a credit payment, Autopay settings) are small Arcadia Text headings, but the Link bank account modal uses a 28px Arcadia Display title, the size used for page balances.",
+   "nodeIds": [
+    "accounts.create-account",
+    "accounts.link-bank",
+    "accounts.edit-autopay"
+   ],
+   "category": "typography",
+   "severity": "medium",
+   "evidence": "Create account <H2> 19px/400 Arcadia Text, line-height 28px (re-measured); How your IO limit works and Disbursement Agreement <H2> 19px/400. Link bank \"What type of account is Iron Bank Checking 1?\": SPAN 28px/380 Arcadia Display, line-height 36px."
+  },
+  {
+   "id": "accounts.i-heading-levels",
+   "title": "Modal heading levels are arbitrary",
+   "detail": "Modal titles are exposed as h1 (Autopay settings, Edit autopay accounts), h2 (Create account, Create a new auto transfer rule, Distribute funds across accounts, How your IO limit works) and h3 (Maintain a target account balance), so two sibling rule forms opened from the same picker sit at different levels. The share-statement sheet has no heading at all.",
+   "nodeIds": [
+    "accounts.edit-autopay",
+    "accounts.autopay-source-edit",
+    "accounts.create-account",
+    "accounts.rule-target-balance",
+    "accounts.rule-distribute",
+    "accounts.share-statement"
+   ],
+   "category": "a11y",
+   "severity": "low",
+   "evidence": "Snapshots 2026-09-24: heading \"Autopay settings\" [level=1], \"Edit autopay accounts\" [level=1], \"Create a new auto transfer rule\" [level=2], \"Distribute funds across accounts\" [level=2], \"Maintain a target account balance\" [level=3]; share dialog: querySelector(\"h1,h2,h3\") === null."
+  },
+  {
+   "id": "accounts.i-tabs-not-tabs",
+   "title": "Tabs and inline actions are clickable divs",
+   "detail": "Accounts (Mercury accounts / Linked accounts / Auto transfer rules), Treasury (Activity / Portfolio) and Financing tab bars are plain divs with click handlers: no tablist/tab roles, no aria-selected and no tabindex. The same pattern appears for the three \"Edit\" links in Autopay settings and the \"Last Month\" control on the credit card page (a <p>), so none of them can be reached by keyboard.",
+   "nodeIds": [
+    "accounts.index",
+    "accounts.treasury",
+    "accounts.financing",
+    "accounts.edit-autopay",
+    "accounts.credit-last-month",
+    "accounts.treasury-portfolio"
+   ],
+   "category": "a11y",
+   "severity": "medium",
+   "evidence": "On /accounts: [role=tab] 0, [role=tablist] 0; \"Mercury accounts\" <DIV> 14px/400 rgb(221,221,229), \"Linked accounts\" <DIV> 14px/400 rgb(157,157,168), padding 10px 0, height 40px. Treasury Portfolio: <div aria-disabled=\"false\" class=\"_dsTabViewTab_95hq1_9\">. Autopay \"Edit\" parents: DIV role=null tabindex=null (15px, rgb(141,164,245)). \"Last Month\": <P> in a DIV with no role or tabindex."
+  },
+  {
+   "id": "accounts.i-safe-form-labels",
+   "title": "Form controls with missing or internal accessible names",
+   "detail": "On Create a new SAFE the Pro-Rata Rights Letter switch is announced as \"proRataRightsLetter\" (a code key) and the valuation cap and discount inputs have no name. The share recipient listbox is named \"mercury-utils-id-78-label\", the venture debt amount field is named by its placeholder \"0.00\", and the linked-account kebab buttons have no name at all.",
+   "nodeIds": [
+    "accounts.safe-type-dropdown",
+    "accounts.safe-create",
+    "accounts.share-recipient-menu",
+    "accounts.vd-request-funds",
+    "accounts.linked-account-kebab"
+   ],
+   "category": "a11y",
+   "severity": "low",
+   "evidence": "Snapshots 2026-09-24: switch \"proRataRightsLetter\" [checked=false]; textbox [ref=e29] and textbox [disabled, ref=e30] with empty names; listbox \"mercury-utils-id-78-label\"; textbox \"0.00\" on /capital/venture-debt/draw-funds; linked account rows expose button [expanded=false] with no label."
+  },
+  {
+   "id": "accounts.i-validation-display",
+   "title": "Validation errors displayed inconsistently",
+   "detail": "In the target balance rule form, three fields show inline pink helper text but the amount field shows only a warning icon, with the message in a hover tooltip. On the SAFE form the SAFE type error appears twice, once with a filled triangle and once with an outlined triangle.",
+   "nodeIds": [
+    "accounts.rule-target-balance-error",
+    "accounts.safe-create-error"
+   ],
+   "category": "component",
+   "severity": "medium",
+   "evidence": "Re-measured 2026-09-24: inline \"Select an account\" <SPAN> 12px/400 Arcadia Text rgb(252,146,180); the amount field shows only an icon, with \"Enter a target balance\" in a tooltip. SAFE error icons: two paths d=\"M256 32c14.2…\" (filled) and one d=\"M248.4 84.3c1.6…\" (outline) after Next with an empty form."
+  },
+  {
+   "id": "accounts.i-error-copy",
+   "title": "Error messages use different voices and punctuation",
+   "detail": "Required-field errors read \"You must make a selection.\", \"Select an account\", \"Please choose an account\", \"Please complete this field\", \"Must be a dollar value.\", \"Please submit a valid email\" and \"Select a SAFE Type to continue\". Some end in periods, some say \"Please\". Limit errors are phrased two ways: \"Must be <= $12,505.87\" (raw operator) on credit payments and \"Request amount may not exceed $1,000,000.00.\" on venture debt.",
+   "nodeIds": [
+    "accounts.create-account-error",
+    "accounts.rule-target-balance-error",
+    "accounts.treasury-transfer-error",
+    "accounts.pay-credit-error",
+    "accounts.safe-create-error",
+    "accounts.safe-investor-error",
+    "accounts.limit-increase-error",
+    "accounts.vd-request-error"
+   ],
+   "category": "copy",
+   "severity": "medium",
+   "evidence": "DOM text of rgb(252,146,180) error nodes, 2026-09-24: target balance \"Select an account\"; SAFE \"Please complete this field\" ×2 plus \"Select a SAFE Type to continue\"; pay credit after Review with $50,020,000: \"Must be <= $12,505.87\"; limit increase \"Must be a dollar value.\"; VD \"Request amount may not exceed $1,000,000.00.\""
+  },
+  {
+   "id": "accounts.i-case-mixing",
+   "title": "Title Case and sentence case mixed for the same labels",
+   "detail": "The same labels change case between places: the Documents menu says \"Bank Letters\" / \"Wire Details\" but the Documents sub-nav says \"Bank letters\" / \"Wire details\"; Treasury shows \"Net yield\" in the summary card and \"Net Yield\" in the Portfolio tab; \"Ending Balance\" (Upcoming payments) vs \"Ending balance\" (schedule); \"Valuation cap\" (SAFE form) vs \"Valuation Cap\" (SAFE drawer); \"Post-money\" (dropdown) vs \"Post-Money\" (list and review); toast \"Account Linked\" vs \"Account nickname updated\"; \"Venture Debt Loan Repayment\" vs \"Working capital loan payment\". Other Title Case outliers: \"Link Credit account\", \"View Account\", \"Total Balance\", \"Learn More About SAFE Types\", \"Explore Options\". More outliers in the new flows: the credit page pill says \"Linked Accounts\" while the tab says \"Linked accounts\"; the limit increase modal uses \"Current Limit\", \"Requested Amount\" and \"Request Increase\"; Add funds has \"Wire Instructions\" and \"View More Details\"; the venture debt success page offers \"Make Another Request\" where Treasury says \"Make another transfer\"; status badges read \"Draw Request Pending\" next to \"Up to date\".",
+   "nodeIds": [
+    "accounts.documents-menu",
+    "accounts.statements",
+    "accounts.treasury",
+    "accounts.treasury-portfolio",
+    "accounts.financing",
+    "accounts.loan-schedule",
+    "accounts.safe-review",
+    "accounts.safe-sent",
+    "accounts.link-bank",
+    "accounts.nickname-saved",
+    "accounts.venture-debt",
+    "accounts.add-account-menu",
+    "accounts.credit-linked-accounts",
+    "accounts.limit-increase",
+    "accounts.add-funds",
+    "accounts.vd-funds-requested",
+    "accounts.vd-draw-pending"
+   ],
+   "category": "copy",
+   "severity": "medium",
+   "evidence": "Re-checked 2026-09-24: Treasury summary \"Net yield\" vs Portfolio tab \"Net Yield\"; Working Capital column \"Ending Balance\"; SAFE option \"Post-money\" vs list \"Post-Money\"; buttons \"Request Increase\" <BUTTON> and \"Make Another Request\" <A> 16px/360 rgb(141,164,245); label \"Requested Amount\" <LABEL> 13px; badge text \"Up to date\" <SPAN> 12px rgb(119,197,153)."
+  },
+  {
+   "id": "accounts.i-same-concept-names",
+   "title": "Same setting named differently",
+   "detail": "Auto transfer rules are \"auto transfer rule\" everywhere except the Edit autopay accounts modal (\"add an auto-transfer rule.\"). The fallback account is \"Backup autopay account (recommended)\" for the credit card but \"Back up autopay account\" for the working capital loan. The same checking account is \"Ops / Payroll\" in most places, \"Mercury Checking ••1038\" in Financing activity, and Treasury activity transfers name a \"Primary Checking\" account that does not exist in the account list. Rule types change names between the picker and the form: \"Distribute funds out\" opens \"Distribute funds across accounts\", \"Send recurring transfers\" opens \"Schedule recurring transfers\" and \"Maintain a target balance\" opens \"Maintain a target account balance\". The \"Manage shared documents\" link opens a dialog titled \"Remove shared document links\".",
+   "nodeIds": [
+    "accounts.autopay-source-edit",
+    "accounts.loan-autopay",
+    "accounts.financing",
+    "accounts.treasury",
+    "accounts.create-rule",
+    "accounts.rule-distribute",
+    "accounts.rule-recurring",
+    "accounts.manage-shared-docs"
+   ],
+   "category": "copy",
+   "severity": "low",
+   "evidence": "Strings re-checked 2026-09-24: link \"add an auto-transfer rule.\"; \"Backup autopay account (recommended)\"; Working Capital activity \"Mercury Checking ••1038\"; Treasury activity \"Transfer from Primary Checking\"; picker buttons \"Distribute funds out\", \"Send recurring transfers\", \"Maintain a target balance\" vs headings \"Distribute funds across accounts\", \"Maintain a target account balance\"; dialog \"Remove shared document links\"."
+  },
+  {
+   "id": "accounts.i-authorization-copy",
+   "title": "Authorization disclaimers are formatted differently in each flow",
+   "detail": "Consent lines quote the button three ways: 'Create rule,' (straight single quotes), “Transfer,” (curly double quotes) and Confirm Payment (no quotes, Title Case, while the button says \"Confirm payment\"). Credit autopay modals say \"By clicking Save, you\" and \"By clicking Save you\". The line sits above the buttons in rule review and payment review, and below them in the autopay modals and Review transfer.",
+   "nodeIds": [
+    "accounts.rule-review",
+    "accounts.pay-credit-review",
+    "accounts.treasury-transfer-review",
+    "accounts.autopay-rule-saving",
+    "accounts.autopay-threshold-saving"
+   ],
+   "category": "copy",
+   "severity": "low",
+   "evidence": "Strings 2026-09-24: \"By clicking 'Create rule,' I authorize…\"; \"By clicking “Transfer,” I authorize…\"; \"By clicking Confirm Payment, I authorize Mercury…\" (button reads \"Confirm payment\"); recurring autopay \"By clicking Save, you authorize…\" vs threshold \"By clicking Save you authorize…\"."
+  },
+  {
+   "id": "accounts.i-destructive-confirm",
+   "title": "Destructive actions confirmed inconsistently",
+   "detail": "Remove rule deletes an auto transfer rule immediately and only shows a toast, while Unlink account asks \"Do you want to unlink this account?\" with a destructive \"Yes, unlink\" button. Saving loan autopay closes the modal without any toast, while other saves (rule created, nickname updated, portfolio updated) do show one.",
+   "nodeIds": [
+    "accounts.rule-kebab-menu",
+    "accounts.rule-removed",
+    "accounts.unlink-confirm",
+    "accounts.loan-autopay-saved"
+   ],
+   "category": "interaction",
+   "severity": "high",
+   "evidence": "Remove rule → toast \"Auto transfer rule removed\" with no intermediate dialog. Unlink dialog \"Yes, unlink\": color rgb(252,146,180), bg rgba(252,146,180,0.2). Loan autopay Confirm → no [role=status]/toast text in DOM afterwards."
+  },
+  {
+   "id": "accounts.i-autopay-rule-mismatch",
+   "title": "Credit autopay is a rule in one tab and missing from the other",
+   "detail": "The Mercury accounts list shows \"Autopay from Ops / Payroll, Every 22nd of the month or if <80% of limit left\" in the Auto transfer rules column, but the Auto transfer rules tab shows the empty state \"Create rules that move money between your bank accounts.\" with template cards.",
+   "nodeIds": [
+    "accounts.index",
+    "accounts.auto-transfer-rules"
+   ],
+   "category": "data-format",
+   "severity": "medium",
+   "evidence": "2026-09-24: /accounts row text \"Autopay from Ops / Payroll\\nEvery 22nd of the month or if <80% of limit left\"; /accounts#auto-transfers shows \"Create rules that move money between your bank accounts.\" and no \"You have N auto transfer rule\" text."
+  },
+  {
+   "id": "accounts.i-account-masking",
+   "title": "Account numbers masked with different dot counts, or not at all",
+   "detail": "Masked numbers show six dots on checking (\"••••••1038\"), five on savings (\"•••••7658\") and two in lists (\"Checking ••1038\"). The Review transfer screen shows the Treasury account number in full (\"Treasury 3713286\"). Routing numbers for two accounts at the same bank also differ (132456789 vs 123456789).",
+   "nodeIds": [
+    "accounts.checking-detail",
+    "accounts.savings-detail",
+    "accounts.treasury-transfer-review"
+   ],
+   "category": "data-format",
+   "severity": "medium",
+   "evidence": "2026-09-24: checking \"••••••1038\" <DIV> 15px/400, routing \"132456789\"; savings \"•••••7658\" <DIV> 15px/400, routing \"123456789\", both Column N.A.; review text \"Treasury 3713286\"."
+  },
+  {
+   "id": "accounts.i-treasury-docs-filter",
+   "title": "Treasury Documents ignores its account filter",
+   "detail": "Documents on checking opens Statements filtered to that account (Accounts: \"Ops / Payroll\"). Documents on Treasury links to ?accountIds=party-treasury-id-0, but the page shows \"8 selected\" and lists every account, including Credit, AP, AR and Sweep summary.",
+   "nodeIds": [
+    "accounts.treasury-statements",
+    "accounts.statements"
+   ],
+   "category": "interaction",
+   "severity": "medium",
+   "evidence": "2026-09-24: Treasury Documents <A href=\"/settings/documents/statements?accountIds=party-treasury-id-0\"> → Accounts combobox shows \"8 selected\", rows Credit, Treasury, Ops / Payroll, AP, AR, Sweep summary; checking link ?accountIds=mercurybankid2 → combobox \"Ops / Payroll\"."
+  },
+  {
+   "id": "accounts.i-documents-control",
+   "title": "\"Documents\" is a dropdown on one account page and a link on another",
+   "detail": "On checking and savings detail, Documents is a chevron dropdown (Statements / Bank Letters / Wire Details). On Treasury it is a link that navigates straight to Statements, rendered at a larger 16px with the icon on the other side.",
+   "nodeIds": [
+    "accounts.documents-menu",
+    "accounts.treasury"
+   ],
+   "category": "component",
+   "severity": "low",
+   "evidence": "2026-09-24: checking Documents <BUTTON> 13.33px/360, padding 4px 12px 4px 16px, height 32px, opens menu; Treasury Documents <A> 16px/360, padding 4px 16px 4px 12px, height 32px."
+  },
+  {
+   "id": "accounts.i-plus-icon-position",
+   "title": "Plus icon placed after the label on Create new SAFE",
+   "detail": "\"Create new SAFE +\" puts the plus icon after the label, while every other create/add action in the area puts it before (\"+ Create rule\", \"+ Deposit\", \"+ Order Checkbook\", \"+ Create account\").",
+   "nodeIds": [
+    "accounts.safes",
+    "accounts.auto-transfer-rules",
+    "accounts.checking-detail"
+   ],
+   "category": "iconography",
+   "severity": "low",
+   "evidence": "2026-09-24: Create new SAFE <a class=\"_button_r6b2u_20 _small_r6b2u_72 _primary_r6b2u_104\"> children DIV, svg (icon last), padding 4px 12px 4px 16px; Deposit children svg, path, DIV (icon first); Create rule padding 4px 16px 4px 12px."
+  },
+  {
+   "id": "accounts.i-safe-sent-state",
+   "title": "Sending a SAFE opens the wrong record",
+   "detail": "After Send SAFE, the toast reads \"SAFE sent to Arthur Rock\", but the list still shows 3 SAFEs with unchanged totals, and the detail drawer that opens shows Logan Roy's $1,000 SAFE. Company details also label the company \"Acme Inc.\" with state \"CA\", while other flows authorize for \"Mercury Demo, Incorporated\".",
+   "nodeIds": [
+    "accounts.safe-sent",
+    "accounts.safe-company-details",
+    "accounts.treasury-transfer-review"
+   ],
+   "category": "interaction",
+   "severity": "medium",
+   "evidence": "URL /capital/safe?safeRequest=1; summary still \"SAFEs 3\", \"Total $10,011,000\"; drawer header \"Logan Roy logan@roy.co\"; company details text \"Company legal name Acme Inc.\" / \"State of incorporation CA\"."
+  },
+  {
+   "id": "accounts.i-shared-link-toast",
+   "title": "Removing a shared link says \"Removed 1 statements\"",
+   "detail": "Removing access for one recipient link that covered 4 documents shows the toast \"Removed 1 statements\": wrong plural, and it counts links as statements. The button that triggers it says \"Remove access to 1 document link\".",
+   "nodeIds": [
+    "accounts.shared-link-selected",
+    "accounts.shared-link-removed"
+   ],
+   "category": "copy",
+   "severity": "medium",
+   "evidence": "2026-09-24: row \"rotem@gmail.com 4 documents shared\" ticked; button \"Remove access to 1 document link\" (bg rgba(252,146,180,0.2), color rgb(252,146,180)); toast text \"Removed 1 statements\"."
+  },
+  {
+   "id": "accounts.i-io-wordmark",
+   "title": "\"IO\" missing from the limit explainer title",
+   "detail": "The How limits work dialog title is built as \"How your <span style=font-family: IO>IO</span> limit works\". The IO span renders as an empty gap in both 2x captures, so the title reads \"How your   limit works\". Everywhere else (\"Mercury IO\", \"IO Credit Limit works\") IO is plain Arcadia text.",
+   "nodeIds": [
+    "accounts.credit-how-limits",
+    "accounts.limit-increase"
+   ],
+   "category": "typography",
+   "severity": "medium",
+   "evidence": "2026-09-24: H2 19px/400 innerHTML \"How your <span style=\\\"font-family: IO; font-weight: 500;\\\">IO</span> limit works\"; FontFace \"IO\" status loaded, span 24.1×19px, color rgb(244,245,249), no visible glyphs in 92-credit-how-limits.png."
+  },
+  {
+   "id": "accounts.i-last-month-toggle",
+   "title": "Credit activity period control mislabels what it shows",
+   "detail": "On load the credit card activity table lists rows dated Sep 30 although today is Sep 24. Clicking \"Last Month\" switches the rows to Aug 30, but the heading still says \"This month\" (with this month's $157.5K cashback / $10.5M spent summary) and the control still reads \"Last Month\", so nothing tells you which month you are looking at.",
+   "nodeIds": [
+    "accounts.credit",
+    "accounts.credit-last-month"
+   ],
+   "category": "data-format",
+   "severity": "medium",
+   "evidence": "2026-09-24 page text before click: date cells \"Sep 30\"; after click: \"Aug 30\" ×10, \"Sep 30\" ×0, heading \"This month\" present, control text \"Last Month\" unchanged, no \"This Month\" label."
+  },
+  {
+   "id": "accounts.i-dismiss-emphasis",
+   "title": "Acknowledge buttons switch between primary and secondary",
+   "detail": "Info dialogs that only need acknowledging use a primary blue button (\"Got it\" in How limits work, \"Done\" after a limit request, \"Close\" in Projected payments) but a grey tonal one in the Treasury net return dialog (\"Done\").",
+   "nodeIds": [
+    "accounts.treasury-net-return",
+    "accounts.credit-how-limits",
+    "accounts.limit-increase-sent",
+    "accounts.vd-projected-payments"
+   ],
+   "category": "component",
+   "severity": "low",
+   "evidence": "2026-09-24: \"Got it\" <BUTTON> bg rgb(82,102,235) color rgb(255,255,255) h 40px; net return \"Done\" <BUTTON> bg rgba(180,183,200,0.12) color rgb(221,221,229) h 40px, both padding 8px 32px, 13.33px/360."
+  },
+  {
+   "id": "accounts.i-button-sizes",
+   "title": "Buttons in the same role come in three sizes",
+   "detail": "Dialog actions are 40px tall with 8px 32px padding in Create account, limit increase and Disbursement agreement, but 32px with 4px 16px padding in Remove shared document links. On the venture debt success page the primary \"View loan details\" uses a 16px label, while primary buttons elsewhere use 13.33px.",
+   "nodeIds": [
+    "accounts.create-account",
+    "accounts.limit-increase",
+    "accounts.vd-disbursement-agreement",
+    "accounts.shared-link-selected",
+    "accounts.vd-funds-requested"
+   ],
+   "category": "component",
+   "severity": "medium",
+   "evidence": "2026-09-24: Create account \"Create account\" <BUTTON> 13.33px/360, padding 8px 32px, height 40px; \"Agree\" same; shared links \"Cancel\" / \"Remove access to 1 document link\" <BUTTON> 13.33px/360, padding 4px 16px, height 32px; \"View loan details\" <A> 16px/360, padding 8px 32px, height 40px."
+  },
+  {
+   "id": "accounts.i-rule-cards-hidden-period",
+   "title": "Auto transfer rule cards announce a stray period",
+   "detail": "The four rule template cards on Accounts > Auto transfer rules each contain an invisible '.' element after the label, so the button's accessible name is 'Distribute funds across accounts .' (space, then period). Screen readers read the stray period; sighted users see nothing. The period sits in a <div> inside a <p>, which is also invalid HTML.",
+   "nodeIds": [
+    "accounts.auto-transfer-rules"
+   ],
+   "category": "a11y",
+   "severity": "low",
+   "evidence": "DOM (2026-09-25) on /accounts#auto-transfers: <button>…<p>Distribute funds<br> across accounts</p><p><div>.</div></p>…</button>; the <div> has opacity 0, width 0px, no aria-hidden. Accessibility tree: button \"Distribute funds across accounts .\", button \"Maintain a target account balance .\" (same for 'Schedule recurring transfers .' and 'Redirect incoming funds .')."
+  }
+ ],
+ "blocked": []
+}
