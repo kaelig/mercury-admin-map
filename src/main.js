@@ -250,6 +250,8 @@ function applyFocus() {
   if (focus) {
     b.hidden = false;
     $("#banner-t").textContent = focus.type === "journey" ? `Journey: ${j?.name}` : focus.type === "issue" ? `Issue: ${issueById.get(focus.id)?.title}` : focus.type === "pattern" ? `Pattern: ${patternById.get(focus.id)?.title} · ${ids.size} screens` : `${ids.size} screens match “${query}”`;
+    const tl = $("#banner-a"), iss = focus.type === "issue" && issueById.get(focus.id);
+    tl.hidden = !iss; if (iss) tl.href = ticketHref(iss.id);
   } else b.hidden = true;
   renderList();
   invalidate();
@@ -313,8 +315,10 @@ function openNode(id, frameIt, lane, highlightIssue) {
   syncUrl();
 }
 function linkHTML(id, label) { const n = nodes.get(id); if (!n) return ""; return `<button data-node="${esc(id)}"><span>${esc(n.title)}</span><small>${esc(label || "")} · ${esc(areaOf.get(id).title)}</small></button>`; }
+const ticketHref = (id) => "agent/tickets/" + encodeURIComponent(id) + ".md";
+const ticketLink = (id, cls) => `<a class="${cls}" href="${esc(ticketHref(id))}" target="_blank" rel="noopener" title="Open the Markdown ticket for coding agents (new tab)">Agent instructions${EXT_ICON}<span class="sr">(opens in a new tab)</span></a>`;
 function issueHTML(i, hi) {
-  return `<div class="issue" ${hi ? 'style="border-color:var(--accent)"' : ""}><div class="meta"><span class="sev ${esc(i.severity)}">${esc(i.severity)}</span><span>${esc(i.category)}</span>${i.nodeIds.length > 1 ? `<button class="chip" data-issue="${esc(i.id)}">Show all ${i.nodeIds.length} screens</button>` : ""}</div><b>${esc(i.title)}</b><p>${esc(i.detail)}</p>${i.evidence ? `<code>${esc(i.evidence)}</code>` : ""}</div>`;
+  return `<div class="issue" ${hi ? 'style="border-color:var(--accent)"' : ""}><div class="meta"><span class="sev ${esc(i.severity)}">${esc(i.severity)}</span><span>${esc(i.category)}</span>${i.nodeIds.length > 1 ? `<button class="chip" data-issue="${esc(i.id)}">Show all ${i.nodeIds.length} screens</button>` : ""}${ticketLink(i.id, "ticket")}</div><b>${esc(i.title)}</b><p>${esc(i.detail)}</p>${i.evidence ? `<code>${esc(i.evidence)}</code>` : ""}</div>`;
 }
 function stepJourney(dir) {
   const j = drawerLane && journeyById.get(drawerLane); if (!j) return;
