@@ -36,4 +36,6 @@ export const zoomTool = {
   // Pointer events carry the live Alt state, which catches an Option press made while the page was unfocused.
   syncAlt(altKey) { if (state.on && altKey !== state.out) set(true, altKey); },
   subscribe(f) { subs.add(f); f(state); },
+  // Show the zoom-in or zoom-out cursor on `el` while the tool is active (styled in app.css).
+  bindCursor(el) { this.subscribe(({ on, out }) => { el.classList.toggle("zoom-in", on && !out); el.classList.toggle("zoom-out", out); }); },
 };

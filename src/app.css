@@ -109,7 +109,7 @@ canvas.mini { width: 220px; height: 150px; background: var(--panel); border: 1px
 .banner-a { color: inherit; text-decoration: underline; text-underline-offset: 2px; white-space: nowrap; flex: none; }
 .banner-a:hover { text-decoration-thickness: 2px; }
 .banner-a:focus-visible { outline: 2px solid var(--inverted-ink); outline-offset: 2px; border-radius: 2px; }
-.banner-a svg, .issue .ticket svg { display: inline-block; margin-left: 3px; vertical-align: -1px; }
+.banner-slot { display: contents; }
 .banner button { flex: none; border: 0; background: var(--inverted-ink); color: var(--inverted); border-radius: 999px; padding: 4px 10px; cursor: pointer; font-weight: 500; }
 
 .drawer { position: absolute; top: 0; right: 0; bottom: 0; width: min(640px, 100%); background: var(--panel); border-left: 1px solid var(--line); z-index: 4; display: flex; flex-direction: column; box-shadow: -10px 0 30px rgba(0,0,0,.12); }
@@ -119,7 +119,7 @@ canvas.mini { width: 220px; height: 150px; background: var(--panel); border: 1px
 .drawer header .path { color: inherit; text-decoration: none; }
 .drawer header .path:hover { color: var(--text); text-decoration: underline; text-underline-offset: 2px; }
 .drawer header .path:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; border-radius: 2px; }
-.drawer header .path svg { display: inline-block; margin-left: 3px; vertical-align: -1px; }
+.drawer header .path svg, .banner-a svg, .issue .ticket svg { display: inline-block; margin-left: 3px; vertical-align: -1px; }
 .issue .ticket { margin-left: auto; color: inherit; text-decoration: none; white-space: nowrap; }
 .issue .ticket:hover { color: var(--text); text-decoration: underline; text-underline-offset: 2px; }
 .issue .ticket:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; border-radius: 2px; }

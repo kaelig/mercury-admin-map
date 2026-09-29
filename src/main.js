@@ -133,7 +133,7 @@ function hit(clientX, clientY) {
 
 let drag = null; const pointers = new Map();
 const Z_STEP = 2; // per Z-click, like the Figma and Photoshop zoom tools
-zoomTool.subscribe(({ on, out }) => { stage.classList.toggle("zoom-in", on && !out); stage.classList.toggle("zoom-out", out); });
+zoomTool.bindCursor(stage);
 canvas.addEventListener("pointerdown", (e) => {
   pointers.set(e.pointerId, { x: e.clientX, y: e.clientY });
   canvas.setPointerCapture(e.pointerId);
@@ -255,8 +255,8 @@ function applyFocus() {
   if (focus) {
     b.hidden = false;
     $("#banner-t").textContent = focus.type === "journey" ? `Journey: ${j?.name}` : focus.type === "issue" ? `Issue: ${issueById.get(focus.id)?.title}` : focus.type === "pattern" ? `Pattern: ${patternById.get(focus.id)?.title} · ${ids.size} screens` : `${ids.size} screens match “${query}”`;
-    const tl = $("#banner-a"), iss = focus.type === "issue" && issueById.get(focus.id);
-    tl.hidden = !iss; if (iss) tl.href = ticketHref(iss.id);
+    const iss = focus.type === "issue" && issueById.get(focus.id);
+    $("#banner-link").innerHTML = iss ? ticketLink(iss.id, "banner-a") : "";
   } else b.hidden = true;
   renderList();
   invalidate();
