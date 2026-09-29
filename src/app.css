@@ -93,6 +93,9 @@ button { font: inherit; color: inherit; }
 .stage { position: relative; overflow: hidden; background: var(--ground); }
 canvas.world { position: absolute; inset: 0; display: block; touch-action: none; cursor: grab; }
 .stage.panning canvas.world { cursor: grabbing; }
+/* Zoom tool (Z held): beats the inline pointer cursor set while hovering a card. */
+.stage.zoom-in:not(.panning) canvas.world { cursor: zoom-in !important; }
+.stage.zoom-out:not(.panning) canvas.world { cursor: zoom-out !important; }
 
 .hud { position: absolute; right: 16px; bottom: 16px; display: flex; gap: 10px; align-items: flex-end; z-index: 2; }
 .tools { display: grid; gap: 4px; background: var(--panel); border: 1px solid var(--line); border-radius: 10px; padding: 4px; box-shadow: var(--shadow); }
@@ -143,6 +146,8 @@ canvas.mini { width: 220px; height: 150px; background: var(--panel); border: 1px
 .lightbox .lb-stage { position: absolute; inset: 0; touch-action: none; cursor: zoom-out; }
 .lightbox .lb-stage img { position: absolute; left: 0; top: 0; max-width: none; transform-origin: 0 0; box-shadow: var(--shadow); cursor: zoom-in; user-select: none; -webkit-user-drag: none; }
 .lightbox .lb-stage.pannable img { cursor: zoom-out; }
+.lightbox .lb-stage.zoom-in:not(.dragging), .lightbox .lb-stage.zoom-in:not(.dragging) img { cursor: zoom-in; }
+.lightbox .lb-stage.zoom-out:not(.dragging), .lightbox .lb-stage.zoom-out:not(.dragging) img { cursor: zoom-out; }
 .lightbox .lb-stage.dragging, .lightbox .lb-stage.dragging img { cursor: grabbing; }
 .lightbox .lb-stage img.anim { transition: transform .24s cubic-bezier(.2,.7,.2,1); }
 @media (max-width: 720px) { .lightbox .lb-hint { display: none; } }

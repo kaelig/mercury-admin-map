@@ -2,6 +2,7 @@ import { CARD_W, CARD_H, LABEL_W, prepare } from "./layout.js";
 import { Renderer, buildScene, AREA_COLORS, FLAGS } from "./render.js";
 import { ImageStore } from "./images.js";
 import { createLightbox } from "./lightbox.js";
+import { zoomTool } from "./zoomtool.js";
 
 const $ = (s) => document.querySelector(s);
 const EXT_ICON = `<svg viewBox="0 0 16 16" width="11" height="11" aria-hidden="true"><path d="M6.5 3.5H3.5v9h9v-3M9.5 3.5h3v3M12.5 3.5 7 9" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" fill="none"/></svg>`;
@@ -131,6 +132,8 @@ function hit(clientX, clientY) {
 }
 
 let drag = null; const pointers = new Map();
+const Z_STEP = 2; // per Z-click, like the Figma and Photoshop zoom tools
+zoomTool.subscribe(({ on, out }) => { stage.classList.toggle("zoom-in", on && !out); stage.classList.toggle("zoom-out", out); });
 canvas.addEventListener("pointerdown", (e) => {
   pointers.set(e.pointerId, { x: e.clientX, y: e.clientY });
   canvas.setPointerCapture(e.pointerId);
@@ -138,6 +141,7 @@ canvas.addEventListener("pointerdown", (e) => {
   if (pointers.size === 2) { const [p, q] = [...pointers.values()]; drag.pinch = { d: Math.hypot(p.x - q.x, p.y - q.y), k: T.k }; }
 });
 canvas.addEventListener("pointermove", (e) => {
+  zoomTool.syncAlt(e.altKey);
   if (!drag) { // hover
     const c = e.pointerType === "mouse" ? hit(e.clientX, e.clientY) : null;
     if (c !== hover) { hover = c; canvas.style.cursor = c ? "pointer" : ""; invalidate(); }
@@ -158,8 +162,9 @@ const end = (e) => {
   if (!drag) return;
   stage.classList.remove("panning");
   if (!drag.moved && pointers.size === 0 && e.type === "pointerup") {
-    const c = hit(e.clientX, e.clientY);
-    if (c) openNode(c.id, false, c.lane);
+    // Z+click zooms in, Z+Option+click zooms out, centred on the click. It never opens the screen underneath.
+    if (zoomTool.on) zoomAt(zoomTool.out ? 1 / Z_STEP : Z_STEP, e.clientX - SR.left, e.clientY - SR.top);
+    else { const c = hit(e.clientX, e.clientY); if (c) openNode(c.id, false, c.lane); }
   }
   if (pointers.size === 0) drag = null;
 };
