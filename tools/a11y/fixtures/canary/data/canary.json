@@ -1,0 +1,21 @@
+{
+ "area": "canary",
+ "blocked": [],
+ "edges": [],
+ "issues": [
+  {
+   "category": "a11y",
+   "detail": "The Checking, Treasury and Credit tabs are divs with click handlers and no tabindex or tab role, so Tab never reaches them.",
+   "evidence": "Accounts: 3 <div class=\"_tab_cnry3_6\" onclick> tabs, no tabindex, no role=tab, 0 [role=tablist].",
+   "id": "canary.i-tabs-clickable-divs",
+   "nodeIds": [
+    "canary.tabs"
+   ],
+   "severity": "medium",
+   "title": "Tabs and inline actions are clickable divs"
+  }
+ ],
+ "journeys": [],
+ "nodes": [],
+ "title": "Canary"
+}

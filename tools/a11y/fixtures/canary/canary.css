@@ -1,0 +1,24 @@
+/* Canary fixture (KTD20): seeded true failures plus traps shaped like AE3 and AE7. Class names follow
+   the demo's CSS-Module shape, _<local>_<hash>_<line>, so signature.py normalizes them the same way. */
+* { box-sizing: border-box; }
+body { margin: 0; font: 14px/1.5 system-ui, sans-serif; color: #1f2937; background: #ffffff; }
+main { padding: 32px 48px; }
+h1 { font-size: 24px; margin: 0 0 24px; }
+table { border-collapse: collapse; width: 720px; }
+th, td { text-align: left; padding: 10px 12px; border-bottom: 1px solid #e5e7eb; }
+._muted_cnry1_8 { color: #868692; font-size: 13px; }
+._rowMenu_cnry1_12 { width: 32px; height: 32px; border: 0; background: none; border-radius: 6px; cursor: pointer; }
+._exportControl_cnry2_3 { display: inline-flex; align-items: center; gap: 6px; padding: 4px 12px 4px 4px;
+  border: 1px solid #d1d5db; border-radius: 8px; cursor: pointer; }
+._iconButton_cnry2_9 { width: 28px; height: 28px; border: 0; background: none; cursor: pointer; }
+._exportLabel_cnry2_14 { font-weight: 500; }
+._tabs_cnry3_2 { display: flex; gap: 24px; border-bottom: 1px solid #e5e7eb; margin-bottom: 16px; }
+._tab_cnry3_6 { padding: 8px 0; cursor: pointer; color: #374151; }
+._tab_cnry3_6[data-active="true"] { color: #1f2937; border-bottom: 2px solid #1f2937; font-weight: 600; }
+._panel_cnry3_11[hidden] { display: none; }
+._hero_cnry4_2 { padding: 48px; border-radius: 12px; color: #ffffff;
+  background-image: linear-gradient(135deg, #0b1f4d 0%, #1d3f8f 100%); width: 720px; }
+._heroTitle_cnry4_7 { font-size: 28px; margin: 0 0 8px; }
+._toolbar_cnry5_2 { display: flex; gap: 2px; padding: 4px; border: 1px solid #d1d5db; border-radius: 6px; width: max-content; }
+._toolButton_cnry5_5 { width: 16px; height: 16px; padding: 0; border: 0; background: none; cursor: pointer; }
+._toolButton_cnry5_5 svg, ._iconButton_cnry2_9 svg, ._rowMenu_cnry1_12 svg { width: 14px; height: 14px; }

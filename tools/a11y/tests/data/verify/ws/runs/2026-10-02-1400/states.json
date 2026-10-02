@@ -1,0 +1,157 @@
+{
+ "map": {
+  "nodes": 8,
+  "sha": "fixture"
+ },
+ "roots": [
+  "accounts.index",
+  "cards.index",
+  "home.index",
+  "settings.tokens"
+ ],
+ "run": "2026-10-02-1400",
+ "states": {
+  "accounts.index": {
+   "area": "accounts",
+   "kind": "page",
+   "labels": [],
+   "mutates": false,
+   "needsRecipe": false,
+   "parent": null,
+   "path": [
+    "accounts.index"
+   ],
+   "root": true,
+   "rootUrl": "/accounts",
+   "source": "0000000000000000000000000000000000000000",
+   "unreachable": null,
+   "url": "/accounts"
+  },
+  "accounts.treasury": {
+   "area": "accounts",
+   "kind": "page",
+   "labels": [
+    "Click"
+   ],
+   "mutates": false,
+   "needsRecipe": true,
+   "parent": "accounts.index",
+   "path": [
+    "accounts.index",
+    "accounts.treasury"
+   ],
+   "root": false,
+   "rootUrl": null,
+   "source": "0000000000000000000000000000000000000000",
+   "unreachable": null,
+   "url": "/accounts/treasury"
+  },
+  "cards.detail": {
+   "area": "cards",
+   "kind": "page",
+   "labels": [
+    "Click"
+   ],
+   "mutates": false,
+   "needsRecipe": true,
+   "parent": "cards.index",
+   "path": [
+    "cards.index",
+    "cards.detail"
+   ],
+   "root": false,
+   "rootUrl": null,
+   "source": "0000000000000000000000000000000000000000",
+   "unreachable": null,
+   "url": "/cards/<id>"
+  },
+  "cards.edit-limit-modal": {
+   "area": "cards",
+   "kind": "modal",
+   "labels": [
+    "Click",
+    "Click"
+   ],
+   "mutates": false,
+   "needsRecipe": true,
+   "parent": "cards.detail",
+   "path": [
+    "cards.index",
+    "cards.detail",
+    "cards.edit-limit-modal"
+   ],
+   "root": false,
+   "rootUrl": null,
+   "source": "0000000000000000000000000000000000000000",
+   "unreachable": null,
+   "url": "/cards/<id>"
+  },
+  "cards.index": {
+   "area": "cards",
+   "kind": "page",
+   "labels": [],
+   "mutates": false,
+   "needsRecipe": false,
+   "parent": null,
+   "path": [
+    "cards.index"
+   ],
+   "root": true,
+   "rootUrl": "/cards",
+   "source": "0000000000000000000000000000000000000000",
+   "unreachable": null,
+   "url": "/cards"
+  },
+  "home.index": {
+   "area": "home",
+   "kind": "page",
+   "labels": [],
+   "mutates": false,
+   "needsRecipe": false,
+   "parent": null,
+   "path": [
+    "home.index"
+   ],
+   "root": true,
+   "rootUrl": "/dashboard",
+   "source": "0000000000000000000000000000000000000000",
+   "unreachable": null,
+   "url": "/dashboard"
+  },
+  "settings.token-menu": {
+   "area": "settings",
+   "kind": "menu",
+   "labels": [
+    "Click"
+   ],
+   "mutates": false,
+   "needsRecipe": true,
+   "parent": "settings.tokens",
+   "path": [
+    "settings.tokens",
+    "settings.token-menu"
+   ],
+   "root": false,
+   "rootUrl": null,
+   "source": "0000000000000000000000000000000000000000",
+   "unreachable": null,
+   "url": "/settings/tokens"
+  },
+  "settings.tokens": {
+   "area": "settings",
+   "kind": "page",
+   "labels": [],
+   "mutates": false,
+   "needsRecipe": false,
+   "parent": null,
+   "path": [
+    "settings.tokens"
+   ],
+   "root": true,
+   "rootUrl": "/settings/tokens",
+   "source": "0000000000000000000000000000000000000000",
+   "unreachable": null,
+   "url": "/settings/tokens"
+  }
+ }
+}

@@ -427,7 +427,11 @@ the state was already unreachable there.
  "reason": "…", "batch": "records-003", "model": "sonnet", "prompt": "record-judge@1"}
 ```
 
-A `flag` with a criterion feeds `group`. A `flag` without one goes to the advisory list.
+A `flag` with a criterion feeds `group`. A `flag` without one goes to the advisory list. A flag
+always carries the `criterion` key (null means advisory). `records prepare` is a second appender of
+`judgments.jsonl`, through the same validator: for a published record signature not yet judged it
+carries the published flag forward (`batch: "published"`, `model: "script"`, `prompt: "carried"`),
+so a published announced-as finding skips the judge (KTD18).
 
 ## runs/<id>/findings.json (U6 `group`)
 
@@ -478,7 +482,22 @@ A `flag` with a criterion feeds `group`. A `flag` without one goes to the adviso
 
 `verify prepare` and `records prepare` write `runs/<id>/batches/<name>.json` (input) and agents
 write `runs/<id>/batches/<name>.out.jsonl` (one verdict, judgment or decision per line). The `add`
-primitives read an `.out.jsonl`, print the rejected lines with reasons as JSON, and append the rest.
+primitives read an `.out.jsonl`, print `{file, to, appended, skipped, rejected: [{line, reasons,
+text}]}`, append the valid lines and exit 1 if any line was rejected. A verify out file may mix
+verdict and decision lines; each `add` skips the other kind. A batch counts as returned once its
+`.out.jsonl` exists (write an empty one for an agent that died); a finding's attempts are the
+returned batches that held it without a valid verdict, and at two `verify prepare` writes an
+`unverified` line (`model: "script"`, `prompt: "verify-prepare"`).
+
+- `records-NNN.json`: `{batch, run, records: [{sig, template, role, states, description, sample,
+  screens, occurrence}]}`, about 150 records each.
+- `verify-NNN.json`: `{batch, run, area, primaries, reach: {workspace, data, map, baseUrl, run},
+  findings: [{key, issueId, source, family, rule, criteria, basis, severityDefault, measured, title,
+  summary, facts, guidance, states, primary, screens, evidenceHash, evidence: [{state, occurrence,
+  evidence}], proposals, attachments, attempt}]}`, at most 10 findings sharing an area and a primary
+  state. `attachments` are registry attachments a verifier may release; their id is
+  `sha([finding, handFound])`.
+- `canary-001.json` has the verify format and lives in the canary's own temp workspace.
 
 ## runs/<id>/verdicts.jsonl (U7 `verdict add`, KTD19)
 
@@ -492,8 +511,21 @@ primitives read an `.out.jsonl`, print the rejected lines with reasons as JSON, 
             "colorScheme": "light", "reducedMotion": "reduce"}, "value": {"...": "..."}}],
  "states": ["<sampled states checked>"], "build": "<hash>",
  "model": "sonnet", "batch": "verify-004", "prompt": "verifier@1", "attempt": 1,
- "second": false, "date": "YYYY-MM-DD"}
+ "second": false, "date": "YYYY-MM-DD", "criterionAnalysis": null | "…"}
 ```
+
+- `severityBefore` equals the finding's `severityDefault`; `confirm` and `not-reached` keep it.
+- `criterionAnalysis` is required for `not-aa-failure`. `counterEvidence` is also the evidence
+  reference on hand-found confirm and rerate lines (which need it or a probe).
+- Every probe carries the sweep environment. Probe `value` by kind, and when it passes:
+
+  | kind | value | passes when |
+  |---|---|---|
+  | `contrast` | `ratio`, optional `required` | ratio ≥ the finding's `facts.required`, else `value.required`, else 4.5 |
+  | `target` | `width`, `height` (or `rect`), `offset` | both sides ≥ 24, or offset ≥ 24 |
+  | `focus` | `visible` (focus-visible) or `trapped` (keyboard-trap) | `visible: true` / `trapped: false` |
+  | `ax` | `role`, `name`, `states`, `description` | not a measured kind; cited as evidence |
+
 
 Drop reason codes: `exception:inline`, `exception:equivalent-control`, `exception:essential`,
 `exception:ua-control`, `decorative`, `not-reproduced-live`, `third-party-frame`,
@@ -509,12 +541,21 @@ Drop reason codes: `exception:inline`, `exception:equivalent-control`, `exceptio
 
 ## runs/<id>/canary.json (U7 `canary`)
 
+The canary definition lives in `tools/a11y/fixtures/canary/` (pages, `map.json`, `data/`, `raw/`,
+`findings.json`, `expected.json` as `{key: {expected, why}}`). `got` is null when no valid line
+exists; `pass` also requires zero rejected lines; `prompt` joins the distinct prompts.
+
 ```json
 {"prompt": "verifier@1", "batch": "canary-001", "expected": 6, "correct": 6, "pass": true,
  "items": [{"key": "…", "expected": "rerate:low", "got": "rerate:low", "ok": true}]}
 ```
 
 ## runs/<id>/lighthouse.json (U7 `calibration add`, KTD25)
+
+Input to `calibration add --file`: `{date?, chrome, lighthouseAxe, states: [{state, kind: "root" |
+"overlay", lighthouseFailed: [rule]}], explanations: {rule: "rule-selection" | "version"}}`. An
+overlay's `sweepRules` are its own results; a rule Lighthouse fails that the sweep found only on the
+parent page is a difference explained by `scope`.
 
 ```json
 {"date": "YYYY-MM-DD", "chrome": "…", "lighthouseAxe": "4.13.0", "sweepAxe": "4.13.0",

@@ -1,0 +1,31 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Accounts</title>
+<link rel="stylesheet" href="canary.css">
+</head>
+<body>
+<main>
+<h1>Accounts</h1>
+<!-- AE7 trap: the hand-found issue rates these clickable-div tabs medium, but Tab never reaches them
+     and keyboard users cannot open the Treasury or Credit panels at all. Expected verdict: re-rate
+     to high. -->
+<div class="_tabs_cnry3_2">
+<div class="_tab_cnry3_6" data-active="true" onclick="show('checking', this)">Checking</div>
+<div class="_tab_cnry3_6" onclick="show('treasury', this)">Treasury</div>
+<div class="_tab_cnry3_6" onclick="show('credit', this)">Credit</div>
+</div>
+<section class="_panel_cnry3_11" id="checking"><p>Operating account ••4321: $12,450.00</p></section>
+<section class="_panel_cnry3_11" id="treasury" hidden><p>Treasury yield 4.1%. <a href="#transfer">Move funds to Treasury</a></p></section>
+<section class="_panel_cnry3_11" id="credit" hidden><p>Credit limit $50,000.00</p></section>
+</main>
+<script>
+function show(id, tab) {
+  for (const p of document.querySelectorAll('section')) p.hidden = p.id !== id;
+  for (const t of document.querySelectorAll('[data-active]')) t.removeAttribute('data-active');
+  for (const t of document.querySelectorAll('._tab_cnry3_6')) if (t === tab) t.dataset.active = 'true';
+}
+</script>
+</body>
+</html>
