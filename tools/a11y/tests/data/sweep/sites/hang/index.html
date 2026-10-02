@@ -1,0 +1,14 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><title>Busy</title>
+<style> body { font: 16px/1.4 sans-serif; margin: 24px; color: #111; background: #fff; } </style></head>
+<body>
+<main>
+  <h1>Busy</h1>
+  <button>Refresh</button>
+</main>
+<script>
+  // Shortly after load the renderer spins for good: every later evaluate and accessibility-tree
+  // request hangs, like a wedged headless browser.
+  addEventListener('load', () => setTimeout(() => { for (;;) { /* spin */ } }, 200));
+</script>
+</body></html>

@@ -253,7 +253,8 @@ export async function runStep(page, ctx, step, policy) {
     await act(page, action, step[action], policy, ctx.baseUrl);
   } catch (e) {
     if (page.isClosed()) throw e;
-    return { ok: false, message: e.refused ? e.message : `${action} ${describeLocator(step[action]?.locator || step[action])}: ${e.message.split('\n')[0]}` };
+    const what = typeof step[action] === 'string' ? step[action] : describeLocator(step[action]?.locator || step[action]);
+    return { ok: false, message: e.refused ? e.message : `${action} ${what}: ${e.message.split('\n')[0]}` };
   }
   await settle(page, ctx.cdp, { tracker: ctx.tracker });
   const off = offOrigin(page, policy, ctx.baseUrl);

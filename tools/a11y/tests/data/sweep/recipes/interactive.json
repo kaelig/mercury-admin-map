@@ -1,0 +1,919 @@
+{
+ "interactive.composite": {
+  "fingerprint": {
+   "controls": [
+    "Activity",
+    "Bold",
+    "Done",
+    "Italic",
+    "Overview",
+    "Statements",
+    "Underline"
+   ],
+   "headings": [
+    "Account"
+   ],
+   "path": "/interactive/composite.html",
+   "structure": "document",
+   "top": {
+    "name": "",
+    "role": "document"
+   }
+  },
+  "hop": [],
+  "mutates": false,
+  "parent": "/interactive/composite.html",
+  "recordedBy": "root",
+  "review": null,
+  "similarity": null,
+  "source": "97d170e1550eee4afc0af065b78cda302a97674c",
+  "status": "accepted"
+ },
+ "interactive.dialog-address": {
+  "fingerprint": {
+   "controls": [
+    "Cancel",
+    "City",
+    "Save",
+    "Street"
+   ],
+   "headings": [
+    "Delivery address"
+   ],
+   "path": "/interactive/dialogs.html",
+   "structure": "dialog",
+   "top": {
+    "name": "Delivery address",
+    "role": "dialog"
+   }
+  },
+  "hop": [
+   {
+    "click": {
+     "name": "Add delivery address",
+     "role": "button"
+    }
+   }
+  ],
+  "mutates": false,
+  "parent": "interactive.dialogs",
+  "recordedBy": "hand",
+  "review": null,
+  "similarity": null,
+  "source": "dc47319860e71d64178315d8f466f7403d6f5027",
+  "status": "accepted"
+ },
+ "interactive.dialog-nickname": {
+  "fingerprint": {
+   "controls": [
+    "Cancel",
+    "Nickname",
+    "Save"
+   ],
+   "headings": [
+    "Card nickname"
+   ],
+   "path": "/interactive/dialogs.html",
+   "structure": "dialog",
+   "top": {
+    "name": "Card nickname",
+    "role": "dialog"
+   }
+  },
+  "hop": [
+   {
+    "click": {
+     "name": "Edit nickname",
+     "role": "button"
+    }
+   }
+  ],
+  "mutates": false,
+  "parent": "interactive.dialogs",
+  "recordedBy": "hand",
+  "review": null,
+  "similarity": null,
+  "source": "a6e75f858d902334e8f3a46dedfc33f17d02eba9",
+  "status": "accepted"
+ },
+ "interactive.dialog-pin": {
+  "fingerprint": {
+   "controls": [
+    "Cancel",
+    "New PIN",
+    "Save"
+   ],
+   "headings": [
+    "Change PIN"
+   ],
+   "path": "/interactive/dialogs.html",
+   "structure": "dialog",
+   "top": {
+    "name": "Change PIN",
+    "role": "dialog"
+   }
+  },
+  "hop": [
+   {
+    "click": {
+     "name": "Change PIN",
+     "role": "button"
+    }
+   }
+  ],
+  "mutates": false,
+  "parent": "interactive.dialogs",
+  "recordedBy": "hand",
+  "review": null,
+  "similarity": null,
+  "source": "bdbe19ae10c2d6327739ad171a8f093fc84b9f85",
+  "status": "accepted"
+ },
+ "interactive.dialogs": {
+  "fingerprint": {
+   "controls": [
+    "Add delivery address",
+    "Change PIN",
+    "Edit nickname"
+   ],
+   "headings": [
+    "Delivery"
+   ],
+   "path": "/interactive/dialogs.html",
+   "structure": "document",
+   "top": {
+    "name": "",
+    "role": "document"
+   }
+  },
+  "hop": [],
+  "mutates": false,
+  "parent": "/interactive/dialogs.html",
+  "recordedBy": "root",
+  "review": null,
+  "similarity": null,
+  "source": "97d170e1550eee4afc0af065b78cda302a97674c",
+  "status": "accepted"
+ },
+ "interactive.drawer-address": {
+  "fingerprint": {
+   "controls": [],
+   "headings": [
+    "Billing address"
+   ],
+   "path": "/interactive/drawers.html",
+   "structure": "dialog",
+   "top": {
+    "name": "Billing address",
+    "role": "dialog"
+   }
+  },
+  "hop": [
+   {
+    "click": {
+     "name": "Edit address",
+     "role": "button"
+    }
+   }
+  ],
+  "mutates": false,
+  "parent": "interactive.drawers",
+  "recordedBy": "hand",
+  "review": null,
+  "similarity": null,
+  "source": "f89e81555bbed09154dbe83201fb92514ab08310",
+  "status": "accepted"
+ },
+ "interactive.drawer-limits": {
+  "fingerprint": {
+   "controls": [
+    "Daily limit",
+    "Save limits"
+   ],
+   "headings": [
+    "Card limits"
+   ],
+   "path": "/interactive/drawers.html",
+   "structure": "dialog",
+   "top": {
+    "name": "Card limits",
+    "role": "dialog"
+   }
+  },
+  "hop": [
+   {
+    "click": {
+     "name": "Edit limits",
+     "role": "button"
+    }
+   }
+  ],
+  "mutates": false,
+  "parent": "interactive.drawers",
+  "recordedBy": "hand",
+  "review": null,
+  "similarity": null,
+  "source": "a305fe554322dda58b1e47b147c340ed2b107f47",
+  "status": "accepted"
+ },
+ "interactive.drawer-payment": {
+  "fingerprint": {
+   "controls": [
+    "Close"
+   ],
+   "headings": [
+    "Payment details"
+   ],
+   "path": "/interactive/drawers.html",
+   "structure": "dialog",
+   "top": {
+    "name": "Payment details",
+    "role": "dialog"
+   }
+  },
+  "hop": [
+   {
+    "click": {
+     "text": "Payment details"
+    }
+   }
+  ],
+  "mutates": false,
+  "parent": "interactive.drawers",
+  "recordedBy": "hand",
+  "review": null,
+  "similarity": null,
+  "source": "fe34ecb136aab3656aec0f22301bdf0685fbe007",
+  "status": "accepted"
+ },
+ "interactive.drawer-settings": {
+  "fingerprint": {
+   "controls": [
+    "Close"
+   ],
+   "headings": [
+    "Card settings"
+   ],
+   "path": "/interactive/drawers.html",
+   "structure": "dialog",
+   "top": {
+    "name": "Card settings",
+    "role": "dialog"
+   }
+  },
+  "hop": [
+   {
+    "click": {
+     "name": "Card settings",
+     "role": "button"
+    }
+   }
+  ],
+  "mutates": false,
+  "parent": "interactive.drawers",
+  "recordedBy": "hand",
+  "review": null,
+  "similarity": null,
+  "source": "a804ff5c7d2f81ec23981e35da776bedc22e5d7a",
+  "status": "accepted"
+ },
+ "interactive.drawers": {
+  "fingerprint": {
+   "controls": [
+    "Card settings",
+    "Edit address",
+    "Edit limits"
+   ],
+   "headings": [
+    "Card"
+   ],
+   "path": "/interactive/drawers.html",
+   "structure": "document",
+   "top": {
+    "name": "",
+    "role": "document"
+   }
+  },
+  "hop": [],
+  "mutates": false,
+  "parent": "/interactive/drawers.html",
+  "recordedBy": "root",
+  "review": null,
+  "similarity": null,
+  "source": "97d170e1550eee4afc0af065b78cda302a97674c",
+  "status": "accepted"
+ },
+ "interactive.focus-rings": {
+  "fingerprint": {
+   "controls": [
+    "Amount",
+    "Custom ring",
+    "Default ring",
+    "No ring"
+   ],
+   "headings": [
+    "Focus rings"
+   ],
+   "path": "/interactive/focus-rings.html",
+   "structure": "document",
+   "top": {
+    "name": "",
+    "role": "document"
+   }
+  },
+  "hop": [],
+  "mutates": false,
+  "parent": "/interactive/focus-rings.html",
+  "recordedBy": "root",
+  "review": null,
+  "similarity": null,
+  "source": "97d170e1550eee4afc0af065b78cda302a97674c",
+  "status": "accepted"
+ },
+ "interactive.form": {
+  "fingerprint": {
+   "controls": [
+    "Nickname",
+    "Save",
+    "ZIP code"
+   ],
+   "headings": [
+    "Card nickname"
+   ],
+   "path": "/interactive/form.html",
+   "structure": "document",
+   "top": {
+    "name": "",
+    "role": "document"
+   }
+  },
+  "hop": [],
+  "mutates": false,
+  "parent": "/interactive/form.html",
+  "recordedBy": "root",
+  "review": null,
+  "similarity": null,
+  "source": "97d170e1550eee4afc0af065b78cda302a97674c",
+  "status": "accepted"
+ },
+ "interactive.form-errors": {
+  "fingerprint": {
+   "controls": [
+    "Nickname",
+    "Save",
+    "ZIP code"
+   ],
+   "headings": [
+    "Card nickname"
+   ],
+   "path": "/interactive/form.html",
+   "structure": "document",
+   "top": {
+    "name": "",
+    "role": "document"
+   }
+  },
+  "hop": [
+   {
+    "click": {
+     "name": "Save",
+     "role": "button"
+    }
+   }
+  ],
+  "mutates": true,
+  "parent": "interactive.form",
+  "recordedBy": "hand",
+  "review": null,
+  "similarity": null,
+  "source": "2003a08cc64f55b8575c9a2e71d8d6c673ea7a56",
+  "status": "accepted"
+ },
+ "interactive.hidden": {
+  "fingerprint": {
+   "controls": [
+    "Continue",
+    "Export CSV",
+    "Help center",
+    "Home",
+    "Skip to content",
+    "Undo"
+   ],
+   "headings": [
+    "Hidden focus"
+   ],
+   "path": "/interactive/hidden.html",
+   "structure": "document",
+   "top": {
+    "name": "",
+    "role": "document"
+   }
+  },
+  "hop": [],
+  "mutates": false,
+  "parent": "/interactive/hidden.html",
+  "recordedBy": "root",
+  "review": null,
+  "similarity": null,
+  "source": "97d170e1550eee4afc0af065b78cda302a97674c",
+  "status": "accepted"
+ },
+ "interactive.iframe": {
+  "fingerprint": {
+   "controls": [
+    "After frame",
+    "Before frame"
+   ],
+   "headings": [
+    "Payment"
+   ],
+   "path": "/interactive/iframe.html",
+   "structure": "document",
+   "top": {
+    "name": "",
+    "role": "document"
+   }
+  },
+  "hop": [],
+  "mutates": false,
+  "parent": "/interactive/iframe.html",
+  "recordedBy": "root",
+  "review": null,
+  "similarity": null,
+  "source": "97d170e1550eee4afc0af065b78cda302a97674c",
+  "status": "accepted"
+ },
+ "interactive.iframe-trap": {
+  "fingerprint": {
+   "controls": [
+    "After frame",
+    "Before frame"
+   ],
+   "headings": [
+    "Notes"
+   ],
+   "path": "/interactive/iframe-trap.html",
+   "structure": "document",
+   "top": {
+    "name": "",
+    "role": "document"
+   }
+  },
+  "hop": [],
+  "mutates": false,
+  "parent": "/interactive/iframe-trap.html",
+  "recordedBy": "root",
+  "review": null,
+  "similarity": null,
+  "source": "97d170e1550eee4afc0af065b78cda302a97674c",
+  "status": "accepted"
+ },
+ "interactive.menu-actions": {
+  "fingerprint": {
+   "controls": [
+    "Copy",
+    "Delete",
+    "Rename"
+   ],
+   "headings": [],
+   "path": "/interactive/menus.html",
+   "structure": "menu",
+   "top": {
+    "name": "Actions",
+    "role": "menu"
+   }
+  },
+  "hop": [
+   {
+    "click": {
+     "name": "Actions",
+     "role": "button"
+    }
+   }
+  ],
+  "mutates": false,
+  "parent": "interactive.menus",
+  "recordedBy": "hand",
+  "review": null,
+  "similarity": null,
+  "source": "c66a0d454df2899d965fc92e153981f8b036d464",
+  "status": "accepted"
+ },
+ "interactive.menu-export": {
+  "fingerprint": {
+   "controls": [
+    "CSV",
+    "PDF"
+   ],
+   "headings": [],
+   "path": "/interactive/menus.html",
+   "structure": "menu",
+   "top": {
+    "name": "Export",
+    "role": "menu"
+   }
+  },
+  "hop": [
+   {
+    "click": {
+     "name": "Export",
+     "role": "button"
+    }
+   }
+  ],
+  "mutates": false,
+  "parent": "interactive.menus",
+  "recordedBy": "hand",
+  "review": null,
+  "similarity": null,
+  "source": "6152556f3d3c356fd4792baa41d7b01d73a2a8cc",
+  "status": "accepted"
+ },
+ "interactive.menus": {
+  "fingerprint": {
+   "controls": [
+    "Actions",
+    "Export",
+    "Help"
+   ],
+   "headings": [
+    "Statements"
+   ],
+   "path": "/interactive/menus.html",
+   "structure": "document",
+   "top": {
+    "name": "",
+    "role": "document"
+   }
+  },
+  "hop": [],
+  "mutates": false,
+  "parent": "/interactive/menus.html",
+  "recordedBy": "root",
+  "review": null,
+  "similarity": null,
+  "source": "97d170e1550eee4afc0af065b78cda302a97674c",
+  "status": "accepted"
+ },
+ "interactive.order": {
+  "fingerprint": {
+   "controls": [
+    "Archive",
+    "Done",
+    "Download",
+    "Print",
+    "Share"
+   ],
+   "headings": [
+    "Statements"
+   ],
+   "path": "/interactive/order.html",
+   "structure": "document",
+   "top": {
+    "name": "",
+    "role": "document"
+   }
+  },
+  "hop": [],
+  "mutates": false,
+  "parent": "/interactive/order.html",
+  "recordedBy": "root",
+  "review": null,
+  "similarity": null,
+  "source": "97d170e1550eee4afc0af065b78cda302a97674c",
+  "status": "accepted"
+ },
+ "interactive.panel": {
+  "fingerprint": {
+   "controls": [
+    "Next page",
+    "Show details"
+   ],
+   "headings": [
+    "Transactions"
+   ],
+   "path": "/interactive/panel.html",
+   "structure": "document",
+   "top": {
+    "name": "",
+    "role": "document"
+   }
+  },
+  "hop": [],
+  "mutates": false,
+  "parent": "/interactive/panel.html",
+  "recordedBy": "root",
+  "review": null,
+  "similarity": null,
+  "source": "97d170e1550eee4afc0af065b78cda302a97674c",
+  "status": "accepted"
+ },
+ "interactive.panel-details": {
+  "fingerprint": {
+   "controls": [
+    "Download",
+    "View receipt"
+   ],
+   "headings": [
+    "Payment to Acme"
+   ],
+   "path": "/interactive/panel.html",
+   "structure": "dialog",
+   "top": {
+    "name": "",
+    "role": "complementary"
+   }
+  },
+  "hop": [
+   {
+    "click": {
+     "name": "Show details",
+     "role": "button"
+    }
+   }
+  ],
+  "mutates": false,
+  "parent": "interactive.panel",
+  "recordedBy": "hand",
+  "review": null,
+  "similarity": null,
+  "source": "1b0beb66d73a6b4094cf6225a96def4d3425ba11",
+  "status": "accepted"
+ },
+ "interactive.popover-card-art": {
+  "fingerprint": {
+   "controls": [
+    "Learn more"
+   ],
+   "headings": [],
+   "path": "/interactive/popovers.html",
+   "structure": "dialog",
+   "top": {
+    "name": "",
+    "role": "generic"
+   }
+  },
+  "hop": [
+   {
+    "hover": {
+     "name": "Card art",
+     "role": "button"
+    }
+   }
+  ],
+  "mutates": false,
+  "parent": "interactive.popovers",
+  "recordedBy": "hand",
+  "review": null,
+  "similarity": null,
+  "source": "fb5643f415cb087a585eb3c7e650817c72814b48",
+  "status": "accepted"
+ },
+ "interactive.popover-fees": {
+  "fingerprint": {
+   "controls": [],
+   "headings": [],
+   "path": "/interactive/popovers.html",
+   "structure": "dialog",
+   "top": {
+    "name": "No fees on ACH transfers",
+    "role": "tooltip"
+   }
+  },
+  "hop": [
+   {
+    "hover": {
+     "name": "Fees info",
+     "role": "button"
+    }
+   }
+  ],
+  "mutates": false,
+  "parent": "interactive.popovers",
+  "recordedBy": "hand",
+  "review": null,
+  "similarity": null,
+  "source": "458315d0f26d0c1476cd73308fd3931a00ad2846",
+  "status": "accepted"
+ },
+ "interactive.popover-filters": {
+  "fingerprint": {
+   "controls": [
+    "Pending",
+    "Posted"
+   ],
+   "headings": [],
+   "path": "/interactive/popovers.html",
+   "structure": "dialog",
+   "top": {
+    "name": "",
+    "role": "generic"
+   }
+  },
+  "hop": [
+   {
+    "click": {
+     "name": "Filters",
+     "role": "button"
+    }
+   }
+  ],
+  "mutates": false,
+  "parent": "interactive.popovers",
+  "recordedBy": "hand",
+  "review": null,
+  "similarity": null,
+  "source": "11efd1c9c62d438284fe320e91806635028d2fe2",
+  "status": "accepted"
+ },
+ "interactive.popovers": {
+  "fingerprint": {
+   "controls": [
+    "Card art",
+    "Done",
+    "Fees info",
+    "Filters"
+   ],
+   "headings": [
+    "Card"
+   ],
+   "path": "/interactive/popovers.html",
+   "structure": "document",
+   "top": {
+    "name": "",
+    "role": "document"
+   }
+  },
+  "hop": [],
+  "mutates": false,
+  "parent": "/interactive/popovers.html",
+  "recordedBy": "root",
+  "review": null,
+  "similarity": null,
+  "source": "97d170e1550eee4afc0af065b78cda302a97674c",
+  "status": "accepted"
+ },
+ "interactive.status": {
+  "fingerprint": {
+   "controls": [
+    "Archive",
+    "Copy account number",
+    "Save",
+    "Send"
+   ],
+   "headings": [
+    "Account"
+   ],
+   "path": "/interactive/status.html",
+   "structure": "document",
+   "top": {
+    "name": "",
+    "role": "document"
+   }
+  },
+  "hop": [],
+  "mutates": false,
+  "parent": "/interactive/status.html",
+  "recordedBy": "root",
+  "review": null,
+  "similarity": null,
+  "source": "97d170e1550eee4afc0af065b78cda302a97674c",
+  "status": "accepted"
+ },
+ "interactive.table": {
+  "fingerprint": {
+   "controls": [
+    "Receipt <n>",
+    "Transaction <n>"
+   ],
+   "headings": [
+    "Transactions"
+   ],
+   "path": "/interactive/table.html",
+   "structure": "document",
+   "top": {
+    "name": "",
+    "role": "document"
+   }
+  },
+  "hop": [],
+  "mutates": false,
+  "parent": "/interactive/table.html",
+  "recordedBy": "root",
+  "review": null,
+  "similarity": null,
+  "source": "97d170e1550eee4afc0af065b78cda302a97674c",
+  "status": "accepted"
+ },
+ "interactive.toast-archived": {
+  "fingerprint": {
+   "controls": [
+    "Undo"
+   ],
+   "headings": [],
+   "path": "/interactive/status.html",
+   "structure": "status",
+   "top": {
+    "name": "Card archived Undo",
+    "role": "generic"
+   }
+  },
+  "hop": [
+   {
+    "click": {
+     "name": "Archive",
+     "role": "button"
+    }
+   }
+  ],
+  "mutates": false,
+  "parent": "interactive.status",
+  "recordedBy": "hand",
+  "review": null,
+  "similarity": null,
+  "source": "85fe59d2aa860b11d2170f86374a86ef965aae22",
+  "status": "accepted"
+ },
+ "interactive.toast-saved": {
+  "fingerprint": {
+   "controls": [],
+   "headings": [],
+   "path": "/interactive/status.html",
+   "structure": "status",
+   "top": {
+    "name": "",
+    "role": "status"
+   }
+  },
+  "hop": [
+   {
+    "click": {
+     "name": "Save",
+     "role": "button"
+    }
+   }
+  ],
+  "mutates": false,
+  "parent": "interactive.status",
+  "recordedBy": "hand",
+  "review": null,
+  "similarity": null,
+  "source": "149b09328a31767dd5b7ec7afc0d431cfcb1dc75",
+  "status": "accepted"
+ },
+ "interactive.toast-sent": {
+  "fingerprint": {
+   "controls": [],
+   "headings": [],
+   "path": "/interactive/status.html",
+   "structure": "status",
+   "top": {
+    "name": "",
+    "role": "generic"
+   }
+  },
+  "hop": [
+   {
+    "click": {
+     "name": "Send",
+     "role": "button"
+    }
+   }
+  ],
+  "mutates": false,
+  "parent": "interactive.status",
+  "recordedBy": "hand",
+  "review": null,
+  "similarity": null,
+  "source": "8ae0d56d44645bf4853157b46dd318e89fa97310",
+  "status": "accepted"
+ },
+ "interactive.trap": {
+  "fingerprint": {
+   "controls": [
+    "After",
+    "Amount",
+    "Before",
+    "Date",
+    "Status"
+   ],
+   "headings": [
+    "Transactions"
+   ],
+   "path": "/interactive/trap.html",
+   "structure": "document",
+   "top": {
+    "name": "",
+    "role": "document"
+   }
+  },
+  "hop": [],
+  "mutates": false,
+  "parent": "/interactive/trap.html",
+  "recordedBy": "root",
+  "review": null,
+  "similarity": null,
+  "source": "97d170e1550eee4afc0af065b78cda302a97674c",
+  "status": "accepted"
+ }
+}

@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><title>Notifications</title>
+<style>
+  body { font: 16px/1.4 sans-serif; margin: 24px; color: #111; background: #fff; }
+  button { font: inherit; margin: 8px; }
+  .toasts { position: fixed; top: 16px; right: 16px; width: 280px; }
+  .toast { padding: 12px; background: #222; color: #fff; border-radius: 6px; }
+</style></head>
+<body>
+<main>
+  <h1>Notifications</h1>
+  <button id="notify">Notify</button>
+</main>
+<div role="status" class="toasts" id="status"></div>
+<script>
+  // "Notify" writes a toast into the status region that exists from page load. The toast leaves as
+  // soon as the first axe.run() on the page resolves: a deterministic stand-in for a toast that
+  // times out while the sweep's checks run (the status observer, first on toasts, sees it; every
+  // family after the rule scan finishes without it).
+  let toast = null;
+  document.getElementById('notify').addEventListener('click', () => {
+    toast = document.createElement('div');
+    toast.className = 'toast';
+    toast.textContent = 'Reminder set';
+    document.getElementById('status').append(toast);
+  });
+  // axe-core assigns window.axe first and axe.run later, so both assignments are trapped.
+  let axe;
+  Object.defineProperty(window, 'axe', {
+    configurable: true,
+    get: () => axe,
+    set(value) {
+      axe = value;
+      let run;
+      Object.defineProperty(value, 'run', {
+        configurable: true,
+        enumerable: true,
+        get: () => run,
+        set(fn) {
+          run = function (...args) {
+            return fn.apply(this, args).then((r) => { toast?.remove(); return r; });
+          };
+        },
+      });
+    },
+  });
+</script>
+</body></html>
