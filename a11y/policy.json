@@ -108,5 +108,21 @@
  "replay": {
   "onlyRecordedEdges": true
  },
+ "roots": {
+  "exclude": {
+   "accounts.order-checkbook-review": "wizard step: the URL alone shows the account page",
+   "accounts.treasury-transfer-review": "wizard step: the URL alone opens the first step (Transfer funds)",
+   "billpay.pay-recipient-match": "wizard step: the URL alone redirects to the dashboard",
+   "cards.submit-expense": "the draft expense in the URL exists only in the session that created it",
+   "home.balance-365": "a fresh session opens the onboarding panel on /dashboard; reach it from home.index",
+   "home.task-payment-review": "wizard step: the URL alone redirects to the dashboard",
+   "home.task-recurring-payment": "wizard step: the URL alone redirects to the dashboard",
+   "payments.batch-review": "the URL alone shows 404",
+   "settings.invite-issue-card": "wizard step: the URL alone shows the Team page",
+   "settings.invite-review": "wizard step: the URL alone shows the Team page",
+   "transactions.insights-breakdown-category": "the query string does not open the breakdown or scroll to it",
+   "transactions.insights-quarterly-spend": "the saved-view query string is ignored: the URL shows the default view"
+  }
+ },
  "version": 1
 }

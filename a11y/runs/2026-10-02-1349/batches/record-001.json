@@ -1,0 +1,227 @@
+{
+ "batch": "record-001",
+ "reach": {
+  "baseUrl": "https://demo.mercury.com",
+  "data": "data",
+  "map": "build/map.json",
+  "run": "2026-10-02-1349",
+  "workspace": "a11y"
+ },
+ "run": "2026-10-02-1349",
+ "states": [
+  {
+   "area": "cards",
+   "draft": "nothing on cards.create-budget matches {\"click\":{\"name\":\"Next with empty form\"}}",
+   "image": "screens/cards/50-create-budget-errors.png",
+   "kind": "validation-error",
+   "labels": [
+    "Click Next with empty form"
+   ],
+   "mutates": false,
+   "note": "Next with an empty form: Name and Description show 'Please complete this field', Spend limit shows 'Amount must be greater than 0'.",
+   "parent": "cards.create-budget",
+   "state": "cards.create-budget-errors",
+   "title": "Create budget: required fields"
+  },
+  {
+   "area": "cards",
+   "draft": "nothing on cards.index matches {\"click\":{\"name\":\"a card\"}}",
+   "image": "screens/cards/02-card-detail-physical.png",
+   "kind": "drawer",
+   "labels": [
+    "Click a card row"
+   ],
+   "mutates": false,
+   "note": "Inline right-hand detail panel for Jane's IO physical credit card: masked card art, Activate physical card CTA, Freeze/Transactions/More actions, budgets, account and billing address.",
+   "parent": "cards.index",
+   "state": "cards.detail-physical",
+   "title": "Card detail: physical credit card"
+  },
+  {
+   "area": "cards",
+   "draft": "nothing on cards.index matches {\"click\":{\"name\":\"a virtual card\"}}",
+   "image": "screens/cards/04-card-detail-virtual.png",
+   "kind": "drawer",
+   "labels": [
+    "Click a virtual card row"
+   ],
+   "mutates": false,
+   "note": "Detail panel for the Facebook ads virtual credit card: spent-this-month progress bar against a $5k limit, merchant restriction, monthly spend limit, account and billing address.",
+   "parent": "cards.index",
+   "state": "cards.detail-virtual",
+   "title": "Card detail: virtual card with limit"
+  },
+  {
+   "area": "cards",
+   "draft": "nothing on cards.expenses matches {\"click\":{\"name\":\"an expense\"}}",
+   "image": "screens/cards/58-expense-detail.png",
+   "kind": "drawer",
+   "labels": [
+    "Click an expense row"
+   ],
+   "mutates": false,
+   "note": "Reimbursement detail for a $16.75 mileage expense (Pending Review): timeline, disabled Approve until a budget is chosen, Decline, More, date/mileage/category and a Reimburse from budget picker.",
+   "parent": "cards.expenses",
+   "state": "cards.expense-detail",
+   "title": "Expense detail panel"
+  },
+  {
+   "area": "cards",
+   "draft": "nothing on cards.expenses matches {\"check\":{\"name\":\"a\"}}",
+   "image": "screens/cards/94-expenses-bulk-select.png",
+   "kind": "form-state",
+   "labels": [
+    "Check a row"
+   ],
+   "mutates": false,
+   "note": "Checking one row shows the header checkbox as mixed and a floating bar '1 request selected $16.75 total' with a disabled Approve.",
+   "parent": "cards.expenses",
+   "state": "cards.expenses-bulk-select",
+   "title": "Expenses: bulk selection"
+  },
+  {
+   "area": "cards",
+   "draft": "cannot parse \"Control type: Existing budgets\"",
+   "image": "screens/cards/80-issue-card-existing-budgets.png",
+   "kind": "form-state",
+   "labels": [
+    "Control type: Existing budgets"
+   ],
+   "mutates": false,
+   "note": "Control type set to Existing budgets: a Select budgets picker shows 'Jane's current budgets' with three budget icons, mirrored in the preview's Budgets row.",
+   "parent": "cards.issue-card",
+   "state": "cards.issue-card-existing-budgets",
+   "title": "Create a card: existing budgets"
+  },
+  {
+   "area": "cards",
+   "draft": "nothing on cards.issue-card matches {\"click\":{\"name\":\"Debit and Physical\"}}",
+   "image": "screens/cards/76-issue-card-physical-debit.png",
+   "kind": "form-state",
+   "labels": [
+    "Choose Debit and Physical"
+   ],
+   "mutates": false,
+   "note": "Debit + Physical selected: a 'Ship physical card to' block appears with the company mailing address and 'Use a different address', a Source account picker (Ops / Payroll ••1038), and the preview switches to a white Physical Debit card named 'Jane Black's Debit Card'.",
+   "parent": "cards.issue-card",
+   "state": "cards.issue-card-physical-debit",
+   "title": "Create a card: physical debit"
+  },
+  {
+   "area": "cards",
+   "draft": "nothing on cards.policies matches {\"click\":{\"name\":\"Edit on Receipt requirement\"}}",
+   "image": "screens/cards/70-policy-receipt-edit.png",
+   "kind": "form-state",
+   "labels": [
+    "Click Edit on Receipt requirement"
+   ],
+   "mutates": false,
+   "note": "Receipt requirement row in inline edit mode: amount input ($75), Merchants to exclude chip picker, Cancel and Save, 'Changes only apply to future transactions'.",
+   "parent": "cards.policies",
+   "state": "cards.policy-receipt-edit",
+   "title": "Edit receipt requirement"
+  },
+  {
+   "area": "cards",
+   "draft": "nothing on cards.policies matches {\"click\":{\"name\":\"Edit on Spend controls\"}}",
+   "image": "screens/cards/91-policy-spend-controls-edit.png",
+   "kind": "form-state",
+   "labels": [
+    "Click Edit on Spend controls"
+   ],
+   "mutates": false,
+   "note": "Spend controls rule in inline edit: Block / Allow radio tiles, Merchants to block chips (Amazon Web Services, Facebook, Google, Notion, Github), Merchant types to block (Alcohol and Bars, Gambling), Cancel and Save.",
+   "parent": "cards.policies",
+   "state": "cards.policy-spend-controls-edit",
+   "title": "Edit card spend controls"
+  },
+  {
+   "area": "cards",
+   "draft": "nothing on cards.subscriptions matches {\"click\":{\"name\":\"a merchant\"}}",
+   "image": "screens/cards/81-subscription-detail.png",
+   "kind": "drawer",
+   "labels": [
+    "Click a merchant row"
+   ],
+   "mutates": false,
+   "note": "Clicking the Adyen N.V. row opens a side panel: Last Charged $37.00, Frequency Monthly, Payment Method Jane B. ••4928, a 'Move this subscription to IO to earn 1.5% cashback' tip, and Recent Charges.",
+   "parent": "cards.subscriptions",
+   "state": "cards.subscription-detail",
+   "title": "Subscription detail panel"
+  },
+  {
+   "area": "cards",
+   "draft": "nothing on cards.team-spend matches {\"click\":{\"name\":\"... next to the period\"}}",
+   "image": "screens/cards/82-team-spend-display-options.png",
+   "kind": "menu",
+   "labels": [
+    "Click ... next to the period"
+   ],
+   "mutates": false,
+   "note": "The ... menu next to the period picker holds a single 'Include non-budget spend' switch (off).",
+   "parent": "cards.team-spend",
+   "state": "cards.team-spend-display-options",
+   "title": "Spend summary display options"
+  },
+  {
+   "area": "cards",
+   "draft": "not drafted: an ancestor had no accepted recipe",
+   "image": "screens/cards/03-card-reveal.png",
+   "kind": "form-state",
+   "labels": [
+    "Click a card row",
+    "Click card art (Click to reveal)"
+   ],
+   "mutates": false,
+   "note": "Card art after Click to reveal: full PAN 4111 1111 1111 1111, exp 12/99 and CVC 123 shown as click-to-copy buttons.",
+   "parent": "cards.detail-physical",
+   "state": "cards.card-revealed",
+   "title": "Card number revealed"
+  },
+  {
+   "area": "cards",
+   "draft": "not drafted: an ancestor had no accepted recipe",
+   "image": "screens/cards/51-create-budget-filled.png",
+   "kind": "form-state",
+   "labels": [
+    "Click Next with empty form",
+    "Fill name, limit and description"
+   ],
+   "mutates": false,
+   "note": "Name Conference travel, $500 monthly per person and a description entered; preview card updates live.",
+   "parent": "cards.create-budget-errors",
+   "state": "cards.create-budget-filled",
+   "title": "Create budget: details filled"
+  },
+  {
+   "area": "cards",
+   "draft": "not drafted: an ancestor had no accepted recipe",
+   "image": "screens/cards/59-expense-more-menu.png",
+   "kind": "menu",
+   "labels": [
+    "Click an expense row",
+    "Click More"
+   ],
+   "mutates": false,
+   "note": "More dropdown in the reimbursement panel: Request details and Edit.",
+   "parent": "cards.expense-detail",
+   "state": "cards.expense-more-menu",
+   "title": "Expense More menu"
+  },
+  {
+   "area": "cards",
+   "draft": "not drafted: an ancestor had no accepted recipe",
+   "image": "screens/cards/77-issue-card-ship-address.png",
+   "kind": "modal",
+   "labels": [
+    "Choose Debit and Physical",
+    "Click Use a different address"
+   ],
+   "mutates": false,
+   "note": "Shipping address picker over the blurred form: Company mailing address (selected), Your personal mailing address with Edit, Custom address; Go back and Use address.",
+   "parent": "cards.issue-card-physical-debit",
+   "state": "cards.issue-card-ship-address",
+   "title": "Where should we ship this card?"
+  }
+ ]
+}

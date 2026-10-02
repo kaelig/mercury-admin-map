@@ -1,0 +1,1229 @@
+{
+ "invoicing.add-catalog-item": {
+  "checked": "2026-10-02-1349",
+  "fingerprint": {
+   "controls": [
+    "Close",
+    "Create item",
+    "Customize your experience",
+    "Description (optional)",
+    "Go back",
+    "Item name",
+    "Open account",
+    "Unit price",
+    "Viewing as Admin"
+   ],
+   "headings": [
+    "Add Item"
+   ],
+   "path": "/invoicing/catalog/add-item",
+   "structure": "document",
+   "top": {
+    "name": "",
+    "role": "document"
+   }
+  },
+  "hop": [],
+  "mutates": false,
+  "parent": "/invoicing/catalog/add-item",
+  "recordedBy": "root",
+  "review": null,
+  "similarity": 0.9999,
+  "source": "97d170e1550eee4afc0af065b78cda302a97674c",
+  "status": "accepted"
+ },
+ "invoicing.add-customer": {
+  "checked": "2026-10-02-1349",
+  "fingerprint": {
+   "controls": [
+    "Add customer address",
+    "Additional emails (optional)",
+    "Close",
+    "Create customer",
+    "Customize your experience",
+    "Go back",
+    "Name",
+    "Open account",
+    "Open combobox menu",
+    "Primary customer email",
+    "Viewing as Admin"
+   ],
+   "headings": [
+    "Add customer"
+   ],
+   "path": "/invoicing/customers/add-customer",
+   "structure": "document",
+   "top": {
+    "name": "",
+    "role": "document"
+   }
+  },
+  "hop": [],
+  "mutates": false,
+  "parent": "/invoicing/customers/add-customer",
+  "recordedBy": "root",
+  "review": null,
+  "similarity": 0.9999,
+  "source": "97d170e1550eee4afc0af065b78cda302a97674c",
+  "status": "accepted"
+ },
+ "invoicing.catalog-index": {
+  "checked": "2026-10-02-1349",
+  "fingerprint": {
+   "controls": [
+    "Accounting",
+    "Accounts",
+    "Add item",
+    "Add to bookmarks",
+    "Banking",
+    "Bill Pay",
+    "Books",
+    "Cards",
+    "Catalog",
+    "Command New",
+    "Credit Card",
+    "Customers",
+    "Customize your experience",
+    "Home",
+    "Insights",
+    "Invoicing",
+    "Learn about bookmarks",
+    "Mercury Demo Pro",
+    "Move money",
+    "Navigate to Settings",
+    "Open account",
+    "Ops / Payroll <amount>",
+    "Payments",
+    "Recurring Series",
+    "Remove bookmark",
+    "Reorder Bill Pay bookmark",
+    "Reorder Credit Card bookmark",
+    "Reorder Insights bookmark",
+    "Reorder Ops / Payroll bookmark",
+    "Search for anything",
+    "Tasks <n>",
+    "Team Spend",
+    "Toggle Private Mode",
+    "Transactions",
+    "Viewing as Admin",
+    "updates"
+   ],
+   "headings": [
+    "Catalog"
+   ],
+   "path": "/invoicing/catalog",
+   "structure": "document",
+   "top": {
+    "name": "",
+    "role": "document"
+   }
+  },
+  "hop": [],
+  "mutates": false,
+  "parent": "/invoicing/catalog",
+  "recordedBy": "root",
+  "review": null,
+  "similarity": 0.9988,
+  "source": "97d170e1550eee4afc0af065b78cda302a97674c",
+  "status": "accepted"
+ },
+ "invoicing.create-series-step1": {
+  "checked": "2026-10-02-1349",
+  "fingerprint": {
+   "controls": [
+    "Back",
+    "Close",
+    "Create a one-time invoice Send a one-time invoice with a built-in payment link.",
+    "Create a recurring series Automatically generate recurring invoices on a set schedule.",
+    "Customize your experience",
+    "International Wire",
+    "Manual Transfer",
+    "Name",
+    "Next",
+    "Open account",
+    "Pay With Mercury",
+    "Request money without an invoice Send only a payment link with a single amount.",
+    "Viewing as Admin"
+   ],
+   "headings": [
+    "How would you like to request money?",
+    "Nebula Consulting Group sent you an invoice",
+    "Invoice",
+    "From",
+    "To",
+    "Details",
+    "Terms",
+    "Memo",
+    "Payment methods",
+    "Manual Transfer",
+    "International Wire",
+    "Pay With Mercury"
+   ],
+   "path": "/invoicing/create-invoice",
+   "structure": "document",
+   "top": {
+    "name": "",
+    "role": "document"
+   }
+  },
+  "hop": [
+   {
+    "click": {
+     "name": "Create series",
+     "role": "link"
+    }
+   }
+  ],
+  "mutates": true,
+  "parent": "invoicing.series-index",
+  "recordedBy": "draft",
+  "review": null,
+  "similarity": 0.9899,
+  "source": "54662a8842793bbccad70a657f3ab7c2faa58c88",
+  "status": "accepted"
+ },
+ "invoicing.create-step1": {
+  "checked": "2026-10-02-1349",
+  "fingerprint": {
+   "controls": [
+    "Back",
+    "Close",
+    "Create a one-time invoice Send a one-time invoice with a built-in payment link.",
+    "Create a recurring series Automatically generate recurring invoices on a set schedule.",
+    "Customize your experience",
+    "International Wire",
+    "Manual Transfer",
+    "Name",
+    "Next",
+    "Open account",
+    "Pay With Mercury",
+    "Request money without an invoice Send only a payment link with a single amount.",
+    "Viewing as Admin"
+   ],
+   "headings": [
+    "How would you like to request money?",
+    "Nebula Consulting Group sent you an invoice",
+    "Invoice",
+    "From",
+    "To",
+    "Details",
+    "Terms",
+    "Memo",
+    "Payment methods",
+    "Manual Transfer",
+    "International Wire",
+    "Pay With Mercury"
+   ],
+   "path": "/invoicing/create-invoice",
+   "structure": "document",
+   "top": {
+    "name": "",
+    "role": "document"
+   }
+  },
+  "hop": [
+   {
+    "click": {
+     "name": "Request money",
+     "role": "link"
+    }
+   }
+  ],
+  "mutates": false,
+  "parent": "invoicing.index",
+  "recordedBy": "draft",
+  "review": null,
+  "similarity": 0.9991,
+  "source": "5a180f418dfb498bf52ce0c75ec1b7a6ef5c2962",
+  "status": "accepted"
+ },
+ "invoicing.customers-index": {
+  "checked": "2026-10-02-1349",
+  "fingerprint": {
+   "controls": [
+    "Accounting",
+    "Accounts",
+    "Add customer",
+    "Add to bookmarks",
+    "Banking",
+    "Bill Pay",
+    "Books",
+    "Cards",
+    "Catalog",
+    "Command New",
+    "Credit Card",
+    "Customers",
+    "Customize your experience",
+    "Home",
+    "Insights",
+    "Invoicing",
+    "Learn about bookmarks",
+    "Mercury Demo Pro",
+    "Move money",
+    "Navigate to Settings",
+    "Open account",
+    "Ops / Payroll <amount>",
+    "Payments",
+    "Recurring Series",
+    "Remove bookmark",
+    "Reorder Bill Pay bookmark",
+    "Reorder Credit Card bookmark",
+    "Reorder Insights bookmark",
+    "Reorder Ops / Payroll bookmark",
+    "Search for anything",
+    "Tasks <n>",
+    "Team Spend",
+    "Toggle Private Mode",
+    "Transactions",
+    "Viewing as Admin",
+    "updates"
+   ],
+   "headings": [
+    "Customers"
+   ],
+   "path": "/invoicing/customers",
+   "structure": "document",
+   "top": {
+    "name": "",
+    "role": "document"
+   }
+  },
+  "hop": [],
+  "mutates": false,
+  "parent": "/invoicing/customers",
+  "recordedBy": "root",
+  "review": null,
+  "similarity": 0.995,
+  "source": "97d170e1550eee4afc0af065b78cda302a97674c",
+  "status": "accepted"
+ },
+ "invoicing.edit-invoice": {
+  "checked": "2026-10-02-1349",
+  "fingerprint": {
+   "controls": [
+    "<amount>",
+    "<n>",
+    "Add line item",
+    "Add sales tax",
+    "Choose Files",
+    "Close",
+    "Currency",
+    "Customize your experience",
+    "Destination account",
+    "Drag to reorder",
+    "Edit",
+    "Next",
+    "Open account",
+    "Open combobox menu",
+    "Payer memo (optional)",
+    "Product Search",
+    "Remove line item",
+    "Upload attachment",
+    "Viewing as Admin"
+   ],
+   "headings": [
+    "Edit Invoice",
+    "Invoice totals",
+    "Invoice",
+    "From",
+    "To",
+    "Details",
+    "Terms",
+    "Memo"
+   ],
+   "path": "/invoicing/edit-invoice/<id>",
+   "structure": "document",
+   "top": {
+    "name": "",
+    "role": "document"
+   }
+  },
+  "hop": [],
+  "mutates": false,
+  "parent": "/invoicing/edit-invoice/inv-aphelion-overdue-media",
+  "recordedBy": "root",
+  "review": null,
+  "similarity": 0.9996,
+  "source": "97d170e1550eee4afc0af065b78cda302a97674c",
+  "status": "accepted"
+ },
+ "invoicing.edit-series": {
+  "checked": "2026-10-02-1349",
+  "fingerprint": {
+   "controls": [
+    "<amount>",
+    "<n>",
+    "Add line item",
+    "Add sales tax",
+    "Back",
+    "Choose Files",
+    "Close",
+    "Currency",
+    "Customize your experience",
+    "Edit",
+    "Internal note (optional)",
+    "Invoice prefix More info",
+    "Next",
+    "Open account",
+    "Open combobox menu",
+    "Payer memo (optional)",
+    "Product Search",
+    "Remove line item",
+    "Upload attachment",
+    "Viewing as Admin"
+   ],
+   "headings": [
+    "Edit recurring series",
+    "Invoice totals",
+    "Invoice",
+    "From",
+    "To",
+    "Details",
+    "Terms",
+    "Memo"
+   ],
+   "path": "/invoicing/series/srs-meridian-monthly/edit",
+   "structure": "document",
+   "top": {
+    "name": "",
+    "role": "document"
+   }
+  },
+  "hop": [],
+  "mutates": false,
+  "parent": "/invoicing/series/srs-meridian-monthly/edit",
+  "recordedBy": "root",
+  "review": null,
+  "similarity": 0.9997,
+  "source": "97d170e1550eee4afc0af065b78cda302a97674c",
+  "status": "accepted"
+ },
+ "invoicing.filters-amount-facet": {
+  "checked": "2026-10-02-1349",
+  "fingerprint": {
+   "controls": [
+    "Amount",
+    "At least...",
+    "Currency",
+    "Customer",
+    "Delivery",
+    "Due Date",
+    "Invoice Date",
+    "Invoice Number",
+    "No more than...",
+    "Open combobox menu",
+    "Series ID",
+    "Show canceled",
+    "Specific amount",
+    "Status",
+    "Type"
+   ],
+   "headings": [],
+   "path": "/invoicing",
+   "structure": "menu",
+   "top": {
+    "name": "Filters",
+    "role": "menu"
+   }
+  },
+  "hop": [
+   {
+    "click": {
+     "name": "Amount",
+     "role": "tab"
+    }
+   }
+  ],
+  "mutates": false,
+  "parent": "invoicing.filters-menu",
+  "recordedBy": "draft",
+  "review": null,
+  "similarity": 0.9945,
+  "source": "f5d669b7c6a5a44dca7a7c7c948ad67ff46adecf",
+  "status": "accepted"
+ },
+ "invoicing.filters-customer-facet": {
+  "checked": "2026-10-02-1349",
+  "fingerprint": {
+   "controls": [
+    "Amount",
+    "Aphelion Financial Advisors",
+    "Astral Creative Co",
+    "Customer",
+    "Delivery",
+    "Due Date",
+    "Invoice Date",
+    "Invoice Number",
+    "Meridian Consulting",
+    "Nebula Strategy Group",
+    "Orbital Advisory Partners",
+    "Polaris Legal Services",
+    "Quasar Design Studio",
+    "Search for customer",
+    "Series ID",
+    "Show canceled",
+    "Solstice Marketing Group",
+    "Status",
+    "Type",
+    "Vega Compliance Partners",
+    "Zenith Capital Firm"
+   ],
+   "headings": [],
+   "path": "/invoicing",
+   "structure": "menu",
+   "top": {
+    "name": "Filters",
+    "role": "menu"
+   }
+  },
+  "hop": [
+   {
+    "click": {
+     "name": "Customer",
+     "role": "tab"
+    }
+   }
+  ],
+  "mutates": false,
+  "parent": "invoicing.filters-menu",
+  "recordedBy": "draft",
+  "review": null,
+  "similarity": 0.9955,
+  "source": "97d59aa005b00c4526a47c230bffbf74f205c525",
+  "status": "accepted"
+ },
+ "invoicing.filters-delivery-facet": {
+  "checked": "2026-10-02-1349",
+  "fingerprint": {
+   "controls": [
+    "Amount",
+    "Created and sent",
+    "Created only",
+    "Customer",
+    "Delivery",
+    "Due Date",
+    "Invoice Date",
+    "Invoice Number",
+    "Series ID",
+    "Show canceled",
+    "Status",
+    "Type"
+   ],
+   "headings": [],
+   "path": "/invoicing",
+   "structure": "menu",
+   "top": {
+    "name": "Filters",
+    "role": "menu"
+   }
+  },
+  "hop": [
+   {
+    "click": {
+     "name": "Delivery",
+     "role": "tab"
+    }
+   }
+  ],
+  "mutates": false,
+  "parent": "invoicing.filters-menu",
+  "recordedBy": "draft",
+  "review": null,
+  "similarity": 0.9945,
+  "source": "4b9283b9613fb4f53fc9f203f10ba927365291b6",
+  "status": "accepted"
+ },
+ "invoicing.filters-menu": {
+  "checked": "2026-10-02-1349",
+  "fingerprint": {
+   "controls": [
+    "Amount",
+    "Customer",
+    "Date Range",
+    "Delivery",
+    "Due Date",
+    "From",
+    "Invoice Date",
+    "Invoice Number",
+    "Open combobox menu",
+    "Series ID",
+    "Show canceled",
+    "Status",
+    "To",
+    "Type"
+   ],
+   "headings": [],
+   "path": "/invoicing",
+   "structure": "menu",
+   "top": {
+    "name": "Filters",
+    "role": "menu"
+   }
+  },
+  "hop": [
+   {
+    "click": {
+     "name": "Filters",
+     "role": "menuitem"
+    }
+   }
+  ],
+  "mutates": false,
+  "parent": "invoicing.index",
+  "recordedBy": "draft",
+  "review": null,
+  "similarity": 0.9884,
+  "source": "c177ef505bdaf555cd2f7aa2727c04081b5a7723",
+  "status": "accepted"
+ },
+ "invoicing.filters-series-facet": {
+  "checked": "2026-10-02-1349",
+  "fingerprint": {
+   "controls": [
+    "Amount",
+    "Customer",
+    "Delivery",
+    "Due Date",
+    "Invoice Date",
+    "Invoice Number",
+    "S-<n>",
+    "Search recurring series",
+    "Series ID",
+    "Show canceled",
+    "Status",
+    "Type"
+   ],
+   "headings": [],
+   "path": "/invoicing",
+   "structure": "menu",
+   "top": {
+    "name": "Filters",
+    "role": "menu"
+   }
+  },
+  "hop": [
+   {
+    "click": {
+     "name": "Series ID",
+     "role": "tab"
+    }
+   }
+  ],
+  "mutates": false,
+  "parent": "invoicing.filters-menu",
+  "recordedBy": "draft",
+  "review": null,
+  "similarity": 0.9944,
+  "source": "28604222ed47aa01cdb6ea78e752c6a528feb8b1",
+  "status": "accepted"
+ },
+ "invoicing.filters-status-facet": {
+  "checked": "2026-10-02-1349",
+  "fingerprint": {
+   "controls": [
+    "Active Unpaid and not overdue",
+    "Amount",
+    "Customer",
+    "Delivery",
+    "Due Date",
+    "Invoice Date",
+    "Invoice Number",
+    "Open All unpaid items, including active, overdue and processing",
+    "Overdue Unpaid items past their due date",
+    "Paid Payment received to your account",
+    "Processing Payment initiated and in transit to your account",
+    "Scheduled Items scheduled to be sent in the future",
+    "Series ID",
+    "Show canceled",
+    "Status",
+    "Type"
+   ],
+   "headings": [],
+   "path": "/invoicing",
+   "structure": "menu",
+   "top": {
+    "name": "Filters",
+    "role": "menu"
+   }
+  },
+  "hop": [
+   {
+    "click": {
+     "name": "Status",
+     "role": "tab"
+    }
+   }
+  ],
+  "mutates": false,
+  "parent": "invoicing.filters-menu",
+  "recordedBy": "draft",
+  "review": null,
+  "similarity": 0.9942,
+  "source": "7c56d8ec94ab64ad6ac123abe81e220cb44c59d5",
+  "status": "accepted"
+ },
+ "invoicing.index": {
+  "checked": "2026-10-02-1349",
+  "fingerprint": {
+   "controls": [
+    "<amount>K Overdue <n> Invoices",
+    "<amount>K Paid <n> Invoices <n> Payment link",
+    "<amount>K Total open Total open <n> Invoices <n> Payment link",
+    "Accounting",
+    "Accounts",
+    "Amount",
+    "Banking",
+    "Bill Pay",
+    "Books",
+    "Cards",
+    "Catalog",
+    "Command New",
+    "Credit Card",
+    "Customer",
+    "Customers",
+    "Customize your experience",
+    "Due date",
+    "Export all",
+    "Filters",
+    "Home",
+    "Insights",
+    "Invoice date",
+    "Invoice no.",
+    "Invoice settings",
+    "Invoicing",
+    "Learn about bookmarks",
+    "Mercury Demo Pro",
+    "Move money",
+    "Navigate to Settings",
+    "Open account",
+    "Ops / Payroll <amount>",
+    "Payments",
+    "Recurring Series",
+    "Remove bookmark",
+    "Reorder Bill Pay bookmark",
+    "Reorder Credit Card bookmark",
+    "Reorder Insights bookmark",
+    "Reorder Ops / Payroll bookmark",
+    "Request money",
+    "Search for anything",
+    "Status",
+    "Tasks <n>",
+    "Team Spend",
+    "Toggle Private Mode",
+    "Transactions",
+    "Type",
+    "Viewing as Admin",
+    "updates"
+   ],
+   "headings": [
+    "Invoicing"
+   ],
+   "path": "/invoicing",
+   "structure": "document",
+   "top": {
+    "name": "",
+    "role": "document"
+   }
+  },
+  "hop": [],
+  "mutates": false,
+  "parent": "/invoicing",
+  "recordedBy": "root",
+  "review": null,
+  "similarity": 0.9917,
+  "source": "97d170e1550eee4afc0af065b78cda302a97674c",
+  "status": "accepted"
+ },
+ "invoicing.make-a-copy": {
+  "checked": "2026-10-02-1349",
+  "fingerprint": {
+   "controls": [
+    "Back",
+    "Close",
+    "Create a one-time invoice Send a one-time invoice with a built-in payment link.",
+    "Create a recurring series Automatically generate recurring invoices on a set schedule.",
+    "Customize your experience",
+    "International Wire",
+    "Manual Transfer",
+    "Name",
+    "Next",
+    "Open account",
+    "Pay With Mercury",
+    "Request money without an invoice Send only a payment link with a single amount.",
+    "Viewing as Admin"
+   ],
+   "headings": [
+    "How would you like to request money?",
+    "Nebula Consulting Group sent you an invoice",
+    "Invoice",
+    "From",
+    "To",
+    "Details",
+    "Terms",
+    "Memo",
+    "Payment methods",
+    "Manual Transfer",
+    "International Wire",
+    "Pay With Mercury"
+   ],
+   "path": "/invoicing/create-invoice",
+   "structure": "document",
+   "top": {
+    "name": "",
+    "role": "document"
+   }
+  },
+  "hop": [],
+  "mutates": false,
+  "parent": "/invoicing/create-invoice?copyInvoiceId=inv-aphelion-overdue-media",
+  "recordedBy": "root",
+  "review": null,
+  "similarity": 0.9993,
+  "source": "97d170e1550eee4afc0af065b78cda302a97674c",
+  "status": "accepted"
+ },
+ "invoicing.row-selected": {
+  "checked": "2026-10-02-1349",
+  "fingerprint": null,
+  "hop": [
+   {
+    "check": {
+     "name": "Status",
+     "role": "menuitem"
+    }
+   }
+  ],
+  "mutates": false,
+  "parent": "invoicing.index",
+  "recordedBy": "draft",
+  "review": null,
+  "similarity": null,
+  "source": null,
+  "status": "draft"
+ },
+ "invoicing.series-detail": {
+  "checked": "2026-10-02-1349",
+  "fingerprint": {
+   "controls": [
+    "Amount Click to sort",
+    "Close",
+    "Customize your experience",
+    "Due date Click to sort",
+    "Edit series",
+    "Invoice date Click to sort",
+    "Invoice no. Click to sort",
+    "Make a copy",
+    "Open account",
+    "Queued invoice actions",
+    "Status Click to sort",
+    "Viewing as Admin"
+   ],
+   "headings": [
+    "Meridian Consulting"
+   ],
+   "path": "/invoicing/series/srs-meridian-monthly",
+   "structure": "document",
+   "top": {
+    "name": "",
+    "role": "document"
+   }
+  },
+  "hop": [],
+  "mutates": false,
+  "parent": "/invoicing/series/srs-meridian-monthly",
+  "recordedBy": "root",
+  "review": null,
+  "similarity": 0.9908,
+  "source": "97d170e1550eee4afc0af065b78cda302a97674c",
+  "status": "accepted"
+ },
+ "invoicing.series-index": {
+  "checked": "2026-10-02-1349",
+  "fingerprint": {
+   "controls": [
+    "Accounting",
+    "Accounts",
+    "Add to bookmarks",
+    "Amount Click to sort",
+    "Banking",
+    "Bill Pay",
+    "Books",
+    "Cards",
+    "Catalog",
+    "Command New",
+    "Create series",
+    "Credit Card",
+    "Customer Click to sort",
+    "Customers",
+    "Customize your experience",
+    "Home",
+    "Insights",
+    "Invoicing",
+    "Learn about bookmarks",
+    "Mercury Demo Pro",
+    "Move money",
+    "Navigate to Settings",
+    "Open account",
+    "Ops / Payroll <amount>",
+    "Payments",
+    "Recurring Series",
+    "Remove bookmark",
+    "Reorder Bill Pay bookmark",
+    "Reorder Credit Card bookmark",
+    "Reorder Insights bookmark",
+    "Reorder Ops / Payroll bookmark",
+    "Search for anything",
+    "Series ID Click to sort",
+    "Status Click to sort",
+    "Tasks <n>",
+    "Team Spend",
+    "Toggle Private Mode",
+    "Transactions",
+    "Viewing as Admin",
+    "updates"
+   ],
+   "headings": [
+    "Recurring Series"
+   ],
+   "path": "/invoicing/series",
+   "structure": "document",
+   "top": {
+    "name": "",
+    "role": "document"
+   }
+  },
+  "hop": [],
+  "mutates": false,
+  "parent": "/invoicing/series",
+  "recordedBy": "root",
+  "review": null,
+  "similarity": 0.9991,
+  "source": "97d170e1550eee4afc0af065b78cda302a97674c",
+  "status": "accepted"
+ },
+ "invoicing.settings-branding": {
+  "checked": "2026-10-02-1349",
+  "fingerprint": {
+   "controls": [
+    "Back",
+    "Close",
+    "Customize your experience",
+    "Display company logo on invoice",
+    "Manage Logo",
+    "Open account",
+    "Save",
+    "Viewing as Admin",
+    "beige-theme",
+    "blue-theme",
+    "green-theme",
+    "orange-theme",
+    "purple-theme",
+    "white-theme"
+   ],
+   "headings": [
+    "Invoice settings",
+    "Branding",
+    "Invoice",
+    "From",
+    "To",
+    "Details",
+    "Terms",
+    "Memo"
+   ],
+   "path": "/invoicing/invoice-settings",
+   "structure": "document",
+   "top": {
+    "name": "",
+    "role": "document"
+   }
+  },
+  "hop": [
+   {
+    "click": {
+     "text": "Branding"
+    }
+   }
+  ],
+  "mutates": false,
+  "parent": "invoicing.settings-general",
+  "recordedBy": "draft",
+  "review": null,
+  "similarity": 0.9908,
+  "source": "d2342a8bfe647f6f5c3f52ce1e993f0e17b3db4d",
+  "status": "accepted"
+ },
+ "invoicing.settings-defaults": {
+  "checked": "2026-10-02-1349",
+  "fingerprint": {
+   "controls": [
+    "Back",
+    "Close",
+    "Customize your experience",
+    "Default CC emails",
+    "Default payer memo",
+    "Open account",
+    "Open combobox menu",
+    "Save",
+    "Send automated reminders for all invoices",
+    "Use virtual account numbers for all invoices",
+    "Viewing as Admin"
+   ],
+   "headings": [
+    "Invoice settings",
+    "Defaults",
+    "Invoice",
+    "From",
+    "To",
+    "Details",
+    "Terms",
+    "Memo"
+   ],
+   "path": "/invoicing/invoice-settings",
+   "structure": "document",
+   "top": {
+    "name": "",
+    "role": "document"
+   }
+  },
+  "hop": [
+   {
+    "click": {
+     "text": "Defaults"
+    }
+   }
+  ],
+  "mutates": false,
+  "parent": "invoicing.settings-general",
+  "recordedBy": "draft",
+  "review": null,
+  "similarity": 0.9021,
+  "source": "fe48167c120f98a9362a9e53ccf9e4664d55e674",
+  "status": "accepted"
+ },
+ "invoicing.settings-general": {
+  "checked": "2026-10-02-1349",
+  "fingerprint": {
+   "controls": [
+    "Address",
+    "Back",
+    "Close",
+    "Company name",
+    "Customize your experience",
+    "Email",
+    "Open account",
+    "Open combobox menu",
+    "Phone number",
+    "Save",
+    "Send receipts to customers",
+    "Set Up",
+    "Show federal tax ID / EIN on invoice",
+    "Show service periods on invoices",
+    "View API docs",
+    "Viewing as Admin"
+   ],
+   "headings": [
+    "Invoice settings",
+    "Invoice header",
+    "Integrations",
+    "Configurations",
+    "Invoice",
+    "From",
+    "To",
+    "Details",
+    "Terms",
+    "Memo"
+   ],
+   "path": "/invoicing/invoice-settings",
+   "structure": "document",
+   "top": {
+    "name": "",
+    "role": "document"
+   }
+  },
+  "hop": [],
+  "mutates": false,
+  "parent": "/invoicing/invoice-settings",
+  "recordedBy": "root",
+  "review": null,
+  "similarity": 0.9995,
+  "source": "97d170e1550eee4afc0af065b78cda302a97674c",
+  "status": "accepted"
+ },
+ "invoicing.settings-saved": {
+  "checked": "2026-10-02-1349",
+  "fingerprint": {
+   "controls": [
+    "Amount",
+    "Customer",
+    "Due date",
+    "Invoice date",
+    "Invoice no.",
+    "Status"
+   ],
+   "headings": [],
+   "path": "/invoicing",
+   "structure": "status",
+   "top": {
+    "name": "Invoices table",
+    "role": "table"
+   }
+  },
+  "hop": [
+   {
+    "click": {
+     "name": "Save",
+     "role": "button"
+    }
+   }
+  ],
+  "mutates": true,
+  "parent": "invoicing.settings-defaults",
+  "recordedBy": "draft",
+  "review": null,
+  "similarity": 0.9812,
+  "source": "402997dbb0c29b61cad6fba2ee78785285245e55",
+  "status": "accepted"
+ },
+ "invoicing.show-canceled-on": {
+  "checked": "2026-10-02-1349",
+  "fingerprint": {
+   "controls": [
+    "<amount>K Overdue <n> Invoices",
+    "<amount>K Paid <n> Invoices <n> Payment link",
+    "<amount>K Total open Total open <n> Invoices <n> Payment link",
+    "Accounting",
+    "Accounts",
+    "Amount",
+    "Banking",
+    "Bill Pay",
+    "Books",
+    "Cards",
+    "Catalog",
+    "Command New",
+    "Credit Card",
+    "Customer",
+    "Customers",
+    "Customize your experience",
+    "Date Range",
+    "Delivery",
+    "Due Date",
+    "Due date",
+    "Export filtered",
+    "Filters (<n>)",
+    "From",
+    "Home",
+    "Insights",
+    "Invoice Date",
+    "Invoice Number",
+    "Invoice date",
+    "Invoice no.",
+    "Invoice settings",
+    "Invoicing",
+    "Learn about bookmarks",
+    "Mercury Demo Pro",
+    "Move money",
+    "Navigate to Settings",
+    "Open account",
+    "Open combobox menu",
+    "Ops / Payroll <amount>",
+    "Payments",
+    "Recurring Series",
+    "Remove bookmark",
+    "Remove filter",
+    "Reorder Bill Pay bookmark",
+    "Reorder Credit Card bookmark",
+    "Reorder Insights bookmark",
+    "Reorder Ops / Payroll bookmark",
+    "Request money",
+    "Reset",
+    "Search for anything",
+    "Series ID",
+    "Show canceled",
+    "Status",
+    "Tasks <n>",
+    "Team Spend",
+    "To",
+    "Toggle Private Mode",
+    "Transactions",
+    "Type",
+    "Viewing as Admin",
+    "updates"
+   ],
+   "headings": [
+    "Invoicing"
+   ],
+   "path": "/invoicing",
+   "structure": "document",
+   "top": {
+    "name": "",
+    "role": "document"
+   }
+  },
+  "hop": [
+   {
+    "click": {
+     "name": "Show canceled",
+     "role": "switch"
+    }
+   }
+  ],
+  "mutates": false,
+  "parent": "invoicing.filters-menu",
+  "recordedBy": "draft",
+  "review": null,
+  "similarity": 0.9416,
+  "source": "cd75c2275470854291d885056bd0ca6c50c75c37",
+  "status": "accepted"
+ },
+ "invoicing.status-filter-menu": {
+  "checked": "2026-10-02-1349",
+  "fingerprint": null,
+  "hop": [
+   {
+    "click": {
+     "name": "Status",
+     "role": "button"
+    }
+   }
+  ],
+  "mutates": false,
+  "parent": "invoicing.index",
+  "recordedBy": "draft",
+  "review": null,
+  "similarity": null,
+  "source": null,
+  "status": "draft"
+ },
+ "invoicing.type-filter-menu": {
+  "checked": "2026-10-02-1349",
+  "fingerprint": {
+   "controls": [
+    "One time invoice",
+    "Payment link",
+    "Recurring invoice"
+   ],
+   "headings": [],
+   "path": "/invoicing",
+   "structure": "menu",
+   "top": {
+    "name": "Type",
+    "role": "menu"
+   }
+  },
+  "hop": [
+   {
+    "click": {
+     "name": "Type",
+     "role": "menuitem"
+    }
+   }
+  ],
+  "mutates": false,
+  "parent": "invoicing.index",
+  "recordedBy": "draft",
+  "review": null,
+  "similarity": 0.9918,
+  "source": "406b257ed0cbb339f2179439f8c2d87d3fcc5488",
+  "status": "accepted"
+ }
+}

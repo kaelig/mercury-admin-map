@@ -1,0 +1,1033 @@
+{
+ "transactions.detail-failed": {
+  "checked": "2026-10-02-1349",
+  "fingerprint": {
+   "controls": [
+    "AR",
+    "Category",
+    "Choose Files",
+    "Close detail panel",
+    "Department",
+    "Drag and drop here or click to upload You may upload PDF, PNG, or JPEG files",
+    "Manage categories",
+    "Notes",
+    "Open combobox menu",
+    "Payment from NASA"
+   ],
+   "headings": [],
+   "path": "/transactions/<id>",
+   "structure": "dialog",
+   "top": {
+    "name": "",
+    "role": "complementary"
+   }
+  },
+  "hop": [
+   {
+    "click": {
+     "name": "This transaction <date> Payment from NASA Failed <amount> AR Request or Invoice Payment Category Open combobox menu Add attachment",
+     "role": "row"
+    }
+   }
+  ],
+  "mutates": false,
+  "parent": "transactions.index",
+  "recordedBy": "draft",
+  "review": {
+   "by": "conductor",
+   "date": null,
+   "decision": null,
+   "reason": "below-threshold"
+  },
+  "similarity": 0.6736,
+  "source": "8a7b5f15bcfc1e655c39bb89768c9642184fe252",
+  "status": "review"
+ },
+ "transactions.export-modal": {
+  "checked": "2026-10-02-1349",
+  "fingerprint": {
+   "controls": [
+    ".csv",
+    ".xlsx",
+    "Cancel",
+    "Download",
+    "File name"
+   ],
+   "headings": [
+    "Export transactions"
+   ],
+   "path": "/transactions",
+   "structure": "dialog",
+   "top": {
+    "name": "",
+    "role": "dialog"
+   }
+  },
+  "hop": [
+   {
+    "click": {
+     "name": "Export all",
+     "role": "button"
+    }
+   }
+  ],
+  "mutates": false,
+  "parent": "transactions.index",
+  "recordedBy": "draft",
+  "review": null,
+  "similarity": 0.9424,
+  "source": "42fc3c87b2149a6f8c14c2c3c72dc99859ad8b95",
+  "status": "accepted"
+ },
+ "transactions.export-xlsx": {
+  "checked": "2026-10-02-1349",
+  "fingerprint": {
+   "controls": [
+    ".csv",
+    ".xlsx",
+    "Cancel",
+    "Download",
+    "File name"
+   ],
+   "headings": [
+    "Export transactions"
+   ],
+   "path": "/transactions",
+   "structure": "dialog",
+   "top": {
+    "name": "",
+    "role": "dialog"
+   }
+  },
+  "hop": [
+   {
+    "click": {
+     "name": ".xlsx",
+     "role": "radio"
+    }
+   }
+  ],
+  "mutates": false,
+  "parent": "transactions.export-modal",
+  "recordedBy": "draft",
+  "review": null,
+  "similarity": 0.9424,
+  "source": "a7230f189a5d058aa495a19d44d8146c282e5459",
+  "status": "accepted"
+ },
+ "transactions.index": {
+  "checked": "2026-10-02-1349",
+  "fingerprint": {
+   "controls": [
+    "Account Click to sort",
+    "Accounting",
+    "Accounts",
+    "Add attachment",
+    "Add file",
+    "Add notes",
+    "Amount",
+    "Amount Click to sort",
+    "Apply",
+    "Banking",
+    "Bill Pay",
+    "Books",
+    "Cards",
+    "Category",
+    "Clear combobox selection",
+    "Command New",
+    "Credit Card",
+    "Customize your experience",
+    "Date",
+    "Date Click to sort",
+    "Dismiss spotlight",
+    "Export all",
+    "Filters",
+    "Group",
+    "Home",
+    "Insights",
+    "Invoicing",
+    "Keyword",
+    "Learn about bookmarks",
+    "Match receipts",
+    "Mercury Demo Pro",
+    "More bulk actions",
+    "Move money",
+    "Navigate to Settings",
+    "Next page",
+    "Open account",
+    "Open combobox menu",
+    "Ops / Payroll <amount>",
+    "Payments",
+    "Previous page",
+    "Remove bookmark",
+    "Reorder Bill Pay bookmark",
+    "Reorder Credit Card bookmark",
+    "Reorder Insights bookmark",
+    "Reorder Ops / Payroll bookmark",
+    "Saved views",
+    "Search for anything",
+    "Settings",
+    "Show graphs",
+    "Show graphs Net change this month <amount> <n> Money in <amount> <n> Money out <amount> <n>",
+    "Sort",
+    "Tasks <n>",
+    "Team Spend",
+    "This transaction",
+    "To/From Click to sort",
+    "Toggle Private Mode",
+    "Transactions",
+    "Unselect",
+    "View categorized transactions",
+    "Viewing as Admin",
+    "updates"
+   ],
+   "headings": [
+    "Transactions"
+   ],
+   "path": "/transactions",
+   "structure": "document",
+   "top": {
+    "name": "",
+    "role": "document"
+   }
+  },
+  "hop": [],
+  "mutates": false,
+  "parent": "/transactions",
+  "recordedBy": "root",
+  "review": {
+   "by": "conductor",
+   "date": "2026-10-02",
+   "decision": "accept",
+   "note": "same screen; dates, amounts and chart data drifted since the capture",
+   "reason": "below-threshold"
+  },
+  "similarity": 0.8736,
+  "source": "97d170e1550eee4afc0af065b78cda302a97674c",
+  "status": "accepted"
+ },
+ "transactions.insights": {
+  "checked": "2026-10-02-1349",
+  "fingerprint": {
+   "controls": [
+    "<date>",
+    "Accounting",
+    "Accounts",
+    "All Cashflow",
+    "Banking",
+    "Bill Pay",
+    "Books",
+    "Cards",
+    "Category",
+    "Command New",
+    "Copy section",
+    "Credit Card",
+    "Customize your experience",
+    "Export",
+    "Filters",
+    "GL Code",
+    "Helpful",
+    "Home",
+    "Insights",
+    "Invoicing",
+    "Learn about bookmarks",
+    "Mercury Demo Pro",
+    "Money in",
+    "Move money",
+    "Navigate to Settings",
+    "Not helpful",
+    "Open account",
+    "Ops / Payroll <amount>",
+    "Payments",
+    "Recipient",
+    "Remove bookmark",
+    "Remove from bookmarks",
+    "Reorder Bill Pay bookmark",
+    "Reorder Credit Card bookmark",
+    "Reorder Insights bookmark",
+    "Reorder Ops / Payroll bookmark",
+    "Saved views",
+    "Search for anything",
+    "Share feedback",
+    "Show line chart",
+    "Show overview chart",
+    "Show sankey chart",
+    "Show stacked bar chart",
+    "Source",
+    "Spending",
+    "Tasks <n>",
+    "Team Spend",
+    "Toggle Private Mode",
+    "Transactions",
+    "Viewing as Admin",
+    "transactions",
+    "updates"
+   ],
+   "headings": [
+    "Insights"
+   ],
+   "path": "/insights/overview",
+   "structure": "document",
+   "top": {
+    "name": "",
+    "role": "document"
+   }
+  },
+  "hop": [],
+  "mutates": false,
+  "parent": "/insights/overview",
+  "recordedBy": "root",
+  "review": {
+   "by": "conductor",
+   "date": "2026-10-02",
+   "decision": "accept",
+   "note": "same screen; dates, amounts and chart data drifted since the capture",
+   "reason": "below-threshold"
+  },
+  "similarity": 0.8804,
+  "source": "97d170e1550eee4afc0af065b78cda302a97674c",
+  "status": "accepted"
+ },
+ "transactions.insights-cashflow-menu": {
+  "checked": "2026-10-02-1349",
+  "fingerprint": {
+   "controls": [
+    "All Cashflow",
+    "Money In E.g. deposits, refunds",
+    "Money Out E.g. purchases, charges"
+   ],
+   "headings": [],
+   "path": "/insights/overview",
+   "structure": "menu",
+   "top": {
+    "name": "All Cashflow",
+    "role": "menu"
+   }
+  },
+  "hop": [
+   {
+    "click": {
+     "name": "All Cashflow",
+     "role": "menuitem"
+    }
+   }
+  ],
+  "mutates": false,
+  "parent": "transactions.insights",
+  "recordedBy": "draft",
+  "review": {
+   "by": "conductor",
+   "date": null,
+   "decision": null,
+   "reason": "below-threshold"
+  },
+  "similarity": 0.8857,
+  "source": "8c850f6cc0250890056fe5feee9329ddf950b8c0",
+  "status": "review"
+ },
+ "transactions.insights-exporting": {
+  "checked": "2026-10-02-1349",
+  "fingerprint": {
+   "controls": [
+    "<date>",
+    "Accounting",
+    "Accounts",
+    "All Cashflow",
+    "Banking",
+    "Bill Pay",
+    "Books",
+    "Cards",
+    "Category",
+    "Command New",
+    "Copy section",
+    "Credit Card",
+    "Customize your experience",
+    "Export",
+    "Filters",
+    "GL Code",
+    "Helpful",
+    "Home",
+    "Insights",
+    "Invoicing",
+    "Learn about bookmarks",
+    "Mercury Demo Pro",
+    "Money in",
+    "Move money",
+    "Navigate to Settings",
+    "Not helpful",
+    "Open account",
+    "Ops / Payroll <amount>",
+    "Payments",
+    "Recipient",
+    "Remove bookmark",
+    "Remove from bookmarks",
+    "Reorder Bill Pay bookmark",
+    "Reorder Credit Card bookmark",
+    "Reorder Insights bookmark",
+    "Reorder Ops / Payroll bookmark",
+    "Saved views",
+    "Search for anything",
+    "Share feedback",
+    "Show line chart",
+    "Show overview chart",
+    "Show sankey chart",
+    "Show stacked bar chart",
+    "Source",
+    "Spending",
+    "Tasks <n>",
+    "Team Spend",
+    "Toggle Private Mode",
+    "Transactions",
+    "Viewing as Admin",
+    "transactions",
+    "updates"
+   ],
+   "headings": [
+    "Insights"
+   ],
+   "path": "/insights/overview",
+   "structure": "document",
+   "top": {
+    "name": "",
+    "role": "document"
+   }
+  },
+  "hop": [
+   {
+    "click": {
+     "name": "Export",
+     "role": "button"
+    }
+   }
+  ],
+  "mutates": false,
+  "parent": "transactions.insights",
+  "recordedBy": "draft",
+  "review": {
+   "by": "conductor",
+   "date": null,
+   "decision": null,
+   "reason": "below-threshold"
+  },
+  "similarity": 0.8761,
+  "source": "c809ea9be227aa8e0a918af5631e3a38d864547c",
+  "status": "review"
+ },
+ "transactions.insights-filters": {
+  "checked": "2026-10-02-1349",
+  "fingerprint": {
+   "controls": [
+    "Account",
+    "All Cashflow",
+    "Budget",
+    "Card",
+    "Cashflow",
+    "Category",
+    "Date",
+    "Department",
+    "Exclusions",
+    "GL Code",
+    "Keywords",
+    "Method",
+    "Money In E.g. deposits, refunds",
+    "Money Out E.g. purchases, charges",
+    "Team Member"
+   ],
+   "headings": [],
+   "path": "/insights/overview",
+   "structure": "dialog",
+   "top": {
+    "name": "",
+    "role": "generic"
+   }
+  },
+  "hop": [
+   {
+    "click": {
+     "name": "Filters",
+     "role": "menuitem"
+    }
+   }
+  ],
+  "mutates": false,
+  "parent": "transactions.insights",
+  "recordedBy": "draft",
+  "review": {
+   "by": "conductor",
+   "date": null,
+   "decision": null,
+   "reason": "below-threshold"
+  },
+  "similarity": 0.8987,
+  "source": "865faddff715be7e1eebf284f2bcdc90d6cf53a3",
+  "status": "review"
+ },
+ "transactions.insights-interval-menu": {
+  "checked": "2026-10-02-1349",
+  "fingerprint": {
+   "controls": [
+    "Month",
+    "Quarter"
+   ],
+   "headings": [],
+   "path": "/insights/overview",
+   "structure": "listbox",
+   "top": {
+    "name": "",
+    "role": "listbox"
+   }
+  },
+  "hop": [
+   {
+    "click": {
+     "text": "Month"
+    }
+   }
+  ],
+  "mutates": false,
+  "parent": "transactions.insights",
+  "recordedBy": "draft",
+  "review": {
+   "by": "conductor",
+   "date": null,
+   "decision": null,
+   "reason": "below-threshold"
+  },
+  "similarity": 0.886,
+  "source": "dd1766d423e1206603bf0b1465409bbf7b8f980e",
+  "status": "review"
+ },
+ "transactions.insights-line": {
+  "checked": "2026-10-02-1349",
+  "fingerprint": {
+   "controls": [
+    "<date>",
+    "Accounting",
+    "Accounts",
+    "All Cashflow",
+    "Banking",
+    "Bill Pay",
+    "Books",
+    "Cards",
+    "Cashflow",
+    "Category",
+    "Command New",
+    "Copy section",
+    "Credit Card",
+    "Customize your experience",
+    "Export",
+    "Filters",
+    "GL Code",
+    "Helpful",
+    "Home",
+    "Insights",
+    "Invoicing",
+    "Learn about bookmarks",
+    "Mercury Demo Pro",
+    "Money In",
+    "Money Out",
+    "Money in",
+    "Move money",
+    "Navigate to Settings",
+    "Not helpful",
+    "Open account",
+    "Ops / Payroll <amount>",
+    "Payments",
+    "Recipient",
+    "Remove bookmark",
+    "Remove from bookmarks",
+    "Reorder Bill Pay bookmark",
+    "Reorder Credit Card bookmark",
+    "Reorder Insights bookmark",
+    "Reorder Ops / Payroll bookmark",
+    "Saved views",
+    "Search for anything",
+    "Share feedback",
+    "Show line chart",
+    "Show overview chart",
+    "Show sankey chart",
+    "Show stacked bar chart",
+    "Source",
+    "Spending",
+    "Tasks <n>",
+    "Team Spend",
+    "Toggle Private Mode",
+    "Transactions",
+    "Viewing as Admin",
+    "transactions",
+    "updates"
+   ],
+   "headings": [
+    "Insights"
+   ],
+   "path": "/insights/overview",
+   "structure": "document",
+   "top": {
+    "name": "",
+    "role": "document"
+   }
+  },
+  "hop": [],
+  "mutates": false,
+  "parent": "/insights/overview?chartMode=line",
+  "recordedBy": "root",
+  "review": {
+   "by": "conductor",
+   "date": "2026-10-02",
+   "decision": "accept",
+   "note": "same screen; dates, amounts and chart data drifted since the capture",
+   "reason": "below-threshold"
+  },
+  "similarity": 0.8905,
+  "source": "97d170e1550eee4afc0af065b78cda302a97674c",
+  "status": "accepted"
+ },
+ "transactions.insights-money-in": {
+  "checked": "2026-10-02-1349",
+  "fingerprint": {
+   "controls": [
+    "<date>",
+    "Accounting",
+    "Accounts",
+    "Banking",
+    "Bill Pay",
+    "Books",
+    "Cards",
+    "Category",
+    "Command New",
+    "Copy section",
+    "Create view",
+    "Credit Card",
+    "Credit Cashback <amount>",
+    "Customize your experience",
+    "Export",
+    "Filters (<n>)",
+    "GL Code",
+    "Helpful",
+    "Home",
+    "Insights",
+    "Invoices <n>",
+    "Invoicing",
+    "Learn about bookmarks",
+    "Mercury Demo Pro",
+    "Money In",
+    "Money in",
+    "Move money",
+    "Navigate to Settings",
+    "Not helpful",
+    "Open account",
+    "Ops / Payroll <amount>",
+    "Payments",
+    "Remove bookmark",
+    "Remove filter",
+    "Remove from bookmarks",
+    "Reorder Bill Pay bookmark",
+    "Reorder Credit Card bookmark",
+    "Reorder Insights bookmark",
+    "Reorder Ops / Payroll bookmark",
+    "Reset",
+    "Saved views",
+    "Search for anything",
+    "Share feedback",
+    "Show line chart",
+    "Show overview chart",
+    "Show sankey chart",
+    "Show stacked bar chart",
+    "Source",
+    "Spending",
+    "Tasks <n>",
+    "Team Spend",
+    "Toggle Private Mode",
+    "Transactions",
+    "Transactions <n>",
+    "Treasury earnings <amount>",
+    "Viewing as Admin",
+    "transactions",
+    "updates"
+   ],
+   "headings": [
+    "Insights",
+    "Summary"
+   ],
+   "path": "/insights/overview",
+   "structure": "document",
+   "top": {
+    "name": "",
+    "role": "document"
+   }
+  },
+  "hop": [],
+  "mutates": false,
+  "parent": "/insights/overview?direction=inflow",
+  "recordedBy": "root",
+  "review": {
+   "by": "conductor",
+   "date": "2026-10-02",
+   "decision": "accept",
+   "note": "same screen; dates, amounts and chart data drifted since the capture",
+   "reason": "below-threshold"
+  },
+  "similarity": 0.8941,
+  "source": "97d170e1550eee4afc0af065b78cda302a97674c",
+  "status": "accepted"
+ },
+ "transactions.insights-sankey": {
+  "checked": "2026-10-02-1349",
+  "fingerprint": {
+   "controls": [
+    "<date>",
+    "Accounting",
+    "Accounts",
+    "All Cashflow",
+    "Banking",
+    "Bill Pay",
+    "Books",
+    "Cards",
+    "Category",
+    "Command New",
+    "Copy section",
+    "Credit Card",
+    "Customize your experience",
+    "Export",
+    "Filters",
+    "GL Code",
+    "Helpful",
+    "Home",
+    "Insights",
+    "Invoicing",
+    "Learn about bookmarks",
+    "Mercury Demo Pro",
+    "Money In: Source",
+    "Money Out: Recipient",
+    "Money in",
+    "Move money",
+    "Navigate to Settings",
+    "Not helpful",
+    "Open account",
+    "Ops / Payroll <amount>",
+    "Payments",
+    "Recipient",
+    "Remove bookmark",
+    "Remove from bookmarks",
+    "Reorder Bill Pay bookmark",
+    "Reorder Credit Card bookmark",
+    "Reorder Insights bookmark",
+    "Reorder Ops / Payroll bookmark",
+    "Saved views",
+    "Search for anything",
+    "Share feedback",
+    "Show line chart",
+    "Show overview chart",
+    "Show sankey chart",
+    "Show stacked bar chart",
+    "Source",
+    "Spending",
+    "Tasks <n>",
+    "Team Spend",
+    "Toggle Private Mode",
+    "Transactions",
+    "Viewing as Admin",
+    "transactions",
+    "updates"
+   ],
+   "headings": [
+    "Insights"
+   ],
+   "path": "/insights/overview",
+   "structure": "document",
+   "top": {
+    "name": "",
+    "role": "document"
+   }
+  },
+  "hop": [],
+  "mutates": false,
+  "parent": "/insights/overview?chartMode=sankey",
+  "recordedBy": "root",
+  "review": null,
+  "similarity": 0.9417,
+  "source": "97d170e1550eee4afc0af065b78cda302a97674c",
+  "status": "accepted"
+ },
+ "transactions.insights-saved-views-menu": {
+  "checked": "2026-10-02-1349",
+  "fingerprint": {
+   "controls": [
+    "Create view",
+    "Monthly cashflow",
+    "Quarterly spend"
+   ],
+   "headings": [],
+   "path": "/insights/overview",
+   "structure": "menu",
+   "top": {
+    "name": "Saved views",
+    "role": "menu"
+   }
+  },
+  "hop": [
+   {
+    "click": {
+     "name": "Saved views",
+     "role": "menuitem"
+    }
+   }
+  ],
+  "mutates": false,
+  "parent": "transactions.insights",
+  "recordedBy": "draft",
+  "review": {
+   "by": "conductor",
+   "date": null,
+   "decision": null,
+   "reason": "below-threshold"
+  },
+  "similarity": 0.8878,
+  "source": "30a390dd8faede1169dc3930baf8c0acc66345b7",
+  "status": "review"
+ },
+ "transactions.insights-spending": {
+  "checked": "2026-10-02-1349",
+  "fingerprint": {
+   "controls": [
+    "<date>",
+    "Accounting",
+    "Accounts",
+    "Banking",
+    "Bill Pay",
+    "Books",
+    "Cards",
+    "Cards used <n>",
+    "Category",
+    "Command New",
+    "Copy section",
+    "Create view",
+    "Credit Card",
+    "Customize your experience",
+    "Export",
+    "Fees paid <amount>",
+    "Filters (<n>)",
+    "GL Code",
+    "Helpful",
+    "Home",
+    "Insights",
+    "Invoicing",
+    "Learn about bookmarks",
+    "Mercury Demo Pro",
+    "Money Out",
+    "Money in",
+    "Move money",
+    "Navigate to Settings",
+    "Not helpful",
+    "Open account",
+    "Ops / Payroll <amount>",
+    "Payments",
+    "Recipient",
+    "Remove bookmark",
+    "Remove filter",
+    "Remove from bookmarks",
+    "Reorder Bill Pay bookmark",
+    "Reorder Credit Card bookmark",
+    "Reorder Insights bookmark",
+    "Reorder Ops / Payroll bookmark",
+    "Reset",
+    "Saved views",
+    "Search for anything",
+    "Share feedback",
+    "Show line chart",
+    "Show overview chart",
+    "Show sankey chart",
+    "Show stacked bar chart",
+    "Spending",
+    "Tasks <n>",
+    "Team Spend",
+    "Toggle Private Mode",
+    "Transactions",
+    "Transactions <n>",
+    "Viewing as Admin",
+    "transactions",
+    "updates"
+   ],
+   "headings": [
+    "Insights",
+    "Summary"
+   ],
+   "path": "/insights/overview",
+   "structure": "document",
+   "top": {
+    "name": "",
+    "role": "document"
+   }
+  },
+  "hop": [],
+  "mutates": false,
+  "parent": "/insights/overview?direction=outflow",
+  "recordedBy": "root",
+  "review": {
+   "by": "conductor",
+   "date": "2026-10-02",
+   "decision": "accept",
+   "note": "same screen; dates, amounts and chart data drifted since the capture",
+   "reason": "below-threshold"
+  },
+  "similarity": 0.8552,
+  "source": "97d170e1550eee4afc0af065b78cda302a97674c",
+  "status": "accepted"
+ },
+ "transactions.insights-stacked-bar": {
+  "checked": "2026-10-02-1349",
+  "fingerprint": {
+   "controls": [
+    "<date>",
+    "Accounting",
+    "Accounts",
+    "All Cashflow",
+    "Banking",
+    "Bill Pay",
+    "Books",
+    "Cards",
+    "Category",
+    "Command New",
+    "Credit Card",
+    "Customize your experience",
+    "Export",
+    "Filters",
+    "GL Code",
+    "Home",
+    "Insights",
+    "Invoicing",
+    "Learn about bookmarks",
+    "Legal Fees",
+    "Mercury Demo Pro",
+    "Move money",
+    "Navigate to Settings",
+    "Open account",
+    "Ops / Payroll <amount>",
+    "Other",
+    "Payments",
+    "Recipient",
+    "Remove bookmark",
+    "Remove from bookmarks",
+    "Reorder Bill Pay bookmark",
+    "Reorder Credit Card bookmark",
+    "Reorder Insights bookmark",
+    "Reorder Ops / Payroll bookmark",
+    "Saved views",
+    "Search for anything",
+    "Share feedback",
+    "Show line chart",
+    "Show overview chart",
+    "Show sankey chart",
+    "Show stacked bar chart",
+    "Software",
+    "Source",
+    "Tasks <n>",
+    "Team Spend",
+    "Toggle Private Mode",
+    "Transactions",
+    "Travel - Accommodation",
+    "Uncategorized",
+    "Viewing as Admin",
+    "updates"
+   ],
+   "headings": [
+    "Insights"
+   ],
+   "path": "/insights/overview",
+   "structure": "document",
+   "top": {
+    "name": "",
+    "role": "document"
+   }
+  },
+  "hop": [],
+  "mutates": false,
+  "parent": "/insights/overview?chartMode=stackedBar",
+  "recordedBy": "root",
+  "review": {
+   "by": "conductor",
+   "date": "2026-10-02",
+   "decision": "accept",
+   "note": "same screen; dates, amounts and chart data drifted since the capture",
+   "reason": "below-threshold"
+  },
+  "similarity": 0.8459,
+  "source": "97d170e1550eee4afc0af065b78cda302a97674c",
+  "status": "accepted"
+ },
+ "transactions.match-receipts": {
+  "checked": "2026-10-02-1349",
+  "fingerprint": {
+   "controls": [
+    "Choose Files",
+    "Match receipts for all transactions"
+   ],
+   "headings": [],
+   "path": "/transactions",
+   "structure": "dialog",
+   "top": {
+    "name": "",
+    "role": "generic"
+   }
+  },
+  "hop": [
+   {
+    "click": {
+     "name": "Match receipts",
+     "role": "button"
+    }
+   }
+  ],
+  "mutates": false,
+  "parent": "transactions.index",
+  "recordedBy": "draft",
+  "review": {
+   "by": "conductor",
+   "date": null,
+   "decision": null,
+   "reason": "below-threshold"
+  },
+  "similarity": 0.8795,
+  "source": "ddb59353e60f520c672f1f20ac30e4665ecb7ac5",
+  "status": "review"
+ },
+ "transactions.saved-views-menu": {
+  "checked": "2026-10-02-1349",
+  "fingerprint": {
+   "controls": [
+    "Create view",
+    "Monthly money in",
+    "Monthly money out",
+    "My transactions",
+    "Operating expenses"
+   ],
+   "headings": [],
+   "path": "/transactions",
+   "structure": "menu",
+   "top": {
+    "name": "Saved views",
+    "role": "menu"
+   }
+  },
+  "hop": [
+   {
+    "click": {
+     "name": "Saved views",
+     "role": "menuitem"
+    }
+   }
+  ],
+  "mutates": false,
+  "parent": "transactions.index",
+  "recordedBy": "draft",
+  "review": {
+   "by": "conductor",
+   "date": null,
+   "decision": null,
+   "reason": "below-threshold"
+  },
+  "similarity": 0.8767,
+  "source": "0e69eeff66bbbd39ac98c8624ad46fed767f2ee5",
+  "status": "review"
+ }
+}

@@ -1,0 +1,934 @@
+{
+ "billpay.accounting-index": {
+  "checked": "2026-10-02-1349",
+  "fingerprint": {
+   "controls": [
+    "Accounting",
+    "Accounts",
+    "Banking",
+    "Bill Pay",
+    "Books",
+    "Cards",
+    "Command New",
+    "Connect",
+    "Credit Card",
+    "Customize your experience",
+    "Home",
+    "Insights",
+    "Invoicing",
+    "Learn about bookmarks",
+    "Learn more",
+    "Mercury Demo Pro",
+    "Move money",
+    "Navigate to Settings",
+    "Open account",
+    "Ops / Payroll <amount>",
+    "Or upload a CSV",
+    "Payments",
+    "Remove bookmark",
+    "Reorder Bill Pay bookmark",
+    "Reorder Credit Card bookmark",
+    "Reorder Insights bookmark",
+    "Reorder Ops / Payroll bookmark",
+    "Search for anything",
+    "Start",
+    "Tasks <n>",
+    "Team Spend",
+    "Toggle Private Mode",
+    "Transactions",
+    "Viewing as Admin",
+    "updates"
+   ],
+   "headings": [
+    "Choose where your books live",
+    "Use Mercury Books",
+    "Sync another software"
+   ],
+   "path": "/accounting",
+   "structure": "document",
+   "top": {
+    "name": "",
+    "role": "document"
+   }
+  },
+  "hop": [],
+  "mutates": false,
+  "parent": "/accounting",
+  "recordedBy": "root",
+  "review": null,
+  "similarity": 0.9995,
+  "source": "97d170e1550eee4afc0af065b78cda302a97674c",
+  "status": "accepted"
+ },
+ "billpay.accounting-settings": {
+  "checked": "2026-10-02-1349",
+  "fingerprint": {
+   "controls": [
+    "Accounting",
+    "Accounts",
+    "Add to bookmarks",
+    "Banking",
+    "Bill Pay",
+    "Books",
+    "Cards",
+    "Command New",
+    "Credit Card",
+    "Customize your experience",
+    "Edit",
+    "Home",
+    "Insights",
+    "Invoicing",
+    "Learn about bookmarks",
+    "Mercury Demo Pro",
+    "Move money",
+    "Navigate to Settings",
+    "Open account",
+    "Ops / Payroll <amount>",
+    "Payments",
+    "Remove bookmark",
+    "Reorder Bill Pay bookmark",
+    "Reorder Credit Card bookmark",
+    "Reorder Insights bookmark",
+    "Reorder Ops / Payroll bookmark",
+    "Search for anything",
+    "Tasks <n>",
+    "Team Spend",
+    "Toggle Private Mode",
+    "Transactions",
+    "Viewing as Admin",
+    "updates"
+   ],
+   "headings": [
+    "Accounting Settings"
+   ],
+   "path": "/accounting/mapping",
+   "structure": "document",
+   "top": {
+    "name": "",
+    "role": "document"
+   }
+  },
+  "hop": [],
+  "mutates": false,
+  "parent": "/accounting/mapping",
+  "recordedBy": "root",
+  "review": null,
+  "similarity": 0.9985,
+  "source": "97d170e1550eee4afc0af065b78cda302a97674c",
+  "status": "accepted"
+ },
+ "billpay.accounting-upload-csv": {
+  "checked": "2026-10-02-1349",
+  "fingerprint": {
+   "controls": [
+    "Cancel",
+    "Choose File",
+    "Upload"
+   ],
+   "headings": [
+    "Upload GL codes"
+   ],
+   "path": "/accounting",
+   "structure": "dialog",
+   "top": {
+    "name": "",
+    "role": "dialog"
+   }
+  },
+  "hop": [
+   {
+    "click": {
+     "name": "Or upload a CSV",
+     "role": "button"
+    }
+   }
+  ],
+  "mutates": true,
+  "parent": "billpay.accounting-index",
+  "recordedBy": "draft",
+  "review": null,
+  "similarity": 0.9992,
+  "source": "65571ada968e1096cb0ba9fe071a2cdf62e9c832",
+  "status": "accepted"
+ },
+ "billpay.approval-panel": {
+  "checked": "2026-10-02-1349",
+  "fingerprint": null,
+  "hop": [
+   {
+    "click": {
+     "name": "Review Requests",
+     "role": "button"
+    }
+   }
+  ],
+  "mutates": false,
+  "parent": "billpay.needs-approval",
+  "recordedBy": "draft",
+  "review": null,
+  "similarity": null,
+  "source": null,
+  "status": "draft"
+ },
+ "billpay.automation-settings": {
+  "checked": "2026-10-02-1349",
+  "fingerprint": {
+   "controls": [
+    "Accounting",
+    "Accounts",
+    "Add to bookmarks",
+    "Auto-categorization",
+    "Banking",
+    "Bill Pay",
+    "Books",
+    "Cards",
+    "Command New",
+    "Credit Card",
+    "Customize your experience",
+    "Home",
+    "Insights",
+    "Invoicing",
+    "Learn about bookmarks",
+    "Mercury Demo Pro",
+    "Move money",
+    "Navigate to Settings",
+    "Open account",
+    "Ops / Payroll <amount>",
+    "Payments",
+    "Remove bookmark",
+    "Reorder Bill Pay bookmark",
+    "Reorder Credit Card bookmark",
+    "Reorder Insights bookmark",
+    "Reorder Ops / Payroll bookmark",
+    "Search for anything",
+    "Tasks <n>",
+    "Team Spend",
+    "Toggle Private Mode",
+    "Transactions",
+    "Viewing as Admin",
+    "updates"
+   ],
+   "headings": [
+    "Accounting Settings",
+    "Automation Settings"
+   ],
+   "path": "/accounting/mapping/automation-settings",
+   "structure": "document",
+   "top": {
+    "name": "",
+    "role": "document"
+   }
+  },
+  "hop": [],
+  "mutates": false,
+  "parent": "/accounting/mapping/automation-settings",
+  "recordedBy": "root",
+  "review": null,
+  "similarity": 0.9997,
+  "source": "97d170e1550eee4afc0af065b78cda302a97674c",
+  "status": "accepted"
+ },
+ "billpay.books-signup": {
+  "checked": "2026-10-02-1349",
+  "fingerprint": {
+   "controls": [
+    "Accrual",
+    "Banking",
+    "Books",
+    "Cash",
+    "Chart of accounts",
+    "Customize your experience",
+    "Learn more about Books",
+    "Mercury Demo Pro",
+    "Open account",
+    "Preview chart of accounts",
+    "Try Mercury Books",
+    "Viewing as Admin"
+   ],
+   "headings": [
+    "Intelligent accounting built into Mercury"
+   ],
+   "path": "/books/signup",
+   "structure": "document",
+   "top": {
+    "name": "",
+    "role": "document"
+   }
+  },
+  "hop": [
+   {
+    "click": {
+     "name": "Start",
+     "role": "button"
+    }
+   }
+  ],
+  "mutates": false,
+  "parent": "billpay.accounting-index",
+  "recordedBy": "draft",
+  "review": null,
+  "similarity": 0.9627,
+  "source": "af20eb160d4270af23d4ae1a65d999cdd9a2cbab",
+  "status": "accepted"
+ },
+ "billpay.categorization-rules": {
+  "checked": "2026-10-02-1349",
+  "fingerprint": {
+   "controls": [
+    "Accounting",
+    "Accounts",
+    "Add to bookmarks",
+    "Banking",
+    "Bill Pay",
+    "Books",
+    "Cards",
+    "Command New",
+    "Create a rule",
+    "Credit Card",
+    "Customize your experience",
+    "Drag to reorder rule",
+    "Home",
+    "Insights",
+    "Invoicing",
+    "Learn about bookmarks",
+    "Mercury Demo Pro",
+    "Move money",
+    "Navigate to Settings",
+    "Open account",
+    "Ops / Payroll <amount>",
+    "Payments",
+    "Remove bookmark",
+    "Reorder Bill Pay bookmark",
+    "Reorder Credit Card bookmark",
+    "Reorder Insights bookmark",
+    "Reorder Ops / Payroll bookmark",
+    "Search for anything",
+    "Tasks <n>",
+    "Team Spend",
+    "Toggle Private Mode",
+    "Transactions",
+    "Viewing as Admin",
+    "updates"
+   ],
+   "headings": [
+    "Accounting Settings"
+   ],
+   "path": "/accounting/mapping/categorization-rules",
+   "structure": "document",
+   "top": {
+    "name": "",
+    "role": "document"
+   }
+  },
+  "hop": [],
+  "mutates": false,
+  "parent": "/accounting/mapping/categorization-rules",
+  "recordedBy": "root",
+  "review": null,
+  "similarity": 0.9996,
+  "source": "97d170e1550eee4afc0af065b78cda302a97674c",
+  "status": "accepted"
+ },
+ "billpay.create-rule": {
+  "checked": "2026-10-02-1349",
+  "fingerprint": {
+   "controls": [
+    "Add condition",
+    "Close detail panel",
+    "Condition <n>",
+    "Create",
+    "Open combobox menu",
+    "Outcome"
+   ],
+   "headings": [],
+   "path": "/accounting/mapping/categorization-rules",
+   "structure": "dialog",
+   "top": {
+    "name": "",
+    "role": "complementary"
+   }
+  },
+  "hop": [
+   {
+    "click": {
+     "name": "Create a rule",
+     "role": "button"
+    }
+   }
+  ],
+  "mutates": true,
+  "parent": "billpay.categorization-rules",
+  "recordedBy": "draft",
+  "review": null,
+  "similarity": 0.9994,
+  "source": "b8ea4180e54e144c8297dee710fea1c4649ddd26",
+  "status": "accepted"
+ },
+ "billpay.feedback-panel": {
+  "checked": "2026-10-02-1349",
+  "fingerprint": {
+   "controls": [
+    "ACH Authorizations",
+    "Accounting",
+    "Accounts",
+    "Banking",
+    "Bill Pay",
+    "Books",
+    "Cancel",
+    "Cards",
+    "Checkbooks",
+    "Choose Files",
+    "Close help menu",
+    "Command New",
+    "Conversation history",
+    "Credit Card",
+    "Customize your experience",
+    "Delete",
+    "Feedback",
+    "Home",
+    "Insights",
+    "Invoicing",
+    "Learn about bookmarks",
+    "Mercury Demo Pro",
+    "Move money",
+    "Navigate to Settings",
+    "New conversation",
+    "Open account",
+    "Ops / Payroll <amount>",
+    "Payments",
+    "Recipients",
+    "Remove bookmark",
+    "Remove from bookmarks",
+    "Reorder Bill Pay bookmark",
+    "Reorder Credit Card bookmark",
+    "Reorder Insights bookmark",
+    "Reorder Ops / Payroll bookmark",
+    "Review",
+    "Search for anything",
+    "Send money",
+    "Share feedback",
+    "Status",
+    "Tasks <n>",
+    "Taxes",
+    "Team Spend",
+    "Toggle Private Mode",
+    "Transactions",
+    "Upload bill",
+    "Viewing as Admin",
+    "We’d love to hear from you. Please provide your feedback for bill pay functionality below.",
+    "Wire Drawdowns",
+    "my-company-name@ap.mercury.com",
+    "updates"
+   ],
+   "headings": [
+    "Bill Pay",
+    "<n>",
+    "Total outstanding",
+    "Overdue",
+    "Due in next <n> days"
+   ],
+   "path": "/bill-pay",
+   "structure": "dialog",
+   "top": {
+    "name": "",
+    "role": "generic"
+   }
+  },
+  "hop": [
+   {
+    "click": {
+     "name": "Feedback",
+     "role": "button"
+    }
+   }
+  ],
+  "mutates": false,
+  "parent": "billpay.index",
+  "recordedBy": "draft",
+  "review": null,
+  "similarity": 0.9983,
+  "source": "4e395958376c689d139a1e5ef23d7df79df93f86",
+  "status": "accepted"
+ },
+ "billpay.gl-codes-edit": {
+  "checked": "2026-10-02-1349",
+  "fingerprint": {
+   "controls": [
+    "Cancel",
+    "Choose File",
+    "Remove",
+    "Save"
+   ],
+   "headings": [
+    "Edit GL codes"
+   ],
+   "path": "/accounting/mapping",
+   "structure": "dialog",
+   "top": {
+    "name": "",
+    "role": "dialog"
+   }
+  },
+  "hop": [
+   {
+    "click": {
+     "name": "Edit",
+     "role": "button"
+    }
+   }
+  ],
+  "mutates": false,
+  "parent": "billpay.accounting-settings",
+  "recordedBy": "draft",
+  "review": null,
+  "similarity": 0.9982,
+  "source": "a8b36f7d543237656cd021e7438ebaea0e28157f",
+  "status": "accepted"
+ },
+ "billpay.inbox-after-payment": {
+  "checked": "2026-10-02-1349",
+  "fingerprint": {
+   "controls": [
+    "ACH Authorizations",
+    "Accounting",
+    "Accounts",
+    "Banking",
+    "Bill Pay",
+    "Books",
+    "Cards",
+    "Checkbooks",
+    "Choose Files",
+    "Command New",
+    "Credit Card",
+    "Customize your experience",
+    "Delete",
+    "Feedback",
+    "Home",
+    "Insights",
+    "Invoicing",
+    "Learn about bookmarks",
+    "Mercury Demo Pro",
+    "Move money",
+    "Navigate to Settings",
+    "Open account",
+    "Ops / Payroll <amount>",
+    "Payments",
+    "Recipients",
+    "Remove bookmark",
+    "Remove from bookmarks",
+    "Reorder Bill Pay bookmark",
+    "Reorder Credit Card bookmark",
+    "Reorder Insights bookmark",
+    "Reorder Ops / Payroll bookmark",
+    "Review",
+    "Search for anything",
+    "Send money",
+    "Status",
+    "Tasks <n>",
+    "Taxes",
+    "Team Spend",
+    "Toggle Private Mode",
+    "Transactions",
+    "Upload bill",
+    "Viewing as Admin",
+    "Wire Drawdowns",
+    "my-company-name@ap.mercury.com",
+    "updates"
+   ],
+   "headings": [
+    "Bill Pay",
+    "<n>",
+    "Total outstanding",
+    "Overdue",
+    "Due in next <n> days"
+   ],
+   "path": "/bill-pay/inbox",
+   "structure": "document",
+   "top": {
+    "name": "",
+    "role": "document"
+   }
+  },
+  "hop": [],
+  "mutates": false,
+  "parent": "/bill-pay/inbox",
+  "recordedBy": "root",
+  "review": null,
+  "similarity": 0.9802,
+  "source": "97d170e1550eee4afc0af065b78cda302a97674c",
+  "status": "accepted"
+ },
+ "billpay.index": {
+  "checked": "2026-10-02-1349",
+  "fingerprint": {
+   "controls": [
+    "ACH Authorizations",
+    "Accounting",
+    "Accounts",
+    "Banking",
+    "Bill Pay",
+    "Books",
+    "Cards",
+    "Checkbooks",
+    "Choose Files",
+    "Command New",
+    "Credit Card",
+    "Customize your experience",
+    "Delete",
+    "Feedback",
+    "Home",
+    "Insights",
+    "Invoicing",
+    "Learn about bookmarks",
+    "Mercury Demo Pro",
+    "Move money",
+    "Navigate to Settings",
+    "Open account",
+    "Ops / Payroll <amount>",
+    "Payments",
+    "Recipients",
+    "Remove bookmark",
+    "Remove from bookmarks",
+    "Reorder Bill Pay bookmark",
+    "Reorder Credit Card bookmark",
+    "Reorder Insights bookmark",
+    "Reorder Ops / Payroll bookmark",
+    "Review",
+    "Search for anything",
+    "Send money",
+    "Status",
+    "Tasks <n>",
+    "Taxes",
+    "Team Spend",
+    "Toggle Private Mode",
+    "Transactions",
+    "Upload bill",
+    "Viewing as Admin",
+    "Wire Drawdowns",
+    "my-company-name@ap.mercury.com",
+    "updates"
+   ],
+   "headings": [
+    "Bill Pay",
+    "<n>",
+    "Total outstanding",
+    "Overdue",
+    "Due in next <n> days"
+   ],
+   "path": "/bill-pay",
+   "structure": "document",
+   "top": {
+    "name": "",
+    "role": "document"
+   }
+  },
+  "hop": [],
+  "mutates": false,
+  "parent": "/bill-pay",
+  "recordedBy": "root",
+  "review": null,
+  "similarity": 0.9965,
+  "source": "97d170e1550eee4afc0af065b78cda302a97674c",
+  "status": "accepted"
+ },
+ "billpay.needs-approval": {
+  "checked": "2026-10-02-1349",
+  "fingerprint": {
+   "controls": [
+    "ACH Authorizations",
+    "Accounting",
+    "Accounts",
+    "Banking",
+    "Bill Pay",
+    "Books",
+    "Cards",
+    "Checkbooks",
+    "Command New",
+    "Credit Card",
+    "Customize your experience",
+    "Feedback",
+    "Home",
+    "Insights",
+    "Invoicing",
+    "Learn about bookmarks",
+    "Mercury Demo Pro",
+    "Move money",
+    "Navigate to Settings",
+    "Open account",
+    "Ops / Payroll <amount>",
+    "Payments",
+    "Recipients",
+    "Remove bookmark",
+    "Remove from bookmarks",
+    "Reorder Bill Pay bookmark",
+    "Reorder Credit Card bookmark",
+    "Reorder Insights bookmark",
+    "Reorder Ops / Payroll bookmark",
+    "Review Requests",
+    "Search for anything",
+    "Send money",
+    "Status",
+    "Tasks <n>",
+    "Taxes",
+    "Team Spend",
+    "Toggle Private Mode",
+    "Transactions",
+    "Upload bill",
+    "Viewing as Admin",
+    "Wire Drawdowns",
+    "my-company-name@ap.mercury.com",
+    "updates"
+   ],
+   "headings": [
+    "Bill Pay",
+    "<n>",
+    "Total outstanding",
+    "Overdue",
+    "Due in next <n> days"
+   ],
+   "path": "/bill-pay/approvals",
+   "structure": "document",
+   "top": {
+    "name": "",
+    "role": "document"
+   }
+  },
+  "hop": [],
+  "mutates": false,
+  "parent": "/bill-pay/approvals",
+  "recordedBy": "root",
+  "review": null,
+  "similarity": 0.9981,
+  "source": "97d170e1550eee4afc0af065b78cda302a97674c",
+  "status": "accepted"
+ },
+ "billpay.paid": {
+  "checked": "2026-10-02-1349",
+  "fingerprint": {
+   "controls": [
+    "ACH Authorizations",
+    "Accounting",
+    "Accounts",
+    "Banking",
+    "Bill Pay",
+    "Books",
+    "Cards",
+    "Checkbooks",
+    "Command New",
+    "Credit Card",
+    "Customize your experience",
+    "Feedback",
+    "Home",
+    "Insights",
+    "Invoicing",
+    "Learn about bookmarks",
+    "Mercury Demo Pro",
+    "Move money",
+    "Navigate to Settings",
+    "Open account",
+    "Ops / Payroll <amount>",
+    "Payments",
+    "Recipients",
+    "Remove bookmark",
+    "Remove from bookmarks",
+    "Reorder Bill Pay bookmark",
+    "Reorder Credit Card bookmark",
+    "Reorder Insights bookmark",
+    "Reorder Ops / Payroll bookmark",
+    "Search for anything",
+    "Send money",
+    "Tasks <n>",
+    "Taxes",
+    "Team Spend",
+    "Toggle Private Mode",
+    "Transactions",
+    "Upload bill",
+    "Viewing as Admin",
+    "Wire Drawdowns",
+    "my-company-name@ap.mercury.com",
+    "updates"
+   ],
+   "headings": [
+    "Bill Pay",
+    "<n>",
+    "Total outstanding",
+    "Overdue",
+    "Due in next <n> days"
+   ],
+   "path": "/bill-pay/paid",
+   "structure": "document",
+   "top": {
+    "name": "",
+    "role": "document"
+   }
+  },
+  "hop": [],
+  "mutates": false,
+  "parent": "/bill-pay/paid",
+  "recordedBy": "root",
+  "review": null,
+  "similarity": 0.9865,
+  "source": "97d170e1550eee4afc0af065b78cda302a97674c",
+  "status": "accepted"
+ },
+ "billpay.paid-transaction": {
+  "checked": "2026-10-02-1349",
+  "fingerprint": null,
+  "hop": [
+   {
+    "click": {
+     "name": "Paid on Recipient Amount Account Method",
+     "role": "row"
+    }
+   }
+  ],
+  "mutates": false,
+  "parent": "billpay.paid",
+  "recordedBy": "draft",
+  "review": null,
+  "similarity": null,
+  "source": null,
+  "status": "draft"
+ },
+ "billpay.rule-details": {
+  "checked": "2026-10-02-1349",
+  "fingerprint": {
+   "controls": [
+    "Add condition",
+    "Close detail panel",
+    "Condition <n>",
+    "Create",
+    "Open combobox menu",
+    "Outcome"
+   ],
+   "headings": [],
+   "path": "/accounting/mapping/categorization-rules",
+   "structure": "dialog",
+   "top": {
+    "name": "",
+    "role": "complementary"
+   }
+  },
+  "hop": [
+   {
+    "click": {
+     "name": "Create a rule",
+     "role": "button"
+    }
+   }
+  ],
+  "mutates": false,
+  "parent": "billpay.categorization-rules",
+  "recordedBy": "draft",
+  "review": {
+   "by": "conductor",
+   "date": null,
+   "decision": null,
+   "reason": "below-threshold"
+  },
+  "similarity": 0.8897,
+  "source": "72c43e258909d8428c467bb5aa9d923bf4773261",
+  "status": "review"
+ },
+ "billpay.scheduled": {
+  "checked": "2026-10-02-1349",
+  "fingerprint": {
+   "controls": [
+    "ACH Authorizations",
+    "Accounting",
+    "Accounts",
+    "Banking",
+    "Bill Pay",
+    "Books",
+    "Cards",
+    "Checkbooks",
+    "Command New",
+    "Credit Card",
+    "Customize your experience",
+    "Feedback",
+    "Home",
+    "Insights",
+    "Invoicing",
+    "Learn about bookmarks",
+    "Mercury Demo Pro",
+    "Move money",
+    "Navigate to Settings",
+    "Open account",
+    "Ops / Payroll <amount>",
+    "Payments",
+    "Recipients",
+    "Remove bookmark",
+    "Remove from bookmarks",
+    "Reorder Bill Pay bookmark",
+    "Reorder Credit Card bookmark",
+    "Reorder Insights bookmark",
+    "Reorder Ops / Payroll bookmark",
+    "Search for anything",
+    "Send money",
+    "Status",
+    "Tasks <n>",
+    "Taxes",
+    "Team Spend",
+    "Toggle Private Mode",
+    "Transactions",
+    "Upload bill",
+    "Viewing as Admin",
+    "Wire Drawdowns",
+    "my-company-name@ap.mercury.com",
+    "updates"
+   ],
+   "headings": [
+    "Bill Pay",
+    "<n>",
+    "Total outstanding",
+    "Overdue",
+    "Due in next <n> days"
+   ],
+   "path": "/bill-pay/scheduled",
+   "structure": "document",
+   "top": {
+    "name": "",
+    "role": "document"
+   }
+  },
+  "hop": [],
+  "mutates": false,
+  "parent": "/bill-pay/scheduled",
+  "recordedBy": "root",
+  "review": null,
+  "similarity": 0.9893,
+  "source": "97d170e1550eee4afc0af065b78cda302a97674c",
+  "status": "accepted"
+ },
+ "billpay.upload-popover": {
+  "checked": "2026-10-02-1349",
+  "fingerprint": {
+   "controls": [
+    "Choose Files",
+    "my-company-name@ap.mercury.com"
+   ],
+   "headings": [],
+   "path": "/bill-pay",
+   "structure": "dialog",
+   "top": {
+    "name": "",
+    "role": "generic"
+   }
+  },
+  "hop": [
+   {
+    "click": {
+     "name": "Upload bill",
+     "role": "button"
+    }
+   }
+  ],
+  "mutates": true,
+  "parent": "billpay.index",
+  "recordedBy": "draft",
+  "review": null,
+  "similarity": 0.9799,
+  "source": "7fccd75683c08e2337e12796a17f38d3c66256dd",
+  "status": "accepted"
+ }
+}

@@ -1,0 +1,203 @@
+{
+ "books.coa-dropdown": {
+  "checked": "2026-10-02-1349",
+  "fingerprint": null,
+  "hop": [
+   {
+    "click": {
+     "name": "Chart of Accounts",
+     "role": "link"
+    }
+   }
+  ],
+  "mutates": false,
+  "parent": "books.index",
+  "recordedBy": "draft",
+  "review": null,
+  "similarity": null,
+  "source": null,
+  "status": "draft"
+ },
+ "books.coa-preview": {
+  "checked": "2026-10-02-1349",
+  "fingerprint": {
+   "controls": [
+    "Close preview"
+   ],
+   "headings": [
+    "Default (Recommended) chart of accounts"
+   ],
+   "path": "/books/signup",
+   "structure": "dialog",
+   "top": {
+    "name": "Default (Recommended) chart of accounts",
+    "role": "dialog"
+   }
+  },
+  "hop": [
+   {
+    "click": {
+     "name": "Preview chart of accounts",
+     "role": "button"
+    }
+   }
+  ],
+  "mutates": false,
+  "parent": "books.index",
+  "recordedBy": "draft",
+  "review": null,
+  "similarity": 0.9689,
+  "source": "d9adf24de6f4b0f3806c9a78dfbb69727f612a0c",
+  "status": "accepted"
+ },
+ "books.index": {
+  "checked": "2026-10-02-1349",
+  "fingerprint": {
+   "controls": [
+    "Accrual",
+    "Banking",
+    "Books",
+    "Cash",
+    "Chart of accounts",
+    "Customize your experience",
+    "Learn more about Books",
+    "Mercury Demo Pro",
+    "Open account",
+    "Preview chart of accounts",
+    "Try Mercury Books",
+    "Viewing as Admin"
+   ],
+   "headings": [
+    "Intelligent accounting built into Mercury"
+   ],
+   "path": "/books/signup",
+   "structure": "document",
+   "top": {
+    "name": "",
+    "role": "document"
+   }
+  },
+  "hop": [
+   {
+    "click": {
+     "name": "Books",
+     "role": "button"
+    }
+   }
+  ],
+  "mutates": false,
+  "parent": "home.index",
+  "recordedBy": "draft",
+  "review": null,
+  "similarity": 0.9648,
+  "source": "ef121c3afd25ca6e182ff6cc6f4af979480e4a10",
+  "status": "accepted"
+ },
+ "books.setup-transition": {
+  "checked": "2026-10-02-1349",
+  "fingerprint": {
+   "controls": [
+    "<date> – <n>: In <amount> Out <amount> Net <amount>. Press Enter or Space to view report details.",
+    "<date> – <n>: Total <amount>. Press Enter or Space to view report details.",
+    "<date>: Total <amount>. Press Enter or Space to view report details.",
+    "<n> of <n> setup steps complete Finalize setup",
+    "Accounting, Tax, and Audit <amount> <n>%",
+    "Accounts",
+    "Add",
+    "Advertising <amount> <n>%",
+    "Banking",
+    "Benefits Expense <amount> <<n>%",
+    "Bills",
+    "Books",
+    "Business Insurance <amount> <n>%",
+    "Chart of Accounts",
+    "Chase Credit Card <n> <amount>",
+    "Citi Checking <n> <amount>",
+    "Command",
+    "Computers and Hardware <amount> −<n>%",
+    "Cost of Revenue: Contractors <amount> <n>%",
+    "Cost of Revenue: Hosting and Infrastructure <amount> <<n>%",
+    "Cost of Revenue: Inventory <amount> <n>%",
+    "Customize your experience",
+    "Dismiss spotlight",
+    "Employee Reimbursements <amount> <<n>%",
+    "Home",
+    "Interest Paid <amount> <n>%",
+    "Invoices",
+    "Journal Entries",
+    "Jupiter Checking <n> <amount>",
+    "Keyboard shortcuts",
+    "Legal <amount> <n>%",
+    "Mercury Demo Pro",
+    "Mercury IO <amount>",
+    "Neptune Checking <n> <amount>",
+    "Open account",
+    "Ops / Payroll <amount>",
+    "Other Operating Expenses <amount> <n>%",
+    "Other Professional Services <amount> <n>%",
+    "Payroll",
+    "Payroll Taxes <amount> <<n>%",
+    "Petty Cash <amount>",
+    "Pluto Checking <n> <amount>",
+    "Product Revenue <amount> <n>%",
+    "Reconciliation",
+    "Rent <amount> <n>%",
+    "Repairs and Maintenance <amount> <n>%",
+    "Reports",
+    "Rules",
+    "Salaries and Wages <amount> <n>%",
+    "Search or jump to",
+    "Services Revenue <amount> <n>%",
+    "Settings",
+    "Stripe Payments Account <amount>",
+    "Subscription Revenue <amount> <n>%",
+    "Transactions",
+    "Uncategorized Cash Inflow <amount> <<n>%",
+    "Uncategorized Cash Outflow <amount> <<n>%",
+    "Venus Credit Card <n> <amount>",
+    "View Cash Flow Analysis",
+    "View expenses",
+    "View revenue",
+    "Viewing as Admin",
+    "Wells Fargo Checking <n> <amount>",
+    "Wells Fargo Credit Card <n> <amount>"
+   ],
+   "headings": [
+    "Mercury Demo",
+    "Cash",
+    "Net cash flow trend",
+    "Cash in vs out",
+    "By ledger account",
+    "Expenses",
+    "Revenue",
+    "Revenue trend"
+   ],
+   "path": "/books/<id>",
+   "structure": "document",
+   "top": {
+    "name": "",
+    "role": "document"
+   }
+  },
+  "hop": [
+   {
+    "click": {
+     "name": "Try Mercury Books",
+     "role": "button"
+    }
+   }
+  ],
+  "mutates": false,
+  "parent": "books.index",
+  "recordedBy": "draft",
+  "review": {
+   "by": "conductor",
+   "date": null,
+   "decision": null,
+   "reason": "below-threshold"
+  },
+  "similarity": 0.4649,
+  "source": "1751fe9f08c683957a280b24b3209e5cd360d40e",
+  "status": "review"
+ }
+}

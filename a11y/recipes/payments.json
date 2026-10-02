@@ -1,0 +1,1374 @@
+{
+ "payments.ach-add": {
+  "checked": "2026-10-02-1349",
+  "fingerprint": {
+   "controls": [
+    "Add new counterparty",
+    "Close",
+    "Customize your experience",
+    "Open account",
+    "Options",
+    "Vendor",
+    "Viewing as Admin"
+   ],
+   "headings": [],
+   "path": "/payments/authorizations/add",
+   "structure": "document",
+   "top": {
+    "name": "",
+    "role": "document"
+   }
+  },
+  "hop": [
+   {
+    "click": {
+     "name": "Add ACH authorization",
+     "role": "link"
+    }
+   }
+  ],
+  "mutates": false,
+  "parent": "payments.ach-authorizations",
+  "recordedBy": "draft",
+  "review": null,
+  "similarity": 0.9987,
+  "source": "ab70a3252890b49947f8901dc56086ec490c3eba",
+  "status": "accepted"
+ },
+ "payments.ach-authorizations": {
+  "checked": "2026-10-02-1349",
+  "fingerprint": {
+   "controls": [
+    "ACH Authorizations",
+    "Accounting",
+    "Accounts",
+    "Add ACH authorization",
+    "Add to bookmarks",
+    "Banking",
+    "Bill Pay",
+    "Books",
+    "Cards",
+    "Checkbooks",
+    "Command New",
+    "Credit Card",
+    "Customize your experience",
+    "Home",
+    "Insights",
+    "Invoicing",
+    "Learn about bookmarks",
+    "Mercury Demo Pro",
+    "Move money",
+    "Navigate to Settings",
+    "Open account",
+    "Ops / Payroll <amount>",
+    "Payments",
+    "Recipients",
+    "Remove bookmark",
+    "Reorder Bill Pay bookmark",
+    "Reorder Credit Card bookmark",
+    "Reorder Insights bookmark",
+    "Reorder Ops / Payroll bookmark",
+    "Search for anything",
+    "Tasks <n>",
+    "Taxes",
+    "Team Spend",
+    "Toggle Private Mode",
+    "Transactions",
+    "Viewing as Admin",
+    "Wire Drawdowns",
+    "updates"
+   ],
+   "headings": [
+    "ACH Authorizations"
+   ],
+   "path": "/payments/authorizations",
+   "structure": "document",
+   "top": {
+    "name": "",
+    "role": "document"
+   }
+  },
+  "hop": [],
+  "mutates": false,
+  "parent": "/payments/authorizations",
+  "recordedBy": "root",
+  "review": null,
+  "similarity": 0.9974,
+  "source": "97d170e1550eee4afc0af065b78cda302a97674c",
+  "status": "accepted"
+ },
+ "payments.ach-flagged": {
+  "checked": "2026-10-02-1349",
+  "fingerprint": {
+   "controls": [
+    "ACH Authorizations",
+    "Accounting",
+    "Accounts",
+    "Add ACH authorization",
+    "Add to bookmarks",
+    "Banking",
+    "Bill Pay",
+    "Books",
+    "Cards",
+    "Checkbooks",
+    "Command New",
+    "Controls",
+    "Credit Card",
+    "Customize your experience",
+    "Home",
+    "Insights",
+    "Invoicing",
+    "Learn about bookmarks",
+    "Mercury Demo Pro",
+    "Move money",
+    "Navigate to Settings",
+    "Open account",
+    "Ops / Payroll <amount>",
+    "Payments",
+    "Recipients",
+    "Remove bookmark",
+    "Reorder Bill Pay bookmark",
+    "Reorder Credit Card bookmark",
+    "Reorder Insights bookmark",
+    "Reorder Ops / Payroll bookmark",
+    "Search for anything",
+    "Tasks <n>",
+    "Taxes",
+    "Team Spend",
+    "Toggle Private Mode",
+    "Transactions",
+    "Viewing as Admin",
+    "Wire Drawdowns",
+    "select row <n>",
+    "updates"
+   ],
+   "headings": [
+    "ACH Authorizations"
+   ],
+   "path": "/payments/authorizations",
+   "structure": "document",
+   "top": {
+    "name": "",
+    "role": "document"
+   }
+  },
+  "hop": [],
+  "mutates": false,
+  "parent": "/payments/authorizations#flaggedPayments",
+  "recordedBy": "root",
+  "review": null,
+  "similarity": 0.9974,
+  "source": "97d170e1550eee4afc0af065b78cda302a97674c",
+  "status": "accepted"
+ },
+ "payments.deposit-check-details": {
+  "checked": "2026-10-02-1349",
+  "fingerprint": {
+   "controls": [
+    "Add a note to yourself (optional)",
+    "Amount",
+    "Back",
+    "Close",
+    "Customize your experience",
+    "Deposit to",
+    "From",
+    "Next",
+    "Open account",
+    "Viewing as Admin"
+   ],
+   "headings": [],
+   "path": "/add-funds/check/details",
+   "structure": "document",
+   "top": {
+    "name": "",
+    "role": "document"
+   }
+  },
+  "hop": [
+   {
+    "click": {
+     "name": "Got it",
+     "role": "button"
+    }
+   }
+  ],
+  "mutates": false,
+  "parent": "payments.deposit-check-start",
+  "recordedBy": "draft",
+  "review": null,
+  "similarity": 0.9971,
+  "source": "b5aa30989818bfe05077e29159be7df6281b7983",
+  "status": "accepted"
+ },
+ "payments.deposit-check-start": {
+  "checked": "2026-10-02-1349",
+  "fingerprint": {
+   "controls": [
+    "Close",
+    "Customize your experience",
+    "Go back",
+    "Got it",
+    "Open account",
+    "Viewing as Admin",
+    "our Help Center"
+   ],
+   "headings": [],
+   "path": "/add-funds/check/guidelines",
+   "structure": "document",
+   "top": {
+    "name": "",
+    "role": "document"
+   }
+  },
+  "hop": [],
+  "mutates": false,
+  "parent": "/add-funds/check/guidelines",
+  "recordedBy": "root",
+  "review": null,
+  "similarity": 0.9997,
+  "source": "97d170e1550eee4afc0af065b78cda302a97674c",
+  "status": "accepted"
+ },
+ "payments.deposit-wire-details": {
+  "checked": "2026-10-02-1349",
+  "fingerprint": {
+   "controls": [
+    "Back",
+    "Close",
+    "Customize your experience",
+    "Deposit to",
+    "Download as PDF",
+    "Open account",
+    "Share",
+    "Viewing as Admin"
+   ],
+   "headings": [],
+   "path": "/add-funds/wire",
+   "structure": "document",
+   "top": {
+    "name": "",
+    "role": "document"
+   }
+  },
+  "hop": [],
+  "mutates": false,
+  "parent": "/add-funds/wire",
+  "recordedBy": "root",
+  "review": null,
+  "similarity": 0.9813,
+  "source": "97d170e1550eee4afc0af065b78cda302a97674c",
+  "status": "accepted"
+ },
+ "payments.index": {
+  "checked": "2026-10-02-1349",
+  "fingerprint": {
+   "controls": [
+    "<amount>",
+    "ACH Authorizations",
+    "Accounting",
+    "Accounts",
+    "Banking",
+    "Bill Pay",
+    "Books",
+    "Cards",
+    "Checkbooks",
+    "Choose Files",
+    "Close detail panel",
+    "Command New",
+    "Credit Card",
+    "Customize your experience",
+    "Delete",
+    "Due date <date>",
+    "Feedback",
+    "Home",
+    "Insights",
+    "Invoice date <date>",
+    "Invoice no. INV-<n>",
+    "Invoicing",
+    "Learn about bookmarks",
+    "Mercury Demo Pro",
+    "Move money",
+    "Navigate to Settings",
+    "Open account",
+    "Ops / Payroll <amount>",
+    "Payments",
+    "Recipients",
+    "Remove bookmark",
+    "Reorder Bill Pay bookmark",
+    "Reorder Credit Card bookmark",
+    "Reorder Insights bookmark",
+    "Reorder Ops / Payroll bookmark",
+    "Review",
+    "Search for anything",
+    "Send money",
+    "Status",
+    "Tasks <n>",
+    "Taxes",
+    "Team Spend",
+    "Toggle Private Mode",
+    "Transactions",
+    "Upload attachment",
+    "Upload bill",
+    "View Email",
+    "Viewing as Admin",
+    "Wire Drawdowns",
+    "demo_invoice-after-ocr-<n>.pdf",
+    "my-company-name@ap.mercury.com",
+    "note",
+    "updates"
+   ],
+   "headings": [
+    "Payments"
+   ],
+   "path": "/payments",
+   "structure": "document",
+   "top": {
+    "name": "",
+    "role": "document"
+   }
+  },
+  "hop": [],
+  "mutates": false,
+  "parent": "/payments",
+  "recordedBy": "root",
+  "review": null,
+  "similarity": 0.9968,
+  "source": "97d170e1550eee4afc0af065b78cda302a97674c",
+  "status": "accepted"
+ },
+ "payments.move-money-menu": {
+  "checked": "2026-10-02-1349",
+  "fingerprint": {
+   "controls": [
+    "Deposit",
+    "Request",
+    "Send",
+    "Transfer",
+    "Upload bill"
+   ],
+   "headings": [],
+   "path": "/payments",
+   "structure": "menu",
+   "top": {
+    "name": "Move money",
+    "role": "menu"
+   }
+  },
+  "hop": [
+   {
+    "click": {
+     "name": "Move money",
+     "role": "button"
+    }
+   }
+  ],
+  "mutates": false,
+  "parent": "payments.index",
+  "recordedBy": "draft",
+  "review": null,
+  "similarity": 0.9965,
+  "source": "b72a1e700172cd2f1a43539283cdd147ee4ffd5a",
+  "status": "accepted"
+ },
+ "payments.needs-approval": {
+  "checked": "2026-10-02-1349",
+  "fingerprint": {
+   "controls": [
+    "ACH Authorizations",
+    "Accounting",
+    "Accounts",
+    "Approve",
+    "Banking",
+    "Bill Pay",
+    "Books",
+    "Cards",
+    "Checkbooks",
+    "Close detail panel",
+    "Command New",
+    "Credit Card",
+    "Customize your experience",
+    "Decline",
+    "Feedback",
+    "Home",
+    "Insights",
+    "Invoicing",
+    "Learn about bookmarks",
+    "Mercury Demo Pro",
+    "Move money",
+    "Navigate to Settings",
+    "Open account",
+    "Ops / Payroll <amount>",
+    "Payments",
+    "Recipients",
+    "Remove bookmark",
+    "Reorder Bill Pay bookmark",
+    "Reorder Credit Card bookmark",
+    "Reorder Insights bookmark",
+    "Reorder Ops / Payroll bookmark",
+    "Review",
+    "Review Requests",
+    "Search for anything",
+    "Send money",
+    "Status",
+    "Tasks <n>",
+    "Taxes",
+    "Team Spend",
+    "Toggle Private Mode",
+    "Transactions",
+    "Upload bill",
+    "Viewing as Admin",
+    "Wire Drawdowns",
+    "a<n>bdc-<n>ea-<n>e<n>.pdf",
+    "my-company-name@ap.mercury.com",
+    "updates"
+   ],
+   "headings": [
+    "Payments"
+   ],
+   "path": "/payments/approvals",
+   "structure": "document",
+   "top": {
+    "name": "",
+    "role": "document"
+   }
+  },
+  "hop": [],
+  "mutates": false,
+  "parent": "/payments/approvals",
+  "recordedBy": "root",
+  "review": null,
+  "similarity": 0.9982,
+  "source": "97d170e1550eee4afc0af065b78cda302a97674c",
+  "status": "accepted"
+ },
+ "payments.paid": {
+  "checked": "2026-10-02-1349",
+  "fingerprint": {
+   "controls": [
+    "ACH Authorizations",
+    "Accounting",
+    "Accounts",
+    "Banking",
+    "Bill Pay",
+    "Books",
+    "Cards",
+    "Checkbooks",
+    "Command New",
+    "Credit Card",
+    "Customize your experience",
+    "Feedback",
+    "Home",
+    "Insights",
+    "Invoicing",
+    "Learn about bookmarks",
+    "Mercury Demo Pro",
+    "Move money",
+    "Navigate to Settings",
+    "Open account",
+    "Ops / Payroll <amount>",
+    "Payments",
+    "Recipients",
+    "Remove bookmark",
+    "Reorder Bill Pay bookmark",
+    "Reorder Credit Card bookmark",
+    "Reorder Insights bookmark",
+    "Reorder Ops / Payroll bookmark",
+    "Search for anything",
+    "Send money",
+    "Tasks <n>",
+    "Taxes",
+    "Team Spend",
+    "Toggle Private Mode",
+    "Transactions",
+    "Upload bill",
+    "Viewing as Admin",
+    "Wire Drawdowns",
+    "my-company-name@ap.mercury.com",
+    "updates"
+   ],
+   "headings": [
+    "Payments"
+   ],
+   "path": "/payments/paid",
+   "structure": "document",
+   "top": {
+    "name": "",
+    "role": "document"
+   }
+  },
+  "hop": [],
+  "mutates": false,
+  "parent": "/payments/paid",
+  "recordedBy": "root",
+  "review": {
+   "by": "conductor",
+   "date": "2026-10-02",
+   "decision": "accept",
+   "note": "same screen; dates, amounts and chart data drifted since the capture",
+   "reason": "below-threshold"
+  },
+  "similarity": 0.8973,
+  "source": "97d170e1550eee4afc0af065b78cda302a97674c",
+  "status": "accepted"
+ },
+ "payments.recipient-create": {
+  "checked": "2026-10-02-1349",
+  "fingerprint": {
+   "controls": [
+    "Apartment, suite, floor (optional)",
+    "Business",
+    "City",
+    "Close",
+    "Country",
+    "Create recipient",
+    "Customize your experience",
+    "Email (optional)",
+    "Go back",
+    "Invite them to fill out their own profile",
+    "Legal name",
+    "Nickname (optional)",
+    "Open account",
+    "Open combobox menu",
+    "Person",
+    "Postal / ZIP code",
+    "Recipient legal address",
+    "Request Tax Documents Request Tax Documents",
+    "State",
+    "Viewing as Admin"
+   ],
+   "headings": [
+    "Create recipient",
+    "Profile",
+    "Address"
+   ],
+   "path": "/payments/recipients/new",
+   "structure": "document",
+   "top": {
+    "name": "",
+    "role": "document"
+   }
+  },
+  "hop": [
+   {
+    "click": {
+     "name": "Create recipient",
+     "role": "button"
+    }
+   }
+  ],
+  "mutates": true,
+  "parent": "payments.recipients",
+  "recordedBy": "draft",
+  "review": null,
+  "similarity": 0.9998,
+  "source": "65b49a9692e97c3fcdb7f25fba19fff33bbed485",
+  "status": "accepted"
+ },
+ "payments.recipient-invite": {
+  "checked": "2026-10-02-1349",
+  "fingerprint": {
+   "controls": [
+    "ACH",
+    "Check",
+    "Close",
+    "Customize your experience",
+    "Email address",
+    "Go back",
+    "Import a CSV",
+    "Name",
+    "Name to show on the request",
+    "Next",
+    "Open account",
+    "Open combobox menu",
+    "Possible payment methods",
+    "Require tax documents (W-<n> or W-<n>BEN)",
+    "Set up a payment now It won’t be sent until your recipient provides their payment details.",
+    "Viewing as Admin",
+    "Wire"
+   ],
+   "headings": [],
+   "path": "/payments/recipients/create/request",
+   "structure": "document",
+   "top": {
+    "name": "",
+    "role": "document"
+   }
+  },
+  "hop": [
+   {
+    "click": {
+     "name": "Invite recipient",
+     "role": "button"
+    }
+   }
+  ],
+  "mutates": true,
+  "parent": "payments.send-start",
+  "recordedBy": "draft",
+  "review": {
+   "by": "conductor",
+   "date": null,
+   "decision": null,
+   "reason": "below-threshold"
+  },
+  "similarity": 0.7709,
+  "source": "3e319109aec45993d142fbf83cb6e8d34771aa47",
+  "status": "review"
+ },
+ "payments.recipients": {
+  "checked": "2026-10-02-1349",
+  "fingerprint": {
+   "controls": [
+    "ACH Authorizations",
+    "Accounting",
+    "Accounts",
+    "Add to bookmarks",
+    "All",
+    "Banking",
+    "Bill Pay",
+    "Books",
+    "Cards",
+    "Checkbooks",
+    "Command New",
+    "Create recipient",
+    "Credit Card",
+    "Customize your experience",
+    "Download W-<n>/W-<n>BEN",
+    "Export all",
+    "Filters",
+    "Has Tax Docs",
+    "Home",
+    "Insights",
+    "Invoicing",
+    "Last paid Click to sort",
+    "Learn about bookmarks",
+    "Mercury Demo Pro",
+    "Move money",
+    "Name Click to sort",
+    "Navigate to Settings",
+    "Needs Tax Docs",
+    "Open Menu",
+    "Open account",
+    "Ops / Payroll <amount>",
+    "Payments",
+    "Recipients",
+    "Remove bookmark",
+    "Reorder Bill Pay bookmark",
+    "Reorder Credit Card bookmark",
+    "Reorder Insights bookmark",
+    "Reorder Ops / Payroll bookmark",
+    "Request tax docs",
+    "Search for anything",
+    "Send NDA",
+    "Status Click to sort",
+    "Tasks <n>",
+    "Tax docs Click to sort",
+    "Taxes",
+    "Team Spend",
+    "Toggle Private Mode",
+    "Total paid Click to sort",
+    "Transactions",
+    "Unselect",
+    "Viewing as Admin",
+    "Wire Drawdowns",
+    "updates"
+   ],
+   "headings": [
+    "Recipients"
+   ],
+   "path": "/payments/recipients",
+   "structure": "document",
+   "top": {
+    "name": "",
+    "role": "document"
+   }
+  },
+  "hop": [],
+  "mutates": false,
+  "parent": "/payments/recipients",
+  "recordedBy": "root",
+  "review": null,
+  "similarity": 0.9964,
+  "source": "97d170e1550eee4afc0af065b78cda302a97674c",
+  "status": "accepted"
+ },
+ "payments.recipients-needs-tax-docs": {
+  "checked": "2026-10-02-1349",
+  "fingerprint": {
+   "controls": [
+    "ACH Authorizations",
+    "Accounting",
+    "Accounts",
+    "Add to bookmarks",
+    "All",
+    "Banking",
+    "Bill Pay",
+    "Books",
+    "Cards",
+    "Checkbooks",
+    "Command New",
+    "Create recipient",
+    "Credit Card",
+    "Customize your experience",
+    "Export filtered",
+    "Filters",
+    "Has Tax Docs",
+    "Home",
+    "Insights",
+    "Invoicing",
+    "Last paid Click to sort",
+    "Learn about bookmarks",
+    "Mercury Demo Pro",
+    "Move money",
+    "Name Click to sort",
+    "Navigate to Settings",
+    "Needs Tax Docs",
+    "Open Menu",
+    "Open account",
+    "Ops / Payroll <amount>",
+    "Payments",
+    "Recipients",
+    "Remove bookmark",
+    "Reorder Bill Pay bookmark",
+    "Reorder Credit Card bookmark",
+    "Reorder Insights bookmark",
+    "Reorder Ops / Payroll bookmark",
+    "Request tax docs",
+    "Search for anything",
+    "Send NDA",
+    "Status Click to sort",
+    "Tasks <n>",
+    "Tax docs Click to sort",
+    "Taxes",
+    "Team Spend",
+    "Toggle Private Mode",
+    "Total paid Click to sort",
+    "Transactions",
+    "Unselect",
+    "Viewing as Admin",
+    "Wire Drawdowns",
+    "updates"
+   ],
+   "headings": [
+    "Recipients"
+   ],
+   "path": "/payments/recipients",
+   "structure": "document",
+   "top": {
+    "name": "",
+    "role": "document"
+   }
+  },
+  "hop": [
+   {
+    "click": {
+     "name": "Needs Tax Docs",
+     "role": "menuitem"
+    }
+   }
+  ],
+  "mutates": false,
+  "parent": "payments.recipients",
+  "recordedBy": "draft",
+  "review": null,
+  "similarity": 0.9967,
+  "source": "ea723e38d118a79f40afad2c3649e86718be9401",
+  "status": "accepted"
+ },
+ "payments.request-link-form": {
+  "checked": "2026-10-02-1349",
+  "fingerprint": {
+   "controls": [
+    "Back",
+    "Close",
+    "Create a one-time invoice Send a one-time invoice with a built-in payment link.",
+    "Create a recurring series Automatically generate recurring invoices on a set schedule.",
+    "Customize your experience",
+    "International Wire",
+    "Manual Transfer",
+    "Name",
+    "Next",
+    "Open account",
+    "Pay With Mercury",
+    "Request money without an invoice Send only a payment link with a single amount.",
+    "Viewing as Admin"
+   ],
+   "headings": [
+    "How would you like to request money?",
+    "Mercury Demo sent you a payment link",
+    "Pay With Mercury",
+    "Manual Transfer",
+    "International Wire"
+   ],
+   "path": "/invoicing/create-invoice",
+   "structure": "document",
+   "top": {
+    "name": "",
+    "role": "document"
+   }
+  },
+  "hop": [
+   {
+    "click": {
+     "name": "Request money without an invoice Send only a payment link with a single amount.",
+     "role": "radio"
+    }
+   },
+   {
+    "click": {
+     "name": "Next",
+     "role": "button"
+    }
+   }
+  ],
+  "mutates": false,
+  "parent": "payments.request-start",
+  "recordedBy": "draft",
+  "review": {
+   "by": "conductor",
+   "date": null,
+   "decision": null,
+   "reason": "below-threshold"
+  },
+  "similarity": 0.5581,
+  "source": "cb72d7909ecfbdf4be7d36c7ce6dd85e47fe7500",
+  "status": "review"
+ },
+ "payments.request-start": {
+  "checked": "2026-10-02-1349",
+  "fingerprint": {
+   "controls": [
+    "Back",
+    "Close",
+    "Create a one-time invoice Send a one-time invoice with a built-in payment link.",
+    "Create a recurring series Automatically generate recurring invoices on a set schedule.",
+    "Customize your experience",
+    "International Wire",
+    "Manual Transfer",
+    "Name",
+    "Next",
+    "Open account",
+    "Pay With Mercury",
+    "Request money without an invoice Send only a payment link with a single amount.",
+    "Viewing as Admin"
+   ],
+   "headings": [
+    "How would you like to request money?",
+    "Nebula Consulting Group sent you an invoice",
+    "Invoice",
+    "From",
+    "To",
+    "Details",
+    "Terms",
+    "Memo",
+    "Payment methods",
+    "Manual Transfer",
+    "International Wire",
+    "Pay With Mercury"
+   ],
+   "path": "/invoicing/create-invoice",
+   "structure": "document",
+   "top": {
+    "name": "",
+    "role": "document"
+   }
+  },
+  "hop": [],
+  "mutates": false,
+  "parent": "/invoicing/create-invoice",
+  "recordedBy": "root",
+  "review": null,
+  "similarity": 0.9993,
+  "source": "97d170e1550eee4afc0af065b78cda302a97674c",
+  "status": "accepted"
+ },
+ "payments.scheduled": {
+  "checked": "2026-10-02-1349",
+  "fingerprint": {
+   "controls": [
+    "ACH Authorizations",
+    "Accounting",
+    "Accounts",
+    "Banking",
+    "Bill Pay",
+    "Books",
+    "Cards",
+    "Checkbooks",
+    "Command New",
+    "Credit Card",
+    "Customize your experience",
+    "Feedback",
+    "Home",
+    "Insights",
+    "Invoicing",
+    "Learn about bookmarks",
+    "Mercury Demo Pro",
+    "Move money",
+    "Navigate to Settings",
+    "Open account",
+    "Ops / Payroll <amount>",
+    "Payments",
+    "Recipients",
+    "Remove bookmark",
+    "Reorder Bill Pay bookmark",
+    "Reorder Credit Card bookmark",
+    "Reorder Insights bookmark",
+    "Reorder Ops / Payroll bookmark",
+    "Search for anything",
+    "Send money",
+    "Status",
+    "Tasks <n>",
+    "Taxes",
+    "Team Spend",
+    "Toggle Private Mode",
+    "Transactions",
+    "Upload bill",
+    "Viewing as Admin",
+    "Wire Drawdowns",
+    "my-company-name@ap.mercury.com",
+    "updates"
+   ],
+   "headings": [
+    "Payments"
+   ],
+   "path": "/payments/scheduled",
+   "structure": "document",
+   "top": {
+    "name": "",
+    "role": "document"
+   }
+  },
+  "hop": [],
+  "mutates": false,
+  "parent": "/payments/scheduled",
+  "recordedBy": "root",
+  "review": null,
+  "similarity": 0.9947,
+  "source": "97d170e1550eee4afc0af065b78cda302a97674c",
+  "status": "accepted"
+ },
+ "payments.send-start": {
+  "checked": "2026-10-02-1349",
+  "fingerprint": {
+   "controls": [
+    "Aliyah McMahon Nutritionist aliyah@mcmahon.com",
+    "Choose File",
+    "Choose Files",
+    "Close",
+    "Create recipient",
+    "Customize your experience",
+    "Domestic Ads",
+    "Invite recipient",
+    "Jason Green Contractor jason@green.com",
+    "Open account",
+    "Search",
+    "Viewing as Admin"
+   ],
+   "headings": [
+    "Upload a bill",
+    "How would you like to start?",
+    "Use this to automatically pre-fill your recipient’s payment details.",
+    "Select a recipient"
+   ],
+   "path": "/send-money/pay/start",
+   "structure": "document",
+   "top": {
+    "name": "",
+    "role": "document"
+   }
+  },
+  "hop": [],
+  "mutates": false,
+  "parent": "/send-money/pay/start",
+  "recordedBy": "root",
+  "review": null,
+  "similarity": 0.9652,
+  "source": "97d170e1550eee4afc0af065b78cda302a97674c",
+  "status": "accepted"
+ },
+ "payments.taxes": {
+  "checked": "2026-10-02-1349",
+  "fingerprint": {
+   "controls": [
+    "ACH Authorizations",
+    "Accounting",
+    "Accounts",
+    "Add recipient",
+    "Add to bookmarks",
+    "Banking",
+    "Bill Pay",
+    "Books",
+    "Cards",
+    "Checkbooks",
+    "Combine <n> Filings",
+    "Command New",
+    "Credit Card",
+    "Customize your experience",
+    "Edit Filing",
+    "Edit Filing Button",
+    "Feedback",
+    "Home",
+    "Insights",
+    "Invoicing",
+    "Learn about bookmarks",
+    "Mercury Demo Pro",
+    "Move money",
+    "Navigate to Settings",
+    "Open Menu",
+    "Open account",
+    "Ops / Payroll <amount>",
+    "Payments",
+    "Recipients",
+    "Refresh",
+    "Remove Filing Button",
+    "Remove bookmark",
+    "Remove payees from <n> filing",
+    "Reorder Bill Pay bookmark",
+    "Reorder Credit Card bookmark",
+    "Reorder Insights bookmark",
+    "Reorder Ops / Payroll bookmark",
+    "Request W-<n>s",
+    "Request W<n>s",
+    "Search for anything",
+    "Tasks <n>",
+    "Tax Year: <n>",
+    "Taxes",
+    "Team Spend",
+    "Toggle Private Mode",
+    "Transactions",
+    "Viewing as Admin",
+    "Wire Drawdowns",
+    "updates"
+   ],
+   "headings": [
+    "Taxes",
+    "Filing updates and tasks"
+   ],
+   "path": "/taxes/<id>/filing/<id>",
+   "structure": "document",
+   "top": {
+    "name": "",
+    "role": "document"
+   }
+  },
+  "hop": [],
+  "mutates": false,
+  "parent": "/taxes/1099/filing/2026",
+  "recordedBy": "root",
+  "review": null,
+  "similarity": 0.9995,
+  "source": "97d170e1550eee4afc0af065b78cda302a97674c",
+  "status": "accepted"
+ },
+ "payments.taxes-documents": {
+  "checked": "2026-10-02-1349",
+  "fingerprint": {
+   "controls": [
+    "<n>-MISC",
+    "<n>-NEC",
+    "ACH Authorizations",
+    "Accounting",
+    "Accounts",
+    "Add to bookmarks",
+    "Banking",
+    "Bill Pay",
+    "Books",
+    "Cards",
+    "Checkbooks",
+    "Command New",
+    "Credit Card",
+    "Customize your experience",
+    "Download",
+    "Home",
+    "Insights",
+    "Invoicing",
+    "Learn about bookmarks",
+    "Mercury Demo Pro",
+    "Move money",
+    "Navigate to Settings",
+    "Open account",
+    "Ops / Payroll <amount>",
+    "Other tax documents",
+    "Payments",
+    "Recipients",
+    "Remove bookmark",
+    "Reorder Bill Pay bookmark",
+    "Reorder Credit Card bookmark",
+    "Reorder Insights bookmark",
+    "Reorder Ops / Payroll bookmark",
+    "Search for anything",
+    "Tasks <n>",
+    "Taxes",
+    "Team Spend",
+    "Toggle Private Mode",
+    "Transactions",
+    "Viewing as Admin",
+    "W-<n>/W-<n>BEN",
+    "Wire Drawdowns",
+    "updates"
+   ],
+   "headings": [
+    "Taxes"
+   ],
+   "path": "/taxes/<id>/documents",
+   "structure": "document",
+   "top": {
+    "name": "",
+    "role": "document"
+   }
+  },
+  "hop": [],
+  "mutates": false,
+  "parent": "/taxes/1099/documents",
+  "recordedBy": "root",
+  "review": null,
+  "similarity": 0.9994,
+  "source": "97d170e1550eee4afc0af065b78cda302a97674c",
+  "status": "accepted"
+ },
+ "payments.taxes-request-w9s": {
+  "checked": "2026-10-02-1349",
+  "fingerprint": {
+   "controls": [
+    "Cancel",
+    "Request W-<n>s"
+   ],
+   "headings": [],
+   "path": "/taxes/<id>/<id>/<id>",
+   "structure": "dialog",
+   "top": {
+    "name": "<n> selected",
+    "role": "dialog"
+   }
+  },
+  "hop": [
+   {
+    "click": {
+     "name": "Request W-<n>s",
+     "role": "button"
+    }
+   }
+  ],
+  "mutates": true,
+  "parent": "payments.taxes",
+  "recordedBy": "draft",
+  "review": null,
+  "similarity": 0.9996,
+  "source": "056faa99099924343466255e7d7ad419aa18cdd6",
+  "status": "accepted"
+ },
+ "payments.taxes-year-menu": {
+  "checked": "2026-10-02-1349",
+  "fingerprint": {
+   "controls": [
+    "<n>"
+   ],
+   "headings": [],
+   "path": "/taxes/<id>/filing/<id>",
+   "structure": "menu",
+   "top": {
+    "name": "Close Menu",
+    "role": "menu"
+   }
+  },
+  "hop": [
+   {
+    "click": {
+     "name": "Tax Year: <n>",
+     "role": "button"
+    }
+   }
+  ],
+  "mutates": false,
+  "parent": "payments.taxes",
+  "recordedBy": "draft",
+  "review": null,
+  "similarity": 0.9994,
+  "source": "7c768da0c6cf16f56288d3e19b92eceb2745bca3",
+  "status": "accepted"
+ },
+ "payments.transfer-start": {
+  "checked": "2026-10-02-1349",
+  "fingerprint": {
+   "controls": [
+    "Add more details",
+    "Amount",
+    "Back",
+    "Close",
+    "Customize your experience",
+    "Next",
+    "Open account",
+    "Transfer from",
+    "Transfer to",
+    "Viewing as Admin"
+   ],
+   "headings": [
+    "Transfer funds",
+    "One-time transfer",
+    "Auto transfer rule"
+   ],
+   "path": "/send-money/transfer",
+   "structure": "document",
+   "top": {
+    "name": "",
+    "role": "document"
+   }
+  },
+  "hop": [
+   {
+    "click": {
+     "name": "Transfer",
+     "role": "menuitem"
+    }
+   }
+  ],
+  "mutates": true,
+  "parent": "payments.move-money-menu",
+  "recordedBy": "draft",
+  "review": null,
+  "similarity": 0.9996,
+  "source": "feb8a74dd44a44233502076025b48d4e2a9610b2",
+  "status": "accepted"
+ },
+ "payments.wire-drawdown-create": {
+  "checked": "2026-10-02-1349",
+  "fingerprint": {
+   "controls": [
+    "Back",
+    "Close",
+    "Custom",
+    "Customize your experience",
+    "Next",
+    "Open account",
+    "Payroll / Benefits",
+    "Viewing as Admin"
+   ],
+   "headings": [],
+   "path": "/wire-drawdowns/recipient-details",
+   "structure": "document",
+   "top": {
+    "name": "",
+    "role": "document"
+   }
+  },
+  "hop": [
+   {
+    "click": {
+     "name": "Create authorization",
+     "role": "link"
+    }
+   }
+  ],
+  "mutates": true,
+  "parent": "payments.wire-drawdowns",
+  "recordedBy": "draft",
+  "review": null,
+  "similarity": 0.9999,
+  "source": "8a1f9bcd5278f5662283c4f25db9d8c5e3aa2869",
+  "status": "accepted"
+ },
+ "payments.wire-drawdown-payroll": {
+  "checked": "2026-10-02-1349",
+  "fingerprint": {
+   "controls": [
+    "Back",
+    "Close",
+    "Custom",
+    "Customize your experience",
+    "Next",
+    "Open account",
+    "Payroll / Benefits",
+    "Recipient",
+    "Viewing as Admin"
+   ],
+   "headings": [],
+   "path": "/wire-drawdowns/recipient-details",
+   "structure": "document",
+   "top": {
+    "name": "",
+    "role": "document"
+   }
+  },
+  "hop": [
+   {
+    "click": {
+     "name": "Payroll / Benefits",
+     "role": "radio"
+    }
+   }
+  ],
+  "mutates": true,
+  "parent": "payments.wire-drawdown-create",
+  "recordedBy": "draft",
+  "review": null,
+  "similarity": 0.9998,
+  "source": "79250d102434d0b9311e35dba5b4b9df2277279c",
+  "status": "accepted"
+ },
+ "payments.wire-drawdowns": {
+  "checked": "2026-10-02-1349",
+  "fingerprint": {
+   "controls": [
+    "ACH Authorizations",
+    "Accounting",
+    "Accounts",
+    "Add to bookmarks",
+    "Banking",
+    "Bill Pay",
+    "Books",
+    "Cards",
+    "Checkbooks",
+    "Command New",
+    "Create authorization",
+    "Credit Card",
+    "Customize your experience",
+    "Home",
+    "Insights",
+    "Invoicing",
+    "Learn about bookmarks",
+    "Mercury Demo Pro",
+    "Move money",
+    "Navigate to Settings",
+    "Open account",
+    "Ops / Payroll <amount>",
+    "Payments",
+    "Recipients",
+    "Remove bookmark",
+    "Reorder Bill Pay bookmark",
+    "Reorder Credit Card bookmark",
+    "Reorder Insights bookmark",
+    "Reorder Ops / Payroll bookmark",
+    "Search for anything",
+    "Tasks <n>",
+    "Taxes",
+    "Team Spend",
+    "Toggle Private Mode",
+    "Transactions",
+    "View drawdown for Custom Entity",
+    "View drawdown for Resourcing Edge I, LLC",
+    "View drawdown for gusto",
+    "View drawdown for trinet",
+    "Viewing as Admin",
+    "Wire Drawdowns",
+    "updates"
+   ],
+   "headings": [
+    "Wire Drawdowns"
+   ],
+   "path": "/payments/wire-drawdowns",
+   "structure": "document",
+   "top": {
+    "name": "",
+    "role": "document"
+   }
+  },
+  "hop": [],
+  "mutates": false,
+  "parent": "/payments/wire-drawdowns",
+  "recordedBy": "root",
+  "review": null,
+  "similarity": 0.9984,
+  "source": "97d170e1550eee4afc0af065b78cda302a97674c",
+  "status": "accepted"
+ }
+}
