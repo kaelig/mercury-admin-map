@@ -1,0 +1,30 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><title>Tab order</title>
+<style>
+  body { font: 16px/1.4 sans-serif; margin: 24px; color: #111; background: #fff; }
+  button { font: inherit; height: 40px; }
+  /* DOM order Download, Share, Print; Print is drawn a row above the other two. */
+  .grid { display: grid; grid-template-columns: 200px 200px; grid-auto-rows: 80px; gap: 20px; align-items: start; }
+  #print { grid-row: 1; grid-column: 1; }
+  #download { grid-row: 2; grid-column: 1; }
+  #share { grid-row: 2; grid-column: 2; }
+  /* Responds to a click, takes no focus. */
+  .card { cursor: pointer; width: 300px; margin: 16px 0; padding: 16px; border: 1px solid #ccc; }
+</style></head>
+<body>
+<main>
+  <h1>Statements</h1>
+  <div class="grid">
+    <button id="download">Download</button>
+    <button id="share">Share</button>
+    <button id="print">Print</button>
+  </div>
+  <div class="card" id="card">Open statement</div>
+  <button id="done">Done</button>
+  <!-- Disabled: Tab skips it by design, so it is not a not-reached candidate. -->
+  <button id="archive" disabled>Archive</button>
+</main>
+<script>
+  document.getElementById('card').addEventListener('click', (e) => { e.currentTarget.textContent = 'Statement opened'; });
+</script>
+</body></html>

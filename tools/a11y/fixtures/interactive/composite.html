@@ -1,0 +1,32 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><title>Composite widgets</title>
+<style>body { font: 16px/1.4 sans-serif; margin: 24px; color: #111; background: #fff; } button { font: inherit; margin: 8px; }</style></head>
+<body>
+<main>
+  <h1>Account</h1>
+  <!-- WAI-ARIA APG tabs with roving tabindex: one tab stop; the other tabs are reached with arrow keys. -->
+  <div role="tablist" aria-label="Account views">
+    <button role="tab" id="tab-overview" aria-selected="true" tabindex="0">Overview</button>
+    <button role="tab" id="tab-activity" aria-selected="false" tabindex="-1">Activity</button>
+    <button role="tab" id="tab-statements" aria-selected="false" tabindex="-1">Statements</button>
+  </div>
+  <!-- A toolbar that leaves every button in the tab order: three presses, one stop. -->
+  <div role="toolbar" aria-label="Formatting">
+    <button>Bold</button><button>Italic</button><button>Underline</button>
+  </div>
+  <button>Done</button>
+</main>
+<script>
+  const tabs = [...document.querySelectorAll('[role=tab]')];
+  document.querySelector('[role=tablist]').addEventListener('keydown', (e) => {
+    const step = { ArrowRight: 1, ArrowLeft: tabs.length - 1 }[e.key];
+    if (!step) return;
+    const next = tabs[(tabs.indexOf(document.activeElement) + step) % tabs.length];
+    for (const t of tabs) {
+      t.setAttribute('aria-selected', String(t === next));
+      t.tabIndex = t === next ? 0 : -1;
+    }
+    next.focus();
+  });
+</script>
+</body></html>

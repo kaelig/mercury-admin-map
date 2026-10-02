@@ -1,0 +1,33 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><title>Card nickname form</title>
+<style>
+  body { font: 16px/1.4 sans-serif; margin: 24px; color: #111; background: #fff; }
+  button, input { font: inherit; margin: 8px; }
+  .row { margin: 12px 0; }
+  .error { margin: 4px 0; color: #b00020; }
+</style></head>
+<body>
+<main>
+  <h1>Card nickname</h1>
+  <form id="form" novalidate>
+    <!-- On submit: aria-invalid plus aria-errormessage pointing at the error. Tied. -->
+    <div class="row"><label for="nickname">Nickname</label><input id="nickname"><p class="error" id="nickname-error" hidden>Enter a nickname</p></div>
+    <!-- On submit: aria-invalid, and the error only sits next to the field. Not tied. -->
+    <div class="row"><label for="zip">ZIP code</label><input id="zip"><p class="error" hidden>Enter a 5-digit ZIP code</p></div>
+    <button>Save</button>
+  </form>
+</main>
+<script>
+  document.getElementById('form').addEventListener('submit', (e) => {
+    e.preventDefault();
+    const nickname = document.getElementById('nickname');
+    nickname.setAttribute('aria-invalid', 'true');
+    nickname.setAttribute('aria-errormessage', 'nickname-error');
+    document.getElementById('nickname-error').hidden = false;
+    const zip = document.getElementById('zip');
+    zip.setAttribute('aria-invalid', 'true');
+    zip.nextElementSibling.hidden = false;
+    nickname.focus();
+  });
+</script>
+</body></html>

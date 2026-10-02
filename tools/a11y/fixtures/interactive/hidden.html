@@ -1,0 +1,24 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><title>Hidden focus</title>
+<style>
+  body { font: 16px/1.4 sans-serif; margin: 24px; color: #111; background: #fff; }
+  button { font: inherit; margin: 8px; }
+  /* A skip link that appears on focus: off screen until focused. */
+  .skip { position: absolute; left: -10000px; top: 8px; padding: 8px; background: #fff; }
+  .skip:focus { left: 8px; }
+  /* Focusable elements that stay hidden while focused: clipped, off screen, transparent. */
+  .sr-only { position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; border: 0; }
+  .offscreen { position: absolute; left: -10000px; }
+  .ghost { opacity: 0; }
+</style></head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+<header><nav aria-label="Primary"><a href="#home">Home</a></nav></header>
+<main id="main" tabindex="-1">
+  <h1>Hidden focus</h1>
+  <a class="sr-only" href="#help">Help center</a>
+  <button class="offscreen">Export CSV</button>
+  <button class="ghost">Undo</button>
+  <button>Continue</button>
+</main>
+</body></html>

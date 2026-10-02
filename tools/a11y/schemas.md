@@ -270,9 +270,10 @@ templates in scope. A replay matches when `path` and `top` are equal and the Jac
     "axe": {"rulesRan": ["color-contrast", "target-size", "label-content-name-mismatch", "..."], "inapplicable": ["..."]},
     "interactive": [ "<occurrence>", "..." ],
     "target": {"measured": 42},
-    "tabwalk": {"stops": [], "end": "body" | "repeat" | "limit", "presses": 31},
-    "dialog": {"trigger": "<occurrence>", "opened": "enter" | "space" | null, "trace": []},
-    "status": {"message": "...", "region": {"role": "status", "preexisting": true}, "focused": false}
+    "tabwalk": {"stops": [], "end": "body" | "repeat" | "exit" | "limit", "presses": 31},
+    "dialog": {"trigger": "<occurrence>", "opened": "enter" | "space" | "focus" | null, "trace": []},
+    "status": {"message": "...", "region": {"role": "status", "live": "polite", "preexisting": true}, "focused": false,
+               "present": true, "messages": [], "errors": []}
   }
 }
 ```
@@ -288,6 +289,14 @@ templates in scope. A replay matches when `path` and `top` are equal and the Jac
   and `source` (`ax` or `pointer`). Disabled controls stay in the set for target size; the Tab walk
   does not expect to reach them.
 - There is no `checks.records`: the `records` check returns its output as the top-level `records`.
+- `checks.tabwalk.stops[]`: `{n, occurrence, box, visible, hidden, focusVisible, style, diff, count,
+  frame, composite}`; `box` is in page coordinates; `hidden` is null or `invisible`, `zero-size`,
+  `clipped`, `off-screen`. `end: exit` means focus left the top layer the walk covers. Inside a top
+  layer, coming back round to the first stop ends the walk as `repeat` and is not probed as a trap.
+- `checks.dialog.trace[]`: `{key, where, focus, count?}`; `key` is `start`, `Tab`, `Enter`, `Space`,
+  `Escape`, `focus`, `close` or `settle`; `where` is `trigger`, `inside`, `outside` or `body`.
+- `checks.status.messages[]`: `{message, region, focused, present, xpath}`; `errors[]`: `{name,
+  message, tied, describedBy, errorMessage, xpath}`.
 - `target-size-own` evidence: `width`, `height`, `offset`, `own` (`fail` or `pass`), `passedBy`
   (`size`, `spacing`, `inline` or null), `axe` (`violation`, `incomplete`, `pass` or
   `inapplicable`), `agree`, `exception` (`ua-control` or null).
@@ -698,7 +707,13 @@ Every module in `tools/a11y/checks/` exports `id` (its check-module id) and
   and returns `{context, page, cdp, tracker}` (the caller closes it), and `ctx.trigger(page)`:
   returns a Playwright Locator for the final hop's trigger.
 - `checks/status.mjs` additionally exports `async arm(page)` (before the final hop) and its `run`
-  collects what the observer saw.
+  collects what the observer saw. It also exports `present(page)`: on toast, confirmation and
+  validation-error states the sweep calls it after each later check, and `false` lists that check
+  as incomplete (the message vanished before it finished).
+- `checks/dialog.mjs` reads `ctx.finalHop` (the recipe's final step; a `hover` step marks a hover
+  popover); `checks/tabwalk.mjs` reads `ctx.shotsDir` (absolute `runs/<id>/shots`) and `ctx.state`,
+  and writes `<state>.tabstops.png` there for backward jumps. The Tab walk changes the page (it
+  presses Esc on a revisit), so it stays the last check on the shared context.
 
 `recipe.mjs` exports the interpreter the sweep, `reach` and `probe` share:
 

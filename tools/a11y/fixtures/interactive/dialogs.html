@@ -1,0 +1,21 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><title>Dialogs</title>
+<style>
+  body { font: 16px/1.4 sans-serif; margin: 24px; color: #111; background: #fff; }
+  button, input { font: inherit; margin: 8px; }
+  .backdrop { position: fixed; inset: 0; background: rgba(0, 0, 0, 0.3); }
+  .dialog { position: absolute; top: 80px; left: 480px; width: 420px; padding: 24px; background: #fff; border-radius: 8px; }
+  .dialog label { display: block; }
+</style></head>
+<body>
+<main>
+  <h1>Delivery</h1>
+  <!-- Correct (WAI-ARIA APG modal dialog): focus to the first field, Tab wraps inside, Esc closes, focus returns. -->
+  <button id="address-open">Add delivery address</button>
+  <!-- Ignores Esc; Cancel closes it and returns focus. Not an AA failure. -->
+  <button id="nickname-open">Edit nickname</button>
+  <!-- Closes on Esc but leaves focus on the page body. -->
+  <button id="pin-open">Change PIN</button>
+</main>
+<script src="dialogs.js"></script>
+</body></html>

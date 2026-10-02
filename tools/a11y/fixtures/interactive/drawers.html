@@ -1,0 +1,22 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><title>Drawers</title>
+<style>
+  body { font: 16px/1.4 sans-serif; margin: 24px; color: #111; background: #fff; }
+  button, input { font: inherit; margin: 8px; }
+  .row, [role=button] { cursor: pointer; display: inline-block; margin: 8px; padding: 6px 12px; border: 1px solid #ccc; }
+  .drawer { position: fixed; top: 0; right: 0; width: 360px; height: 100vh; padding: 24px; background: #fff; border-left: 1px solid #ccc; }
+</style></head>
+<body>
+<main>
+  <h1>Card</h1>
+  <!-- AE4: opens the drawer and drops focus to the page body; Tab reaches the drawer later. -->
+  <button id="limits-open">Edit limits</button>
+  <!-- Same, but nothing in the drawer takes focus. -->
+  <button id="address-open">Edit address</button>
+  <!-- A clickable row with no tab stop. -->
+  <div class="row" id="payment-open">Payment details</div>
+  <!-- Focusable, but only a click opens it: Enter and Space do nothing. -->
+  <div role="button" tabindex="0" id="settings-open">Card settings</div>
+</main>
+<script src="drawers.js"></script>
+</body></html>
