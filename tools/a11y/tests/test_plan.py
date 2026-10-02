@@ -311,10 +311,14 @@ class CurrentData(unittest.TestCase):
             self.assertTrue(self.states[r]["root"])
 
     def test_roots_are_the_first_concrete_non_books_page_of_each_url(self):
+        excluded = canon.read_json(os.path.join(COMMITTED_A11Y, "policy.json")).get("roots", {}).get("exclude", {})
         seen, expected = set(), []
         for n in self.nodes:
             u = n["url"]
             if n["kind"] != "page" or n["id"].startswith("books.") or re.search(r"[…<>{}\[\]]|\.\.\.", u):
+                continue
+            if n["id"] in excluded:
+                seen.add(u)
                 continue
             if u not in seen:
                 seen.add(u)
@@ -485,6 +489,21 @@ class StageTable(unittest.TestCase):
             self.assertEqual(module.endswith(".mjs"), lang == "node", name)
             self.assertRegex(unit, r"^U\d+$", name)
             self.assertTrue(summary, name)
+
+    def test_node_stages_get_the_subcommand_only_when_their_module_takes_one(self):
+        calls = []
+        real = audit.subprocess.call
+        audit.subprocess.call = lambda cmd: calls.append(cmd) or 0
+        try:
+            audit.main(["recipe", "draft", "home.index"])
+            audit.main(["recipe", "check", "home.index"])
+        finally:
+            audit.subprocess.call = real
+        draft, check = calls
+        self.assertTrue(draft[1].endswith("draft.mjs"))
+        self.assertEqual(draft[2], "--workspace", "draft.mjs is the draft command: no 'draft' state id")
+        self.assertIn("home.index", draft)
+        self.assertEqual(check[2], "check")
 
     def test_u1_stage_modules_exist(self):
         for cmd, sub, lang, module, unit, summary in audit.STAGES:

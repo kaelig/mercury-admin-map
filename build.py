@@ -15,6 +15,8 @@ from concurrent.futures import ThreadPoolExecutor
 ROOT = os.path.dirname(os.path.abspath(__file__))
 sys.path.insert(0, os.path.join(ROOT, "tools"))
 import mapdata  # noqa: E402
+sys.path.insert(0, os.path.join(ROOT, "tools", "a11y"))
+import report  # noqa: E402
 DIST = os.path.join(ROOT, "dist")
 CACHE = os.path.join(DIST, "img")
 ORDER = ["home", "accounts", "transactions", "cards", "payments", "billpay", "invoicing", "settings", "books", "extra"]
@@ -157,6 +159,8 @@ def main():
     subprocess.run(export, cwd=ROOT, check=True)
     for stray in [f for f in os.listdir(DIST) if f.endswith(".html") and f != "index.html"]:
         os.remove(os.path.join(DIST, stray))
+    # The standalone accessibility report (KTD24): dist/a11y/index.html, or no dist/a11y/ without a snapshot.
+    report.render(mapdata.snapshot_path(), DIST)
 
     total = sum(os.path.getsize(os.path.join(dp, f)) for dp, _, fs in os.walk(DIST) for f in fs)
     print(json.dumps(stats), f"dist={total/1e6:.1f}MB")

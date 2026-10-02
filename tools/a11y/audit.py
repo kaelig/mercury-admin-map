@@ -98,7 +98,9 @@ def main(argv=None):
         print(f"audit.py: {args.command} is not implemented yet ({module}, {unit})", file=sys.stderr)
         return 3
     if lang == "node":
-        cmd = ["node", path] + ([sub] if sub else []) + [
+        # A module named after its subcommand (draft.mjs for `recipe draft`) is that command.
+        passes_sub = sub and module[:-4] != sub
+        cmd = ["node", path] + ([sub] if passes_sub else []) + [
             "--workspace", args.workspace, "--data", args.data, "--map", args.map, "--base-url", args.base_url]
         if args.run:
             cmd += ["--run", args.run]
