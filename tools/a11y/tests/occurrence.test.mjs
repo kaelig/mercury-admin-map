@@ -76,3 +76,17 @@ test('a listbox inside a modal does not replace the modal as the top layer', asy
   assert.equal(layer.role, 'dialog');
   await ctx.close();
 });
+
+test('a toast written into a status region that was already on the page is the toast layer', async () => {
+  const { ctx, page, cdp, tracker } = await open();
+  await armLayer(page);
+  await page.click('#toast-live');
+  await settle(page, cdp, { tracker });
+  const layer = await findLayer(cdp, 'toast');
+  assert.equal(layer.role, 'status');
+  assert.match(layer.xpath, /\/div\[\d\]$/);
+  const [region] = await describeElements(cdp, BY_XPATH, [layer.xpath]);
+  assert.equal(region.name, '');
+  assert.equal(await page.evaluate((x) => document.evaluate(x, document, null, 9, null).singleNodeValue.id, layer.xpath), 'live');
+  await ctx.close();
+});

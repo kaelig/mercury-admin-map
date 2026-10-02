@@ -4,3 +4,9 @@ document.getElementById('open-drawer').onclick = () => add('<aside class="drawer
 document.getElementById('open-menu').onclick = (e) => { e.target.setAttribute('aria-expanded', 'true'); add('<div role="menu" class="menu" aria-label="Move money"><div role="menuitem">Send</div><div role="menuitem">Transfer</div></div>'); };
 document.getElementById('toast').onclick = () => { add('<div style="position:fixed;top:10px;right:10px">Card saved</div>'); };
 document.getElementById('show-aside').onclick = () => { document.getElementById('details').hidden = false; };
+// A toast written into the status region that was already on the page (empty), while a tooltip
+// also shows up: the toast is the layer.
+document.getElementById('toast-live').onclick = () => {
+  document.getElementById('live').textContent = 'Payment sent';
+  add('<div style="position:absolute;top:300px;left:300px">Balance tooltip</div>');
+};

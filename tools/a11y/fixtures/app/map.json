@@ -1,0 +1,86 @@
+{
+ "areas": [
+  {
+   "area": "home",
+   "title": "Home",
+   "blocked": [],
+   "issues": [],
+   "nodes": [
+    {"id": "home.index", "title": "Dashboard", "url": "/app/dashboard", "image": "tools/a11y/fixtures/app/captures/home.index.png", "kind": "page", "note": "Move money, Try Acme Books, a Help center link to another site, a balance chart and Logout."},
+    {"id": "home.move-money-menu", "title": "Move money menu", "url": "/app/dashboard", "image": "tools/a11y/fixtures/app/captures/home.move-money-menu.png", "kind": "menu", "note": "Send money, Transfer, Deposit check."},
+    {"id": "home.send-modal", "title": "Send money", "url": "/app/dashboard", "image": "tools/a11y/fixtures/app/captures/home.send-modal.png", "kind": "modal", "note": "Recipient email and Amount; Send submits the form."},
+    {"id": "home.send-toast", "title": "Payment sent toast", "url": "/app/dashboard", "image": "tools/a11y/fixtures/app/captures/home.send-toast.png", "kind": "toast", "note": "Toast after the Send money form submits."},
+    {"id": "home.chart-tooltip", "title": "Balance chart tooltip", "url": "/app/dashboard", "image": "tools/a11y/fixtures/app/captures/home.chart-tooltip.png", "kind": "popover", "note": "Appears while the pointer is over the chart."}
+   ],
+   "edges": [
+    {"from": "home.index", "to": "home.move-money-menu", "label": "Click Move money"},
+    {"from": "home.move-money-menu", "to": "home.send-modal", "label": "Choose Send money"},
+    {"from": "home.send-modal", "to": "home.send-toast", "label": "Type a11y-audit@example.invalid in Recipient email, type 1.00 in Amount, click Send"},
+    {"from": "home.index", "to": "home.chart-tooltip", "label": "Hover over the chart"}
+   ],
+   "journeys": [
+    {"id": "home.j-send", "name": "Send money from the dashboard", "steps": ["home.index", "home.move-money-menu", "home.send-modal", "home.send-toast"]}
+   ]
+  },
+  {
+   "area": "cards",
+   "title": "Cards",
+   "blocked": [],
+   "issues": [],
+   "nodes": [
+    {"id": "cards.index", "title": "Cards", "url": "/app/cards", "image": "tools/a11y/fixtures/app/captures/cards.index.png", "kind": "page", "note": "Two cards; the first has Edit limits and Freeze card."},
+    {"id": "cards.edit-limit-modal", "title": "Edit card limits", "url": "/app/cards", "image": "tools/a11y/fixtures/app/captures/cards.edit-limit-modal.png", "kind": "modal", "note": "Wide dialog with daily, monthly and ATM limits."},
+    {"id": "cards.freeze-modal", "title": "Freeze card", "url": "/app/cards", "image": "tools/a11y/fixtures/app/captures/cards.freeze-modal.png", "kind": "modal", "note": "Small confirmation dialog next to Edit limits."}
+   ],
+   "edges": [
+    {"from": "cards.index", "to": "cards.edit-limit-modal", "label": "Click Edit limits"},
+    {"from": "cards.index", "to": "cards.freeze-modal", "label": "Click Freeze card"}
+   ],
+   "journeys": []
+  },
+  {
+   "area": "transactions",
+   "title": "Transactions",
+   "blocked": [],
+   "issues": [],
+   "nodes": [
+    {"id": "transactions.index", "title": "Transactions", "url": "/app/transactions", "image": "tools/a11y/fixtures/app/captures/transactions.index.png", "kind": "page", "note": "Four rows; Blue Bottle Coffee was paid yesterday."},
+    {"id": "transactions.filters-menu", "title": "Filters menu", "url": "/app/transactions", "image": "tools/a11y/fixtures/app/captures/transactions.filters-menu.png", "kind": "menu", "note": "Card payments, Transfers, Deposits."},
+    {"id": "transactions.card-payments", "title": "Card payments", "url": "/app/transactions", "image": "tools/a11y/fixtures/app/captures/transactions.card-payments.png", "kind": "page", "note": "Same URL as Transactions, filtered to card payments."},
+    {"id": "transactions.drawer", "title": "Transaction details drawer", "url": "/app/transactions", "image": "tools/a11y/fixtures/app/captures/transactions.drawer.png", "kind": "drawer", "note": "A plain aside, kept hidden in the DOM until a row is clicked."}
+   ],
+   "edges": [
+    {"from": "transactions.index", "to": "transactions.filters-menu", "label": "Click Filters"},
+    {"from": "transactions.filters-menu", "to": "transactions.card-payments", "label": "Choose Card payments"},
+    {"from": "transactions.card-payments", "to": "transactions.drawer", "label": "Click the Blue Bottle Coffee row"}
+   ],
+   "journeys": [
+    {"id": "transactions.j-details", "name": "Open a card payment's details", "steps": ["transactions.index", "transactions.filters-menu", "transactions.card-payments", "transactions.drawer"]}
+   ]
+  },
+  {
+   "area": "reports",
+   "title": "Reports",
+   "blocked": [],
+   "issues": [],
+   "nodes": [
+    {"id": "reports.index", "title": "Reports", "url": "/app/reports", "image": "tools/a11y/fixtures/app/captures/reports.index.png", "kind": "page", "note": "A root page; a test variant redirects it to /app/dashboard."}
+   ],
+   "edges": [],
+   "journeys": []
+  },
+  {
+   "area": "books",
+   "title": "Books",
+   "blocked": [],
+   "issues": [],
+   "nodes": [
+    {"id": "books.index", "title": "Acme Books", "url": "/app/books", "image": "tools/a11y/fixtures/app/captures/books.index.png", "kind": "page", "note": "Set up in memory by Try Acme Books; loading /app/books directly redirects to /app/dashboard."}
+   ],
+   "edges": [
+    {"from": "home.index", "to": "books.index", "label": "Click Try Acme Books"}
+   ],
+   "journeys": []
+  }
+ ]
+}

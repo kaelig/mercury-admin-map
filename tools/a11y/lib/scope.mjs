@@ -8,6 +8,8 @@
 import { XPATH_FN } from './occurrence.mjs';
 
 const BEFORE = "Symbol.for('a11y.layer.before')";
+const BEFORE_TEXT = "Symbol.for('a11y.layer.liveText')";
+const LIVE = '[role=status],[role=alert],[aria-live=polite],[aria-live=assertive]';
 
 // Kinds whose top layer, when open, is what gets scanned (schemas.md "State kinds").
 const OVERLAY_KINDS = new Set(['modal', 'drawer', 'menu', 'popover', 'toast']);
@@ -15,9 +17,13 @@ const OPTIONAL_KINDS = new Set(['form-state', 'empty-state', 'confirmation', 'va
 
 // Record the elements visible now, so findLayer() can tell which layer the next action opened or
 // revealed (the demo keeps its transaction drawer in the DOM, hidden, until a row is clicked).
+// Live regions are remembered with their text: a toast is often written into a status region that
+// was already on the page, empty.
 export function armLayer(page) {
   return page.evaluate(`window[${BEFORE}] = new WeakSet([...document.querySelectorAll('body *')]
-    .filter((e) => e.checkVisibility({ opacityProperty: true, visibilityProperty: true })))`);
+    .filter((e) => e.checkVisibility({ opacityProperty: true, visibilityProperty: true })));
+    window[${BEFORE_TEXT}] = new WeakMap([...document.querySelectorAll(${JSON.stringify(LIVE)})]
+    .map((e) => [e, (e.innerText || '').trim()]))`);
 }
 
 const FIND = `(kind) => {
@@ -28,7 +34,8 @@ const FIND = `(kind) => {
     return r.width > 0 && r.height > 0 && s.visibility !== 'hidden' && s.display !== 'none' && Number(s.opacity) > 0
       && r.bottom > 0 && r.right > 0 && r.top < innerHeight && r.left < innerWidth;
   };
-  const isNew = (e) => !before || !before.has(e);
+  const liveText = window[${BEFORE_TEXT}];
+  const isNew = (e) => !before || !before.has(e) || (liveText?.has(e) && liveText.get(e) !== (e.innerText || '').trim());
   const role = (e) => e.getAttribute('role') || (e.tagName === 'DIALOG' ? 'dialog' : e.tagName === 'ASIDE' ? 'complementary' : '');
   const positioned = (e) => ['fixed', 'absolute', 'sticky'].includes(getComputedStyle(e).position);
   const modalish = (e) => ['dialog', 'alertdialog'].includes(role(e)) && (e.getAttribute('aria-modal') === 'true' || (e.tagName === 'DIALOG' && e.matches(':modal')) || role(e) === 'alertdialog');
@@ -38,7 +45,7 @@ const FIND = `(kind) => {
   // Layers the last action opened that carry no overlay role: a positioned container, or an aside.
   const fresh = before ? [...document.querySelectorAll('body *')].filter((e) => isNew(e) && visible(e)
     && (positioned(e) || e.tagName === 'ASIDE') && (e.innerText || '').trim()) : [];
-  const status = [...document.querySelectorAll('[role=status],[role=alert],[aria-live=polite],[aria-live=assertive]')]
+  const status = [...document.querySelectorAll(${JSON.stringify(LIVE)})]
     .filter((e) => visible(e) && (e.innerText || '').trim());
   let pool;
   if (kind === 'menu') pool = byRole.filter((e) => ['menu', 'listbox'].includes(role(e)));

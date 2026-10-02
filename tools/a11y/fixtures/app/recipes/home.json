@@ -1,0 +1,145 @@
+{
+ "home.index": {
+  "fingerprint": {
+   "controls": [
+    "Cards",
+    "Dashboard",
+    "Help center",
+    "Logout",
+    "Move money",
+    "Reports",
+    "Transactions",
+    "Try Acme Books"
+   ],
+   "headings": [
+    "Dashboard",
+    "Balance",
+    "Recent activity"
+   ],
+   "path": "/app/dashboard",
+   "structure": "document",
+   "top": {
+    "name": "",
+    "role": "document"
+   }
+  },
+  "hop": [],
+  "mutates": false,
+  "parent": "/app/dashboard",
+  "recordedBy": "hand",
+  "review": null,
+  "similarity": null,
+  "source": "97d170e1550eee4afc0af065b78cda302a97674c",
+  "status": "accepted"
+ },
+ "home.move-money-menu": {
+  "fingerprint": {
+   "controls": [
+    "Deposit check",
+    "Send money",
+    "Transfer"
+   ],
+   "headings": [],
+   "path": "/app/dashboard",
+   "structure": "menu",
+   "top": {
+    "name": "Move money",
+    "role": "menu"
+   }
+  },
+  "hop": [
+   {
+    "click": {
+     "name": "Move money",
+     "role": "button"
+    }
+   }
+  ],
+  "mutates": false,
+  "parent": "home.index",
+  "recordedBy": "hand",
+  "review": null,
+  "similarity": null,
+  "source": "6c18e8e10ad0706916174d2cd38e1c54730c9fe3",
+  "status": "accepted"
+ },
+ "home.send-modal": {
+  "fingerprint": {
+   "controls": [
+    "Amount",
+    "Cancel",
+    "Recipient email",
+    "Send"
+   ],
+   "headings": [
+    "Send money"
+   ],
+   "path": "/app/dashboard",
+   "structure": "dialog",
+   "top": {
+    "name": "Send money",
+    "role": "dialog"
+   }
+  },
+  "hop": [
+   {
+    "click": {
+     "name": "Send money",
+     "role": "menuitem"
+    }
+   }
+  ],
+  "mutates": true,
+  "parent": "home.move-money-menu",
+  "recordedBy": "hand",
+  "review": null,
+  "similarity": null,
+  "source": "af520524d151f13336268628562efdf794cd2f9a",
+  "status": "accepted"
+ },
+ "home.send-toast": {
+  "fingerprint": {
+   "controls": [
+    "Dismiss"
+   ],
+   "headings": [],
+   "path": "/app/dashboard",
+   "structure": "status",
+   "top": {
+    "name": "",
+    "role": "status"
+   }
+  },
+  "hop": [
+   {
+    "fill": {
+     "locator": {
+      "label": "Recipient email"
+     },
+     "value": "a11y-audit@example.invalid"
+    }
+   },
+   {
+    "fill": {
+     "locator": {
+      "label": "Amount"
+     },
+     "value": "1.00"
+    }
+   },
+   {
+    "click": {
+     "name": "Send",
+     "role": "button"
+    }
+   }
+  ],
+  "mutates": true,
+  "parent": "home.send-modal",
+  "recordedBy": "hand",
+  "review": null,
+  "similarity": null,
+  "source": "c875397786786c568e6020e2a983ae82b78a3720",
+  "status": "accepted"
+ }
+}

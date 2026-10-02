@@ -203,6 +203,14 @@ An object keyed by state id, sorted. Editable by hand.
 - `parent` is a state id, or a URL path starting with `/` for roots.
 - `status`: `accepted` (replayed by the sweep), `review` (waiting for the conductor), `rejected`,
   `draft` (not yet checked). Only `accepted` recipes are replayed.
+- `checked` is the run id of the last `recipe check`; `queue` drops states re-checked since the
+  published run. A pending review is `{reason, by: "conductor", decision: null, date: null}`.
+- `recipe check` also requires the open layer the state's kind needs (modal, drawer, menu, popover,
+  toast): a screenshot cannot tell a menu over its page from the page (`structure-missing`
+  otherwise). Similarity threshold 0.90 (mean SSIM of 160×100 grayscale crops), to tune on the first
+  real area. Agent-recorded recipes that pass but mutate, or fall in a 10% sample, go to `review`.
+- Captured screenshots for the fixture app live in `fixtures/app/captures/`: `.git/info/exclude`
+  ignores every `screens/` directory.
 
 ### Steps
 
@@ -726,7 +734,13 @@ Every module in `tools/a11y/checks/` exports `id` (its check-module id) and
   injects the motion-off CSS and compares the fingerprint. `untilParent: true` stops at the
   parent state (for the dialog check). `ctx` is `{cdp, tracker, baseUrl}`. It refuses a step the
   policy forbids before running it (`step-failed` with the reason).
-- `resolveLocator(page, locator) -> Locator` (KTD6 order, name templates).
+- `async resolveLocator(page, locator) -> Locator` (KTD6 order, name templates; async because the
+  fallback order needs a count per strategy, so callers such as `ctx.trigger(page)` await it).
+- `replay` also accepts `kind` and `edges` overrides and returns `mutates`. Step 0 is the root load;
+  hop steps follow in chain order. Recipes must come from `loadRecipes(ws)`, which attaches the map's
+  edges and kinds the replay needs to refuse hops on no recorded edge. Roots need recipe entries too
+  (`recordedBy: "root"`, created by `recipe draft`), because `chain()` starts from the root's recipe.
+- The allowed origins are `policy.allowedOrigins` plus the `--base-url` origin.
 - `async captureFingerprint(page, cdp, kind) -> fingerprint` and `matchFingerprint(a, b) -> {ok, why}`
   live in `fingerprint.mjs`.
 
