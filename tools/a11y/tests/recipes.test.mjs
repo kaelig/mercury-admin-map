@@ -349,6 +349,25 @@ test('a path that submits a form is observed as mutating; one that only opens a 
 // recipe check, queue and status
 // ---------------------------------------------------------------------------
 
+test('recipe check compares in the theme of the capture: a dark capture still matches a light-theme replay', async () => {
+  const map = readJson(join(APP, 'map.json'));
+  const node = map.areas.flatMap((a) => a.nodes).find((n) => n.id === 'cards.index');
+  const dark = join(tmp('a11y-dark-'), 'cards.index.dark.png');
+  const context = await newContext(browser, { colorScheme: 'dark' });
+  contexts.push(context);
+  const page = await context.newPage();
+  await page.goto(server.origin + node.url);
+  await page.waitForLoadState('networkidle');
+  await page.screenshot({ path: dark });
+  node.image = dark;
+  const w = workspace({ map });
+  const r = await stage('recipe.mjs', ['check', 'cards.index'], w);
+  assert.equal(r.status, 0, r.stderr + r.stdout);
+  const entry = recipesFile(w, 'cards')['cards.index'];
+  assert.ok(entry.similarity >= THRESHOLD, `similarity ${entry.similarity} against a dark capture`);
+  assert.equal(entry.status, 'accepted');
+});
+
 test('recipe check replays twice, scores the screenshot and accepts the drawer recipe', async () => {
   const w = workspace();
   const r = await stage('recipe.mjs', ['check', 'transactions.drawer'], w);

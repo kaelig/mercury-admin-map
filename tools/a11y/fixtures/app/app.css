@@ -41,3 +41,13 @@ aside.drawer dl { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; }
 .toast:not(:empty) { display: flex; gap: 16px; align-items: center; padding: 14px 20px; background: #1d6b3a; color: #fff; border-radius: 8px; }
 .toast button { background: transparent; border-color: #fff; }
 .chip { display: inline-block; padding: 4px 12px; margin-bottom: 16px; background: #e4e4f7; border-radius: 12px; }
+/* Dark theme, like the demo: it follows prefers-color-scheme. The capture of the real map is dark. */
+@media (prefers-color-scheme: dark) {
+  body { color: #e6e6ee; background: #16161c; }
+  nav { background: #1d1d24; border-right-color: #33333d; }
+  nav a { color: #e6e6ee; }
+  nav a[aria-current=page] { background: #2c2c40; }
+  .panel { background: #1d1d24; border-color: #33333d; }
+  .chart { background: #22222a; }
+  button.ghost { background: #1d1d24; }
+}

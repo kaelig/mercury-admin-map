@@ -487,16 +487,22 @@ export function similarity(captured, shot) {
 // 10% of agent-recorded recipes go to the conductor even when they pass (KTD8 step 4).
 const sampled = (id) => parseInt(sha1(id).slice(0, 8), 16) % 10 === 0;
 
-async function replayFresh(browser, baseUrl, recipes, id, policy, kind, shot = null) {
+// With `shots`, the reached state is screenshotted in light, then again in dark: the map's own
+// captures are dark while the audit runs light (R2), and the demo follows prefers-color-scheme live.
+// The replay itself, and its fingerprint, stay in light.
+async function replayFresh(browser, baseUrl, recipes, id, policy, kind, shots = null) {
   const context = await newContext(browser);
   try {
     const page = await context.newPage();
     const tracker = trackRequests(page);
     const cdp = await cdpSession(context, page);
     const result = await replay(page, { cdp, tracker, baseUrl }, id, { recipes, policy, kind });
-    if (shot && result.status === 'reached') {
-      mkdirSync(dirname(shot), { recursive: true });
-      await page.screenshot({ path: shot });
+    if (shots && result.status === 'reached') {
+      mkdirSync(dirname(shots.light), { recursive: true });
+      await page.screenshot({ path: shots.light });
+      await page.emulateMedia({ colorScheme: 'dark' });
+      await settle(page, cdp, { tracker });
+      await page.screenshot({ path: shots.dark });
     }
     return result;
   } finally {
@@ -545,16 +551,20 @@ async function checkOne(ws, runId, states, policy, browser, map, id, candidate) 
     keepDraft();
     return { state: id, status: 'structure-missing', step: null, message: `a ${s.kind} needs an open layer; the replay found none`, fingerprint: one.fingerprint };
   }
+  const node = recipes[META].nodes[id];
+  const captured = node?.image ? resolve(ROOT, node.image) : null;
+  const shots = { light: shot, dark: shot.replace(/\.png$/, '.dark.png') };
   const second = { ...trial, [id]: { ...trial[id], fingerprint: one.fingerprint } };
-  const two = await replayFresh(browser, ws.baseUrl, second, id, policy, s.kind, shot);
+  const two = await replayFresh(browser, ws.baseUrl, second, id, policy, s.kind, shots);
   if (two.status !== 'reached') {
     keepDraft();
     return { state: id, ...two, message: `second replay: ${two.message}` };
   }
 
-  const node = recipes[META].nodes[id];
-  const captured = node?.image ? resolve(ROOT, node.image) : null;
-  const sim = captured && existsSync(captured) ? similarity(captured, shot) : null;
+  // The better of the two themes: whichever the capture was taken in.
+  const sim = captured && existsSync(captured)
+    ? [similarity(captured, shots.light), similarity(captured, shots.dark)].reduce((a, b) => (b.score > a.score ? b : a))
+    : null;
   const mutates = Boolean(one.mutates || two.mutates || s.mutates || list.slice(0, -1).some((r) => r.mutates));
   let status = 'accepted';
   let review = null;
