@@ -1,0 +1,40 @@
+{
+ "area": "settings",
+ "blocked": [],
+ "edges": [],
+ "issues": [
+  {
+   "category": "a11y",
+   "detail": "The ••• buttons on API Tokens expose no text or aria-label, so a screen reader announces three identical unnamed buttons with no token to tell them apart.",
+   "evidence": "Accessibility snapshot: each token row ends with 'button [expanded=false]' containing 'button' with no name. eval: 11 buttons in the page with empty innerText and no aria-label.",
+   "id": "settings.i-unnamed-row-buttons",
+   "nodeIds": [
+    "settings.tokens",
+    "settings.token-menu"
+   ],
+   "severity": "medium",
+   "title": "API token row menus have no accessible name"
+  },
+  {
+   "category": "copy",
+   "detail": "Settings success toasts use the same component but two sentence styles: full sentences ending in a period, and terse fragments with no period. One toast adds 'successfully'; another uses a colon label.",
+   "evidence": "Exact toast strings: \"Your company name has been updated.\" and \"Your Mercury account is now connected to NetSuite.\" (period) vs \"Job title updated\", \"New role created: AP Clerk\" and \"Security check-in triggered successfully\" (no period). Personal settings add \"Your preferred name has been updated.\" (period) vs \"Opted in to SMS notifications\" and \"Invite sent\" (no period).",
+   "id": "settings.i-toast-punctuation",
+   "nodeIds": [
+    "settings.company-name-updated",
+    "settings.netsuite-connected",
+    "settings.member-saved",
+    "settings.role-created",
+    "settings.run-check-in",
+    "settings.preferred-name-updated",
+    "settings.sms-opted-in",
+    "settings.referral-sent"
+   ],
+   "severity": "low",
+   "title": "Success toasts disagree on punctuation and phrasing"
+  }
+ ],
+ "journeys": [],
+ "nodes": [],
+ "title": "Settings"
+}

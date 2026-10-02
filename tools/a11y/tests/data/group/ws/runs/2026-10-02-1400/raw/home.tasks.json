@@ -1,0 +1,94 @@
+{
+ "build": "fixture",
+ "checks": {
+  "axe": {
+   "inapplicable": [],
+   "rulesRan": [
+    "button-name",
+    "color-contrast"
+   ]
+  }
+ },
+ "env": {
+  "axe": "4.13.0",
+  "chromium": "fixture",
+  "colorScheme": "light",
+  "dpr": 1,
+  "locale": "en-US",
+  "playwright": "1.62.1",
+  "reducedMotion": "reduce",
+  "timezone": "America/Los_Angeles",
+  "viewport": [
+   1440,
+   900
+  ]
+ },
+ "families": {
+  "completed": [
+   "axe",
+   "records",
+   "interactive",
+   "target"
+  ],
+  "incomplete": []
+ },
+ "frames": [],
+ "harness": "0000000000000000",
+ "kind": "page",
+ "layer": {
+  "name": "",
+  "role": "document",
+  "scope": "document",
+  "xpath": "/html"
+ },
+ "reason": null,
+ "reasonDetail": null,
+ "recipeHash": "0000000000000000000000000000000000000000000000000000000000000000",
+ "records": [
+  {
+   "description": "",
+   "name": "All",
+   "occurrence": {
+    "ancestors": [
+     [
+      "_filters_hom22_9"
+     ],
+     [
+      "_transactionsWidget_hom22_7"
+     ]
+    ],
+    "classes": [
+     "_chip_chp11_2",
+     "_selected_chp11_5"
+    ],
+    "data": {},
+    "heading": "",
+    "landmark": {
+     "name": "",
+     "role": "main"
+    },
+    "layer": "document",
+    "name": "All",
+    "rect": [
+     10,
+     10,
+     24,
+     24
+    ],
+    "role": "menuitem",
+    "tag": "button",
+    "xpath": "/html/body/div/main/div[3]/div[1]"
+   },
+   "role": "menuitem",
+   "states": {
+    "selected": false
+   },
+   "template": "menuitem \"All\" [selected=false]"
+  }
+ ],
+ "results": [],
+ "schema": 1,
+ "state": "home.tasks",
+ "status": "audited",
+ "url": "/tasks"
+}

@@ -331,6 +331,10 @@ in CSS pixels, rounded.
   `menu-focus-not-moved`, `popover-not-reachable`, `hover-only` (dialog), `status-not-announced`,
   `error-not-associated` (status).
 - `basis: candidate` marks a result KTD13 sends to the verifier as unconfirmed.
+- Evidence fields `group` reads to fill templates: `stop` (1-based tab stop where the failure
+  shows), `stops` (distinct tab stops visited), `previous` (occurrence of the stop before),
+  `focus` (occurrence where focus was at the assertion, or `"body"`), `message` (status or error
+  text), `offset` (diameter in CSS px of the largest clear circle centered on a target).
 
 ### Record: one announced-as line (R12)
 
@@ -448,8 +452,14 @@ A `flag` with a criterion feeds `group`. A `flag` without one goes to the adviso
 ```
 
 `occurrences[].index` points into the state's raw `results` (or `records` for record findings).
-Hand-found findings have key `hand:<issue id>`, `issueId` set to that id, and `states` from the
-issue's `nodeIds`.
+
+- Scanner keys read `<family>:<rule>:<12 hex of sha(key parts)>` (signature.py lists the parts).
+- Announced-as findings: key `<family>:announced-as:<12 hex>`, `rule: "announced-as"`,
+  `basis: "candidate"`, `recordSig: "rec:<12 hex>"`.
+- Hand-found findings: key `hand:<issue id>`, `rule: "hand-found"`, `basis: "failure"`, `issueId`
+  set to that id, `states` from the issue's `nodeIds`, `severityDefault` the issue's severity,
+  `summary` its original evidence, `facts: {}`.
+- `flags[].message` reads "tags and attributes agree N% of the time"; `advisory[].states` is a count.
 
 ## Batch files (U7)
 

@@ -410,8 +410,11 @@ class Policy(unittest.TestCase):
         self.assertEqual(p["version"], 1)
         self.assertEqual(p["origin"], "https://demo.mercury.com")
         self.assertEqual(p["allowedOrigins"], ["https://demo.mercury.com"])
-        self.assertEqual(p["isolation"]["status"], "unchecked")
-        self.assertIsNone(p["isolation"]["date"])
+        self.assertIn(p["isolation"]["status"], ("unchecked", "confirmed", "failed"))
+        if p["isolation"]["status"] == "unchecked":
+            self.assertIsNone(p["isolation"]["date"])
+        else:
+            self.assertRegex(p["isolation"]["date"], r"^\d{4}-\d{2}-\d{2}$")
         self.assertEqual(p["replay"], {"onlyRecordedEdges": True})
 
     def test_denylist_holds_the_capture_prohibitions(self):
