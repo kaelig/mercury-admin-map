@@ -606,6 +606,17 @@ row objects), `advisory`, `priority` (ids in order), `notRetested`, `withdrawn`,
   only the families `name`, `role-state` and `structure`.
 - R20 names 1.4.12 as not tested, so `checks/axe.mjs` disables `avoid-inline-spacing`.
 
+## Shared browser helpers (lib/)
+
+- `lib/browser.mjs`: `launch()`, `newContext(browser)` (KTD4), `envFor(browser)`, `trackRequests(page)`
+  (arm right after `newPage()`; counts first-party requests only), `settle(page, cdp, {tracker})`,
+  `injectMotionOff(page)`, `parkPointer(page)`, `cdpSession(context, page)`, `readBuildHash(page)`.
+- `lib/scope.mjs`: `armLayer(page)` before a state's final hop, then `findLayer(cdp, kind)` →
+  `{scope, role, name, xpath}` (the raw file's `layer`). Without arming, only overlay roles count.
+- `lib/occurrence.mjs`: `describeElements(cdp, fnSource, args, {layerXPath})` and
+  `describeBackendNodes(cdp, ids, {layerXPath})` return occurrences (DOM facts plus the accessibility
+  tree's role and name); `BY_XPATH` resolves xpaths; `XPATH_FN` computes an element's xpath.
+
 ## Stage modules
 
 `audit.py`'s `STAGES` table names every command, its module and its owning unit. Adding a stage

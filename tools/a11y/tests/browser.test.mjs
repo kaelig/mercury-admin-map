@@ -269,3 +269,15 @@ test('server CLI: prints both origins on one line, writes --map-out, serves unti
     rmSync(tmp, { recursive: true, force: true });
   }
 });
+
+test('a hanging third-party request does not hold up the stability wait', async () => {
+  const ctx = await newContext(browser);
+  const page = await ctx.newPage();
+  const tracker = trackRequests(page);
+  const cdp = await cdpSession(ctx, page);
+  await page.goto(`${server.origin}/browser/thirdparty.html`, { waitUntil: 'commit' });
+  const r = await settle(page, cdp, { tracker });
+  assert.equal(r.idle, true);
+  assert.ok(r.ms < 2500, `settle took ${r.ms} ms waiting on an analytics-style request`);
+  await ctx.close();
+});

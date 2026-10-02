@@ -76,12 +76,25 @@ function originOf(url) {
 // Counts the page's own requests in flight. Arm it right after newPage(), before the first goto:
 // Playwright's 'networkidle' fires once per navigation, so it never waits for a fetch a click starts.
 // Requests from cross-origin frames don't count.
+// The registrable part of a URL's host: demo.mercury.com and cdn.mercury.com share mercury.com.
+function siteOf(url) {
+  try {
+    const host = new URL(url).hostname;
+    return /^[\d.]+$|^\[|^localhost$/.test(host) ? host : host.split('.').slice(-2).join('.');
+  } catch {
+    return null;
+  }
+}
+
 export function trackRequests(page) {
   const live = new Set();
   let changed = Date.now();
   const counts = (req) => {
     if (!COUNTED.has(req.resourceType())) return false;
     const frame = req.frame();
+    if (frame === page.mainFrame() && req.isNavigationRequest()) return true;
+    // Third-party analytics (Amplitude, LinkedIn) can stay pending for good: only first-party requests count.
+    if (siteOf(req.url()) !== siteOf(page.mainFrame().url())) return false;
     if (frame === page.mainFrame()) return true;
     const origin = originOf(req.isNavigationRequest() ? req.url() : frame.url());
     return origin === 'null' || origin === originOf(page.mainFrame().url());
