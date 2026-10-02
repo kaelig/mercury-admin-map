@@ -136,6 +136,13 @@ class CanaryRun(unittest.TestCase):
         self.assertEqual(states["states"]["canary.tabs"]["rootUrl"], "/canary/tabs.html")
         self.assertEqual(sorted(os.listdir(os.path.join(cws, "runs", RUN, "raw"))),
                          sorted(os.listdir(os.path.join(DEF, "raw"))))
+        # Every canary state is a page: an accepted root recipe lets reach and probe open it.
+        recipes = canon.read_json(os.path.join(cws, "recipes", "canary.json"))
+        self.assertEqual(sorted(recipes), sorted(states["roots"]))
+        self.assertEqual(recipes["canary.tabs"]["parent"], "/canary/tabs.html")
+        self.assertEqual({r["status"] for r in recipes.values()}, {"accepted"})
+        # The printed score command writes canary.json into this run's workspace, not the default one.
+        self.assertIn(f"--workspace {self.ws}", out["score"])
         # The run's own workspace still points at the demo and receives nothing.
         self.assertEqual(Workspace(workspace=self.ws).base_url, "https://demo.mercury.com")
         self.assertFalse(os.path.exists(os.path.join(self.run_dir, "canary.json")))

@@ -53,6 +53,12 @@ def prepare(ws, run_id, port=None, out_dir=None):
     policy = dict(ws.policy() or {}, origin=origin, allowedOrigins=[origin])
     write_json(os.path.join(cws.path, "policy.json"), policy)
     write_json(cws.file("states.json"), plan.build_doc(read_json(cws.map_path), policy, run_id))
+    states = read_json(cws.file("states.json"))["states"]
+    # Every canary state is a page: an accepted root recipe lets reach and probe open it.
+    write_json(os.path.join(cws.recipes_dir, "canary.json"), {
+        sid: {"parent": s["rootUrl"], "hop": [], "fingerprint": None, "mutates": False, "source": s["source"],
+              "status": "accepted", "similarity": None, "recordedBy": "root", "review": None}
+        for sid, s in states.items() if s["root"]})
     findings = dict(read_json(os.path.join(DEFINITION, "findings.json")), run=run_id)
     write_json(cws.file("findings.json"), findings)
     os.makedirs(cws.raw_dir(), exist_ok=True)
@@ -65,7 +71,7 @@ def prepare(ws, run_id, port=None, out_dir=None):
     write_json(batch_path, verify.batch_doc(BATCH, run_id, "canary", verify.reach_of(cws, run_id), entries))
     return {"root": root, "workspace": cws.path, "run": run_id, "batch": batch_path, "findings": len(entries),
             "baseUrl": origin, "server": f"node tools/a11y/fixtures/server.mjs --port {port} canary",
-            "score": f"python3 tools/a11y/audit.py canary score --run {run_id} "
+            "score": f"python3 tools/a11y/audit.py canary score --workspace {ws.path} --run {run_id} "
                      f"--file {batch_path[:-5]}.out.jsonl"}
 
 
