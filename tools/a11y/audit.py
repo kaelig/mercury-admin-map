@@ -79,7 +79,9 @@ def build_parser():
     return p
 
 
-def main(argv=None):
+def main(argv=None, exec_node=False):
+    """Run one stage. With exec_node (the command line), a Node stage replaces this process, so a
+    signal sent to the audit.py pid reaches the sweep instead of orphaning it."""
     argv = sys.argv[1:] if argv is None else argv
     args, rest = build_parser().parse_known_args(argv)
     sub = None
@@ -104,10 +106,12 @@ def main(argv=None):
             "--workspace", args.workspace, "--data", args.data, "--map", args.map, "--base-url", args.base_url]
         if args.run:
             cmd += ["--run", args.run]
+        if exec_node:
+            os.execvp("node", cmd + rest)
         return subprocess.call(cmd + rest)
     mod = importlib.import_module(module[:-3])
     return mod.cli(Workspace.from_args(args), sub, rest) or 0
 
 
 if __name__ == "__main__":
-    sys.exit(main())
+    sys.exit(main(exec_node=True))

@@ -505,6 +505,30 @@ class StageTable(unittest.TestCase):
         self.assertIn("home.index", draft)
         self.assertEqual(check[2], "check")
 
+    def test_run_as_a_command_a_node_stage_replaces_the_python_process(self):
+        # So a signal to the audit.py pid reaches the sweep instead of orphaning it.
+        execs = []
+
+        class Replaced(Exception):
+            pass
+
+        def execvp(file, args):  # the real one never returns
+            execs.append((file, args))
+            raise Replaced
+
+        real_exec, real_call = audit.os.execvp, audit.subprocess.call
+        audit.os.execvp = execvp
+        audit.subprocess.call = lambda cmd: self.fail(f"ran {cmd} instead of replacing the process")
+        try:
+            with self.assertRaises(Replaced):
+                audit.main(["sweep", "--workers", "2", "--workspace", tempfile.mkdtemp()], exec_node=True)
+        finally:
+            audit.os.execvp, audit.subprocess.call = real_exec, real_call
+        (file, args), = execs
+        self.assertEqual(file, "node")
+        self.assertTrue(args[1].endswith("sweep.mjs"))
+        self.assertEqual(args[-2:], ["--workers", "2"])
+
     def test_u1_stage_modules_exist(self):
         for cmd, sub, lang, module, unit, summary in audit.STAGES:
             if cmd in ("plan", "preflight"):

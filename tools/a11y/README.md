@@ -60,6 +60,31 @@ In the order the audit runs them. `audit.py` is short for `python3 tools/a11y/au
 | Publish | `audit.py publish` | `published/` |
 | Report | `audit.py report` (`build.py` calls it too) | `dist/a11y/index.html` |
 
+## Sweep
+
+```sh
+python3 tools/a11y/audit.py sweep [--run <id>] [--workers 8] [--timeout 180000] [--state <id> ...]
+```
+
+- `--workers` sets how many browsers run at once (default 8). Each state gets a fresh browser context, and starts once its parent's raw file exists.
+- `--timeout` is how long one step of a state may take, in milliseconds: the replay, or one check (default 180000). A step that runs over is a hang: the worker's browser restarts, the state is tried twice more, then written unreachable with `tool-error`.
+- `--state` sweeps the named states again, even with a valid raw file, plus any ancestor they need that has none. Repeat it for several states. Nothing else runs.
+- To resume, run the same command again. Only states without a valid raw file run. Valid means it parses, names its state and carries the current harness hash.
+
+Progress goes to stderr, one line per state. The last line on stdout is `{run, audited, unreachable, pending, interrupted, ms}`. Exit codes:
+
+| code | meaning |
+|---|---|
+| 0 | every state has a raw file and `outcomes.json` is written (with `--state`: the named states were swept) |
+| 1 | an error, or states left without a raw file |
+| 2 | a usage error, such as a `--state` id that is not in `states.json` |
+| 75 | the circuit breaker tripped: the demo answered 403 or 429, served a challenge page, or failed three root pages in a row |
+| 130, 143 | stopped by Ctrl-C (SIGINT) or SIGTERM (129 for SIGHUP). Rerun to resume |
+
+After a breaker trip, the sweep writes nothing more. The states it skipped get no unreachable result: they stay pending and run when you resume. A root page that failed to load is held back the same way, and written unreachable only if the sweep ends without a trip.
+
+Stop a sweep with Ctrl-C or SIGTERM. `audit.py` hands its process to the sweep, so a signal to its pid reaches the sweep, which closes its browsers and writes nothing more. A sweep stopped with SIGKILL (`kill -9`) cannot close its browsers, and headless Chromium keeps running. `pgrep -fl ms-playwright/chromium` lists them; `kill -9` each one that no running sweep or test owns.
+
 ## Walkthrough: the fixture app from plan to publish
 
 The fixture app in `tools/a11y/fixtures/app/` is a small multi-screen site built to test recipes: a dashboard with a menu, a send modal that submits to a toast, a hover tooltip, a cards page with two modals, a transactions page with a filter menu and a drawer, a reports page, and a Books page that needs a setup step. It has hand-written recipes and its own captured screenshots, and its dialogs and menus do not move focus when they open, so the sweep has real failures to find. This walkthrough runs its 14 states through every stage in a temporary workspace, so the committed `a11y/` is never touched. Follow one state, `cards.edit-limit-modal`, through the files as you go.
@@ -72,7 +97,7 @@ In a real run, agents judge records and verify findings. Here, three short scrip
 node tools/a11y/fixtures/server.mjs --port 4173 app
 ```
 
-It prints `{"origin": "http://127.0.0.1:4173", ...}` and serves until you stop it.
+It prints `{"origin":"http://127.0.0.1:4173","origin2":"http://localhost:<port>"}` and serves until you stop it.
 
 **2. Make a workspace,** in a second terminal:
 
@@ -107,7 +132,7 @@ python3 tools/a11y/audit.py recipe queue "${A[@]}"
 python3 tools/a11y/audit.py recipe check cards.edit-limit-modal "${A[@]}"
 ```
 
-The queue is empty: every fixture state has an accepted recipe. `recipe check` replays one recipe twice in fresh browsers, records its fingerprint, compares the screenshot with `fixtures/app/captures/cards.edit-limit-modal.png`, and prints `accepted` with the similarity score. Its screenshots land in `$W/ws/runs/$RUN/shots/`.
+The queue holds one state, `home.chart-tooltip`, as `no-recipe`: the fixture has no recipe for its hover tooltip, so the sweep will write it unreachable. Every other state has an accepted recipe. `recipe check` replays one recipe twice in fresh browsers, records its fingerprint, compares the screenshot with `fixtures/app/captures/cards.edit-limit-modal.png`, and prints `accepted` with the similarity score. Its screenshots land in `$W/ws/runs/$RUN/shots/`.
 
 **5. Sweep.**
 
@@ -116,7 +141,7 @@ python3 tools/a11y/audit.py sweep "${A[@]}"
 python3 tools/a11y/audit.py status "${A[@]}"
 ```
 
-The sweep writes one raw file per state, then `outcomes.json`. `status` shows every state audited or unreachable, and `coverage: "ok"`. Open `$W/ws/runs/$RUN/raw/cards.edit-limit-modal.json`: the open dialog it scanned (`layer`), the checks that completed, every result with its measured evidence, and the announced-as records.
+The sweep writes one raw file per state, then `outcomes.json`. It takes about 20 seconds. `status` shows 13 states audited and 1 unreachable (`home.chart-tooltip`, `no-recipe`) under `stages.sweep`, and `outcomes.coverage: "ok"`. Open `$W/ws/runs/$RUN/raw/cards.edit-limit-modal.json`: the open dialog it scanned (`layer`), the checks that completed, every result with its measured evidence, and the announced-as records.
 
 **6. Records.** `records prepare` deduplicates the announced-as records and writes judge batches. The stand-in judge marks every record ok:
 
@@ -144,12 +169,12 @@ done
 python3 tools/a11y/audit.py group "${A[@]}"
 ```
 
-`findings.json` holds one finding per rule per shared element, with every state it occurs on, its primary state, the states a verifier samples, and its default severity. Look for `cards.edit-limit-modal`: the modal leaves focus on the page when it opens, so expect a dialog focus finding there.
+`findings.json` holds one finding per rule per shared element (axe's incomplete results: one per rule and message), with every state it occurs on, its primary state, the states a verifier samples, and its default severity. Look for `cards.edit-limit-modal`: the modal leaves focus on the page when it opens, so expect a dialog focus finding there.
 
-**8. Canary.** Verification starts with a canary batch whose answers are known. `canary prepare` builds it in its own temporary workspace. The stand-in copies the expected answers, which makes this canary worthless as a check: a real run gives the batch to a verifier agent. Score it with the walkthrough's options, so `canary.json` lands in this workspace:
+**8. Canary.** Verification starts with a canary batch whose answers are known. `canary prepare` builds it in its own workspace, here inside `$W` (`--out`) so the cleanup removes it too. The stand-in copies the expected answers, which makes this canary worthless as a check: a real run gives the batch to a verifier agent. Score it with the walkthrough's options, so `canary.json` lands in this workspace:
 
 ```sh
-python3 tools/a11y/audit.py canary prepare "${A[@]}" > "$W/canary.json"
+python3 tools/a11y/audit.py canary prepare --out "$W/canary" "${A[@]}" > "$W/canary.json"
 OUT=$(python3 - "$W/canary.json" <<'EOF'
 # Stand-in for the canary verifier: the expected answers.
 import json, sys
@@ -212,11 +237,14 @@ python3 tools/a11y/audit.py verify status "${A[@]}"
 python3 tools/a11y/audit.py diff "${A[@]}"
 python3 tools/a11y/audit.py publish "${A[@]}"
 python3 tools/a11y/audit.py status "${A[@]}"
+python3 tools/a11y/audit.py report --dist "$W/dist" "${A[@]}"
 ```
 
-With no earlier snapshot, `diff.json` lists every finding as `new`. Publish checks its gates and writes `$W/ws/published/`: `issues.json` (the generated `a11y` issues, each with its WCAG criteria, ticket copy and audit block), `report.json` (the report model), `registry.json` (finding keys to issue ids) and `meta.json`. Find the issue whose `nodeIds` include `cards.edit-limit-modal`. `status` now reports "already published".
+With no earlier snapshot, `diff.json` lists every finding as `new`. Publish checks its gates and writes `$W/ws/published/`: `issues.json` (the generated `a11y` issues, each with its WCAG criteria, ticket copy and audit block), `report.json` (the report model), `registry.json` (finding keys to issue ids) and `meta.json`. Find the three issues whose `nodeIds` include `cards.edit-limit-modal`: focus not moved into the dialog, Tab leaving it, and focus lost when it closes. `status` now reports "already published". `report` renders `$W/dist/a11y/index.html`; its links to the map do not resolve outside a built `dist/`.
 
 **11. Clean up.** Stop the server, then `rm -rf "$W"`. Do not run `build.py` against this snapshot: `build.py` writes the real `dist/` and `build/`.
+
+`tools/a11y/tests/e2e.test.mjs` runs these steps and more: hand-found issues, a scripted flag and attachment, a sweep stopped and resumed, and a second run against the first snapshot.
 
 ## The whole audit
 
@@ -274,6 +302,7 @@ Every new or persisting row links to `../index.html?issue=<id>`, which opens the
 ```sh
 npm run a11y:test                                              # everything
 node --test tools/a11y/tests/sweep.test.mjs                    # one Node test file
+node --test tools/a11y/tests/e2e.test.mjs                      # every stage on the fixture app, about 2 minutes
 cd tools/a11y && python3 -m unittest tests.test_verdict -v     # one Python test module
 ```
 
