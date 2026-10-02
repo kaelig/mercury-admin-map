@@ -1,0 +1,861 @@
+{
+ "generated": [
+  {
+   "area": "accounts",
+   "audit": {
+    "build": "b1d2e3",
+    "checkedStates": [
+     "accounts.treasury"
+    ],
+    "criteria": [
+     {
+      "name": "Keyboard",
+      "number": "2.1.1",
+      "url": "https://www.w3.org/WAI/WCAG22/Understanding/keyboard"
+     }
+    ],
+    "date": "2026-10-02",
+    "evidence": "The Tab walk visited 12 stops and never reached the text \"Statements\", which responds to a click.\nVerifier (2026-10-02, checked accounts.treasury): Reproduced on every sampled state.",
+    "family": "keyboard",
+    "reason": "Reproduced on every sampled state.",
+    "run": "2026-10-02-1400",
+    "status": "not-retested",
+    "verdict": "confirm"
+   },
+   "category": "a11y",
+   "copy": {
+    "acceptance": [
+     "Tab reaches the text \"Statements\".",
+     "Enter or Space does what a click does."
+    ],
+    "confidence": "high",
+    "confidenceReason": "The scripted Tab walk never reached it, and a verifier checked it on the live demo.",
+    "demoArtifactRisk": false,
+    "fixHypothesis": "The control seems to be a div or span with a click handler. Using a native button or link, or adding a role, tabindex=0 and Enter and Space handling, would likely fix it.",
+    "impact": "accessibility",
+    "searchTerms": [
+     "onClick div",
+     "tabindex 0",
+     "clickable div keyboard"
+    ],
+    "summary": "On accounts.treasury, the text \"Statements\" responds to a click, but the Tab walk visited 12 stops without reaching it.",
+    "title": "Make the text \"Statements\" reachable and operable by keyboard",
+    "userImpact": "Keyboard and switch users cannot use this control, and may be unable to finish the task it belongs to.",
+    "verify": [
+     "Check whether the design system has a button or tab component this control should use."
+    ]
+   },
+   "detail": "Tab never reaches the text \"Statements\", so people who use a keyboard or switch device cannot use it. WCAG 2.1.1 Keyboard.",
+   "evidence": "The Tab walk visited 12 stops and never reached the text \"Statements\", which responds to a click. Verifier: Reproduced on every sampled state.",
+   "id": "accounts.i-a11y-keyboard-text-statements",
+   "nodeIds": [
+    "accounts.treasury",
+    "accounts.treasury-statements"
+   ],
+   "severity": "medium",
+   "title": "Not reachable by keyboard: text \"Statements\"",
+   "wcag": [
+    "2.1.1"
+   ]
+  },
+  {
+   "area": "cards",
+   "audit": {
+    "build": "b1d2e3",
+    "checkedStates": [
+     "cards.index",
+     "cards.detail-physical"
+    ],
+    "criteria": [
+     {
+      "name": "Name, Role, Value",
+      "number": "4.1.2",
+      "url": "https://www.w3.org/WAI/WCAG22/Understanding/name-role-value"
+     }
+    ],
+    "date": "2026-10-02",
+    "evidence": "button-name: announced as button \"\". Element does not have an accessible name\nVerifier (2026-10-02, checked cards.index, cards.detail-physical): Reproduced on every sampled state.",
+    "family": "name",
+    "reason": "Reproduced on every sampled state.",
+    "run": "2026-10-02-1400",
+    "status": "persisting",
+    "verdict": "confirm"
+   },
+   "category": "a11y",
+   "copy": {
+    "acceptance": [
+     "The button \"More actions\" has an accessible name that says what it does.",
+     "Repeated controls on cards.index have names that tell them apart."
+    ],
+    "confidence": "high",
+    "confidenceReason": "Read from the accessibility tree, and a verifier checked it on the live demo.",
+    "demoArtifactRisk": false,
+    "fixHypothesis": "The control seems to rely on an icon, a placeholder or its position for meaning. Adding an aria-label or a visible label that names the action and its target would likely fix it.",
+    "impact": "accessibility",
+    "searchTerms": [
+     "aria-label",
+     "accessible name",
+     "button-name"
+    ],
+    "summary": "On cards.index, the button \"More actions\" is announced as button \"\".",
+    "title": "Give the button \"More actions\" a name that says what it does",
+    "userImpact": "A screen-reader user hears a control without a usable name and cannot tell what it does or which item it acts on.",
+    "verify": [
+     "Check the design-system icon button and form field docs for the naming pattern."
+    ]
+   },
+   "detail": "Screen readers announce the button \"More actions\" as button \"\", which does not say what it is or does, so blind users cannot tell what it is for. WCAG 4.1.2 Name, Role, Value.",
+   "evidence": "button-name: announced as button \"\". Element does not have an accessible name. Verifier: Reproduced on every sampled state.",
+   "id": "cards.i-a11y-name-button-more-actions",
+   "nodeIds": [
+    "cards.index",
+    "cards.detail-physical"
+   ],
+   "severity": "high",
+   "title": "Missing or unclear name: button \"More actions\"",
+   "wcag": [
+    "4.1.2"
+   ]
+  },
+  {
+   "area": "cards",
+   "audit": {
+    "build": "b1d2e3",
+    "checkedStates": [
+     "cards.freeze-confirm"
+    ],
+    "criteria": [
+     {
+      "name": "Focus Order",
+      "number": "2.4.3",
+      "url": "https://www.w3.org/WAI/WCAG22/Understanding/focus-order"
+     }
+    ],
+    "date": "2026-10-02",
+    "evidence": "After the button \"Freeze card\" opened the dialog \"Freeze card\", focus was on the page body.\nVerifier (2026-10-02, checked cards.freeze-confirm): Reproduced on every sampled state.",
+    "family": "dialog-focus",
+    "reason": "Reproduced on every sampled state.",
+    "run": "2026-10-02-1400",
+    "status": "new",
+    "verdict": "confirm"
+   },
+   "category": "a11y",
+   "copy": {
+    "acceptance": [
+     "Opening the dialog \"Freeze card\" moves focus inside it.",
+     "Tab and Shift+Tab stay inside it while it is open.",
+     "Esc closes it and returns focus to the button \"Freeze card\"."
+    ],
+    "confidence": "high",
+    "confidenceReason": "The dialog check traced focus from a fresh page, and a verifier reproduced it on the live demo.",
+    "demoArtifactRisk": false,
+    "fixHypothesis": "The dialog seems to open without setting initial focus. Using the design-system dialog's built-in focus handling would likely fix it.",
+    "impact": "accessibility",
+    "searchTerms": [
+     "initial focus",
+     "dialog focus management",
+     "focus return"
+    ],
+    "summary": "On cards.freeze-confirm, opening the dialog \"Freeze card\" from the button \"Freeze card\" leaves focus on the page body.",
+    "title": "Move focus into the dialog \"Freeze card\" when it opens",
+    "userImpact": "Keyboard and screen-reader users are not told the dialog \"Freeze card\" opened and have to find it before they can use it.",
+    "verify": [
+     "Check the design-system modal docs for initial-focus and return-focus behavior."
+    ]
+   },
+   "detail": "When the dialog \"Freeze card\" opens, focus stays outside it, so keyboard and screen-reader users are not taken to it and must find it themselves. WCAG 2.4.3 Focus Order.",
+   "evidence": "After the button \"Freeze card\" opened the dialog \"Freeze card\", focus was on the page body. Verifier: Reproduced on every sampled state.",
+   "id": "cards.i-a11y-dialog-focus-button-freeze-card",
+   "nodeIds": [
+    "cards.freeze-confirm"
+   ],
+   "severity": "medium",
+   "title": "Focus not moved into dialog \"Freeze card\"",
+   "wcag": [
+    "2.4.3"
+   ]
+  },
+  {
+   "area": "settings",
+   "audit": {
+    "build": "b1d2e3",
+    "checkedStates": [
+     "settings.tokens",
+     "settings.index"
+    ],
+    "criteria": [
+     {
+      "name": "Focus Visible",
+      "number": "2.4.7",
+      "url": "https://www.w3.org/WAI/WCAG22/Understanding/focus-visible"
+     }
+    ],
+    "date": "2026-10-02",
+    "evidence": "Tab stop 4: focusing the link \"Create token\" changed no pixels within 8 px of it.\nVerifier (2026-10-02, checked settings.tokens, settings.index): Reproduced on every sampled state.",
+    "family": "focus-visible",
+    "reason": "Reproduced on every sampled state.",
+    "run": "2026-10-02-1400",
+    "status": "new",
+    "verdict": "confirm"
+   },
+   "category": "a11y",
+   "copy": {
+    "acceptance": [
+     "Focusing the link \"Create token\" with Tab shows a visible indicator.",
+     "The indicator shows on every screen where the component appears."
+    ],
+    "confidence": "high",
+    "confidenceReason": "The Tab walk compared screenshots with and without focus, and a verifier checked it on the live demo.",
+    "demoArtifactRisk": false,
+    "fixHypothesis": "The component seems to remove the browser outline without a replacement. Adding a :focus-visible style that matches the design system's focus ring would likely fix it.",
+    "impact": "accessibility",
+    "searchTerms": [
+     "focus ring",
+     "focus-visible",
+     "outline: none"
+    ],
+    "summary": "On settings.tokens, tab stop 4 lands on the link \"Create token\", and focusing it changes nothing on screen. It appears on 2 screens.",
+    "title": "Show a focus indicator on the link \"Create token\"",
+    "userImpact": "Keyboard users cannot see which control has focus, so they may act on the wrong one or lose their place.",
+    "verify": [
+     "Check the design-system focus ring docs for the standard indicator."
+    ]
+   },
+   "detail": "When the link \"Create token\" has keyboard focus, nothing on screen changes, so keyboard users cannot see where they are. WCAG 2.4.7 Focus Visible.",
+   "evidence": "Tab stop 4: focusing the link \"Create token\" changed no pixels within 8 px of it. Verifier: Reproduced on every sampled state.",
+   "id": "settings.i-a11y-focus-visible-link-create-token",
+   "nodeIds": [
+    "settings.tokens",
+    "settings.index"
+   ],
+   "severity": "medium",
+   "title": "No visible focus: link \"Create token\"",
+   "wcag": [
+    "2.4.7"
+   ]
+  },
+  {
+   "area": "transactions",
+   "audit": {
+    "build": "b1d2e3",
+    "checkedStates": [
+     "transactions.index",
+     "transactions.attachment-menu"
+    ],
+    "criteria": [
+     {
+      "name": "Contrast (Minimum)",
+      "number": "1.4.3",
+      "url": "https://www.w3.org/WAI/WCAG22/Understanding/contrast-minimum"
+     }
+    ],
+    "date": "2026-10-02",
+    "evidence": "axe color-contrast: #9d9da8 on #ffffff measures 3.12:1; AA needs 4.5:1.\nVerifier (2026-10-02, checked transactions.index, transactions.attachment-menu): Reproduced on every sampled state.",
+    "family": "contrast",
+    "reason": "Reproduced on every sampled state.",
+    "run": "2026-10-02-1400",
+    "status": "persisting",
+    "verdict": "confirm"
+   },
+   "category": "a11y",
+   "copy": {
+    "acceptance": [
+     "The text in \"Recent transactions\" reaches at least 4.5:1 against its background.",
+     "The same style reaches 4.5:1 on every screen where it appears."
+    ],
+    "confidence": "high",
+    "confidenceReason": "axe computed both colors and the ratio, and a verifier checked them on the live demo.",
+    "demoArtifactRisk": false,
+    "fixHypothesis": "The color seems to come from a shared muted-text style. Moving that style to a token that reaches 4.5:1 on #ffffff would likely fix every screen at once.",
+    "impact": "accessibility",
+    "searchTerms": [
+     "#9d9da8",
+     "muted text color",
+     "color contrast"
+    ],
+    "summary": "On transactions.index, the text in \"Recent transactions\" uses #9d9da8 on #ffffff, a contrast of 3.12:1. AA needs 4.5:1 for this text. The same style appears on 30 screens.",
+    "title": "Raise the contrast of the text in \"Recent transactions\"",
+    "userImpact": "People with low vision, or anyone on a dim or glare-prone screen, may not be able to read this text.",
+    "verify": [
+     "Check the design-system color tokens for a muted-text value that reaches 4.5:1 on #ffffff."
+    ]
+   },
+   "detail": "The text in \"Recent transactions\" uses #9d9da8 on #ffffff, a contrast of 3.12:1 where AA needs 4.5:1, so people with low vision may not be able to read it. WCAG 1.4.3 Contrast (Minimum).",
+   "evidence": "axe color-contrast: #9d9da8 on #ffffff measures 3.12:1; AA needs 4.5:1. Verifier: Reproduced on every sampled state.",
+   "id": "transactions.i-a11y-contrast-text-in-recent-transactions",
+   "nodeIds": [
+    "transactions.index",
+    "transactions.attachment-menu",
+    "transactions.attachment-preview",
+    "transactions.attachment-toast",
+    "transactions.bulk-field-picker",
+    "transactions.bulk-gl-code-applied",
+    "transactions.bulk-gl-code-values",
+    "transactions.bulk-more-menu",
+    "transactions.bulk-select",
+    "transactions.categorized-tip",
+    "transactions.category-created",
+    "transactions.comment-mention",
+    "transactions.comment-posted",
+    "transactions.create-category-modal",
+    "transactions.create-view-modal",
+    "transactions.date-chip",
+    "transactions.delete-view-confirm",
+    "transactions.detail-ach",
+    "transactions.detail-ach-comments",
+    "transactions.detail-ach-more-menu",
+    "transactions.detail-ach-pull",
+    "transactions.detail-card",
+    "transactions.detail-card-lower",
+    "transactions.detail-category-dropdown",
+    "transactions.detail-failed",
+    "transactions.detail-intl-wire",
+    "transactions.detail-more-menu",
+    "transactions.detail-note-saved",
+    "transactions.detail-pending-deposit",
+    "transactions.detail-receipt-attached"
+   ],
+   "severity": "medium",
+   "title": "Low contrast: text in \"Recent transactions\"",
+   "wcag": [
+    "1.4.3"
+   ]
+  }
+ ],
+ "overlays": {
+  "accounts.i-heading-levels": {
+   "addNodeIds": [],
+   "audit": {
+    "build": "b1d2e3",
+    "checkedStates": [
+     "accounts.autopay-source-edit",
+     "accounts.create-account"
+    ],
+    "criteria": [
+     {
+      "name": "Info and Relationships",
+      "number": "1.3.1",
+      "url": "https://www.w3.org/WAI/WCAG22/Understanding/info-and-relationships"
+     }
+    ],
+    "date": "2026-10-02",
+    "evidence": "Snapshots 2026-09-24: heading \"Autopay settings\" [level=1], \"Edit autopay accounts\" [level=1], \"Create a new auto transfer rule\" [level=2], \"Distribute funds across accounts\" [level=2], \"Maintain a target account balance\" [level=3]; share dialog: querySelector(\"h1,h2,h3\") === null.\nEvidence reference: shot:accounts.autopay-source-edit\nVerifier (2026-10-02, checked accounts.autopay-source-edit, accounts.create-account): Reproduced on every sampled state.",
+    "family": "structure",
+    "reason": "Reproduced on every sampled state.",
+    "run": "2026-10-02-1400",
+    "status": "confirmed",
+    "verdict": "confirm"
+   },
+   "evidenceAppend": null,
+   "history": null,
+   "severity": null,
+   "wcag": [
+    "1.3.1"
+   ]
+  },
+  "accounts.i-rule-cards-hidden-period": {
+   "addNodeIds": [],
+   "audit": {
+    "build": "b1d2e3",
+    "checkedStates": [
+     "accounts.auto-transfer-rules"
+    ],
+    "criteria": [
+     {
+      "name": "Name, Role, Value",
+      "number": "4.1.2",
+      "url": "https://www.w3.org/WAI/WCAG22/Understanding/name-role-value"
+     }
+    ],
+    "date": "2026-10-02",
+    "evidence": "DOM (2026-09-25) on /accounts#auto-transfers: <button>…<p>Distribute funds<br> across accounts</p><p><div>.</div></p>…</button>; the <div> has opacity 0, width 0px, no aria-hidden. Accessibility tree: button \"Distribute funds across accounts .\", button \"Maintain a target account balance .\" (same for 'Schedule recurring transfers .' and 'Redirect incoming funds .').\nEvidence reference: shot:accounts.auto-transfer-rules\nVerifier (2026-10-02, checked accounts.auto-transfer-rules): Reproduced on every sampled state.",
+    "family": "name",
+    "reason": "Reproduced on every sampled state.",
+    "run": "2026-10-02-1400",
+    "status": "confirmed",
+    "verdict": "confirm"
+   },
+   "evidenceAppend": null,
+   "history": null,
+   "severity": null,
+   "wcag": [
+    "4.1.2"
+   ]
+  },
+  "accounts.i-safe-form-labels": {
+   "addNodeIds": [],
+   "audit": {
+    "build": "b1d2e3",
+    "checkedStates": [
+     "accounts.linked-account-kebab",
+     "accounts.safe-create"
+    ],
+    "criteria": [
+     {
+      "name": "Name, Role, Value",
+      "number": "4.1.2",
+      "url": "https://www.w3.org/WAI/WCAG22/Understanding/name-role-value"
+     }
+    ],
+    "date": "2026-10-02",
+    "evidence": "Snapshots 2026-09-24: switch \"proRataRightsLetter\" [checked=false]; textbox [ref=e29] and textbox [disabled, ref=e30] with empty names; listbox \"mercury-utils-id-78-label\"; textbox \"0.00\" on /capital/venture-debt/draw-funds; linked account rows expose button [expanded=false] with no label.\nEvidence reference: shot:accounts.linked-account-kebab\nVerifier (2026-10-02, checked accounts.linked-account-kebab, accounts.safe-create): Reproduced on every sampled state.",
+    "family": "name",
+    "reason": "Reproduced on every sampled state.",
+    "run": "2026-10-02-1400",
+    "status": "confirmed",
+    "verdict": "confirm"
+   },
+   "evidenceAppend": null,
+   "history": null,
+   "severity": null,
+   "wcag": [
+    "4.1.2"
+   ]
+  },
+  "accounts.i-tabs-not-tabs": {
+   "addNodeIds": [],
+   "audit": {
+    "build": "b1d2e3",
+    "checkedStates": [
+     "accounts.credit-last-month",
+     "accounts.edit-autopay"
+    ],
+    "criteria": [
+     {
+      "name": "Keyboard",
+      "number": "2.1.1",
+      "url": "https://www.w3.org/WAI/WCAG22/Understanding/keyboard"
+     },
+     {
+      "name": "Name, Role, Value",
+      "number": "4.1.2",
+      "url": "https://www.w3.org/WAI/WCAG22/Understanding/name-role-value"
+     }
+    ],
+    "date": "2026-10-02",
+    "evidence": "On /accounts: [role=tab] 0, [role=tablist] 0; \"Mercury accounts\" <DIV> 14px/400 rgb(221,221,229), \"Linked accounts\" <DIV> 14px/400 rgb(157,157,168), padding 10px 0, height 40px. Treasury Portfolio: <div aria-disabled=\"false\" class=\"_dsTabViewTab_95hq1_9\">. Autopay \"Edit\" parents: DIV role=null tabindex=null (15px, rgb(141,164,245)). \"Last Month\": <P> in a DIV with no role or tabindex.\nEvidence reference: shot:accounts.credit-last-month\nVerifier (2026-10-02, checked accounts.credit-last-month, accounts.edit-autopay): Tab never reaches the Treasury and Financing tabs, so keyboard users cannot switch views.",
+    "family": "keyboard",
+    "reason": "Tab never reaches the Treasury and Financing tabs, so keyboard users cannot switch views.",
+    "run": "2026-10-02-1400",
+    "status": "re-rated",
+    "verdict": "rerate"
+   },
+   "evidenceAppend": "Verifier (2026-10-02): Tab never reaches the Treasury and Financing tabs, so keyboard users cannot switch views.",
+   "history": "rated high on 2026-10-02, previously medium",
+   "severity": "high",
+   "wcag": [
+    "2.1.1",
+    "4.1.2"
+   ]
+  },
+  "billpay.i-date-input-label": {
+   "addNodeIds": [],
+   "audit": {
+    "build": "b1d2e3",
+    "checkedStates": [
+     "billpay.bill-panel-edit"
+    ],
+    "criteria": [
+     {
+      "name": "Label in Name",
+      "number": "2.5.3",
+      "url": "https://www.w3.org/WAI/WCAG22/Understanding/label-in-name"
+     }
+    ],
+    "date": "2026-10-02",
+    "evidence": "Edit-mode inputs: input[placeholder='Select due date'] value 'Apr 19, 2025' (Due date) and input[placeholder='Select due date'] value 'Apr 18, 2025' (Invoice date); amount input named only by placeholder '0.00'.\nEvidence reference: shot:billpay.bill-panel-edit\nVerifier (2026-10-02, checked billpay.bill-panel-edit): Reproduced on every sampled state.",
+    "family": "name",
+    "reason": "Reproduced on every sampled state.",
+    "run": "2026-10-02-1400",
+    "status": "confirmed",
+    "verdict": "confirm"
+   },
+   "evidenceAppend": null,
+   "history": null,
+   "severity": null,
+   "wcag": [
+    "2.5.3"
+   ]
+  },
+  "billpay.i-manage-link": {
+   "addNodeIds": [],
+   "audit": {
+    "build": "b1d2e3",
+    "checkedStates": [
+     "billpay.settings"
+    ],
+    "criteria": [
+     {
+      "name": "Use of Color",
+      "number": "1.4.1",
+      "url": "https://www.w3.org/WAI/WCAG22/Understanding/use-of-color"
+     }
+    ],
+    "date": "2026-10-02",
+    "evidence": "'Manage' A: 14px/400 rgb(195,195,204), text-decoration none; sibling 'Edit' (approval rules) and 'Connect' A: 15px/400 rgb(141,164,245).\nEvidence reference: shot:billpay.settings\nVerifier (2026-10-02, checked billpay.settings): Reproduced on every sampled state.",
+    "family": "contrast",
+    "reason": "Reproduced on every sampled state.",
+    "run": "2026-10-02-1400",
+    "status": "confirmed",
+    "verdict": "confirm"
+   },
+   "evidenceAppend": null,
+   "history": null,
+   "severity": null,
+   "wcag": [
+    "1.4.1"
+   ]
+  },
+  "billpay.i-pay-dialog-name": {
+   "addNodeIds": [],
+   "audit": {
+    "build": "b1d2e3",
+    "checkedStates": [
+     "billpay.pay-amount",
+     "billpay.pay-recipient-match"
+    ],
+    "criteria": [
+     {
+      "name": "Info and Relationships",
+      "number": "1.3.1",
+      "url": "https://www.w3.org/WAI/WCAG22/Understanding/info-and-relationships"
+     }
+    ],
+    "date": "2026-10-02",
+    "evidence": "Snapshot on /send-money/pay/recipient-match: heading 'Upload an attachment' [level=2] then heading 'Recipient match' [level=1]; the h2 is inside ._fullScreenOverlay with opacity 0 and pointer-events none, no aria-hidden.\nEvidence reference: shot:billpay.pay-amount\nVerifier (2026-10-02, checked billpay.pay-amount, billpay.pay-recipient-match): Reproduced on every sampled state.",
+    "family": "structure",
+    "reason": "Reproduced on every sampled state.",
+    "run": "2026-10-02-1400",
+    "status": "confirmed",
+    "verdict": "confirm"
+   },
+   "evidenceAppend": null,
+   "history": null,
+   "severity": null,
+   "wcag": [
+    "1.3.1"
+   ]
+  },
+  "billpay.i-unlabeled-controls": {
+   "addNodeIds": [],
+   "audit": {
+    "build": "b1d2e3",
+    "checkedStates": [
+     "billpay.accounting-workbench",
+     "billpay.index"
+    ],
+    "criteria": [
+     {
+      "name": "Name, Role, Value",
+      "number": "4.1.2",
+      "url": "https://www.w3.org/WAI/WCAG22/Understanding/name-role-value"
+     }
+    ],
+    "date": "2026-10-02",
+    "evidence": "Row delete button <button class=\"_button_r6b2u_20 _small_r6b2u_72 _destructive_r6b2u_186\"> with aria-label null, title '' and only svg[data-icon=trash][aria-hidden=true]; tabs are DIV with role=null (snapshot 'generic \"Inbox 3\"', 'generic \"Sync Error3\"'); bill edit amount input's only name is its placeholder '0.00'.\nEvidence reference: shot:billpay.accounting-workbench\nVerifier (2026-10-02, checked billpay.accounting-workbench, billpay.index): Reproduced on every sampled state.",
+    "family": "name",
+    "reason": "Reproduced on every sampled state.",
+    "run": "2026-10-02-1400",
+    "status": "confirmed",
+    "verdict": "confirm"
+   },
+   "evidenceAppend": null,
+   "history": null,
+   "severity": null,
+   "wcag": [
+    "4.1.2"
+   ]
+  },
+  "books.i-fake-disabled-save": {
+   "addNodeIds": [],
+   "audit": {
+    "build": "b1d2e3",
+    "checkedStates": [
+     "books.rule-create"
+    ],
+    "criteria": [
+     {
+      "name": "Name, Role, Value",
+      "number": "4.1.2",
+      "url": "https://www.w3.org/WAI/WCAG22/Understanding/name-role-value"
+     }
+    ],
+    "date": "2026-10-02",
+    "evidence": "getComputedStyle(Save): opacity '0.4', background-color 'rgb(82, 102, 235)'; button.disabled false; aria-disabled null.\nEvidence reference: shot:books.rule-create\nVerifier (2026-10-02, checked books.rule-create): Reproduced on every sampled state.",
+    "family": "role-state",
+    "reason": "Reproduced on every sampled state.",
+    "run": "2026-10-02-1400",
+    "status": "confirmed",
+    "verdict": "confirm"
+   },
+   "evidenceAppend": null,
+   "history": null,
+   "severity": null,
+   "wcag": [
+    "4.1.2"
+   ]
+  },
+  "books.i-frequency-aria": {
+   "addNodeIds": [],
+   "audit": {
+    "build": "b1d2e3",
+    "checkedStates": [
+     "books.report-frequency"
+    ],
+    "criteria": [
+     {
+      "name": "Name, Role, Value",
+      "number": "4.1.2",
+      "url": "https://www.w3.org/WAI/WCAG22/Understanding/name-role-value"
+     }
+    ],
+    "date": "2026-10-02",
+    "evidence": "combobox 'frequency': 'Monthly'; listbox: option 'Annual' [selected], option 'Quarterly', option 'Monthly', option 'Custom'.\nEvidence reference: shot:books.report-frequency\nVerifier (2026-10-02, checked books.report-frequency): Reproduced on every sampled state.",
+    "family": "role-state",
+    "reason": "Reproduced on every sampled state.",
+    "run": "2026-10-02-1400",
+    "status": "confirmed",
+    "verdict": "confirm"
+   },
+   "evidenceAppend": null,
+   "history": null,
+   "severity": null,
+   "wcag": [
+    "4.1.2"
+   ]
+  },
+  "cards.i-modal-heading-semantics": {
+   "addNodeIds": [],
+   "audit": {
+    "build": "b1d2e3",
+    "checkedStates": [
+     "cards.edit-limit-modal",
+     "cards.edit-nickname"
+    ],
+    "criteria": [
+     {
+      "name": "Info and Relationships",
+      "number": "1.3.1",
+      "url": "https://www.w3.org/WAI/WCAG22/Understanding/info-and-relationships"
+     }
+    ],
+    "date": "2026-10-02",
+    "evidence": "Nickname title: <H2> 19px/400/28px 'Change Card Nickname'; Freeze: <H2> 19px/400; Archive budget: <H2> 19px/400; Edit card limits title: <SPAN> 19px/400/28px with no heading role.\nEvidence reference: shot:cards.edit-limit-modal\nVerifier (2026-10-02, checked cards.edit-limit-modal, cards.edit-nickname): The Edit card limits title is an h2 inside the dialog header; the capture read a stale DOM.",
+    "family": "structure",
+    "reason": "The Edit card limits title is an h2 inside the dialog header; the capture read a stale DOM.",
+    "run": "2026-10-02-1400",
+    "status": "not-reproduced",
+    "verdict": "drop"
+   },
+   "evidenceAppend": null,
+   "history": "not reproduced on 2026-10-02: The Edit card limits title is an h2 inside the dialog header; the capture read a stale DOM.",
+   "severity": null,
+   "wcag": [
+    "1.3.1"
+   ]
+  },
+  "cards.i-subscription-actions-unlabeled": {
+   "addNodeIds": [],
+   "audit": {
+    "build": "b1d2e3",
+    "checkedStates": [
+     "cards.subscriptions"
+    ],
+    "criteria": [
+     {
+      "name": "Name, Role, Value",
+      "number": "4.1.2",
+      "url": "https://www.w3.org/WAI/WCAG22/Understanding/name-role-value"
+     },
+     {
+      "name": "Link Purpose (In Context)",
+      "number": "2.4.4",
+      "url": "https://www.w3.org/WAI/WCAG22/Understanding/link-purpose-in-context"
+     }
+    ],
+    "date": "2026-10-02",
+    "evidence": "Adyen N.V. row: <A> 32x32 aria-label=null title=null text=''; <BUTTON> 32x32 aria-label=null title=null text=''; a third <BUTTON> 32x70 with no text or label.\nEvidence reference: shot:cards.subscriptions\nVerifier (2026-10-02, checked cards.subscriptions): Reproduced on every sampled state.",
+    "family": "name",
+    "reason": "Reproduced on every sampled state.",
+    "run": "2026-10-02-1400",
+    "status": "confirmed",
+    "verdict": "confirm"
+   },
+   "evidenceAppend": null,
+   "history": null,
+   "severity": null,
+   "wcag": [
+    "4.1.2",
+    "2.4.4"
+   ]
+  },
+  "home.i-chips-as-menuitems": {
+   "addNodeIds": [],
+   "audit": {
+    "build": "b1d2e3",
+    "checkedStates": [
+     "home.accounts-kebab",
+     "home.avatar-menu"
+    ],
+    "criteria": [
+     {
+      "name": "Name, Role, Value",
+      "number": "4.1.2",
+      "url": "https://www.w3.org/WAI/WCAG22/Understanding/name-role-value"
+     },
+     {
+      "name": "Info and Relationships",
+      "number": "1.3.1",
+      "url": "https://www.w3.org/WAI/WCAG22/Understanding/info-and-relationships"
+     }
+    ],
+    "date": "2026-10-02",
+    "evidence": "Dashboard: 5 <button role=\"menuitem\"> chips (Recent … Operating expenses), 0 [role=tablist]. Avatar <button aria-haspopup=\"menu\" class=\"_menuButton_ko7ja_21\"> with no aria-label, img alt=\"\". Kebabs: 4× <button aria-haspopup=\"menu\" class=\"… _menuButton_ok3n2_7\"> with no aria-label or text.\nEvidence reference: shot:home.accounts-kebab\nVerifier (2026-10-02, checked home.accounts-kebab, home.avatar-menu): Reproduced on every sampled state.",
+    "family": "role-state",
+    "reason": "Reproduced on every sampled state.",
+    "run": "2026-10-02-1400",
+    "status": "confirmed",
+    "verdict": "confirm"
+   },
+   "evidenceAppend": null,
+   "history": null,
+   "severity": null,
+   "wcag": [
+    "4.1.2",
+    "1.3.1"
+   ]
+  },
+  "invoicing.i-unlabeled-controls": {
+   "addNodeIds": [],
+   "audit": {
+    "build": "b1d2e3",
+    "checkedStates": [
+     "invoicing.customers-index",
+     "invoicing.settings-branding"
+    ],
+    "criteria": [
+     {
+      "name": "Name, Role, Value",
+      "number": "4.1.2",
+      "url": "https://www.w3.org/WAI/WCAG22/Understanding/name-role-value"
+     }
+    ],
+    "date": "2026-10-02",
+    "evidence": "Customers row buttons: aria-label null, title '', textContent '' (class _button_ _small_ _tertiary_). Branding radios exposed as 'white-theme', 'green-theme', 'blue-theme', 'beige-theme', 'orange-theme', 'purple-theme'; the 'white-theme' swatch is dark grey.\nEvidence reference: shot:invoicing.customers-index\nVerifier (2026-10-02, checked invoicing.customers-index, invoicing.settings-branding): Reproduced on every sampled state.",
+    "family": "name",
+    "reason": "Reproduced on every sampled state.",
+    "run": "2026-10-02-1400",
+    "status": "confirmed",
+    "verdict": "confirm"
+   },
+   "evidenceAppend": null,
+   "history": null,
+   "severity": null,
+   "wcag": [
+    "4.1.2"
+   ]
+  },
+  "payments.i-icon-links-a11y": {
+   "addNodeIds": [],
+   "audit": {
+    "build": "b1d2e3",
+    "checkedStates": [
+     "payments.recipients"
+    ],
+    "criteria": [
+     {
+      "name": "Name, Role, Value",
+      "number": "4.1.2",
+      "url": "https://www.w3.org/WAI/WCAG22/Understanding/name-role-value"
+     },
+     {
+      "name": "Link Purpose (In Context)",
+      "number": "2.4.4",
+      "url": "https://www.w3.org/WAI/WCAG22/Understanding/link-purpose-in-context"
+     }
+    ],
+    "date": "2026-10-02",
+    "evidence": "a[href='/send-money/pay/recipient-details']: aria-label null, aria-labelledby null, title null, textContent '', svg <title> none. Snapshot lists them as unnamed 'link' elements.\nEvidence reference: shot:payments.recipients\nVerifier (2026-10-02, checked payments.recipients): Reproduced on every sampled state.",
+    "family": "name",
+    "reason": "Reproduced on every sampled state.",
+    "run": "2026-10-02-1400",
+    "status": "confirmed",
+    "verdict": "confirm"
+   },
+   "evidenceAppend": null,
+   "history": null,
+   "severity": null,
+   "wcag": [
+    "4.1.2",
+    "2.4.4"
+   ]
+  },
+  "settings.i-unnamed-row-buttons": {
+   "addNodeIds": [
+    "settings.tokens-new-row"
+   ],
+   "audit": {
+    "build": "b1d2e3",
+    "checkedStates": [
+     "settings.token-menu",
+     "settings.tokens"
+    ],
+    "criteria": [
+     {
+      "name": "Name, Role, Value",
+      "number": "4.1.2",
+      "url": "https://www.w3.org/WAI/WCAG22/Understanding/name-role-value"
+     }
+    ],
+    "date": "2026-10-02",
+    "evidence": "Accessibility snapshot: each token row ends with 'button [expanded=false]' containing 'button' with no name. eval: 11 buttons in the page with empty innerText and no aria-label.\nEvidence reference: shot:settings.token-menu\nVerifier (2026-10-02, checked settings.token-menu, settings.tokens): Reproduced on every sampled state.",
+    "family": "name",
+    "reason": "Reproduced on every sampled state.",
+    "run": "2026-10-02-1400",
+    "status": "confirmed",
+    "verdict": "confirm"
+   },
+   "evidenceAppend": null,
+   "history": null,
+   "severity": null,
+   "wcag": [
+    "4.1.2"
+   ]
+  },
+  "transactions.i-category-name-label": {
+   "addNodeIds": [],
+   "audit": {
+    "build": "b1d2e3",
+    "checkedStates": [
+     "transactions.create-category-modal"
+    ],
+    "criteria": [
+     {
+      "name": "Name, Role, Value",
+      "number": "4.1.2",
+      "url": "https://www.w3.org/WAI/WCAG22/Understanding/name-role-value"
+     },
+     {
+      "name": "Labels or Instructions",
+      "number": "3.3.2",
+      "url": "https://www.w3.org/WAI/WCAG22/Understanding/labels-or-instructions"
+     }
+    ],
+    "date": "2026-10-02",
+    "evidence": "Create category dialog input: id \"categoryname-mercury-utils-id-135\", placeholder \"\", aria-label null, aria-labelledby null, input.labels empty; heading \"Create category\" 19px/400.\nEvidence reference: shot:transactions.create-category-modal\nVerifier (2026-10-02, checked transactions.create-category-modal): Reproduced on every sampled state.",
+    "family": "name",
+    "reason": "Reproduced on every sampled state.",
+    "run": "2026-10-02-1400",
+    "status": "confirmed",
+    "verdict": "confirm"
+   },
+   "evidenceAppend": null,
+   "history": null,
+   "severity": null,
+   "wcag": [
+    "4.1.2",
+    "3.3.2"
+   ]
+  }
+ }
+}

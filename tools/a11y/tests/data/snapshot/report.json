@@ -1,0 +1,1586 @@
+{
+ "advisory": [],
+ "baseline": "2026-10-01-0900",
+ "captured": "2026-09-24",
+ "changes": {
+  "findings": {
+   "fixed": 1,
+   "new": 2,
+   "not-retested": 1,
+   "persisting": 2,
+   "re-rated": 0,
+   "reappeared": 0,
+   "withdrawn": 1
+  },
+  "handFound": {
+   "confirmed": 15,
+   "first-audited": 0,
+   "not-reproduced": 1,
+   "not-retested": 0,
+   "re-rated": 1
+  }
+ },
+ "counts": {
+  "high": 2,
+  "low": 5,
+  "medium": 13
+ },
+ "coverage": {
+  "audited": 75,
+  "builds": [
+   "b1d2e3"
+  ],
+  "caveat": "This audit was produced by black-box testing of the public demo at demo.mercury.com, with no access to Mercury's design system, component library, content style guide, analytics or roadmap. Some findings may be intentional decisions, artifacts of the demo's seeded data, or issues Mercury already knows about. Every finding is a hypothesis to verify, not a confirmed defect. Before filing, check each one against Mercury's internal conventions. Those are available only to Mercury employees, or to an agent driving a logged-in browser on their behalf (for example Claude in Chrome or computer use).",
+  "dimensions": [
+   "zoom and reflow",
+   "real screen readers",
+   "mobile",
+   "dark theme"
+  ],
+  "lighthouse": {
+   "date": "2026-10-01",
+   "line": "Lighthouse (axe 4.13.0, Chrome 151.0.7000.0) audited 1 state on 2026-10-01 (run 2026-10-01-0900): 0 unexplained differences from the sweep.",
+   "run": "2026-10-01-0900",
+   "unexplained": 0
+  },
+  "states": 78,
+  "tested": [
+   {
+    "checks": [
+     "image-alt"
+    ],
+    "coverage": "partial",
+    "level": "A",
+    "modes": "Images, icons, SVGs, meters and image inputs with no text alternative.",
+    "name": "Non-text Content",
+    "number": "1.1.1",
+    "principle": "Perceivable"
+   },
+   {
+    "checks": [
+     "announced-as",
+     "list",
+     "listitem"
+    ],
+    "coverage": "partial",
+    "level": "A",
+    "modes": "Lists, tables, headings and ARIA parent-child roles that misstate the structure, and structure judged from Chrome's accessibility tree.",
+    "name": "Info and Relationships",
+    "number": "1.3.1",
+    "principle": "Perceivable"
+   },
+   {
+    "checks": [
+     "backward-jump"
+    ],
+    "coverage": "partial",
+    "level": "A",
+    "modes": "Tab order that jumps backward against the visual order.",
+    "name": "Meaningful Sequence",
+    "number": "1.3.2",
+    "principle": "Perceivable"
+   },
+   {
+    "checks": [
+     "link-in-text-block"
+    ],
+    "coverage": "partial",
+    "level": "A",
+    "modes": "Links that differ from the text around them by color alone.",
+    "name": "Use of Color",
+    "number": "1.4.1",
+    "principle": "Perceivable"
+   },
+   {
+    "checks": [
+     "color-contrast"
+    ],
+    "coverage": "partial",
+    "level": "AA",
+    "modes": "Text contrast as axe computes it; text over images or gradients goes to the verifier.",
+    "name": "Contrast (Minimum)",
+    "number": "1.4.3",
+    "principle": "Perceivable"
+   },
+   {
+    "checks": [
+     "dialog-trigger-not-focusable",
+     "dialog-trigger-not-operable",
+     "hover-only",
+     "not-reached"
+    ],
+    "coverage": "partial",
+    "level": "A",
+    "modes": "Clickable elements Tab never reaches, triggers that Enter and Space cannot open, and scrollable regions without focusable content. Arrow keys are not tested.",
+    "name": "Keyboard",
+    "number": "2.1.1",
+    "principle": "Operable"
+   },
+   {
+    "checks": [
+     "keyboard-trap"
+    ],
+    "coverage": "partial",
+    "level": "A",
+    "modes": "Tab loops that Tab, Shift+Tab and Esc cannot leave, on pages, modals and drawers.",
+    "name": "No Keyboard Trap",
+    "number": "2.1.2",
+    "principle": "Operable"
+   },
+   {
+    "checks": [
+     "document-title"
+    ],
+    "coverage": "partial",
+    "level": "A",
+    "modes": "A missing or empty page title; whether the title describes the page is not tested.",
+    "name": "Page Titled",
+    "number": "2.4.2",
+    "principle": "Operable"
+   },
+   {
+    "checks": [
+     "backward-jump",
+     "dialog-focus-escaped",
+     "dialog-focus-not-moved",
+     "dialog-focus-not-returned",
+     "focus-hidden",
+     "menu-focus-not-moved",
+     "popover-not-reachable"
+    ],
+    "coverage": "partial",
+    "level": "A",
+    "modes": "Focus moved into, kept inside and returned from dialogs, menus and popovers, and Tab stops on hidden elements.",
+    "name": "Focus Order",
+    "number": "2.4.3",
+    "principle": "Operable"
+   },
+   {
+    "checks": [
+     "link-name"
+    ],
+    "coverage": "partial",
+    "level": "A",
+    "modes": "Links and image-map areas with no name.",
+    "name": "Link Purpose (In Context)",
+    "number": "2.4.4",
+    "principle": "Operable"
+   },
+   {
+    "checks": [
+     "focus-hidden",
+     "focus-not-visible"
+    ],
+    "coverage": "partial",
+    "level": "AA",
+    "modes": "A visible change around every Tab stop on pages, modals and drawers.",
+    "name": "Focus Visible",
+    "number": "2.4.7",
+    "principle": "Operable"
+   },
+   {
+    "checks": [
+     "target-size",
+     "target-size-own"
+    ],
+    "coverage": "full",
+    "level": "AA",
+    "modes": "Every interactive element measured against 24×24 px, with the spacing exception computed; the inline and essential exceptions are judged by the verifier.",
+    "name": "Target Size (Minimum)",
+    "number": "2.5.8",
+    "principle": "Operable"
+   },
+   {
+    "checks": [
+     "html-has-lang"
+    ],
+    "coverage": "partial",
+    "level": "A",
+    "modes": "A missing or invalid page language.",
+    "name": "Language of Page",
+    "number": "3.1.1",
+    "principle": "Understandable"
+   },
+   {
+    "checks": [
+     "announced-as",
+     "button-name",
+     "label",
+     "link-name",
+     "nested-interactive"
+    ],
+    "coverage": "partial",
+    "level": "A",
+    "modes": "Controls with no name and invalid ARIA roles, states and attributes, plus names, roles and states judged from Chrome's accessibility tree.",
+    "name": "Name, Role, Value",
+    "number": "4.1.2",
+    "principle": "Robust"
+   }
+  ],
+  "unreachable": 3,
+  "untested": [
+   {
+    "level": "A",
+    "name": "Audio-only and Video-only (Prerecorded)",
+    "named": false,
+    "number": "1.2.1",
+    "principle": "Perceivable"
+   },
+   {
+    "level": "A",
+    "name": "Captions (Prerecorded)",
+    "named": false,
+    "number": "1.2.2",
+    "principle": "Perceivable"
+   },
+   {
+    "level": "A",
+    "name": "Audio Description or Media Alternative (Prerecorded)",
+    "named": false,
+    "number": "1.2.3",
+    "principle": "Perceivable"
+   },
+   {
+    "level": "AA",
+    "name": "Captions (Live)",
+    "named": false,
+    "number": "1.2.4",
+    "principle": "Perceivable"
+   },
+   {
+    "level": "AA",
+    "name": "Audio Description (Prerecorded)",
+    "named": false,
+    "number": "1.2.5",
+    "principle": "Perceivable"
+   },
+   {
+    "level": "A",
+    "name": "Sensory Characteristics",
+    "named": false,
+    "number": "1.3.3",
+    "principle": "Perceivable"
+   },
+   {
+    "level": "AA",
+    "name": "Orientation",
+    "named": false,
+    "number": "1.3.4",
+    "principle": "Perceivable"
+   },
+   {
+    "level": "AA",
+    "name": "Identify Input Purpose",
+    "named": false,
+    "number": "1.3.5",
+    "principle": "Perceivable"
+   },
+   {
+    "level": "A",
+    "name": "Audio Control",
+    "named": false,
+    "number": "1.4.2",
+    "principle": "Perceivable"
+   },
+   {
+    "level": "AA",
+    "name": "Resize Text",
+    "named": false,
+    "number": "1.4.4",
+    "principle": "Perceivable"
+   },
+   {
+    "level": "AA",
+    "name": "Images of Text",
+    "named": false,
+    "number": "1.4.5",
+    "principle": "Perceivable"
+   },
+   {
+    "level": "AA",
+    "name": "Reflow",
+    "named": false,
+    "number": "1.4.10",
+    "principle": "Perceivable"
+   },
+   {
+    "level": "AA",
+    "name": "Non-text Contrast",
+    "named": false,
+    "number": "1.4.11",
+    "principle": "Perceivable"
+   },
+   {
+    "level": "AA",
+    "name": "Text Spacing",
+    "named": true,
+    "number": "1.4.12",
+    "principle": "Perceivable"
+   },
+   {
+    "level": "AA",
+    "name": "Content on Hover or Focus",
+    "named": true,
+    "number": "1.4.13",
+    "principle": "Perceivable"
+   },
+   {
+    "level": "A",
+    "name": "Character Key Shortcuts",
+    "named": false,
+    "number": "2.1.4",
+    "principle": "Operable"
+   },
+   {
+    "level": "A",
+    "name": "Timing Adjustable",
+    "named": false,
+    "number": "2.2.1",
+    "principle": "Operable"
+   },
+   {
+    "level": "A",
+    "name": "Pause, Stop, Hide",
+    "named": false,
+    "number": "2.2.2",
+    "principle": "Operable"
+   },
+   {
+    "level": "A",
+    "name": "Three Flashes or Below Threshold",
+    "named": false,
+    "number": "2.3.1",
+    "principle": "Operable"
+   },
+   {
+    "level": "A",
+    "name": "Bypass Blocks",
+    "named": false,
+    "number": "2.4.1",
+    "principle": "Operable"
+   },
+   {
+    "level": "AA",
+    "name": "Multiple Ways",
+    "named": false,
+    "number": "2.4.5",
+    "principle": "Operable"
+   },
+   {
+    "level": "AA",
+    "name": "Headings and Labels",
+    "named": false,
+    "number": "2.4.6",
+    "principle": "Operable"
+   },
+   {
+    "level": "AA",
+    "name": "Focus Not Obscured (Minimum)",
+    "named": true,
+    "number": "2.4.11",
+    "principle": "Operable"
+   },
+   {
+    "level": "A",
+    "name": "Pointer Gestures",
+    "named": false,
+    "number": "2.5.1",
+    "principle": "Operable"
+   },
+   {
+    "level": "A",
+    "name": "Pointer Cancellation",
+    "named": false,
+    "number": "2.5.2",
+    "principle": "Operable"
+   },
+   {
+    "level": "A",
+    "name": "Label in Name",
+    "named": false,
+    "number": "2.5.3",
+    "principle": "Operable"
+   },
+   {
+    "level": "A",
+    "name": "Motion Actuation",
+    "named": false,
+    "number": "2.5.4",
+    "principle": "Operable"
+   },
+   {
+    "level": "AA",
+    "name": "Dragging Movements",
+    "named": true,
+    "number": "2.5.7",
+    "principle": "Operable"
+   },
+   {
+    "level": "AA",
+    "name": "Language of Parts",
+    "named": false,
+    "number": "3.1.2",
+    "principle": "Understandable"
+   },
+   {
+    "level": "A",
+    "name": "On Focus",
+    "named": false,
+    "number": "3.2.1",
+    "principle": "Understandable"
+   },
+   {
+    "level": "A",
+    "name": "On Input",
+    "named": false,
+    "number": "3.2.2",
+    "principle": "Understandable"
+   },
+   {
+    "level": "AA",
+    "name": "Consistent Navigation",
+    "named": false,
+    "number": "3.2.3",
+    "principle": "Understandable"
+   },
+   {
+    "level": "AA",
+    "name": "Consistent Identification",
+    "named": false,
+    "number": "3.2.4",
+    "principle": "Understandable"
+   },
+   {
+    "level": "A",
+    "name": "Consistent Help",
+    "named": false,
+    "number": "3.2.6",
+    "principle": "Understandable"
+   },
+   {
+    "level": "A",
+    "name": "Error Identification",
+    "named": false,
+    "number": "3.3.1",
+    "principle": "Understandable"
+   },
+   {
+    "level": "A",
+    "name": "Labels or Instructions",
+    "named": false,
+    "number": "3.3.2",
+    "principle": "Understandable"
+   },
+   {
+    "level": "AA",
+    "name": "Error Suggestion",
+    "named": false,
+    "number": "3.3.3",
+    "principle": "Understandable"
+   },
+   {
+    "level": "AA",
+    "name": "Error Prevention (Legal, Financial, Data)",
+    "named": false,
+    "number": "3.3.4",
+    "principle": "Understandable"
+   },
+   {
+    "level": "A",
+    "name": "Redundant Entry",
+    "named": false,
+    "number": "3.3.7",
+    "principle": "Understandable"
+   },
+   {
+    "level": "AA",
+    "name": "Accessible Authentication (Minimum)",
+    "named": false,
+    "number": "3.3.8",
+    "principle": "Understandable"
+   },
+   {
+    "level": "AA",
+    "name": "Status Messages",
+    "named": false,
+    "number": "4.1.3",
+    "principle": "Robust"
+   }
+  ]
+ },
+ "date": "2026-10-02",
+ "findings": [
+  {
+   "criteria": [
+    "1.3.1"
+   ],
+   "evidence": "Snapshots 2026-09-24: heading \"Autopay settings\" [level=1], \"Edit autopay accounts\" [level=1], \"Create a new auto transfer rule\" [level=2], \"Distribute funds across accounts\" [level=2], \"Maintain a target account balance\" [level=3]; share dialog: querySelector(\"h1,h2,h3\") === null.",
+   "family": "structure",
+   "fix": "Modals seem to set their own heading level. Having the modal header render one fixed level, and giving the share sheet a title, would likely resolve it.",
+   "id": "accounts.i-heading-levels",
+   "key": "hand:accounts.i-heading-levels",
+   "principle": "Perceivable",
+   "screens": 6,
+   "severity": "low",
+   "severityBefore": "low",
+   "source": "hand-found",
+   "status": "confirmed",
+   "title": "Modal heading levels are arbitrary"
+  },
+  {
+   "criteria": [
+    "1.3.1"
+   ],
+   "evidence": "Snapshot on /send-money/pay/recipient-match: heading 'Upload an attachment' [level=2] then heading 'Recipient match' [level=1]; the h2 is inside ._fullScreenOverlay with opacity 0 and pointer-events none, no aria-hidden.",
+   "family": "structure",
+   "fix": "The drop overlay seems to stay mounted and hidden only visually. Adding aria-hidden, or rendering it only while a file is dragged, would likely fix it.",
+   "id": "billpay.i-pay-dialog-name",
+   "key": "hand:billpay.i-pay-dialog-name",
+   "principle": "Perceivable",
+   "screens": 3,
+   "severity": "low",
+   "severityBefore": "low",
+   "source": "hand-found",
+   "status": "confirmed",
+   "title": "Hidden 'Upload an attachment' heading precedes every pay-flow step"
+  },
+  {
+   "criteria": [
+    "1.4.1"
+   ],
+   "evidence": "'Manage' A: 14px/400 rgb(195,195,204), text-decoration none; sibling 'Edit' (approval rules) and 'Connect' A: 15px/400 rgb(141,164,245).",
+   "family": "contrast",
+   "fix": "The 'Manage' link seems to inherit paragraph styles instead of the link style its siblings use. Applying the shared link style would likely fix it.",
+   "id": "billpay.i-manage-link",
+   "key": "hand:billpay.i-manage-link",
+   "principle": "Perceivable",
+   "screens": 1,
+   "severity": "medium",
+   "severityBefore": "medium",
+   "source": "hand-found",
+   "status": "confirmed",
+   "title": "'Manage' link looks like body text"
+  },
+  {
+   "criteria": [
+    "1.4.3"
+   ],
+   "evidence": "axe color-contrast: #9d9da8 on #ffffff measures 3.12:1; AA needs 4.5:1. Verifier: Reproduced on every sampled state.",
+   "family": "contrast",
+   "fix": "The color seems to come from a shared muted-text style. Moving that style to a token that reaches 4.5:1 on #ffffff would likely fix every screen at once.",
+   "id": "transactions.i-a11y-contrast-text-in-recent-transactions",
+   "key": "contrast:color-contrast:7ee769f66dc5",
+   "principle": "Perceivable",
+   "screens": 30,
+   "severity": "medium",
+   "severityBefore": "medium",
+   "source": "scanner",
+   "status": "persisting",
+   "title": "Low contrast: text in \"Recent transactions\""
+  },
+  {
+   "criteria": [
+    "2.1.1",
+    "4.1.2"
+   ],
+   "evidence": "On /accounts: [role=tab] 0, [role=tablist] 0; \"Mercury accounts\" <DIV> 14px/400 rgb(221,221,229), \"Linked accounts\" <DIV> 14px/400 rgb(157,157,168), padding 10px 0, height 40px. Treasury Portfolio: <div aria-disabled=\"false\" class=\"_dsTabViewTab_95hq1_9\">. Autopay \"Edit\" parents: DIV role=null tabindex=null (15px, rgb(141,164,245)). \"Last Month\": <P> in a DIV with no role or tabindex. Verifier (2026-10-02): Tab never reaches the Treasury and Financing tabs, so keyboard users cannot switch views.",
+   "family": "keyboard",
+   "fix": "These controls seem to be built from plain divs rather than tab and button components. Moving them onto components with the right roles would likely fix focus and announcement together.",
+   "id": "accounts.i-tabs-not-tabs",
+   "key": "hand:accounts.i-tabs-not-tabs",
+   "principle": "Operable",
+   "screens": 6,
+   "severity": "high",
+   "severityBefore": "medium",
+   "source": "hand-found",
+   "status": "re-rated",
+   "title": "Tabs and inline actions are clickable divs"
+  },
+  {
+   "criteria": [
+    "2.4.3"
+   ],
+   "evidence": "After the button \"Freeze card\" opened the dialog \"Freeze card\", focus was on the page body. Verifier: Reproduced on every sampled state.",
+   "family": "dialog-focus",
+   "fix": "The dialog seems to open without setting initial focus. Using the design-system dialog's built-in focus handling would likely fix it.",
+   "id": "cards.i-a11y-dialog-focus-button-freeze-card",
+   "key": "dialog-focus:dialog-focus-not-moved:bf22fbcdc32e",
+   "principle": "Operable",
+   "screens": 1,
+   "severity": "medium",
+   "severityBefore": null,
+   "source": "scanner",
+   "status": "new",
+   "title": "Focus not moved into dialog \"Freeze card\""
+  },
+  {
+   "criteria": [
+    "2.4.7"
+   ],
+   "evidence": "Tab stop 4: focusing the link \"Create token\" changed no pixels within 8 px of it. Verifier: Reproduced on every sampled state.",
+   "family": "focus-visible",
+   "fix": "The component seems to remove the browser outline without a replacement. Adding a :focus-visible style that matches the design system's focus ring would likely fix it.",
+   "id": "settings.i-a11y-focus-visible-link-create-token",
+   "key": "focus-visible:focus-not-visible:ecb8efdb4f68",
+   "principle": "Operable",
+   "screens": 2,
+   "severity": "medium",
+   "severityBefore": null,
+   "source": "scanner",
+   "status": "new",
+   "title": "No visible focus: link \"Create token\""
+  },
+  {
+   "criteria": [
+    "2.5.3"
+   ],
+   "evidence": "Edit-mode inputs: input[placeholder='Select due date'] value 'Apr 19, 2025' (Due date) and input[placeholder='Select due date'] value 'Apr 18, 2025' (Invoice date); amount input named only by placeholder '0.00'.",
+   "family": "name",
+   "fix": "The Invoice date field seems to reuse the due date input's props. Giving it its own label and placeholder would likely fix it.",
+   "id": "billpay.i-date-input-label",
+   "key": "hand:billpay.i-date-input-label",
+   "principle": "Operable",
+   "screens": 1,
+   "severity": "low",
+   "severityBefore": "low",
+   "source": "hand-found",
+   "status": "confirmed",
+   "title": "Invoice date input labeled as due date"
+  },
+  {
+   "criteria": [
+    "4.1.2"
+   ],
+   "evidence": "button-name: announced as button \"\". Element does not have an accessible name. Verifier: Reproduced on every sampled state.",
+   "family": "name",
+   "fix": "The control seems to rely on an icon, a placeholder or its position for meaning. Adding an aria-label or a visible label that names the action and its target would likely fix it.",
+   "id": "cards.i-a11y-name-button-more-actions",
+   "key": "name:button-name:bfa4c84727b9",
+   "principle": "Robust",
+   "screens": 2,
+   "severity": "high",
+   "severityBefore": "high",
+   "source": "scanner",
+   "status": "persisting",
+   "title": "Missing or unclear name: button \"More actions\""
+  },
+  {
+   "criteria": [
+    "4.1.2",
+    "1.3.1"
+   ],
+   "evidence": "Dashboard: 5 <button role=\"menuitem\"> chips (Recent … Operating expenses), 0 [role=tablist]. Avatar <button aria-haspopup=\"menu\" class=\"_menuButton_ko7ja_21\"> with no aria-label, img alt=\"\". Kebabs: 4× <button aria-haspopup=\"menu\" class=\"… _menuButton_ok3n2_7\"> with no aria-label or text.",
+   "family": "role-state",
+   "fix": "The chips seem to reuse a menu component, and the icon buttons seem to lack a label. Tab or radio-group semantics with selected state, plus aria-labels, would likely fix it.",
+   "id": "home.i-chips-as-menuitems",
+   "key": "hand:home.i-chips-as-menuitems",
+   "principle": "Robust",
+   "screens": 4,
+   "severity": "medium",
+   "severityBefore": "medium",
+   "source": "hand-found",
+   "status": "confirmed",
+   "title": "Filter chips, avatar and widget kebabs lack proper semantics"
+  },
+  {
+   "criteria": [
+    "4.1.2"
+   ],
+   "evidence": "Row delete button <button class=\"_button_r6b2u_20 _small_r6b2u_72 _destructive_r6b2u_186\"> with aria-label null, title '' and only svg[data-icon=trash][aria-hidden=true]; tabs are DIV with role=null (snapshot 'generic \"Inbox 3\"', 'generic \"Sync Error3\"'); bill edit amount input's only name is its placeholder '0.00'.",
+   "family": "name",
+   "fix": "The trash button seems to render only an icon without a label, and the tabs appear to be styled DIVs rather than a tab component. Adding a name and tablist and tab roles with selected state would likely fix it.",
+   "id": "billpay.i-unlabeled-controls",
+   "key": "hand:billpay.i-unlabeled-controls",
+   "principle": "Robust",
+   "screens": 3,
+   "severity": "medium",
+   "severityBefore": "medium",
+   "source": "hand-found",
+   "status": "confirmed",
+   "title": "Icon buttons and tabs lack accessible names/roles"
+  },
+  {
+   "criteria": [
+    "4.1.2"
+   ],
+   "evidence": "Accessibility snapshot: each token row ends with 'button [expanded=false]' containing 'button' with no name. eval: 11 buttons in the page with empty innerText and no aria-label.",
+   "family": "name",
+   "fix": "The icon button seems to lack an aria-label. Adding one that includes the token nickname, such as 'Actions for Map audit token', would likely resolve it.",
+   "id": "settings.i-unnamed-row-buttons",
+   "key": "hand:settings.i-unnamed-row-buttons",
+   "principle": "Robust",
+   "screens": 3,
+   "severity": "medium",
+   "severityBefore": "medium",
+   "source": "hand-found",
+   "status": "confirmed",
+   "title": "API token row menus have no accessible name"
+  },
+  {
+   "criteria": [
+    "4.1.2"
+   ],
+   "evidence": "Customers row buttons: aria-label null, title '', textContent '' (class _button_ _small_ _tertiary_). Branding radios exposed as 'white-theme', 'green-theme', 'blue-theme', 'beige-theme', 'orange-theme', 'purple-theme'; the 'white-theme' swatch is dark grey.",
+   "family": "name",
+   "fix": "The icon buttons seem to lack an aria-label, and the swatches seem to expose internal ids as names. Adding names such as 'Edit Lumen Robotics' and readable color names would likely resolve it.",
+   "id": "invoicing.i-unlabeled-controls",
+   "key": "hand:invoicing.i-unlabeled-controls",
+   "principle": "Robust",
+   "screens": 2,
+   "severity": "medium",
+   "severityBefore": "medium",
+   "source": "hand-found",
+   "status": "confirmed",
+   "title": "Icon-only controls without accessible names"
+  },
+  {
+   "criteria": [
+    "4.1.2"
+   ],
+   "evidence": "getComputedStyle(Save): opacity '0.4', background-color 'rgb(82, 102, 235)'; button.disabled false; aria-disabled null.",
+   "family": "role-state",
+   "fix": "The button seems to be styled as disabled without the disabled or aria-disabled attribute. Either setting aria-disabled with an explanation, or keeping it enabled and showing validation on press, would likely resolve it.",
+   "id": "books.i-fake-disabled-save",
+   "key": "hand:books.i-fake-disabled-save",
+   "principle": "Robust",
+   "screens": 1,
+   "severity": "medium",
+   "severityBefore": "medium",
+   "source": "hand-found",
+   "status": "confirmed",
+   "title": "Rule Save looks disabled but is not"
+  },
+  {
+   "criteria": [
+    "4.1.2"
+   ],
+   "evidence": "combobox 'frequency': 'Monthly'; listbox: option 'Annual' [selected], option 'Quarterly', option 'Monthly', option 'Custom'.",
+   "family": "role-state",
+   "fix": "The listbox may mark the first option selected by default instead of the current value. Setting the selected state from the combobox value would likely fix it.",
+   "id": "books.i-frequency-aria",
+   "key": "hand:books.i-frequency-aria",
+   "principle": "Robust",
+   "screens": 1,
+   "severity": "medium",
+   "severityBefore": "medium",
+   "source": "hand-found",
+   "status": "confirmed",
+   "title": "Report frequency listbox marks the wrong option selected"
+  },
+  {
+   "criteria": [
+    "4.1.2",
+    "2.4.4"
+   ],
+   "evidence": "Adyen N.V. row: <A> 32x32 aria-label=null title=null text=''; <BUTTON> 32x32 aria-label=null title=null text=''; a third <BUTTON> 32x70 with no text or label.",
+   "family": "name",
+   "fix": "The icon controls likely omit an accessible label. Adding names such as 'Open Adyen N.V.' and 'Block Adyen N.V.' would likely resolve it.",
+   "id": "cards.i-subscription-actions-unlabeled",
+   "key": "hand:cards.i-subscription-actions-unlabeled",
+   "principle": "Robust",
+   "screens": 1,
+   "severity": "medium",
+   "severityBefore": "medium",
+   "source": "hand-found",
+   "status": "confirmed",
+   "title": "Subscription row action icons have no accessible name"
+  },
+  {
+   "criteria": [
+    "4.1.2",
+    "2.4.4"
+   ],
+   "evidence": "a[href='/send-money/pay/recipient-details']: aria-label null, aria-labelledby null, title null, textContent '', svg <title> none. Snapshot lists them as unnamed 'link' elements.",
+   "family": "name",
+   "fix": "The row actions seem to render an icon inside an anchor without a label prop. Adding an accessible name such as 'Send payment to <recipient>' would likely resolve it.",
+   "id": "payments.i-icon-links-a11y",
+   "key": "hand:payments.i-icon-links-a11y",
+   "principle": "Robust",
+   "screens": 1,
+   "severity": "medium",
+   "severityBefore": "medium",
+   "source": "hand-found",
+   "status": "confirmed",
+   "title": "Recipient row icon links have no accessible name"
+  },
+  {
+   "criteria": [
+    "4.1.2",
+    "3.3.2"
+   ],
+   "evidence": "Create category dialog input: id \"categoryname-mercury-utils-id-135\", placeholder \"\", aria-label null, aria-labelledby null, input.labels empty; heading \"Create category\" 19px/400.",
+   "family": "name",
+   "fix": "The input likely renders without its label. Adding a visible 'Category name' label tied to the input would likely fix it.",
+   "id": "transactions.i-category-name-label",
+   "key": "hand:transactions.i-category-name-label",
+   "principle": "Robust",
+   "screens": 1,
+   "severity": "medium",
+   "severityBefore": "medium",
+   "source": "hand-found",
+   "status": "confirmed",
+   "title": "Create category name field has no label"
+  },
+  {
+   "criteria": [
+    "4.1.2"
+   ],
+   "evidence": "Snapshots 2026-09-24: switch \"proRataRightsLetter\" [checked=false]; textbox [ref=e29] and textbox [disabled, ref=e30] with empty names; listbox \"mercury-utils-id-78-label\"; textbox \"0.00\" on /capital/venture-debt/draw-funds; linked account rows expose button [expanded=false] with no label.",
+   "family": "name",
+   "fix": "The labels seem to be missing or wired to internal ids instead of the visible label text. Associating each control with its visible label, and giving icon-only buttons a label, would likely resolve it.",
+   "id": "accounts.i-safe-form-labels",
+   "key": "hand:accounts.i-safe-form-labels",
+   "principle": "Robust",
+   "screens": 5,
+   "severity": "low",
+   "severityBefore": "low",
+   "source": "hand-found",
+   "status": "confirmed",
+   "title": "Form controls with missing or internal accessible names"
+  },
+  {
+   "criteria": [
+    "4.1.2"
+   ],
+   "evidence": "DOM (2026-09-25) on /accounts#auto-transfers: <button>…<p>Distribute funds<br> across accounts</p><p><div>.</div></p>…</button>; the <div> has opacity 0, width 0px, no aria-hidden. Accessibility tree: button \"Distribute funds across accounts .\", button \"Maintain a target account balance .\" (same for 'Schedule recurring transfers .' and 'Redirect incoming funds .').",
+   "family": "name",
+   "fix": "The '.' is probably a layout spacer or leftover placeholder inside the card's second paragraph. Remove it, or hide it with aria-hidden if it holds layout, and replace the <div> inside <p> with valid markup.",
+   "id": "accounts.i-rule-cards-hidden-period",
+   "key": "hand:accounts.i-rule-cards-hidden-period",
+   "principle": "Robust",
+   "screens": 1,
+   "severity": "low",
+   "severityBefore": "low",
+   "source": "hand-found",
+   "status": "confirmed",
+   "title": "Auto transfer rule cards announce a stray period"
+  }
+ ],
+ "fixed": [
+  {
+   "criteria": [
+    "2.5.8"
+   ],
+   "family": "target-size",
+   "formerId": "home.i-a11y-target-size-button-dismiss",
+   "id": null,
+   "key": "target-size:target-size-own:a51a4c413583",
+   "reason": null,
+   "run": "2026-10-02-1400",
+   "screens": 2,
+   "severity": "low",
+   "title": "Target under 24×24 px: button \"Dismiss\""
+  }
+ ],
+ "handFound": [
+  {
+   "attached": [],
+   "criteria": [
+    "1.3.1"
+   ],
+   "date": "2026-10-02",
+   "family": "structure",
+   "id": "accounts.i-heading-levels",
+   "reason": null,
+   "screens": 6,
+   "severityAfter": "low",
+   "severityBefore": "low",
+   "status": "confirmed",
+   "title": "Modal heading levels are arbitrary",
+   "verifierReason": "Reproduced on every sampled state."
+  },
+  {
+   "attached": [],
+   "criteria": [
+    "4.1.2"
+   ],
+   "date": "2026-10-02",
+   "family": "name",
+   "id": "accounts.i-rule-cards-hidden-period",
+   "reason": null,
+   "screens": 1,
+   "severityAfter": "low",
+   "severityBefore": "low",
+   "status": "confirmed",
+   "title": "Auto transfer rule cards announce a stray period",
+   "verifierReason": "Reproduced on every sampled state."
+  },
+  {
+   "attached": [],
+   "criteria": [
+    "4.1.2"
+   ],
+   "date": "2026-10-02",
+   "family": "name",
+   "id": "accounts.i-safe-form-labels",
+   "reason": null,
+   "screens": 5,
+   "severityAfter": "low",
+   "severityBefore": "low",
+   "status": "confirmed",
+   "title": "Form controls with missing or internal accessible names",
+   "verifierReason": "Reproduced on every sampled state."
+  },
+  {
+   "attached": [],
+   "criteria": [
+    "2.1.1",
+    "4.1.2"
+   ],
+   "date": "2026-10-02",
+   "family": "keyboard",
+   "id": "accounts.i-tabs-not-tabs",
+   "reason": null,
+   "screens": 6,
+   "severityAfter": "high",
+   "severityBefore": "medium",
+   "status": "re-rated",
+   "title": "Tabs and inline actions are clickable divs",
+   "verifierReason": "Tab never reaches the Treasury and Financing tabs, so keyboard users cannot switch views."
+  },
+  {
+   "attached": [],
+   "criteria": [
+    "2.5.3"
+   ],
+   "date": "2026-10-02",
+   "family": "name",
+   "id": "billpay.i-date-input-label",
+   "reason": null,
+   "screens": 1,
+   "severityAfter": "low",
+   "severityBefore": "low",
+   "status": "confirmed",
+   "title": "Invoice date input labeled as due date",
+   "verifierReason": "Reproduced on every sampled state."
+  },
+  {
+   "attached": [],
+   "criteria": [
+    "1.4.1"
+   ],
+   "date": "2026-10-02",
+   "family": "contrast",
+   "id": "billpay.i-manage-link",
+   "reason": null,
+   "screens": 1,
+   "severityAfter": "medium",
+   "severityBefore": "medium",
+   "status": "confirmed",
+   "title": "'Manage' link looks like body text",
+   "verifierReason": "Reproduced on every sampled state."
+  },
+  {
+   "attached": [],
+   "criteria": [
+    "1.3.1"
+   ],
+   "date": "2026-10-02",
+   "family": "structure",
+   "id": "billpay.i-pay-dialog-name",
+   "reason": null,
+   "screens": 3,
+   "severityAfter": "low",
+   "severityBefore": "low",
+   "status": "confirmed",
+   "title": "Hidden 'Upload an attachment' heading precedes every pay-flow step",
+   "verifierReason": "Reproduced on every sampled state."
+  },
+  {
+   "attached": [],
+   "criteria": [
+    "4.1.2"
+   ],
+   "date": "2026-10-02",
+   "family": "name",
+   "id": "billpay.i-unlabeled-controls",
+   "reason": null,
+   "screens": 3,
+   "severityAfter": "medium",
+   "severityBefore": "medium",
+   "status": "confirmed",
+   "title": "Icon buttons and tabs lack accessible names/roles",
+   "verifierReason": "Reproduced on every sampled state."
+  },
+  {
+   "attached": [],
+   "criteria": [
+    "4.1.2"
+   ],
+   "date": "2026-10-02",
+   "family": "role-state",
+   "id": "books.i-fake-disabled-save",
+   "reason": null,
+   "screens": 1,
+   "severityAfter": "medium",
+   "severityBefore": "medium",
+   "status": "confirmed",
+   "title": "Rule Save looks disabled but is not",
+   "verifierReason": "Reproduced on every sampled state."
+  },
+  {
+   "attached": [],
+   "criteria": [
+    "4.1.2"
+   ],
+   "date": "2026-10-02",
+   "family": "role-state",
+   "id": "books.i-frequency-aria",
+   "reason": null,
+   "screens": 1,
+   "severityAfter": "medium",
+   "severityBefore": "medium",
+   "status": "confirmed",
+   "title": "Report frequency listbox marks the wrong option selected",
+   "verifierReason": "Reproduced on every sampled state."
+  },
+  {
+   "attached": [],
+   "criteria": [
+    "1.3.1"
+   ],
+   "date": "2026-10-02",
+   "family": "structure",
+   "id": "cards.i-modal-heading-semantics",
+   "reason": "tool false positive",
+   "screens": 2,
+   "severityAfter": "low",
+   "severityBefore": "low",
+   "status": "not-reproduced",
+   "title": "Edit card limits title is not a heading",
+   "verifierReason": "The Edit card limits title is an h2 inside the dialog header; the capture read a stale DOM."
+  },
+  {
+   "attached": [],
+   "criteria": [
+    "4.1.2",
+    "2.4.4"
+   ],
+   "date": "2026-10-02",
+   "family": "name",
+   "id": "cards.i-subscription-actions-unlabeled",
+   "reason": null,
+   "screens": 1,
+   "severityAfter": "medium",
+   "severityBefore": "medium",
+   "status": "confirmed",
+   "title": "Subscription row action icons have no accessible name",
+   "verifierReason": "Reproduced on every sampled state."
+  },
+  {
+   "attached": [],
+   "criteria": [
+    "4.1.2",
+    "1.3.1"
+   ],
+   "date": "2026-10-02",
+   "family": "role-state",
+   "id": "home.i-chips-as-menuitems",
+   "reason": null,
+   "screens": 4,
+   "severityAfter": "medium",
+   "severityBefore": "medium",
+   "status": "confirmed",
+   "title": "Filter chips, avatar and widget kebabs lack proper semantics",
+   "verifierReason": "Reproduced on every sampled state."
+  },
+  {
+   "attached": [],
+   "criteria": [
+    "4.1.2"
+   ],
+   "date": "2026-10-02",
+   "family": "name",
+   "id": "invoicing.i-unlabeled-controls",
+   "reason": null,
+   "screens": 2,
+   "severityAfter": "medium",
+   "severityBefore": "medium",
+   "status": "confirmed",
+   "title": "Icon-only controls without accessible names",
+   "verifierReason": "Reproduced on every sampled state."
+  },
+  {
+   "attached": [],
+   "criteria": [
+    "4.1.2",
+    "2.4.4"
+   ],
+   "date": "2026-10-02",
+   "family": "name",
+   "id": "payments.i-icon-links-a11y",
+   "reason": null,
+   "screens": 1,
+   "severityAfter": "medium",
+   "severityBefore": "medium",
+   "status": "confirmed",
+   "title": "Recipient row icon links have no accessible name",
+   "verifierReason": "Reproduced on every sampled state."
+  },
+  {
+   "attached": [
+    {
+     "criteria": [
+      "4.1.2"
+     ],
+     "family": "name",
+     "formerId": null,
+     "issue": {
+      "area": "settings",
+      "audit": {
+       "build": "b1d2e3",
+       "checkedStates": [
+        "settings.tokens",
+        "settings.token-menu"
+       ],
+       "criteria": [
+        {
+         "name": "Name, Role, Value",
+         "number": "4.1.2",
+         "url": "https://www.w3.org/WAI/WCAG22/Understanding/name-role-value"
+        }
+       ],
+       "date": "2026-10-02",
+       "evidence": "button-name: announced as button \"\". Element does not have an accessible name\nVerifier (2026-10-02, checked settings.tokens, settings.token-menu): Reproduced on every sampled state.",
+       "family": "name",
+       "reason": "Reproduced on every sampled state.",
+       "run": "2026-10-02-1400",
+       "status": "new",
+       "verdict": "confirm"
+      },
+      "category": "a11y",
+      "copy": {
+       "acceptance": [
+        "The button in \"API Tokens\" has an accessible name that says what it does.",
+        "Repeated controls on settings.tokens have names that tell them apart."
+       ],
+       "confidence": "high",
+       "confidenceReason": "Read from the accessibility tree, and a verifier checked it on the live demo.",
+       "demoArtifactRisk": false,
+       "fixHypothesis": "The control seems to rely on an icon, a placeholder or its position for meaning. Adding an aria-label or a visible label that names the action and its target would likely fix it.",
+       "impact": "accessibility",
+       "searchTerms": [
+        "aria-label",
+        "accessible name",
+        "button-name"
+       ],
+       "summary": "On settings.tokens, the button in \"API Tokens\" is announced as button \"\".",
+       "title": "Give the button in \"API Tokens\" a name that says what it does",
+       "userImpact": "A screen-reader user hears a control without a usable name and cannot tell what it does or which item it acts on.",
+       "verify": [
+        "Check the design-system icon button and form field docs for the naming pattern."
+       ]
+      },
+      "detail": "Screen readers announce the button in \"API Tokens\" as button \"\", which does not say what it is or does, so blind users cannot tell what it is for. WCAG 4.1.2 Name, Role, Value.",
+      "evidence": "button-name: announced as button \"\". Element does not have an accessible name. Verifier: Reproduced on every sampled state.",
+      "id": null,
+      "nodeIds": [
+       "settings.tokens",
+       "settings.token-menu",
+       "settings.tokens-new-row"
+      ],
+      "severity": "medium",
+      "title": "Missing or unclear name: button in \"API Tokens\"",
+      "wcag": [
+       "4.1.2"
+      ]
+     },
+     "key": "name:button-name:70cf6cfde8e9",
+     "nodeIds": [
+      "settings.tokens",
+      "settings.token-menu",
+      "settings.tokens-new-row"
+     ],
+     "severity": "medium",
+     "status": "new",
+     "title": "Missing or unclear name: button in \"API Tokens\""
+    }
+   ],
+   "criteria": [
+    "4.1.2"
+   ],
+   "date": "2026-10-02",
+   "family": "name",
+   "id": "settings.i-unnamed-row-buttons",
+   "reason": null,
+   "screens": 3,
+   "severityAfter": "medium",
+   "severityBefore": "medium",
+   "status": "confirmed",
+   "title": "API token row menus have no accessible name",
+   "verifierReason": "Reproduced on every sampled state."
+  },
+  {
+   "attached": [],
+   "criteria": [
+    "4.1.2",
+    "3.3.2"
+   ],
+   "date": "2026-10-02",
+   "family": "name",
+   "id": "transactions.i-category-name-label",
+   "reason": null,
+   "screens": 1,
+   "severityAfter": "medium",
+   "severityBefore": "medium",
+   "status": "confirmed",
+   "title": "Create category name field has no label",
+   "verifierReason": "Reproduced on every sampled state."
+  }
+ ],
+ "notRetested": [
+  {
+   "criteria": [
+    "2.1.1"
+   ],
+   "family": "keyboard",
+   "id": "accounts.i-a11y-keyboard-text-statements",
+   "key": "keyboard:not-reached:0030ac6a8114",
+   "lastVerified": {
+    "date": "2026-10-02",
+    "run": "2026-10-02-1400"
+   },
+   "nodeIds": [
+    "accounts.treasury",
+    "accounts.treasury-statements"
+   ],
+   "reason": "unreachable: accounts.treasury-statements",
+   "screens": 2,
+   "severity": "medium",
+   "title": "Not reachable by keyboard: text \"Statements\""
+  }
+ ],
+ "priority": [
+  "accounts.i-tabs-not-tabs",
+  "cards.i-a11y-name-button-more-actions",
+  "transactions.i-a11y-contrast-text-in-recent-transactions",
+  "home.i-chips-as-menuitems",
+  "billpay.i-unlabeled-controls",
+  "settings.i-unnamed-row-buttons",
+  "invoicing.i-unlabeled-controls",
+  "settings.i-a11y-focus-visible-link-create-token",
+  "billpay.i-manage-link",
+  "books.i-fake-disabled-save",
+  "books.i-frequency-aria",
+  "cards.i-a11y-dialog-focus-button-freeze-card",
+  "cards.i-subscription-actions-unlabeled",
+  "payments.i-icon-links-a11y",
+  "transactions.i-category-name-label",
+  "accounts.i-heading-levels",
+  "accounts.i-safe-form-labels",
+  "billpay.i-pay-dialog-name",
+  "accounts.i-rule-cards-hidden-period",
+  "billpay.i-date-input-label"
+ ],
+ "run": "2026-10-02-1400",
+ "standard": "WCAG 2.2 AA",
+ "tables": {
+  "contrast": [
+   {
+    "bg": null,
+    "criterion": "1.4.1",
+    "element": null,
+    "fg": null,
+    "id": "billpay.i-manage-link",
+    "ratio": null,
+    "required": null,
+    "rule": "hand-found",
+    "screens": 1,
+    "severity": "medium",
+    "status": "confirmed",
+    "title": "'Manage' link looks like body text"
+   },
+   {
+    "bg": "#ffffff",
+    "criterion": "1.4.3",
+    "element": "text in \"Recent transactions\"",
+    "fg": "#9d9da8",
+    "id": "transactions.i-a11y-contrast-text-in-recent-transactions",
+    "ratio": "3.12",
+    "required": "4.5",
+    "rule": "color-contrast",
+    "screens": 30,
+    "severity": "medium",
+    "status": "persisting",
+    "title": "Low contrast: text in \"Recent transactions\""
+   }
+  ],
+  "dialog": [
+   {
+    "criterion": "2.4.3",
+    "element": "button \"Freeze card\"",
+    "focus": "page body",
+    "id": "cards.i-a11y-dialog-focus-button-freeze-card",
+    "overlay": "dialog \"Freeze card\"",
+    "rule": "dialog-focus-not-moved",
+    "screens": 1,
+    "severity": "medium",
+    "status": "new",
+    "title": "Focus not moved into dialog \"Freeze card\""
+   }
+  ],
+  "keyboard": [
+   {
+    "arrowKeys": "not tested",
+    "criterion": "2.1.1",
+    "element": null,
+    "id": "accounts.i-tabs-not-tabs",
+    "previous": null,
+    "rule": "hand-found",
+    "screens": 6,
+    "severity": "high",
+    "status": "re-rated",
+    "stop": null,
+    "stops": null,
+    "title": "Tabs and inline actions are clickable divs"
+   },
+   {
+    "arrowKeys": "not tested",
+    "criterion": "2.4.7",
+    "element": "link \"Create token\"",
+    "id": "settings.i-a11y-focus-visible-link-create-token",
+    "previous": null,
+    "rule": "focus-not-visible",
+    "screens": 2,
+    "severity": "medium",
+    "status": "new",
+    "stop": "4",
+    "stops": null,
+    "title": "No visible focus: link \"Create token\""
+   }
+  ],
+  "screenReader": [
+   {
+    "announced": null,
+    "criterion": "1.3.1",
+    "element": null,
+    "id": "accounts.i-heading-levels",
+    "message": null,
+    "rule": "hand-found",
+    "screens": 6,
+    "severity": "low",
+    "status": "confirmed",
+    "title": "Modal heading levels are arbitrary"
+   },
+   {
+    "announced": null,
+    "criterion": "1.3.1",
+    "element": null,
+    "id": "billpay.i-pay-dialog-name",
+    "message": null,
+    "rule": "hand-found",
+    "screens": 3,
+    "severity": "low",
+    "status": "confirmed",
+    "title": "Hidden 'Upload an attachment' heading precedes every pay-flow step"
+   },
+   {
+    "announced": null,
+    "criterion": "2.5.3",
+    "element": null,
+    "id": "billpay.i-date-input-label",
+    "message": null,
+    "rule": "hand-found",
+    "screens": 1,
+    "severity": "low",
+    "status": "confirmed",
+    "title": "Invoice date input labeled as due date"
+   },
+   {
+    "announced": "button \"\"",
+    "criterion": "4.1.2",
+    "element": "button \"More actions\"",
+    "id": "cards.i-a11y-name-button-more-actions",
+    "message": null,
+    "rule": "button-name",
+    "screens": 2,
+    "severity": "high",
+    "status": "persisting",
+    "title": "Missing or unclear name: button \"More actions\""
+   },
+   {
+    "announced": null,
+    "criterion": "4.1.2",
+    "element": null,
+    "id": "home.i-chips-as-menuitems",
+    "message": null,
+    "rule": "hand-found",
+    "screens": 4,
+    "severity": "medium",
+    "status": "confirmed",
+    "title": "Filter chips, avatar and widget kebabs lack proper semantics"
+   },
+   {
+    "announced": null,
+    "criterion": "4.1.2",
+    "element": null,
+    "id": "billpay.i-unlabeled-controls",
+    "message": null,
+    "rule": "hand-found",
+    "screens": 3,
+    "severity": "medium",
+    "status": "confirmed",
+    "title": "Icon buttons and tabs lack accessible names/roles"
+   },
+   {
+    "announced": null,
+    "criterion": "4.1.2",
+    "element": null,
+    "id": "settings.i-unnamed-row-buttons",
+    "message": null,
+    "rule": "hand-found",
+    "screens": 3,
+    "severity": "medium",
+    "status": "confirmed",
+    "title": "API token row menus have no accessible name"
+   },
+   {
+    "announced": null,
+    "criterion": "4.1.2",
+    "element": null,
+    "id": "invoicing.i-unlabeled-controls",
+    "message": null,
+    "rule": "hand-found",
+    "screens": 2,
+    "severity": "medium",
+    "status": "confirmed",
+    "title": "Icon-only controls without accessible names"
+   },
+   {
+    "announced": null,
+    "criterion": "4.1.2",
+    "element": null,
+    "id": "books.i-fake-disabled-save",
+    "message": null,
+    "rule": "hand-found",
+    "screens": 1,
+    "severity": "medium",
+    "status": "confirmed",
+    "title": "Rule Save looks disabled but is not"
+   },
+   {
+    "announced": null,
+    "criterion": "4.1.2",
+    "element": null,
+    "id": "books.i-frequency-aria",
+    "message": null,
+    "rule": "hand-found",
+    "screens": 1,
+    "severity": "medium",
+    "status": "confirmed",
+    "title": "Report frequency listbox marks the wrong option selected"
+   },
+   {
+    "announced": null,
+    "criterion": "4.1.2",
+    "element": null,
+    "id": "cards.i-subscription-actions-unlabeled",
+    "message": null,
+    "rule": "hand-found",
+    "screens": 1,
+    "severity": "medium",
+    "status": "confirmed",
+    "title": "Subscription row action icons have no accessible name"
+   },
+   {
+    "announced": null,
+    "criterion": "4.1.2",
+    "element": null,
+    "id": "payments.i-icon-links-a11y",
+    "message": null,
+    "rule": "hand-found",
+    "screens": 1,
+    "severity": "medium",
+    "status": "confirmed",
+    "title": "Recipient row icon links have no accessible name"
+   },
+   {
+    "announced": null,
+    "criterion": "4.1.2",
+    "element": null,
+    "id": "transactions.i-category-name-label",
+    "message": null,
+    "rule": "hand-found",
+    "screens": 1,
+    "severity": "medium",
+    "status": "confirmed",
+    "title": "Create category name field has no label"
+   },
+   {
+    "announced": null,
+    "criterion": "4.1.2",
+    "element": null,
+    "id": "accounts.i-safe-form-labels",
+    "message": null,
+    "rule": "hand-found",
+    "screens": 5,
+    "severity": "low",
+    "status": "confirmed",
+    "title": "Form controls with missing or internal accessible names"
+   },
+   {
+    "announced": null,
+    "criterion": "4.1.2",
+    "element": null,
+    "id": "accounts.i-rule-cards-hidden-period",
+    "message": null,
+    "rule": "hand-found",
+    "screens": 1,
+    "severity": "low",
+    "status": "confirmed",
+    "title": "Auto transfer rule cards announce a stray period"
+   }
+  ]
+ },
+ "unreachable": [
+  {
+   "firstUnreachable": "2026-10-02-1400",
+   "reason": "step-failed",
+   "rootCause": "accounts.treasury-statements",
+   "states": [
+    {
+     "firstUnreachable": "2026-10-02-1400",
+     "reason": "step-failed",
+     "state": "accounts.treasury-statements"
+    }
+   ]
+  },
+  {
+   "firstUnreachable": "2026-10-02-1400",
+   "reason": "step-failed",
+   "rootCause": "cards.transfer-card",
+   "states": [
+    {
+     "firstUnreachable": "2026-10-02-1400",
+     "reason": "step-failed",
+     "state": "cards.transfer-card"
+    },
+    {
+     "firstUnreachable": "2026-10-02-1400",
+     "reason": "blocked-by-parent",
+     "state": "cards.transfer-card-error"
+    }
+   ]
+  }
+ ],
+ "withdrawn": [
+  {
+   "criteria": [
+    "1.3.1"
+   ],
+   "family": "structure",
+   "formerId": null,
+   "id": null,
+   "key": "structure:list:8ae02cb2dc07",
+   "nodeIds": [
+    "home.tasks"
+   ],
+   "reason": "The list markup is valid; axe read a detached node.",
+   "reasonCode": "tool-false-positive",
+   "run": "2026-10-02-1400",
+   "screens": 1,
+   "severity": "low",
+   "title": "Markup misstates structure: list in \"Tasks\""
+  }
+ ]
+}

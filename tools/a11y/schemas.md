@@ -665,14 +665,41 @@ Generated issues are written grouped by area, then by severity (high first), the
 
 ### report.json
 
-The report model (U10 renders it): `run`, `date`, `captured` (`2026-09-24`), `baseline`,
-`counts` (by severity), `coverage` (tested criteria with `full` or `partial` and the failure modes
-covered, untested criteria, untested dimensions, builds, Lighthouse line, caveat), `changes`
-(count per status), `findings` (rows with id or null, title, criteria, severity, screens, status,
-fix, evidence, family), `tables` (`contrast`, `keyboard`, `dialog`, `screenReader`, each a list of
-row objects), `advisory`, `priority` (ids in order), `notRetested`, `withdrawn`, `fixed`,
-`handFound` (rows with status and reason), `unreachable` (grouped by root cause, with
-`firstUnreachable`).
+The report model `publish` writes and `report.py` renders (KTD24):
+
+- `run`, `date` (run.json `created`), `captured` ("2026-09-24"), `baseline` ("none" or a run id),
+  `standard` ("WCAG 2.2 AA"); `counts` `{high, medium, low}` over `findings`.
+- `coverage`: `states`, `audited`, `unreachable`; `tested[]` `{number, name, principle, level,
+  coverage: "full" | "partial", checks: [rule ids], modes}` (a criterion counts as tested when an axe
+  rule in the raw files' `checks.axe.rulesRan` covers it or a custom check completed somewhere);
+  `untested[]` `{number, name, principle, level, named}` (`named` is true for 1.4.12, 1.4.13, 2.4.11,
+  2.5.7); `dimensions` (zoom and reflow, real screen readers, mobile, dark theme); `builds[]`;
+  `lighthouse` `{run, date, unexplained, line}`; `caveat` (the export's `CAVEAT`).
+- `changes`: `{findings: {new, persisting, re-rated, reappeared, not-retested, withdrawn, fixed},
+  handFound: {first-audited, confirmed, re-rated, not-reproduced, not-retested}}`.
+- `findings[]`: `{id, key, source, title, criteria, principle, family, severity, severityBefore,
+  screens, status, fix, evidence}` for new, persisting, re-rated and reappeared scanner findings and
+  first-audited, confirmed and re-rated hand-found issues.
+- `tables`: `contrast`, `keyboard`, `dialog`, `screenReader`; every row `{id, title, criterion,
+  rule, severity, screens, status}` plus contrast `element, fg, bg, ratio, required`; keyboard
+  `element, stop, stops, previous, arrowKeys: "not tested"`; dialog `element, overlay, focus`;
+  screenReader `element, announced, message`.
+- `advisory` (from findings.json); `priority` (ids by severity, then screen count, then id).
+- `notRetested[]` `{id | null, key, title, criteria, family, severity, screens, nodeIds, reason,
+  lastVerified: {run, date}}`; `withdrawn[]` `{id: null, formerId, key, title, criteria, family,
+  severity, screens, nodeIds, reason, reasonCode, run}`; `fixed[]` `{id: null, formerId, key, title,
+  criteria, family, severity, screens, reason, run}`.
+- `handFound[]` (all 17) `{id, title, status, reason, verifierReason, severityBefore, severityAfter,
+  criteria, family, screens, date, attached: [{key, formerId, title, criteria, family, severity,
+  nodeIds, status, issue}]}`; `attached[].issue` carries the generated issue forward.
+- `unreachable[]` `{rootCause, reason, firstUnreachable, states: [{state, reason, firstUnreachable}]}`.
+- Links the publish gate checks: every `id` in findings, notRetested, handFound and table rows, and
+  `priority`.
+
+Other snapshot notes: `issues.json` `overlays` has an entry for every hand-found issue (`audit` null
+when never verified); `meta.json` `lighthouse` may be null; generated issues' `audit.evidence` holds
+the full live evidence over several lines, ending with the verifier's reason. In diff.json, a
+withdrawn entry's `reason` is the drop `reasonCode`; a not-retested entry's reason joins its causes.
 
 ## Check data: wcag.json, checks.json, hand-found.json (U1, KTD14)
 

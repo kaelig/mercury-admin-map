@@ -30,6 +30,8 @@ import sys
 import urllib.parse
 from collections import Counter, defaultdict, deque
 
+import mapdata
+
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 DEMO_ORIGIN = "https://demo.mercury.com"
 AUDIT_SLUG = "mercury-admin-ux-audit"
@@ -6401,10 +6403,9 @@ CURATED = {'accounts.i-account-masking': {'title': 'Mask account numbers the sam
 # ---------------------------------------------------------------------------
 
 def load_inputs():
-    areas = []
-    for path in sorted(glob.glob(os.path.join(ROOT, "data", "*.json"))):
-        with open(path, encoding="utf-8") as f:
-            areas.append(json.load(f))
+    # data/*.json through the shared loader (KTD22), merged with the published accessibility snapshot
+    # when there is one: A11Y_SNAPSHOT, else a11y/published/.
+    areas = mapdata.load_areas()
     with open(os.path.join(ROOT, "patterns.json"), encoding="utf-8") as f:
         patterns = json.load(f)
     inputs = glob.glob(os.path.join(ROOT, "data", "*.json")) + [os.path.join(ROOT, "patterns.json")]

@@ -13,6 +13,8 @@ import hashlib, json, os, shutil, subprocess, sys, struct
 from concurrent.futures import ThreadPoolExecutor
 
 ROOT = os.path.dirname(os.path.abspath(__file__))
+sys.path.insert(0, os.path.join(ROOT, "tools"))
+import mapdata  # noqa: E402
 DIST = os.path.join(ROOT, "dist")
 CACHE = os.path.join(DIST, "img")
 ORDER = ["home", "accounts", "transactions", "cards", "payments", "billpay", "invoicing", "settings", "books", "extra"]
@@ -49,14 +51,9 @@ def convert(rel):
 
 
 def main():
-    areas, problems = [], []
-    files = sorted(f for f in os.listdir(os.path.join(ROOT, "data")) if f.endswith(".json"))
-    for fn in files:
-        try:
-            with open(os.path.join(ROOT, "data", fn)) as f:
-                areas.append(json.load(f))
-        except Exception as e:
-            problems.append(f"{fn}: invalid JSON ({e})")
+    # data/*.json, merged with the published accessibility snapshot when there is one (KTD22):
+    # A11Y_SNAPSHOT, else a11y/published/. The loader prints its own WARN lines.
+    areas, problems = mapdata.load_areas(), []
     areas.sort(key=lambda a: ORDER.index(a["area"]) if a.get("area") in ORDER else 99)
 
     all_ids = {n["id"] for a in areas for n in a.get("nodes", [])}
@@ -120,7 +117,9 @@ def main():
                 patterns.append(p)
 
     os.makedirs(BUILD, exist_ok=True)
-    data = {"areas": areas, "stats": stats, "patterns": patterns, "atlas": atlas}
+    # The page gets each issue's viewer fields only; copy and audit stay in the snapshot for the export.
+    shown = [dict(a, issues=[mapdata.viewer_issue(i) for i in a.get("issues", [])]) for a in areas]
+    data = {"areas": shown, "stats": stats, "patterns": patterns, "atlas": atlas}
     with open(os.path.join(BUILD, "map.json"), "w") as f:
         json.dump(data, f)
     subprocess.run(["node", "tools/prerender.mjs", "build/map.json", "build/layout.json"], cwd=ROOT, check=True)
