@@ -541,7 +541,11 @@ returned batches that held it without a valid verdict, and at two `verify prepar
   | `contrast` | `ratio`, optional `required` | ratio ≥ the finding's `facts.required`, else `value.required`, else 4.5 |
   | `target` | `width`, `height` (or `rect`), `offset` | both sides ≥ 24, or offset ≥ 24 |
   | `focus` | `visible` (focus-visible) or `trapped` (keyboard-trap) | `visible: true` / `trapped: false` |
-  | `ax` | `role`, `name`, `states`, `description` | not a measured kind; cited as evidence |
+  | `ax` | `role`, `name`, `states`, `description`, `template` | not a measured kind; cited as evidence |
+
+  `probe.mjs` prints the probe object as its last line, with `xpath`, `build` and an advisory `pass`
+  (the validator recomputes from `value`). Ids are `probe-<12 hex of sha([state, kind, xpath, value])>`.
+  A focus probe in `--session` mode presses keys in that session: run `reach` again afterwards.
 
 
 Drop reason codes: `exception:inline`, `exception:equivalent-control`, `exception:essential`,
