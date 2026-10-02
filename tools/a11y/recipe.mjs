@@ -297,7 +297,11 @@ export async function replay(page, ctx, stateId, { recipes, policy, beforeFinalH
     let i = 1;
     for (const r of run) {
       const root = r.parent.startsWith('/');
-      if (root && (r.hop || []).length) return failed(i, `${r.id}: a hop from the root URL ${r.parent} follows no recorded edge`);
+      // A root's setup steps (closing a first-visit panel) must follow a recorded edge into it: `via`
+      // names that edge's source state.
+      if (root && (r.hop || []).length && !(r.via && edgeSet.has(edgeKey(r.via, r.id)))) {
+        return failed(i, `${r.id}: a hop from the root URL ${r.parent} must name in "via" a state with a recorded edge into ${r.id}`);
+      }
       if (!root && !edgeSet.has(edgeKey(r.parent, r.id))) return failed(i, `${r.id}: ${r.parent} → ${r.id} is not a recorded edge`);
       i += (r.hop || []).length;
     }
@@ -510,7 +514,7 @@ async function replayFresh(browser, baseUrl, recipes, id, policy, kind, shots = 
   }
 }
 
-const RECIPE_FIELDS = ['parent', 'hop', 'recordedBy'];
+const RECIPE_FIELDS = ['parent', 'via', 'hop', 'recordedBy'];
 
 // Check one candidate recipe for `id` (the entry in recipes/<area>.json unless `candidate` is given):
 // replay it twice in fresh contexts, capture the fingerprint, compare the second replay's screenshot

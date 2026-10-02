@@ -49,11 +49,18 @@ def map_nodes(map_doc):
     return [(a.get("area"), n) for a in map_doc["areas"] for n in a.get("nodes", [])]
 
 
-def find_roots(nodes):
-    """Ids of the first page node of each concrete URL, Books nodes excluded. nodes: [(area, node)]."""
+def find_roots(nodes, exclude=()):
+    """Ids of the first page node of each concrete URL, Books nodes excluded. nodes: [(area, node)].
+
+    `exclude` lists states whose URL alone does not reproduce them (a wizard step that redirects, a
+    view the demo rebuilds from in-memory state), found by `recipe check`. Their URL yields no root.
+    """
     seen, roots = set(), []
     for _, n in nodes:
         if n.get("kind") != "page" or n["id"].startswith(BOOKS) or not is_concrete(n.get("url")):
+            continue
+        if n["id"] in exclude:
+            seen.add(n["url"])
             continue
         if n["url"] not in seen:
             seen.add(n["url"])
@@ -131,7 +138,7 @@ def classify(map_doc, policy):
             for u, v in zip(j.get("steps", []), j.get("steps", [])[1:]):
                 journey_sources[v].add(u)
 
-    roots = find_roots(nodes)
+    roots = find_roots(nodes, ((policy or {}).get("roots") or {}).get("exclude", {}))
     dist, parent = cheapest_paths(roots, out_edges)
     order = sorted((v for v in dist if parent[v] is not None), key=lambda v: (dist[v], v))
     prefer_journey_edges(order, dist, parent, journey_sources, best_label)

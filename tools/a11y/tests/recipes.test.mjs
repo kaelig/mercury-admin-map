@@ -338,6 +338,21 @@ test('an action on no recorded edge is refused before it runs', async () => {
   assert.match((await replayOn(server.origin, rootHop, 'cards.index')).result.message, /recorded edge/);
 });
 
+test('a root may run setup steps only when it names, in via, a state with a recorded edge into it', async () => {
+  const map = readJson(join(APP, 'map.json'));
+  map.areas.find((a) => a.area === 'cards').edges.push({ from: 'cards.index', to: 'home.index', label: 'Press Escape to close the panel' });
+  const { ws } = workspace({ map });
+  const recipes = loadRecipes(ws);
+  const setup = { hop: [{ press: 'Escape' }] };
+  const ok = await replayOn(server.origin, tampered(recipes, 'home.index', { ...setup, via: 'cards.index' }), 'home.index');
+  assert.equal(ok.result.status, 'reached', ok.result.message);
+  const bare = await replayOn(server.origin, tampered(recipes, 'home.index', setup), 'home.index');
+  assert.equal(bare.result.status, 'step-failed');
+  const wrong = await replayOn(server.origin, tampered(recipes, 'home.index', { ...setup, via: 'transactions.index' }), 'home.index');
+  assert.equal(wrong.result.status, 'step-failed');
+  assert.match(wrong.result.message, /recorded edge/);
+});
+
 test('a path that submits a form is observed as mutating; one that only opens a dialog is not', async () => {
   const { ws } = workspace();
   const recipes = loadRecipes(ws);

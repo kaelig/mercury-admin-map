@@ -89,6 +89,21 @@ class Roots(unittest.TestCase):
         self.assertFalse(states["t.a"]["needsRecipe"])
 
 
+class RootExclusions(unittest.TestCase):
+    def test_a_page_whose_url_needs_earlier_steps_is_not_a_root(self):
+        doc = graph([
+            ("t.a", "page", "/a"),
+            ("t.review", "page", "/a/review"),           # a wizard step: its URL alone redirects
+            ("t.review2", "page", "/a/review"),          # same URL: not promoted in its place
+        ], [("t.a", "t.review", "Click Next"), ("t.a", "t.review2", "Click Next again")])
+        policy = dict(VERBS, roots={"exclude": {"t.review": "wizard step: the URL alone redirects"}})
+        states = plan.classify(doc, policy)
+        self.assertEqual([i for i, s in states.items() if s["root"]], ["t.a"])
+        self.assertEqual(states["t.review"]["parent"], "t.a")
+        self.assertEqual(states["t.review"]["path"], ["t.a", "t.review"])
+        self.assertFalse(states["t.review2"]["root"])
+
+
 class ParentChoice(unittest.TestCase):
     def test_journey_edge_beats_shorter_edge(self):
         nodes = [("t.r", "page", "/r"), ("t.a", "modal", "/r"), ("t.v", "modal", "/r")]

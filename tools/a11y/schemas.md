@@ -131,9 +131,14 @@ writes `findings.json`; `records prepare` writes `records.jsonl`; `judgment add`
   },
   "mutatingVerbs": ["submit", "create", "send", "delete", "invite", "confirm", "pay", "..."],
   "fixtureValues": {"email": "a11y-audit@example.invalid", "name": "Test Person", "...": "..."},
-  "replay": {"onlyRecordedEdges": true}
+  "replay": {"onlyRecordedEdges": true},
+  "roots": {"exclude": {"<state id>": "why its URL alone does not reproduce it"}}
 }
 ```
+
+`roots.exclude` lists page states whose concrete URL does not reproduce them (a wizard step that
+redirects, a view rebuilt from in-memory state), found when `recipe check` compares a root with its
+capture. `plan` gives their URL no root, so they get a recipe through their predecessors (R5).
 
 `denylist.names` are matched against a step locator's name template, case-insensitively, as whole
 strings. A `goto` or a navigation that leaves `allowedOrigins` is refused. `mutatingVerbs` entries are
@@ -201,6 +206,9 @@ An object keyed by state id, sorted. Editable by hand.
 ```
 
 - `parent` is a state id, or a URL path starting with `/` for roots.
+- A root's `hop` holds setup steps (closing a first-visit panel) only with `via`: a state that has a
+  recorded edge into the root, whose action the steps follow (KTD9). The demo opens its "Try out
+  Mercury" panel on every fresh /dashboard visit; the capture closed it ("Click collapse chevron").
 - `status`: `accepted` (replayed by the sweep), `review` (waiting for the conductor), `rejected`,
   `draft` (not yet checked). Only `accepted` recipes are replayed.
 - `checked` is the run id of the last `recipe check`; `queue` drops states re-checked since the
