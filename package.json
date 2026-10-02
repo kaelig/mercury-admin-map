@@ -2,6 +2,14 @@
   "name": "mercury-admin-map",
   "private": true,
   "type": "module",
-  "scripts": { "build": "python3 build.py" },
-  "devDependencies": { "esbuild": "^0.25.0", "dagre": "0.8.5" }
+  "scripts": {
+    "build": "python3 build.py",
+    "a11y:test": "node --test \"tools/a11y/tests/*.test.mjs\" && python3 -m unittest discover -s tools/a11y/tests -t tools/a11y"
+  },
+  "devDependencies": {
+    "axe-core": "4.13.0",
+    "dagre": "0.8.5",
+    "esbuild": "^0.25.0",
+    "playwright": "1.62.1"
+  }
 }
