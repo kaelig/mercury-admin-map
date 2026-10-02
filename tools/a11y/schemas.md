@@ -136,15 +136,16 @@ writes `findings.json`; `records prepare` writes `records.jsonl`; `judgment add`
 ```
 
 `denylist.names` are matched against a step locator's name template, case-insensitively, as whole
-strings. A `goto` or a navigation that leaves `allowedOrigins` is refused. `mutatingVerbs` are matched
-as whole words against an edge label, case-insensitively.
+strings. A `goto` or a navigation that leaves `allowedOrigins` is refused. `mutatingVerbs` entries are
+words or multi-word phrases, matched as whole words against an edge label, case-insensitively; only
+`plan` reads them.
 
 ## runs/<id>/states.json (U1 `plan`, KTD5)
 
 ```json
 {
   "run": "2026-10-02-1400",
-  "map": {"nodes": 915, "sha": "<sha of the node id list>"},
+  "map": {"nodes": 915, "sha": "<sha of the sorted node id list>"},
   "roots": ["home.index", "..."],
   "states": {
     "cards.edit-limit-modal": {
@@ -169,8 +170,10 @@ as whole words against an edge label, case-insensitively.
   excluding `books.*` nodes. `rootUrl` is that URL. A root has `parent: null` and `path: [self]`.
 - A non-root's `parent` is its predecessor on `path`, and `path[0]` is always a root.
 - `needsRecipe` is false only for roots.
-- `unreachable` is `"no-path"` when no path from a root exists; then `parent` and `path` are `null`.
-- A URL is concrete unless it contains `…`, `...`, `<`, `>`, `{…}`-style placeholders or `[...]`.
+- `unreachable` is `"no-path"` when no path from a root exists; then `parent`, `path`, `labels` and
+  `source` are `null`, `mutates` is false and `needsRecipe` is true.
+- A URL is concrete unless it contains any of `…`, `...`, `<`, `>`, `{`, `}`, `[`, `]`. The
+  `{savedTransactionViewId:…}` URLs are not real query strings: the demo ignores them.
 
 ## recipes/<area>.json (U4, KTD6–KTD8)
 
@@ -356,8 +359,8 @@ and descriptions inside the template are name templates.
   "created": "2026-10-02T14:00:00",
   "baseUrl": "https://demo.mercury.com",
   "workspace": "a11y",
-  "versions": {"playwright": "1.62.1", "axe": "4.13.0", "chromium": "151.0.…", "node": "v24…", "python": "3.14…"},
-  "harness": "<harness hash at sweep start>",
+  "versions": {"playwright": "1.62.1", "axe": "4.13.0", "chromium": null | "151.0.…", "node": "v24…", "python": "3.14…"},
+  "harness": null | "<harness hash at sweep start>",
   "builds": ["<build hash>", "..."],
   "stages": {"sweep": {"started": "…", "finished": "…", "interrupted": null | "environment"}}
 }
@@ -578,6 +581,31 @@ row objects), `advisory`, `priority` (ids in order), `notRetested`, `withdrawn`,
 `handFound` (rows with status and reason), `unreachable` (grouped by root cause, with
 `firstUnreachable`).
 
+## Check data: wcag.json, checks.json, hand-found.json (U1, KTD14)
+
+- `wcag.json`: the 55 A and AA criteria of WCAG 2.2 (`number`, `name`, `level`, `principle`,
+  `guideline`, `url`), sorted numerically. A criterion that is not in this file (an AAA tag such as
+  axe's 2.1.3 on `scrollable-region-focusable`) is dropped from a result's criteria by `group`.
+- `checks.json`:
+  - `families.<id>`: `label`, `criteria` (primary first), `defaultSeverity`, optional
+    `defaultSeverityByKind: {kind: {rule: severity}}`, `guidance` (for the verifier), `key`
+    (`intrinsic` or `content`, KTD15), `facts` (placeholders its templates use), `templates`
+    (`title`, `detail`, `evidence`, and `copy` with the keys of a `CURATED` entry minus `impact` and
+    `demoArtifactRisk`, which publish adds as `accessibility` and `false`), and optional
+    `ruleTemplates: {rule: partial templates}`, merged over `templates` key by key (and inside
+    `copy` key by key).
+  - Severity lookup: `fam.get("defaultSeverityByKind", {}).get(kind, {}).get(rule, fam["defaultSeverity"])`,
+    where `kind` is the primary state's kind.
+  - `axeRules: {ruleId: family}`, `customRules: {ruleId: family}`, `customCriteria: {ruleId: [criteria]}`.
+  - `factDocs: {placeholder: meaning}`: the shared fact vocabulary. `group` computes every fact a
+    finding's family lists into `finding.facts`; templates are filled with `str.format(**facts)`.
+  - The fact `criterion` is the finding's criterion that comes first in its family's `criteria`.
+- `hand-found.json`: `{issueId: {family, criteria, why}}` for every `category: "a11y"` issue in
+  `--data`. `group` fails when one is missing.
+- Findings from judged announced-as records (KTD20) use rule id `announced-as`; a judgment may flag
+  only the families `name`, `role-state` and `structure`.
+- R20 names 1.4.12 as not tested, so `checks/axe.mjs` disables `avoid-inline-spacing`.
+
 ## Stage modules
 
 `audit.py`'s `STAGES` table names every command, its module and its owning unit. Adding a stage
@@ -586,10 +614,12 @@ module never requires editing `audit.py` or `status.py`.
 - A Python stage module exposes `cli(ws, sub, argv) -> int`. `ws` is a `lib.ws.Workspace`, `sub`
   is the subcommand or `None`, and `argv` holds the stage's own options, parsed by the module with
   `argparse`. It may also expose `status(ws, run_id) -> dict`, which `status.py` calls and prints
-  under the module's name. A status function reads files only and never writes.
+  under the module's name. A status function reads files only and never writes, and returns
+  `{"pending": true, …}` when the run holds none of its inputs or outputs yet.
 - A Node stage module runs as `node tools/a11y/<module>.mjs [sub] --workspace … --data … --map …
   --base-url … [--run …] [stage options]` and parses them with `lib/cli.mjs`'s `parse()`. It prints
-  a JSON summary on stdout as its last line and exits non-zero on failure. It may answer a `status`
-  subcommand with a JSON object on stdout, which `status.py` prints under the module's name.
+  a JSON summary on stdout as its last line and exits non-zero on failure. Every Node module answers
+  a `status` subcommand by printing one JSON object (it may be `{}`) and doing nothing else;
+  `status.py` prints it under the module's name.
 - Python modules import shared code as `from lib.canon import …` and `from lib.ws import …`;
   `audit.py` and `tests/pathshim.py` put `tools/a11y/` and `tools/` on `sys.path`.
