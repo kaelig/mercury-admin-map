@@ -63,12 +63,16 @@ async function axOf(cdp, objectId) {
   return { role: n.role?.value ?? '', name: (n.name?.value ?? '').replace(/\s+/g, ' ').trim() };
 }
 
+// The DOM facts and the accessibility node, fetched together. Null for a non-element (the in-page
+// function throws on a text node) or a node gone since it was found.
 async function describeObject(cdp, objectId, layerXPath) {
-  const { result } = await cdp.send('Runtime.callFunctionOn', {
-    objectId, functionDeclaration: DESCRIBE, arguments: [{ value: layerXPath ?? null }], returnByValue: true,
-  });
-  const ax = await axOf(cdp, objectId);
-  const d = result.value;
+  const [d, ax] = await Promise.all([
+    cdp.send('Runtime.callFunctionOn', {
+      objectId, functionDeclaration: DESCRIBE, arguments: [{ value: layerXPath ?? null }], returnByValue: true,
+    }).then(({ result, exceptionDetails }) => (exceptionDetails ? null : result.value), () => null),
+    axOf(cdp, objectId).catch(() => ({ role: '', name: '' })),
+  ]);
+  if (!d || typeof d !== 'object') return null;
   return { tag: d.tag, role: ax.role, name: ax.name, classes: d.classes, ancestors: d.ancestors, landmark: d.landmark,
     heading: d.heading, data: d.data, xpath: d.xpath, rect: d.rect, layer: d.layer };
 }
@@ -89,9 +93,7 @@ async function elementIds(cdp, fn, args) {
 export async function describeElements(cdp, fn, args, { layerXPath = null } = {}) {
   try {
     const ids = await elementIds(cdp, fn, args);
-    const out = [];
-    for (const id of ids) out.push(id ? await describeObject(cdp, id, layerXPath) : null);
-    return out;
+    return await Promise.all(ids.map((id) => (id ? describeObject(cdp, id, layerXPath) : null)));
   } finally {
     await cdp.send('Runtime.releaseObjectGroup', { objectGroup: GROUP }).catch(() => {});
   }
@@ -100,12 +102,10 @@ export async function describeElements(cdp, fn, args, { layerXPath = null } = {}
 // Describe DOM nodes by backend node id (from the accessibility tree or DOM domain).
 export async function describeBackendNodes(cdp, backendNodeIds, { layerXPath = null } = {}) {
   try {
-    const out = [];
-    for (const backendNodeId of backendNodeIds) {
+    return await Promise.all(backendNodeIds.map(async (backendNodeId) => {
       const { object } = await cdp.send('DOM.resolveNode', { backendNodeId, objectGroup: GROUP }).catch(() => ({ object: null }));
-      out.push(object?.objectId && object.subtype === 'node' ? await describeObject(cdp, object.objectId, layerXPath) : null);
-    }
-    return out;
+      return object?.objectId && object.subtype === 'node' ? describeObject(cdp, object.objectId, layerXPath) : null;
+    }));
   } finally {
     await cdp.send('Runtime.releaseObjectGroup', { objectGroup: GROUP }).catch(() => {});
   }

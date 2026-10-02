@@ -1,0 +1,26 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<!-- Like the demo: inline scripts are blocked, so axe must be injected through CDP. -->
+<meta http-equiv="Content-Security-Policy" content="script-src 'self'">
+<title>Contrast</title>
+<style>
+  body { font: 16px/1.5 Arial, sans-serif; color: #1a1a1a; background: #ffffff; margin: 24px; }
+  /* #aaaaaa on #ffffff is 2.32:1 against the 4.5:1 that 16px normal text needs. */
+  .muted { color: #aaaaaa; }
+  /* A gradient background: axe cannot compute contrast and reports bgGradient as incomplete. */
+  .banner { background: linear-gradient(90deg, #ffffff, #1a1a1a); color: #555555; padding: 8px; }
+</style>
+</head>
+<body>
+<!-- Best-practice bait: content outside any landmark (region) and a skipped heading level (heading-order). -->
+<div>Outside any landmark</div>
+<main>
+  <h1>Contrast</h1>
+  <h3>Skipped level</h3>
+  <p class="muted" id="muted">Pending since last week</p>
+  <p class="banner" id="gradient">Gradient banner text</p>
+</main>
+</body>
+</html>

@@ -77,7 +77,7 @@ function originOf(url) {
 // Playwright's 'networkidle' fires once per navigation, so it never waits for a fetch a click starts.
 // Requests from cross-origin frames don't count.
 // The registrable part of a URL's host: demo.mercury.com and cdn.mercury.com share mercury.com.
-function siteOf(url) {
+export function siteOf(url) {
   try {
     const host = new URL(url).hostname;
     return /^[\d.]+$|^\[|^localhost$/.test(host) ? host : host.split('.').slice(-2).join('.');

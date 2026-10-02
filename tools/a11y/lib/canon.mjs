@@ -38,6 +38,11 @@ function ser(v, indent, level) {
 }
 
 export const canonical = (obj) => ser(obj, false, 0);
+
+// Items ordered by their canonical bytes: a stable order that does not depend on discovery order.
+export function sortCanonical(items) {
+  return items.map((x) => [canonical(x), x]).sort(([a], [b]) => (a < b ? -1 : a > b ? 1 : 0)).map(([, x]) => x);
+}
 export const dump = (obj) => ser(obj, true, 0) + '\n';
 export const sha = (obj) => createHash('sha256').update(canonical(obj)).digest('hex');
 export const sha1 = (obj) => createHash('sha1').update(canonical(obj)).digest('hex');

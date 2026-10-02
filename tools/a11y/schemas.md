@@ -280,7 +280,17 @@ templates in scope. A replay matches when `path` and `top` are equal and the Jac
 - An unreachable file has `status`, `reason`, `reasonDetail`, `harness`, `recipeHash`, `build`, `env`
   and empty `results`, `records`, `checks`, with `families.completed` empty.
 - The file holds no run id and no timestamps, so two sweeps can be compared byte for byte.
-- Results and records are sorted by `canonical()` for stable output.
+- Results and records are sorted by `canonical()` for stable output (`sortCanonical` in canon.mjs).
+- `frames` is the axe check's `detail.frames` (url without query or hash, origin, `firstParty` by
+  site), which the sweep moves to the top level; `checks.axe` keeps `rulesRan` and `inapplicable`.
+  First-party frames are listed but not scanned.
+- `checks.interactive` is the expected-interactive set: occurrences plus `focusable`, `disabled`
+  and `source` (`ax` or `pointer`). Disabled controls stay in the set for target size; the Tab walk
+  does not expect to reach them.
+- There is no `checks.records`: the `records` check returns its output as the top-level `records`.
+- `target-size-own` evidence: `width`, `height`, `offset`, `own` (`fail` or `pass`), `passedBy`
+  (`size`, `spacing`, `inline` or null), `axe` (`violation`, `incomplete`, `pass` or
+  `inapplicable`), `agree`, `exception` (`ua-control` or null).
 
 ### Occurrence: the element an observation is about
 
@@ -349,6 +359,9 @@ in CSS pixels, rounded.
 }
 ```
 
+Records cover interactive roles, landmarks, headings, and the dialog, alertdialog, status, alert,
+log, marquee and timer roles (the ones that carry `modal` and `live`). False flags, `invalid=false`,
+`haspopup=false`, `live=off`, and a `valuetext` equal to `valuenow` are left out.
 `states` keys are written in this fixed order when present: `checked`, `pressed`, `selected`,
 `expanded`, `haspopup`, `disabled`, `readonly`, `required`, `invalid`, `modal`, `multiselectable`,
 `level`, `valuenow`, `valuetext`, `live`, `errormessage`. The template is

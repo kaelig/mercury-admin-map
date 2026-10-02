@@ -1,0 +1,33 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Transactions</title>
+<style>
+  body { font: 14px/1.5 Arial, sans-serif; color: #1a1a1a; background: #ffffff; margin: 0; }
+  header, nav { padding: 8px 24px; border-bottom: 1px solid #1a1a1a; }
+  nav a { margin-right: 12px; }
+  main { padding: 24px; }
+  table { border-collapse: collapse; width: 100%; }
+  td, th { padding: 4px 8px; border-bottom: 1px solid #dddddd; text-align: left; }
+  .muted { color: #8a8a8a; }
+  .icon { width: 20px; height: 20px; padding: 0; border: 0; background: #1a1a1a; }
+  .row-card { cursor: pointer; }
+  button.more { font: 13px Arial, sans-serif; padding: 2px 6px; }
+</style>
+</head>
+<body>
+<!-- The largest fixture, for timing: a transactions table of 120 rows, each with a checkbox, a link,
+     an icon button, a menu button and muted text, about 3,500 elements and 500 targets in all. -->
+<header><button type="button" aria-haspopup="menu" aria-expanded="false">Move money</button> <input type="search" aria-label="Search"></header>
+<nav aria-label="Primary" id="nav"></nav>
+<main>
+  <h1>Transactions</h1>
+  <table>
+    <thead><tr><th><input type="checkbox" aria-label="Select all"></th><th>Merchant</th><th>Amount</th><th>Status</th><th>Actions</th></tr></thead>
+    <tbody id="rows"></tbody>
+  </table>
+</main>
+<script src="large.js"></script>
+</body>
+</html>
