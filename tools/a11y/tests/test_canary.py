@@ -70,6 +70,9 @@ class Definition(unittest.TestCase):
                 raw = canon.read_json(os.path.join(DEF, "raw", f"{o['state']}.json"))
                 r = raw["results"][o["index"]]
                 self.assertEqual(r["rule"], f["rule"], o)
+                if r["basis"] == "incomplete":      # KTD12: one finding per rule and messageKey, no element
+                    self.assertEqual(signature.incomplete_key(f["family"], r["rule"], r["messageKey"]), f["key"])
+                    continue
                 shape = CHECKS["families"][f["family"]]["key"]
                 self.assertEqual(signature.finding_key(f["family"], r["rule"], shape, r["occurrence"], r["evidence"]),
                                  f["key"])

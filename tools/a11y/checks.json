@@ -1212,6 +1212,59 @@
    "3.3.1"
   ]
  },
+ "incomplete": {
+  "facts": [
+   "rule",
+   "messageKey",
+   "why",
+   "elements",
+   "screen",
+   "criterion",
+   "criterionName"
+  ],
+  "messageKeyText": {
+   "bgOverlap": "an element overlaps its background",
+   "bgImage": "it sits on a background image",
+   "bgGradient": "it sits on a background gradient",
+   "pseudoContent": "a pseudo-element changes its look",
+   "elmPartiallyObscured": "another element partly covers it",
+   "elmPartiallyObscuring": "it partly covers other elements",
+   "shortTextContent": "its text is too short to judge",
+   "nonBmp": "it holds only symbols, not text",
+   "equalRatio": "its text matches its background",
+   "controlsWithinPopup": "aria-controls names a closed popup",
+   "noId": "an ARIA attribute names a missing id",
+   "visibleLabelSingular": "its ARIA label is poorly supported",
+   "noRoleSingular": "it has an ARIA label but no role",
+   "nonTabbableNeighbor": "its neighbor may not be a target"
+  },
+  "noMessageKey": "axe gave no reason",
+  "templates": {
+   "title": "Needs review: {rule}, {why}",
+   "detail": "axe could not decide {rule} for {elements}: {why}. A verifier checked a sample on the live demo; the others may pass or fail. WCAG {criterion} {criterionName}.",
+   "evidence": "axe {rule} could not decide {elements} ({messageKey}): {why}.",
+   "copy": {
+    "title": "Review and fix {rule}: {why}",
+    "summary": "axe could not decide {rule} for {elements} ({messageKey}): {why}. A verifier checked a sample on the live demo, starting on {screen}; nobody has checked the other elements by hand.",
+    "userImpact": "Where one of these elements does fail WCAG {criterion} {criterionName}, the people that criterion protects meet the same barrier on every screen it appears on. Which elements fail is not known yet.",
+    "fixHypothesis": "These elements seem to share a pattern axe cannot measure: {why}. Checking the sampled elements by hand, then fixing the pattern in its shared component where it fails, would likely clear most of them.",
+    "acceptance": [
+     "Each element in this group passes WCAG {criterion} {criterionName} when checked by hand.",
+     "A rerun of the audit confirms no failure in this group."
+    ],
+    "verify": [
+     "Start with the sampled screens in the audit evidence, then check the others: the verifier saw only a sample."
+    ],
+    "searchTerms": [
+     "{rule}",
+     "{messageKey}",
+     "needs review"
+    ],
+    "confidence": "medium",
+    "confidenceReason": "axe could not decide these elements, and a verifier checked only a sample of them on the live demo."
+   }
+  }
+ },
  "factDocs": {
   "element": "The element in words, at most 50 characters: its role and quoted name template (button \"Edit limits\"), or, when it has no name, its role and where it sits: the nearest heading in quotes, else the nearest landmark (button in \"API Tokens\", link in the main landmark). The role is the occurrence's ARIA role, or text when it has none or a generic one. The name or place is cut with an ellipsis to fit.",
   "screen": "The map title of the finding's primary state, at most 40 characters (Settings — API Tokens).",
@@ -1232,6 +1285,9 @@
   "previous": "The tab stop just before stop, in the same words as element, at most 50 characters.",
   "overlay": "The modal, drawer, menu or popover in words, at most 40 characters: its role and quoted name from the raw file's layer (dialog \"Edit card limits\"), or unnamed and its role (unnamed menu). The name is cut with an ellipsis to fit.",
   "focus": "Where focus was when the check made its assertion, in the same words as element, or page body when focus fell to the body; at most 50 characters.",
-  "message": "The status or error text as a name template in quotes, at most 50 characters (\"Category created\"), cut with an ellipsis to fit."
+  "message": "The status or error text as a name template in quotes, at most 50 characters (\"Category created\"), cut with an ellipsis to fit.",
+  "messageKey": "axe's messageKey for an incomplete group: the reason axe could not decide its rule (bgOverlap), or none when axe gave none.",
+  "why": "That reason in words, at most 36 characters: incomplete.messageKeyText for the key (an element overlaps its background), else the key itself cut with an ellipsis to fit, or incomplete.noMessageKey when axe gave none.",
+  "elements": "How many distinct elements an incomplete group holds, with the noun (48 elements, 1 element). Two results are one element when a violation of the rule on them would share a finding key (KTD15)."
  }
 }

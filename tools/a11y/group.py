@@ -5,7 +5,9 @@
 Reads states.json, the audited raw files (the states outcomes.json lists as audited, or, before the
 sweep writes it, every raw file marked audited), judgments.jsonl, the hand-found issues from --data
 with the snapshot off, tools/a11y/hand-found.json and the current snapshot's registry.json. One
-finding per rule per shared element (keys from signature.py), one per hand-found issue, and an
+finding per rule per shared element (keys from signature.py), except axe's incomplete results: one
+finding per rule and messageKey across the product (KTD12), written with checks.json's `incomplete`
+templates, which name no single element. One finding per hand-found issue, and an
 attachment proposal wherever a scanner finding covers at least half of a hand-found issue's screens
 in the same family. Issues are never read from --map: the map gives screen titles only.
 
@@ -28,8 +30,10 @@ AGREEMENT = 0.9     # KTD15: flag a group whose members share a tag-and-attribut
 OVERLAP = 0.5       # KTD17: share of a hand-found issue's screens a scanner finding must cover
 BASIS = ("violation", "failure", "incomplete", "candidate")
 GENERIC_ROLES = {"", "generic", "none", "presentation", "StaticText"}
+NO_MESSAGE_KEY = "none"   # the messageKey fact of an incomplete group axe gave no messageKey
 FAR = 10 ** 9
 UNKNOWN = "unknown"
+WHY_MAX = 36        # checks.json factDocs: `why` is at most 36 characters
 
 
 class GroupError(Exception):
@@ -207,7 +211,21 @@ def fact_names(fam):
     return sorted(names)
 
 
-def compute_facts(fam, rule, criteria, m, states, primary, ctx):
+def element_count(g, ctx):
+    """An incomplete group's distinct elements, counted by the key a violation on each would get."""
+    shape = ctx["checks"]["families"][g["family"]]["key"]
+    n = len({signature.finding_key(g["family"], g["rule"], shape, m["occ"], m["evidence"]) for m in g["members"]})
+    return f"{n} element{'' if n == 1 else 's'}"
+
+
+def why_words(message_key, ctx):
+    inc = ctx["checks"]["incomplete"]
+    if message_key is None:
+        return inc["noMessageKey"]
+    return inc["messageKeyText"].get(message_key) or cut(message_key, WHY_MAX)
+
+
+def compute_facts(fam, rule, criteria, m, states, primary, ctx, g=None):
     occ, ev = m["occ"], m["evidence"]
     fg, bg = signature.contrast_colors(ev)
     calc = {
@@ -232,8 +250,21 @@ def compute_facts(fam, rule, criteria, m, states, primary, ctx):
         "overlay": lambda: overlay_words(m["raw"]),
         "focus": lambda: focus_words(ev),
         "message": lambda: message_words(m),
+        "messageKey": lambda: g.get("messageKey") or NO_MESSAGE_KEY,
+        "why": lambda: why_words(g.get("messageKey"), ctx),
+        "elements": lambda: element_count(g, ctx),
     }
     return {name: calc[name]() for name in fact_names(fam)}
+
+
+def finding_templates(checks, family, rule, basis):
+    """The templates a scanner finding is written with: checks.json's `incomplete` set for a group of
+    axe's incomplete results, else its family's (templates_for)."""
+    if basis == "incomplete":
+        t = dict(checks["incomplete"]["templates"])
+        t["copy"] = dict(t["copy"])
+        return t
+    return templates_for(checks["families"][family], rule)
 
 
 def templates_for(fam, rule):
@@ -314,9 +345,15 @@ def collect(raws, judgments, checks, wcag):
             if not criteria:
                 skipped[f"{rule}: no WCAG 2.2 A or AA criterion"] += 1
                 continue
-            fam = checks["families"][family]
-            key = signature.finding_key(family, rule, fam["key"], r.get("occurrence"), r.get("evidence"))
-            g = groups.setdefault(key, {"family": family, "rule": rule, "sig": None, "members": []})
+            if r.get("basis") == "incomplete":
+                mk = r.get("messageKey")
+                key = signature.incomplete_key(family, rule, mk)
+                g = groups.setdefault(key, {"family": family, "rule": rule, "sig": None, "basis": "incomplete",
+                                            "messageKey": mk, "members": []})
+            else:
+                fam = checks["families"][family]
+                key = signature.finding_key(family, rule, fam["key"], r.get("occurrence"), r.get("evidence"))
+                g = groups.setdefault(key, {"family": family, "rule": rule, "sig": None, "members": []})
             g["members"].append({"state": sid, "index": i, "occ": r.get("occurrence"), "evidence": r.get("evidence") or {},
                                  "check": r.get("check"), "criteria": criteria, "basis": r.get("basis"), "raw": raw})
         for i, rec in enumerate(raw.get("records") or []):
@@ -350,8 +387,9 @@ def assemble(key, g, ctx):
     criteria = order_criteria([c for m in members for c in m["criteria"]], fam)
     kind = (states.get(primary) or {}).get("kind") or first[primary]["raw"].get("kind")
     rule = g["rule"]
-    facts = compute_facts(fam, rule, criteria, first[primary], ids, primary, ctx)
-    t = templates_for(fam, rule)
+    words = checks["incomplete"] if g.get("basis") == "incomplete" else fam
+    facts = compute_facts(words, rule, criteria, first[primary], ids, primary, ctx, g)
+    t = finding_templates(checks, g["family"], rule, g.get("basis"))
     bases = [m["basis"] for m in members]
     return {
         "key": key,
@@ -421,7 +459,8 @@ def propose(scanner, hand_found, registry):
 def flag_groups(groups):
     out = []
     for key, g in sorted(groups.items()):
-        if len(g["members"]) < 2:
+        # An incomplete group spans different elements by design (KTD12): the shared-element check skips it.
+        if len(g["members"]) < 2 or g.get("basis") == "incomplete":
             continue
         share = signature.agreement(m["occ"] for m in g["members"])
         if share < AGREEMENT:

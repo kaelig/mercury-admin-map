@@ -310,6 +310,131 @@ class PrimaryAndSample(ScratchTest):
 
 
 # ---------------------------------------------------------------------------
+# axe's incomplete results: one finding per rule and messageKey (R8, KTD12)
+# ---------------------------------------------------------------------------
+
+def incomplete(rule, o, message_key, criteria=("4.1.2",), evidence=None):
+    r = result(rule, o, basis="incomplete", criteria=criteria, evidence=evidence or {
+        "failureSummary": "Fix any of the following:\n  Unable to determine if aria-controls referenced ID exists"})
+    r["messageKey"] = message_key
+    return r
+
+
+WORDS = ["Account", "Card", "Payee", "Invoice", "Transfer", "Statement", "Category", "Recipient"]
+
+
+def popup_trigger(i):
+    """48 different shared elements: their own module classes, names, call sites, tags and roles."""
+    tag, role = (("button", "button"), ("a", "link"), ("div", "combobox"))[i % 3]
+    return occ(tag=tag, role=role, name=f"{WORDS[i % 8]} menu {'x' * (i // 8)}",
+               classes=[f"_trigger{i}_mn{i:03d}_1"], ancestors=[[f"_toolbar{i}_tb{i:03d}_2"]],
+               heading=f"{WORDS[i % 8]}s", xpath=f"/html/body/div/main/div[{i + 1}]/button")
+
+
+def named_anywhere(f, occs):
+    """Element names and CSS local class names of occs that appear in a finding's title, summary or facts."""
+    text = " ".join([f["title"], f["summary"]] + [str(v) for v in f["facts"].values()])
+    out = []
+    for o in occs:
+        out += [n for n in [signature.template(o["name"])] + signature.local_classes(o["classes"]) if n in text]
+    return out
+
+
+class Incomplete(ScratchTest):
+    def test_48_controls_within_popup_results_on_different_elements_and_states_are_one_finding(self):
+        s = self.scratch()
+        ids = [f"a.s{i:02d}" for i in range(20)] + [f"b.s{i:02d}" for i in range(10)]
+        for sid in ids:
+            kind = {"a.s00": "menu", "b.s03": "drawer"}.get(sid, "page")
+            s.state(sid, kind=kind, hops={"a.s00": 0, "a.s05": 1}.get(sid, 2),
+                    title="Accounts — Overview" if sid == "a.s05" else None)
+        triggers = [popup_trigger(i) for i in range(48)]
+        for i, o in enumerate(triggers):
+            s.add(ids[i % 30], incomplete("aria-valid-attr-value", o, "controlsWithinPopup"))
+        self.assertEqual(len({signature.finding_key("role-state", "aria-valid-attr-value", "content", o)
+                              for o in triggers}), 48)
+        code, out, err, doc = s.run()
+        self.assertEqual(code, 0, err)
+        (f,) = by_rule(doc, "aria-valid-attr-value")
+        self.assertEqual(f["key"], signature.incomplete_key("role-state", "aria-valid-attr-value", "controlsWithinPopup"))
+        self.assertEqual((f["family"], f["basis"], f["criteria"], f["severityDefault"]),
+                         ("role-state", "incomplete", ["4.1.2"], "medium"))
+        self.assertEqual(f["states"], sorted(ids))
+        self.assertEqual(len(f["occurrences"]), 48)
+        self.assertEqual(f["primary"], "a.s05", "a page first, then the fewest hops")
+        self.assertEqual(f["sample"], ["a.s05", "b.s03"], "then the state least like it")
+        self.assertEqual(f["title"], "Needs review: aria-valid-attr-value, aria-controls names a closed popup")
+        self.assertLessEqual(len(f["title"]), 80)
+        self.assertEqual(f["summary"], "axe aria-valid-attr-value could not decide 48 elements (controlsWithinPopup): "
+                                       "aria-controls names a closed popup.")
+        self.assertEqual(f["facts"], {
+            "rule": "aria-valid-attr-value", "messageKey": "controlsWithinPopup",
+            "why": "aria-controls names a closed popup", "elements": "48 elements", "screen": "Accounts — Overview",
+            "criterion": "4.1.2", "criterionName": "Name, Role, Value"})
+        self.assertEqual(named_anywhere(f, triggers), [], "no single element stands for the group")
+        self.assertIn("aria-valid-attr-value: 48 nodes, 1 group", out)
+        self.assertEqual(doc["flags"], [], "an incomplete group's members differ by design")
+
+    def test_two_message_keys_of_one_rule_are_two_findings_and_no_key_is_a_third(self):
+        s = self.scratch()
+        s.state("a.one").state("a.two")
+        texts = [occ(tag="span", role="", name="Balance", classes=[f"_label{i}_lb{i:03d}_3"],
+                     xpath=f"/html/body/div/span[{i + 1}]") for i in range(6)]
+        for o, (sid, mk) in zip(texts, [("a.one", "bgOverlap"), ("a.two", "bgOverlap"), ("a.two", "bgOverlap"),
+                                        ("a.one", "bgImage"), ("a.two", "bgImage"), ("a.one", None)]):
+            s.add(sid, incomplete("color-contrast", o, mk, criteria=["1.4.3"],
+                                  evidence={"fgColor": "#ffffff", "bgColor": None, "contrastRatio": 0}))
+        code, _, err, doc = s.run()
+        self.assertEqual(code, 0, err)
+        got = {f["key"]: (f["title"], f["facts"]["elements"], f["facts"]["messageKey"], len(f["occurrences"]))
+               for f in by_rule(doc, "color-contrast")}
+        key = lambda mk: signature.incomplete_key("contrast", "color-contrast", mk)  # noqa: E731
+        self.assertEqual(got, {
+            key("bgOverlap"): ("Needs review: color-contrast, an element overlaps its background", "3 elements",
+                               "bgOverlap", 3),
+            key("bgImage"): ("Needs review: color-contrast, it sits on a background image", "2 elements", "bgImage", 2),
+            key(None): ("Needs review: color-contrast, axe gave no reason", "1 element", "none", 1)})
+
+    def test_a_violation_of_the_same_rule_on_the_same_element_stays_its_own_finding(self):
+        s = self.scratch()
+        s.state("a.one").state("a.two").state("b.three")
+        e, other = popup_trigger(0), popup_trigger(1)
+        violation = dict(criteria=["4.1.2"], evidence={"failureSummary": "Fix all of the following:\n  Invalid ARIA "
+                                                                          "attribute value: aria-controls=\"menu-1\""})
+        s.add("a.one", incomplete("aria-valid-attr-value", e, "controlsWithinPopup"),
+              result("aria-valid-attr-value", e, **violation))
+        s.add("a.two", incomplete("aria-valid-attr-value", other, "controlsWithinPopup"),
+              result("aria-valid-attr-value", other, **violation))
+        s.add("b.three", result("aria-valid-attr-value", e, **violation))
+        code, out, err, doc = s.run()
+        self.assertEqual(code, 0, err)
+        found = {f["key"]: f for f in by_rule(doc, "aria-valid-attr-value")}
+        self.assertEqual(len(found), 3)
+        pending = found[signature.incomplete_key("role-state", "aria-valid-attr-value", "controlsWithinPopup")]
+        self.assertEqual((pending["states"], pending["facts"]["elements"]), (["a.one", "a.two"], "2 elements"))
+        mine = found[signature.finding_key("role-state", "aria-valid-attr-value", "content", e)]
+        self.assertEqual((mine["basis"], mine["states"]), ("violation", ["a.one", "b.three"]))
+        self.assertEqual(mine["title"], 'Wrong role or state: button "Account menu"')
+        theirs = found[signature.finding_key("role-state", "aria-valid-attr-value", "content", other)]
+        self.assertEqual((theirs["basis"], theirs["states"]), ("violation", ["a.two"]))
+        self.assertIn("aria-valid-attr-value: 5 nodes, 3 groups", out)
+
+    def test_an_unknown_long_message_key_on_the_longest_rule_id_keeps_the_title_within_80(self):
+        s = self.scratch()
+        s.state("a.one")
+        mk = "focusableDescendantInsideAShadowRootSlot"
+        s.add("a.one", incomplete("scrollable-region-focusable", occ(tag="div", role="", classes=["_scroller_scr11_1"]),
+                                  mk, criteria=["2.1.1", "2.1.3"]))
+        code, _, err, doc = s.run()
+        self.assertEqual(code, 0, err)
+        (f,) = by_rule(doc, "scrollable-region-focusable")
+        self.assertEqual(f["facts"]["why"], mk[:35] + "…", "an unknown key reads as itself, cut to fit")
+        self.assertEqual(f["title"], f"Needs review: scrollable-region-focusable, {mk[:35]}…")
+        self.assertLessEqual(len(f["title"]), 80)
+        self.assertNotIn("scroller", f["title"])
+
+
+# ---------------------------------------------------------------------------
 # Hand-found issues and attachment proposals (R17, KTD17, AE5)
 # ---------------------------------------------------------------------------
 

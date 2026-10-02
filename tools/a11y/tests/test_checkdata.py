@@ -116,7 +116,13 @@ UNCAPPED_SAMPLES = {
     "offset": "14",
     "stop": "57",
     "stops": "118",
+    "elements": "312 elements",
+    "messageKey": "elmPartiallyObscuring",
 }
+# The message keys the incomplete block must word (KTD12): the ones axe 4.13 returns most on the demo.
+MESSAGE_KEYS = ["bgOverlap", "bgImage", "bgGradient", "pseudoContent", "elmPartiallyObscured", "elmPartiallyObscuring",
+                "shortTextContent", "nonBmp", "equalRatio", "controlsWithinPopup", "noId", "visibleLabelSingular",
+                "noRoleSingular", "nonTabbableNeighbor"]
 # Each capped fact is filled to its cap from text like this.
 CAPPED_SEED = 'button "Distribute funds across accounts and keep a target balance in Treasury '
 CSS_MODULE_CLASS = re.compile(r"_[A-Za-z][A-Za-z0-9-]*_[A-Za-z0-9]{5}_\d+")
@@ -320,6 +326,7 @@ class CheckDataTest(unittest.TestCase):
             for name in used:
                 self.assertIn(name, self.checks["factDocs"], f"{fid} uses undocumented fact {name}")
             used_anywhere |= used
+        used_anywhere |= self.incomplete_placeholders()
         self.assertEqual(sorted(set(self.checks["factDocs"]) - used_anywhere), [], "documented but unused facts")
 
     def test_templates_fill_and_fit(self):
@@ -337,6 +344,56 @@ class CheckDataTest(unittest.TestCase):
                     self.assertEqual(filled, filled.strip(), f"{where} {path}")
                     if path == "title":
                         self.assertLessEqual(len(filled), 80, f"{where} title: {filled}")
+                    if path == "detail":
+                        self.assertTrue(filled.endswith(f"{facts['criterion']} {facts['criterionName']}."),
+                                        f"{where} detail must end with the criterion: {filled}")
+
+    # -- the incomplete block (KTD12: one finding per axe rule and messageKey) ---
+
+    def incomplete_placeholders(self):
+        used = set()
+        for _, s in template_strings(self.checks["incomplete"]["templates"]):
+            used |= placeholders(s)
+        return used
+
+    def test_incomplete_block_is_well_formed(self):
+        inc = self.checks["incomplete"]
+        t = inc["templates"]
+        self.assertEqual(sorted(t), ["copy", "detail", "evidence", "title"])
+        self.assertEqual(set(t["copy"]), COPY_KEYS)
+        for k in LIST_KEYS:
+            self.assertIsInstance(t["copy"][k], list, k)
+        used = self.incomplete_placeholders()
+        self.assertEqual(sorted(inc["facts"]), sorted(used), "facts list differs from the templates")
+        for name in used:
+            self.assertIn(name, self.checks["factDocs"], f"incomplete uses undocumented fact {name}")
+        self.assertNotIn("element", used, "an incomplete group names no single element")
+        self.assertEqual(sorted(set(MESSAGE_KEYS) - set(inc["messageKeyText"])), [])
+        cap = self.caps()["why"]
+        for key, text in list(inc["messageKeyText"].items()) + [(None, inc["noMessageKey"])]:
+            self.assertLessEqual(len(text), cap, f"{key}: {text}")
+            self.assertEqual(text, text.strip(), key)
+            self.assertNotIn("class", text.lower(), key)
+
+    def test_incomplete_templates_fill_and_fit_for_every_axe_rule(self):
+        inc = self.checks["incomplete"]
+        whys = list(inc["messageKeyText"].values()) + [inc["noMessageKey"]]
+        for rule, fid in sorted(self.checks["axeRules"].items()):
+            for why in [None] + whys:
+                facts = self.sample_facts(fid, rule)
+                if why is not None:
+                    facts["why"] = why
+                where = f"incomplete/{rule}/{why}"
+                for path, s in template_strings(inc["templates"]):
+                    try:
+                        filled = s.format(**facts)
+                    except KeyError as e:
+                        self.fail(f"{where} {path}: no fact {e}")
+                    self.assertNotIn("class", s.lower(), f"{where} {path} mentions a CSS class")
+                    self.assertIsNone(CSS_MODULE_CLASS.search(s), f"{where} {path} names a CSS-Module class")
+                    self.assertEqual(filled, filled.strip(), f"{where} {path}")
+                    if path in ("title", "copy.title"):
+                        self.assertLessEqual(len(filled), 80, f"{where} {path}: {filled}")
                     if path == "detail":
                         self.assertTrue(filled.endswith(f"{facts['criterion']} {facts['criterionName']}."),
                                         f"{where} detail must end with the criterion: {filled}")

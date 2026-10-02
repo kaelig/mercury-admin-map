@@ -154,6 +154,37 @@ class ContentKeys(unittest.TestCase):
                             sig.finding_key("role-state", "button-name", "content", o))
 
 
+class IncompleteKeys(unittest.TestCase):
+    """KTD12: axe's incomplete results group by rule and messageKey, product-wide, not per element."""
+
+    def popup_triggers(self, n=48):
+        return [occ(tag=("button", "a", "div")[i % 3], role=("button", "link", "combobox")[i % 3], name=f"Options {i}",
+                    classes=[f"_trigger{i}_mn{i:03d}_1"], ancestors=[[f"_toolbar{i}_tb{i:03d}_2"]],
+                    xpath=f"/html/body/div[{i + 1}]/button") for i in range(n)]
+
+    def test_48_elements_share_one_key_per_rule_and_message_key(self):
+        triggers = self.popup_triggers()
+        per_element = {sig.finding_key("role-state", "aria-valid-attr-value", "content", o) for o in triggers}
+        self.assertEqual(len(per_element), 48, "the elements really are 48 different shared elements")
+        k = sig.incomplete_key("role-state", "aria-valid-attr-value", "controlsWithinPopup")
+        self.assertRegex(k, r"^role-state:aria-valid-attr-value:[0-9a-f]{12}$")
+        self.assertEqual(k, "role-state:aria-valid-attr-value:" + sig.sha(
+            {"family": "role-state", "rule": "aria-valid-attr-value", "basis": "incomplete",
+             "messageKey": "controlsWithinPopup"})[:12])
+        self.assertNotIn(k, per_element)
+
+    def test_message_keys_split_and_null_is_its_own_group(self):
+        keys = {sig.incomplete_key("contrast", "color-contrast", m) for m in ("bgOverlap", "bgImage", None)}
+        self.assertEqual(len(keys), 3)
+        self.assertEqual(sig.incomplete_key("contrast", "color-contrast", None),
+                         sig.incomplete_key("contrast", "color-contrast", None))
+
+    def test_family_and_rule_are_part_of_the_key(self):
+        k = sig.incomplete_key("role-state", "aria-valid-attr-value", "noId")
+        self.assertNotEqual(k, sig.incomplete_key("name", "aria-valid-attr-value", "noId"))
+        self.assertNotEqual(k, sig.incomplete_key("role-state", "aria-prohibited-attr", "noId"))
+
+
 class RecordSignature(unittest.TestCase):
     def record(self, template, o):
         return {"role": o["role"], "name": o["name"], "states": {}, "description": "", "template": template,

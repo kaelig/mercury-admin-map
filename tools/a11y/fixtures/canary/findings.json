@@ -49,20 +49,17 @@
    ],
    "evidenceHash": "87bbacd384a3876cc0344a126cf8d89431513324bcd3f419605e7876627bca59",
    "facts": {
-    "bg": "unknown",
     "criterion": "1.4.3",
     "criterionName": "Contrast (Minimum)",
-    "element": "paragraph in \"Treasury\"",
-    "fg": "unknown",
-    "ratio": "0.00",
-    "required": "3",
+    "elements": "1 element",
+    "messageKey": "bgGradient",
     "rule": "color-contrast",
     "screen": "Canary — Treasury",
-    "screens": 1
+    "why": "it sits on a background gradient"
    },
    "family": "contrast",
    "issueId": null,
-   "key": "contrast:color-contrast:b2a5b0d9a6b1",
+   "key": "contrast:color-contrast:0f3893042bc0",
    "occurrences": [
     {
      "index": 0,
@@ -80,8 +77,8 @@
    "states": [
     "canary.hero"
    ],
-   "summary": "axe color-contrast: unknown on unknown measures 0.00:1; AA needs 3:1.",
-   "title": "Low contrast: paragraph in \"Treasury\""
+   "summary": "axe color-contrast could not decide 1 element (bgGradient): it sits on a background gradient.",
+   "title": "Needs review: color-contrast, it sits on a background gradient"
   },
   {
    "basis": "failure",

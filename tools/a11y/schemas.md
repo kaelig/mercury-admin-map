@@ -496,6 +496,11 @@ so a published announced-as finding skips the judge (KTD18).
 `occurrences[].index` points into the state's raw `results` (or `records` for record findings).
 
 - Scanner keys read `<family>:<rule>:<12 hex of sha(key parts)>` (signature.py lists the parts).
+- axe incomplete results (`basis: incomplete`) group product-wide by rule and messageKey (KTD12),
+  whatever the element: key `<family>:<rule>:<12 hex of sha({family, rule, basis: "incomplete",
+  messageKey})>`. Their `facts` are `rule`, `messageKey` ("none" when null), `why`, `elements`,
+  `screen`, `criterion`, `criterionName`; title and copy come from `checks.json` `incomplete`;
+  `flags` never lists them. Published, they get the id `<area>.i-a11y-<rule>-<messageKey>`.
 - Announced-as findings: key `<family>:announced-as:<12 hex>`, `rule: "announced-as"`,
   `basis: "candidate"`, `recordSig: "rec:<12 hex>"`.
 - Hand-found findings: key `hand:<issue id>`, `rule: "hand-found"`, `basis: "failure"`, `issueId`
@@ -725,6 +730,8 @@ withdrawn entry's `reason` is the drop `reasonCode`; a not-retested entry's reas
 - Findings from judged announced-as records (KTD20) use rule id `announced-as`; a judgment may flag
   only the families `name`, `role-state` and `structure`.
 - R20 names 1.4.12 as not tested, so `checks/axe.mjs` disables `avoid-inline-spacing`.
+- `checks.json` `incomplete`: `facts`, `messageKeyText` (messageKey → words, at most 36
+  characters), `noMessageKey`, and `templates` (title, detail, evidence, copy) for incomplete groups.
 
 ## Shared browser helpers (lib/)
 

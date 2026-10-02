@@ -11,6 +11,9 @@ Two key shapes (checks.json `families.<id>.key`):
   different CSS Module, or the landmark and `data-*` hooks for an element with no module classes).
 
 A key reads `<family>:<rule>:<12 hex characters of sha(key parts)>`.
+
+axe's incomplete results ("needs review") are keyed by rule and messageKey instead, product-wide
+(KTD12): `incomplete_key` hashes family, rule, `basis: "incomplete"` and the messageKey, no element.
 """
 import collections
 import re
@@ -137,6 +140,13 @@ def key_parts(family, rule, shape, occ, evidence=None):
 
 def finding_key(family, rule, shape, occ, evidence=None):
     return f"{family}:{rule}:{sha(key_parts(family, rule, shape, occ, evidence))[:12]}"
+
+
+def incomplete_key(family, rule, message_key):
+    """The key of the one finding all of axe's incomplete results for a rule and messageKey share,
+    whatever the element (KTD12). A null messageKey is a group of its own."""
+    parts = {"family": family, "rule": rule, "basis": "incomplete", "messageKey": message_key}
+    return f"{family}:{rule}:{sha(parts)[:12]}"
 
 
 def record_sig(record):

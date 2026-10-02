@@ -17,13 +17,14 @@ import unittest
 from unittest import mock
 
 from tests.pathshim import A11Y, ROOT
-from tests.ledger import (DATA, HEADING, RUN_A, RUN_B, ROWS, SNAPSHOT, TABS, Ledger, build_test_snapshot,
+from tests.ledger import (CHECKS, DATA, HEADING, RUN_A, RUN_B, ROWS, SNAPSHOT, TABS, Ledger, build_test_snapshot,
                           hand_found_ids, raw_issues)
 
 import audit
 import diff
 import mapdata
 import publish
+import signature
 import status
 from lib.canon import read_json, write_json
 from lib.ws import Workspace
@@ -206,6 +207,45 @@ class PublishTest(unittest.TestCase):
         self.assertEqual(len(set(t.lower() for t in titles)), 2, titles)
         self.assertEqual(len({i["copy"]["title"].lower() for i in gen}), 2)
         self.assertTrue(all(len(t) <= 80 for t in titles))
+
+    def incomplete(self, led, family, rule, message_key, states, primary, elements="48 elements"):
+        """An incomplete group as `group` writes it: one finding per rule and messageKey, element-free facts."""
+        inc = CHECKS["incomplete"]
+        f = led.scanner(family, rule, states, primary=primary)
+        facts = {"rule": rule, "messageKey": message_key, "why": inc["messageKeyText"][message_key],
+                 "elements": elements, "screen": primary, "criterion": f["criteria"][0],
+                 "criterionName": f["facts"]["criterionName"]}
+        f.update(key=signature.incomplete_key(family, rule, message_key), basis="incomplete", facts=facts,
+                 title=inc["templates"]["title"].format(**facts), summary=inc["templates"]["evidence"].format(**facts))
+        return f
+
+    def test_a_published_incomplete_group_gets_the_incomplete_copy_and_an_element_free_id(self):
+        led = self.ledger(RUN_A)
+        led.hand_found()
+        f = self.incomplete(led, "role-state", "aria-valid-attr-value", "controlsWithinPopup",
+                            ["cards.index", "cards.detail-physical", "home.index"], primary="cards.index")
+        led.scanner("role-state", "aria-valid-attr-value", ["cards.index"], element='button "Card menu"')
+        led.confirm_rest()
+        self.run_stages(led)
+        gen = by_id(published(self.ws_dir, "issues.json"))
+        iid = "cards.i-a11y-aria-valid-attr-value-controlswithinpopup"
+        self.assertEqual(sorted(gen), [iid, "cards.i-a11y-role-state-button-card-menu"])
+        self.assertEqual(published(self.ws_dir, "registry.json")["keys"][f["key"]], iid)
+        i, t = gen[iid], CHECKS["incomplete"]["templates"]
+        self.assertEqual(i["title"], "Needs review: aria-valid-attr-value, aria-controls names a closed popup")
+        self.assertEqual(i["detail"], t["detail"].format(**f["facts"]))
+        self.assertTrue(i["detail"].startswith("axe could not decide aria-valid-attr-value for 48 elements: "
+                                               "aria-controls names a closed popup."), i["detail"])
+        self.assertEqual(i["evidence"], "axe aria-valid-attr-value could not decide 48 elements (controlsWithinPopup): "
+                                        "aria-controls names a closed popup. Verifier: Reproduced on every sampled state.")
+        expected = {k: ([s.format(**f["facts"]) for s in v] if isinstance(v, list) else v.format(**f["facts"]))
+                    for k, v in t["copy"].items()}
+        self.assertEqual(i["copy"], dict(expected, impact="accessibility", demoArtifactRisk=False))
+        self.assertEqual(i["copy"]["title"], "Review and fix aria-valid-attr-value: aria-controls names a closed popup")
+        self.assertEqual(i["copy"]["confidence"], "medium")
+        self.assertEqual((i["wcag"], i["nodeIds"][0], i["audit"]["family"]), (["4.1.2"], "cards.index", "role-state"))
+        row = next(r for r in published(self.ws_dir, "report.json")["tables"]["screenReader"] if r["id"] == iid)
+        self.assertEqual((row["element"], row["rule"]), ("48 elements", "aria-valid-attr-value"))
 
     # Later runs ----------------------------------------------------------------
 

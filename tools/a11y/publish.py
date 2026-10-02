@@ -283,8 +283,7 @@ def audit_block(f, v, status, ctx):
 
 def fresh_issue(f, v, e, iid, ctx):
     """A generated issue from this run's finding and verdict."""
-    fam = ctx["checks"]["families"][f["family"]]
-    t = group.templates_for(fam, f["rule"])
+    t = group.finding_templates(ctx["checks"], f["family"], f["rule"], f.get("basis"))
     facts = f.get("facts") or {}
     copy = {k: fill(val, facts) for k, val in t["copy"].items() if k != "title"}
     copy["title"] = fill_within(t["copy"]["title"], facts, TITLE_MAX)
@@ -412,9 +411,12 @@ def apply_registry(ctx, problems):
             if iid is None:
                 f = ctx["by_key"].get(key) or {}
                 facts = f.get("facts") or {}
-                element = facts.get("element") or facts.get("message") or facts.get("overlay") or f.get("title")
-                reg, iid = registry.mint(reg, key, area_of(e["nodeIds"][0], ctx), f.get("family") or key.split(":")[0],
-                                         element, hand_ids)
+                if f.get("basis") == "incomplete":      # one group per rule and messageKey: `<rule>-<messageKey>`
+                    prefix, element = f["rule"], facts.get("messageKey")
+                else:
+                    prefix = f.get("family") or key.split(":")[0]
+                    element = facts.get("element") or facts.get("message") or facts.get("overlay") or f.get("title")
+                reg, iid = registry.mint(reg, key, area_of(e["nodeIds"][0], ctx), prefix, element, hand_ids)
             elif tomb is not None:
                 reg = registry.untombstone(reg, iid)
             ids[key] = iid
@@ -547,6 +549,8 @@ def build_report(ctx, reg, attached_to, attached, generated, overlays, hand):
                        "rule": (ctx["by_key"].get(r["key"]) or {}).get("rule"), "severity": r["severity"],
                        "screens": r["screens"], "status": r["status"]}
                 row.update({k: r["facts"].get(k) for k in TABLE_FACTS[name]})
+                if "elements" in r["facts"]:        # an incomplete group names no single element
+                    row["element"] = r["facts"]["elements"]
                 if name == "keyboard":
                     row["arrowKeys"] = "not tested"
                 tables[name].append(row)
