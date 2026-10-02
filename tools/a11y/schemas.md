@@ -617,6 +617,40 @@ row objects), `advisory`, `priority` (ids in order), `notRetested`, `withdrawn`,
   `describeBackendNodes(cdp, ids, {layerXPath})` return occurrences (DOM facts plus the accessibility
   tree's role and name); `BY_XPATH` resolves xpaths; `XPATH_FN` computes an element's xpath.
 
+## Check modules (U2, U3) and replay (U4), as the sweep (U5) calls them
+
+Every module in `tools/a11y/checks/` exports `id` (its check-module id) and
+`async run(ctx) -> {results, records, detail, completed}`:
+
+- `results`: result objects (schemas.md "Result"); `records`: announced-as records (only `ax`);
+  `detail`: what goes into the raw file's `checks.<id>`; `completed`: false when the check started
+  and could not finish (the raw file lists it under `families.incomplete`).
+- `ctx` holds `page`, `cdp`, `tracker`, `kind`, `state` (the state id), `layer` (from
+  `findLayer`), `env`, and what earlier checks produced: `axe` (the axe module's detail and
+  results), `interactive` (the expected-interactive occurrences). The sweep runs them in this
+  order: `status` collect first on toast states, then `axe`, `ax`, `interactive`, `target`,
+  `tabwalk`, and last `dialog`, which works in fresh contexts.
+- `checks/dialog.mjs` also gets `ctx.reopen()`: opens a fresh context replayed to the parent state
+  and returns `{context, page, cdp, tracker}` (the caller closes it), and `ctx.trigger(page)`:
+  returns a Playwright Locator for the final hop's trigger.
+- `checks/status.mjs` additionally exports `async arm(page)` (before the final hop) and its `run`
+  collects what the observer saw.
+
+`recipe.mjs` exports the interpreter the sweep, `reach` and `probe` share:
+
+- `loadRecipes(ws) -> {stateId: recipe}` (all areas merged) and `chain(recipes, stateId)` → the
+  recipes from the root to the state.
+- `async replay(page, ctx, stateId, {recipes, policy, beforeFinalHop, untilParent})` →
+  `{status: "reached" | "step-failed" | "fingerprint-mismatch", step, message, fingerprint}`.
+  It navigates to the root, runs every hop with `settle` after each, calls `beforeFinalHop(page)`
+  (the sweep arms the layer and the status observer there), runs the final hop, settles,
+  injects the motion-off CSS and compares the fingerprint. `untilParent: true` stops at the
+  parent state (for the dialog check). `ctx` is `{cdp, tracker, baseUrl}`. It refuses a step the
+  policy forbids before running it (`step-failed` with the reason).
+- `resolveLocator(page, locator) -> Locator` (KTD6 order, name templates).
+- `async captureFingerprint(page, cdp, kind) -> fingerprint` and `matchFingerprint(a, b) -> {ok, why}`
+  live in `fingerprint.mjs`.
+
 ## Stage modules
 
 `audit.py`'s `STAGES` table names every command, its module and its owning unit. Adding a stage
