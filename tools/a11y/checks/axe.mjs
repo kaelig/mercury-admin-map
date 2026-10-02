@@ -2,7 +2,7 @@
 // Every violation and incomplete node becomes a result; incomplete ones are kept for the verifier.
 import { readFileSync } from 'node:fs';
 import { createRequire } from 'node:module';
-import { BY_XPATH, describeElements } from '../lib/occurrence.mjs';
+import { describeElements } from '../lib/occurrence.mjs';
 import { sortCanonical } from '../lib/canon.mjs';
 import { siteOf } from '../lib/browser.mjs';
 
@@ -37,16 +37,26 @@ export async function injectAxe(cdp) {
 }
 
 // Runs in the page. Returns plain data: one entry per violation or incomplete node, and rule ids.
+// The failing elements stay in the page (NODES) for describeElements: an xpath round trip loses SVG
+// nodes, which document.evaluate cannot find by tag name.
+const NODES = "window[Symbol.for('a11y.axe.nodes')]";
 const RUN = `async (xpath, options) => {
   const context = xpath ? document.evaluate(xpath, document, null, 9, null).singleNodeValue : document;
   if (!context) throw new Error('layer not found: ' + xpath);
-  const r = await axe.run(context, options);
-  const nodes = (type) => r[type].flatMap((rule) => rule.nodes.map((n) => ({
-    rule: rule.id, tags: rule.tags, xpath: n.xpath[n.xpath.length - 1], failureSummary: n.failureSummary || '',
-    checks: [...n.any, ...n.all, ...n.none].map((c) => ({ id: c.id, data: c.data ?? null })),
-  })));
+  const r = await axe.run(context, { ...options, elementRef: true });
+  const elements = [];
+  const nodes = (type) => r[type].flatMap((rule) => rule.nodes.map((n) => {
+    elements.push(n.element);
+    return {
+      rule: rule.id, tags: rule.tags, xpath: n.xpath[n.xpath.length - 1], failureSummary: n.failureSummary || '',
+      checks: [...n.any, ...n.all, ...n.none].map((c) => ({ id: c.id, data: c.data ?? null })),
+    };
+  }));
+  const violation = nodes('violations');
+  const incomplete = nodes('incomplete');
+  ${NODES} = elements;
   return {
-    violation: nodes('violations'), incomplete: nodes('incomplete'),
+    violation, incomplete,
     ran: [...r.violations, ...r.incomplete, ...r.passes, ...r.inapplicable].map((x) => x.id),
     inapplicable: r.inapplicable.map((x) => x.id),
   };
@@ -101,7 +111,7 @@ export async function run(ctx) {
   if (missing.length) throw new Error(`axe did not run ${missing.join(', ')}: check AXE_OPTIONS (target-size needs the wcag22aa tag)`);
 
   const nodes = [...raw.violation.map((n) => ['violation', n]), ...raw.incomplete.map((n) => ['incomplete', n])];
-  const occurrences = await describeElements(cdp, BY_XPATH, nodes.map(([, n]) => n.xpath), { layerXPath: layer?.xpath ?? null });
+  const occurrences = await describeElements(cdp, `() => ${NODES}`, null, { layerXPath: layer?.xpath ?? null });
   const results = nodes.map(([basis, n], i) => {
     if (!occurrences[i]) throw new Error(`axe node not found again: ${n.rule} at ${n.xpath}`);
     return {

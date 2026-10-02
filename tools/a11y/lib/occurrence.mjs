@@ -112,4 +112,8 @@ export async function describeBackendNodes(cdp, backendNodeIds, { layerXPath = n
 }
 
 // In-page helper source: resolve xpaths to elements. Use as describeElements(cdp, BY_XPATH, xpaths).
-export const BY_XPATH = '(xs) => xs.map((x) => document.evaluate(x, document, null, 9, null).singleNodeValue)';
+// SVG and MathML steps need local-name(): document.evaluate does not match them by tag name.
+export const BY_XPATH = `(xs) => xs.map((x) => {
+  const find = (p) => document.evaluate(p, document, null, 9, null).singleNodeValue;
+  return find(x) || find(x.replace(/\\/([a-z][\\w-]*)(\\[\\d+\\])?/gi, (_, n, i) => "/*[local-name()='" + n + "']" + (i || '')));
+})`;

@@ -6,6 +6,7 @@ import assert from 'node:assert/strict';
 import { canonical } from '../lib/canon.mjs';
 import { cdpSession, envFor, injectMotionOff, launch, newContext, settle, trackRequests } from '../lib/browser.mjs';
 import { findLayer } from '../lib/scope.mjs';
+import { BY_XPATH, describeElements } from '../lib/occurrence.mjs';
 import { startServer } from '../fixtures/server.mjs';
 import * as axe from '../checks/axe.mjs';
 import * as ax from '../checks/ax.mjs';
@@ -319,4 +320,22 @@ test('interactive: disabled controls are flagged so the Tab walk does not expect
   assert.equal(off.disabled, true);
   assert.equal(i.detail.find((o) => o.name === 'Transfer').disabled, false);
   assert.ok(i.detail.filter((o) => o.source === 'pointer').every((o) => o.disabled === false));
+});
+
+test('axe: a failing node inside an SVG is described, not lost to an xpath lookup', async () => {
+  const out = await checks('svg-text');
+  const r = out.axe.results.find((x) => x.rule === 'color-contrast');
+  assert.ok(r, 'the grey chart label fails 1.4.3');
+  assert.equal(r.occurrence.tag, 'text');
+  assert.match(r.occurrence.xpath, /\/svg\[1\]\/g\[1\]\/g\[1\]\/text\[1\]$/);
+});
+
+test('BY_XPATH resolves an SVG node by its occurrence xpath', async () => {
+  const ctx = await open('svg-text', 'page');
+  try {
+    const [occ] = await describeElements(ctx.cdp, BY_XPATH, ['/html/body/main[1]/svg[1]/g[1]/g[1]/text[1]']);
+    assert.equal(occ?.tag, 'text');
+  } finally {
+    await ctx.context.close();
+  }
 });
