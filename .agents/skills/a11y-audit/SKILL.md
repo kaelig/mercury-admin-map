@@ -7,7 +7,7 @@ description: Run, resume or refresh the WCAG 2.2 AA accessibility audit of demo.
 
 After any interruption, run `python3 tools/a11y/audit.py status` before anything else. It reads every stage's progress from files: sweep coverage, batches out and returned, the canary, pending attachment proposals, an incomplete publish, and whether the snapshot already holds this run. Resume at the first stage that is not done. Every stage resumes by running its command again.
 
-You conduct. Recorders, record judges and verifiers are subagents on Sonnet: spawn them with the Agent tool and `model: "sonnet"`, and point each at its prompt in `references/`. You adjudicate: recipe reviews, second-opinion disagreements, proposals nobody decided, and every stop condition.
+You conduct. Recorders, record judges and verifiers run on Sonnet, each pointed at its prompt in `references/`. Recorders run as lean headless processes through `tools/a11y/record-headless.sh` (Recorders, below). Record judges and verifiers are subagents: spawn them with the Agent tool and `model: "sonnet"`. You adjudicate: recipe reviews, second-opinion disagreements, proposals nobody decided, and every stop condition.
 
 ## Ground rules
 
@@ -103,7 +103,7 @@ On the first run, before bulk recording, work in this run and publish nothing fr
 1. **Isolation.** If `policy.isolation.status` is `confirmed`, skip this step (confirmed on 2026-10-02: submissions stay in the session). Otherwise submit one policy-allowed form in one browser context and look for its result in a fresh context. If it shows up: stop condition 2. If not, record `{"status": "confirmed", "date": "<today>", "note": "<what you submitted, and where>"}` in `policy.isolation`.
 2. **Drafts.** Draft the roots and everything draftable, and review.
 3. **Timing.** Sweep this run (stage 3). It measures what has recipes at full concurrency. Seconds per state = sweep wall time ÷ states swept, from `run.json`'s `stages.sweep`.
-4. **Pilot.** Run one recorder batch: at most 15 non-mutating states from one area's agent queue. Note its token use from the subagent's report.
+4. **Pilot.** Run one recorder batch: at most 15 non-mutating states from one area's agent queue. Note its token use from the usage lines `record-headless.sh` prints.
 5. **Counts.** Run `python3 tools/a11y/audit.py records prepare --run <id>` and `python3 tools/a11y/audit.py group --run <id>` on this run. Count the pilot area's findings and distinct records, and estimate the snapshot and export sizes from them.
 6. **Gate.** Show Kaelig, in one message:
    - the policy: denylist names and notes, fixture values, mutating verbs, isolation status, root exclusions;
@@ -117,9 +117,13 @@ On the first run, before bulk recording, work in this run and publish nothing fr
 
 ### Recorders
 
-Build recorder batches from the agent queue: 10 to 15 states from one subtree, parents before children. Write each to `a11y/runs/<id>/batches/record-NNN.json` in the format `references/recorder.md` describes: `area`, `kind`, `parent`, `labels` and `mutates` from `states.json`; `title`, `note` and `image` from the node in `build/map.json`; `draft` from the state's last line in `draft.jsonl`; and `reach`, the workspace, data, map, base URL and run every command takes. Run up to 8 recorders at once, never two on one subtree. Spawn each with:
+Build recorder batches from the agent queue: 10 to 15 states from one subtree, parents before children. Write each to `a11y/runs/<id>/batches/record-NNN.json` in the format `references/recorder.md` describes: `area`, `kind`, `parent`, `labels` and `mutates` from `states.json`; `title`, `note` and `image` from the node in `build/map.json`; `draft` from the state's last line in `draft.jsonl`; and `reach`, the workspace, data, map, base URL and run every command takes. Run up to 8 recorders at once, never two on one subtree. Start each in the background, outside the Bash sandbox (it drives Chrome on the demo):
 
-> Read `.agents/skills/a11y-audit/references/recorder.md` and follow it. Batch: `a11y/runs/<id>/batches/record-NNN.json`. agent-browser session: `record-NNN`.
+```sh
+tools/a11y/record-headless.sh <id> record-NNN
+```
+
+It runs Sonnet headless with a 3k-token base context instead of an Agent-tool subagent's 44k, and only the commands `recorder.md` names. With recorder@4, one 15-state batch processed 0.97M tokens ($0.49), against 7.0M for the recorder@1 pilot. When it exits it prints the batch's token usage and cost; its stream stays in `batches/record-NNN.stream.jsonl`, which `python3 tools/a11y/stream_usage.py` summarizes again.
 
 Each recorder writes `batches/record-NNN.out.jsonl`, one line per state, with `result` set to `accepted`, `review`, `failed` or `policy`.
 

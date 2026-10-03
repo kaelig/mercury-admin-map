@@ -265,7 +265,7 @@ With no earlier snapshot, `diff.json` lists every finding as `new`. Publish chec
 
 ## The whole audit
 
-Run the `a11y-audit` skill in Claude Code (`.agents/skills/a11y-audit/SKILL.md`, linked from `.claude/skills/`). It runs the stages above against demo.mercury.com in this order: preflight, plan and recipes, sweep, Lighthouse calibration, records and judging, group, verification with the canary first, diff, publish, `python3 build.py`, and a summary that ends with the deploy command it never runs. Recorders, record judges and verifiers are Sonnet subagents; their prompts are in the skill's `references/`.
+Run the `a11y-audit` skill in Claude Code (`.agents/skills/a11y-audit/SKILL.md`, linked from `.claude/skills/`). It runs the stages above against demo.mercury.com in this order: preflight, plan and recipes, sweep, Lighthouse calibration, records and judging, group, verification with the canary first, diff, publish, `python3 build.py`, and a summary that ends with the deploy command it never runs. Recorders, record judges and verifiers run on Sonnet; their prompts are in the skill's `references/`. Recorders run headless through `tools/a11y/record-headless.sh <run> <batch>`, which prints the batch's token usage (`tools/a11y/stream_usage.py` reads it again from `batches/<batch>.stream.jsonl`).
 
 On the first run the skill stops before agents record recipes in bulk, and shows the mutation policy and a cost estimate. It also stops when a form submitted in one browser shows up in a fresh one, when the demo blocks headless access twice, when a state needs an action outside the policy, and when two sweeps of the same demo build differ after the harness waits are fixed. Nothing is deployed without Kaelig's go.
 
