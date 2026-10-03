@@ -233,7 +233,7 @@ Waves wait until this run's canary passes: `python3 tools/a11y/audit.py verify s
 2. Start the printed server command in the background: `node tools/a11y/fixtures/server.mjs --port <port> canary`.
 3. Spawn one verifier on the canary batch, with the same message as a wave (below). The canary workspace has a root recipe for every canary page, so `reach` and `probe` work there.
 4. Run the printed `audit.py canary score` command. It writes `canary.json` into this run. Stop the server.
-5. A wrong verdict fails the canary. Read each wrong item's `expected` and `got`, fix `references/verifier.md`, bump its version id (`verifier@2` becomes `verifier@3`), and run the canary again. Never change the canary to fit the prompt.
+5. A wrong verdict fails the canary. Read each wrong item's `expected` and `got`, fix `references/verifier.md`, bump its version id (`verifier@3` becomes `verifier@4`), and run the canary again. Never change the canary to fit the prompt.
 
 ### Waves
 

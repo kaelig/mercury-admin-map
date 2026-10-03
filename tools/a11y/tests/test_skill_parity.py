@@ -148,6 +148,30 @@ class PromptVersions(unittest.TestCase):
                 self.assertEqual({x["prompt"] for x in carried}, {version})
 
 
+class CanaryIsolation(unittest.TestCase):
+    """The canary scores the verifier prompt, so the prompt must not already hold the canary's answers."""
+
+    def test_verifier_md_quotes_nothing_from_the_canary(self):
+        text = read(os.path.join(SKILL_DIR, "references", "verifier.md"))
+        canary = os.path.join(A11Y, "fixtures", "canary")
+        with open(os.path.join(canary, "findings.json"), encoding="utf-8") as f:
+            findings = json.load(f)["findings"]
+        with open(os.path.join(canary, "expected.json"), encoding="utf-8") as f:
+            expected = json.load(f)
+        terms = set()
+        for key in expected:
+            terms.add(key.rsplit(":", 1)[-1])
+        for x in findings:
+            terms.add(x["key"].rsplit(":", 1)[-1])
+            terms.update(v for v in (x.get("issueId"), x.get("primary")) if v)
+            terms.update(re.findall(r'"([^"]{4,})"', x.get("title", "")))
+            terms.update(re.findall(r"#[0-9a-fA-F]{6}\b|\b\d+\.\d+:1\b", x.get("summary", "")))
+        # WCAG thresholds and plain black or white say nothing about the canary.
+        terms -= {"4.5:1", "3:1", "7:1", "4.5", "#ffffff", "#000000"}
+        self.assertGreater(len(terms), 10, "the canary fixture should yield its keys, states and quoted names")
+        self.assertEqual(sorted(t for t in terms if t in text), [], "verifier.md repeats canary content")
+
+
 class SkillLink(unittest.TestCase):
     def test_claude_skill_is_a_relative_symlink_to_the_skill_directory(self):
         self.assertTrue(os.path.islink(LINK), f"{LINK} is not a symlink")
