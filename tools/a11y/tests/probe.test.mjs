@@ -162,7 +162,9 @@ function validate(p, family) {
   const line = { key, issueId: null, source: 'scanner', outcome: 'drop', severityBefore: 'medium', severityAfter: 'medium',
     reason: 'measured again on the live state', reasonCode: 'not-reproduced-live', counterEvidence: p.id, probes: [p],
     states: [p.state], build: p.build, model: 'sonnet', batch: 'verify-001', prompt: 'verifier@1' };
-  const code = 'import json, sys, verdict; f, l = json.load(sys.stdin); print(json.dumps(verdict.validate(l, {f["key"]: f})[1]))';
+  // verdict.py imports mapdata from tools/, which audit.py puts on the path for the CLI.
+  const code = 'import json, sys; sys.path.insert(0, ".."); import verdict; '
+    + 'f, l = json.load(sys.stdin); print(json.dumps(verdict.validate(l, {f["key"]: f})[1]))';
   const r = spawnSync('python3', ['-c', code], { cwd: A11Y, input: JSON.stringify([finding, line]), encoding: 'utf8' });
   assert.equal(r.status, 0, r.stderr);
   return JSON.parse(r.stdout);

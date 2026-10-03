@@ -359,7 +359,8 @@ in CSS pixels, rounded.
   tags; `messageKey` is set for incomplete results; `evidence` holds axe's `data` (for
   `color-contrast`: `fgColor`, `bgColor`, `contrastRatio`, `fontSize`, `fontWeight`,
   `expectedContrastRatio`) plus `failureSummary`.
-- Custom checks use these rule ids, which `checks.json` maps to families:
+- Custom checks use these rule ids, which `checks.json` maps to families (`customRules`) and to the
+  check module in parentheses (`customChecks`):
   `target-size-own` (target), `focus-not-visible`, `focus-hidden`, `keyboard-trap`, `not-reached`,
   `backward-jump` (tabwalk), `dialog-trigger-not-focusable`, `dialog-trigger-not-operable`,
   `dialog-focus-not-moved`, `dialog-focus-escaped`, `dialog-focus-not-returned`,
@@ -722,6 +723,14 @@ withdrawn entry's `reason` is the drop `reasonCode`; a not-retested entry's reas
   - Severity lookup: `fam.get("defaultSeverityByKind", {}).get(kind, {}).get(rule, fam["defaultSeverity"])`,
     where `kind` is the primary state's kind.
   - `axeRules: {ruleId: family}`, `customRules: {ruleId: family}`, `customCriteria: {ruleId: [criteria]}`.
+  - `axeCriteria: {ruleId: [criteria]}`: the WCAG criteria of each rule in `axeRules`, from axe-core
+    4.13.0's `wcagNNN` tags (publish's coverage table drops a criterion outside `wcag.json`, such as
+    2.1.3 on `scrollable-region-focusable`). `customChecks: {ruleId: check module}`: which check
+    (`target`, `tabwalk`, `dialog` or `status`) produces a custom rule, so `diff` and `publish` can
+    tell whether the check behind a rule completed.
+  - `fullCoverage: {criterion: [ruleIds]}`: a tested criterion counts as fully covered only when
+    every listed rule ran; any other tested criterion is partial. `failureModes: {criterion: text}`:
+    the failure modes the checks cover for each criterion (R20), shown in the report's coverage table.
   - `factDocs: {placeholder: meaning}`: the shared fact vocabulary. `group` computes every fact a
     finding's family lists into `finding.facts`; templates are filled with `str.format(**facts)`.
   - The fact `criterion` is the finding's criterion that comes first in its family's `criteria`.
@@ -740,9 +749,17 @@ withdrawn entry's `reason` is the drop `reasonCode`; a not-retested entry's reas
   `injectMotionOff(page)`, `parkPointer(page)`, `cdpSession(context, page)`, `readBuildHash(page)`.
 - `lib/scope.mjs`: `armLayer(page)` before a state's final hop, then `findLayer(cdp, kind)` →
   `{scope, role, name, xpath}` (the raw file's `layer`). Without arming, only overlay roles count.
-- `lib/occurrence.mjs`: `describeElements(cdp, fnSource, args, {layerXPath})` and
-  `describeBackendNodes(cdp, ids, {layerXPath})` return occurrences (DOM facts plus the accessibility
-  tree's role and name); `BY_XPATH` resolves xpaths; `XPATH_FN` computes an element's xpath.
+- `lib/occurrence.mjs`: `describeElements(cdp, fnSource, args, {layerXPath})` returns occurrences
+  (DOM facts plus the accessibility tree's role and name) for the elements an in-page function
+  returns; `describeAXNodes(cdp, nodes, {layerXPath})` does the same for non-ignored accessibility
+  tree nodes, taking role and name from each node; `describeEvaluated(cdp, expression, objectGroup,
+  {layerXPath})` describes the one element an expression evaluates to and keeps its handle in
+  `objectGroup` until `releaseGroup(cdp, objectGroup)`. `describeElements` and `describeAXNodes` share
+  one object group, so they never run at once on a CDP session. `BY_XPATH` resolves xpaths (SVG
+  included); `XPATH_FN` computes an element's xpath; `findExpr(xpath)` is the Runtime.evaluate
+  expression for the node at an xpath and `backendIdOf(cdp, xpath)` returns its backend id or null.
+- `lib/results.mjs`: `customResult(check, rule, basis, occurrence, evidence)` builds a custom check's
+  result, with `criteria` from `checks.json` `customCriteria` and `messageKey: null`.
 
 ## Check modules (U2, U3) and replay (U4), as the sweep (U5) calls them
 
@@ -756,7 +773,9 @@ Every module in `tools/a11y/checks/` exports `id` (its check-module id) and
   `findLayer`), `env`, and what earlier checks produced: `axe` (the axe module's detail and
   results), `interactive` (the expected-interactive occurrences). The sweep runs them in this
   order: `status` collect first on toast states, then `axe`, `ax`, `interactive`, `target`,
-  `tabwalk`, and last `dialog`, which works in fresh contexts.
+  `tabwalk`, and last `dialog`, which works in fresh contexts. `ax` and `interactive` share one
+  accessibility-tree read and one description per node for each state (`treeOf(ctx)` and
+  `occurrencesOf(ctx, nodes)` in `checks/ax.mjs`).
 - `checks/dialog.mjs` also gets `ctx.reopen()`: opens a fresh context replayed to the parent state
   and returns `{context, page, cdp, tracker}` (the caller closes it), and `ctx.trigger(page)`:
   returns a Playwright Locator for the final hop's trigger.
@@ -773,13 +792,16 @@ Every module in `tools/a11y/checks/` exports `id` (its check-module id) and
 
 - `loadRecipes(ws) -> {stateId: recipe}` (all areas merged) and `chain(recipes, stateId)` → the
   recipes from the root to the state.
-- `async replay(page, ctx, stateId, {recipes, policy, beforeFinalHop, untilParent})` →
+- `async replay(page, ctx, stateId, {recipes, policy, beforeFinalHop, untilParent, layerKind})` →
   `{status: "reached" | "step-failed" | "fingerprint-mismatch", step, message, fingerprint}`.
-  It navigates to the root, runs every hop with `settle` after each, calls `beforeFinalHop(page)`
-  (the sweep arms the layer and the status observer there), runs the final hop, settles,
+  It navigates to the root, runs every hop with `settle` after each, arms the layer
+  (`armLayer`) and calls `beforeFinalHop(page)` (the sweep arms the status observer there on status
+  kinds), runs the final hop, settles,
   injects the motion-off CSS and compares the fingerprint. `untilParent: true` stops at the
   parent state (for the dialog check). `ctx` is `{cdp, tracker, baseUrl}`. It refuses a step the
-  policy forbids before running it (`step-failed` with the reason).
+  policy forbids before running it (`step-failed` with the reason). With `layerKind` equal to the
+  kind the fingerprint used, a reached result also carries `layer` (`findLayer`'s result), which the
+  sweep uses instead of finding the layer again.
 - `async resolveLocator(page, locator) -> Locator` (KTD6 order, name templates; async because the
   fallback order needs a count per strategy, so callers such as `ctx.trigger(page)` await it).
 - `replay` also accepts `kind` and `edges` overrides and returns `mutates`. Step 0 is the root load;
@@ -787,7 +809,8 @@ Every module in `tools/a11y/checks/` exports `id` (its check-module id) and
   edges and kinds the replay needs to refuse hops on no recorded edge. Roots need recipe entries too
   (`recordedBy: "root"`, created by `recipe draft`), because `chain()` starts from the root's recipe.
 - The allowed origins are `policy.allowedOrigins` plus the `--base-url` origin.
-- `async captureFingerprint(page, cdp, kind) -> fingerprint` and `matchFingerprint(a, b) -> {ok, why}`
+- `async captureFingerprint(page, cdp, kind, layer = null) -> fingerprint` (pass `layer` when the
+  caller has just found that kind's layer) and `matchFingerprint(a, b) -> {ok, why}`
   live in `fingerprint.mjs`.
 
 ## Stage modules
@@ -801,7 +824,8 @@ module never requires editing `audit.py` or `status.py`.
   under the module's name. A status function reads files only and never writes, and returns
   `{"pending": true, …}` when the run holds none of its inputs or outputs yet.
 - A Node stage module runs as `node tools/a11y/<module>.mjs [sub] --workspace … --data … --map …
-  --base-url … [--run …] [stage options]` and parses them with `lib/cli.mjs`'s `parse()`. It prints
+  --base-url … [--run …] [stage options]` and parses them with `lib/cli.mjs`'s `parse()`; `reach`,
+  `probe`, `recipe` and `draft` run their `main` through `runMain(import.meta.url, label, main)`. It prints
   a JSON summary on stdout as its last line and exits non-zero on failure. Every Node module answers
   a `status` subcommand by printing one JSON object (it may be `{}`) and doing nothing else;
   `status.py` prints it under the module's name.

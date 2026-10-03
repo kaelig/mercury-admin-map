@@ -9,19 +9,22 @@ applies and whether the state was reached; it cannot overrule a measured value, 
 `not-reproduced-live` drop on a measured family must cite a passing probe taken under the sweep's
 environment. File formats: schemas.md.
 
-The plumbing every `add` primitive shares (read_out, add_file, print_result) lives here too.
+The plumbing every `add` primitive shares (read_out, check_lines, add_file, print_result and the
+field checks) lives here too.
 """
 import argparse
+import collections
 import datetime
 import json
-import os
 import re
 import sys
 
-from lib.canon import ROOT, append_jsonl, dump, read_json, read_jsonl
+import mapdata
+from lib.canon import append_jsonl, dump, read_json, read_jsonl, rel
 
 OUTCOMES = ("confirm", "drop", "rerate", "not-reached", "unverified")
-SEVERITIES = ("high", "medium", "low")
+VERIFIED = ("confirm", "rerate")     # the outcomes that keep a finding in the map
+SEVERITIES = tuple(mapdata.SEVERITY_RANK)
 SOURCES = ("scanner", "hand-found")
 DROP_CODES = ("exception:inline", "exception:equivalent-control", "exception:essential", "exception:ua-control",
               "decorative", "not-reproduced-live", "third-party-frame", "aria-optional-by-apg",
@@ -45,9 +48,21 @@ def text(v):
     return isinstance(v, str) and bool(v.strip())
 
 
-def rel(path):
-    r = os.path.relpath(os.path.abspath(path), ROOT)
-    return path if r.startswith("..") else r
+def missing_fields(line, fields):
+    """A "<field> is required" reason for each field that holds no text."""
+    return [f"{field} is required" for field in fields if not text(line.get(field))]
+
+
+def date_reasons(date):
+    """The reason an optional date is invalid, as a list: empty when it is absent or YYYY-MM-DD."""
+    if date is not None and not (isinstance(date, str) and DATE.match(date)):
+        return ["date must be YYYY-MM-DD"]
+    return []
+
+
+def count_by(lines, field):
+    """{value: lines with it}, sorted by value, for a stage's status."""
+    return dict(sorted(collections.Counter(line.get(field) for line in lines).items()))
 
 
 # ---------------------------------------------------------------------------
@@ -70,11 +85,11 @@ def read_out(path):
     return rows
 
 
-def add_file(path, validate, out_path, skip=None):
-    """Validate every line of `path`; append the valid ones to `out_path`.
+def check_lines(path, validate, skip=None):
+    """Validate every line of `path` without storing anything.
 
     validate(obj) -> (line to store, [reasons]); skip(obj) -> True for a line another primitive owns.
-    Returns (stored lines, rejected entries, skipped count)."""
+    Returns (valid lines, rejected entries, skipped count)."""
     accepted, rejected, skipped = [], [], 0
     for n, raw, obj in read_out(path):
         if isinstance(obj, dict) and skip and skip(obj):
@@ -88,6 +103,12 @@ def add_file(path, validate, out_path, skip=None):
             rejected.append({"line": n, "reasons": reasons, "text": raw})
         else:
             accepted.append(line)
+    return accepted, rejected, skipped
+
+
+def add_file(path, validate, out_path, skip=None):
+    """check_lines(), then append the valid lines to `out_path`. Returns what check_lines returns."""
+    accepted, rejected, skipped = check_lines(path, validate, skip)
     if accepted:
         append_jsonl(out_path, accepted)
     return accepted, rejected, skipped
@@ -212,9 +233,7 @@ def validate(line, findings, allow_unverified=False):
         reasons.append("unverified is written by verify prepare after two failed attempts, not by a verifier")
     if line.get("source") not in SOURCES:
         reasons.append(f"source must be scanner or hand-found (got {line.get('source')!r})")
-    for field in REQUIRED:
-        if not text(line.get(field)):
-            reasons.append(f"{field} is required")
+    reasons += missing_fields(line, REQUIRED)
     before, after = line.get("severityBefore"), line.get("severityAfter")
     for field, v in (("severityBefore", before), ("severityAfter", after)):
         if v not in SEVERITIES:
@@ -271,7 +290,7 @@ def validate(line, findings, allow_unverified=False):
                 reasons.append("fixed-since-capture is for hand-found issues only")
             if code == "not-reproduced-live" and f["family"] in MEASURED:
                 reasons += cited_probe_reasons(line, f)
-        if f["source"] == "hand-found" and outcome in ("confirm", "rerate", "drop") and not probes and not text(cite):
+        if f["source"] == "hand-found" and outcome in VERIFIED + ("drop",) and not probes and not text(cite):
             reasons.append("a hand-found verdict must cite a probe (probes) or an evidence reference (counterEvidence)")
 
     attempt = line.get("attempt", 1)
@@ -279,9 +298,7 @@ def validate(line, findings, allow_unverified=False):
         reasons.append("attempt must be a positive integer")
     if not isinstance(line.get("second", False), bool):
         reasons.append("second must be true or false")
-    date = line.get("date")
-    if date is not None and not (isinstance(date, str) and DATE.match(date)):
-        reasons.append("date must be YYYY-MM-DD")
+    reasons += date_reasons(line.get("date"))
 
     stored = dict(line)
     stored.setdefault("issueId", f.get("issueId") if f else None)
@@ -305,10 +322,7 @@ def status(ws, run_id):
     lines = read_jsonl(ws.file("verdicts.jsonl", run_id)) if run_id else []
     if not lines:
         return {"pending": True}
-    by = {}
-    for v in lines:
-        by[v.get("outcome")] = by.get(v.get("outcome"), 0) + 1
-    return {"lines": len(lines), "keys": len({v.get("key") for v in lines}), "outcomes": dict(sorted(by.items()))}
+    return {"lines": len(lines), "keys": len({v.get("key") for v in lines}), "outcomes": count_by(lines, "outcome")}
 
 
 def cli(ws, sub, argv):

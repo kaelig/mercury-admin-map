@@ -12,17 +12,15 @@
 // its own connection and agent-browser's settings are applied again after it. Prints the fingerprint
 // check: {state, session, status, step, message, url, fingerprint, expected}.
 import { spawnSync } from 'node:child_process';
-import { existsSync } from 'node:fs';
-import { resolve } from 'node:path';
-import { fileURLToPath } from 'node:url';
 import { chromium } from 'playwright';
 import { ENV, cdpSession, injectMotionOff, trackRequests } from './lib/browser.mjs';
-import { parse } from './lib/cli.mjs';
+import { parse, runMain } from './lib/cli.mjs';
 import { allowedOrigins, chain, loadRecipes, replay } from './recipe.mjs';
 
-// One agent-browser command in the session. `quiet` detaches stdio: the command that starts the
-// session's daemon would otherwise keep our stdout pipe open for the daemon's lifetime.
-function ab(session, args, { quiet = false } = {}) {
+// One agent-browser command in the session (probe.mjs runs its commands through this too). `quiet`
+// detaches stdio: the command that starts the session's daemon would otherwise keep our stdout pipe
+// open for the daemon's lifetime.
+export function ab(session, args, { quiet = false } = {}) {
   const r = spawnSync('agent-browser', ['--session', session, ...args],
     quiet ? { stdio: 'ignore', timeout: 60000 } : { encoding: 'utf8', timeout: 60000 });
   if (r.error?.code === 'ENOENT') throw new Error('agent-browser is not on PATH');
@@ -31,8 +29,10 @@ function ab(session, args, { quiet = false } = {}) {
   return quiet ? '' : r.stdout.trim();
 }
 
-function setEnvironment(session) {
-  ab(session, ['set', 'viewport', String(ENV.viewport[0]), String(ENV.viewport[1]), String(ENV.dpr)]);
+// KTD4's viewport and media, through agent-browser's own settings. `quiet` applies to the first
+// command, the one that may start the session's daemon.
+export function setEnvironment(session, { quiet = false } = {}) {
+  ab(session, ['set', 'viewport', String(ENV.viewport[0]), String(ENV.viewport[1]), String(ENV.dpr)], { quiet });
   ab(session, ['set', 'media', ENV.colorScheme, 'reduced-motion']);
 }
 
@@ -46,7 +46,7 @@ async function clearStorage(cdp, origins) {
   }
 }
 
-export async function reach(ws, stateId, session) {
+async function reach(ws, stateId, session) {
   const policy = ws.policy();
   const recipes = loadRecipes(ws);
   const expected = chain(recipes, stateId).at(-1).fingerprint;
@@ -80,8 +80,7 @@ async function main(argv) {
   const { ws, values, positionals } = parse(argv, { session: { type: 'string' } });
   if (positionals[0] === 'status') {
     // reach keeps no files: pending until the run has a states.json, then nothing to count.
-    const runId = ws.runId(false);
-    console.log(JSON.stringify(runId && existsSync(ws.file('states.json', runId)) ? {} : { pending: true }));
+    console.log(JSON.stringify(ws.hasStates(ws.runId(false)) ? {} : { pending: true }));
     return 0;
   }
   if (positionals.length !== 1 || !values.session) {
@@ -94,10 +93,4 @@ async function main(argv) {
   return out.status === 'reached' ? 0 : 1;
 }
 
-if (process.argv[1] && resolve(process.argv[1]) === fileURLToPath(import.meta.url)) {
-  main(process.argv.slice(2)).then((code) => process.exit(code), (e) => {
-    console.error(`reach: ${e.message}`);
-    console.log(JSON.stringify({ error: e.message }));
-    process.exit(1);
-  });
-}
+runMain(import.meta.url, 'reach', main);

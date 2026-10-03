@@ -1,4 +1,4 @@
-"""The a11y-audit skill matches the tooling it drives (U11, KTD26).
+"""The a11y-audit skill matches the tooling it drives (KTD26).
 
 - Every `audit.py <command> [sub]` that SKILL.md names is a stage `audit.py --help` lists.
 - Each prompt in references/ starts with its version id, and every example line in it carries that id.

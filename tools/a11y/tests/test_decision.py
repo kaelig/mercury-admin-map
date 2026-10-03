@@ -1,4 +1,4 @@
-"""U7: `decision add`, the only writer of decisions.jsonl (R17, KTD17, KTD19).
+"""`decision add`, the only writer of decisions.jsonl (R17, KTD17, KTD19).
 
 Run: cd tools/a11y && python3 -m unittest tests.test_decision -v
 

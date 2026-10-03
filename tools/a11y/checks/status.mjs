@@ -18,14 +18,12 @@
 // before run() describes it, run() returns completed: false. present(page) tells the sweep whether
 // the message is still on screen, so it can list a later family that finished without it as
 // incomplete.
-import { join } from 'node:path';
-import { ROOT, readJson } from '../lib/canon.mjs';
 import { describeElements } from '../lib/occurrence.mjs';
+import { customResult } from '../lib/results.mjs';
 import { PAGE_HELPERS } from './tabwalk.mjs';
 
 export const id = 'status';
 
-const CRITERIA = readJson(join(ROOT, 'tools/a11y/checks.json')).customCriteria;
 const STATE = "window[Symbol.for('a11y.status')]";
 
 const COMMON = `
@@ -138,8 +136,6 @@ export function present(page) {
   return page.evaluate(PRESENT);
 }
 
-const result = (rule, occurrence, evidence) => ({ check: id, rule, basis: 'failure', criteria: CRITERIA[rule], messageKey: null, occurrence, evidence });
-
 export async function run(ctx) {
   const { page, cdp } = ctx;
   const layerXPath = ctx.kind === 'toast' && ctx.layer?.scope === 'top' ? ctx.layer.xpath : null;
@@ -150,18 +146,16 @@ export async function run(ctx) {
   const scope = ctx.layer?.scope === 'top' ? ctx.layer.xpath : null;
   const msgOccs = await describeElements(cdp, `() => ${STATE}.out.messages`, null, { layerXPath: scope });
   const fieldOccs = await describeElements(cdp, `() => ${STATE}.out.fields`, null, { layerXPath: scope });
-  const [focus] = await describeElements(cdp, `() => { let a = document.activeElement;
-    while (a && a.shadowRoot && a.shadowRoot.activeElement) a = a.shadowRoot.activeElement;
-    return [a === document.body || a === document.documentElement ? null : a]; }`, null, { layerXPath: scope });
+  const [focus] = await describeElements(cdp, `() => { ${PAGE_HELPERS} return [deepActive()]; }`, null, { layerXPath: scope });
 
   const results = [];
   seen.messages.forEach((m, i) => {
     if (!msgOccs[i] || (m.region && m.region.preexisting) || m.focused) return;
-    results.push(result('status-not-announced', msgOccs[i], { message: m.message, region: m.region, focused: false, focus: focus || 'body' }));
+    results.push(customResult(id, 'status-not-announced', 'failure', msgOccs[i], { message: m.message, region: m.region, focused: false, focus: focus || 'body' }));
   });
   seen.errors.forEach((e, i) => {
     if (e.tied !== false) return;
-    results.push(result('error-not-associated', fieldOccs[i], { message: e.message, describedBy: e.describedBy, errorMessage: e.errorMessage }));
+    results.push(customResult(id, 'error-not-associated', 'failure', fieldOccs[i], { message: e.message, describedBy: e.describedBy, errorMessage: e.errorMessage }));
   });
 
   const first = seen.messages[0] || null;

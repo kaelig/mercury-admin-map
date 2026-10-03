@@ -2,7 +2,7 @@
 """How alike two screenshots look, from 0 to 1 (KTD8): `recipe check` compares a replay with the PNG
 the capture took of the same state.
 
-    python3 tools/a11y/similarity.py captured.png replay.png [--json]
+    python3 tools/a11y/similarity.py captured.png replay.png [replay2.png] [--json]
 
 Both images are cropped to the viewport's 1440:900 shape from the top (a capture may be a full-page
 shot), converted to grayscale and shrunk to 160×100 by area averaging. At that size text is a blur,
@@ -24,6 +24,9 @@ its parent page only by an overlay that leaves most of the page in view (a menu 
 a side drawer 0.91) cannot be told apart by a screenshot, so `recipe check` also requires the top
 layer the state's kind needs (KTD7).
 Open Question: tune THRESHOLD on the first area recorded.
+
+With two replays (`recipe check` takes one in light and one in dark), the score is the closer one's:
+the capture was taken in one of the two themes.
 """
 import json
 import sys
@@ -74,13 +77,19 @@ def score(path_a, path_b):
     return round(score_pixels(prepare(path_a), prepare(path_b)), 4)
 
 
+def best_score(captured, replays):
+    """The highest score() of `captured` against each replay, decoding `captured` once."""
+    ref = prepare(captured)
+    return max(round(score_pixels(ref, prepare(path)), 4) for path in replays)
+
+
 def main(argv=None):
     argv = sys.argv[1:] if argv is None else argv
     paths = [a for a in argv if not a.startswith("--")]
-    if len(paths) != 2:
-        print("usage: similarity.py a.png b.png [--json]", file=sys.stderr)
+    if len(paths) not in (2, 3):
+        print("usage: similarity.py a.png b.png [c.png] [--json]", file=sys.stderr)
         return 2
-    s = score(*paths)
+    s = best_score(paths[0], paths[1:])
     if "--json" in argv:
         print(json.dumps({"score": s, "threshold": THRESHOLD, "pass": s >= THRESHOLD}))
     else:

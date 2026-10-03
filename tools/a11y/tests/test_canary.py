@@ -1,4 +1,4 @@
-"""U7: the canary (KTD20 "Calibration first"; AE3, AE7).
+"""The canary (KTD20 "Calibration first").
 
 Run: cd tools/a11y && python3 -m unittest tests.test_canary -v
 

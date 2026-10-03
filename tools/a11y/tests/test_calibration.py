@@ -1,4 +1,4 @@
-"""U7: `calibration add` and `calibration.due` (R3, KTD25).
+"""`calibration add` and `calibration.due` (R3, KTD25).
 
 Run: cd tools/a11y && python3 -m unittest tests.test_calibration -v
 

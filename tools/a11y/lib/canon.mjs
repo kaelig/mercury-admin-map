@@ -1,6 +1,6 @@
 // Canonical JSON, name templates and hashes. Mirrors lib/canon.py byte for byte (schemas.md).
 import { createHash } from 'node:crypto';
-import { existsSync, mkdirSync, readFileSync, readdirSync, renameSync, writeFileSync, appendFileSync } from 'node:fs';
+import { existsSync, mkdirSync, readFileSync, readdirSync, renameSync, writeFileSync } from 'node:fs';
 import { dirname, join, resolve } from 'node:path';
 import { fileURLToPath } from 'node:url';
 
@@ -39,15 +39,18 @@ function ser(v, indent, level) {
 
 export const canonical = (obj) => ser(obj, false, 0);
 
+// Code-unit order for sort(), as Python compares strings. Not localeCompare: that depends on the locale.
+export const cmp = (a, b) => (a < b ? -1 : a > b ? 1 : 0);
+
 // Items ordered by their canonical bytes: a stable order that does not depend on discovery order.
 export function sortCanonical(items) {
-  return items.map((x) => [canonical(x), x]).sort(([a], [b]) => (a < b ? -1 : a > b ? 1 : 0)).map(([, x]) => x);
+  return items.map((x) => [canonical(x), x]).sort(([a], [b]) => cmp(a, b)).map(([, x]) => x);
 }
 export const dump = (obj) => ser(obj, true, 0) + '\n';
 export const sha = (obj) => createHash('sha256').update(canonical(obj)).digest('hex');
 export const sha1 = (obj) => createHash('sha1').update(canonical(obj)).digest('hex');
 
-export function writeText(path, text) {
+function writeText(path, text) {
   mkdirSync(dirname(resolve(path)), { recursive: true });
   const tmp = `${path}.tmp-${process.pid}`;
   writeFileSync(tmp, text);
@@ -66,14 +69,13 @@ export function readJsonl(path) {
   return readFileSync(path, 'utf8').split('\n').filter((l) => l.trim()).map((l) => JSON.parse(l));
 }
 
-export function appendJsonl(path, objs) {
-  mkdirSync(dirname(resolve(path)), { recursive: true });
-  appendFileSync(path, objs.map((o) => canonical(o) + '\n').join(''));
-}
-
 // ---------------------------------------------------------------------------
 // Name templates (KTD15)
 // ---------------------------------------------------------------------------
+
+// Runs of whitespace (JavaScript's \s) as one space, trimmed: a name or description as read from the
+// accessibility tree. nameTemplate() uses its own class instead (WS below), the one Python's mirror uses.
+export const clean = (s) => String(s ?? '').replace(/\s+/g, ' ').trim();
 
 const WS = /[ \t\n\r\f\v  -   　]+/g;
 const MONTH = '(?:Jan(?:uary)?|Feb(?:ruary)?|Mar(?:ch)?|Apr(?:il)?|May|June?|July?|Aug(?:ust)?' +
@@ -105,17 +107,18 @@ export function nameTemplate(s) {
   return t.replace(COLLAPSE, '$1');
 }
 
-const esc = (s) => s.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
+// `s` as a regex source that matches it literally.
+export const escapeRegExp = (s) => s.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
 
 export function nameTemplateRegex(template) {
-  return new RegExp('^' + template.split(PLACEHOLDER).map(esc).join('.+?') + '$');
+  return new RegExp('^' + template.split(PLACEHOLDER).map(escapeRegExp).join('.+?') + '$');
 }
 
 // ---------------------------------------------------------------------------
 // Hashes shared with Python
 // ---------------------------------------------------------------------------
 
-export function harnessFiles(root = ROOT) {
+function harnessFiles(root = ROOT) {
   const base = join(root, 'tools', 'a11y');
   const out = [];
   for (const sub of ['checks', 'lib']) {
@@ -134,7 +137,10 @@ export function harnessHash(root = ROOT) {
   return createHash('sha256').update(text).digest('hex').slice(0, 16);
 }
 
+// The build id in a cdn.mercury.com asset path.
+export const BUILD_PATH = /cdn\.mercury\.com\/builds\/([A-Za-z0-9]+)\//;
+
 export function buildHash(html) {
-  const m = /cdn\.mercury\.com\/builds\/([A-Za-z0-9]+)\//.exec(html || '');
+  const m = BUILD_PATH.exec(html || '');
   return m ? m[1] : 'unknown';
 }

@@ -1,4 +1,4 @@
-"""U6: registry logic publish uses (KTD16). Pure functions: nothing is written.
+"""The registry logic publish uses (KTD16). Pure functions: nothing is written.
 
 Run: cd tools/a11y && python3 -m unittest tests.test_registry -v
 """

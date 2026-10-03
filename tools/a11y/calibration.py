@@ -23,7 +23,7 @@ import os
 import sys
 
 from lib.canon import dump, read_json, write_json
-from verdict import DATE, rel, text, today
+from verdict import date_reasons, missing_fields, rel, today
 
 KINDS = ("root", "overlay")
 EXPLANATIONS = ("rule-selection", "version")   # "scope" is computed here, never claimed
@@ -33,10 +33,6 @@ BASES = ("violation", "incomplete")
 def sweep_rules(raw):
     return sorted({r["rule"] for r in (raw or {}).get("results") or []
                    if r.get("check") == "axe" and r.get("basis") in BASES})
-
-
-def read_raw(ws, run_id, sid):
-    return read_json(os.path.join(ws.raw_dir(run_id), f"{sid}.json"))
 
 
 def compare(lighthouse, own, parent, overlay, explanations):
@@ -56,12 +52,9 @@ def build(ws, run_id, doc):
     reasons = []
     if not isinstance(doc, dict):
         return None, ["the comparison must be a JSON object"]
-    for field in ("chrome", "lighthouseAxe"):
-        if not text(doc.get(field)):
-            reasons.append(f"{field} is required")
+    reasons += missing_fields(doc, ("chrome", "lighthouseAxe"))
     date = doc.get("date")
-    if date is not None and not (isinstance(date, str) and DATE.match(date)):
-        reasons.append("date must be YYYY-MM-DD")
+    reasons += date_reasons(date)
     explanations = doc.get("explanations") or {}
     if not isinstance(explanations, dict):
         reasons.append("explanations must map axe rule ids to rule-selection or version")
@@ -83,7 +76,7 @@ def build(ws, run_id, doc):
         if not isinstance(failed, list) or not all(isinstance(r, str) for r in failed):
             reasons.append(f"{sid}: lighthouseFailed must list axe rule ids")
             continue
-        raw = read_raw(ws, run_id, sid) if sid in states else None
+        raw = ws.raw(sid, run_id) if sid in states else None
         if not raw or raw.get("status") != "audited":
             reasons.append(f"{sid}: not an audited state of run {run_id}")
             continue
@@ -91,7 +84,7 @@ def build(ws, run_id, doc):
         parent_rules = []
         if kind == "overlay":
             parent = (states.get(sid) or {}).get("parent")
-            praw = read_raw(ws, run_id, parent) if parent else None
+            praw = ws.raw(parent, run_id) if parent else None
             if not praw or praw.get("status") != "audited":
                 reasons.append(f"{sid}: an overlay needs its parent page audited (parent {parent!r})")
                 continue
@@ -102,7 +95,7 @@ def build(ws, run_id, doc):
                     "differences": compare(lighthouse, own, parent_rules, kind == "overlay", explanations)})
     if reasons:
         return None, reasons
-    versions = (read_json(ws.file("run.json", run_id)) or {}).get("versions") or {}
+    versions = ws.run_doc(run_id).get("versions") or {}
     return {"date": date or today(), "chrome": doc["chrome"], "lighthouseAxe": doc["lighthouseAxe"],
             "sweepAxe": axe or versions.get("axe"), "states": out,
             "unexplained": sum(1 for s in out for d in s["differences"] if not d["explained"])}, []
@@ -114,7 +107,7 @@ def build(ws, run_id, doc):
 
 def current_versions(ws, run_id):
     """(axe, chromium) of this run: run.json, else the first raw file's env."""
-    v = (read_json(ws.file("run.json", run_id)) or {}).get("versions") or {}
+    v = ws.run_doc(run_id).get("versions") or {}
     axe, chromium = v.get("axe"), v.get("chromium")
     raw_dir = ws.raw_dir(run_id)
     if (not axe or not chromium) and os.path.isdir(raw_dir):

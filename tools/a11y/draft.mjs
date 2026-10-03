@@ -10,13 +10,10 @@
 // partial match such as "the Blue Bottle Coffee row"), then a label, then visible text. The step
 // stores the element's own name as a name template. Typed values must be policy.fixtureValues.
 // Anything else ("Hover over the chart", "Click a card row") goes to the agent queue.
-import { existsSync } from 'node:fs';
-import { resolve } from 'node:path';
-import { fileURLToPath } from 'node:url';
-import { nameTemplate, nameTemplateRegex } from './lib/canon.mjs';
+import { clean, cmp, escapeRegExp, nameTemplate, nameTemplateRegex } from './lib/canon.mjs';
 import { cdpSession, launch, newContext, trackRequests } from './lib/browser.mjs';
-import { parse } from './lib/cli.mjs';
-import { checkPassed, checkStates, loadRecipes, refreshQueue, replay, runStep } from './recipe.mjs';
+import { parse, runMain } from './lib/cli.mjs';
+import { checkPassed, checkStates, fixtureValues, loadRecipes, refreshQueue, replay, runStep } from './recipe.mjs';
 
 const SPLIT = /\s*,\s*then\s+|\s+then\s+|\s*,\s*and\s+|\s*,\s+|\s+and\s+(?=(?:click|open|choose|pick|select|toggle|tick|check|type|enter|press)\b)/i;
 const CLICK = /^(?:click|open|choose|pick|select|toggle)\s+(.+)$/i;
@@ -49,7 +46,7 @@ function target(raw) {
 
 // An edge label -> {steps} with unresolved targets ({name, role?}), or {error}.
 export function parseLabel(label, policy) {
-  const values = new Set(Object.values(policy?.fixtureValues || {}).map(String));
+  const values = fixtureValues(policy);
   const steps = [];
   for (const clause of String(label || '').trim().split(SPLIT).map((c) => c.trim()).filter(Boolean)) {
     let m;
@@ -79,7 +76,6 @@ export function parseLabel(label, policy) {
   return steps.length ? { steps } : { error: 'empty label' };
 }
 
-const escapeRe = (s) => s.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
 const loose = (name) => new RegExp(nameTemplateRegex(nameTemplate(name)).source, 'i');
 
 // The accessible name Playwright computes for the first element of `loc`.
@@ -100,11 +96,11 @@ async function locate(page, { name, role }, roles) {
   const labelled = page.getByLabel(loose(name)).filter({ visible: true });
   if (await labelled.count()) return { label: nameTemplate(await nameOf(labelled.first())) };
   for (const r of order) {
-    const loc = page.getByRole(r, { name: new RegExp(escapeRe(name), 'i') });
+    const loc = page.getByRole(r, { name: new RegExp(escapeRegExp(name), 'i') });
     if ((await loc.count()) === 1) return { role: r, name: nameTemplate(await nameOf(loc)) };
   }
   const text = page.getByText(loose(name)).filter({ visible: true });
-  if (await text.count()) return { text: nameTemplate((await text.first().innerText()).replace(/\s+/g, ' ').trim()) };
+  if (await text.count()) return { text: nameTemplate(clean(await text.first().innerText())) };
   return null;
 }
 
@@ -159,13 +155,13 @@ async function resolveSteps(browser, ws, recipes, policy, s, parsed) {
 
 const depth = (s) => (s?.path ? s.path.length : 0);
 
-export async function draft(ws, ids = []) {
+async function draft(ws, ids = []) {
   const runId = ws.runId();
   const states = ws.states(runId);
   const policy = ws.policy();
   const map = ws.loadMap();
   const wanted = ids.length ? ids : [...new Set(refreshQueue(ws, runId).map((q) => q.state))];
-  const order = [...wanted].sort((a, b) => depth(states[a]) - depth(states[b]) || (a < b ? -1 : a > b ? 1 : 0));
+  const order = [...wanted].sort((a, b) => depth(states[a]) - depth(states[b]) || cmp(a, b));
   const out = { run: runId, accepted: [], review: [], agentQueue: [] };
   const queue = (state, label, reason) => out.agentQueue.push({ state, label, reason });
   const browser = await launch();
@@ -215,8 +211,7 @@ export async function draft(ws, ids = []) {
 }
 
 export function status(ws) {
-  const runId = ws.runId(false);
-  if (!runId || !existsSync(ws.file('states.json', runId))) return { pending: true };
+  if (!ws.hasStates(ws.runId(false))) return { pending: true };
   const counts = { drafted: 0, accepted: 0, review: 0, rejected: 0, draft: 0 };
   for (const r of Object.values(loadRecipes(ws, { map: { areas: [] } }))) {
     if (r.recordedBy !== 'draft') continue;
@@ -236,10 +231,4 @@ async function main(argv) {
   return 0;
 }
 
-if (process.argv[1] && resolve(process.argv[1]) === fileURLToPath(import.meta.url)) {
-  main(process.argv.slice(2)).then((code) => process.exit(code), (e) => {
-    console.error(`recipe draft: ${e.message}`);
-    console.log(JSON.stringify({ error: e.message }));
-    process.exit(1);
-  });
-}
+runMain(import.meta.url, 'recipe draft', main);

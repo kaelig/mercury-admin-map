@@ -18,26 +18,18 @@ null, which sends the record to the advisory list. File formats: schemas.md.
 """
 import argparse
 import math
-import os
 import sys
 
 import group
 import signature
-from lib.canon import append_jsonl, canonical, dump, read_json, read_jsonl, write_json, write_text
-from verdict import add_file, print_result, text
-from verify import batch_files, batch_name, next_number
+from lib.canon import append_jsonl, canonical, dump, load_checks, load_wcag, read_jsonl, write_json, write_text
+from signature import RECORD_FAMILIES
+from verdict import add_file, missing_fields, print_result, text
+from verify import batch_files, batch_name, batch_path, in_flight, next_number, out_names
 
-HERE = os.path.dirname(os.path.abspath(__file__))
 BATCH_SIZE = 150    # KTD20: about 150 records per judge
-FAMILIES = ("name", "role-state", "structure")
 VERDICTS = ("ok", "flag")
 REQUIRED = ("reason", "batch", "model", "prompt")
-
-
-def check_data():
-    checks = read_json(os.path.join(HERE, "checks.json"))
-    wcag = {c["number"] for c in read_json(os.path.join(HERE, "wcag.json"))["criteria"]}
-    return checks, wcag
 
 
 # ---------------------------------------------------------------------------
@@ -69,13 +61,15 @@ def published_sigs(ws, sigs, checks, wcag):
     live unless tombstoned as fixed or withdrawn (an attached id is still published, under the
     hand-found issue). The criterion is the published issue's first wcag entry, else the family's
     primary criterion."""
-    registry = read_json(os.path.join(ws.published_dir, "registry.json")) or {}
+    registry = ws.published("registry.json") or {}
     keys, tombstones = registry.get("keys") or {}, registry.get("tombstones") or {}
-    issues = read_json(os.path.join(ws.published_dir, "issues.json")) or {}
+    issues = ws.published("issues.json") or {}
     wcag_of = {i["id"]: i.get("wcag") or [] for i in issues.get("generated", [])}
+    if not any(":announced-as:" in k for k in keys):
+        return {}       # the registry holds no announced-as key: nothing to look up
     out = {}
     for sig in sigs:
-        for family in FAMILIES:
+        for family in RECORD_FAMILIES:
             iid = keys.get(signature.record_finding_key(family, sig))
             if not iid or (tombstones.get(iid) or {}).get("reason") in ("fixed", "withdrawn"):
                 continue
@@ -112,20 +106,14 @@ def validate(line, sigs, wcag):
         elif line["criterion"] is not None:
             if line["criterion"] not in wcag:
                 reasons.append(f"criterion {line['criterion']!r} is not a WCAG 2.2 A or AA criterion in wcag.json")
-            if line.get("family") not in FAMILIES:
-                reasons.append(f"a flag with a criterion names a family, one of {', '.join(FAMILIES)} "
+            if line.get("family") not in RECORD_FAMILIES:
+                reasons.append(f"a flag with a criterion names a family, one of {', '.join(RECORD_FAMILIES)} "
                                f"(got {line.get('family')!r})")
-    for field in REQUIRED:
-        if not text(line.get(field)):
-            reasons.append(f"{field} is required")
+    reasons += missing_fields(line, REQUIRED)
     stored = dict(line)
     stored.setdefault("criterion", None)
     stored.setdefault("family", None)
     return stored, reasons
-
-
-def latest(ws, run_id):
-    return {j["sig"]: j for j in read_jsonl(ws.file("judgments.jsonl", run_id))}
 
 
 # ---------------------------------------------------------------------------
@@ -142,7 +130,7 @@ def chunks(items, size):
 
 
 def prepare(ws, run_id):
-    checks, wcag = check_data()
+    checks, wcag = load_checks(), set(load_wcag())
     states = ws.states(run_id)
     raws, _ = group.audited_raws(ws, run_id, states)
     lines = collect(raws, states)
@@ -152,7 +140,7 @@ def prepare(ws, run_id):
     ordered = [lines[s] for s in sorted(lines)]
     write_text(ws.file("records.jsonl", run_id), "".join(canonical(x) + "\n" for x in ordered))
 
-    judged = latest(ws, run_id)
+    judged = group.latest_judgments(ws, run_id)
     carry = []
     for sig in sorted(pub):
         if sig not in judged:
@@ -165,8 +153,8 @@ def prepare(ws, run_id):
 
     run_dir = ws.run_dir(run_id)
     files = batch_files(run_dir, "records")
-    in_flight = {r["sig"] for _, _, b, returned in files if not returned for r in (b or {}).get("records", [])}
-    todo = [x for x in ordered if x["sig"] not in judged and x["sig"] not in pub and x["sig"] not in in_flight]
+    out_sigs = in_flight(files, "records", "sig")
+    todo = [x for x in ordered if x["sig"] not in judged and x["sig"] not in pub and x["sig"] not in out_sigs]
     todo.sort(key=lambda x: (x["sample"], x["template"] or "", x["sig"]))
     n, written = next_number(files), []
     for chunk in chunks(todo, BATCH_SIZE):
@@ -175,10 +163,10 @@ def prepare(ws, run_id):
         entries = [{"sig": x["sig"], "template": x["template"], "role": x["role"], "states": x["states"],
                     "description": x["description"], "sample": x["sample"], "screens": len(x["states_seen"]),
                     "occurrence": x["occurrence"]} for x in chunk]
-        write_json(os.path.join(run_dir, "batches", f"{name}.json"), {"batch": name, "run": run_id, "records": entries})
+        write_json(batch_path(run_dir, name), {"batch": name, "run": run_id, "records": entries})
         written.append(name)
     return {"run": run_id, "records": len(ordered), "published": len(pub), "carried": [x["sig"] for x in carry],
-            "batches": written, "inFlight": [name for name, _, _, returned in files if not returned],
+            "batches": written, "inFlight": out_names(files),
             "awaiting": sum(1 for x in ordered if x["sig"] not in judged and x["sig"] not in pub)}
 
 
@@ -190,7 +178,7 @@ def status(ws, run_id):
     lines = read_jsonl(ws.file("records.jsonl", run_id)) if run_id else []
     if not lines:
         return {"pending": True}
-    judged = latest(ws, run_id)
+    judged = group.latest_judgments(ws, run_id)
     sigs = {x["sig"] for x in lines}
     flags = [j for s, j in judged.items() if s in sigs and j.get("verdict") == "flag"]
     files = batch_files(ws.run_dir(run_id), "records")
@@ -201,7 +189,7 @@ def status(ws, run_id):
             "advisory": sum(1 for j in flags if j.get("criterion") is None),
             "awaiting": sum(1 for x in lines if x["sig"] not in judged and not x.get("published")),
             "batches": len(files),
-            "inFlight": [name for name, _, _, returned in files if not returned]}
+            "inFlight": out_names(files)}
 
 
 def cli(ws, sub, argv):
@@ -216,7 +204,7 @@ def cli(ws, sub, argv):
                   file=sys.stderr)
             return 2
         sigs = {x["sig"] for x in lines}
-        _, wcag = check_data()
+        wcag = set(load_wcag())
         out_path = ws.file("judgments.jsonl", run_id)
         accepted, rejected, skipped = add_file(args.file, lambda obj: validate(obj, sigs, wcag), out_path)
         return print_result(args.file, out_path, accepted, rejected, skipped)

@@ -15,16 +15,14 @@
 // Every failure carries the whole focus trace. `ctx.reopen()` gives the fresh context, which this
 // check closes; `ctx.trigger(page)` gives the trigger's Locator; `ctx.finalHop` (the recipe's final
 // step, e.g. {"hover": {...}}) says whether the state is reached by hover.
-import { join } from 'node:path';
 import { settle } from '../lib/browser.mjs';
-import { ROOT, readJson } from '../lib/canon.mjs';
-import { BY_XPATH, describeElements } from '../lib/occurrence.mjs';
+import { BY_XPATH, describeElements, findExpr } from '../lib/occurrence.mjs';
+import { customResult } from '../lib/results.mjs';
 import { armLayer, findLayer } from '../lib/scope.mjs';
-import { PAGE_HELPERS, settleFocus } from './tabwalk.mjs';
+import { PAGE_HELPERS, ref, settleFocus } from './tabwalk.mjs';
 
 export const id = 'dialog';
 
-const CRITERIA = readJson(join(ROOT, 'tools/a11y/checks.json')).customCriteria;
 const KEY = 'a11y.dialog';
 const STATE = `window[Symbol.for('${KEY}')]`;
 
@@ -67,9 +65,7 @@ const FOCUS_CLOSE = `(() => {
   c.focus();
   return true;
 })()`;
-const SET_LAYER = (xpath) => `(${STATE}.layer = document.evaluate(${JSON.stringify(xpath)}, document, null, 9, null).singleNodeValue, true)`;
-
-const result = (rule, occurrence, evidence) => ({ check: id, rule, basis: 'failure', criteria: CRITERIA[rule], messageKey: null, occurrence, evidence });
+const SET_LAYER = (xpath) => `(${STATE}.layer = ${findExpr(xpath)}, true)`;
 
 export async function run(ctx) {
   const verb = ctx.finalHop && 'hover' in ctx.finalHop ? 'hover' : 'click';
@@ -102,7 +98,7 @@ async function check(ctx, { page, cdp, tracker }, verb) {
       last.count = (last.count || 1) + 1;
       return f;
     }
-    trace.push({ key, where: f.where, focus: f.body ? 'body' : { tag: f.tag, label: f.label, xpath: f.xpath } });
+    trace.push({ key, where: f.where, focus: ref(f) });
     return f;
   };
   const press = async (key) => {
@@ -112,7 +108,7 @@ async function check(ctx, { page, cdp, tracker }, verb) {
   // The focused element as an occurrence (call right after where()), or "body".
   const focusOf = async (f) => (f.body ? 'body'
     : (await describeElements(cdp, `() => [${STATE}.el]`, null, { layerXPath }))[0]);
-  const fail = (rule, occurrence, evidence) => results.push(result(rule, occurrence, { ...evidence, trace }));
+  const fail = (rule, occurrence, evidence) => results.push(customResult(id, rule, 'failure', occurrence, { ...evidence, trace }));
   const finish = (opened) => {
     const stops = new Set(trace.filter((s) => s.key === 'Tab' && s.focus !== 'body').map((s) => s.focus.xpath)).size;
     for (const r of results) r.evidence.stops = stops;
@@ -206,17 +202,19 @@ async function check(ctx, { page, cdp, tracker }, verb) {
   };
 
   if (kind === 'menu') {
+    // Open the closed menu again the way it first opened, and make the layer it opens the one WHERE tests.
+    const reopenMenu = async () => {
+      if ((await where()).where !== 'trigger') await page.evaluate(`${STATE}.trigger.focus()`);
+      if (opened !== 'focus') await press(opened === 'enter' ? 'Enter' : 'Space');
+      await settleFocus(page);
+      const again = await findLayer(cdp, kind);
+      if (again.scope === 'top') await page.evaluate(SET_LAYER(again.xpath));
+    };
     const onFirst = await page.evaluate(ON_FIRST_ITEM);
     await closeAndReturn({ control: false });
     if (!onFirst) {
       // Reopen it the same way, then press Tab once: does focus reach the menu at all?
-      if (await page.evaluate(CLOSED)) {
-        if ((await where()).where !== 'trigger') await page.evaluate(`${STATE}.trigger.focus()`);
-        if (opened !== 'focus') await press(opened === 'enter' ? 'Enter' : 'Space');
-        await settleFocus(page);
-        const again = await findLayer(cdp, kind);
-        if (again.scope === 'top') await page.evaluate(SET_LAYER(again.xpath));
-      }
+      if (await page.evaluate(CLOSED)) await reopenMenu();
       const next = await press('Tab');
       fail('menu-focus-not-moved', overlay, { focus: focusAtOpen, nextTabInside: next.where === 'inside' });
     }
@@ -231,7 +229,8 @@ async function check(ctx, { page, cdp, tracker }, verb) {
   } else {
     let reachedLayer = atOpen.where === 'inside';
     if (!reachedLayer) {
-      // AE4: record whether Tab reaches the layer's controls at all.
+      // Record whether Tab reaches the layer's controls at all: the verifier rates the finding high
+      // when it never does.
       const passed = new Set(atOpen.body ? [] : [atOpen.id]);
       for (let i = 0; i < limit; i++) {
         const next = await press('Tab');

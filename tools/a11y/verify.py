@@ -23,10 +23,12 @@ import os
 import re
 import sys
 
+import group
+import signature
 import verdict
-from lib.canon import append_jsonl, dump, read_json, read_jsonl, sha, write_json
+from lib.canon import append_jsonl, dump, latest_by, load_checks, read_json, read_jsonl, write_json
+from status import pending_proposals
 
-HERE = os.path.dirname(os.path.abspath(__file__))
 BATCH_MAX = 10      # KTD20: about 10 findings per verifier subagent
 ATTEMPTS = 2        # KTD20: then the finding is unverified
 FAIL, PASS = "fail", "pass"
@@ -45,6 +47,10 @@ def batch_name(prefix, n):
     return f"{prefix}-{n:03d}"
 
 
+def batch_path(run_dir, name):
+    return os.path.join(run_dir, "batches", f"{name}.json")
+
+
 def batch_files(run_dir, prefix):
     """[(name, path, doc, returned)] for batches/<prefix>-NNN.json in number order. A batch is
     returned once its <name>.out.jsonl exists."""
@@ -55,13 +61,23 @@ def batch_files(run_dir, prefix):
     for f in os.listdir(d):
         m = BATCH_FILE.match(f)
         if m and m.group("prefix") == prefix:
-            path = os.path.join(d, f)
-            found.append((int(m.group("n")), f[:-5], path))
+            name = f[:-5]
+            found.append((int(m.group("n")), name, batch_path(run_dir, name)))
     return [(name, path, read_json(path), os.path.exists(path[:-5] + ".out.jsonl")) for _, name, path in sorted(found)]
 
 
 def next_number(files):
     return max((int(name.rsplit("-", 1)[1]) for name, _, _, _ in files), default=0) + 1
+
+
+def out_names(files):
+    """The names of the batches not returned yet, in number order."""
+    return [name for name, _, _, returned in files if not returned]
+
+
+def in_flight(files, list_field, id_field):
+    """The id_field of every entry in list_field of the batches not returned yet."""
+    return {e[id_field] for _, _, b, returned in files if not returned for e in (b or {}).get(list_field, [])}
 
 
 def reach_of(ws, run_id):
@@ -77,7 +93,7 @@ def reach_of(ws, run_id):
 def area_of(f, states):
     p = f.get("primary")
     if p:
-        return (states.get(p) or {}).get("area") or p.split(".")[0]
+        return group.area_of(p, states)
     return (f.get("issueId") or f["key"].split(":", 1)[-1]).split(".")[0]
 
 
@@ -103,9 +119,23 @@ def sampled_evidence(raw_dir, f, raws):
     return out
 
 
-def concerns(f, item):
-    """True when a proposal or attachment is about this finding, from either side."""
-    return item["finding"] == f["key"] or (f["source"] == "hand-found" and item["handFound"] == f.get("issueId"))
+def by_side(items):
+    """({finding key: [positions]}, {hand-found id: [positions]}) of proposals or attachments."""
+    by_finding, by_hand = collections.defaultdict(list), collections.defaultdict(list)
+    for i, item in enumerate(items):
+        by_finding[item["finding"]].append(i)
+        by_hand[item["handFound"]].append(i)
+    return by_finding, by_hand
+
+
+def concerning(f, items, sides):
+    """The proposals or attachments about this finding, from either side, in their original order.
+    sides is by_side(items)."""
+    by_finding, by_hand = sides
+    at = set(by_finding.get(f["key"], []))
+    if f["source"] == "hand-found":
+        at.update(by_hand.get(f.get("issueId"), []))
+    return [items[i] for i in sorted(at)]
 
 
 def entry(f, ctx, attempt):
@@ -119,9 +149,10 @@ def entry(f, ctx, attempt):
         "states": f.get("sample") or [], "primary": f.get("primary"), "screens": len(f.get("states") or []),
         "evidenceHash": f.get("evidenceHash"),
         "evidence": sampled_evidence(ctx["raw_dir"], f, ctx["raws"]),
-        "proposals": [dict(p) for p in ctx["proposals"] if concerns(f, p)],
-        "attachments": [{"id": sha([a["finding"], a["handFound"]]), "finding": a["finding"], "handFound": a["handFound"]}
-                        for a in ctx["attachments"] if concerns(f, a)],
+        "proposals": [dict(p) for p in concerning(f, ctx["proposals"], ctx["proposal_sides"])],
+        "attachments": [{"id": signature.proposal_id(a["finding"], a["handFound"]), "finding": a["finding"],
+                         "handFound": a["handFound"]}
+                        for a in concerning(f, ctx["attachments"], ctx["attachment_sides"])],
         "attempt": attempt,
     }
 
@@ -133,9 +164,11 @@ def batch_doc(name, run_id, area, reach, entries):
 
 
 def context(ws, run_id, doc):
-    registry = read_json(os.path.join(ws.published_dir, "registry.json")) or {}
-    return {"checks": read_json(os.path.join(HERE, "checks.json")), "raw_dir": ws.raw_dir(run_id), "raws": {},
-            "proposals": doc.get("proposals", []), "attachments": registry.get("attachments", [])}
+    proposals = doc.get("proposals", [])
+    attachments = (ws.published("registry.json") or {}).get("attachments", [])
+    return {"checks": load_checks(), "raw_dir": ws.raw_dir(run_id), "raws": {},
+            "proposals": proposals, "proposal_sides": by_side(proposals),
+            "attachments": attachments, "attachment_sides": by_side(attachments)}
 
 
 # ---------------------------------------------------------------------------
@@ -143,7 +176,7 @@ def context(ws, run_id, doc):
 # ---------------------------------------------------------------------------
 
 def build_of(ws, run_id):
-    builds = (read_json(ws.file("run.json", run_id)) or {}).get("builds") or []
+    builds = ws.run_doc(run_id).get("builds") or []
     return builds[-1] if builds else "unknown"
 
 
@@ -165,14 +198,14 @@ def prepare(ws, run_id):
     run_dir = ws.run_dir(run_id)
     has_verdict = {v["key"] for v in read_jsonl(ws.file("verdicts.jsonl", run_id))}
     files = batch_files(run_dir, "verify")
-    out_now = [name for name, _, _, returned in files if not returned]
-    in_flight = {e["key"] for _, _, b, returned in files if not returned for e in (b or {}).get("findings", [])}
+    out_now = out_names(files)
+    out_keys = in_flight(files, "findings", "key")
     tried = collections.defaultdict(list)
     for name, _, b, returned in files:
         if returned:
             for e in (b or {}).get("findings", []):
                 tried[e["key"]].append(name)
-    pending = [f for f in findings if f["key"] not in has_verdict and f["key"] not in in_flight]
+    pending = [f for f in findings if f["key"] not in has_verdict and f["key"] not in out_keys]
 
     give_up, lines = [f for f in pending if len(tried[f["key"]]) >= ATTEMPTS], []
     build = build_of(ws, run_id)
@@ -197,7 +230,7 @@ def prepare(ws, run_id):
             n += 1
             entries = [entry(f, ctx, len(tried[f["key"]]) + 1) for f in fs[i:i + BATCH_MAX]]
             b = batch_doc(name, run_id, area, reach, entries)
-            write_json(os.path.join(run_dir, "batches", f"{name}.json"), b)
+            write_json(batch_path(run_dir, name), b)
             written.append({"batch": name, "area": area, "primaries": b["primaries"], "findings": len(entries)})
     canary = canary_state(ws, run_id)
     return {"run": run_id, "batches": written, "inFlight": out_now, "unverified": [f["key"] for f in give_up],
@@ -223,11 +256,15 @@ def canary_state(ws, run_id):
                         f"({', '.join(wrong)}). Fix the verifier prompt and rerun the canary before any wave.")
 
 
+def status_of(outcome):
+    """fail for a verified outcome, pass for a drop, else None."""
+    return FAIL if outcome in verdict.VERIFIED else PASS if outcome == "drop" else None
+
+
 def prior_status(f, registry, overlays):
     """The finding's status in the published snapshot: fail (published), pass (withdrawn or dropped), or None."""
     if f["source"] == "hand-found":
-        v = ((overlays.get(f.get("issueId")) or {}).get("audit") or {}).get("verdict")
-        return FAIL if v in ("confirm", "rerate") else PASS if v == "drop" else None
+        return status_of(((overlays.get(f.get("issueId")) or {}).get("audit") or {}).get("verdict"))
     iid = (registry.get("keys") or {}).get(f["key"])
     if not iid:
         return None
@@ -237,28 +274,21 @@ def prior_status(f, registry, overlays):
     return PASS if t.get("reason") == "withdrawn" else None
 
 
-def now_status(v):
-    return FAIL if v["outcome"] in ("confirm", "rerate") else PASS if v["outcome"] == "drop" else None
-
-
 def second_opinion_queue(ws, findings, verdicts):
-    last, seconds = {}, set()
-    for v in verdicts:
-        last[v["key"]] = v
-        if v.get("second"):
-            seconds.add(v["key"])
+    last = latest_by(verdicts, "key")
+    seconds = {v["key"] for v in verdicts if v.get("second")}
     baseline = (ws.published_meta() or {}).get("run")
     prev = read_json(os.path.join(ws.runs_dir, baseline, "findings.json")) if baseline else None
     prev_hash = {f["key"]: f.get("evidenceHash") for f in (prev or {}).get("findings", [])}
-    registry = read_json(os.path.join(ws.published_dir, "registry.json")) or {}
-    overlays = (read_json(os.path.join(ws.published_dir, "issues.json")) or {}).get("overlays") or {}
+    registry = ws.published("registry.json") or {}
+    overlays = (ws.published("issues.json") or {}).get("overlays") or {}
     queue = []
     for f in findings:
         v = last.get(f["key"])
         if v is None or f["key"] in seconds:
             continue
         why = []
-        before, after = prior_status(f, registry, overlays), now_status(v)
+        before, after = prior_status(f, registry, overlays), status_of(v["outcome"])
         if before and after and before != after and prev_hash.get(f["key"]) == f.get("evidenceHash"):
             why.append("flip")
         if v["outcome"] == "drop" and f["severityDefault"] == "high":
@@ -275,28 +305,26 @@ def status(ws, run_id):
         return {"pending": True}
     findings = doc.get("findings", [])
     verdicts = read_jsonl(ws.file("verdicts.jsonl", run_id))
-    last = {v["key"]: v for v in verdicts}
+    last = latest_by(verdicts, "key")
     files = batch_files(ws.run_dir(run_id), "verify")
-    in_flight = {e["key"] for _, _, b, returned in files if not returned for e in (b or {}).get("findings", [])}
+    out_keys = in_flight(files, "findings", "key")
     counts = {"total": len(findings), "verdicted": 0, "notReached": 0, "unverified": 0, "pending": 0, "inFlight": 0}
     outcomes = collections.Counter()
     for f in findings:
         v = last.get(f["key"])
         if v is None:
             counts["pending"] += 1
-            counts["inFlight"] += f["key"] in in_flight
+            counts["inFlight"] += f["key"] in out_keys
             continue
         outcomes[v["outcome"]] += 1
         slot = {"not-reached": "notReached", "unverified": "unverified"}.get(v["outcome"], "verdicted")
         counts[slot] += 1
-    decided = {d.get("proposal") for d in read_jsonl(ws.file("decisions.jsonl", run_id))}
-    proposals = [p["id"] for p in doc.get("proposals", [])]
+    total, pending = len(doc.get("proposals", [])), pending_proposals(ws, run_id)
     canary = canary_state(ws, run_id)
     return {"findings": counts,
             "outcomes": dict(sorted(outcomes.items())),
-            "proposals": {"total": len(proposals), "decided": sum(1 for p in proposals if p in decided),
-                          "pending": [p for p in proposals if p not in decided]},
-            "batches": {"written": len(files), "inFlight": [name for name, _, _, returned in files if not returned]},
+            "proposals": {"total": total, "decided": total - len(pending), "pending": pending},
+            "batches": {"written": len(files), "inFlight": out_names(files)},
             "canary": canary,
             "holdWaves": canary["status"] != "passed",
             "secondOpinion": second_opinion_queue(ws, findings, verdicts)}

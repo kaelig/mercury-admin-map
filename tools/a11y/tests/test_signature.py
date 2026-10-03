@@ -1,4 +1,4 @@
-"""U6: shared-element signatures (KTD15).
+"""Shared-element signatures (KTD15).
 
 Run: cd tools/a11y && python3 -m unittest tests.test_signature -v
 """

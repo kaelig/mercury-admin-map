@@ -10,17 +10,18 @@
 // matches. Read from Chrome's accessibility tree: a hidden element (display: none, visibility:
 // hidden, aria-hidden) is not in it, so "visible" means rendered and exposed. File format: schemas.md.
 import { nameTemplate } from './lib/canon.mjs';
+import { backendIdOf } from './lib/occurrence.mjs';
 import { findLayer } from './lib/scope.mjs';
 
-export const MIN_JACCARD = 0.6;
+const MIN_JACCARD = 0.6;
 
-export const CONTROL_ROLES = new Set(['button', 'link', 'checkbox', 'radio', 'switch', 'tab', 'menuitem',
+const CONTROL_ROLES = new Set(['button', 'link', 'checkbox', 'radio', 'switch', 'tab', 'menuitem',
   'menuitemcheckbox', 'menuitemradio', 'option', 'textbox', 'searchbox', 'combobox', 'listbox', 'slider',
   'spinbutton', 'treeitem']);
 
 const STATUS_ROLES = new Set(['status', 'alert', 'log']);
 
-export function fingerprintPath(url) {
+function fingerprintPath(url) {
   let path;
   try {
     path = new URL(url).pathname;
@@ -36,21 +37,6 @@ function structureOf(kind, top) {
   if (top.role === 'menu' || top.role === 'listbox') return top.role;
   if (STATUS_ROLES.has(top.role) || kind === 'toast') return 'status';
   return 'dialog';
-}
-
-// The backend DOM node id of the element at `xpath`, or null.
-async function backendIdOf(cdp, xpath) {
-  const { result } = await cdp.send('Runtime.evaluate', {
-    expression: `document.evaluate(${JSON.stringify(xpath)}, document, null, 9, null).singleNodeValue`,
-    objectGroup: 'a11y-fingerprint',
-  });
-  try {
-    if (result.subtype !== 'node') return null;
-    const { node } = await cdp.send('DOM.describeNode', { objectId: result.objectId });
-    return node.backendNodeId;
-  } finally {
-    await cdp.send('Runtime.releaseObjectGroup', { objectGroup: 'a11y-fingerprint' }).catch(() => {});
-  }
 }
 
 // Accessibility nodes under `root` (inclusive), in tree order.
@@ -72,9 +58,10 @@ const roleOf = (n) => n.role?.value ?? '';
 
 // Capture the fingerprint of the state on screen. `kind` is the map node's kind (page, modal,
 // drawer, menu, toast, ...). Arm the layer (lib/scope.mjs armLayer) before the final hop so a layer
-// with no overlay role, like the demo's <aside> drawer, is found.
-export async function captureFingerprint(page, cdp, kind) {
-  const layer = await findLayer(cdp, kind);
+// with no overlay role, like the demo's <aside> drawer, is found. Pass `layer` when the caller has
+// just found the layer for `kind` itself.
+export async function captureFingerprint(page, cdp, kind, layer = null) {
+  layer ??= await findLayer(cdp, kind);
   const { nodes } = await cdp.send('Accessibility.getFullAXTree');
   let scope = subtree(nodes, nodes.find((n) => !n.parentId) || nodes[0]);
   if (layer.scope === 'top' && layer.xpath) {

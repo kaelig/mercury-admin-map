@@ -115,9 +115,13 @@ def merge_snapshot(areas, snapshot_dir):
             issue["severity"] = ov["severity"]
         if ov.get("evidenceAppend"):
             issue["evidence"] = f"{issue.get('evidence', '').rstrip()} {ov['evidenceAppend']}".strip()
-        for n in known_screens(iid, ov.get("addNodeIds"), known):
-            if n not in issue["nodeIds"]:
-                issue["nodeIds"].append(n)
+        added = known_screens(iid, ov.get("addNodeIds"), known)
+        if added:
+            on_issue = set(issue["nodeIds"])
+            for n in added:
+                if n not in on_issue:
+                    issue["nodeIds"].append(n)
+                    on_issue.add(n)
         for k in OVERLAY_FIELDS:
             if ov.get(k) is not None:
                 issue[k] = ov[k]

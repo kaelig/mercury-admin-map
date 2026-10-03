@@ -1,9 +1,9 @@
 // The expected-interactive set (KTD13): the accessibility tree's interactive roles in scope, plus
 // the topmost `cursor: pointer` elements that are not focusable and have no focusable ancestor or
 // descendant. It feeds the Tab walk and target size; it reports nothing by itself.
-import { describeBackendNodes, describeElements } from '../lib/occurrence.mjs';
+import { describeElements } from '../lib/occurrence.mjs';
 import { sortCanonical } from '../lib/canon.mjs';
-import { INTERACTIVE, axInScope, inDocument } from './ax.mjs';
+import { INTERACTIVE, inDocument, occurrencesOf, treeOf } from './ax.mjs';
 
 export const id = 'interactive';
 
@@ -37,9 +37,10 @@ const propOf = (node, name) => (node.properties || []).some((p) => p.name === na
 export async function run(ctx) {
   const { cdp, layer } = ctx;
   const layerXPath = layer?.xpath ?? null;
-  const { nodes } = await axInScope(cdp, layer);
+  const { nodes } = await treeOf(ctx);
   const fromTree = nodes.filter((n) => INTERACTIVE.has(n.role?.value) && n.backendDOMNodeId);
-  const treeOccurrences = await describeBackendNodes(cdp, fromTree.map((n) => n.backendDOMNodeId), { layerXPath });
+  // The ax check, just before this one, has described these nodes already.
+  const treeOccurrences = await occurrencesOf(ctx, fromTree);
   const pointerOccurrences = await describeElements(cdp, POINTER, layerXPath, { layerXPath });
 
   const seen = new Set();

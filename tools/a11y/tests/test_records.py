@@ -1,4 +1,4 @@
-"""U7: `records prepare` and `judgment add` (R12; KTD18, KTD20).
+"""`records prepare` and `judgment add` (R12; KTD18, KTD20).
 
 Run: cd tools/a11y && python3 -m unittest tests.test_records -v
 

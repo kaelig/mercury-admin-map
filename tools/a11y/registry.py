@@ -1,7 +1,8 @@
 """Issue ids for findings (KTD16): pure functions `publish` uses on published/registry.json.
 
 Nothing here reads or writes a file. Every function takes a registry (schemas.md, registry.json)
-and returns a new one; the input is never changed.
+and returns a new one; the input is never changed. Each change also has an `_in_place` twin that
+changes the registry it is given, for a caller that applies many changes to one `copied()` registry.
 
 - An id is minted once, as `<area of the primary state>.i-a11y-<slug>`, in the [a-z0-9.-] alphabet
   that ticket URLs use. It never matches an id the registry has ever held, live or tombstoned, nor a
@@ -24,7 +25,8 @@ def empty():
     return {"keys": {}, "held": [], "tombstones": {}, "attachments": []}
 
 
-def _copy(reg):
+def copied(reg):
+    """A deep copy of reg with every field present."""
     out = empty()
     out.update(copy.deepcopy(reg or {}))
     return out
@@ -46,9 +48,19 @@ def slug(family, element):
 
 def mint(reg, key, area, family, element, hand_found_ids=()):
     """(registry, id): the key's existing id, or a new one that clashes with nothing ever held."""
-    reg = _copy(reg)
+    reg = copied(reg)
     if key in reg["keys"]:
         return reg, reg["keys"][key]
+    iid = mint_in_place(reg, key, area, family, element, hand_found_ids)
+    reg["held"] = sorted(set(reg["held"]))
+    return reg, iid
+
+
+def mint_in_place(reg, key, area, family, element, hand_found_ids=()):
+    """mint() on reg itself. A new id is appended to held: the caller sorts held, sorted(set(held)), once
+    it has minted every id."""
+    if key in reg["keys"]:
+        return reg["keys"][key]
     base = f"{_words(area) or 'map'}.i-a11y-{slug(family, element)}"
     taken = set(reg["held"]) | set(reg["tombstones"]) | set(reg["keys"].values()) | set(hand_found_ids)
     iid, n = base, 1
@@ -56,39 +68,56 @@ def mint(reg, key, area, family, element, hand_found_ids=()):
         n += 1
         iid = f"{base}-{n}"
     reg["keys"][key] = iid
-    reg["held"] = sorted(set(reg["held"]) | {iid})
-    return reg, iid
+    reg["held"].append(iid)
+    return iid
 
 
 def tombstone(reg, issue_id, reason, run, date, attached_to=None):
     """Mark an id fixed, withdrawn or attached. The key keeps the id."""
-    reg = _copy(reg)
-    reg["tombstones"][issue_id] = {"reason": reason, "attachedTo": attached_to, "run": run, "date": date}
+    reg = copied(reg)
+    tombstone_in_place(reg, issue_id, reason, run, date, attached_to)
     return reg
+
+
+def tombstone_in_place(reg, issue_id, reason, run, date, attached_to=None):
+    reg["tombstones"][issue_id] = {"reason": reason, "attachedTo": attached_to, "run": run, "date": date}
 
 
 def untombstone(reg, issue_id):
     """Reappeared, or Withdrawn back to Persisting: the id is live again."""
-    reg = _copy(reg)
-    reg["tombstones"].pop(issue_id, None)
+    reg = copied(reg)
+    untombstone_in_place(reg, issue_id)
     return reg
+
+
+def untombstone_in_place(reg, issue_id):
+    reg["tombstones"].pop(issue_id, None)
 
 
 def attach(reg, key, hand_id, run, date):
     """Record a confirmed attachment. A live published id for the key is tombstoned as attached."""
-    reg = _copy(reg)
+    reg = copied(reg)
+    attach_in_place(reg, key, hand_id, run, date)
+    return reg
+
+
+def attach_in_place(reg, key, hand_id, run, date):
     if not any(a["finding"] == key and a["handFound"] == hand_id for a in reg["attachments"]):
         reg["attachments"].append({"finding": key, "handFound": hand_id, "run": run})
         reg["attachments"].sort(key=lambda a: (a["finding"], a["handFound"]))
     iid = reg["keys"].get(key)
     if iid and iid not in reg["tombstones"]:
         reg["tombstones"][iid] = {"reason": "attached", "attachedTo": hand_id, "run": run, "date": date}
-    return reg
 
 
 def release(reg, key, hand_id):
     """Undo an attachment. The attached tombstone goes too, unless another attachment still holds the id."""
-    reg = _copy(reg)
+    reg = copied(reg)
+    release_in_place(reg, key, hand_id)
+    return reg
+
+
+def release_in_place(reg, key, hand_id):
     reg["attachments"] = [a for a in reg["attachments"] if not (a["finding"] == key and a["handFound"] == hand_id)]
     iid = reg["keys"].get(key)
     t = reg["tombstones"].get(iid)
@@ -98,12 +127,11 @@ def release(reg, key, hand_id):
             t["attachedTo"] = rest[0]
         else:
             del reg["tombstones"][iid]
-    return reg
 
 
 def violations(reg, hand_found_ids=()):
     """Every broken KTD16 invariant, as one line each. An empty list means the registry is sound."""
-    reg = _copy(reg)
+    reg = copied(reg)
     out = []
     held = reg["held"]
     if held != sorted(set(held)):

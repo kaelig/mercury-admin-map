@@ -1,4 +1,4 @@
-"""U8: `publish`, the atomic snapshot the map, the export and the report read (R16–R21, R26; KTD16, KTD21, KTD22).
+"""`publish`, the atomic snapshot the map, the export and the report read (R16–R21, R26; KTD16, KTD21, KTD22).
 
 Run: cd tools/a11y && python3 -m unittest tests.test_publish -v
 
@@ -362,7 +362,7 @@ class PublishTest(unittest.TestCase):
     # Hand-found overlays ---------------------------------------------------------
 
     def hand_run(self):
-        """Run A with AE7's re-rate, a drop, and an attachment of a scanner finding to ROWS."""
+        """Run A with the tabs issue's re-rate, a drop, and an attachment of a scanner finding to ROWS."""
         led = self.ledger(RUN_A)
         hand = led.hand_found()
         rows = led.scanner("name", "button-name", ["settings.tokens", "settings.index"], element='button in "API Tokens"',
@@ -811,8 +811,8 @@ class PublishTest(unittest.TestCase):
         got = json.loads(proc.stdout)
         self.assertEqual(got["version"], "4.13.0")
         checks = read_json(os.path.join(A11Y, "checks.json"))
-        self.assertEqual(set(publish.AXE_CRITERIA), set(checks["axeRules"]))
-        for rule, criteria in publish.AXE_CRITERIA.items():
+        self.assertEqual(set(checks["axeCriteria"]), set(checks["axeRules"]))
+        for rule, criteria in checks["axeCriteria"].items():
             self.assertEqual(sorted(criteria), sorted(got["rules"][rule]), rule)
 
 

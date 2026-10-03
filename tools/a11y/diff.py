@@ -25,32 +25,20 @@ After the run is published, diff leaves diff.json as it is: publish built the sn
 File formats: schemas.md ("diff.json").
 """
 import argparse
-import os
 import sys
 
 import mapdata
 import signature
-from lib.canon import dump, read_json, read_jsonl, write_json
-from status import restore_published
+from lib.canon import dump, latest_by, load_checks, read_json, read_jsonl, write_json
+from verdict import VERIFIED
 
-HERE = os.path.dirname(os.path.abspath(__file__))
-RECORD_FAMILIES = ("name", "role-state", "structure")
-# schemas.md "Result": the check module that produces each custom rule.
-CUSTOM_CHECKS = {
-    "target-size-own": "target",
-    "focus-not-visible": "tabwalk", "focus-hidden": "tabwalk", "keyboard-trap": "tabwalk", "not-reached": "tabwalk",
-    "backward-jump": "tabwalk",
-    "dialog-trigger-not-focusable": "dialog", "dialog-trigger-not-operable": "dialog",
-    "dialog-focus-not-moved": "dialog", "dialog-focus-escaped": "dialog", "dialog-focus-not-returned": "dialog",
-    "menu-focus-not-moved": "dialog", "popover-not-reachable": "dialog", "hover-only": "dialog",
-    "status-not-announced": "status", "error-not-associated": "status",
-}
+STATUSES = ("new", "persisting", "re-rated", "reappeared", "not-retested", "withdrawn", "fixed")
+HAND_STATUSES = ("first-audited", "confirmed", "re-rated", "not-reproduced", "not-retested")
 DROP_REASONS = {"fixed-since-capture": "fixed since capture", "tool-false-positive": "tool false positive"}
 NOT_AA = "not an AA failure"
 SCREEN_REMOVED = "screen removed"
 LIVE, ATTACHED, WITHDRAWN, FIXED = "live", "attached", "withdrawn", "fixed"
 IN_MAP = (LIVE, ATTACHED)
-VERIFIED = ("confirm", "rerate")
 UNFINISHED = {"not-reached": "verifier could not reach the state",
               "unverified": "unverified after two verification attempts",
               None: "no verdict"}
@@ -64,25 +52,22 @@ class DiffError(Exception):
 # Check modules
 # ---------------------------------------------------------------------------
 
-def load_checks():
-    return read_json(os.path.join(HERE, "checks.json"))
-
-
 def check_of(rule, checks):
     """The check module that produces a rule: axe, records (announced-as) or a custom module."""
     if rule == "announced-as":
         return "records"
     if rule in checks["axeRules"]:
         return "axe"
-    return CUSTOM_CHECKS.get(rule)
+    return checks["customChecks"].get(rule)
 
 
 def family_checks(family, checks):
     """Every check module that produces a rule of the family."""
-    out = {CUSTOM_CHECKS[r] for r, fam in checks["customRules"].items() if fam == family and r in CUSTOM_CHECKS}
+    custom = checks["customChecks"]
+    out = {custom[r] for r, fam in checks["customRules"].items() if fam == family and r in custom}
     if any(fam == family for fam in checks["axeRules"].values()):
         out.add("axe")
-    if family in RECORD_FAMILIES:
+    if family in signature.RECORD_FAMILIES:
         out.add("records")
     return out
 
@@ -98,15 +83,11 @@ def rule_of(key):
 # ---------------------------------------------------------------------------
 
 def latest_verdicts(ws, run_id):
-    out = {}
-    for v in read_jsonl(ws.file("verdicts.jsonl", run_id)):
-        out[v["key"]] = v
-    return out
+    return latest_by(read_jsonl(ws.file("verdicts.jsonl", run_id)), "key")
 
 
 def read_snapshot(ws):
-    pub = ws.published_dir
-    return {name: read_json(os.path.join(pub, f"{name}.json")) for name in ("issues", "report", "registry", "meta")}
+    return {name: ws.published(f"{name}.json") for name in ("issues", "report", "registry", "meta")}
 
 
 def map_nodes(ws):
@@ -167,6 +148,7 @@ def load(ws, run_id):
         "verdicts": latest_verdicts(ws, run_id),
         "outcomes": outcomes.get("states") or {},
         "sigs": {line["sig"] for line in read_jsonl(ws.file("records.jsonl", run_id))},
+        "record_keys": {},      # family: the announced-as keys of this run's records (record_present)
         "nodes": map_nodes(ws),
         "snapshot": snapshot,
         "priors": priors(snapshot),
@@ -202,8 +184,11 @@ def primary_first(primary, screens):
 
 
 def record_present(key, ctx):
+    """True when one of this run's records still has the signature an announced-as key came from."""
     family = key.split(":")[0]
-    return any(signature.record_finding_key(family, sig) == key for sig in ctx["sigs"])
+    if family not in ctx["record_keys"]:
+        ctx["record_keys"][family] = {signature.record_finding_key(family, sig) for sig in ctx["sigs"]}
+    return key in ctx["record_keys"][family]
 
 
 # ---------------------------------------------------------------------------
@@ -226,16 +211,17 @@ def present(f, v, prior, ctx):
     outcome = v["outcome"] if v else None
     gaps, why = [], []
     if kind in IN_MAP:
-        gaps = [s for s in prior.screens if s in ctx["nodes"] and s not in f["states"] and not retested(ctx, s, check)]
+        found = set(f["states"])
+        gaps = [s for s in prior.screens if s in ctx["nodes"] and s not in found and not retested(ctx, s, check)]
         why = gap_reason(ctx, gaps, check)
     union = primary_first(f["primary"], f["states"] + gaps)
     if outcome == "drop":
         return entry("withdrawn", iid, before, v["severityAfter"], here, v.get("reasonCode"))
     if outcome in VERIFIED:
         after = v["severityAfter"]
+        if kind in IN_MAP and gaps:
+            return entry("not-retested", iid, before, after, union, "; ".join(why))
         if kind in IN_MAP:
-            if gaps:
-                return entry("not-retested", iid, before, after, union, "; ".join(why))
             return entry("re-rated" if after != before else "persisting", iid, before, after, here)
         if kind == FIXED:
             return entry("reappeared", iid, before, after, here)
@@ -270,12 +256,16 @@ def absent(key, prior, ctx):
     return entry("not-retested", prior.issue_id, before, before, gaps, "; ".join(gap_reason(ctx, gaps, check)))
 
 
+def hand_entry(status, before, after, reason=None):
+    return {"status": status, "reason": reason, "severityBefore": before, "severityAfter": after}
+
+
 def hand_found(f, v, ctx):
     """Status of a hand-found issue."""
     before = f["severityDefault"]
     outcome = v["outcome"] if v else None
     if outcome not in VERIFIED + ("drop",):
-        return {"status": "not-retested", "reason": None, "severityBefore": before, "severityAfter": before}
+        return hand_entry("not-retested", before, before)
     if outcome == "drop":
         checks = family_checks(f["family"], ctx["checks"])
         for s in f["states"]:
@@ -283,13 +273,11 @@ def hand_found(f, v, ctx):
                 continue
             o = ctx["outcomes"].get(s) or {}
             if o.get("outcome") != "audited" or checks & set(o.get("incomplete") or []):
-                return {"status": "not-retested", "reason": None, "severityBefore": before, "severityAfter": before}
-        return {"status": "not-reproduced", "reason": DROP_REASONS.get(v.get("reasonCode"), NOT_AA),
-                "severityBefore": before, "severityAfter": before}
+                return hand_entry("not-retested", before, before)
+        return hand_entry("not-reproduced", before, before, DROP_REASONS.get(v.get("reasonCode"), NOT_AA))
     if outcome == "rerate":
-        return {"status": "re-rated", "reason": None, "severityBefore": before, "severityAfter": v["severityAfter"]}
-    status = "first-audited" if ctx["baseline"] == "none" else "confirmed"
-    return {"status": status, "reason": None, "severityBefore": before, "severityAfter": before}
+        return hand_entry("re-rated", before, v["severityAfter"])
+    return hand_entry("first-audited" if ctx["baseline"] == "none" else "confirmed", before, before)
 
 
 def compute(ws, run_id):
@@ -318,10 +306,6 @@ def compute(ws, run_id):
 # Stage
 # ---------------------------------------------------------------------------
 
-STATUSES = ("new", "persisting", "re-rated", "reappeared", "not-retested", "withdrawn", "fixed")
-HAND_STATUSES = ("first-audited", "confirmed", "re-rated", "not-reproduced", "not-retested")
-
-
 def counts(doc):
     f = {s: 0 for s in STATUSES}
     for e in doc.get("findings", {}).values():
@@ -346,7 +330,7 @@ def cli(ws, sub, argv):
     p = argparse.ArgumentParser(prog="audit.py diff", description=__doc__.split("\n\n")[0])
     p.parse_args(argv)
     run_id = ws.run_id()
-    restore_published(ws.published_dir)
+    mapdata.restore_snapshot(ws.published_dir)
     if (ws.published_meta() or {}).get("run") == run_id:
         print(f"diff: run {run_id} is already published; diff.json is the one it was published with")
         return 0

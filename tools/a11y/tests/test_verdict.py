@@ -1,4 +1,4 @@
-"""U7: `verdict add`, the only writer of verdicts.jsonl (R16, KTD19).
+"""`verdict add`, the only writer of verdicts.jsonl (R16, KTD19).
 
 Run: cd tools/a11y && python3 -m unittest tests.test_verdict -v
 

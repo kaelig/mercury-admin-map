@@ -1,6 +1,7 @@
 // Common options and workspace paths for Node stages (KTD2, KTD3). Mirrors lib/ws.py.
 import { existsSync, readdirSync } from 'node:fs';
 import { join, resolve } from 'node:path';
+import { fileURLToPath } from 'node:url';
 import { parseArgs } from 'node:util';
 import { ROOT, readJson } from './canon.mjs';
 
@@ -25,6 +26,18 @@ export function parse(argv, options = {}) {
   const { values, positionals } = parseArgs({ args: argv, options: { ...COMMON, ...options }, allowPositionals: true, strict: true });
   const ws = new Workspace({ workspace: values.workspace, data: values.data, map: values.map, baseUrl: values['base-url'], run: values.run });
   return { ws, values, positionals };
+}
+
+// Run a stage's main(argv) when the module at `url` (its import.meta.url) is the entry point: exit
+// with the code it returns, or, when it throws, print the error under `label` on stderr and {error}
+// as the last stdout line, then exit 1.
+export function runMain(url, label, main) {
+  if (!process.argv[1] || resolve(process.argv[1]) !== fileURLToPath(url)) return;
+  main(process.argv.slice(2)).then((code) => process.exit(code), (e) => {
+    console.error(`${label}: ${e.message}`);
+    console.log(JSON.stringify({ error: e.message }));
+    process.exit(1);
+  });
 }
 
 export class Workspace {
@@ -64,6 +77,9 @@ export class Workspace {
   rawDir(runId) { return join(this.runDir(runId), 'raw'); }
   file(name, runId) { return join(this.runDir(runId), name); }
 
+  // Whether `runId` names a planned run: one with a states.json. False for a null id.
+  hasStates(runId) { return Boolean(runId) && existsSync(this.file('states.json', runId)); }
+
   states(runId) {
     const doc = readJson(this.file('states.json', runId));
     return doc ? doc.states : {};
@@ -73,5 +89,15 @@ export class Workspace {
     const m = readJson(this.mapPath);
     if (!m) throw new Error(`${this.mapPath} not found: run \`python3 build.py\` first`);
     return m;
+  }
+
+  publishedMeta() { return readJson(join(this.publishedDir, 'meta.json')); }
+
+  // The outcomes of the run the published snapshot came from (meta.json names it): {run, states}, or null.
+  previousOutcomes() {
+    const meta = this.publishedMeta();
+    if (!meta?.run) return null;
+    const doc = readJson(this.file('outcomes.json', meta.run));
+    return doc ? { run: meta.run, states: doc.states || {} } : null;
   }
 }

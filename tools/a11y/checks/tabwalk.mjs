@@ -22,36 +22,28 @@ import { mkdirSync } from 'node:fs';
 import { join } from 'node:path';
 import { setTimeout as sleep } from 'node:timers/promises';
 import { inflateSync } from 'node:zlib';
-import { ROOT, readJson } from '../lib/canon.mjs';
-import { describeElements } from '../lib/occurrence.mjs';
+import { XPATH_FN, describeEvaluated, releaseGroup } from '../lib/occurrence.mjs';
+import { customResult } from '../lib/results.mjs';
 
 export const id = 'tabwalk';
 
-// Changed pixels below which a focused stop counts as showing no focus change. Plan Open Questions:
-// start at 16 and tune on real states.
+// Changed pixels below which a focused stop counts as showing no focus change: a starting value, to
+// be tuned on real states.
 export const FOCUS_DIFF_FLOOR = 16;
 // Padding around the focused element's box, in CSS px, for the focus crop.
-export const CROP_PAD = 8;
+const CROP_PAD = 8;
 
-const CRITERIA = readJson(join(ROOT, 'tools/a11y/checks.json')).customCriteria;
-const STATE = "window[Symbol.for('a11y.tabwalk')]";
+// The walk's in-page state. probe.mjs measures through INIT, INFO, measure() and probeTrap() too.
+export const STATE = "window[Symbol.for('a11y.tabwalk')]";
 
-// In-page helpers shared by the expressions below (and by checks/dialog.mjs).
+// In-page helpers shared by the expressions below (and by checks/dialog.mjs and checks/status.mjs).
 export const PAGE_HELPERS = `
   const deepActive = () => {
     let a = document.activeElement;
     while (a && a.shadowRoot && a.shadowRoot.activeElement) a = a.shadowRoot.activeElement;
     return !a || a === document.body || a === document.documentElement ? null : a;
   };
-  const xpathOf = (n) => {
-    const parts = [];
-    for (let x = n; x && x.nodeType === 1; x = x.parentElement) {
-      let i = 1;
-      for (let s = x.previousElementSibling; s; s = s.previousElementSibling) if (s.tagName === x.tagName) i++;
-      parts.unshift(x.tagName.toLowerCase() + '[' + i + ']');
-    }
-    return '/' + parts.join('/').replace(/^html\\[1\\]/, 'html').replace(/^html\\/body\\[1\\]/, 'html/body');
-  };
+  const xpathOf = (n) => (${XPATH_FN}).call(n);
   const labelOf = (e) => (e.getAttribute('aria-label') || e.innerText || e.value || e.title || e.getAttribute('alt') || '')
     .replace(/\\s+/g, ' ').trim().slice(0, 80);
   const tabbableIn = (root) => [...root.querySelectorAll('*')].filter((e) => e.tabIndex >= 0 && !e.disabled
@@ -59,11 +51,14 @@ export const PAGE_HELPERS = `
 `;
 
 // Reset focus to the start of the scope: the top layer's element (focusable for one press), or the
-// start of the document. Returns the scope's tabbable count.
-const INIT = `(layerXPath) => {
+// start of the document. Returns the scope's tabbable count. INFO reports `target` for focus on the
+// element at `targetXPath` (the probe's element; the walk passes none).
+export const INIT = `(layerXPath, targetXPath = null) => {
   ${PAGE_HELPERS}
-  const scope = layerXPath ? document.evaluate(layerXPath, document, null, 9, null).singleNodeValue : null;
-  const S = ${STATE} = { ids: new WeakMap(), next: 1, el: null, scope, restore: null, focused: null };
+  const find = (x) => document.evaluate(x, document, null, 9, null).singleNodeValue;
+  const scope = layerXPath ? find(layerXPath) : null;
+  const S = ${STATE} = { ids: new WeakMap(), next: 1, el: null, scope, restore: null, focused: null,
+    target: targetXPath ? find(targetXPath) : null };
   const a = deepActive();
   if (a) a.blur();
   if (scope) {
@@ -103,7 +98,7 @@ const SIG = `
 `;
 
 // Where focus is after a press, and the facts a stop records. Stashes the element for describe().
-const INFO = `(() => {
+export const INFO = `(() => {
   ${PAGE_HELPERS}
   ${SIG}
   const S = ${STATE};
@@ -145,7 +140,7 @@ const INFO = `(() => {
     body: false, id: idOf(el), unit: idOf(composite || el), frame, composite: composite ? xpathOf(composite) : null,
     inScope: !S.scope || S.scope === el || S.scope.contains(el), hidden, focusVisible: el.matches(':focus-visible'),
     box: [Math.round(r.left + scrollX), Math.round(r.top + scrollY), Math.round(r.width), Math.round(r.height)],
-    tag: el.tagName.toLowerCase(), label: labelOf(el), xpath: xpathOf(el),
+    tag: el.tagName.toLowerCase(), label: labelOf(el), xpath: xpathOf(el), target: el === S.target,
   };
 })()`;
 
@@ -178,12 +173,14 @@ const BLUR = `((pad) => {
 
 const REFOCUS = `(() => { const S = ${STATE}; S.el.focus({ preventScroll: true }); return document.activeElement === S.el || S.el.contains(document.activeElement); })()`;
 
-const CURRENT = `() => [${STATE}.el]`;
+// The stop INFO stashed, and the object group that holds its handle until the walk ends.
+const CURRENT = `${STATE}.el`;
+const WALK_GROUP = 'a11y-tabwalk';
 
 // --- PNG crops ----------------------------------------------------------------------------------
 
 // Decode an 8-bit, non-interlaced PNG (what Chrome's screenshots are) into raw pixel rows.
-export function decodePng(buf) {
+function decodePng(buf) {
   let pos = 8;
   let width = 0;
   let height = 0;
@@ -235,7 +232,7 @@ export function decodePng(buf) {
 }
 
 // How many pixels differ between two same-size PNGs (base64, as CDP returns them).
-export function pixelDiff(a, b) {
+function pixelDiff(a, b) {
   if (a === b) return 0;
   const x = decodePng(Buffer.from(a, 'base64'));
   const y = decodePng(Buffer.from(b, 'base64'));
@@ -275,14 +272,16 @@ export async function settleFocus(page, max = 1000) {
 
 // --- The walk -----------------------------------------------------------------------------------
 
-const result = (rule, basis, occurrence, evidence) => ({ check: id, rule, basis, criteria: CRITERIA[rule], messageKey: null, occurrence, evidence });
-const ref = (f) => (f.body ? 'body' : { tag: f.tag, label: f.label, xpath: f.xpath });
+// A focus position in a trace: "body", or the focused element's tag, label and xpath.
+export const ref = (f) => (f.body ? 'body' : { tag: f.tag, label: f.label, xpath: f.xpath });
 // An xpath at or below another.
 const within = (x, root) => x === root || x.startsWith(root + '/');
 const OCCURRENCE_KEYS = ['tag', 'role', 'name', 'classes', 'ancestors', 'landmark', 'heading', 'data', 'xpath', 'rect', 'layer'];
 const bare = (o) => Object.fromEntries(OCCURRENCE_KEYS.map((k) => [k, o[k]]));
 
-async function measure(page, cdp) {
+// The focused stop's padded pixel diff against itself blurred (null when its crop is off screen or
+// focus does not come back), and the style properties that changed.
+export async function measure(page, cdp) {
   const { style, crop } = await page.evaluate(`${BLUR}(${CROP_PAD})`);
   if (!crop) {
     await page.evaluate(REFOCUS);
@@ -295,18 +294,19 @@ async function measure(page, cdp) {
   return { style, diff: pixelDiff(focused, blurred) };
 }
 
-// Esc, then Shift+Tab up to once per stop in the loop: does focus get out of it?
-async function probeTrap(page, loop) {
+// Esc, then Shift+Tab up to once per stop in the loop: does focus get out of it? `describe` writes
+// each probe's focus.
+export async function probeTrap(page, loop, describe = ref) {
   const probes = [];
   const out = (f) => f.body || !loop.has(f.unit);
   await page.keyboard.press('Escape');
   await settleFocus(page);
   let f = await page.evaluate(INFO);
-  probes.push({ key: 'Escape', focus: ref(f), left: out(f) });
+  probes.push({ key: 'Escape', focus: describe(f), left: out(f) });
   for (let i = 0; i < loop.size && !out(f); i++) {
     await page.keyboard.press('Shift+Tab');
     f = await page.evaluate(INFO);
-    probes.push({ key: 'Shift+Tab', focus: ref(f), left: out(f) });
+    probes.push({ key: 'Shift+Tab', focus: describe(f), left: out(f) });
   }
   return { left: out(f), probes };
 }
@@ -345,42 +345,47 @@ export async function run(ctx) {
   let end = 'limit';
   let presses = 0;
   let trap = null;
-  while (presses < limit) {
-    await page.keyboard.press('Tab');
-    presses++;
-    const f = await page.evaluate(INFO);
-    if (f.body) {
-      end = 'body';
-      break;
+  try {
+    while (presses < limit) {
+      await page.keyboard.press('Tab');
+      presses++;
+      const f = await page.evaluate(INFO);
+      if (f.body) {
+        end = 'body';
+        break;
+      }
+      if (!f.inScope) {
+        end = 'exit';
+        break;
+      }
+      const last = stops.at(-1);
+      if (last && last.unit === f.unit && (f.frame || f.composite)) {
+        last.count++;
+        continue;
+      }
+      if (firstVisit.has(f.unit)) {
+        end = 'repeat';
+        const from = firstVisit.get(f.unit);
+        // Inside an open layer, coming back round to the first stop is containment, which a modal does
+        // by design: its close control is the way out (2.1.2), and the dialog check tests that.
+        if (top && from === 0) break;
+        const loop = new Set(stops.slice(from).map((s) => s.unit));
+        const probe = await probeTrap(page, loop);
+        if (!probe.left) trap = { stop: stops[from], probes: probe.probes };
+        break;
+      }
+      firstVisit.set(f.unit, stops.length);
+      // Described now, not after the walk: `rect` is in viewport coordinates and the page scrolls.
+      const occurrence = await describeEvaluated(cdp, CURRENT, WALK_GROUP, { layerXPath: top });
+      const stop = {
+        n: stops.length + 1, occurrence, box: f.box, hidden: f.hidden, focusVisible: f.focusVisible,
+        style: [], diff: null, count: 1, frame: f.frame, composite: f.composite, unit: f.unit,
+      };
+      if (!f.frame && !f.hidden) Object.assign(stop, await measure(page, cdp));
+      stops.push(stop);
     }
-    if (!f.inScope) {
-      end = 'exit';
-      break;
-    }
-    const last = stops.at(-1);
-    if (last && last.unit === f.unit && (f.frame || f.composite)) {
-      last.count++;
-      continue;
-    }
-    if (firstVisit.has(f.unit)) {
-      end = 'repeat';
-      const from = firstVisit.get(f.unit);
-      // Inside an open layer, coming back round to the first stop is containment, which a modal does
-      // by design: its close control is the way out (2.1.2), and the dialog check tests that.
-      if (top && from === 0) break;
-      const loop = new Set(stops.slice(from).map((s) => s.unit));
-      const probe = await probeTrap(page, loop);
-      if (!probe.left) trap = { stop: stops[from], probes: probe.probes };
-      break;
-    }
-    firstVisit.set(f.unit, stops.length);
-    const [occurrence] = await describeElements(cdp, CURRENT, null, { layerXPath: top });
-    const stop = {
-      n: stops.length + 1, occurrence, box: f.box, hidden: f.hidden, focusVisible: f.focusVisible,
-      style: [], diff: null, count: 1, frame: f.frame, composite: f.composite, unit: f.unit,
-    };
-    if (!f.frame && !f.hidden) Object.assign(stop, await measure(page, cdp));
-    stops.push(stop);
+  } finally {
+    await releaseGroup(cdp, WALK_GROUP);
   }
 
   const results = [];
@@ -389,10 +394,10 @@ export async function run(ctx) {
   const previousOf = (s) => stops[s.n - 2]?.occurrence ?? null;
   for (const s of stops) {
     if (s.hidden) {
-      results.push(result('focus-hidden', 'failure', s.occurrence,
+      results.push(customResult(id, 'focus-hidden', 'failure', s.occurrence,
         { stop: s.n, stops: count, previous: previousOf(s), focus: s.occurrence, hidden: s.hidden, box: s.box }));
     } else if (!s.frame && s.diff !== null && s.diff < FOCUS_DIFF_FLOOR) {
-      results.push(result('focus-not-visible', 'failure', s.occurrence,
+      results.push(customResult(id, 'focus-not-visible', 'failure', s.occurrence,
         { stop: s.n, stops: count, previous: previousOf(s), diff: s.diff, floor: FOCUS_DIFF_FLOOR, style: s.style, focusVisible: s.focusVisible }));
     }
   }
@@ -400,7 +405,7 @@ export async function run(ctx) {
   if (trap) {
     // Every stop in order, then the revisit that closed the loop, then the Esc and Shift+Tab probes.
     const trace = [...stops, trap.stop].map((s) => ({ n: s.n, role: s.occurrence.role, name: s.occurrence.name, xpath: s.occurrence.xpath }));
-    results.push(result('keyboard-trap', 'failure', trap.stop.occurrence, { stop: trap.stop.n, stops: count, trace, probes: trap.probes }));
+    results.push(customResult(id, 'keyboard-trap', 'failure', trap.stop.occurrence, { stop: trap.stop.n, stops: count, trace, probes: trap.probes }));
   }
 
   // A stop more than one row band (the taller of the two boxes) above the previous visible stop.
@@ -417,7 +422,7 @@ export async function run(ctx) {
     await saveOverlay(page, stops, ctx.shotsDir, overlay, !top);
   }
   for (const { s, prev, rise, band } of jumps) {
-    results.push(result('backward-jump', 'candidate', s.occurrence, { stop: s.n, stops: count, previous: prev.occurrence, rise, band, overlay }));
+    results.push(customResult(id, 'backward-jump', 'candidate', s.occurrence, { stop: s.n, stops: count, previous: prev.occurrence, rise, band, overlay }));
   }
 
   // Not reached: only a walk that went all the way round (no trap, no press limit) can say so.
@@ -428,7 +433,7 @@ export async function run(ctx) {
     for (const o of ctx.interactive || []) {
       if (o.disabled || (top && o.layer !== 'top')) continue;
       if (reached(o)) continue;
-      results.push(result('not-reached', 'candidate', bare(o), { stops: count, end, focusable: o.focusable ?? null, source: o.source ?? null }));
+      results.push(customResult(id, 'not-reached', 'candidate', bare(o), { stops: count, end, focusable: o.focusable ?? null, source: o.source ?? null }));
     }
   }
 

@@ -3,12 +3,12 @@
 import { createRequire } from 'node:module';
 import { setTimeout as sleep } from 'node:timers/promises';
 import { chromium } from 'playwright';
-import { buildHash, sha } from './canon.mjs';
+import { BUILD_PATH, buildHash, sha } from './canon.mjs';
 
 const require = createRequire(import.meta.url);
 
 // README "Capture notes": without these, fresh headless Chrome hangs on screenshots after the laptop sleeps.
-export const GPU_FLAGS = ['--disable-gpu', '--disable-gpu-compositing', '--disable-gpu-vsync', '--disable-frame-rate-limit'];
+const GPU_FLAGS = ['--disable-gpu', '--disable-gpu-compositing', '--disable-gpu-vsync', '--disable-frame-rate-limit'];
 
 // The raw file's `env` (schemas.md). `chromium` is only known once a browser runs: use envFor().
 export const ENV = {
@@ -23,7 +23,7 @@ export const ENV = {
   timezone: 'America/Los_Angeles',
 };
 
-export const MOTION_OFF_CSS = '*, *::before, *::after { transition: none !important; animation: none !important;'
+const MOTION_OFF_CSS = '*, *::before, *::after { transition: none !important; animation: none !important;'
   + ' caret-color: transparent !important; scroll-behavior: auto !important; }';
 
 export function launch(opts = {}) {
@@ -73,9 +73,6 @@ function originOf(url) {
   }
 }
 
-// Counts the page's own requests in flight. Arm it right after newPage(), before the first goto:
-// Playwright's 'networkidle' fires once per navigation, so it never waits for a fetch a click starts.
-// Requests from cross-origin frames don't count.
 // The registrable part of a URL's host: demo.mercury.com and cdn.mercury.com share mercury.com.
 export function siteOf(url) {
   try {
@@ -86,6 +83,9 @@ export function siteOf(url) {
   }
 }
 
+// Counts the page's own requests in flight. Arm it right after newPage(), before the first goto:
+// Playwright's 'networkidle' fires once per navigation, so it never waits for a fetch a click starts.
+// Requests from cross-origin frames don't count.
 export function trackRequests(page) {
   const live = new Set();
   let changed = Date.now();
@@ -152,6 +152,16 @@ export async function settle(page, cdp, { tracker, timeout = 10000, interval = 2
   return { ms: Date.now() - t0, samples, stable: false, idle: idled };
 }
 
+// The build id in the page's HTML, or 'unknown'. The regex runs in the page, so the DOM never
+// crosses CDP (page.content() also serializes the doctype, which never holds an asset path). A page
+// that cannot answer, navigating or closed, goes through page.content(), whose error says why.
 export async function readBuildHash(page) {
-  return buildHash(await page.content());
+  let id;
+  try {
+    id = await page.evaluate((source) => new RegExp(source).exec(document.documentElement?.outerHTML ?? '')?.[1] ?? null,
+      BUILD_PATH.source);
+  } catch {
+    return buildHash(await page.content());
+  }
+  return id ?? 'unknown';
 }

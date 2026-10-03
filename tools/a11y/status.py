@@ -4,12 +4,13 @@ Sweep coverage, attachment proposals and the publish state are computed here. Ev
 module reports through its own `status(ws, run_id)` (Python) or `status` subcommand (Node), so
 adding a stage never means editing this file.
 """
+import collections
 import importlib
 import json
 import os
-import shutil
 import subprocess
 
+import mapdata
 from lib.canon import dump, harness_hash, read_json, read_jsonl
 
 HERE = os.path.dirname(os.path.abspath(__file__))
@@ -23,7 +24,7 @@ def check_coverage(state_ids, audited, unreachable):
     both = sorted(set(a) & set(u))
     if both:
         problems.append(f"audited and unreachable: {', '.join(both)}")
-    dupes = sorted({s for s in a + u if (a + u).count(s) > 1} - set(both))
+    dupes = sorted({s for s, n in collections.Counter(a + u).items() if n > 1} - set(both))
     if dupes:
         problems.append(f"listed twice: {', '.join(dupes)}")
     missing = sorted(states - set(a) - set(u))
@@ -35,6 +36,12 @@ def check_coverage(state_ids, audited, unreachable):
     return problems
 
 
+def coverage_problems(state_ids, outcomes):
+    """check_coverage() for outcomes.json's states: {state id: {outcome, ...}}."""
+    return check_coverage(state_ids, [s for s, o in outcomes.items() if o.get("outcome") == "audited"],
+                          [s for s, o in outcomes.items() if o.get("outcome") == "unreachable"])
+
+
 def sweep_progress(ws, run_id):
     states = ws.states(run_id)
     if not states:
@@ -43,9 +50,8 @@ def sweep_progress(ws, run_id):
     counts = {"audited": 0, "unreachable": 0, "stale": 0, "pending": 0}
     audited, unreachable = [], []
     for sid in states:
-        path = os.path.join(ws.raw_dir(run_id), f"{sid}.json")
         try:
-            doc = read_json(path)
+            doc = ws.raw(sid, run_id)
         except (ValueError, OSError):
             doc = None
         if not doc or doc.get("state") != sid:
@@ -63,9 +69,7 @@ def sweep_progress(ws, run_id):
     out = {**counts, "states": len(states), "harness": current}
     outcomes = read_json(ws.file("outcomes.json", run_id))
     if outcomes:
-        recorded = outcomes.get("states", {})
-        problems = check_coverage(states, [s for s, o in recorded.items() if o.get("outcome") == "audited"],
-                                  [s for s, o in recorded.items() if o.get("outcome") == "unreachable"])
+        problems = coverage_problems(states, outcomes.get("states", {}))
         out["outcomes"] = {"written": True, "coverage": problems or "ok"}
     else:
         out["outcomes"] = {"written": False}
@@ -82,18 +86,9 @@ def pending_proposals(ws, run_id):
     return [p["id"] for p in findings.get("proposals", []) if p["id"] not in decided]
 
 
-def restore_published(pub):
-    """Undo a publish that stopped between its two renames (KTD21). Returns True when it restored."""
-    prev = pub + ".prev"
-    if not os.path.exists(pub) and os.path.isdir(prev):
-        os.rename(prev, pub)
-        return True
-    return False
-
-
 def publish_state(ws, run_id):
     pub = ws.published_dir
-    restored = restore_published(pub)
+    restored = mapdata.restore_snapshot(pub)    # undo a publish that stopped between its two renames (KTD21)
     if os.path.exists(pub + ".tmp") or os.path.exists(pub + ".prev"):
         state = "publish incomplete, rerun publish"
     else:
@@ -107,20 +102,30 @@ def publish_state(ws, run_id):
     return {"state": state, "restored": restored}
 
 
-def module_status(ws, run_id, module):
-    path = os.path.join(HERE, module)
-    if not os.path.exists(path):
-        return {"pending": True, "note": "not implemented"}
-    if module.endswith(".py"):
-        mod = importlib.import_module(module[:-3])
-        fn = getattr(mod, "status", None)
-        return fn(ws, run_id) if fn else {"pending": True, "note": "no status"}
-    cmd = ["node", path, "status", "--workspace", ws.path, "--data", ws.data_dir, "--map", ws.map_path,
-           "--base-url", ws.base_url] + (["--run", run_id] if run_id else [])
+def python_status(ws, run_id, module):
+    mod = importlib.import_module(module[:-3])
+    fn = getattr(mod, "status", None)
+    return fn(ws, run_id) if fn else {"pending": True, "note": "no status"}
+
+
+def start_node_status(ws, run_id, module):
+    """Start `node <module> status`; node_status() collects it."""
+    cmd = ["node", os.path.join(HERE, module), "status", "--workspace", ws.path, "--data", ws.data_dir,
+           "--map", ws.map_path, "--base-url", ws.base_url] + (["--run", run_id] if run_id else [])
+    return subprocess.Popen(cmd, stdout=subprocess.PIPE, stderr=subprocess.PIPE, text=True)
+
+
+def node_status(proc):
+    """The JSON a Node module's `status` printed last, given at most 120 s, collected as subprocess.run would."""
     try:
-        out = subprocess.run(cmd, capture_output=True, text=True, timeout=120)
-        lines = out.stdout.strip().splitlines()
-        return json.loads(lines[-1]) if out.returncode == 0 and lines else {"pending": True, "note": "no status"}
+        with proc:
+            try:
+                stdout, _ = proc.communicate(timeout=120)
+            except BaseException:
+                proc.kill()     # leaving the `with` block then waits for it
+                raise
+        lines = stdout.strip().splitlines()
+        return json.loads(lines[-1]) if proc.returncode == 0 and lines else {"pending": True, "note": "no status"}
     except (subprocess.TimeoutExpired, ValueError):
         return {"pending": True, "note": "status failed"}
 
@@ -133,11 +138,27 @@ def report(ws):
         stages["sweep"] = sweep_progress(ws, run_id)
     else:
         stages["sweep"] = {"pending": True}
-    for module in dict.fromkeys(e[3] for e in STAGES):
-        if module in OWN:
-            continue
-        name = module.rsplit(".", 1)[0]
-        stages[name] = module_status(ws, run_id, module) if run_id else {"pending": True}
+    modules = [m for m in dict.fromkeys(e[3] for e in STAGES) if m not in OWN]
+    implemented = {m for m in modules if os.path.exists(os.path.join(HERE, m))}
+    # The Node modules answer in parallel, each in its own process; their results are read in table order.
+    started = {m: start_node_status(ws, run_id, m) for m in modules
+               if run_id and m in implemented and m.endswith(".mjs")}
+    try:
+        for module in modules:
+            name = module.rsplit(".", 1)[0]
+            if not run_id:
+                stages[name] = {"pending": True}
+            elif module not in implemented:
+                stages[name] = {"pending": True, "note": "not implemented"}
+            elif module in started:
+                stages[name] = node_status(started[module])
+            else:
+                stages[name] = python_status(ws, run_id, module)
+    finally:
+        for proc in started.values():
+            if proc.returncode is None:     # not collected: a Python status raised first
+                with proc:
+                    proc.kill()
     return {
         "run": run_id,
         "workspace": ws.path,

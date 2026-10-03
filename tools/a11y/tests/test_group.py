@@ -1,4 +1,4 @@
-"""U6: the `group` stage (R12–R15, R17, KTD15–KTD17).
+"""The `group` stage (R12–R15, R17, KTD15–KTD17).
 
 Run: cd tools/a11y && python3 -m unittest tests.test_group -v
 
@@ -435,7 +435,7 @@ class Incomplete(ScratchTest):
 
 
 # ---------------------------------------------------------------------------
-# Hand-found issues and attachment proposals (R17, KTD17, AE5)
+# Hand-found issues and attachment proposals (R17, KTD17)
 # ---------------------------------------------------------------------------
 
 class Proposals(ScratchTest):

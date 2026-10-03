@@ -23,12 +23,13 @@ import string
 import sys
 from urllib.parse import quote
 
-HERE = os.path.dirname(os.path.abspath(__file__))
-ROOT = os.path.dirname(os.path.dirname(HERE))
+import mapdata
+from lib.canon import ROOT, plural, read_json
+
 APP_CSS = os.path.join(ROOT, "src", "app.css")
 DEFAULT_DIST = os.path.join(ROOT, "dist")
 FONT_TOKENS = ("--ui", "--display")       # the map's webfont stacks: the report uses the system stack
-SEVERITIES = ("high", "medium", "low")
+SEVERITIES = tuple(mapdata.SEVERITY_RANK)
 SEVERITY = {"high": "High", "medium": "Medium", "low": "Low"}
 PRINCIPLES = ("Perceivable", "Operable", "Understandable", "Robust")
 NO_FAILURES = "No failures found by these checks"
@@ -148,10 +149,6 @@ def esc(value):
     return html.escape("" if value is None else str(value), quote=True)
 
 
-def plural(n, word):
-    return f"{n} {word}" if n == 1 else f"{n} {word}s"
-
-
 def join_and(items):
     items = list(items)
     if len(items) < 2:
@@ -244,7 +241,7 @@ def summary(m):
     scanner = sum(1 for f in m["findings"] if f.get("source") != "hand-found")
     rows = [[severity(s), str(counts.get(s, 0))] for s in SEVERITIES] + [["Total", str(total)]]
     return (f"<p>This run verified {plural(total, 'failure')}: {scanner} found by the scripted checks and "
-            f"{total - scanner} hand-found {'issue' if total - scanner == 1 else 'issues'} the verifier reproduced. "
+            f"{plural(total - scanner, 'hand-found issue')} the verifier reproduced. "
             "Severity is rated by what the failure blocks: High, Medium and Low stand for Critical, Major and Minor "
             'in the accessibility-review format. Findings this run could not retest stay in the map and are listed '
             'under <a href="#not-retested">Not retested</a>, outside these counts.</p>\n'
@@ -556,10 +553,7 @@ def page(m, issues):
 
 def read(snapshot_dir, name):
     path = os.path.join(snapshot_dir, name)
-    if not os.path.isfile(path):
-        return None
-    with open(path, encoding="utf-8") as f:
-        return json.load(f)
+    return read_json(path) if os.path.isfile(path) else None
 
 
 def render(snapshot_dir, dist_dir):

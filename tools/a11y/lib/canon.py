@@ -1,4 +1,5 @@
-"""Canonical JSON, name templates and hashes. Mirrors lib/canon.mjs byte for byte (schemas.md)."""
+"""Canonical JSON, name templates and hashes, which mirror lib/canon.mjs byte for byte (schemas.md),
+and the small helpers every Python stage shares (the last section)."""
 import hashlib
 import json
 import math
@@ -6,6 +7,7 @@ import os
 import re
 
 ROOT = os.path.dirname(os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__)))))
+A11Y = os.path.join(ROOT, "tools", "a11y")
 
 
 # ---------------------------------------------------------------------------
@@ -158,3 +160,32 @@ _BUILD = re.compile(r"cdn\.mercury\.com/builds/([A-Za-z0-9]+)/")
 def build_hash(html):
     m = _BUILD.search(html or "")
     return m.group(1) if m else "unknown"
+
+
+# ---------------------------------------------------------------------------
+# Helpers the Python stages share
+# ---------------------------------------------------------------------------
+
+def rel(path):
+    """path relative to the repository root, or as given when it lies outside it."""
+    r = os.path.relpath(os.path.abspath(path), ROOT)
+    return path if r.startswith("..") else r
+
+
+def plural(n, word):
+    return f"{n} {word}" if n == 1 else f"{n} {word}s"
+
+
+def latest_by(lines, field):
+    """{value of field: the last line with that value}, for append-only ledgers."""
+    return {line[field]: line for line in lines}
+
+
+def load_checks():
+    """tools/a11y/checks.json: check families, rule maps, templates and coverage tables."""
+    return read_json(os.path.join(A11Y, "checks.json"))
+
+
+def load_wcag():
+    """{criterion number: criterion} from tools/a11y/wcag.json, the WCAG 2.2 A and AA criteria."""
+    return {c["number"]: c for c in read_json(os.path.join(A11Y, "wcag.json"))["criteria"]}

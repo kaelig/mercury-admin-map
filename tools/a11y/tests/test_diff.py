@@ -1,4 +1,4 @@
-"""U8: `diff`, each finding's status against the snapshot in force (R21, R26; KTD18).
+"""`diff`, each finding's status against the snapshot in force (R21, R26; KTD18).
 
 Run: cd tools/a11y && python3 -m unittest tests.test_diff -v
 

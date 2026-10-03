@@ -269,7 +269,7 @@ Once a run has a second run beside it, pass `--run <id>` to every stage: the def
 
 | path | what | in git |
 |---|---|---|
-| `tools/a11y/` | the code, `checks.json` (check families, default severities, text templates), `wcag.json` (the 55 A and AA criteria), `hand-found.json` (family and criteria of each hand-found issue), `schemas.md` | yes |
+| `tools/a11y/` | the code, `checks.json` (check families, default severities, text templates, rule-to-criterion and coverage tables), `wcag.json` (the 55 A and AA criteria), `hand-found.json` (family and criteria of each hand-found issue), `schemas.md` | yes |
 | `a11y/policy.json` | the mutation policy: denylist, fixture values, mutating verbs, isolation result, root exclusions | yes |
 | `a11y/recipes/<area>.json` | one replay recipe per state, editable by hand | yes |
 | `a11y/runs/<id>/` | a run's ledger: `run.json`, `states.json`, `outcomes.json`, `findings.json`, `records.jsonl`, `judgments.jsonl`, `verdicts.jsonl`, `decisions.jsonl`, `canary.json`, `lighthouse.json`, `diff.json`, `batches/` | yes |

@@ -1,4 +1,4 @@
-"""U7: `verify prepare` and `verify status` (R16, R17, R26; KTD19, KTD20).
+"""`verify prepare` and `verify status` (R16, R17, R26; KTD19, KTD20).
 
 Run: cd tools/a11y && python3 -m unittest tests.test_verify -v
 
@@ -403,7 +403,7 @@ class SecondOpinions(Fixture):
 
 
 # ---------------------------------------------------------------------------
-# A dry verification over group's own output (U7 Verification)
+# A dry verification over group's own output
 # ---------------------------------------------------------------------------
 
 class DryVerification(unittest.TestCase):

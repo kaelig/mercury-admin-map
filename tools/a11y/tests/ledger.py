@@ -1,4 +1,4 @@
-"""Test helper for U8: a synthetic run ledger on real data/ node ids, written into a temp workspace.
+"""Test helper for `diff` and `publish`: a synthetic run ledger on real data/ node ids, written into a temp workspace.
 
 `Ledger` writes what `diff` and `publish` read: run.json, states.json, outcomes.json, minimal raw
 files (families and axe rules that ran), findings.json, verdicts.jsonl, decisions.jsonl, records.jsonl,
@@ -8,7 +8,7 @@ schemas.md, so the tests exercise the stages, not the fixtures.
 
 `build_test_snapshot(dest)` publishes two runs with this ledger and copies the second snapshot to
 `dest`: new, persisting, not-retested (one screen unreachable), withdrawn and fixed findings, a
-30-screen contrast finding, a hand-found re-rate (AE7), a hand-found drop, an attachment, and
+30-screen contrast finding, a hand-found re-rate (the tabs issue), a hand-found drop, an attachment, and
 unreachable states grouped under a root cause. tests/data/snapshot/ is that output; test_publish checks it is current. Regenerate it with:
 
     cd tools/a11y && python3 -m tests.ledger

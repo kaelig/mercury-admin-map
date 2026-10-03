@@ -4,10 +4,10 @@
     python3 tools/a11y/audit.py canary score --file <canary workspace>/runs/<id>/batches/canary-001.out.jsonl [--run <id>]
 
 The canary is defined in tools/a11y/fixtures/canary/: five fixture pages with seeded true failures
-and traps shaped like AE3 (an unnamed icon button whose visible label sits inside the same control:
-re-rate to low) and AE7 (clickable-div tabs keyboard users cannot activate, hand-found as medium:
-re-rate to high), their raw files, a committed findings.json, the hand-found issue in data/, and
-expected.json. So no sweep runs for it.
+and two traps (an unnamed icon button whose visible label sits inside the same control: re-rate to
+low; clickable-div tabs keyboard users cannot activate, hand-found as medium: re-rate to high),
+their raw files, a committed findings.json, the hand-found issue in data/, and expected.json. So no
+sweep runs for it.
 
 `prepare` builds the canary's own workspace, under the system temp dir unless --out names one, on
 the fixture server's origin (http://127.0.0.1:<port>, a free port unless --port names one), writes
@@ -67,7 +67,7 @@ def prepare(ws, run_id, port=None, out_dir=None):
 
     ctx = verify.context(cws, run_id, findings)
     entries = [verify.entry(f, ctx, 1) for f in sorted(findings["findings"], key=lambda f: f["key"])]
-    batch_path = os.path.join(cws.run_dir(), "batches", f"{BATCH}.json")
+    batch_path = verify.batch_path(cws.run_dir(), BATCH)
     write_json(batch_path, verify.batch_doc(BATCH, run_id, "canary", verify.reach_of(cws, run_id), entries))
     return {"root": root, "workspace": cws.path, "run": run_id, "batch": batch_path, "findings": len(entries),
             "baseUrl": origin, "server": f"node tools/a11y/fixtures/server.mjs --port {port} canary",
@@ -92,18 +92,9 @@ def score(ws, run_id, path):
     if sorted(expected) != sorted(findings):
         raise CanaryError("the canary workspace's findings do not match fixtures/canary/expected.json: "
                           "run `canary prepare` again")
-    valid, rejected = {}, []
-    for n, raw, obj in verdict.read_out(path):
-        if isinstance(obj, dict) and verdict.is_decision(obj):
-            continue
-        if not isinstance(obj, dict):
-            rejected.append({"line": n, "reasons": ["not a JSON object"], "text": raw})
-            continue
-        line, reasons = verdict.validate(obj, findings)
-        if reasons:
-            rejected.append({"line": n, "reasons": reasons, "text": raw})
-        else:
-            valid[line["key"]] = line
+    accepted, rejected, _ = verdict.check_lines(path, lambda obj: verdict.validate(obj, findings),
+                                                skip=verdict.is_decision)
+    valid = {line["key"]: line for line in accepted}
     items = []
     for key in sorted(expected):
         got = got_word(valid.get(key))

@@ -9,7 +9,7 @@ Builds published/ from the run's ledger and the snapshot in force:
   characters; plus an overlay for every hand-found issue, computed only from its raw record in
   --data and its latest verdict (a re-rate sets the severity and appends the reason once, an
   attachment adds screens, a drop leaves the record unchanged).
-- report.json: the report model U10 renders (KTD24).
+- report.json: the model report.py renders (KTD24).
 - registry.json: ids, tombstones and attachments (KTD16).
 - meta.json: run id, build hashes, tool versions, coverage and the Lighthouse calibration (this
   run's lighthouse.json, else the previous snapshot's result with its run id and date).
@@ -25,7 +25,6 @@ File formats: schemas.md ("published/").
 """
 import argparse
 import collections
-import json
 import os
 import shutil
 import string
@@ -38,11 +37,9 @@ import mapdata
 import registry
 import verify
 from calibration import due
-from lib.canon import dump, read_json, read_jsonl, write_json
-from status import check_coverage, pending_proposals, restore_published
+from lib.canon import dump, load_wcag, plural, read_json, read_jsonl, write_text
+from status import coverage_problems, pending_proposals
 
-HERE = os.path.dirname(os.path.abspath(__file__))
-CAPTURED = "2026-09-24"
 STANDARD = "WCAG 2.2 AA"
 FILES = ("issues.json", "report.json", "registry.json", "meta.json")
 TITLE_MAX = 80
@@ -55,71 +52,6 @@ COPY_MAY_BE_EMPTY = {"verify", "demoArtifactRisk"}
 NEVER_TESTED = ("1.4.12", "1.4.13", "2.4.11", "2.5.7")   # R20 names them as not tested
 DIMENSIONS = ["zoom and reflow", "real screen readers", "mobile", "dark theme"]
 RECORD_CRITERIA = ("4.1.2", "1.3.1")
-# WCAG criteria of each axe rule checks.json runs, from axe-core 4.13.0's wcagNNN tags. A criterion
-# outside wcag.json (2.1.3 on scrollable-region-focusable is AAA) is dropped where it is read.
-AXE_CRITERIA = {
-    "area-alt": ["2.4.4", "4.1.2"], "aria-allowed-attr": ["4.1.2"], "aria-braille-equivalent": ["4.1.2"],
-    "aria-command-name": ["4.1.2"], "aria-conditional-attr": ["4.1.2"], "aria-deprecated-role": ["4.1.2"],
-    "aria-hidden-body": ["1.3.1", "4.1.2"], "aria-hidden-focus": ["4.1.2"], "aria-input-field-name": ["4.1.2"],
-    "aria-meter-name": ["1.1.1"], "aria-progressbar-name": ["1.1.1"], "aria-prohibited-attr": ["4.1.2"],
-    "aria-required-attr": ["4.1.2"], "aria-required-children": ["1.3.1"], "aria-required-parent": ["1.3.1"],
-    "aria-roledescription": ["4.1.2"], "aria-roles": ["4.1.2"], "aria-tab-name": ["4.1.2"],
-    "aria-toggle-field-name": ["4.1.2"], "aria-tooltip-name": ["4.1.2"], "aria-valid-attr-value": ["4.1.2"],
-    "aria-valid-attr": ["4.1.2"], "audio-caption": ["1.2.1"], "autocomplete-valid": ["1.3.5"],
-    "avoid-inline-spacing": ["1.4.12"], "blink": ["2.2.2"], "button-name": ["4.1.2"], "bypass": ["2.4.1"],
-    "color-contrast": ["1.4.3"], "css-orientation-lock": ["1.3.4"], "definition-list": ["1.3.1"],
-    "dlitem": ["1.3.1"], "document-title": ["2.4.2"], "duplicate-id-aria": ["4.1.2"],
-    "form-field-multiple-labels": ["3.3.2"], "frame-focusable-content": ["2.1.1"], "frame-title-unique": ["4.1.2"],
-    "frame-title": ["4.1.2"], "html-has-lang": ["3.1.1"], "html-lang-valid": ["3.1.1"],
-    "html-xml-lang-mismatch": ["3.1.1"], "image-alt": ["1.1.1"], "input-button-name": ["4.1.2"],
-    "input-image-alt": ["1.1.1", "4.1.2"], "label-content-name-mismatch": ["2.5.3"], "label": ["4.1.2"],
-    "link-in-text-block": ["1.4.1"], "link-name": ["2.4.4", "4.1.2"], "list": ["1.3.1"], "listitem": ["1.3.1"],
-    "marquee": ["2.2.2"], "meta-refresh": ["2.2.1"], "meta-viewport": ["1.4.4"], "nested-interactive": ["4.1.2"],
-    "no-autoplay-audio": ["1.4.2"], "object-alt": ["1.1.1"], "p-as-heading": ["1.3.1"], "role-img-alt": ["1.1.1"],
-    "scrollable-region-focusable": ["2.1.1", "2.1.3"], "select-name": ["4.1.2"], "server-side-image-map": ["2.1.1"],
-    "summary-name": ["4.1.2"], "svg-img-alt": ["1.1.1"], "table-fake-caption": ["1.3.1"], "target-size": ["2.5.8"],
-    "td-has-header": ["1.3.1"], "td-headers-attr": ["1.3.1"], "th-has-data-cells": ["1.3.1"], "valid-lang": ["3.1.2"],
-    "video-caption": ["1.2.2"],
-}
-# A tested criterion is fully covered only when every rule listed here ran; every other one is partial.
-FULL_WHEN = {"2.5.8": {"target-size-own"}, "3.1.1": {"html-has-lang", "html-lang-valid"}}
-# The failure modes the checks cover, per criterion (R20).
-MODES = {
-    "1.1.1": "Images, icons, SVGs, meters and image inputs with no text alternative.",
-    "1.2.1": "Audio with no transcript.",
-    "1.2.2": "Video with no captions.",
-    "1.3.1": "Lists, tables, headings and ARIA parent-child roles that misstate the structure, and structure "
-             "judged from Chrome's accessibility tree.",
-    "1.3.2": "Tab order that jumps backward against the visual order.",
-    "1.3.4": "CSS that locks the screen orientation.",
-    "1.3.5": "Invalid autocomplete values.",
-    "1.4.1": "Links that differ from the text around them by color alone.",
-    "1.4.2": "Audio that plays on its own.",
-    "1.4.3": "Text contrast as axe computes it; text over images or gradients goes to the verifier.",
-    "1.4.4": "Viewport settings that block zoom; resizing text itself is not tested.",
-    "2.1.1": "Clickable elements Tab never reaches, triggers that Enter and Space cannot open, and scrollable "
-             "regions without focusable content. Arrow keys are not tested.",
-    "2.1.2": "Tab loops that Tab, Shift+Tab and Esc cannot leave, on pages, modals and drawers.",
-    "2.2.1": "Meta refresh redirects.",
-    "2.2.2": "Blinking and scrolling marquee content.",
-    "2.4.1": "A way to bypass repeated blocks.",
-    "2.4.2": "A missing or empty page title; whether the title describes the page is not tested.",
-    "2.4.3": "Focus moved into, kept inside and returned from dialogs, menus and popovers, and Tab stops on hidden "
-             "elements.",
-    "2.4.4": "Links and image-map areas with no name.",
-    "2.4.7": "A visible change around every Tab stop on pages, modals and drawers.",
-    "2.5.3": "Accessible names that leave out the visible label.",
-    "2.5.8": "Every interactive element measured against 24×24 px, with the spacing exception computed; the inline "
-             "and essential exceptions are judged by the verifier.",
-    "3.1.1": "A missing or invalid page language.",
-    "3.1.2": "Invalid language codes on parts of the page.",
-    "3.3.1": "Fields marked invalid whose error text is not linked to them.",
-    "3.3.2": "Form fields with more than one label.",
-    "4.1.2": "Controls with no name and invalid ARIA roles, states and attributes, plus names, roles and states "
-             "judged from Chrome's accessibility tree.",
-    "4.1.3": "Messages that appear outside any live region without taking focus, on toasts, confirmations and "
-             "validation errors.",
-}
 TABLES = {
     "contrast": ("contrast",),
     "keyboard": ("keyboard", "keyboard-trap", "focus-visible", "focus-order"),
@@ -217,7 +149,7 @@ def compact(value, limit=160):
 
 
 def run_date(ws, run_id):
-    created = (read_json(ws.file("run.json", run_id)) or {}).get("created") or ""
+    created = ws.run_doc(run_id).get("created") or ""
     return created[:10] if len(created) >= 10 else run_id[:10]
 
 
@@ -235,20 +167,16 @@ def load(ws, run_id):
         "by_key": {f["key"]: f for f in findings_doc.get("findings", [])},
         "decisions": read_jsonl(ws.file("decisions.jsonl", run_id)),
         "states": ws.states(run_id),
-        "run_doc": read_json(ws.file("run.json", run_id)) or {},
+        "run_doc": ws.run_doc(run_id),
         "outcomes_doc": read_json(ws.file("outcomes.json", run_id)) or {},
         "areas": {a["area"]: a for a in areas},
         "raw_issues": {i["id"]: i for a in areas for i in a.get("issues", [])},
-        "wcag": {c["number"]: c for c in read_json(os.path.join(HERE, "wcag.json"))["criteria"]},
+        "wcag": load_wcag(),
         "date": run_date(ws, run_id),
         "raw_dir": ws.raw_dir(run_id),
         "raws": {},
     })
     return ctx
-
-
-def area_of(sid, ctx):
-    return (ctx["states"].get(sid) or {}).get("area") or sid.split(".")[0]
 
 
 # ---------------------------------------------------------------------------
@@ -289,8 +217,8 @@ def fresh_issue(f, v, e, iid, ctx):
     copy["title"] = fill_within(t["copy"]["title"], facts, TITLE_MAX)
     copy["impact"] = "accessibility"
     copy["demoArtifactRisk"] = False
-    return {"id": iid, "area": area_of(e["nodeIds"][0], ctx), "title": f["title"], "severity": e["severityAfter"],
-            "category": "a11y", "detail": fill(t["detail"], facts),
+    return {"id": iid, "area": group.area_of(e["nodeIds"][0], ctx["states"]), "title": f["title"],
+            "severity": e["severityAfter"], "category": "a11y", "detail": fill(t["detail"], facts),
             "evidence": short_evidence(f.get("summary"), v.get("reason")), "nodeIds": list(e["nodeIds"]),
             "wcag": list(f["criteria"]), "copy": copy, "audit": audit_block(f, v, e["status"], ctx)}
 
@@ -301,7 +229,7 @@ def carried_issue(prior, e, iid, ctx):
     if not base:
         return None
     issue = dict(base, id=iid, nodeIds=[n for n in e["nodeIds"] if n in ctx["nodes"]])
-    issue["area"] = area_of(issue["nodeIds"][0], ctx) if issue["nodeIds"] else base.get("area")
+    issue["area"] = group.area_of(issue["nodeIds"][0], ctx["states"]) if issue["nodeIds"] else base.get("area")
     if issue.get("audit"):
         issue["audit"] = dict(issue["audit"], status=e["status"])
     return issue
@@ -379,20 +307,32 @@ def hand_overlay(hf, v, e, add, ctx):
 # The snapshot
 # ---------------------------------------------------------------------------
 
+def slug_parts(key, f):
+    """(prefix, element) a new id's slug is made of: `<rule>-<messageKey>` for an incomplete group, which
+    is one group per rule and messageKey, else the family and the element words."""
+    facts = f.get("facts") or {}
+    if f.get("basis") == "incomplete":
+        return f["rule"], facts.get("messageKey")
+    return (f.get("family") or key.split(":")[0],
+            facts.get("element") or facts.get("message") or facts.get("overlay") or f.get("title"))
+
+
 def apply_registry(ctx, problems):
-    """(registry, {finding key: [hand-found ids]}, {key: issue id}) after this run's decisions and statuses."""
+    """(registry, {finding key: [hand-found ids]}, {key: issue id}) after this run's decisions and statuses.
+
+    The snapshot's registry is copied once and changed in place."""
     d, run, date = ctx["diff"], ctx["run"], ctx["date"]
-    reg = registry.empty()
-    reg.update(ctx["snapshot"]["registry"] or {})
+    reg = registry.copied(ctx["snapshot"]["registry"])
+    held = len(reg["held"])
     for dec in ctx["decisions"]:
         if dec.get("decision") == "attach":
-            reg = registry.attach(reg, dec["finding"], dec["handFound"], run, dec.get("date") or date)
+            registry.attach_in_place(reg, dec["finding"], dec["handFound"], run, dec.get("date") or date)
         elif dec.get("decision") == "release":
-            reg = registry.release(reg, dec["finding"], dec["handFound"])
+            registry.release_in_place(reg, dec["finding"], dec["handFound"])
     dropped = {hid for hid, e in d["handFound"].items() if e["status"] == "not-reproduced"}
     for a in list(reg["attachments"]):
         if a["handFound"] in dropped:
-            reg = registry.release(reg, a["finding"], a["handFound"])
+            registry.release_in_place(reg, a["finding"], a["handFound"])
     hand_ids = sorted(ctx["raw_issues"])
     ids = {}
     for key, e in sorted(d["findings"].items()):
@@ -401,25 +341,22 @@ def apply_registry(ctx, problems):
         tomb = reg["tombstones"].get(iid) if iid else None
         if e["status"] == "fixed":
             for hid in attached:
-                reg = registry.release(reg, key, hid)
+                registry.release_in_place(reg, key, hid)
             if iid:
-                reg = registry.tombstone(reg, iid, "fixed", run, date)
+                registry.tombstone_in_place(reg, iid, "fixed", run, date)
         elif e["status"] == "withdrawn":
             if iid and not attached and tomb is None:
-                reg = registry.tombstone(reg, iid, "withdrawn", run, date)
+                registry.tombstone_in_place(reg, iid, "withdrawn", run, date)
         elif in_map(key, e, ctx) and not attached:
             if iid is None:
-                f = ctx["by_key"].get(key) or {}
-                facts = f.get("facts") or {}
-                if f.get("basis") == "incomplete":      # one group per rule and messageKey: `<rule>-<messageKey>`
-                    prefix, element = f["rule"], facts.get("messageKey")
-                else:
-                    prefix = f.get("family") or key.split(":")[0]
-                    element = facts.get("element") or facts.get("message") or facts.get("overlay") or f.get("title")
-                reg, iid = registry.mint(reg, key, area_of(e["nodeIds"][0], ctx), prefix, element, hand_ids)
+                prefix, element = slug_parts(key, ctx["by_key"].get(key) or {})
+                area = group.area_of(e["nodeIds"][0], ctx["states"])
+                iid = registry.mint_in_place(reg, key, area, prefix, element, hand_ids)
             elif tomb is not None:
-                reg = registry.untombstone(reg, iid)
+                registry.untombstone_in_place(reg, iid)
             ids[key] = iid
+    if len(reg["held"]) != held:        # ids were minted: sort held once, as registry.mint does after each
+        reg["held"] = sorted(set(reg["held"]))
     attached_to = collections.defaultdict(list)
     for a in reg["attachments"]:
         attached_to[a["finding"]].append(a["handFound"])
@@ -436,9 +373,9 @@ def in_map(key, e, ctx):
 
 
 def build_snapshot(ws, run_id):
-    """({file name: document}, [problems]) for the run, without writing anything."""
+    """({file name: document}, [problems], the context it was built from) for the run, without writing anything."""
     ctx = load(ws, run_id)
-    ctx["titles"] = {n["id"]: n.get("title") or n["id"] for a in ctx["areas"].values() for n in a.get("nodes", [])}
+    ctx["titles"] = group.node_titles({"areas": list(ctx["areas"].values())})
     problems = []
     d = ctx["diff"]
     reg, attached_to, ids = apply_registry(ctx, problems)
@@ -470,8 +407,9 @@ def build_snapshot(ws, run_id):
     issues_doc = {"generated": sorted(({k: v for k, v in i.items() if k != "key"} for i in generated),
                                       key=lambda i: (i["area"],) + mapdata.issue_order(i)),
                   "overlays": overlays}
-    meta = build_meta(ws, ctx)
-    report = build_report(ctx, reg, attached_to, attached, generated, overlays, hand)
+    lighthouse = lighthouse_of(ws, ctx)
+    meta = build_meta(ctx, lighthouse)
+    report = build_report(ctx, reg, attached_to, attached, generated, overlays, hand, lighthouse)
     docs = {"issues.json": issues_doc, "report.json": report, "registry.json": reg, "meta.json": meta}
     problems += export_problems(issues_doc, ctx) + id_problems(issues_doc, ctx) + link_problems(report, issues_doc, ctx)
     return docs, problems, ctx
@@ -486,14 +424,14 @@ def principle(criteria, ctx):
 
 
 def criterion_key(c):
-    return tuple(int(p) for p in c.split(".")) if c else (99,)
+    return group.criterion_key(c) if c else (99,)
 
 
 def curated_fix(iid):
     return (export.CURATED.get(iid) or {}).get("fixHypothesis")
 
 
-def build_report(ctx, reg, attached_to, attached, generated, overlays, hand):
+def build_report(ctx, reg, attached_to, attached, generated, overlays, hand, lighthouse):
     d, run = ctx["diff"], ctx["run"]
     rows, tables = [], {name: [] for name in TABLES}
     for i in generated:
@@ -559,6 +497,7 @@ def build_report(ctx, reg, attached_to, attached, generated, overlays, hand):
     priority = [r["id"] for r in sorted(rows, key=lambda r: (rank[r["severity"]], -r["screens"], r["id"]))]
 
     published_ids = {i["id"] for i in generated}
+    generated_by_key = {i["key"]: i for i in generated}
     not_retested, withdrawn, fixed = [], [], []
     for key, e in sorted(d["findings"].items()):
         f = ctx["by_key"].get(key) or {}
@@ -571,7 +510,7 @@ def build_report(ctx, reg, attached_to, attached, generated, overlays, hand):
         if e["status"] == "not-retested":
             if key in attached_to:
                 continue        # listed with the hand-found issue it is attached to
-            issue = next((i for i in generated if i["key"] == key), None)
+            issue = generated_by_key.get(key)
             link = iid if iid in published_ids else None
             audit = (issue or {}).get("audit") or {}
             not_retested.append({"id": link, "key": key, "title": title, "criteria": criteria, "family": family,
@@ -601,9 +540,9 @@ def build_report(ctx, reg, attached_to, attached, generated, overlays, hand):
     f_counts.update({"not-retested": len(not_retested), "fixed": len(fixed),
                      "withdrawn": sum(1 for r in withdrawn if r.get("run") == run)})
     return {
-        "run": run, "date": ctx["date"], "captured": CAPTURED, "baseline": d["baseline"], "standard": STANDARD,
-        "counts": {s: sum(1 for r in rows if r["severity"] == s) for s in ("high", "medium", "low")},
-        "coverage": build_coverage(ctx),
+        "run": run, "date": ctx["date"], "captured": export.CAPTURED, "baseline": d["baseline"], "standard": STANDARD,
+        "counts": {s: sum(1 for r in rows if r["severity"] == s) for s in rank},
+        "coverage": build_coverage(ctx, lighthouse),
         "changes": {"findings": f_counts, "handFound": h_counts},
         "findings": rows, "tables": tables,
         "advisory": ctx["doc"].get("advisory") or [],
@@ -612,7 +551,8 @@ def build_report(ctx, reg, attached_to, attached, generated, overlays, hand):
     }
 
 
-def build_coverage(ctx):
+def build_coverage(ctx, lighthouse):
+    checks_data = ctx["checks"]
     outcomes = ctx["outcomes"]
     rules, ran = set(), set()
     for sid, o in sorted(outcomes.items()):
@@ -624,11 +564,12 @@ def build_coverage(ctx):
             rules.update(((raw.get("checks") or {}).get("axe") or {}).get("rulesRan") or [])
     by_criterion = collections.defaultdict(set)
     for rule in rules:
-        for c in AXE_CRITERIA.get(rule, []):
+        # axeCriteria holds axe-core's wcagNNN tags; a criterion outside wcag.json (2.1.3 is AAA) drops out below
+        for c in checks_data["axeCriteria"].get(rule, []):
             by_criterion[c].add(rule)
-    for rule, module in diff.CUSTOM_CHECKS.items():
+    for rule, module in checks_data["customChecks"].items():
         if module in ran:
-            for c in ctx["checks"]["customCriteria"].get(rule, []):
+            for c in checks_data["customCriteria"].get(rule, []):
                 by_criterion[c].add(rule)
     if "records" in ran:
         for c in RECORD_CRITERIA:
@@ -638,17 +579,21 @@ def build_coverage(ctx):
         base = {"number": c, "name": info["name"], "principle": info["principle"], "level": info["level"]}
         checks = sorted(by_criterion.get(c, ()))
         if checks and c not in NEVER_TESTED:
-            full = c in FULL_WHEN and FULL_WHEN[c] <= set(checks)
+            full_when = checks_data["fullCoverage"].get(c)
+            full = full_when is not None and set(full_when) <= set(checks)
             tested.append(dict(base, coverage="full" if full else "partial", checks=checks,
-                               modes=MODES.get(c) or f"Checked by {', '.join(checks)}."))
+                               modes=checks_data["failureModes"].get(c) or f"Checked by {', '.join(checks)}."))
         else:
             untested.append(dict(base, named=c in NEVER_TESTED))
-    audited = sum(1 for o in outcomes.values() if o.get("outcome") == "audited")
-    builds = set(ctx["run_doc"].get("builds") or []) | set(ctx["outcomes_doc"].get("builds") or [])
-    builds |= {o.get("build") for o in outcomes.values() if o.get("build")}
-    return {"states": len(outcomes), "audited": audited, "unreachable": len(outcomes) - audited,
+    builds = doc_builds(ctx) | {o.get("build") for o in outcomes.values() if o.get("build")}
+    return {**build_coverage_counts(ctx),
             "tested": tested, "untested": untested, "dimensions": list(DIMENSIONS), "builds": sorted(builds),
-            "lighthouse": lighthouse_line(ctx["lighthouse"]), "caveat": export.CAVEAT}
+            "lighthouse": lighthouse_line(lighthouse), "caveat": export.CAVEAT}
+
+
+def doc_builds(ctx):
+    """The build hashes run.json and outcomes.json record."""
+    return set(ctx["run_doc"].get("builds") or []) | set(ctx["outcomes_doc"].get("builds") or [])
 
 
 def lighthouse_line(lh):
@@ -656,10 +601,9 @@ def lighthouse_line(lh):
         return {"run": None, "date": None, "unexplained": None, "line": "Lighthouse calibration has not run."}
     r = lh.get("result") or {}
     n = len(r.get("states") or [])
-    line = (f"Lighthouse (axe {r.get('lighthouseAxe')}, Chrome {r.get('chrome')}) audited {n} "
-            f"state{'' if n == 1 else 's'} on {lh.get('date')} (run {lh.get('run')}): "
-            f"{r.get('unexplained', 0)} unexplained difference{'' if r.get('unexplained', 0) == 1 else 's'} "
-            f"from the sweep.")
+    line = (f"Lighthouse (axe {r.get('lighthouseAxe')}, Chrome {r.get('chrome')}) audited "
+            f"{plural(n, 'state')} on {lh.get('date')} (run {lh.get('run')}): "
+            f"{plural(r.get('unexplained', 0), 'unexplained difference')} from the sweep.")
     return {"run": lh.get("run"), "date": lh.get("date"), "unexplained": r.get("unexplained"), "line": line}
 
 
@@ -679,19 +623,20 @@ def unreachable_groups(ctx):
 # meta.json
 # ---------------------------------------------------------------------------
 
-def build_meta(ws, ctx):
+def lighthouse_of(ws, ctx):
+    """This run's Lighthouse calibration when it is due or the snapshot has none, else the snapshot's."""
     run_id = ctx["run"]
     mine = read_json(ws.file("lighthouse.json", run_id))
     previous = (ctx["snapshot"]["meta"] or {}).get("lighthouse")
     if mine and (due(ws, run_id) or not previous):
-        lighthouse = {"run": run_id, "date": mine.get("date"), "result": mine}
-    else:
-        lighthouse = previous
-    ctx["lighthouse"] = lighthouse
-    cov = build_coverage_counts(ctx)
-    builds = sorted(set(ctx["run_doc"].get("builds") or []) | set(ctx["outcomes_doc"].get("builds") or []))
-    return {"run": run_id, "date": ctx["date"], "builds": builds, "versions": ctx["run_doc"].get("versions") or {},
-            "coverage": cov, "lighthouse": lighthouse}
+        return {"run": run_id, "date": mine.get("date"), "result": mine}
+    return previous
+
+
+def build_meta(ctx, lighthouse):
+    return {"run": ctx["run"], "date": ctx["date"], "builds": sorted(doc_builds(ctx)),
+            "versions": ctx["run_doc"].get("versions") or {}, "coverage": build_coverage_counts(ctx),
+            "lighthouse": lighthouse}
 
 
 def build_coverage_counts(ctx):
@@ -764,11 +709,7 @@ def link_problems(report, issues_doc, ctx):
 def ledger_problems(ws, run_id, ctx):
     """The gates that read the run's files: coverage, verdicts, proposals, canary, diff and its baseline."""
     out = []
-    states = ctx["states"]
-    recorded = ctx["outcomes"]
-    problems = check_coverage(states, [s for s, o in recorded.items() if o.get("outcome") == "audited"],
-                              [s for s, o in recorded.items() if o.get("outcome") == "unreachable"])
-    out += [f"coverage: {p}" for p in problems]
+    out += [f"coverage: {p}" for p in coverage_problems(ctx["states"], ctx["outcomes"])]
     missing = sorted(f["key"] for f in ctx["findings"] if f["key"] not in ctx["verdicts"])
     if missing:
         out.append(f"no verdict for {len(missing)} finding(s): {', '.join(missing)}")
@@ -797,7 +738,7 @@ def ledger_problems(ws, run_id, ctx):
 
 def tidy(pub):
     """Restore a snapshot left between the two renames, and remove what a finished or failed publish left."""
-    restore_published(pub)
+    mapdata.restore_snapshot(pub)
     if os.path.isdir(pub) and os.path.exists(pub + ".prev"):
         shutil.rmtree(pub + ".prev")
     if os.path.exists(pub + ".tmp"):
@@ -807,21 +748,20 @@ def tidy(pub):
 def swap(pub, docs):
     """Write published.tmp/, check it, then rename published/ → .prev/, .tmp/ → published/, delete .prev/."""
     tmp, prev = pub + ".tmp", pub + ".prev"
+    texts = {}
     for name in FILES:
-        write_json(os.path.join(tmp, name), docs[name])
+        texts[name] = dump(docs[name])
+        write_text(os.path.join(tmp, name), texts[name])
     for name in FILES:
-        if read_json(os.path.join(tmp, name)) != read_json_text(docs[name]):
-            shutil.rmtree(tmp)
-            raise Refused(f"published.tmp/{name} does not read back as written")
+        with open(os.path.join(tmp, name), encoding="utf-8") as f:
+            if f.read() != texts[name]:
+                shutil.rmtree(tmp)
+                raise Refused(f"published.tmp/{name} does not read back as written")
     if os.path.exists(pub):
         os.rename(pub, prev)
     os.rename(tmp, pub)
     if os.path.exists(prev):
         shutil.rmtree(prev)
-
-
-def read_json_text(doc):
-    return json.loads(dump(doc))
 
 
 def publish(ws, run_id):

@@ -16,10 +16,10 @@ import { closeSync, existsSync, mkdirSync, openSync, readdirSync, statSync, unli
 import { dirname, join, resolve } from 'node:path';
 import { fileURLToPath } from 'node:url';
 import { setTimeout as sleep } from 'node:timers/promises';
-import { ROOT, nameTemplate, nameTemplateRegex, readJson, sha1, writeJson } from './lib/canon.mjs';
+import { ROOT, cmp, escapeRegExp, nameTemplate, nameTemplateRegex, readJson, sha1, writeJson } from './lib/canon.mjs';
 import { cdpSession, injectMotionOff, launch, newContext, parkPointer, settle, trackRequests } from './lib/browser.mjs';
-import { armLayer } from './lib/scope.mjs';
-import { parse } from './lib/cli.mjs';
+import { OVERLAY_KINDS, armLayer, findLayer } from './lib/scope.mjs';
+import { parse, runMain } from './lib/cli.mjs';
 import { captureFingerprint, matchFingerprint } from './fingerprint.mjs';
 
 const HERE = dirname(fileURLToPath(import.meta.url));
@@ -29,9 +29,7 @@ const SIMILARITY = join(HERE, 'similarity.py');
 // A symbol key: spreads keep it, JSON and canonical() ignore it.
 export const META = Symbol.for('a11y.recipes.meta');
 
-export const ACTIONS = new Set(['goto', 'click', 'hover', 'check', 'scroll', 'press', 'fill', 'select', 'wait']);
-// Kinds whose state is an open layer: a replay that finds none did not reach the state (KTD7).
-export const NEEDS_LAYER = new Set(['modal', 'drawer', 'menu', 'popover', 'toast']);
+const ACTIONS = new Set(['goto', 'click', 'hover', 'check', 'scroll', 'press', 'fill', 'select', 'wait']);
 // Unreachable reasons that mean the recipe itself broke (KTD8 refresh).
 const RECIPE_REASONS = new Set(['step-failed', 'fingerprint-mismatch']);
 
@@ -45,7 +43,7 @@ const edgeKey = (from, to) => `${from}\n${to}`;
 // Recipes and chains
 // ---------------------------------------------------------------------------
 
-export function mapMeta(map) {
+function mapMeta(map) {
   const edges = new Map();
   const nodes = {};
   for (const a of map?.areas || []) {
@@ -103,7 +101,7 @@ function candidates(scope, l) {
   return out;
 }
 
-export function describeLocator(l) {
+function describeLocator(l) {
   return JSON.stringify(Object.fromEntries(Object.entries(l || {}).filter(([, v]) => v !== null && v !== undefined)));
 }
 
@@ -137,7 +135,8 @@ export function allowedOrigins(policy, baseUrl) {
 
 const denied = (policy) => new Set((policy.denylist?.names || []).map((n) => nameTemplate(n).toLowerCase()));
 const isDenied = (deny, s) => typeof s === 'string' && deny.has(nameTemplate(s).toLowerCase());
-const fixtureValues = (policy) => new Set(Object.values(policy.fixtureValues || {}).map(String));
+// The values a fill step may type (policy.fixtureValues), as strings.
+export const fixtureValues = (policy) => new Set(Object.values(policy?.fixtureValues || {}).map(String));
 
 function locatorsIn(action, value) {
   const top = ['click', 'hover', 'check'].includes(action) ? value
@@ -150,7 +149,7 @@ function locatorsIn(action, value) {
 }
 
 // Why a step may not run, judged from the recipe alone, or null.
-export function stepRefusal(step, policy, baseUrl) {
+function stepRefusal(step, policy, baseUrl) {
   const keys = step && typeof step === 'object' ? Object.keys(step) : [];
   if (keys.length !== 1 || !ACTIONS.has(keys[0])) return `unknown action ${JSON.stringify(step)}`;
   const [action] = keys;
@@ -269,12 +268,13 @@ export async function runStep(page, ctx, step, policy) {
 
 // Replay `stateId` into `page` (KTD6, KTD7). ctx: {cdp, tracker (armed right after newPage()), baseUrl}.
 // The pointer is parked after the root load and again after a final hop that does not end in a hover.
-// Options: recipes (from loadRecipes), policy, beforeFinalHop(page), untilParent, and `kind` and
-// `edges` ([[from, to], ...]) to override what loadRecipes() read from the map.
+// Options: recipes (from loadRecipes), policy, beforeFinalHop(page), untilParent, `kind` and
+// `edges` ([[from, to], ...]) to override what loadRecipes() read from the map, and `layerKind`.
 // Returns {status: 'reached' | 'step-failed' | 'fingerprint-mismatch', step, message, fingerprint, mutates}:
 // `step` is the failing step (0 is the root load, then hop steps in chain order), `fingerprint` what
-// the replay captured, `mutates` whether a hop submitted a form.
-export async function replay(page, ctx, stateId, { recipes, policy, beforeFinalHop = null, untilParent = false, kind = null, edges = null } = {}) {
+// the replay captured, `mutates` whether a hop submitted a form. When the fingerprint read the top
+// layer for `layerKind`, a reached result also carries that `layer` (lib/scope.mjs findLayer).
+export async function replay(page, ctx, stateId, { recipes, policy, beforeFinalHop = null, untilParent = false, kind = null, edges = null, layerKind = null } = {}) {
   if (!policy) throw new Error('replay() needs the policy (ws.policy())');
   const meta = recipes[META] || { edges: new Map(), nodes: {} };
   const edgeSet = edges ? new Set(edges.map(([f, t]) => edgeKey(f, t))) : new Set(meta.edges.keys());
@@ -338,11 +338,13 @@ export async function replay(page, ctx, stateId, { recipes, policy, beforeFinalH
       await settle(page, ctx.cdp, { tracker: ctx.tracker });
     }
     await injectMotionOff(page);
-    const fingerprint = await captureFingerprint(page, ctx.cdp, targetKind);
-    if (!target.fingerprint) return { status: 'reached', step: null, message: `${target.id} has no fingerprint yet`, fingerprint, mutates };
+    const layer = await findLayer(ctx.cdp, targetKind);
+    const fingerprint = await captureFingerprint(page, ctx.cdp, targetKind, layer);
+    const withLayer = layerKind && layerKind === targetKind ? { layer } : {};
+    if (!target.fingerprint) return { status: 'reached', step: null, message: `${target.id} has no fingerprint yet`, fingerprint, mutates, ...withLayer };
     const m = matchFingerprint(target.fingerprint, fingerprint);
     if (!m.ok) return { status: 'fingerprint-mismatch', step: null, message: `${target.id}: ${m.why}`, fingerprint, mutates };
-    return { status: 'reached', step: null, message: null, fingerprint, mutates };
+    return { status: 'reached', step: null, message: null, fingerprint, mutates, ...withLayer };
   } finally {
     page.off('request', onRequest);
   }
@@ -353,21 +355,20 @@ export async function replay(page, ctx, stateId, { recipes, policy, beforeFinalH
 // ---------------------------------------------------------------------------
 
 function verbPattern(verbs) {
-  const esc = (s) => s.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
   const alts = (verbs || []).filter((v) => v.trim()).sort((a, b) => b.length - a.length)
-    .map((v) => v.trim().split(/\s+/).map(esc).join('\\s+'));
+    .map((v) => v.trim().split(/\s+/).map(escapeRegExp).join('\\s+'));
   return alts.length ? new RegExp(`(?<![A-Za-z0-9])(?:${alts.join('|')})(?![A-Za-z0-9])`, 'i') : null;
 }
 
 // The label plan.py keeps between two states: fewest mutating verbs, then the smallest label.
 function bestLabel(labels, pattern) {
   const score = (l) => [pattern && pattern.test(l) ? 1 : 0, l];
-  return labels.map(score).sort((a, b) => a[0] - b[0] || (a[1] < b[1] ? -1 : a[1] > b[1] ? 1 : 0))[0][1];
+  return labels.map(score).sort((a, b) => a[0] - b[0] || cmp(a[1], b[1]))[0][1];
 }
 
 // sha1 of [[from, to, label], ...] along the recipe's own chain, labels from the current map, as
 // plan.py computes `source` for its paths. null when an edge on the chain is gone from the map.
-export function sourceOf(recipes, stateId, policy) {
+function sourceOf(recipes, stateId, policy) {
   const meta = recipes[META];
   const pattern = verbPattern(policy?.mutatingVerbs);
   const edges = [];
@@ -382,12 +383,10 @@ export function sourceOf(recipes, stateId, policy) {
 
 // States the previous published run found unreachable because their recipe broke.
 function previousUnreachable(ws) {
-  const meta = readJson(join(ws.publishedDir, 'meta.json'));
-  if (!meta?.run) return {};
-  const outcomes = readJson(ws.file('outcomes.json', meta.run));
+  const prev = ws.previousOutcomes();
   const out = {};
-  for (const [id, o] of Object.entries(outcomes?.states || {})) {
-    if (o.outcome === 'unreachable' && RECIPE_REASONS.has(o.reason)) out[id] = { run: meta.run, reason: o.reason };
+  for (const [id, o] of Object.entries(prev?.states || {})) {
+    if (o.outcome === 'unreachable' && RECIPE_REASONS.has(o.reason)) out[id] = { run: prev.run, reason: o.reason };
   }
   return out;
 }
@@ -427,7 +426,7 @@ export function refreshQueue(ws, runId, recipes = loadRecipes(ws)) {
 
 export function status(ws) {
   const runId = ws.runId(false);
-  if (!runId || !existsSync(ws.file('states.json', runId))) return { pending: true };
+  if (!ws.hasStates(runId)) return { pending: true };
   const recipes = loadRecipes(ws);
   const counts = { recipes: 0, accepted: 0, review: 0, rejected: 0, draft: 0 };
   for (const r of Object.values(recipes)) {
@@ -483,8 +482,9 @@ export function writeRecipe(ws, area, id, entry, { onlyIfMissing = false } = {})
   });
 }
 
-export function similarity(captured, shot) {
-  const r = spawnSync('python3', [SIMILARITY, captured, shot, '--json'], { encoding: 'utf8' });
+// {score, threshold, pass} for whichever replay screenshot is closest to the capture, in one process.
+function similarity(captured, ...shots) {
+  const r = spawnSync('python3', [SIMILARITY, captured, ...shots, '--json'], { encoding: 'utf8' });
   if (r.status !== 0) throw new Error(`similarity.py failed: ${r.stderr}`);
   return JSON.parse(r.stdout);
 }
@@ -552,7 +552,8 @@ async function checkOne(ws, runId, states, policy, browser, map, id, candidate) 
     keepDraft();
     return { state: id, ...one };
   }
-  if (NEEDS_LAYER.has(s.kind) && one.fingerprint.top.role === 'document') {
+  // A state of an overlay kind is an open layer: a replay that finds none did not reach it (KTD7).
+  if (OVERLAY_KINDS.has(s.kind) && one.fingerprint.top.role === 'document') {
     keepDraft();
     return { state: id, status: 'structure-missing', step: null, message: `a ${s.kind} needs an open layer; the replay found none`, fingerprint: one.fingerprint };
   }
@@ -567,9 +568,7 @@ async function checkOne(ws, runId, states, policy, browser, map, id, candidate) 
   }
 
   // The better of the two themes: whichever the capture was taken in.
-  const sim = captured && existsSync(captured)
-    ? [similarity(captured, shots.light), similarity(captured, shots.dark)].reduce((a, b) => (b.score > a.score ? b : a))
-    : null;
+  const sim = captured && existsSync(captured) ? similarity(captured, shots.light, shots.dark) : null;
   const mutates = Boolean(one.mutates || two.mutates || s.mutates || list.slice(0, -1).some((r) => r.mutates));
   let status = 'accepted';
   let review = null;
@@ -642,10 +641,4 @@ async function main(argv) {
   return 2;
 }
 
-if (process.argv[1] && resolve(process.argv[1]) === fileURLToPath(import.meta.url)) {
-  main(process.argv.slice(2)).then((code) => process.exit(code), (e) => {
-    console.error(`recipe: ${e.message}`);
-    console.log(JSON.stringify({ error: e.message }));
-    process.exit(1);
-  });
-}
+runMain(import.meta.url, 'recipe', main);

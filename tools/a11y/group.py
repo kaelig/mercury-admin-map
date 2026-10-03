@@ -23,7 +23,8 @@ import sys
 
 import mapdata
 import signature
-from lib.canon import ROOT, read_json, read_jsonl, sha, write_json
+import verdict
+from lib.canon import latest_by, load_checks, load_wcag, plural, read_json, read_jsonl, rel, sha, write_json
 
 HERE = os.path.dirname(os.path.abspath(__file__))
 AGREEMENT = 0.9     # KTD15: flag a group whose members share a tag-and-attribute set less often than this
@@ -45,10 +46,8 @@ class GroupError(Exception):
 # ---------------------------------------------------------------------------
 
 def load_check_data():
-    checks = read_json(os.path.join(HERE, "checks.json"))
-    wcag = {c["number"]: c for c in read_json(os.path.join(HERE, "wcag.json"))["criteria"]}
     hand = read_json(os.path.join(HERE, "hand-found.json"))
-    return checks, wcag, hand
+    return load_checks(), load_wcag(), hand
 
 
 def audited_raws(ws, run_id, states):
@@ -65,7 +64,7 @@ def audited_raws(ws, run_id, states):
         ids = sorted(states)
     raws, absent = {}, []
     for sid in ids:
-        doc = read_json(os.path.join(raw_dir, f"{sid}.json"))
+        doc = ws.raw(sid, run_id)
         if doc is None:
             absent.append(sid)
         elif doc.get("status") == "audited":
@@ -75,7 +74,7 @@ def audited_raws(ws, run_id, states):
 
 def latest_judgments(ws, run_id):
     """The last judgment for each record signature."""
-    return {j["sig"]: j for j in read_jsonl(ws.file("judgments.jsonl", run_id))}
+    return latest_by(read_jsonl(ws.file("judgments.jsonl", run_id)), "sig")
 
 
 def hand_found_issues(ws, hand):
@@ -122,9 +121,8 @@ def element_words(occ, limit=50):
 
 
 def ratio_text(value, decimals=None):
-    try:
-        x = float(str(value).replace(":1", "").strip())
-    except (TypeError, ValueError):
+    x = verdict.number(value)
+    if x is None:
         return UNKNOWN
     return f"{x:.{decimals}f}" if decimals is not None else f"{x:g}"
 
@@ -215,7 +213,7 @@ def element_count(g, ctx):
     """An incomplete group's distinct elements, counted by the key a violation on each would get."""
     shape = ctx["checks"]["families"][g["family"]]["key"]
     n = len({signature.finding_key(g["family"], g["rule"], shape, m["occ"], m["evidence"]) for m in g["members"]})
-    return f"{n} element{'' if n == 1 else 's'}"
+    return plural(n, "element")
 
 
 def why_words(message_key, ctx):
@@ -301,21 +299,26 @@ def pick_sample(primary, ids, states, occ_of):
     """The primary plus the state least like it: another area, then another kind, then the largest
     class distance; ties go to the fewest hops, then the id."""
     others = [s for s in ids if s != primary]
-    if not others:
-        return [primary]
+    if len(others) < 2:
+        return [primary] + others
     p_area, p_kind = area_of(primary, states), (states.get(primary) or {}).get("kind")
+    p_classes = signature.class_set(occ_of(primary))
 
     def rank(s):
         return (-(area_of(s, states) != p_area), -((states.get(s) or {}).get("kind") != p_kind),
-                -signature.class_distance(occ_of(primary), occ_of(s)), hops(states.get(s)), s)
+                -signature.set_distance(p_classes, signature.class_set(occ_of(s))), hops(states.get(s)), s)
 
     return [primary, min(others, key=rank)]
 
 
+def criterion_key(number):
+    """(2, 4, 11) for "2.4.11": criteria in numeric order."""
+    return tuple(int(p) for p in number.split("."))
+
+
 def order_criteria(criteria, fam):
     order = fam["criteria"]
-    return sorted(set(criteria), key=lambda c: (order.index(c) if c in order else len(order),
-                                                tuple(int(p) for p in c.split("."))))
+    return sorted(set(criteria), key=lambda c: (order.index(c) if c in order else len(order), criterion_key(c)))
 
 
 # ---------------------------------------------------------------------------
@@ -442,17 +445,21 @@ def propose(scanner, hand_found, registry):
     """KTD17: same family, and at least half of the hand-found issue's screens among the finding's.
     Many-to-many. An attachment the registry already holds stands and is not proposed again."""
     attached = {(a["finding"], a["handFound"]) for a in registry.get("attachments", [])}
+    by_family = collections.defaultdict(list)     # family: [(hand-found finding, its screens)]
+    for h in hand_found:
+        screens = set(h["states"])
+        if screens:
+            by_family[h["family"]].append((h, screens))
     out = []
     for f in scanner:
         mine = set(f["states"])
-        for h in hand_found:
-            screens = set(h["states"])
-            if f["family"] != h["family"] or not screens or (f["key"], h["issueId"]) in attached:
+        for h, screens in by_family.get(f["family"], []):
+            if (f["key"], h["issueId"]) in attached:
                 continue
             overlap = len(screens & mine) / len(screens)
             if overlap >= OVERLAP:
-                out.append({"id": sha([f["key"], h["issueId"]]), "finding": f["key"], "handFound": h["issueId"],
-                            "overlap": round(overlap, 4), "family": f["family"]})
+                out.append({"id": signature.proposal_id(f["key"], h["issueId"]), "finding": f["key"],
+                            "handFound": h["issueId"], "overlap": round(overlap, 4), "family": f["family"]})
     return sorted(out, key=lambda p: (p["finding"], p["handFound"]))
 
 
@@ -477,7 +484,7 @@ def build(ws, run_id):
         raise GroupError(f"run {run_id} has no states.json: run `audit.py plan` first")
     raws, absent = audited_raws(ws, run_id, states)
     issues = hand_found_issues(ws, hand)
-    registry = read_json(os.path.join(ws.published_dir, "registry.json")) or {}
+    registry = ws.published("registry.json") or {}
     ctx = {"checks": checks, "wcag": wcag, "hand": hand, "states": states, "registry": registry,
            "titles": node_titles(ws.load_map())}
 
@@ -496,10 +503,10 @@ def build(ws, run_id):
         per_rule[g["rule"]][0] += len(g["members"])
         per_rule[g["rule"]][1] += 1
     for rule, (nodes, n) in sorted(per_rule.items()):
-        lines.append(f"{rule}: {nodes} node{'' if nodes == 1 else 's'}, {n} group{'' if n == 1 else 's'}")
-    lines.append(f"hand-found: {len(hand_found)} issue{'' if len(hand_found) == 1 else 's'}")
+        lines.append(f"{rule}: {plural(nodes, 'node')}, {plural(n, 'group')}")
+    lines.append(f"hand-found: {plural(len(hand_found), 'issue')}")
     for reason, n in sorted(skipped.items()):
-        lines.append(f"skipped {n} result{'' if n == 1 else 's'}, {reason}")
+        lines.append(f"skipped {plural(n, 'result')}, {reason}")
     for f in doc["flags"]:
         lines.append(f"flagged {f['key']}: {f['message']}")
     if absent:
@@ -539,6 +546,5 @@ def cli(ws, sub, argv):
     path = ws.file("findings.json", run_id)
     write_json(path, doc)
     print("\n".join(lines))
-    rel = os.path.relpath(path, ROOT)
-    print(f"Wrote {path if rel.startswith('..') else rel}")
+    print(f"Wrote {rel(path)}")
     return 0

@@ -1,4 +1,4 @@
-"""U1: the `plan` and `preflight` stages and the stage table (KTD5, KTD26, KTD27).
+"""The `plan` and `preflight` stages and the stage table (KTD5, KTD26, KTD27).
 
 Run: cd tools/a11y && python3 -m unittest tests.test_plan -v
 """
@@ -529,7 +529,7 @@ class StageTable(unittest.TestCase):
         self.assertTrue(args[1].endswith("sweep.mjs"))
         self.assertEqual(args[-2:], ["--workers", "2"])
 
-    def test_u1_stage_modules_exist(self):
+    def test_plan_and_preflight_modules_exist(self):
         for cmd, sub, lang, module, unit, summary in audit.STAGES:
             if cmd in ("plan", "preflight"):
                 self.assertTrue(os.path.exists(os.path.join(audit.HERE, module)), module)

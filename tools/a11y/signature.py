@@ -27,6 +27,8 @@ NTH = re.compile(r":nth-(?:last-)?(?:child|of-type)\([^)]*\)")
 COLOR_STEP = 8  # channels are floored to a multiple of this, so rendering noise keeps one key
 HEX = re.compile(r"^#([0-9a-fA-F]{3,4}|[0-9a-fA-F]{6}|[0-9a-fA-F]{8})$")
 RGB = re.compile(r"^rgba?\(\s*([0-9.]+)[\s,]+([0-9.]+)[\s,]+([0-9.]+)")
+# The families a judged announced-as record can be flagged in (records.jsonl, judgments.jsonl).
+RECORD_FAMILIES = ("name", "role-state", "structure")
 
 
 # ---------------------------------------------------------------------------
@@ -165,11 +167,16 @@ def hand_key(issue_id):
     return f"hand:{issue_id}"
 
 
+def proposal_id(finding_key, hand_found_id):
+    """The id of an attachment proposal, and of the registry attachment it becomes (KTD17)."""
+    return sha([finding_key, hand_found_id])
+
+
 # ---------------------------------------------------------------------------
 # Group checks
 # ---------------------------------------------------------------------------
 
-def shape(occ):
+def tag_attr_set(occ):
     """An element's tag-and-attribute set: tag, role, class attribute as written (FontAwesome
     dropped) and data-* attributes."""
     o = occ or {}
@@ -183,7 +190,7 @@ def agreement(occs):
     occs = list(occs)
     if not occs:
         return 1
-    top = collections.Counter(shape(o) for o in occs).most_common(1)[0][1]
+    top = collections.Counter(tag_attr_set(o) for o in occs).most_common(1)[0][1]
     return round(top / len(occs), 4)
 
 
@@ -197,7 +204,11 @@ def class_set(occ):
 
 def class_distance(a, b):
     """Jaccard distance between the local classes of two elements and their ancestors."""
-    x, y = class_set(a), class_set(b)
+    return set_distance(class_set(a), class_set(b))
+
+
+def set_distance(x, y):
+    """Jaccard distance between two class sets (class_set)."""
     if not x and not y:
         return 0
     return round(1 - len(x & y) / len(x | y), 4)

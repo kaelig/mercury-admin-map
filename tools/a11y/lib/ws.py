@@ -83,11 +83,23 @@ class Workspace:
         doc = read_json(self.file("states.json", run_id))
         return doc["states"] if doc else {}
 
+    def run_doc(self, run_id=None):
+        """The run's run.json, or {} before `plan` writes it."""
+        return read_json(self.file("run.json", run_id)) or {}
+
+    def raw(self, sid, run_id=None):
+        """The state's raw file, or None before the sweep writes it."""
+        return read_json(os.path.join(self.raw_dir(run_id), f"{sid}.json"))
+
     def load_map(self):
         m = read_json(self.map_path)
         if m is None:
             raise SystemExit(f"{self.map_path} not found: run `python3 build.py` first")
         return m
 
+    def published(self, name):
+        """A file of the snapshot in force (published/<name>), or None when it has none."""
+        return read_json(os.path.join(self.published_dir, name))
+
     def published_meta(self):
-        return read_json(os.path.join(self.published_dir, "meta.json"))
+        return self.published("meta.json")

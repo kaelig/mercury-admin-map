@@ -40,8 +40,8 @@ CAPTURED = "2026-09-24"  # capture date of the screenshots (see project folder n
 CAPTURE_SETUP = "1440x900 viewport at 2x, headless Chrome"
 SCHEMA_VERSION = 2
 A11Y_SOURCE_LABEL = "source:a11y-audit"
-# Write-time caps for issues on many screens (KTD23): affectedScreens entries in issues.json and
-# issues.jsonl, and table rows in the ticket. Records at or under the cap keep full lists and tables.
+# Caps for issues on many screens (KTD23): affectedScreens entries per record, which is what issues.json
+# and issues.jsonl carry, and table rows in the ticket. Records at or under the cap keep full lists and tables.
 SCREEN_CAP = 25
 TICKET_SCREEN_ROWS = 15
 VERDICT_PHRASE = {"confirm": "confirmed", "rerate": "re-rated", "drop": "not reproduced"}
@@ -6575,19 +6575,29 @@ def open_step(node):
             f"'Viewing as Admin', switch to Admin there if it does not).")
 
 
-def reproduction(issue, nodes, edges, incoming, journeys):
+def journeys_by_node(journeys):
+    """Node id -> [(journey, index of the node's first step in it)], in journey order."""
+    by_node = defaultdict(list)
+    for j in journeys:
+        first = {}
+        for idx, step in enumerate(j["steps"]):
+            first.setdefault(step, idx)
+        for step, idx in first.items():
+            by_node[step].append((j, idx))
+    return by_node
+
+
+def reproduction(issue, nodes, edges, incoming, by_node):
     targets = issue["nodeIds"]
 
     # 1. A journey that reaches one of the affected screens. Prefer the first
     #    (primary) screen, then the shortest route, then a journey in the same area.
     best = None
     for rank, target in enumerate(targets):
-        for j in journeys:
-            if target in j["steps"]:
-                idx = j["steps"].index(target)
-                key = (rank, idx, j["area"] != issue["area"])
-                if best is None or key < best[0]:
-                    best = (key, j, idx, target)
+        for j, idx in by_node.get(target, ()):
+            key = (rank, idx, j["area"] != issue["area"])
+            if best is None or key < best[0]:
+                best = (key, j, idx, target)
         if best is not None and best[0][0] == rank:
             break
     if best:
@@ -6652,6 +6662,13 @@ def screen_ref(node, urls):
         "viewer": urls.viewer(node["id"]),
         "note": node["note"],
     }
+
+
+def screen_refs(issue, nodes, urls):
+    """screen_ref for the issue's first SCREEN_CAP screens (KTD23); affectedScreenIds keeps them all.
+    Every id is still looked up, so a stale one fails the build."""
+    screens = [nodes[n] for n in issue["nodeIds"]]
+    return [screen_ref(node, urls) for node in screens[:SCREEN_CAP]]
 
 
 def verify_list(issue, copy, pattern_refs):
@@ -6785,17 +6802,9 @@ REQUIRED_ISSUE_FIELDS = [
     "ticketUrl", "curated",
 ]
 # Only on issues the accessibility audit verified (KTD23); `history` only on hand-found ones it re-rated or dropped.
-AUDIT_FIELDS = ["wcag", "audit", "history"]
+AUDIT_FIELDS = list(mapdata.OVERLAY_FIELDS)
 # Fields allowed to be empty lists or false.
 MAY_BE_EMPTY = {"patterns", "demoArtifactRisk", "curated"}
-
-
-def capped(r):
-    """The record as issues.json, issues.jsonl and its ticket write it (KTD23): an issue on more than
-    SCREEN_CAP screens keeps its first SCREEN_CAP affectedScreens; affectedScreenIds keeps them all."""
-    if len(r["affectedScreens"]) <= SCREEN_CAP:
-        return r
-    return dict(r, affectedScreens=r["affectedScreens"][:SCREEN_CAP])
 
 
 def build_issues(areas, patterns, nodes, edges, incoming, journeys, urls):
@@ -6804,6 +6813,7 @@ def build_issues(areas, patterns, nodes, edges, incoming, journeys, urls):
         for iid in p["issueIds"]:
             issue_patterns[iid].append({"id": p["id"], "title": p["title"]})
     area_titles = {a["area"]: a["title"] for a in areas}
+    by_node = journeys_by_node(journeys)
 
     records, warnings = [], []
     for a in areas:
@@ -6847,10 +6857,10 @@ def build_issues(areas, patterns, nodes, edges, incoming, journeys, urls):
                 "confidence": copy["confidence"],
                 "confidenceReason": copy["confidenceReason"],
                 "demoArtifactRisk": bool(copy["demoArtifactRisk"]),
-                "affectedScreens": [screen_ref(nodes[n], urls) for n in issue["nodeIds"]],
+                "affectedScreens": screen_refs(issue, nodes, urls),
                 "affectedScreenCount": len(issue["nodeIds"]),
                 "affectedScreenIds": list(issue["nodeIds"]),
-                "reproduce": reproduction(issue, nodes, edges, incoming, journeys),
+                "reproduce": reproduction(issue, nodes, edges, incoming, by_node),
                 "fixHypothesis": copy["fixHypothesis"],
                 "acceptanceCriteria": list(copy["acceptance"]),
                 "labels": labels,
@@ -7316,10 +7326,10 @@ def main():
                    "patterns": len(patterns_out)},
     }
 
-    write_json(os.path.join(out_dir, "issues.json"), {"meta": meta, "issues": [capped(r) for r in records]})
+    write_json(os.path.join(out_dir, "issues.json"), {"meta": meta, "issues": records})
     with open(os.path.join(out_dir, "issues.jsonl"), "w", encoding="utf-8") as f:
         for r in records:
-            f.write(json.dumps(capped(r), ensure_ascii=False) + "\n")
+            f.write(json.dumps(r, ensure_ascii=False) + "\n")
     with open(os.path.join(out_dir, "issues-index.json"), "w", encoding="utf-8") as f:
         # One row per line keeps the index small and easy to scan.
         rows = ",\n    ".join(json.dumps(index_row(r), ensure_ascii=False) for r in records)
@@ -7334,7 +7344,7 @@ def main():
         os.remove(old)
     for r in ticket_records:
         with open(os.path.join(tickets_dir, f"{r['id']}.md"), "w", encoding="utf-8") as f:
-            f.write(ticket_markdown(capped(r), ticket_urls) + "\n")
+            f.write(ticket_markdown(r, ticket_urls) + "\n")
     # A closed accessibility id keeps a stub so tracker links keep working; one that is live again has its ticket.
     live = {r["id"] for r in records}
     for iid, tomb in sorted(load_tombstones().items()):
@@ -7342,7 +7352,7 @@ def main():
             with open(os.path.join(tickets_dir, f"{iid}.md"), "w", encoding="utf-8") as f:
                 f.write(stub_markdown(iid, tomb, ticket_urls) + "\n")
 
-    example = capped(next((r for r in records if r["id"] == EXAMPLE_ID), records[0]))
+    example = next((r for r in records if r["id"] == EXAMPLE_ID), records[0])
     doc = readme(meta, records, patterns_out, standalone, example)
     for name in ("README.md", "AGENTS.md"):
         with open(os.path.join(out_dir, name), "w", encoding="utf-8") as f:

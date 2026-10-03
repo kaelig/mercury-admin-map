@@ -16,7 +16,7 @@ import re
 import subprocess
 import sys
 
-from lib.canon import ROOT, read_json, sha, sha1, write_json
+from lib.canon import ROOT, plural, read_json, rel, sha, sha1, write_json
 from lib.ws import Workspace
 
 # A URL is a placeholder when it carries an ellipsis, angle brackets, braces or square brackets. The
@@ -210,7 +210,7 @@ def summary(doc):
     c = counts(doc)
     kinds = collections.Counter(s["kind"] for s in doc["states"].values())
     by_kind = ", ".join(f"{k} {n}" for k, n in sorted(kinds.items(), key=lambda kv: (-kv[1], kv[0])))
-    return (f"Run {doc['run']}: {c['states']} states, {c['roots']} root{'' if c['roots'] == 1 else 's'}, "
+    return (f"Run {doc['run']}: {c['states']} states, {plural(c['roots'], 'root')}, "
             f"{c['needsRecipe']} need a recipe, {c['mutating']} sit behind a mutating step, "
             f"{c['noPath']} have no path from a root. By kind: {by_kind}.")
 
@@ -229,11 +229,10 @@ def node_version():
 
 
 def run_doc(ws, run_id, now):
-    inside = not os.path.relpath(ws.path, ROOT).startswith("..")
     return {"run": run_id,
             "created": now.strftime("%Y-%m-%dT%H:%M:%S"),
             "baseUrl": ws.base_url,
-            "workspace": os.path.relpath(ws.path, ROOT) if inside else ws.path,
+            "workspace": rel(ws.path),
             "versions": {"playwright": package_version("playwright"), "axe": package_version("axe-core"),
                          "chromium": None, "node": node_version(), "python": platform.python_version()},
             "harness": None,
@@ -263,6 +262,5 @@ def cli(ws, sub, argv):
     write_json(ws.file("run.json", run_id), run_doc(ws, run_id, now))
     write_json(states_path, doc)  # last: a run exists once it has a states.json
     print(summary(doc))
-    rel = os.path.relpath(states_path, ROOT)
-    print(f"Wrote {states_path if rel.startswith('..') else rel}")
+    print(f"Wrote {rel(states_path)}")
     return 0

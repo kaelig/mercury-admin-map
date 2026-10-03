@@ -5,6 +5,7 @@
 // spotlights use role=alert. So armLayer() records which elements are visible before a state's final
 // hop, and findLayer() prefers a layer that appeared after it, chosen by the state's kind.
 
+import { clean } from './canon.mjs';
 import { XPATH_FN } from './occurrence.mjs';
 
 const BEFORE = "Symbol.for('a11y.layer.before')";
@@ -12,7 +13,7 @@ const BEFORE_TEXT = "Symbol.for('a11y.layer.liveText')";
 const LIVE = '[role=status],[role=alert],[aria-live=polite],[aria-live=assertive]';
 
 // Kinds whose top layer, when open, is what gets scanned (schemas.md "State kinds").
-const OVERLAY_KINDS = new Set(['modal', 'drawer', 'menu', 'popover', 'toast']);
+export const OVERLAY_KINDS = new Set(['modal', 'drawer', 'menu', 'popover', 'toast']);
 const OPTIONAL_KINDS = new Set(['form-state', 'empty-state', 'confirmation', 'validation-error']);
 
 // Record the elements visible now, so findLayer() can tell which layer the next action opened or
@@ -74,7 +75,7 @@ export async function findLayer(cdp, kind) {
     const { result: x } = await cdp.send('Runtime.callFunctionOn', { objectId: result.objectId, functionDeclaration: XPATH_FN, returnByValue: true });
     const { nodes } = await cdp.send('Accessibility.getPartialAXTree', { objectId: result.objectId, fetchRelatives: false });
     const n = nodes.find((v) => !v.ignored) || {};
-    return { scope: 'top', role: n.role?.value || 'generic', name: (n.name?.value || '').replace(/\s+/g, ' ').trim(), xpath: x.value };
+    return { scope: 'top', role: n.role?.value || 'generic', name: clean(n.name?.value), xpath: x.value };
   } finally {
     await cdp.send('Runtime.releaseObjectGroup', { objectGroup: 'a11y-scope' }).catch(() => {});
   }

@@ -9,11 +9,13 @@
 // the two disagree, or the target is a native control whose size the user agent may set.
 import { XPATH_FN } from '../lib/occurrence.mjs';
 import { sortCanonical } from '../lib/canon.mjs';
+import { customResult } from '../lib/results.mjs';
 import { injectAxe } from './axe.mjs';
 
 export const id = 'target';
 
-const MIN = 24;
+// The spacing computation below is shared with probe.mjs, which measures one target the same way.
+export const MIN = 24;
 const EPS = 0.01; // layout rounding: circles that touch do not intersect
 
 // Runs in the page. Measures each target, then asks axe's target-size rule alone for a verdict on
@@ -58,8 +60,8 @@ const MEASURE = `async (xpaths, layerXPath) => {
   return { measured, verdict };
 }`;
 
-const round2 = (v) => Math.round(v * 100) / 100;
-const rendered = ([x, y, w, h]) => w * h > 1 && x + w > 0 && y + h > 0;
+export const round2 = (v) => Math.round(v * 100) / 100;
+export const rendered = ([x, y, w, h]) => w * h > 1 && x + w > 0 && y + h > 0;
 const related = (a, b) => a.startsWith(b + '/') || b.startsWith(a + '/');
 
 function distanceToBox(px, py, b) {
@@ -70,7 +72,7 @@ function distanceToBox(px, py, b) {
 
 // Half the clear diameter: the distance from a's center to the nearest other target's box, or to
 // an undersized target's circle. Targets nested in one another (a listbox and its options) don't count.
-function clearRadius(a, boxes) {
+export function clearRadius(a, boxes) {
   let r = Infinity;
   for (const b of boxes) {
     if (b === a || related(a.xpath, b.xpath)) continue;
@@ -80,6 +82,15 @@ function clearRadius(a, boxes) {
   }
   return r;
 }
+
+// A target's box for clearRadius(), from its rect [x, y, width, height]: the center, and whether it
+// is undersized.
+export const boxOf = (xpath, [x, y, w, h]) => ({
+  xpath, x, y, w, h, cx: x + w / 2, cy: y + h / 2, small: w < MIN - EPS || h < MIN - EPS,
+});
+
+// The clear circle's diameter, or null when no other target bounds it.
+export const offsetOf = (radius) => (Number.isFinite(radius) ? round2(2 * radius) : null);
 
 export async function run(ctx) {
   const { cdp, layer } = ctx;
@@ -96,8 +107,7 @@ export async function run(ctx) {
   targets.forEach((t, i) => {
     const m = measured[i];
     if (!m || !rendered(m.rect)) return;
-    const [x, y, w, h] = m.rect;
-    boxes.push({ t, m, xpath: t.xpath, x, y, w, h, cx: x + w / 2, cy: y + h / 2, small: w < MIN - EPS || h < MIN - EPS });
+    boxes.push({ t, m, ...boxOf(t.xpath, m.rect) });
   });
 
   const results = [];
@@ -110,14 +120,11 @@ export async function run(ctx) {
     const agree = fails === (axe === 'violation');
     if (!fails && axe !== 'violation') continue;
     const { focusable, source, ...occurrence } = b.t;
-    results.push({
-      check: 'target', rule: 'target-size-own', basis: fails && agree && !b.m.ua ? 'failure' : 'candidate',
-      criteria: ['2.5.8'], messageKey: null, occurrence,
-      evidence: {
-        width: round2(b.w), height: round2(b.h), offset: Number.isFinite(radius) ? round2(2 * radius) : null,
-        own: fails ? 'fail' : 'pass', passedBy, axe, agree, exception: b.m.ua ? 'ua-control' : null,
-      },
-    });
+    const basis = fails && agree && !b.m.ua ? 'failure' : 'candidate';
+    results.push(customResult(id, 'target-size-own', basis, occurrence, {
+      width: round2(b.w), height: round2(b.h), offset: offsetOf(radius),
+      own: fails ? 'fail' : 'pass', passedBy, axe, agree, exception: b.m.ua ? 'ua-control' : null,
+    }));
   }
   return { results: sortCanonical(results), records: [], detail: { measured: boxes.length }, completed: true };
 }

@@ -77,6 +77,17 @@ class SimilarityTest(unittest.TestCase):
             similarity.main([screen("cards.index.png"), screen("cards.index.png"), "--json"])
         self.assertEqual(json.loads(out.getvalue()), {"score": 1.0, "threshold": similarity.THRESHOLD, "pass": True})
 
+    def test_cli_with_two_replays_scores_the_closer_one(self):
+        captured = screen("cards.edit-limit-modal.png")
+        far, near = screen("cards.freeze-modal.png"), screen("rerender/cards.edit-limit-modal.dpr2.png")
+        best = max(similarity.score(captured, far), similarity.score(captured, near))
+        self.assertEqual(best, similarity.score(captured, near))
+        out = io.StringIO()
+        with contextlib.redirect_stdout(out):
+            code = similarity.main([captured, far, near, "--json"])
+        self.assertEqual(code, 0)
+        self.assertEqual(json.loads(out.getvalue()), {"score": best, "threshold": similarity.THRESHOLD, "pass": True})
+
 
 if __name__ == "__main__":
     unittest.main()

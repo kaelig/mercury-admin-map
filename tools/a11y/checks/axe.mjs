@@ -3,7 +3,7 @@
 import { readFileSync } from 'node:fs';
 import { createRequire } from 'node:module';
 import { describeElements } from '../lib/occurrence.mjs';
-import { sortCanonical } from '../lib/canon.mjs';
+import { cmp, sortCanonical } from '../lib/canon.mjs';
 import { siteOf } from '../lib/browser.mjs';
 
 export const id = 'axe';
@@ -63,7 +63,7 @@ const RUN = `async (xpath, options) => {
 }`;
 
 // wcag143 -> 1.4.3, wcag1410 -> 1.4.10, wcag2411 -> 2.4.11. Level tags (wcag2aa) don't match.
-export function criteriaOf(tags) {
+function criteriaOf(tags) {
   const out = [];
   for (const t of tags) {
     const m = /^wcag(\d)(\d)(\d+)$/.exec(t);
@@ -94,7 +94,7 @@ function framesOf(page) {
     if (!/^https?:/.test(raw)) return { url: raw, origin: 'null', firstParty: true }; // about:blank, srcdoc
     const u = new URL(raw);
     return { url: u.origin + u.pathname, origin: u.origin, firstParty: siteOf(raw) === siteOf(main.url()) };
-  }).sort((a, b) => (a.url < b.url ? -1 : a.url > b.url ? 1 : 0));
+  }).sort((a, b) => cmp(a.url, b.url));
 }
 
 export async function run(ctx) {

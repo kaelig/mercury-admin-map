@@ -1,4 +1,4 @@
-// The `sweep` stage (U5, KTD10): replay every state, run the checks its kind gets, and write
+// The `sweep` stage (KTD10): replay every state, run the checks its kind gets, and write
 // runs/<id>/raw/<state>.json; once every state in states.json has a valid raw file, write
 // runs/<id>/outcomes.json. File formats: schemas.md.
 //
@@ -30,7 +30,7 @@ import { join, resolve } from 'node:path';
 import { fileURLToPath } from 'node:url';
 import { harnessHash, readJson, sha, sortCanonical, writeJson } from './lib/canon.mjs';
 import { cdpSession, envFor, launch, newContext, readBuildHash, trackRequests } from './lib/browser.mjs';
-import { armLayer, findLayer } from './lib/scope.mjs';
+import { findLayer } from './lib/scope.mjs';
 import { parse } from './lib/cli.mjs';
 import { Queue } from './lib/queue.mjs';
 import { chain, loadRecipes, replay, resolveLocator } from './recipe.mjs';
@@ -59,7 +59,7 @@ const LOAD_FAILURE = /net::ERR_(?!ABORTED)|answered HTTP 5\d\d\b/;
 // The checks a state gets, in the order they run (schemas.md "State kinds", "Check modules"): the
 // status observer first on toasts and right after axe on the other status kinds, the Tab walk last
 // on the shared page, the dialog check (fresh contexts) only after a click or hover final hop.
-export function checksFor(kind, finalHop) {
+function checksFor(kind, finalHop) {
   const list = kind === 'toast' ? [statusCheck, axeCheck] : [axeCheck];
   if (STATUS_KINDS.has(kind) && kind !== 'toast') list.push(statusCheck);
   list.push(axCheck, interactiveCheck, targetCheck);
@@ -99,15 +99,23 @@ const outcomeOf = (doc) => ({
   rootCause: doc.reason === 'blocked-by-parent' ? doc.reasonDetail.rootCause : doc.state,
 });
 
-function validDoc(rawDir, id, harness) {
-  let doc;
+// A raw file's document, or null when it is missing or does not parse.
+function readRaw(rawDir, id) {
   try {
-    doc = readJson(join(rawDir, `${id}.json`));
+    return readJson(join(rawDir, `${id}.json`));
   } catch {
     return null;
   }
+}
+
+function validDoc(rawDir, id, harness) {
+  const doc = readRaw(rawDir, id);
   return doc && doc.state === id && doc.harness === harness && ['audited', 'unreachable'].includes(doc.status) ? doc : null;
 }
+
+// What outcomes.json and run.json read from a valid raw file (outcomeOf, outcomesDoc, the builds).
+const summaryOf = (doc) => ({ state: doc.state, status: doc.status, reason: doc.reason, reasonDetail: doc.reasonDetail,
+  families: doc.families, build: doc.build });
 
 // What every page of one attempt saw: an environment signal, the root page's load (the main page's
 // first navigation), and the first page navigation that failed.
@@ -182,10 +190,11 @@ class Sweep {
       const s = this.states[id];
       if (s.root && !this.recipes[id]) this.recipes[id] = { parent: s.rootUrl || s.url, hop: [], fingerprint: null, status: 'accepted', recordedBy: 'root' };
     }
+    // The summary of every state with a valid raw file; save() keeps it current.
     this.valid = {};
     for (const id of this.ids) {
       const doc = validDoc(this.rawDir, id, this.harness);
-      if (doc) this.valid[id] = doc;
+      if (doc) this.valid[id] = summaryOf(doc);
     }
     this.todo = this.select(only);
     this.env = null;
@@ -235,6 +244,7 @@ class Sweep {
 
   save(doc, ms) {
     writeJson(join(this.rawDir, `${doc.state}.json`), doc);
+    this.valid[doc.state] = summaryOf(doc);
     this.written += 1;
     const what = doc.status === 'audited'
       ? `audited ${doc.state} (${doc.kind}, ${ms} ms)${doc.families.incomplete.length ? `, incomplete: ${doc.families.incomplete.join(', ')}` : ''}`
@@ -359,12 +369,8 @@ class Sweep {
     try {
       const main = await open(true);
       const { page, cdp, tracker } = main;
-      const r = await reach(main, {
-        beforeFinalHop: async (p) => {
-          await armLayer(p);
-          if (statusKind) await statusCheck.arm(p);
-        },
-      });
+      // replay() arms the layer before the final hop itself; a status kind also arms the observer.
+      const r = await reach(main, { beforeFinalHop: statusKind ? (p) => statusCheck.arm(p) : null, layerKind: s.kind });
       step = r.step;
       if (seen.env || ENV_ANSWER.test(r.message || '')) return { env: seen.env || r.message };
       const rootLoaded = Boolean(seen.root?.ok);
@@ -377,7 +383,8 @@ class Sweep {
       }
 
       const build = await guard(readBuildHash(page), 'reading the build');
-      const layer = await guard(findLayer(cdp, s.kind), 'finding the layer');
+      // The layer the fingerprint was scoped to, when the replay looked for this kind's layer.
+      const layer = r.layer || await guard(findLayer(cdp, s.kind), 'finding the layer');
       const triggers = new WeakMap();
       const ctx = {
         page, cdp, tracker, kind: s.kind, state: id, layer, env: this.env, finalHop, shotsDir: this.shotsDir,
@@ -472,14 +479,6 @@ class Sweep {
 // outcomes.json and run.json
 // ---------------------------------------------------------------------------
 
-// The previous published run's outcomes (published/meta.json names it), or null.
-function previousOutcomes(ws) {
-  const meta = readJson(join(ws.publishedDir, 'meta.json'));
-  if (!meta?.run) return null;
-  const doc = readJson(ws.file('outcomes.json', meta.run));
-  return doc ? { run: meta.run, states: doc.states || {} } : null;
-}
-
 function outcomesDoc(runId, ids, docs, prev) {
   const states = {};
   const counts = { audited: 0, unreachable: 0 };
@@ -509,15 +508,12 @@ function updateRun(ws, runId, fn) {
 // `sweep status`: counts from the raw files, never writing.
 function progress(ws) {
   const runId = ws.runId(false);
-  if (!runId || !existsSync(ws.file('states.json', runId))) return { pending: true };
+  if (!ws.hasStates(runId)) return { pending: true };
   const states = ws.states(runId);
   const harness = harnessHash();
   const out = { run: runId, states: Object.keys(states).length, audited: 0, unreachable: 0, stale: 0, pending: 0 };
   for (const sid of Object.keys(states)) {
-    let doc = null;
-    try {
-      doc = readJson(join(ws.rawDir(runId), `${sid}.json`));
-    } catch { /* unreadable counts as pending */ }
+    const doc = readRaw(ws.rawDir(runId), sid); // unreadable counts as pending
     if (!doc || doc.state !== sid) out.pending += 1;
     else if (doc.harness !== harness) out.stale += 1;
     else if (doc.status === 'audited' || doc.status === 'unreachable') out[doc.status] += 1;
@@ -555,13 +551,13 @@ async function main(argv) {
   const workers = positiveInt(values.workers, 'workers', 8);
   const timeout = positiveInt(values.timeout, 'timeout', TIMEOUT);
   const runId = ws.runId();
-  if (!existsSync(ws.file('states.json', runId))) throw new Error(`run ${runId} has no states.json: run \`audit.py plan\` first`);
+  if (!ws.hasStates(runId)) throw new Error(`run ${runId} has no states.json: run \`audit.py plan\` first`);
   const states = ws.states(runId);
   const unknown = (values.state || []).filter((s) => !states[s]);
   if (unknown.length) throw new Usage(`not in run ${runId}'s states.json: ${unknown.join(', ')}`);
 
   const sweep = new Sweep(ws, runId, { workers, timeout, only: values.state || null });
-  const prev = previousOutcomes(ws);
+  const prev = ws.previousOutcomes();
   const outcomesPath = ws.file('outcomes.json', runId);
   updateRun(ws, runId, (doc) => {
     doc.harness = sweep.harness;
@@ -581,11 +577,7 @@ async function main(argv) {
     await sweep.run();
   }
 
-  const docs = {};
-  for (const sid of sweep.ids) {
-    const doc = validDoc(sweep.rawDir, sid, sweep.harness);
-    if (doc) docs[sid] = doc;
-  }
+  const docs = sweep.valid;
   const pending = sweep.ids.filter((sid) => !docs[sid]);
   const outcomes = !pending.length ? outcomesDoc(runId, sweep.ids, docs, prev) : null;
   if (outcomes && !sweep.tripped) writeJson(outcomesPath, outcomes);

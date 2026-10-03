@@ -1,4 +1,4 @@
-"""U10: the standalone report (R3, R19–R22, R26; KTD24, KTD25).
+"""The standalone report (R3, R19–R22, R26; KTD24, KTD25).
 
 Run: cd tools/a11y && python3 -m unittest tests.test_report -v
 
@@ -488,7 +488,7 @@ class RenderedSnapshot(unittest.TestCase):
         self.assertEqual(advisory.tag, "section")
         self.assertIn("No advisory announcements this run.", advisory.text)
 
-    # Unreachable (AE2) ------------------------------------------------------------
+    # Unreachable states -----------------------------------------------------------
 
     def test_unreachable_states_are_grouped_by_root_cause_with_their_first_unreachable_run(self):
         sec = self.doc.by_id("unreachable")

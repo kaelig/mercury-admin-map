@@ -4,16 +4,16 @@
 
 Each line answers one attachment proposal: `attach` or `reject` a proposal from findings.json, or
 `release` an attachment the snapshot registry holds (its proposal id is sha([finding key,
-hand-found id]), the same formula `group` uses). Every decision needs a reason. Prints the rejected
-lines with their reasons as JSON and appends the valid ones; verdict lines in the same file are
-skipped, since `verdict add` takes them. File formats: schemas.md.
+hand-found id]), from signature.proposal_id like `group`'s proposals). Every decision needs a
+reason. Prints the rejected lines with their reasons as JSON and appends the valid ones; verdict
+lines in the same file are skipped, since `verdict add` takes them. File formats: schemas.md.
 """
 import argparse
-import os
 import sys
 
-from lib.canon import read_json, read_jsonl, sha
-from verdict import DATE, add_file, print_result, text, today
+from lib.canon import read_json, read_jsonl
+from signature import proposal_id
+from verdict import add_file, count_by, date_reasons, missing_fields, print_result, text, today
 
 DECISIONS = ("attach", "reject", "release")
 REQUIRED = ("model", "batch", "prompt")
@@ -25,8 +25,8 @@ def answerable(ws, run_id):
     if not doc:
         return None
     proposals = {p["id"]: p for p in doc.get("proposals", [])}
-    registry = read_json(os.path.join(ws.published_dir, "registry.json")) or {}
-    attachments = {sha([a["finding"], a["handFound"]]): a for a in registry.get("attachments", [])}
+    registry = ws.published("registry.json") or {}
+    attachments = {proposal_id(a["finding"], a["handFound"]): a for a in registry.get("attachments", [])}
     return proposals, attachments
 
 
@@ -38,12 +38,8 @@ def validate(line, proposals, attachments):
         reasons.append(f"decision must be one of {', '.join(DECISIONS)} (got {kind!r})")
     if not text(line.get("reason")):
         reasons.append("a decision needs a reason")
-    for field in REQUIRED:
-        if not text(line.get(field)):
-            reasons.append(f"{field} is required")
-    date = line.get("date")
-    if date is not None and not (isinstance(date, str) and DATE.match(date)):
-        reasons.append("date must be YYYY-MM-DD")
+    reasons += missing_fields(line, REQUIRED)
+    reasons += date_reasons(line.get("date"))
     target = None
     if not text(pid):
         reasons.append("proposal is required: the id of the proposal this decision answers")
@@ -76,10 +72,8 @@ def status(ws, run_id):
     lines = read_jsonl(ws.file("decisions.jsonl", run_id)) if run_id else []
     if not lines:
         return {"pending": True}
-    by = {}
-    for d in lines:
-        by[d.get("decision")] = by.get(d.get("decision"), 0) + 1
-    return {"lines": len(lines), "proposals": len({d.get("proposal") for d in lines}), "decisions": dict(sorted(by.items()))}
+    return {"lines": len(lines), "proposals": len({d.get("proposal") for d in lines}),
+            "decisions": count_by(lines, "decision")}
 
 
 def cli(ws, sub, argv):

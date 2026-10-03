@@ -13,6 +13,7 @@ import urllib.error
 import urllib.request
 
 from lib.canon import ROOT, build_hash, read_json
+from plan import package_version
 
 USER_AGENT = ("Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) "
               "Chrome/151.0.0.0 Safari/537.36")
@@ -26,8 +27,7 @@ def check_map(ws):
 
 def check_package(name):
     pinned = ((read_json(os.path.join(ROOT, "package.json"), {}) or {}).get("devDependencies") or {}).get(name)
-    pkg = read_json(os.path.join(ROOT, "node_modules", name, "package.json"))
-    installed = pkg.get("version") if pkg else None
+    installed = package_version(name)
     return {"ok": installed is not None and installed == pinned, "installed": installed, "pinned": pinned}
 
 
