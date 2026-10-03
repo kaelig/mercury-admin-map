@@ -15,6 +15,8 @@ ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 VIEWER_FIELDS = ("id", "title", "severity", "category", "detail", "evidence", "nodeIds")
 SEVERITY_RANK = {"high": 0, "medium": 1, "low": 2}
 OVERLAY_FIELDS = ("wcag", "audit", "history")
+# What the map and the report say over a test snapshot (meta.json testData, written by tests/ledger.py only).
+TEST_DATA_NOTE = "Test data: the accessibility findings on this page are invented for tests. They are not audit results."
 
 
 def read_areas(data_dir, problems=None):
@@ -40,6 +42,15 @@ def read_areas(data_dir, problems=None):
 def snapshot_path(snapshot_dir=None):
     """The snapshot directory: the argument, else $A11Y_SNAPSHOT, else <repo>/a11y/published/."""
     return snapshot_dir or os.environ.get("A11Y_SNAPSHOT") or os.path.join(ROOT, "a11y", "published")
+
+
+def is_test_data(snapshot_dir=None):
+    """True when the snapshot's meta.json has testData: tests/ledger.py wrote it and its findings are invented."""
+    path = os.path.join(snapshot_path(snapshot_dir), "meta.json")
+    if not os.path.isfile(path):
+        return False
+    with open(path, encoding="utf-8") as f:
+        return json.load(f).get("testData") is True
 
 
 def load_areas(data_dir=None, snapshot_dir=None, problems=None):

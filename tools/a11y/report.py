@@ -10,7 +10,8 @@ mapdata.snapshot_path(); this stage renders the workspace's published/ snapshot.
 The page has no script and no embedded font. Its colors are the map's own tokens, read from the
 :root blocks of src/app.css at render time (light, and dark under prefers-color-scheme). Every string
 from the snapshot is escaped. Rows link to ../index.html?issue=<id>, which works on Netlify and from
-file://. Wording: "no failures found by these checks", never "passes".
+file://. Wording: "no failures found by these checks", never "passes". A test snapshot (meta.json
+testData) opens with mapdata.TEST_DATA_NOTE; any other snapshot renders without it.
 File formats: schemas.md ("published/").
 """
 import argparse
@@ -73,7 +74,7 @@ $css
 </style>
 </head>
 <body>
-<header>
+$test_data<header>
 <p class="crumb"><a href="../index.html">Mercury Admin Map</a></p>
 <h1>Accessibility report</h1>
 <p class="lede">$lede</p>
@@ -139,6 +140,8 @@ td p { margin: 6px 0 0; }
   dl.facts { grid-template-columns: minmax(0, 1fr); gap: 2px; }
   dl.facts dd { margin-bottom: 8px; }
 }""")
+TEST_DATA_CSS = ("\n.test-data { margin: 0 0 16px; padding: 10px 14px; border-radius: 6px; background: var(--med); "
+                 "color: var(--high-ink); font-weight: 600; }")
 
 
 # ---------------------------------------------------------------------------
@@ -522,7 +525,7 @@ def tokens(path=APP_CSS):
     return decls(light.group(1)), decls(dark.group(1))
 
 
-def page(m, issues):
+def page(m, issues, test_data=False):
     names = {c["number"]: c["name"] for c in (m["coverage"].get("tested") or []) + (m["coverage"].get("untested") or [])}
     evidence = {i["id"]: i["audit"]["evidence"] for i in issues.get("generated") or []
                 if i.get("id") and (i.get("audit") or {}).get("evidence")}
@@ -543,7 +546,9 @@ def page(m, issues):
     light, dark = tokens()
     css = CSS.substitute(light=" ".join(f"{n}: {v};" for n, v in light), dark=" ".join(f"{n}: {v};" for n, v in dark))
     return PAGE.substitute(
-        css=css,
+        css=css + (TEST_DATA_CSS if test_data else ""),
+        test_data=(f'<section id="test-data" class="test-data" aria-label="Test data">{esc(mapdata.TEST_DATA_NOTE)}</section>\n'
+                   if test_data else ""),
         lede=(f"{esc(m.get('standard'))} audit of the Admin view of demo.mercury.com, run on {esc(m.get('date'))}. "
               "Each finding links to the map, which highlights the screens where it occurs."),
         nav="\n".join(f'<li><a href="#{sid}">{esc(title)}</a></li>' for sid, title in SECTIONS),
@@ -563,7 +568,7 @@ def render(snapshot_dir, dist_dir):
     model = read(snapshot_dir, "report.json") if snapshot_dir and os.path.isdir(snapshot_dir) else None
     if model is None:
         return None
-    text = page(model, read(snapshot_dir, "issues.json") or {})
+    text = page(model, read(snapshot_dir, "issues.json") or {}, mapdata.is_test_data(snapshot_dir))
     os.makedirs(out_dir)
     path = os.path.join(out_dir, "index.html")
     with open(path, "w", encoding="utf-8", newline="\n") as f:

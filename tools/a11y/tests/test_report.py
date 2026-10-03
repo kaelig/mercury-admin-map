@@ -19,6 +19,7 @@ import unittest
 from tests.pathshim import A11Y, ROOT
 
 import audit
+import mapdata
 import report
 from lib.ws import Workspace
 
@@ -242,6 +243,14 @@ class RenderedSnapshot(unittest.TestCase):
         by_rows = {s: sum(1 for f in self.model["findings"] if f["severity"] == s) for s in ("high", "medium", "low")}
         self.assertEqual(by_rows, counts)
         self.assertEqual((counts["high"], counts["medium"], counts["low"]), (2, 13, 5))
+
+    def test_the_test_snapshot_opens_with_the_test_data_note_before_the_summary(self):
+        note = self.doc.by_id("test-data")
+        self.assertEqual(note.text, mapdata.TEST_DATA_NOTE)
+        self.assertEqual((note.tag, note.attrs.get("aria-label")), ("section", "Test data"))
+        body = self.doc.all("body")[0]
+        self.assertIs(next(c for c in body.children if isinstance(c, Node)), note)
+        self.assertLess(self.html.index('id="test-data"'), self.html.index('id="summary"'))
 
     # Links (R19) --------------------------------------------------------------
 
@@ -591,6 +600,20 @@ class Variants(unittest.TestCase):
         dist, _ = render_to(self.tmp, snap)
         hrefs = parse(page_of(dist)).by_id("findings").links()
         self.assertIn(LINK + "a%20b%22%26c", hrefs)
+
+    def test_a_snapshot_without_test_data_renders_without_the_note_and_nothing_else_changes(self):
+        dest = os.path.join(self.tmp, "snapshot")
+        shutil.copytree(SNAPSHOT, dest)
+        meta = load("meta.json", dest)
+        self.assertIs(meta.pop("testData"), True)
+        with open(os.path.join(dest, "meta.json"), "w", encoding="utf-8") as f:
+            json.dump(meta, f, indent=1)
+        text = page_of(render_to(self.tmp, dest)[0])
+        self.assertNotIn(mapdata.TEST_DATA_NOTE, text)
+        self.assertNotIn("test-data", text)
+        flagged = page_of(render_to(self.tmp, name="flagged")[0])
+        note = f'<section id="test-data" class="test-data" aria-label="Test data">{mapdata.TEST_DATA_NOTE}</section>\n'
+        self.assertEqual(flagged.replace(report.TEST_DATA_CSS, "").replace(note, ""), text)
 
     def test_rendering_twice_is_byte_identical(self):
         a, _ = render_to(self.tmp, name="a")

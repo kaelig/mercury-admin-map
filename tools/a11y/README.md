@@ -280,7 +280,7 @@ Once a run has a second run beside it, pass `--run <id>` to every stage: the def
 | `dist/a11y/index.html` | the rendered report | no |
 | `.agents/skills/a11y-audit/` | the skill and its agent prompts | yes |
 
-`build.py` and `tools/export_agent_data.py` read the snapshot through `tools/mapdata.py`. Set `A11Y_SNAPSHOT` to read another snapshot directory. A `data/*.json` that does not parse stops `tools/export_agent_data.py` run on its own. `build.py` leaves that area out of the map and prints `WARN <file>: invalid JSON (<error>)`, and runs the export with `MAP_SKIP_INVALID_DATA=1`, so the export leaves out the same file.
+`build.py` and `tools/export_agent_data.py` read the snapshot through `tools/mapdata.py`. Set `A11Y_SNAPSHOT` to read another snapshot directory. `tools/a11y/tests/data/snapshot/` is a test snapshot with invented findings on real screens: its `meta.json` has `"testData": true`, so a build from it shows a test-data banner on the map and the report, and prints a `NOTE` line. A `data/*.json` that does not parse stops `tools/export_agent_data.py` run on its own. `build.py` leaves that area out of the map and prints `WARN <file>: invalid JSON (<error>)`, and runs the export with `MAP_SKIP_INVALID_DATA=1`, so the export leaves out the same file.
 
 ## Reading the report
 

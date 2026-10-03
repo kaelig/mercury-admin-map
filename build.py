@@ -7,9 +7,9 @@ Pipeline:
     -> dist/img/atlas.webp                            (every screen as a 128x80 tile, for zoomed-out views)
     -> build/map.json -> node tools/prerender.mjs -> build/layout.json   (dagre runs here, not in the page)
     -> esbuild src/main.js -> build/app.js
-    -> src/index.html + src/app.css + fonts -> dist/index.html
+    -> src/index.html + src/app.css + fonts -> dist/index.html   (+ src/test-data.css and its strip over a test snapshot)
 """
-import hashlib, json, os, shutil, subprocess, sys, struct
+import hashlib, html, json, os, shutil, subprocess, sys, struct
 from concurrent.futures import ThreadPoolExecutor
 
 ROOT = os.path.dirname(os.path.abspath(__file__))
@@ -58,6 +58,7 @@ def main():
     # parse lands in problems and the map and the export are built without that area.
     problems = []
     areas = mapdata.load_areas(problems=problems)
+    test_data = mapdata.is_test_data()
     areas.sort(key=lambda a: ORDER.index(a["area"]) if a.get("area") in ORDER else 99)
 
     all_ids = {n["id"] for a in areas for n in a.get("nodes", [])}
@@ -124,6 +125,8 @@ def main():
     # The page gets each issue's viewer fields only; copy and audit stay in the snapshot for the export.
     shown = [dict(a, issues=[mapdata.viewer_issue(i) for i in a.get("issues", [])]) for a in areas]
     data = {"areas": shown, "stats": stats, "patterns": patterns, "atlas": atlas}
+    if test_data:
+        data["testData"] = True
     with open(os.path.join(BUILD, "map.json"), "w") as f:
         json.dump(data, f)
     subprocess.run(["node", "tools/prerender.mjs", "build/map.json", "build/layout.json"], cwd=ROOT, check=True)
@@ -133,9 +136,15 @@ def main():
     fonts_css = copy_fonts()
     inline = lambda s: s.replace("</", "<\\/")
     page = open(os.path.join(ROOT, "src", "index.html")).read()
+    style, banner = open(os.path.join(ROOT, "src", "app.css")).read(), ""
+    if test_data:
+        # A strip above the map says the findings are invented. Without test data the page is unchanged.
+        style += open(os.path.join(ROOT, "src", "test-data.css")).read()
+        banner = f'<section class="test-data" aria-label="Test data">{html.escape(mapdata.TEST_DATA_NOTE)}</section>\n'
     parts = {
         "<!--FONTS-->": fonts_css,
-        "<!--STYLE-->": open(os.path.join(ROOT, "src", "app.css")).read(),
+        "<!--STYLE-->": style,
+        "<!--TEST_DATA-->": banner,
         "<!--MAP_DATA-->": f'<script id="map-data" type="application/json">{inline(json.dumps(data))}</script>',
         "<!--MAP_LAYOUT-->": f'<script id="map-layout" type="application/json">{inline(open(os.path.join(BUILD, "layout.json")).read())}</script>',
         "<!--APP-->": inline(open(os.path.join(BUILD, "app.js")).read()),
@@ -167,6 +176,8 @@ def main():
 
     total = sum(os.path.getsize(os.path.join(dp, f)) for dp, _, fs in os.walk(DIST) for f in fs)
     print(json.dumps(stats), f"dist={total/1e6:.1f}MB")
+    if test_data:
+        print(f"NOTE built from test data ({mapdata.snapshot_path()}): the a11y findings are invented", file=sys.stderr)
     for p in problems:
         print("WARN", p, file=sys.stderr)
 

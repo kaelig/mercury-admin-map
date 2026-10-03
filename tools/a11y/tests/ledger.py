@@ -11,7 +11,9 @@ the fixtures.
 `build_test_snapshot(dest)` publishes two runs with this ledger and copies the second snapshot to
 `dest`: new, persisting, not-retested (one screen unreachable), withdrawn and fixed findings, a
 30-screen contrast finding, a hand-found re-rate (the tabs issue), a hand-found drop, an attachment, and
-unreachable states grouped under a root cause. tests/data/snapshot/ is that output; test_publish checks it is current. Regenerate it with:
+unreachable states grouped under a root cause. Its meta.json also gets "testData": true, which publish never
+writes: build.py and the report then say the findings are invented. tests/data/snapshot/ is that output;
+test_publish checks it is current. Regenerate it with:
 
     cd tools/a11y && python3 -m tests.ledger
 """
@@ -322,13 +324,15 @@ def snapshot_runs(ws_dir):
 
 
 def build_test_snapshot(dest):
-    """Write the four snapshot files the two runs produce into dest."""
+    """Write the four snapshot files the two runs produce into dest, meta.json marked as test data."""
     with tempfile.TemporaryDirectory() as tmp, contextlib.redirect_stdout(io.StringIO()):
         ws = os.path.join(tmp, "ws")
         snapshot_runs(ws)
         os.makedirs(dest, exist_ok=True)
         for name in ("issues.json", "report.json", "registry.json", "meta.json"):
             shutil.copyfile(os.path.join(ws, "published", name), os.path.join(dest, name))
+        meta = os.path.join(dest, "meta.json")
+        write_json(meta, dict(read_json(meta), testData=True))
 
 
 if __name__ == "__main__":

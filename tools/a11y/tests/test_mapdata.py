@@ -1,4 +1,5 @@
-"""U6 and U8: the shared map-data loader (KTD22): raw read, snapshot merge, viewer fields and order.
+"""U6 and U8: the shared map-data loader (KTD22): raw read, snapshot merge, viewer fields and order, and
+build.py's test-data flag.
 
 Run: cd tools/a11y && python3 -m unittest tests.test_mapdata -v
 """
@@ -15,11 +16,12 @@ import tempfile
 import unittest
 from unittest import mock
 
-from tests.pathshim import ROOT
+from tests.pathshim import A11Y, ROOT
 
 import mapdata
 
 DATA = os.path.join(ROOT, "data")
+SNAPSHOT = os.path.join(A11Y, "tests", "data", "snapshot")
 
 
 def raw_areas(data_dir):
@@ -28,6 +30,60 @@ def raw_areas(data_dir):
         with open(path, encoding="utf-8") as f:
             out.append(json.load(f))
     return out
+
+
+def build_site(root):
+    """A scratch root for build.py: the real data, patterns and screens, and a page of placeholders only."""
+    os.makedirs(os.path.join(root, "tools"))
+    for name in ("mapdata.py", "export_agent_data.py"):
+        shutil.copy(os.path.join(ROOT, "tools", name), os.path.join(root, "tools", name))
+    shutil.copytree(DATA, os.path.join(root, "data"))
+    shutil.copy(os.path.join(ROOT, "patterns.json"), root)
+    os.symlink(os.path.join(ROOT, "screens"), os.path.join(root, "screens"))
+    os.makedirs(os.path.join(root, "src"))
+    with open(os.path.join(root, "src", "index.html"), "w", encoding="utf-8") as f:
+        f.write("<!--FONTS--><!--STYLE--><!--TEST_DATA--><!--MAP_DATA--><!--MAP_LAYOUT--><!--APP-->")
+    open(os.path.join(root, "src", "app.css"), "w").close()
+    shutil.copy(os.path.join(ROOT, "src", "test-data.css"), os.path.join(root, "src"))
+    os.makedirs(os.path.join(root, "dist"))
+
+
+def run_build(root, env):
+    """build.py's main() on root with env set: the real loader, export and report run; screen encoding, the
+    atlas, node and esbuild are stubbed. Returns (stderr, the export subprocess results)."""
+    spec = importlib.util.spec_from_file_location("build_under_test", os.path.join(ROOT, "build.py"))
+    build = importlib.util.module_from_spec(spec)
+    spec.loader.exec_module(build)
+    real_run, exports = subprocess.run, []
+
+    def run(cmd, **kwargs):
+        if cmd[0] == "node":
+            with open(os.path.join(root, "build", "layout.json"), "w") as f:
+                f.write("{}")
+        elif cmd[0] == "npx":
+            open(os.path.join(root, "build", "app.js"), "w").close()
+        else:
+            exports.append(real_run(cmd, capture_output=True, text=True, **kwargs))
+
+    def convert(rel):
+        return rel, (1440, 900), os.path.join(root, "dist", "img", os.path.splitext(os.path.relpath(rel, "screens"))[0])
+
+    err = io.StringIO()
+    paths = {"ROOT": root, "DIST": os.path.join(root, "dist"), "CACHE": os.path.join(root, "dist", "img"),
+             "BUILD": os.path.join(root, "build")}
+    with contextlib.ExitStack() as stack:
+        for name, value in paths.items():
+            stack.enter_context(mock.patch.object(build, name, value))
+        stack.enter_context(mock.patch.object(mapdata, "ROOT", root))
+        stack.enter_context(mock.patch.object(build.subprocess, "run", side_effect=run))
+        stack.enter_context(mock.patch.object(build, "convert", side_effect=convert))
+        stack.enter_context(mock.patch.object(build, "build_atlas", return_value={"src": "img/atlas.webp"}))
+        stack.enter_context(mock.patch.dict(os.environ, env))
+        stack.enter_context(contextlib.redirect_stdout(io.StringIO()))
+        stack.enter_context(contextlib.redirect_stderr(err))
+        os.environ.pop("MAP_SKIP_INVALID_DATA", None)
+        build.main()
+    return err.getvalue(), exports
 
 
 class LoadAreas(unittest.TestCase):
@@ -110,59 +166,16 @@ class MalformedAreaFile(unittest.TestCase):
         self.assertEqual(problems, [])
 
     def test_build_warns_and_builds_the_map_and_export_without_that_area(self):
-        # build.py on a scratch root holding the real data plus one file that does not parse: the real
-        # loader and export subprocess run; screen encoding, the atlas, node and esbuild are stubbed.
+        # build.py on a scratch root holding the real data plus one file that does not parse.
         root = os.path.join(self.tmp.name, "site")
-        os.makedirs(os.path.join(root, "tools"))
-        for name in ("mapdata.py", "export_agent_data.py"):
-            shutil.copy(os.path.join(ROOT, "tools", name), os.path.join(root, "tools", name))
-        shutil.copytree(DATA, os.path.join(root, "data"))
+        build_site(root)
         with open(os.path.join(root, "data", "broken.json"), "w", encoding="utf-8") as f:
             f.write('{"area": "broken",')
-        shutil.copy(os.path.join(ROOT, "patterns.json"), root)
-        os.symlink(os.path.join(ROOT, "screens"), os.path.join(root, "screens"))
-        os.makedirs(os.path.join(root, "src"))
-        with open(os.path.join(root, "src", "index.html"), "w", encoding="utf-8") as f:
-            f.write("<!--FONTS--><!--STYLE--><!--MAP_DATA--><!--MAP_LAYOUT--><!--APP-->")
-        open(os.path.join(root, "src", "app.css"), "w").close()
-        os.makedirs(os.path.join(root, "dist"))
         env = {"A11Y_SNAPSHOT": os.path.join(root, "no-snapshot")}
+        err, exports = run_build(root, env)
 
-        spec = importlib.util.spec_from_file_location("build_under_test", os.path.join(ROOT, "build.py"))
-        build = importlib.util.module_from_spec(spec)
-        spec.loader.exec_module(build)
-        real_run, exports = subprocess.run, []
-
-        def run(cmd, **kwargs):
-            if cmd[0] == "node":
-                with open(os.path.join(root, "build", "layout.json"), "w") as f:
-                    f.write("{}")
-            elif cmd[0] == "npx":
-                open(os.path.join(root, "build", "app.js"), "w").close()
-            else:
-                exports.append(real_run(cmd, capture_output=True, text=True, **kwargs))
-
-        def convert(rel):
-            return rel, (1440, 900), os.path.join(root, "dist", "img", os.path.splitext(os.path.relpath(rel, "screens"))[0])
-
-        err = io.StringIO()
-        paths = {"ROOT": root, "DIST": os.path.join(root, "dist"), "CACHE": os.path.join(root, "dist", "img"),
-                 "BUILD": os.path.join(root, "build")}
-        with contextlib.ExitStack() as stack:
-            for name, value in paths.items():
-                stack.enter_context(mock.patch.object(build, name, value))
-            stack.enter_context(mock.patch.object(mapdata, "ROOT", root))
-            stack.enter_context(mock.patch.object(build.subprocess, "run", side_effect=run))
-            stack.enter_context(mock.patch.object(build, "convert", side_effect=convert))
-            stack.enter_context(mock.patch.object(build, "build_atlas", return_value={"src": "img/atlas.webp"}))
-            stack.enter_context(mock.patch.dict(os.environ, env))
-            stack.enter_context(contextlib.redirect_stdout(io.StringIO()))
-            stack.enter_context(contextlib.redirect_stderr(err))
-            os.environ.pop("MAP_SKIP_INVALID_DATA", None)
-            build.main()
-
-        warns = [line for line in err.getvalue().splitlines() if line.startswith("WARN")]
-        self.assertEqual(len(warns), 1, err.getvalue())
+        warns = [line for line in err.splitlines() if line.startswith("WARN")]
+        self.assertEqual(len(warns), 1, err)
         self.assertRegex(warns[0], r"^WARN broken\.json: invalid JSON \(Expecting .+\)$")
         with open(os.path.join(root, "build", "map.json"), encoding="utf-8") as f:
             self.assertEqual(sorted(a["area"] for a in json.load(f)["areas"]), sorted(a["area"] for a in raw_areas(DATA)))
@@ -172,9 +185,9 @@ class MalformedAreaFile(unittest.TestCase):
             exported = {i["id"] for i in json.load(f)["issues"]}
         self.assertEqual(exported, {i["id"] for a in raw_areas(DATA) for i in a.get("issues", [])})
         # The export run by hand still stops on the bad file.
-        alone = real_run([sys.executable, "tools/export_agent_data.py", "--out", os.path.join(root, "out")],
-                         cwd=root, capture_output=True, text=True,
-                         env={**{k: v for k, v in os.environ.items() if k != "MAP_SKIP_INVALID_DATA"}, **env})
+        alone = subprocess.run([sys.executable, "tools/export_agent_data.py", "--out", os.path.join(root, "out")],
+                               cwd=root, capture_output=True, text=True,
+                               env={**{k: v for k, v in os.environ.items() if k != "MAP_SKIP_INVALID_DATA"}, **env})
         self.assertEqual(alone.returncode, 1)
         self.assertIn("JSONDecodeError", alone.stderr)
 
@@ -353,6 +366,54 @@ class SnapshotMerge(unittest.TestCase):
         self.assertTrue(os.path.isdir(self.snap))
         self.assertFalse(os.path.exists(prev))
         self.assertIsNotNone(issue_in(areas, "home.i-a11y-prev")[1])
+
+
+class TestDataBuild(unittest.TestCase):
+    """build.py marks the map as test data for tests/ledger.py's snapshot (meta.json testData), and only then."""
+
+    def setUp(self):
+        self.tmp = tempfile.TemporaryDirectory()
+        self.addCleanup(self.tmp.cleanup)
+        self.root = os.path.join(self.tmp.name, "site")
+        build_site(self.root)
+
+    def build(self, snapshot):
+        """(map data, page, report page or "", build.py's NOTE and WARN lines) for a build from snapshot."""
+        err, _ = run_build(self.root, {"A11Y_SNAPSHOT": snapshot})
+
+        def read(*path):
+            path = os.path.join(self.root, *path)
+            if not os.path.exists(path):
+                return ""
+            with open(path, encoding="utf-8") as f:
+                return f.read()
+        notes = [ln for ln in err.splitlines() if ln.startswith(("NOTE", "WARN"))]
+        return json.loads(read("build", "map.json")), read("dist", "index.html"), read("dist", "a11y", "index.html"), notes
+
+    def test_the_test_snapshot_marks_the_map_data_shows_the_banner_and_prints_a_note(self):
+        data, page, report, notes = self.build(SNAPSHOT)
+        self.assertIs(data["testData"], True)
+        self.assertIn(f'<section class="test-data" aria-label="Test data">{mapdata.TEST_DATA_NOTE}</section>', page)
+        self.assertIn(".test-data {", page)
+        self.assertIn(mapdata.TEST_DATA_NOTE, report)
+        self.assertEqual(notes, [f"NOTE built from test data ({SNAPSHOT}): the a11y findings are invented"])
+
+    def test_a_snapshot_without_test_data_or_no_snapshot_leaves_the_map_unmarked(self):
+        real = os.path.join(self.tmp.name, "real")
+        shutil.copytree(SNAPSHOT, real)
+        with open(os.path.join(real, "meta.json"), encoding="utf-8") as f:
+            meta = json.load(f)
+        self.assertIs(meta.pop("testData"), True)
+        with open(os.path.join(real, "meta.json"), "w", encoding="utf-8") as f:
+            json.dump(meta, f)
+        for snapshot in (real, os.path.join(self.tmp.name, "no-snapshot")):
+            data, page, report, notes = self.build(snapshot)
+            self.assertNotIn("testData", data, snapshot)
+            self.assertNotIn("test-data", page, snapshot)
+            self.assertNotIn(mapdata.TEST_DATA_NOTE, page + report, snapshot)
+            self.assertEqual(notes, [], snapshot)
+            if snapshot == real:
+                self.assertIn("Accessibility report", report)
 
 
 if __name__ == "__main__":

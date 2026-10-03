@@ -706,6 +706,10 @@ Generated issues are written grouped by area, then by severity (high first), the
  "lighthouse": {"run": "…", "date": "YYYY-MM-DD", "result": {"...": "lighthouse.json"}}}
 ```
 
+Optional `testData: true` marks a snapshot whose findings are invented. Only `tests/ledger.py` writes it,
+for `tests/data/snapshot/`; `publish` never does. With it, `build.py` shows a test-data banner above the
+map and prints a `NOTE` line, and the report opens with the same message.
+
 ### report.json
 
 The report model `publish` writes and `report.py` renders (KTD24):
