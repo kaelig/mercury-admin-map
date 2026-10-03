@@ -4,10 +4,12 @@
 
 Reads a verifier's output file, checks each verdict line against findings.json and schemas.md,
 prints the rejected lines with their reasons as JSON, and appends the valid ones. Decision lines in
-the same file are skipped: `decision add` takes them. The verifier judges whether a criterion
-applies and whether the state was reached; it cannot overrule a measured value, so a
-`not-reproduced-live` drop on a measured family must cite a passing probe taken under the sweep's
-environment. File formats: schemas.md.
+the same file are skipped: `decision add` takes them, and so are lines verdicts.jsonl already
+holds, so adding a file twice appends nothing. The verifier judges whether a criterion applies and
+whether the state was reached; it cannot overrule a measured value, so a `not-reproduced-live` drop
+on a measured family must cite a passing probe taken under the sweep's environment, of one of the
+finding's own elements (an occurrence on the probe's state, read from the raw file). File formats:
+schemas.md.
 
 The plumbing every `add` primitive shares (read_out, check_lines, add_file, print_result and the
 field checks) lives here too.
@@ -15,12 +17,15 @@ field checks) lives here too.
 import argparse
 import collections
 import datetime
+import functools
 import json
+import os
 import re
 import sys
 
 import mapdata
-from lib.canon import append_jsonl, dump, read_json, read_jsonl, rel
+import signature
+from lib.canon import append_jsonl, canonical, dump, read_json, read_jsonl, rel
 
 OUTCOMES = ("confirm", "drop", "rerate", "not-reached", "unverified")
 VERIFIED = ("confirm", "rerate")     # the outcomes that keep a finding in the map
@@ -85,11 +90,8 @@ def read_out(path):
     return rows
 
 
-def check_lines(path, validate, skip=None):
-    """Validate every line of `path` without storing anything.
-
-    validate(obj) -> (line to store, [reasons]); skip(obj) -> True for a line another primitive owns.
-    Returns (valid lines, rejected entries, skipped count)."""
+def checked(path, validate, skip=None):
+    """check_lines(), with each valid line as (the object read, the line to store)."""
     accepted, rejected, skipped = [], [], 0
     for n, raw, obj in read_out(path):
         if isinstance(obj, dict) and skip and skip(obj):
@@ -102,22 +104,62 @@ def check_lines(path, validate, skip=None):
         if reasons:
             rejected.append({"line": n, "reasons": reasons, "text": raw})
         else:
-            accepted.append(line)
+            accepted.append((obj, line))
     return accepted, rejected, skipped
+
+
+def check_lines(path, validate, skip=None):
+    """Validate every line of `path` without storing anything.
+
+    validate(obj) -> (line to store, [reasons]); skip(obj) -> True for a line another primitive owns.
+    Returns (valid lines, rejected entries, skipped count)."""
+    accepted, rejected, skipped = checked(path, validate, skip)
+    return [line for _, line in accepted], rejected, skipped
+
+
+def undated(line):
+    return {k: v for k, v in line.items() if k != "date"}
+
+
+def ledger_key(obj, line):
+    """The canonical text a line to store is matched against the ledger by. A date the validator
+    filled in is left out, so the same line added again on another day still matches."""
+    return canonical(undated(line) if obj.get("date") is None else line)
+
+
+def ledger_keys(lines):
+    """Every ledger_key the lines match: each line whole, and without its date."""
+    return {canonical(form) for line in lines for form in (line, undated(line))}
+
+
+def unadded(path, validate, held, skip=None):
+    """How many valid lines of `path` are not among `held`, the ledger_keys of the ledger they go to."""
+    accepted, _, _ = checked(path, validate, skip)
+    return sum(1 for obj, line in accepted if ledger_key(obj, line) not in held)
 
 
 def add_file(path, validate, out_path, skip=None):
-    """check_lines(), then append the valid lines to `out_path`. Returns what check_lines returns."""
-    accepted, rejected, skipped = check_lines(path, validate, skip)
-    if accepted:
-        append_jsonl(out_path, accepted)
-    return accepted, rejected, skipped
+    """check_lines(), then append the valid lines `out_path` does not hold yet, so a file added twice
+    appends nothing the second time. Returns (appended lines, rejected entries, skipped count,
+    duplicates: valid lines the ledger already held)."""
+    accepted, rejected, skipped = checked(path, validate, skip)
+    held = ledger_keys(read_jsonl(out_path))
+    lines, duplicates = [], 0
+    for obj, line in accepted:
+        if ledger_key(obj, line) in held:
+            duplicates += 1
+            continue
+        held |= ledger_keys([line])
+        lines.append(line)
+    if lines:
+        append_jsonl(out_path, lines)
+    return lines, rejected, skipped, duplicates
 
 
-def print_result(path, out_path, accepted, rejected, skipped):
+def print_result(path, out_path, accepted, rejected, skipped, duplicates):
     """Print the add summary as JSON; exit 1 when any line was rejected."""
-    print(dump({"file": rel(path), "to": rel(out_path), "appended": len(accepted), "skipped": skipped,
-                "rejected": rejected}), end="")
+    print(dump({"file": rel(path), "to": rel(out_path), "appended": len(accepted), "duplicates": duplicates,
+                "skipped": skipped, "rejected": rejected}), end="")
     return 1 if rejected else 0
 
 
@@ -197,7 +239,40 @@ def probe_passes(finding, p):
     return True, ""
 
 
-def cited_probe_reasons(line, finding):
+def occurrence_items(f, state, raw):
+    """The raw results (records, for announced-as) the finding's occurrences on `state` point at, from
+    that state's raw file. An index past the end, or at an item of another rule or record signature
+    (the raw file was swept again after `group`), is left out."""
+    records = f.get("rule") == "announced-as"
+    items = (raw or {}).get("records" if records else "results") or []
+    out = []
+    for o in f.get("occurrences") or []:
+        if o["state"] != state or o["index"] >= len(items):
+            continue
+        item = items[o["index"]]
+        if (signature.record_sig(item) == f.get("recordSig")) if records else item.get("rule") == f.get("rule"):
+            out.append(item)
+    return out
+
+
+def measured_element_reasons(cite, p, finding, raw):
+    """A scanner finding's measurement is of its own elements, so the probe must measure one of them on
+    its state. A hand-found finding has no occurrences: the sweep measured no element of it. Without
+    raw files (raw is None) there is nothing to match against, and the check is left out."""
+    occurrences = finding.get("occurrences") or []
+    if raw is None or not occurrences:
+        return []
+    state, xpath = p.get("state"), p.get("xpath")
+    xpaths = set()
+    if any(o["state"] == state for o in occurrences):
+        xpaths = {(i.get("occurrence") or {}).get("xpath") for i in occurrence_items(finding, state, raw(state))}
+    if text(xpath) and xpath in xpaths:
+        return []
+    return [f"probe {cite} measured {xpath!r} on {state}, which is not one of the finding's elements there: "
+            f"probe the element the sweep measured (the xpath in the batch entry's evidence)"]
+
+
+def cited_probe_reasons(line, finding, raw):
     family, kind = finding["family"], MEASURED[finding["family"]]
     cite = line.get("counterEvidence")
     probes = [p for p in line.get("probes") or [] if isinstance(p, dict)]
@@ -208,18 +283,22 @@ def cited_probe_reasons(line, finding):
     if p.get("kind") != kind:
         return [f"probe {cite} is a {p.get('kind')} probe; {family} needs a {kind} probe"]
     ok, why = probe_passes(finding, p)
-    return [] if ok else [f"probe {cite} does not pass: {why}"]
+    if not ok:
+        return [f"probe {cite} does not pass: {why}"]
+    return measured_element_reasons(cite, p, finding, raw)
 
 
 # ---------------------------------------------------------------------------
 # The verdict validator
 # ---------------------------------------------------------------------------
 
-def validate(line, findings, allow_unverified=False):
+def validate(line, findings, allow_unverified=False, raw=None):
     """(line to store, [reasons]). An empty reason list means the line is valid.
 
     findings: {key: finding} from findings.json. `unverified` is written only by `verify prepare`,
-    which passes allow_unverified=True."""
+    which passes allow_unverified=True. raw(state) returns the run's raw file for a state: with it, the
+    probe a not-reproduced-live drop on a measured family cites must measure one of the finding's own
+    elements. `verdict add` always passes it (run_check)."""
     reasons = []
     key, outcome = line.get("key"), line.get("outcome")
     f = findings.get(key) if isinstance(key, str) else None
@@ -289,7 +368,7 @@ def validate(line, findings, allow_unverified=False):
             if code == "fixed-since-capture" and f["source"] != "hand-found":
                 reasons.append("fixed-since-capture is for hand-found issues only")
             if code == "not-reproduced-live" and f["family"] in MEASURED:
-                reasons += cited_probe_reasons(line, f)
+                reasons += cited_probe_reasons(line, f, raw)
         if f["source"] == "hand-found" and outcome in VERIFIED + ("drop",) and not probes and not text(cite):
             reasons.append("a hand-found verdict must cite a probe (probes) or an evidence reference (counterEvidence)")
 
@@ -325,6 +404,25 @@ def status(ws, run_id):
     return {"lines": len(lines), "keys": len({v.get("key") for v in lines}), "outcomes": count_by(lines, "outcome")}
 
 
+def raw_files(raw_dir):
+    """raw(state) for validate(): the state's raw file in raw_dir, or None, each read once."""
+    return functools.lru_cache(maxsize=None)(lambda sid: read_json(os.path.join(raw_dir, f"{sid}.json")))
+
+
+def run_check(ws, run_id, findings):
+    """The check `verdict add` applies to each line: validate() against the run's raw files, and no
+    canary verdicts."""
+    raw = raw_files(ws.raw_dir(run_id))
+
+    def check(obj):
+        line, reasons = validate(obj, findings, raw=raw)
+        if str(obj.get("batch", "")).startswith("canary"):
+            reasons = reasons + ["canary verdicts never enter the run: score them with `audit.py canary score`"]
+        return line, reasons
+
+    return check
+
+
 def cli(ws, sub, argv):
     p = argparse.ArgumentParser(prog="audit.py verdict add", description=__doc__.split("\n\n")[0])
     p.add_argument("--file", required=True, help="a verifier output file, batches/<batch>.out.jsonl")
@@ -334,13 +432,6 @@ def cli(ws, sub, argv):
     if findings is None:
         print(f"verdict add: run {run_id} has no findings.json: run `audit.py group` first", file=sys.stderr)
         return 2
-
-    def check(obj):
-        line, reasons = validate(obj, findings)
-        if str(obj.get("batch", "")).startswith("canary"):
-            reasons = reasons + ["canary verdicts never enter the run: score them with `audit.py canary score`"]
-        return line, reasons
-
     out_path = ws.file("verdicts.jsonl", run_id)
-    accepted, rejected, skipped = add_file(args.file, check, out_path, skip=is_decision)
-    return print_result(args.file, out_path, accepted, rejected, skipped)
+    return print_result(args.file, out_path, *add_file(args.file, run_check(ws, run_id, findings), out_path,
+                                                       skip=is_decision))

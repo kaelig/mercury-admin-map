@@ -131,6 +131,8 @@ describe('tab walk', { concurrency: 4 }, () => {
     const out = await twice(() => walk('trap.html', { interactive: [['main button', true, 'ax']] }));
     assert.deepEqual(names(out.detail), ['Before', 'Status', 'Amount', 'Date']);
     assert.equal(out.detail.end, 'repeat');
+    // A walk held by a trap did not cover the page: a finding it does not report is not a fixed one.
+    assert.equal(out.completed, false);
     // After is never reached, but the trap explains that: no not-reached candidates behind a trap.
     assert.deepEqual(brief(out.results), [['keyboard-trap', 'failure', '2.1.2', 'Status']]);
     const ev = out.results[0].evidence;
@@ -148,6 +150,7 @@ describe('tab walk', { concurrency: 4 }, () => {
     assert.equal(out.detail.stops[0].occurrence.layer, 'top');
     assert.deepEqual(names(out.detail), ['Street', 'City', 'Cancel', 'Save']);
     assert.equal(out.detail.end, 'repeat');
+    assert.equal(out.completed, true);
     assert.deepEqual(out.results, []);
   });
 
@@ -158,7 +161,17 @@ describe('tab walk', { concurrency: 4 }, () => {
     }));
     assert.deepEqual(names(out.detail), ['Nickname', 'Cancel', 'Save']);
     assert.equal(out.detail.end, 'repeat');
+    assert.equal(out.completed, true);
     assert.deepEqual(out.results, []);
+  });
+
+  test('tabwalk: a bar that sends Tab back to its first button but lets Shift+Tab out is no trap, and leaves the walk incomplete', async () => {
+    const out = await twice(() => walk('wrap.html'));
+    assert.deepEqual(names(out.detail), ['Before', 'Status', 'Amount', 'Date']);
+    assert.equal(out.detail.end, 'repeat');
+    assert.deepEqual(out.results, []);
+    // After is never visited: a finding the walk would report there is not shown to be fixed.
+    assert.equal(out.completed, false);
   });
 
   test('tabwalk: an iframe that takes three Tab presses is one stop with a count', async () => {
@@ -187,6 +200,7 @@ describe('tab walk', { concurrency: 4 }, () => {
     assert.match(out.detail.stops[0].occurrence.xpath, /aside/);
     assert.deepEqual(names(out.detail), ['View receipt', 'Download']);
     assert.equal(out.detail.end, 'exit');
+    assert.equal(out.completed, true);
     assert.deepEqual(out.results, []);
   });
 
@@ -196,8 +210,10 @@ describe('tab walk', { concurrency: 4 }, () => {
     assert.equal(out.detail.end, 'limit');
     assert.equal(out.detail.presses, 60);
     assert.equal(out.detail.stops[1].count, 59);
-    // A walk cut off at the limit proves nothing about reach: no not-reached for After frame.
+    // A walk cut off at the limit proves nothing about reach: no not-reached for After frame, and the
+    // family is incomplete, so a finding it does not report is not a fixed one.
     assert.deepEqual(out.results, []);
+    assert.equal(out.completed, false);
   });
 
   test('tabwalk: a clickable div is a 2.1.1 candidate, a disabled button is not; a stop a row above its predecessor is a 2.4.3 candidate with an overlay', async () => {
@@ -271,41 +287,77 @@ describe('dialog check', { concurrency: 5 }, () => {
     assert.deepEqual(brief(never.results), [['dialog-focus-not-moved', 'failure', '2.4.3', 'Billing address']]);
     assert.equal(never.results[0].evidence.reachedLayer, false);
     assert.equal(never.results[0].evidence.trace.some((s) => s.where === 'inside'), false);
+    // A non-modal drawer has no containment rule to miss, and Esc closes it.
+    assert.equal(never.completed, true);
   });
 
   test('dialog: a trigger with no tab stop, and one that only a click opens, fail 2.1.1', async () => {
     const row = await twice(() => check('drawers.html', 'drawer', 'click', 'Payment details'));
     assert.deepEqual(brief(row.results), [['dialog-trigger-not-focusable', 'failure', '2.1.1', '/html/body/main[1]/div[1]']]);
     assert.equal(row.detail.opened, null);
+    // No focus rule ran, so the family is incomplete: a published focus finding on this state is not fixed.
+    assert.equal(row.completed, false);
     assert.equal(row.results[0].evidence.stops, 3);
 
     const div = await twice(() => check('drawers.html', 'drawer', 'click', 'Card settings'));
     assert.deepEqual(brief(div.results), [['dialog-trigger-not-operable', 'failure', '2.1.1', 'Card settings']]);
     assert.equal(div.detail.opened, null);
+    assert.equal(div.completed, false);
     assert.deepEqual(div.detail.trace.filter((s) => !['start', 'Tab'].includes(s.key)).map((s) => s.key), ['Enter', 'Space']);
   });
 
   test('dialog: a correct modal passes; ignoring Esc gives nothing; dropping focus on close fails 2.4.3', async () => {
     const ok = await twice(() => check('dialogs.html', 'modal', 'click', 'Add delivery address'));
     assert.equal(ok.detail.opened, 'enter');
+    assert.equal(ok.completed, true);
     assert.deepEqual(ok.results, []);
 
     const noEsc = await twice(() => check('dialogs.html', 'modal', 'click', 'Edit nickname'));
     assert.equal(noEsc.detail.opened, 'enter');
     assert.deepEqual(noEsc.results, []);
     assert.ok(noEsc.detail.trace.some((s) => s.key === 'close'));
+    assert.equal(noEsc.completed, true);
 
     const noReturn = await twice(() => check('dialogs.html', 'modal', 'click', 'Change PIN'));
     assert.deepEqual(brief(noReturn.results), [['dialog-focus-not-returned', 'failure', '2.4.3', 'Change PIN']]);
     assert.equal(noReturn.results[0].evidence.focus, 'body');
+    assert.equal(noReturn.completed, true);
+  });
+
+  test('dialog: a layer the check cannot test every focus rule on leaves the family incomplete, with the results it has', async () => {
+    // Focus moves inside and stays there, but neither Esc nor a close control closes it: the return rule never ran.
+    const noExit = await twice(() => check('layers.html', 'modal', 'click', 'Review transfer'));
+    assert.equal(noExit.detail.opened, 'enter');
+    assert.deepEqual(noExit.results, []);
+    assert.equal(noExit.completed, false);
+
+    // Tab never reaches the modal, so containment was never tested.
+    const outside = await twice(() => check('layers.html', 'modal', 'click', 'View terms'));
+    assert.deepEqual(brief(outside.results), [['dialog-focus-not-moved', 'failure', '2.4.3', 'Terms']]);
+    assert.equal(outside.results[0].evidence.reachedLayer, false);
+    assert.equal(outside.completed, false);
+
+    // A menu that ignores Esc.
+    const menu = await twice(() => check('layers.html', 'menu', 'click', 'Sort'));
+    assert.equal(menu.detail.opened, 'enter');
+    assert.deepEqual(menu.results, []);
+    assert.equal(menu.completed, false);
+
+    // A popover whose link Tab never reaches, so its return rule never ran.
+    const pop = await twice(() => check('layers.html', 'popover', 'click', 'Limits help'));
+    assert.equal(pop.detail.opened, 'enter');
+    assert.deepEqual(pop.results.map((r) => r.rule), ['popover-not-reachable']);
+    assert.equal(pop.completed, false);
   });
 
   test('dialog: an APG menu button passes; a menu that leaves focus on its button fails 2.4.3', async () => {
     const ok = await twice(() => check('menus.html', 'menu', 'click', 'Actions'));
     assert.equal(ok.detail.opened, 'enter');
+    assert.equal(ok.completed, true);
     assert.deepEqual(ok.results, []);
 
     const bad = await twice(() => check('menus.html', 'menu', 'click', 'Export'));
+    assert.equal(bad.completed, true);
     assert.deepEqual(brief(bad.results), [['menu-focus-not-moved', 'failure', '2.4.3', 'Export']]);
     assert.equal(who(bad.results[0].evidence.focus), 'Export');
     assert.equal(bad.results[0].evidence.nextTabInside, false);
@@ -315,14 +367,18 @@ describe('dialog check', { concurrency: 5 }, () => {
     const hover = await twice(() => check('popovers.html', 'popover', 'hover', 'Fees info'));
     assert.deepEqual(brief(hover.results), [['hover-only', 'failure', '2.1.1', 'Fees info']]);
     assert.equal(hover.detail.opened, null);
+    assert.equal(hover.completed, false);
 
+    // Neither closes on Esc, so the return rule never ran: no failure, and the family is incomplete.
     const focus = await twice(() => check('popovers.html', 'popover', 'hover', 'Card art'));
     assert.equal(focus.detail.opened, 'focus');
     assert.deepEqual(focus.results, []);
+    assert.equal(focus.completed, false);
 
     const disclosure = await twice(() => check('popovers.html', 'popover', 'click', 'Filters'));
     assert.equal(disclosure.detail.opened, 'enter');
     assert.deepEqual(disclosure.results, []);
+    assert.equal(disclosure.completed, false);
   });
 });
 

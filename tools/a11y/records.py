@@ -12,9 +12,9 @@ once its .out.jsonl exists. A record whose signature a published finding came fr
 issue's family and criterion, so `group` folds it into a finding that goes straight to verification.
 
 `judgment add` checks each line of a judge's output, prints the rejected lines with their reasons
-as JSON, and appends the valid ones to judgments.jsonl. A flag carries `criterion`: a WCAG 2.2 A or
-AA criterion with a family (name, role-state or structure), which `group` turns into a finding, or
-null, which sends the record to the advisory list. File formats: schemas.md.
+as JSON, and appends the valid ones judgments.jsonl does not hold yet. A flag carries `criterion`:
+a WCAG 2.2 A or AA criterion with a family (name, role-state or structure), which `group` turns
+into a finding, or null, which sends the record to the advisory list. File formats: schemas.md.
 """
 import argparse
 import math
@@ -206,8 +206,8 @@ def cli(ws, sub, argv):
         sigs = {x["sig"] for x in lines}
         wcag = set(load_wcag())
         out_path = ws.file("judgments.jsonl", run_id)
-        accepted, rejected, skipped = add_file(args.file, lambda obj: validate(obj, sigs, wcag), out_path)
-        return print_result(args.file, out_path, accepted, rejected, skipped)
+        return print_result(args.file, out_path, *add_file(args.file, lambda obj: validate(obj, sigs, wcag),
+                                                           out_path))
 
     p = argparse.ArgumentParser(prog="audit.py records prepare", description=__doc__.split("\n\n")[0])
     p.parse_args(argv)

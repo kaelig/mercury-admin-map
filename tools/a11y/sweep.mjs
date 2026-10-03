@@ -332,10 +332,11 @@ class Sweep {
     }
     const doc = this.unreachable(id, 'tool-error', { step: last.step ?? null, message: last.error }, { hash: recipeHash(list) });
     if (!last.rootLoad) return this.write(doc, t0);
+    // Trip before holding: hold() can settle the held states at once when nothing else is left.
+    this.rootFailures += 1;
+    if (this.rootFailures >= ROOT_FAILURES) return this.trip(`${ROOT_FAILURES} consecutive root pages failed to load (last: ${last.error})`);
     this.held.set(id, { doc, t0 });
     this.queue.hold(id);
-    this.rootFailures += 1;
-    if (this.rootFailures >= ROOT_FAILURES) this.trip(`${ROOT_FAILURES} consecutive root pages failed to load (last: ${last.error})`);
   }
 
   // One replay of `id` and its checks in fresh contexts. Returns {env}, {error, step, rootLoad, hang}

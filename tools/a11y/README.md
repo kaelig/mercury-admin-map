@@ -23,7 +23,7 @@ python3 build.py                   # writes build/map.json, which every stage re
 python3 tools/a11y/audit.py preflight
 ```
 
-`preflight` checks the map, the two pinned packages and the demo, and prints the demo's build hash. Python stages use the standard library only. `reach`, `probe` and the agents also need `agent-browser` on `PATH`.
+`preflight` checks the map, the two pinned packages and the demo, and prints the demo's build hash. Python stages use the standard library only. `reach`, `probe` and the agents also need `agent-browser` on `PATH`. A session that `reach` or `probe` starts can only `open` the hostnames of `policy.allowedOrigins` and the `--base-url` origin: both start it with agent-browser's `--allowed-domains`. agent-browser sets that when the session's daemon starts, so run `reach` before any other command in a new session. It refuses `agent-browser open` on another domain and nothing else: a click, a script or a sub-resource can still leave the demo.
 
 Every stage takes the same options:
 
@@ -258,9 +258,10 @@ You can run every stage by hand from `SKILL.md`. Only recording, judging and ver
 
 Run `python3 tools/a11y/audit.py status` first. It reads every stage's progress from files and names what is pending. Then run the pending stage's command again:
 
-- `sweep` runs only states without a valid raw file. A raw file made by different harness code (any change under `checks/`, `lib/*.mjs` or `sweep.mjs`) is invalid, so a code fix re-sweeps every state.
+- `sweep` runs only states without a valid raw file. A raw file made by different harness code (any change under `checks/` or `lib/*.mjs`, to `sweep.mjs`, `recipe.mjs`, `fingerprint.mjs` or `checks.json`, or a new axe-core or Playwright version) is invalid, so a code fix re-sweeps every state.
 - `records prepare` and `verify prepare` batch only what has no judgment or verdict and is not already out in a batch. A batch counts as returned once its `.out.jsonl` exists; write an empty one for an agent that died.
-- The `add` commands append, so add each file once. Corrected lines go in a new file.
+- The `add` commands append only lines their ledger does not hold yet, so adding a file again is safe (repeats count as `duplicates`). Corrected lines go in a new file. `verify status` lists returned batches not added yet (`batches.returnedNotAdded`), and `verify prepare` refuses until they are added.
+- `group` records in `findings.json` the harness hash, the sweep outcomes and the raw files it read. After any sweep of the run, `verify prepare`, `diff` and `publish` refuse it until `group` runs again. They also refuse a run swept with other harness code than the current one until `sweep`, then `group`, run again.
 - `publish` rebuilds everything from the run's ledger. If `status` says "publish incomplete, rerun publish", rerun it.
 
 Once a run has a second run beside it, pass `--run <id>` to every stage: the default is the newest run.
@@ -279,7 +280,7 @@ Once a run has a second run beside it, pass `--run <id>` to every stage: the def
 | `dist/a11y/index.html` | the rendered report | no |
 | `.agents/skills/a11y-audit/` | the skill and its agent prompts | yes |
 
-`build.py` and `tools/export_agent_data.py` read the snapshot through `tools/mapdata.py`. Set `A11Y_SNAPSHOT` to read another snapshot directory.
+`build.py` and `tools/export_agent_data.py` read the snapshot through `tools/mapdata.py`. Set `A11Y_SNAPSHOT` to read another snapshot directory. A `data/*.json` that does not parse stops `tools/export_agent_data.py` run on its own. `build.py` leaves that area out of the map and prints `WARN <file>: invalid JSON (<error>)`, and runs the export with `MAP_SKIP_INVALID_DATA=1`, so the export leaves out the same file.
 
 ## Reading the report
 
@@ -306,4 +307,4 @@ node --test tools/a11y/tests/e2e.test.mjs                      # every stage on 
 cd tools/a11y && python3 -m unittest tests.test_verdict -v     # one Python test module
 ```
 
-Browser tests run against the fixture sites in `tools/a11y/fixtures/`, served by a small static server inside the tests, and every stage test uses a temporary workspace. Two tests skip with a message when a local tool is missing: the `plan` test needs `build/map.json`, and the `reach` test needs agent-browser on `PATH`. `tests/test_skill_parity.py` checks that the skill names only stages `audit.py` lists, that each agent prompt starts with its version id, and that the verifier's drop reason codes match `verdict.py`.
+Browser tests run against the fixture sites in `tools/a11y/fixtures/`, served by a small static server inside the tests, and every stage test uses a temporary workspace. Some tests skip with a message when a local tool is missing: the `plan` test needs `build/map.json`, and the `reach` test, the `probe --session` test and the allowed-domains tests need agent-browser on `PATH`. `tests/test_skill_parity.py` checks that the skill names only stages `audit.py` lists, that each agent prompt starts with its version id, and that the verifier's drop reason codes match `verdict.py`.

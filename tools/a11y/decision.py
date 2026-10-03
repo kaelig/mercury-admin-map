@@ -5,8 +5,9 @@
 Each line answers one attachment proposal: `attach` or `reject` a proposal from findings.json, or
 `release` an attachment the snapshot registry holds (its proposal id is sha([finding key,
 hand-found id]), from signature.proposal_id like `group`'s proposals). Every decision needs a
-reason. Prints the rejected lines with their reasons as JSON and appends the valid ones; verdict
-lines in the same file are skipped, since `verdict add` takes them. File formats: schemas.md.
+reason. Prints the rejected lines with their reasons as JSON and appends the valid ones that
+decisions.jsonl does not hold yet; verdict lines in the same file are skipped, since `verdict add`
+takes them. File formats: schemas.md.
 """
 import argparse
 import sys
@@ -86,5 +87,5 @@ def cli(ws, sub, argv):
         print(f"decision add: run {run_id} has no findings.json: run `audit.py group` first", file=sys.stderr)
         return 2
     out_path = ws.file("decisions.jsonl", run_id)
-    accepted, rejected, skipped = add_file(args.file, lambda obj: validate(obj, *known), out_path, skip=is_verdict)
-    return print_result(args.file, out_path, accepted, rejected, skipped)
+    return print_result(args.file, out_path, *add_file(args.file, lambda obj: validate(obj, *known), out_path,
+                                                       skip=is_verdict))

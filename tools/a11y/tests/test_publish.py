@@ -26,7 +26,7 @@ import mapdata
 import publish
 import signature
 import status
-from lib.canon import read_json, write_json
+from lib.canon import harness_hash, read_json, write_json
 from lib.ws import Workspace
 
 GROUP_FIXTURE = os.path.join(A11Y, "tests", "data", "group")
@@ -428,6 +428,32 @@ class PublishTest(unittest.TestCase):
         self.assertEqual(issues["overlays"][ROWS]["addNodeIds"], [])
         self.assertEqual(published(self.ws_dir, "registry.json")["attachments"], [])
 
+    def decided(self, decisions):
+        """Run A with one proposal to attach the API-tokens finding to ROWS, decided in `decisions` order."""
+        led = self.ledger(RUN_A)
+        led.hand_found()
+        rows = led.scanner("name", "button-name", ["settings.tokens", "settings.index"], element='button in "API Tokens"',
+                           primary="settings.tokens")
+        p = led.propose(rows, ROWS)
+        for d in decisions:
+            led.decide(p["id"], rows["key"], ROWS, decision=d)
+        led.confirm_rest()
+        self.run_stages(led)
+        return rows
+
+    def test_a_reject_after_an_attach_on_the_same_proposal_leaves_no_attachment(self):
+        self.decided(["attach", "reject"])
+        self.assertEqual(published(self.ws_dir, "registry.json")["attachments"], [])
+        issues = published(self.ws_dir, "issues.json")
+        self.assertEqual([i["nodeIds"] for i in issues["generated"]], [["settings.tokens", "settings.index"]])
+        self.assertEqual(issues["overlays"][ROWS]["addNodeIds"], [])
+
+    def test_an_attach_after_a_reject_on_the_same_proposal_attaches(self):
+        rows = self.decided(["reject", "attach"])
+        self.assertEqual(published(self.ws_dir, "registry.json")["attachments"],
+                         [{"finding": rows["key"], "handFound": ROWS, "run": RUN_A}])
+        self.assertEqual(published(self.ws_dir, "issues.json")["generated"], [])
+
     def merged_issue(self, iid):
         with contextlib.redirect_stderr(io.StringIO()):
             areas = mapdata.load_areas(DATA, snapshot_dir=os.path.join(self.ws_dir, "published"))
@@ -504,8 +530,9 @@ class PublishTest(unittest.TestCase):
         self.assertEqual(code, 0, err)
         return read_json(os.path.join(ws_dir, "runs", GROUP_RUN, "findings.json"))
 
-    def complete_ledger(self, ws, doc):
-        """outcomes.json from the raw files, run.json, a passing canary, verdicts and decisions."""
+    def swept(self, ws):
+        """outcomes.json from the raw files and run.json with the current harness, as a finished sweep
+        leaves them before `group`."""
         run_dir = ws.run_dir(GROUP_RUN)
         states = {}
         for name in sorted(os.listdir(os.path.join(run_dir, "raw"))):
@@ -516,7 +543,12 @@ class PublishTest(unittest.TestCase):
                                     "build": raw.get("build")}
         write_json(os.path.join(run_dir, "outcomes.json"), {"run": GROUP_RUN, "counts": {}, "builds": ["b1d2e3"], "states": states})
         write_json(os.path.join(run_dir, "run.json"), {"run": GROUP_RUN, "created": "2026-10-02T14:00:00",
-                                                       "versions": {"axe": "4.13.0"}, "builds": ["b1d2e3"]})
+                                                       "versions": {"axe": "4.13.0"}, "harness": harness_hash(),
+                                                       "builds": ["b1d2e3"]})
+
+    def complete_ledger(self, ws, doc):
+        """A passing canary, verdicts and decisions for the grouped findings."""
+        run_dir = ws.run_dir(GROUP_RUN)
         led = Ledger(ws.path, GROUP_RUN)
         led.findings = doc["findings"]
         led.calibrate()
@@ -540,6 +572,7 @@ class PublishTest(unittest.TestCase):
 
     def test_publish_rebuild_group_and_publish_again_keeps_the_hand_found_set_and_the_bytes(self):
         ws_dir, ws = self.group_workspace()
+        self.swept(ws)
         doc = self.group(ws_dir)
         self.complete_ledger(ws, doc)
         pristine = os.path.join(self.tmp.name, "pristine")
@@ -585,6 +618,7 @@ class PublishTest(unittest.TestCase):
 
     def test_titles_from_real_facts_never_carry_a_css_class_name(self):
         ws_dir, ws = self.group_workspace()
+        self.swept(ws)
         doc = self.group(ws_dir)
         self.complete_ledger(ws, doc)
         stage(ws, "diff")
@@ -674,6 +708,53 @@ class PublishTest(unittest.TestCase):
                 fh.write(json.dumps(v) + "\n")
 
         self.refuses(led, "diff.json is out of date", late_verdict)
+
+    def resweep(self, led):
+        """cards.detail-physical swept again after group, unreachable this time."""
+        def setup(ws):
+            outcomes = read_json(led.path("outcomes.json"))
+            outcomes["states"]["cards.detail-physical"] = dict(outcomes["states"]["cards.detail-physical"],
+                                                               outcome="unreachable", completed=[])
+            write_json(led.path("outcomes.json"), outcomes)
+        return setup
+
+    def other_harness(self, led):
+        def setup(ws):
+            write_json(led.path("run.json"), dict(read_json(led.path("run.json")), harness="0123456789abcdef"))
+        return setup
+
+    def test_refuses_findings_grouped_from_another_sweep(self):
+        led = self.second_run()
+        led.confirm_rest()
+        self.refuses(led, "findings.json was grouped from a different sweep: rerun `audit.py group`", self.resweep(led))
+
+    def test_refuses_a_run_swept_with_another_harness(self):
+        led = self.second_run()
+        led.confirm_rest()
+        err = self.refuses(led, "the run was swept with harness 0123456789abcdef", self.other_harness(led))
+        self.assertIn("rerun `audit.py sweep`, then `audit.py group`", err)
+        self.assertEqual(err.count("the run was swept with harness"), 1)
+
+    def test_a_stale_sweep_and_stale_findings_ask_for_a_new_sweep_once(self):
+        led = self.second_run()
+        led.confirm_rest()
+
+        def both(ws):
+            self.resweep(led)(ws)
+            self.other_harness(led)(ws)
+
+        err = self.refuses(led, "rerun `audit.py sweep`, then `audit.py group`", both)
+        self.assertEqual(err.count("the run was swept with harness"), 1)
+
+    def test_refuses_findings_grouped_before_a_state_was_swept_again(self):
+        led = self.second_run()
+        led.confirm_rest()
+
+        def resweep_raw(ws):
+            path = os.path.join(led.path("raw"), "cards.index.json")
+            raw = read_json(path)
+            write_json(path, dict(raw, build="c9d8e7"))                 # same outcome, another raw file
+        self.refuses(led, "findings.json was grouped from a different sweep: rerun `audit.py group`", resweep_raw)
 
     def test_refuses_on_a_title_over_80_characters(self):
         led = self.second_run()

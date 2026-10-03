@@ -345,6 +345,9 @@ export async function run(ctx) {
   let end = 'limit';
   let presses = 0;
   let trap = null;
+  // Set when the walk comes back round to a later stop than the first: the stops past that loop are
+  // never visited.
+  let partial = false;
   try {
     while (presses < limit) {
       await page.keyboard.press('Tab');
@@ -369,6 +372,7 @@ export async function run(ctx) {
         // Inside an open layer, coming back round to the first stop is containment, which a modal does
         // by design: its close control is the way out (2.1.2), and the dialog check tests that.
         if (top && from === 0) break;
+        partial = from > 0;
         const loop = new Set(stops.slice(from).map((s) => s.unit));
         const probe = await probeTrap(page, loop);
         if (!probe.left) trap = { stop: stops[from], probes: probe.probes };
@@ -445,5 +449,7 @@ export async function run(ctx) {
     end,
     presses,
   };
-  return { results, records: [], detail, completed: true };
+  // A walk cut off at the press limit, held by a trap, or sent round a loop that starts past its first
+  // stop did not cover the scope: a finding it does not report is not shown to be fixed.
+  return { results, records: [], detail, completed: !trap && !partial && end !== 'limit' };
 }

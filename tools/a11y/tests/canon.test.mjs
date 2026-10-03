@@ -1,8 +1,8 @@
 import { test } from 'node:test';
 import assert from 'node:assert/strict';
-import { readFileSync, mkdtempSync, readdirSync, readFileSync as read } from 'node:fs';
+import { readFileSync, mkdtempSync, mkdirSync, readdirSync, writeFileSync, readFileSync as read } from 'node:fs';
 import { execFileSync } from 'node:child_process';
-import { join } from 'node:path';
+import { dirname, join } from 'node:path';
 import { tmpdir } from 'node:os';
 import { ROOT, canonical, dump, nameTemplate, nameTemplateRegex, buildHash, harnessHash, writeJson } from '../lib/canon.mjs';
 
@@ -38,6 +38,55 @@ test('build hash matches the shared vectors', () => {
 test('harness hash equals the Python one', () => {
   const py = execFileSync('python3', ['-c', 'import sys; sys.path.insert(0, "tools/a11y"); from lib.canon import harness_hash; print(harness_hash())'], { cwd: ROOT, encoding: 'utf8' });
   assert.equal(harnessHash(), py.trim());
+});
+
+// A repository root holding every file and package the harness hash reads, each with distinct content.
+function harnessFixture() {
+  const root = mkdtempSync(join(tmpdir(), 'harness-'));
+  const put = (rel, text) => {
+    mkdirSync(dirname(join(root, rel)), { recursive: true });
+    writeFileSync(join(root, rel), text);
+  };
+  for (const rel of ['checks/axe.mjs', 'lib/canon.mjs', 'sweep.mjs', 'recipe.mjs', 'fingerprint.mjs', 'checks.json']) {
+    put(`tools/a11y/${rel}`, `// ${rel}\n`);
+  }
+  for (const name of ['axe-core', 'playwright']) put(`node_modules/${name}/package.json`, JSON.stringify({ name, version: '1.0.0' }));
+  return { root, put };
+}
+
+test('harness hash equals the Python one on a fixture root', () => {
+  const { root } = harnessFixture();
+  const py = execFileSync('python3', ['-c', 'import sys; sys.path.insert(0, "tools/a11y"); from lib.canon import harness_hash; print(harness_hash(sys.argv[1]))', root], { cwd: ROOT, encoding: 'utf8' });
+  assert.equal(harnessHash(root), py.trim());
+});
+
+test('harness hash changes with every file and package that decides a raw file', () => {
+  const { root, put } = harnessFixture();
+  const seen = new Set([harnessHash(root)]);
+  const changes = [
+    ['tools/a11y/sweep.mjs', '// changed\n'],
+    ['tools/a11y/recipe.mjs', '// changed\n'],
+    ['tools/a11y/fingerprint.mjs', '// changed\n'],
+    ['tools/a11y/checks.json', '{}\n'],
+    ['tools/a11y/checks/axe.mjs', '// changed\n'],
+    ['tools/a11y/lib/canon.mjs', '// changed\n'],
+    ['node_modules/axe-core/package.json', JSON.stringify({ version: '1.0.1' })],
+    ['node_modules/playwright/package.json', JSON.stringify({ version: '1.0.1' })],
+  ];
+  for (const [rel, text] of changes) {
+    put(rel, text);
+    const h = harnessHash(root);
+    assert.ok(!seen.has(h), `changing ${rel} left the hash at ${h}`);
+    seen.add(h);
+  }
+});
+
+test('harness hash ignores files the sweep does not read', () => {
+  const { root, put } = harnessFixture();
+  const before = harnessHash(root);
+  put('tools/a11y/publish.py', '# changed\n');
+  put('tools/a11y/README.md', 'changed\n');
+  assert.equal(harnessHash(root), before);
 });
 
 test('canonical bytes equal Python for the same object', () => {

@@ -11,6 +11,7 @@ import os
 import shutil
 import tempfile
 import unittest
+from unittest import mock
 
 from tests.pathshim import A11Y
 from tests import test_verdict as tv
@@ -126,6 +127,8 @@ class Batching(unittest.TestCase):
         canon.write_json(os.path.join(run_dir, "findings.json"),
                          {"run": RUN, "findings": sorted(findings, key=lambda f: f["key"]), "proposals": [],
                           "advisory": [], "flags": []})
+        tv.swept(ws)
+        tv.stamp(ws)
         return ws
 
     def test_batches_hold_at_most_10_findings_sharing_an_area_and_a_primary_state(self):
@@ -210,6 +213,15 @@ class Entries(Fixture):
         self.assertEqual((rows["source"], rows["evidence"], rows["states"]),
                          ("hand-found", [], ["settings.tokens", "settings.token-menu"]))
 
+    def test_evidence_at_an_occurrence_index_now_holding_another_rule_is_left_out(self):
+        raw_dir = os.path.join(self.ws, "runs", RUN, "raw")
+        raw = canon.read_json(os.path.join(raw_dir, "cards.index.json"))
+        raw["results"][0]["rule"] = "link-in-text-block"           # swept again after group
+        canon.write_json(os.path.join(raw_dir, "cards.index.json"), raw)
+        findings = canon.read_json(os.path.join(self.ws, "runs", RUN, "findings.json"))["findings"]
+        contrast = next(f for f in findings if f["key"] == tv.CONTRAST)
+        self.assertEqual([x["state"] for x in verify.sampled_evidence(raw_dir, contrast, {})], ["settings.tokens"])
+
     def test_the_base_url_travels_with_the_batch(self):
         prepare(self.ws, base_url="http://127.0.0.1:4100")
         self.assertEqual(batches(self.ws)["verify-001"]["reach"]["baseUrl"], "http://127.0.0.1:4100")
@@ -268,6 +280,95 @@ class Resume(Fixture):
         self.assertEqual(status_of(self.ws)["findings"]["unverified"], 1)
         _, again, _ = prepare(self.ws)
         self.assertEqual((again["unverified"], again["batches"]), ([], []))
+
+    def test_prepare_refuses_while_a_returned_batch_is_not_added(self):
+        prepare(self.ws)
+        name = entry_of(self.ws, tv.NAME)
+        lines = [confirm(name, "verify-005", issueId=name["issueId"]),
+                 {"proposal": PROPOSAL, "decision": "attach", "reason": "Same row menus.", "model": "sonnet",
+                  "batch": "verify-005", "prompt": "verifier@1"}]
+        path = tv.write_lines(out_path(self.ws, "verify-005"), lines)
+        tv.write_lines(out_path(self.ws, "verify-004"), [])                    # the agent died: nothing to add
+        self.assertEqual(status_of(self.ws)["batches"]["returnedNotAdded"], ["verify-005"])
+        code, out, err = prepare(self.ws)
+        self.assertEqual((code, out), (1, None))
+        self.assertIn("verify-005", err)
+        self.assertNotIn("verify-004", err)
+        self.assertEqual(sorted(batches(self.ws)), [f"verify-00{n}" for n in range(1, 6)])
+
+        add_verdicts(self.ws, "verify-005", lines)                              # the verdict, not the decision
+        self.assertEqual(status_of(self.ws)["batches"]["returnedNotAdded"], ["verify-005"])
+        add_decisions(self.ws, path)
+        self.assertEqual(status_of(self.ws)["batches"]["returnedNotAdded"], [])
+        code, out, err = prepare(self.ws)
+        self.assertEqual(code, 0, err)
+
+    def test_a_returned_batch_with_only_rejected_lines_counts_as_added(self):
+        prepare(self.ws)
+        trap = entry_of(self.ws, tv.TRAP)
+        add_verdicts(self.ws, "verify-002", [confirm(trap, "verify-002", outcome="drop")])   # no code: rejected
+        self.assertEqual(status_of(self.ws)["batches"]["returnedNotAdded"], [])
+        code, out, err = prepare(self.ws)
+        self.assertEqual(code, 0, err)
+        self.assertEqual([b["batch"] for b in out["batches"]], ["verify-006"])
+
+
+# ---------------------------------------------------------------------------
+# A findings.json grouped from another sweep or harness
+# ---------------------------------------------------------------------------
+
+class Stale(Fixture):
+    def assert_refused(self, why="findings.json was grouped from a different sweep: rerun `audit.py group`"):
+        code, out, err = prepare(self.ws)
+        self.assertEqual((code, out), (1, None))
+        self.assertIn(why, err)
+        self.assertEqual(batches(self.ws), {})
+
+    def test_a_sweep_that_finished_after_group_ran_is_refused(self):
+        canon.write_json(os.path.join(self.ws, "runs", RUN, "outcomes.json"), {"run": RUN, "states": {
+            "cards.index": {"outcome": "audited", "completed": ["axe"], "incomplete": []}}})
+        self.assert_refused()
+
+    def test_an_audited_state_swept_again_after_group_is_refused(self):
+        audited = {"outcome": "audited", "completed": ["axe"], "incomplete": []}
+        canon.write_json(os.path.join(self.ws, "runs", RUN, "outcomes.json"), {"run": RUN, "states": {
+            "cards.index": audited, "settings.tokens": audited}})
+        tv.stamp(self.ws)
+        # `sweep --state cards.index`: the same outcome, and another color-contrast element at results[0].
+        path = os.path.join(self.ws, "runs", RUN, "raw", "cards.index.json")
+        raw = canon.read_json(path)
+        first = raw["results"][0]
+        other = dict(first, occurrence=dict(first["occurrence"], xpath="/html/body/div/main/h1"))
+        canon.write_json(path, dict(raw, results=[other] + raw["results"]))
+        self.assert_refused()
+
+    def test_findings_grouped_under_another_harness_than_the_sweeps_are_refused(self):
+        path = os.path.join(self.ws, "runs", RUN, "findings.json")
+        doc = canon.read_json(path)
+        canon.write_json(path, dict(doc, inputs=dict(doc["inputs"], harness="ffffffffffffffff")))
+        self.assert_refused()
+
+    def test_a_harness_change_after_the_sweep_asks_for_a_new_sweep_even_after_grouping_again(self):
+        now = canon.harness_hash()
+        why = (f"the run was swept with harness {now}, and the harness is now ffffffffffffffff: "
+               f"rerun `audit.py sweep`, then `audit.py group`")
+        with mock.patch("group.harness_hash", return_value="ffffffffffffffff"):
+            self.assert_refused(why)
+            tv.stamp(self.ws)                                   # `group` again, under the new harness
+            self.assert_refused(why)
+
+    def test_a_findings_json_without_inputs_is_refused(self):
+        path = os.path.join(self.ws, "runs", RUN, "findings.json")
+        doc = canon.read_json(path)
+        del doc["inputs"]
+        canon.write_json(path, doc)
+        self.assert_refused()
+
+    def test_grouping_again_clears_it(self):
+        canon.write_json(os.path.join(self.ws, "runs", RUN, "outcomes.json"), {"run": RUN, "states": {}})
+        tv.stamp(self.ws)
+        code, out, err = prepare(self.ws)
+        self.assertEqual(code, 0, err)
 
 
 # ---------------------------------------------------------------------------
@@ -420,6 +521,7 @@ class DryVerification(unittest.TestCase):
             j["sig"] = signature.record_sig(canon.read_json(os.path.join(raw_dir, f"{sid}.json"))["records"][int(index)])
         with open(path, "w", encoding="utf-8") as f:
             f.writelines(canon.canonical(j) + "\n" for j in lines)
+        tv.swept(self.ws)
         code, out, err = tv.run_cli("group", "--workspace", self.ws, "--run", RUN,
                                     "--map", os.path.join(GROUP_FIXTURE, "map.json"),
                                     "--data", os.path.join(GROUP_FIXTURE, "data"))

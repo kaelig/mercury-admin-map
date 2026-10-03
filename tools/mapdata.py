@@ -17,12 +17,23 @@ SEVERITY_RANK = {"high": 0, "medium": 1, "low": 2}
 OVERLAY_FIELDS = ("wcag", "audit", "history")
 
 
-def read_areas(data_dir):
-    """Every data/*.json area, in file-name order, exactly as stored."""
+def read_areas(data_dir, problems=None):
+    """Every data/*.json area, in file-name order, exactly as stored.
+
+    A file that does not parse raises, unless problems is a list: the file is then skipped and
+    "<file>: invalid JSON (<error>)" is appended to it. With $MAP_SKIP_INVALID_DATA set, it is skipped
+    without a word: build.py sets it for the export it runs, and reports the file itself.
+    """
     areas = []
     for path in sorted(glob.glob(os.path.join(data_dir, "*.json"))):
-        with open(path, encoding="utf-8") as f:
-            areas.append(json.load(f))
+        try:
+            with open(path, encoding="utf-8") as f:
+                areas.append(json.load(f))
+        except Exception as e:
+            if problems is not None:
+                problems.append(f"{os.path.basename(path)}: invalid JSON ({e})")
+            elif not os.environ.get("MAP_SKIP_INVALID_DATA"):
+                raise
     return areas
 
 
@@ -31,13 +42,15 @@ def snapshot_path(snapshot_dir=None):
     return snapshot_dir or os.environ.get("A11Y_SNAPSHOT") or os.path.join(ROOT, "a11y", "published")
 
 
-def load_areas(data_dir=None, snapshot_dir=None):
+def load_areas(data_dir=None, snapshot_dir=None, problems=None):
     """The area dicts from data_dir (default <repo>/data), merged with the snapshot when one exists.
+
+    problems is passed to read_areas(): build.py collects unreadable files there instead of stopping.
 
     snapshot_dir=False reads the raw data. A snapshot directory that does not exist also gives the raw
     data. A publish that stopped between its two renames left only <snapshot>.prev/: it is restored first.
     """
-    areas = read_areas(data_dir or os.path.join(ROOT, "data"))
+    areas = read_areas(data_dir or os.path.join(ROOT, "data"), problems)
     if snapshot_dir is False:
         return areas
     snap = snapshot_path(snapshot_dir)

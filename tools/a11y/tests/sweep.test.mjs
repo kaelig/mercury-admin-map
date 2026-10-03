@@ -39,6 +39,23 @@ const FAMILIES = {
   toast: [...BASE, 'status'],
   'validation-error': [...BASE, 'status'],
 };
+// Fixture states built to stop a check short: a dialog check whose trigger never takes focus, never
+// opens the layer or cannot close it again (the details panel has no close control and ignores Esc),
+// and Tab walks that hit the press limit or a trap. The
+// state is still audited; the family is listed as incomplete.
+const INCOMPLETE = {
+  'home.send-modal': ['dialog'],
+  'home.move-money-menu': ['dialog'],
+  'transactions.filters-menu': ['dialog'],
+  'interactive.drawer-payment': ['dialog'],
+  'interactive.drawer-settings': ['dialog'],
+  'interactive.panel-details': ['dialog'],
+  'interactive.popover-fees': ['dialog'],
+  'interactive.popover-card-art': ['dialog'],
+  'interactive.popover-filters': ['dialog'],
+  'interactive.iframe-trap': ['tabwalk'],
+  'interactive.trap': ['tabwalk'],
+};
 const RAW_KEYS = ['build', 'checks', 'env', 'families', 'frames', 'harness', 'kind', 'layer', 'reason', 'reasonDetail',
   'recipeHash', 'records', 'results', 'schema', 'state', 'status', 'url'];
 
@@ -241,8 +258,9 @@ describe('fixture sweep', () => {
     for (const id of audited) {
       const doc = raw(A, id);
       assert.equal(doc.reason, null, id);
-      assert.deepEqual(sorted(doc.families.completed), sorted(FAMILIES[doc.kind]), `${id} (${doc.kind})`);
-      assert.deepEqual(doc.families.incomplete, [], id);
+      const incomplete = INCOMPLETE[id] || [];
+      assert.deepEqual(sorted(doc.families.completed), sorted(FAMILIES[doc.kind].filter((f) => !incomplete.includes(f))), `${id} (${doc.kind})`);
+      assert.deepEqual(doc.families.incomplete, incomplete, id);
       assert.equal(doc.build, 'unknown', 'the fixtures load no cdn.mercury.com build');
       assert.match(doc.recipeHash, /^[0-9a-f]{64}$/);
       for (const fam of doc.families.completed.filter((f) => f !== 'records')) assert.ok(fam in doc.checks, `${id}: checks.${fam}`);
@@ -509,6 +527,16 @@ test('three consecutive root pages that fail to load trip the breaker, and none 
   const again = await sweep(w, server.origin, ['--workers', '3']);
   assert.equal(again.status, 0, again.stderr.slice(-4000));
   assert.equal(again.json.audited, 5);
+});
+
+test('the third root failure arriving while the other workers are idle trips the breaker before the held roots are written', async () => {
+  // One worker per state: when the last root fails, nothing is ready or in flight and the others wait.
+  const server = await serve(['static'], { crash: () => true });
+  const w = workspace(subset(server.mergedMap(), STATIC_FIVE.slice(0, 3)));
+  const r = await sweep(w, server.origin, ['--workers', '3']);
+  assert.equal(r.status, EXIT_ENVIRONMENT, r.stderr.slice(-4000));
+  assert.equal(r.json.interrupted, 'environment');
+  assert.deepEqual(rawFiles(w), []);
 });
 
 // ---------------------------------------------------------------------------

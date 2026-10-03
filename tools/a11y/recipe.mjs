@@ -10,7 +10,10 @@
 // origins (policy.allowedOrigins plus the --base-url origin), a typed value that is not one of
 // policy.fixtureValues, an unknown action, or a hop on a parent → state pair the map has no edge for.
 // Before each action it refuses an element whose own name is denylisted or a link off the allowed
-// origins. A refusal is `step-failed` naming the step. File formats: schemas.md.
+// origins. Before a press it refuses a key that would put text into the focused field (a character
+// or a paste), and Enter or Space on a focused element it would refuse to click or inside a frame
+// from another origin. A refusal is `step-failed` naming the step.
+// File formats: schemas.md.
 import { spawnSync } from 'node:child_process';
 import { closeSync, existsSync, mkdirSync, openSync, readdirSync, statSync, unlinkSync } from 'node:fs';
 import { dirname, join, resolve } from 'node:path';
@@ -177,8 +180,9 @@ function stepRefusal(step, policy, baseUrl) {
   return null;
 }
 
-// Why the resolved element may not be acted on, or null: its own name is denylisted (a css locator
-// can land on Logout), or it is a link that leaves the allowed origins.
+// Why the resolved element (a Locator or an ElementHandle) may not be acted on, or null: its own
+// name is denylisted (a css locator can land on Logout), or it is a link that leaves the allowed
+// origins.
 async function elementRefusal(loc, policy, baseUrl) {
   const info = await loc.evaluate((el) => {
     const a = el.closest('a[href]');
@@ -193,6 +197,88 @@ async function elementRefusal(loc, policy, baseUrl) {
     }
   }
   return null;
+}
+
+// The keys of a press, split as Playwright splits "Shift+A" (a lone "+" is itself a key).
+function pressKeys(value) {
+  const keys = [''];
+  for (const c of value) {
+    if (c === '+' && keys.at(-1)) keys.push('');
+    else keys[keys.length - 1] += c;
+  }
+  return keys;
+}
+
+const PRINTABLE = /^(?:Key[A-Z]|Digit\d|Numpad\d|Numpad(?:Add|Subtract|Multiply|Divide|Decimal)|Backquote|Minus|Equal|Backslash|BracketLeft|BracketRight|Semicolon|Quote|Comma|Period|Slash|Space)$/;
+
+// Whether a press puts text into a field: one of its keys is a character ("s", "@", "KeyS", "Space")
+// and no Control, Alt or Meta is down when it goes down (Playwright sends no text under those), or
+// it pastes: V under Control or Meta, Insert under Shift, or Y under Control (yank, macOS's kill ring).
+function insertsText(value) {
+  const held = new Set();
+  for (const k of pressKeys(value)) {
+    const mod = /^(Control|Alt|Meta|Shift)(?:Left|Right)?$/.exec(k)?.[1] || (k === 'ControlOrMeta' ? 'Control' : null);
+    if (mod) {
+      held.add(mod);
+      continue;
+    }
+    const command = held.has('Control') || held.has('Meta');
+    if (!command && !held.has('Alt') && (k.length === 1 ? k >= ' ' : PRINTABLE.test(k))) return true;
+    if (command && /^(?:[vV]|KeyV)$/.test(k)) return true;
+    if (held.has('Control') && /^(?:[yY]|KeyY)$/.test(k)) return true;
+    if (held.has('Shift') && k === 'Insert') return true;
+  }
+  return false;
+}
+
+// Whether a press activates the focused element, as a click would.
+const activates = (value) => pressKeys(value).some((k) => ['Enter', 'NumpadEnter', 'Space', ' ', '\n', '\r'].includes(k));
+
+// The focused element, followed into open shadow roots and same-origin frames. It stops on a frame
+// from another origin, whose document it cannot read.
+const FOCUSED = () => {
+  let el = document.activeElement || document.documentElement;
+  for (;;) {
+    const inner = el.shadowRoot?.activeElement || el.contentDocument?.activeElement;
+    if (!inner) return el;
+    el = inner;
+  }
+};
+
+// What a key lands on: `frame` when the focused element is a frame the replay cannot look into, and
+// `text` when keys typed there land as text: a text input, a textarea, a select (type-ahead picks an
+// option), an editable element, or such a frame.
+const FOCUS_KIND = (el) => {
+  const frame = ['IFRAME', 'FRAME', 'OBJECT', 'EMBED'].includes(el.tagName);
+  const text = frame || el.isContentEditable || ['TEXTAREA', 'SELECT'].includes(el.tagName)
+    || (el.tagName === 'INPUT' && !['button', 'checkbox', 'color', 'file', 'hidden', 'image', 'radio', 'range', 'reset', 'submit'].includes(el.type));
+  return { frame, text };
+};
+
+// Why a press may not run, or null: it would put text into the focused field (only a fill step
+// types, and only policy.fixtureValues), or it activates a focused element a click would be refused
+// on, or one inside a frame the replay cannot look into.
+async function pressRefusal(page, value, policy, baseUrl) {
+  const focused = await page.evaluateHandle(FOCUSED);
+  try {
+    const on = await focused.evaluate(FOCUS_KIND);
+    if (on.text && insertsText(value)) {
+      return `press "${value}" would put text into the focused field: type with a fill step and one of policy.fixtureValues`;
+    }
+    if (!activates(value)) return null;
+    if (on.frame) return `press "${value}" would act inside a frame from another origin, which the replay cannot check`;
+    const why = await elementRefusal(focused, policy, baseUrl);
+    return why ? `press "${value}" on the focused element: ${why}` : null;
+  } finally {
+    await focused.dispose();
+  }
+}
+
+// A policy refusal: runStep reports its message as is, without the action's prefix.
+function refused(why) {
+  const e = new Error(why);
+  e.refused = true;
+  return e;
 }
 
 // ---------------------------------------------------------------------------
@@ -210,7 +296,11 @@ async function act(page, action, value, policy, baseUrl) {
     if (response && response.status() >= 400) throw new Error(`loading ${value} answered HTTP ${response.status()}`);
     return;
   }
-  if (action === 'press') return page.keyboard.press(value);
+  if (action === 'press') {
+    const why = await pressRefusal(page, value, policy, baseUrl);
+    if (why) throw refused(why);
+    return page.keyboard.press(value);
+  }
   if (action === 'wait') {
     if (Number.isFinite(value.ms)) return sleep(Math.min(value.ms, 10000));
     return resolveLocator(page, value.locator, { timeout: ACTION_TIMEOUT });
@@ -219,11 +309,7 @@ async function act(page, action, value, policy, baseUrl) {
   const locator = ['fill', 'select'].includes(action) ? value.locator : action === 'scroll' ? (value.locator || value) : value;
   const loc = await resolveLocator(page, locator);
   const why = await elementRefusal(loc, policy, baseUrl);
-  if (why) {
-    const e = new Error(why);
-    e.refused = true;
-    throw e;
-  }
+  if (why) throw refused(why);
   if (action === 'click') return loc.click({ timeout: ACTION_TIMEOUT });
   if (action === 'hover') return loc.hover({ timeout: ACTION_TIMEOUT });
   if (action === 'check') return loc.check({ timeout: ACTION_TIMEOUT });
@@ -515,20 +601,24 @@ async function replayFresh(browser, baseUrl, recipes, id, policy, kind, shots = 
   }
 }
 
-const RECIPE_FIELDS = ['parent', 'via', 'hop', 'recordedBy'];
+const RECIPE_FIELDS = ['parent', 'via', 'hop'];
 
 // Check one candidate recipe for `id` (the entry in recipes/<area>.json unless `candidate` is given):
 // replay it twice in fresh contexts, capture the fingerprint, compare the second replay's screenshot
 // with the map node's captured PNG, and write the entry back. A recipe that does not reach its state
 // is written only when the state has no entry yet (as `draft`), so a working recipe is never lost.
-async function checkOne(ws, runId, states, policy, browser, map, id, candidate) {
+// A candidate's `recordedBy` is the caller's `recordedBy` (`root` for a root's bare URL), never the
+// candidate's own: it decides whether the recipe skips the conductor's review.
+async function checkOne(ws, runId, states, policy, browser, map, id, candidate, recordedBy) {
   const s = states[id];
   if (!s) return { state: id, status: 'error', message: `${id} is not in run ${runId}'s states.json` };
   const recipes = loadRecipes(ws, { map });
   const base = candidate || recipes[id];
   if (!base) return { state: id, status: 'no-recipe', message: `no recipe for ${id}: pass --recipe or run recipe draft` };
   const entry = Object.fromEntries(RECIPE_FIELDS.filter((k) => base[k] !== undefined).map((k) => [k, base[k]]));
-  entry.recordedBy = entry.recordedBy || (s.root ? 'root' : 'agent');
+  const bareRoot = s.root && (base.hop ?? []).length === 0;
+  const by = candidate ? (bareRoot ? 'root' : recordedBy) : base.recordedBy;
+  entry.recordedBy = by || (bareRoot ? 'root' : 'agent');
   const trial = { ...recipes, [id]: { ...entry, fingerprint: null } };
   const keepDraft = () => writeRecipe(ws, s.area, id, { ...entry, fingerprint: null, mutates: false, source: null,
     status: 'draft', similarity: null, review: null, checked: runId }, { onlyIfMissing: true });
@@ -583,9 +673,24 @@ async function checkOne(ws, runId, states, policy, browser, map, id, candidate) 
     threshold: sim?.threshold ?? null, mutates, screenshot: shot, captured, fingerprint: one.fingerprint };
 }
 
+// `work` (a promise that uses `browser`), or a rejection once `browser` is gone. A Playwright call in
+// flight when the browser crashes can stay pending for good, and with nothing else to wait on, Node
+// would exit 0 without printing a result.
+export function whileConnected(browser, work) {
+  let fail;
+  const gone = new Promise((_, reject) => {
+    fail = () => reject(new Error('the browser closed or crashed'));
+  });
+  if (!browser.isConnected()) fail();
+  else browser.once('disconnected', fail);
+  return Promise.race([work, gone]).finally(() => browser.off('disconnected', fail));
+}
+
 // `recipe check` for each state; `candidates` maps a state id to a recipe to check in place of its
-// entry. Pass `browser` to reuse one; otherwise a browser is launched and closed here.
-export async function checkStates(ws, stateIds, { candidates = {}, browser = null } = {}) {
+// entry, recorded by `recordedBy`. Pass `browser` to reuse one; otherwise a browser is launched and
+// closed here. A state that throws, or whose browser dies, is `error` with the message's first line,
+// and the rest still run.
+export async function checkStates(ws, stateIds, { candidates = {}, browser = null, recordedBy = 'agent' } = {}) {
   const runId = ws.runId();
   const states = ws.states(runId);
   const policy = ws.policy();
@@ -593,7 +698,14 @@ export async function checkStates(ws, stateIds, { candidates = {}, browser = nul
   const own = browser ? null : await launch();
   const results = [];
   try {
-    for (const id of stateIds) results.push(await checkOne(ws, runId, states, policy, browser || own, map, id, candidates[id]));
+    for (const id of stateIds) {
+      try {
+        const b = browser || own;
+        results.push(await whileConnected(b, checkOne(ws, runId, states, policy, b, map, id, candidates[id], recordedBy)));
+      } catch (e) {
+        results.push({ state: id, status: 'error', message: e.message.split('\n')[0] });
+      }
+    }
   } finally {
     await own?.close();
   }

@@ -43,7 +43,7 @@ MAP_BASE_URL=https://mercury-admin-map.netlify.app python3 build.py   # absolute
 netlify deploy --prod --dir dist
 ```
 
-`build.py` merges the manifests, encodes each screenshot three ways (400px and 800px lossy, 2880px lossless WebP; only changed PNGs are re-encoded), packs every screen into one 128×80 sprite sheet, runs the layout prerender and esbuild, inlines data, layouts, app and fonts into `dist/index.html`, writes the agent export, renders the accessibility report when `a11y/published/` exists, and adds `robots.txt` and Netlify `_headers` (`X-Robots-Tag: noindex`).
+`build.py` merges the manifests, encodes each screenshot three ways (400px and 800px lossy, 2880px lossless WebP; only changed PNGs are re-encoded), packs every screen into one 128×80 sprite sheet, runs the layout prerender and esbuild, inlines data, layouts, app and fonts into `dist/index.html`, writes the agent export, renders the accessibility report when `a11y/published/` exists, and adds `robots.txt` and Netlify `_headers` (`X-Robots-Tag: noindex`). A `data/*.json` file that does not parse is left out of the map and the agent export, and the build prints `WARN <file>: invalid JSON (<error>)` as it finishes. `tools/export_agent_data.py` run on its own stops on that file instead.
 
 ## Accessibility audit
 

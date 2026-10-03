@@ -3,7 +3,8 @@
 Run: cd tools/a11y && python3 -m unittest tests.test_verdict -v
 
 Every test copies tests/data/verify/ws (seven findings: contrast, button-name with a registry id,
-keyboard trap, target size, focus visibility, and two hand-found issues) into a temp workspace and
+keyboard trap, target size, focus visibility, and two hand-found issues) into a temp workspace,
+stamps its run.json and findings.json with the current harness as a sweep and `group` would, and
 feeds `audit.py verdict add` an agent output file.
 """
 import contextlib
@@ -14,11 +15,14 @@ import re
 import shutil
 import tempfile
 import unittest
+from unittest import mock
 
 from tests.pathshim import A11Y
 
 import audit
+import group
 from lib import canon
+from lib.ws import Workspace
 
 RUN = "2026-10-02-1400"
 FIXTURE = os.path.join(A11Y, "tests", "data", "verify", "ws")
@@ -30,6 +34,24 @@ FOCUS = "focus-visible:focus-not-visible:4d5e6f7a8b9c"
 TABS = "hand:accounts.i-tabs-not-tabs"
 ROWS = "hand:settings.i-unnamed-row-buttons"
 SWEEP_ENV = {"viewport": [1440, 900], "dpr": 1, "colorScheme": "light", "reducedMotion": "reduce"}
+# The elements the sweep measured, from the fixture's raw files (results[index].occurrence.xpath).
+CONTRAST_XPATH = "/html/body/div/main/table/tbody/tr[1]/td[3]/span"            # cards.index
+CONTRAST_TOKENS_XPATH = "/html/body/div/main/table/tbody/tr[2]/td[2]/span"     # settings.tokens
+TARGET_XPATH = "/html/body/div/main/div[1]/button[2]"                          # cards.index
+FOCUS_XPATH = "/html/body/div/main/a[2]"                                       # home.index, in a test's raw file
+
+
+def swept(ws_dir, run=RUN):
+    """Record the current harness in run.json, as a sweep does when it starts."""
+    path = os.path.join(ws_dir, "runs", run, "run.json")
+    canon.write_json(path, dict(canon.read_json(path) or {}, harness=canon.harness_hash()))
+
+
+def stamp(ws_dir, run=RUN):
+    """Record the run's current inputs in findings.json, as `group` does."""
+    path = os.path.join(ws_dir, "runs", run, "findings.json")
+    doc = canon.read_json(path)
+    canon.write_json(path, dict(doc, inputs=group.inputs(Workspace(workspace=ws_dir, run=run), run)))
 
 
 def copy_fixture(test):
@@ -37,6 +59,8 @@ def copy_fixture(test):
     test.addCleanup(tmp.cleanup)
     ws = os.path.join(tmp.name, "ws")
     shutil.copytree(FIXTURE, ws)
+    swept(ws)
+    stamp(ws)
     return ws
 
 
@@ -67,8 +91,9 @@ def verdict(**over):
     return line
 
 
-def probe(pid="p1", state="cards.index", kind="contrast", env=None, **value):
-    return {"id": pid, "state": state, "kind": kind, "env": dict(SWEEP_ENV, **(env or {})), "value": value}
+def probe(pid="p1", state="cards.index", kind="contrast", env=None, xpath=CONTRAST_XPATH, **value):
+    return {"id": pid, "state": state, "kind": kind, "env": dict(SWEEP_ENV, **(env or {})), "value": value,
+            "xpath": xpath}
 
 
 class VerdictTest(unittest.TestCase):
@@ -243,18 +268,50 @@ class MeasuredValues(VerdictTest):
 
     def test_target_size_needs_a_passing_target_probe(self):
         base = dict(key=TARGET, severityBefore="low", severityAfter="low", states=["cards.index", "home.index"])
-        self.assert_rejected(self.live([probe(kind="target", width=18, height=18, offset=18)], **base), "does not pass")
+        target = dict(kind="target", xpath=TARGET_XPATH)
+        self.assert_rejected(self.live([probe(width=18, height=18, offset=18, **target)], **base), "does not pass")
         self.assert_rejected(self.live([probe(ratio=7)], **base), "target")
-        got = self.assert_accepted(self.live([probe(kind="target", width=18, height=18, offset=26)], **base))
+        got = self.assert_accepted(self.live([probe(width=18, height=18, offset=26, **target)], **base))
         self.assertEqual(got["probes"][0]["value"]["offset"], 26)
 
+    def write_home_raw(self):
+        """home.index's raw file, which the fixture leaves out: the target-size and focus findings'
+        occurrences on it (indexes 0 and 1)."""
+        canon.write_json(os.path.join(self.run_dir, "raw", "home.index.json"), {
+            "state": "home.index", "status": "audited", "records": [], "results": [
+                {"rule": "target-size", "occurrence": {"xpath": "/html/body/div/main/div[2]/button[1]"}, "evidence": {}},
+                {"rule": "focus-not-visible", "occurrence": {"xpath": FOCUS_XPATH}, "evidence": {}}]})
+
     def test_focus_visibility_and_traps_need_passing_focus_probes(self):
+        self.write_home_raw()
         focus = dict(key=FOCUS, states=["home.index"])
-        self.assert_rejected(self.live([probe(state="home.index", kind="focus", visible=False)], **focus), "does not pass")
-        self.assert_accepted(self.live([probe(state="home.index", kind="focus", visible=True)], **focus))
+        ring = dict(state="home.index", kind="focus", xpath=FOCUS_XPATH)
+        self.assert_rejected(self.live([probe(visible=False, **ring)], **focus), "does not pass")
+        self.assert_accepted(self.live([probe(visible=True, **ring)], **focus))
         trap = dict(key=TRAP, severityBefore="high", severityAfter="high", states=["cards.edit-limit-modal"])
         self.assert_rejected(self.live([probe(state="cards.edit-limit-modal", kind="focus", trapped=True)], **trap),
                              "does not pass")
+
+    def test_the_passing_probe_must_measure_one_of_the_findings_own_elements_on_its_state(self):
+        neighbour = "/html/body/div/main/table/tbody/tr[2]/td[3]/span"
+        for xpath in (neighbour, CONTRAST_TOKENS_XPATH, None):
+            with self.subTest(xpath=xpath):
+                self.assert_rejected(self.live([probe(ratio=4.6, xpath=xpath)]), "not one of the finding's elements")
+        tokens = probe(state="settings.tokens", ratio=4.6, xpath=CONTRAST_TOKENS_XPATH)
+        self.assert_accepted(self.live([tokens]))
+
+    def test_a_probe_cannot_match_an_element_a_later_sweep_put_at_the_occurrence_index(self):
+        path = os.path.join(self.run_dir, "raw", "cards.index.json")
+        raw = canon.read_json(path)
+        raw["results"][0]["rule"] = "link-in-text-block"           # swept again: index 0 is another rule now
+        canon.write_json(path, raw)
+        self.assert_rejected(self.live([probe(ratio=4.6)]), "not one of the finding's elements")
+
+    def test_a_focus_probe_off_the_findings_element_is_rejected(self):
+        self.write_home_raw()
+        line = self.live([probe(state="home.index", kind="focus", visible=True,
+                                xpath="/html/body/div/main/div[2]/button[1]")], key=FOCUS, states=["home.index"])
+        self.assert_rejected(line, "not one of the finding's elements")
 
     def test_a_judgment_family_needs_no_probe(self):
         line = verdict(key=NAME, issueId="settings.i-a11y-name-button-in-api-tokens", outcome="drop",
@@ -327,6 +384,31 @@ class BatchFiles(VerdictTest):
         self.assertEqual(code, 1)
         self.assertIn("canary", " ".join(out["rejected"][0]["reasons"]))
         self.assertEqual(self.stored(), [])
+
+    def test_adding_the_same_file_twice_appends_nothing_the_second_time(self):
+        lines = [verdict(), verdict(key=FOCUS, states=["home.index"], reason="No ring at stop 4.")]
+        code, out = self.add(*lines)
+        self.assertEqual((code, out["appended"], out["duplicates"]), (0, 2, 0))
+        code, out = self.add(*lines)
+        self.assertEqual((code, out["appended"], out["duplicates"], out["rejected"]), (0, 0, 2, []))
+        self.assertEqual([v["key"] for v in self.stored()], [CONTRAST, FOCUS])
+
+    def test_a_dateless_line_added_again_on_a_later_day_is_still_a_duplicate(self):
+        self.add(verdict())
+        with mock.patch("verdict.today", return_value="2099-01-01"):
+            code, out = self.add(verdict())
+        self.assertEqual((code, out["appended"], out["duplicates"]), (0, 0, 1))
+        self.assertEqual(len(self.stored()), 1)
+
+    def test_adding_an_old_file_again_never_overrides_a_later_verdict(self):
+        first = verdict(date="2026-10-02")
+        self.add(first)
+        later = verdict(outcome="rerate", severityAfter="high", reason="Balance text.", batch="second-001",
+                        second=True, date="2026-10-02")
+        self.add(later, name="second-001.out.jsonl")
+        code, out = self.add(first)
+        self.assertEqual((code, out["appended"], out["duplicates"]), (0, 0, 1))
+        self.assertEqual(canon.latest_by(self.stored(), "key")[CONTRAST]["outcome"], "rerate")
 
     def test_lines_are_appended_canonically(self):
         self.add(verdict())

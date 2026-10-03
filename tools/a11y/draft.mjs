@@ -13,7 +13,7 @@
 import { clean, cmp, escapeRegExp, nameTemplate, nameTemplateRegex } from './lib/canon.mjs';
 import { cdpSession, launch, newContext, trackRequests } from './lib/browser.mjs';
 import { parse, runMain } from './lib/cli.mjs';
-import { checkPassed, checkStates, fixtureValues, loadRecipes, refreshQueue, replay, runStep } from './recipe.mjs';
+import { checkPassed, checkStates, fixtureValues, loadRecipes, refreshQueue, replay, runStep, whileConnected } from './recipe.mjs';
 
 const SPLIT = /\s*,\s*then\s+|\s+then\s+|\s*,\s*and\s+|\s*,\s+|\s+and\s+(?=(?:click|open|choose|pick|select|toggle|tick|check|type|enter|press)\b)/i;
 const CLICK = /^(?:click|open|choose|pick|select|toggle)\s+(.+)$/i;
@@ -164,44 +164,53 @@ async function draft(ws, ids = []) {
   const order = [...wanted].sort((a, b) => depth(states[a]) - depth(states[b]) || cmp(a, b));
   const out = { run: runId, accepted: [], review: [], agentQueue: [] };
   const queue = (state, label, reason) => out.agentQueue.push({ state, label, reason });
-  const browser = await launch();
+  let browser = await launch();
   try {
     for (const id of order) {
+      if (!browser.isConnected()) browser = await launch();
       const s = states[id];
       if (!s) {
         queue(id, null, `not in run ${runId}'s states.json`);
         continue;
       }
-      let candidate;
       const label = s.labels ? s.labels[s.labels.length - 1] : null;
-      if (s.root) {
-        candidate = { parent: s.rootUrl, hop: [], recordedBy: 'root' };
-      } else if (s.unreachable) {
-        queue(id, label, `unreachable: ${s.unreachable}`);
-        continue;
-      } else {
-        const parsed = parseLabel(label, policy);
-        if (parsed.error) {
-          queue(id, label, parsed.error);
+      // One state's exception (a page that crashed or navigated mid-replay, or the browser dying)
+      // queues that state alone; the next state gets a new browser if this one is gone.
+      try {
+        let candidate;
+        if (s.root) {
+          candidate = { parent: s.rootUrl, hop: [] };
+        } else if (s.unreachable) {
+          queue(id, label, `unreachable: ${s.unreachable}`);
           continue;
+        } else {
+          const parsed = parseLabel(label, policy);
+          if (parsed.error) {
+            queue(id, label, parsed.error);
+            continue;
+          }
+          const recipes = loadRecipes(ws, { map });
+          if (recipes[s.parent]?.status !== 'accepted') {
+            queue(id, label, `the parent ${s.parent} has no accepted recipe`);
+            continue;
+          }
+          const resolved = await whileConnected(browser, resolveSteps(browser, ws, recipes, policy, s, parsed.steps));
+          if (resolved.error) {
+            queue(id, label, resolved.error);
+            continue;
+          }
+          candidate = { parent: s.parent, hop: resolved.steps };
         }
-        const recipes = loadRecipes(ws, { map });
-        if (recipes[s.parent]?.status !== 'accepted') {
-          queue(id, label, `the parent ${s.parent} has no accepted recipe`);
-          continue;
-        }
-        const resolved = await resolveSteps(browser, ws, recipes, policy, s, parsed.steps);
-        if (resolved.error) {
-          queue(id, label, resolved.error);
-          continue;
-        }
-        candidate = { parent: s.parent, hop: resolved.steps, recordedBy: 'draft' };
+        const [res] = await checkStates(ws, [id], { candidates: { [id]: candidate }, browser, recordedBy: 'draft' });
+        if (res.status === 'accepted') out.accepted.push(id);
+        else if (res.status === 'review') out.review.push(id);
+        if (!checkPassed(res)) queue(id, label, `${res.status}: ${res.message}`);
+        console.log(`${res.status.padEnd(20)} ${id}${res.message ? `: ${res.message}` : ''}`);
+      } catch (e) {
+        const message = e.message.split('\n')[0];
+        queue(id, label, `tool-error: ${message}`);
+        console.log(`${'tool-error'.padEnd(20)} ${id}: ${message}`);
       }
-      const [res] = await checkStates(ws, [id], { candidates: { [id]: candidate }, browser });
-      if (res.status === 'accepted') out.accepted.push(id);
-      else if (res.status === 'review') out.review.push(id);
-      if (!checkPassed(res)) queue(id, label, `${res.status}: ${res.message}`);
-      console.log(`${res.status.padEnd(20)} ${id}${res.message ? `: ${res.message}` : ''}`);
     }
   } finally {
     await browser.close();

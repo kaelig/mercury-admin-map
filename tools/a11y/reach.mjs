@@ -4,6 +4,11 @@
 //   node tools/a11y/reach.mjs <state> --session <name> [--workspace … --map … --base-url …]
 //   node tools/a11y/reach.mjs status
 //
+// A session that reach (or probe) starts is bound to the policy's origins: agent-browser refuses to
+// `open` a domain outside policy.allowedOrigins and the --base-url origin. The restriction is set when
+// the session's daemon starts and cannot change after, so a session opened by another command first
+// has none. It covers agent-browser's own navigation command, not clicks, scripts or sub-resources.
+//
 // It clears the session's cookies (agent-browser) and its storage for the allowed origins (CDP), sets
 // KTD4's environment through agent-browser's own settings (viewport 1440×900 at pixel ratio 1, light
 // scheme, reduced motion), connects Playwright over CDP, replays the recipe, re-injects the
@@ -12,16 +17,35 @@
 // its own connection and agent-browser's settings are applied again after it. Prints the fingerprint
 // check: {state, session, status, step, message, url, fingerprint, expected}.
 import { spawnSync } from 'node:child_process';
+import { parseArgs } from 'node:util';
 import { chromium } from 'playwright';
 import { ENV, cdpSession, injectMotionOff, trackRequests } from './lib/browser.mjs';
-import { parse, runMain } from './lib/cli.mjs';
+import { Workspace, parse, runMain } from './lib/cli.mjs';
 import { allowedOrigins, chain, loadRecipes, replay } from './recipe.mjs';
+
+// The hostnames agent-browser may open: those of the origins recipe.mjs's replay allows. Its domain
+// patterns match hosts, so the port of an origin is dropped.
+export function allowedDomains(policy, baseUrl) {
+  return [...new Set([...allowedOrigins(policy, baseUrl)].map((origin) => new URL(origin).hostname))].join(',');
+}
+
+// reach and probe both take --workspace and --base-url and both run their agent-browser commands
+// through ab, so the stage's own arguments decide the domains.
+let domains;
+function sessionDomains() {
+  if (domains === undefined) {
+    const { values } = parseArgs({ args: process.argv.slice(2), options: { workspace: { type: 'string' }, 'base-url': { type: 'string' } }, strict: false });
+    const ws = new Workspace({ workspace: values.workspace, baseUrl: values['base-url'] });
+    domains = allowedDomains(ws.policy(), ws.baseUrl);
+  }
+  return domains;
+}
 
 // One agent-browser command in the session (probe.mjs runs its commands through this too). `quiet`
 // detaches stdio: the command that starts the session's daemon would otherwise keep our stdout pipe
 // open for the daemon's lifetime.
 export function ab(session, args, { quiet = false } = {}) {
-  const r = spawnSync('agent-browser', ['--session', session, ...args],
+  const r = spawnSync('agent-browser', ['--session', session, '--allowed-domains', sessionDomains(), ...args],
     quiet ? { stdio: 'ignore', timeout: 60000 } : { encoding: 'utf8', timeout: 60000 });
   if (r.error?.code === 'ENOENT') throw new Error('agent-browser is not on PATH');
   if (r.error) throw new Error(`agent-browser ${args.join(' ')}: ${r.error.message}`);

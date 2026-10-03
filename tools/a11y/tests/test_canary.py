@@ -26,6 +26,7 @@ RUN = tv.RUN
 DEF = os.path.join(A11Y, "fixtures", "canary")
 FINDINGS = canon.read_json(os.path.join(DEF, "findings.json"))["findings"]
 EXPECTED = canon.read_json(os.path.join(DEF, "expected.json"))
+HERO_XPATH = "/html/body/main[1]/div[1]/p[1]"     # the drop trap's element on canary.hero (raw results[0])
 CHECKS = canon.read_json(os.path.join(A11Y, "checks.json"))
 PORT = "4321"
 
@@ -112,7 +113,7 @@ class CanaryRun(unittest.TestCase):
             if outcome == "drop":
                 line.update(reasonCode="not-reproduced-live", counterEvidence="p-hero", probes=[
                     {"id": "p-hero", "state": "canary.hero", "kind": "contrast", "env": dict(tv.SWEEP_ENV),
-                     "value": {"fg": "#ffffff", "bg": "#1d3f8f", "ratio": 9.72}}])
+                     "value": {"fg": "#ffffff", "bg": "#1d3f8f", "ratio": 9.72}, "xpath": HERO_XPATH}])
             if e["source"] == "hand-found":
                 line["counterEvidence"] = "shot:canary.tabs-tabwalk"
             lines.append(line)
@@ -210,6 +211,17 @@ class CanaryRun(unittest.TestCase):
         doc = canon.read_json(os.path.join(self.run_dir, "canary.json"))
         self.assertEqual(next(i for i in doc["items"] if i["key"] == ae7)["got"], None)
         self.assertFalse(doc["pass"])
+
+    def test_a_drop_citing_a_probe_of_another_element_fails(self):
+        out = self.prepare()
+        lines = self.answers(canon.read_json(out["batch"]))
+        drop = next(x for x in lines if x["outcome"] == "drop")
+        drop["probes"][0]["xpath"] = "/html/body/main[1]/div[1]/p[2]"    # passes, but not the finding's element
+        code, text, _ = self.score(out, lines)
+        self.assertEqual(code, 1)
+        self.assertEqual([r["line"] for r in text["rejected"]], [lines.index(drop) + 1])
+        self.assertIn("not one of the finding's elements", " ".join(text["rejected"][0]["reasons"]))
+        self.assertFalse(canon.read_json(os.path.join(self.run_dir, "canary.json"))["pass"])
 
     def test_verdict_add_refuses_canary_verdicts_for_the_run(self):
         out = self.prepare()

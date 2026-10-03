@@ -6,7 +6,8 @@ Reads the run's findings.json, verdicts.jsonl (the latest verdict per key), outc
 state's outcome and the check modules that completed on it) and records.jsonl, the area data in
 --data (raw, for the screens that still exist), and the current snapshot's issues.json, report.json,
 registry.json and meta.json. Writes diff.json with the snapshot's run id as its baseline, or `none`
-on a first run.
+on a first run. Refuses a run swept with another harness than the current one, and a findings.json
+grouped from other raw files, outcomes or harness than the run's current ones (group.stale).
 
 Scanner findings: new, persisting, re-rated, not-retested, fixed, withdrawn, reappeared.
 - "Fixed" needs positive evidence: the check that produces the finding completed on every prior
@@ -27,6 +28,7 @@ File formats: schemas.md ("diff.json").
 import argparse
 import sys
 
+import group
 import mapdata
 import signature
 from lib.canon import dump, latest_by, load_checks, read_json, read_jsonl, write_json
@@ -139,6 +141,9 @@ def load(ws, run_id):
     outcomes = read_json(ws.file("outcomes.json", run_id))
     if not outcomes:
         raise DiffError(f"run {run_id} has no outcomes.json: finish `audit.py sweep` first")
+    stale = group.stale(ws, run_id, doc)
+    if stale:
+        raise DiffError(stale)
     snapshot = read_snapshot(ws)
     meta = snapshot["meta"] or {}
     return {

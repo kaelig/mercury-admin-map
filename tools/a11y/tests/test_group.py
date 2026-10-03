@@ -15,6 +15,7 @@ import re
 import shutil
 import tempfile
 import unittest
+from unittest import mock
 
 from tests.pathshim import A11Y, ROOT
 
@@ -696,6 +697,59 @@ class Fixture(unittest.TestCase):
             second = f.read()
         self.assertEqual(first, second)
         self.assertEqual(first.decode(), canon.dump(json.loads(first)))
+
+    def swept(self):
+        """run.json with the current harness, as a sweep writes it when it starts; returns the workspace."""
+        canon.write_json(os.path.join(self.ws, "runs", RUN, "run.json"), {"run": RUN, "harness": canon.harness_hash()})
+        return Workspace(workspace=self.ws, data=self.data, map=self.map_path, run=RUN)
+
+    def outcomes(self):
+        """outcomes.json listing every state with a raw file as audited, as a finished sweep writes it."""
+        states = {sid[:-5]: {"outcome": "audited", "completed": ["axe", "records"], "incomplete": []}
+                  for sid in sorted(os.listdir(self.raw_dir))}
+        canon.write_json(os.path.join(self.ws, "runs", RUN, "outcomes.json"), {"run": RUN, "states": states})
+        return states
+
+    def test_findings_record_the_harness_outcomes_and_raw_files_they_were_grouped_from(self):
+        ws = self.swept()
+        _, _, _, doc = self.run_group()
+        self.assertEqual(sorted(doc["inputs"]), ["harness", "outcomes", "raw"])
+        self.assertEqual((doc["inputs"]["harness"], doc["inputs"]["outcomes"]), (canon.harness_hash(), None))
+        self.assertIsNone(group.stale(ws, RUN, doc))
+
+        # The sweep finishes after group ran: outcomes.json appears, and findings.json is stale.
+        states = self.outcomes()
+        self.assertEqual(group.stale(ws, RUN, doc), group.STALE)
+        _, _, _, doc = self.run_group()
+        self.assertEqual((doc["inputs"]["harness"], doc["inputs"]["outcomes"]),
+                         (canon.harness_hash(), canon.sha(states)))
+        self.assertIsNone(group.stale(ws, RUN, doc))
+        self.assertEqual(group.stale(ws, RUN, {k: v for k, v in doc.items() if k != "inputs"}), group.STALE)
+
+    def test_an_audited_state_swept_again_after_group_makes_findings_stale(self):
+        ws = self.swept()
+        self.outcomes()
+        _, _, _, doc = self.run_group()
+        self.assertIsNone(group.stale(ws, RUN, doc))
+
+        # `sweep --state cards.index`: still audited, same outcome, another element at results[0].
+        raw = self.raw("cards.index")
+        moved = dict(raw["results"][0], occurrence=dict(raw["results"][0]["occurrence"], xpath="/html/body/p[9]"))
+        canon.write_json(os.path.join(self.raw_dir, "cards.index.json"), dict(raw, results=[moved] + raw["results"]))
+        self.assertEqual(group.stale(ws, RUN, doc), group.STALE)
+        _, _, _, doc = self.run_group()
+        self.assertIsNone(group.stale(ws, RUN, doc))
+
+    def test_a_harness_change_after_the_sweep_needs_a_new_sweep_which_grouping_again_cannot_replace(self):
+        ws = self.swept()
+        _, _, _, doc = self.run_group()
+        now = canon.harness_hash()
+        with mock.patch("group.harness_hash", return_value="ffffffffffffffff"):
+            why = group.stale(ws, RUN, doc)
+            self.assertEqual(why, f"the run was swept with harness {now}, and the harness is now ffffffffffffffff: "
+                                  f"rerun `audit.py sweep`, then `audit.py group`")
+            _, _, _, again = self.run_group()
+            self.assertEqual(group.stale(ws, RUN, again), why)
 
     def test_status(self):
         ws = Workspace(workspace=self.ws, data=self.data, map=self.map_path, run=RUN)

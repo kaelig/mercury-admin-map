@@ -11,11 +11,17 @@ templates, which name no single element. One finding per hand-found issue, and a
 attachment proposal wherever a scanner finding covers at least half of a hand-found issue's screens
 in the same family. Issues are never read from --map: the map gives screen titles only.
 
-Writes findings.json, canonical and sorted, so two runs on the same inputs give the same bytes.
+Writes findings.json, canonical and sorted, so two runs on the same inputs give the same bytes. Its
+`inputs` record what it was grouped from: the harness hash, the sha of outcomes.json's states (null
+before the sweep writes it) and the sha of the raw files it read, byte for byte. `verify prepare`,
+`diff` and `publish` refuse a findings.json whose `inputs` differ from the run's current ones, or
+that has none (rerun `group`), and a run whose run.json `harness`, written as the sweep starts, is
+not the harness now (rerun `sweep`, then `group`).
 File formats: schemas.md.
 """
 import argparse
 import collections
+import hashlib
 import math
 import os
 import string
@@ -24,7 +30,8 @@ import sys
 import mapdata
 import signature
 import verdict
-from lib.canon import latest_by, load_checks, load_wcag, plural, read_json, read_jsonl, rel, sha, write_json
+from lib.canon import (harness_hash, latest_by, load_checks, load_wcag, plural, read_json, read_jsonl, rel, sha,
+                       write_json)
 
 HERE = os.path.dirname(os.path.abspath(__file__))
 AGREEMENT = 0.9     # KTD15: flag a group whose members share a tag-and-attribute set less often than this
@@ -35,6 +42,7 @@ NO_MESSAGE_KEY = "none"   # the messageKey fact of an incomplete group axe gave 
 FAR = 10 ** 9
 UNKNOWN = "unknown"
 WHY_MAX = 36        # checks.json factDocs: `why` is at most 36 characters
+STALE = "findings.json was grouped from a different sweep: rerun `audit.py group`"
 
 
 class GroupError(Exception):
@@ -50,18 +58,24 @@ def load_check_data():
     return load_checks(), load_wcag(), hand
 
 
+def audited_ids(outcomes, states):
+    """The states whose raw files group reads: those outcomes.json lists as audited, or, before the sweep
+    writes it, every state."""
+    if outcomes:
+        return sorted(s for s, o in outcomes.get("states", {}).items() if o.get("outcome") == "audited")
+    return sorted(states)
+
+
 def audited_raws(ws, run_id, states):
     """({state id: raw file} for every audited state, states with no raw file yet)."""
     raw_dir = ws.raw_dir(run_id)
     outcomes = read_json(ws.file("outcomes.json", run_id))
+    ids = audited_ids(outcomes, states)
     if outcomes:
-        ids = sorted(s for s, o in outcomes.get("states", {}).items() if o.get("outcome") == "audited")
         missing = [s for s in ids if not os.path.exists(os.path.join(raw_dir, f"{s}.json"))]
         if missing:
             raise GroupError(f"outcomes.json lists {len(missing)} audited state(s) with no raw file in "
                              f"{raw_dir}: {', '.join(missing)}")
-    else:
-        ids = sorted(states)
     raws, absent = {}, []
     for sid in ids:
         doc = ws.raw(sid, run_id)
@@ -70,6 +84,43 @@ def audited_raws(ws, run_id, states):
         elif doc.get("status") == "audited":
             raws[sid] = doc
     return raws, absent
+
+
+def file_sha(path):
+    """The sha256 of the file's bytes, or None when there is no file."""
+    try:
+        with open(path, "rb") as f:
+            return hashlib.sha256(f.read()).hexdigest()
+    except FileNotFoundError:
+        return None
+
+
+def inputs(ws, run_id):
+    """What findings.json is grouped from now: the harness hash, the sha of outcomes.json's states (null
+    before the sweep writes outcomes.json) and the sha of the raw files group reads. A state swept
+    again changes its raw file even when its outcome stays the same."""
+    outcomes = read_json(ws.file("outcomes.json", run_id))
+    raw_dir = ws.raw_dir(run_id)
+    files = {sid: file_sha(os.path.join(raw_dir, f"{sid}.json")) for sid in audited_ids(outcomes, ws.states(run_id))}
+    return {"harness": harness_hash(), "outcomes": sha(outcomes.get("states") or {}) if outcomes else None,
+            "raw": sha(files)}
+
+
+def swept_with_another_harness(ws, run_id):
+    """The refusal when run.json's harness, which every sweep writes as it starts, is not the harness now:
+    the raw files hold another harness's results, and grouping them again cannot change that. Else None."""
+    swept, now = ws.run_doc(run_id).get("harness"), harness_hash()
+    if swept == now:
+        return None
+    return (f"the run was swept with harness {swept}, and the harness is now {now}: rerun `audit.py sweep`, "
+            f"then `audit.py group`")
+
+
+def stale(ws, run_id, doc):
+    """Why findings.json (doc) cannot be used, else None: the run was swept with another harness, or
+    findings.json was grouped from other inputs than the run's current ones (STALE). A findings.json
+    without `inputs` was grouped before they were recorded: stale too."""
+    return swept_with_another_harness(ws, run_id) or (None if doc.get("inputs") == inputs(ws, run_id) else STALE)
 
 
 def latest_judgments(ws, run_id):
@@ -482,6 +533,7 @@ def build(ws, run_id):
     states = ws.states(run_id)
     if not states:
         raise GroupError(f"run {run_id} has no states.json: run `audit.py plan` first")
+    grouped_from = inputs(ws, run_id)
     raws, absent = audited_raws(ws, run_id, states)
     issues = hand_found_issues(ws, hand)
     registry = ws.published("registry.json") or {}
@@ -492,6 +544,7 @@ def build(ws, run_id):
     scanner = [assemble(k, g, ctx) for k, g in sorted(groups.items())]
     hand_found = [hand_found_finding(i, ctx) for i in sorted(issues, key=lambda i: i["id"])]
     doc = {"run": run_id,
+           "inputs": grouped_from,
            "findings": sorted(scanner + hand_found, key=lambda f: f["key"]),
            "proposals": propose(scanner, hand_found, registry),
            "advisory": advisory,

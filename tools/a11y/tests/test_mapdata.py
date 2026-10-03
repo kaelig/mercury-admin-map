@@ -4,9 +4,13 @@ Run: cd tools/a11y && python3 -m unittest tests.test_mapdata -v
 """
 import contextlib
 import glob
+import importlib.util
 import io
 import json
 import os
+import shutil
+import subprocess
+import sys
 import tempfile
 import unittest
 from unittest import mock
@@ -68,6 +72,111 @@ class LoadAreas(unittest.TestCase):
             self.assertEqual(mapdata.load_areas(DATA, snapshot_dir=snap), raw_areas(DATA))
         self.assertIn("WARN", err.getvalue())
         self.assertIn("no issues.json", err.getvalue())
+
+
+class MalformedAreaFile(unittest.TestCase):
+    def setUp(self):
+        self.tmp = tempfile.TemporaryDirectory()
+        self.addCleanup(self.tmp.cleanup)
+        self.data = os.path.join(self.tmp.name, "data")
+        os.makedirs(self.data)
+        for name, text in (("a.json", '{"area": "a"}'), ("b.json", '{"area": "b",'), ("c.json", '{"area": "c"}')):
+            with open(os.path.join(self.data, name), "w", encoding="utf-8") as f:
+                f.write(text)
+
+    def test_a_malformed_file_raises_without_a_problems_list(self):
+        with mock.patch.dict(os.environ, {}, clear=False):
+            os.environ.pop("MAP_SKIP_INVALID_DATA", None)
+            with self.assertRaises(json.JSONDecodeError):
+                mapdata.load_areas(self.data, snapshot_dir=False)
+            with self.assertRaises(json.JSONDecodeError):
+                mapdata.read_areas(self.data)
+
+    def test_map_skip_invalid_data_skips_the_file_without_a_problems_list(self):
+        with mock.patch.dict(os.environ, {"MAP_SKIP_INVALID_DATA": "1"}):
+            areas = mapdata.load_areas(self.data, snapshot_dir=False)
+        self.assertEqual([a["area"] for a in areas], ["a", "c"])
+
+    def test_with_a_problems_list_the_file_is_reported_and_its_area_skipped(self):
+        problems = []
+        areas = mapdata.load_areas(self.data, snapshot_dir=False, problems=problems)
+        self.assertEqual([a["area"] for a in areas], ["a", "c"])
+        self.assertEqual(len(problems), 1)
+        self.assertRegex(problems[0], r"^b\.json: invalid JSON \(Expecting .+\)$")
+
+    def test_a_clean_data_dir_adds_no_problems(self):
+        problems = []
+        mapdata.load_areas(DATA, snapshot_dir=False, problems=problems)
+        self.assertEqual(problems, [])
+
+    def test_build_warns_and_builds_the_map_and_export_without_that_area(self):
+        # build.py on a scratch root holding the real data plus one file that does not parse: the real
+        # loader and export subprocess run; screen encoding, the atlas, node and esbuild are stubbed.
+        root = os.path.join(self.tmp.name, "site")
+        os.makedirs(os.path.join(root, "tools"))
+        for name in ("mapdata.py", "export_agent_data.py"):
+            shutil.copy(os.path.join(ROOT, "tools", name), os.path.join(root, "tools", name))
+        shutil.copytree(DATA, os.path.join(root, "data"))
+        with open(os.path.join(root, "data", "broken.json"), "w", encoding="utf-8") as f:
+            f.write('{"area": "broken",')
+        shutil.copy(os.path.join(ROOT, "patterns.json"), root)
+        os.symlink(os.path.join(ROOT, "screens"), os.path.join(root, "screens"))
+        os.makedirs(os.path.join(root, "src"))
+        with open(os.path.join(root, "src", "index.html"), "w", encoding="utf-8") as f:
+            f.write("<!--FONTS--><!--STYLE--><!--MAP_DATA--><!--MAP_LAYOUT--><!--APP-->")
+        open(os.path.join(root, "src", "app.css"), "w").close()
+        os.makedirs(os.path.join(root, "dist"))
+        env = {"A11Y_SNAPSHOT": os.path.join(root, "no-snapshot")}
+
+        spec = importlib.util.spec_from_file_location("build_under_test", os.path.join(ROOT, "build.py"))
+        build = importlib.util.module_from_spec(spec)
+        spec.loader.exec_module(build)
+        real_run, exports = subprocess.run, []
+
+        def run(cmd, **kwargs):
+            if cmd[0] == "node":
+                with open(os.path.join(root, "build", "layout.json"), "w") as f:
+                    f.write("{}")
+            elif cmd[0] == "npx":
+                open(os.path.join(root, "build", "app.js"), "w").close()
+            else:
+                exports.append(real_run(cmd, capture_output=True, text=True, **kwargs))
+
+        def convert(rel):
+            return rel, (1440, 900), os.path.join(root, "dist", "img", os.path.splitext(os.path.relpath(rel, "screens"))[0])
+
+        err = io.StringIO()
+        paths = {"ROOT": root, "DIST": os.path.join(root, "dist"), "CACHE": os.path.join(root, "dist", "img"),
+                 "BUILD": os.path.join(root, "build")}
+        with contextlib.ExitStack() as stack:
+            for name, value in paths.items():
+                stack.enter_context(mock.patch.object(build, name, value))
+            stack.enter_context(mock.patch.object(mapdata, "ROOT", root))
+            stack.enter_context(mock.patch.object(build.subprocess, "run", side_effect=run))
+            stack.enter_context(mock.patch.object(build, "convert", side_effect=convert))
+            stack.enter_context(mock.patch.object(build, "build_atlas", return_value={"src": "img/atlas.webp"}))
+            stack.enter_context(mock.patch.dict(os.environ, env))
+            stack.enter_context(contextlib.redirect_stdout(io.StringIO()))
+            stack.enter_context(contextlib.redirect_stderr(err))
+            os.environ.pop("MAP_SKIP_INVALID_DATA", None)
+            build.main()
+
+        warns = [line for line in err.getvalue().splitlines() if line.startswith("WARN")]
+        self.assertEqual(len(warns), 1, err.getvalue())
+        self.assertRegex(warns[0], r"^WARN broken\.json: invalid JSON \(Expecting .+\)$")
+        with open(os.path.join(root, "build", "map.json"), encoding="utf-8") as f:
+            self.assertEqual(sorted(a["area"] for a in json.load(f)["areas"]), sorted(a["area"] for a in raw_areas(DATA)))
+        self.assertEqual(len(exports), 1)
+        self.assertEqual(exports[0].stderr, "")
+        with open(os.path.join(root, "dist", "agent", "issues.json"), encoding="utf-8") as f:
+            exported = {i["id"] for i in json.load(f)["issues"]}
+        self.assertEqual(exported, {i["id"] for a in raw_areas(DATA) for i in a.get("issues", [])})
+        # The export run by hand still stops on the bad file.
+        alone = real_run([sys.executable, "tools/export_agent_data.py", "--out", os.path.join(root, "out")],
+                         cwd=root, capture_output=True, text=True,
+                         env={**{k: v for k, v in os.environ.items() if k != "MAP_SKIP_INVALID_DATA"}, **env})
+        self.assertEqual(alone.returncode, 1)
+        self.assertIn("JSONDecodeError", alone.stderr)
 
 
 TABS = "accounts.i-tabs-not-tabs"            # AE7: medium in data/accounts.json

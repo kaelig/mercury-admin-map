@@ -9,12 +9,16 @@ the batches already written, so the same inputs give the same files. A batch is 
 batches/<name>.out.jsonl exists (an agent that failed gets an empty one). Each returned batch that
 brought no valid verdict for a finding is one failed attempt; after two, the finding gets an
 `unverified` verdict through `verdict add`'s validator. Run `verdict add` and `decision add` on every
-returned batch before preparing again.
+returned batch before preparing again: `prepare` refuses while a returned batch holds a valid line
+that verdicts.jsonl or decisions.jsonl does not, while the run was swept with another harness than
+the current one, and while findings.json was grouped from other raw files, outcomes or harness than
+the run's current ones (group.stale).
 
 `status` reports findings verdicted, pending and unverified, proposals decided and pending, the
-canary result (the waves hold until canary.json passes), and the second-opinion queue: every
-verdict that flips the previous published status on the same evidence hash, and every drop of a
-finding whose default severity is high, until a `second: true` verdict exists for it.
+batches still out and those returned but not added (`returnedNotAdded`), the canary result (the
+waves hold until canary.json passes), and the second-opinion queue: every verdict that flips the
+previous published status on the same evidence hash, and every drop of a finding whose default
+severity is high, until a `second: true` verdict exists for it.
 File formats: schemas.md ("Batch files", "verdicts.jsonl").
 """
 import argparse
@@ -23,6 +27,7 @@ import os
 import re
 import sys
 
+import decision
 import group
 import signature
 import verdict
@@ -98,19 +103,18 @@ def area_of(f, states):
 
 
 def sampled_evidence(raw_dir, f, raws):
-    """The raw result (or record) behind the finding on each sampled state, where the raw file has it."""
+    """The raw result (or record) behind the finding on each sampled state, where the raw file has it
+    at the occurrence's index, for the finding's rule."""
     out = []
     for s in f.get("sample") or []:
-        occ = next((o for o in f.get("occurrences") or [] if o["state"] == s), None)
-        if occ is None:
+        if not any(o["state"] == s for o in f.get("occurrences") or []):
             continue
         if s not in raws:
             raws[s] = read_json(os.path.join(raw_dir, f"{s}.json"))
-        raw = raws[s] or {}
-        items = raw.get("records" if f.get("rule") == "announced-as" else "results") or []
-        if occ["index"] >= len(items):
+        items = verdict.occurrence_items(f, s, raws[s])
+        if not items:
             continue
-        item = items[occ["index"]]
+        item = items[0]
         if f.get("rule") == "announced-as":
             ev = {k: v for k, v in item.items() if k != "occurrence"}
         else:
@@ -189,15 +193,41 @@ def unverified_line(f, tried, build):
             "attempt": len(tried), "second": False}
 
 
+def returned_not_added(ws, run_id, files, by_key):
+    """The returned batches whose .out.jsonl holds a valid verdict or decision line that verdicts.jsonl
+    or decisions.jsonl does not: `verdict add` or `decision add` has not taken it yet."""
+    returned = [name for name, _, _, back in files if back]
+    if not returned:
+        return []
+    check, known = verdict.run_check(ws, run_id, by_key), decision.answerable(ws, run_id)
+    verdicts = verdict.ledger_keys(read_jsonl(ws.file("verdicts.jsonl", run_id)))
+    decisions = verdict.ledger_keys(read_jsonl(ws.file("decisions.jsonl", run_id)))
+    out = []
+    for name in returned:
+        path = batch_path(ws.run_dir(run_id), name)[:-5] + ".out.jsonl"
+        if (verdict.unadded(path, check, verdicts, skip=verdict.is_decision)
+                or verdict.unadded(path, lambda obj: decision.validate(obj, *known), decisions,
+                                   skip=decision.is_verdict)):
+            out.append(name)
+    return out
+
+
 def prepare(ws, run_id):
     doc = read_json(ws.file("findings.json", run_id))
     if not doc:
         raise VerifyError(f"run {run_id} has no findings.json: run `audit.py group` first")
+    stale = group.stale(ws, run_id, doc)
+    if stale:
+        raise VerifyError(stale)
     findings = doc.get("findings", [])
     by_key = {f["key"]: f for f in findings}
     run_dir = ws.run_dir(run_id)
-    has_verdict = {v["key"] for v in read_jsonl(ws.file("verdicts.jsonl", run_id))}
     files = batch_files(run_dir, "verify")
+    unadded = returned_not_added(ws, run_id, files, by_key)
+    if unadded:
+        raise VerifyError(f"returned batch(es) not added yet: {', '.join(unadded)}. Run `audit.py verdict add` "
+                          f"and `audit.py decision add` on each one's .out.jsonl, then prepare again")
+    has_verdict = {v["key"] for v in read_jsonl(ws.file("verdicts.jsonl", run_id))}
     out_now = out_names(files)
     out_keys = in_flight(files, "findings", "key")
     tried = collections.defaultdict(list)
@@ -308,6 +338,7 @@ def status(ws, run_id):
     last = latest_by(verdicts, "key")
     files = batch_files(ws.run_dir(run_id), "verify")
     out_keys = in_flight(files, "findings", "key")
+    unadded = returned_not_added(ws, run_id, files, {f["key"]: f for f in findings})
     counts = {"total": len(findings), "verdicted": 0, "notReached": 0, "unverified": 0, "pending": 0, "inFlight": 0}
     outcomes = collections.Counter()
     for f in findings:
@@ -324,7 +355,7 @@ def status(ws, run_id):
     return {"findings": counts,
             "outcomes": dict(sorted(outcomes.items())),
             "proposals": {"total": total, "decided": total - len(pending), "pending": pending},
-            "batches": {"written": len(files), "inFlight": out_names(files)},
+            "batches": {"written": len(files), "inFlight": out_names(files), "returnedNotAdded": unadded},
             "canary": canary,
             "holdWaves": canary["status"] != "passed",
             "secondOpinion": second_opinion_queue(ws, findings, verdicts)}

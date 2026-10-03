@@ -294,6 +294,13 @@ class JudgmentAdd(unittest.TestCase):
         code, out = self.s.judge([judgment(self.chip), "not json", judgment(signature.record_sig(MOVE))])
         self.assertEqual((code, out["appended"], [r["line"] for r in out["rejected"]]), (1, 2, [2]))
 
+    def test_adding_the_same_file_twice_appends_nothing_the_second_time(self):
+        lines = [judgment(self.chip), judgment(signature.record_sig(MOVE))]
+        self.s.judge(lines)
+        code, out = self.s.judge(lines)
+        self.assertEqual((code, out["appended"], out["duplicates"]), (0, 0, 2))
+        self.assertEqual(len(self.s.judgments()), 2)
+
 
 class Status(unittest.TestCase):
     def test_status_counts_records_judgments_and_batches(self):

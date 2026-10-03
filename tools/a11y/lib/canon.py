@@ -134,6 +134,12 @@ def name_template_regex(template):
 # Hashes shared with Node
 # ---------------------------------------------------------------------------
 
+# Beside the checks and lib modules: what replays a state, matches its fingerprint and names the
+# custom checks. The installed engines are hashed by version.
+HARNESS_TOP = ("sweep.mjs", "recipe.mjs", "fingerprint.mjs", "checks.json")
+HARNESS_PACKAGES = ("axe-core", "playwright")
+
+
 def harness_files(root=ROOT):
     base = os.path.join(root, "tools", "a11y")
     out = []
@@ -141,8 +147,7 @@ def harness_files(root=ROOT):
         d = os.path.join(base, sub)
         if os.path.isdir(d):
             out += [f"tools/a11y/{sub}/{f}" for f in os.listdir(d) if f.endswith(".mjs")]
-    if os.path.exists(os.path.join(base, "sweep.mjs")):
-        out.append("tools/a11y/sweep.mjs")
+    out += [f"tools/a11y/{f}" for f in HARNESS_TOP if os.path.exists(os.path.join(base, f))]
     return sorted(out)
 
 
@@ -151,6 +156,11 @@ def harness_hash(root=ROOT):
     for rel in harness_files(root):
         with open(os.path.join(root, rel), "rb") as f:
             text += rel + "\n" + hashlib.sha256(f.read()).hexdigest() + "\n"
+    for name in HARNESS_PACKAGES:
+        pkg = os.path.join(root, "node_modules", name, "package.json")
+        if os.path.exists(pkg):
+            with open(pkg, encoding="utf-8") as f:
+                text += f"node_modules/{name}\n{json.load(f)['version']}\n"
     return hashlib.sha256(text.encode()).hexdigest()[:16]
 
 

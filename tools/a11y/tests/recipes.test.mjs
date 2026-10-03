@@ -4,14 +4,15 @@
 import { test, before, after } from 'node:test';
 import assert from 'node:assert/strict';
 import { spawn, spawnSync } from 'node:child_process';
-import { cpSync, existsSync, mkdtempSync, readFileSync, rmSync, writeFileSync } from 'node:fs';
+import { EventEmitter } from 'node:events';
+import { cpSync, existsSync, mkdirSync, mkdtempSync, rmSync, writeFileSync } from 'node:fs';
 import { tmpdir } from 'node:os';
 import { join } from 'node:path';
 import { ROOT, readJson, writeJson } from '../lib/canon.mjs';
 import { Workspace } from '../lib/cli.mjs';
 import { cdpSession, launch, newContext, trackRequests } from '../lib/browser.mjs';
 import { startServer } from '../fixtures/server.mjs';
-import { chain, loadRecipes, replay, resolveLocator } from '../recipe.mjs';
+import { chain, checkStates, loadRecipes, replay, resolveLocator, runStep } from '../recipe.mjs';
 import { captureFingerprint, matchFingerprint } from '../fingerprint.mjs';
 import { parseLabel } from '../draft.mjs';
 
@@ -326,6 +327,85 @@ test('a goto off the allowed origins, an unknown action and an unlisted typed va
   }
 });
 
+test('a press that would type or paste into a text field is refused; Escape and Tab still run there', async () => {
+  const { ws } = workspace();
+  const recipes = loadRecipes(ws);
+  const focus = [{ click: { role: 'menuitem', name: 'Send money' } }, { click: { label: 'Recipient email' } }];
+  for (const key of ['s', 'Shift+S', 'KeyS', '@', 'Space']) {
+    const { result, page } = await replayOn(server.origin, tampered(recipes, 'home.send-modal', { hop: [...focus, { press: key }] }), 'home.send-modal');
+    assert.equal(result.status, 'step-failed', `press ${key} was not refused`);
+    assert.equal(result.step, 4, 'step 0 loads the root; 1 Move money, 2 Send money, 3 the field, 4 the press');
+    assert.match(result.message, /fixtureValues/);
+    assert.equal(await page.getByLabel('Recipient email').inputValue(), '');
+  }
+  // Select and copy the page's text first, so a paste that ran would fill the field.
+  const copy = [{ press: 'ControlOrMeta+A' }, { press: 'ControlOrMeta+C' }];
+  for (const key of ['ControlOrMeta+V', 'Shift+ControlOrMeta+V', 'Shift+Insert', 'Control+Y']) {
+    const { result, page } = await replayOn(server.origin, tampered(recipes, 'home.send-modal', { hop: [...copy, ...focus, { press: key }] }), 'home.send-modal');
+    assert.equal(result.status, 'step-failed', `press ${key} was not refused`);
+    assert.equal(result.step, 6);
+    assert.match(result.message, /fixtureValues/);
+    assert.equal(await page.getByLabel('Recipient email').inputValue(), '');
+  }
+  const keys = await replayOn(server.origin, tampered(recipes, 'home.send-modal', { hop: [...focus, { press: 'Escape' }, { press: 'Tab' }] }), 'home.send-modal');
+  assert.equal(keys.result.status, 'reached', keys.result.message);
+});
+
+test('Enter or Space inside a frame from another origin is refused; in a same-origin frame it is judged like a click', async () => {
+  const dir = join(tmp('a11y-frames-'), 'frames');
+  mkdirSync(dir);
+  writeFileSync(join(dir, 'index.html'), '<!doctype html><title>Frames</title>'
+    + '<iframe title="Other origin" src="{{origin2}}/frames/inner.html"></iframe>'
+    + '<iframe title="Same origin" src="{{origin}}/frames/inner.html"></iframe>');
+  writeFileSync(join(dir, 'inner.html'), '<!doctype html><title>Inner</title>'
+    + '<button onclick="document.title = \'Continued\'">Continue</button>'
+    + '<button onclick="document.title = \'Logged out\'">Log out</button>');
+  const s = await startServer({ dirs: [dir] });
+  servers.push(s);
+  const { page, tracker, cdp } = await open();
+  await page.goto(`${s.origin}/frames/`);
+  const ctx = { cdp, tracker, baseUrl: s.origin };
+  const press = (key) => runStep(page, ctx, { press: key }, POLICY);
+  const title = (origin) => page.frames().find((f) => f !== page.mainFrame() && f.url().startsWith(origin)).title();
+  // Tab order: the other origin's Continue and Log out, then the same origin's.
+  assert.equal((await press('Tab')).ok, true);
+  assert.match((await press('Enter')).message, /frame from another origin/);
+  // Space could as well be typing into a field in that frame.
+  assert.match((await press('Space')).message, /put text into the focused field/);
+  assert.equal(await title(s.origin2), 'Inner');
+  for (let i = 0; i < 2; i++) assert.equal((await press('Tab')).ok, true);
+  assert.deepEqual(await press('Enter'), { ok: true, submitted: false });
+  assert.equal(await title(s.origin), 'Continued');
+  assert.equal((await press('Tab')).ok, true);
+  assert.match((await press('Enter')).message, /denylist/);
+  assert.equal(await title(s.origin), 'Continued');
+});
+
+test('Enter or Space on a focused denylisted control or off-domain link is refused; Enter on Move money opens it', async () => {
+  const { ws } = workspace();
+  const recipes = loadRecipes(ws);
+  const tabs = (n) => Array.from({ length: n }, () => ({ press: 'Tab' }));
+  // Tab order on the dashboard: Logout, the four nav links, Move money, Try Acme Books, Help center.
+  for (const key of ['Enter', 'Space']) {
+    const { result, page } = await replayOn(server.origin, tampered(recipes, 'home.move-money-menu', { hop: [...tabs(1), { press: key }] }), 'home.move-money-menu');
+    assert.equal(result.status, 'step-failed', `${key} on Logout was not refused`);
+    assert.equal(result.step, 2);
+    assert.match(result.message, /denylist/);
+    assert.equal(new URL(page.url()).pathname, '/app/dashboard');
+    assert.equal(await page.evaluate(() => localStorage.getItem('loggedOut')), null);
+  }
+  const { page, tracker, cdp } = await open();
+  const offsite = [];
+  page.on('request', (r) => { if (r.url().startsWith(server.origin2)) offsite.push(r.url()); });
+  const help = tampered(recipes, 'home.move-money-menu', { hop: [...tabs(8), { press: 'Enter' }] });
+  const result = await replay(page, { cdp, tracker, baseUrl: server.origin }, 'home.move-money-menu', { recipes: help, policy: POLICY });
+  assert.equal(result.status, 'step-failed');
+  assert.match(result.message, /allowed origins/);
+  assert.deepEqual(offsite, []);
+  const move = await replayOn(server.origin, tampered(recipes, 'home.move-money-menu', { hop: [...tabs(6), { press: 'Enter' }] }), 'home.move-money-menu');
+  assert.equal(move.result.status, 'reached', move.result.message);
+});
+
 test('an action on no recorded edge is refused before it runs', async () => {
   const { ws } = workspace();
   const recipes = tampered(loadRecipes(ws), 'cards.freeze-modal', { parent: 'home.index' });
@@ -421,6 +501,66 @@ test('a click that lands on the neighboring dialog scores below the threshold an
   assert.equal(entry.review.reason, 'below-threshold');
   assert.deepEqual(entry.hop, agent.hop);
   assert.equal(entry.recordedBy, 'agent');
+});
+
+test('a candidate cannot name who recorded it: check --recipe records the agent, so a mutating path goes to review', async () => {
+  const w = workspace();
+  const claimed = { parent: 'home.send-modal', hop: DESIGN['home.send-toast'].hop, recordedBy: 'draft' };
+  const r = await stage('recipe.mjs', ['check', 'home.send-toast', '--recipe', JSON.stringify(claimed)], w);
+  assert.equal(r.status, 0, r.stderr + r.stdout);
+  const entry = recipesFile(w, 'home')['home.send-toast'];
+  assert.equal(entry.recordedBy, 'agent');
+  assert.equal(entry.mutates, true);
+  assert.equal(entry.status, 'review');
+  assert.equal(entry.review.reason, 'mutating');
+});
+
+test('a root candidate with setup steps is the agent\'s, so a mutating one goes to review; a bare root URL is the root\'s', async () => {
+  const map = readJson(join(APP, 'map.json'));
+  map.areas.find((a) => a.area === 'cards').edges.push({ from: 'cards.index', to: 'home.index', label: 'Send money from the dashboard' });
+  const w = workspace({ map });
+  const send = [...DESIGN['home.move-money-menu'].hop, ...DESIGN['home.send-modal'].hop, ...DESIGN['home.send-toast'].hop];
+  const setup = { parent: '/app/dashboard', via: 'cards.index', hop: send, recordedBy: 'root' };
+  let r = await stage('recipe.mjs', ['check', 'home.index', '--recipe', JSON.stringify(setup)], w);
+  assert.equal(r.status, 0, r.stderr + r.stdout);
+  let entry = recipesFile(w, 'home')['home.index'];
+  assert.equal(entry.recordedBy, 'agent');
+  assert.equal(entry.mutates, true);
+  assert.equal(entry.status, 'review');
+  assert.equal(entry.review.reason, 'mutating');
+  r = await stage('recipe.mjs', ['check', 'home.index', '--recipe', JSON.stringify({ parent: '/app/dashboard', hop: [] })], w);
+  assert.equal(r.status, 0, r.stderr + r.stdout);
+  entry = recipesFile(w, 'home')['home.index'];
+  assert.equal(entry.recordedBy, 'root');
+  assert.equal(entry.status, 'accepted');
+});
+
+test('recipe check finishes the batch when one state throws, and still exits non-zero', async () => {
+  const w = workspace();
+  // A hop that is not a list makes the replay throw, outside any step.
+  setRecipe(w, 'cards', 'cards.edit-limit-modal', { ...DESIGN['cards.edit-limit-modal'], hop: 5 });
+  const r = await stage('recipe.mjs', ['check', 'cards.edit-limit-modal', 'cards.freeze-modal'], w);
+  assert.equal(r.status, 1, r.stderr + r.stdout);
+  assert.deepEqual(r.json.checked.map((c) => [c.state, c.status]), [['cards.edit-limit-modal', 'error'], ['cards.freeze-modal', 'accepted']]);
+  assert.match(r.json.checked[0].message, /not iterable/);
+});
+
+test('recipe check reports each state as an error, instead of waiting forever, when its browser dies mid-batch', { timeout: 30000 }, async () => {
+  const { ws } = workspace();
+  // A crashed browser as Playwright leaves it: the page being opened never arrives, then 'disconnected'.
+  const dying = Object.assign(new EventEmitter(), {
+    alive: true,
+    isConnected() { return this.alive; },
+    async newContext() {
+      setTimeout(() => { dying.alive = false; dying.emit('disconnected'); }, 100);
+      return { newPage: () => new Promise(() => {}), close: async () => {} };
+    },
+  });
+  const results = await checkStates(ws, ['cards.index', 'cards.freeze-modal'], { browser: dying });
+  assert.deepEqual(results, [
+    { state: 'cards.index', status: 'error', message: 'the browser closed or crashed' },
+    { state: 'cards.freeze-modal', status: 'error', message: 'the browser closed or crashed' },
+  ]);
 });
 
 test('a recipe that does not reach its state is reported and leaves the existing entry alone', async () => {
@@ -549,6 +689,57 @@ test('draft resolves a multi-step label and a row named by its merchant', async 
   assert.deepEqual(recipesFile(w, 'transactions')['transactions.drawer'].hop, DESIGN['transactions.drawer'].hop);
   assert.deepEqual([...r.json.accepted].sort(), ['home.send-toast', 'transactions.drawer']);
   assert.deepEqual(r.json.agentQueue.map((q) => q.state), ['home.chart-tooltip']);
+});
+
+test('draft queues a state whose replay throws as a tool error and goes on to the next state', async () => {
+  const w = workspace();
+  setRecipe(w, 'cards', 'cards.edit-limit-modal', null);
+  setRecipe(w, 'transactions', 'transactions.drawer', null);
+  // The parent stays accepted, but a hop that is not a list makes replaying it throw.
+  setRecipe(w, 'cards', 'cards.index', { ...DESIGN['cards.index'], hop: 5 });
+  const r = await stage('draft.mjs', ['cards.edit-limit-modal', 'transactions.drawer'], w);
+  assert.equal(r.status, 0, r.stderr + r.stdout);
+  assert.deepEqual(r.json.agentQueue.map((q) => [q.state, q.label]), [['cards.edit-limit-modal', 'Click Edit limits']]);
+  assert.match(r.json.agentQueue[0].reason, /^tool-error: \S/);
+  assert.deepEqual(r.json.accepted, ['transactions.drawer']);
+  assert.equal(recipesFile(w, 'transactions')['transactions.drawer'].status, 'accepted');
+});
+
+// The pid of the browser process a process launched, or null.
+function browserOf(pid) {
+  const ps = spawnSync('ps', ['-A', '-o', 'pid=,ppid=,command='], { encoding: 'utf8' }).stdout;
+  for (const line of ps.split('\n')) {
+    const [, child, parent, command] = /^\s*(\d+)\s+(\d+)\s+(.*)$/.exec(line) || [];
+    if (Number(parent) === pid && /chrom/i.test(command)) return Number(child);
+  }
+  return null;
+}
+
+test('draft launches a new browser when its browser dies mid-batch, and drafts the states after it', async () => {
+  const w = workspace();
+  const ids = ['cards.index', 'cards.edit-limit-modal', 'cards.freeze-modal'];
+  const child = spawn('node', [join(A11Y, 'draft.mjs'), ...ids, '--workspace', w.root, '--map', w.mapPath, '--base-url', w.ws.baseUrl],
+    { stdio: ['ignore', 'pipe', 'pipe'] });
+  let stdout = '';
+  let stderr = '';
+  let killed = null;
+  child.stdout.on('data', (d) => {
+    stdout += d;
+    // Once the first state is drafted, crash the browser (its whole process group) under the second.
+    if (killed === null && /^accepted +cards\.index$/m.test(stdout)) {
+      killed = browserOf(child.pid);
+      if (killed) process.kill(-killed, 'SIGKILL');
+    }
+  });
+  child.stderr.on('data', (d) => { stderr += d; });
+  const status = await new Promise((done) => child.on('close', done));
+  assert.equal(status, 0, stderr + stdout);
+  assert.ok(killed, `no browser process under draft (pid ${child.pid}) to kill: ${stdout}`);
+  const out = JSON.parse(stdout.trim().split('\n').pop());
+  assert.deepEqual(out.accepted, ['cards.index', 'cards.freeze-modal']);
+  assert.deepEqual(out.agentQueue.map((q) => q.state), ['cards.edit-limit-modal']);
+  assert.equal(recipesFile(w, 'cards')['cards.index'].recordedBy, 'root');
+  assert.equal(recipesFile(w, 'cards')['cards.freeze-modal'].recordedBy, 'draft');
 });
 
 // ---------------------------------------------------------------------------

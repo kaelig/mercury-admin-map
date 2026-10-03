@@ -2,9 +2,11 @@
 
 `Ledger` writes what `diff` and `publish` read: run.json, states.json, outcomes.json, minimal raw
 files (families and axe rules that ran), findings.json, verdicts.jsonl, decisions.jsonl, records.jsonl,
-canary.json and lighthouse.json. Findings get their title and evidence summary from the checks.json
-templates, filled with plain facts, the way `group` fills them. Every line is valid against
-schemas.md, so the tests exercise the stages, not the fixtures.
+canary.json and lighthouse.json. run.json's harness and findings.json's `inputs` are the current
+harness hash, outcomes and raw files, computed as it writes, as a sweep and `group` leave them. Findings get
+their title and evidence summary from the checks.json templates, filled with plain facts, the way
+`group` fills them. Every line is valid against schemas.md, so the tests exercise the stages, not
+the fixtures.
 
 `build_test_snapshot(dest)` publishes two runs with this ledger and copies the second snapshot to
 `dest`: new, persisting, not-retested (one screen unreachable), withdrawn and fixed findings, a
@@ -24,7 +26,7 @@ from tests.pathshim import A11Y, ROOT
 import group
 import mapdata
 import signature
-from lib.canon import append_jsonl, read_json, sha, write_json
+from lib.canon import append_jsonl, harness_hash, read_json, sha, write_json
 from lib.ws import Workspace
 
 DATA = os.path.join(ROOT, "data")
@@ -218,7 +220,7 @@ class Ledger:
         os.makedirs(os.path.join(rd, "raw"), exist_ok=True)
         write_json(self.path("run.json"), {"run": self.run, "created": f"{self.date}T09:00:00",
                                            "baseUrl": "https://demo.mercury.com", "workspace": "a11y",
-                                           "versions": VERSIONS, "harness": "0123456789abcdef",
+                                           "versions": VERSIONS, "harness": harness_hash(),
                                            "builds": self.builds, "stages": {}})
         write_json(self.path("states.json"), {"run": self.run, "map": {"nodes": len(self.states), "sha": sha(sorted(self.states))},
                                               "roots": [], "states": self.states})
@@ -232,7 +234,8 @@ class Ledger:
                 "reason": o["reason"], "families": {"completed": o["completed"], "incomplete": o["incomplete"]},
                 "results": [], "records": [],
                 "checks": {"axe": {"rulesRan": RULES_RAN, "inapplicable": []}} if "axe" in o["completed"] else {}})
-        write_json(self.path("findings.json"), {"run": self.run, "findings": sorted(self.findings, key=lambda f: f["key"]),
+        write_json(self.path("findings.json"), {"run": self.run, "inputs": group.inputs(self.workspace(), self.run),
+                                                "findings": sorted(self.findings, key=lambda f: f["key"]),
                                                 "proposals": self.proposals, "advisory": self.advisory, "flags": []})
         for name, lines in (("verdicts.jsonl", self.verdicts), ("decisions.jsonl", self.decisions),
                             ("records.jsonl", self.records)):

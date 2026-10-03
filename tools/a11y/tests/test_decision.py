@@ -98,6 +98,12 @@ class DecisionTest(unittest.TestCase):
     def test_a_release_of_a_pair_the_registry_does_not_hold_is_rejected(self):
         self.assert_rejected(decision(decision="release"), "registry")
 
+    def test_adding_the_same_file_twice_appends_nothing_the_second_time(self):
+        self.add(decision())
+        code, out = self.add(decision())
+        self.assertEqual((code, out["appended"], out["duplicates"]), (0, 0, 1))
+        self.assertEqual(len(self.stored()), 1)
+
     def test_verdict_lines_in_the_same_file_are_left_for_verdict_add(self):
         code, out = self.add(decision(), tv.verdict())
         self.assertEqual((code, out["appended"], out["skipped"]), (0, 1, 1))

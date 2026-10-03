@@ -118,6 +118,11 @@ export function nameTemplateRegex(template) {
 // Hashes shared with Python
 // ---------------------------------------------------------------------------
 
+// Beside the checks and lib modules: what replays a state, matches its fingerprint and names the
+// custom checks. The installed engines are hashed by version.
+const HARNESS_TOP = ['sweep.mjs', 'recipe.mjs', 'fingerprint.mjs', 'checks.json'];
+const HARNESS_PACKAGES = ['axe-core', 'playwright'];
+
 function harnessFiles(root = ROOT) {
   const base = join(root, 'tools', 'a11y');
   const out = [];
@@ -125,7 +130,7 @@ function harnessFiles(root = ROOT) {
     const d = join(base, sub);
     if (existsSync(d)) out.push(...readdirSync(d).filter((f) => f.endsWith('.mjs')).map((f) => `tools/a11y/${sub}/${f}`));
   }
-  if (existsSync(join(base, 'sweep.mjs'))) out.push('tools/a11y/sweep.mjs');
+  for (const f of HARNESS_TOP) if (existsSync(join(base, f))) out.push(`tools/a11y/${f}`);
   return out.sort();
 }
 
@@ -133,6 +138,10 @@ export function harnessHash(root = ROOT) {
   let text = '';
   for (const rel of harnessFiles(root)) {
     text += rel + '\n' + createHash('sha256').update(readFileSync(join(root, rel))).digest('hex') + '\n';
+  }
+  for (const name of HARNESS_PACKAGES) {
+    const pkg = join(root, 'node_modules', name, 'package.json');
+    if (existsSync(pkg)) text += `node_modules/${name}\n${JSON.parse(readFileSync(pkg, 'utf8')).version}\n`;
   }
   return createHash('sha256').update(text).digest('hex').slice(0, 16);
 }

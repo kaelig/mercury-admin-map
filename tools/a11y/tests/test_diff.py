@@ -398,6 +398,40 @@ class DiffTest(unittest.TestCase):
         self.assertIn("already published", out + err)
         self.assertEqual(read_json(led.path("diff.json"))["baseline"], RUN_A)
 
+    def test_a_findings_json_grouped_from_another_sweep_is_refused(self):
+        led = self.ledger(RUN_A)
+        led.hand_found()
+        led.scanner("contrast", "color-contrast", ["cards.index", "cards.detail-physical"], primary="cards.index")
+        led.confirm_rest()
+        ws = led.write()
+        self.assertEqual(run_diff(ws, RUN_A)[0], 0)
+        why = "findings.json was grouped from a different sweep: rerun `audit.py group`"
+
+        outcomes = read_json(led.path("outcomes.json"))           # cards.detail-physical swept again, unreachable
+        outcomes["states"]["cards.detail-physical"] = dict(outcomes["states"]["cards.detail-physical"],
+                                                           outcome="unreachable", completed=[])
+        write_json(led.path("outcomes.json"), outcomes)
+        code, out, err = run_diff(ws, RUN_A)
+        self.assertEqual((code, out), (1, ""))
+        self.assertIn(why, err)
+        with self.assertRaisesRegex(diff.DiffError, "rerun `audit.py group`"):
+            diff.compute(ws, RUN_A)
+
+        led.write()                                                   # grouped again: current
+        raw_path = os.path.join(led.path("raw"), "cards.index.json")  # cards.index swept again, still audited
+        write_json(raw_path, dict(read_json(raw_path), build="c9d8e7"))
+        code, _, err = run_diff(ws, RUN_A)
+        self.assertEqual(code, 1)
+        self.assertIn(why, err)
+
+        led.write()
+        doc = read_json(led.path("findings.json"))
+        del doc["inputs"]                                             # grouped before inputs were recorded
+        write_json(led.path("findings.json"), doc)
+        code, _, err = run_diff(ws, RUN_A)
+        self.assertEqual(code, 1)
+        self.assertIn(why, err)
+
     def test_without_findings_json_diff_fails(self):
         os.makedirs(os.path.join(self.ws_dir, "runs", RUN_A))
         write_json(os.path.join(self.ws_dir, "runs", RUN_A, "states.json"), {"run": RUN_A, "states": {}})

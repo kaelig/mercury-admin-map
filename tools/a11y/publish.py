@@ -15,12 +15,14 @@ Builds published/ from the run's ledger and the snapshot in force:
   run's lighthouse.json, else the previous snapshot's result with its run id and date).
 
 Publish refuses, and leaves the snapshot in force untouched, unless every KTD21 gate passes: the
-coverage invariant, a verdict (or `unverified` line) for every finding, a decision for every
-proposal, a passing canary, diff.json current and based on the run in meta.json, every generated
-issue valid for the ticket export, unique ids across the merged set, every report link resolving,
-and a sound registry. It writes published.tmp/, checks what it wrote, renames published/ to
-published.prev/ and published.tmp/ to published/, then deletes published.prev/. Rerunning it for a
-run already published reports "already published" and changes nothing.
+run swept with the current harness (run.json's `harness`), findings.json grouped from that sweep
+(group.stale, through diff), the coverage invariant, a verdict (or `unverified` line) for every
+finding, a decision for every proposal, a passing canary, diff.json current and based on the run in
+meta.json, every generated issue valid for the ticket export, unique ids across the merged set,
+every report link resolving, and a sound registry. The latest decision on a proposal is the one
+applied. It writes published.tmp/, checks what it wrote, renames published/ to published.prev/ and
+published.tmp/ to published/, then deletes published.prev/. Rerunning it for a run already
+published reports "already published" and changes nothing.
 File formats: schemas.md ("published/").
 """
 import argparse
@@ -37,7 +39,7 @@ import mapdata
 import registry
 import verify
 from calibration import due
-from lib.canon import dump, load_wcag, plural, read_json, read_jsonl, write_text
+from lib.canon import dump, latest_by, load_wcag, plural, read_json, read_jsonl, write_text
 from status import coverage_problems, pending_proposals
 
 STANDARD = "WCAG 2.2 AA"
@@ -320,11 +322,13 @@ def slug_parts(key, f):
 def apply_registry(ctx, problems):
     """(registry, {finding key: [hand-found ids]}, {key: issue id}) after this run's decisions and statuses.
 
-    The snapshot's registry is copied once and changed in place."""
+    Only the latest decision on each proposal applies, in proposal id order: a reject after an attach
+    leaves no attachment. The snapshot's registry is copied once and changed in place."""
     d, run, date = ctx["diff"], ctx["run"], ctx["date"]
     reg = registry.copied(ctx["snapshot"]["registry"])
     held = len(reg["held"])
-    for dec in ctx["decisions"]:
+    latest = latest_by(ctx["decisions"], "proposal")
+    for dec in (latest[pid] for pid in sorted(latest)):
         if dec.get("decision") == "attach":
             registry.attach_in_place(reg, dec["finding"], dec["handFound"], run, dec.get("date") or date)
         elif dec.get("decision") == "release":
@@ -707,9 +711,9 @@ def link_problems(report, issues_doc, ctx):
 
 
 def ledger_problems(ws, run_id, ctx):
-    """The gates that read the run's files: coverage, verdicts, proposals, canary, diff and its baseline."""
-    out = []
-    out += [f"coverage: {p}" for p in coverage_problems(ctx["states"], ctx["outcomes"])]
+    """The gates that read the run's files: coverage, verdicts, proposals, canary, diff and its baseline.
+    The harness and findings.json's inputs were checked as diff loaded the run (group.stale)."""
+    out = [f"coverage: {p}" for p in coverage_problems(ctx["states"], ctx["outcomes"])]
     missing = sorted(f["key"] for f in ctx["findings"] if f["key"] not in ctx["verdicts"])
     if missing:
         out.append(f"no verdict for {len(missing)} finding(s): {', '.join(missing)}")
@@ -774,7 +778,9 @@ def publish(ws, run_id):
     try:
         docs, problems, ctx = build_snapshot(ws, run_id)
     except diff.DiffError as e:
-        return {"run": run_id, "state": "refused", "problems": [str(e)]}, 1
+        swept = group.swept_with_another_harness(ws, run_id)
+        problems = [swept] if swept and swept != str(e) else []
+        return {"run": run_id, "state": "refused", "problems": problems + [str(e)]}, 1
     problems = ledger_problems(ws, run_id, ctx) + problems
     if problems:
         return {"run": run_id, "state": "refused", "problems": problems}, 1

@@ -1,6 +1,7 @@
 """The a11y-audit skill matches the tooling it drives (KTD26).
 
 - Every `audit.py <command> [sub]` that SKILL.md names is a stage `audit.py --help` lists.
+- Every stage `audit.py --help` lists is named in SKILL.md or references/, unless it is allowed as internal.
 - Each prompt in references/ starts with its version id, and every example line in it carries that id.
 - .claude/skills/a11y-audit is a relative symlink to the skill directory.
 - The drop reason codes in verifier.md are exactly the ones verdict.py accepts.
@@ -14,12 +15,15 @@ import unittest
 
 from tests.pathshim import A11Y, ROOT
 
+import audit
 import verdict
 
 SKILL_DIR = os.path.join(ROOT, ".agents", "skills", "a11y-audit")
 SKILL = os.path.join(SKILL_DIR, "SKILL.md")
 LINK = os.path.join(ROOT, ".claude", "skills", "a11y-audit")
 PROMPTS = {"recorder": "recorder.md", "record-judge": "record-judge.md", "verifier": "verifier.md"}
+# Stages the skill need not name. Empty: every stage is part of the audit procedure.
+INTERNAL_STAGES = set()
 
 MENTION = re.compile(r"audit\.py\s+([a-z][a-z-]*)(?:[ \t]+([a-z][a-z-]*))?")
 HELP_ROW = re.compile(r"^  (\S+(?: \S+)?)\s{2,}\S")
@@ -45,6 +49,19 @@ def help_stages():
             if sub:
                 stages[cmd].add(sub)
     return stages
+
+
+def skill_text():
+    """SKILL.md and every prompt in references/, as one text."""
+    refs = os.path.join(SKILL_DIR, "references")
+    return "\n".join([read(SKILL)] + [read(os.path.join(refs, f)) for f in sorted(os.listdir(refs)) if f.endswith(".md")])
+
+
+def stage_named(text, cmd, sub):
+    """`audit.py <cmd> [sub]` in the text, or for a subcommand the bare `<cmd> <sub>` the skill uses in prose."""
+    if sub:
+        return re.search(rf"(?:audit\.py\s+|`){cmd}\s+{sub}\b", text) is not None
+    return re.search(rf"audit\.py\s+{cmd}\b", text) is not None
 
 
 def example_lines(text):
@@ -92,6 +109,21 @@ class StageCommands(unittest.TestCase):
             elif stages[cmd] and word not in stages[cmd]:
                 unknown.append(f"audit.py {cmd} {word}".strip())
         self.assertEqual(sorted(set(unknown)), [], "stages SKILL.md names that `audit.py --help` does not list")
+
+    def test_every_stage_help_lists_is_named_by_the_skill(self):
+        text = skill_text()
+        stages = {f"{cmd} {sub}" if sub else cmd: (cmd, sub) for cmd, sub, *_ in audit.STAGES}
+        self.assertEqual(INTERNAL_STAGES - set(stages), set(), "INTERNAL_STAGES lists a stage audit.py does not")
+        orphans = [f"audit.py {name}" for name, (cmd, sub) in stages.items()
+                   if name not in INTERNAL_STAGES and not stage_named(text, cmd, sub)]
+        self.assertEqual(orphans, [], "stages SKILL.md and references/ never name")
+
+    def test_stage_named_wants_the_command_and_its_subcommand(self):
+        self.assertTrue(stage_named("run `audit.py sweep` next", "sweep", None))
+        self.assertTrue(stage_named("audit.py verify status", "verify", "status"))
+        self.assertTrue(stage_named("`recipe check` replays it", "recipe", "check"))
+        self.assertFalse(stage_named("audit.py verify prepare", "verify", "status"))
+        self.assertFalse(stage_named("the sweep stage", "sweep", None))
 
     def test_skill_md_starts_with_status_after_an_interruption(self):
         body = read(SKILL).split("---", 2)[2]

@@ -54,8 +54,10 @@ def convert(rel):
 
 def main():
     # data/*.json, merged with the published accessibility snapshot when there is one (KTD22):
-    # A11Y_SNAPSHOT, else a11y/published/. The loader prints its own WARN lines.
-    areas, problems = mapdata.load_areas(), []
+    # A11Y_SNAPSHOT, else a11y/published/. The loader prints its own WARN lines; a file that does not
+    # parse lands in problems and the map and the export are built without that area.
+    problems = []
+    areas = mapdata.load_areas(problems=problems)
     areas.sort(key=lambda a: ORDER.index(a["area"]) if a.get("area") in ORDER else 99)
 
     all_ids = {n["id"] for a in areas for n in a.get("nodes", [])}
@@ -153,10 +155,11 @@ def main():
 
     # Agent-readable export (dist/agent/*, dist/llms.txt). Set MAP_BASE_URL to the public site URL
     # so links in ticket bodies stay absolute once pasted into a tracker.
+    # MAP_SKIP_INVALID_DATA: the export skips the data files that did not parse, as the map did.
     export = [sys.executable, "tools/export_agent_data.py", "--out", os.path.join(DIST, "agent")]
     if os.environ.get("MAP_BASE_URL"):
         export += ["--base-url", os.environ["MAP_BASE_URL"]]
-    subprocess.run(export, cwd=ROOT, check=True)
+    subprocess.run(export, cwd=ROOT, check=True, env=dict(os.environ, MAP_SKIP_INVALID_DATA="1"))
     for stray in [f for f in os.listdir(DIST) if f.endswith(".html") and f != "index.html"]:
         os.remove(os.path.join(DIST, stray))
     # The standalone accessibility report (KTD24): dist/a11y/index.html, or no dist/a11y/ without a snapshot.

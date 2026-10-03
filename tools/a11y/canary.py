@@ -92,7 +92,8 @@ def score(ws, run_id, path):
     if sorted(expected) != sorted(findings):
         raise CanaryError("the canary workspace's findings do not match fixtures/canary/expected.json: "
                           "run `canary prepare` again")
-    accepted, rejected, _ = verdict.check_lines(path, lambda obj: verdict.validate(obj, findings),
+    raw = verdict.raw_files(os.path.join(run_dir, "raw"))
+    accepted, rejected, _ = verdict.check_lines(path, lambda obj: verdict.validate(obj, findings, raw=raw),
                                                 skip=verdict.is_decision)
     valid = {line["key"]: line for line in accepted}
     items = []

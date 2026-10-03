@@ -14,8 +14,8 @@ You conduct. Recorders, record judges and verifiers are subagents on Sonnet: spa
 - Every stage is `python3 tools/a11y/audit.py <command> [sub] [--run <id>] [options]`. Defaults: workspace `a11y/`, data `data/`, map `build/map.json`, base URL `https://demo.mercury.com`. `python3 tools/a11y/audit.py --help` lists the stages in the order below. `tools/a11y/schemas.md` defines every file.
 - `--run` defaults to the newest run with a `states.json`. Once a second run exists (a determinism pair, a characterization run), pass `--run <id>` to every stage and every script.
 - One writer per file. By hand you edit only `a11y/policy.json`, `tools/a11y/hand-found.json`, and a recipe's `status` and `review` during review. `verdicts.jsonl`, `judgments.jsonl` and `decisions.jsonl` change only through their `add` commands.
-- `add` appends. Never add the same file twice. When an agent fixes rejected lines, it writes only the fixed lines to a new file, `batches/<batch>.fix1.jsonl`, and you add that file.
-- A stage that needs a code fix gets it in its owning module, with a test (`npm run a11y:test`). Then resume. A change under `tools/a11y/checks/`, `tools/a11y/lib/*.mjs` or `tools/a11y/sweep.mjs` changes the harness hash, so the next sweep re-measures every state.
+- `add` appends only the lines its ledger does not hold yet, so adding a file again is safe: repeats come back as `duplicates`. When an agent fixes rejected lines, it writes only the fixed lines to a new file, `batches/<batch>.fix1.jsonl`, and you add that file.
+- A stage that needs a code fix gets it in its owning module, with a test (`npm run a11y:test`). Then resume. A change under `tools/a11y/checks/` or `tools/a11y/lib/*.mjs`, to `tools/a11y/sweep.mjs`, `tools/a11y/recipe.mjs`, `tools/a11y/fingerprint.mjs` or `tools/a11y/checks.json`, or a new axe-core or Playwright version, changes the harness hash, so the next sweep re-measures every state.
 - Ask before anything reaches an audience. Deploying needs Kaelig's go. Research, reruns, rebuilds and drafts don't: do them, then say so.
 - Each subagent gets its own agent-browser session, named after its batch. No two subagents share a batch, a session or a subtree.
 
@@ -79,13 +79,13 @@ python3 tools/a11y/audit.py recipe draft [--run <id>] [<state>...]
 
 Draft turns edge labels ("Click X", "Choose X", "Type V in X") into steps, resolves them on the live parent, and submits them through `recipe check`. With no state ids it drafts the whole queue, one state at a time.
 
-For hundreds of states, run 8 processes per path depth, parents first. Group the queue by `len(path)` from `states.json`, split each depth into 8 lists, start the 8 processes in the background, wait for all of them, then do the next depth. `recipe check` locks each area file while it writes, so parallel processes never drop each other's entries. Each process prints `{run, accepted, review, agentQueue}`. The `agentQueue` entries are the recorders' work.
+For hundreds of states, run 8 processes per path depth, parents first. Group the queue by `len(path)` from `states.json`, split each depth into 8 lists, start the 8 processes in the background, wait for all of them, then do the next depth. `recipe check` locks each area file while it writes, so parallel processes never drop each other's entries. Each process prints `{run, accepted, review, agentQueue}`. A state whose replay throws, or whose browser crashes, goes to `agentQueue` with reason `tool-error: <message>` (or `error: <message>` when it fails inside `recipe check`), and the process goes on with the next state, in a new browser if the old one died. The `agentQueue` entries are the recorders' work.
 
 Resume: `recipe queue` again. Accepted recipes leave the queue.
 
 ### Reviews
 
-`recipe check` sends a recipe to `review` when its similarity is under 0.90, when an agent recorded it and it mutates, and for a 10% sample of agent recipes. A child cannot be checked until its whole chain is `accepted`, so review roots and parents first.
+`recipe check` sends a recipe to `review` when its similarity is under 0.90, when an agent recorded it and it mutates, and for a 10% sample of agent recipes. A `--recipe` candidate counts as the agent's whatever `recordedBy` it carries, and so does a root candidate with setup steps. A child cannot be checked until its whole chain is `accepted`, so review roots and parents first.
 
 For each recipe in `review`, view three images side by side: the capture (the node's `image` in `build/map.json`), `a11y/runs/<id>/shots/<state>.recipe.png` (light) and `<state>.recipe.dark.png`. The same screen with drifted dates, amounts or chart data: accept. A different screen, row or dialog, or a missing layer: reject. Record the decision in the entry in `a11y/recipes/<area>.json`, while no draft or recipe check is running on that area:
 
@@ -145,7 +145,7 @@ When it exits:
 - **Coverage.** `status` must show `stages.sweep.outcomes.coverage: "ok"`: every state audited or unreachable, none twice, none missing. `outcomes.json` exists only when that holds.
 - **Build hash.** Run preflight again and compare its hash with the one from before the sweep. demo.mercury.com deploys often (three build hashes on 2026-10-02). List the hashes the raw files carry: `grep -h '"build"' a11y/runs/<id>/raw/*.json | sort | uniq -c`. The report names every hash; mixed hashes do not block publishing.
 
-Resume: run the same command. Only states without a valid raw file run. To re-sweep a state after a recipe fix, delete its raw file and its descendants' `blocked-by-parent` files first.
+Resume: run the same command. Only states without a valid raw file run. To re-sweep a state after a recipe fix, delete its raw file and its descendants' `blocked-by-parent` files first. If the run was already grouped, run `audit.py group` again: findings.json records the raw files it was grouped from, and the later stages refuse it once one changes.
 
 ### Determinism pair
 
@@ -221,7 +221,7 @@ It writes `findings.json`: one finding per rule per shared element, one per hand
 
 - A flag ("tags and attributes agree N% of the time", under 90%) may mean one key covers different elements. Open two of its occurrences. If they are different components, fix `signature.py` with a test and group again.
 - `group` fails when an `a11y` issue in `data/` is missing from `tools/a11y/hand-found.json`. Add it with its family and criteria.
-- Group again whenever the judgments change. It rewrites the whole file, and the same inputs give the same bytes.
+- Group again whenever the judgments change, and after any sweep of this run, including `sweep --state` or a resume after deleting a raw file. It rewrites the whole file, and the same inputs give the same bytes. `verify prepare`, `diff` and `publish` refuse a findings.json grouped before the latest sweep ("rerun `audit.py group`"), and a run swept with another harness than the current one ("rerun `audit.py sweep`, then `audit.py group`").
 
 ## 7. Verification
 
@@ -233,7 +233,7 @@ Waves wait until this run's canary passes: `python3 tools/a11y/audit.py verify s
 2. Start the printed server command in the background: `node tools/a11y/fixtures/server.mjs --port <port> canary`.
 3. Spawn one verifier on the canary batch, with the same message as a wave (below). The canary workspace has a root recipe for every canary page, so `reach` and `probe` work there.
 4. Run the printed `audit.py canary score` command. It writes `canary.json` into this run. Stop the server.
-5. A wrong verdict fails the canary. Read each wrong item's `expected` and `got`, fix `references/verifier.md`, bump its version id (`verifier@2`), and run the canary again. Never change the canary to fit the prompt.
+5. A wrong verdict fails the canary. Read each wrong item's `expected` and `got`, fix `references/verifier.md`, bump its version id (`verifier@2` becomes `verifier@3`), and run the canary again. Never change the canary to fit the prompt.
 
 ### Waves
 
@@ -258,7 +258,7 @@ Waves wait until this run's canary passes: `python3 tools/a11y/audit.py verify s
    A verifier that died gets an empty out file, so the attempt counts.
 4. Go back to 1 until `verify status` shows `findings.pending: 0`. A finding whose batch came back twice without a valid verdict gets an `unverified` line from `verify prepare`. A new unverified finding is not published. A published one stays in the map as not retested (R26).
 
-Resume: `verify status`, then `verify prepare`. Batches still out (`inFlight`) are not batched again: give them to a verifier, or write their empty out file.
+Resume: `verify status`. Add every batch it lists in `batches.returnedNotAdded` with `verdict add` and `decision add`. Rerunning an add is safe: lines already added count as `duplicates`. Then run `verify prepare`, which refuses while any returned batch is not added. Batches still out (`inFlight`) are not batched again: give them to a verifier, or write their empty out file.
 
 ### Second opinions
 
@@ -268,7 +268,7 @@ When the two verdicts disagree, you decide. Compare both lines, their probes and
 
 ### Attachment decisions
 
-A proposal says a scanner finding may be the same failure as a hand-found issue (AE5). Verifiers decide each proposal in the batch that holds its scanner finding: `attach` or `reject`. They may `release` an attachment the registry holds when the two no longer describe one failure. `audit.py status` lists `proposals.pending`. Decide every leftover yourself, with lines in the verifier's decision format and `"prompt": "conductor"`, through `decision add`. Publish refuses while a proposal is pending.
+A proposal says a scanner finding may be the same failure as a hand-found issue (AE5). Verifiers decide each proposal in the batch that holds its scanner finding: `attach` or `reject`. They may `release` an attachment the registry holds when the two no longer describe one failure. `audit.py status` lists `proposals.pending`. Decide every leftover yourself, with lines in the verifier's decision format and `"prompt": "conductor"`, through `decision add`. Publish refuses while a proposal is pending. The last decision line for a proposal is the one publish applies.
 
 ## 8. Diff
 
@@ -284,7 +284,7 @@ It writes `diff.json`: each finding's status against the published snapshot (`ne
 python3 tools/a11y/audit.py publish --run <id>
 ```
 
-It checks the gates and writes `a11y/published/` (issues, report, registry, meta) through a three-step swap. The gates: coverage, a verdict or carry-forward for every finding, every proposal decided, the canary passed, the diff's baseline equal to the current snapshot's run, the export's rules on every generated issue, unique ids, and every report link resolving. A refusal names the gate and leaves the previous snapshot in place: fix the cause and rerun. "Already published" means this run is in.
+It checks the gates and writes `a11y/published/` (issues, report, registry, meta) through a three-step swap. The gates: the run swept with the current harness (else "rerun `audit.py sweep`, then `audit.py group`"), findings.json grouped from that sweep (else "rerun `audit.py group`"), coverage, a verdict or carry-forward for every finding, every proposal decided, the canary passed, the diff's baseline equal to the current snapshot's run, the export's rules on every generated issue, unique ids, and every report link resolving. A refusal names the gate and leaves the previous snapshot in place: fix the cause and rerun. "Already published" means this run is in.
 
 Resume: if `status` shows "publish incomplete, rerun publish", rerun it. Publish rebuilds everything from the run's ledger.
 
@@ -307,7 +307,14 @@ Write Kaelig a summary:
 - the Lighthouse calibration result, or the earlier one the snapshot carries;
 - the determinism pair: identical, or what differed and what you fixed;
 - states that need an action outside the policy;
-- AE1 to AE7: where the demo had a case, and where it had none.
+- the seven acceptance cases below: where the demo had a case, and where it had none.
+  - AE1, one component on many screens: a failure shared by many states (muted table text failing 1.4.3, say) publishes as one issue whose "Show all N screens" highlights every one.
+  - AE2, broken recipe: a drawer whose recipe no longer reaches it appears in the report's unreachable list by state id, and the rest of the run completes.
+  - AE3, verifier downgrade: an axe violation the live demo shows to be minor (an icon button with a visible text label inside the same control) publishes as low, with the verifier's reason.
+  - AE4, drawer focus: a drawer that opens with Enter but leaves focus on the page raises a 2.4.3 finding with the focus trace; it is high if keyboard users then cannot reach its controls.
+  - AE5, matching a hand-found issue: a scanner finding that is the same failure as a hand-found issue attaches to it instead of creating a second one.
+  - AE6, rerun after a fix: a scanner finding published in the previous run that no longer reproduces is listed as fixed and leaves the map.
+  - AE7, verifier raises severity: a hand-found issue rated medium that keyboard users cannot get past at all publishes as high, with that reason.
 
 End with the deploy command. Do not run it. It runs only when Kaelig says go:
 

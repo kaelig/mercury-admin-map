@@ -12,6 +12,10 @@
 //     (hover-only); a click trigger that neither opens is dialog-trigger-not-operable, and one Tab
 //     never reaches is dialog-trigger-not-focusable.
 //
+// The check is complete only when every focus rule the layer calls for ran: not when the trigger
+// never opened it, when focus never got inside a modal layer or a popover that holds anything
+// focusable, or when nothing closed it.
+//
 // Every failure carries the whole focus trace. `ctx.reopen()` gives the fresh context, which this
 // check closes; `ctx.trigger(page)` gives the trigger's Locator; `ctx.finalHop` (the recipe's final
 // step, e.g. {"hover": {...}}) says whether the state is reached by hover.
@@ -109,10 +113,11 @@ async function check(ctx, { page, cdp, tracker }, verb) {
   const focusOf = async (f) => (f.body ? 'body'
     : (await describeElements(cdp, `() => [${STATE}.el]`, null, { layerXPath }))[0]);
   const fail = (rule, occurrence, evidence) => results.push(customResult(id, rule, 'failure', occurrence, { ...evidence, trace }));
-  const finish = (opened) => {
+  // `completed` is false when a focus rule the layer calls for never ran.
+  const finish = (opened, completed = true) => {
     const stops = new Set(trace.filter((s) => s.key === 'Tab' && s.focus !== 'body').map((s) => s.focus.xpath)).size;
     for (const r of results) r.evidence.stops = stops;
-    return { results, records: [], detail: { trigger, opened, trace }, completed: true };
+    return { results, records: [], detail: { trigger, opened, trace }, completed };
   };
 
   // 1. Tab until the trigger has focus: give up at a second pass through the body, a revisit, or
@@ -145,7 +150,7 @@ async function check(ctx, { page, cdp, tracker }, verb) {
   }
   if (!reached) {
     fail('dialog-trigger-not-focusable', trigger, { focus: await focusOf(f) });
-    return finish(null);
+    return finish(null, false);
   }
 
   // 2. Open it: keyboard focus alone for a hover popover, then Enter, then Space.
@@ -176,7 +181,7 @@ async function check(ctx, { page, cdp, tracker }, verb) {
   if (!layer) {
     f = await where();
     fail(verb === 'hover' ? 'hover-only' : 'dialog-trigger-not-operable', trigger, { focus: await focusOf(f) });
-    return finish(null);
+    return finish(null, false);
   }
   layerXPath = layer.xpath;
   await page.evaluate(SET_LAYER(layerXPath));
@@ -185,7 +190,8 @@ async function check(ctx, { page, cdp, tracker }, verb) {
   const atOpen = note('settle', await where());
   const focusAtOpen = await focusOf(atOpen);
 
-  // Esc, then the close control; when it closes, focus must be back on the trigger.
+  // Esc, then the close control; when it closes, focus must be back on the trigger. Returns whether
+  // it closed: when nothing closes it, the return rule never ran.
   const closeAndReturn = async ({ control }) => {
     await press('Escape');
     await settleFocus(page);
@@ -196,11 +202,13 @@ async function check(ctx, { page, cdp, tracker }, verb) {
       await settleFocus(page);
       if (await page.evaluate(CLOSED)) closedBy = 'close';
     }
-    if (!closedBy) return;
+    if (!closedBy) return false;
     const back = note('settle', await where());
     if (back.where !== 'trigger') fail('dialog-focus-not-returned', trigger, { focus: await focusOf(back), closedBy });
+    return true;
   };
 
+  let completed = true;
   if (kind === 'menu') {
     // Open the closed menu again the way it first opened, and make the layer it opens the one WHERE tests.
     const reopenMenu = async () => {
@@ -211,7 +219,7 @@ async function check(ctx, { page, cdp, tracker }, verb) {
       if (again.scope === 'top') await page.evaluate(SET_LAYER(again.xpath));
     };
     const onFirst = await page.evaluate(ON_FIRST_ITEM);
-    await closeAndReturn({ control: false });
+    if (!(await closeAndReturn({ control: false }))) completed = false;
     if (!onFirst) {
       // Reopen it the same way, then press Tab once: does focus reach the menu at all?
       if (await page.evaluate(CLOSED)) await reopenMenu();
@@ -223,9 +231,12 @@ async function check(ctx, { page, cdp, tracker }, verb) {
     if (!inside && await page.evaluate(TABBABLE_IN_LAYER) > 0) {
       const next = await press('Tab');
       inside = next.where === 'inside';
-      if (!inside) fail('popover-not-reachable', overlay, { focus: await focusOf(next) });
+      if (!inside) {
+        fail('popover-not-reachable', overlay, { focus: await focusOf(next) });
+        completed = false;
+      }
     }
-    if (inside) await closeAndReturn({ control: false });
+    if (inside && !(await closeAndReturn({ control: false }))) completed = false;
   } else {
     let reachedLayer = atOpen.where === 'inside';
     if (!reachedLayer) {
@@ -243,7 +254,10 @@ async function check(ctx, { page, cdp, tracker }, verb) {
       }
       fail('dialog-focus-not-moved', overlay, { focus: focusAtOpen, reachedLayer });
     }
-    if (reachedLayer && (kind === 'modal' || await page.evaluate(MODAL))) {
+    const modal = kind === 'modal' || await page.evaluate(MODAL);
+    // Containment is tested from inside the layer: when Tab never got there, that rule did not run.
+    if (modal && !reachedLayer) completed = false;
+    if (modal && reachedLayer) {
       const n = await page.evaluate(TABBABLE_IN_LAYER);
       for (let i = 0; i <= n; i++) {
         const next = await press('Tab');
@@ -253,7 +267,7 @@ async function check(ctx, { page, cdp, tracker }, verb) {
         }
       }
     }
-    await closeAndReturn({ control: true });
+    if (!(await closeAndReturn({ control: true }))) completed = false;
   }
-  return finish(opened);
+  return finish(opened, completed);
 }

@@ -11,6 +11,7 @@ import { join } from 'node:path';
 import { ROOT, writeJson } from '../lib/canon.mjs';
 import { cdpSession, injectMotionOff, launch, newContext, parkPointer, settle, trackRequests } from '../lib/browser.mjs';
 import { findLayer } from '../lib/scope.mjs';
+import { allowedDomains } from '../reach.mjs';
 import { startServer } from '../fixtures/server.mjs';
 import * as axe from '../checks/axe.mjs';
 import * as ax from '../checks/ax.mjs';
@@ -398,6 +399,60 @@ test('--session probes the state reach left in an agent-browser session, then re
     const wrong = await stage('probe.mjs', ['static.target-text', '--kind', 'target', '--xpath', '/html/body/main[1]/p[1]/button[1]', '--session', session]);
     assert.notEqual(wrong.status, 0);
     assert.match(wrong.json.error, /session .* is not on static\.target-text/);
+  } finally {
+    await run('agent-browser', ['--session', session, 'close'], { ignore: true, timeout: 30000 });
+  }
+});
+
+// ---------------------------------------------------------------------------
+// Sessions reach and probe start are bound to the policy's origins
+// ---------------------------------------------------------------------------
+
+test('allowedDomains lists the hostnames of the policy origins and the base URL', () => {
+  const policy = { allowedOrigins: ['https://demo.mercury.com'] };
+  assert.equal(allowedDomains(policy, 'http://127.0.0.1:4173'), 'demo.mercury.com,127.0.0.1');
+  assert.equal(allowedDomains(policy, 'https://demo.mercury.com/'), 'demo.mercury.com');
+  assert.equal(allowedDomains({}, 'http://localhost:3000'), 'localhost');
+});
+
+// The session's daemon opens the fixture's first origin and refuses its second, another domain.
+async function assertBound(session) {
+  const open = (origin) => run('agent-browser', ['--session', session, 'open', `${origin}/static/menu.html`], { timeout: 60000 });
+  const off = await open(server.origin2);
+  assert.notEqual(off.status, 0, off.stdout);
+  assert.match(off.stdout + off.stderr, /Domain 'localhost' is not in the allowed domains list/);
+  const on = await open(server.origin);
+  assert.equal(on.status, 0, on.stdout + on.stderr);
+}
+
+test('a session reach starts refuses to open a domain outside the allowed list', async (t) => {
+  if (!agentBrowser()) {
+    t.skip('agent-browser is not on PATH: install agent-browser 0.26 to run the allowed-domains test');
+    return;
+  }
+  const session = `a11y-w1-reach-${process.pid}`;
+  try {
+    // Nothing opens the session first: reach's own first command starts its daemon.
+    const reached = await stage('reach.mjs', ['static.contrast', '--session', session]);
+    assert.equal(reached.status, 0, reached.stderr + reached.stdout);
+    await assertBound(session);
+  } finally {
+    await run('agent-browser', ['--session', session, 'close'], { ignore: true, timeout: 30000 });
+  }
+});
+
+test('a session probe starts refuses to open a domain outside the allowed list', async (t) => {
+  if (!agentBrowser()) {
+    t.skip('agent-browser is not on PATH: install agent-browser 0.26 to run the allowed-domains test');
+    return;
+  }
+  const session = `a11y-w1-probe-${process.pid}`;
+  try {
+    // No reach first: probe's own first command starts the session's daemon, which shows no state.
+    const r = await stage('probe.mjs', ['static.contrast', '--kind', 'contrast', '--xpath', '/html/body/main[1]/p[1]', '--session', session]);
+    assert.notEqual(r.status, 0);
+    assert.match(r.json.error, /session .*(has no page|is not on static\.contrast)/);
+    await assertBound(session);
   } finally {
     await run('agent-browser', ['--session', session, 'close'], { ignore: true, timeout: 30000 });
   }

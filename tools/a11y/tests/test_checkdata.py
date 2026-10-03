@@ -272,6 +272,15 @@ class CheckDataTest(unittest.TestCase):
             for n in crit:
                 self.assertIn(n, self.families[self.checks["customRules"][rule]]["criteria"], rule)
 
+    def test_custom_checks_name_the_module_that_emits_each_custom_rule(self):
+        self.assertEqual(set(self.checks["customChecks"]), set(self.checks["customRules"]))
+        for rule, module in self.checks["customChecks"].items():
+            path = os.path.join(A11Y, "checks", f"{module}.mjs")
+            self.assertTrue(os.path.isfile(path), f"{rule}: checks/{module}.mjs does not exist")
+            with open(path, encoding="utf-8") as f:
+                found = re.search("[\"'`]" + re.escape(rule) + "[\"'`]", f.read())
+            self.assertTrue(found, f"{rule} is not a literal in checks/{module}.mjs")
+
     # -- checks.json: templates and facts ------------------------------------
 
     def caps(self):

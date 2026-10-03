@@ -64,11 +64,16 @@ from a different CSS Module" within one state; it never enters a key. FontAwesom
 
 ### Harness hash (KTD4, KTD10)
 
-`harness_hash()` / `harnessHash()`: list the files `tools/a11y/checks/*.mjs`, `tools/a11y/lib/*.mjs`
-and `tools/a11y/sweep.mjs` that exist, as repo-relative POSIX paths sorted by code point. For each,
-append `path + "\n" + hex sha256(file bytes) + "\n"`. The hash is the first 16 hex characters of
-the SHA-256 of that text. The axe options live in `checks/axe.mjs`, so they are covered. A raw file
-whose `harness` differs from the current hash is invalid and is re-swept.
+`harness_hash()` / `harnessHash()`: list the files `tools/a11y/checks/*.mjs`, `tools/a11y/lib/*.mjs`,
+`tools/a11y/sweep.mjs`, `tools/a11y/recipe.mjs`, `tools/a11y/fingerprint.mjs` and
+`tools/a11y/checks.json` that exist, as repo-relative POSIX paths sorted by code point. For each,
+append `path + "\n" + hex sha256(file bytes) + "\n"`. Then, for `axe-core` and then `playwright`, if
+`node_modules/<name>/package.json` exists, append `"node_modules/" + name + "\n" + version + "\n"`,
+where `version` is the `version` field of that file. The hash is the first 16 hex characters of the
+SHA-256 of that text. The axe options live in `checks/axe.mjs`, so they are covered; the replay and
+the fingerprint match live in `recipe.mjs` and `fingerprint.mjs`, the custom checks' rule table in
+`checks.json`, and the engines in the two package versions. A raw file whose `harness` differs from
+the current hash is invalid and is re-swept.
 
 ### Build hash
 
@@ -211,6 +216,12 @@ An object keyed by state id, sorted. Editable by hand.
   Mercury" panel on every fresh /dashboard visit; the capture closed it ("Click collapse chevron").
 - `status`: `accepted` (replayed by the sweep), `review` (waiting for the conductor), `rejected`,
   `draft` (not yet checked). Only `accepted` recipes are replayed.
+- `recordedBy` is set by whoever submits the recipe, never read from a `--recipe` candidate:
+  `recipe draft` writes `draft`, `recipe check --recipe` writes `agent`, and a root checked with an
+  empty `hop` writes `root`. A root candidate with setup steps is `agent`, so it gets the mutating and
+  sample reviews. Re-checking an existing entry keeps its `recordedBy`. `recipe check` reports a
+  state that throws, or whose browser crashes, as `error`; the other states still run and the exit
+  code is 1.
 - `checked` is the run id of the last `recipe check`; `queue` drops states re-checked since the
   published run. A pending review is `{reason, by: "conductor", decision: null, date: null}`.
 - `recipe check` also requires the open layer the state's kind needs (modal, drawer, menu, popover,
@@ -228,7 +239,7 @@ Each step is a one-key object:
 |---|---|
 | `goto` | a path on the policy origin, e.g. `"/cards"` |
 | `click`, `hover`, `check`, `scroll` | a locator (`scroll` also accepts `{"y": 600}`) |
-| `press` | a key name, e.g. `"Enter"`, `"Escape"` |
+| `press` | a key name, e.g. `"Enter"`, `"Escape"`. Refused (`step-failed`) when it would put text into the focused field (a text input, textarea, select, editable element or frame from another origin): a character key with no Control, Alt or Meta held, or a paste (V under Control or Meta, Shift+Insert, Control+Y). Type with `fill` instead. Enter or Space is refused on a focused element a click would be refused on, and on anything inside a frame from another origin |
 | `fill` | `{"locator": {...}, "value": "..."}`; the value comes from `policy.fixtureValues` or is obviously fake |
 | `select` | `{"locator": {...}, "option": "..."}` |
 | `wait` | `{"ms": 500}` or `{"locator": {...}}` |
@@ -409,6 +420,9 @@ and descriptions inside the template are name templates.
 }
 ```
 
+`sweep` rewrites `harness` when it starts. `verify prepare`, `diff` and `publish` refuse when it
+differs from the current harness hash: "rerun `audit.py sweep`, then `audit.py group`".
+
 ## runs/<id>/outcomes.json (U5 `sweep`)
 
 Written only when the coverage invariant holds: audited and unreachable together are exactly the
@@ -464,6 +478,7 @@ so a published announced-as finding skips the judge (KTD18).
 ```json
 {
   "run": "…",
+  "inputs": {"harness": "<harness hash when group ran>", "outcomes": null | "<sha of outcomes.json's states>", "raw": "<sha of {state id: hex sha256 of the raw file's bytes, or null}>"},
   "findings": [
     {
       "key": "<finding key>",
@@ -494,7 +509,18 @@ so a published announced-as finding skips the judge (KTD18).
 }
 ```
 
-`occurrences[].index` points into the state's raw `results` (or `records` for record findings).
+`occurrences[].index` points into the state's raw `results` (or `records` for record findings). An
+index counts only while the item there has the finding's `rule` (for announced-as, its `recordSig`):
+a raw file swept again after `group` can move it.
+
+`inputs` records what `group` read. `raw` covers the raw files of the states outcomes.json lists as
+audited, or of every state in states.json before outcomes.json exists; a missing file counts as null.
+A state swept again (`sweep --state`, or a resume after its raw file was deleted) changes `raw` when
+its raw file changes, even if its outcome stays the same. `verify prepare`, `diff` and `publish`
+refuse when run.json's `harness` is not the current harness hash ("the run was swept with harness
+<old>, and the harness is now <new>: rerun `audit.py sweep`, then `audit.py group`"). They also refuse
+when `inputs` differ from the run's current ones, or are missing ("findings.json was grouped from a
+different sweep: rerun `audit.py group`").
 
 - Scanner keys read `<family>:<rule>:<12 hex of sha(key parts)>` (signature.py lists the parts).
 - axe incomplete results (`basis: incomplete`) group product-wide by rule and messageKey (KTD12),
@@ -513,12 +539,17 @@ so a published announced-as finding skips the judge (KTD18).
 
 `verify prepare` and `records prepare` write `runs/<id>/batches/<name>.json` (input) and agents
 write `runs/<id>/batches/<name>.out.jsonl` (one verdict, judgment or decision per line). The `add`
-primitives read an `.out.jsonl`, print `{file, to, appended, skipped, rejected: [{line, reasons,
-text}]}`, append the valid lines and exit 1 if any line was rejected. A verify out file may mix
-verdict and decision lines; each `add` skips the other kind. A batch counts as returned once its
+primitives read an `.out.jsonl`, print `{file, to, appended, duplicates, skipped, rejected: [{line,
+reasons, text}]}`, append the valid lines the ledger does not hold yet, and exit 1 if any line was
+rejected. A valid line canonically equal to a ledger line, leaving out a `date` the validator filled
+in, counts in `duplicates` and is not appended, so adding a file twice is safe. A verify out file may
+mix verdict and decision lines; each `add` skips the other kind. A batch counts as returned once its
 `.out.jsonl` exists (write an empty one for an agent that died); a finding's attempts are the
 returned batches that held it without a valid verdict, and at two `verify prepare` writes an
-`unverified` line (`model: "script"`, `prompt: "verify-prepare"`).
+`unverified` line (`model: "script"`, `prompt: "verify-prepare"`). `verify status` lists the
+returned verify batches whose `.out.jsonl` holds a valid verdict or decision line that
+verdicts.jsonl or decisions.jsonl does not (`batches.returnedNotAdded`), and `verify prepare` exits
+1, naming them, until they are added.
 
 - `records-NNN.json`: `{batch, run, records: [{sig, template, role, states, description, sample,
   screens, occurrence}]}`, about 150 records each.
@@ -539,7 +570,7 @@ returned batches that held it without a valid verdict, and at two `verify prepar
  "reason": "…", "reasonCode": null | "exception:inline" | "…",
  "counterEvidence": null | "<probe or screenshot reference>",
  "probes": [{"id": "…", "state": "…", "kind": "contrast", "env": {"viewport": [1440, 900], "dpr": 1,
-            "colorScheme": "light", "reducedMotion": "reduce"}, "value": {"...": "..."}}],
+            "colorScheme": "light", "reducedMotion": "reduce"}, "value": {"...": "..."}, "xpath": "<the element measured>"}],
  "states": ["<sampled states checked>"], "build": "<hash>",
  "model": "sonnet", "batch": "verify-004", "prompt": "verifier@1", "attempt": 1,
  "second": false, "date": "YYYY-MM-DD", "criterionAnalysis": null | "…"}
@@ -560,7 +591,10 @@ returned batches that held it without a valid verdict, and at two `verify prepar
   `probe.mjs` prints the probe object as its last line, with `xpath`, `build` and an advisory `pass`
   (the validator recomputes from `value`). Ids are `probe-<12 hex of sha([state, kind, xpath, value])>`.
   A focus probe in `--session` mode presses keys in that session: run `reach` again afterwards.
-
+- A `not-reproduced-live` drop on a measured family cites, in `counterEvidence`, a passing probe
+  whose `xpath` is one of the finding's elements on the probe's `state`: the occurrence xpath of a
+  raw item the finding's `occurrences` point at there. One such probe is enough. Hand-found findings
+  have no occurrences, so their probes are not matched to an element.
 
 Drop reason codes: `exception:inline`, `exception:equivalent-control`, `exception:essential`,
 `exception:ua-control`, `decorative`, `not-reproduced-live`, `third-party-frame`,
@@ -573,6 +607,9 @@ Drop reason codes: `exception:inline`, `exception:equivalent-control`, `exceptio
  "decision": "attach" | "reject" | "release", "reason": "…",
  "model": "sonnet", "batch": "…", "prompt": "verifier@1", "date": "YYYY-MM-DD"}
 ```
+
+The last line for a proposal is its decision. `publish` applies only that line for each proposal, in
+proposal id order, so a `reject` after an `attach` leaves no attachment.
 
 ## runs/<id>/canary.json (U7 `canary`)
 
@@ -768,7 +805,8 @@ Every module in `tools/a11y/checks/` exports `id` (its check-module id) and
 
 - `results`: result objects (schemas.md "Result"); `records`: announced-as records (only `ax`);
   `detail`: what goes into the raw file's `checks.<id>`; `completed`: false when the check started
-  and could not finish (the raw file lists it under `families.incomplete`).
+  and could not finish, or ran but did not cover its scope (the raw file lists it under
+  `families.incomplete`).
 - `ctx` holds `page`, `cdp`, `tracker`, `kind`, `state` (the state id), `layer` (from
   `findLayer`), `env`, and what earlier checks produced: `axe` (the axe module's detail and
   results), `interactive` (the expected-interactive occurrences). The sweep runs them in this
@@ -787,6 +825,14 @@ Every module in `tools/a11y/checks/` exports `id` (its check-module id) and
   popover); `checks/tabwalk.mjs` reads `ctx.shotsDir` (absolute `runs/<id>/shots`) and `ctx.state`,
   and writes `<state>.tabstops.png` there for backward jumps. The Tab walk changes the page (it
   presses Esc on a revisit), so it stays the last check on the shared context.
+- `checks/tabwalk.mjs` reports `completed: false` when the walk did not cover its scope: it stopped
+  at the press limit, found a keyboard trap, or came back round to a stop later than its first (the
+  stops past that loop were never visited). `checks/dialog.mjs` reports `completed: false` when a
+  focus rule the layer calls for never ran: Tab never reached the trigger or the trigger never opened
+  the layer, focus never got inside a modal layer or inside a popover that holds anything focusable,
+  or the layer never closed (Esc on a menu or popover; Esc, then the close control, on a modal or
+  drawer). Either way the results found are kept, the state is still audited, and `diff` reports an
+  absent published finding there as not retested, never fixed.
 
 `recipe.mjs` exports the interpreter the sweep, `reach` and `probe` share:
 
@@ -799,7 +845,9 @@ Every module in `tools/a11y/checks/` exports `id` (its check-module id) and
   kinds), runs the final hop, settles,
   injects the motion-off CSS and compares the fingerprint. `untilParent: true` stops at the
   parent state (for the dialog check). `ctx` is `{cdp, tracker, baseUrl}`. It refuses a step the
-  policy forbids before running it (`step-failed` with the reason). With `layerKind` equal to the
+  policy forbids before running it (`step-failed` with the reason). Before a press it also refuses a
+  key that would type or paste into the focused field, and Enter or Space on a focused element it
+  would refuse to click or inside a frame from another origin. With `layerKind` equal to the
   kind the fingerprint used, a reached result also carries `layer` (`findLayer`'s result), which the
   sweep uses instead of finding the layer again.
 - `async resolveLocator(page, locator) -> Locator` (KTD6 order, name templates; async because the
