@@ -74,14 +74,14 @@ It lists each state with a reason: `no-recipe`, `stale` (an edge label on its pa
 ### Drafts
 
 ```sh
-python3 tools/a11y/audit.py recipe draft [--run <id>] [<state>...]
+python3 tools/a11y/audit.py recipe draft [--run <id>] [--ready [--shard <i>/8]] [<state>...]
 ```
 
-Draft turns edge labels ("Click X", "Choose X", "Type V in X") into steps, resolves them on the live parent, and submits them through `recipe check`. With no state ids it drafts the whole queue, one state at a time.
+Draft turns edge labels ("Click X", "Choose X", "Type V in X") into steps, resolves them on the live parent, and submits them through `recipe check`. It can only draft a state whose parent chain is accepted. Every attempt appends a line to `a11y/runs/<id>/draft.jsonl`. A state's last line there gives its reason when the drafter gives up, and that reason is the recorders' starting point.
 
-For hundreds of states, run 8 processes per path depth, parents first. Group the queue by `len(path)` from `states.json`, split each depth into 8 lists, start the 8 processes in the background, wait for all of them, then do the next depth. `recipe check` locks each area file while it writes, so parallel processes never drop each other's entries. Each process prints `{run, accepted, review, agentQueue}`. A state whose replay throws, or whose browser crashes, goes to `agentQueue` with reason `tool-error: <message>` (or `error: <message>` when it fails inside `recipe check`), and the process goes on with the next state, in a new browser if the old one died. The `agentQueue` entries are the recorders' work.
+`--ready` drafts every queued state whose parent chain is accepted and that the drafter has not tried against that same parent recipe. It keeps going round by round, so newly accepted states make their children ready. Start it as 8 background processes, `--ready --shard <i>/8` for i = 1 to 8, wait for all of them, and repeat until `audit.py recipe draft --run <id> status` shows `"ready": 0`. A shard that exits 1 could not launch its browser and logged nothing: run it again. `recipe check` locks each area file while it writes, so parallel processes never drop each other's entries. Run `--ready` only between recorder waves, never while recorders hold states. A state that failed with `tool-error: <message>`, or on a typed value since added to `policy.fixtureValues`, is not retried by `--ready`: name its id to draft it again.
 
-Resume: `recipe queue` again. Accepted recipes leave the queue.
+Resume: run the `--ready` passes again. Accepted recipes leave the queue.
 
 ### Reviews
 
@@ -117,7 +117,7 @@ On the first run, before bulk recording, work in this run and publish nothing fr
 
 ### Recorders
 
-Build recorder batches from the agent queue: 10 to 15 states from one subtree, parents before children. Write each to `a11y/runs/<id>/batches/record-NNN.json` in the format `references/recorder.md` describes: `area`, `kind`, `parent`, `labels` and `mutates` from `states.json`; `title`, `note` and `image` from the node in `build/map.json`; `draft` from the draft's `agentQueue` reason; and `reach`, the workspace, data, map, base URL and run every command takes. Run up to 8 recorders at once, never two on one subtree. Spawn each with:
+Build recorder batches from the agent queue: 10 to 15 states from one subtree, parents before children. Write each to `a11y/runs/<id>/batches/record-NNN.json` in the format `references/recorder.md` describes: `area`, `kind`, `parent`, `labels` and `mutates` from `states.json`; `title`, `note` and `image` from the node in `build/map.json`; `draft` from the state's last line in `draft.jsonl`; and `reach`, the workspace, data, map, base URL and run every command takes. Run up to 8 recorders at once, never two on one subtree. Spawn each with:
 
 > Read `.agents/skills/a11y-audit/references/recorder.md` and follow it. Batch: `a11y/runs/<id>/batches/record-NNN.json`. agent-browser session: `record-NNN`.
 
@@ -126,6 +126,7 @@ Each recorder writes `batches/record-NNN.out.jsonl`, one line per state, with `r
 - `policy` lines are stop condition 4: collect them and report the state ids with the action each needs.
 - Retry `failed` states once, in a later batch, with the recorder's `detail`. Still failing, they stay `no-recipe` and show as unreachable in the report.
 - Review every `review` recipe (above).
+- Then re-draft with the `--ready` passes (above). The wave's accepted recipes make their children draftable at no model cost, so the next wave holds only what the drafter could not resolve.
 
 Before the sweep, `recipe queue` holds only states you know will stay unreachable.
 

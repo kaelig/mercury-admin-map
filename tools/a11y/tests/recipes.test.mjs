@@ -8,13 +8,13 @@ import { EventEmitter } from 'node:events';
 import { cpSync, existsSync, mkdirSync, mkdtempSync, rmSync, writeFileSync } from 'node:fs';
 import { tmpdir } from 'node:os';
 import { join } from 'node:path';
-import { ROOT, readJson, writeJson } from '../lib/canon.mjs';
+import { ROOT, readJson, readJsonl, writeJson } from '../lib/canon.mjs';
 import { Workspace } from '../lib/cli.mjs';
 import { cdpSession, launch, newContext, trackRequests } from '../lib/browser.mjs';
 import { startServer } from '../fixtures/server.mjs';
 import { chain, checkStates, loadRecipes, replay, resolveLocator, runStep } from '../recipe.mjs';
 import { captureFingerprint, matchFingerprint } from '../fingerprint.mjs';
-import { parseLabel } from '../draft.mjs';
+import { acceptedChainHash, parseLabel } from '../draft.mjs';
 
 const A11Y = join(ROOT, 'tools', 'a11y');
 const APP = join(A11Y, 'fixtures', 'app');
@@ -674,9 +674,14 @@ test('draft turns "Click Edit limits" into a role-and-name click, accepts it, an
   assert.deepEqual(r.json.accepted, ['cards.edit-limit-modal']);
   assert.deepEqual(r.json.agentQueue.map((q) => [q.state, q.label]), [['home.chart-tooltip', 'Hover over the chart']]);
   assert.equal(recipesFile(w, 'home')['home.chart-tooltip'], undefined);
+  assert.deepEqual(readJsonl(w.ws.file('draft.jsonl', RUN)).map((l) => [l.state, l.parent, l.result, l.reason]), [
+    ['cards.edit-limit-modal', 'cards.index', 'accepted', null],
+    ['home.chart-tooltip', 'home.index', 'queued', 'cannot parse "Hover over the chart"'],
+  ], 'named states are logged too');
   const s = await stage('draft.mjs', ['status'], w);
   assert.equal(s.status, 0);
   assert.equal(s.json.accepted, 1);
+  assert.deepEqual([s.json.attempts, s.json.ready], [2, 0]);
 });
 
 test('draft resolves a multi-step label and a row named by its merchant', async () => {
@@ -689,6 +694,37 @@ test('draft resolves a multi-step label and a row named by its merchant', async 
   assert.deepEqual(recipesFile(w, 'transactions')['transactions.drawer'].hop, DESIGN['transactions.drawer'].hop);
   assert.deepEqual([...r.json.accepted].sort(), ['home.send-toast', 'transactions.drawer']);
   assert.deepEqual(r.json.agentQueue.map((q) => q.state), ['home.chart-tooltip']);
+});
+
+test('draft --ready drafts a subtree one depth per round, logs every attempt, and skips them on the next pass', async () => {
+  const w = workspace();
+  setRecipe(w, 'transactions', 'transactions.filters-menu', null);
+  setRecipe(w, 'transactions', 'transactions.card-payments', null);
+  setRecipe(w, 'transactions', 'transactions.drawer', null);
+  const r = await stage('draft.mjs', ['--ready'], w);
+  assert.equal(r.status, 0, r.stderr + r.stdout);
+  assert.deepEqual(r.stdout.split('\n').filter((l) => l.startsWith('ready round')), [
+    'ready round 1: 2 selected; skipped 0 attempted against the same parent recipe, 2 with no accepted parent, 0 rejected',
+    'ready round 2: 1 selected; skipped 1 attempted against the same parent recipe, 1 with no accepted parent, 0 rejected',
+    'ready round 3: 1 selected; skipped 1 attempted against the same parent recipe, 0 with no accepted parent, 0 rejected',
+    'ready round 4: 0 selected; skipped 1 attempted against the same parent recipe, 0 with no accepted parent, 0 rejected',
+  ]);
+  assert.deepEqual(r.json.accepted, ['transactions.filters-menu', 'transactions.card-payments', 'transactions.drawer']);
+  assert.deepEqual(r.json.agentQueue.map((q) => q.state), ['home.chart-tooltip']);
+  assert.deepEqual(r.json.ready, { rounds: 4, selected: 4, skipped: { attempted: 1, noAcceptedParent: 0, rejected: 0 } });
+
+  const recipes = loadRecipes(w.ws);
+  const log = readJsonl(w.ws.file('draft.jsonl', RUN));
+  assert.deepEqual(log.map((l) => [l.state, l.result]), [['home.chart-tooltip', 'queued'], ['transactions.filters-menu', 'accepted'],
+    ['transactions.card-payments', 'accepted'], ['transactions.drawer', 'accepted']]);
+  assert.deepEqual(log[0], { state: 'home.chart-tooltip', parent: 'home.index', parentRecipe: acceptedChainHash(recipes, 'home.index'),
+    label: 'Hover over the chart', result: 'queued', reason: 'cannot parse "Hover over the chart"', date: log[0].date });
+  assert.equal(log[3].parentRecipe, acceptedChainHash(recipes, 'transactions.card-payments'), 'the parent as drafted in round 2');
+
+  const again = await stage('draft.mjs', ['--ready'], w);
+  assert.equal(again.status, 0, again.stderr);
+  assert.deepEqual(again.json.ready, { rounds: 1, selected: 0, skipped: { attempted: 1, noAcceptedParent: 0, rejected: 0 } });
+  assert.equal(readJsonl(w.ws.file('draft.jsonl', RUN)).length, 4);
 });
 
 test('draft queues a state whose replay throws as a tool error and goes on to the next state', async () => {

@@ -19,7 +19,7 @@ Two serializations, identical in Python (`lib/canon.py`) and Node (`lib/canon.mj
 Both write through a temp file in the same directory and a rename (`write_json` / `writeJson`).
 Neither ever writes a timestamp into a file that a determinism check compares (raw state files,
 `findings.json`, `published/issues.json`). Dates appear only in `run.json`, `meta.json`,
-`report.json`, verdict lines and policy fields.
+`report.json`, verdict and draft.jsonl lines and policy fields.
 
 `sha(obj)` is the hex SHA-256 of `canonical(obj)`. `sha1(obj)` is the hex SHA-1 of
 `canonical(obj)` (used only for recipe source hashes).
@@ -109,7 +109,7 @@ Check-module ids (the families a raw file lists as completed or incomplete): `ax
   policy.json                    falls back to the committed a11y/policy.json when absent
   recipes/<area>.json
   runs/<run-id>/
-    run.json states.json outcomes.json findings.json records.jsonl judgments.jsonl
+    run.json states.json draft.jsonl outcomes.json findings.json records.jsonl judgments.jsonl
     verdicts.jsonl decisions.jsonl canary.json lighthouse.json diff.json
     batches/                     prepared batch inputs and agent outputs (committed)
     raw/<state-id>.json          one per state, gitignored
@@ -118,8 +118,8 @@ Check-module ids (the families a raw file lists as completed or incomplete): `ax
 ```
 
 One writer per file (KTD3): sweep workers write `raw/*`; `sweep` writes `outcomes.json`; `group`
-writes `findings.json`; `records prepare` writes `records.jsonl`; `judgment add`, `verdict add`,
-`decision add` and `calibration add` are the only appenders of their files; `canary` writes
+writes `findings.json`; `records prepare` writes `records.jsonl`; `recipe draft`, `judgment add`,
+`verdict add`, `decision add` and `calibration add` are the only appenders of their files; `canary` writes
 `canary.json`; `diff` writes `diff.json`; `publish` writes `published/`.
 
 ## policy.json (KTD9)
@@ -270,6 +270,38 @@ replaced by `<id>`. `top` is `{"role": "document", "name": ""}` when there is no
 headings are name templates; `controls` is the sorted, de-duplicated set of visible control name
 templates in scope. A replay matches when `path` and `top` are equal and the Jaccard overlap of
 `controls` is at least 0.6.
+
+## runs/<id>/draft.jsonl (U4 `recipe draft`)
+
+One line for each state `recipe draft` tries, appended as soon as that attempt ends:
+
+```json
+{"date":"2026-10-02","label":"Click eye icon next to Account number","parent":"accounts.checking-detail","parentRecipe":"<hex sha256>","reason":"nothing on accounts.checking-detail matches {\"click\":{\"name\":\"eye icon next to Account number\"}}","result":"queued","state":"accounts.account-number-revealed"}
+```
+
+- `parent` is the state's parent in states.json (null for a root); `label` is the last label on its
+  path, the edge the draft parsed (null for a root).
+- `parentRecipe` is the hash of the recipe chain from the root to the parent at attempt time,
+  computed like a raw file's `recipeHash`: `sha` of `[{id, parent, hop, fingerprint}]`, root first.
+  It is null for a root, and when any recipe on that chain is missing or not `accepted`. A parent
+  or ancestor checked again (a new hop or fingerprint) changes it; a review decision does not.
+- `result` is `accepted` or `review` (what `recipe check` made of the drafted recipe), or `queued`
+  (the state went to the agent queue). `reason` is a queued attempt's agent-queue reason, else
+  null. A state's last line gives a recorder batch its `draft` reason.
+- `date` is the local date of the attempt.
+- Each line is a single `write()` on the file opened with `O_APPEND`, so the parallel draft
+  processes of a pass never drop or interleave each other's lines. A reader leaves out a last line
+  with no newline that does not parse yet.
+- An id not in states.json gets no line. A browser that fails to launch stops the pass (exit 1)
+  before the line of the state that needed it, so that state stays untried.
+
+`recipe draft --ready` picks from the refresh queue: roots, and states whose parent's chain is all
+`accepted`. It leaves out a state whose recipe is `rejected` (that goes to a recorder) and a state
+with a line for the same `parentRecipe` (null for a root), whatever its result: a `tool-error:`
+reason counts too, so draft such a state again by naming its id. It drafts what it picked, then
+picks again, until nothing is left, so one pass drafts a subtree one depth per round. `--shard i/n`
+keeps the states for which the first 8 hex digits of `sha1(state id)`, mod n, equal i − 1. `recipe
+draft status` reports `attempts` (lines in draft.jsonl) and `ready` (what `--ready` would pick now).
 
 ## runs/<id>/raw/<state-id>.json (U5 writes; U2, U3 define `checks.*`)
 

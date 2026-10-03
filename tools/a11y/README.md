@@ -45,7 +45,7 @@ In the order the audit runs them. `audit.py` is short for `python3 tools/a11y/au
 | Preflight | `audit.py preflight` | nothing |
 | Plan | `audit.py plan` | `runs/<id>/run.json`, `states.json` |
 | Refresh queue | `audit.py recipe queue` | nothing |
-| Draft recipes | `audit.py recipe draft [state...]` | `recipes/<area>.json` |
+| Draft recipes | `audit.py recipe draft [state...]`, or `--ready [--shard i/8]` | `recipes/<area>.json`, `draft.jsonl` |
 | Check one recipe | `audit.py recipe check <state> [--recipe '<json>']` | `recipes/<area>.json`, `shots/<state>.recipe.png` |
 | Reach a state | `audit.py reach <state> --session <name>` | nothing: replays into an agent-browser session |
 | Sweep | `audit.py sweep` | `raw/<state>.json`, `outcomes.json` |
@@ -59,6 +59,23 @@ In the order the audit runs them. `audit.py` is short for `python3 tools/a11y/au
 | Diff | `audit.py diff` | `diff.json` |
 | Publish | `audit.py publish` | `published/` |
 | Report | `audit.py report` (`build.py` calls it too) | `dist/a11y/index.html` |
+
+## Draft
+
+```sh
+python3 tools/a11y/audit.py recipe draft [--run <id>] [<state>...]
+python3 tools/a11y/audit.py recipe draft [--run <id>] --ready [--shard <i>/<n>]
+```
+
+Draft turns edge labels into recipe steps and submits them through `recipe check`. With state ids it drafts those states; with neither ids nor `--ready` it drafts the whole refresh queue.
+
+Every attempt appends one line to `runs/<id>/draft.jsonl`: the state, its parent, a hash of the parent's accepted recipe chain, the label, the result (`accepted`, `review` or `queued`), the agent-queue reason and the date. A state's last line is the `draft` reason its recorder batch needs. An id not in `states.json` gets no line. If the browser fails to launch, the pass stops with exit 1 and logs nothing for the state that needed it, so the next pass tries that state again.
+
+`--ready` drafts only the queue states worth a try now: roots, and states whose parent's chain is accepted, with no line in `draft.jsonl` against the same parent recipe. It skips a state whose recipe the conductor rejected. When a recorder re-records a parent, its hash changes and its children are tried again. Each round prints how many states it selected and skipped; `--ready` repeats rounds until none is left, so the children of what it accepts get drafted in the same run. The last stdout line adds `ready: {rounds, selected, skipped}`.
+
+`--ready` keys attempts on the state and its parent recipe only. So it does not try again a `tool-error` attempt (a page or browser that crashed mid-state), a root it tried once, or a state that failed on a typed value since added to `policy.fixtureValues`. Name those ids to draft them again. Run `--ready` between recorder waves, not during one: it cannot tell which queue states a recorder is still recording.
+
+`--shard i/n` splits a `--ready` pass across n processes by a hash of the state id: start `--shard 1/8` through `--shard 8/8` at once and wait for all of them. A shard that finishes early does not wait for parents another shard accepts later, so `audit.py recipe draft status` may still show `ready` above 0: run the pass again until it shows 0, and again after each recorder wave. That status (also under `draft` in `audit.py status`) shows `attempts`, the lines in `draft.jsonl`, and `ready`, the states the next pass would draft. Format details: [schemas.md](schemas.md).
 
 ## Sweep
 
@@ -258,6 +275,7 @@ You can run every stage by hand from `SKILL.md`. Only recording, judging and ver
 
 Run `python3 tools/a11y/audit.py status` first. It reads every stage's progress from files and names what is pending. Then run the pending stage's command again:
 
+- `recipe draft --ready` tries only states it has not tried against their parent's current recipe, so rerun it after any stop.
 - `sweep` runs only states without a valid raw file. A raw file made by different harness code (any change under `checks/` or `lib/*.mjs`, to `sweep.mjs`, `recipe.mjs`, `fingerprint.mjs` or `checks.json`, or a new axe-core or Playwright version) is invalid, so a code fix re-sweeps every state.
 - `records prepare` and `verify prepare` batch only what has no judgment or verdict and is not already out in a batch. A batch counts as returned once its `.out.jsonl` exists; write an empty one for an agent that died.
 - The `add` commands append only lines their ledger does not hold yet, so adding a file again is safe (repeats count as `duplicates`). Corrected lines go in a new file. `verify status` lists returned batches not added yet (`batches.returnedNotAdded`), and `verify prepare` refuses until they are added.
@@ -273,7 +291,7 @@ Once a run has a second run beside it, pass `--run <id>` to every stage: the def
 | `tools/a11y/` | the code, `checks.json` (check families, default severities, text templates, rule-to-criterion and coverage tables), `wcag.json` (the 55 A and AA criteria), `hand-found.json` (family and criteria of each hand-found issue), `schemas.md` | yes |
 | `a11y/policy.json` | the mutation policy: denylist, fixture values, mutating verbs, isolation result, root exclusions | yes |
 | `a11y/recipes/<area>.json` | one replay recipe per state, editable by hand | yes |
-| `a11y/runs/<id>/` | a run's ledger: `run.json`, `states.json`, `outcomes.json`, `findings.json`, `records.jsonl`, `judgments.jsonl`, `verdicts.jsonl`, `decisions.jsonl`, `canary.json`, `lighthouse.json`, `diff.json`, `batches/` | yes |
+| `a11y/runs/<id>/` | a run's ledger: `run.json`, `states.json`, `draft.jsonl`, `outcomes.json`, `findings.json`, `records.jsonl`, `judgments.jsonl`, `verdicts.jsonl`, `decisions.jsonl`, `canary.json`, `lighthouse.json`, `diff.json`, `batches/` | yes |
 | `a11y/runs/<id>/raw/` | one measurement file per state, tens of megabytes per run | no |
 | `a11y/runs/<id>/shots/` | replay screenshots, tab-stop overlays, verifier screenshots | no |
 | `a11y/published/` | the snapshot `build.py` merges: `issues.json`, `report.json`, `registry.json`, `meta.json` | yes |
