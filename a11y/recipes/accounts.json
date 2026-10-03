@@ -1,4 +1,92 @@
 {
+ "accounts.account-number-revealed": {
+  "checked": "2026-10-02-1349",
+  "fingerprint": {
+   "controls": [
+    "<amount>",
+    "<date> Contractor <amount> Mercury ACH Payment",
+    "<date> Deli <n> <amount> Jane B. ••<n>",
+    "<date> Domestic Ads <amount> Real-Time Payment",
+    "<date> From AR <amount> Transfer",
+    "<date> Lily's Eatery <amount> Alice C. ••<n>",
+    "<date> Mercury Working Capital <amount> Working Capital Loan Payment",
+    "<date> Office Stop Co. <amount> Jessica A. ••<n>",
+    "<date> The Plant Organic Cafe <amount> Landon S. ••<n>",
+    "<date> To Ops / Payroll <amount> Transfer",
+    "<date> Trader John's <amount> Alice C. ••<n>",
+    "<n>",
+    "<n> Letterman Drive Building A, Suite A<n> San Francisco, CA <n>",
+    "Accounting",
+    "Accounts",
+    "Banking",
+    "Bill Pay",
+    "Books",
+    "Cards",
+    "Column N.A.",
+    "Command New",
+    "Credit Card",
+    "Customize your experience",
+    "Deposit",
+    "Documents",
+    "Edit account nickname",
+    "Financing",
+    "Home",
+    "Insights",
+    "Invoicing",
+    "Learn about bookmarks",
+    "Mercury Demo Pro",
+    "Move money",
+    "Navigate to Settings",
+    "Open Menu",
+    "Open account",
+    "Ops / Payroll <amount>",
+    "Order Checkbook",
+    "Payments",
+    "Remove bookmark",
+    "Remove from bookmarks",
+    "Reorder Bill Pay bookmark",
+    "Reorder Credit Card bookmark",
+    "Reorder Insights bookmark",
+    "Reorder Ops / Payroll bookmark",
+    "Search for anything",
+    "Set up an auto transfer rule",
+    "Tasks <n>",
+    "Team Spend",
+    "Toggle Private Mode",
+    "Transactions",
+    "Transfer",
+    "Treasury",
+    "View all",
+    "View as Employee",
+    "Viewing as Admin",
+    "updates",
+    "••••••<n>"
+   ],
+   "headings": [],
+   "path": "/accounts/depository/<id>",
+   "structure": "document",
+   "top": {
+    "name": "",
+    "role": "document"
+   }
+  },
+  "hop": [
+   {
+    "click": {
+     "index": 1,
+     "name": "",
+     "role": "button"
+    }
+   }
+  ],
+  "mutates": false,
+  "parent": "accounts.checking-detail",
+  "recordedBy": "agent",
+  "review": null,
+  "similarity": 0.9302,
+  "source": "10d376cc9b971c1302849d58e739aa1b251f4d59",
+  "status": "accepted"
+ },
  "accounts.add-account-menu": {
   "checked": "2026-10-02-1349",
   "fingerprint": {
@@ -139,13 +227,14 @@
   "recordedBy": "draft",
   "review": {
    "by": "conductor",
-   "date": null,
-   "decision": null,
+   "date": "2026-10-03",
+   "decision": "reject",
+   "note": "different screen: the hop clicks an account row and stays on Mercury accounts; the label means the Auto transfer rules tab",
    "reason": "below-threshold"
   },
   "similarity": 0.7016,
   "source": "b7e624ab261eafdb500b85f00d19577740b5cab5",
-  "status": "review"
+  "status": "rejected"
  },
  "accounts.bank-letter-customize": {
   "checked": "2026-10-02-1349",
@@ -588,13 +677,14 @@
   "recordedBy": "draft",
   "review": {
    "by": "conductor",
-   "date": null,
-   "decision": null,
+   "date": "2026-10-03",
+   "decision": "reject",
+   "note": "different screen: the hop clicks 'Customize your experience' and opens the demo form; the label means the Last Month control",
    "reason": "below-threshold"
   },
   "similarity": 0.6918,
   "source": "cb8caff180dc4ec0a7f59510cbfd3b5450fd4eb5",
-  "status": "review"
+  "status": "rejected"
  },
  "accounts.credit-limit-details": {
   "checked": "2026-10-02-1349",
@@ -667,6 +757,45 @@
   "source": "53c6fc7c8e527b2aca16e556a50d821a1f11ca51",
   "status": "accepted"
  },
+ "accounts.credit-linked-accounts": {
+  "checked": "2026-10-02-1349",
+  "fingerprint": {
+   "controls": [
+    "Close",
+    "Exclude all accounts"
+   ],
+   "headings": [
+    "Linked accounts"
+   ],
+   "path": "/accounts/credit",
+   "structure": "dialog",
+   "top": {
+    "name": "",
+    "role": "dialog"
+   }
+  },
+  "hop": [
+   {
+    "click": {
+     "name": "Linked Accounts <n> account",
+     "role": "button"
+    }
+   }
+  ],
+  "mutates": false,
+  "parent": "accounts.credit",
+  "recordedBy": "agent",
+  "review": {
+   "by": "conductor",
+   "date": "2026-10-03",
+   "decision": "accept",
+   "note": "same Linked accounts dialog (Checking ••5231, Capital One)",
+   "reason": "below-threshold"
+  },
+  "similarity": 0.894,
+  "source": "e6c292b5115fd4683d686ef63a93aeb97ea260f3",
+  "status": "accepted"
+ },
  "accounts.custom-statement": {
   "checked": "2026-10-02-1349",
   "fingerprint": {
@@ -703,6 +832,38 @@
   "source": "3baaebfe4dfe31307cc1c7d008e3a27837bc8f71",
   "status": "accepted"
  },
+ "accounts.edit-autopay": {
+  "checked": "2026-10-02-1349",
+  "fingerprint": {
+   "controls": [
+    "Done"
+   ],
+   "headings": [
+    "Autopay settings"
+   ],
+   "path": "/accounts/credit",
+   "structure": "dialog",
+   "top": {
+    "name": "",
+    "role": "dialog"
+   }
+  },
+  "hop": [
+   {
+    "click": {
+     "name": "Autopay Oct <n> Every <n>",
+     "role": "button"
+    }
+   }
+  ],
+  "mutates": false,
+  "parent": "accounts.credit",
+  "recordedBy": "agent",
+  "review": null,
+  "similarity": 0.9952,
+  "source": "d5350d699053005d915a37614880f1fb40b8749e",
+  "status": "accepted"
+ },
  "accounts.edit-portfolio": {
   "checked": "2026-10-02-1349",
   "fingerprint": {
@@ -734,6 +895,46 @@
   "review": null,
   "similarity": 0.9788,
   "source": "97d170e1550eee4afc0af065b78cda302a97674c",
+  "status": "accepted"
+ },
+ "accounts.edit-portfolio-tier5": {
+  "checked": "2026-10-02-1349",
+  "fingerprint": {
+   "controls": [
+    "Close",
+    "Customize your experience",
+    "Go Back",
+    "More about these funds Fund data as of <date>",
+    "Open account",
+    "Select your portfolio allocation",
+    "Tier <n>",
+    "Update portfolio",
+    "Viewing as Admin"
+   ],
+   "headings": [
+    "Edit portfolio"
+   ],
+   "path": "/accounts/treasury/<id>/portfolio/edit",
+   "structure": "document",
+   "top": {
+    "name": "",
+    "role": "document"
+   }
+  },
+  "hop": [
+   {
+    "click": {
+     "name": "Tier 5",
+     "role": "button"
+    }
+   }
+  ],
+  "mutates": false,
+  "parent": "accounts.edit-portfolio",
+  "recordedBy": "agent",
+  "review": null,
+  "similarity": 0.9743,
+  "source": "1093f38fb46ada7c3e27fc58df1f3636a06043e8",
   "status": "accepted"
  },
  "accounts.financing": {
@@ -967,22 +1168,42 @@
  },
  "accounts.link-bank": {
   "checked": "2026-10-02-1349",
-  "fingerprint": null,
+  "fingerprint": {
+   "controls": [
+    "Business",
+    "Personal",
+    "Save"
+   ],
+   "headings": [
+    "What type of account is Iron Bank Checking <n>?"
+   ],
+   "path": "/accounts",
+   "structure": "dialog",
+   "top": {
+    "name": "",
+    "role": "dialog"
+   }
+  },
   "hop": [
    {
     "click": {
      "name": "Link bank account",
      "role": "menuitem"
     }
+   },
+   {
+    "wait": {
+     "ms": 2000
+    }
    }
   ],
   "mutates": false,
   "parent": "accounts.add-account-menu",
-  "recordedBy": "draft",
+  "recordedBy": "agent",
   "review": null,
-  "similarity": null,
-  "source": null,
-  "status": "draft"
+  "similarity": 0.9992,
+  "source": "f0b246ddf879734ec7bce51cf53cd255c65b7159",
+  "status": "accepted"
  },
  "accounts.link-credit": {
   "checked": "2026-10-02-1349",
@@ -1233,6 +1454,97 @@
   "source": "39913b7544b816fb14c223a92e141f3151804e3e",
   "status": "accepted"
  },
+ "accounts.nickname-edit": {
+  "checked": "2026-10-02-1349",
+  "fingerprint": {
+   "controls": [
+    "<amount>",
+    "<date> Contractor <amount> Real-Time Payment",
+    "<date> From Mercury Savings ••<n> <amount> Transfer",
+    "<date> Jordi O'Donnell <amount> Intl. Wire",
+    "<date> Lighthouse Properties #<n> <amount> Mercury ACH Payment",
+    "<date> Miles Davidson <amount> Check Payment",
+    "<date> Nutritionist <amount> Intl. Wire",
+    "<date> Pending Deposit <amount> Check Deposit",
+    "<date> Stefanie Katz <amount> Check Payment",
+    "<date> To AP <amount> Transfer",
+    "<n>",
+    "<n> Letterman Drive Building A, Suite A<n> San Francisco, CA <n>",
+    "Accounting",
+    "Accounts",
+    "Add to bookmarks",
+    "Banking",
+    "Bill Pay",
+    "Books",
+    "Cards",
+    "Column N.A.",
+    "Command New",
+    "Credit Card",
+    "Customize your experience",
+    "Deposit",
+    "Documents",
+    "Edit account nickname",
+    "Financing",
+    "Home",
+    "Insights",
+    "Invoicing",
+    "Learn about bookmarks",
+    "Mercury Demo Pro",
+    "Move money",
+    "Navigate to Settings",
+    "Open Menu",
+    "Open account",
+    "Ops / Payroll <amount>",
+    "Order Checkbook",
+    "Payments",
+    "Remove bookmark",
+    "Reorder Bill Pay bookmark",
+    "Reorder Credit Card bookmark",
+    "Reorder Insights bookmark",
+    "Reorder Ops / Payroll bookmark",
+    "Search for anything",
+    "Set up an auto transfer rule",
+    "Tasks <n>",
+    "Team Spend",
+    "Toggle Private Mode",
+    "Transactions",
+    "Transfer",
+    "Treasury",
+    "View all",
+    "Viewing as Admin",
+    "updates",
+    "••••••<n>"
+   ],
+   "headings": [],
+   "path": "/accounts/depository/<id>",
+   "structure": "document",
+   "top": {
+    "name": "",
+    "role": "document"
+   }
+  },
+  "hop": [
+   {
+    "click": {
+     "name": "AP Checking ••<n>",
+     "role": "cell"
+    }
+   },
+   {
+    "click": {
+     "name": "Edit account nickname",
+     "role": "textbox"
+    }
+   }
+  ],
+  "mutates": false,
+  "parent": "accounts.index",
+  "recordedBy": "agent",
+  "review": null,
+  "similarity": 0.9562,
+  "source": "02e7f1cb4d130fb49a6de2d5e146b25b27c3c85b",
+  "status": "accepted"
+ },
  "accounts.order-checkbook": {
   "checked": "2026-10-02-1349",
   "fingerprint": {
@@ -1300,6 +1612,53 @@
   "source": "19d275f9f16f2817e5bf4460a5f713584801ca5d",
   "status": "accepted"
  },
+ "accounts.pay-credit-error": {
+  "checked": "2026-10-02-1349",
+  "fingerprint": {
+   "controls": [
+    "Amount",
+    "Go back",
+    "Make payment from",
+    "Review"
+   ],
+   "headings": [],
+   "path": "/accounts/credit",
+   "structure": "dialog",
+   "top": {
+    "name": "",
+    "role": "dialog"
+   }
+  },
+  "hop": [
+   {
+    "click": {
+     "name": "Edit",
+     "role": "button"
+    }
+   },
+   {
+    "fill": {
+     "locator": {
+      "label": "Amount"
+     },
+     "value": "250000"
+    }
+   }
+  ],
+  "mutates": false,
+  "parent": "accounts.pay-credit-review",
+  "recordedBy": "agent",
+  "review": {
+   "by": "conductor",
+   "date": "2026-10-03",
+   "decision": "reject",
+   "note": "missing state: 250,000 is typed but the 'Must be <= $12,505.87' error never shows; it likely needs a blur (Tab) after the fill",
+   "reason": "below-threshold"
+  },
+  "similarity": 0.8984,
+  "source": "66616c4d6a3e91064580745cef29f3f5e899bc56",
+  "status": "rejected"
+ },
  "accounts.pay-credit-review": {
   "checked": "2026-10-02-1349",
   "fingerprint": {
@@ -1363,6 +1722,78 @@
   "source": "06531834d50b3ebc1d67ed8c230cfb7badc39f41",
   "status": "accepted"
  },
+ "accounts.portfolio-updated": {
+  "checked": "2026-10-02-1349",
+  "fingerprint": {
+   "controls": [
+    "Accounting",
+    "Accounts",
+    "Banking",
+    "Bill Pay",
+    "Books",
+    "Cards",
+    "Command New",
+    "Credit Card",
+    "Financing",
+    "Home",
+    "Insights",
+    "Invoicing",
+    "Learn about bookmarks",
+    "Mercury Demo Pro",
+    "Ops / Payroll <amount>",
+    "Payments",
+    "Remove bookmark",
+    "Reorder Bill Pay bookmark",
+    "Reorder Credit Card bookmark",
+    "Reorder Insights bookmark",
+    "Reorder Ops / Payroll bookmark",
+    "Tasks <n>",
+    "Team Spend",
+    "Transactions",
+    "Treasury"
+   ],
+   "headings": [],
+   "path": "/accounts/treasury/<id>",
+   "structure": "status",
+   "top": {
+    "name": "",
+    "role": "navigation"
+   }
+  },
+  "hop": [
+   {
+    "click": {
+     "name": "Update portfolio",
+     "role": "button"
+    }
+   }
+  ],
+  "mutates": true,
+  "parent": "accounts.edit-portfolio-tier5",
+  "recordedBy": "draft",
+  "review": null,
+  "similarity": 0.9188,
+  "source": "775fcc385577a7714640fd3e48965390b3e6f68b",
+  "status": "accepted"
+ },
+ "accounts.routing-copied": {
+  "checked": "2026-10-02-1349",
+  "fingerprint": null,
+  "hop": [
+   {
+    "click": {
+     "text": "Routing number"
+    }
+   }
+  ],
+  "mutates": false,
+  "parent": "accounts.account-number-revealed",
+  "recordedBy": "draft",
+  "review": null,
+  "similarity": null,
+  "source": null,
+  "status": "draft"
+ },
  "accounts.safe-create": {
   "checked": "2026-10-02-1349",
   "fingerprint": {
@@ -1394,6 +1825,78 @@
   "review": null,
   "similarity": 0.9983,
   "source": "97d170e1550eee4afc0af065b78cda302a97674c",
+  "status": "accepted"
+ },
+ "accounts.safe-create-error": {
+  "checked": "2026-10-02-1349",
+  "fingerprint": {
+   "controls": [
+    "Close",
+    "Customize your experience",
+    "Destination account",
+    "Go back",
+    "Investment amount",
+    "Investment date",
+    "Learn More About SAFE Types",
+    "Next",
+    "Open account",
+    "SAFE type Learn More About SAFE Types",
+    "Viewing as Admin"
+   ],
+   "headings": [],
+   "path": "/safe/create",
+   "structure": "document",
+   "top": {
+    "name": "",
+    "role": "document"
+   }
+  },
+  "hop": [
+   {
+    "click": {
+     "name": "Next",
+     "role": "button"
+    }
+   }
+  ],
+  "mutates": false,
+  "parent": "accounts.safe-create",
+  "recordedBy": "agent",
+  "review": null,
+  "similarity": 0.9983,
+  "source": "b4ae13160e6835ad1ee21ff4b27425f9da2c5215",
+  "status": "accepted"
+ },
+ "accounts.safe-detail": {
+  "checked": "2026-10-02-1349",
+  "fingerprint": {
+   "controls": [
+    ".../safe/status/iAmAsLuG",
+    "Cancel SAFE",
+    "Logan_Roy_SAFE_<n>.pdf"
+   ],
+   "headings": [],
+   "path": "/capital/safe",
+   "structure": "dialog",
+   "top": {
+    "name": "",
+    "role": "generic"
+   }
+  },
+  "hop": [
+   {
+    "click": {
+     "name": "Logan Roy logan@roy.co",
+     "role": "gridcell"
+    }
+   }
+  ],
+  "mutates": false,
+  "parent": "accounts.safes",
+  "recordedBy": "agent",
+  "review": null,
+  "similarity": 0.998,
+  "source": "dcb1e2033b7804d2583df54cb99671b3ba9ff5ff",
   "status": "accepted"
  },
  "accounts.safes": {
@@ -1532,6 +2035,220 @@
   "source": "97d170e1550eee4afc0af065b78cda302a97674c",
   "status": "accepted"
  },
+ "accounts.share-recipient-menu": {
+  "checked": "2026-10-02-1349",
+  "fingerprint": {
+   "controls": [
+    "aliyah@mcmahon.com",
+    "jason@green.com",
+    "jordi@mercury.com",
+    "mercury-utils-id-<n>-label"
+   ],
+   "headings": [],
+   "path": "/settings/documents/statements",
+   "structure": "listbox",
+   "top": {
+    "name": "mercury-utils-id-<n>-label",
+    "role": "listbox"
+   }
+  },
+  "hop": [
+   {
+    "click": {
+     "name": "Recipient emails",
+     "role": "combobox"
+    }
+   }
+  ],
+  "mutates": false,
+  "parent": "accounts.share-statement",
+  "recordedBy": "draft",
+  "review": null,
+  "similarity": 0.9998,
+  "source": "1ae739f3eb3dde1a6479a9bbebbcacc19f9d7613",
+  "status": "accepted"
+ },
+ "accounts.share-statement": {
+  "checked": "2026-10-02-1349",
+  "fingerprint": {
+   "controls": [
+    "Back",
+    "Recipient emails",
+    "Share via email"
+   ],
+   "headings": [],
+   "path": "/settings/documents/statements",
+   "structure": "dialog",
+   "top": {
+    "name": "",
+    "role": "dialog"
+   }
+  },
+  "hop": [
+   {
+    "click": {
+     "name": "Share document",
+     "role": "button"
+    }
+   }
+  ],
+  "mutates": false,
+  "parent": "accounts.statement-selected",
+  "recordedBy": "draft",
+  "review": null,
+  "similarity": 0.9997,
+  "source": "c1256e1e861e92bfe0267e89b6e52b9af1537c35",
+  "status": "accepted"
+ },
+ "accounts.shared-link-removed": {
+  "checked": "2026-10-02-1349",
+  "fingerprint": {
+   "controls": [],
+   "headings": [],
+   "path": "/settings/documents/statements",
+   "structure": "status",
+   "top": {
+    "name": "",
+    "role": "generic"
+   }
+  },
+  "hop": [
+   {
+    "click": {
+     "name": "Remove access to <n> document link",
+     "role": "button"
+    }
+   }
+  ],
+  "mutates": true,
+  "parent": "accounts.shared-link-selected",
+  "recordedBy": "draft",
+  "review": null,
+  "similarity": 0.9835,
+  "source": "66db613a7c4597c9a3f6ce52c6c4a1cd761da4c7",
+  "status": "accepted"
+ },
+ "accounts.shared-link-selected": {
+  "checked": "2026-10-02-1349",
+  "fingerprint": {
+   "controls": [
+    "Cancel",
+    "Remove access to <n> document link",
+    "rotem@gmail.com <n> documents shared",
+    "thom@cooley.com <n> documents shared"
+   ],
+   "headings": [],
+   "path": "/settings/documents/statements",
+   "structure": "dialog",
+   "top": {
+    "name": "",
+    "role": "dialog"
+   }
+  },
+  "hop": [
+   {
+    "check": {
+     "name": "rotem@gmail.com <n> documents shared",
+     "role": "checkbox"
+    }
+   }
+  ],
+  "mutates": false,
+  "parent": "accounts.manage-shared-docs",
+  "recordedBy": "agent",
+  "review": null,
+  "similarity": 0.9928,
+  "source": "834843752140126a4e3952fdbea6885eb450ac6a",
+  "status": "accepted"
+ },
+ "accounts.statement-export-menu": {
+  "checked": "2026-10-02-1349",
+  "fingerprint": {
+   "controls": [
+    "View as Employee"
+   ],
+   "headings": [],
+   "path": "/settings/documents/statements",
+   "structure": "menu",
+   "top": {
+    "name": "Viewing as Admin",
+    "role": "menu"
+   }
+  },
+  "hop": [
+   {
+    "click": {
+     "index": 1,
+     "name": "",
+     "role": "button"
+    }
+   }
+  ],
+  "mutates": false,
+  "parent": "accounts.statements",
+  "recordedBy": "agent",
+  "review": null,
+  "similarity": 0.9472,
+  "source": "1dc13dde7b875ddbdc08827acfbe4da8194d04e1",
+  "status": "accepted"
+ },
+ "accounts.statement-selected": {
+  "checked": "2026-10-02-1349",
+  "fingerprint": {
+   "controls": [
+    "Download",
+    "Share document"
+   ],
+   "headings": [],
+   "path": "/settings/documents/statements",
+   "structure": "dialog",
+   "top": {
+    "name": "<n> document selected",
+    "role": "dialog"
+   }
+  },
+  "hop": [
+   {
+    "check": {
+     "index": 2,
+     "name": "",
+     "role": "checkbox"
+    }
+   }
+  ],
+  "mutates": false,
+  "parent": "accounts.statements",
+  "recordedBy": "agent",
+  "review": null,
+  "similarity": 0.9664,
+  "source": "7179d8da1554924496c175558e21f034425829e8",
+  "status": "accepted"
+ },
+ "accounts.statement-shared": {
+  "checked": "2026-10-02-1349",
+  "fingerprint": null,
+  "hop": [
+   {
+    "click": {
+     "name": "jason@green.com",
+     "role": "option"
+    }
+   },
+   {
+    "click": {
+     "name": "Share via email",
+     "role": "button"
+    }
+   }
+  ],
+  "mutates": false,
+  "parent": "accounts.share-recipient-menu",
+  "recordedBy": "draft",
+  "review": null,
+  "similarity": null,
+  "source": null,
+  "status": "draft"
+ },
  "accounts.statements": {
   "checked": "2026-10-02-1349",
   "fingerprint": {
@@ -1606,6 +2323,46 @@
   "review": null,
   "similarity": 0.9684,
   "source": "97d170e1550eee4afc0af065b78cda302a97674c",
+  "status": "accepted"
+ },
+ "accounts.statements-account-filter": {
+  "checked": "2026-10-02-1349",
+  "fingerprint": {
+   "controls": [
+    "AP",
+    "AR",
+    "All Accounts",
+    "Checking ••<n>",
+    "Checking ••<n> Closed",
+    "Credit",
+    "Ops / Payroll",
+    "Options",
+    "Savings ••<n>",
+    "Sweep Statements",
+    "Treasury"
+   ],
+   "headings": [],
+   "path": "/settings/documents/statements",
+   "structure": "listbox",
+   "top": {
+    "name": "Options",
+    "role": "listbox"
+   }
+  },
+  "hop": [
+   {
+    "click": {
+     "name": "Accounts",
+     "role": "combobox"
+    }
+   }
+  ],
+  "mutates": false,
+  "parent": "accounts.statements",
+  "recordedBy": "agent",
+  "review": null,
+  "similarity": 0.9889,
+  "source": "8051a8723568facdf65340328a6fa1d8b9cee29f",
   "status": "accepted"
  },
  "accounts.treasury": {
@@ -1712,13 +2469,14 @@
   "recordedBy": "draft",
   "review": {
    "by": "conductor",
-   "date": null,
-   "decision": null,
+   "date": "2026-10-03",
+   "decision": "reject",
+   "note": "different screen: the hop clicks the 'Edit portfolio' link; the label means the Portfolio tab",
    "reason": "below-threshold"
   },
   "similarity": 0.5139,
   "source": "5657ebd8a7aed07d1dd490a457ad33018bb8445c",
-  "status": "review"
+  "status": "rejected"
  },
  "accounts.treasury-statements": {
   "checked": "2026-10-02-1349",
@@ -1832,6 +2590,174 @@
   "source": "97d170e1550eee4afc0af065b78cda302a97674c",
   "status": "accepted"
  },
+ "accounts.vd-destination": {
+  "checked": "2026-10-02-1349",
+  "fingerprint": {
+   "controls": [
+    "Close",
+    "Customize your experience",
+    "Deposit In",
+    "Go back",
+    "Next",
+    "Open account",
+    "Viewing as Admin"
+   ],
+   "headings": [],
+   "path": "/capital/venture-debt/draw-funds",
+   "structure": "document",
+   "top": {
+    "name": "",
+    "role": "document"
+   }
+  },
+  "hop": [
+   {
+    "click": {
+     "name": "Next",
+     "role": "button"
+    }
+   }
+  ],
+  "mutates": false,
+  "parent": "accounts.vd-request-calculator",
+  "recordedBy": "draft",
+  "review": null,
+  "similarity": 0.9999,
+  "source": "7459131acaf0c5a73db43d8cd5a899b38b6ec419",
+  "status": "accepted"
+ },
+ "accounts.vd-disbursement-agreement": {
+  "checked": "2026-10-02-1349",
+  "fingerprint": {
+   "controls": [
+    "Agree",
+    "Cancel"
+   ],
+   "headings": [
+    "Disbursement Agreement"
+   ],
+   "path": "/capital/venture-debt/draw-funds",
+   "structure": "dialog",
+   "top": {
+    "name": "",
+    "role": "dialog"
+   }
+  },
+  "hop": [
+   {
+    "click": {
+     "name": "Request funds",
+     "role": "button"
+    }
+   }
+  ],
+  "mutates": false,
+  "parent": "accounts.vd-review",
+  "recordedBy": "draft",
+  "review": null,
+  "similarity": 0.9995,
+  "source": "721e0cfef8035f9bc4d8d61434069265b4203b44",
+  "status": "accepted"
+ },
+ "accounts.vd-draw-pending": {
+  "checked": "2026-10-02-1349",
+  "fingerprint": {
+   "controls": [
+    "Accounting",
+    "Accounts",
+    "Add to bookmarks",
+    "Banking",
+    "Bill Pay",
+    "Books",
+    "Cards",
+    "Command New",
+    "Credit Card",
+    "Customize your experience",
+    "Download loan agreement",
+    "Financing",
+    "Home",
+    "Insights",
+    "Invoicing",
+    "Learn about bookmarks",
+    "Mercury Demo Pro",
+    "Move money",
+    "Navigate to Settings",
+    "Open account",
+    "Ops / Payroll <amount>",
+    "Payments",
+    "Remove bookmark",
+    "Reorder Bill Pay bookmark",
+    "Reorder Credit Card bookmark",
+    "Reorder Insights bookmark",
+    "Reorder Ops / Payroll bookmark",
+    "Search for anything",
+    "Tasks <n>",
+    "Team Spend",
+    "Toggle Private Mode",
+    "Transactions",
+    "Treasury",
+    "View more",
+    "Viewing as Admin",
+    "updates"
+   ],
+   "headings": [
+    "Financing"
+   ],
+   "path": "/capital/venture-debt",
+   "structure": "document",
+   "top": {
+    "name": "",
+    "role": "document"
+   }
+  },
+  "hop": [
+   {
+    "click": {
+     "name": "View loan details",
+     "role": "link"
+    }
+   }
+  ],
+  "mutates": true,
+  "parent": "accounts.vd-funds-requested",
+  "recordedBy": "draft",
+  "review": null,
+  "similarity": 0.9982,
+  "source": "26f7d4ec7156ecf5cdf739459b46f691c29f72c4",
+  "status": "accepted"
+ },
+ "accounts.vd-funds-requested": {
+  "checked": "2026-10-02-1349",
+  "fingerprint": {
+   "controls": [
+    "Make Another Request",
+    "View loan details",
+    "support@mercury.com"
+   ],
+   "headings": [],
+   "path": "/capital/venture-debt/draw-funds",
+   "structure": "document",
+   "top": {
+    "name": "",
+    "role": "document"
+   }
+  },
+  "hop": [
+   {
+    "click": {
+     "name": "Agree",
+     "role": "button"
+    }
+   }
+  ],
+  "mutates": true,
+  "parent": "accounts.vd-disbursement-agreement",
+  "recordedBy": "draft",
+  "review": null,
+  "similarity": 0.9999,
+  "source": "46348d4bb9cd7193f7bd587c44f79a0a4ddfc83d",
+  "status": "accepted"
+ },
  "accounts.vd-projected-payments": {
   "checked": "2026-10-02-1349",
   "fingerprint": {
@@ -1864,6 +2790,44 @@
   "source": "822c48b5fbe2e5d691248595196b21064067e160",
   "status": "accepted"
  },
+ "accounts.vd-request-calculator": {
+  "checked": "2026-10-02-1349",
+  "fingerprint": {
+   "controls": [
+    "<amount>",
+    "Close",
+    "Customize your experience",
+    "Next",
+    "Open account",
+    "Viewing as Admin"
+   ],
+   "headings": [],
+   "path": "/capital/venture-debt/draw-funds",
+   "structure": "document",
+   "top": {
+    "name": "",
+    "role": "document"
+   }
+  },
+  "hop": [
+   {
+    "fill": {
+     "locator": {
+      "name": "0.00",
+      "role": "textbox"
+     },
+     "value": "250000"
+    }
+   }
+  ],
+  "mutates": false,
+  "parent": "accounts.vd-request-funds",
+  "recordedBy": "agent",
+  "review": null,
+  "similarity": 0.9995,
+  "source": "18cc092596b1bd3cecfc233ad350a6f7d75f9ee1",
+  "status": "accepted"
+ },
  "accounts.vd-request-funds": {
   "checked": "2026-10-02-1349",
   "fingerprint": {
@@ -1890,6 +2854,41 @@
   "review": null,
   "similarity": 0.9996,
   "source": "97d170e1550eee4afc0af065b78cda302a97674c",
+  "status": "accepted"
+ },
+ "accounts.vd-review": {
+  "checked": "2026-10-02-1349",
+  "fingerprint": {
+   "controls": [
+    "Close",
+    "Customize your experience",
+    "Go back",
+    "Open account",
+    "Request funds",
+    "Viewing as Admin"
+   ],
+   "headings": [],
+   "path": "/capital/venture-debt/draw-funds",
+   "structure": "document",
+   "top": {
+    "name": "",
+    "role": "document"
+   }
+  },
+  "hop": [
+   {
+    "click": {
+     "name": "Next",
+     "role": "button"
+    }
+   }
+  ],
+  "mutates": false,
+  "parent": "accounts.vd-destination",
+  "recordedBy": "draft",
+  "review": null,
+  "similarity": 0.9998,
+  "source": "72de41208d6c229ee6a7c19dc0131cc7e52d57cc",
   "status": "accepted"
  },
  "accounts.venture-debt": {

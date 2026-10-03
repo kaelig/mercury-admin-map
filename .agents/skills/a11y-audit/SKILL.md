@@ -87,7 +87,7 @@ Resume: run the `--ready` passes again. Accepted recipes leave the queue.
 
 `recipe check` sends a recipe to `review` when its similarity is under 0.90, when an agent recorded it and it mutates, and for a 10% sample of agent recipes. A `--recipe` candidate counts as the agent's whatever `recordedBy` it carries, and so does a root candidate with setup steps. A child cannot be checked until its whole chain is `accepted`, so review roots and parents first.
 
-For each recipe in `review`, view three images side by side: the capture (the node's `image` in `build/map.json`), `a11y/runs/<id>/shots/<state>.recipe.png` (light) and `<state>.recipe.dark.png`. The same screen with drifted dates, amounts or chart data: accept. A different screen, row or dialog, or a missing layer: reject. Record the decision in the entry in `a11y/recipes/<area>.json`, while no draft or recipe check is running on that area:
+For each recipe in `review`, view three images side by side: the capture (the node's `image` in `build/map.json`), `a11y/runs/<id>/shots/<state>.recipe.png` (light) and `<state>.recipe.dark.png`. The same screen with drifted dates, amounts or chart data: accept. A different screen, row or dialog, or a missing or extra layer: reject. Read the hop too: a click on a control the label does not name is a reject, even at 0.89. Record the decision in the entry in `a11y/recipes/<area>.json`, while no draft or recipe check is running on that area:
 
 ```json
 "status": "accepted",
