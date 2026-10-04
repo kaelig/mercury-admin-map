@@ -1,0 +1,300 @@
+{
+ "batch": "record-056",
+ "reach": {
+  "baseUrl": "https://demo.mercury.com",
+  "data": "data",
+  "map": "build/map.json",
+  "run": "2026-10-02-1349",
+  "workspace": "a11y"
+ },
+ "run": "2026-10-02-1349",
+ "states": [
+  {
+   "area": "books",
+   "draft": "not drafted: its parent had no accepted recipe when the drafter ran",
+   "image": "screens/books/07-home.png",
+   "kind": "page",
+   "labels": [
+    "Toggle Books",
+    "Click Try Mercury Books",
+    "Books created",
+    "Dismiss spotlight"
+   ],
+   "mutates": false,
+   "note": "Company dashboard after dismissing the spotlight: date range timeline (Jun 25 - Sep 25), Finalize setup chip, Cash / Expenses / Revenue columns with net cash flow, coverage, trend charts and By ledger account breakdowns; header has Add, Search, Keyboard shortcuts and avatar.",
+   "parent": "books.home-setup-popover",
+   "state": "books.home",
+   "title": "Books home"
+  },
+  {
+   "area": "books",
+   "draft": "not drafted: its parent had no accepted recipe when the drafter ran",
+   "image": "screens/books/35-accounts.png",
+   "kind": "page",
+   "labels": [
+    "Toggle Books",
+    "Click Try Mercury Books",
+    "Books created",
+    "Dismiss spotlight",
+    "Sidebar: Accounts"
+   ],
+   "mutates": false,
+   "note": "Tabs All / Mercury / Bank / Credit / Payments / Payroll; account list with Auto-synced or Manual account badges and Bank / Credit type.",
+   "parent": "books.home",
+   "state": "books.accounts",
+   "title": "Accounts"
+  },
+  {
+   "area": "books",
+   "draft": "not drafted: its parent had no accepted recipe when the drafter ran",
+   "image": "screens/books/13-add-menu.png",
+   "kind": "menu",
+   "labels": [
+    "Toggle Books",
+    "Click Try Mercury Books",
+    "Books created",
+    "Dismiss spotlight",
+    "Click Add"
+   ],
+   "mutates": false,
+   "note": "Global Add menu: Journal entry, Invoice, Bill, Rule, Tag; Import: Transactions, Journal entries; plus Account, Ledger account, Customer, Vendor.",
+   "parent": "books.home",
+   "state": "books.add-menu",
+   "title": "Add menu"
+  },
+  {
+   "area": "books",
+   "draft": "not drafted: its parent had no accepted recipe when the drafter ran",
+   "image": "screens/books/14-new-journal-entry.png",
+   "kind": "drawer",
+   "labels": [
+    "Toggle Books",
+    "Click Try Mercury Books",
+    "Books created",
+    "Dismiss spotlight",
+    "Click Add",
+    "Journal entry"
+   ],
+   "mutates": false,
+   "note": "Right drawer with Date, Description and a spreadsheet-style Line items grid (Ledger account, Debit, Credit, Memo, Tags) with two empty lines and totals row.",
+   "parent": "books.add-menu",
+   "state": "books.je-create",
+   "title": "Create journal entry drawer"
+  },
+  {
+   "area": "books",
+   "draft": "not drafted: its parent had no accepted recipe when the drafter ran",
+   "image": "screens/books/17-je-date-picker.png",
+   "kind": "popover",
+   "labels": [
+    "Toggle Books",
+    "Click Try Mercury Books",
+    "Books created",
+    "Dismiss spotlight",
+    "Click Add",
+    "Journal entry",
+    "Open Date"
+   ],
+   "mutates": false,
+   "note": "Calendar popover for the Date field, defaulting to Sep 25, 2026.",
+   "parent": "books.je-create",
+   "state": "books.je-date-picker",
+   "title": "Journal entry date picker"
+  },
+  {
+   "area": "books",
+   "draft": "not drafted: its parent had no accepted recipe when the drafter ran",
+   "image": "screens/books/18-je-filling.png",
+   "kind": "form-state",
+   "labels": [
+    "Toggle Books",
+    "Click Try Mercury Books",
+    "Books created",
+    "Dismiss spotlight",
+    "Click Add",
+    "Journal entry",
+    "Open Date",
+    "Pick Sep 24"
+   ],
+   "mutates": false,
+   "note": "Rent debit 1,250.00 and Cash and Cash Equivalents credit 1,250.00, totals balanced.",
+   "parent": "books.je-date-picker",
+   "state": "books.je-filled",
+   "title": "Balanced journal entry"
+  },
+  {
+   "area": "books",
+   "draft": "not drafted: its parent had no accepted recipe when the drafter ran",
+   "image": "screens/books/19-je-saved.png",
+   "kind": "confirmation",
+   "labels": [
+    "Toggle Books",
+    "Click Try Mercury Books",
+    "Books created",
+    "Dismiss spotlight",
+    "Click Add",
+    "Journal entry",
+    "Open Date",
+    "Pick Sep 24",
+    "Save"
+   ],
+   "mutates": true,
+   "note": "After Save a \"Successfully created the journal entry\" toast appears and the drawer turns into the read-only entry with edit, delete and duplicate icons.",
+   "parent": "books.je-filled",
+   "state": "books.je-detail",
+   "title": "Journal entry created"
+  },
+  {
+   "area": "books",
+   "draft": "not drafted: its parent had no accepted recipe when the drafter ran",
+   "image": "screens/books/15-journal-entry-empty-save.png",
+   "kind": "validation-error",
+   "labels": [
+    "Toggle Books",
+    "Click Try Mercury Books",
+    "Books created",
+    "Dismiss spotlight",
+    "Click Add",
+    "Journal entry",
+    "Save with no lines"
+   ],
+   "mutates": true,
+   "note": "Saving the blank entry shows a single \"Please complete all required fields.\" line under the grid; no field is marked.",
+   "parent": "books.je-create",
+   "state": "books.je-empty-save",
+   "title": "Journal entry empty-save error"
+  },
+  {
+   "area": "books",
+   "draft": "not drafted: its parent had no accepted recipe when the drafter ran",
+   "image": "screens/books/16-je-ledger-picker.png",
+   "kind": "menu",
+   "labels": [
+    "Toggle Books",
+    "Click Try Mercury Books",
+    "Books created",
+    "Dismiss spotlight",
+    "Click Add",
+    "Journal entry",
+    "Edit Ledger account cell"
+   ],
+   "mutates": false,
+   "note": "Editing a Ledger account cell opens a narrow grouped combobox; typing \"Rent\" ranks Other Current Assets first and the exact Rent match last.",
+   "parent": "books.je-create",
+   "state": "books.je-ledger-picker",
+   "title": "Ledger account picker"
+  },
+  {
+   "area": "books",
+   "draft": "not drafted: its parent had no accepted recipe when the drafter ran",
+   "image": "screens/books/59-avatar-menu.png",
+   "kind": "menu",
+   "labels": [
+    "Toggle Books",
+    "Click Try Mercury Books",
+    "Books created",
+    "Dismiss spotlight",
+    "Click avatar"
+   ],
+   "mutates": false,
+   "note": "Jane Black: Profile, Notifications, Security, Privacy, Perks, Appearance (System default), Log out (not clicked).",
+   "parent": "books.home",
+   "state": "books.avatar-menu",
+   "title": "Avatar menu"
+  },
+  {
+   "area": "books",
+   "draft": "not drafted: its parent had no accepted recipe when the drafter ran",
+   "image": "screens/books/28-balance-sheet.png",
+   "kind": "page",
+   "labels": [
+    "Toggle Books",
+    "Click Try Mercury Books",
+    "Books created",
+    "Dismiss spotlight",
+    "Sidebar: Reports"
+   ],
+   "mutates": false,
+   "note": "Working capital line chart and stacked asset/liability/equity bars, then Filters, frequency (Monthly), year and month chips over an expandable statement grid ending in Sep MTD.",
+   "parent": "books.home",
+   "state": "books.balance-sheet",
+   "title": "Balance Sheet"
+  },
+  {
+   "area": "books",
+   "draft": "not drafted: its parent had no accepted recipe when the drafter ran",
+   "image": "screens/books/29-profit-and-loss.png",
+   "kind": "page",
+   "labels": [
+    "Toggle Books",
+    "Click Try Mercury Books",
+    "Books created",
+    "Dismiss spotlight",
+    "Sidebar: Reports",
+    "Sidebar: Profit & Loss"
+   ],
+   "mutates": false,
+   "note": "Revenue / Expenses / Net profit bars and a monthly P&L grid with Total column.",
+   "parent": "books.balance-sheet",
+   "state": "books.profit-loss",
+   "title": "Profit & Loss"
+  },
+  {
+   "area": "books",
+   "draft": "not drafted: its parent had no accepted recipe when the drafter ran",
+   "image": "screens/books/55-report-frequency-menu.png",
+   "kind": "menu",
+   "labels": [
+    "Toggle Books",
+    "Click Try Mercury Books",
+    "Books created",
+    "Dismiss spotlight",
+    "Sidebar: Reports",
+    "Open frequency select"
+   ],
+   "mutates": false,
+   "note": "Frequency options Annual, Quarterly, Monthly, Custom.",
+   "parent": "books.balance-sheet",
+   "state": "books.report-frequency",
+   "title": "Report frequency menu"
+  },
+  {
+   "area": "books",
+   "draft": "not drafted: its parent had no accepted recipe when the drafter ran",
+   "image": "screens/books/56-balance-sheet-quarterly.png",
+   "kind": "page",
+   "labels": [
+    "Toggle Books",
+    "Click Try Mercury Books",
+    "Books created",
+    "Dismiss spotlight",
+    "Sidebar: Reports",
+    "Open frequency select",
+    "Quarterly"
+   ],
+   "mutates": false,
+   "note": "Quarterly view: Q1 2026, Q2 2026, Q3 QTD columns and Q1-Q3 chips.",
+   "parent": "books.report-frequency",
+   "state": "books.balance-sheet-quarterly",
+   "title": "Balance Sheet by quarter"
+  },
+  {
+   "area": "books",
+   "draft": "not drafted: its parent had no accepted recipe when the drafter ran",
+   "image": "screens/books/24-bills.png",
+   "kind": "page",
+   "labels": [
+    "Toggle Books",
+    "Click Try Mercury Books",
+    "Books created",
+    "Dismiss spotlight",
+    "Sidebar: Bills"
+   ],
+   "mutates": false,
+   "note": "Bill grid (Bill #, Vendor, Date, Due date, Status, Amount, Outstanding) with Paid, Open, Draft, Cancelled, Partially Paid badges; one bill has an em dash for its number.",
+   "parent": "books.home",
+   "state": "books.bills",
+   "title": "Bills"
+  }
+ ]
+}

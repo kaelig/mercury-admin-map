@@ -1,0 +1,35 @@
+{
+ "batch": "record-126",
+ "reach": {
+  "baseUrl": "https://demo.mercury.com",
+  "data": "data",
+  "map": "build/map.json",
+  "run": "2026-10-02-1349",
+  "workspace": "a11y"
+ },
+ "run": "2026-10-02-1349",
+ "states": [
+  {
+   "area": "books",
+   "draft": "not drafted: its parent had no accepted recipe when the drafter ran",
+   "image": "screens/books/53-tag-created.png",
+   "kind": "toast",
+   "labels": [
+    "Toggle Books",
+    "Click Try Mercury Books",
+    "Books created",
+    "Dismiss spotlight",
+    "Sidebar: Settings",
+    "Sidebar: Tags",
+    "Click Create tag",
+    "Save with empty name",
+    "Enter Finance, Save"
+   ],
+   "mutates": true,
+   "note": "\"Tag created\" toast; #Finance appears in the list and the drawer shows the read-only tag.",
+   "parent": "books.tag-empty-save",
+   "state": "books.tag-created",
+   "title": "Tag created"
+  }
+ ]
+}

@@ -1,0 +1,235 @@
+{
+ "batch": "record-034",
+ "reach": {
+  "baseUrl": "https://demo.mercury.com",
+  "data": "data",
+  "map": "build/map.json",
+  "run": "2026-10-02-1349",
+  "workspace": "a11y"
+ },
+ "run": "2026-10-02-1349",
+ "states": [
+  {
+   "area": "transactions",
+   "draft": "nothing on transactions.saved-views-menu matches {\"click\":{\"name\":\"trash on a custom view\"}}",
+   "image": "screens/transactions/95-delete-view-confirm.png",
+   "kind": "confirmation",
+   "labels": [
+    "Click Saved views",
+    "Click trash on a custom view"
+   ],
+   "mutates": false,
+   "note": "Trash icon on a saved view asks \"Are you sure you want to delete \u201cOperating expenses\u201d?\" with Cancel and a destructive Delete.",
+   "parent": "transactions.saved-views-menu",
+   "state": "transactions.delete-view-confirm",
+   "title": "Delete saved view confirmation"
+  },
+  {
+   "area": "transactions",
+   "draft": "not drafted: its parent had no accepted recipe when the drafter ran",
+   "image": "screens/transactions/96-view-deleted.png",
+   "kind": "toast",
+   "labels": [
+    "Click Saved views",
+    "Click trash on a custom view",
+    "Click Delete"
+   ],
+   "mutates": true,
+   "note": "After Delete the table returns to the default toolbar and a \"View deleted\" toast offers Undo.",
+   "parent": "transactions.delete-view-confirm",
+   "state": "transactions.view-deleted",
+   "title": "View deleted toast"
+  },
+  {
+   "area": "transactions",
+   "draft": "nothing on transactions.index matches {\"click\":{\"name\":\"Group icon\"}}",
+   "image": "screens/transactions/24-group-menu.png",
+   "kind": "menu",
+   "labels": [
+    "Click Group icon"
+   ],
+   "mutates": false,
+   "note": "Group button opens a Group by combobox: To/From, Account, Card, Merchant Type, Category, GL Code, Directionality (In/Out).",
+   "parent": "transactions.index",
+   "state": "transactions.group-menu",
+   "title": "Group by menu"
+  },
+  {
+   "area": "transactions",
+   "draft": "not drafted: its parent had no accepted recipe when the drafter ran",
+   "image": "screens/transactions/25-grouped-by-category.png",
+   "kind": "page",
+   "labels": [
+    "Click Group icon",
+    "Choose Category"
+   ],
+   "mutates": false,
+   "note": "Table collapsed into category groups with transaction counts and money in / money out subtotals.",
+   "parent": "transactions.group-menu",
+   "state": "transactions.grouped-by-category",
+   "title": "Grouped by category"
+  },
+  {
+   "area": "transactions",
+   "draft": "cannot parse \"Search Deli 77\"",
+   "image": "screens/transactions/86-insights-exclusion-selected.png",
+   "kind": "form-state",
+   "labels": [
+    "Click Filters",
+    "Click Exclusions",
+    "Search Deli 77 and tick rows"
+   ],
+   "mutates": false,
+   "note": "Searching \"Deli 77\" lists matching transactions; two rows are ticked and Exclude becomes active next to Cancel.",
+   "parent": "transactions.insights-exclusions",
+   "state": "transactions.insights-exclusion-selected",
+   "title": "Exclusions: transactions selected"
+  },
+  {
+   "area": "transactions",
+   "draft": "not drafted: its parent had no accepted recipe when the drafter ran",
+   "image": "screens/transactions/87-insights-transactions-excluded.png",
+   "kind": "toast",
+   "labels": [
+    "Click Filters",
+    "Click Exclusions",
+    "Search Deli 77 and tick rows",
+    "Click Exclude"
+   ],
+   "mutates": true,
+   "note": "The two rows move into the exclusions table, the header reads \"2 transactions excluded\" and a matching toast appears.",
+   "parent": "transactions.insights-exclusion-selected",
+   "state": "transactions.insights-excluded",
+   "title": "Transactions excluded"
+  },
+  {
+   "area": "transactions",
+   "draft": "nothing on transactions.insights matches {\"click\":{\"name\":\"sliders icon\"}}",
+   "image": "screens/transactions/61-insights-settings-menu.png",
+   "kind": "menu",
+   "labels": [
+    "Click sliders icon"
+   ],
+   "mutates": false,
+   "note": "Sliders icon menu: Settings, Manage categories.",
+   "parent": "transactions.insights",
+   "state": "transactions.insights-settings-menu",
+   "title": "Insights settings menu"
+  },
+  {
+   "area": "transactions",
+   "draft": "not drafted: its parent had no accepted recipe when the drafter ran",
+   "image": "screens/transactions/62-insights-settings-modal.png",
+   "kind": "modal",
+   "labels": [
+    "Click sliders icon",
+    "Click Settings"
+   ],
+   "mutates": false,
+   "note": "Insights Settings: notification link, Runway toggle with 3M/6M/12M timeframe, linked-transfer toggle and a transaction exclusions search table.",
+   "parent": "transactions.insights-settings-menu",
+   "state": "transactions.insights-settings-modal",
+   "title": "Insights Settings modal"
+  },
+  {
+   "area": "transactions",
+   "draft": "cannot parse \"type \"Google\"\"",
+   "image": "screens/transactions/20-keyword-suggestions.png",
+   "kind": "popover",
+   "labels": [
+    "Open Keyword and type \"Google\""
+   ],
+   "mutates": false,
+   "note": "Keyword popover with \"Google\" lists matching counterparties as checkboxes (two identical \"Google\" rows).",
+   "parent": "transactions.index",
+   "state": "transactions.keyword-suggestions",
+   "title": "Keyword suggestions"
+  },
+  {
+   "area": "transactions",
+   "draft": "not drafted: its parent had no accepted recipe when the drafter ran",
+   "image": "screens/transactions/22-keyword-filtered-results.png",
+   "kind": "page",
+   "labels": [
+    "Open Keyword and type \"Google\"",
+    "Tick a Google suggestion"
+   ],
+   "mutates": false,
+   "note": "After ticking a Google suggestion the chip becomes \"Google x\", Filters (1) and Create view appear, and the table is filtered to Google transactions with Net change/Money in/Money out recomputed.",
+   "parent": "transactions.keyword-suggestions",
+   "state": "transactions.keyword-results",
+   "title": "Keyword filtered results"
+  },
+  {
+   "area": "transactions",
+   "draft": "nothing on transactions.index matches {\"click\":{\"name\":\"Settings icon\"}}",
+   "image": "screens/transactions/27-column-settings-menu.png",
+   "kind": "menu",
+   "labels": [
+    "Click Settings icon"
+   ],
+   "mutates": false,
+   "note": "Settings popover: Show graph toggle, Time zone (PDT) submenu, Manage categories link.",
+   "parent": "transactions.index",
+   "state": "transactions.settings-menu",
+   "title": "Table settings menu"
+  },
+  {
+   "area": "transactions",
+   "draft": "not drafted: its parent had no accepted recipe when the drafter ran",
+   "image": "screens/transactions/74-settings-time-zone-submenu.png",
+   "kind": "menu",
+   "labels": [
+    "Click Settings icon",
+    "Hover Time zone"
+   ],
+   "mutates": false,
+   "note": "Settings menu with the Time zone submenu open: UTC or Local (PDT), Local checked.",
+   "parent": "transactions.settings-menu",
+   "state": "transactions.time-zone-submenu",
+   "title": "Time zone submenu"
+  },
+  {
+   "area": "transactions",
+   "draft": "cannot parse \"First visit shows tip\"",
+   "image": "screens/transactions/02-categorized-tip.png",
+   "kind": "popover",
+   "labels": [
+    "First visit shows tip"
+   ],
+   "mutates": false,
+   "note": "First-visit popover over the Category column saying Mercury categorized past transactions, with a View link and close button.",
+   "parent": "transactions.index",
+   "state": "transactions.categorized-tip",
+   "title": "Auto-categorization tip"
+  },
+  {
+   "area": "transactions",
+   "draft": "nothing on transactions.index matches {\"click\":{\"name\":\"Date chip\"}}",
+   "image": "screens/transactions/23-date-chip-dropdown.png",
+   "kind": "popover",
+   "labels": [
+    "Click Date chip"
+   ],
+   "mutates": false,
+   "note": "Date toolbar chip opened: preset combobox (All time), From/To fields and 2026 month grid.",
+   "parent": "transactions.index",
+   "state": "transactions.date-chip",
+   "title": "Date chip dropdown"
+  },
+  {
+   "area": "transactions",
+   "draft": "nothing on transactions.index matches {\"click\":{\"name\":\"an ACH payment\"}}",
+   "image": "screens/transactions/40-detail-ach.png",
+   "kind": "drawer",
+   "labels": [
+    "Click an ACH payment row"
+   ],
+   "mutates": false,
+   "note": "Mercury ACH Payment panel: \u2212$5,250.00 from AP to Lighthouse Properties, Category, GL Code, Department and a \"1 Unread Comment\" jump pill.",
+   "parent": "transactions.index",
+   "state": "transactions.detail-ach",
+   "title": "ACH payment detail"
+  }
+ ]
+}

@@ -153,22 +153,314 @@
  },
  "billpay.approval-panel": {
   "checked": "2026-10-02-1349",
-  "fingerprint": null,
+  "fingerprint": {
+   "controls": [
+    "Approve",
+    "Close detail panel",
+    "Decline",
+    "Review",
+    "View Email",
+    "a<n>bdc-<n>ea-<n>e<n>.pdf"
+   ],
+   "headings": [],
+   "path": "/bill-pay/approvals",
+   "structure": "dialog",
+   "top": {
+    "name": "",
+    "role": "complementary"
+   }
+  },
   "hop": [
    {
     "click": {
-     "name": "Review Requests",
-     "role": "button"
+     "name": "Jason Green",
+     "role": "cell"
     }
    }
   ],
   "mutates": false,
   "parent": "billpay.needs-approval",
-  "recordedBy": "draft",
+  "recordedBy": "agent",
   "review": null,
-  "similarity": null,
-  "source": null,
-  "status": "draft"
+  "similarity": 0.997,
+  "source": "8e5f7833840f1a4bc19006ca8b6801057757c921",
+  "status": "accepted"
+ },
+ "billpay.approval-review": {
+  "checked": "2026-10-02-1349",
+  "fingerprint": {
+   "controls": [
+    "Accounting",
+    "Approve payments",
+    "Ask Mercury Command /",
+    "Close",
+    "Customize your experience",
+    "Decline",
+    "Open account",
+    "Viewing as Admin",
+    "a<n>bdc-<n>ea-<n>e<n>.pdf"
+   ],
+   "headings": [],
+   "path": "/send-money/review/approve/payment",
+   "structure": "document",
+   "top": {
+    "name": "",
+    "role": "document"
+   }
+  },
+  "hop": [
+   {
+    "click": {
+     "name": "Review",
+     "role": "button"
+    }
+   }
+  ],
+  "mutates": false,
+  "parent": "billpay.approval-panel",
+  "recordedBy": "agent",
+  "review": {
+   "by": "conductor",
+   "date": "2026-10-03",
+   "decision": "accept",
+   "note": "same full-screen Review of the $5,000.00 recurring payment to Jason Green (Oct 5 / Nov 2 / Dec 7 schedule, PDF preview, Decline / Approve payments); the hop clicks the Review button the label names",
+   "reason": "sample"
+  },
+  "similarity": 0.9995,
+  "source": "fbe88b70c83f598cbb1573bdf8afb3d135d48adf",
+  "status": "accepted"
+ },
+ "billpay.approval-success": {
+  "checked": "2026-10-02-1349",
+  "fingerprint": {
+   "controls": [
+    "Back to Needs Approval",
+    "Close",
+    "Customize your experience",
+    "Open account",
+    "Viewing as Admin"
+   ],
+   "headings": [
+    "You’ve approved a recurring ACH payment",
+    "Payments will be sent on the scheduled dates."
+   ],
+   "path": "/send-money/pay/success",
+   "structure": "document",
+   "top": {
+    "name": "",
+    "role": "document"
+   }
+  },
+  "hop": [
+   {
+    "click": {
+     "name": "Approve payments",
+     "role": "button"
+    }
+   }
+  ],
+  "mutates": true,
+  "parent": "billpay.approval-review",
+  "recordedBy": "agent",
+  "review": {
+   "by": "conductor",
+   "date": "2026-10-03",
+   "decision": "accept",
+   "note": "same 'You've approved a recurring ACH payment' confirmation ($5,000.00 to Contractor (Jason Green), monthly rule, Back to Needs Approval); hop clicks Approve payments as labeled",
+   "reason": "mutating"
+  },
+  "similarity": 0.9997,
+  "source": "1ab9b9d36ac4c47887b3446de5a56fc74ba81308",
+  "status": "accepted"
+ },
+ "billpay.approvals-bulk-loading": {
+  "checked": "2026-10-02-1349",
+  "fingerprint": {
+   "controls": [
+    "Accounting",
+    "Approve",
+    "Ask Mercury Command /",
+    "Close",
+    "Customize your experience",
+    "Decline",
+    "Open account",
+    "Skip",
+    "Viewing as Admin",
+    "a<n>bdc-<n>ea-<n>e<n>.pdf"
+   ],
+   "headings": [],
+   "path": "/send-money/review/approve/payment",
+   "structure": "document",
+   "top": {
+    "name": "",
+    "role": "document"
+   }
+  },
+  "hop": [
+   {
+    "click": {
+     "name": "Review Request",
+     "role": "button"
+    }
+   }
+  ],
+  "mutates": false,
+  "parent": "billpay.approvals-bulk-select",
+  "recordedBy": "agent",
+  "review": {
+   "by": "conductor",
+   "date": "2026-10-03",
+   "decision": "accept",
+   "note": "transient dot loader on Review Request; replay shows the settled Review page (Approval 1 of 1, Jason Green $5,000.00, Approve button) where the child's wait-for-Approve starts; accepted as chain link for 2 states",
+   "reason": "below-threshold"
+  },
+  "similarity": 0.2671,
+  "source": "6c4de2eb0b001a495c0a01f6cf574b2b3eb60412",
+  "status": "accepted"
+ },
+ "billpay.approvals-bulk-select": {
+  "checked": "2026-10-02-1349",
+  "fingerprint": {
+   "controls": [
+    "Review Request"
+   ],
+   "headings": [],
+   "path": "/bill-pay/approvals",
+   "structure": "dialog",
+   "top": {
+    "name": "<n> request selected",
+    "role": "dialog"
+   }
+  },
+  "hop": [
+   {
+    "check": {
+     "index": 1,
+     "role": "checkbox"
+    }
+   }
+  ],
+  "mutates": false,
+  "parent": "billpay.needs-approval",
+  "recordedBy": "agent",
+  "review": {
+   "by": "conductor",
+   "date": "2026-10-03",
+   "decision": "accept",
+   "note": "same Needs Approval list with the Jason Green row checked and the floating '1 request selected $5,000.00 total' bar with Review Request; the due date drifted from Oct 29 to Nov 7",
+   "reason": "sample"
+  },
+  "similarity": 0.9988,
+  "source": "f8de389100cd24febbd58e1b679113731f69187f",
+  "status": "accepted"
+ },
+ "billpay.approved-senders-edit": {
+  "checked": "2026-10-02-1349",
+  "fingerprint": {
+   "controls": [
+    "Allow bills from",
+    "Cancel",
+    "Connect",
+    "Edit",
+    "Jane Black",
+    "Jessica Awad",
+    "Manage",
+    "Mary Metcalfe",
+    "Remove Tag",
+    "Save",
+    "my-company-name@ap.mercury.com"
+   ],
+   "headings": [
+    "Bill Pay settings"
+   ],
+   "path": "/bill-pay",
+   "structure": "dialog",
+   "top": {
+    "name": "",
+    "role": "dialog"
+   }
+  },
+  "hop": [
+   {
+    "click": {
+     "index": 1,
+     "name": "Edit",
+     "role": "button",
+     "within": {
+      "role": "dialog"
+     }
+    }
+   }
+  ],
+  "mutates": false,
+  "parent": "billpay.settings-bottom",
+  "recordedBy": "agent",
+  "review": null,
+  "similarity": 0.9985,
+  "source": "bedc0b30f8721ffa7418e715efc376a15d41c743",
+  "status": "accepted"
+ },
+ "billpay.approvers-tooltip": {
+  "checked": "2026-10-02-1349",
+  "fingerprint": {
+   "controls": [],
+   "headings": [],
+   "path": "/bill-pay/approvals",
+   "structure": "dialog",
+   "top": {
+    "name": "",
+    "role": "generic"
+   }
+  },
+  "hop": [
+   {
+    "hover": {
+     "text": "0 of 2"
+    }
+   }
+  ],
+  "mutates": false,
+  "parent": "billpay.needs-approval",
+  "recordedBy": "agent",
+  "review": null,
+  "similarity": 0.9983,
+  "source": "a4b975b5c76e1976e5bc4e8a79ff719b1b5c7328",
+  "status": "accepted"
+ },
+ "billpay.auto-categorization-off": {
+  "checked": "2026-10-02-1349",
+  "fingerprint": {
+   "controls": [
+    "Cancel",
+    "Close help menu",
+    "Conversation history",
+    "New conversation",
+    "Share feedback",
+    "We’d love to hear from you. Please provide your feedback for automated categorization and accounting below."
+   ],
+   "headings": [],
+   "path": "/accounting/mapping/automation-settings",
+   "structure": "status",
+   "top": {
+    "name": "",
+    "role": "generic"
+   }
+  },
+  "hop": [
+   {
+    "click": {
+     "name": "Auto-categorization",
+     "role": "switch"
+    }
+   }
+  ],
+  "mutates": false,
+  "parent": "billpay.automation-settings",
+  "recordedBy": "agent",
+  "review": null,
+  "similarity": 0.9996,
+  "source": "3b3bd0d6be07a8c08b85168c0140c5d35298a47a",
+  "status": "accepted"
  },
  "billpay.automation-settings": {
   "checked": "2026-10-02-1349",
@@ -228,6 +520,442 @@
   "source": "97d170e1550eee4afc0af065b78cda302a97674c",
   "status": "accepted"
  },
+ "billpay.bank-details-edit": {
+  "checked": "2026-10-02-1349",
+  "fingerprint": {
+   "controls": [
+    "Account number",
+    "Account type",
+    "Apartment, suite, floor (optional)",
+    "Ask Mercury Command /",
+    "Back",
+    "Business",
+    "Choose Files",
+    "City",
+    "Close",
+    "Country",
+    "Customize your experience",
+    "Email (optional)",
+    "Go back",
+    "Legal name",
+    "Next",
+    "Nickname (optional)",
+    "Open account",
+    "Open combobox menu",
+    "Payment method",
+    "Person",
+    "Postal / ZIP code",
+    "Recipient legal address",
+    "Routing number",
+    "Save",
+    "State",
+    "Viewing as Admin"
+   ],
+   "headings": [
+    "Upload an attachment",
+    "Recipient",
+    "Edit recipient details",
+    "Profile",
+    "Address"
+   ],
+   "path": "/send-money/pay/recipient-details",
+   "structure": "document",
+   "top": {
+    "name": "",
+    "role": "document"
+   }
+  },
+  "hop": [
+   {
+    "click": {
+     "name": "Edit",
+     "role": "button"
+    }
+   }
+  ],
+  "mutates": false,
+  "parent": "billpay.pay-recipient",
+  "recordedBy": "agent",
+  "review": null,
+  "similarity": 0.9989,
+  "source": "b4b7588c83ac5d3acf687aa51259702840485c10",
+  "status": "accepted"
+ },
+ "billpay.bill-due-date-picker": {
+  "checked": "2026-10-02-1349",
+  "fingerprint": {
+   "controls": [
+    "Select due date"
+   ],
+   "headings": [],
+   "path": "/bill-pay",
+   "structure": "dialog",
+   "top": {
+    "name": "",
+    "role": "generic"
+   }
+  },
+  "hop": [
+   {
+    "click": {
+     "index": 0,
+     "name": "Select due date",
+     "role": "textbox"
+    }
+   }
+  ],
+  "mutates": false,
+  "parent": "billpay.bill-panel-edit",
+  "recordedBy": "agent",
+  "review": null,
+  "similarity": 0.9989,
+  "source": "04d6a5121d4eac6de5cba64e89fbaf876f4f8570",
+  "status": "accepted"
+ },
+ "billpay.bill-edit-amount-error": {
+  "checked": "2026-10-02-1349",
+  "fingerprint": {
+   "controls": [
+    "<amount>",
+    "ACH Authorizations",
+    "Accounting",
+    "Accounts",
+    "Banking",
+    "Bill Pay",
+    "Books",
+    "Cancel",
+    "Cards",
+    "Checkbooks",
+    "Choose Files",
+    "Close detail panel",
+    "Command New",
+    "Credit Card",
+    "Customize your experience",
+    "Delete",
+    "Due date <date>",
+    "Feedback",
+    "Home",
+    "Insights",
+    "Invoice date <date>",
+    "Invoice no. INV-<n>",
+    "Invoicing",
+    "Learn about bookmarks",
+    "Mercury Demo Pro",
+    "Move money",
+    "Navigate to Settings",
+    "Open account",
+    "Ops / Payroll <amount>",
+    "Payments",
+    "Recipients",
+    "Remove bookmark",
+    "Remove from bookmarks",
+    "Reorder Bill Pay bookmark",
+    "Reorder Credit Card bookmark",
+    "Reorder Insights bookmark",
+    "Reorder Ops / Payroll bookmark",
+    "Review",
+    "Save edits",
+    "Search for anything",
+    "Select due date",
+    "Send money",
+    "Status",
+    "Tasks <n>",
+    "Taxes",
+    "Team Spend",
+    "Toggle Private Mode",
+    "Transactions",
+    "Upload attachment",
+    "Upload bill",
+    "View Email",
+    "Viewing as Admin",
+    "Wire Drawdowns",
+    "demo_invoice-after-ocr-<n>.pdf",
+    "my-company-name@ap.mercury.com",
+    "note",
+    "updates"
+   ],
+   "headings": [
+    "Bill Pay",
+    "<n>",
+    "Total outstanding",
+    "Overdue",
+    "Due in next <n> days"
+   ],
+   "path": "/bill-pay",
+   "structure": "document",
+   "top": {
+    "name": "",
+    "role": "document"
+   }
+  },
+  "hop": [
+   {
+    "fill": {
+     "locator": {
+      "name": "0.00",
+      "role": "textbox"
+     },
+     "value": ""
+    }
+   },
+   {
+    "click": {
+     "name": "Save edits",
+     "role": "button"
+    }
+   }
+  ],
+  "mutates": true,
+  "parent": "billpay.bill-panel-edit",
+  "recordedBy": "agent",
+  "review": {
+   "by": "conductor",
+   "date": "2026-10-03",
+   "decision": "accept",
+   "note": "same Debug LLC edit panel: amount cleared, 'Must be a dollar value.' under the field; hop clears amount and clicks Save edits as labeled",
+   "reason": "mutating"
+  },
+  "similarity": 0.998,
+  "source": "31e8ec2dcf6678b996ff3a9594003667a48f00d0",
+  "status": "accepted"
+ },
+ "billpay.bill-edit-saved": {
+  "checked": "2026-10-02-1349",
+  "fingerprint": {
+   "controls": [],
+   "headings": [],
+   "path": "/bill-pay",
+   "structure": "status",
+   "top": {
+    "name": "Draft bills",
+    "role": "table"
+   }
+  },
+  "hop": [
+   {
+    "fill": {
+     "locator": {
+      "name": "0.00",
+      "role": "textbox"
+     },
+     "value": "1.00"
+    }
+   },
+   {
+    "click": {
+     "name": "Save edits",
+     "role": "button"
+    }
+   }
+  ],
+  "mutates": true,
+  "parent": "billpay.bill-edit-amount-error",
+  "recordedBy": "agent",
+  "review": {
+   "by": "conductor",
+   "date": "2026-10-03",
+   "decision": "accept",
+   "note": "same Debug LLC bill panel back in read mode with the saved amount ($1.00 fixture vs captured $350.00) and the 'Changes saved' toast; hop fills the amount and clicks Save edits as labeled",
+   "reason": "mutating"
+  },
+  "similarity": 0.9948,
+  "source": "6b914017cf2c3330c2014a7c74aa05a7c7dcd574",
+  "status": "accepted"
+ },
+ "billpay.bill-panel": {
+  "checked": "2026-10-02-1349",
+  "fingerprint": {
+   "controls": [
+    "<amount>",
+    "Choose Files",
+    "Close detail panel",
+    "Delete",
+    "Due date <date>",
+    "Invoice date <date>",
+    "Invoice no. INV-<n>",
+    "Review",
+    "Upload attachment",
+    "View Email",
+    "demo_invoice-after-ocr-<n>.pdf",
+    "note"
+   ],
+   "headings": [],
+   "path": "/bill-pay",
+   "structure": "dialog",
+   "top": {
+    "name": "",
+    "role": "complementary"
+   }
+  },
+  "hop": [
+   {
+    "click": {
+     "name": "Apr 2025 Overdue Debug LLC <amount> INV-902 <date> Review",
+     "role": "row"
+    }
+   }
+  ],
+  "mutates": false,
+  "parent": "billpay.index",
+  "recordedBy": "agent",
+  "review": null,
+  "similarity": 0.9855,
+  "source": "c8a8907e8c77b47a5a2294dc43d1e5845820f99f",
+  "status": "accepted"
+ },
+ "billpay.bill-panel-edit": {
+  "checked": "2026-10-02-1349",
+  "fingerprint": {
+   "controls": [
+    "<amount>",
+    "ACH Authorizations",
+    "Accounting",
+    "Accounts",
+    "Banking",
+    "Bill Pay",
+    "Books",
+    "Cancel",
+    "Cards",
+    "Checkbooks",
+    "Choose Files",
+    "Close detail panel",
+    "Command New",
+    "Credit Card",
+    "Customize your experience",
+    "Delete",
+    "Due date <date>",
+    "Feedback",
+    "Home",
+    "Insights",
+    "Invoice date <date>",
+    "Invoice no. INV-<n>",
+    "Invoicing",
+    "Learn about bookmarks",
+    "Mercury Demo Pro",
+    "Move money",
+    "Navigate to Settings",
+    "Open account",
+    "Ops / Payroll <amount>",
+    "Payments",
+    "Recipients",
+    "Remove bookmark",
+    "Remove from bookmarks",
+    "Reorder Bill Pay bookmark",
+    "Reorder Credit Card bookmark",
+    "Reorder Insights bookmark",
+    "Reorder Ops / Payroll bookmark",
+    "Review",
+    "Save edits",
+    "Search for anything",
+    "Select due date",
+    "Send money",
+    "Status",
+    "Tasks <n>",
+    "Taxes",
+    "Team Spend",
+    "Toggle Private Mode",
+    "Transactions",
+    "Upload attachment",
+    "Upload bill",
+    "View Email",
+    "Viewing as Admin",
+    "Wire Drawdowns",
+    "demo_invoice-after-ocr-<n>.pdf",
+    "my-company-name@ap.mercury.com",
+    "note",
+    "updates"
+   ],
+   "headings": [
+    "Bill Pay",
+    "<n>",
+    "Total outstanding",
+    "Overdue",
+    "Due in next <n> days"
+   ],
+   "path": "/bill-pay",
+   "structure": "document",
+   "top": {
+    "name": "",
+    "role": "document"
+   }
+  },
+  "hop": [
+   {
+    "click": {
+     "name": "Invoice no. INV-902",
+     "role": "button"
+    }
+   }
+  ],
+  "mutates": false,
+  "parent": "billpay.bill-panel",
+  "recordedBy": "agent",
+  "review": null,
+  "similarity": 0.9971,
+  "source": "716b547394c73fe65d7aaf97036ca2f94d30aad2",
+  "status": "accepted"
+ },
+ "billpay.bill-panel-lower": {
+  "checked": "2026-10-02-1349",
+  "fingerprint": {
+   "controls": [
+    "<amount>",
+    "Choose Files",
+    "Close detail panel",
+    "Delete",
+    "Due date <date>",
+    "Invoice date <date>",
+    "Invoice no. INV-<n>",
+    "Review",
+    "Upload attachment",
+    "View Email",
+    "demo_invoice-after-ocr-<n>.pdf",
+    "note"
+   ],
+   "headings": [],
+   "path": "/bill-pay",
+   "structure": "dialog",
+   "top": {
+    "name": "",
+    "role": "complementary"
+   }
+  },
+  "hop": [
+   {
+    "wait": {
+     "locator": {
+      "name": "Upload attachment",
+      "role": "button"
+     }
+    }
+   },
+   {
+    "scroll": {
+     "name": "Upload attachment",
+     "role": "button"
+    }
+   },
+   {
+    "scroll": {
+     "name": "Total outstanding",
+     "role": "heading"
+    }
+   }
+  ],
+  "mutates": false,
+  "parent": "billpay.bill-panel",
+  "recordedBy": "agent",
+  "review": {
+   "by": "conductor",
+   "date": "2026-10-03",
+   "decision": "accept",
+   "note": "same Debug LLC bill drawer scrolled to Notes, View Email, demo_invoice-after-ocr-2.pdf and Upload attachment; only scroll differs (the page isn't scrolled, so the drawer scrolls further and hides the Sender row)",
+   "reason": "below-threshold"
+  },
+  "similarity": 0.7016,
+  "source": "358f365fd5ee313e88ac98e82e8c182534c82306",
+  "status": "accepted"
+ },
  "billpay.books-signup": {
   "checked": "2026-10-02-1349",
   "fingerprint": {
@@ -269,6 +997,192 @@
   "review": null,
   "similarity": 0.9627,
   "source": "af20eb160d4270af23d4ae1a65d999cdd9a2cbab",
+  "status": "accepted"
+ },
+ "billpay.bulk-approval-review": {
+  "checked": "2026-10-02-1349",
+  "fingerprint": {
+   "controls": [
+    "Accounting",
+    "Approve",
+    "Ask Mercury Command /",
+    "Close",
+    "Customize your experience",
+    "Decline",
+    "Open account",
+    "Skip",
+    "Viewing as Admin",
+    "a<n>bdc-<n>ea-<n>e<n>.pdf"
+   ],
+   "headings": [],
+   "path": "/send-money/review/approve/payment",
+   "structure": "document",
+   "top": {
+    "name": "",
+    "role": "document"
+   }
+  },
+  "hop": [
+   {
+    "wait": {
+     "locator": {
+      "name": "Skip",
+      "role": "button"
+     }
+    }
+   }
+  ],
+  "mutates": false,
+  "parent": "billpay.approvals-bulk-loading",
+  "recordedBy": "agent",
+  "review": null,
+  "similarity": 0.9994,
+  "source": "c35f31bec99bcaaa57ef537cfb6664f107cd3a67",
+  "status": "accepted"
+ },
+ "billpay.bulk-delete-confirm": {
+  "checked": "2026-10-02-1349",
+  "fingerprint": {
+   "controls": [
+    "Cancel",
+    "Delete <n> items"
+   ],
+   "headings": [
+    "Delete items?"
+   ],
+   "path": "/bill-pay",
+   "structure": "dialog",
+   "top": {
+    "name": "",
+    "role": "dialog"
+   }
+  },
+  "hop": [
+   {
+    "click": {
+     "name": "Delete",
+     "role": "button"
+    }
+   }
+  ],
+  "mutates": true,
+  "parent": "billpay.bulk-select",
+  "recordedBy": "agent",
+  "review": {
+   "by": "conductor",
+   "date": "2026-10-03",
+   "decision": "accept",
+   "note": "same 'Delete items?' dialog with Cancel / Delete 3 items over the blurred list with 3 rows selected; the hop clicks the Delete button the label names and does not confirm the delete",
+   "reason": "mutating"
+  },
+  "similarity": 0.9983,
+  "source": "c6156bfe05af5b977b572f74612464dc212060e5",
+  "status": "accepted"
+ },
+ "billpay.bulk-review-skipped": {
+  "checked": "2026-10-02-1349",
+  "fingerprint": {
+   "controls": [
+    "Back to needs approval",
+    "Close",
+    "Customize your experience",
+    "Open account",
+    "Viewing as Admin"
+   ],
+   "headings": [
+    "You’ve reviewed <n> payments"
+   ],
+   "path": "/send-money/bulk-approval-review/success",
+   "structure": "document",
+   "top": {
+    "name": "",
+    "role": "document"
+   }
+  },
+  "hop": [
+   {
+    "click": {
+     "name": "Skip",
+     "role": "button"
+    }
+   }
+  ],
+  "mutates": false,
+  "parent": "billpay.bulk-approval-review",
+  "recordedBy": "agent",
+  "review": null,
+  "similarity": 0.9999,
+  "source": "fe3ef0d1e2ffe20ef149eb11e0bf560f181397c2",
+  "status": "accepted"
+ },
+ "billpay.bulk-select": {
+  "checked": "2026-10-02-1349",
+  "fingerprint": {
+   "controls": [
+    "Delete",
+    "Review"
+   ],
+   "headings": [],
+   "path": "/bill-pay",
+   "structure": "dialog",
+   "top": {
+    "name": "<n> items selected",
+    "role": "dialog"
+   }
+  },
+  "hop": [
+   {
+    "check": {
+     "index": 0,
+     "role": "checkbox"
+    }
+   }
+  ],
+  "mutates": false,
+  "parent": "billpay.index",
+  "recordedBy": "agent",
+  "review": null,
+  "similarity": 0.9962,
+  "source": "e87f503fef8e42e0d0b7ca0336de9358910a4888",
+  "status": "accepted"
+ },
+ "billpay.cancel-payment-confirm": {
+  "checked": "2026-10-02-1349",
+  "fingerprint": {
+   "controls": [
+    "Cancel payment",
+    "Go back"
+   ],
+   "headings": [
+    "Cancel recurring payment"
+   ],
+   "path": "/bill-pay/scheduled",
+   "structure": "dialog",
+   "top": {
+    "name": "",
+    "role": "dialog"
+   }
+  },
+  "hop": [
+   {
+    "click": {
+     "name": "Cancel payment",
+     "role": "button"
+    }
+   }
+  ],
+  "mutates": true,
+  "parent": "billpay.scheduled-panel",
+  "recordedBy": "agent",
+  "review": {
+   "by": "conductor",
+   "date": "2026-10-03",
+   "decision": "accept",
+   "note": "same Cancel recurring payment dialog (Domestic Ads, Go back / Cancel payment); the hop clicks the panel's Cancel payment button and the date drifted",
+   "reason": "mutating"
+  },
+  "similarity": 0.9971,
+  "source": "9bd29089d3916eb26d43b8ddc9e604c85d40a5b5",
   "status": "accepted"
  },
  "billpay.categorization-rules": {
@@ -364,7 +1278,327 @@
   "source": "b8ea4180e54e144c8297dee710fea1c4649ddd26",
   "status": "accepted"
  },
+ "billpay.decline-confirm": {
+  "checked": "2026-10-02-1349",
+  "fingerprint": {
+   "controls": [
+    "Go back",
+    "Yes, decline"
+   ],
+   "headings": [
+    "Are you sure you want to decline this request?"
+   ],
+   "path": "/send-money/review/approve/payment",
+   "structure": "dialog",
+   "top": {
+    "name": "",
+    "role": "dialog"
+   }
+  },
+  "hop": [
+   {
+    "click": {
+     "name": "Decline",
+     "role": "button"
+    }
+   }
+  ],
+  "mutates": true,
+  "parent": "billpay.approval-review",
+  "recordedBy": "agent",
+  "review": {
+   "by": "conductor",
+   "date": "2026-10-03",
+   "decision": "accept",
+   "note": "same 'Are you sure you want to decline this request?' dialog (Go back / Yes, decline) over the Review page; hop clicks Decline and stops before confirming",
+   "reason": "below-threshold"
+  },
+  "similarity": 0.8839,
+  "source": "f889db51284f8da22ec49508ebacf5447254cece",
+  "status": "accepted"
+ },
+ "billpay.delete-bill-confirm": {
+  "checked": "2026-10-02-1349",
+  "fingerprint": {
+   "controls": [
+    "Cancel",
+    "Delete item"
+   ],
+   "headings": [
+    "Delete item?"
+   ],
+   "path": "/bill-pay",
+   "structure": "dialog",
+   "top": {
+    "name": "",
+    "role": "dialog"
+   }
+  },
+  "hop": [
+   {
+    "click": {
+     "css": "[class*=\"_destructive_\"][class*=\"_small_\"]",
+     "index": 0
+    }
+   }
+  ],
+  "mutates": false,
+  "parent": "billpay.row-hover",
+  "recordedBy": "agent",
+  "review": null,
+  "similarity": 0.9984,
+  "source": "43fb55494038735e34497816f3c0f7ba6c22c4f3",
+  "status": "accepted"
+ },
+ "billpay.delete-rule-confirm": {
+  "checked": "2026-10-02-1349",
+  "fingerprint": {
+   "controls": [
+    "Cancel",
+    "Yes, delete rule"
+   ],
+   "headings": [
+    "Delete categorization rule?"
+   ],
+   "path": "/accounting/mapping/categorization-rules",
+   "structure": "dialog",
+   "top": {
+    "name": "",
+    "role": "dialog"
+   }
+  },
+  "hop": [
+   {
+    "click": {
+     "name": "Delete rule",
+     "role": "button"
+    }
+   }
+  ],
+  "mutates": true,
+  "parent": "billpay.rule-updated",
+  "recordedBy": "agent",
+  "review": {
+   "by": "conductor",
+   "date": "2026-10-03",
+   "decision": "accept",
+   "note": "same 'Delete categorization rule?' dialog (Cancel / Yes, delete rule); the parent's 'Rule updated' toast is still showing in the light replay, which is fine",
+   "reason": "mutating"
+  },
+  "similarity": 0.9984,
+  "source": "d25b101d3acc0971264b97bafcfffa7fae05865c",
+  "status": "accepted"
+ },
+ "billpay.due-date-tooltip": {
+  "checked": "2026-10-02-1349",
+  "fingerprint": {
+   "controls": [
+    "<amount>",
+    "Choose Files",
+    "Close detail panel",
+    "Delete",
+    "Due date <date>",
+    "Invoice date <date>",
+    "Invoice no. INV-<n>",
+    "Review",
+    "Upload attachment",
+    "View Email",
+    "demo_invoice-after-ocr-<n>.pdf",
+    "note"
+   ],
+   "headings": [],
+   "path": "/bill-pay",
+   "structure": "dialog",
+   "top": {
+    "name": "",
+    "role": "generic"
+   }
+  },
+  "hop": [
+   {
+    "hover": {
+     "index": 0,
+     "text": "Apr 2025"
+    }
+   }
+  ],
+  "mutates": false,
+  "parent": "billpay.index",
+  "recordedBy": "agent",
+  "review": null,
+  "similarity": 0.9562,
+  "source": "b25cc546e07578877dde745611cd2231ed4d134a",
+  "status": "accepted"
+ },
+ "billpay.edit-recipient-details": {
+  "checked": "2026-10-02-1349",
+  "fingerprint": {
+   "controls": [
+    "Apartment, suite, floor (optional)",
+    "Ask Mercury Command /",
+    "Back",
+    "Business",
+    "Choose Files",
+    "City",
+    "Close",
+    "Country",
+    "Customize your experience",
+    "Edit",
+    "Email (optional)",
+    "Go back",
+    "Legal name",
+    "Next",
+    "Nickname (optional)",
+    "Open account",
+    "Open combobox menu",
+    "Payment method",
+    "Person",
+    "Postal / ZIP code",
+    "Recipient legal address",
+    "Save",
+    "State",
+    "Viewing as Admin"
+   ],
+   "headings": [
+    "Upload an attachment",
+    "Recipient",
+    "Edit recipient details",
+    "Profile",
+    "Address"
+   ],
+   "path": "/send-money/pay/recipient-details",
+   "structure": "document",
+   "top": {
+    "name": "",
+    "role": "document"
+   }
+  },
+  "hop": [
+   {
+    "click": {
+     "text": "Edit recipient details"
+    }
+   }
+  ],
+  "mutates": false,
+  "parent": "billpay.recipient-card-menu",
+  "recordedBy": "agent",
+  "review": null,
+  "similarity": 0.9147,
+  "source": "2986f9311eab63cae8257307a20b762454486510",
+  "status": "accepted"
+ },
+ "billpay.edit-rule": {
+  "checked": "2026-10-02-1349",
+  "fingerprint": {
+   "controls": [
+    "Accounting",
+    "Accounts",
+    "Add condition",
+    "Add to bookmarks",
+    "Auto-mark ready to sync",
+    "Banking",
+    "Bill Pay",
+    "Books",
+    "Cancel",
+    "Cards",
+    "Close detail panel",
+    "Command New",
+    "Condition <n>",
+    "Create a rule",
+    "Credit Card",
+    "Customize your experience",
+    "Drag to reorder rule",
+    "GL code",
+    "Home",
+    "Insights",
+    "Invoicing",
+    "Learn about bookmarks",
+    "Mercury Demo Pro",
+    "Move money",
+    "Navigate to Settings",
+    "Open account",
+    "Open combobox menu",
+    "Ops / Payroll <amount>",
+    "Outcome",
+    "Payments",
+    "Remove bookmark",
+    "Reorder Bill Pay bookmark",
+    "Reorder Credit Card bookmark",
+    "Reorder Insights bookmark",
+    "Reorder Ops / Payroll bookmark",
+    "Search for anything",
+    "Tasks <n>",
+    "Team Spend",
+    "Toggle Private Mode",
+    "Transactions",
+    "Update",
+    "Value",
+    "Viewing as Admin",
+    "updates"
+   ],
+   "headings": [
+    "Accounting Settings"
+   ],
+   "path": "/accounting/mapping/categorization-rules",
+   "structure": "document",
+   "top": {
+    "name": "",
+    "role": "document"
+   }
+  },
+  "hop": [
+   {
+    "click": {
+     "name": "Edit",
+     "role": "button"
+    }
+   }
+  ],
+  "mutates": false,
+  "parent": "billpay.rule-details",
+  "recordedBy": "agent",
+  "review": null,
+  "similarity": 0.9992,
+  "source": "f73333cb7d456614c921feba0ea90ef93417fd39",
+  "status": "accepted"
+ },
  "billpay.feedback-panel": {
+  "checked": "2026-10-02-1349",
+  "fingerprint": {
+   "controls": [
+    "Cancel",
+    "Close help menu",
+    "Conversation history",
+    "New conversation",
+    "Share feedback",
+    "We’d love to hear from you. Please provide your feedback for bill pay functionality below."
+   ],
+   "headings": [],
+   "path": "/bill-pay",
+   "structure": "dialog",
+   "top": {
+    "name": "",
+    "role": "generic"
+   }
+  },
+  "hop": [
+   {
+    "click": {
+     "name": "Feedback",
+     "role": "button"
+    }
+   }
+  ],
+  "mutates": false,
+  "parent": "billpay.index",
+  "recordedBy": "draft",
+  "review": null,
+  "similarity": 0.9983,
+  "source": "4e395958376c689d139a1e5ef23d7df79df93f86",
+  "status": "accepted"
+ },
+ "billpay.feedback-sent": {
   "checked": "2026-10-02-1349",
   "fingerprint": {
    "controls": [
@@ -374,7 +1608,6 @@
     "Banking",
     "Bill Pay",
     "Books",
-    "Cancel",
     "Cards",
     "Checkbooks",
     "Choose Files",
@@ -384,6 +1617,7 @@
     "Credit Card",
     "Customize your experience",
     "Delete",
+    "Done",
     "Feedback",
     "Home",
     "Insights",
@@ -406,7 +1640,6 @@
     "Review",
     "Search for anything",
     "Send money",
-    "Share feedback",
     "Status",
     "Tasks <n>",
     "Taxes",
@@ -415,7 +1648,6 @@
     "Transactions",
     "Upload bill",
     "Viewing as Admin",
-    "We’d love to hear from you. Please provide your feedback for bill pay functionality below.",
     "Wire Drawdowns",
     "my-company-name@ap.mercury.com",
     "updates"
@@ -428,6 +1660,146 @@
     "Due in next <n> days"
    ],
    "path": "/bill-pay",
+   "structure": "document",
+   "top": {
+    "name": "",
+    "role": "document"
+   }
+  },
+  "hop": [
+   {
+    "fill": {
+     "locator": {
+      "name": "We’d love to hear from you. Please provide your feedback for bill pay functionality below.",
+      "role": "textbox"
+     },
+     "value": "A11y audit test feedback"
+    }
+   },
+   {
+    "click": {
+     "name": "Share feedback",
+     "role": "button"
+    }
+   }
+  ],
+  "mutates": true,
+  "parent": "billpay.feedback-panel",
+  "recordedBy": "agent",
+  "review": {
+   "by": "conductor",
+   "date": "2026-10-03",
+   "decision": "accept",
+   "note": "same 'Thanks for your feedback' panel with the Done button over the Inbox tab; the hop fills the feedback textbox, then clicks Share feedback as the label says",
+   "reason": "mutating"
+  },
+  "similarity": 0.9969,
+  "source": "34050b0e1b354586d7927b18203558e402a2119f",
+  "status": "accepted"
+ },
+ "billpay.filter-empty": {
+  "checked": "2026-10-02-1349",
+  "fingerprint": {
+   "controls": [
+    "ACH Authorizations",
+    "Accounting",
+    "Accounts",
+    "Banking",
+    "Bill Pay",
+    "Books",
+    "Cards",
+    "Checkbooks",
+    "Choose Files",
+    "Command New",
+    "Credit Card",
+    "Customize your experience",
+    "Delete",
+    "Feedback",
+    "Home",
+    "Insights",
+    "Invoicing",
+    "Learn about bookmarks",
+    "Mercury Demo Pro",
+    "Missing due date",
+    "Move money",
+    "Navigate to Settings",
+    "Open account",
+    "Ops / Payroll <amount>",
+    "Payments",
+    "Recipients",
+    "Remove bookmark",
+    "Remove filter",
+    "Remove from bookmarks",
+    "Reorder Bill Pay bookmark",
+    "Reorder Credit Card bookmark",
+    "Reorder Insights bookmark",
+    "Reorder Ops / Payroll bookmark",
+    "Reset",
+    "Review",
+    "Search for anything",
+    "Send money",
+    "Tasks <n>",
+    "Taxes",
+    "Team Spend",
+    "Toggle Private Mode",
+    "Transactions",
+    "Upload bill",
+    "Viewing as Admin",
+    "Wire Drawdowns",
+    "my-company-name@ap.mercury.com",
+    "updates"
+   ],
+   "headings": [
+    "Bill Pay",
+    "<n>",
+    "Total outstanding",
+    "Overdue",
+    "Due in next <n> days",
+    "No drafts or bills found"
+   ],
+   "path": "/bill-pay",
+   "structure": "document",
+   "top": {
+    "name": "",
+    "role": "document"
+   }
+  },
+  "hop": [
+   {
+    "check": {
+     "name": "Missing due date",
+     "role": "checkbox"
+    }
+   },
+   {
+    "press": "Escape"
+   },
+   {
+    "wait": {
+     "ms": 500
+    }
+   }
+  ],
+  "mutates": false,
+  "parent": "billpay.status-filter",
+  "recordedBy": "agent",
+  "review": {
+   "by": "conductor",
+   "date": "2026-10-03",
+   "decision": "accept",
+   "note": "same filtered empty state as the note: 'Missing due date' chip with Reset, 'No drafts or bills found' over the skeleton table, menu closed. The hop checks 'Missing due date' as the label says, and that option appears in the parent capture's Status menu. The capture file (52) is wrong: it shows the Bill Pay settings dialog and needs re-taking.",
+   "reason": "below-threshold"
+  },
+  "similarity": 0.6452,
+  "source": "d7a699887a4309add34c30f00d38275363d6ad1a",
+  "status": "accepted"
+ },
+ "billpay.forwarding-email-copied": {
+  "checked": "2026-10-02-1349",
+  "fingerprint": {
+   "controls": [],
+   "headings": [],
+   "path": "/bill-pay",
    "structure": "dialog",
    "top": {
     "name": "",
@@ -437,17 +1809,147 @@
   "hop": [
    {
     "click": {
-     "name": "Feedback",
+     "name": "my-company-name@ap.mercury.com",
      "role": "button"
     }
    }
   ],
   "mutates": false,
   "parent": "billpay.index",
-  "recordedBy": "draft",
+  "recordedBy": "agent",
+  "review": {
+   "by": "conductor",
+   "date": "2026-10-03",
+   "decision": "accept",
+   "note": "re-checked after the layer fix (fingerprint refreshed); same hop the conductor accepted on 2026-10-03 (Copied tooltip over the forwarding address pill), similarity 0.9884",
+   "reason": "sample"
+  },
+  "similarity": 0.9884,
+  "source": "ddc1d08bc9000f49ba86f604b548f9e598001962",
+  "status": "accepted"
+ },
+ "billpay.forwarding-email-edit": {
+  "checked": "2026-10-02-1349",
+  "fingerprint": {
+   "controls": [
+    "Cancel",
+    "Connect",
+    "Edit",
+    "Jane Black",
+    "Jessica Awad",
+    "Manage",
+    "Mary Metcalfe",
+    "New email",
+    "Save"
+   ],
+   "headings": [
+    "Bill Pay settings"
+   ],
+   "path": "/bill-pay",
+   "structure": "dialog",
+   "top": {
+    "name": "",
+    "role": "dialog"
+   }
+  },
+  "hop": [
+   {
+    "click": {
+     "index": 0,
+     "name": "Edit",
+     "role": "button",
+     "within": {
+      "role": "dialog"
+     }
+    }
+   }
+  ],
+  "mutates": false,
+  "parent": "billpay.settings",
+  "recordedBy": "agent",
   "review": null,
+  "similarity": 0.9985,
+  "source": "1725aedfd1a46dda7d10b3fb9cc9e063ae9f72ad",
+  "status": "accepted"
+ },
+ "billpay.forwarding-email-invalid": {
+  "checked": "2026-10-02-1349",
+  "fingerprint": {
+   "controls": [],
+   "headings": [
+    "Error"
+   ],
+   "path": "/bill-pay",
+   "structure": "dialog",
+   "top": {
+    "name": "Error",
+    "role": "dialog"
+   }
+  },
+  "hop": [
+   {
+    "fill": {
+     "locator": {
+      "label": "New email"
+     },
+     "value": "Test Person"
+    }
+   }
+  ],
+  "mutates": false,
+  "parent": "billpay.forwarding-email-edit",
+  "recordedBy": "agent",
+  "review": {
+   "by": "conductor",
+   "date": "2026-10-03",
+   "decision": "accept",
+   "note": "same Bill Pay settings invalid-email state: pink field, disabled Save, 'Please enter a valid email address' tooltip; fixture 'Test Person' instead of 'bad name!!'",
+   "reason": "sample"
+  },
   "similarity": 0.9983,
-  "source": "4e395958376c689d139a1e5ef23d7df79df93f86",
+  "source": "a3ab9e4118df73fc916453fdf00f3fb2bcdfabe9",
+  "status": "accepted"
+ },
+ "billpay.forwarding-email-saved": {
+  "checked": "2026-10-02-1349",
+  "fingerprint": {
+   "controls": [],
+   "headings": [],
+   "path": "/bill-pay",
+   "structure": "status",
+   "top": {
+    "name": "",
+    "role": "generic"
+   }
+  },
+  "hop": [
+   {
+    "fill": {
+     "locator": {
+      "label": "New email"
+     },
+     "value": "notanemail"
+    }
+   },
+   {
+    "click": {
+     "name": "Save",
+     "role": "button"
+    }
+   }
+  ],
+  "mutates": true,
+  "parent": "billpay.forwarding-email-edit",
+  "recordedBy": "agent",
+  "review": {
+   "by": "conductor",
+   "date": "2026-10-03",
+   "decision": "accept",
+   "note": "re-checked after the layer-detection fixes of 2026-10-03 (fingerprint refreshed); same hop the conductor's review panel accepted earlier today, similarity 0.9941",
+   "reason": "mutating"
+  },
+  "similarity": 0.9941,
+  "source": "90eb387c3aabb512c48ae805f12d98eb69278443",
   "status": "accepted"
  },
  "billpay.gl-codes-edit": {
@@ -556,6 +2058,174 @@
   "review": null,
   "similarity": 0.9802,
   "source": "97d170e1550eee4afc0af065b78cda302a97674c",
+  "status": "accepted"
+ },
+ "billpay.inbox-sorted": {
+  "checked": "2026-10-02-1349",
+  "fingerprint": {
+   "controls": [
+    "ACH Authorizations",
+    "Accounting",
+    "Accounts",
+    "Banking",
+    "Bill Pay",
+    "Books",
+    "Cards",
+    "Checkbooks",
+    "Choose Files",
+    "Command New",
+    "Credit Card",
+    "Customize your experience",
+    "Delete",
+    "Feedback",
+    "Home",
+    "Insights",
+    "Invoicing",
+    "Learn about bookmarks",
+    "Mercury Demo Pro",
+    "Move money",
+    "Navigate to Settings",
+    "Open account",
+    "Ops / Payroll <amount>",
+    "Payments",
+    "Recipients",
+    "Remove bookmark",
+    "Remove from bookmarks",
+    "Reorder Bill Pay bookmark",
+    "Reorder Credit Card bookmark",
+    "Reorder Insights bookmark",
+    "Reorder Ops / Payroll bookmark",
+    "Review",
+    "Search for anything",
+    "Send money",
+    "Status",
+    "Tasks <n>",
+    "Taxes",
+    "Team Spend",
+    "Toggle Private Mode",
+    "Transactions",
+    "Upload bill",
+    "Viewing as Admin",
+    "Wire Drawdowns",
+    "my-company-name@ap.mercury.com",
+    "updates"
+   ],
+   "headings": [
+    "Bill Pay",
+    "<n>",
+    "Total outstanding",
+    "Overdue",
+    "Due in next <n> days"
+   ],
+   "path": "/bill-pay",
+   "structure": "document",
+   "top": {
+    "name": "",
+    "role": "document"
+   }
+  },
+  "hop": [
+   {
+    "click": {
+     "name": "Amount",
+     "role": "columnheader"
+    }
+   }
+  ],
+  "mutates": false,
+  "parent": "billpay.index",
+  "recordedBy": "agent",
+  "review": null,
+  "similarity": 0.9954,
+  "source": "c0776e4dd67a9baa162e32061808812a46969592",
+  "status": "accepted"
+ },
+ "billpay.inbox-zero": {
+  "checked": "2026-10-02-1349",
+  "fingerprint": {
+   "controls": [
+    "ACH Authorizations",
+    "Accounting",
+    "Accounts",
+    "Banking",
+    "Bill Pay",
+    "Books",
+    "Cards",
+    "Checkbooks",
+    "Choose Files",
+    "Close",
+    "Command New",
+    "Credit Card",
+    "Customize your experience",
+    "Delete",
+    "Feedback",
+    "Home",
+    "Insights",
+    "Invoicing",
+    "Learn about bookmarks",
+    "Mercury Demo Pro",
+    "Move money",
+    "Navigate to Settings",
+    "Open account",
+    "Ops / Payroll <amount>",
+    "Payments",
+    "Play Zero Inbox",
+    "Recipients",
+    "Remove bookmark",
+    "Remove from bookmarks",
+    "Reorder Bill Pay bookmark",
+    "Reorder Credit Card bookmark",
+    "Reorder Insights bookmark",
+    "Reorder Ops / Payroll bookmark",
+    "Review",
+    "Search for anything",
+    "Send money",
+    "Tasks <n>",
+    "Taxes",
+    "Team Spend",
+    "Toggle Private Mode",
+    "Transactions",
+    "Upload bill",
+    "Viewing as Admin",
+    "Wire Drawdowns",
+    "my-company-name@ap.mercury.com",
+    "updates"
+   ],
+   "headings": [
+    "Bill Pay",
+    "<n>",
+    "Total outstanding",
+    "Overdue",
+    "Due in next <n> days",
+    "All your bills are paid!"
+   ],
+   "path": "/bill-pay",
+   "structure": "document",
+   "top": {
+    "name": "",
+    "role": "document"
+   }
+  },
+  "hop": [
+   {
+    "click": {
+     "name": "Delete 3 items",
+     "role": "button"
+    }
+   }
+  ],
+  "mutates": true,
+  "parent": "billpay.bulk-delete-confirm",
+  "recordedBy": "agent",
+  "review": {
+   "by": "conductor",
+   "date": "2026-10-03",
+   "decision": "accept",
+   "note": "same inbox-zero 'All your bills are paid!' Zero Inbox card with 'Deleted 3 items' toast; hop clicks Delete 3 items as labeled",
+   "reason": "mutating"
+  },
+  "similarity": 0.9987,
+  "source": "b899be5cdeb9e2a2d31554d1aad0c04eaf357d1c",
   "status": "accepted"
  },
  "billpay.index": {
@@ -702,6 +2372,90 @@
   "source": "97d170e1550eee4afc0af065b78cda302a97674c",
   "status": "accepted"
  },
+ "billpay.needs-approval-empty": {
+  "checked": "2026-10-02-1349",
+  "fingerprint": {
+   "controls": [
+    "ACH Authorizations",
+    "Accounting",
+    "Accounts",
+    "Banking",
+    "Bill Pay",
+    "Books",
+    "Cards",
+    "Checkbooks",
+    "Choose Files",
+    "Command New",
+    "Credit Card",
+    "Customize your experience",
+    "Feedback",
+    "Home",
+    "Insights",
+    "Invoicing",
+    "Learn about bookmarks",
+    "Mercury Demo Pro",
+    "Move money",
+    "Navigate to Settings",
+    "Open account",
+    "Ops / Payroll <amount>",
+    "Payments",
+    "Recipients",
+    "Remove bookmark",
+    "Remove from bookmarks",
+    "Reorder Bill Pay bookmark",
+    "Reorder Credit Card bookmark",
+    "Reorder Insights bookmark",
+    "Reorder Ops / Payroll bookmark",
+    "Search for anything",
+    "Send money",
+    "Tasks <n>",
+    "Taxes",
+    "Team Spend",
+    "Toggle Private Mode",
+    "Transactions",
+    "Upload bill",
+    "Viewing as Admin",
+    "Wire Drawdowns",
+    "my-company-name@ap.mercury.com",
+    "updates"
+   ],
+   "headings": [
+    "Bill Pay",
+    "<n>",
+    "Total outstanding",
+    "Overdue",
+    "Due in next <n> days",
+    "No pending approvals"
+   ],
+   "path": "/bill-pay/approvals",
+   "structure": "document",
+   "top": {
+    "name": "",
+    "role": "document"
+   }
+  },
+  "hop": [
+   {
+    "click": {
+     "name": "Back to Needs Approval",
+     "role": "button"
+    }
+   }
+  ],
+  "mutates": true,
+  "parent": "billpay.approval-success",
+  "recordedBy": "agent",
+  "review": {
+   "by": "conductor",
+   "date": "2026-10-03",
+   "decision": "accept",
+   "note": "same Bill Pay Needs Approval tab with 'No pending approvals' over the blurred skeleton table; the hop clicks 'Back to Needs Approval' as the label says",
+   "reason": "mutating"
+  },
+  "similarity": 0.9984,
+  "source": "bb501b1bbe0de52c53bb829d81368111fd60cfae",
+  "status": "accepted"
+ },
  "billpay.paid": {
   "checked": "2026-10-02-1349",
   "fingerprint": {
@@ -773,33 +2527,1180 @@
  },
  "billpay.paid-transaction": {
   "checked": "2026-10-02-1349",
-  "fingerprint": null,
+  "fingerprint": {
+   "controls": [
+    "Accounting",
+    "Accounts",
+    "Banking",
+    "Bill Pay",
+    "Books",
+    "Cards",
+    "Command New",
+    "Credit Card",
+    "Home",
+    "Insights",
+    "Invoicing",
+    "Learn about bookmarks",
+    "Mercury Demo Pro",
+    "Ops / Payroll <amount>",
+    "Payments",
+    "Remove bookmark",
+    "Reorder Bill Pay bookmark",
+    "Reorder Credit Card bookmark",
+    "Reorder Insights bookmark",
+    "Reorder Ops / Payroll bookmark",
+    "Tasks <n>",
+    "Team Spend",
+    "Transactions"
+   ],
+   "headings": [],
+   "path": "/transactions/<id>",
+   "structure": "dialog",
+   "top": {
+    "name": "",
+    "role": "navigation"
+   }
+  },
   "hop": [
    {
     "click": {
-     "name": "Paid on Recipient Amount Account Method",
-     "role": "row"
+     "text": "Lighthouse Properties #<n>"
     }
    }
   ],
   "mutates": false,
   "parent": "billpay.paid",
-  "recordedBy": "draft",
+  "recordedBy": "agent",
+  "review": {
+   "by": "conductor",
+   "date": "2026-10-03",
+   "decision": "accept",
+   "note": "same Transactions page filtered by 'Has bill' with the Mercury ACH Payment −$5,250.00 drawer open for Lighthouse Properties #3431; the hop clicks the paid row",
+   "reason": "sample"
+  },
+  "similarity": 0.9897,
+  "source": "19daa558302bb75cfe59699031416231f24bde14",
+  "status": "accepted"
+ },
+ "billpay.pay-amount": {
+  "checked": "2026-10-02-1349",
+  "fingerprint": {
+   "controls": [
+    "Ask Mercury Command /",
+    "Back",
+    "Choose Files",
+    "Close",
+    "Customize your experience",
+    "Next",
+    "Open account",
+    "Recipient gets",
+    "Repeat this payment",
+    "Send from",
+    "Send on",
+    "Viewing as Admin"
+   ],
+   "headings": [
+    "Upload an attachment",
+    "Amount"
+   ],
+   "path": "/send-money/pay/amount",
+   "structure": "document",
+   "top": {
+    "name": "",
+    "role": "document"
+   }
+  },
+  "hop": [
+   {
+    "click": {
+     "name": "Next",
+     "role": "button"
+    }
+   },
+   {
+    "wait": {
+     "ms": 4000
+    }
+   }
+  ],
+  "mutates": false,
+  "parent": "billpay.pay-recipient",
+  "recordedBy": "agent",
+  "review": {
+   "by": "conductor",
+   "date": "2026-10-03",
+   "decision": "accept",
+   "note": "same Pay bill Amount step (Recipient gets, Ops / Payroll send-from, Send on, Repeat toggle); amount 220.00 vs typed 350 and the invoice preview zoom drifted; neither child edge needs 350",
+   "reason": "below-threshold"
+  },
+  "similarity": 0.8234,
+  "source": "c138e99774c1e427666da9debabbf39a7778d1bc",
+  "status": "accepted"
+ },
+ "billpay.pay-amount-error": {
+  "checked": "2026-10-02-1349",
+  "fingerprint": {
+   "controls": [
+    "Ask Mercury Command /",
+    "Back",
+    "Choose Files",
+    "Close",
+    "Customize your experience",
+    "Next",
+    "Open account",
+    "Recipient gets",
+    "Repeat this payment",
+    "Send from",
+    "Send on",
+    "Viewing as Admin"
+   ],
+   "headings": [
+    "Upload an attachment",
+    "Amount"
+   ],
+   "path": "/send-money/pay/amount",
+   "structure": "document",
+   "top": {
+    "name": "",
+    "role": "document"
+   }
+  },
+  "hop": [
+   {
+    "fill": {
+     "locator": {
+      "name": "Recipient gets",
+      "role": "textbox"
+     },
+     "value": ""
+    }
+   },
+   {
+    "click": {
+     "name": "Next",
+     "role": "button"
+    }
+   }
+  ],
+  "mutates": false,
+  "parent": "billpay.pay-amount",
+  "recordedBy": "agent",
+  "review": null,
+  "similarity": 0.9984,
+  "source": "e1aab3051c75f2c60c1b152f871dc133fb04cf2d",
+  "status": "accepted"
+ },
+ "billpay.pay-categorization": {
+  "checked": "2026-10-02-1349",
+  "fingerprint": {
+   "controls": [
+    "Ask Mercury Command /",
+    "Back",
+    "Choose Files",
+    "Clear combobox selection",
+    "Close",
+    "Customize your experience",
+    "GL Code",
+    "Multiple GL Codes",
+    "Next",
+    "Open account",
+    "Single GL Code",
+    "Viewing as Admin"
+   ],
+   "headings": [
+    "Upload an attachment",
+    "Categorization"
+   ],
+   "path": "/send-money/pay/accounting",
+   "structure": "document",
+   "top": {
+    "name": "",
+    "role": "document"
+   }
+  },
+  "hop": [
+   {
+    "click": {
+     "name": "Next",
+     "role": "button"
+    }
+   }
+  ],
+  "mutates": false,
+  "parent": "billpay.pay-amount",
+  "recordedBy": "agent",
+  "review": null,
+  "similarity": 0.9994,
+  "source": "fa4a9c73314e6e501b7d6ef25f6bee3d63bbfb78",
+  "status": "accepted"
+ },
+ "billpay.pay-details": {
+  "checked": "2026-10-02-1349",
+  "fingerprint": {
+   "controls": [
+    "Ask Mercury Command /",
+    "Back",
+    "Choose Files",
+    "Close",
+    "Customize your experience",
+    "Department (optional)",
+    "Due date (optional)",
+    "Email receipt to (optional)",
+    "Include attachments",
+    "Invoice date (optional)",
+    "Invoice number (optional)",
+    "Memo (optional)",
+    "Name to display on the payment",
+    "Next",
+    "Note: not visible to the recipient",
+    "Open account",
+    "Open combobox menu",
+    "Viewing as Admin",
+    "demo_invoice-after-ocr-<n>.pdf",
+    "payments@debug.io"
+   ],
+   "headings": [
+    "Upload an attachment"
+   ],
+   "path": "/send-money/pay/more-details",
+   "structure": "document",
+   "top": {
+    "name": "",
+    "role": "document"
+   }
+  },
+  "hop": [
+   {
+    "click": {
+     "name": "Next",
+     "role": "button"
+    }
+   }
+  ],
+  "mutates": false,
+  "parent": "billpay.pay-categorization",
+  "recordedBy": "agent",
+  "review": null,
+  "similarity": 0.9929,
+  "source": "ca801b18e97d34e8ebd0ce7b102b48ee35ea6a59",
+  "status": "accepted"
+ },
+ "billpay.pay-line-items-error": {
+  "checked": "2026-10-02-1349",
+  "fingerprint": {
+   "controls": [
+    "<amount>",
+    "Add line item",
+    "Amount",
+    "Ask Mercury Command /",
+    "Back",
+    "Choose Files",
+    "Clear combobox selection",
+    "Close",
+    "Customize your experience",
+    "GL Code",
+    "Line Item",
+    "Multiple GL Codes",
+    "Next",
+    "Open account",
+    "Open combobox menu",
+    "Remove line item",
+    "Single GL Code",
+    "Viewing as Admin"
+   ],
+   "headings": [
+    "Upload an attachment",
+    "Categorization"
+   ],
+   "path": "/send-money/pay/accounting",
+   "structure": "document",
+   "top": {
+    "name": "",
+    "role": "document"
+   }
+  },
+  "hop": [
+   {
+    "click": {
+     "name": "Add line item",
+     "role": "button"
+    }
+   },
+   {
+    "click": {
+     "name": "Next",
+     "role": "button"
+    }
+   }
+  ],
+  "mutates": false,
+  "parent": "billpay.pay-multiple-gl",
+  "recordedBy": "agent",
+  "review": null,
+  "similarity": 0.9993,
+  "source": "e708389869250ab54bd9b4e2211b45e06258bc48",
+  "status": "accepted"
+ },
+ "billpay.pay-method-check": {
+  "checked": "2026-10-02-1349",
+  "fingerprint": {
+   "controls": [
+    "Apartment, suite, floor (optional)",
+    "Ask Mercury Command /",
+    "Back",
+    "Business",
+    "Choose Files",
+    "City",
+    "Close",
+    "Country",
+    "Customize your experience",
+    "Email (optional)",
+    "Go back",
+    "Legal name",
+    "Next",
+    "Nickname (optional)",
+    "Open account",
+    "Open combobox menu",
+    "Payment method",
+    "Person",
+    "Postal / ZIP code",
+    "Recipient legal address",
+    "Save",
+    "State",
+    "Viewing as Admin"
+   ],
+   "headings": [
+    "Upload an attachment",
+    "Recipient",
+    "Edit recipient details",
+    "Profile",
+    "Address"
+   ],
+   "path": "/send-money/pay/recipient-details",
+   "structure": "document",
+   "top": {
+    "name": "",
+    "role": "document"
+   }
+  },
+  "hop": [
+   {
+    "click": {
+     "name": "Check <n>-<n> business days",
+     "role": "option"
+    }
+   }
+  ],
+  "mutates": false,
+  "parent": "billpay.pay-method-menu",
+  "recordedBy": "agent",
+  "review": null,
+  "similarity": 0.9909,
+  "source": "1e976d75885f4888519ecd6be940976e1a11940a",
+  "status": "accepted"
+ },
+ "billpay.pay-method-menu": {
+  "checked": "2026-10-02-1349",
+  "fingerprint": {
+   "controls": [
+    "ACH Last paid · <n> business days",
+    "Check <n> business days",
+    "International Wire <n> business days",
+    "Real-Time Payment New Instant",
+    "Wire <n> business days"
+   ],
+   "headings": [],
+   "path": "/send-money/pay/recipient-details",
+   "structure": "listbox",
+   "top": {
+    "name": "",
+    "role": "listbox"
+   }
+  },
+  "hop": [
+   {
+    "click": {
+     "index": 0,
+     "name": "Open combobox menu",
+     "role": "button"
+    }
+   }
+  ],
+  "mutates": false,
+  "parent": "billpay.pay-recipient",
+  "recordedBy": "agent",
+  "review": null,
+  "similarity": 0.9989,
+  "source": "01d2243f9cc556e1064338738da36dcb9bb49ad2",
+  "status": "accepted"
+ },
+ "billpay.pay-multiple-gl": {
+  "checked": "2026-10-02-1349",
+  "fingerprint": {
+   "controls": [
+    "<amount>",
+    "Add line item",
+    "Amount",
+    "Ask Mercury Command /",
+    "Back",
+    "Choose Files",
+    "Clear combobox selection",
+    "Close",
+    "Customize your experience",
+    "GL Code",
+    "Line Item",
+    "Multiple GL Codes",
+    "Next",
+    "Open account",
+    "Remove line item",
+    "Single GL Code",
+    "Viewing as Admin"
+   ],
+   "headings": [
+    "Upload an attachment",
+    "Categorization"
+   ],
+   "path": "/send-money/pay/accounting",
+   "structure": "document",
+   "top": {
+    "name": "",
+    "role": "document"
+   }
+  },
+  "hop": [
+   {
+    "click": {
+     "name": "Multiple GL Codes",
+     "role": "button"
+    }
+   }
+  ],
+  "mutates": false,
+  "parent": "billpay.pay-categorization",
+  "recordedBy": "agent",
+  "review": null,
+  "similarity": 0.9987,
+  "source": "c1bac3064fc895f35e701cdbb19a28f129931bbf",
+  "status": "accepted"
+ },
+ "billpay.pay-recipient": {
+  "checked": "2026-10-02-1349",
+  "fingerprint": {
+   "controls": [
+    "Apartment, suite, floor (optional)",
+    "Ask Mercury Command /",
+    "Back",
+    "Business",
+    "Choose Files",
+    "City",
+    "Close",
+    "Country",
+    "Customize your experience",
+    "Edit",
+    "Email (optional)",
+    "Go back",
+    "Legal name",
+    "Next",
+    "Nickname (optional)",
+    "Open account",
+    "Open combobox menu",
+    "Payment method",
+    "Person",
+    "Postal / ZIP code",
+    "Recipient legal address",
+    "Save",
+    "State",
+    "Viewing as Admin"
+   ],
+   "headings": [
+    "Upload an attachment",
+    "Recipient",
+    "Edit recipient details",
+    "Profile",
+    "Address"
+   ],
+   "path": "/send-money/pay/recipient-details",
+   "structure": "document",
+   "top": {
+    "name": "",
+    "role": "document"
+   }
+  },
+  "hop": [
+   {
+    "click": {
+     "name": "Continue with matched recipient",
+     "role": "button"
+    }
+   }
+  ],
+  "mutates": false,
+  "parent": "billpay.pay-recipient-match",
+  "recordedBy": "agent",
+  "review": null,
+  "similarity": 0.999,
+  "source": "0392b0bae08e275369c2288e81a7ba17c6065fec",
+  "status": "accepted"
+ },
+ "billpay.pay-recipient-match": {
+  "checked": "2026-10-02-1349",
+  "fingerprint": {
+   "controls": [
+    "Ask Mercury Command /",
+    "Choose Files",
+    "Close",
+    "Continue with matched recipient",
+    "Create recipient",
+    "Customize your experience",
+    "Open account",
+    "Search for another recipient",
+    "Viewing as Admin"
+   ],
+   "headings": [
+    "Upload an attachment",
+    "Recipient match"
+   ],
+   "path": "/send-money/pay/recipient-match",
+   "structure": "document",
+   "top": {
+    "name": "",
+    "role": "document"
+   }
+  },
+  "hop": [
+   {
+    "click": {
+     "name": "Review",
+     "role": "button"
+    }
+   }
+  ],
+  "mutates": false,
+  "parent": "billpay.bill-panel",
+  "recordedBy": "agent",
+  "review": null,
+  "similarity": 0.9992,
+  "source": "81256bab49ec8469c3b544f6d6ffbe3a4e176bf7",
+  "status": "accepted"
+ },
+ "billpay.pay-repeat": {
+  "checked": "2026-10-02-1349",
+  "fingerprint": {
+   "controls": [
+    "After",
+    "Ask Mercury Command /",
+    "Back",
+    "Choose Files",
+    "Close",
+    "Customize your experience",
+    "Never",
+    "Next",
+    "Number of payments before ending",
+    "On",
+    "On day",
+    "Open account",
+    "Open combobox menu",
+    "Recipient gets",
+    "Repeat",
+    "Repeat this payment",
+    "Send from",
+    "Start on",
+    "Viewing as Admin"
+   ],
+   "headings": [
+    "Upload an attachment",
+    "Amount"
+   ],
+   "path": "/send-money/pay/amount",
+   "structure": "document",
+   "top": {
+    "name": "",
+    "role": "document"
+   }
+  },
+  "hop": [
+   {
+    "click": {
+     "name": "Repeat this payment",
+     "role": "switch"
+    }
+   }
+  ],
+  "mutates": false,
+  "parent": "billpay.pay-amount",
+  "recordedBy": "agent",
+  "review": null,
+  "similarity": 0.9904,
+  "source": "08d631b183efe899b0dd1c55f75628468b3a092f",
+  "status": "accepted"
+ },
+ "billpay.pay-review": {
+  "checked": "2026-10-02-1349",
+  "fingerprint": {
+   "controls": [
+    "Accounting",
+    "Ask Mercury Command /",
+    "Back",
+    "Choose Files",
+    "Close",
+    "Customize your experience",
+    "Open account",
+    "Schedule payment",
+    "Viewing as Admin",
+    "demo_invoice-after-ocr-<n>.pdf"
+   ],
+   "headings": [
+    "Upload an attachment"
+   ],
+   "path": "/send-money/pay/review",
+   "structure": "document",
+   "top": {
+    "name": "",
+    "role": "document"
+   }
+  },
+  "hop": [
+   {
+    "click": {
+     "name": "Next",
+     "role": "button"
+    }
+   }
+  ],
+  "mutates": false,
+  "parent": "billpay.pay-details",
+  "recordedBy": "agent",
+  "review": {
+   "by": "conductor",
+   "date": "2026-10-03",
+   "decision": "accept",
+   "note": "same Pay bill Review step (Debug LLC $220.00, ACH, JPMorgan Chase 158856789 / 021000021, Ops / Payroll, Schedule payment). The replay's card adds 'Scheduled · Pay once on Oct 5, 2026', which is date drift: the replay ran on a Saturday, so the send date moves to Monday. The hop clicks Next as the label says.",
+   "reason": "below-threshold"
+  },
+  "similarity": 0.8599,
+  "source": "f045c6c0c8a31e25e9674a187037d5de72f09a7c",
+  "status": "accepted"
+ },
+ "billpay.pay-success": {
+  "checked": "2026-10-02-1349",
+  "fingerprint": {
+   "controls": [
+    "Back to Bill Pay",
+    "Close",
+    "Customize your experience",
+    "Email",
+    "Open account",
+    "Request documents",
+    "Viewing as Admin",
+    "required to file a <n>"
+   ],
+   "headings": [
+    "You’ve scheduled an ACH payment"
+   ],
+   "path": "/send-money/pay/success",
+   "structure": "document",
+   "top": {
+    "name": "",
+    "role": "document"
+   }
+  },
+  "hop": [
+   {
+    "click": {
+     "name": "Schedule payment",
+     "role": "button"
+    }
+   },
+   {
+    "wait": {
+     "ms": 4000
+    }
+   },
+   {
+    "wait": {
+     "locator": {
+      "name": "You’ve scheduled an ACH payment",
+      "role": "heading"
+     }
+    }
+   }
+  ],
+  "mutates": true,
+  "parent": "billpay.pay-review",
+  "recordedBy": "agent",
+  "review": {
+   "by": "conductor",
+   "date": "2026-10-03",
+   "decision": "accept",
+   "note": "same 'You've scheduled an ACH payment' confirmation ($220.00 to Debug LLC, 1099 request card, Back to Bill Pay); the replay adds a 'Scheduled' badge and a 'Pay once on Oct 5, 2026' line, which explains the low score. The screenshot shows the confirmation, not the Review page the recorder note feared",
+   "reason": "below-threshold"
+  },
+  "similarity": 0.8223,
+  "source": "f496eba7c2a610f5a0317968f7cf2f8a6ef659a7",
+  "status": "accepted"
+ },
+ "billpay.payment-canceled": {
+  "checked": "2026-10-02-1349",
+  "fingerprint": {
+   "controls": [],
+   "headings": [],
+   "path": "/bill-pay/scheduled",
+   "structure": "status",
+   "top": {
+    "name": "Scheduled bills",
+    "role": "table"
+   }
+  },
+  "hop": [
+   {
+    "click": {
+     "name": "Cancel payment",
+     "role": "button"
+    }
+   }
+  ],
+  "mutates": true,
+  "parent": "billpay.cancel-payment-confirm",
+  "recordedBy": "agent",
+  "review": {
+   "by": "conductor",
+   "date": "2026-10-03",
+   "decision": "accept",
+   "note": "same Scheduled tab with the row removed (count 2: Domestic Ads, Jean Vallee); 'Payment canceled' toast faded; outstanding/Needs Approval counts drift",
+   "reason": "mutating"
+  },
+  "similarity": 0.9634,
+  "source": "667857003c2e57b431c68bf443590cb5a4d6ff8b",
+  "status": "accepted"
+ },
+ "billpay.quick-approve": {
+  "checked": "2026-10-02-1349",
+  "fingerprint": {
+   "controls": [],
+   "headings": [
+    "No pending approvals"
+   ],
+   "path": "/bill-pay/approvals",
+   "structure": "status",
+   "top": {
+    "name": "",
+    "role": "generic"
+   }
+  },
+  "hop": [
+   {
+    "click": {
+     "name": "Approve",
+     "role": "button"
+    }
+   }
+  ],
+  "mutates": true,
+  "parent": "billpay.approval-panel",
+  "recordedBy": "agent",
+  "review": {
+   "by": "conductor",
+   "date": "2026-10-03",
+   "decision": "accept",
+   "note": "same empty Needs Approval tab ('No pending approvals') with 'Request approved' toast; the hop clicks Approve as labeled",
+   "reason": "mutating"
+  },
+  "similarity": 0.9985,
+  "source": "6e2542d901e19f40492ecfc104306e8feaaf6f8e",
+  "status": "accepted"
+ },
+ "billpay.recipient-card-menu": {
+  "checked": "2026-10-02-1349",
+  "fingerprint": {
+   "controls": [
+    "Edit recipient details",
+    "Pay different recipient"
+   ],
+   "headings": [],
+   "path": "/send-money/pay/recipient-details",
+   "structure": "menu",
+   "top": {
+    "name": "",
+    "role": "menu"
+   }
+  },
+  "hop": [
+   {
+    "click": {
+     "css": "[class*=\"_menuButton_\"]",
+     "index": 1
+    }
+   }
+  ],
+  "mutates": false,
+  "parent": "billpay.pay-recipient",
+  "recordedBy": "agent",
+  "review": null,
+  "similarity": 0.999,
+  "source": "0f93ff8a107922652e14bb5a6e8488721c217feb",
+  "status": "accepted"
+ },
+ "billpay.recipient-search-menu": {
+  "checked": "2026-10-02-1349",
+  "fingerprint": null,
+  "hop": [
+   {
+    "click": {
+     "name": "Search for another recipient",
+     "role": "combobox"
+    }
+   }
+  ],
+  "mutates": false,
+  "parent": "billpay.pay-recipient-match",
+  "recordedBy": "agent",
   "review": null,
   "similarity": null,
   "source": null,
   "status": "draft"
  },
+ "billpay.recipient-updated": {
+  "checked": "2026-10-02-1349",
+  "fingerprint": {
+   "controls": [],
+   "headings": [],
+   "path": "/send-money/pay/recipient-details",
+   "structure": "status",
+   "top": {
+    "name": "",
+    "role": "generic"
+   }
+  },
+  "hop": [
+   {
+    "wait": {
+     "ms": 1500
+    }
+   },
+   {
+    "click": {
+     "name": "Save",
+     "role": "button"
+    }
+   }
+  ],
+  "mutates": true,
+  "parent": "billpay.edit-recipient-details",
+  "recordedBy": "agent",
+  "review": {
+   "by": "conductor",
+   "date": "2026-10-03",
+   "decision": "accept",
+   "note": "same Recipient step with the 'Recipient updated' toast on Debug LLC. The hop clicks Save as the label names. 'Last paid' reads Sep 3 vs Aug 25 in the capture, which is date drift.",
+   "reason": "mutating"
+  },
+  "similarity": 0.999,
+  "source": "739fe852dac795fe64b360044c74952ccdb1242f",
+  "status": "accepted"
+ },
+ "billpay.repeat-frequency-menu": {
+  "checked": "2026-10-02-1349",
+  "fingerprint": {
+   "controls": [
+    "Custom",
+    "Monthly on the <n>st Monday",
+    "Monthly on the <n>th",
+    "Weekly on Monday"
+   ],
+   "headings": [],
+   "path": "/send-money/pay/amount",
+   "structure": "listbox",
+   "top": {
+    "name": "",
+    "role": "listbox"
+   }
+  },
+  "hop": [
+   {
+    "click": {
+     "name": "Repeat",
+     "role": "combobox"
+    }
+   }
+  ],
+  "mutates": false,
+  "parent": "billpay.pay-repeat",
+  "recordedBy": "agent",
+  "review": null,
+  "similarity": 0.976,
+  "source": "3952831fbd71137c5d68f4968561d6695e91f672",
+  "status": "accepted"
+ },
+ "billpay.request-declined": {
+  "checked": "2026-10-02-1349",
+  "fingerprint": {
+   "controls": [],
+   "headings": [
+    "No pending approvals"
+   ],
+   "path": "/bill-pay/approvals",
+   "structure": "status",
+   "top": {
+    "name": "",
+    "role": "generic"
+   }
+  },
+  "hop": [
+   {
+    "click": {
+     "name": "Decline",
+     "role": "button"
+    }
+   }
+  ],
+  "mutates": true,
+  "parent": "billpay.approval-panel",
+  "recordedBy": "agent",
+  "review": {
+   "by": "conductor",
+   "date": "2026-10-03",
+   "decision": "accept",
+   "note": "same empty Needs Approval tab ('No pending approvals') with 'Request declined' toast; the hop clicks Decline as labeled",
+   "reason": "mutating"
+  },
+  "similarity": 0.9985,
+  "source": "ac8758af2b8b97a225a2c4a263e87b1266170933",
+  "status": "accepted"
+ },
+ "billpay.routing-number-error": {
+  "checked": "2026-10-02-1349",
+  "fingerprint": {
+   "controls": [
+    "Account number",
+    "Account type",
+    "Apartment, suite, floor (optional)",
+    "Ask Mercury Command /",
+    "Back",
+    "Business",
+    "Choose Files",
+    "City",
+    "Close",
+    "Country",
+    "Customize your experience",
+    "Email (optional)",
+    "Go back",
+    "Legal name",
+    "Next",
+    "Nickname (optional)",
+    "Open account",
+    "Open combobox menu",
+    "Payment method",
+    "Person",
+    "Postal / ZIP code",
+    "Recipient legal address",
+    "Routing number",
+    "Save",
+    "State",
+    "Viewing as Admin"
+   ],
+   "headings": [
+    "Upload an attachment",
+    "Recipient",
+    "Edit recipient details",
+    "Profile",
+    "Address"
+   ],
+   "path": "/send-money/pay/recipient-details",
+   "structure": "document",
+   "top": {
+    "name": "",
+    "role": "document"
+   }
+  },
+  "hop": [
+   {
+    "fill": {
+     "locator": {
+      "label": "Routing number"
+     },
+     "value": "12345"
+    }
+   },
+   {
+    "click": {
+     "name": "Next",
+     "role": "button"
+    }
+   }
+  ],
+  "mutates": false,
+  "parent": "billpay.bank-details-edit",
+  "recordedBy": "agent",
+  "review": null,
+  "similarity": 0.9989,
+  "source": "bbef6619d9fa00bf47ad70adc4a28dc837469b89",
+  "status": "accepted"
+ },
+ "billpay.row-hover": {
+  "checked": "2026-10-02-1349",
+  "fingerprint": {
+   "controls": [
+    "ACH Authorizations",
+    "Accounting",
+    "Accounts",
+    "Banking",
+    "Bill Pay",
+    "Books",
+    "Cards",
+    "Checkbooks",
+    "Choose Files",
+    "Command New",
+    "Credit Card",
+    "Customize your experience",
+    "Delete",
+    "Feedback",
+    "Home",
+    "Insights",
+    "Invoicing",
+    "Learn about bookmarks",
+    "Mercury Demo Pro",
+    "Move money",
+    "Navigate to Settings",
+    "Open account",
+    "Ops / Payroll <amount>",
+    "Payments",
+    "Recipients",
+    "Remove bookmark",
+    "Remove from bookmarks",
+    "Reorder Bill Pay bookmark",
+    "Reorder Credit Card bookmark",
+    "Reorder Insights bookmark",
+    "Reorder Ops / Payroll bookmark",
+    "Review",
+    "Search for anything",
+    "Send money",
+    "Status",
+    "Tasks <n>",
+    "Taxes",
+    "Team Spend",
+    "Toggle Private Mode",
+    "Transactions",
+    "Upload bill",
+    "Viewing as Admin",
+    "Wire Drawdowns",
+    "my-company-name@ap.mercury.com",
+    "updates"
+   ],
+   "headings": [
+    "Bill Pay",
+    "<n>",
+    "Total outstanding",
+    "Overdue",
+    "Due in next <n> days"
+   ],
+   "path": "/bill-pay",
+   "structure": "document",
+   "top": {
+    "name": "",
+    "role": "document"
+   }
+  },
+  "hop": [
+   {
+    "hover": {
+     "index": 1,
+     "role": "row"
+    }
+   }
+  ],
+  "mutates": false,
+  "parent": "billpay.index",
+  "recordedBy": "agent",
+  "review": {
+   "by": "conductor",
+   "date": "2026-10-03",
+   "decision": "accept",
+   "note": "same Bill Pay inbox with the first row (Debug LLC, INV-902) hovered, trash and Review in place of Last updated, as title, note and label say. The map's capture screens/billpay/49-row-hover-actions.png is the wrong image (a Send money Amount step): recapture it",
+   "reason": "below-threshold"
+  },
+  "similarity": 0.2711,
+  "source": "8070c99472d3b0b3e5a3a003a92390147779b651",
+  "status": "accepted"
+ },
+ "billpay.rule-created": {
+  "checked": "2026-10-02-1349",
+  "fingerprint": {
+   "controls": [
+    "Drag to reorder rule"
+   ],
+   "headings": [],
+   "path": "/accounting/mapping/categorization-rules",
+   "structure": "status",
+   "top": {
+    "name": "Categorization rules in priority order",
+    "role": "table"
+   }
+  },
+  "hop": [
+   {
+    "click": {
+     "name": "Create",
+     "role": "button"
+    }
+   }
+  ],
+  "mutates": true,
+  "parent": "billpay.rule-filled",
+  "recordedBy": "agent",
+  "review": {
+   "by": "conductor",
+   "date": "2026-10-03",
+   "decision": "accept",
+   "note": "same Accounting Settings categorization rules with new rule 7 (Bank Description, Google → Mercury Checking) and the 'Rule created · View rule' toast; the hop clicks Create as the label says; typed value Google vs Figma is a fixture difference",
+   "reason": "mutating"
+  },
+  "similarity": 0.9989,
+  "source": "cc97fd81800e00f463094d436f0ce4d08a77c537",
+  "status": "accepted"
+ },
+ "billpay.rule-deleted": {
+  "checked": "2026-10-02-1349",
+  "fingerprint": {
+   "controls": [
+    "Drag to reorder rule"
+   ],
+   "headings": [],
+   "path": "/accounting/mapping/categorization-rules",
+   "structure": "status",
+   "top": {
+    "name": "Categorization rules in priority order",
+    "role": "table"
+   }
+  },
+  "hop": [
+   {
+    "click": {
+     "name": "Yes, delete rule",
+     "role": "button"
+    }
+   }
+  ],
+  "mutates": true,
+  "parent": "billpay.delete-rule-confirm",
+  "recordedBy": "agent",
+  "review": {
+   "by": "conductor",
+   "date": "2026-10-03",
+   "decision": "accept",
+   "note": "same Categorization rules list renumbered to five rules (Amount, Counterparty Delta, Facebook/Amount, Budget, Bank Description) with the 'Rule deleted' toast; the capture's hover chips on row 3 come from where the pointer happened to rest, not from the state",
+   "reason": "mutating"
+  },
+  "similarity": 0.959,
+  "source": "c29e0607de8633106a10920419ee95ca7ebfa8c8",
+  "status": "accepted"
+ },
  "billpay.rule-details": {
   "checked": "2026-10-02-1349",
   "fingerprint": {
    "controls": [
-    "Add condition",
     "Close detail panel",
-    "Condition <n>",
-    "Create",
-    "Open combobox menu",
-    "Outcome"
+    "Delete rule",
+    "Edit"
    ],
    "headings": [],
    "path": "/accounting/mapping/categorization-rules",
@@ -812,24 +3713,281 @@
   "hop": [
    {
     "click": {
-     "name": "Create a rule",
-     "role": "button"
+     "index": 1,
+     "role": "row"
     }
    }
   ],
   "mutates": false,
   "parent": "billpay.categorization-rules",
-  "recordedBy": "draft",
+  "recordedBy": "agent",
+  "review": null,
+  "similarity": 0.9993,
+  "source": "72c43e258909d8428c467bb5aa9d923bf4773261",
+  "status": "accepted"
+ },
+ "billpay.rule-filled": {
+  "checked": "2026-10-02-1349",
+  "fingerprint": {
+   "controls": [
+    "Accounting",
+    "Accounts",
+    "Add condition",
+    "Add to bookmarks",
+    "Auto-mark ready to sync",
+    "Banking",
+    "Bill Pay",
+    "Books",
+    "Cards",
+    "Close detail panel",
+    "Command New",
+    "Condition <n>",
+    "Create",
+    "Create a rule",
+    "Credit Card",
+    "Customize your experience",
+    "Drag to reorder rule",
+    "GL code",
+    "Home",
+    "Insights",
+    "Invoicing",
+    "Learn about bookmarks",
+    "Mercury Demo Pro",
+    "Move money",
+    "Navigate to Settings",
+    "Open account",
+    "Open combobox menu",
+    "Ops / Payroll <amount>",
+    "Outcome",
+    "Payments",
+    "Remove bookmark",
+    "Reorder Bill Pay bookmark",
+    "Reorder Credit Card bookmark",
+    "Reorder Insights bookmark",
+    "Reorder Ops / Payroll bookmark",
+    "Search for anything",
+    "Tasks <n>",
+    "Team Spend",
+    "Toggle Private Mode",
+    "Transactions",
+    "Value",
+    "Viewing as Admin",
+    "updates"
+   ],
+   "headings": [
+    "Accounting Settings"
+   ],
+   "path": "/accounting/mapping/categorization-rules",
+   "structure": "document",
+   "top": {
+    "name": "",
+    "role": "document"
+   }
+  },
+  "hop": [
+   {
+    "click": {
+     "name": "GL code",
+     "role": "option"
+    }
+   },
+   {
+    "click": {
+     "name": "GL code",
+     "role": "combobox"
+    }
+   },
+   {
+    "click": {
+     "name": "Mercury Checking (7772)",
+     "role": "option"
+    }
+   }
+  ],
+  "mutates": true,
+  "parent": "billpay.rule-outcome-menu",
+  "recordedBy": "agent",
   "review": {
    "by": "conductor",
    "date": "2026-10-03",
-   "decision": "reject",
-   "note": "different panel: the hop clicks 'Create a rule' and opens Create categorization rule; the label means a rule row (Rule details)",
-   "reason": "below-threshold"
+   "decision": "accept",
+   "note": "same Create categorization rule panel: Bank description, then GL code Mercury Checking (7772), Auto-mark toggle on, Create enabled; the typed value is the fixture 'Google' instead of 'Figma'; the hop picks GL code and then a code as the label says",
+   "reason": "mutating"
   },
-  "similarity": 0.8897,
-  "source": "72c43e258909d8428c467bb5aa9d923bf4773261",
-  "status": "rejected"
+  "similarity": 0.9985,
+  "source": "d21a2a861b273b64912daa51ece7ab91fe994adc",
+  "status": "accepted"
+ },
+ "billpay.rule-input-menu": {
+  "checked": "2026-10-02-1349",
+  "fingerprint": {
+   "controls": [
+    "Amount Less than, more than, equal to, or between a range of values",
+    "Bank description Text found anywhere in the bank description (case-insensitive)",
+    "Budget A specific team budget",
+    "Card A specific debit or credit card",
+    "Counterparty A specific recipient or merchant you’ve paid",
+    "Customer A specific customer on an invoice or estimate",
+    "Department A specific functional department set up in Mercury or via your HRIS",
+    "Merchant type A card transaction from a specific industry occurs",
+    "Mercury category A category that drives Insights in Mercury",
+    "Team member Who made or requested the transaction"
+   ],
+   "headings": [],
+   "path": "/accounting/mapping/categorization-rules",
+   "structure": "listbox",
+   "top": {
+    "name": "",
+    "role": "listbox"
+   }
+  },
+  "hop": [
+   {
+    "click": {
+     "name": "Condition 1",
+     "role": "combobox"
+    }
+   }
+  ],
+  "mutates": true,
+  "parent": "billpay.create-rule",
+  "recordedBy": "agent",
+  "review": {
+   "by": "conductor",
+   "date": "2026-10-03",
+   "decision": "accept",
+   "note": "same If dropdown open in the Create categorization rule drawer (Amount, Bank description, Budget, Card, Counterparty...); hop clicks the Condition 1 combobox, i.e. the If select",
+   "reason": "mutating"
+  },
+  "similarity": 0.9988,
+  "source": "b240f4998f57aab1446ff57b7f57f008a784fd78",
+  "status": "accepted"
+ },
+ "billpay.rule-invalid-tooltip": {
+  "checked": "2026-10-02-1349",
+  "fingerprint": {
+   "controls": [],
+   "headings": [],
+   "path": "/accounting/mapping/categorization-rules",
+   "structure": "dialog",
+   "top": {
+    "name": "",
+    "role": "generic"
+   }
+  },
+  "hop": [
+   {
+    "hover": {
+     "text": "Invalid"
+    }
+   }
+  ],
+  "mutates": false,
+  "parent": "billpay.categorization-rules",
+  "recordedBy": "agent",
+  "review": null,
+  "similarity": 0.9994,
+  "source": "ff9208ff2ab31571e50924c4d66e23a7d9f39179",
+  "status": "accepted"
+ },
+ "billpay.rule-outcome-menu": {
+  "checked": "2026-10-02-1349",
+  "fingerprint": {
+   "controls": [
+    "Exclude from review",
+    "GL code",
+    "Mercury category",
+    "Outcome"
+   ],
+   "headings": [],
+   "path": "/accounting/mapping/categorization-rules",
+   "structure": "listbox",
+   "top": {
+    "name": "Outcome",
+    "role": "listbox"
+   }
+  },
+  "hop": [
+   {
+    "click": {
+     "name": "Bank description Text found anywhere in the bank description (case-insensitive)",
+     "role": "option"
+    }
+   },
+   {
+    "fill": {
+     "locator": {
+      "name": "Value",
+      "role": "textbox"
+     },
+     "value": "Google"
+    }
+   },
+   {
+    "click": {
+     "name": "Outcome",
+     "role": "combobox"
+    }
+   }
+  ],
+  "mutates": true,
+  "parent": "billpay.rule-input-menu",
+  "recordedBy": "agent",
+  "review": {
+   "by": "conductor",
+   "date": "2026-10-03",
+   "decision": "accept",
+   "note": "same Create categorization rule panel with Then menu open (GL code, Mercury category, Exclude from review); If = Bank description, fixture value 'Google' instead of 'Figma'",
+   "reason": "mutating"
+  },
+  "similarity": 0.9984,
+  "source": "49097490d6144cc7fdc586db39a44a85de07b459",
+  "status": "accepted"
+ },
+ "billpay.rule-updated": {
+  "checked": "2026-10-02-1349",
+  "fingerprint": {
+   "controls": [
+    "Drag to reorder rule"
+   ],
+   "headings": [],
+   "path": "/accounting/mapping/categorization-rules",
+   "structure": "status",
+   "top": {
+    "name": "Categorization rules in priority order",
+    "role": "table"
+   }
+  },
+  "hop": [
+   {
+    "fill": {
+     "locator": {
+      "name": "Value",
+      "role": "textbox"
+     },
+     "value": "Google"
+    }
+   },
+   {
+    "click": {
+     "name": "Update",
+     "role": "button"
+    }
+   }
+  ],
+  "mutates": true,
+  "parent": "billpay.edit-rule",
+  "recordedBy": "agent",
+  "review": {
+   "by": "conductor",
+   "date": "2026-10-03",
+   "decision": "accept",
+   "note": "same Rule details panel with 'Rule updated' toast; the hop types Google into Value and clicks Update as the label says (capture typed AWS Marketplace)",
+   "reason": "mutating"
+  },
+  "similarity": 0.9916,
+  "source": "5c18b6a7bbc649bd618d9f6760c858cc7f58f6aa",
+  "status": "accepted"
  },
  "billpay.scheduled": {
   "checked": "2026-10-02-1349",
@@ -901,6 +4059,303 @@
   "source": "97d170e1550eee4afc0af065b78cda302a97674c",
   "status": "accepted"
  },
+ "billpay.scheduled-panel": {
+  "checked": "2026-10-02-1349",
+  "fingerprint": {
+   "controls": [
+    "<n> line items",
+    "Cancel payment",
+    "Choose Files",
+    "Close detail panel",
+    "Upload attachment",
+    "note"
+   ],
+   "headings": [],
+   "path": "/bill-pay/scheduled",
+   "structure": "dialog",
+   "top": {
+    "name": "",
+    "role": "complementary"
+   }
+  },
+  "hop": [
+   {
+    "click": {
+     "index": 2,
+     "role": "row"
+    }
+   }
+  ],
+  "mutates": false,
+  "parent": "billpay.scheduled",
+  "recordedBy": "agent",
+  "review": null,
+  "similarity": 0.9873,
+  "source": "4b7d8da3ffa591f252bcc16b12d47866e7613c28",
+  "status": "accepted"
+ },
+ "billpay.send-from-menu": {
+  "checked": "2026-10-02-1349",
+  "fingerprint": {
+   "controls": [
+    "AP <amount> / Checking ••<n>",
+    "AR <amount> / Checking ••<n>",
+    "Checking ••<n> <amount>",
+    "Savings ••<n> <amount>"
+   ],
+   "headings": [],
+   "path": "/send-money/pay/amount",
+   "structure": "listbox",
+   "top": {
+    "name": "",
+    "role": "listbox"
+   }
+  },
+  "hop": [
+   {
+    "click": {
+     "name": "Send from",
+     "role": "combobox"
+    }
+   }
+  ],
+  "mutates": true,
+  "parent": "billpay.pay-amount",
+  "recordedBy": "agent",
+  "review": {
+   "by": "conductor",
+   "date": "2026-10-03",
+   "decision": "accept",
+   "note": "same Send from dropdown open over Pay bill: amount (AP, AR, Checking ••0297, Savings ••7658; Ops / Payroll selected); the hop only opens the Send from combobox, as the label says",
+   "reason": "mutating"
+  },
+  "similarity": 0.9994,
+  "source": "ef183072d05a62335d20303eb2c0de6636bf984c",
+  "status": "accepted"
+ },
+ "billpay.send-on-date-picker": {
+  "checked": "2026-10-02-1349",
+  "fingerprint": {
+   "controls": [],
+   "headings": [],
+   "path": "/send-money/pay/amount",
+   "structure": "dialog",
+   "top": {
+    "name": "",
+    "role": "generic"
+   }
+  },
+  "hop": [
+   {
+    "click": {
+     "name": "Send on",
+     "role": "textbox"
+    }
+   }
+  ],
+  "mutates": true,
+  "parent": "billpay.pay-amount",
+  "recordedBy": "agent",
+  "review": {
+   "by": "conductor",
+   "date": "2026-10-03",
+   "decision": "accept",
+   "note": "same Send on calendar popover with past days disabled and today highlighted; the month moved from Sep 25 to Oct 5 because of date drift; the hop clicks the Send on textbox, as the label says",
+   "reason": "mutating"
+  },
+  "similarity": 0.9776,
+  "source": "9bdf439600d433c31ce4b0292a1fde430503da96",
+  "status": "accepted"
+ },
+ "billpay.settings": {
+  "checked": "2026-10-02-1349",
+  "fingerprint": {
+   "controls": [
+    "Connect",
+    "Edit",
+    "Jane Black",
+    "Jessica Awad",
+    "Manage",
+    "Mary Metcalfe",
+    "my-company-name@ap.mercury.com"
+   ],
+   "headings": [
+    "Bill Pay settings"
+   ],
+   "path": "/bill-pay",
+   "structure": "dialog",
+   "top": {
+    "name": "",
+    "role": "dialog"
+   }
+  },
+  "hop": [
+   {
+    "click": {
+     "index": 23,
+     "role": "button"
+    }
+   }
+  ],
+  "mutates": false,
+  "parent": "billpay.index",
+  "recordedBy": "agent",
+  "review": null,
+  "similarity": 0.9985,
+  "source": "197394cf6d8ae5e2c48cc7e1656074ae35781b64",
+  "status": "accepted"
+ },
+ "billpay.settings-bottom": {
+  "checked": "2026-10-02-1349",
+  "fingerprint": {
+   "controls": [
+    "Connect",
+    "Edit",
+    "Jane Black",
+    "Jessica Awad",
+    "Manage",
+    "Mary Metcalfe",
+    "my-company-name@ap.mercury.com"
+   ],
+   "headings": [
+    "Bill Pay settings"
+   ],
+   "path": "/bill-pay",
+   "structure": "dialog",
+   "top": {
+    "name": "",
+    "role": "dialog"
+   }
+  },
+  "hop": [
+   {
+    "scroll": {
+     "name": "Connect",
+     "role": "link"
+    }
+   }
+  ],
+  "mutates": false,
+  "parent": "billpay.settings",
+  "recordedBy": "agent",
+  "review": null,
+  "similarity": 0.9984,
+  "source": "e7c4621c709e580efb75ece9b264059fb037db70",
+  "status": "accepted"
+ },
+ "billpay.source-tooltip": {
+  "checked": "2026-10-02-1349",
+  "fingerprint": {
+   "controls": [
+    "ACH Authorizations",
+    "Accounting",
+    "Accounts",
+    "Banking",
+    "Bill Pay",
+    "Books",
+    "Cards",
+    "Checkbooks",
+    "Choose Files",
+    "Command New",
+    "Credit Card",
+    "Customize your experience",
+    "Delete",
+    "Feedback",
+    "Home",
+    "Insights",
+    "Invoicing",
+    "Learn about bookmarks",
+    "Mercury Demo Pro",
+    "Move money",
+    "Navigate to Settings",
+    "Open account",
+    "Ops / Payroll <amount>",
+    "Payments",
+    "Recipients",
+    "Remove bookmark",
+    "Remove from bookmarks",
+    "Reorder Bill Pay bookmark",
+    "Reorder Credit Card bookmark",
+    "Reorder Insights bookmark",
+    "Reorder Ops / Payroll bookmark",
+    "Review",
+    "Search for anything",
+    "Send money",
+    "Status",
+    "Tasks <n>",
+    "Taxes",
+    "Team Spend",
+    "Toggle Private Mode",
+    "Transactions",
+    "Upload bill",
+    "Viewing as Admin",
+    "Wire Drawdowns",
+    "my-company-name@ap.mercury.com",
+    "updates"
+   ],
+   "headings": [
+    "Bill Pay",
+    "<n>",
+    "Total outstanding",
+    "Overdue",
+    "Due in next <n> days"
+   ],
+   "path": "/bill-pay",
+   "structure": "dialog",
+   "top": {
+    "name": "",
+    "role": "generic"
+   }
+  },
+  "hop": [
+   {
+    "hover": {
+     "name": "Debug LLC",
+     "role": "cell"
+    }
+   }
+  ],
+  "mutates": false,
+  "parent": "billpay.row-hover",
+  "recordedBy": "agent",
+  "review": null,
+  "similarity": 0.9848,
+  "source": "a21d68d6ae82b5d0121997acc59585cd9c8aff16",
+  "status": "accepted"
+ },
+ "billpay.status-filter": {
+  "checked": "2026-10-02-1349",
+  "fingerprint": {
+   "controls": [
+    "Due next <n>",
+    "Missing due date",
+    "Not due yet",
+    "Overdue"
+   ],
+   "headings": [],
+   "path": "/bill-pay",
+   "structure": "menu",
+   "top": {
+    "name": "Status",
+    "role": "menu"
+   }
+  },
+  "hop": [
+   {
+    "click": {
+     "name": "Status",
+     "role": "menuitem"
+    }
+   }
+  ],
+  "mutates": false,
+  "parent": "billpay.index",
+  "recordedBy": "agent",
+  "review": null,
+  "similarity": 0.9965,
+  "source": "37c253e9fab1c4883707afe3f0ce1e12488abfeb",
+  "status": "accepted"
+ },
  "billpay.upload-popover": {
   "checked": "2026-10-02-1349",
   "fingerprint": {
@@ -930,6 +4385,93 @@
   "review": null,
   "similarity": 0.9799,
   "source": "7fccd75683c08e2337e12796a17f38d3c66256dd",
+  "status": "accepted"
+ },
+ "billpay.zero-inbox-game": {
+  "checked": "2026-10-02-1349",
+  "fingerprint": {
+   "controls": [
+    "ACH Authorizations",
+    "Accounting",
+    "Accounts",
+    "Banking",
+    "Bill Pay",
+    "Books",
+    "Cards",
+    "Checkbooks",
+    "Choose Files",
+    "Command New",
+    "Credit Card",
+    "Customize your experience",
+    "Delete",
+    "Feedback",
+    "Home",
+    "Insights",
+    "Invoicing",
+    "Learn about bookmarks",
+    "Mercury Demo Pro",
+    "Move money",
+    "Navigate to Settings",
+    "Open account",
+    "Ops / Payroll <amount>",
+    "Payments",
+    "Recipients",
+    "Remove bookmark",
+    "Remove from bookmarks",
+    "Reorder Bill Pay bookmark",
+    "Reorder Credit Card bookmark",
+    "Reorder Insights bookmark",
+    "Reorder Ops / Payroll bookmark",
+    "Review",
+    "Search for anything",
+    "Send money",
+    "Start",
+    "Tasks <n>",
+    "Taxes",
+    "Team Spend",
+    "Toggle Private Mode",
+    "Transactions",
+    "Upload bill",
+    "Viewing as Admin",
+    "Wire Drawdowns",
+    "my-company-name@ap.mercury.com",
+    "updates"
+   ],
+   "headings": [
+    "Bill Pay",
+    "<n>",
+    "Total outstanding",
+    "Overdue",
+    "Due in next <n> days",
+    "How to play"
+   ],
+   "path": "/bill-pay",
+   "structure": "document",
+   "top": {
+    "name": "",
+    "role": "document"
+   }
+  },
+  "hop": [
+   {
+    "click": {
+     "name": "Play Zero Inbox",
+     "role": "button"
+    }
+   }
+  ],
+  "mutates": true,
+  "parent": "billpay.inbox-zero",
+  "recordedBy": "agent",
+  "review": {
+   "by": "conductor",
+   "date": "2026-10-03",
+   "decision": "accept",
+   "note": "same Zero Inbox game panel (HOW TO PLAY, Score 0, Start); the hop clicks Play Zero Inbox as the label says; the leftover 'Deleted 3 items' toast in the light replay is fine",
+   "reason": "mutating"
+  },
+  "similarity": 0.9996,
+  "source": "00dd387fd11c53c3234c82c5d11e61f808b12aa0",
   "status": "accepted"
  }
 }

@@ -1,0 +1,244 @@
+{
+ "batch": "record-050",
+ "reach": {
+  "baseUrl": "https://demo.mercury.com",
+  "data": "data",
+  "map": "build/map.json",
+  "run": "2026-10-02-1349",
+  "workspace": "a11y"
+ },
+ "run": "2026-10-02-1349",
+ "states": [
+  {
+   "area": "payments",
+   "draft": "not drafted: its parent had no accepted recipe when the drafter ran",
+   "image": "screens/payments/100-batch-approval-review.png",
+   "kind": "page",
+   "labels": [
+    "Tick two request checkboxes",
+    "Click Review Requests"
+   ],
+   "mutates": false,
+   "note": "Full-screen reviewer: 'Approval 1 of 2', wire total, from account, send on Tomorrow, batch link, Decline / Approve / Skip, attachment pane.",
+   "parent": "payments.approvals-bulk",
+   "state": "payments.batch-review",
+   "title": "Review batch payment"
+  },
+  {
+   "area": "payments",
+   "draft": "not drafted: its parent had no accepted recipe when the drafter ran",
+   "image": "screens/payments/101-batch-approval-next.png",
+   "kind": "form-state",
+   "labels": [
+    "Tick two request checkboxes",
+    "Click Review Requests",
+    "Click Approve"
+   ],
+   "mutates": true,
+   "note": "After approving the first item: advances to 'Approval 2 of 2' with an 'Approved' toast.",
+   "parent": "payments.batch-review",
+   "state": "payments.batch-review-next",
+   "title": "Batch review: next item"
+  },
+  {
+   "area": "payments",
+   "draft": "not drafted: its parent had no accepted recipe when the drafter ran; the conductor rejected the previous recipe: different screen: the replay stays on 'How would you like to request money?' with 'Please complete this field' under Name; the hop clicks Next without picking a customer, so Payment link details (Orbit Labs Inc) never opens; a previous recorder failed: policy (now retry: policy.fixtureValues gained empty \"\", 2000000, 10000, 500, 150, card, a): Radio plus Next reaches a different screen (0.558): with no customer chosen Next does not advance (capture shows customer Orbit Labs Inc selected). Needs selecting or adding a customer, an action no label records and not covered by fixture values.",
+   "image": "screens/payments/50-request-link-form.png",
+   "kind": "form-state",
+   "labels": [
+    "Choose Request money without an invoice, click Next"
+   ],
+   "mutates": false,
+   "note": "Payment link form: customer card, currency, amount, payer memo, methods, destination account, payer page preview.",
+   "parent": "payments.request-start",
+   "state": "payments.request-link-form",
+   "title": "Payment link details"
+  },
+  {
+   "area": "payments",
+   "draft": "not drafted: its parent had no accepted recipe when the drafter ran",
+   "image": "screens/payments/51-request-send.png",
+   "kind": "confirmation",
+   "labels": [
+    "Choose Request money without an invoice, click Next",
+    "Enter amount, click Create & send"
+   ],
+   "mutates": true,
+   "note": "'Your payment link has been created and sent' with amount, copyable link and a 'Payment link created!' toast.",
+   "parent": "payments.request-link-form",
+   "state": "payments.request-success",
+   "title": "Payment link sent"
+  },
+  {
+   "area": "payments",
+   "draft": "not drafted: its parent had no accepted recipe when the drafter ran",
+   "image": "screens/payments/107-scheduled-edit-review.png",
+   "kind": "modal",
+   "labels": [
+    "Click a scheduled row",
+    "Click Edit",
+    "Change amount, click Review"
+   ],
+   "mutates": false,
+   "note": "Review modal: send-from account, plain-language payment rule, next three dates with amounts, no end date; Cancel / Confirm.",
+   "parent": "payments.scheduled-edit",
+   "state": "payments.scheduled-edit-review",
+   "title": "Review new payment details"
+  },
+  {
+   "area": "payments",
+   "draft": "not drafted: its parent had no accepted recipe when the drafter ran",
+   "image": "screens/payments/108-scheduled-updated-toast.png",
+   "kind": "toast",
+   "labels": [
+    "Click a scheduled row",
+    "Click Edit",
+    "Change amount, click Review",
+    "Click Confirm"
+   ],
+   "mutates": true,
+   "note": "After Confirm: 'Payment(s) updated' toast, new rule in the panel, and every row in the table now shows 'No due date'.",
+   "parent": "payments.scheduled-edit-review",
+   "state": "payments.scheduled-updated",
+   "title": "Payment(s) updated"
+  },
+  {
+   "area": "payments",
+   "draft": "not drafted: its parent had no accepted recipe when the drafter ran",
+   "image": "screens/payments/97-approval-approved-toast.png",
+   "kind": "toast",
+   "labels": [
+    "Click a request row",
+    "Click Approve"
+   ],
+   "mutates": true,
+   "note": "Approve from the panel: row leaves the list, count drops 7 to 6, 'Request approved' toast.",
+   "parent": "payments.approval-detail",
+   "state": "payments.approval-approved",
+   "title": "Request approved"
+  },
+  {
+   "area": "payments",
+   "draft": "not drafted: its parent had no accepted recipe when the drafter ran",
+   "image": "screens/payments/98-approval-declined-toast.png",
+   "kind": "toast",
+   "labels": [
+    "Click a request row",
+    "Click Decline"
+   ],
+   "mutates": true,
+   "note": "Decline from the panel fires immediately with no confirmation; 'Request declined' toast with a green check.",
+   "parent": "payments.approval-detail",
+   "state": "payments.approval-declined",
+   "title": "Request declined"
+  },
+  {
+   "area": "payments",
+   "draft": "not drafted: its parent had no accepted recipe when the drafter ran",
+   "image": "screens/payments/61-recipient-created.png",
+   "kind": "drawer",
+   "labels": [
+    "Click Create recipient",
+    "Type street in Recipient legal address",
+    "Pick suggestion, click Create recipient"
+   ],
+   "mutates": true,
+   "note": "New recipient opens in the side panel with no payment details and a 'Recipient created / Send Payment' toast.",
+   "parent": "payments.recipient-address-autocomplete",
+   "state": "payments.recipient-created",
+   "title": "Recipient created"
+  },
+  {
+   "area": "payments",
+   "draft": "cannot parse \"Fill name + email\"; a previous recorder failed: policy (now retry: policy.fixtureValues gained empty \"\", 2000000, 10000, 500, 150, card, a): Reaching Send request needs unchecking 'Set up a payment now' and multi-step payment setup, which no label records. Capture also shows the invitee Priya Raman, not a fixture value.",
+   "image": "screens/payments/57-recipient-invite-sent.png",
+   "kind": "toast",
+   "labels": [
+    "Click Invite recipient",
+    "Fill name + email, click Send request"
+   ],
+   "mutates": true,
+   "note": "Back on Recipients with toast 'Priya Raman has been invited to fill out their payment details.'",
+   "parent": "payments.recipient-invite",
+   "state": "payments.recipient-invite-sent",
+   "title": "Invite sent toast"
+  },
+  {
+   "area": "payments",
+   "draft": "nothing on payments.recipient-invite matches {\"click\":{\"name\":\"Send request empty\"}}; the conductor rejected the previous recipe: different form state: the hop clicks 'Next' (replay has 'Set up a payment now' checked, with the stepper and ACH/Check/Wire methods); the label and capture mean 'Send request' with the box unchecked. The Name/Email errors match, but the form is a different variant",
+   "image": "screens/payments/55-recipient-invite-validation.png",
+   "kind": "validation-error",
+   "labels": [
+    "Click Invite recipient",
+    "Click Send request empty"
+   ],
+   "mutates": true,
+   "note": "Send request empty: 'Please complete this field' under Name and Email.",
+   "parent": "payments.recipient-invite",
+   "state": "payments.recipient-invite-validation",
+   "title": "Invite: required fields"
+  },
+  {
+   "area": "payments",
+   "draft": "not drafted: its parent had no accepted recipe when the drafter ran",
+   "image": "screens/payments/49-request-add-customer.png",
+   "kind": "form-state",
+   "labels": [
+    "Open Name combobox",
+    "Click Add new customer"
+   ],
+   "mutates": false,
+   "note": "Inline Add customer form: name, primary email, additional emails, address toggle.",
+   "parent": "payments.request-customer-dropdown",
+   "state": "payments.request-add-customer",
+   "title": "Request: Add customer"
+  },
+  {
+   "area": "payments",
+   "draft": "not drafted: its parent had no accepted recipe when the drafter ran",
+   "image": "screens/payments/105-scheduled-canceled-toast.png",
+   "kind": "toast",
+   "labels": [
+    "Click a scheduled row",
+    "Click Cancel payment",
+    "Click Cancel payment"
+   ],
+   "mutates": true,
+   "note": "Payment removed from Scheduled (7 to 6) with 'Payment canceled' toast.",
+   "parent": "payments.scheduled-cancel",
+   "state": "payments.scheduled-canceled",
+   "title": "Payment canceled"
+  },
+  {
+   "area": "payments",
+   "draft": "cannot parse \"Type in recipient Search\"; a previous recorder failed: policy (now retry: policy.fixtureValues gained empty \"\", 2000000, 10000, 500, 150, card, a): The label types into recipient Search and the capture shows 'a'; 'a' is not a fixture value.",
+   "image": "screens/payments/04-send-recipient-search.png",
+   "kind": "popover",
+   "labels": [
+    "Type in recipient Search"
+   ],
+   "mutates": false,
+   "note": "Recipient search combobox open with matching recipients listed.",
+   "parent": "payments.send-start",
+   "state": "payments.send-recipient-search",
+   "title": "Send: recipient search"
+  },
+  {
+   "area": "payments",
+   "draft": "not drafted: its parent had no accepted recipe when the drafter ran",
+   "image": "screens/payments/28-transfer-to-dropdown.png",
+   "kind": "menu",
+   "labels": [
+    "Click Move money",
+    "Click Transfer",
+    "Open Transfer from",
+    "Pick source, open Transfer to"
+   ],
+   "mutates": true,
+   "note": "Destination list incl. internal accounts and external accounts (Iron Bank, Chase, Capital One).",
+   "parent": "payments.transfer-from-dropdown",
+   "state": "payments.transfer-to-dropdown",
+   "title": "Transfer: to account list"
+  }
+ ]
+}

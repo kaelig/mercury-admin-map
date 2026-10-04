@@ -1,0 +1,51 @@
+{
+ "batch": "record-134",
+ "reach": {
+  "baseUrl": "https://demo.mercury.com",
+  "data": "data",
+  "map": "build/map.json",
+  "run": "2026-10-02-1349",
+  "workspace": "a11y"
+ },
+ "run": "2026-10-02-1349",
+ "states": [
+  {
+   "area": "settings",
+   "draft": "not drafted: its parent had no accepted recipe when the drafter ran",
+   "image": "screens/settings/86-create-webhook-filled.png",
+   "kind": "form-state",
+   "labels": [
+    "Click + Create webhook",
+    "Enter an http:// URL and tab away",
+    "Switch to https:// and click Verify endpoint",
+    "Open the Event types combobox",
+    "Tick two event types and close the list"
+   ],
+   "mutates": true,
+   "note": "Verified URL, Event types '2 selected', Create endpoint enabled.",
+   "parent": "settings.webhook-event-types",
+   "state": "settings.create-webhook-filled",
+   "title": "Create webhook \u2014 ready to submit"
+  },
+  {
+   "area": "settings",
+   "draft": "not drafted: its parent had no accepted recipe when the drafter ran",
+   "image": "screens/settings/98-token-created.png",
+   "kind": "confirmation",
+   "labels": [
+    "Click + Create an API token",
+    "Click Create token with the form empty",
+    "Enter a nickname and open Permissions",
+    "Choose Custom Scopes",
+    "Open the Scopes combobox",
+    "Pick Send Money * and click Create token without an IP",
+    "Enter an IP and click Create token"
+   ],
+   "mutates": true,
+   "note": "'Here is your API token' \u2014 'For security reasons, this is the only time we will display this token to you\u2026', the token string and 'Please copy and save this token before closing.' Closing is an X.",
+   "parent": "settings.token-ip-required",
+   "state": "settings.token-created",
+   "title": "API token created"
+  }
+ ]
+}

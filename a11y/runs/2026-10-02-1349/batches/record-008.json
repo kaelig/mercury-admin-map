@@ -1,0 +1,232 @@
+{
+ "batch": "record-008",
+ "reach": {
+  "baseUrl": "https://demo.mercury.com",
+  "data": "data",
+  "map": "build/map.json",
+  "run": "2026-10-02-1349",
+  "workspace": "a11y"
+ },
+ "run": "2026-10-02-1349",
+ "states": [
+  {
+   "area": "billpay",
+   "draft": "cannot parse \"Hover a bill row\"",
+   "image": "screens/billpay/49-row-hover-actions.png",
+   "kind": "form-state",
+   "labels": [
+    "Hover a bill row"
+   ],
+   "mutates": false,
+   "note": "Hovering an inbox row replaces 'Last updated' with a trash icon button and a Review button.",
+   "parent": "billpay.index",
+   "state": "billpay.row-hover",
+   "title": "Row hover actions"
+  },
+  {
+   "area": "billpay",
+   "draft": "not drafted: its parent had no accepted recipe when the drafter ran",
+   "image": "screens/billpay/50-delete-bill-confirm.png",
+   "kind": "modal",
+   "labels": [
+    "Hover a bill row",
+    "Click trash icon"
+   ],
+   "mutates": false,
+   "note": "Row trash icon opens 'Delete item?' with Cancel / Delete item.",
+   "parent": "billpay.row-hover",
+   "state": "billpay.delete-bill-confirm",
+   "title": "Delete item dialog"
+  },
+  {
+   "area": "billpay",
+   "draft": "not drafted: its parent had no accepted recipe when the drafter ran",
+   "image": "screens/billpay/51-source-tooltip.png",
+   "kind": "popover",
+   "labels": [
+    "Hover a bill row",
+    "Hover envelope avatar"
+   ],
+   "mutates": false,
+   "note": "Hovering the envelope avatar shows 'Emailed by demo@mercury.com'.",
+   "parent": "billpay.row-hover",
+   "state": "billpay.source-tooltip",
+   "title": "Bill source tooltip"
+  },
+  {
+   "area": "billpay",
+   "draft": "not drafted: its parent had no accepted recipe when the drafter ran; the conductor rejected the previous recipe: different panel: the hop clicks 'Create a rule' and opens Create categorization rule; the label means a rule row (Rule details)",
+   "image": "screens/billpay/110-rule-details.png",
+   "kind": "drawer",
+   "labels": [
+    "Click a rule row"
+   ],
+   "mutates": false,
+   "note": "Clicking a rule opens 'Rule details' (If Bank Description has AWS, then 782 - Expense Account) with Delete rule and Edit.",
+   "parent": "billpay.categorization-rules",
+   "state": "billpay.rule-details",
+   "title": "Rule details panel"
+  },
+  {
+   "area": "billpay",
+   "draft": "not drafted: its parent had no accepted recipe when the drafter ran",
+   "image": "screens/billpay/111-edit-rule.png",
+   "kind": "form-state",
+   "labels": [
+    "Click a rule row",
+    "Click Edit"
+   ],
+   "mutates": false,
+   "note": "Edit mode of the rule panel: If select 'Bank description' with value AWS and helper text, Then GL code '782 - Expense Account', Auto-mark ready toggle, Cancel / Update and 'Updates will only apply to future transactions.'",
+   "parent": "billpay.rule-details",
+   "state": "billpay.edit-rule",
+   "title": "Edit categorization rule"
+  },
+  {
+   "area": "billpay",
+   "draft": "not drafted: its parent had no accepted recipe when the drafter ran",
+   "image": "screens/billpay/117-rule-updated.png",
+   "kind": "toast",
+   "labels": [
+    "Click a rule row",
+    "Click Edit",
+    "Change the value, click Update"
+   ],
+   "mutates": true,
+   "note": "After Update the panel returns to Rule details ('If Bank Description has AWS Marketplace then 782 - Expense Account'), the row updates and a 'Rule updated' toast shows.",
+   "parent": "billpay.edit-rule",
+   "state": "billpay.rule-updated",
+   "title": "Rule updated"
+  },
+  {
+   "area": "billpay",
+   "draft": "nothing on billpay.index matches {\"check\":{\"name\":\"select-all\"}}",
+   "image": "screens/billpay/45-bulk-select-all.png",
+   "kind": "form-state",
+   "labels": [
+    "Check select-all"
+   ],
+   "mutates": false,
+   "note": "Selecting all rows shows a floating bar: '3 items selected $13,110.00 total' with Delete and Review.",
+   "parent": "billpay.index",
+   "state": "billpay.bulk-select",
+   "title": "Bulk selection bar"
+  },
+  {
+   "area": "billpay",
+   "draft": "not drafted: its parent had no accepted recipe when the drafter ran",
+   "image": "screens/billpay/46-bulk-delete-confirm.png",
+   "kind": "modal",
+   "labels": [
+    "Check select-all",
+    "Click Delete"
+   ],
+   "mutates": true,
+   "note": "Confirmation 'Delete items?' with Cancel / Delete 3 items.",
+   "parent": "billpay.bulk-select",
+   "state": "billpay.bulk-delete-confirm",
+   "title": "Delete items dialog"
+  },
+  {
+   "area": "billpay",
+   "draft": "nothing on billpay.scheduled matches {\"click\":{\"name\":\"scheduled\"}}",
+   "image": "screens/billpay/15-scheduled-detail.png",
+   "kind": "drawer",
+   "labels": [
+    "Click scheduled row"
+   ],
+   "mutates": false,
+   "note": "Side panel for a scheduled payment with Cancel payment, metadata, line items, notes and attachments.",
+   "parent": "billpay.scheduled",
+   "state": "billpay.scheduled-panel",
+   "title": "Scheduled payment panel"
+  },
+  {
+   "area": "billpay",
+   "draft": "not drafted: its parent had no accepted recipe when the drafter ran",
+   "image": "screens/billpay/16-cancel-payment-confirm.png",
+   "kind": "modal",
+   "labels": [
+    "Click scheduled row",
+    "Click Cancel payment"
+   ],
+   "mutates": true,
+   "note": "Confirmation dialog 'Cancel recurring payment' with the payment rule and Go back / Cancel payment.",
+   "parent": "billpay.scheduled-panel",
+   "state": "billpay.cancel-payment-confirm",
+   "title": "Cancel payment dialog"
+  },
+  {
+   "area": "billpay",
+   "draft": "nothing on billpay.index matches {\"click\":{\"name\":\"Status filter\"}}",
+   "image": "screens/billpay/02-status-filter-menu.png",
+   "kind": "menu",
+   "labels": [
+    "Click Status filter"
+   ],
+   "mutates": false,
+   "note": "Status dropdown with checkboxes for Overdue, Due next 7, Not due yet and Missing due date.",
+   "parent": "billpay.index",
+   "state": "billpay.status-filter",
+   "title": "Status filter menu"
+  },
+  {
+   "area": "billpay",
+   "draft": "not drafted: its parent had no accepted recipe when the drafter ran",
+   "image": "screens/billpay/52-filter-no-results.png",
+   "kind": "empty-state",
+   "labels": [
+    "Click Status filter",
+    "Check Missing due date"
+   ],
+   "mutates": false,
+   "note": "Filter chip 'Missing due date' with Reset; 'No drafts or bills found. Try changing your filters.' over a skeleton table.",
+   "parent": "billpay.status-filter",
+   "state": "billpay.filter-empty",
+   "title": "Filtered empty state"
+  },
+  {
+   "area": "billpay",
+   "draft": "nothing on billpay.accounting-upload-csv matches {\"click\":{\"name\":\"CSV file\"}}",
+   "image": "screens/billpay/58-accounting-csv-selected.png",
+   "kind": "form-state",
+   "labels": [
+    "Click Or upload a CSV",
+    "Choose CSV file"
+   ],
+   "mutates": true,
+   "note": "The chosen CSV shows as a file chip with Remove, and Upload becomes enabled.",
+   "parent": "billpay.accounting-upload-csv",
+   "state": "billpay.accounting-csv-selected",
+   "title": "GL CSV selected"
+  },
+  {
+   "area": "billpay",
+   "draft": "cannot parse \"Hover '0 of 2'\"",
+   "image": "screens/billpay/83-approvers-tooltip.png",
+   "kind": "popover",
+   "labels": [
+    "Hover '0 of 2'"
+   ],
+   "mutates": false,
+   "note": "Hovering '0 of 2' in the Approvals column lists the available approvers (Jane B., Landon S., Mary M.).",
+   "parent": "billpay.needs-approval",
+   "state": "billpay.approvers-tooltip",
+   "title": "Available approvers tooltip"
+  },
+  {
+   "area": "billpay",
+   "draft": "nothing on billpay.automation-settings matches {\"click\":{\"name\":\"Auto-categorization off\"}}",
+   "image": "screens/billpay/72-auto-categorization-off.png",
+   "kind": "toast",
+   "labels": [
+    "Toggle Auto-categorization off"
+   ],
+   "mutates": false,
+   "note": "Turning the switch off shows 'Auto-categorization disabled' and a 'Provide feedback' popover.",
+   "parent": "billpay.automation-settings",
+   "state": "billpay.auto-categorization-off",
+   "title": "Auto-categorization off"
+  }
+ ]
+}

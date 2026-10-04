@@ -1,0 +1,184 @@
+{
+ "batch": "record-027",
+ "reach": {
+  "baseUrl": "https://demo.mercury.com",
+  "data": "data",
+  "map": "build/map.json",
+  "run": "2026-10-02-1349",
+  "workspace": "a11y"
+ },
+ "run": "2026-10-02-1349",
+ "states": [
+  {
+   "area": "settings",
+   "draft": "cannot parse \"Scroll to Account recovery\"",
+   "image": "screens/settings/120-personal-security-lower.png",
+   "kind": "page",
+   "labels": [
+    "Scroll to Account recovery"
+   ],
+   "mutates": false,
+   "note": "2FA methods (YubiKey, '2FA app (Third-party)' with 'Reset or Remove'), '+ Add another verification method', Account recovery (Backup codes 6/8 remaining, grey 'Required' tag, 'Generate New Codes'), Password with 'Change password', and 'Where you\u2019re signed in' with 'Log out other sessions' and per-row 'Sign out'.",
+   "parent": "settings.personal-security",
+   "state": "settings.personal-security-lower",
+   "title": "Security \u2014 recovery, password, sessions"
+  },
+  {
+   "area": "settings",
+   "draft": "not drafted: its parent had no accepted recipe when the drafter ran",
+   "image": "screens/settings/121-backup-codes.png",
+   "kind": "modal",
+   "labels": [
+    "Scroll to Account recovery",
+    "Click Generate New Codes"
+   ],
+   "mutates": true,
+   "note": "Full-screen takeover with an 'esc' close: eight monospace codes, Print / Download / Copy, and a required checkbox 'I\u2019ve saved my backup codes in a secure place' that enables Done.",
+   "parent": "settings.personal-security-lower",
+   "state": "settings.backup-codes",
+   "title": "Save your new backup codes"
+  },
+  {
+   "area": "settings",
+   "draft": "not drafted: its parent had no accepted recipe when the drafter ran",
+   "image": "screens/settings/117-change-password.png",
+   "kind": "modal",
+   "labels": [
+    "Scroll to Account recovery",
+    "Click Change password"
+   ],
+   "mutates": false,
+   "note": "'Change Password' heading, Old / New / Repeat New Password fields with show toggles, a pre-ticked 'Log out of all other devices' checkbox, Cancel / 'Change password'.",
+   "parent": "settings.personal-security-lower",
+   "state": "settings.change-password",
+   "title": "Change Password modal"
+  },
+  {
+   "area": "settings",
+   "draft": "not drafted: its parent had no accepted recipe when the drafter ran",
+   "image": "screens/settings/118-change-password-errors.png",
+   "kind": "validation-error",
+   "labels": [
+    "Scroll to Account recovery",
+    "Click Change password",
+    "Enter short passwords and submit"
+   ],
+   "mutates": true,
+   "note": "Short new passwords flag New and Repeat fields with 'Minimum 10 characters'.",
+   "parent": "settings.change-password",
+   "state": "settings.change-password-short",
+   "title": "Change password \u2014 too short"
+  },
+  {
+   "area": "settings",
+   "draft": "not drafted: its parent had no accepted recipe when the drafter ran",
+   "image": "screens/settings/123-add-verification-method.png",
+   "kind": "modal",
+   "labels": [
+    "Scroll to Account recovery",
+    "Click + Add another verification method"
+   ],
+   "mutates": false,
+   "note": "'+ Add another verification method' first asks for a backup code (placeholder 'ABCD-EFGH-IJKL-MNOP'), with left-aligned Cancel / Submit, 'Use passkey instead', 'Use 2FA code instead', 'Backup code guide' and 'Unable to log in?'.",
+   "parent": "settings.personal-security-lower",
+   "state": "settings.verify-identity",
+   "title": "Verify your identity first"
+  },
+  {
+   "area": "settings",
+   "draft": "not drafted: its parent had no accepted recipe when the drafter ran",
+   "image": "screens/settings/124-verify-identity-result.png",
+   "kind": "modal",
+   "labels": [
+    "Scroll to Account recovery",
+    "Click + Add another verification method",
+    "Enter a backup code and click Submit"
+   ],
+   "mutates": true,
+   "note": "Any code (tested 'AAAA-BBBB-CCCC-DDDD') is accepted and the modal becomes a spinner: 'Waiting for security key \u2014 Follow browser instructions to complete setup'. The WebAuthn prompt was not pursued.",
+   "parent": "settings.verify-identity",
+   "state": "settings.waiting-security-key",
+   "title": "Waiting for security key"
+  },
+  {
+   "area": "settings",
+   "draft": "structure-missing: a modal needs an open layer; the replay found none",
+   "image": "screens/settings/28-netsuite-step1.png",
+   "kind": "modal",
+   "labels": [
+    "Click the NetSuite row"
+   ],
+   "mutates": false,
+   "note": "Account mapping: each Mercury account (Treasury, Ops / Payroll, AP, AR, checking, savings, credit) mapped to a NetSuite GL code select.",
+   "parent": "settings.integrations",
+   "state": "settings.netsuite-step1",
+   "title": "NetSuite setup \u2014 Step 1 of 3"
+  },
+  {
+   "area": "settings",
+   "draft": "not drafted: its parent had no accepted recipe when the drafter ran",
+   "image": "screens/settings/29-netsuite-gl-dropdown.png",
+   "kind": "menu",
+   "labels": [
+    "Click the NetSuite row",
+    "Open the Treasury GL code select"
+   ],
+   "mutates": false,
+   "note": "GL code select open with options like Mercury Checking (7772), Mercury Savings (7774), 120 - Accounts Receivable.",
+   "parent": "settings.netsuite-step1",
+   "state": "settings.netsuite-gl-dropdown",
+   "title": "NetSuite setup \u2014 GL code options"
+  },
+  {
+   "area": "settings",
+   "draft": "not drafted: its parent had no accepted recipe when the drafter ran",
+   "image": "screens/settings/30-netsuite-step2.png",
+   "kind": "form-state",
+   "labels": [
+    "Click the NetSuite row",
+    "Open the Treasury GL code select",
+    "Pick a GL code and click Next"
+   ],
+   "mutates": false,
+   "note": "Advanced account defaults: Bill pay GL code select; Next stays disabled until a code is chosen.",
+   "parent": "settings.netsuite-gl-dropdown",
+   "state": "settings.netsuite-step2",
+   "title": "NetSuite setup \u2014 Step 2 of 3"
+  },
+  {
+   "area": "settings",
+   "draft": "not drafted: its parent had no accepted recipe when the drafter ran",
+   "image": "screens/settings/31-netsuite-step3.png",
+   "kind": "form-state",
+   "labels": [
+    "Click the NetSuite row",
+    "Open the Treasury GL code select",
+    "Pick a GL code and click Next",
+    "Choose a Bill pay GL code and click Next"
+   ],
+   "mutates": false,
+   "note": "'When do you want to sync from?' radio choice (today / a past date) with Back and Start sync.",
+   "parent": "settings.netsuite-step2",
+   "state": "settings.netsuite-step3",
+   "title": "NetSuite setup \u2014 Step 3 of 3"
+  },
+  {
+   "area": "settings",
+   "draft": "not drafted: its parent had no accepted recipe when the drafter ran",
+   "image": "screens/settings/32-netsuite-synced.png",
+   "kind": "toast",
+   "labels": [
+    "Click the NetSuite row",
+    "Open the Treasury GL code select",
+    "Pick a GL code and click Next",
+    "Choose a Bill pay GL code and click Next",
+    "Click Start sync"
+   ],
+   "mutates": true,
+   "note": "Back on Integrations, NetSuite leaves the browse list and a toast says 'Your Mercury account is now connected to NetSuite.'",
+   "parent": "settings.netsuite-step3",
+   "state": "settings.netsuite-connected",
+   "title": "NetSuite connected toast"
+  }
+ ]
+}

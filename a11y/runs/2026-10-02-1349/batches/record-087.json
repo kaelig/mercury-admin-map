@@ -1,0 +1,30 @@
+{
+ "batch": "record-087",
+ "reach": {
+  "baseUrl": "https://demo.mercury.com",
+  "data": "data",
+  "map": "build/map.json",
+  "run": "2026-10-02-1349",
+  "workspace": "a11y"
+ },
+ "run": "2026-10-02-1349",
+ "states": [
+  {
+   "area": "payments",
+   "draft": "not drafted: its parent had no accepted recipe when the drafter ran",
+   "image": "screens/payments/102-batch-approval-success.png",
+   "kind": "confirmation",
+   "labels": [
+    "Tick two request checkboxes",
+    "Click Review Requests",
+    "Click Approve",
+    "Click Approve on the last item"
+   ],
+   "mutates": true,
+   "note": "'You've reviewed 2 payments', receipts sent, $12,085.90 approved total with View details, Back to needs approval.",
+   "parent": "payments.batch-review-next",
+   "state": "payments.batch-success",
+   "title": "Batch approval done"
+  }
+ ]
+}

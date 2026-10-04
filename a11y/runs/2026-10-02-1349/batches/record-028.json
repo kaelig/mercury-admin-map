@@ -1,0 +1,210 @@
+{
+ "batch": "record-028",
+ "reach": {
+  "baseUrl": "https://demo.mercury.com",
+  "data": "data",
+  "map": "build/map.json",
+  "run": "2026-10-02-1349",
+  "workspace": "a11y"
+ },
+ "run": "2026-10-02-1349",
+ "states": [
+  {
+   "area": "settings",
+   "draft": "nothing on settings.team matches {\"click\":{\"name\":\"a team member\"}}",
+   "image": "screens/settings/49-user-detail.png",
+   "kind": "drawer",
+   "labels": [
+    "Click a team member row"
+   ],
+   "mutates": false,
+   "note": "Right-side panel for Alice Chen: role tag, Assign Budget / Edit / Remove, member info, role permissions; the left rail switches from Settings nav to the main Banking nav.",
+   "parent": "settings.team",
+   "state": "settings.user-detail",
+   "title": "Team member detail panel"
+  },
+  {
+   "area": "settings",
+   "draft": "not drafted: its parent had no accepted recipe when the drafter ran",
+   "image": "screens/settings/50-edit-user.png",
+   "kind": "form-state",
+   "labels": [
+    "Click a team member row",
+    "Click Edit"
+   ],
+   "mutates": false,
+   "note": "Panel in edit mode: job title select (Other) + free-text title, department combobox, role select and permission toggles.",
+   "parent": "settings.user-detail",
+   "state": "settings.edit-member",
+   "title": "Edit member panel"
+  },
+  {
+   "area": "settings",
+   "draft": "not drafted: its parent had no accepted recipe when the drafter ran",
+   "image": "screens/settings/51-edit-user-dirty.png",
+   "kind": "form-state",
+   "labels": [
+    "Click a team member row",
+    "Click Edit",
+    "Change Specify job title"
+   ],
+   "mutates": false,
+   "note": "After changing the job title, the panel footer's Cancel/Save become active (Save was disabled until a change).",
+   "parent": "settings.edit-member",
+   "state": "settings.edit-member-dirty",
+   "title": "Edit member \u2014 changed, Save enabled"
+  },
+  {
+   "area": "settings",
+   "draft": "not drafted: its parent had no accepted recipe when the drafter ran",
+   "image": "screens/settings/52-user-saved.png",
+   "kind": "toast",
+   "labels": [
+    "Click a team member row",
+    "Click Edit",
+    "Change Specify job title",
+    "Click Save"
+   ],
+   "mutates": true,
+   "note": "Panel returns to read view showing 'Senior Software Engineer' and a 'Job title updated' toast.",
+   "parent": "settings.edit-member-dirty",
+   "state": "settings.member-saved",
+   "title": "Job title updated toast"
+  },
+  {
+   "area": "settings",
+   "draft": "not drafted: its parent had no accepted recipe when the drafter ran",
+   "image": "screens/settings/53-remove-user.png",
+   "kind": "modal",
+   "labels": [
+    "Click a team member row",
+    "Click Remove"
+   ],
+   "mutates": true,
+   "note": "'Remove Alice?' warns cards will be canceled and 6 subscriptions affected; Go back / pink 'Remove Alice'.",
+   "parent": "settings.user-detail",
+   "state": "settings.remove-member-confirm",
+   "title": "Remove member confirmation"
+  },
+  {
+   "area": "settings",
+   "draft": "nothing on settings.tokens matches {\"click\":{\"name\":\"\u2022\u2022\u2022 on a token\"}}",
+   "image": "screens/settings/89-token-kebab-menu.png",
+   "kind": "menu",
+   "labels": [
+    "Click \u2022\u2022\u2022 on a token row"
+   ],
+   "mutates": false,
+   "note": "The \u2022\u2022\u2022 button on a token row opens Edit (pencil icon in accent blue) and Delete (trash icon in grey).",
+   "parent": "settings.tokens",
+   "state": "settings.token-menu",
+   "title": "API token actions menu"
+  },
+  {
+   "area": "settings",
+   "draft": "not drafted: its parent had no accepted recipe when the drafter ran",
+   "image": "screens/settings/100-delete-token-confirm.png",
+   "kind": "modal",
+   "labels": [
+    "Click \u2022\u2022\u2022 on a token row",
+    "Click Delete"
+   ],
+   "mutates": true,
+   "note": "'Delete API Token' \u2014 'Are you sure you want to delete the API token \u201cMap audit token\u201d? This action cannot be undone.' with Cancel / 'Delete Token'. Confirming removes the row with no toast.",
+   "parent": "settings.token-menu",
+   "state": "settings.delete-token-confirm",
+   "title": "Delete API Token confirmation"
+  },
+  {
+   "area": "settings",
+   "draft": "not drafted: its parent had no accepted recipe when the drafter ran",
+   "image": "screens/settings/90-edit-token.png",
+   "kind": "modal",
+   "labels": [
+    "Click \u2022\u2022\u2022 on a token row",
+    "Click Edit"
+   ],
+   "mutates": false,
+   "note": "Nickname and IP whitelist prefilled ('Token with long IPv6 address', one IPv6 address), helper 'Comma-separated IPs or CIDR ranges. Current IP: 192.168.1.1', Cancel and a disabled 'Update token'. Permissions cannot be edited.",
+   "parent": "settings.token-menu",
+   "state": "settings.edit-token",
+   "title": "Edit API token modal"
+  },
+  {
+   "area": "settings",
+   "draft": "not drafted: its parent had no accepted recipe when the drafter ran",
+   "image": "screens/settings/91-edit-token-errors.png",
+   "kind": "validation-error",
+   "labels": [
+    "Click \u2022\u2022\u2022 on a token row",
+    "Click Edit",
+    "Enter an invalid IP and click Update token"
+   ],
+   "mutates": true,
+   "note": "IP whitelist '999.1.1' shows 'Enter a comma-separated list of IPv4/6 addresses or CIDR ranges.' and Update token stays disabled.",
+   "parent": "settings.edit-token",
+   "state": "settings.edit-token-invalid",
+   "title": "Edit API token \u2014 invalid IP"
+  },
+  {
+   "area": "settings",
+   "draft": "nothing on settings.webhooks matches {\"click\":{\"name\":\"an endpoint\"}}",
+   "image": "screens/settings/77-webhook-detail.png",
+   "kind": "drawer",
+   "labels": [
+    "Click an endpoint row"
+   ],
+   "mutates": false,
+   "note": "Clicking a row narrows the table to URL + Status and opens a side panel: Webhook URL, Status badge, Event subscriptions as monospace chips (transaction.created, transaction.updated, checkingAccount.balance.updated), Last delivery 'Feb 18, 2026 01:14:32', Consecutive failures 0, Created/Updated dates, and View deliveries / Edit / Delete buttons.",
+   "parent": "settings.webhooks",
+   "state": "settings.webhook-detail",
+   "title": "Webhook endpoint detail panel"
+  },
+  {
+   "area": "settings",
+   "draft": "not drafted: its parent had no accepted recipe when the drafter ran",
+   "image": "screens/settings/80-delete-webhook-confirm.png",
+   "kind": "modal",
+   "labels": [
+    "Click an endpoint row",
+    "Click Delete"
+   ],
+   "mutates": true,
+   "note": "'Delete endpoint?' \u2014 'Are you sure you want to delete the endpoint at https://api.acme.com/webhooks/mercury? This action cannot be undone.' with Cancel / Delete.",
+   "parent": "settings.webhook-detail",
+   "state": "settings.delete-webhook-confirm",
+   "title": "Delete endpoint confirmation"
+  },
+  {
+   "area": "settings",
+   "draft": "not drafted: its parent had no accepted recipe when the drafter ran",
+   "image": "screens/settings/78-edit-webhook.png",
+   "kind": "modal",
+   "labels": [
+    "Click an endpoint row",
+    "Click Edit"
+   ],
+   "mutates": false,
+   "note": "Endpoint URL prefilled, Event types combobox showing '3 selected', an Active switch, Cancel and a disabled 'Save changes'.",
+   "parent": "settings.webhook-detail",
+   "state": "settings.edit-webhook",
+   "title": "Edit webhook endpoint modal"
+  },
+  {
+   "area": "settings",
+   "draft": "not drafted: its parent had no accepted recipe when the drafter ran",
+   "image": "screens/settings/79-edit-webhook-invalid-url.png",
+   "kind": "validation-error",
+   "labels": [
+    "Click an endpoint row",
+    "Click Edit",
+    "Replace the URL with a non-URL and tab away"
+   ],
+   "mutates": false,
+   "note": "Typing 'not a url' turns the label and border pink with 'Please enter a valid HTTPS URL (e.g. https://example.com/webhook)' (12px, rgb(252,146,180)). A 'Verify endpoint' button appears, and Event types drops its '3 selected' value back to the 'All events' placeholder.",
+   "parent": "settings.edit-webhook",
+   "state": "settings.edit-webhook-invalid",
+   "title": "Edit webhook \u2014 invalid URL"
+  }
+ ]
+}

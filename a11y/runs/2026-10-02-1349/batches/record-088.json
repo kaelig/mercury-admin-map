@@ -1,0 +1,30 @@
+{
+ "batch": "record-088",
+ "reach": {
+  "baseUrl": "https://demo.mercury.com",
+  "data": "data",
+  "map": "build/map.json",
+  "run": "2026-10-02-1349",
+  "workspace": "a11y"
+ },
+ "run": "2026-10-02-1349",
+ "states": [
+  {
+   "area": "settings",
+   "draft": "not drafted: its parent had no accepted recipe when the drafter ran",
+   "image": "screens/settings/52-user-saved.png",
+   "kind": "toast",
+   "labels": [
+    "Click a team member row",
+    "Click Edit",
+    "Change Specify job title",
+    "Click Save"
+   ],
+   "mutates": true,
+   "note": "Panel returns to read view showing 'Senior Software Engineer' and a 'Job title updated' toast.",
+   "parent": "settings.edit-member-dirty",
+   "state": "settings.member-saved",
+   "title": "Job title updated toast"
+  }
+ ]
+}

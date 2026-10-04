@@ -1,0 +1,263 @@
+{
+ "batch": "record-021",
+ "reach": {
+  "baseUrl": "https://demo.mercury.com",
+  "data": "data",
+  "map": "build/map.json",
+  "run": "2026-10-02-1349",
+  "workspace": "a11y"
+ },
+ "run": "2026-10-02-1349",
+ "states": [
+  {
+   "area": "payments",
+   "draft": "nothing on payments.send-start matches {\"click\":{\"name\":\"a recently paid recipient\"}}",
+   "image": "screens/payments/05-send-recipient-step.png",
+   "kind": "form-state",
+   "labels": [
+    "Click a recently paid recipient"
+   ],
+   "mutates": false,
+   "note": "Step 1 of 5: recipient card, address, payment method (ACH) and recipient bank details.",
+   "parent": "payments.send-start",
+   "state": "payments.send-recipient-step",
+   "title": "Send: Recipient step"
+  },
+  {
+   "area": "payments",
+   "draft": "not drafted: its parent had no accepted recipe when the drafter ran",
+   "image": "screens/payments/12-send-amount.png",
+   "kind": "form-state",
+   "labels": [
+    "Click a recently paid recipient",
+    "Click Next (ACH)"
+   ],
+   "mutates": false,
+   "note": "Step 2: Recipient gets, Send from account, Send on date, Repeat this payment toggle.",
+   "parent": "payments.send-recipient-step",
+   "state": "payments.send-amount",
+   "title": "Send: Amount step"
+  },
+  {
+   "area": "payments",
+   "draft": "not drafted: its parent had no accepted recipe when the drafter ran",
+   "image": "screens/payments/13-send-amount-validation.png",
+   "kind": "validation-error",
+   "labels": [
+    "Click a recently paid recipient",
+    "Click Next (ACH)",
+    "Click Next with empty amount"
+   ],
+   "mutates": false,
+   "note": "Next with empty amount shows 'Must be a dollar value.' under the field.",
+   "parent": "payments.send-amount",
+   "state": "payments.send-amount-validation",
+   "title": "Send: amount required"
+  },
+  {
+   "area": "payments",
+   "draft": "not drafted: its parent had no accepted recipe when the drafter ran",
+   "image": "screens/payments/17-send-categorization.png",
+   "kind": "form-state",
+   "labels": [
+    "Click a recently paid recipient",
+    "Click Next (ACH)",
+    "Enter amount, click Next"
+   ],
+   "mutates": false,
+   "note": "Step 3: Single vs Multiple GL Codes segmented control with a GL Code select.",
+   "parent": "payments.send-amount",
+   "state": "payments.send-categorization",
+   "title": "Send: Categorization step"
+  },
+  {
+   "area": "payments",
+   "draft": "not drafted: its parent had no accepted recipe when the drafter ran",
+   "image": "screens/payments/20-send-details.png",
+   "kind": "form-state",
+   "labels": [
+    "Click a recently paid recipient",
+    "Click Next (ACH)",
+    "Enter amount, click Next",
+    "Click Next"
+   ],
+   "mutates": false,
+   "note": "Step 4: display name, memo, email receipt chips, include attachments, collapsed Bill details.",
+   "parent": "payments.send-categorization",
+   "state": "payments.send-details",
+   "title": "Send: Details step"
+  },
+  {
+   "area": "payments",
+   "draft": "not drafted: its parent had no accepted recipe when the drafter ran",
+   "image": "screens/payments/21-send-details-bill-expanded.png",
+   "kind": "form-state",
+   "labels": [
+    "Click a recently paid recipient",
+    "Click Next (ACH)",
+    "Enter amount, click Next",
+    "Click Next",
+    "Expand Bill details"
+   ],
+   "mutates": false,
+   "note": "Bill details accordion open: invoice number, invoice/due dates, department, internal note, attachments.",
+   "parent": "payments.send-details",
+   "state": "payments.send-details-bill",
+   "title": "Send: Bill details open"
+  },
+  {
+   "area": "payments",
+   "draft": "not drafted: its parent had no accepted recipe when the drafter ran",
+   "image": "screens/payments/22-send-review.png",
+   "kind": "form-state",
+   "labels": [
+    "Click a recently paid recipient",
+    "Click Next (ACH)",
+    "Enter amount, click Next",
+    "Click Next",
+    "Click Next"
+   ],
+   "mutates": false,
+   "note": "Step 5: amount hero card, ACH delivery estimate, recipient bank and source account summary, Schedule payment.",
+   "parent": "payments.send-details",
+   "state": "payments.send-review",
+   "title": "Send: Review step"
+  },
+  {
+   "area": "payments",
+   "draft": "not drafted: its parent had no accepted recipe when the drafter ran",
+   "image": "screens/payments/23-send-submitting.png",
+   "kind": "form-state",
+   "labels": [
+    "Click a recently paid recipient",
+    "Click Next (ACH)",
+    "Enter amount, click Next",
+    "Click Next",
+    "Click Next",
+    "Click Schedule payment"
+   ],
+   "mutates": true,
+   "note": "Schedule payment pressed: primary button shows loading dots and Back is disabled.",
+   "parent": "payments.send-review",
+   "state": "payments.send-submitting",
+   "title": "Send: submitting"
+  },
+  {
+   "area": "payments",
+   "draft": "not drafted: its parent had no accepted recipe when the drafter ran",
+   "image": "screens/payments/113-send-wire-review.png",
+   "kind": "form-state",
+   "labels": [
+    "Click a recently paid recipient",
+    "Click Next (ACH)",
+    "Enter amount, click Next",
+    "Click Next",
+    "Click Next (wire)"
+   ],
+   "mutates": false,
+   "note": "Wire review: $500.00 hero, delivery estimate, bank, full account and routing numbers, from account; Schedule wire.",
+   "parent": "payments.send-details",
+   "state": "payments.send-wire-review",
+   "title": "Send: wire review"
+  },
+  {
+   "area": "payments",
+   "draft": "not drafted: its parent had no accepted recipe when the drafter ran",
+   "image": "screens/payments/18-send-gl-code-dropdown.png",
+   "kind": "menu",
+   "labels": [
+    "Click a recently paid recipient",
+    "Click Next (ACH)",
+    "Enter amount, click Next",
+    "Open GL Code"
+   ],
+   "mutates": false,
+   "note": "GL Code listbox: Mercury Checking (7772), 120 - Accounts Receivable, 400 - Inventory...",
+   "parent": "payments.send-categorization",
+   "state": "payments.send-gl-dropdown",
+   "title": "Send: GL code list"
+  },
+  {
+   "area": "payments",
+   "draft": "not drafted: its parent had no accepted recipe when the drafter ran",
+   "image": "screens/payments/19-send-multiple-gl-codes.png",
+   "kind": "form-state",
+   "labels": [
+    "Click a recently paid recipient",
+    "Click Next (ACH)",
+    "Enter amount, click Next",
+    "Click Multiple GL Codes"
+   ],
+   "mutates": false,
+   "note": "Multiple GL Codes: break line items by Amount, Add line item, running Total.",
+   "parent": "payments.send-categorization",
+   "state": "payments.send-multiple-gl",
+   "title": "Send: Multiple GL codes"
+  },
+  {
+   "area": "payments",
+   "draft": "not drafted: its parent had no accepted recipe when the drafter ran",
+   "image": "screens/payments/112-send-wire-purpose.png",
+   "kind": "menu",
+   "labels": [
+    "Click a recently paid recipient",
+    "Click Next (ACH)",
+    "Enter amount, click Next",
+    "Click Next (wire)"
+   ],
+   "mutates": false,
+   "note": "Extra wire-only step: 'Who or what is this payment for?' options Employee, Contractor, Vendor, Landlord, Transferring to subsidiary, Other.",
+   "parent": "payments.send-categorization",
+   "state": "payments.send-wire-purpose",
+   "title": "Send: Wire purpose"
+  },
+  {
+   "area": "payments",
+   "draft": "not drafted: its parent had no accepted recipe when the drafter ran",
+   "image": "screens/payments/15-send-date-picker.png",
+   "kind": "popover",
+   "labels": [
+    "Click a recently paid recipient",
+    "Click Next (ACH)",
+    "Click Send on"
+   ],
+   "mutates": true,
+   "note": "Calendar popover with past dates disabled and next business day selected.",
+   "parent": "payments.send-amount",
+   "state": "payments.send-date-picker",
+   "title": "Send: Send on calendar"
+  },
+  {
+   "area": "payments",
+   "draft": "not drafted: its parent had no accepted recipe when the drafter ran",
+   "image": "screens/payments/14-send-from-account-dropdown.png",
+   "kind": "menu",
+   "labels": [
+    "Click a recently paid recipient",
+    "Click Next (ACH)",
+    "Open Send from"
+   ],
+   "mutates": true,
+   "note": "Account picker listing AP, AR, Checking and Savings with balances.",
+   "parent": "payments.send-amount",
+   "state": "payments.send-from-dropdown",
+   "title": "Send: Send from accounts"
+  },
+  {
+   "area": "payments",
+   "draft": "not drafted: its parent had no accepted recipe when the drafter ran",
+   "image": "screens/payments/16-send-repeat-payment.png",
+   "kind": "form-state",
+   "labels": [
+    "Click a recently paid recipient",
+    "Click Next (ACH)",
+    "Toggle Repeat this payment"
+   ],
+   "mutates": false,
+   "note": "Repeat on: label becomes Start on; Repeat frequency select and Ends (On / After / Never) appear.",
+   "parent": "payments.send-amount",
+   "state": "payments.send-repeat",
+   "title": "Send: Repeat payment"
+  }
+ ]
+}

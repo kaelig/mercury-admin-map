@@ -1,0 +1,64 @@
+{
+ "batch": "record-100",
+ "reach": {
+  "baseUrl": "https://demo.mercury.com",
+  "data": "data",
+  "map": "build/map.json",
+  "run": "2026-10-02-1349",
+  "workspace": "a11y"
+ },
+ "run": "2026-10-02-1349",
+ "states": [
+  {
+   "area": "invoicing",
+   "draft": "not drafted: its parent had no accepted recipe when the drafter ran",
+   "image": "screens/invoicing/92-create-series-ends-menu.png",
+   "kind": "menu",
+   "labels": [
+    "Click Create series",
+    "Pick a customer and click Next",
+    "Add a line item and click Next",
+    "Click 'when I cancel'"
+   ],
+   "mutates": true,
+   "note": "Inline 'series ends' dropdown on the Frequency step: On (ends on a specific date), After (choose how many invoices), When I cancel (no end date).",
+   "parent": "invoicing.create-series-frequency",
+   "state": "invoicing.create-series-ends-menu",
+   "title": "Series end options"
+  },
+  {
+   "area": "invoicing",
+   "draft": "not drafted: its parent had no accepted recipe when the drafter ran",
+   "image": "screens/invoicing/47-create-series-frequency-menu.png",
+   "kind": "menu",
+   "labels": [
+    "Click Create series",
+    "Pick a customer and click Next",
+    "Add a line item and click Next",
+    "Click the cadence dropdown"
+   ],
+   "mutates": true,
+   "note": "Inline dropdown of cadence options: Weekly on Thursday, Monthly on the 24th, Monthly on the last Thursday, Custom.",
+   "parent": "invoicing.create-series-frequency",
+   "state": "invoicing.create-series-frequency-menu",
+   "title": "Frequency options menu"
+  },
+  {
+   "area": "invoicing",
+   "draft": "not drafted: its parent had no accepted recipe when the drafter ran",
+   "image": "screens/invoicing/49-create-series-details.png",
+   "kind": "page",
+   "labels": [
+    "Click Create series",
+    "Pick a customer and click Next",
+    "Add a line item and click Next",
+    "Click Next"
+   ],
+   "mutates": true,
+   "note": "Series step 4: accepted payment methods, destination account and virtual account number toggle.",
+   "parent": "invoicing.create-series-frequency",
+   "state": "invoicing.create-series-payment",
+   "title": "Series payment details"
+  }
+ ]
+}

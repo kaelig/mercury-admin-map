@@ -1,0 +1,111 @@
+{
+ "batch": "record-102",
+ "reach": {
+  "baseUrl": "https://demo.mercury.com",
+  "data": "data",
+  "map": "build/map.json",
+  "run": "2026-10-02-1349",
+  "workspace": "a11y"
+ },
+ "run": "2026-10-02-1349",
+ "states": [
+  {
+   "area": "settings",
+   "draft": "not drafted: its parent had no accepted recipe when the drafter ran",
+   "image": "screens/settings/122-backup-codes-done.png",
+   "kind": "confirmation",
+   "labels": [
+    "Scroll to Account recovery",
+    "Click Generate New Codes",
+    "Tick the confirmation and click Done"
+   ],
+   "mutates": true,
+   "note": "Back on the page the row reads 'Backup codes (8/8 remaining)'; Added on and Most recent activity keep their old dates and no toast appears.",
+   "parent": "settings.backup-codes",
+   "state": "settings.backup-codes-regenerated",
+   "title": "Backup codes regenerated"
+  },
+  {
+   "area": "settings",
+   "draft": "not drafted: its parent had no accepted recipe when the drafter ran",
+   "image": "screens/settings/118-change-password-errors.png",
+   "kind": "validation-error",
+   "labels": [
+    "Scroll to Account recovery",
+    "Click Change password",
+    "Enter short passwords and submit"
+   ],
+   "mutates": true,
+   "note": "Short new passwords flag New and Repeat fields with 'Minimum 10 characters'.",
+   "parent": "settings.change-password",
+   "state": "settings.change-password-short",
+   "title": "Change password \u2014 too short"
+  },
+  {
+   "area": "settings",
+   "draft": "cannot parse \"Enter a From date after today\"; the conductor rejected the previous recipe: missing layer: the capture shows the calendar popover open over the dialog; the hop clicks the dialog heading (not named by the label) to close it, and the replay adds a second error on To; a previous recorder failed: Filling From with 12/31/2099 opens the calendar over the Download button (click times out), and Enter or Tab shows no 'Please choose a day' error; last candidate (fill, Enter) scored 0.7952 and shows the calendar without the error.",
+   "image": "screens/settings/16-custom-statement-invalid.png",
+   "kind": "validation-error",
+   "labels": [
+    "Click Generate a custom statement",
+    "Enter a From date after today and click Download"
+   ],
+   "mutates": true,
+   "note": "From date after today shows 'Please choose a day on or before Sep 24, 2026' with the calendar popover open.",
+   "parent": "settings.custom-statement",
+   "state": "settings.custom-statement-invalid",
+   "title": "Custom statement \u2014 date out of range"
+  },
+  {
+   "area": "settings",
+   "draft": "not drafted: its parent had no accepted recipe when the drafter ran",
+   "image": "screens/settings/22-share-success.png",
+   "kind": "confirmation",
+   "labels": [
+    "Check statement rows",
+    "Click Share documents",
+    "Click Share via email with no recipient",
+    "Type an email and press Enter",
+    "Click Share via email"
+   ],
+   "mutates": true,
+   "note": "'Email sent' confirmation with shared-documents summary and an upsell to invite the accountant as a bookkeeper-style user.",
+   "parent": "settings.share-recipient-suggest",
+   "state": "settings.share-email-sent",
+   "title": "Share documents \u2014 Email sent"
+  },
+  {
+   "area": "settings",
+   "draft": "not drafted: its parent had no accepted recipe when the drafter ran",
+   "image": "screens/settings/95-token-custom-scopes.png",
+   "kind": "form-state",
+   "labels": [
+    "Click + Create an API token",
+    "Click Create token with the form empty",
+    "Enter a nickname and open Permissions",
+    "Choose Custom Scopes"
+   ],
+   "mutates": true,
+   "note": "Choosing Custom Scopes adds a Scopes combobox ('Select routes for custom token') and the helper 'IP whitelist required for scopes with an asterisk *'.",
+   "parent": "settings.token-permissions",
+   "state": "settings.token-custom-scopes",
+   "title": "Create token \u2014 Custom Scopes"
+  },
+  {
+   "area": "settings",
+   "draft": "not drafted: its parent had no accepted recipe when the drafter ran",
+   "image": "screens/settings/124-verify-identity-result.png",
+   "kind": "modal",
+   "labels": [
+    "Scroll to Account recovery",
+    "Click + Add another verification method",
+    "Enter a backup code and click Submit"
+   ],
+   "mutates": true,
+   "note": "Any code (tested 'AAAA-BBBB-CCCC-DDDD') is accepted and the modal becomes a spinner: 'Waiting for security key \u2014 Follow browser instructions to complete setup'. The WebAuthn prompt was not pursued.",
+   "parent": "settings.verify-identity",
+   "state": "settings.waiting-security-key",
+   "title": "Waiting for security key"
+  }
+ ]
+}

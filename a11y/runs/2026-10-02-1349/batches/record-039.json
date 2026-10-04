@@ -1,0 +1,258 @@
+{
+ "batch": "record-039",
+ "reach": {
+  "baseUrl": "https://demo.mercury.com",
+  "data": "data",
+  "map": "build/map.json",
+  "run": "2026-10-02-1349",
+  "workspace": "a11y"
+ },
+ "run": "2026-10-02-1349",
+ "states": [
+  {
+   "area": "billpay",
+   "draft": "not drafted: its parent had no accepted recipe when the drafter ran",
+   "image": "screens/billpay/23-bill-edit-empty-amount.png",
+   "kind": "validation-error",
+   "labels": [
+    "Click inbox bill row",
+    "Click a field value",
+    "Clear amount, click Save edits"
+   ],
+   "mutates": true,
+   "note": "Saving with an empty amount shows inline 'Must be a dollar value.' under a pink-bordered field.",
+   "parent": "billpay.bill-panel-edit",
+   "state": "billpay.bill-edit-amount-error",
+   "title": "Bill amount required"
+  },
+  {
+   "area": "billpay",
+   "draft": "not drafted: its parent had no accepted recipe when the drafter ran; a previous recorder failed: structure-missing: a drawer needs an open layer; the replay found none (scroll to Upload attachment, View Email and note textbox, and a bare wait, all tried)",
+   "image": "screens/billpay/55-bill-panel-lower.png",
+   "kind": "drawer",
+   "labels": [
+    "Click inbox bill row",
+    "Scroll panel"
+   ],
+   "mutates": false,
+   "note": "Scrolled bill panel: sender, notes, forwarded email preview with View Email, attachment and Upload attachment.",
+   "parent": "billpay.bill-panel",
+   "state": "billpay.bill-panel-lower",
+   "title": "Bill panel (lower)"
+  },
+  {
+   "area": "billpay",
+   "draft": "not drafted: its parent had no accepted recipe when the drafter ran",
+   "image": "screens/billpay/87-decline-confirm.png",
+   "kind": "modal",
+   "labels": [
+    "Click request row",
+    "Click Review",
+    "Click Decline"
+   ],
+   "mutates": true,
+   "note": "Decline on the review page asks 'Are you sure you want to decline this request?' with Go back / Yes, decline.",
+   "parent": "billpay.approval-review",
+   "state": "billpay.decline-confirm",
+   "title": "Decline confirmation"
+  },
+  {
+   "area": "billpay",
+   "draft": "not drafted: its parent had no accepted recipe when the drafter ran",
+   "image": "screens/billpay/50-delete-bill-confirm.png",
+   "kind": "modal",
+   "labels": [
+    "Hover a bill row",
+    "Click trash icon"
+   ],
+   "mutates": false,
+   "note": "Row trash icon opens 'Delete item?' with Cancel / Delete item.",
+   "parent": "billpay.row-hover",
+   "state": "billpay.delete-bill-confirm",
+   "title": "Delete item dialog"
+  },
+  {
+   "area": "billpay",
+   "draft": "not drafted: its parent had no accepted recipe when the drafter ran",
+   "image": "screens/billpay/112-delete-rule-confirm.png",
+   "kind": "modal",
+   "labels": [
+    "Click a rule row",
+    "Click Edit",
+    "Change the value, click Update",
+    "Click Delete rule"
+   ],
+   "mutates": true,
+   "note": "'Delete categorization rule?' dialog: 'This won\u2019t affect previously categorized transactions.' with Cancel and a destructive 'Yes, delete rule'.",
+   "parent": "billpay.rule-updated",
+   "state": "billpay.delete-rule-confirm",
+   "title": "Delete rule confirmation"
+  },
+  {
+   "area": "billpay",
+   "draft": "not drafted: its parent had no accepted recipe when the drafter ran; the conductor rejected the previous recipe: capture 52-filter-no-results.png shows the Bill Pay settings dialog, so it needs a re-capture; measured against the note, the replay has an extra layer: the Status filter menu is still open over the 'Missing due date' empty state",
+   "image": "screens/billpay/52-filter-no-results.png",
+   "kind": "empty-state",
+   "labels": [
+    "Click Status filter",
+    "Check Missing due date"
+   ],
+   "mutates": false,
+   "note": "Filter chip 'Missing due date' with Reset; 'No drafts or bills found. Try changing your filters.' over a skeleton table.",
+   "parent": "billpay.status-filter",
+   "state": "billpay.filter-empty",
+   "title": "Filtered empty state"
+  },
+  {
+   "area": "billpay",
+   "draft": "not drafted: its parent had no accepted recipe when the drafter ran",
+   "image": "screens/billpay/47-bills-deleted-empty.png",
+   "kind": "empty-state",
+   "labels": [
+    "Check select-all",
+    "Click Delete",
+    "Click Delete 3 items"
+   ],
+   "mutates": true,
+   "note": "After deleting every bill: 'Deleted 3 items' toast and a pixel-font 'All your bills are paid!' card offering the Zero Inbox game.",
+   "parent": "billpay.bulk-delete-confirm",
+   "state": "billpay.inbox-zero",
+   "title": "Inbox zero empty state"
+  },
+  {
+   "area": "billpay",
+   "draft": "not drafted: its parent had no accepted recipe when the drafter ran",
+   "image": "screens/billpay/29-pay-bill-amount-empty-error.png",
+   "kind": "validation-error",
+   "labels": [
+    "Click inbox bill row",
+    "Click Review",
+    "Click Continue with matched recipient",
+    "Click Next",
+    "Clear amount, click Next"
+   ],
+   "mutates": false,
+   "note": "Clearing the amount and pressing Next shows 'Must be a dollar value.' and a 'Flag error?' chip beside the shortened field.",
+   "parent": "billpay.pay-amount",
+   "state": "billpay.pay-amount-error",
+   "title": "Pay bill: amount required"
+  },
+  {
+   "area": "billpay",
+   "draft": "not drafted: its parent had no accepted recipe when the drafter ran",
+   "image": "screens/billpay/30-pay-bill-repeat-on.png",
+   "kind": "form-state",
+   "labels": [
+    "Click inbox bill row",
+    "Click Review",
+    "Click Continue with matched recipient",
+    "Click Next",
+    "Toggle Repeat this payment"
+   ],
+   "mutates": false,
+   "note": "Repeat toggle on: 'Send on' becomes 'Start on' and a Repeat frequency select plus Ends (On / After / Never) options appear.",
+   "parent": "billpay.pay-amount",
+   "state": "billpay.pay-repeat",
+   "title": "Pay bill: repeat on"
+  },
+  {
+   "area": "billpay",
+   "draft": "not drafted: its parent had no accepted recipe when the drafter ran",
+   "image": "screens/billpay/17-payment-canceled.png",
+   "kind": "toast",
+   "labels": [
+    "Click scheduled row",
+    "Click Cancel payment",
+    "Click Cancel payment"
+   ],
+   "mutates": true,
+   "note": "Row removed from Scheduled (count 3 to 2) with a 'Payment canceled' toast.",
+   "parent": "billpay.cancel-payment-confirm",
+   "state": "billpay.payment-canceled",
+   "title": "Payment canceled"
+  },
+  {
+   "area": "billpay",
+   "draft": "not drafted: its parent had no accepted recipe when the drafter ran",
+   "image": "screens/billpay/89-recipient-search-menu.png",
+   "kind": "menu",
+   "labels": [
+    "Click inbox bill row",
+    "Click Review",
+    "Focus Search for another recipient"
+   ],
+   "mutates": false,
+   "note": "'Search for another recipient' opens a Recently paid list (Contractor, Domestic Ads, Nutritionist, Lighthouse Properties).",
+   "parent": "billpay.pay-recipient-match",
+   "state": "billpay.recipient-search-menu",
+   "title": "Recipient search menu"
+  },
+  {
+   "area": "billpay",
+   "draft": "not drafted: its parent had no accepted recipe when the drafter ran",
+   "image": "screens/billpay/67-rule-outcome-menu.png",
+   "kind": "menu",
+   "labels": [
+    "Click Create a rule",
+    "Open If select",
+    "Pick Bank description, type value, open Then select"
+   ],
+   "mutates": true,
+   "note": "Then dropdown: GL code, Mercury category, Exclude from review.",
+   "parent": "billpay.rule-input-menu",
+   "state": "billpay.rule-outcome-menu",
+   "title": "Rule outcome menu"
+  },
+  {
+   "area": "billpay",
+   "draft": "not drafted: its parent had no accepted recipe when the drafter ran",
+   "image": "screens/billpay/97-send-from-menu.png",
+   "kind": "menu",
+   "labels": [
+    "Click inbox bill row",
+    "Click Review",
+    "Click Continue with matched recipient",
+    "Click Next",
+    "Open Send from"
+   ],
+   "mutates": true,
+   "note": "Send from dropdown listing AP, AR, Checking \u2022\u20220297 and Savings \u2022\u20227658 with balances.",
+   "parent": "billpay.pay-amount",
+   "state": "billpay.send-from-menu",
+   "title": "Send from account menu"
+  },
+  {
+   "area": "billpay",
+   "draft": "not drafted: its parent had no accepted recipe when the drafter ran",
+   "image": "screens/billpay/98-send-on-date-picker.png",
+   "kind": "popover",
+   "labels": [
+    "Click inbox bill row",
+    "Click Review",
+    "Click Continue with matched recipient",
+    "Click Next",
+    "Click Send on"
+   ],
+   "mutates": true,
+   "note": "Calendar for Send on: past days disabled, today (25) highlighted, typed input and month arrows at the top.",
+   "parent": "billpay.pay-amount",
+   "state": "billpay.send-on-date-picker",
+   "title": "Send on date picker"
+  },
+  {
+   "area": "billpay",
+   "draft": "not drafted: its parent had no accepted recipe when the drafter ran",
+   "image": "screens/billpay/51-source-tooltip.png",
+   "kind": "popover",
+   "labels": [
+    "Hover a bill row",
+    "Hover envelope avatar"
+   ],
+   "mutates": false,
+   "note": "Hovering the envelope avatar shows 'Emailed by demo@mercury.com'.",
+   "parent": "billpay.row-hover",
+   "state": "billpay.source-tooltip",
+   "title": "Bill source tooltip"
+  }
+ ]
+}

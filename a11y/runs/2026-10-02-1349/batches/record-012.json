@@ -1,0 +1,257 @@
+{
+ "batch": "record-012",
+ "reach": {
+  "baseUrl": "https://demo.mercury.com",
+  "data": "data",
+  "map": "build/map.json",
+  "run": "2026-10-02-1349",
+  "workspace": "a11y"
+ },
+ "run": "2026-10-02-1349",
+ "states": [
+  {
+   "area": "cards",
+   "draft": "cannot parse \"More > Order replacement\"",
+   "image": "screens/cards/25-order-replacement.png",
+   "kind": "form-state",
+   "labels": [
+    "Click a card row",
+    "More > Order replacement"
+   ],
+   "mutates": false,
+   "note": "Step 1 of the full-screen replacement flow: 'What happened to your card?' with six radio tiles (Lost, Never Received, Stolen, Renewal, Damaged, Other) and Next.",
+   "parent": "cards.detail-physical",
+   "state": "cards.replace-reason",
+   "title": "Replace card: choose reason"
+  },
+  {
+   "area": "cards",
+   "draft": "not drafted: its parent had no accepted recipe when the drafter ran",
+   "image": "screens/cards/26-replacement-address.png",
+   "kind": "form-state",
+   "labels": [
+    "Click a card row",
+    "More > Order replacement",
+    "Pick Lost, click Next"
+   ],
+   "mutates": false,
+   "note": "Step 2 'Confirm Shipping Address' showing the company mailing address card with a 'Use a different address' link and Confirm.",
+   "parent": "cards.replace-reason",
+   "state": "cards.replace-address",
+   "title": "Replace card: confirm address"
+  },
+  {
+   "area": "cards",
+   "draft": "not drafted: its parent had no accepted recipe when the drafter ran",
+   "image": "screens/cards/27-replacement-new-address.png",
+   "kind": "modal",
+   "labels": [
+    "Click a card row",
+    "More > Order replacement",
+    "Pick Lost, click Next",
+    "Click Use a different address"
+   ],
+   "mutates": false,
+   "note": "Address chooser dialog with radio cards for company mailing address, personal mailing address (with Edit) and Custom address; Go back and Use address.",
+   "parent": "cards.replace-address",
+   "state": "cards.replace-address-picker",
+   "title": "Where should we ship this card?"
+  },
+  {
+   "area": "cards",
+   "draft": "not drafted: its parent had no accepted recipe when the drafter ran",
+   "image": "screens/cards/28-replacement-custom-address.png",
+   "kind": "modal",
+   "labels": [
+    "Click a card row",
+    "More > Order replacement",
+    "Pick Lost, click Next",
+    "Click Use a different address",
+    "Pick Custom address, click Continue"
+   ],
+   "mutates": false,
+   "note": "Custom address form with an info callout, Country select (United States), Address line 1/2, City, State and ZIP Code.",
+   "parent": "cards.replace-address-picker",
+   "state": "cards.replace-custom-address",
+   "title": "Enter a custom address"
+  },
+  {
+   "area": "cards",
+   "draft": "not drafted: its parent had no accepted recipe when the drafter ran",
+   "image": "screens/cards/29-replacement-custom-address-error.png",
+   "kind": "validation-error",
+   "labels": [
+    "Click a card row",
+    "More > Order replacement",
+    "Pick Lost, click Next",
+    "Click Use a different address",
+    "Pick Custom address, click Continue",
+    "Click Use address with empty fields"
+   ],
+   "mutates": false,
+   "note": "Use address with an empty form: Address line 1, City and ZIP show 'Please complete this field', State shows 'Please enter a valid US state.'",
+   "parent": "cards.replace-custom-address",
+   "state": "cards.replace-custom-address-error",
+   "title": "Custom address: required fields"
+  },
+  {
+   "area": "cards",
+   "draft": "not drafted: its parent had no accepted recipe when the drafter ran",
+   "image": "screens/cards/30-replacement-done.png",
+   "kind": "confirmation",
+   "labels": [
+    "Click a card row",
+    "More > Order replacement",
+    "Pick Lost, click Next",
+    "Click Confirm"
+   ],
+   "mutates": true,
+   "note": "Success banner 'Your new card is on the way' plus a 'Check the latest transactions on the card' list of recent \u2022\u20225555 transactions and a Finish button.",
+   "parent": "cards.replace-address",
+   "state": "cards.replace-done",
+   "title": "Replacement ordered"
+  },
+  {
+   "area": "cards",
+   "draft": "nothing on cards.create-budget-assign matches {\"click\":{\"name\":\"Jane Black and Landon Shepherd\"}}",
+   "image": "screens/cards/53-create-budget-review.png",
+   "kind": "form-state",
+   "labels": [
+    "Click Next with empty form",
+    "Fill name, limit and description",
+    "Click Next",
+    "Select Jane Black and Landon Shepherd, click Next"
+   ],
+   "mutates": false,
+   "note": "Step 3 'Let's review everything' summarising the budget ($500 monthly), 2 assignees and automatic routing, with Back and Create budget.",
+   "parent": "cards.create-budget-assign",
+   "state": "cards.create-budget-review",
+   "title": "Create budget: review"
+  },
+  {
+   "area": "cards",
+   "draft": "not drafted: its parent had no accepted recipe when the drafter ran",
+   "image": "screens/cards/54-create-budget-done.png",
+   "kind": "toast",
+   "labels": [
+    "Click Next with empty form",
+    "Fill name, limit and description",
+    "Click Next",
+    "Select Jane Black and Landon Shepherd, click Next",
+    "Click Create budget"
+   ],
+   "mutates": true,
+   "note": "Back on Team Spend with Conference travel at the top of the budgets table and a 'Budget published' toast.",
+   "parent": "cards.create-budget-review",
+   "state": "cards.create-budget-done",
+   "title": "Budget published"
+  },
+  {
+   "area": "cards",
+   "draft": "nothing on cards.team-spend matches {\"click\":{\"name\":\"Assign budget to employees on a\"}}",
+   "image": "screens/cards/84-assign-budget-modal.png",
+   "kind": "modal",
+   "labels": [
+    "Click Assign budget to employees on a row"
+   ],
+   "mutates": true,
+   "note": "Assign budget to employees on the Team Lunch row opens 'Assign Team Lunch': Select team members search combobox, Import a CSV list, Cancel and a disabled Assign.",
+   "parent": "cards.team-spend",
+   "state": "cards.assign-budget-modal",
+   "title": "Assign budget modal"
+  },
+  {
+   "area": "cards",
+   "draft": "cannot parse \"Clear Name\"",
+   "image": "screens/cards/48-budget-edit-errors.png",
+   "kind": "validation-error",
+   "labels": [
+    "Clear Name, click Save changes"
+   ],
+   "mutates": true,
+   "note": "Name cleared and Save changes pressed: Name turns pink with 'Please complete this field' (12px/400 rgb(252,146,180) with warning icon), the preview title falls back to 'Budget name', Save changes disabled.",
+   "parent": "cards.budget-edit",
+   "state": "cards.budget-edit-error",
+   "title": "Edit budget: name required"
+  },
+  {
+   "area": "cards",
+   "draft": "not drafted: its parent had no accepted recipe when the drafter ran; the conductor rejected the previous recipe: different screen: the replay shows the budget page after the save; the capture is the Edit budget form mid-save with the loading button",
+   "image": "screens/cards/47-budget-saving.png",
+   "kind": "form-state",
+   "labels": [
+    "Click Save changes"
+   ],
+   "mutates": true,
+   "note": "Save changes pressed with valid values: the button shows a three-dot loading state and Cancel dims; the app then returns to the budget page with a 'Changes saved' toast.",
+   "parent": "cards.budget-edit",
+   "state": "cards.budget-saving",
+   "title": "Edit budget saving"
+  },
+  {
+   "area": "cards",
+   "draft": "nothing on cards.detail-physical matches {\"click\":{\"name\":\"card art\"}}; a previous recorder failed: cards.card-revealed: cards.detail-physical on its chain is review, not accepted",
+   "image": "screens/cards/03-card-reveal.png",
+   "kind": "form-state",
+   "labels": [
+    "Click a card row",
+    "Click card art (Click to reveal)"
+   ],
+   "mutates": false,
+   "note": "Card art after Click to reveal: full PAN 4111 1111 1111 1111, exp 12/99 and CVC 123 shown as click-to-copy buttons.",
+   "parent": "cards.detail-physical",
+   "state": "cards.card-revealed",
+   "title": "Card number revealed"
+  },
+  {
+   "area": "cards",
+   "draft": "cannot parse \"More > Edit limit\"",
+   "image": "screens/cards/09-edit-limit-empty.png",
+   "kind": "validation-error",
+   "labels": [
+    "Click a virtual card row",
+    "Click More",
+    "Click Edit limit",
+    "Click Limit type",
+    "Choose Weekly, click Save Limit",
+    "More > Edit limit, clear amount, click Save Limit"
+   ],
+   "mutates": true,
+   "note": "Spend limit cleared and saved: red field border and 'Must be a dollar value.' error, Save Limit disabled.",
+   "parent": "cards.limit-saved",
+   "state": "cards.edit-limit-error",
+   "title": "Edit limit: empty amount error"
+  },
+  {
+   "area": "cards",
+   "draft": "cannot parse \"Enter a reason\"",
+   "image": "screens/cards/61-expense-declined.png",
+   "kind": "toast",
+   "labels": [
+    "Click an expense row",
+    "Click Decline",
+    "Enter a reason, click Decline"
+   ],
+   "mutates": true,
+   "note": "Row status flips to Declined, All expenses count drops from 5 to 4, and a green-check 'Reimbursement request declined' toast appears.",
+   "parent": "cards.expense-decline",
+   "state": "cards.expense-declined",
+   "title": "Reimbursement declined"
+  },
+  {
+   "area": "cards",
+   "draft": "cannot parse \"hover Approve\"",
+   "image": "screens/cards/95-expenses-approve-own-blocked.png",
+   "kind": "validation-error",
+   "labels": [
+    "Check a row",
+    "Select your own Pending Review expense, hover Approve"
+   ],
+   "mutates": true,
+   "note": "Hovering the disabled Approve on your own expense shows the tooltip 'Approvers cannot approve their own expenses'.",
+   "parent": "cards.expenses-bulk-select",
+   "state": "cards.expenses-approve-own-blocked",
+   "title": "Approve own expense blocked"
+  }
+ ]
+}

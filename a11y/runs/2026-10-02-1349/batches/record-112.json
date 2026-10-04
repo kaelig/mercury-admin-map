@@ -1,0 +1,28 @@
+{
+ "batch": "record-112",
+ "reach": {
+  "baseUrl": "https://demo.mercury.com",
+  "data": "data",
+  "map": "build/map.json",
+  "run": "2026-10-02-1349",
+  "workspace": "a11y"
+ },
+ "run": "2026-10-02-1349",
+ "states": [
+  {
+   "area": "settings",
+   "draft": "not drafted: its parent had no accepted recipe when the drafter ran; a previous recorder failed: previous recorders reported policy before policy.fixtureValues gained the value this label types; it is there now (check with jq)",
+   "image": "screens/settings/83-create-webhook-http-error.png",
+   "kind": "validation-error",
+   "labels": [
+    "Click + Create webhook",
+    "Enter an http:// URL and tab away"
+   ],
+   "mutates": true,
+   "note": "An http:// URL shows 'Please enter a valid HTTPS URL (e.g. https://example.com/webhook)'; Create endpoint stays disabled.",
+   "parent": "settings.create-webhook",
+   "state": "settings.create-webhook-http-error",
+   "title": "Create webhook \u2014 http URL rejected"
+  }
+ ]
+}

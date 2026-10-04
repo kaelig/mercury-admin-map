@@ -1,0 +1,51 @@
+{
+ "batch": "record-108",
+ "reach": {
+  "baseUrl": "https://demo.mercury.com",
+  "data": "data",
+  "map": "build/map.json",
+  "run": "2026-10-02-1349",
+  "workspace": "a11y"
+ },
+ "run": "2026-10-02-1349",
+ "states": [
+  {
+   "area": "payments",
+   "draft": "not drafted: its parent had no accepted recipe when the drafter ran",
+   "image": "screens/payments/24-send-confirmation.png",
+   "kind": "confirmation",
+   "labels": [
+    "Click a recently paid recipient",
+    "Click Next (ACH)",
+    "Enter amount, click Next",
+    "Click Next",
+    "Click Next",
+    "Click Schedule payment",
+    "Payment scheduled"
+   ],
+   "mutates": true,
+   "note": "'You've scheduled an ACH payment' with amount card, receipt download, Make another payment, Go to dashboard.",
+   "parent": "payments.send-submitting",
+   "state": "payments.send-success",
+   "title": "Send: ACH scheduled"
+  },
+  {
+   "area": "payments",
+   "draft": "not drafted: its parent had no accepted recipe when the drafter ran; the conductor rejected the previous recipe: missing typed value: replay Amount is empty ($0.00) and the 'money should arrive between...' line is gone, while the capture (note: 'Filled transfer with arrival estimate') shows $5,000.00. Ops / Payroll to Treasury, Add more details on, Internal note and Attachments all match. Amount is required, and the 2 descendants (Next to review) need it, so the hop needs a fixture amount fill (e.g. 1.00).; a previous recorder failed: payments.transfer-start hop 0: click {\"name\":\"Transfer\",\"role\":\"menuitem\"}: no element matches {\"name\":\"Transfer\",\"role\":\"menuitem\"} (an ancestor recipe is broken)",
+   "image": "screens/payments/29-transfer-more-details.png",
+   "kind": "form-state",
+   "labels": [
+    "Click Move money",
+    "Click Transfer",
+    "Open Transfer from",
+    "Pick source, open Transfer to",
+    "Pick destination, toggle Add more details"
+   ],
+   "mutates": true,
+   "note": "Filled transfer with arrival estimate and Add more details on: Internal note and Attachments.",
+   "parent": "payments.transfer-to-dropdown",
+   "state": "payments.transfer-more-details",
+   "title": "Transfer: more details"
+  }
+ ]
+}

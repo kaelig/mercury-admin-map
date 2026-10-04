@@ -1,0 +1,64 @@
+{
+ "batch": "record-120",
+ "reach": {
+  "baseUrl": "https://demo.mercury.com",
+  "data": "data",
+  "map": "build/map.json",
+  "run": "2026-10-02-1349",
+  "workspace": "a11y"
+ },
+ "run": "2026-10-02-1349",
+ "states": [
+  {
+   "area": "payments",
+   "draft": "not drafted: its parent had no accepted recipe when the drafter ran; the conductor rejected the previous recipe: wrong hop: it clicks 'Send requests'; the label means 'Select a recipient with no email'. The error ('Please complete this field', Send disabled, Lighthouse Properties) shows only because the parent replay opened a recipient with no email. The parent capture shows Debug LLC with payments@debug.io, so on that screen this click would send the request, and the hop is not marked mutates; a previous recorder failed: reach of parent payments.recipients-request-tax-docs failed: payments.recipients-bulk hop 1: check {\"index\":2,\"role\":\"checkbox\"}: locator.check: Timeout 5000ms exceeded",
+   "image": "screens/payments/95-recipients-request-tax-docs-validation.png",
+   "kind": "validation-error",
+   "labels": [
+    "Tick two recipient checkboxes",
+    "Click Request tax docs",
+    "Select a recipient with no email"
+   ],
+   "mutates": false,
+   "note": "Recipient without an email: 'Please complete this field' and Send requests disabled.",
+   "parent": "payments.recipients-request-tax-docs",
+   "state": "payments.recipients-request-tax-docs-validation",
+   "title": "Request tax docs: email missing"
+  },
+  {
+   "area": "payments",
+   "draft": "not drafted: its parent had no accepted recipe when the drafter ran; the conductor rejected the previous recipe: form state missing: Wire is selected for Jason Green, but his saved HSBC bank details (\u2022\u20220101) replace the empty Routing number and Account number inputs the capture shows (Domestic Ads), so the next edge, send-wire-validation (Next on empty fields), cannot start here; a previous recorder failed: review: below-threshold 0.8808. Choosing Wire for Jason Green shows his saved HSBC card instead of empty Routing/Account inputs; the capture is Domestic Ads, not reachable from this parent.",
+   "image": "screens/payments/110-send-method-wire.png",
+   "kind": "form-state",
+   "labels": [
+    "Click a recently paid recipient",
+    "Open Payment method",
+    "Choose Wire"
+   ],
+   "mutates": false,
+   "note": "Payment method Wire (0-1 business days, No fee) asks for routing and account numbers.",
+   "parent": "payments.send-method-dropdown",
+   "state": "payments.send-method-wire",
+   "title": "Send: domestic Wire"
+  },
+  {
+   "area": "payments",
+   "draft": "not drafted: its parent had no accepted recipe when the drafter ran",
+   "image": "screens/payments/30-transfer-review.png",
+   "kind": "form-state",
+   "labels": [
+    "Click Move money",
+    "Click Transfer",
+    "Open Transfer from",
+    "Pick source, open Transfer to",
+    "Pick destination, toggle Add more details",
+    "Click Next"
+   ],
+   "mutates": true,
+   "note": "Review: 'Transfer from Ops / Payroll to Treasury', $5,000.00, From/To accounts, internal note, Transfer button and legal copy.",
+   "parent": "payments.transfer-more-details",
+   "state": "payments.transfer-review",
+   "title": "Review transfer"
+  }
+ ]
+}

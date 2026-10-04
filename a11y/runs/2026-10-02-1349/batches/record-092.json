@@ -1,0 +1,50 @@
+{
+ "batch": "record-092",
+ "reach": {
+  "baseUrl": "https://demo.mercury.com",
+  "data": "data",
+  "map": "build/map.json",
+  "run": "2026-10-02-1349",
+  "workspace": "a11y"
+ },
+ "run": "2026-10-02-1349",
+ "states": [
+  {
+   "area": "payments",
+   "draft": "not drafted: its parent had no accepted recipe when the drafter ran",
+   "image": "screens/payments/23-send-submitting.png",
+   "kind": "form-state",
+   "labels": [
+    "Click a recently paid recipient",
+    "Click Next (ACH)",
+    "Enter amount, click Next",
+    "Click Next",
+    "Click Next",
+    "Click Schedule payment"
+   ],
+   "mutates": true,
+   "note": "Schedule payment pressed: primary button shows loading dots and Back is disabled.",
+   "parent": "payments.send-review",
+   "state": "payments.send-submitting",
+   "title": "Send: submitting"
+  },
+  {
+   "area": "payments",
+   "draft": "not drafted: its parent had no accepted recipe when the drafter ran; a previous recorder failed: payments.transfer-start hop 0: click {\"name\":\"Transfer\",\"role\":\"menuitem\"}: no element matches {\"name\":\"Transfer\",\"role\":\"menuitem\"} (an ancestor recipe is broken)",
+   "image": "screens/payments/29-transfer-more-details.png",
+   "kind": "form-state",
+   "labels": [
+    "Click Move money",
+    "Click Transfer",
+    "Open Transfer from",
+    "Pick source, open Transfer to",
+    "Pick destination, toggle Add more details"
+   ],
+   "mutates": true,
+   "note": "Filled transfer with arrival estimate and Add more details on: Internal note and Attachments.",
+   "parent": "payments.transfer-to-dropdown",
+   "state": "payments.transfer-more-details",
+   "title": "Transfer: more details"
+  }
+ ]
+}

@@ -1,0 +1,33 @@
+{
+ "batch": "record-140",
+ "reach": {
+  "baseUrl": "https://demo.mercury.com",
+  "data": "data",
+  "map": "build/map.json",
+  "run": "2026-10-02-1349",
+  "workspace": "a11y"
+ },
+ "run": "2026-10-02-1349",
+ "states": [
+  {
+   "area": "settings",
+   "draft": "not drafted: its parent had no accepted recipe when the drafter ran",
+   "image": "screens/settings/88-webhook-secret-copied.png",
+   "kind": "popover",
+   "labels": [
+    "Click + Create webhook",
+    "Enter an http:// URL and tab away",
+    "Switch to https:// and click Verify endpoint",
+    "Open the Event types combobox",
+    "Tick two event types and close the list",
+    "Click Create endpoint",
+    "Click the secret"
+   ],
+   "mutates": true,
+   "note": "The secret block is itself an unlabelled button; clicking it outlines the block and shows a 'Copied' tooltip.",
+   "parent": "settings.webhook-signing-secret",
+   "state": "settings.webhook-secret-copied",
+   "title": "Signing secret copied"
+  }
+ ]
+}

@@ -1,0 +1,125 @@
+{
+ "batch": "record-094",
+ "reach": {
+  "baseUrl": "https://demo.mercury.com",
+  "data": "data",
+  "map": "build/map.json",
+  "run": "2026-10-02-1349",
+  "workspace": "a11y"
+ },
+ "run": "2026-10-02-1349",
+ "states": [
+  {
+   "area": "transactions",
+   "draft": "not drafted: its parent had no accepted recipe when the drafter ran; a previous recorder failed: a previous attempt failed with structure-missing on a drawer the parent opened; the harness now accepts that open drawer (fixed 2026-10-03), so a scroll or wait hop inside it works",
+   "image": "screens/transactions/34-detail-card-notes-attachments.png",
+   "kind": "drawer",
+   "labels": [
+    "Click a card transaction row",
+    "Scroll panel"
+   ],
+   "mutates": false,
+   "note": "Lower part of the card panel: Department, Notes, Attachments dropzone (PDF, PNG, JPEG), Find using Gmail, Bank description.",
+   "parent": "transactions.detail-card",
+   "state": "transactions.detail-card-lower",
+   "title": "Card detail: notes & attachments"
+  },
+  {
+   "area": "transactions",
+   "draft": "not drafted: its parent had no accepted recipe when the drafter ran",
+   "image": "screens/transactions/35-attachment-uploaded-toast.png",
+   "kind": "toast",
+   "labels": [
+    "Click a card transaction row",
+    "Scroll panel",
+    "Upload a file"
+   ],
+   "mutates": true,
+   "note": "\"Attachment uploaded\" toast; the row's attachment column switches from + to a paperclip.",
+   "parent": "transactions.detail-card-lower",
+   "state": "transactions.attachment-toast",
+   "title": "Attachment uploaded toast"
+  },
+  {
+   "area": "transactions",
+   "draft": "not drafted: its parent had no accepted recipe when the drafter ran",
+   "image": "screens/transactions/92-detail-note-saved.png",
+   "kind": "confirmation",
+   "labels": [
+    "Click a card transaction row",
+    "Scroll panel",
+    "Edit Notes and tab out"
+   ],
+   "mutates": false,
+   "note": "Editing Notes on a debit card charge and tabbing out shows a green \"Saved\" check in the panel header.",
+   "parent": "transactions.detail-card-lower",
+   "state": "transactions.detail-note-saved",
+   "title": "Note saved"
+  },
+  {
+   "area": "transactions",
+   "draft": "not drafted: its parent had no accepted recipe when the drafter ran",
+   "image": "screens/transactions/93-attachment-menu.png",
+   "kind": "menu",
+   "labels": [
+    "Click a card transaction row",
+    "Scroll panel",
+    "Edit Notes and tab out",
+    "Click the attachment chevron"
+   ],
+   "mutates": false,
+   "note": "Chevron next to an attachment opens Receipt / Bill / Other type options and a destructive Remove.",
+   "parent": "transactions.detail-note-saved",
+   "state": "transactions.attachment-menu",
+   "title": "Attachment type menu"
+  },
+  {
+   "area": "transactions",
+   "draft": "not drafted: its parent had no accepted recipe when the drafter ran",
+   "image": "screens/transactions/94-attachment-preview.png",
+   "kind": "modal",
+   "labels": [
+    "Click a card transaction row",
+    "Scroll panel",
+    "Edit Notes and tab out",
+    "Click the attachment name"
+   ],
+   "mutates": false,
+   "note": "Clicking the attachment name opens a document viewer with page (1 of 3), zoom, Reset, open-in-new-tab and download controls, beside the transaction summary and Close.",
+   "parent": "transactions.detail-note-saved",
+   "state": "transactions.attachment-preview",
+   "title": "Attachment preview"
+  },
+  {
+   "area": "transactions",
+   "draft": "not drafted: its parent had no accepted recipe when the drafter ran",
+   "image": "screens/transactions/36-detail-receipt-attached.png",
+   "kind": "confirmation",
+   "labels": [
+    "Click a card transaction row",
+    "Scroll panel",
+    "Drop receipt on Attachments"
+   ],
+   "mutates": false,
+   "note": "Attachments list shows the uploaded receipt with a green check (named receipt.pdf although a PNG was uploaded).",
+   "parent": "transactions.detail-card-lower",
+   "state": "transactions.detail-receipt-attached",
+   "title": "Receipt attached"
+  },
+  {
+   "area": "transactions",
+   "draft": "not drafted: its parent had no accepted recipe when the drafter ran; a previous recorder failed: a previous attempt failed with structure-missing on a drawer the parent opened; the harness now accepts that open drawer (fixed 2026-10-03), so a scroll or wait hop inside it works",
+   "image": "screens/transactions/41-detail-ach-comments.png",
+   "kind": "drawer",
+   "labels": [
+    "Click an ACH payment row",
+    "Click 1 Unread Comment"
+   ],
+   "mutates": false,
+   "note": "ACH panel scrolled to the attached bill, bank description, Mercury-generated receipt and an existing comment thread.",
+   "parent": "transactions.detail-ach",
+   "state": "transactions.detail-ach-comments",
+   "title": "ACH detail: attachments & comments"
+  }
+ ]
+}

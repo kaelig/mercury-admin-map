@@ -1,0 +1,64 @@
+{
+ "batch": "record-076",
+ "reach": {
+  "baseUrl": "https://demo.mercury.com",
+  "data": "data",
+  "map": "build/map.json",
+  "run": "2026-10-02-1349",
+  "workspace": "a11y"
+ },
+ "run": "2026-10-02-1349",
+ "states": [
+  {
+   "area": "cards",
+   "draft": "cannot parse \"Clear amount\"; the conductor rejected the previous recipe: missing validation error: the amount is cleared and Save is disabled, but the replay has no red border, no warning icon and no 'Please complete this field' tooltip; the hop only clears the field and never clicks Save; a previous recorder failed: policy (now retry: policy.fixtureValues gained empty \"\", 2000000, 10000, 2500, 500, 150, card, a, zzqxnothing, Lunch, Deli 77, 12/31/2099): Needs clearing the amount (typing an empty value); the replay refuses \"\" because it is not a policy.fixtureValues entry.",
+   "image": "screens/cards/71-policy-receipt-error.png",
+   "kind": "validation-error",
+   "labels": [
+    "Click Edit on Receipt requirement",
+    "Clear amount, click Save"
+   ],
+   "mutates": true,
+   "note": "Amount cleared: the input shows a warning icon and a 'Please complete this field' tooltip above it; Save disabled.",
+   "parent": "cards.policy-receipt-edit",
+   "state": "cards.policy-receipt-error",
+   "title": "Receipt threshold required"
+  },
+  {
+   "area": "cards",
+   "draft": "not drafted: its parent had no accepted recipe when the drafter ran",
+   "image": "screens/cards/67-submit-expense-review.png",
+   "kind": "form-state",
+   "labels": [
+    "Click Submit expense",
+    "Click Review with empty form",
+    "Fill amount, merchant and notes",
+    "Click Review"
+   ],
+   "mutates": true,
+   "note": "Step 2 Review expense: $42.50, a warning that the expense is missing a category, summary rows (Date September 24, 2026, merchant, participants, notes), Back and Submit.",
+   "parent": "cards.submit-expense-filled",
+   "state": "cards.submit-expense-review",
+   "title": "Review expense"
+  },
+  {
+   "area": "cards",
+   "draft": "not drafted: its parent had no accepted recipe when the drafter ran",
+   "image": "screens/cards/23-transfer-card-done.png",
+   "kind": "toast",
+   "labels": [
+    "Click a virtual card row",
+    "Click More",
+    "Click Transfer card",
+    "Click Transfer with no recipient",
+    "Open Transfer to",
+    "Pick Alice Chen, click Transfer"
+   ],
+   "mutates": true,
+   "note": "Card now listed under Alice Chen, panel shows Alice Chen as holder and a 'Card transferred' toast fades in at the bottom.",
+   "parent": "cards.transfer-card-dropdown",
+   "state": "cards.transfer-card-done",
+   "title": "Card transferred"
+  }
+ ]
+}

@@ -1,0 +1,300 @@
+{
+ "batch": "record-064",
+ "reach": {
+  "baseUrl": "https://demo.mercury.com",
+  "data": "data",
+  "map": "build/map.json",
+  "run": "2026-10-02-1349",
+  "workspace": "a11y"
+ },
+ "run": "2026-10-02-1349",
+ "states": [
+  {
+   "area": "books",
+   "draft": "not drafted: its parent had no accepted recipe when the drafter ran",
+   "image": "screens/books/21-transactions.png",
+   "kind": "page",
+   "labels": [
+    "Toggle Books",
+    "Click Try Mercury Books",
+    "Books created",
+    "Dismiss spotlight",
+    "Sidebar: Transactions"
+   ],
+   "mutates": false,
+   "note": "Tabs All / Bank / Credit card / Payments / Loans, dismissible \"Categorization that keeps up with you\" explainer, Review / Filters / Categorization method controls and a spreadsheet grid (Date, Account, Ledger account, Description, Tags, Amount).",
+   "parent": "books.home",
+   "state": "books.transactions",
+   "title": "Transactions"
+  },
+  {
+   "area": "books",
+   "draft": "not drafted: its parent had no accepted recipe when the drafter ran",
+   "image": "screens/books/45-review-menu.png",
+   "kind": "menu",
+   "labels": [
+    "Toggle Books",
+    "Click Try Mercury Books",
+    "Books created",
+    "Dismiss spotlight",
+    "Sidebar: Transactions",
+    "Click Review"
+   ],
+   "mutates": false,
+   "note": "Review dropdown with To review and Reviewed radio items.",
+   "parent": "books.transactions",
+   "state": "books.review-menu",
+   "title": "Review filter menu"
+  },
+  {
+   "area": "books",
+   "draft": "not drafted: its parent had no accepted recipe when the drafter ran",
+   "image": "screens/books/46-to-review-filtered.png",
+   "kind": "form-state",
+   "labels": [
+    "Toggle Books",
+    "Click Try Mercury Books",
+    "Books created",
+    "Dismiss spotlight",
+    "Sidebar: Transactions",
+    "Click Review",
+    "To review"
+   ],
+   "mutates": false,
+   "note": "Control reads \"To review (7975)\", Filters becomes \"Filters (1)\"; the menu stays open after picking.",
+   "parent": "books.review-menu",
+   "state": "books.to-review",
+   "title": "To review filter applied"
+  },
+  {
+   "area": "books",
+   "draft": "not drafted: its parent had no accepted recipe when the drafter ran",
+   "image": "screens/books/43-transaction-drawer.png",
+   "kind": "drawer",
+   "labels": [
+    "Toggle Books",
+    "Click Try Mercury Books",
+    "Books created",
+    "Dismiss spotlight",
+    "Sidebar: Transactions",
+    "Open row"
+   ],
+   "mutates": false,
+   "note": "$14,934.67 Money out, Transaction / Journal Entry tabs, account, type, date, description, memo, line items and ACH metadata; the grid behind narrows so Ledger cells show \"Un\u2026\" and \"C\".",
+   "parent": "books.transactions",
+   "state": "books.transaction-drawer",
+   "title": "Transaction detail"
+  },
+  {
+   "area": "books",
+   "draft": "not drafted: its parent had no accepted recipe when the drafter ran",
+   "image": "screens/books/44-transaction-je-tab.png",
+   "kind": "drawer",
+   "labels": [
+    "Toggle Books",
+    "Click Try Mercury Books",
+    "Books created",
+    "Dismiss spotlight",
+    "Sidebar: Transactions",
+    "Open row",
+    "Journal Entry tab"
+   ],
+   "mutates": false,
+   "note": "Journal Entry tab: Date, Description and a \"Line entries\" debit/credit table (Ops / Payroll credit, Uncategorized Cash Outflow debit).",
+   "parent": "books.transaction-drawer",
+   "state": "books.transaction-je-tab",
+   "title": "Transaction journal entry tab"
+  },
+  {
+   "area": "books",
+   "draft": "not drafted: its parent had no accepted recipe when the drafter ran",
+   "image": "screens/books/08-finalize-setup.png",
+   "kind": "modal",
+   "labels": [
+    "Toggle Books",
+    "Click Try Mercury Books",
+    "Books created",
+    "Dismiss spotlight",
+    "Click Finalize setup"
+   ],
+   "mutates": false,
+   "note": "Add other bank or credit accounts: list of linked external accounts with checkmarks and a + to link more.",
+   "parent": "books.home",
+   "state": "books.finalize-step1",
+   "title": "Finalize setup 1 of 3: linked accounts"
+  },
+  {
+   "area": "books",
+   "draft": "not drafted: its parent had no accepted recipe when the drafter ran",
+   "image": "screens/books/09-finalize-step2.png",
+   "kind": "form-state",
+   "labels": [
+    "Toggle Books",
+    "Click Try Mercury Books",
+    "Books created",
+    "Dismiss spotlight",
+    "Click Finalize setup",
+    "Next"
+   ],
+   "mutates": false,
+   "note": "Right after Next on step 1 the modal keeps showing the linked-accounts list while the Next button turns into a loading pill. Step 2 (Add payment or payroll integrations: Stripe, PayPal, Gusto, each \"Set up on <provider>\u2019s site\") followed; its OAuth tiles were not opened.",
+   "parent": "books.finalize-step1",
+   "state": "books.finalize-step2",
+   "title": "Finalize setup: advancing from step 1"
+  },
+  {
+   "area": "books",
+   "draft": "not drafted: its parent had no accepted recipe when the drafter ran",
+   "image": "screens/books/10-finalize-step3.png",
+   "kind": "form-state",
+   "labels": [
+    "Toggle Books",
+    "Click Try Mercury Books",
+    "Books created",
+    "Dismiss spotlight",
+    "Click Finalize setup",
+    "Next",
+    "Next"
+   ],
+   "mutates": false,
+   "note": "Transition into step 3 shows \"Finalize setup 3 of 3\" with an empty body and a three-dot loader before the accountant options appear.",
+   "parent": "books.finalize-step2",
+   "state": "books.finalize-step3",
+   "title": "Finalize setup: loading step 3"
+  },
+  {
+   "area": "books",
+   "draft": "not drafted: its parent had no accepted recipe when the drafter ran",
+   "image": "screens/books/11-invite-accountant.png",
+   "kind": "form-state",
+   "labels": [
+    "Toggle Books",
+    "Click Try Mercury Books",
+    "Books created",
+    "Dismiss spotlight",
+    "Click Finalize setup",
+    "Next",
+    "Next",
+    "Choose Invite my accountant"
+   ],
+   "mutates": true,
+   "note": "Choosing Invite my accountant reveals a Team member select pre-filled with Xavier Xyloto.",
+   "parent": "books.finalize-step3",
+   "state": "books.finalize-invite",
+   "title": "Invite my accountant selected"
+  },
+  {
+   "area": "books",
+   "draft": "not drafted: its parent had no accepted recipe when the drafter ran",
+   "image": "screens/books/36-books-details.png",
+   "kind": "page",
+   "labels": [
+    "Toggle Books",
+    "Click Try Mercury Books",
+    "Books created",
+    "Dismiss spotlight",
+    "Sidebar: Settings"
+   ],
+   "mutates": false,
+   "note": "Settings: Start date Sep 1, 2023, Accounting basis Cash, Close date Aug 25, 2026, Books subscription Free trial, Request to be matched with an accounting partner.",
+   "parent": "books.home",
+   "state": "books.books-details",
+   "title": "Books Details"
+  },
+  {
+   "area": "books",
+   "draft": "not drafted: its parent had no accepted recipe when the drafter ran",
+   "image": "screens/books/37-tags.png",
+   "kind": "page",
+   "labels": [
+    "Toggle Books",
+    "Click Try Mercury Books",
+    "Books created",
+    "Dismiss spotlight",
+    "Sidebar: Settings",
+    "Sidebar: Tags"
+   ],
+   "mutates": false,
+   "note": "Tag list of #Engineering, #Marketing, #Operations, #Product, #Sales in the Department group, all Active.",
+   "parent": "books.books-details",
+   "state": "books.tags",
+   "title": "Tags"
+  },
+  {
+   "area": "books",
+   "draft": "not drafted: its parent had no accepted recipe when the drafter ran",
+   "image": "screens/books/51-create-tag.png",
+   "kind": "drawer",
+   "labels": [
+    "Toggle Books",
+    "Click Try Mercury Books",
+    "Books created",
+    "Dismiss spotlight",
+    "Sidebar: Settings",
+    "Sidebar: Tags",
+    "Click Create tag"
+   ],
+   "mutates": true,
+   "note": "Create tag: Tag group Department, Tag name field with # prefix.",
+   "parent": "books.tags",
+   "state": "books.tag-create",
+   "title": "Create tag drawer"
+  },
+  {
+   "area": "books",
+   "draft": "not drafted: its parent had no accepted recipe when the drafter ran",
+   "image": "screens/books/22-invoices.png",
+   "kind": "page",
+   "labels": [
+    "Toggle Books",
+    "Click Try Mercury Books",
+    "Books created",
+    "Dismiss spotlight",
+    "Sidebar: Invoices"
+   ],
+   "mutates": false,
+   "note": "Warning banner \"You have 3 non-USD invoices that won\u2019t sync to Books\u2026\" with View invoices; grid of invoices with Draft, Overdue, Paid - Needs Action, Cancelled, Processing, Partially Paid, Paid and Open badges.",
+   "parent": "books.home",
+   "state": "books.invoices",
+   "title": "Invoices"
+  },
+  {
+   "area": "books",
+   "draft": "not drafted: its parent had no accepted recipe when the drafter ran",
+   "image": "screens/books/23-invoices-customers.png",
+   "kind": "page",
+   "labels": [
+    "Toggle Books",
+    "Click Try Mercury Books",
+    "Books created",
+    "Dismiss spotlight",
+    "Sidebar: Invoices",
+    "Sidebar: Customers"
+   ],
+   "mutates": false,
+   "note": "Customer list (Name, Email) under Invoices, with Add a customer split button.",
+   "parent": "books.invoices",
+   "state": "books.customers",
+   "title": "Customers"
+  },
+  {
+   "area": "books",
+   "draft": "not drafted: its parent had no accepted recipe when the drafter ran",
+   "image": "screens/books/47-invoice-drawer.png",
+   "kind": "drawer",
+   "labels": [
+    "Toggle Books",
+    "Click Try Mercury Books",
+    "Books created",
+    "Dismiss spotlight",
+    "Sidebar: Invoices",
+    "Open INV-OVERDUE-001"
+   ],
+   "mutates": false,
+   "note": "INV-OVERDUE-001: Details / Payments / Journal Entries tabs, Overdue badge, amount $4,200.00, dates Aug 11, 2026 and Sep 10, 2026, line items, outstanding balance, attachment dropzone.",
+   "parent": "books.invoices",
+   "state": "books.invoice-drawer",
+   "title": "Invoice detail"
+  }
+ ]
+}

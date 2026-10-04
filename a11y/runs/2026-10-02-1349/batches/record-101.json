@@ -1,0 +1,98 @@
+{
+ "batch": "record-101",
+ "reach": {
+  "baseUrl": "https://demo.mercury.com",
+  "data": "data",
+  "map": "build/map.json",
+  "run": "2026-10-02-1349",
+  "workspace": "a11y"
+ },
+ "run": "2026-10-02-1349",
+ "states": [
+  {
+   "area": "payments",
+   "draft": "not drafted: its parent had no accepted recipe when the drafter ran; the conductor rejected the previous recipe: different record and method: the replay shows the ACH review (Jason Green, $1.00, Schedule payment); the label means the wire review (Domestic Ads, Wire, Mock Bank, Schedule wire); a previous recorder failed: review: below-threshold. The send-details parent chain is the ACH flow (Jason Green); clicking Next reaches the ACH review, not the wire review (Domestic Ads, Wire). The wire path needs a different recipient and a wire-specific step not available from this parent.",
+   "image": "screens/payments/113-send-wire-review.png",
+   "kind": "form-state",
+   "labels": [
+    "Click a recently paid recipient",
+    "Click Next (ACH)",
+    "Enter amount, click Next",
+    "Click Next",
+    "Click Next (wire)"
+   ],
+   "mutates": false,
+   "note": "Wire review: $500.00 hero, delivery estimate, bank, full account and routing numbers, from account; Schedule wire.",
+   "parent": "payments.send-details",
+   "state": "payments.send-wire-review",
+   "title": "Send: wire review"
+  },
+  {
+   "area": "payments",
+   "draft": "not drafted: its parent had no accepted recipe when the drafter ran",
+   "image": "screens/payments/114-send-wire-success.png",
+   "kind": "confirmation",
+   "labels": [
+    "Click a recently paid recipient",
+    "Click Next (ACH)",
+    "Enter amount, click Next",
+    "Click Next",
+    "Click Next (wire)",
+    "Click Schedule wire"
+   ],
+   "mutates": true,
+   "note": "'You've scheduled a wire payment' with receipt download and a 1099 prompt to request the recipient's tax documents by email.",
+   "parent": "payments.send-wire-review",
+   "state": "payments.send-wire-success",
+   "title": "Send: wire scheduled"
+  },
+  {
+   "area": "payments",
+   "draft": "not drafted: its parent had no accepted recipe when the drafter ran; the conductor rejected the previous recipe: missing validation error: the replay shows the Request tax documents dialog (Lighthouse Properties, empty Email) with focus on the remove button, but no 'Please complete this field' error under Email; a previous recorder failed: reach of parent payments.recipients-request-tax-docs failed: payments.recipients-bulk hop 1: check {\"index\":2,\"role\":\"checkbox\"}: locator.check: Timeout 5000ms exceeded",
+   "image": "screens/payments/95-recipients-request-tax-docs-validation.png",
+   "kind": "validation-error",
+   "labels": [
+    "Tick two recipient checkboxes",
+    "Click Request tax docs",
+    "Select a recipient with no email"
+   ],
+   "mutates": false,
+   "note": "Recipient without an email: 'Please complete this field' and Send requests disabled.",
+   "parent": "payments.recipients-request-tax-docs",
+   "state": "payments.recipients-request-tax-docs-validation",
+   "title": "Request tax docs: email missing"
+  },
+  {
+   "area": "payments",
+   "draft": "not drafted: its parent had no accepted recipe when the drafter ran",
+   "image": "screens/payments/11-send-edit-recipient-drawer.png",
+   "kind": "drawer",
+   "labels": [
+    "Click a recently paid recipient",
+    "Click recipient card ... menu",
+    "Click Edit recipient details"
+   ],
+   "mutates": false,
+   "note": "Full-screen overlay to edit recipient profile (person/business, name, email, nickname) and address; covers the demo banner.",
+   "parent": "payments.send-recipient-more-menu",
+   "state": "payments.send-edit-recipient",
+   "title": "Send: Edit recipient details"
+  },
+  {
+   "area": "payments",
+   "draft": "not drafted: its parent had no accepted recipe when the drafter ran; the conductor rejected the previous recipe: form state differs: Wire is selected (0-1 business days, No fee), but Jason Green's saved HSBC bank card (Account \u2022\u20220101, Edit) replaces the empty Routing number and Account number inputs that the capture (Domestic Ads) and its note ('asks for routing and account numbers') are about. The hop and record match the accepted parent, but those inputs never get audited, and the child send-wire-validation (Next with empty routing) cannot fire from here. Fix: pick a recipient with no saved wire details.",
+   "image": "screens/payments/110-send-method-wire.png",
+   "kind": "form-state",
+   "labels": [
+    "Click a recently paid recipient",
+    "Open Payment method",
+    "Choose Wire"
+   ],
+   "mutates": false,
+   "note": "Payment method Wire (0-1 business days, No fee) asks for routing and account numbers.",
+   "parent": "payments.send-method-dropdown",
+   "state": "payments.send-method-wire",
+   "title": "Send: domestic Wire"
+  }
+ ]
+}

@@ -35,6 +35,163 @@
   "source": "ab70a3252890b49947f8901dc56086ec490c3eba",
   "status": "accepted"
  },
+ "payments.ach-add-details": {
+  "checked": "2026-10-02-1349",
+  "fingerprint": {
+   "controls": [
+    "+ Add Account",
+    "ACH Company ID(s)",
+    "Account",
+    "Back",
+    "Close",
+    "Customize your experience",
+    "Next",
+    "Open account",
+    "Remove Tag",
+    "Transaction limit",
+    "Vendor",
+    "Viewing as Admin"
+   ],
+   "headings": [],
+   "path": "/payments/authorizations/add",
+   "structure": "document",
+   "top": {
+    "name": "",
+    "role": "document"
+   }
+  },
+  "hop": [
+   {
+    "click": {
+     "name": "PG&E ACH Company ID: <n>",
+     "role": "option"
+    }
+   }
+  ],
+  "mutates": false,
+  "parent": "payments.ach-add",
+  "recordedBy": "agent",
+  "review": {
+   "by": "conductor",
+   "date": "2026-10-03",
+   "decision": "accept",
+   "note": "same ACH authorization details form (vendor PG&E, Company ID chip, Ops / Payroll ••1038, Transaction limit off); the Company ID number changes between sessions and the hop already stores it as <n>",
+   "reason": "sample"
+  },
+  "similarity": 0.9998,
+  "source": "1d771d451fcac45f0924c4cf91535d4b584b9636",
+  "status": "accepted"
+ },
+ "payments.ach-add-review": {
+  "checked": "2026-10-02-1349",
+  "fingerprint": {
+   "controls": [
+    "Authorize",
+    "Back",
+    "Close",
+    "Customize your experience",
+    "Open account",
+    "Viewing as Admin"
+   ],
+   "headings": [],
+   "path": "/payments/authorizations/add",
+   "structure": "document",
+   "top": {
+    "name": "",
+    "role": "document"
+   }
+  },
+  "hop": [
+   {
+    "click": {
+     "name": "Next",
+     "role": "button"
+    }
+   }
+  ],
+  "mutates": false,
+  "parent": "payments.ach-add-details",
+  "recordedBy": "agent",
+  "review": null,
+  "similarity": 0.9998,
+  "source": "9c1b8566f1ec84b27c0d3dd5e381fd9c30a09a5a",
+  "status": "accepted"
+ },
+ "payments.ach-add-success": {
+  "checked": "2026-10-02-1349",
+  "fingerprint": {
+   "controls": [
+    "ACH Authorizations",
+    "Accounting",
+    "Accounts",
+    "Add ACH authorization",
+    "Add to bookmarks",
+    "Banking",
+    "Bill Pay",
+    "Books",
+    "Cards",
+    "Checkbooks",
+    "Command New",
+    "Credit Card",
+    "Customize your experience",
+    "Home",
+    "Insights",
+    "Invoicing",
+    "Learn about bookmarks",
+    "Mercury Demo Pro",
+    "Move money",
+    "Navigate to Settings",
+    "Open account",
+    "Ops / Payroll <amount>",
+    "Payments",
+    "Recipients",
+    "Remove bookmark",
+    "Reorder Bill Pay bookmark",
+    "Reorder Credit Card bookmark",
+    "Reorder Insights bookmark",
+    "Reorder Ops / Payroll bookmark",
+    "Search for anything",
+    "Tasks <n>",
+    "Taxes",
+    "Team Spend",
+    "Toggle Private Mode",
+    "Transactions",
+    "Viewing as Admin",
+    "Wire Drawdowns",
+    "updates"
+   ],
+   "headings": [
+    "ACH Authorizations"
+   ],
+   "path": "/payments/authorizations",
+   "structure": "document",
+   "top": {
+    "name": "",
+    "role": "document"
+   }
+  },
+  "hop": [
+   {
+    "click": {
+     "name": "Authorize",
+     "role": "button"
+    }
+   }
+  ],
+  "mutates": true,
+  "parent": "payments.ach-add-review",
+  "recordedBy": "agent",
+  "review": {
+   "by": "conductor",
+   "date": "2026-10-03",
+   "decision": "accept",
+   "note": "same ACH Authorizations list with PG&E added below Domestic Ads (the fresh root list has no PG&E row, so the Authorize hop added it); dates drifted; the 'parent has no recipe' detail is stale because ach-add-review is now accepted",
+   "reason": "mutating"
+  },
+  "similarity": 0.9967,
+  "source": "048b008261f8f4ad62d511ee1dc9e7f05c2cdd06",
+  "status": "accepted"
+ },
  "payments.ach-authorizations": {
   "checked": "2026-10-02-1349",
   "fingerprint": {
@@ -161,6 +318,747 @@
   "source": "97d170e1550eee4afc0af065b78cda302a97674c",
   "status": "accepted"
  },
+ "payments.approval-approved": {
+  "checked": "2026-10-02-1349",
+  "fingerprint": {
+   "controls": [],
+   "headings": [],
+   "path": "/payments/approvals",
+   "structure": "status",
+   "top": {
+    "name": "Bills needing approval",
+    "role": "table"
+   }
+  },
+  "hop": [
+   {
+    "click": {
+     "name": "Approve",
+     "role": "button"
+    }
+   }
+  ],
+  "mutates": true,
+  "parent": "payments.approval-detail",
+  "recordedBy": "agent",
+  "review": {
+   "by": "conductor",
+   "date": "2026-10-03",
+   "decision": "accept",
+   "note": "same Needs Approval list after Approve: the parent's Jason Green Monthly (-$5,000) row is gone, count 7 to 6, panel closed, same 6 rows as the capture; the 'Request approved' toast faded",
+   "reason": "mutating"
+  },
+  "similarity": 0.9658,
+  "source": "a4f9b4e15e1321895cd75c5750fb6d36970d3e8b",
+  "status": "accepted"
+ },
+ "payments.approval-declined": {
+  "checked": "2026-10-02-1349",
+  "fingerprint": {
+   "controls": [],
+   "headings": [],
+   "path": "/payments/approvals",
+   "structure": "status",
+   "top": {
+    "name": "Bills needing approval",
+    "role": "table"
+   }
+  },
+  "hop": [
+   {
+    "click": {
+     "name": "Decline",
+     "role": "button"
+    }
+   }
+  ],
+  "mutates": true,
+  "parent": "payments.approval-detail",
+  "recordedBy": "agent",
+  "review": {
+   "by": "conductor",
+   "date": "2026-10-03",
+   "decision": "accept",
+   "note": "same Needs Approval list after Decline, on a different record: the replay declines the parent's Jason Green Monthly (7 to 6), while the person declined the No-due-date Jason Green after an earlier approve (6 to 5); the label names no row; the 'Request declined' toast faded",
+   "reason": "mutating"
+  },
+  "similarity": 0.9147,
+  "source": "a964d77b5f54c8a12a11650a7668c554db0fba9e",
+  "status": "accepted"
+ },
+ "payments.approval-detail": {
+  "checked": "2026-10-02-1349",
+  "fingerprint": {
+   "controls": [
+    "Approve",
+    "Close detail panel",
+    "Decline",
+    "Review",
+    "View Email",
+    "a<n>bdc-<n>ea-<n>e<n>.pdf"
+   ],
+   "headings": [],
+   "path": "/payments/approvals",
+   "structure": "dialog",
+   "top": {
+    "name": "",
+    "role": "complementary"
+   }
+  },
+  "hop": [
+   {
+    "click": {
+     "index": 0,
+     "text": "Jason Green"
+    }
+   }
+  ],
+  "mutates": false,
+  "parent": "payments.needs-approval",
+  "recordedBy": "agent",
+  "review": {
+   "by": "conductor",
+   "date": "2026-10-03",
+   "decision": "accept",
+   "note": "same Jason Green Monthly approval panel (-$5,000.00, Review/Approve/Decline, Recurring payment, invoice date Yesterday, approvals 0 of 2); dates drifted",
+   "reason": "sample"
+  },
+  "similarity": 0.9966,
+  "source": "1882875b939ebbc1677b1300c55e23427c7ac717",
+  "status": "accepted"
+ },
+ "payments.approvals-bulk": {
+  "checked": "2026-10-02-1349",
+  "fingerprint": {
+   "controls": [
+    "Review Requests"
+   ],
+   "headings": [],
+   "path": "/payments/approvals",
+   "structure": "dialog",
+   "top": {
+    "name": "<n> requests selected",
+    "role": "dialog"
+   }
+  },
+  "hop": [
+   {
+    "check": {
+     "index": 2,
+     "role": "checkbox"
+    }
+   },
+   {
+    "check": {
+     "index": 3,
+     "role": "checkbox"
+    }
+   }
+  ],
+  "mutates": false,
+  "parent": "payments.needs-approval",
+  "recordedBy": "agent",
+  "review": {
+   "by": "conductor",
+   "date": "2026-10-03",
+   "decision": "accept",
+   "note": "same bulk selection: both Batch 'Vendor Payments' rows ticked, '2 requests selected $12,085.90' bar with decline, approve and Review Requests; the list has 7 rows vs 5 in the capture (count drift only)",
+   "reason": "below-threshold"
+  },
+  "similarity": 0.8858,
+  "source": "b38d3fc631f6fddec2efdbdac28ec19728a46434",
+  "status": "accepted"
+ },
+ "payments.batch-review": {
+  "checked": "2026-10-02-1349",
+  "fingerprint": {
+   "controls": [
+    "Approve",
+    "Close",
+    "Customize your experience",
+    "Decline",
+    "Open account",
+    "Skip",
+    "Vendor Payments to Jason Green",
+    "Viewing as Admin"
+   ],
+   "headings": [
+    "Review batch payment"
+   ],
+   "path": "/batch-payments/approval",
+   "structure": "document",
+   "top": {
+    "name": "",
+    "role": "document"
+   }
+  },
+  "hop": [
+   {
+    "click": {
+     "name": "Review Requests",
+     "role": "button"
+    }
+   }
+  ],
+  "mutates": false,
+  "parent": "payments.approvals-bulk",
+  "recordedBy": "agent",
+  "review": null,
+  "similarity": 0.9957,
+  "source": "ca9e51524253cc8fc0ab2f5d363baeecc9c353a3",
+  "status": "accepted"
+ },
+ "payments.batch-review-next": {
+  "checked": "2026-10-02-1349",
+  "fingerprint": {
+   "controls": [
+    "Approve",
+    "Close",
+    "Customize your experience",
+    "Decline",
+    "Open account",
+    "Skip",
+    "Vendor Payments to Bridget Adam",
+    "Viewing as Admin"
+   ],
+   "headings": [
+    "Review batch payment"
+   ],
+   "path": "/batch-payments/approval",
+   "structure": "document",
+   "top": {
+    "name": "",
+    "role": "document"
+   }
+  },
+  "hop": [
+   {
+    "click": {
+     "name": "Approve",
+     "role": "button"
+    }
+   }
+  ],
+  "mutates": true,
+  "parent": "payments.batch-review",
+  "recordedBy": "agent",
+  "review": {
+   "by": "conductor",
+   "date": "2026-10-03",
+   "decision": "accept",
+   "note": "same 'Approval 2 of 2' Review batch payment screen (Vendor Payments to Bridget Adam, $6,042.95) with the 'Approved' toast; the hop clicks Approve; only Send on drifted (Tomorrow vs Today)",
+   "reason": "mutating"
+  },
+  "similarity": 0.9956,
+  "source": "c93eb7cd3f398796c9f24e6e7b80b56f237bc025",
+  "status": "accepted"
+ },
+ "payments.batch-success": {
+  "checked": "2026-10-02-1349",
+  "fingerprint": {
+   "controls": [
+    "Back to needs approval",
+    "Close",
+    "Customize your experience",
+    "Open account",
+    "View details",
+    "Viewing as Admin"
+   ],
+   "headings": [
+    "You’ve reviewed <n> payments",
+    "Email receipts have been sent."
+   ],
+   "path": "/send-money/bulk-approval-review/success",
+   "structure": "document",
+   "top": {
+    "name": "",
+    "role": "document"
+   }
+  },
+  "hop": [
+   {
+    "click": {
+     "name": "Approve",
+     "role": "button"
+    }
+   }
+  ],
+  "mutates": true,
+  "parent": "payments.batch-review-next",
+  "recordedBy": "agent",
+  "review": {
+   "by": "conductor",
+   "date": "2026-10-03",
+   "decision": "accept",
+   "note": "same 'You've reviewed 2 payments' confirmation ($12,085.90 approved, View details, Back to needs approval, Approved toast); the hop clicks Approve as the label says",
+   "reason": "mutating"
+  },
+  "similarity": 0.9822,
+  "source": "2cd7620536c54647ffb9998bc66cac1e4ad40184",
+  "status": "accepted"
+ },
+ "payments.checkbook-check-approved": {
+  "checked": "2026-10-02-1349",
+  "fingerprint": {
+   "controls": [
+    "ACH Authorizations",
+    "Accounting",
+    "Accounts",
+    "Add to bookmarks",
+    "Approve",
+    "Banking",
+    "Bill Pay",
+    "Books",
+    "Cards",
+    "Checkbooks",
+    "Close detail panel",
+    "Command New",
+    "Credit Card",
+    "Customize your experience",
+    "Home",
+    "Insights",
+    "Invoicing",
+    "Learn about bookmarks",
+    "Mercury Demo Pro",
+    "Move money",
+    "Navigate to Settings",
+    "Open account",
+    "Open check front in a new tab",
+    "Ops / Payroll <amount>",
+    "Order Checkbook",
+    "Payments",
+    "Recipients",
+    "Reject",
+    "Remove bookmark",
+    "Reorder Bill Pay bookmark",
+    "Reorder Credit Card bookmark",
+    "Reorder Insights bookmark",
+    "Reorder Ops / Payroll bookmark",
+    "Search for anything",
+    "Settings",
+    "Show back of check",
+    "Tasks <n>",
+    "Taxes",
+    "Team Spend",
+    "Toggle Private Mode",
+    "Transactions",
+    "View all check payments",
+    "Viewing as Admin",
+    "Wire Drawdowns",
+    "updates"
+   ],
+   "headings": [
+    "Checkbooks"
+   ],
+   "path": "/checkbooks/hub/<id>",
+   "structure": "document",
+   "top": {
+    "name": "",
+    "role": "document"
+   }
+  },
+  "hop": [
+   {
+    "click": {
+     "name": "Approve",
+     "role": "button"
+    }
+   }
+  ],
+  "mutates": true,
+  "parent": "payments.checkbook-check-detail",
+  "recordedBy": "agent",
+  "review": {
+   "by": "conductor",
+   "date": "2026-10-03",
+   "decision": "accept",
+   "note": "same Check Payment panel for check 1001 $1,250.75 showing the Processing badge and the 'approved on' banner (date has drifted); the hop clicks Approve as the label says",
+   "reason": "mutating"
+  },
+  "similarity": 0.9992,
+  "source": "50876ffef9c5815b8af7746ea92a778c7f26f339",
+  "status": "accepted"
+ },
+ "payments.checkbook-check-detail": {
+  "checked": "2026-10-02-1349",
+  "fingerprint": {
+   "controls": [
+    "Approve",
+    "Close detail panel",
+    "Memo (optional)",
+    "Open check front in a new tab",
+    "Reject",
+    "Show back of check"
+   ],
+   "headings": [],
+   "path": "/checkbooks/hub/<id>",
+   "structure": "dialog",
+   "top": {
+    "name": "",
+    "role": "complementary"
+   }
+  },
+  "hop": [
+   {
+    "click": {
+     "name": "1001 <date> <amount> Ops / Payroll <n>hr",
+     "role": "row"
+    }
+   }
+  ],
+  "mutates": false,
+  "parent": "payments.checkbooks",
+  "recordedBy": "agent",
+  "review": null,
+  "similarity": 0.9993,
+  "source": "2981b3b2c2224b0fdac31778ccdd2c73590b8bc9",
+  "status": "accepted"
+ },
+ "payments.checkbook-order": {
+  "checked": "2026-10-02-1349",
+  "fingerprint": {
+   "controls": [
+    "Account",
+    "Cancel",
+    "Checkbook nickname",
+    "Close",
+    "Next",
+    "Start number More info",
+    "Use a different address",
+    "blue check color",
+    "green check color",
+    "pink check color"
+   ],
+   "headings": [
+    "Order a Checkbook"
+   ],
+   "path": "/checkbooks/ordering/order",
+   "structure": "document",
+   "top": {
+    "name": "",
+    "role": "document"
+   }
+  },
+  "hop": [
+   {
+    "click": {
+     "name": "Order Checkbook",
+     "role": "button"
+    }
+   }
+  ],
+  "mutates": false,
+  "parent": "payments.checkbooks",
+  "recordedBy": "agent",
+  "review": null,
+  "similarity": 0.9989,
+  "source": "9e82e30800bebe475f7216e258ce9a18a4521445",
+  "status": "accepted"
+ },
+ "payments.checkbook-order-review": {
+  "checked": "2026-10-02-1349",
+  "fingerprint": {
+   "controls": [
+    "Back",
+    "By checking this box, I, Jane Black, confirm I have the authority to agree to these terms on behalf of Mercury Demo, Incorporated and agree to the Deposit Account Agreement, which governs the Checkbooks feature.",
+    "Close",
+    "Confirm",
+    "Deposit Account Agreement"
+   ],
+   "headings": [
+    "Review"
+   ],
+   "path": "/checkbooks/ordering/review",
+   "structure": "document",
+   "top": {
+    "name": "",
+    "role": "document"
+   }
+  },
+  "hop": [
+   {
+    "click": {
+     "name": "Account",
+     "role": "combobox"
+    }
+   },
+   {
+    "click": {
+     "name": "Ops / Payroll <amount> / Checking ••<n>",
+     "role": "option"
+    }
+   },
+   {
+    "fill": {
+     "locator": {
+      "label": "Checkbook nickname"
+     },
+     "value": "A11y Test"
+    }
+   },
+   {
+    "click": {
+     "name": "Next",
+     "role": "button"
+    }
+   }
+  ],
+  "mutates": false,
+  "parent": "payments.checkbook-order",
+  "recordedBy": "agent",
+  "review": null,
+  "similarity": 0.9928,
+  "source": "09dce79e7f2a21bbf62e6ae62815862b7799c9d0",
+  "status": "accepted"
+ },
+ "payments.checkbook-order-success": {
+  "checked": "2026-10-02-1349",
+  "fingerprint": {
+   "controls": [
+    "Close",
+    "Done"
+   ],
+   "headings": [
+    "We’re getting your checkbook ready"
+   ],
+   "path": "/checkbooks/ordering/success",
+   "structure": "document",
+   "top": {
+    "name": "",
+    "role": "document"
+   }
+  },
+  "hop": [
+   {
+    "check": {
+     "name": "By checking this box, I, Jane Black, confirm I have the authority to agree to these terms on behalf of Mercury Demo, Incorporated and agree to the Deposit Account Agreement, which governs the Checkbooks feature.",
+     "role": "checkbox"
+    }
+   },
+   {
+    "click": {
+     "name": "Confirm",
+     "role": "button"
+    }
+   }
+  ],
+  "mutates": true,
+  "parent": "payments.checkbook-order-review",
+  "recordedBy": "agent",
+  "review": {
+   "by": "conductor",
+   "date": "2026-10-03",
+   "decision": "accept",
+   "note": "same 'We're getting your checkbook ready' confirmation with check preview and Done; the hop ticks the authority box and clicks Confirm, as the label says",
+   "reason": "mutating"
+  },
+  "similarity": 0.9983,
+  "source": "606decc282bed646e25ce32b88638a8e54f85177",
+  "status": "accepted"
+ },
+ "payments.checkbook-order-validation": {
+  "checked": "2026-10-02-1349",
+  "fingerprint": {
+   "controls": [
+    "Account",
+    "Cancel",
+    "Checkbook nickname",
+    "Close",
+    "Next",
+    "Start number More info",
+    "Use a different address",
+    "blue check color",
+    "green check color",
+    "pink check color"
+   ],
+   "headings": [
+    "Order a Checkbook"
+   ],
+   "path": "/checkbooks/ordering/order",
+   "structure": "document",
+   "top": {
+    "name": "",
+    "role": "document"
+   }
+  },
+  "hop": [
+   {
+    "click": {
+     "name": "Next",
+     "role": "button"
+    }
+   }
+  ],
+  "mutates": false,
+  "parent": "payments.checkbook-order",
+  "recordedBy": "agent",
+  "review": null,
+  "similarity": 0.9985,
+  "source": "f788c582425588a4d899f76a7f62a636940eefad",
+  "status": "accepted"
+ },
+ "payments.checkbooks": {
+  "checked": "2026-10-02-1349",
+  "fingerprint": {
+   "controls": [
+    "ACH Authorizations",
+    "Accounting",
+    "Accounts",
+    "Add to bookmarks",
+    "Approve",
+    "Banking",
+    "Bill Pay",
+    "Books",
+    "Cards",
+    "Checkbooks",
+    "Command New",
+    "Credit Card",
+    "Customize your experience",
+    "Home",
+    "Insights",
+    "Invoicing",
+    "Learn about bookmarks",
+    "Mercury Demo Pro",
+    "Move money",
+    "Navigate to Settings",
+    "Open account",
+    "Ops / Payroll <amount>",
+    "Order Checkbook",
+    "Payments",
+    "Recipients",
+    "Reject",
+    "Remove bookmark",
+    "Reorder Bill Pay bookmark",
+    "Reorder Credit Card bookmark",
+    "Reorder Insights bookmark",
+    "Reorder Ops / Payroll bookmark",
+    "Search for anything",
+    "Settings",
+    "Tasks <n>",
+    "Taxes",
+    "Team Spend",
+    "Toggle Private Mode",
+    "Transactions",
+    "View all check payments",
+    "Viewing as Admin",
+    "Wire Drawdowns",
+    "updates"
+   ],
+   "headings": [
+    "Checkbooks"
+   ],
+   "path": "/checkbooks/hub",
+   "structure": "document",
+   "top": {
+    "name": "",
+    "role": "document"
+   }
+  },
+  "hop": [
+   {
+    "click": {
+     "name": "Checkbooks",
+     "role": "link"
+    }
+   }
+  ],
+  "mutates": false,
+  "parent": "payments.index",
+  "recordedBy": "agent",
+  "review": null,
+  "similarity": 0.9995,
+  "source": "45dd7bfddb901c9097fe4ea54c24f572f08fb978",
+  "status": "accepted"
+ },
+ "payments.deposit": {
+  "checked": "2026-10-02-1349",
+  "fingerprint": {
+   "controls": [
+    "Bank Transfer Most common Arrives in <n> business days.",
+    "Check Deposit Appears in <n> to <n> business days.",
+    "Click to copy",
+    "Close",
+    "Customize your experience",
+    "Invoice",
+    "Open account",
+    "Receiving account",
+    "SAFE Investment",
+    "View More Details",
+    "Viewing as Admin",
+    "Wire Instructions"
+   ],
+   "headings": [],
+   "path": "/add-funds",
+   "structure": "document",
+   "top": {
+    "name": "",
+    "role": "document"
+   }
+  },
+  "hop": [
+   {
+    "click": {
+     "text": "Choose method"
+    }
+   }
+  ],
+  "mutates": false,
+  "parent": "payments.deposit-domestic-details",
+  "recordedBy": "agent",
+  "review": {
+   "by": "conductor",
+   "date": "2026-10-03",
+   "decision": "accept",
+   "note": "same Add funds page (Wire Transfer to Ops / Payroll ••1038, Bank Transfer, Check Deposit, Invoice, SAFE Investment); hop clicks 'Choose method' as labeled",
+   "reason": "sample"
+  },
+  "similarity": 0.9991,
+  "source": "216ad71b8dd075649e515fd09de0a9853715d960",
+  "status": "accepted"
+ },
+ "payments.deposit-bank-transfer": {
+  "checked": "2026-10-02-1349",
+  "fingerprint": {
+   "controls": [
+    "Add more details",
+    "Amount",
+    "Back",
+    "Close",
+    "Customize your experience",
+    "Next",
+    "Open account",
+    "Transfer from",
+    "Transfer to",
+    "Viewing as Admin"
+   ],
+   "headings": [
+    "Transfer funds",
+    "One-time transfer",
+    "Auto transfer rule"
+   ],
+   "path": "/send-money/transfer",
+   "structure": "document",
+   "top": {
+    "name": "",
+    "role": "document"
+   }
+  },
+  "hop": [
+   {
+    "click": {
+     "name": "Bank Transfer Most common Arrives in 2–4 business days.",
+     "role": "button"
+    }
+   }
+  ],
+  "mutates": false,
+  "parent": "payments.deposit",
+  "recordedBy": "agent",
+  "review": null,
+  "similarity": 0.9873,
+  "source": "6b841027b014928526337792edbd2df6d27ceec6",
+  "status": "accepted"
+ },
  "payments.deposit-check-details": {
   "checked": "2026-10-02-1349",
   "fingerprint": {
@@ -200,6 +1098,104 @@
   "source": "b5aa30989818bfe05077e29159be7df6281b7983",
   "status": "accepted"
  },
+ "payments.deposit-check-details-filled": {
+  "checked": "2026-10-02-1349",
+  "fingerprint": {
+   "controls": [
+    "Add a note to yourself (optional)",
+    "Amount",
+    "Back",
+    "Close",
+    "Customize your experience",
+    "Deposit to",
+    "From",
+    "Next",
+    "Open account",
+    "Viewing as Admin"
+   ],
+   "headings": [],
+   "path": "/add-funds/check/details",
+   "structure": "document",
+   "top": {
+    "name": "",
+    "role": "document"
+   }
+  },
+  "hop": [
+   {
+    "fill": {
+     "locator": {
+      "label": "Amount"
+     },
+     "value": "1.00"
+    }
+   },
+   {
+    "fill": {
+     "locator": {
+      "label": "From"
+     },
+     "value": "Test Person"
+    }
+   },
+   {
+    "click": {
+     "name": "Deposit to",
+     "role": "combobox"
+    }
+   },
+   {
+    "click": {
+     "name": "Ops / Payroll <amount> / Checking ••<n>",
+     "role": "option"
+    }
+   }
+  ],
+  "mutates": false,
+  "parent": "payments.deposit-check-details",
+  "recordedBy": "agent",
+  "review": null,
+  "similarity": 0.9959,
+  "source": "5e22aadf5964e051ddb8d93c7edba41865444bb5",
+  "status": "accepted"
+ },
+ "payments.deposit-check-images": {
+  "checked": "2026-10-02-1349",
+  "fingerprint": {
+   "controls": [
+    "Back",
+    "Choose File",
+    "Close",
+    "Customize your experience",
+    "Open account",
+    "Review",
+    "Upload a picture of the front of the check.",
+    "Viewing as Admin"
+   ],
+   "headings": [],
+   "path": "/add-funds/check/pictures",
+   "structure": "document",
+   "top": {
+    "name": "",
+    "role": "document"
+   }
+  },
+  "hop": [
+   {
+    "click": {
+     "name": "Next",
+     "role": "button"
+    }
+   }
+  ],
+  "mutates": false,
+  "parent": "payments.deposit-check-details-filled",
+  "recordedBy": "agent",
+  "review": null,
+  "similarity": 0.9998,
+  "source": "0aa26d59bc08faa09f7da0fc594700aadf7517de",
+  "status": "accepted"
+ },
  "payments.deposit-check-start": {
   "checked": "2026-10-02-1349",
   "fingerprint": {
@@ -227,6 +1223,88 @@
   "review": null,
   "similarity": 0.9997,
   "source": "97d170e1550eee4afc0af065b78cda302a97674c",
+  "status": "accepted"
+ },
+ "payments.deposit-domestic-details": {
+  "checked": "2026-10-02-1349",
+  "fingerprint": {
+   "controls": [
+    "<n>",
+    "<n> Letterman Drive, Building A, Suite A<n> San Francisco, CA <n>",
+    "<n> Market St, Suite <n> San Francisco, CA <n>",
+    "Back",
+    "Checking",
+    "Close",
+    "Column N.A.",
+    "Customize your experience",
+    "Deposit to",
+    "Download as PDF",
+    "Mercury Demo, Incorporated",
+    "Open account",
+    "Share",
+    "Viewing as Admin"
+   ],
+   "headings": [],
+   "path": "/add-funds/wire",
+   "structure": "document",
+   "top": {
+    "name": "",
+    "role": "document"
+   }
+  },
+  "hop": [
+   {
+    "click": {
+     "text": "Domestic Transfer Details"
+    }
+   }
+  ],
+  "mutates": false,
+  "parent": "payments.deposit-wire-details",
+  "recordedBy": "agent",
+  "review": null,
+  "similarity": 0.9853,
+  "source": "6549c25143a2dbfbe9c3343f9f76477864b8162b",
+  "status": "accepted"
+ },
+ "payments.deposit-safe": {
+  "checked": "2026-10-02-1349",
+  "fingerprint": {
+   "controls": [
+    "Close",
+    "Customize your experience",
+    "Destination account",
+    "Go back",
+    "Investment amount",
+    "Investment date",
+    "Learn More About SAFE Types",
+    "Next",
+    "Open account",
+    "SAFE type Learn More About SAFE Types",
+    "Viewing as Admin"
+   ],
+   "headings": [],
+   "path": "/safe/create",
+   "structure": "document",
+   "top": {
+    "name": "",
+    "role": "document"
+   }
+  },
+  "hop": [
+   {
+    "click": {
+     "name": "SAFE Investment",
+     "role": "button"
+    }
+   }
+  ],
+  "mutates": false,
+  "parent": "payments.deposit",
+  "recordedBy": "agent",
+  "review": null,
+  "similarity": 0.9983,
+  "source": "2220f179aca135fc2d5e69c8359064c236b6a205",
   "status": "accepted"
  },
  "payments.deposit-wire-details": {
@@ -511,6 +1589,105 @@
   "source": "97d170e1550eee4afc0af065b78cda302a97674c",
   "status": "accepted"
  },
+ "payments.paid-detail": {
+  "checked": "2026-10-02-1349",
+  "fingerprint": {
+   "controls": [
+    "Accounting",
+    "Accounts",
+    "Banking",
+    "Bill Pay",
+    "Books",
+    "Cards",
+    "Command New",
+    "Credit Card",
+    "Home",
+    "Insights",
+    "Invoicing",
+    "Learn about bookmarks",
+    "Mercury Demo Pro",
+    "Ops / Payroll <amount>",
+    "Payments",
+    "Remove bookmark",
+    "Reorder Bill Pay bookmark",
+    "Reorder Credit Card bookmark",
+    "Reorder Insights bookmark",
+    "Reorder Ops / Payroll bookmark",
+    "Tasks <n>",
+    "Team Spend",
+    "Transactions"
+   ],
+   "headings": [],
+   "path": "/transactions/<id>",
+   "structure": "dialog",
+   "top": {
+    "name": "",
+    "role": "navigation"
+   }
+  },
+  "hop": [
+   {
+    "click": {
+     "text": "Miles Davidson"
+    }
+   }
+  ],
+  "mutates": false,
+  "parent": "payments.paid",
+  "recordedBy": "agent",
+  "review": null,
+  "similarity": 0.9213,
+  "source": "da21f7ee806120146b27fab2c6e7780eae8a7d2c",
+  "status": "accepted"
+ },
+ "payments.recipient-address-autocomplete": {
+  "checked": "2026-10-02-1349",
+  "fingerprint": {
+   "controls": [
+    "<n> Test Farm Road, Willard, NC, USA",
+    "<n> Test Road, Richmond, IN, USA",
+    "<n> Test St, Waconia, MN, USA",
+    "<n> Test Street, Beaumont, TX, USA",
+    "<n> Test Street, Council Bluffs, IA, USA"
+   ],
+   "headings": [],
+   "path": "/payments/recipients/new",
+   "structure": "listbox",
+   "top": {
+    "name": "",
+    "role": "listbox"
+   }
+  },
+  "hop": [
+   {
+    "fill": {
+     "locator": {
+      "name": "Recipient legal address",
+      "role": "combobox"
+     },
+     "value": "123 Test Street"
+    }
+   },
+   {
+    "wait": {
+     "ms": 1500
+    }
+   }
+  ],
+  "mutates": true,
+  "parent": "payments.recipient-create",
+  "recordedBy": "agent",
+  "review": {
+   "by": "conductor",
+   "date": "2026-10-03",
+   "decision": "accept",
+   "note": "same address autocomplete popover under Recipient legal address (123 Test Street suggestions vs 500 Howard St, fixture value); the capture's State error and filled email/nickname came from unrecorded earlier steps, and the parent form is fresh",
+   "reason": "below-threshold"
+  },
+  "similarity": 0.6502,
+  "source": "8c2434f01fcd63147fdf65022f9a61b43aaccffa",
+  "status": "accepted"
+ },
  "payments.recipient-create": {
   "checked": "2026-10-02-1349",
   "fingerprint": {
@@ -564,6 +1741,125 @@
   "source": "65b49a9692e97c3fcdb7f25fba19fff33bbed485",
   "status": "accepted"
  },
+ "payments.recipient-create-validation": {
+  "checked": "2026-10-02-1349",
+  "fingerprint": {
+   "controls": [
+    "Apartment, suite, floor (optional)",
+    "Business",
+    "City",
+    "Close",
+    "Country",
+    "Create recipient",
+    "Customize your experience",
+    "Email (optional)",
+    "Go back",
+    "Invite them to fill out their own profile",
+    "Legal name",
+    "Nickname (optional)",
+    "Open account",
+    "Open combobox menu",
+    "Person",
+    "Postal / ZIP code",
+    "Recipient legal address",
+    "Request Tax Documents Request Tax Documents",
+    "State",
+    "Viewing as Admin"
+   ],
+   "headings": [
+    "Create recipient",
+    "Profile",
+    "Address"
+   ],
+   "path": "/payments/recipients/new",
+   "structure": "document",
+   "top": {
+    "name": "",
+    "role": "document"
+   }
+  },
+  "hop": [
+   {
+    "click": {
+     "name": "Create recipient",
+     "role": "button"
+    }
+   }
+  ],
+  "mutates": true,
+  "parent": "payments.recipient-create",
+  "recordedBy": "agent",
+  "review": {
+   "by": "conductor",
+   "date": "2026-10-03",
+   "decision": "accept",
+   "note": "same Create recipient empty-submit errors ('You must make a selection.' on Profile, 'Please complete this field' on Legal name); the hop clicks the Create recipient submit as labeled; replay is scrolled further down",
+   "reason": "below-threshold"
+  },
+  "similarity": 0.6743,
+  "source": "eb6048f7574a5e4bf654c2f23ed1d8c003a07b3f",
+  "status": "accepted"
+ },
+ "payments.recipient-created": {
+  "checked": "2026-10-02-1349",
+  "fingerprint": null,
+  "hop": [
+   {
+    "click": {
+     "name": "123 Test Street, Council Bluffs, IA, USA",
+     "role": "option"
+    }
+   },
+   {
+    "click": {
+     "name": "Create recipient",
+     "role": "button"
+    }
+   }
+  ],
+  "mutates": false,
+  "parent": "payments.recipient-address-autocomplete",
+  "recordedBy": "agent",
+  "review": null,
+  "similarity": null,
+  "source": null,
+  "status": "draft"
+ },
+ "payments.recipient-detail": {
+  "checked": "2026-10-02-1349",
+  "fingerprint": {
+   "controls": [
+    "Choose File",
+    "Close detail panel",
+    "Edit",
+    "Request tax documents",
+    "View All"
+   ],
+   "headings": [
+    "Recipient’s Profile"
+   ],
+   "path": "/payments/recipients",
+   "structure": "dialog",
+   "top": {
+    "name": "",
+    "role": "complementary"
+   }
+  },
+  "hop": [
+   {
+    "click": {
+     "text": "Jean Vallee"
+    }
+   }
+  ],
+  "mutates": false,
+  "parent": "payments.recipients",
+  "recordedBy": "agent",
+  "review": null,
+  "similarity": 0.9992,
+  "source": "1842ce0b8a3c2523fa836cb24c22346dce4ce57c",
+  "status": "accepted"
+ },
  "payments.recipient-invite": {
   "checked": "2026-10-02-1349",
   "fingerprint": {
@@ -614,6 +1910,125 @@
   },
   "similarity": 0.7709,
   "source": "3e319109aec45993d142fbf83cb6e8d34771aa47",
+  "status": "accepted"
+ },
+ "payments.recipient-invite-sent": {
+  "checked": "2026-10-02-1349",
+  "fingerprint": {
+   "controls": [
+    "Download W-<n>/W-<n>BEN",
+    "Last paid Click to sort",
+    "Name Click to sort",
+    "Send NDA",
+    "Status Click to sort",
+    "Tax docs Click to sort",
+    "Total paid Click to sort"
+   ],
+   "headings": [],
+   "path": "/payments/recipients",
+   "structure": "status",
+   "top": {
+    "name": "Recipients table",
+    "role": "table"
+   }
+  },
+  "hop": [
+   {
+    "fill": {
+     "locator": {
+      "label": "Name"
+     },
+     "value": "Test Person"
+    }
+   },
+   {
+    "fill": {
+     "locator": {
+      "label": "Email address"
+     },
+     "value": "a11y-audit@example.invalid"
+    }
+   },
+   {
+    "click": {
+     "text": "Set up a payment nowIt won’t be sent until your recipient provides their payment details."
+    }
+   },
+   {
+    "click": {
+     "name": "Send request",
+     "role": "button"
+    }
+   }
+  ],
+  "mutates": true,
+  "parent": "payments.recipient-invite",
+  "recordedBy": "agent",
+  "review": {
+   "by": "conductor",
+   "date": "2026-10-03",
+   "decision": "accept",
+   "note": "same Recipients list after Send request with fixture name and email; the invite toast faded. The 'Set up a payment now' click is a setup step, not an off-label action: the parent replay shot shows the box checked by default with Next and no Send request, while the parent capture shows it unchecked. Unchecking it puts back the captured form so the named Send request can run",
+   "reason": "mutating"
+  },
+  "similarity": 0.9367,
+  "source": "aff6399a913841cec0bcd9a3ff2ee5ab6c426eb5",
+  "status": "accepted"
+ },
+ "payments.recipient-invite-validation": {
+  "checked": "2026-10-02-1349",
+  "fingerprint": {
+   "controls": [
+    "Close",
+    "Customize your experience",
+    "Email address",
+    "Go back",
+    "Import a CSV",
+    "Name",
+    "Name to show on the request",
+    "Notes",
+    "Open account",
+    "Open combobox menu",
+    "Require tax documents (W-<n> or W-<n>BEN)",
+    "Send request",
+    "Set up a payment now It won’t be sent until your recipient provides their payment details.",
+    "Specified by me",
+    "Specified by recipient",
+    "Viewing as Admin"
+   ],
+   "headings": [],
+   "path": "/payments/recipients/create/request",
+   "structure": "document",
+   "top": {
+    "name": "",
+    "role": "document"
+   }
+  },
+  "hop": [
+   {
+    "click": {
+     "text": "Set up a payment nowIt won’t be sent until your recipient provides their payment details."
+    }
+   },
+   {
+    "click": {
+     "name": "Send request",
+     "role": "button"
+    }
+   }
+  ],
+  "mutates": true,
+  "parent": "payments.recipient-invite",
+  "recordedBy": "agent",
+  "review": {
+   "by": "conductor",
+   "date": "2026-10-03",
+   "decision": "accept",
+   "note": "same Invite recipient form with 'Please complete this field' under Name and Email and 'Set up a payment now' unchecked, as in the capture; only the demo banner is missing. The hop clicks 'Set up a payment now', which the label does not name, before the labelled Send request. That click only unchecks a box the demo now checks by default: the accepted parent's fingerprint shows the Next button and ACH/Check/Wire chips. Unchecking it restores the unchecked state in the parent capture, and the labelled Send request button exists only in that state. It is a precondition, not a different control.",
+   "reason": "below-threshold"
+  },
+  "similarity": 0.6788,
+  "source": "6295d36e6432ab1c7249ab1d91d5b0c65a9ec943",
   "status": "accepted"
  },
  "payments.recipients": {
@@ -691,6 +2106,129 @@
   "review": null,
   "similarity": 0.9964,
   "source": "97d170e1550eee4afc0af065b78cda302a97674c",
+  "status": "accepted"
+ },
+ "payments.recipients-bulk": {
+  "checked": "2026-10-02-1349",
+  "fingerprint": {
+   "controls": [
+    "Request tax docs",
+    "Unselect"
+   ],
+   "headings": [],
+   "path": "/payments/recipients",
+   "structure": "dialog",
+   "top": {
+    "name": "<n> recipients selected",
+    "role": "dialog"
+   }
+  },
+  "hop": [
+   {
+    "check": {
+     "index": 1,
+     "role": "checkbox"
+    }
+   },
+   {
+    "check": {
+     "index": 2,
+     "role": "checkbox"
+    }
+   }
+  ],
+  "mutates": false,
+  "parent": "payments.recipients",
+  "recordedBy": "agent",
+  "review": null,
+  "similarity": 0.9614,
+  "source": "d4fd9c1a32d23b609f40d7ab1a3872b89fe56ba5",
+  "status": "accepted"
+ },
+ "payments.recipients-create-menu": {
+  "checked": "2026-10-02-1349",
+  "fingerprint": {
+   "controls": [
+    "Bulk invite with CSV",
+    "Invite recipient"
+   ],
+   "headings": [],
+   "path": "/payments/recipients",
+   "structure": "menu",
+   "top": {
+    "name": "Close Menu",
+    "role": "menu"
+   }
+  },
+  "hop": [
+   {
+    "click": {
+     "name": "Open Menu",
+     "role": "button"
+    }
+   }
+  ],
+  "mutates": true,
+  "parent": "payments.recipients",
+  "recordedBy": "agent",
+  "review": {
+   "by": "conductor",
+   "date": "2026-10-03",
+   "decision": "accept",
+   "note": "same Create recipient split-button menu open (Invite recipient, Bulk invite with CSV); 'Open Menu' is the chevron the label names",
+   "reason": "mutating"
+  },
+  "similarity": 0.9962,
+  "source": "7eb030085c5a343bdcfe6479a59354d042ed6144",
+  "status": "accepted"
+ },
+ "payments.recipients-filters": {
+  "checked": "2026-10-02-1349",
+  "fingerprint": {
+   "controls": [
+    "Amount Paid",
+    "Anil Kapoor",
+    "Bolat Akhmetov",
+    "Date Added",
+    "Date Last Paid",
+    "Debug LLC",
+    "Deshaun Moore",
+    "Domestic Ads",
+    "Email",
+    "Jean Vallee",
+    "Jordi O'Donnell",
+    "Lighthouse Properties #<n>",
+    "Miles Davidson",
+    "Name",
+    "Nutritionist",
+    "Pending Details",
+    "Search for names",
+    "Select All",
+    "Tax Document",
+    "Year Paid"
+   ],
+   "headings": [],
+   "path": "/payments/recipients",
+   "structure": "dialog",
+   "top": {
+    "name": "",
+    "role": "generic"
+   }
+  },
+  "hop": [
+   {
+    "click": {
+     "name": "Filters",
+     "role": "menuitem"
+    }
+   }
+  ],
+  "mutates": false,
+  "parent": "payments.recipients-needs-tax-docs",
+  "recordedBy": "agent",
+  "review": null,
+  "similarity": 0.9989,
+  "source": "fc84f45271d2de06ab9d4f3162d4161924b429fc",
   "status": "accepted"
  },
  "payments.recipients-needs-tax-docs": {
@@ -776,6 +2314,226 @@
   "source": "ea723e38d118a79f40afad2c3649e86718be9401",
   "status": "accepted"
  },
+ "payments.recipients-request-tax-docs": {
+  "checked": "2026-10-02-1349",
+  "fingerprint": {
+   "controls": [
+    "Close",
+    "Email address",
+    "Send requests"
+   ],
+   "headings": [
+    "Request tax documents",
+    "Get W-<n>s and W-<n>BENs from <n> recipient via email."
+   ],
+   "path": "/payments/recipients",
+   "structure": "dialog",
+   "top": {
+    "name": "",
+    "role": "dialog"
+   }
+  },
+  "hop": [
+   {
+    "click": {
+     "name": "Request tax docs",
+     "role": "button"
+    }
+   }
+  ],
+  "mutates": false,
+  "parent": "payments.recipients-bulk",
+  "recordedBy": "agent",
+  "review": null,
+  "similarity": 0.9799,
+  "source": "41d18d381d08a4c793e69cd90e1a563f53352110",
+  "status": "accepted"
+ },
+ "payments.recipients-request-tax-docs-validation": {
+  "checked": "2026-10-02-1349",
+  "fingerprint": {
+   "controls": [
+    "Close",
+    "Email address",
+    "Send requests"
+   ],
+   "headings": [
+    "Request tax documents",
+    "Get W-<n>s and W-<n>BENs from <n> recipient via email."
+   ],
+   "path": "/payments/recipients",
+   "structure": "dialog",
+   "top": {
+    "name": "",
+    "role": "dialog"
+   }
+  },
+  "hop": [
+   {
+    "wait": {
+     "locator": {
+      "name": "Send requests",
+      "role": "button"
+     }
+    }
+   }
+  ],
+  "mutates": false,
+  "parent": "payments.recipients-request-tax-docs",
+  "recordedBy": "agent",
+  "review": {
+   "by": "conductor",
+   "date": "2026-10-03",
+   "decision": "reject",
+   "note": "missing validation error: the replay shows the Request tax documents dialog (Lighthouse Properties, empty Email, Send disabled) with no 'Please complete this field' message. The hop only waits for Send requests and does not trigger the error or select a no-email recipient.",
+   "reason": "sample"
+  },
+  "similarity": 0.9266,
+  "source": "65456fa6caed7f315fe8bf6cff60b3bdb2ee5e85",
+  "status": "rejected"
+ },
+ "payments.recipients-tax-docs-requested": {
+  "checked": "2026-10-02-1349",
+  "fingerprint": {
+   "controls": [],
+   "headings": [],
+   "path": "/payments/recipients",
+   "structure": "status",
+   "top": {
+    "name": "",
+    "role": "generic"
+   }
+  },
+  "hop": [
+   {
+    "fill": {
+     "locator": {
+      "name": "Email address",
+      "role": "textbox"
+     },
+     "value": "a11y-audit@example.invalid"
+    }
+   },
+   {
+    "click": {
+     "name": "Send requests",
+     "role": "button"
+    }
+   }
+  ],
+  "mutates": true,
+  "parent": "payments.recipients-request-tax-docs",
+  "recordedBy": "agent",
+  "review": {
+   "by": "conductor",
+   "date": "2026-10-03",
+   "decision": "accept",
+   "note": "re-checked after the layer-detection fixes of 2026-10-03 (fingerprint refreshed); same hop the conductor's review panel accepted earlier today, similarity 0.9724",
+   "reason": "mutating"
+  },
+  "similarity": 0.9724,
+  "source": "78351f170c573fa72bf74f10f443beeca895d3bd",
+  "status": "accepted"
+ },
+ "payments.request-add-customer": {
+  "checked": "2026-10-02-1349",
+  "fingerprint": {
+   "controls": [
+    "Add customer",
+    "Add customer address",
+    "Additional emails (optional)",
+    "Back",
+    "Close",
+    "Customize your experience",
+    "International Wire",
+    "Manual Transfer",
+    "Name",
+    "Open account",
+    "Open combobox menu",
+    "Pay With Mercury",
+    "Primary customer email",
+    "Viewing as Admin"
+   ],
+   "headings": [
+    "Add customer",
+    "Nebula Consulting Group sent you an invoice",
+    "Invoice",
+    "From",
+    "To",
+    "Details",
+    "Terms",
+    "Memo",
+    "Payment methods",
+    "Manual Transfer",
+    "International Wire",
+    "Pay With Mercury"
+   ],
+   "path": "/invoicing/create-invoice",
+   "structure": "document",
+   "top": {
+    "name": "",
+    "role": "document"
+   }
+  },
+  "hop": [
+   {
+    "click": {
+     "name": "Add new customer",
+     "role": "option"
+    }
+   }
+  ],
+  "mutates": false,
+  "parent": "payments.request-customer-dropdown",
+  "recordedBy": "agent",
+  "review": {
+   "by": "conductor",
+   "date": "2026-10-03",
+   "decision": "accept",
+   "note": "same Add customer form (Name, Primary customer email, Additional emails, address toggle) opened by 'Add new customer'; the capture's typed Orbit Labs values were entered after the hop, and its payment-link preview comes from earlier steps (parent accepted on the default invoice preview)",
+   "reason": "below-threshold"
+  },
+  "similarity": 0.8189,
+  "source": "4aa9d9f3ee14695c6f065970922d6adb109efcdf",
+  "status": "accepted"
+ },
+ "payments.request-customer-dropdown": {
+  "checked": "2026-10-02-1349",
+  "fingerprint": {
+   "controls": [
+    "Add new customer",
+    "Options"
+   ],
+   "headings": [],
+   "path": "/invoicing/create-invoice",
+   "structure": "listbox",
+   "top": {
+    "name": "Options",
+    "role": "listbox"
+   }
+  },
+  "hop": [
+   {
+    "click": {
+     "name": "Name",
+     "role": "combobox"
+    }
+   }
+  ],
+  "mutates": false,
+  "parent": "payments.request-start",
+  "recordedBy": "agent",
+  "review": {
+   "by": "conductor",
+   "date": "2026-10-03",
+   "decision": "accept",
+   "note": "same Name customer list open (Add new customer, Nebula Strategy Group through Aphelion Financial Advisors); the capture's red Name label and payment-link preview came from earlier steps, and the replay matches the parent capture's default (one-time invoice preview, no error), which is what the hop 'Open Name combobox' should start from",
+   "reason": "below-threshold"
+  },
+  "similarity": 0.839,
+  "source": "5a5a81de90c988c4c5e6fb796e210636ede6b3e4",
+  "status": "accepted"
+ },
  "payments.request-link-form": {
   "checked": "2026-10-02-1349",
   "fingerprint": {
@@ -824,12 +2582,12 @@
   ],
   "mutates": false,
   "parent": "payments.request-start",
-  "recordedBy": "draft",
+  "recordedBy": "agent",
   "review": {
    "by": "conductor",
    "date": "2026-10-03",
    "decision": "reject",
-   "note": "different screen: Next fails with 'Please complete this field' on the customer; the capture is the Payment link details form",
+   "note": "different screen: the replay stays on 'How would you like to request money?' with 'Please complete this field' under Name; the hop clicks Next without picking a customer, so Payment link details (Orbit Labs Inc) never opens",
    "reason": "below-threshold"
   },
   "similarity": 0.5581,
@@ -882,6 +2640,67 @@
   "review": null,
   "similarity": 0.9993,
   "source": "97d170e1550eee4afc0af065b78cda302a97674c",
+  "status": "accepted"
+ },
+ "payments.request-validation": {
+  "checked": "2026-10-02-1349",
+  "fingerprint": {
+   "controls": [
+    "Back",
+    "Close",
+    "Create a one-time invoice Send a one-time invoice with a built-in payment link.",
+    "Create a recurring series Automatically generate recurring invoices on a set schedule.",
+    "Customize your experience",
+    "International Wire",
+    "Manual Transfer",
+    "Name",
+    "Next",
+    "Open account",
+    "Pay With Mercury",
+    "Request money without an invoice Send only a payment link with a single amount.",
+    "Viewing as Admin"
+   ],
+   "headings": [
+    "How would you like to request money?",
+    "Nebula Consulting Group sent you an invoice",
+    "Invoice",
+    "From",
+    "To",
+    "Details",
+    "Terms",
+    "Memo",
+    "Payment methods",
+    "Manual Transfer",
+    "International Wire",
+    "Pay With Mercury"
+   ],
+   "path": "/invoicing/create-invoice",
+   "structure": "document",
+   "top": {
+    "name": "",
+    "role": "document"
+   }
+  },
+  "hop": [
+   {
+    "click": {
+     "name": "Next",
+     "role": "button"
+    }
+   }
+  ],
+  "mutates": false,
+  "parent": "payments.request-start",
+  "recordedBy": "agent",
+  "review": {
+   "by": "conductor",
+   "date": "2026-10-03",
+   "decision": "accept",
+   "note": "same 'Please complete this field' error under Name, with Next dimmed; the replay keeps the parent's default 'Create a one-time invoice' radio, while the capture had 'Request money without an invoice' set by an unrecorded step",
+   "reason": "below-threshold"
+  },
+  "similarity": 0.8395,
+  "source": "311c51a0408450af67254a1c22f878ec688089ae",
   "status": "accepted"
  },
  "payments.scheduled": {
@@ -949,6 +2768,1273 @@
   "source": "97d170e1550eee4afc0af065b78cda302a97674c",
   "status": "accepted"
  },
+ "payments.scheduled-cancel": {
+  "checked": "2026-10-02-1349",
+  "fingerprint": {
+   "controls": [
+    "Cancel payment",
+    "Go back"
+   ],
+   "headings": [
+    "Cancel recurring payment"
+   ],
+   "path": "/payments/scheduled",
+   "structure": "dialog",
+   "top": {
+    "name": "",
+    "role": "dialog"
+   }
+  },
+  "hop": [
+   {
+    "click": {
+     "name": "Cancel payment",
+     "role": "button"
+    }
+   }
+  ],
+  "mutates": true,
+  "parent": "payments.scheduled-detail",
+  "recordedBy": "agent",
+  "review": {
+   "by": "conductor",
+   "date": "2026-10-03",
+   "decision": "accept",
+   "note": "same Cancel recurring payment modal (Contractor, USD to CAD weekly rule, 2,646.40 CAD, Go back / Cancel payment); the date drifted from Oct 1 to Oct 8; the hop clicks the panel's Cancel payment button to open the modal, as labeled",
+   "reason": "mutating"
+  },
+  "similarity": 0.9971,
+  "source": "b70db1456aa5a0fe62f3288343a12040bb1c823f",
+  "status": "accepted"
+ },
+ "payments.scheduled-canceled": {
+  "checked": "2026-10-02-1349",
+  "fingerprint": {
+   "controls": [],
+   "headings": [],
+   "path": "/payments/scheduled",
+   "structure": "status",
+   "top": {
+    "name": "Scheduled bills",
+    "role": "table"
+   }
+  },
+  "hop": [
+   {
+    "click": {
+     "name": "Cancel payment",
+     "role": "button"
+    }
+   }
+  ],
+  "mutates": true,
+  "parent": "payments.scheduled-cancel",
+  "recordedBy": "agent",
+  "review": {
+   "by": "conductor",
+   "date": "2026-10-03",
+   "decision": "accept",
+   "note": "same Scheduled list, now 6 (Lighthouse, Domestic Ads, Nutritionist, Domestic Ads, Jean Vallee, Jack Black) with the 'Payment canceled' toast; the hop clicks the Cancel payment button the label names",
+   "reason": "mutating"
+  },
+  "similarity": 0.9725,
+  "source": "1d0bb645a0a0f0d905ab6c3257a7a983f9e17673",
+  "status": "accepted"
+ },
+ "payments.scheduled-detail": {
+  "checked": "2026-10-02-1349",
+  "fingerprint": {
+   "controls": [
+    "Cancel payment",
+    "Choose Files",
+    "Close detail panel",
+    "Edit",
+    "GL Code",
+    "Open combobox menu",
+    "Upload attachment",
+    "note"
+   ],
+   "headings": [],
+   "path": "/payments/scheduled",
+   "structure": "dialog",
+   "top": {
+    "name": "",
+    "role": "complementary"
+   }
+  },
+  "hop": [
+   {
+    "click": {
+     "name": "Contractor",
+     "role": "cell"
+    }
+   }
+  ],
+  "mutates": false,
+  "parent": "payments.scheduled",
+  "recordedBy": "agent",
+  "review": null,
+  "similarity": 0.9934,
+  "source": "981862343279469fb029b44e1ec70a21eb4c6374",
+  "status": "accepted"
+ },
+ "payments.scheduled-edit": {
+  "checked": "2026-10-02-1349",
+  "fingerprint": {
+   "controls": [
+    "ACH Authorizations",
+    "Accounting",
+    "Accounts",
+    "After",
+    "Banking",
+    "Bill Pay",
+    "Books",
+    "Cancel",
+    "Cards",
+    "Checkbooks",
+    "Close detail panel",
+    "Command New",
+    "Credit Card",
+    "Customize your experience",
+    "Feedback",
+    "Home",
+    "Insights",
+    "Invoicing",
+    "Learn about bookmarks",
+    "Memo for the recipient",
+    "Mercury Demo Pro",
+    "Move money",
+    "Navigate to Settings",
+    "Never",
+    "Number of payments before ending",
+    "On",
+    "On day",
+    "Open account",
+    "Open combobox menu",
+    "Ops / Payroll <amount>",
+    "Payments",
+    "Recipient gets",
+    "Recipients",
+    "Remove bookmark",
+    "Reorder Bill Pay bookmark",
+    "Reorder Credit Card bookmark",
+    "Reorder Insights bookmark",
+    "Reorder Ops / Payroll bookmark",
+    "Repeat",
+    "Repeat count",
+    "Repeat count unit",
+    "Review",
+    "Search for anything",
+    "Select source account",
+    "Send money",
+    "Status",
+    "Tasks <n>",
+    "Taxes",
+    "Team Spend",
+    "Toggle Private Mode",
+    "Transactions",
+    "Upload bill",
+    "Viewing as Admin",
+    "Wire Drawdowns",
+    "my-company-name@ap.mercury.com",
+    "updates"
+   ],
+   "headings": [
+    "Payments"
+   ],
+   "path": "/payments/scheduled",
+   "structure": "document",
+   "top": {
+    "name": "",
+    "role": "document"
+   }
+  },
+  "hop": [
+   {
+    "click": {
+     "name": "Edit",
+     "role": "button"
+    }
+   }
+  ],
+  "mutates": false,
+  "parent": "payments.scheduled-detail",
+  "recordedBy": "agent",
+  "review": {
+   "by": "conductor",
+   "date": "2026-10-03",
+   "decision": "accept",
+   "note": "same inline Edit scheduled payment form, on the record the accepted parent opens (Contractor, weekly CAD); the capture edited another row (Lighthouse Properties #3431) that the recorded chain never reaches",
+   "reason": "below-threshold"
+  },
+  "similarity": 0.8104,
+  "source": "db7b590777d5abd17c7fd7689715a92d57160a44",
+  "status": "accepted"
+ },
+ "payments.scheduled-edit-review": {
+  "checked": "2026-10-02-1349",
+  "fingerprint": {
+   "controls": [
+    "Cancel",
+    "Confirm"
+   ],
+   "headings": [],
+   "path": "/payments/scheduled",
+   "structure": "dialog",
+   "top": {
+    "name": "",
+    "role": "dialog"
+   }
+  },
+  "hop": [
+   {
+    "fill": {
+     "locator": {
+      "label": "Memo for the recipient"
+     },
+     "value": "A11y audit test memo"
+    }
+   },
+   {
+    "click": {
+     "name": "Review",
+     "role": "button"
+    }
+   }
+  ],
+  "mutates": false,
+  "parent": "payments.scheduled-edit",
+  "recordedBy": "agent",
+  "review": {
+   "by": "conductor",
+   "date": "2026-10-03",
+   "decision": "accept",
+   "note": "reached on a re-check at low load (2026-10-03): the hop types the fixture memo and clicks Review, and the Review your new payment details modal opens with Send from, Payment rule, dates and Cancel / Confirm, as captured. The scheduled payment differs (USD to CAD weekly vs monthly USD), the same different-record pattern accepted for payments.scheduled-edit; nothing is submitted",
+   "reason": "below-threshold"
+  },
+  "similarity": 0.8255,
+  "source": "c81659a258f190d942553150293f0b1f0deb5187",
+  "status": "accepted"
+ },
+ "payments.send-amount": {
+  "checked": "2026-10-02-1349",
+  "fingerprint": {
+   "controls": [
+    "Ask Mercury Command /",
+    "Back",
+    "Choose Files",
+    "Close",
+    "Customize your experience",
+    "Next",
+    "Open account",
+    "Recipient gets",
+    "Repeat this payment",
+    "Send from",
+    "Send on",
+    "Viewing as Admin"
+   ],
+   "headings": [
+    "Upload an attachment",
+    "Amount"
+   ],
+   "path": "/send-money/pay/amount",
+   "structure": "document",
+   "top": {
+    "name": "",
+    "role": "document"
+   }
+  },
+  "hop": [
+   {
+    "click": {
+     "name": "Next",
+     "role": "button"
+    }
+   }
+  ],
+  "mutates": false,
+  "parent": "payments.send-recipient-step",
+  "recordedBy": "agent",
+  "review": null,
+  "similarity": 0.9989,
+  "source": "621889f700942518bb4764d72245714ca72430cd",
+  "status": "accepted"
+ },
+ "payments.send-amount-validation": {
+  "checked": "2026-10-02-1349",
+  "fingerprint": {
+   "controls": [
+    "Ask Mercury Command /",
+    "Back",
+    "Choose Files",
+    "Close",
+    "Customize your experience",
+    "Next",
+    "Open account",
+    "Recipient gets",
+    "Repeat this payment",
+    "Send from",
+    "Send on",
+    "Viewing as Admin"
+   ],
+   "headings": [
+    "Upload an attachment",
+    "Amount"
+   ],
+   "path": "/send-money/pay/amount",
+   "structure": "document",
+   "top": {
+    "name": "",
+    "role": "document"
+   }
+  },
+  "hop": [
+   {
+    "click": {
+     "name": "Next",
+     "role": "button"
+    }
+   }
+  ],
+  "mutates": false,
+  "parent": "payments.send-amount",
+  "recordedBy": "agent",
+  "review": null,
+  "similarity": 0.9988,
+  "source": "c9287079ea2bba2dc579f6de0b221ec47cd15bf5",
+  "status": "accepted"
+ },
+ "payments.send-categorization": {
+  "checked": "2026-10-02-1349",
+  "fingerprint": {
+   "controls": [
+    "Ask Mercury Command /",
+    "Back",
+    "Choose Files",
+    "Close",
+    "Customize your experience",
+    "GL Code",
+    "Multiple GL Codes",
+    "Next",
+    "Open account",
+    "Open combobox menu",
+    "Single GL Code",
+    "Viewing as Admin"
+   ],
+   "headings": [
+    "Upload an attachment",
+    "Categorization"
+   ],
+   "path": "/send-money/pay/accounting",
+   "structure": "document",
+   "top": {
+    "name": "",
+    "role": "document"
+   }
+  },
+  "hop": [
+   {
+    "fill": {
+     "locator": {
+      "label": "Recipient gets"
+     },
+     "value": "1.00"
+    }
+   },
+   {
+    "click": {
+     "name": "Next",
+     "role": "button"
+    }
+   }
+  ],
+  "mutates": false,
+  "parent": "payments.send-amount",
+  "recordedBy": "agent",
+  "review": null,
+  "similarity": 0.9998,
+  "source": "36a439cb9fe0b9b2827b133e96272cabad490ea7",
+  "status": "accepted"
+ },
+ "payments.send-date-picker": {
+  "checked": "2026-10-02-1349",
+  "fingerprint": {
+   "controls": [],
+   "headings": [],
+   "path": "/send-money/pay/amount",
+   "structure": "dialog",
+   "top": {
+    "name": "",
+    "role": "generic"
+   }
+  },
+  "hop": [
+   {
+    "click": {
+     "label": "Send on"
+    }
+   }
+  ],
+  "mutates": true,
+  "parent": "payments.send-amount",
+  "recordedBy": "agent",
+  "review": {
+   "by": "conductor",
+   "date": "2026-10-03",
+   "decision": "accept",
+   "note": "same Send on calendar popover on the Amount step, past dates disabled, next business day selected (dates drifted); the hop only opens the Send on field and submits nothing; the empty amount matches the parent capture",
+   "reason": "mutating"
+  },
+  "similarity": 0.977,
+  "source": "6d17fd63658cd5e6819dcb5e325ed38296fa678f",
+  "status": "accepted"
+ },
+ "payments.send-details": {
+  "checked": "2026-10-02-1349",
+  "fingerprint": {
+   "controls": [
+    "Ask Mercury Command /",
+    "Back",
+    "Choose Files",
+    "Close",
+    "Customize your experience",
+    "Department (optional)",
+    "Due date (optional)",
+    "Email receipt to (optional)",
+    "Include attachments",
+    "Invoice date (optional)",
+    "Invoice number (optional)",
+    "Memo (optional)",
+    "Name to display on the payment",
+    "Next",
+    "Note: not visible to the recipient",
+    "Open account",
+    "Open combobox menu",
+    "Viewing as Admin",
+    "greenjason@stanford.edu",
+    "jason@green.com",
+    "somethingelse@email.com"
+   ],
+   "headings": [
+    "Upload an attachment"
+   ],
+   "path": "/send-money/pay/more-details",
+   "structure": "document",
+   "top": {
+    "name": "",
+    "role": "document"
+   }
+  },
+  "hop": [
+   {
+    "click": {
+     "name": "Next",
+     "role": "button"
+    }
+   }
+  ],
+  "mutates": false,
+  "parent": "payments.send-categorization",
+  "recordedBy": "agent",
+  "review": {
+   "by": "conductor",
+   "date": "2026-10-03",
+   "decision": "accept",
+   "note": "same Send Details step (Mercury Demo, Incorporated display name, memo, three email receipt chips, Include attachments unchecked, Bill details collapsed)",
+   "reason": "sample"
+  },
+  "similarity": 0.9995,
+  "source": "91756f4114370cdeb7ce6483bcd8d64c1ecd7439",
+  "status": "accepted"
+ },
+ "payments.send-details-bill": {
+  "checked": "2026-10-02-1349",
+  "fingerprint": {
+   "controls": [
+    "Ask Mercury Command /",
+    "Back",
+    "Choose Files",
+    "Close",
+    "Customize your experience",
+    "Department (optional)",
+    "Due date (optional)",
+    "Email receipt to (optional)",
+    "Include attachments",
+    "Invoice date (optional)",
+    "Invoice number (optional)",
+    "Memo (optional)",
+    "Name to display on the payment",
+    "Next",
+    "Note: not visible to the recipient",
+    "Open account",
+    "Open combobox menu",
+    "Viewing as Admin",
+    "greenjason@stanford.edu",
+    "jason@green.com",
+    "somethingelse@email.com"
+   ],
+   "headings": [
+    "Upload an attachment"
+   ],
+   "path": "/send-money/pay/more-details",
+   "structure": "document",
+   "top": {
+    "name": "",
+    "role": "document"
+   }
+  },
+  "hop": [
+   {
+    "click": {
+     "css": "[class*=\"_header_bipbt_\"]",
+     "index": 0
+    }
+   },
+   {
+    "wait": {
+     "locator": {
+      "label": "Invoice number (optional)"
+     }
+    }
+   }
+  ],
+  "mutates": false,
+  "parent": "payments.send-details",
+  "recordedBy": "agent",
+  "review": {
+   "by": "conductor",
+   "date": "2026-10-03",
+   "decision": "accept",
+   "note": "same Details step with Bill details expanded (chevron up, Invoice number field showing); scrolled to the top where the capture is scrolled to Department/Internal note; the hop clicks the only accordion header (hashed CSS class), and its wait on 'Invoice number (optional)' confirms it opened Bill details",
+   "reason": "below-threshold"
+  },
+  "similarity": 0.7617,
+  "source": "2feb144b80eaf2e4ac7f83069ecaa32c4189db94",
+  "status": "accepted"
+ },
+ "payments.send-edit-recipient": {
+  "checked": "2026-10-02-1349",
+  "fingerprint": null,
+  "hop": [
+   {
+    "click": {
+     "name": "Edit recipient details",
+     "role": "menuitem"
+    }
+   }
+  ],
+  "mutates": false,
+  "parent": "payments.send-recipient-more-menu",
+  "recordedBy": "agent",
+  "review": null,
+  "similarity": null,
+  "source": null,
+  "status": "draft"
+ },
+ "payments.send-from-dropdown": {
+  "checked": "2026-10-02-1349",
+  "fingerprint": {
+   "controls": [
+    "AP <amount> / Checking ••<n>",
+    "AR <amount> / Checking ••<n>",
+    "Checking ••<n> <amount>",
+    "Savings ••<n> <amount>"
+   ],
+   "headings": [],
+   "path": "/send-money/pay/amount",
+   "structure": "listbox",
+   "top": {
+    "name": "",
+    "role": "listbox"
+   }
+  },
+  "hop": [
+   {
+    "click": {
+     "name": "Send from",
+     "role": "combobox"
+    }
+   }
+  ],
+  "mutates": true,
+  "parent": "payments.send-amount",
+  "recordedBy": "agent",
+  "review": {
+   "by": "conductor",
+   "date": "2026-10-03",
+   "decision": "accept",
+   "note": "same Send from account menu open on the Amount step (AP ••1794 highlighted, AR, Checking ••0297, Savings ••7658); the hop clicks only the Send from combobox and submits nothing; the empty amount field matches the parent capture, and the capture's $250.00 is not part of this edge",
+   "reason": "mutating"
+  },
+  "similarity": 0.9985,
+  "source": "2b11aa2a8395e59654dae7acc8e0aff16015ac00",
+  "status": "accepted"
+ },
+ "payments.send-gl-dropdown": {
+  "checked": "2026-10-02-1349",
+  "fingerprint": {
+   "controls": [
+    "<n> - Accounts Payable",
+    "<n> - Accounts Receivable",
+    "<n> - Bill pay",
+    "<n> - COGS",
+    "<n> - Expense Account",
+    "<n> - Inactive GL Code",
+    "<n> - Inventory",
+    "<n> - Mercury Credit",
+    "<n> - Other liabilities",
+    "<n> - Raw Materials",
+    "<n> - Unbilled Receivables",
+    "Mercury Checking (<n>)",
+    "Mercury Savings (<n>)",
+    "Operating Expenses:Debt Service:Interest Payments",
+    "Operating Expenses:Facilities:Electric Bills",
+    "Operating Expenses:Facilities:Utilities",
+    "Operating Expenses:Office Supplies:Printer Paper",
+    "Operating Expenses:Travel & Entertainment:Client Dinners"
+   ],
+   "headings": [],
+   "path": "/send-money/pay/accounting",
+   "structure": "listbox",
+   "top": {
+    "name": "",
+    "role": "listbox"
+   }
+  },
+  "hop": [
+   {
+    "click": {
+     "name": "GL Code",
+     "role": "combobox"
+    }
+   }
+  ],
+  "mutates": false,
+  "parent": "payments.send-categorization",
+  "recordedBy": "agent",
+  "review": null,
+  "similarity": 0.9998,
+  "source": "4b666143f245098782638cd0df1d96b3a12b45be",
+  "status": "accepted"
+ },
+ "payments.send-intl-validation": {
+  "checked": "2026-10-02-1349",
+  "fingerprint": {
+   "controls": [
+    "Apartment, suite, floor (optional)",
+    "Ask Mercury Command /",
+    "Business",
+    "Choose Files",
+    "City",
+    "Close",
+    "Country",
+    "Currency",
+    "Customize your experience",
+    "Email (optional)",
+    "Go back",
+    "Legal name",
+    "Next",
+    "Nickname (optional)",
+    "Open account",
+    "Open combobox menu",
+    "Payment method",
+    "Person",
+    "Postal / ZIP code",
+    "Recipient legal address",
+    "Save",
+    "State",
+    "Viewing as Admin"
+   ],
+   "headings": [
+    "Upload an attachment",
+    "Recipient",
+    "Edit recipient details",
+    "Profile",
+    "Address"
+   ],
+   "path": "/send-money/pay/recipient-details",
+   "structure": "document",
+   "top": {
+    "name": "",
+    "role": "document"
+   }
+  },
+  "hop": [
+   {
+    "click": {
+     "name": "Next",
+     "role": "button"
+    }
+   }
+  ],
+  "mutates": false,
+  "parent": "payments.send-method-intl-wire",
+  "recordedBy": "agent",
+  "review": {
+   "by": "conductor",
+   "date": "2026-10-03",
+   "decision": "accept",
+   "note": "same Recipient step (Jason Green, International Wire) with 'Please complete this field' under the empty Currency; only the scroll differs",
+   "reason": "below-threshold"
+  },
+  "similarity": 0.8156,
+  "source": "a4e3800b2fc99daedd8ed805cb5857c44446e25f",
+  "status": "accepted"
+ },
+ "payments.send-method-check": {
+  "checked": "2026-10-02-1349",
+  "fingerprint": {
+   "controls": [
+    "Apartment, suite, floor (optional)",
+    "Ask Mercury Command /",
+    "Business",
+    "Choose Files",
+    "City",
+    "Close",
+    "Country",
+    "Customize your experience",
+    "Edit",
+    "Email (optional)",
+    "Go back",
+    "Legal name",
+    "Next",
+    "Nickname (optional)",
+    "Open account",
+    "Open combobox menu",
+    "Payment method",
+    "Person",
+    "Postal / ZIP code",
+    "Recipient legal address",
+    "Save",
+    "State",
+    "Viewing as Admin"
+   ],
+   "headings": [
+    "Upload an attachment",
+    "Recipient",
+    "Edit recipient details",
+    "Profile",
+    "Address"
+   ],
+   "path": "/send-money/pay/recipient-details",
+   "structure": "document",
+   "top": {
+    "name": "",
+    "role": "document"
+   }
+  },
+  "hop": [
+   {
+    "click": {
+     "name": "Check <n>-<n> business days",
+     "role": "option"
+    }
+   }
+  ],
+  "mutates": false,
+  "parent": "payments.send-method-dropdown",
+  "recordedBy": "agent",
+  "review": null,
+  "similarity": 0.9995,
+  "source": "40d54153b2d0d3c3e1bdcf5c99c7dc6d1fd4e3fc",
+  "status": "accepted"
+ },
+ "payments.send-method-dropdown": {
+  "checked": "2026-10-02-1349",
+  "fingerprint": {
+   "controls": [
+    "ACH Last paid · <n> business days",
+    "Check <n> business days",
+    "International Wire <n> business days",
+    "Real-Time Payment New Instant",
+    "Wire <n> business days"
+   ],
+   "headings": [],
+   "path": "/send-money/pay/recipient-details",
+   "structure": "listbox",
+   "top": {
+    "name": "",
+    "role": "listbox"
+   }
+  },
+  "hop": [
+   {
+    "click": {
+     "index": 0,
+     "name": "Open combobox menu",
+     "role": "button"
+    }
+   },
+   {
+    "wait": {
+     "locator": {
+      "role": "listbox"
+     }
+    }
+   }
+  ],
+  "mutates": false,
+  "parent": "payments.send-recipient-step",
+  "recordedBy": "agent",
+  "review": null,
+  "similarity": 0.9993,
+  "source": "f1dbdc30e8d65d1556df191a41c1e3080e3fa1d5",
+  "status": "accepted"
+ },
+ "payments.send-method-intl-wire": {
+  "checked": "2026-10-02-1349",
+  "fingerprint": {
+   "controls": [
+    "Apartment, suite, floor (optional)",
+    "Argentine Peso",
+    "Ask Mercury Command /",
+    "Australian Dollar",
+    "Bermudian Dollar",
+    "Botswana Pula",
+    "Brazilian Real",
+    "British Pound Sterling",
+    "Business",
+    "Canadian Dollar",
+    "Cayman Islands Dollar",
+    "Chilean Peso",
+    "Chinese Yuan",
+    "Choose Files",
+    "City",
+    "Close",
+    "Close combobox menu",
+    "Country",
+    "Currency",
+    "Customize your experience",
+    "Czech Republic Koruna",
+    "Danish Krone",
+    "Email (optional)",
+    "Euro",
+    "Go back",
+    "Hong Kong Dollar",
+    "Hungarian Forint",
+    "Icelandic Króna",
+    "Indian Rupee",
+    "Indonesian Rupiah",
+    "Israeli New Shekel",
+    "Japanese Yen",
+    "Legal name",
+    "Malaysian Ringgit",
+    "Mauritian Rupee",
+    "Mexican Peso",
+    "Moroccan Dirham",
+    "New Zealand Dollar",
+    "Next",
+    "Nickname (optional)",
+    "Norwegian Krone",
+    "Open account",
+    "Open combobox menu",
+    "Payment method",
+    "Person",
+    "Philippine Peso",
+    "Polish Złoty",
+    "Postal / ZIP code",
+    "Recipient legal address",
+    "Romanian Leu",
+    "Saudi Riyal",
+    "Save",
+    "Singapore Dollar",
+    "South African Rand",
+    "South Korean Won",
+    "State",
+    "Swedish Krona",
+    "Swiss Franc",
+    "Taiwanese Dollar",
+    "Tanzanian Shilling",
+    "Thai Baht",
+    "Turkish Lira",
+    "United Arab Emirates Dirham",
+    "United States Dollar",
+    "Viewing as Admin"
+   ],
+   "headings": [
+    "Upload an attachment",
+    "Recipient",
+    "Edit recipient details",
+    "Profile",
+    "Address"
+   ],
+   "path": "/send-money/pay/recipient-details",
+   "structure": "document",
+   "top": {
+    "name": "",
+    "role": "document"
+   }
+  },
+  "hop": [
+   {
+    "click": {
+     "name": "International Wire <n>-<n> business days",
+     "role": "option"
+    }
+   }
+  ],
+  "mutates": false,
+  "parent": "payments.send-method-dropdown",
+  "recordedBy": "agent",
+  "review": null,
+  "similarity": 0.9994,
+  "source": "0f9afccae45e6c89eb547e2c970048b670ffe8a4",
+  "status": "accepted"
+ },
+ "payments.send-method-wire": {
+  "checked": "2026-10-02-1349",
+  "fingerprint": {
+   "controls": [
+    "Apartment, suite, floor (optional)",
+    "Ask Mercury Command /",
+    "Business",
+    "Choose Files",
+    "City",
+    "Close",
+    "Country",
+    "Customize your experience",
+    "Edit",
+    "Email (optional)",
+    "Go back",
+    "Legal name",
+    "Next",
+    "Nickname (optional)",
+    "Open account",
+    "Open combobox menu",
+    "Payment method",
+    "Person",
+    "Postal / ZIP code",
+    "Recipient legal address",
+    "Save",
+    "State",
+    "Viewing as Admin"
+   ],
+   "headings": [
+    "Upload an attachment",
+    "Recipient",
+    "Edit recipient details",
+    "Profile",
+    "Address"
+   ],
+   "path": "/send-money/pay/recipient-details",
+   "structure": "document",
+   "top": {
+    "name": "",
+    "role": "document"
+   }
+  },
+  "hop": [
+   {
+    "click": {
+     "name": "Wire 0-1 business days",
+     "role": "option"
+    }
+   }
+  ],
+  "mutates": false,
+  "parent": "payments.send-method-dropdown",
+  "recordedBy": "agent",
+  "review": {
+   "by": "conductor",
+   "date": "2026-10-03",
+   "decision": "reject",
+   "note": "form state missing: Wire is selected for Jason Green, but his saved HSBC bank details (••0101) replace the empty Routing number and Account number inputs the capture shows (Domestic Ads), so the next edge, send-wire-validation (Next on empty fields), cannot start here",
+   "reason": "below-threshold"
+  },
+  "similarity": 0.8808,
+  "source": "d89b39f1ab736b89ceccdf811c805c4e368a0996",
+  "status": "rejected"
+ },
+ "payments.send-multiple-gl": {
+  "checked": "2026-10-02-1349",
+  "fingerprint": {
+   "controls": [
+    "Add line item",
+    "Amount",
+    "Ask Mercury Command /",
+    "Back",
+    "Choose Files",
+    "Close",
+    "Customize your experience",
+    "Multiple GL Codes",
+    "Next",
+    "Open account",
+    "Single GL Code",
+    "Viewing as Admin"
+   ],
+   "headings": [
+    "Upload an attachment",
+    "Categorization"
+   ],
+   "path": "/send-money/pay/accounting",
+   "structure": "document",
+   "top": {
+    "name": "",
+    "role": "document"
+   }
+  },
+  "hop": [
+   {
+    "click": {
+     "name": "Multiple GL Codes",
+     "role": "button"
+    }
+   }
+  ],
+  "mutates": false,
+  "parent": "payments.send-categorization",
+  "recordedBy": "agent",
+  "review": null,
+  "similarity": 0.9954,
+  "source": "a6a5a4d730ebd97edb32d523e19b18167387c449",
+  "status": "accepted"
+ },
+ "payments.send-recipient-more-menu": {
+  "checked": "2026-10-02-1349",
+  "fingerprint": {
+   "controls": [
+    "Edit recipient details",
+    "Pay different recipient"
+   ],
+   "headings": [],
+   "path": "/send-money/pay/recipient-details",
+   "structure": "menu",
+   "top": {
+    "name": "",
+    "role": "menu"
+   }
+  },
+  "hop": [
+   {
+    "click": {
+     "css": "[class*=\"_menuButton_\"]",
+     "index": 1
+    }
+   }
+  ],
+  "mutates": false,
+  "parent": "payments.send-recipient-step",
+  "recordedBy": "agent",
+  "review": {
+   "by": "conductor",
+   "date": "2026-10-03",
+   "decision": "accept",
+   "note": "same recipient card overflow menu (Edit recipient details, Pay different recipient) on Jason Green; the form behind it shows ACH + HSBC, where the capture had International Wire + Currency error, which comes from the parent's state and not from this layer",
+   "reason": "below-threshold"
+  },
+  "similarity": 0.7947,
+  "source": "d47825bc22d3f7957243aee97ed658187cf85314",
+  "status": "accepted"
+ },
+ "payments.send-recipient-search": {
+  "checked": "2026-10-02-1349",
+  "fingerprint": {
+   "controls": [
+    "Anil Kapoor",
+    "Bolat Akhmetov",
+    "Catherine Ndereba",
+    "Contractor Jason Green",
+    "Create recipient: a",
+    "Deshaun Moore",
+    "Domestic Ads",
+    "Greenwich Capital",
+    "Invite recipient: a",
+    "Jean Vallee",
+    "Karim Halabi",
+    "Miles Davidson",
+    "Nano Tech LLC",
+    "Nutritionist Aliyah McMahon",
+    "Search",
+    "Stefanie Katz",
+    "Tax Bureau Inc"
+   ],
+   "headings": [],
+   "path": "/send-money/pay/start",
+   "structure": "listbox",
+   "top": {
+    "name": "Search",
+    "role": "listbox"
+   }
+  },
+  "hop": [
+   {
+    "fill": {
+     "locator": {
+      "name": "Search",
+      "role": "combobox"
+     },
+     "value": "a"
+    }
+   }
+  ],
+  "mutates": false,
+  "parent": "payments.send-start",
+  "recordedBy": "agent",
+  "review": {
+   "by": "conductor",
+   "date": "2026-10-03",
+   "decision": "accept",
+   "note": "same open recipient Search list for 'a' (Nutritionist/Aliyah McMahon, Anil Kapoor, Contractor/Jason Green, Catherine Ndereba...)",
+   "reason": "sample"
+  },
+  "similarity": 0.9997,
+  "source": "e3973a4977bc711582d4c0f710ff92f03f9b2533",
+  "status": "accepted"
+ },
+ "payments.send-recipient-step": {
+  "checked": "2026-10-02-1349",
+  "fingerprint": {
+   "controls": [
+    "Apartment, suite, floor (optional)",
+    "Ask Mercury Command /",
+    "Business",
+    "Choose Files",
+    "City",
+    "Close",
+    "Country",
+    "Customize your experience",
+    "Edit",
+    "Email (optional)",
+    "Go back",
+    "Legal name",
+    "Next",
+    "Nickname (optional)",
+    "Open account",
+    "Open combobox menu",
+    "Payment method",
+    "Person",
+    "Postal / ZIP code",
+    "Recipient legal address",
+    "Save",
+    "State",
+    "Viewing as Admin"
+   ],
+   "headings": [
+    "Upload an attachment",
+    "Recipient",
+    "Edit recipient details",
+    "Profile",
+    "Address"
+   ],
+   "path": "/send-money/pay/recipient-details",
+   "structure": "document",
+   "top": {
+    "name": "",
+    "role": "document"
+   }
+  },
+  "hop": [
+   {
+    "click": {
+     "name": "Jason Green Contractor jason@green.com",
+     "role": "button"
+    }
+   }
+  ],
+  "mutates": false,
+  "parent": "payments.send-start",
+  "recordedBy": "agent",
+  "review": null,
+  "similarity": 0.9994,
+  "source": "213c9266bc19c6ec0227d6b66982001dd6c1bebc",
+  "status": "accepted"
+ },
+ "payments.send-repeat": {
+  "checked": "2026-10-02-1349",
+  "fingerprint": {
+   "controls": [
+    "After",
+    "Ask Mercury Command /",
+    "Back",
+    "Choose Files",
+    "Close",
+    "Customize your experience",
+    "Never",
+    "Next",
+    "Number of payments before ending",
+    "On",
+    "On day",
+    "Open account",
+    "Open combobox menu",
+    "Recipient gets",
+    "Repeat",
+    "Repeat this payment",
+    "Send from",
+    "Start on",
+    "Viewing as Admin"
+   ],
+   "headings": [
+    "Upload an attachment",
+    "Amount"
+   ],
+   "path": "/send-money/pay/amount",
+   "structure": "document",
+   "top": {
+    "name": "",
+    "role": "document"
+   }
+  },
+  "hop": [
+   {
+    "click": {
+     "name": "Repeat this payment",
+     "role": "switch"
+    }
+   }
+  ],
+  "mutates": false,
+  "parent": "payments.send-amount",
+  "recordedBy": "agent",
+  "review": null,
+  "similarity": 0.9975,
+  "source": "836dc6675560c70c2da0cb0fdb51f635fc9434a7",
+  "status": "accepted"
+ },
+ "payments.send-review": {
+  "checked": "2026-10-02-1349",
+  "fingerprint": {
+   "controls": [
+    "Ask Mercury Command /",
+    "Back",
+    "Choose Files",
+    "Close",
+    "Customize your experience",
+    "Open account",
+    "Schedule payment",
+    "Viewing as Admin"
+   ],
+   "headings": [
+    "Upload an attachment"
+   ],
+   "path": "/send-money/pay/review",
+   "structure": "document",
+   "top": {
+    "name": "",
+    "role": "document"
+   }
+  },
+  "hop": [
+   {
+    "click": {
+     "name": "Next",
+     "role": "button"
+    }
+   }
+  ],
+  "mutates": false,
+  "parent": "payments.send-details",
+  "recordedBy": "agent",
+  "review": {
+   "by": "conductor",
+   "date": "2026-10-03",
+   "decision": "accept",
+   "note": "same Send Review step (Jason Green, ACH, HSBC ••0101, Schedule payment); hop clicks Next as labeled; the $1.00 amount comes from the fixture; the 'Scheduled' badge and 'Pay once on Oct 5' are date drift (replay ran on Saturday Oct 3)",
+   "reason": "below-threshold"
+  },
+  "similarity": 0.8615,
+  "source": "2f157b3121b28236804b70f43a711c7da2cdaafc",
+  "status": "accepted"
+ },
  "payments.send-start": {
   "checked": "2026-10-02-1349",
   "fingerprint": {
@@ -986,6 +4072,256 @@
   "review": null,
   "similarity": 0.9652,
   "source": "97d170e1550eee4afc0af065b78cda302a97674c",
+  "status": "accepted"
+ },
+ "payments.send-submitting": {
+  "checked": "2026-10-02-1349",
+  "fingerprint": {
+   "controls": [
+    "Close",
+    "Customize your experience",
+    "Go to dashboard",
+    "Make another payment",
+    "Open account",
+    "Viewing as Admin"
+   ],
+   "headings": [
+    "You’ve scheduled an ACH payment"
+   ],
+   "path": "/send-money/pay/success",
+   "structure": "document",
+   "top": {
+    "name": "",
+    "role": "document"
+   }
+  },
+  "hop": [
+   {
+    "click": {
+     "name": "Schedule payment",
+     "role": "button"
+    }
+   }
+  ],
+  "mutates": true,
+  "parent": "payments.send-review",
+  "recordedBy": "agent",
+  "review": {
+   "by": "conductor",
+   "date": "2026-10-03",
+   "decision": "accept",
+   "note": "transient loading-dots moment on Schedule payment; the replay shows the settled 'You've scheduled an ACH payment' screen (Jason Green, $1.00 fixture) that the next edge 'Payment scheduled' leads to; accepted as chain link for 1 state",
+   "reason": "below-threshold"
+  },
+  "similarity": 0.6985,
+  "source": "2fe7edb910eecfbf7c56092a98af06e8b5606b7c",
+  "status": "accepted"
+ },
+ "payments.send-success": {
+  "checked": "2026-10-02-1349",
+  "fingerprint": {
+   "controls": [
+    "Close",
+    "Customize your experience",
+    "Go to dashboard",
+    "Make another payment",
+    "Open account",
+    "Viewing as Admin"
+   ],
+   "headings": [
+    "You’ve scheduled an ACH payment"
+   ],
+   "path": "/send-money/pay/success",
+   "structure": "document",
+   "top": {
+    "name": "",
+    "role": "document"
+   }
+  },
+  "hop": [
+   {
+    "wait": {
+     "locator": {
+      "name": "You’ve scheduled an ACH payment",
+      "role": "heading"
+     }
+    }
+   }
+  ],
+  "mutates": true,
+  "parent": "payments.send-submitting",
+  "recordedBy": "agent",
+  "review": {
+   "by": "conductor",
+   "date": "2026-10-03",
+   "decision": "accept",
+   "note": "same 'You've scheduled an ACH payment' confirmation (Contractor Jason Green, Make another payment, Go to dashboard); the hop only waits for the heading after the accepted parent clicked Schedule payment; $1.00 fixture instead of $250.00, and the Scheduled badge and 'Pay once on Oct 5' line come from a weekend date drift",
+   "reason": "below-threshold"
+  },
+  "similarity": 0.839,
+  "source": "837c8c11cd1910e9fa3556dfdd5f4f2b8c4f32bd",
+  "status": "accepted"
+ },
+ "payments.send-wire-purpose": {
+  "checked": "2026-10-02-1349",
+  "fingerprint": null,
+  "hop": [
+   {
+    "click": {
+     "name": "Next",
+     "role": "button"
+    }
+   }
+  ],
+  "mutates": false,
+  "parent": "payments.send-categorization",
+  "recordedBy": "agent",
+  "review": null,
+  "similarity": null,
+  "source": null,
+  "status": "draft"
+ },
+ "payments.send-wire-review": {
+  "checked": "2026-10-02-1349",
+  "fingerprint": {
+   "controls": [
+    "Ask Mercury Command /",
+    "Back",
+    "Choose Files",
+    "Close",
+    "Customize your experience",
+    "Open account",
+    "Schedule payment",
+    "Viewing as Admin"
+   ],
+   "headings": [
+    "Upload an attachment"
+   ],
+   "path": "/send-money/pay/review",
+   "structure": "document",
+   "top": {
+    "name": "",
+    "role": "document"
+   }
+  },
+  "hop": [
+   {
+    "click": {
+     "name": "Next",
+     "role": "button"
+    }
+   }
+  ],
+  "mutates": false,
+  "parent": "payments.send-details",
+  "recordedBy": "agent",
+  "review": {
+   "by": "conductor",
+   "date": "2026-10-03",
+   "decision": "reject",
+   "note": "different record and method: the replay shows the ACH review (Jason Green, $1.00, Schedule payment); the label means the wire review (Domestic Ads, Wire, Mock Bank, Schedule wire)",
+   "reason": "below-threshold"
+  },
+  "similarity": 0.8483,
+  "source": "29e7c5e821c24f900e35f4524e2fe5b9786be8f2",
+  "status": "rejected"
+ },
+ "payments.send-wire-validation": {
+  "checked": "2026-10-02-1349",
+  "fingerprint": null,
+  "hop": [
+   {
+    "click": {
+     "name": "Next",
+     "role": "button"
+    }
+   }
+  ],
+  "mutates": false,
+  "parent": "payments.send-method-wire",
+  "recordedBy": "agent",
+  "review": null,
+  "similarity": null,
+  "source": null,
+  "status": "draft"
+ },
+ "payments.settings-modal": {
+  "checked": "2026-10-02-1349",
+  "fingerprint": {
+   "controls": [
+    "Connect",
+    "Edit",
+    "Jane Black",
+    "Jessica Awad",
+    "Manage",
+    "Mary Metcalfe",
+    "my-company-name@ap.mercury.com"
+   ],
+   "headings": [
+    "Payments settings"
+   ],
+   "path": "/payments",
+   "structure": "dialog",
+   "top": {
+    "name": "",
+    "role": "dialog"
+   }
+  },
+  "hop": [
+   {
+    "click": {
+     "css": "button:has([data-icon=\"gear\"])"
+    }
+   },
+   {
+    "wait": {
+     "locator": {
+      "index": 0,
+      "name": "Edit",
+      "role": "button"
+     }
+    }
+   }
+  ],
+  "mutates": false,
+  "parent": "payments.index",
+  "recordedBy": "agent",
+  "review": null,
+  "similarity": 0.9984,
+  "source": "6d1e252811191239c9e58bca709b3308f102a4a4",
+  "status": "accepted"
+ },
+ "payments.status-filter": {
+  "checked": "2026-10-02-1349",
+  "fingerprint": {
+   "controls": [
+    "Due next <n>",
+    "Missing due date",
+    "Not due yet",
+    "Overdue"
+   ],
+   "headings": [],
+   "path": "/payments/scheduled",
+   "structure": "dialog",
+   "top": {
+    "name": "",
+    "role": "generic"
+   }
+  },
+  "hop": [
+   {
+    "click": {
+     "name": "Status",
+     "role": "menuitem"
+    }
+   }
+  ],
+  "mutates": false,
+  "parent": "payments.scheduled",
+  "recordedBy": "agent",
+  "review": null,
+  "similarity": 0.9958,
+  "source": "1afbf32377b3baa36d0d29cdc3ea8085c5681c38",
   "status": "accepted"
  },
  "payments.taxes": {
@@ -1128,6 +4464,73 @@
   "source": "97d170e1550eee4afc0af065b78cda302a97674c",
   "status": "accepted"
  },
+ "payments.taxes-edit-filing": {
+  "checked": "2026-10-02-1349",
+  "fingerprint": {
+   "controls": [
+    "Apply <n>",
+    "Done"
+   ],
+   "headings": [],
+   "path": "/taxes/<id>/<id>/edit-filing",
+   "structure": "dialog",
+   "top": {
+    "name": "<n> selected",
+    "role": "dialog"
+   }
+  },
+  "hop": [
+   {
+    "click": {
+     "index": 0,
+     "name": "Edit Filing",
+     "role": "button"
+    }
+   }
+  ],
+  "mutates": false,
+  "parent": "payments.taxes",
+  "recordedBy": "agent",
+  "review": null,
+  "similarity": 0.9998,
+  "source": "bb9a9f0b5455ced8248b03f80eb99cb0abdda1dc",
+  "status": "accepted"
+ },
+ "payments.taxes-payee-drawer": {
+  "checked": "2026-10-02-1349",
+  "fingerprint": {
+   "controls": [
+    "Choose File",
+    "Close detail panel",
+    "Edit Filing Button",
+    "Remove Filing Button",
+    "Request W-<n>",
+    "View Payments"
+   ],
+   "headings": [],
+   "path": "/taxes/<id>/filing/<id>",
+   "structure": "dialog",
+   "top": {
+    "name": "",
+    "role": "complementary"
+   }
+  },
+  "hop": [
+   {
+    "click": {
+     "name": "Done",
+     "role": "button"
+    }
+   }
+  ],
+  "mutates": false,
+  "parent": "payments.taxes-edit-filing",
+  "recordedBy": "agent",
+  "review": null,
+  "similarity": 0.9994,
+  "source": "22066ddb7073775f5a9c5106d9aadd6e855f681a",
+  "status": "accepted"
+ },
  "payments.taxes-request-w9s": {
   "checked": "2026-10-02-1349",
   "fingerprint": {
@@ -1189,6 +4592,156 @@
   "source": "7c768da0c6cf16f56288d3e19b92eceb2745bca3",
   "status": "accepted"
  },
+ "payments.transfer-from-dropdown": {
+  "checked": "2026-10-02-1349",
+  "fingerprint": {
+   "controls": [
+    "AP <amount> / Checking ••<n>",
+    "Checking ••<n> <amount>",
+    "Checking ••<n> Business Checking – Iron Bank",
+    "Checking ••<n> Personal Checking – Capital One",
+    "Link a Bank Account",
+    "Ops / Payroll <amount> / Checking ••<n>",
+    "Savings ••<n> <amount>",
+    "Savings ••<n> Business Savings – Chase",
+    "Treasury <amount>"
+   ],
+   "headings": [],
+   "path": "/send-money/transfer",
+   "structure": "listbox",
+   "top": {
+    "name": "",
+    "role": "listbox"
+   }
+  },
+  "hop": [
+   {
+    "click": {
+     "name": "Transfer from",
+     "role": "combobox"
+    }
+   }
+  ],
+  "mutates": true,
+  "parent": "payments.transfer-start",
+  "recordedBy": "agent",
+  "review": {
+   "by": "conductor",
+   "date": "2026-10-03",
+   "decision": "accept",
+   "note": "same open Transfer from list (Treasury highlighted, Ops / Payroll, AP, Checking ••0297); amount empty instead of $5,000.00, not part of this menu state",
+   "reason": "mutating"
+  },
+  "similarity": 0.9943,
+  "source": "cb33f965239d33c5c210cbb5f2f2db7c049e8e13",
+  "status": "accepted"
+ },
+ "payments.transfer-more-details": {
+  "checked": "2026-10-02-1349",
+  "fingerprint": {
+   "controls": [
+    "Add more details",
+    "Amount",
+    "Attachments",
+    "Back",
+    "Close",
+    "Customize your experience",
+    "Next",
+    "Note: not visible to the recipient",
+    "Open account",
+    "Transfer from",
+    "Transfer to",
+    "Viewing as Admin"
+   ],
+   "headings": [
+    "Transfer funds",
+    "One-time transfer",
+    "Auto transfer rule"
+   ],
+   "path": "/send-money/transfer",
+   "structure": "document",
+   "top": {
+    "name": "",
+    "role": "document"
+   }
+  },
+  "hop": [
+   {
+    "click": {
+     "name": "Treasury <amount>",
+     "role": "option"
+    }
+   },
+   {
+    "fill": {
+     "locator": {
+      "label": "Amount"
+     },
+     "value": "1.00"
+    }
+   },
+   {
+    "click": {
+     "name": "Add more details",
+     "role": "switch"
+    }
+   }
+  ],
+  "mutates": true,
+  "parent": "payments.transfer-to-dropdown",
+  "recordedBy": "agent",
+  "review": {
+   "by": "conductor",
+   "date": "2026-10-03",
+   "decision": "accept",
+   "note": "same Transfer funds form (Ops / Payroll to Treasury, Add more details on, Internal note and Attachments); the hop picks Treasury as the label says and fills the fixture amount 1.00 where the capture had $5,000.00",
+   "reason": "mutating"
+  },
+  "similarity": 0.995,
+  "source": "471e46b82fbce97e902eb24288e47112a865091b",
+  "status": "accepted"
+ },
+ "payments.transfer-review": {
+  "checked": "2026-10-02-1349",
+  "fingerprint": {
+   "controls": [
+    "Back",
+    "Close",
+    "Customize your experience",
+    "Open account",
+    "Transfer",
+    "Viewing as Admin"
+   ],
+   "headings": [],
+   "path": "/send-money/review/transfer/<id>/amount/<id>/<id>",
+   "structure": "document",
+   "top": {
+    "name": "",
+    "role": "document"
+   }
+  },
+  "hop": [
+   {
+    "click": {
+     "name": "Next",
+     "role": "button"
+    }
+   }
+  ],
+  "mutates": true,
+  "parent": "payments.transfer-more-details",
+  "recordedBy": "agent",
+  "review": {
+   "by": "conductor",
+   "date": "2026-10-03",
+   "decision": "accept",
+   "note": "same Review transfer screen (Ops / Payroll ••1038 to Treasury 3713286, initiates today, Back / Transfer, legal copy). The hop clicks Next as the label says, not Transfer. The amount is the fixture $1.00. The optional Internal note row is absent because no label types a note; the accepted parent capture shows the note field empty.",
+   "reason": "mutating"
+  },
+  "similarity": 0.9058,
+  "source": "4f4548238f4246a83dbbbaea0388548d2d85c426",
+  "status": "accepted"
+ },
  "payments.transfer-start": {
   "checked": "2026-10-02-1349",
   "fingerprint": {
@@ -1232,6 +4785,152 @@
   "source": "feb8a74dd44a44233502076025b48d4e2a9610b2",
   "status": "accepted"
  },
+ "payments.transfer-success": {
+  "checked": "2026-10-02-1349",
+  "fingerprint": {
+   "controls": [
+    "Close",
+    "Customize your experience",
+    "Go to dashboard",
+    "Make another transfer",
+    "Open account",
+    "Viewing as Admin"
+   ],
+   "headings": [
+    "Your transfer is on the way",
+    "The money should arrive between <date>-<n>."
+   ],
+   "path": "/send-money/success/transfer",
+   "structure": "document",
+   "top": {
+    "name": "",
+    "role": "document"
+   }
+  },
+  "hop": [
+   {
+    "click": {
+     "name": "Transfer",
+     "role": "button"
+    }
+   }
+  ],
+  "mutates": true,
+  "parent": "payments.transfer-review",
+  "recordedBy": "agent",
+  "review": {
+   "by": "conductor",
+   "date": "2026-10-03",
+   "decision": "accept",
+   "note": "same 'Your transfer is on the way' screen (Ops / Payroll to Treasury, Make another transfer, Go to dashboard); the hop clicks Transfer as the label says; amount is the fixture $1.00 instead of $5,000.00",
+   "reason": "mutating"
+  },
+  "similarity": 0.9927,
+  "source": "d104cb5082e785f79217f902e1dcfe7eb0ff2eb1",
+  "status": "accepted"
+ },
+ "payments.transfer-to-dropdown": {
+  "checked": "2026-10-02-1349",
+  "fingerprint": {
+   "controls": [
+    "AP <amount> / Checking ••<n>",
+    "AR <amount> / Checking ••<n>",
+    "Checking ••<n> <amount>",
+    "Checking ••<n> Business Checking – Iron Bank",
+    "Checking ••<n> Personal Checking – Capital One",
+    "Link a Bank Account",
+    "Ops / Payroll <amount> / Checking ••<n>",
+    "Savings ••<n> <amount>",
+    "Savings ••<n> Business Savings – Chase",
+    "Savings ••<n> Personal Savings / Jane’s Account",
+    "Stripe Income Business Checking ••<n> / Mercury Demo, Inc",
+    "Treasury <amount>"
+   ],
+   "headings": [],
+   "path": "/send-money/transfer",
+   "structure": "listbox",
+   "top": {
+    "name": "",
+    "role": "listbox"
+   }
+  },
+  "hop": [
+   {
+    "click": {
+     "name": "Ops / Payroll $<amount> / Checking ••<n>",
+     "role": "option"
+    }
+   },
+   {
+    "click": {
+     "name": "Transfer to",
+     "role": "combobox"
+    }
+   }
+  ],
+  "mutates": true,
+  "parent": "payments.transfer-from-dropdown",
+  "recordedBy": "agent",
+  "review": {
+   "by": "conductor",
+   "date": "2026-10-03",
+   "decision": "accept",
+   "note": "same open Transfer to list (Treasury highlighted, Ops / Payroll, AP) with Ops / Payroll as source; amount empty instead of $5,000.00, which no label sets; the hop only picks options and submits nothing",
+   "reason": "mutating"
+  },
+  "similarity": 0.9958,
+  "source": "51f3d67171305a85521adc1064e55c8c1e3a8d13",
+  "status": "accepted"
+ },
+ "payments.transfer-validation": {
+  "checked": "2026-10-02-1349",
+  "fingerprint": {
+   "controls": [
+    "Add more details",
+    "Amount",
+    "Back",
+    "Close",
+    "Customize your experience",
+    "Next",
+    "Open account",
+    "Transfer from",
+    "Transfer to",
+    "Viewing as Admin"
+   ],
+   "headings": [
+    "Transfer funds",
+    "One-time transfer",
+    "Auto transfer rule"
+   ],
+   "path": "/send-money/transfer",
+   "structure": "document",
+   "top": {
+    "name": "",
+    "role": "document"
+   }
+  },
+  "hop": [
+   {
+    "click": {
+     "name": "Next",
+     "role": "button"
+    }
+   }
+  ],
+  "mutates": true,
+  "parent": "payments.transfer-start",
+  "recordedBy": "agent",
+  "review": {
+   "by": "conductor",
+   "date": "2026-10-03",
+   "decision": "accept",
+   "note": "same empty-submit errors: 'Must be a dollar value.' and two 'Please choose an account'; hop clicks Next as labeled",
+   "reason": "mutating"
+  },
+  "similarity": 0.9982,
+  "source": "879abcca5d16e0bd0172db1e0a94db9e1b1d1df6",
+  "status": "accepted"
+ },
  "payments.wire-drawdown-create": {
   "checked": "2026-10-02-1349",
   "fingerprint": {
@@ -1269,6 +4968,93 @@
   "source": "8a1f9bcd5278f5662283c4f25db9d8c5e3aa2869",
   "status": "accepted"
  },
+ "payments.wire-drawdown-detail": {
+  "checked": "2026-10-02-1349",
+  "fingerprint": {
+   "controls": [
+    "Close details",
+    "Landon S.",
+    "Show account number"
+   ],
+   "headings": [
+    "Drawdown Recipient"
+   ],
+   "path": "/payments/wire-drawdowns",
+   "structure": "dialog",
+   "top": {
+    "name": "",
+    "role": "generic"
+   }
+  },
+  "hop": [
+   {
+    "click": {
+     "text": "Custom Entity"
+    }
+   }
+  ],
+  "mutates": false,
+  "parent": "payments.wire-drawdowns",
+  "recordedBy": "agent",
+  "review": null,
+  "similarity": 0.9976,
+  "source": "b09730cf274d8a3fad26a7880ea93deaa5f35cd0",
+  "status": "accepted"
+ },
+ "payments.wire-drawdown-funding": {
+  "checked": "2026-10-02-1349",
+  "fingerprint": {
+   "controls": [
+    "Back",
+    "Close",
+    "Customize your experience",
+    "Next",
+    "Open account",
+    "Source account",
+    "Viewing as Admin"
+   ],
+   "headings": [],
+   "path": "/wire-drawdowns/funding-account",
+   "structure": "document",
+   "top": {
+    "name": "",
+    "role": "document"
+   }
+  },
+  "hop": [
+   {
+    "click": {
+     "name": "Recipient",
+     "role": "combobox"
+    }
+   },
+   {
+    "click": {
+     "name": "Gusto",
+     "role": "option"
+    }
+   },
+   {
+    "click": {
+     "name": "Next",
+     "role": "button"
+    }
+   }
+  ],
+  "mutates": true,
+  "parent": "payments.wire-drawdown-payroll",
+  "recordedBy": "agent",
+  "review": {
+   "by": "conductor",
+   "date": "2026-10-03",
+   "decision": "reject",
+   "note": "the empty state no longer exists on the live demo: the capture's Source account reads 'There are no accounts'; the demo now lists accounts in an enabled 'Select an account' dropdown. The hop (Recipient > Gusto > Next) is right",
+   "reason": "mutating"
+  },
+  "similarity": 0.9983,
+  "source": "a7557dc63a6e4f5c68f606a48d6807a0a4e4c3cc",
+  "status": "rejected"
+ },
  "payments.wire-drawdown-payroll": {
   "checked": "2026-10-02-1349",
   "fingerprint": {
@@ -1305,6 +5091,50 @@
   "review": null,
   "similarity": 0.9998,
   "source": "79250d102434d0b9311e35dba5b4b9df2277279c",
+  "status": "accepted"
+ },
+ "payments.wire-drawdown-validation": {
+  "checked": "2026-10-02-1349",
+  "fingerprint": {
+   "controls": [
+    "Back",
+    "Close",
+    "Custom",
+    "Customize your experience",
+    "Next",
+    "Open account",
+    "Payroll / Benefits",
+    "Recipient",
+    "Viewing as Admin"
+   ],
+   "headings": [],
+   "path": "/wire-drawdowns/recipient-details",
+   "structure": "document",
+   "top": {
+    "name": "",
+    "role": "document"
+   }
+  },
+  "hop": [
+   {
+    "click": {
+     "name": "Next",
+     "role": "button"
+    }
+   }
+  ],
+  "mutates": true,
+  "parent": "payments.wire-drawdown-payroll",
+  "recordedBy": "agent",
+  "review": {
+   "by": "conductor",
+   "date": "2026-10-03",
+   "decision": "accept",
+   "note": "same Recipient details step with 'Please choose a recipient.' under an empty Recipient field, Payroll / Benefits selected, Next disabled; hop clicks Next as labeled",
+   "reason": "mutating"
+  },
+  "similarity": 0.9999,
+  "source": "4fc3559b755421f8fec9077d3a05147eead02521",
   "status": "accepted"
  },
  "payments.wire-drawdowns": {

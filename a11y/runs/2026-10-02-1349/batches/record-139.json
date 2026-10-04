@@ -1,0 +1,131 @@
+{
+ "batch": "record-139",
+ "reach": {
+  "baseUrl": "https://demo.mercury.com",
+  "data": "data",
+  "map": "build/map.json",
+  "run": "2026-10-02-1349",
+  "workspace": "a11y"
+ },
+ "run": "2026-10-02-1349",
+ "states": [
+  {
+   "area": "invoicing",
+   "draft": "not drafted: its parent had no accepted recipe when the drafter ran",
+   "image": "screens/invoicing/18-create-preview-email.png",
+   "kind": "form-state",
+   "labels": [
+    "Click Request money",
+    "Click the Name combobox",
+    "Pick a customer",
+    "Click Next",
+    "Click the line item field",
+    "Type a custom item name",
+    "Enter quantity, unit price and memo",
+    "Click Add sales tax",
+    "Click the Payer page preview tab",
+    "Click the Email preview tab"
+   ],
+   "mutates": false,
+   "note": "Email preview tab: subject, preview text, to/from headers and the 'You've been sent a new invoice' email body with Pay invoice button.",
+   "parent": "invoicing.create-preview-payer",
+   "state": "invoicing.create-preview-email",
+   "title": "Preview: Email"
+  },
+  {
+   "area": "invoicing",
+   "draft": "not drafted: its parent had no accepted recipe when the drafter ran",
+   "image": "screens/invoicing/19-create-form-bottom.png",
+   "kind": "form-state",
+   "labels": [
+    "Click Request money",
+    "Click the Name combobox",
+    "Pick a customer",
+    "Click Next",
+    "Click the line item field",
+    "Type a custom item name",
+    "Enter quantity, unit price and memo",
+    "Click Add sales tax",
+    "Click the Payer page preview tab",
+    "Click the Email preview tab",
+    "Scroll to the bottom of the form"
+   ],
+   "mutates": false,
+   "note": "Bottom of step 2: payer memo, Upload attachment, Destination account and 'Use a secure virtual account number' toggle.",
+   "parent": "invoicing.create-preview-email",
+   "state": "invoicing.create-setup-bottom",
+   "title": "Invoice set up: destination"
+  },
+  {
+   "area": "invoicing",
+   "draft": "not drafted: its parent had no accepted recipe when the drafter ran",
+   "image": "screens/invoicing/20-create-destination-account.png",
+   "kind": "menu",
+   "labels": [
+    "Click Request money",
+    "Click the Name combobox",
+    "Pick a customer",
+    "Click Next",
+    "Click the line item field",
+    "Type a custom item name",
+    "Enter quantity, unit price and memo",
+    "Click Add sales tax",
+    "Click the Payer page preview tab",
+    "Click the Email preview tab",
+    "Scroll to the bottom of the form",
+    "Click Destination account"
+   ],
+   "mutates": false,
+   "note": "Destination account dropdown listing Mercury accounts with balances and masked numbers.",
+   "parent": "invoicing.create-setup-bottom",
+   "state": "invoicing.create-destination-menu",
+   "title": "Destination account picker"
+  },
+  {
+   "area": "invoicing",
+   "draft": "not drafted: its parent had no accepted recipe when the drafter ran",
+   "image": "screens/invoicing/24-create-schedule-send.png",
+   "kind": "form-state",
+   "labels": [
+    "Click Request money",
+    "Click the Name combobox",
+    "Pick a customer",
+    "Click Next",
+    "Click the line item field",
+    "Type a custom item name",
+    "Enter quantity, unit price and memo",
+    "Click Next",
+    "Click Next",
+    "Toggle Schedule send"
+   ],
+   "mutates": true,
+   "note": "Schedule send toggled on reveals a Send date field (9am ET) and the primary action becomes Create & schedule.",
+   "parent": "invoicing.create-review",
+   "state": "invoicing.create-schedule-send",
+   "title": "Review: schedule send on"
+  },
+  {
+   "area": "invoicing",
+   "draft": "not drafted: its parent had no accepted recipe when the drafter ran",
+   "image": "screens/invoicing/25-create-sending-loading.png",
+   "kind": "form-state",
+   "labels": [
+    "Click Request money",
+    "Click the Name combobox",
+    "Pick a customer",
+    "Click Next",
+    "Click the line item field",
+    "Type a custom item name",
+    "Enter quantity, unit price and memo",
+    "Click Next",
+    "Click Next",
+    "Click Create & send email"
+   ],
+   "mutates": true,
+   "note": "After clicking Create & send email the primary button turns into a disabled 'Loading...' state.",
+   "parent": "invoicing.create-review",
+   "state": "invoicing.create-sending",
+   "title": "Creating invoice"
+  }
+ ]
+}

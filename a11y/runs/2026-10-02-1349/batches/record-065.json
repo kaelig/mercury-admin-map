@@ -1,0 +1,254 @@
+{
+ "batch": "record-065",
+ "reach": {
+  "baseUrl": "https://demo.mercury.com",
+  "data": "data",
+  "map": "build/map.json",
+  "run": "2026-10-02-1349",
+  "workspace": "a11y"
+ },
+ "run": "2026-10-02-1349",
+ "states": [
+  {
+   "area": "books",
+   "draft": "not drafted: its parent had no accepted recipe when the drafter ran",
+   "image": "screens/books/32-reconciliations.png",
+   "kind": "page",
+   "labels": [
+    "Toggle Books",
+    "Click Try Mercury Books",
+    "Books created",
+    "Dismiss spotlight",
+    "Sidebar: Reconciliation"
+   ],
+   "mutates": false,
+   "note": "Opens on Jupiter Checking 4455 (Auto-reconciled) for Aug: month chips with sparkle icons, Reconciled / Ending balance and Difference $0.00, transaction grid with running Balance.",
+   "parent": "books.home",
+   "state": "books.reconciliation",
+   "title": "Reconciliation"
+  },
+  {
+   "area": "books",
+   "draft": "not drafted: its parent had no accepted recipe when the drafter ran",
+   "image": "screens/books/57-reconciliation-account-menu.png",
+   "kind": "menu",
+   "labels": [
+    "Toggle Books",
+    "Click Try Mercury Books",
+    "Books created",
+    "Dismiss spotlight",
+    "Sidebar: Reconciliation",
+    "Open account picker"
+   ],
+   "mutates": false,
+   "note": "Searchable account list grouped Bank accounts / Credit cards, each with Auto-reconciled or Not reconciled.",
+   "parent": "books.reconciliation",
+   "state": "books.reconciliation-account-menu",
+   "title": "Reconciliation account picker"
+  },
+  {
+   "area": "books",
+   "draft": "not drafted: its parent had no accepted recipe when the drafter ran",
+   "image": "screens/books/58-reconciliation-not-reconciled.png",
+   "kind": "page",
+   "labels": [
+    "Toggle Books",
+    "Click Try Mercury Books",
+    "Books created",
+    "Dismiss spotlight",
+    "Sidebar: Reconciliation",
+    "Open account picker",
+    "Pick Citi Checking 9384"
+   ],
+   "mutates": false,
+   "note": "Citi Checking 9384, Not reconciled: \"Sep 1, 2023 - Now\" with Needs reconciliation badge, Start reconciliation and Import transactions.",
+   "parent": "books.reconciliation-account-menu",
+   "state": "books.reconciliation-pending",
+   "title": "Account needing reconciliation"
+  },
+  {
+   "area": "books",
+   "draft": "not drafted: its parent had no accepted recipe when the drafter ran",
+   "image": "screens/books/33-chart-of-accounts.png",
+   "kind": "page",
+   "labels": [
+    "Toggle Books",
+    "Click Try Mercury Books",
+    "Books created",
+    "Dismiss spotlight",
+    "Sidebar: Chart of Accounts"
+   ],
+   "mutates": false,
+   "note": "Tabs All / Assets / Liabilities / Equity / Revenues / Expenses; ledger grid with code, name, type, subtype, Debit / credit, opening balance; linked-bank rows carry a link icon.",
+   "parent": "books.home",
+   "state": "books.chart-of-accounts",
+   "title": "Chart of Accounts"
+  },
+  {
+   "area": "books",
+   "draft": "not drafted: its parent had no accepted recipe when the drafter ran",
+   "image": "screens/books/54-ledger-account-drawer.png",
+   "kind": "drawer",
+   "labels": [
+    "Toggle Books",
+    "Click Try Mercury Books",
+    "Books created",
+    "Dismiss spotlight",
+    "Sidebar: Chart of Accounts",
+    "Open 10003 row"
+   ],
+   "mutates": false,
+   "note": "\"10003 \u2014 Citi Checking 9384\": code, account, type, subtype, Debit or credit, Parent (em dash), Opening balance $0.00.",
+   "parent": "books.chart-of-accounts",
+   "state": "books.ledger-drawer",
+   "title": "Ledger account detail"
+  },
+  {
+   "area": "books",
+   "draft": "not drafted: its parent had no accepted recipe when the drafter ran",
+   "image": "screens/books/34-rules.png",
+   "kind": "page",
+   "labels": [
+    "Toggle Books",
+    "Click Try Mercury Books",
+    "Books created",
+    "Dismiss spotlight",
+    "Sidebar: Rules"
+   ],
+   "mutates": false,
+   "note": "Ordered categorization rules: Input, Condition, Outcome, Last applied, drag handles; one rule flagged Invalid because its ledger was deleted.",
+   "parent": "books.home",
+   "state": "books.rules",
+   "title": "Rules"
+  },
+  {
+   "area": "books",
+   "draft": "not drafted: its parent had no accepted recipe when the drafter ran",
+   "image": "screens/books/38-create-rule.png",
+   "kind": "drawer",
+   "labels": [
+    "Toggle Books",
+    "Click Try Mercury Books",
+    "Books created",
+    "Dismiss spotlight",
+    "Sidebar: Rules",
+    "Click Create rule"
+   ],
+   "mutates": true,
+   "note": "Drawer with empty If and Then selects. Save renders at opacity 0.4 but is not disabled; clicking it with the form empty does nothing and shows no message.",
+   "parent": "books.rules",
+   "state": "books.rule-create",
+   "title": "Create categorization rule"
+  },
+  {
+   "area": "books",
+   "draft": "not drafted: its parent had no accepted recipe when the drafter ran",
+   "image": "screens/books/48-bill-drawer.png",
+   "kind": "drawer",
+   "labels": [
+    "Toggle Books",
+    "Click Try Mercury Books",
+    "Books created",
+    "Dismiss spotlight",
+    "Sidebar: Bills",
+    "Open BILL-001"
+   ],
+   "mutates": false,
+   "note": "BILL-001 (Open, $8,250.55): Due date shows \"-\" although the list shows 08/31/2026; line items table has no Amount column value in Total.",
+   "parent": "books.bills",
+   "state": "books.bill-drawer",
+   "title": "Bill detail"
+  },
+  {
+   "area": "books",
+   "draft": "not drafted: its parent had no accepted recipe when the drafter ran",
+   "image": "screens/books/20-command.png",
+   "kind": "page",
+   "labels": [
+    "Toggle Books",
+    "Click Try Mercury Books",
+    "Books created",
+    "Dismiss spotlight",
+    "Sidebar: Command"
+   ],
+   "mutates": false,
+   "note": "AI command page: \"Ask anything about your money\" prompt box with suggestion chips Issue new card and Compare monthly balances.",
+   "parent": "books.home",
+   "state": "books.command",
+   "title": "Command"
+  },
+  {
+   "area": "books",
+   "draft": "not drafted: its parent had no accepted recipe when the drafter ran",
+   "image": "screens/books/26-payroll.png",
+   "kind": "empty-state",
+   "labels": [
+    "Toggle Books",
+    "Click Try Mercury Books",
+    "Books created",
+    "Dismiss spotlight",
+    "Sidebar: Payroll"
+   ],
+   "mutates": false,
+   "note": "Empty state \"Payroll account will show up here when it's connected\" with Connect payroll CTA, drawn over grey skeleton rows of the pay-run grid.",
+   "parent": "books.home",
+   "state": "books.payroll",
+   "title": "Payroll (empty)"
+  },
+  {
+   "area": "books",
+   "draft": "not drafted: its parent had no accepted recipe when the drafter ran",
+   "image": "screens/books/49-search.png",
+   "kind": "modal",
+   "labels": [
+    "Toggle Books",
+    "Click Try Mercury Books",
+    "Books created",
+    "Dismiss spotlight",
+    "Click Search"
+   ],
+   "mutates": false,
+   "note": "Global search with All / Pages / Accounts / Ledgers / Transactions / Journal entries / Invoices / Bills chips. Query \"rent\" lists three \"Cur-rent\" ledgers, recent items and transactions, but not the Rent ledger.",
+   "parent": "books.home",
+   "state": "books.search",
+   "title": "Search or jump to"
+  },
+  {
+   "area": "books",
+   "draft": "not drafted: its parent had no accepted recipe when the drafter ran",
+   "image": "screens/books/50-keyboard-shortcuts.png",
+   "kind": "modal",
+   "labels": [
+    "Toggle Books",
+    "Click Try Mercury Books",
+    "Books created",
+    "Dismiss spotlight",
+    "Click Keyboard shortcuts"
+   ],
+   "mutates": false,
+   "note": "Searchable shortcut sheet: General (Search everywhere \u2318K, Show keyboard shortcuts \u2318S) and Grid shortcuts.",
+   "parent": "books.home",
+   "state": "books.shortcuts",
+   "title": "Keyboard shortcuts"
+  },
+  {
+   "area": "books",
+   "draft": "not drafted: its parent had no accepted recipe when the drafter ran",
+   "image": "screens/books/25-bills-vendors.png",
+   "kind": "page",
+   "labels": [
+    "Toggle Books",
+    "Click Try Mercury Books",
+    "Books created",
+    "Dismiss spotlight",
+    "Sidebar: Bills",
+    "Sidebar: Vendors"
+   ],
+   "mutates": false,
+   "note": "Vendor list (Name, Email, Type, Address) with info banner \"Payment recipients automatically appear as vendors in Books.\" and Add a vendor.",
+   "parent": "books.bills",
+   "state": "books.vendors",
+   "title": "Vendors"
+  }
+ ]
+}

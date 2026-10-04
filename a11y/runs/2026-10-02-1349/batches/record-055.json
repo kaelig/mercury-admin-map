@@ -1,0 +1,30 @@
+{
+ "batch": "record-055",
+ "reach": {
+  "baseUrl": "https://demo.mercury.com",
+  "data": "data",
+  "map": "build/map.json",
+  "run": "2026-10-02-1349",
+  "workspace": "a11y"
+ },
+ "run": "2026-10-02-1349",
+ "states": [
+  {
+   "area": "accounts",
+   "draft": "not drafted: its parent had no accepted recipe when the drafter ran",
+   "image": "screens/accounts/84-checkbook-ordered.png",
+   "kind": "confirmation",
+   "labels": [
+    "Click Next with empty nickname",
+    "Type nickname, pick pink check",
+    "Click Next",
+    "Tick authority checkbox, click Confirm"
+   ],
+   "mutates": true,
+   "note": "\"We\u2019re getting your checkbook ready \u2014 It should arrive in 10 - 14 business days.\" with a Done button.",
+   "parent": "accounts.order-checkbook-review",
+   "state": "accounts.checkbook-ordered",
+   "title": "Checkbook ordered"
+  }
+ ]
+}

@@ -1,0 +1,143 @@
+{
+ "batch": "record-009",
+ "reach": {
+  "baseUrl": "https://demo.mercury.com",
+  "data": "data",
+  "map": "build/map.json",
+  "run": "2026-10-02-1349",
+  "workspace": "a11y"
+ },
+ "run": "2026-10-02-1349",
+ "states": [
+  {
+   "area": "billpay",
+   "draft": "cannot parse \"Hover a due date\"",
+   "image": "screens/billpay/82-due-date-tooltip.png",
+   "kind": "popover",
+   "labels": [
+    "Hover a due date"
+   ],
+   "mutates": false,
+   "note": "Hovering a year-only due date ('Apr 2025') shows the full date as 'Apr 19 2025' in a tooltip.",
+   "parent": "billpay.index",
+   "state": "billpay.due-date-tooltip",
+   "title": "Due date tooltip"
+  },
+  {
+   "area": "billpay",
+   "draft": "cannot parse \"Type feedback\"",
+   "image": "screens/billpay/115-feedback-sent.png",
+   "kind": "confirmation",
+   "labels": [
+    "Click Feedback",
+    "Type feedback, click Share feedback"
+   ],
+   "mutates": true,
+   "note": "After Share feedback the panel reads 'Thanks for your feedback' / 'We\u2019ll share your thoughts with our product teams\u2026' with a Done button.",
+   "parent": "billpay.feedback-panel",
+   "state": "billpay.feedback-sent",
+   "title": "Feedback sent"
+  },
+  {
+   "area": "billpay",
+   "draft": "nothing on billpay.index matches {\"click\":{\"name\":\"forwarding address pill\"}}",
+   "image": "screens/billpay/116-forwarding-email-copied.png",
+   "kind": "popover",
+   "labels": [
+    "Click the forwarding address pill"
+   ],
+   "mutates": false,
+   "note": "Clicking the my-company-name@ap.mercury.com pill copies it and shows a 'Copied' tooltip; the hovered Total outstanding card swaps its amount for '3 Inbox \u00b7 1 Approval \u00b7 3 Scheduled'.",
+   "parent": "billpay.index",
+   "state": "billpay.forwarding-email-copied",
+   "title": "Forwarding address copied"
+  },
+  {
+   "area": "billpay",
+   "draft": "nothing on billpay.index matches {\"click\":{\"name\":\"Amount column header\"}}",
+   "image": "screens/billpay/81-inbox-sorted-amount.png",
+   "kind": "form-state",
+   "labels": [
+    "Click Amount column header"
+   ],
+   "mutates": false,
+   "note": "Clicking the Amount header sorts bills high to low and shows its chevron; hovering the Overdue card swaps its total for '3 Inbox'.",
+   "parent": "billpay.index",
+   "state": "billpay.inbox-sorted",
+   "title": "Inbox sorted by amount"
+  },
+  {
+   "area": "billpay",
+   "draft": "structure-missing: a drawer needs an open layer; the replay found none",
+   "image": "screens/billpay/19-paid-detail.png",
+   "kind": "drawer",
+   "labels": [
+    "Click paid row"
+   ],
+   "mutates": false,
+   "note": "Clicking a paid row leaves Bill Pay for Transactions filtered by 'Has bill', with the transaction drawer open.",
+   "parent": "billpay.paid",
+   "state": "billpay.paid-transaction",
+   "title": "Paid bill transaction"
+  },
+  {
+   "area": "billpay",
+   "draft": "nothing on billpay.create-rule matches {\"click\":{\"name\":\"If select\"}}",
+   "image": "screens/billpay/66-rule-input-menu.png",
+   "kind": "menu",
+   "labels": [
+    "Click Create a rule",
+    "Open If select"
+   ],
+   "mutates": true,
+   "note": "If dropdown listing inputs (Amount, Bank description, Budget, Card, Counterparty, Customer, Department, Merchant type, Mercury category, Team member) with descriptions.",
+   "parent": "billpay.create-rule",
+   "state": "billpay.rule-input-menu",
+   "title": "Rule input menu"
+  },
+  {
+   "area": "billpay",
+   "draft": "cannot parse \"Hover Invalid badge\"",
+   "image": "screens/billpay/109-invalid-rule-tooltip.png",
+   "kind": "popover",
+   "labels": [
+    "Hover Invalid badge"
+   ],
+   "mutates": false,
+   "note": "Hovering the Invalid badge explains the outcome references a deleted GL code or category; row hover also reveals If / has / then chips.",
+   "parent": "billpay.categorization-rules",
+   "state": "billpay.rule-invalid-tooltip",
+   "title": "Invalid rule tooltip"
+  },
+  {
+   "area": "billpay",
+   "draft": "cannot parse \"Drop an invoice PDF\"",
+   "image": "screens/billpay/40-upload-recipient-no-match.png",
+   "kind": "page",
+   "labels": [
+    "Click Upload bill",
+    "Drop an invoice PDF"
+   ],
+   "mutates": true,
+   "note": "After upload the bill is scanned; with no matching recipient the step offers a full-width Create recipient button or a recipient search.",
+   "parent": "billpay.upload-popover",
+   "state": "billpay.upload-no-match",
+   "title": "Recipient match: none"
+  },
+  {
+   "area": "billpay",
+   "draft": "cannot parse \"Drop a file under 1 KB\"",
+   "image": "screens/billpay/39-upload-file-too-small.png",
+   "kind": "toast",
+   "labels": [
+    "Click Upload bill",
+    "Drop a file under 1 KB"
+   ],
+   "mutates": true,
+   "note": "Uploading a file under 1 KB shows an error toast: 'One or more files are too small to upload, minimum 1KB per file.'",
+   "parent": "billpay.upload-popover",
+   "state": "billpay.upload-too-small",
+   "title": "Upload rejected"
+  }
+ ]
+}

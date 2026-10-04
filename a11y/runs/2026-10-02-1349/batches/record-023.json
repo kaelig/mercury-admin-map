@@ -1,0 +1,211 @@
+{
+ "batch": "record-023",
+ "reach": {
+  "baseUrl": "https://demo.mercury.com",
+  "data": "data",
+  "map": "build/map.json",
+  "run": "2026-10-02-1349",
+  "workspace": "a11y"
+ },
+ "run": "2026-10-02-1349",
+ "states": [
+  {
+   "area": "payments",
+   "draft": "nothing on payments.recipients matches {\"check\":{\"name\":\"two recipient checkboxes\"}}",
+   "image": "screens/payments/92-recipients-bulk-select.png",
+   "kind": "form-state",
+   "labels": [
+    "Tick two recipient checkboxes"
+   ],
+   "mutates": false,
+   "note": "Two recipients checked: floating bar with delete, reminder, merge, Request tax docs; header export becomes 'Export 2 Recipients'.",
+   "parent": "payments.recipients",
+   "state": "payments.recipients-bulk",
+   "title": "Recipients bulk selection"
+  },
+  {
+   "area": "payments",
+   "draft": "not drafted: its parent had no accepted recipe when the drafter ran",
+   "image": "screens/payments/93-recipients-request-tax-docs.png",
+   "kind": "modal",
+   "labels": [
+    "Tick two recipient checkboxes",
+    "Click Request tax docs"
+   ],
+   "mutates": false,
+   "note": "Modal lists eligible recipients with an email picker; 'Get W-9s and W-8BENs from 1 recipient via email.' Close / Send requests.",
+   "parent": "payments.recipients-bulk",
+   "state": "payments.recipients-request-tax-docs",
+   "title": "Request tax documents"
+  },
+  {
+   "area": "payments",
+   "draft": "not drafted: its parent had no accepted recipe when the drafter ran",
+   "image": "screens/payments/95-recipients-request-tax-docs-validation.png",
+   "kind": "validation-error",
+   "labels": [
+    "Tick two recipient checkboxes",
+    "Click Request tax docs",
+    "Select a recipient with no email"
+   ],
+   "mutates": false,
+   "note": "Recipient without an email: 'Please complete this field' and Send requests disabled.",
+   "parent": "payments.recipients-request-tax-docs",
+   "state": "payments.recipients-request-tax-docs-validation",
+   "title": "Request tax docs: email missing"
+  },
+  {
+   "area": "payments",
+   "draft": "not drafted: its parent had no accepted recipe when the drafter ran",
+   "image": "screens/payments/94-recipients-tax-docs-requested.png",
+   "kind": "toast",
+   "labels": [
+    "Tick two recipient checkboxes",
+    "Click Request tax docs",
+    "Click Send requests"
+   ],
+   "mutates": true,
+   "note": "'Tax documents requested from 1 recipient' toast; Tax docs column shows pending clocks.",
+   "parent": "payments.recipients-request-tax-docs",
+   "state": "payments.recipients-tax-docs-requested",
+   "title": "Tax documents requested"
+  },
+  {
+   "area": "payments",
+   "draft": "nothing on payments.ach-add matches {\"click\":{\"name\":\"a vendor\"}}",
+   "image": "screens/payments/72-ach-authorization-details.png",
+   "kind": "form-state",
+   "labels": [
+    "Click Add ACH authorization",
+    "Pick a vendor"
+   ],
+   "mutates": false,
+   "note": "Vendor, ACH Company ID chip, account to pull from, transaction limit toggle, + Add Account.",
+   "parent": "payments.ach-add",
+   "state": "payments.ach-add-details",
+   "title": "ACH authorization details"
+  },
+  {
+   "area": "payments",
+   "draft": "not drafted: its parent had no accepted recipe when the drafter ran",
+   "image": "screens/payments/73-ach-authorization-review.png",
+   "kind": "form-state",
+   "labels": [
+    "Click Add ACH authorization",
+    "Pick a vendor",
+    "Click Next"
+   ],
+   "mutates": false,
+   "note": "Review vendor, ACH Company ID, account and limit; Authorize.",
+   "parent": "payments.ach-add-details",
+   "state": "payments.ach-add-review",
+   "title": "Review and authorize"
+  },
+  {
+   "area": "payments",
+   "draft": "not drafted: its parent had no accepted recipe when the drafter ran",
+   "image": "screens/payments/74-ach-authorization-success.png",
+   "kind": "confirmation",
+   "labels": [
+    "Click Add ACH authorization",
+    "Pick a vendor",
+    "Click Next",
+    "Click Authorize"
+   ],
+   "mutates": true,
+   "note": "Returns to the list with PG&E added; no toast or success message.",
+   "parent": "payments.ach-add-review",
+   "state": "payments.ach-add-success",
+   "title": "ACH list with new vendor"
+  },
+  {
+   "area": "payments",
+   "draft": "nothing on payments.needs-approval matches {\"click\":{\"name\":\"a request\"}}",
+   "image": "screens/payments/96-approval-detail.png",
+   "kind": "drawer",
+   "labels": [
+    "Click a request row"
+   ],
+   "mutates": false,
+   "note": "Needs Approval row panel: amount, requester, Review / Approve / Decline, type, due date, invoice date 'Yesterday', approvals 0 of 2, attached bill PDF.",
+   "parent": "payments.needs-approval",
+   "state": "payments.approval-detail",
+   "title": "Approval request panel"
+  },
+  {
+   "area": "payments",
+   "draft": "not drafted: its parent had no accepted recipe when the drafter ran",
+   "image": "screens/payments/97-approval-approved-toast.png",
+   "kind": "toast",
+   "labels": [
+    "Click a request row",
+    "Click Approve"
+   ],
+   "mutates": true,
+   "note": "Approve from the panel: row leaves the list, count drops 7 to 6, 'Request approved' toast.",
+   "parent": "payments.approval-detail",
+   "state": "payments.approval-approved",
+   "title": "Request approved"
+  },
+  {
+   "area": "payments",
+   "draft": "not drafted: its parent had no accepted recipe when the drafter ran",
+   "image": "screens/payments/98-approval-declined-toast.png",
+   "kind": "toast",
+   "labels": [
+    "Click a request row",
+    "Click Decline"
+   ],
+   "mutates": true,
+   "note": "Decline from the panel fires immediately with no confirmation; 'Request declined' toast with a green check.",
+   "parent": "payments.approval-detail",
+   "state": "payments.approval-declined",
+   "title": "Request declined"
+  },
+  {
+   "area": "payments",
+   "draft": "nothing on payments.needs-approval matches {\"check\":{\"name\":\"two request checkboxes\"}}",
+   "image": "screens/payments/99-approvals-bulk-select.png",
+   "kind": "form-state",
+   "labels": [
+    "Tick two request checkboxes"
+   ],
+   "mutates": false,
+   "note": "Two requests selected: floating bar with count, total, decline, approve and Review Requests.",
+   "parent": "payments.needs-approval",
+   "state": "payments.approvals-bulk",
+   "title": "Approvals bulk selection"
+  },
+  {
+   "area": "payments",
+   "draft": "not drafted: its parent had no accepted recipe when the drafter ran",
+   "image": "screens/payments/100-batch-approval-review.png",
+   "kind": "page",
+   "labels": [
+    "Tick two request checkboxes",
+    "Click Review Requests"
+   ],
+   "mutates": false,
+   "note": "Full-screen reviewer: 'Approval 1 of 2', wire total, from account, send on Tomorrow, batch link, Decline / Approve / Skip, attachment pane.",
+   "parent": "payments.approvals-bulk",
+   "state": "payments.batch-review",
+   "title": "Review batch payment"
+  },
+  {
+   "area": "payments",
+   "draft": "not drafted: its parent had no accepted recipe when the drafter ran",
+   "image": "screens/payments/101-batch-approval-next.png",
+   "kind": "form-state",
+   "labels": [
+    "Tick two request checkboxes",
+    "Click Review Requests",
+    "Click Approve"
+   ],
+   "mutates": true,
+   "note": "After approving the first item: advances to 'Approval 2 of 2' with an 'Approved' toast.",
+   "parent": "payments.batch-review",
+   "state": "payments.batch-review-next",
+   "title": "Batch review: next item"
+  }
+ ]
+}

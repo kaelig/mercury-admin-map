@@ -1,0 +1,45 @@
+{
+ "batch": "record-073",
+ "reach": {
+  "baseUrl": "https://demo.mercury.com",
+  "data": "data",
+  "map": "build/map.json",
+  "run": "2026-10-02-1349",
+  "workspace": "a11y"
+ },
+ "run": "2026-10-02-1349",
+ "states": [
+  {
+   "area": "accounts",
+   "draft": "not drafted: its parent had no accepted recipe when the drafter ran; the conductor rejected the previous recipe: form-state missing: replay is Checking \u2022\u20229876 (already Business) with Save disabled; the capture is Chase Freedom Unlimited 1 changed from Personal to Business with Save enabled",
+   "image": "screens/accounts/78-account-type-changed.png",
+   "kind": "form-state",
+   "labels": [
+    "Click row kebab",
+    "Click Edit account type",
+    "Select Business"
+   ],
+   "mutates": false,
+   "note": "Business selected, Save enabled.",
+   "parent": "accounts.edit-account-type",
+   "state": "accounts.edit-account-type-changed",
+   "title": "Edit account type \u2014 changed"
+  },
+  {
+   "area": "accounts",
+   "draft": "not drafted: its parent had no accepted recipe when the drafter ran",
+   "image": "screens/accounts/70-unlinked.png",
+   "kind": "toast",
+   "labels": [
+    "Click row kebab",
+    "Click Unlink account",
+    "Click Yes, unlink"
+   ],
+   "mutates": true,
+   "note": "Checking \u2022\u20229876 is removed from the list with a \"Checking \u2022\u20229876 unlinked\" toast.",
+   "parent": "accounts.unlink-confirm",
+   "state": "accounts.unlinked",
+   "title": "Account unlinked"
+  }
+ ]
+}

@@ -1,0 +1,236 @@
+{
+ "batch": "record-024",
+ "reach": {
+  "baseUrl": "https://demo.mercury.com",
+  "data": "data",
+  "map": "build/map.json",
+  "run": "2026-10-02-1349",
+  "workspace": "a11y"
+ },
+ "run": "2026-10-02-1349",
+ "states": [
+  {
+   "area": "payments",
+   "draft": "cannot parse \"Fill amount\"",
+   "image": "screens/payments/38-deposit-check-details-filled.png",
+   "kind": "form-state",
+   "labels": [
+    "Click Got it",
+    "Fill amount, from, account"
+   ],
+   "mutates": false,
+   "note": "Step 2 filled ($1,200 from Acme Customer Co into Ops / Payroll); Next enabled.",
+   "parent": "payments.deposit-check-details",
+   "state": "payments.deposit-check-details-filled",
+   "title": "Check deposit: details filled"
+  },
+  {
+   "area": "payments",
+   "draft": "not drafted: its parent had no accepted recipe when the drafter ran",
+   "image": "screens/payments/39-deposit-check-images.png",
+   "kind": "form-state",
+   "labels": [
+    "Click Got it",
+    "Fill amount, from, account",
+    "Click Next"
+   ],
+   "mutates": false,
+   "note": "Step 3: endorsement instructions and an upload zone for the front of the check.",
+   "parent": "payments.deposit-check-details-filled",
+   "state": "payments.deposit-check-images",
+   "title": "Check deposit: upload pictures"
+  },
+  {
+   "area": "payments",
+   "draft": "not drafted: its parent had no accepted recipe when the drafter ran",
+   "image": "screens/payments/40-deposit-check-rotate-modal.png",
+   "kind": "modal",
+   "labels": [
+    "Click Got it",
+    "Fill amount, from, account",
+    "Click Next",
+    "Upload front image"
+   ],
+   "mutates": true,
+   "note": "Modal to rotate the uploaded front image horizontally, Cancel / Save.",
+   "parent": "payments.deposit-check-images",
+   "state": "payments.deposit-check-rotate",
+   "title": "Upload front of check"
+  },
+  {
+   "area": "payments",
+   "draft": "nothing on payments.request-start matches {\"click\":{\"name\":\"Name combobox\"}}",
+   "image": "screens/payments/48-request-customer-dropdown.png",
+   "kind": "menu",
+   "labels": [
+    "Open Name combobox"
+   ],
+   "mutates": false,
+   "note": "Customer combobox with Add new customer and existing customers with emails.",
+   "parent": "payments.request-start",
+   "state": "payments.request-customer-dropdown",
+   "title": "Request: customer list"
+  },
+  {
+   "area": "payments",
+   "draft": "not drafted: its parent had no accepted recipe when the drafter ran",
+   "image": "screens/payments/49-request-add-customer.png",
+   "kind": "form-state",
+   "labels": [
+    "Open Name combobox",
+    "Click Add new customer"
+   ],
+   "mutates": false,
+   "note": "Inline Add customer form: name, primary email, additional emails, address toggle.",
+   "parent": "payments.request-customer-dropdown",
+   "state": "payments.request-add-customer",
+   "title": "Request: Add customer"
+  },
+  {
+   "area": "payments",
+   "draft": "not drafted: its parent had no accepted recipe when the drafter ran; the conductor rejected the previous recipe: different screen: Next fails with 'Please complete this field' on the customer; the capture is the Payment link details form",
+   "image": "screens/payments/50-request-link-form.png",
+   "kind": "form-state",
+   "labels": [
+    "Choose Request money without an invoice, click Next"
+   ],
+   "mutates": false,
+   "note": "Payment link form: customer card, currency, amount, payer memo, methods, destination account, payer page preview.",
+   "parent": "payments.request-start",
+   "state": "payments.request-link-form",
+   "title": "Payment link details"
+  },
+  {
+   "area": "payments",
+   "draft": "not drafted: its parent had no accepted recipe when the drafter ran",
+   "image": "screens/payments/51-request-send.png",
+   "kind": "confirmation",
+   "labels": [
+    "Choose Request money without an invoice, click Next",
+    "Enter amount, click Create & send"
+   ],
+   "mutates": true,
+   "note": "'Your payment link has been created and sent' with amount, copyable link and a 'Payment link created!' toast.",
+   "parent": "payments.request-link-form",
+   "state": "payments.request-success",
+   "title": "Payment link sent"
+  },
+  {
+   "area": "payments",
+   "draft": "nothing on payments.taxes matches {\"click\":{\"name\":\"Edit Filing on a task\"}}",
+   "image": "screens/payments/115-taxes-edit-filing.png",
+   "kind": "form-state",
+   "labels": [
+    "Click Edit Filing on a task"
+   ],
+   "mutates": false,
+   "note": "Full-screen filing editor: W-9 error banner, Invalid State badge, payee name fields; a '0 transactions selected' bar floats over the form.",
+   "parent": "payments.taxes",
+   "state": "payments.taxes-edit-filing",
+   "title": "Edit 1099 filing"
+  },
+  {
+   "area": "payments",
+   "draft": "not drafted: its parent had no accepted recipe when the drafter ran",
+   "image": "screens/payments/116-taxes-payee-drawer.png",
+   "kind": "drawer",
+   "labels": [
+    "Click Edit Filing on a task",
+    "Click Done"
+   ],
+   "mutates": false,
+   "note": "After Done: returns to 1099 Filing with the payee panel open: Tax Year 2026, email, Remove Filing / Edit filing.",
+   "parent": "payments.taxes-edit-filing",
+   "state": "payments.taxes-payee-drawer",
+   "title": "1099 payee panel"
+  },
+  {
+   "area": "payments",
+   "draft": "nothing on payments.paid matches {\"click\":{\"name\":\"a paid\"}}",
+   "image": "screens/payments/89-payments-paid-detail.png",
+   "kind": "drawer",
+   "labels": [
+    "Click a paid row"
+   ],
+   "mutates": false,
+   "note": "Clicking a Paid row jumps to Transactions with the Check Payment panel open: tracking timeline, memo, check images, comments.",
+   "parent": "payments.paid",
+   "state": "payments.paid-detail",
+   "title": "Paid payment detail"
+  },
+  {
+   "area": "payments",
+   "draft": "typed value \"street\" is not one of policy.fixtureValues",
+   "image": "screens/payments/60-recipient-address-autocomplete.png",
+   "kind": "popover",
+   "labels": [
+    "Click Create recipient",
+    "Type street in Recipient legal address"
+   ],
+   "mutates": true,
+   "note": "Recipient legal address suggestions; State shows 'Please enter a valid US state.'",
+   "parent": "payments.recipient-create",
+   "state": "payments.recipient-address-autocomplete",
+   "title": "Address autocomplete"
+  },
+  {
+   "area": "payments",
+   "draft": "nothing on payments.recipient-create matches {\"click\":{\"name\":\"Create recipient empty\"}}",
+   "image": "screens/payments/59-recipient-create-validation.png",
+   "kind": "validation-error",
+   "labels": [
+    "Click Create recipient",
+    "Click Create recipient empty"
+   ],
+   "mutates": true,
+   "note": "Empty submit: 'You must make a selection.' on type and 'Please complete this field' on legal name.",
+   "parent": "payments.recipient-create",
+   "state": "payments.recipient-create-validation",
+   "title": "Create recipient: errors"
+  },
+  {
+   "area": "payments",
+   "draft": "nothing on payments.recipients matches {\"click\":{\"name\":\"a recipient\"}}",
+   "image": "screens/payments/62-recipient-detail.png",
+   "kind": "drawer",
+   "labels": [
+    "Click a recipient row"
+   ],
+   "mutates": false,
+   "note": "Side panel: profile, international wire bank details, payments by year, tax documents upload, action bar.",
+   "parent": "payments.recipients",
+   "state": "payments.recipient-detail",
+   "title": "Recipient detail panel"
+  },
+  {
+   "area": "payments",
+   "draft": "cannot parse \"Fill name + email\"",
+   "image": "screens/payments/57-recipient-invite-sent.png",
+   "kind": "toast",
+   "labels": [
+    "Click Invite recipient",
+    "Fill name + email, click Send request"
+   ],
+   "mutates": true,
+   "note": "Back on Recipients with toast 'Priya Raman has been invited to fill out their payment details.'",
+   "parent": "payments.recipient-invite",
+   "state": "payments.recipient-invite-sent",
+   "title": "Invite sent toast"
+  },
+  {
+   "area": "payments",
+   "draft": "nothing on payments.recipient-invite matches {\"click\":{\"name\":\"Specified by me\"}}",
+   "image": "screens/payments/56-recipient-invite-specified-by-me.png",
+   "kind": "form-state",
+   "labels": [
+    "Click Invite recipient",
+    "Click Specified by me"
+   ],
+   "mutates": true,
+   "note": "Specified by me: possible payment methods chips (ACH, Wire, International Wire, Check).",
+   "parent": "payments.recipient-invite",
+   "state": "payments.recipient-invite-specified",
+   "title": "Invite: specified by me"
+  }
+ ]
+}

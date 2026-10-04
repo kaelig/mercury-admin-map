@@ -1,0 +1,122 @@
+{
+ "batch": "record-062",
+ "reach": {
+  "baseUrl": "https://demo.mercury.com",
+  "data": "data",
+  "map": "build/map.json",
+  "run": "2026-10-02-1349",
+  "workspace": "a11y"
+ },
+ "run": "2026-10-02-1349",
+ "states": [
+  {
+   "area": "accounts",
+   "draft": "not drafted: its parent had no accepted recipe when the drafter ran",
+   "image": "screens/accounts/63-safe-investor-details.png",
+   "kind": "form-state",
+   "labels": [
+    "Click Next with empty fields",
+    "Enter amount and open SAFE type",
+    "Pick Post-money, enter valuation cap, click Next",
+    "Pick Delaware and signatory, click Next"
+   ],
+   "mutates": false,
+   "note": "Step 3: investor type, legal name, email, optional address and note.",
+   "parent": "accounts.safe-company-details",
+   "state": "accounts.safe-investor-details",
+   "title": "SAFE \u2014 Investor details"
+  },
+  {
+   "area": "accounts",
+   "draft": "not drafted: its parent had no accepted recipe when the drafter ran",
+   "image": "screens/accounts/64-safe-investor-validation.png",
+   "kind": "validation-error",
+   "labels": [
+    "Click Next with empty fields",
+    "Enter amount and open SAFE type",
+    "Pick Post-money, enter valuation cap, click Next",
+    "Pick Delaware and signatory, click Next",
+    "Enter invalid email, click Review"
+   ],
+   "mutates": false,
+   "note": "\"Please submit a valid email\" under Investor email; empty legal name is not flagged.",
+   "parent": "accounts.safe-investor-details",
+   "state": "accounts.safe-investor-error",
+   "title": "SAFE investor \u2014 invalid email"
+  },
+  {
+   "area": "accounts",
+   "draft": "not drafted: its parent had no accepted recipe when the drafter ran",
+   "image": "screens/accounts/65-safe-review.png",
+   "kind": "page",
+   "labels": [
+    "Click Next with empty fields",
+    "Enter amount and open SAFE type",
+    "Pick Post-money, enter valuation cap, click Next",
+    "Pick Delaware and signatory, click Next",
+    "Enter invalid email, click Review",
+    "Enter name and valid email, click Review"
+   ],
+   "mutates": false,
+   "note": "Step 4: Post-Money SAFE to Arthur Rock for $250,000.00, valuation cap, generated PDF, CC field and Send SAFE.",
+   "parent": "accounts.safe-investor-error",
+   "state": "accounts.safe-review",
+   "title": "SAFE \u2014 Review"
+  },
+  {
+   "area": "accounts",
+   "draft": "not drafted: its parent had no accepted recipe when the drafter ran",
+   "image": "screens/accounts/66-safe-sent.png",
+   "kind": "toast",
+   "labels": [
+    "Click Next with empty fields",
+    "Enter amount and open SAFE type",
+    "Pick Post-money, enter valuation cap, click Next",
+    "Pick Delaware and signatory, click Next",
+    "Enter invalid email, click Review",
+    "Enter name and valid email, click Review",
+    "Click Send SAFE"
+   ],
+   "mutates": true,
+   "note": "Toast \"SAFE sent to Arthur Rock\"; a detail drawer opens for Logan Roy and the list still shows 3 SAFEs.",
+   "parent": "accounts.safe-review",
+   "state": "accounts.safe-sent",
+   "title": "SAFE sent"
+  },
+  {
+   "area": "accounts",
+   "draft": "not drafted: its parent had no accepted recipe when the drafter ran",
+   "image": "screens/accounts/06-create-account-success.png",
+   "kind": "toast",
+   "labels": [
+    "Click Add account",
+    "Click Create account",
+    "Click Create account with no type",
+    "Select Checking and type nickname",
+    "Click Create account"
+   ],
+   "mutates": true,
+   "note": "Toast 'Your new account is ready to use.' with a View Account link; new Taxes \u2022\u20224311 row appears in the list.",
+   "parent": "accounts.create-account-filled",
+   "state": "accounts.create-account-success",
+   "title": "Account created toast"
+  },
+  {
+   "area": "accounts",
+   "draft": "not drafted: its parent had no accepted recipe when the drafter ran",
+   "image": "screens/accounts/11-rule-target-balance-validation.png",
+   "kind": "validation-error",
+   "labels": [
+    "Click Auto transfer rules tab",
+    "Click Create rule",
+    "Click Maintain a target balance",
+    "Click Next with empty fields"
+   ],
+   "mutates": true,
+   "note": "Clicking Next with an empty form shows inline errors under selects, but the amount error only as an icon with a tooltip.",
+   "parent": "accounts.rule-target-balance",
+   "state": "accounts.rule-target-balance-error",
+   "title": "Target balance rule \u2014 empty submit"
+  }
+ ]
+}

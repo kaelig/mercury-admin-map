@@ -1,0 +1,52 @@
+{
+ "batch": "record-128",
+ "reach": {
+  "baseUrl": "https://demo.mercury.com",
+  "data": "data",
+  "map": "build/map.json",
+  "run": "2026-10-02-1349",
+  "workspace": "a11y"
+ },
+ "run": "2026-10-02-1349",
+ "states": [
+  {
+   "area": "invoicing",
+   "draft": "not drafted: its parent had no accepted recipe when the drafter ran; the conductor rejected the previous recipe: missing required value: the replay has Quantity 1.00 but an empty Unit price (0.00 placeholder), Total $0.00 and a disabled Next. The capture has priced rows totaling $7,500 and Next enabled. The 'fill 0.00' step does not set the unit price the label asks for, so the 20 descendant states cannot get past Next; a previous recorder failed: The previous recipe filled {\"role\":\"textbox\",\"name\":\"0.00\"}: a name template, so its numbers match anything and it hit the Quantity field, leaving Unit price empty and Next disabled. Fill Unit price with {\"css\":\"input[name^=\\\"amount-\\\"]\"} (placeholder 0.00, name amount-<id>) using the fixture amount 1.00; leave Quantity at its default 1; fill Payer memo with the fixture memo. Next must be enabled at the end.",
+   "image": "screens/invoicing/15-create-line-items-filled.png",
+   "kind": "form-state",
+   "labels": [
+    "Click Request money",
+    "Click the Name combobox",
+    "Pick a customer",
+    "Click Next",
+    "Click the line item field",
+    "Type a custom item name",
+    "Enter quantity, unit price and memo"
+   ],
+   "mutates": false,
+   "note": "Two line items (catalog Advisory Retainer and a custom Onboarding workshop x2) plus memo; preview and total update to $7,500.00.",
+   "parent": "invoicing.create-line-item-typed",
+   "state": "invoicing.create-line-items-filled",
+   "title": "Line items filled"
+  },
+  {
+   "area": "invoicing",
+   "draft": "not drafted: its parent had no accepted recipe when the drafter ran",
+   "image": "screens/invoicing/51-create-series-success.png",
+   "kind": "confirmation",
+   "labels": [
+    "Click Create series",
+    "Pick a customer and click Next",
+    "Add a line item and click Next",
+    "Click Next",
+    "Click Next",
+    "Click Create series and send"
+   ],
+   "mutates": true,
+   "note": "'Your recurring series has been created' with the series summary, recipient, Create another series and Return to dashboard.",
+   "parent": "invoicing.create-series-review",
+   "state": "invoicing.create-series-success",
+   "title": "Series created"
+  }
+ ]
+}

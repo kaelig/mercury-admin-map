@@ -1,0 +1,34 @@
+{
+ "batch": "record-131",
+ "reach": {
+  "baseUrl": "https://demo.mercury.com",
+  "data": "data",
+  "map": "build/map.json",
+  "run": "2026-10-02-1349",
+  "workspace": "a11y"
+ },
+ "run": "2026-10-02-1349",
+ "states": [
+  {
+   "area": "accounts",
+   "draft": "not drafted: its parent had no accepted recipe when the drafter ran",
+   "image": "screens/accounts/15-rule-created.png",
+   "kind": "toast",
+   "labels": [
+    "Click Auto transfer rules tab",
+    "Click Create rule",
+    "Click Maintain a target balance",
+    "Click Next with empty fields",
+    "Open Account dropdown",
+    "Pick AP, enter $50,000, supporting account and frequency",
+    "Click Next",
+    "Click Create rule"
+   ],
+   "mutates": true,
+   "note": "Rule list with the new rule card and an \"Auto transfer rule created\" toast.",
+   "parent": "accounts.rule-review",
+   "state": "accounts.rule-created",
+   "title": "Rule created"
+  }
+ ]
+}

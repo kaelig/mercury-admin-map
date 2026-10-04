@@ -1,0 +1,77 @@
+{
+ "batch": "record-080",
+ "reach": {
+  "baseUrl": "https://demo.mercury.com",
+  "data": "data",
+  "map": "build/map.json",
+  "run": "2026-10-02-1349",
+  "workspace": "a11y"
+ },
+ "run": "2026-10-02-1349",
+ "states": [
+  {
+   "area": "settings",
+   "draft": "cannot parse \"Enter a From date after today\"; the conductor rejected the previous recipe: missing validation error: replay shows the calendar open on Dec 31, 2099 but no 'Please choose a day on or before\u2026' message; the hop presses Enter and never clicks Download as the label says; a previous recorder failed: Filling From with 12/31/2099 opens the calendar over the Download button (click times out), and Enter or Tab shows no 'Please choose a day' error; last candidate (fill, Enter) scored 0.7952 and shows the calendar without the error.",
+   "image": "screens/settings/16-custom-statement-invalid.png",
+   "kind": "validation-error",
+   "labels": [
+    "Click Generate a custom statement",
+    "Enter a From date after today and click Download"
+   ],
+   "mutates": true,
+   "note": "From date after today shows 'Please choose a day on or before Sep 24, 2026' with the calendar popover open.",
+   "parent": "settings.custom-statement",
+   "state": "settings.custom-statement-invalid",
+   "title": "Custom statement \u2014 date out of range"
+  },
+  {
+   "area": "settings",
+   "draft": "not drafted: its parent had no accepted recipe when the drafter ran",
+   "image": "screens/settings/58-role-created.png",
+   "kind": "toast",
+   "labels": [
+    "Click Save New Role with empty form",
+    "Enter a name, tick Send money, click Save New Role",
+    "Tick an account and click Save New Role"
+   ],
+   "mutates": true,
+   "note": "Back on Roles, the new 'AP Clerk' custom role appears and a toast reads 'New role created: AP Clerk'.",
+   "parent": "settings.create-role-account-error",
+   "state": "settings.role-created",
+   "title": "Role created toast"
+  },
+  {
+   "area": "settings",
+   "draft": "not drafted: its parent had no accepted recipe when the drafter ran",
+   "image": "screens/settings/21-share-recipient-suggestions.png",
+   "kind": "form-state",
+   "labels": [
+    "Check statement rows",
+    "Click Share documents",
+    "Click Share via email with no recipient",
+    "Type an email and press Enter"
+   ],
+   "mutates": true,
+   "note": "Typed email becomes a removable tag and a listbox suggests known contacts (jason@green.com, aliyah@mcmahon.com, jordi@mercury.com).",
+   "parent": "settings.share-documents-error",
+   "state": "settings.share-recipient-suggest",
+   "title": "Share documents \u2014 recipient suggestions"
+  },
+  {
+   "area": "settings",
+   "draft": "not drafted: its parent had no accepted recipe when the drafter ran",
+   "image": "screens/settings/94-token-permissions-options.png",
+   "kind": "menu",
+   "labels": [
+    "Click + Create an API token",
+    "Click Create token with the form empty",
+    "Enter a nickname and open Permissions"
+   ],
+   "mutates": true,
+   "note": "Options: 'Custom Scopes', 'Read and Write', 'Read Only'. The tokens table labels the same levels 'Read/Write' and 'Read'.",
+   "parent": "settings.create-token-errors",
+   "state": "settings.token-permissions",
+   "title": "Token permissions options"
+  }
+ ]
+}

@@ -1,0 +1,92 @@
+{
+ "batch": "record-058",
+ "reach": {
+  "baseUrl": "https://demo.mercury.com",
+  "data": "data",
+  "map": "build/map.json",
+  "run": "2026-10-02-1349",
+  "workspace": "a11y"
+ },
+ "run": "2026-10-02-1349",
+ "states": [
+  {
+   "area": "transactions",
+   "draft": "cannot parse \"Search Deli 77\"; a previous recorder failed: policy (now retry: policy.fixtureValues gained empty \"\", 2000000, 10000, 500, 150, card, a, 12/31/2099): The label types \"Deli 77\" in Search transactions to exclude; it is not a fixture value (only searchTerm \"Google\" exists).",
+   "image": "screens/transactions/86-insights-exclusion-selected.png",
+   "kind": "form-state",
+   "labels": [
+    "Click Filters",
+    "Click Exclusions",
+    "Search Deli 77 and tick rows"
+   ],
+   "mutates": false,
+   "note": "Searching \"Deli 77\" lists matching transactions; two rows are ticked and Exclude becomes active next to Cancel.",
+   "parent": "transactions.insights-exclusions",
+   "state": "transactions.insights-exclusion-selected",
+   "title": "Exclusions: transactions selected"
+  },
+  {
+   "area": "transactions",
+   "draft": "not drafted: its parent had no accepted recipe when the drafter ran",
+   "image": "screens/transactions/87-insights-transactions-excluded.png",
+   "kind": "toast",
+   "labels": [
+    "Click Filters",
+    "Click Exclusions",
+    "Search Deli 77 and tick rows",
+    "Click Exclude"
+   ],
+   "mutates": true,
+   "note": "The two rows move into the exclusions table, the header reads \"2 transactions excluded\" and a matching toast appears.",
+   "parent": "transactions.insights-exclusion-selected",
+   "state": "transactions.insights-excluded",
+   "title": "Transactions excluded"
+  },
+  {
+   "area": "transactions",
+   "draft": "not drafted: its parent had no accepted recipe when the drafter ran",
+   "image": "screens/transactions/41-detail-ach-comments.png",
+   "kind": "drawer",
+   "labels": [
+    "Click an ACH payment row",
+    "Click 1 Unread Comment"
+   ],
+   "mutates": false,
+   "note": "ACH panel scrolled to the attached bill, bank description, Mercury-generated receipt and an existing comment thread.",
+   "parent": "transactions.detail-ach",
+   "state": "transactions.detail-ach-comments",
+   "title": "ACH detail: attachments & comments"
+  },
+  {
+   "area": "transactions",
+   "draft": "not drafted: its parent had no accepted recipe when the drafter ran",
+   "image": "screens/transactions/42-detail-ach-more-menu.png",
+   "kind": "menu",
+   "labels": [
+    "Click an ACH payment row",
+    "Click ... in panel footer"
+   ],
+   "mutates": false,
+   "note": "Footer overflow menu for an ACH payment: View Recipient, Nickname recipient.",
+   "parent": "transactions.detail-ach",
+   "state": "transactions.detail-ach-more-menu",
+   "title": "ACH detail more menu"
+  },
+  {
+   "area": "transactions",
+   "draft": "not drafted: its parent had no accepted recipe when the drafter ran",
+   "image": "screens/transactions/98-view-renamed.png",
+   "kind": "toast",
+   "labels": [
+    "Click Saved views",
+    "Click pencil on a custom view",
+    "Type a name and click Save"
+   ],
+   "mutates": true,
+   "note": "Saving the new name closes the dialog and shows a \"View renamed\" toast with Undo.",
+   "parent": "transactions.rename-view-modal",
+   "state": "transactions.view-renamed",
+   "title": "View renamed toast"
+  }
+ ]
+}

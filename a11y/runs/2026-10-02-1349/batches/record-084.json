@@ -1,0 +1,33 @@
+{
+ "batch": "record-084",
+ "reach": {
+  "baseUrl": "https://demo.mercury.com",
+  "data": "data",
+  "map": "build/map.json",
+  "run": "2026-10-02-1349",
+  "workspace": "a11y"
+ },
+ "run": "2026-10-02-1349",
+ "states": [
+  {
+   "area": "books",
+   "draft": "not drafted: its parent had no accepted recipe when the drafter ran; the conductor rejected the previous recipe: missing content: the replay opens the Create tag drawer shell (header, Cancel, Save) but its body is blank, with no TAG card, Tag group Department or Tag name field. The hop (click Create tag) is right; the form had probably not loaded yet",
+   "image": "screens/books/51-create-tag.png",
+   "kind": "drawer",
+   "labels": [
+    "Toggle Books",
+    "Click Try Mercury Books",
+    "Books created",
+    "Dismiss spotlight",
+    "Sidebar: Settings",
+    "Sidebar: Tags",
+    "Click Create tag"
+   ],
+   "mutates": true,
+   "note": "Create tag: Tag group Department, Tag name field with # prefix.",
+   "parent": "books.tags",
+   "state": "books.tag-create",
+   "title": "Create tag drawer"
+  }
+ ]
+}

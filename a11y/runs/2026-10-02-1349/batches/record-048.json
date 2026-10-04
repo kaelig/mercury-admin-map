@@ -1,0 +1,48 @@
+{
+ "batch": "record-048",
+ "reach": {
+  "baseUrl": "https://demo.mercury.com",
+  "data": "data",
+  "map": "build/map.json",
+  "run": "2026-10-02-1349",
+  "workspace": "a11y"
+ },
+ "run": "2026-10-02-1349",
+ "states": [
+  {
+   "area": "payments",
+   "draft": "not drafted: its parent had no accepted recipe when the drafter ran",
+   "image": "screens/payments/112-send-wire-purpose.png",
+   "kind": "menu",
+   "labels": [
+    "Click a recently paid recipient",
+    "Click Next (ACH)",
+    "Enter amount, click Next",
+    "Click Next (wire)"
+   ],
+   "mutates": false,
+   "note": "Extra wire-only step: 'Who or what is this payment for?' options Employee, Contractor, Vendor, Landlord, Transferring to subsidiary, Other.",
+   "parent": "payments.send-categorization",
+   "state": "payments.send-wire-purpose",
+   "title": "Send: Wire purpose"
+  },
+  {
+   "area": "payments",
+   "draft": "not drafted: its parent had no accepted recipe when the drafter ran",
+   "image": "screens/payments/113-send-wire-review.png",
+   "kind": "form-state",
+   "labels": [
+    "Click a recently paid recipient",
+    "Click Next (ACH)",
+    "Enter amount, click Next",
+    "Click Next",
+    "Click Next (wire)"
+   ],
+   "mutates": false,
+   "note": "Wire review: $500.00 hero, delivery estimate, bank, full account and routing numbers, from account; Schedule wire.",
+   "parent": "payments.send-details",
+   "state": "payments.send-wire-review",
+   "title": "Send: wire review"
+  }
+ ]
+}

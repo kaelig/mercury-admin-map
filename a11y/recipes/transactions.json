@@ -1,18 +1,576 @@
 {
- "transactions.detail-failed": {
+ "transactions.bulk-field-picker": {
   "checked": "2026-10-02-1349",
   "fingerprint": {
    "controls": [
-    "AR",
+    "Budget",
+    "Category",
+    "GL Code"
+   ],
+   "headings": [],
+   "path": "/transactions",
+   "structure": "listbox",
+   "top": {
+    "name": "",
+    "role": "listbox"
+   }
+  },
+  "hop": [
+   {
+    "click": {
+     "name": "Apply",
+     "role": "combobox"
+    }
+   }
+  ],
+  "mutates": false,
+  "parent": "transactions.bulk-select",
+  "recordedBy": "agent",
+  "review": {
+   "by": "conductor",
+   "date": "2026-10-03",
+   "decision": "accept",
+   "note": "same bulk-bar field dropdown open (Category, GL Code, Budget); the replay has 3 rows selected where the capture had 2, which comes from the parent bulk-select recipe the conductor accepted (the label names no rows); the first-visit categorization tip is also showing",
+   "reason": "below-threshold"
+  },
+  "similarity": 0.8607,
+  "source": "68317487c9f1f9c860fa09e0985686cc280dba28",
+  "status": "accepted"
+ },
+ "transactions.bulk-gl-code-applied": {
+  "checked": "2026-10-02-1349",
+  "fingerprint": {
+   "controls": [
+    "Add file",
+    "Add notes",
+    "Apply",
+    "GL Code",
+    "More bulk actions",
+    "Open combobox menu",
+    "Unselect"
+   ],
+   "headings": [],
+   "path": "/transactions",
+   "structure": "dialog",
+   "top": {
+    "name": "<n>selected",
+    "role": "dialog"
+   }
+  },
+  "hop": [
+   {
+    "click": {
+     "name": "400 - Inventory",
+     "role": "option"
+    }
+   }
+  ],
+  "mutates": false,
+  "parent": "transactions.bulk-gl-code-values",
+  "recordedBy": "agent",
+  "review": {
+   "by": "conductor",
+   "date": "2026-10-03",
+   "decision": "accept",
+   "note": "same bulk bar (2 selected, GL Code = 400 - Inventory) with the 'Apply 400 - Inventory to all future Contractor transactions? Create rule' prompt; the hop clicks the 400 - Inventory option. The ticked rows differ because of data drift in the accepted ancestor, and the first-visit categorized tip also shows",
+   "reason": "below-threshold"
+  },
+  "similarity": 0.8664,
+  "source": "595c50e8cac45ee39cb9bbd102fb001bf1cfb5cc",
+  "status": "accepted"
+ },
+ "transactions.bulk-gl-code-values": {
+  "checked": "2026-10-02-1349",
+  "fingerprint": {
+   "controls": [
+    "<n> - Accounts Payable",
+    "<n> - Accounts Receivable",
+    "<n> - Bill pay",
+    "<n> - COGS",
+    "<n> - Expense Account",
+    "<n> - Inactive GL Code",
+    "<n> - Inventory",
+    "<n> - Mercury Credit",
+    "<n> - Other liabilities",
+    "<n> - Raw Materials",
+    "<n> - Unbilled Receivables",
+    "Client Dinners Operating Expenses:Travel & Entertainment:Client Dinners",
+    "Electric Bills Operating Expenses:Facilities:Electric Bills",
+    "Interest Payments Operating Expenses:Debt Service:Interest Payments",
+    "Mercury Checking (<n>)",
+    "Mercury Savings (<n>)",
+    "Printer Paper Operating Expenses:Office Supplies:Printer Paper",
+    "Utilities Operating Expenses:Facilities:Utilities"
+   ],
+   "headings": [],
+   "path": "/transactions",
+   "structure": "listbox",
+   "top": {
+    "name": "",
+    "role": "listbox"
+   }
+  },
+  "hop": [
+   {
+    "click": {
+     "index": 1,
+     "name": "This transaction",
+     "role": "checkbox"
+    }
+   },
+   {
+    "click": {
+     "name": "Apply",
+     "role": "combobox"
+    }
+   },
+   {
+    "click": {
+     "name": "GL Code",
+     "role": "option"
+    }
+   },
+   {
+    "click": {
+     "name": "GL Code",
+     "role": "combobox"
+    }
+   },
+   {
+    "wait": {
+     "locator": {
+      "name": "400 - Inventory",
+      "role": "option"
+     }
+    }
+   }
+  ],
+  "mutates": false,
+  "parent": "transactions.bulk-field-picker",
+  "recordedBy": "agent",
+  "review": {
+   "by": "conductor",
+   "date": "2026-10-03",
+   "decision": "accept",
+   "note": "reached: conductor changed the first hop from row index 2 to index 1 on 2026-10-03. The demo clock moved to Oct 4 and added a Stefanie Katz check-payment row at index 1 that disables the bulk GL Code field; unticking it leaves Contractor + Mercury Working Capital, the selection reviewed before. Replay shows 2 selected and the GL Code value list open, as captured",
+   "reason": "below-threshold"
+  },
+  "similarity": 0.8023,
+  "source": "506216c74a367c2dac1d5938feb54d22eec46690",
+  "status": "accepted"
+ },
+ "transactions.bulk-more-menu": {
+  "checked": "2026-10-02-1349",
+  "fingerprint": {
+   "controls": [
+    "Add comment",
+    "Export selected"
+   ],
+   "headings": [],
+   "path": "/transactions",
+   "structure": "menu",
+   "top": {
+    "name": "More bulk actions",
+    "role": "menu"
+   }
+  },
+  "hop": [
+   {
+    "click": {
+     "name": "More bulk actions",
+     "role": "button"
+    }
+   }
+  ],
+  "mutates": false,
+  "parent": "transactions.bulk-select",
+  "recordedBy": "agent",
+  "review": {
+   "by": "conductor",
+   "date": "2026-10-03",
+   "decision": "accept",
+   "note": "same bulk-bar overflow menu (Export selected, Add comment) over '3 selected'; hop clicks 'More bulk actions' as the label says. Only the ticked rows and scroll position differ, and those come from the parent bulk-select recipe.",
+   "reason": "below-threshold"
+  },
+  "similarity": 0.6212,
+  "source": "f07e312d376950f2a07f38745b1c27ac5b25e36f",
+  "status": "accepted"
+ },
+ "transactions.bulk-select": {
+  "checked": "2026-10-02-1349",
+  "fingerprint": {
+   "controls": [
+    "Add file",
+    "Add notes",
+    "Apply",
+    "Category",
+    "More bulk actions",
+    "Open combobox menu",
+    "Unselect"
+   ],
+   "headings": [],
+   "path": "/transactions",
+   "structure": "dialog",
+   "top": {
+    "name": "<n>selected",
+    "role": "dialog"
+   }
+  },
+  "hop": [
+   {
+    "check": {
+     "index": 0,
+     "name": "This transaction",
+     "role": "checkbox"
+    }
+   },
+   {
+    "check": {
+     "index": 1,
+     "name": "This transaction",
+     "role": "checkbox"
+    }
+   },
+   {
+    "check": {
+     "index": 2,
+     "name": "This transaction",
+     "role": "checkbox"
+    }
+   }
+  ],
+  "mutates": false,
+  "parent": "transactions.index",
+  "recordedBy": "agent",
+  "review": {
+   "by": "conductor",
+   "date": "2026-10-03",
+   "decision": "accept",
+   "note": "same '3 selected' bulk bar (Category field picker, value combobox, attach/receipt icons), header checkbox indeterminate; the hop ticks the first three rows where the capture ticked Stefanie Katz, NASA and Deli 77, but the label names no rows; list scrolled in capture",
+   "reason": "below-threshold"
+  },
+  "similarity": 0.6173,
+  "source": "7bdba44164e09aec24f39fd6a70e6dc7bd88590a",
+  "status": "accepted"
+ },
+ "transactions.categorized-tip": {
+  "checked": "2026-10-02-1349",
+  "fingerprint": {
+   "controls": [
+    "Account Click to sort",
+    "Accounting",
+    "Accounts",
+    "Add attachment",
+    "Add file",
+    "Add notes",
+    "Amount",
+    "Amount Click to sort",
+    "Apply",
+    "Banking",
+    "Bill Pay",
+    "Books",
+    "Cards",
+    "Category",
+    "Clear combobox selection",
+    "Command New",
+    "Credit Card",
+    "Customize your experience",
+    "Date",
+    "Date Click to sort",
+    "Dismiss spotlight",
+    "Export all",
+    "Filters",
+    "Group",
+    "Home",
+    "Insights",
+    "Invoicing",
+    "Keyword",
+    "Learn about bookmarks",
+    "Match receipts",
+    "Mercury Demo Pro",
+    "More bulk actions",
+    "Move money",
+    "Navigate to Settings",
+    "Next page",
+    "Open account",
+    "Open combobox menu",
+    "Ops / Payroll <amount>",
+    "Payments",
+    "Previous page",
+    "Remove bookmark",
+    "Reorder Bill Pay bookmark",
+    "Reorder Credit Card bookmark",
+    "Reorder Insights bookmark",
+    "Reorder Ops / Payroll bookmark",
+    "Saved views",
+    "Search for anything",
+    "Settings",
+    "Show graphs",
+    "Show graphs Net change this month <amount> <n> Money in <amount> <n> Money out <amount> <n>",
+    "Sort",
+    "Tasks <n>",
+    "Team Spend",
+    "This transaction",
+    "To/From Click to sort",
+    "Toggle Private Mode",
+    "Transactions",
+    "Unselect",
+    "View categorized transactions",
+    "Viewing as Admin",
+    "updates"
+   ],
+   "headings": [
+    "Transactions"
+   ],
+   "path": "/transactions",
+   "structure": "dialog",
+   "top": {
+    "name": "",
+    "role": "generic"
+   }
+  },
+  "hop": [
+   {
+    "wait": {
+     "locator": {
+      "text": "We categorized past transactions for you"
+     }
+    }
+   }
+  ],
+  "mutates": false,
+  "parent": "transactions.index",
+  "recordedBy": "agent",
+  "review": null,
+  "similarity": 0.9732,
+  "source": "ac1b6650f1316f4be5d3349af3252251c5a50243",
+  "status": "accepted"
+ },
+ "transactions.category-created": {
+  "checked": "2026-10-02-1349",
+  "fingerprint": {
+   "controls": [],
+   "headings": [],
+   "path": "/transactions/<id>",
+   "structure": "status",
+   "top": {
+    "name": "",
+    "role": "LabelText"
+   }
+  },
+  "hop": [
+   {
+    "fill": {
+     "locator": {
+      "index": 2,
+      "role": "textbox"
+     },
+     "value": "Test Person"
+    }
+   },
+   {
+    "click": {
+     "name": "Create category",
+     "role": "button"
+    }
+   }
+  ],
+  "mutates": true,
+  "parent": "transactions.create-category-modal",
+  "recordedBy": "agent",
+  "review": {
+   "by": "conductor",
+   "date": "2026-10-03",
+   "decision": "accept",
+   "note": "same Wire In panel (Deshaun Moore, $244.99) with the new category applied ('Test Person' fixture instead of 'Consulting Income'), 'Saved' header and the 'Category created and applied to transaction' toast; the hop clicks Create category as the label names; the first-visit tip overlaps the panel header",
+   "reason": "mutating"
+  },
+  "similarity": 0.9515,
+  "source": "9ca9a5c41e0a1189e7cd0d9e98c5bb22602eed54",
+  "status": "accepted"
+ },
+ "transactions.create-category-modal": {
+  "checked": "2026-10-02-1349",
+  "fingerprint": {
+   "controls": [
+    "Cancel",
+    "Card transactions",
+    "Create category",
+    "Other (Payments, deposits, fees or transfers)",
+    "Reimbursements",
+    "settings."
+   ],
+   "headings": [
+    "Create category",
+    "Create a new category from here, or manage all your company’s categories from settings."
+   ],
+   "path": "/transactions/<id>",
+   "structure": "dialog",
+   "top": {
+    "name": "",
+    "role": "dialog"
+   }
+  },
+  "hop": [
+   {
+    "click": {
+     "name": "Create category",
+     "role": "option"
+    }
+   }
+  ],
+  "mutates": true,
+  "parent": "transactions.detail-category-dropdown",
+  "recordedBy": "agent",
+  "review": {
+   "by": "conductor",
+   "date": "2026-10-03",
+   "decision": "accept",
+   "note": "same Create category dialog (empty name input, Other checked, Create category disabled); the hop clicks the 'Create category' option the label names and submits nothing; the blurred tip behind the backdrop is the first-visit categorized-transactions tip",
+   "reason": "mutating"
+  },
+  "similarity": 0.9714,
+  "source": "80b2f6c49c59ddfddcfdc33e0b452c97de0d45f9",
+  "status": "accepted"
+ },
+ "transactions.create-view-modal": {
+  "checked": "2026-10-02-1349",
+  "fingerprint": {
+   "controls": [
+    "Cancel",
+    "Save",
+    "Saved view name"
+   ],
+   "headings": [
+    "Save view"
+   ],
+   "path": "/transactions",
+   "structure": "dialog",
+   "top": {
+    "name": "",
+    "role": "dialog"
+   }
+  },
+  "hop": [
+   {
+    "click": {
+     "name": "Create New View",
+     "role": "menuitem"
+    }
+   },
+   {
+    "wait": {
+     "locator": {
+      "role": "dialog"
+     }
+    }
+   }
+  ],
+  "mutates": true,
+  "parent": "transactions.save-view-menu",
+  "recordedBy": "agent",
+  "review": {
+   "by": "conductor",
+   "date": "2026-10-03",
+   "decision": "accept",
+   "note": "same Save view dialog (filter chips, empty Saved view name field, Save disabled); the hop clicks Create New View. The chip text (This month, Money out = $1) comes from the accepted parent, which fills Specific amount with 1.00, so the list behind is empty",
+   "reason": "below-threshold"
+  },
+  "similarity": 0.7667,
+  "source": "b5b780a644d409537e41c6f9bfd5f27ad3281aee",
+  "status": "accepted"
+ },
+ "transactions.date-chip": {
+  "checked": "2026-10-02-1349",
+  "fingerprint": {
+   "controls": [
+    "From",
+    "Open combobox menu",
+    "Show transactions for",
+    "To"
+   ],
+   "headings": [],
+   "path": "/transactions",
+   "structure": "dialog",
+   "top": {
+    "name": "",
+    "role": "generic"
+   }
+  },
+  "hop": [
+   {
+    "click": {
+     "name": "Date",
+     "role": "menuitem"
+    }
+   }
+  ],
+  "mutates": false,
+  "parent": "transactions.index",
+  "recordedBy": "agent",
+  "review": {
+   "by": "conductor",
+   "date": "2026-10-03",
+   "decision": "accept",
+   "note": "re-checked after the layer-detection fixes of 2026-10-03 (fingerprint refreshed); same hop the conductor accepted earlier today, similarity 0.7613",
+   "reason": "below-threshold"
+  },
+  "similarity": 0.7613,
+  "source": "3a825f415e8970788eaf377c8fa29e898770f0b2",
+  "status": "accepted"
+ },
+ "transactions.delete-view-confirm": {
+  "checked": "2026-10-02-1349",
+  "fingerprint": {
+   "controls": [
+    "Cancel",
+    "Delete"
+   ],
+   "headings": [
+    "Are you sure you want to delete “Operating expenses”?"
+   ],
+   "path": "/transactions",
+   "structure": "dialog",
+   "top": {
+    "name": "",
+    "role": "dialog"
+   }
+  },
+  "hop": [
+   {
+    "click": {
+     "css": "[class*=\"_iconWrapperDelete_\"]"
+    }
+   }
+  ],
+  "mutates": false,
+  "parent": "transactions.saved-views-menu",
+  "recordedBy": "agent",
+  "review": null,
+  "similarity": 0.948,
+  "source": "cf76a5c838a4a49e55072fed41d8c282ce951760",
+  "status": "accepted"
+ },
+ "transactions.detail-ach": {
+  "checked": "2026-10-02-1349",
+  "fingerprint": {
+   "controls": [
+    "<n> Unread Comment",
+    "AP",
+    "Accounting Page",
+    "Alice C.",
     "Category",
     "Choose Files",
+    "Clear combobox selection",
     "Close detail panel",
     "Department",
     "Drag and drop here or click to upload You may upload PDF, PNG, or JPEG files",
+    "GL Code",
+    "Lighthouse Properties #<n>",
     "Manage categories",
+    "Mercury receipt",
     "Notes",
-    "Open combobox menu",
-    "Payment from NASA"
+    "jason-purple-mock-bill.pdf"
    ],
    "headings": [],
    "path": "/transactions/<id>",
@@ -25,24 +583,481 @@
   "hop": [
    {
     "click": {
-     "name": "This transaction <date> Payment from NASA Failed <amount> AR Request or Invoice Payment Category Open combobox menu Add attachment",
-     "role": "row"
+     "text": "Lighthouse Properties #<n>"
     }
    }
   ],
   "mutates": false,
   "parent": "transactions.index",
-  "recordedBy": "draft",
+  "recordedBy": "agent",
+  "review": null,
+  "similarity": 0.9501,
+  "source": "06ea5653b601444296f5fc436be221ce6e14247e",
+  "status": "accepted"
+ },
+ "transactions.detail-ach-comments": {
+  "checked": "2026-10-02-1349",
+  "fingerprint": {
+   "controls": [
+    "AP",
+    "Accounting Page",
+    "Alice C.",
+    "Category",
+    "Choose Files",
+    "Clear combobox selection",
+    "Close detail panel",
+    "Department",
+    "Drag and drop here or click to upload You may upload PDF, PNG, or JPEG files",
+    "GL Code",
+    "Lighthouse Properties #<n>",
+    "Manage categories",
+    "Mercury receipt",
+    "Notes",
+    "jason-purple-mock-bill.pdf"
+   ],
+   "headings": [],
+   "path": "/transactions/<id>",
+   "structure": "dialog",
+   "top": {
+    "name": "",
+    "role": "complementary"
+   }
+  },
+  "hop": [
+   {
+    "click": {
+     "name": "1 Unread Comment",
+     "role": "button"
+    }
+   }
+  ],
+  "mutates": false,
+  "parent": "transactions.detail-ach",
+  "recordedBy": "agent",
+  "review": null,
+  "similarity": 0.9565,
+  "source": "2b52b933e6ad9b1693ec2c6f33145b8981c8b4dd",
+  "status": "accepted"
+ },
+ "transactions.detail-ach-more-menu": {
+  "checked": "2026-10-02-1349",
+  "fingerprint": {
+   "controls": [
+    "Nickname recipient",
+    "View recipient"
+   ],
+   "headings": [],
+   "path": "/transactions/<id>",
+   "structure": "menu",
+   "top": {
+    "name": "",
+    "role": "menu"
+   }
+  },
+  "hop": [
+   {
+    "click": {
+     "css": "button:has([data-icon=\"ellipsis\"])",
+     "index": 0
+    }
+   }
+  ],
+  "mutates": false,
+  "parent": "transactions.detail-ach",
+  "recordedBy": "agent",
   "review": {
    "by": "conductor",
    "date": "2026-10-03",
-   "decision": "reject",
-   "note": "different row and panel: a Request or Invoice Payment panel for NASA with the first-visit tip over it; the capture is a failed Real-Time Payment with a Failure reason",
+   "decision": "accept",
+   "note": "same footer overflow menu (View recipient, Nickname recipient) on the Lighthouse Properties #3431 -$5,250 ACH panel; the hop clicks the panel's ellipsis; only the panel scroll and the categorization tip over the Category header differ",
    "reason": "below-threshold"
   },
-  "similarity": 0.6736,
+  "similarity": 0.8293,
+  "source": "bb764ca53f8f3bdc62eefa8bc36178a3f6a2fa5a",
+  "status": "accepted"
+ },
+ "transactions.detail-ach-pull": {
+  "checked": "2026-10-02-1349",
+  "fingerprint": {
+   "controls": [
+    "Accounting Page",
+    "Category",
+    "Choose Files",
+    "Clear combobox selection",
+    "Close detail panel",
+    "Department",
+    "Drag and drop here or click to upload You may upload PDF, PNG, or JPEG files",
+    "GL Code",
+    "Gusto (Payroll)",
+    "Manage categories",
+    "Notes",
+    "Ops / Payroll"
+   ],
+   "headings": [],
+   "path": "/transactions/<id>",
+   "structure": "dialog",
+   "top": {
+    "name": "",
+    "role": "complementary"
+   }
+  },
+  "hop": [
+   {
+    "click": {
+     "index": 0,
+     "name": "Gusto (Payroll)",
+     "role": "cell"
+    }
+   }
+  ],
+  "mutates": false,
+  "parent": "transactions.insights-drilldown",
+  "recordedBy": "agent",
+  "review": null,
+  "similarity": 0.9572,
+  "source": "eeea3673afd4d4c63c48c30eac2b9b16a2fdc4f5",
+  "status": "accepted"
+ },
+ "transactions.detail-card": {
+  "checked": "2026-10-02-1349",
+  "fingerprint": {
+   "controls": [
+    "Accounting Page",
+    "Budget",
+    "Category",
+    "Choose Files",
+    "Clear combobox selection",
+    "Close detail panel",
+    "Credit Card ••<n> “AWS billing”",
+    "Credit account",
+    "Department",
+    "Drag and drop here or click to upload You may upload PDF, PNG, or JPEG files",
+    "Find using Gmail",
+    "GL Code",
+    "Jane B.’s Card ••<n>",
+    "Manage categories",
+    "Notes",
+    "Office Stop Co.",
+    "Open combobox menu",
+    "receipts@mercury.com"
+   ],
+   "headings": [],
+   "path": "/transactions/<id>",
+   "structure": "dialog",
+   "top": {
+    "name": "",
+    "role": "complementary"
+   }
+  },
+  "hop": [
+   {
+    "click": {
+     "index": 2,
+     "text": "Office Stop Co."
+    }
+   },
+   {
+    "wait": {
+     "ms": 1000
+    }
+   }
+  ],
+  "mutates": false,
+  "parent": "transactions.index",
+  "recordedBy": "agent",
+  "review": {
+   "by": "conductor",
+   "date": "2026-10-03",
+   "decision": "accept",
+   "note": "same card transaction drawer (Credit Card ••0330 'AWS billing', $563.94, Office Stop Co. to Jane B.'s Card ••0330); only extra is the first-visit categorization tip, header clipped by the banner",
+   "reason": "below-threshold"
+  },
+  "similarity": 0.6976,
+  "source": "34c5bf69f953078e3f0fef454a66e9ce54adc9d5",
+  "status": "accepted"
+ },
+ "transactions.detail-card-lower": {
+  "checked": "2026-10-02-1349",
+  "fingerprint": null,
+  "hop": [
+   {
+    "wait": {
+     "locator": {
+      "name": "Find using Gmail",
+      "role": "link"
+     }
+    }
+   },
+   {
+    "scroll": {
+     "name": "Find using Gmail",
+     "role": "link"
+    }
+   }
+  ],
+  "mutates": false,
+  "parent": "transactions.detail-card",
+  "recordedBy": "agent",
+  "review": null,
+  "similarity": null,
+  "source": null,
+  "status": "draft"
+ },
+ "transactions.detail-category-dropdown": {
+  "checked": "2026-10-02-1349",
+  "fingerprint": {
+   "controls": [
+    "Create category",
+    "Employee Gifts",
+    "Investments",
+    "Legal Fees",
+    "Software",
+    "Travel - Accommodation",
+    "Travel - Vehicles",
+    "Venue Rental"
+   ],
+   "headings": [],
+   "path": "/transactions/<id>",
+   "structure": "listbox",
+   "top": {
+    "name": "",
+    "role": "listbox"
+   }
+  },
+  "hop": [
+   {
+    "click": {
+     "index": 100,
+     "name": "Category",
+     "role": "combobox"
+    }
+   }
+  ],
+  "mutates": false,
+  "parent": "transactions.detail-wire-in",
+  "recordedBy": "agent",
+  "review": null,
+  "similarity": 0.9531,
+  "source": "1f51540ddf0c9c1e3fe423888cf1c7429926429f",
+  "status": "accepted"
+ },
+ "transactions.detail-failed": {
+  "checked": "2026-10-02-1349",
+  "fingerprint": {
+   "controls": [
+    "Category",
+    "Choose Files",
+    "Clear combobox selection",
+    "Close detail panel",
+    "Debug LLC",
+    "Department",
+    "Drag and drop here or click to upload You may upload PDF, PNG, or JPEG files",
+    "Landon S.",
+    "Manage categories",
+    "Mercury receipt",
+    "Notes",
+    "Ops / Payroll"
+   ],
+   "headings": [],
+   "path": "/transactions/<id>",
+   "structure": "dialog",
+   "top": {
+    "name": "",
+    "role": "complementary"
+   }
+  },
+  "hop": [
+   {
+    "click": {
+     "name": "Debug LLC Failed",
+     "role": "cell"
+    }
+   }
+  ],
+  "mutates": false,
+  "parent": "transactions.index",
+  "recordedBy": "agent",
+  "review": {
+   "by": "conductor",
+   "date": "2026-10-03",
+   "decision": "accept",
+   "note": "same Debug LLC Real-Time Payment drawer (struck-through −$450.50, red Failed timestamp, 'Receiving account is closed' failure reason); hop clicks the Debug LLC Failed cell as labeled; only extra is the first-visit 'We categorized past transactions' tip",
+   "reason": "sample"
+  },
+  "similarity": 0.9515,
   "source": "8a7b5f15bcfc1e655c39bb89768c9642184fe252",
-  "status": "rejected"
+  "status": "accepted"
+ },
+ "transactions.detail-intl-wire": {
+  "checked": "2026-10-02-1349",
+  "fingerprint": {
+   "controls": [
+    "AP",
+    "Accounting Page",
+    "Alice C.",
+    "Category",
+    "Choose Files",
+    "Clear combobox selection",
+    "Close detail panel",
+    "Department",
+    "Drag and drop here or click to upload You may upload PDF, PNG, or JPEG files",
+    "GL Code",
+    "Manage categories",
+    "Mercury receipt",
+    "Notes",
+    "Nutritionist",
+    "https://demo.mercury.com/track/tracker-link-demo-transit"
+   ],
+   "headings": [],
+   "path": "/transactions/<id>",
+   "structure": "dialog",
+   "top": {
+    "name": "",
+    "role": "complementary"
+   }
+  },
+  "hop": [
+   {
+    "click": {
+     "name": "Intl. Wire",
+     "role": "cell"
+    }
+   }
+  ],
+  "mutates": false,
+  "parent": "transactions.index",
+  "recordedBy": "agent",
+  "review": null,
+  "similarity": 0.9535,
+  "source": "44a42a4d7e5204e5cab49d99f6b8128d4a5d8347",
+  "status": "accepted"
+ },
+ "transactions.detail-more-menu": {
+  "checked": "2026-10-02-1349",
+  "fingerprint": {
+   "controls": [
+    "Nickname sender"
+   ],
+   "headings": [],
+   "path": "/transactions/<id>",
+   "structure": "menu",
+   "top": {
+    "name": "",
+    "role": "menu"
+   }
+  },
+  "hop": [
+   {
+    "click": {
+     "css": "button:has([data-icon=\"ellipsis\"])"
+    }
+   }
+  ],
+  "mutates": false,
+  "parent": "transactions.detail-card",
+  "recordedBy": "agent",
+  "review": {
+   "by": "conductor",
+   "date": "2026-10-03",
+   "decision": "accept",
+   "note": "same footer overflow menu ('Nickname sender') on the Office Stop Co. $563.94 Jane B. ••0330 panel; panel scrolled differently; the clipped tip at the top is the first-visit 'We categorized past transactions' tip body",
+   "reason": "below-threshold"
+  },
+  "similarity": 0.583,
+  "source": "a5ae15a9961adf83fe146228babbd7a48fd0fe50",
+  "status": "accepted"
+ },
+ "transactions.detail-pending-deposit": {
+  "checked": "2026-10-02-1349",
+  "fingerprint": {
+   "controls": [
+    "AP",
+    "Accounting Page",
+    "Category",
+    "Choose Files",
+    "Close detail panel",
+    "Department",
+    "Drag and drop here or click to upload You may upload PDF, PNG, or JPEG files",
+    "GL Code",
+    "Manage categories",
+    "Notes",
+    "Open combobox menu",
+    "Pending Deposit",
+    "back of the check",
+    "front of the check"
+   ],
+   "headings": [],
+   "path": "/transactions/<id>",
+   "structure": "dialog",
+   "top": {
+    "name": "",
+    "role": "complementary"
+   }
+  },
+  "hop": [
+   {
+    "click": {
+     "name": "Pending Deposit",
+     "role": "cell"
+    }
+   }
+  ],
+  "mutates": false,
+  "parent": "transactions.index",
+  "recordedBy": "agent",
+  "review": {
+   "by": "conductor",
+   "date": "2026-10-03",
+   "decision": "accept",
+   "note": "same Check Deposit drawer ($1,000.00 Pending Deposit into AP, timeline, front/back check images, Category, GL Code); the categorized tip hides the drawer title; list scrolled",
+   "reason": "below-threshold"
+  },
+  "similarity": 0.7419,
+  "source": "2187b695d6120fe923781d399520848f3d0ad8d8",
+  "status": "accepted"
+ },
+ "transactions.detail-wire-in": {
+  "checked": "2026-10-02-1349",
+  "fingerprint": {
+   "controls": [
+    "Accounting Page",
+    "Category",
+    "Choose Files",
+    "Clear combobox selection",
+    "Close detail panel",
+    "Department",
+    "Deshaun Moore",
+    "Drag and drop here or click to upload You may upload PDF, PNG, or JPEG files",
+    "GL Code",
+    "Manage categories",
+    "Mercury receipt",
+    "Notes",
+    "Open combobox menu",
+    "Ops / Payroll"
+   ],
+   "headings": [],
+   "path": "/transactions/<id>",
+   "structure": "dialog",
+   "top": {
+    "name": "",
+    "role": "complementary"
+   }
+  },
+  "hop": [
+   {
+    "click": {
+     "name": "Deshaun Moore",
+     "role": "cell"
+    }
+   }
+  ],
+  "mutates": false,
+  "parent": "transactions.index",
+  "recordedBy": "agent",
+  "review": null,
+  "similarity": 0.9532,
+  "source": "67993ecd394ee05083a153df5b5b8825375b8dd2",
+  "status": "accepted"
  },
  "transactions.export-modal": {
   "checked": "2026-10-02-1349",
@@ -123,101 +1138,42 @@
     "AP",
     "AR",
     "Account",
-    "Account Click to sort",
-    "Accounting",
-    "Accounts",
-    "Add attachment",
-    "Add file",
-    "Add notes",
     "Amount",
-    "Amount Click to sort",
-    "Apply",
     "Attachment",
-    "Banking",
-    "Bill Pay",
-    "Books",
     "Budget",
     "Business Loan – Wells Fargo",
     "Card",
-    "Cards",
     "Category",
     "Chase Credit Card – Chase",
     "Checking ••<n>",
     "Checking ••<n> – Capital One",
     "Checking ••<n> – Iron Bank",
-    "Clear combobox selection",
-    "Command New",
     "Credit Card",
     "Credit Card ••<n> – Capital One",
-    "Customize your experience",
     "Date",
-    "Date Click to sort",
     "Department",
-    "Dismiss spotlight",
-    "Export filtered",
-    "Filters (<n>)",
     "GL Code",
-    "Group",
-    "Home",
-    "Insights",
-    "Invoicing",
     "Keyword",
-    "Learn about bookmarks",
-    "Match receipts",
     "Merchant Type",
-    "Mercury Demo Pro",
     "Method",
-    "More bulk actions",
-    "Move money",
-    "Navigate to Settings",
-    "Next page",
-    "Open account",
-    "Open combobox menu",
     "Ops / Payroll",
-    "Ops / Payroll <amount>",
-    "Payments",
     "Policy",
-    "Previous page",
-    "Remove",
-    "Remove bookmark",
-    "Reorder Bill Pay bookmark",
-    "Reorder Credit Card bookmark",
-    "Reorder Insights bookmark",
-    "Reorder Ops / Payroll bookmark",
     "Reset",
     "Savings ••<n>",
     "Savings ••<n> – Chase",
     "Savings ••<n> – Jane’s Account",
-    "Search for anything",
     "Select All",
-    "Selected Monthly money out",
-    "Settings",
-    "Show graphs",
-    "Show graphs Money out this month <amount> <n>",
-    "Sort",
     "Status",
     "Stripe Income – Mercury Demo, Inc",
-    "Tasks <n>",
     "Team Member",
-    "Team Spend",
-    "This transaction",
-    "To/From Click to sort",
-    "Toggle Private Mode",
-    "Transactions",
-    "Treasury",
-    "Unselect",
-    "View categorized transactions",
-    "Viewing as Admin",
-    "updates"
+    "Treasury"
    ],
-   "headings": [
-    "Transactions"
-   ],
+   "headings": [],
    "path": "/transactions",
-   "structure": "dialog",
+   "structure": "menu",
    "top": {
-    "name": "",
-    "role": "generic"
+    "name": "Filters (<n>)",
+    "role": "menu"
    }
   },
   "hop": [
@@ -235,10 +1191,10 @@
    "by": "conductor",
    "date": "2026-10-03",
    "decision": "accept",
-   "note": "right account tab content; the panel opens inside the parent's Monthly money out view; the first-visit 'We categorized past transactions' tip also shows, as on the accepted root",
+   "note": "reached: replay light and dark show the Filters panel with the Account tab selected and the same options as the capture (conductor compared sheets 2026-10-03). Similarity is low because the fingerprint top is a fragment of the right-hand pane, not the panel; capture differs only in the saved view's edited filters and theme",
    "reason": "below-threshold"
   },
-  "similarity": 0.723,
+  "similarity": 0.7228,
   "source": "752f72c6ed5540978a967a3f2e68e71902e26e9e",
   "status": "accepted"
  },
@@ -247,94 +1203,34 @@
   "fingerprint": {
    "controls": [
     "Account",
-    "Account Click to sort",
-    "Accounting",
-    "Accounts",
-    "Add attachment",
-    "Add file",
-    "Add notes",
     "Amount",
-    "Amount Click to sort",
     "Any",
-    "Apply",
     "At least...",
     "Attachment",
-    "Banking",
-    "Bill Pay",
-    "Books",
     "Budget",
     "Card",
-    "Cards",
     "Category",
-    "Clear combobox selection",
-    "Command New",
-    "Credit Card",
-    "Customize your experience",
     "Date",
-    "Date Click to sort",
     "Department",
-    "Dismiss spotlight",
-    "Export filtered",
-    "Filters (<n>)",
     "GL Code",
-    "Group",
-    "Home",
     "In (e.g. deposits, refunds)",
-    "Insights",
-    "Invoicing",
     "Keyword",
-    "Learn about bookmarks",
-    "Match receipts",
     "Merchant Type",
-    "Mercury Demo Pro",
     "Method",
-    "More bulk actions",
-    "Move money",
-    "Navigate to Settings",
-    "Next page",
     "No more than...",
-    "Open account",
-    "Open combobox menu",
-    "Ops / Payroll <amount>",
     "Out (e.g. purchases, charges)",
-    "Payments",
     "Policy",
-    "Previous page",
-    "Remove",
-    "Remove bookmark",
-    "Reorder Bill Pay bookmark",
-    "Reorder Credit Card bookmark",
-    "Reorder Insights bookmark",
-    "Reorder Ops / Payroll bookmark",
     "Reset",
-    "Search for anything",
-    "Selected Monthly money out",
-    "Settings",
-    "Show graphs",
-    "Show graphs Money out this month <amount> <n>",
-    "Sort",
     "Specific amount",
     "Status",
-    "Tasks <n>",
-    "Team Member",
-    "Team Spend",
-    "This transaction",
-    "To/From Click to sort",
-    "Toggle Private Mode",
-    "Transactions",
-    "Unselect",
-    "View categorized transactions",
-    "Viewing as Admin",
-    "updates"
+    "Team Member"
    ],
-   "headings": [
-    "Transactions"
-   ],
+   "headings": [],
    "path": "/transactions",
-   "structure": "dialog",
+   "structure": "menu",
    "top": {
-    "name": "",
-    "role": "generic"
+    "name": "Filters (<n>)",
+    "role": "menu"
    }
   },
   "hop": [
@@ -349,100 +1245,62 @@
   "parent": "transactions.filters-panel",
   "recordedBy": "draft",
   "review": null,
-  "similarity": 0.9501,
+  "similarity": 0.9389,
   "source": "8787d53e9bd0e2ef3b1183f169b977a65cb310a8",
+  "status": "accepted"
+ },
+ "transactions.filter-amount-invalid": {
+  "checked": "2026-10-02-1349",
+  "fingerprint": {
+   "controls": [],
+   "headings": [
+    "Error"
+   ],
+   "path": "/transactions",
+   "structure": "dialog",
+   "top": {
+    "name": "Error",
+    "role": "dialog"
+   }
+  },
+  "hop": [
+   {
+    "fill": {
+     "locator": {
+      "name": "At least...",
+      "role": "textbox"
+     },
+     "value": "150"
+    }
+   },
+   {
+    "fill": {
+     "locator": {
+      "name": "No more than...",
+      "role": "textbox"
+     },
+     "value": "1.00"
+    }
+   }
+  ],
+  "mutates": false,
+  "parent": "transactions.filter-amount",
+  "recordedBy": "agent",
+  "review": null,
+  "similarity": 0.9306,
+  "source": "4bbf66f1b8f0f51f88ac0c82a25b55e63f4d501d",
   "status": "accepted"
  },
  "transactions.filter-attachment": {
   "checked": "2026-10-02-1349",
   "fingerprint": {
-   "controls": [
-    "Account",
-    "Account Click to sort",
-    "Accounting",
-    "Accounts",
-    "Add attachment",
-    "Add file",
-    "Add notes",
-    "All",
-    "Amount",
-    "Amount Click to sort",
-    "Apply",
-    "Attachment",
-    "Banking",
-    "Bill Pay",
-    "Books",
-    "Budget",
-    "Card",
-    "Cards",
-    "Category",
-    "Clear combobox selection",
-    "Command New",
-    "Credit Card",
-    "Customize your experience",
-    "Date",
-    "Date Click to sort",
-    "Department",
-    "Dismiss spotlight",
-    "Does not have",
-    "Export filtered",
-    "Filters (<n>)",
-    "GL Code",
-    "Group",
-    "Has",
-    "Home",
-    "Insights",
-    "Invoicing",
-    "Keyword",
-    "Learn about bookmarks",
-    "Match receipts",
-    "Merchant Type",
-    "Mercury Demo Pro",
-    "Method",
-    "More bulk actions",
-    "Move money",
-    "Navigate to Settings",
-    "Next page",
-    "Open account",
-    "Open combobox menu",
-    "Ops / Payroll <amount>",
-    "Payments",
-    "Policy",
-    "Previous page",
-    "Remove",
-    "Remove bookmark",
-    "Reorder Bill Pay bookmark",
-    "Reorder Credit Card bookmark",
-    "Reorder Insights bookmark",
-    "Reorder Ops / Payroll bookmark",
-    "Reset",
-    "Search for anything",
-    "Selected Monthly money out",
-    "Settings",
-    "Show graphs",
-    "Show graphs Money out this month <amount> <n>",
-    "Sort",
-    "Status",
-    "Tasks <n>",
-    "Team Member",
-    "Team Spend",
-    "This transaction",
-    "To/From Click to sort",
-    "Toggle Private Mode",
-    "Transactions",
-    "Unselect",
-    "View categorized transactions",
-    "Viewing as Admin",
-    "updates"
-   ],
-   "headings": [
-    "Transactions"
-   ],
+   "controls": [],
+   "headings": [],
    "path": "/transactions",
    "structure": "dialog",
    "top": {
     "name": "",
-    "role": "generic"
+    "role": "Legend"
    }
   },
   "hop": [
@@ -460,106 +1318,23 @@
    "by": "conductor",
    "date": "2026-10-03",
    "decision": "accept",
-   "note": "right attachment tab content; the panel opens inside the parent's Monthly money out view; the first-visit 'We categorized past transactions' tip also shows, as on the accepted root",
+   "note": "reached: replay light and dark show the Filters panel with the Attachment tab selected and the same options as the capture (conductor compared sheets 2026-10-03). Similarity is low because the fingerprint top is a fragment of the right-hand pane, not the panel; capture differs only in the saved view's edited filters and theme",
    "reason": "below-threshold"
   },
-  "similarity": 0.8177,
+  "similarity": 0.8175,
   "source": "b0d972c96862c4160158b4633325fc8f0bb65a0c",
   "status": "accepted"
  },
  "transactions.filter-budget": {
   "checked": "2026-10-02-1349",
   "fingerprint": {
-   "controls": [
-    "Account",
-    "Account Click to sort",
-    "Accounting",
-    "Accounts",
-    "Add attachment",
-    "Add file",
-    "Add notes",
-    "Amount",
-    "Amount Click to sort",
-    "Apply",
-    "Attachment",
-    "Banking",
-    "Bill Pay",
-    "Books",
-    "Budget",
-    "Card",
-    "Cards",
-    "Category",
-    "Clear combobox selection",
-    "Command New",
-    "Credit Card",
-    "Customize your experience",
-    "Date",
-    "Date Click to sort",
-    "Department",
-    "Dismiss spotlight",
-    "Export filtered",
-    "Filters (<n>)",
-    "GL Code",
-    "Group",
-    "Hardware",
-    "Home",
-    "Insights",
-    "Invoicing",
-    "Keyword",
-    "Learn about bookmarks",
-    "Learning & Development",
-    "Match receipts",
-    "Merchant Type",
-    "Mercury Demo Pro",
-    "Method",
-    "More bulk actions",
-    "Move money",
-    "Navigate to Settings",
-    "Next page",
-    "Open account",
-    "Open combobox menu",
-    "Ops / Payroll <amount>",
-    "Payments",
-    "Policy",
-    "Previous page",
-    "Remove",
-    "Remove bookmark",
-    "Reorder Bill Pay bookmark",
-    "Reorder Credit Card bookmark",
-    "Reorder Insights bookmark",
-    "Reorder Ops / Payroll bookmark",
-    "Reset",
-    "Search for a budget",
-    "Search for anything",
-    "Select All",
-    "Selected Monthly money out",
-    "Settings",
-    "Show graphs",
-    "Show graphs Money out this month <amount> <n>",
-    "Software Subscriptions",
-    "Sort",
-    "Status",
-    "Tasks <n>",
-    "Team Lunch",
-    "Team Member",
-    "Team Spend",
-    "This transaction",
-    "To/From Click to sort",
-    "Toggle Private Mode",
-    "Transactions",
-    "Unselect",
-    "View categorized transactions",
-    "Viewing as Admin",
-    "updates"
-   ],
-   "headings": [
-    "Transactions"
-   ],
+   "controls": [],
+   "headings": [],
    "path": "/transactions",
    "structure": "dialog",
    "top": {
     "name": "",
-    "role": "generic"
+    "role": "LabelText"
    }
   },
   "hop": [
@@ -577,114 +1352,23 @@
    "by": "conductor",
    "date": "2026-10-03",
    "decision": "accept",
-   "note": "right budget tab content; the panel opens inside the parent's Monthly money out view; the first-visit 'We categorized past transactions' tip also shows, as on the accepted root",
+   "note": "reached: re-checked after the layer-detection fix; replay light and dark show the Filters panel with the Budget tab selected and the same options as the capture (conductor compared sheets 2026-10-03). Similarity is low because the fingerprint top is a fragment of the right-hand pane",
    "reason": "below-threshold"
   },
-  "similarity": 0.6904,
+  "similarity": 0.6892,
   "source": "c22ebf48294f89f8410a4c8fe13956277d437688",
   "status": "accepted"
  },
  "transactions.filter-card": {
   "checked": "2026-10-02-1349",
   "fingerprint": {
-   "controls": [
-    "Account",
-    "Account Click to sort",
-    "Accounting",
-    "Accounts",
-    "Add attachment",
-    "Add file",
-    "Add notes",
-    "Alice C. ••<n>",
-    "Amount",
-    "Amount Click to sort",
-    "Apply",
-    "Attachment",
-    "Banking",
-    "Bill Pay",
-    "Books",
-    "Budget",
-    "Card",
-    "Cards",
-    "Carry B. ••<n>",
-    "Category",
-    "Clear combobox selection",
-    "Command New",
-    "Credit Card",
-    "Customize your experience",
-    "Date",
-    "Date Click to sort",
-    "Dave W. ••<n>",
-    "Department",
-    "Dismiss spotlight",
-    "Emmett B. ••<n>",
-    "Export filtered",
-    "Filters (<n>)",
-    "GL Code",
-    "Group",
-    "Home",
-    "Insights",
-    "Invoicing",
-    "Jane B. ••<n>",
-    "Jessica A. ••<n>",
-    "John M. ••<n>",
-    "Keyword",
-    "Landon S. ••<n>",
-    "Learn about bookmarks",
-    "Mary M. ••<n>",
-    "Match receipts",
-    "Merchant Type",
-    "Mercury Demo Pro",
-    "Method",
-    "More bulk actions",
-    "Move money",
-    "Navigate to Settings",
-    "Next page",
-    "Noel K. ••<n>",
-    "Open account",
-    "Open combobox menu",
-    "Ops / Payroll <amount>",
-    "Payments",
-    "Policy",
-    "Previous page",
-    "Remove",
-    "Remove bookmark",
-    "Reorder Bill Pay bookmark",
-    "Reorder Credit Card bookmark",
-    "Reorder Insights bookmark",
-    "Reorder Ops / Payroll bookmark",
-    "Reset",
-    "Sally P. ••<n>",
-    "Search cardholders",
-    "Search for anything",
-    "Select All",
-    "Selected Monthly money out",
-    "Settings",
-    "Show graphs",
-    "Show graphs Money out this month <amount> <n>",
-    "Sort",
-    "Status",
-    "Tasks <n>",
-    "Team Member",
-    "Team Spend",
-    "This transaction",
-    "Thomas B. ••<n>",
-    "To/From Click to sort",
-    "Toggle Private Mode",
-    "Transactions",
-    "Unselect",
-    "View categorized transactions",
-    "Viewing as Admin",
-    "updates"
-   ],
-   "headings": [
-    "Transactions"
-   ],
+   "controls": [],
+   "headings": [],
    "path": "/transactions",
    "structure": "dialog",
    "top": {
     "name": "",
-    "role": "generic"
+    "role": "LabelText"
    }
   },
   "hop": [
@@ -702,117 +1386,23 @@
    "by": "conductor",
    "date": "2026-10-03",
    "decision": "accept",
-   "note": "right card tab content; the panel opens inside the parent's Monthly money out view; the first-visit 'We categorized past transactions' tip also shows, as on the accepted root",
+   "note": "reached: re-checked after the layer-detection fix; replay light and dark show the Filters panel with the Card tab selected and the same options as the capture (conductor compared sheets 2026-10-03). Similarity is low because the fingerprint top is a fragment of the right-hand pane",
    "reason": "below-threshold"
   },
-  "similarity": 0.7097,
+  "similarity": 0.7095,
   "source": "99d8f2cd2cf4996bdde77233c1653ba12469c7d0",
   "status": "accepted"
  },
  "transactions.filter-category": {
   "checked": "2026-10-02-1349",
   "fingerprint": {
-   "controls": [
-    "Account",
-    "Account Click to sort",
-    "Accounting",
-    "Accounts",
-    "Add attachment",
-    "Add file",
-    "Add notes",
-    "All Transactions",
-    "Amount",
-    "Amount Click to sort",
-    "Apply",
-    "Attachment",
-    "Banking",
-    "Bill Pay",
-    "Books",
-    "Budget",
-    "Business Client Meals",
-    "Card",
-    "Cards",
-    "Categorized",
-    "Category",
-    "Clear combobox selection",
-    "Command New",
-    "Contractor Payments",
-    "Credit Card",
-    "Customize your experience",
-    "Date",
-    "Date Click to sort",
-    "Department",
-    "Dismiss spotlight",
-    "Employee Gifts",
-    "Export filtered",
-    "Filters (<n>)",
-    "GL Code",
-    "Group",
-    "Home",
-    "Insights",
-    "Investments",
-    "Invoicing",
-    "Keyword",
-    "Learn about bookmarks",
-    "Legal Fees",
-    "Lunch Perks",
-    "Match receipts",
-    "Merchant Type",
-    "Mercury Demo Pro",
-    "Method",
-    "More bulk actions",
-    "Move money",
-    "Navigate to Settings",
-    "Next page",
-    "Office Supplies",
-    "Open account",
-    "Open combobox menu",
-    "Ops / Payroll <amount>",
-    "Payments",
-    "Policy",
-    "Previous page",
-    "Remove",
-    "Remove bookmark",
-    "Reorder Bill Pay bookmark",
-    "Reorder Credit Card bookmark",
-    "Reorder Insights bookmark",
-    "Reorder Ops / Payroll bookmark",
-    "Reset",
-    "Search for a category",
-    "Search for anything",
-    "Select All",
-    "Selected Monthly money out",
-    "Settings",
-    "Show graphs",
-    "Show graphs Money out this month <amount> <n>",
-    "Software",
-    "Sort",
-    "Status",
-    "Tasks <n>",
-    "Team Member",
-    "Team Spend",
-    "This transaction",
-    "To/From Click to sort",
-    "Toggle Private Mode",
-    "Transactions",
-    "Travel - Accommodation",
-    "Travel - Flights",
-    "Travel - Vehicles",
-    "Uncategorized",
-    "Unselect",
-    "Venue Rental",
-    "View categorized transactions",
-    "Viewing as Admin",
-    "updates"
-   ],
-   "headings": [
-    "Transactions"
-   ],
+   "controls": [],
+   "headings": [],
    "path": "/transactions",
    "structure": "dialog",
    "top": {
     "name": "",
-    "role": "generic"
+    "role": "LabelText"
    }
   },
   "hop": [
@@ -830,10 +1420,10 @@
    "by": "conductor",
    "date": "2026-10-03",
    "decision": "accept",
-   "note": "right category tab content; the panel opens inside the parent's Monthly money out view; the first-visit 'We categorized past transactions' tip also shows, as on the accepted root",
+   "note": "reached: re-checked after the layer-detection fix; replay light and dark show the Filters panel with the Category tab selected and the same options as the capture (conductor compared sheets 2026-10-03). Similarity is low because the fingerprint top is a fragment of the right-hand pane",
    "reason": "below-threshold"
   },
-  "similarity": 0.7283,
+  "similarity": 0.7281,
   "source": "2fec3672ce4f165dc2b254f71097780b9ae45196",
   "status": "accepted"
  },
@@ -882,94 +1472,35 @@
   "fingerprint": {
    "controls": [
     "Account",
-    "Account Click to sort",
     "Accounting",
-    "Accounts",
-    "Add attachment",
-    "Add file",
-    "Add notes",
     "Amount",
-    "Amount Click to sort",
-    "Apply",
     "Attachment",
     "Audit",
-    "Banking",
-    "Bill Pay",
-    "Books",
     "Budget",
     "Card",
-    "Cards",
     "Category",
-    "Clear combobox selection",
-    "Command New",
-    "Credit Card",
-    "Customize your experience",
     "Date",
-    "Date Click to sort",
     "Department",
     "Design",
-    "Dismiss spotlight",
     "Executive",
-    "Export filtered",
-    "Filters (<n>)",
     "Finance",
     "GL Code",
-    "Group",
-    "Home",
-    "Insights",
-    "Invoicing",
     "Keyword",
-    "Learn about bookmarks",
-    "Match receipts",
     "Merchant Type",
-    "Mercury Demo Pro",
     "Method",
-    "More bulk actions",
-    "Move money",
-    "Navigate to Settings",
-    "Next page",
-    "Open account",
-    "Open combobox menu",
-    "Ops / Payroll <amount>",
-    "Payments",
     "Policy",
-    "Previous page",
     "Product",
-    "Remove",
-    "Remove bookmark",
-    "Reorder Bill Pay bookmark",
-    "Reorder Credit Card bookmark",
-    "Reorder Insights bookmark",
-    "Reorder Ops / Payroll bookmark",
     "Reset",
-    "Search for anything",
     "Select All",
-    "Selected Monthly money out",
-    "Settings",
-    "Show graphs",
-    "Show graphs Money out this month <amount> <n>",
-    "Sort",
     "Status",
-    "Tasks <n>",
-    "Team Member",
-    "Team Spend",
-    "This transaction",
-    "To/From Click to sort",
-    "Toggle Private Mode",
-    "Transactions",
-    "Unselect",
-    "View categorized transactions",
-    "Viewing as Admin",
-    "updates"
+    "Team Member"
    ],
-   "headings": [
-    "Transactions"
-   ],
+   "headings": [],
    "path": "/transactions",
-   "structure": "dialog",
+   "structure": "menu",
    "top": {
-    "name": "",
-    "role": "generic"
+    "name": "Filters (<n>)",
+    "role": "menu"
    }
   },
   "hop": [
@@ -987,122 +1518,23 @@
    "by": "conductor",
    "date": "2026-10-03",
    "decision": "accept",
-   "note": "right department tab content; the panel opens inside the parent's Monthly money out view; the first-visit 'We categorized past transactions' tip also shows, as on the accepted root",
+   "note": "reached: replay light and dark show the Filters panel with the Department tab selected and the same options as the capture (conductor compared sheets 2026-10-03). Similarity is low because the fingerprint top is a fragment of the right-hand pane, not the panel; capture differs only in the saved view's edited filters and theme",
    "reason": "below-threshold"
   },
-  "similarity": 0.7101,
+  "similarity": 0.7089,
   "source": "4c81bbdd9df53252ff8b9f7f6f7be1c997d0299c",
   "status": "accepted"
  },
  "transactions.filter-gl-code": {
   "checked": "2026-10-02-1349",
   "fingerprint": {
-   "controls": [
-    "<n> - Accounts Payable",
-    "<n> - Accounts Receivable",
-    "<n> - Bill pay",
-    "<n> - COGS",
-    "<n> - Expense Account",
-    "<n> - Inactive GL Code",
-    "<n> - Inventory",
-    "<n> - Mercury Credit",
-    "<n> - Other liabilities",
-    "<n> - Raw Materials",
-    "<n> - Unbilled Receivables",
-    "Account",
-    "Account Click to sort",
-    "Accounting",
-    "Accounts",
-    "Add attachment",
-    "Add file",
-    "Add notes",
-    "All Transactions",
-    "Amount",
-    "Amount Click to sort",
-    "Apply",
-    "Attachment",
-    "Banking",
-    "Bill Pay",
-    "Books",
-    "Budget",
-    "Card",
-    "Cards",
-    "Categorized",
-    "Category",
-    "Clear combobox selection",
-    "Command New",
-    "Credit Card",
-    "Customize your experience",
-    "Date",
-    "Date Click to sort",
-    "Department",
-    "Dismiss spotlight",
-    "Export filtered",
-    "Filters (<n>)",
-    "GL Code",
-    "Group",
-    "Home",
-    "Insights",
-    "Invoicing",
-    "Keyword",
-    "Learn about bookmarks",
-    "Match receipts",
-    "Merchant Type",
-    "Mercury Checking (<n>)",
-    "Mercury Demo Pro",
-    "Mercury Savings (<n>)",
-    "Method",
-    "More bulk actions",
-    "Move money",
-    "Navigate to Settings",
-    "Next page",
-    "Open account",
-    "Open combobox menu",
-    "Operating Expenses:Debt Service:Interest Payments",
-    "Operating Expenses:Facilities:Electric Bills",
-    "Operating Expenses:Facilities:Utilities",
-    "Operating Expenses:Office Supplies:Printer Paper",
-    "Operating Expenses:Travel & Entertainment:Client Dinners",
-    "Ops / Payroll <amount>",
-    "Payments",
-    "Policy",
-    "Previous page",
-    "Remove",
-    "Remove bookmark",
-    "Reorder Bill Pay bookmark",
-    "Reorder Credit Card bookmark",
-    "Reorder Insights bookmark",
-    "Reorder Ops / Payroll bookmark",
-    "Reset",
-    "Search for a GL Code",
-    "Search for anything",
-    "Selected Monthly money out",
-    "Settings",
-    "Show graphs",
-    "Show graphs Money out this month <amount> <n>",
-    "Sort",
-    "Status",
-    "Tasks <n>",
-    "Team Member",
-    "Team Spend",
-    "This transaction",
-    "To/From Click to sort",
-    "Toggle Private Mode",
-    "Transactions",
-    "Uncategorized",
-    "Unselect",
-    "View categorized transactions",
-    "Viewing as Admin",
-    "updates"
-   ],
-   "headings": [
-    "Transactions"
-   ],
+   "controls": [],
+   "headings": [],
    "path": "/transactions",
    "structure": "dialog",
    "top": {
     "name": "",
-    "role": "generic"
+    "role": "LabelText"
    }
   },
   "hop": [
@@ -1120,109 +1552,23 @@
    "by": "conductor",
    "date": "2026-10-03",
    "decision": "accept",
-   "note": "right gl code tab content; the panel opens inside the parent's Monthly money out view; the first-visit 'We categorized past transactions' tip also shows, as on the accepted root",
+   "note": "reached: replay light and dark show the Filters panel with the GL Code tab selected and the same options as the capture (conductor compared sheets 2026-10-03). Similarity is low because the fingerprint top is a fragment of the right-hand pane, not the panel; capture differs only in the saved view's edited filters and theme",
    "reason": "below-threshold"
   },
-  "similarity": 0.6466,
+  "similarity": 0.6454,
   "source": "bf62ff630b38b6e0de8702bdfd0bab9d82106c53",
   "status": "accepted"
  },
  "transactions.filter-keyword": {
   "checked": "2026-10-02-1349",
   "fingerprint": {
-   "controls": [
-    "Account",
-    "Account Click to sort",
-    "Accounting",
-    "Accounts",
-    "Add attachment",
-    "Add file",
-    "Add notes",
-    "Amount",
-    "Amount Click to sort",
-    "Apply",
-    "Attachment",
-    "Banking",
-    "Bill Pay",
-    "Books",
-    "Budget",
-    "Card",
-    "Cards",
-    "Category",
-    "Catherine Ndereba",
-    "Clear combobox selection",
-    "Command New",
-    "Contractor",
-    "Credit Card",
-    "Customize your experience",
-    "Date",
-    "Date Click to sort",
-    "Debug LLC",
-    "Department",
-    "Dismiss spotlight",
-    "Domestic Ads",
-    "Export filtered",
-    "Filters (<n>)",
-    "GL Code",
-    "Group",
-    "Home",
-    "Insights",
-    "Invoicing",
-    "Jean Vallee",
-    "Jordi O'Donnell",
-    "Keyword",
-    "Learn about bookmarks",
-    "Lighthouse Properties #<n>",
-    "Match receipts",
-    "Merchant Type",
-    "Mercury Demo Pro",
-    "Method",
-    "More bulk actions",
-    "Move money",
-    "Navigate to Settings",
-    "Next page",
-    "Nutritionist",
-    "Open account",
-    "Open combobox menu",
-    "Ops / Payroll <amount>",
-    "Payments",
-    "Policy",
-    "Previous page",
-    "Remove",
-    "Remove bookmark",
-    "Reorder Bill Pay bookmark",
-    "Reorder Credit Card bookmark",
-    "Reorder Insights bookmark",
-    "Reorder Ops / Payroll bookmark",
-    "Reset",
-    "Search by keyword",
-    "Search for anything",
-    "Selected Monthly money out",
-    "Settings",
-    "Show graphs",
-    "Show graphs Money out this month <amount> <n>",
-    "Sort",
-    "Status",
-    "Tasks <n>",
-    "Team Member",
-    "Team Spend",
-    "This transaction",
-    "To/From Click to sort",
-    "Toggle Private Mode",
-    "Transactions",
-    "Unselect",
-    "View categorized transactions",
-    "Viewing as Admin",
-    "updates"
-   ],
-   "headings": [
-    "Transactions"
-   ],
+   "controls": [],
+   "headings": [],
    "path": "/transactions",
    "structure": "dialog",
    "top": {
     "name": "",
-    "role": "generic"
+    "role": "LabelText"
    }
   },
   "hop": [
@@ -1240,141 +1586,23 @@
    "by": "conductor",
    "date": "2026-10-03",
    "decision": "accept",
-   "note": "right keyword tab content; the panel opens inside the parent's Monthly money out view; the first-visit 'We categorized past transactions' tip also shows, as on the accepted root",
+   "note": "reached: re-checked after the layer-detection fix; replay light and dark show the Filters panel with the Keyword tab selected and the same options as the capture (conductor compared sheets 2026-10-03). Similarity is low because the fingerprint top is a fragment of the right-hand pane",
    "reason": "below-threshold"
   },
-  "similarity": 0.6616,
+  "similarity": 0.6604,
   "source": "2be9da3a6dcaf0c70ae52896270bdf592ac7488a",
   "status": "accepted"
  },
  "transactions.filter-merchant-type": {
   "checked": "2026-10-02-1349",
   "fingerprint": {
-   "controls": [
-    "Account",
-    "Account Click to sort",
-    "Accounting",
-    "Accounts",
-    "Add attachment",
-    "Add file",
-    "Add notes",
-    "Advertising",
-    "Airlines",
-    "Alcohol and Bars",
-    "Amount",
-    "Amount Click to sort",
-    "Apply",
-    "Attachment",
-    "Banking",
-    "Bill Pay",
-    "Books",
-    "Books and Newspapers",
-    "Budget",
-    "Car Rental",
-    "Card",
-    "Cards",
-    "Category",
-    "Charity",
-    "Clear combobox selection",
-    "Clothing",
-    "Command New",
-    "Conferences",
-    "Credit Card",
-    "Customize your experience",
-    "Date",
-    "Date Click to sort",
-    "Department",
-    "Dismiss spotlight",
-    "Education",
-    "Electronics",
-    "Entertainment",
-    "Export filtered",
-    "Facilities Expenses",
-    "Filters (<n>)",
-    "Financial Institutions and Fees",
-    "Food Delivery",
-    "Fuel and Gas",
-    "GL Code",
-    "Gambling",
-    "Government Services",
-    "Grocery",
-    "Ground Transportation",
-    "Group",
-    "Home",
-    "Insights",
-    "Insurance",
-    "Internet and Telephone",
-    "Invoicing",
-    "Keyword",
-    "Learn about bookmarks",
-    "Legal",
-    "Lodging",
-    "Match receipts",
-    "Medical",
-    "Memberships",
-    "Merchant Type",
-    "Mercury Demo Pro",
-    "Method",
-    "More bulk actions",
-    "Move money",
-    "Navigate to Settings",
-    "Next page",
-    "Office Supplies",
-    "Open account",
-    "Open combobox menu",
-    "Ops / Payroll <amount>",
-    "Other",
-    "Other Travel",
-    "Parking",
-    "Payments",
-    "Policy",
-    "Political",
-    "Previous page",
-    "Professional Services",
-    "Remove",
-    "Remove bookmark",
-    "Reorder Bill Pay bookmark",
-    "Reorder Credit Card bookmark",
-    "Reorder Insights bookmark",
-    "Reorder Ops / Payroll bookmark",
-    "Reset",
-    "Restaurants",
-    "Retail",
-    "Rideshare and Taxis",
-    "Search for a merchant type",
-    "Search for anything",
-    "Select All",
-    "Selected Monthly money out",
-    "Settings",
-    "Shipping",
-    "Show graphs",
-    "Show graphs Money out this month <amount> <n>",
-    "Software",
-    "Sort",
-    "Status",
-    "Tasks <n>",
-    "Taxes",
-    "Team Member",
-    "Team Spend",
-    "This transaction",
-    "To/From Click to sort",
-    "Toggle Private Mode",
-    "Transactions",
-    "Unselect",
-    "Utilities",
-    "Vehicle Expenses",
-    "View categorized transactions",
-    "Viewing as Admin",
-    "updates"
-   ],
-   "headings": [
-    "Transactions"
-   ],
+   "controls": [],
+   "headings": [],
    "path": "/transactions",
    "structure": "dialog",
    "top": {
     "name": "",
-    "role": "generic"
+    "role": "LabelText"
    }
   },
   "hop": [
@@ -1392,10 +1620,10 @@
    "by": "conductor",
    "date": "2026-10-03",
    "decision": "accept",
-   "note": "right merchant type tab content; the panel opens inside the parent's Monthly money out view; the first-visit 'We categorized past transactions' tip also shows, as on the accepted root",
+   "note": "reached: replay light and dark show the Filters panel with the Merchant Type tab selected and the same options as the capture (conductor compared sheets 2026-10-03). Similarity is low because the fingerprint top is a fragment of the right-hand pane, not the panel; capture differs only in the saved view's edited filters and theme",
    "reason": "below-threshold"
   },
-  "similarity": 0.6659,
+  "similarity": 0.6647,
   "source": "413d587d6a7db7ffa48ac68b44b2742d10dc3442",
   "status": "accepted"
  },
@@ -1407,19 +1635,8 @@
     "ACH In",
     "ACH Pull",
     "Account",
-    "Account Click to sort",
-    "Accounting",
-    "Accounts",
-    "Add attachment",
-    "Add file",
-    "Add notes",
     "Amount",
-    "Amount Click to sort",
-    "Apply",
     "Attachment",
-    "Banking",
-    "Bill Pay",
-    "Books",
     "Budget",
     "Card",
     "Cards",
@@ -1427,23 +1644,13 @@
     "Check",
     "Check Deposit",
     "Check Payment",
-    "Clear combobox selection",
-    "Command New",
     "Credit Account Payment",
     "Credit Card",
     "Credit Cashback Deposit",
-    "Customize your experience",
     "Date",
-    "Date Click to sort",
     "Debit Card",
     "Department",
-    "Dismiss spotlight",
-    "Export filtered",
-    "Filters (<n>)",
     "GL Code",
-    "Group",
-    "Home",
-    "Insights",
     "Interest Payment",
     "Internal Transfer",
     "Intl. Transaction Fee",
@@ -1452,61 +1659,27 @@
     "Intl. Wire Foreign Exchange Fee",
     "Intl. Wire Return",
     "Inverse",
-    "Invoicing",
     "Keyword",
-    "Learn about bookmarks",
     "Linked Account Transfer",
-    "Match receipts",
     "Merchant Type",
-    "Mercury Demo Pro",
     "Mercury Payment (ACH)",
     "Mercury Subscription Fee",
     "Method",
-    "More bulk actions",
-    "Move money",
-    "Navigate to Settings",
-    "Next page",
     "None",
-    "Open account",
-    "Open combobox menu",
-    "Ops / Payroll <amount>",
     "Payment Request or Invoice Payment",
-    "Payments",
     "Physical Card Upgrade Fee",
     "Policy",
-    "Previous page",
     "Real-Time Payment",
     "Real-Time Payment In",
     "Real-Time Payment Out",
     "Reimbursement ACH",
-    "Remove",
-    "Remove bookmark",
-    "Reorder Bill Pay bookmark",
-    "Reorder Credit Card bookmark",
-    "Reorder Insights bookmark",
-    "Reorder Ops / Payroll bookmark",
     "Reset",
-    "Search for anything",
     "Select All",
-    "Selected Monthly money out",
-    "Settings",
-    "Show graphs",
-    "Show graphs Money out this month <amount> <n>",
-    "Sort",
     "Status",
-    "Tasks <n>",
     "Team Member",
-    "Team Spend",
-    "This transaction",
-    "To/From Click to sort",
-    "Toggle Private Mode",
-    "Transactions",
     "Transfer",
     "Treasury Transfer",
-    "Unselect",
     "Venture Debt Transfer",
-    "View categorized transactions",
-    "Viewing as Admin",
     "Wire",
     "Wire Drawdown",
     "Wire In",
@@ -1514,17 +1687,14 @@
     "Wire Out (International)",
     "Working Capital",
     "Working Capital Deposit",
-    "Working Capital Loan Payment",
-    "updates"
+    "Working Capital Loan Payment"
    ],
-   "headings": [
-    "Transactions"
-   ],
+   "headings": [],
    "path": "/transactions",
-   "structure": "dialog",
+   "structure": "menu",
    "top": {
-    "name": "",
-    "role": "generic"
+    "name": "Filters (<n>)",
+    "role": "menu"
    }
   },
   "hop": [
@@ -1542,11 +1712,122 @@
    "by": "conductor",
    "date": "2026-10-03",
    "decision": "accept",
-   "note": "right method tab content; the panel opens inside the parent's Monthly money out view; the first-visit 'We categorized past transactions' tip also shows, as on the accepted root",
+   "note": "reached: re-checked after the layer-detection fix; replay light and dark show the Filters panel with the Method tab selected and the same money-movement method checkboxes as the capture (conductor compared sheets 2026-10-03). Similarity is low because the fingerprint top is the Filters menu, not the method pane",
    "reason": "below-threshold"
   },
-  "similarity": 0.7093,
+  "similarity": 0.7091,
   "source": "95a721f590431d2756c0435a7fef500f770a7a77",
+  "status": "accepted"
+ },
+ "transactions.filter-no-results": {
+  "checked": "2026-10-02-1349",
+  "fingerprint": {
+   "controls": [
+    "= <amount>",
+    "Account Click to sort",
+    "Accounting",
+    "Accounts",
+    "Add file",
+    "Add notes",
+    "Amount Click to sort",
+    "Any",
+    "Apply",
+    "At least...",
+    "Banking",
+    "Bill Pay",
+    "Books",
+    "Cards",
+    "Category",
+    "Command New",
+    "Create view",
+    "Credit Card",
+    "Customize your experience",
+    "Date",
+    "Date Click to sort",
+    "Export filtered",
+    "Filters (<n>)",
+    "Group",
+    "Home",
+    "In (e.g. deposits, refunds)",
+    "Insights",
+    "Invoicing",
+    "Keyword",
+    "Learn about bookmarks",
+    "Match receipts",
+    "Mercury Demo Pro",
+    "More bulk actions",
+    "Move money",
+    "Navigate to Settings",
+    "No more than...",
+    "Open account",
+    "Open combobox menu",
+    "Ops / Payroll <amount>",
+    "Out (e.g. purchases, charges)",
+    "Payments",
+    "Remove bookmark",
+    "Reorder Bill Pay bookmark",
+    "Reorder Credit Card bookmark",
+    "Reorder Insights bookmark",
+    "Reorder Ops / Payroll bookmark",
+    "Reset",
+    "Saved views",
+    "Search for anything",
+    "Settings",
+    "Show graphs",
+    "Show graphs Net change <amount> . <n> Money in <amount> . <n> Money out <amount> . <n>",
+    "Sort",
+    "Specific amount",
+    "Tasks <n>",
+    "Team Spend",
+    "To/From Click to sort",
+    "Toggle Private Mode",
+    "Transactions",
+    "Unselect",
+    "Viewing as Admin",
+    "reset",
+    "updates"
+   ],
+   "headings": [
+    "Transactions"
+   ],
+   "path": "/transactions",
+   "structure": "document",
+   "top": {
+    "name": "",
+    "role": "document"
+   }
+  },
+  "hop": [
+   {
+    "click": {
+     "name": "Amount",
+     "role": "menuitem"
+    }
+   },
+   {
+    "fill": {
+     "locator": {
+      "name": "Specific amount",
+      "role": "textbox"
+     },
+     "value": "2000000"
+    }
+   },
+   {
+    "press": "Enter"
+   },
+   {
+    "wait": {
+     "ms": 1000
+    }
+   }
+  ],
+  "mutates": false,
+  "parent": "transactions.index",
+  "recordedBy": "agent",
+  "review": null,
+  "similarity": 0.9197,
+  "source": "bb72a91fcb8b50d330887e6d0e64ee0d4b9e03ae",
   "status": "accepted"
  },
  "transactions.filter-policy": {
@@ -1554,89 +1835,29 @@
   "fingerprint": {
    "controls": [
     "Account",
-    "Account Click to sort",
-    "Accounting",
-    "Accounts",
-    "Add attachment",
-    "Add file",
-    "Add notes",
     "Amount",
-    "Amount Click to sort",
-    "Apply",
     "Attachment",
-    "Banking",
-    "Bill Pay",
-    "Books",
     "Budget",
     "Card",
-    "Cards",
     "Category",
-    "Clear combobox selection",
-    "Command New",
-    "Credit Card",
-    "Customize your experience",
     "Date",
-    "Date Click to sort",
     "Department",
-    "Dismiss spotlight",
-    "Export filtered",
-    "Filters (<n>)",
     "GL Code",
-    "Group",
-    "Home",
-    "Insights",
-    "Invoicing",
     "Keyword",
-    "Learn about bookmarks",
-    "Match receipts",
     "Merchant Type",
-    "Mercury Demo Pro",
     "Method",
     "Missing required information Card transactions that are missing required information such as receipts, notes, or categories.",
-    "More bulk actions",
-    "Move money",
-    "Navigate to Settings",
-    "Next page",
-    "Open account",
-    "Open combobox menu",
-    "Ops / Payroll <amount>",
-    "Payments",
     "Policy",
-    "Previous page",
-    "Remove",
-    "Remove bookmark",
-    "Reorder Bill Pay bookmark",
-    "Reorder Credit Card bookmark",
-    "Reorder Insights bookmark",
-    "Reorder Ops / Payroll bookmark",
     "Reset",
-    "Search for anything",
-    "Selected Monthly money out",
-    "Settings",
-    "Show graphs",
-    "Show graphs Money out this month <amount> <n>",
-    "Sort",
     "Status",
-    "Tasks <n>",
-    "Team Member",
-    "Team Spend",
-    "This transaction",
-    "To/From Click to sort",
-    "Toggle Private Mode",
-    "Transactions",
-    "Unselect",
-    "View categorized transactions",
-    "Viewing as Admin",
-    "updates"
+    "Team Member"
    ],
-   "headings": [
-    "Transactions"
-   ],
+   "headings": [],
    "path": "/transactions",
-   "structure": "dialog",
+   "structure": "menu",
    "top": {
-    "name": "",
-    "role": "generic"
+    "name": "Filters (<n>)",
+    "role": "menu"
    }
   },
   "hop": [
@@ -1654,108 +1875,23 @@
    "by": "conductor",
    "date": "2026-10-03",
    "decision": "accept",
-   "note": "right policy tab content; the panel opens inside the parent's Monthly money out view; the first-visit 'We categorized past transactions' tip also shows, as on the accepted root",
+   "note": "reached: replay light and dark show the Filters panel with the Policy tab selected and the same options as the capture (conductor compared sheets 2026-10-03). Similarity is low because the fingerprint top is a fragment of the right-hand pane, not the panel; capture differs only in the saved view's edited filters and theme",
    "reason": "below-threshold"
   },
-  "similarity": 0.696,
+  "similarity": 0.6948,
   "source": "08d21fc18f6755b539617d7bcc35b521994a8cea",
   "status": "accepted"
  },
  "transactions.filter-status": {
   "checked": "2026-10-02-1349",
   "fingerprint": {
-   "controls": [
-    "Account",
-    "Account Click to sort",
-    "Accounting",
-    "Accounts",
-    "Add attachment",
-    "Add file",
-    "Add notes",
-    "Amount",
-    "Amount Click to sort",
-    "Any",
-    "Apply",
-    "Attachment",
-    "Banking",
-    "Bill Pay",
-    "Blocked",
-    "Books",
-    "Budget",
-    "Canceled",
-    "Card",
-    "Cards",
-    "Category",
-    "Clear combobox selection",
-    "Command New",
-    "Credit Card",
-    "Customize your experience",
-    "Date",
-    "Date Click to sort",
-    "Department",
-    "Dismiss spotlight",
-    "Disputed",
-    "Export filtered",
-    "Failed",
-    "Filters (<n>)",
-    "GL Code",
-    "Group",
-    "Home",
-    "Insights",
-    "Invoicing",
-    "Keyword",
-    "Learn about bookmarks",
-    "Match receipts",
-    "Merchant Type",
-    "Mercury Demo Pro",
-    "Method",
-    "More bulk actions",
-    "Move money",
-    "Navigate to Settings",
-    "Next page",
-    "Not disputed",
-    "Open account",
-    "Open combobox menu",
-    "Ops / Payroll <amount>",
-    "Payments",
-    "Pending",
-    "Policy",
-    "Posted",
-    "Previous page",
-    "Remove",
-    "Remove bookmark",
-    "Reorder Bill Pay bookmark",
-    "Reorder Credit Card bookmark",
-    "Reorder Insights bookmark",
-    "Reorder Ops / Payroll bookmark",
-    "Reset",
-    "Search for anything",
-    "Selected Monthly money out",
-    "Settings",
-    "Show graphs",
-    "Show graphs Money out this month <amount> <n>",
-    "Sort",
-    "Status",
-    "Tasks <n>",
-    "Team Member",
-    "Team Spend",
-    "This transaction",
-    "To/From Click to sort",
-    "Toggle Private Mode",
-    "Transactions",
-    "Unselect",
-    "View categorized transactions",
-    "Viewing as Admin",
-    "updates"
-   ],
-   "headings": [
-    "Transactions"
-   ],
+   "controls": [],
+   "headings": [],
    "path": "/transactions",
    "structure": "dialog",
    "top": {
     "name": "",
-    "role": "generic"
+    "role": "paragraph"
    }
   },
   "hop": [
@@ -1773,136 +1909,23 @@
    "by": "conductor",
    "date": "2026-10-03",
    "decision": "accept",
-   "note": "right status tab content; the panel opens inside the parent's Monthly money out view; the first-visit 'We categorized past transactions' tip also shows, as on the accepted root",
+   "note": "reached: replay light and dark show the Filters panel with the Status tab selected and the same options as the capture (conductor compared sheets 2026-10-03). Similarity is low because the fingerprint top is a fragment of the right-hand pane, not the panel; capture differs only in the saved view's edited filters and theme",
    "reason": "below-threshold"
   },
-  "similarity": 0.7525,
+  "similarity": 0.7523,
   "source": "e56abda7a7b1712b554441de4c9086bb791e289d",
   "status": "accepted"
  },
  "transactions.filter-team-member": {
   "checked": "2026-10-02-1349",
   "fingerprint": {
-   "controls": [
-    "Abigail Kyte",
-    "Account",
-    "Account Click to sort",
-    "Accounting",
-    "Accounts",
-    "Add attachment",
-    "Add file",
-    "Add notes",
-    "Alice Chen",
-    "Amount",
-    "Amount Click to sort",
-    "Andrew Jeffords",
-    "Anthony Buteo",
-    "Apply",
-    "Attachment",
-    "Banking",
-    "Barbara Carpenter",
-    "Bill Pay",
-    "Blake Walker",
-    "Books",
-    "Brian Ford",
-    "Brock Forestead",
-    "Bryce Clay",
-    "Budget",
-    "Campbell Majors",
-    "Card",
-    "Cards",
-    "Carly Avines",
-    "Carry Beck",
-    "Category",
-    "Clear combobox selection",
-    "Command New",
-    "Credit Card",
-    "Customize your experience",
-    "Date",
-    "Date Click to sort",
-    "Dave Walker",
-    "Department",
-    "Dismiss spotlight",
-    "Emmett Brown",
-    "Export filtered",
-    "Filters (<n>)",
-    "GL Code",
-    "Group",
-    "Home",
-    "Insights",
-    "Invoicing",
-    "Jane Black You jane@demo.mercury.com",
-    "Jane Black jane@demo.mercury.com",
-    "Jessica Awad",
-    "John Miller",
-    "Keyword",
-    "Landon Shepherd",
-    "Learn about bookmarks",
-    "Mary Metcalfe",
-    "Match receipts",
-    "Merchant Type",
-    "Mercury Demo Pro",
-    "Method",
-    "More bulk actions",
-    "Move money",
-    "Multiple Pending Employee",
-    "Navigate to Settings",
-    "Next page",
-    "No Engagement",
-    "Noel Kim",
-    "Onboarding Incomplete",
-    "Open account",
-    "Open combobox menu",
-    "Ops / Payroll <amount>",
-    "Paul Paulson",
-    "Payments",
-    "Pedro Nuñes",
-    "Policy",
-    "Previous page",
-    "Remove",
-    "Remove bookmark",
-    "Reorder Bill Pay bookmark",
-    "Reorder Credit Card bookmark",
-    "Reorder Insights bookmark",
-    "Reorder Ops / Payroll bookmark",
-    "Reset",
-    "Sally Park",
-    "Search for anything",
-    "Search team members by name or email",
-    "Select All",
-    "Selected Monthly money out",
-    "Settings",
-    "Sharon Green",
-    "Shawn Bruce",
-    "Show graphs",
-    "Show graphs Money out this month <amount> <n>",
-    "Silvia Branch",
-    "Sort",
-    "Starting Soon",
-    "Status",
-    "Stephen Miles",
-    "Tasks <n>",
-    "Team Member",
-    "Team Spend",
-    "This transaction",
-    "Thomas Brown",
-    "To/From Click to sort",
-    "Toggle Private Mode",
-    "Transactions",
-    "Unselect",
-    "View categorized transactions",
-    "Viewing as Admin",
-    "Xavier Xyloto",
-    "updates"
-   ],
-   "headings": [
-    "Transactions"
-   ],
+   "controls": [],
+   "headings": [],
    "path": "/transactions",
    "structure": "dialog",
    "top": {
     "name": "",
-    "role": "generic"
+    "role": "LabelText"
    }
   },
   "hop": [
@@ -1920,10 +1943,10 @@
    "by": "conductor",
    "date": "2026-10-03",
    "decision": "accept",
-   "note": "right team member tab content; the panel opens inside the parent's Monthly money out view; the first-visit 'We categorized past transactions' tip also shows, as on the accepted root",
+   "note": "reached: re-checked after the layer-detection fix; replay light and dark show the Filters panel with the Team Member tab selected and the same options as the capture (conductor compared sheets 2026-10-03). Similarity is low because the fingerprint top is a fragment of the right-hand pane",
    "reason": "below-threshold"
   },
-  "similarity": 0.7484,
+  "similarity": 0.7482,
   "source": "f34016a29b1acb21b52eb9294e16f330ce966a1e",
   "status": "accepted"
  },
@@ -1932,86 +1955,27 @@
   "fingerprint": {
    "controls": [
     "Account",
-    "Account Click to sort",
-    "Accounting",
-    "Accounts",
-    "Add attachment",
-    "Add file",
-    "Add notes",
     "Amount",
-    "Amount Click to sort",
-    "Apply",
     "Attachment",
-    "Banking",
-    "Bill Pay",
-    "Books",
     "Budget",
     "Card",
-    "Cards",
     "Category",
-    "Clear combobox selection",
-    "Command New",
-    "Credit Card",
-    "Customize your experience",
     "Date",
-    "Date Click to sort",
     "Department",
-    "Dismiss spotlight",
-    "Export filtered",
-    "Filters (<n>)",
     "From",
     "GL Code",
-    "Group",
-    "Home",
-    "Insights",
-    "Invoicing",
     "Keyword",
-    "Learn about bookmarks",
-    "Match receipts",
     "Merchant Type",
-    "Mercury Demo Pro",
     "Method",
-    "More bulk actions",
-    "Move money",
-    "Navigate to Settings",
-    "Next page",
-    "Open account",
     "Open combobox menu",
-    "Ops / Payroll <amount>",
-    "Payments",
     "Policy",
-    "Previous page",
-    "Remove",
-    "Remove bookmark",
-    "Reorder Bill Pay bookmark",
-    "Reorder Credit Card bookmark",
-    "Reorder Insights bookmark",
-    "Reorder Ops / Payroll bookmark",
     "Reset",
-    "Search for anything",
-    "Selected Monthly money out",
-    "Settings",
-    "Show graphs",
-    "Show graphs Money out this month <amount> <n>",
     "Show transactions for",
-    "Sort",
     "Status",
-    "Tasks <n>",
     "Team Member",
-    "Team Spend",
-    "This transaction",
-    "To",
-    "To/From Click to sort",
-    "Toggle Private Mode",
-    "Transactions",
-    "Unselect",
-    "View categorized transactions",
-    "Viewing as Admin",
-    "updates"
+    "To"
    ],
-   "headings": [
-    "Transactions"
-   ],
+   "headings": [],
    "path": "/transactions",
    "structure": "dialog",
    "top": {
@@ -2031,8 +1995,259 @@
   "parent": "transactions.saved-view-applied",
   "recordedBy": "draft",
   "review": null,
-  "similarity": 0.9553,
+  "similarity": 0.9445,
   "source": "43c01c840b99a23a8dd34b4f82653ec1ae7c86f8",
+  "status": "accepted"
+ },
+ "transactions.graphs-shown": {
+  "checked": "2026-10-02-1349",
+  "fingerprint": {
+   "controls": [
+    "Account Click to sort",
+    "Accounting",
+    "Accounts",
+    "Add attachment",
+    "Add file",
+    "Add notes",
+    "Amount",
+    "Amount Click to sort",
+    "Apply",
+    "Banking",
+    "Bill Pay",
+    "Books",
+    "Cards",
+    "Category",
+    "Clear combobox selection",
+    "Command New",
+    "Credit Card",
+    "Customize your experience",
+    "Date",
+    "Date Click to sort",
+    "Dismiss spotlight",
+    "Export all",
+    "Filters",
+    "Group",
+    "Hide graphs",
+    "Home",
+    "Insights",
+    "Invoicing",
+    "Keyword",
+    "Learn about bookmarks",
+    "Match receipts",
+    "Mercury Demo Pro",
+    "More bulk actions",
+    "Move money",
+    "Navigate to Settings",
+    "Next page",
+    "Open account",
+    "Open combobox menu",
+    "Ops / Payroll <amount>",
+    "Payments",
+    "Previous page",
+    "Remove bookmark",
+    "Reorder Bill Pay bookmark",
+    "Reorder Credit Card bookmark",
+    "Reorder Insights bookmark",
+    "Reorder Ops / Payroll bookmark",
+    "Saved views",
+    "Search for anything",
+    "Settings",
+    "Sort",
+    "Tasks <n>",
+    "Team Spend",
+    "This transaction",
+    "To/From",
+    "To/From Click to sort",
+    "Toggle Private Mode",
+    "Transactions",
+    "Unselect",
+    "View categorized transactions",
+    "Viewing as Admin",
+    "updates"
+   ],
+   "headings": [
+    "Transactions"
+   ],
+   "path": "/transactions",
+   "structure": "document",
+   "top": {
+    "name": "",
+    "role": "document"
+   }
+  },
+  "hop": [
+   {
+    "click": {
+     "name": "Show graphs",
+     "role": "button"
+    }
+   }
+  ],
+  "mutates": false,
+  "parent": "transactions.index",
+  "recordedBy": "agent",
+  "review": {
+   "by": "conductor",
+   "date": "2026-10-03",
+   "decision": "accept",
+   "note": "same expanded graphs (cumulative money in/out line chart plus bar chart); the hop clicks Show graphs as the label says. The grouping reads To/From where the capture shows Category, which the card marks as specific to that capture. The 'Hide graphs' tooltip is the pointer still resting on the button the hop just clicked, not a separate layer.",
+   "reason": "below-threshold"
+  },
+  "similarity": 0.895,
+  "source": "2db1456476b1467146288d802f374dc656daa383",
+  "status": "accepted"
+ },
+ "transactions.group-menu": {
+  "checked": "2026-10-02-1349",
+  "fingerprint": {
+   "controls": [
+    "Account",
+    "Card",
+    "Category",
+    "Directionality (In/Out)",
+    "GL Code",
+    "Group by",
+    "Merchant Type",
+    "Options",
+    "To/From"
+   ],
+   "headings": [],
+   "path": "/transactions",
+   "structure": "menu",
+   "top": {
+    "name": "Group",
+    "role": "menu"
+   }
+  },
+  "hop": [
+   {
+    "click": {
+     "name": "Group",
+     "role": "button"
+    }
+   }
+  ],
+  "mutates": false,
+  "parent": "transactions.index",
+  "recordedBy": "agent",
+  "review": {
+   "by": "conductor",
+   "date": "2026-10-03",
+   "decision": "accept",
+   "note": "same Group by combobox open (To/From, Account, Card, Merchant Type, Category, GL Code, Directionality), partly under the first-visit tip; hop clicks the Group button",
+   "reason": "sample"
+  },
+  "similarity": 0.9152,
+  "source": "ecb6f5c25d5959ced58e07b8016b63f72ee9268e",
+  "status": "accepted"
+ },
+ "transactions.grouped-by-category": {
+  "checked": "2026-10-02-1349",
+  "fingerprint": {
+   "controls": [
+    "Accounting",
+    "Accounts",
+    "Add file",
+    "Add notes",
+    "Amount",
+    "Apply",
+    "Banking",
+    "Bill Pay",
+    "Books",
+    "Business Client Meals <n> transactions Expand group <amount>",
+    "Cards",
+    "Category",
+    "Command New",
+    "Contractor Payments <n> transactions Expand group <amount>",
+    "Credit Card",
+    "Customize your experience",
+    "Date",
+    "Employee Gifts <n> transactions Expand group <amount>",
+    "Export all",
+    "Filters",
+    "Group",
+    "Group by",
+    "Group sort order",
+    "Home",
+    "Insights",
+    "Investments <n> transactions Expand group <amount>",
+    "Invoicing",
+    "Keyword",
+    "Learn about bookmarks",
+    "Legal Fees <n> transaction Expand group <amount>",
+    "Lunch Perks <n> transactions Expand group <amount>",
+    "Match receipts",
+    "Mercury Demo Pro",
+    "More bulk actions",
+    "Move money",
+    "Navigate to Settings",
+    "Next page",
+    "Office Supplies <n> transactions Expand group <amount>",
+    "Open account",
+    "Open combobox menu",
+    "Ops / Payroll <amount>",
+    "Payments",
+    "Previous page",
+    "Remove bookmark",
+    "Reorder Bill Pay bookmark",
+    "Reorder Credit Card bookmark",
+    "Reorder Insights bookmark",
+    "Reorder Ops / Payroll bookmark",
+    "Reset",
+    "Saved views",
+    "Search for anything",
+    "Settings",
+    "Show graphs",
+    "Show graphs Net change this month <amount> <n> Money in <amount> <n> Money out <amount> <n>",
+    "Software <n> transactions Expand group <amount>",
+    "Sort",
+    "Sort groups by",
+    "Tasks <n>",
+    "Team Spend",
+    "Toggle Private Mode",
+    "Transactions",
+    "Travel - Accommodation <n> transactions Expand group <amount>",
+    "Uncategorized <n> transactions Expand group <amount>",
+    "Unselect",
+    "Venue Rental <n> transactions Expand group <amount>",
+    "Viewing as Admin",
+    "updates"
+   ],
+   "headings": [
+    "Transactions",
+    "Software <n> transactions Expand group <amount>",
+    "Uncategorized <n> transactions Expand group <amount>",
+    "Legal Fees <n> transaction Expand group <amount>",
+    "Travel - Accommodation <n> transactions Expand group <amount>",
+    "Investments <n> transactions Expand group <amount>",
+    "Venue Rental <n> transactions Expand group <amount>",
+    "Office Supplies <n> transactions Expand group <amount>",
+    "Employee Gifts <n> transactions Expand group <amount>",
+    "Contractor Payments <n> transactions Expand group <amount>",
+    "Lunch Perks <n> transactions Expand group <amount>",
+    "Business Client Meals <n> transactions Expand group <amount>"
+   ],
+   "path": "/transactions",
+   "structure": "document",
+   "top": {
+    "name": "",
+    "role": "document"
+   }
+  },
+  "hop": [
+   {
+    "click": {
+     "name": "Category",
+     "role": "option"
+    }
+   }
+  ],
+  "mutates": false,
+  "parent": "transactions.group-menu",
+  "recordedBy": "agent",
+  "review": null,
+  "similarity": 0.9375,
+  "source": "7b0e5d10bc6751645c31afd2d2139fa5f8cdaee1",
   "status": "accepted"
  },
  "transactions.index": {
@@ -2208,6 +2423,180 @@
   "source": "97d170e1550eee4afc0af065b78cda302a97674c",
   "status": "accepted"
  },
+ "transactions.insights-breakdown": {
+  "checked": "2026-10-02-1349",
+  "fingerprint": {
+   "controls": [
+    "<date>",
+    "Accounting",
+    "Accounts",
+    "All Cashflow",
+    "Banking",
+    "Bill Pay",
+    "Books",
+    "Cards",
+    "Category",
+    "Command New",
+    "Copy section",
+    "Credit Card",
+    "Customize your experience",
+    "Export",
+    "Filters",
+    "GL Code",
+    "Helpful",
+    "Home",
+    "Insights",
+    "Invoicing",
+    "Learn about bookmarks",
+    "Mercury Demo Pro",
+    "Money in",
+    "Move money",
+    "Navigate to Settings",
+    "Not helpful",
+    "Open account",
+    "Ops / Payroll <amount>",
+    "Payments",
+    "Recipient",
+    "Remove bookmark",
+    "Remove from bookmarks",
+    "Reorder Bill Pay bookmark",
+    "Reorder Credit Card bookmark",
+    "Reorder Insights bookmark",
+    "Reorder Ops / Payroll bookmark",
+    "Saved views",
+    "Search for anything",
+    "Share feedback",
+    "Show line chart",
+    "Show overview chart",
+    "Show sankey chart",
+    "Show stacked bar chart",
+    "Source",
+    "Spending",
+    "Tasks <n>",
+    "Team Spend",
+    "Toggle Private Mode",
+    "Transactions",
+    "Viewing as Admin",
+    "transactions",
+    "updates"
+   ],
+   "headings": [
+    "Insights"
+   ],
+   "path": "/insights/overview",
+   "structure": "document",
+   "top": {
+    "name": "",
+    "role": "document"
+   }
+  },
+  "hop": [
+   {
+    "scroll": {
+     "text": "Remaining recipients"
+    }
+   }
+  ],
+  "mutates": false,
+  "parent": "transactions.insights",
+  "recordedBy": "agent",
+  "review": null,
+  "similarity": 0.9499,
+  "source": "0974ef455a1e2bde0f9e1faf713cd27381d602f7",
+  "status": "accepted"
+ },
+ "transactions.insights-breakdown-category": {
+  "checked": "2026-10-02-1349",
+  "fingerprint": {
+   "controls": [
+    "<date>",
+    "Accounting",
+    "Accounts",
+    "All Cashflow",
+    "Banking",
+    "Bill Pay",
+    "Books",
+    "Cards",
+    "Categorize",
+    "Category",
+    "Command New",
+    "Copy section",
+    "Credit Card",
+    "Customize your experience",
+    "Dismiss banner",
+    "Export",
+    "Filters",
+    "GL Code",
+    "Helpful",
+    "Home",
+    "Insights",
+    "Invoicing",
+    "Learn about bookmarks",
+    "Mercury Demo Pro",
+    "Money in",
+    "Move money",
+    "Navigate to Settings",
+    "Not helpful",
+    "Open account",
+    "Ops / Payroll <amount>",
+    "Payments",
+    "Recipient",
+    "Remove bookmark",
+    "Remove from bookmarks",
+    "Reorder Bill Pay bookmark",
+    "Reorder Credit Card bookmark",
+    "Reorder Insights bookmark",
+    "Reorder Ops / Payroll bookmark",
+    "Saved views",
+    "Search for anything",
+    "Share feedback",
+    "Show line chart",
+    "Show overview chart",
+    "Show sankey chart",
+    "Show stacked bar chart",
+    "Source",
+    "Spending",
+    "Tasks <n>",
+    "Team Spend",
+    "Toggle Private Mode",
+    "Transactions",
+    "Viewing as Admin",
+    "transactions",
+    "updates"
+   ],
+   "headings": [
+    "Insights"
+   ],
+   "path": "/insights/overview",
+   "structure": "document",
+   "top": {
+    "name": "",
+    "role": "document"
+   }
+  },
+  "hop": [
+   {
+    "click": {
+     "index": 0,
+     "name": "Category",
+     "role": "button"
+    }
+   }
+  ],
+  "mutates": false,
+  "parent": "transactions.insights-breakdown",
+  "recordedBy": "agent",
+  "review": {
+   "by": "conductor",
+   "date": "2026-10-03",
+   "decision": "accept",
+   "note": "same Insights breakdown with Money in on the Category segment (Uncategorized 57.0%, Software 27.9%) and the 'Get better insights' Categorize prompt; hop clicks the first Category button as labeled; only scroll and amounts differ",
+   "reason": "below-threshold"
+  },
+  "similarity": 0.6428,
+  "source": "bd16d501349a35762ac35a6c05a656bc9f29476a",
+  "status": "accepted"
+ },
  "transactions.insights-cashflow-menu": {
   "checked": "2026-10-02-1349",
   "fingerprint": {
@@ -2244,6 +2633,382 @@
   },
   "similarity": 0.8857,
   "source": "8c850f6cc0250890056fe5feee9329ddf950b8c0",
+  "status": "accepted"
+ },
+ "transactions.insights-compare": {
+  "checked": "2026-10-02-1349",
+  "fingerprint": {
+   "controls": [
+    "<date>",
+    "Accounting",
+    "Accounts",
+    "All Cashflow",
+    "Banking",
+    "Bill Pay",
+    "Books",
+    "Cards",
+    "Category",
+    "Command New",
+    "Copy section",
+    "Create view",
+    "Credit Card",
+    "Customize your experience",
+    "Export",
+    "Filters (<n>)",
+    "GL Code",
+    "Helpful",
+    "Home",
+    "Insights",
+    "Invoicing",
+    "Learn about bookmarks",
+    "Mercury Demo Pro",
+    "Money in",
+    "Move money",
+    "Navigate to Settings",
+    "Not helpful",
+    "Open account",
+    "Ops / Payroll <amount>",
+    "Payments",
+    "Recipient",
+    "Remove bookmark",
+    "Remove comparison",
+    "Remove filter",
+    "Remove from bookmarks",
+    "Reorder Bill Pay bookmark",
+    "Reorder Credit Card bookmark",
+    "Reorder Insights bookmark",
+    "Reorder Ops / Payroll bookmark",
+    "Reset",
+    "Saved views",
+    "Search for anything",
+    "Share feedback",
+    "Show line chart",
+    "Show overview chart",
+    "Show sankey chart",
+    "Show stacked bar chart",
+    "Source",
+    "Spending",
+    "Tasks <n>",
+    "Team Spend",
+    "Toggle Private Mode",
+    "Transactions",
+    "Viewing as Admin",
+    "transactions",
+    "updates"
+   ],
+   "headings": [
+    "Insights"
+   ],
+   "path": "/insights/overview",
+   "structure": "document",
+   "top": {
+    "name": "",
+    "role": "document"
+   }
+  },
+  "hop": [
+   {
+    "click": {
+     "name": "Previous month",
+     "role": "option"
+    }
+   }
+  ],
+  "mutates": false,
+  "parent": "transactions.insights-compare-menu",
+  "recordedBy": "agent",
+  "review": {
+   "by": "conductor",
+   "date": "2026-10-03",
+   "decision": "accept",
+   "note": "same Insights page, August 2026 compared to Previous month: 'Net cashflow vs. previous month' with delta chips on net cashflow and Money out, Compare to menu closed; the chip values and the generated insight cards differ only because the demo data drifted",
+   "reason": "below-threshold"
+  },
+  "similarity": 0.8489,
+  "source": "1b519b6fd9a4c0cccb82378548db4ce63d827a41",
+  "status": "accepted"
+ },
+ "transactions.insights-compare-menu": {
+  "checked": "2026-10-02-1349",
+  "fingerprint": {
+   "controls": [
+    "No comparison",
+    "Previous month"
+   ],
+   "headings": [],
+   "path": "/insights/overview",
+   "structure": "listbox",
+   "top": {
+    "name": "",
+    "role": "listbox"
+   }
+  },
+  "hop": [
+   {
+    "click": {
+     "name": "Select August, 2026",
+     "role": "gridcell"
+    }
+   },
+   {
+    "click": {
+     "text": "Compare to"
+    }
+   }
+  ],
+  "mutates": false,
+  "parent": "transactions.insights-date-menu",
+  "recordedBy": "agent",
+  "review": {
+   "by": "conductor",
+   "date": "2026-10-03",
+   "decision": "accept",
+   "note": "same Compare to menu (No comparison checked, Previous month) with the August 2026 chip; the hop picks August, then Compare to, as the label says",
+   "reason": "below-threshold"
+  },
+  "similarity": 0.8527,
+  "source": "9ba9cdc4f9c2d5bf15ef10e0470aac03238cfa5f",
+  "status": "accepted"
+ },
+ "transactions.insights-date-menu": {
+  "checked": "2026-10-02-1349",
+  "fingerprint": {
+   "controls": [
+    "From",
+    "Open combobox menu",
+    "To"
+   ],
+   "headings": [],
+   "path": "/insights/overview",
+   "structure": "dialog",
+   "top": {
+    "name": "",
+    "role": "generic"
+   }
+  },
+  "hop": [
+   {
+    "click": {
+     "index": 2,
+     "name": "<date>–Today",
+     "role": "menuitem"
+    }
+   }
+  ],
+  "mutates": false,
+  "parent": "transactions.insights",
+  "recordedBy": "agent",
+  "review": {
+   "by": "conductor",
+   "date": "2026-10-03",
+   "decision": "accept",
+   "note": "same date-chip popover (Custom preset, From/To Today, 2026 month grid); the hop clicks the '<date>–Today' chip; only the start date differs (Jun 25 vs Jun 17)",
+   "reason": "below-threshold"
+  },
+  "similarity": 0.8834,
+  "source": "e1b01d64701dcdbcd740fddf45c125ce41efb3a9",
+  "status": "accepted"
+ },
+ "transactions.insights-drilldown": {
+  "checked": "2026-10-02-1349",
+  "fingerprint": {
+   "controls": [
+    "+ <n> more",
+    "Account Click to sort",
+    "Accounting",
+    "Accounts",
+    "Add attachment",
+    "Add file",
+    "Add notes",
+    "All time",
+    "Amount Click to sort",
+    "Apply",
+    "Banking",
+    "Bill Pay",
+    "Books",
+    "Cards",
+    "Category",
+    "Clear combobox selection",
+    "Command New",
+    "Create view",
+    "Credit Card",
+    "Customize your experience",
+    "Date Click to sort",
+    "Dismiss spotlight",
+    "Export filtered",
+    "Filters (<n>)",
+    "Group",
+    "Gusto (Payroll)",
+    "Home",
+    "Insights",
+    "Invoicing",
+    "Learn about bookmarks",
+    "Match receipts",
+    "Mercury Demo Pro",
+    "More bulk actions",
+    "Move money",
+    "Navigate to Settings",
+    "Next page",
+    "Open account",
+    "Open combobox menu",
+    "Ops / Payroll <amount>",
+    "Payments",
+    "Previous page",
+    "Remove bookmark",
+    "Remove filter",
+    "Reorder Bill Pay bookmark",
+    "Reorder Credit Card bookmark",
+    "Reorder Insights bookmark",
+    "Reorder Ops / Payroll bookmark",
+    "Reset",
+    "Saved views",
+    "Search for anything",
+    "Settings",
+    "Show graphs",
+    "Show graphs Money out all time <amount> <n>",
+    "Sort",
+    "Tasks <n>",
+    "Team Spend",
+    "This transaction",
+    "To/From Click to sort",
+    "Toggle Private Mode",
+    "Transactions",
+    "Unselect",
+    "View categorized transactions",
+    "Viewing as Admin",
+    "updates"
+   ],
+   "headings": [
+    "Transactions"
+   ],
+   "path": "/transactions",
+   "structure": "document",
+   "top": {
+    "name": "",
+    "role": "document"
+   }
+  },
+  "hop": [
+   {
+    "click": {
+     "text": "GUSTO"
+    }
+   }
+  ],
+  "mutates": false,
+  "parent": "transactions.insights-breakdown",
+  "recordedBy": "agent",
+  "review": null,
+  "similarity": 0.9516,
+  "source": "0b875fe2163d31315076a18863a701eff9fcaf82",
+  "status": "accepted"
+ },
+ "transactions.insights-excluded": {
+  "checked": "2026-10-02-1349",
+  "fingerprint": {
+   "controls": [
+    "Account Click to sort",
+    "Amount Click to sort",
+    "Date Click to sort",
+    "This transaction",
+    "To/From Click to sort"
+   ],
+   "headings": [],
+   "path": "/insights/overview",
+   "structure": "status",
+   "top": {
+    "name": "Insights exclusions table",
+    "role": "table"
+   }
+  },
+  "hop": [
+   {
+    "click": {
+     "name": "Exclude 2 Transactions",
+     "role": "button"
+    }
+   }
+  ],
+  "mutates": true,
+  "parent": "transactions.insights-exclusion-selected",
+  "recordedBy": "agent",
+  "review": {
+   "by": "conductor",
+   "date": "2026-10-03",
+   "decision": "accept",
+   "note": "re-checked after the layer-detection fixes of 2026-10-03 (fingerprint refreshed); same hop the conductor's review panel accepted earlier today, similarity 0.9694",
+   "reason": "mutating"
+  },
+  "similarity": 0.9694,
+  "source": "e3e7614ae9f273da12335f56b0fb4e189f6e1d25",
+  "status": "accepted"
+ },
+ "transactions.insights-exclusion-selected": {
+  "checked": "2026-10-02-1349",
+  "fingerprint": {
+   "controls": [
+    "<n>M",
+    "Account Click to sort",
+    "Amount Click to sort",
+    "Cancel",
+    "Close",
+    "Date Click to sort",
+    "Enabled",
+    "Exclude <n> Transactions",
+    "Include linked account transfers",
+    "Search transactions to exclude",
+    "Settings",
+    "This transaction",
+    "To/From Click to sort",
+    "View your custom art"
+   ],
+   "headings": [],
+   "path": "/insights/overview",
+   "structure": "dialog",
+   "top": {
+    "name": "",
+    "role": "dialog"
+   }
+  },
+  "hop": [
+   {
+    "fill": {
+     "locator": {
+      "name": "Search transactions to exclude",
+      "role": "textbox"
+     },
+     "value": "Deli 77"
+    }
+   },
+   {
+    "wait": {
+     "locator": {
+      "name": "Deli 77",
+      "role": "cell"
+     }
+    }
+   },
+   {
+    "click": {
+     "index": 0,
+     "name": "This transaction",
+     "role": "cell"
+    }
+   },
+   {
+    "click": {
+     "index": 1,
+     "name": "This transaction",
+     "role": "cell"
+    }
+   }
+  ],
+  "mutates": false,
+  "parent": "transactions.insights-exclusions",
+  "recordedBy": "agent",
+  "review": null,
+  "similarity": 0.9347,
+  "source": "378b6c473d6fc4d5070f56f427440e97af9c99d7",
   "status": "accepted"
  },
  "transactions.insights-exclusions": {
@@ -2363,15 +3128,15 @@
   ],
   "mutates": false,
   "parent": "transactions.insights",
-  "recordedBy": "draft",
+  "recordedBy": "agent",
   "review": {
    "by": "conductor",
    "date": "2026-10-03",
    "decision": "reject",
-   "note": "different screen: the replay shows the idle Export button; the capture is the transient loading pill",
+   "note": "transient export loading pill with 0 descendants: the replay shows the settled Export button, not the three-dot pill",
    "reason": "below-threshold"
   },
-  "similarity": 0.8761,
+  "similarity": 0.8754,
   "source": "c809ea9be227aa8e0a918af5631e3a38d864547c",
   "status": "rejected"
  },
@@ -2635,6 +3400,102 @@
   "source": "97d170e1550eee4afc0af065b78cda302a97674c",
   "status": "accepted"
  },
+ "transactions.insights-money-in-summary": {
+  "checked": "2026-10-02-1349",
+  "fingerprint": {
+   "controls": [
+    "<date>",
+    "Accounting",
+    "Accounts",
+    "Banking",
+    "Bill Pay",
+    "Books",
+    "Cards",
+    "Category",
+    "Command New",
+    "Copy section",
+    "Create view",
+    "Credit Card",
+    "Credit Cashback <amount>",
+    "Customize your experience",
+    "Export",
+    "Filters (<n>)",
+    "GL Code",
+    "Helpful",
+    "Home",
+    "Insights",
+    "Invoices <n>",
+    "Invoicing",
+    "Learn about bookmarks",
+    "Mercury Demo Pro",
+    "Money In",
+    "Money in",
+    "Move money",
+    "Navigate to Settings",
+    "Not helpful",
+    "Open account",
+    "Ops / Payroll <amount>",
+    "Payments",
+    "Remove bookmark",
+    "Remove filter",
+    "Remove from bookmarks",
+    "Reorder Bill Pay bookmark",
+    "Reorder Credit Card bookmark",
+    "Reorder Insights bookmark",
+    "Reorder Ops / Payroll bookmark",
+    "Reset",
+    "Saved views",
+    "Search for anything",
+    "Share feedback",
+    "Show line chart",
+    "Show overview chart",
+    "Show sankey chart",
+    "Show stacked bar chart",
+    "Source",
+    "Spending",
+    "Tasks <n>",
+    "Team Spend",
+    "Toggle Private Mode",
+    "Transactions",
+    "Transactions <n>",
+    "Treasury earnings <amount>",
+    "Viewing as Admin",
+    "transactions",
+    "updates"
+   ],
+   "headings": [
+    "Insights",
+    "Summary"
+   ],
+   "path": "/insights/overview",
+   "structure": "document",
+   "top": {
+    "name": "",
+    "role": "document"
+   }
+  },
+  "hop": [
+   {
+    "wait": {
+     "locator": {
+      "text": "Remaining sources"
+     }
+    }
+   },
+   {
+    "scroll": {
+     "text": "Remaining sources"
+    }
+   }
+  ],
+  "mutates": false,
+  "parent": "transactions.insights-money-in",
+  "recordedBy": "agent",
+  "review": null,
+  "similarity": 0.9538,
+  "source": "3831d7e8ec7a5a1e08f66f7ee9bcf2ede6bfd90a",
+  "status": "accepted"
+ },
  "transactions.insights-quarterly-spend": {
   "checked": "2026-10-02-1349",
   "fingerprint": {
@@ -2847,6 +3708,82 @@
   "source": "30a390dd8faede1169dc3930baf8c0acc66345b7",
   "status": "accepted"
  },
+ "transactions.insights-settings-menu": {
+  "checked": "2026-10-02-1349",
+  "fingerprint": {
+   "controls": [
+    "Manage categories",
+    "Settings"
+   ],
+   "headings": [],
+   "path": "/insights/overview",
+   "structure": "menu",
+   "top": {
+    "name": "",
+    "role": "menu"
+   }
+  },
+  "hop": [
+   {
+    "click": {
+     "css": "[data-icon=\"sliders\"]"
+    }
+   }
+  ],
+  "mutates": false,
+  "parent": "transactions.insights",
+  "recordedBy": "agent",
+  "review": {
+   "by": "conductor",
+   "date": "2026-10-03",
+   "decision": "accept",
+   "note": "same sliders-icon menu (Settings, Manage categories) on Insights; the hop clicks the sliders icon",
+   "reason": "below-threshold"
+  },
+  "similarity": 0.8933,
+  "source": "0d2230ce04b209dede64f1a793cff71526d6ff19",
+  "status": "accepted"
+ },
+ "transactions.insights-settings-modal": {
+  "checked": "2026-10-02-1349",
+  "fingerprint": {
+   "controls": [
+    "<n>M",
+    "Account Click to sort",
+    "Amount Click to sort",
+    "Close",
+    "Date Click to sort",
+    "Enabled",
+    "Include linked account transfers",
+    "Search transactions to exclude",
+    "Settings",
+    "To/From Click to sort",
+    "View your custom art"
+   ],
+   "headings": [],
+   "path": "/insights/overview",
+   "structure": "dialog",
+   "top": {
+    "name": "",
+    "role": "dialog"
+   }
+  },
+  "hop": [
+   {
+    "click": {
+     "name": "Settings",
+     "role": "menuitem"
+    }
+   }
+  ],
+  "mutates": false,
+  "parent": "transactions.insights-settings-menu",
+  "recordedBy": "agent",
+  "review": null,
+  "similarity": 0.9738,
+  "source": "2c085d27622652a2d05089d136c5b3b6ef3849f9",
+  "status": "accepted"
+ },
  "transactions.insights-spending": {
   "checked": "2026-10-02-1349",
   "fingerprint": {
@@ -2935,6 +3872,103 @@
   "source": "97d170e1550eee4afc0af065b78cda302a97674c",
   "status": "accepted"
  },
+ "transactions.insights-spending-summary": {
+  "checked": "2026-10-02-1349",
+  "fingerprint": {
+   "controls": [
+    "<date>",
+    "Accounting",
+    "Accounts",
+    "Banking",
+    "Bill Pay",
+    "Books",
+    "Cards",
+    "Cards used <n>",
+    "Category",
+    "Command New",
+    "Copy section",
+    "Create view",
+    "Credit Card",
+    "Customize your experience",
+    "Export",
+    "Fees paid <amount>",
+    "Filters (<n>)",
+    "GL Code",
+    "Helpful",
+    "Home",
+    "Insights",
+    "Invoicing",
+    "Learn about bookmarks",
+    "Mercury Demo Pro",
+    "Money Out",
+    "Money in",
+    "Move money",
+    "Navigate to Settings",
+    "Not helpful",
+    "Open account",
+    "Ops / Payroll <amount>",
+    "Payments",
+    "Recipient",
+    "Remove bookmark",
+    "Remove filter",
+    "Remove from bookmarks",
+    "Reorder Bill Pay bookmark",
+    "Reorder Credit Card bookmark",
+    "Reorder Insights bookmark",
+    "Reorder Ops / Payroll bookmark",
+    "Reset",
+    "Saved views",
+    "Search for anything",
+    "Share feedback",
+    "Show line chart",
+    "Show overview chart",
+    "Show sankey chart",
+    "Show stacked bar chart",
+    "Spending",
+    "Tasks <n>",
+    "Team Spend",
+    "Toggle Private Mode",
+    "Transactions",
+    "Transactions <n>",
+    "Viewing as Admin",
+    "transactions",
+    "updates"
+   ],
+   "headings": [
+    "Insights",
+    "Summary"
+   ],
+   "path": "/insights/overview",
+   "structure": "document",
+   "top": {
+    "name": "",
+    "role": "document"
+   }
+  },
+  "hop": [
+   {
+    "wait": {
+     "locator": {
+      "name": "Remaining recipients",
+      "role": "cell"
+     }
+    }
+   },
+   {
+    "scroll": {
+     "name": "Remaining recipients",
+     "role": "cell"
+    }
+   }
+  ],
+  "mutates": false,
+  "parent": "transactions.insights-spending",
+  "recordedBy": "agent",
+  "review": null,
+  "similarity": 0.9489,
+  "source": "e29be0294d6785db58e7e6b16d2b7131095be0d6",
+  "status": "accepted"
+ },
  "transactions.insights-stacked-bar": {
   "checked": "2026-10-02-1349",
   "fingerprint": {
@@ -3007,13 +4041,366 @@
   "recordedBy": "root",
   "review": {
    "by": "conductor",
-   "date": "2026-10-02",
+   "date": "2026-10-03",
    "decision": "accept",
-   "note": "same screen; dates, amounts and chart data drifted since the capture",
+   "note": "re-checked after the layer-detection fixes of 2026-10-03 (fingerprint refreshed); same hop the conductor accepted earlier today, similarity 0.8643",
    "reason": "below-threshold"
   },
-  "similarity": 0.8459,
+  "similarity": 0.8643,
   "source": "97d170e1550eee4afc0af065b78cda302a97674c",
+  "status": "accepted"
+ },
+ "transactions.insights-timeline-no-data": {
+  "checked": "2026-10-02-1349",
+  "fingerprint": {
+   "controls": [],
+   "headings": [],
+   "path": "/insights/overview",
+   "structure": "dialog",
+   "top": {
+    "name": "",
+    "role": "generic"
+   }
+  },
+  "hop": [
+   {
+    "hover": {
+     "css": "[data-inactive-area=\"true\"]",
+     "index": 5
+    }
+   }
+  ],
+  "mutates": false,
+  "parent": "transactions.insights",
+  "recordedBy": "agent",
+  "review": {
+   "by": "conductor",
+   "date": "2026-10-03",
+   "decision": "accept",
+   "note": "same 'No data available' tooltip over an empty month on the timeline scrubber; the month sits further left because the dates moved, and the label names no month",
+   "reason": "below-threshold"
+  },
+  "similarity": 0.8641,
+  "source": "5e516b016f506828fbdfc5122ae3c0d8b6c0ef1d",
+  "status": "accepted"
+ },
+ "transactions.keyword-no-matches": {
+  "checked": "2026-10-02-1349",
+  "fingerprint": {
+   "controls": [
+    "Account Click to sort",
+    "Accounting",
+    "Accounts",
+    "Add attachment",
+    "Add file",
+    "Add notes",
+    "Amount",
+    "Amount Click to sort",
+    "Apply",
+    "Banking",
+    "Bill Pay",
+    "Books",
+    "Cards",
+    "Category",
+    "Clear combobox selection",
+    "Command New",
+    "Credit Card",
+    "Customize your experience",
+    "Date",
+    "Date Click to sort",
+    "Dismiss spotlight",
+    "Export all",
+    "Filter for any matching ‘A<n>y Test’",
+    "Filters",
+    "Group",
+    "Home",
+    "Insights",
+    "Invoicing",
+    "Keyword",
+    "Learn about bookmarks",
+    "Match receipts",
+    "Mercury Demo Pro",
+    "More bulk actions",
+    "Move money",
+    "Navigate to Settings",
+    "Next page",
+    "Open account",
+    "Open combobox menu",
+    "Ops / Payroll <amount>",
+    "Payments",
+    "Previous page",
+    "Remove bookmark",
+    "Reorder Bill Pay bookmark",
+    "Reorder Credit Card bookmark",
+    "Reorder Insights bookmark",
+    "Reorder Ops / Payroll bookmark",
+    "Saved views",
+    "Search by keyword",
+    "Search for anything",
+    "Settings",
+    "Show graphs",
+    "Show graphs Net change this month <amount> <n> Money in <amount> <n> Money out <amount> <n>",
+    "Sort",
+    "Tasks <n>",
+    "Team Spend",
+    "This transaction",
+    "To/From Click to sort",
+    "Toggle Private Mode",
+    "Transactions",
+    "Unselect",
+    "View categorized transactions",
+    "Viewing as Admin",
+    "updates"
+   ],
+   "headings": [
+    "Transactions"
+   ],
+   "path": "/transactions",
+   "structure": "document",
+   "top": {
+    "name": "",
+    "role": "document"
+   }
+  },
+  "hop": [
+   {
+    "click": {
+     "name": "Keyword",
+     "role": "menuitem"
+    }
+   },
+   {
+    "fill": {
+     "locator": {
+      "name": "Search by keyword",
+      "role": "textbox"
+     },
+     "value": "A11y Test"
+    }
+   },
+   {
+    "wait": {
+     "locator": {
+      "name": "Filter for any matching ‘A11y Test’",
+      "role": "button"
+     }
+    }
+   }
+  ],
+  "mutates": false,
+  "parent": "transactions.index",
+  "recordedBy": "agent",
+  "review": null,
+  "similarity": 0.9323,
+  "source": "3f016b33d88b8fe13555b65bc92e0b7b3a76bebb",
+  "status": "accepted"
+ },
+ "transactions.keyword-results": {
+  "checked": "2026-10-02-1349",
+  "fingerprint": {
+   "controls": [
+    "Account Click to sort",
+    "Accounting",
+    "Accounts",
+    "Add attachment",
+    "Add file",
+    "Add notes",
+    "Amount",
+    "Amount Click to sort",
+    "Apply",
+    "Banking",
+    "Bill Pay",
+    "Books",
+    "Cards",
+    "Category",
+    "Clear combobox selection",
+    "Command New",
+    "Create view",
+    "Credit Card",
+    "Customize your experience",
+    "Date",
+    "Date Click to sort",
+    "Dismiss spotlight",
+    "Export filtered",
+    "Filters (<n>)",
+    "Google",
+    "Group",
+    "Home",
+    "Insights",
+    "Invoicing",
+    "Learn about bookmarks",
+    "Match receipts",
+    "Mercury Demo Pro",
+    "More bulk actions",
+    "Move money",
+    "Navigate to Settings",
+    "Next page",
+    "Open account",
+    "Open combobox menu",
+    "Ops / Payroll <amount>",
+    "Payments",
+    "Previous page",
+    "Remove bookmark",
+    "Remove filter",
+    "Reorder Bill Pay bookmark",
+    "Reorder Credit Card bookmark",
+    "Reorder Insights bookmark",
+    "Reorder Ops / Payroll bookmark",
+    "Reset",
+    "Saved views",
+    "Search for anything",
+    "Settings",
+    "Show graphs",
+    "Show graphs Net change <amount> <n> Money in <amount> <n> Money out <amount> . <n>",
+    "Sort",
+    "Tasks <n>",
+    "Team Spend",
+    "This transaction",
+    "To/From Click to sort",
+    "Toggle Private Mode",
+    "Transactions",
+    "Unselect",
+    "View categorized transactions",
+    "Viewing as Admin",
+    "updates"
+   ],
+   "headings": [
+    "Transactions"
+   ],
+   "path": "/transactions",
+   "structure": "document",
+   "top": {
+    "name": "",
+    "role": "document"
+   }
+  },
+  "hop": [
+   {
+    "check": {
+     "index": 0,
+     "name": "Google",
+     "role": "checkbox"
+    }
+   },
+   {
+    "press": "Escape"
+   }
+  ],
+  "mutates": false,
+  "parent": "transactions.keyword-suggestions",
+  "recordedBy": "agent",
+  "review": null,
+  "similarity": 0.9498,
+  "source": "5cdb5b99eb90950050c501d02c5680e17a394958",
+  "status": "accepted"
+ },
+ "transactions.keyword-suggestions": {
+  "checked": "2026-10-02-1349",
+  "fingerprint": {
+   "controls": [
+    "Account Click to sort",
+    "Accounting",
+    "Accounts",
+    "Add attachment",
+    "Add file",
+    "Add notes",
+    "Amount",
+    "Amount Click to sort",
+    "Apply",
+    "Banking",
+    "Bill Pay",
+    "Books",
+    "Cards",
+    "Category",
+    "Clear combobox selection",
+    "Command New",
+    "Credit Card",
+    "Customize your experience",
+    "Date",
+    "Date Click to sort",
+    "Dismiss spotlight",
+    "Export all",
+    "Filter for any matching ‘Google’",
+    "Filters",
+    "Google",
+    "Group",
+    "Home",
+    "Insights",
+    "Invoicing",
+    "Keyword",
+    "Learn about bookmarks",
+    "Match receipts",
+    "Mercury Demo Pro",
+    "More bulk actions",
+    "Move money",
+    "Navigate to Settings",
+    "Next page",
+    "Open account",
+    "Open combobox menu",
+    "Ops / Payroll <amount>",
+    "Payments",
+    "Previous page",
+    "Remove bookmark",
+    "Reorder Bill Pay bookmark",
+    "Reorder Credit Card bookmark",
+    "Reorder Insights bookmark",
+    "Reorder Ops / Payroll bookmark",
+    "Saved views",
+    "Search by keyword",
+    "Search for anything",
+    "Settings",
+    "Show graphs",
+    "Show graphs Net change this month <amount> <n> Money in <amount> <n> Money out <amount> <n>",
+    "Sort",
+    "Tasks <n>",
+    "Team Spend",
+    "This transaction",
+    "To/From Click to sort",
+    "Toggle Private Mode",
+    "Transactions",
+    "Unselect",
+    "View categorized transactions",
+    "Viewing as Admin",
+    "updates"
+   ],
+   "headings": [
+    "Transactions"
+   ],
+   "path": "/transactions",
+   "structure": "dialog",
+   "top": {
+    "name": "",
+    "role": "generic"
+   }
+  },
+  "hop": [
+   {
+    "click": {
+     "name": "Keyword",
+     "role": "menuitem"
+    }
+   },
+   {
+    "fill": {
+     "locator": {
+      "name": "Search by keyword",
+      "role": "textbox"
+     },
+     "value": "Google"
+    }
+   },
+   {
+    "wait": {
+     "ms": 800
+    }
+   }
+  ],
+  "mutates": false,
+  "parent": "transactions.index",
+  "recordedBy": "agent",
+  "review": null,
+  "similarity": 0.9331,
+  "source": "d6b6c8369ad9daf81791cfedade45ad01f693bc4",
   "status": "accepted"
  },
  "transactions.match-receipts": {
@@ -3051,6 +4438,373 @@
   },
   "similarity": 0.8795,
   "source": "ddb59353e60f520c672f1f20ac30e4665ecb7ac5",
+  "status": "accepted"
+ },
+ "transactions.rename-view-modal": {
+  "checked": "2026-10-02-1349",
+  "fingerprint": {
+   "controls": [
+    "Cancel",
+    "New saved view name",
+    "Save"
+   ],
+   "headings": [
+    "Rename View"
+   ],
+   "path": "/transactions",
+   "structure": "dialog",
+   "top": {
+    "name": "",
+    "role": "dialog"
+   }
+  },
+  "hop": [
+   {
+    "click": {
+     "css": "[class*=\"_iconWrapperEdit_\"]",
+     "index": 0
+    }
+   }
+  ],
+  "mutates": false,
+  "parent": "transactions.saved-views-menu",
+  "recordedBy": "agent",
+  "review": null,
+  "similarity": 0.9477,
+  "source": "89c5cb1804a983ba22a1bdf6ef75a5d5e0007b13",
+  "status": "accepted"
+ },
+ "transactions.review-similar": {
+  "checked": "2026-10-02-1349",
+  "fingerprint": {
+   "controls": [
+    "Accounting",
+    "Accounts",
+    "Add file",
+    "Add notes",
+    "Amount",
+    "Apply",
+    "Banking",
+    "Bill Pay",
+    "Books",
+    "Business Client Meals <n> transactions Expand group <amount>",
+    "Cards",
+    "Category",
+    "Command New",
+    "Contractor Payments <n> transactions Expand group <amount>",
+    "Credit Card",
+    "Customize your experience",
+    "Date",
+    "Employee Gifts <n> transactions Expand group <amount>",
+    "Export all",
+    "Filters",
+    "Group",
+    "Home",
+    "Insights",
+    "Investments <n> transactions Expand group <amount>",
+    "Invoicing",
+    "Keyword",
+    "Learn about bookmarks",
+    "Legal Fees <n> transaction Expand group <amount>",
+    "Lunch Perks <n> transactions Expand group <amount>",
+    "Match receipts",
+    "Mercury Demo Pro",
+    "More bulk actions",
+    "Move money",
+    "Navigate to Settings",
+    "Next page",
+    "Office Supplies <n> transactions Expand group <amount>",
+    "Open account",
+    "Open combobox menu",
+    "Ops / Payroll <amount>",
+    "Payments",
+    "Previous page",
+    "Remove bookmark",
+    "Reorder Bill Pay bookmark",
+    "Reorder Credit Card bookmark",
+    "Reorder Insights bookmark",
+    "Reorder Ops / Payroll bookmark",
+    "Reset",
+    "Saved views",
+    "Search for anything",
+    "Settings",
+    "Show graphs",
+    "Show graphs Net change this month <amount> <n> Money in <amount> <n> Money out <amount> <n>",
+    "Software <n> transactions Expand group <amount>",
+    "Sort",
+    "Tasks <n>",
+    "Team Spend",
+    "Toggle Private Mode",
+    "Transactions",
+    "Travel - Accommodation <n> transactions Expand group <amount>",
+    "Uncategorized <n> transactions Expand group <amount>",
+    "Unselect",
+    "Venue Rental <n> transactions Expand group <amount>",
+    "Viewing as Admin",
+    "updates"
+   ],
+   "headings": [
+    "Transactions",
+    "Software <n> transactions Expand group <amount>",
+    "Uncategorized <n> transactions Expand group <amount>",
+    "Legal Fees <n> transaction Expand group <amount>",
+    "Travel - Accommodation <n> transactions Expand group <amount>",
+    "Investments <n> transactions Expand group <amount>",
+    "Venue Rental <n> transactions Expand group <amount>",
+    "Office Supplies <n> transactions Expand group <amount>",
+    "Employee Gifts <n> transactions Expand group <amount>",
+    "Contractor Payments <n> transactions Expand group <amount>",
+    "Lunch Perks <n> transactions Expand group <amount>",
+    "Business Client Meals <n> transactions Expand group <amount>"
+   ],
+   "path": "/transactions",
+   "structure": "document",
+   "top": {
+    "name": "",
+    "role": "document"
+   }
+  },
+  "hop": [
+   {
+    "click": {
+     "name": "View categorized transactions",
+     "role": "link"
+    }
+   }
+  ],
+  "mutates": false,
+  "parent": "transactions.row-category-set",
+  "recordedBy": "agent",
+  "review": {
+   "by": "conductor",
+   "date": "2026-10-03",
+   "decision": "reject",
+   "note": "different screen: the hop clicks the 'View categorized transactions' spotlight link, not Review similar; the replay shows the transactions table grouped by category (Software, Uncategorized, Legal Fees...), not the table filtered to Stefanie Katz x + Check Payment x with Filters (2) and Create view",
+   "reason": "below-threshold"
+  },
+  "similarity": 0.5565,
+  "source": "52f9ba962ce012ae93705d649cc028dc4d6a18a8",
+  "status": "rejected"
+ },
+ "transactions.row-category-dropdown": {
+  "checked": "2026-10-02-1349",
+  "fingerprint": {
+   "controls": [
+    "Create category",
+    "Employee Gifts",
+    "Investments",
+    "Legal Fees",
+    "Software",
+    "Travel - Accommodation",
+    "Travel - Vehicles",
+    "Venue Rental"
+   ],
+   "headings": [],
+   "path": "/transactions",
+   "structure": "listbox",
+   "top": {
+    "name": "",
+    "role": "listbox"
+   }
+  },
+  "hop": [
+   {
+    "click": {
+     "index": 1,
+     "name": "Category",
+     "role": "combobox"
+    }
+   }
+  ],
+  "mutates": false,
+  "parent": "transactions.index",
+  "recordedBy": "agent",
+  "review": null,
+  "similarity": 0.9269,
+  "source": "08196755a93897ed57b9c43cdd28332c191ab18f",
+  "status": "accepted"
+ },
+ "transactions.row-category-search": {
+  "checked": "2026-10-02-1349",
+  "fingerprint": {
+   "controls": [
+    "Account Click to sort",
+    "Accounting",
+    "Accounts",
+    "Add attachment",
+    "Add file",
+    "Add notes",
+    "Amount",
+    "Amount Click to sort",
+    "Apply",
+    "Banking",
+    "Bill Pay",
+    "Books",
+    "Cards",
+    "Category",
+    "Clear combobox selection",
+    "Close combobox menu",
+    "Command New",
+    "Create category",
+    "Credit Card",
+    "Customize your experience",
+    "Date",
+    "Date Click to sort",
+    "Dismiss spotlight",
+    "Export all",
+    "Filters",
+    "Group",
+    "Home",
+    "Insights",
+    "Invoicing",
+    "Keyword",
+    "Learn about bookmarks",
+    "Match receipts",
+    "Mercury Demo Pro",
+    "More bulk actions",
+    "Move money",
+    "Navigate to Settings",
+    "Next page",
+    "Open account",
+    "Open combobox menu",
+    "Ops / Payroll <amount>",
+    "Payments",
+    "Previous page",
+    "Remove bookmark",
+    "Reorder Bill Pay bookmark",
+    "Reorder Credit Card bookmark",
+    "Reorder Insights bookmark",
+    "Reorder Ops / Payroll bookmark",
+    "Saved views",
+    "Search for anything",
+    "Settings",
+    "Show graphs",
+    "Show graphs Net change this month <amount> <n> Money in <amount> <n> Money out <amount> <n>",
+    "Sort",
+    "Tasks <n>",
+    "Team Spend",
+    "This transaction",
+    "To/From Click to sort",
+    "Toggle Private Mode",
+    "Transactions",
+    "Unselect",
+    "View categorized transactions",
+    "Viewing as Admin",
+    "updates"
+   ],
+   "headings": [
+    "Transactions"
+   ],
+   "path": "/transactions",
+   "structure": "document",
+   "top": {
+    "name": "",
+    "role": "document"
+   }
+  },
+  "hop": [
+   {
+    "fill": {
+     "locator": {
+      "index": 1,
+      "name": "Category",
+      "role": "combobox"
+     },
+     "value": "Lunch"
+    }
+   }
+  ],
+  "mutates": false,
+  "parent": "transactions.row-category-dropdown",
+  "recordedBy": "agent",
+  "review": {
+   "by": "conductor",
+   "date": "2026-10-03",
+   "decision": "reject",
+   "note": "different form state: typing 'Lunch' in the Mercury Working Capital row's Category combobox (the row the parent opens) matches nothing and shows only '+ Create category'. The capture, taken on the Lily's Eatery row, shows the 'Lunch Perks' match the note describes.",
+   "reason": "below-threshold"
+  },
+  "similarity": 0.8663,
+  "source": "9a3845d807dd47549e69c9d5eee196c3063a6a69",
+  "status": "rejected"
+ },
+ "transactions.row-category-set": {
+  "checked": "2026-10-02-1349",
+  "fingerprint": {
+   "controls": [],
+   "headings": [],
+   "path": "/transactions",
+   "structure": "status",
+   "top": {
+    "name": "",
+    "role": "LabelText"
+   }
+  },
+  "hop": [
+   {
+    "click": {
+     "name": "Software",
+     "role": "option"
+    }
+   }
+  ],
+  "mutates": false,
+  "parent": "transactions.row-category-dropdown",
+  "recordedBy": "agent",
+  "review": {
+   "by": "conductor",
+   "date": "2026-10-03",
+   "decision": "accept",
+   "note": "same table with Mercury Working Capital set to Software, as the label says; the 'Category updated' toast faded before the screenshots. The sweep arms its status observer before the final hop, so the toast is measured live",
+   "reason": "below-threshold"
+  },
+  "similarity": 0.8832,
+  "source": "e2fe02f66f0a09b213e7bfe001d6834f2e11ce5f",
+  "status": "accepted"
+ },
+ "transactions.save-view-menu": {
+  "checked": "2026-10-02-1349",
+  "fingerprint": {
+   "controls": [
+    "Create New View"
+   ],
+   "headings": [],
+   "path": "/transactions",
+   "structure": "menu",
+   "top": {
+    "name": "Save",
+    "role": "menu"
+   }
+  },
+  "hop": [
+   {
+    "fill": {
+     "locator": {
+      "label": "Specific amount"
+     },
+     "value": "1.00"
+    }
+   },
+   {
+    "click": {
+     "index": 1,
+     "name": "Save",
+     "role": "menuitem"
+    }
+   }
+  ],
+  "mutates": true,
+  "parent": "transactions.filter-amount",
+  "recordedBy": "agent",
+  "review": {
+   "by": "conductor",
+   "date": "2026-10-03",
+   "decision": "accept",
+   "note": "same Save split menu (Create New View) open from the panel Save on 'Monthly money out (edited)'. The 1.00 amount fill only makes the fresh view edited, which the label's Save menu needs, and the capture's view was edited by amount too ($1,000-$50,000). The Amount pane matches the labels. The capture's Team Member pane is where the person wandered before taking the shot, so it is not part of this state.",
+   "reason": "below-threshold"
+  },
+  "similarity": 0.6248,
+  "source": "04c123e099a00b0962930cfe19e796774416abf2",
   "status": "accepted"
  },
  "transactions.saved-view-applied": {
@@ -3184,6 +4938,69 @@
   "source": "0e69eeff66bbbd39ac98c8624ad46fed767f2ee5",
   "status": "accepted"
  },
+ "transactions.settings-menu": {
+  "checked": "2026-10-02-1349",
+  "fingerprint": {
+   "controls": [
+    "Manage categories",
+    "Show graph",
+    "Time zone PDT"
+   ],
+   "headings": [],
+   "path": "/transactions",
+   "structure": "menu",
+   "top": {
+    "name": "Settings",
+    "role": "menu"
+   }
+  },
+  "hop": [
+   {
+    "click": {
+     "name": "Settings",
+     "role": "button"
+    }
+   }
+  ],
+  "mutates": false,
+  "parent": "transactions.index",
+  "recordedBy": "agent",
+  "review": null,
+  "similarity": 0.9347,
+  "source": "1cec514624c3e6f8645d12f32ce1b05df0552e2c",
+  "status": "accepted"
+ },
+ "transactions.sort-menu": {
+  "checked": "2026-10-02-1349",
+  "fingerprint": {
+   "controls": [
+    "Sort order",
+    "Sort transactions by"
+   ],
+   "headings": [],
+   "path": "/transactions",
+   "structure": "menu",
+   "top": {
+    "name": "Sort",
+    "role": "menu"
+   }
+  },
+  "hop": [
+   {
+    "click": {
+     "name": "Sort",
+     "role": "button"
+    }
+   }
+  ],
+  "mutates": false,
+  "parent": "transactions.index",
+  "recordedBy": "agent",
+  "review": null,
+  "similarity": 0.9156,
+  "source": "e0a55bab7598415dde88e5ee96177a84446f5ad9",
+  "status": "accepted"
+ },
  "transactions.table-loading": {
   "checked": "2026-10-02-1349",
   "fingerprint": {
@@ -3269,16 +5086,190 @@
   ],
   "mutates": false,
   "parent": "transactions.saved-views-menu",
-  "recordedBy": "draft",
+  "recordedBy": "agent",
   "review": {
    "by": "conductor",
    "date": "2026-10-03",
    "decision": "reject",
-   "note": "different screen: the replay shows the loaded table; the capture is the transient loading skeleton",
+   "note": "transient skeleton with 0 descendants; replay shows the settled Operating expenses view with loaded rows",
    "reason": "below-threshold"
   },
   "similarity": 0.7268,
   "source": "3e8f4710d0f1dc9c33aa9e426f5686219f6224a9",
   "status": "rejected"
+ },
+ "transactions.time-zone-submenu": {
+  "checked": "2026-10-02-1349",
+  "fingerprint": {
+   "controls": [
+    "Local PDT",
+    "UTC"
+   ],
+   "headings": [],
+   "path": "/transactions",
+   "structure": "menu",
+   "top": {
+    "name": "Time zone PDT",
+    "role": "menu"
+   }
+  },
+  "hop": [
+   {
+    "hover": {
+     "name": "Time zone <n>",
+     "role": "menuitem"
+    }
+   }
+  ],
+  "mutates": false,
+  "parent": "transactions.settings-menu",
+  "recordedBy": "agent",
+  "review": {
+   "by": "conductor",
+   "date": "2026-10-03",
+   "decision": "accept",
+   "note": "same Settings menu with the Time zone submenu (UTC, Local PDT checked), partly under the first-visit tip",
+   "reason": "below-threshold"
+  },
+  "similarity": 0.6738,
+  "source": "e31a941ba8d20016b177ecdf7440904f19277c11",
+  "status": "accepted"
+ },
+ "transactions.view-deleted": {
+  "checked": "2026-10-02-1349",
+  "fingerprint": {
+   "controls": [
+    "Undo"
+   ],
+   "headings": [],
+   "path": "/transactions",
+   "structure": "status",
+   "top": {
+    "name": "",
+    "role": "generic"
+   }
+  },
+  "hop": [
+   {
+    "click": {
+     "name": "Delete",
+     "role": "button"
+    }
+   },
+   {
+    "wait": {
+     "locator": {
+      "text": "View deleted"
+     }
+    }
+   }
+  ],
+  "mutates": true,
+  "parent": "transactions.delete-view-confirm",
+  "recordedBy": "agent",
+  "review": {
+   "by": "conductor",
+   "date": "2026-10-03",
+   "decision": "accept",
+   "note": "re-checked after the layer-detection fixes of 2026-10-03 (fingerprint refreshed); same hop the conductor accepted earlier today, similarity 0.8538",
+   "reason": "below-threshold"
+  },
+  "similarity": 0.8538,
+  "source": "d0fc7d91a13f203bb659070d904d5b17efd3eda9",
+  "status": "accepted"
+ },
+ "transactions.view-renamed": {
+  "checked": "2026-10-02-1349",
+  "fingerprint": {
+   "controls": [
+    "Undo"
+   ],
+   "headings": [],
+   "path": "/transactions",
+   "structure": "status",
+   "top": {
+    "name": "",
+    "role": "generic"
+   }
+  },
+  "hop": [
+   {
+    "fill": {
+     "locator": {
+      "name": "New saved view name",
+      "role": "textbox"
+     },
+     "value": "Test Person"
+    }
+   },
+   {
+    "click": {
+     "name": "Save",
+     "role": "button"
+    }
+   },
+   {
+    "wait": {
+     "locator": {
+      "text": "View renamed"
+     }
+    }
+   }
+  ],
+  "mutates": true,
+  "parent": "transactions.rename-view-modal",
+  "recordedBy": "agent",
+  "review": {
+   "by": "conductor",
+   "date": "2026-10-03",
+   "decision": "accept",
+   "note": "same 'View renamed' toast with Undo, rename dialog closed; hop fills the view name and clicks Save as the label says",
+   "reason": "mutating"
+  },
+  "similarity": 0.905,
+  "source": "9fbf4b5cf40723ef5f5bbf7ca52096a1f25c9257",
+  "status": "accepted"
+ },
+ "transactions.view-saved": {
+  "checked": "2026-10-02-1349",
+  "fingerprint": {
+   "controls": [],
+   "headings": [],
+   "path": "/transactions",
+   "structure": "status",
+   "top": {
+    "name": "",
+    "role": "generic"
+   }
+  },
+  "hop": [
+   {
+    "fill": {
+     "locator": {
+      "label": "Saved view name"
+     },
+     "value": "Test Person"
+    }
+   },
+   {
+    "click": {
+     "name": "Save",
+     "role": "button"
+    }
+   }
+  ],
+  "mutates": true,
+  "parent": "transactions.create-view-modal",
+  "recordedBy": "agent",
+  "review": {
+   "by": "conductor",
+   "date": "2026-10-03",
+   "decision": "accept",
+   "note": "same saved-view result: new chip 'Test Person' active, Filters (3), 'View saved' toast open; the hop types the name and clicks Save as the label says. The empty list and 'Money out this month' come from the accepted parent's filters (This month, amount 1.00), and the fixture name replaces 'Large payments Q3'",
+   "reason": "below-threshold"
+  },
+  "similarity": 0.6701,
+  "source": "f4256474776a649d7216771f82fb54c8cc8385ca",
+  "status": "accepted"
  }
 }

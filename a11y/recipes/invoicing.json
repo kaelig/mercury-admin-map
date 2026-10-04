@@ -32,6 +32,64 @@
   "source": "97d170e1550eee4afc0af065b78cda302a97674c",
   "status": "accepted"
  },
+ "invoicing.add-catalog-item-filled": {
+  "checked": "2026-10-02-1349",
+  "fingerprint": {
+   "controls": [
+    "Close",
+    "Create item",
+    "Customize your experience",
+    "Description (optional)",
+    "Go back",
+    "Item name",
+    "Open account",
+    "Unit price",
+    "Viewing as Admin"
+   ],
+   "headings": [
+    "Add Item"
+   ],
+   "path": "/invoicing/catalog/add-item",
+   "structure": "document",
+   "top": {
+    "name": "",
+    "role": "document"
+   }
+  },
+  "hop": [
+   {
+    "fill": {
+     "locator": {
+      "label": "Item name"
+     },
+     "value": "Test Person"
+    }
+   },
+   {
+    "fill": {
+     "locator": {
+      "label": "Unit price"
+     },
+     "value": "1.00"
+    }
+   },
+   {
+    "fill": {
+     "locator": {
+      "label": "Description (optional)"
+     },
+     "value": "A11y audit test description"
+    }
+   }
+  ],
+  "mutates": false,
+  "parent": "invoicing.add-catalog-item",
+  "recordedBy": "agent",
+  "review": null,
+  "similarity": 0.989,
+  "source": "cf6a5f5447d0bd510a794b75d36bc099aa96c094",
+  "status": "accepted"
+ },
  "invoicing.add-customer": {
   "checked": "2026-10-02-1349",
   "fingerprint": {
@@ -65,6 +123,238 @@
   "review": null,
   "similarity": 0.9999,
   "source": "97d170e1550eee4afc0af065b78cda302a97674c",
+  "status": "accepted"
+ },
+ "invoicing.add-customer-address": {
+  "checked": "2026-10-02-1349",
+  "fingerprint": {
+   "controls": [
+    "Add customer address",
+    "Additional emails (optional)",
+    "Address line <n>",
+    "City",
+    "Close",
+    "Country",
+    "Create customer",
+    "Customize your experience",
+    "Go back",
+    "Name",
+    "Open account",
+    "Open combobox menu",
+    "Postal / ZIP code",
+    "Primary customer email",
+    "State",
+    "Viewing as Admin"
+   ],
+   "headings": [
+    "Add customer"
+   ],
+   "path": "/invoicing/customers/add-customer",
+   "structure": "document",
+   "top": {
+    "name": "",
+    "role": "document"
+   }
+  },
+  "hop": [
+   {
+    "fill": {
+     "locator": {
+      "label": "Name"
+     },
+     "value": "Test Person"
+    }
+   },
+   {
+    "fill": {
+     "locator": {
+      "label": "Primary customer email"
+     },
+     "value": "a11y-audit@example.invalid"
+    }
+   },
+   {
+    "click": {
+     "name": "Add customer address",
+     "role": "switch"
+    }
+   },
+   {
+    "fill": {
+     "locator": {
+      "label": "Address line 1"
+     },
+     "value": "123 Test Street"
+    }
+   },
+   {
+    "fill": {
+     "locator": {
+      "label": "City"
+     },
+     "value": "Testville"
+    }
+   },
+   {
+    "fill": {
+     "locator": {
+      "label": "State"
+     },
+     "value": "CA"
+    }
+   },
+   {
+    "fill": {
+     "locator": {
+      "label": "Postal / ZIP code"
+     },
+     "value": "94105"
+    }
+   },
+   {
+    "scroll": {
+     "name": "Create customer",
+     "role": "button"
+    }
+   }
+  ],
+  "mutates": false,
+  "parent": "invoicing.add-customer-invalid",
+  "recordedBy": "agent",
+  "review": null,
+  "similarity": 0.9921,
+  "source": "04fb68d713529702832dd21083bed02e0ff87b68",
+  "status": "accepted"
+ },
+ "invoicing.add-customer-invalid": {
+  "checked": "2026-10-02-1349",
+  "fingerprint": {
+   "controls": [
+    "Add customer address",
+    "Additional emails (optional)",
+    "Close",
+    "Create customer",
+    "Customize your experience",
+    "Go back",
+    "Name",
+    "Open account",
+    "Open combobox menu",
+    "Primary customer email",
+    "Viewing as Admin"
+   ],
+   "headings": [
+    "Add customer"
+   ],
+   "path": "/invoicing/customers/add-customer",
+   "structure": "document",
+   "top": {
+    "name": "",
+    "role": "document"
+   }
+  },
+  "hop": [
+   {
+    "fill": {
+     "locator": {
+      "label": "Primary customer email"
+     },
+     "value": "notanemail"
+    }
+   },
+   {
+    "press": "Tab"
+   }
+  ],
+  "mutates": false,
+  "parent": "invoicing.add-customer",
+  "recordedBy": "agent",
+  "review": null,
+  "similarity": 0.987,
+  "source": "dc47f68a04bcf717c53f9ccba3eeb8d73e84a325",
+  "status": "accepted"
+ },
+ "invoicing.bulk-cancel-done": {
+  "checked": "2026-10-02-1349",
+  "fingerprint": {
+   "controls": [
+    "Amount",
+    "Customer",
+    "Due date",
+    "Invoice date",
+    "Invoice no.",
+    "Status"
+   ],
+   "headings": [],
+   "path": "/invoicing",
+   "structure": "status",
+   "top": {
+    "name": "Invoices table",
+    "role": "table"
+   }
+  },
+  "hop": [
+   {
+    "click": {
+     "name": "Cancel Invoice",
+     "role": "button"
+    }
+   },
+   {
+    "wait": {
+     "ms": 800
+    }
+   }
+  ],
+  "mutates": true,
+  "parent": "invoicing.bulk-cancel-modal",
+  "recordedBy": "agent",
+  "review": {
+   "by": "conductor",
+   "date": "2026-10-03",
+   "decision": "accept",
+   "note": "same Invoicing list with 'Item canceled' toast after the Cancel Invoice hop; the capture's 'Show canceled' filter chip (Filters (1), Export filtered) is session state from upstream, not a recorded edge, and is absent in the replay",
+   "reason": "mutating"
+  },
+  "similarity": 0.9737,
+  "source": "1feadcc6bbc720ff40a84838e997022c5b6449ea",
+  "status": "accepted"
+ },
+ "invoicing.bulk-cancel-modal": {
+  "checked": "2026-10-02-1349",
+  "fingerprint": {
+   "controls": [
+    "Cancel Invoice",
+    "Close"
+   ],
+   "headings": [
+    "Cancel invoice for Quasar Design Studio?"
+   ],
+   "path": "/invoicing",
+   "structure": "dialog",
+   "top": {
+    "name": "",
+    "role": "dialog"
+   }
+  },
+  "hop": [
+   {
+    "click": {
+     "name": "Cancel selected items",
+     "role": "button"
+    }
+   },
+   {
+    "wait": {
+     "ms": 500
+    }
+   }
+  ],
+  "mutates": false,
+  "parent": "invoicing.row-selected",
+  "recordedBy": "agent",
+  "review": null,
+  "similarity": 0.9952,
+  "source": "5ee7b836ea7847364e1131b7d0e2772b77521235",
   "status": "accepted"
  },
  "invoicing.catalog-index": {
@@ -127,6 +417,1266 @@
   "source": "97d170e1550eee4afc0af065b78cda302a97674c",
   "status": "accepted"
  },
+ "invoicing.catalog-item-created": {
+  "checked": "2026-10-02-1349",
+  "fingerprint": {
+   "controls": [],
+   "headings": [],
+   "path": "/invoicing/catalog",
+   "structure": "status",
+   "top": {
+    "name": "Catalog items",
+    "role": "table"
+   }
+  },
+  "hop": [
+   {
+    "click": {
+     "name": "Create item",
+     "role": "button"
+    }
+   },
+   {
+    "wait": {
+     "ms": 800
+    }
+   }
+  ],
+  "mutates": true,
+  "parent": "invoicing.add-catalog-item-filled",
+  "recordedBy": "agent",
+  "review": {
+   "by": "conductor",
+   "date": "2026-10-03",
+   "decision": "accept",
+   "note": "same Catalog detail panel for the new item plus 'Item added' toast (fixture 'Test Person' $1.00 instead of Onboarding Workshop); the hop clicks Create item as the label says",
+   "reason": "mutating"
+  },
+  "similarity": 0.9429,
+  "source": "37f5bad9a319fc3bafd19c47d6dec8101f82a07b",
+  "status": "accepted"
+ },
+ "invoicing.catalog-item-deleted": {
+  "checked": "2026-10-02-1349",
+  "fingerprint": {
+   "controls": [],
+   "headings": [],
+   "path": "/invoicing/catalog",
+   "structure": "status",
+   "top": {
+    "name": "Catalog items",
+    "role": "table"
+   }
+  },
+  "hop": [
+   {
+    "click": {
+     "name": "Delete item",
+     "role": "button"
+    }
+   }
+  ],
+  "mutates": true,
+  "parent": "invoicing.delete-catalog-item-modal",
+  "recordedBy": "agent",
+  "review": {
+   "by": "conductor",
+   "date": "2026-10-03",
+   "decision": "accept",
+   "note": "same Catalog list without the new item and the 'Product deleted' toast; the hop clicks Delete item in the delete modal",
+   "reason": "mutating"
+  },
+  "similarity": 0.9883,
+  "source": "f150e4dc9567e76ce63c5988132b12313bff1a8f",
+  "status": "accepted"
+ },
+ "invoicing.create-catalog-picker": {
+  "checked": "2026-10-02-1349",
+  "fingerprint": {
+   "controls": [
+    "Add new catalog item",
+    "Advisory Retainer <amount>",
+    "Brand Strategy Deliverable <amount>",
+    "Consulting Package — <n>H <amount>",
+    "Contract Setup Fee <amount>",
+    "Creative Deliverable — Custom <amount>",
+    "Filing & Administrative Fees <amount>",
+    "Monthly Retainer <amount>",
+    "Options",
+    "Q<n> Paid Media Execution <amount>",
+    "Web Design & Infrastructure <amount>",
+    "Web Maintenance <amount>"
+   ],
+   "headings": [],
+   "path": "/invoicing/create-invoice",
+   "structure": "listbox",
+   "top": {
+    "name": "Options",
+    "role": "listbox"
+   }
+  },
+  "hop": [
+   {
+    "click": {
+     "name": "Product Search",
+     "role": "combobox"
+    }
+   }
+  ],
+  "mutates": false,
+  "parent": "invoicing.create-setup",
+  "recordedBy": "agent",
+  "review": null,
+  "similarity": 0.9555,
+  "source": "44f7025e273131dfea641702174fae1e7398c5ee",
+  "status": "accepted"
+ },
+ "invoicing.create-customer-dropdown": {
+  "checked": "2026-10-02-1349",
+  "fingerprint": {
+   "controls": [
+    "Add new customer",
+    "Options"
+   ],
+   "headings": [],
+   "path": "/invoicing/create-invoice",
+   "structure": "listbox",
+   "top": {
+    "name": "Options",
+    "role": "listbox"
+   }
+  },
+  "hop": [
+   {
+    "click": {
+     "name": "Name",
+     "role": "combobox"
+    }
+   }
+  ],
+  "mutates": false,
+  "parent": "invoicing.create-step1",
+  "recordedBy": "agent",
+  "review": null,
+  "similarity": 0.9943,
+  "source": "3467eabecd5bd7f4f86a64394e3c2e47fce75822",
+  "status": "accepted"
+ },
+ "invoicing.create-customer-selected": {
+  "checked": "2026-10-02-1349",
+  "fingerprint": {
+   "controls": [
+    "Back",
+    "Close",
+    "Create a one-time invoice Send a one-time invoice with a built-in payment link.",
+    "Create a recurring series Automatically generate recurring invoices on a set schedule.",
+    "Customize your experience",
+    "International Wire",
+    "Manual Transfer",
+    "Name",
+    "Next",
+    "Open account",
+    "Pay With Mercury",
+    "Request money without an invoice Send only a payment link with a single amount.",
+    "Viewing as Admin"
+   ],
+   "headings": [
+    "How would you like to request money?",
+    "Nebula Consulting Group sent you an invoice",
+    "Invoice",
+    "From",
+    "To",
+    "Details",
+    "Terms",
+    "Memo",
+    "Payment methods",
+    "Manual Transfer",
+    "International Wire",
+    "Pay With Mercury"
+   ],
+   "path": "/invoicing/create-invoice",
+   "structure": "document",
+   "top": {
+    "name": "",
+    "role": "document"
+   }
+  },
+  "hop": [
+   {
+    "click": {
+     "name": "Orbital Advisory Partners invoices@orbitaladvisory.com",
+     "role": "option"
+    }
+   }
+  ],
+  "mutates": false,
+  "parent": "invoicing.create-customer-dropdown",
+  "recordedBy": "agent",
+  "review": null,
+  "similarity": 0.9993,
+  "source": "d0b839a98260e63168b20597c2bf89a8246ffef9",
+  "status": "accepted"
+ },
+ "invoicing.create-destination-menu": {
+  "checked": "2026-10-02-1349",
+  "fingerprint": {
+   "controls": [
+    "AP <amount> / Checking ••<n>",
+    "Checking ••<n> <amount>",
+    "Ops / Payroll <amount> / Checking ••<n>",
+    "Savings ••<n> <amount>"
+   ],
+   "headings": [],
+   "path": "/invoicing/create-invoice",
+   "structure": "listbox",
+   "top": {
+    "name": "",
+    "role": "listbox"
+   }
+  },
+  "hop": [
+   {
+    "click": {
+     "name": "Destination account",
+     "role": "combobox"
+    }
+   }
+  ],
+  "mutates": false,
+  "parent": "invoicing.create-setup-bottom",
+  "recordedBy": "agent",
+  "review": {
+   "by": "conductor",
+   "date": "2026-10-03",
+   "decision": "accept",
+   "note": "same Destination account dropdown (Ops / Payroll, AP, Checking ••0297, Savings ••7658, AR selected) at the bottom of step 2; the hop clicks the Destination account combobox as the label says; the fixture line item and empty sales-tax rate come from the accepted parent chain",
+   "reason": "below-threshold"
+  },
+  "similarity": 0.5276,
+  "source": "f0bd75b22353805ccb2d037d816a215208966d07",
+  "status": "accepted"
+ },
+ "invoicing.create-details": {
+  "checked": "2026-10-02-1349",
+  "fingerprint": {
+   "controls": [
+    "Accept ACH debit <n> business days",
+    "Accept credit cards Set up Stripe integration",
+    "Back",
+    "Close",
+    "Customize your experience",
+    "Due date",
+    "From",
+    "Internal note (optional)",
+    "Invoice date",
+    "Invoice number",
+    "Methods Manual Transfer (ACH/Wire), Pay with Mercury, International wires",
+    "Next",
+    "Open account",
+    "PO number (Optional) PO number (Optional)",
+    "Set up Stripe integration",
+    "To",
+    "Viewing as Admin"
+   ],
+   "headings": [
+    "Invoice details",
+    "Service period",
+    "Methods Manual Transfer (ACH/Wire), Pay with Mercury, International wires",
+    "Invoice",
+    "From",
+    "To",
+    "Details",
+    "Terms",
+    "Memo"
+   ],
+   "path": "/invoicing/create-invoice",
+   "structure": "document",
+   "top": {
+    "name": "",
+    "role": "document"
+   }
+  },
+  "hop": [
+   {
+    "click": {
+     "name": "Next",
+     "role": "button"
+    }
+   }
+  ],
+  "mutates": false,
+  "parent": "invoicing.create-line-items-filled",
+  "recordedBy": "agent",
+  "review": {
+   "by": "conductor",
+   "date": "2026-10-03",
+   "decision": "accept",
+   "note": "same Invoice details step (INV-34, PO number, invoice/due dates, service period, Methods with ACH/wire, Pay with Mercury, international wires, cards via Stripe) for Orbital Advisory Partners; only the scroll position, dates and fixture line item (Test Person $1.00) differ; the hop clicks Next as labeled",
+   "reason": "below-threshold"
+  },
+  "similarity": 0.6002,
+  "source": "825df8b63e0d515d80714a830681079e15e52541",
+  "status": "accepted"
+ },
+ "invoicing.create-due-date-menu": {
+  "checked": "2026-10-02-1349",
+  "fingerprint": {
+   "controls": [
+    "<date> Due on receipt",
+    "<date> Net <n>",
+    "Custom...",
+    "Options"
+   ],
+   "headings": [],
+   "path": "/invoicing/create-invoice",
+   "structure": "listbox",
+   "top": {
+    "name": "Options",
+    "role": "listbox"
+   }
+  },
+  "hop": [
+   {
+    "click": {
+     "label": "Due date"
+    }
+   }
+  ],
+  "mutates": false,
+  "parent": "invoicing.create-details",
+  "recordedBy": "agent",
+  "review": null,
+  "similarity": 0.9883,
+  "source": "a136249e24ffb49c12e07646d50045b64e45d3d0",
+  "status": "accepted"
+ },
+ "invoicing.create-line-item-typed": {
+  "checked": "2026-10-02-1349",
+  "fingerprint": {
+   "controls": [
+    "<amount>",
+    "<n>",
+    "Add line item",
+    "Add new catalog item",
+    "Add sales tax",
+    "Back",
+    "Choose Files",
+    "Close",
+    "Currency",
+    "Customize your experience",
+    "Destination account",
+    "Edit",
+    "Next",
+    "Open account",
+    "Open combobox menu",
+    "Options",
+    "Payer memo (optional)",
+    "Product Search",
+    "Remove line item",
+    "Upload attachment",
+    "Viewing as Admin"
+   ],
+   "headings": [
+    "Invoice set up",
+    "Invoice totals",
+    "Invoice",
+    "From",
+    "To",
+    "Details",
+    "Terms",
+    "Memo"
+   ],
+   "path": "/invoicing/create-invoice",
+   "structure": "document",
+   "top": {
+    "name": "",
+    "role": "document"
+   }
+  },
+  "hop": [
+   {
+    "fill": {
+     "locator": {
+      "name": "Product Search",
+      "role": "combobox"
+     },
+     "value": "Test Person"
+    }
+   },
+   {
+    "wait": {
+     "ms": 500
+    }
+   }
+  ],
+  "mutates": false,
+  "parent": "invoicing.create-catalog-picker",
+  "recordedBy": "agent",
+  "review": {
+   "by": "conductor",
+   "date": "2026-10-03",
+   "decision": "accept",
+   "note": "same custom line item state: typed name ('A11y audit test description' vs 'Onboarding workshop') leaves only 'Add new catalog item' in the picker. The hop fills the Product Search combobox as the label says. The capture's extra Advisory Retainer row is off the recorded path; the parent capture has one empty row, like the replay",
+   "reason": "below-threshold"
+  },
+  "similarity": 0.8192,
+  "source": "7f018ca266dc8b7a40842e0b52b00613ad2bffb7",
+  "status": "accepted"
+ },
+ "invoicing.create-line-items-filled": {
+  "checked": "2026-10-02-1349",
+  "fingerprint": {
+   "controls": [
+    "<amount>",
+    "<n>",
+    "Add line item",
+    "Add sales tax",
+    "Back",
+    "Choose Files",
+    "Close",
+    "Currency",
+    "Customize your experience",
+    "Destination account",
+    "Edit",
+    "Next",
+    "Open account",
+    "Open combobox menu",
+    "Payer memo (optional)",
+    "Product Search",
+    "Remove line item",
+    "Upload attachment",
+    "Viewing as Admin"
+   ],
+   "headings": [
+    "Invoice set up",
+    "Invoice totals",
+    "Invoice",
+    "From",
+    "To",
+    "Details",
+    "Terms",
+    "Memo"
+   ],
+   "path": "/invoicing/create-invoice",
+   "structure": "document",
+   "top": {
+    "name": "",
+    "role": "document"
+   }
+  },
+  "hop": [
+   {
+    "fill": {
+     "locator": {
+      "css": "input[name^=\"amount-\"]"
+     },
+     "value": "1.00"
+    }
+   },
+   {
+    "fill": {
+     "locator": {
+      "label": "Payer memo (optional)"
+     },
+     "value": "A11y audit test memo"
+    }
+   }
+  ],
+  "mutates": false,
+  "parent": "invoicing.create-line-item-typed",
+  "recordedBy": "agent",
+  "review": {
+   "by": "conductor",
+   "date": "2026-10-03",
+   "decision": "accept",
+   "note": "same Invoice set up form with a filled line item (qty 1, $1.00), memo typed, total and preview updated; fixture values instead of the capture's two items totaling $7,500. The capture's extra Advisory Retainer row was already in the parent capture, so the single row comes from the accepted parent recipe. The hop leaves quantity at its default 1.",
+   "reason": "below-threshold"
+  },
+  "similarity": 0.8338,
+  "source": "c87afd51e30bfe70965222721825118f8aeef1cd",
+  "status": "accepted"
+ },
+ "invoicing.create-preview-email": {
+  "checked": "2026-10-02-1349",
+  "fingerprint": {
+   "controls": [
+    "<amount>",
+    "<n>",
+    "Add line item",
+    "Back",
+    "Choose Files",
+    "Close",
+    "Currency",
+    "Customize your experience",
+    "Destination account",
+    "Edit",
+    "Next",
+    "Open account",
+    "Open combobox menu",
+    "Payer memo (optional)",
+    "Product Search",
+    "Remove line item",
+    "Remove sales tax",
+    "Upload attachment",
+    "Viewing as Admin",
+    "You’ve been sent a new invoice"
+   ],
+   "headings": [
+    "Invoice set up",
+    "Invoice totals"
+   ],
+   "path": "/invoicing/create-invoice",
+   "structure": "document",
+   "top": {
+    "name": "",
+    "role": "document"
+   }
+  },
+  "hop": [
+   {
+    "click": {
+     "text": "Email"
+    }
+   }
+  ],
+  "mutates": false,
+  "parent": "invoicing.create-preview-payer",
+  "recordedBy": "agent",
+  "review": {
+   "by": "conductor",
+   "date": "2026-10-03",
+   "decision": "accept",
+   "note": "same Email preview tab ('You've been sent a new invoice', INV-34, Pay invoice); the hop clicks the Email tab as the label says; only fixture line items and totals differ. The empty sales tax field comes from the parent state.",
+   "reason": "below-threshold"
+  },
+  "similarity": 0.8958,
+  "source": "eda5bbcf2e7c896f3b2368d4d1814b8bfeb073d8",
+  "status": "accepted"
+ },
+ "invoicing.create-preview-payer": {
+  "checked": "2026-10-02-1349",
+  "fingerprint": {
+   "controls": [
+    "<amount>",
+    "<n>",
+    "Add line item",
+    "Back",
+    "Choose Files",
+    "Close",
+    "Currency",
+    "Customize your experience",
+    "Destination account",
+    "Edit",
+    "International Wire",
+    "Manual Transfer",
+    "Next",
+    "Open account",
+    "Open combobox menu",
+    "Pay With Mercury",
+    "Payer memo (optional)",
+    "Product Search",
+    "Remove line item",
+    "Remove sales tax",
+    "Upload attachment",
+    "Viewing as Admin"
+   ],
+   "headings": [
+    "Invoice set up",
+    "Invoice totals",
+    "Nebula Consulting Group sent you an invoice",
+    "Invoice",
+    "From",
+    "To",
+    "Details",
+    "Terms",
+    "Memo",
+    "Payment methods",
+    "Manual Transfer",
+    "International Wire",
+    "Pay With Mercury"
+   ],
+   "path": "/invoicing/create-invoice",
+   "structure": "document",
+   "top": {
+    "name": "",
+    "role": "document"
+   }
+  },
+  "hop": [
+   {
+    "click": {
+     "text": "Payer page"
+    }
+   }
+  ],
+  "mutates": false,
+  "parent": "invoicing.create-sales-tax",
+  "recordedBy": "agent",
+  "review": {
+   "by": "conductor",
+   "date": "2026-10-03",
+   "decision": "accept",
+   "note": "same Payer page preview tab (hosted pay-page mock with INV-34, memo, Download invoice); the hop clicks 'Payer page' as the label says; the empty sales-tax rate and disabled Next come from the accepted parent",
+   "reason": "below-threshold"
+  },
+  "similarity": 0.8671,
+  "source": "b0112a7a75e6af3cb5373e1a783122a603df12bb",
+  "status": "accepted"
+ },
+ "invoicing.create-review": {
+  "checked": "2026-10-02-1349",
+  "fingerprint": {
+   "controls": [
+    "Back",
+    "CC",
+    "Close",
+    "Create & send email",
+    "Create only",
+    "Customize your experience",
+    "Open account",
+    "Open combobox menu",
+    "Schedule send Set this invoice to be sent at a later date.",
+    "Send automated reminders Automatically remind customers before and after invoices are due.",
+    "Viewing as Admin"
+   ],
+   "headings": [
+    "Review and send",
+    "Invoice",
+    "From",
+    "To",
+    "Details",
+    "Terms",
+    "Memo"
+   ],
+   "path": "/invoicing/create-invoice",
+   "structure": "document",
+   "top": {
+    "name": "",
+    "role": "document"
+   }
+  },
+  "hop": [
+   {
+    "click": {
+     "name": "Next",
+     "role": "button"
+    }
+   }
+  ],
+  "mutates": false,
+  "parent": "invoicing.create-details",
+  "recordedBy": "agent",
+  "review": {
+   "by": "conductor",
+   "date": "2026-10-03",
+   "decision": "accept",
+   "note": "same Review and send step (Email to, CC, Schedule send, reminders, Create only disabled, Create & send email); the capture is scrolled down, the replay is at the top, amounts are fixture data",
+   "reason": "below-threshold"
+  },
+  "similarity": 0.5246,
+  "source": "f300a752d781465a349cdef43f8f456b5971fc9a",
+  "status": "accepted"
+ },
+ "invoicing.create-sales-tax": {
+  "checked": "2026-10-02-1349",
+  "fingerprint": {
+   "controls": [
+    "<amount>",
+    "<n>",
+    "Add line item",
+    "Back",
+    "Choose Files",
+    "Close",
+    "Currency",
+    "Customize your experience",
+    "Destination account",
+    "Edit",
+    "Next",
+    "Open account",
+    "Open combobox menu",
+    "Payer memo (optional)",
+    "Product Search",
+    "Remove line item",
+    "Remove sales tax",
+    "Upload attachment",
+    "Viewing as Admin"
+   ],
+   "headings": [
+    "Invoice set up",
+    "Invoice totals",
+    "Invoice",
+    "From",
+    "To",
+    "Details",
+    "Terms",
+    "Memo"
+   ],
+   "path": "/invoicing/create-invoice",
+   "structure": "document",
+   "top": {
+    "name": "",
+    "role": "document"
+   }
+  },
+  "hop": [
+   {
+    "click": {
+     "name": "Add sales tax",
+     "role": "button"
+    }
+   }
+  ],
+  "mutates": false,
+  "parent": "invoicing.create-line-items-filled",
+  "recordedBy": "agent",
+  "review": {
+   "by": "conductor",
+   "date": "2026-10-03",
+   "decision": "accept",
+   "note": "same Invoice set up form with the Sales tax (%) row added, as the label 'Click Add sales tax' says; the capture's 8.875% rate came from a step no label records, so the row is empty and the totals have no tax split. Its four children are preview tabs that do not depend on the rate",
+   "reason": "below-threshold"
+  },
+  "similarity": 0.8298,
+  "source": "7897d0d71253c38ea89344025d78f95581b282d3",
+  "status": "accepted"
+ },
+ "invoicing.create-schedule-send": {
+  "checked": "2026-10-02-1349",
+  "fingerprint": {
+   "controls": [
+    "Back",
+    "CC",
+    "Close",
+    "Create & schedule",
+    "Create only",
+    "Customize your experience",
+    "Open account",
+    "Open combobox menu",
+    "Schedule send Set this invoice to be sent at a later date.",
+    "Send automated reminders Automatically remind customers before and after invoices are due.",
+    "Send date",
+    "Viewing as Admin"
+   ],
+   "headings": [
+    "Review and send",
+    "Invoice",
+    "From",
+    "To",
+    "Details",
+    "Terms",
+    "Memo"
+   ],
+   "path": "/invoicing/create-invoice",
+   "structure": "document",
+   "top": {
+    "name": "",
+    "role": "document"
+   }
+  },
+  "hop": [
+   {
+    "click": {
+     "name": "Schedule send Set this invoice to be sent at a later date.",
+     "role": "switch"
+    }
+   }
+  ],
+  "mutates": true,
+  "parent": "invoicing.create-review",
+  "recordedBy": "agent",
+  "review": {
+   "by": "conductor",
+   "date": "2026-10-03",
+   "decision": "accept",
+   "note": "same Review and send step with the Schedule send switch on, the Send date field (9am ET) and the Create & schedule button; the hop clicks the Schedule send switch; dates, amounts and scroll position differ",
+   "reason": "below-threshold"
+  },
+  "similarity": 0.7722,
+  "source": "9b7989b2ad31fab04e72b53c7171107790fa86ed",
+  "status": "accepted"
+ },
+ "invoicing.create-sending": {
+  "checked": "2026-10-02-1349",
+  "fingerprint": {
+   "controls": [
+    "Close",
+    "Customize your experience",
+    "Download invoice",
+    "Open account",
+    "Return to dashboard",
+    "Send another invoice",
+    "Viewing as Admin",
+    "https://demo.mercury.com/pay/ylk<n>fnl<n>bpkfcg<n>"
+   ],
+   "headings": [
+    "Invoice",
+    "From",
+    "To",
+    "Details",
+    "Terms",
+    "Memo",
+    "Your invoice has been created and sent!"
+   ],
+   "path": "/invoicing/create-invoice",
+   "structure": "document",
+   "top": {
+    "name": "",
+    "role": "document"
+   }
+  },
+  "hop": [
+   {
+    "click": {
+     "name": "Create & send email",
+     "role": "button"
+    }
+   }
+  ],
+  "mutates": true,
+  "parent": "invoicing.create-review",
+  "recordedBy": "agent",
+  "review": {
+   "by": "conductor",
+   "date": "2026-10-03",
+   "decision": "accept",
+   "note": "transient Loading... button after the Create & send email click (the hop clicks that button); the replay shows the settled 'Your invoice has been created and sent!' screen, where the next recorded edge ('Wait for the invoice to be created' -> create-sent) begins; accepted as chain link for 10 states",
+   "reason": "below-threshold"
+  },
+  "similarity": 0.3553,
+  "source": "17a0b7fd98135dc568cda855cfc0ce49e244d5bc",
+  "status": "accepted"
+ },
+ "invoicing.create-sent": {
+  "checked": "2026-10-02-1349",
+  "fingerprint": {
+   "controls": [
+    "Close",
+    "Customize your experience",
+    "Download invoice",
+    "Open account",
+    "Return to dashboard",
+    "Send another invoice",
+    "Viewing as Admin",
+    "https://demo.mercury.com/pay/ylk<n>fnl<n>bpkfcg<n>"
+   ],
+   "headings": [
+    "Invoice",
+    "From",
+    "To",
+    "Details",
+    "Terms",
+    "Memo",
+    "Your invoice has been created and sent!"
+   ],
+   "path": "/invoicing/create-invoice",
+   "structure": "document",
+   "top": {
+    "name": "",
+    "role": "document"
+   }
+  },
+  "hop": [
+   {
+    "wait": {
+     "locator": {
+      "text": "Your invoice has been created and sent!"
+     }
+    }
+   }
+  ],
+  "mutates": true,
+  "parent": "invoicing.create-sending",
+  "recordedBy": "agent",
+  "review": {
+   "by": "conductor",
+   "date": "2026-10-03",
+   "decision": "accept",
+   "note": "same 'Your invoice has been created and sent!' screen for Orbital Advisory Partners (summary card, invoice sent to chip, payment link, Send another invoice / Return to dashboard) with the 'Invoice created and sent!' toast in both; the hop only waits for that heading, as the label 'Wait for the invoice to be created' says, and the Create & send email submit is in the accepted parent; the amount ($1.00 vs $7,500.00) and due date are fixture drift",
+   "reason": "mutating"
+  },
+  "similarity": 0.9597,
+  "source": "a22f5a5cc9b4cb24a5cc0182d155864e789ff383",
+  "status": "accepted"
+ },
+ "invoicing.create-series-ends-after": {
+  "checked": "2026-10-02-1349",
+  "fingerprint": {
+   "controls": [
+    "Back",
+    "Close",
+    "Customize your experience",
+    "Next",
+    "Number of invoices before ending",
+    "Open account",
+    "Start date",
+    "Viewing as Admin",
+    "after",
+    "due on receipt",
+    "monthly on the <n>rd"
+   ],
+   "headings": [
+    "Frequency",
+    "Invoice",
+    "From",
+    "To",
+    "Details",
+    "Terms",
+    "Memo"
+   ],
+   "path": "/invoicing/create-invoice",
+   "structure": "document",
+   "top": {
+    "name": "",
+    "role": "document"
+   }
+  },
+  "hop": [
+   {
+    "click": {
+     "name": "After Choose how many invoices to send",
+     "role": "menuitem"
+    }
+   }
+  ],
+  "mutates": true,
+  "parent": "invoicing.create-series-ends-menu",
+  "recordedBy": "agent",
+  "review": {
+   "by": "conductor",
+   "date": "2026-10-03",
+   "decision": "accept",
+   "note": "same Frequency step with 'The recurring invoice series ends after 12 invoices' (Astral Creative Co). The first-invoice date and line item amount have drifted. The hop picks the After menu item, as the label says",
+   "reason": "mutating"
+  },
+  "similarity": 0.9854,
+  "source": "7d1a413ea040d9c0ae68d915ab0eae70cee66a4c",
+  "status": "accepted"
+ },
+ "invoicing.create-series-ends-menu": {
+  "checked": "2026-10-02-1349",
+  "fingerprint": {
+   "controls": [
+    "After Choose how many invoices to send",
+    "On Ends on a specific date",
+    "When I cancel No end date"
+   ],
+   "headings": [],
+   "path": "/invoicing/create-invoice",
+   "structure": "menu",
+   "top": {
+    "name": "when I cancel",
+    "role": "menu"
+   }
+  },
+  "hop": [
+   {
+    "click": {
+     "name": "when I cancel",
+     "role": "button"
+    }
+   }
+  ],
+  "mutates": true,
+  "parent": "invoicing.create-series-frequency",
+  "recordedBy": "agent",
+  "review": {
+   "by": "conductor",
+   "date": "2026-10-03",
+   "decision": "accept",
+   "note": "same series-ends dropdown open from 'when I cancel' (On / After / When I cancel, highlighted) on the Frequency step; the hop clicks 'when I cancel' as labelled; first-invoice date and invoice amount drifted",
+   "reason": "mutating"
+  },
+  "similarity": 0.9874,
+  "source": "178a0b359feace14a10ba057c598ab38e02084c2",
+  "status": "accepted"
+ },
+ "invoicing.create-series-frequency": {
+  "checked": "2026-10-02-1349",
+  "fingerprint": {
+   "controls": [
+    "Back",
+    "Close",
+    "Customize your experience",
+    "Next",
+    "Open account",
+    "Start date",
+    "Viewing as Admin",
+    "due on receipt",
+    "monthly on the <n>rd",
+    "when I cancel"
+   ],
+   "headings": [
+    "Frequency",
+    "Invoice",
+    "From",
+    "To",
+    "Details",
+    "Terms",
+    "Memo"
+   ],
+   "path": "/invoicing/create-invoice",
+   "structure": "document",
+   "top": {
+    "name": "",
+    "role": "document"
+   }
+  },
+  "hop": [
+   {
+    "click": {
+     "name": "Product Search",
+     "role": "combobox"
+    }
+   },
+   {
+    "click": {
+     "name": "Monthly Retainer $<n>",
+     "role": "option"
+    }
+   },
+   {
+    "click": {
+     "name": "Next",
+     "role": "button"
+    }
+   }
+  ],
+  "mutates": true,
+  "parent": "invoicing.create-series-setup",
+  "recordedBy": "agent",
+  "review": {
+   "by": "conductor",
+   "date": "2026-10-03",
+   "decision": "accept",
+   "note": "same series Frequency step (ends 'when I cancel', sent monthly, 'due on receipt', Astral Creative Co); the date drifted (Today/3rd vs Sep 24/24th) and the fixture line item is Monthly Retainer $7,500 where the capture has a $4,000 design retainer",
+   "reason": "mutating"
+  },
+  "similarity": 0.9856,
+  "source": "101c2cc5f37570e3001533d4d8388e742ae172a7",
+  "status": "accepted"
+ },
+ "invoicing.create-series-frequency-menu": {
+  "checked": "2026-10-02-1349",
+  "fingerprint": {
+   "controls": [
+    "Custom",
+    "Monthly on the <n>rd",
+    "Monthly on the <n>st Saturday",
+    "Weekly on Saturday"
+   ],
+   "headings": [],
+   "path": "/invoicing/create-invoice",
+   "structure": "menu",
+   "top": {
+    "name": "monthly on the <n>rd",
+    "role": "menu"
+   }
+  },
+  "hop": [
+   {
+    "click": {
+     "name": "monthly on the 3rd",
+     "role": "button"
+    }
+   }
+  ],
+  "mutates": true,
+  "parent": "invoicing.create-series-frequency",
+  "recordedBy": "agent",
+  "review": {
+   "by": "conductor",
+   "date": "2026-10-03",
+   "decision": "accept",
+   "note": "same cadence menu open on the Frequency step (Weekly on Saturday / Monthly on the 3rd / Monthly on the 1st Saturday / Custom; Thursday / 24th in the capture is date drift); the hop clicks the cadence trigger as the label says. Caveat, a tooling bug rather than a reason to reject: canon.mjs templates the name to ^monthly on the .+?rd$, so the 'rd' suffix is kept and the replay only matches on the 3rd or 23rd. On other days it fails loudly with no element matched; it does not silently audit the wrong screen. The fix is to template ordinal suffixes (st/nd/rd/th) and probably weekday names in nameTemplate.",
+   "reason": "mutating"
+  },
+  "similarity": 0.9842,
+  "source": "af2d7e7ede6257e091feb5fdcac4d35e6972f1e3",
+  "status": "accepted"
+ },
+ "invoicing.create-series-payment": {
+  "checked": "2026-10-02-1349",
+  "fingerprint": {
+   "controls": [
+    "Accept ACH debit <n> business days",
+    "Accept credit cards Set up Stripe integration",
+    "Back",
+    "Close",
+    "Customize your experience",
+    "Destination account",
+    "Methods Manual Transfer (ACH/Wire), Pay with Mercury, International wires",
+    "Next",
+    "Open account",
+    "Set up Stripe integration",
+    "Viewing as Admin"
+   ],
+   "headings": [
+    "Payment details",
+    "Methods Manual Transfer (ACH/Wire), Pay with Mercury, International wires",
+    "Invoice",
+    "From",
+    "To",
+    "Details",
+    "Terms",
+    "Memo"
+   ],
+   "path": "/invoicing/create-invoice",
+   "structure": "document",
+   "top": {
+    "name": "",
+    "role": "document"
+   }
+  },
+  "hop": [
+   {
+    "click": {
+     "name": "Next",
+     "role": "button"
+    }
+   }
+  ],
+  "mutates": true,
+  "parent": "invoicing.create-series-frequency",
+  "recordedBy": "agent",
+  "review": {
+   "by": "conductor",
+   "date": "2026-10-03",
+   "decision": "accept",
+   "note": "same Series Payment details step (ACH/Wire, Pay with Mercury, International wires ticked, AR Checking ••4296, virtual account toggle on); hop clicks Next as the label says; only the line item differs ($7,500 vs $4,000)",
+   "reason": "mutating"
+  },
+  "similarity": 0.9907,
+  "source": "49d3ba6c65f00a1971ed3a63f7cc69c243f301cc",
+  "status": "accepted"
+ },
+ "invoicing.create-series-review": {
+  "checked": "2026-10-02-1349",
+  "fingerprint": {
+   "controls": [
+    "Back",
+    "CC",
+    "Close",
+    "Create series and send",
+    "Customize your experience",
+    "Open account",
+    "Open combobox menu",
+    "Send automated reminders Automatically remind customers before and after invoices are due. This schedule applies to all future invoices in the series.",
+    "Viewing as Admin"
+   ],
+   "headings": [
+    "Review and create",
+    "Invoice",
+    "From",
+    "To",
+    "Details",
+    "Terms",
+    "Memo"
+   ],
+   "path": "/invoicing/create-invoice",
+   "structure": "document",
+   "top": {
+    "name": "",
+    "role": "document"
+   }
+  },
+  "hop": [
+   {
+    "click": {
+     "name": "Next",
+     "role": "button"
+    }
+   }
+  ],
+  "mutates": true,
+  "parent": "invoicing.create-series-payment",
+  "recordedBy": "agent",
+  "review": {
+   "by": "conductor",
+   "date": "2026-10-03",
+   "decision": "accept",
+   "note": "same Review and create step for Astral Creative Co (Monthly, never ends, email finance@astralcreative.co, CC, automated reminders on, 'Create series and send'). The hop clicks Next as the label says and does not submit. Line item and start date drift, and payment terms read 'Due on receipt' instead of 'Net 30 days' because no label in this chain picks Net 30.",
+   "reason": "mutating"
+  },
+  "similarity": 0.9951,
+  "source": "be67ee9ea79a6d3fae23ebc8d6f3459c55d770e1",
+  "status": "accepted"
+ },
+ "invoicing.create-series-setup": {
+  "checked": "2026-10-02-1349",
+  "fingerprint": {
+   "controls": [
+    "<amount>",
+    "<n>",
+    "Add line item",
+    "Add sales tax",
+    "Back",
+    "Choose Files",
+    "Close",
+    "Currency",
+    "Customize your experience",
+    "Edit",
+    "Internal note (optional)",
+    "Invoice prefix More info",
+    "Next",
+    "Open account",
+    "Open combobox menu",
+    "Payer memo (optional)",
+    "Product Search",
+    "Remove line item",
+    "Upload attachment",
+    "Viewing as Admin"
+   ],
+   "headings": [
+    "Recurring series set up",
+    "Invoice totals",
+    "Invoice",
+    "From",
+    "To",
+    "Details",
+    "Terms",
+    "Memo"
+   ],
+   "path": "/invoicing/create-invoice",
+   "structure": "document",
+   "top": {
+    "name": "",
+    "role": "document"
+   }
+  },
+  "hop": [
+   {
+    "click": {
+     "name": "Name",
+     "role": "combobox"
+    }
+   },
+   {
+    "click": {
+     "name": "Astral Creative Co finance@astralcreative.co",
+     "role": "option"
+    }
+   },
+   {
+    "click": {
+     "name": "Next",
+     "role": "button"
+    }
+   }
+  ],
+  "mutates": true,
+  "parent": "invoicing.create-series-step1",
+  "recordedBy": "agent",
+  "review": {
+   "by": "conductor",
+   "date": "2026-10-03",
+   "decision": "accept",
+   "note": "same 'Recurring series set up' step 2 for Astral Creative Co with prefix INV and USD; the line item and memo are empty because the next recorded edge ('Add a line item and click Next') fills them; the hop picks the customer and clicks Next as the label says",
+   "reason": "mutating"
+  },
+  "similarity": 0.9557,
+  "source": "5a586dfd7fd506d6759c1dc6e6ef74f32349e908",
+  "status": "accepted"
+ },
  "invoicing.create-series-step1": {
   "checked": "2026-10-02-1349",
   "fingerprint": {
@@ -182,6 +1732,271 @@
   "source": "54662a8842793bbccad70a657f3ab7c2faa58c88",
   "status": "accepted"
  },
+ "invoicing.create-series-success": {
+  "checked": "2026-10-02-1349",
+  "fingerprint": {
+   "controls": [
+    "Close",
+    "Create another series",
+    "Customize your experience",
+    "Open account",
+    "Return to dashboard",
+    "Viewing as Admin"
+   ],
+   "headings": [
+    "Invoice",
+    "From",
+    "To",
+    "Details",
+    "Terms",
+    "Memo",
+    "Your recurring series has been created"
+   ],
+   "path": "/invoicing/create-invoice",
+   "structure": "document",
+   "top": {
+    "name": "",
+    "role": "document"
+   }
+  },
+  "hop": [
+   {
+    "click": {
+     "name": "Create series and send",
+     "role": "button"
+    }
+   }
+  ],
+  "mutates": true,
+  "parent": "invoicing.create-series-review",
+  "recordedBy": "agent",
+  "review": {
+   "by": "conductor",
+   "date": "2026-10-03",
+   "decision": "accept",
+   "note": "same 'Your recurring series has been created' confirmation for Astral Creative Co with Create another series / Return to dashboard; amount and line item ($7,500 Monthly Retainer vs $3,000 Design retainer) and terms drift from the parent; the replay also still shows the 'Recurring series created and sent!' toast, which is fine; the hop clicks Create series and send as labeled",
+   "reason": "mutating"
+  },
+  "similarity": 0.9709,
+  "source": "d62ded4996b90a01a085796034ea417869b58b14",
+  "status": "accepted"
+ },
+ "invoicing.create-series-terms-menu": {
+  "checked": "2026-10-02-1349",
+  "fingerprint": {
+   "controls": [
+    "Custom",
+    "Due on receipt",
+    "Net <n>"
+   ],
+   "headings": [],
+   "path": "/invoicing/create-invoice",
+   "structure": "menu",
+   "top": {
+    "name": "due on receipt",
+    "role": "menu"
+   }
+  },
+  "hop": [
+   {
+    "click": {
+     "name": "Monthly on the 3rd",
+     "role": "menuitem"
+    }
+   },
+   {
+    "click": {
+     "name": "due on receipt",
+     "role": "button"
+    }
+   }
+  ],
+  "mutates": true,
+  "parent": "invoicing.create-series-frequency-menu",
+  "recordedBy": "agent",
+  "review": {
+   "by": "conductor",
+   "date": "2026-10-03",
+   "decision": "accept",
+   "note": "same payment-terms menu open on the Frequency step (Due on receipt / Net 30 / Net 60 / Net 90 / Custom). The hop picks Monthly and then opens the terms trigger, as the label says. The capture had Net 30 already chosen and the replay shows the default 'due on receipt', but the label does not name Net 30. Same date-bound 'Monthly on the 3rd' name caveat as the accepted parent: on other days it fails loudly rather than silently.",
+   "reason": "mutating"
+  },
+  "similarity": 0.9645,
+  "source": "d69bd8c9ae6ec031e24566d636ee2a5a6295e07a",
+  "status": "accepted"
+ },
+ "invoicing.create-setup": {
+  "checked": "2026-10-02-1349",
+  "fingerprint": {
+   "controls": [
+    "<amount>",
+    "<n>",
+    "Add line item",
+    "Add sales tax",
+    "Back",
+    "Choose Files",
+    "Close",
+    "Currency",
+    "Customize your experience",
+    "Destination account",
+    "Edit",
+    "Next",
+    "Open account",
+    "Open combobox menu",
+    "Payer memo (optional)",
+    "Product Search",
+    "Remove line item",
+    "Upload attachment",
+    "Viewing as Admin"
+   ],
+   "headings": [
+    "Invoice set up",
+    "Invoice totals",
+    "Invoice",
+    "From",
+    "To",
+    "Details",
+    "Terms",
+    "Memo"
+   ],
+   "path": "/invoicing/create-invoice",
+   "structure": "document",
+   "top": {
+    "name": "",
+    "role": "document"
+   }
+  },
+  "hop": [
+   {
+    "click": {
+     "name": "Next",
+     "role": "button"
+    }
+   }
+  ],
+  "mutates": false,
+  "parent": "invoicing.create-customer-selected",
+  "recordedBy": "agent",
+  "review": null,
+  "similarity": 0.9996,
+  "source": "21796581960d3f26b139419dc3254b39cb7d936f",
+  "status": "accepted"
+ },
+ "invoicing.create-setup-bottom": {
+  "checked": "2026-10-02-1349",
+  "fingerprint": {
+   "controls": [
+    "<amount>",
+    "<n>",
+    "Add line item",
+    "Back",
+    "Choose Files",
+    "Close",
+    "Currency",
+    "Customize your experience",
+    "Destination account",
+    "Edit",
+    "Next",
+    "Open account",
+    "Open combobox menu",
+    "Payer memo (optional)",
+    "Product Search",
+    "Remove line item",
+    "Remove sales tax",
+    "Upload attachment",
+    "Viewing as Admin",
+    "You’ve been sent a new invoice"
+   ],
+   "headings": [
+    "Invoice set up",
+    "Invoice totals"
+   ],
+   "path": "/invoicing/create-invoice",
+   "structure": "document",
+   "top": {
+    "name": "",
+    "role": "document"
+   }
+  },
+  "hop": [
+   {
+    "scroll": {
+     "name": "Destination account",
+     "role": "combobox"
+    }
+   }
+  ],
+  "mutates": false,
+  "parent": "invoicing.create-preview-email",
+  "recordedBy": "agent",
+  "review": {
+   "by": "conductor",
+   "date": "2026-10-03",
+   "decision": "accept",
+   "note": "same bottom of step 2 with the Email preview open (payer memo, Upload attachment, Destination account AR Checking ••4296, secure virtual account toggle on); the hop scrolls to the Destination account combobox, as 'Scroll to the bottom of the form' says; the one $1.00 line item, the empty sales tax and the disabled Next come from the accepted parent chain, and the child (Destination account menu) does not need Next",
+   "reason": "below-threshold"
+  },
+  "similarity": 0.5135,
+  "source": "845a6f6033c23aa2d47b48efb606ea679de7d48f",
+  "status": "accepted"
+ },
+ "invoicing.create-setup-error": {
+  "checked": "2026-10-02-1349",
+  "fingerprint": {
+   "controls": [
+    "<amount>",
+    "<n>",
+    "Add line item",
+    "Add sales tax",
+    "Back",
+    "Choose Files",
+    "Close",
+    "Currency",
+    "Customize your experience",
+    "Destination account",
+    "Edit",
+    "Next",
+    "Open account",
+    "Open combobox menu",
+    "Payer memo (optional)",
+    "Product Search",
+    "Remove line item",
+    "Upload attachment",
+    "Viewing as Admin"
+   ],
+   "headings": [
+    "Invoice set up",
+    "Invoice totals",
+    "Invoice",
+    "From",
+    "To",
+    "Details",
+    "Terms",
+    "Memo"
+   ],
+   "path": "/invoicing/create-invoice",
+   "structure": "document",
+   "top": {
+    "name": "",
+    "role": "document"
+   }
+  },
+  "hop": [
+   {
+    "click": {
+     "name": "Next",
+     "role": "button"
+    }
+   }
+  ],
+  "mutates": false,
+  "parent": "invoicing.create-setup",
+  "recordedBy": "agent",
+  "review": null,
+  "similarity": 0.9995,
+  "source": "a61094c53ef6b85508e2be36da24c2f9862023bc",
+  "status": "accepted"
+ },
  "invoicing.create-step1": {
   "checked": "2026-10-02-1349",
   "fingerprint": {
@@ -235,6 +2050,137 @@
   "review": null,
   "similarity": 0.9991,
   "source": "5a180f418dfb498bf52ce0c75ec1b7a6ef5c2962",
+  "status": "accepted"
+ },
+ "invoicing.create-step1-error": {
+  "checked": "2026-10-02-1349",
+  "fingerprint": {
+   "controls": [
+    "Back",
+    "Close",
+    "Create a one-time invoice Send a one-time invoice with a built-in payment link.",
+    "Create a recurring series Automatically generate recurring invoices on a set schedule.",
+    "Customize your experience",
+    "International Wire",
+    "Manual Transfer",
+    "Name",
+    "Next",
+    "Open account",
+    "Pay With Mercury",
+    "Request money without an invoice Send only a payment link with a single amount.",
+    "Viewing as Admin"
+   ],
+   "headings": [
+    "How would you like to request money?",
+    "Nebula Consulting Group sent you an invoice",
+    "Invoice",
+    "From",
+    "To",
+    "Details",
+    "Terms",
+    "Memo",
+    "Payment methods",
+    "Manual Transfer",
+    "International Wire",
+    "Pay With Mercury"
+   ],
+   "path": "/invoicing/create-invoice",
+   "structure": "document",
+   "top": {
+    "name": "",
+    "role": "document"
+   }
+  },
+  "hop": [
+   {
+    "click": {
+     "name": "Next",
+     "role": "button"
+    }
+   }
+  ],
+  "mutates": false,
+  "parent": "invoicing.create-step1",
+  "recordedBy": "agent",
+  "review": null,
+  "similarity": 0.9973,
+  "source": "5d097b4cb6358ba746e67a964caa13b5908b6f8c",
+  "status": "accepted"
+ },
+ "invoicing.customer-created": {
+  "checked": "2026-10-02-1349",
+  "fingerprint": {
+   "controls": [],
+   "headings": [],
+   "path": "/invoicing/customers",
+   "structure": "status",
+   "top": {
+    "name": "Customers table",
+    "role": "table"
+   }
+  },
+  "hop": [
+   {
+    "click": {
+     "name": "Create customer",
+     "role": "button"
+    }
+   },
+   {
+    "wait": {
+     "ms": 800
+    }
+   }
+  ],
+  "mutates": true,
+  "parent": "invoicing.add-customer-address",
+  "recordedBy": "agent",
+  "review": {
+   "by": "conductor",
+   "date": "2026-10-03",
+   "decision": "accept",
+   "note": "same Customers page: the new customer is selected with its detail panel (address, Total sent 0, No payment history) and the 'Customer added' toast. The hop clicks Create customer as labeled; the fixture name 'Test Person' stands in for Lumen Robotics",
+   "reason": "mutating"
+  },
+  "similarity": 0.9459,
+  "source": "8e23725e0c5b6ccdc7bbde0d940f67119b9a8568",
+  "status": "accepted"
+ },
+ "invoicing.customer-detail": {
+  "checked": "2026-10-02-1349",
+  "fingerprint": {
+   "controls": [
+    "Close detail panel",
+    "Delete",
+    "Edit",
+    "Request",
+    "View",
+    "View All"
+   ],
+   "headings": [
+    "Customer"
+   ],
+   "path": "/invoicing/customers",
+   "structure": "dialog",
+   "top": {
+    "name": "",
+    "role": "complementary"
+   }
+  },
+  "hop": [
+   {
+    "click": {
+     "name": "Aphelion Financial Advisors billing@aphelionfa.com <date>",
+     "role": "row"
+    }
+   }
+  ],
+  "mutates": false,
+  "parent": "invoicing.customers-index",
+  "recordedBy": "agent",
+  "review": null,
+  "similarity": 0.9956,
+  "source": "ecfeb49a9ef17eefca46932a97655fd1989cec1a",
   "status": "accepted"
  },
  "invoicing.customers-index": {
@@ -295,6 +2241,122 @@
   "review": null,
   "similarity": 0.995,
   "source": "97d170e1550eee4afc0af065b78cda302a97674c",
+  "status": "accepted"
+ },
+ "invoicing.delete-catalog-item-modal": {
+  "checked": "2026-10-02-1349",
+  "fingerprint": {
+   "controls": [
+    "Delete item",
+    "Go back"
+   ],
+   "headings": [
+    "Delete Test Person?"
+   ],
+   "path": "/invoicing/catalog",
+   "structure": "dialog",
+   "top": {
+    "name": "",
+    "role": "dialog"
+   }
+  },
+  "hop": [
+   {
+    "click": {
+     "name": "Delete",
+     "role": "button"
+    }
+   }
+  ],
+  "mutates": true,
+  "parent": "invoicing.catalog-item-created",
+  "recordedBy": "agent",
+  "review": {
+   "by": "conductor",
+   "date": "2026-10-03",
+   "decision": "accept",
+   "note": "same Delete catalog item confirmation (Go back / Delete item) for the item the parent recipe created ('Test Person' vs 'Onboarding Workshop'); label does not name the record",
+   "reason": "mutating"
+  },
+  "similarity": 0.9553,
+  "source": "b6d2942db3802e5ffebc90beeb4de9a7a6f2b203",
+  "status": "accepted"
+ },
+ "invoicing.delete-customer-modal": {
+  "checked": "2026-10-02-1349",
+  "fingerprint": {
+   "controls": [
+    "Delete customer",
+    "Go back"
+   ],
+   "headings": [
+    "Delete Test Person?"
+   ],
+   "path": "/invoicing/customers",
+   "structure": "dialog",
+   "top": {
+    "name": "",
+    "role": "dialog"
+   }
+  },
+  "hop": [
+   {
+    "click": {
+     "name": "Delete",
+     "role": "button"
+    }
+   }
+  ],
+  "mutates": true,
+  "parent": "invoicing.customer-created",
+  "recordedBy": "agent",
+  "review": {
+   "by": "conductor",
+   "date": "2026-10-03",
+   "decision": "accept",
+   "note": "same Delete customer confirmation (payment history preserved, Go back / Delete customer) for the customer the parent recipe created ('Test Person' vs 'Lumen Robotics'); label does not name the record",
+   "reason": "mutating"
+  },
+  "similarity": 0.9772,
+  "source": "fbb39089ba76a77da389dedc5940448bd7b5a763",
+  "status": "accepted"
+ },
+ "invoicing.edit-customer-blocked": {
+  "checked": "2026-10-02-1349",
+  "fingerprint": {
+   "controls": [
+    "Go back",
+    "View pending payments"
+   ],
+   "headings": [
+    "Edit Aphelion Financial Advisors?"
+   ],
+   "path": "/invoicing/customers",
+   "structure": "dialog",
+   "top": {
+    "name": "",
+    "role": "dialog"
+   }
+  },
+  "hop": [
+   {
+    "click": {
+     "name": "Edit",
+     "role": "button"
+    }
+   },
+   {
+    "wait": {
+     "ms": 500
+    }
+   }
+  ],
+  "mutates": false,
+  "parent": "invoicing.customer-detail",
+  "recordedBy": "agent",
+  "review": null,
+  "similarity": 0.9989,
+  "source": "4c6410b9ec50190dfcd66cebb9648da737389879",
   "status": "accepted"
  },
  "invoicing.edit-invoice": {
@@ -396,6 +2458,95 @@
   "review": null,
   "similarity": 0.9997,
   "source": "97d170e1550eee4afc0af065b78cda302a97674c",
+  "status": "accepted"
+ },
+ "invoicing.filtered-overdue": {
+  "checked": "2026-10-02-1349",
+  "fingerprint": {
+   "controls": [
+    "<amount>K Overdue <n> Invoices",
+    "<amount>K Paid <n> Invoices <n> Payment link",
+    "<amount>K Total open Total open <n> Invoices <n> Payment link",
+    "Accounting",
+    "Accounts",
+    "Amount",
+    "Banking",
+    "Bill Pay",
+    "Books",
+    "Cards",
+    "Catalog",
+    "Command New",
+    "Credit Card",
+    "Customer",
+    "Customers",
+    "Customize your experience",
+    "Due date",
+    "Export filtered",
+    "Filters (<n>)",
+    "Home",
+    "Insights",
+    "Invoice date",
+    "Invoice no.",
+    "Invoice settings",
+    "Invoicing",
+    "Learn about bookmarks",
+    "Mercury Demo Pro",
+    "Move money",
+    "Navigate to Settings",
+    "Open account",
+    "Ops / Payroll <amount>",
+    "Overdue",
+    "Payments",
+    "Recurring Series",
+    "Remove bookmark",
+    "Remove filter",
+    "Reorder Bill Pay bookmark",
+    "Reorder Credit Card bookmark",
+    "Reorder Insights bookmark",
+    "Reorder Ops / Payroll bookmark",
+    "Request money",
+    "Reset",
+    "Search for anything",
+    "Status",
+    "Tasks <n>",
+    "Team Spend",
+    "Toggle Private Mode",
+    "Transactions",
+    "Type",
+    "Viewing as Admin",
+    "updates"
+   ],
+   "headings": [
+    "Invoicing"
+   ],
+   "path": "/invoicing",
+   "structure": "document",
+   "top": {
+    "name": "",
+    "role": "document"
+   }
+  },
+  "hop": [
+   {
+    "click": {
+     "text": "OverdueUnpaid items past their due date"
+    }
+   },
+   {
+    "press": "Escape"
+   },
+   {
+    "wait": {
+     "ms": 600
+    }
+   }
+  ],
+  "mutates": false,
+  "parent": "invoicing.status-filter-menu",
+  "recordedBy": "agent",
+  "review": null,
+  "similarity": 0.9877,
+  "source": "2af3aac7e5bb71b35cb8ae1c91368886d02a7fdd",
   "status": "accepted"
  },
  "invoicing.filters-amount-facet": {
@@ -734,6 +2885,266 @@
   "source": "97d170e1550eee4afc0af065b78cda302a97674c",
   "status": "accepted"
  },
+ "invoicing.index-loading": {
+  "checked": "2026-10-02-1349",
+  "fingerprint": {
+   "controls": [
+    "+ <n> more events",
+    "<amount>K Overdue <n> Invoices",
+    "<amount>K Paid <n> Invoices <n> Payment link",
+    "<amount>K Total open Total open <n> Invoices <n> Payment link",
+    "Accounting",
+    "Accounts",
+    "Amount",
+    "Banking",
+    "Bill Pay",
+    "Books",
+    "Cards",
+    "Catalog",
+    "Choose Files",
+    "Close detail panel",
+    "Command New",
+    "Credit Card",
+    "Customer",
+    "Customers",
+    "Customize your experience",
+    "Due date",
+    "Edit",
+    "Export all",
+    "Filters",
+    "Home",
+    "Insights",
+    "Internal note",
+    "Invoice date",
+    "Invoice no.",
+    "Invoice settings",
+    "Invoice-INV-<n>.pdf",
+    "Invoicing",
+    "Learn about bookmarks",
+    "Mercury Demo Pro",
+    "More",
+    "Move money",
+    "Navigate to Settings",
+    "Open account",
+    "Open invoice PDF in a new tab",
+    "Ops / Payroll <amount>",
+    "Payments",
+    "Recurring Series",
+    "Remind",
+    "Remove bookmark",
+    "Reorder Bill Pay bookmark",
+    "Reorder Credit Card bookmark",
+    "Reorder Insights bookmark",
+    "Reorder Ops / Payroll bookmark",
+    "Request money",
+    "Search for anything",
+    "Status",
+    "Tasks <n>",
+    "Team Spend",
+    "Toggle Private Mode",
+    "Transactions",
+    "Type",
+    "Upload attachment",
+    "Viewing as Admin",
+    "https://demo.mercury.com/pay/ylk<n>fnl<n>bpkfcg<n>",
+    "updates"
+   ],
+   "headings": [
+    "Invoicing",
+    "Invoice to Orbital Advisory Partners"
+   ],
+   "path": "/invoicing",
+   "structure": "document",
+   "top": {
+    "name": "",
+    "role": "document"
+   }
+  },
+  "hop": [
+   {
+    "click": {
+     "name": "Return to dashboard",
+     "role": "button"
+    }
+   }
+  ],
+  "mutates": true,
+  "parent": "invoicing.create-sent",
+  "recordedBy": "agent",
+  "review": {
+   "by": "conductor",
+   "date": "2026-10-03",
+   "decision": "reject",
+   "note": "transient loading skeleton with 0 descendants; the replay shows the settled invoice list with the Invoice not found toast",
+   "reason": "below-threshold"
+  },
+  "similarity": 0.6981,
+  "source": "c18b6e31cc1e84443e702098f66d4e24695b2f0b",
+  "status": "rejected"
+ },
+ "invoicing.index-paid-rows": {
+  "checked": "2026-10-02-1349",
+  "fingerprint": {
+   "controls": [
+    "<amount>K Overdue <n> Invoices",
+    "<amount>K Paid <n> Invoices <n> Payment link",
+    "<amount>K Total open Total open <n> Invoices <n> Payment link",
+    "Accounting",
+    "Accounts",
+    "Amount",
+    "Banking",
+    "Bill Pay",
+    "Books",
+    "Cards",
+    "Catalog",
+    "Command New",
+    "Credit Card",
+    "Customer",
+    "Customers",
+    "Customize your experience",
+    "Due date",
+    "Export all",
+    "Filters",
+    "Home",
+    "Insights",
+    "Invoice date",
+    "Invoice no.",
+    "Invoice settings",
+    "Invoicing",
+    "Learn about bookmarks",
+    "Mercury Demo Pro",
+    "Move money",
+    "Navigate to Settings",
+    "Open account",
+    "Ops / Payroll <amount>",
+    "Payments",
+    "Recurring Series",
+    "Remove bookmark",
+    "Reorder Bill Pay bookmark",
+    "Reorder Credit Card bookmark",
+    "Reorder Insights bookmark",
+    "Reorder Ops / Payroll bookmark",
+    "Request money",
+    "Search for anything",
+    "Status",
+    "Tasks <n>",
+    "Team Spend",
+    "Toggle Private Mode",
+    "Transactions",
+    "Type",
+    "Viewing as Admin",
+    "updates"
+   ],
+   "headings": [
+    "Invoicing"
+   ],
+   "path": "/invoicing",
+   "structure": "document",
+   "top": {
+    "name": "",
+    "role": "document"
+   }
+  },
+  "hop": [
+   {
+    "scroll": {
+     "name": "Monthly Series canceled",
+     "role": "cell"
+    }
+   }
+  ],
+  "mutates": false,
+  "parent": "invoicing.index",
+  "recordedBy": "agent",
+  "review": null,
+  "similarity": 0.909,
+  "source": "963991cb67554a625e28e44898491cc6eb9f2553",
+  "status": "accepted"
+ },
+ "invoicing.invoice-detail-lower": {
+  "checked": "2026-10-02-1349",
+  "fingerprint": {
+   "controls": [
+    "+ <n> more events",
+    "Choose Files",
+    "Close detail panel",
+    "Edit",
+    "Internal note",
+    "Invoice-INV-<n>.pdf",
+    "More",
+    "Open invoice PDF in a new tab",
+    "Remind",
+    "Upload attachment",
+    "https://demo.mercury.com/pay/slug-inv-aphelion-overdue-media"
+   ],
+   "headings": [
+    "Invoice to Aphelion Financial Advisors"
+   ],
+   "path": "/invoicing",
+   "structure": "dialog",
+   "top": {
+    "name": "",
+    "role": "complementary"
+   }
+  },
+  "hop": [
+   {
+    "scroll": {
+     "name": "https://demo.mercury.com/pay/slug-inv-aphelion-overdue-media",
+     "role": "button"
+    }
+   }
+  ],
+  "mutates": false,
+  "parent": "invoicing.invoice-detail-overdue",
+  "recordedBy": "agent",
+  "review": null,
+  "similarity": 0.9022,
+  "source": "6393ad68f04ca402e255b1c88c71500f5a0de3f8",
+  "status": "accepted"
+ },
+ "invoicing.invoice-detail-overdue": {
+  "checked": "2026-10-02-1349",
+  "fingerprint": {
+   "controls": [
+    "+ <n> more events",
+    "Choose Files",
+    "Close detail panel",
+    "Edit",
+    "Internal note",
+    "Invoice-INV-<n>.pdf",
+    "More",
+    "Open invoice PDF in a new tab",
+    "Remind",
+    "Upload attachment",
+    "https://demo.mercury.com/pay/slug-inv-aphelion-overdue-media"
+   ],
+   "headings": [
+    "Invoice to Aphelion Financial Advisors"
+   ],
+   "path": "/invoicing",
+   "structure": "dialog",
+   "top": {
+    "name": "",
+    "role": "complementary"
+   }
+  },
+  "hop": [
+   {
+    "click": {
+     "name": "<date> <date> Overdue Aphelion Financial Advisors billing@aphelionfa.com <amount> INV-<n> <date> One time",
+     "role": "row"
+    }
+   }
+  ],
+  "mutates": false,
+  "parent": "invoicing.index",
+  "recordedBy": "agent",
+  "review": null,
+  "similarity": 0.9947,
+  "source": "009b1c925f3317fd1923f44eb7ab35082c86a96d",
+  "status": "accepted"
+ },
  "invoicing.make-a-copy": {
   "checked": "2026-10-02-1349",
   "fingerprint": {
@@ -782,24 +3193,490 @@
   "source": "97d170e1550eee4afc0af065b78cda302a97674c",
   "status": "accepted"
  },
- "invoicing.row-selected": {
+ "invoicing.paid-card-filter": {
   "checked": "2026-10-02-1349",
-  "fingerprint": null,
+  "fingerprint": {
+   "controls": [
+    "<amount>K Overdue <n> Invoices",
+    "<amount>K Paid <n> Invoices <n> Payment link",
+    "<amount>K Total open Total open <n> Invoices <n> Payment link",
+    "Accounting",
+    "Accounts",
+    "Amount",
+    "Banking",
+    "Bill Pay",
+    "Books",
+    "Cards",
+    "Catalog",
+    "Command New",
+    "Credit Card",
+    "Customer",
+    "Customers",
+    "Customize your experience",
+    "Due date",
+    "Export filtered",
+    "Filters (<n>)",
+    "Home",
+    "Insights",
+    "Invoice date",
+    "Invoice no.",
+    "Invoice settings",
+    "Invoicing",
+    "Learn about bookmarks",
+    "Mercury Demo Pro",
+    "Move money",
+    "Navigate to Settings",
+    "Open account",
+    "Ops / Payroll <amount>",
+    "Paid",
+    "Payments",
+    "Recurring Series",
+    "Remove bookmark",
+    "Remove filter",
+    "Reorder Bill Pay bookmark",
+    "Reorder Credit Card bookmark",
+    "Reorder Insights bookmark",
+    "Reorder Ops / Payroll bookmark",
+    "Request money",
+    "Reset",
+    "Search for anything",
+    "Status",
+    "Tasks <n>",
+    "Team Spend",
+    "Toggle Private Mode",
+    "Transactions",
+    "Type",
+    "Viewing as Admin",
+    "updates"
+   ],
+   "headings": [
+    "Invoicing"
+   ],
+   "path": "/invoicing",
+   "structure": "document",
+   "top": {
+    "name": "",
+    "role": "document"
+   }
+  },
   "hop": [
    {
-    "check": {
-     "name": "Status",
-     "role": "menuitem"
+    "click": {
+     "name": "$75K Paid 18 Invoices 1 Payment link",
+     "role": "button"
     }
    }
   ],
   "mutates": false,
   "parent": "invoicing.index",
-  "recordedBy": "draft",
+  "recordedBy": "agent",
   "review": null,
-  "similarity": null,
-  "source": null,
-  "status": "draft"
+  "similarity": 0.969,
+  "source": "6c0d20033a7ee32bc48a89399845cbce0da4fe31",
+  "status": "accepted"
+ },
+ "invoicing.payment-link-details": {
+  "checked": "2026-10-02-1349",
+  "fingerprint": {
+   "controls": [
+    "Accept ACH debit <n> business days",
+    "Accept credit cards Set up Stripe integration",
+    "Amount",
+    "Back",
+    "Choose Files",
+    "Close",
+    "Create & send",
+    "Create only",
+    "Currency",
+    "Customize your experience",
+    "Destination account",
+    "Edit",
+    "International Wire",
+    "Manual Transfer",
+    "Methods Manual Transfer (ACH/Wire), Pay with Mercury, International wires",
+    "Open account",
+    "Open combobox menu",
+    "Pay With Mercury",
+    "Payer memo (optional)",
+    "Set up Stripe integration",
+    "Upload attachment",
+    "Viewing as Admin"
+   ],
+   "headings": [
+    "Payment link details",
+    "Methods Manual Transfer (ACH/Wire), Pay with Mercury, International wires",
+    "Nebula Consulting Group sent you a payment link",
+    "Pay With Mercury",
+    "Manual Transfer",
+    "International Wire"
+   ],
+   "path": "/invoicing/create-invoice",
+   "structure": "document",
+   "top": {
+    "name": "",
+    "role": "document"
+   }
+  },
+  "hop": [
+   {
+    "click": {
+     "name": "Next",
+     "role": "button"
+    }
+   }
+  ],
+  "mutates": false,
+  "parent": "invoicing.payment-link-option",
+  "recordedBy": "agent",
+  "review": null,
+  "similarity": 0.9957,
+  "source": "e502bac7a716b1c2eab1e0ec2aff6691dbbd0e49",
+  "status": "accepted"
+ },
+ "invoicing.payment-link-error": {
+  "checked": "2026-10-02-1349",
+  "fingerprint": {
+   "controls": [
+    "Accept ACH debit <n> business days",
+    "Accept credit cards Set up Stripe integration",
+    "Amount",
+    "Back",
+    "Choose Files",
+    "Close",
+    "Create & send",
+    "Create only",
+    "Currency",
+    "Customize your experience",
+    "Destination account",
+    "Edit",
+    "International Wire",
+    "Manual Transfer",
+    "Methods Manual Transfer (ACH/Wire), Pay with Mercury, International wires",
+    "Open account",
+    "Open combobox menu",
+    "Pay With Mercury",
+    "Payer memo (optional)",
+    "Set up Stripe integration",
+    "Upload attachment",
+    "Viewing as Admin"
+   ],
+   "headings": [
+    "Payment link details",
+    "Methods Manual Transfer (ACH/Wire), Pay with Mercury, International wires",
+    "Nebula Consulting Group sent you a payment link",
+    "Pay With Mercury",
+    "Manual Transfer",
+    "International Wire"
+   ],
+   "path": "/invoicing/create-invoice",
+   "structure": "document",
+   "top": {
+    "name": "",
+    "role": "document"
+   }
+  },
+  "hop": [
+   {
+    "click": {
+     "name": "Create & send",
+     "role": "button"
+    }
+   }
+  ],
+  "mutates": true,
+  "parent": "invoicing.payment-link-details",
+  "recordedBy": "agent",
+  "review": {
+   "by": "conductor",
+   "date": "2026-10-03",
+   "decision": "accept",
+   "note": "same Payment link details form with 'Please complete this field' under an empty Amount after the hop clicks Create & send; the customer is Orbital Advisory Partners, not Vega, because the accepted 'Pick a customer' ancestor picks Orbital and the label names neither",
+   "reason": "mutating"
+  },
+  "similarity": 0.9957,
+  "source": "028f3a399783458503917684800c90b2524709f8",
+  "status": "accepted"
+ },
+ "invoicing.payment-link-filled": {
+  "checked": "2026-10-02-1349",
+  "fingerprint": {
+   "controls": [
+    "Accept ACH debit <n> business days",
+    "Accept credit cards Set up Stripe integration",
+    "Amount",
+    "Back",
+    "Choose Files",
+    "Close",
+    "Create & send",
+    "Create only",
+    "Currency",
+    "Customize your experience",
+    "Destination account",
+    "Edit",
+    "International Wire",
+    "Manual Transfer",
+    "Methods Manual Transfer (ACH/Wire), Pay with Mercury, International wires",
+    "Open account",
+    "Open combobox menu",
+    "Pay With Mercury",
+    "Payer memo (optional)",
+    "Set up Stripe integration",
+    "Upload attachment",
+    "Viewing as Admin"
+   ],
+   "headings": [
+    "Payment link details",
+    "Methods Manual Transfer (ACH/Wire), Pay with Mercury, International wires",
+    "Nebula Consulting Group sent you a payment link",
+    "Pay With Mercury",
+    "Manual Transfer",
+    "International Wire"
+   ],
+   "path": "/invoicing/create-invoice",
+   "structure": "document",
+   "top": {
+    "name": "",
+    "role": "document"
+   }
+  },
+  "hop": [
+   {
+    "fill": {
+     "locator": {
+      "name": "Amount",
+      "role": "textbox"
+     },
+     "value": "1.00"
+    }
+   },
+   {
+    "fill": {
+     "locator": {
+      "name": "Payer memo (optional)",
+      "role": "textbox"
+     },
+     "value": "A11y audit test memo"
+    }
+   }
+  ],
+  "mutates": true,
+  "parent": "invoicing.payment-link-error",
+  "recordedBy": "agent",
+  "review": {
+   "by": "conductor",
+   "date": "2026-10-03",
+   "decision": "accept",
+   "note": "same Payment link details form with Amount $1.00 (fixture), the fixture memo and the payer preview showing $1.00; validation error cleared. The customer is Orbital Advisory Partners, not Vega, because the accepted 'Pick a customer' ancestor picks Orbital and the label names neither. No submit in this hop",
+   "reason": "mutating"
+  },
+  "similarity": 0.9685,
+  "source": "585bcd726e9e092e27ef20a155f6e1cbc18681c8",
+  "status": "accepted"
+ },
+ "invoicing.payment-link-option": {
+  "checked": "2026-10-02-1349",
+  "fingerprint": {
+   "controls": [
+    "Back",
+    "Close",
+    "Create a one-time invoice Send a one-time invoice with a built-in payment link.",
+    "Create a recurring series Automatically generate recurring invoices on a set schedule.",
+    "Customize your experience",
+    "International Wire",
+    "Manual Transfer",
+    "Name",
+    "Next",
+    "Open account",
+    "Pay With Mercury",
+    "Request money without an invoice Send only a payment link with a single amount.",
+    "Viewing as Admin"
+   ],
+   "headings": [
+    "How would you like to request money?",
+    "Mercury Demo sent you a payment link",
+    "Pay With Mercury",
+    "Manual Transfer",
+    "International Wire"
+   ],
+   "path": "/invoicing/create-invoice",
+   "structure": "document",
+   "top": {
+    "name": "",
+    "role": "document"
+   }
+  },
+  "hop": [
+   {
+    "click": {
+     "name": "Request money without an invoice Send only a payment link with a single amount.",
+     "role": "radio"
+    }
+   }
+  ],
+  "mutates": false,
+  "parent": "invoicing.create-customer-selected",
+  "recordedBy": "agent",
+  "review": {
+   "by": "conductor",
+   "date": "2026-10-03",
+   "decision": "accept",
+   "note": "same 'Request money without an invoice' radio selected, with the payer-page payment-link mock in the preview. The hop clicks that radio. The customer is Orbital Advisory Partners rather than Vega because the parent capture also picked Orbital",
+   "reason": "below-threshold"
+  },
+  "similarity": 0.8793,
+  "source": "3e8002b4b7b22b5897bb1e45f3b741dc0fad83c1",
+  "status": "accepted"
+ },
+ "invoicing.payment-link-sent": {
+  "checked": "2026-10-02-1349",
+  "fingerprint": {
+   "controls": [
+    "Close",
+    "Create another request",
+    "Customize your experience",
+    "Open account",
+    "Return to dashboard",
+    "Viewing as Admin",
+    "https://demo.mercury.com/pay/ylk<n>fnl<n>bpkfcg<n>"
+   ],
+   "headings": [
+    "Your payment link has been created and sent"
+   ],
+   "path": "/invoicing/create-invoice",
+   "structure": "document",
+   "top": {
+    "name": "",
+    "role": "document"
+   }
+  },
+  "hop": [
+   {
+    "click": {
+     "name": "Create & send",
+     "role": "button"
+    }
+   }
+  ],
+  "mutates": true,
+  "parent": "invoicing.payment-link-filled",
+  "recordedBy": "agent",
+  "review": {
+   "by": "conductor",
+   "date": "2026-10-03",
+   "decision": "accept",
+   "note": "same 'Your payment link has been created and sent' screen with link, Create another request and Return to dashboard; hop clicks Create & send as labeled; customer Orbital Advisory vs Vega Compliance comes from the parent's unnamed 'Pick a customer'; $1.00 fixture amount; toast shows in light replay and faded in dark",
+   "reason": "below-threshold"
+  },
+  "similarity": 0.7741,
+  "source": "b2f49962cd7c132e6b67c8e7107633853f91a168",
+  "status": "accepted"
+ },
+ "invoicing.remind-modal": {
+  "checked": "2026-10-02-1349",
+  "fingerprint": {
+   "controls": [
+    "Close",
+    "Yes, Send Now"
+   ],
+   "headings": [
+    "Send a reminder Automated reminders are enabled for this invoice. Are you sure you want to send it manually now?"
+   ],
+   "path": "/invoicing",
+   "structure": "dialog",
+   "top": {
+    "name": "",
+    "role": "dialog"
+   }
+  },
+  "hop": [
+   {
+    "click": {
+     "name": "Remind",
+     "role": "button"
+    }
+   },
+   {
+    "wait": {
+     "ms": 500
+    }
+   }
+  ],
+  "mutates": false,
+  "parent": "invoicing.invoice-detail-overdue",
+  "recordedBy": "agent",
+  "review": null,
+  "similarity": 0.9981,
+  "source": "daac6f68e8c844b199fda61f6ef5ba863f55c550",
+  "status": "accepted"
+ },
+ "invoicing.reminder-sent": {
+  "checked": "2026-10-02-1349",
+  "fingerprint": {
+   "controls": [],
+   "headings": [],
+   "path": "/invoicing",
+   "structure": "status",
+   "top": {
+    "name": "",
+    "role": "generic"
+   }
+  },
+  "hop": [
+   {
+    "click": {
+     "name": "Yes, Send Now",
+     "role": "button"
+    }
+   }
+  ],
+  "mutates": true,
+  "parent": "invoicing.remind-modal",
+  "recordedBy": "agent",
+  "review": {
+   "by": "conductor",
+   "date": "2026-10-03",
+   "decision": "accept",
+   "note": "same 'Reminder sent' toast over the invoice list with the Aphelion Financial Advisors overdue invoice panel open; the hop clicks 'Yes, Send Now' as the label says",
+   "reason": "mutating"
+  },
+  "similarity": 0.9847,
+  "source": "b64a635fa1afe4ece11b58a7c421ec27b17f9ffa",
+  "status": "accepted"
+ },
+ "invoicing.row-selected": {
+  "checked": "2026-10-02-1349",
+  "fingerprint": {
+   "controls": [
+    "Cancel selected items",
+    "Export invoices",
+    "Send reminder"
+   ],
+   "headings": [],
+   "path": "/invoicing",
+   "structure": "dialog",
+   "top": {
+    "name": "<n> item selected",
+    "role": "dialog"
+   }
+  },
+  "hop": [
+   {
+    "check": {
+     "role": "checkbox",
+     "within": {
+      "name": "<date> <date> Scheduled Quasar Design Studio hello@quasardesign.co <amount> INV-<n> <date> One time",
+      "role": "row"
+     }
+    }
+   }
+  ],
+  "mutates": false,
+  "parent": "invoicing.index",
+  "recordedBy": "agent",
+  "review": null,
+  "similarity": 0.9749,
+  "source": "5c50e53e95d23450adbf83c1fe25b60310835d29",
+  "status": "accepted"
  },
  "invoicing.series-detail": {
   "checked": "2026-10-02-1349",
@@ -835,6 +3712,55 @@
   "review": null,
   "similarity": 0.9908,
   "source": "97d170e1550eee4afc0af065b78cda302a97674c",
+  "status": "accepted"
+ },
+ "invoicing.series-detail-new": {
+  "checked": "2026-10-02-1349",
+  "fingerprint": {
+   "controls": [
+    "Amount Click to sort",
+    "Close",
+    "Customize your experience",
+    "Due date Click to sort",
+    "Edit series",
+    "Invoice date Click to sort",
+    "Invoice no. Click to sort",
+    "Make a copy",
+    "Open account",
+    "Queued invoice actions",
+    "Status Click to sort",
+    "Viewing as Admin"
+   ],
+   "headings": [
+    "Astral Creative Co"
+   ],
+   "path": "/invoicing/series/<id>",
+   "structure": "document",
+   "top": {
+    "name": "",
+    "role": "document"
+   }
+  },
+  "hop": [
+   {
+    "click": {
+     "name": "Return to dashboard",
+     "role": "button"
+    }
+   }
+  ],
+  "mutates": true,
+  "parent": "invoicing.create-series-success",
+  "recordedBy": "agent",
+  "review": {
+   "by": "conductor",
+   "date": "2026-10-03",
+   "decision": "accept",
+   "note": "same new series detail for Astral Creative Co (S-0006, Active, Monthly) with a single Queued INV-34; the date (Nov 2 vs Oct 24) and amount ($7,500 vs $3,000) drifted, consistent with the accepted parent. The hop clicks Return to dashboard as labeled.",
+   "reason": "mutating"
+  },
+  "similarity": 0.9977,
+  "source": "d16115e313a9fa4171b18c61531b1624da55e634",
   "status": "accepted"
  },
  "invoicing.series-index": {
@@ -901,6 +3827,148 @@
   "source": "97d170e1550eee4afc0af065b78cda302a97674c",
   "status": "accepted"
  },
+ "invoicing.series-index-after": {
+  "checked": "2026-10-02-1349",
+  "fingerprint": {
+   "controls": [
+    "Accounting",
+    "Accounts",
+    "Add to bookmarks",
+    "Amount Click to sort",
+    "Banking",
+    "Bill Pay",
+    "Books",
+    "Cards",
+    "Catalog",
+    "Command New",
+    "Create series",
+    "Credit Card",
+    "Customer Click to sort",
+    "Customers",
+    "Customize your experience",
+    "Home",
+    "Insights",
+    "Invoicing",
+    "Learn about bookmarks",
+    "Mercury Demo Pro",
+    "Move money",
+    "Navigate to Settings",
+    "Open account",
+    "Ops / Payroll <amount>",
+    "Payments",
+    "Recurring Series",
+    "Remove bookmark",
+    "Reorder Bill Pay bookmark",
+    "Reorder Credit Card bookmark",
+    "Reorder Insights bookmark",
+    "Reorder Ops / Payroll bookmark",
+    "Search for anything",
+    "Series ID Click to sort",
+    "Status Click to sort",
+    "Tasks <n>",
+    "Team Spend",
+    "Toggle Private Mode",
+    "Transactions",
+    "Viewing as Admin",
+    "updates"
+   ],
+   "headings": [
+    "Recurring Series"
+   ],
+   "path": "/invoicing/series",
+   "structure": "document",
+   "top": {
+    "name": "",
+    "role": "document"
+   }
+  },
+  "hop": [
+   {
+    "click": {
+     "name": "Close",
+     "role": "button"
+    }
+   }
+  ],
+  "mutates": true,
+  "parent": "invoicing.series-detail-new",
+  "recordedBy": "agent",
+  "review": {
+   "by": "conductor",
+   "date": "2026-10-03",
+   "decision": "accept",
+   "note": "same Recurring Series list with the new Astral Creative Co S-0006 row; the hop clicks Close as the label says; the 'Recurring series created and sent!' toast is still up in the replay",
+   "reason": "mutating"
+  },
+  "similarity": 0.9725,
+  "source": "a4187a98fd183be0eea29dbb15c115789113129c",
+  "status": "accepted"
+ },
+ "invoicing.series-queued-menu": {
+  "checked": "2026-10-02-1349",
+  "fingerprint": {
+   "controls": [
+    "Edit queued invoice",
+    "Send now",
+    "Skip invoice"
+   ],
+   "headings": [],
+   "path": "/invoicing/series/srs-meridian-monthly",
+   "structure": "menu",
+   "top": {
+    "name": "Queued invoice actions",
+    "role": "menu"
+   }
+  },
+  "hop": [
+   {
+    "click": {
+     "name": "Queued invoice actions",
+     "role": "button"
+    }
+   }
+  ],
+  "mutates": false,
+  "parent": "invoicing.series-detail",
+  "recordedBy": "agent",
+  "review": null,
+  "similarity": 0.9926,
+  "source": "c4ba1b5abdfa57ddb169c355d35917e73451d6a3",
+  "status": "accepted"
+ },
+ "invoicing.series-skip-modal": {
+  "checked": "2026-10-02-1349",
+  "fingerprint": {
+   "controls": [
+    "Close",
+    "Skip invoice"
+   ],
+   "headings": [
+    "Skip queued invoice?"
+   ],
+   "path": "/invoicing/series/srs-meridian-monthly",
+   "structure": "dialog",
+   "top": {
+    "name": "",
+    "role": "dialog"
+   }
+  },
+  "hop": [
+   {
+    "click": {
+     "name": "Skip invoice",
+     "role": "menuitem"
+    }
+   }
+  ],
+  "mutates": false,
+  "parent": "invoicing.series-queued-menu",
+  "recordedBy": "agent",
+  "review": null,
+  "similarity": 0.9985,
+  "source": "1820d606787c8cb37371755cf1968445fdfb2ce1",
+  "status": "accepted"
+ },
  "invoicing.settings-branding": {
   "checked": "2026-10-02-1349",
   "fingerprint": {
@@ -950,6 +4018,58 @@
   "review": null,
   "similarity": 0.9908,
   "source": "d2342a8bfe647f6f5c3f52ce1e993f0e17b3db4d",
+  "status": "accepted"
+ },
+ "invoicing.settings-branding-blue": {
+  "checked": "2026-10-02-1349",
+  "fingerprint": {
+   "controls": [
+    "Back",
+    "Close",
+    "Customize your experience",
+    "Display company logo on invoice",
+    "Manage Logo",
+    "Open account",
+    "Save",
+    "Viewing as Admin",
+    "beige-theme",
+    "blue-theme",
+    "green-theme",
+    "orange-theme",
+    "purple-theme",
+    "white-theme"
+   ],
+   "headings": [
+    "Invoice settings",
+    "Branding",
+    "Invoice",
+    "From",
+    "To",
+    "Details",
+    "Terms",
+    "Memo"
+   ],
+   "path": "/invoicing/invoice-settings",
+   "structure": "document",
+   "top": {
+    "name": "",
+    "role": "document"
+   }
+  },
+  "hop": [
+   {
+    "check": {
+     "name": "blue-theme",
+     "role": "radio"
+    }
+   }
+  ],
+  "mutates": false,
+  "parent": "invoicing.settings-branding",
+  "recordedBy": "agent",
+  "review": null,
+  "similarity": 0.9998,
+  "source": "7ca192a90c3a9ec5cc09f3b02e2c0a25939c8bd5",
   "status": "accepted"
  },
  "invoicing.settings-defaults": {
@@ -1175,24 +4295,152 @@
   "source": "cd75c2275470854291d885056bd0ca6c50c75c37",
   "status": "accepted"
  },
- "invoicing.status-filter-menu": {
+ "invoicing.sorted-by-amount": {
   "checked": "2026-10-02-1349",
-  "fingerprint": null,
+  "fingerprint": {
+   "controls": [
+    "<amount>K Overdue <n> Invoices",
+    "<amount>K Paid <n> Invoices <n> Payment link",
+    "<amount>K Total open Total open <n> Invoices <n> Payment link",
+    "Accounting",
+    "Accounts",
+    "Amount",
+    "Banking",
+    "Bill Pay",
+    "Books",
+    "Cards",
+    "Catalog",
+    "Command New",
+    "Credit Card",
+    "Customer",
+    "Customers",
+    "Customize your experience",
+    "Due date",
+    "Export all",
+    "Filters",
+    "Home",
+    "Insights",
+    "Invoice date",
+    "Invoice no.",
+    "Invoice settings",
+    "Invoicing",
+    "Learn about bookmarks",
+    "Mercury Demo Pro",
+    "Move money",
+    "Navigate to Settings",
+    "Open account",
+    "Ops / Payroll <amount>",
+    "Payments",
+    "Recurring Series",
+    "Remove bookmark",
+    "Reorder Bill Pay bookmark",
+    "Reorder Credit Card bookmark",
+    "Reorder Insights bookmark",
+    "Reorder Ops / Payroll bookmark",
+    "Request money",
+    "Search for anything",
+    "Status",
+    "Tasks <n>",
+    "Team Spend",
+    "Toggle Private Mode",
+    "Transactions",
+    "Type",
+    "Viewing as Admin",
+    "updates"
+   ],
+   "headings": [
+    "Invoicing"
+   ],
+   "path": "/invoicing",
+   "structure": "document",
+   "top": {
+    "name": "",
+    "role": "document"
+   }
+  },
   "hop": [
    {
     "click": {
-     "name": "Status",
+     "name": "Amount",
      "role": "button"
     }
    }
   ],
   "mutates": false,
   "parent": "invoicing.index",
-  "recordedBy": "draft",
+  "recordedBy": "agent",
   "review": null,
-  "similarity": null,
-  "source": null,
-  "status": "draft"
+  "similarity": 0.9927,
+  "source": "b68dc6063128efdcadace61496616f8c7849b9ee",
+  "status": "accepted"
+ },
+ "invoicing.status-filter-menu": {
+  "checked": "2026-10-02-1349",
+  "fingerprint": {
+   "controls": [
+    "Active Unpaid and not overdue",
+    "Open All unpaid items, including active, overdue and processing",
+    "Overdue Unpaid items past their due date",
+    "Paid Payment received to your account",
+    "Processing Payment initiated and in transit to your account",
+    "Scheduled Items scheduled to be sent in the future"
+   ],
+   "headings": [],
+   "path": "/invoicing",
+   "structure": "menu",
+   "top": {
+    "name": "Status",
+    "role": "menu"
+   }
+  },
+  "hop": [
+   {
+    "click": {
+     "name": "Status",
+     "role": "menuitem"
+    }
+   },
+   {
+    "wait": {
+     "ms": 600
+    }
+   }
+  ],
+  "mutates": false,
+  "parent": "invoicing.index",
+  "recordedBy": "agent",
+  "review": null,
+  "similarity": 0.9923,
+  "source": "ca5f67baa455dd4714facf38555a0e703b80dff9",
+  "status": "accepted"
+ },
+ "invoicing.total-open-tooltip": {
+  "checked": "2026-10-02-1349",
+  "fingerprint": {
+   "controls": [],
+   "headings": [],
+   "path": "/invoicing",
+   "structure": "dialog",
+   "top": {
+    "name": "",
+    "role": "generic"
+   }
+  },
+  "hop": [
+   {
+    "hover": {
+     "css": "[class*=\"_iconWrapper_\"]",
+     "index": 0
+    }
+   }
+  ],
+  "mutates": false,
+  "parent": "invoicing.index",
+  "recordedBy": "agent",
+  "review": null,
+  "similarity": 0.9927,
+  "source": "fbcfc7985d76b32cf4b7278fd96ea5120c815374",
+  "status": "accepted"
  },
  "invoicing.type-filter-menu": {
   "checked": "2026-10-02-1349",

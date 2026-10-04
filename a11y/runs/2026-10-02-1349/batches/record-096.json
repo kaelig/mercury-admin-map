@@ -1,0 +1,31 @@
+{
+ "batch": "record-096",
+ "reach": {
+  "baseUrl": "https://demo.mercury.com",
+  "data": "data",
+  "map": "build/map.json",
+  "run": "2026-10-02-1349",
+  "workspace": "a11y"
+ },
+ "run": "2026-10-02-1349",
+ "states": [
+  {
+   "area": "billpay",
+   "draft": "not drafted: its parent had no accepted recipe when the drafter ran",
+   "image": "screens/billpay/70-rule-created.png",
+   "kind": "toast",
+   "labels": [
+    "Click Create a rule",
+    "Open If select",
+    "Pick Bank description, type value, open Then select",
+    "Pick GL code and a code",
+    "Click Create"
+   ],
+   "mutates": true,
+   "note": "New rule 7 appended to the table and a 'Rule created \u00b7 View rule' toast.",
+   "parent": "billpay.rule-filled",
+   "state": "billpay.rule-created",
+   "title": "Rule created"
+  }
+ ]
+}
