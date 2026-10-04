@@ -183,7 +183,7 @@ The second run of the pair is never published.
    {"chrome": "151.0.7700.0", "lighthouseAxe": "4.11.0", "states": [{"state": "cards.index", "kind": "root", "lighthouseFailed": ["color-contrast", "heading-order"]}], "explanations": {"heading-order": "rule-selection"}}
    ```
 
-   You may claim two explanations: `rule-selection` (Lighthouse runs a rule the sweep's WCAG tags leave out, or the reverse) and `version` (a different axe or Chrome). `scope`, a parent-page failure Lighthouse reports on an overlay, is computed for you.
+   You may claim three explanations: `rule-selection` (Lighthouse runs a rule the sweep's WCAG tags leave out, or the reverse, such as an axe rule tagged `experimental`), `version` (a different axe or Chrome), and `environment` (the demo renders differently because the sweep emulates `prefers-reduced-motion: reduce`, which the MCP cannot: check the element on both pages first). `scope`, a parent-page failure Lighthouse reports on an overlay, and `incomplete`, a rule the sweep has only as an axe incomplete result (Lighthouse scores those as passing), are computed for you.
 5. Record it:
 
    ```sh

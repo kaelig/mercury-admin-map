@@ -7,13 +7,17 @@ The conductor runs Lighthouse in snapshot mode on three roots and three one-hop 
 
     {"date": "YYYY-MM-DD", "chrome": "<the MCP's Chrome version>", "lighthouseAxe": "4.13.0",
      "states": [{"state": "<state id>", "kind": "root" | "overlay", "lighthouseFailed": ["<axe rule id>", ...]}],
-     "explanations": {"<axe rule id>": "rule-selection" | "version"}}
+     "explanations": {"<axe rule id>": "rule-selection" | "version" | "environment"}}
 
 For each state this stage reads the sweep's axe violations and incomplete results from the raw file
 and records every rule only one side reports. Lighthouse audits the whole document while the sweep
 scopes an overlay to its top layer (KTD11), so a rule Lighthouse fails on an overlay state that the
-sweep found only on its parent page is explained by scope. A rule the conductor attributes to
-Lighthouse's rule selection or a different axe or Chrome version is explained. Anything else is an
+sweep found only on its parent page is explained by scope. Lighthouse scores an axe incomplete result
+as passing, so a rule the sweep has only as incomplete is explained by incomplete. A rule the conductor attributes to
+Lighthouse's rule selection, a different axe or Chrome version, or the environment is explained.
+"environment" is for a difference the demo itself causes because the sweep emulates
+prefers-reduced-motion: reduce and the Lighthouse MCP cannot: the conductor checks the element on
+both pages before claiming it, and the sweep's finding then goes to a verifier like any other. Anything else is an
 unexplained difference: a harness bug to fix before grouping. Writes lighthouse.json; exits 1 while
 any difference is unexplained. `due(ws, run_id)` says whether this run needs a calibration.
 File format: schemas.md ("lighthouse.json").
@@ -26,7 +30,7 @@ from lib.canon import dump, read_json, write_json
 from verdict import date_reasons, missing_fields, rel, today
 
 KINDS = ("root", "overlay")
-EXPLANATIONS = ("rule-selection", "version")   # "scope" is computed here, never claimed
+EXPLANATIONS = ("rule-selection", "version", "environment")   # "scope" and "incomplete" are computed, never claimed
 BASES = ("violation", "incomplete")
 
 
@@ -35,12 +39,23 @@ def sweep_rules(raw):
                    if r.get("check") == "axe" and r.get("basis") in BASES})
 
 
-def compare(lighthouse, own, parent, overlay, explanations):
+def incomplete_only(raw):
+    """Axe rules the sweep has only as incomplete: Lighthouse scores an incomplete result as passing."""
+    bases = {}
+    for r in (raw or {}).get("results") or []:
+        if r.get("check") == "axe" and r.get("basis") in BASES:
+            bases.setdefault(r["rule"], set()).add(r["basis"])
+    return {rule for rule, b in bases.items() if b == {"incomplete"}}
+
+
+def compare(lighthouse, own, parent, overlay, explanations, incomplete=frozenset()):
     out = []
     for rule in sorted(set(lighthouse) ^ set(own)):
         side = "lighthouse" if rule in lighthouse else "sweep"
         if overlay and side == "lighthouse" and rule in parent:
             why = "scope"
+        elif side == "sweep" and rule in incomplete:
+            why = "incomplete"
         else:
             why = explanations.get(rule)
         out.append({"rule": rule, "side": side, "explained": why is not None, "explanation": why})
@@ -57,11 +72,11 @@ def build(ws, run_id, doc):
     reasons += date_reasons(date)
     explanations = doc.get("explanations") or {}
     if not isinstance(explanations, dict):
-        reasons.append("explanations must map axe rule ids to rule-selection or version")
+        reasons.append("explanations must map axe rule ids to rule-selection, version or environment")
         explanations = {}
     for rule, why in sorted(explanations.items()):
         if why not in EXPLANATIONS:
-            reasons.append(f"explanation {why!r} for {rule} must be rule-selection or version; scope is computed")
+            reasons.append(f"explanation {why!r} for {rule} must be rule-selection, version or environment; scope and incomplete are computed")
     entries = doc.get("states")
     if not isinstance(entries, list) or not entries:
         return None, reasons + ["states must list the states Lighthouse audited"]
@@ -92,7 +107,8 @@ def build(ws, run_id, doc):
         own = sweep_rules(raw)
         lighthouse = sorted(set(failed))
         out.append({"state": sid, "kind": kind, "lighthouseFailed": lighthouse, "sweepRules": own,
-                    "differences": compare(lighthouse, own, parent_rules, kind == "overlay", explanations)})
+                    "differences": compare(lighthouse, own, parent_rules, kind == "overlay", explanations,
+                                           incomplete_only(raw))})
     if reasons:
         return None, reasons
     versions = ws.run_doc(run_id).get("versions") or {}

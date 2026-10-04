@@ -120,7 +120,29 @@ class Add(CalibrationTest):
         self.assertEqual(st["differences"], [
             {"rule": "image-alt", "side": "lighthouse", "explained": True, "explanation": "version"},
             {"rule": "landmark-one-main", "side": "sweep", "explained": True, "explanation": "rule-selection"},
-            {"rule": "target-size", "side": "sweep", "explained": True, "explanation": "rule-selection"}])
+            {"rule": "target-size", "side": "sweep", "explained": True, "explanation": "incomplete"}])
+
+    def test_the_conductor_explains_a_reduced_motion_environment_difference(self):
+        code, out, err = self.add(self.comparison(
+            states=[{"state": "cards.index", "kind": "root", "lighthouseFailed": ["color-contrast"]}],
+            explanations={"landmark-one-main": "environment", "target-size": "rule-selection"}))
+        self.assertEqual(code, 0, err)
+        (st,) = self.written()["states"]
+        self.assertEqual(st["differences"], [
+            {"rule": "landmark-one-main", "side": "sweep", "explained": True, "explanation": "environment"},
+            {"rule": "target-size", "side": "sweep", "explained": True, "explanation": "incomplete"}])
+
+    def test_a_rule_the_sweep_has_only_as_incomplete_is_explained_by_incomplete(self):
+        import calibration
+        raw = {"results": [{"check": "axe", "rule": "aria-valid-attr-value", "basis": "incomplete"},
+                           {"check": "axe", "rule": "color-contrast", "basis": "incomplete"},
+                           {"check": "axe", "rule": "color-contrast", "basis": "violation"},
+                           {"check": "tabwalk", "rule": "backward-jump", "basis": "candidate"}]}
+        self.assertEqual(calibration.incomplete_only(raw), {"aria-valid-attr-value"})
+        diffs = calibration.compare([], calibration.sweep_rules(raw), [], False, {}, calibration.incomplete_only(raw))
+        self.assertEqual(diffs, [
+            {"rule": "aria-valid-attr-value", "side": "sweep", "explained": True, "explanation": "incomplete"},
+            {"rule": "color-contrast", "side": "sweep", "explained": False, "explanation": None}])
 
     def test_the_sweep_side_counts_only_axe_violations_and_incomplete_results(self):
         self.add(self.comparison())

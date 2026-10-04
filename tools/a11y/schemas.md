@@ -657,7 +657,7 @@ exists; `pass` also requires zero rejected lines; `prompt` joins the distinct pr
 ## runs/<id>/lighthouse.json (U7 `calibration add`, KTD25)
 
 Input to `calibration add --file`: `{date?, chrome, lighthouseAxe, states: [{state, kind: "root" |
-"overlay", lighthouseFailed: [rule]}], explanations: {rule: "rule-selection" | "version"}}`. An
+"overlay", lighthouseFailed: [rule]}], explanations: {rule: "rule-selection" | "version" | "environment"}}`. An
 overlay's `sweepRules` are its own results; a rule Lighthouse fails that the sweep found only on the
 parent page is a difference explained by `scope`.
 
@@ -665,7 +665,7 @@ parent page is a difference explained by `scope`.
 {"date": "YYYY-MM-DD", "chrome": "…", "lighthouseAxe": "4.13.0", "sweepAxe": "4.13.0",
  "states": [{"state": "…", "kind": "root" | "overlay", "lighthouseFailed": ["…"],
              "sweepRules": ["…"], "differences": [{"rule": "…", "side": "lighthouse" | "sweep",
-             "explained": true, "explanation": "scope" | "rule-selection" | "version" | null}]}],
+             "explained": true, "explanation": "scope" | "incomplete" | "rule-selection" | "version" | "environment" | null}]}],
  "unexplained": 0}
 ```
 
