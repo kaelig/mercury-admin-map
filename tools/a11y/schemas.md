@@ -499,7 +499,11 @@ the state was already unreachable there.
  "reason": "…", "batch": "records-003", "model": "sonnet", "prompt": "record-judge@1"}
 ```
 
-A `flag` with a criterion feeds `group`. A `flag` without one goes to the advisory list. A flag
+A `flag` with a criterion feeds `group`, except where the record's element (its occurrence `xpath`
+on that state) already carries a definite axe or custom result of the same family and criterion:
+that is the same failure, so `group` skips the record and counts it under "skipped … same element and
+criterion as a scanner result". An `incomplete` result does not cover a record. A `flag` without a
+criterion goes to the advisory list. A flag
 always carries the `criterion` key (null means advisory). `records prepare` is a second appender of
 `judgments.jsonl`, through the same validator: for a published record signature not yet judged it
 carries the published flag forward (`batch: "published"`, `model: "script"`, `prompt: "carried"`),
@@ -810,7 +814,8 @@ withdrawn entry's `reason` is the drop `reasonCode`; a not-retested entry's reas
 - `hand-found.json`: `{issueId: {family, criteria, why}}` for every `category: "a11y"` issue in
   `--data`. `group` fails when one is missing.
 - Findings from judged announced-as records (KTD20) use rule id `announced-as`; a judgment may flag
-  only the families `name`, `role-state` and `structure`.
+  only the families `name`, `role-state` and `structure`. A record on an element a definite scanner
+  result already reports for the same family and criterion adds nothing (`judgments.jsonl` above).
 - R20 names 1.4.12 as not tested, so `checks/axe.mjs` disables `avoid-inline-spacing`.
 - `checks.json` `incomplete`: `facts`, `messageKeyText` (messageKey → words, at most 36
   characters), `noMessageKey`, and `templates` (title, detail, evidence, copy) for incomplete groups.

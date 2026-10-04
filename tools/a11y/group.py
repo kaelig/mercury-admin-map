@@ -389,6 +389,9 @@ def collect(raws, judgments, checks, wcag):
     groups, advisory, skipped = {}, {}, collections.Counter()
     for sid in sorted(raws):
         raw = raws[sid]
+        # (family, criterion, xpath) of every definite axe or custom result on this state: a flagged record on
+        # the same element for the same criterion is the same failure, already a finding.
+        covered = set()
         for i, r in enumerate(raw.get("results") or []):
             rule = r.get("rule")
             family = checks["axeRules"].get(rule) or checks["customRules"].get(rule)
@@ -408,12 +411,18 @@ def collect(raws, judgments, checks, wcag):
                 fam = checks["families"][family]
                 key = signature.finding_key(family, rule, fam["key"], r.get("occurrence"), r.get("evidence"))
                 g = groups.setdefault(key, {"family": family, "rule": rule, "sig": None, "members": []})
+                xpath = (r.get("occurrence") or {}).get("xpath")
+                if xpath:
+                    covered |= {(family, c, xpath) for c in criteria}
             g["members"].append({"state": sid, "index": i, "occ": r.get("occurrence"), "evidence": r.get("evidence") or {},
                                  "check": r.get("check"), "criteria": criteria, "basis": r.get("basis"), "raw": raw})
         for i, rec in enumerate(raw.get("records") or []):
             s = signature.record_sig(rec)
             if s in flagged:
                 j = flagged[s]
+                if (j["family"], j["criterion"], (rec.get("occurrence") or {}).get("xpath")) in covered:
+                    skipped["announced-as: same element and criterion as a scanner result"] += 1
+                    continue
                 key = signature.record_finding_key(j["family"], s)
                 g = groups.setdefault(key, {"family": j["family"], "rule": "announced-as", "sig": s, "members": []})
                 g["members"].append({"state": sid, "index": i, "occ": rec.get("occurrence"),

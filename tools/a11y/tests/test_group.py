@@ -640,6 +640,32 @@ class Fixture(unittest.TestCase):
         ok_sig = self.sig_of("@home.index#1")
         self.assertNotIn(ok_sig, json.dumps(doc))
 
+    def test_a_flagged_record_on_an_element_a_scanner_result_already_covers_adds_no_finding(self):
+        # The judge flags settings.tokens' first unnamed row button, which axe's button-name already reports.
+        path = os.path.join(self.raw_dir, "settings.tokens.json")
+        raw = self.raw("settings.tokens")
+        row = raw["results"][1]
+        raw["records"] = [{"role": "button", "name": "", "states": {}, "description": "", "template": 'button ""',
+                           "occurrence": row["occurrence"]}]
+        canon.write_json(path, raw)
+        flag = {"batch": "records-002", "criterion": "4.1.2", "family": "name", "model": "sonnet",
+                "prompt": "record-judge@1", "reason": "Announced as button with no name.",
+                "sig": signature.record_sig(raw["records"][0]), "verdict": "flag"}
+        with open(os.path.join(self.ws, "runs", RUN, "judgments.jsonl"), "a", encoding="utf-8") as f:
+            f.write(canon.canonical(flag) + "\n")
+
+        code, out, err, doc = self.run_group()
+        self.assertEqual(code, 0, err)
+        self.assertEqual([f["family"] for f in by_rule(doc, "announced-as")], ["role-state"])
+        self.assertIn("skipped 1 result, announced-as: same element and criterion as a scanner result", out)
+
+        # The same record judged under another criterion is a different failure and stays a finding.
+        flag["criterion"], flag["batch"] = "1.3.1", "records-003"
+        with open(os.path.join(self.ws, "runs", RUN, "judgments.jsonl"), "a", encoding="utf-8") as f:
+            f.write(canon.canonical(flag) + "\n")
+        _, _, _, doc = self.run_group()
+        self.assertEqual(sorted(f["family"] for f in by_rule(doc, "announced-as")), ["name", "role-state"])
+
     def test_proposals_in_the_fixture(self):
         _, _, _, doc = self.run_group()
         rows = next(f for f in by_rule(doc, "button-name") if f["states"] == ["settings.tokens"])
