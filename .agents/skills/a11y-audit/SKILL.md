@@ -251,7 +251,9 @@ Waves wait until this run's canary passes: `python3 tools/a11y/audit.py verify s
    It writes `batches/verify-NNN.json`, up to 10 findings that share an area and a primary state, for every finding with no verdict that no batch holds.
 2. Run up to 8 verifiers at once, one batch each:
 
-   > Read `.agents/skills/a11y-audit/references/verifier.md` and follow it. Batch: `a11y/runs/<id>/batches/verify-NNN.json`. agent-browser session: `verify-NNN`. Demo build hash: `<hash from preflight>`.
+   > Read `.agents/skills/a11y-audit/references/verifier.md` and follow it. Batch: `a11y/runs/<id>/batches/verify-NNN.json`. agent-browser session: `verify-NNN`. Demo build hash: `<hash from preflight>`. Other verifiers share your scratch directory: keep every helper script and temp file in `<scratch>/verify-NNN/`, and pass `--session verify-NNN` on every agent-browser, reach and probe command, never through a shared wrapper.
+
+   Name the private folder in the message. Spawned agents share the conductor's scratch directory, and on the first real run verifiers overwrote each other's same-named helper scripts and replayed states into each other's sessions. `probe` refuses a session that has left its state, but a raw `eval` or screenshot does not, so every verdict taken in a disturbed session needed a second opinion.
 
 3. As each one returns, add its file with both primitives. Each skips the other's lines:
 
