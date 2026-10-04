@@ -63,6 +63,24 @@ function firstLine(stream) {
   });
 }
 
+test('the canary site serves its pages but not its answer key or definition files', async () => {
+  const canary = await startServer({ dirs: ['canary'] });
+  try {
+    const get = (path) => fetch(`${canary.origin}${path}`);
+    for (const path of ['/canary/expected.json', '/canary/findings.json', '/canary/raw/canary.hero.json', '/canary/data/canary.json']) {
+      assert.equal((await get(path)).status, 404, path);
+    }
+    for (const page of ['activity', 'export', 'hero', 'tabs', 'toolbar']) {
+      const res = await get(`/canary/${page}.html`);
+      assert.equal(res.status, 200, page);
+      const html = await res.text();
+      assert.doesNotMatch(html, /<!--|expected verdict|trap/i, `${page}.html hints at its verdict`);
+    }
+  } finally {
+    await canary.close();
+  }
+});
+
 test('context: fixed viewport, media, locale and timezone, recorded by envFor', async () => {
   const { page } = await open(`${server.origin}/browser/plain.html`);
   const seen = await page.evaluate(() => ({

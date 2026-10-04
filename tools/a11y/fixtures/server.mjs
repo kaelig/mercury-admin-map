@@ -4,7 +4,8 @@
 //   node tools/a11y/fixtures/server.mjs [--port N] [--map-out path] dir...
 //   prints {"origin": "http://127.0.0.1:<port>", "origin2": "http://localhost:<port2>"} and serves until killed.
 //
-// A dir is a folder under tools/a11y/fixtures/ or an absolute path, served at /<basename>/.
+// A dir is a folder under tools/a11y/fixtures/ or an absolute path, served at /<basename>/. The
+// canary's definition files (expected.json, findings.json, raw/, data/) are never served.
 // origin2 is a different site (localhost, not 127.0.0.1), so a frame from it is cross-origin and
 // out-of-process like Plaid or Stripe. In .html files, {{origin}} and {{origin2}} are replaced
 // with the two origins.
@@ -39,6 +40,10 @@ function listen(server, port) {
   });
 }
 
+// Files in a mount that are fixture definitions, not part of its site: the canary's answer key and
+// the sweep results it was built from must not be reachable by the verifier the canary tests.
+const PRIVATE = { canary: new Set(['expected.json', 'findings.json', 'raw', 'data']) };
+
 export async function startServer({ dirs, port = 0, hooks = {} }) {
   const mounts = new Map(dirs.map((d) => [basename(resolve(HERE, d)), resolve(HERE, d)]));
   const state = { status429: null, crash: null, ...hooks };
@@ -48,6 +53,7 @@ export async function startServer({ dirs, port = 0, hooks = {} }) {
     const [, mount, ...rest] = decodeURIComponent(path).split('/');
     const root = mounts.get(mount);
     if (!root) return null;
+    if (PRIVATE[mount]?.has(rest[0])) return null;
     let file = join(root, ...rest);
     if (file !== root && !file.startsWith(root + sep)) return null;
     if (existsSync(file) && statSync(file).isDirectory()) file = join(file, 'index.html');
