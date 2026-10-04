@@ -10,3 +10,9 @@ document.getElementById('toast-live').onclick = () => {
   document.getElementById('live').textContent = 'Payment sent';
   add('<div style="position:absolute;top:300px;left:300px">Balance tooltip</div>');
 };
+// A role-less "Copied" tooltip opens while a hidden, aria-hidden draft card (opacity 0) mounts its
+// positioned content earlier in the page: the tooltip is the layer, never the hidden card.
+document.getElementById('copy-ghost').onclick = () => {
+  document.getElementById('ghost').hidden = false;
+  add('<div style="position:absolute;top:120px;left:200px">Copied</div>');
+};

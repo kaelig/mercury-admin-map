@@ -3,7 +3,10 @@
 //
 // Roles alone are not enough on the demo: its transaction drawer is a plain <aside>, and onboarding
 // spotlights use role=alert. So armLayer() records which elements are visible before a state's final
-// hop, and findLayer() prefers a layer that appeared after it, chosen by the state's kind.
+// hop, and findLayer() prefers a layer that appeared after it, chosen by the state's kind. A drawer
+// state whose final hop only scrolls inside a drawer its parent opened falls back to that open
+// <aside> (fixed or absolute, visible): a hidden drawer still counts as none. A popover state whose
+// final hop only waits falls back the same way to an open, positioned alert, dialog or tooltip.
 
 import { clean } from './canon.mjs';
 import { XPATH_FN } from './occurrence.mjs';
@@ -33,7 +36,10 @@ const FIND = `(kind) => {
     const r = e.getBoundingClientRect();
     const s = getComputedStyle(e);
     return r.width > 0 && r.height > 0 && s.visibility !== 'hidden' && s.display !== 'none' && Number(s.opacity) > 0
-      && r.bottom > 0 && r.right > 0 && r.top < innerHeight && r.left < innerWidth;
+      && r.bottom > 0 && r.right > 0 && r.top < innerHeight && r.left < innerWidth
+      // An ancestor at opacity 0, or an aria-hidden or inert subtree, hides it too (armLayer's
+      // checkVisibility already counts ancestors): a mounted-but-hidden card is not a layer.
+      && e.checkVisibility({ opacityProperty: true, visibilityProperty: true }) && !e.closest('[aria-hidden="true"],[inert]');
   };
   const liveText = window[${BEFORE_TEXT}];
   const isNew = (e) => !before || !before.has(e) || (liveText?.has(e) && liveText.get(e) !== (e.innerText || '').trim());
@@ -48,11 +54,18 @@ const FIND = `(kind) => {
     && (positioned(e) || e.tagName === 'ASIDE') && (e.innerText || '').trim()) : [];
   const status = [...document.querySelectorAll(${JSON.stringify(LIVE)})]
     .filter((e) => visible(e) && (e.innerText || '').trim());
+  // A drawer the parent state already opened: a state scrolled inside it opens nothing new.
+  const openAsides = [...document.querySelectorAll('aside,[role=complementary]')].filter((e) => visible(e)
+    && ['fixed', 'absolute'].includes(getComputedStyle(e).position) && (e.innerText || '').trim());
+  // A popover the parent's hop already opened (an onboarding spotlight that shows after a redirect),
+  // for a popover state whose own hop only waits for it.
+  const openPopovers = [...document.querySelectorAll('[role=alert],[role=dialog],[role=tooltip]')].filter((e) => visible(e)
+    && ['fixed', 'absolute'].includes(getComputedStyle(e).position) && (e.innerText || '').trim());
   let pool;
   if (kind === 'menu') pool = byRole.filter((e) => ['menu', 'listbox'].includes(role(e)));
   else if (kind === 'modal') pool = byRole.filter(modalish).concat(byRole.filter((e) => role(e) === 'dialog'));
-  else if (kind === 'drawer') pool = byRole.filter((e) => ['dialog', 'alertdialog'].includes(role(e))).concat(fresh.filter((e) => e.tagName === 'ASIDE' || role(e) === 'complementary'), fresh);
-  else if (kind === 'popover') pool = byRole.concat(fresh);
+  else if (kind === 'drawer') pool = byRole.filter((e) => ['dialog', 'alertdialog'].includes(role(e))).concat(fresh.filter((e) => e.tagName === 'ASIDE' || role(e) === 'complementary'), fresh, openAsides);
+  else if (kind === 'popover') pool = byRole.concat(fresh, openPopovers);
   else if (kind === 'toast') pool = status.filter(isNew).concat(fresh, status);
   else pool = byRole.filter(modalish).concat(byRole.filter((e) => ['dialog', 'alertdialog'].includes(role(e))), fresh.filter((e) => e.tagName === 'ASIDE'));
   pool = pool.filter((e, i) => pool.indexOf(e) === i);

@@ -67,6 +67,44 @@ for (const [kind, button, role, name] of [
   });
 }
 
+test('a drawer the parent opened stays the top layer when the final hop only scrolls inside it', async () => {
+  const { ctx, page, cdp, tracker } = await open();
+  await page.click('#show-aside');
+  await settle(page, cdp, { tracker });
+  await armLayer(page);
+  await page.locator('#details button').scrollIntoViewIfNeeded();
+  await settle(page, cdp, { tracker });
+  const layer = await findLayer(cdp, 'drawer');
+  assert.equal(layer.scope, 'top');
+  assert.equal(layer.role, 'complementary');
+  assert.match(layer.xpath, /aside\[\d\]$/);
+  await ctx.close();
+});
+
+test('a popover the parent opened is the top layer when the final hop only waits for it', async () => {
+  const { ctx, page, cdp, tracker } = await open();
+  await armLayer(page);
+  await page.waitForTimeout(100);
+  await settle(page, cdp, { tracker });
+  const layer = await findLayer(cdp, 'popover');
+  assert.equal(layer.scope, 'top');
+  assert.equal(layer.role, 'alert');
+  assert.equal(await page.evaluate((x) => document.evaluate(x, document, null, 9, null).singleNodeValue.textContent, layer.xpath), 'Tip: try bookmarks');
+  await ctx.close();
+});
+
+test('content inside an aria-hidden, transparent wrapper is never the top layer', async () => {
+  const { ctx, page, cdp, tracker } = await open();
+  await armLayer(page);
+  await page.click('#copy-ghost');
+  await settle(page, cdp, { tracker });
+  const layer = await findLayer(cdp, 'popover');
+  assert.equal(layer.scope, 'top');
+  const text = await page.evaluate((x) => document.evaluate(x, document, null, 9, null).singleNodeValue.textContent, layer.xpath);
+  assert.equal(text, 'Copied');
+  await ctx.close();
+});
+
 test('a listbox inside a modal does not replace the modal as the top layer', async () => {
   const { ctx, page, cdp, tracker } = await open();
   await armLayer(page);
