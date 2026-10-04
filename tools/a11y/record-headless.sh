@@ -16,7 +16,8 @@
 # shots/, no git, no screenshot path with "..".
 #
 # The stream goes to a11y/runs/<run>/batches/<batch>.stream.jsonl (gitignored), not to stdout, so the
-# caller's context stays small. Token usage and cost print to stderr at the end.
+# caller's context stays small. Token usage and cost print to stderr at the end, after the batch's
+# agent-browser session is closed.
 set -euo pipefail
 
 if [ $# -ne 2 ]; then
@@ -59,6 +60,10 @@ ALLOW=(
   "Bash($AB scrollintoview *)"
   "Bash($AB wait *)"
   "Bash($AB get url)"
+  "Bash($AB get html *)"
+  "Bash($AB get attr *)"
+  "Bash($AB get count *)"
+  "Bash($AB get text *)"
   "Bash($AB screenshot a11y/runs/$RUN/shots/*)"
   "Bash(jq *)"
   "Bash(head *)"
@@ -98,5 +103,8 @@ printf '%s' "$MESSAGE" | CLAUDE_CODE_DISABLE_AUTO_MEMORY=1 CLAUDE_CODE_DISABLE_C
 status=$?
 set -e
 
+# The recorder's agent-browser session keeps its Chrome alive after the batch: close it, or every
+# finished batch leaves a browser running (60 of them swapped the machine on 2026-10-03).
+agent-browser --session "$BATCH" close >/dev/null 2>&1 || true
 python3 "$REPO/tools/a11y/stream_usage.py" "$STREAM" >&2
 exit "$status"
