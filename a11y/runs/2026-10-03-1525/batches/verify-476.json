@@ -1,0 +1,183 @@
+{
+ "area": "home",
+ "batch": "verify-476",
+ "findings": [
+  {
+   "attachments": [],
+   "attempt": 1,
+   "basis": "candidate",
+   "criteria": [
+    "4.1.2"
+   ],
+   "evidence": [
+    {
+     "evidence": {
+      "description": "",
+      "name": "",
+      "role": "button",
+      "states": {},
+      "template": "button \"\""
+     },
+     "occurrence": {
+      "ancestors": [
+       [
+        "_containerAmount_1207z_48"
+       ],
+       [],
+       [
+        "_successAnimation_1207z_145"
+       ],
+       [
+        "_containerCard_1207z_77"
+       ],
+       [
+        "_wrapper_4qdoa_1"
+       ],
+       [
+        "_success_lxo0u_7",
+        "_pageWrapperCentered_1f3if_3",
+        "_pageWrapperMarginTop_1f3if_13"
+       ],
+       [
+        "_contentDiv_bcpsw_53",
+        "_noBottomPadding_bcpsw_57",
+        "_contentDivHeightPreset_bcpsw_62"
+       ],
+       [
+        "_fullScreenWorkspaceLayout_bcpsw_14",
+        "_success_jbl4w_1"
+       ]
+      ],
+      "classes": [
+       "_button_r6b2u_20",
+       "_small_r6b2u_72",
+       "_tertiary_r6b2u_153",
+       "_iconButton_1207z_42"
+      ],
+      "data": {},
+      "heading": "The payment will be sent immediately.",
+      "landmark": {
+       "name": "",
+       "role": "main"
+      },
+      "layer": "document",
+      "name": "",
+      "rect": [
+       912,
+       534,
+       32,
+       32
+      ],
+      "role": "button",
+      "tag": "button",
+      "xpath": "/html/body/div[1]/main[1]/div[1]/div[2]/div[2]/div[3]/div[1]/div[1]/div[2]/div[1]/div[1]/div[2]/button[1]"
+     },
+     "state": "home.task-payment-approved"
+    },
+    {
+     "evidence": {
+      "description": "",
+      "name": "",
+      "role": "button",
+      "states": {},
+      "template": "button \"\""
+     },
+     "occurrence": {
+      "ancestors": [
+       [
+        "_containerAmount_1207z_48"
+       ],
+       [],
+       [
+        "_successAnimation_1207z_145"
+       ],
+       [
+        "_containerCard_1207z_77",
+        "_paddedCard_1207z_113"
+       ],
+       [
+        "_wrapper_4qdoa_1"
+       ],
+       [
+        "_success_lxo0u_7",
+        "_pageWrapperCentered_1f3if_3",
+        "_pageWrapperMarginTop_1f3if_13"
+       ],
+       [
+        "_contentDiv_bcpsw_53",
+        "_noBottomPadding_bcpsw_57",
+        "_contentDivHeightPreset_bcpsw_62"
+       ],
+       [
+        "_fullScreenWorkspaceLayout_bcpsw_14",
+        "_success_jbl4w_1"
+       ]
+      ],
+      "classes": [
+       "_button_r6b2u_20",
+       "_small_r6b2u_72",
+       "_tertiary_r6b2u_153",
+       "_iconButton_1207z_42"
+      ],
+      "data": {},
+      "heading": "You’ve scheduled an ACH payment",
+      "landmark": {
+       "name": "",
+       "role": "main"
+      },
+      "layer": "document",
+      "name": "",
+      "rect": [
+       912,
+       482,
+       32,
+       32
+      ],
+      "role": "button",
+      "tag": "button",
+      "xpath": "/html/body/div[1]/main[1]/div[1]/div[2]/div[2]/div[3]/div[1]/div[1]/div[2]/div[1]/div[1]/div[2]/button[1]"
+     },
+     "state": "payments.send-submitting"
+    }
+   ],
+   "evidenceHash": "a3d8f26c6ebc502f1db5119320fe5ba997182ea86e53fc95d84d486ff9b9e366",
+   "facts": {
+    "announced": "button \"\"",
+    "axeSummary": "",
+    "criterion": "4.1.2",
+    "criterionName": "Name, Role, Value",
+    "element": "button in \"The payment will be sent immediately.\"",
+    "rule": "announced-as",
+    "screen": "Tasks — payment approved"
+   },
+   "family": "name",
+   "guidance": "High for an unnamed form control or the sole primary action.",
+   "issueId": null,
+   "key": "name:announced-as:c223c84f4e32",
+   "measured": false,
+   "primary": "home.task-payment-approved",
+   "proposals": [],
+   "rule": "announced-as",
+   "screens": 4,
+   "severityDefault": "medium",
+   "source": "scanner",
+   "states": [
+    "home.task-payment-approved",
+    "payments.send-submitting"
+   ],
+   "summary": "announced-as: announced as button \"\".",
+   "title": "Missing or unclear name: button in \"The payment will be sent immediately.\""
+  }
+ ],
+ "primaries": [
+  "home.task-payment-approved"
+ ],
+ "reach": {
+  "baseUrl": "https://demo.mercury.com",
+  "data": "data",
+  "map": "build/map.json",
+  "run": "2026-10-03-1525",
+  "workspace": "a11y"
+ },
+ "run": "2026-10-03-1525"
+}

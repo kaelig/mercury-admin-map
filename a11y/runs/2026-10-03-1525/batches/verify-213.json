@@ -1,0 +1,1032 @@
+{
+ "area": "invoicing",
+ "batch": "verify-213",
+ "findings": [
+  {
+   "attachments": [],
+   "attempt": 1,
+   "basis": "candidate",
+   "criteria": [
+    "2.4.3",
+    "1.3.2"
+   ],
+   "evidence": [
+    {
+     "evidence": {
+      "band": 64,
+      "overlay": "invoicing.create-details.tabstops.png",
+      "previous": {
+       "ancestors": [
+        [
+         "_tiny_qaod7_67",
+         "_text-secondary_12t49_1"
+        ],
+        [
+         "_subLabel_1km7i_9"
+        ],
+        [
+         "_defaultCheckboxLabel_1km7i_56",
+         "_subLabelPlacementBottom_1km7i_72"
+        ],
+        [
+         "_checkboxHeightFix_1wfxj_6",
+         "_checkboxWrapper_1758n_62",
+         "_defaultCheckboxWrapper_1km7i_14"
+        ],
+        [
+         "_paymentMethodsWrapper_ksbtz_1"
+        ],
+        [
+         "_accordionItemBody_1q1xu_17"
+        ],
+        [
+         "_content_1q1xu_133"
+        ],
+        [
+         "_expandable_1q1xu_10",
+         "_open_1q1xu_137"
+        ]
+       ],
+       "classes": [
+        "_text-link_12t49_1",
+        "_link_ual8v_4",
+        "_underlineOnHover_ual8v_15"
+       ],
+       "data": {},
+       "heading": "Methods Manual Transfer (ACH/Wire), Pay with Mercury, International wires",
+       "landmark": {
+        "name": "Methods Manual Transfer (ACH/Wire), Pay with Mercury, International wires",
+        "role": "region"
+       },
+       "layer": "document",
+       "name": "Set up Stripe integration",
+       "rect": [
+        171,
+        780,
+        151,
+        14
+       ],
+       "role": "button",
+       "tag": "span",
+       "xpath": "/html/body/div[1]/main[1]/div[1]/div[2]/div[2]/div[3]/div[1]/div[1]/div[1]/div[1]/div[1]/div[1]/div[2]/div[4]/div[1]/div[1]/div[1]/div[1]/label[1]/div[2]/div[2]/span[1]/span[1]"
+      },
+      "rise": 73,
+      "stop": 20,
+      "stops": 26
+     },
+     "occurrence": {
+      "ancestors": [
+       [
+        "_textareaWrapper_54wwi_16",
+        "_rowSizing_54wwi_149"
+       ],
+       [
+        "_textareaProgressWrapper_54wwi_28"
+       ],
+       [
+        "_textareaBoundingWrapper_54wwi_7"
+       ],
+       [
+        "_wrapper_1ygkv_1"
+       ],
+       [
+        "_wrapper_1ojdq_8",
+        "_formWrapper_3giu5_1"
+       ],
+       [],
+       [
+        "_leftInnerContainer_12jyu_3"
+       ],
+       [
+        "_left_yg1rf_39"
+       ]
+      ],
+      "classes": [
+       "_textarea_54wwi_7"
+      ],
+      "data": {
+       "data-session-replay-mask": "true"
+      },
+      "heading": "Methods Manual Transfer (ACH/Wire), Pay with Mercury, International wires",
+      "landmark": {
+       "name": "",
+       "role": "main"
+      },
+      "layer": "document",
+      "name": "Internal note (optional)",
+      "rect": [
+       121,
+       707,
+       478,
+       64
+      ],
+      "role": "textbox",
+      "tag": "textarea",
+      "xpath": "/html/body/div[1]/main[1]/div[1]/div[2]/div[2]/div[3]/div[1]/div[1]/div[1]/div[1]/div[1]/div[1]/div[2]/div[5]/div[2]/div[1]/div[1]/textarea[1]"
+     },
+     "state": "invoicing.create-details"
+    }
+   ],
+   "evidenceHash": "0a1d5fa00241f816c0cf882cfe4fafd80b9238e6c63a5b126bfbd5ef04e74b1e",
+   "facts": {
+    "criterion": "2.4.3",
+    "criterionName": "Focus Order",
+    "element": "textbox \"Internal note (optional)\"",
+    "previous": "button \"Set up Stripe integration\"",
+    "screen": "Invoice details",
+    "stop": "20"
+   },
+   "family": "focus-order",
+   "guidance": "High if the order skips a required control.",
+   "issueId": null,
+   "key": "focus-order:backward-jump:5f3035ca1a8e",
+   "measured": false,
+   "primary": "invoicing.create-details",
+   "proposals": [],
+   "rule": "backward-jump",
+   "screens": 1,
+   "severityDefault": "medium",
+   "source": "scanner",
+   "states": [
+    "invoicing.create-details"
+   ],
+   "summary": "Tab stop 20 jumped backward on screen, from the button \"Set up Stripe integration\" to the textbox \"Internal note (optional)\".",
+   "title": "Tab order jumps backward at textbox \"Internal note (optional)\""
+  },
+  {
+   "attachments": [],
+   "attempt": 1,
+   "basis": "candidate",
+   "criteria": [
+    "2.4.3",
+    "1.3.2"
+   ],
+   "evidence": [
+    {
+     "evidence": {
+      "band": 20,
+      "overlay": "invoicing.create-details.tabstops.png",
+      "previous": {
+       "ancestors": [
+        [
+         "_suffix_q7hf7_210"
+        ],
+        [
+         "_inputBox_q7hf7_93",
+         "_hasValue_q7hf7_171"
+        ],
+        [
+         "_inputBoxWrapper_q7hf7_93"
+        ],
+        [
+         "_textInputWrapper_q7hf7_24"
+        ],
+        [
+         "_provideDSTextInput_q7hf7_6",
+         "_addWrapperMargin_q7hf7_19",
+         "_input_evvdi_1"
+        ],
+        [
+         "_inputWrapper_3giu5_46"
+        ],
+        [
+         "_wrapper_1ojdq_8",
+         "_formWrapper_3giu5_1"
+        ],
+        []
+       ],
+       "classes": [
+        "_tooltipAnchor_18bac_4"
+       ],
+       "data": {
+        "data-focus-visible": "true"
+       },
+       "heading": "Invoice details",
+       "landmark": {
+        "name": "",
+        "role": "main"
+       },
+       "layer": "document",
+       "name": "",
+       "rect": [
+        323,
+        256,
+        16,
+        17
+       ],
+       "role": "generic",
+       "tag": "div",
+       "xpath": "/html/body/div[1]/main[1]/div[1]/div[2]/div[2]/div[3]/div[1]/div[1]/div[1]/div[1]/div[1]/div[1]/div[2]/div[1]/div[1]/div[1]/div[1]/div[1]/div[1]/div[1]"
+      },
+      "rise": 36,
+      "stop": 6,
+      "stops": 26
+     },
+     "occurrence": {
+      "ancestors": [
+       [
+        "_labelWithTooltipQuestion_in1lv_4"
+       ],
+       [
+        "_label_qaod7_59",
+        "_label_1nilg_3",
+        "_label_q7hf7_41"
+       ],
+       [
+        "_textInputWrapper_q7hf7_24"
+       ],
+       [
+        "_provideDSTextInput_q7hf7_6",
+        "_addWrapperMargin_q7hf7_19",
+        "_input_evvdi_1"
+       ],
+       [
+        "_inputWrapper_3giu5_46"
+       ],
+       [
+        "_wrapper_1ojdq_8",
+        "_formWrapper_3giu5_1"
+       ],
+       [],
+       [
+        "_leftInnerContainer_12jyu_3"
+       ]
+      ],
+      "classes": [
+       "_tooltipAnchor_18bac_4",
+       "_tooltipAnchor_in1lv_9"
+      ],
+      "data": {},
+      "heading": "Invoice details",
+      "landmark": {
+       "name": "",
+       "role": "main"
+      },
+      "layer": "document",
+      "name": "PO number (Optional)",
+      "rect": [
+       509,
+       220,
+       14,
+       20
+      ],
+      "role": "generic",
+      "tag": "div",
+      "xpath": "/html/body/div[1]/main[1]/div[1]/div[2]/div[2]/div[3]/div[1]/div[1]/div[1]/div[1]/div[1]/div[1]/div[2]/div[1]/div[2]/div[1]/label[1]/div[1]/div[2]"
+     },
+     "state": "invoicing.create-details"
+    }
+   ],
+   "evidenceHash": "d158643df4524a80eb62149e0b5826c409edddeea3dc8fc1f020446a74bd3946",
+   "facts": {
+    "criterion": "2.4.3",
+    "criterionName": "Focus Order",
+    "element": "text \"PO number (Optional)\"",
+    "previous": "text in \"Invoice details\"",
+    "screen": "Invoice details",
+    "stop": "6"
+   },
+   "family": "focus-order",
+   "guidance": "High if the order skips a required control.",
+   "issueId": null,
+   "key": "focus-order:backward-jump:bcfb5eadf377",
+   "measured": false,
+   "primary": "invoicing.create-details",
+   "proposals": [],
+   "rule": "backward-jump",
+   "screens": 1,
+   "severityDefault": "medium",
+   "source": "scanner",
+   "states": [
+    "invoicing.create-details"
+   ],
+   "summary": "Tab stop 6 jumped backward on screen, from the text in \"Invoice details\" to the text \"PO number (Optional)\".",
+   "title": "Tab order jumps backward at text \"PO number (Optional)\""
+  },
+  {
+   "attachments": [],
+   "attempt": 1,
+   "basis": "failure",
+   "criteria": [
+    "2.4.7"
+   ],
+   "evidence": [
+    {
+     "evidence": {
+      "diff": 0,
+      "floor": 16,
+      "focusVisible": true,
+      "previous": {
+       "ancestors": [
+        [
+         "_topRow_1ml1o_114",
+         "_topRowExtraPadding_1ml1o_137"
+        ],
+        [
+         "_calendarPopupWrapper_1ml1o_59",
+         "_visible_1ml1o_109"
+        ],
+        [
+         "_calendarInputWrapper_1ml1o_11",
+         "_open_1ml1o_15"
+        ],
+        [
+         "_calendarDateInputContainer_1ml1o_5",
+         "_calendarInputContainer_6vr3v_13"
+        ],
+        [
+         "_servicePeriodContainer_6vr3v_1"
+        ],
+        [],
+        [
+         "_wrapper_1ojdq_8",
+         "_formWrapper_3giu5_1"
+        ],
+        []
+       ],
+       "classes": [
+        "_button-wrapper_1rzdg_13",
+        "_button_1rzdg_13",
+        "_tertiary-with-icon_1rzdg_76",
+        "undefined",
+        "_monthArrowBtn_1ml1o_145"
+       ],
+       "data": {},
+       "heading": "Service period",
+       "landmark": {
+        "name": "",
+        "role": "main"
+       },
+       "layer": "document",
+       "name": "",
+       "rect": [
+        658,
+        461,
+        28,
+        28
+       ],
+       "role": "button",
+       "tag": "button",
+       "xpath": "/html/body/div[1]/main[1]/div[1]/div[2]/div[2]/div[3]/div[1]/div[1]/div[1]/div[1]/div[1]/div[1]/div[2]/div[3]/div[1]/div[2]/div[1]/div[2]/div[1]/button[2]"
+      },
+      "stop": 16,
+      "stops": 26,
+      "style": [
+       "box-shadow",
+       "outline"
+      ]
+     },
+     "occurrence": {
+      "ancestors": [
+       [
+        "_bodyDefault_qaod7_40"
+       ],
+       [
+        "_accordionWrapper_1q1xu_3",
+        "_accordionBorder_1q1xu_7"
+       ],
+       [
+        "_wrapper_1ojdq_8",
+        "_formWrapper_3giu5_1"
+       ],
+       [],
+       [
+        "_leftInnerContainer_12jyu_3"
+       ],
+       [
+        "_left_yg1rf_39"
+       ],
+       [
+        "_leftScrollArea_yg1rf_57"
+       ],
+       [
+        "_leftContainer_yg1rf_39",
+        "_splitVariant_yg1rf_82",
+        "_leftBoxShadow_12jyu_10"
+       ]
+      ],
+      "classes": [
+       "_accordionItemHeader_1q1xu_16",
+       "_accordionHeader_15lvb_5"
+      ],
+      "data": {},
+      "heading": "Service period",
+      "landmark": {
+       "name": "",
+       "role": "main"
+      },
+      "layer": "document",
+      "name": "Methods Manual Transfer (ACH/Wire), Pay with Mercury, International wires",
+      "rect": [
+       121,
+       521,
+       478,
+       76
+      ],
+      "role": "button",
+      "tag": "button",
+      "xpath": "/html/body/div[1]/main[1]/div[1]/div[2]/div[2]/div[3]/div[1]/div[1]/div[1]/div[1]/div[1]/div[1]/div[2]/div[4]/h2[1]/button[1]"
+     },
+     "state": "invoicing.create-details"
+    }
+   ],
+   "evidenceHash": "5a73968e470bdfe04daa0f944179df8d27e867e9b73c61fa65c51898de89622f",
+   "facts": {
+    "criterion": "2.4.7",
+    "criterionName": "Focus Visible",
+    "element": "button \"Methods Manual Transfer (ACH/Wire), Pay…\"",
+    "screen": "Invoice details",
+    "screens": 1,
+    "stop": "16"
+   },
+   "family": "focus-visible",
+   "guidance": "High on shared components on primary paths.",
+   "issueId": null,
+   "key": "focus-visible:focus-not-visible:b89455c3305d",
+   "measured": true,
+   "primary": "invoicing.create-details",
+   "proposals": [],
+   "rule": "focus-not-visible",
+   "screens": 1,
+   "severityDefault": "medium",
+   "source": "scanner",
+   "states": [
+    "invoicing.create-details"
+   ],
+   "summary": "Tab stop 16: focusing the button \"Methods Manual Transfer (ACH/Wire), Pay…\" changed no pixels within 8 px of it.",
+   "title": "No visible focus: button \"Methods Manual Transfer (ACH/Wire), Pay…\""
+  },
+  {
+   "attachments": [],
+   "attempt": 1,
+   "basis": "violation",
+   "criteria": [
+    "1.3.5"
+   ],
+   "evidence": [
+    {
+     "evidence": {
+      "failureSummary": "Fix all of the following:\n  the autocomplete attribute is incorrectly formatted"
+     },
+     "occurrence": {
+      "ancestors": [
+       [
+        "_inputBox_q7hf7_93",
+        "_hasValue_q7hf7_171"
+       ],
+       [
+        "_inputBoxWrapper_q7hf7_93"
+       ],
+       [
+        "_textInputWrapper_q7hf7_24"
+       ],
+       [
+        "_provideDSTextInput_q7hf7_6",
+        "_calendarDateInput_1ml1o_5",
+        "_calendarInput_1tzyl_5"
+       ],
+       [
+        "_calendarInputWrapper_1ml1o_11"
+       ],
+       [
+        "_calendarDateInputContainer_1ml1o_5",
+        "_calendarInputContainer_1tzyl_16"
+       ],
+       [
+        "_calendarInputContainer_1tzyl_16"
+       ],
+       [
+        "_invoiceDateWrapper_3giu5_12"
+       ]
+      ],
+      "classes": [
+       "_input_q7hf7_93"
+      ],
+      "data": {
+       "data-testid": "invoiceBuilder-select-invoice-date-input"
+      },
+      "heading": "Invoice details",
+      "landmark": {
+       "name": "",
+       "role": "main"
+      },
+      "layer": "document",
+      "name": "Invoice date",
+      "rect": [
+       133,
+       340,
+       210,
+       24
+      ],
+      "role": "textbox",
+      "tag": "input",
+      "xpath": "/html/body/div[1]/main[1]/div[1]/div[2]/div[2]/div[3]/div[1]/div[1]/div[1]/div[1]/div[1]/div[1]/div[2]/div[2]/div[1]/div[1]/div[1]/div[1]/div[1]/div[1]/div[1]/div[1]/input[1]"
+     },
+     "state": "invoicing.create-details"
+    }
+   ],
+   "evidenceHash": "6fe0fed52f9028a7d1cbe96be78134ba6763d035df4c818acd553615330e56af",
+   "facts": {
+    "announced": "textbox \"Invoice date\"",
+    "axeSummary": "the autocomplete attribute is incorrectly formatted",
+    "criterion": "1.3.5",
+    "criterionName": "Identify Input Purpose",
+    "element": "textbox \"Invoice date\"",
+    "rule": "autocomplete-valid",
+    "screen": "Invoice details"
+   },
+   "family": "role-state",
+   "guidance": "Low for optional ARIA or an invalid autocomplete token; high when aria-hidden hides the whole page.",
+   "issueId": null,
+   "key": "role-state:autocomplete-valid:0cb77c3431bd",
+   "measured": false,
+   "primary": "invoicing.create-details",
+   "proposals": [],
+   "rule": "autocomplete-valid",
+   "screens": 1,
+   "severityDefault": "medium",
+   "source": "scanner",
+   "states": [
+    "invoicing.create-details"
+   ],
+   "summary": "autocomplete-valid: announced as textbox \"Invoice date\". the autocomplete attribute is incorrectly formatted",
+   "title": "Invalid autocomplete value: textbox \"Invoice date\""
+  },
+  {
+   "attachments": [],
+   "attempt": 1,
+   "basis": "violation",
+   "criteria": [
+    "1.3.5"
+   ],
+   "evidence": [
+    {
+     "evidence": {
+      "failureSummary": "Fix all of the following:\n  the autocomplete attribute is incorrectly formatted"
+     },
+     "occurrence": {
+      "ancestors": [
+       [
+        "_inputBox_q7hf7_93",
+        "_hasValue_q7hf7_171"
+       ],
+       [
+        "_inputBoxWrapper_q7hf7_93"
+       ],
+       [
+        "_textInputWrapper_q7hf7_24"
+       ],
+       [
+        "_provideDSTextInput_q7hf7_6",
+        "_addWrapperMargin_q7hf7_19",
+        "_input_evvdi_1"
+       ],
+       [
+        "_inputWrapper_3giu5_46"
+       ],
+       [
+        "_wrapper_1ojdq_8",
+        "_formWrapper_3giu5_1"
+       ],
+       [],
+       [
+        "_leftInnerContainer_12jyu_3"
+       ]
+      ],
+      "classes": [
+       "_input_q7hf7_93"
+      ],
+      "data": {
+       "data-testid": "invoice-builder-invoice-number-input"
+      },
+      "heading": "Invoice details",
+      "landmark": {
+       "name": "",
+       "role": "main"
+      },
+      "layer": "document",
+      "name": "Invoice number",
+      "rect": [
+       133,
+       252,
+       190,
+       24
+      ],
+      "role": "textbox",
+      "tag": "input",
+      "xpath": "/html/body/div[1]/main[1]/div[1]/div[2]/div[2]/div[3]/div[1]/div[1]/div[1]/div[1]/div[1]/div[1]/div[2]/div[1]/div[1]/div[1]/div[1]/div[1]/input[1]"
+     },
+     "state": "invoicing.create-details"
+    }
+   ],
+   "evidenceHash": "6fe0fed52f9028a7d1cbe96be78134ba6763d035df4c818acd553615330e56af",
+   "facts": {
+    "announced": "textbox \"Invoice number\"",
+    "axeSummary": "the autocomplete attribute is incorrectly formatted",
+    "criterion": "1.3.5",
+    "criterionName": "Identify Input Purpose",
+    "element": "textbox \"Invoice number\"",
+    "rule": "autocomplete-valid",
+    "screen": "Invoice details"
+   },
+   "family": "role-state",
+   "guidance": "Low for optional ARIA or an invalid autocomplete token; high when aria-hidden hides the whole page.",
+   "issueId": null,
+   "key": "role-state:autocomplete-valid:16768112bba8",
+   "measured": false,
+   "primary": "invoicing.create-details",
+   "proposals": [],
+   "rule": "autocomplete-valid",
+   "screens": 1,
+   "severityDefault": "medium",
+   "source": "scanner",
+   "states": [
+    "invoicing.create-details"
+   ],
+   "summary": "autocomplete-valid: announced as textbox \"Invoice number\". the autocomplete attribute is incorrectly formatted",
+   "title": "Invalid autocomplete value: textbox \"Invoice number\""
+  },
+  {
+   "attachments": [],
+   "attempt": 1,
+   "basis": "violation",
+   "criteria": [
+    "1.3.5"
+   ],
+   "evidence": [
+    {
+     "evidence": {
+      "failureSummary": "Fix all of the following:\n  the autocomplete attribute is incorrectly formatted"
+     },
+     "occurrence": {
+      "ancestors": [
+       [
+        "_inputBox_q7hf7_93"
+       ],
+       [
+        "_inputBoxWrapper_q7hf7_93"
+       ],
+       [
+        "_textInputWrapper_q7hf7_24"
+       ],
+       [
+        "_provideDSTextInput_q7hf7_6",
+        "_calendarDateInput_1ml1o_5",
+        "_calendarInput_6vr3v_7"
+       ],
+       [
+        "_calendarInputWrapper_1ml1o_11"
+       ],
+       [
+        "_calendarDateInputContainer_1ml1o_5",
+        "_calendarInputContainer_6vr3v_13"
+       ],
+       [
+        "_servicePeriodContainer_6vr3v_1"
+       ],
+       []
+      ],
+      "classes": [
+       "_input_q7hf7_93"
+      ],
+      "data": {
+       "data-testid": "invoiceBuilder-select-service-period-start-date-input"
+      },
+      "heading": "Service period",
+      "landmark": {
+       "name": "",
+       "role": "main"
+      },
+      "layer": "document",
+      "name": "From",
+      "rect": [
+       133,
+       464,
+       210,
+       24
+      ],
+      "role": "textbox",
+      "tag": "input",
+      "xpath": "/html/body/div[1]/main[1]/div[1]/div[2]/div[2]/div[3]/div[1]/div[1]/div[1]/div[1]/div[1]/div[1]/div[2]/div[3]/div[1]/div[1]/div[1]/div[1]/div[1]/div[1]/div[1]/input[1]"
+     },
+     "state": "invoicing.create-details"
+    }
+   ],
+   "evidenceHash": "6fe0fed52f9028a7d1cbe96be78134ba6763d035df4c818acd553615330e56af",
+   "facts": {
+    "announced": "textbox \"From\"",
+    "axeSummary": "the autocomplete attribute is incorrectly formatted",
+    "criterion": "1.3.5",
+    "criterionName": "Identify Input Purpose",
+    "element": "textbox \"From\"",
+    "rule": "autocomplete-valid",
+    "screen": "Invoice details"
+   },
+   "family": "role-state",
+   "guidance": "Low for optional ARIA or an invalid autocomplete token; high when aria-hidden hides the whole page.",
+   "issueId": null,
+   "key": "role-state:autocomplete-valid:2db3f2ca129f",
+   "measured": false,
+   "primary": "invoicing.create-details",
+   "proposals": [],
+   "rule": "autocomplete-valid",
+   "screens": 1,
+   "severityDefault": "medium",
+   "source": "scanner",
+   "states": [
+    "invoicing.create-details"
+   ],
+   "summary": "autocomplete-valid: announced as textbox \"From\". the autocomplete attribute is incorrectly formatted",
+   "title": "Invalid autocomplete value: textbox \"From\""
+  },
+  {
+   "attachments": [],
+   "attempt": 1,
+   "basis": "violation",
+   "criteria": [
+    "1.3.5"
+   ],
+   "evidence": [
+    {
+     "evidence": {
+      "failureSummary": "Fix all of the following:\n  the autocomplete attribute is incorrectly formatted"
+     },
+     "occurrence": {
+      "ancestors": [
+       [
+        "_inputBox_q7hf7_93"
+       ],
+       [
+        "_inputBoxWrapper_q7hf7_93"
+       ],
+       [
+        "_textInputWrapper_q7hf7_24"
+       ],
+       [
+        "_provideDSTextInput_q7hf7_6",
+        "_calendarDateInput_1ml1o_5",
+        "_calendarInput_6vr3v_7"
+       ],
+       [
+        "_calendarInputWrapper_1ml1o_11"
+       ],
+       [
+        "_calendarDateInputContainer_1ml1o_5",
+        "_calendarInputContainer_6vr3v_13"
+       ],
+       [
+        "_servicePeriodContainer_6vr3v_1"
+       ],
+       []
+      ],
+      "classes": [
+       "_input_q7hf7_93"
+      ],
+      "data": {
+       "data-testid": "invoiceBuilder-select-service-period-end-date-input"
+      },
+      "heading": "Service period",
+      "landmark": {
+       "name": "",
+       "role": "main"
+      },
+      "layer": "document",
+      "name": "To",
+      "rect": [
+       377,
+       464,
+       210,
+       24
+      ],
+      "role": "textbox",
+      "tag": "input",
+      "xpath": "/html/body/div[1]/main[1]/div[1]/div[2]/div[2]/div[3]/div[1]/div[1]/div[1]/div[1]/div[1]/div[1]/div[2]/div[3]/div[1]/div[2]/div[1]/div[1]/div[1]/div[1]/div[1]/input[1]"
+     },
+     "state": "invoicing.create-details"
+    }
+   ],
+   "evidenceHash": "6fe0fed52f9028a7d1cbe96be78134ba6763d035df4c818acd553615330e56af",
+   "facts": {
+    "announced": "textbox \"To\"",
+    "axeSummary": "the autocomplete attribute is incorrectly formatted",
+    "criterion": "1.3.5",
+    "criterionName": "Identify Input Purpose",
+    "element": "textbox \"To\"",
+    "rule": "autocomplete-valid",
+    "screen": "Invoice details"
+   },
+   "family": "role-state",
+   "guidance": "Low for optional ARIA or an invalid autocomplete token; high when aria-hidden hides the whole page.",
+   "issueId": null,
+   "key": "role-state:autocomplete-valid:c0d36f7d735d",
+   "measured": false,
+   "primary": "invoicing.create-details",
+   "proposals": [],
+   "rule": "autocomplete-valid",
+   "screens": 1,
+   "severityDefault": "medium",
+   "source": "scanner",
+   "states": [
+    "invoicing.create-details"
+   ],
+   "summary": "autocomplete-valid: announced as textbox \"To\". the autocomplete attribute is incorrectly formatted",
+   "title": "Invalid autocomplete value: textbox \"To\""
+  },
+  {
+   "attachments": [],
+   "attempt": 1,
+   "basis": "violation",
+   "criteria": [
+    "1.3.5"
+   ],
+   "evidence": [
+    {
+     "evidence": {
+      "failureSummary": "Fix all of the following:\n  the autocomplete attribute is incorrectly formatted"
+     },
+     "occurrence": {
+      "ancestors": [
+       [
+        "_inputBox_q7hf7_93"
+       ],
+       [
+        "_inputBoxWrapper_q7hf7_93"
+       ],
+       [
+        "_textInputWrapper_q7hf7_24"
+       ],
+       [
+        "_provideDSTextInput_q7hf7_6",
+        "_addWrapperMargin_q7hf7_19",
+        "_input_evvdi_1"
+       ],
+       [
+        "_inputWrapper_3giu5_46"
+       ],
+       [
+        "_wrapper_1ojdq_8",
+        "_formWrapper_3giu5_1"
+       ],
+       [],
+       [
+        "_leftInnerContainer_12jyu_3"
+       ]
+      ],
+      "classes": [
+       "_input_q7hf7_93"
+      ],
+      "data": {
+       "data-testid": "invoice-builder-po-number-input"
+      },
+      "heading": "Invoice details",
+      "landmark": {
+       "name": "",
+       "role": "main"
+      },
+      "layer": "document",
+      "name": "PO number (Optional) PO number (Optional)",
+      "rect": [
+       381,
+       252,
+       206,
+       24
+      ],
+      "role": "textbox",
+      "tag": "input",
+      "xpath": "/html/body/div[1]/main[1]/div[1]/div[2]/div[2]/div[3]/div[1]/div[1]/div[1]/div[1]/div[1]/div[1]/div[2]/div[1]/div[2]/div[1]/div[1]/div[1]/input[1]"
+     },
+     "state": "invoicing.create-details"
+    }
+   ],
+   "evidenceHash": "6fe0fed52f9028a7d1cbe96be78134ba6763d035df4c818acd553615330e56af",
+   "facts": {
+    "announced": "textbox \"PO number (Optional) PO number (Optional)\"",
+    "axeSummary": "the autocomplete attribute is incorrectly formatted",
+    "criterion": "1.3.5",
+    "criterionName": "Identify Input Purpose",
+    "element": "textbox \"PO number (Optional) PO number (Optiona…\"",
+    "rule": "autocomplete-valid",
+    "screen": "Invoice details"
+   },
+   "family": "role-state",
+   "guidance": "Low for optional ARIA or an invalid autocomplete token; high when aria-hidden hides the whole page.",
+   "issueId": null,
+   "key": "role-state:autocomplete-valid:db8099d61ea0",
+   "measured": false,
+   "primary": "invoicing.create-details",
+   "proposals": [],
+   "rule": "autocomplete-valid",
+   "screens": 1,
+   "severityDefault": "medium",
+   "source": "scanner",
+   "states": [
+    "invoicing.create-details"
+   ],
+   "summary": "autocomplete-valid: announced as textbox \"PO number (Optional) PO number (Optional)\". the autocomplete attribute is incorrectly formatted",
+   "title": "Invalid autocomplete value: textbox \"PO number (Optional) PO number (Optiona…\""
+  },
+  {
+   "attachments": [],
+   "attempt": 1,
+   "basis": "violation",
+   "criteria": [
+    "1.3.5"
+   ],
+   "evidence": [
+    {
+     "evidence": {
+      "failureSummary": "Fix all of the following:\n  the autocomplete attribute is incorrectly formatted"
+     },
+     "occurrence": {
+      "ancestors": [
+       [
+        "_textboxWrapper_1a7mr_158"
+       ],
+       [
+        "_selectWrapper_1a7mr_150"
+       ],
+       [
+        "_comboboxWrapper_1a7mr_6",
+        "_dueDateInput_1tzyl_28",
+        "session-replay-block"
+       ],
+       [
+        "_calendarInputContainer_1tzyl_16"
+       ],
+       [
+        "_calendarInputContainer_3giu5_16"
+       ],
+       [
+        "_calendarInputWrapper_3giu5_7"
+       ],
+       [
+        "_wrapper_1ojdq_8",
+        "_formWrapper_3giu5_1"
+       ],
+       []
+      ],
+      "classes": [
+       "_textboxInput_1a7mr_250",
+       "_selectedPlaceholder_1a7mr_293"
+      ],
+      "data": {},
+      "heading": "Invoice details",
+      "landmark": {
+       "name": "",
+       "role": "main"
+      },
+      "layer": "document",
+      "name": "Due date",
+      "rect": [
+       365,
+       333,
+       198,
+       38
+      ],
+      "role": "combobox",
+      "tag": "input",
+      "xpath": "/html/body/div[1]/main[1]/div[1]/div[2]/div[2]/div[3]/div[1]/div[1]/div[1]/div[1]/div[1]/div[1]/div[2]/div[2]/div[2]/div[1]/div[2]/div[1]/div[1]/input[1]"
+     },
+     "state": "invoicing.create-details"
+    }
+   ],
+   "evidenceHash": "6fe0fed52f9028a7d1cbe96be78134ba6763d035df4c818acd553615330e56af",
+   "facts": {
+    "announced": "combobox \"Due date\" [expanded=false, haspopup=listbox]",
+    "axeSummary": "the autocomplete attribute is incorrectly formatted",
+    "criterion": "1.3.5",
+    "criterionName": "Identify Input Purpose",
+    "element": "combobox \"Due date\"",
+    "rule": "autocomplete-valid",
+    "screen": "Invoice details"
+   },
+   "family": "role-state",
+   "guidance": "Low for optional ARIA or an invalid autocomplete token; high when aria-hidden hides the whole page.",
+   "issueId": null,
+   "key": "role-state:autocomplete-valid:f812212811ac",
+   "measured": false,
+   "primary": "invoicing.create-details",
+   "proposals": [],
+   "rule": "autocomplete-valid",
+   "screens": 1,
+   "severityDefault": "medium",
+   "source": "scanner",
+   "states": [
+    "invoicing.create-details"
+   ],
+   "summary": "autocomplete-valid: announced as combobox \"Due date\" [expanded=false, haspopup=listbox]. the autocomplete attribute is incorrectly formatted",
+   "title": "Invalid autocomplete value: combobox \"Due date\""
+  }
+ ],
+ "primaries": [
+  "invoicing.create-details"
+ ],
+ "reach": {
+  "baseUrl": "https://demo.mercury.com",
+  "data": "data",
+  "map": "build/map.json",
+  "run": "2026-10-03-1525",
+  "workspace": "a11y"
+ },
+ "run": "2026-10-03-1525"
+}

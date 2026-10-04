@@ -1,0 +1,112 @@
+{
+ "area": "home",
+ "batch": "verify-196",
+ "findings": [
+  {
+   "attachments": [],
+   "attempt": 1,
+   "basis": "violation",
+   "criteria": [
+    "1.3.1"
+   ],
+   "evidence": [
+    {
+     "evidence": {
+      "failureSummary": "Fix any of the following:\n  Element has children which are not allowed: ul",
+      "messageKey": "unallowed",
+      "values": "ul"
+     },
+     "occurrence": {
+      "ancestors": [
+       [
+        "_inputAndResultsContainer_16edb_80"
+       ],
+       [
+        "_large_kwlx6_9",
+        "_noHover_3n0se_28",
+        "_shadow_3n0se_25",
+        "_raisedBackground_3n0se_45",
+        "_card_lo4oy_4",
+        "_omnisearchCard_16edb_36"
+       ],
+       [
+        "ReactModal__Content",
+        "ReactModal__Content--after-open",
+        "_modal_lo4oy_73",
+        "_disableAutoCenter_lo4oy_79",
+        "_omnisearchModal_16edb_27"
+       ],
+       [
+        "ReactModal__Overlay",
+        "ReactModal__Overlay--after-open",
+        "_overlay_lo4oy_89",
+        "_omnisearchOverlay_16edb_40"
+       ],
+       [
+        "ReactModalPortal"
+       ]
+      ],
+      "classes": [
+       "_menu_16edb_182"
+      ],
+      "data": {},
+      "heading": "",
+      "landmark": {
+       "name": "",
+       "role": "dialog"
+      },
+      "layer": "top",
+      "name": "zzqxnothing",
+      "rect": [
+       320,
+       240,
+       800,
+       422
+      ],
+      "role": "listbox",
+      "tag": "div",
+      "xpath": "/html/body/div[15]/div[1]/div[1]/div[1]/div[2]/div[4]"
+     },
+     "state": "home.search-no-results"
+    }
+   ],
+   "evidenceHash": "045a5b993d82b279c45745388b35de12874759d09279a433d84f99d5c71cb14c",
+   "facts": {
+    "announced": "listbox \"zzqxnothing\"",
+    "axeSummary": "Element has children which are not allowed: ul",
+    "criterion": "1.3.1",
+    "criterionName": "Info and Relationships",
+    "element": "listbox \"zzqxnothing\"",
+    "rule": "aria-required-children",
+    "screen": "Search: no matches"
+   },
+   "family": "role-state",
+   "guidance": "Low for optional ARIA or an invalid autocomplete token; high when aria-hidden hides the whole page.",
+   "issueId": null,
+   "key": "role-state:aria-required-children:cc1acea0e2ae",
+   "measured": false,
+   "primary": "home.search-no-results",
+   "proposals": [],
+   "rule": "aria-required-children",
+   "screens": 1,
+   "severityDefault": "medium",
+   "source": "scanner",
+   "states": [
+    "home.search-no-results"
+   ],
+   "summary": "aria-required-children: announced as listbox \"zzqxnothing\". Element has children which are not allowed: ul",
+   "title": "Wrong role or state: listbox \"zzqxnothing\""
+  }
+ ],
+ "primaries": [
+  "home.search-no-results"
+ ],
+ "reach": {
+  "baseUrl": "https://demo.mercury.com",
+  "data": "data",
+  "map": "build/map.json",
+  "run": "2026-10-03-1525",
+  "workspace": "a11y"
+ },
+ "run": "2026-10-03-1525"
+}

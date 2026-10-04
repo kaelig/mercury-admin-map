@@ -1,0 +1,177 @@
+{
+ "area": "home",
+ "batch": "verify-467",
+ "findings": [
+  {
+   "attachments": [],
+   "attempt": 1,
+   "basis": "candidate",
+   "criteria": [
+    "3.3.2"
+   ],
+   "evidence": [
+    {
+     "evidence": {
+      "description": "",
+      "name": "",
+      "role": "textbox",
+      "states": {},
+      "template": "textbox \"\""
+     },
+     "occurrence": {
+      "ancestors": [
+       [
+        "_inputBox_q7hf7_93"
+       ],
+       [
+        "_inputBoxWrapper_q7hf7_93"
+       ],
+       [
+        "_textInputWrapper_q7hf7_24"
+       ],
+       [
+        "_provideDSTextInput_q7hf7_6",
+        "_balanceInput_i6wom_23"
+       ],
+       [
+        "_inputMargin_i6wom_19"
+       ],
+       [],
+       [],
+       [
+        "_large_kwlx6_9",
+        "_noHover_3n0se_28",
+        "_shadow_3n0se_25",
+        "_raisedBackground_3n0se_45",
+        "_card_lo4oy_4",
+        "_defaultPadding_lo4oy_27",
+        "_small_lo4oy_11"
+       ]
+      ],
+      "classes": [
+       "_input_q7hf7_93"
+      ],
+      "data": {},
+      "heading": "Customize the Mercury demo",
+      "landmark": {
+       "name": "",
+       "role": "form"
+      },
+      "layer": "top",
+      "name": "",
+      "rect": [
+       564,
+       652,
+       327,
+       24
+      ],
+      "role": "textbox",
+      "tag": "input",
+      "xpath": "/html/body/div[15]/div[1]/div[1]/div[1]/form[1]/div[1]/div[7]/div[1]/div[1]/div[1]/div[1]/input[1]"
+     },
+     "state": "home.customize-demo-modal"
+    },
+    {
+     "evidence": {
+      "description": "",
+      "name": "",
+      "role": "textbox",
+      "states": {},
+      "template": "textbox \"\""
+     },
+     "occurrence": {
+      "ancestors": [
+       [
+        "_inputBox_q7hf7_93",
+        "_hasValue_q7hf7_171"
+       ],
+       [
+        "_inputBoxWrapper_q7hf7_93"
+       ],
+       [
+        "_textInputWrapper_q7hf7_24"
+       ],
+       [
+        "_provideDSTextInput_q7hf7_6",
+        "_balanceInput_i6wom_23"
+       ],
+       [
+        "_inputMargin_i6wom_19"
+       ],
+       [],
+       [],
+       [
+        "_large_kwlx6_9",
+        "_noHover_3n0se_28",
+        "_shadow_3n0se_25",
+        "_raisedBackground_3n0se_45",
+        "_card_lo4oy_4",
+        "_defaultPadding_lo4oy_27",
+        "_small_lo4oy_11"
+       ]
+      ],
+      "classes": [
+       "_input_q7hf7_93"
+      ],
+      "data": {},
+      "heading": "Customize the Mercury demo",
+      "landmark": {
+       "name": "",
+       "role": "form"
+      },
+      "layer": "top",
+      "name": "",
+      "rect": [
+       564,
+       652,
+       327,
+       24
+      ],
+      "role": "textbox",
+      "tag": "input",
+      "xpath": "/html/body/div[15]/div[1]/div[1]/div[1]/form[1]/div[1]/div[7]/div[1]/div[1]/div[1]/div[1]/input[1]"
+     },
+     "state": "home.customize-demo-filled"
+    }
+   ],
+   "evidenceHash": "019475dabdab643dfa87054ea602827993bc1e07904764ed097e60544c169273",
+   "facts": {
+    "announced": "textbox \"\"",
+    "axeSummary": "",
+    "criterion": "3.3.2",
+    "criterionName": "Labels or Instructions",
+    "element": "textbox in \"Customize the Mercury demo\"",
+    "rule": "announced-as",
+    "screen": "Customize the Mercury demo modal"
+   },
+   "family": "name",
+   "guidance": "High for an unnamed form control or the sole primary action.",
+   "issueId": null,
+   "key": "name:announced-as:d4c2d5881f6b",
+   "measured": false,
+   "primary": "home.customize-demo-modal",
+   "proposals": [],
+   "rule": "announced-as",
+   "screens": 3,
+   "severityDefault": "medium",
+   "source": "scanner",
+   "states": [
+    "home.customize-demo-modal",
+    "home.customize-demo-filled"
+   ],
+   "summary": "announced-as: announced as textbox \"\".",
+   "title": "Missing or unclear name: textbox in \"Customize the Mercury demo\""
+  }
+ ],
+ "primaries": [
+  "home.customize-demo-modal"
+ ],
+ "reach": {
+  "baseUrl": "https://demo.mercury.com",
+  "data": "data",
+  "map": "build/map.json",
+  "run": "2026-10-03-1525",
+  "workspace": "a11y"
+ },
+ "run": "2026-10-03-1525"
+}

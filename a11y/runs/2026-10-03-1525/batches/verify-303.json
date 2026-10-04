@@ -1,0 +1,205 @@
+{
+ "area": "payments",
+ "batch": "verify-303",
+ "findings": [
+  {
+   "attachments": [],
+   "attempt": 1,
+   "basis": "violation",
+   "criteria": [
+    "4.1.2"
+   ],
+   "evidence": [
+    {
+     "evidence": {
+      "aria-errormessage": [
+       "mercury-utils-id-32-error-message"
+      ],
+      "failureSummary": "Fix all of the following:\n  aria-errormessage value `mercury-utils-id-32-error-message` must use a technique to announce the message (e.g., aria-live, aria-describedby, role=alert, etc.)"
+     },
+     "occurrence": {
+      "ancestors": [
+       [
+        "_textboxWrapper_1a7mr_158",
+        "_textboxWrapperError_1a7mr_227"
+       ],
+       [
+        "_selectWrapper_1a7mr_150"
+       ],
+       [
+        "_comboboxWrapper_1a7mr_6",
+        "session-replay-block"
+       ],
+       [
+        "_fundingRecipientPresetContainer_5s50y_16"
+       ],
+       [],
+       [
+        "_formContainer_5s50y_3"
+       ],
+       [
+        "_contentDiv_bcpsw_53",
+        "_contentDivHeightPreset_bcpsw_62"
+       ],
+       [
+        "_fullScreenWorkspaceLayout_bcpsw_14",
+        "_fullScreenWorkspaceLayoutBackground_bcpsw_32"
+       ]
+      ],
+      "classes": [
+       "_textboxInput_1a7mr_250"
+      ],
+      "data": {},
+      "heading": "",
+      "landmark": {
+       "name": "",
+       "role": "form"
+      },
+      "layer": "document",
+      "name": "Recipient",
+      "rect": [
+       509,
+       347,
+       386,
+       38
+      ],
+      "role": "combobox",
+      "tag": "input",
+      "xpath": "/html/body/div[1]/main[1]/div[1]/div[2]/div[2]/div[3]/div[1]/form[1]/div[3]/div[1]/div[1]/div[1]/input[1]"
+     },
+     "state": "payments.wire-drawdown-validation"
+    }
+   ],
+   "evidenceHash": "a10ddb6bf08607fae4aede2ae49a0cbefecd57b49ef94c44283941c1a562ad4a",
+   "facts": {
+    "announced": "combobox \"Recipient\" [expanded=false, haspopup=listbox, invalid=true, errormess…",
+    "axeSummary": "aria-errormessage value `mercury-utils-id-32-error-message` must use a technique to announce the message (e.g., aria-live, aria-describedby, role=alert, etc.)",
+    "criterion": "4.1.2",
+    "criterionName": "Name, Role, Value",
+    "element": "combobox \"Recipient\"",
+    "rule": "aria-valid-attr-value",
+    "screen": "Drawdown: recipient required"
+   },
+   "family": "role-state",
+   "guidance": "Low for optional ARIA or an invalid autocomplete token; high when aria-hidden hides the whole page.",
+   "issueId": null,
+   "key": "role-state:aria-valid-attr-value:87cde772ea02",
+   "measured": false,
+   "primary": "payments.wire-drawdown-validation",
+   "proposals": [],
+   "rule": "aria-valid-attr-value",
+   "screens": 1,
+   "severityDefault": "medium",
+   "source": "scanner",
+   "states": [
+    "payments.wire-drawdown-validation"
+   ],
+   "summary": "aria-valid-attr-value: announced as combobox \"Recipient\" [expanded=false, haspopup=listbox, invalid=true, errormess…. aria-errormessage value `mercury-utils-id-32-error-message` must use a technique to announce the message (e.g., aria-live, aria-describedby, role=alert, etc.)",
+   "title": "Wrong role or state: combobox \"Recipient\""
+  },
+  {
+   "attachments": [],
+   "attempt": 1,
+   "basis": "failure",
+   "criteria": [
+    "4.1.3"
+   ],
+   "evidence": [
+    {
+     "evidence": {
+      "focus": "body",
+      "focused": false,
+      "message": "Please choose a recipient.",
+      "region": null
+     },
+     "occurrence": {
+      "ancestors": [
+       [
+        "_comboboxWrapper_1a7mr_6",
+        "session-replay-block"
+       ],
+       [
+        "_fundingRecipientPresetContainer_5s50y_16"
+       ],
+       [],
+       [
+        "_formContainer_5s50y_3"
+       ],
+       [
+        "_contentDiv_bcpsw_53",
+        "_contentDivHeightPreset_bcpsw_62"
+       ],
+       [
+        "_fullScreenWorkspaceLayout_bcpsw_14",
+        "_fullScreenWorkspaceLayoutBackground_bcpsw_32"
+       ],
+       [
+        "_wrapper_bcpsw_3"
+       ],
+       []
+      ],
+      "classes": [
+       "_defaultErrorContainer_1tnh5_1",
+       "_errorMessage_1a7mr_448"
+      ],
+      "data": {
+       "data-session-replay-unmask": "true"
+      },
+      "heading": "",
+      "landmark": {
+       "name": "",
+       "role": "form"
+      },
+      "layer": "document",
+      "name": "",
+      "rect": [
+       508,
+       390,
+       424,
+       20
+      ],
+      "role": "",
+      "tag": "div",
+      "xpath": "/html/body/div[1]/main[1]/div[1]/div[2]/div[2]/div[3]/div[1]/form[1]/div[3]/div[1]/div[2]"
+     },
+     "state": "payments.wire-drawdown-validation"
+    }
+   ],
+   "evidenceHash": "d8872a4a0f0bfaf30038f6994db78c4252ad6794526aeb7e0977c6fdb0ccc4a7",
+   "facts": {
+    "criterion": "4.1.3",
+    "criterionName": "Status Messages",
+    "focus": "page body",
+    "message": "\"Please choose a recipient.\"",
+    "screen": "Drawdown: recipient required"
+   },
+   "family": "status-message",
+   "guidance": "High when it is the only confirmation of a money movement.",
+   "issueId": null,
+   "key": "status-message:status-not-announced:e211880e0048",
+   "measured": false,
+   "primary": "payments.wire-drawdown-validation",
+   "proposals": [],
+   "rule": "status-not-announced",
+   "screens": 1,
+   "severityDefault": "medium",
+   "source": "scanner",
+   "states": [
+    "payments.wire-drawdown-validation"
+   ],
+   "summary": "\"Please choose a recipient.\" appeared outside any live region, alert or status role that existed before it, and focus stayed on the page body.",
+   "title": "Status message not announced: \"Please choose a recipient.\""
+  }
+ ],
+ "primaries": [
+  "payments.wire-drawdown-validation"
+ ],
+ "reach": {
+  "baseUrl": "https://demo.mercury.com",
+  "data": "data",
+  "map": "build/map.json",
+  "run": "2026-10-03-1525",
+  "workspace": "a11y"
+ },
+ "run": "2026-10-03-1525"
+}

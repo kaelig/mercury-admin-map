@@ -1,0 +1,1603 @@
+{
+ "area": "home",
+ "batch": "verify-203",
+ "findings": [
+  {
+   "attachments": [],
+   "attempt": 1,
+   "basis": "violation",
+   "criteria": [
+    "1.4.1"
+   ],
+   "evidence": [
+    {
+     "evidence": {
+      "contrastRatio": 1.3,
+      "failureSummary": "Fix any of the following:\n  The link has insufficient color contrast of 1.3:1 with the surrounding text. (Minimum contrast is 3:1, link text: #465bd1, surrounding text: #535461)\n  The link has no styling (such as underline) to distinguish it from the surrounding text",
+      "messageKey": "fgContrast",
+      "nodeColor": "#465bd1",
+      "parentColor": "#535461",
+      "requiredContrastRatio": 3
+     },
+     "occurrence": {
+      "ancestors": [
+       [
+        "_text-link_12t49_1"
+       ],
+       [
+        "_label_qaod7_59",
+        "_text-secondary_12t49_1"
+       ],
+       [],
+       [
+        "_settingsProfileSection_mup67_3"
+       ],
+       [],
+       [
+        "_pageContent_809q8_151",
+        "_pageContentWidth_809q8_184",
+        "_footerPadding_809q8_115"
+       ],
+       [
+        "_dashboardContent_809q8_29"
+       ],
+       [
+        "_layout_809q8_18"
+       ]
+      ],
+      "classes": [
+       "_link_ual8v_4",
+       "_underlineOnHover_ual8v_15"
+      ],
+      "data": {},
+      "heading": "Jane Black",
+      "landmark": {
+       "name": "",
+       "role": "main"
+      },
+      "layer": "document",
+      "name": "receipts@mercury.com",
+      "rect": [
+       346,
+       532,
+       140,
+       15
+      ],
+      "role": "link",
+      "tag": "a",
+      "xpath": "/html/body/div[1]/main[1]/div[1]/div[1]/div[4]/div[1]/div[2]/div[2]/div[15]/div[1]/div[2]/span[1]/a[1]"
+     },
+     "state": "home.task-receipt-forwarding"
+    },
+    {
+     "evidence": {
+      "contrastRatio": 1.3,
+      "failureSummary": "Fix any of the following:\n  The link has insufficient color contrast of 1.3:1 with the surrounding text. (Minimum contrast is 3:1, link text: #465bd1, surrounding text: #535461)\n  The link has no styling (such as underline) to distinguish it from the surrounding text",
+      "messageKey": "fgContrast",
+      "nodeColor": "#465bd1",
+      "parentColor": "#535461",
+      "requiredContrastRatio": 3
+     },
+     "occurrence": {
+      "ancestors": [
+       [
+        "_text-link_12t49_1"
+       ],
+       [
+        "_tiny_qaod7_67",
+        "_text-secondary_12t49_1"
+       ],
+       [
+        "_container_ktzvq_3",
+        "_accountingPageCTA_lz19l_14"
+       ],
+       [
+        "_wrapper_16rxx_1"
+       ],
+       [
+        "_accountingCategorizationSelectComboboxWrapper_lz19l_1"
+       ],
+       [
+        "_panelSection_d3i56_148"
+       ],
+       [
+        "_panelBody_d3i56_64"
+       ],
+       [
+        "_large_kwlx6_9",
+        "_noHover_3n0se_28",
+        "_shadow_3n0se_25",
+        "_raisedBackground_3n0se_45",
+        "_panel_d3i56_55",
+        "_detailsCardPanel_15kl9_287"
+       ]
+      ],
+      "classes": [
+       "_link_ual8v_4",
+       "_underlineOnHover_ual8v_15"
+      ],
+      "data": {
+       "data-discover": "true"
+      },
+      "heading": "",
+      "landmark": {
+       "name": "",
+       "role": "complementary"
+      },
+      "layer": "top",
+      "name": "Accounting Page",
+      "rect": [
+       1166,
+       549,
+       95,
+       14
+      ],
+      "role": "link",
+      "tag": "a",
+      "xpath": "/html/body/div[3]/aside[1]/div[1]/div[1]/section[2]/div[2]/div[1]/div[2]/span[1]/span[1]/a[1]"
+     },
+     "state": "transactions.detail-ach"
+    }
+   ],
+   "evidenceHash": "b43c6bce1d40f99b11eb424e8d4e1342c810adb509a2b1cf0448be3d90c26417",
+   "facts": {
+    "bg": "#535461",
+    "criterion": "1.4.1",
+    "criterionName": "Use of Color",
+    "element": "link \"receipts@mercury.com\"",
+    "fg": "#465bd1",
+    "ratio": "1.30",
+    "required": "3",
+    "rule": "link-in-text-block",
+    "screen": "Task — receipt forwarding",
+    "screens": 10
+   },
+   "family": "contrast",
+   "guidance": "High under 2:1, or under 3:1 for essential text.",
+   "issueId": null,
+   "key": "contrast:link-in-text-block:6166d314eff9",
+   "measured": true,
+   "primary": "home.task-receipt-forwarding",
+   "proposals": [],
+   "rule": "link-in-text-block",
+   "screens": 10,
+   "severityDefault": "medium",
+   "source": "scanner",
+   "states": [
+    "home.task-receipt-forwarding",
+    "transactions.detail-ach"
+   ],
+   "summary": "axe link-in-text-block: link #465bd1 against text #535461 measures 1.30:1 with no other visual cue; AA needs 3:1 or a cue such as an underline.",
+   "title": "Link shown by color only: link \"receipts@mercury.com\""
+  },
+  {
+   "attachments": [],
+   "attempt": 1,
+   "basis": "violation",
+   "criteria": [
+    "1.4.1"
+   ],
+   "evidence": [
+    {
+     "evidence": {
+      "contrastRatio": 2.88,
+      "failureSummary": "Fix any of the following:\n  The link has insufficient color contrast of 2.88:1 with the surrounding text. (Minimum contrast is 3:1, link text: #465bd1, surrounding text: #1e1e2a)\n  The link has no styling (such as underline) to distinguish it from the surrounding text",
+      "messageKey": "fgContrast",
+      "nodeColor": "#465bd1",
+      "parentColor": "#1e1e2a",
+      "requiredContrastRatio": 3
+     },
+     "occurrence": {
+      "ancestors": [
+       [
+        "_text-link_12t49_1"
+       ],
+       [
+        "_bodySecondary_qaod7_51"
+       ]
+      ],
+      "classes": [
+       "_link_ual8v_4",
+       "_underlineOnHover_ual8v_15"
+      ],
+      "data": {},
+      "heading": "",
+      "landmark": null,
+      "layer": "document",
+      "name": "",
+      "rect": [
+       0,
+       0,
+       0,
+       0
+      ],
+      "role": "",
+      "tag": "a",
+      "xpath": "/span[1]/span[1]/a[1]"
+     },
+     "state": "home.task-receipt-forwarding"
+    }
+   ],
+   "evidenceHash": "3799b3473a5565ad5b9f5d5580db6b55b9c3cd0470aae66227f046dd165cfdc2",
+   "facts": {
+    "bg": "#1e1e2a",
+    "criterion": "1.4.1",
+    "criterionName": "Use of Color",
+    "element": "text",
+    "fg": "#465bd1",
+    "ratio": "2.88",
+    "required": "3",
+    "rule": "link-in-text-block",
+    "screen": "Task — receipt forwarding",
+    "screens": 1
+   },
+   "family": "contrast",
+   "guidance": "High under 2:1, or under 3:1 for essential text.",
+   "issueId": null,
+   "key": "contrast:link-in-text-block:93f5512fd58e",
+   "measured": true,
+   "primary": "home.task-receipt-forwarding",
+   "proposals": [],
+   "rule": "link-in-text-block",
+   "screens": 1,
+   "severityDefault": "medium",
+   "source": "scanner",
+   "states": [
+    "home.task-receipt-forwarding"
+   ],
+   "summary": "axe link-in-text-block: link #465bd1 against text #1e1e2a measures 2.88:1 with no other visual cue; AA needs 3:1 or a cue such as an underline.",
+   "title": "Link shown by color only: text"
+  },
+  {
+   "attachments": [],
+   "attempt": 1,
+   "basis": "candidate",
+   "criteria": [
+    "2.4.3",
+    "1.3.2"
+   ],
+   "evidence": [
+    {
+     "evidence": {
+      "band": 20,
+      "overlay": "home.task-receipt-forwarding.tabstops.png",
+      "previous": {
+       "ancestors": [
+        [
+         "_contentWrapper_mup67_17"
+        ],
+        [
+         "_settingsProfileSection_mup67_3"
+        ],
+        [],
+        [
+         "_pageContent_809q8_151",
+         "_pageContentWidth_809q8_184",
+         "_footerPadding_809q8_115"
+        ],
+        [
+         "_dashboardContent_809q8_29"
+        ],
+        [
+         "_layout_809q8_18"
+        ],
+        [
+         "_wrapper_809q8_3"
+        ],
+        []
+       ],
+       "classes": [
+        "_bodySecondary_qaod7_51",
+        "_text-link_12t49_1",
+        "_editButton_mup67_23",
+        "_link_ual8v_4",
+        "_underlineOnHover_ual8v_15"
+       ],
+       "data": {},
+       "heading": "Jane Black",
+       "landmark": {
+        "name": "",
+        "role": "main"
+       },
+       "layer": "document",
+       "name": "Edit",
+       "rect": [
+        722,
+        815,
+        38,
+        20
+       ],
+       "role": "button",
+       "tag": "span",
+       "xpath": "/html/body/div[1]/main[1]/div[1]/div[1]/div[4]/div[1]/div[2]/div[2]/div[7]/div[2]/span[1]"
+      },
+      "rise": 347,
+      "stop": 38,
+      "stops": 57
+     },
+     "occurrence": {
+      "ancestors": [
+       [
+        "_contentWrapper_mup67_17"
+       ],
+       [
+        "_settingsProfileSection_mup67_3"
+       ],
+       [],
+       [
+        "_pageContent_809q8_151",
+        "_pageContentWidth_809q8_184",
+        "_footerPadding_809q8_115"
+       ],
+       [
+        "_dashboardContent_809q8_29"
+       ],
+       [
+        "_layout_809q8_18"
+       ],
+       [
+        "_wrapper_809q8_3"
+       ],
+       []
+      ],
+      "classes": [
+       "_bodySecondary_qaod7_51",
+       "_text-link_12t49_1",
+       "_editButton_mup67_23",
+       "_link_ual8v_4",
+       "_underlineOnHover_ual8v_15"
+      ],
+      "data": {},
+      "heading": "Jane Black",
+      "landmark": {
+       "name": "",
+       "role": "main"
+      },
+      "layer": "document",
+      "name": "Edit",
+      "rect": [
+       722,
+       468,
+       38,
+       20
+      ],
+      "role": "button",
+      "tag": "span",
+      "xpath": "/html/body/div[1]/main[1]/div[1]/div[1]/div[4]/div[1]/div[2]/div[2]/div[8]/div[2]/span[1]"
+     },
+     "state": "home.task-receipt-forwarding"
+    },
+    {
+     "evidence": {
+      "band": 20,
+      "overlay": "settings.index.tabstops.png",
+      "previous": {
+       "ancestors": [
+        [
+         "_contentWrapper_mup67_17"
+        ],
+        [
+         "_settingsProfileSection_mup67_3"
+        ],
+        [],
+        [
+         "_pageContent_809q8_151",
+         "_pageContentWidth_809q8_184",
+         "_footerPadding_809q8_115"
+        ],
+        [
+         "_dashboardContent_809q8_29"
+        ],
+        [
+         "_layout_809q8_18"
+        ],
+        [
+         "_wrapper_809q8_3"
+        ],
+        []
+       ],
+       "classes": [
+        "_bodySecondary_qaod7_51",
+        "_text-link_12t49_1",
+        "_editButton_mup67_23",
+        "_link_ual8v_4",
+        "_underlineOnHover_ual8v_15"
+       ],
+       "data": {},
+       "heading": "Mercury Demo",
+       "landmark": {
+        "name": "",
+        "role": "main"
+       },
+       "layer": "document",
+       "name": "Edit",
+       "rect": [
+        722,
+        847,
+        38,
+        20
+       ],
+       "role": "button",
+       "tag": "span",
+       "xpath": "/html/body/div[1]/main[1]/div[1]/div[1]/div[4]/div[1]/div[2]/div[2]/div[7]/div[2]/span[1]"
+      },
+      "rise": 379,
+      "stop": 38,
+      "stops": 44
+     },
+     "occurrence": {
+      "ancestors": [
+       [
+        "_contentWrapper_mup67_17"
+       ],
+       [
+        "_settingsProfileSection_mup67_3"
+       ],
+       [],
+       [
+        "_pageContent_809q8_151",
+        "_pageContentWidth_809q8_184",
+        "_footerPadding_809q8_115"
+       ],
+       [
+        "_dashboardContent_809q8_29"
+       ],
+       [
+        "_layout_809q8_18"
+       ],
+       [
+        "_wrapper_809q8_3"
+       ],
+       []
+      ],
+      "classes": [
+       "_bodySecondary_qaod7_51",
+       "_text-link_12t49_1",
+       "_editButton_mup67_23",
+       "_link_ual8v_4",
+       "_underlineOnHover_ual8v_15"
+      ],
+      "data": {},
+      "heading": "Mercury Demo",
+      "landmark": {
+       "name": "",
+       "role": "main"
+      },
+      "layer": "document",
+      "name": "Edit",
+      "rect": [
+       722,
+       468,
+       38,
+       20
+      ],
+      "role": "button",
+      "tag": "span",
+      "xpath": "/html/body/div[1]/main[1]/div[1]/div[1]/div[4]/div[1]/div[2]/div[2]/div[8]/div[2]/span[1]"
+     },
+     "state": "settings.index"
+    }
+   ],
+   "evidenceHash": "74d9a31611a6c16933bd5da3a5e2208ecba2559371895cbd8c7d06938ed0cfb8",
+   "facts": {
+    "criterion": "2.4.3",
+    "criterionName": "Focus Order",
+    "element": "button \"Edit\"",
+    "previous": "button \"Edit\"",
+    "screen": "Task — receipt forwarding",
+    "stop": "38"
+   },
+   "family": "focus-order",
+   "guidance": "High if the order skips a required control.",
+   "issueId": null,
+   "key": "focus-order:backward-jump:52eac3c97623",
+   "measured": false,
+   "primary": "home.task-receipt-forwarding",
+   "proposals": [],
+   "rule": "backward-jump",
+   "screens": 5,
+   "severityDefault": "medium",
+   "source": "scanner",
+   "states": [
+    "home.task-receipt-forwarding",
+    "settings.index"
+   ],
+   "summary": "Tab stop 38 jumped backward on screen, from the button \"Edit\" to the button \"Edit\".",
+   "title": "Tab order jumps backward at button \"Edit\""
+  },
+  {
+   "attachments": [],
+   "attempt": 1,
+   "basis": "candidate",
+   "criteria": [
+    "2.4.3",
+    "1.3.2"
+   ],
+   "evidence": [
+    {
+     "evidence": {
+      "band": 40,
+      "overlay": "home.task-receipt-forwarding.tabstops.png",
+      "previous": {
+       "ancestors": [
+        [
+         "_optInForm_u86as_14"
+        ],
+        [],
+        [
+         "_container_u86as_1"
+        ],
+        [
+         "_contentWrapper_mup67_17"
+        ],
+        [
+         "_settingsProfileSection_mup67_3"
+        ],
+        [],
+        [
+         "_pageContent_809q8_151",
+         "_pageContentWidth_809q8_184",
+         "_footerPadding_809q8_115"
+        ],
+        [
+         "_dashboardContent_809q8_29"
+        ]
+       ],
+       "classes": [
+        "_button_r6b2u_20",
+        "_large_r6b2u_88",
+        "_primary_r6b2u_104",
+        "_optInButton_u86as_20",
+        "session-replay-unmask"
+       ],
+       "data": {},
+       "heading": "Jane Black",
+       "landmark": {
+        "name": "",
+        "role": "form"
+       },
+       "layer": "document",
+       "name": "Opt In",
+       "rect": [
+        722,
+        860,
+        108,
+        40
+       ],
+       "role": "button",
+       "tag": "button",
+       "xpath": "/html/body/div[1]/main[1]/div[1]/div[1]/div[4]/div[1]/div[2]/div[2]/div[17]/div[2]/div[1]/form[1]/div[1]/button[1]"
+      },
+      "rise": 173,
+      "stop": 54,
+      "stops": 57
+     },
+     "occurrence": {
+      "ancestors": [
+       [
+        "_text-tertiary_12t49_1"
+       ],
+       [
+        "_tiny_qaod7_67",
+        "_text-tertiary_12t49_1"
+       ],
+       [
+        "_optInForm_u86as_14"
+       ],
+       [],
+       [
+        "_container_u86as_1"
+       ],
+       [
+        "_contentWrapper_mup67_17"
+       ],
+       [
+        "_settingsProfileSection_mup67_3"
+       ],
+       []
+      ],
+      "classes": [
+       "_link_ual8v_4",
+       "_underlineAlways_ual8v_11"
+      ],
+      "data": {},
+      "heading": "Jane Black",
+      "landmark": {
+       "name": "",
+       "role": "form"
+      },
+      "layer": "document",
+      "name": "View Terms",
+      "rect": [
+       990,
+       687,
+       66,
+       14
+      ],
+      "role": "link",
+      "tag": "a",
+      "xpath": "/html/body/div[1]/main[1]/div[1]/div[1]/div[4]/div[1]/div[2]/div[2]/div[17]/div[2]/div[1]/form[1]/div[1]/div[2]/span[1]/a[1]"
+     },
+     "state": "home.task-receipt-forwarding"
+    },
+    {
+     "evidence": {
+      "band": 40,
+      "overlay": "settings.my-profile.tabstops.png",
+      "previous": {
+       "ancestors": [
+        [
+         "_optInForm_u86as_14"
+        ],
+        [],
+        [
+         "_container_u86as_1"
+        ],
+        [
+         "_contentWrapper_mup67_17"
+        ],
+        [
+         "_settingsProfileSection_mup67_3"
+        ],
+        [],
+        [
+         "_pageContent_809q8_151",
+         "_pageContentWidth_809q8_184",
+         "_footerPadding_809q8_115"
+        ],
+        [
+         "_dashboardContent_809q8_29"
+        ]
+       ],
+       "classes": [
+        "_button_r6b2u_20",
+        "_large_r6b2u_88",
+        "_primary_r6b2u_104",
+        "_optInButton_u86as_20",
+        "session-replay-unmask"
+       ],
+       "data": {},
+       "heading": "Jane Black",
+       "landmark": {
+        "name": "",
+        "role": "form"
+       },
+       "layer": "document",
+       "name": "Opt In",
+       "rect": [
+        722,
+        860,
+        108,
+        40
+       ],
+       "role": "button",
+       "tag": "button",
+       "xpath": "/html/body/div[1]/main[1]/div[1]/div[1]/div[4]/div[1]/div[2]/div[2]/div[17]/div[2]/div[1]/form[1]/div[1]/button[1]"
+      },
+      "rise": 173,
+      "stop": 54,
+      "stops": 57
+     },
+     "occurrence": {
+      "ancestors": [
+       [
+        "_text-tertiary_12t49_1"
+       ],
+       [
+        "_tiny_qaod7_67",
+        "_text-tertiary_12t49_1"
+       ],
+       [
+        "_optInForm_u86as_14"
+       ],
+       [],
+       [
+        "_container_u86as_1"
+       ],
+       [
+        "_contentWrapper_mup67_17"
+       ],
+       [
+        "_settingsProfileSection_mup67_3"
+       ],
+       []
+      ],
+      "classes": [
+       "_link_ual8v_4",
+       "_underlineAlways_ual8v_11"
+      ],
+      "data": {},
+      "heading": "Jane Black",
+      "landmark": {
+       "name": "",
+       "role": "form"
+      },
+      "layer": "document",
+      "name": "View Terms",
+      "rect": [
+       990,
+       687,
+       66,
+       14
+      ],
+      "role": "link",
+      "tag": "a",
+      "xpath": "/html/body/div[1]/main[1]/div[1]/div[1]/div[4]/div[1]/div[2]/div[2]/div[17]/div[2]/div[1]/form[1]/div[1]/div[2]/span[1]/a[1]"
+     },
+     "state": "settings.my-profile"
+    }
+   ],
+   "evidenceHash": "b0cb703dbe8af8879e509efaacfbb9eb0de2ed2d306f8444b72484e6c26de164",
+   "facts": {
+    "criterion": "2.4.3",
+    "criterionName": "Focus Order",
+    "element": "link \"View Terms\"",
+    "previous": "button \"Opt In\"",
+    "screen": "Task — receipt forwarding",
+    "stop": "54"
+   },
+   "family": "focus-order",
+   "guidance": "High if the order skips a required control.",
+   "issueId": null,
+   "key": "focus-order:backward-jump:7b956abf504a",
+   "measured": false,
+   "primary": "home.task-receipt-forwarding",
+   "proposals": [],
+   "rule": "backward-jump",
+   "screens": 4,
+   "severityDefault": "medium",
+   "source": "scanner",
+   "states": [
+    "home.task-receipt-forwarding",
+    "settings.my-profile"
+   ],
+   "summary": "Tab stop 54 jumped backward on screen, from the button \"Opt In\" to the link \"View Terms\".",
+   "title": "Tab order jumps backward at link \"View Terms\""
+  },
+  {
+   "attachments": [],
+   "attempt": 1,
+   "basis": "candidate",
+   "criteria": [
+    "2.4.3",
+    "1.3.2"
+   ],
+   "evidence": [
+    {
+     "evidence": {
+      "band": 26,
+      "overlay": "home.task-receipt-forwarding.tabstops.png",
+      "previous": {
+       "ancestors": [
+        [
+         "_section_16j01_1"
+        ],
+        [
+         "_contentWrapper_mup67_17",
+         "_receiptMatchingContentWrapper_1czci_90"
+        ],
+        [
+         "_settingsProfileSection_mup67_3"
+        ],
+        [],
+        [
+         "_pageContent_809q8_151",
+         "_pageContentWidth_809q8_184",
+         "_footerPadding_809q8_115"
+        ],
+        [
+         "_dashboardContent_809q8_29"
+        ],
+        [
+         "_layout_809q8_18"
+        ],
+        [
+         "_wrapper_809q8_3"
+        ]
+       ],
+       "classes": [
+        "_bodySecondary_qaod7_51",
+        "_text-link_12t49_1",
+        "_addOrEditLink_16j01_18",
+        "_link_ual8v_4",
+        "_underlineOnHover_ual8v_15"
+       ],
+       "data": {},
+       "heading": "Jane Black",
+       "landmark": {
+        "name": "",
+        "role": "main"
+       },
+       "layer": "document",
+       "name": "Add or edit",
+       "rect": [
+        722,
+        874,
+        85,
+        26
+       ],
+       "role": "button",
+       "tag": "span",
+       "xpath": "/html/body/div[1]/main[1]/div[1]/div[1]/div[4]/div[1]/div[2]/div[2]/div[14]/div[2]/div[1]/span[1]"
+      },
+      "rise": 404,
+      "stop": 44,
+      "stops": 57
+     },
+     "occurrence": {
+      "ancestors": [
+       [
+        "_text-link_12t49_1"
+       ],
+       [
+        "_label_qaod7_59",
+        "_text-secondary_12t49_1"
+       ],
+       [],
+       [
+        "_settingsProfileSection_mup67_3"
+       ],
+       [],
+       [
+        "_pageContent_809q8_151",
+        "_pageContentWidth_809q8_184",
+        "_footerPadding_809q8_115"
+       ],
+       [
+        "_dashboardContent_809q8_29"
+       ],
+       [
+        "_layout_809q8_18"
+       ]
+      ],
+      "classes": [
+       "_link_ual8v_4",
+       "_underlineOnHover_ual8v_15"
+      ],
+      "data": {},
+      "heading": "Jane Black",
+      "landmark": {
+       "name": "",
+       "role": "main"
+      },
+      "layer": "document",
+      "name": "receipts@mercury.com",
+      "rect": [
+       346,
+       470,
+       140,
+       15
+      ],
+      "role": "link",
+      "tag": "a",
+      "xpath": "/html/body/div[1]/main[1]/div[1]/div[1]/div[4]/div[1]/div[2]/div[2]/div[15]/div[1]/div[2]/span[1]/a[1]"
+     },
+     "state": "home.task-receipt-forwarding"
+    },
+    {
+     "evidence": {
+      "band": 26,
+      "overlay": "settings.my-profile.tabstops.png",
+      "previous": {
+       "ancestors": [
+        [
+         "_section_16j01_1"
+        ],
+        [
+         "_contentWrapper_mup67_17",
+         "_receiptMatchingContentWrapper_1czci_90"
+        ],
+        [
+         "_settingsProfileSection_mup67_3"
+        ],
+        [],
+        [
+         "_pageContent_809q8_151",
+         "_pageContentWidth_809q8_184",
+         "_footerPadding_809q8_115"
+        ],
+        [
+         "_dashboardContent_809q8_29"
+        ],
+        [
+         "_layout_809q8_18"
+        ],
+        [
+         "_wrapper_809q8_3"
+        ]
+       ],
+       "classes": [
+        "_bodySecondary_qaod7_51",
+        "_text-link_12t49_1",
+        "_addOrEditLink_16j01_18",
+        "_link_ual8v_4",
+        "_underlineOnHover_ual8v_15"
+       ],
+       "data": {},
+       "heading": "Jane Black",
+       "landmark": {
+        "name": "",
+        "role": "main"
+       },
+       "layer": "document",
+       "name": "Add or edit",
+       "rect": [
+        722,
+        874,
+        85,
+        26
+       ],
+       "role": "button",
+       "tag": "span",
+       "xpath": "/html/body/div[1]/main[1]/div[1]/div[1]/div[4]/div[1]/div[2]/div[2]/div[14]/div[2]/div[1]/span[1]"
+      },
+      "rise": 404,
+      "stop": 44,
+      "stops": 57
+     },
+     "occurrence": {
+      "ancestors": [
+       [
+        "_text-link_12t49_1"
+       ],
+       [
+        "_label_qaod7_59",
+        "_text-secondary_12t49_1"
+       ],
+       [],
+       [
+        "_settingsProfileSection_mup67_3"
+       ],
+       [],
+       [
+        "_pageContent_809q8_151",
+        "_pageContentWidth_809q8_184",
+        "_footerPadding_809q8_115"
+       ],
+       [
+        "_dashboardContent_809q8_29"
+       ],
+       [
+        "_layout_809q8_18"
+       ]
+      ],
+      "classes": [
+       "_link_ual8v_4",
+       "_underlineOnHover_ual8v_15"
+      ],
+      "data": {},
+      "heading": "Jane Black",
+      "landmark": {
+       "name": "",
+       "role": "main"
+      },
+      "layer": "document",
+      "name": "receipts@mercury.com",
+      "rect": [
+       346,
+       470,
+       140,
+       15
+      ],
+      "role": "link",
+      "tag": "a",
+      "xpath": "/html/body/div[1]/main[1]/div[1]/div[1]/div[4]/div[1]/div[2]/div[2]/div[15]/div[1]/div[2]/span[1]/a[1]"
+     },
+     "state": "settings.my-profile"
+    }
+   ],
+   "evidenceHash": "3671855e60795c376128f3c2682b84902336322c1c43810ca07d30fca62d5f39",
+   "facts": {
+    "criterion": "2.4.3",
+    "criterionName": "Focus Order",
+    "element": "link \"receipts@mercury.com\"",
+    "previous": "button \"Add or edit\"",
+    "screen": "Task — receipt forwarding",
+    "stop": "44"
+   },
+   "family": "focus-order",
+   "guidance": "High if the order skips a required control.",
+   "issueId": null,
+   "key": "focus-order:backward-jump:7f6b15520a2a",
+   "measured": false,
+   "primary": "home.task-receipt-forwarding",
+   "proposals": [],
+   "rule": "backward-jump",
+   "screens": 4,
+   "severityDefault": "medium",
+   "source": "scanner",
+   "states": [
+    "home.task-receipt-forwarding",
+    "settings.my-profile"
+   ],
+   "summary": "Tab stop 44 jumped backward on screen, from the button \"Add or edit\" to the link \"receipts@mercury.com\".",
+   "title": "Tab order jumps backward at link \"receipts@mercury.com\""
+  },
+  {
+   "attachments": [],
+   "attempt": 1,
+   "basis": "candidate",
+   "criteria": [
+    "2.4.3",
+    "1.3.2"
+   ],
+   "evidence": [
+    {
+     "evidence": {
+      "band": 20,
+      "overlay": "home.task-receipt-forwarding.tabstops.png",
+      "previous": {
+       "ancestors": [
+        [
+         "_contentWrapper_mup67_17"
+        ],
+        [
+         "_settingsProfileSection_mup67_3"
+        ],
+        [],
+        [
+         "_pageContent_809q8_151",
+         "_pageContentWidth_809q8_184",
+         "_footerPadding_809q8_115"
+        ],
+        [
+         "_dashboardContent_809q8_29"
+        ],
+        [
+         "_layout_809q8_18"
+        ],
+        [
+         "_wrapper_809q8_3"
+        ],
+        []
+       ],
+       "classes": [
+        "_bodySecondary_qaod7_51",
+        "_text-link_12t49_1",
+        "_editButton_mup67_23",
+        "_link_ual8v_4",
+        "_underlineOnHover_ual8v_15"
+       ],
+       "data": {},
+       "heading": "Jane Black",
+       "landmark": {
+        "name": "",
+        "role": "main"
+       },
+       "layer": "document",
+       "name": "Edit",
+       "rect": [
+        722,
+        641,
+        38,
+        20
+       ],
+       "role": "button",
+       "tag": "span",
+       "xpath": "/html/body/div[1]/main[1]/div[1]/div[1]/div[4]/div[1]/div[2]/div[2]/div[9]/div[2]/span[1]"
+      },
+      "rise": 171,
+      "stop": 40,
+      "stops": 57
+     },
+     "occurrence": {
+      "ancestors": [
+       [],
+       [
+        "_bodySecondary_qaod7_51",
+        "_text-link_12t49_1",
+        "_editButton_mup67_23"
+       ],
+       [
+        "_contentWrapper_mup67_17"
+       ],
+       [
+        "_settingsProfileSection_mup67_3"
+       ],
+       [],
+       [
+        "_pageContent_809q8_151",
+        "_pageContentWidth_809q8_184",
+        "_footerPadding_809q8_115"
+       ],
+       [
+        "_dashboardContent_809q8_29"
+       ],
+       [
+        "_layout_809q8_18"
+       ]
+      ],
+      "classes": [
+       "_link_ual8v_4",
+       "_underlineOnHover_ual8v_15"
+      ],
+      "data": {
+       "data-discover": "true"
+      },
+      "heading": "Jane Black",
+      "landmark": {
+       "name": "",
+       "role": "main"
+      },
+      "layer": "document",
+      "name": "Manage",
+      "rect": [
+       722,
+       470,
+       63,
+       16
+      ],
+      "role": "link",
+      "tag": "a",
+      "xpath": "/html/body/div[1]/main[1]/div[1]/div[1]/div[4]/div[1]/div[2]/div[2]/div[11]/div[2]/span[1]/span[1]/a[1]"
+     },
+     "state": "home.task-receipt-forwarding"
+    },
+    {
+     "evidence": {
+      "band": 20,
+      "overlay": "settings.my-profile.tabstops.png",
+      "previous": {
+       "ancestors": [
+        [
+         "_contentWrapper_mup67_17"
+        ],
+        [
+         "_settingsProfileSection_mup67_3"
+        ],
+        [],
+        [
+         "_pageContent_809q8_151",
+         "_pageContentWidth_809q8_184",
+         "_footerPadding_809q8_115"
+        ],
+        [
+         "_dashboardContent_809q8_29"
+        ],
+        [
+         "_layout_809q8_18"
+        ],
+        [
+         "_wrapper_809q8_3"
+        ],
+        []
+       ],
+       "classes": [
+        "_bodySecondary_qaod7_51",
+        "_text-link_12t49_1",
+        "_editButton_mup67_23",
+        "_link_ual8v_4",
+        "_underlineOnHover_ual8v_15"
+       ],
+       "data": {},
+       "heading": "Jane Black",
+       "landmark": {
+        "name": "",
+        "role": "main"
+       },
+       "layer": "document",
+       "name": "Edit",
+       "rect": [
+        722,
+        641,
+        38,
+        20
+       ],
+       "role": "button",
+       "tag": "span",
+       "xpath": "/html/body/div[1]/main[1]/div[1]/div[1]/div[4]/div[1]/div[2]/div[2]/div[9]/div[2]/span[1]"
+      },
+      "rise": 171,
+      "stop": 40,
+      "stops": 57
+     },
+     "occurrence": {
+      "ancestors": [
+       [],
+       [
+        "_bodySecondary_qaod7_51",
+        "_text-link_12t49_1",
+        "_editButton_mup67_23"
+       ],
+       [
+        "_contentWrapper_mup67_17"
+       ],
+       [
+        "_settingsProfileSection_mup67_3"
+       ],
+       [],
+       [
+        "_pageContent_809q8_151",
+        "_pageContentWidth_809q8_184",
+        "_footerPadding_809q8_115"
+       ],
+       [
+        "_dashboardContent_809q8_29"
+       ],
+       [
+        "_layout_809q8_18"
+       ]
+      ],
+      "classes": [
+       "_link_ual8v_4",
+       "_underlineOnHover_ual8v_15"
+      ],
+      "data": {
+       "data-discover": "true"
+      },
+      "heading": "Jane Black",
+      "landmark": {
+       "name": "",
+       "role": "main"
+      },
+      "layer": "document",
+      "name": "Manage",
+      "rect": [
+       722,
+       470,
+       63,
+       16
+      ],
+      "role": "link",
+      "tag": "a",
+      "xpath": "/html/body/div[1]/main[1]/div[1]/div[1]/div[4]/div[1]/div[2]/div[2]/div[11]/div[2]/span[1]/span[1]/a[1]"
+     },
+     "state": "settings.my-profile"
+    }
+   ],
+   "evidenceHash": "bfbf29049452782b0f6ebe7497ed7f63be08fafccdc13c5d63a276739629e270",
+   "facts": {
+    "criterion": "2.4.3",
+    "criterionName": "Focus Order",
+    "element": "link \"Manage\"",
+    "previous": "button \"Edit\"",
+    "screen": "Task — receipt forwarding",
+    "stop": "40"
+   },
+   "family": "focus-order",
+   "guidance": "High if the order skips a required control.",
+   "issueId": null,
+   "key": "focus-order:backward-jump:dfdd8ac39304",
+   "measured": false,
+   "primary": "home.task-receipt-forwarding",
+   "proposals": [],
+   "rule": "backward-jump",
+   "screens": 4,
+   "severityDefault": "medium",
+   "source": "scanner",
+   "states": [
+    "home.task-receipt-forwarding",
+    "settings.my-profile"
+   ],
+   "summary": "Tab stop 40 jumped backward on screen, from the button \"Edit\" to the link \"Manage\".",
+   "title": "Tab order jumps backward at link \"Manage\""
+  },
+  {
+   "attachments": [],
+   "attempt": 1,
+   "basis": "candidate",
+   "criteria": [
+    "2.1.1"
+   ],
+   "evidence": [
+    {
+     "evidence": {
+      "end": "body",
+      "focusable": false,
+      "source": "pointer",
+      "stops": 57
+     },
+     "occurrence": {
+      "ancestors": [
+       [
+        "_titleRow_809q8_88",
+        "_hasContentLeftOfTitle_809q8_102"
+       ],
+       [
+        "_pageContent_809q8_151",
+        "_pageContentWidth_809q8_184",
+        "_footerPadding_809q8_115"
+       ],
+       [
+        "_dashboardContent_809q8_29"
+       ],
+       [
+        "_layout_809q8_18"
+       ],
+       [
+        "_wrapper_809q8_3"
+       ],
+       [],
+       [
+        "_main_1gb3b_1"
+       ],
+       [
+        "mercury-root"
+       ]
+      ],
+      "classes": [
+       "_circle_299z2_4",
+       "_avatar_1czci_34",
+       "_title_1czci_42",
+       "_enabled_1czci_35",
+       "session-replay-block"
+      ],
+      "data": {},
+      "heading": "",
+      "landmark": {
+       "name": "",
+       "role": "main"
+      },
+      "layer": "document",
+      "name": "",
+      "rect": [
+       346,
+       -1299,
+       48,
+       48
+      ],
+      "role": "generic",
+      "tag": "div",
+      "xpath": "/html/body/div[1]/main[1]/div[1]/div[1]/div[4]/div[1]/div[2]/div[1]/div[1]"
+     },
+     "state": "home.task-receipt-forwarding"
+    },
+    {
+     "evidence": {
+      "end": "body",
+      "focusable": false,
+      "source": "pointer",
+      "stops": 57
+     },
+     "occurrence": {
+      "ancestors": [
+       [
+        "_titleRow_809q8_88",
+        "_hasContentLeftOfTitle_809q8_102"
+       ],
+       [
+        "_pageContent_809q8_151",
+        "_pageContentWidth_809q8_184",
+        "_footerPadding_809q8_115"
+       ],
+       [
+        "_dashboardContent_809q8_29"
+       ],
+       [
+        "_layout_809q8_18"
+       ],
+       [
+        "_wrapper_809q8_3"
+       ],
+       [],
+       [
+        "_main_1gb3b_1"
+       ],
+       [
+        "mercury-root"
+       ]
+      ],
+      "classes": [
+       "_circle_299z2_4",
+       "_avatar_1czci_34",
+       "_title_1czci_42",
+       "_enabled_1czci_35",
+       "session-replay-block"
+      ],
+      "data": {},
+      "heading": "",
+      "landmark": {
+       "name": "",
+       "role": "main"
+      },
+      "layer": "document",
+      "name": "",
+      "rect": [
+       346,
+       128,
+       48,
+       48
+      ],
+      "role": "generic",
+      "tag": "div",
+      "xpath": "/html/body/div[1]/main[1]/div[1]/div[1]/div[4]/div[1]/div[2]/div[1]/div[1]"
+     },
+     "state": "settings.my-profile"
+    }
+   ],
+   "evidenceHash": "8df12992d45011536a66246baa904f8ed9a2dc1c48f9163e2b099c297f070b7c",
+   "facts": {
+    "axeSummary": "",
+    "criterion": "2.1.1",
+    "criterionName": "Keyboard",
+    "element": "text in the main landmark",
+    "rule": "not-reached",
+    "screen": "Task — receipt forwarding",
+    "stops": "57"
+   },
+   "family": "keyboard",
+   "guidance": "High if a task cannot be completed without a mouse.",
+   "issueId": null,
+   "key": "keyboard:not-reached:1f9234e33f21",
+   "measured": false,
+   "primary": "home.task-receipt-forwarding",
+   "proposals": [],
+   "rule": "not-reached",
+   "screens": 4,
+   "severityDefault": "medium",
+   "source": "scanner",
+   "states": [
+    "home.task-receipt-forwarding",
+    "settings.my-profile"
+   ],
+   "summary": "The Tab walk visited 57 stops and never reached the text in the main landmark, which responds to a click.",
+   "title": "Not reachable by keyboard: text in the main landmark"
+  },
+  {
+   "attachments": [],
+   "attempt": 1,
+   "basis": "candidate",
+   "criteria": [
+    "2.1.1"
+   ],
+   "evidence": [
+    {
+     "evidence": {
+      "end": "body",
+      "focusable": false,
+      "source": "pointer",
+      "stops": 57
+     },
+     "occurrence": {
+      "ancestors": [
+       [
+        "_contentWrapper_mup67_17"
+       ],
+       [
+        "_settingsProfileSection_mup67_3"
+       ],
+       [],
+       [
+        "_pageContent_809q8_151",
+        "_pageContentWidth_809q8_184",
+        "_footerPadding_809q8_115"
+       ],
+       [
+        "_dashboardContent_809q8_29"
+       ],
+       [
+        "_layout_809q8_18"
+       ],
+       [
+        "_wrapper_809q8_3"
+       ],
+       []
+      ],
+      "classes": [
+       "_large_299z2_56",
+       "_circle_299z2_4",
+       "_avatar_1czci_34",
+       "_enabled_1czci_35",
+       "session-replay-block"
+      ],
+      "data": {},
+      "heading": "Jane Black",
+      "landmark": {
+       "name": "",
+       "role": "main"
+      },
+      "layer": "document",
+      "name": "",
+      "rect": [
+       722,
+       -1210,
+       40,
+       40
+      ],
+      "role": "generic",
+      "tag": "div",
+      "xpath": "/html/body/div[1]/main[1]/div[1]/div[1]/div[4]/div[1]/div[2]/div[2]/div[1]/div[2]/div[1]"
+     },
+     "state": "home.task-receipt-forwarding"
+    },
+    {
+     "evidence": {
+      "end": "body",
+      "focusable": false,
+      "source": "pointer",
+      "stops": 57
+     },
+     "occurrence": {
+      "ancestors": [
+       [
+        "_contentWrapper_mup67_17"
+       ],
+       [
+        "_settingsProfileSection_mup67_3"
+       ],
+       [],
+       [
+        "_pageContent_809q8_151",
+        "_pageContentWidth_809q8_184",
+        "_footerPadding_809q8_115"
+       ],
+       [
+        "_dashboardContent_809q8_29"
+       ],
+       [
+        "_layout_809q8_18"
+       ],
+       [
+        "_wrapper_809q8_3"
+       ],
+       []
+      ],
+      "classes": [
+       "_large_299z2_56",
+       "_circle_299z2_4",
+       "_avatar_1czci_34",
+       "_enabled_1czci_35",
+       "session-replay-block"
+      ],
+      "data": {},
+      "heading": "Jane Black",
+      "landmark": {
+       "name": "",
+       "role": "main"
+      },
+      "layer": "document",
+      "name": "",
+      "rect": [
+       722,
+       217,
+       40,
+       40
+      ],
+      "role": "generic",
+      "tag": "div",
+      "xpath": "/html/body/div[1]/main[1]/div[1]/div[1]/div[4]/div[1]/div[2]/div[2]/div[1]/div[2]/div[1]"
+     },
+     "state": "settings.my-profile"
+    }
+   ],
+   "evidenceHash": "8df12992d45011536a66246baa904f8ed9a2dc1c48f9163e2b099c297f070b7c",
+   "facts": {
+    "axeSummary": "",
+    "criterion": "2.1.1",
+    "criterionName": "Keyboard",
+    "element": "text in \"Jane Black\"",
+    "rule": "not-reached",
+    "screen": "Task — receipt forwarding",
+    "stops": "57"
+   },
+   "family": "keyboard",
+   "guidance": "High if a task cannot be completed without a mouse.",
+   "issueId": null,
+   "key": "keyboard:not-reached:5aba5cd7e6eb",
+   "measured": false,
+   "primary": "home.task-receipt-forwarding",
+   "proposals": [],
+   "rule": "not-reached",
+   "screens": 4,
+   "severityDefault": "medium",
+   "source": "scanner",
+   "states": [
+    "home.task-receipt-forwarding",
+    "settings.my-profile"
+   ],
+   "summary": "The Tab walk visited 57 stops and never reached the text in \"Jane Black\", which responds to a click.",
+   "title": "Not reachable by keyboard: text in \"Jane Black\""
+  }
+ ],
+ "primaries": [
+  "home.task-receipt-forwarding"
+ ],
+ "reach": {
+  "baseUrl": "https://demo.mercury.com",
+  "data": "data",
+  "map": "build/map.json",
+  "run": "2026-10-03-1525",
+  "workspace": "a11y"
+ },
+ "run": "2026-10-03-1525"
+}

@@ -1,0 +1,177 @@
+{
+ "area": "transactions",
+ "batch": "verify-382",
+ "findings": [
+  {
+   "attachments": [],
+   "attempt": 1,
+   "basis": "candidate",
+   "criteria": [
+    "2.4.3",
+    "1.3.2"
+   ],
+   "evidence": [
+    {
+     "evidence": {
+      "band": 32,
+      "overlay": "transactions.insights-compare.tabstops.png",
+      "previous": {
+       "ancestors": [
+        [
+         "_expandableActions_1b8g2_178"
+        ],
+        [
+         "_sectionHoverActions_1b8g2_146",
+         "_expanded_1b8g2_173"
+        ],
+        [
+         "_sectionRow_1b8g2_111"
+        ],
+        [
+         "_content_1b8g2_96"
+        ],
+        [
+         "_wrapper_1b8g2_7"
+        ],
+        [
+         "_financialRecapWrapper_snsic_51"
+        ],
+        [
+         "_recapAndInsightsGraphContainer_snsic_9"
+        ],
+        [
+         "_overviewContainer_snsic_3"
+        ]
+       ],
+       "classes": [
+        "_button_r6b2u_20",
+        "_small_r6b2u_72",
+        "_tertiary_r6b2u_153",
+        "_tooltipAnchor_18bac_4",
+        "_wrapper_7927n_1"
+       ],
+       "data": {
+        "data-focus-visible": "true"
+       },
+       "heading": "Insights",
+       "landmark": {
+        "name": "",
+        "role": "main"
+       },
+       "layer": "document",
+       "name": "Copy section",
+       "rect": [
+        583,
+        690,
+        32,
+        32
+       ],
+       "role": "button",
+       "tag": "button",
+       "xpath": "/html/body/div[1]/main[1]/div[1]/div[1]/div[4]/div[1]/div[2]/div[3]/div[1]/div[1]/div[2]/div[1]/div[1]/div[3]/div[2]/div[1]/button[3]"
+      },
+      "rise": 222,
+      "stop": 68,
+      "stops": 95
+     },
+     "occurrence": {
+      "ancestors": [
+       [
+        "_headline_1n7fu_1",
+        "_comparisonPeriod_1n7fu_30"
+       ],
+       [
+        "_headlines_1n7fu_1"
+       ],
+       [
+        "_everythingButTheList_y4qdi_20"
+       ],
+       [
+        "_large_kwlx6_9",
+        "_noHover_3n0se_28",
+        "_border_3n0se_35",
+        "_wrapper_y4qdi_1",
+        "viewCaptureExpand"
+       ],
+       [
+        "_topMoneyInWrapper_snsic_43"
+       ],
+       [
+        "_moneyInMoneyOutContainer_snsic_25"
+       ],
+       [
+        "_overviewContainer_snsic_3"
+       ],
+       [
+        "_tabContent_almxf_77"
+       ]
+      ],
+      "classes": [
+       "_tooltipAnchor_18bac_4",
+       "_inline_1fb2p_26",
+       "_underline_1fb2p_17",
+       "_tooltipAnchor_1fb2p_4",
+       "_tooltipAnchor_1n7fu_35"
+      ],
+      "data": {
+       "data-focus-visible": "true"
+      },
+      "heading": "Insights",
+      "landmark": {
+       "name": "",
+       "role": "main"
+      },
+      "layer": "document",
+      "name": "Previous month",
+      "rect": [
+       517,
+       468,
+       94,
+       20
+      ],
+      "role": "generic",
+      "tag": "div",
+      "xpath": "/html/body/div[1]/main[1]/div[1]/div[1]/div[4]/div[1]/div[2]/div[3]/div[1]/div[3]/div[1]/div[1]/div[1]/div[1]/div[2]/div[1]"
+     },
+     "state": "transactions.insights-compare"
+    }
+   ],
+   "evidenceHash": "ba71d57e9a4a3fb6078c0aa5b03c1dee442a74de8ce51e4af7cfe7b264b076d7",
+   "facts": {
+    "criterion": "2.4.3",
+    "criterionName": "Focus Order",
+    "element": "text \"Previous month\"",
+    "previous": "button \"Copy section\"",
+    "screen": "Compared to previous month",
+    "stop": "68"
+   },
+   "family": "focus-order",
+   "guidance": "High if the order skips a required control.",
+   "issueId": null,
+   "key": "focus-order:backward-jump:93c0b938c7ba",
+   "measured": false,
+   "primary": "transactions.insights-compare",
+   "proposals": [],
+   "rule": "backward-jump",
+   "screens": 1,
+   "severityDefault": "medium",
+   "source": "scanner",
+   "states": [
+    "transactions.insights-compare"
+   ],
+   "summary": "Tab stop 68 jumped backward on screen, from the button \"Copy section\" to the text \"Previous month\".",
+   "title": "Tab order jumps backward at text \"Previous month\""
+  }
+ ],
+ "primaries": [
+  "transactions.insights-compare"
+ ],
+ "reach": {
+  "baseUrl": "https://demo.mercury.com",
+  "data": "data",
+  "map": "build/map.json",
+  "run": "2026-10-03-1525",
+  "workspace": "a11y"
+ },
+ "run": "2026-10-03-1525"
+}

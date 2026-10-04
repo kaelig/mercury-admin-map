@@ -1,0 +1,649 @@
+{
+ "area": "invoicing",
+ "batch": "verify-243",
+ "findings": [
+  {
+   "attachments": [],
+   "attempt": 1,
+   "basis": "candidate",
+   "criteria": [
+    "2.4.3",
+    "1.3.2"
+   ],
+   "evidence": [
+    {
+     "evidence": {
+      "band": 76,
+      "overlay": "invoicing.payment-link-details.tabstops.png",
+      "previous": {
+       "ancestors": [
+        [
+         "_bodyDefault_qaod7_40"
+        ],
+        [
+         "_accordionWrapper_1q1xu_3",
+         "_accordionBorder_1q1xu_7"
+        ],
+        [
+         "_wrapper_1ojdq_8"
+        ],
+        [],
+        [
+         "_leftInnerContainer_12jyu_3"
+        ],
+        [
+         "_left_yg1rf_39"
+        ],
+        [
+         "_leftScrollArea_yg1rf_57"
+        ],
+        [
+         "_leftContainer_yg1rf_39",
+         "_splitVariant_yg1rf_82",
+         "_leftBoxShadow_12jyu_10"
+        ]
+       ],
+       "classes": [
+        "_accordionItemHeader_1q1xu_16",
+        "_accordionHeader_15lvb_5"
+       ],
+       "data": {},
+       "heading": "Payment link details",
+       "landmark": {
+        "name": "",
+        "role": "main"
+       },
+       "layer": "document",
+       "name": "Methods Manual Transfer (ACH/Wire), Pay with Mercury, International wires",
+       "rect": [
+        121,
+        629,
+        478,
+        76
+       ],
+       "role": "button",
+       "tag": "button",
+       "xpath": "/html/body/div[1]/main[1]/div[1]/div[2]/div[2]/div[3]/div[1]/div[1]/div[1]/div[1]/div[1]/div[1]/div[2]/div[5]/h2[1]/button[1]"
+      },
+      "rise": 83,
+      "stop": 12,
+      "stops": 23
+     },
+     "occurrence": {
+      "ancestors": [
+       [
+        "_tiny_qaod7_67",
+        "_text-secondary_12t49_1"
+       ],
+       [
+        "_subLabel_1km7i_9"
+       ],
+       [
+        "_defaultCheckboxLabel_1km7i_56",
+        "_subLabelPlacementBottom_1km7i_72"
+       ],
+       [
+        "_checkboxHeightFix_1wfxj_6",
+        "_checkboxWrapper_1758n_62",
+        "_defaultCheckboxWrapper_1km7i_14"
+       ],
+       [
+        "_paymentMethodsWrapper_ksbtz_1"
+       ],
+       [
+        "_accordionItemBody_1q1xu_17"
+       ],
+       [
+        "_content_1q1xu_133"
+       ],
+       [
+        "_expandable_1q1xu_10",
+        "_open_1q1xu_137"
+       ]
+      ],
+      "classes": [
+       "_text-link_12t49_1",
+       "_link_ual8v_4",
+       "_underlineOnHover_ual8v_15"
+      ],
+      "data": {},
+      "heading": "Methods Manual Transfer (ACH/Wire), Pay with Mercury, International wires",
+      "landmark": {
+       "name": "Methods Manual Transfer (ACH/Wire), Pay with Mercury, International wires",
+       "role": "region"
+      },
+      "layer": "document",
+      "name": "Set up Stripe integration",
+      "rect": [
+       171,
+       546,
+       151,
+       14
+      ],
+      "role": "button",
+      "tag": "span",
+      "xpath": "/html/body/div[1]/main[1]/div[1]/div[2]/div[2]/div[3]/div[1]/div[1]/div[1]/div[1]/div[1]/div[1]/div[2]/div[5]/div[1]/div[1]/div[1]/div[1]/label[1]/div[2]/div[2]/span[1]/span[1]"
+     },
+     "state": "invoicing.payment-link-details"
+    }
+   ],
+   "evidenceHash": "7891e4a27eef9ad1129d482474de1faeb1e4d381b9e54f7a81fe5d5371880e05",
+   "facts": {
+    "criterion": "2.4.3",
+    "criterionName": "Focus Order",
+    "element": "button \"Set up Stripe integration\"",
+    "previous": "button \"Methods Manual Transfer (ACH/Wire), Pay…\"",
+    "screen": "Payment link details",
+    "stop": "12"
+   },
+   "family": "focus-order",
+   "guidance": "High if the order skips a required control.",
+   "issueId": null,
+   "key": "focus-order:backward-jump:66f19c8f8d3f",
+   "measured": false,
+   "primary": "invoicing.payment-link-details",
+   "proposals": [],
+   "rule": "backward-jump",
+   "screens": 1,
+   "severityDefault": "medium",
+   "source": "scanner",
+   "states": [
+    "invoicing.payment-link-details"
+   ],
+   "summary": "Tab stop 12 jumped backward on screen, from the button \"Methods Manual Transfer (ACH/Wire), Pay…\" to the button \"Set up Stripe integration\".",
+   "title": "Tab order jumps backward at button \"Set up Stripe integration\""
+  },
+  {
+   "attachments": [],
+   "attempt": 1,
+   "basis": "candidate",
+   "criteria": [
+    "2.4.3",
+    "1.3.2"
+   ],
+   "evidence": [
+    {
+     "evidence": {
+      "band": 48,
+      "overlay": "invoicing.payment-link-details.tabstops.png",
+      "previous": {
+       "ancestors": [
+        [
+         "_buttonWrapper_1a350_1",
+         "_buttonGroup_16t7w_1",
+         "_horizontal_16t7w_11"
+        ],
+        [
+         "_formNavigationButtonsWrapper_1a350_15"
+        ],
+        [
+         "_bottom_yg1rf_99"
+        ],
+        [
+         "_bottomContainer_yg1rf_99",
+         "_mobileStickyBottom_12jyu_16"
+        ],
+        [
+         "_leftContainer_yg1rf_39",
+         "_splitVariant_yg1rf_82",
+         "_leftBoxShadow_12jyu_10"
+        ],
+        [
+         "_containerBase_yg1rf_1",
+         "_container_yg1rf_1",
+         "_containerWithBanner_yg1rf_12"
+        ],
+        [
+         "_contentDiv_bcpsw_53",
+         "_contentDivHeightPreset_bcpsw_62",
+         "_layout_uyfdj_1",
+         "_fullWidthContentDiv_bcpsw_40"
+        ],
+        [
+         "_fullScreenWorkspaceLayout_bcpsw_14",
+         "_fullScreenWorkspaceLayoutBackground_bcpsw_32",
+         "_noScrollbar_bcpsw_27"
+        ]
+       ],
+       "classes": [
+        "_button_r6b2u_20",
+        "_large_r6b2u_88",
+        "_primary_r6b2u_104",
+        "_appearDisabled_r6b2u_16",
+        "session-replay-unmask"
+       ],
+       "data": {},
+       "heading": "Methods Manual Transfer (ACH/Wire), Pay with Mercury, International wires",
+       "landmark": {
+        "name": "",
+        "role": "main"
+       },
+       "layer": "document",
+       "name": "Create & send",
+       "rect": [
+        424,
+        836,
+        176,
+        40
+       ],
+       "role": "button",
+       "tag": "button",
+       "xpath": "/html/body/div[1]/main[1]/div[1]/div[2]/div[2]/div[3]/div[1]/div[1]/div[2]/div[1]/div[1]/div[1]/button[3]"
+      },
+      "rise": 258,
+      "stop": 18,
+      "stops": 23
+     },
+     "occurrence": {
+      "ancestors": [
+       [
+        "_bodyDefault_qaod7_40",
+        "_accordionButton_d8q07_16",
+        "_readOnly_d8q07_40"
+       ],
+       [
+        "_accordionWrapper_1q1xu_3",
+        "_accordionBorder_1q1xu_7",
+        "_accordion_d8q07_1"
+       ],
+       [
+        "_paymentMethodsWrapper_1f7uf_97",
+        "_readOnly_1f7uf_11"
+       ],
+       [
+        "_large_kwlx6_9",
+        "_noHover_3n0se_28",
+        "_shadow_3n0se_25",
+        "_raisedBackground_3n0se_45"
+       ],
+       [
+        "_themed-white_c4u0a_59",
+        "_bgGradient_c4u0a_60"
+       ],
+       [
+        "_webpagePreviewWrapper_18zpr_85"
+       ],
+       [],
+       [
+        "_wrapper_1krd1_1"
+       ]
+      ],
+      "classes": [
+       "_accordionItemHeader_1q1xu_16",
+       "_customHeaderReadOnly_d8q07_21"
+      ],
+      "data": {},
+      "heading": "Nebula Consulting Group sent you a payment link",
+      "landmark": {
+       "name": "",
+       "role": "main"
+      },
+      "layer": "document",
+      "name": "Pay With Mercury",
+      "rect": [
+       944,
+       578,
+       272,
+       48
+      ],
+      "role": "button",
+      "tag": "button",
+      "xpath": "/html/body/div[1]/main[1]/div[1]/div[2]/div[2]/div[3]/div[1]/div[2]/div[1]/div[1]/div[2]/div[1]/div[2]/div[1]/div[1]/div[2]/div[2]/h2[1]/button[1]"
+     },
+     "state": "invoicing.payment-link-details"
+    }
+   ],
+   "evidenceHash": "2fff9f3418b1df4d97fa1666bf9354de5a354fd5fe5a346f5c91a7a52ca4844f",
+   "facts": {
+    "criterion": "2.4.3",
+    "criterionName": "Focus Order",
+    "element": "button \"Pay With Mercury\"",
+    "previous": "button \"Create & send\"",
+    "screen": "Payment link details",
+    "stop": "18"
+   },
+   "family": "focus-order",
+   "guidance": "High if the order skips a required control.",
+   "issueId": null,
+   "key": "focus-order:backward-jump:8d02a1e9ebcd",
+   "measured": false,
+   "primary": "invoicing.payment-link-details",
+   "proposals": [],
+   "rule": "backward-jump",
+   "screens": 1,
+   "severityDefault": "medium",
+   "source": "scanner",
+   "states": [
+    "invoicing.payment-link-details"
+   ],
+   "summary": "Tab stop 18 jumped backward on screen, from the button \"Create & send\" to the button \"Pay With Mercury\".",
+   "title": "Tab order jumps backward at button \"Pay With Mercury\""
+  },
+  {
+   "attachments": [],
+   "attempt": 1,
+   "basis": "violation",
+   "criteria": [
+    "1.3.5"
+   ],
+   "evidence": [
+    {
+     "evidence": {
+      "failureSummary": "Fix all of the following:\n  the autocomplete attribute is incorrectly formatted"
+     },
+     "occurrence": {
+      "ancestors": [
+       [
+        "_inputBox_q7hf7_93"
+       ],
+       [
+        "_inputBoxWrapper_q7hf7_93"
+       ],
+       [
+        "_textInputWrapper_q7hf7_24"
+       ],
+       [
+        "_provideDSTextInput_q7hf7_6"
+       ],
+       [
+        "_wrapper_1ojdq_8"
+       ],
+       [],
+       [
+        "_leftInnerContainer_12jyu_3"
+       ],
+       [
+        "_left_yg1rf_39"
+       ]
+      ],
+      "classes": [
+       "_input_q7hf7_93"
+      ],
+      "data": {},
+      "heading": "Payment link details",
+      "landmark": {
+       "name": "",
+       "role": "main"
+      },
+      "layer": "document",
+      "name": "Amount",
+      "rect": [
+       148,
+       438,
+       439,
+       24
+      ],
+      "role": "textbox",
+      "tag": "input",
+      "xpath": "/html/body/div[1]/main[1]/div[1]/div[2]/div[2]/div[3]/div[1]/div[1]/div[1]/div[1]/div[1]/div[1]/div[2]/div[3]/div[1]/div[1]/div[1]/input[1]"
+     },
+     "state": "invoicing.payment-link-details"
+    },
+    {
+     "evidence": {
+      "failureSummary": "Fix all of the following:\n  the autocomplete attribute is incorrectly formatted"
+     },
+     "occurrence": {
+      "ancestors": [
+       [
+        "_inputBox_q7hf7_93",
+        "_error_q7hf7_41"
+       ],
+       [
+        "_inputBoxWrapper_q7hf7_93"
+       ],
+       [
+        "_textInputWrapper_q7hf7_24"
+       ],
+       [
+        "_provideDSTextInput_q7hf7_6"
+       ],
+       [
+        "_wrapper_1ojdq_8"
+       ],
+       [],
+       [
+        "_leftInnerContainer_12jyu_3"
+       ],
+       [
+        "_left_yg1rf_39"
+       ]
+      ],
+      "classes": [
+       "_input_q7hf7_93"
+      ],
+      "data": {},
+      "heading": "Payment link details",
+      "landmark": {
+       "name": "",
+       "role": "main"
+      },
+      "layer": "document",
+      "name": "Amount",
+      "rect": [
+       148,
+       438,
+       439,
+       24
+      ],
+      "role": "textbox",
+      "tag": "input",
+      "xpath": "/html/body/div[1]/main[1]/div[1]/div[2]/div[2]/div[3]/div[1]/div[1]/div[1]/div[1]/div[1]/div[1]/div[2]/div[3]/div[1]/div[1]/div[1]/input[1]"
+     },
+     "state": "invoicing.payment-link-error"
+    }
+   ],
+   "evidenceHash": "69694ecb9dff57863fa11d616f4c538de9c85ab84dfb5b390f1090719c4d81d0",
+   "facts": {
+    "announced": "textbox \"Amount\"",
+    "axeSummary": "the autocomplete attribute is incorrectly formatted",
+    "criterion": "1.3.5",
+    "criterionName": "Identify Input Purpose",
+    "element": "textbox \"Amount\"",
+    "rule": "autocomplete-valid",
+    "screen": "Payment link details"
+   },
+   "family": "role-state",
+   "guidance": "Low for optional ARIA or an invalid autocomplete token; high when aria-hidden hides the whole page.",
+   "issueId": null,
+   "key": "role-state:autocomplete-valid:da66cdb7aab9",
+   "measured": false,
+   "primary": "invoicing.payment-link-details",
+   "proposals": [],
+   "rule": "autocomplete-valid",
+   "screens": 3,
+   "severityDefault": "medium",
+   "source": "scanner",
+   "states": [
+    "invoicing.payment-link-details",
+    "invoicing.payment-link-error"
+   ],
+   "summary": "autocomplete-valid: announced as textbox \"Amount\". the autocomplete attribute is incorrectly formatted",
+   "title": "Invalid autocomplete value: textbox \"Amount\""
+  },
+  {
+   "attachments": [],
+   "attempt": 1,
+   "basis": "candidate",
+   "criteria": [
+    "2.5.8"
+   ],
+   "evidence": [
+    {
+     "evidence": {
+      "agree": false,
+      "axe": "pass",
+      "exception": "ua-control",
+      "height": 18,
+      "offset": 0,
+      "own": "fail",
+      "passedBy": null,
+      "width": 18
+     },
+     "occurrence": {
+      "ancestors": [
+       [
+        "_checkboxHeightFix_1wfxj_6",
+        "_checkboxWrapper_1758n_62",
+        "_defaultCheckboxWrapper_1km7i_14"
+       ],
+       [
+        "_paymentMethodsWrapper_ksbtz_1"
+       ],
+       [
+        "_accordionItemBody_1q1xu_17"
+       ],
+       [
+        "_content_1q1xu_133"
+       ],
+       [
+        "_expandable_1q1xu_10",
+        "_open_1q1xu_137"
+       ],
+       [
+        "_accordionWrapper_1q1xu_3",
+        "_accordionBorder_1q1xu_7"
+       ],
+       [
+        "_wrapper_1ojdq_8"
+       ],
+       []
+      ],
+      "classes": [
+       "_input_1758n_13",
+       "_defaultInput_1km7i_44"
+      ],
+      "data": {},
+      "disabled": false,
+      "heading": "Methods Manual Transfer (ACH/Wire), Pay with Mercury, International wires",
+      "landmark": {
+       "name": "Methods Manual Transfer (ACH/Wire), Pay with Mercury, International wires",
+       "role": "region"
+      },
+      "layer": "document",
+      "name": "Accept credit cards Set up Stripe integration",
+      "rect": [
+       141,
+       864,
+       18,
+       18
+      ],
+      "role": "checkbox",
+      "tag": "input",
+      "xpath": "/html/body/div[1]/main[1]/div[1]/div[2]/div[2]/div[3]/div[1]/div[1]/div[1]/div[1]/div[1]/div[1]/div[2]/div[5]/div[1]/div[1]/div[1]/div[1]/label[1]/input[1]"
+     },
+     "state": "invoicing.payment-link-details"
+    },
+    {
+     "evidence": {
+      "agree": false,
+      "axe": "pass",
+      "exception": "ua-control",
+      "height": 18,
+      "offset": 0,
+      "own": "fail",
+      "passedBy": null,
+      "width": 18
+     },
+     "occurrence": {
+      "ancestors": [
+       [
+        "_checkboxHeightFix_1wfxj_6",
+        "_mailingListCheckbox_i6wom_5",
+        "_checkboxWrapper_1758n_62",
+        "_defaultCheckboxWrapper_1km7i_14"
+       ],
+       [],
+       [],
+       [
+        "_large_kwlx6_9",
+        "_noHover_3n0se_28",
+        "_shadow_3n0se_25",
+        "_raisedBackground_3n0se_45",
+        "_card_lo4oy_4",
+        "_defaultPadding_lo4oy_27",
+        "_small_lo4oy_11"
+       ],
+       [
+        "ReactModal__Content",
+        "ReactModal__Content--after-open",
+        "_modal_lo4oy_73"
+       ],
+       [
+        "ReactModal__Overlay",
+        "ReactModal__Overlay--after-open",
+        "_overlay_lo4oy_89",
+        "_backgroundColor_lo4oy_103"
+       ],
+       [
+        "ReactModalPortal"
+       ]
+      ],
+      "classes": [
+       "_input_1758n_13",
+       "_defaultInput_1km7i_44"
+      ],
+      "data": {},
+      "disabled": false,
+      "heading": "Customize the Mercury demo",
+      "landmark": {
+       "name": "",
+       "role": "form"
+      },
+      "layer": "top",
+      "name": "I'd like to receive Mercury emails",
+      "rect": [
+       536,
+       703,
+       18,
+       18
+      ],
+      "role": "checkbox",
+      "tag": "input",
+      "xpath": "/html/body/div[15]/div[1]/div[1]/div[1]/form[1]/div[1]/label[1]/input[1]"
+     },
+     "state": "home.customize-demo-industry"
+    }
+   ],
+   "evidenceHash": "c7dfbf34c116408f5489c4fd767b4fd01e596662ecda4b83bad031adb091e35f",
+   "facts": {
+    "criterion": "2.5.8",
+    "criterionName": "Target Size (Minimum)",
+    "element": "checkbox \"Accept credit cards Set up Stripe inte…\"",
+    "offset": "0",
+    "rule": "target-size-own",
+    "screen": "Payment link details",
+    "screens": 3,
+    "size": "18×18"
+   },
+   "family": "target-size",
+   "guidance": "Medium next to destructive or financial controls.",
+   "issueId": null,
+   "key": "target-size:target-size-own:7c048915e14c",
+   "measured": true,
+   "primary": "invoicing.payment-link-details",
+   "proposals": [],
+   "rule": "target-size-own",
+   "screens": 3,
+   "severityDefault": "low",
+   "source": "scanner",
+   "states": [
+    "invoicing.payment-link-details",
+    "home.customize-demo-industry"
+   ],
+   "summary": "target-size-own: 18×18 px; the widest circle centered on it that clears other targets is 0 px, and the spacing exception needs 24 px.",
+   "title": "Target under 24×24 px: checkbox \"Accept credit cards Set up Stripe inte…\""
+  }
+ ],
+ "primaries": [
+  "invoicing.payment-link-details"
+ ],
+ "reach": {
+  "baseUrl": "https://demo.mercury.com",
+  "data": "data",
+  "map": "build/map.json",
+  "run": "2026-10-03-1525",
+  "workspace": "a11y"
+ },
+ "run": "2026-10-03-1525"
+}

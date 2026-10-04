@@ -1,0 +1,117 @@
+{
+ "area": "home",
+ "batch": "verify-181",
+ "findings": [
+  {
+   "attachments": [],
+   "attempt": 1,
+   "basis": "violation",
+   "criteria": [
+    "1.3.5"
+   ],
+   "evidence": [
+    {
+     "evidence": {
+      "failureSummary": "Fix all of the following:\n  the autocomplete attribute is incorrectly formatted"
+     },
+     "occurrence": {
+      "ancestors": [
+       [
+        "_textboxWrapper_1a7mr_158"
+       ],
+       [
+        "_selectWrapper_1a7mr_150"
+       ],
+       [
+        "_comboboxWrapper_1a7mr_6",
+        "_dropDown_i6wom_27",
+        "session-replay-block"
+       ],
+       [],
+       [],
+       [
+        "_large_kwlx6_9",
+        "_noHover_3n0se_28",
+        "_shadow_3n0se_25",
+        "_raisedBackground_3n0se_45",
+        "_card_lo4oy_4",
+        "_defaultPadding_lo4oy_27",
+        "_small_lo4oy_11"
+       ],
+       [
+        "ReactModal__Content",
+        "ReactModal__Content--after-open",
+        "_modal_lo4oy_73"
+       ],
+       [
+        "ReactModal__Overlay",
+        "ReactModal__Overlay--after-open",
+        "_overlay_lo4oy_89",
+        "_backgroundColor_lo4oy_103"
+       ]
+      ],
+      "classes": [
+       "_textboxInput_1a7mr_250",
+       "_selectedPlaceholder_1a7mr_293"
+      ],
+      "data": {},
+      "heading": "Customize the Mercury demo",
+      "landmark": {
+       "name": "",
+       "role": "form"
+      },
+      "layer": "top",
+      "name": "Industry",
+      "rect": [
+       537,
+       565,
+       330,
+       38
+      ],
+      "role": "combobox",
+      "tag": "input",
+      "xpath": "/html/body/div[15]/div[1]/div[1]/div[1]/form[1]/div[1]/div[6]/div[1]/div[1]/input[1]"
+     },
+     "state": "home.customize-demo-filled"
+    }
+   ],
+   "evidenceHash": "dfab61d9b201a012cfe576412c7db9e88bb87f4a59f624346c20098c0e85853c",
+   "facts": {
+    "announced": "combobox \"Industry\" [expanded=false, haspopup=listbox]",
+    "axeSummary": "the autocomplete attribute is incorrectly formatted",
+    "criterion": "1.3.5",
+    "criterionName": "Identify Input Purpose",
+    "element": "combobox \"Industry\"",
+    "rule": "autocomplete-valid",
+    "screen": "Customize demo — filled"
+   },
+   "family": "role-state",
+   "guidance": "Low for optional ARIA or an invalid autocomplete token; high when aria-hidden hides the whole page.",
+   "issueId": null,
+   "key": "role-state:autocomplete-valid:ed714caf55c0",
+   "measured": false,
+   "primary": "home.customize-demo-filled",
+   "proposals": [],
+   "rule": "autocomplete-valid",
+   "screens": 1,
+   "severityDefault": "medium",
+   "source": "scanner",
+   "states": [
+    "home.customize-demo-filled"
+   ],
+   "summary": "autocomplete-valid: announced as combobox \"Industry\" [expanded=false, haspopup=listbox]. the autocomplete attribute is incorrectly formatted",
+   "title": "Invalid autocomplete value: combobox \"Industry\""
+  }
+ ],
+ "primaries": [
+  "home.customize-demo-filled"
+ ],
+ "reach": {
+  "baseUrl": "https://demo.mercury.com",
+  "data": "data",
+  "map": "build/map.json",
+  "run": "2026-10-03-1525",
+  "workspace": "a11y"
+ },
+ "run": "2026-10-03-1525"
+}

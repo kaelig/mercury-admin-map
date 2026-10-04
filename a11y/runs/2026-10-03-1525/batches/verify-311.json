@@ -1,0 +1,255 @@
+{
+ "area": "settings",
+ "batch": "verify-311",
+ "findings": [
+  {
+   "attachments": [],
+   "attempt": 1,
+   "basis": "candidate",
+   "criteria": [
+    "2.4.3",
+    "1.3.2"
+   ],
+   "evidence": [
+    {
+     "evidence": {
+      "band": 37,
+      "overlay": "settings.billing-history.tabstops.png",
+      "previous": {
+       "ancestors": [
+        [],
+        [],
+        [
+         "_subNavWrapper_19y5b_3",
+         "_subNavWrapper_7ux9c_36",
+         "session-replay-unmask"
+        ],
+        [
+         "_documentsRoot_7ux9c_6"
+        ],
+        [],
+        [
+         "_documentsPageContent_7ux9c_1",
+         "_pageContent_809q8_151",
+         "_footerPadding_809q8_115"
+        ],
+        [
+         "_dashboardContent_809q8_29"
+        ],
+        [
+         "_layout_809q8_18"
+        ]
+       ],
+       "classes": [
+        "_subNavItem_1kjbw_3",
+        "_noStyleLink_njx8v_1"
+       ],
+       "data": {
+        "data-discover": "true"
+       },
+       "heading": "Documents & Data",
+       "landmark": {
+        "name": "Documents Sub Nav",
+        "role": "navigation"
+       },
+       "layer": "document",
+       "name": "Other",
+       "rect": [
+        346,
+        672,
+        183,
+        36
+       ],
+       "role": "link",
+       "tag": "a",
+       "xpath": "/html/body/div[1]/main[1]/div[1]/div[1]/div[4]/div[1]/div[2]/div[2]/div[2]/nav[1]/ul[1]/li[13]/a[1]"
+      },
+      "rise": 327,
+      "stop": 49,
+      "stops": 54
+     },
+     "occurrence": {
+      "ancestors": [
+       [
+        "_textboxWrapper_1a7mr_158",
+        "_focus_1a7mr_178"
+       ],
+       [
+        "_selectWrapper_1a7mr_150"
+       ],
+       [
+        "_comboboxWrapper_1a7mr_6",
+        "_focus_1a7mr_178",
+        "_yearCombobox_hh83k_7",
+        "session-replay-block"
+       ],
+       [
+        "_actionBar_hh83k_1"
+       ],
+       [],
+       [
+        "_documentsRoot_7ux9c_6"
+       ],
+       [],
+       [
+        "_documentsPageContent_7ux9c_1",
+        "_pageContent_809q8_151",
+        "_footerPadding_809q8_115"
+       ]
+      ],
+      "classes": [
+       "_textboxInput_1a7mr_250",
+       "_focus_1a7mr_178",
+       "_selectedPlaceholder_1a7mr_293"
+      ],
+      "data": {},
+      "heading": "Documents & Data",
+      "landmark": {
+       "name": "",
+       "role": "main"
+      },
+      "layer": "document",
+      "name": "Year",
+      "rect": [
+       584,
+       345,
+       133,
+       37
+      ],
+      "role": "combobox",
+      "tag": "input",
+      "xpath": "/html/body/div[1]/main[1]/div[1]/div[1]/div[4]/div[1]/div[2]/div[2]/div[2]/div[1]/div[2]/div[1]/div[1]/div[1]/input[1]"
+     },
+     "state": "settings.billing-history"
+    }
+   ],
+   "evidenceHash": "b8ab7ea6b461ff137bee9baaeecea078f64374b42cdf12662eab8323fe60a486",
+   "facts": {
+    "criterion": "2.4.3",
+    "criterionName": "Focus Order",
+    "element": "combobox \"Year\"",
+    "previous": "link \"Other\"",
+    "screen": "Documents — Billing history",
+    "stop": "49"
+   },
+   "family": "focus-order",
+   "guidance": "High if the order skips a required control.",
+   "issueId": null,
+   "key": "focus-order:backward-jump:9973ef3f3262",
+   "measured": false,
+   "primary": "settings.billing-history",
+   "proposals": [],
+   "rule": "backward-jump",
+   "screens": 1,
+   "severityDefault": "medium",
+   "source": "scanner",
+   "states": [
+    "settings.billing-history"
+   ],
+   "summary": "Tab stop 49 jumped backward on screen, from the link \"Other\" to the combobox \"Year\".",
+   "title": "Tab order jumps backward at combobox \"Year\""
+  },
+  {
+   "attachments": [],
+   "attempt": 1,
+   "basis": "violation",
+   "criteria": [
+    "1.3.5"
+   ],
+   "evidence": [
+    {
+     "evidence": {
+      "failureSummary": "Fix all of the following:\n  the autocomplete attribute is incorrectly formatted"
+     },
+     "occurrence": {
+      "ancestors": [
+       [
+        "_textboxWrapper_1a7mr_158"
+       ],
+       [
+        "_selectWrapper_1a7mr_150"
+       ],
+       [
+        "_comboboxWrapper_1a7mr_6",
+        "_yearCombobox_hh83k_7",
+        "session-replay-block"
+       ],
+       [
+        "_actionBar_hh83k_1"
+       ],
+       [],
+       [
+        "_documentsRoot_7ux9c_6"
+       ],
+       [],
+       [
+        "_documentsPageContent_7ux9c_1",
+        "_pageContent_809q8_151",
+        "_footerPadding_809q8_115"
+       ]
+      ],
+      "classes": [
+       "_textboxInput_1a7mr_250",
+       "_selectedPlaceholder_1a7mr_293"
+      ],
+      "data": {},
+      "heading": "Documents & Data",
+      "landmark": {
+       "name": "",
+       "role": "main"
+      },
+      "layer": "document",
+      "name": "Year",
+      "rect": [
+       584,
+       345,
+       97,
+       38
+      ],
+      "role": "combobox",
+      "tag": "input",
+      "xpath": "/html/body/div[1]/main[1]/div[1]/div[1]/div[4]/div[1]/div[2]/div[2]/div[2]/div[1]/div[2]/div[1]/div[1]/div[1]/input[1]"
+     },
+     "state": "settings.billing-history"
+    }
+   ],
+   "evidenceHash": "70aef76a46fcb41da2d8ec9f929c510a5055dabe1d56b65d42afb07cf751cae6",
+   "facts": {
+    "announced": "combobox \"Year\" [expanded=false, haspopup=listbox]",
+    "axeSummary": "the autocomplete attribute is incorrectly formatted",
+    "criterion": "1.3.5",
+    "criterionName": "Identify Input Purpose",
+    "element": "combobox \"Year\"",
+    "rule": "autocomplete-valid",
+    "screen": "Documents — Billing history"
+   },
+   "family": "role-state",
+   "guidance": "Low for optional ARIA or an invalid autocomplete token; high when aria-hidden hides the whole page.",
+   "issueId": null,
+   "key": "role-state:autocomplete-valid:2b6a08e070ef",
+   "measured": false,
+   "primary": "settings.billing-history",
+   "proposals": [],
+   "rule": "autocomplete-valid",
+   "screens": 1,
+   "severityDefault": "medium",
+   "source": "scanner",
+   "states": [
+    "settings.billing-history"
+   ],
+   "summary": "autocomplete-valid: announced as combobox \"Year\" [expanded=false, haspopup=listbox]. the autocomplete attribute is incorrectly formatted",
+   "title": "Invalid autocomplete value: combobox \"Year\""
+  }
+ ],
+ "primaries": [
+  "settings.billing-history"
+ ],
+ "reach": {
+  "baseUrl": "https://demo.mercury.com",
+  "data": "data",
+  "map": "build/map.json",
+  "run": "2026-10-03-1525",
+  "workspace": "a11y"
+ },
+ "run": "2026-10-03-1525"
+}

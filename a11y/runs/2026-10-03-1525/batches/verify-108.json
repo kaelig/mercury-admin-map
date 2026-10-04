@@ -1,0 +1,44 @@
+{
+ "area": "books",
+ "batch": "verify-108",
+ "findings": [
+  {
+   "attachments": [],
+   "attempt": 1,
+   "basis": "failure",
+   "criteria": [
+    "4.1.2"
+   ],
+   "evidence": [],
+   "evidenceHash": "ef878d5bc168eae47d80ad89cbb24976affebdfa87f435af04c5ec2695862450",
+   "facts": {},
+   "family": "role-state",
+   "guidance": "Low for optional ARIA or an invalid autocomplete token; high when aria-hidden hides the whole page.",
+   "issueId": "books.i-frequency-aria",
+   "key": "hand:books.i-frequency-aria",
+   "measured": false,
+   "primary": "books.report-frequency",
+   "proposals": [],
+   "rule": "hand-found",
+   "screens": 1,
+   "severityDefault": "medium",
+   "source": "hand-found",
+   "states": [
+    "books.report-frequency"
+   ],
+   "summary": "combobox 'frequency': 'Monthly'; listbox: option 'Annual' [selected], option 'Quarterly', option 'Monthly', option 'Custom'.",
+   "title": "Report frequency listbox marks the wrong option selected"
+  }
+ ],
+ "primaries": [
+  "books.report-frequency"
+ ],
+ "reach": {
+  "baseUrl": "https://demo.mercury.com",
+  "data": "data",
+  "map": "build/map.json",
+  "run": "2026-10-03-1525",
+  "workspace": "a11y"
+ },
+ "run": "2026-10-03-1525"
+}

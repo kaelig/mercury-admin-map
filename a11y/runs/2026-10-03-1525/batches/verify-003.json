@@ -1,0 +1,225 @@
+{
+ "area": "accounts",
+ "batch": "verify-003",
+ "findings": [
+  {
+   "attachments": [],
+   "attempt": 1,
+   "basis": "failure",
+   "criteria": [
+    "2.1.1"
+   ],
+   "evidence": [
+    {
+     "evidence": {
+      "focus": {
+       "ancestors": [
+        [
+         "_textboxWrapper_1a7mr_158",
+         "_focus_1a7mr_178"
+        ],
+        [
+         "_selectWrapper_1a7mr_150"
+        ],
+        [
+         "_comboboxWrapper_1a7mr_6",
+         "_focus_1a7mr_178",
+         "_occurrenceField_rcara_74",
+         "session-replay-block"
+        ],
+        [
+         "_formRow_rcara_50",
+         "_formRowDouble_rcara_69"
+        ],
+        [
+         "_container_rcara_12"
+        ],
+        [],
+        [],
+        [
+         "_large_kwlx6_9",
+         "_noHover_3n0se_28",
+         "_shadow_3n0se_25",
+         "_raisedBackground_3n0se_45",
+         "_card_lo4oy_4",
+         "_modal_rcara_3",
+         "_small_lo4oy_11"
+        ]
+       ],
+       "classes": [
+        "_textboxInput_1a7mr_250",
+        "_focus_1a7mr_178",
+        "_selectedPlaceholder_1a7mr_293"
+       ],
+       "data": {},
+       "heading": "Credit Card",
+       "landmark": {
+        "name": "",
+        "role": "form"
+       },
+       "layer": "document",
+       "name": "On",
+       "rect": [
+        730,
+        319,
+        173,
+        37
+       ],
+       "role": "combobox",
+       "tag": "input",
+       "xpath": "/html/body/div[11]/div[1]/div[1]/div[1]/form[1]/div[1]/div[2]/div[1]/div[2]/div[1]/div[1]/input[1]"
+      },
+      "stops": 2,
+      "trace": [
+       {
+        "focus": {
+         "label": "Edit recurring autopay Autopay will process just after midnight UTC on each spec",
+         "tag": "div",
+         "xpath": "/html/body/div[11]/div[1]/div[1]"
+        },
+        "key": "start",
+        "where": "trigger"
+       },
+       {
+        "focus": {
+         "label": "",
+         "tag": "input",
+         "xpath": "/html/body/div[11]/div[1]/div[1]/div[1]/form[1]/div[1]/div[2]/div[1]/div[1]/div[1]/div[1]/input[1]"
+        },
+        "key": "Tab",
+        "where": "outside"
+       },
+       {
+        "focus": {
+         "label": "",
+         "tag": "input",
+         "xpath": "/html/body/div[11]/div[1]/div[1]/div[1]/form[1]/div[1]/div[2]/div[1]/div[2]/div[1]/div[1]/input[1]"
+        },
+        "key": "Tab",
+        "where": "trigger"
+       },
+       {
+        "focus": {
+         "label": "",
+         "tag": "input",
+         "xpath": "/html/body/div[11]/div[1]/div[1]/div[1]/form[1]/div[1]/div[2]/div[1]/div[2]/div[1]/div[1]/input[1]"
+        },
+        "key": "Enter",
+        "where": "trigger"
+       },
+       {
+        "focus": {
+         "label": "",
+         "tag": "input",
+         "xpath": "/html/body/div[11]/div[1]/div[1]/div[1]/form[1]/div[1]/div[2]/div[1]/div[2]/div[1]/div[1]/input[1]"
+        },
+        "key": "focus",
+        "where": "trigger"
+       },
+       {
+        "focus": {
+         "label": "",
+         "tag": "input",
+         "xpath": "/html/body/div[11]/div[1]/div[1]/div[1]/form[1]/div[1]/div[2]/div[1]/div[2]/div[1]/div[1]/input[1]"
+        },
+        "key": "Space",
+        "where": "trigger"
+       }
+      ]
+     },
+     "occurrence": {
+      "ancestors": [
+       [
+        "_textboxWrapper_1a7mr_158"
+       ],
+       [
+        "_selectWrapper_1a7mr_150"
+       ],
+       [
+        "_comboboxWrapper_1a7mr_6",
+        "_occurrenceField_rcara_74",
+        "session-replay-block"
+       ],
+       [
+        "_formRow_rcara_50",
+        "_formRowDouble_rcara_69"
+       ],
+       [
+        "_container_rcara_12"
+       ],
+       [],
+       [],
+       [
+        "_large_kwlx6_9",
+        "_noHover_3n0se_28",
+        "_shadow_3n0se_25",
+        "_raisedBackground_3n0se_45",
+        "_card_lo4oy_4",
+        "_modal_rcara_3",
+        "_small_lo4oy_11"
+       ]
+      ],
+      "classes": [
+       "_textboxInput_1a7mr_250",
+       "_selectedPlaceholder_1a7mr_293"
+      ],
+      "data": {},
+      "heading": "Credit Card",
+      "landmark": {
+       "name": "",
+       "role": "form"
+      },
+      "layer": "document",
+      "name": "On",
+      "rect": [
+       730,
+       369,
+       137,
+       38
+      ],
+      "role": "combobox",
+      "tag": "input",
+      "xpath": "/html/body/div[11]/div[1]/div[1]/div[1]/form[1]/div[1]/div[2]/div[1]/div[2]/div[1]/div[1]/input[1]"
+     },
+     "state": "accounts.autopay-day-select"
+    }
+   ],
+   "evidenceHash": "dd03ef794b1c4fc453f55ea79dc8e287375a2661dc5e5726f0e197f79d33e7f1",
+   "facts": {
+    "criterion": "2.1.1",
+    "criterionName": "Keyboard",
+    "element": "combobox \"On\"",
+    "overlay": "listbox \"Options\"",
+    "screen": "Autopay day dropdown",
+    "stops": "2"
+   },
+   "family": "dialog-trigger",
+   "guidance": "Lower only when an equivalent keyboard path exists.",
+   "issueId": null,
+   "key": "dialog-trigger:dialog-trigger-not-operable:a6f28dd01062",
+   "measured": false,
+   "primary": "accounts.autopay-day-select",
+   "proposals": [],
+   "rule": "dialog-trigger-not-operable",
+   "screens": 1,
+   "severityDefault": "high",
+   "source": "scanner",
+   "states": [
+    "accounts.autopay-day-select"
+   ],
+   "summary": "Tab focused the combobox \"On\", but neither Enter nor Space opened the listbox \"Options\".",
+   "title": "Opens only with a mouse: combobox \"On\""
+  }
+ ],
+ "primaries": [
+  "accounts.autopay-day-select"
+ ],
+ "reach": {
+  "baseUrl": "https://demo.mercury.com",
+  "data": "data",
+  "map": "build/map.json",
+  "run": "2026-10-03-1525",
+  "workspace": "a11y"
+ },
+ "run": "2026-10-03-1525"
+}

@@ -1,0 +1,546 @@
+{
+ "area": "invoicing",
+ "batch": "verify-218",
+ "findings": [
+  {
+   "attachments": [],
+   "attempt": 1,
+   "basis": "failure",
+   "criteria": [
+    "2.4.3"
+   ],
+   "evidence": [
+    {
+     "evidence": {
+      "closedBy": "escape",
+      "focus": "body",
+      "stops": 11,
+      "trace": [
+       {
+        "focus": {
+         "label": "Next",
+         "tag": "button",
+         "xpath": "/html/body/div[1]/main[1]/div[1]/div[2]/div[2]/div[3]/div[1]/div[1]/div[2]/div[1]/div[1]/div[1]/button[2]"
+        },
+        "key": "start",
+        "where": "outside"
+       },
+       {
+        "focus": {
+         "label": "Invoice Payer page Email Invoice From Nebula Consulting Group jane@demo.mercury.",
+         "tag": "div",
+         "xpath": "/html/body/div[1]/main[1]/div[1]/div[2]/div[2]/div[3]/div[1]/div[2]/div[1]/div[1]"
+        },
+        "key": "Tab",
+        "where": "outside"
+       },
+       {
+        "focus": {
+         "label": "Close",
+         "tag": "button",
+         "xpath": "/html/body/div[1]/main[1]/div[1]/div[2]/div[2]/div[4]/button[1]"
+        },
+        "key": "Tab",
+        "where": "outside"
+       },
+       {
+        "focus": {
+         "label": "",
+         "tag": "div",
+         "xpath": "/html/body/div[1]/main[1]/div[1]/div[4]/div[2]"
+        },
+        "key": "Tab",
+        "where": "outside"
+       },
+       {
+        "focus": {
+         "label": "",
+         "tag": "button",
+         "xpath": "/html/body/div[1]/main[1]/div[1]/div[4]/div[2]/button[1]"
+        },
+        "key": "Tab",
+        "where": "outside"
+       },
+       {
+        "focus": "body",
+        "key": "Tab",
+        "where": "body"
+       },
+       {
+        "focus": {
+         "label": "Customize your experience",
+         "tag": "button",
+         "xpath": "/html/body/div[1]/main[1]/div[1]/div[2]/div[1]/div[1]/div[1]/div[1]/div[1]/span[2]/button[1]"
+        },
+        "key": "Tab",
+        "where": "outside"
+       },
+       {
+        "focus": {
+         "label": "Viewing as Admin",
+         "tag": "button",
+         "xpath": "/html/body/div[1]/main[1]/div[1]/div[2]/div[1]/div[1]/div[2]/div[1]/button[1]"
+        },
+        "key": "Tab",
+        "where": "outside"
+       },
+       {
+        "focus": {
+         "label": "Open account",
+         "tag": "a",
+         "xpath": "/html/body/div[1]/main[1]/div[1]/div[2]/div[1]/div[1]/div[2]/span[1]/a[1]"
+        },
+        "key": "Tab",
+        "where": "outside"
+       },
+       {
+        "focus": {
+         "label": "Oct 3, 2026",
+         "tag": "input",
+         "xpath": "/html/body/div[1]/main[1]/div[1]/div[2]/div[2]/div[3]/div[1]/div[1]/div[1]/div[1]/div[1]/div[1]/div[2]/div[1]/div[1]/div[1]/div[1]/div[1]/div[1]/div[1]/input[1]"
+        },
+        "key": "Tab",
+        "where": "outside"
+       },
+       {
+        "focus": {
+         "label": "",
+         "tag": "button",
+         "xpath": "/html/body/div[1]/main[1]/div[1]/div[2]/div[2]/div[3]/div[1]/div[1]/div[1]/div[1]/div[1]/div[1]/div[2]/div[1]/div[1]/div[1]/div[2]/div[1]/button[2]"
+        },
+        "key": "Tab",
+        "where": "outside"
+       },
+       {
+        "focus": {
+         "label": "when I cancel",
+         "tag": "button",
+         "xpath": "/html/body/div[1]/main[1]/div[1]/div[2]/div[2]/div[3]/div[1]/div[1]/div[1]/div[1]/div[1]/div[1]/div[2]/div[2]/div[1]/button[1]"
+        },
+        "key": "Tab",
+        "where": "trigger"
+       },
+       {
+        "focus": {
+         "label": "when I cancel",
+         "tag": "button",
+         "xpath": "/html/body/div[1]/main[1]/div[1]/div[2]/div[2]/div[3]/div[1]/div[1]/div[1]/div[1]/div[1]/div[1]/div[2]/div[2]/div[1]/button[1]"
+        },
+        "key": "Enter",
+        "where": "trigger"
+       },
+       {
+        "focus": {
+         "label": "when I cancel",
+         "tag": "button",
+         "xpath": "/html/body/div[1]/main[1]/div[1]/div[2]/div[2]/div[3]/div[1]/div[1]/div[1]/div[1]/div[1]/div[1]/div[2]/div[2]/div[1]/button[1]"
+        },
+        "key": "settle",
+        "where": "trigger"
+       },
+       {
+        "focus": "body",
+        "key": "Escape",
+        "where": "body"
+       },
+       {
+        "focus": "body",
+        "key": "settle",
+        "where": "body"
+       },
+       {
+        "focus": "body",
+        "key": "Enter",
+        "where": "body"
+       },
+       {
+        "focus": {
+         "label": "Customize your experience",
+         "tag": "button",
+         "xpath": "/html/body/div[1]/main[1]/div[1]/div[1]/div[1]/div[1]/div[1]/div[1]/div[1]/span[2]/button[1]"
+        },
+        "key": "Tab",
+        "where": "outside"
+       }
+      ]
+     },
+     "occurrence": {
+      "ancestors": [
+       [
+        "_dropdownContainer_sixj2_2"
+       ],
+       [
+        "_sentenceRow_38qef_1"
+       ],
+       [
+        "_wrapper_1ojdq_8"
+       ],
+       [],
+       [
+        "_leftInnerContainer_12jyu_3"
+       ],
+       [
+        "_left_yg1rf_39"
+       ],
+       [
+        "_leftScrollArea_yg1rf_57"
+       ],
+       [
+        "_leftContainer_yg1rf_39",
+        "_splitVariant_yg1rf_82",
+        "_leftBoxShadow_12jyu_10"
+       ]
+      ],
+      "classes": [
+       "_dropdownButton_sixj2_20"
+      ],
+      "data": {},
+      "heading": "Frequency",
+      "landmark": {
+       "name": "",
+       "role": "main"
+      },
+      "layer": "document",
+      "name": "when I cancel",
+      "rect": [
+       352,
+       309,
+       125,
+       24
+      ],
+      "role": "button",
+      "tag": "button",
+      "xpath": "/html/body/div[1]/main[1]/div[1]/div[2]/div[2]/div[3]/div[1]/div[1]/div[1]/div[1]/div[1]/div[1]/div[2]/div[2]/div[1]/button[1]"
+     },
+     "state": "invoicing.create-series-ends-menu"
+    }
+   ],
+   "evidenceHash": "aaabb94ac666cb527bfa41e892b47060bd19ce256349eef133732b4a6ee95895",
+   "facts": {
+    "criterion": "2.4.3",
+    "criterionName": "Focus Order",
+    "element": "button \"when I cancel\"",
+    "focus": "page body",
+    "overlay": "menu \"when I cancel\"",
+    "screen": "Series end options"
+   },
+   "family": "dialog-focus",
+   "guidance": "High when controls inside are unreachable.",
+   "issueId": null,
+   "key": "dialog-focus:dialog-focus-not-returned:9adb7fb31484",
+   "measured": false,
+   "primary": "invoicing.create-series-ends-menu",
+   "proposals": [],
+   "rule": "dialog-focus-not-returned",
+   "screens": 1,
+   "severityDefault": "low",
+   "source": "scanner",
+   "states": [
+    "invoicing.create-series-ends-menu"
+   ],
+   "summary": "Esc closed the menu \"when I cancel\" and focus went to the page body, not back to the button \"when I cancel\".",
+   "title": "Focus lost after closing menu \"when I cancel\""
+  },
+  {
+   "attachments": [],
+   "attempt": 1,
+   "basis": "failure",
+   "criteria": [
+    "2.4.3"
+   ],
+   "evidence": [
+    {
+     "evidence": {
+      "focus": {
+       "ancestors": [
+        [
+         "_dropdownContainer_sixj2_2"
+        ],
+        [
+         "_sentenceRow_38qef_1"
+        ],
+        [
+         "_wrapper_1ojdq_8"
+        ],
+        [],
+        [
+         "_leftInnerContainer_12jyu_3"
+        ],
+        [
+         "_left_yg1rf_39"
+        ],
+        [
+         "_leftScrollArea_yg1rf_57"
+        ],
+        [
+         "_leftContainer_yg1rf_39",
+         "_splitVariant_yg1rf_82",
+         "_leftBoxShadow_12jyu_10"
+        ]
+       ],
+       "classes": [
+        "_dropdownButton_sixj2_20"
+       ],
+       "data": {
+        "data-focus-visible": "true"
+       },
+       "heading": "",
+       "landmark": {
+        "name": "",
+        "role": "main"
+       },
+       "layer": "document",
+       "name": "when I cancel",
+       "rect": [
+        352,
+        309,
+        125,
+        24
+       ],
+       "role": "button",
+       "tag": "button",
+       "xpath": "/html/body/div[1]/main[1]/div[1]/div[2]/div[2]/div[3]/div[1]/div[1]/div[1]/div[1]/div[1]/div[1]/div[2]/div[2]/div[1]/button[1]"
+      },
+      "nextTabInside": false,
+      "stops": 11,
+      "trace": [
+       {
+        "focus": {
+         "label": "Next",
+         "tag": "button",
+         "xpath": "/html/body/div[1]/main[1]/div[1]/div[2]/div[2]/div[3]/div[1]/div[1]/div[2]/div[1]/div[1]/div[1]/button[2]"
+        },
+        "key": "start",
+        "where": "outside"
+       },
+       {
+        "focus": {
+         "label": "Invoice Payer page Email Invoice From Nebula Consulting Group jane@demo.mercury.",
+         "tag": "div",
+         "xpath": "/html/body/div[1]/main[1]/div[1]/div[2]/div[2]/div[3]/div[1]/div[2]/div[1]/div[1]"
+        },
+        "key": "Tab",
+        "where": "outside"
+       },
+       {
+        "focus": {
+         "label": "Close",
+         "tag": "button",
+         "xpath": "/html/body/div[1]/main[1]/div[1]/div[2]/div[2]/div[4]/button[1]"
+        },
+        "key": "Tab",
+        "where": "outside"
+       },
+       {
+        "focus": {
+         "label": "",
+         "tag": "div",
+         "xpath": "/html/body/div[1]/main[1]/div[1]/div[4]/div[2]"
+        },
+        "key": "Tab",
+        "where": "outside"
+       },
+       {
+        "focus": {
+         "label": "",
+         "tag": "button",
+         "xpath": "/html/body/div[1]/main[1]/div[1]/div[4]/div[2]/button[1]"
+        },
+        "key": "Tab",
+        "where": "outside"
+       },
+       {
+        "focus": "body",
+        "key": "Tab",
+        "where": "body"
+       },
+       {
+        "focus": {
+         "label": "Customize your experience",
+         "tag": "button",
+         "xpath": "/html/body/div[1]/main[1]/div[1]/div[2]/div[1]/div[1]/div[1]/div[1]/div[1]/span[2]/button[1]"
+        },
+        "key": "Tab",
+        "where": "outside"
+       },
+       {
+        "focus": {
+         "label": "Viewing as Admin",
+         "tag": "button",
+         "xpath": "/html/body/div[1]/main[1]/div[1]/div[2]/div[1]/div[1]/div[2]/div[1]/button[1]"
+        },
+        "key": "Tab",
+        "where": "outside"
+       },
+       {
+        "focus": {
+         "label": "Open account",
+         "tag": "a",
+         "xpath": "/html/body/div[1]/main[1]/div[1]/div[2]/div[1]/div[1]/div[2]/span[1]/a[1]"
+        },
+        "key": "Tab",
+        "where": "outside"
+       },
+       {
+        "focus": {
+         "label": "Oct 3, 2026",
+         "tag": "input",
+         "xpath": "/html/body/div[1]/main[1]/div[1]/div[2]/div[2]/div[3]/div[1]/div[1]/div[1]/div[1]/div[1]/div[1]/div[2]/div[1]/div[1]/div[1]/div[1]/div[1]/div[1]/div[1]/input[1]"
+        },
+        "key": "Tab",
+        "where": "outside"
+       },
+       {
+        "focus": {
+         "label": "",
+         "tag": "button",
+         "xpath": "/html/body/div[1]/main[1]/div[1]/div[2]/div[2]/div[3]/div[1]/div[1]/div[1]/div[1]/div[1]/div[1]/div[2]/div[1]/div[1]/div[1]/div[2]/div[1]/button[2]"
+        },
+        "key": "Tab",
+        "where": "outside"
+       },
+       {
+        "focus": {
+         "label": "when I cancel",
+         "tag": "button",
+         "xpath": "/html/body/div[1]/main[1]/div[1]/div[2]/div[2]/div[3]/div[1]/div[1]/div[1]/div[1]/div[1]/div[1]/div[2]/div[2]/div[1]/button[1]"
+        },
+        "key": "Tab",
+        "where": "trigger"
+       },
+       {
+        "focus": {
+         "label": "when I cancel",
+         "tag": "button",
+         "xpath": "/html/body/div[1]/main[1]/div[1]/div[2]/div[2]/div[3]/div[1]/div[1]/div[1]/div[1]/div[1]/div[1]/div[2]/div[2]/div[1]/button[1]"
+        },
+        "key": "Enter",
+        "where": "trigger"
+       },
+       {
+        "focus": {
+         "label": "when I cancel",
+         "tag": "button",
+         "xpath": "/html/body/div[1]/main[1]/div[1]/div[2]/div[2]/div[3]/div[1]/div[1]/div[1]/div[1]/div[1]/div[1]/div[2]/div[2]/div[1]/button[1]"
+        },
+        "key": "settle",
+        "where": "trigger"
+       },
+       {
+        "focus": "body",
+        "key": "Escape",
+        "where": "body"
+       },
+       {
+        "focus": "body",
+        "key": "settle",
+        "where": "body"
+       },
+       {
+        "focus": "body",
+        "key": "Enter",
+        "where": "body"
+       },
+       {
+        "focus": {
+         "label": "Customize your experience",
+         "tag": "button",
+         "xpath": "/html/body/div[1]/main[1]/div[1]/div[1]/div[1]/div[1]/div[1]/div[1]/div[1]/span[2]/button[1]"
+        },
+        "key": "Tab",
+        "where": "outside"
+       }
+      ]
+     },
+     "occurrence": {
+      "ancestors": [
+       [],
+       [
+        "_dropdownContainer_sixj2_2"
+       ],
+       [
+        "_sentenceRow_38qef_1"
+       ],
+       [
+        "_wrapper_1ojdq_8"
+       ],
+       [],
+       [
+        "_leftInnerContainer_12jyu_3"
+       ],
+       [
+        "_left_yg1rf_39"
+       ],
+       [
+        "_leftScrollArea_yg1rf_57"
+       ]
+      ],
+      "classes": [
+       "_dropdownMenu_vz05y_4",
+       "_zIndexDefault_1fl3q_5",
+       "_dropdownMenu_sixj2_10"
+      ],
+      "data": {
+       "data-dialog": "",
+       "data-enter": "true",
+       "data-open": "true"
+      },
+      "heading": "",
+      "landmark": {
+       "name": "",
+       "role": "main"
+      },
+      "layer": "top",
+      "name": "when I cancel",
+      "rect": [
+       299,
+       337,
+       231,
+       188
+      ],
+      "role": "menu",
+      "tag": "div",
+      "xpath": "/html/body/div[1]/main[1]/div[1]/div[2]/div[2]/div[3]/div[1]/div[1]/div[1]/div[1]/div[1]/div[1]/div[2]/div[2]/div[1]/div[1]/div[1]"
+     },
+     "state": "invoicing.create-series-ends-menu"
+    }
+   ],
+   "evidenceHash": "9be91e52b548e74099cd2a6509ee1d8171624aa8d912908e5b0fab93cecea5a5",
+   "facts": {
+    "criterion": "2.4.3",
+    "criterionName": "Focus Order",
+    "element": "menu \"when I cancel\"",
+    "focus": "button \"when I cancel\"",
+    "overlay": "menu \"when I cancel\"",
+    "screen": "Series end options"
+   },
+   "family": "dialog-focus",
+   "guidance": "High when controls inside are unreachable.",
+   "issueId": null,
+   "key": "dialog-focus:menu-focus-not-moved:bcc5937119bf",
+   "measured": false,
+   "primary": "invoicing.create-series-ends-menu",
+   "proposals": [],
+   "rule": "menu-focus-not-moved",
+   "screens": 1,
+   "severityDefault": "medium",
+   "source": "scanner",
+   "states": [
+    "invoicing.create-series-ends-menu"
+   ],
+   "summary": "After the menu \"when I cancel\" opened the menu \"when I cancel\", focus was on the button \"when I cancel\", not its first item.",
+   "title": "Focus not on first item of menu \"when I cancel\""
+  }
+ ],
+ "primaries": [
+  "invoicing.create-series-ends-menu"
+ ],
+ "reach": {
+  "baseUrl": "https://demo.mercury.com",
+  "data": "data",
+  "map": "build/map.json",
+  "run": "2026-10-03-1525",
+  "workspace": "a11y"
+ },
+ "run": "2026-10-03-1525"
+}

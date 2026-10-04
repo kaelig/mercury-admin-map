@@ -1,0 +1,172 @@
+{
+ "area": "billpay",
+ "batch": "verify-073",
+ "findings": [
+  {
+   "attachments": [],
+   "attempt": 1,
+   "basis": "violation",
+   "criteria": [
+    "1.3.5"
+   ],
+   "evidence": [
+    {
+     "evidence": {
+      "failureSummary": "Fix all of the following:\n  the autocomplete attribute is incorrectly formatted"
+     },
+     "occurrence": {
+      "ancestors": [
+       [
+        "_inputWrapper_11c85_6"
+       ],
+       [
+        "_wrapper_1xgdp_8"
+       ],
+       [
+        "_enrichmentSelect_16juw_78"
+       ],
+       [
+        "_enrichmentRow_16juw_67"
+       ],
+       [
+        "_enrichment_16juw_60"
+       ],
+       [
+        "_container_16juw_6"
+       ],
+       [],
+       [
+        "_panelSection_d3i56_148"
+       ]
+      ],
+      "classes": [
+       "_input_11c85_6"
+      ],
+      "data": {
+       "data-1p-ignore": "true",
+       "data-active-item": "true",
+       "data-bwignore": "true",
+       "data-lpignore": "true"
+      },
+      "heading": "Accounting Settings",
+      "landmark": {
+       "name": "",
+       "role": "complementary"
+      },
+      "layer": "document",
+      "name": "GL code",
+      "rect": [
+       954,
+       680,
+       303,
+       40
+      ],
+      "role": "combobox",
+      "tag": "input",
+      "xpath": "/html/body/div[1]/main[1]/div[1]/div[1]/div[4]/div[1]/div[2]/div[3]/div[2]/aside[2]/div[1]/div[1]/section[1]/div[1]/div[1]/div[2]/div[3]/div[1]/div[1]/div[1]/input[1]"
+     },
+     "state": "billpay.edit-rule"
+    },
+    {
+     "evidence": {
+      "failureSummary": "Fix all of the following:\n  the autocomplete attribute is incorrectly formatted"
+     },
+     "occurrence": {
+      "ancestors": [
+       [
+        "_inputWrapper_11c85_6"
+       ],
+       [
+        "_wrapper_1xgdp_8"
+       ],
+       [
+        "_enrichmentSelect_16juw_78"
+       ],
+       [
+        "_enrichmentRow_16juw_67"
+       ],
+       [
+        "_enrichment_16juw_60"
+       ],
+       [
+        "_container_16juw_6"
+       ],
+       [
+        "_panelSection_d3i56_148"
+       ],
+       [
+        "_panelBody_d3i56_64",
+        "_body_16juw_1"
+       ]
+      ],
+      "classes": [
+       "_input_11c85_6"
+      ],
+      "data": {
+       "data-1p-ignore": "true",
+       "data-active-item": "true",
+       "data-bwignore": "true",
+       "data-focus-visible": "true",
+       "data-lpignore": "true"
+      },
+      "heading": "Accounting Settings",
+      "landmark": {
+       "name": "",
+       "role": "complementary"
+      },
+      "layer": "document",
+      "name": "GL code",
+      "rect": [
+       954,
+       680,
+       303,
+       40
+      ],
+      "role": "combobox",
+      "tag": "input",
+      "xpath": "/html/body/div[1]/main[1]/div[1]/div[1]/div[4]/div[1]/div[2]/div[3]/div[2]/aside[1]/div[1]/div[1]/section[1]/div[1]/div[2]/div[3]/div[1]/div[1]/div[1]/input[1]"
+     },
+     "state": "billpay.rule-filled"
+    }
+   ],
+   "evidenceHash": "a72b1d7f0030792a69f7e565fbfcaaa071b1ea182584d4d70fea55ab24e9f93d",
+   "facts": {
+    "announced": "combobox \"GL code\" [expanded=false, haspopup=listbox]",
+    "axeSummary": "the autocomplete attribute is incorrectly formatted",
+    "criterion": "1.3.5",
+    "criterionName": "Identify Input Purpose",
+    "element": "combobox \"GL code\"",
+    "rule": "autocomplete-valid",
+    "screen": "Edit categorization rule"
+   },
+   "family": "role-state",
+   "guidance": "Low for optional ARIA or an invalid autocomplete token; high when aria-hidden hides the whole page.",
+   "issueId": null,
+   "key": "role-state:autocomplete-valid:0e6b6a08bb39",
+   "measured": false,
+   "primary": "billpay.edit-rule",
+   "proposals": [],
+   "rule": "autocomplete-valid",
+   "screens": 2,
+   "severityDefault": "medium",
+   "source": "scanner",
+   "states": [
+    "billpay.edit-rule",
+    "billpay.rule-filled"
+   ],
+   "summary": "autocomplete-valid: announced as combobox \"GL code\" [expanded=false, haspopup=listbox]. the autocomplete attribute is incorrectly formatted",
+   "title": "Invalid autocomplete value: combobox \"GL code\""
+  }
+ ],
+ "primaries": [
+  "billpay.edit-rule"
+ ],
+ "reach": {
+  "baseUrl": "https://demo.mercury.com",
+  "data": "data",
+  "map": "build/map.json",
+  "run": "2026-10-03-1525",
+  "workspace": "a11y"
+ },
+ "run": "2026-10-03-1525"
+}

@@ -1,0 +1,90 @@
+{
+ "area": "home",
+ "batch": "verify-464",
+ "findings": [
+  {
+   "attachments": [],
+   "attempt": 1,
+   "basis": "candidate",
+   "criteria": [
+    "4.1.2"
+   ],
+   "evidence": [
+    {
+     "evidence": {
+      "description": "",
+      "name": "",
+      "role": "dialog",
+      "states": {},
+      "template": "dialog \"\""
+     },
+     "occurrence": {
+      "ancestors": [
+       [],
+       []
+      ],
+      "classes": [
+       "_popover_fh9km_22"
+      ],
+      "data": {
+       "data-dialog": "",
+       "data-enter": "true",
+       "data-open": "true"
+      },
+      "heading": "",
+      "landmark": null,
+      "layer": "top",
+      "name": "",
+      "rect": [
+       209,
+       539,
+       422,
+       345
+      ],
+      "role": "dialog",
+      "tag": "div",
+      "xpath": "/html/body/div[3]/div[1]/div[1]"
+     },
+     "state": "home.bookmarks-popover"
+    }
+   ],
+   "evidenceHash": "10a3618a75719dff92ae071bd84f2e31c88b51bba653baebb2c1467ea2b70eb1",
+   "facts": {
+    "announced": "dialog \"\"",
+    "axeSummary": "",
+    "criterion": "4.1.2",
+    "criterionName": "Name, Role, Value",
+    "element": "dialog",
+    "rule": "announced-as",
+    "screen": "Learn about bookmarks popover"
+   },
+   "family": "name",
+   "guidance": "High for an unnamed form control or the sole primary action.",
+   "issueId": null,
+   "key": "name:announced-as:56f4d8ce6034",
+   "measured": false,
+   "primary": "home.bookmarks-popover",
+   "proposals": [],
+   "rule": "announced-as",
+   "screens": 1,
+   "severityDefault": "medium",
+   "source": "scanner",
+   "states": [
+    "home.bookmarks-popover"
+   ],
+   "summary": "announced-as: announced as dialog \"\".",
+   "title": "Missing or unclear name: dialog"
+  }
+ ],
+ "primaries": [
+  "home.bookmarks-popover"
+ ],
+ "reach": {
+  "baseUrl": "https://demo.mercury.com",
+  "data": "data",
+  "map": "build/map.json",
+  "run": "2026-10-03-1525",
+  "workspace": "a11y"
+ },
+ "run": "2026-10-03-1525"
+}

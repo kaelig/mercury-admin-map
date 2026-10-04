@@ -1,0 +1,106 @@
+{
+ "area": "accounts",
+ "batch": "verify-418",
+ "findings": [
+  {
+   "attachments": [],
+   "attempt": 1,
+   "basis": "candidate",
+   "criteria": [
+    "4.1.2"
+   ],
+   "evidence": [
+    {
+     "evidence": {
+      "description": "",
+      "name": "",
+      "role": "link",
+      "states": {},
+      "template": "link \"\""
+     },
+     "occurrence": {
+      "ancestors": [
+       [],
+       [
+        "_logoSection_159qm_5"
+       ],
+       [
+        "_container_159qm_1"
+       ],
+       [
+        "session-replay-unmask"
+       ],
+       [],
+       [
+        "_main_1gb3b_1"
+       ],
+       [
+        "mercury-root"
+       ]
+      ],
+      "classes": [
+       "_noStyleLink_njx8v_1"
+      ],
+      "data": {
+       "data-discover": "true"
+      },
+      "heading": "",
+      "landmark": {
+       "name": "",
+       "role": "main"
+      },
+      "layer": "document",
+      "name": "",
+      "rect": [
+       48,
+       32,
+       139,
+       32
+      ],
+      "role": "link",
+      "tag": "a",
+      "xpath": "/html/body/div[1]/main[1]/div[1]/div[1]/div[2]/div[1]/span[1]/a[1]"
+     },
+     "state": "accounts.vd-funds-requested"
+    }
+   ],
+   "evidenceHash": "59a4b204ab5d33b998b9271b879639dac3f2dafa1875e2775796096fdb38bac6",
+   "facts": {
+    "announced": "link \"\"",
+    "axeSummary": "",
+    "criterion": "4.1.2",
+    "criterionName": "Name, Role, Value",
+    "element": "link in the main landmark",
+    "rule": "announced-as",
+    "screen": "Venture debt draw requested"
+   },
+   "family": "name",
+   "guidance": "High for an unnamed form control or the sole primary action.",
+   "issueId": null,
+   "key": "name:announced-as:6d4425106f8f",
+   "measured": false,
+   "primary": "accounts.vd-funds-requested",
+   "proposals": [],
+   "rule": "announced-as",
+   "screens": 1,
+   "severityDefault": "medium",
+   "source": "scanner",
+   "states": [
+    "accounts.vd-funds-requested"
+   ],
+   "summary": "announced-as: announced as link \"\".",
+   "title": "Missing or unclear name: link in the main landmark"
+  }
+ ],
+ "primaries": [
+  "accounts.vd-funds-requested"
+ ],
+ "reach": {
+  "baseUrl": "https://demo.mercury.com",
+  "data": "data",
+  "map": "build/map.json",
+  "run": "2026-10-03-1525",
+  "workspace": "a11y"
+ },
+ "run": "2026-10-03-1525"
+}

@@ -1,0 +1,1457 @@
+{
+ "area": "cards",
+ "batch": "verify-143",
+ "findings": [
+  {
+   "attachments": [],
+   "attempt": 1,
+   "basis": "violation",
+   "criteria": [
+    "1.4.1"
+   ],
+   "evidence": [
+    {
+     "evidence": {
+      "contrastRatio": 1.17,
+      "failureSummary": "Fix any of the following:\n  The link has insufficient color contrast of 1.17:1 with the surrounding text. (Minimum contrast is 3:1, link text: #465bd1, surrounding text: #70707d)\n  The link has no styling (such as underline) to distinguish it from the surrounding text",
+      "messageKey": "fgContrast",
+      "nodeColor": "#465bd1",
+      "parentColor": "#70707d",
+      "requiredContrastRatio": 3
+     },
+     "occurrence": {
+      "ancestors": [
+       [],
+       [
+        "_label_qaod7_59",
+        "_text-tertiary_12t49_1",
+        "_description_1ynjm_26"
+       ],
+       [
+        "_leftSide_1ynjm_10"
+       ],
+       [
+        "_large_kwlx6_9",
+        "_noHover_3n0se_28",
+        "_shadow_3n0se_25",
+        "_raisedBackground_3n0se_45",
+        "_card_1ynjm_1"
+       ],
+       [
+        "_pageContent_809q8_151",
+        "_pageContentWidth_809q8_184",
+        "_footerPadding_809q8_115"
+       ],
+       [
+        "_dashboardContent_809q8_29"
+       ],
+       [
+        "_layout_809q8_18"
+       ],
+       [
+        "_wrapper_809q8_3"
+       ]
+      ],
+      "classes": [
+       "_link_ual8v_4",
+       "_variantPrimary_ual8v_33"
+      ],
+      "data": {
+       "data-discover": "true"
+      },
+      "heading": "Cards",
+      "landmark": {
+       "name": "",
+       "role": "main"
+      },
+      "layer": "document",
+      "name": "Policies page",
+      "rect": [
+       370,
+       294,
+       479,
+       35
+      ],
+      "role": "link",
+      "tag": "a",
+      "xpath": "/html/body/div[1]/main[1]/div[1]/div[1]/div[4]/div[1]/div[2]/div[3]/div[1]/span[2]/span[1]/a[1]"
+     },
+     "state": "cards.index"
+    },
+    {
+     "evidence": {
+      "contrastRatio": 1.17,
+      "failureSummary": "Fix any of the following:\n  The link has insufficient color contrast of 1.17:1 with the surrounding text. (Minimum contrast is 3:1, link text: #465bd1, surrounding text: #70707d)\n  The link has no styling (such as underline) to distinguish it from the surrounding text",
+      "messageKey": "fgContrast",
+      "nodeColor": "#465bd1",
+      "parentColor": "#70707d",
+      "requiredContrastRatio": 3
+     },
+     "occurrence": {
+      "ancestors": [
+       [],
+       [
+        "_label_qaod7_59",
+        "_text-tertiary_12t49_1",
+        "_description_1ynjm_26"
+       ],
+       [
+        "_leftSide_1ynjm_10"
+       ],
+       [
+        "_large_kwlx6_9",
+        "_noHover_3n0se_28",
+        "_shadow_3n0se_25",
+        "_raisedBackground_3n0se_45",
+        "_card_1ynjm_1"
+       ],
+       [
+        "_pageContent_809q8_151",
+        "_pageContentWidth_809q8_184",
+        "_footerPadding_809q8_115"
+       ],
+       [
+        "_dashboardContent_809q8_29"
+       ],
+       [
+        "_layout_809q8_18"
+       ],
+       [
+        "_wrapper_809q8_3"
+       ]
+      ],
+      "classes": [
+       "_link_ual8v_4",
+       "_variantPrimary_ual8v_33"
+      ],
+      "data": {
+       "data-discover": "true"
+      },
+      "heading": "Cards",
+      "landmark": {
+       "name": "",
+       "role": "main"
+      },
+      "layer": "document",
+      "name": "Policies page",
+      "rect": [
+       370,
+       294,
+       479,
+       35
+      ],
+      "role": "link",
+      "tag": "a",
+      "xpath": "/html/body/div[1]/main[1]/div[1]/div[1]/div[4]/div[1]/div[2]/div[3]/div[1]/span[2]/span[1]/a[1]"
+     },
+     "state": "cards.card-revealed"
+    }
+   ],
+   "evidenceHash": "1f1c923b9ce6b55c7157fce830bc154a7e3c7c6a453847c69a5cccb48dff0baf",
+   "facts": {
+    "bg": "#70707d",
+    "criterion": "1.4.1",
+    "criterionName": "Use of Color",
+    "element": "link \"Policies page\"",
+    "fg": "#465bd1",
+    "ratio": "1.17",
+    "required": "3",
+    "rule": "link-in-text-block",
+    "screen": "Cards",
+    "screens": 9
+   },
+   "family": "contrast",
+   "guidance": "High under 2:1, or under 3:1 for essential text.",
+   "issueId": null,
+   "key": "contrast:link-in-text-block:7032725cf151",
+   "measured": true,
+   "primary": "cards.index",
+   "proposals": [],
+   "rule": "link-in-text-block",
+   "screens": 9,
+   "severityDefault": "medium",
+   "source": "scanner",
+   "states": [
+    "cards.index",
+    "cards.card-revealed"
+   ],
+   "summary": "axe link-in-text-block: link #465bd1 against text #70707d measures 1.17:1 with no other visual cue; AA needs 3:1 or a cue such as an underline.",
+   "title": "Link shown by color only: link \"Policies page\""
+  },
+  {
+   "attachments": [],
+   "attempt": 1,
+   "basis": "candidate",
+   "criteria": [
+    "2.4.3",
+    "1.3.2"
+   ],
+   "evidence": [
+    {
+     "evidence": {
+      "band": 28,
+      "overlay": "cards.index.tabstops.png",
+      "previous": {
+       "ancestors": [
+        [
+         "_avatarListItem_1xc2q_107"
+        ],
+        [
+         "_avatarList_1xc2q_97"
+        ],
+        [
+         "_avatarStack_1xc2q_86",
+         "_stack_2qfv3_10",
+         "_sizeSmall_2qfv3_27"
+        ],
+        [
+         "_collapsible_9it56_122",
+         "_budgetsCol_9it56_244",
+         "_noPadding_1lcwv_22"
+        ],
+        [
+         "_hoverRow_1lcwv_53",
+         "_tableRow_9it56_168"
+        ],
+        [],
+        [
+         "_table_1lcwv_7",
+         "_table_9it56_4"
+        ],
+        []
+       ],
+       "classes": [
+        "_tooltipAnchor_18bac_4"
+       ],
+       "data": {
+        "data-focus-visible": "true"
+       },
+       "heading": "Cards",
+       "landmark": {
+        "name": "",
+        "role": "main"
+       },
+       "layer": "document",
+       "name": "Team Lunch",
+       "rect": [
+        888,
+        869,
+        28,
+        28
+       ],
+       "role": "generic",
+       "tag": "div",
+       "xpath": "/html/body/div[1]/main[1]/div[1]/div[1]/div[4]/div[1]/div[2]/div[6]/div[1]/div[1]/table[1]/tbody[1]/tr[15]/td[3]/div[1]/ul[1]/li[1]/div[1]"
+      },
+      "rise": 405,
+      "stop": 64,
+      "stops": 93
+     },
+     "occurrence": {
+      "ancestors": [
+       [
+        "_avatarListItem_1xc2q_107"
+       ],
+       [
+        "_avatarList_1xc2q_97"
+       ],
+       [
+        "_avatarStack_1xc2q_86",
+        "_stack_2qfv3_10",
+        "_sizeSmall_2qfv3_27"
+       ],
+       [
+        "_collapsible_9it56_122",
+        "_budgetsCol_9it56_244",
+        "_noPadding_1lcwv_22"
+       ],
+       [
+        "_hoverRow_1lcwv_53",
+        "_tableRow_9it56_168"
+       ],
+       [],
+       [
+        "_table_1lcwv_7",
+        "_table_9it56_4"
+       ],
+       []
+      ],
+      "classes": [
+       "_tooltipAnchor_18bac_4"
+      ],
+      "data": {
+       "data-focus-visible": "true"
+      },
+      "heading": "Cards",
+      "landmark": {
+       "name": "",
+       "role": "main"
+      },
+      "layer": "document",
+      "name": "Hardware",
+      "rect": [
+       888,
+       464,
+       28,
+       28
+      ],
+      "role": "generic",
+      "tag": "div",
+      "xpath": "/html/body/div[1]/main[1]/div[1]/div[1]/div[4]/div[1]/div[2]/div[6]/div[1]/div[1]/table[1]/tbody[1]/tr[16]/td[3]/div[1]/ul[1]/li[1]/div[1]"
+     },
+     "state": "cards.index"
+    }
+   ],
+   "evidenceHash": "5d1f4ed80e1de0c80617d013945338b7ee12be0749b9d1c48aaa6a0fba5c72a1",
+   "facts": {
+    "criterion": "2.4.3",
+    "criterionName": "Focus Order",
+    "element": "text \"Hardware\"",
+    "previous": "text \"Team Lunch\"",
+    "screen": "Cards",
+    "stop": "64"
+   },
+   "family": "focus-order",
+   "guidance": "High if the order skips a required control.",
+   "issueId": null,
+   "key": "focus-order:backward-jump:0802c601e019",
+   "measured": false,
+   "primary": "cards.index",
+   "proposals": [],
+   "rule": "backward-jump",
+   "screens": 1,
+   "severityDefault": "medium",
+   "source": "scanner",
+   "states": [
+    "cards.index"
+   ],
+   "summary": "Tab stop 64 jumped backward on screen, from the text \"Team Lunch\" to the text \"Hardware\".",
+   "title": "Tab order jumps backward at text \"Hardware\""
+  },
+  {
+   "attachments": [],
+   "attempt": 1,
+   "basis": "candidate",
+   "criteria": [
+    "2.4.3",
+    "1.3.2"
+   ],
+   "evidence": [
+    {
+     "evidence": {
+      "band": 35,
+      "overlay": "cards.index.tabstops.png",
+      "previous": {
+       "ancestors": [
+        [],
+        [
+         "_label_qaod7_59",
+         "_text-tertiary_12t49_1",
+         "_description_1ynjm_26"
+        ],
+        [
+         "_leftSide_1ynjm_10"
+        ],
+        [
+         "_large_kwlx6_9",
+         "_noHover_3n0se_28",
+         "_shadow_3n0se_25",
+         "_raisedBackground_3n0se_45",
+         "_card_1ynjm_1"
+        ],
+        [
+         "_pageContent_809q8_151",
+         "_pageContentWidth_809q8_184",
+         "_footerPadding_809q8_115"
+        ],
+        [
+         "_dashboardContent_809q8_29"
+        ],
+        [
+         "_layout_809q8_18"
+        ],
+        [
+         "_wrapper_809q8_3"
+        ]
+       ],
+       "classes": [
+        "_link_ual8v_4",
+        "_variantPrimary_ual8v_33"
+       ],
+       "data": {
+        "data-discover": "true"
+       },
+       "heading": "Cards",
+       "landmark": {
+        "name": "",
+        "role": "main"
+       },
+       "layer": "document",
+       "name": "Policies page",
+       "rect": [
+        370,
+        294,
+        479,
+        35
+       ],
+       "role": "link",
+       "tag": "a",
+       "xpath": "/html/body/div[1]/main[1]/div[1]/div[1]/div[4]/div[1]/div[2]/div[3]/div[1]/span[2]/span[1]/a[1]"
+      },
+      "rise": 82,
+      "stop": 40,
+      "stops": 93
+     },
+     "occurrence": {
+      "ancestors": [
+       [
+        "_rightSide_1ynjm_30"
+       ],
+       [
+        "_large_kwlx6_9",
+        "_noHover_3n0se_28",
+        "_shadow_3n0se_25",
+        "_raisedBackground_3n0se_45",
+        "_card_1ynjm_1"
+       ],
+       [
+        "_pageContent_809q8_151",
+        "_pageContentWidth_809q8_184",
+        "_footerPadding_809q8_115"
+       ],
+       [
+        "_dashboardContent_809q8_29"
+       ],
+       [
+        "_layout_809q8_18"
+       ],
+       [
+        "_wrapper_809q8_3"
+       ],
+       [],
+       [
+        "_main_1gb3b_1"
+       ]
+      ],
+      "classes": [
+       "_button_r6b2u_20",
+       "_large_r6b2u_88",
+       "_tertiary_r6b2u_153",
+       "_dismissButton_1ynjm_39"
+      ],
+      "data": {},
+      "heading": "Cards",
+      "landmark": {
+       "name": "",
+       "role": "main"
+      },
+      "layer": "document",
+      "name": "",
+      "rect": [
+       1262,
+       212,
+       24,
+       24
+      ],
+      "role": "button",
+      "tag": "button",
+      "xpath": "/html/body/div[1]/main[1]/div[1]/div[1]/div[4]/div[1]/div[2]/div[3]/div[2]/button[1]"
+     },
+     "state": "cards.index"
+    }
+   ],
+   "evidenceHash": "8c3582afd2694d288b323ddb4a3a6d4c41e1aacde5c8238312a5690fd1b64495",
+   "facts": {
+    "criterion": "2.4.3",
+    "criterionName": "Focus Order",
+    "element": "button in \"Cards\"",
+    "previous": "link \"Policies page\"",
+    "screen": "Cards",
+    "stop": "40"
+   },
+   "family": "focus-order",
+   "guidance": "High if the order skips a required control.",
+   "issueId": null,
+   "key": "focus-order:backward-jump:5d646bb62365",
+   "measured": false,
+   "primary": "cards.index",
+   "proposals": [],
+   "rule": "backward-jump",
+   "screens": 1,
+   "severityDefault": "medium",
+   "source": "scanner",
+   "states": [
+    "cards.index"
+   ],
+   "summary": "Tab stop 40 jumped backward on screen, from the link \"Policies page\" to the button in \"Cards\".",
+   "title": "Tab order jumps backward at button in \"Cards\""
+  },
+  {
+   "attachments": [],
+   "attempt": 1,
+   "basis": "candidate",
+   "criteria": [
+    "2.4.3",
+    "1.3.2"
+   ],
+   "evidence": [
+    {
+     "evidence": {
+      "band": 28,
+      "overlay": "cards.index.tabstops.png",
+      "previous": {
+       "ancestors": [
+        [
+         "_avatarListItem_1xc2q_107"
+        ],
+        [
+         "_avatarList_1xc2q_97"
+        ],
+        [
+         "_avatarStack_1xc2q_86",
+         "_stack_2qfv3_10",
+         "_sizeSmall_2qfv3_27"
+        ],
+        [
+         "_collapsible_9it56_122",
+         "_budgetsCol_9it56_244",
+         "_noPadding_1lcwv_22"
+        ],
+        [
+         "_hoverRow_1lcwv_53",
+         "_tableRow_9it56_168"
+        ],
+        [],
+        [
+         "_table_1lcwv_7",
+         "_table_9it56_4"
+        ],
+        []
+       ],
+       "classes": [
+        "_tooltipAnchor_18bac_4"
+       ],
+       "data": {
+        "data-focus-visible": "true"
+       },
+       "heading": "Cards",
+       "landmark": {
+        "name": "",
+        "role": "main"
+       },
+       "layer": "document",
+       "name": "Hardware",
+       "rect": [
+        920,
+        695,
+        28,
+        28
+       ],
+       "role": "generic",
+       "tag": "div",
+       "xpath": "/html/body/div[1]/main[1]/div[1]/div[1]/div[4]/div[1]/div[2]/div[6]/div[1]/div[1]/table[1]/tbody[1]/tr[20]/td[3]/div[1]/ul[1]/li[3]/div[1]"
+      },
+      "rise": 164,
+      "stop": 84,
+      "stops": 93
+     },
+     "occurrence": {
+      "ancestors": [
+       [
+        "_avatarListItem_1xc2q_107"
+       ],
+       [
+        "_avatarList_1xc2q_97"
+       ],
+       [
+        "_avatarStack_1xc2q_86",
+        "_stack_2qfv3_10",
+        "_sizeSmall_2qfv3_27"
+       ],
+       [
+        "_collapsible_9it56_122",
+        "_budgetsCol_9it56_244",
+        "_noPadding_1lcwv_22"
+       ],
+       [
+        "_hoverRow_1lcwv_53",
+        "_tableRow_9it56_168"
+       ],
+       [],
+       [
+        "_table_1lcwv_7",
+        "_table_9it56_4"
+       ],
+       []
+      ],
+      "classes": [
+       "_tooltipAnchor_18bac_4"
+      ],
+      "data": {
+       "data-focus-visible": "true"
+      },
+      "heading": "Cards",
+      "landmark": {
+       "name": "",
+       "role": "main"
+      },
+      "layer": "document",
+      "name": "Team Lunch",
+      "rect": [
+       888,
+       531,
+       28,
+       28
+      ],
+      "role": "generic",
+      "tag": "div",
+      "xpath": "/html/body/div[1]/main[1]/div[1]/div[1]/div[4]/div[1]/div[2]/div[6]/div[1]/div[1]/table[1]/tbody[1]/tr[17]/td[3]/div[1]/ul[1]/li[1]/div[1]"
+     },
+     "state": "cards.index"
+    },
+    {
+     "evidence": {
+      "band": 32,
+      "overlay": "cards.team-members.tabstops.png",
+      "previous": {
+       "ancestors": [
+        [
+         "_tableData_1u4jr_5",
+         "_alignmentEnd_1u4jr_22",
+         "_caretCol_kyw76_63"
+        ],
+        [
+         "_summaryRow_1x2ld_5",
+         "_xlarge_1x2ld_50"
+        ],
+        [
+         "_tableBody_1cp5b_1"
+        ],
+        [
+         "_table_1acga_4"
+        ],
+        [
+         "_tableWrapper_1acga_4"
+        ],
+        [
+         "_tableWrapper_kyw76_3"
+        ],
+        [
+         "_pageContent_809q8_151",
+         "_pageContentWidth_809q8_184",
+         "_footerPadding_809q8_115"
+        ],
+        [
+         "_dashboardContent_809q8_29"
+        ]
+       ],
+       "classes": [
+        "_toggle_1x2ld_168"
+       ],
+       "data": {},
+       "heading": "Team Spend",
+       "landmark": {
+        "name": "",
+        "role": "main"
+       },
+       "layer": "document",
+       "name": "Budget details for Carry Beck",
+       "rect": [
+        1266,
+        868,
+        32,
+        32
+       ],
+       "role": "button",
+       "tag": "button",
+       "xpath": "/html/body/div[1]/main[1]/div[1]/div[1]/div[4]/div[1]/div[2]/div[4]/div[2]/table[1]/tbody[1]/tr[7]/td[4]/button[1]"
+      },
+      "rise": 404,
+      "stop": 69,
+      "stops": 126
+     },
+     "occurrence": {
+      "ancestors": [
+       [
+        "_avatarListItem_1xc2q_107"
+       ],
+       [
+        "_avatarList_1xc2q_97"
+       ],
+       [
+        "_avatarStack_1xc2q_86",
+        "_stack_2qfv3_10",
+        "_sizeSmall_2qfv3_27"
+       ],
+       [
+        "_budgetsCell_kyw76_73"
+       ],
+       [
+        "_tableData_1u4jr_5",
+        "_alignmentStart_1u4jr_12",
+        "_budgetsCol_kyw76_44"
+       ],
+       [
+        "_summaryRow_1x2ld_5",
+        "_xlarge_1x2ld_50"
+       ],
+       [
+        "_tableBody_1cp5b_1"
+       ],
+       [
+        "_table_1acga_4"
+       ]
+      ],
+      "classes": [
+       "_tooltipAnchor_18bac_4"
+      ],
+      "data": {
+       "data-focus-visible": "true"
+      },
+      "heading": "Team Spend",
+      "landmark": {
+       "name": "",
+       "role": "main"
+      },
+      "layer": "document",
+      "name": "Team Lunch",
+      "rect": [
+       1064,
+       464,
+       28,
+       28
+      ],
+      "role": "generic",
+      "tag": "div",
+      "xpath": "/html/body/div[1]/main[1]/div[1]/div[1]/div[4]/div[1]/div[2]/div[4]/div[2]/table[1]/tbody[1]/tr[9]/td[2]/div[1]/div[1]/ul[1]/li[1]/div[1]"
+     },
+     "state": "cards.team-members"
+    }
+   ],
+   "evidenceHash": "fe5307d4887709e058796e796b4daa43d6d63b92c0096ab29dfb09b26b533803",
+   "facts": {
+    "criterion": "2.4.3",
+    "criterionName": "Focus Order",
+    "element": "text \"Team Lunch\"",
+    "previous": "text \"Hardware\"",
+    "screen": "Cards",
+    "stop": "84"
+   },
+   "family": "focus-order",
+   "guidance": "High if the order skips a required control.",
+   "issueId": null,
+   "key": "focus-order:backward-jump:bcc4c397a162",
+   "measured": false,
+   "primary": "cards.index",
+   "proposals": [],
+   "rule": "backward-jump",
+   "screens": 2,
+   "severityDefault": "medium",
+   "source": "scanner",
+   "states": [
+    "cards.index",
+    "cards.team-members"
+   ],
+   "summary": "Tab stop 84 jumped backward on screen, from the text \"Hardware\" to the text \"Team Lunch\".",
+   "title": "Tab order jumps backward at text \"Team Lunch\""
+  },
+  {
+   "attachments": [],
+   "attempt": 1,
+   "basis": "failure",
+   "criteria": [
+    "2.4.7",
+    "2.4.3"
+   ],
+   "evidence": [
+    {
+     "evidence": {
+      "box": [
+       1300,
+       454,
+       48,
+       48
+      ],
+      "focus": {
+       "ancestors": [
+        [
+         "_arrowCol_9it56_57",
+         "_noPadding_1lcwv_22"
+        ],
+        [
+         "_hoverRow_1lcwv_53",
+         "_tableRow_9it56_168"
+        ],
+        [],
+        [
+         "_table_1lcwv_7",
+         "_table_9it56_4"
+        ],
+        [],
+        [],
+        [
+         "_contents_1f9jt_1",
+         "_withTabView_1f9jt_8"
+        ],
+        [
+         "_pageContent_809q8_151",
+         "_pageContentWidth_809q8_184",
+         "_footerPadding_809q8_115"
+        ]
+       ],
+       "classes": [
+        "_arrow_9it56_57"
+       ],
+       "data": {},
+       "heading": "Cards",
+       "landmark": {
+        "name": "",
+        "role": "main"
+       },
+       "layer": "document",
+       "name": "Expand details for Jane Black’s card ending with 6871",
+       "rect": [
+        1300,
+        454,
+        48,
+        48
+       ],
+       "role": "button",
+       "tag": "button",
+       "xpath": "/html/body/div[1]/main[1]/div[1]/div[1]/div[4]/div[1]/div[2]/div[6]/div[1]/div[1]/table[1]/tbody[1]/tr[8]/td[7]/button[1]"
+      },
+      "hidden": "invisible",
+      "previous": {
+       "ancestors": [
+        [
+         "_arrowCol_9it56_57",
+         "_noPadding_1lcwv_22"
+        ],
+        [
+         "_hoverRow_1lcwv_53",
+         "_tableRow_9it56_168"
+        ],
+        [],
+        [
+         "_table_1lcwv_7",
+         "_table_9it56_4"
+        ],
+        [],
+        [],
+        [
+         "_contents_1f9jt_1",
+         "_withTabView_1f9jt_8"
+        ],
+        [
+         "_pageContent_809q8_151",
+         "_pageContentWidth_809q8_184",
+         "_footerPadding_809q8_115"
+        ]
+       ],
+       "classes": [
+        "_arrow_9it56_57"
+       ],
+       "data": {},
+       "heading": "Cards",
+       "landmark": {
+        "name": "",
+        "role": "main"
+       },
+       "layer": "document",
+       "name": "Expand details for Jane Black’s card ending with 4471",
+       "rect": [
+        1300,
+        852,
+        48,
+        48
+       ],
+       "role": "button",
+       "tag": "button",
+       "xpath": "/html/body/div[1]/main[1]/div[1]/div[1]/div[4]/div[1]/div[2]/div[6]/div[1]/div[1]/table[1]/tbody[1]/tr[7]/td[7]/button[1]"
+      },
+      "stop": 52,
+      "stops": 93
+     },
+     "occurrence": {
+      "ancestors": [
+       [
+        "_arrowCol_9it56_57",
+        "_noPadding_1lcwv_22"
+       ],
+       [
+        "_hoverRow_1lcwv_53",
+        "_tableRow_9it56_168"
+       ],
+       [],
+       [
+        "_table_1lcwv_7",
+        "_table_9it56_4"
+       ],
+       [],
+       [],
+       [
+        "_contents_1f9jt_1",
+        "_withTabView_1f9jt_8"
+       ],
+       [
+        "_pageContent_809q8_151",
+        "_pageContentWidth_809q8_184",
+        "_footerPadding_809q8_115"
+       ]
+      ],
+      "classes": [
+       "_arrow_9it56_57"
+      ],
+      "data": {},
+      "heading": "Cards",
+      "landmark": {
+       "name": "",
+       "role": "main"
+      },
+      "layer": "document",
+      "name": "Expand details for Jane Black’s card ending with 6871",
+      "rect": [
+       1300,
+       454,
+       48,
+       48
+      ],
+      "role": "button",
+      "tag": "button",
+      "xpath": "/html/body/div[1]/main[1]/div[1]/div[1]/div[4]/div[1]/div[2]/div[6]/div[1]/div[1]/table[1]/tbody[1]/tr[8]/td[7]/button[1]"
+     },
+     "state": "cards.index"
+    },
+    {
+     "evidence": {
+      "box": [
+       748,
+       252,
+       32,
+       48
+      ],
+      "focus": {
+       "ancestors": [
+        [
+         "_tableRow_2f0es_21",
+         "_tableRow_1waxt_94",
+         "_hoverDisabled_1waxt_108",
+         "_selectDisabled_1waxt_106"
+        ],
+        [
+         "_cardTable_1waxt_4"
+        ],
+        [
+         "_tableAndLoadingStateWrapper_1waxt_313"
+        ],
+        [
+         "_tableWrapper_1waxt_304",
+         "_tableAndCardWrapper_2f0es_27"
+        ],
+        [
+         "_contents_2f0es_11"
+        ],
+        [
+         "_page_15h2q_38"
+        ],
+        [
+         "_dashboardContent_15h2q_45"
+        ],
+        [
+         "_layout_15h2q_18"
+        ]
+       ],
+       "classes": [
+        "_arrow_1waxt_173"
+       ],
+       "data": {},
+       "heading": "6 accounts",
+       "landmark": {
+        "name": "",
+        "role": "main"
+       },
+       "layer": "document",
+       "name": "",
+       "rect": [
+        748,
+        252,
+        32,
+        48
+       ],
+       "role": "button",
+       "tag": "button",
+       "xpath": "/html/body/div[1]/main[1]/div[1]/div[1]/div[4]/div[1]/div[1]/div[3]/div[1]/div[1]/div[1]/div[3]/button[1]"
+      },
+      "hidden": "invisible",
+      "previous": {
+       "ancestors": [
+        [
+         "_orgNameAndBadge_2f0es_60",
+         "_grayedOut_2f0es_1"
+        ],
+        [
+         "_tableCell_1waxt_102",
+         "_notCollapsible_1waxt_40",
+         "_cellOrgName_2f0es_51"
+        ],
+        [
+         "_tableRow_2f0es_21",
+         "_tableRow_1waxt_94",
+         "_hoverDisabled_1waxt_108",
+         "_selectDisabled_1waxt_106"
+        ],
+        [
+         "_cardTable_1waxt_4"
+        ],
+        [
+         "_tableAndLoadingStateWrapper_1waxt_313"
+        ],
+        [
+         "_tableWrapper_1waxt_304",
+         "_tableAndCardWrapper_2f0es_27"
+        ],
+        [
+         "_contents_2f0es_11"
+        ],
+        [
+         "_page_15h2q_38"
+        ]
+       ],
+       "classes": [
+        "_tooltipAnchor_18bac_4",
+        "_overflowHidden_kqdyx_13"
+       ],
+       "data": {
+        "data-focus-visible": "true"
+       },
+       "heading": "6 accounts",
+       "landmark": {
+        "name": "",
+        "role": "main"
+       },
+       "layer": "document",
+       "name": "CompConsult",
+       "rect": [
+        252,
+        262,
+        136,
+        28
+       ],
+       "role": "generic",
+       "tag": "div",
+       "xpath": "/html/body/div[1]/main[1]/div[1]/div[1]/div[4]/div[1]/div[1]/div[3]/div[1]/div[1]/div[1]/div[3]/div[1]/div[1]/div[1]"
+      },
+      "stop": 11,
+      "stops": 28
+     },
+     "occurrence": {
+      "ancestors": [
+       [
+        "_tableRow_2f0es_21",
+        "_tableRow_1waxt_94",
+        "_hoverDisabled_1waxt_108",
+        "_selectDisabled_1waxt_106"
+       ],
+       [
+        "_cardTable_1waxt_4"
+       ],
+       [
+        "_tableAndLoadingStateWrapper_1waxt_313"
+       ],
+       [
+        "_tableWrapper_1waxt_304",
+        "_tableAndCardWrapper_2f0es_27"
+       ],
+       [
+        "_contents_2f0es_11"
+       ],
+       [
+        "_page_15h2q_38"
+       ],
+       [
+        "_dashboardContent_15h2q_45"
+       ],
+       [
+        "_layout_15h2q_18"
+       ]
+      ],
+      "classes": [
+       "_arrow_1waxt_173"
+      ],
+      "data": {},
+      "heading": "6 accounts",
+      "landmark": {
+       "name": "",
+       "role": "main"
+      },
+      "layer": "document",
+      "name": "",
+      "rect": [
+       748,
+       252,
+       32,
+       48
+      ],
+      "role": "button",
+      "tag": "button",
+      "xpath": "/html/body/div[1]/main[1]/div[1]/div[1]/div[4]/div[1]/div[1]/div[3]/div[1]/div[1]/div[1]/div[3]/button[1]"
+     },
+     "state": "settings.panorama"
+    }
+   ],
+   "evidenceHash": "03b0fc180f1a4fde75487f7b59144e4dd334b57448d1193152061948ff073199",
+   "facts": {
+    "criterion": "2.4.7",
+    "criterionName": "Focus Visible",
+    "element": "button \"Expand details for Jane Black’s card end…\"",
+    "screen": "Cards",
+    "screens": 7,
+    "stop": "52"
+   },
+   "family": "focus-visible",
+   "guidance": "High on shared components on primary paths.",
+   "issueId": null,
+   "key": "focus-visible:focus-hidden:b7d12ca92f2a",
+   "measured": true,
+   "primary": "cards.index",
+   "proposals": [],
+   "rule": "focus-hidden",
+   "screens": 7,
+   "severityDefault": "medium",
+   "source": "scanner",
+   "states": [
+    "cards.index",
+    "settings.panorama"
+   ],
+   "summary": "Tab stop 52 focused the button \"Expand details for Jane Black’s card end…\", which is invisible, has no size, or sits off screen.",
+   "title": "Tab stops on hidden element: button \"Expand details for Jane Black’s card end…\""
+  },
+  {
+   "attachments": [],
+   "attempt": 1,
+   "basis": "candidate",
+   "criteria": [
+    "2.1.1"
+   ],
+   "evidence": [
+    {
+     "evidence": {
+      "end": "body",
+      "focusable": false,
+      "source": "pointer",
+      "stops": 93
+     },
+     "occurrence": {
+      "ancestors": [
+       [
+        "_dsTabView_95hq1_3"
+       ],
+       [
+        "_cardTabBarWrapper_zyag2_2"
+       ],
+       [
+        "_pageContent_809q8_151",
+        "_pageContentWidth_809q8_184",
+        "_footerPadding_809q8_115"
+       ],
+       [
+        "_dashboardContent_809q8_29"
+       ],
+       [
+        "_layout_809q8_18"
+       ],
+       [
+        "_wrapper_809q8_3"
+       ],
+       [],
+       [
+        "_main_1gb3b_1"
+       ]
+      ],
+      "classes": [
+       "_bodySecondary_qaod7_51",
+       "_cardTabContainer_zyag2_2",
+       "_dsTabViewTab_95hq1_9"
+      ],
+      "data": {},
+      "heading": "Cards",
+      "landmark": {
+       "name": "",
+       "role": "main"
+      },
+      "layer": "document",
+      "name": "",
+      "rect": [
+       420,
+       415,
+       88,
+       40
+      ],
+      "role": "generic",
+      "tag": "div",
+      "xpath": "/html/body/div[1]/main[1]/div[1]/div[1]/div[4]/div[1]/div[2]/div[4]/div[1]/div[2]"
+     },
+     "state": "cards.index"
+    },
+    {
+     "evidence": {
+      "end": "body",
+      "focusable": false,
+      "source": "pointer",
+      "stops": 203
+     },
+     "occurrence": {
+      "ancestors": [
+       [
+        "_dsTabView_95hq1_3"
+       ],
+       [
+        "_cardTabBarWrapper_zyag2_2"
+       ],
+       [
+        "_pageContent_809q8_151",
+        "_pageContentWidth_809q8_184",
+        "_footerPadding_809q8_115"
+       ],
+       [
+        "_dashboardContent_809q8_29"
+       ],
+       [
+        "_layout_809q8_18"
+       ],
+       [
+        "_wrapper_809q8_3"
+       ],
+       [],
+       [
+        "_main_1gb3b_1"
+       ]
+      ],
+      "classes": [
+       "_bodySecondary_qaod7_51",
+       "_cardTabContainer_zyag2_2",
+       "_dsTabViewTab_95hq1_9"
+      ],
+      "data": {},
+      "heading": "Cards",
+      "landmark": {
+       "name": "",
+       "role": "main"
+      },
+      "layer": "document",
+      "name": "",
+      "rect": [
+       346,
+       184,
+       50,
+       40
+      ],
+      "role": "generic",
+      "tag": "div",
+      "xpath": "/html/body/div[1]/main[1]/div[1]/div[1]/div[4]/div[1]/div[2]/div[2]/div[1]/div[1]"
+     },
+     "state": "cards.subscriptions"
+    }
+   ],
+   "evidenceHash": "ae0175d81e0b147933c0eb8085c9f5c258c68fc58a39da755ad7adfc6ec88520",
+   "facts": {
+    "axeSummary": "",
+    "criterion": "2.1.1",
+    "criterionName": "Keyboard",
+    "element": "text in \"Cards\"",
+    "rule": "not-reached",
+    "screen": "Cards",
+    "stops": "93"
+   },
+   "family": "keyboard",
+   "guidance": "High if a task cannot be completed without a mouse.",
+   "issueId": null,
+   "key": "keyboard:not-reached:b9847ddec5a4",
+   "measured": false,
+   "primary": "cards.index",
+   "proposals": [],
+   "rule": "not-reached",
+   "screens": 2,
+   "severityDefault": "medium",
+   "source": "scanner",
+   "states": [
+    "cards.index",
+    "cards.subscriptions"
+   ],
+   "summary": "The Tab walk visited 93 stops and never reached the text in \"Cards\", which responds to a click.",
+   "title": "Not reachable by keyboard: text in \"Cards\""
+  },
+  {
+   "attachments": [],
+   "attempt": 1,
+   "basis": "violation",
+   "criteria": [
+    "4.1.2"
+   ],
+   "evidence": [
+    {
+     "evidence": {
+      "failureSummary": "Fix any of the following:\n  Element does not have inner text that is visible to screen readers\n  aria-label attribute does not exist or is empty\n  aria-labelledby attribute does not exist, references elements that do not exist or references elements that are empty\n  Element has no title attribute\n  Element does not have an implicit (wrapped) <label>\n  Element does not have an explicit <label>\n  Element's default semantics were not overridden with role=\"none\" or role=\"presentation\"",
+      "messageKey": "noAttr"
+     },
+     "occurrence": {
+      "ancestors": [
+       [
+        "_rightSide_1ynjm_30"
+       ],
+       [
+        "_large_kwlx6_9",
+        "_noHover_3n0se_28",
+        "_shadow_3n0se_25",
+        "_raisedBackground_3n0se_45",
+        "_card_1ynjm_1"
+       ],
+       [
+        "_pageContent_809q8_151",
+        "_pageContentWidth_809q8_184",
+        "_footerPadding_809q8_115"
+       ],
+       [
+        "_dashboardContent_809q8_29"
+       ],
+       [
+        "_layout_809q8_18"
+       ],
+       [
+        "_wrapper_809q8_3"
+       ],
+       [],
+       [
+        "_main_1gb3b_1"
+       ]
+      ],
+      "classes": [
+       "_button_r6b2u_20",
+       "_large_r6b2u_88",
+       "_tertiary_r6b2u_153",
+       "_dismissButton_1ynjm_39"
+      ],
+      "data": {},
+      "heading": "Cards",
+      "landmark": {
+       "name": "",
+       "role": "main"
+      },
+      "layer": "document",
+      "name": "",
+      "rect": [
+       1262,
+       212,
+       24,
+       24
+      ],
+      "role": "button",
+      "tag": "button",
+      "xpath": "/html/body/div[1]/main[1]/div[1]/div[1]/div[4]/div[1]/div[2]/div[3]/div[2]/button[1]"
+     },
+     "state": "cards.index"
+    },
+    {
+     "evidence": {
+      "failureSummary": "Fix any of the following:\n  Element does not have inner text that is visible to screen readers\n  aria-label attribute does not exist or is empty\n  aria-labelledby attribute does not exist, references elements that do not exist or references elements that are empty\n  Element has no title attribute\n  Element does not have an implicit (wrapped) <label>\n  Element does not have an explicit <label>\n  Element's default semantics were not overridden with role=\"none\" or role=\"presentation\"",
+      "messageKey": "noAttr"
+     },
+     "occurrence": {
+      "ancestors": [
+       [
+        "_rightSide_1ynjm_30"
+       ],
+       [
+        "_large_kwlx6_9",
+        "_noHover_3n0se_28",
+        "_shadow_3n0se_25",
+        "_raisedBackground_3n0se_45",
+        "_card_1ynjm_1"
+       ],
+       [
+        "_pageContent_809q8_151",
+        "_pageContentWidth_809q8_184",
+        "_footerPadding_809q8_115"
+       ],
+       [
+        "_dashboardContent_809q8_29"
+       ],
+       [
+        "_layout_809q8_18"
+       ],
+       [
+        "_wrapper_809q8_3"
+       ],
+       [],
+       [
+        "_main_1gb3b_1"
+       ]
+      ],
+      "classes": [
+       "_button_r6b2u_20",
+       "_large_r6b2u_88",
+       "_tertiary_r6b2u_153",
+       "_dismissButton_1ynjm_39"
+      ],
+      "data": {},
+      "heading": "Cards",
+      "landmark": {
+       "name": "",
+       "role": "main"
+      },
+      "layer": "document",
+      "name": "",
+      "rect": [
+       1262,
+       212,
+       24,
+       24
+      ],
+      "role": "button",
+      "tag": "button",
+      "xpath": "/html/body/div[1]/main[1]/div[1]/div[1]/div[4]/div[1]/div[2]/div[3]/div[2]/button[1]"
+     },
+     "state": "cards.card-revealed"
+    }
+   ],
+   "evidenceHash": "310561b3a195b176dc1f20f291a4d3c6d5982f0c389a35b2b19256cac5a75048",
+   "facts": {
+    "announced": "button \"\"",
+    "axeSummary": "Element does not have inner text that is visible to screen readers; aria-label attribute does not exist or is empty; aria-labelledby attribute does not exist,…",
+    "criterion": "4.1.2",
+    "criterionName": "Name, Role, Value",
+    "element": "button in \"Cards\"",
+    "rule": "button-name",
+    "screen": "Cards"
+   },
+   "family": "name",
+   "guidance": "High for an unnamed form control or the sole primary action.",
+   "issueId": null,
+   "key": "name:button-name:1cef6a96f87a",
+   "measured": false,
+   "primary": "cards.index",
+   "proposals": [],
+   "rule": "button-name",
+   "screens": 9,
+   "severityDefault": "medium",
+   "source": "scanner",
+   "states": [
+    "cards.index",
+    "cards.card-revealed"
+   ],
+   "summary": "button-name: announced as button \"\". Element does not have inner text that is visible to screen readers; aria-label attribute does not exist or is empty; aria-labelledby attribute does not exist,…",
+   "title": "Missing or unclear name: button in \"Cards\""
+  }
+ ],
+ "primaries": [
+  "cards.index"
+ ],
+ "reach": {
+  "baseUrl": "https://demo.mercury.com",
+  "data": "data",
+  "map": "build/map.json",
+  "run": "2026-10-03-1525",
+  "workspace": "a11y"
+ },
+ "run": "2026-10-03-1525"
+}

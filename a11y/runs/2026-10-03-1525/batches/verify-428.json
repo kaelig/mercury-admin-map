@@ -1,0 +1,162 @@
+{
+ "area": "billpay",
+ "batch": "verify-428",
+ "findings": [
+  {
+   "attachments": [],
+   "attempt": 1,
+   "basis": "candidate",
+   "criteria": [
+    "4.1.2"
+   ],
+   "evidence": [
+    {
+     "evidence": {
+      "description": "To pick up a draggable item, press the space bar. While dragging, use the arrow keys to move the item. Press space again to drop the item in its new position, or press escape to cancel.",
+      "name": "",
+      "role": "button",
+      "states": {},
+      "template": "button \"\" (To pick up a draggable item, press the space bar. While dragging, use the arrow keys to move the item. Press space again to drop the item in its new position, or press escape to cancel.)"
+     },
+     "occurrence": {
+      "ancestors": [
+       [
+        "_row_1wsk7_22",
+        "_hideQuantity_1wsk7_29"
+       ],
+       [],
+       [
+        "ReactVirtualized__Grid__innerScrollContainer"
+       ],
+       [
+        "ReactVirtualized__Grid",
+        "ReactVirtualized__List"
+       ],
+       [],
+       [],
+       [
+        "_lineItems_1wsk7_3"
+       ],
+       [
+        "_lineItemWrapper_8i915_29"
+       ]
+      ],
+      "classes": [
+       "_draggableHandle_1wsk7_46"
+      ],
+      "data": {},
+      "heading": "Categorization",
+      "landmark": {
+       "name": "",
+       "role": "form"
+      },
+      "layer": "document",
+      "name": "",
+      "rect": [
+       44,
+       392,
+       32,
+       32
+      ],
+      "role": "button",
+      "tag": "span",
+      "xpath": "/html/body/div[1]/main[1]/div[1]/div[2]/div[2]/div[1]/div[2]/section[2]/div[1]/div[1]/form[1]/div[1]/div[2]/div[2]/div[1]/div[1]/div[1]/div[1]/div[1]/div[1]/div[2]/span[1]"
+     },
+     "state": "billpay.pay-multiple-gl"
+    },
+    {
+     "evidence": {
+      "description": "To pick up a draggable item, press the space bar. While dragging, use the arrow keys to move the item. Press space again to drop the item in its new position, or press escape to cancel.",
+      "name": "",
+      "role": "button",
+      "states": {},
+      "template": "button \"\" (To pick up a draggable item, press the space bar. While dragging, use the arrow keys to move the item. Press space again to drop the item in its new position, or press escape to cancel.)"
+     },
+     "occurrence": {
+      "ancestors": [
+       [
+        "_row_1wsk7_22",
+        "_hideQuantity_1wsk7_29"
+       ],
+       [],
+       [
+        "ReactVirtualized__Grid__innerScrollContainer"
+       ],
+       [
+        "ReactVirtualized__Grid",
+        "ReactVirtualized__List"
+       ],
+       [],
+       [],
+       [
+        "_lineItems_1wsk7_3"
+       ],
+       [
+        "_lineItemWrapper_8i915_29"
+       ]
+      ],
+      "classes": [
+       "_draggableHandle_1wsk7_46"
+      ],
+      "data": {},
+      "heading": "Categorization",
+      "landmark": {
+       "name": "",
+       "role": "form"
+      },
+      "layer": "document",
+      "name": "",
+      "rect": [
+       44,
+       392,
+       32,
+       32
+      ],
+      "role": "button",
+      "tag": "span",
+      "xpath": "/html/body/div[1]/main[1]/div[1]/div[2]/div[2]/div[1]/div[2]/section[2]/div[1]/div[1]/form[1]/div[1]/div[2]/div[2]/div[1]/div[1]/div[1]/div[1]/div[1]/div[1]/div[2]/span[1]"
+     },
+     "state": "billpay.pay-line-items-error"
+    }
+   ],
+   "evidenceHash": "cb6d43290ac1d0fb5e28b0f918337d73e2e6250ed842e57227e0367de28d7891",
+   "facts": {
+    "announced": "button \"\" (To pick up a draggable item, press the space bar. While dragging, us…",
+    "axeSummary": "",
+    "criterion": "4.1.2",
+    "criterionName": "Name, Role, Value",
+    "element": "button in \"Categorization\"",
+    "rule": "announced-as",
+    "screen": "Pay bill: multiple GL codes"
+   },
+   "family": "name",
+   "guidance": "High for an unnamed form control or the sole primary action.",
+   "issueId": null,
+   "key": "name:announced-as:307b9e65fc92",
+   "measured": false,
+   "primary": "billpay.pay-multiple-gl",
+   "proposals": [],
+   "rule": "announced-as",
+   "screens": 2,
+   "severityDefault": "medium",
+   "source": "scanner",
+   "states": [
+    "billpay.pay-multiple-gl",
+    "billpay.pay-line-items-error"
+   ],
+   "summary": "announced-as: announced as button \"\" (To pick up a draggable item, press the space bar. While dragging, us….",
+   "title": "Missing or unclear name: button in \"Categorization\""
+  }
+ ],
+ "primaries": [
+  "billpay.pay-multiple-gl"
+ ],
+ "reach": {
+  "baseUrl": "https://demo.mercury.com",
+  "data": "data",
+  "map": "build/map.json",
+  "run": "2026-10-03-1525",
+  "workspace": "a11y"
+ },
+ "run": "2026-10-03-1525"
+}

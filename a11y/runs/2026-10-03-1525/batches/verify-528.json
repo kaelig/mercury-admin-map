@@ -1,0 +1,91 @@
+{
+ "area": "settings",
+ "batch": "verify-528",
+ "findings": [
+  {
+   "attachments": [],
+   "attempt": 1,
+   "basis": "candidate",
+   "criteria": [
+    "4.1.2"
+   ],
+   "evidence": [
+    {
+     "evidence": {
+      "description": "",
+      "name": "Error",
+      "role": "dialog",
+      "states": {},
+      "template": "dialog \"Error\""
+     },
+     "occurrence": {
+      "ancestors": [
+       [],
+       []
+      ],
+      "classes": [
+       "_popoverErrorBubble_1w4pk_20",
+       "_zIndexAboveModalAndSiblingPopover_1fl3q_27"
+      ],
+      "data": {
+       "data-dialog": "",
+       "data-enter": "true",
+       "data-open": "true"
+      },
+      "heading": "",
+      "landmark": null,
+      "layer": "top",
+      "name": "Error",
+      "rect": [
+       856,
+       132,
+       186,
+       36
+      ],
+      "role": "dialog",
+      "tag": "div",
+      "xpath": "/html/body/div[12]/div[1]/div[1]"
+     },
+     "state": "settings.referral-invalid-email"
+    }
+   ],
+   "evidenceHash": "9cbe966486d57dd7d8022d5cc3b29547def84182f64a78817127ab4438a37c92",
+   "facts": {
+    "announced": "dialog \"Error\"",
+    "axeSummary": "",
+    "criterion": "4.1.2",
+    "criterionName": "Name, Role, Value",
+    "element": "dialog \"Error\"",
+    "rule": "announced-as",
+    "screen": "Referral — invalid email"
+   },
+   "family": "role-state",
+   "guidance": "Low for optional ARIA or an invalid autocomplete token; high when aria-hidden hides the whole page.",
+   "issueId": null,
+   "key": "role-state:announced-as:0772ee0e6b0a",
+   "measured": false,
+   "primary": "settings.referral-invalid-email",
+   "proposals": [],
+   "rule": "announced-as",
+   "screens": 1,
+   "severityDefault": "medium",
+   "source": "scanner",
+   "states": [
+    "settings.referral-invalid-email"
+   ],
+   "summary": "announced-as: announced as dialog \"Error\".",
+   "title": "Wrong role or state: dialog \"Error\""
+  }
+ ],
+ "primaries": [
+  "settings.referral-invalid-email"
+ ],
+ "reach": {
+  "baseUrl": "https://demo.mercury.com",
+  "data": "data",
+  "map": "build/map.json",
+  "run": "2026-10-03-1525",
+  "workspace": "a11y"
+ },
+ "run": "2026-10-03-1525"
+}

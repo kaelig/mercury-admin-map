@@ -1,0 +1,172 @@
+{
+ "area": "cards",
+ "batch": "verify-137",
+ "findings": [
+  {
+   "attachments": [],
+   "attempt": 1,
+   "basis": "violation",
+   "criteria": [
+    "1.3.1"
+   ],
+   "evidence": [
+    {
+     "evidence": {
+      "failureSummary": "Fix any of the following:\n  Description list item does not have a <dl> parent element"
+     },
+     "occurrence": {
+      "ancestors": [
+       [
+        "_container_16ibf_1"
+       ],
+       [
+        "_expenseCardSection_egeg9_1"
+       ],
+       [],
+       [
+        "_panelBody_d3i56_64"
+       ],
+       [
+        "_large_kwlx6_9",
+        "_noHover_3n0se_28",
+        "_shadow_3n0se_25",
+        "_raisedBackground_3n0se_45",
+        "_panel_d3i56_55"
+       ],
+       [
+        "_transitionWrapper_d3i56_5",
+        "_visible_d3i56_19"
+       ],
+       [
+        "_tableWrapper_1j2wi_1"
+       ],
+       [
+        "_expensesTableContainer_1hmn7_1"
+       ]
+      ],
+      "classes": [
+       "_tiny_qaod7_67",
+       "_text-tertiary_12t49_1",
+       "_leftSide_16ibf_13"
+      ],
+      "data": {},
+      "heading": "",
+      "landmark": {
+       "name": "",
+       "role": "complementary"
+      },
+      "layer": "top",
+      "name": "Attachments",
+      "rect": [
+       946,
+       907,
+       73,
+       20
+      ],
+      "role": "term",
+      "tag": "dt",
+      "xpath": "/html/body/div[1]/main[1]/div[1]/div[1]/div[4]/div[1]/div[2]/div[4]/div[2]/aside[1]/div[1]/div[1]/div[1]/div[4]/div[1]/dt[1]"
+     },
+     "state": "cards.expense-detail"
+    },
+    {
+     "evidence": {
+      "failureSummary": "Fix any of the following:\n  Description list item does not have a <dl> parent element"
+     },
+     "occurrence": {
+      "ancestors": [
+       [
+        "_container_16ibf_1"
+       ],
+       [
+        "_expenseCardSection_egeg9_1"
+       ],
+       [],
+       [
+        "_panelBody_d3i56_64"
+       ],
+       [
+        "_large_kwlx6_9",
+        "_noHover_3n0se_28",
+        "_shadow_3n0se_25",
+        "_raisedBackground_3n0se_45",
+        "_panel_d3i56_55"
+       ],
+       [
+        "_transitionWrapper_d3i56_5",
+        "_visible_d3i56_19"
+       ],
+       [
+        "_tableWrapper_1j2wi_1"
+       ],
+       [
+        "_expensesTableContainer_1hmn7_1"
+       ]
+      ],
+      "classes": [
+       "_tiny_qaod7_67",
+       "_text-tertiary_12t49_1",
+       "_leftSide_16ibf_13"
+      ],
+      "data": {},
+      "heading": "",
+      "landmark": {
+       "name": "",
+       "role": "complementary"
+      },
+      "layer": "top",
+      "name": "Attachments",
+      "rect": [
+       946,
+       956,
+       73,
+       20
+      ],
+      "role": "term",
+      "tag": "dt",
+      "xpath": "/html/body/div[1]/main[1]/div[1]/div[1]/div[4]/div[1]/div[2]/div[4]/div[2]/aside[1]/div[1]/div[1]/div[1]/div[5]/div[1]/dt[1]"
+     },
+     "state": "home.task-reimbursement"
+    }
+   ],
+   "evidenceHash": "93245ff1f00e94ab57ba8aa5f0ca362ea4fa7e803ca120e1c543d656664719ef",
+   "facts": {
+    "announced": "term \"Attachments\"",
+    "axeSummary": "Description list item does not have a <dl> parent element",
+    "criterion": "1.3.1",
+    "criterionName": "Info and Relationships",
+    "element": "term \"Attachments\"",
+    "rule": "dlitem",
+    "screen": "Expense detail panel"
+   },
+   "family": "structure",
+   "guidance": "Medium when a data table's headers do not reach its cells, or when structure is the only way to tell sections or steps apart.",
+   "issueId": null,
+   "key": "structure:dlitem:335f69c7b0b3",
+   "measured": false,
+   "primary": "cards.expense-detail",
+   "proposals": [],
+   "rule": "dlitem",
+   "screens": 3,
+   "severityDefault": "low",
+   "source": "scanner",
+   "states": [
+    "cards.expense-detail",
+    "home.task-reimbursement"
+   ],
+   "summary": "dlitem: announced as term \"Attachments\". Description list item does not have a <dl> parent element",
+   "title": "Markup misstates structure: term \"Attachments\""
+  }
+ ],
+ "primaries": [
+  "cards.expense-detail"
+ ],
+ "reach": {
+  "baseUrl": "https://demo.mercury.com",
+  "data": "data",
+  "map": "build/map.json",
+  "run": "2026-10-03-1525",
+  "workspace": "a11y"
+ },
+ "run": "2026-10-03-1525"
+}

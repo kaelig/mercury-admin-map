@@ -1,0 +1,113 @@
+{
+ "area": "settings",
+ "batch": "verify-521",
+ "findings": [
+  {
+   "attachments": [],
+   "attempt": 1,
+   "basis": "candidate",
+   "criteria": [
+    "4.1.2"
+   ],
+   "evidence": [
+    {
+     "evidence": {
+      "description": "",
+      "name": "•••••••••",
+      "role": "button",
+      "states": {},
+      "template": "button \"•••••••••\""
+     },
+     "occurrence": {
+      "ancestors": [
+       [],
+       [
+        "_contentWrapper_mup67_17"
+       ],
+       [
+        "_settingsProfileSection_mup67_3"
+       ],
+       [],
+       [
+        "_pageContent_809q8_151",
+        "_pageContentWidth_809q8_184",
+        "_footerPadding_809q8_115"
+       ],
+       [
+        "_dashboardContent_809q8_29"
+       ],
+       [
+        "_layout_809q8_18"
+       ],
+       [
+        "_wrapper_809q8_3"
+       ]
+      ],
+      "classes": [
+       "_bodyDefault_qaod7_40",
+       "_tooltipAnchor_18bac_4",
+       "_wrapper_7927n_1",
+       "_link_ual8v_4",
+       "_underlineOnHover_ual8v_15"
+      ],
+      "data": {},
+      "heading": "Mercury Demo",
+      "landmark": {
+       "name": "",
+       "role": "main"
+      },
+      "layer": "document",
+      "name": "•••••••••",
+      "rect": [
+       722,
+       411,
+       77,
+       24
+      ],
+      "role": "button",
+      "tag": "div",
+      "xpath": "/html/body/div[1]/main[1]/div[1]/div[1]/div[4]/div[1]/div[2]/div[2]/div[3]/div[2]/div[1]/div[1]"
+     },
+     "state": "settings.index"
+    }
+   ],
+   "evidenceHash": "1c892dc82cb123b376f471824a1385ce333fa4b759cff8175e43c6f99f5fa16b",
+   "facts": {
+    "announced": "button \"•••••••••\"",
+    "axeSummary": "",
+    "criterion": "4.1.2",
+    "criterionName": "Name, Role, Value",
+    "element": "button \"•••••••••\"",
+    "rule": "announced-as",
+    "screen": "Settings — Company Profile"
+   },
+   "family": "name",
+   "guidance": "High for an unnamed form control or the sole primary action.",
+   "issueId": null,
+   "key": "name:announced-as:5fb9c329c65a",
+   "measured": false,
+   "primary": "settings.index",
+   "proposals": [],
+   "rule": "announced-as",
+   "screens": 1,
+   "severityDefault": "medium",
+   "source": "scanner",
+   "states": [
+    "settings.index"
+   ],
+   "summary": "announced-as: announced as button \"•••••••••\".",
+   "title": "Missing or unclear name: button \"•••••••••\""
+  }
+ ],
+ "primaries": [
+  "settings.index"
+ ],
+ "reach": {
+  "baseUrl": "https://demo.mercury.com",
+  "data": "data",
+  "map": "build/map.json",
+  "run": "2026-10-03-1525",
+  "workspace": "a11y"
+ },
+ "run": "2026-10-03-1525"
+}

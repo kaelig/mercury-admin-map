@@ -1,0 +1,495 @@
+{
+ "area": "billpay",
+ "batch": "verify-083",
+ "findings": [
+  {
+   "attachments": [],
+   "attempt": 1,
+   "basis": "violation",
+   "criteria": [
+    "4.1.2"
+   ],
+   "evidence": [
+    {
+     "evidence": {
+      "aria-errormessage": [
+       "amount-mercury-utils-id-50-errormessage"
+      ],
+      "failureSummary": "Fix all of the following:\n  aria-errormessage value `amount-mercury-utils-id-50-errormessage` must use a technique to announce the message (e.g., aria-live, aria-describedby, role=alert, etc.)"
+     },
+     "occurrence": {
+      "ancestors": [
+       [
+        "_inputBox_q7hf7_93",
+        "_error_q7hf7_41"
+       ],
+       [
+        "_inputBoxWrapper_q7hf7_93"
+       ],
+       [
+        "_textInputWrapper_q7hf7_24"
+       ],
+       [
+        "_provideDSTextInput_q7hf7_6",
+        "_addWrapperMargin_q7hf7_19"
+       ],
+       [
+        "_formFieldWrapper_b92ke_1",
+        "_feedbackBadgeShown_b92ke_6"
+       ],
+       [],
+       [
+        "_amountAndSourceContainer_8dg5w_1"
+       ],
+       [
+        "_routeContainer_15al5_228"
+       ]
+      ],
+      "classes": [
+       "_input_q7hf7_93"
+      ],
+      "data": {},
+      "heading": "Amount",
+      "landmark": {
+       "name": "",
+       "role": "form"
+      },
+      "layer": "document",
+      "name": "Recipient gets",
+      "rect": [
+       108,
+       288,
+       434,
+       24
+      ],
+      "role": "textbox",
+      "tag": "input",
+      "xpath": "/html/body/div[1]/main[1]/div[1]/div[2]/div[2]/div[1]/div[2]/section[2]/div[1]/div[1]/div[1]/form[1]/div[1]/div[1]/div[1]/div[1]/div[1]/input[1]"
+     },
+     "state": "billpay.pay-amount-error"
+    }
+   ],
+   "evidenceHash": "1ebba2f814a77d951be6ff08189d9ebf54a68aa5cbfb12f4bfead040f8ea4833",
+   "facts": {
+    "announced": "textbox \"Recipient gets\" [invalid=true, errormessage=Must be a dollar value.]",
+    "axeSummary": "aria-errormessage value `amount-mercury-utils-id-50-errormessage` must use a technique to announce the message (e.g., aria-live, aria-describedby, role=alert,…",
+    "criterion": "4.1.2",
+    "criterionName": "Name, Role, Value",
+    "element": "textbox \"Recipient gets\"",
+    "rule": "aria-valid-attr-value",
+    "screen": "Pay bill: amount required"
+   },
+   "family": "role-state",
+   "guidance": "Low for optional ARIA or an invalid autocomplete token; high when aria-hidden hides the whole page.",
+   "issueId": null,
+   "key": "role-state:aria-valid-attr-value:3843ee5bd5aa",
+   "measured": false,
+   "primary": "billpay.pay-amount-error",
+   "proposals": [],
+   "rule": "aria-valid-attr-value",
+   "screens": 1,
+   "severityDefault": "medium",
+   "source": "scanner",
+   "states": [
+    "billpay.pay-amount-error"
+   ],
+   "summary": "aria-valid-attr-value: announced as textbox \"Recipient gets\" [invalid=true, errormessage=Must be a dollar value.]. aria-errormessage value `amount-mercury-utils-id-50-errormessage` must use a technique to announce the message (e.g., aria-live, aria-describedby, role=alert,…",
+   "title": "Wrong role or state: textbox \"Recipient gets\""
+  },
+  {
+   "attachments": [],
+   "attempt": 1,
+   "basis": "failure",
+   "criteria": [
+    "4.1.3"
+   ],
+   "evidence": [
+    {
+     "evidence": {
+      "focus": {
+       "ancestors": [
+        [
+         "_navigation_g4akw_1"
+        ],
+        [
+         "_navigationButtonContainer_1wq2f_1"
+        ],
+        [],
+        [
+         "_amountAndSourceContainer_8dg5w_1"
+        ],
+        [
+         "_routeContainer_15al5_228"
+        ],
+        [
+         "_routes_15al5_220"
+        ],
+        [
+         "_routeSection_15al5_207"
+        ],
+        [
+         "_container_15al5_4",
+         "_container_10wfz_3",
+         "_preview-open_15al5_94"
+        ]
+       ],
+       "classes": [
+        "_button_r6b2u_20",
+        "_large_r6b2u_88",
+        "_primary_r6b2u_104"
+       ],
+       "data": {},
+       "heading": "Amount",
+       "landmark": {
+        "name": "",
+        "role": "form"
+       },
+       "layer": "document",
+       "name": "Next",
+       "rect": [
+        202,
+        836,
+        109,
+        40
+       ],
+       "role": "button",
+       "tag": "button",
+       "xpath": "/html/body/div[1]/main[1]/div[1]/div[2]/div[2]/div[1]/div[2]/section[2]/div[1]/div[1]/div[1]/form[1]/div[4]/div[1]/button[2]"
+      },
+      "focused": false,
+      "message": "Flag error?",
+      "region": null
+     },
+     "occurrence": {
+      "ancestors": [
+       [
+        "_formFieldWrapper_b92ke_1",
+        "_feedbackBadgeShown_b92ke_6"
+       ],
+       [],
+       [
+        "_amountAndSourceContainer_8dg5w_1"
+       ],
+       [
+        "_routeContainer_15al5_228"
+       ],
+       [
+        "_routes_15al5_220"
+       ],
+       [
+        "_routeSection_15al5_207"
+       ],
+       [
+        "_container_15al5_4",
+        "_container_10wfz_3",
+        "_preview-open_15al5_94"
+       ],
+       [
+        "_dropzone_15al5_74"
+       ]
+      ],
+      "classes": [
+       "_feedbackBadge_b92ke_6"
+      ],
+      "data": {},
+      "heading": "Amount",
+      "landmark": {
+       "name": "",
+       "role": "form"
+      },
+      "layer": "document",
+      "name": "",
+      "rect": [
+       566,
+       308,
+       94,
+       20
+      ],
+      "role": "generic",
+      "tag": "div",
+      "xpath": "/html/body/div[1]/main[1]/div[1]/div[2]/div[2]/div[1]/div[2]/section[2]/div[1]/div[1]/div[1]/form[1]/div[1]/div[2]"
+     },
+     "state": "billpay.pay-amount-error"
+    }
+   ],
+   "evidenceHash": "c0ccc2563b325daa60bb3870c86acc652879721b0ab2a5f3a6123f0ee0013ca5",
+   "facts": {
+    "criterion": "4.1.3",
+    "criterionName": "Status Messages",
+    "focus": "button \"Next\"",
+    "message": "\"Flag error?\"",
+    "screen": "Pay bill: amount required"
+   },
+   "family": "status-message",
+   "guidance": "High when it is the only confirmation of a money movement.",
+   "issueId": null,
+   "key": "status-message:status-not-announced:2682753e2d57",
+   "measured": false,
+   "primary": "billpay.pay-amount-error",
+   "proposals": [],
+   "rule": "status-not-announced",
+   "screens": 1,
+   "severityDefault": "medium",
+   "source": "scanner",
+   "states": [
+    "billpay.pay-amount-error"
+   ],
+   "summary": "\"Flag error?\" appeared outside any live region, alert or status role that existed before it, and focus stayed on the button \"Next\".",
+   "title": "Status message not announced: \"Flag error?\""
+  },
+  {
+   "attachments": [],
+   "attempt": 1,
+   "basis": "failure",
+   "criteria": [
+    "4.1.3"
+   ],
+   "evidence": [
+    {
+     "evidence": {
+      "focus": {
+       "ancestors": [
+        [
+         "_navigation_g4akw_1"
+        ],
+        [
+         "_navigationButtonContainer_1wq2f_1"
+        ],
+        [],
+        [
+         "_amountAndSourceContainer_8dg5w_1"
+        ],
+        [
+         "_routeContainer_15al5_228"
+        ],
+        [
+         "_routes_15al5_220"
+        ],
+        [
+         "_routeSection_15al5_207"
+        ],
+        [
+         "_container_15al5_4",
+         "_container_10wfz_3",
+         "_preview-open_15al5_94"
+        ]
+       ],
+       "classes": [
+        "_button_r6b2u_20",
+        "_large_r6b2u_88",
+        "_primary_r6b2u_104"
+       ],
+       "data": {},
+       "heading": "Amount",
+       "landmark": {
+        "name": "",
+        "role": "form"
+       },
+       "layer": "document",
+       "name": "Next",
+       "rect": [
+        202,
+        836,
+        109,
+        40
+       ],
+       "role": "button",
+       "tag": "button",
+       "xpath": "/html/body/div[1]/main[1]/div[1]/div[2]/div[2]/div[1]/div[2]/section[2]/div[1]/div[1]/div[1]/form[1]/div[4]/div[1]/button[2]"
+      },
+      "focused": false,
+      "message": "Must be a dollar value.",
+      "region": null
+     },
+     "occurrence": {
+      "ancestors": [
+       [
+        "_textInputWrapper_q7hf7_24"
+       ],
+       [
+        "_provideDSTextInput_q7hf7_6",
+        "_addWrapperMargin_q7hf7_19"
+       ],
+       [
+        "_formFieldWrapper_b92ke_1",
+        "_feedbackBadgeShown_b92ke_6"
+       ],
+       [],
+       [
+        "_amountAndSourceContainer_8dg5w_1"
+       ],
+       [
+        "_routeContainer_15al5_228"
+       ],
+       [
+        "_routes_15al5_220"
+       ],
+       [
+        "_routeSection_15al5_207"
+       ]
+      ],
+      "classes": [
+       "_defaultErrorContainer_1tnh5_1",
+       "_errorMessage_q7hf7_303"
+      ],
+      "data": {
+       "data-session-replay-unmask": "true"
+      },
+      "heading": "Amount",
+      "landmark": {
+       "name": "",
+       "role": "form"
+      },
+      "layer": "document",
+      "name": "",
+      "rect": [
+       80,
+       324,
+       475,
+       20
+      ],
+      "role": "",
+      "tag": "div",
+      "xpath": "/html/body/div[1]/main[1]/div[1]/div[2]/div[2]/div[1]/div[2]/section[2]/div[1]/div[1]/div[1]/form[1]/div[1]/div[1]/div[1]/div[2]"
+     },
+     "state": "billpay.pay-amount-error"
+    }
+   ],
+   "evidenceHash": "52a0f8cf1518e62e6071d96c596747de420f2c1976b52d154f767f7c07b88302",
+   "facts": {
+    "criterion": "4.1.3",
+    "criterionName": "Status Messages",
+    "focus": "button \"Next\"",
+    "message": "\"Must be a dollar value.\"",
+    "screen": "Pay bill: amount required"
+   },
+   "family": "status-message",
+   "guidance": "High when it is the only confirmation of a money movement.",
+   "issueId": null,
+   "key": "status-message:status-not-announced:9c1c300ab302",
+   "measured": false,
+   "primary": "billpay.pay-amount-error",
+   "proposals": [],
+   "rule": "status-not-announced",
+   "screens": 1,
+   "severityDefault": "medium",
+   "source": "scanner",
+   "states": [
+    "billpay.pay-amount-error"
+   ],
+   "summary": "\"Must be a dollar value.\" appeared outside any live region, alert or status role that existed before it, and focus stayed on the button \"Next\".",
+   "title": "Status message not announced: \"Must be a dollar value.\""
+  },
+  {
+   "attachments": [],
+   "attempt": 1,
+   "basis": "candidate",
+   "criteria": [
+    "2.5.8"
+   ],
+   "evidence": [
+    {
+     "evidence": {
+      "agree": false,
+      "axe": "inapplicable",
+      "exception": null,
+      "height": 20,
+      "offset": 0,
+      "own": "fail",
+      "passedBy": null,
+      "width": 93.75
+     },
+     "occurrence": {
+      "ancestors": [
+       [
+        "_formFieldWrapper_b92ke_1",
+        "_feedbackBadgeShown_b92ke_6"
+       ],
+       [],
+       [
+        "_amountAndSourceContainer_8dg5w_1"
+       ],
+       [
+        "_routeContainer_15al5_228"
+       ],
+       [
+        "_routes_15al5_220"
+       ],
+       [
+        "_routeSection_15al5_207"
+       ],
+       [
+        "_container_15al5_4",
+        "_container_10wfz_3",
+        "_preview-open_15al5_94"
+       ],
+       [
+        "_dropzone_15al5_74"
+       ]
+      ],
+      "classes": [
+       "_feedbackBadge_b92ke_6"
+      ],
+      "data": {},
+      "disabled": false,
+      "heading": "Amount",
+      "landmark": {
+       "name": "",
+       "role": "form"
+      },
+      "layer": "document",
+      "name": "",
+      "rect": [
+       566,
+       308,
+       94,
+       20
+      ],
+      "role": "generic",
+      "tag": "div",
+      "xpath": "/html/body/div[1]/main[1]/div[1]/div[2]/div[2]/div[1]/div[2]/section[2]/div[1]/div[1]/div[1]/form[1]/div[1]/div[2]"
+     },
+     "state": "billpay.pay-amount-error"
+    }
+   ],
+   "evidenceHash": "56e57f10600f889a309c85cd5b9594643ca46a762db753261e39d23631718584",
+   "facts": {
+    "criterion": "2.5.8",
+    "criterionName": "Target Size (Minimum)",
+    "element": "text in \"Amount\"",
+    "offset": "0",
+    "rule": "target-size-own",
+    "screen": "Pay bill: amount required",
+    "screens": 1,
+    "size": "94×20"
+   },
+   "family": "target-size",
+   "guidance": "Medium next to destructive or financial controls.",
+   "issueId": null,
+   "key": "target-size:target-size-own:19d5dfca58f0",
+   "measured": true,
+   "primary": "billpay.pay-amount-error",
+   "proposals": [],
+   "rule": "target-size-own",
+   "screens": 1,
+   "severityDefault": "low",
+   "source": "scanner",
+   "states": [
+    "billpay.pay-amount-error"
+   ],
+   "summary": "target-size-own: 94×20 px; the widest circle centered on it that clears other targets is 0 px, and the spacing exception needs 24 px.",
+   "title": "Target under 24×24 px: text in \"Amount\""
+  }
+ ],
+ "primaries": [
+  "billpay.pay-amount-error"
+ ],
+ "reach": {
+  "baseUrl": "https://demo.mercury.com",
+  "data": "data",
+  "map": "build/map.json",
+  "run": "2026-10-03-1525",
+  "workspace": "a11y"
+ },
+ "run": "2026-10-03-1525"
+}

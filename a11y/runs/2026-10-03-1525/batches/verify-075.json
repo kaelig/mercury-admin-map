@@ -1,0 +1,328 @@
+{
+ "area": "billpay",
+ "batch": "verify-075",
+ "findings": [
+  {
+   "attachments": [],
+   "attempt": 1,
+   "basis": "failure",
+   "criteria": [
+    "4.1.3"
+   ],
+   "evidence": [
+    {
+     "evidence": {
+      "focus": "body",
+      "focused": false,
+      "message": "Done",
+      "region": null
+     },
+     "occurrence": {
+      "ancestors": [
+       [
+        "_contentMaxHeight_uvfpb_14",
+        "_content_d0dr0_1",
+        "_firstPartyChat_uvfpb_7"
+       ],
+       [
+        "_wrapper_uvfpb_3",
+        "_firstPartyChat_uvfpb_7"
+       ],
+       [
+        "_large_kwlx6_9",
+        "_noHover_3n0se_28",
+        "_shadow_3n0se_25",
+        "_raisedBackground_3n0se_45",
+        "_popoverContainer_1hboj_3",
+        "_firstPartyChat_1hboj_7"
+       ],
+       [
+        "_wrapper_gtpm4_1",
+        "_visible_gtpm4_7",
+        "_animationReady_gtpm4_30",
+        "_visibilityWrapper_1floe_172",
+        "_firstPartyChat_1floe_41"
+       ],
+       [
+        "_menuContainer_1floe_8",
+        "_firstPartyChat_1floe_41",
+        "session-replay-unmask"
+       ],
+       [
+        "_wrapper_809q8_3"
+       ],
+       [],
+       [
+        "_main_1gb3b_1"
+       ]
+      ],
+      "classes": [
+       "_successDoneButton_d0dr0_13"
+      ],
+      "data": {},
+      "heading": "Due in next 7 days",
+      "landmark": {
+       "name": "",
+       "role": "main"
+      },
+      "layer": "document",
+      "name": "",
+      "rect": [
+       1012,
+       816,
+       376,
+       32
+      ],
+      "role": "",
+      "tag": "div",
+      "xpath": "/html/body/div[1]/main[1]/div[1]/div[1]/div[5]/div[1]/div[1]/div[1]/div[2]/div[2]"
+     },
+     "state": "billpay.feedback-sent"
+    }
+   ],
+   "evidenceHash": "0ee16e5c9f0496faf6238844e554f0b0c3d4a1ca5f91b26a1058f0ce5c48c5d0",
+   "facts": {
+    "criterion": "4.1.3",
+    "criterionName": "Status Messages",
+    "focus": "page body",
+    "message": "\"Done\"",
+    "screen": "Feedback sent"
+   },
+   "family": "status-message",
+   "guidance": "High when it is the only confirmation of a money movement.",
+   "issueId": null,
+   "key": "status-message:status-not-announced:5f94c1c08e96",
+   "measured": false,
+   "primary": "billpay.feedback-sent",
+   "proposals": [],
+   "rule": "status-not-announced",
+   "screens": 1,
+   "severityDefault": "medium",
+   "source": "scanner",
+   "states": [
+    "billpay.feedback-sent"
+   ],
+   "summary": "\"Done\" appeared outside any live region, alert or status role that existed before it, and focus stayed on the page body.",
+   "title": "Status message not announced: \"Done\""
+  },
+  {
+   "attachments": [],
+   "attempt": 1,
+   "basis": "failure",
+   "criteria": [
+    "4.1.3"
+   ],
+   "evidence": [
+    {
+     "evidence": {
+      "focus": "body",
+      "focused": false,
+      "message": "Thanks for your feedback",
+      "region": null
+     },
+     "occurrence": {
+      "ancestors": [
+       [
+        "_titleContainerTop_1gjng_50"
+       ],
+       [
+        "_titleContainer_1gjng_34"
+       ],
+       [
+        "_headerLeft_1gjng_23"
+       ],
+       [
+        "_header_1gjng_5"
+       ],
+       [
+        "_wrapper_uvfpb_3",
+        "_firstPartyChat_uvfpb_7"
+       ],
+       [
+        "_large_kwlx6_9",
+        "_noHover_3n0se_28",
+        "_shadow_3n0se_25",
+        "_raisedBackground_3n0se_45",
+        "_popoverContainer_1hboj_3",
+        "_firstPartyChat_1hboj_7"
+       ],
+       [
+        "_wrapper_gtpm4_1",
+        "_visible_gtpm4_7",
+        "_animationReady_gtpm4_30",
+        "_visibilityWrapper_1floe_172",
+        "_firstPartyChat_1floe_41"
+       ],
+       [
+        "_menuContainer_1floe_8",
+        "_firstPartyChat_1floe_41",
+        "session-replay-unmask"
+       ]
+      ],
+      "classes": [
+       "_bodyDefault_qaod7_40",
+       "_title_1gjng_34"
+      ],
+      "data": {},
+      "heading": "Due in next 7 days",
+      "landmark": {
+       "name": "",
+       "role": "main"
+      },
+      "layer": "document",
+      "name": "",
+      "rect": [
+       1012,
+       676,
+       175,
+       24
+      ],
+      "role": "",
+      "tag": "span",
+      "xpath": "/html/body/div[1]/main[1]/div[1]/div[1]/div[5]/div[1]/div[1]/div[1]/div[1]/div[1]/div[1]/div[1]/span[1]"
+     },
+     "state": "billpay.feedback-sent"
+    }
+   ],
+   "evidenceHash": "1babd1ab36b7e2f369faa5b02b7b6b40120803b2ee36b26e7c2c44e34dde5984",
+   "facts": {
+    "criterion": "4.1.3",
+    "criterionName": "Status Messages",
+    "focus": "page body",
+    "message": "\"Thanks for your feedback\"",
+    "screen": "Feedback sent"
+   },
+   "family": "status-message",
+   "guidance": "High when it is the only confirmation of a money movement.",
+   "issueId": null,
+   "key": "status-message:status-not-announced:bac8181292c7",
+   "measured": false,
+   "primary": "billpay.feedback-sent",
+   "proposals": [],
+   "rule": "status-not-announced",
+   "screens": 1,
+   "severityDefault": "medium",
+   "source": "scanner",
+   "states": [
+    "billpay.feedback-sent"
+   ],
+   "summary": "\"Thanks for your feedback\" appeared outside any live region, alert or status role that existed before it, and focus stayed on the page body.",
+   "title": "Status message not announced: \"Thanks for your feedback\""
+  },
+  {
+   "attachments": [],
+   "attempt": 1,
+   "basis": "failure",
+   "criteria": [
+    "4.1.3"
+   ],
+   "evidence": [
+    {
+     "evidence": {
+      "focus": "body",
+      "focused": false,
+      "message": "We’ll share your thoughts with our product teams and may follow up if we have any additional questions.",
+      "region": null
+     },
+     "occurrence": {
+      "ancestors": [
+       [
+        "_contentMaxHeight_uvfpb_14",
+        "_content_d0dr0_1",
+        "_firstPartyChat_uvfpb_7"
+       ],
+       [
+        "_wrapper_uvfpb_3",
+        "_firstPartyChat_uvfpb_7"
+       ],
+       [
+        "_large_kwlx6_9",
+        "_noHover_3n0se_28",
+        "_shadow_3n0se_25",
+        "_raisedBackground_3n0se_45",
+        "_popoverContainer_1hboj_3",
+        "_firstPartyChat_1hboj_7"
+       ],
+       [
+        "_wrapper_gtpm4_1",
+        "_visible_gtpm4_7",
+        "_animationReady_gtpm4_30",
+        "_visibilityWrapper_1floe_172",
+        "_firstPartyChat_1floe_41"
+       ],
+       [
+        "_menuContainer_1floe_8",
+        "_firstPartyChat_1floe_41",
+        "session-replay-unmask"
+       ],
+       [
+        "_wrapper_809q8_3"
+       ],
+       [],
+       [
+        "_main_1gb3b_1"
+       ]
+      ],
+      "classes": [
+       "_bodyDefault_qaod7_40",
+       "_text-default_12t49_1"
+      ],
+      "data": {},
+      "heading": "Due in next 7 days",
+      "landmark": {
+       "name": "",
+       "role": "main"
+      },
+      "layer": "document",
+      "name": "",
+      "rect": [
+       1012,
+       744,
+       376,
+       48
+      ],
+      "role": "generic",
+      "tag": "div",
+      "xpath": "/html/body/div[1]/main[1]/div[1]/div[1]/div[5]/div[1]/div[1]/div[1]/div[2]/div[1]"
+     },
+     "state": "billpay.feedback-sent"
+    }
+   ],
+   "evidenceHash": "f6196895d0a77720e234d7ccc5a735e824254e0ace3be6aaecdcca8219ac21f4",
+   "facts": {
+    "criterion": "4.1.3",
+    "criterionName": "Status Messages",
+    "focus": "page body",
+    "message": "\"We’ll share your thoughts with our product team…\"",
+    "screen": "Feedback sent"
+   },
+   "family": "status-message",
+   "guidance": "High when it is the only confirmation of a money movement.",
+   "issueId": null,
+   "key": "status-message:status-not-announced:ded3091baf9c",
+   "measured": false,
+   "primary": "billpay.feedback-sent",
+   "proposals": [],
+   "rule": "status-not-announced",
+   "screens": 1,
+   "severityDefault": "medium",
+   "source": "scanner",
+   "states": [
+    "billpay.feedback-sent"
+   ],
+   "summary": "\"We’ll share your thoughts with our product team…\" appeared outside any live region, alert or status role that existed before it, and focus stayed on the page body.",
+   "title": "Status message not announced: \"We’ll share your thoughts with our product team…\""
+  }
+ ],
+ "primaries": [
+  "billpay.feedback-sent"
+ ],
+ "reach": {
+  "baseUrl": "https://demo.mercury.com",
+  "data": "data",
+  "map": "build/map.json",
+  "run": "2026-10-03-1525",
+  "workspace": "a11y"
+ },
+ "run": "2026-10-03-1525"
+}

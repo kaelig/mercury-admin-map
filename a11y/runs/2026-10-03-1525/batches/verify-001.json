@@ -1,0 +1,931 @@
+{
+ "area": "accounts",
+ "batch": "verify-001",
+ "findings": [
+  {
+   "attachments": [],
+   "attempt": 1,
+   "basis": "incomplete",
+   "criteria": [
+    "1.4.3"
+   ],
+   "evidence": [
+    {
+     "evidence": {
+      "contrastRatio": 0,
+      "expectedContrastRatio": "4.5:1",
+      "failureSummary": "Fix any of the following:\n  Element's background color could not be determined because element contains an image node",
+      "fontSize": "12.8pt (17px)",
+      "fontWeight": "normal",
+      "messageKey": "imgNode"
+     },
+     "occurrence": {
+      "ancestors": [
+       [
+        "_selectionTitlesFlex_1ja2n_89"
+       ],
+       [
+        "_selectionTitles_1ja2n_67"
+       ],
+       [
+        "_selectionCard_1ja2n_33",
+        "_flexRow_1ja2n_45",
+        "_cursorPointer_1ja2n_58",
+        "_fullWidth_1ja2n_29",
+        "_safeRequestCard_1ja2n_97"
+       ],
+       [
+        "_large_kwlx6_9",
+        "_shadow_3n0se_25",
+        "_fullWidth_1ja2n_29"
+       ],
+       [
+        "_cardButtonWrapper_1ja2n_14"
+       ],
+       [
+        "_selectMethodWrapper_1ja2n_7"
+       ],
+       [
+        "_addFundsStartWrapper_1ja2n_3"
+       ],
+       [
+        "_contentDiv_bcpsw_53",
+        "_contentDivHeightPreset_bcpsw_62",
+        "_addFundsFlowContent_1wxi3_1"
+       ]
+      ],
+      "classes": [
+       "_titleMinor_qaod7_24",
+       "_text-default_12t49_1"
+      ],
+      "data": {},
+      "heading": "",
+      "landmark": {
+       "name": "",
+       "role": "main"
+      },
+      "layer": "document",
+      "name": "",
+      "rect": [
+       536,
+       844,
+       132,
+       28
+      ],
+      "role": "generic",
+      "tag": "div",
+      "xpath": "/html/body/div[1]/main[1]/div[1]/div[2]/div[2]/div[3]/div[1]/div[2]/button[4]/div[1]/div[1]/div[3]/div[1]/div[1]"
+     },
+     "state": "accounts.add-funds"
+    },
+    {
+     "evidence": {
+      "contrastRatio": 0,
+      "expectedContrastRatio": "4.5:1",
+      "failureSummary": "Fix any of the following:\n  Element's background color could not be determined because element contains an image node",
+      "fontSize": "12.0pt (16px)",
+      "fontWeight": "normal",
+      "messageKey": "imgNode"
+     },
+     "occurrence": {
+      "ancestors": [
+       [
+        "_textLayer_krmxv_16",
+        "_transparent_krmxv_39"
+       ],
+       [],
+       [],
+       [
+        "_page_1lhz4_7"
+       ],
+       [
+        "_viewerContainer_1lhz4_21"
+       ],
+       [
+        "_viewerAndControlsWrapper_1lhz4_14"
+       ],
+       [],
+       [
+        "_pdfRenderer_smemz_99"
+       ]
+      ],
+      "classes": [],
+      "data": {},
+      "heading": "",
+      "landmark": {
+       "name": "",
+       "role": "main"
+      },
+      "layer": "document",
+      "name": "",
+      "rect": [
+       901,
+       266,
+       576,
+       16
+      ],
+      "role": "",
+      "tag": "span",
+      "xpath": "/html/body/div[1]/main[1]/div[1]/div[2]/div[2]/div[3]/div[1]/div[1]/div[2]/div[1]/div[1]/div[1]/div[1]/div[1]/div[1]/div[1]/div[1]/span[1]"
+     },
+     "state": "billpay.approvals-bulk-loading"
+    }
+   ],
+   "evidenceHash": "fb72f4c9f9e4b073ce6f8fd9f3266895b9d93f9ce80fb0b523d5bbfcf6771d8a",
+   "facts": {
+    "criterion": "1.4.3",
+    "criterionName": "Contrast (Minimum)",
+    "elements": "14 elements",
+    "messageKey": "imgNode",
+    "rule": "color-contrast",
+    "screen": "Add funds to your accounts",
+    "why": "imgNode"
+   },
+   "family": "contrast",
+   "guidance": "High under 2:1, or under 3:1 for essential text.",
+   "issueId": null,
+   "key": "contrast:color-contrast:e6fc08b84c69",
+   "measured": true,
+   "primary": "accounts.add-funds",
+   "proposals": [],
+   "rule": "color-contrast",
+   "screens": 61,
+   "severityDefault": "medium",
+   "source": "scanner",
+   "states": [
+    "accounts.add-funds",
+    "billpay.approvals-bulk-loading"
+   ],
+   "summary": "axe color-contrast could not decide 14 elements (imgNode): imgNode.",
+   "title": "Needs review: color-contrast, imgNode"
+  },
+  {
+   "attachments": [],
+   "attempt": 1,
+   "basis": "candidate",
+   "criteria": [
+    "2.4.3",
+    "1.3.2"
+   ],
+   "evidence": [
+    {
+     "evidence": {
+      "band": 76,
+      "overlay": "accounts.add-funds.tabstops.png",
+      "previous": {
+       "ancestors": [
+        [
+         "_selectMethodWrapper_1ja2n_7"
+        ],
+        [
+         "_addFundsStartWrapper_1ja2n_3"
+        ],
+        [
+         "_contentDiv_bcpsw_53",
+         "_contentDivHeightPreset_bcpsw_62",
+         "_addFundsFlowContent_1wxi3_1"
+        ],
+        [
+         "_fullScreenWorkspaceLayout_bcpsw_14",
+         "_fullScreenWorkspaceLayoutBackground_bcpsw_32"
+        ],
+        [
+         "_wrapper_bcpsw_3",
+         "_responsive_bcpsw_88"
+        ],
+        [],
+        [
+         "_main_1gb3b_1"
+        ],
+        [
+         "mercury-root"
+        ]
+       ],
+       "classes": [
+        "_cardButtonWrapper_1ja2n_14"
+       ],
+       "data": {},
+       "heading": "",
+       "landmark": {
+        "name": "",
+        "role": "main"
+       },
+       "layer": "document",
+       "name": "SAFE Investment",
+       "rect": [
+        472,
+        820,
+        496,
+        76
+       ],
+       "role": "button",
+       "tag": "button",
+       "xpath": "/html/body/div[1]/main[1]/div[1]/div[2]/div[2]/div[3]/div[1]/div[2]/button[4]"
+      },
+      "rise": 718,
+      "stop": 14,
+      "stops": 16
+     },
+     "occurrence": {
+      "ancestors": [
+       [
+        "_escapeDiv_bcpsw_46"
+       ],
+       [
+        "_fullScreenWorkspaceLayout_bcpsw_14",
+        "_fullScreenWorkspaceLayoutBackground_bcpsw_32"
+       ],
+       [
+        "_wrapper_bcpsw_3",
+        "_responsive_bcpsw_88"
+       ],
+       [],
+       [
+        "_main_1gb3b_1"
+       ],
+       [
+        "mercury-root"
+       ]
+      ],
+      "classes": [
+       "_escapeButton_1i6e3_3",
+       "_navigationControl_bcpsw_67"
+      ],
+      "data": {},
+      "heading": "",
+      "landmark": {
+       "name": "",
+       "role": "main"
+      },
+      "layer": "document",
+      "name": "Close",
+      "rect": [
+       1360,
+       102,
+       26,
+       26
+      ],
+      "role": "button",
+      "tag": "button",
+      "xpath": "/html/body/div[1]/main[1]/div[1]/div[2]/div[2]/div[4]/button[1]"
+     },
+     "state": "accounts.add-funds"
+    },
+    {
+     "evidence": {
+      "band": 28,
+      "overlay": "cards.budget-edit.tabstops.png",
+      "previous": {
+       "ancestors": [
+        [
+         "_avatarStack_1xc2q_86",
+         "_container_7tk34_10"
+        ],
+        [
+         "_sectionContent_l1dvt_174"
+        ],
+        [
+         "_section_l1dvt_165"
+        ],
+        [
+         "_large_kwlx6_9",
+         "_noHover_3n0se_28",
+         "_raisedBackground_3n0se_45",
+         "_card_l1dvt_19",
+         "_cardThemeGreen_l1dvt_55"
+        ],
+        [
+         "_cardWrapper_l1dvt_19"
+        ],
+        [
+         "_container_l1dvt_4"
+        ],
+        [
+         "_rightPaneContent_112ku_82"
+        ],
+        [
+         "_rightPane_112ku_76"
+        ]
+       ],
+       "classes": [
+        "_tooltipAnchor_18bac_4"
+       ],
+       "data": {},
+       "heading": "Software Subscriptions",
+       "landmark": {
+        "name": "",
+        "role": "main"
+       },
+       "layer": "document",
+       "name": "+4",
+       "rect": [
+        948,
+        739,
+        28,
+        28
+       ],
+       "role": "generic",
+       "tag": "div",
+       "xpath": "/html/body/div[1]/main[1]/div[1]/div[2]/div[2]/div[3]/div[1]/div[2]/div[1]/div[2]/div[1]/div[1]/div[2]/div[5]/div[2]/div[1]/div[1]"
+      },
+      "rise": 637,
+      "stop": 24,
+      "stops": 26
+     },
+     "occurrence": {
+      "ancestors": [
+       [
+        "_escapeDiv_bcpsw_46",
+        "_fullWidthEscapeDiv_bcpsw_36"
+       ],
+       [
+        "_fullScreenWorkspaceLayout_bcpsw_14",
+        "_fullScreenWorkspaceLayoutBackground_bcpsw_32",
+        "_noScrollbar_bcpsw_27"
+       ],
+       [
+        "_wrapper_bcpsw_3"
+       ],
+       [],
+       [
+        "_main_1gb3b_1"
+       ],
+       [
+        "mercury-root"
+       ]
+      ],
+      "classes": [
+       "_escapeButton_1i6e3_3",
+       "_navigationControl_bcpsw_67"
+      ],
+      "data": {},
+      "heading": "Software Subscriptions",
+      "landmark": {
+       "name": "",
+       "role": "main"
+      },
+      "layer": "document",
+      "name": "Close",
+      "rect": [
+       1360,
+       102,
+       26,
+       26
+      ],
+      "role": "button",
+      "tag": "button",
+      "xpath": "/html/body/div[1]/main[1]/div[1]/div[2]/div[2]/div[4]/button[1]"
+     },
+     "state": "cards.budget-edit"
+    }
+   ],
+   "evidenceHash": "3a106f9a4b45f0fe47519a2ed2f708c166f2de61f8f1c1c6975cb77f7fe1a49a",
+   "facts": {
+    "criterion": "2.4.3",
+    "criterionName": "Focus Order",
+    "element": "button \"Close\"",
+    "previous": "button \"SAFE Investment\"",
+    "screen": "Add funds to your accounts",
+    "stop": "14"
+   },
+   "family": "focus-order",
+   "guidance": "High if the order skips a required control.",
+   "issueId": null,
+   "key": "focus-order:backward-jump:74f0c97b47e3",
+   "measured": false,
+   "primary": "accounts.add-funds",
+   "proposals": [],
+   "rule": "backward-jump",
+   "screens": 42,
+   "severityDefault": "medium",
+   "source": "scanner",
+   "states": [
+    "accounts.add-funds",
+    "cards.budget-edit"
+   ],
+   "summary": "Tab stop 14 jumped backward on screen, from the button \"SAFE Investment\" to the button \"Close\".",
+   "title": "Tab order jumps backward at button \"Close\""
+  },
+  {
+   "attachments": [],
+   "attempt": 1,
+   "basis": "violation",
+   "criteria": [
+    "4.1.2"
+   ],
+   "evidence": [
+    {
+     "evidence": {
+      "failureSummary": "Fix any of the following:\n  Element does not have inner text that is visible to screen readers\n  aria-label attribute does not exist or is empty\n  aria-labelledby attribute does not exist, references elements that do not exist or references elements that are empty\n  Element has no title attribute\n  Element does not have an implicit (wrapped) <label>\n  Element does not have an explicit <label>\n  Element's default semantics were not overridden with role=\"none\" or role=\"presentation\"",
+      "messageKey": "noAttr"
+     },
+     "occurrence": {
+      "ancestors": [
+       [
+        "_tooltipAnchor_18bac_4",
+        "_tooltipWrapper_1cgg7_75"
+       ],
+       [
+        "_menuContainer_1cgg7_8",
+        "session-replay-unmask"
+       ],
+       [],
+       [
+        "_main_1gb3b_1"
+       ],
+       [
+        "mercury-root"
+       ]
+      ],
+      "classes": [
+       "_menuIcon_1cgg7_33"
+      ],
+      "data": {},
+      "heading": "",
+      "landmark": {
+       "name": "",
+       "role": "main"
+      },
+      "layer": "document",
+      "name": "",
+      "rect": [
+       1364,
+       832,
+       48,
+       48
+      ],
+      "role": "button",
+      "tag": "button",
+      "xpath": "/html/body/div[1]/main[1]/div[1]/div[4]/div[2]/button[1]"
+     },
+     "state": "accounts.add-funds"
+    },
+    {
+     "evidence": {
+      "failureSummary": "Fix any of the following:\n  Element does not have inner text that is visible to screen readers\n  aria-label attribute does not exist or is empty\n  aria-labelledby attribute does not exist, references elements that do not exist or references elements that are empty\n  Element has no title attribute\n  Element does not have an implicit (wrapped) <label>\n  Element does not have an explicit <label>\n  Element's default semantics were not overridden with role=\"none\" or role=\"presentation\"",
+      "messageKey": "noAttr"
+     },
+     "occurrence": {
+      "ancestors": [
+       [
+        "_tooltipAnchor_18bac_4",
+        "_tooltipWrapper_1cgg7_75"
+       ],
+       [
+        "_menuContainer_1cgg7_8",
+        "session-replay-unmask"
+       ],
+       [
+        "_wrapper_809q8_3"
+       ],
+       [],
+       [
+        "_main_1gb3b_1"
+       ],
+       [
+        "mercury-root"
+       ]
+      ],
+      "classes": [
+       "_menuIcon_1cgg7_33"
+      ],
+      "data": {},
+      "heading": "Due in next 7 days",
+      "landmark": {
+       "name": "",
+       "role": "main"
+      },
+      "layer": "document",
+      "name": "",
+      "rect": [
+       1364,
+       832,
+       48,
+       48
+      ],
+      "role": "button",
+      "tag": "button",
+      "xpath": "/html/body/div[1]/main[1]/div[1]/div[1]/div[6]/div[2]/button[1]"
+     },
+     "state": "billpay.inbox-sorted"
+    }
+   ],
+   "evidenceHash": "76416ca6f296f79e68c90def178776b5e4488005d5f2acbee570aef3fe590784",
+   "facts": {
+    "announced": "button \"\"",
+    "axeSummary": "Element does not have inner text that is visible to screen readers; aria-label attribute does not exist or is empty; aria-labelledby attribute does not exist,…",
+    "criterion": "4.1.2",
+    "criterionName": "Name, Role, Value",
+    "element": "button in the main landmark",
+    "rule": "button-name",
+    "screen": "Add funds to your accounts"
+   },
+   "family": "name",
+   "guidance": "High for an unnamed form control or the sole primary action.",
+   "issueId": null,
+   "key": "name:button-name:e440427419da",
+   "measured": false,
+   "primary": "accounts.add-funds",
+   "proposals": [
+    {
+     "family": "name",
+     "finding": "name:button-name:e440427419da",
+     "handFound": "accounts.i-rule-cards-hidden-period",
+     "id": "125c06abdb228664c2c028b3db0978b5479ad2858f308cbc2bd99144519b5bb4",
+     "overlap": 1
+    },
+    {
+     "family": "name",
+     "finding": "name:button-name:e440427419da",
+     "handFound": "billpay.i-date-input-label",
+     "id": "36b084a35156ae3458be6ce6c8329bcfacedfef36f85cd27b9a139e72a4a7b26",
+     "overlap": 1
+    },
+    {
+     "family": "name",
+     "finding": "name:button-name:e440427419da",
+     "handFound": "billpay.i-unlabeled-controls",
+     "id": "08661a52cb4cf908f1b8eef1ab20c0403910953241d6c1e9a5d5272496ce0b4b",
+     "overlap": 0.6667
+    },
+    {
+     "family": "name",
+     "finding": "name:button-name:e440427419da",
+     "handFound": "cards.i-subscription-actions-unlabeled",
+     "id": "498d323b4c1fee257a3f6994b1bc32663b52299dfd514a99776c5aa7c1df1da6",
+     "overlap": 1
+    },
+    {
+     "family": "name",
+     "finding": "name:button-name:e440427419da",
+     "handFound": "invoicing.i-unlabeled-controls",
+     "id": "e4964d13a26727829de86262d330930c158da24439a8f25797195c7f64f0af51",
+     "overlap": 1
+    },
+    {
+     "family": "name",
+     "finding": "name:button-name:e440427419da",
+     "handFound": "payments.i-icon-links-a11y",
+     "id": "1eb379234a329c33110fbb2fee5bb83d558e99699de025a832614790ef6e902b",
+     "overlap": 1
+    },
+    {
+     "family": "name",
+     "finding": "name:button-name:e440427419da",
+     "handFound": "settings.i-unnamed-row-buttons",
+     "id": "70820e9bcd012a133cc5a5b1262d7642aa6c47ba662240c1e9dbefeb555a21f7",
+     "overlap": 0.5
+    }
+   ],
+   "rule": "button-name",
+   "screens": 337,
+   "severityDefault": "medium",
+   "source": "scanner",
+   "states": [
+    "accounts.add-funds",
+    "billpay.inbox-sorted"
+   ],
+   "summary": "button-name: announced as button \"\". Element does not have inner text that is visible to screen readers; aria-label attribute does not exist or is empty; aria-labelledby attribute does not exist,…",
+   "title": "Missing or unclear name: button in the main landmark"
+  },
+  {
+   "attachments": [],
+   "attempt": 1,
+   "basis": "violation",
+   "criteria": [
+    "4.1.2",
+    "2.4.4"
+   ],
+   "evidence": [
+    {
+     "evidence": {
+      "failureSummary": "Fix all of the following:\n  Element is in tab order and does not have accessible text\n\nFix any of the following:\n  Element does not have text that is visible to screen readers\n  aria-label attribute does not exist or is empty\n  aria-labelledby attribute does not exist, references elements that do not exist or references elements that are empty\n  Element has no title attribute",
+      "messageKey": "noAttr"
+     },
+     "occurrence": {
+      "ancestors": [
+       [
+        "_logoSection_w6xr5_28",
+        "_orgNameWrapper_w6xr5_59"
+       ],
+       [
+        "_container_w6xr5_1",
+        "_responsive_w6xr5_66"
+       ],
+       [
+        "_sidebarContainer_bcpsw_45"
+       ],
+       [
+        "_fullScreenWorkspaceLayout_bcpsw_14",
+        "_fullScreenWorkspaceLayoutBackground_bcpsw_32"
+       ],
+       [
+        "_wrapper_bcpsw_3",
+        "_responsive_bcpsw_88"
+       ],
+       [],
+       [
+        "_main_1gb3b_1"
+       ],
+       [
+        "mercury-root"
+       ]
+      ],
+      "classes": [
+       "_noStyleLink_njx8v_1"
+      ],
+      "data": {
+       "data-discover": "true"
+      },
+      "heading": "",
+      "landmark": {
+       "name": "",
+       "role": "main"
+      },
+      "layer": "document",
+      "name": "",
+      "rect": [
+       48,
+       104,
+       32,
+       35
+      ],
+      "role": "link",
+      "tag": "a",
+      "xpath": "/html/body/div[1]/main[1]/div[1]/div[2]/div[2]/div[1]/div[1]/div[1]/a[1]"
+     },
+     "state": "accounts.add-funds"
+    },
+    {
+     "evidence": {
+      "failureSummary": "Fix all of the following:\n  Element is in tab order and does not have accessible text\n\nFix any of the following:\n  Element does not have text that is visible to screen readers\n  aria-label attribute does not exist or is empty\n  aria-labelledby attribute does not exist, references elements that do not exist or references elements that are empty\n  Element has no title attribute",
+      "messageKey": "noAttr"
+     },
+     "occurrence": {
+      "ancestors": [
+       [
+        "_logoSection_w6xr5_28",
+        "_orgNameWrapper_w6xr5_59"
+       ],
+       [
+        "_container_w6xr5_1"
+       ],
+       [
+        "_logoHeader_yg1rf_127"
+       ],
+       [
+        "_leftScrollArea_yg1rf_57"
+       ],
+       [
+        "_leftContainer_yg1rf_39",
+        "_splitVariant_yg1rf_82"
+       ],
+       [
+        "_containerBase_yg1rf_1",
+        "_container_yg1rf_1",
+        "_containerWithBanner_yg1rf_12"
+       ],
+       [
+        "session-replay-unmask"
+       ],
+       []
+      ],
+      "classes": [
+       "_noStyleLink_njx8v_1"
+      ],
+      "data": {
+       "data-discover": "true"
+      },
+      "heading": "",
+      "landmark": {
+       "name": "",
+       "role": "form"
+      },
+      "layer": "document",
+      "name": "",
+      "rect": [
+       48,
+       104,
+       32,
+       35
+      ],
+      "role": "link",
+      "tag": "a",
+      "xpath": "/html/body/div[1]/main[1]/div[1]/div[2]/div[2]/div[3]/form[1]/div[1]/div[1]/div[1]/div[1]/div[1]/div[1]/div[1]/a[1]"
+     },
+     "state": "cards.issue-card-agent-card"
+    }
+   ],
+   "evidenceHash": "77d02bf4e3f636c8e39453c88d2a5d0fd091e72727170107bef159098a905efb",
+   "facts": {
+    "announced": "link \"\"",
+    "axeSummary": "Element is in tab order and does not have accessible text; Element does not have text that is visible to screen readers; aria-label attribute does not exist or…",
+    "criterion": "4.1.2",
+    "criterionName": "Name, Role, Value",
+    "element": "link in the main landmark",
+    "rule": "link-name",
+    "screen": "Add funds to your accounts"
+   },
+   "family": "name",
+   "guidance": "High for an unnamed form control or the sole primary action.",
+   "issueId": null,
+   "key": "name:link-name:546bf1523023",
+   "measured": false,
+   "primary": "accounts.add-funds",
+   "proposals": [],
+   "rule": "link-name",
+   "screens": 112,
+   "severityDefault": "medium",
+   "source": "scanner",
+   "states": [
+    "accounts.add-funds",
+    "cards.issue-card-agent-card"
+   ],
+   "summary": "link-name: announced as link \"\". Element is in tab order and does not have accessible text; Element does not have text that is visible to screen readers; aria-label attribute does not exist or…",
+   "title": "Missing or unclear name: link in the main landmark"
+  },
+  {
+   "attachments": [],
+   "attempt": 1,
+   "basis": "incomplete",
+   "criteria": [
+    "4.1.2"
+   ],
+   "evidence": [
+    {
+     "evidence": {
+      "failureSummary": "Fix all of the following:\n  Unable to determine if aria-controls referenced ID exists on the page while using aria-haspopup: aria-controls=\":r1:\"",
+      "messageKey": "controlsWithinPopup",
+      "needsReview": "aria-controls=\":r1:\""
+     },
+     "occurrence": {
+      "ancestors": [
+       [
+        "_dropdownContainer_5swj3_1",
+        "_roleButton_roc1v_64"
+       ],
+       [
+        "_buttonContainer_roc1v_57"
+       ],
+       [
+        "_demoBanner_roc1v_17"
+       ],
+       [
+        "_bannerContainer_bcpsw_9"
+       ],
+       [
+        "_wrapper_bcpsw_3",
+        "_responsive_bcpsw_88"
+       ],
+       [],
+       [
+        "_main_1gb3b_1"
+       ],
+       [
+        "mercury-root"
+       ]
+      ],
+      "classes": [
+       "_button_r6b2u_20",
+       "_small_r6b2u_72",
+       "_secondary_r6b2u_126",
+       "_menuButton_ok3n2_7"
+      ],
+      "data": {},
+      "heading": "",
+      "landmark": {
+       "name": "",
+       "role": "main"
+      },
+      "layer": "document",
+      "name": "Viewing as Admin",
+      "rect": [
+       1084,
+       12,
+       169,
+       32
+      ],
+      "role": "button",
+      "tag": "button",
+      "xpath": "/html/body/div[1]/main[1]/div[1]/div[2]/div[1]/div[1]/div[2]/div[1]/button[1]"
+     },
+     "state": "accounts.add-funds"
+    },
+    {
+     "evidence": {
+      "failureSummary": "Fix all of the following:\n  Unable to determine if aria-controls referenced ID exists on the page while using aria-haspopup: aria-controls=\":r3t:\"",
+      "messageKey": "controlsWithinPopup",
+      "needsReview": "aria-controls=\":r3t:\""
+     },
+     "occurrence": {
+      "ancestors": [
+       [
+        "_selectWrapper_1m31o_7"
+       ],
+       [
+        "_enrichmentSelect_16juw_78"
+       ],
+       [
+        "_enrichmentRow_16juw_67"
+       ],
+       [
+        "_enrichment_16juw_60"
+       ],
+       [
+        "_container_16juw_6"
+       ],
+       [
+        "_panelSection_d3i56_148"
+       ],
+       [
+        "_panelBody_d3i56_64",
+        "_body_16juw_1"
+       ],
+       [
+        "_large_kwlx6_9",
+        "_noHover_3n0se_28",
+        "_shadow_3n0se_25",
+        "_raisedBackground_3n0se_45",
+        "_panel_d3i56_55"
+       ]
+      ],
+      "classes": [
+       "_select_1m31o_7"
+      ],
+      "data": {},
+      "heading": "",
+      "landmark": {
+       "name": "",
+       "role": "complementary"
+      },
+      "layer": "top",
+      "name": "Outcome",
+      "rect": [
+       970,
+       540,
+       320,
+       40
+      ],
+      "role": "combobox",
+      "tag": "button",
+      "xpath": "/html/body/div[1]/main[1]/div[1]/div[1]/div[4]/div[1]/div[2]/div[3]/div[2]/aside[1]/div[1]/div[1]/section[1]/div[1]/div[2]/div[2]/div[1]/div[1]/button[1]"
+     },
+     "state": "billpay.create-rule"
+    }
+   ],
+   "evidenceHash": "bfacf5ad6f57e5ca572581193781b2f44c2d0204f24925a9450b8b93f9abce08",
+   "facts": {
+    "criterion": "4.1.2",
+    "criterionName": "Name, Role, Value",
+    "elements": "194 elements",
+    "messageKey": "controlsWithinPopup",
+    "rule": "aria-valid-attr-value",
+    "screen": "Add funds to your accounts",
+    "why": "aria-controls names a closed popup"
+   },
+   "family": "role-state",
+   "guidance": "Low for optional ARIA or an invalid autocomplete token; high when aria-hidden hides the whole page.",
+   "issueId": null,
+   "key": "role-state:aria-valid-attr-value:ef390dee7390",
+   "measured": false,
+   "primary": "accounts.add-funds",
+   "proposals": [
+    {
+     "family": "role-state",
+     "finding": "role-state:aria-valid-attr-value:ef390dee7390",
+     "handFound": "books.i-fake-disabled-save",
+     "id": "2c7e48753e5de86f029c9846b50304ccfabb354ada1bdceef333b2a379197630",
+     "overlap": 1
+    },
+    {
+     "family": "role-state",
+     "finding": "role-state:aria-valid-attr-value:ef390dee7390",
+     "handFound": "home.i-chips-as-menuitems",
+     "id": "ac2540817645c98e305259febe6a07549c3944ee7969ab09b6b82d1bdaf8c7ca",
+     "overlap": 0.75
+    }
+   ],
+   "rule": "aria-valid-attr-value",
+   "screens": 450,
+   "severityDefault": "medium",
+   "source": "scanner",
+   "states": [
+    "accounts.add-funds",
+    "billpay.create-rule"
+   ],
+   "summary": "axe aria-valid-attr-value could not decide 194 elements (controlsWithinPopup): aria-controls names a closed popup.",
+   "title": "Needs review: aria-valid-attr-value, aria-controls names a closed popup"
+  }
+ ],
+ "primaries": [
+  "accounts.add-funds"
+ ],
+ "reach": {
+  "baseUrl": "https://demo.mercury.com",
+  "data": "data",
+  "map": "build/map.json",
+  "run": "2026-10-03-1525",
+  "workspace": "a11y"
+ },
+ "run": "2026-10-03-1525"
+}

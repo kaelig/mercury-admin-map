@@ -1,0 +1,1366 @@
+{
+ "area": "payments",
+ "batch": "verify-295",
+ "findings": [
+  {
+   "attachments": [],
+   "attempt": 1,
+   "basis": "candidate",
+   "criteria": [
+    "2.4.3",
+    "1.3.2"
+   ],
+   "evidence": [
+    {
+     "evidence": {
+      "band": 51,
+      "overlay": "payments.taxes.tabstops.png",
+      "previous": {
+       "ancestors": [
+        [
+         "_w9Status_zlm7f_1"
+        ],
+        [
+         "_tableData_1u4jr_5",
+         "_alignmentStart_1u4jr_12"
+        ],
+        [
+         "_tableRow_137xu_3",
+         "_interactiveRows_137xu_35",
+         "_filingTableRow_17hdp_7",
+         "_filingTableRowLoaded_17hdp_11",
+         "_hasHoverActions_17hdp_33"
+        ],
+        [
+         "_tableBody_1cp5b_1"
+        ],
+        [
+         "_table_1acga_4"
+        ],
+        [
+         "_tableWrapper_1acga_4"
+        ],
+        [
+         "_filingTableContainer_17hdp_1"
+        ],
+        [
+         "_filingTabContent_l4eet_1"
+        ]
+       ],
+       "classes": [
+        "_tooltipAnchor_18bac_4"
+       ],
+       "data": {
+        "data-focus-visible": "true"
+       },
+       "heading": "Filing updates and tasks",
+       "landmark": {
+        "name": "",
+        "role": "main"
+       },
+       "layer": "document",
+       "name": "Missing",
+       "rect": [
+        692,
+        865,
+        59,
+        20
+       ],
+       "role": "generic",
+       "tag": "div",
+       "xpath": "/html/body/div[1]/main[1]/div[1]/div[1]/div[4]/div[1]/div[2]/div[2]/div[2]/div[1]/div[1]/table[1]/tbody[1]/tr[5]/td[3]/div[1]/div[1]"
+      },
+      "rise": 413,
+      "stop": 94,
+      "stops": 201
+     },
+     "occurrence": {
+      "ancestors": [
+       [
+        "_tableBody_1cp5b_1"
+       ],
+       [
+        "_table_1acga_4"
+       ],
+       [
+        "_tableWrapper_1acga_4"
+       ],
+       [
+        "_filingTableContainer_17hdp_1"
+       ],
+       [
+        "_filingTabContent_l4eet_1"
+       ],
+       [
+        "_taxesDashboardContent_8iz6r_1"
+       ],
+       [
+        "_pageContent_809q8_151",
+        "_pageContentWidth_809q8_184",
+        "_footerPadding_809q8_115"
+       ],
+       [
+        "_dashboardContent_809q8_29"
+       ]
+      ],
+      "classes": [
+       "_tableRow_137xu_3",
+       "_interactiveRows_137xu_35",
+       "_filingTableRow_17hdp_7",
+       "_filingTableRowLoaded_17hdp_11",
+       "_hasHoverActions_17hdp_33"
+      ],
+      "data": {},
+      "heading": "Filing updates and tasks",
+      "landmark": {
+       "name": "",
+       "role": "main"
+      },
+      "layer": "document",
+      "name": "",
+      "rect": [
+       346,
+       452,
+       968,
+       51
+      ],
+      "role": "row",
+      "tag": "tr",
+      "xpath": "/html/body/div[1]/main[1]/div[1]/div[1]/div[4]/div[1]/div[2]/div[2]/div[2]/div[1]/div[1]/table[1]/tbody[1]/tr[6]"
+     },
+     "state": "payments.taxes"
+    }
+   ],
+   "evidenceHash": "a6f5d8a08d1c2aae81c98b4cccd63c326a6d99d429b2d0e2a1581dc5964bd693",
+   "facts": {
+    "criterion": "2.4.3",
+    "criterionName": "Focus Order",
+    "element": "row in \"Filing updates and tasks\"",
+    "previous": "text \"Missing\"",
+    "screen": "Taxes: 1099 filing",
+    "stop": "94"
+   },
+   "family": "focus-order",
+   "guidance": "High if the order skips a required control.",
+   "issueId": null,
+   "key": "focus-order:backward-jump:1b5428e43b97",
+   "measured": false,
+   "primary": "payments.taxes",
+   "proposals": [],
+   "rule": "backward-jump",
+   "screens": 1,
+   "severityDefault": "medium",
+   "source": "scanner",
+   "states": [
+    "payments.taxes"
+   ],
+   "summary": "Tab stop 94 jumped backward on screen, from the text \"Missing\" to the row in \"Filing updates and tasks\".",
+   "title": "Tab order jumps backward at row in \"Filing updates and tasks\""
+  },
+  {
+   "attachments": [],
+   "attempt": 1,
+   "basis": "failure",
+   "criteria": [
+    "2.4.7",
+    "2.4.3"
+   ],
+   "evidence": [
+    {
+     "evidence": {
+      "box": [
+       1146,
+       541,
+       308,
+       40
+      ],
+      "focus": {
+       "ancestors": [
+        [
+         "_singleAttachmentContainer_3soht_273"
+        ],
+        [
+         "_attachmentsList_3soht_513"
+        ],
+        [
+         "_outerWrapper_3soht_14"
+        ],
+        [
+         "_taxDocument_fqgg5_1"
+        ],
+        [
+         "_detailItem_1t2mt_1"
+        ],
+        [
+         "_col_g60ex_14",
+         "_gapMd_g60ex_24"
+        ],
+        [
+         "_panelSection_d3i56_148",
+         "_col_g60ex_14",
+         "_gapMd_g60ex_24"
+        ],
+        [
+         "_panelBody_d3i56_64"
+        ]
+       ],
+       "classes": [
+        "_fileUploadAttachment_3soht_276",
+        "_only_3soht_302",
+        "_singleAttachment_3soht_273",
+        "_singleWithEndAdornment_3soht_354"
+       ],
+       "data": {},
+       "heading": "Filing updates and tasks",
+       "landmark": {
+        "name": "",
+        "role": "complementary"
+       },
+       "layer": "document",
+       "name": "Bob_Padilla_W-9.pdf",
+       "rect": [
+        1146,
+        541,
+        308,
+        40
+       ],
+       "role": "button",
+       "tag": "div",
+       "xpath": "/html/body/div[1]/main[1]/div[1]/div[1]/div[4]/div[1]/div[2]/div[2]/div[2]/div[1]/div[2]/aside[1]/div[1]/div[1]/section[2]/div[2]/div[5]/div[1]/div[1]/div[1]/div[1]/div[1]"
+      },
+      "hidden": "invisible",
+      "previous": {
+       "ancestors": [
+        [
+         "_amountRow_6uopq_7"
+        ],
+        [
+         "_yearlyPaidTotal_6uopq_1"
+        ],
+        [
+         "_col_g60ex_14",
+         "_gapMd_g60ex_24"
+        ],
+        [
+         "_panelSection_d3i56_148",
+         "_col_g60ex_14",
+         "_gapMd_g60ex_24"
+        ],
+        [
+         "_panelBody_d3i56_64"
+        ],
+        [
+         "_large_kwlx6_9",
+         "_noHover_3n0se_28",
+         "_shadow_3n0se_25",
+         "_raisedBackground_3n0se_45",
+         "_panel_d3i56_55"
+        ],
+        [
+         "_transitionWrapper_d3i56_5"
+        ],
+        []
+       ],
+       "classes": [
+        "_bodySecondary_qaod7_51",
+        "_text-link_12t49_1",
+        "_actionLink_1op2e_1",
+        "_link_ual8v_4",
+        "_underlineOnHover_ual8v_15"
+       ],
+       "data": {},
+       "heading": "Filing updates and tasks",
+       "landmark": {
+        "name": "",
+        "role": "complementary"
+       },
+       "layer": "document",
+       "name": "View Payments",
+       "rect": [
+        1379,
+        480,
+        111,
+        20
+       ],
+       "role": "button",
+       "tag": "span",
+       "xpath": "/html/body/div[1]/main[1]/div[1]/div[1]/div[4]/div[1]/div[2]/div[2]/div[2]/div[1]/div[2]/aside[1]/div[1]/div[1]/section[2]/div[2]/div[4]/div[1]/span[1]"
+      },
+      "stop": 192,
+      "stops": 201
+     },
+     "occurrence": {
+      "ancestors": [
+       [
+        "_singleAttachmentContainer_3soht_273"
+       ],
+       [
+        "_attachmentsList_3soht_513"
+       ],
+       [
+        "_outerWrapper_3soht_14"
+       ],
+       [
+        "_taxDocument_fqgg5_1"
+       ],
+       [
+        "_detailItem_1t2mt_1"
+       ],
+       [
+        "_col_g60ex_14",
+        "_gapMd_g60ex_24"
+       ],
+       [
+        "_panelSection_d3i56_148",
+        "_col_g60ex_14",
+        "_gapMd_g60ex_24"
+       ],
+       [
+        "_panelBody_d3i56_64"
+       ]
+      ],
+      "classes": [
+       "_fileUploadAttachment_3soht_276",
+       "_only_3soht_302",
+       "_singleAttachment_3soht_273",
+       "_singleWithEndAdornment_3soht_354"
+      ],
+      "data": {},
+      "heading": "Filing updates and tasks",
+      "landmark": {
+       "name": "",
+       "role": "complementary"
+      },
+      "layer": "document",
+      "name": "Bob_Padilla_W-9.pdf",
+      "rect": [
+       1146,
+       541,
+       308,
+       40
+      ],
+      "role": "button",
+      "tag": "div",
+      "xpath": "/html/body/div[1]/main[1]/div[1]/div[1]/div[4]/div[1]/div[2]/div[2]/div[2]/div[1]/div[2]/aside[1]/div[1]/div[1]/section[2]/div[2]/div[5]/div[1]/div[1]/div[1]/div[1]/div[1]"
+     },
+     "state": "payments.taxes"
+    }
+   ],
+   "evidenceHash": "f140a337e044bd89871e7eedf48683c78e3e0dec125f2a36f8da83d9a73831df",
+   "facts": {
+    "criterion": "2.4.7",
+    "criterionName": "Focus Visible",
+    "element": "button \"Bob_Padilla_W-<n>.pdf\"",
+    "screen": "Taxes: 1099 filing",
+    "screens": 1,
+    "stop": "192"
+   },
+   "family": "focus-visible",
+   "guidance": "High on shared components on primary paths.",
+   "issueId": null,
+   "key": "focus-visible:focus-hidden:112cbbe469dd",
+   "measured": true,
+   "primary": "payments.taxes",
+   "proposals": [],
+   "rule": "focus-hidden",
+   "screens": 1,
+   "severityDefault": "medium",
+   "source": "scanner",
+   "states": [
+    "payments.taxes"
+   ],
+   "summary": "Tab stop 192 focused the button \"Bob_Padilla_W-<n>.pdf\", which is invisible, has no size, or sits off screen.",
+   "title": "Tab stops on hidden element: button \"Bob_Padilla_W-<n>.pdf\""
+  },
+  {
+   "attachments": [],
+   "attempt": 1,
+   "basis": "failure",
+   "criteria": [
+    "2.4.7",
+    "2.4.3"
+   ],
+   "evidence": [
+    {
+     "evidence": {
+      "box": [
+       1454,
+       541,
+       36,
+       40
+      ],
+      "focus": {
+       "ancestors": [
+        [
+         "_singleAttachmentContainer_3soht_273"
+        ],
+        [
+         "_attachmentsList_3soht_513"
+        ],
+        [
+         "_outerWrapper_3soht_14"
+        ],
+        [
+         "_taxDocument_fqgg5_1"
+        ],
+        [
+         "_detailItem_1t2mt_1"
+        ],
+        [
+         "_col_g60ex_14",
+         "_gapMd_g60ex_24"
+        ],
+        [
+         "_panelSection_d3i56_148",
+         "_col_g60ex_14",
+         "_gapMd_g60ex_24"
+        ],
+        [
+         "_panelBody_d3i56_64"
+        ]
+       ],
+       "classes": [
+        "_tooltipAnchor_18bac_4",
+        "_endAdornmentRemoveButton_3soht_282",
+        "_only_3soht_302"
+       ],
+       "data": {
+        "data-focus-visible": "true"
+       },
+       "heading": "Filing updates and tasks",
+       "landmark": {
+        "name": "",
+        "role": "complementary"
+       },
+       "layer": "document",
+       "name": "Remove Bob_Padilla_W-9.pdf",
+       "rect": [
+        1454,
+        541,
+        36,
+        40
+       ],
+       "role": "button",
+       "tag": "button",
+       "xpath": "/html/body/div[1]/main[1]/div[1]/div[1]/div[4]/div[1]/div[2]/div[2]/div[2]/div[1]/div[2]/aside[1]/div[1]/div[1]/section[2]/div[2]/div[5]/div[1]/div[1]/div[1]/div[1]/button[1]"
+      },
+      "hidden": "invisible",
+      "previous": {
+       "ancestors": [
+        [
+         "_fileUploadAttachment_3soht_276",
+         "_only_3soht_302",
+         "_singleAttachment_3soht_273",
+         "_singleWithEndAdornment_3soht_354"
+        ],
+        [
+         "_singleAttachmentContainer_3soht_273"
+        ],
+        [
+         "_attachmentsList_3soht_513"
+        ],
+        [
+         "_outerWrapper_3soht_14"
+        ],
+        [
+         "_taxDocument_fqgg5_1"
+        ],
+        [
+         "_detailItem_1t2mt_1"
+        ],
+        [
+         "_col_g60ex_14",
+         "_gapMd_g60ex_24"
+        ],
+        [
+         "_panelSection_d3i56_148",
+         "_col_g60ex_14",
+         "_gapMd_g60ex_24"
+        ]
+       ],
+       "classes": [
+        "_bodyDefault_qaod7_40",
+        "_text-emphasized_12t49_1",
+        "_tooltipAnchor_18bac_4",
+        "_container_1acnw_3",
+        "_fileName_3soht_375"
+       ],
+       "data": {
+        "data-focus-visible": "true"
+       },
+       "heading": "Filing updates and tasks",
+       "landmark": {
+        "name": "",
+        "role": "complementary"
+       },
+       "layer": "document",
+       "name": "Bob_Padilla_W-9.pdf",
+       "rect": [
+        1155,
+        549,
+        258,
+        24
+       ],
+       "role": "generic",
+       "tag": "span",
+       "xpath": "/html/body/div[1]/main[1]/div[1]/div[1]/div[4]/div[1]/div[2]/div[2]/div[2]/div[1]/div[2]/aside[1]/div[1]/div[1]/section[2]/div[2]/div[5]/div[1]/div[1]/div[1]/div[1]/div[1]/span[1]"
+      },
+      "stop": 194,
+      "stops": 201
+     },
+     "occurrence": {
+      "ancestors": [
+       [
+        "_singleAttachmentContainer_3soht_273"
+       ],
+       [
+        "_attachmentsList_3soht_513"
+       ],
+       [
+        "_outerWrapper_3soht_14"
+       ],
+       [
+        "_taxDocument_fqgg5_1"
+       ],
+       [
+        "_detailItem_1t2mt_1"
+       ],
+       [
+        "_col_g60ex_14",
+        "_gapMd_g60ex_24"
+       ],
+       [
+        "_panelSection_d3i56_148",
+        "_col_g60ex_14",
+        "_gapMd_g60ex_24"
+       ],
+       [
+        "_panelBody_d3i56_64"
+       ]
+      ],
+      "classes": [
+       "_tooltipAnchor_18bac_4",
+       "_endAdornmentRemoveButton_3soht_282",
+       "_only_3soht_302"
+      ],
+      "data": {
+       "data-focus-visible": "true"
+      },
+      "heading": "Filing updates and tasks",
+      "landmark": {
+       "name": "",
+       "role": "complementary"
+      },
+      "layer": "document",
+      "name": "Remove Bob_Padilla_W-9.pdf",
+      "rect": [
+       1454,
+       541,
+       36,
+       40
+      ],
+      "role": "button",
+      "tag": "button",
+      "xpath": "/html/body/div[1]/main[1]/div[1]/div[1]/div[4]/div[1]/div[2]/div[2]/div[2]/div[1]/div[2]/aside[1]/div[1]/div[1]/section[2]/div[2]/div[5]/div[1]/div[1]/div[1]/div[1]/button[1]"
+     },
+     "state": "payments.taxes"
+    }
+   ],
+   "evidenceHash": "d142969448163d39eb5092be197d620bc3213c04658062612fcb78bc0a6645d5",
+   "facts": {
+    "criterion": "2.4.7",
+    "criterionName": "Focus Visible",
+    "element": "button \"Remove Bob_Padilla_W-<n>.pdf\"",
+    "screen": "Taxes: 1099 filing",
+    "screens": 1,
+    "stop": "194"
+   },
+   "family": "focus-visible",
+   "guidance": "High on shared components on primary paths.",
+   "issueId": null,
+   "key": "focus-visible:focus-hidden:bce8ff6d88ea",
+   "measured": true,
+   "primary": "payments.taxes",
+   "proposals": [],
+   "rule": "focus-hidden",
+   "screens": 1,
+   "severityDefault": "medium",
+   "source": "scanner",
+   "states": [
+    "payments.taxes"
+   ],
+   "summary": "Tab stop 194 focused the button \"Remove Bob_Padilla_W-<n>.pdf\", which is invisible, has no size, or sits off screen.",
+   "title": "Tab stops on hidden element: button \"Remove Bob_Padilla_W-<n>.pdf\""
+  },
+  {
+   "attachments": [],
+   "attempt": 1,
+   "basis": "failure",
+   "criteria": [
+    "2.4.7",
+    "2.4.3"
+   ],
+   "evidence": [
+    {
+     "evidence": {
+      "box": [
+       1379,
+       480,
+       111,
+       20
+      ],
+      "focus": {
+       "ancestors": [
+        [
+         "_amountRow_6uopq_7"
+        ],
+        [
+         "_yearlyPaidTotal_6uopq_1"
+        ],
+        [
+         "_col_g60ex_14",
+         "_gapMd_g60ex_24"
+        ],
+        [
+         "_panelSection_d3i56_148",
+         "_col_g60ex_14",
+         "_gapMd_g60ex_24"
+        ],
+        [
+         "_panelBody_d3i56_64"
+        ],
+        [
+         "_large_kwlx6_9",
+         "_noHover_3n0se_28",
+         "_shadow_3n0se_25",
+         "_raisedBackground_3n0se_45",
+         "_panel_d3i56_55"
+        ],
+        [
+         "_transitionWrapper_d3i56_5"
+        ],
+        []
+       ],
+       "classes": [
+        "_bodySecondary_qaod7_51",
+        "_text-link_12t49_1",
+        "_actionLink_1op2e_1",
+        "_link_ual8v_4",
+        "_underlineOnHover_ual8v_15"
+       ],
+       "data": {},
+       "heading": "Filing updates and tasks",
+       "landmark": {
+        "name": "",
+        "role": "complementary"
+       },
+       "layer": "document",
+       "name": "View Payments",
+       "rect": [
+        1379,
+        480,
+        111,
+        20
+       ],
+       "role": "button",
+       "tag": "span",
+       "xpath": "/html/body/div[1]/main[1]/div[1]/div[1]/div[4]/div[1]/div[2]/div[2]/div[2]/div[1]/div[2]/aside[1]/div[1]/div[1]/section[2]/div[2]/div[4]/div[1]/span[1]"
+      },
+      "hidden": "invisible",
+      "previous": {
+       "ancestors": [
+        [
+         "_w9Status_zlm7f_1"
+        ],
+        [
+         "_detailItem_1t2mt_1",
+         "_horizontal_1t2mt_6"
+        ],
+        [
+         "_col_g60ex_14",
+         "_gapMd_g60ex_24"
+        ],
+        [
+         "_panelSection_d3i56_148",
+         "_col_g60ex_14",
+         "_gapMd_g60ex_24"
+        ],
+        [
+         "_panelBody_d3i56_64"
+        ],
+        [
+         "_large_kwlx6_9",
+         "_noHover_3n0se_28",
+         "_shadow_3n0se_25",
+         "_raisedBackground_3n0se_45",
+         "_panel_d3i56_55"
+        ],
+        [
+         "_transitionWrapper_d3i56_5"
+        ],
+        []
+       ],
+       "classes": [
+        "_tooltipAnchor_18bac_4"
+       ],
+       "data": {
+        "data-focus-visible": "true"
+       },
+       "heading": "Filing updates and tasks",
+       "landmark": {
+        "name": "",
+        "role": "complementary"
+       },
+       "layer": "document",
+       "name": "Received",
+       "rect": [
+        1422,
+        317,
+        68,
+        20
+       ],
+       "role": "generic",
+       "tag": "div",
+       "xpath": "/html/body/div[1]/main[1]/div[1]/div[1]/div[4]/div[1]/div[2]/div[2]/div[2]/div[1]/div[2]/aside[1]/div[1]/div[1]/section[2]/div[2]/div[1]/div[1]/div[1]"
+      },
+      "stop": 191,
+      "stops": 201
+     },
+     "occurrence": {
+      "ancestors": [
+       [
+        "_amountRow_6uopq_7"
+       ],
+       [
+        "_yearlyPaidTotal_6uopq_1"
+       ],
+       [
+        "_col_g60ex_14",
+        "_gapMd_g60ex_24"
+       ],
+       [
+        "_panelSection_d3i56_148",
+        "_col_g60ex_14",
+        "_gapMd_g60ex_24"
+       ],
+       [
+        "_panelBody_d3i56_64"
+       ],
+       [
+        "_large_kwlx6_9",
+        "_noHover_3n0se_28",
+        "_shadow_3n0se_25",
+        "_raisedBackground_3n0se_45",
+        "_panel_d3i56_55"
+       ],
+       [
+        "_transitionWrapper_d3i56_5"
+       ],
+       []
+      ],
+      "classes": [
+       "_bodySecondary_qaod7_51",
+       "_text-link_12t49_1",
+       "_actionLink_1op2e_1",
+       "_link_ual8v_4",
+       "_underlineOnHover_ual8v_15"
+      ],
+      "data": {},
+      "heading": "Filing updates and tasks",
+      "landmark": {
+       "name": "",
+       "role": "complementary"
+      },
+      "layer": "document",
+      "name": "View Payments",
+      "rect": [
+       1379,
+       480,
+       111,
+       20
+      ],
+      "role": "button",
+      "tag": "span",
+      "xpath": "/html/body/div[1]/main[1]/div[1]/div[1]/div[4]/div[1]/div[2]/div[2]/div[2]/div[1]/div[2]/aside[1]/div[1]/div[1]/section[2]/div[2]/div[4]/div[1]/span[1]"
+     },
+     "state": "payments.taxes"
+    }
+   ],
+   "evidenceHash": "56cfc01cdffa0b903adabd771eb99f5afda1e1abbf5565cb2e5fa9e22f13c05a",
+   "facts": {
+    "criterion": "2.4.7",
+    "criterionName": "Focus Visible",
+    "element": "button \"View Payments\"",
+    "screen": "Taxes: 1099 filing",
+    "screens": 1,
+    "stop": "191"
+   },
+   "family": "focus-visible",
+   "guidance": "High on shared components on primary paths.",
+   "issueId": null,
+   "key": "focus-visible:focus-hidden:f4f1a69f7068",
+   "measured": true,
+   "primary": "payments.taxes",
+   "proposals": [],
+   "rule": "focus-hidden",
+   "screens": 1,
+   "severityDefault": "medium",
+   "source": "scanner",
+   "states": [
+    "payments.taxes"
+   ],
+   "summary": "Tab stop 191 focused the button \"View Payments\", which is invisible, has no size, or sits off screen.",
+   "title": "Tab stops on hidden element: button \"View Payments\""
+  },
+  {
+   "attachments": [],
+   "attempt": 1,
+   "basis": "candidate",
+   "criteria": [
+    "2.1.1"
+   ],
+   "evidence": [
+    {
+     "evidence": {
+      "end": "body",
+      "focusable": false,
+      "source": "pointer",
+      "stops": 201
+     },
+     "occurrence": {
+      "ancestors": [
+       [
+        "_tableHeadRow_1rlph_21"
+       ],
+       [
+        "_tableHead_1rlph_1"
+       ],
+       [
+        "_table_1acga_4"
+       ],
+       [
+        "_tableWrapper_1acga_4"
+       ],
+       [
+        "_filingTableContainer_17hdp_1"
+       ],
+       [
+        "_filingTabContent_l4eet_1"
+       ],
+       [
+        "_taxesDashboardContent_8iz6r_1"
+       ],
+       [
+        "_pageContent_809q8_151",
+        "_pageContentWidth_809q8_184",
+        "_footerPadding_809q8_115"
+       ]
+      ],
+      "classes": [
+       "_tableHead_hi0p4_3",
+       "_alignmentEnd_hi0p4_19",
+       "_collapsibleColumn_1acga_26",
+       "_headCell_17hdp_45",
+       "_canSort_17hdp_49"
+      ],
+      "data": {},
+      "heading": "Filing updates and tasks",
+      "landmark": {
+       "name": "",
+       "role": "main"
+      },
+      "layer": "document",
+      "name": "1099-MISC",
+      "rect": [
+       1107,
+       621,
+       205,
+       40
+      ],
+      "role": "columnheader",
+      "tag": "th",
+      "xpath": "/html/body/div[1]/main[1]/div[1]/div[1]/div[4]/div[1]/div[2]/div[2]/div[2]/div[1]/div[1]/table[1]/thead[1]/tr[1]/th[5]"
+     },
+     "state": "payments.taxes"
+    }
+   ],
+   "evidenceHash": "284a3855045c842678661d8f2d31ebf1ded19d071c3db8a88a0d3045ce86e63b",
+   "facts": {
+    "axeSummary": "",
+    "criterion": "2.1.1",
+    "criterionName": "Keyboard",
+    "element": "columnheader \"<n>-MISC\"",
+    "rule": "not-reached",
+    "screen": "Taxes: 1099 filing",
+    "stops": "201"
+   },
+   "family": "keyboard",
+   "guidance": "High if a task cannot be completed without a mouse.",
+   "issueId": null,
+   "key": "keyboard:not-reached:1e04d46669f5",
+   "measured": false,
+   "primary": "payments.taxes",
+   "proposals": [],
+   "rule": "not-reached",
+   "screens": 1,
+   "severityDefault": "medium",
+   "source": "scanner",
+   "states": [
+    "payments.taxes"
+   ],
+   "summary": "The Tab walk visited 201 stops and never reached the columnheader \"<n>-MISC\", which responds to a click.",
+   "title": "Not reachable by keyboard: columnheader \"<n>-MISC\""
+  },
+  {
+   "attachments": [],
+   "attempt": 1,
+   "basis": "candidate",
+   "criteria": [
+    "2.1.1"
+   ],
+   "evidence": [
+    {
+     "evidence": {
+      "end": "body",
+      "focusable": false,
+      "source": "pointer",
+      "stops": 201
+     },
+     "occurrence": {
+      "ancestors": [
+       [
+        "_tableHeadRow_1rlph_21"
+       ],
+       [
+        "_tableHead_1rlph_1"
+       ],
+       [
+        "_table_1acga_4"
+       ],
+       [
+        "_tableWrapper_1acga_4"
+       ],
+       [
+        "_filingTableContainer_17hdp_1"
+       ],
+       [
+        "_filingTabContent_l4eet_1"
+       ],
+       [
+        "_taxesDashboardContent_8iz6r_1"
+       ],
+       [
+        "_pageContent_809q8_151",
+        "_pageContentWidth_809q8_184",
+        "_footerPadding_809q8_115"
+       ]
+      ],
+      "classes": [
+       "_tableHead_hi0p4_3",
+       "_alignmentStart_hi0p4_11",
+       "_headCell_17hdp_45",
+       "_canSort_17hdp_49"
+      ],
+      "data": {},
+      "heading": "Filing updates and tasks",
+      "landmark": {
+       "name": "",
+       "role": "main"
+      },
+      "layer": "document",
+      "name": "Name",
+      "rect": [
+       386,
+       621,
+       306,
+       40
+      ],
+      "role": "columnheader",
+      "tag": "th",
+      "xpath": "/html/body/div[1]/main[1]/div[1]/div[1]/div[4]/div[1]/div[2]/div[2]/div[2]/div[1]/div[1]/table[1]/thead[1]/tr[1]/th[2]"
+     },
+     "state": "payments.taxes"
+    }
+   ],
+   "evidenceHash": "284a3855045c842678661d8f2d31ebf1ded19d071c3db8a88a0d3045ce86e63b",
+   "facts": {
+    "axeSummary": "",
+    "criterion": "2.1.1",
+    "criterionName": "Keyboard",
+    "element": "columnheader \"Name\"",
+    "rule": "not-reached",
+    "screen": "Taxes: 1099 filing",
+    "stops": "201"
+   },
+   "family": "keyboard",
+   "guidance": "High if a task cannot be completed without a mouse.",
+   "issueId": null,
+   "key": "keyboard:not-reached:37afdd914512",
+   "measured": false,
+   "primary": "payments.taxes",
+   "proposals": [],
+   "rule": "not-reached",
+   "screens": 1,
+   "severityDefault": "medium",
+   "source": "scanner",
+   "states": [
+    "payments.taxes"
+   ],
+   "summary": "The Tab walk visited 201 stops and never reached the columnheader \"Name\", which responds to a click.",
+   "title": "Not reachable by keyboard: columnheader \"Name\""
+  },
+  {
+   "attachments": [],
+   "attempt": 1,
+   "basis": "candidate",
+   "criteria": [
+    "2.1.1"
+   ],
+   "evidence": [
+    {
+     "evidence": {
+      "end": "body",
+      "focusable": false,
+      "source": "pointer",
+      "stops": 201
+     },
+     "occurrence": {
+      "ancestors": [
+       [
+        "_tableHeadRow_1rlph_21"
+       ],
+       [
+        "_tableHead_1rlph_1"
+       ],
+       [
+        "_table_1acga_4"
+       ],
+       [
+        "_tableWrapper_1acga_4"
+       ],
+       [
+        "_filingTableContainer_17hdp_1"
+       ],
+       [
+        "_filingTabContent_l4eet_1"
+       ],
+       [
+        "_taxesDashboardContent_8iz6r_1"
+       ],
+       [
+        "_pageContent_809q8_151",
+        "_pageContentWidth_809q8_184",
+        "_footerPadding_809q8_115"
+       ]
+      ],
+      "classes": [
+       "_tableHead_hi0p4_3",
+       "_alignmentEnd_hi0p4_19",
+       "_collapsibleColumn_1acga_26",
+       "_headCell_17hdp_45",
+       "_canSort_17hdp_49"
+      ],
+      "data": {},
+      "heading": "Filing updates and tasks",
+      "landmark": {
+       "name": "",
+       "role": "main"
+      },
+      "layer": "document",
+      "name": "1099-NEC",
+      "rect": [
+       902,
+       621,
+       205,
+       40
+      ],
+      "role": "columnheader",
+      "tag": "th",
+      "xpath": "/html/body/div[1]/main[1]/div[1]/div[1]/div[4]/div[1]/div[2]/div[2]/div[2]/div[1]/div[1]/table[1]/thead[1]/tr[1]/th[4]"
+     },
+     "state": "payments.taxes"
+    }
+   ],
+   "evidenceHash": "284a3855045c842678661d8f2d31ebf1ded19d071c3db8a88a0d3045ce86e63b",
+   "facts": {
+    "axeSummary": "",
+    "criterion": "2.1.1",
+    "criterionName": "Keyboard",
+    "element": "columnheader \"<n>-NEC\"",
+    "rule": "not-reached",
+    "screen": "Taxes: 1099 filing",
+    "stops": "201"
+   },
+   "family": "keyboard",
+   "guidance": "High if a task cannot be completed without a mouse.",
+   "issueId": null,
+   "key": "keyboard:not-reached:6ad72b716a5b",
+   "measured": false,
+   "primary": "payments.taxes",
+   "proposals": [],
+   "rule": "not-reached",
+   "screens": 1,
+   "severityDefault": "medium",
+   "source": "scanner",
+   "states": [
+    "payments.taxes"
+   ],
+   "summary": "The Tab walk visited 201 stops and never reached the columnheader \"<n>-NEC\", which responds to a click.",
+   "title": "Not reachable by keyboard: columnheader \"<n>-NEC\""
+  },
+  {
+   "attachments": [],
+   "attempt": 1,
+   "basis": "candidate",
+   "criteria": [
+    "2.1.1"
+   ],
+   "evidence": [
+    {
+     "evidence": {
+      "end": "body",
+      "focusable": false,
+      "source": "pointer",
+      "stops": 201
+     },
+     "occurrence": {
+      "ancestors": [
+       [
+        "_dsTabView_95hq1_3"
+       ],
+       [
+        "_taxesDashboardContent_8iz6r_1"
+       ],
+       [
+        "_pageContent_809q8_151",
+        "_pageContentWidth_809q8_184",
+        "_footerPadding_809q8_115"
+       ],
+       [
+        "_dashboardContent_809q8_29"
+       ],
+       [
+        "_layout_809q8_18"
+       ],
+       [
+        "_wrapper_809q8_3"
+       ],
+       [],
+       [
+        "_main_1gb3b_1"
+       ]
+      ],
+      "classes": [
+       "_bodySecondary_qaod7_51",
+       "_dsTabViewTab_95hq1_9"
+      ],
+      "data": {},
+      "heading": "Taxes",
+      "landmark": {
+       "name": "",
+       "role": "main"
+      },
+      "layer": "document",
+      "name": "",
+      "rect": [
+       439,
+       184,
+       99,
+       40
+      ],
+      "role": "generic",
+      "tag": "div",
+      "xpath": "/html/body/div[1]/main[1]/div[1]/div[1]/div[4]/div[1]/div[2]/div[2]/div[1]/div[2]"
+     },
+     "state": "payments.taxes"
+    },
+    {
+     "evidence": {
+      "end": "body",
+      "focusable": false,
+      "source": "pointer",
+      "stops": 53
+     },
+     "occurrence": {
+      "ancestors": [
+       [
+        "_dsTabView_95hq1_3"
+       ],
+       [
+        "_taxesDashboardContent_8iz6r_1"
+       ],
+       [
+        "_pageContent_809q8_151",
+        "_pageContentWidth_809q8_184",
+        "_footerPadding_809q8_115"
+       ],
+       [
+        "_dashboardContent_809q8_29"
+       ],
+       [
+        "_layout_809q8_18"
+       ],
+       [
+        "_wrapper_809q8_3"
+       ],
+       [],
+       [
+        "_main_1gb3b_1"
+       ]
+      ],
+      "classes": [
+       "_bodySecondary_qaod7_51",
+       "_dsTabViewTab_95hq1_9"
+      ],
+      "data": {},
+      "heading": "Taxes",
+      "landmark": {
+       "name": "",
+       "role": "main"
+      },
+      "layer": "document",
+      "name": "",
+      "rect": [
+       346,
+       184,
+       69,
+       40
+      ],
+      "role": "generic",
+      "tag": "div",
+      "xpath": "/html/body/div[1]/main[1]/div[1]/div[1]/div[4]/div[1]/div[2]/div[2]/div[1]/div[1]"
+     },
+     "state": "payments.taxes-documents"
+    }
+   ],
+   "evidenceHash": "0aadc1c0026df061cd6c8eb962ae03964b8eedf5c3bd282d09fe09928c31be2e",
+   "facts": {
+    "axeSummary": "",
+    "criterion": "2.1.1",
+    "criterionName": "Keyboard",
+    "element": "text in \"Taxes\"",
+    "rule": "not-reached",
+    "screen": "Taxes: 1099 filing",
+    "stops": "201"
+   },
+   "family": "keyboard",
+   "guidance": "High if a task cannot be completed without a mouse.",
+   "issueId": null,
+   "key": "keyboard:not-reached:e6bb3d56e73e",
+   "measured": false,
+   "primary": "payments.taxes",
+   "proposals": [],
+   "rule": "not-reached",
+   "screens": 2,
+   "severityDefault": "medium",
+   "source": "scanner",
+   "states": [
+    "payments.taxes",
+    "payments.taxes-documents"
+   ],
+   "summary": "The Tab walk visited 201 stops and never reached the text in \"Taxes\", which responds to a click.",
+   "title": "Not reachable by keyboard: text in \"Taxes\""
+  },
+  {
+   "attachments": [],
+   "attempt": 1,
+   "basis": "violation",
+   "criteria": [
+    "4.1.2"
+   ],
+   "evidence": [
+    {
+     "evidence": {
+      "failureSummary": "Fix all of the following:\n  Focusable content should be disabled or be removed from the DOM\n  Focusable content should have tabindex=\"-1\" or be removed from the DOM"
+     },
+     "occurrence": {
+      "ancestors": [
+       [],
+       [
+        "_filingTableContainer_17hdp_1"
+       ],
+       [
+        "_filingTabContent_l4eet_1"
+       ],
+       [
+        "_taxesDashboardContent_8iz6r_1"
+       ],
+       [
+        "_pageContent_809q8_151",
+        "_pageContentWidth_809q8_184",
+        "_footerPadding_809q8_115"
+       ],
+       [
+        "_dashboardContent_809q8_29"
+       ],
+       [
+        "_layout_809q8_18"
+       ],
+       [
+        "_wrapper_809q8_3"
+       ]
+      ],
+      "classes": [
+       "_transitionWrapper_d3i56_5"
+      ],
+      "data": {},
+      "heading": "Filing updates and tasks",
+      "landmark": {
+       "name": "",
+       "role": "main"
+      },
+      "layer": "document",
+      "name": "",
+      "rect": [
+       1122,
+       621,
+       392,
+       1060
+      ],
+      "role": "",
+      "tag": "aside",
+      "xpath": "/html/body/div[1]/main[1]/div[1]/div[1]/div[4]/div[1]/div[2]/div[2]/div[2]/div[1]/div[2]/aside[1]"
+     },
+     "state": "payments.taxes"
+    }
+   ],
+   "evidenceHash": "f1c1350019b7fe3caca83cbdbd10afc111978449f8c964d21f1045b31bd30c78",
+   "facts": {
+    "announced": " \"\"",
+    "axeSummary": "Focusable content should be disabled or be removed from the DOM; Focusable content should have tabindex=\"-1\" or be removed from the DOM",
+    "criterion": "4.1.2",
+    "criterionName": "Name, Role, Value",
+    "element": "text in \"Filing updates and tasks\"",
+    "rule": "aria-hidden-focus",
+    "screen": "Taxes: 1099 filing"
+   },
+   "family": "role-state",
+   "guidance": "Low for optional ARIA or an invalid autocomplete token; high when aria-hidden hides the whole page.",
+   "issueId": null,
+   "key": "role-state:aria-hidden-focus:333eea643c95",
+   "measured": false,
+   "primary": "payments.taxes",
+   "proposals": [],
+   "rule": "aria-hidden-focus",
+   "screens": 1,
+   "severityDefault": "medium",
+   "source": "scanner",
+   "states": [
+    "payments.taxes"
+   ],
+   "summary": "aria-hidden-focus: announced as  \"\". Focusable content should be disabled or be removed from the DOM; Focusable content should have tabindex=\"-1\" or be removed from the DOM",
+   "title": "Focusable but hidden: text in \"Filing updates and tasks\""
+  }
+ ],
+ "primaries": [
+  "payments.taxes"
+ ],
+ "reach": {
+  "baseUrl": "https://demo.mercury.com",
+  "data": "data",
+  "map": "build/map.json",
+  "run": "2026-10-03-1525",
+  "workspace": "a11y"
+ },
+ "run": "2026-10-03-1525"
+}

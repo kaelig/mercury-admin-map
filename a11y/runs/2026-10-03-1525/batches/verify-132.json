@@ -1,0 +1,339 @@
+{
+ "area": "cards",
+ "batch": "verify-132",
+ "findings": [
+  {
+   "attachments": [],
+   "attempt": 1,
+   "basis": "violation",
+   "criteria": [
+    "1.1.1"
+   ],
+   "evidence": [
+    {
+     "evidence": {
+      "failureSummary": "Fix any of the following:\n  aria-label attribute does not exist or is empty\n  aria-labelledby attribute does not exist, references elements that do not exist or references elements that are empty\n  Element has no title attribute",
+      "messageKey": "noAttr"
+     },
+     "occurrence": {
+      "ancestors": [
+       [
+        "_bars_1izx5_3"
+       ],
+       [
+        "_usageMeter_ted14_15"
+       ],
+       [
+        "_root_ted14_1"
+       ],
+       [
+        "_headerSectionText_re3p4_40"
+       ],
+       [
+        "_headerSection_re3p4_16"
+       ],
+       [
+        "_cardRoot_ihrj0_28"
+       ],
+       [
+        "_large_kwlx6_9",
+        "_noHover_3n0se_28",
+        "_shadow_3n0se_25",
+        "_raisedBackground_3n0se_45",
+        "_cardDetailsBox_1f9jt_47"
+       ],
+       [
+        "_cardDetailsCardWrapper_1f9jt_13",
+        "_visible_1f9jt_26"
+       ]
+      ],
+      "classes": [
+       "_bar_1izx5_3",
+       "_pendingBar_1izx5_27"
+      ],
+      "data": {},
+      "heading": "",
+      "landmark": {
+       "name": "",
+       "role": "main"
+      },
+      "layer": "top",
+      "name": "",
+      "rect": [
+       955,
+       181,
+       95,
+       14
+      ],
+      "role": "meter",
+      "tag": "div",
+      "xpath": "/html/body/div[1]/main[1]/div[1]/div[1]/div[4]/div[1]/div[2]/div[6]/div[2]/div[1]/div[1]/div[1]/div[1]/section[1]/div[1]/div[1]/div[1]"
+     },
+     "state": "cards.detail-virtual"
+    },
+    {
+     "evidence": {
+      "failureSummary": "Fix any of the following:\n  aria-label attribute does not exist or is empty\n  aria-labelledby attribute does not exist, references elements that do not exist or references elements that are empty\n  Element has no title attribute",
+      "messageKey": "noAttr"
+     },
+     "occurrence": {
+      "ancestors": [
+       [
+        "_bars_1izx5_3"
+       ],
+       [
+        "_usageMeter_ted14_15"
+       ],
+       [
+        "_root_ted14_1",
+        "_open_ted14_50"
+       ],
+       [
+        "_headerSectionText_re3p4_40"
+       ],
+       [
+        "_headerSection_re3p4_16",
+        "_open_re3p4_53"
+       ],
+       [
+        "_cardRoot_ihrj0_28"
+       ],
+       [
+        "_large_kwlx6_9",
+        "_noHover_3n0se_28",
+        "_shadow_3n0se_25",
+        "_raisedBackground_3n0se_45",
+        "_cardDetailsBox_1f9jt_47"
+       ],
+       [
+        "_cardDetailsCardWrapper_1f9jt_13",
+        "_visible_1f9jt_26"
+       ]
+      ],
+      "classes": [
+       "_bar_1izx5_3",
+       "_pendingBar_1izx5_27"
+      ],
+      "data": {},
+      "heading": "Cards",
+      "landmark": {
+       "name": "",
+       "role": "main"
+      },
+      "layer": "document",
+      "name": "",
+      "rect": [
+       955,
+       181,
+       95,
+       14
+      ],
+      "role": "meter",
+      "tag": "div",
+      "xpath": "/html/body/div[1]/main[1]/div[1]/div[1]/div[4]/div[1]/div[2]/div[6]/div[2]/div[1]/div[1]/div[1]/div[1]/section[1]/div[1]/div[1]/div[1]"
+     },
+     "state": "cards.spend-details"
+    }
+   ],
+   "evidenceHash": "c8e440c8ae79a251c129ab4831ed9cd06c5f789cc8a6bb5b3d462edb84f58517",
+   "facts": {
+    "announced": "meter \"\"",
+    "axeSummary": "aria-label attribute does not exist or is empty; aria-labelledby attribute does not exist, references elements that do not exist or references elements that ar…",
+    "criterion": "1.1.1",
+    "criterionName": "Non-text Content",
+    "element": "meter in the main landmark",
+    "rule": "aria-meter-name",
+    "screen": "Card detail: virtual card with limit"
+   },
+   "family": "name",
+   "guidance": "High for an unnamed form control or the sole primary action.",
+   "issueId": null,
+   "key": "name:aria-meter-name:50c9f1e4749a",
+   "measured": false,
+   "primary": "cards.detail-virtual",
+   "proposals": [],
+   "rule": "aria-meter-name",
+   "screens": 7,
+   "severityDefault": "medium",
+   "source": "scanner",
+   "states": [
+    "cards.detail-virtual",
+    "cards.spend-details"
+   ],
+   "summary": "aria-meter-name: announced as meter \"\". aria-label attribute does not exist or is empty; aria-labelledby attribute does not exist, references elements that do not exist or references elements that ar…",
+   "title": "Missing or unclear name: meter in the main landmark"
+  },
+  {
+   "attachments": [],
+   "attempt": 1,
+   "basis": "violation",
+   "criteria": [
+    "1.1.1"
+   ],
+   "evidence": [
+    {
+     "evidence": {
+      "failureSummary": "Fix any of the following:\n  aria-label attribute does not exist or is empty\n  aria-labelledby attribute does not exist, references elements that do not exist or references elements that are empty\n  Element has no title attribute",
+      "messageKey": "noAttr"
+     },
+     "occurrence": {
+      "ancestors": [
+       [
+        "_bars_1izx5_3"
+       ],
+       [
+        "_usageMeter_ted14_15"
+       ],
+       [
+        "_root_ted14_1"
+       ],
+       [
+        "_headerSectionText_re3p4_40"
+       ],
+       [
+        "_headerSection_re3p4_16"
+       ],
+       [
+        "_cardRoot_ihrj0_28"
+       ],
+       [
+        "_large_kwlx6_9",
+        "_noHover_3n0se_28",
+        "_shadow_3n0se_25",
+        "_raisedBackground_3n0se_45",
+        "_cardDetailsBox_1f9jt_47"
+       ],
+       [
+        "_cardDetailsCardWrapper_1f9jt_13",
+        "_visible_1f9jt_26"
+       ]
+      ],
+      "classes": [
+       "_bar_1izx5_3",
+       "_postedBar_1izx5_23"
+      ],
+      "data": {},
+      "heading": "",
+      "landmark": {
+       "name": "",
+       "role": "main"
+      },
+      "layer": "top",
+      "name": "",
+      "rect": [
+       955,
+       181,
+       64,
+       14
+      ],
+      "role": "meter",
+      "tag": "div",
+      "xpath": "/html/body/div[1]/main[1]/div[1]/div[1]/div[4]/div[1]/div[2]/div[6]/div[2]/div[1]/div[1]/div[1]/div[1]/section[1]/div[1]/div[1]/div[2]"
+     },
+     "state": "cards.detail-virtual"
+    },
+    {
+     "evidence": {
+      "failureSummary": "Fix any of the following:\n  aria-label attribute does not exist or is empty\n  aria-labelledby attribute does not exist, references elements that do not exist or references elements that are empty\n  Element has no title attribute",
+      "messageKey": "noAttr"
+     },
+     "occurrence": {
+      "ancestors": [
+       [
+        "_bars_1izx5_3"
+       ],
+       [
+        "_usageMeter_ted14_15"
+       ],
+       [
+        "_root_ted14_1",
+        "_open_ted14_50"
+       ],
+       [
+        "_headerSectionText_re3p4_40"
+       ],
+       [
+        "_headerSection_re3p4_16",
+        "_open_re3p4_53"
+       ],
+       [
+        "_cardRoot_ihrj0_28"
+       ],
+       [
+        "_large_kwlx6_9",
+        "_noHover_3n0se_28",
+        "_shadow_3n0se_25",
+        "_raisedBackground_3n0se_45",
+        "_cardDetailsBox_1f9jt_47"
+       ],
+       [
+        "_cardDetailsCardWrapper_1f9jt_13",
+        "_visible_1f9jt_26"
+       ]
+      ],
+      "classes": [
+       "_bar_1izx5_3",
+       "_postedBar_1izx5_23"
+      ],
+      "data": {},
+      "heading": "Cards",
+      "landmark": {
+       "name": "",
+       "role": "main"
+      },
+      "layer": "document",
+      "name": "",
+      "rect": [
+       955,
+       181,
+       64,
+       14
+      ],
+      "role": "meter",
+      "tag": "div",
+      "xpath": "/html/body/div[1]/main[1]/div[1]/div[1]/div[4]/div[1]/div[2]/div[6]/div[2]/div[1]/div[1]/div[1]/div[1]/section[1]/div[1]/div[1]/div[2]"
+     },
+     "state": "cards.spend-details"
+    }
+   ],
+   "evidenceHash": "c8e440c8ae79a251c129ab4831ed9cd06c5f789cc8a6bb5b3d462edb84f58517",
+   "facts": {
+    "announced": "meter \"\"",
+    "axeSummary": "aria-label attribute does not exist or is empty; aria-labelledby attribute does not exist, references elements that do not exist or references elements that ar…",
+    "criterion": "1.1.1",
+    "criterionName": "Non-text Content",
+    "element": "meter in the main landmark",
+    "rule": "aria-meter-name",
+    "screen": "Card detail: virtual card with limit"
+   },
+   "family": "name",
+   "guidance": "High for an unnamed form control or the sole primary action.",
+   "issueId": null,
+   "key": "name:aria-meter-name:d7c6a74ea57c",
+   "measured": false,
+   "primary": "cards.detail-virtual",
+   "proposals": [],
+   "rule": "aria-meter-name",
+   "screens": 7,
+   "severityDefault": "medium",
+   "source": "scanner",
+   "states": [
+    "cards.detail-virtual",
+    "cards.spend-details"
+   ],
+   "summary": "aria-meter-name: announced as meter \"\". aria-label attribute does not exist or is empty; aria-labelledby attribute does not exist, references elements that do not exist or references elements that ar…",
+   "title": "Missing or unclear name: meter in the main landmark"
+  }
+ ],
+ "primaries": [
+  "cards.detail-virtual"
+ ],
+ "reach": {
+  "baseUrl": "https://demo.mercury.com",
+  "data": "data",
+  "map": "build/map.json",
+  "run": "2026-10-03-1525",
+  "workspace": "a11y"
+ },
+ "run": "2026-10-03-1525"
+}

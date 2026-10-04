@@ -1,0 +1,114 @@
+{
+ "area": "transactions",
+ "batch": "verify-397",
+ "findings": [
+  {
+   "attachments": [],
+   "attempt": 1,
+   "basis": "violation",
+   "criteria": [
+    "1.3.1"
+   ],
+   "evidence": [
+    {
+     "evidence": {
+      "failureSummary": "Fix any of the following:\n  Element has children which are not allowed: [role=switch]",
+      "messageKey": "unallowed",
+      "values": "[role=switch]"
+     },
+     "occurrence": {
+      "ancestors": [
+       [],
+       [
+        "_toolbarButtonsContainer_54yyd_221"
+       ],
+       [
+        "_filtersAndExportButton_1ow20_72"
+       ],
+       [
+        "_topContent_1ow20_3"
+       ],
+       [
+        "_transactionsPageDashboardWrapper_1ow20_48"
+       ],
+       [
+        "_dashboardContent_809q8_29",
+        "_scrollContainer_809q8_29"
+       ],
+       [
+        "_layout_809q8_18"
+       ],
+       [
+        "_wrapper_809q8_3"
+       ]
+      ],
+      "classes": [
+       "_menu_54yyd_84",
+       "_mainMenu_54yyd_120",
+       "_withGroupBy_54yyd_123"
+      ],
+      "data": {
+       "data-dialog": "",
+       "data-enter": "true",
+       "data-open": "true"
+      },
+      "heading": "",
+      "landmark": {
+       "name": "",
+       "role": "main"
+      },
+      "layer": "top",
+      "name": "Settings",
+      "rect": [
+       959,
+       224,
+       340,
+       128
+      ],
+      "role": "menu",
+      "tag": "div",
+      "xpath": "/html/body/div[1]/main[1]/div[1]/div[1]/div[4]/div[1]/div[2]/div[2]/div[1]/div[2]/div[3]/div[1]"
+     },
+     "state": "transactions.settings-menu"
+    }
+   ],
+   "evidenceHash": "33d4a7e87ca87b8ec2ee6615d0fa7c838f0f03fc60fde1725afe2c790d254625",
+   "facts": {
+    "announced": "menu \"Settings\"",
+    "axeSummary": "Element has children which are not allowed: [role=switch]",
+    "criterion": "1.3.1",
+    "criterionName": "Info and Relationships",
+    "element": "menu \"Settings\"",
+    "rule": "aria-required-children",
+    "screen": "Table settings menu"
+   },
+   "family": "role-state",
+   "guidance": "Low for optional ARIA or an invalid autocomplete token; high when aria-hidden hides the whole page.",
+   "issueId": null,
+   "key": "role-state:aria-required-children:e57e75281fb8",
+   "measured": false,
+   "primary": "transactions.settings-menu",
+   "proposals": [],
+   "rule": "aria-required-children",
+   "screens": 1,
+   "severityDefault": "medium",
+   "source": "scanner",
+   "states": [
+    "transactions.settings-menu"
+   ],
+   "summary": "aria-required-children: announced as menu \"Settings\". Element has children which are not allowed: [role=switch]",
+   "title": "Wrong role or state: menu \"Settings\""
+  }
+ ],
+ "primaries": [
+  "transactions.settings-menu"
+ ],
+ "reach": {
+  "baseUrl": "https://demo.mercury.com",
+  "data": "data",
+  "map": "build/map.json",
+  "run": "2026-10-03-1525",
+  "workspace": "a11y"
+ },
+ "run": "2026-10-03-1525"
+}

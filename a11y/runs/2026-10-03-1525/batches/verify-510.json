@@ -1,0 +1,114 @@
+{
+ "area": "payments",
+ "batch": "verify-510",
+ "findings": [
+  {
+   "attachments": [],
+   "attempt": 1,
+   "basis": "candidate",
+   "criteria": [
+    "4.1.2"
+   ],
+   "evidence": [
+    {
+     "evidence": {
+      "description": "",
+      "name": "2026",
+      "role": "menuitem",
+      "states": {},
+      "template": "menuitem \"<n>\""
+     },
+     "occurrence": {
+      "ancestors": [
+       [
+        "_dropdownMenu_vz05y_4",
+        "_zIndexDefault_1fl3q_5"
+       ],
+       [],
+       [
+        "_splitButtonContainer_gfxsf_5",
+        "_taxYearSelector_4cxlj_1"
+       ],
+       [
+        "_toolbarLeft_l4eet_16"
+       ],
+       [
+        "_toolbar_l4eet_7"
+       ],
+       [
+        "_filingTabContent_l4eet_1"
+       ],
+       [
+        "_taxesDashboardContent_8iz6r_1"
+       ],
+       [
+        "_pageContent_809q8_151",
+        "_pageContentWidth_809q8_184",
+        "_footerPadding_809q8_115"
+       ]
+      ],
+      "classes": [
+       "_currentlySelected_4cxlj_2",
+       "_menuItem_1yc9d_56"
+      ],
+      "data": {},
+      "heading": "",
+      "landmark": {
+       "name": "",
+       "role": "main"
+      },
+      "layer": "top",
+      "name": "2026",
+      "rect": [
+       469,
+       288,
+       61,
+       40
+      ],
+      "role": "menuitem",
+      "tag": "div",
+      "xpath": "/html/body/div[1]/main[1]/div[1]/div[1]/div[4]/div[1]/div[2]/div[2]/div[2]/section[1]/div[1]/div[1]/div[2]/div[1]/div[1]"
+     },
+     "state": "payments.taxes-year-menu"
+    }
+   ],
+   "evidenceHash": "ae2eb4f0f22c5fa91ec76920cda8acbdcdac86594c1e600f5c218576d902b906",
+   "facts": {
+    "announced": "menuitem \"<n>\"",
+    "axeSummary": "",
+    "criterion": "4.1.2",
+    "criterionName": "Name, Role, Value",
+    "element": "menuitem \"<n>\"",
+    "rule": "announced-as",
+    "screen": "Tax year menu"
+   },
+   "family": "role-state",
+   "guidance": "Low for optional ARIA or an invalid autocomplete token; high when aria-hidden hides the whole page.",
+   "issueId": null,
+   "key": "role-state:announced-as:26dd05f719f5",
+   "measured": false,
+   "primary": "payments.taxes-year-menu",
+   "proposals": [],
+   "rule": "announced-as",
+   "screens": 1,
+   "severityDefault": "medium",
+   "source": "scanner",
+   "states": [
+    "payments.taxes-year-menu"
+   ],
+   "summary": "announced-as: announced as menuitem \"<n>\".",
+   "title": "Wrong role or state: menuitem \"<n>\""
+  }
+ ],
+ "primaries": [
+  "payments.taxes-year-menu"
+ ],
+ "reach": {
+  "baseUrl": "https://demo.mercury.com",
+  "data": "data",
+  "map": "build/map.json",
+  "run": "2026-10-03-1525",
+  "workspace": "a11y"
+ },
+ "run": "2026-10-03-1525"
+}

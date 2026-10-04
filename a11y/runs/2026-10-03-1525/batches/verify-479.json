@@ -1,0 +1,335 @@
+{
+ "area": "home",
+ "batch": "verify-479",
+ "findings": [
+  {
+   "attachments": [],
+   "attempt": 1,
+   "basis": "candidate",
+   "criteria": [
+    "4.1.2"
+   ],
+   "evidence": [
+    {
+     "evidence": {
+      "description": "",
+      "name": "Completed",
+      "role": "menuitem",
+      "states": {},
+      "template": "menuitem \"Completed\""
+     },
+     "occurrence": {
+      "ancestors": [
+       [
+        "_chip_1xw00_8",
+        "_inactive_1xw00_119",
+        "_truncateText_1xw00_16"
+       ],
+       [
+        "_facets_grqat_22"
+       ],
+       [
+        "_tableActions_1bvy2_1"
+       ],
+       [
+        "_pageContent_809q8_151",
+        "_pageContentWidth_809q8_184",
+        "_footerPadding_809q8_115"
+       ],
+       [
+        "_dashboardContent_809q8_29"
+       ],
+       [
+        "_layout_809q8_18"
+       ],
+       [
+        "_wrapper_809q8_3"
+       ],
+       []
+      ],
+      "classes": [
+       "_mainElement_1xw00_24",
+       "_interactive_1xw00_134"
+      ],
+      "data": {},
+      "heading": "Tasks",
+      "landmark": {
+       "name": "",
+       "role": "main"
+      },
+      "layer": "document",
+      "name": "Completed",
+      "rect": [
+       458,
+       184,
+       101,
+       32
+      ],
+      "role": "menuitem",
+      "tag": "button",
+      "xpath": "/html/body/div[1]/main[1]/div[1]/div[1]/div[4]/div[1]/div[2]/div[2]/span[1]/span[2]/button[1]"
+     },
+     "state": "home.tasks"
+    },
+    {
+     "evidence": {
+      "description": "",
+      "name": "Completed",
+      "role": "menuitem",
+      "states": {},
+      "template": "menuitem \"Completed\""
+     },
+     "occurrence": {
+      "ancestors": [
+       [
+        "_chip_1xw00_8",
+        "_active_1xw00_161",
+        "_truncateText_1xw00_16"
+       ],
+       [
+        "_facets_grqat_22"
+       ],
+       [
+        "_tableActions_1bvy2_1"
+       ],
+       [
+        "_pageContent_809q8_151",
+        "_pageContentWidth_809q8_184",
+        "_footerPadding_809q8_115"
+       ],
+       [
+        "_dashboardContent_809q8_29"
+       ],
+       [
+        "_layout_809q8_18"
+       ],
+       [
+        "_wrapper_809q8_3"
+       ],
+       []
+      ],
+      "classes": [
+       "_mainElement_1xw00_24",
+       "_interactive_1xw00_134"
+      ],
+      "data": {},
+      "heading": "Tasks",
+      "landmark": {
+       "name": "",
+       "role": "main"
+      },
+      "layer": "document",
+      "name": "Completed",
+      "rect": [
+       458,
+       184,
+       101,
+       32
+      ],
+      "role": "menuitem",
+      "tag": "button",
+      "xpath": "/html/body/div[1]/main[1]/div[1]/div[1]/div[4]/div[1]/div[2]/div[2]/span[1]/span[2]/button[1]"
+     },
+     "state": "home.tasks-completed"
+    }
+   ],
+   "evidenceHash": "ef1637b9ecbb159103910de41b6d998c7509d7bfc83250a61342afc96951f5dc",
+   "facts": {
+    "announced": "menuitem \"Completed\"",
+    "axeSummary": "",
+    "criterion": "4.1.2",
+    "criterionName": "Name, Role, Value",
+    "element": "menuitem \"Completed\"",
+    "rule": "announced-as",
+    "screen": "Tasks: Incomplete"
+   },
+   "family": "role-state",
+   "guidance": "Low for optional ARIA or an invalid autocomplete token; high when aria-hidden hides the whole page.",
+   "issueId": null,
+   "key": "role-state:announced-as:08fb3c30ded9",
+   "measured": false,
+   "primary": "home.tasks",
+   "proposals": [],
+   "rule": "announced-as",
+   "screens": 3,
+   "severityDefault": "medium",
+   "source": "scanner",
+   "states": [
+    "home.tasks",
+    "home.tasks-completed"
+   ],
+   "summary": "announced-as: announced as menuitem \"Completed\".",
+   "title": "Wrong role or state: menuitem \"Completed\""
+  },
+  {
+   "attachments": [],
+   "attempt": 1,
+   "basis": "candidate",
+   "criteria": [
+    "4.1.2"
+   ],
+   "evidence": [
+    {
+     "evidence": {
+      "description": "",
+      "name": "Incomplete",
+      "role": "menuitem",
+      "states": {},
+      "template": "menuitem \"Incomplete\""
+     },
+     "occurrence": {
+      "ancestors": [
+       [
+        "_chip_1xw00_8",
+        "_active_1xw00_161",
+        "_truncateText_1xw00_16"
+       ],
+       [
+        "_facets_grqat_22"
+       ],
+       [
+        "_tableActions_1bvy2_1"
+       ],
+       [
+        "_pageContent_809q8_151",
+        "_pageContentWidth_809q8_184",
+        "_footerPadding_809q8_115"
+       ],
+       [
+        "_dashboardContent_809q8_29"
+       ],
+       [
+        "_layout_809q8_18"
+       ],
+       [
+        "_wrapper_809q8_3"
+       ],
+       []
+      ],
+      "classes": [
+       "_mainElement_1xw00_24",
+       "_interactive_1xw00_134"
+      ],
+      "data": {},
+      "heading": "Tasks",
+      "landmark": {
+       "name": "",
+       "role": "main"
+      },
+      "layer": "document",
+      "name": "Incomplete",
+      "rect": [
+       347,
+       184,
+       101,
+       32
+      ],
+      "role": "menuitem",
+      "tag": "button",
+      "xpath": "/html/body/div[1]/main[1]/div[1]/div[1]/div[4]/div[1]/div[2]/div[2]/span[1]/span[1]/button[1]"
+     },
+     "state": "home.tasks"
+    },
+    {
+     "evidence": {
+      "description": "",
+      "name": "Incomplete",
+      "role": "menuitem",
+      "states": {},
+      "template": "menuitem \"Incomplete\""
+     },
+     "occurrence": {
+      "ancestors": [
+       [
+        "_chip_1xw00_8",
+        "_inactive_1xw00_119",
+        "_truncateText_1xw00_16"
+       ],
+       [
+        "_facets_grqat_22"
+       ],
+       [
+        "_tableActions_1bvy2_1"
+       ],
+       [
+        "_pageContent_809q8_151",
+        "_pageContentWidth_809q8_184",
+        "_footerPadding_809q8_115"
+       ],
+       [
+        "_dashboardContent_809q8_29"
+       ],
+       [
+        "_layout_809q8_18"
+       ],
+       [
+        "_wrapper_809q8_3"
+       ],
+       []
+      ],
+      "classes": [
+       "_mainElement_1xw00_24",
+       "_interactive_1xw00_134"
+      ],
+      "data": {},
+      "heading": "Tasks",
+      "landmark": {
+       "name": "",
+       "role": "main"
+      },
+      "layer": "document",
+      "name": "Incomplete",
+      "rect": [
+       347,
+       184,
+       101,
+       32
+      ],
+      "role": "menuitem",
+      "tag": "button",
+      "xpath": "/html/body/div[1]/main[1]/div[1]/div[1]/div[4]/div[1]/div[2]/div[2]/span[1]/span[1]/button[1]"
+     },
+     "state": "home.tasks-completed"
+    }
+   ],
+   "evidenceHash": "680a46f269b335f2efb71dab0b2a4bda04549da0208b051beb53d2d9d282b32f",
+   "facts": {
+    "announced": "menuitem \"Incomplete\"",
+    "axeSummary": "",
+    "criterion": "4.1.2",
+    "criterionName": "Name, Role, Value",
+    "element": "menuitem \"Incomplete\"",
+    "rule": "announced-as",
+    "screen": "Tasks: Incomplete"
+   },
+   "family": "role-state",
+   "guidance": "Low for optional ARIA or an invalid autocomplete token; high when aria-hidden hides the whole page.",
+   "issueId": null,
+   "key": "role-state:announced-as:36d1981c5361",
+   "measured": false,
+   "primary": "home.tasks",
+   "proposals": [],
+   "rule": "announced-as",
+   "screens": 3,
+   "severityDefault": "medium",
+   "source": "scanner",
+   "states": [
+    "home.tasks",
+    "home.tasks-completed"
+   ],
+   "summary": "announced-as: announced as menuitem \"Incomplete\".",
+   "title": "Wrong role or state: menuitem \"Incomplete\""
+  }
+ ],
+ "primaries": [
+  "home.tasks"
+ ],
+ "reach": {
+  "baseUrl": "https://demo.mercury.com",
+  "data": "data",
+  "map": "build/map.json",
+  "run": "2026-10-03-1525",
+  "workspace": "a11y"
+ },
+ "run": "2026-10-03-1525"
+}

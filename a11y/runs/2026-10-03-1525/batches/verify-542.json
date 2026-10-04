@@ -1,0 +1,211 @@
+{
+ "area": "transactions",
+ "batch": "verify-542",
+ "findings": [
+  {
+   "attachments": [],
+   "attempt": 1,
+   "basis": "candidate",
+   "criteria": [
+    "4.1.2"
+   ],
+   "evidence": [
+    {
+     "evidence": {
+      "description": "",
+      "name": "Show graphs Net change $ 0 . 0 0 Money in $ 0 . 0 0 Money out $ 0 . 0 0",
+      "role": "button",
+      "states": {},
+      "template": "button \"Show graphs Net change <amount> . <n> Money in <amount> . <n> Money out <amount> . <n>\""
+     },
+     "occurrence": {
+      "ancestors": [
+       [
+        "_topContent_1ow20_3"
+       ],
+       [
+        "_transactionsPageDashboardWrapper_1ow20_48"
+       ],
+       [
+        "_dashboardContent_809q8_29",
+        "_scrollContainer_809q8_29"
+       ],
+       [
+        "_layout_809q8_18"
+       ],
+       [
+        "_wrapper_809q8_3"
+       ],
+       [],
+       [
+        "_main_1gb3b_1"
+       ],
+       [
+        "mercury-root"
+       ]
+      ],
+      "classes": [
+       "_wrapper_1apo0_1",
+       "session-replay-block",
+       "_collapsed_1apo0_24",
+       "_clickableWhenCollapsed_1apo0_109"
+      ],
+      "data": {},
+      "heading": "Transactions",
+      "landmark": {
+       "name": "",
+       "role": "main"
+      },
+      "layer": "document",
+      "name": "Show graphs Net change $ 0 . 0 0 Money in $ 0 . 0 0 Money out $ 0 . 0 0",
+      "rect": [
+       220,
+       232,
+       1220,
+       76
+      ],
+      "role": "button",
+      "tag": "div",
+      "xpath": "/html/body/div[1]/main[1]/div[1]/div[1]/div[4]/div[1]/div[2]/div[2]/div[2]"
+     },
+     "state": "transactions.filter-no-results"
+    }
+   ],
+   "evidenceHash": "a6f2ed96bcefb0e108fe6687e042c1fb2dad49b53caa58780aa9328f6cd6713c",
+   "facts": {
+    "announced": "button \"Show graphs Net change <amount> . <n> Money in <amount> . <n> Money out…",
+    "axeSummary": "",
+    "criterion": "4.1.2",
+    "criterionName": "Name, Role, Value",
+    "element": "button \"Show graphs Net change <amount> . <n> Mo…\"",
+    "rule": "announced-as",
+    "screen": "No matching transactions"
+   },
+   "family": "role-state",
+   "guidance": "Low for optional ARIA or an invalid autocomplete token; high when aria-hidden hides the whole page.",
+   "issueId": null,
+   "key": "role-state:announced-as:2f66fe771e2e",
+   "measured": false,
+   "primary": "transactions.filter-no-results",
+   "proposals": [],
+   "rule": "announced-as",
+   "screens": 1,
+   "severityDefault": "medium",
+   "source": "scanner",
+   "states": [
+    "transactions.filter-no-results"
+   ],
+   "summary": "announced-as: announced as button \"Show graphs Net change <amount> . <n> Money in <amount> . <n> Money out….",
+   "title": "Wrong role or state: button \"Show graphs Net change <amount> . <n> Mo…\""
+  },
+  {
+   "attachments": [],
+   "attempt": 1,
+   "basis": "candidate",
+   "criteria": [
+    "4.1.2"
+   ],
+   "evidence": [
+    {
+     "evidence": {
+      "description": "",
+      "name": "= $2,000,000",
+      "role": "menuitem",
+      "states": {
+       "expanded": true,
+       "haspopup": "menu"
+      },
+      "template": "menuitem \"= <amount>\" [expanded=true, haspopup=menu]"
+     },
+     "occurrence": {
+      "ancestors": [
+       [
+        "_chip_1xw00_8",
+        "_active_1xw00_161"
+       ],
+       [],
+       [
+        "_filters_grqat_29"
+       ],
+       [
+        "_tableViewsAndFilters_grqat_82"
+       ],
+       [
+        "_toolbarContainer_grqat_4"
+       ],
+       [
+        "_filtersAndExportButton_1ow20_72"
+       ],
+       [
+        "_topContent_1ow20_3"
+       ],
+       [
+        "_transactionsPageDashboardWrapper_1ow20_48"
+       ]
+      ],
+      "classes": [
+       "_mainElement_1xw00_24",
+       "_interactive_1xw00_134",
+       "_dropdownChip_r52w9_7"
+      ],
+      "data": {},
+      "heading": "Transactions",
+      "landmark": {
+       "name": "",
+       "role": "main"
+      },
+      "layer": "document",
+      "name": "= $2,000,000",
+      "rect": [
+       525,
+       184,
+       140,
+       32
+      ],
+      "role": "menuitem",
+      "tag": "button",
+      "xpath": "/html/body/div[1]/main[1]/div[1]/div[1]/div[4]/div[1]/div[2]/div[2]/div[1]/div[1]/span[1]/span[4]/span[1]/span[1]/button[1]"
+     },
+     "state": "transactions.filter-no-results"
+    }
+   ],
+   "evidenceHash": "4a4a3df94e7186d774596b482bab0a7e5360b83213c96f121bb6dedcd85ed41c",
+   "facts": {
+    "announced": "menuitem \"= <amount>\" [expanded=true, haspopup=menu]",
+    "axeSummary": "",
+    "criterion": "4.1.2",
+    "criterionName": "Name, Role, Value",
+    "element": "menuitem \"= <amount>\"",
+    "rule": "announced-as",
+    "screen": "No matching transactions"
+   },
+   "family": "role-state",
+   "guidance": "Low for optional ARIA or an invalid autocomplete token; high when aria-hidden hides the whole page.",
+   "issueId": null,
+   "key": "role-state:announced-as:74a6b5b6927c",
+   "measured": false,
+   "primary": "transactions.filter-no-results",
+   "proposals": [],
+   "rule": "announced-as",
+   "screens": 1,
+   "severityDefault": "medium",
+   "source": "scanner",
+   "states": [
+    "transactions.filter-no-results"
+   ],
+   "summary": "announced-as: announced as menuitem \"= <amount>\" [expanded=true, haspopup=menu].",
+   "title": "Wrong role or state: menuitem \"= <amount>\""
+  }
+ ],
+ "primaries": [
+  "transactions.filter-no-results"
+ ],
+ "reach": {
+  "baseUrl": "https://demo.mercury.com",
+  "data": "data",
+  "map": "build/map.json",
+  "run": "2026-10-03-1525",
+  "workspace": "a11y"
+ },
+ "run": "2026-10-03-1525"
+}

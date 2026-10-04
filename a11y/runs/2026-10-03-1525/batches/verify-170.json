@@ -1,0 +1,452 @@
+{
+ "area": "cards",
+ "batch": "verify-170",
+ "findings": [
+  {
+   "attachments": [],
+   "attempt": 1,
+   "basis": "failure",
+   "criteria": [
+    "2.4.3"
+   ],
+   "evidence": [
+    {
+     "evidence": {
+      "closedBy": "escape",
+      "focus": {
+       "ancestors": [
+        [
+         "_kebab_4hqh3_102"
+        ],
+        [
+         "_actionButtonsSection_ihrj0_19"
+        ],
+        [
+         "_wrapper_ihrj0_3"
+        ],
+        [
+         "_cardWrapper_ihrj0_32"
+        ],
+        [
+         "_cardRoot_ihrj0_28"
+        ],
+        [
+         "_large_kwlx6_9",
+         "_noHover_3n0se_28",
+         "_shadow_3n0se_25",
+         "_raisedBackground_3n0se_45",
+         "_cardDetailsBox_1f9jt_47"
+        ],
+        [
+         "_cardDetailsCardWrapper_1f9jt_13",
+         "_visible_1f9jt_26"
+        ],
+        [
+         "_contents_1f9jt_1",
+         "_withTabView_1f9jt_8"
+        ]
+       ],
+       "classes": [],
+       "data": {},
+       "heading": "Cards",
+       "landmark": {
+        "name": "",
+        "role": "main"
+       },
+       "layer": "document",
+       "name": "More",
+       "rect": [
+        1201,
+        468,
+        81,
+        32
+       ],
+       "role": "button",
+       "tag": "span",
+       "xpath": "/html/body/div[1]/main[1]/div[1]/div[1]/div[4]/div[1]/div[2]/div[6]/div[2]/div[1]/div[1]/div[2]/div[1]/div[3]/div[1]/span[1]"
+      },
+      "stops": 7,
+      "trace": [
+       {
+        "focus": {
+         "label": "More",
+         "tag": "span",
+         "xpath": "/html/body/div[1]/main[1]/div[1]/div[1]/div[4]/div[1]/div[2]/div[6]/div[2]/div[1]/div[1]/div[2]/div[1]/div[3]/div[1]/span[1]"
+        },
+        "key": "start",
+        "where": "outside"
+       },
+       {
+        "focus": {
+         "label": "Edit nickname",
+         "tag": "div",
+         "xpath": "/html/body/div[1]/main[1]/div[1]/div[1]/div[4]/div[1]/div[2]/div[6]/div[2]/div[1]/div[1]/div[2]/div[1]/div[3]/div[1]/div[1]/div[1]"
+        },
+        "key": "Tab",
+        "where": "outside"
+       },
+       {
+        "focus": {
+         "label": "Edit limit",
+         "tag": "div",
+         "xpath": "/html/body/div[1]/main[1]/div[1]/div[1]/div[4]/div[1]/div[2]/div[6]/div[2]/div[1]/div[1]/div[2]/div[1]/div[3]/div[1]/div[1]/div[2]"
+        },
+        "key": "Tab",
+        "where": "outside"
+       },
+       {
+        "focus": {
+         "label": "Reset PIN",
+         "tag": "div",
+         "xpath": "/html/body/div[1]/main[1]/div[1]/div[1]/div[4]/div[1]/div[2]/div[6]/div[2]/div[1]/div[1]/div[2]/div[1]/div[3]/div[1]/div[1]/div[3]"
+        },
+        "key": "Tab",
+        "where": "outside"
+       },
+       {
+        "focus": {
+         "label": "Transfer card",
+         "tag": "div",
+         "xpath": "/html/body/div[1]/main[1]/div[1]/div[1]/div[4]/div[1]/div[2]/div[6]/div[2]/div[1]/div[1]/div[2]/div[1]/div[3]/div[1]/div[1]/div[4]"
+        },
+        "key": "Tab",
+        "where": "trigger"
+       },
+       {
+        "focus": {
+         "label": "Transfer card? The current cardholder will no longer have access to card details",
+         "tag": "div",
+         "xpath": "/html/body/div[11]/div[1]/div[1]"
+        },
+        "key": "Enter",
+        "where": "outside"
+       },
+       {
+        "focus": {
+         "label": "Transfer card? The current cardholder will no longer have access to card details",
+         "tag": "div",
+         "xpath": "/html/body/div[11]/div[1]/div[1]"
+        },
+        "key": "settle",
+        "where": "inside"
+       },
+       {
+        "focus": {
+         "label": "",
+         "tag": "input",
+         "xpath": "/html/body/div[11]/div[1]/div[1]/div[1]/form[1]/div[1]/div[2]/div[1]/div[1]/div[1]/input[1]"
+        },
+        "key": "Tab",
+        "where": "inside"
+       },
+       {
+        "focus": {
+         "label": "Go back",
+         "tag": "button",
+         "xpath": "/html/body/div[11]/div[1]/div[1]/div[1]/form[1]/div[1]/div[3]/button[1]"
+        },
+        "key": "Tab",
+        "where": "inside"
+       },
+       {
+        "focus": {
+         "label": "Transfer",
+         "tag": "button",
+         "xpath": "/html/body/div[11]/div[1]/div[1]/div[1]/form[1]/div[1]/div[3]/button[2]"
+        },
+        "key": "Tab",
+        "where": "inside"
+       },
+       {
+        "focus": {
+         "label": "",
+         "tag": "input",
+         "xpath": "/html/body/div[11]/div[1]/div[1]/div[1]/form[1]/div[1]/div[2]/div[1]/div[1]/div[1]/input[1]"
+        },
+        "key": "Tab",
+        "where": "inside"
+       },
+       {
+        "focus": {
+         "label": "More",
+         "tag": "span",
+         "xpath": "/html/body/div[1]/main[1]/div[1]/div[1]/div[4]/div[1]/div[2]/div[6]/div[2]/div[1]/div[1]/div[2]/div[1]/div[3]/div[1]/span[1]"
+        },
+        "key": "Escape",
+        "where": "outside"
+       },
+       {
+        "focus": {
+         "label": "More",
+         "tag": "span",
+         "xpath": "/html/body/div[1]/main[1]/div[1]/div[1]/div[4]/div[1]/div[2]/div[6]/div[2]/div[1]/div[1]/div[2]/div[1]/div[3]/div[1]/span[1]"
+        },
+        "key": "settle",
+        "where": "outside"
+       }
+      ]
+     },
+     "occurrence": {
+      "ancestors": [
+       [
+        "_kebabMenu_4hqh3_160",
+        "_menu_4vkue_4"
+       ],
+       [
+        "_kebab_4hqh3_102"
+       ],
+       [
+        "_actionButtonsSection_ihrj0_19"
+       ],
+       [
+        "_wrapper_ihrj0_3"
+       ],
+       [
+        "_cardWrapper_ihrj0_32"
+       ],
+       [
+        "_cardRoot_ihrj0_28"
+       ],
+       [
+        "_large_kwlx6_9",
+        "_noHover_3n0se_28",
+        "_shadow_3n0se_25",
+        "_raisedBackground_3n0se_45",
+        "_cardDetailsBox_1f9jt_47"
+       ],
+       [
+        "_cardDetailsCardWrapper_1f9jt_13",
+        "_visible_1f9jt_26"
+       ]
+      ],
+      "classes": [
+       "_overflowButton_4hqh3_118"
+      ],
+      "data": {},
+      "heading": "Cards",
+      "landmark": {
+       "name": "",
+       "role": "main"
+      },
+      "layer": "document",
+      "name": "Transfer card",
+      "rect": [
+       1118,
+       664,
+       164,
+       52
+      ],
+      "role": "menuitem",
+      "tag": "div",
+      "xpath": "/html/body/div[1]/main[1]/div[1]/div[1]/div[4]/div[1]/div[2]/div[6]/div[2]/div[1]/div[1]/div[2]/div[1]/div[3]/div[1]/div[1]/div[4]"
+     },
+     "state": "cards.transfer-card"
+    }
+   ],
+   "evidenceHash": "96ed67dc41aab37d9b25dba02a55fe6c5fd6d59dd7bdda59925f788fdd031935",
+   "facts": {
+    "criterion": "2.4.3",
+    "criterionName": "Focus Order",
+    "element": "menuitem \"Transfer card\"",
+    "focus": "button \"More\"",
+    "overlay": "unnamed dialog",
+    "screen": "Transfer card modal"
+   },
+   "family": "dialog-focus",
+   "guidance": "High when controls inside are unreachable.",
+   "issueId": null,
+   "key": "dialog-focus:dialog-focus-not-returned:842873c41bea",
+   "measured": false,
+   "primary": "cards.transfer-card",
+   "proposals": [],
+   "rule": "dialog-focus-not-returned",
+   "screens": 1,
+   "severityDefault": "medium",
+   "source": "scanner",
+   "states": [
+    "cards.transfer-card"
+   ],
+   "summary": "Esc closed the unnamed dialog and focus went to the button \"More\", not back to the menuitem \"Transfer card\".",
+   "title": "Focus lost after closing unnamed dialog"
+  },
+  {
+   "attachments": [],
+   "attempt": 1,
+   "basis": "violation",
+   "criteria": [
+    "1.3.5"
+   ],
+   "evidence": [
+    {
+     "evidence": {
+      "failureSummary": "Fix all of the following:\n  the autocomplete attribute is incorrectly formatted"
+     },
+     "occurrence": {
+      "ancestors": [
+       [
+        "_inputWrapper_11c85_6"
+       ],
+       [
+        "_wrapper_1xgdp_8",
+        "_sectionInputUserSelectionComboBox_17ueg_7",
+        "session-replay-mask"
+       ],
+       [
+        "_sectionInputUserSelection_17ueg_1"
+       ],
+       [],
+       [
+        "_contentWrapper_1pxij_1"
+       ],
+       [],
+       [
+        "_large_kwlx6_9",
+        "_noHover_3n0se_28",
+        "_shadow_3n0se_25",
+        "_raisedBackground_3n0se_45",
+        "_card_lo4oy_4",
+        "_defaultPadding_lo4oy_27",
+        "_small_lo4oy_11"
+       ],
+       [
+        "ReactModal__Content",
+        "ReactModal__Content--after-open",
+        "_modal_lo4oy_73"
+       ]
+      ],
+      "classes": [
+       "_input_11c85_6"
+      ],
+      "data": {
+       "data-1p-ignore": "true",
+       "data-active-item": "true",
+       "data-bwignore": "true",
+       "data-lpignore": "true"
+      },
+      "heading": "Transfer card?",
+      "landmark": {
+       "name": "",
+       "role": "form"
+      },
+      "layer": "top",
+      "name": "Transfer to",
+      "rect": [
+       536,
+       508,
+       335,
+       40
+      ],
+      "role": "combobox",
+      "tag": "input",
+      "xpath": "/html/body/div[11]/div[1]/div[1]/div[1]/form[1]/div[1]/div[2]/div[1]/div[1]/div[1]/input[1]"
+     },
+     "state": "cards.transfer-card"
+    },
+    {
+     "evidence": {
+      "failureSummary": "Fix all of the following:\n  the autocomplete attribute is incorrectly formatted"
+     },
+     "occurrence": {
+      "ancestors": [
+       [
+        "_inputWrapper_11c85_6",
+        "_error_11c85_74"
+       ],
+       [
+        "_wrapper_1xgdp_8",
+        "_sectionInputUserSelectionComboBox_17ueg_7",
+        "session-replay-mask"
+       ],
+       [
+        "_sectionInputUserSelection_17ueg_1"
+       ],
+       [],
+       [
+        "_contentWrapper_1pxij_1"
+       ],
+       [],
+       [
+        "_large_kwlx6_9",
+        "_noHover_3n0se_28",
+        "_shadow_3n0se_25",
+        "_raisedBackground_3n0se_45",
+        "_card_lo4oy_4",
+        "_defaultPadding_lo4oy_27",
+        "_small_lo4oy_11"
+       ],
+       [
+        "ReactModal__Content",
+        "ReactModal__Content--after-open",
+        "_modal_lo4oy_73"
+       ]
+      ],
+      "classes": [
+       "_input_11c85_6"
+      ],
+      "data": {
+       "data-1p-ignore": "true",
+       "data-active-item": "true",
+       "data-bwignore": "true",
+       "data-lpignore": "true"
+      },
+      "heading": "Transfer card?",
+      "landmark": {
+       "name": "",
+       "role": "form"
+      },
+      "layer": "top",
+      "name": "Transfer to",
+      "rect": [
+       536,
+       496,
+       335,
+       40
+      ],
+      "role": "combobox",
+      "tag": "input",
+      "xpath": "/html/body/div[11]/div[1]/div[1]/div[1]/form[1]/div[1]/div[2]/div[1]/div[1]/div[1]/input[1]"
+     },
+     "state": "cards.transfer-card-error"
+    }
+   ],
+   "evidenceHash": "7cc5621ac8702cf1fac735fb91400ccebcd490d74893e877ba431fba702c3126",
+   "facts": {
+    "announced": "combobox \"Transfer to\" [expanded=false, haspopup=listbox]",
+    "axeSummary": "the autocomplete attribute is incorrectly formatted",
+    "criterion": "1.3.5",
+    "criterionName": "Identify Input Purpose",
+    "element": "combobox \"Transfer to\"",
+    "rule": "autocomplete-valid",
+    "screen": "Transfer card modal"
+   },
+   "family": "role-state",
+   "guidance": "Low for optional ARIA or an invalid autocomplete token; high when aria-hidden hides the whole page.",
+   "issueId": null,
+   "key": "role-state:autocomplete-valid:3f2bfc8c448a",
+   "measured": false,
+   "primary": "cards.transfer-card",
+   "proposals": [],
+   "rule": "autocomplete-valid",
+   "screens": 2,
+   "severityDefault": "medium",
+   "source": "scanner",
+   "states": [
+    "cards.transfer-card",
+    "cards.transfer-card-error"
+   ],
+   "summary": "autocomplete-valid: announced as combobox \"Transfer to\" [expanded=false, haspopup=listbox]. the autocomplete attribute is incorrectly formatted",
+   "title": "Invalid autocomplete value: combobox \"Transfer to\""
+  }
+ ],
+ "primaries": [
+  "cards.transfer-card"
+ ],
+ "reach": {
+  "baseUrl": "https://demo.mercury.com",
+  "data": "data",
+  "map": "build/map.json",
+  "run": "2026-10-03-1525",
+  "workspace": "a11y"
+ },
+ "run": "2026-10-03-1525"
+}

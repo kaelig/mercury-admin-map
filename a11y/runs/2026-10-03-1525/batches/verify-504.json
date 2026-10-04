@@ -1,0 +1,118 @@
+{
+ "area": "payments",
+ "batch": "verify-504",
+ "findings": [
+  {
+   "attachments": [],
+   "attempt": 1,
+   "basis": "candidate",
+   "criteria": [
+    "4.1.2"
+   ],
+   "evidence": [
+    {
+     "evidence": {
+      "description": "",
+      "name": "",
+      "role": "button",
+      "states": {},
+      "template": "button \"\""
+     },
+     "occurrence": {
+      "ancestors": [
+       [
+        "_header_bipbt_13"
+       ],
+       [
+        "_container_bipbt_1",
+        "_billDetailsCollapsibleSection_1qhzr_18"
+       ],
+       [
+        "_internalSection_1qhzr_40"
+       ],
+       [
+        "_wrapper_1qhzr_1",
+        "_container_1eyrc_1"
+       ],
+       [
+        "_routeContainer_15al5_228"
+       ],
+       [
+        "_routes_15al5_220"
+       ],
+       [
+        "_routeSection_15al5_207"
+       ],
+       [
+        "_container_15al5_4",
+        "_container_10wfz_3",
+        "_closed_15al5_75"
+       ]
+      ],
+      "classes": [
+       "_button_r6b2u_20",
+       "_small_r6b2u_72",
+       "_tertiary_r6b2u_153",
+       "_button_bipbt_30"
+      ],
+      "data": {},
+      "heading": "Upload an attachment",
+      "landmark": {
+       "name": "",
+       "role": "form"
+      },
+      "layer": "document",
+      "name": "",
+      "rect": [
+       951,
+       738,
+       32,
+       32
+      ],
+      "role": "button",
+      "tag": "button",
+      "xpath": "/html/body/div[1]/main[1]/div[1]/div[2]/div[2]/div[1]/div[2]/section[2]/div[1]/div[1]/form[1]/div[6]/div[1]/div[1]/button[1]"
+     },
+     "state": "payments.send-details"
+    }
+   ],
+   "evidenceHash": "970e4a9dacd1add6ca54c39cd475c22031e12e4f9c686b954d4f5f525bf676b3",
+   "facts": {
+    "announced": "button \"\"",
+    "axeSummary": "",
+    "criterion": "4.1.2",
+    "criterionName": "Name, Role, Value",
+    "element": "button in \"Upload an attachment\"",
+    "rule": "announced-as",
+    "screen": "Send: Details step"
+   },
+   "family": "name",
+   "guidance": "High for an unnamed form control or the sole primary action.",
+   "issueId": null,
+   "key": "name:announced-as:d7cc261279db",
+   "measured": false,
+   "primary": "payments.send-details",
+   "proposals": [],
+   "rule": "announced-as",
+   "screens": 1,
+   "severityDefault": "medium",
+   "source": "scanner",
+   "states": [
+    "payments.send-details"
+   ],
+   "summary": "announced-as: announced as button \"\".",
+   "title": "Missing or unclear name: button in \"Upload an attachment\""
+  }
+ ],
+ "primaries": [
+  "payments.send-details"
+ ],
+ "reach": {
+  "baseUrl": "https://demo.mercury.com",
+  "data": "data",
+  "map": "build/map.json",
+  "run": "2026-10-03-1525",
+  "workspace": "a11y"
+ },
+ "run": "2026-10-03-1525"
+}

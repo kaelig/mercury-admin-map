@@ -1,0 +1,379 @@
+{
+ "area": "payments",
+ "batch": "verify-286",
+ "findings": [
+  {
+   "attachments": [],
+   "attempt": 1,
+   "basis": "failure",
+   "criteria": [
+    "2.4.3"
+   ],
+   "evidence": [
+    {
+     "evidence": {
+      "closedBy": "escape",
+      "focus": {
+       "ancestors": [
+        [
+         "_inputWrapper_jvgw4_85"
+        ],
+        [
+         "_recipientSearchBox_jvgw4_10"
+        ],
+        [],
+        [
+         "_recipientsContainer_ajzls_52"
+        ],
+        [
+         "_sectionContainer_ajzls_31"
+        ],
+        [
+         "_container_ajzls_8"
+        ],
+        [
+         "_contentDiv_bcpsw_53",
+         "_noBottomPadding_bcpsw_57",
+         "_contentDivHeightPreset_bcpsw_62",
+         "_contentArea_ajzls_105"
+        ],
+        [
+         "_fullScreenWorkspaceLayout_bcpsw_14",
+         "_fullScreenWorkspaceLayoutBackground_bcpsw_32",
+         "_background_ajzls_3"
+        ]
+       ],
+       "classes": [],
+       "data": {},
+       "heading": "Select a recipient",
+       "landmark": {
+        "name": "",
+        "role": "main"
+       },
+       "layer": "document",
+       "name": "Search",
+       "rect": [
+        440,
+        556,
+        560,
+        40
+       ],
+       "role": "combobox",
+       "tag": "input",
+       "xpath": "/html/body/div[1]/main[1]/div[1]/div[1]/div[3]/div[2]/div[3]/div[1]/div[1]/div[3]/div[1]/div[1]/div[1]/input[1]"
+      },
+      "stops": 1,
+      "trace": [
+       {
+        "focus": {
+         "label": "",
+         "tag": "input",
+         "xpath": "/html/body/div[1]/main[1]/div[1]/div[2]/div[2]/div[1]/div[2]/section[2]/div[1]/div[1]/div[1]/form[1]/div[1]/div[1]/div[1]/div[1]/input[1]"
+        },
+        "key": "start",
+        "where": "outside"
+       },
+       {
+        "focus": {
+         "label": "Ops / Payroll $2,023,267.12 / Checking ••1038",
+         "tag": "button",
+         "xpath": "/html/body/div[1]/main[1]/div[1]/div[2]/div[2]/div[1]/div[2]/section[2]/div[1]/div[1]/div[1]/form[1]/div[2]/button[1]"
+        },
+        "key": "Tab",
+        "where": "trigger"
+       },
+       {
+        "focus": {
+         "label": "AP $226,767.82 / Checking ••1794 AR $0.00 / Checking ••4296 Checking ••0297 $1,3",
+         "tag": "div",
+         "xpath": "/html/body/div[6]/div[1]/div[1]"
+        },
+        "key": "Enter",
+        "where": "outside"
+       },
+       {
+        "focus": {
+         "label": "AP $226,767.82 / Checking ••1794 AR $0.00 / Checking ••4296 Checking ••0297 $1,3",
+         "tag": "div",
+         "xpath": "/html/body/div[6]/div[1]/div[1]"
+        },
+        "key": "settle",
+        "where": "inside"
+       },
+       {
+        "focus": {
+         "label": "",
+         "tag": "input",
+         "xpath": "/html/body/div[1]/main[1]/div[1]/div[1]/div[3]/div[2]/div[3]/div[1]/div[1]/div[3]/div[1]/div[1]/div[1]/input[1]"
+        },
+        "key": "Escape",
+        "where": "outside"
+       },
+       {
+        "focus": {
+         "label": "",
+         "tag": "input",
+         "xpath": "/html/body/div[1]/main[1]/div[1]/div[1]/div[3]/div[2]/div[3]/div[1]/div[1]/div[3]/div[1]/div[1]/div[1]/input[1]"
+        },
+        "key": "settle",
+        "where": "outside"
+       }
+      ]
+     },
+     "occurrence": {
+      "ancestors": [
+       [
+        "_accountSelectorWrapper_dd0l7_6"
+       ],
+       [],
+       [
+        "_amountAndSourceContainer_8dg5w_1"
+       ],
+       [
+        "_routeContainer_15al5_228"
+       ],
+       [
+        "_routes_15al5_220"
+       ],
+       [
+        "_routeSection_15al5_207"
+       ],
+       [
+        "_container_15al5_4",
+        "_container_10wfz_3",
+        "_closed_15al5_75"
+       ],
+       [
+        "_dropzone_15al5_74"
+       ]
+      ],
+      "classes": [
+       "_selectButton_dd0l7_11",
+       "_selectButtonWrapper_dd0l7_11",
+       "session-replay-mask"
+      ],
+      "data": {},
+      "heading": "Amount",
+      "landmark": {
+       "name": "",
+       "role": "form"
+      },
+      "layer": "document",
+      "name": "Send from",
+      "rect": [
+       440,
+       368,
+       560,
+       68
+      ],
+      "role": "combobox",
+      "tag": "button",
+      "xpath": "/html/body/div[1]/main[1]/div[1]/div[2]/div[2]/div[1]/div[2]/section[2]/div[1]/div[1]/div[1]/form[1]/div[2]/button[1]"
+     },
+     "state": "payments.send-from-dropdown"
+    },
+    {
+     "evidence": {
+      "closedBy": "escape",
+      "focus": {
+       "ancestors": [
+        [
+         "_closeButtonWrapper_d3i56_118"
+        ],
+        [
+         "_headerActionsWrapper_d3i56_93"
+        ],
+        [
+         "_panelHeader_d3i56_65"
+        ],
+        [
+         "_large_kwlx6_9",
+         "_noHover_3n0se_28",
+         "_shadow_3n0se_25",
+         "_raisedBackground_3n0se_45",
+         "_panel_d3i56_55"
+        ],
+        [
+         "_transitionWrapper_d3i56_5",
+         "_visible_d3i56_19",
+         "_draftCardWrapper_nfv0v_7"
+        ],
+        [],
+        [
+         "_draftsTableContainer_1o7vl_1",
+         "_isTableCondensed_1o7vl_24"
+        ],
+        []
+       ],
+       "classes": [
+        "_additionalActionsButton_d3i56_99"
+       ],
+       "data": {},
+       "heading": "",
+       "landmark": {
+        "name": "",
+        "role": "complementary"
+       },
+       "layer": "document",
+       "name": "Close detail panel",
+       "rect": [
+        1266,
+        469,
+        24,
+        24
+       ],
+       "role": "button",
+       "tag": "button",
+       "xpath": "/html/body/div[1]/main[1]/div[1]/div[1]/div[4]/div[1]/div[2]/div[2]/div[2]/div[2]/div[2]/div[1]/form[1]/aside[1]/div[1]/section[1]/div[2]/span[1]/button[1]"
+      },
+      "stops": 1,
+      "trace": [
+       {
+        "focus": {
+         "label": "220.00",
+         "tag": "input",
+         "xpath": "/html/body/div[1]/main[1]/div[1]/div[2]/div[2]/div[1]/div[2]/section[2]/div[1]/div[1]/div[1]/form[1]/div[1]/div[1]/div[1]/div[1]/div[1]/input[1]"
+        },
+        "key": "start",
+        "where": "outside"
+       },
+       {
+        "focus": {
+         "label": "Ops / Payroll $2,023,267.12 / Checking ••1038",
+         "tag": "button",
+         "xpath": "/html/body/div[1]/main[1]/div[1]/div[2]/div[2]/div[1]/div[2]/section[2]/div[1]/div[1]/div[1]/form[1]/div[2]/button[1]"
+        },
+        "key": "Tab",
+        "where": "trigger"
+       },
+       {
+        "focus": {
+         "label": "AP $226,767.82 / Checking ••1794 AR $0.00 / Checking ••4296 Checking ••0297 $1,3",
+         "tag": "div",
+         "xpath": "/html/body/div[6]/div[1]/div[1]"
+        },
+        "key": "Enter",
+        "where": "outside"
+       },
+       {
+        "focus": {
+         "label": "AP $226,767.82 / Checking ••1794 AR $0.00 / Checking ••4296 Checking ••0297 $1,3",
+         "tag": "div",
+         "xpath": "/html/body/div[6]/div[1]/div[1]"
+        },
+        "key": "settle",
+        "where": "inside"
+       },
+       {
+        "focus": {
+         "label": "Close detail panel",
+         "tag": "button",
+         "xpath": "/html/body/div[1]/main[1]/div[1]/div[1]/div[4]/div[1]/div[2]/div[2]/div[2]/div[2]/div[2]/div[1]/form[1]/aside[1]/div[1]/section[1]/div[2]/span[1]/button[1]"
+        },
+        "key": "Escape",
+        "where": "outside"
+       },
+       {
+        "focus": {
+         "label": "Close detail panel",
+         "tag": "button",
+         "xpath": "/html/body/div[1]/main[1]/div[1]/div[1]/div[4]/div[1]/div[2]/div[2]/div[2]/div[2]/div[2]/div[1]/form[1]/aside[1]/div[1]/section[1]/div[2]/span[1]/button[1]"
+        },
+        "key": "settle",
+        "where": "outside"
+       }
+      ]
+     },
+     "occurrence": {
+      "ancestors": [
+       [
+        "_accountSelectorWrapper_dd0l7_6"
+       ],
+       [],
+       [
+        "_amountAndSourceContainer_8dg5w_1"
+       ],
+       [
+        "_routeContainer_15al5_228"
+       ],
+       [
+        "_routes_15al5_220"
+       ],
+       [
+        "_routeSection_15al5_207"
+       ],
+       [
+        "_container_15al5_4",
+        "_container_10wfz_3",
+        "_preview-open_15al5_94"
+       ],
+       [
+        "_dropzone_15al5_74"
+       ]
+      ],
+      "classes": [
+       "_selectButton_dd0l7_11",
+       "_selectButtonWrapper_dd0l7_11",
+       "session-replay-mask"
+      ],
+      "data": {},
+      "heading": "Amount",
+      "landmark": {
+       "name": "",
+       "role": "form"
+      },
+      "layer": "document",
+      "name": "Send from",
+      "rect": [
+       80,
+       368,
+       560,
+       68
+      ],
+      "role": "combobox",
+      "tag": "button",
+      "xpath": "/html/body/div[1]/main[1]/div[1]/div[2]/div[2]/div[1]/div[2]/section[2]/div[1]/div[1]/div[1]/form[1]/div[2]/button[1]"
+     },
+     "state": "billpay.send-from-menu"
+    }
+   ],
+   "evidenceHash": "3a2edbb743c3bcd9ae0fb39bfbe45f86fcc8553951c1b1caa640fe8ab760944b",
+   "facts": {
+    "criterion": "2.4.3",
+    "criterionName": "Focus Order",
+    "element": "combobox \"Send from\"",
+    "focus": "combobox \"Search\"",
+    "overlay": "unnamed listbox",
+    "screen": "Send: Send from accounts"
+   },
+   "family": "dialog-focus",
+   "guidance": "High when controls inside are unreachable.",
+   "issueId": null,
+   "key": "dialog-focus:dialog-focus-not-returned:791534494487",
+   "measured": false,
+   "primary": "payments.send-from-dropdown",
+   "proposals": [],
+   "rule": "dialog-focus-not-returned",
+   "screens": 2,
+   "severityDefault": "low",
+   "source": "scanner",
+   "states": [
+    "payments.send-from-dropdown",
+    "billpay.send-from-menu"
+   ],
+   "summary": "Esc closed the unnamed listbox and focus went to the combobox \"Search\", not back to the combobox \"Send from\".",
+   "title": "Focus lost after closing unnamed listbox"
+  }
+ ],
+ "primaries": [
+  "payments.send-from-dropdown"
+ ],
+ "reach": {
+  "baseUrl": "https://demo.mercury.com",
+  "data": "data",
+  "map": "build/map.json",
+  "run": "2026-10-03-1525",
+  "workspace": "a11y"
+ },
+ "run": "2026-10-03-1525"
+}

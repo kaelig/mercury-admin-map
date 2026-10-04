@@ -1,0 +1,319 @@
+{
+ "area": "invoicing",
+ "batch": "verify-219",
+ "findings": [
+  {
+   "attachments": [],
+   "attempt": 1,
+   "basis": "failure",
+   "criteria": [
+    "2.4.7"
+   ],
+   "evidence": [
+    {
+     "evidence": {
+      "diff": 0,
+      "floor": 16,
+      "focusVisible": true,
+      "previous": {
+       "ancestors": [
+        [
+         "_dropdownContainer_sixj2_2"
+        ],
+        [
+         "_sentenceRow_38qef_1"
+        ],
+        [
+         "_wrapper_1ojdq_8"
+        ],
+        [],
+        [
+         "_leftInnerContainer_12jyu_3"
+        ],
+        [
+         "_left_yg1rf_39"
+        ],
+        [
+         "_leftScrollArea_yg1rf_57"
+        ],
+        [
+         "_leftContainer_yg1rf_39",
+         "_splitVariant_yg1rf_82",
+         "_leftBoxShadow_12jyu_10"
+        ]
+       ],
+       "classes": [
+        "_dropdownButton_sixj2_20"
+       ],
+       "data": {},
+       "heading": "Frequency",
+       "landmark": {
+        "name": "",
+        "role": "main"
+       },
+       "layer": "document",
+       "name": "monthly on the 3rd",
+       "rect": [
+        242,
+        389,
+        161,
+        24
+       ],
+       "role": "button",
+       "tag": "button",
+       "xpath": "/html/body/div[1]/main[1]/div[1]/div[2]/div[2]/div[3]/div[1]/div[1]/div[1]/div[1]/div[1]/div[1]/div[2]/div[3]/div[1]/button[1]"
+      },
+      "stop": 8,
+      "stops": 14,
+      "style": [
+       "box-shadow",
+       "outline"
+      ]
+     },
+     "occurrence": {
+      "ancestors": [
+       [
+        "_dropdownContainer_sixj2_2"
+       ],
+       [
+        "_sentenceRow_38qef_1"
+       ],
+       [
+        "_wrapper_1ojdq_8"
+       ],
+       [],
+       [
+        "_leftInnerContainer_12jyu_3"
+       ],
+       [
+        "_left_yg1rf_39"
+       ],
+       [
+        "_leftScrollArea_yg1rf_57"
+       ],
+       [
+        "_leftContainer_yg1rf_39",
+        "_splitVariant_yg1rf_82",
+        "_leftBoxShadow_12jyu_10"
+       ]
+      ],
+      "classes": [
+       "_dropdownButton_sixj2_20"
+      ],
+      "data": {
+       "data-focus-visible": "true"
+      },
+      "heading": "Frequency",
+      "landmark": {
+       "name": "",
+       "role": "main"
+      },
+      "layer": "document",
+      "name": "due on receipt",
+      "rect": [
+       284,
+       469,
+       130,
+       24
+      ],
+      "role": "button",
+      "tag": "button",
+      "xpath": "/html/body/div[1]/main[1]/div[1]/div[2]/div[2]/div[3]/div[1]/div[1]/div[1]/div[1]/div[1]/div[1]/div[2]/div[4]/div[1]/button[1]"
+     },
+     "state": "invoicing.create-series-frequency"
+    }
+   ],
+   "evidenceHash": "db322f871e74e1b9f99712693d2b64888e800a466938456dd8a9520354b2be3c",
+   "facts": {
+    "criterion": "2.4.7",
+    "criterionName": "Focus Visible",
+    "element": "button \"due on receipt\"",
+    "screen": "Series frequency",
+    "screens": 1,
+    "stop": "8"
+   },
+   "family": "focus-visible",
+   "guidance": "High on shared components on primary paths.",
+   "issueId": null,
+   "key": "focus-visible:focus-not-visible:450103362f78",
+   "measured": true,
+   "primary": "invoicing.create-series-frequency",
+   "proposals": [],
+   "rule": "focus-not-visible",
+   "screens": 1,
+   "severityDefault": "medium",
+   "source": "scanner",
+   "states": [
+    "invoicing.create-series-frequency"
+   ],
+   "summary": "Tab stop 8: focusing the button \"due on receipt\" changed no pixels within 8 px of it.",
+   "title": "No visible focus: button \"due on receipt\""
+  },
+  {
+   "attachments": [],
+   "attempt": 1,
+   "basis": "violation",
+   "criteria": [
+    "1.3.5"
+   ],
+   "evidence": [
+    {
+     "evidence": {
+      "failureSummary": "Fix all of the following:\n  the autocomplete attribute is incorrectly formatted"
+     },
+     "occurrence": {
+      "ancestors": [
+       [
+        "_inputBox_q7hf7_93",
+        "_inline_q7hf7_201",
+        "_hasValue_q7hf7_171"
+       ],
+       [
+        "_inputBoxWrapper_q7hf7_93"
+       ],
+       [
+        "_textInputWrapper_q7hf7_24"
+       ],
+       [
+        "_provideDSTextInput_q7hf7_6",
+        "_calendarDateInput_1ml1o_5"
+       ],
+       [
+        "_calendarInputWrapper_1ml1o_11"
+       ],
+       [
+        "_calendarDateInputContainer_1ml1o_5"
+       ],
+       [
+        "_sentenceRow_38qef_1"
+       ],
+       [
+        "_wrapper_1ojdq_8"
+       ]
+      ],
+      "classes": [
+       "_input_q7hf7_93"
+      ],
+      "data": {
+       "data-testid": "invoice-frequency-start-date"
+      },
+      "heading": "Frequency",
+      "landmark": {
+       "name": "",
+       "role": "main"
+      },
+      "layer": "document",
+      "name": "Start date",
+      "rect": [
+       287,
+       228,
+       106,
+       24
+      ],
+      "role": "textbox",
+      "tag": "input",
+      "xpath": "/html/body/div[1]/main[1]/div[1]/div[2]/div[2]/div[3]/div[1]/div[1]/div[1]/div[1]/div[1]/div[1]/div[2]/div[1]/div[1]/div[1]/div[1]/div[1]/div[1]/div[1]/input[1]"
+     },
+     "state": "invoicing.create-series-frequency"
+    },
+    {
+     "evidence": {
+      "failureSummary": "Fix all of the following:\n  the autocomplete attribute is incorrectly formatted"
+     },
+     "occurrence": {
+      "ancestors": [
+       [
+        "_inputBox_q7hf7_93",
+        "_inline_q7hf7_201",
+        "_hasValue_q7hf7_171"
+       ],
+       [
+        "_inputBoxWrapper_q7hf7_93"
+       ],
+       [
+        "_textInputWrapper_q7hf7_24"
+       ],
+       [
+        "_provideDSTextInput_q7hf7_6",
+        "_calendarDateInput_1ml1o_5"
+       ],
+       [
+        "_calendarInputWrapper_1ml1o_11"
+       ],
+       [
+        "_calendarDateInputContainer_1ml1o_5"
+       ],
+       [
+        "_sentenceRow_38qef_1"
+       ],
+       [
+        "_wrapper_1ojdq_8"
+       ]
+      ],
+      "classes": [
+       "_input_q7hf7_93"
+      ],
+      "data": {
+       "data-testid": "invoice-frequency-start-date"
+      },
+      "heading": "Frequency",
+      "landmark": {
+       "name": "",
+       "role": "main"
+      },
+      "layer": "document",
+      "name": "Start date",
+      "rect": [
+       287,
+       228,
+       106,
+       24
+      ],
+      "role": "textbox",
+      "tag": "input",
+      "xpath": "/html/body/div[1]/main[1]/div[1]/div[2]/div[2]/div[3]/div[1]/div[1]/div[1]/div[1]/div[1]/div[1]/div[2]/div[1]/div[1]/div[1]/div[1]/div[1]/div[1]/div[1]/input[1]"
+     },
+     "state": "invoicing.create-series-ends-after"
+    }
+   ],
+   "evidenceHash": "6b207c4e353a290e601e9a94daa038f7640be47d7d1da2c7d61a51ee88b4483c",
+   "facts": {
+    "announced": "textbox \"Start date\"",
+    "axeSummary": "the autocomplete attribute is incorrectly formatted",
+    "criterion": "1.3.5",
+    "criterionName": "Identify Input Purpose",
+    "element": "textbox \"Start date\"",
+    "rule": "autocomplete-valid",
+    "screen": "Series frequency"
+   },
+   "family": "role-state",
+   "guidance": "Low for optional ARIA or an invalid autocomplete token; high when aria-hidden hides the whole page.",
+   "issueId": null,
+   "key": "role-state:autocomplete-valid:363619787e06",
+   "measured": false,
+   "primary": "invoicing.create-series-frequency",
+   "proposals": [],
+   "rule": "autocomplete-valid",
+   "screens": 2,
+   "severityDefault": "medium",
+   "source": "scanner",
+   "states": [
+    "invoicing.create-series-frequency",
+    "invoicing.create-series-ends-after"
+   ],
+   "summary": "autocomplete-valid: announced as textbox \"Start date\". the autocomplete attribute is incorrectly formatted",
+   "title": "Invalid autocomplete value: textbox \"Start date\""
+  }
+ ],
+ "primaries": [
+  "invoicing.create-series-frequency"
+ ],
+ "reach": {
+  "baseUrl": "https://demo.mercury.com",
+  "data": "data",
+  "map": "build/map.json",
+  "run": "2026-10-03-1525",
+  "workspace": "a11y"
+ },
+ "run": "2026-10-03-1525"
+}

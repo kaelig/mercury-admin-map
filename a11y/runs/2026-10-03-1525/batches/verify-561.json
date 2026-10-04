@@ -1,0 +1,113 @@
+{
+ "area": "transactions",
+ "batch": "verify-561",
+ "findings": [
+  {
+   "attachments": [],
+   "attempt": 1,
+   "basis": "candidate",
+   "criteria": [
+    "4.1.2"
+   ],
+   "evidence": [
+    {
+     "evidence": {
+      "description": "",
+      "name": "Show graphs Money out this month −$ 7 0 , 9 4 7 . 7 2",
+      "role": "button",
+      "states": {},
+      "template": "button \"Show graphs Money out this month <amount> <n>\""
+     },
+     "occurrence": {
+      "ancestors": [
+       [
+        "_topContent_1ow20_3"
+       ],
+       [
+        "_transactionsPageDashboardWrapper_1ow20_48"
+       ],
+       [
+        "_dashboardContent_809q8_29",
+        "_scrollContainer_809q8_29"
+       ],
+       [
+        "_layout_809q8_18"
+       ],
+       [
+        "_wrapper_809q8_3"
+       ],
+       [],
+       [
+        "_main_1gb3b_1"
+       ],
+       [
+        "mercury-root"
+       ]
+      ],
+      "classes": [
+       "_wrapper_1apo0_1",
+       "session-replay-block",
+       "_collapsed_1apo0_24",
+       "_clickableWhenCollapsed_1apo0_109"
+      ],
+      "data": {},
+      "heading": "Transactions",
+      "landmark": {
+       "name": "",
+       "role": "main"
+      },
+      "layer": "document",
+      "name": "Show graphs Money out this month −$ 7 0 , 9 4 7 . 7 2",
+      "rect": [
+       220,
+       232,
+       1220,
+       76
+      ],
+      "role": "button",
+      "tag": "div",
+      "xpath": "/html/body/div[1]/main[1]/div[1]/div[1]/div[4]/div[1]/div[2]/div[2]/div[2]"
+     },
+     "state": "transactions.saved-view-applied"
+    }
+   ],
+   "evidenceHash": "c578d560616e6fdf87d3dff12a340060cd4d166360b0278a3985b62f1a656172",
+   "facts": {
+    "announced": "button \"Show graphs Money out this month <amount> <n>\"",
+    "axeSummary": "",
+    "criterion": "4.1.2",
+    "criterionName": "Name, Role, Value",
+    "element": "button \"Show graphs Money out this month <amount…\"",
+    "rule": "announced-as",
+    "screen": "Saved view applied"
+   },
+   "family": "role-state",
+   "guidance": "Low for optional ARIA or an invalid autocomplete token; high when aria-hidden hides the whole page.",
+   "issueId": null,
+   "key": "role-state:announced-as:e54ee09d6842",
+   "measured": false,
+   "primary": "transactions.saved-view-applied",
+   "proposals": [],
+   "rule": "announced-as",
+   "screens": 1,
+   "severityDefault": "medium",
+   "source": "scanner",
+   "states": [
+    "transactions.saved-view-applied"
+   ],
+   "summary": "announced-as: announced as button \"Show graphs Money out this month <amount> <n>\".",
+   "title": "Wrong role or state: button \"Show graphs Money out this month <amount…\""
+  }
+ ],
+ "primaries": [
+  "transactions.saved-view-applied"
+ ],
+ "reach": {
+  "baseUrl": "https://demo.mercury.com",
+  "data": "data",
+  "map": "build/map.json",
+  "run": "2026-10-03-1525",
+  "workspace": "a11y"
+ },
+ "run": "2026-10-03-1525"
+}

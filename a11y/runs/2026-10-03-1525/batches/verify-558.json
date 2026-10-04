@@ -1,0 +1,178 @@
+{
+ "area": "transactions",
+ "batch": "verify-558",
+ "findings": [
+  {
+   "attachments": [],
+   "attempt": 1,
+   "basis": "candidate",
+   "criteria": [
+    "4.1.2"
+   ],
+   "evidence": [
+    {
+     "evidence": {
+      "description": "",
+      "name": "Money Out",
+      "role": "menuitem",
+      "states": {
+       "expanded": false,
+       "haspopup": "menu"
+      },
+      "template": "menuitem \"Money Out\" [expanded=false, haspopup=menu]"
+     },
+     "occurrence": {
+      "ancestors": [
+       [
+        "_chip_1xw00_8",
+        "_active_1xw00_161"
+       ],
+       [],
+       [
+        "_filters_grqat_29"
+       ],
+       [
+        "_tableViewsAndFilters_grqat_82"
+       ],
+       [
+        "_toolbarContainer_grqat_4"
+       ],
+       [
+        "_wrapper_1p8lo_1"
+       ],
+       [
+        "_tabBarLeft_almxf_39"
+       ],
+       [
+        "_tabBar_almxf_27"
+       ]
+      ],
+      "classes": [
+       "_mainElement_1xw00_24",
+       "_interactive_1xw00_134",
+       "_dropdownChip_r52w9_7"
+      ],
+      "data": {},
+      "heading": "Insights",
+      "landmark": {
+       "name": "",
+       "role": "main"
+      },
+      "layer": "document",
+      "name": "Money Out",
+      "rect": [
+       525,
+       196,
+       93,
+       32
+      ],
+      "role": "menuitem",
+      "tag": "button",
+      "xpath": "/html/body/div[1]/main[1]/div[1]/div[1]/div[4]/div[1]/div[2]/div[2]/div[1]/div[1]/div[1]/div[1]/span[1]/span[4]/span[1]/span[1]/button[1]"
+     },
+     "state": "transactions.insights-spending"
+    },
+    {
+     "evidence": {
+      "description": "",
+      "name": "Money Out",
+      "role": "menuitem",
+      "states": {
+       "expanded": false,
+       "haspopup": "menu"
+      },
+      "template": "menuitem \"Money Out\" [expanded=false, haspopup=menu]"
+     },
+     "occurrence": {
+      "ancestors": [
+       [
+        "_chip_1xw00_8",
+        "_active_1xw00_161"
+       ],
+       [],
+       [
+        "_filters_grqat_29"
+       ],
+       [
+        "_tableViewsAndFilters_grqat_82"
+       ],
+       [
+        "_toolbarContainer_grqat_4"
+       ],
+       [
+        "_wrapper_1p8lo_1"
+       ],
+       [
+        "_tabBarLeft_almxf_39"
+       ],
+       [
+        "_tabBar_almxf_27"
+       ]
+      ],
+      "classes": [
+       "_mainElement_1xw00_24",
+       "_interactive_1xw00_134",
+       "_dropdownChip_r52w9_7"
+      ],
+      "data": {},
+      "heading": "Insights",
+      "landmark": {
+       "name": "",
+       "role": "main"
+      },
+      "layer": "document",
+      "name": "Money Out",
+      "rect": [
+       525,
+       84,
+       93,
+       32
+      ],
+      "role": "menuitem",
+      "tag": "button",
+      "xpath": "/html/body/div[1]/main[1]/div[1]/div[1]/div[4]/div[1]/div[2]/div[2]/div[1]/div[1]/div[1]/div[1]/span[1]/span[4]/span[1]/span[1]/button[1]"
+     },
+     "state": "transactions.insights-spending-summary"
+    }
+   ],
+   "evidenceHash": "110ff2703ca3a3ec03b8fe597f6e6c52a34df99872f3a4058a4f45323c7a8b7c",
+   "facts": {
+    "announced": "menuitem \"Money Out\" [expanded=false, haspopup=menu]",
+    "axeSummary": "",
+    "criterion": "4.1.2",
+    "criterionName": "Name, Role, Value",
+    "element": "menuitem \"Money Out\"",
+    "rule": "announced-as",
+    "screen": "Insights: Spending"
+   },
+   "family": "role-state",
+   "guidance": "Low for optional ARIA or an invalid autocomplete token; high when aria-hidden hides the whole page.",
+   "issueId": null,
+   "key": "role-state:announced-as:45f13bbbc4a9",
+   "measured": false,
+   "primary": "transactions.insights-spending",
+   "proposals": [],
+   "rule": "announced-as",
+   "screens": 3,
+   "severityDefault": "medium",
+   "source": "scanner",
+   "states": [
+    "transactions.insights-spending",
+    "transactions.insights-spending-summary"
+   ],
+   "summary": "announced-as: announced as menuitem \"Money Out\" [expanded=false, haspopup=menu].",
+   "title": "Wrong role or state: menuitem \"Money Out\""
+  }
+ ],
+ "primaries": [
+  "transactions.insights-spending"
+ ],
+ "reach": {
+  "baseUrl": "https://demo.mercury.com",
+  "data": "data",
+  "map": "build/map.json",
+  "run": "2026-10-03-1525",
+  "workspace": "a11y"
+ },
+ "run": "2026-10-03-1525"
+}

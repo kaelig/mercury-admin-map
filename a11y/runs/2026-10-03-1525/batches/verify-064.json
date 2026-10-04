@@ -1,0 +1,192 @@
+{
+ "area": "billpay",
+ "batch": "verify-064",
+ "findings": [
+  {
+   "attachments": [],
+   "attempt": 1,
+   "basis": "violation",
+   "criteria": [
+    "4.1.2"
+   ],
+   "evidence": [
+    {
+     "evidence": {
+      "aria-allowed-attr": [
+       "aria-expanded=\"false\""
+      ],
+      "failureSummary": "Fix all of the following:\n  ARIA attribute is not allowed: aria-expanded=\"false\""
+     },
+     "occurrence": {
+      "ancestors": [
+       [
+        "_conversationsDropdownWrapper_1gjng_122"
+       ],
+       [
+        "_headerRight_1gjng_56"
+       ],
+       [
+        "_header_1gjng_5"
+       ],
+       [
+        "_wrapper_uvfpb_3",
+        "_firstPartyChat_uvfpb_7"
+       ],
+       [
+        "_large_kwlx6_9",
+        "_noHover_3n0se_28",
+        "_shadow_3n0se_25",
+        "_raisedBackground_3n0se_45",
+        "_popoverContainer_1hboj_3",
+        "_firstPartyChat_1hboj_7"
+       ],
+       [
+        "_wrapper_gtpm4_1",
+        "_visible_gtpm4_7",
+        "_animationReady_gtpm4_30",
+        "_visibilityWrapper_1floe_172",
+        "_firstPartyChat_1floe_41"
+       ],
+       [
+        "_menuContainer_1floe_8",
+        "_firstPartyChat_1floe_41",
+        "session-replay-unmask"
+       ],
+       [
+        "_wrapper_809q8_3"
+       ]
+      ],
+      "classes": [
+       "_tooltipAnchor_18bac_4"
+      ],
+      "data": {},
+      "heading": "",
+      "landmark": {
+       "name": "",
+       "role": "main"
+      },
+      "layer": "top",
+      "name": "",
+      "rect": [
+       1316,
+       570,
+       40,
+       40
+      ],
+      "role": "generic",
+      "tag": "div",
+      "xpath": "/html/body/div[1]/main[1]/div[1]/div[1]/div[5]/div[1]/div[1]/div[1]/div[1]/div[2]/div[2]/div[1]"
+     },
+     "state": "billpay.auto-categorization-off"
+    },
+    {
+     "evidence": {
+      "aria-allowed-attr": [
+       "aria-expanded=\"false\""
+      ],
+      "failureSummary": "Fix all of the following:\n  ARIA attribute is not allowed: aria-expanded=\"false\""
+     },
+     "occurrence": {
+      "ancestors": [
+       [
+        "_conversationsDropdownWrapper_1gjng_122"
+       ],
+       [
+        "_headerRight_1gjng_56"
+       ],
+       [
+        "_header_1gjng_5"
+       ],
+       [
+        "_wrapper_uvfpb_3",
+        "_firstPartyChat_uvfpb_7"
+       ],
+       [
+        "_large_kwlx6_9",
+        "_noHover_3n0se_28",
+        "_shadow_3n0se_25",
+        "_raisedBackground_3n0se_45",
+        "_popoverContainer_1hboj_3",
+        "_firstPartyChat_1hboj_7"
+       ],
+       [
+        "_wrapper_gtpm4_1",
+        "_visible_gtpm4_7",
+        "_animationReady_gtpm4_30",
+        "_visibilityWrapper_1floe_172",
+        "_firstPartyChat_1floe_41"
+       ],
+       [
+        "_menuContainer_1floe_8",
+        "_firstPartyChat_1floe_41",
+        "session-replay-unmask"
+       ],
+       [
+        "_wrapper_809q8_3"
+       ]
+      ],
+      "classes": [
+       "_tooltipAnchor_18bac_4"
+      ],
+      "data": {},
+      "heading": "",
+      "landmark": {
+       "name": "",
+       "role": "main"
+      },
+      "layer": "top",
+      "name": "",
+      "rect": [
+       1316,
+       594,
+       40,
+       40
+      ],
+      "role": "generic",
+      "tag": "div",
+      "xpath": "/html/body/div[1]/main[1]/div[1]/div[1]/div[5]/div[1]/div[1]/div[1]/div[1]/div[2]/div[2]/div[1]"
+     },
+     "state": "home.feedback-panel"
+    }
+   ],
+   "evidenceHash": "a9d6bee91d682d8db71fcd2e683b93171ed327a0a85701b32f68d557d5b599b0",
+   "facts": {
+    "announced": "generic \"\"",
+    "axeSummary": "ARIA attribute is not allowed: aria-expanded=\"false\"",
+    "criterion": "4.1.2",
+    "criterionName": "Name, Role, Value",
+    "element": "text in the main landmark",
+    "rule": "aria-allowed-attr",
+    "screen": "Auto-categorization off"
+   },
+   "family": "role-state",
+   "guidance": "Low for optional ARIA or an invalid autocomplete token; high when aria-hidden hides the whole page.",
+   "issueId": null,
+   "key": "role-state:aria-allowed-attr:c1db844e35e8",
+   "measured": false,
+   "primary": "billpay.auto-categorization-off",
+   "proposals": [],
+   "rule": "aria-allowed-attr",
+   "screens": 4,
+   "severityDefault": "medium",
+   "source": "scanner",
+   "states": [
+    "billpay.auto-categorization-off",
+    "home.feedback-panel"
+   ],
+   "summary": "aria-allowed-attr: announced as generic \"\". ARIA attribute is not allowed: aria-expanded=\"false\"",
+   "title": "Wrong role or state: text in the main landmark"
+  }
+ ],
+ "primaries": [
+  "billpay.auto-categorization-off"
+ ],
+ "reach": {
+  "baseUrl": "https://demo.mercury.com",
+  "data": "data",
+  "map": "build/map.json",
+  "run": "2026-10-03-1525",
+  "workspace": "a11y"
+ },
+ "run": "2026-10-03-1525"
+}

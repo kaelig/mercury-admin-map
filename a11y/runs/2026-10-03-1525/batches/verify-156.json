@@ -1,0 +1,109 @@
+{
+ "area": "cards",
+ "batch": "verify-156",
+ "findings": [
+  {
+   "attachments": [],
+   "attempt": 1,
+   "basis": "violation",
+   "criteria": [
+    "1.3.5"
+   ],
+   "evidence": [
+    {
+     "evidence": {
+      "failureSummary": "Fix all of the following:\n  the autocomplete attribute is incorrectly formatted"
+     },
+     "occurrence": {
+      "ancestors": [
+       [
+        "_inputBox_q7hf7_93",
+        "_inline_q7hf7_201",
+        "_hasValue_q7hf7_171"
+       ],
+       [
+        "_inputBoxWrapper_q7hf7_93"
+       ],
+       [
+        "_textInputWrapper_q7hf7_24"
+       ],
+       [
+        "_provideDSTextInput_q7hf7_6"
+       ],
+       [
+        "_thresholdInputWrapper_1dbnm_7"
+       ],
+       [
+        "_inputContainer_1dbnm_1"
+       ],
+       [
+        "_tooltipHintContainer_1dbnm_19"
+       ],
+       []
+      ],
+      "classes": [
+       "_input_q7hf7_93"
+      ],
+      "data": {
+       "data-testid": "policy-rule-threshold-dollars-input"
+      },
+      "heading": "Spend Policies",
+      "landmark": {
+       "name": "",
+       "role": "form"
+      },
+      "layer": "document",
+      "name": "Receipt required if transaction amount exceeds",
+      "rect": [
+       730,
+       324,
+       117,
+       24
+      ],
+      "role": "textbox",
+      "tag": "input",
+      "xpath": "/html/body/div[1]/main[1]/div[1]/div[1]/div[4]/div[1]/div[2]/div[2]/div[1]/div[1]/div[2]/form[1]/div[1]/div[1]/div[1]/div[1]/div[1]/div[1]/div[1]/input[1]"
+     },
+     "state": "cards.policy-receipt-edit"
+    }
+   ],
+   "evidenceHash": "5594a9ecc32950cc2d35d3ff898a1db660c738165658084ffd3a33fe23326b3f",
+   "facts": {
+    "announced": "textbox \"Receipt required if transaction amount exceeds\"",
+    "axeSummary": "the autocomplete attribute is incorrectly formatted",
+    "criterion": "1.3.5",
+    "criterionName": "Identify Input Purpose",
+    "element": "textbox \"Receipt required if transaction amount…\"",
+    "rule": "autocomplete-valid",
+    "screen": "Edit receipt requirement"
+   },
+   "family": "role-state",
+   "guidance": "Low for optional ARIA or an invalid autocomplete token; high when aria-hidden hides the whole page.",
+   "issueId": null,
+   "key": "role-state:autocomplete-valid:05f20a13f41a",
+   "measured": false,
+   "primary": "cards.policy-receipt-edit",
+   "proposals": [],
+   "rule": "autocomplete-valid",
+   "screens": 1,
+   "severityDefault": "medium",
+   "source": "scanner",
+   "states": [
+    "cards.policy-receipt-edit"
+   ],
+   "summary": "autocomplete-valid: announced as textbox \"Receipt required if transaction amount exceeds\". the autocomplete attribute is incorrectly formatted",
+   "title": "Invalid autocomplete value: textbox \"Receipt required if transaction amount…\""
+  }
+ ],
+ "primaries": [
+  "cards.policy-receipt-edit"
+ ],
+ "reach": {
+  "baseUrl": "https://demo.mercury.com",
+  "data": "data",
+  "map": "build/map.json",
+  "run": "2026-10-03-1525",
+  "workspace": "a11y"
+ },
+ "run": "2026-10-03-1525"
+}

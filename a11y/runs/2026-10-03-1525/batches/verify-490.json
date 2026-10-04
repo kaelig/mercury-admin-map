@@ -1,0 +1,115 @@
+{
+ "area": "invoicing",
+ "batch": "verify-490",
+ "findings": [
+  {
+   "attachments": [],
+   "attempt": 1,
+   "basis": "candidate",
+   "criteria": [
+    "4.1.2"
+   ],
+   "evidence": [
+    {
+     "evidence": {
+      "description": "",
+      "name": "",
+      "role": "button",
+      "states": {},
+      "template": "button \"\""
+     },
+     "occurrence": {
+      "ancestors": [
+       [
+        "_toolbar_8t2tc_1"
+       ],
+       [
+        "_contentDiv_bcpsw_53",
+        "_contentDivHeightPreset_bcpsw_62",
+        "_layout_uyfdj_1",
+        "_fullWidthContentDiv_bcpsw_40"
+       ],
+       [
+        "_fullScreenWorkspaceLayout_bcpsw_14",
+        "_fullScreenWorkspaceLayoutBackground_bcpsw_32",
+        "_noScrollbar_bcpsw_27"
+       ],
+       [
+        "_wrapper_bcpsw_3"
+       ],
+       [],
+       [
+        "_main_1gb3b_1"
+       ],
+       [
+        "mercury-root"
+       ]
+      ],
+      "classes": [
+       "_button_r6b2u_20",
+       "_small_r6b2u_72",
+       "_secondary_r6b2u_126",
+       "_closeButton_8t2tc_14",
+       "_toolbarCloseButton_8t2tc_14"
+      ],
+      "data": {},
+      "heading": "",
+      "landmark": {
+       "name": "",
+       "role": "main"
+      },
+      "layer": "document",
+      "name": "",
+      "rect": [
+       1384,
+       80,
+       32,
+       32
+      ],
+      "role": "button",
+      "tag": "button",
+      "xpath": "/html/body/div[1]/main[1]/div[1]/div[2]/div[2]/div[3]/div[1]/button[1]"
+     },
+     "state": "invoicing.edit-series"
+    }
+   ],
+   "evidenceHash": "25b688d87847851c2bec1886e787a8d1450233d318f9ff69f58b71cf318ef82a",
+   "facts": {
+    "announced": "button \"\"",
+    "axeSummary": "",
+    "criterion": "4.1.2",
+    "criterionName": "Name, Role, Value",
+    "element": "button in the main landmark",
+    "rule": "announced-as",
+    "screen": "Edit recurring series"
+   },
+   "family": "name",
+   "guidance": "High for an unnamed form control or the sole primary action.",
+   "issueId": null,
+   "key": "name:announced-as:8b254da03f82",
+   "measured": false,
+   "primary": "invoicing.edit-series",
+   "proposals": [],
+   "rule": "announced-as",
+   "screens": 1,
+   "severityDefault": "medium",
+   "source": "scanner",
+   "states": [
+    "invoicing.edit-series"
+   ],
+   "summary": "announced-as: announced as button \"\".",
+   "title": "Missing or unclear name: button in the main landmark"
+  }
+ ],
+ "primaries": [
+  "invoicing.edit-series"
+ ],
+ "reach": {
+  "baseUrl": "https://demo.mercury.com",
+  "data": "data",
+  "map": "build/map.json",
+  "run": "2026-10-03-1525",
+  "workspace": "a11y"
+ },
+ "run": "2026-10-03-1525"
+}

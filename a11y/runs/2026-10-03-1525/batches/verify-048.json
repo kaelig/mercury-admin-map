@@ -1,0 +1,199 @@
+{
+ "area": "accounts",
+ "batch": "verify-048",
+ "findings": [
+  {
+   "attachments": [],
+   "attempt": 1,
+   "basis": "violation",
+   "criteria": [
+    "1.4.3"
+   ],
+   "evidence": [
+    {
+     "evidence": {
+      "bgColor": "#f1f1f4",
+      "contrastRatio": 4.32,
+      "expectedContrastRatio": "4.5:1",
+      "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 4.32 (foreground color: #70707d, background color: #f1f1f4, font size: 11.3pt (15px), font weight: normal). Expected contrast ratio of 4.5:1",
+      "fgColor": "#70707d",
+      "fontSize": "11.3pt (15px)",
+      "fontWeight": "normal",
+      "messageKey": null
+     },
+     "occurrence": {
+      "ancestors": [
+       [
+        "fa-ul",
+        "_bookkeeperPermissionsList_152f5_109"
+       ],
+       [
+        "_cardBody_152f5_33",
+        "_success_152f5_28"
+       ],
+       [
+        "_large_kwlx6_9",
+        "_shadow_3n0se_25",
+        "_raisedBackground_3n0se_45"
+       ],
+       [
+        "_contentContainer_152f5_12"
+       ],
+       [
+        "_wrapper_cjx1n_3"
+       ],
+       [
+        "ReactModal__Content",
+        "ReactModal__Content--after-open",
+        "_modal_cjx1n_34"
+       ],
+       [
+        "ReactModal__Overlay",
+        "ReactModal__Overlay--after-open",
+        "_overlay_cjx1n_39",
+        "_successOverlay_152f5_50"
+       ],
+       [
+        "ReactModalPortal"
+       ]
+      ],
+      "classes": [
+       "_bodyDefault_qaod7_40",
+       "_text-tertiary_12t49_1"
+      ],
+      "data": {},
+      "heading": "All document links expire 30 days after they are sent",
+      "landmark": {
+       "name": "",
+       "role": "dialog"
+      },
+      "layer": "top",
+      "name": "",
+      "rect": [
+       534,
+       410,
+       412,
+       24
+      ],
+      "role": "listitem",
+      "tag": "li",
+      "xpath": "/html/body/div[12]/div[1]/div[1]/div[1]/div[2]/div[2]/div[2]/ul[1]/li[1]"
+     },
+     "state": "accounts.statement-shared"
+    },
+    {
+     "evidence": {
+      "bgColor": "#f1f1f4",
+      "contrastRatio": 4.32,
+      "expectedContrastRatio": "4.5:1",
+      "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 4.32 (foreground color: #70707d, background color: #f1f1f4, font size: 11.3pt (15px), font weight: normal). Expected contrast ratio of 4.5:1",
+      "fgColor": "#70707d",
+      "fontSize": "11.3pt (15px)",
+      "fontWeight": "normal",
+      "messageKey": null
+     },
+     "occurrence": {
+      "ancestors": [
+       [
+        "fa-ul",
+        "_bookkeeperPermissionsList_152f5_109"
+       ],
+       [
+        "_cardBody_152f5_33",
+        "_success_152f5_28"
+       ],
+       [
+        "_large_kwlx6_9",
+        "_shadow_3n0se_25",
+        "_raisedBackground_3n0se_45"
+       ],
+       [
+        "_contentContainer_152f5_12"
+       ],
+       [
+        "_wrapper_cjx1n_3"
+       ],
+       [
+        "ReactModal__Content",
+        "ReactModal__Content--after-open",
+        "_modal_cjx1n_34"
+       ],
+       [
+        "ReactModal__Overlay",
+        "ReactModal__Overlay--after-open",
+        "_overlay_cjx1n_39",
+        "_successOverlay_152f5_50"
+       ],
+       [
+        "ReactModalPortal"
+       ]
+      ],
+      "classes": [
+       "_bodyDefault_qaod7_40",
+       "_text-tertiary_12t49_1"
+      ],
+      "data": {},
+      "heading": "All document links expire 30 days after they are sent",
+      "landmark": {
+       "name": "",
+       "role": "dialog"
+      },
+      "layer": "top",
+      "name": "",
+      "rect": [
+       534,
+       410,
+       412,
+       24
+      ],
+      "role": "listitem",
+      "tag": "li",
+      "xpath": "/html/body/div[11]/div[1]/div[1]/div[1]/div[2]/div[2]/div[2]/ul[1]/li[1]"
+     },
+     "state": "settings.share-email-sent"
+    }
+   ],
+   "evidenceHash": "9049e2a1467f181edadc85742b1296720db7cfc44aeace03a1e04840d607ed7b",
+   "facts": {
+    "bg": "#f1f1f4",
+    "criterion": "1.4.3",
+    "criterionName": "Contrast (Minimum)",
+    "element": "listitem in \"All document links expire <n> days…\"",
+    "fg": "#70707d",
+    "ratio": "4.32",
+    "required": "4.5",
+    "rule": "color-contrast",
+    "screen": "Statement shared",
+    "screens": 2
+   },
+   "family": "contrast",
+   "guidance": "High under 2:1, or under 3:1 for essential text.",
+   "issueId": null,
+   "key": "contrast:color-contrast:f91606b13073",
+   "measured": true,
+   "primary": "accounts.statement-shared",
+   "proposals": [],
+   "rule": "color-contrast",
+   "screens": 2,
+   "severityDefault": "medium",
+   "source": "scanner",
+   "states": [
+    "accounts.statement-shared",
+    "settings.share-email-sent"
+   ],
+   "summary": "axe color-contrast: #70707d on #f1f1f4 measures 4.32:1; AA needs 4.5:1.",
+   "title": "Low contrast: listitem in \"All document links expire <n> days…\""
+  }
+ ],
+ "primaries": [
+  "accounts.statement-shared"
+ ],
+ "reach": {
+  "baseUrl": "https://demo.mercury.com",
+  "data": "data",
+  "map": "build/map.json",
+  "run": "2026-10-03-1525",
+  "workspace": "a11y"
+ },
+ "run": "2026-10-03-1525"
+}

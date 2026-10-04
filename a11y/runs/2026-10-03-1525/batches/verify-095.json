@@ -1,0 +1,869 @@
+{
+ "area": "billpay",
+ "batch": "verify-095",
+ "findings": [
+  {
+   "attachments": [],
+   "attempt": 1,
+   "basis": "failure",
+   "criteria": [
+    "2.4.3"
+   ],
+   "evidence": [
+    {
+     "evidence": {
+      "focus": {
+       "ancestors": [
+        [
+         "_checkboxHeightFix_1wfxj_6",
+         "_checkboxItem_55yn8_29",
+         "_checkboxWrapper_1758n_62",
+         "_defaultCheckboxWrapper_1km7i_14"
+        ],
+        [
+         "_checkboxGroup_55yn8_23"
+        ],
+        [
+         "_popoverContent_55yn8_17"
+        ],
+        [
+         "_menu_14lgn_4",
+         "_statusFilter_55yn8_7"
+        ],
+        [],
+        []
+       ],
+       "classes": [
+        "_input_1758n_13",
+        "_defaultInput_1km7i_44"
+       ],
+       "data": {},
+       "heading": "",
+       "landmark": null,
+       "layer": "top",
+       "name": "Overdue",
+       "rect": [
+        371,
+        472,
+        18,
+        18
+       ],
+       "role": "checkbox",
+       "tag": "input",
+       "xpath": "/html/body/div[9]/div[1]/div[1]/div[1]/div[1]/label[1]/input[1]"
+      },
+      "nextTabInside": true,
+      "stops": 64,
+      "trace": [
+       {
+        "focus": "body",
+        "key": "start",
+        "where": "body"
+       },
+       {
+        "focus": {
+         "label": "$220.00",
+         "tag": "button",
+         "xpath": "/html/body/div[1]/main[1]/div[1]/div[1]/div[4]/div[1]/div[2]/div[2]/div[2]/div[2]/div[2]/div[1]/form[1]/aside[1]/div[1]/div[1]/section[1]/div[1]/div[1]/div[1]/button[1]"
+        },
+        "key": "Tab",
+        "where": "outside"
+       },
+       {
+        "focus": {
+         "label": "Review",
+         "tag": "button",
+         "xpath": "/html/body/div[1]/main[1]/div[1]/div[1]/div[4]/div[1]/div[2]/div[2]/div[2]/div[2]/div[2]/div[1]/form[1]/aside[1]/div[1]/div[1]/section[1]/div[1]/div[3]/button[1]"
+        },
+        "key": "Tab",
+        "where": "outside"
+       },
+       {
+        "focus": {
+         "label": "Delete",
+         "tag": "button",
+         "xpath": "/html/body/div[1]/main[1]/div[1]/div[1]/div[4]/div[1]/div[2]/div[2]/div[2]/div[2]/div[2]/div[1]/form[1]/aside[1]/div[1]/div[1]/section[1]/div[1]/div[3]/button[2]"
+        },
+        "key": "Tab",
+        "where": "outside"
+       },
+       {
+        "focus": {
+         "label": "Due date Apr 19, 2025",
+         "tag": "button",
+         "xpath": "/html/body/div[1]/main[1]/div[1]/div[1]/div[4]/div[1]/div[2]/div[2]/div[2]/div[2]/div[2]/div[1]/form[1]/aside[1]/div[1]/div[1]/section[2]/div[1]/button[1]"
+        },
+        "key": "Tab",
+        "where": "outside"
+       },
+       {
+        "focus": {
+         "label": "Invoice date Apr 18, 2025",
+         "tag": "button",
+         "xpath": "/html/body/div[1]/main[1]/div[1]/div[1]/div[4]/div[1]/div[2]/div[2]/div[2]/div[2]/div[2]/div[1]/form[1]/aside[1]/div[1]/div[1]/section[2]/div[1]/button[2]"
+        },
+        "key": "Tab",
+        "where": "outside"
+       },
+       {
+        "focus": {
+         "label": "Invoice no. INV-902",
+         "tag": "button",
+         "xpath": "/html/body/div[1]/main[1]/div[1]/div[1]/div[4]/div[1]/div[2]/div[2]/div[2]/div[2]/div[2]/div[1]/form[1]/aside[1]/div[1]/div[1]/section[2]/div[1]/button[3]"
+        },
+        "key": "Tab",
+        "where": "outside"
+       },
+       {
+        "focus": {
+         "label": "",
+         "tag": "textarea",
+         "xpath": "/html/body/div[1]/main[1]/div[1]/div[1]/div[4]/div[1]/div[2]/div[2]/div[2]/div[2]/div[2]/div[1]/form[1]/aside[1]/div[1]/div[1]/section[3]/div[1]/form[1]/div[1]/div[1]/div[1]/div[1]/textarea[1]"
+        },
+        "key": "Tab",
+        "where": "outside"
+       },
+       {
+        "focus": {
+         "label": "View Email",
+         "tag": "button",
+         "xpath": "/html/body/div[1]/main[1]/div[1]/div[1]/div[4]/div[1]/div[2]/div[2]/div[2]/div[2]/div[2]/div[1]/form[1]/aside[1]/div[1]/div[1]/section[3]/div[2]/div[1]/button[1]"
+        },
+        "key": "Tab",
+        "where": "outside"
+       },
+       {
+        "focus": {
+         "label": "demo_invoice-after-ocr-2.pdf demo_invoice-after-oc r-2.pdf",
+         "tag": "div",
+         "xpath": "/html/body/div[1]/main[1]/div[1]/div[1]/div[4]/div[1]/div[2]/div[2]/div[2]/div[2]/div[2]/div[1]/form[1]/aside[1]/div[1]/div[1]/section[3]/div[3]/div[1]/div[1]/div[1]/div[1]"
+        },
+        "key": "Tab",
+        "where": "outside"
+       },
+       {
+        "focus": {
+         "label": "demo_invoice-after-ocr-2.pdf demo_invoice-after-oc r-2.pdf",
+         "tag": "span",
+         "xpath": "/html/body/div[1]/main[1]/div[1]/div[1]/div[4]/div[1]/div[2]/div[2]/div[2]/div[2]/div[2]/div[1]/form[1]/aside[1]/div[1]/div[1]/section[3]/div[3]/div[1]/div[1]/div[1]/div[1]/span[1]"
+        },
+        "key": "Tab",
+        "where": "outside"
+       },
+       {
+        "focus": {
+         "label": "Upload attachment",
+         "tag": "button",
+         "xpath": "/html/body/div[1]/main[1]/div[1]/div[1]/div[4]/div[1]/div[2]/div[2]/div[2]/div[2]/div[2]/div[1]/form[1]/aside[1]/div[1]/div[1]/section[3]/div[3]/div[1]/div[2]/button[1]"
+        },
+        "key": "Tab",
+        "where": "outside"
+       },
+       {
+        "focus": {
+         "label": "Delete",
+         "tag": "button",
+         "xpath": "/html/body/div[1]/main[1]/div[1]/div[1]/div[4]/div[1]/div[2]/div[2]/div[2]/div[2]/dialog[1]/div[1]/div[1]/div[2]/button[1]"
+        },
+        "key": "Tab",
+        "where": "outside"
+       },
+       {
+        "focus": {
+         "label": "Review",
+         "tag": "button",
+         "xpath": "/html/body/div[1]/main[1]/div[1]/div[1]/div[4]/div[1]/div[2]/div[2]/div[2]/div[2]/dialog[1]/div[1]/div[1]/div[2]/button[2]"
+        },
+        "key": "Tab",
+        "where": "outside"
+       },
+       {
+        "focus": {
+         "label": "",
+         "tag": "div",
+         "xpath": "/html/body/div[1]/main[1]/div[1]/div[1]/div[6]/div[2]"
+        },
+        "key": "Tab",
+        "where": "outside"
+       },
+       {
+        "focus": {
+         "label": "",
+         "tag": "button",
+         "xpath": "/html/body/div[1]/main[1]/div[1]/div[1]/div[6]/div[2]/button[1]"
+        },
+        "key": "Tab",
+        "where": "outside"
+       },
+       {
+        "focus": "body",
+        "key": "Tab",
+        "where": "body"
+       },
+       {
+        "focus": {
+         "label": "Customize your experience",
+         "tag": "button",
+         "xpath": "/html/body/div[1]/main[1]/div[1]/div[1]/div[1]/div[1]/div[1]/div[1]/div[1]/span[2]/button[1]"
+        },
+        "key": "Tab",
+        "where": "outside"
+       },
+       {
+        "focus": {
+         "label": "Viewing as Admin",
+         "tag": "button",
+         "xpath": "/html/body/div[1]/main[1]/div[1]/div[1]/div[1]/div[1]/div[2]/div[1]/button[1]"
+        },
+        "key": "Tab",
+        "where": "outside"
+       },
+       {
+        "focus": {
+         "label": "Open account",
+         "tag": "a",
+         "xpath": "/html/body/div[1]/main[1]/div[1]/div[1]/div[1]/div[1]/div[2]/span[1]/a[1]"
+        },
+        "key": "Tab",
+        "where": "outside"
+       },
+       {
+        "focus": {
+         "label": "Mercury Demo Pro",
+         "tag": "button",
+         "xpath": "/html/body/div[1]/main[1]/div[1]/div[1]/div[4]/nav[1]/div[1]/div[1]/button[1]"
+        },
+        "key": "Tab",
+        "where": "outside"
+       },
+       {
+        "focus": {
+         "label": "Banking",
+         "tag": "button",
+         "xpath": "/html/body/div[1]/main[1]/div[1]/div[1]/div[4]/nav[1]/div[2]/div[1]/div[1]/button[1]"
+        },
+        "key": "Tab",
+        "where": "outside"
+       },
+       {
+        "focus": {
+         "label": "Books",
+         "tag": "button",
+         "xpath": "/html/body/div[1]/main[1]/div[1]/div[1]/div[4]/nav[1]/div[2]/div[1]/div[1]/button[2]"
+        },
+        "key": "Tab",
+        "where": "outside"
+       },
+       {
+        "focus": {
+         "label": "Home",
+         "tag": "a",
+         "xpath": "/html/body/div[1]/main[1]/div[1]/div[1]/div[4]/nav[1]/div[2]/div[2]/div[1]/div[1]/a[1]"
+        },
+        "key": "Tab",
+        "where": "outside"
+       },
+       {
+        "focus": {
+         "label": "Tasks 10",
+         "tag": "a",
+         "xpath": "/html/body/div[1]/main[1]/div[1]/div[1]/div[4]/nav[1]/div[2]/div[2]/div[2]/div[1]/a[1]"
+        },
+        "key": "Tab",
+        "where": "outside"
+       },
+       {
+        "focus": {
+         "label": "Command New",
+         "tag": "a",
+         "xpath": "/html/body/div[1]/main[1]/div[1]/div[1]/div[4]/nav[1]/div[2]/div[2]/div[3]/div[1]/a[1]"
+        },
+        "key": "Tab",
+        "where": "outside"
+       },
+       {
+        "focus": {
+         "label": "Accounts",
+         "tag": "a",
+         "xpath": "/html/body/div[1]/main[1]/div[1]/div[1]/div[4]/nav[1]/div[2]/div[3]/div[1]/div[1]/div[1]/a[1]"
+        },
+        "key": "Tab",
+        "where": "outside"
+       },
+       {
+        "focus": {
+         "label": "Transactions",
+         "tag": "a",
+         "xpath": "/html/body/div[1]/main[1]/div[1]/div[1]/div[4]/nav[1]/div[2]/div[3]/div[1]/div[2]/div[1]/a[1]"
+        },
+        "key": "Tab",
+        "where": "outside"
+       },
+       {
+        "focus": {
+         "label": "Cards",
+         "tag": "a",
+         "xpath": "/html/body/div[1]/main[1]/div[1]/div[1]/div[4]/nav[1]/div[2]/div[3]/div[1]/div[3]/div[1]/a[1]"
+        },
+        "key": "Tab",
+        "where": "outside"
+       },
+       {
+        "focus": {
+         "label": "Team Spend",
+         "tag": "a",
+         "xpath": "/html/body/div[1]/main[1]/div[1]/div[1]/div[4]/nav[1]/div[2]/div[3]/div[1]/div[4]/div[1]/a[1]"
+        },
+        "key": "Tab",
+        "where": "outside"
+       },
+       {
+        "focus": {
+         "label": "Payments",
+         "tag": "a",
+         "xpath": "/html/body/div[1]/main[1]/div[1]/div[1]/div[4]/nav[1]/div[2]/div[3]/div[1]/div[5]/div[1]/a[1]"
+        },
+        "key": "Tab",
+        "where": "outside"
+       },
+       {
+        "focus": {
+         "label": "Bill Pay",
+         "tag": "a",
+         "xpath": "/html/body/div[1]/main[1]/div[1]/div[1]/div[4]/nav[1]/div[2]/div[3]/div[1]/div[5]/div[1]/div[1]/div[1]/div[1]/ul[1]/li[1]/a[1]"
+        },
+        "key": "Tab",
+        "where": "outside"
+       },
+       {
+        "focus": {
+         "label": "Recipients",
+         "tag": "a",
+         "xpath": "/html/body/div[1]/main[1]/div[1]/div[1]/div[4]/nav[1]/div[2]/div[3]/div[1]/div[5]/div[1]/div[1]/div[1]/div[1]/ul[1]/li[2]/a[1]"
+        },
+        "key": "Tab",
+        "where": "outside"
+       },
+       {
+        "focus": {
+         "label": "Taxes",
+         "tag": "a",
+         "xpath": "/html/body/div[1]/main[1]/div[1]/div[1]/div[4]/nav[1]/div[2]/div[3]/div[1]/div[5]/div[1]/div[1]/div[1]/div[1]/ul[1]/li[3]/a[1]"
+        },
+        "key": "Tab",
+        "where": "outside"
+       },
+       {
+        "focus": {
+         "label": "Wire Drawdowns",
+         "tag": "a",
+         "xpath": "/html/body/div[1]/main[1]/div[1]/div[1]/div[4]/nav[1]/div[2]/div[3]/div[1]/div[5]/div[1]/div[1]/div[1]/div[1]/ul[1]/li[4]/a[1]"
+        },
+        "key": "Tab",
+        "where": "outside"
+       },
+       {
+        "focus": {
+         "label": "ACH Authorizations",
+         "tag": "a",
+         "xpath": "/html/body/div[1]/main[1]/div[1]/div[1]/div[4]/nav[1]/div[2]/div[3]/div[1]/div[5]/div[1]/div[1]/div[1]/div[1]/ul[1]/li[5]/a[1]"
+        },
+        "key": "Tab",
+        "where": "outside"
+       },
+       {
+        "focus": {
+         "label": "Checkbooks",
+         "tag": "a",
+         "xpath": "/html/body/div[1]/main[1]/div[1]/div[1]/div[4]/nav[1]/div[2]/div[3]/div[1]/div[5]/div[1]/div[1]/div[1]/div[1]/ul[1]/li[6]/a[1]"
+        },
+        "key": "Tab",
+        "where": "outside"
+       },
+       {
+        "focus": {
+         "label": "Invoicing",
+         "tag": "a",
+         "xpath": "/html/body/div[1]/main[1]/div[1]/div[1]/div[4]/nav[1]/div[2]/div[3]/div[1]/div[6]/div[1]/a[1]"
+        },
+        "key": "Tab",
+        "where": "outside"
+       },
+       {
+        "focus": {
+         "label": "Accounting",
+         "tag": "a",
+         "xpath": "/html/body/div[1]/main[1]/div[1]/div[1]/div[4]/nav[1]/div[2]/div[3]/div[1]/div[7]/div[1]/a[1]"
+        },
+        "key": "Tab",
+        "where": "outside"
+       },
+       {
+        "focus": {
+         "label": "Learn about bookmarks",
+         "tag": "button",
+         "xpath": "/html/body/div[1]/main[1]/div[1]/div[1]/div[4]/nav[1]/div[2]/div[4]/div[1]/button[1]"
+        },
+        "key": "Tab",
+        "where": "outside"
+       },
+       {
+        "focus": {
+         "label": "Reorder Ops / Payroll bookmark",
+         "tag": "button",
+         "xpath": "/html/body/div[1]/main[1]/div[1]/div[1]/div[4]/nav[1]/div[2]/div[4]/ul[1]/li[1]/button[1]"
+        },
+        "key": "Tab",
+        "where": "outside"
+       },
+       {
+        "focus": {
+         "label": "Ops / Payroll $2,023,267.12",
+         "tag": "a",
+         "xpath": "/html/body/div[1]/main[1]/div[1]/div[1]/div[4]/nav[1]/div[2]/div[4]/ul[1]/li[1]/a[1]"
+        },
+        "key": "Tab",
+        "where": "outside"
+       },
+       {
+        "focus": {
+         "label": "Remove bookmark",
+         "tag": "button",
+         "xpath": "/html/body/div[1]/main[1]/div[1]/div[1]/div[4]/nav[1]/div[2]/div[4]/ul[1]/li[1]/button[2]"
+        },
+        "key": "Tab",
+        "where": "outside"
+       },
+       {
+        "focus": {
+         "label": "Reorder Credit Card bookmark",
+         "tag": "button",
+         "xpath": "/html/body/div[1]/main[1]/div[1]/div[1]/div[4]/nav[1]/div[2]/div[4]/ul[1]/li[2]/button[1]"
+        },
+        "key": "Tab",
+        "where": "outside"
+       },
+       {
+        "focus": {
+         "label": "Credit Card",
+         "tag": "a",
+         "xpath": "/html/body/div[1]/main[1]/div[1]/div[1]/div[4]/nav[1]/div[2]/div[4]/ul[1]/li[2]/a[1]"
+        },
+        "key": "Tab",
+        "where": "outside"
+       },
+       {
+        "focus": {
+         "label": "Remove bookmark",
+         "tag": "button",
+         "xpath": "/html/body/div[1]/main[1]/div[1]/div[1]/div[4]/nav[1]/div[2]/div[4]/ul[1]/li[2]/button[2]"
+        },
+        "key": "Tab",
+        "where": "outside"
+       },
+       {
+        "focus": {
+         "label": "Reorder Bill Pay bookmark",
+         "tag": "button",
+         "xpath": "/html/body/div[1]/main[1]/div[1]/div[1]/div[4]/nav[1]/div[2]/div[4]/ul[1]/li[3]/button[1]"
+        },
+        "key": "Tab",
+        "where": "outside"
+       },
+       {
+        "focus": {
+         "label": "Bill Pay",
+         "tag": "a",
+         "xpath": "/html/body/div[1]/main[1]/div[1]/div[1]/div[4]/nav[1]/div[2]/div[4]/ul[1]/li[3]/a[1]"
+        },
+        "key": "Tab",
+        "where": "outside"
+       },
+       {
+        "focus": {
+         "label": "Remove bookmark",
+         "tag": "button",
+         "xpath": "/html/body/div[1]/main[1]/div[1]/div[1]/div[4]/nav[1]/div[2]/div[4]/ul[1]/li[3]/button[2]"
+        },
+        "key": "Tab",
+        "where": "outside"
+       },
+       {
+        "focus": {
+         "label": "Reorder Insights bookmark",
+         "tag": "button",
+         "xpath": "/html/body/div[1]/main[1]/div[1]/div[1]/div[4]/nav[1]/div[2]/div[4]/ul[1]/li[4]/button[1]"
+        },
+        "key": "Tab",
+        "where": "outside"
+       },
+       {
+        "focus": {
+         "label": "Insights",
+         "tag": "a",
+         "xpath": "/html/body/div[1]/main[1]/div[1]/div[1]/div[4]/nav[1]/div[2]/div[4]/ul[1]/li[4]/a[1]"
+        },
+        "key": "Tab",
+        "where": "outside"
+       },
+       {
+        "focus": {
+         "label": "Remove bookmark",
+         "tag": "button",
+         "xpath": "/html/body/div[1]/main[1]/div[1]/div[1]/div[4]/nav[1]/div[2]/div[4]/ul[1]/li[4]/button[2]"
+        },
+        "key": "Tab",
+        "where": "outside"
+       },
+       {
+        "focus": {
+         "label": "Search for anything",
+         "tag": "button",
+         "xpath": "/html/body/div[1]/main[1]/div[1]/div[1]/div[4]/div[1]/div[1]/div[1]/div[1]/button[1]"
+        },
+        "key": "Tab",
+        "where": "outside"
+       },
+       {
+        "focus": {
+         "label": "Move money",
+         "tag": "button",
+         "xpath": "/html/body/div[1]/main[1]/div[1]/div[1]/div[4]/div[1]/div[1]/div[1]/div[2]/button[1]"
+        },
+        "key": "Tab",
+        "where": "outside"
+       },
+       {
+        "focus": {
+         "label": "Toggle Private Mode",
+         "tag": "button",
+         "xpath": "/html/body/div[1]/main[1]/div[1]/div[1]/div[4]/div[1]/div[1]/div[1]/div[3]/button[1]"
+        },
+        "key": "Tab",
+        "where": "outside"
+       },
+       {
+        "focus": {
+         "label": "Navigate to Settings",
+         "tag": "a",
+         "xpath": "/html/body/div[1]/main[1]/div[1]/div[1]/div[4]/div[1]/div[1]/div[1]/div[3]/span[1]/a[1]"
+        },
+        "key": "Tab",
+        "where": "outside"
+       },
+       {
+        "focus": {
+         "label": "updates",
+         "tag": "button",
+         "xpath": "/html/body/div[1]/main[1]/div[1]/div[1]/div[4]/div[1]/div[1]/div[1]/div[3]/div[1]/button[1]"
+        },
+        "key": "Tab",
+        "where": "outside"
+       },
+       {
+        "focus": {
+         "label": "",
+         "tag": "button",
+         "xpath": "/html/body/div[1]/main[1]/div[1]/div[1]/div[4]/div[1]/div[1]/div[1]/div[3]/div[2]/button[1]"
+        },
+        "key": "Tab",
+        "where": "outside"
+       },
+       {
+        "focus": {
+         "label": "Remove from bookmarks",
+         "tag": "button",
+         "xpath": "/html/body/div[1]/main[1]/div[1]/div[1]/div[4]/div[1]/div[2]/div[1]/div[1]/div[1]/div[1]/button[1]"
+        },
+        "key": "Tab",
+        "where": "outside"
+       },
+       {
+        "focus": {
+         "label": "Feedback",
+         "tag": "button",
+         "xpath": "/html/body/div[1]/main[1]/div[1]/div[1]/div[4]/div[1]/div[2]/div[1]/div[1]/div[1]/div[2]/button[1]"
+        },
+        "key": "Tab",
+        "where": "outside"
+       },
+       {
+        "focus": {
+         "label": "Send money",
+         "tag": "a",
+         "xpath": "/html/body/div[1]/main[1]/div[1]/div[1]/div[4]/div[1]/div[2]/div[1]/div[1]/div[2]/span[1]/a[1]"
+        },
+        "key": "Tab",
+        "where": "outside"
+       },
+       {
+        "focus": {
+         "label": "Upload bill",
+         "tag": "button",
+         "xpath": "/html/body/div[1]/main[1]/div[1]/div[1]/div[4]/div[1]/div[2]/div[1]/div[1]/div[2]/div[1]/button[1]"
+        },
+        "key": "Tab",
+        "where": "outside"
+       },
+       {
+        "focus": {
+         "label": "my-company-name@ap.mercury.com",
+         "tag": "div",
+         "xpath": "/html/body/div[1]/main[1]/div[1]/div[1]/div[4]/div[1]/div[2]/div[2]/div[2]/div[1]/div[2]/div[1]"
+        },
+        "key": "Tab",
+        "where": "outside"
+       },
+       {
+        "focus": {
+         "label": "",
+         "tag": "button",
+         "xpath": "/html/body/div[1]/main[1]/div[1]/div[1]/div[4]/div[1]/div[2]/div[2]/div[2]/div[1]/div[2]/button[1]"
+        },
+        "key": "Tab",
+        "where": "outside"
+       },
+       {
+        "focus": {
+         "label": "Status",
+         "tag": "button",
+         "xpath": "/html/body/div[1]/main[1]/div[1]/div[1]/div[4]/div[1]/div[2]/div[2]/div[2]/div[2]/div[1]/span[1]/div[1]/span[1]/span[1]/span[1]/span[1]/button[1]"
+        },
+        "key": "Tab",
+        "where": "trigger"
+       },
+       {
+        "focus": {
+         "label": "on",
+         "tag": "input",
+         "xpath": "/html/body/div[9]/div[1]/div[1]/div[1]/div[1]/label[1]/input[1]"
+        },
+        "key": "Enter",
+        "where": "outside"
+       },
+       {
+        "focus": {
+         "label": "on",
+         "tag": "input",
+         "xpath": "/html/body/div[9]/div[1]/div[1]/div[1]/div[1]/label[1]/input[1]"
+        },
+        "key": "settle",
+        "where": "inside"
+       },
+       {
+        "focus": {
+         "label": "Status",
+         "tag": "button",
+         "xpath": "/html/body/div[1]/main[1]/div[1]/div[1]/div[4]/div[1]/div[2]/div[2]/div[2]/div[2]/div[1]/span[1]/div[1]/span[1]/span[1]/span[1]/span[1]/button[1]"
+        },
+        "key": "Escape",
+        "where": "trigger"
+       },
+       {
+        "focus": {
+         "label": "Status",
+         "tag": "button",
+         "xpath": "/html/body/div[1]/main[1]/div[1]/div[1]/div[4]/div[1]/div[2]/div[2]/div[2]/div[2]/div[1]/span[1]/div[1]/span[1]/span[1]/span[1]/span[1]/button[1]"
+        },
+        "key": "settle",
+        "where": "trigger"
+       },
+       {
+        "focus": {
+         "label": "on",
+         "tag": "input",
+         "xpath": "/html/body/div[9]/div[1]/div[1]/div[1]/div[1]/label[1]/input[1]"
+        },
+        "key": "Enter",
+        "where": "outside"
+       },
+       {
+        "focus": {
+         "label": "on",
+         "tag": "input",
+         "xpath": "/html/body/div[9]/div[1]/div[1]/div[1]/div[1]/label[2]/input[1]"
+        },
+        "key": "Tab",
+        "where": "inside"
+       }
+      ]
+     },
+     "occurrence": {
+      "ancestors": [
+       [],
+       []
+      ],
+      "classes": [
+       "_menu_14lgn_4",
+       "_statusFilter_55yn8_7"
+      ],
+      "data": {
+       "data-dialog": "",
+       "data-enter": "true",
+       "data-open": "true"
+      },
+      "heading": "",
+      "landmark": null,
+      "layer": "top",
+      "name": "Status",
+      "rect": [
+       347,
+       445,
+       195,
+       192
+      ],
+      "role": "menu",
+      "tag": "div",
+      "xpath": "/html/body/div[9]/div[1]/div[1]"
+     },
+     "state": "billpay.status-filter"
+    }
+   ],
+   "evidenceHash": "cd591795df7c5f7469f264347f35e24fe0ca38c3701b789d6326f06ec043a882",
+   "facts": {
+    "criterion": "2.4.3",
+    "criterionName": "Focus Order",
+    "element": "menu \"Status\"",
+    "focus": "checkbox \"Overdue\"",
+    "overlay": "menu \"Status\"",
+    "screen": "Status filter menu"
+   },
+   "family": "dialog-focus",
+   "guidance": "High when controls inside are unreachable.",
+   "issueId": null,
+   "key": "dialog-focus:menu-focus-not-moved:105cbaf24535",
+   "measured": false,
+   "primary": "billpay.status-filter",
+   "proposals": [],
+   "rule": "menu-focus-not-moved",
+   "screens": 1,
+   "severityDefault": "medium",
+   "source": "scanner",
+   "states": [
+    "billpay.status-filter"
+   ],
+   "summary": "After the menu \"Status\" opened the menu \"Status\", focus was on the checkbox \"Overdue\", not its first item.",
+   "title": "Focus not on first item of menu \"Status\""
+  },
+  {
+   "attachments": [],
+   "attempt": 1,
+   "basis": "violation",
+   "criteria": [
+    "1.3.1"
+   ],
+   "evidence": [
+    {
+     "evidence": {
+      "failureSummary": "Fix any of the following:\n  Element has children which are not allowed: input",
+      "messageKey": "unallowed",
+      "values": "input"
+     },
+     "occurrence": {
+      "ancestors": [
+       [],
+       []
+      ],
+      "classes": [
+       "_menu_14lgn_4",
+       "_statusFilter_55yn8_7"
+      ],
+      "data": {
+       "data-dialog": "",
+       "data-enter": "true",
+       "data-open": "true"
+      },
+      "heading": "",
+      "landmark": null,
+      "layer": "top",
+      "name": "Status",
+      "rect": [
+       347,
+       445,
+       195,
+       192
+      ],
+      "role": "menu",
+      "tag": "div",
+      "xpath": "/html/body/div[9]/div[1]/div[1]"
+     },
+     "state": "billpay.status-filter"
+    },
+    {
+     "evidence": {
+      "failureSummary": "Fix any of the following:\n  Element has children which are not allowed: input",
+      "messageKey": "unallowed",
+      "values": "input"
+     },
+     "occurrence": {
+      "ancestors": [
+       [],
+       []
+      ],
+      "classes": [
+       "_menu_14lgn_4",
+       "_statusFilter_55yn8_7"
+      ],
+      "data": {
+       "data-dialog": "",
+       "data-enter": "true",
+       "data-open": "true"
+      },
+      "heading": "",
+      "landmark": null,
+      "layer": "top",
+      "name": "Status",
+      "rect": [
+       347,
+       277,
+       195,
+       192
+      ],
+      "role": "menu",
+      "tag": "div",
+      "xpath": "/html/body/div[10]/div[1]/div[1]"
+     },
+     "state": "payments.status-filter"
+    }
+   ],
+   "evidenceHash": "2d88be792c37527f3443b27125253e962cf294f078e1cf733b2bde5afef4c414",
+   "facts": {
+    "announced": "menu \"Status\"",
+    "axeSummary": "Element has children which are not allowed: input",
+    "criterion": "1.3.1",
+    "criterionName": "Info and Relationships",
+    "element": "menu \"Status\"",
+    "rule": "aria-required-children",
+    "screen": "Status filter menu"
+   },
+   "family": "role-state",
+   "guidance": "Low for optional ARIA or an invalid autocomplete token; high when aria-hidden hides the whole page.",
+   "issueId": null,
+   "key": "role-state:aria-required-children:8c8a98709917",
+   "measured": false,
+   "primary": "billpay.status-filter",
+   "proposals": [],
+   "rule": "aria-required-children",
+   "screens": 2,
+   "severityDefault": "medium",
+   "source": "scanner",
+   "states": [
+    "billpay.status-filter",
+    "payments.status-filter"
+   ],
+   "summary": "aria-required-children: announced as menu \"Status\". Element has children which are not allowed: input",
+   "title": "Wrong role or state: menu \"Status\""
+  }
+ ],
+ "primaries": [
+  "billpay.status-filter"
+ ],
+ "reach": {
+  "baseUrl": "https://demo.mercury.com",
+  "data": "data",
+  "map": "build/map.json",
+  "run": "2026-10-03-1525",
+  "workspace": "a11y"
+ },
+ "run": "2026-10-03-1525"
+}

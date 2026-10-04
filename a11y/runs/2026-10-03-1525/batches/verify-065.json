@@ -1,0 +1,160 @@
+{
+ "area": "billpay",
+ "batch": "verify-065",
+ "findings": [
+  {
+   "attachments": [],
+   "attempt": 1,
+   "basis": "violation",
+   "criteria": [
+    "1.3.5"
+   ],
+   "evidence": [
+    {
+     "evidence": {
+      "failureSummary": "Fix all of the following:\n  the autocomplete attribute is incorrectly formatted"
+     },
+     "occurrence": {
+      "ancestors": [
+       [
+        "_textboxWrapper_1a7mr_158"
+       ],
+       [
+        "_selectWrapper_1a7mr_150"
+       ],
+       [
+        "_comboboxWrapper_1a7mr_6",
+        "_combobox_1i6x8_1",
+        "session-replay-block"
+       ],
+       [],
+       [
+        "_inputFields_196na_25"
+       ],
+       [
+        "_formWrapper_17xei_3"
+       ],
+       [],
+       [
+        "_routeContainer_15al5_228"
+       ]
+      ],
+      "classes": [
+       "_textboxInput_1a7mr_250",
+       "_selectedPlaceholder_1a7mr_293"
+      ],
+      "data": {},
+      "heading": "Recipient",
+      "landmark": {
+       "name": "",
+       "role": "form"
+      },
+      "layer": "document",
+      "name": "Account type",
+      "rect": [
+       98,
+       866,
+       488,
+       38
+      ],
+      "role": "combobox",
+      "tag": "input",
+      "xpath": "/html/body/div[1]/main[1]/div[1]/div[2]/div[2]/div[1]/div[2]/section[2]/div[1]/div[1]/form[1]/div[1]/div[4]/div[3]/div[1]/div[1]/div[1]/input[1]"
+     },
+     "state": "billpay.bank-details-edit"
+    },
+    {
+     "evidence": {
+      "failureSummary": "Fix all of the following:\n  the autocomplete attribute is incorrectly formatted"
+     },
+     "occurrence": {
+      "ancestors": [
+       [
+        "_textboxWrapper_1a7mr_158"
+       ],
+       [
+        "_selectWrapper_1a7mr_150"
+       ],
+       [
+        "_comboboxWrapper_1a7mr_6",
+        "_combobox_1i6x8_1",
+        "session-replay-block"
+       ],
+       [],
+       [
+        "_inputFields_196na_25"
+       ],
+       [
+        "_formWrapper_17xei_3"
+       ],
+       [],
+       [
+        "_routeContainer_15al5_228"
+       ]
+      ],
+      "classes": [
+       "_textboxInput_1a7mr_250",
+       "_selectedPlaceholder_1a7mr_293"
+      ],
+      "data": {},
+      "heading": "Recipient",
+      "landmark": {
+       "name": "",
+       "role": "form"
+      },
+      "layer": "document",
+      "name": "Account type",
+      "rect": [
+       98,
+       828,
+       488,
+       38
+      ],
+      "role": "combobox",
+      "tag": "input",
+      "xpath": "/html/body/div[1]/main[1]/div[1]/div[2]/div[2]/div[1]/div[2]/section[2]/div[1]/div[1]/form[1]/div[1]/div[4]/div[3]/div[1]/div[1]/div[1]/input[1]"
+     },
+     "state": "billpay.routing-number-error"
+    }
+   ],
+   "evidenceHash": "1518c4e5084250e14714a3076f642e6a650e4303cfe2031f6d178288a7c2c56c",
+   "facts": {
+    "announced": "combobox \"Account type\" [expanded=false, haspopup=listbox]",
+    "axeSummary": "the autocomplete attribute is incorrectly formatted",
+    "criterion": "1.3.5",
+    "criterionName": "Identify Input Purpose",
+    "element": "combobox \"Account type\"",
+    "rule": "autocomplete-valid",
+    "screen": "Bank details inline edit"
+   },
+   "family": "role-state",
+   "guidance": "Low for optional ARIA or an invalid autocomplete token; high when aria-hidden hides the whole page.",
+   "issueId": null,
+   "key": "role-state:autocomplete-valid:9720f5966b69",
+   "measured": false,
+   "primary": "billpay.bank-details-edit",
+   "proposals": [],
+   "rule": "autocomplete-valid",
+   "screens": 2,
+   "severityDefault": "medium",
+   "source": "scanner",
+   "states": [
+    "billpay.bank-details-edit",
+    "billpay.routing-number-error"
+   ],
+   "summary": "autocomplete-valid: announced as combobox \"Account type\" [expanded=false, haspopup=listbox]. the autocomplete attribute is incorrectly formatted",
+   "title": "Invalid autocomplete value: combobox \"Account type\""
+  }
+ ],
+ "primaries": [
+  "billpay.bank-details-edit"
+ ],
+ "reach": {
+  "baseUrl": "https://demo.mercury.com",
+  "data": "data",
+  "map": "build/map.json",
+  "run": "2026-10-03-1525",
+  "workspace": "a11y"
+ },
+ "run": "2026-10-03-1525"
+}

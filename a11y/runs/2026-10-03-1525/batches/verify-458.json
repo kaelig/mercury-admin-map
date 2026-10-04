@@ -1,0 +1,337 @@
+{
+ "area": "cards",
+ "batch": "verify-458",
+ "findings": [
+  {
+   "attachments": [],
+   "attempt": 1,
+   "basis": "candidate",
+   "criteria": [
+    "4.1.2"
+   ],
+   "evidence": [
+    {
+     "evidence": {
+      "description": "",
+      "name": "Expense",
+      "role": "button",
+      "states": {},
+      "template": "button \"Expense\""
+     },
+     "occurrence": {
+      "ancestors": [
+       [
+        "_buttonWithDivider_1xt6d_80"
+       ],
+       [
+        "_container_1xt6d_3",
+        "_large_1xt6d_15"
+       ],
+       [
+        "_containerSpacing_1nsbe_7"
+       ],
+       [],
+       [
+        "_contentArea_f8xr8_1"
+       ],
+       [
+        "_contentDiv_bcpsw_53",
+        "_contentDivHeightPreset_bcpsw_62"
+       ],
+       [
+        "_fullScreenWorkspaceLayout_bcpsw_14",
+        "_fullScreenWorkspaceLayoutBackground_bcpsw_32",
+        "_noScrollbar_bcpsw_27"
+       ],
+       [
+        "_wrapper_bcpsw_3"
+       ]
+      ],
+      "classes": [
+       "_segment_1xt6d_7",
+       "_selected_1xt6d_60",
+       "_first_1xt6d_73"
+      ],
+      "data": {},
+      "heading": "",
+      "landmark": {
+       "name": "",
+       "role": "form"
+      },
+      "layer": "document",
+      "name": "Expense",
+      "rect": [
+       508,
+       312,
+       213,
+       40
+      ],
+      "role": "button",
+      "tag": "button",
+      "xpath": "/html/body/div[1]/main[1]/div[1]/div[2]/div[2]/div[3]/div[1]/form[1]/div[1]/div[2]/div[1]/button[1]"
+     },
+     "state": "cards.submit-expense"
+    },
+    {
+     "evidence": {
+      "description": "",
+      "name": "Expense",
+      "role": "button",
+      "states": {},
+      "template": "button \"Expense\""
+     },
+     "occurrence": {
+      "ancestors": [
+       [
+        "_buttonWithDivider_1xt6d_80"
+       ],
+       [
+        "_container_1xt6d_3",
+        "_large_1xt6d_15"
+       ],
+       [
+        "_containerSpacing_1nsbe_7"
+       ],
+       [],
+       [
+        "_contentArea_f8xr8_1"
+       ],
+       [
+        "_contentDiv_bcpsw_53",
+        "_contentDivHeightPreset_bcpsw_62"
+       ],
+       [
+        "_fullScreenWorkspaceLayout_bcpsw_14",
+        "_fullScreenWorkspaceLayoutBackground_bcpsw_32",
+        "_noScrollbar_bcpsw_27"
+       ],
+       [
+        "_wrapper_bcpsw_3"
+       ]
+      ],
+      "classes": [
+       "_segment_1xt6d_7",
+       "_selected_1xt6d_60",
+       "_first_1xt6d_73"
+      ],
+      "data": {},
+      "heading": "",
+      "landmark": {
+       "name": "",
+       "role": "form"
+      },
+      "layer": "document",
+      "name": "Expense",
+      "rect": [
+       508,
+       -224,
+       213,
+       40
+      ],
+      "role": "button",
+      "tag": "button",
+      "xpath": "/html/body/div[1]/main[1]/div[1]/div[2]/div[2]/div[3]/div[1]/form[1]/div[1]/div[2]/div[1]/button[1]"
+     },
+     "state": "cards.submit-expense-errors"
+    }
+   ],
+   "evidenceHash": "367fc3e5d30e6f9487f591c953c25e336a1df0730b8d996a9519543ed732d777",
+   "facts": {
+    "announced": "button \"Expense\"",
+    "axeSummary": "",
+    "criterion": "4.1.2",
+    "criterionName": "Name, Role, Value",
+    "element": "button \"Expense\"",
+    "rule": "announced-as",
+    "screen": "Submit expense form"
+   },
+   "family": "role-state",
+   "guidance": "Low for optional ARIA or an invalid autocomplete token; high when aria-hidden hides the whole page.",
+   "issueId": null,
+   "key": "role-state:announced-as:238f1dec0049",
+   "measured": false,
+   "primary": "cards.submit-expense",
+   "proposals": [],
+   "rule": "announced-as",
+   "screens": 3,
+   "severityDefault": "medium",
+   "source": "scanner",
+   "states": [
+    "cards.submit-expense",
+    "cards.submit-expense-errors"
+   ],
+   "summary": "announced-as: announced as button \"Expense\".",
+   "title": "Wrong role or state: button \"Expense\""
+  },
+  {
+   "attachments": [],
+   "attempt": 1,
+   "basis": "candidate",
+   "criteria": [
+    "4.1.2"
+   ],
+   "evidence": [
+    {
+     "evidence": {
+      "description": "",
+      "name": "Mileage",
+      "role": "button",
+      "states": {},
+      "template": "button \"Mileage\""
+     },
+     "occurrence": {
+      "ancestors": [
+       [
+        "_buttonWithDivider_1xt6d_80"
+       ],
+       [
+        "_container_1xt6d_3",
+        "_large_1xt6d_15"
+       ],
+       [
+        "_containerSpacing_1nsbe_7"
+       ],
+       [],
+       [
+        "_contentArea_f8xr8_1"
+       ],
+       [
+        "_contentDiv_bcpsw_53",
+        "_contentDivHeightPreset_bcpsw_62"
+       ],
+       [
+        "_fullScreenWorkspaceLayout_bcpsw_14",
+        "_fullScreenWorkspaceLayoutBackground_bcpsw_32",
+        "_noScrollbar_bcpsw_27"
+       ],
+       [
+        "_wrapper_bcpsw_3"
+       ]
+      ],
+      "classes": [
+       "_segment_1xt6d_7",
+       "_last_1xt6d_76"
+      ],
+      "data": {},
+      "heading": "",
+      "landmark": {
+       "name": "",
+       "role": "form"
+      },
+      "layer": "document",
+      "name": "Mileage",
+      "rect": [
+       720,
+       313,
+       211,
+       38
+      ],
+      "role": "button",
+      "tag": "button",
+      "xpath": "/html/body/div[1]/main[1]/div[1]/div[2]/div[2]/div[3]/div[1]/form[1]/div[1]/div[2]/div[2]/button[1]"
+     },
+     "state": "cards.submit-expense"
+    },
+    {
+     "evidence": {
+      "description": "",
+      "name": "Mileage",
+      "role": "button",
+      "states": {},
+      "template": "button \"Mileage\""
+     },
+     "occurrence": {
+      "ancestors": [
+       [
+        "_buttonWithDivider_1xt6d_80"
+       ],
+       [
+        "_container_1xt6d_3",
+        "_large_1xt6d_15"
+       ],
+       [
+        "_containerSpacing_1nsbe_7"
+       ],
+       [],
+       [
+        "_contentArea_f8xr8_1"
+       ],
+       [
+        "_contentDiv_bcpsw_53",
+        "_contentDivHeightPreset_bcpsw_62"
+       ],
+       [
+        "_fullScreenWorkspaceLayout_bcpsw_14",
+        "_fullScreenWorkspaceLayoutBackground_bcpsw_32",
+        "_noScrollbar_bcpsw_27"
+       ],
+       [
+        "_wrapper_bcpsw_3"
+       ]
+      ],
+      "classes": [
+       "_segment_1xt6d_7",
+       "_last_1xt6d_76"
+      ],
+      "data": {},
+      "heading": "",
+      "landmark": {
+       "name": "",
+       "role": "form"
+      },
+      "layer": "document",
+      "name": "Mileage",
+      "rect": [
+       720,
+       -223,
+       211,
+       38
+      ],
+      "role": "button",
+      "tag": "button",
+      "xpath": "/html/body/div[1]/main[1]/div[1]/div[2]/div[2]/div[3]/div[1]/form[1]/div[1]/div[2]/div[2]/button[1]"
+     },
+     "state": "cards.submit-expense-errors"
+    }
+   ],
+   "evidenceHash": "e924718567fe730bba6c8c9ca1b3f679b606cc2ff3e9b54e123f245eb0b58008",
+   "facts": {
+    "announced": "button \"Mileage\"",
+    "axeSummary": "",
+    "criterion": "4.1.2",
+    "criterionName": "Name, Role, Value",
+    "element": "button \"Mileage\"",
+    "rule": "announced-as",
+    "screen": "Submit expense form"
+   },
+   "family": "role-state",
+   "guidance": "Low for optional ARIA or an invalid autocomplete token; high when aria-hidden hides the whole page.",
+   "issueId": null,
+   "key": "role-state:announced-as:b062615ddd4c",
+   "measured": false,
+   "primary": "cards.submit-expense",
+   "proposals": [],
+   "rule": "announced-as",
+   "screens": 3,
+   "severityDefault": "medium",
+   "source": "scanner",
+   "states": [
+    "cards.submit-expense",
+    "cards.submit-expense-errors"
+   ],
+   "summary": "announced-as: announced as button \"Mileage\".",
+   "title": "Wrong role or state: button \"Mileage\""
+  }
+ ],
+ "primaries": [
+  "cards.submit-expense"
+ ],
+ "reach": {
+  "baseUrl": "https://demo.mercury.com",
+  "data": "data",
+  "map": "build/map.json",
+  "run": "2026-10-03-1525",
+  "workspace": "a11y"
+ },
+ "run": "2026-10-03-1525"
+}

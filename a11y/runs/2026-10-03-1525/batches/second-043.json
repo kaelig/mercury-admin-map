@@ -1,0 +1,606 @@
+{
+ "area": "accounts",
+ "batch": "second-043",
+ "findings": [
+  {
+   "attachments": [],
+   "attempt": 1,
+   "basis": "candidate",
+   "criteria": [
+    "4.1.2"
+   ],
+   "evidence": [
+    {
+     "evidence": {
+      "description": "",
+      "name": "",
+      "role": "button",
+      "states": {},
+      "template": "button \"\""
+     },
+     "occurrence": {
+      "ancestors": [
+       [
+        "_textWithIcon_tttvr_83"
+       ],
+       [
+        "_row_tttvr_15"
+       ],
+       [
+        "_accountNumbersWrapper_tttvr_10"
+       ],
+       [
+        "_topOfCard_tttvr_102"
+       ],
+       [
+        "_large_kwlx6_9",
+        "_noHover_3n0se_28",
+        "_shadow_3n0se_25",
+        "_raisedBackground_3n0se_45",
+        "_accountDetailsCard_tttvr_3"
+       ],
+       [
+        "_container_1mevc_1"
+       ],
+       [],
+       [
+        "_pageContent_809q8_151",
+        "_pageContentWidth_809q8_184",
+        "_footerPadding_809q8_115"
+       ]
+      ],
+      "classes": [
+       "_accountNumberReveal_tttvr_33"
+      ],
+      "data": {},
+      "heading": "",
+      "landmark": {
+       "name": "",
+       "role": "main"
+      },
+      "layer": "document",
+      "name": "",
+      "rect": [
+       1073,
+       250,
+       15,
+       16
+      ],
+      "role": "button",
+      "tag": "button",
+      "xpath": "/html/body/div[1]/main[1]/div[1]/div[1]/div[4]/div[1]/div[2]/div[2]/div[1]/div[2]/div[1]/div[1]/div[2]/div[1]/button[1]"
+     },
+     "state": "accounts.checking-detail"
+    },
+    {
+     "evidence": {
+      "description": "",
+      "name": "",
+      "role": "button",
+      "states": {},
+      "template": "button \"\""
+     },
+     "occurrence": {
+      "ancestors": [
+       [
+        "_textWithIcon_tttvr_83"
+       ],
+       [
+        "_row_tttvr_15"
+       ],
+       [
+        "_accountNumbersWrapper_tttvr_10"
+       ],
+       [
+        "_topOfCard_tttvr_102"
+       ],
+       [
+        "_large_kwlx6_9",
+        "_noHover_3n0se_28",
+        "_shadow_3n0se_25",
+        "_raisedBackground_3n0se_45",
+        "_accountDetailsCard_tttvr_3"
+       ],
+       [
+        "_container_1mevc_1"
+       ],
+       [],
+       [
+        "_pageContent_809q8_151",
+        "_pageContentWidth_809q8_184",
+        "_footerPadding_809q8_115"
+       ]
+      ],
+      "classes": [
+       "_accountNumberReveal_tttvr_33"
+      ],
+      "data": {},
+      "heading": "",
+      "landmark": {
+       "name": "",
+       "role": "main"
+      },
+      "layer": "document",
+      "name": "",
+      "rect": [
+       1073,
+       250,
+       15,
+       16
+      ],
+      "role": "button",
+      "tag": "button",
+      "xpath": "/html/body/div[1]/main[1]/div[1]/div[1]/div[4]/div[1]/div[2]/div[2]/div[1]/div[2]/div[1]/div[1]/div[2]/div[1]/button[1]"
+     },
+     "state": "accounts.account-number-revealed"
+    }
+   ],
+   "evidenceHash": "853517ea635dbc8da316e3d90a13177018413872b7965bb927dfe10c9619aa9b",
+   "facts": {
+    "announced": "button \"\"",
+    "axeSummary": "",
+    "criterion": "4.1.2",
+    "criterionName": "Name, Role, Value",
+    "element": "button in the main landmark",
+    "rule": "announced-as",
+    "screen": "Checking account detail"
+   },
+   "family": "name",
+   "guidance": "High for an unnamed form control or the sole primary action.",
+   "issueId": null,
+   "key": "name:announced-as:a0327d8395b7",
+   "measured": false,
+   "primary": "accounts.checking-detail",
+   "proposals": [],
+   "rule": "announced-as",
+   "screens": 4,
+   "severityDefault": "medium",
+   "source": "scanner",
+   "states": [
+    "accounts.checking-detail",
+    "accounts.account-number-revealed"
+   ],
+   "summary": "announced-as: announced as button \"\".",
+   "title": "Missing or unclear name: button in the main landmark"
+  },
+  {
+   "attachments": [],
+   "attempt": 1,
+   "basis": "candidate",
+   "criteria": [
+    "2.4.4"
+   ],
+   "evidence": [
+    {
+     "evidence": {
+      "description": "",
+      "name": "$2,023,267.12",
+      "role": "link",
+      "states": {},
+      "template": "link \"<amount>\""
+     },
+     "occurrence": {
+      "ancestors": [
+       [],
+       [
+        "_entry_1mevc_42"
+       ],
+       [
+        "_row_1mevc_32",
+        "_availableAndButtons_1mevc_37"
+       ],
+       [
+        "_topOfCard_1mevc_28"
+       ],
+       [
+        "_large_kwlx6_9",
+        "_noHover_3n0se_28",
+        "_shadow_3n0se_25",
+        "_raisedBackground_3n0se_45",
+        "_card_1mevc_23"
+       ],
+       [
+        "_container_1mevc_1"
+       ],
+       [],
+       [
+        "_pageContent_809q8_151",
+        "_pageContentWidth_809q8_184",
+        "_footerPadding_809q8_115"
+       ]
+      ],
+      "classes": [
+       "_link_ual8v_4",
+       "_underlineOnHover_ual8v_15"
+      ],
+      "data": {
+       "data-discover": "true"
+      },
+      "heading": "",
+      "landmark": {
+       "name": "",
+       "role": "main"
+      },
+      "layer": "document",
+      "name": "$2,023,267.12",
+      "rect": [
+       370,
+       232,
+       207,
+       47
+      ],
+      "role": "link",
+      "tag": "a",
+      "xpath": "/html/body/div[1]/main[1]/div[1]/div[1]/div[4]/div[1]/div[2]/div[2]/div[1]/div[1]/div[1]/div[1]/div[1]/span[1]/a[1]"
+     },
+     "state": "accounts.checking-detail"
+    },
+    {
+     "evidence": {
+      "description": "",
+      "name": "$2,023,267.12",
+      "role": "link",
+      "states": {},
+      "template": "link \"<amount>\""
+     },
+     "occurrence": {
+      "ancestors": [
+       [],
+       [
+        "_entry_1mevc_42"
+       ],
+       [
+        "_row_1mevc_32",
+        "_availableAndButtons_1mevc_37"
+       ],
+       [
+        "_topOfCard_1mevc_28"
+       ],
+       [
+        "_large_kwlx6_9",
+        "_noHover_3n0se_28",
+        "_shadow_3n0se_25",
+        "_raisedBackground_3n0se_45",
+        "_card_1mevc_23"
+       ],
+       [
+        "_container_1mevc_1"
+       ],
+       [],
+       [
+        "_pageContent_809q8_151",
+        "_pageContentWidth_809q8_184",
+        "_footerPadding_809q8_115"
+       ]
+      ],
+      "classes": [
+       "_link_ual8v_4",
+       "_underlineOnHover_ual8v_15"
+      ],
+      "data": {
+       "data-discover": "true"
+      },
+      "heading": "",
+      "landmark": {
+       "name": "",
+       "role": "main"
+      },
+      "layer": "document",
+      "name": "$2,023,267.12",
+      "rect": [
+       370,
+       232,
+       207,
+       47
+      ],
+      "role": "link",
+      "tag": "a",
+      "xpath": "/html/body/div[1]/main[1]/div[1]/div[1]/div[4]/div[1]/div[2]/div[2]/div[1]/div[1]/div[1]/div[1]/div[1]/span[1]/a[1]"
+     },
+     "state": "accounts.account-number-revealed"
+    }
+   ],
+   "evidenceHash": "a6e58e6d571f735d6a28b9e817f17a33569dc3d8ef81a607e7a20287969942f2",
+   "facts": {
+    "announced": "link \"<amount>\"",
+    "axeSummary": "",
+    "criterion": "2.4.4",
+    "criterionName": "Link Purpose (In Context)",
+    "element": "link \"<amount>\"",
+    "rule": "announced-as",
+    "screen": "Checking account detail"
+   },
+   "family": "name",
+   "guidance": "High for an unnamed form control or the sole primary action.",
+   "issueId": null,
+   "key": "name:announced-as:e13113a7eb55",
+   "measured": false,
+   "primary": "accounts.checking-detail",
+   "proposals": [],
+   "rule": "announced-as",
+   "screens": 4,
+   "severityDefault": "medium",
+   "source": "scanner",
+   "states": [
+    "accounts.checking-detail",
+    "accounts.account-number-revealed"
+   ],
+   "summary": "announced-as: announced as link \"<amount>\".",
+   "title": "Missing or unclear name: link \"<amount>\""
+  },
+  {
+   "attachments": [],
+   "attempt": 1,
+   "basis": "candidate",
+   "criteria": [
+    "4.1.2"
+   ],
+   "evidence": [
+    {
+     "evidence": {
+      "description": "",
+      "name": "",
+      "role": "link",
+      "states": {},
+      "template": "link \"\""
+     },
+     "occurrence": {
+      "ancestors": [
+       [],
+       [
+        "_tooltipAnchor_18bac_4",
+        "_wrapper_1vqgb_4"
+       ],
+       [
+        "_cashbackEarned_1nuw4_102",
+        "_cashbackEarnedHeader_1nuw4_107",
+        "_columnHeader_1nuw4_166"
+       ],
+       [
+        "_activityLogRow_1nuw4_13",
+        "_activityLogHeaderRow_1nuw4_29"
+       ],
+       [],
+       [
+        "_activityLogTable_1nuw4_1"
+       ],
+       [],
+       [
+        "_accountDashboard_1lez4_1",
+        "_pageContent_809q8_151",
+        "_pageContentWidth_809q8_184"
+       ]
+      ],
+      "classes": [
+       "_link_ual8v_4",
+       "_underlineOnHover_ual8v_15"
+      ],
+      "data": {},
+      "heading": "Credit Card",
+      "landmark": {
+       "name": "",
+       "role": "main"
+      },
+      "layer": "document",
+      "name": "",
+      "rect": [
+       1300,
+       564,
+       12,
+       19
+      ],
+      "role": "link",
+      "tag": "a",
+      "xpath": "/html/body/div[1]/main[1]/div[1]/div[1]/div[4]/div[1]/div[2]/div[3]/div[2]/div[1]/div[1]/div[1]/div[1]/span[1]/a[1]"
+     },
+     "state": "accounts.credit"
+    },
+    {
+     "evidence": {
+      "description": "",
+      "name": "",
+      "role": "link",
+      "states": {},
+      "template": "link \"\""
+     },
+     "occurrence": {
+      "ancestors": [
+       [],
+       [
+        "_tooltipAnchor_18bac_4",
+        "_wrapper_1vqgb_4"
+       ],
+       [
+        "_cashbackEarned_1nuw4_102",
+        "_cashbackEarnedHeader_1nuw4_107",
+        "_columnHeader_1nuw4_166"
+       ],
+       [
+        "_activityLogRow_1nuw4_13",
+        "_activityLogHeaderRow_1nuw4_29"
+       ],
+       [],
+       [
+        "_activityLogTable_1nuw4_1"
+       ],
+       [],
+       [
+        "_accountDashboard_1lez4_1",
+        "_pageContent_809q8_151",
+        "_pageContentWidth_809q8_184"
+       ]
+      ],
+      "classes": [
+       "_link_ual8v_4",
+       "_underlineOnHover_ual8v_15"
+      ],
+      "data": {},
+      "heading": "Credit Card",
+      "landmark": {
+       "name": "",
+       "role": "main"
+      },
+      "layer": "document",
+      "name": "",
+      "rect": [
+       1300,
+       564,
+       12,
+       19
+      ],
+      "role": "link",
+      "tag": "a",
+      "xpath": "/html/body/div[1]/main[1]/div[1]/div[1]/div[4]/div[1]/div[2]/div[3]/div[2]/div[1]/div[1]/div[1]/div[1]/span[1]/a[1]"
+     },
+     "state": "accounts.credit-last-month"
+    }
+   ],
+   "evidenceHash": "9eeab73f1cc3e874772cf8aa3a61226bb52a36415025f0321d2294efa0b3bdb7",
+   "facts": {
+    "announced": "link \"\"",
+    "axeSummary": "",
+    "criterion": "4.1.2",
+    "criterionName": "Name, Role, Value",
+    "element": "link in \"Credit Card\"",
+    "rule": "announced-as",
+    "screen": "Credit Card account"
+   },
+   "family": "name",
+   "guidance": "High for an unnamed form control or the sole primary action.",
+   "issueId": null,
+   "key": "name:announced-as:2cbbf00daca7",
+   "measured": false,
+   "primary": "accounts.credit",
+   "proposals": [],
+   "rule": "announced-as",
+   "screens": 3,
+   "severityDefault": "medium",
+   "source": "scanner",
+   "states": [
+    "accounts.credit",
+    "accounts.credit-last-month"
+   ],
+   "summary": "announced-as: announced as link \"\".",
+   "title": "Missing or unclear name: link in \"Credit Card\""
+  },
+  {
+   "attachments": [],
+   "attempt": 1,
+   "basis": "candidate",
+   "criteria": [
+    "4.1.2"
+   ],
+   "evidence": [
+    {
+     "evidence": {
+      "description": "",
+      "name": "",
+      "role": "link",
+      "states": {},
+      "template": "link \"\""
+     },
+     "occurrence": {
+      "ancestors": [
+       [],
+       [
+        "_tooltipAnchor_18bac_4"
+       ],
+       [
+        "_headingContainer_18dih_15"
+       ],
+       [],
+       [
+        "_large_kwlx6_9",
+        "_noHover_3n0se_28",
+        "_shadow_3n0se_25",
+        "_raisedBackground_3n0se_45",
+        "_card_lo4oy_4",
+        "_modal_18dih_3"
+       ],
+       [
+        "ReactModal__Content",
+        "ReactModal__Content--after-open",
+        "_modal_lo4oy_73"
+       ],
+       [
+        "ReactModal__Overlay",
+        "ReactModal__Overlay--after-open",
+        "_overlay_lo4oy_89",
+        "_backgroundColor_lo4oy_103"
+       ],
+       [
+        "ReactModalPortal"
+       ]
+      ],
+      "classes": [
+       "_button_r6b2u_20",
+       "_small_r6b2u_72",
+       "_secondary_r6b2u_126",
+       "_link_ual8v_4",
+       "_underlineNever_ual8v_7"
+      ],
+      "data": {
+       "data-discover": "true"
+      },
+      "heading": "Linked accounts",
+      "landmark": {
+       "name": "",
+       "role": "dialog"
+      },
+      "layer": "top",
+      "name": "",
+      "rect": [
+       948,
+       346,
+       32,
+       32
+      ],
+      "role": "link",
+      "tag": "a",
+      "xpath": "/html/body/div[11]/div[1]/div[1]/div[1]/div[2]/div[2]/div[1]/span[1]/a[1]"
+     },
+     "state": "accounts.credit-linked-accounts"
+    }
+   ],
+   "evidenceHash": "dfaf4e821517cd181849f6b22883dfc617a22d631da4cba66995ccdb9f2a70b6",
+   "facts": {
+    "announced": "link \"\"",
+    "axeSummary": "",
+    "criterion": "4.1.2",
+    "criterionName": "Name, Role, Value",
+    "element": "link in \"Linked accounts\"",
+    "rule": "announced-as",
+    "screen": "Linked accounts for IO limit"
+   },
+   "family": "name",
+   "guidance": "High for an unnamed form control or the sole primary action.",
+   "issueId": null,
+   "key": "name:announced-as:da72c8f07a73",
+   "measured": false,
+   "primary": "accounts.credit-linked-accounts",
+   "proposals": [],
+   "rule": "announced-as",
+   "screens": 1,
+   "severityDefault": "medium",
+   "source": "scanner",
+   "states": [
+    "accounts.credit-linked-accounts"
+   ],
+   "summary": "announced-as: announced as link \"\".",
+   "title": "Missing or unclear name: link in \"Linked accounts\""
+  }
+ ],
+ "primaries": [
+  "accounts.checking-detail",
+  "accounts.credit",
+  "accounts.credit-linked-accounts"
+ ],
+ "reach": {
+  "baseUrl": "https://demo.mercury.com",
+  "data": "data",
+  "map": "build/map.json",
+  "run": "2026-10-03-1525",
+  "workspace": "a11y"
+ },
+ "run": "2026-10-03-1525"
+}

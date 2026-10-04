@@ -1,0 +1,284 @@
+{
+ "area": "cards",
+ "batch": "verify-171",
+ "findings": [
+  {
+   "attachments": [],
+   "attempt": 1,
+   "basis": "violation",
+   "criteria": [
+    "4.1.2"
+   ],
+   "evidence": [
+    {
+     "evidence": {
+      "aria-errormessage": [
+       "error-message-:r4q:"
+      ],
+      "failureSummary": "Fix all of the following:\n  aria-errormessage value `error-message-:r4q:` must use a technique to announce the message (e.g., aria-live, aria-describedby, role=alert, etc.)"
+     },
+     "occurrence": {
+      "ancestors": [
+       [
+        "_inputWrapper_11c85_6",
+        "_error_11c85_74"
+       ],
+       [
+        "_wrapper_1xgdp_8",
+        "_sectionInputUserSelectionComboBox_17ueg_7",
+        "session-replay-mask"
+       ],
+       [
+        "_sectionInputUserSelection_17ueg_1"
+       ],
+       [],
+       [
+        "_contentWrapper_1pxij_1"
+       ],
+       [],
+       [
+        "_large_kwlx6_9",
+        "_noHover_3n0se_28",
+        "_shadow_3n0se_25",
+        "_raisedBackground_3n0se_45",
+        "_card_lo4oy_4",
+        "_defaultPadding_lo4oy_27",
+        "_small_lo4oy_11"
+       ],
+       [
+        "ReactModal__Content",
+        "ReactModal__Content--after-open",
+        "_modal_lo4oy_73"
+       ]
+      ],
+      "classes": [
+       "_input_11c85_6"
+      ],
+      "data": {
+       "data-1p-ignore": "true",
+       "data-active-item": "true",
+       "data-bwignore": "true",
+       "data-lpignore": "true"
+      },
+      "heading": "Transfer card?",
+      "landmark": {
+       "name": "",
+       "role": "form"
+      },
+      "layer": "top",
+      "name": "Transfer to",
+      "rect": [
+       536,
+       496,
+       335,
+       40
+      ],
+      "role": "combobox",
+      "tag": "input",
+      "xpath": "/html/body/div[11]/div[1]/div[1]/div[1]/form[1]/div[1]/div[2]/div[1]/div[1]/div[1]/input[1]"
+     },
+     "state": "cards.transfer-card-error"
+    }
+   ],
+   "evidenceHash": "40560cb1e45439fa5f8ecc8abfb9a0de3642a435c12ab671936c90395cde9ae2",
+   "facts": {
+    "announced": "combobox \"Transfer to\" [expanded=false, haspopup=listbox, invalid=true, errorme…",
+    "axeSummary": "aria-errormessage value `error-message-:r4q:` must use a technique to announce the message (e.g., aria-live, aria-describedby, role=alert, etc.)",
+    "criterion": "4.1.2",
+    "criterionName": "Name, Role, Value",
+    "element": "combobox \"Transfer to\"",
+    "rule": "aria-valid-attr-value",
+    "screen": "Transfer card: no recipient"
+   },
+   "family": "role-state",
+   "guidance": "Low for optional ARIA or an invalid autocomplete token; high when aria-hidden hides the whole page.",
+   "issueId": null,
+   "key": "role-state:aria-valid-attr-value:1f3187520faf",
+   "measured": false,
+   "primary": "cards.transfer-card-error",
+   "proposals": [],
+   "rule": "aria-valid-attr-value",
+   "screens": 1,
+   "severityDefault": "medium",
+   "source": "scanner",
+   "states": [
+    "cards.transfer-card-error"
+   ],
+   "summary": "aria-valid-attr-value: announced as combobox \"Transfer to\" [expanded=false, haspopup=listbox, invalid=true, errorme…. aria-errormessage value `error-message-:r4q:` must use a technique to announce the message (e.g., aria-live, aria-describedby, role=alert, etc.)",
+   "title": "Wrong role or state: combobox \"Transfer to\""
+  },
+  {
+   "attachments": [],
+   "attempt": 1,
+   "basis": "failure",
+   "criteria": [
+    "4.1.3"
+   ],
+   "evidence": [
+    {
+     "evidence": {
+      "focus": {
+       "ancestors": [
+        [
+         "_container_1ieyt_1",
+         "_rightAlign_1ieyt_9",
+         "_buttonsContainer_1pxij_7"
+        ],
+        [
+         "_contentWrapper_1pxij_1"
+        ],
+        [],
+        [
+         "_large_kwlx6_9",
+         "_noHover_3n0se_28",
+         "_shadow_3n0se_25",
+         "_raisedBackground_3n0se_45",
+         "_card_lo4oy_4",
+         "_defaultPadding_lo4oy_27",
+         "_small_lo4oy_11"
+        ],
+        [
+         "ReactModal__Content",
+         "ReactModal__Content--after-open",
+         "_modal_lo4oy_73"
+        ],
+        [
+         "ReactModal__Overlay",
+         "ReactModal__Overlay--after-open",
+         "_overlay_lo4oy_89",
+         "_backgroundColor_lo4oy_103"
+        ],
+        [
+         "ReactModalPortal"
+        ]
+       ],
+       "classes": [
+        "_button_r6b2u_20",
+        "_large_r6b2u_88",
+        "_primary_r6b2u_104",
+        "_appearDisabled_r6b2u_16",
+        "session-replay-unmask"
+       ],
+       "data": {},
+       "heading": "Transfer card?",
+       "landmark": {
+        "name": "",
+        "role": "form"
+       },
+       "layer": "top",
+       "name": "Transfer",
+       "rect": [
+        782,
+        584,
+        122,
+        40
+       ],
+       "role": "button",
+       "tag": "button",
+       "xpath": "/html/body/div[11]/div[1]/div[1]/div[1]/form[1]/div[1]/div[3]/button[2]"
+      },
+      "focused": false,
+      "message": "Please complete this field",
+      "region": null
+     },
+     "occurrence": {
+      "ancestors": [
+       [
+        "_wrapper_1xgdp_8",
+        "_sectionInputUserSelectionComboBox_17ueg_7",
+        "session-replay-mask"
+       ],
+       [
+        "_sectionInputUserSelection_17ueg_1"
+       ],
+       [],
+       [
+        "_contentWrapper_1pxij_1"
+       ],
+       [],
+       [
+        "_large_kwlx6_9",
+        "_noHover_3n0se_28",
+        "_shadow_3n0se_25",
+        "_raisedBackground_3n0se_45",
+        "_card_lo4oy_4",
+        "_defaultPadding_lo4oy_27",
+        "_small_lo4oy_11"
+       ],
+       [
+        "ReactModal__Content",
+        "ReactModal__Content--after-open",
+        "_modal_lo4oy_73"
+       ],
+       [
+        "ReactModal__Overlay",
+        "ReactModal__Overlay--after-open",
+        "_overlay_lo4oy_89",
+        "_backgroundColor_lo4oy_103"
+       ]
+      ],
+      "classes": [
+       "_defaultErrorContainer_1tnh5_1",
+       "_errorMessage_1xgdp_20"
+      ],
+      "data": {
+       "data-session-replay-unmask": "true"
+      },
+      "heading": "Transfer card?",
+      "landmark": {
+       "name": "",
+       "role": "form"
+      },
+      "layer": "top",
+      "name": "",
+      "rect": [
+       536,
+       540,
+       368,
+       20
+      ],
+      "role": "",
+      "tag": "div",
+      "xpath": "/html/body/div[11]/div[1]/div[1]/div[1]/form[1]/div[1]/div[2]/div[1]/div[1]/div[2]"
+     },
+     "state": "cards.transfer-card-error"
+    }
+   ],
+   "evidenceHash": "029c993b2c13c1a816f05f73329412ca6ae694bdaad9ba1cdd39bf0f50764197",
+   "facts": {
+    "criterion": "4.1.3",
+    "criterionName": "Status Messages",
+    "focus": "button \"Transfer\"",
+    "message": "\"Please complete this field\"",
+    "screen": "Transfer card: no recipient"
+   },
+   "family": "status-message",
+   "guidance": "High when it is the only confirmation of a money movement.",
+   "issueId": null,
+   "key": "status-message:status-not-announced:be05e8a9c74e",
+   "measured": false,
+   "primary": "cards.transfer-card-error",
+   "proposals": [],
+   "rule": "status-not-announced",
+   "screens": 1,
+   "severityDefault": "medium",
+   "source": "scanner",
+   "states": [
+    "cards.transfer-card-error"
+   ],
+   "summary": "\"Please complete this field\" appeared outside any live region, alert or status role that existed before it, and focus stayed on the button \"Transfer\".",
+   "title": "Status message not announced: \"Please complete this field\""
+  }
+ ],
+ "primaries": [
+  "cards.transfer-card-error"
+ ],
+ "reach": {
+  "baseUrl": "https://demo.mercury.com",
+  "data": "data",
+  "map": "build/map.json",
+  "run": "2026-10-03-1525",
+  "workspace": "a11y"
+ },
+ "run": "2026-10-03-1525"
+}

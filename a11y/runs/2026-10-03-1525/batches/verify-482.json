@@ -1,0 +1,114 @@
+{
+ "area": "invoicing",
+ "batch": "verify-482",
+ "findings": [
+  {
+   "attachments": [],
+   "attempt": 1,
+   "basis": "candidate",
+   "criteria": [
+    "3.3.2"
+   ],
+   "evidence": [
+    {
+     "evidence": {
+      "description": "",
+      "name": "after",
+      "role": "button",
+      "states": {
+       "expanded": false,
+       "haspopup": "menu"
+      },
+      "template": "button \"after\" [expanded=false, haspopup=menu]"
+     },
+     "occurrence": {
+      "ancestors": [
+       [
+        "_dropdownContainer_sixj2_2"
+       ],
+       [
+        "_sentenceRow_38qef_1"
+       ],
+       [
+        "_wrapper_1ojdq_8"
+       ],
+       [],
+       [
+        "_leftInnerContainer_12jyu_3"
+       ],
+       [
+        "_left_yg1rf_39"
+       ],
+       [
+        "_leftScrollArea_yg1rf_57"
+       ],
+       [
+        "_leftContainer_yg1rf_39",
+        "_splitVariant_yg1rf_82",
+        "_leftBoxShadow_12jyu_10"
+       ]
+      ],
+      "classes": [
+       "_dropdownButton_sixj2_20"
+      ],
+      "data": {},
+      "heading": "Frequency",
+      "landmark": {
+       "name": "",
+       "role": "main"
+      },
+      "layer": "document",
+      "name": "after",
+      "rect": [
+       352,
+       309,
+       63,
+       24
+      ],
+      "role": "button",
+      "tag": "button",
+      "xpath": "/html/body/div[1]/main[1]/div[1]/div[2]/div[2]/div[3]/div[1]/div[1]/div[1]/div[1]/div[1]/div[1]/div[2]/div[2]/div[1]/button[1]"
+     },
+     "state": "invoicing.create-series-ends-after"
+    }
+   ],
+   "evidenceHash": "85f86d14fa6ec30b3fb55c0edc0a903c67aa1a6835df72b766bb40ced48eaec2",
+   "facts": {
+    "announced": "button \"after\" [expanded=false, haspopup=menu]",
+    "axeSummary": "",
+    "criterion": "3.3.2",
+    "criterionName": "Labels or Instructions",
+    "element": "button \"after\"",
+    "rule": "announced-as",
+    "screen": "Series ends after N invoices"
+   },
+   "family": "name",
+   "guidance": "High for an unnamed form control or the sole primary action.",
+   "issueId": null,
+   "key": "name:announced-as:ff65b575ced0",
+   "measured": false,
+   "primary": "invoicing.create-series-ends-after",
+   "proposals": [],
+   "rule": "announced-as",
+   "screens": 1,
+   "severityDefault": "medium",
+   "source": "scanner",
+   "states": [
+    "invoicing.create-series-ends-after"
+   ],
+   "summary": "announced-as: announced as button \"after\" [expanded=false, haspopup=menu].",
+   "title": "Missing or unclear name: button \"after\""
+  }
+ ],
+ "primaries": [
+  "invoicing.create-series-ends-after"
+ ],
+ "reach": {
+  "baseUrl": "https://demo.mercury.com",
+  "data": "data",
+  "map": "build/map.json",
+  "run": "2026-10-03-1525",
+  "workspace": "a11y"
+ },
+ "run": "2026-10-03-1525"
+}

@@ -1,0 +1,114 @@
+{
+ "area": "books",
+ "batch": "verify-439",
+ "findings": [
+  {
+   "attachments": [],
+   "attempt": 1,
+   "basis": "candidate",
+   "criteria": [
+    "4.1.2"
+   ],
+   "evidence": [
+    {
+     "evidence": {
+      "description": "",
+      "name": "",
+      "role": "button",
+      "states": {},
+      "template": "button \"\""
+     },
+     "occurrence": {
+      "ancestors": [
+       [
+        "_settingsGroup_15n7x_15"
+       ],
+       [
+        "_actions_15n7x_9",
+        "session-replay-unmask"
+       ],
+       [
+        "_container_15n7x_1"
+       ],
+       [
+        "_scrollableHeader_7rfk9_35"
+       ],
+       [
+        "_virtualizerContainer_7rfk9_25"
+       ],
+       [
+        "_grid_7rfk9_1"
+       ],
+       [
+        "_csvImportGate_hp7ar_25"
+       ],
+       [
+        "_gridContainer_hp7ar_3"
+       ]
+      ],
+      "classes": [
+       "_button_r6b2u_20",
+       "_small_r6b2u_72",
+       "_secondary_r6b2u_126"
+      ],
+      "data": {},
+      "heading": "Add other bank or credit accounts",
+      "landmark": {
+       "name": "",
+       "role": "main"
+      },
+      "layer": "document",
+      "name": "",
+      "rect": [
+       1384,
+       164,
+       32,
+       32
+      ],
+      "role": "button",
+      "tag": "button",
+      "xpath": "/html/body/div[1]/main[1]/div[1]/div[1]/div[1]/div[4]/div[1]/div[1]/div[2]/div[1]/div[1]/div[2]/div[1]/div[1]/div[1]/div[1]/div[1]/div[1]/div[2]/div[1]/button[1]"
+     },
+     "state": "books.reconciliation"
+    }
+   ],
+   "evidenceHash": "f385552b279f836cc6d276e039ab1373b5c771732495fe2377e20548b409417f",
+   "facts": {
+    "announced": "button \"\"",
+    "axeSummary": "",
+    "criterion": "4.1.2",
+    "criterionName": "Name, Role, Value",
+    "element": "button in \"Add other bank or credit accounts\"",
+    "rule": "announced-as",
+    "screen": "Reconciliation"
+   },
+   "family": "name",
+   "guidance": "High for an unnamed form control or the sole primary action.",
+   "issueId": null,
+   "key": "name:announced-as:77a36faa03b6",
+   "measured": false,
+   "primary": "books.reconciliation",
+   "proposals": [],
+   "rule": "announced-as",
+   "screens": 1,
+   "severityDefault": "medium",
+   "source": "scanner",
+   "states": [
+    "books.reconciliation"
+   ],
+   "summary": "announced-as: announced as button \"\".",
+   "title": "Missing or unclear name: button in \"Add other bank or credit accounts\""
+  }
+ ],
+ "primaries": [
+  "books.reconciliation"
+ ],
+ "reach": {
+  "baseUrl": "https://demo.mercury.com",
+  "data": "data",
+  "map": "build/map.json",
+  "run": "2026-10-03-1525",
+  "workspace": "a11y"
+ },
+ "run": "2026-10-03-1525"
+}

@@ -1,0 +1,319 @@
+{
+ "area": "payments",
+ "batch": "verify-262",
+ "findings": [
+  {
+   "attachments": [],
+   "attempt": 1,
+   "basis": "failure",
+   "criteria": [
+    "4.1.3"
+   ],
+   "evidence": [
+    {
+     "evidence": {
+      "focus": "body",
+      "focused": false,
+      "message": "Approved by John Doe",
+      "region": null
+     },
+     "occurrence": {
+      "ancestors": [
+       [
+        "_panelSection_d3i56_148"
+       ],
+       [
+        "_panelBody_d3i56_64"
+       ],
+       [
+        "_large_kwlx6_9",
+        "_noHover_3n0se_28",
+        "_shadow_3n0se_25",
+        "_raisedBackground_3n0se_45",
+        "_panel_d3i56_55",
+        "_detailPanelPanel_1d15f_16"
+       ],
+       [
+        "_transitionWrapper_d3i56_5",
+        "_visible_d3i56_19",
+        "_detailPanelWrapper_1d15f_12"
+       ],
+       [
+        "_tableWrapper_1d15f_1"
+       ],
+       [
+        "_pageContent_809q8_151",
+        "_pageContentWidth_809q8_184",
+        "_footerPadding_809q8_115"
+       ],
+       [
+        "_dashboardContent_809q8_29"
+       ],
+       [
+        "_layout_809q8_18"
+       ]
+      ],
+      "classes": [
+       "_detailRow_7vixx_59"
+      ],
+      "data": {},
+      "heading": "Checkbooks",
+      "landmark": {
+       "name": "",
+       "role": "complementary"
+      },
+      "layer": "document",
+      "name": "",
+      "rect": [
+       946,
+       682,
+       344,
+       20
+      ],
+      "role": "",
+      "tag": "div",
+      "xpath": "/html/body/div[1]/main[1]/div[1]/div[1]/div[4]/div[1]/div[2]/div[2]/aside[1]/div[1]/div[1]/section[1]/div[7]"
+     },
+     "state": "payments.checkbook-check-approved"
+    }
+   ],
+   "evidenceHash": "bd65aa6692848e25e437a034b8f31b8e5b2da37c7e4ab0e30d086eaaa3fe8a6d",
+   "facts": {
+    "criterion": "4.1.3",
+    "criterionName": "Status Messages",
+    "focus": "page body",
+    "message": "\"Approved by John Doe\"",
+    "screen": "Check approved"
+   },
+   "family": "status-message",
+   "guidance": "High when it is the only confirmation of a money movement.",
+   "issueId": null,
+   "key": "status-message:status-not-announced:277e9a88c9c9",
+   "measured": false,
+   "primary": "payments.checkbook-check-approved",
+   "proposals": [],
+   "rule": "status-not-announced",
+   "screens": 1,
+   "severityDefault": "medium",
+   "source": "scanner",
+   "states": [
+    "payments.checkbook-check-approved"
+   ],
+   "summary": "\"Approved by John Doe\" appeared outside any live region, alert or status role that existed before it, and focus stayed on the page body.",
+   "title": "Status message not announced: \"Approved by John Doe\""
+  },
+  {
+   "attachments": [],
+   "attempt": 1,
+   "basis": "failure",
+   "criteria": [
+    "4.1.3"
+   ],
+   "evidence": [
+    {
+     "evidence": {
+      "focus": "body",
+      "focused": false,
+      "message": "This payment was approved on October 3, 2026 and is currently being processed.",
+      "region": null
+     },
+     "occurrence": {
+      "ancestors": [
+       [
+        "_panelSection_d3i56_148"
+       ],
+       [
+        "_panelBody_d3i56_64"
+       ],
+       [
+        "_large_kwlx6_9",
+        "_noHover_3n0se_28",
+        "_shadow_3n0se_25",
+        "_raisedBackground_3n0se_45",
+        "_panel_d3i56_55",
+        "_detailPanelPanel_1d15f_16"
+       ],
+       [
+        "_transitionWrapper_d3i56_5",
+        "_visible_d3i56_19",
+        "_detailPanelWrapper_1d15f_12"
+       ],
+       [
+        "_tableWrapper_1d15f_1"
+       ],
+       [
+        "_pageContent_809q8_151",
+        "_pageContentWidth_809q8_184",
+        "_footerPadding_809q8_115"
+       ],
+       [
+        "_dashboardContent_809q8_29"
+       ],
+       [
+        "_layout_809q8_18"
+       ]
+      ],
+      "classes": [
+       "_approvedBanner_7vixx_41"
+      ],
+      "data": {},
+      "heading": "Checkbooks",
+      "landmark": {
+       "name": "",
+       "role": "complementary"
+      },
+      "layer": "document",
+      "name": "",
+      "rect": [
+       922,
+       485,
+       392,
+       65
+      ],
+      "role": "generic",
+      "tag": "div",
+      "xpath": "/html/body/div[1]/main[1]/div[1]/div[1]/div[4]/div[1]/div[2]/div[2]/aside[1]/div[1]/div[1]/section[1]/div[3]"
+     },
+     "state": "payments.checkbook-check-approved"
+    }
+   ],
+   "evidenceHash": "8f6a9922c5230158b2bd0e83123dbbb9ea637cc718dd93caba675f4dd11fa149",
+   "facts": {
+    "criterion": "4.1.3",
+    "criterionName": "Status Messages",
+    "focus": "page body",
+    "message": "\"This payment was approved on <date> and is curr…\"",
+    "screen": "Check approved"
+   },
+   "family": "status-message",
+   "guidance": "High when it is the only confirmation of a money movement.",
+   "issueId": null,
+   "key": "status-message:status-not-announced:62c80e342cbe",
+   "measured": false,
+   "primary": "payments.checkbook-check-approved",
+   "proposals": [],
+   "rule": "status-not-announced",
+   "screens": 1,
+   "severityDefault": "medium",
+   "source": "scanner",
+   "states": [
+    "payments.checkbook-check-approved"
+   ],
+   "summary": "\"This payment was approved on <date> and is curr…\" appeared outside any live region, alert or status role that existed before it, and focus stayed on the page body.",
+   "title": "Status message not announced: \"This payment was approved on <date> and is curr…\""
+  },
+  {
+   "attachments": [],
+   "attempt": 1,
+   "basis": "failure",
+   "criteria": [
+    "4.1.3"
+   ],
+   "evidence": [
+    {
+     "evidence": {
+      "focus": "body",
+      "focused": false,
+      "message": "Memo",
+      "region": null
+     },
+     "occurrence": {
+      "ancestors": [
+       [
+        "_panelSection_d3i56_148"
+       ],
+       [
+        "_panelBody_d3i56_64"
+       ],
+       [
+        "_large_kwlx6_9",
+        "_noHover_3n0se_28",
+        "_shadow_3n0se_25",
+        "_raisedBackground_3n0se_45",
+        "_panel_d3i56_55",
+        "_detailPanelPanel_1d15f_16"
+       ],
+       [
+        "_transitionWrapper_d3i56_5",
+        "_visible_d3i56_19",
+        "_detailPanelWrapper_1d15f_12"
+       ],
+       [
+        "_tableWrapper_1d15f_1"
+       ],
+       [
+        "_pageContent_809q8_151",
+        "_pageContentWidth_809q8_184",
+        "_footerPadding_809q8_115"
+       ],
+       [
+        "_dashboardContent_809q8_29"
+       ],
+       [
+        "_layout_809q8_18"
+       ]
+      ],
+      "classes": [
+       "_label_qaod7_59",
+       "_text-secondary_12t49_1",
+       "_memoLabel_7vixx_77"
+      ],
+      "data": {},
+      "heading": "Checkbooks",
+      "landmark": {
+       "name": "",
+       "role": "complementary"
+      },
+      "layer": "document",
+      "name": "",
+      "rect": [
+       946,
+       751,
+       344,
+       20
+      ],
+      "role": "generic",
+      "tag": "div",
+      "xpath": "/html/body/div[1]/main[1]/div[1]/div[1]/div[4]/div[1]/div[2]/div[2]/aside[1]/div[1]/div[1]/section[2]/div[1]"
+     },
+     "state": "payments.checkbook-check-approved"
+    }
+   ],
+   "evidenceHash": "9e3eafc60deb6e40b9aa40af9bac509ceb7f348f59d3513a3bbb5b4e9c919d05",
+   "facts": {
+    "criterion": "4.1.3",
+    "criterionName": "Status Messages",
+    "focus": "page body",
+    "message": "\"Memo\"",
+    "screen": "Check approved"
+   },
+   "family": "status-message",
+   "guidance": "High when it is the only confirmation of a money movement.",
+   "issueId": null,
+   "key": "status-message:status-not-announced:6a1b1ab1881c",
+   "measured": false,
+   "primary": "payments.checkbook-check-approved",
+   "proposals": [],
+   "rule": "status-not-announced",
+   "screens": 1,
+   "severityDefault": "medium",
+   "source": "scanner",
+   "states": [
+    "payments.checkbook-check-approved"
+   ],
+   "summary": "\"Memo\" appeared outside any live region, alert or status role that existed before it, and focus stayed on the page body.",
+   "title": "Status message not announced: \"Memo\""
+  }
+ ],
+ "primaries": [
+  "payments.checkbook-check-approved"
+ ],
+ "reach": {
+  "baseUrl": "https://demo.mercury.com",
+  "data": "data",
+  "map": "build/map.json",
+  "run": "2026-10-03-1525",
+  "workspace": "a11y"
+ },
+ "run": "2026-10-03-1525"
+}

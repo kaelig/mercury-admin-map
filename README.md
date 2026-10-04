@@ -49,6 +49,8 @@ netlify deploy --prod --dir dist
 
 A repeatable WCAG 2.2 AA audit of every screen in the map. A scripted Playwright sweep replays each screen on demo.mercury.com and measures it, Sonnet agents try to disprove every finding on the live demo, and the verified findings are published to `a11y/published/`. `build.py` merges that snapshot into the map, as `a11y` issues on their screens, and into the agent export.
 
+Published run `2026-10-03-1525` (demo build `0c71cd6`): 796 of 915 states audited, 835 verified failures (52 high, 418 medium, 365 low; 818 from the scripted checks, 17 hand-found), 433 scanner findings withdrawn by verifiers.
+
 - **Report:** [`dist/a11y/index.html`](dist/a11y/index.html), built only when `a11y/published/` exists. It covers what was tested and what was not, findings by WCAG principle, and what changed since the last published run. Each row opens the map with that issue's screens highlighted.
 - **Run, resume or refresh it** with the `a11y-audit` skill in Claude Code: [`.agents/skills/a11y-audit/SKILL.md`](.agents/skills/a11y-audit/SKILL.md). It stops before anything reaches an audience and never deploys.
 - **Run stages by hand,** read the file formats, or follow a fixture run from plan to publish: [`tools/a11y/README.md`](tools/a11y/README.md). `npm run a11y:test` runs the tooling's tests.

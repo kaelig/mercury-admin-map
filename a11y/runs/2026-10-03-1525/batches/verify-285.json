@@ -1,0 +1,180 @@
+{
+ "area": "payments",
+ "batch": "verify-285",
+ "findings": [
+  {
+   "attachments": [],
+   "attempt": 1,
+   "basis": "violation",
+   "criteria": [
+    "4.1.2"
+   ],
+   "evidence": [
+    {
+     "evidence": {
+      "failureSummary": "Fix any of the following:\n  Element does not have inner text that is visible to screen readers\n  aria-label attribute does not exist or is empty\n  aria-labelledby attribute does not exist, references elements that do not exist or references elements that are empty\n  Element has no title attribute\n  Element does not have an implicit (wrapped) <label>\n  Element does not have an explicit <label>\n  Element's default semantics were not overridden with role=\"none\" or role=\"presentation\"",
+      "messageKey": "noAttr"
+     },
+     "occurrence": {
+      "ancestors": [
+       [
+        "_header_bipbt_13"
+       ],
+       [
+        "_container_bipbt_1",
+        "_billDetailsCollapsibleSection_1qhzr_18"
+       ],
+       [
+        "_internalSection_1qhzr_40"
+       ],
+       [
+        "_wrapper_1qhzr_1",
+        "_container_1eyrc_1"
+       ],
+       [
+        "_routeContainer_15al5_228"
+       ],
+       [
+        "_routes_15al5_220"
+       ],
+       [
+        "_routeSection_15al5_207"
+       ],
+       [
+        "_container_15al5_4",
+        "_container_10wfz_3",
+        "_closed_15al5_75"
+       ]
+      ],
+      "classes": [
+       "_button_r6b2u_20",
+       "_small_r6b2u_72",
+       "_tertiary_r6b2u_153",
+       "_button_bipbt_30",
+       "_buttonOpen_bipbt_33"
+      ],
+      "data": {},
+      "heading": "Upload an attachment",
+      "landmark": {
+       "name": "",
+       "role": "form"
+      },
+      "layer": "document",
+      "name": "",
+      "rect": [
+       951,
+       738,
+       32,
+       32
+      ],
+      "role": "button",
+      "tag": "button",
+      "xpath": "/html/body/div[1]/main[1]/div[1]/div[2]/div[2]/div[1]/div[2]/section[2]/div[1]/div[1]/form[1]/div[6]/div[1]/div[1]/button[1]"
+     },
+     "state": "payments.send-details-bill"
+    },
+    {
+     "evidence": {
+      "failureSummary": "Fix any of the following:\n  Element does not have inner text that is visible to screen readers\n  aria-label attribute does not exist or is empty\n  aria-labelledby attribute does not exist, references elements that do not exist or references elements that are empty\n  Element has no title attribute\n  Element does not have an implicit (wrapped) <label>\n  Element does not have an explicit <label>\n  Element's default semantics were not overridden with role=\"none\" or role=\"presentation\"",
+      "messageKey": "noAttr"
+     },
+     "occurrence": {
+      "ancestors": [
+       [
+        "_header_bipbt_13"
+       ],
+       [
+        "_container_bipbt_1",
+        "_billDetailsCollapsibleSection_1qhzr_18"
+       ],
+       [
+        "_internalSection_1qhzr_40"
+       ],
+       [
+        "_wrapper_1qhzr_1",
+        "_container_1eyrc_1"
+       ],
+       [
+        "_routeContainer_15al5_228"
+       ],
+       [
+        "_routes_15al5_220"
+       ],
+       [
+        "_routeSection_15al5_207"
+       ],
+       [
+        "_container_15al5_4",
+        "_container_10wfz_3",
+        "_preview-open_15al5_94"
+       ]
+      ],
+      "classes": [
+       "_button_r6b2u_20",
+       "_small_r6b2u_72",
+       "_tertiary_r6b2u_153",
+       "_button_bipbt_30",
+       "_buttonOpen_bipbt_33"
+      ],
+      "data": {},
+      "heading": "Upload an attachment",
+      "landmark": {
+       "name": "",
+       "role": "form"
+      },
+      "layer": "document",
+      "name": "",
+      "rect": [
+       591,
+       702,
+       32,
+       32
+      ],
+      "role": "button",
+      "tag": "button",
+      "xpath": "/html/body/div[1]/main[1]/div[1]/div[2]/div[2]/div[1]/div[2]/section[2]/div[1]/div[1]/form[1]/div[6]/div[1]/div[1]/button[1]"
+     },
+     "state": "billpay.pay-details"
+    }
+   ],
+   "evidenceHash": "5b6156d9f73b18d61b02f34b5fe43865af1aff870a60c3ce3f7af531ab925adf",
+   "facts": {
+    "announced": "button \"\"",
+    "axeSummary": "Element does not have inner text that is visible to screen readers; aria-label attribute does not exist or is empty; aria-labelledby attribute does not exist,…",
+    "criterion": "4.1.2",
+    "criterionName": "Name, Role, Value",
+    "element": "button in \"Upload an attachment\"",
+    "rule": "button-name",
+    "screen": "Send: Bill details open"
+   },
+   "family": "name",
+   "guidance": "High for an unnamed form control or the sole primary action.",
+   "issueId": null,
+   "key": "name:button-name:82aa4d581a39",
+   "measured": false,
+   "primary": "payments.send-details-bill",
+   "proposals": [],
+   "rule": "button-name",
+   "screens": 2,
+   "severityDefault": "medium",
+   "source": "scanner",
+   "states": [
+    "payments.send-details-bill",
+    "billpay.pay-details"
+   ],
+   "summary": "button-name: announced as button \"\". Element does not have inner text that is visible to screen readers; aria-label attribute does not exist or is empty; aria-labelledby attribute does not exist,…",
+   "title": "Missing or unclear name: button in \"Upload an attachment\""
+  }
+ ],
+ "primaries": [
+  "payments.send-details-bill"
+ ],
+ "reach": {
+  "baseUrl": "https://demo.mercury.com",
+  "data": "data",
+  "map": "build/map.json",
+  "run": "2026-10-03-1525",
+  "workspace": "a11y"
+ },
+ "run": "2026-10-03-1525"
+}

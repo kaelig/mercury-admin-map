@@ -1,0 +1,110 @@
+{
+ "area": "accounts",
+ "batch": "verify-410",
+ "findings": [
+  {
+   "attachments": [],
+   "attempt": 1,
+   "basis": "candidate",
+   "criteria": [
+    "4.1.2"
+   ],
+   "evidence": [
+    {
+     "evidence": {
+      "description": "",
+      "name": "",
+      "role": "textbox",
+      "states": {},
+      "template": "textbox \"\""
+     },
+     "occurrence": {
+      "ancestors": [
+       [
+        "_inputBox_q7hf7_93"
+       ],
+       [
+        "_inputBoxWrapper_q7hf7_93"
+       ],
+       [
+        "_textInputWrapper_q7hf7_24"
+       ],
+       [
+        "_provideDSTextInput_q7hf7_6",
+        "_distributeRowAmountInput_15jit_22"
+       ],
+       [
+        "_distributeRow_15jit_1"
+       ],
+       [
+        "_autoTransferTabModal_11bzg_18"
+       ],
+       [
+        "_autoTransferTabModal_11bzg_18"
+       ],
+       []
+      ],
+      "classes": [
+       "_input_q7hf7_93"
+      ],
+      "data": {},
+      "heading": "Schedule recurring transfers",
+      "landmark": {
+       "name": "",
+       "role": "form"
+      },
+      "layer": "top",
+      "name": "",
+      "rect": [
+       546,
+       313,
+       119,
+       24
+      ],
+      "role": "textbox",
+      "tag": "input",
+      "xpath": "/html/body/div[11]/div[1]/div[1]/div[1]/div[2]/form[1]/div[1]/div[4]/div[1]/div[1]/div[1]/div[1]/div[1]/input[1]"
+     },
+     "state": "accounts.rule-recurring"
+    }
+   ],
+   "evidenceHash": "15af1b035433d2b2af3083759cb928bfcbf73b07126398e2b5976aaf9e5bb0f5",
+   "facts": {
+    "announced": "textbox \"\"",
+    "axeSummary": "",
+    "criterion": "4.1.2",
+    "criterionName": "Name, Role, Value",
+    "element": "textbox in \"Schedule recurring transfers\"",
+    "rule": "announced-as",
+    "screen": "Recurring transfer rule form"
+   },
+   "family": "name",
+   "guidance": "High for an unnamed form control or the sole primary action.",
+   "issueId": null,
+   "key": "name:announced-as:7a2678ca36a7",
+   "measured": false,
+   "primary": "accounts.rule-recurring",
+   "proposals": [],
+   "rule": "announced-as",
+   "screens": 1,
+   "severityDefault": "medium",
+   "source": "scanner",
+   "states": [
+    "accounts.rule-recurring"
+   ],
+   "summary": "announced-as: announced as textbox \"\".",
+   "title": "Missing or unclear name: textbox in \"Schedule recurring transfers\""
+  }
+ ],
+ "primaries": [
+  "accounts.rule-recurring"
+ ],
+ "reach": {
+  "baseUrl": "https://demo.mercury.com",
+  "data": "data",
+  "map": "build/map.json",
+  "run": "2026-10-03-1525",
+  "workspace": "a11y"
+ },
+ "run": "2026-10-03-1525"
+}

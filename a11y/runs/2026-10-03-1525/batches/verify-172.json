@@ -1,0 +1,239 @@
+{
+ "area": "home",
+ "batch": "verify-172",
+ "findings": [
+  {
+   "attachments": [],
+   "attempt": 1,
+   "basis": "failure",
+   "criteria": [
+    "2.4.3"
+   ],
+   "evidence": [
+    {
+     "evidence": {
+      "closedBy": "escape",
+      "focus": {
+       "ancestors": [
+        [
+         "_wrapper_ko7ja_5"
+        ],
+        [
+         "_menus_w61dd_40"
+        ],
+        [
+         "_wrapper_w61dd_28"
+        ],
+        [
+         "_fullWidthTopBar_w61dd_4"
+        ],
+        [
+         "_dashboardContent_809q8_29",
+         "_hasMobileDesigns_809q8_136"
+        ],
+        [
+         "_layout_809q8_18",
+         "_homeLayout_ct6b5_100"
+        ],
+        [
+         "_wrapper_809q8_3"
+        ],
+        []
+       ],
+       "classes": [
+        "_menuButton_ko7ja_21"
+       ],
+       "data": {
+        "data-focus-visible": "true"
+       },
+       "heading": "",
+       "landmark": {
+        "name": "",
+        "role": "main"
+       },
+       "layer": "document",
+       "name": "",
+       "rect": [
+        1384,
+        64,
+        32,
+        32
+       ],
+       "role": "button",
+       "tag": "button",
+       "xpath": "/html/body/div[1]/main[1]/div[1]/div[1]/div[4]/div[1]/div[1]/div[1]/div[3]/div[2]/button[1]"
+      },
+      "stops": 6,
+      "trace": [
+       {
+        "focus": {
+         "label": "Jane Black jane@demo.mercury.com Profile Notifications Security Privacy Perks Ap",
+         "tag": "div",
+         "xpath": "/html/body/div[6]/div[1]/div[1]"
+        },
+        "key": "start",
+        "where": "trigger"
+       },
+       {
+        "focus": {
+         "label": "Profile",
+         "tag": "div",
+         "xpath": "/html/body/div[6]/div[1]/div[1]/div[2]"
+        },
+        "key": "Tab",
+        "where": "outside"
+       },
+       {
+        "focus": {
+         "label": "Notifications",
+         "tag": "div",
+         "xpath": "/html/body/div[6]/div[1]/div[1]/div[3]"
+        },
+        "key": "Tab",
+        "where": "outside"
+       },
+       {
+        "focus": {
+         "label": "Security",
+         "tag": "div",
+         "xpath": "/html/body/div[6]/div[1]/div[1]/div[4]"
+        },
+        "key": "Tab",
+        "where": "outside"
+       },
+       {
+        "focus": {
+         "label": "Privacy",
+         "tag": "div",
+         "xpath": "/html/body/div[6]/div[1]/div[1]/div[5]"
+        },
+        "key": "Tab",
+        "where": "outside"
+       },
+       {
+        "focus": {
+         "label": "Perks",
+         "tag": "div",
+         "xpath": "/html/body/div[6]/div[1]/div[1]/div[6]"
+        },
+        "key": "Tab",
+        "where": "outside"
+       },
+       {
+        "focus": {
+         "label": "Appearance System default",
+         "tag": "div",
+         "xpath": "/html/body/div[6]/div[1]/div[1]/div[7]"
+        },
+        "key": "Tab",
+        "where": "trigger"
+       },
+       {
+        "focus": {
+         "label": "System default We’ll match your system preferences",
+         "tag": "div",
+         "xpath": "/html/body/div[6]/div[1]/div[1]/div[8]/div[1]/div[1]"
+        },
+        "key": "Enter",
+        "where": "outside"
+       },
+       {
+        "focus": {
+         "label": "System default We’ll match your system preferences",
+         "tag": "div",
+         "xpath": "/html/body/div[6]/div[1]/div[1]/div[8]/div[1]/div[1]"
+        },
+        "key": "settle",
+        "where": "inside"
+       },
+       {
+        "focus": {
+         "label": "",
+         "tag": "button",
+         "xpath": "/html/body/div[1]/main[1]/div[1]/div[1]/div[4]/div[1]/div[1]/div[1]/div[3]/div[2]/button[1]"
+        },
+        "key": "Escape",
+        "where": "outside"
+       },
+       {
+        "focus": {
+         "label": "",
+         "tag": "button",
+         "xpath": "/html/body/div[1]/main[1]/div[1]/div[1]/div[4]/div[1]/div[1]/div[1]/div[3]/div[2]/button[1]"
+        },
+        "key": "settle",
+        "where": "outside"
+       }
+      ]
+     },
+     "occurrence": {
+      "ancestors": [
+       [
+        "_menu_ko7ja_21",
+        "_userMenu_ko7ja_74"
+       ],
+       [],
+       []
+      ],
+      "classes": [
+       "_menuItem_1svr1_4",
+       "_themeSubmenuButton_s0t7d_4",
+       "session-replay-unmask"
+      ],
+      "data": {},
+      "heading": "Welcome, Jane",
+      "landmark": null,
+      "layer": "document",
+      "name": "Appearance System default",
+      "rect": [
+       1193,
+       464,
+       219,
+       60
+      ],
+      "role": "menuitem",
+      "tag": "div",
+      "xpath": "/html/body/div[6]/div[1]/div[1]/div[7]"
+     },
+     "state": "home.appearance-submenu"
+    }
+   ],
+   "evidenceHash": "a10b4ce19c21afa290f0e85bff0645f5cc8552f2a0e7d3354bfe6682d5a2f6be",
+   "facts": {
+    "criterion": "2.4.3",
+    "criterionName": "Focus Order",
+    "element": "menuitem \"Appearance System default\"",
+    "focus": "button in the main landmark",
+    "overlay": "menu \"Appearance System default\"",
+    "screen": "Appearance submenu"
+   },
+   "family": "dialog-focus",
+   "guidance": "High when controls inside are unreachable.",
+   "issueId": null,
+   "key": "dialog-focus:dialog-focus-not-returned:4a4de539d83b",
+   "measured": false,
+   "primary": "home.appearance-submenu",
+   "proposals": [],
+   "rule": "dialog-focus-not-returned",
+   "screens": 1,
+   "severityDefault": "low",
+   "source": "scanner",
+   "states": [
+    "home.appearance-submenu"
+   ],
+   "summary": "Esc closed the menu \"Appearance System default\" and focus went to the button in the main landmark, not back to the menuitem \"Appearance System default\".",
+   "title": "Focus lost after closing menu \"Appearance System default\""
+  }
+ ],
+ "primaries": [
+  "home.appearance-submenu"
+ ],
+ "reach": {
+  "baseUrl": "https://demo.mercury.com",
+  "data": "data",
+  "map": "build/map.json",
+  "run": "2026-10-03-1525",
+  "workspace": "a11y"
+ },
+ "run": "2026-10-03-1525"
+}

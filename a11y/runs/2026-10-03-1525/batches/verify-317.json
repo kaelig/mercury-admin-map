@@ -1,0 +1,1206 @@
+{
+ "area": "settings",
+ "batch": "verify-317",
+ "findings": [
+  {
+   "attachments": [],
+   "attempt": 1,
+   "basis": "violation",
+   "criteria": [
+    "1.4.3"
+   ],
+   "evidence": [
+    {
+     "evidence": {
+      "bgColor": "#bac2f7",
+      "contrastRatio": 1.25,
+      "expectedContrastRatio": "4.5:1",
+      "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 1.25 (foreground color: #d6dafa, background color: #bac2f7, font size: 11.3pt (15px), font weight: normal). Expected contrast ratio of 4.5:1",
+      "fgColor": "#d6dafa",
+      "fontSize": "11.3pt (15px)",
+      "fontWeight": "normal",
+      "messageKey": null
+     },
+     "occurrence": {
+      "ancestors": [
+       [
+        "_button_r6b2u_20",
+        "_large_r6b2u_88",
+        "_primary_r6b2u_104",
+        "_appearDisabled_r6b2u_16"
+       ],
+       [
+        "_buttonGroup_16t7w_1",
+        "_horizontal_16t7w_11"
+       ],
+       [
+        "_fixedFooterContent_usgjh_12"
+       ],
+       [
+        "_fixedFooter_usgjh_1"
+       ],
+       [],
+       [
+        "_contentDiv_bcpsw_53",
+        "_noBottomPadding_bcpsw_57",
+        "_contentDivHeightPreset_bcpsw_62"
+       ],
+       [
+        "_fullScreenWorkspaceLayout_bcpsw_14",
+        "_fullScreenWorkspaceLayoutBackground_bcpsw_32",
+        "_noScrollbar_bcpsw_27"
+       ],
+       [
+        "_wrapper_bcpsw_3",
+        "_responsive_bcpsw_88"
+       ]
+      ],
+      "classes": [
+       "_bodyDefaultDemi_qaod7_47"
+      ],
+      "data": {},
+      "heading": "Create a new role",
+      "landmark": {
+       "name": "",
+       "role": "form"
+      },
+      "layer": "document",
+      "name": "",
+      "rect": [
+       852,
+       844,
+       102,
+       24
+      ],
+      "role": "generic",
+      "tag": "div",
+      "xpath": "/html/body/div[1]/main[1]/div[1]/div[2]/div[2]/div[3]/form[1]/div[1]/div[1]/div[1]/button[1]/div[1]"
+     },
+     "state": "settings.create-role"
+    },
+    {
+     "evidence": {
+      "bgColor": "#bac2f7",
+      "contrastRatio": 1.25,
+      "expectedContrastRatio": "4.5:1",
+      "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 1.25 (foreground color: #d6dafa, background color: #bac2f7, font size: 11.3pt (15px), font weight: normal). Expected contrast ratio of 4.5:1",
+      "fgColor": "#d6dafa",
+      "fontSize": "11.3pt (15px)",
+      "fontWeight": "normal",
+      "messageKey": null
+     },
+     "occurrence": {
+      "ancestors": [
+       [
+        "_button_r6b2u_20",
+        "_large_r6b2u_88",
+        "_primary_r6b2u_104",
+        "_appearDisabled_r6b2u_16",
+        "session-replay-unmask"
+       ],
+       [
+        "_buttonGroup_152f5_125",
+        "_buttonGroup_16t7w_1",
+        "_horizontal_16t7w_11"
+       ],
+       [
+        "_contentContainer_152f5_12"
+       ],
+       [],
+       [
+        "_wrapper_cjx1n_3"
+       ],
+       [
+        "ReactModal__Content",
+        "ReactModal__Content--after-open",
+        "_modal_cjx1n_34"
+       ],
+       [
+        "ReactModal__Overlay",
+        "ReactModal__Overlay--after-open",
+        "_overlay_cjx1n_39"
+       ],
+       [
+        "ReactModalPortal"
+       ]
+      ],
+      "classes": [
+       "_bodyDefaultDemi_qaod7_47"
+      ],
+      "data": {},
+      "heading": "",
+      "landmark": {
+       "name": "",
+       "role": "form"
+      },
+      "layer": "top",
+      "name": "",
+      "rect": [
+       612,
+       493,
+       105,
+       24
+      ],
+      "role": "generic",
+      "tag": "div",
+      "xpath": "/html/body/div[10]/div[1]/div[1]/div[1]/div[2]/form[1]/div[4]/button[2]/div[1]"
+     },
+     "state": "accounts.share-statement"
+    }
+   ],
+   "evidenceHash": "7e0e094016be1abf856528189f8a454af272624e43406e23553cbafd0e9520cc",
+   "facts": {
+    "bg": "#bac2f7",
+    "criterion": "1.4.3",
+    "criterionName": "Contrast (Minimum)",
+    "element": "text in \"Create a new role\"",
+    "fg": "#d6dafa",
+    "ratio": "1.25",
+    "required": "4.5",
+    "rule": "color-contrast",
+    "screen": "Create a new role",
+    "screens": 8
+   },
+   "family": "contrast",
+   "guidance": "High under 2:1, or under 3:1 for essential text.",
+   "issueId": null,
+   "key": "contrast:color-contrast:cf41bd98ee62",
+   "measured": true,
+   "primary": "settings.create-role",
+   "proposals": [],
+   "rule": "color-contrast",
+   "screens": 8,
+   "severityDefault": "medium",
+   "source": "scanner",
+   "states": [
+    "settings.create-role",
+    "accounts.share-statement"
+   ],
+   "summary": "axe color-contrast: #d6dafa on #bac2f7 measures 1.25:1; AA needs 4.5:1.",
+   "title": "Low contrast: text in \"Create a new role\""
+  },
+  {
+   "attachments": [],
+   "attempt": 1,
+   "basis": "failure",
+   "criteria": [
+    "2.4.7",
+    "2.4.3"
+   ],
+   "evidence": [
+    {
+     "evidence": {
+      "box": [
+       487,
+       735,
+       29,
+       13
+      ],
+      "focus": {
+       "ancestors": [
+        [
+         "_stack_il1fi_18",
+         "_direction-row_il1fi_27",
+         "_align-center_il1fi_35"
+        ],
+        [
+         "_label_qaod7_59",
+         "_text-secondary_12t49_1",
+         "_legend_5thm1_3",
+         "_hidden_5thm1_6"
+        ],
+        [
+         "_outerWrapper_5thm1_19"
+        ],
+        [
+         "_checkboxGroup_5ajor_3",
+         "_checkboxGroupWrapper_113x8_17"
+        ],
+        [
+         "_checkboxGroupInput_113x8_1"
+        ],
+        [
+         "_checkboxGroupsSection_xfb0h_7"
+        ],
+        [
+         "_formContainer_xfb0h_1"
+        ],
+        [
+         "_contentArea_1xvys_1",
+         "_contentLayout_1xvys_23"
+        ]
+       ],
+       "classes": [
+        "_tooltipAnchor_18bac_4",
+        "_tooltipAnchorIcon_1fb2p_8",
+        "_tooltipAnchor_1fb2p_4",
+        "_tooltipHintIcon_13j5t_1"
+       ],
+       "data": {
+        "data-focus-visible": "true"
+       },
+       "heading": "Create a new role",
+       "landmark": {
+        "name": "",
+        "role": "form"
+       },
+       "layer": "document",
+       "name": "More info",
+       "rect": [
+        487,
+        735,
+        29,
+        13
+       ],
+       "role": "generic",
+       "tag": "div",
+       "xpath": "/html/body/div[1]/main[1]/div[1]/div[2]/div[2]/div[3]/form[1]/section[1]/div[3]/section[2]/div[1]/fieldset[1]/fieldset[1]/legend[1]/div[1]/div[1]"
+      },
+      "hidden": "clipped",
+      "previous": {
+       "ancestors": [
+        [
+         "_headerControls_5ajor_26"
+        ],
+        [
+         "_checkboxGroupHeader_5ajor_13",
+         "_checkboxGroupHeader_113x8_13"
+        ],
+        [
+         "_checkboxGroup_5ajor_3",
+         "_checkboxGroupWrapper_113x8_17"
+        ],
+        [
+         "_checkboxGroupInput_113x8_1"
+        ],
+        [
+         "_checkboxGroupsSection_xfb0h_7"
+        ],
+        [
+         "_formContainer_xfb0h_1"
+        ],
+        [
+         "_contentArea_1xvys_1",
+         "_contentLayout_1xvys_23"
+        ],
+        []
+       ],
+       "classes": [
+        "_controlButton_5ajor_47"
+       ],
+       "data": {},
+       "heading": "Create a new role",
+       "landmark": {
+        "name": "",
+        "role": "form"
+       },
+       "layer": "document",
+       "name": "Select All",
+       "rect": [
+        944,
+        709,
+        54,
+        20
+       ],
+       "role": "button",
+       "tag": "button",
+       "xpath": "/html/body/div[1]/main[1]/div[1]/div[2]/div[2]/div[3]/form[1]/section[1]/div[3]/section[2]/div[1]/fieldset[1]/div[1]/div[1]/button[1]"
+      },
+      "stop": 12,
+      "stops": 42
+     },
+     "occurrence": {
+      "ancestors": [
+       [
+        "_stack_il1fi_18",
+        "_direction-row_il1fi_27",
+        "_align-center_il1fi_35"
+       ],
+       [
+        "_label_qaod7_59",
+        "_text-secondary_12t49_1",
+        "_legend_5thm1_3",
+        "_hidden_5thm1_6"
+       ],
+       [
+        "_outerWrapper_5thm1_19"
+       ],
+       [
+        "_checkboxGroup_5ajor_3",
+        "_checkboxGroupWrapper_113x8_17"
+       ],
+       [
+        "_checkboxGroupInput_113x8_1"
+       ],
+       [
+        "_checkboxGroupsSection_xfb0h_7"
+       ],
+       [
+        "_formContainer_xfb0h_1"
+       ],
+       [
+        "_contentArea_1xvys_1",
+        "_contentLayout_1xvys_23"
+       ]
+      ],
+      "classes": [
+       "_tooltipAnchor_18bac_4",
+       "_tooltipAnchorIcon_1fb2p_8",
+       "_tooltipAnchor_1fb2p_4",
+       "_tooltipHintIcon_13j5t_1"
+      ],
+      "data": {
+       "data-focus-visible": "true"
+      },
+      "heading": "Create a new role",
+      "landmark": {
+       "name": "",
+       "role": "form"
+      },
+      "layer": "document",
+      "name": "More info",
+      "rect": [
+       487,
+       735,
+       29,
+       13
+      ],
+      "role": "generic",
+      "tag": "div",
+      "xpath": "/html/body/div[1]/main[1]/div[1]/div[2]/div[2]/div[3]/form[1]/section[1]/div[3]/section[2]/div[1]/fieldset[1]/fieldset[1]/legend[1]/div[1]/div[1]"
+     },
+     "state": "settings.create-role"
+    }
+   ],
+   "evidenceHash": "e7da4b49e2d95840edd21306a7bb3854e0b217d63022021ea02283443068270b",
+   "facts": {
+    "criterion": "2.4.7",
+    "criterionName": "Focus Visible",
+    "element": "text \"More info\"",
+    "screen": "Create a new role",
+    "screens": 1,
+    "stop": "12"
+   },
+   "family": "focus-visible",
+   "guidance": "High on shared components on primary paths.",
+   "issueId": null,
+   "key": "focus-visible:focus-hidden:29db3234a01d",
+   "measured": true,
+   "primary": "settings.create-role",
+   "proposals": [],
+   "rule": "focus-hidden",
+   "screens": 1,
+   "severityDefault": "medium",
+   "source": "scanner",
+   "states": [
+    "settings.create-role"
+   ],
+   "summary": "Tab stop 12 focused the text \"More info\", which is invisible, has no size, or sits off screen.",
+   "title": "Tab stops on hidden element: text \"More info\""
+  },
+  {
+   "attachments": [],
+   "attempt": 1,
+   "basis": "failure",
+   "criteria": [
+    "2.4.7"
+   ],
+   "evidence": [
+    {
+     "evidence": {
+      "diff": 0,
+      "floor": 16,
+      "focusVisible": true,
+      "previous": {
+       "ancestors": [
+        [
+         "_checkboxHeightFix_1wfxj_6",
+         "_checkbox_113x8_1",
+         "_checkboxWrapper_1758n_62",
+         "_defaultCheckboxWrapper_1km7i_14"
+        ],
+        [
+         "_innerWrapper_5thm1_24",
+         "_columnLayout_5thm1_31",
+         "_checkboxGroupInnerWrapper_113x8_24"
+        ],
+        [
+         "_outerWrapper_5thm1_19"
+        ],
+        [
+         "_checkboxGroup_5ajor_3",
+         "_checkboxGroupWrapper_113x8_17"
+        ],
+        [
+         "_checkboxGroupInput_113x8_1"
+        ],
+        [
+         "_spendSection_xfb0h_13"
+        ],
+        [
+         "_checkboxGroupsSection_xfb0h_7"
+        ],
+        [
+         "_formContainer_xfb0h_1"
+        ]
+       ],
+       "classes": [
+        "_input_1758n_13",
+        "_defaultInput_1km7i_44"
+       ],
+       "data": {},
+       "heading": "Create a new role",
+       "landmark": {
+        "name": "",
+        "role": "form"
+       },
+       "layer": "document",
+       "name": "Spend management More info",
+       "rect": [
+        502,
+        811,
+        18,
+        18
+       ],
+       "role": "checkbox",
+       "tag": "input",
+       "xpath": "/html/body/div[1]/main[1]/div[1]/div[2]/div[2]/div[3]/form[1]/section[1]/div[3]/section[2]/div[3]/div[1]/fieldset[1]/fieldset[1]/div[1]/label[1]/input[1]"
+      },
+      "stop": 27,
+      "stops": 42,
+      "style": [
+       "::after border-color",
+       "::after color",
+       "::after outline",
+       "::after text-decoration",
+       "::before border-color",
+       "::before color",
+       "::before outline",
+       "::before text-decoration",
+       "^1 border-color",
+       "^1 color",
+       "^1 outline",
+       "^1 text-decoration",
+       "^2 border-color",
+       "^2 color",
+       "^2 outline",
+       "^2 text-decoration",
+       "border-color",
+       "color",
+       "outline",
+       "text-decoration"
+      ]
+     },
+     "occurrence": {
+      "ancestors": [
+       [
+        "_stack_il1fi_18",
+        "_direction-row_il1fi_27",
+        "_align-center_il1fi_35"
+       ],
+       [
+        "_content_1km7i_4"
+       ],
+       [
+        "_defaultCheckboxLabel_1km7i_56"
+       ],
+       [
+        "_checkboxHeightFix_1wfxj_6",
+        "_checkbox_113x8_1",
+        "_checkboxWrapper_1758n_62",
+        "_defaultCheckboxWrapper_1km7i_14"
+       ],
+       [
+        "_innerWrapper_5thm1_24",
+        "_columnLayout_5thm1_31",
+        "_checkboxGroupInnerWrapper_113x8_24"
+       ],
+       [
+        "_outerWrapper_5thm1_19"
+       ],
+       [
+        "_checkboxGroup_5ajor_3",
+        "_checkboxGroupWrapper_113x8_17"
+       ],
+       [
+        "_checkboxGroupInput_113x8_1"
+       ]
+      ],
+      "classes": [
+       "_tooltipAnchor_18bac_4",
+       "_tooltipAnchorIcon_1fb2p_8",
+       "_tooltipAnchor_1fb2p_4",
+       "_tooltipHintIcon_13j5t_1"
+      ],
+      "data": {
+       "data-focus-visible": "true"
+      },
+      "heading": "Create a new role",
+      "landmark": {
+       "name": "",
+       "role": "form"
+      },
+      "layer": "document",
+      "name": "More info",
+      "rect": [
+       672,
+       813,
+       31,
+       15
+      ],
+      "role": "generic",
+      "tag": "div",
+      "xpath": "/html/body/div[1]/main[1]/div[1]/div[2]/div[2]/div[3]/form[1]/section[1]/div[3]/section[2]/div[3]/div[1]/fieldset[1]/fieldset[1]/div[1]/label[1]/div[2]/div[1]/div[1]/div[1]"
+     },
+     "state": "settings.create-role"
+    }
+   ],
+   "evidenceHash": "5ddbdce587d1a723102e9302cc8ef743c0e73ba130b3e3bce312507f05900d5d",
+   "facts": {
+    "criterion": "2.4.7",
+    "criterionName": "Focus Visible",
+    "element": "text \"More info\"",
+    "screen": "Create a new role",
+    "screens": 1,
+    "stop": "27"
+   },
+   "family": "focus-visible",
+   "guidance": "High on shared components on primary paths.",
+   "issueId": null,
+   "key": "focus-visible:focus-not-visible:313a643d1bba",
+   "measured": true,
+   "primary": "settings.create-role",
+   "proposals": [],
+   "rule": "focus-not-visible",
+   "screens": 1,
+   "severityDefault": "medium",
+   "source": "scanner",
+   "states": [
+    "settings.create-role"
+   ],
+   "summary": "Tab stop 27: focusing the text \"More info\" changed no pixels within 8 px of it.",
+   "title": "No visible focus: text \"More info\""
+  },
+  {
+   "attachments": [],
+   "attempt": 1,
+   "basis": "failure",
+   "criteria": [
+    "2.4.7"
+   ],
+   "evidence": [
+    {
+     "evidence": {
+      "diff": 0,
+      "floor": 16,
+      "focusVisible": true,
+      "previous": {
+       "ancestors": [
+        [
+         "_stack_il1fi_18",
+         "_direction-row_il1fi_27",
+         "_align-center_il1fi_35"
+        ],
+        [
+         "_content_1km7i_4"
+        ],
+        [
+         "_defaultCheckboxLabel_1km7i_56"
+        ],
+        [
+         "_checkboxHeightFix_1wfxj_6",
+         "_checkbox_113x8_1",
+         "_checkboxWrapper_1758n_62",
+         "_defaultCheckboxWrapper_1km7i_14"
+        ],
+        [
+         "_innerWrapper_5thm1_24",
+         "_columnLayout_5thm1_31",
+         "_checkboxGroupInnerWrapper_113x8_24"
+        ],
+        [
+         "_outerWrapper_5thm1_19"
+        ],
+        [
+         "_checkboxGroup_5ajor_3",
+         "_checkboxGroupWrapper_113x8_17"
+        ],
+        [
+         "_checkboxGroupInput_113x8_1"
+        ]
+       ],
+       "classes": [
+        "_tooltipAnchor_18bac_4",
+        "_tooltipAnchorIcon_1fb2p_8",
+        "_tooltipAnchor_1fb2p_4",
+        "_tooltipHintIcon_13j5t_1"
+       ],
+       "data": {
+        "data-focus-visible": "true"
+       },
+       "heading": "Create a new role",
+       "landmark": {
+        "name": "",
+        "role": "form"
+       },
+       "layer": "document",
+       "name": "More info",
+       "rect": [
+        672,
+        813,
+        31,
+        15
+       ],
+       "role": "generic",
+       "tag": "div",
+       "xpath": "/html/body/div[1]/main[1]/div[1]/div[2]/div[2]/div[3]/form[1]/section[1]/div[3]/section[2]/div[3]/div[1]/fieldset[1]/fieldset[1]/div[1]/label[1]/div[2]/div[1]/div[1]/div[1]"
+      },
+      "stop": 28,
+      "stops": 42,
+      "style": [
+       "background",
+       "border-color",
+       "box-shadow",
+       "outline"
+      ]
+     },
+     "occurrence": {
+      "ancestors": [
+       [
+        "_inputWrapper_11c85_6"
+       ],
+       [
+        "_wrapper_1xgdp_8"
+       ],
+       [
+        "_stack_il1fi_18",
+        "_direction-column_il1fi_24",
+        "_paddingBottom-space-150_il1fi_1"
+       ],
+       [
+        "_spendSection_xfb0h_13"
+       ],
+       [
+        "_checkboxGroupsSection_xfb0h_7"
+       ],
+       [
+        "_formContainer_xfb0h_1"
+       ],
+       [
+        "_contentArea_1xvys_1",
+        "_contentLayout_1xvys_23"
+       ],
+       []
+      ],
+      "classes": [
+       "_input_11c85_6"
+      ],
+      "data": {
+       "data-1p-ignore": "true",
+       "data-active-item": "true",
+       "data-bwignore": "true",
+       "data-focus-visible": "true",
+       "data-lpignore": "true"
+      },
+      "heading": "Create a new role",
+      "landmark": {
+       "name": "",
+       "role": "form"
+      },
+      "layer": "document",
+      "name": "Spend",
+      "rect": [
+       502,
+       856,
+       463,
+       40
+      ],
+      "role": "combobox",
+      "tag": "input",
+      "xpath": "/html/body/div[1]/main[1]/div[1]/div[2]/div[2]/div[3]/form[1]/section[1]/div[3]/section[2]/div[3]/div[2]/div[1]/div[1]/input[1]"
+     },
+     "state": "settings.create-role"
+    },
+    {
+     "evidence": {
+      "diff": 0,
+      "floor": 16,
+      "focusVisible": true,
+      "previous": {
+       "ancestors": [
+        [
+         "_wrapper_v0ae1_3"
+        ],
+        [
+         "_blockStyle_1v12x_10",
+         "_radioButton_12hgs_5"
+        ],
+        [
+         "_blockStyle_g37pd_3",
+         "_rowLayout_g37pd_8"
+        ],
+        [],
+        [
+         "_outerWrapper_g37pd_13"
+        ],
+        [],
+        [
+         "_sectionInput_12hgs_1"
+        ],
+        [
+         "_childContainer_6kwxg_17"
+        ]
+       ],
+       "classes": [
+        "_input_v0ae1_14",
+        "_ds-radio_v0ae1_42",
+        "_hover_v0ae1_51",
+        "_hideFocus_v0ae1_56"
+       ],
+       "data": {},
+       "heading": "Issue Test a card",
+       "landmark": {
+        "name": "",
+        "role": "form"
+       },
+       "layer": "document",
+       "name": "Virtual",
+       "rect": [
+        661,
+        738,
+        18,
+        18
+       ],
+       "role": "radio",
+       "tag": "input",
+       "xpath": "/html/body/div[1]/main[1]/div[1]/div[2]/div[2]/div[3]/form[1]/section[1]/div[2]/div[1]/div[2]/div[2]/div[2]/fieldset[1]/div[1]/div[1]/div[1]/div[1]/label[1]/input[1]"
+      },
+      "stop": 10,
+      "stops": 15,
+      "style": [
+       "background",
+       "border-color",
+       "box-shadow",
+       "outline"
+      ]
+     },
+     "occurrence": {
+      "ancestors": [
+       [
+        "_inputWrapper_11c85_6"
+       ],
+       [
+        "_wrapper_1xgdp_8"
+       ],
+       [
+        "_sectionInput_12hgs_1"
+       ],
+       [
+        "_sectionInput_1j8bf_1"
+       ],
+       [
+        "_childContainer_6kwxg_17"
+       ],
+       [
+        "_container_6kwxg_1",
+        "_lastSectionPadding_1j8bf_12"
+       ],
+       [],
+       [
+        "_createCardContainer_1uuen_2"
+       ]
+      ],
+      "classes": [
+       "_input_11c85_6"
+      ],
+      "data": {
+       "data-1p-ignore": "true",
+       "data-active-item": "true",
+       "data-bwignore": "true",
+       "data-focus-visible": "true",
+       "data-lpignore": "true"
+      },
+      "heading": "Issue Test a card",
+      "landmark": {
+       "name": "",
+       "role": "form"
+      },
+      "layer": "document",
+      "name": "Control type",
+      "rect": [
+       640,
+       845,
+       300,
+       40
+      ],
+      "role": "combobox",
+      "tag": "input",
+      "xpath": "/html/body/div[1]/main[1]/div[1]/div[2]/div[2]/div[3]/form[1]/section[1]/div[2]/div[1]/div[4]/div[2]/div[1]/div[1]/div[1]/div[1]/input[1]"
+     },
+     "state": "settings.invite-issue-card"
+    }
+   ],
+   "evidenceHash": "e69932493bba15456e2e705e1ba5628f4723f9a785219cf9ad1829fed1222260",
+   "facts": {
+    "criterion": "2.4.7",
+    "criterionName": "Focus Visible",
+    "element": "combobox \"Spend\"",
+    "screen": "Create a new role",
+    "screens": 2,
+    "stop": "28"
+   },
+   "family": "focus-visible",
+   "guidance": "High on shared components on primary paths.",
+   "issueId": null,
+   "key": "focus-visible:focus-not-visible:4356395e6097",
+   "measured": true,
+   "primary": "settings.create-role",
+   "proposals": [],
+   "rule": "focus-not-visible",
+   "screens": 2,
+   "severityDefault": "medium",
+   "source": "scanner",
+   "states": [
+    "settings.create-role",
+    "settings.invite-issue-card"
+   ],
+   "summary": "Tab stop 28: focusing the combobox \"Spend\" changed no pixels within 8 px of it.",
+   "title": "No visible focus: combobox \"Spend\""
+  },
+  {
+   "attachments": [],
+   "attempt": 1,
+   "basis": "violation",
+   "criteria": [
+    "1.3.5"
+   ],
+   "evidence": [
+    {
+     "evidence": {
+      "failureSummary": "Fix all of the following:\n  the autocomplete attribute is incorrectly formatted"
+     },
+     "occurrence": {
+      "ancestors": [
+       [
+        "_inputWrapper_11c85_6"
+       ],
+       [
+        "_wrapper_1xgdp_8"
+       ],
+       [
+        "_stack_il1fi_18",
+        "_direction-column_il1fi_24",
+        "_paddingBottom-space-150_il1fi_1"
+       ],
+       [
+        "_spendSection_xfb0h_13"
+       ],
+       [
+        "_checkboxGroupsSection_xfb0h_7"
+       ],
+       [
+        "_formContainer_xfb0h_1"
+       ],
+       [
+        "_contentArea_1xvys_1",
+        "_contentLayout_1xvys_23"
+       ],
+       []
+      ],
+      "classes": [
+       "_input_11c85_6"
+      ],
+      "data": {
+       "data-1p-ignore": "true",
+       "data-active-item": "true",
+       "data-bwignore": "true",
+       "data-lpignore": "true"
+      },
+      "heading": "Create a new role",
+      "landmark": {
+       "name": "",
+       "role": "form"
+      },
+      "layer": "document",
+      "name": "Spend",
+      "rect": [
+       502,
+       1316,
+       463,
+       40
+      ],
+      "role": "combobox",
+      "tag": "input",
+      "xpath": "/html/body/div[1]/main[1]/div[1]/div[2]/div[2]/div[3]/form[1]/section[1]/div[3]/section[2]/div[3]/div[2]/div[1]/div[1]/input[1]"
+     },
+     "state": "settings.create-role"
+    },
+    {
+     "evidence": {
+      "failureSummary": "Fix all of the following:\n  the autocomplete attribute is incorrectly formatted"
+     },
+     "occurrence": {
+      "ancestors": [
+       [
+        "_inputWrapper_11c85_6"
+       ],
+       [
+        "_wrapper_1xgdp_8"
+       ],
+       [
+        "_stack_il1fi_18",
+        "_direction-column_il1fi_24",
+        "_paddingBottom-space-150_il1fi_1"
+       ],
+       [
+        "_spendSection_xfb0h_13"
+       ],
+       [
+        "_checkboxGroupsSection_xfb0h_7"
+       ],
+       [
+        "_formContainer_xfb0h_1"
+       ],
+       [
+        "_contentArea_1xvys_1",
+        "_contentLayout_1xvys_23"
+       ],
+       []
+      ],
+      "classes": [
+       "_input_11c85_6"
+      ],
+      "data": {
+       "data-1p-ignore": "true",
+       "data-active-item": "true",
+       "data-bwignore": "true",
+       "data-lpignore": "true"
+      },
+      "heading": "Create a new role",
+      "landmark": {
+       "name": "",
+       "role": "form"
+      },
+      "layer": "document",
+      "name": "Spend",
+      "rect": [
+       502,
+       1320,
+       463,
+       40
+      ],
+      "role": "combobox",
+      "tag": "input",
+      "xpath": "/html/body/div[1]/main[1]/div[1]/div[2]/div[2]/div[3]/form[1]/section[1]/div[3]/section[2]/div[3]/div[2]/div[1]/div[1]/input[1]"
+     },
+     "state": "settings.create-role-errors"
+    }
+   ],
+   "evidenceHash": "66359f7557af935fcf86f20912bf0a257b424834f940ccad7645244084fe4c4f",
+   "facts": {
+    "announced": "combobox \"Spend\" [expanded=false, haspopup=listbox]",
+    "axeSummary": "the autocomplete attribute is incorrectly formatted",
+    "criterion": "1.3.5",
+    "criterionName": "Identify Input Purpose",
+    "element": "combobox \"Spend\"",
+    "rule": "autocomplete-valid",
+    "screen": "Create a new role"
+   },
+   "family": "role-state",
+   "guidance": "Low for optional ARIA or an invalid autocomplete token; high when aria-hidden hides the whole page.",
+   "issueId": null,
+   "key": "role-state:autocomplete-valid:dcca89570804",
+   "measured": false,
+   "primary": "settings.create-role",
+   "proposals": [],
+   "rule": "autocomplete-valid",
+   "screens": 3,
+   "severityDefault": "medium",
+   "source": "scanner",
+   "states": [
+    "settings.create-role",
+    "settings.create-role-errors"
+   ],
+   "summary": "autocomplete-valid: announced as combobox \"Spend\" [expanded=false, haspopup=listbox]. the autocomplete attribute is incorrectly formatted",
+   "title": "Invalid autocomplete value: combobox \"Spend\""
+  },
+  {
+   "attachments": [],
+   "attempt": 1,
+   "basis": "violation",
+   "criteria": [
+    "1.3.5"
+   ],
+   "evidence": [
+    {
+     "evidence": {
+      "failureSummary": "Fix all of the following:\n  the autocomplete attribute is incorrectly formatted"
+     },
+     "occurrence": {
+      "ancestors": [
+       [
+        "_inputWrapper_11c85_6"
+       ],
+       [
+        "_wrapper_1xgdp_8"
+       ],
+       [
+        "_stack_il1fi_18",
+        "_direction-column_il1fi_24",
+        "_gap-space-400_il1fi_1"
+       ],
+       [
+        "_contentArea_1xvys_1",
+        "_contentLayout_1xvys_23"
+       ],
+       [],
+       [
+        "_contentDiv_bcpsw_53",
+        "_noBottomPadding_bcpsw_57",
+        "_contentDivHeightPreset_bcpsw_62"
+       ],
+       [
+        "_fullScreenWorkspaceLayout_bcpsw_14",
+        "_fullScreenWorkspaceLayoutBackground_bcpsw_32",
+        "_noScrollbar_bcpsw_27"
+       ],
+       [
+        "_wrapper_bcpsw_3",
+        "_responsive_bcpsw_88"
+       ]
+      ],
+      "classes": [
+       "_input_11c85_6"
+      ],
+      "data": {
+       "data-1p-ignore": "true",
+       "data-active-item": "true",
+       "data-bwignore": "true",
+       "data-lpignore": "true"
+      },
+      "heading": "Create a new role",
+      "landmark": {
+       "name": "",
+       "role": "form"
+      },
+      "layer": "document",
+      "name": "Select template",
+      "rect": [
+       502,
+       312,
+       463,
+       40
+      ],
+      "role": "combobox",
+      "tag": "input",
+      "xpath": "/html/body/div[1]/main[1]/div[1]/div[2]/div[2]/div[3]/form[1]/section[1]/div[2]/div[1]/div[1]/input[1]"
+     },
+     "state": "settings.create-role"
+    },
+    {
+     "evidence": {
+      "failureSummary": "Fix all of the following:\n  the autocomplete attribute is incorrectly formatted"
+     },
+     "occurrence": {
+      "ancestors": [
+       [
+        "_inputWrapper_11c85_6"
+       ],
+       [
+        "_wrapper_1xgdp_8"
+       ],
+       [
+        "_stack_il1fi_18",
+        "_direction-column_il1fi_24",
+        "_gap-space-400_il1fi_1"
+       ],
+       [
+        "_contentArea_1xvys_1",
+        "_contentLayout_1xvys_23"
+       ],
+       [],
+       [
+        "_contentDiv_bcpsw_53",
+        "_noBottomPadding_bcpsw_57",
+        "_contentDivHeightPreset_bcpsw_62"
+       ],
+       [
+        "_fullScreenWorkspaceLayout_bcpsw_14",
+        "_fullScreenWorkspaceLayoutBackground_bcpsw_32",
+        "_noScrollbar_bcpsw_27"
+       ],
+       [
+        "_wrapper_bcpsw_3",
+        "_responsive_bcpsw_88"
+       ]
+      ],
+      "classes": [
+       "_input_11c85_6"
+      ],
+      "data": {
+       "data-1p-ignore": "true",
+       "data-active-item": "true",
+       "data-bwignore": "true",
+       "data-lpignore": "true"
+      },
+      "heading": "Create a new role",
+      "landmark": {
+       "name": "",
+       "role": "form"
+      },
+      "layer": "document",
+      "name": "Select template",
+      "rect": [
+       502,
+       312,
+       463,
+       40
+      ],
+      "role": "combobox",
+      "tag": "input",
+      "xpath": "/html/body/div[1]/main[1]/div[1]/div[2]/div[2]/div[3]/form[1]/section[1]/div[2]/div[1]/div[1]/input[1]"
+     },
+     "state": "settings.create-role-errors"
+    }
+   ],
+   "evidenceHash": "66359f7557af935fcf86f20912bf0a257b424834f940ccad7645244084fe4c4f",
+   "facts": {
+    "announced": "combobox \"Select template\" [expanded=false, haspopup=listbox]",
+    "axeSummary": "the autocomplete attribute is incorrectly formatted",
+    "criterion": "1.3.5",
+    "criterionName": "Identify Input Purpose",
+    "element": "combobox \"Select template\"",
+    "rule": "autocomplete-valid",
+    "screen": "Create a new role"
+   },
+   "family": "role-state",
+   "guidance": "Low for optional ARIA or an invalid autocomplete token; high when aria-hidden hides the whole page.",
+   "issueId": null,
+   "key": "role-state:autocomplete-valid:f668a82e6220",
+   "measured": false,
+   "primary": "settings.create-role",
+   "proposals": [],
+   "rule": "autocomplete-valid",
+   "screens": 3,
+   "severityDefault": "medium",
+   "source": "scanner",
+   "states": [
+    "settings.create-role",
+    "settings.create-role-errors"
+   ],
+   "summary": "autocomplete-valid: announced as combobox \"Select template\" [expanded=false, haspopup=listbox]. the autocomplete attribute is incorrectly formatted",
+   "title": "Invalid autocomplete value: combobox \"Select template\""
+  }
+ ],
+ "primaries": [
+  "settings.create-role"
+ ],
+ "reach": {
+  "baseUrl": "https://demo.mercury.com",
+  "data": "data",
+  "map": "build/map.json",
+  "run": "2026-10-03-1525",
+  "workspace": "a11y"
+ },
+ "run": "2026-10-03-1525"
+}

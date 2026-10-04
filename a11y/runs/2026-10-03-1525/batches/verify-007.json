@@ -1,0 +1,134 @@
+{
+ "area": "accounts",
+ "batch": "verify-007",
+ "findings": [
+  {
+   "attachments": [],
+   "attempt": 1,
+   "basis": "failure",
+   "criteria": [
+    "4.1.3"
+   ],
+   "evidence": [
+    {
+     "evidence": {
+      "focus": "body",
+      "focused": false,
+      "message": "Mercury Demo 2261 Market St, Suite 86807 San Francisco, CA 94114 CHECK NO. DATE PAY TO $ DOLLARS Valid for 180 days Drawee bank: Column N.A., Member FDIC MEMO MP We’re getting your checkbook ready It should arrive in 10 - 14 business days. Done",
+      "region": null
+     },
+     "occurrence": {
+      "ancestors": [
+       [],
+       [
+        "_main_1gb3b_1"
+       ],
+       [
+        "mercury-root"
+       ]
+      ],
+      "classes": [
+       "_base_1o3a2_3",
+       "_page_192c9_1"
+      ],
+      "data": {},
+      "heading": "",
+      "landmark": {
+       "name": "",
+       "role": "main"
+      },
+      "layer": "document",
+      "name": "",
+      "rect": [
+       0,
+       0,
+       1440,
+       900
+      ],
+      "role": "generic",
+      "tag": "div",
+      "xpath": "/html/body/div[1]/main[1]/div[1]/div[2]"
+     },
+     "state": "accounts.checkbook-ordered"
+    },
+    {
+     "evidence": {
+      "focus": "body",
+      "focused": false,
+      "message": "Mercury Demo 2261 Market St, Suite 86807 San Francisco, CA 94114 CHECK NO. DATE PAY TO $ DOLLARS Valid for 180 days Drawee bank: Column N.A., Member FDIC MEMO MP We’re getting your checkbook ready It should arrive in 10 - 14 business days. Done",
+      "region": null
+     },
+     "occurrence": {
+      "ancestors": [
+       [],
+       [
+        "_main_1gb3b_1"
+       ],
+       [
+        "mercury-root"
+       ]
+      ],
+      "classes": [
+       "_base_1o3a2_3",
+       "_page_192c9_1"
+      ],
+      "data": {},
+      "heading": "",
+      "landmark": {
+       "name": "",
+       "role": "main"
+      },
+      "layer": "document",
+      "name": "",
+      "rect": [
+       0,
+       0,
+       1440,
+       900
+      ],
+      "role": "generic",
+      "tag": "div",
+      "xpath": "/html/body/div[1]/main[1]/div[1]/div[2]"
+     },
+     "state": "payments.checkbook-order-success"
+    }
+   ],
+   "evidenceHash": "61736847e0bf8a8ae5c390a63cb5335e3449821de3329ff0b8c672d8a4de77f4",
+   "facts": {
+    "criterion": "4.1.3",
+    "criterionName": "Status Messages",
+    "focus": "page body",
+    "message": "\"Mercury Demo <n> Market St, Suite <n> San Franc…\"",
+    "screen": "Checkbook ordered"
+   },
+   "family": "status-message",
+   "guidance": "High when it is the only confirmation of a money movement.",
+   "issueId": null,
+   "key": "status-message:status-not-announced:0bbac915c378",
+   "measured": false,
+   "primary": "accounts.checkbook-ordered",
+   "proposals": [],
+   "rule": "status-not-announced",
+   "screens": 2,
+   "severityDefault": "medium",
+   "source": "scanner",
+   "states": [
+    "accounts.checkbook-ordered",
+    "payments.checkbook-order-success"
+   ],
+   "summary": "\"Mercury Demo <n> Market St, Suite <n> San Franc…\" appeared outside any live region, alert or status role that existed before it, and focus stayed on the page body.",
+   "title": "Status message not announced: \"Mercury Demo <n> Market St, Suite <n> San Franc…\""
+  }
+ ],
+ "primaries": [
+  "accounts.checkbook-ordered"
+ ],
+ "reach": {
+  "baseUrl": "https://demo.mercury.com",
+  "data": "data",
+  "map": "build/map.json",
+  "run": "2026-10-03-1525",
+  "workspace": "a11y"
+ },
+ "run": "2026-10-03-1525"
+}

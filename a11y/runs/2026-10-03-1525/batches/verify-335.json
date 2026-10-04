@@ -1,0 +1,190 @@
+{
+ "area": "settings",
+ "batch": "verify-335",
+ "findings": [
+  {
+   "attachments": [],
+   "attempt": 1,
+   "basis": "failure",
+   "criteria": [
+    "2.4.3"
+   ],
+   "evidence": [
+    {
+     "evidence": {
+      "closedBy": "escape",
+      "focus": "body",
+      "stops": 3,
+      "trace": [
+       {
+        "focus": {
+         "label": "",
+         "tag": "input",
+         "xpath": "/html/body/div[1]/main[1]/div[1]/div[2]/div[2]/div[3]/form[1]/section[1]/div[2]/div[1]/div[1]/div[1]/div[1]/div[1]/input[1]"
+        },
+        "key": "start",
+        "where": "outside"
+       },
+       {
+        "focus": {
+         "label": "",
+         "tag": "input",
+         "xpath": "/html/body/div[1]/main[1]/div[1]/div[2]/div[2]/div[3]/form[1]/section[1]/div[2]/div[1]/div[2]/div[1]/div[1]/div[1]/input[1]"
+        },
+        "key": "Tab",
+        "where": "outside"
+       },
+       {
+        "focus": {
+         "label": "",
+         "tag": "input",
+         "xpath": "/html/body/div[1]/main[1]/div[1]/div[2]/div[2]/div[3]/form[1]/section[1]/div[2]/div[2]/div[1]/div[1]/div[1]/input[1]"
+        },
+        "key": "Tab",
+        "where": "outside"
+       },
+       {
+        "focus": {
+         "label": "",
+         "tag": "input",
+         "xpath": "/html/body/div[1]/main[1]/div[1]/div[2]/div[2]/div[3]/form[1]/section[1]/div[2]/div[3]/div[1]/div[1]/div[1]/input[1]"
+        },
+        "key": "Tab",
+        "where": "trigger"
+       },
+       {
+        "focus": {
+         "label": "",
+         "tag": "input",
+         "xpath": "/html/body/div[1]/main[1]/div[1]/div[2]/div[2]/div[3]/form[1]/section[1]/div[2]/div[3]/div[1]/div[1]/div[1]/input[1]"
+        },
+        "key": "Enter",
+        "where": "trigger"
+       },
+       {
+        "focus": {
+         "label": "",
+         "tag": "input",
+         "xpath": "/html/body/div[1]/main[1]/div[1]/div[2]/div[2]/div[3]/form[1]/section[1]/div[2]/div[3]/div[1]/div[1]/div[1]/input[1]"
+        },
+        "key": "Space",
+        "where": "trigger"
+       },
+       {
+        "focus": {
+         "label": "",
+         "tag": "input",
+         "xpath": "/html/body/div[1]/main[1]/div[1]/div[2]/div[2]/div[3]/form[1]/section[1]/div[2]/div[3]/div[1]/div[1]/div[1]/input[1]"
+        },
+        "key": "settle",
+        "where": "trigger"
+       },
+       {
+        "focus": "body",
+        "key": "Escape",
+        "where": "body"
+       },
+       {
+        "focus": "body",
+        "key": "settle",
+        "where": "body"
+       }
+      ]
+     },
+     "occurrence": {
+      "ancestors": [
+       [
+        "_inputWrapper_11c85_6"
+       ],
+       [
+        "_wrapper_1xgdp_8"
+       ],
+       [
+        "_stack_il1fi_18",
+        "_direction-column_il1fi_24",
+        "_gap-space-150_il1fi_1"
+       ],
+       [],
+       [
+        "_stack_il1fi_18",
+        "_direction-column_il1fi_24",
+        "_gap-space-300_il1fi_1"
+       ],
+       [
+        "_contentArea_1xvys_1",
+        "_contentLayout_1xvys_23"
+       ],
+       [],
+       [
+        "_contentDiv_bcpsw_53",
+        "_contentDivHeightPreset_bcpsw_62"
+       ]
+      ],
+      "classes": [
+       "_input_11c85_6"
+      ],
+      "data": {
+       "data-1p-ignore": "true",
+       "data-active-item": "true",
+       "data-bwignore": "true",
+       "data-lpignore": "true"
+      },
+      "heading": "Invite a user",
+      "landmark": {
+       "name": "",
+       "role": "form"
+      },
+      "layer": "document",
+      "name": "Job title - optional",
+      "rect": [
+       502,
+       488,
+       463,
+       40
+      ],
+      "role": "combobox",
+      "tag": "input",
+      "xpath": "/html/body/div[1]/main[1]/div[1]/div[2]/div[2]/div[3]/form[1]/section[1]/div[2]/div[3]/div[1]/div[1]/div[1]/input[1]"
+     },
+     "state": "settings.invite-job-title"
+    }
+   ],
+   "evidenceHash": "d9f1f2210a4fac15a7e3d2ea79110b4dffb3721c227f507e434b991c859085dd",
+   "facts": {
+    "criterion": "2.4.3",
+    "criterionName": "Focus Order",
+    "element": "combobox \"Job title - optional\"",
+    "focus": "page body",
+    "overlay": "unnamed listbox",
+    "screen": "Invite a user — Job title options"
+   },
+   "family": "dialog-focus",
+   "guidance": "High when controls inside are unreachable.",
+   "issueId": null,
+   "key": "dialog-focus:dialog-focus-not-returned:f8f3813dd466",
+   "measured": false,
+   "primary": "settings.invite-job-title",
+   "proposals": [],
+   "rule": "dialog-focus-not-returned",
+   "screens": 1,
+   "severityDefault": "low",
+   "source": "scanner",
+   "states": [
+    "settings.invite-job-title"
+   ],
+   "summary": "Esc closed the unnamed listbox and focus went to the page body, not back to the combobox \"Job title - optional\".",
+   "title": "Focus lost after closing unnamed listbox"
+  }
+ ],
+ "primaries": [
+  "settings.invite-job-title"
+ ],
+ "reach": {
+  "baseUrl": "https://demo.mercury.com",
+  "data": "data",
+  "map": "build/map.json",
+  "run": "2026-10-03-1525",
+  "workspace": "a11y"
+ },
+ "run": "2026-10-03-1525"
+}

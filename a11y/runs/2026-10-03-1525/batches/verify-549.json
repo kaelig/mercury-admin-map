@@ -1,0 +1,115 @@
+{
+ "area": "transactions",
+ "batch": "verify-549",
+ "findings": [
+  {
+   "attachments": [],
+   "attempt": 1,
+   "basis": "candidate",
+   "criteria": [
+    "3.3.2"
+   ],
+   "evidence": [
+    {
+     "evidence": {
+      "description": "",
+      "name": "",
+      "role": "combobox",
+      "states": {
+       "expanded": false,
+       "haspopup": "listbox"
+      },
+      "template": "combobox \"\" [expanded=false, haspopup=listbox]"
+     },
+     "occurrence": {
+      "ancestors": [
+       [
+        "_inputWrapper_11c85_6"
+       ],
+       [
+        "_wrapper_1xgdp_8"
+       ],
+       [
+        "_rangePickerSection_1q0q9_5"
+       ],
+       [
+        "_container_1q0q9_1"
+       ],
+       [
+        "_tabPanel_1p8lo_8"
+       ],
+       [
+        "_menu_14lgn_4"
+       ],
+       [],
+       []
+      ],
+      "classes": [
+       "_input_11c85_6"
+      ],
+      "data": {
+       "data-1p-ignore": "true",
+       "data-active-item": "true",
+       "data-bwignore": "true",
+       "data-lpignore": "true"
+      },
+      "heading": "",
+      "landmark": {
+       "name": "",
+       "role": "form"
+      },
+      "layer": "top",
+      "name": "",
+      "rect": [
+       529,
+       260,
+       295,
+       40
+      ],
+      "role": "combobox",
+      "tag": "input",
+      "xpath": "/html/body/div[9]/div[1]/div[1]/div[1]/form[1]/section[1]/div[1]/div[1]/input[1]"
+     },
+     "state": "transactions.insights-date-menu"
+    }
+   ],
+   "evidenceHash": "8da63b26a521b582b0e528c089fd91b82a302d0c2217e06b3399eac9a2ef6a1f",
+   "facts": {
+    "announced": "combobox \"\" [expanded=false, haspopup=listbox]",
+    "axeSummary": "",
+    "criterion": "3.3.2",
+    "criterionName": "Labels or Instructions",
+    "element": "combobox in the form landmark",
+    "rule": "announced-as",
+    "screen": "Insights date range menu"
+   },
+   "family": "name",
+   "guidance": "High for an unnamed form control or the sole primary action.",
+   "issueId": null,
+   "key": "name:announced-as:04f0f3487ad8",
+   "measured": false,
+   "primary": "transactions.insights-date-menu",
+   "proposals": [],
+   "rule": "announced-as",
+   "screens": 1,
+   "severityDefault": "medium",
+   "source": "scanner",
+   "states": [
+    "transactions.insights-date-menu"
+   ],
+   "summary": "announced-as: announced as combobox \"\" [expanded=false, haspopup=listbox].",
+   "title": "Missing or unclear name: combobox in the form landmark"
+  }
+ ],
+ "primaries": [
+  "transactions.insights-date-menu"
+ ],
+ "reach": {
+  "baseUrl": "https://demo.mercury.com",
+  "data": "data",
+  "map": "build/map.json",
+  "run": "2026-10-03-1525",
+  "workspace": "a11y"
+ },
+ "run": "2026-10-03-1525"
+}

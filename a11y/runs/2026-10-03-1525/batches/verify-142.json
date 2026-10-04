@@ -1,0 +1,201 @@
+{
+ "area": "cards",
+ "batch": "verify-142",
+ "findings": [
+  {
+   "attachments": [],
+   "attempt": 1,
+   "basis": "violation",
+   "criteria": [
+    "4.1.2"
+   ],
+   "evidence": [
+    {
+     "evidence": {
+      "failureSummary": "Fix any of the following:\n  Element has focusable descendants"
+     },
+     "occurrence": {
+      "ancestors": [
+       [
+        "_filterList_5tfy2_26"
+       ],
+       [
+        "_filterBar_5tfy2_21",
+        "_filterBar_uhwci_1"
+       ],
+       [
+        "_cardFilterButtonsWrapper_zyag2_13"
+       ],
+       [
+        "_pageContent_809q8_151",
+        "_pageContentWidth_809q8_184",
+        "_footerPadding_809q8_115"
+       ],
+       [
+        "_dashboardContent_809q8_29"
+       ],
+       [
+        "_layout_809q8_18"
+       ],
+       [
+        "_wrapper_809q8_3"
+       ],
+       []
+      ],
+      "classes": [
+       "_tag_1ok12_3",
+       "_clickable_1ok12_50"
+      ],
+      "data": {},
+      "heading": "Cards",
+      "landmark": {
+       "name": "",
+       "role": "main"
+      },
+      "layer": "document",
+      "name": "Virtual Cards Remove Tag",
+      "rect": [
+       482,
+       467,
+       134,
+       32
+      ],
+      "role": "button",
+      "tag": "li",
+      "xpath": "/html/body/div[1]/main[1]/div[1]/div[1]/div[4]/div[1]/div[2]/div[5]/div[1]/ul[1]/li[1]"
+     },
+     "state": "cards.filtered-virtual"
+    }
+   ],
+   "evidenceHash": "c62ac9f92160e3d67dac0ab23714b62f23745371ea3f6f95db3a117332117a9b",
+   "facts": {
+    "announced": "button \"Virtual Cards Remove Tag\"",
+    "axeSummary": "Element has focusable descendants",
+    "criterion": "4.1.2",
+    "criterionName": "Name, Role, Value",
+    "element": "button \"Virtual Cards Remove Tag\"",
+    "rule": "nested-interactive",
+    "screen": "Cards filtered to virtual"
+   },
+   "family": "role-state",
+   "guidance": "Low for optional ARIA or an invalid autocomplete token; high when aria-hidden hides the whole page.",
+   "issueId": null,
+   "key": "role-state:nested-interactive:4d2452fbfe92",
+   "measured": false,
+   "primary": "cards.filtered-virtual",
+   "proposals": [],
+   "rule": "nested-interactive",
+   "screens": 1,
+   "severityDefault": "medium",
+   "source": "scanner",
+   "states": [
+    "cards.filtered-virtual"
+   ],
+   "summary": "nested-interactive: announced as button \"Virtual Cards Remove Tag\". Element has focusable descendants",
+   "title": "Control nested in a control: button \"Virtual Cards Remove Tag\""
+  },
+  {
+   "attachments": [],
+   "attempt": 1,
+   "basis": "violation",
+   "criteria": [
+    "1.3.1"
+   ],
+   "evidence": [
+    {
+     "evidence": {
+      "failureSummary": "Fix all of the following:\n  List element has direct children that are not allowed: [role=button]",
+      "values": "[role=button]"
+     },
+     "occurrence": {
+      "ancestors": [
+       [
+        "_filterBar_5tfy2_21",
+        "_filterBar_uhwci_1"
+       ],
+       [
+        "_cardFilterButtonsWrapper_zyag2_13"
+       ],
+       [
+        "_pageContent_809q8_151",
+        "_pageContentWidth_809q8_184",
+        "_footerPadding_809q8_115"
+       ],
+       [
+        "_dashboardContent_809q8_29"
+       ],
+       [
+        "_layout_809q8_18"
+       ],
+       [
+        "_wrapper_809q8_3"
+       ],
+       [],
+       [
+        "_main_1gb3b_1"
+       ]
+      ],
+      "classes": [
+       "_filterList_5tfy2_26"
+      ],
+      "data": {},
+      "heading": "Cards",
+      "landmark": {
+       "name": "",
+       "role": "main"
+      },
+      "layer": "document",
+      "name": "",
+      "rect": [
+       482,
+       467,
+       142,
+       32
+      ],
+      "role": "list",
+      "tag": "ul",
+      "xpath": "/html/body/div[1]/main[1]/div[1]/div[1]/div[4]/div[1]/div[2]/div[5]/div[1]/ul[1]"
+     },
+     "state": "cards.filtered-virtual"
+    }
+   ],
+   "evidenceHash": "21bb74fa86c11bf63b0ad7b9ce678f3a26d10bc04e4257c766b9eab8c7f357fd",
+   "facts": {
+    "announced": "list \"\"",
+    "axeSummary": "List element has direct children that are not allowed: [role=button]",
+    "criterion": "1.3.1",
+    "criterionName": "Info and Relationships",
+    "element": "list in \"Cards\"",
+    "rule": "list",
+    "screen": "Cards filtered to virtual"
+   },
+   "family": "structure",
+   "guidance": "Medium when a data table's headers do not reach its cells, or when structure is the only way to tell sections or steps apart.",
+   "issueId": null,
+   "key": "structure:list:643f88bf6f40",
+   "measured": false,
+   "primary": "cards.filtered-virtual",
+   "proposals": [],
+   "rule": "list",
+   "screens": 1,
+   "severityDefault": "low",
+   "source": "scanner",
+   "states": [
+    "cards.filtered-virtual"
+   ],
+   "summary": "list: announced as list \"\". List element has direct children that are not allowed: [role=button]",
+   "title": "Markup misstates structure: list in \"Cards\""
+  }
+ ],
+ "primaries": [
+  "cards.filtered-virtual"
+ ],
+ "reach": {
+  "baseUrl": "https://demo.mercury.com",
+  "data": "data",
+  "map": "build/map.json",
+  "run": "2026-10-03-1525",
+  "workspace": "a11y"
+ },
+ "run": "2026-10-03-1525"
+}

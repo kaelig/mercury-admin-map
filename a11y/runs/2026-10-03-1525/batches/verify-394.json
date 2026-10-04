@@ -1,0 +1,190 @@
+{
+ "area": "transactions",
+ "batch": "verify-394",
+ "findings": [
+  {
+   "attachments": [],
+   "attempt": 1,
+   "basis": "failure",
+   "criteria": [
+    "2.1.1"
+   ],
+   "evidence": [
+    {
+     "evidence": {
+      "focus": {
+       "ancestors": [
+        [
+         "_viewActions_grqat_123"
+        ],
+        [
+         "_view_grqat_122"
+        ],
+        [
+         "_labelWrapper_1yc9d_18"
+        ],
+        [
+         "_viewSelectorRow_grqat_122",
+         "_menuItem_1yc9d_56"
+        ],
+        [
+         "_dropdownMenu_vz05y_4",
+         "_zIndexDefault_1fl3q_5"
+        ],
+        [],
+        [],
+        [
+         "_tableViewsAndFilters_grqat_82"
+        ]
+       ],
+       "classes": [
+        "_tooltipAnchor_18bac_4"
+       ],
+       "data": {
+        "data-focus-visible": "true"
+       },
+       "heading": "Transactions",
+       "landmark": {
+        "name": "",
+        "role": "main"
+       },
+       "layer": "document",
+       "name": "",
+       "rect": [
+        406,
+        -452,
+        24,
+        25
+       ],
+       "role": "generic",
+       "tag": "div",
+       "xpath": "/html/body/div[1]/main[1]/div[1]/div[1]/div[4]/div[1]/div[2]/div[2]/div[1]/div[1]/span[1]/span[1]/div[1]/div[1]/div[4]/div[1]/div[1]/div[1]/div[1]"
+      },
+      "stops": 1,
+      "trace": [
+       {
+        "focus": {
+         "label": "My transactions Monthly money in Monthly money out Operating expenses Create vie",
+         "tag": "div",
+         "xpath": "/html/body/div[1]/main[1]/div[1]/div[1]/div[4]/div[1]/div[2]/div[2]/div[1]/div[1]/span[1]/span[1]/div[1]/div[1]"
+        },
+        "key": "start",
+        "where": "trigger"
+       },
+       {
+        "focus": {
+         "label": "",
+         "tag": "div",
+         "xpath": "/html/body/div[1]/main[1]/div[1]/div[1]/div[4]/div[1]/div[2]/div[2]/div[1]/div[1]/span[1]/span[1]/div[1]/div[1]/div[4]/div[1]/div[1]/div[1]/div[1]"
+        },
+        "key": "Tab",
+        "where": "trigger"
+       },
+       {
+        "focus": {
+         "label": "",
+         "tag": "div",
+         "xpath": "/html/body/div[1]/main[1]/div[1]/div[1]/div[4]/div[1]/div[2]/div[2]/div[1]/div[1]/span[1]/span[1]/div[1]/div[1]/div[4]/div[1]/div[1]/div[1]/div[1]"
+        },
+        "key": "Enter",
+        "where": "trigger"
+       },
+       {
+        "focus": {
+         "label": "",
+         "tag": "div",
+         "xpath": "/html/body/div[1]/main[1]/div[1]/div[1]/div[4]/div[1]/div[2]/div[2]/div[1]/div[1]/span[1]/span[1]/div[1]/div[1]/div[4]/div[1]/div[1]/div[1]/div[1]"
+        },
+        "key": "Space",
+        "where": "trigger"
+       }
+      ]
+     },
+     "occurrence": {
+      "ancestors": [
+       [
+        "_tooltipAnchor_18bac_4"
+       ],
+       [
+        "_viewActions_grqat_123"
+       ],
+       [
+        "_view_grqat_122"
+       ],
+       [
+        "_labelWrapper_1yc9d_18"
+       ],
+       [
+        "_viewSelectorRow_grqat_122",
+        "_menuItem_1yc9d_56"
+       ],
+       [
+        "_dropdownMenu_vz05y_4",
+        "_zIndexDefault_1fl3q_5"
+       ],
+       [],
+       []
+      ],
+      "classes": [
+       "_iconWrapperEdit_grqat_181"
+      ],
+      "data": {},
+      "heading": "Transactions",
+      "landmark": {
+       "name": "",
+       "role": "main"
+      },
+      "layer": "document",
+      "name": "",
+      "rect": [
+       406,
+       352,
+       24,
+       25
+      ],
+      "role": "generic",
+      "tag": "div",
+      "xpath": "/html/body/div[1]/main[1]/div[1]/div[1]/div[4]/div[1]/div[2]/div[2]/div[1]/div[1]/span[1]/span[1]/div[1]/div[1]/div[4]/div[1]/div[1]/div[1]/div[1]/div[1]"
+     },
+     "state": "transactions.rename-view-modal"
+    }
+   ],
+   "evidenceHash": "f63f0694c82281685d0dc5b4491e62d76d1063db8db76db2ea0eb00e6ac85bc3",
+   "facts": {
+    "criterion": "2.1.1",
+    "criterionName": "Keyboard",
+    "element": "text in \"Transactions\"",
+    "overlay": "unnamed dialog",
+    "screen": "Rename view modal",
+    "stops": "1"
+   },
+   "family": "dialog-trigger",
+   "guidance": "Lower only when an equivalent keyboard path exists.",
+   "issueId": null,
+   "key": "dialog-trigger:dialog-trigger-not-operable:f141bb5f0376",
+   "measured": false,
+   "primary": "transactions.rename-view-modal",
+   "proposals": [],
+   "rule": "dialog-trigger-not-operable",
+   "screens": 1,
+   "severityDefault": "high",
+   "source": "scanner",
+   "states": [
+    "transactions.rename-view-modal"
+   ],
+   "summary": "Tab focused the text in \"Transactions\", but neither Enter nor Space opened the unnamed dialog.",
+   "title": "Opens only with a mouse: text in \"Transactions\""
+  }
+ ],
+ "primaries": [
+  "transactions.rename-view-modal"
+ ],
+ "reach": {
+  "baseUrl": "https://demo.mercury.com",
+  "data": "data",
+  "map": "build/map.json",
+  "run": "2026-10-03-1525",
+  "workspace": "a11y"
+ },
+ "run": "2026-10-03-1525"
+}

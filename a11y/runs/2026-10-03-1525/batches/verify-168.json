@@ -1,0 +1,192 @@
+{
+ "area": "cards",
+ "batch": "verify-168",
+ "findings": [
+  {
+   "attachments": [],
+   "attempt": 1,
+   "basis": "incomplete",
+   "criteria": [
+    "1.4.3"
+   ],
+   "evidence": [
+    {
+     "evidence": {
+      "contrastRatio": 0,
+      "expectedContrastRatio": "4.5:1",
+      "failureSummary": "Fix any of the following:\n  Element content is too short to determine if it is actual text content",
+      "fontSize": "7.5pt (10px)",
+      "fontWeight": "normal",
+      "messageKey": "shortTextContent"
+     },
+     "occurrence": {
+      "ancestors": [
+       [
+        "_small_299z2_48",
+        "_circle_299z2_4",
+        "_noHover_299z2_93",
+        "_startsWithC_299z2_156",
+        "_textAvatar_299z2_78",
+        "session-replay-mask",
+        "_avatar_1xc2q_86"
+       ],
+       [
+        "_tooltipAnchor_18bac_4"
+       ],
+       [
+        "_avatarListItem_1xc2q_107"
+       ],
+       [
+        "_avatarList_1xc2q_97"
+       ],
+       [
+        "_avatarStack_1xc2q_86",
+        "_container_7tk34_10",
+        "_avatarStack_zwg3g_6"
+       ],
+       [
+        "_issuedToCell_zwg3g_1"
+       ],
+       [
+        "_tableData_1u4jr_5",
+        "_alignmentStart_1u4jr_12",
+        "_assignedToCol_191wj_17"
+       ],
+       [
+        "_tableRow_137xu_3",
+        "_interactiveRows_137xu_35",
+        "_tallRow_191wj_37"
+       ]
+      ],
+      "classes": [
+       "_lastLetter_299z2_64",
+       "_offsetUpwards_299z2_71"
+      ],
+      "data": {},
+      "heading": "Team Spend",
+      "landmark": {
+       "name": "",
+       "role": "main"
+      },
+      "layer": "document",
+      "name": "",
+      "rect": [
+       1101,
+       878,
+       6,
+       24
+      ],
+      "role": "",
+      "tag": "span",
+      "xpath": "/html/body/div[1]/main[1]/div[1]/div[1]/div[4]/div[1]/div[2]/div[5]/table[1]/tbody[1]/tr[4]/td[4]/div[1]/div[1]/ul[1]/li[2]/div[1]/div[1]/span[2]"
+     },
+     "state": "cards.team-spend"
+    },
+    {
+     "evidence": {
+      "bgColor": "#ffffff",
+      "contrastRatio": 2.68,
+      "expectedContrastRatio": "4.5:1",
+      "failureSummary": "Fix any of the following:\n  Element content is too short to determine if it is actual text content",
+      "fgColor": "#9d9da8",
+      "fontSize": "7.5pt (10px)",
+      "fontWeight": "normal",
+      "messageKey": "shortTextContent"
+     },
+     "occurrence": {
+      "ancestors": [
+       [
+        "_colorLayer_i14b5_10",
+        "_hoverLayer_i14b5_93"
+       ],
+       [
+        "_markerCellContent_i14b5_23",
+        "_outerBorder_i14b5_44",
+        "_markersOnly_i14b5_61"
+       ],
+       [
+        "_colorLayer_i14b5_10"
+       ],
+       [
+        "_gridMarkerCell_i14b5_3"
+       ],
+       [
+        "_gridRow_1ixju_1"
+       ],
+       [
+        "_virtualizerContainer_7rfk9_25"
+       ],
+       [
+        "_grid_7rfk9_1"
+       ],
+       [
+        "_csvImportGate_hp7ar_25"
+       ]
+      ],
+      "classes": [
+       "_micro_qaod7_79",
+       "_text-disabled_12t49_1",
+       "_rowMarker_i14b5_66"
+      ],
+      "data": {},
+      "heading": "Default (Recommended) chart of accounts",
+      "landmark": {
+       "name": "Default (Recommended) chart of accounts",
+       "role": "dialog"
+      },
+      "layer": "top",
+      "name": "",
+      "rect": [
+       247,
+       262,
+       6,
+       20
+      ],
+      "role": "",
+      "tag": "span",
+      "xpath": "/html/body/div[7]/div[1]/div[1]/div[1]/div[3]/div[1]/div[1]/div[1]/div[4]/div[2]/div[1]/div[1]/div[1]/span[1]"
+     },
+     "state": "books.coa-preview"
+    }
+   ],
+   "evidenceHash": "0b1b060b305b4e66cfee493ad41e92bb2fc58e7d1252c6f451d4fb93f0c6014b",
+   "facts": {
+    "criterion": "1.4.3",
+    "criterionName": "Contrast (Minimum)",
+    "elements": "15 elements",
+    "messageKey": "shortTextContent",
+    "rule": "color-contrast",
+    "screen": "Team Spend",
+    "why": "its text is too short to judge"
+   },
+   "family": "contrast",
+   "guidance": "High under 2:1, or under 3:1 for essential text.",
+   "issueId": null,
+   "key": "contrast:color-contrast:0f829708cd97",
+   "measured": true,
+   "primary": "cards.team-spend",
+   "proposals": [],
+   "rule": "color-contrast",
+   "screens": 52,
+   "severityDefault": "medium",
+   "source": "scanner",
+   "states": [
+    "cards.team-spend",
+    "books.coa-preview"
+   ],
+   "summary": "axe color-contrast could not decide 15 elements (shortTextContent): its text is too short to judge.",
+   "title": "Needs review: color-contrast, its text is too short to judge"
+  }
+ ],
+ "primaries": [
+  "cards.team-spend"
+ ],
+ "reach": {
+  "baseUrl": "https://demo.mercury.com",
+  "data": "data",
+  "map": "build/map.json",
+  "run": "2026-10-03-1525",
+  "workspace": "a11y"
+ },
+ "run": "2026-10-03-1525"
+}

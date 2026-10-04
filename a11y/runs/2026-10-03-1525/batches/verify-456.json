@@ -1,0 +1,109 @@
+{
+ "area": "cards",
+ "batch": "verify-456",
+ "findings": [
+  {
+   "attachments": [],
+   "attempt": 1,
+   "basis": "candidate",
+   "criteria": [
+    "3.3.2"
+   ],
+   "evidence": [
+    {
+     "evidence": {
+      "description": "",
+      "name": "",
+      "role": "textbox",
+      "states": {},
+      "template": "textbox \"\""
+     },
+     "occurrence": {
+      "ancestors": [
+       [
+        "_inputWrapper_1oe90_3"
+       ],
+       [],
+       [
+        "_formWrapper_1qmer_19"
+       ],
+       [],
+       [
+        "_activateCardInput_1qmer_12"
+       ],
+       [
+        "_activateCardContents_1qmer_1"
+       ],
+       [],
+       [
+        "_cardActionsWrapper_1isom_21"
+       ]
+      ],
+      "classes": [
+       "_input_1oe90_3",
+       "_inputField_1oe90_64",
+       "_defaultInput_1oe90_30",
+       "_saveButtonRadius_1oe90_53",
+       "_error_1oe90_48"
+      ],
+      "data": {},
+      "heading": "",
+      "landmark": {
+       "name": "",
+       "role": "form"
+      },
+      "layer": "document",
+      "name": "",
+      "rect": [
+       795,
+       238,
+       174,
+       64
+      ],
+      "role": "textbox",
+      "tag": "input",
+      "xpath": "/html/body/div[1]/main[1]/div[1]/div[2]/div[2]/div[3]/div[1]/div[2]/div[2]/div[1]/div[2]/div[2]/form[1]/div[1]/div[1]/div[1]/input[1]"
+     },
+     "state": "cards.reset-pin-error"
+    }
+   ],
+   "evidenceHash": "f630b0c61d7db390015d65e32a36e3f9473936c90c2a72ddf769af70b3683714",
+   "facts": {
+    "announced": "textbox \"\"",
+    "axeSummary": "",
+    "criterion": "3.3.2",
+    "criterionName": "Labels or Instructions",
+    "element": "textbox in the form landmark",
+    "rule": "announced-as",
+    "screen": "Change PIN: too short"
+   },
+   "family": "name",
+   "guidance": "High for an unnamed form control or the sole primary action.",
+   "issueId": null,
+   "key": "name:announced-as:545bb24e4923",
+   "measured": false,
+   "primary": "cards.reset-pin-error",
+   "proposals": [],
+   "rule": "announced-as",
+   "screens": 1,
+   "severityDefault": "medium",
+   "source": "scanner",
+   "states": [
+    "cards.reset-pin-error"
+   ],
+   "summary": "announced-as: announced as textbox \"\".",
+   "title": "Missing or unclear name: textbox in the form landmark"
+  }
+ ],
+ "primaries": [
+  "cards.reset-pin-error"
+ ],
+ "reach": {
+  "baseUrl": "https://demo.mercury.com",
+  "data": "data",
+  "map": "build/map.json",
+  "run": "2026-10-03-1525",
+  "workspace": "a11y"
+ },
+ "run": "2026-10-03-1525"
+}

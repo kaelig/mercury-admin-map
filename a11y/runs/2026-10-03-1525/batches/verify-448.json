@@ -1,0 +1,444 @@
+{
+ "area": "cards",
+ "batch": "verify-448",
+ "findings": [
+  {
+   "attachments": [],
+   "attempt": 1,
+   "basis": "candidate",
+   "criteria": [
+    "4.1.2"
+   ],
+   "evidence": [
+    {
+     "evidence": {
+      "description": "",
+      "name": "",
+      "role": "button",
+      "states": {},
+      "template": "button \"\""
+     },
+     "occurrence": {
+      "ancestors": [
+       [
+        "_tooltipAnchor_18bac_4"
+       ],
+       [
+        "_tableData_1u4jr_5",
+        "_alignmentCenter_1u4jr_17",
+        "_collapsibleColumn_1acga_26"
+       ],
+       [
+        "_tableRow_137xu_3",
+        "_interactiveRows_137xu_35",
+        "_large_137xu_29"
+       ],
+       [
+        "_tableBody_1cp5b_1"
+       ],
+       [
+        "_table_1acga_4"
+       ],
+       [
+        "_tableWrapper_1acga_4"
+       ],
+       [
+        "_tableWrapper_1j2wi_1"
+       ],
+       [
+        "_expensesTableContainer_1hmn7_1"
+       ]
+      ],
+      "classes": [
+       "_link_ual8v_4",
+       "_underlineOnHover_ual8v_15"
+      ],
+      "data": {},
+      "heading": "Reimbursements",
+      "landmark": {
+       "name": "",
+       "role": "main"
+      },
+      "layer": "document",
+      "name": "",
+      "rect": [
+       1195,
+       493,
+       12,
+       19
+      ],
+      "role": "button",
+      "tag": "span",
+      "xpath": "/html/body/div[1]/main[1]/div[1]/div[1]/div[4]/div[1]/div[2]/div[4]/div[2]/div[1]/table[1]/tbody[1]/tr[3]/td[8]/div[1]/span[1]"
+     },
+     "state": "cards.expenses"
+    },
+    {
+     "evidence": {
+      "description": "",
+      "name": "",
+      "role": "button",
+      "states": {},
+      "template": "button \"\""
+     },
+     "occurrence": {
+      "ancestors": [
+       [
+        "_tooltipAnchor_18bac_4"
+       ],
+       [
+        "_tableData_1u4jr_5",
+        "_alignmentCenter_1u4jr_17",
+        "_collapsibleColumn_1acga_26"
+       ],
+       [
+        "_tableRow_137xu_3",
+        "_interactiveRows_137xu_35",
+        "_large_137xu_29"
+       ],
+       [
+        "_tableBody_1cp5b_1"
+       ],
+       [
+        "_table_1acga_4"
+       ],
+       [
+        "_tableWrapper_1acga_4"
+       ],
+       [
+        "_tableWrapper_1j2wi_1"
+       ],
+       [
+        "_expensesTableContainer_1hmn7_1"
+       ]
+      ],
+      "classes": [
+       "_link_ual8v_4",
+       "_underlineOnHover_ual8v_15"
+      ],
+      "data": {},
+      "heading": "",
+      "landmark": {
+       "name": "",
+       "role": "main"
+      },
+      "layer": "top",
+      "name": "",
+      "rect": [
+       1195,
+       493,
+       12,
+       19
+      ],
+      "role": "button",
+      "tag": "span",
+      "xpath": "/html/body/div[1]/main[1]/div[1]/div[1]/div[4]/div[1]/div[2]/div[4]/div[2]/div[1]/table[1]/tbody[1]/tr[3]/td[8]/div[1]/span[1]"
+     },
+     "state": "home.task-reimbursement-approved"
+    }
+   ],
+   "evidenceHash": "6a10f8220a03464708fd4cd201fe6953bd70bd06d1bddb10aefa05ae0319322c",
+   "facts": {
+    "announced": "button \"\"",
+    "axeSummary": "",
+    "criterion": "4.1.2",
+    "criterionName": "Name, Role, Value",
+    "element": "button in \"Reimbursements\"",
+    "rule": "announced-as",
+    "screen": "Reimbursements: all expenses"
+   },
+   "family": "name",
+   "guidance": "High for an unnamed form control or the sole primary action.",
+   "issueId": null,
+   "key": "name:announced-as:01ca568794e6",
+   "measured": false,
+   "primary": "cards.expenses",
+   "proposals": [],
+   "rule": "announced-as",
+   "screens": 6,
+   "severityDefault": "medium",
+   "source": "scanner",
+   "states": [
+    "cards.expenses",
+    "home.task-reimbursement-approved"
+   ],
+   "summary": "announced-as: announced as button \"\".",
+   "title": "Missing or unclear name: button in \"Reimbursements\""
+  },
+  {
+   "attachments": [],
+   "attempt": 1,
+   "basis": "candidate",
+   "criteria": [
+    "4.1.2"
+   ],
+   "evidence": [
+    {
+     "evidence": {
+      "description": "",
+      "name": "Pending Review",
+      "role": "menuitem",
+      "states": {},
+      "template": "menuitem \"Pending Review\""
+     },
+     "occurrence": {
+      "ancestors": [
+       [
+        "_chip_1xw00_8",
+        "_inactive_1xw00_119",
+        "_truncateText_1xw00_16"
+       ],
+       [
+        "_facets_grqat_22"
+       ],
+       [
+        "_tableViewsAndFilters_grqat_82"
+       ],
+       [
+        "_toolbarContainer_grqat_4"
+       ],
+       [
+        "_actionBar_1hmn7_9"
+       ],
+       [
+        "_expensesTableContainer_1hmn7_1"
+       ],
+       [
+        "_pageContent_809q8_151",
+        "_pageContentWidth_809q8_184",
+        "_footerPadding_809q8_115"
+       ],
+       [
+        "_dashboardContent_809q8_29"
+       ]
+      ],
+      "classes": [
+       "_mainElement_1xw00_24",
+       "_interactive_1xw00_134"
+      ],
+      "data": {},
+      "heading": "Reimbursements",
+      "landmark": {
+       "name": "",
+       "role": "main"
+      },
+      "layer": "document",
+      "name": "Pending Review",
+      "rect": [
+       399,
+       249,
+       132,
+       32
+      ],
+      "role": "menuitem",
+      "tag": "button",
+      "xpath": "/html/body/div[1]/main[1]/div[1]/div[1]/div[4]/div[1]/div[2]/div[4]/div[1]/div[1]/span[1]/span[1]/span[2]/button[1]"
+     },
+     "state": "cards.expenses"
+    }
+   ],
+   "evidenceHash": "e2bea9803133fabb885338bb9d257ecf76da46ea43829b7b0b5c2cec9bac0f11",
+   "facts": {
+    "announced": "menuitem \"Pending Review\"",
+    "axeSummary": "",
+    "criterion": "4.1.2",
+    "criterionName": "Name, Role, Value",
+    "element": "menuitem \"Pending Review\"",
+    "rule": "announced-as",
+    "screen": "Reimbursements: all expenses"
+   },
+   "family": "role-state",
+   "guidance": "Low for optional ARIA or an invalid autocomplete token; high when aria-hidden hides the whole page.",
+   "issueId": null,
+   "key": "role-state:announced-as:1de968418fe2",
+   "measured": false,
+   "primary": "cards.expenses",
+   "proposals": [],
+   "rule": "announced-as",
+   "screens": 1,
+   "severityDefault": "medium",
+   "source": "scanner",
+   "states": [
+    "cards.expenses"
+   ],
+   "summary": "announced-as: announced as menuitem \"Pending Review\".",
+   "title": "Wrong role or state: menuitem \"Pending Review\""
+  },
+  {
+   "attachments": [],
+   "attempt": 1,
+   "basis": "candidate",
+   "criteria": [
+    "4.1.2"
+   ],
+   "evidence": [
+    {
+     "evidence": {
+      "description": "",
+      "name": "Add filter",
+      "role": "menuitem",
+      "states": {
+       "expanded": false,
+       "haspopup": "menu"
+      },
+      "template": "menuitem \"Add filter\" [expanded=false, haspopup=menu]"
+     },
+     "occurrence": {
+      "ancestors": [
+       [
+        "_chip_1xw00_8",
+        "_inactive_1xw00_119"
+       ],
+       [
+        "_tableViewsAndFilters_grqat_82"
+       ],
+       [
+        "_toolbarContainer_grqat_4"
+       ],
+       [
+        "_actionBar_1hmn7_9"
+       ],
+       [
+        "_expensesTableContainer_1hmn7_1"
+       ],
+       [
+        "_pageContent_809q8_151",
+        "_pageContentWidth_809q8_184",
+        "_footerPadding_809q8_115"
+       ],
+       [
+        "_dashboardContent_809q8_29"
+       ],
+       [
+        "_layout_809q8_18"
+       ]
+      ],
+      "classes": [
+       "_mainElement_1xw00_24",
+       "_interactive_1xw00_134",
+       "_filterMenuChip_veh3u_4"
+      ],
+      "data": {},
+      "heading": "Reimbursements",
+      "landmark": {
+       "name": "",
+       "role": "main"
+      },
+      "layer": "document",
+      "name": "Add filter",
+      "rect": [
+       550,
+       249,
+       106,
+       32
+      ],
+      "role": "menuitem",
+      "tag": "button",
+      "xpath": "/html/body/div[1]/main[1]/div[1]/div[1]/div[4]/div[1]/div[2]/div[4]/div[1]/div[1]/span[1]/span[3]/button[1]"
+     },
+     "state": "cards.expenses"
+    },
+    {
+     "evidence": {
+      "description": "",
+      "name": "Add filter",
+      "role": "menuitem",
+      "states": {
+       "expanded": false,
+       "haspopup": "menu"
+      },
+      "template": "menuitem \"Add filter\" [expanded=false, haspopup=menu]"
+     },
+     "occurrence": {
+      "ancestors": [
+       [
+        "_chip_1xw00_8",
+        "_inactive_1xw00_119"
+       ],
+       [
+        "_tableViewsAndFilters_grqat_82"
+       ],
+       [
+        "_toolbarContainer_grqat_4"
+       ],
+       [
+        "_toolbar_836fy_21"
+       ],
+       [
+        "_filterBar_1u40e_160"
+       ],
+       [],
+       [],
+       [
+        "_pageContent_809q8_151",
+        "_pageContentWidth_809q8_184",
+        "_footerPadding_809q8_115"
+       ]
+      ],
+      "classes": [
+       "_mainElement_1xw00_24",
+       "_interactive_1xw00_134",
+       "_filterMenuChip_veh3u_4"
+      ],
+      "data": {},
+      "heading": "Team",
+      "landmark": {
+       "name": "",
+       "role": "main"
+      },
+      "layer": "document",
+      "name": "Add filter",
+      "rect": [
+       535,
+       184,
+       106,
+       32
+      ],
+      "role": "menuitem",
+      "tag": "button",
+      "xpath": "/html/body/div[1]/main[1]/div[1]/div[1]/div[4]/div[1]/div[2]/div[2]/div[1]/div[1]/div[1]/div[1]/span[1]/span[3]/button[1]"
+     },
+     "state": "settings.edit-member"
+    }
+   ],
+   "evidenceHash": "42d72825610e579062325f7535f43f6d90318f13002852751714fda8501f2378",
+   "facts": {
+    "announced": "menuitem \"Add filter\" [expanded=false, haspopup=menu]",
+    "axeSummary": "",
+    "criterion": "4.1.2",
+    "criterionName": "Name, Role, Value",
+    "element": "menuitem \"Add filter\"",
+    "rule": "announced-as",
+    "screen": "Reimbursements: all expenses"
+   },
+   "family": "role-state",
+   "guidance": "Low for optional ARIA or an invalid autocomplete token; high when aria-hidden hides the whole page.",
+   "issueId": null,
+   "key": "role-state:announced-as:f4fedda56f06",
+   "measured": false,
+   "primary": "cards.expenses",
+   "proposals": [],
+   "rule": "announced-as",
+   "screens": 6,
+   "severityDefault": "medium",
+   "source": "scanner",
+   "states": [
+    "cards.expenses",
+    "settings.edit-member"
+   ],
+   "summary": "announced-as: announced as menuitem \"Add filter\" [expanded=false, haspopup=menu].",
+   "title": "Wrong role or state: menuitem \"Add filter\""
+  }
+ ],
+ "primaries": [
+  "cards.expenses"
+ ],
+ "reach": {
+  "baseUrl": "https://demo.mercury.com",
+  "data": "data",
+  "map": "build/map.json",
+  "run": "2026-10-03-1525",
+  "workspace": "a11y"
+ },
+ "run": "2026-10-03-1525"
+}

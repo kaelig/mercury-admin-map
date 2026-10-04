@@ -1,0 +1,219 @@
+{
+ "area": "settings",
+ "batch": "verify-537",
+ "findings": [
+  {
+   "attachments": [],
+   "attempt": 1,
+   "basis": "candidate",
+   "criteria": [
+    "2.4.4"
+   ],
+   "evidence": [
+    {
+     "evidence": {
+      "description": "",
+      "name": "Learn More",
+      "role": "link",
+      "states": {},
+      "template": "link \"Learn More\""
+     },
+     "occurrence": {
+      "ancestors": [
+       [
+        "_text-secondary_12t49_1"
+       ],
+       [
+        "_aboutVaultSection_1pgld_1"
+       ],
+       [
+        "_pageContent_809q8_151",
+        "_pageContentWidth_809q8_184",
+        "_footerPadding_809q8_115"
+       ],
+       [
+        "_dashboardContent_809q8_29"
+       ],
+       [
+        "_layout_809q8_18"
+       ],
+       [
+        "_wrapper_809q8_3"
+       ],
+       [],
+       [
+        "_main_1gb3b_1"
+       ]
+      ],
+      "classes": [
+       "_link_ual8v_4",
+       "_underlineOnHover_ual8v_15"
+      ],
+      "data": {},
+      "heading": "$5,000,000.00",
+      "landmark": {
+       "name": "",
+       "role": "main"
+      },
+      "layer": "document",
+      "name": "Learn More",
+      "rect": [
+       346,
+       836,
+       103,
+       19
+      ],
+      "role": "link",
+      "tag": "a",
+      "xpath": "/html/body/div[1]/main[1]/div[1]/div[1]/div[4]/div[1]/div[2]/div[4]/span[1]/a[1]"
+     },
+     "state": "settings.vault"
+    }
+   ],
+   "evidenceHash": "5ffea3f168d8400d4bea511850d49357d91a19ce86d168cc2eab98d05baba992",
+   "facts": {
+    "announced": "link \"Learn More\"",
+    "axeSummary": "",
+    "criterion": "2.4.4",
+    "criterionName": "Link Purpose (In Context)",
+    "element": "link \"Learn More\"",
+    "rule": "announced-as",
+    "screen": "Mercury Vault"
+   },
+   "family": "name",
+   "guidance": "High for an unnamed form control or the sole primary action.",
+   "issueId": null,
+   "key": "name:announced-as:7d15b950a800",
+   "measured": false,
+   "primary": "settings.vault",
+   "proposals": [],
+   "rule": "announced-as",
+   "screens": 1,
+   "severityDefault": "medium",
+   "source": "scanner",
+   "states": [
+    "settings.vault"
+   ],
+   "summary": "announced-as: announced as link \"Learn More\".",
+   "title": "Missing or unclear name: link \"Learn More\""
+  },
+  {
+   "attachments": [],
+   "attempt": 1,
+   "basis": "candidate",
+   "criteria": [
+    "1.3.1"
+   ],
+   "evidence": [
+    {
+     "evidence": {
+      "description": "",
+      "name": "$5,000,000.00",
+      "role": "heading",
+      "states": {
+       "level": 3
+      },
+      "template": "heading \"<amount>\" [level=3]"
+     },
+     "occurrence": {
+      "ancestors": [
+       [
+        "_accountBalanceWrapper_k1thc_1"
+       ],
+       [
+        "_medium_kwlx6_5",
+        "_noHover_3n0se_28",
+        "_raisedBackground_3n0se_45",
+        "_innerCard_18job_17"
+       ],
+       [
+        "_topGrid_a4f6l_7"
+       ],
+       [
+        "_large_kwlx6_9",
+        "_noHover_3n0se_28",
+        "_shadow_3n0se_25",
+        "_raisedBackground_3n0se_45",
+        "_outerCard_a4f6l_1"
+       ],
+       [
+        "_cardsSection_1pgld_18"
+       ],
+       [
+        "_pageContent_809q8_151",
+        "_pageContentWidth_809q8_184",
+        "_footerPadding_809q8_115"
+       ],
+       [
+        "_dashboardContent_809q8_29"
+       ],
+       [
+        "_layout_809q8_18"
+       ]
+      ],
+      "classes": [
+       "_titleMain_qaod7_16",
+       "_text-title_12t49_1",
+       "_currentAmount_k1thc_7"
+      ],
+      "data": {},
+      "heading": "Mercury Vault",
+      "landmark": {
+       "name": "",
+       "role": "main"
+      },
+      "layer": "document",
+      "name": "$5,000,000.00",
+      "rect": [
+       915,
+       319,
+       336,
+       36
+      ],
+      "role": "heading",
+      "tag": "h3",
+      "xpath": "/html/body/div[1]/main[1]/div[1]/div[1]/div[4]/div[1]/div[2]/div[3]/div[1]/div[1]/div[2]/div[1]/h3[1]"
+     },
+     "state": "settings.vault"
+    }
+   ],
+   "evidenceHash": "dfd9972e178450a6844a214aa5b8f2f0696201c7c37ff20ad0e875d14394bca7",
+   "facts": {
+    "announced": "heading \"<amount>\" [level=3]",
+    "axeSummary": "",
+    "criterion": "1.3.1",
+    "criterionName": "Info and Relationships",
+    "element": "heading \"<amount>\"",
+    "rule": "announced-as",
+    "screen": "Mercury Vault"
+   },
+   "family": "structure",
+   "guidance": "Medium when a data table's headers do not reach its cells, or when structure is the only way to tell sections or steps apart.",
+   "issueId": null,
+   "key": "structure:announced-as:2b118bea8f31",
+   "measured": false,
+   "primary": "settings.vault",
+   "proposals": [],
+   "rule": "announced-as",
+   "screens": 1,
+   "severityDefault": "low",
+   "source": "scanner",
+   "states": [
+    "settings.vault"
+   ],
+   "summary": "announced-as: announced as heading \"<amount>\" [level=3].",
+   "title": "Markup misstates structure: heading \"<amount>\""
+  }
+ ],
+ "primaries": [
+  "settings.vault"
+ ],
+ "reach": {
+  "baseUrl": "https://demo.mercury.com",
+  "data": "data",
+  "map": "build/map.json",
+  "run": "2026-10-03-1525",
+  "workspace": "a11y"
+ },
+ "run": "2026-10-03-1525"
+}

@@ -1,0 +1,109 @@
+{
+ "area": "transactions",
+ "batch": "verify-385",
+ "findings": [
+  {
+   "attachments": [],
+   "attempt": 1,
+   "basis": "violation",
+   "criteria": [
+    "4.1.2"
+   ],
+   "evidence": [
+    {
+     "evidence": {
+      "failureSummary": "Fix any of the following:\n  Element has focusable descendants"
+     },
+     "occurrence": {
+      "ancestors": [
+       [
+        "_topContent_1ow20_3"
+       ],
+       [
+        "_transactionsPageDashboardWrapper_1ow20_48"
+       ],
+       [
+        "_dashboardContent_809q8_29",
+        "_scrollContainer_809q8_29"
+       ],
+       [
+        "_layout_809q8_18"
+       ],
+       [
+        "_wrapper_809q8_3"
+       ],
+       [],
+       [
+        "_main_1gb3b_1"
+       ],
+       [
+        "mercury-root"
+       ]
+      ],
+      "classes": [
+       "_wrapper_1apo0_1",
+       "session-replay-block",
+       "_collapsed_1apo0_24",
+       "_clickableWhenCollapsed_1apo0_109"
+      ],
+      "data": {},
+      "heading": "Transactions",
+      "landmark": {
+       "name": "",
+       "role": "main"
+      },
+      "layer": "document",
+      "name": "Show graphs Money out all time −$ 2 6 8 , 9 8 6 . 7 5",
+      "rect": [
+       220,
+       232,
+       1220,
+       76
+      ],
+      "role": "button",
+      "tag": "div",
+      "xpath": "/html/body/div[1]/main[1]/div[1]/div[1]/div[4]/div[1]/div[2]/div[2]/div[2]"
+     },
+     "state": "transactions.insights-drilldown"
+    }
+   ],
+   "evidenceHash": "eeddcb539a21303d9a3f3fa433af8198b1dce1bcdddfe82cf373de5a56fd7219",
+   "facts": {
+    "announced": "button \"Show graphs Money out all time <amount> <n>\"",
+    "axeSummary": "Element has focusable descendants",
+    "criterion": "4.1.2",
+    "criterionName": "Name, Role, Value",
+    "element": "button \"Show graphs Money out all time <amount>…\"",
+    "rule": "nested-interactive",
+    "screen": "Breakdown drill-down"
+   },
+   "family": "role-state",
+   "guidance": "Low for optional ARIA or an invalid autocomplete token; high when aria-hidden hides the whole page.",
+   "issueId": null,
+   "key": "role-state:nested-interactive:7976446e537c",
+   "measured": false,
+   "primary": "transactions.insights-drilldown",
+   "proposals": [],
+   "rule": "nested-interactive",
+   "screens": 1,
+   "severityDefault": "medium",
+   "source": "scanner",
+   "states": [
+    "transactions.insights-drilldown"
+   ],
+   "summary": "nested-interactive: announced as button \"Show graphs Money out all time <amount> <n>\". Element has focusable descendants",
+   "title": "Control nested in a control: button \"Show graphs Money out all time <amount>…\""
+  }
+ ],
+ "primaries": [
+  "transactions.insights-drilldown"
+ ],
+ "reach": {
+  "baseUrl": "https://demo.mercury.com",
+  "data": "data",
+  "map": "build/map.json",
+  "run": "2026-10-03-1525",
+  "workspace": "a11y"
+ },
+ "run": "2026-10-03-1525"
+}

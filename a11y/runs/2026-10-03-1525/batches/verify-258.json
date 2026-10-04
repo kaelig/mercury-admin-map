@@ -1,0 +1,197 @@
+{
+ "area": "payments",
+ "batch": "verify-258",
+ "findings": [
+  {
+   "attachments": [],
+   "attempt": 1,
+   "basis": "failure",
+   "criteria": [
+    "4.1.3"
+   ],
+   "evidence": [
+    {
+     "evidence": {
+      "focus": "body",
+      "focused": false,
+      "message": "ACH Authorizations Flagged 3 Vendor Authorized on Authorized for Transaction limit L Lighthouse Properties #3431 Oct 3, 2026 Ops / Payroll $23,103.46 L Lighthouse Properties #3431 Oct 3, 2026 AP None D A Domestic Ads Oct 3, 2026 Ops / Payroll $20,000.00 P PG&E Oct 3, 2026 Ops / Payroll None",
+      "region": null
+     },
+     "occurrence": {
+      "ancestors": [
+       [
+        "_pageContent_809q8_151",
+        "_pageContentWidth_809q8_184",
+        "_footerPadding_809q8_115"
+       ],
+       [
+        "_dashboardContent_809q8_29"
+       ],
+       [
+        "_layout_809q8_18"
+       ],
+       [
+        "_wrapper_809q8_3"
+       ],
+       [],
+       [
+        "_main_1gb3b_1"
+       ],
+       [
+        "mercury-root"
+       ]
+      ],
+      "classes": [],
+      "data": {},
+      "heading": "ACH Authorizations",
+      "landmark": {
+       "name": "",
+       "role": "main"
+      },
+      "layer": "document",
+      "name": "",
+      "rect": [
+       346,
+       184,
+       968,
+       289
+      ],
+      "role": "",
+      "tag": "div",
+      "xpath": "/html/body/div[1]/main[1]/div[1]/div[1]/div[4]/div[1]/div[2]/div[2]"
+     },
+     "state": "payments.ach-add-success"
+    }
+   ],
+   "evidenceHash": "b1241e8fccc77eb455fcda7dd66be1672795e45fe066ddf7d1c4cac33b9b1c83",
+   "facts": {
+    "criterion": "4.1.3",
+    "criterionName": "Status Messages",
+    "focus": "page body",
+    "message": "\"ACH Authorizations Flagged <n> Vendor Authorize…\"",
+    "screen": "ACH list with new vendor"
+   },
+   "family": "status-message",
+   "guidance": "High when it is the only confirmation of a money movement.",
+   "issueId": null,
+   "key": "status-message:status-not-announced:4a41292d3751",
+   "measured": false,
+   "primary": "payments.ach-add-success",
+   "proposals": [],
+   "rule": "status-not-announced",
+   "screens": 1,
+   "severityDefault": "medium",
+   "source": "scanner",
+   "states": [
+    "payments.ach-add-success"
+   ],
+   "summary": "\"ACH Authorizations Flagged <n> Vendor Authorize…\" appeared outside any live region, alert or status role that existed before it, and focus stayed on the page body.",
+   "title": "Status message not announced: \"ACH Authorizations Flagged <n> Vendor Authorize…\""
+  },
+  {
+   "attachments": [],
+   "attempt": 1,
+   "basis": "failure",
+   "criteria": [
+    "4.1.3"
+   ],
+   "evidence": [
+    {
+     "evidence": {
+      "focus": "body",
+      "focused": false,
+      "message": "Add ACH authorization",
+      "region": null
+     },
+     "occurrence": {
+      "ancestors": [
+       [
+        "_headerWrapper_irpp8_1",
+        "_pageHeaderWrapper_809q8_70"
+       ],
+       [
+        "_titleRow_809q8_88"
+       ],
+       [
+        "_pageContent_809q8_151",
+        "_pageContentWidth_809q8_184",
+        "_footerPadding_809q8_115"
+       ],
+       [
+        "_dashboardContent_809q8_29"
+       ],
+       [
+        "_layout_809q8_18"
+       ],
+       [
+        "_wrapper_809q8_3"
+       ],
+       [],
+       [
+        "_main_1gb3b_1"
+       ]
+      ],
+      "classes": [
+       "_actionWrapper_irpp8_29",
+       "_buttonGroup_16t7w_1",
+       "_horizontal_16t7w_11"
+      ],
+      "data": {},
+      "heading": "ACH Authorizations",
+      "landmark": {
+       "name": "",
+       "role": "main"
+      },
+      "layer": "document",
+      "name": "",
+      "rect": [
+       1111,
+       132,
+       203,
+       32
+      ],
+      "role": "",
+      "tag": "div",
+      "xpath": "/html/body/div[1]/main[1]/div[1]/div[1]/div[4]/div[1]/div[2]/div[1]/div[1]/div[2]"
+     },
+     "state": "payments.ach-add-success"
+    }
+   ],
+   "evidenceHash": "01d5d4186f0a599bcf3e002fcab856caac1c5bb371ef47636a94e044c2cd7838",
+   "facts": {
+    "criterion": "4.1.3",
+    "criterionName": "Status Messages",
+    "focus": "page body",
+    "message": "\"Add ACH authorization\"",
+    "screen": "ACH list with new vendor"
+   },
+   "family": "status-message",
+   "guidance": "High when it is the only confirmation of a money movement.",
+   "issueId": null,
+   "key": "status-message:status-not-announced:8679ce65770d",
+   "measured": false,
+   "primary": "payments.ach-add-success",
+   "proposals": [],
+   "rule": "status-not-announced",
+   "screens": 1,
+   "severityDefault": "medium",
+   "source": "scanner",
+   "states": [
+    "payments.ach-add-success"
+   ],
+   "summary": "\"Add ACH authorization\" appeared outside any live region, alert or status role that existed before it, and focus stayed on the page body.",
+   "title": "Status message not announced: \"Add ACH authorization\""
+  }
+ ],
+ "primaries": [
+  "payments.ach-add-success"
+ ],
+ "reach": {
+  "baseUrl": "https://demo.mercury.com",
+  "data": "data",
+  "map": "build/map.json",
+  "run": "2026-10-03-1525",
+  "workspace": "a11y"
+ },
+ "run": "2026-10-03-1525"
+}

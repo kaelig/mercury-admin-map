@@ -1,0 +1,576 @@
+{
+ "area": "home",
+ "batch": "second-026",
+ "findings": [
+  {
+   "attachments": [],
+   "attempt": 1,
+   "basis": "violation",
+   "criteria": [
+    "4.1.2"
+   ],
+   "evidence": [
+    {
+     "evidence": {
+      "failureSummary": "Fix any of the following:\n  Element does not have inner text that is visible to screen readers\n  aria-label attribute does not exist or is empty\n  aria-labelledby attribute does not exist, references elements that do not exist or references elements that are empty\n  Element has no title attribute\n  Element does not have an implicit (wrapped) <label>\n  Element does not have an explicit <label>\n  Element's default semantics were not overridden with role=\"none\" or role=\"presentation\"",
+      "messageKey": "noAttr"
+     },
+     "occurrence": {
+      "ancestors": [
+       [
+        "_header_t58zp_10"
+       ],
+       [
+        "_wrapper_t58zp_3"
+       ],
+       [
+        "_large_kwlx6_9",
+        "_noHover_3n0se_28",
+        "_shadow_3n0se_25",
+        "_raisedBackground_3n0se_45",
+        "_popoverContainer_hn0wv_3"
+       ],
+       [
+        "_wrapper_gtpm4_1",
+        "_visible_gtpm4_7",
+        "_animationReady_gtpm4_30",
+        "_visibilityWrapper_1cgg7_92"
+       ],
+       [
+        "_menuContainer_1cgg7_8",
+        "session-replay-unmask"
+       ],
+       [
+        "_wrapper_809q8_3"
+       ],
+       [],
+       [
+        "_main_1gb3b_1"
+       ]
+      ],
+      "classes": [
+       "_headerButton_t58zp_25"
+      ],
+      "data": {},
+      "heading": "Welcome, Test",
+      "landmark": {
+       "name": "",
+       "role": "main"
+      },
+      "layer": "document",
+      "name": "",
+      "rect": [
+       1368,
+       328,
+       20,
+       20
+      ],
+      "role": "button",
+      "tag": "button",
+      "xpath": "/html/body/div[1]/main[1]/div[1]/div[1]/div[6]/div[1]/div[1]/div[1]/div[1]/button[1]"
+     },
+     "state": "home.customize-demo-success"
+    }
+   ],
+   "evidenceHash": "93190522467d620e0e779a98bff14c1458f4c27d780fc42c4882affe3f3e9523",
+   "facts": {
+    "announced": "button \"\"",
+    "axeSummary": "Element does not have inner text that is visible to screen readers; aria-label attribute does not exist or is empty; aria-labelledby attribute does not exist,…",
+    "criterion": "4.1.2",
+    "criterionName": "Name, Role, Value",
+    "element": "button in \"Welcome, Test\"",
+    "rule": "button-name",
+    "screen": "Customize demo — applied"
+   },
+   "family": "name",
+   "guidance": "High for an unnamed form control or the sole primary action.",
+   "issueId": null,
+   "key": "name:button-name:4f1976d4f256",
+   "measured": false,
+   "primary": "home.customize-demo-success",
+   "proposals": [],
+   "rule": "button-name",
+   "screens": 1,
+   "severityDefault": "medium",
+   "source": "scanner",
+   "states": [
+    "home.customize-demo-success"
+   ],
+   "summary": "button-name: announced as button \"\". Element does not have inner text that is visible to screen readers; aria-label attribute does not exist or is empty; aria-labelledby attribute does not exist,…",
+   "title": "Missing or unclear name: button in \"Welcome, Test\""
+  },
+  {
+   "attachments": [],
+   "attempt": 1,
+   "basis": "violation",
+   "criteria": [
+    "4.1.2"
+   ],
+   "evidence": [
+    {
+     "evidence": {
+      "failureSummary": "Fix any of the following:\n  Element does not have inner text that is visible to screen readers\n  aria-label attribute does not exist or is empty\n  aria-labelledby attribute does not exist, references elements that do not exist or references elements that are empty\n  Element has no title attribute\n  Element does not have an implicit (wrapped) <label>\n  Element does not have an explicit <label>\n  Element's default semantics were not overridden with role=\"none\" or role=\"presentation\"",
+      "messageKey": "noAttr"
+     },
+     "occurrence": {
+      "ancestors": [
+       [
+        "_tooltipAnchor_18bac_4",
+        "_tooltipWrapper_1cgg7_75",
+        "_helpMenuOpen_1cgg7_87"
+       ],
+       [
+        "_menuContainer_1cgg7_8",
+        "session-replay-unmask"
+       ],
+       [
+        "_wrapper_809q8_3"
+       ],
+       [],
+       [
+        "_main_1gb3b_1"
+       ],
+       [
+        "mercury-root"
+       ]
+      ],
+      "classes": [
+       "_menuIcon_1cgg7_33"
+      ],
+      "data": {},
+      "heading": "Welcome, Test",
+      "landmark": {
+       "name": "",
+       "role": "main"
+      },
+      "layer": "document",
+      "name": "",
+      "rect": [
+       1364,
+       832,
+       48,
+       48
+      ],
+      "role": "button",
+      "tag": "button",
+      "xpath": "/html/body/div[1]/main[1]/div[1]/div[1]/div[6]/div[2]/button[1]"
+     },
+     "state": "home.customize-demo-success"
+    }
+   ],
+   "evidenceHash": "93190522467d620e0e779a98bff14c1458f4c27d780fc42c4882affe3f3e9523",
+   "facts": {
+    "announced": "button \"\"",
+    "axeSummary": "Element does not have inner text that is visible to screen readers; aria-label attribute does not exist or is empty; aria-labelledby attribute does not exist,…",
+    "criterion": "4.1.2",
+    "criterionName": "Name, Role, Value",
+    "element": "button in \"Welcome, Test\"",
+    "rule": "button-name",
+    "screen": "Customize demo — applied"
+   },
+   "family": "name",
+   "guidance": "High for an unnamed form control or the sole primary action.",
+   "issueId": null,
+   "key": "name:button-name:afb6b4c5125c",
+   "measured": false,
+   "primary": "home.customize-demo-success",
+   "proposals": [],
+   "rule": "button-name",
+   "screens": 1,
+   "severityDefault": "medium",
+   "source": "scanner",
+   "states": [
+    "home.customize-demo-success"
+   ],
+   "summary": "button-name: announced as button \"\". Element does not have inner text that is visible to screen readers; aria-label attribute does not exist or is empty; aria-labelledby attribute does not exist,…",
+   "title": "Missing or unclear name: button in \"Welcome, Test\""
+  },
+  {
+   "attachments": [],
+   "attempt": 1,
+   "basis": "violation",
+   "criteria": [
+    "1.1.1"
+   ],
+   "evidence": [
+    {
+     "evidence": {
+      "failureSummary": "Fix any of the following:\n  Element has no child that is a title\n  aria-label attribute does not exist or is empty\n  aria-labelledby attribute does not exist, references elements that do not exist or references elements that are empty\n  Element has no title attribute",
+      "messageKey": "noAttr"
+     },
+     "occurrence": {
+      "ancestors": [
+       [
+        "_rightIconContainer_hn0wv_85"
+       ],
+       [
+        "_optionContent_hn0wv_93"
+       ],
+       [
+        "_optionItem_hn0wv_33"
+       ],
+       [
+        "_noStyleLink_njx8v_1"
+       ],
+       [
+        "_optionsContainer_hn0wv_16",
+        "_visible_hn0wv_25"
+       ],
+       [],
+       [
+        "_wrapper_t58zp_3"
+       ],
+       [
+        "_large_kwlx6_9",
+        "_noHover_3n0se_28",
+        "_shadow_3n0se_25",
+        "_raisedBackground_3n0se_45",
+        "_popoverContainer_hn0wv_3"
+       ]
+      ],
+      "classes": [
+       "svg-inline--fa",
+       "fa-chevron-right",
+       "_chevronIcon_hn0wv_89"
+      ],
+      "data": {
+       "data-icon": "chevron-right",
+       "data-prefix": "far"
+      },
+      "heading": "Welcome, Test",
+      "landmark": {
+       "name": "",
+       "role": "main"
+      },
+      "layer": "document",
+      "name": "",
+      "rect": [
+       1351,
+       444,
+       8,
+       13
+      ],
+      "role": "image",
+      "tag": "svg",
+      "xpath": "/html/body/div[1]/main[1]/div[1]/div[1]/div[6]/div[1]/div[1]/div[1]/div[2]/div[2]/a[1]/div[1]/div[1]/div[2]/svg[1]"
+     },
+     "state": "home.customize-demo-success"
+    }
+   ],
+   "evidenceHash": "9a86553f7537861a7959967761b305ed6409af18b9a5905f433d2a5e425fd4a9",
+   "facts": {
+    "announced": "image \"\"",
+    "axeSummary": "Element has no child that is a title; aria-label attribute does not exist or is empty; aria-labelledby attribute does not exist, references elements that do no…",
+    "criterion": "1.1.1",
+    "criterionName": "Non-text Content",
+    "element": "image in \"Welcome, Test\"",
+    "rule": "svg-img-alt",
+    "screen": "Customize demo — applied"
+   },
+   "family": "name",
+   "guidance": "High for an unnamed form control or the sole primary action.",
+   "issueId": null,
+   "key": "name:svg-img-alt:6765ccb71fea",
+   "measured": false,
+   "primary": "home.customize-demo-success",
+   "proposals": [],
+   "rule": "svg-img-alt",
+   "screens": 1,
+   "severityDefault": "medium",
+   "source": "scanner",
+   "states": [
+    "home.customize-demo-success"
+   ],
+   "summary": "svg-img-alt: announced as image \"\". Element has no child that is a title; aria-label attribute does not exist or is empty; aria-labelledby attribute does not exist, references elements that do no…",
+   "title": "Missing or unclear name: image in \"Welcome, Test\""
+  },
+  {
+   "attachments": [],
+   "attempt": 1,
+   "basis": "candidate",
+   "criteria": [
+    "2.5.8"
+   ],
+   "evidence": [
+    {
+     "evidence": {
+      "agree": false,
+      "axe": "pass",
+      "exception": null,
+      "height": 18,
+      "offset": 0,
+      "own": "fail",
+      "passedBy": null,
+      "width": 61.08
+     },
+     "occurrence": {
+      "ancestors": [
+       [],
+       [
+        "_bodyDefault_qaod7_40",
+        "_text-default_12t49_1"
+       ],
+       [
+        "_topRow_1dk39_2"
+       ],
+       [
+        "_large_kwlx6_9",
+        "_noHover_3n0se_28",
+        "_border_3n0se_35",
+        "_raisedBackground_3n0se_45",
+        "_card_1ym9q_1",
+        "_card_1dk39_1"
+       ],
+       [
+        "_moduleRow_ct6b5_48",
+        "_moduleRowThreeColumns_ct6b5_61"
+       ],
+       [
+        "_analyticsDashboard_ct6b5_36"
+       ],
+       [
+        "_fullWidthWrapper_ct6b5_9"
+       ],
+       [
+        "_outerWrapper_ct6b5_1"
+       ]
+      ],
+      "classes": [
+       "_link_ual8v_4",
+       "_underlineOnHover_ual8v_15"
+      ],
+      "data": {
+       "data-discover": "true"
+      },
+      "disabled": false,
+      "heading": "Welcome, Test",
+      "landmark": {
+       "name": "",
+       "role": "main"
+      },
+      "layer": "document",
+      "name": "Invoicing",
+      "rect": [
+       1032,
+       670,
+       61,
+       18
+      ],
+      "role": "link",
+      "tag": "a",
+      "xpath": "/html/body/div[1]/main[1]/div[1]/div[1]/div[4]/div[1]/div[2]/div[1]/div[1]/div[4]/div[2]/div[3]/div[1]/span[1]/span[1]/a[1]"
+     },
+     "state": "home.customize-demo-success"
+    }
+   ],
+   "evidenceHash": "3e321208643a76d947351478b61aee4de4d266e66088426c34f2234ddd5344b5",
+   "facts": {
+    "criterion": "2.5.8",
+    "criterionName": "Target Size (Minimum)",
+    "element": "link \"Invoicing\"",
+    "offset": "0",
+    "rule": "target-size-own",
+    "screen": "Customize demo — applied",
+    "screens": 1,
+    "size": "61×18"
+   },
+   "family": "target-size",
+   "guidance": "Medium next to destructive or financial controls.",
+   "issueId": null,
+   "key": "target-size:target-size-own:7c409b63219d",
+   "measured": true,
+   "primary": "home.customize-demo-success",
+   "proposals": [],
+   "rule": "target-size-own",
+   "screens": 1,
+   "severityDefault": "low",
+   "source": "scanner",
+   "states": [
+    "home.customize-demo-success"
+   ],
+   "summary": "target-size-own: 61×18 px; the widest circle centered on it that clears other targets is 0 px, and the spacing exception needs 24 px.",
+   "title": "Target under 24×24 px: link \"Invoicing\""
+  },
+  {
+   "attachments": [],
+   "attempt": 1,
+   "basis": "candidate",
+   "criteria": [
+    "4.1.2"
+   ],
+   "evidence": [
+    {
+     "evidence": {
+      "description": "",
+      "name": "Transactions",
+      "role": "button",
+      "states": {},
+      "template": "button \"Transactions\""
+     },
+     "occurrence": {
+      "ancestors": [
+       [
+        "_chip_1xw00_8",
+        "_inactive_1xw00_119",
+        "_truncateText_1xw00_16"
+       ],
+       [],
+       [
+        "_facets_4ah12_118"
+       ],
+       [
+        "_filterScrollContent_4ah12_19"
+       ],
+       [
+        "_filterScrollContainer_4ah12_12"
+       ],
+       [
+        "_filterChipsContainer_4ah12_2"
+       ],
+       [
+        "_inputAndResultsContainer_16edb_80"
+       ],
+       [
+        "_large_kwlx6_9",
+        "_noHover_3n0se_28",
+        "_shadow_3n0se_25",
+        "_raisedBackground_3n0se_45",
+        "_card_lo4oy_4",
+        "_omnisearchCard_16edb_36"
+       ]
+      ],
+      "classes": [
+       "_mainElement_1xw00_24",
+       "_interactive_1xw00_134"
+      ],
+      "data": {
+       "data-filter-id": "transactions"
+      },
+      "heading": "",
+      "landmark": {
+       "name": "",
+       "role": "dialog"
+      },
+      "layer": "top",
+      "name": "Transactions",
+      "rect": [
+       459,
+       196,
+       112,
+       32
+      ],
+      "role": "button",
+      "tag": "button",
+      "xpath": "/html/body/div[15]/div[1]/div[1]/div[1]/div[2]/div[3]/div[1]/div[2]/span[1]/span[3]/span[1]/button[1]"
+     },
+     "state": "home.search-open"
+    },
+    {
+     "evidence": {
+      "description": "",
+      "name": "Transactions",
+      "role": "button",
+      "states": {},
+      "template": "button \"Transactions\""
+     },
+     "occurrence": {
+      "ancestors": [
+       [
+        "_chip_1xw00_8",
+        "_inactive_1xw00_119",
+        "_truncateText_1xw00_16"
+       ],
+       [],
+       [
+        "_facets_4ah12_118"
+       ],
+       [
+        "_filterScrollContent_4ah12_19"
+       ],
+       [
+        "_filterScrollContainer_4ah12_12"
+       ],
+       [
+        "_filterChipsContainer_4ah12_2"
+       ],
+       [
+        "_inputAndResultsContainer_16edb_80"
+       ],
+       [
+        "_large_kwlx6_9",
+        "_noHover_3n0se_28",
+        "_shadow_3n0se_25",
+        "_raisedBackground_3n0se_45",
+        "_card_lo4oy_4",
+        "_omnisearchCard_16edb_36"
+       ]
+      ],
+      "classes": [
+       "_mainElement_1xw00_24",
+       "_interactive_1xw00_134"
+      ],
+      "data": {
+       "data-filter-id": "transactions"
+      },
+      "heading": "",
+      "landmark": {
+       "name": "",
+       "role": "dialog"
+      },
+      "layer": "top",
+      "name": "Transactions",
+      "rect": [
+       647,
+       196,
+       112,
+       32
+      ],
+      "role": "button",
+      "tag": "button",
+      "xpath": "/html/body/div[9]/div[1]/div[1]/div[1]/div[2]/div[2]/div[1]/div[2]/span[1]/span[5]/span[1]/button[1]"
+     },
+     "state": "books.search"
+    }
+   ],
+   "evidenceHash": "f25fe18db6668b584c516bcc3575cb3a82e535dd709e23f34f3fb0cb163fc17e",
+   "facts": {
+    "announced": "button \"Transactions\"",
+    "axeSummary": "",
+    "criterion": "4.1.2",
+    "criterionName": "Name, Role, Value",
+    "element": "button \"Transactions\"",
+    "rule": "announced-as",
+    "screen": "Search dialog (empty)"
+   },
+   "family": "role-state",
+   "guidance": "Low for optional ARIA or an invalid autocomplete token; high when aria-hidden hides the whole page.",
+   "issueId": null,
+   "key": "role-state:announced-as:aa328c3fdd4d",
+   "measured": false,
+   "primary": "home.search-open",
+   "proposals": [],
+   "rule": "announced-as",
+   "screens": 8,
+   "severityDefault": "medium",
+   "source": "scanner",
+   "states": [
+    "home.search-open",
+    "books.search"
+   ],
+   "summary": "announced-as: announced as button \"Transactions\".",
+   "title": "Wrong role or state: button \"Transactions\""
+  }
+ ],
+ "primaries": [
+  "home.customize-demo-success",
+  "home.search-open"
+ ],
+ "reach": {
+  "baseUrl": "https://demo.mercury.com",
+  "data": "data",
+  "map": "build/map.json",
+  "run": "2026-10-03-1525",
+  "workspace": "a11y"
+ },
+ "run": "2026-10-03-1525"
+}

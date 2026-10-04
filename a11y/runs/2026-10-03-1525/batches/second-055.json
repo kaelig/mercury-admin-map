@@ -1,0 +1,166 @@
+{
+ "area": "invoicing",
+ "batch": "second-055",
+ "findings": [
+  {
+   "attachments": [],
+   "attempt": 1,
+   "basis": "candidate",
+   "criteria": [
+    "4.1.2"
+   ],
+   "evidence": [
+    {
+     "evidence": {
+      "description": "",
+      "name": "",
+      "role": "switch",
+      "states": {
+       "checked": true
+      },
+      "template": "switch \"\" [checked=true]"
+     },
+     "occurrence": {
+      "ancestors": [
+       [
+        "_dsToggleSwitchWrapper_3k8xy_3",
+        "_checked_3k8xy_50",
+        "_leftLabel_3k8xy_39"
+       ],
+       [
+        "_accountNumberToggle_1fapw_9"
+       ],
+       [],
+       [],
+       [
+        "_contentWrapper_kogp0_1"
+       ],
+       [
+        "_wrapper_1ojdq_8"
+       ],
+       [],
+       [
+        "_leftInnerContainer_12jyu_3"
+       ]
+      ],
+      "classes": [
+       "_switch_3k8xy_11"
+      ],
+      "data": {},
+      "heading": "Invoice totals",
+      "landmark": {
+       "name": "",
+       "role": "main"
+      },
+      "layer": "document",
+      "name": "",
+      "rect": [
+       560,
+       906,
+       40,
+       20
+      ],
+      "role": "switch",
+      "tag": "input",
+      "xpath": "/html/body/div[1]/main[1]/div[1]/div[2]/div[2]/div[3]/div[1]/div[1]/div[1]/div[1]/div[1]/div[1]/div[2]/div[2]/div[4]/div[1]/div[2]/div[2]/input[1]"
+     },
+     "state": "invoicing.create-sales-tax"
+    },
+    {
+     "evidence": {
+      "description": "",
+      "name": "",
+      "role": "switch",
+      "states": {
+       "checked": true
+      },
+      "template": "switch \"\" [checked=true]"
+     },
+     "occurrence": {
+      "ancestors": [
+       [
+        "_dsToggleSwitchWrapper_3k8xy_3",
+        "_checked_3k8xy_50",
+        "_leftLabel_3k8xy_39"
+       ],
+       [
+        "_accountNumberToggle_1fapw_9"
+       ],
+       [],
+       [],
+       [
+        "_contentWrapper_kogp0_1"
+       ],
+       [
+        "_wrapper_1ojdq_8"
+       ],
+       [],
+       [
+        "_leftInnerContainer_12jyu_3"
+       ]
+      ],
+      "classes": [
+       "_switch_3k8xy_11"
+      ],
+      "data": {},
+      "heading": "Invoice totals",
+      "landmark": {
+       "name": "",
+       "role": "main"
+      },
+      "layer": "document",
+      "name": "",
+      "rect": [
+       560,
+       906,
+       40,
+       20
+      ],
+      "role": "switch",
+      "tag": "input",
+      "xpath": "/html/body/div[1]/main[1]/div[1]/div[2]/div[2]/div[3]/div[1]/div[1]/div[1]/div[1]/div[1]/div[1]/div[2]/div[2]/div[4]/div[1]/div[2]/div[2]/input[1]"
+     },
+     "state": "invoicing.create-preview-payer"
+    }
+   ],
+   "evidenceHash": "3352f8c293dd575775d1fab686bfa11ce4810e792c9007e84badfc3f090e4d15",
+   "facts": {
+    "announced": "switch \"\" [checked=true]",
+    "axeSummary": "",
+    "criterion": "4.1.2",
+    "criterionName": "Name, Role, Value",
+    "element": "switch in \"Invoice totals\"",
+    "rule": "announced-as",
+    "screen": "Sales tax added"
+   },
+   "family": "name",
+   "guidance": "High for an unnamed form control or the sole primary action.",
+   "issueId": null,
+   "key": "name:announced-as:247c1ba82a87",
+   "measured": false,
+   "primary": "invoicing.create-sales-tax",
+   "proposals": [],
+   "rule": "announced-as",
+   "screens": 3,
+   "severityDefault": "medium",
+   "source": "scanner",
+   "states": [
+    "invoicing.create-sales-tax",
+    "invoicing.create-preview-payer"
+   ],
+   "summary": "announced-as: announced as switch \"\" [checked=true].",
+   "title": "Missing or unclear name: switch in \"Invoice totals\""
+  }
+ ],
+ "primaries": [
+  "invoicing.create-sales-tax"
+ ],
+ "reach": {
+  "baseUrl": "https://demo.mercury.com",
+  "data": "data",
+  "map": "build/map.json",
+  "run": "2026-10-03-1525",
+  "workspace": "a11y"
+ },
+ "run": "2026-10-03-1525"
+}

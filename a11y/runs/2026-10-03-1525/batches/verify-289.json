@@ -1,0 +1,179 @@
+{
+ "area": "payments",
+ "batch": "verify-289",
+ "findings": [
+  {
+   "attachments": [],
+   "attempt": 1,
+   "basis": "violation",
+   "criteria": [
+    "1.3.5"
+   ],
+   "evidence": [
+    {
+     "evidence": {
+      "failureSummary": "Fix all of the following:\n  the autocomplete attribute is incorrectly formatted"
+     },
+     "occurrence": {
+      "ancestors": [
+       [
+        "_inputWrapper_11c85_6",
+        "_open_11c85_14"
+       ],
+       [
+        "_wrapper_1xgdp_8",
+        "_dropdown_17xei_18"
+       ],
+       [
+        "_formWrapper_17xei_3"
+       ],
+       [],
+       [
+        "_routeContainer_15al5_228"
+       ],
+       [
+        "_routes_15al5_220"
+       ],
+       [
+        "_routeSection_15al5_207"
+       ],
+       [
+        "_container_15al5_4",
+        "_container_10wfz_3",
+        "_closed_15al5_75"
+       ]
+      ],
+      "classes": [
+       "_input_11c85_6"
+      ],
+      "data": {
+       "data-1p-ignore": "true",
+       "data-active-item": "true",
+       "data-autofocus": "true",
+       "data-bwignore": "true",
+       "data-focus-visible": "true",
+       "data-lpignore": "true"
+      },
+      "heading": "Recipient",
+      "landmark": {
+       "name": "",
+       "role": "form"
+      },
+      "layer": "document",
+      "name": "Currency",
+      "rect": [
+       440,
+       622,
+       527,
+       40
+      ],
+      "role": "combobox",
+      "tag": "input",
+      "xpath": "/html/body/div[1]/main[1]/div[1]/div[2]/div[2]/div[1]/div[2]/section[2]/div[1]/div[1]/form[1]/div[1]/div[3]/div[1]/input[1]"
+     },
+     "state": "payments.send-method-intl-wire"
+    },
+    {
+     "evidence": {
+      "failureSummary": "Fix all of the following:\n  the autocomplete attribute is incorrectly formatted"
+     },
+     "occurrence": {
+      "ancestors": [
+       [
+        "_inputWrapper_11c85_6",
+        "_error_11c85_74"
+       ],
+       [
+        "_wrapper_1xgdp_8",
+        "_dropdown_17xei_18"
+       ],
+       [
+        "_formWrapper_17xei_3"
+       ],
+       [],
+       [
+        "_routeContainer_15al5_228"
+       ],
+       [
+        "_routes_15al5_220"
+       ],
+       [
+        "_routeSection_15al5_207"
+       ],
+       [
+        "_container_15al5_4",
+        "_container_10wfz_3",
+        "_closed_15al5_75"
+       ]
+      ],
+      "classes": [
+       "_input_11c85_6"
+      ],
+      "data": {
+       "data-1p-ignore": "true",
+       "data-active-item": "true",
+       "data-autofocus": "true",
+       "data-bwignore": "true",
+       "data-lpignore": "true"
+      },
+      "heading": "Recipient",
+      "landmark": {
+       "name": "",
+       "role": "form"
+      },
+      "layer": "document",
+      "name": "Currency",
+      "rect": [
+       440,
+       458,
+       527,
+       40
+      ],
+      "role": "combobox",
+      "tag": "input",
+      "xpath": "/html/body/div[1]/main[1]/div[1]/div[2]/div[2]/div[1]/div[2]/section[2]/div[1]/div[1]/form[1]/div[1]/div[3]/div[1]/input[1]"
+     },
+     "state": "payments.send-intl-validation"
+    }
+   ],
+   "evidenceHash": "b52b84d211c59b2d189de726e5d5dbb975455a67f44fe93c4ac9760b2af629d5",
+   "facts": {
+    "announced": "combobox \"Currency\" [expanded=true, haspopup=listbox]",
+    "axeSummary": "the autocomplete attribute is incorrectly formatted",
+    "criterion": "1.3.5",
+    "criterionName": "Identify Input Purpose",
+    "element": "combobox \"Currency\"",
+    "rule": "autocomplete-valid",
+    "screen": "Send: International wire currency"
+   },
+   "family": "role-state",
+   "guidance": "Low for optional ARIA or an invalid autocomplete token; high when aria-hidden hides the whole page.",
+   "issueId": null,
+   "key": "role-state:autocomplete-valid:592565398fc1",
+   "measured": false,
+   "primary": "payments.send-method-intl-wire",
+   "proposals": [],
+   "rule": "autocomplete-valid",
+   "screens": 2,
+   "severityDefault": "medium",
+   "source": "scanner",
+   "states": [
+    "payments.send-method-intl-wire",
+    "payments.send-intl-validation"
+   ],
+   "summary": "autocomplete-valid: announced as combobox \"Currency\" [expanded=true, haspopup=listbox]. the autocomplete attribute is incorrectly formatted",
+   "title": "Invalid autocomplete value: combobox \"Currency\""
+  }
+ ],
+ "primaries": [
+  "payments.send-method-intl-wire"
+ ],
+ "reach": {
+  "baseUrl": "https://demo.mercury.com",
+  "data": "data",
+  "map": "build/map.json",
+  "run": "2026-10-03-1525",
+  "workspace": "a11y"
+ },
+ "run": "2026-10-03-1525"
+}

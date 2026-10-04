@@ -1,0 +1,1641 @@
+{
+ "area": "transactions",
+ "batch": "verify-545",
+ "findings": [
+  {
+   "attachments": [],
+   "attempt": 1,
+   "basis": "candidate",
+   "criteria": [
+    "4.1.2"
+   ],
+   "evidence": [
+    {
+     "evidence": {
+      "description": "",
+      "name": "",
+      "role": "button",
+      "states": {
+       "expanded": false,
+       "haspopup": "menu"
+      },
+      "template": "button \"\" [expanded=false, haspopup=menu]"
+     },
+     "occurrence": {
+      "ancestors": [
+       [
+        "_dropdownContainer_5swj3_1"
+       ],
+       [
+        "_timeframeSticky_almxf_50"
+       ],
+       [
+        "_timeframeWrapper_almxf_45"
+       ],
+       [
+        "_tabBar_almxf_27"
+       ],
+       [
+        "_stickyControlsAndTimeline_almxf_14"
+       ],
+       [
+        "_insightsPageDashboardWrapper_almxf_4"
+       ],
+       [
+        "_dashboardContent_809q8_29",
+        "_scrollContainer_809q8_29"
+       ],
+       [
+        "_layout_809q8_18"
+       ]
+      ],
+      "classes": [
+       "_button_r6b2u_20",
+       "_small_r6b2u_72",
+       "_secondary_r6b2u_126",
+       "_settingsButton_almxf_63",
+       "_menuButton_ok3n2_7"
+      ],
+      "data": {},
+      "heading": "Insights",
+      "landmark": {
+       "name": "",
+       "role": "main"
+      },
+      "layer": "document",
+      "name": "",
+      "rect": [
+       1382,
+       196,
+       34,
+       32
+      ],
+      "role": "button",
+      "tag": "button",
+      "xpath": "/html/body/div[1]/main[1]/div[1]/div[1]/div[4]/div[1]/div[2]/div[2]/div[1]/div[2]/div[1]/div[2]/button[1]"
+     },
+     "state": "transactions.insights"
+    },
+    {
+     "evidence": {
+      "description": "",
+      "name": "",
+      "role": "button",
+      "states": {
+       "expanded": false,
+       "haspopup": "menu"
+      },
+      "template": "button \"\" [expanded=false, haspopup=menu]"
+     },
+     "occurrence": {
+      "ancestors": [
+       [
+        "_dropdownContainer_5swj3_1"
+       ],
+       [
+        "_timeframeSticky_almxf_50"
+       ],
+       [
+        "_timeframeWrapper_almxf_45"
+       ],
+       [
+        "_tabBar_almxf_27"
+       ],
+       [
+        "_stickyControlsAndTimeline_almxf_14"
+       ],
+       [
+        "_insightsPageDashboardWrapper_almxf_4"
+       ],
+       [
+        "_dashboardContent_809q8_29",
+        "_scrollContainer_809q8_29"
+       ],
+       [
+        "_layout_809q8_18"
+       ]
+      ],
+      "classes": [
+       "_button_r6b2u_20",
+       "_small_r6b2u_72",
+       "_secondary_r6b2u_126",
+       "_settingsButton_almxf_63",
+       "_menuButton_ok3n2_7"
+      ],
+      "data": {},
+      "heading": "Insights",
+      "landmark": {
+       "name": "",
+       "role": "main"
+      },
+      "layer": "document",
+      "name": "",
+      "rect": [
+       1382,
+       196,
+       34,
+       32
+      ],
+      "role": "button",
+      "tag": "button",
+      "xpath": "/html/body/div[1]/main[1]/div[1]/div[1]/div[4]/div[1]/div[2]/div[2]/div[1]/div[2]/div[1]/div[2]/button[1]"
+     },
+     "state": "transactions.insights-line"
+    }
+   ],
+   "evidenceHash": "04299354bad8e180fa891c7d95c3b0cd9e57f32ac2eb57bb83cdfb6f7c8bc386",
+   "facts": {
+    "announced": "button \"\" [expanded=false, haspopup=menu]",
+    "axeSummary": "",
+    "criterion": "4.1.2",
+    "criterionName": "Name, Role, Value",
+    "element": "button in \"Insights\"",
+    "rule": "announced-as",
+    "screen": "Insights overview"
+   },
+   "family": "name",
+   "guidance": "High for an unnamed form control or the sole primary action.",
+   "issueId": null,
+   "key": "name:announced-as:524ae181955b",
+   "measured": false,
+   "primary": "transactions.insights",
+   "proposals": [],
+   "rule": "announced-as",
+   "screens": 12,
+   "severityDefault": "medium",
+   "source": "scanner",
+   "states": [
+    "transactions.insights",
+    "transactions.insights-line"
+   ],
+   "summary": "announced-as: announced as button \"\" [expanded=false, haspopup=menu].",
+   "title": "Missing or unclear name: button in \"Insights\""
+  },
+  {
+   "attachments": [],
+   "attempt": 1,
+   "basis": "candidate",
+   "criteria": [
+    "4.1.2"
+   ],
+   "evidence": [
+    {
+     "evidence": {
+      "description": "",
+      "name": "",
+      "role": "combobox",
+      "states": {
+       "disabled": true,
+       "expanded": false,
+       "haspopup": "listbox"
+      },
+      "template": "combobox \"\" [expanded=false, haspopup=listbox, disabled=true]"
+     },
+     "occurrence": {
+      "ancestors": [
+       [
+        "_timeframeSticky_almxf_50"
+       ],
+       [
+        "_timeframeWrapper_almxf_45"
+       ],
+       [
+        "_tabBar_almxf_27"
+       ],
+       [
+        "_stickyControlsAndTimeline_almxf_14"
+       ],
+       [
+        "_insightsPageDashboardWrapper_almxf_4"
+       ],
+       [
+        "_dashboardContent_809q8_29",
+        "_scrollContainer_809q8_29"
+       ],
+       [
+        "_layout_809q8_18"
+       ],
+       [
+        "_wrapper_809q8_3"
+       ]
+      ],
+      "classes": [
+       "_timeframeBtn_1apwv_9"
+      ],
+      "data": {
+       "data-has-selection": "false"
+      },
+      "heading": "Insights",
+      "landmark": {
+       "name": "",
+       "role": "main"
+      },
+      "layer": "document",
+      "name": "",
+      "rect": [
+       1227,
+       196,
+       147,
+       32
+      ],
+      "role": "combobox",
+      "tag": "button",
+      "xpath": "/html/body/div[1]/main[1]/div[1]/div[1]/div[4]/div[1]/div[2]/div[2]/div[1]/div[2]/div[1]/button[1]"
+     },
+     "state": "transactions.insights"
+    },
+    {
+     "evidence": {
+      "description": "",
+      "name": "",
+      "role": "combobox",
+      "states": {
+       "disabled": true,
+       "expanded": false,
+       "haspopup": "listbox"
+      },
+      "template": "combobox \"\" [expanded=false, haspopup=listbox, disabled=true]"
+     },
+     "occurrence": {
+      "ancestors": [
+       [
+        "_timeframeSticky_almxf_50"
+       ],
+       [
+        "_timeframeWrapper_almxf_45"
+       ],
+       [
+        "_tabBar_almxf_27"
+       ],
+       [
+        "_stickyControlsAndTimeline_almxf_14"
+       ],
+       [
+        "_insightsPageDashboardWrapper_almxf_4"
+       ],
+       [
+        "_dashboardContent_809q8_29",
+        "_scrollContainer_809q8_29"
+       ],
+       [
+        "_layout_809q8_18"
+       ],
+       [
+        "_wrapper_809q8_3"
+       ]
+      ],
+      "classes": [
+       "_timeframeBtn_1apwv_9"
+      ],
+      "data": {
+       "data-has-selection": "false"
+      },
+      "heading": "Insights",
+      "landmark": {
+       "name": "",
+       "role": "main"
+      },
+      "layer": "document",
+      "name": "",
+      "rect": [
+       1227,
+       196,
+       147,
+       32
+      ],
+      "role": "combobox",
+      "tag": "button",
+      "xpath": "/html/body/div[1]/main[1]/div[1]/div[1]/div[4]/div[1]/div[2]/div[2]/div[1]/div[2]/div[1]/button[1]"
+     },
+     "state": "transactions.insights-line"
+    }
+   ],
+   "evidenceHash": "ab4ca731af676c4f67e4bea817c667f79586edd24219f6a6dc43b2222bff08b3",
+   "facts": {
+    "announced": "combobox \"\" [expanded=false, haspopup=listbox, disabled=true]",
+    "axeSummary": "",
+    "criterion": "4.1.2",
+    "criterionName": "Name, Role, Value",
+    "element": "combobox in \"Insights\"",
+    "rule": "announced-as",
+    "screen": "Insights overview"
+   },
+   "family": "name",
+   "guidance": "High for an unnamed form control or the sole primary action.",
+   "issueId": null,
+   "key": "name:announced-as:7af9674cd228",
+   "measured": false,
+   "primary": "transactions.insights",
+   "proposals": [],
+   "rule": "announced-as",
+   "screens": 10,
+   "severityDefault": "medium",
+   "source": "scanner",
+   "states": [
+    "transactions.insights",
+    "transactions.insights-line"
+   ],
+   "summary": "announced-as: announced as combobox \"\" [expanded=false, haspopup=listbox, disabled=true].",
+   "title": "Missing or unclear name: combobox in \"Insights\""
+  },
+  {
+   "attachments": [],
+   "attempt": 1,
+   "basis": "candidate",
+   "criteria": [
+    "4.1.2"
+   ],
+   "evidence": [
+    {
+     "evidence": {
+      "description": "",
+      "name": "",
+      "role": "combobox",
+      "states": {
+       "expanded": false,
+       "haspopup": "listbox"
+      },
+      "template": "combobox \"\" [expanded=false, haspopup=listbox]"
+     },
+     "occurrence": {
+      "ancestors": [
+       [
+        "_insightsIntervalSelectorWrapper_snsic_70"
+       ],
+       [
+        "_headlinesWrapper_snsic_60"
+       ],
+       [
+        "_recapAndInsightsGraphContainer_snsic_9"
+       ],
+       [
+        "_overviewContainer_snsic_3"
+       ],
+       [
+        "_tabContent_almxf_77"
+       ],
+       [
+        "_insightsPageDashboardWrapper_almxf_4"
+       ],
+       [
+        "_dashboardContent_809q8_29",
+        "_scrollContainer_809q8_29"
+       ],
+       [
+        "_layout_809q8_18"
+       ]
+      ],
+      "classes": [
+       "_timeframeBtn_1apwv_9"
+      ],
+      "data": {
+       "data-has-selection": "true"
+      },
+      "heading": "Insights",
+      "landmark": {
+       "name": "",
+       "role": "main"
+      },
+      "layer": "document",
+      "name": "",
+      "rect": [
+       1160,
+       355,
+       95,
+       32
+      ],
+      "role": "combobox",
+      "tag": "button",
+      "xpath": "/html/body/div[1]/main[1]/div[1]/div[1]/div[4]/div[1]/div[2]/div[3]/div[1]/div[1]/div[1]/div[1]/button[1]"
+     },
+     "state": "transactions.insights"
+    },
+    {
+     "evidence": {
+      "description": "",
+      "name": "",
+      "role": "combobox",
+      "states": {
+       "expanded": false,
+       "haspopup": "listbox"
+      },
+      "template": "combobox \"\" [expanded=false, haspopup=listbox]"
+     },
+     "occurrence": {
+      "ancestors": [
+       [
+        "_insightsIntervalSelectorWrapper_ywxis_69"
+       ],
+       [
+        "_headlinesWrapper_ywxis_59"
+       ],
+       [
+        "_recapAndMoneyInGraphContainer_ywxis_9"
+       ],
+       [
+        "_moneyInContainer_ywxis_3"
+       ],
+       [
+        "_tabContent_almxf_77"
+       ],
+       [
+        "_insightsPageDashboardWrapper_almxf_4"
+       ],
+       [
+        "_dashboardContent_809q8_29",
+        "_scrollContainer_809q8_29"
+       ],
+       [
+        "_layout_809q8_18"
+       ]
+      ],
+      "classes": [
+       "_timeframeBtn_1apwv_9"
+      ],
+      "data": {
+       "data-has-selection": "true"
+      },
+      "heading": "Insights",
+      "landmark": {
+       "name": "",
+       "role": "main"
+      },
+      "layer": "document",
+      "name": "",
+      "rect": [
+       1160,
+       355,
+       95,
+       32
+      ],
+      "role": "combobox",
+      "tag": "button",
+      "xpath": "/html/body/div[1]/main[1]/div[1]/div[1]/div[4]/div[1]/div[2]/div[3]/div[1]/div[1]/div[1]/div[1]/button[1]"
+     },
+     "state": "transactions.insights-money-in"
+    }
+   ],
+   "evidenceHash": "d656b42d0a555b7ff9967189a018c9ddb81836805cd6a6c057e1e5760587699d",
+   "facts": {
+    "announced": "combobox \"\" [expanded=false, haspopup=listbox]",
+    "axeSummary": "",
+    "criterion": "4.1.2",
+    "criterionName": "Name, Role, Value",
+    "element": "combobox in \"Insights\"",
+    "rule": "announced-as",
+    "screen": "Insights overview"
+   },
+   "family": "name",
+   "guidance": "High for an unnamed form control or the sole primary action.",
+   "issueId": null,
+   "key": "name:announced-as:a108bd442e3e",
+   "measured": false,
+   "primary": "transactions.insights",
+   "proposals": [],
+   "rule": "announced-as",
+   "screens": 11,
+   "severityDefault": "medium",
+   "source": "scanner",
+   "states": [
+    "transactions.insights",
+    "transactions.insights-money-in"
+   ],
+   "summary": "announced-as: announced as combobox \"\" [expanded=false, haspopup=listbox].",
+   "title": "Missing or unclear name: combobox in \"Insights\""
+  },
+  {
+   "attachments": [],
+   "attempt": 1,
+   "basis": "candidate",
+   "criteria": [
+    "4.1.2"
+   ],
+   "evidence": [
+    {
+     "evidence": {
+      "description": "",
+      "name": "Show stacked bar chart",
+      "role": "button",
+      "states": {},
+      "template": "button \"Show stacked bar chart\""
+     },
+     "occurrence": {
+      "ancestors": [
+       [
+        "_buttonWithDivider_1xt6d_80"
+       ],
+       [
+        "_container_1xt6d_3",
+        "_small_1xt6d_4",
+        "_segmentWrapper_1m7e5_1"
+       ],
+       [
+        "_insightsIntervalSelectorWrapper_snsic_70"
+       ],
+       [
+        "_headlinesWrapper_snsic_60"
+       ],
+       [
+        "_recapAndInsightsGraphContainer_snsic_9"
+       ],
+       [
+        "_overviewContainer_snsic_3"
+       ],
+       [
+        "_tabContent_almxf_77"
+       ],
+       [
+        "_insightsPageDashboardWrapper_almxf_4"
+       ]
+      ],
+      "classes": [
+       "_segment_1xt6d_7"
+      ],
+      "data": {},
+      "heading": "Insights",
+      "landmark": {
+       "name": "",
+       "role": "main"
+      },
+      "layer": "document",
+      "name": "Show stacked bar chart",
+      "rect": [
+       1339,
+       356,
+       37,
+       30
+      ],
+      "role": "button",
+      "tag": "button",
+      "xpath": "/html/body/div[1]/main[1]/div[1]/div[1]/div[4]/div[1]/div[2]/div[3]/div[1]/div[1]/div[1]/div[1]/div[2]/div[3]/button[1]"
+     },
+     "state": "transactions.insights"
+    },
+    {
+     "evidence": {
+      "description": "",
+      "name": "Show stacked bar chart",
+      "role": "button",
+      "states": {},
+      "template": "button \"Show stacked bar chart\""
+     },
+     "occurrence": {
+      "ancestors": [
+       [
+        "_buttonWithDivider_1xt6d_80"
+       ],
+       [
+        "_container_1xt6d_3",
+        "_small_1xt6d_4",
+        "_segmentWrapper_1m7e5_1"
+       ],
+       [
+        "_insightsIntervalSelectorWrapper_ywxis_69"
+       ],
+       [
+        "_headlinesWrapper_ywxis_59"
+       ],
+       [
+        "_recapAndMoneyInGraphContainer_ywxis_9"
+       ],
+       [
+        "_moneyInContainer_ywxis_3"
+       ],
+       [
+        "_tabContent_almxf_77"
+       ],
+       [
+        "_insightsPageDashboardWrapper_almxf_4"
+       ]
+      ],
+      "classes": [
+       "_segment_1xt6d_7"
+      ],
+      "data": {},
+      "heading": "Insights",
+      "landmark": {
+       "name": "",
+       "role": "main"
+      },
+      "layer": "document",
+      "name": "Show stacked bar chart",
+      "rect": [
+       1339,
+       356,
+       37,
+       30
+      ],
+      "role": "button",
+      "tag": "button",
+      "xpath": "/html/body/div[1]/main[1]/div[1]/div[1]/div[4]/div[1]/div[2]/div[3]/div[1]/div[1]/div[1]/div[1]/div[2]/div[3]/button[1]"
+     },
+     "state": "transactions.insights-money-in"
+    }
+   ],
+   "evidenceHash": "5fc2ff33552daa4952db8894ad0f4c5feabc74e3707380ae5ded3d292f1bed7f",
+   "facts": {
+    "announced": "button \"Show stacked bar chart\"",
+    "axeSummary": "",
+    "criterion": "4.1.2",
+    "criterionName": "Name, Role, Value",
+    "element": "button \"Show stacked bar chart\"",
+    "rule": "announced-as",
+    "screen": "Insights overview"
+   },
+   "family": "role-state",
+   "guidance": "Low for optional ARIA or an invalid autocomplete token; high when aria-hidden hides the whole page.",
+   "issueId": null,
+   "key": "role-state:announced-as:1c88780ea4e5",
+   "measured": false,
+   "primary": "transactions.insights",
+   "proposals": [],
+   "rule": "announced-as",
+   "screens": 11,
+   "severityDefault": "medium",
+   "source": "scanner",
+   "states": [
+    "transactions.insights",
+    "transactions.insights-money-in"
+   ],
+   "summary": "announced-as: announced as button \"Show stacked bar chart\".",
+   "title": "Wrong role or state: button \"Show stacked bar chart\""
+  },
+  {
+   "attachments": [],
+   "attempt": 1,
+   "basis": "candidate",
+   "criteria": [
+    "4.1.2"
+   ],
+   "evidence": [
+    {
+     "evidence": {
+      "description": "",
+      "name": "Show overview chart",
+      "role": "button",
+      "states": {},
+      "template": "button \"Show overview chart\""
+     },
+     "occurrence": {
+      "ancestors": [
+       [
+        "_buttonWithDivider_1xt6d_80"
+       ],
+       [
+        "_container_1xt6d_3",
+        "_small_1xt6d_4",
+        "_segmentWrapper_1m7e5_1"
+       ],
+       [
+        "_insightsIntervalSelectorWrapper_snsic_70"
+       ],
+       [
+        "_headlinesWrapper_snsic_60"
+       ],
+       [
+        "_recapAndInsightsGraphContainer_snsic_9"
+       ],
+       [
+        "_overviewContainer_snsic_3"
+       ],
+       [
+        "_tabContent_almxf_77"
+       ],
+       [
+        "_insightsPageDashboardWrapper_almxf_4"
+       ]
+      ],
+      "classes": [
+       "_segment_1xt6d_7",
+       "_selected_1xt6d_60",
+       "_first_1xt6d_73"
+      ],
+      "data": {},
+      "heading": "Insights",
+      "landmark": {
+       "name": "",
+       "role": "main"
+      },
+      "layer": "document",
+      "name": "Show overview chart",
+      "rect": [
+       1263,
+       355,
+       39,
+       32
+      ],
+      "role": "button",
+      "tag": "button",
+      "xpath": "/html/body/div[1]/main[1]/div[1]/div[1]/div[4]/div[1]/div[2]/div[3]/div[1]/div[1]/div[1]/div[1]/div[2]/div[1]/button[1]"
+     },
+     "state": "transactions.insights"
+    },
+    {
+     "evidence": {
+      "description": "",
+      "name": "Show overview chart",
+      "role": "button",
+      "states": {},
+      "template": "button \"Show overview chart\""
+     },
+     "occurrence": {
+      "ancestors": [
+       [
+        "_buttonWithDivider_1xt6d_80"
+       ],
+       [
+        "_container_1xt6d_3",
+        "_small_1xt6d_4",
+        "_segmentWrapper_1m7e5_1"
+       ],
+       [
+        "_insightsIntervalSelectorWrapper_ywxis_69"
+       ],
+       [
+        "_headlinesWrapper_ywxis_59"
+       ],
+       [
+        "_recapAndMoneyInGraphContainer_ywxis_9"
+       ],
+       [
+        "_moneyInContainer_ywxis_3"
+       ],
+       [
+        "_tabContent_almxf_77"
+       ],
+       [
+        "_insightsPageDashboardWrapper_almxf_4"
+       ]
+      ],
+      "classes": [
+       "_segment_1xt6d_7",
+       "_selected_1xt6d_60",
+       "_first_1xt6d_73"
+      ],
+      "data": {},
+      "heading": "Insights",
+      "landmark": {
+       "name": "",
+       "role": "main"
+      },
+      "layer": "document",
+      "name": "Show overview chart",
+      "rect": [
+       1263,
+       355,
+       39,
+       32
+      ],
+      "role": "button",
+      "tag": "button",
+      "xpath": "/html/body/div[1]/main[1]/div[1]/div[1]/div[4]/div[1]/div[2]/div[3]/div[1]/div[1]/div[1]/div[1]/div[2]/div[1]/button[1]"
+     },
+     "state": "transactions.insights-money-in"
+    }
+   ],
+   "evidenceHash": "ecc1ad5535613c2bc9227accc40affcfb84f2709a1d429b9c422ba47cbbdecf5",
+   "facts": {
+    "announced": "button \"Show overview chart\"",
+    "axeSummary": "",
+    "criterion": "4.1.2",
+    "criterionName": "Name, Role, Value",
+    "element": "button \"Show overview chart\"",
+    "rule": "announced-as",
+    "screen": "Insights overview"
+   },
+   "family": "role-state",
+   "guidance": "Low for optional ARIA or an invalid autocomplete token; high when aria-hidden hides the whole page.",
+   "issueId": null,
+   "key": "role-state:announced-as:50a8d4b74e5e",
+   "measured": false,
+   "primary": "transactions.insights",
+   "proposals": [],
+   "rule": "announced-as",
+   "screens": 9,
+   "severityDefault": "medium",
+   "source": "scanner",
+   "states": [
+    "transactions.insights",
+    "transactions.insights-money-in"
+   ],
+   "summary": "announced-as: announced as button \"Show overview chart\".",
+   "title": "Wrong role or state: button \"Show overview chart\""
+  },
+  {
+   "attachments": [],
+   "attempt": 1,
+   "basis": "candidate",
+   "criteria": [
+    "4.1.2"
+   ],
+   "evidence": [
+    {
+     "evidence": {
+      "description": "",
+      "name": "Category",
+      "role": "button",
+      "states": {},
+      "template": "button \"Category\""
+     },
+     "occurrence": {
+      "ancestors": [
+       [
+        "_buttonWithDivider_1xt6d_80"
+       ],
+       [
+        "_container_1xt6d_3",
+        "_small_1xt6d_4"
+       ],
+       [
+        "_everythingButTheList_1v7h7_20"
+       ],
+       [
+        "_large_kwlx6_9",
+        "_noHover_3n0se_28",
+        "_border_3n0se_35",
+        "_wrapper_1v7h7_1",
+        "viewCaptureExpand"
+       ],
+       [
+        "_topMoneyOutWrapper_snsic_47"
+       ],
+       [
+        "_moneyInMoneyOutContainer_snsic_25"
+       ],
+       [
+        "_overviewContainer_snsic_3"
+       ],
+       [
+        "_tabContent_almxf_77"
+       ]
+      ],
+      "classes": [
+       "_segment_1xt6d_7"
+      ],
+      "data": {},
+      "heading": "Insights",
+      "landmark": {
+       "name": "",
+       "role": "main"
+      },
+      "layer": "document",
+      "name": "Category",
+      "rect": [
+       1039,
+       1047,
+       175,
+       30
+      ],
+      "role": "button",
+      "tag": "button",
+      "xpath": "/html/body/div[1]/main[1]/div[1]/div[1]/div[4]/div[1]/div[2]/div[3]/div[1]/div[3]/div[2]/div[1]/div[1]/div[2]/div[2]/button[1]"
+     },
+     "state": "transactions.insights"
+    },
+    {
+     "evidence": {
+      "description": "",
+      "name": "Category",
+      "role": "button",
+      "states": {},
+      "template": "button \"Category\""
+     },
+     "occurrence": {
+      "ancestors": [
+       [
+        "_buttonWithDivider_1xt6d_80"
+       ],
+       [
+        "_container_1xt6d_3",
+        "_small_1xt6d_4"
+       ],
+       [
+        "_everythingButTheList_y4qdi_20"
+       ],
+       [
+        "_large_kwlx6_9",
+        "_noHover_3n0se_28",
+        "_border_3n0se_35",
+        "_wrapper_y4qdi_1",
+        "viewCaptureExpand"
+       ],
+       [
+        "_topMoneyInWrapper_ywxis_46"
+       ],
+       [
+        "_summaryAndTopMoneyInContainer_ywxis_25"
+       ],
+       [
+        "_moneyInContainer_ywxis_3"
+       ],
+       [
+        "_tabContent_almxf_77"
+       ]
+      ],
+      "classes": [
+       "_segment_1xt6d_7"
+      ],
+      "data": {},
+      "heading": "Summary",
+      "landmark": {
+       "name": "",
+       "role": "main"
+      },
+      "layer": "document",
+      "name": "Category",
+      "rect": [
+       911,
+       1047,
+       240,
+       30
+      ],
+      "role": "button",
+      "tag": "button",
+      "xpath": "/html/body/div[1]/main[1]/div[1]/div[1]/div[4]/div[1]/div[2]/div[3]/div[1]/div[3]/div[2]/div[1]/div[1]/div[2]/div[2]/button[1]"
+     },
+     "state": "transactions.insights-money-in"
+    }
+   ],
+   "evidenceHash": "3531fc70f286ec4fb4a57e365d1ba396e72e1d97245b7d977cca374fcce25786",
+   "facts": {
+    "announced": "button \"Category\"",
+    "axeSummary": "",
+    "criterion": "4.1.2",
+    "criterionName": "Name, Role, Value",
+    "element": "button \"Category\"",
+    "rule": "announced-as",
+    "screen": "Insights overview"
+   },
+   "family": "role-state",
+   "guidance": "Low for optional ARIA or an invalid autocomplete token; high when aria-hidden hides the whole page.",
+   "issueId": null,
+   "key": "role-state:announced-as:5b36a71776d2",
+   "measured": false,
+   "primary": "transactions.insights",
+   "proposals": [],
+   "rule": "announced-as",
+   "screens": 12,
+   "severityDefault": "medium",
+   "source": "scanner",
+   "states": [
+    "transactions.insights",
+    "transactions.insights-money-in"
+   ],
+   "summary": "announced-as: announced as button \"Category\".",
+   "title": "Wrong role or state: button \"Category\""
+  },
+  {
+   "attachments": [],
+   "attempt": 1,
+   "basis": "candidate",
+   "criteria": [
+    "4.1.2"
+   ],
+   "evidence": [
+    {
+     "evidence": {
+      "description": "",
+      "name": "Jun 26–Today",
+      "role": "menuitem",
+      "states": {
+       "expanded": false,
+       "haspopup": "menu"
+      },
+      "template": "menuitem \"<date>\" [expanded=false, haspopup=menu]"
+     },
+     "occurrence": {
+      "ancestors": [
+       [
+        "_chip_1xw00_8",
+        "_inactive_1xw00_119"
+       ],
+       [],
+       [
+        "_filters_grqat_29"
+       ],
+       [
+        "_tableViewsAndFilters_grqat_82"
+       ],
+       [
+        "_toolbarContainer_grqat_4"
+       ],
+       [
+        "_wrapper_1p8lo_1"
+       ],
+       [
+        "_tabBarLeft_almxf_39"
+       ],
+       [
+        "_tabBar_almxf_27"
+       ]
+      ],
+      "classes": [
+       "_mainElement_1xw00_24",
+       "_interactive_1xw00_134",
+       "_dropdownChip_r52w9_7"
+      ],
+      "data": {},
+      "heading": "Insights",
+      "landmark": {
+       "name": "",
+       "role": "main"
+      },
+      "layer": "document",
+      "name": "Jun 26–Today",
+      "rect": [
+       505,
+       196,
+       141,
+       32
+      ],
+      "role": "menuitem",
+      "tag": "button",
+      "xpath": "/html/body/div[1]/main[1]/div[1]/div[1]/div[4]/div[1]/div[2]/div[2]/div[1]/div[1]/div[1]/div[1]/span[1]/span[4]/span[1]/span[1]/button[1]"
+     },
+     "state": "transactions.insights"
+    },
+    {
+     "evidence": {
+      "description": "",
+      "name": "Oct 1–Today",
+      "role": "menuitem",
+      "states": {
+       "expanded": false,
+       "haspopup": "menu"
+      },
+      "template": "menuitem \"<date>\" [expanded=false, haspopup=menu]"
+     },
+     "occurrence": {
+      "ancestors": [
+       [
+        "_chip_1xw00_8",
+        "_active_1xw00_161"
+       ],
+       [],
+       [
+        "_filters_grqat_29"
+       ],
+       [
+        "_tableViewsAndFilters_grqat_82"
+       ],
+       [
+        "_toolbarContainer_grqat_4"
+       ],
+       [
+        "_wrapper_1p8lo_1"
+       ],
+       [
+        "_tabBarLeft_almxf_39"
+       ],
+       [
+        "_tabBar_almxf_27"
+       ]
+      ],
+      "classes": [
+       "_mainElement_1xw00_24",
+       "_interactive_1xw00_134",
+       "_dropdownChip_r52w9_7"
+      ],
+      "data": {},
+      "heading": "Insights",
+      "landmark": {
+       "name": "",
+       "role": "main"
+      },
+      "layer": "document",
+      "name": "Oct 1–Today",
+      "rect": [
+       555,
+       196,
+       101,
+       32
+      ],
+      "role": "menuitem",
+      "tag": "button",
+      "xpath": "/html/body/div[1]/main[1]/div[1]/div[1]/div[4]/div[1]/div[2]/div[2]/div[1]/div[1]/div[1]/div[1]/span[1]/span[4]/span[1]/span[1]/button[1]"
+     },
+     "state": "transactions.insights-quarterly-spend"
+    }
+   ],
+   "evidenceHash": "51557b5d650117204f18abb9b8639214bbe8a30a2b1237baf5ac99f1cb77024a",
+   "facts": {
+    "announced": "menuitem \"<date>\" [expanded=false, haspopup=menu]",
+    "axeSummary": "",
+    "criterion": "4.1.2",
+    "criterionName": "Name, Role, Value",
+    "element": "menuitem \"<date>\"",
+    "rule": "announced-as",
+    "screen": "Insights overview"
+   },
+   "family": "role-state",
+   "guidance": "Low for optional ARIA or an invalid autocomplete token; high when aria-hidden hides the whole page.",
+   "issueId": null,
+   "key": "role-state:announced-as:74f33c96a043",
+   "measured": false,
+   "primary": "transactions.insights",
+   "proposals": [],
+   "rule": "announced-as",
+   "screens": 12,
+   "severityDefault": "medium",
+   "source": "scanner",
+   "states": [
+    "transactions.insights",
+    "transactions.insights-quarterly-spend"
+   ],
+   "summary": "announced-as: announced as menuitem \"<date>\" [expanded=false, haspopup=menu].",
+   "title": "Wrong role or state: menuitem \"<date>\""
+  },
+  {
+   "attachments": [],
+   "attempt": 1,
+   "basis": "candidate",
+   "criteria": [
+    "4.1.2"
+   ],
+   "evidence": [
+    {
+     "evidence": {
+      "description": "",
+      "name": "GL Code",
+      "role": "button",
+      "states": {},
+      "template": "button \"GL Code\""
+     },
+     "occurrence": {
+      "ancestors": [
+       [
+        "_buttonWithDivider_1xt6d_80"
+       ],
+       [
+        "_container_1xt6d_3",
+        "_small_1xt6d_4"
+       ],
+       [
+        "_everythingButTheList_1v7h7_20"
+       ],
+       [
+        "_large_kwlx6_9",
+        "_noHover_3n0se_28",
+        "_border_3n0se_35",
+        "_wrapper_1v7h7_1",
+        "viewCaptureExpand"
+       ],
+       [
+        "_topMoneyOutWrapper_snsic_47"
+       ],
+       [
+        "_moneyInMoneyOutContainer_snsic_25"
+       ],
+       [
+        "_overviewContainer_snsic_3"
+       ],
+       [
+        "_tabContent_almxf_77"
+       ]
+      ],
+      "classes": [
+       "_segment_1xt6d_7",
+       "_last_1xt6d_76"
+      ],
+      "data": {},
+      "heading": "Insights",
+      "landmark": {
+       "name": "",
+       "role": "main"
+      },
+      "layer": "document",
+      "name": "GL Code",
+      "rect": [
+       1215,
+       1047,
+       175,
+       30
+      ],
+      "role": "button",
+      "tag": "button",
+      "xpath": "/html/body/div[1]/main[1]/div[1]/div[1]/div[4]/div[1]/div[2]/div[3]/div[1]/div[3]/div[2]/div[1]/div[1]/div[2]/div[3]/button[1]"
+     },
+     "state": "transactions.insights"
+    },
+    {
+     "evidence": {
+      "description": "",
+      "name": "GL Code",
+      "role": "button",
+      "states": {},
+      "template": "button \"GL Code\""
+     },
+     "occurrence": {
+      "ancestors": [
+       [
+        "_buttonWithDivider_1xt6d_80"
+       ],
+       [
+        "_container_1xt6d_3",
+        "_small_1xt6d_4"
+       ],
+       [
+        "_everythingButTheList_y4qdi_20"
+       ],
+       [
+        "_large_kwlx6_9",
+        "_noHover_3n0se_28",
+        "_border_3n0se_35",
+        "_wrapper_y4qdi_1",
+        "viewCaptureExpand"
+       ],
+       [
+        "_topMoneyInWrapper_ywxis_46"
+       ],
+       [
+        "_summaryAndTopMoneyInContainer_ywxis_25"
+       ],
+       [
+        "_moneyInContainer_ywxis_3"
+       ],
+       [
+        "_tabContent_almxf_77"
+       ]
+      ],
+      "classes": [
+       "_segment_1xt6d_7",
+       "_last_1xt6d_76"
+      ],
+      "data": {},
+      "heading": "Summary",
+      "landmark": {
+       "name": "",
+       "role": "main"
+      },
+      "layer": "document",
+      "name": "GL Code",
+      "rect": [
+       1150,
+       1047,
+       240,
+       30
+      ],
+      "role": "button",
+      "tag": "button",
+      "xpath": "/html/body/div[1]/main[1]/div[1]/div[1]/div[4]/div[1]/div[2]/div[3]/div[1]/div[3]/div[2]/div[1]/div[1]/div[2]/div[3]/button[1]"
+     },
+     "state": "transactions.insights-money-in"
+    }
+   ],
+   "evidenceHash": "8ab27b8b771117f1673cba9ac09276d3b0c4f6146f4af990cb70aa300516921c",
+   "facts": {
+    "announced": "button \"GL Code\"",
+    "axeSummary": "",
+    "criterion": "4.1.2",
+    "criterionName": "Name, Role, Value",
+    "element": "button \"GL Code\"",
+    "rule": "announced-as",
+    "screen": "Insights overview"
+   },
+   "family": "role-state",
+   "guidance": "Low for optional ARIA or an invalid autocomplete token; high when aria-hidden hides the whole page.",
+   "issueId": null,
+   "key": "role-state:announced-as:7c9f78f5fdbd",
+   "measured": false,
+   "primary": "transactions.insights",
+   "proposals": [],
+   "rule": "announced-as",
+   "screens": 12,
+   "severityDefault": "medium",
+   "source": "scanner",
+   "states": [
+    "transactions.insights",
+    "transactions.insights-money-in"
+   ],
+   "summary": "announced-as: announced as button \"GL Code\".",
+   "title": "Wrong role or state: button \"GL Code\""
+  },
+  {
+   "attachments": [],
+   "attempt": 1,
+   "basis": "candidate",
+   "criteria": [
+    "4.1.2"
+   ],
+   "evidence": [
+    {
+     "evidence": {
+      "description": "",
+      "name": "Show sankey chart",
+      "role": "button",
+      "states": {},
+      "template": "button \"Show sankey chart\""
+     },
+     "occurrence": {
+      "ancestors": [
+       [
+        "_buttonWithDivider_1xt6d_80"
+       ],
+       [
+        "_container_1xt6d_3",
+        "_small_1xt6d_4",
+        "_segmentWrapper_1m7e5_1"
+       ],
+       [
+        "_insightsIntervalSelectorWrapper_snsic_70"
+       ],
+       [
+        "_headlinesWrapper_snsic_60"
+       ],
+       [
+        "_recapAndInsightsGraphContainer_snsic_9"
+       ],
+       [
+        "_overviewContainer_snsic_3"
+       ],
+       [
+        "_tabContent_almxf_77"
+       ],
+       [
+        "_insightsPageDashboardWrapper_almxf_4"
+       ]
+      ],
+      "classes": [
+       "_segment_1xt6d_7",
+       "_last_1xt6d_76"
+      ],
+      "data": {},
+      "heading": "Insights",
+      "landmark": {
+       "name": "",
+       "role": "main"
+      },
+      "layer": "document",
+      "name": "Show sankey chart",
+      "rect": [
+       1376,
+       356,
+       39,
+       30
+      ],
+      "role": "button",
+      "tag": "button",
+      "xpath": "/html/body/div[1]/main[1]/div[1]/div[1]/div[4]/div[1]/div[2]/div[3]/div[1]/div[1]/div[1]/div[1]/div[2]/div[4]/button[1]"
+     },
+     "state": "transactions.insights"
+    },
+    {
+     "evidence": {
+      "description": "",
+      "name": "Show sankey chart",
+      "role": "button",
+      "states": {},
+      "template": "button \"Show sankey chart\""
+     },
+     "occurrence": {
+      "ancestors": [
+       [
+        "_buttonWithDivider_1xt6d_80"
+       ],
+       [
+        "_container_1xt6d_3",
+        "_small_1xt6d_4",
+        "_segmentWrapper_1m7e5_1"
+       ],
+       [
+        "_insightsIntervalSelectorWrapper_ywxis_69"
+       ],
+       [
+        "_headlinesWrapper_ywxis_59"
+       ],
+       [
+        "_recapAndMoneyInGraphContainer_ywxis_9"
+       ],
+       [
+        "_moneyInContainer_ywxis_3"
+       ],
+       [
+        "_tabContent_almxf_77"
+       ],
+       [
+        "_insightsPageDashboardWrapper_almxf_4"
+       ]
+      ],
+      "classes": [
+       "_segment_1xt6d_7",
+       "_last_1xt6d_76"
+      ],
+      "data": {},
+      "heading": "Insights",
+      "landmark": {
+       "name": "",
+       "role": "main"
+      },
+      "layer": "document",
+      "name": "Show sankey chart",
+      "rect": [
+       1376,
+       356,
+       39,
+       30
+      ],
+      "role": "button",
+      "tag": "button",
+      "xpath": "/html/body/div[1]/main[1]/div[1]/div[1]/div[4]/div[1]/div[2]/div[3]/div[1]/div[1]/div[1]/div[1]/div[2]/div[4]/button[1]"
+     },
+     "state": "transactions.insights-money-in"
+    }
+   ],
+   "evidenceHash": "b523ab78c742a7161947718713b8c437929e56369bccc613da04c65c060e6b4e",
+   "facts": {
+    "announced": "button \"Show sankey chart\"",
+    "axeSummary": "",
+    "criterion": "4.1.2",
+    "criterionName": "Name, Role, Value",
+    "element": "button \"Show sankey chart\"",
+    "rule": "announced-as",
+    "screen": "Insights overview"
+   },
+   "family": "role-state",
+   "guidance": "Low for optional ARIA or an invalid autocomplete token; high when aria-hidden hides the whole page.",
+   "issueId": null,
+   "key": "role-state:announced-as:870e88d3c1a4",
+   "measured": false,
+   "primary": "transactions.insights",
+   "proposals": [],
+   "rule": "announced-as",
+   "screens": 11,
+   "severityDefault": "medium",
+   "source": "scanner",
+   "states": [
+    "transactions.insights",
+    "transactions.insights-money-in"
+   ],
+   "summary": "announced-as: announced as button \"Show sankey chart\".",
+   "title": "Wrong role or state: button \"Show sankey chart\""
+  },
+  {
+   "attachments": [],
+   "attempt": 1,
+   "basis": "candidate",
+   "criteria": [
+    "4.1.2"
+   ],
+   "evidence": [
+    {
+     "evidence": {
+      "description": "",
+      "name": "Show line chart",
+      "role": "button",
+      "states": {},
+      "template": "button \"Show line chart\""
+     },
+     "occurrence": {
+      "ancestors": [
+       [
+        "_buttonWithDivider_1xt6d_80"
+       ],
+       [
+        "_container_1xt6d_3",
+        "_small_1xt6d_4",
+        "_segmentWrapper_1m7e5_1"
+       ],
+       [
+        "_insightsIntervalSelectorWrapper_snsic_70"
+       ],
+       [
+        "_headlinesWrapper_snsic_60"
+       ],
+       [
+        "_recapAndInsightsGraphContainer_snsic_9"
+       ],
+       [
+        "_overviewContainer_snsic_3"
+       ],
+       [
+        "_tabContent_almxf_77"
+       ],
+       [
+        "_insightsPageDashboardWrapper_almxf_4"
+       ]
+      ],
+      "classes": [
+       "_segment_1xt6d_7"
+      ],
+      "data": {},
+      "heading": "Insights",
+      "landmark": {
+       "name": "",
+       "role": "main"
+      },
+      "layer": "document",
+      "name": "Show line chart",
+      "rect": [
+       1301,
+       356,
+       37,
+       30
+      ],
+      "role": "button",
+      "tag": "button",
+      "xpath": "/html/body/div[1]/main[1]/div[1]/div[1]/div[4]/div[1]/div[2]/div[3]/div[1]/div[1]/div[1]/div[1]/div[2]/div[2]/button[1]"
+     },
+     "state": "transactions.insights"
+    },
+    {
+     "evidence": {
+      "description": "",
+      "name": "Show line chart",
+      "role": "button",
+      "states": {},
+      "template": "button \"Show line chart\""
+     },
+     "occurrence": {
+      "ancestors": [
+       [
+        "_buttonWithDivider_1xt6d_80"
+       ],
+       [
+        "_container_1xt6d_3",
+        "_small_1xt6d_4",
+        "_segmentWrapper_1m7e5_1"
+       ],
+       [
+        "_insightsIntervalSelectorWrapper_ywxis_69"
+       ],
+       [
+        "_headlinesWrapper_ywxis_59"
+       ],
+       [
+        "_recapAndMoneyInGraphContainer_ywxis_9"
+       ],
+       [
+        "_moneyInContainer_ywxis_3"
+       ],
+       [
+        "_tabContent_almxf_77"
+       ],
+       [
+        "_insightsPageDashboardWrapper_almxf_4"
+       ]
+      ],
+      "classes": [
+       "_segment_1xt6d_7"
+      ],
+      "data": {},
+      "heading": "Insights",
+      "landmark": {
+       "name": "",
+       "role": "main"
+      },
+      "layer": "document",
+      "name": "Show line chart",
+      "rect": [
+       1301,
+       356,
+       37,
+       30
+      ],
+      "role": "button",
+      "tag": "button",
+      "xpath": "/html/body/div[1]/main[1]/div[1]/div[1]/div[4]/div[1]/div[2]/div[3]/div[1]/div[1]/div[1]/div[1]/div[2]/div[2]/button[1]"
+     },
+     "state": "transactions.insights-money-in"
+    }
+   ],
+   "evidenceHash": "07194b9703e538bf94f6412305c7e390a62c7d38cd12482239fc105069ce7183",
+   "facts": {
+    "announced": "button \"Show line chart\"",
+    "axeSummary": "",
+    "criterion": "4.1.2",
+    "criterionName": "Name, Role, Value",
+    "element": "button \"Show line chart\"",
+    "rule": "announced-as",
+    "screen": "Insights overview"
+   },
+   "family": "role-state",
+   "guidance": "Low for optional ARIA or an invalid autocomplete token; high when aria-hidden hides the whole page.",
+   "issueId": null,
+   "key": "role-state:announced-as:8fe13f4ef96e",
+   "measured": false,
+   "primary": "transactions.insights",
+   "proposals": [],
+   "rule": "announced-as",
+   "screens": 11,
+   "severityDefault": "medium",
+   "source": "scanner",
+   "states": [
+    "transactions.insights",
+    "transactions.insights-money-in"
+   ],
+   "summary": "announced-as: announced as button \"Show line chart\".",
+   "title": "Wrong role or state: button \"Show line chart\""
+  }
+ ],
+ "primaries": [
+  "transactions.insights"
+ ],
+ "reach": {
+  "baseUrl": "https://demo.mercury.com",
+  "data": "data",
+  "map": "build/map.json",
+  "run": "2026-10-03-1525",
+  "workspace": "a11y"
+ },
+ "run": "2026-10-03-1525"
+}

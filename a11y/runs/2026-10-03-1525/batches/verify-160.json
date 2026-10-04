@@ -1,0 +1,197 @@
+{
+ "area": "cards",
+ "batch": "verify-160",
+ "findings": [
+  {
+   "attachments": [],
+   "attempt": 1,
+   "basis": "incomplete",
+   "criteria": [
+    "1.4.1"
+   ],
+   "evidence": [
+    {
+     "evidence": {
+      "failureSummary": "Fix any of the following:\n  Element's foreground contrast ratio could not be determined",
+      "messageKey": "elmPartiallyObscuring"
+     },
+     "occurrence": {
+      "ancestors": [
+       [],
+       [
+        "_bodyDefault_qaod7_40",
+        "_caption_ji4s9_57"
+       ],
+       [
+        "_checkTransactionsWrapper_ji4s9_47"
+       ],
+       [
+        "_contentsWrapper_ji4s9_1"
+       ],
+       [
+        "_contentDiv_bcpsw_53",
+        "_contentDivHeightPreset_bcpsw_62",
+        "_replaceCardLayoutContent_1082y_1"
+       ],
+       [
+        "_fullScreenWorkspaceLayout_bcpsw_14",
+        "_fullScreenWorkspaceLayoutBackground_bcpsw_32"
+       ],
+       [
+        "_wrapper_bcpsw_3",
+        "_responsive_bcpsw_88"
+       ],
+       []
+      ],
+      "classes": [
+       "_link_ual8v_4",
+       "_variantPrimary_ual8v_33"
+      ],
+      "data": {},
+      "heading": "Check the latest transactions on the card",
+      "landmark": {
+       "name": "",
+       "role": "main"
+      },
+      "layer": "document",
+      "name": "help@mercury.com",
+      "rect": [
+       718,
+       351,
+       133,
+       18
+      ],
+      "role": "link",
+      "tag": "a",
+      "xpath": "/html/body/div[1]/main[1]/div[1]/div[2]/div[2]/div[3]/div[1]/div[2]/div[1]/span[1]/a[1]"
+     },
+     "state": "cards.replace-done"
+    }
+   ],
+   "evidenceHash": "a0f9e184a1191c63867f871b500c846e6f04dc5a45d9e84a14413d8877db3668",
+   "facts": {
+    "criterion": "1.4.1",
+    "criterionName": "Use of Color",
+    "elements": "1 element",
+    "messageKey": "elmPartiallyObscuring",
+    "rule": "link-in-text-block",
+    "screen": "Replacement ordered",
+    "why": "it partly covers other elements"
+   },
+   "family": "contrast",
+   "guidance": "High under 2:1, or under 3:1 for essential text.",
+   "issueId": null,
+   "key": "contrast:link-in-text-block:2c6455b0f52b",
+   "measured": true,
+   "primary": "cards.replace-done",
+   "proposals": [],
+   "rule": "link-in-text-block",
+   "screens": 1,
+   "severityDefault": "medium",
+   "source": "scanner",
+   "states": [
+    "cards.replace-done"
+   ],
+   "summary": "axe link-in-text-block could not decide 1 element (elmPartiallyObscuring): it partly covers other elements.",
+   "title": "Needs review: link-in-text-block, it partly covers other elements"
+  },
+  {
+   "attachments": [],
+   "attempt": 1,
+   "basis": "failure",
+   "criteria": [
+    "4.1.3"
+   ],
+   "evidence": [
+    {
+     "evidence": {
+      "focus": "body",
+      "focused": false,
+      "message": "Your new card is on the way We’ve deactivated your old credit card. Your new card is on the way. Check the latest transactions on the card Please contact us at help@mercury.com if you see transactions that you don't recognize. Oct 4 L E Lily's Eatery $25.89 Jane B. ••5555 Oct 3 L E Lily's Eatery −$3",
+      "region": null
+     },
+     "occurrence": {
+      "ancestors": [
+       [
+        "_contentDiv_bcpsw_53",
+        "_contentDivHeightPreset_bcpsw_62",
+        "_replaceCardLayoutContent_1082y_1"
+       ],
+       [
+        "_fullScreenWorkspaceLayout_bcpsw_14",
+        "_fullScreenWorkspaceLayoutBackground_bcpsw_32"
+       ],
+       [
+        "_wrapper_bcpsw_3",
+        "_responsive_bcpsw_88"
+       ],
+       [],
+       [
+        "_main_1gb3b_1"
+       ],
+       [
+        "mercury-root"
+       ]
+      ],
+      "classes": [
+       "_contentsWrapper_ji4s9_1"
+      ],
+      "data": {},
+      "heading": "",
+      "landmark": {
+       "name": "",
+       "role": "main"
+      },
+      "layer": "document",
+      "name": "",
+      "rect": [
+       510,
+       128,
+       700,
+       729
+      ],
+      "role": "",
+      "tag": "div",
+      "xpath": "/html/body/div[1]/main[1]/div[1]/div[2]/div[2]/div[3]/div[1]"
+     },
+     "state": "cards.replace-done"
+    }
+   ],
+   "evidenceHash": "7d65949dd8a28b892e0464de3426c3dd91c00af1b70a282389653f6342b7c2f0",
+   "facts": {
+    "criterion": "4.1.3",
+    "criterionName": "Status Messages",
+    "focus": "page body",
+    "message": "\"Your new card is on the way We’ve deactivated y…\"",
+    "screen": "Replacement ordered"
+   },
+   "family": "status-message",
+   "guidance": "High when it is the only confirmation of a money movement.",
+   "issueId": null,
+   "key": "status-message:status-not-announced:f0f9d1d5a89d",
+   "measured": false,
+   "primary": "cards.replace-done",
+   "proposals": [],
+   "rule": "status-not-announced",
+   "screens": 1,
+   "severityDefault": "medium",
+   "source": "scanner",
+   "states": [
+    "cards.replace-done"
+   ],
+   "summary": "\"Your new card is on the way We’ve deactivated y…\" appeared outside any live region, alert or status role that existed before it, and focus stayed on the page body.",
+   "title": "Status message not announced: \"Your new card is on the way We’ve deactivated y…\""
+  }
+ ],
+ "primaries": [
+  "cards.replace-done"
+ ],
+ "reach": {
+  "baseUrl": "https://demo.mercury.com",
+  "data": "data",
+  "map": "build/map.json",
+  "run": "2026-10-03-1525",
+  "workspace": "a11y"
+ },
+ "run": "2026-10-03-1525"
+}

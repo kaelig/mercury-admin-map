@@ -1,0 +1,307 @@
+{
+ "area": "payments",
+ "batch": "verify-261",
+ "findings": [
+  {
+   "attachments": [],
+   "attempt": 1,
+   "basis": "violation",
+   "criteria": [
+    "1.3.1"
+   ],
+   "evidence": [
+    {
+     "evidence": {
+      "failureSummary": "Fix all of the following:\n  dl element has direct children that are not allowed: div > div",
+      "values": "div > div"
+     },
+     "occurrence": {
+      "ancestors": [
+       [
+        "_wrapper_5m7r3_1"
+       ],
+       [
+        "_leftChildrenWrapper_usdau_19"
+       ],
+       [
+        "_leftWrapper_usdau_23"
+       ],
+       [
+        "_leftScrollableContainer_usdau_9"
+       ],
+       [
+        "_contentsWrapper_usdau_1",
+        "_container_15al5_4"
+       ],
+       [
+        "_wrapper_1tn8i_1"
+       ],
+       [],
+       [
+        "_contentDiv_bcpsw_53",
+        "_contentDivHeightPreset_bcpsw_62"
+       ]
+      ],
+      "classes": [
+       "_accountInfo_epex7_31"
+      ],
+      "data": {},
+      "heading": "Review batch payment",
+      "landmark": {
+       "name": "",
+       "role": "form"
+      },
+      "layer": "document",
+      "name": "",
+      "rect": [
+       115,
+       468,
+       496,
+       88
+      ],
+      "role": "DescriptionList",
+      "tag": "dl",
+      "xpath": "/html/body/div[1]/main[1]/div[1]/div[2]/div[2]/div[3]/form[1]/div[1]/div[1]/div[1]/div[1]/div[1]/section[1]/dl[1]"
+     },
+     "state": "payments.batch-review"
+    },
+    {
+     "evidence": {
+      "failureSummary": "Fix all of the following:\n  dl element has direct children that are not allowed: div > div",
+      "values": "div > div"
+     },
+     "occurrence": {
+      "ancestors": [
+       [
+        "_wrapper_5m7r3_1"
+       ],
+       [
+        "_leftChildrenWrapper_usdau_19"
+       ],
+       [
+        "_leftWrapper_usdau_23"
+       ],
+       [
+        "_leftScrollableContainer_usdau_9"
+       ],
+       [
+        "_contentsWrapper_usdau_1",
+        "_container_15al5_4"
+       ],
+       [
+        "_wrapper_1tn8i_1"
+       ],
+       [],
+       [
+        "_contentDiv_bcpsw_53",
+        "_contentDivHeightPreset_bcpsw_62"
+       ]
+      ],
+      "classes": [
+       "_accountInfo_epex7_31"
+      ],
+      "data": {},
+      "heading": "Review batch payment",
+      "landmark": {
+       "name": "",
+       "role": "form"
+      },
+      "layer": "document",
+      "name": "",
+      "rect": [
+       115,
+       468,
+       496,
+       88
+      ],
+      "role": "DescriptionList",
+      "tag": "dl",
+      "xpath": "/html/body/div[1]/main[1]/div[1]/div[2]/div[2]/div[3]/form[1]/div[1]/div[1]/div[1]/div[1]/div[1]/section[1]/dl[1]"
+     },
+     "state": "payments.batch-review-next"
+    }
+   ],
+   "evidenceHash": "aaa2fdb14f9755964b65f662c08bc03f7406f4c79eee3f05c7629990eb70fbfe",
+   "facts": {
+    "announced": "DescriptionList \"\"",
+    "axeSummary": "dl element has direct children that are not allowed: div > div",
+    "criterion": "1.3.1",
+    "criterionName": "Info and Relationships",
+    "element": "DescriptionList in \"Review batch payment\"",
+    "rule": "definition-list",
+    "screen": "Review batch payment"
+   },
+   "family": "structure",
+   "guidance": "Medium when a data table's headers do not reach its cells, or when structure is the only way to tell sections or steps apart.",
+   "issueId": null,
+   "key": "structure:definition-list:9e45601a343c",
+   "measured": false,
+   "primary": "payments.batch-review",
+   "proposals": [],
+   "rule": "definition-list",
+   "screens": 2,
+   "severityDefault": "low",
+   "source": "scanner",
+   "states": [
+    "payments.batch-review",
+    "payments.batch-review-next"
+   ],
+   "summary": "definition-list: announced as DescriptionList \"\". dl element has direct children that are not allowed: div > div",
+   "title": "Markup misstates structure: DescriptionList in \"Review batch payment\""
+  },
+  {
+   "attachments": [],
+   "attempt": 1,
+   "basis": "violation",
+   "criteria": [
+    "1.3.1"
+   ],
+   "evidence": [
+    {
+     "evidence": {
+      "failureSummary": "Fix any of the following:\n  Description list item does not have a <dl> parent element"
+     },
+     "occurrence": {
+      "ancestors": [
+       [],
+       [
+        "_accountInfoRow_epex7_37"
+       ],
+       [
+        "_accountInfo_epex7_31"
+       ],
+       [
+        "_wrapper_5m7r3_1"
+       ],
+       [
+        "_leftChildrenWrapper_usdau_19"
+       ],
+       [
+        "_leftWrapper_usdau_23"
+       ],
+       [
+        "_leftScrollableContainer_usdau_9"
+       ],
+       [
+        "_contentsWrapper_usdau_1",
+        "_container_15al5_4"
+       ]
+      ],
+      "classes": [
+       "_bodyDefault_qaod7_40"
+      ],
+      "data": {},
+      "heading": "Review batch payment",
+      "landmark": {
+       "name": "",
+       "role": "form"
+      },
+      "layer": "document",
+      "name": "",
+      "rect": [
+       299,
+       500,
+       122,
+       24
+      ],
+      "role": "definition",
+      "tag": "dd",
+      "xpath": "/html/body/div[1]/main[1]/div[1]/div[2]/div[2]/div[3]/form[1]/div[1]/div[1]/div[1]/div[1]/div[1]/section[1]/dl[1]/div[2]/div[1]/dd[1]"
+     },
+     "state": "payments.batch-review"
+    },
+    {
+     "evidence": {
+      "failureSummary": "Fix any of the following:\n  Description list item does not have a <dl> parent element"
+     },
+     "occurrence": {
+      "ancestors": [
+       [],
+       [
+        "_accountInfoRow_epex7_37"
+       ],
+       [
+        "_accountInfo_epex7_31"
+       ],
+       [
+        "_wrapper_5m7r3_1"
+       ],
+       [
+        "_leftChildrenWrapper_usdau_19"
+       ],
+       [
+        "_leftWrapper_usdau_23"
+       ],
+       [
+        "_leftScrollableContainer_usdau_9"
+       ],
+       [
+        "_contentsWrapper_usdau_1",
+        "_container_15al5_4"
+       ]
+      ],
+      "classes": [
+       "_bodyDefault_qaod7_40"
+      ],
+      "data": {},
+      "heading": "Review batch payment",
+      "landmark": {
+       "name": "",
+       "role": "form"
+      },
+      "layer": "document",
+      "name": "",
+      "rect": [
+       299,
+       500,
+       122,
+       24
+      ],
+      "role": "definition",
+      "tag": "dd",
+      "xpath": "/html/body/div[1]/main[1]/div[1]/div[2]/div[2]/div[3]/form[1]/div[1]/div[1]/div[1]/div[1]/div[1]/section[1]/dl[1]/div[2]/div[1]/dd[1]"
+     },
+     "state": "payments.batch-review-next"
+    }
+   ],
+   "evidenceHash": "9ed9ce9ab23ed004c8fb2a583fc9496eff4fe7f0c5023d10a09b8c8c6e68ef26",
+   "facts": {
+    "announced": "definition \"\"",
+    "axeSummary": "Description list item does not have a <dl> parent element",
+    "criterion": "1.3.1",
+    "criterionName": "Info and Relationships",
+    "element": "definition in \"Review batch payment\"",
+    "rule": "dlitem",
+    "screen": "Review batch payment"
+   },
+   "family": "structure",
+   "guidance": "Medium when a data table's headers do not reach its cells, or when structure is the only way to tell sections or steps apart.",
+   "issueId": null,
+   "key": "structure:dlitem:fb79b378c993",
+   "measured": false,
+   "primary": "payments.batch-review",
+   "proposals": [],
+   "rule": "dlitem",
+   "screens": 2,
+   "severityDefault": "low",
+   "source": "scanner",
+   "states": [
+    "payments.batch-review",
+    "payments.batch-review-next"
+   ],
+   "summary": "dlitem: announced as definition \"\". Description list item does not have a <dl> parent element",
+   "title": "Markup misstates structure: definition in \"Review batch payment\""
+  }
+ ],
+ "primaries": [
+  "payments.batch-review"
+ ],
+ "reach": {
+  "baseUrl": "https://demo.mercury.com",
+  "data": "data",
+  "map": "build/map.json",
+  "run": "2026-10-03-1525",
+  "workspace": "a11y"
+ },
+ "run": "2026-10-03-1525"
+}

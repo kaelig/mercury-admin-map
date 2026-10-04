@@ -1,0 +1,753 @@
+{
+ "area": "accounts",
+ "batch": "verify-412",
+ "findings": [
+  {
+   "attachments": [],
+   "attempt": 1,
+   "basis": "candidate",
+   "criteria": [
+    "4.1.2"
+   ],
+   "evidence": [
+    {
+     "evidence": {
+      "description": "",
+      "name": "",
+      "role": "button",
+      "states": {},
+      "template": "button \"\""
+     },
+     "occurrence": {
+      "ancestors": [
+       [],
+       [
+        "_row_1kxul_63",
+        "_tableRow_1waxt_94"
+       ],
+       [
+        "ReactVirtualized__Grid__innerScrollContainer"
+       ],
+       [
+        "ReactVirtualized__Grid",
+        "ReactVirtualized__List"
+       ],
+       [],
+       [],
+       [
+        "_cardTable_1waxt_4"
+       ],
+       [
+        "_tableAndLoadingStateWrapper_1waxt_313"
+       ]
+      ],
+      "classes": [
+       "_arrow_1waxt_173"
+      ],
+      "data": {},
+      "heading": "Financing",
+      "landmark": {
+       "name": "",
+       "role": "main"
+      },
+      "layer": "document",
+      "name": "",
+      "rect": [
+       858,
+       444,
+       32,
+       64
+      ],
+      "role": "button",
+      "tag": "button",
+      "xpath": "/html/body/div[1]/main[1]/div[1]/div[1]/div[1]/div[4]/div[1]/div[2]/div[4]/div[3]/div[1]/div[1]/div[3]/div[1]/div[1]/div[1]/div[1]/div[5]/button[1]"
+     },
+     "state": "accounts.safes"
+    }
+   ],
+   "evidenceHash": "a6b797376415682275adb56e08d08836e3e5b0671a9feaabb1f0255193924ed8",
+   "facts": {
+    "announced": "button \"\"",
+    "axeSummary": "",
+    "criterion": "4.1.2",
+    "criterionName": "Name, Role, Value",
+    "element": "button in \"Financing\"",
+    "rule": "announced-as",
+    "screen": "Financing — SAFEs"
+   },
+   "family": "name",
+   "guidance": "High for an unnamed form control or the sole primary action.",
+   "issueId": null,
+   "key": "name:announced-as:8bcbb3780721",
+   "measured": false,
+   "primary": "accounts.safes",
+   "proposals": [],
+   "rule": "announced-as",
+   "screens": 1,
+   "severityDefault": "medium",
+   "source": "scanner",
+   "states": [
+    "accounts.safes"
+   ],
+   "summary": "announced-as: announced as button \"\".",
+   "title": "Missing or unclear name: button in \"Financing\""
+  },
+  {
+   "attachments": [],
+   "attempt": 1,
+   "basis": "candidate",
+   "criteria": [
+    "4.1.2"
+   ],
+   "evidence": [
+    {
+     "evidence": {
+      "description": "",
+      "name": "All",
+      "role": "menuitem",
+      "states": {},
+      "template": "menuitem \"All\""
+     },
+     "occurrence": {
+      "ancestors": [
+       [
+        "_chip_1xw00_8",
+        "_active_1xw00_161",
+        "_truncateText_1xw00_16"
+       ],
+       [
+        "_facets_grqat_22"
+       ],
+       [
+        "_tableViewsAndFilters_grqat_82"
+       ],
+       [
+        "_toolbarContainer_grqat_4"
+       ],
+       [
+        "_wrapper_1hteo_1"
+       ],
+       [
+        "_wrapper_sot9h_1",
+        "_pageContent_809q8_151",
+        "_pageContentWidth_809q8_184"
+       ],
+       [
+        "_dashboardContent_809q8_29"
+       ],
+       [
+        "_layout_809q8_18"
+       ]
+      ],
+      "classes": [
+       "_mainElement_1xw00_24",
+       "_interactive_1xw00_134"
+      ],
+      "data": {},
+      "heading": "Financing",
+      "landmark": {
+       "name": "",
+       "role": "main"
+      },
+      "layer": "document",
+      "name": "All",
+      "rect": [
+       347,
+       364,
+       42,
+       32
+      ],
+      "role": "menuitem",
+      "tag": "button",
+      "xpath": "/html/body/div[1]/main[1]/div[1]/div[1]/div[1]/div[4]/div[1]/div[2]/div[4]/div[2]/span[1]/span[1]/span[1]/button[1]"
+     },
+     "state": "accounts.safes"
+    },
+    {
+     "evidence": {
+      "description": "",
+      "name": "All",
+      "role": "menuitem",
+      "states": {},
+      "template": "menuitem \"All\""
+     },
+     "occurrence": {
+      "ancestors": [
+       [
+        "_chip_1xw00_8",
+        "_active_1xw00_161",
+        "_truncateText_1xw00_16"
+       ],
+       [
+        "_facets_grqat_22"
+       ],
+       [
+        "_tableViewsAndFilters_grqat_82"
+       ],
+       [
+        "_toolbarContainer_grqat_4"
+       ],
+       [
+        "_toolbar_836fy_21"
+       ],
+       [
+        "_filterBar_1u40e_160"
+       ],
+       [],
+       []
+      ],
+      "classes": [
+       "_mainElement_1xw00_24",
+       "_interactive_1xw00_134"
+      ],
+      "data": {},
+      "heading": "Team",
+      "landmark": {
+       "name": "",
+       "role": "main"
+      },
+      "layer": "document",
+      "name": "All",
+      "rect": [
+       347,
+       184,
+       42,
+       32
+      ],
+      "role": "menuitem",
+      "tag": "button",
+      "xpath": "/html/body/div[1]/main[1]/div[1]/div[1]/div[4]/div[1]/div[2]/div[2]/div[1]/div[1]/div[1]/div[1]/span[1]/span[1]/span[1]/button[1]"
+     },
+     "state": "settings.edit-member"
+    }
+   ],
+   "evidenceHash": "282eba6b75ca8ae24f3e4e7e1b90b800f4e23636ad471811983029e025bdf18a",
+   "facts": {
+    "announced": "menuitem \"All\"",
+    "axeSummary": "",
+    "criterion": "4.1.2",
+    "criterionName": "Name, Role, Value",
+    "element": "menuitem \"All\"",
+    "rule": "announced-as",
+    "screen": "Financing — SAFEs"
+   },
+   "family": "role-state",
+   "guidance": "Low for optional ARIA or an invalid autocomplete token; high when aria-hidden hides the whole page.",
+   "issueId": null,
+   "key": "role-state:announced-as:00a93c029497",
+   "measured": false,
+   "primary": "accounts.safes",
+   "proposals": [],
+   "rule": "announced-as",
+   "screens": 8,
+   "severityDefault": "medium",
+   "source": "scanner",
+   "states": [
+    "accounts.safes",
+    "settings.edit-member"
+   ],
+   "summary": "announced-as: announced as menuitem \"All\".",
+   "title": "Wrong role or state: menuitem \"All\""
+  },
+  {
+   "attachments": [],
+   "attempt": 1,
+   "basis": "candidate",
+   "criteria": [
+    "4.1.2"
+   ],
+   "evidence": [
+    {
+     "evidence": {
+      "description": "",
+      "name": "Active",
+      "role": "menuitem",
+      "states": {},
+      "template": "menuitem \"Active\""
+     },
+     "occurrence": {
+      "ancestors": [
+       [
+        "_chip_1xw00_8",
+        "_inactive_1xw00_119",
+        "_truncateText_1xw00_16"
+       ],
+       [
+        "_facets_grqat_22"
+       ],
+       [
+        "_tableViewsAndFilters_grqat_82"
+       ],
+       [
+        "_toolbarContainer_grqat_4"
+       ],
+       [
+        "_wrapper_1hteo_1"
+       ],
+       [
+        "_wrapper_sot9h_1",
+        "_pageContent_809q8_151",
+        "_pageContentWidth_809q8_184"
+       ],
+       [
+        "_dashboardContent_809q8_29"
+       ],
+       [
+        "_layout_809q8_18"
+       ]
+      ],
+      "classes": [
+       "_mainElement_1xw00_24",
+       "_interactive_1xw00_134"
+      ],
+      "data": {},
+      "heading": "Financing",
+      "landmark": {
+       "name": "",
+       "role": "main"
+      },
+      "layer": "document",
+      "name": "Active",
+      "rect": [
+       399,
+       364,
+       68,
+       32
+      ],
+      "role": "menuitem",
+      "tag": "button",
+      "xpath": "/html/body/div[1]/main[1]/div[1]/div[1]/div[1]/div[4]/div[1]/div[2]/div[4]/div[2]/span[1]/span[1]/span[2]/button[1]"
+     },
+     "state": "accounts.safes"
+    },
+    {
+     "evidence": {
+      "description": "",
+      "name": "Active",
+      "role": "menuitem",
+      "states": {},
+      "template": "menuitem \"Active\""
+     },
+     "occurrence": {
+      "ancestors": [
+       [
+        "_chip_1xw00_8",
+        "_inactive_1xw00_119",
+        "_truncateText_1xw00_16"
+       ],
+       [
+        "_facets_grqat_22"
+       ],
+       [
+        "_tableViewsAndFilters_grqat_82"
+       ],
+       [
+        "_toolbarContainer_grqat_4"
+       ],
+       [
+        "_wrapper_1hteo_1"
+       ],
+       [
+        "_wrapper_sot9h_1",
+        "_pageContent_809q8_151",
+        "_pageContentWidth_809q8_184"
+       ],
+       [
+        "_dashboardContent_809q8_29"
+       ],
+       [
+        "_layout_809q8_18"
+       ]
+      ],
+      "classes": [
+       "_mainElement_1xw00_24",
+       "_interactive_1xw00_134"
+      ],
+      "data": {},
+      "heading": "Financing",
+      "landmark": {
+       "name": "",
+       "role": "main"
+      },
+      "layer": "document",
+      "name": "Active",
+      "rect": [
+       399,
+       364,
+       68,
+       32
+      ],
+      "role": "menuitem",
+      "tag": "button",
+      "xpath": "/html/body/div[1]/main[1]/div[1]/div[1]/div[1]/div[4]/div[1]/div[2]/div[4]/div[2]/span[1]/span[1]/span[2]/button[1]"
+     },
+     "state": "accounts.safe-filter-cancelled"
+    }
+   ],
+   "evidenceHash": "623d69b8fc3ab5c6804bcec339a38683873bd1194201d83988bd107c75db7066",
+   "facts": {
+    "announced": "menuitem \"Active\"",
+    "axeSummary": "",
+    "criterion": "4.1.2",
+    "criterionName": "Name, Role, Value",
+    "element": "menuitem \"Active\"",
+    "rule": "announced-as",
+    "screen": "Financing — SAFEs"
+   },
+   "family": "role-state",
+   "guidance": "Low for optional ARIA or an invalid autocomplete token; high when aria-hidden hides the whole page.",
+   "issueId": null,
+   "key": "role-state:announced-as:5692acd87e0c",
+   "measured": false,
+   "primary": "accounts.safes",
+   "proposals": [],
+   "rule": "announced-as",
+   "screens": 2,
+   "severityDefault": "medium",
+   "source": "scanner",
+   "states": [
+    "accounts.safes",
+    "accounts.safe-filter-cancelled"
+   ],
+   "summary": "announced-as: announced as menuitem \"Active\".",
+   "title": "Wrong role or state: menuitem \"Active\""
+  },
+  {
+   "attachments": [],
+   "attempt": 1,
+   "basis": "candidate",
+   "criteria": [
+    "4.1.2"
+   ],
+   "evidence": [
+    {
+     "evidence": {
+      "description": "",
+      "name": "Expired",
+      "role": "menuitem",
+      "states": {},
+      "template": "menuitem \"Expired\""
+     },
+     "occurrence": {
+      "ancestors": [
+       [
+        "_chip_1xw00_8",
+        "_inactive_1xw00_119",
+        "_truncateText_1xw00_16"
+       ],
+       [
+        "_facets_grqat_22"
+       ],
+       [
+        "_tableViewsAndFilters_grqat_82"
+       ],
+       [
+        "_toolbarContainer_grqat_4"
+       ],
+       [
+        "_wrapper_1hteo_1"
+       ],
+       [
+        "_wrapper_sot9h_1",
+        "_pageContent_809q8_151",
+        "_pageContentWidth_809q8_184"
+       ],
+       [
+        "_dashboardContent_809q8_29"
+       ],
+       [
+        "_layout_809q8_18"
+       ]
+      ],
+      "classes": [
+       "_mainElement_1xw00_24",
+       "_interactive_1xw00_134"
+      ],
+      "data": {},
+      "heading": "Financing",
+      "landmark": {
+       "name": "",
+       "role": "main"
+      },
+      "layer": "document",
+      "name": "Expired",
+      "rect": [
+       576,
+       364,
+       76,
+       32
+      ],
+      "role": "menuitem",
+      "tag": "button",
+      "xpath": "/html/body/div[1]/main[1]/div[1]/div[1]/div[1]/div[4]/div[1]/div[2]/div[4]/div[2]/span[1]/span[1]/span[4]/button[1]"
+     },
+     "state": "accounts.safes"
+    },
+    {
+     "evidence": {
+      "description": "",
+      "name": "Expired",
+      "role": "menuitem",
+      "states": {},
+      "template": "menuitem \"Expired\""
+     },
+     "occurrence": {
+      "ancestors": [
+       [
+        "_chip_1xw00_8",
+        "_inactive_1xw00_119",
+        "_truncateText_1xw00_16"
+       ],
+       [
+        "_facets_grqat_22"
+       ],
+       [
+        "_tableViewsAndFilters_grqat_82"
+       ],
+       [
+        "_toolbarContainer_grqat_4"
+       ],
+       [
+        "_wrapper_1hteo_1"
+       ],
+       [
+        "_wrapper_sot9h_1",
+        "_pageContent_809q8_151",
+        "_pageContentWidth_809q8_184"
+       ],
+       [
+        "_dashboardContent_809q8_29"
+       ],
+       [
+        "_layout_809q8_18"
+       ]
+      ],
+      "classes": [
+       "_mainElement_1xw00_24",
+       "_interactive_1xw00_134"
+      ],
+      "data": {},
+      "heading": "Financing",
+      "landmark": {
+       "name": "",
+       "role": "main"
+      },
+      "layer": "document",
+      "name": "Expired",
+      "rect": [
+       576,
+       364,
+       76,
+       32
+      ],
+      "role": "menuitem",
+      "tag": "button",
+      "xpath": "/html/body/div[1]/main[1]/div[1]/div[1]/div[1]/div[4]/div[1]/div[2]/div[4]/div[2]/span[1]/span[1]/span[4]/button[1]"
+     },
+     "state": "accounts.safe-filter-cancelled"
+    }
+   ],
+   "evidenceHash": "c7b421df41a5f9ece87e6ffc03a5763264f38102e97eb3c8697f8602071b3764",
+   "facts": {
+    "announced": "menuitem \"Expired\"",
+    "axeSummary": "",
+    "criterion": "4.1.2",
+    "criterionName": "Name, Role, Value",
+    "element": "menuitem \"Expired\"",
+    "rule": "announced-as",
+    "screen": "Financing — SAFEs"
+   },
+   "family": "role-state",
+   "guidance": "Low for optional ARIA or an invalid autocomplete token; high when aria-hidden hides the whole page.",
+   "issueId": null,
+   "key": "role-state:announced-as:e3fce27bd634",
+   "measured": false,
+   "primary": "accounts.safes",
+   "proposals": [],
+   "rule": "announced-as",
+   "screens": 2,
+   "severityDefault": "medium",
+   "source": "scanner",
+   "states": [
+    "accounts.safes",
+    "accounts.safe-filter-cancelled"
+   ],
+   "summary": "announced-as: announced as menuitem \"Expired\".",
+   "title": "Wrong role or state: menuitem \"Expired\""
+  },
+  {
+   "attachments": [],
+   "attempt": 1,
+   "basis": "candidate",
+   "criteria": [
+    "4.1.2"
+   ],
+   "evidence": [
+    {
+     "evidence": {
+      "description": "",
+      "name": "Canceled",
+      "role": "menuitem",
+      "states": {},
+      "template": "menuitem \"Canceled\""
+     },
+     "occurrence": {
+      "ancestors": [
+       [
+        "_chip_1xw00_8",
+        "_inactive_1xw00_119",
+        "_truncateText_1xw00_16"
+       ],
+       [
+        "_facets_grqat_22"
+       ],
+       [
+        "_tableViewsAndFilters_grqat_82"
+       ],
+       [
+        "_toolbarContainer_grqat_4"
+       ],
+       [
+        "_wrapper_1hteo_1"
+       ],
+       [
+        "_wrapper_sot9h_1",
+        "_pageContent_809q8_151",
+        "_pageContentWidth_809q8_184"
+       ],
+       [
+        "_dashboardContent_809q8_29"
+       ],
+       [
+        "_layout_809q8_18"
+       ]
+      ],
+      "classes": [
+       "_mainElement_1xw00_24",
+       "_interactive_1xw00_134"
+      ],
+      "data": {},
+      "heading": "Financing",
+      "landmark": {
+       "name": "",
+       "role": "main"
+      },
+      "layer": "document",
+      "name": "Canceled",
+      "rect": [
+       477,
+       364,
+       90,
+       32
+      ],
+      "role": "menuitem",
+      "tag": "button",
+      "xpath": "/html/body/div[1]/main[1]/div[1]/div[1]/div[1]/div[4]/div[1]/div[2]/div[4]/div[2]/span[1]/span[1]/span[3]/button[1]"
+     },
+     "state": "accounts.safes"
+    },
+    {
+     "evidence": {
+      "description": "",
+      "name": "Canceled",
+      "role": "menuitem",
+      "states": {},
+      "template": "menuitem \"Canceled\""
+     },
+     "occurrence": {
+      "ancestors": [
+       [
+        "_chip_1xw00_8",
+        "_active_1xw00_161",
+        "_truncateText_1xw00_16"
+       ],
+       [
+        "_facets_grqat_22"
+       ],
+       [
+        "_tableViewsAndFilters_grqat_82"
+       ],
+       [
+        "_toolbarContainer_grqat_4"
+       ],
+       [
+        "_wrapper_1hteo_1"
+       ],
+       [
+        "_wrapper_sot9h_1",
+        "_pageContent_809q8_151",
+        "_pageContentWidth_809q8_184"
+       ],
+       [
+        "_dashboardContent_809q8_29"
+       ],
+       [
+        "_layout_809q8_18"
+       ]
+      ],
+      "classes": [
+       "_mainElement_1xw00_24",
+       "_interactive_1xw00_134"
+      ],
+      "data": {},
+      "heading": "Financing",
+      "landmark": {
+       "name": "",
+       "role": "main"
+      },
+      "layer": "document",
+      "name": "Canceled",
+      "rect": [
+       477,
+       364,
+       90,
+       32
+      ],
+      "role": "menuitem",
+      "tag": "button",
+      "xpath": "/html/body/div[1]/main[1]/div[1]/div[1]/div[1]/div[4]/div[1]/div[2]/div[4]/div[2]/span[1]/span[1]/span[3]/button[1]"
+     },
+     "state": "accounts.safe-filter-cancelled"
+    }
+   ],
+   "evidenceHash": "435e96a24e8c2eff963b0fc2b1d399e6ce5c0561bb6f8ed194fc00621f547b4e",
+   "facts": {
+    "announced": "menuitem \"Canceled\"",
+    "axeSummary": "",
+    "criterion": "4.1.2",
+    "criterionName": "Name, Role, Value",
+    "element": "menuitem \"Canceled\"",
+    "rule": "announced-as",
+    "screen": "Financing — SAFEs"
+   },
+   "family": "role-state",
+   "guidance": "Low for optional ARIA or an invalid autocomplete token; high when aria-hidden hides the whole page.",
+   "issueId": null,
+   "key": "role-state:announced-as:f4436f31ecdc",
+   "measured": false,
+   "primary": "accounts.safes",
+   "proposals": [],
+   "rule": "announced-as",
+   "screens": 2,
+   "severityDefault": "medium",
+   "source": "scanner",
+   "states": [
+    "accounts.safes",
+    "accounts.safe-filter-cancelled"
+   ],
+   "summary": "announced-as: announced as menuitem \"Canceled\".",
+   "title": "Wrong role or state: menuitem \"Canceled\""
+  }
+ ],
+ "primaries": [
+  "accounts.safes"
+ ],
+ "reach": {
+  "baseUrl": "https://demo.mercury.com",
+  "data": "data",
+  "map": "build/map.json",
+  "run": "2026-10-03-1525",
+  "workspace": "a11y"
+ },
+ "run": "2026-10-03-1525"
+}

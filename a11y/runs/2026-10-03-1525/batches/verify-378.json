@@ -1,0 +1,1996 @@
+{
+ "area": "transactions",
+ "batch": "verify-378",
+ "findings": [
+  {
+   "attachments": [],
+   "attempt": 1,
+   "basis": "candidate",
+   "criteria": [
+    "2.4.3",
+    "1.3.2"
+   ],
+   "evidence": [
+    {
+     "evidence": {
+      "band": 48,
+      "overlay": "transactions.index.tabstops.png",
+      "previous": {
+       "ancestors": [
+        [
+         "_tooltipAnchor_18bac_4",
+         "_tooltipWrapper_1cgg7_75"
+        ],
+        [
+         "_menuContainer_1cgg7_8",
+         "session-replay-unmask"
+        ],
+        [
+         "_wrapper_809q8_3"
+        ],
+        [],
+        [
+         "_main_1gb3b_1"
+        ],
+        [
+         "mercury-root"
+        ]
+       ],
+       "classes": [
+        "_menuIcon_1cgg7_33"
+       ],
+       "data": {},
+       "heading": "Transactions",
+       "landmark": {
+        "name": "",
+        "role": "main"
+       },
+       "layer": "document",
+       "name": "",
+       "rect": [
+        1364,
+        832,
+        48,
+        48
+       ],
+       "role": "button",
+       "tag": "button",
+       "xpath": "/html/body/div[1]/main[1]/div[1]/div[1]/div[6]/div[2]/button[1]"
+      },
+      "rise": 817,
+      "stop": 535,
+      "stops": 536
+     },
+     "occurrence": {
+      "ancestors": [
+       [
+        "_headerRow_10vn5_37"
+       ],
+       [
+        "_textContent_10vn5_30"
+       ],
+       [
+        "_content_10vn5_18"
+       ],
+       [
+        "_spotlightPortal_10vn5_14"
+       ]
+      ],
+      "classes": [
+       "_closeButton_10vn5_57"
+      ],
+      "data": {},
+      "heading": "Transactions",
+      "landmark": null,
+      "layer": "document",
+      "name": "Dismiss spotlight",
+      "rect": [
+       1141,
+       15,
+       12,
+       17
+      ],
+      "role": "button",
+      "tag": "button",
+      "xpath": "/html/body/div[15]/div[1]/div[1]/div[1]/button[1]"
+     },
+     "state": "transactions.index"
+    },
+    {
+     "evidence": {
+      "band": 48,
+      "overlay": "transactions.graphs-shown.tabstops.png",
+      "previous": {
+       "ancestors": [
+        [
+         "_tooltipAnchor_18bac_4",
+         "_tooltipWrapper_1cgg7_75"
+        ],
+        [
+         "_menuContainer_1cgg7_8",
+         "session-replay-unmask"
+        ],
+        [
+         "_wrapper_809q8_3"
+        ],
+        [],
+        [
+         "_main_1gb3b_1"
+        ],
+        [
+         "mercury-root"
+        ]
+       ],
+       "classes": [
+        "_menuIcon_1cgg7_33"
+       ],
+       "data": {},
+       "heading": "Transactions",
+       "landmark": {
+        "name": "",
+        "role": "main"
+       },
+       "layer": "document",
+       "name": "",
+       "rect": [
+        1364,
+        832,
+        48,
+        48
+       ],
+       "role": "button",
+       "tag": "button",
+       "xpath": "/html/body/div[1]/main[1]/div[1]/div[1]/div[6]/div[2]/button[1]"
+      },
+      "rise": 817,
+      "stop": 535,
+      "stops": 536
+     },
+     "occurrence": {
+      "ancestors": [
+       [
+        "_headerRow_10vn5_37"
+       ],
+       [
+        "_textContent_10vn5_30"
+       ],
+       [
+        "_content_10vn5_18"
+       ],
+       [
+        "_spotlightPortal_10vn5_14"
+       ]
+      ],
+      "classes": [
+       "_closeButton_10vn5_57"
+      ],
+      "data": {},
+      "heading": "Transactions",
+      "landmark": null,
+      "layer": "document",
+      "name": "Dismiss spotlight",
+      "rect": [
+       1141,
+       15,
+       12,
+       17
+      ],
+      "role": "button",
+      "tag": "button",
+      "xpath": "/html/body/div[15]/div[1]/div[1]/div[1]/button[1]"
+     },
+     "state": "transactions.graphs-shown"
+    }
+   ],
+   "evidenceHash": "1f8f7d1a1d9dc4d706a9fdc11c1292f11a60b96f31b1d2532dbb269035764fc6",
+   "facts": {
+    "criterion": "2.4.3",
+    "criterionName": "Focus Order",
+    "element": "button \"Dismiss spotlight\"",
+    "previous": "button in \"Transactions\"",
+    "screen": "Transactions",
+    "stop": "535"
+   },
+   "family": "focus-order",
+   "guidance": "High if the order skips a required control.",
+   "issueId": null,
+   "key": "focus-order:backward-jump:d4ba8d61d805",
+   "measured": false,
+   "primary": "transactions.index",
+   "proposals": [],
+   "rule": "backward-jump",
+   "screens": 4,
+   "severityDefault": "medium",
+   "source": "scanner",
+   "states": [
+    "transactions.index",
+    "transactions.graphs-shown"
+   ],
+   "summary": "Tab stop 535 jumped backward on screen, from the button in \"Transactions\" to the button \"Dismiss spotlight\".",
+   "title": "Tab order jumps backward at button \"Dismiss spotlight\""
+  },
+  {
+   "attachments": [],
+   "attempt": 1,
+   "basis": "failure",
+   "criteria": [
+    "2.4.7",
+    "2.4.3"
+   ],
+   "evidence": [
+    {
+     "evidence": {
+      "box": [
+       1095,
+       956,
+       32,
+       32
+      ],
+      "focus": {
+       "ancestors": [
+        [
+         "_dropdownContainer_5swj3_1"
+        ],
+        [
+         "_actionButtons_1pbh4_58"
+        ],
+        [
+         "_contentContainer_1pbh4_46"
+        ],
+        [
+         "_floatingBulkActionsInnerContainer_1pbh4_35"
+        ],
+        [
+         "_floatingBulkActionsOuterContainer_1pbh4_4",
+         "_islandContainer_1diig_1"
+        ]
+       ],
+       "classes": [
+        "_button_r6b2u_20",
+        "_small_r6b2u_72",
+        "_secondary_r6b2u_126",
+        "_menuButton_ok3n2_7"
+       ],
+       "data": {
+        "data-focus-visible": "true"
+       },
+       "heading": "Transactions",
+       "landmark": {
+        "name": "0 selected",
+        "role": "dialog"
+       },
+       "layer": "document",
+       "name": "More bulk actions",
+       "rect": [
+        1095,
+        956,
+        32,
+        32
+       ],
+       "role": "button",
+       "tag": "button",
+       "xpath": "/html/body/dialog[1]/div[1]/div[1]/div[2]/div[3]/button[1]"
+      },
+      "hidden": "invisible",
+      "previous": {
+       "ancestors": [
+        [
+         "_actionButtons_1pbh4_58"
+        ],
+        [
+         "_contentContainer_1pbh4_46"
+        ],
+        [
+         "_floatingBulkActionsInnerContainer_1pbh4_35"
+        ],
+        [
+         "_floatingBulkActionsOuterContainer_1pbh4_4",
+         "_islandContainer_1diig_1"
+        ]
+       ],
+       "classes": [
+        "_button_r6b2u_20",
+        "_small_r6b2u_72",
+        "_secondary_r6b2u_126",
+        "_tooltipAnchor_18bac_4"
+       ],
+       "data": {
+        "data-focus-visible": "true"
+       },
+       "heading": "Transactions",
+       "landmark": {
+        "name": "0 selected",
+        "role": "dialog"
+       },
+       "layer": "document",
+       "name": "Add notes",
+       "rect": [
+        1051,
+        956,
+        32,
+        32
+       ],
+       "role": "button",
+       "tag": "button",
+       "xpath": "/html/body/dialog[1]/div[1]/div[1]/div[2]/button[2]"
+      },
+      "stop": 533,
+      "stops": 536
+     },
+     "occurrence": {
+      "ancestors": [
+       [
+        "_dropdownContainer_5swj3_1"
+       ],
+       [
+        "_actionButtons_1pbh4_58"
+       ],
+       [
+        "_contentContainer_1pbh4_46"
+       ],
+       [
+        "_floatingBulkActionsInnerContainer_1pbh4_35"
+       ],
+       [
+        "_floatingBulkActionsOuterContainer_1pbh4_4",
+        "_islandContainer_1diig_1"
+       ]
+      ],
+      "classes": [
+       "_button_r6b2u_20",
+       "_small_r6b2u_72",
+       "_secondary_r6b2u_126",
+       "_menuButton_ok3n2_7"
+      ],
+      "data": {
+       "data-focus-visible": "true"
+      },
+      "heading": "Transactions",
+      "landmark": {
+       "name": "0 selected",
+       "role": "dialog"
+      },
+      "layer": "document",
+      "name": "More bulk actions",
+      "rect": [
+       1095,
+       956,
+       32,
+       32
+      ],
+      "role": "button",
+      "tag": "button",
+      "xpath": "/html/body/dialog[1]/div[1]/div[1]/div[2]/div[3]/button[1]"
+     },
+     "state": "transactions.index"
+    },
+    {
+     "evidence": {
+      "box": [
+       1095,
+       956,
+       32,
+       32
+      ],
+      "focus": {
+       "ancestors": [
+        [
+         "_dropdownContainer_5swj3_1"
+        ],
+        [
+         "_actionButtons_1pbh4_58"
+        ],
+        [
+         "_contentContainer_1pbh4_46"
+        ],
+        [
+         "_floatingBulkActionsInnerContainer_1pbh4_35"
+        ],
+        [
+         "_floatingBulkActionsOuterContainer_1pbh4_4",
+         "_islandContainer_1diig_1"
+        ]
+       ],
+       "classes": [
+        "_button_r6b2u_20",
+        "_small_r6b2u_72",
+        "_secondary_r6b2u_126",
+        "_menuButton_ok3n2_7"
+       ],
+       "data": {
+        "data-focus-visible": "true"
+       },
+       "heading": "Transactions",
+       "landmark": {
+        "name": "0 selected",
+        "role": "dialog"
+       },
+       "layer": "document",
+       "name": "More bulk actions",
+       "rect": [
+        1095,
+        956,
+        32,
+        32
+       ],
+       "role": "button",
+       "tag": "button",
+       "xpath": "/html/body/dialog[1]/div[1]/div[1]/div[2]/div[3]/button[1]"
+      },
+      "hidden": "invisible",
+      "previous": {
+       "ancestors": [
+        [
+         "_actionButtons_1pbh4_58"
+        ],
+        [
+         "_contentContainer_1pbh4_46"
+        ],
+        [
+         "_floatingBulkActionsInnerContainer_1pbh4_35"
+        ],
+        [
+         "_floatingBulkActionsOuterContainer_1pbh4_4",
+         "_islandContainer_1diig_1"
+        ]
+       ],
+       "classes": [
+        "_button_r6b2u_20",
+        "_small_r6b2u_72",
+        "_secondary_r6b2u_126",
+        "_tooltipAnchor_18bac_4"
+       ],
+       "data": {},
+       "heading": "Transactions",
+       "landmark": {
+        "name": "0 selected",
+        "role": "dialog"
+       },
+       "layer": "document",
+       "name": "Add notes",
+       "rect": [
+        1051,
+        956,
+        32,
+        32
+       ],
+       "role": "button",
+       "tag": "button",
+       "xpath": "/html/body/dialog[1]/div[1]/div[1]/div[2]/button[2]"
+      },
+      "stop": 533,
+      "stops": 536
+     },
+     "occurrence": {
+      "ancestors": [
+       [
+        "_dropdownContainer_5swj3_1"
+       ],
+       [
+        "_actionButtons_1pbh4_58"
+       ],
+       [
+        "_contentContainer_1pbh4_46"
+       ],
+       [
+        "_floatingBulkActionsInnerContainer_1pbh4_35"
+       ],
+       [
+        "_floatingBulkActionsOuterContainer_1pbh4_4",
+        "_islandContainer_1diig_1"
+       ]
+      ],
+      "classes": [
+       "_button_r6b2u_20",
+       "_small_r6b2u_72",
+       "_secondary_r6b2u_126",
+       "_menuButton_ok3n2_7"
+      ],
+      "data": {
+       "data-focus-visible": "true"
+      },
+      "heading": "Transactions",
+      "landmark": {
+       "name": "0 selected",
+       "role": "dialog"
+      },
+      "layer": "document",
+      "name": "More bulk actions",
+      "rect": [
+       1095,
+       956,
+       32,
+       32
+      ],
+      "role": "button",
+      "tag": "button",
+      "xpath": "/html/body/dialog[1]/div[1]/div[1]/div[2]/div[3]/button[1]"
+     },
+     "state": "transactions.graphs-shown"
+    }
+   ],
+   "evidenceHash": "b25525f502047f2fcd03c879aecf3201752e26df202983a52c1fc128de9b478d",
+   "facts": {
+    "criterion": "2.4.7",
+    "criterionName": "Focus Visible",
+    "element": "button \"More bulk actions\"",
+    "screen": "Transactions",
+    "screens": 5,
+    "stop": "533"
+   },
+   "family": "focus-visible",
+   "guidance": "High on shared components on primary paths.",
+   "issueId": null,
+   "key": "focus-visible:focus-hidden:5f33d766e0cc",
+   "measured": true,
+   "primary": "transactions.index",
+   "proposals": [],
+   "rule": "focus-hidden",
+   "screens": 5,
+   "severityDefault": "medium",
+   "source": "scanner",
+   "states": [
+    "transactions.index",
+    "transactions.graphs-shown"
+   ],
+   "summary": "Tab stop 533 focused the button \"More bulk actions\", which is invisible, has no size, or sits off screen.",
+   "title": "Tab stops on hidden element: button \"More bulk actions\""
+  },
+  {
+   "attachments": [],
+   "attempt": 1,
+   "basis": "failure",
+   "criteria": [
+    "2.4.7",
+    "2.4.3"
+   ],
+   "evidence": [
+    {
+     "evidence": {
+      "box": [
+       726,
+       953,
+       268,
+       37
+      ],
+      "focus": {
+       "ancestors": [
+        [
+         "_textboxWrapper_1a7mr_158",
+         "_textboxWrapperUpwards_1a7mr_216",
+         "_focus_1a7mr_178"
+        ],
+        [
+         "_selectWrapper_1a7mr_150"
+        ],
+        [
+         "_comboboxWrapper_1a7mr_6",
+         "_focus_1a7mr_178",
+         "_tooltipAnchor_18bac_4",
+         "_combobox_1diig_6",
+         "session-replay-block"
+        ],
+        [
+         "_comboboxContainer_1diig_6"
+        ],
+        [
+         "_actionButtons_1pbh4_58"
+        ],
+        [
+         "_contentContainer_1pbh4_46"
+        ],
+        [
+         "_floatingBulkActionsInnerContainer_1pbh4_35"
+        ],
+        [
+         "_floatingBulkActionsOuterContainer_1pbh4_4",
+         "_islandContainer_1diig_1"
+        ]
+       ],
+       "classes": [
+        "_textboxInput_1a7mr_250",
+        "_focus_1a7mr_178"
+       ],
+       "data": {},
+       "heading": "Transactions",
+       "landmark": {
+        "name": "0 selected",
+        "role": "dialog"
+       },
+       "layer": "document",
+       "name": "Category",
+       "rect": [
+        726,
+        953,
+        268,
+        37
+       ],
+       "role": "combobox",
+       "tag": "input",
+       "xpath": "/html/body/dialog[1]/div[1]/div[1]/div[2]/div[2]/div[1]/div[1]/div[1]/input[1]"
+      },
+      "hidden": "invisible",
+      "previous": {
+       "ancestors": [
+        [
+         "_inputWrapper_11c85_6"
+        ],
+        [
+         "_wrapper_1xgdp_8",
+         "_fieldTypeCombobox_1diig_16"
+        ],
+        [
+         "_actionButtons_1pbh4_58"
+        ],
+        [
+         "_contentContainer_1pbh4_46"
+        ],
+        [
+         "_floatingBulkActionsInnerContainer_1pbh4_35"
+        ],
+        [
+         "_floatingBulkActionsOuterContainer_1pbh4_4",
+         "_islandContainer_1diig_1"
+        ]
+       ],
+       "classes": [
+        "_input_11c85_6"
+       ],
+       "data": {
+        "data-1p-ignore": "true",
+        "data-active-item": "true",
+        "data-bwignore": "true",
+        "data-focus-visible": "true",
+        "data-lpignore": "true"
+       },
+       "heading": "Transactions",
+       "landmark": {
+        "name": "0 selected",
+        "role": "dialog"
+       },
+       "layer": "document",
+       "name": "Apply",
+       "rect": [
+        573,
+        952,
+        107,
+        40
+       ],
+       "role": "combobox",
+       "tag": "input",
+       "xpath": "/html/body/dialog[1]/div[1]/div[1]/div[2]/div[1]/div[1]/input[1]"
+      },
+      "stop": 530,
+      "stops": 536
+     },
+     "occurrence": {
+      "ancestors": [
+       [
+        "_textboxWrapper_1a7mr_158",
+        "_textboxWrapperUpwards_1a7mr_216",
+        "_focus_1a7mr_178"
+       ],
+       [
+        "_selectWrapper_1a7mr_150"
+       ],
+       [
+        "_comboboxWrapper_1a7mr_6",
+        "_focus_1a7mr_178",
+        "_tooltipAnchor_18bac_4",
+        "_combobox_1diig_6",
+        "session-replay-block"
+       ],
+       [
+        "_comboboxContainer_1diig_6"
+       ],
+       [
+        "_actionButtons_1pbh4_58"
+       ],
+       [
+        "_contentContainer_1pbh4_46"
+       ],
+       [
+        "_floatingBulkActionsInnerContainer_1pbh4_35"
+       ],
+       [
+        "_floatingBulkActionsOuterContainer_1pbh4_4",
+        "_islandContainer_1diig_1"
+       ]
+      ],
+      "classes": [
+       "_textboxInput_1a7mr_250",
+       "_focus_1a7mr_178"
+      ],
+      "data": {},
+      "heading": "Transactions",
+      "landmark": {
+       "name": "0 selected",
+       "role": "dialog"
+      },
+      "layer": "document",
+      "name": "Category",
+      "rect": [
+       726,
+       953,
+       268,
+       37
+      ],
+      "role": "combobox",
+      "tag": "input",
+      "xpath": "/html/body/dialog[1]/div[1]/div[1]/div[2]/div[2]/div[1]/div[1]/div[1]/input[1]"
+     },
+     "state": "transactions.index"
+    },
+    {
+     "evidence": {
+      "box": [
+       726,
+       953,
+       268,
+       37
+      ],
+      "focus": {
+       "ancestors": [
+        [
+         "_textboxWrapper_1a7mr_158",
+         "_textboxWrapperUpwards_1a7mr_216",
+         "_focus_1a7mr_178"
+        ],
+        [
+         "_selectWrapper_1a7mr_150"
+        ],
+        [
+         "_comboboxWrapper_1a7mr_6",
+         "_focus_1a7mr_178",
+         "_tooltipAnchor_18bac_4",
+         "_combobox_1diig_6",
+         "session-replay-block"
+        ],
+        [
+         "_comboboxContainer_1diig_6"
+        ],
+        [
+         "_actionButtons_1pbh4_58"
+        ],
+        [
+         "_contentContainer_1pbh4_46"
+        ],
+        [
+         "_floatingBulkActionsInnerContainer_1pbh4_35"
+        ],
+        [
+         "_floatingBulkActionsOuterContainer_1pbh4_4",
+         "_islandContainer_1diig_1"
+        ]
+       ],
+       "classes": [
+        "_textboxInput_1a7mr_250",
+        "_focus_1a7mr_178"
+       ],
+       "data": {},
+       "heading": "Transactions",
+       "landmark": {
+        "name": "0 selected",
+        "role": "dialog"
+       },
+       "layer": "document",
+       "name": "Category",
+       "rect": [
+        726,
+        953,
+        268,
+        37
+       ],
+       "role": "combobox",
+       "tag": "input",
+       "xpath": "/html/body/dialog[1]/div[1]/div[1]/div[2]/div[2]/div[1]/div[1]/div[1]/input[1]"
+      },
+      "hidden": "invisible",
+      "previous": {
+       "ancestors": [
+        [
+         "_inputWrapper_11c85_6"
+        ],
+        [
+         "_wrapper_1xgdp_8",
+         "_fieldTypeCombobox_1diig_16"
+        ],
+        [
+         "_actionButtons_1pbh4_58"
+        ],
+        [
+         "_contentContainer_1pbh4_46"
+        ],
+        [
+         "_floatingBulkActionsInnerContainer_1pbh4_35"
+        ],
+        [
+         "_floatingBulkActionsOuterContainer_1pbh4_4",
+         "_islandContainer_1diig_1"
+        ]
+       ],
+       "classes": [
+        "_input_11c85_6"
+       ],
+       "data": {
+        "data-1p-ignore": "true",
+        "data-active-item": "true",
+        "data-bwignore": "true",
+        "data-focus-visible": "true",
+        "data-lpignore": "true"
+       },
+       "heading": "Transactions",
+       "landmark": {
+        "name": "0 selected",
+        "role": "dialog"
+       },
+       "layer": "document",
+       "name": "Apply",
+       "rect": [
+        573,
+        952,
+        107,
+        40
+       ],
+       "role": "combobox",
+       "tag": "input",
+       "xpath": "/html/body/dialog[1]/div[1]/div[1]/div[2]/div[1]/div[1]/input[1]"
+      },
+      "stop": 530,
+      "stops": 536
+     },
+     "occurrence": {
+      "ancestors": [
+       [
+        "_textboxWrapper_1a7mr_158",
+        "_textboxWrapperUpwards_1a7mr_216",
+        "_focus_1a7mr_178"
+       ],
+       [
+        "_selectWrapper_1a7mr_150"
+       ],
+       [
+        "_comboboxWrapper_1a7mr_6",
+        "_focus_1a7mr_178",
+        "_tooltipAnchor_18bac_4",
+        "_combobox_1diig_6",
+        "session-replay-block"
+       ],
+       [
+        "_comboboxContainer_1diig_6"
+       ],
+       [
+        "_actionButtons_1pbh4_58"
+       ],
+       [
+        "_contentContainer_1pbh4_46"
+       ],
+       [
+        "_floatingBulkActionsInnerContainer_1pbh4_35"
+       ],
+       [
+        "_floatingBulkActionsOuterContainer_1pbh4_4",
+        "_islandContainer_1diig_1"
+       ]
+      ],
+      "classes": [
+       "_textboxInput_1a7mr_250",
+       "_focus_1a7mr_178"
+      ],
+      "data": {},
+      "heading": "Transactions",
+      "landmark": {
+       "name": "0 selected",
+       "role": "dialog"
+      },
+      "layer": "document",
+      "name": "Category",
+      "rect": [
+       726,
+       953,
+       268,
+       37
+      ],
+      "role": "combobox",
+      "tag": "input",
+      "xpath": "/html/body/dialog[1]/div[1]/div[1]/div[2]/div[2]/div[1]/div[1]/div[1]/input[1]"
+     },
+     "state": "transactions.graphs-shown"
+    }
+   ],
+   "evidenceHash": "178996d6bb9fe0171356adb874ab3e0fc458ee565cdf26cc02d08754221f255d",
+   "facts": {
+    "criterion": "2.4.7",
+    "criterionName": "Focus Visible",
+    "element": "combobox \"Category\"",
+    "screen": "Transactions",
+    "screens": 5,
+    "stop": "530"
+   },
+   "family": "focus-visible",
+   "guidance": "High on shared components on primary paths.",
+   "issueId": null,
+   "key": "focus-visible:focus-hidden:b0ad779ccea9",
+   "measured": true,
+   "primary": "transactions.index",
+   "proposals": [],
+   "rule": "focus-hidden",
+   "screens": 5,
+   "severityDefault": "medium",
+   "source": "scanner",
+   "states": [
+    "transactions.index",
+    "transactions.graphs-shown"
+   ],
+   "summary": "Tab stop 530 focused the combobox \"Category\", which is invisible, has no size, or sits off screen.",
+   "title": "Tab stops on hidden element: combobox \"Category\""
+  },
+  {
+   "attachments": [],
+   "attempt": 1,
+   "basis": "failure",
+   "criteria": [
+    "2.4.7"
+   ],
+   "evidence": [
+    {
+     "evidence": {
+      "diff": 0,
+      "floor": 16,
+      "focusVisible": true,
+      "previous": {
+       "ancestors": [
+        [
+         "_clearSelectionContainer_1pbh4_66"
+        ],
+        [
+         "_floatingBulkActionsInnerContainer_1pbh4_35"
+        ],
+        [
+         "_floatingBulkActionsOuterContainer_1pbh4_4",
+         "_islandContainer_1diig_1"
+        ]
+       ],
+       "classes": [
+        "_button_r6b2u_20",
+        "_small_r6b2u_72",
+        "_secondary_r6b2u_126",
+        "_tooltipAnchor_18bac_4"
+       ],
+       "data": {
+        "data-focus-visible": "true"
+       },
+       "heading": "Transactions",
+       "landmark": {
+        "name": "0 selected",
+        "role": "dialog"
+       },
+       "layer": "document",
+       "name": "Unselect",
+       "rect": [
+        1160,
+        956,
+        32,
+        32
+       ],
+       "role": "button",
+       "tag": "button",
+       "xpath": "/html/body/dialog[1]/div[1]/div[2]/button[1]"
+      },
+      "stop": 535,
+      "stops": 536,
+      "style": [
+       "box-shadow",
+       "outline"
+      ]
+     },
+     "occurrence": {
+      "ancestors": [
+       [
+        "_headerRow_10vn5_37"
+       ],
+       [
+        "_textContent_10vn5_30"
+       ],
+       [
+        "_content_10vn5_18"
+       ],
+       [
+        "_spotlightPortal_10vn5_14"
+       ]
+      ],
+      "classes": [
+       "_closeButton_10vn5_57"
+      ],
+      "data": {},
+      "heading": "Transactions",
+      "landmark": null,
+      "layer": "document",
+      "name": "Dismiss spotlight",
+      "rect": [
+       1141,
+       15,
+       12,
+       17
+      ],
+      "role": "button",
+      "tag": "button",
+      "xpath": "/html/body/div[15]/div[1]/div[1]/div[1]/button[1]"
+     },
+     "state": "transactions.index"
+    },
+    {
+     "evidence": {
+      "diff": 0,
+      "floor": 16,
+      "focusVisible": true,
+      "previous": {
+       "ancestors": [
+        [
+         "_clearSelectionContainer_1pbh4_66"
+        ],
+        [
+         "_floatingBulkActionsInnerContainer_1pbh4_35"
+        ],
+        [
+         "_floatingBulkActionsOuterContainer_1pbh4_4",
+         "_islandContainer_1diig_1"
+        ]
+       ],
+       "classes": [
+        "_button_r6b2u_20",
+        "_small_r6b2u_72",
+        "_secondary_r6b2u_126",
+        "_tooltipAnchor_18bac_4"
+       ],
+       "data": {
+        "data-focus-visible": "true"
+       },
+       "heading": "Transactions",
+       "landmark": {
+        "name": "0 selected",
+        "role": "dialog"
+       },
+       "layer": "document",
+       "name": "Unselect",
+       "rect": [
+        1160,
+        956,
+        32,
+        32
+       ],
+       "role": "button",
+       "tag": "button",
+       "xpath": "/html/body/dialog[1]/div[1]/div[2]/button[1]"
+      },
+      "stop": 535,
+      "stops": 536,
+      "style": [
+       "box-shadow",
+       "outline"
+      ]
+     },
+     "occurrence": {
+      "ancestors": [
+       [
+        "_headerRow_10vn5_37"
+       ],
+       [
+        "_textContent_10vn5_30"
+       ],
+       [
+        "_content_10vn5_18"
+       ],
+       [
+        "_spotlightPortal_10vn5_14"
+       ]
+      ],
+      "classes": [
+       "_closeButton_10vn5_57"
+      ],
+      "data": {},
+      "heading": "Transactions",
+      "landmark": null,
+      "layer": "document",
+      "name": "Dismiss spotlight",
+      "rect": [
+       1141,
+       15,
+       12,
+       17
+      ],
+      "role": "button",
+      "tag": "button",
+      "xpath": "/html/body/div[15]/div[1]/div[1]/div[1]/button[1]"
+     },
+     "state": "transactions.graphs-shown"
+    }
+   ],
+   "evidenceHash": "f63aaa918736629d7976c225a0d479323f757e1997edf2a7e0d1dd83be9957c6",
+   "facts": {
+    "criterion": "2.4.7",
+    "criterionName": "Focus Visible",
+    "element": "button \"Dismiss spotlight\"",
+    "screen": "Transactions",
+    "screens": 3,
+    "stop": "535"
+   },
+   "family": "focus-visible",
+   "guidance": "High on shared components on primary paths.",
+   "issueId": null,
+   "key": "focus-visible:focus-not-visible:293f56d9f27b",
+   "measured": true,
+   "primary": "transactions.index",
+   "proposals": [],
+   "rule": "focus-not-visible",
+   "screens": 3,
+   "severityDefault": "medium",
+   "source": "scanner",
+   "states": [
+    "transactions.index",
+    "transactions.graphs-shown"
+   ],
+   "summary": "Tab stop 535: focusing the button \"Dismiss spotlight\" changed no pixels within 8 px of it.",
+   "title": "No visible focus: button \"Dismiss spotlight\""
+  },
+  {
+   "attachments": [],
+   "attempt": 1,
+   "basis": "violation",
+   "criteria": [
+    "4.1.2"
+   ],
+   "evidence": [
+    {
+     "evidence": {
+      "failureSummary": "Fix all of the following:\n  Focusable content should be disabled or be removed from the DOM"
+     },
+     "occurrence": {
+      "ancestors": [
+       [
+        "_drawerRoot_15kl9_6"
+       ]
+      ],
+      "classes": [
+       "_transitionWrapper_d3i56_5",
+       "_detailsCardWrapper_15kl9_247"
+      ],
+      "data": {},
+      "heading": "Transactions",
+      "landmark": null,
+      "layer": "document",
+      "name": "",
+      "rect": [
+       1188,
+       72,
+       424,
+       900
+      ],
+      "role": "",
+      "tag": "aside",
+      "xpath": "/html/body/div[3]/aside[1]"
+     },
+     "state": "transactions.index"
+    },
+    {
+     "evidence": {
+      "failureSummary": "Fix all of the following:\n  Focusable content should be disabled or be removed from the DOM"
+     },
+     "occurrence": {
+      "ancestors": [
+       [
+        "_drawerRoot_15kl9_6"
+       ]
+      ],
+      "classes": [
+       "_transitionWrapper_d3i56_5",
+       "_detailsCardWrapper_15kl9_247"
+      ],
+      "data": {},
+      "heading": "Transactions",
+      "landmark": null,
+      "layer": "document",
+      "name": "",
+      "rect": [
+       1188,
+       72,
+       424,
+       900
+      ],
+      "role": "",
+      "tag": "aside",
+      "xpath": "/html/body/div[3]/aside[1]"
+     },
+     "state": "transactions.filter-no-results"
+    }
+   ],
+   "evidenceHash": "be30e0d91dc4650d9ebd5d3160c2a524d81c905f17b837c468c8bec3e7f423d9",
+   "facts": {
+    "announced": " \"\"",
+    "axeSummary": "Focusable content should be disabled or be removed from the DOM",
+    "criterion": "4.1.2",
+    "criterionName": "Name, Role, Value",
+    "element": "text in \"Transactions\"",
+    "rule": "aria-hidden-focus",
+    "screen": "Transactions"
+   },
+   "family": "role-state",
+   "guidance": "Low for optional ARIA or an invalid autocomplete token; high when aria-hidden hides the whole page.",
+   "issueId": null,
+   "key": "role-state:aria-hidden-focus:27887f91376b",
+   "measured": false,
+   "primary": "transactions.index",
+   "proposals": [],
+   "rule": "aria-hidden-focus",
+   "screens": 7,
+   "severityDefault": "medium",
+   "source": "scanner",
+   "states": [
+    "transactions.index",
+    "transactions.filter-no-results"
+   ],
+   "summary": "aria-hidden-focus: announced as  \"\". Focusable content should be disabled or be removed from the DOM",
+   "title": "Focusable but hidden: text in \"Transactions\""
+  },
+  {
+   "attachments": [],
+   "attempt": 1,
+   "basis": "violation",
+   "criteria": [
+    "1.3.5"
+   ],
+   "evidence": [
+    {
+     "evidence": {
+      "failureSummary": "Fix all of the following:\n  the autocomplete attribute is incorrectly formatted"
+     },
+     "occurrence": {
+      "ancestors": [
+       [
+        "_inputWrapper_11c85_6"
+       ],
+       [
+        "_wrapper_1xgdp_8",
+        "_fieldTypeCombobox_1diig_16"
+       ],
+       [
+        "_actionButtons_1pbh4_58"
+       ],
+       [
+        "_contentContainer_1pbh4_46"
+       ],
+       [
+        "_floatingBulkActionsInnerContainer_1pbh4_35"
+       ],
+       [
+        "_floatingBulkActionsOuterContainer_1pbh4_4",
+        "_islandContainer_1diig_1"
+       ]
+      ],
+      "classes": [
+       "_input_11c85_6"
+      ],
+      "data": {
+       "data-1p-ignore": "true",
+       "data-active-item": "true",
+       "data-bwignore": "true",
+       "data-lpignore": "true"
+      },
+      "heading": "Transactions",
+      "landmark": {
+       "name": "0 selected",
+       "role": "dialog"
+      },
+      "layer": "document",
+      "name": "Apply",
+      "rect": [
+       573,
+       952,
+       107,
+       40
+      ],
+      "role": "combobox",
+      "tag": "input",
+      "xpath": "/html/body/dialog[1]/div[1]/div[1]/div[2]/div[1]/div[1]/input[1]"
+     },
+     "state": "transactions.index"
+    },
+    {
+     "evidence": {
+      "failureSummary": "Fix all of the following:\n  the autocomplete attribute is incorrectly formatted"
+     },
+     "occurrence": {
+      "ancestors": [
+       [
+        "_inputWrapper_11c85_6"
+       ],
+       [
+        "_wrapper_1xgdp_8",
+        "_fieldTypeCombobox_1diig_16"
+       ],
+       [
+        "_actionButtons_1pbh4_58"
+       ],
+       [
+        "_contentContainer_1pbh4_46"
+       ],
+       [
+        "_floatingBulkActionsInnerContainer_1pbh4_35"
+       ],
+       [
+        "_floatingBulkActionsOuterContainer_1pbh4_4",
+        "_islandContainer_1diig_1",
+        "_visible_1pbh4_30"
+       ]
+      ],
+      "classes": [
+       "_input_11c85_6"
+      ],
+      "data": {
+       "data-1p-ignore": "true",
+       "data-active-item": "true",
+       "data-bwignore": "true",
+       "data-lpignore": "true"
+      },
+      "heading": "",
+      "landmark": {
+       "name": "3 selected",
+       "role": "dialog"
+      },
+      "layer": "top",
+      "name": "Apply",
+      "rect": [
+       572,
+       802,
+       107,
+       40
+      ],
+      "role": "combobox",
+      "tag": "input",
+      "xpath": "/html/body/dialog[1]/div[1]/div[1]/div[2]/div[1]/div[1]/input[1]"
+     },
+     "state": "transactions.bulk-select"
+    }
+   ],
+   "evidenceHash": "86d021d354c8220929dec77709b208562280321bf3ea6a5ea0c13c93321b18bb",
+   "facts": {
+    "announced": "combobox \"Apply\" [expanded=false, haspopup=listbox]",
+    "axeSummary": "the autocomplete attribute is incorrectly formatted",
+    "criterion": "1.3.5",
+    "criterionName": "Identify Input Purpose",
+    "element": "combobox \"Apply\"",
+    "rule": "autocomplete-valid",
+    "screen": "Transactions"
+   },
+   "family": "role-state",
+   "guidance": "Low for optional ARIA or an invalid autocomplete token; high when aria-hidden hides the whole page.",
+   "issueId": null,
+   "key": "role-state:autocomplete-valid:34dddae9f17a",
+   "measured": false,
+   "primary": "transactions.index",
+   "proposals": [],
+   "rule": "autocomplete-valid",
+   "screens": 8,
+   "severityDefault": "medium",
+   "source": "scanner",
+   "states": [
+    "transactions.index",
+    "transactions.bulk-select"
+   ],
+   "summary": "autocomplete-valid: announced as combobox \"Apply\" [expanded=false, haspopup=listbox]. the autocomplete attribute is incorrectly formatted",
+   "title": "Invalid autocomplete value: combobox \"Apply\""
+  },
+  {
+   "attachments": [],
+   "attempt": 1,
+   "basis": "violation",
+   "criteria": [
+    "1.3.5"
+   ],
+   "evidence": [
+    {
+     "evidence": {
+      "failureSummary": "Fix all of the following:\n  the autocomplete attribute is incorrectly formatted"
+     },
+     "occurrence": {
+      "ancestors": [
+       [
+        "_textboxWrapper_1a7mr_158",
+        "_textboxWrapperUpwards_1a7mr_216"
+       ],
+       [
+        "_selectWrapper_1a7mr_150"
+       ],
+       [
+        "_comboboxWrapper_1a7mr_6",
+        "_tooltipAnchor_18bac_4",
+        "_combobox_1diig_6",
+        "session-replay-block"
+       ],
+       [
+        "_comboboxContainer_1diig_6"
+       ],
+       [
+        "_actionButtons_1pbh4_58"
+       ],
+       [
+        "_contentContainer_1pbh4_46"
+       ],
+       [
+        "_floatingBulkActionsInnerContainer_1pbh4_35"
+       ],
+       [
+        "_floatingBulkActionsOuterContainer_1pbh4_4",
+        "_islandContainer_1diig_1"
+       ]
+      ],
+      "classes": [
+       "_textboxInput_1a7mr_250"
+      ],
+      "data": {},
+      "heading": "Transactions",
+      "landmark": {
+       "name": "0 selected",
+       "role": "dialog"
+      },
+      "layer": "document",
+      "name": "Category",
+      "rect": [
+       726,
+       953,
+       232,
+       38
+      ],
+      "role": "combobox",
+      "tag": "input",
+      "xpath": "/html/body/dialog[1]/div[1]/div[1]/div[2]/div[2]/div[1]/div[1]/div[1]/input[1]"
+     },
+     "state": "transactions.index"
+    },
+    {
+     "evidence": {
+      "failureSummary": "Fix all of the following:\n  the autocomplete attribute is incorrectly formatted"
+     },
+     "occurrence": {
+      "ancestors": [
+       [
+        "_textboxWrapper_1a7mr_158",
+        "_textboxWrapperUpwards_1a7mr_216"
+       ],
+       [
+        "_selectWrapper_1a7mr_150"
+       ],
+       [
+        "_comboboxWrapper_1a7mr_6",
+        "_tooltipAnchor_18bac_4",
+        "_combobox_1diig_6",
+        "session-replay-block"
+       ],
+       [
+        "_comboboxContainer_1diig_6"
+       ],
+       [
+        "_actionButtons_1pbh4_58"
+       ],
+       [
+        "_contentContainer_1pbh4_46"
+       ],
+       [
+        "_floatingBulkActionsInnerContainer_1pbh4_35"
+       ],
+       [
+        "_floatingBulkActionsOuterContainer_1pbh4_4",
+        "_islandContainer_1diig_1",
+        "_visible_1pbh4_30"
+       ]
+      ],
+      "classes": [
+       "_textboxInput_1a7mr_250"
+      ],
+      "data": {},
+      "heading": "",
+      "landmark": {
+       "name": "3 selected",
+       "role": "dialog"
+      },
+      "layer": "top",
+      "name": "Category",
+      "rect": [
+       725,
+       803,
+       232,
+       38
+      ],
+      "role": "combobox",
+      "tag": "input",
+      "xpath": "/html/body/dialog[1]/div[1]/div[1]/div[2]/div[2]/div[1]/div[1]/div[1]/input[1]"
+     },
+     "state": "transactions.bulk-select"
+    }
+   ],
+   "evidenceHash": "86d021d354c8220929dec77709b208562280321bf3ea6a5ea0c13c93321b18bb",
+   "facts": {
+    "announced": "combobox \"Category\" [expanded=false, haspopup=listbox]",
+    "axeSummary": "the autocomplete attribute is incorrectly formatted",
+    "criterion": "1.3.5",
+    "criterionName": "Identify Input Purpose",
+    "element": "combobox \"Category\"",
+    "rule": "autocomplete-valid",
+    "screen": "Transactions"
+   },
+   "family": "role-state",
+   "guidance": "Low for optional ARIA or an invalid autocomplete token; high when aria-hidden hides the whole page.",
+   "issueId": null,
+   "key": "role-state:autocomplete-valid:9ae059821935",
+   "measured": false,
+   "primary": "transactions.index",
+   "proposals": [],
+   "rule": "autocomplete-valid",
+   "screens": 8,
+   "severityDefault": "medium",
+   "source": "scanner",
+   "states": [
+    "transactions.index",
+    "transactions.bulk-select"
+   ],
+   "summary": "autocomplete-valid: announced as combobox \"Category\" [expanded=false, haspopup=listbox]. the autocomplete attribute is incorrectly formatted",
+   "title": "Invalid autocomplete value: combobox \"Category\""
+  },
+  {
+   "attachments": [],
+   "attempt": 1,
+   "basis": "violation",
+   "criteria": [
+    "4.1.2"
+   ],
+   "evidence": [
+    {
+     "evidence": {
+      "failureSummary": "Fix any of the following:\n  Element has focusable descendants"
+     },
+     "occurrence": {
+      "ancestors": [
+       [
+        "_topContent_1ow20_3"
+       ],
+       [
+        "_transactionsPageDashboardWrapper_1ow20_48"
+       ],
+       [
+        "_dashboardContent_809q8_29",
+        "_scrollContainer_809q8_29"
+       ],
+       [
+        "_layout_809q8_18"
+       ],
+       [
+        "_wrapper_809q8_3"
+       ],
+       [],
+       [
+        "_main_1gb3b_1"
+       ],
+       [
+        "mercury-root"
+       ]
+      ],
+      "classes": [
+       "_wrapper_1apo0_1",
+       "session-replay-block",
+       "_collapsed_1apo0_24",
+       "_clickableWhenCollapsed_1apo0_109"
+      ],
+      "data": {},
+      "heading": "Transactions",
+      "landmark": {
+       "name": "",
+       "role": "main"
+      },
+      "layer": "document",
+      "name": "Show graphs Net change this month $ 1 7 , 6 3 5 . 0 7 Money in $ 2 9 5 , 9 6 7 . 2 1 Money out −$ 2 7 8 , 3 3 2 . 1 4",
+      "rect": [
+       220,
+       232,
+       1220,
+       76
+      ],
+      "role": "button",
+      "tag": "div",
+      "xpath": "/html/body/div[1]/main[1]/div[1]/div[1]/div[4]/div[1]/div[2]/div[2]/div[2]"
+     },
+     "state": "transactions.index"
+    },
+    {
+     "evidence": {
+      "failureSummary": "Fix any of the following:\n  Element has focusable descendants"
+     },
+     "occurrence": {
+      "ancestors": [
+       [
+        "_topContent_1ow20_3"
+       ],
+       [
+        "_transactionsPageDashboardWrapper_1ow20_48"
+       ],
+       [
+        "_dashboardContent_809q8_29",
+        "_scrollContainer_809q8_29"
+       ],
+       [
+        "_layout_809q8_18"
+       ],
+       [
+        "_wrapper_809q8_3"
+       ],
+       [],
+       [
+        "_main_1gb3b_1"
+       ],
+       [
+        "mercury-root"
+       ]
+      ],
+      "classes": [
+       "_wrapper_1apo0_1",
+       "session-replay-block",
+       "_collapsed_1apo0_24",
+       "_clickableWhenCollapsed_1apo0_109"
+      ],
+      "data": {},
+      "heading": "Transactions",
+      "landmark": {
+       "name": "",
+       "role": "main"
+      },
+      "layer": "document",
+      "name": "Show graphs Net change this month $ 1 7 , 6 3 5 . 0 7 Money in $ 2 9 5 , 9 6 7 . 2 1 Money out −$ 2 7 8 , 3 3 2 . 1 4",
+      "rect": [
+       220,
+       232,
+       1220,
+       76
+      ],
+      "role": "button",
+      "tag": "div",
+      "xpath": "/html/body/div[1]/main[1]/div[1]/div[1]/div[4]/div[1]/div[2]/div[2]/div[2]"
+     },
+     "state": "transactions.keyword-no-matches"
+    }
+   ],
+   "evidenceHash": "b3fe58436a48934911212676e78c5090f39bf55abddda0382ad924ce496d0cb9",
+   "facts": {
+    "announced": "button \"Show graphs Net change this month <amount> <n> Money in <amount> <n> Mo…",
+    "axeSummary": "Element has focusable descendants",
+    "criterion": "4.1.2",
+    "criterionName": "Name, Role, Value",
+    "element": "button \"Show graphs Net change this month <amoun…\"",
+    "rule": "nested-interactive",
+    "screen": "Transactions"
+   },
+   "family": "role-state",
+   "guidance": "Low for optional ARIA or an invalid autocomplete token; high when aria-hidden hides the whole page.",
+   "issueId": null,
+   "key": "role-state:nested-interactive:c557063b6a71",
+   "measured": false,
+   "primary": "transactions.index",
+   "proposals": [],
+   "rule": "nested-interactive",
+   "screens": 2,
+   "severityDefault": "medium",
+   "source": "scanner",
+   "states": [
+    "transactions.index",
+    "transactions.keyword-no-matches"
+   ],
+   "summary": "nested-interactive: announced as button \"Show graphs Net change this month <amount> <n> Money in <amount> <n> Mo…. Element has focusable descendants",
+   "title": "Control nested in a control: button \"Show graphs Net change this month <amoun…\""
+  },
+  {
+   "attachments": [],
+   "attempt": 1,
+   "basis": "violation",
+   "criteria": [
+    "1.3.1"
+   ],
+   "evidence": [
+    {
+     "evidence": {
+      "failureSummary": "Fix any of the following:\n  Description list item does not have a <dl> parent element"
+     },
+     "occurrence": {
+      "ancestors": [
+       [
+        "_container_16ibf_1"
+       ],
+       [
+        "_hiddenLabel_1xgdp_12",
+        "_label_8ui37_3"
+       ],
+       [
+        "_wrapper_1xgdp_8"
+       ],
+       [
+        "_wrapper_1oqqp_1"
+       ],
+       [
+        "_tableData_1u4jr_5",
+        "_alignmentStart_1u4jr_12",
+        "_fullWidthTable_4sbgh_49",
+        "_body_4sbgh_40",
+        "_customCategory_4sbgh_26"
+       ],
+       [
+        "_tableRow_137xu_3",
+        "_interactiveRows_137xu_35",
+        "_row_1ow20_44"
+       ],
+       [
+        "_tableBody_1cp5b_1"
+       ],
+       [
+        "_table_1acga_4"
+       ]
+      ],
+      "classes": [
+       "_tiny_qaod7_67",
+       "_text-tertiary_12t49_1",
+       "_leftSide_16ibf_13"
+      ],
+      "data": {},
+      "heading": "Transactions",
+      "landmark": {
+       "name": "",
+       "role": "main"
+      },
+      "layer": "document",
+      "name": "Category",
+      "rect": [
+       1190,
+       1003,
+       52,
+       20
+      ],
+      "role": "term",
+      "tag": "dt",
+      "xpath": "/html/body/div[1]/main[1]/div[1]/div[1]/div[4]/div[1]/div[2]/div[3]/div[1]/table[1]/tbody[1]/tr[14]/td[7]/div[1]/div[1]/label[1]/div[1]/dt[1]"
+     },
+     "state": "transactions.index"
+    },
+    {
+     "evidence": {
+      "failureSummary": "Fix any of the following:\n  Description list item does not have a <dl> parent element"
+     },
+     "occurrence": {
+      "ancestors": [
+       [
+        "_container_16ibf_1"
+       ],
+       [
+        "_hiddenLabel_1xgdp_12",
+        "_label_8ui37_3"
+       ],
+       [
+        "_wrapper_1xgdp_8"
+       ],
+       [
+        "_wrapper_1oqqp_1"
+       ],
+       [
+        "_tableData_1u4jr_5",
+        "_alignmentStart_1u4jr_12",
+        "_fullWidthTable_4sbgh_49",
+        "_body_4sbgh_40",
+        "_customCategory_4sbgh_26"
+       ],
+       [
+        "_tableRow_137xu_3",
+        "_interactiveRows_137xu_35",
+        "_selectedRow_137xu_64",
+        "_row_1ow20_44"
+       ],
+       [
+        "_tableBody_1cp5b_1"
+       ],
+       [
+        "_table_1acga_4"
+       ]
+      ],
+      "classes": [
+       "_tiny_qaod7_67",
+       "_text-tertiary_12t49_1",
+       "_leftSide_16ibf_13"
+      ],
+      "data": {},
+      "heading": "",
+      "landmark": {
+       "name": "",
+       "role": "main"
+      },
+      "layer": "top",
+      "name": "Category",
+      "rect": [
+       1190,
+       457,
+       52,
+       20
+      ],
+      "role": "term",
+      "tag": "dt",
+      "xpath": "/html/body/div[1]/main[1]/div[1]/div[1]/div[4]/div[1]/div[2]/div[3]/div[1]/table[1]/tbody[1]/tr[58]/td[7]/div[1]/div[1]/label[1]/div[1]/dt[1]"
+     },
+     "state": "transactions.category-created"
+    }
+   ],
+   "evidenceHash": "ea032d1e5068576cdd38fc9239c232200820745b2e9b1e1cbf4ea7b77a1579a9",
+   "facts": {
+    "announced": "term \"Category\"",
+    "axeSummary": "Description list item does not have a <dl> parent element",
+    "criterion": "1.3.1",
+    "criterionName": "Info and Relationships",
+    "element": "term \"Category\"",
+    "rule": "dlitem",
+    "screen": "Transactions"
+   },
+   "family": "structure",
+   "guidance": "Medium when a data table's headers do not reach its cells, or when structure is the only way to tell sections or steps apart.",
+   "issueId": null,
+   "key": "structure:dlitem:b80008975a6b",
+   "measured": false,
+   "primary": "transactions.index",
+   "proposals": [],
+   "rule": "dlitem",
+   "screens": 7,
+   "severityDefault": "low",
+   "source": "scanner",
+   "states": [
+    "transactions.index",
+    "transactions.category-created"
+   ],
+   "summary": "dlitem: announced as term \"Category\". Description list item does not have a <dl> parent element",
+   "title": "Markup misstates structure: term \"Category\""
+  },
+  {
+   "attachments": [],
+   "attempt": 1,
+   "basis": "candidate",
+   "criteria": [
+    "2.5.8"
+   ],
+   "evidence": [
+    {
+     "evidence": {
+      "agree": false,
+      "axe": "pass",
+      "exception": null,
+      "height": 16.66,
+      "offset": 0,
+      "own": "fail",
+      "passedBy": null,
+      "width": 12.48
+     },
+     "occurrence": {
+      "ancestors": [
+       [
+        "_headerRow_10vn5_37"
+       ],
+       [
+        "_textContent_10vn5_30"
+       ],
+       [
+        "_content_10vn5_18"
+       ],
+       [
+        "_spotlightPortal_10vn5_14"
+       ]
+      ],
+      "classes": [
+       "_closeButton_10vn5_57"
+      ],
+      "data": {},
+      "disabled": false,
+      "heading": "Transactions",
+      "landmark": null,
+      "layer": "document",
+      "name": "Dismiss spotlight",
+      "rect": [
+       1141,
+       267,
+       12,
+       17
+      ],
+      "role": "button",
+      "tag": "button",
+      "xpath": "/html/body/div[15]/div[1]/div[1]/div[1]/button[1]"
+     },
+     "state": "transactions.index"
+    },
+    {
+     "evidence": {
+      "agree": false,
+      "axe": "pass",
+      "exception": null,
+      "height": 16.66,
+      "offset": 0,
+      "own": "fail",
+      "passedBy": null,
+      "width": 12.48
+     },
+     "occurrence": {
+      "ancestors": [
+       [
+        "_headerRow_10vn5_37"
+       ],
+       [
+        "_textContent_10vn5_30"
+       ],
+       [
+        "_content_10vn5_18"
+       ],
+       [
+        "_spotlightPortal_10vn5_14"
+       ]
+      ],
+      "classes": [
+       "_closeButton_10vn5_57"
+      ],
+      "data": {},
+      "disabled": false,
+      "heading": "Transactions",
+      "landmark": null,
+      "layer": "document",
+      "name": "Dismiss spotlight",
+      "rect": [
+       1141,
+       267,
+       12,
+       17
+      ],
+      "role": "button",
+      "tag": "button",
+      "xpath": "/html/body/div[16]/div[1]/div[1]/div[1]/button[1]"
+     },
+     "state": "transactions.keyword-no-matches"
+    }
+   ],
+   "evidenceHash": "d5a8ad7eba28ca58a14f74bc03e4d0c9b31d362bb0cfb7a9bdf52e85f7ae2574",
+   "facts": {
+    "criterion": "2.5.8",
+    "criterionName": "Target Size (Minimum)",
+    "element": "button \"Dismiss spotlight\"",
+    "offset": "0",
+    "rule": "target-size-own",
+    "screen": "Transactions",
+    "screens": 4,
+    "size": "12×17"
+   },
+   "family": "target-size",
+   "guidance": "Medium next to destructive or financial controls.",
+   "issueId": null,
+   "key": "target-size:target-size-own:71c449829f97",
+   "measured": true,
+   "primary": "transactions.index",
+   "proposals": [],
+   "rule": "target-size-own",
+   "screens": 4,
+   "severityDefault": "low",
+   "source": "scanner",
+   "states": [
+    "transactions.index",
+    "transactions.keyword-no-matches"
+   ],
+   "summary": "target-size-own: 12×17 px; the widest circle centered on it that clears other targets is 0 px, and the spacing exception needs 24 px.",
+   "title": "Target under 24×24 px: button \"Dismiss spotlight\""
+  }
+ ],
+ "primaries": [
+  "transactions.index"
+ ],
+ "reach": {
+  "baseUrl": "https://demo.mercury.com",
+  "data": "data",
+  "map": "build/map.json",
+  "run": "2026-10-03-1525",
+  "workspace": "a11y"
+ },
+ "run": "2026-10-03-1525"
+}

@@ -1,0 +1,325 @@
+{
+ "area": "payments",
+ "batch": "verify-502",
+ "findings": [
+  {
+   "attachments": [],
+   "attempt": 1,
+   "basis": "candidate",
+   "criteria": [
+    "4.1.2"
+   ],
+   "evidence": [
+    {
+     "evidence": {
+      "description": "",
+      "name": "Multiple GL Codes",
+      "role": "button",
+      "states": {},
+      "template": "button \"Multiple GL Codes\""
+     },
+     "occurrence": {
+      "ancestors": [
+       [
+        "_buttonWithDivider_1xt6d_80"
+       ],
+       [
+        "_container_1xt6d_3",
+        "_large_1xt6d_15"
+       ],
+       [
+        "_marginBottom_8i915_13"
+       ],
+       [
+        "_formWrapper_8i915_9"
+       ],
+       [],
+       [
+        "_routeContainer_15al5_228"
+       ],
+       [
+        "_routes_15al5_220"
+       ],
+       [
+        "_routeSection_15al5_207"
+       ]
+      ],
+      "classes": [
+       "_segment_1xt6d_7",
+       "_last_1xt6d_76"
+      ],
+      "data": {},
+      "heading": "Categorization",
+      "landmark": {
+       "name": "",
+       "role": "form"
+      },
+      "layer": "document",
+      "name": "Multiple GL Codes",
+      "rect": [
+       720,
+       257,
+       279,
+       38
+      ],
+      "role": "button",
+      "tag": "button",
+      "xpath": "/html/body/div[1]/main[1]/div[1]/div[2]/div[2]/div[1]/div[2]/section[2]/div[1]/div[1]/form[1]/div[1]/div[1]/div[1]/div[2]/button[1]"
+     },
+     "state": "payments.send-categorization"
+    },
+    {
+     "evidence": {
+      "description": "",
+      "name": "Multiple GL Codes",
+      "role": "button",
+      "states": {},
+      "template": "button \"Multiple GL Codes\""
+     },
+     "occurrence": {
+      "ancestors": [
+       [
+        "_buttonWithDivider_1xt6d_80"
+       ],
+       [
+        "_container_1xt6d_3",
+        "_large_1xt6d_15"
+       ],
+       [
+        "_marginBottom_8i915_13"
+       ],
+       [
+        "_formWrapper_8i915_9"
+       ],
+       [],
+       [
+        "_routeContainer_15al5_228"
+       ],
+       [
+        "_routes_15al5_220"
+       ],
+       [
+        "_routeSection_15al5_207"
+       ]
+      ],
+      "classes": [
+       "_segment_1xt6d_7",
+       "_last_1xt6d_76"
+      ],
+      "data": {},
+      "heading": "Categorization",
+      "landmark": {
+       "name": "",
+       "role": "form"
+      },
+      "layer": "document",
+      "name": "Multiple GL Codes",
+      "rect": [
+       360,
+       257,
+       279,
+       38
+      ],
+      "role": "button",
+      "tag": "button",
+      "xpath": "/html/body/div[1]/main[1]/div[1]/div[2]/div[2]/div[1]/div[2]/section[2]/div[1]/div[1]/form[1]/div[1]/div[1]/div[1]/div[2]/button[1]"
+     },
+     "state": "billpay.pay-categorization"
+    }
+   ],
+   "evidenceHash": "036f70584f25473a26a15fbbe5817dac78d4b410023413f68a828ff17bd6ebf8",
+   "facts": {
+    "announced": "button \"Multiple GL Codes\"",
+    "axeSummary": "",
+    "criterion": "4.1.2",
+    "criterionName": "Name, Role, Value",
+    "element": "button \"Multiple GL Codes\"",
+    "rule": "announced-as",
+    "screen": "Send: Categorization step"
+   },
+   "family": "role-state",
+   "guidance": "Low for optional ARIA or an invalid autocomplete token; high when aria-hidden hides the whole page.",
+   "issueId": null,
+   "key": "role-state:announced-as:27be60d37569",
+   "measured": false,
+   "primary": "payments.send-categorization",
+   "proposals": [],
+   "rule": "announced-as",
+   "screens": 2,
+   "severityDefault": "medium",
+   "source": "scanner",
+   "states": [
+    "payments.send-categorization",
+    "billpay.pay-categorization"
+   ],
+   "summary": "announced-as: announced as button \"Multiple GL Codes\".",
+   "title": "Wrong role or state: button \"Multiple GL Codes\""
+  },
+  {
+   "attachments": [],
+   "attempt": 1,
+   "basis": "candidate",
+   "criteria": [
+    "4.1.2"
+   ],
+   "evidence": [
+    {
+     "evidence": {
+      "description": "",
+      "name": "Single GL Code",
+      "role": "button",
+      "states": {},
+      "template": "button \"Single GL Code\""
+     },
+     "occurrence": {
+      "ancestors": [
+       [
+        "_buttonWithDivider_1xt6d_80"
+       ],
+       [
+        "_container_1xt6d_3",
+        "_large_1xt6d_15"
+       ],
+       [
+        "_marginBottom_8i915_13"
+       ],
+       [
+        "_formWrapper_8i915_9"
+       ],
+       [],
+       [
+        "_routeContainer_15al5_228"
+       ],
+       [
+        "_routes_15al5_220"
+       ],
+       [
+        "_routeSection_15al5_207"
+       ]
+      ],
+      "classes": [
+       "_segment_1xt6d_7",
+       "_selected_1xt6d_60",
+       "_first_1xt6d_73"
+      ],
+      "data": {},
+      "heading": "Categorization",
+      "landmark": {
+       "name": "",
+       "role": "form"
+      },
+      "layer": "document",
+      "name": "Single GL Code",
+      "rect": [
+       440,
+       256,
+       281,
+       40
+      ],
+      "role": "button",
+      "tag": "button",
+      "xpath": "/html/body/div[1]/main[1]/div[1]/div[2]/div[2]/div[1]/div[2]/section[2]/div[1]/div[1]/form[1]/div[1]/div[1]/div[1]/div[1]/button[1]"
+     },
+     "state": "payments.send-categorization"
+    },
+    {
+     "evidence": {
+      "description": "",
+      "name": "Single GL Code",
+      "role": "button",
+      "states": {},
+      "template": "button \"Single GL Code\""
+     },
+     "occurrence": {
+      "ancestors": [
+       [
+        "_buttonWithDivider_1xt6d_80"
+       ],
+       [
+        "_container_1xt6d_3",
+        "_large_1xt6d_15"
+       ],
+       [
+        "_marginBottom_8i915_13"
+       ],
+       [
+        "_formWrapper_8i915_9"
+       ],
+       [],
+       [
+        "_routeContainer_15al5_228"
+       ],
+       [
+        "_routes_15al5_220"
+       ],
+       [
+        "_routeSection_15al5_207"
+       ]
+      ],
+      "classes": [
+       "_segment_1xt6d_7",
+       "_selected_1xt6d_60",
+       "_first_1xt6d_73"
+      ],
+      "data": {},
+      "heading": "Categorization",
+      "landmark": {
+       "name": "",
+       "role": "form"
+      },
+      "layer": "document",
+      "name": "Single GL Code",
+      "rect": [
+       80,
+       256,
+       281,
+       40
+      ],
+      "role": "button",
+      "tag": "button",
+      "xpath": "/html/body/div[1]/main[1]/div[1]/div[2]/div[2]/div[1]/div[2]/section[2]/div[1]/div[1]/form[1]/div[1]/div[1]/div[1]/div[1]/button[1]"
+     },
+     "state": "billpay.pay-categorization"
+    }
+   ],
+   "evidenceHash": "bf563baa3b7d6d6d869ed1901a91c5f5b40a0f0c0120a07cf760a52c0d5811d8",
+   "facts": {
+    "announced": "button \"Single GL Code\"",
+    "axeSummary": "",
+    "criterion": "4.1.2",
+    "criterionName": "Name, Role, Value",
+    "element": "button \"Single GL Code\"",
+    "rule": "announced-as",
+    "screen": "Send: Categorization step"
+   },
+   "family": "role-state",
+   "guidance": "Low for optional ARIA or an invalid autocomplete token; high when aria-hidden hides the whole page.",
+   "issueId": null,
+   "key": "role-state:announced-as:59ae8ce26a94",
+   "measured": false,
+   "primary": "payments.send-categorization",
+   "proposals": [],
+   "rule": "announced-as",
+   "screens": 2,
+   "severityDefault": "medium",
+   "source": "scanner",
+   "states": [
+    "payments.send-categorization",
+    "billpay.pay-categorization"
+   ],
+   "summary": "announced-as: announced as button \"Single GL Code\".",
+   "title": "Wrong role or state: button \"Single GL Code\""
+  }
+ ],
+ "primaries": [
+  "payments.send-categorization"
+ ],
+ "reach": {
+  "baseUrl": "https://demo.mercury.com",
+  "data": "data",
+  "map": "build/map.json",
+  "run": "2026-10-03-1525",
+  "workspace": "a11y"
+ },
+ "run": "2026-10-03-1525"
+}

@@ -1,0 +1,686 @@
+{
+ "area": "transactions",
+ "batch": "verify-566",
+ "findings": [
+  {
+   "attachments": [],
+   "attempt": 1,
+   "basis": "failure",
+   "criteria": [
+    "4.1.3"
+   ],
+   "evidence": [
+    {
+     "evidence": {
+      "focus": {
+       "ancestors": [
+        [
+         "_inputBox_q7hf7_93",
+         "_hasValue_q7hf7_171",
+         "_error_q7hf7_41"
+        ],
+        [
+         "_inputBoxWrapper_q7hf7_93"
+        ],
+        [
+         "_textInputWrapper_q7hf7_24"
+        ],
+        [
+         "_provideDSTextInput_q7hf7_6",
+         "_input_xwodo_18"
+        ],
+        [
+         "_inputAndReset_xwodo_18"
+        ],
+        [],
+        [
+         "_wrapper_1txk6_3"
+        ],
+        []
+       ],
+       "classes": [
+        "_input_q7hf7_93"
+       ],
+       "data": {},
+       "heading": "",
+       "landmark": {
+        "name": "",
+        "role": "form"
+       },
+       "layer": "document",
+       "name": "No more than...",
+       "rect": [
+        757,
+        637,
+        243,
+        24
+       ],
+       "role": "textbox",
+       "tag": "input",
+       "xpath": "/html/body/div[15]/div[1]/div[1]/div[2]/div[2]/div[3]/form[1]/div[1]/div[1]/div[3]/div[2]/div[1]/div[1]/div[1]/input[1]"
+      },
+      "focused": false,
+      "message": "Revert changes",
+      "region": null
+     },
+     "occurrence": {
+      "ancestors": [
+       [
+        "_tableActions_grqat_89"
+       ],
+       [
+        "_toolbarContainer_grqat_4"
+       ],
+       [
+        "_filtersAndExportButton_1ow20_72"
+       ],
+       [
+        "_topContent_1ow20_3"
+       ],
+       [
+        "_transactionsPageDashboardWrapper_1ow20_48"
+       ],
+       [
+        "_dashboardContent_809q8_29",
+        "_scrollContainer_809q8_29"
+       ],
+       [
+        "_layout_809q8_18"
+       ],
+       [
+        "_wrapper_809q8_3"
+       ]
+      ],
+      "classes": [
+       "_button_r6b2u_20",
+       "_small_r6b2u_72",
+       "_tertiary_r6b2u_153"
+      ],
+      "data": {},
+      "heading": "",
+      "landmark": {
+       "name": "",
+       "role": "main"
+      },
+      "layer": "document",
+      "name": "Revert changes",
+      "rect": [
+       915,
+       184,
+       137,
+       32
+      ],
+      "role": "button",
+      "tag": "button",
+      "xpath": "/html/body/div[1]/main[1]/div[1]/div[1]/div[4]/div[1]/div[2]/div[2]/div[1]/div[1]/span[2]/button[1]"
+     },
+     "state": "transactions.filter-amount-invalid"
+    }
+   ],
+   "evidenceHash": "e0778cd0012ba1e7cecd5392cb874ab8c1ea207702eb87feea5daf8092062427",
+   "facts": {
+    "criterion": "4.1.3",
+    "criterionName": "Status Messages",
+    "focus": "textbox \"No more than...\"",
+    "message": "\"Revert changes\"",
+    "screen": "Amount range validation"
+   },
+   "family": "status-message",
+   "guidance": "High when it is the only confirmation of a money movement.",
+   "issueId": null,
+   "key": "status-message:status-not-announced:2179887bb495",
+   "measured": false,
+   "primary": "transactions.filter-amount-invalid",
+   "proposals": [],
+   "rule": "status-not-announced",
+   "screens": 1,
+   "severityDefault": "medium",
+   "source": "scanner",
+   "states": [
+    "transactions.filter-amount-invalid"
+   ],
+   "summary": "\"Revert changes\" appeared outside any live region, alert or status role that existed before it, and focus stayed on the textbox \"No more than...\".",
+   "title": "Status message not announced: \"Revert changes\""
+  },
+  {
+   "attachments": [],
+   "attempt": 1,
+   "basis": "failure",
+   "criteria": [
+    "4.1.3"
+   ],
+   "evidence": [
+    {
+     "evidence": {
+      "focus": {
+       "ancestors": [
+        [
+         "_inputBox_q7hf7_93",
+         "_hasValue_q7hf7_171",
+         "_error_q7hf7_41"
+        ],
+        [
+         "_inputBoxWrapper_q7hf7_93"
+        ],
+        [
+         "_textInputWrapper_q7hf7_24"
+        ],
+        [
+         "_provideDSTextInput_q7hf7_6",
+         "_input_xwodo_18"
+        ],
+        [
+         "_inputAndReset_xwodo_18"
+        ],
+        [],
+        [
+         "_wrapper_1txk6_3"
+        ],
+        []
+       ],
+       "classes": [
+        "_input_q7hf7_93"
+       ],
+       "data": {},
+       "heading": "",
+       "landmark": {
+        "name": "",
+        "role": "form"
+       },
+       "layer": "document",
+       "name": "No more than...",
+       "rect": [
+        757,
+        637,
+        243,
+        24
+       ],
+       "role": "textbox",
+       "tag": "input",
+       "xpath": "/html/body/div[15]/div[1]/div[1]/div[2]/div[2]/div[3]/form[1]/div[1]/div[1]/div[3]/div[2]/div[1]/div[1]/div[1]/input[1]"
+      },
+      "focused": false,
+      "message": "Money out, ≥ $150,",
+      "region": null
+     },
+     "occurrence": {
+      "ancestors": [
+       [
+        "_label_qaod7_59",
+        "_text-default_12t49_1"
+       ],
+       [
+        "_left_54yyd_13"
+       ],
+       [
+        "_filterMenuTopContent_54yyd_4"
+       ],
+       [
+        "_filterMenu_veh3u_4",
+        "_transactionFilterMenu_54yyd_19"
+       ],
+       [],
+       []
+      ],
+      "classes": [
+       "_italic_qaod7_112"
+      ],
+      "data": {},
+      "heading": "",
+      "landmark": null,
+      "layer": "document",
+      "name": "",
+      "rect": [
+       556,
+       258,
+       120,
+       15
+      ],
+      "role": "",
+      "tag": "span",
+      "xpath": "/html/body/div[15]/div[1]/div[1]/div[1]/div[1]/span[2]/span[2]"
+     },
+     "state": "transactions.filter-amount-invalid"
+    }
+   ],
+   "evidenceHash": "dc610d23bf5d55fac805e78c282e6f955fd8f1200f96e407d6a4cbb5f9e9dfdb",
+   "facts": {
+    "criterion": "4.1.3",
+    "criterionName": "Status Messages",
+    "focus": "textbox \"No more than...\"",
+    "message": "\"Money out, ≥ <amount>\"",
+    "screen": "Amount range validation"
+   },
+   "family": "status-message",
+   "guidance": "High when it is the only confirmation of a money movement.",
+   "issueId": null,
+   "key": "status-message:status-not-announced:2235a5b94f9b",
+   "measured": false,
+   "primary": "transactions.filter-amount-invalid",
+   "proposals": [],
+   "rule": "status-not-announced",
+   "screens": 1,
+   "severityDefault": "medium",
+   "source": "scanner",
+   "states": [
+    "transactions.filter-amount-invalid"
+   ],
+   "summary": "\"Money out, ≥ <amount>\" appeared outside any live region, alert or status role that existed before it, and focus stayed on the textbox \"No more than...\".",
+   "title": "Status message not announced: \"Money out, ≥ <amount>\""
+  },
+  {
+   "attachments": [],
+   "attempt": 1,
+   "basis": "failure",
+   "criteria": [
+    "4.1.3"
+   ],
+   "evidence": [
+    {
+     "evidence": {
+      "focus": {
+       "ancestors": [
+        [
+         "_inputBox_q7hf7_93",
+         "_hasValue_q7hf7_171",
+         "_error_q7hf7_41"
+        ],
+        [
+         "_inputBoxWrapper_q7hf7_93"
+        ],
+        [
+         "_textInputWrapper_q7hf7_24"
+        ],
+        [
+         "_provideDSTextInput_q7hf7_6",
+         "_input_xwodo_18"
+        ],
+        [
+         "_inputAndReset_xwodo_18"
+        ],
+        [],
+        [
+         "_wrapper_1txk6_3"
+        ],
+        []
+       ],
+       "classes": [
+        "_input_q7hf7_93"
+       ],
+       "data": {},
+       "heading": "",
+       "landmark": {
+        "name": "",
+        "role": "form"
+       },
+       "layer": "document",
+       "name": "No more than...",
+       "rect": [
+        757,
+        637,
+        243,
+        24
+       ],
+       "role": "textbox",
+       "tag": "input",
+       "xpath": "/html/body/div[15]/div[1]/div[1]/div[2]/div[2]/div[3]/form[1]/div[1]/div[1]/div[3]/div[2]/div[1]/div[1]/div[1]/input[1]"
+      },
+      "focused": false,
+      "message": "55 Transactions",
+      "region": null
+     },
+     "occurrence": {
+      "ancestors": [
+       [
+        "_wrapper_1ham9_3"
+       ],
+       [
+        "_regularFooter_1ow20_197"
+       ],
+       [
+        "_transactionsPageDashboardWrapper_1ow20_48"
+       ],
+       [
+        "_dashboardContent_809q8_29",
+        "_scrollContainer_809q8_29"
+       ],
+       [
+        "_layout_809q8_18"
+       ],
+       [
+        "_wrapper_809q8_3"
+       ],
+       [],
+       [
+        "_main_1gb3b_1"
+       ]
+      ],
+      "classes": [
+       "_label_qaod7_59",
+       "_text-default_12t49_1",
+       "_label_1ham9_9"
+      ],
+      "data": {
+       "data-testid": "pagination-count"
+      },
+      "heading": "",
+      "landmark": {
+       "name": "",
+       "role": "main"
+      },
+      "layer": "document",
+      "name": "",
+      "rect": [
+       244,
+       3117,
+       96,
+       20
+      ],
+      "role": "",
+      "tag": "span",
+      "xpath": "/html/body/div[1]/main[1]/div[1]/div[1]/div[4]/div[1]/div[2]/div[4]/div[1]/span[1]"
+     },
+     "state": "transactions.filter-amount-invalid"
+    }
+   ],
+   "evidenceHash": "086301582f9110ee8f388d9b6b89ee3854bcf3183f4dadada724e7c091b0fd05",
+   "facts": {
+    "criterion": "4.1.3",
+    "criterionName": "Status Messages",
+    "focus": "textbox \"No more than...\"",
+    "message": "\"<n> Transactions\"",
+    "screen": "Amount range validation"
+   },
+   "family": "status-message",
+   "guidance": "High when it is the only confirmation of a money movement.",
+   "issueId": null,
+   "key": "status-message:status-not-announced:248ad1545800",
+   "measured": false,
+   "primary": "transactions.filter-amount-invalid",
+   "proposals": [],
+   "rule": "status-not-announced",
+   "screens": 1,
+   "severityDefault": "medium",
+   "source": "scanner",
+   "states": [
+    "transactions.filter-amount-invalid"
+   ],
+   "summary": "\"<n> Transactions\" appeared outside any live region, alert or status role that existed before it, and focus stayed on the textbox \"No more than...\".",
+   "title": "Status message not announced: \"<n> Transactions\""
+  },
+  {
+   "attachments": [],
+   "attempt": 1,
+   "basis": "failure",
+   "criteria": [
+    "4.1.3"
+   ],
+   "evidence": [
+    {
+     "evidence": {
+      "focus": {
+       "ancestors": [
+        [
+         "_inputBox_q7hf7_93",
+         "_hasValue_q7hf7_171",
+         "_error_q7hf7_41"
+        ],
+        [
+         "_inputBoxWrapper_q7hf7_93"
+        ],
+        [
+         "_textInputWrapper_q7hf7_24"
+        ],
+        [
+         "_provideDSTextInput_q7hf7_6",
+         "_input_xwodo_18"
+        ],
+        [
+         "_inputAndReset_xwodo_18"
+        ],
+        [],
+        [
+         "_wrapper_1txk6_3"
+        ],
+        []
+       ],
+       "classes": [
+        "_input_q7hf7_93"
+       ],
+       "data": {},
+       "heading": "",
+       "landmark": {
+        "name": "",
+        "role": "form"
+       },
+       "layer": "document",
+       "name": "No more than...",
+       "rect": [
+        757,
+        637,
+        243,
+        24
+       ],
+       "role": "textbox",
+       "tag": "input",
+       "xpath": "/html/body/div[15]/div[1]/div[1]/div[2]/div[2]/div[3]/form[1]/div[1]/div[1]/div[3]/div[2]/div[1]/div[1]/div[1]/input[1]"
+      },
+      "focused": false,
+      "message": "Monthly money out (edited)",
+      "region": null
+     },
+     "occurrence": {
+      "ancestors": [
+       [
+        "_left_54yyd_13"
+       ],
+       [
+        "_filterMenuTopContent_54yyd_4"
+       ],
+       [
+        "_filterMenu_veh3u_4",
+        "_transactionFilterMenu_54yyd_19"
+       ],
+       [],
+       []
+      ],
+      "classes": [
+       "_bodyDefault_qaod7_40",
+       "_text-secondary_12t49_1"
+      ],
+      "data": {},
+      "heading": "",
+      "landmark": null,
+      "layer": "document",
+      "name": "",
+      "rect": [
+       482,
+       232,
+       271,
+       24
+      ],
+      "role": "",
+      "tag": "span",
+      "xpath": "/html/body/div[15]/div[1]/div[1]/div[1]/div[1]/span[1]"
+     },
+     "state": "transactions.filter-amount-invalid"
+    }
+   ],
+   "evidenceHash": "8db68fd977ec20fd16c66f9392222352873372a401d8bfedf8a226316154b7a6",
+   "facts": {
+    "criterion": "4.1.3",
+    "criterionName": "Status Messages",
+    "focus": "textbox \"No more than...\"",
+    "message": "\"Monthly money out (edited)\"",
+    "screen": "Amount range validation"
+   },
+   "family": "status-message",
+   "guidance": "High when it is the only confirmation of a money movement.",
+   "issueId": null,
+   "key": "status-message:status-not-announced:73f5ad64e150",
+   "measured": false,
+   "primary": "transactions.filter-amount-invalid",
+   "proposals": [],
+   "rule": "status-not-announced",
+   "screens": 1,
+   "severityDefault": "medium",
+   "source": "scanner",
+   "states": [
+    "transactions.filter-amount-invalid"
+   ],
+   "summary": "\"Monthly money out (edited)\" appeared outside any live region, alert or status role that existed before it, and focus stayed on the textbox \"No more than...\".",
+   "title": "Status message not announced: \"Monthly money out (edited)\""
+  },
+  {
+   "attachments": [],
+   "attempt": 1,
+   "basis": "failure",
+   "criteria": [
+    "4.1.3"
+   ],
+   "evidence": [
+    {
+     "evidence": {
+      "focus": {
+       "ancestors": [
+        [
+         "_inputBox_q7hf7_93",
+         "_hasValue_q7hf7_171",
+         "_error_q7hf7_41"
+        ],
+        [
+         "_inputBoxWrapper_q7hf7_93"
+        ],
+        [
+         "_textInputWrapper_q7hf7_24"
+        ],
+        [
+         "_provideDSTextInput_q7hf7_6",
+         "_input_xwodo_18"
+        ],
+        [
+         "_inputAndReset_xwodo_18"
+        ],
+        [],
+        [
+         "_wrapper_1txk6_3"
+        ],
+        []
+       ],
+       "classes": [
+        "_input_q7hf7_93"
+       ],
+       "data": {},
+       "heading": "",
+       "landmark": {
+        "name": "",
+        "role": "form"
+       },
+       "layer": "document",
+       "name": "No more than...",
+       "rect": [
+        757,
+        637,
+        243,
+        24
+       ],
+       "role": "textbox",
+       "tag": "input",
+       "xpath": "/html/body/div[15]/div[1]/div[1]/div[2]/div[2]/div[3]/form[1]/div[1]/div[1]/div[3]/div[2]/div[1]/div[1]/div[1]/input[1]"
+      },
+      "focused": false,
+      "message": "Editing",
+      "region": null
+     },
+     "occurrence": {
+      "ancestors": [
+       [
+        "_bodyDefault_qaod7_40",
+        "_label_1xw00_17"
+       ],
+       [
+        "_mainElement_1xw00_24",
+        "_interactive_1xw00_134",
+        "_dropdownChip_r52w9_7"
+       ],
+       [
+        "_chip_1xw00_8",
+        "_active_1xw00_161",
+        "_truncateText_1xw00_16"
+       ],
+       [],
+       [
+        "_tableViewsAndFilters_grqat_82"
+       ],
+       [
+        "_toolbarContainer_grqat_4"
+       ],
+       [
+        "_filtersAndExportButton_1ow20_72"
+       ],
+       [
+        "_topContent_1ow20_3"
+       ]
+      ],
+      "classes": [
+       "_hiddenPrefix_1vbl1_3"
+      ],
+      "data": {},
+      "heading": "",
+      "landmark": {
+       "name": "",
+       "role": "main"
+      },
+      "layer": "document",
+      "name": "",
+      "rect": [
+       274,
+       187,
+       1,
+       1
+      ],
+      "role": "",
+      "tag": "span",
+      "xpath": "/html/body/div[1]/main[1]/div[1]/div[1]/div[4]/div[1]/div[2]/div[2]/div[1]/div[1]/span[1]/span[1]/span[1]/button[1]/span[2]/span[1]"
+     },
+     "state": "transactions.filter-amount-invalid"
+    }
+   ],
+   "evidenceHash": "fa7ce470b87bba0839cac299f831badd36fbfc2aea8ad3309cb299112ca1cf35",
+   "facts": {
+    "criterion": "4.1.3",
+    "criterionName": "Status Messages",
+    "focus": "textbox \"No more than...\"",
+    "message": "\"Editing\"",
+    "screen": "Amount range validation"
+   },
+   "family": "status-message",
+   "guidance": "High when it is the only confirmation of a money movement.",
+   "issueId": null,
+   "key": "status-message:status-not-announced:a4999281db79",
+   "measured": false,
+   "primary": "transactions.filter-amount-invalid",
+   "proposals": [],
+   "rule": "status-not-announced",
+   "screens": 1,
+   "severityDefault": "medium",
+   "source": "scanner",
+   "states": [
+    "transactions.filter-amount-invalid"
+   ],
+   "summary": "\"Editing\" appeared outside any live region, alert or status role that existed before it, and focus stayed on the textbox \"No more than...\".",
+   "title": "Status message not announced: \"Editing\""
+  }
+ ],
+ "primaries": [
+  "transactions.filter-amount-invalid"
+ ],
+ "reach": {
+  "baseUrl": "https://demo.mercury.com",
+  "data": "data",
+  "map": "build/map.json",
+  "run": "2026-10-03-1525",
+  "workspace": "a11y"
+ },
+ "run": "2026-10-03-1525"
+}

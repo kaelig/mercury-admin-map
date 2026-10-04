@@ -1,0 +1,841 @@
+{
+ "area": "accounts",
+ "batch": "second-042",
+ "findings": [
+  {
+   "attachments": [],
+   "attempt": 1,
+   "basis": "candidate",
+   "criteria": [
+    "4.1.2"
+   ],
+   "evidence": [
+    {
+     "evidence": {
+      "description": "",
+      "name": "",
+      "role": "checkbox",
+      "states": {
+       "checked": false
+      },
+      "template": "checkbox \"\" [checked=false]"
+     },
+     "occurrence": {
+      "ancestors": [
+       [
+        "_checkboxHeightFix_1wfxj_6",
+        "_checkboxWrapper_1758n_62",
+        "_defaultCheckboxWrapper_1km7i_14",
+        "_inTable_1758n_108"
+       ],
+       [
+        "_tableData_1u4jr_5",
+        "_alignmentCenter_1u4jr_17",
+        "_checkboxCell_1u4jr_75"
+       ],
+       [
+        "_tableRow_137xu_3",
+        "_interactiveRows_137xu_35",
+        "_large_137xu_29",
+        "_reviewTableRow_1d15f_6"
+       ],
+       [
+        "_tableBody_1cp5b_1"
+       ],
+       [
+        "_table_1acga_4"
+       ],
+       [
+        "_tableWrapper_1acga_4"
+       ],
+       [
+        "_tableWrapper_1d15f_1"
+       ],
+       [
+        "_pageContent_809q8_151",
+        "_pageContentWidth_809q8_184",
+        "_footerPadding_809q8_115"
+       ]
+      ],
+      "classes": [
+       "_input_1758n_13",
+       "_defaultInput_1km7i_44"
+      ],
+      "data": {},
+      "heading": "Checkbooks",
+      "landmark": {
+       "name": "",
+       "role": "main"
+      },
+      "layer": "document",
+      "name": "",
+      "rect": [
+       346,
+       241,
+       40,
+       40
+      ],
+      "role": "checkbox",
+      "tag": "input",
+      "xpath": "/html/body/div[1]/main[1]/div[1]/div[1]/div[4]/div[1]/div[2]/div[2]/div[1]/table[1]/tbody[1]/tr[1]/td[1]/div[1]/input[1]"
+     },
+     "state": "accounts.checkbooks-hub"
+    },
+    {
+     "evidence": {
+      "description": "",
+      "name": "",
+      "role": "checkbox",
+      "states": {
+       "checked": false
+      },
+      "template": "checkbox \"\" [checked=false]"
+     },
+     "occurrence": {
+      "ancestors": [
+       [
+        "_checkboxHeightFix_1wfxj_6",
+        "_checkboxWrapper_1758n_62",
+        "_defaultCheckboxWrapper_1km7i_14",
+        "_inTable_1758n_108"
+       ],
+       [
+        "_tableHead_hi0p4_3",
+        "_alignmentCenter_hi0p4_15",
+        "_fullWidthTable_4sbgh_49",
+        "_header_4sbgh_38",
+        "_select_4sbgh_2",
+        "_firstColumn_4sbgh_56",
+        "_checkboxCell_hi0p4_31"
+       ],
+       [
+        "_tableHeadRow_1rlph_21"
+       ],
+       [
+        "_tableHead_1rlph_1",
+        "_transactionsTableHeader_1ow20_37",
+        "_fullWidthTable_1ow20_37"
+       ],
+       [
+        "_table_1acga_4"
+       ],
+       [
+        "_tableWrapper_1ow20_26",
+        "_tableWrapper_1acga_4"
+       ],
+       [],
+       [
+        "_transactionsPageDashboardWrapper_1ow20_48"
+       ]
+      ],
+      "classes": [
+       "_input_1758n_13",
+       "_defaultInput_1km7i_44"
+      ],
+      "data": {},
+      "heading": "Transactions",
+      "landmark": {
+       "name": "",
+       "role": "main"
+      },
+      "layer": "document",
+      "name": "",
+      "rect": [
+       230,
+       311,
+       40,
+       40
+      ],
+      "role": "checkbox",
+      "tag": "input",
+      "xpath": "/html/body/div[1]/main[1]/div[1]/div[1]/div[4]/div[1]/div[2]/div[3]/div[1]/table[1]/thead[1]/tr[1]/th[1]/div[1]/input[1]"
+     },
+     "state": "transactions.keyword-no-matches"
+    }
+   ],
+   "evidenceHash": "fd722000de811721b6bce2a7c0f1c4ff15936f70e0f98776eaaa51faf29bde81",
+   "facts": {
+    "announced": "checkbox \"\" [checked=false]",
+    "axeSummary": "",
+    "criterion": "4.1.2",
+    "criterionName": "Name, Role, Value",
+    "element": "checkbox in \"Checkbooks\"",
+    "rule": "announced-as",
+    "screen": "Checkbooks hub (after Done)"
+   },
+   "family": "name",
+   "guidance": "High for an unnamed form control or the sole primary action.",
+   "issueId": null,
+   "key": "name:announced-as:48a153145c04",
+   "measured": false,
+   "primary": "accounts.checkbooks-hub",
+   "proposals": [],
+   "rule": "announced-as",
+   "screens": 43,
+   "severityDefault": "medium",
+   "source": "scanner",
+   "states": [
+    "accounts.checkbooks-hub",
+    "transactions.keyword-no-matches"
+   ],
+   "summary": "announced-as: announced as checkbox \"\" [checked=false].",
+   "title": "Missing or unclear name: checkbox in \"Checkbooks\""
+  },
+  {
+   "attachments": [],
+   "attempt": 1,
+   "basis": "candidate",
+   "criteria": [
+    "4.1.2"
+   ],
+   "evidence": [
+    {
+     "evidence": {
+      "description": "",
+      "name": "",
+      "role": "checkbox",
+      "states": {
+       "checked": false,
+       "disabled": true
+      },
+      "template": "checkbox \"\" [checked=false, disabled=true]"
+     },
+     "occurrence": {
+      "ancestors": [
+       [
+        "_checkboxHeightFix_1wfxj_6",
+        "_checkboxWrapper_1758n_62",
+        "_defaultCheckboxWrapper_1km7i_14",
+        "_disabled_1km7i_21",
+        "_disabled_1758n_85",
+        "_inTable_1758n_108"
+       ],
+       [
+        "_tableData_1u4jr_5",
+        "_alignmentCenter_1u4jr_17",
+        "_checkboxCell_1u4jr_75"
+       ],
+       [
+        "_tableRow_137xu_3",
+        "_interactiveRows_137xu_35",
+        "_large_137xu_29",
+        "_reviewTableRow_1d15f_6"
+       ],
+       [
+        "_tableBody_1cp5b_1"
+       ],
+       [
+        "_table_1acga_4"
+       ],
+       [
+        "_tableWrapper_1acga_4"
+       ],
+       [
+        "_tableWrapper_1d15f_1"
+       ],
+       [
+        "_pageContent_809q8_151",
+        "_pageContentWidth_809q8_184",
+        "_footerPadding_809q8_115"
+       ]
+      ],
+      "classes": [
+       "_input_1758n_13",
+       "_defaultInput_1km7i_44"
+      ],
+      "data": {},
+      "heading": "Checkbooks",
+      "landmark": {
+       "name": "",
+       "role": "main"
+      },
+      "layer": "document",
+      "name": "",
+      "rect": [
+       346,
+       505,
+       40,
+       40
+      ],
+      "role": "checkbox",
+      "tag": "input",
+      "xpath": "/html/body/div[1]/main[1]/div[1]/div[1]/div[4]/div[1]/div[2]/div[2]/div[1]/table[1]/tbody[1]/tr[5]/td[1]/div[1]/input[1]"
+     },
+     "state": "accounts.checkbooks-hub"
+    },
+    {
+     "evidence": {
+      "description": "",
+      "name": "",
+      "role": "checkbox",
+      "states": {
+       "checked": false,
+       "disabled": true
+      },
+      "template": "checkbox \"\" [checked=false, disabled=true]"
+     },
+     "occurrence": {
+      "ancestors": [
+       [
+        "_checkboxHeightFix_1wfxj_6",
+        "_checkboxWrapper_1758n_62",
+        "_defaultCheckboxWrapper_1km7i_14",
+        "_disabled_1km7i_21",
+        "_disabled_1758n_85",
+        "_inTable_1758n_108"
+       ],
+       [
+        "_tableHead_hi0p4_3",
+        "_alignmentCenter_hi0p4_15",
+        "_fullWidthTable_4sbgh_49",
+        "_header_4sbgh_38",
+        "_select_4sbgh_2",
+        "_firstColumn_4sbgh_56",
+        "_checkboxCell_hi0p4_31"
+       ],
+       [
+        "_tableHeadRow_1rlph_21"
+       ],
+       [
+        "_tableHead_1rlph_1",
+        "_transactionsTableHeader_1ow20_37",
+        "_fullWidthTable_1ow20_37"
+       ],
+       [
+        "_table_1acga_4"
+       ],
+       [
+        "_tableWrapper_1ow20_26",
+        "_tableWrapper_1acga_4"
+       ],
+       [],
+       [
+        "_transactionsPageDashboardWrapper_1ow20_48"
+       ]
+      ],
+      "classes": [
+       "_input_1758n_13",
+       "_defaultInput_1km7i_44"
+      ],
+      "data": {},
+      "heading": "Transactions",
+      "landmark": {
+       "name": "",
+       "role": "main"
+      },
+      "layer": "document",
+      "name": "",
+      "rect": [
+       230,
+       311,
+       40,
+       40
+      ],
+      "role": "checkbox",
+      "tag": "input",
+      "xpath": "/html/body/div[1]/main[1]/div[1]/div[1]/div[4]/div[1]/div[2]/div[3]/div[1]/table[1]/thead[1]/tr[1]/th[1]/div[1]/input[1]"
+     },
+     "state": "transactions.filter-no-results"
+    }
+   ],
+   "evidenceHash": "d44d26eae229d9de7b4a544e71b13aabb442c805903fcebc6aaf8cc8317123e8",
+   "facts": {
+    "announced": "checkbox \"\" [checked=false, disabled=true]",
+    "axeSummary": "",
+    "criterion": "4.1.2",
+    "criterionName": "Name, Role, Value",
+    "element": "checkbox in \"Checkbooks\"",
+    "rule": "announced-as",
+    "screen": "Checkbooks hub (after Done)"
+   },
+   "family": "name",
+   "guidance": "High for an unnamed form control or the sole primary action.",
+   "issueId": null,
+   "key": "name:announced-as:9abc72f52a54",
+   "measured": false,
+   "primary": "accounts.checkbooks-hub",
+   "proposals": [],
+   "rule": "announced-as",
+   "screens": 6,
+   "severityDefault": "medium",
+   "source": "scanner",
+   "states": [
+    "accounts.checkbooks-hub",
+    "transactions.filter-no-results"
+   ],
+   "summary": "announced-as: announced as checkbox \"\" [checked=false, disabled=true].",
+   "title": "Missing or unclear name: checkbox in \"Checkbooks\""
+  },
+  {
+   "attachments": [],
+   "attempt": 1,
+   "basis": "candidate",
+   "criteria": [
+    "4.1.2"
+   ],
+   "evidence": [
+    {
+     "evidence": {
+      "description": "",
+      "name": "Banking",
+      "role": "button",
+      "states": {},
+      "template": "button \"Banking\""
+     },
+     "occurrence": {
+      "ancestors": [
+       [
+        "_track_1o8q5_4"
+       ],
+       [
+        "_wrapper_1o8q5_5"
+       ],
+       [
+        "_navContainer_184ve_12"
+       ],
+       [
+        "_sidebar_11y1x_4",
+        "_narrowSidebar_184ve_7"
+       ],
+       [
+        "_layout_809q8_18"
+       ],
+       [
+        "_wrapper_809q8_3"
+       ],
+       [],
+       [
+        "_main_1gb3b_1"
+       ]
+      ],
+      "classes": [
+       "_chip_1o8q5_31",
+       "_chipActive_1o8q5_96"
+      ],
+      "data": {},
+      "heading": "",
+      "landmark": {
+       "name": "",
+       "role": "navigation"
+      },
+      "layer": "document",
+      "name": "Banking",
+      "rect": [
+       10,
+       118,
+       113,
+       28
+      ],
+      "role": "button",
+      "tag": "button",
+      "xpath": "/html/body/div[1]/main[1]/div[1]/div[1]/div[4]/nav[1]/div[2]/div[1]/div[1]/button[1]"
+     },
+     "state": "accounts.checkbooks-hub"
+    },
+    {
+     "evidence": {
+      "description": "",
+      "name": "Banking",
+      "role": "button",
+      "states": {},
+      "template": "button \"Banking\""
+     },
+     "occurrence": {
+      "ancestors": [
+       [
+        "_track_1o8q5_4"
+       ],
+       [
+        "_wrapper_1o8q5_5"
+       ],
+       [
+        "_navContainer_184ve_12"
+       ],
+       [
+        "_sidebar_11y1x_4",
+        "_narrowSidebar_184ve_7"
+       ],
+       [
+        "_layout_809q8_18",
+        "_homeLayout_ct6b5_100"
+       ],
+       [
+        "_wrapper_809q8_3"
+       ],
+       [],
+       [
+        "_main_1gb3b_1"
+       ]
+      ],
+      "classes": [
+       "_chip_1o8q5_31",
+       "_chipActive_1o8q5_96"
+      ],
+      "data": {},
+      "heading": "",
+      "landmark": {
+       "name": "",
+       "role": "navigation"
+      },
+      "layer": "document",
+      "name": "Banking",
+      "rect": [
+       10,
+       118,
+       113,
+       28
+      ],
+      "role": "button",
+      "tag": "button",
+      "xpath": "/html/body/div[1]/main[1]/div[1]/div[1]/div[4]/nav[1]/div[2]/div[1]/div[1]/button[1]"
+     },
+     "state": "home.balance-graph-hover"
+    }
+   ],
+   "evidenceHash": "ce83a1e8527c4dd8cbeea86af13e7c30d6a9f925841149fc7ef219897e36ed39",
+   "facts": {
+    "announced": "button \"Banking\"",
+    "axeSummary": "",
+    "criterion": "4.1.2",
+    "criterionName": "Name, Role, Value",
+    "element": "button \"Banking\"",
+    "rule": "announced-as",
+    "screen": "Checkbooks hub (after Done)"
+   },
+   "family": "role-state",
+   "guidance": "Low for optional ARIA or an invalid autocomplete token; high when aria-hidden hides the whole page.",
+   "issueId": null,
+   "key": "role-state:announced-as:115d6c64c71d",
+   "measured": false,
+   "primary": "accounts.checkbooks-hub",
+   "proposals": [],
+   "rule": "announced-as",
+   "screens": 149,
+   "severityDefault": "medium",
+   "source": "scanner",
+   "states": [
+    "accounts.checkbooks-hub",
+    "home.balance-graph-hover"
+   ],
+   "summary": "announced-as: announced as button \"Banking\".",
+   "title": "Wrong role or state: button \"Banking\""
+  },
+  {
+   "attachments": [],
+   "attempt": 1,
+   "basis": "candidate",
+   "criteria": [
+    "4.1.2"
+   ],
+   "evidence": [
+    {
+     "evidence": {
+      "description": "",
+      "name": "Books",
+      "role": "button",
+      "states": {},
+      "template": "button \"Books\""
+     },
+     "occurrence": {
+      "ancestors": [
+       [
+        "_track_1o8q5_4"
+       ],
+       [
+        "_wrapper_1o8q5_5"
+       ],
+       [
+        "_navContainer_184ve_12"
+       ],
+       [
+        "_sidebar_11y1x_4",
+        "_narrowSidebar_184ve_7"
+       ],
+       [
+        "_layout_809q8_18"
+       ],
+       [
+        "_wrapper_809q8_3"
+       ],
+       [],
+       [
+        "_main_1gb3b_1"
+       ]
+      ],
+      "classes": [
+       "_chip_1o8q5_31",
+       "_chipInactive_1o8q5_52"
+      ],
+      "data": {},
+      "heading": "",
+      "landmark": {
+       "name": "",
+       "role": "navigation"
+      },
+      "layer": "document",
+      "name": "Books",
+      "rect": [
+       125,
+       118,
+       84,
+       28
+      ],
+      "role": "button",
+      "tag": "button",
+      "xpath": "/html/body/div[1]/main[1]/div[1]/div[1]/div[4]/nav[1]/div[2]/div[1]/div[1]/button[2]"
+     },
+     "state": "accounts.checkbooks-hub"
+    },
+    {
+     "evidence": {
+      "description": "",
+      "name": "Books",
+      "role": "button",
+      "states": {},
+      "template": "button \"Books\""
+     },
+     "occurrence": {
+      "ancestors": [
+       [
+        "_track_1o8q5_4"
+       ],
+       [
+        "_wrapper_1o8q5_5"
+       ],
+       [
+        "_navContainer_184ve_12"
+       ],
+       [
+        "_sidebar_11y1x_4",
+        "_narrowSidebar_184ve_7"
+       ],
+       [
+        "_layout_809q8_18",
+        "_homeLayout_ct6b5_100"
+       ],
+       [
+        "_wrapper_809q8_3"
+       ],
+       [],
+       [
+        "_main_1gb3b_1"
+       ]
+      ],
+      "classes": [
+       "_chip_1o8q5_31",
+       "_chipInactive_1o8q5_52"
+      ],
+      "data": {},
+      "heading": "",
+      "landmark": {
+       "name": "",
+       "role": "navigation"
+      },
+      "layer": "document",
+      "name": "Books",
+      "rect": [
+       125,
+       118,
+       84,
+       28
+      ],
+      "role": "button",
+      "tag": "button",
+      "xpath": "/html/body/div[1]/main[1]/div[1]/div[1]/div[4]/nav[1]/div[2]/div[1]/div[1]/button[2]"
+     },
+     "state": "home.balance-graph-hover"
+    }
+   ],
+   "evidenceHash": "b69ed8c90ecf7e3ff451d52287d3749a4856981a107beb531c78be696b3503ef",
+   "facts": {
+    "announced": "button \"Books\"",
+    "axeSummary": "",
+    "criterion": "4.1.2",
+    "criterionName": "Name, Role, Value",
+    "element": "button \"Books\"",
+    "rule": "announced-as",
+    "screen": "Checkbooks hub (after Done)"
+   },
+   "family": "role-state",
+   "guidance": "Low for optional ARIA or an invalid autocomplete token; high when aria-hidden hides the whole page.",
+   "issueId": null,
+   "key": "role-state:announced-as:9c4e212e3db9",
+   "measured": false,
+   "primary": "accounts.checkbooks-hub",
+   "proposals": [],
+   "rule": "announced-as",
+   "screens": 149,
+   "severityDefault": "medium",
+   "source": "scanner",
+   "states": [
+    "accounts.checkbooks-hub",
+    "home.balance-graph-hover"
+   ],
+   "summary": "announced-as: announced as button \"Books\".",
+   "title": "Wrong role or state: button \"Books\""
+  },
+  {
+   "attachments": [],
+   "attempt": 1,
+   "basis": "candidate",
+   "criteria": [
+    "2.4.4"
+   ],
+   "evidence": [
+    {
+     "evidence": {
+      "description": "",
+      "name": "View all",
+      "role": "link",
+      "states": {},
+      "template": "link \"View all\""
+     },
+     "occurrence": {
+      "ancestors": [
+       [],
+       [
+        "_header_1m27d_3"
+       ],
+       [],
+       [
+        "_pageContent_809q8_151",
+        "_pageContentWidth_809q8_184",
+        "_footerPadding_809q8_115"
+       ],
+       [
+        "_dashboardContent_809q8_29"
+       ],
+       [
+        "_layout_809q8_18"
+       ],
+       [
+        "_wrapper_809q8_3"
+       ],
+       []
+      ],
+      "classes": [
+       "_link_ual8v_4",
+       "_variantPrimary_ual8v_33"
+      ],
+      "data": {
+       "data-discover": "true"
+      },
+      "heading": "",
+      "landmark": {
+       "name": "",
+       "role": "main"
+      },
+      "layer": "document",
+      "name": "View all",
+      "rect": [
+       543,
+       479,
+       68,
+       19
+      ],
+      "role": "link",
+      "tag": "a",
+      "xpath": "/html/body/div[1]/main[1]/div[1]/div[1]/div[4]/div[1]/div[2]/div[2]/div[2]/span[2]/a[1]"
+     },
+     "state": "accounts.checking-detail"
+    },
+    {
+     "evidence": {
+      "description": "",
+      "name": "View all",
+      "role": "link",
+      "states": {},
+      "template": "link \"View all\""
+     },
+     "occurrence": {
+      "ancestors": [
+       [],
+       [
+        "_header_1m27d_3"
+       ],
+       [],
+       [
+        "_pageContent_809q8_151",
+        "_pageContentWidth_809q8_184",
+        "_footerPadding_809q8_115"
+       ],
+       [
+        "_dashboardContent_809q8_29"
+       ],
+       [
+        "_layout_809q8_18"
+       ],
+       [
+        "_wrapper_809q8_3"
+       ],
+       []
+      ],
+      "classes": [
+       "_link_ual8v_4",
+       "_variantPrimary_ual8v_33"
+      ],
+      "data": {
+       "data-discover": "true"
+      },
+      "heading": "",
+      "landmark": {
+       "name": "",
+       "role": "main"
+      },
+      "layer": "document",
+      "name": "View all",
+      "rect": [
+       543,
+       479,
+       68,
+       19
+      ],
+      "role": "link",
+      "tag": "a",
+      "xpath": "/html/body/div[1]/main[1]/div[1]/div[1]/div[4]/div[1]/div[2]/div[2]/div[2]/span[2]/a[1]"
+     },
+     "state": "accounts.account-number-revealed"
+    }
+   ],
+   "evidenceHash": "912abe807110621b7c4a74b1ce1ee98b0a8c433d99dd6615ddced8bdbf8642ad",
+   "facts": {
+    "announced": "link \"View all\"",
+    "axeSummary": "",
+    "criterion": "2.4.4",
+    "criterionName": "Link Purpose (In Context)",
+    "element": "link \"View all\"",
+    "rule": "announced-as",
+    "screen": "Checking account detail"
+   },
+   "family": "name",
+   "guidance": "High for an unnamed form control or the sole primary action.",
+   "issueId": null,
+   "key": "name:announced-as:42b675f472e3",
+   "measured": false,
+   "primary": "accounts.checking-detail",
+   "proposals": [],
+   "rule": "announced-as",
+   "screens": 4,
+   "severityDefault": "medium",
+   "source": "scanner",
+   "states": [
+    "accounts.checking-detail",
+    "accounts.account-number-revealed"
+   ],
+   "summary": "announced-as: announced as link \"View all\".",
+   "title": "Missing or unclear name: link \"View all\""
+  }
+ ],
+ "primaries": [
+  "accounts.checkbooks-hub",
+  "accounts.checking-detail"
+ ],
+ "reach": {
+  "baseUrl": "https://demo.mercury.com",
+  "data": "data",
+  "map": "build/map.json",
+  "run": "2026-10-03-1525",
+  "workspace": "a11y"
+ },
+ "run": "2026-10-03-1525"
+}

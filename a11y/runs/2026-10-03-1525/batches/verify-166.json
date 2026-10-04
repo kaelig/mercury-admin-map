@@ -1,0 +1,822 @@
+{
+ "area": "cards",
+ "batch": "verify-166",
+ "findings": [
+  {
+   "attachments": [],
+   "attempt": 1,
+   "basis": "candidate",
+   "criteria": [
+    "2.4.3",
+    "1.3.2"
+   ],
+   "evidence": [
+    {
+     "evidence": {
+      "band": 32,
+      "overlay": "cards.subscriptions.tabstops.png",
+      "previous": {
+       "ancestors": [
+        [
+         "_tooltipAnchor_18bac_4",
+         "_roundTooltipWrapper_fhqdr_95"
+        ],
+        [
+         "_tableCell_1waxt_102",
+         "_collapsible_1waxt_24",
+         "_actionsCell_fhqdr_70",
+         "_notFirstRow_1waxt_142"
+        ],
+        [
+         "_tableRow_1waxt_94"
+        ],
+        [
+         "_cardTable_1waxt_4"
+        ],
+        [
+         "_tableAndLoadingStateWrapper_1waxt_313"
+        ],
+        [
+         "_tableWrapper_1waxt_304",
+         "_tableWrapper_fhqdr_113"
+        ],
+        [
+         "_pageContent_809q8_151",
+         "_pageContentWidth_809q8_184",
+         "_footerPadding_809q8_115"
+        ],
+        [
+         "_dashboardContent_809q8_29"
+        ]
+       ],
+       "classes": [
+        "_button_r6b2u_20",
+        "_small_r6b2u_72",
+        "_secondary_r6b2u_126",
+        "_cancelButton_fhqdr_82"
+       ],
+       "data": {},
+       "heading": "Cards",
+       "landmark": {
+        "name": "",
+        "role": "main"
+       },
+       "layer": "document",
+       "name": "",
+       "rect": [
+        1272,
+        868,
+        32,
+        32
+       ],
+       "role": "button",
+       "tag": "button",
+       "xpath": "/html/body/div[1]/main[1]/div[1]/div[1]/div[4]/div[1]/div[2]/div[5]/div[1]/div[1]/div[22]/div[4]/div[2]/button[1]"
+      },
+      "rise": 406,
+      "stop": 127,
+      "stops": 203
+     },
+     "occurrence": {
+      "ancestors": [
+       [
+        "_tableCell_1waxt_102",
+        "_collapsible_1waxt_24",
+        "_actionsCell_fhqdr_70",
+        "_notFirstRow_1waxt_142"
+       ],
+       [
+        "_tableRow_1waxt_94"
+       ],
+       [
+        "_cardTable_1waxt_4"
+       ],
+       [
+        "_tableAndLoadingStateWrapper_1waxt_313"
+       ],
+       [
+        "_tableWrapper_1waxt_304",
+        "_tableWrapper_fhqdr_113"
+       ],
+       [
+        "_pageContent_809q8_151",
+        "_pageContentWidth_809q8_184",
+        "_footerPadding_809q8_115"
+       ],
+       [
+        "_dashboardContent_809q8_29"
+       ],
+       [
+        "_layout_809q8_18"
+       ]
+      ],
+      "classes": [
+       "_tooltipAnchor_18bac_4",
+       "_roundTooltipWrapper_fhqdr_95"
+      ],
+      "data": {
+       "data-focus-visible": "true"
+      },
+      "heading": "Cards",
+      "landmark": {
+       "name": "",
+       "role": "main"
+      },
+      "layer": "document",
+      "name": "",
+      "rect": [
+       1232,
+       462,
+       32,
+       32
+      ],
+      "role": "generic",
+      "tag": "div",
+      "xpath": "/html/body/div[1]/main[1]/div[1]/div[1]/div[4]/div[1]/div[2]/div[5]/div[1]/div[1]/div[23]/div[4]/div[1]"
+     },
+     "state": "cards.subscriptions"
+    }
+   ],
+   "evidenceHash": "1526bc26ebf73768fc505e4385e850ebd09ef16a023aa28e119e96c0f2535ee9",
+   "facts": {
+    "criterion": "2.4.3",
+    "criterionName": "Focus Order",
+    "element": "text in \"Cards\"",
+    "previous": "button in \"Cards\"",
+    "screen": "Subscriptions tab",
+    "stop": "127"
+   },
+   "family": "focus-order",
+   "guidance": "High if the order skips a required control.",
+   "issueId": null,
+   "key": "focus-order:backward-jump:3cb15b8b72d0",
+   "measured": false,
+   "primary": "cards.subscriptions",
+   "proposals": [],
+   "rule": "backward-jump",
+   "screens": 1,
+   "severityDefault": "medium",
+   "source": "scanner",
+   "states": [
+    "cards.subscriptions"
+   ],
+   "summary": "Tab stop 127 jumped backward on screen, from the button in \"Cards\" to the text in \"Cards\".",
+   "title": "Tab order jumps backward at text in \"Cards\""
+  },
+  {
+   "attachments": [],
+   "attempt": 1,
+   "basis": "candidate",
+   "criteria": [
+    "2.4.3",
+    "1.3.2"
+   ],
+   "evidence": [
+    {
+     "evidence": {
+      "band": 27,
+      "overlay": "cards.subscriptions.tabstops.png",
+      "previous": {
+       "ancestors": [
+        [],
+        [
+         "_createLink_12cah_28"
+        ],
+        [
+         "_ctaCardContent_12cah_11"
+        ],
+        [
+         "_large_kwlx6_9",
+         "_shadow_3n0se_25",
+         "_raisedBackground_3n0se_45",
+         "_ctaCard_12cah_1"
+        ],
+        [
+         "_ctaContainer_12cah_36"
+        ],
+        [
+         "_pageContent_809q8_151",
+         "_pageContentWidth_809q8_184",
+         "_footerPadding_809q8_115"
+        ],
+        [
+         "_dashboardContent_809q8_29"
+        ],
+        [
+         "_layout_809q8_18"
+        ]
+       ],
+       "classes": [
+        "_link_ual8v_4",
+        "_variantPrimary_ual8v_33"
+       ],
+       "data": {
+        "data-discover": "true"
+       },
+       "heading": "Cards",
+       "landmark": {
+        "name": "",
+        "role": "main"
+       },
+       "layer": "document",
+       "name": "Create Merchant Card",
+       "rect": [
+        370,
+        364,
+        182,
+        19
+       ],
+       "role": "link",
+       "tag": "a",
+       "xpath": "/html/body/div[1]/main[1]/div[1]/div[1]/div[4]/div[1]/div[2]/div[3]/div[1]/div[1]/div[2]/span[1]/a[1]"
+      },
+      "rise": 88,
+      "stop": 39,
+      "stops": 203
+     },
+     "occurrence": {
+      "ancestors": [
+       [
+        "_ctaDismissButton_12cah_32"
+       ],
+       [
+        "_large_kwlx6_9",
+        "_shadow_3n0se_25",
+        "_raisedBackground_3n0se_45",
+        "_ctaCard_12cah_1"
+       ],
+       [
+        "_ctaContainer_12cah_36"
+       ],
+       [
+        "_pageContent_809q8_151",
+        "_pageContentWidth_809q8_184",
+        "_footerPadding_809q8_115"
+       ],
+       [
+        "_dashboardContent_809q8_29"
+       ],
+       [
+        "_layout_809q8_18"
+       ],
+       [
+        "_wrapper_809q8_3"
+       ],
+       []
+      ],
+      "classes": [
+       "_ctaDismissButton_12cah_32"
+      ],
+      "data": {},
+      "heading": "Cards",
+      "landmark": {
+       "name": "",
+       "role": "main"
+      },
+      "layer": "document",
+      "name": "",
+      "rect": [
+       772,
+       276,
+       24,
+       27
+      ],
+      "role": "button",
+      "tag": "button",
+      "xpath": "/html/body/div[1]/main[1]/div[1]/div[1]/div[4]/div[1]/div[2]/div[3]/div[1]/div[2]/button[1]"
+     },
+     "state": "cards.subscriptions"
+    }
+   ],
+   "evidenceHash": "6b0597d57bbe5eb553235443e6c8793761a9649671e7167ddcc572f934622e2e",
+   "facts": {
+    "criterion": "2.4.3",
+    "criterionName": "Focus Order",
+    "element": "button in \"Cards\"",
+    "previous": "link \"Create Merchant Card\"",
+    "screen": "Subscriptions tab",
+    "stop": "39"
+   },
+   "family": "focus-order",
+   "guidance": "High if the order skips a required control.",
+   "issueId": null,
+   "key": "focus-order:backward-jump:576c307bd990",
+   "measured": false,
+   "primary": "cards.subscriptions",
+   "proposals": [],
+   "rule": "backward-jump",
+   "screens": 1,
+   "severityDefault": "medium",
+   "source": "scanner",
+   "states": [
+    "cards.subscriptions"
+   ],
+   "summary": "Tab stop 39 jumped backward on screen, from the link \"Create Merchant Card\" to the button in \"Cards\".",
+   "title": "Tab order jumps backward at button in \"Cards\""
+  },
+  {
+   "attachments": [],
+   "attempt": 1,
+   "basis": "failure",
+   "criteria": [
+    "4.1.2",
+    "2.4.4"
+   ],
+   "evidence": [],
+   "evidenceHash": "02a9e3ef9bba4691fd8f564c5bfef45163a6dba27257d244c04161b949d4fe07",
+   "facts": {},
+   "family": "name",
+   "guidance": "High for an unnamed form control or the sole primary action.",
+   "issueId": "cards.i-subscription-actions-unlabeled",
+   "key": "hand:cards.i-subscription-actions-unlabeled",
+   "measured": false,
+   "primary": "cards.subscriptions",
+   "proposals": [
+    {
+     "family": "name",
+     "finding": "name:button-name:47304993177c",
+     "handFound": "cards.i-subscription-actions-unlabeled",
+     "id": "a99dc6dc19f79c4bd34365e9c5a66a9544703b7707f5155549f9a1ec23aaa7be",
+     "overlap": 1
+    },
+    {
+     "family": "name",
+     "finding": "name:button-name:56f8b659b3a0",
+     "handFound": "cards.i-subscription-actions-unlabeled",
+     "id": "a4f330d812cc24d3e2cc6bdb49cb1338d9e8bd3d71e31199632e33106b03508f",
+     "overlap": 1
+    },
+    {
+     "family": "name",
+     "finding": "name:button-name:5dd5ad49e183",
+     "handFound": "cards.i-subscription-actions-unlabeled",
+     "id": "ed0e776d28b716617f5fa1e3ad5094960d06fadcb1280785c8cb4ef9a6ae3728",
+     "overlap": 1
+    },
+    {
+     "family": "name",
+     "finding": "name:button-name:b9268695c292",
+     "handFound": "cards.i-subscription-actions-unlabeled",
+     "id": "fc6e2300e1171c6f6c50f4407734bb6e373c6f34bdf0e9930e737bb5890bd238",
+     "overlap": 1
+    },
+    {
+     "family": "name",
+     "finding": "name:button-name:e440427419da",
+     "handFound": "cards.i-subscription-actions-unlabeled",
+     "id": "498d323b4c1fee257a3f6994b1bc32663b52299dfd514a99776c5aa7c1df1da6",
+     "overlap": 1
+    },
+    {
+     "family": "name",
+     "finding": "name:link-name:3b05d3542a06",
+     "handFound": "cards.i-subscription-actions-unlabeled",
+     "id": "63e6df4b1940f2f70ea796c339ea863832df55c9ff3939e0dc12451c03d4645e",
+     "overlap": 1
+    }
+   ],
+   "rule": "hand-found",
+   "screens": 1,
+   "severityDefault": "medium",
+   "source": "hand-found",
+   "states": [
+    "cards.subscriptions"
+   ],
+   "summary": "Adyen N.V. row: <A> 32x32 aria-label=null title=null text=''; <BUTTON> 32x32 aria-label=null title=null text=''; a third <BUTTON> 32x70 with no text or label.",
+   "title": "Subscription row action icons have no accessible name"
+  },
+  {
+   "attachments": [],
+   "attempt": 1,
+   "basis": "violation",
+   "criteria": [
+    "4.1.2"
+   ],
+   "evidence": [
+    {
+     "evidence": {
+      "failureSummary": "Fix any of the following:\n  Element does not have inner text that is visible to screen readers\n  aria-label attribute does not exist or is empty\n  aria-labelledby attribute does not exist, references elements that do not exist or references elements that are empty\n  Element has no title attribute\n  Element does not have an implicit (wrapped) <label>\n  Element does not have an explicit <label>\n  Element's default semantics were not overridden with role=\"none\" or role=\"presentation\"",
+      "messageKey": "noAttr"
+     },
+     "occurrence": {
+      "ancestors": [
+       [
+        "_tooltipAnchor_18bac_4",
+        "_roundTooltipWrapper_fhqdr_95"
+       ],
+       [
+        "_tableCell_1waxt_102",
+        "_collapsible_1waxt_24",
+        "_actionsCell_fhqdr_70",
+        "_notFirstRow_1waxt_142"
+       ],
+       [
+        "_tableRow_1waxt_94"
+       ],
+       [
+        "_cardTable_1waxt_4"
+       ],
+       [
+        "_tableAndLoadingStateWrapper_1waxt_313"
+       ],
+       [
+        "_tableWrapper_1waxt_304",
+        "_tableWrapper_fhqdr_113"
+       ],
+       [
+        "_pageContent_809q8_151",
+        "_pageContentWidth_809q8_184",
+        "_footerPadding_809q8_115"
+       ],
+       [
+        "_dashboardContent_809q8_29"
+       ]
+      ],
+      "classes": [
+       "_button_r6b2u_20",
+       "_small_r6b2u_72",
+       "_secondary_r6b2u_126",
+       "_cancelButton_fhqdr_82"
+      ],
+      "data": {},
+      "heading": "Cards",
+      "landmark": {
+       "name": "",
+       "role": "main"
+      },
+      "layer": "document",
+      "name": "",
+      "rect": [
+       1272,
+       1306,
+       32,
+       32
+      ],
+      "role": "button",
+      "tag": "button",
+      "xpath": "/html/body/div[1]/main[1]/div[1]/div[1]/div[4]/div[1]/div[2]/div[5]/div[1]/div[1]/div[14]/div[4]/div[2]/button[1]"
+     },
+     "state": "cards.subscriptions"
+    }
+   ],
+   "evidenceHash": "543c62da5db223efb72379dc0ca7080f1e676e532df090110872405c5f238c03",
+   "facts": {
+    "announced": "button \"\"",
+    "axeSummary": "Element does not have inner text that is visible to screen readers; aria-label attribute does not exist or is empty; aria-labelledby attribute does not exist,…",
+    "criterion": "4.1.2",
+    "criterionName": "Name, Role, Value",
+    "element": "button in \"Cards\"",
+    "rule": "button-name",
+    "screen": "Subscriptions tab"
+   },
+   "family": "name",
+   "guidance": "High for an unnamed form control or the sole primary action.",
+   "issueId": null,
+   "key": "name:button-name:47304993177c",
+   "measured": false,
+   "primary": "cards.subscriptions",
+   "proposals": [
+    {
+     "family": "name",
+     "finding": "name:button-name:47304993177c",
+     "handFound": "cards.i-subscription-actions-unlabeled",
+     "id": "a99dc6dc19f79c4bd34365e9c5a66a9544703b7707f5155549f9a1ec23aaa7be",
+     "overlap": 1
+    }
+   ],
+   "rule": "button-name",
+   "screens": 1,
+   "severityDefault": "medium",
+   "source": "scanner",
+   "states": [
+    "cards.subscriptions"
+   ],
+   "summary": "button-name: announced as button \"\". Element does not have inner text that is visible to screen readers; aria-label attribute does not exist or is empty; aria-labelledby attribute does not exist,…",
+   "title": "Missing or unclear name: button in \"Cards\""
+  },
+  {
+   "attachments": [],
+   "attempt": 1,
+   "basis": "violation",
+   "criteria": [
+    "4.1.2"
+   ],
+   "evidence": [
+    {
+     "evidence": {
+      "failureSummary": "Fix any of the following:\n  Element does not have inner text that is visible to screen readers\n  aria-label attribute does not exist or is empty\n  aria-labelledby attribute does not exist, references elements that do not exist or references elements that are empty\n  Element has no title attribute\n  Element does not have an implicit (wrapped) <label>\n  Element does not have an explicit <label>\n  Element's default semantics were not overridden with role=\"none\" or role=\"presentation\"",
+      "messageKey": "noAttr"
+     },
+     "occurrence": {
+      "ancestors": [
+       [
+        "_tableRow_1waxt_94"
+       ],
+       [
+        "_cardTable_1waxt_4"
+       ],
+       [
+        "_tableAndLoadingStateWrapper_1waxt_313"
+       ],
+       [
+        "_tableWrapper_1waxt_304",
+        "_tableWrapper_fhqdr_113"
+       ],
+       [
+        "_pageContent_809q8_151",
+        "_pageContentWidth_809q8_184",
+        "_footerPadding_809q8_115"
+       ],
+       [
+        "_dashboardContent_809q8_29"
+       ],
+       [
+        "_layout_809q8_18"
+       ],
+       [
+        "_wrapper_809q8_3"
+       ]
+      ],
+      "classes": [
+       "_arrow_1waxt_173"
+      ],
+      "data": {},
+      "heading": "Cards",
+      "landmark": {
+       "name": "",
+       "role": "main"
+      },
+      "layer": "document",
+      "name": "",
+      "rect": [
+       858,
+       1007,
+       32,
+       70
+      ],
+      "role": "button",
+      "tag": "button",
+      "xpath": "/html/body/div[1]/main[1]/div[1]/div[1]/div[4]/div[1]/div[2]/div[5]/div[1]/div[1]/div[10]/button[1]"
+     },
+     "state": "cards.subscriptions"
+    }
+   ],
+   "evidenceHash": "543c62da5db223efb72379dc0ca7080f1e676e532df090110872405c5f238c03",
+   "facts": {
+    "announced": "button \"\"",
+    "axeSummary": "Element does not have inner text that is visible to screen readers; aria-label attribute does not exist or is empty; aria-labelledby attribute does not exist,…",
+    "criterion": "4.1.2",
+    "criterionName": "Name, Role, Value",
+    "element": "button in \"Cards\"",
+    "rule": "button-name",
+    "screen": "Subscriptions tab"
+   },
+   "family": "name",
+   "guidance": "High for an unnamed form control or the sole primary action.",
+   "issueId": null,
+   "key": "name:button-name:56f8b659b3a0",
+   "measured": false,
+   "primary": "cards.subscriptions",
+   "proposals": [
+    {
+     "family": "name",
+     "finding": "name:button-name:56f8b659b3a0",
+     "handFound": "cards.i-subscription-actions-unlabeled",
+     "id": "a4f330d812cc24d3e2cc6bdb49cb1338d9e8bd3d71e31199632e33106b03508f",
+     "overlap": 1
+    }
+   ],
+   "rule": "button-name",
+   "screens": 1,
+   "severityDefault": "medium",
+   "source": "scanner",
+   "states": [
+    "cards.subscriptions"
+   ],
+   "summary": "button-name: announced as button \"\". Element does not have inner text that is visible to screen readers; aria-label attribute does not exist or is empty; aria-labelledby attribute does not exist,…",
+   "title": "Missing or unclear name: button in \"Cards\""
+  },
+  {
+   "attachments": [],
+   "attempt": 1,
+   "basis": "violation",
+   "criteria": [
+    "4.1.2"
+   ],
+   "evidence": [
+    {
+     "evidence": {
+      "failureSummary": "Fix any of the following:\n  Element does not have inner text that is visible to screen readers\n  aria-label attribute does not exist or is empty\n  aria-labelledby attribute does not exist, references elements that do not exist or references elements that are empty\n  Element has no title attribute\n  Element does not have an implicit (wrapped) <label>\n  Element does not have an explicit <label>\n  Element's default semantics were not overridden with role=\"none\" or role=\"presentation\"",
+      "messageKey": "noAttr"
+     },
+     "occurrence": {
+      "ancestors": [
+       [
+        "_ctaDismissButton_12cah_32"
+       ],
+       [
+        "_large_kwlx6_9",
+        "_shadow_3n0se_25",
+        "_raisedBackground_3n0se_45",
+        "_ctaCard_12cah_1"
+       ],
+       [
+        "_ctaContainer_12cah_36"
+       ],
+       [
+        "_pageContent_809q8_151",
+        "_pageContentWidth_809q8_184",
+        "_footerPadding_809q8_115"
+       ],
+       [
+        "_dashboardContent_809q8_29"
+       ],
+       [
+        "_layout_809q8_18"
+       ],
+       [
+        "_wrapper_809q8_3"
+       ],
+       []
+      ],
+      "classes": [
+       "_ctaDismissButton_12cah_32"
+      ],
+      "data": {},
+      "heading": "Cards",
+      "landmark": {
+       "name": "",
+       "role": "main"
+      },
+      "layer": "document",
+      "name": "",
+      "rect": [
+       1266,
+       276,
+       24,
+       27
+      ],
+      "role": "button",
+      "tag": "button",
+      "xpath": "/html/body/div[1]/main[1]/div[1]/div[1]/div[4]/div[1]/div[2]/div[3]/div[2]/div[2]/button[1]"
+     },
+     "state": "cards.subscriptions"
+    }
+   ],
+   "evidenceHash": "543c62da5db223efb72379dc0ca7080f1e676e532df090110872405c5f238c03",
+   "facts": {
+    "announced": "button \"\"",
+    "axeSummary": "Element does not have inner text that is visible to screen readers; aria-label attribute does not exist or is empty; aria-labelledby attribute does not exist,…",
+    "criterion": "4.1.2",
+    "criterionName": "Name, Role, Value",
+    "element": "button in \"Cards\"",
+    "rule": "button-name",
+    "screen": "Subscriptions tab"
+   },
+   "family": "name",
+   "guidance": "High for an unnamed form control or the sole primary action.",
+   "issueId": null,
+   "key": "name:button-name:5dd5ad49e183",
+   "measured": false,
+   "primary": "cards.subscriptions",
+   "proposals": [
+    {
+     "family": "name",
+     "finding": "name:button-name:5dd5ad49e183",
+     "handFound": "cards.i-subscription-actions-unlabeled",
+     "id": "ed0e776d28b716617f5fa1e3ad5094960d06fadcb1280785c8cb4ef9a6ae3728",
+     "overlap": 1
+    }
+   ],
+   "rule": "button-name",
+   "screens": 1,
+   "severityDefault": "medium",
+   "source": "scanner",
+   "states": [
+    "cards.subscriptions"
+   ],
+   "summary": "button-name: announced as button \"\". Element does not have inner text that is visible to screen readers; aria-label attribute does not exist or is empty; aria-labelledby attribute does not exist,…",
+   "title": "Missing or unclear name: button in \"Cards\""
+  },
+  {
+   "attachments": [],
+   "attempt": 1,
+   "basis": "violation",
+   "criteria": [
+    "4.1.2",
+    "2.4.4"
+   ],
+   "evidence": [
+    {
+     "evidence": {
+      "failureSummary": "Fix all of the following:\n  Element is in tab order and does not have accessible text\n\nFix any of the following:\n  Element does not have text that is visible to screen readers\n  aria-label attribute does not exist or is empty\n  aria-labelledby attribute does not exist, references elements that do not exist or references elements that are empty\n  Element has no title attribute",
+      "messageKey": "noAttr"
+     },
+     "occurrence": {
+      "ancestors": [
+       [],
+       [
+        "_tooltipAnchor_18bac_4",
+        "_roundTooltipWrapper_fhqdr_95"
+       ],
+       [
+        "_tableCell_1waxt_102",
+        "_collapsible_1waxt_24",
+        "_actionsCell_fhqdr_70",
+        "_notFirstRow_1waxt_142"
+       ],
+       [
+        "_tableRow_1waxt_94"
+       ],
+       [
+        "_cardTable_1waxt_4"
+       ],
+       [
+        "_tableAndLoadingStateWrapper_1waxt_313"
+       ],
+       [
+        "_tableWrapper_1waxt_304",
+        "_tableWrapper_fhqdr_113"
+       ],
+       [
+        "_pageContent_809q8_151",
+        "_pageContentWidth_809q8_184",
+        "_footerPadding_809q8_115"
+       ]
+      ],
+      "classes": [
+       "_button_r6b2u_20",
+       "_small_r6b2u_72",
+       "_secondary_r6b2u_126",
+       "_link_ual8v_4",
+       "_underlineNever_ual8v_7"
+      ],
+      "data": {},
+      "heading": "Cards",
+      "landmark": {
+       "name": "",
+       "role": "main"
+      },
+      "layer": "document",
+      "name": "",
+      "rect": [
+       1232,
+       1026,
+       32,
+       32
+      ],
+      "role": "link",
+      "tag": "a",
+      "xpath": "/html/body/div[1]/main[1]/div[1]/div[1]/div[4]/div[1]/div[2]/div[5]/div[1]/div[1]/div[10]/div[4]/div[1]/span[1]/a[1]"
+     },
+     "state": "cards.subscriptions"
+    }
+   ],
+   "evidenceHash": "0f9bdf711c48b7294832c14265efb9cd2e5e37d495ee20dcdc3ac67a4b98614e",
+   "facts": {
+    "announced": "link \"\"",
+    "axeSummary": "Element is in tab order and does not have accessible text; Element does not have text that is visible to screen readers; aria-label attribute does not exist or…",
+    "criterion": "4.1.2",
+    "criterionName": "Name, Role, Value",
+    "element": "link in \"Cards\"",
+    "rule": "link-name",
+    "screen": "Subscriptions tab"
+   },
+   "family": "name",
+   "guidance": "High for an unnamed form control or the sole primary action.",
+   "issueId": null,
+   "key": "name:link-name:3b05d3542a06",
+   "measured": false,
+   "primary": "cards.subscriptions",
+   "proposals": [
+    {
+     "family": "name",
+     "finding": "name:link-name:3b05d3542a06",
+     "handFound": "cards.i-subscription-actions-unlabeled",
+     "id": "63e6df4b1940f2f70ea796c339ea863832df55c9ff3939e0dc12451c03d4645e",
+     "overlap": 1
+    }
+   ],
+   "rule": "link-name",
+   "screens": 1,
+   "severityDefault": "medium",
+   "source": "scanner",
+   "states": [
+    "cards.subscriptions"
+   ],
+   "summary": "link-name: announced as link \"\". Element is in tab order and does not have accessible text; Element does not have text that is visible to screen readers; aria-label attribute does not exist or…",
+   "title": "Missing or unclear name: link in \"Cards\""
+  }
+ ],
+ "primaries": [
+  "cards.subscriptions"
+ ],
+ "reach": {
+  "baseUrl": "https://demo.mercury.com",
+  "data": "data",
+  "map": "build/map.json",
+  "run": "2026-10-03-1525",
+  "workspace": "a11y"
+ },
+ "run": "2026-10-03-1525"
+}

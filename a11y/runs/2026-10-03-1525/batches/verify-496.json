@@ -1,0 +1,166 @@
+{
+ "area": "payments",
+ "batch": "verify-496",
+ "findings": [
+  {
+   "attachments": [],
+   "attempt": 1,
+   "basis": "candidate",
+   "criteria": [
+    "4.1.2"
+   ],
+   "evidence": [
+    {
+     "evidence": {
+      "description": "",
+      "name": "",
+      "role": "button",
+      "states": {},
+      "template": "button \"\""
+     },
+     "occurrence": {
+      "ancestors": [
+       [
+        "_tableRow_1waxt_94"
+       ],
+       [
+        "_cardTable_1waxt_4"
+       ],
+       [
+        "_tableAndLoadingStateWrapper_1waxt_313"
+       ],
+       [
+        "_tableWrapper_1waxt_304"
+       ],
+       [],
+       [],
+       [
+        "_pageContent_809q8_151",
+        "_pageContentWidth_809q8_184",
+        "_footerPadding_809q8_115"
+       ],
+       [
+        "_dashboardContent_809q8_29"
+       ]
+      ],
+      "classes": [
+       "_arrow_1waxt_173"
+      ],
+      "data": {},
+      "heading": "ACH Authorizations",
+      "landmark": {
+       "name": "",
+       "role": "main"
+      },
+      "layer": "document",
+      "name": "",
+      "rect": [
+       858,
+       281,
+       32,
+       48
+      ],
+      "role": "button",
+      "tag": "button",
+      "xpath": "/html/body/div[1]/main[1]/div[1]/div[1]/div[4]/div[1]/div[2]/div[2]/div[2]/div[1]/div[1]/div[1]/div[3]/button[1]"
+     },
+     "state": "payments.ach-authorizations"
+    },
+    {
+     "evidence": {
+      "description": "",
+      "name": "",
+      "role": "button",
+      "states": {},
+      "template": "button \"\""
+     },
+     "occurrence": {
+      "ancestors": [
+       [
+        "_tableRow_1waxt_94"
+       ],
+       [
+        "_cardTable_1waxt_4"
+       ],
+       [
+        "_tableAndLoadingStateWrapper_1waxt_313"
+       ],
+       [
+        "_tableWrapper_1waxt_304"
+       ],
+       [],
+       [],
+       [
+        "_pageContent_809q8_151",
+        "_pageContentWidth_809q8_184",
+        "_footerPadding_809q8_115"
+       ],
+       [
+        "_dashboardContent_809q8_29"
+       ]
+      ],
+      "classes": [
+       "_arrow_1waxt_173"
+      ],
+      "data": {},
+      "heading": "ACH Authorizations",
+      "landmark": {
+       "name": "",
+       "role": "main"
+      },
+      "layer": "document",
+      "name": "",
+      "rect": [
+       858,
+       281,
+       32,
+       48
+      ],
+      "role": "button",
+      "tag": "button",
+      "xpath": "/html/body/div[1]/main[1]/div[1]/div[1]/div[4]/div[1]/div[2]/div[2]/div[2]/div[1]/div[1]/div[1]/div[3]/button[1]"
+     },
+     "state": "payments.ach-add-success"
+    }
+   ],
+   "evidenceHash": "f0c678c8be4fbfd2423b4d10c64daa12b23cb78671ba959759afea72bdc894cb",
+   "facts": {
+    "announced": "button \"\"",
+    "axeSummary": "",
+    "criterion": "4.1.2",
+    "criterionName": "Name, Role, Value",
+    "element": "button in \"ACH Authorizations\"",
+    "rule": "announced-as",
+    "screen": "ACH Authorizations"
+   },
+   "family": "name",
+   "guidance": "High for an unnamed form control or the sole primary action.",
+   "issueId": null,
+   "key": "name:announced-as:56b4a5e69ebd",
+   "measured": false,
+   "primary": "payments.ach-authorizations",
+   "proposals": [],
+   "rule": "announced-as",
+   "screens": 2,
+   "severityDefault": "medium",
+   "source": "scanner",
+   "states": [
+    "payments.ach-authorizations",
+    "payments.ach-add-success"
+   ],
+   "summary": "announced-as: announced as button \"\".",
+   "title": "Missing or unclear name: button in \"ACH Authorizations\""
+  }
+ ],
+ "primaries": [
+  "payments.ach-authorizations"
+ ],
+ "reach": {
+  "baseUrl": "https://demo.mercury.com",
+  "data": "data",
+  "map": "build/map.json",
+  "run": "2026-10-03-1525",
+  "workspace": "a11y"
+ },
+ "run": "2026-10-03-1525"
+}

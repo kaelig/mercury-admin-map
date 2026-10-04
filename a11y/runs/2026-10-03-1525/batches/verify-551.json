@@ -1,0 +1,123 @@
+{
+ "area": "transactions",
+ "batch": "verify-551",
+ "findings": [
+  {
+   "attachments": [],
+   "attempt": 1,
+   "basis": "candidate",
+   "criteria": [
+    "4.1.2"
+   ],
+   "evidence": [
+    {
+     "evidence": {
+      "description": "",
+      "name": "",
+      "role": "checkbox",
+      "states": {
+       "checked": "mixed"
+      },
+      "template": "checkbox \"\" [checked=mixed]"
+     },
+     "occurrence": {
+      "ancestors": [
+       [
+        "_checkboxHeightFix_1wfxj_6",
+        "_checkboxWrapper_1758n_62",
+        "_defaultCheckboxWrapper_1km7i_14",
+        "_inTable_1758n_108"
+       ],
+       [
+        "_tableHead_hi0p4_3",
+        "_alignmentCenter_hi0p4_15",
+        "_fullWidthTable_4sbgh_49",
+        "_header_4sbgh_38",
+        "_select_4sbgh_2",
+        "_checkboxCell_hi0p4_31"
+       ],
+       [
+        "_tableHeadRow_1rlph_21"
+       ],
+       [
+        "_tableHead_1rlph_1",
+        "_exclusionsTableHeader_9bbky_53"
+       ],
+       [
+        "_table_1acga_4"
+       ],
+       [
+        "_tableWrapper_1acga_4"
+       ],
+       [
+        "_content_9bbky_37"
+       ],
+       [
+        "_container_9bbky_1"
+       ]
+      ],
+      "classes": [
+       "_input_1758n_13",
+       "_defaultInput_1km7i_44"
+      ],
+      "data": {},
+      "heading": "",
+      "landmark": {
+       "name": "",
+       "role": "dialog"
+      },
+      "layer": "top",
+      "name": "",
+      "rect": [
+       243,
+       377,
+       40,
+       40
+      ],
+      "role": "checkbox",
+      "tag": "input",
+      "xpath": "/html/body/div[11]/div[1]/div[1]/div[1]/div[2]/div[5]/div[1]/div[3]/div[1]/table[1]/thead[1]/tr[1]/th[1]/div[1]/input[1]"
+     },
+     "state": "transactions.insights-exclusion-selected"
+    }
+   ],
+   "evidenceHash": "481eae33aa14170578e6e312fa7555e12ee90c6a10a428023fc8590460d80476",
+   "facts": {
+    "announced": "checkbox \"\" [checked=mixed]",
+    "axeSummary": "",
+    "criterion": "4.1.2",
+    "criterionName": "Name, Role, Value",
+    "element": "checkbox in the dialog landmark",
+    "rule": "announced-as",
+    "screen": "Exclusions: transactions selected"
+   },
+   "family": "name",
+   "guidance": "High for an unnamed form control or the sole primary action.",
+   "issueId": null,
+   "key": "name:announced-as:2732da54b3e4",
+   "measured": false,
+   "primary": "transactions.insights-exclusion-selected",
+   "proposals": [],
+   "rule": "announced-as",
+   "screens": 1,
+   "severityDefault": "medium",
+   "source": "scanner",
+   "states": [
+    "transactions.insights-exclusion-selected"
+   ],
+   "summary": "announced-as: announced as checkbox \"\" [checked=mixed].",
+   "title": "Missing or unclear name: checkbox in the dialog landmark"
+  }
+ ],
+ "primaries": [
+  "transactions.insights-exclusion-selected"
+ ],
+ "reach": {
+  "baseUrl": "https://demo.mercury.com",
+  "data": "data",
+  "map": "build/map.json",
+  "run": "2026-10-03-1525",
+  "workspace": "a11y"
+ },
+ "run": "2026-10-03-1525"
+}

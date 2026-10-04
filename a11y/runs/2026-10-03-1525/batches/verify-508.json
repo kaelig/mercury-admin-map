@@ -1,0 +1,343 @@
+{
+ "area": "payments",
+ "batch": "verify-508",
+ "findings": [
+  {
+   "attachments": [],
+   "attempt": 1,
+   "basis": "candidate",
+   "criteria": [
+    "4.1.2"
+   ],
+   "evidence": [
+    {
+     "evidence": {
+      "description": "",
+      "name": "",
+      "role": "button",
+      "states": {},
+      "template": "button \"\""
+     },
+     "occurrence": {
+      "ancestors": [
+       [
+        "_resizeHandleContainer_15al5_246",
+        "_closed_15al5_75"
+       ],
+       [
+        "_tooltipAnchor_18bac_4",
+        "_preview_15al5_94",
+        "_attachmentViewerBackground_15al5_359"
+       ],
+       [
+        "_container_15al5_4",
+        "_container_10wfz_3",
+        "_closed_15al5_75"
+       ],
+       [
+        "_dropzone_15al5_74"
+       ],
+       [
+        "_pageWrapper_1avu1_1"
+       ],
+       [
+        "_sessionReplayUnmask_1avu1_8",
+        "session-replay-unmask"
+       ],
+       [],
+       [
+        "_main_1gb3b_1"
+       ]
+      ],
+      "classes": [
+       "_resizeHandle_15al5_86"
+      ],
+      "data": {},
+      "heading": "Recipient",
+      "landmark": {
+       "name": "",
+       "role": "main"
+      },
+      "layer": "document",
+      "name": "",
+      "rect": [
+       1358,
+       454,
+       48,
+       48
+      ],
+      "role": "button",
+      "tag": "button",
+      "xpath": "/html/body/div[1]/main[1]/div[1]/div[2]/div[2]/div[1]/div[2]/section[3]/div[1]/button[1]"
+     },
+     "state": "payments.send-recipient-step"
+    },
+    {
+     "evidence": {
+      "description": "",
+      "name": "",
+      "role": "button",
+      "states": {},
+      "template": "button \"\""
+     },
+     "occurrence": {
+      "ancestors": [
+       [
+        "_resizeHandleContainer_15al5_246",
+        "_closed_15al5_75"
+       ],
+       [
+        "_tooltipAnchor_18bac_4",
+        "_preview_15al5_94",
+        "_attachmentViewerBackground_15al5_359"
+       ],
+       [
+        "_container_15al5_4",
+        "_container_10wfz_3",
+        "_closed_15al5_75"
+       ],
+       [
+        "_dropzone_15al5_74"
+       ],
+       [
+        "_pageWrapper_1avu1_1"
+       ],
+       [
+        "_sessionReplayUnmask_1avu1_8",
+        "session-replay-unmask"
+       ],
+       [],
+       [
+        "_main_1gb3b_1"
+       ]
+      ],
+      "classes": [
+       "_resizeHandle_15al5_86"
+      ],
+      "data": {},
+      "heading": "Amount",
+      "landmark": {
+       "name": "",
+       "role": "main"
+      },
+      "layer": "document",
+      "name": "",
+      "rect": [
+       1358,
+       454,
+       48,
+       48
+      ],
+      "role": "button",
+      "tag": "button",
+      "xpath": "/html/body/div[1]/main[1]/div[1]/div[2]/div[2]/div[1]/div[2]/section[3]/div[1]/button[1]"
+     },
+     "state": "payments.send-amount-validation"
+    }
+   ],
+   "evidenceHash": "ff9d85e0f7f29130f13e0624e4e86cac840d55961f98f2b7e4f1c505d8e496fd",
+   "facts": {
+    "announced": "button \"\"",
+    "axeSummary": "",
+    "criterion": "4.1.2",
+    "criterionName": "Name, Role, Value",
+    "element": "button in \"Recipient\"",
+    "rule": "announced-as",
+    "screen": "Send: Recipient step"
+   },
+   "family": "name",
+   "guidance": "High for an unnamed form control or the sole primary action.",
+   "issueId": null,
+   "key": "name:announced-as:21b0eb17c866",
+   "measured": false,
+   "primary": "payments.send-recipient-step",
+   "proposals": [],
+   "rule": "announced-as",
+   "screens": 12,
+   "severityDefault": "medium",
+   "source": "scanner",
+   "states": [
+    "payments.send-recipient-step",
+    "payments.send-amount-validation"
+   ],
+   "summary": "announced-as: announced as button \"\".",
+   "title": "Missing or unclear name: button in \"Recipient\""
+  },
+  {
+   "attachments": [],
+   "attempt": 1,
+   "basis": "candidate",
+   "criteria": [
+    "4.1.2"
+   ],
+   "evidence": [
+    {
+     "evidence": {
+      "description": "",
+      "name": "",
+      "role": "button",
+      "states": {
+       "expanded": false,
+       "haspopup": "menu"
+      },
+      "template": "button \"\" [expanded=false, haspopup=menu]"
+     },
+     "occurrence": {
+      "ancestors": [
+       [
+        "_dropdownContainer_5swj3_1",
+        "_dropdown_bj7nn_82"
+       ],
+       [
+        "_recipientName_bj7nn_18"
+       ],
+       [
+        "_recipientMatchContainer_bj7nn_3",
+        "session-replay-mask"
+       ],
+       [
+        "_formWrapper_17xei_3"
+       ],
+       [],
+       [
+        "_routeContainer_15al5_228"
+       ],
+       [
+        "_routes_15al5_220"
+       ],
+       [
+        "_routeSection_15al5_207"
+       ]
+      ],
+      "classes": [
+       "_button_r6b2u_20",
+       "_small_r6b2u_72",
+       "_tertiary_r6b2u_153",
+       "_menuButton_ok3n2_7"
+      ],
+      "data": {},
+      "heading": "Recipient",
+      "landmark": {
+       "name": "",
+       "role": "form"
+      },
+      "layer": "document",
+      "name": "",
+      "rect": [
+       935,
+       305,
+       32,
+       32
+      ],
+      "role": "button",
+      "tag": "button",
+      "xpath": "/html/body/div[1]/main[1]/div[1]/div[2]/div[2]/div[1]/div[2]/section[2]/div[1]/div[1]/form[1]/div[1]/div[1]/div[1]/div[3]/button[1]"
+     },
+     "state": "payments.send-recipient-step"
+    },
+    {
+     "evidence": {
+      "description": "",
+      "name": "",
+      "role": "button",
+      "states": {
+       "expanded": false,
+       "haspopup": "menu"
+      },
+      "template": "button \"\" [expanded=false, haspopup=menu]"
+     },
+     "occurrence": {
+      "ancestors": [
+       [
+        "_dropdownContainer_5swj3_1",
+        "_dropdown_bj7nn_82"
+       ],
+       [
+        "_recipientName_bj7nn_18"
+       ],
+       [
+        "_recipientMatchContainer_bj7nn_3",
+        "session-replay-mask"
+       ],
+       [
+        "_formWrapper_17xei_3"
+       ],
+       [],
+       [
+        "_routeContainer_15al5_228"
+       ],
+       [
+        "_routes_15al5_220"
+       ],
+       [
+        "_routeSection_15al5_207"
+       ]
+      ],
+      "classes": [
+       "_button_r6b2u_20",
+       "_small_r6b2u_72",
+       "_tertiary_r6b2u_153",
+       "_menuButton_ok3n2_7"
+      ],
+      "data": {},
+      "heading": "Recipient",
+      "landmark": {
+       "name": "",
+       "role": "form"
+      },
+      "layer": "document",
+      "name": "",
+      "rect": [
+       575,
+       295,
+       32,
+       32
+      ],
+      "role": "button",
+      "tag": "button",
+      "xpath": "/html/body/div[1]/main[1]/div[1]/div[2]/div[2]/div[1]/div[2]/section[2]/div[1]/div[1]/form[1]/div[1]/div[1]/div[1]/div[3]/button[1]"
+     },
+     "state": "billpay.routing-number-error"
+    }
+   ],
+   "evidenceHash": "07a626de25cfe3aa6b8935b3862f0fbb1687eb1cfeada330207e58ba65a42c1e",
+   "facts": {
+    "announced": "button \"\" [expanded=false, haspopup=menu]",
+    "axeSummary": "",
+    "criterion": "4.1.2",
+    "criterionName": "Name, Role, Value",
+    "element": "button in \"Recipient\"",
+    "rule": "announced-as",
+    "screen": "Send: Recipient step"
+   },
+   "family": "name",
+   "guidance": "High for an unnamed form control or the sole primary action.",
+   "issueId": null,
+   "key": "name:announced-as:6dd4494ac128",
+   "measured": false,
+   "primary": "payments.send-recipient-step",
+   "proposals": [],
+   "rule": "announced-as",
+   "screens": 9,
+   "severityDefault": "medium",
+   "source": "scanner",
+   "states": [
+    "payments.send-recipient-step",
+    "billpay.routing-number-error"
+   ],
+   "summary": "announced-as: announced as button \"\" [expanded=false, haspopup=menu].",
+   "title": "Missing or unclear name: button in \"Recipient\""
+  }
+ ],
+ "primaries": [
+  "payments.send-recipient-step"
+ ],
+ "reach": {
+  "baseUrl": "https://demo.mercury.com",
+  "data": "data",
+  "map": "build/map.json",
+  "run": "2026-10-03-1525",
+  "workspace": "a11y"
+ },
+ "run": "2026-10-03-1525"
+}

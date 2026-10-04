@@ -1,0 +1,508 @@
+{
+ "area": "cards",
+ "batch": "verify-442",
+ "findings": [
+  {
+   "attachments": [],
+   "attempt": 1,
+   "basis": "candidate",
+   "criteria": [
+    "2.5.3"
+   ],
+   "evidence": [
+    {
+     "evidence": {
+      "description": "",
+      "name": "bolt selected",
+      "role": "combobox",
+      "states": {
+       "expanded": false,
+       "haspopup": "grid"
+      },
+      "template": "combobox \"bolt selected\" [expanded=false, haspopup=grid]"
+     },
+     "occurrence": {
+      "ancestors": [
+       [
+        "_wrapper_72qf5_6"
+       ],
+       [
+        "_iconField_112ku_45"
+       ],
+       [
+        "_row_112ku_33"
+       ],
+       [
+        "_fieldGroup_112ku_27"
+       ],
+       [
+        "_fields_112ku_18"
+       ],
+       [
+        "_formContent_112ku_3"
+       ],
+       [
+        "_left_yg1rf_39",
+        "_wideLeftColumn_evx13_10"
+       ],
+       [
+        "_leftScrollArea_yg1rf_57"
+       ]
+      ],
+      "classes": [
+       "_button_72qf5_18"
+      ],
+      "data": {},
+      "heading": "Edit budget",
+      "landmark": {
+       "name": "",
+       "role": "main"
+      },
+      "layer": "document",
+      "name": "bolt selected",
+      "rect": [
+       556,
+       263,
+       64,
+       40
+      ],
+      "role": "combobox",
+      "tag": "button",
+      "xpath": "/html/body/div[1]/main[1]/div[1]/div[2]/div[2]/div[3]/div[1]/div[1]/div[1]/div[2]/div[1]/div[2]/div[1]/div[1]/div[2]/div[1]/button[1]"
+     },
+     "state": "cards.budget-edit"
+    },
+    {
+     "evidence": {
+      "description": "",
+      "name": "bolt selected",
+      "role": "combobox",
+      "states": {
+       "expanded": false,
+       "haspopup": "grid"
+      },
+      "template": "combobox \"bolt selected\" [expanded=false, haspopup=grid]"
+     },
+     "occurrence": {
+      "ancestors": [
+       [
+        "_wrapper_72qf5_6"
+       ],
+       [
+        "_iconField_112ku_45"
+       ],
+       [
+        "_row_112ku_33"
+       ],
+       [
+        "_fieldGroup_112ku_27"
+       ],
+       [
+        "_fields_112ku_18"
+       ],
+       [
+        "_formContent_112ku_3"
+       ],
+       [
+        "_left_yg1rf_39",
+        "_wideLeftColumn_evx13_10"
+       ],
+       [
+        "_leftScrollArea_yg1rf_57"
+       ]
+      ],
+      "classes": [
+       "_button_72qf5_18"
+      ],
+      "data": {},
+      "heading": "Edit budget",
+      "landmark": {
+       "name": "",
+       "role": "main"
+      },
+      "layer": "document",
+      "name": "bolt selected",
+      "rect": [
+       556,
+       263,
+       64,
+       40
+      ],
+      "role": "combobox",
+      "tag": "button",
+      "xpath": "/html/body/div[1]/main[1]/div[1]/div[2]/div[2]/div[3]/div[1]/div[1]/div[1]/div[2]/div[1]/div[2]/div[1]/div[1]/div[2]/div[1]/button[1]"
+     },
+     "state": "cards.budget-edit-error"
+    }
+   ],
+   "evidenceHash": "4f0579789307f9aca823d890d6c28ac4ad8172f4a24a7a69a0d43670643000af",
+   "facts": {
+    "announced": "combobox \"bolt selected\" [expanded=false, haspopup=grid]",
+    "axeSummary": "",
+    "criterion": "2.5.3",
+    "criterionName": "Label in Name",
+    "element": "combobox \"bolt selected\"",
+    "rule": "announced-as",
+    "screen": "Edit budget"
+   },
+   "family": "name",
+   "guidance": "High for an unnamed form control or the sole primary action.",
+   "issueId": null,
+   "key": "name:announced-as:96bea6e0aa8c",
+   "measured": false,
+   "primary": "cards.budget-edit",
+   "proposals": [],
+   "rule": "announced-as",
+   "screens": 2,
+   "severityDefault": "medium",
+   "source": "scanner",
+   "states": [
+    "cards.budget-edit",
+    "cards.budget-edit-error"
+   ],
+   "summary": "announced-as: announced as combobox \"bolt selected\" [expanded=false, haspopup=grid].",
+   "title": "Missing or unclear name: combobox \"bolt selected\""
+  },
+  {
+   "attachments": [],
+   "attempt": 1,
+   "basis": "candidate",
+   "criteria": [
+    "4.1.2"
+   ],
+   "evidence": [
+    {
+     "evidence": {
+      "description": "",
+      "name": "This budget starts",
+      "role": "button",
+      "states": {
+       "disabled": true,
+       "expanded": false,
+       "haspopup": "dialog"
+      },
+      "template": "button \"This budget starts\" [expanded=false, haspopup=dialog, disabled=true]"
+     },
+     "occurrence": {
+      "ancestors": [
+       [
+        "_root_11qmg_9",
+        "_rootFullWidth_11qmg_16"
+       ],
+       [
+        "_triggerAnchor_o7w4k_15",
+        "_triggerAnchorFullWidth_o7w4k_29"
+       ],
+       [
+        "_fullWidthRoot_o7w4k_25"
+       ],
+       [
+        "_tooltipAnchor_18bac_4"
+       ],
+       [
+        "_dateField_112ku_202"
+       ],
+       [
+        "_dateRow_112ku_196"
+       ],
+       [
+        "_fields_112ku_18"
+       ],
+       [
+        "_formContent_112ku_3"
+       ]
+      ],
+      "classes": [
+       "_trigger_11qmg_24"
+      ],
+      "data": {},
+      "heading": "Edit budget",
+      "landmark": {
+       "name": "",
+       "role": "main"
+      },
+      "layer": "document",
+      "name": "This budget starts",
+      "rect": [
+       100,
+       795,
+       254,
+       40
+      ],
+      "role": "button",
+      "tag": "button",
+      "xpath": "/html/body/div[1]/main[1]/div[1]/div[2]/div[2]/div[3]/div[1]/div[1]/div[1]/div[2]/div[1]/div[2]/div[3]/div[1]/div[1]/div[1]/div[1]/div[1]/button[1]"
+     },
+     "state": "cards.budget-edit"
+    },
+    {
+     "evidence": {
+      "description": "",
+      "name": "This budget starts",
+      "role": "button",
+      "states": {
+       "disabled": true,
+       "expanded": false,
+       "haspopup": "dialog"
+      },
+      "template": "button \"This budget starts\" [expanded=false, haspopup=dialog, disabled=true]"
+     },
+     "occurrence": {
+      "ancestors": [
+       [
+        "_root_11qmg_9",
+        "_rootFullWidth_11qmg_16"
+       ],
+       [
+        "_triggerAnchor_o7w4k_15",
+        "_triggerAnchorFullWidth_o7w4k_29"
+       ],
+       [
+        "_fullWidthRoot_o7w4k_25"
+       ],
+       [
+        "_tooltipAnchor_18bac_4"
+       ],
+       [
+        "_dateField_112ku_202"
+       ],
+       [
+        "_dateRow_112ku_196"
+       ],
+       [
+        "_fields_112ku_18"
+       ],
+       [
+        "_formContent_112ku_3"
+       ]
+      ],
+      "classes": [
+       "_trigger_11qmg_24"
+      ],
+      "data": {},
+      "heading": "Edit budget",
+      "landmark": {
+       "name": "",
+       "role": "main"
+      },
+      "layer": "document",
+      "name": "This budget starts",
+      "rect": [
+       100,
+       819,
+       254,
+       40
+      ],
+      "role": "button",
+      "tag": "button",
+      "xpath": "/html/body/div[1]/main[1]/div[1]/div[2]/div[2]/div[3]/div[1]/div[1]/div[1]/div[2]/div[1]/div[2]/div[3]/div[1]/div[1]/div[1]/div[1]/div[1]/button[1]"
+     },
+     "state": "cards.budget-edit-error"
+    }
+   ],
+   "evidenceHash": "6d0e7352ffbfabd14d1e2b5714a89be936f33ac27d6862d5f72ad9788f2993a5",
+   "facts": {
+    "announced": "button \"This budget starts\" [expanded=false, haspopup=dialog, disabled=true]",
+    "axeSummary": "",
+    "criterion": "4.1.2",
+    "criterionName": "Name, Role, Value",
+    "element": "button \"This budget starts\"",
+    "rule": "announced-as",
+    "screen": "Edit budget"
+   },
+   "family": "role-state",
+   "guidance": "Low for optional ARIA or an invalid autocomplete token; high when aria-hidden hides the whole page.",
+   "issueId": null,
+   "key": "role-state:announced-as:db5b64829a42",
+   "measured": false,
+   "primary": "cards.budget-edit",
+   "proposals": [],
+   "rule": "announced-as",
+   "screens": 2,
+   "severityDefault": "medium",
+   "source": "scanner",
+   "states": [
+    "cards.budget-edit",
+    "cards.budget-edit-error"
+   ],
+   "summary": "announced-as: announced as button \"This budget starts\" [expanded=false, haspopup=dialog, disabled=true].",
+   "title": "Wrong role or state: button \"This budget starts\""
+  },
+  {
+   "attachments": [],
+   "attempt": 1,
+   "basis": "candidate",
+   "criteria": [
+    "4.1.2"
+   ],
+   "evidence": [
+    {
+     "evidence": {
+      "description": "",
+      "name": "This budget ends",
+      "role": "button",
+      "states": {
+       "expanded": false,
+       "haspopup": "dialog"
+      },
+      "template": "button \"This budget ends\" [expanded=false, haspopup=dialog]"
+     },
+     "occurrence": {
+      "ancestors": [
+       [
+        "_root_11qmg_9",
+        "_rootFullWidth_11qmg_16"
+       ],
+       [
+        "_triggerAnchor_o7w4k_15",
+        "_triggerAnchorFullWidth_o7w4k_29"
+       ],
+       [
+        "_fullWidthRoot_o7w4k_25"
+       ],
+       [
+        "_dateField_112ku_202"
+       ],
+       [
+        "_dateRow_112ku_196"
+       ],
+       [
+        "_fields_112ku_18"
+       ],
+       [
+        "_formContent_112ku_3"
+       ],
+       [
+        "_left_yg1rf_39",
+        "_wideLeftColumn_evx13_10"
+       ]
+      ],
+      "classes": [
+       "_trigger_11qmg_24"
+      ],
+      "data": {},
+      "heading": "Edit budget",
+      "landmark": {
+       "name": "",
+       "role": "main"
+      },
+      "layer": "document",
+      "name": "This budget ends",
+      "rect": [
+       366,
+       795,
+       254,
+       40
+      ],
+      "role": "button",
+      "tag": "button",
+      "xpath": "/html/body/div[1]/main[1]/div[1]/div[2]/div[2]/div[3]/div[1]/div[1]/div[1]/div[2]/div[1]/div[2]/div[3]/div[2]/div[1]/div[1]/div[1]/button[1]"
+     },
+     "state": "cards.budget-edit"
+    },
+    {
+     "evidence": {
+      "description": "",
+      "name": "This budget ends",
+      "role": "button",
+      "states": {
+       "expanded": false,
+       "haspopup": "dialog"
+      },
+      "template": "button \"This budget ends\" [expanded=false, haspopup=dialog]"
+     },
+     "occurrence": {
+      "ancestors": [
+       [
+        "_root_11qmg_9",
+        "_rootFullWidth_11qmg_16"
+       ],
+       [
+        "_triggerAnchor_o7w4k_15",
+        "_triggerAnchorFullWidth_o7w4k_29"
+       ],
+       [
+        "_fullWidthRoot_o7w4k_25"
+       ],
+       [
+        "_dateField_112ku_202"
+       ],
+       [
+        "_dateRow_112ku_196"
+       ],
+       [
+        "_fields_112ku_18"
+       ],
+       [
+        "_formContent_112ku_3"
+       ],
+       [
+        "_left_yg1rf_39",
+        "_wideLeftColumn_evx13_10"
+       ]
+      ],
+      "classes": [
+       "_trigger_11qmg_24"
+      ],
+      "data": {},
+      "heading": "Edit budget",
+      "landmark": {
+       "name": "",
+       "role": "main"
+      },
+      "layer": "document",
+      "name": "This budget ends",
+      "rect": [
+       366,
+       819,
+       254,
+       40
+      ],
+      "role": "button",
+      "tag": "button",
+      "xpath": "/html/body/div[1]/main[1]/div[1]/div[2]/div[2]/div[3]/div[1]/div[1]/div[1]/div[2]/div[1]/div[2]/div[3]/div[2]/div[1]/div[1]/div[1]/button[1]"
+     },
+     "state": "cards.budget-edit-error"
+    }
+   ],
+   "evidenceHash": "0781dc37f3b07bc7dd05bf0d278062860b35b942932b4fda4d6d96d084a7334d",
+   "facts": {
+    "announced": "button \"This budget ends\" [expanded=false, haspopup=dialog]",
+    "axeSummary": "",
+    "criterion": "4.1.2",
+    "criterionName": "Name, Role, Value",
+    "element": "button \"This budget ends\"",
+    "rule": "announced-as",
+    "screen": "Edit budget"
+   },
+   "family": "role-state",
+   "guidance": "Low for optional ARIA or an invalid autocomplete token; high when aria-hidden hides the whole page.",
+   "issueId": null,
+   "key": "role-state:announced-as:e329fbfa6e21",
+   "measured": false,
+   "primary": "cards.budget-edit",
+   "proposals": [],
+   "rule": "announced-as",
+   "screens": 5,
+   "severityDefault": "medium",
+   "source": "scanner",
+   "states": [
+    "cards.budget-edit",
+    "cards.budget-edit-error"
+   ],
+   "summary": "announced-as: announced as button \"This budget ends\" [expanded=false, haspopup=dialog].",
+   "title": "Wrong role or state: button \"This budget ends\""
+  }
+ ],
+ "primaries": [
+  "cards.budget-edit"
+ ],
+ "reach": {
+  "baseUrl": "https://demo.mercury.com",
+  "data": "data",
+  "map": "build/map.json",
+  "run": "2026-10-03-1525",
+  "workspace": "a11y"
+ },
+ "run": "2026-10-03-1525"
+}

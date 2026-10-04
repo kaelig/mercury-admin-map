@@ -1,0 +1,149 @@
+{
+ "area": "accounts",
+ "batch": "verify-401",
+ "findings": [
+  {
+   "attachments": [],
+   "attempt": 1,
+   "basis": "candidate",
+   "criteria": [
+    "4.1.2"
+   ],
+   "evidence": [
+    {
+     "evidence": {
+      "description": "",
+      "name": "",
+      "role": "dialog",
+      "states": {
+       "modal": true
+      },
+      "template": "dialog \"\" [modal=true]"
+     },
+     "occurrence": {
+      "ancestors": [
+       [
+        "ReactModal__Overlay",
+        "ReactModal__Overlay--after-open",
+        "_overlay_lo4oy_89",
+        "_backgroundColor_lo4oy_103"
+       ],
+       [
+        "ReactModalPortal"
+       ]
+      ],
+      "classes": [
+       "ReactModal__Content",
+       "ReactModal__Content--after-open",
+       "_modal_lo4oy_73"
+      ],
+      "data": {},
+      "heading": "",
+      "landmark": null,
+      "layer": "top",
+      "name": "",
+      "rect": [
+       432,
+       35,
+       576,
+       831
+      ],
+      "role": "dialog",
+      "tag": "div",
+      "xpath": "/html/body/div[10]/div[1]/div[1]"
+     },
+     "state": "accounts.bank-letter-customize"
+    },
+    {
+     "evidence": {
+      "description": "",
+      "name": "",
+      "role": "dialog",
+      "states": {
+       "modal": true
+      },
+      "template": "dialog \"\" [modal=true]"
+     },
+     "occurrence": {
+      "ancestors": [
+       [
+        "ReactModal__Overlay",
+        "ReactModal__Overlay--after-open",
+        "_overlay_cjx1n_39"
+       ],
+       [
+        "ReactModalPortal"
+       ]
+      ],
+      "classes": [
+       "ReactModal__Content",
+       "ReactModal__Content--after-open",
+       "_modal_cjx1n_34"
+      ],
+      "data": {},
+      "heading": "",
+      "landmark": null,
+      "layer": "top",
+      "name": "",
+      "rect": [
+       0,
+       0,
+       1440,
+       777
+      ],
+      "role": "dialog",
+      "tag": "div",
+      "xpath": "/html/body/div[10]/div[1]/div[1]"
+     },
+     "state": "settings.share-documents-error"
+    }
+   ],
+   "evidenceHash": "002c5df1263d8f5887be07644e3b0834aed0ed0b8d4f3809a50fa41168011a5c",
+   "facts": {
+    "announced": "dialog \"\" [modal=true]",
+    "axeSummary": "",
+    "criterion": "4.1.2",
+    "criterionName": "Name, Role, Value",
+    "element": "dialog",
+    "rule": "announced-as",
+    "screen": "Custom bank letter editor"
+   },
+   "family": "name",
+   "guidance": "High for an unnamed form control or the sole primary action.",
+   "issueId": null,
+   "key": "name:announced-as:d95b05305d73",
+   "measured": false,
+   "primary": "accounts.bank-letter-customize",
+   "proposals": [
+    {
+     "family": "name",
+     "finding": "name:announced-as:d95b05305d73",
+     "handFound": "transactions.i-category-name-label",
+     "id": "ec5c8aa2f0c07bc25cb3df4eb08f636281d38d25ae3489d18d8b03712d4142b0",
+     "overlap": 1
+    }
+   ],
+   "rule": "announced-as",
+   "screens": 125,
+   "severityDefault": "medium",
+   "source": "scanner",
+   "states": [
+    "accounts.bank-letter-customize",
+    "settings.share-documents-error"
+   ],
+   "summary": "announced-as: announced as dialog \"\" [modal=true].",
+   "title": "Missing or unclear name: dialog"
+  }
+ ],
+ "primaries": [
+  "accounts.bank-letter-customize"
+ ],
+ "reach": {
+  "baseUrl": "https://demo.mercury.com",
+  "data": "data",
+  "map": "build/map.json",
+  "run": "2026-10-03-1525",
+  "workspace": "a11y"
+ },
+ "run": "2026-10-03-1525"
+}

@@ -1,0 +1,500 @@
+{
+ "area": "settings",
+ "batch": "verify-518",
+ "findings": [
+  {
+   "attachments": [],
+   "attempt": 1,
+   "basis": "candidate",
+   "criteria": [
+    "4.1.2"
+   ],
+   "evidence": [
+    {
+     "evidence": {
+      "description": "",
+      "name": "",
+      "role": "button",
+      "states": {},
+      "template": "button \"\""
+     },
+     "occurrence": {
+      "ancestors": [
+       [
+        "ReactModal__Content",
+        "ReactModal__Content--after-open",
+        "_modal_lo4oy_73",
+        "_modalContent_94z7m_6"
+       ],
+       [
+        "ReactModal__Overlay",
+        "ReactModal__Overlay--after-open",
+        "_overlay_lo4oy_89",
+        "_overlay_94z7m_1"
+       ],
+       [
+        "ReactModalPortal"
+       ]
+      ],
+      "classes": [
+       "_button_r6b2u_20",
+       "_small_r6b2u_72",
+       "_floating_r6b2u_16",
+       "_closeButton_ijyce_244"
+      ],
+      "data": {},
+      "heading": "",
+      "landmark": {
+       "name": "",
+       "role": "dialog"
+      },
+      "layer": "top",
+      "name": "",
+      "rect": [
+       1372,
+       36,
+       32,
+       32
+      ],
+      "role": "button",
+      "tag": "button",
+      "xpath": "/html/body/div[10]/div[1]/div[1]/button[1]"
+     },
+     "state": "settings.choose-plan-monthly"
+    },
+    {
+     "evidence": {
+      "description": "",
+      "name": "",
+      "role": "button",
+      "states": {},
+      "template": "button \"\""
+     },
+     "occurrence": {
+      "ancestors": [
+       [
+        "ReactModal__Content",
+        "ReactModal__Content--after-open",
+        "_modal_lo4oy_73",
+        "_modalContent_94z7m_6"
+       ],
+       [
+        "ReactModal__Overlay",
+        "ReactModal__Overlay--after-open",
+        "_overlay_lo4oy_89",
+        "_overlay_94z7m_1"
+       ],
+       [
+        "ReactModalPortal"
+       ]
+      ],
+      "classes": [
+       "_button_r6b2u_20",
+       "_small_r6b2u_72",
+       "_floating_r6b2u_16",
+       "_closeButton_ijyce_244"
+      ],
+      "data": {},
+      "heading": "",
+      "landmark": {
+       "name": "",
+       "role": "dialog"
+      },
+      "layer": "top",
+      "name": "",
+      "rect": [
+       1372,
+       36,
+       32,
+       32
+      ],
+      "role": "button",
+      "tag": "button",
+      "xpath": "/html/body/div[10]/div[1]/div[1]/button[1]"
+     },
+     "state": "settings.choose-plan-annual"
+    }
+   ],
+   "evidenceHash": "6807fcb6947ee9032b217ccac6959c3d40eee9113e87452ad587403a6bae552a",
+   "facts": {
+    "announced": "button \"\"",
+    "axeSummary": "",
+    "criterion": "4.1.2",
+    "criterionName": "Name, Role, Value",
+    "element": "button in the dialog landmark",
+    "rule": "announced-as",
+    "screen": "Choose a Plan — monthly"
+   },
+   "family": "name",
+   "guidance": "High for an unnamed form control or the sole primary action.",
+   "issueId": null,
+   "key": "name:announced-as:4d5f28a42190",
+   "measured": false,
+   "primary": "settings.choose-plan-monthly",
+   "proposals": [],
+   "rule": "announced-as",
+   "screens": 2,
+   "severityDefault": "medium",
+   "source": "scanner",
+   "states": [
+    "settings.choose-plan-monthly",
+    "settings.choose-plan-annual"
+   ],
+   "summary": "announced-as: announced as button \"\".",
+   "title": "Missing or unclear name: button in the dialog landmark"
+  },
+  {
+   "attachments": [],
+   "attempt": 1,
+   "basis": "candidate",
+   "criteria": [
+    "4.1.2"
+   ],
+   "evidence": [
+    {
+     "evidence": {
+      "description": "",
+      "name": "",
+      "role": "dialog",
+      "states": {
+       "modal": true
+      },
+      "template": "dialog \"\" [modal=true]"
+     },
+     "occurrence": {
+      "ancestors": [
+       [
+        "ReactModal__Overlay",
+        "ReactModal__Overlay--after-open",
+        "_overlay_lo4oy_89",
+        "_overlay_94z7m_1"
+       ],
+       [
+        "ReactModalPortal"
+       ]
+      ],
+      "classes": [
+       "ReactModal__Content",
+       "ReactModal__Content--after-open",
+       "_modal_lo4oy_73",
+       "_modalContent_94z7m_6"
+      ],
+      "data": {},
+      "heading": "",
+      "landmark": null,
+      "layer": "top",
+      "name": "",
+      "rect": [
+       254,
+       86,
+       932,
+       728
+      ],
+      "role": "dialog",
+      "tag": "div",
+      "xpath": "/html/body/div[10]/div[1]/div[1]"
+     },
+     "state": "settings.choose-plan-monthly"
+    },
+    {
+     "evidence": {
+      "description": "",
+      "name": "",
+      "role": "dialog",
+      "states": {
+       "modal": true
+      },
+      "template": "dialog \"\" [modal=true]"
+     },
+     "occurrence": {
+      "ancestors": [
+       [
+        "ReactModal__Overlay",
+        "ReactModal__Overlay--after-open",
+        "_overlay_lo4oy_89",
+        "_overlay_94z7m_1"
+       ],
+       [
+        "ReactModalPortal"
+       ]
+      ],
+      "classes": [
+       "ReactModal__Content",
+       "ReactModal__Content--after-open",
+       "_modal_lo4oy_73",
+       "_modalContent_94z7m_6"
+      ],
+      "data": {},
+      "heading": "",
+      "landmark": null,
+      "layer": "top",
+      "name": "",
+      "rect": [
+       254,
+       75,
+       932,
+       750
+      ],
+      "role": "dialog",
+      "tag": "div",
+      "xpath": "/html/body/div[10]/div[1]/div[1]"
+     },
+     "state": "settings.choose-plan-annual"
+    }
+   ],
+   "evidenceHash": "2c11c166fa77900396114b38b20d14aeea3737dd9355a3e5fe8dcb9d24827db9",
+   "facts": {
+    "announced": "dialog \"\" [modal=true]",
+    "axeSummary": "",
+    "criterion": "4.1.2",
+    "criterionName": "Name, Role, Value",
+    "element": "dialog",
+    "rule": "announced-as",
+    "screen": "Choose a Plan — monthly"
+   },
+   "family": "name",
+   "guidance": "High for an unnamed form control or the sole primary action.",
+   "issueId": null,
+   "key": "name:announced-as:e294df56f52b",
+   "measured": false,
+   "primary": "settings.choose-plan-monthly",
+   "proposals": [],
+   "rule": "announced-as",
+   "screens": 3,
+   "severityDefault": "medium",
+   "source": "scanner",
+   "states": [
+    "settings.choose-plan-monthly",
+    "settings.choose-plan-annual"
+   ],
+   "summary": "announced-as: announced as dialog \"\" [modal=true].",
+   "title": "Missing or unclear name: dialog"
+  },
+  {
+   "attachments": [],
+   "attempt": 1,
+   "basis": "candidate",
+   "criteria": [
+    "4.1.2"
+   ],
+   "evidence": [
+    {
+     "evidence": {
+      "description": "",
+      "name": "Pay annually Pay annually -15%",
+      "role": "button",
+      "states": {},
+      "template": "button \"Pay annually Pay annually -<n>%\""
+     },
+     "occurrence": {
+      "ancestors": [
+       [
+        "_buttonWithDivider_1xt6d_80"
+       ],
+       [
+        "_container_1xt6d_3",
+        "_large_1xt6d_15"
+       ],
+       [
+        "_billingPlanToggle_ijyce_30"
+       ],
+       [
+        "_headerRow_ijyce_20"
+       ],
+       [
+        "_container_ijyce_4"
+       ],
+       [
+        "_large_kwlx6_9",
+        "_noHover_3n0se_28",
+        "_shadow_3n0se_25",
+        "_raisedBackground_3n0se_45",
+        "_card_lo4oy_4",
+        "_card_94z7m_10"
+       ],
+       [
+        "ReactModal__Content",
+        "ReactModal__Content--after-open",
+        "_modal_lo4oy_73",
+        "_modalContent_94z7m_6"
+       ],
+       [
+        "ReactModal__Overlay",
+        "ReactModal__Overlay--after-open",
+        "_overlay_lo4oy_89",
+        "_overlay_94z7m_1"
+       ]
+      ],
+      "classes": [
+       "_segment_1xt6d_7",
+       "_last_1xt6d_76"
+      ],
+      "data": {},
+      "heading": "",
+      "landmark": {
+       "name": "",
+       "role": "dialog"
+      },
+      "layer": "top",
+      "name": "Pay annually Pay annually -15%",
+      "rect": [
+       979,
+       111,
+       174,
+       38
+      ],
+      "role": "button",
+      "tag": "button",
+      "xpath": "/html/body/div[10]/div[1]/div[1]/div[1]/div[2]/div[1]/div[1]/div[1]/div[2]/button[1]"
+     },
+     "state": "settings.choose-plan-monthly"
+    }
+   ],
+   "evidenceHash": "986a376e4851d55a3e2ca843c49a5df7155118eb1908d64d4938fd17b53234a4",
+   "facts": {
+    "announced": "button \"Pay annually Pay annually -<n>%\"",
+    "axeSummary": "",
+    "criterion": "4.1.2",
+    "criterionName": "Name, Role, Value",
+    "element": "button \"Pay annually Pay annually -<n>%\"",
+    "rule": "announced-as",
+    "screen": "Choose a Plan — monthly"
+   },
+   "family": "role-state",
+   "guidance": "Low for optional ARIA or an invalid autocomplete token; high when aria-hidden hides the whole page.",
+   "issueId": null,
+   "key": "role-state:announced-as:29bf1f9e5c9c",
+   "measured": false,
+   "primary": "settings.choose-plan-monthly",
+   "proposals": [],
+   "rule": "announced-as",
+   "screens": 1,
+   "severityDefault": "medium",
+   "source": "scanner",
+   "states": [
+    "settings.choose-plan-monthly"
+   ],
+   "summary": "announced-as: announced as button \"Pay annually Pay annually -<n>%\".",
+   "title": "Wrong role or state: button \"Pay annually Pay annually -<n>%\""
+  },
+  {
+   "attachments": [],
+   "attempt": 1,
+   "basis": "candidate",
+   "criteria": [
+    "4.1.2"
+   ],
+   "evidence": [
+    {
+     "evidence": {
+      "description": "",
+      "name": "Pay monthly",
+      "role": "button",
+      "states": {},
+      "template": "button \"Pay monthly\""
+     },
+     "occurrence": {
+      "ancestors": [
+       [
+        "_buttonWithDivider_1xt6d_80"
+       ],
+       [
+        "_container_1xt6d_3",
+        "_large_1xt6d_15"
+       ],
+       [
+        "_billingPlanToggle_ijyce_30"
+       ],
+       [
+        "_headerRow_ijyce_20"
+       ],
+       [
+        "_container_ijyce_4"
+       ],
+       [
+        "_large_kwlx6_9",
+        "_noHover_3n0se_28",
+        "_shadow_3n0se_25",
+        "_raisedBackground_3n0se_45",
+        "_card_lo4oy_4",
+        "_card_94z7m_10"
+       ],
+       [
+        "ReactModal__Content",
+        "ReactModal__Content--after-open",
+        "_modal_lo4oy_73",
+        "_modalContent_94z7m_6"
+       ],
+       [
+        "ReactModal__Overlay",
+        "ReactModal__Overlay--after-open",
+        "_overlay_lo4oy_89",
+        "_overlay_94z7m_1"
+       ]
+      ],
+      "classes": [
+       "_segment_1xt6d_7",
+       "_selected_1xt6d_60",
+       "_first_1xt6d_73"
+      ],
+      "data": {},
+      "heading": "",
+      "landmark": {
+       "name": "",
+       "role": "dialog"
+      },
+      "layer": "top",
+      "name": "Pay monthly",
+      "rect": [
+       804,
+       110,
+       176,
+       40
+      ],
+      "role": "button",
+      "tag": "button",
+      "xpath": "/html/body/div[10]/div[1]/div[1]/div[1]/div[2]/div[1]/div[1]/div[1]/div[1]/button[1]"
+     },
+     "state": "settings.choose-plan-monthly"
+    }
+   ],
+   "evidenceHash": "e8e13f4f5d99044307f23812688f11144de5cdbc9d2d4c105e13565c838770c1",
+   "facts": {
+    "announced": "button \"Pay monthly\"",
+    "axeSummary": "",
+    "criterion": "4.1.2",
+    "criterionName": "Name, Role, Value",
+    "element": "button \"Pay monthly\"",
+    "rule": "announced-as",
+    "screen": "Choose a Plan — monthly"
+   },
+   "family": "role-state",
+   "guidance": "Low for optional ARIA or an invalid autocomplete token; high when aria-hidden hides the whole page.",
+   "issueId": null,
+   "key": "role-state:announced-as:a2fc7ef87a93",
+   "measured": false,
+   "primary": "settings.choose-plan-monthly",
+   "proposals": [],
+   "rule": "announced-as",
+   "screens": 1,
+   "severityDefault": "medium",
+   "source": "scanner",
+   "states": [
+    "settings.choose-plan-monthly"
+   ],
+   "summary": "announced-as: announced as button \"Pay monthly\".",
+   "title": "Wrong role or state: button \"Pay monthly\""
+  }
+ ],
+ "primaries": [
+  "settings.choose-plan-monthly"
+ ],
+ "reach": {
+  "baseUrl": "https://demo.mercury.com",
+  "data": "data",
+  "map": "build/map.json",
+  "run": "2026-10-03-1525",
+  "workspace": "a11y"
+ },
+ "run": "2026-10-03-1525"
+}

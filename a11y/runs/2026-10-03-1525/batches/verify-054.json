@@ -1,0 +1,444 @@
+{
+ "area": "accounts",
+ "batch": "verify-054",
+ "findings": [
+  {
+   "attachments": [],
+   "attempt": 1,
+   "basis": "violation",
+   "criteria": [
+    "1.4.1"
+   ],
+   "evidence": [
+    {
+     "evidence": {
+      "contrastRatio": 2.08,
+      "failureSummary": "Fix any of the following:\n  The link has insufficient color contrast of 2.08:1 with the surrounding text. (Minimum contrast is 3:1, link text: #465bd1, surrounding text: #363644)\n  The link has no styling (such as underline) to distinguish it from the surrounding text",
+      "messageKey": "fgContrast",
+      "nodeColor": "#465bd1",
+      "parentColor": "#363644",
+      "requiredContrastRatio": 3
+     },
+     "occurrence": {
+      "ancestors": [
+       [],
+       [
+        "_bodySecondary_qaod7_51",
+        "_toast_1uumt_1"
+       ],
+       [],
+       [
+        "_fundInformationComponent_11v94_1"
+       ],
+       [],
+       [
+        "_portfolioInfoTab_1wr5i_1"
+       ],
+       [
+        "_portfolioTabContentWrapper_1gorc_92"
+       ],
+       []
+      ],
+      "classes": [
+       "_link_ual8v_4",
+       "_variantPrimary_ual8v_33"
+      ],
+      "data": {},
+      "heading": "Treasury",
+      "landmark": {
+       "name": "",
+       "role": "main"
+      },
+      "layer": "document",
+      "name": "here.",
+      "rect": [
+       1248,
+       992,
+       28,
+       14
+      ],
+      "role": "link",
+      "tag": "a",
+      "xpath": "/html/body/div[1]/main[1]/div[1]/div[1]/div[4]/div[1]/div[2]/div[2]/div[4]/div[1]/div[1]/div[2]/div[3]/p[1]/span[1]/a[1]"
+     },
+     "state": "accounts.treasury-portfolio"
+    },
+    {
+     "evidence": {
+      "contrastRatio": 2.08,
+      "failureSummary": "Fix any of the following:\n  The link has insufficient color contrast of 2.08:1 with the surrounding text. (Minimum contrast is 3:1, link text: #465bd1, surrounding text: #363644)\n  The link has no styling (such as underline) to distinguish it from the surrounding text",
+      "messageKey": "fgContrast",
+      "nodeColor": "#465bd1",
+      "parentColor": "#363644",
+      "requiredContrastRatio": 3
+     },
+     "occurrence": {
+      "ancestors": [
+       [],
+       [
+        "_bodyDefault_qaod7_40",
+        "_text-default_12t49_1"
+       ],
+       [
+        "_noDataContainer_1ow20_188"
+       ],
+       [
+        "_statusMessage_1nxbl_16"
+       ],
+       [
+        "_statusOverlay_1nxbl_1"
+       ],
+       [
+        "_tableWrapper_1ow20_26",
+        "_tableWrapper_1acga_4"
+       ],
+       [],
+       [
+        "_transactionsPageDashboardWrapper_1ow20_48"
+       ]
+      ],
+      "classes": [
+       "_link_ual8v_4",
+       "_variantPrimary_ual8v_33"
+      ],
+      "data": {
+       "data-discover": "true"
+      },
+      "heading": "Transactions",
+      "landmark": {
+       "name": "",
+       "role": "main"
+      },
+      "layer": "document",
+      "name": "reset",
+      "rect": [
+       910,
+       588,
+       35,
+       18
+      ],
+      "role": "link",
+      "tag": "a",
+      "xpath": "/html/body/div[1]/main[1]/div[1]/div[1]/div[4]/div[1]/div[2]/div[3]/div[1]/div[1]/div[2]/div[1]/span[2]/span[1]/a[1]"
+     },
+     "state": "transactions.filter-no-results"
+    }
+   ],
+   "evidenceHash": "f4bb84daeb269037813bc4e18ed39fe658aace1bb801246ba2f7a343862b4894",
+   "facts": {
+    "bg": "#363644",
+    "criterion": "1.4.1",
+    "criterionName": "Use of Color",
+    "element": "link \"here.\"",
+    "fg": "#465bd1",
+    "ratio": "2.08",
+    "required": "3",
+    "rule": "link-in-text-block",
+    "screen": "Treasury — Portfolio tab",
+    "screens": 6
+   },
+   "family": "contrast",
+   "guidance": "High under 2:1, or under 3:1 for essential text.",
+   "issueId": null,
+   "key": "contrast:link-in-text-block:e4d10bf01792",
+   "measured": true,
+   "primary": "accounts.treasury-portfolio",
+   "proposals": [],
+   "rule": "link-in-text-block",
+   "screens": 6,
+   "severityDefault": "medium",
+   "source": "scanner",
+   "states": [
+    "accounts.treasury-portfolio",
+    "transactions.filter-no-results"
+   ],
+   "summary": "axe link-in-text-block: link #465bd1 against text #363644 measures 2.08:1 with no other visual cue; AA needs 3:1 or a cue such as an underline.",
+   "title": "Link shown by color only: link \"here.\""
+  },
+  {
+   "attachments": [],
+   "attempt": 1,
+   "basis": "candidate",
+   "criteria": [
+    "2.4.3",
+    "1.3.2"
+   ],
+   "evidence": [
+    {
+     "evidence": {
+      "band": 20,
+      "overlay": "accounts.treasury-portfolio.tabstops.png",
+      "previous": {
+       "ancestors": [
+        [],
+        [
+         "_rowLabelWrapper_11v94_10"
+        ],
+        [
+         "_descriptionColumn_11v94_31"
+        ],
+        [
+         "_fundInformationComponent_11v94_1"
+        ],
+        [],
+        [
+         "_portfolioInfoTab_1wr5i_1"
+        ],
+        [
+         "_portfolioTabContentWrapper_1gorc_92"
+        ],
+        []
+       ],
+       "classes": [
+        "_prospectusWrapper_11v94_18",
+        "_link_ual8v_4",
+        "_underlineOnHover_ual8v_15"
+       ],
+       "data": {},
+       "heading": "Treasury",
+       "landmark": {
+        "name": "",
+        "role": "main"
+       },
+       "layer": "document",
+       "name": "Prospectus",
+       "rect": [
+        693,
+        665,
+        85,
+        20
+       ],
+       "role": "link",
+       "tag": "a",
+       "xpath": "/html/body/div[1]/main[1]/div[1]/div[1]/div[4]/div[1]/div[2]/div[2]/div[4]/div[1]/div[1]/div[1]/div[2]/div[3]/span[1]/a[1]"
+      },
+      "rise": 114,
+      "stop": 52,
+      "stops": 58
+     },
+     "occurrence": {
+      "ancestors": [
+       [
+        "_bodySecondary_qaod7_51",
+        "_text-tertiary_12t49_1",
+        "_fundDescriptionTableTitle_11v94_64"
+       ],
+       [
+        "_fundDescriptionTableCell_11v94_46"
+       ],
+       [
+        "_fundDescriptionTable_11v94_40"
+       ],
+       [],
+       [
+        "_fundInformationComponent_11v94_1"
+       ],
+       [],
+       [
+        "_portfolioInfoTab_1wr5i_1"
+       ],
+       [
+        "_portfolioTabContentWrapper_1gorc_92"
+       ]
+      ],
+      "classes": [
+       "_tooltipAnchor_18bac_4"
+      ],
+      "data": {
+       "data-focus-visible": "true"
+      },
+      "heading": "Treasury",
+      "landmark": {
+       "name": "",
+       "role": "main"
+      },
+      "layer": "document",
+      "name": "",
+      "rect": [
+       1121,
+       551,
+       12,
+       20
+      ],
+      "role": "generic",
+      "tag": "div",
+      "xpath": "/html/body/div[1]/main[1]/div[1]/div[1]/div[4]/div[1]/div[2]/div[2]/div[4]/div[1]/div[1]/div[1]/div[3]/div[1]/div[2]/div[1]/div[1]"
+     },
+     "state": "accounts.treasury-portfolio"
+    }
+   ],
+   "evidenceHash": "a998e62f3265f67f051a137403bd0da46ced838e22655c86338ecf1868b6c773",
+   "facts": {
+    "criterion": "2.4.3",
+    "criterionName": "Focus Order",
+    "element": "text in \"Treasury\"",
+    "previous": "link \"Prospectus\"",
+    "screen": "Treasury — Portfolio tab",
+    "stop": "52"
+   },
+   "family": "focus-order",
+   "guidance": "High if the order skips a required control.",
+   "issueId": null,
+   "key": "focus-order:backward-jump:3cc1d4f0302f",
+   "measured": false,
+   "primary": "accounts.treasury-portfolio",
+   "proposals": [],
+   "rule": "backward-jump",
+   "screens": 1,
+   "severityDefault": "medium",
+   "source": "scanner",
+   "states": [
+    "accounts.treasury-portfolio"
+   ],
+   "summary": "Tab stop 52 jumped backward on screen, from the link \"Prospectus\" to the text in \"Treasury\".",
+   "title": "Tab order jumps backward at text in \"Treasury\""
+  },
+  {
+   "attachments": [],
+   "attempt": 1,
+   "basis": "candidate",
+   "criteria": [
+    "2.4.3",
+    "1.3.2"
+   ],
+   "evidence": [
+    {
+     "evidence": {
+      "band": 20,
+      "overlay": "accounts.treasury-portfolio.tabstops.png",
+      "previous": {
+       "ancestors": [
+        [
+         "_bodySecondary_qaod7_51",
+         "_text-tertiary_12t49_1",
+         "_fundDescriptionTableTitle_11v94_64"
+        ],
+        [
+         "_fundDescriptionTableCell_11v94_46"
+        ],
+        [
+         "_fundDescriptionTable_11v94_40"
+        ],
+        [],
+        [
+         "_fundInformationComponent_11v94_1"
+        ],
+        [],
+        [
+         "_portfolioInfoTab_1wr5i_1"
+        ],
+        [
+         "_portfolioTabContentWrapper_1gorc_92"
+        ]
+       ],
+       "classes": [
+        "_tooltipAnchor_18bac_4"
+       ],
+       "data": {
+        "data-focus-visible": "true"
+       },
+       "heading": "Treasury",
+       "landmark": {
+        "name": "",
+        "role": "main"
+       },
+       "layer": "document",
+       "name": "",
+       "rect": [
+        1128,
+        880,
+        12,
+        20
+       ],
+       "role": "generic",
+       "tag": "div",
+       "xpath": "/html/body/div[1]/main[1]/div[1]/div[1]/div[4]/div[1]/div[2]/div[2]/div[4]/div[1]/div[1]/div[2]/div[3]/div[1]/div[5]/div[1]/div[1]"
+      },
+      "rise": 161,
+      "stop": 56,
+      "stops": 58
+     },
+     "occurrence": {
+      "ancestors": [
+       [],
+       [
+        "_bodySecondary_qaod7_51",
+        "_toast_1uumt_1"
+       ],
+       [],
+       [
+        "_fundInformationComponent_11v94_1"
+       ],
+       [],
+       [
+        "_portfolioInfoTab_1wr5i_1"
+       ],
+       [
+        "_portfolioTabContentWrapper_1gorc_92"
+       ],
+       []
+      ],
+      "classes": [
+       "_link_ual8v_4",
+       "_variantPrimary_ual8v_33"
+      ],
+      "data": {},
+      "heading": "Treasury",
+      "landmark": {
+       "name": "",
+       "role": "main"
+      },
+      "layer": "document",
+      "name": "here.",
+      "rect": [
+       1248,
+       719,
+       28,
+       14
+      ],
+      "role": "link",
+      "tag": "a",
+      "xpath": "/html/body/div[1]/main[1]/div[1]/div[1]/div[4]/div[1]/div[2]/div[2]/div[4]/div[1]/div[1]/div[2]/div[3]/p[1]/span[1]/a[1]"
+     },
+     "state": "accounts.treasury-portfolio"
+    }
+   ],
+   "evidenceHash": "fed6225c240bc491aaf6f655455aa0fb33c09e0f872961333b38fab13b932cbb",
+   "facts": {
+    "criterion": "2.4.3",
+    "criterionName": "Focus Order",
+    "element": "link \"here.\"",
+    "previous": "text in \"Treasury\"",
+    "screen": "Treasury — Portfolio tab",
+    "stop": "56"
+   },
+   "family": "focus-order",
+   "guidance": "High if the order skips a required control.",
+   "issueId": null,
+   "key": "focus-order:backward-jump:95c8136ec833",
+   "measured": false,
+   "primary": "accounts.treasury-portfolio",
+   "proposals": [],
+   "rule": "backward-jump",
+   "screens": 1,
+   "severityDefault": "medium",
+   "source": "scanner",
+   "states": [
+    "accounts.treasury-portfolio"
+   ],
+   "summary": "Tab stop 56 jumped backward on screen, from the text in \"Treasury\" to the link \"here.\".",
+   "title": "Tab order jumps backward at link \"here.\""
+  }
+ ],
+ "primaries": [
+  "accounts.treasury-portfolio"
+ ],
+ "reach": {
+  "baseUrl": "https://demo.mercury.com",
+  "data": "data",
+  "map": "build/map.json",
+  "run": "2026-10-03-1525",
+  "workspace": "a11y"
+ },
+ "run": "2026-10-03-1525"
+}

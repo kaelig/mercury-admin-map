@@ -1,0 +1,343 @@
+{
+ "area": "cards",
+ "batch": "verify-164",
+ "findings": [
+  {
+   "attachments": [],
+   "attempt": 1,
+   "basis": "violation",
+   "criteria": [
+    "4.1.2"
+   ],
+   "evidence": [
+    {
+     "evidence": {
+      "aria-errormessage": [
+       "merchant-mercury-utils-id-44-errormessage"
+      ],
+      "failureSummary": "Fix all of the following:\n  aria-errormessage value `merchant-mercury-utils-id-44-errormessage` must use a technique to announce the message (e.g., aria-live, aria-describedby, role=alert, etc.)"
+     },
+     "occurrence": {
+      "ancestors": [
+       [
+        "_inputBox_q7hf7_93",
+        "_error_q7hf7_41"
+       ],
+       [
+        "_inputBoxWrapper_q7hf7_93"
+       ],
+       [
+        "_textInputWrapper_q7hf7_24"
+       ],
+       [
+        "_provideDSTextInput_q7hf7_6"
+       ],
+       [
+        "_containerSpacing_1nsbe_7"
+       ],
+       [],
+       [
+        "_contentArea_f8xr8_1"
+       ],
+       [
+        "_contentDiv_bcpsw_53",
+        "_contentDivHeightPreset_bcpsw_62"
+       ]
+      ],
+      "classes": [
+       "_input_q7hf7_93"
+      ],
+      "data": {},
+      "heading": "",
+      "landmark": {
+       "name": "",
+       "role": "form"
+      },
+      "layer": "document",
+      "name": "Merchant",
+      "rect": [
+       521,
+       406,
+       398,
+       24
+      ],
+      "role": "textbox",
+      "tag": "input",
+      "xpath": "/html/body/div[1]/main[1]/div[1]/div[2]/div[2]/div[3]/div[1]/form[1]/div[1]/div[8]/div[1]/div[1]/div[1]/input[1]"
+     },
+     "state": "cards.submit-expense-errors"
+    }
+   ],
+   "evidenceHash": "fc12a634b4a0a71df3104391b695fd75caedc3062db2453d15dce2bf2027a501",
+   "facts": {
+    "announced": "textbox \"Merchant\" [invalid=true, errormessage=Please complete this field]",
+    "axeSummary": "aria-errormessage value `merchant-mercury-utils-id-44-errormessage` must use a technique to announce the message (e.g., aria-live, aria-describedby, role=alert…",
+    "criterion": "4.1.2",
+    "criterionName": "Name, Role, Value",
+    "element": "textbox \"Merchant\"",
+    "rule": "aria-valid-attr-value",
+    "screen": "Submit expense: required fields"
+   },
+   "family": "role-state",
+   "guidance": "Low for optional ARIA or an invalid autocomplete token; high when aria-hidden hides the whole page.",
+   "issueId": null,
+   "key": "role-state:aria-valid-attr-value:ca71c7a6f3cb",
+   "measured": false,
+   "primary": "cards.submit-expense-errors",
+   "proposals": [],
+   "rule": "aria-valid-attr-value",
+   "screens": 1,
+   "severityDefault": "medium",
+   "source": "scanner",
+   "states": [
+    "cards.submit-expense-errors"
+   ],
+   "summary": "aria-valid-attr-value: announced as textbox \"Merchant\" [invalid=true, errormessage=Please complete this field]. aria-errormessage value `merchant-mercury-utils-id-44-errormessage` must use a technique to announce the message (e.g., aria-live, aria-describedby, role=alert…",
+   "title": "Wrong role or state: textbox \"Merchant\""
+  },
+  {
+   "attachments": [],
+   "attempt": 1,
+   "basis": "violation",
+   "criteria": [
+    "4.1.2"
+   ],
+   "evidence": [
+    {
+     "evidence": {
+      "aria-errormessage": [
+       "amount-mercury-utils-id-40-errormessage"
+      ],
+      "failureSummary": "Fix all of the following:\n  aria-errormessage value `amount-mercury-utils-id-40-errormessage` must use a technique to announce the message (e.g., aria-live, aria-describedby, role=alert, etc.)"
+     },
+     "occurrence": {
+      "ancestors": [
+       [
+        "_inputBox_q7hf7_93",
+        "_inputBoxWithJoinedSuffix_q7hf7_236",
+        "_error_q7hf7_41"
+       ],
+       [
+        "_inputBoxWrapper_q7hf7_93"
+       ],
+       [
+        "_textInputWrapper_q7hf7_24"
+       ],
+       [
+        "_provideDSTextInput_q7hf7_6"
+       ],
+       [],
+       [
+        "_containerSpacing_1nsbe_7"
+       ],
+       [],
+       [
+        "_contentArea_f8xr8_1"
+       ]
+      ],
+      "classes": [
+       "_input_q7hf7_93"
+      ],
+      "data": {},
+      "heading": "",
+      "landmark": {
+       "name": "",
+       "role": "form"
+      },
+      "layer": "document",
+      "name": "Amount",
+      "rect": [
+       536,
+       206,
+       278,
+       24
+      ],
+      "role": "textbox",
+      "tag": "input",
+      "xpath": "/html/body/div[1]/main[1]/div[1]/div[2]/div[2]/div[3]/div[1]/form[1]/div[1]/div[6]/div[1]/div[1]/div[1]/div[1]/input[1]"
+     },
+     "state": "cards.submit-expense-errors"
+    }
+   ],
+   "evidenceHash": "bf583e09ed9234849706d8a266487c75b069d9f99b7cbaec7a8569ce061efa47",
+   "facts": {
+    "announced": "textbox \"Amount\" [invalid=true, errormessage=Must be a dollar value.]",
+    "axeSummary": "aria-errormessage value `amount-mercury-utils-id-40-errormessage` must use a technique to announce the message (e.g., aria-live, aria-describedby, role=alert,…",
+    "criterion": "4.1.2",
+    "criterionName": "Name, Role, Value",
+    "element": "textbox \"Amount\"",
+    "rule": "aria-valid-attr-value",
+    "screen": "Submit expense: required fields"
+   },
+   "family": "role-state",
+   "guidance": "Low for optional ARIA or an invalid autocomplete token; high when aria-hidden hides the whole page.",
+   "issueId": null,
+   "key": "role-state:aria-valid-attr-value:e7672ca28e41",
+   "measured": false,
+   "primary": "cards.submit-expense-errors",
+   "proposals": [],
+   "rule": "aria-valid-attr-value",
+   "screens": 1,
+   "severityDefault": "medium",
+   "source": "scanner",
+   "states": [
+    "cards.submit-expense-errors"
+   ],
+   "summary": "aria-valid-attr-value: announced as textbox \"Amount\" [invalid=true, errormessage=Must be a dollar value.]. aria-errormessage value `amount-mercury-utils-id-40-errormessage` must use a technique to announce the message (e.g., aria-live, aria-describedby, role=alert,…",
+   "title": "Wrong role or state: textbox \"Amount\""
+  },
+  {
+   "attachments": [],
+   "attempt": 1,
+   "basis": "failure",
+   "criteria": [
+    "4.1.3"
+   ],
+   "evidence": [
+    {
+     "evidence": {
+      "focus": {
+       "ancestors": [
+        [
+         "_navButtonContainer_1nsbe_27"
+        ],
+        [
+         "_containerSpacing_1nsbe_7"
+        ],
+        [],
+        [
+         "_contentArea_f8xr8_1"
+        ],
+        [
+         "_contentDiv_bcpsw_53",
+         "_contentDivHeightPreset_bcpsw_62"
+        ],
+        [
+         "_fullScreenWorkspaceLayout_bcpsw_14",
+         "_fullScreenWorkspaceLayoutBackground_bcpsw_32",
+         "_noScrollbar_bcpsw_27"
+        ],
+        [
+         "_wrapper_bcpsw_3"
+        ],
+        []
+       ],
+       "classes": [
+        "_button_r6b2u_20",
+        "_large_r6b2u_88",
+        "_primary_r6b2u_104",
+        "session-replay-unmask"
+       ],
+       "data": {},
+       "heading": "",
+       "landmark": {
+        "name": "",
+        "role": "form"
+       },
+       "layer": "document",
+       "name": "Review",
+       "rect": [
+        642,
+        748,
+        114,
+        40
+       ],
+       "role": "button",
+       "tag": "button",
+       "xpath": "/html/body/div[1]/main[1]/div[1]/div[2]/div[2]/div[3]/div[1]/form[1]/div[1]/div[11]/button[2]"
+      },
+      "focused": false,
+      "message": "Must be a dollar value.",
+      "region": null
+     },
+     "occurrence": {
+      "ancestors": [
+       [
+        "_textInputWrapper_q7hf7_24"
+       ],
+       [
+        "_provideDSTextInput_q7hf7_6"
+       ],
+       [],
+       [
+        "_containerSpacing_1nsbe_7"
+       ],
+       [],
+       [
+        "_contentArea_f8xr8_1"
+       ],
+       [
+        "_contentDiv_bcpsw_53",
+        "_contentDivHeightPreset_bcpsw_62"
+       ],
+       [
+        "_fullScreenWorkspaceLayout_bcpsw_14",
+        "_fullScreenWorkspaceLayoutBackground_bcpsw_32",
+        "_noScrollbar_bcpsw_27"
+       ]
+      ],
+      "classes": [
+       "_defaultErrorContainer_1tnh5_1",
+       "_errorMessage_q7hf7_303"
+      ],
+      "data": {
+       "data-session-replay-unmask": "true"
+      },
+      "heading": "",
+      "landmark": {
+       "name": "",
+       "role": "form"
+      },
+      "layer": "document",
+      "name": "",
+      "rect": [
+       508,
+       242,
+       424,
+       20
+      ],
+      "role": "",
+      "tag": "div",
+      "xpath": "/html/body/div[1]/main[1]/div[1]/div[2]/div[2]/div[3]/div[1]/form[1]/div[1]/div[6]/div[1]/div[1]/div[2]"
+     },
+     "state": "cards.submit-expense-errors"
+    }
+   ],
+   "evidenceHash": "3b68729c75e21a2e5e78ffdc3cff16e4a3a276210a8fbe5be627234137912316",
+   "facts": {
+    "criterion": "4.1.3",
+    "criterionName": "Status Messages",
+    "focus": "button \"Review\"",
+    "message": "\"Must be a dollar value.\"",
+    "screen": "Submit expense: required fields"
+   },
+   "family": "status-message",
+   "guidance": "High when it is the only confirmation of a money movement.",
+   "issueId": null,
+   "key": "status-message:status-not-announced:15e956cbf36e",
+   "measured": false,
+   "primary": "cards.submit-expense-errors",
+   "proposals": [],
+   "rule": "status-not-announced",
+   "screens": 1,
+   "severityDefault": "medium",
+   "source": "scanner",
+   "states": [
+    "cards.submit-expense-errors"
+   ],
+   "summary": "\"Must be a dollar value.\" appeared outside any live region, alert or status role that existed before it, and focus stayed on the button \"Review\".",
+   "title": "Status message not announced: \"Must be a dollar value.\""
+  }
+ ],
+ "primaries": [
+  "cards.submit-expense-errors"
+ ],
+ "reach": {
+  "baseUrl": "https://demo.mercury.com",
+  "data": "data",
+  "map": "build/map.json",
+  "run": "2026-10-03-1525",
+  "workspace": "a11y"
+ },
+ "run": "2026-10-03-1525"
+}

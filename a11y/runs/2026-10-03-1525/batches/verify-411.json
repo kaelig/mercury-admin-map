@@ -1,0 +1,118 @@
+{
+ "area": "accounts",
+ "batch": "verify-411",
+ "findings": [
+  {
+   "attachments": [],
+   "attempt": 1,
+   "basis": "candidate",
+   "criteria": [
+    "4.1.2"
+   ],
+   "evidence": [
+    {
+     "evidence": {
+      "description": "",
+      "name": "",
+      "role": "button",
+      "states": {},
+      "template": "button \"\""
+     },
+     "occurrence": {
+      "ancestors": [
+       [
+        "_topBar_1tjci_12"
+       ],
+       [
+        "_large_kwlx6_9",
+        "_shadow_3n0se_25",
+        "_raisedBackground_3n0se_45",
+        "_card_1tjci_1"
+       ],
+       [
+        "_wrapperColumn_k8dlh_4",
+        "_visible_k8dlh_16",
+        "_elevateZIndex_k8dlh_32"
+       ],
+       [
+        "_tableWrapper_1waxt_304"
+       ],
+       [
+        "_wrapper_1hteo_1"
+       ],
+       [
+        "_wrapper_sot9h_1",
+        "_pageContent_809q8_151",
+        "_pageContentWidth_809q8_184"
+       ],
+       [
+        "_dashboardContent_809q8_29"
+       ],
+       [
+        "_layout_809q8_18"
+       ]
+      ],
+      "classes": [
+       "_closeButton_1tjci_32"
+      ],
+      "data": {},
+      "heading": "",
+      "landmark": {
+       "name": "",
+       "role": "main"
+      },
+      "layer": "top",
+      "name": "",
+      "rect": [
+       1266,
+       430,
+       24,
+       24
+      ],
+      "role": "button",
+      "tag": "button",
+      "xpath": "/html/body/div[1]/main[1]/div[1]/div[1]/div[1]/div[4]/div[1]/div[2]/div[4]/div[3]/div[2]/div[1]/div[1]/button[1]"
+     },
+     "state": "accounts.safe-detail"
+    }
+   ],
+   "evidenceHash": "3b17b535926b43c9057699ca75d470cabbd0ed7239a88197f4dfc894c80683f0",
+   "facts": {
+    "announced": "button \"\"",
+    "axeSummary": "",
+    "criterion": "4.1.2",
+    "criterionName": "Name, Role, Value",
+    "element": "button in the main landmark",
+    "rule": "announced-as",
+    "screen": "SAFE detail drawer"
+   },
+   "family": "name",
+   "guidance": "High for an unnamed form control or the sole primary action.",
+   "issueId": null,
+   "key": "name:announced-as:f6ab3f88952c",
+   "measured": false,
+   "primary": "accounts.safe-detail",
+   "proposals": [],
+   "rule": "announced-as",
+   "screens": 1,
+   "severityDefault": "medium",
+   "source": "scanner",
+   "states": [
+    "accounts.safe-detail"
+   ],
+   "summary": "announced-as: announced as button \"\".",
+   "title": "Missing or unclear name: button in the main landmark"
+  }
+ ],
+ "primaries": [
+  "accounts.safe-detail"
+ ],
+ "reach": {
+  "baseUrl": "https://demo.mercury.com",
+  "data": "data",
+  "map": "build/map.json",
+  "run": "2026-10-03-1525",
+  "workspace": "a11y"
+ },
+ "run": "2026-10-03-1525"
+}

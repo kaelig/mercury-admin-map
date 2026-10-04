@@ -1,0 +1,1159 @@
+{
+ "area": "transactions",
+ "batch": "verify-377",
+ "findings": [
+  {
+   "attachments": [],
+   "attempt": 1,
+   "basis": "violation",
+   "criteria": [
+    "1.4.3"
+   ],
+   "evidence": [
+    {
+     "evidence": {
+      "bgColor": "#ffffff",
+      "contrastRatio": 2.18,
+      "expectedContrastRatio": "4.5:1",
+      "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 2.18 (foreground color: #afafb4, background color: #ffffff, font size: 11.3pt (15px), font weight: normal). Expected contrast ratio of 4.5:1",
+      "fgColor": "#afafb4",
+      "fontSize": "11.3pt (15px)",
+      "fontWeight": "normal",
+      "messageKey": null
+     },
+     "occurrence": {
+      "ancestors": [
+       [
+        "_button_r6b2u_20",
+        "_small_r6b2u_72",
+        "_tertiary_r6b2u_153",
+        "_appearDisabled_r6b2u_16",
+        "_tooltipAnchor_18bac_4"
+       ],
+       [
+        "_filtersAndExportButton_1ow20_72"
+       ],
+       [
+        "_topContent_1ow20_3"
+       ],
+       [
+        "_transactionsPageDashboardWrapper_1ow20_48"
+       ],
+       [
+        "_dashboardContent_809q8_29",
+        "_scrollContainer_809q8_29"
+       ],
+       [
+        "_layout_809q8_18"
+       ],
+       [
+        "_wrapper_809q8_3"
+       ],
+       []
+      ],
+      "classes": [
+       "_bodyDefault_qaod7_40"
+      ],
+      "data": {},
+      "heading": "Transactions",
+      "landmark": {
+       "name": "",
+       "role": "main"
+      },
+      "layer": "document",
+      "name": "",
+      "rect": [
+       1336,
+       188,
+       64,
+       24
+      ],
+      "role": "generic",
+      "tag": "div",
+      "xpath": "/html/body/div[1]/main[1]/div[1]/div[1]/div[4]/div[1]/div[2]/div[2]/div[1]/button[1]/div[1]"
+     },
+     "state": "transactions.grouped-by-category"
+    },
+    {
+     "evidence": {
+      "bgColor": "#ffffff",
+      "contrastRatio": 2.18,
+      "expectedContrastRatio": "4.5:1",
+      "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 2.18 (foreground color: #afafb4, background color: #ffffff, font size: 11.3pt (15px), font weight: normal). Expected contrast ratio of 4.5:1",
+      "fgColor": "#afafb4",
+      "fontSize": "11.3pt (15px)",
+      "fontWeight": "normal",
+      "messageKey": null
+     },
+     "occurrence": {
+      "ancestors": [
+       [
+        "_button_r6b2u_20",
+        "_small_r6b2u_72",
+        "_tertiary_r6b2u_153",
+        "_appearDisabled_r6b2u_16",
+        "_tooltipAnchor_18bac_4"
+       ],
+       [
+        "_filtersAndExportButton_1ow20_72"
+       ],
+       [
+        "_topContent_1ow20_3"
+       ],
+       [
+        "_transactionsPageDashboardWrapper_1ow20_48"
+       ],
+       [
+        "_dashboardContent_809q8_29",
+        "_scrollContainer_809q8_29"
+       ],
+       [
+        "_layout_809q8_18"
+       ],
+       [
+        "_wrapper_809q8_3"
+       ],
+       []
+      ],
+      "classes": [
+       "_bodyDefault_qaod7_40"
+      ],
+      "data": {},
+      "heading": "Transactions",
+      "landmark": {
+       "name": "",
+       "role": "main"
+      },
+      "layer": "document",
+      "name": "",
+      "rect": [
+       1302,
+       188,
+       98,
+       24
+      ],
+      "role": "generic",
+      "tag": "div",
+      "xpath": "/html/body/div[1]/main[1]/div[1]/div[1]/div[4]/div[1]/div[2]/div[2]/div[1]/button[1]/div[1]"
+     },
+     "state": "transactions.filter-no-results"
+    }
+   ],
+   "evidenceHash": "f2903f8fc17f0b368f6172b3cf8c97581f0e2a91adf49aca738aa307ad79e7d2",
+   "facts": {
+    "bg": "#ffffff",
+    "criterion": "1.4.3",
+    "criterionName": "Contrast (Minimum)",
+    "element": "text in \"Transactions\"",
+    "fg": "#afafb4",
+    "ratio": "2.18",
+    "required": "4.5",
+    "rule": "color-contrast",
+    "screen": "Grouped by category",
+    "screens": 2
+   },
+   "family": "contrast",
+   "guidance": "High under 2:1, or under 3:1 for essential text.",
+   "issueId": null,
+   "key": "contrast:color-contrast:23e209c02f3d",
+   "measured": true,
+   "primary": "transactions.grouped-by-category",
+   "proposals": [],
+   "rule": "color-contrast",
+   "screens": 2,
+   "severityDefault": "medium",
+   "source": "scanner",
+   "states": [
+    "transactions.grouped-by-category",
+    "transactions.filter-no-results"
+   ],
+   "summary": "axe color-contrast: #afafb4 on #ffffff measures 2.18:1; AA needs 4.5:1.",
+   "title": "Low contrast: text in \"Transactions\""
+  },
+  {
+   "attachments": [],
+   "attempt": 1,
+   "basis": "candidate",
+   "criteria": [
+    "2.1.1"
+   ],
+   "evidence": [
+    {
+     "evidence": {
+      "end": "body",
+      "focusable": true,
+      "source": "ax",
+      "stops": 65
+     },
+     "occurrence": {
+      "ancestors": [
+       [
+        "_textboxWrapper_1a7mr_158"
+       ],
+       [
+        "_selectWrapper_1a7mr_150"
+       ],
+       [
+        "_comboboxWrapper_1a7mr_6",
+        "_selectWrapper_54yyd_183",
+        "session-replay-block"
+       ],
+       [
+        "_sortGroupsByWrapper_54yyd_172",
+        "_twoParts_54yyd_176"
+       ],
+       [
+        "_menu_54yyd_84",
+        "_mainMenu_54yyd_120",
+        "_withGroupBy_54yyd_123"
+       ],
+       [],
+       [
+        "_toolbarButtonsContainer_54yyd_221"
+       ],
+       [
+        "_filtersAndExportButton_1ow20_72"
+       ]
+      ],
+      "classes": [
+       "_textboxInput_1a7mr_250",
+       "_selectedPlaceholder_1a7mr_293"
+      ],
+      "data": {},
+      "heading": "Transactions",
+      "landmark": {
+       "name": "",
+       "role": "main"
+      },
+      "layer": "document",
+      "name": "Group sort order",
+      "rect": [
+       1058,
+       333,
+       112,
+       38
+      ],
+      "role": "combobox",
+      "tag": "input",
+      "xpath": "/html/body/div[1]/main[1]/div[1]/div[1]/div[4]/div[1]/div[2]/div[2]/div[1]/div[3]/div[1]/div[1]/div[2]/div[2]/div[1]/div[1]/input[1]"
+     },
+     "state": "transactions.grouped-by-category"
+    }
+   ],
+   "evidenceHash": "57aab4444ace938ce917f67a17afd5134833083a654104de516abafb4a7995f7",
+   "facts": {
+    "axeSummary": "",
+    "criterion": "2.1.1",
+    "criterionName": "Keyboard",
+    "element": "combobox \"Group sort order\"",
+    "rule": "not-reached",
+    "screen": "Grouped by category",
+    "stops": "65"
+   },
+   "family": "keyboard",
+   "guidance": "High if a task cannot be completed without a mouse.",
+   "issueId": null,
+   "key": "keyboard:not-reached:4b03f63e1253",
+   "measured": false,
+   "primary": "transactions.grouped-by-category",
+   "proposals": [],
+   "rule": "not-reached",
+   "screens": 1,
+   "severityDefault": "medium",
+   "source": "scanner",
+   "states": [
+    "transactions.grouped-by-category"
+   ],
+   "summary": "The Tab walk visited 65 stops and never reached the combobox \"Group sort order\", which responds to a click.",
+   "title": "Not reachable by keyboard: combobox \"Group sort order\""
+  },
+  {
+   "attachments": [],
+   "attempt": 1,
+   "basis": "candidate",
+   "criteria": [
+    "2.1.1"
+   ],
+   "evidence": [
+    {
+     "evidence": {
+      "end": "body",
+      "focusable": true,
+      "source": "ax",
+      "stops": 65
+     },
+     "occurrence": {
+      "ancestors": [
+       [
+        "_textboxWrapper_1a7mr_158"
+       ],
+       [
+        "_selectWrapper_1a7mr_150"
+       ],
+       [
+        "_comboboxWrapper_1a7mr_6",
+        "_selectWrapper_54yyd_183",
+        "session-replay-block"
+       ],
+       [
+        "_sortGroupsByWrapper_54yyd_172",
+        "_twoParts_54yyd_176"
+       ],
+       [
+        "_menu_54yyd_84",
+        "_mainMenu_54yyd_120",
+        "_withGroupBy_54yyd_123"
+       ],
+       [],
+       [
+        "_toolbarButtonsContainer_54yyd_221"
+       ],
+       [
+        "_filtersAndExportButton_1ow20_72"
+       ]
+      ],
+      "classes": [
+       "_textboxInput_1a7mr_250",
+       "_selectedPlaceholder_1a7mr_293"
+      ],
+      "data": {},
+      "heading": "Transactions",
+      "landmark": {
+       "name": "",
+       "role": "main"
+      },
+      "layer": "document",
+      "name": "Sort groups by",
+      "rect": [
+       900,
+       333,
+       112,
+       38
+      ],
+      "role": "combobox",
+      "tag": "input",
+      "xpath": "/html/body/div[1]/main[1]/div[1]/div[1]/div[4]/div[1]/div[2]/div[2]/div[1]/div[3]/div[1]/div[1]/div[2]/div[1]/div[1]/div[1]/input[1]"
+     },
+     "state": "transactions.grouped-by-category"
+    }
+   ],
+   "evidenceHash": "57aab4444ace938ce917f67a17afd5134833083a654104de516abafb4a7995f7",
+   "facts": {
+    "axeSummary": "",
+    "criterion": "2.1.1",
+    "criterionName": "Keyboard",
+    "element": "combobox \"Sort groups by\"",
+    "rule": "not-reached",
+    "screen": "Grouped by category",
+    "stops": "65"
+   },
+   "family": "keyboard",
+   "guidance": "High if a task cannot be completed without a mouse.",
+   "issueId": null,
+   "key": "keyboard:not-reached:5ee0828198f4",
+   "measured": false,
+   "primary": "transactions.grouped-by-category",
+   "proposals": [],
+   "rule": "not-reached",
+   "screens": 1,
+   "severityDefault": "medium",
+   "source": "scanner",
+   "states": [
+    "transactions.grouped-by-category"
+   ],
+   "summary": "The Tab walk visited 65 stops and never reached the combobox \"Sort groups by\", which responds to a click.",
+   "title": "Not reachable by keyboard: combobox \"Sort groups by\""
+  },
+  {
+   "attachments": [],
+   "attempt": 1,
+   "basis": "candidate",
+   "criteria": [
+    "2.1.1"
+   ],
+   "evidence": [
+    {
+     "evidence": {
+      "end": "body",
+      "focusable": true,
+      "source": "ax",
+      "stops": 65
+     },
+     "occurrence": {
+      "ancestors": [
+       [
+        "_textboxWrapper_1a7mr_158"
+       ],
+       [
+        "_selectWrapper_1a7mr_150"
+       ],
+       [
+        "_comboboxWrapper_1a7mr_6",
+        "_selectWrapper_54yyd_183",
+        "session-replay-block"
+       ],
+       [
+        "_groupByWrapper_54yyd_168"
+       ],
+       [
+        "_menu_54yyd_84",
+        "_mainMenu_54yyd_120",
+        "_withGroupBy_54yyd_123"
+       ],
+       [],
+       [
+        "_toolbarButtonsContainer_54yyd_221"
+       ],
+       [
+        "_filtersAndExportButton_1ow20_72"
+       ]
+      ],
+      "classes": [
+       "_textboxInput_1a7mr_250",
+       "_selectedPlaceholder_1a7mr_293"
+      ],
+      "data": {},
+      "heading": "Transactions",
+      "landmark": {
+       "name": "",
+       "role": "main"
+      },
+      "layer": "document",
+      "name": "Group by",
+      "rect": [
+       900,
+       261,
+       270,
+       38
+      ],
+      "role": "combobox",
+      "tag": "input",
+      "xpath": "/html/body/div[1]/main[1]/div[1]/div[1]/div[4]/div[1]/div[2]/div[2]/div[1]/div[3]/div[1]/div[1]/div[1]/div[1]/div[1]/div[1]/input[1]"
+     },
+     "state": "transactions.grouped-by-category"
+    }
+   ],
+   "evidenceHash": "57aab4444ace938ce917f67a17afd5134833083a654104de516abafb4a7995f7",
+   "facts": {
+    "axeSummary": "",
+    "criterion": "2.1.1",
+    "criterionName": "Keyboard",
+    "element": "combobox \"Group by\"",
+    "rule": "not-reached",
+    "screen": "Grouped by category",
+    "stops": "65"
+   },
+   "family": "keyboard",
+   "guidance": "High if a task cannot be completed without a mouse.",
+   "issueId": null,
+   "key": "keyboard:not-reached:7bcceef05bda",
+   "measured": false,
+   "primary": "transactions.grouped-by-category",
+   "proposals": [],
+   "rule": "not-reached",
+   "screens": 1,
+   "severityDefault": "medium",
+   "source": "scanner",
+   "states": [
+    "transactions.grouped-by-category"
+   ],
+   "summary": "The Tab walk visited 65 stops and never reached the combobox \"Group by\", which responds to a click.",
+   "title": "Not reachable by keyboard: combobox \"Group by\""
+  },
+  {
+   "attachments": [],
+   "attempt": 1,
+   "basis": "violation",
+   "criteria": [
+    "1.3.1"
+   ],
+   "evidence": [
+    {
+     "evidence": {
+      "failureSummary": "Fix any of the following:\n  Element has children which are not allowed: button",
+      "messageKey": "unallowed",
+      "values": "button"
+     },
+     "occurrence": {
+      "ancestors": [
+       [
+        "_filtersAndExportButton_1ow20_72"
+       ],
+       [
+        "_topContent_1ow20_3"
+       ],
+       [
+        "_transactionsPageDashboardWrapper_1ow20_48"
+       ],
+       [
+        "_dashboardContent_809q8_29",
+        "_scrollContainer_809q8_29"
+       ],
+       [
+        "_layout_809q8_18"
+       ],
+       [
+        "_wrapper_809q8_3"
+       ],
+       [],
+       [
+        "_main_1gb3b_1"
+       ]
+      ],
+      "classes": [
+       "_toolbarContainer_grqat_4"
+      ],
+      "data": {
+       "data-ds-table-toolbar-menubar": "true"
+      },
+      "heading": "Transactions",
+      "landmark": {
+       "name": "",
+       "role": "main"
+      },
+      "layer": "document",
+      "name": "",
+      "rect": [
+       244,
+       184,
+       931,
+       32
+      ],
+      "role": "menubar",
+      "tag": "div",
+      "xpath": "/html/body/div[1]/main[1]/div[1]/div[1]/div[4]/div[1]/div[2]/div[2]/div[1]/div[1]"
+     },
+     "state": "transactions.grouped-by-category"
+    },
+    {
+     "evidence": {
+      "failureSummary": "Fix any of the following:\n  Element has children which are not allowed: button, div[tabindex], span[aria-owns]",
+      "messageKey": "unallowed",
+      "values": "button, div[tabindex], span[aria-owns]"
+     },
+     "occurrence": {
+      "ancestors": [
+       [
+        "_filtersAndExportButton_1ow20_72"
+       ],
+       [
+        "_topContent_1ow20_3"
+       ],
+       [
+        "_transactionsPageDashboardWrapper_1ow20_48"
+       ],
+       [
+        "_dashboardContent_809q8_29",
+        "_scrollContainer_809q8_29"
+       ],
+       [
+        "_layout_809q8_18"
+       ],
+       [
+        "_wrapper_809q8_3"
+       ],
+       [],
+       [
+        "_main_1gb3b_1"
+       ]
+      ],
+      "classes": [
+       "_toolbarContainer_grqat_4"
+      ],
+      "data": {
+       "data-ds-table-toolbar-menubar": "true"
+      },
+      "heading": "Transactions",
+      "landmark": {
+       "name": "",
+       "role": "main"
+      },
+      "layer": "document",
+      "name": "",
+      "rect": [
+       244,
+       184,
+       897,
+       32
+      ],
+      "role": "menubar",
+      "tag": "div",
+      "xpath": "/html/body/div[1]/main[1]/div[1]/div[1]/div[4]/div[1]/div[2]/div[2]/div[1]/div[1]"
+     },
+     "state": "transactions.filter-no-results"
+    }
+   ],
+   "evidenceHash": "38e9b42318a0cae10e6748a70d7c75d92adf72bd417619509284430bb2ce4691",
+   "facts": {
+    "announced": "menubar \"\"",
+    "axeSummary": "Element has children which are not allowed: button",
+    "criterion": "1.3.1",
+    "criterionName": "Info and Relationships",
+    "element": "menubar in \"Transactions\"",
+    "rule": "aria-required-children",
+    "screen": "Grouped by category"
+   },
+   "family": "role-state",
+   "guidance": "Low for optional ARIA or an invalid autocomplete token; high when aria-hidden hides the whole page.",
+   "issueId": null,
+   "key": "role-state:aria-required-children:5cf238b7e576",
+   "measured": false,
+   "primary": "transactions.grouped-by-category",
+   "proposals": [],
+   "rule": "aria-required-children",
+   "screens": 5,
+   "severityDefault": "medium",
+   "source": "scanner",
+   "states": [
+    "transactions.grouped-by-category",
+    "transactions.filter-no-results"
+   ],
+   "summary": "aria-required-children: announced as menubar \"\". Element has children which are not allowed: button",
+   "title": "Wrong role or state: menubar in \"Transactions\""
+  },
+  {
+   "attachments": [],
+   "attempt": 1,
+   "basis": "violation",
+   "criteria": [
+    "1.3.1"
+   ],
+   "evidence": [
+    {
+     "evidence": {
+      "failureSummary": "Fix any of the following:\n  Element has children which are not allowed: [role=combobox]",
+      "messageKey": "unallowed",
+      "values": "[role=combobox]"
+     },
+     "occurrence": {
+      "ancestors": [
+       [],
+       [
+        "_toolbarButtonsContainer_54yyd_221"
+       ],
+       [
+        "_filtersAndExportButton_1ow20_72"
+       ],
+       [
+        "_topContent_1ow20_3"
+       ],
+       [
+        "_transactionsPageDashboardWrapper_1ow20_48"
+       ],
+       [
+        "_dashboardContent_809q8_29",
+        "_scrollContainer_809q8_29"
+       ],
+       [
+        "_layout_809q8_18"
+       ],
+       [
+        "_wrapper_809q8_3"
+       ]
+      ],
+      "classes": [
+       "_menu_54yyd_84",
+       "_mainMenu_54yyd_120",
+       "_withGroupBy_54yyd_123"
+      ],
+      "data": {
+       "data-dialog": "",
+       "data-enter": "true",
+       "data-open": "true"
+      },
+      "heading": "Transactions",
+      "landmark": {
+       "name": "",
+       "role": "main"
+      },
+      "layer": "document",
+      "name": "Group",
+      "rect": [
+       883,
+       224,
+       340,
+       160
+      ],
+      "role": "menu",
+      "tag": "div",
+      "xpath": "/html/body/div[1]/main[1]/div[1]/div[1]/div[4]/div[1]/div[2]/div[2]/div[1]/div[3]/div[1]/div[1]"
+     },
+     "state": "transactions.grouped-by-category"
+    },
+    {
+     "evidence": {
+      "failureSummary": "Fix any of the following:\n  Element has children which are not allowed: [role=listbox], [role=combobox]",
+      "messageKey": "unallowed",
+      "values": "[role=listbox], [role=combobox]"
+     },
+     "occurrence": {
+      "ancestors": [
+       [],
+       [
+        "_toolbarButtonsContainer_54yyd_221"
+       ],
+       [
+        "_filtersAndExportButton_1ow20_72"
+       ],
+       [
+        "_topContent_1ow20_3"
+       ],
+       [
+        "_transactionsPageDashboardWrapper_1ow20_48"
+       ],
+       [
+        "_dashboardContent_809q8_29",
+        "_scrollContainer_809q8_29"
+       ],
+       [
+        "_layout_809q8_18"
+       ],
+       [
+        "_wrapper_809q8_3"
+       ]
+      ],
+      "classes": [
+       "_menu_54yyd_84",
+       "_mainMenu_54yyd_120",
+       "_withGroupBy_54yyd_123"
+      ],
+      "data": {
+       "data-dialog": "",
+       "data-enter": "true",
+       "data-open": "true"
+      },
+      "heading": "",
+      "landmark": {
+       "name": "",
+       "role": "main"
+      },
+      "layer": "top",
+      "name": "Group",
+      "rect": [
+       883,
+       224,
+       340,
+       88
+      ],
+      "role": "menu",
+      "tag": "div",
+      "xpath": "/html/body/div[1]/main[1]/div[1]/div[1]/div[4]/div[1]/div[2]/div[2]/div[1]/div[2]/div[1]/div[1]"
+     },
+     "state": "transactions.group-menu"
+    }
+   ],
+   "evidenceHash": "2c3adfde1453b3b577cf0be1b99a4d9560994b341950c7a42e8c0ae82a3cca55",
+   "facts": {
+    "announced": "menu \"Group\"",
+    "axeSummary": "Element has children which are not allowed: [role=combobox]",
+    "criterion": "1.3.1",
+    "criterionName": "Info and Relationships",
+    "element": "menu \"Group\"",
+    "rule": "aria-required-children",
+    "screen": "Grouped by category"
+   },
+   "family": "role-state",
+   "guidance": "Low for optional ARIA or an invalid autocomplete token; high when aria-hidden hides the whole page.",
+   "issueId": null,
+   "key": "role-state:aria-required-children:9b0ddbf0a6dc",
+   "measured": false,
+   "primary": "transactions.grouped-by-category",
+   "proposals": [],
+   "rule": "aria-required-children",
+   "screens": 2,
+   "severityDefault": "medium",
+   "source": "scanner",
+   "states": [
+    "transactions.grouped-by-category",
+    "transactions.group-menu"
+   ],
+   "summary": "aria-required-children: announced as menu \"Group\". Element has children which are not allowed: [role=combobox]",
+   "title": "Wrong role or state: menu \"Group\""
+  },
+  {
+   "attachments": [],
+   "attempt": 1,
+   "basis": "violation",
+   "criteria": [
+    "1.3.5"
+   ],
+   "evidence": [
+    {
+     "evidence": {
+      "failureSummary": "Fix all of the following:\n  the autocomplete attribute is incorrectly formatted"
+     },
+     "occurrence": {
+      "ancestors": [
+       [
+        "_textboxWrapper_1a7mr_158"
+       ],
+       [
+        "_selectWrapper_1a7mr_150"
+       ],
+       [
+        "_comboboxWrapper_1a7mr_6",
+        "_selectWrapper_54yyd_183",
+        "session-replay-block"
+       ],
+       [
+        "_sortGroupsByWrapper_54yyd_172",
+        "_twoParts_54yyd_176"
+       ],
+       [
+        "_menu_54yyd_84",
+        "_mainMenu_54yyd_120",
+        "_withGroupBy_54yyd_123"
+       ],
+       [],
+       [
+        "_toolbarButtonsContainer_54yyd_221"
+       ],
+       [
+        "_filtersAndExportButton_1ow20_72"
+       ]
+      ],
+      "classes": [
+       "_textboxInput_1a7mr_250",
+       "_selectedPlaceholder_1a7mr_293"
+      ],
+      "data": {},
+      "heading": "Transactions",
+      "landmark": {
+       "name": "",
+       "role": "main"
+      },
+      "layer": "document",
+      "name": "Sort groups by",
+      "rect": [
+       900,
+       333,
+       112,
+       38
+      ],
+      "role": "combobox",
+      "tag": "input",
+      "xpath": "/html/body/div[1]/main[1]/div[1]/div[1]/div[4]/div[1]/div[2]/div[2]/div[1]/div[3]/div[1]/div[1]/div[2]/div[1]/div[1]/div[1]/input[1]"
+     },
+     "state": "transactions.grouped-by-category"
+    }
+   ],
+   "evidenceHash": "0cd45d1372e468dedecd036ac16f9bf8959b86b0ff995dae107dd61f301d5ca1",
+   "facts": {
+    "announced": "combobox \"Sort groups by\" [expanded=false, haspopup=listbox]",
+    "axeSummary": "the autocomplete attribute is incorrectly formatted",
+    "criterion": "1.3.5",
+    "criterionName": "Identify Input Purpose",
+    "element": "combobox \"Sort groups by\"",
+    "rule": "autocomplete-valid",
+    "screen": "Grouped by category"
+   },
+   "family": "role-state",
+   "guidance": "Low for optional ARIA or an invalid autocomplete token; high when aria-hidden hides the whole page.",
+   "issueId": null,
+   "key": "role-state:autocomplete-valid:300845683ba5",
+   "measured": false,
+   "primary": "transactions.grouped-by-category",
+   "proposals": [],
+   "rule": "autocomplete-valid",
+   "screens": 1,
+   "severityDefault": "medium",
+   "source": "scanner",
+   "states": [
+    "transactions.grouped-by-category"
+   ],
+   "summary": "autocomplete-valid: announced as combobox \"Sort groups by\" [expanded=false, haspopup=listbox]. the autocomplete attribute is incorrectly formatted",
+   "title": "Invalid autocomplete value: combobox \"Sort groups by\""
+  },
+  {
+   "attachments": [],
+   "attempt": 1,
+   "basis": "violation",
+   "criteria": [
+    "1.3.5"
+   ],
+   "evidence": [
+    {
+     "evidence": {
+      "failureSummary": "Fix all of the following:\n  the autocomplete attribute is incorrectly formatted"
+     },
+     "occurrence": {
+      "ancestors": [
+       [
+        "_textboxWrapper_1a7mr_158"
+       ],
+       [
+        "_selectWrapper_1a7mr_150"
+       ],
+       [
+        "_comboboxWrapper_1a7mr_6",
+        "_selectWrapper_54yyd_183",
+        "session-replay-block"
+       ],
+       [
+        "_sortGroupsByWrapper_54yyd_172",
+        "_twoParts_54yyd_176"
+       ],
+       [
+        "_menu_54yyd_84",
+        "_mainMenu_54yyd_120",
+        "_withGroupBy_54yyd_123"
+       ],
+       [],
+       [
+        "_toolbarButtonsContainer_54yyd_221"
+       ],
+       [
+        "_filtersAndExportButton_1ow20_72"
+       ]
+      ],
+      "classes": [
+       "_textboxInput_1a7mr_250",
+       "_selectedPlaceholder_1a7mr_293"
+      ],
+      "data": {},
+      "heading": "Transactions",
+      "landmark": {
+       "name": "",
+       "role": "main"
+      },
+      "layer": "document",
+      "name": "Group sort order",
+      "rect": [
+       1058,
+       333,
+       112,
+       38
+      ],
+      "role": "combobox",
+      "tag": "input",
+      "xpath": "/html/body/div[1]/main[1]/div[1]/div[1]/div[4]/div[1]/div[2]/div[2]/div[1]/div[3]/div[1]/div[1]/div[2]/div[2]/div[1]/div[1]/input[1]"
+     },
+     "state": "transactions.grouped-by-category"
+    }
+   ],
+   "evidenceHash": "0cd45d1372e468dedecd036ac16f9bf8959b86b0ff995dae107dd61f301d5ca1",
+   "facts": {
+    "announced": "combobox \"Group sort order\" [expanded=false, haspopup=listbox]",
+    "axeSummary": "the autocomplete attribute is incorrectly formatted",
+    "criterion": "1.3.5",
+    "criterionName": "Identify Input Purpose",
+    "element": "combobox \"Group sort order\"",
+    "rule": "autocomplete-valid",
+    "screen": "Grouped by category"
+   },
+   "family": "role-state",
+   "guidance": "Low for optional ARIA or an invalid autocomplete token; high when aria-hidden hides the whole page.",
+   "issueId": null,
+   "key": "role-state:autocomplete-valid:4d949718d37e",
+   "measured": false,
+   "primary": "transactions.grouped-by-category",
+   "proposals": [],
+   "rule": "autocomplete-valid",
+   "screens": 1,
+   "severityDefault": "medium",
+   "source": "scanner",
+   "states": [
+    "transactions.grouped-by-category"
+   ],
+   "summary": "autocomplete-valid: announced as combobox \"Group sort order\" [expanded=false, haspopup=listbox]. the autocomplete attribute is incorrectly formatted",
+   "title": "Invalid autocomplete value: combobox \"Group sort order\""
+  },
+  {
+   "attachments": [],
+   "attempt": 1,
+   "basis": "violation",
+   "criteria": [
+    "1.3.5"
+   ],
+   "evidence": [
+    {
+     "evidence": {
+      "failureSummary": "Fix all of the following:\n  the autocomplete attribute is incorrectly formatted"
+     },
+     "occurrence": {
+      "ancestors": [
+       [
+        "_textboxWrapper_1a7mr_158"
+       ],
+       [
+        "_selectWrapper_1a7mr_150"
+       ],
+       [
+        "_comboboxWrapper_1a7mr_6",
+        "_selectWrapper_54yyd_183",
+        "session-replay-block"
+       ],
+       [
+        "_groupByWrapper_54yyd_168"
+       ],
+       [
+        "_menu_54yyd_84",
+        "_mainMenu_54yyd_120",
+        "_withGroupBy_54yyd_123"
+       ],
+       [],
+       [
+        "_toolbarButtonsContainer_54yyd_221"
+       ],
+       [
+        "_filtersAndExportButton_1ow20_72"
+       ]
+      ],
+      "classes": [
+       "_textboxInput_1a7mr_250",
+       "_selectedPlaceholder_1a7mr_293"
+      ],
+      "data": {},
+      "heading": "Transactions",
+      "landmark": {
+       "name": "",
+       "role": "main"
+      },
+      "layer": "document",
+      "name": "Group by",
+      "rect": [
+       900,
+       261,
+       270,
+       38
+      ],
+      "role": "combobox",
+      "tag": "input",
+      "xpath": "/html/body/div[1]/main[1]/div[1]/div[1]/div[4]/div[1]/div[2]/div[2]/div[1]/div[3]/div[1]/div[1]/div[1]/div[1]/div[1]/div[1]/input[1]"
+     },
+     "state": "transactions.grouped-by-category"
+    }
+   ],
+   "evidenceHash": "0cd45d1372e468dedecd036ac16f9bf8959b86b0ff995dae107dd61f301d5ca1",
+   "facts": {
+    "announced": "combobox \"Group by\" [expanded=false, haspopup=listbox]",
+    "axeSummary": "the autocomplete attribute is incorrectly formatted",
+    "criterion": "1.3.5",
+    "criterionName": "Identify Input Purpose",
+    "element": "combobox \"Group by\"",
+    "rule": "autocomplete-valid",
+    "screen": "Grouped by category"
+   },
+   "family": "role-state",
+   "guidance": "Low for optional ARIA or an invalid autocomplete token; high when aria-hidden hides the whole page.",
+   "issueId": null,
+   "key": "role-state:autocomplete-valid:bdd7177810b2",
+   "measured": false,
+   "primary": "transactions.grouped-by-category",
+   "proposals": [],
+   "rule": "autocomplete-valid",
+   "screens": 1,
+   "severityDefault": "medium",
+   "source": "scanner",
+   "states": [
+    "transactions.grouped-by-category"
+   ],
+   "summary": "autocomplete-valid: announced as combobox \"Group by\" [expanded=false, haspopup=listbox]. the autocomplete attribute is incorrectly formatted",
+   "title": "Invalid autocomplete value: combobox \"Group by\""
+  },
+  {
+   "attachments": [],
+   "attempt": 1,
+   "basis": "violation",
+   "criteria": [
+    "4.1.2"
+   ],
+   "evidence": [
+    {
+     "evidence": {
+      "failureSummary": "Fix any of the following:\n  Element has focusable descendants"
+     },
+     "occurrence": {
+      "ancestors": [
+       [
+        "_topContent_1ow20_3"
+       ],
+       [
+        "_transactionsPageDashboardWrapper_1ow20_48"
+       ],
+       [
+        "_dashboardContent_809q8_29",
+        "_scrollContainer_809q8_29"
+       ],
+       [
+        "_layout_809q8_18"
+       ],
+       [
+        "_wrapper_809q8_3"
+       ],
+       [],
+       [
+        "_main_1gb3b_1"
+       ],
+       [
+        "mercury-root"
+       ]
+      ],
+      "classes": [
+       "_wrapper_1apo0_1",
+       "session-replay-block",
+       "_collapsed_1apo0_24",
+       "_clickableWhenCollapsed_1apo0_109",
+       "_noBottomBorder_1apo0_9"
+      ],
+      "data": {},
+      "heading": "Transactions",
+      "landmark": {
+       "name": "",
+       "role": "main"
+      },
+      "layer": "document",
+      "name": "Show graphs Net change this month $ 1 7 , 6 3 5 . 0 7 Money in $ 2 9 5 , 9 6 7 . 2 1 Money out −$ 2 7 8 , 3 3 2 . 1 4",
+      "rect": [
+       220,
+       232,
+       1220,
+       76
+      ],
+      "role": "button",
+      "tag": "div",
+      "xpath": "/html/body/div[1]/main[1]/div[1]/div[1]/div[4]/div[1]/div[2]/div[2]/div[2]"
+     },
+     "state": "transactions.grouped-by-category"
+    }
+   ],
+   "evidenceHash": "2bfad2843aa08401e6bd0951465e7afbb7ee8a9921c45c8f51b3e29da61f5af9",
+   "facts": {
+    "announced": "button \"Show graphs Net change this month <amount> <n> Money in <amount> <n> Mo…",
+    "axeSummary": "Element has focusable descendants",
+    "criterion": "4.1.2",
+    "criterionName": "Name, Role, Value",
+    "element": "button \"Show graphs Net change this month <amoun…\"",
+    "rule": "nested-interactive",
+    "screen": "Grouped by category"
+   },
+   "family": "role-state",
+   "guidance": "Low for optional ARIA or an invalid autocomplete token; high when aria-hidden hides the whole page.",
+   "issueId": null,
+   "key": "role-state:nested-interactive:11dee701ff10",
+   "measured": false,
+   "primary": "transactions.grouped-by-category",
+   "proposals": [],
+   "rule": "nested-interactive",
+   "screens": 1,
+   "severityDefault": "medium",
+   "source": "scanner",
+   "states": [
+    "transactions.grouped-by-category"
+   ],
+   "summary": "nested-interactive: announced as button \"Show graphs Net change this month <amount> <n> Money in <amount> <n> Mo…. Element has focusable descendants",
+   "title": "Control nested in a control: button \"Show graphs Net change this month <amoun…\""
+  }
+ ],
+ "primaries": [
+  "transactions.grouped-by-category"
+ ],
+ "reach": {
+  "baseUrl": "https://demo.mercury.com",
+  "data": "data",
+  "map": "build/map.json",
+  "run": "2026-10-03-1525",
+  "workspace": "a11y"
+ },
+ "run": "2026-10-03-1525"
+}

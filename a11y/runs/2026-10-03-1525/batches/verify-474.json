@@ -1,0 +1,524 @@
+{
+ "area": "home",
+ "batch": "verify-474",
+ "findings": [
+  {
+   "attachments": [],
+   "attempt": 1,
+   "basis": "candidate",
+   "criteria": [
+    "4.1.2"
+   ],
+   "evidence": [
+    {
+     "evidence": {
+      "description": "",
+      "name": "Transactions",
+      "role": "button",
+      "states": {},
+      "template": "button \"Transactions\""
+     },
+     "occurrence": {
+      "ancestors": [
+       [
+        "_chip_1xw00_8",
+        "_inactive_1xw00_119",
+        "_truncateText_1xw00_16"
+       ],
+       [],
+       [
+        "_facets_4ah12_118"
+       ],
+       [
+        "_filterScrollContent_4ah12_19"
+       ],
+       [
+        "_filterScrollContainer_4ah12_12"
+       ],
+       [
+        "_filterChipsContainer_4ah12_2"
+       ],
+       [
+        "_inputAndResultsContainer_16edb_80"
+       ],
+       [
+        "_large_kwlx6_9",
+        "_noHover_3n0se_28",
+        "_shadow_3n0se_25",
+        "_raisedBackground_3n0se_45",
+        "_card_lo4oy_4",
+        "_omnisearchCard_16edb_36"
+       ]
+      ],
+      "classes": [
+       "_mainElement_1xw00_24",
+       "_interactive_1xw00_134"
+      ],
+      "data": {
+       "data-filter-id": "transactions"
+      },
+      "heading": "",
+      "landmark": {
+       "name": "",
+       "role": "dialog"
+      },
+      "layer": "top",
+      "name": "Transactions",
+      "rect": [
+       459,
+       196,
+       112,
+       32
+      ],
+      "role": "button",
+      "tag": "button",
+      "xpath": "/html/body/div[15]/div[1]/div[1]/div[1]/div[2]/div[3]/div[1]/div[2]/span[1]/span[3]/span[1]/button[1]"
+     },
+     "state": "home.search-open"
+    },
+    {
+     "evidence": {
+      "description": "",
+      "name": "Transactions",
+      "role": "button",
+      "states": {},
+      "template": "button \"Transactions\""
+     },
+     "occurrence": {
+      "ancestors": [
+       [
+        "_chip_1xw00_8",
+        "_inactive_1xw00_119",
+        "_truncateText_1xw00_16"
+       ],
+       [],
+       [
+        "_facets_4ah12_118"
+       ],
+       [
+        "_filterScrollContent_4ah12_19"
+       ],
+       [
+        "_filterScrollContainer_4ah12_12"
+       ],
+       [
+        "_filterChipsContainer_4ah12_2"
+       ],
+       [
+        "_inputAndResultsContainer_16edb_80"
+       ],
+       [
+        "_large_kwlx6_9",
+        "_noHover_3n0se_28",
+        "_shadow_3n0se_25",
+        "_raisedBackground_3n0se_45",
+        "_card_lo4oy_4",
+        "_omnisearchCard_16edb_36"
+       ]
+      ],
+      "classes": [
+       "_mainElement_1xw00_24",
+       "_interactive_1xw00_134"
+      ],
+      "data": {
+       "data-filter-id": "transactions"
+      },
+      "heading": "",
+      "landmark": {
+       "name": "",
+       "role": "dialog"
+      },
+      "layer": "top",
+      "name": "Transactions",
+      "rect": [
+       647,
+       196,
+       112,
+       32
+      ],
+      "role": "button",
+      "tag": "button",
+      "xpath": "/html/body/div[9]/div[1]/div[1]/div[1]/div[2]/div[2]/div[1]/div[2]/span[1]/span[5]/span[1]/button[1]"
+     },
+     "state": "books.search"
+    }
+   ],
+   "evidenceHash": "f25fe18db6668b584c516bcc3575cb3a82e535dd709e23f34f3fb0cb163fc17e",
+   "facts": {
+    "announced": "button \"Transactions\"",
+    "axeSummary": "",
+    "criterion": "4.1.2",
+    "criterionName": "Name, Role, Value",
+    "element": "button \"Transactions\"",
+    "rule": "announced-as",
+    "screen": "Search dialog (empty)"
+   },
+   "family": "role-state",
+   "guidance": "Low for optional ARIA or an invalid autocomplete token; high when aria-hidden hides the whole page.",
+   "issueId": null,
+   "key": "role-state:announced-as:aa328c3fdd4d",
+   "measured": false,
+   "primary": "home.search-open",
+   "proposals": [],
+   "rule": "announced-as",
+   "screens": 8,
+   "severityDefault": "medium",
+   "source": "scanner",
+   "states": [
+    "home.search-open",
+    "books.search"
+   ],
+   "summary": "announced-as: announced as button \"Transactions\".",
+   "title": "Wrong role or state: button \"Transactions\""
+  },
+  {
+   "attachments": [],
+   "attempt": 1,
+   "basis": "candidate",
+   "criteria": [
+    "4.1.2"
+   ],
+   "evidence": [
+    {
+     "evidence": {
+      "description": "",
+      "name": "Cards",
+      "role": "button",
+      "states": {},
+      "template": "button \"Cards\""
+     },
+     "occurrence": {
+      "ancestors": [
+       [
+        "_chip_1xw00_8",
+        "_inactive_1xw00_119",
+        "_truncateText_1xw00_16"
+       ],
+       [],
+       [
+        "_facets_4ah12_118"
+       ],
+       [
+        "_filterScrollContent_4ah12_19"
+       ],
+       [
+        "_filterScrollContainer_4ah12_12"
+       ],
+       [
+        "_filterChipsContainer_4ah12_2"
+       ],
+       [
+        "_inputAndResultsContainer_16edb_80"
+       ],
+       [
+        "_large_kwlx6_9",
+        "_noHover_3n0se_28",
+        "_shadow_3n0se_25",
+        "_raisedBackground_3n0se_45",
+        "_card_lo4oy_4",
+        "_omnisearchCard_16edb_36"
+       ]
+      ],
+      "classes": [
+       "_mainElement_1xw00_24",
+       "_interactive_1xw00_134"
+      ],
+      "data": {
+       "data-filter-id": "cards"
+      },
+      "heading": "",
+      "landmark": {
+       "name": "",
+       "role": "dialog"
+      },
+      "layer": "top",
+      "name": "Cards",
+      "rect": [
+       681,
+       196,
+       65,
+       32
+      ],
+      "role": "button",
+      "tag": "button",
+      "xpath": "/html/body/div[15]/div[1]/div[1]/div[1]/div[2]/div[3]/div[1]/div[2]/span[1]/span[5]/span[1]/button[1]"
+     },
+     "state": "home.search-open"
+    },
+    {
+     "evidence": {
+      "description": "",
+      "name": "Cards",
+      "role": "button",
+      "states": {},
+      "template": "button \"Cards\""
+     },
+     "occurrence": {
+      "ancestors": [
+       [
+        "_chip_1xw00_8",
+        "_inactive_1xw00_119",
+        "_truncateText_1xw00_16"
+       ],
+       [],
+       [
+        "_facets_4ah12_118"
+       ],
+       [
+        "_filterScrollContent_4ah12_19"
+       ],
+       [
+        "_filterScrollContainer_4ah12_12"
+       ],
+       [
+        "_filterChipsContainer_4ah12_2"
+       ],
+       [
+        "_inputAndResultsContainer_16edb_80"
+       ],
+       [
+        "_large_kwlx6_9",
+        "_noHover_3n0se_28",
+        "_shadow_3n0se_25",
+        "_raisedBackground_3n0se_45",
+        "_card_lo4oy_4",
+        "_omnisearchCard_16edb_36"
+       ]
+      ],
+      "classes": [
+       "_mainElement_1xw00_24",
+       "_interactive_1xw00_134"
+      ],
+      "data": {
+       "data-filter-id": "cards"
+      },
+      "heading": "",
+      "landmark": {
+       "name": "",
+       "role": "dialog"
+      },
+      "layer": "top",
+      "name": "Cards",
+      "rect": [
+       681,
+       196,
+       65,
+       32
+      ],
+      "role": "button",
+      "tag": "button",
+      "xpath": "/html/body/div[15]/div[1]/div[1]/div[1]/div[2]/div[3]/div[1]/div[2]/span[1]/span[5]/span[1]/button[1]"
+     },
+     "state": "home.search-no-results"
+    }
+   ],
+   "evidenceHash": "99250495ccd2e941d9b300215bbc8e5e8f05f2d937a0f165c0b002daa35daa69",
+   "facts": {
+    "announced": "button \"Cards\"",
+    "axeSummary": "",
+    "criterion": "4.1.2",
+    "criterionName": "Name, Role, Value",
+    "element": "button \"Cards\"",
+    "rule": "announced-as",
+    "screen": "Search dialog (empty)"
+   },
+   "family": "role-state",
+   "guidance": "Low for optional ARIA or an invalid autocomplete token; high when aria-hidden hides the whole page.",
+   "issueId": null,
+   "key": "role-state:announced-as:bad9b3b16938",
+   "measured": false,
+   "primary": "home.search-open",
+   "proposals": [],
+   "rule": "announced-as",
+   "screens": 7,
+   "severityDefault": "medium",
+   "source": "scanner",
+   "states": [
+    "home.search-open",
+    "home.search-no-results"
+   ],
+   "summary": "announced-as: announced as button \"Cards\".",
+   "title": "Wrong role or state: button \"Cards\""
+  },
+  {
+   "attachments": [],
+   "attempt": 1,
+   "basis": "candidate",
+   "criteria": [
+    "4.1.2"
+   ],
+   "evidence": [
+    {
+     "evidence": {
+      "description": "",
+      "name": "Accounts",
+      "role": "button",
+      "states": {},
+      "template": "button \"Accounts\""
+     },
+     "occurrence": {
+      "ancestors": [
+       [
+        "_chip_1xw00_8",
+        "_inactive_1xw00_119",
+        "_truncateText_1xw00_16"
+       ],
+       [],
+       [
+        "_facets_4ah12_118"
+       ],
+       [
+        "_filterScrollContent_4ah12_19"
+       ],
+       [
+        "_filterScrollContainer_4ah12_12"
+       ],
+       [
+        "_filterChipsContainer_4ah12_2"
+       ],
+       [
+        "_inputAndResultsContainer_16edb_80"
+       ],
+       [
+        "_large_kwlx6_9",
+        "_noHover_3n0se_28",
+        "_shadow_3n0se_25",
+        "_raisedBackground_3n0se_45",
+        "_card_lo4oy_4",
+        "_omnisearchCard_16edb_36"
+       ]
+      ],
+      "classes": [
+       "_mainElement_1xw00_24",
+       "_interactive_1xw00_134"
+      ],
+      "data": {
+       "data-filter-id": "accounts"
+      },
+      "heading": "",
+      "landmark": {
+       "name": "",
+       "role": "dialog"
+      },
+      "layer": "top",
+      "name": "Accounts",
+      "rect": [
+       581,
+       196,
+       90,
+       32
+      ],
+      "role": "button",
+      "tag": "button",
+      "xpath": "/html/body/div[15]/div[1]/div[1]/div[1]/div[2]/div[3]/div[1]/div[2]/span[1]/span[4]/span[1]/button[1]"
+     },
+     "state": "home.search-open"
+    },
+    {
+     "evidence": {
+      "description": "",
+      "name": "Accounts",
+      "role": "button",
+      "states": {},
+      "template": "button \"Accounts\""
+     },
+     "occurrence": {
+      "ancestors": [
+       [
+        "_chip_1xw00_8",
+        "_inactive_1xw00_119",
+        "_truncateText_1xw00_16"
+       ],
+       [],
+       [
+        "_facets_4ah12_118"
+       ],
+       [
+        "_filterScrollContent_4ah12_19"
+       ],
+       [
+        "_filterScrollContainer_4ah12_12"
+       ],
+       [
+        "_filterChipsContainer_4ah12_2"
+       ],
+       [
+        "_inputAndResultsContainer_16edb_80"
+       ],
+       [
+        "_large_kwlx6_9",
+        "_noHover_3n0se_28",
+        "_shadow_3n0se_25",
+        "_raisedBackground_3n0se_45",
+        "_card_lo4oy_4",
+        "_omnisearchCard_16edb_36"
+       ]
+      ],
+      "classes": [
+       "_mainElement_1xw00_24",
+       "_interactive_1xw00_134"
+      ],
+      "data": {
+       "data-filter-id": "accounts"
+      },
+      "heading": "",
+      "landmark": {
+       "name": "",
+       "role": "dialog"
+      },
+      "layer": "top",
+      "name": "Accounts",
+      "rect": [
+       459,
+       196,
+       90,
+       32
+      ],
+      "role": "button",
+      "tag": "button",
+      "xpath": "/html/body/div[9]/div[1]/div[1]/div[1]/div[2]/div[2]/div[1]/div[2]/span[1]/span[3]/span[1]/button[1]"
+     },
+     "state": "books.search"
+    }
+   ],
+   "evidenceHash": "5a1a1ea89f4d9a73515c2a2e2fdc5c5dbcea2f0f86e7eef1d41c79d70f8fbae3",
+   "facts": {
+    "announced": "button \"Accounts\"",
+    "axeSummary": "",
+    "criterion": "4.1.2",
+    "criterionName": "Name, Role, Value",
+    "element": "button \"Accounts\"",
+    "rule": "announced-as",
+    "screen": "Search dialog (empty)"
+   },
+   "family": "role-state",
+   "guidance": "Low for optional ARIA or an invalid autocomplete token; high when aria-hidden hides the whole page.",
+   "issueId": null,
+   "key": "role-state:announced-as:d5b7d6b49d94",
+   "measured": false,
+   "primary": "home.search-open",
+   "proposals": [],
+   "rule": "announced-as",
+   "screens": 8,
+   "severityDefault": "medium",
+   "source": "scanner",
+   "states": [
+    "home.search-open",
+    "books.search"
+   ],
+   "summary": "announced-as: announced as button \"Accounts\".",
+   "title": "Wrong role or state: button \"Accounts\""
+  }
+ ],
+ "primaries": [
+  "home.search-open"
+ ],
+ "reach": {
+  "baseUrl": "https://demo.mercury.com",
+  "data": "data",
+  "map": "build/map.json",
+  "run": "2026-10-03-1525",
+  "workspace": "a11y"
+ },
+ "run": "2026-10-03-1525"
+}

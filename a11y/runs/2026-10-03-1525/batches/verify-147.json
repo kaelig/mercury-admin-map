@@ -1,0 +1,319 @@
+{
+ "area": "cards",
+ "batch": "verify-147",
+ "findings": [
+  {
+   "attachments": [],
+   "attempt": 1,
+   "basis": "violation",
+   "criteria": [
+    "1.3.5"
+   ],
+   "evidence": [
+    {
+     "evidence": {
+      "failureSummary": "Fix all of the following:\n  the autocomplete attribute is incorrectly formatted"
+     },
+     "occurrence": {
+      "ancestors": [
+       [
+        "_inputWrapper_11c85_6"
+       ],
+       [
+        "_wrapper_1xgdp_8"
+       ],
+       [
+        "_sectionInput_12hgs_1"
+       ],
+       [
+        "_childContainer_6kwxg_17"
+       ],
+       [
+        "_container_6kwxg_1"
+       ],
+       [],
+       [
+        "_left_yg1rf_39"
+       ],
+       [
+        "_leftScrollArea_yg1rf_57"
+       ]
+      ],
+      "classes": [
+       "_input_11c85_6"
+      ],
+      "data": {
+       "data-1p-ignore": "true",
+       "data-active-item": "true",
+       "data-bwignore": "true",
+       "data-lpignore": "true"
+      },
+      "heading": "",
+      "landmark": {
+       "name": "",
+       "role": "form"
+      },
+      "layer": "document",
+      "name": "Limit type",
+      "rect": [
+       267,
+       575,
+       300,
+       40
+      ],
+      "role": "combobox",
+      "tag": "input",
+      "xpath": "/html/body/div[1]/main[1]/div[1]/div[2]/div[2]/div[3]/form[1]/div[1]/div[1]/div[1]/div[1]/div[2]/div[1]/div[5]/div[2]/div[3]/div[1]/div[1]/input[1]"
+     },
+     "state": "cards.issue-card-spending-limit"
+    },
+    {
+     "evidence": {
+      "failureSummary": "Fix all of the following:\n  the autocomplete attribute is incorrectly formatted"
+     },
+     "occurrence": {
+      "ancestors": [
+       [
+        "_inputWrapper_11c85_6"
+       ],
+       [
+        "_wrapper_1xgdp_8"
+       ],
+       [
+        "_sectionInput_12hgs_1"
+       ],
+       [
+        "_childContainer_6kwxg_17"
+       ],
+       [
+        "_container_6kwxg_1"
+       ],
+       [],
+       [
+        "_left_yg1rf_39"
+       ],
+       [
+        "_leftScrollArea_yg1rf_57"
+       ]
+      ],
+      "classes": [
+       "_input_11c85_6"
+      ],
+      "data": {
+       "data-1p-ignore": "true",
+       "data-active-item": "true",
+       "data-bwignore": "true",
+       "data-lpignore": "true"
+      },
+      "heading": "",
+      "landmark": {
+       "name": "",
+       "role": "form"
+      },
+      "layer": "document",
+      "name": "Limit type",
+      "rect": [
+       76,
+       575,
+       300,
+       40
+      ],
+      "role": "combobox",
+      "tag": "input",
+      "xpath": "/html/body/div[1]/main[1]/div[1]/div[2]/div[2]/div[3]/form[1]/div[1]/div[1]/div[1]/div[1]/div[2]/div[1]/div[5]/div[2]/div[3]/div[1]/div[1]/input[1]"
+     },
+     "state": "cards.issue-card-success"
+    }
+   ],
+   "evidenceHash": "f7bd01d0d649b8dd46ac40954a1b392e172d36eb9d0254d10d08142845f6cf42",
+   "facts": {
+    "announced": "combobox \"Limit type\" [expanded=false, haspopup=listbox]",
+    "axeSummary": "the autocomplete attribute is incorrectly formatted",
+    "criterion": "1.3.5",
+    "criterionName": "Identify Input Purpose",
+    "element": "combobox \"Limit type\"",
+    "rule": "autocomplete-valid",
+    "screen": "Spending limit controls"
+   },
+   "family": "role-state",
+   "guidance": "Low for optional ARIA or an invalid autocomplete token; high when aria-hidden hides the whole page.",
+   "issueId": null,
+   "key": "role-state:autocomplete-valid:07c90eb70cf0",
+   "measured": false,
+   "primary": "cards.issue-card-spending-limit",
+   "proposals": [],
+   "rule": "autocomplete-valid",
+   "screens": 2,
+   "severityDefault": "medium",
+   "source": "scanner",
+   "states": [
+    "cards.issue-card-spending-limit",
+    "cards.issue-card-success"
+   ],
+   "summary": "autocomplete-valid: announced as combobox \"Limit type\" [expanded=false, haspopup=listbox]. the autocomplete attribute is incorrectly formatted",
+   "title": "Invalid autocomplete value: combobox \"Limit type\""
+  },
+  {
+   "attachments": [],
+   "attempt": 1,
+   "basis": "violation",
+   "criteria": [
+    "1.3.5"
+   ],
+   "evidence": [
+    {
+     "evidence": {
+      "failureSummary": "Fix all of the following:\n  the autocomplete attribute is incorrectly formatted"
+     },
+     "occurrence": {
+      "ancestors": [
+       [
+        "_inputWrapper_11c85_6"
+       ],
+       [
+        "_wrapper_1xgdp_8"
+       ],
+       [
+        "_sectionInput_12hgs_1"
+       ],
+       [
+        "_sectionInput_1j8bf_1"
+       ],
+       [
+        "_childContainer_6kwxg_17"
+       ],
+       [
+        "_container_6kwxg_1"
+       ],
+       [],
+       [
+        "_left_yg1rf_39"
+       ]
+      ],
+      "classes": [
+       "_input_11c85_6"
+      ],
+      "data": {
+       "data-1p-ignore": "true",
+       "data-active-item": "true",
+       "data-bwignore": "true",
+       "data-lpignore": "true"
+      },
+      "heading": "",
+      "landmark": {
+       "name": "",
+       "role": "form"
+      },
+      "layer": "document",
+      "name": "Merchant controls",
+      "rect": [
+       267,
+       495,
+       300,
+       40
+      ],
+      "role": "combobox",
+      "tag": "input",
+      "xpath": "/html/body/div[1]/main[1]/div[1]/div[2]/div[2]/div[3]/form[1]/div[1]/div[1]/div[1]/div[1]/div[2]/div[1]/div[5]/div[2]/div[2]/div[1]/div[1]/div[1]/input[1]"
+     },
+     "state": "cards.issue-card-spending-limit"
+    },
+    {
+     "evidence": {
+      "failureSummary": "Fix all of the following:\n  the autocomplete attribute is incorrectly formatted"
+     },
+     "occurrence": {
+      "ancestors": [
+       [
+        "_inputWrapper_11c85_6"
+       ],
+       [
+        "_wrapper_1xgdp_8"
+       ],
+       [
+        "_sectionInput_12hgs_1"
+       ],
+       [
+        "_sectionInput_1j8bf_1"
+       ],
+       [
+        "_childContainer_6kwxg_17"
+       ],
+       [
+        "_container_6kwxg_1"
+       ],
+       [],
+       [
+        "_left_yg1rf_39"
+       ]
+      ],
+      "classes": [
+       "_input_11c85_6"
+      ],
+      "data": {
+       "data-1p-ignore": "true",
+       "data-active-item": "true",
+       "data-bwignore": "true",
+       "data-lpignore": "true"
+      },
+      "heading": "",
+      "landmark": {
+       "name": "",
+       "role": "form"
+      },
+      "layer": "document",
+      "name": "Merchant controls",
+      "rect": [
+       76,
+       495,
+       300,
+       40
+      ],
+      "role": "combobox",
+      "tag": "input",
+      "xpath": "/html/body/div[1]/main[1]/div[1]/div[2]/div[2]/div[3]/form[1]/div[1]/div[1]/div[1]/div[1]/div[2]/div[1]/div[5]/div[2]/div[2]/div[1]/div[1]/div[1]/input[1]"
+     },
+     "state": "cards.issue-card-success"
+    }
+   ],
+   "evidenceHash": "f7bd01d0d649b8dd46ac40954a1b392e172d36eb9d0254d10d08142845f6cf42",
+   "facts": {
+    "announced": "combobox \"Merchant controls\" [expanded=false, haspopup=listbox]",
+    "axeSummary": "the autocomplete attribute is incorrectly formatted",
+    "criterion": "1.3.5",
+    "criterionName": "Identify Input Purpose",
+    "element": "combobox \"Merchant controls\"",
+    "rule": "autocomplete-valid",
+    "screen": "Spending limit controls"
+   },
+   "family": "role-state",
+   "guidance": "Low for optional ARIA or an invalid autocomplete token; high when aria-hidden hides the whole page.",
+   "issueId": null,
+   "key": "role-state:autocomplete-valid:1895e689797d",
+   "measured": false,
+   "primary": "cards.issue-card-spending-limit",
+   "proposals": [],
+   "rule": "autocomplete-valid",
+   "screens": 2,
+   "severityDefault": "medium",
+   "source": "scanner",
+   "states": [
+    "cards.issue-card-spending-limit",
+    "cards.issue-card-success"
+   ],
+   "summary": "autocomplete-valid: announced as combobox \"Merchant controls\" [expanded=false, haspopup=listbox]. the autocomplete attribute is incorrectly formatted",
+   "title": "Invalid autocomplete value: combobox \"Merchant controls\""
+  }
+ ],
+ "primaries": [
+  "cards.issue-card-spending-limit"
+ ],
+ "reach": {
+  "baseUrl": "https://demo.mercury.com",
+  "data": "data",
+  "map": "build/map.json",
+  "run": "2026-10-03-1525",
+  "workspace": "a11y"
+ },
+ "run": "2026-10-03-1525"
+}

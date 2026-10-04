@@ -1,0 +1,301 @@
+{
+ "area": "invoicing",
+ "batch": "verify-215",
+ "findings": [
+  {
+   "attachments": [],
+   "attempt": 1,
+   "basis": "violation",
+   "criteria": [
+    "1.3.1"
+   ],
+   "evidence": [
+    {
+     "evidence": {
+      "failureSummary": "Fix any of the following:\n  Element has children which are not allowed: button[aria-label]",
+      "messageKey": "unallowed",
+      "values": "button[aria-label]"
+     },
+     "occurrence": {
+      "ancestors": [
+       [
+        "_lineItems_2qrq0_4"
+       ],
+       [],
+       [
+        "_contentWrapper_kogp0_1"
+       ],
+       [
+        "_wrapper_1ojdq_8"
+       ],
+       [],
+       [
+        "_leftInnerContainer_12jyu_3"
+       ],
+       [
+        "_left_yg1rf_39"
+       ],
+       [
+        "_leftScrollArea_yg1rf_57"
+       ]
+      ],
+      "classes": [
+       "_salesTaxRow_2qrq0_96"
+      ],
+      "data": {},
+      "heading": "Invoice set up",
+      "landmark": {
+       "name": "",
+       "role": "main"
+      },
+      "layer": "document",
+      "name": "",
+      "rect": [
+       120,
+       482,
+       480,
+       56
+      ],
+      "role": "row",
+      "tag": "div",
+      "xpath": "/html/body/div[1]/main[1]/div[1]/div[2]/div[2]/div[3]/div[1]/div[1]/div[1]/div[1]/div[1]/div[1]/div[2]/div[2]/div[2]/div[2]/div[4]"
+     },
+     "state": "invoicing.create-sales-tax"
+    },
+    {
+     "evidence": {
+      "failureSummary": "Fix any of the following:\n  Element has children which are not allowed: button[aria-label]",
+      "messageKey": "unallowed",
+      "values": "button[aria-label]"
+     },
+     "occurrence": {
+      "ancestors": [
+       [
+        "_lineItems_2qrq0_4"
+       ],
+       [],
+       [
+        "_contentWrapper_kogp0_1"
+       ],
+       [
+        "_wrapper_1ojdq_8"
+       ],
+       [],
+       [
+        "_leftInnerContainer_12jyu_3"
+       ],
+       [
+        "_left_yg1rf_39"
+       ],
+       [
+        "_leftScrollArea_yg1rf_57"
+       ]
+      ],
+      "classes": [
+       "_salesTaxRow_2qrq0_96"
+      ],
+      "data": {},
+      "heading": "Invoice set up",
+      "landmark": {
+       "name": "",
+       "role": "main"
+      },
+      "layer": "document",
+      "name": "",
+      "rect": [
+       120,
+       482,
+       480,
+       56
+      ],
+      "role": "row",
+      "tag": "div",
+      "xpath": "/html/body/div[1]/main[1]/div[1]/div[2]/div[2]/div[3]/div[1]/div[1]/div[1]/div[1]/div[1]/div[1]/div[2]/div[2]/div[2]/div[2]/div[4]"
+     },
+     "state": "invoicing.create-preview-payer"
+    }
+   ],
+   "evidenceHash": "7707839bccea26c6157415ed244b7434cd1ee8805ebc7b99a609d97989dafb4a",
+   "facts": {
+    "announced": "row \"\"",
+    "axeSummary": "Element has children which are not allowed: button[aria-label]",
+    "criterion": "1.3.1",
+    "criterionName": "Info and Relationships",
+    "element": "row in \"Invoice set up\"",
+    "rule": "aria-required-children",
+    "screen": "Sales tax added"
+   },
+   "family": "role-state",
+   "guidance": "Low for optional ARIA or an invalid autocomplete token; high when aria-hidden hides the whole page.",
+   "issueId": null,
+   "key": "role-state:aria-required-children:ad3e1f9067f1",
+   "measured": false,
+   "primary": "invoicing.create-sales-tax",
+   "proposals": [],
+   "rule": "aria-required-children",
+   "screens": 4,
+   "severityDefault": "medium",
+   "source": "scanner",
+   "states": [
+    "invoicing.create-sales-tax",
+    "invoicing.create-preview-payer"
+   ],
+   "summary": "aria-required-children: announced as row \"\". Element has children which are not allowed: button[aria-label]",
+   "title": "Wrong role or state: row in \"Invoice set up\""
+  },
+  {
+   "attachments": [],
+   "attempt": 1,
+   "basis": "violation",
+   "criteria": [
+    "1.3.5"
+   ],
+   "evidence": [
+    {
+     "evidence": {
+      "failureSummary": "Fix all of the following:\n  the autocomplete attribute is incorrectly formatted"
+     },
+     "occurrence": {
+      "ancestors": [
+       [
+        "_inputBox_q7hf7_93"
+       ],
+       [
+        "_inputBoxWrapper_q7hf7_93"
+       ],
+       [
+        "_textInputWrapper_q7hf7_24"
+       ],
+       [
+        "_provideDSTextInput_q7hf7_6"
+       ],
+       [],
+       [
+        "_salesTaxRow_2qrq0_96"
+       ],
+       [
+        "_lineItems_2qrq0_4"
+       ],
+       []
+      ],
+      "classes": [
+       "_input_q7hf7_93",
+       "_rightAlignedInputWithMargin_2qrq0_123"
+      ],
+      "data": {
+       "data-testid": "sales-tax-input"
+      },
+      "heading": "Invoice set up",
+      "landmark": {
+       "name": "",
+       "role": "main"
+      },
+      "layer": "document",
+      "name": "0.000",
+      "rect": [
+       439,
+       498,
+       117,
+       24
+      ],
+      "role": "textbox",
+      "tag": "input",
+      "xpath": "/html/body/div[1]/main[1]/div[1]/div[2]/div[2]/div[3]/div[1]/div[1]/div[1]/div[1]/div[1]/div[1]/div[2]/div[2]/div[2]/div[2]/div[4]/div[3]/div[1]/div[1]/div[1]/div[1]/input[1]"
+     },
+     "state": "invoicing.create-sales-tax"
+    },
+    {
+     "evidence": {
+      "failureSummary": "Fix all of the following:\n  the autocomplete attribute is incorrectly formatted"
+     },
+     "occurrence": {
+      "ancestors": [
+       [
+        "_inputBox_q7hf7_93"
+       ],
+       [
+        "_inputBoxWrapper_q7hf7_93"
+       ],
+       [
+        "_textInputWrapper_q7hf7_24"
+       ],
+       [
+        "_provideDSTextInput_q7hf7_6"
+       ],
+       [],
+       [
+        "_salesTaxRow_2qrq0_96"
+       ],
+       [
+        "_lineItems_2qrq0_4"
+       ],
+       []
+      ],
+      "classes": [
+       "_input_q7hf7_93",
+       "_rightAlignedInputWithMargin_2qrq0_123"
+      ],
+      "data": {
+       "data-testid": "sales-tax-input"
+      },
+      "heading": "Invoice set up",
+      "landmark": {
+       "name": "",
+       "role": "main"
+      },
+      "layer": "document",
+      "name": "0.000",
+      "rect": [
+       439,
+       498,
+       117,
+       24
+      ],
+      "role": "textbox",
+      "tag": "input",
+      "xpath": "/html/body/div[1]/main[1]/div[1]/div[2]/div[2]/div[3]/div[1]/div[1]/div[1]/div[1]/div[1]/div[1]/div[2]/div[2]/div[2]/div[2]/div[4]/div[3]/div[1]/div[1]/div[1]/div[1]/input[1]"
+     },
+     "state": "invoicing.create-preview-payer"
+    }
+   ],
+   "evidenceHash": "e31ac75706717a168c97d225709987d35622c321d6dbca03aacf3729a3203c85",
+   "facts": {
+    "announced": "textbox \"<n>\"",
+    "axeSummary": "the autocomplete attribute is incorrectly formatted",
+    "criterion": "1.3.5",
+    "criterionName": "Identify Input Purpose",
+    "element": "textbox \"<n>\"",
+    "rule": "autocomplete-valid",
+    "screen": "Sales tax added"
+   },
+   "family": "role-state",
+   "guidance": "Low for optional ARIA or an invalid autocomplete token; high when aria-hidden hides the whole page.",
+   "issueId": null,
+   "key": "role-state:autocomplete-valid:777c61a293b8",
+   "measured": false,
+   "primary": "invoicing.create-sales-tax",
+   "proposals": [],
+   "rule": "autocomplete-valid",
+   "screens": 4,
+   "severityDefault": "medium",
+   "source": "scanner",
+   "states": [
+    "invoicing.create-sales-tax",
+    "invoicing.create-preview-payer"
+   ],
+   "summary": "autocomplete-valid: announced as textbox \"<n>\". the autocomplete attribute is incorrectly formatted",
+   "title": "Invalid autocomplete value: textbox \"<n>\""
+  }
+ ],
+ "primaries": [
+  "invoicing.create-sales-tax"
+ ],
+ "reach": {
+  "baseUrl": "https://demo.mercury.com",
+  "data": "data",
+  "map": "build/map.json",
+  "run": "2026-10-03-1525",
+  "workspace": "a11y"
+ },
+ "run": "2026-10-03-1525"
+}

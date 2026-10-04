@@ -1,0 +1,173 @@
+{
+ "area": "payments",
+ "batch": "verify-287",
+ "findings": [
+  {
+   "attachments": [],
+   "attempt": 1,
+   "basis": "failure",
+   "criteria": [
+    "2.4.3"
+   ],
+   "evidence": [
+    {
+     "evidence": {
+      "closedBy": "escape",
+      "focus": "body",
+      "stops": 2,
+      "trace": [
+       {
+        "focus": "body",
+        "key": "start",
+        "where": "body"
+       },
+       {
+        "focus": {
+         "label": "Multiple GL Codes",
+         "tag": "button",
+         "xpath": "/html/body/div[1]/main[1]/div[1]/div[2]/div[2]/div[1]/div[2]/section[2]/div[1]/div[1]/form[1]/div[1]/div[1]/div[1]/div[2]/button[1]"
+        },
+        "key": "Tab",
+        "where": "outside"
+       },
+       {
+        "focus": {
+         "label": "",
+         "tag": "input",
+         "xpath": "/html/body/div[1]/main[1]/div[1]/div[2]/div[2]/div[1]/div[2]/section[2]/div[1]/div[1]/form[1]/div[1]/div[2]/div[1]/div[1]/div[1]/input[1]"
+        },
+        "key": "Tab",
+        "where": "trigger"
+       },
+       {
+        "focus": {
+         "label": "",
+         "tag": "input",
+         "xpath": "/html/body/div[1]/main[1]/div[1]/div[2]/div[2]/div[1]/div[2]/section[2]/div[1]/div[1]/form[1]/div[1]/div[2]/div[1]/div[1]/div[1]/input[1]"
+        },
+        "key": "Enter",
+        "where": "trigger"
+       },
+       {
+        "focus": {
+         "label": "",
+         "tag": "input",
+         "xpath": "/html/body/div[1]/main[1]/div[1]/div[2]/div[2]/div[1]/div[2]/section[2]/div[1]/div[1]/form[1]/div[1]/div[2]/div[1]/div[1]/div[1]/input[1]"
+        },
+        "key": "Space",
+        "where": "trigger"
+       },
+       {
+        "focus": {
+         "label": "",
+         "tag": "input",
+         "xpath": "/html/body/div[1]/main[1]/div[1]/div[2]/div[2]/div[1]/div[2]/section[2]/div[1]/div[1]/form[1]/div[1]/div[2]/div[1]/div[1]/div[1]/input[1]"
+        },
+        "key": "settle",
+        "where": "trigger"
+       },
+       {
+        "focus": "body",
+        "key": "Escape",
+        "where": "body"
+       },
+       {
+        "focus": "body",
+        "key": "settle",
+        "where": "body"
+       }
+      ]
+     },
+     "occurrence": {
+      "ancestors": [
+       [
+        "_inputWrapper_11c85_6"
+       ],
+       [
+        "_wrapper_1xgdp_8"
+       ],
+       [
+        "_wrapper_16rxx_1"
+       ],
+       [
+        "_singleLineItemFormWrapper_8i915_23"
+       ],
+       [
+        "_formWrapper_8i915_9"
+       ],
+       [],
+       [
+        "_routeContainer_15al5_228"
+       ],
+       [
+        "_routes_15al5_220"
+       ]
+      ],
+      "classes": [
+       "_input_11c85_6"
+      ],
+      "data": {
+       "data-1p-ignore": "true",
+       "data-active-item": "true",
+       "data-bwignore": "true",
+       "data-lpignore": "true"
+      },
+      "heading": "Categorization",
+      "landmark": {
+       "name": "",
+       "role": "form"
+      },
+      "layer": "document",
+      "name": "GL Code",
+      "rect": [
+       440,
+       336,
+       527,
+       40
+      ],
+      "role": "combobox",
+      "tag": "input",
+      "xpath": "/html/body/div[1]/main[1]/div[1]/div[2]/div[2]/div[1]/div[2]/section[2]/div[1]/div[1]/form[1]/div[1]/div[2]/div[1]/div[1]/div[1]/input[1]"
+     },
+     "state": "payments.send-gl-dropdown"
+    }
+   ],
+   "evidenceHash": "39b8cfb699312dde49f2b3cde3183303c4045e97359ba8e4177d207c208473da",
+   "facts": {
+    "criterion": "2.4.3",
+    "criterionName": "Focus Order",
+    "element": "combobox \"GL Code\"",
+    "focus": "page body",
+    "overlay": "unnamed listbox",
+    "screen": "Send: GL code list"
+   },
+   "family": "dialog-focus",
+   "guidance": "High when controls inside are unreachable.",
+   "issueId": null,
+   "key": "dialog-focus:dialog-focus-not-returned:bd661a5912c4",
+   "measured": false,
+   "primary": "payments.send-gl-dropdown",
+   "proposals": [],
+   "rule": "dialog-focus-not-returned",
+   "screens": 1,
+   "severityDefault": "low",
+   "source": "scanner",
+   "states": [
+    "payments.send-gl-dropdown"
+   ],
+   "summary": "Esc closed the unnamed listbox and focus went to the page body, not back to the combobox \"GL Code\".",
+   "title": "Focus lost after closing unnamed listbox"
+  }
+ ],
+ "primaries": [
+  "payments.send-gl-dropdown"
+ ],
+ "reach": {
+  "baseUrl": "https://demo.mercury.com",
+  "data": "data",
+  "map": "build/map.json",
+  "run": "2026-10-03-1525",
+  "workspace": "a11y"
+ },
+ "run": "2026-10-03-1525"
+}

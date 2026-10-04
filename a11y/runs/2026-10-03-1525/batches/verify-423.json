@@ -1,0 +1,289 @@
+{
+ "area": "billpay",
+ "batch": "verify-423",
+ "findings": [
+  {
+   "attachments": [],
+   "attempt": 1,
+   "basis": "candidate",
+   "criteria": [
+    "3.3.2"
+   ],
+   "evidence": [
+    {
+     "evidence": {
+      "description": "",
+      "name": "0.00",
+      "role": "textbox",
+      "states": {},
+      "template": "textbox \"<amount>\""
+     },
+     "occurrence": {
+      "ancestors": [
+       [
+        "_inputBox_q7hf7_93",
+        "_hasValue_q7hf7_171"
+       ],
+       [
+        "_inputBoxWrapper_q7hf7_93"
+       ],
+       [
+        "_textInputWrapper_q7hf7_24"
+       ],
+       [
+        "_provideDSTextInput_q7hf7_6",
+        "_addWrapperMargin_q7hf7_19"
+       ],
+       [],
+       [
+        "_stack_u67me_12",
+        "_gap8_u67me_18"
+       ],
+       [
+        "_container_u67me_4"
+       ],
+       [
+        "_panelSection_d3i56_148"
+       ]
+      ],
+      "classes": [
+       "_input_q7hf7_93"
+      ],
+      "data": {},
+      "heading": "Due in next 7 days",
+      "landmark": {
+       "name": "",
+       "role": "complementary"
+      },
+      "layer": "document",
+      "name": "0.00",
+      "rect": [
+       974,
+       549,
+       303,
+       24
+      ],
+      "role": "textbox",
+      "tag": "input",
+      "xpath": "/html/body/div[1]/main[1]/div[1]/div[1]/div[4]/div[1]/div[2]/div[2]/div[2]/div[2]/div[2]/div[1]/form[1]/aside[1]/div[1]/div[1]/section[1]/div[1]/div[1]/div[1]/div[1]/div[1]/div[1]/div[1]/input[1]"
+     },
+     "state": "billpay.bill-panel-edit"
+    }
+   ],
+   "evidenceHash": "780c8b78864a4b19d4e1b6815617183e45d1ffc6824708ff587d211d45e20aac",
+   "facts": {
+    "announced": "textbox \"<amount>\"",
+    "axeSummary": "",
+    "criterion": "3.3.2",
+    "criterionName": "Labels or Instructions",
+    "element": "textbox \"<amount>\"",
+    "rule": "announced-as",
+    "screen": "Bill panel edit mode"
+   },
+   "family": "name",
+   "guidance": "High for an unnamed form control or the sole primary action.",
+   "issueId": null,
+   "key": "name:announced-as:9220f3e9b1f4",
+   "measured": false,
+   "primary": "billpay.bill-panel-edit",
+   "proposals": [
+    {
+     "family": "name",
+     "finding": "name:announced-as:9220f3e9b1f4",
+     "handFound": "billpay.i-date-input-label",
+     "id": "fa39d26fd4d54678187e2f14aa39e080579f40002220c93356a3dc2cccbdd7c7",
+     "overlap": 1
+    }
+   ],
+   "rule": "announced-as",
+   "screens": 1,
+   "severityDefault": "medium",
+   "source": "scanner",
+   "states": [
+    "billpay.bill-panel-edit"
+   ],
+   "summary": "announced-as: announced as textbox \"<amount>\".",
+   "title": "Missing or unclear name: textbox \"<amount>\""
+  },
+  {
+   "attachments": [],
+   "attempt": 1,
+   "basis": "candidate",
+   "criteria": [
+    "3.3.2"
+   ],
+   "evidence": [
+    {
+     "evidence": {
+      "description": "",
+      "name": "",
+      "role": "textbox",
+      "states": {},
+      "template": "textbox \"\""
+     },
+     "occurrence": {
+      "ancestors": [
+       [
+        "_inputBox_q7hf7_93",
+        "_inline_q7hf7_201",
+        "_hasValue_q7hf7_171"
+       ],
+       [
+        "_inputBoxWrapper_q7hf7_93"
+       ],
+       [
+        "_textInputWrapper_q7hf7_24"
+       ],
+       [
+        "_provideDSTextInput_q7hf7_6"
+       ],
+       [
+        "_editComponent_1isei_40"
+       ],
+       [
+        "_detailRow_1isei_10",
+        "_editing_1isei_30",
+        "_unstyledButtonWithoutFocus_1isei_102"
+       ],
+       [
+        "_container_1isei_4"
+       ],
+       [
+        "_panelSection_d3i56_148"
+       ]
+      ],
+      "classes": [
+       "_input_q7hf7_93"
+      ],
+      "data": {},
+      "heading": "Due in next 7 days",
+      "landmark": {
+       "name": "",
+       "role": "complementary"
+      },
+      "layer": "document",
+      "name": "",
+      "rect": [
+       1154,
+       752,
+       128,
+       24
+      ],
+      "role": "textbox",
+      "tag": "input",
+      "xpath": "/html/body/div[1]/main[1]/div[1]/div[1]/div[4]/div[1]/div[2]/div[2]/div[2]/div[2]/div[2]/div[1]/form[1]/aside[1]/div[1]/div[1]/section[2]/div[1]/button[3]/div[1]/div[1]/div[1]/div[1]/div[1]/input[1]"
+     },
+     "state": "billpay.bill-panel-edit"
+    },
+    {
+     "evidence": {
+      "description": "",
+      "name": "",
+      "role": "textbox",
+      "states": {},
+      "template": "textbox \"\""
+     },
+     "occurrence": {
+      "ancestors": [
+       [
+        "_inputBox_q7hf7_93",
+        "_inline_q7hf7_201",
+        "_hasValue_q7hf7_171"
+       ],
+       [
+        "_inputBoxWrapper_q7hf7_93"
+       ],
+       [
+        "_textInputWrapper_q7hf7_24"
+       ],
+       [
+        "_provideDSTextInput_q7hf7_6"
+       ],
+       [
+        "_editComponent_1isei_40"
+       ],
+       [
+        "_detailRow_1isei_10",
+        "_editing_1isei_30",
+        "_unstyledButtonWithoutFocus_1isei_102"
+       ],
+       [
+        "_container_1isei_4"
+       ],
+       [
+        "_panelSection_d3i56_148"
+       ]
+      ],
+      "classes": [
+       "_input_q7hf7_93"
+      ],
+      "data": {},
+      "heading": "Due in next 7 days",
+      "landmark": {
+       "name": "",
+       "role": "complementary"
+      },
+      "layer": "document",
+      "name": "",
+      "rect": [
+       1154,
+       776,
+       128,
+       24
+      ],
+      "role": "textbox",
+      "tag": "input",
+      "xpath": "/html/body/div[1]/main[1]/div[1]/div[1]/div[4]/div[1]/div[2]/div[2]/div[2]/div[2]/div[2]/div[1]/form[1]/aside[1]/div[1]/div[1]/section[2]/div[1]/button[3]/div[1]/div[1]/div[1]/div[1]/div[1]/input[1]"
+     },
+     "state": "billpay.bill-edit-amount-error"
+    }
+   ],
+   "evidenceHash": "c7b0818c231317c3090c33a5bd054ae95e093f5af57ce45c7f626e721991d55d",
+   "facts": {
+    "announced": "textbox \"\"",
+    "axeSummary": "",
+    "criterion": "3.3.2",
+    "criterionName": "Labels or Instructions",
+    "element": "textbox in \"Due in next <n> days\"",
+    "rule": "announced-as",
+    "screen": "Bill panel edit mode"
+   },
+   "family": "name",
+   "guidance": "High for an unnamed form control or the sole primary action.",
+   "issueId": null,
+   "key": "name:announced-as:a8acc12d5e26",
+   "measured": false,
+   "primary": "billpay.bill-panel-edit",
+   "proposals": [
+    {
+     "family": "name",
+     "finding": "name:announced-as:a8acc12d5e26",
+     "handFound": "billpay.i-date-input-label",
+     "id": "a930bdf44fafc5b078278754744147ea23f24044b6e27a1563179a933d1813dd",
+     "overlap": 1
+    }
+   ],
+   "rule": "announced-as",
+   "screens": 2,
+   "severityDefault": "medium",
+   "source": "scanner",
+   "states": [
+    "billpay.bill-panel-edit",
+    "billpay.bill-edit-amount-error"
+   ],
+   "summary": "announced-as: announced as textbox \"\".",
+   "title": "Missing or unclear name: textbox in \"Due in next <n> days\""
+  }
+ ],
+ "primaries": [
+  "billpay.bill-panel-edit"
+ ],
+ "reach": {
+  "baseUrl": "https://demo.mercury.com",
+  "data": "data",
+  "map": "build/map.json",
+  "run": "2026-10-03-1525",
+  "workspace": "a11y"
+ },
+ "run": "2026-10-03-1525"
+}

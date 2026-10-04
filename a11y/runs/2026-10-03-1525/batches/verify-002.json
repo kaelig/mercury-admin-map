@@ -1,0 +1,59 @@
+{
+ "area": "accounts",
+ "batch": "verify-002",
+ "findings": [
+  {
+   "attachments": [],
+   "attempt": 1,
+   "basis": "failure",
+   "criteria": [
+    "4.1.2"
+   ],
+   "evidence": [],
+   "evidenceHash": "228a91b69abc540452a0fa36d35cf18014a2902697904721f93375e07d5f5e36",
+   "facts": {},
+   "family": "name",
+   "guidance": "High for an unnamed form control or the sole primary action.",
+   "issueId": "accounts.i-rule-cards-hidden-period",
+   "key": "hand:accounts.i-rule-cards-hidden-period",
+   "measured": false,
+   "primary": "accounts.auto-transfer-rules",
+   "proposals": [
+    {
+     "family": "name",
+     "finding": "name:button-name:b9268695c292",
+     "handFound": "accounts.i-rule-cards-hidden-period",
+     "id": "8f8496d46333b809096836d9528cd2639a4e373bef0837e9c10d198955f61daa",
+     "overlap": 1
+    },
+    {
+     "family": "name",
+     "finding": "name:button-name:e440427419da",
+     "handFound": "accounts.i-rule-cards-hidden-period",
+     "id": "125c06abdb228664c2c028b3db0978b5479ad2858f308cbc2bd99144519b5bb4",
+     "overlap": 1
+    }
+   ],
+   "rule": "hand-found",
+   "screens": 1,
+   "severityDefault": "low",
+   "source": "hand-found",
+   "states": [
+    "accounts.auto-transfer-rules"
+   ],
+   "summary": "DOM (2026-09-25) on /accounts#auto-transfers: <button>…<p>Distribute funds<br> across accounts</p><p><div>.</div></p>…</button>; the <div> has opacity 0, width 0px, no aria-hidden. Accessibility tree: button \"Distribute funds across accounts .\", button \"Maintain a target account balance .\" (same for 'Schedule recurring transfers .' and 'Redirect incoming funds .').",
+   "title": "Auto transfer rule cards announce a stray period"
+  }
+ ],
+ "primaries": [
+  "accounts.auto-transfer-rules"
+ ],
+ "reach": {
+  "baseUrl": "https://demo.mercury.com",
+  "data": "data",
+  "map": "build/map.json",
+  "run": "2026-10-03-1525",
+  "workspace": "a11y"
+ },
+ "run": "2026-10-03-1525"
+}

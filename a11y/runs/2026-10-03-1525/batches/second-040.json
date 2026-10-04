@@ -1,0 +1,577 @@
+{
+ "area": "transactions",
+ "batch": "second-040",
+ "findings": [
+  {
+   "attachments": [],
+   "attempt": 1,
+   "basis": "failure",
+   "criteria": [
+    "2.4.3"
+   ],
+   "evidence": [
+    {
+     "evidence": {
+      "closedBy": "escape",
+      "focus": {
+       "ancestors": [
+        [
+         "_toolbarButtonsContainer_54yyd_221"
+        ],
+        [
+         "_filtersAndExportButton_1ow20_72"
+        ],
+        [
+         "_topContent_1ow20_3"
+        ],
+        [
+         "_transactionsPageDashboardWrapper_1ow20_48"
+        ],
+        [
+         "_dashboardContent_809q8_29",
+         "_scrollContainer_809q8_29"
+        ],
+        [
+         "_layout_809q8_18"
+        ],
+        [
+         "_wrapper_809q8_3"
+        ],
+        []
+       ],
+       "classes": [
+        "_button_r6b2u_20",
+        "_small_r6b2u_72",
+        "_tertiary_r6b2u_153",
+        "_tooltipAnchor_18bac_4",
+        "_roundedTooltipAnchor_54yyd_217",
+        "_menuButton_54yyd_84"
+       ],
+       "data": {
+        "data-focus-visible": "true"
+       },
+       "heading": "",
+       "landmark": {
+        "name": "",
+        "role": "main"
+       },
+       "layer": "document",
+       "name": "Settings",
+       "rect": [
+        1267,
+        184,
+        32,
+        32
+       ],
+       "role": "button",
+       "tag": "button",
+       "xpath": "/html/body/div[1]/main[1]/div[1]/div[1]/div[4]/div[1]/div[2]/div[2]/div[1]/div[2]/button[3]"
+      },
+      "stops": 2,
+      "trace": [
+       {
+        "focus": {
+         "label": "Show graph Show graph Time zone PDT Manage categories",
+         "tag": "div",
+         "xpath": "/html/body/div[1]/main[1]/div[1]/div[1]/div[4]/div[1]/div[2]/div[2]/div[1]/div[2]/div[3]/div[1]"
+        },
+        "key": "start",
+        "where": "trigger"
+       },
+       {
+        "focus": {
+         "label": "on",
+         "tag": "input",
+         "xpath": "/html/body/div[1]/main[1]/div[1]/div[1]/div[4]/div[1]/div[2]/div[2]/div[1]/div[2]/div[3]/div[1]/div[1]/div[1]/div[1]/input[1]"
+        },
+        "key": "Tab",
+        "where": "outside"
+       },
+       {
+        "focus": {
+         "label": "Time zone PDT",
+         "tag": "div",
+         "xpath": "/html/body/div[1]/main[1]/div[1]/div[1]/div[4]/div[1]/div[2]/div[2]/div[1]/div[2]/div[3]/div[1]/div[2]"
+        },
+        "key": "Tab",
+        "where": "trigger"
+       },
+       {
+        "focus": {
+         "label": "UTC",
+         "tag": "div",
+         "xpath": "/html/body/div[1]/main[1]/div[1]/div[1]/div[4]/div[1]/div[2]/div[2]/div[1]/div[2]/div[3]/div[1]/div[3]/div[1]/div[1]"
+        },
+        "key": "Enter",
+        "where": "outside"
+       },
+       {
+        "focus": {
+         "label": "UTC",
+         "tag": "div",
+         "xpath": "/html/body/div[1]/main[1]/div[1]/div[1]/div[4]/div[1]/div[2]/div[2]/div[1]/div[2]/div[3]/div[1]/div[3]/div[1]/div[1]"
+        },
+        "key": "settle",
+        "where": "inside"
+       },
+       {
+        "focus": {
+         "label": "Settings",
+         "tag": "button",
+         "xpath": "/html/body/div[1]/main[1]/div[1]/div[1]/div[4]/div[1]/div[2]/div[2]/div[1]/div[2]/button[3]"
+        },
+        "key": "Escape",
+        "where": "outside"
+       },
+       {
+        "focus": {
+         "label": "Settings",
+         "tag": "button",
+         "xpath": "/html/body/div[1]/main[1]/div[1]/div[1]/div[4]/div[1]/div[2]/div[2]/div[1]/div[2]/button[3]"
+        },
+        "key": "settle",
+        "where": "outside"
+       }
+      ]
+     },
+     "occurrence": {
+      "ancestors": [
+       [
+        "_menu_54yyd_84",
+        "_mainMenu_54yyd_120",
+        "_withGroupBy_54yyd_123"
+       ],
+       [],
+       [
+        "_toolbarButtonsContainer_54yyd_221"
+       ],
+       [
+        "_filtersAndExportButton_1ow20_72"
+       ],
+       [
+        "_topContent_1ow20_3"
+       ],
+       [
+        "_transactionsPageDashboardWrapper_1ow20_48"
+       ],
+       [
+        "_dashboardContent_809q8_29",
+        "_scrollContainer_809q8_29"
+       ],
+       [
+        "_layout_809q8_18"
+       ]
+      ],
+      "classes": [
+       "_menuItem_54yyd_128"
+      ],
+      "data": {},
+      "heading": "Transactions",
+      "landmark": {
+       "name": "",
+       "role": "main"
+      },
+      "layer": "document",
+      "name": "Time zone PDT",
+      "rect": [
+       963,
+       268,
+       332,
+       40
+      ],
+      "role": "menuitem",
+      "tag": "div",
+      "xpath": "/html/body/div[1]/main[1]/div[1]/div[1]/div[4]/div[1]/div[2]/div[2]/div[1]/div[2]/div[3]/div[1]/div[2]"
+     },
+     "state": "transactions.time-zone-submenu"
+    }
+   ],
+   "evidenceHash": "b52e1a933792dd58465ff0826f00250511caeae1c17cdf2a70ed1af08d15afed",
+   "facts": {
+    "criterion": "2.4.3",
+    "criterionName": "Focus Order",
+    "element": "menuitem \"Time zone PDT\"",
+    "focus": "button \"Settings\"",
+    "overlay": "menu \"Time zone PDT\"",
+    "screen": "Time zone submenu"
+   },
+   "family": "dialog-focus",
+   "guidance": "High when controls inside are unreachable.",
+   "issueId": null,
+   "key": "dialog-focus:dialog-focus-not-returned:96033b7c351d",
+   "measured": false,
+   "primary": "transactions.time-zone-submenu",
+   "proposals": [],
+   "rule": "dialog-focus-not-returned",
+   "screens": 1,
+   "severityDefault": "low",
+   "source": "scanner",
+   "states": [
+    "transactions.time-zone-submenu"
+   ],
+   "summary": "Esc closed the menu \"Time zone PDT\" and focus went to the button \"Settings\", not back to the menuitem \"Time zone PDT\".",
+   "title": "Focus lost after closing menu \"Time zone PDT\""
+  },
+  {
+   "attachments": [],
+   "attempt": 1,
+   "basis": "candidate",
+   "criteria": [
+    "4.1.2"
+   ],
+   "evidence": [
+    {
+     "evidence": {
+      "description": "",
+      "name": "",
+      "role": "textbox",
+      "states": {},
+      "template": "textbox \"\""
+     },
+     "occurrence": {
+      "ancestors": [
+       [
+        "_inputBox_q7hf7_93"
+       ],
+       [
+        "_inputBoxWrapper_q7hf7_93"
+       ],
+       [
+        "_textInputWrapper_q7hf7_24"
+       ],
+       [
+        "_provideDSTextInput_q7hf7_6"
+       ],
+       [
+        "_modalContent_1oqqp_33"
+       ],
+       [],
+       [
+        "_large_kwlx6_9",
+        "_noHover_3n0se_28",
+        "_shadow_3n0se_25",
+        "_raisedBackground_3n0se_45",
+        "_card_lo4oy_4",
+        "_defaultPadding_lo4oy_27",
+        "_small_lo4oy_11"
+       ],
+       [
+        "ReactModal__Content",
+        "ReactModal__Content--after-open",
+        "_modal_lo4oy_73"
+       ]
+      ],
+      "classes": [
+       "_input_q7hf7_93"
+      ],
+      "data": {},
+      "heading": "Create a new category from here, or manage all your company’s categories from settings.",
+      "landmark": {
+       "name": "",
+       "role": "form"
+      },
+      "layer": "top",
+      "name": "",
+      "rect": [
+       549,
+       390,
+       342,
+       24
+      ],
+      "role": "textbox",
+      "tag": "input",
+      "xpath": "/html/body/div[18]/div[1]/div[1]/div[1]/form[1]/div[1]/div[1]/div[1]/div[1]/div[1]/input[1]"
+     },
+     "state": "transactions.create-category-modal"
+    }
+   ],
+   "evidenceHash": "1ff43028f8666aaa1eeff8215cf631db773c9396e6c893acdb9d233ca07dc591",
+   "facts": {
+    "announced": "textbox \"\"",
+    "axeSummary": "",
+    "criterion": "4.1.2",
+    "criterionName": "Name, Role, Value",
+    "element": "textbox in \"Create a new category from here, or…\"",
+    "rule": "announced-as",
+    "screen": "Create category modal"
+   },
+   "family": "name",
+   "guidance": "High for an unnamed form control or the sole primary action.",
+   "issueId": null,
+   "key": "name:announced-as:984a2af91dec",
+   "measured": false,
+   "primary": "transactions.create-category-modal",
+   "proposals": [],
+   "rule": "announced-as",
+   "screens": 1,
+   "severityDefault": "medium",
+   "source": "scanner",
+   "states": [
+    "transactions.create-category-modal"
+   ],
+   "summary": "announced-as: announced as textbox \"\".",
+   "title": "Missing or unclear name: textbox in \"Create a new category from here, or…\""
+  },
+  {
+   "attachments": [],
+   "attempt": 1,
+   "basis": "candidate",
+   "criteria": [
+    "1.3.1"
+   ],
+   "evidence": [
+    {
+     "evidence": {
+      "description": "",
+      "name": "Create a new category from here, or manage all your company’s categories from settings.",
+      "role": "heading",
+      "states": {
+       "level": 3
+      },
+      "template": "heading \"Create a new category from here, or manage all your company’s categories from settings.\" [level=3]"
+     },
+     "occurrence": {
+      "ancestors": [
+       [
+        "_large_kwlx6_9",
+        "_noHover_3n0se_28",
+        "_shadow_3n0se_25",
+        "_raisedBackground_3n0se_45",
+        "_card_lo4oy_4",
+        "_defaultPadding_lo4oy_27",
+        "_small_lo4oy_11"
+       ],
+       [
+        "ReactModal__Content",
+        "ReactModal__Content--after-open",
+        "_modal_lo4oy_73"
+       ],
+       [
+        "ReactModal__Overlay",
+        "ReactModal__Overlay--after-open",
+        "_overlay_lo4oy_89",
+        "_backgroundColor_lo4oy_103"
+       ],
+       [
+        "ReactModalPortal"
+       ]
+      ],
+      "classes": [
+       "_bodySecondary_qaod7_51",
+       "_text-secondary_12t49_1",
+       "_subHeadingWithChildren_17zd2_6"
+      ],
+      "data": {},
+      "heading": "Create category",
+      "landmark": {
+       "name": "",
+       "role": "dialog"
+      },
+      "layer": "top",
+      "name": "Create a new category from here, or manage all your company’s categories from settings.",
+      "rect": [
+       536,
+       318,
+       368,
+       48
+      ],
+      "role": "heading",
+      "tag": "h3",
+      "xpath": "/html/body/div[18]/div[1]/div[1]/div[1]/h3[1]"
+     },
+     "state": "transactions.create-category-modal"
+    }
+   ],
+   "evidenceHash": "fec78b30ee7000d30dd5fc89a9270b1adccaf8bda7febd29858d90837751c5b9",
+   "facts": {
+    "announced": "heading \"Create a new category from here, or manage all your company’s categori…",
+    "axeSummary": "",
+    "criterion": "1.3.1",
+    "criterionName": "Info and Relationships",
+    "element": "heading \"Create a new category from here, or man…\"",
+    "rule": "announced-as",
+    "screen": "Create category modal"
+   },
+   "family": "structure",
+   "guidance": "Medium when a data table's headers do not reach its cells, or when structure is the only way to tell sections or steps apart.",
+   "issueId": null,
+   "key": "structure:announced-as:f021d033a9ec",
+   "measured": false,
+   "primary": "transactions.create-category-modal",
+   "proposals": [],
+   "rule": "announced-as",
+   "screens": 1,
+   "severityDefault": "low",
+   "source": "scanner",
+   "states": [
+    "transactions.create-category-modal"
+   ],
+   "summary": "announced-as: announced as heading \"Create a new category from here, or manage all your company’s categori….",
+   "title": "Markup misstates structure: heading \"Create a new category from here, or man…\""
+  },
+  {
+   "attachments": [],
+   "attempt": 1,
+   "basis": "violation",
+   "criteria": [
+    "4.1.2"
+   ],
+   "evidence": [
+    {
+     "evidence": {
+      "failureSummary": "Fix all of the following:\n  Focusable content should have tabindex=\"-1\" or be removed from the DOM"
+     },
+     "occurrence": {
+      "ancestors": [
+       [],
+       [
+        "_chip_1xw00_8",
+        "_inactive_1xw00_119"
+       ],
+       [],
+       [
+        "_filters_grqat_29"
+       ],
+       [
+        "_tableViewsAndFilters_grqat_82"
+       ],
+       [
+        "_toolbarContainer_grqat_4"
+       ],
+       [
+        "_filtersAndExportButton_1ow20_72"
+       ],
+       [
+        "_topContent_1ow20_3"
+       ]
+      ],
+      "classes": [
+       "__focus-trap-outer-before"
+      ],
+      "data": {},
+      "heading": "Transactions",
+      "landmark": {
+       "name": "",
+       "role": "main"
+      },
+      "layer": "document",
+      "name": "",
+      "rect": [
+       219,
+       103,
+       1,
+       1
+      ],
+      "role": "",
+      "tag": "span",
+      "xpath": "/html/body/div[1]/main[1]/div[1]/div[1]/div[4]/div[1]/div[2]/div[2]/div[1]/div[1]/span[1]/span[4]/span[2]/span[1]/span[1]/span[1]"
+     },
+     "state": "transactions.keyword-no-matches"
+    }
+   ],
+   "evidenceHash": "0b3bac2f39894a611039c438aef0acff5c16b4aa27b46835cabdd610ed21b3b6",
+   "facts": {
+    "announced": " \"\"",
+    "axeSummary": "Focusable content should have tabindex=\"-1\" or be removed from the DOM",
+    "criterion": "4.1.2",
+    "criterionName": "Name, Role, Value",
+    "element": "text in \"Transactions\"",
+    "rule": "aria-hidden-focus",
+    "screen": "Keyword search: no matches"
+   },
+   "family": "role-state",
+   "guidance": "Low for optional ARIA or an invalid autocomplete token; high when aria-hidden hides the whole page.",
+   "issueId": null,
+   "key": "role-state:aria-hidden-focus:4795aff4b0b7",
+   "measured": false,
+   "primary": "transactions.keyword-no-matches",
+   "proposals": [],
+   "rule": "aria-hidden-focus",
+   "screens": 1,
+   "severityDefault": "medium",
+   "source": "scanner",
+   "states": [
+    "transactions.keyword-no-matches"
+   ],
+   "summary": "aria-hidden-focus: announced as  \"\". Focusable content should have tabindex=\"-1\" or be removed from the DOM",
+   "title": "Focusable but hidden: text in \"Transactions\""
+  },
+  {
+   "attachments": [],
+   "attempt": 1,
+   "basis": "violation",
+   "criteria": [
+    "4.1.2"
+   ],
+   "evidence": [
+    {
+     "evidence": {
+      "failureSummary": "Fix all of the following:\n  Focusable content should have tabindex=\"-1\" or be removed from the DOM"
+     },
+     "occurrence": {
+      "ancestors": [
+       []
+      ],
+      "classes": [
+       "__focus-trap-inner-before"
+      ],
+      "data": {},
+      "heading": "Transactions",
+      "landmark": null,
+      "layer": "document",
+      "name": "",
+      "rect": [
+       -1,
+       -1,
+       1,
+       1
+      ],
+      "role": "",
+      "tag": "span",
+      "xpath": "/html/body/div[17]/span[1]"
+     },
+     "state": "transactions.keyword-no-matches"
+    }
+   ],
+   "evidenceHash": "0b3bac2f39894a611039c438aef0acff5c16b4aa27b46835cabdd610ed21b3b6",
+   "facts": {
+    "announced": " \"\"",
+    "axeSummary": "Focusable content should have tabindex=\"-1\" or be removed from the DOM",
+    "criterion": "4.1.2",
+    "criterionName": "Name, Role, Value",
+    "element": "text in \"Transactions\"",
+    "rule": "aria-hidden-focus",
+    "screen": "Keyword search: no matches"
+   },
+   "family": "role-state",
+   "guidance": "Low for optional ARIA or an invalid autocomplete token; high when aria-hidden hides the whole page.",
+   "issueId": null,
+   "key": "role-state:aria-hidden-focus:525a47259ae3",
+   "measured": false,
+   "primary": "transactions.keyword-no-matches",
+   "proposals": [],
+   "rule": "aria-hidden-focus",
+   "screens": 1,
+   "severityDefault": "medium",
+   "source": "scanner",
+   "states": [
+    "transactions.keyword-no-matches"
+   ],
+   "summary": "aria-hidden-focus: announced as  \"\". Focusable content should have tabindex=\"-1\" or be removed from the DOM",
+   "title": "Focusable but hidden: text in \"Transactions\""
+  }
+ ],
+ "primaries": [
+  "transactions.create-category-modal",
+  "transactions.keyword-no-matches",
+  "transactions.time-zone-submenu"
+ ],
+ "reach": {
+  "baseUrl": "https://demo.mercury.com",
+  "data": "data",
+  "map": "build/map.json",
+  "run": "2026-10-03-1525",
+  "workspace": "a11y"
+ },
+ "run": "2026-10-03-1525"
+}

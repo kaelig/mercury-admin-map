@@ -1,0 +1,110 @@
+{
+ "area": "invoicing",
+ "batch": "verify-486",
+ "findings": [
+  {
+   "attachments": [],
+   "attempt": 1,
+   "basis": "candidate",
+   "criteria": [
+    "4.1.2"
+   ],
+   "evidence": [
+    {
+     "evidence": {
+      "description": "",
+      "name": "Due on receipt",
+      "role": "menuitem",
+      "states": {},
+      "template": "menuitem \"Due on receipt\""
+     },
+     "occurrence": {
+      "ancestors": [
+       [
+        "_dropdownMenu_vz05y_4",
+        "_zIndexDefault_1fl3q_5",
+        "_dropdownMenu_sixj2_10"
+       ],
+       [],
+       [
+        "_dropdownContainer_sixj2_2"
+       ],
+       [
+        "_sentenceRow_38qef_1"
+       ],
+       [
+        "_wrapper_1ojdq_8"
+       ],
+       [],
+       [
+        "_leftInnerContainer_12jyu_3"
+       ],
+       [
+        "_left_yg1rf_39"
+       ]
+      ],
+      "classes": [
+       "_selectedOption_sixj2_35",
+       "_menuItem_1yc9d_56"
+      ],
+      "data": {},
+      "heading": "",
+      "landmark": {
+       "name": "",
+       "role": "main"
+      },
+      "layer": "top",
+      "name": "Due on receipt",
+      "rect": [
+       287,
+       501,
+       125,
+       40
+      ],
+      "role": "menuitem",
+      "tag": "div",
+      "xpath": "/html/body/div[1]/main[1]/div[1]/div[2]/div[2]/div[3]/div[1]/div[1]/div[1]/div[1]/div[1]/div[1]/div[2]/div[4]/div[1]/div[1]/div[1]/div[1]"
+     },
+     "state": "invoicing.create-series-terms-menu"
+    }
+   ],
+   "evidenceHash": "cd3ba611a273e3449cf5f7b5535b691aef5d1608d859f8fc4b3aea80e38091db",
+   "facts": {
+    "announced": "menuitem \"Due on receipt\"",
+    "axeSummary": "",
+    "criterion": "4.1.2",
+    "criterionName": "Name, Role, Value",
+    "element": "menuitem \"Due on receipt\"",
+    "rule": "announced-as",
+    "screen": "Payment terms menu"
+   },
+   "family": "role-state",
+   "guidance": "Low for optional ARIA or an invalid autocomplete token; high when aria-hidden hides the whole page.",
+   "issueId": null,
+   "key": "role-state:announced-as:b6608bc090c2",
+   "measured": false,
+   "primary": "invoicing.create-series-terms-menu",
+   "proposals": [],
+   "rule": "announced-as",
+   "screens": 1,
+   "severityDefault": "medium",
+   "source": "scanner",
+   "states": [
+    "invoicing.create-series-terms-menu"
+   ],
+   "summary": "announced-as: announced as menuitem \"Due on receipt\".",
+   "title": "Wrong role or state: menuitem \"Due on receipt\""
+  }
+ ],
+ "primaries": [
+  "invoicing.create-series-terms-menu"
+ ],
+ "reach": {
+  "baseUrl": "https://demo.mercury.com",
+  "data": "data",
+  "map": "build/map.json",
+  "run": "2026-10-03-1525",
+  "workspace": "a11y"
+ },
+ "run": "2026-10-03-1525"
+}
