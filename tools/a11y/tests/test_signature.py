@@ -217,6 +217,12 @@ class GroupShape(unittest.TestCase):
         self.assertEqual(sig.agreement([occ(classes=["_chip_aaaaa_1"]), occ(classes=["_chip_bbbbb_1"])]), 0.5)
         self.assertEqual(sig.agreement([occ(name="One", xpath="/a"), occ(name="Two", xpath="/b")]), 1.0)
 
+    def test_agreement_ignores_interaction_state_attributes(self):
+        focused = occ(data={"data-focus-visible": "true", "data-active-item": "true"})
+        self.assertEqual(sig.agreement([focused, occ(), occ(data={"data-discover": "true"})]), 1.0)
+        self.assertEqual(sig.agreement([occ(data={"data-testid": "a", "data-focus-visible": "true"}),
+                                        occ(data={"data-testid": "b"})]), 0.5)
+
     def test_class_distance(self):
         a = occ(classes=["_a_aaaaa_1"], ancestors=[["_b_bbbbb_1"]])
         self.assertEqual(sig.class_distance(a, a), 0)

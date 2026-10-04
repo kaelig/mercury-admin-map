@@ -27,6 +27,11 @@ NTH = re.compile(r":nth-(?:last-)?(?:child|of-type)\([^)]*\)")
 COLOR_STEP = 8  # channels are floored to a multiple of this, so rendering noise keeps one key
 HEX = re.compile(r"^#([0-9a-fA-F]{3,4}|[0-9a-fA-F]{6}|[0-9a-fA-F]{8})$")
 RGB = re.compile(r"^rgba?\(\s*([0-9.]+)[\s,]+([0-9.]+)[\s,]+([0-9.]+)")
+# data-* attributes a component sets on itself for an interaction state, not for what it is: the
+# element the Tab walk focused carries data-focus-visible, a link React Router has prefetched carries
+# data-discover. They differ between occurrences of one component, so agreement() ignores them.
+STATE_DATA = frozenset({"data-focus-visible", "data-discover", "data-active-item", "data-autofocus",
+                        "data-hovered", "data-pressed", "data-highlighted", "data-state"})
 # The families a judged announced-as record can be flagged in (records.jsonl, judgments.jsonl).
 RECORD_FAMILIES = ("name", "role-state", "structure")
 
@@ -181,7 +186,7 @@ def tag_attr_set(occ):
     dropped) and data-* attributes."""
     o = occ or {}
     classes = tuple(sorted({c for c in o.get("classes") or [] if not FONTAWESOME.match(c)}))
-    data = tuple(sorted((k, strip_volatile(v)) for k, v in (o.get("data") or {}).items()))
+    data = tuple(sorted((k, strip_volatile(v)) for k, v in (o.get("data") or {}).items() if k not in STATE_DATA))
     return ((o.get("tag") or "").lower(), o.get("role") or "", classes, data)
 
 
