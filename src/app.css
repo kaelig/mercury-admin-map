@@ -6,6 +6,7 @@
   --ground: #ededf3; --panel: #fbfcfd; --panel-2: #7073931a; --card: #ffffff;
   --ink: #1e1e2a; --text: #363644; --muted: #535461; --faint: #70707d;
   --line: #7073931a; --card-border: #70739329; --edge: #9d9da8;
+  --hover: #7073930f; --seg-active: #ffffff; --seg-active-border: #70739338;
   --accent: #5266eb; --accent-soft: #5266eb1a; --accent-ink: #ffffff; --primary: #5266eb; --primary-ink: #ffffff;
   --high: #d03275; --high-ink: #ffffff; --med: #c45000; --low: #70707d;
   --inverted: #1e1e2a; --inverted-ink: #ffffff;
@@ -22,6 +23,7 @@
     --ground: #171721; --panel: #10101a; --panel-2: #272735; --card: #1e1e2a;
     --ink: #f4f5f9; --text: #dddde5; --muted: #c3c3cc; --faint: #9d9da8;
     --line: #b4b7c81f; --card-border: #b4b7c833; --edge: #9d9da8;
+    --hover: #afb2ce14; --seg-active: #171721; --seg-active-border: #b4b7c85c;
     --accent: #8da4f5; --accent-soft: #8da4f533; --accent-ink: #10101a; --primary: #5266eb; --primary-ink: #ffffff;
     --high: #fc92b4; --high-ink: #10101a; --med: #fc9b6f; --low: #9d9da8;
     --inverted: #363644; --inverted-ink: #ffffff;
@@ -34,6 +36,7 @@
   --ground: #171721; --panel: #10101a; --panel-2: #272735; --card: #1e1e2a;
   --ink: #f4f5f9; --text: #dddde5; --muted: #c3c3cc; --faint: #9d9da8;
   --line: #b4b7c81f; --card-border: #b4b7c833; --edge: #9d9da8;
+  --hover: #afb2ce14; --seg-active: #171721; --seg-active-border: #b4b7c85c;
   --accent: #8da4f5; --accent-soft: #8da4f533; --accent-ink: #10101a; --primary: #5266eb; --primary-ink: #ffffff;
   --high: #fc92b4; --high-ink: #10101a; --med: #fc9b6f; --low: #9d9da8;
   --inverted: #363644; --inverted-ink: #ffffff;
@@ -60,9 +63,17 @@ button { font: inherit; color: inherit; }
 .about summary:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
 .brand p { margin: 6px 0 0; color: var(--muted); font-size: 12.5px; }
 .brand a { color: var(--accent); text-underline-offset: 2px; }
-.seg { display: flex; background: var(--panel-2); border: 1px solid var(--line); border-radius: 8px; padding: 2px; }
-.seg button { flex: 1; border: 0; background: none; padding: 6px 8px; border-radius: 6px; cursor: pointer; color: var(--muted); font-weight: 500; }
-.seg button[aria-pressed="true"] { background: var(--card); color: var(--ink); box-shadow: var(--shadow); }
+/* Mirrors Mercury's product switcher: flush track, outlined active chip, icon revealed on the active chip only. */
+.seg { display: flex; align-items: stretch; gap: 2px; height: 32px; border-radius: 8px; background: var(--line); }
+.seg button { flex: 1 1 auto; min-width: 0; display: flex; align-items: center; justify-content: center; padding: 0 2px; border: 1px solid transparent; border-radius: 8px; background: none; cursor: pointer; font: 400 14px/20px var(--ui); color: var(--muted); white-space: nowrap; }
+.seg button:not([aria-pressed="true"]):hover { background: var(--hover); }
+.seg button[aria-pressed="true"] { flex-shrink: 0; background: var(--seg-active); border-color: var(--seg-active-border); color: var(--text); cursor: default; }
+.seg button:focus-visible { outline-offset: -2px; }
+.seg .ic { display: inline-flex; flex-shrink: 0; width: 0; overflow: hidden; opacity: 0; }
+.seg .ic svg { flex-shrink: 0; margin-right: 4px; }
+.seg button[aria-pressed="true"] .ic { width: 17px; opacity: 1; }
+.seg .l { overflow: hidden; text-overflow: ellipsis; }
+@media (prefers-reduced-motion: no-preference) { .seg button { transition: background-color .16s ease-out, border-color .16s ease-out, color .16s ease-out; } .seg .ic { transition: width .16s ease-out, opacity .16s ease-out; } }
 .search-wrap { position: relative; }
 .search { width: 100%; height: 40px; box-sizing: border-box; padding: 0 44px 0 10px; border: 1px solid var(--line); border-radius: 8px; background: var(--card); color: var(--ink); font: inherit; }
 .search::-webkit-search-cancel-button, .search::-webkit-search-decoration { -webkit-appearance: none; appearance: none; }
