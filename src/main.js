@@ -7,6 +7,7 @@ const $ = (s) => document.querySelector(s);
 const EXT_ICON = `<svg viewBox="0 0 16 16" width="11" height="11" aria-hidden="true"><path d="M6.5 3.5H3.5v9h9v-3M9.5 3.5h3v3M12.5 3.5 7 9" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" fill="none"/></svg>`;
 const DEMO_ORIGIN = "https://demo.mercury.com";
 const X_ICON = `<svg viewBox="0 0 16 16" width="14" height="14" aria-hidden="true"><path d="M4 4l8 8M12 4l-8 8" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" fill="none"/></svg>`;
+const LOCATE_ICON = `<svg viewBox="0 0 16 16" width="16" height="16" aria-hidden="true"><circle cx="8" cy="8" r="4.5" stroke="currentColor" stroke-width="1.6" fill="none"/><circle cx="8" cy="8" r="1.4" fill="currentColor"/><path d="M8 1.5v2M8 12.5v2M1.5 8h2M12.5 8h2" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" fill="none"/></svg>`;
 const FIT_ICON = `<svg viewBox="0 0 16 16" width="16" height="16" aria-hidden="true"><path d="M2.5 6V2.5H6M10 2.5h3.5V6M13.5 10v3.5H10M6 13.5H2.5V10" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" fill="none"/></svg>`;
 const lightbox = createLightbox({ closeIcon: X_ICON, fitIcon: FIT_ICON, extIcon: EXT_ICON.replaceAll('"11"', '"14"') });
 const esc = (s) => String(s ?? "").replace(/[&<>"]/g, (c) => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;" }[c]));
@@ -109,9 +110,11 @@ function render() {
 }
 
 // ---------- transform ----------
+// Max zoom: at 8 a 360-unit card is 2880 CSS px wide, so one screenshot fills even a 5K display.
+const clampK = (k) => Math.min(8, Math.max(0.02, k));
 function zoomAt(f, cx, cy) {
   viewTouched = true;
-  const k = Math.min(2.5, Math.max(0.02, T.k * f));
+  const k = clampK(T.k * f);
   T.x = cx - (cx - T.x) * (k / T.k); T.y = cy - (cy - T.y) * (k / T.k); T.k = k; moved();
 }
 function fitRect(r, pad = 60, maxK = 1) {
@@ -179,8 +182,12 @@ canvas.addEventListener("wheel", (e) => {
 $("#zin").onclick = () => zoomAt(1.4, stage.clientWidth / 2, stage.clientHeight / 2);
 $("#zout").onclick = () => zoomAt(1 / 1.4, stage.clientWidth / 2, stage.clientHeight / 2);
 $("#zfit").onclick = () => fit();
+const MAC = /Mac|iP(hone|ad|od)/.test(navigator.userAgentData?.platform || navigator.platform);
+$("#q").setAttribute("aria-keyshortcuts", MAC ? "Meta+K" : "Control+K");
 addEventListener("keydown", (e) => {
-  if (lightbox.isOpen() || e.target.matches("input, textarea")) return;
+  if (lightbox.isOpen()) return; // the modal makes the sidebar inert
+  if ((MAC ? e.metaKey : e.ctrlKey) && !e.altKey && !e.shiftKey && e.key.toLowerCase() === "k") { e.preventDefault(); $("#q").focus(); $("#q").select(); return; }
+  if (e.target.matches("input, textarea")) return;
   if (e.metaKey || e.ctrlKey || e.altKey) return;
   if (e.key === "f" || e.key === "F") fit();
   if ((e.key === "c" || e.key === "C") && current) centerSelected();
@@ -279,7 +286,7 @@ function openNode(id, frameIt, lane, highlightIssue) {
   const iss = issuesByNode.get(id) || [], js = MAP.journeys.filter((j) => j.steps.includes(id));
   const j = drawerLane && MAP.journeys.find((x) => x.id === drawerLane && x.steps.includes(id));
   const d = $("#drawer");
-  d.innerHTML = `<header><div><h3>${esc(n.title)}</h3></div><div class="x"><button class="icon-btn" id="d-frame" aria-label="Center on canvas" title="Center on canvas (C)">◎</button><button class="icon-btn" id="d-close" aria-label="Close panel" title="Close (Esc)">${X_ICON}</button></div>
+  d.innerHTML = `<header><div><h3>${esc(n.title)}</h3></div><div class="x"><button class="icon-btn" id="d-frame" aria-label="Center on canvas" title="Center on canvas (C)">${LOCATE_ICON}</button><button class="icon-btn" id="d-close" aria-label="Close panel" title="Close (Esc)">${X_ICON}</button></div>
     <div class="u">${esc(a.title)} · ${esc(n.kind || "page")}${n.url ? ` · <a class="path" href="${esc(DEMO_ORIGIN + n.url)}" target="_blank" rel="noopener noreferrer" title="Open on demo.mercury.com (new tab)">${esc(n.url)}${EXT_ICON}<span class="sr">(opens in a new tab)</span></a>` : ""}</div></header>
     <div class="body">
       ${j ? `<div class="jnav"><button id="j-prev" ${j.steps.indexOf(id) === 0 ? "disabled" : ""}>← Prev</button><span>Step ${j.steps.indexOf(id) + 1} of ${j.steps.length} · ${esc(j.name)}</span><button id="j-next" ${j.steps.indexOf(id) === j.steps.length - 1 ? "disabled" : ""}>Next →</button></div>` : ""}
@@ -451,7 +458,7 @@ function applyUrl() {
     else if (drawerOpen()) closeDrawer();
     if (hasAt) {
       viewTouched = true;
-      T.k = Math.min(2.5, Math.max(0.02, at[2])); T.x = R.W / 2 - at[0] * T.k; T.y = R.H / 2 - at[1] * T.k; moved();
+      T.k = clampK(at[2]); T.x = R.W / 2 - at[0] * T.k; T.y = R.H / 2 - at[1] * T.k; moved();
     } else {
       viewTouched = false;
       if (current) centerSelected();
