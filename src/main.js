@@ -487,8 +487,6 @@ window.__map = {
 };
 
 // ---------- boot ----------
-const s = MAP.stats;
-$("#stats").innerHTML = [["screens", s.screens], ["journeys", MAP.journeys.length], ["links", MAP.edges.length], ["issues", s.issues]].map(([l, v]) => `<div><b>${v}</b><span>${l}</span></div>`).join("");
 $("#c-j").textContent = MAP.journeys.length; $("#c-s").textContent = nodes.size; $("#c-i").textContent = MAP.issues.length;
 R.setTheme(getComputedStyle(document.documentElement)); themeColors();
 resize(); applyUrl();
