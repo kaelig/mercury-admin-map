@@ -202,6 +202,9 @@ addEventListener("keydown", (e) => {
   if (e.key === "Escape") { if (drawerOpen()) closeDrawer(); else clearFocus(); }
   if (e.key === "+" || e.key === "=") $("#zin").click();
   if (e.key === "-") $("#zout").click();
+  // Match the digit or its key, so AZERTY layouts (where the unshifted key types "&" or "é") work too.
+  if (e.key === "1" || e.code === "Digit1") setView("journeys");
+  if (e.key === "2" || e.code === "Digit2") setView("graph");
   if (drawerOpen() && (e.key === "ArrowRight" || e.key === "ArrowLeft")) stepJourney(e.key === "ArrowRight" ? 1 : -1);
 });
 
