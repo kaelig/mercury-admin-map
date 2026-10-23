@@ -189,7 +189,7 @@ canvas.mini { width: 220px; height: 150px; background: var(--panel); border: 1px
 .issue code { font: 12px/1.5 var(--mono); color: var(--muted); white-space: pre-wrap; display: block; background: var(--panel-2); border-radius: 6px; padding: 6px 8px; }
 .issue .meta { display: flex; gap: 10px; align-items: center; font-size: 12px; color: var(--muted); }
 .jnav { display: flex; gap: 8px; align-items: center; font-size: 13px; color: var(--muted); }
-.jnav button { border: 1px solid var(--line); background: var(--card); border-radius: 8px; padding: 5px 10px; cursor: pointer; }
+.jnav button { border: 1px solid var(--line); background: var(--card); border-radius: 8px; padding: 5px 10px; min-height: 32px; cursor: pointer; }
 .loading { position: absolute; inset: 0; display: grid; place-items: center; color: var(--muted); font-size: 15px; }
 
 @media (max-width: 760px) {
