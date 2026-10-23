@@ -185,7 +185,7 @@ canvas.addEventListener("wheel", (e) => {
 $("#zin").onclick = () => zoomAt(1.4, stage.clientWidth / 2, stage.clientHeight / 2);
 $("#zout").onclick = () => zoomAt(1 / 1.4, stage.clientWidth / 2, stage.clientHeight / 2);
 $("#zfit").onclick = () => fit();
-const MAC = /Mac|iP(hone|ad|od)/.test(navigator.userAgentData?.platform || navigator.platform);
+const MAC = /mac|iphone|ipad|ipod/i.test(navigator.userAgentData?.platform || navigator.platform);
 $("#q").setAttribute("aria-keyshortcuts", MAC ? "Meta+K" : "Control+K");
 addEventListener("keydown", (e) => {
   if (lightbox.isOpen()) return; // the modal makes the sidebar inert
@@ -295,7 +295,7 @@ function openNode(id, frameIt, lane, highlightIssue) {
       ${j ? `<div class="jnav"><button id="j-prev" ${j.steps.indexOf(id) === 0 ? "disabled" : ""}>← Prev</button><span>Step ${j.steps.indexOf(id) + 1} of ${j.steps.length} · ${esc(j.name)}</span><button id="j-next" ${j.steps.indexOf(id) === j.steps.length - 1 ? "disabled" : ""}>Next →</button></div>` : ""}
       <a class="full" href="${esc(n.full)}" target="_blank" rel="noopener" title="View full screen" style="aspect-ratio:${n.w}/${n.h}"><img alt="${esc(n.title)} screenshot" decoding="async" src="${esc(n.thumb)}" data-full="${esc(n.full)}" width="${n.w}" height="${n.h}"></a>
       ${n.note ? `<p class="note">${esc(n.note)}</p>` : ""}
-      ${dev && iss.length ? `<div><h4>Design issues on this screen</h4><div class="links">${iss.map((i) => issueHTML(i, i.id === highlightIssue)).join("")}</div></div>` : ""}
+      ${iss.length ? `<div class="d-issues"${dev ? "" : " hidden"}><h4>Design issues on this screen</h4><div class="links">${iss.map((i) => issueHTML(i, i.id === highlightIssue)).join("")}</div></div>` : ""}
       ${outs.length ? `<div><h4>Leads to</h4><div class="links">${outs.map((e) => linkHTML(e.to, e.label)).join("")}</div></div>` : ""}
       ${ins.length ? `<div><h4>Reached from</h4><div class="links">${ins.map((e) => linkHTML(e.from, e.label)).join("")}</div></div>` : ""}
       ${js.length ? `<div><h4>Part of journeys</h4><div class="links">${js.map((j) => `<button data-journey="${esc(j.id)}"><span>${esc(j.name)}</span><small>step ${j.steps.indexOf(id) + 1} of ${j.steps.length}</small></button>`).join("")}</div></div>` : ""}
@@ -388,10 +388,10 @@ function setDev(on, save = true) {
   if (save) try { localStorage.setItem(DEV_KEY, on ? "1" : "0"); } catch {}
   $("#t-i").hidden = $("#agent-link").hidden = !on;
   $("#q").placeholder = on ? "Search screens, URLs, issues" : "Search screens and URLs";
-  R.setIssues(on);
+  R.setIssues(on); $("#drawer .d-issues")?.toggleAttribute("hidden", !on);
   if (!on) { if (tab === "i") setTab("j", true); if (focus?.type === "issue" || focus?.type === "pattern") focus = null; }
 }
-$("#dev").onchange = (e) => { setDev(e.target.checked); applyFocus(); if (current) openNode(current, false, drawerLane); syncUrl(); };
+$("#dev").onchange = (e) => { setDev(e.target.checked); applyFocus(); syncUrl(); };
 function searchFocus() { return { type: "search", ids: new Set([...nodes.values()].filter((n) => matches(n.title, n.url, n.note)).map((n) => n.id)) }; }
 function runSearch() {
   query = $("#q").value.trim().toLowerCase();
@@ -421,7 +421,8 @@ $("#v-journeys").onclick = () => setView("journeys"); $("#v-graph").onclick = ()
 
 // ---------- URL state ----------
 // ?view=graph  &q=search  &journey= | &issue= | &pattern=  &screen=<node>&lane=<journey row>  &at=x,y,zoom
-// An issue= or pattern= link turns dev mode on (and remembers it), so shared audit links keep working.
+// Opening an issue= or pattern= link turns dev mode on (and remembers it), so shared audit links keep working;
+// Back/Forward never flip it, and while it is off those parameters are ignored and dropped.
 // Discrete navigation (select, close, focus, switch view) pushes a history entry so Back/Forward work;
 // typing and panning replace the current one. Old #<nodeId> links still open that screen.
 let urlPending = null, urlQueued = false, urlSuppress = false;
@@ -450,8 +451,9 @@ function flushUrl() {
   if (url === location.pathname + location.search + location.hash) return;
   try { history[mode === "push" ? "pushState" : "replaceState"](null, "", url); } catch {}
 }
-function applyUrl() {
+function applyUrl(boot) {
   const p = new URLSearchParams(location.search);
+  let dropped = false;
   const legacy = decodeURIComponent(location.hash.slice(1));
   urlSuppress = true;
   try {
@@ -460,10 +462,12 @@ function applyUrl() {
     $("#q").value = p.get("q") || ""; syncClear();
     query = $("#q").value.trim().toLowerCase();
     const has = (k, m) => p.get(k) && m.has(p.get(k));
-    if (!dev && (has("issue", issueById) || has("pattern", patternById))) setDev(true);
+    const audit = has("issue", issueById) || has("pattern", patternById);
+    if (audit && !dev && boot) setDev(true); // only a freshly opened link; Back/Forward keep the viewer's choice
+    if (audit && !dev) dropped = true;
     focus = has("journey", journeyById) ? { type: "journey", id: p.get("journey") }
-      : has("issue", issueById) ? { type: "issue", id: p.get("issue") }
-      : has("pattern", patternById) ? { type: "pattern", id: p.get("pattern") }
+      : dev && has("issue", issueById) ? { type: "issue", id: p.get("issue") }
+      : dev && has("pattern", patternById) ? { type: "pattern", id: p.get("pattern") }
       : query ? searchFocus() : null;
     applyFocus();
     const at = (p.get("at") || "").split(",").map(Number);
@@ -482,9 +486,9 @@ function applyUrl() {
       else fit();
     }
   } finally { urlSuppress = false; }
-  if (legacy) syncUrl("replace"); // rewrite old #node links into the canonical form
+  if (legacy || dropped) syncUrl("replace"); // rewrite old #node links, and drop audit params while Dev mode is off
 }
-addEventListener("popstate", applyUrl);
+addEventListener("popstate", () => applyUrl(false));
 
 // Test hook for the benchmark: screen rect of the first card showing a node.
 window.__map = {
@@ -512,7 +516,7 @@ window.__map = {
 $("#c-j").textContent = MAP.journeys.length; $("#c-s").textContent = nodes.size; $("#c-i").textContent = MAP.issues.length;
 R.setTheme(getComputedStyle(document.documentElement)); themeColors();
 setDev(dev, false);
-resize(); applyUrl();
+resize(); applyUrl(true);
 zlabel.textContent = Math.round(T.k * 100) + "%";
 // Canvas text never triggers a webfont load by itself: request the faces explicitly, then
 // re-measure and repaint (setTheme clears the text caches and invalidates the cached layers).
