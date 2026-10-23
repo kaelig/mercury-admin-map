@@ -74,10 +74,13 @@ button { font: inherit; color: inherit; }
 .seg .l { overflow: hidden; text-overflow: ellipsis; }
 @media (prefers-reduced-motion: no-preference) { .seg button { transition: background-color .16s ease-out, border-color .16s ease-out, color .16s ease-out; } .seg .ic { transition: width .16s ease-out, opacity .16s ease-out; } }
 .search-wrap { position: relative; }
-.search { width: 100%; height: 40px; box-sizing: border-box; padding: 0 44px 0 10px; border: 1px solid var(--line); border-radius: 8px; background: var(--card); color: var(--ink); font: inherit; }
+.search { width: 100%; height: 32px; box-sizing: border-box; padding: 0 44px 0 10px; border: 1px solid var(--line); border-radius: 8px; background: var(--card); color: var(--ink); font: inherit; }
 .search::-webkit-search-cancel-button, .search::-webkit-search-decoration { -webkit-appearance: none; appearance: none; }
-.search-wrap .icon-btn { position: absolute; top: 4px; right: 4px; border-color: transparent; background: transparent; }
+.search-wrap .icon-btn { position: absolute; top: 4px; right: 4px; width: 24px; height: 24px; border-radius: 6px; border-color: transparent; background: transparent; }
 .search-wrap .icon-btn:hover { background: var(--panel-2); }
+.kbd { position: absolute; top: 50%; right: 8px; transform: translateY(-50%); padding: 0 5px; border: 1px solid var(--line); border-radius: 4px; color: var(--faint); font-family: inherit; font-size: 11px; font-weight: 500; line-height: 16px; pointer-events: none; }
+.kbd[hidden] { display: none; }
+@media (hover: none) { .kbd { display: none; } }
 /* One icon button for every dismiss/utility control: the panel's close and center buttons, the search clear. */
 .icon-btn { display: inline-grid; place-items: center; box-sizing: border-box; width: 32px; height: 32px; padding: 0; border: 1px solid var(--line); background: var(--card); color: var(--text); border-radius: 8px; cursor: pointer; font-size: 15px; line-height: 32px; }
 .icon-btn:hover { background: var(--panel-2); color: var(--ink); }

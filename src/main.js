@@ -186,7 +186,7 @@ $("#zin").onclick = () => zoomAt(1.4, stage.clientWidth / 2, stage.clientHeight 
 $("#zout").onclick = () => zoomAt(1 / 1.4, stage.clientWidth / 2, stage.clientHeight / 2);
 $("#zfit").onclick = () => fit();
 const MAC = /mac|iphone|ipad|ipod/i.test(navigator.userAgentData?.platform || navigator.platform);
-$("#q").setAttribute("aria-keyshortcuts", MAC ? "Meta+K" : "Control+K");
+$("#q").setAttribute("aria-keyshortcuts", MAC ? "Meta+K" : "Control+K"); $("#q-kbd").textContent = MAC ? "⌘K" : "Ctrl K";
 addEventListener("keydown", (e) => {
   if (lightbox.isOpen()) return; // the modal makes the sidebar inert
   if ((MAC ? e.metaKey : e.ctrlKey) && !e.altKey && !e.shiftKey && e.key.toLowerCase() === "k") { e.preventDefault(); $("#q").focus(); $("#q").select(); return; }
@@ -401,7 +401,7 @@ function runSearch() {
   syncUrl("replace"); // typing refines one history entry instead of adding one per keystroke
 }
 const qClear = $("#q-clear");
-function syncClear() { qClear.hidden = !$("#q").value; }
+function syncClear() { $("#q-kbd").hidden = !(qClear.hidden = !$("#q").value); }
 let qt; $("#q").addEventListener("input", () => { syncClear(); clearTimeout(qt); qt = setTimeout(runSearch, 150); });
 $("#q").addEventListener("keydown", (e) => { if (e.key === "Escape" && e.target.value) { e.stopPropagation(); clearSearch(); } });
 function clearSearch() { $("#q").value = ""; syncClear(); clearTimeout(qt); runSearch(); $("#q").focus(); }
