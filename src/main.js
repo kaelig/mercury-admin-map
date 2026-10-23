@@ -389,7 +389,7 @@ function setDev(on, save = true) {
   $("#t-i").hidden = $("#agent-link").hidden = !on;
   $("#q").placeholder = on ? "Search screens, URLs, issues" : "Search screens and URLs";
   R.setIssues(on); $("#drawer .d-issues")?.toggleAttribute("hidden", !on);
-  if (!on) { if (tab === "i") setTab("j", true); if (focus?.type === "issue" || focus?.type === "pattern") focus = null; }
+  if (!on) { if (tab === "i") setTab("j", true); if (focus?.type === "issue" || focus?.type === "pattern") focus = null; document.querySelectorAll("#drawer .d-issues .issue[style]").forEach((el) => el.removeAttribute("style")); }
 }
 $("#dev").onchange = (e) => { setDev(e.target.checked); applyFocus(); syncUrl(); };
 function searchFocus() { return { type: "search", ids: new Set([...nodes.values()].filter((n) => matches(n.title, n.url, n.note)).map((n) => n.id)) }; }
