@@ -1,0 +1,523 @@
+{
+ "area": "billpay",
+ "batch": "verify-425",
+ "findings": [
+  {
+   "attachments": [],
+   "attempt": 1,
+   "basis": "candidate",
+   "criteria": [
+    "4.1.2"
+   ],
+   "evidence": [
+    {
+     "evidence": {
+      "description": "",
+      "name": "",
+      "role": "button",
+      "states": {},
+      "template": "button \"\""
+     },
+     "occurrence": {
+      "ancestors": [
+       [
+        "_rowHoverActions_affr2_1"
+       ],
+       [
+        "_tableRow_137xu_3",
+        "_interactiveRows_137xu_35",
+        "_large_137xu_29",
+        "_showHoverActions_1o7vl_18"
+       ],
+       [
+        "_tableBody_1cp5b_1"
+       ],
+       [
+        "_table_1acga_4"
+       ],
+       [
+        "_tableWrapper_1acga_4"
+       ],
+       [
+        "_draftsTableContainer_1o7vl_1"
+       ],
+       [],
+       [
+        "_dropzone_ex01s_1"
+       ]
+      ],
+      "classes": [
+       "_button_r6b2u_20",
+       "_small_r6b2u_72",
+       "_destructive_r6b2u_186"
+      ],
+      "data": {},
+      "heading": "Due in next 7 days",
+      "landmark": {
+       "name": "",
+       "role": "main"
+      },
+      "layer": "document",
+      "name": "",
+      "rect": [
+       1170,
+       507,
+       32,
+       32
+      ],
+      "role": "button",
+      "tag": "button",
+      "xpath": "/html/body/div[1]/main[1]/div[1]/div[1]/div[4]/div[1]/div[2]/div[2]/div[2]/div[2]/div[2]/div[1]/div[1]/table[1]/tbody[1]/tr[1]/td[8]/button[1]"
+     },
+     "state": "billpay.inbox-after-payment"
+    },
+    {
+     "evidence": {
+      "description": "",
+      "name": "",
+      "role": "button",
+      "states": {},
+      "template": "button \"\""
+     },
+     "occurrence": {
+      "ancestors": [
+       [
+        "_rowHoverActions_affr2_1"
+       ],
+       [
+        "_tableRow_137xu_3",
+        "_interactiveRows_137xu_35",
+        "_large_137xu_29",
+        "_showHoverActions_1o7vl_18"
+       ],
+       [
+        "_tableBody_1cp5b_1"
+       ],
+       [
+        "_table_1acga_4"
+       ],
+       [
+        "_tableWrapper_1acga_4"
+       ],
+       [
+        "_draftsTableContainer_1o7vl_1"
+       ],
+       [],
+       [
+        "_dropzone_ex01s_1"
+       ]
+      ],
+      "classes": [
+       "_button_r6b2u_20",
+       "_small_r6b2u_72",
+       "_destructive_r6b2u_186"
+      ],
+      "data": {},
+      "heading": "Payments",
+      "landmark": {
+       "name": "",
+       "role": "main"
+      },
+      "layer": "document",
+      "name": "",
+      "rect": [
+       1170,
+       339,
+       32,
+       32
+      ],
+      "role": "button",
+      "tag": "button",
+      "xpath": "/html/body/div[1]/main[1]/div[1]/div[1]/div[4]/div[1]/div[2]/div[3]/div[2]/div[2]/div[1]/div[1]/table[1]/tbody[1]/tr[1]/td[8]/button[1]"
+     },
+     "state": "payments.index"
+    }
+   ],
+   "evidenceHash": "4cbbf77ec8e357aaf24c3e5abcd9bce7ba70adbf965254be355c54c18c218100",
+   "facts": {
+    "announced": "button \"\"",
+    "axeSummary": "",
+    "criterion": "4.1.2",
+    "criterionName": "Name, Role, Value",
+    "element": "button in \"Due in next <n> days\"",
+    "rule": "announced-as",
+    "screen": "Inbox after paying"
+   },
+   "family": "name",
+   "guidance": "High for an unnamed form control or the sole primary action.",
+   "issueId": null,
+   "key": "name:announced-as:a4ccc1c1ea94",
+   "measured": false,
+   "primary": "billpay.inbox-after-payment",
+   "proposals": [
+    {
+     "family": "name",
+     "finding": "name:announced-as:a4ccc1c1ea94",
+     "handFound": "billpay.i-unlabeled-controls",
+     "id": "81f58d5fbdbb80673cfb36debd426682f4ca23888ea3d6b5d0933d0b7b32d8cb",
+     "overlap": 0.6667
+    }
+   ],
+   "rule": "announced-as",
+   "screens": 6,
+   "severityDefault": "medium",
+   "source": "scanner",
+   "states": [
+    "billpay.inbox-after-payment",
+    "payments.index"
+   ],
+   "summary": "announced-as: announced as button \"\".",
+   "title": "Missing or unclear name: button in \"Due in next <n> days\""
+  },
+  {
+   "attachments": [],
+   "attempt": 1,
+   "basis": "candidate",
+   "criteria": [
+    "4.1.2"
+   ],
+   "evidence": [
+    {
+     "evidence": {
+      "description": "",
+      "name": "",
+      "role": "button",
+      "states": {},
+      "template": "button \"\""
+     },
+     "occurrence": {
+      "ancestors": [
+       [
+        "_settingsArea_a2zac_31"
+       ],
+       [
+        "_tabbarContainer_qtx5m_1",
+        "_tabbarContainer_a2zac_28"
+       ],
+       [
+        "_tabContent_a2zac_49"
+       ],
+       [
+        "session-replay-unmask"
+       ],
+       [
+        "_pageContent_809q8_151",
+        "_pageContentWidth_809q8_184",
+        "_footerPadding_809q8_115"
+       ],
+       [
+        "_dashboardContent_809q8_29"
+       ],
+       [
+        "_layout_809q8_18"
+       ],
+       [
+        "_wrapper_809q8_3"
+       ]
+      ],
+      "classes": [
+       "_button_r6b2u_20",
+       "_small_r6b2u_72",
+       "_tertiary_r6b2u_153"
+      ],
+      "data": {},
+      "heading": "Due in next 7 days",
+      "landmark": {
+       "name": "",
+       "role": "main"
+      },
+      "layer": "document",
+      "name": "",
+      "rect": [
+       1282,
+       352,
+       32,
+       32
+      ],
+      "role": "button",
+      "tag": "button",
+      "xpath": "/html/body/div[1]/main[1]/div[1]/div[1]/div[4]/div[1]/div[2]/div[2]/div[2]/div[1]/div[2]/button[1]"
+     },
+     "state": "billpay.inbox-after-payment"
+    },
+    {
+     "evidence": {
+      "description": "",
+      "name": "",
+      "role": "button",
+      "states": {},
+      "template": "button \"\""
+     },
+     "occurrence": {
+      "ancestors": [
+       [
+        "_settingsArea_a2zac_31"
+       ],
+       [
+        "_tabbarContainer_qtx5m_1",
+        "_tabbarContainer_a2zac_28"
+       ],
+       [
+        "_tabContent_a2zac_49"
+       ],
+       [
+        "_pageContent_809q8_151",
+        "_pageContentWidth_809q8_184",
+        "_footerPadding_809q8_115"
+       ],
+       [
+        "_dashboardContent_809q8_29"
+       ],
+       [
+        "_layout_809q8_18"
+       ],
+       [
+        "_wrapper_809q8_3"
+       ],
+       []
+      ],
+      "classes": [
+       "_button_r6b2u_20",
+       "_small_r6b2u_72",
+       "_tertiary_r6b2u_153"
+      ],
+      "data": {},
+      "heading": "Payments",
+      "landmark": {
+       "name": "",
+       "role": "main"
+      },
+      "layer": "document",
+      "name": "",
+      "rect": [
+       1282,
+       184,
+       32,
+       32
+      ],
+      "role": "button",
+      "tag": "button",
+      "xpath": "/html/body/div[1]/main[1]/div[1]/div[1]/div[4]/div[1]/div[2]/div[3]/div[1]/div[2]/button[1]"
+     },
+     "state": "payments.scheduled-edit"
+    }
+   ],
+   "evidenceHash": "e9225a3045904c8f9c38a36ba525621ee27bbc9225af3871b356dd149d625dfd",
+   "facts": {
+    "announced": "button \"\"",
+    "axeSummary": "",
+    "criterion": "4.1.2",
+    "criterionName": "Name, Role, Value",
+    "element": "button in \"Due in next <n> days\"",
+    "rule": "announced-as",
+    "screen": "Inbox after paying"
+   },
+   "family": "name",
+   "guidance": "High for an unnamed form control or the sole primary action.",
+   "issueId": null,
+   "key": "name:announced-as:f9226d533132",
+   "measured": false,
+   "primary": "billpay.inbox-after-payment",
+   "proposals": [
+    {
+     "family": "name",
+     "finding": "name:announced-as:f9226d533132",
+     "handFound": "billpay.i-date-input-label",
+     "id": "ee77671a57c43f82c80c935eaeccfca17473092038dd7d1578dbd3835fb39914",
+     "overlap": 1
+    },
+    {
+     "family": "name",
+     "finding": "name:announced-as:f9226d533132",
+     "handFound": "billpay.i-unlabeled-controls",
+     "id": "0ba889165a5c22173bf653898ebf3dba9d8f325a3d80851847ce7598757b01f4",
+     "overlap": 0.6667
+    }
+   ],
+   "rule": "announced-as",
+   "screens": 19,
+   "severityDefault": "medium",
+   "source": "scanner",
+   "states": [
+    "billpay.inbox-after-payment",
+    "payments.scheduled-edit"
+   ],
+   "summary": "announced-as: announced as button \"\".",
+   "title": "Missing or unclear name: button in \"Due in next <n> days\""
+  },
+  {
+   "attachments": [],
+   "attempt": 1,
+   "basis": "candidate",
+   "criteria": [
+    "4.1.2"
+   ],
+   "evidence": [
+    {
+     "evidence": {
+      "description": "",
+      "name": "Status",
+      "role": "menuitem",
+      "states": {
+       "expanded": false,
+       "haspopup": "menu"
+      },
+      "template": "menuitem \"Status\" [expanded=false, haspopup=menu]"
+     },
+     "occurrence": {
+      "ancestors": [
+       [
+        "_chip_1xw00_8",
+        "_inactive_1xw00_119"
+       ],
+       [],
+       [
+        "_filters_grqat_29"
+       ],
+       [
+        "_tableViewsAndFilters_grqat_82"
+       ],
+       [
+        "_toolbarContainer_grqat_4"
+       ],
+       [
+        "_leftToolbar_55yn8_12"
+       ],
+       [
+        "_toolbarWrapper_55yn8_1"
+       ],
+       [
+        "_dropzone_ex01s_1"
+       ]
+      ],
+      "classes": [
+       "_mainElement_1xw00_24",
+       "_interactive_1xw00_134",
+       "_dropdownChip_r52w9_7"
+      ],
+      "data": {},
+      "heading": "Due in next 7 days",
+      "landmark": {
+       "name": "",
+       "role": "main"
+      },
+      "layer": "document",
+      "name": "Status",
+      "rect": [
+       347,
+       409,
+       88,
+       32
+      ],
+      "role": "menuitem",
+      "tag": "button",
+      "xpath": "/html/body/div[1]/main[1]/div[1]/div[1]/div[4]/div[1]/div[2]/div[2]/div[2]/div[2]/div[1]/span[1]/div[1]/span[1]/span[1]/span[1]/span[1]/button[1]"
+     },
+     "state": "billpay.inbox-after-payment"
+    },
+    {
+     "evidence": {
+      "description": "",
+      "name": "Status",
+      "role": "menuitem",
+      "states": {
+       "expanded": false,
+       "haspopup": "menu"
+      },
+      "template": "menuitem \"Status\" [expanded=false, haspopup=menu]"
+     },
+     "occurrence": {
+      "ancestors": [
+       [
+        "_chip_1xw00_8",
+        "_inactive_1xw00_119"
+       ],
+       [],
+       [
+        "_filters_grqat_29"
+       ],
+       [
+        "_tableViewsAndFilters_grqat_82"
+       ],
+       [
+        "_toolbarContainer_grqat_4"
+       ],
+       [
+        "_root_1loyy_1"
+       ],
+       [
+        "_pageContent_809q8_151",
+        "_pageContentWidth_809q8_184",
+        "_footerPadding_809q8_115"
+       ],
+       [
+        "_dashboardContent_809q8_29"
+       ]
+      ],
+      "classes": [
+       "_mainElement_1xw00_24",
+       "_interactive_1xw00_134",
+       "_dropdownChip_r52w9_7"
+      ],
+      "data": {},
+      "heading": "Team Spend",
+      "landmark": {
+       "name": "",
+       "role": "main"
+      },
+      "layer": "document",
+      "name": "Status",
+      "rect": [
+       347,
+       463,
+       88,
+       32
+      ],
+      "role": "menuitem",
+      "tag": "button",
+      "xpath": "/html/body/div[1]/main[1]/div[1]/div[1]/div[4]/div[1]/div[2]/div[4]/div[1]/span[1]/span[1]/span[1]/span[1]/button[1]"
+     },
+     "state": "cards.team-spend-non-budget"
+    }
+   ],
+   "evidenceHash": "e0ac7db436227ed9acf53a8f22d6489ac4b4fa6167026be6bd243ab7da0f360d",
+   "facts": {
+    "announced": "menuitem \"Status\" [expanded=false, haspopup=menu]",
+    "axeSummary": "",
+    "criterion": "4.1.2",
+    "criterionName": "Name, Role, Value",
+    "element": "menuitem \"Status\"",
+    "rule": "announced-as",
+    "screen": "Inbox after paying"
+   },
+   "family": "role-state",
+   "guidance": "Low for optional ARIA or an invalid autocomplete token; high when aria-hidden hides the whole page.",
+   "issueId": null,
+   "key": "role-state:announced-as:f3ecbacb6d97",
+   "measured": false,
+   "primary": "billpay.inbox-after-payment",
+   "proposals": [],
+   "rule": "announced-as",
+   "screens": 19,
+   "severityDefault": "medium",
+   "source": "scanner",
+   "states": [
+    "billpay.inbox-after-payment",
+    "cards.team-spend-non-budget"
+   ],
+   "summary": "announced-as: announced as menuitem \"Status\" [expanded=false, haspopup=menu].",
+   "title": "Wrong role or state: menuitem \"Status\""
+  }
+ ],
+ "primaries": [
+  "billpay.inbox-after-payment"
+ ],
+ "reach": {
+  "baseUrl": "https://demo.mercury.com",
+  "data": "data",
+  "map": "build/map.json",
+  "run": "2026-10-03-1525",
+  "workspace": "a11y"
+ },
+ "run": "2026-10-03-1525"
+}

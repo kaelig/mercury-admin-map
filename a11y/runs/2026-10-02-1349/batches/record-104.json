@@ -1,0 +1,48 @@
+{
+ "batch": "record-104",
+ "reach": {
+  "baseUrl": "https://demo.mercury.com",
+  "data": "data",
+  "map": "build/map.json",
+  "run": "2026-10-02-1349",
+  "workspace": "a11y"
+ },
+ "run": "2026-10-02-1349",
+ "states": [
+  {
+   "area": "accounts",
+   "draft": "not drafted: its parent had no accepted recipe when the drafter ran; the conductor rejected the previous recipe: form-state not visible: the replay opens Checking \u2022\u20229876, which is already Business, so checking Business changes nothing and Save stays disabled; the capture shows Chase Freedom Unlimited 1 switched from Personal to Business with Save enabled (the parent recipe opens the wrong row; the parent capture shows Chase Freedom Unlimited 1); a previous recorder failed: Parent accounts.edit-account-type opens Checking \u2022\u20229876 (already Business) instead of Chase Freedom Unlimited 1, so selecting Business changes nothing and Save stays disabled. The parent recipe needs fixing first.",
+   "image": "screens/accounts/78-account-type-changed.png",
+   "kind": "form-state",
+   "labels": [
+    "Click row kebab",
+    "Click Edit account type",
+    "Select Business"
+   ],
+   "mutates": false,
+   "note": "Business selected, Save enabled.",
+   "parent": "accounts.edit-account-type",
+   "state": "accounts.edit-account-type-changed",
+   "title": "Edit account type \u2014 changed"
+  },
+  {
+   "area": "accounts",
+   "draft": "not drafted: its parent had no accepted recipe when the drafter ran; a previous recorder failed: policy (now retry: policy.fixtureValues gained empty \"\", 2000000, 10000, 2500, 500, 150, card, a, zzqxnothing, Lunch, Deli 77, 12/31/2099, http://example.invalid/a11y-audit): The label enters $50,000 in Amount; 50000 is not a fixture value (amount 1.00, amountTransfer 10000 are). Typing it would break the fixtureValues rule.",
+   "image": "screens/accounts/13-rule-target-balance-filled.png",
+   "kind": "form-state",
+   "labels": [
+    "Click Auto transfer rules tab",
+    "Click Create rule",
+    "Click Maintain a target balance",
+    "Click Next with empty fields",
+    "Open Account dropdown",
+    "Pick AP, enter $50,000, supporting account and frequency"
+   ],
+   "mutates": true,
+   "note": "AP kept at $50,000 from Ops / Payroll, every business day.",
+   "parent": "accounts.rule-account-dropdown",
+   "state": "accounts.rule-target-balance-filled",
+   "title": "Target balance rule \u2014 filled"
+  }
+ ]
+}

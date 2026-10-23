@@ -1,0 +1,46 @@
+{
+ "batch": "record-081",
+ "reach": {
+  "baseUrl": "https://demo.mercury.com",
+  "data": "data",
+  "map": "build/map.json",
+  "run": "2026-10-02-1349",
+  "workspace": "a11y"
+ },
+ "run": "2026-10-02-1349",
+ "states": [
+  {
+   "area": "transactions",
+   "draft": "not drafted: its parent had no accepted recipe when the drafter ran",
+   "image": "screens/transactions/78-bulk-gl-code-values.png",
+   "kind": "menu",
+   "labels": [
+    "Tick row checkboxes",
+    "Open the field dropdown",
+    "Choose GL Code, open values"
+   ],
+   "mutates": false,
+   "note": "Bulk bar set to GL Code with its value list open (Mercury Checking (7772), 120 - Accounts Receivable, 400 - Inventory, Printer Paper...).",
+   "parent": "transactions.bulk-field-picker",
+   "state": "transactions.bulk-gl-code-values",
+   "title": "Bulk GL code values"
+  },
+  {
+   "area": "transactions",
+   "draft": "not drafted: its parent had no accepted recipe when the drafter ran",
+   "image": "screens/transactions/85-bulk-gl-code-applied.png",
+   "kind": "confirmation",
+   "labels": [
+    "Tick row checkboxes",
+    "Open the field dropdown",
+    "Choose GL Code, open values",
+    "Choose 400 - Inventory"
+   ],
+   "mutates": false,
+   "note": "400 - Inventory applied to the selection; a prompt offers \"Apply 400 - Inventory to all future Contractor transactions?\" with Create rule.",
+   "parent": "transactions.bulk-gl-code-values",
+   "state": "transactions.bulk-gl-code-applied",
+   "title": "Bulk GL code applied"
+  }
+ ]
+}

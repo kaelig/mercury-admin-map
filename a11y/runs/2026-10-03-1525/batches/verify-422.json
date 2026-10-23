@@ -1,0 +1,115 @@
+{
+ "area": "billpay",
+ "batch": "verify-422",
+ "findings": [
+  {
+   "attachments": [],
+   "attempt": 1,
+   "basis": "candidate",
+   "criteria": [
+    "3.3.2"
+   ],
+   "evidence": [
+    {
+     "evidence": {
+      "description": "",
+      "name": "0.00",
+      "role": "textbox",
+      "states": {
+       "errormessage": "Must be a dollar value.",
+       "invalid": true
+      },
+      "template": "textbox \"<amount>\" [invalid=true, errormessage=Must be a dollar value.]"
+     },
+     "occurrence": {
+      "ancestors": [
+       [
+        "_inputBox_q7hf7_93",
+        "_error_q7hf7_41"
+       ],
+       [
+        "_inputBoxWrapper_q7hf7_93"
+       ],
+       [
+        "_textInputWrapper_q7hf7_24"
+       ],
+       [
+        "_provideDSTextInput_q7hf7_6",
+        "_addWrapperMargin_q7hf7_19"
+       ],
+       [],
+       [
+        "_stack_u67me_12",
+        "_gap8_u67me_18"
+       ],
+       [
+        "_container_u67me_4"
+       ],
+       [
+        "_panelSection_d3i56_148"
+       ]
+      ],
+      "classes": [
+       "_input_q7hf7_93"
+      ],
+      "data": {},
+      "heading": "Due in next 7 days",
+      "landmark": {
+       "name": "",
+       "role": "complementary"
+      },
+      "layer": "document",
+      "name": "0.00",
+      "rect": [
+       974,
+       549,
+       303,
+       24
+      ],
+      "role": "textbox",
+      "tag": "input",
+      "xpath": "/html/body/div[1]/main[1]/div[1]/div[1]/div[4]/div[1]/div[2]/div[2]/div[2]/div[2]/div[2]/div[1]/form[1]/aside[1]/div[1]/div[1]/section[1]/div[1]/div[1]/div[1]/div[1]/div[1]/div[1]/div[1]/input[1]"
+     },
+     "state": "billpay.bill-edit-amount-error"
+    }
+   ],
+   "evidenceHash": "51c6a70195f1a9873766c53fd966be958bf42920f8d2b809c831fe7b7749bd81",
+   "facts": {
+    "announced": "textbox \"<amount>\" [invalid=true, errormessage=Must be a dollar value.]",
+    "axeSummary": "",
+    "criterion": "3.3.2",
+    "criterionName": "Labels or Instructions",
+    "element": "textbox \"<amount>\"",
+    "rule": "announced-as",
+    "screen": "Bill amount required"
+   },
+   "family": "name",
+   "guidance": "High for an unnamed form control or the sole primary action.",
+   "issueId": null,
+   "key": "name:announced-as:3f96126d4bbf",
+   "measured": false,
+   "primary": "billpay.bill-edit-amount-error",
+   "proposals": [],
+   "rule": "announced-as",
+   "screens": 1,
+   "severityDefault": "medium",
+   "source": "scanner",
+   "states": [
+    "billpay.bill-edit-amount-error"
+   ],
+   "summary": "announced-as: announced as textbox \"<amount>\" [invalid=true, errormessage=Must be a dollar value.].",
+   "title": "Missing or unclear name: textbox \"<amount>\""
+  }
+ ],
+ "primaries": [
+  "billpay.bill-edit-amount-error"
+ ],
+ "reach": {
+  "baseUrl": "https://demo.mercury.com",
+  "data": "data",
+  "map": "build/map.json",
+  "run": "2026-10-03-1525",
+  "workspace": "a11y"
+ },
+ "run": "2026-10-03-1525"
+}

@@ -1,0 +1,233 @@
+{
+ "area": "invoicing",
+ "batch": "verify-229",
+ "findings": [
+  {
+   "attachments": [],
+   "attempt": 1,
+   "basis": "failure",
+   "criteria": [
+    "4.1.2"
+   ],
+   "evidence": [],
+   "evidenceHash": "ca223a2cc205ed45dad51f394e7ba28e84f3bd243fa4c4c2bf100446fb256db6",
+   "facts": {},
+   "family": "name",
+   "guidance": "High for an unnamed form control or the sole primary action.",
+   "issueId": "invoicing.i-unlabeled-controls",
+   "key": "hand:invoicing.i-unlabeled-controls",
+   "measured": false,
+   "primary": "invoicing.customers-index",
+   "proposals": [
+    {
+     "family": "name",
+     "finding": "name:button-name:105c98ccb585",
+     "handFound": "invoicing.i-unlabeled-controls",
+     "id": "05d9a7f4ddb4d38548feaacefe2047b70d2ba3d9173aa466e6cbe2dba5f878bd",
+     "overlap": 0.5
+    },
+    {
+     "family": "name",
+     "finding": "name:button-name:b9268695c292",
+     "handFound": "invoicing.i-unlabeled-controls",
+     "id": "44ea6ae3fdf0fab6a9f03f0bcbde5bda89b0a973ec680c93a790dad6363d155b",
+     "overlap": 0.5
+    },
+    {
+     "family": "name",
+     "finding": "name:button-name:e440427419da",
+     "handFound": "invoicing.i-unlabeled-controls",
+     "id": "e4964d13a26727829de86262d330930c158da24439a8f25797195c7f64f0af51",
+     "overlap": 1
+    }
+   ],
+   "rule": "hand-found",
+   "screens": 2,
+   "severityDefault": "medium",
+   "source": "hand-found",
+   "states": [
+    "invoicing.customers-index",
+    "invoicing.settings-branding"
+   ],
+   "summary": "Customers row buttons: aria-label null, title '', textContent '' (class _button_ _small_ _tertiary_). Branding radios exposed as 'white-theme', 'green-theme', 'blue-theme', 'beige-theme', 'orange-theme', 'purple-theme'; the 'white-theme' swatch is dark grey.",
+   "title": "Icon-only controls without accessible names"
+  },
+  {
+   "attachments": [],
+   "attempt": 1,
+   "basis": "violation",
+   "criteria": [
+    "4.1.2"
+   ],
+   "evidence": [
+    {
+     "evidence": {
+      "failureSummary": "Fix any of the following:\n  Element does not have inner text that is visible to screen readers\n  aria-label attribute does not exist or is empty\n  aria-labelledby attribute does not exist, references elements that do not exist or references elements that are empty\n  Element has no title attribute\n  Element does not have an implicit (wrapped) <label>\n  Element does not have an explicit <label>\n  Element's default semantics were not overridden with role=\"none\" or role=\"presentation\"",
+      "messageKey": "noAttr"
+     },
+     "occurrence": {
+      "ancestors": [
+       [
+        "_tooltipAnchor_18bac_4"
+       ],
+       [
+        "_actionButtonGroup_1ig9o_1",
+        "_buttonGroup_16t7w_1",
+        "_horizontal_16t7w_11"
+       ],
+       [
+        "_tableData_1u4jr_5",
+        "_alignmentStart_1u4jr_12",
+        "_collapsibleColumn_1acga_26"
+       ],
+       [
+        "_tableRow_137xu_3",
+        "_interactiveRows_137xu_35"
+       ],
+       [
+        "_tableBody_1cp5b_1"
+       ],
+       [
+        "_table_1acga_4"
+       ],
+       [
+        "_tableWrapper_1acga_4"
+       ],
+       [
+        "_tableWrapper_1q8c8_1"
+       ]
+      ],
+      "classes": [
+       "_button_r6b2u_20",
+       "_small_r6b2u_72",
+       "_tertiary_r6b2u_153"
+      ],
+      "data": {},
+      "heading": "Customers",
+      "landmark": {
+       "name": "",
+       "role": "main"
+      },
+      "layer": "document",
+      "name": "",
+      "rect": [
+       1214,
+       230,
+       32,
+       32
+      ],
+      "role": "button",
+      "tag": "button",
+      "xpath": "/html/body/div[1]/main[1]/div[1]/div[1]/div[4]/div[1]/div[2]/div[2]/div[1]/table[1]/tbody[1]/tr[1]/td[4]/div[1]/div[1]/button[1]"
+     },
+     "state": "invoicing.customers-index"
+    },
+    {
+     "evidence": {
+      "failureSummary": "Fix any of the following:\n  Element does not have inner text that is visible to screen readers\n  aria-label attribute does not exist or is empty\n  aria-labelledby attribute does not exist, references elements that do not exist or references elements that are empty\n  Element has no title attribute\n  Element does not have an implicit (wrapped) <label>\n  Element does not have an explicit <label>\n  Element's default semantics were not overridden with role=\"none\" or role=\"presentation\"",
+      "messageKey": "noAttr"
+     },
+     "occurrence": {
+      "ancestors": [
+       [
+        "_tooltipAnchor_18bac_4"
+       ],
+       [
+        "_footerContainer_qm7tc_100"
+       ],
+       [
+        "_card_qm7tc_4"
+       ],
+       [
+        "_transactionsDetailsCardWrapper_jcxwg_3"
+       ],
+       [
+        "_wrapperColumn_k8dlh_4",
+        "_visible_k8dlh_16",
+        "_elevateZIndex_k8dlh_32"
+       ],
+       [
+        "_tableWrapper_1waxt_304"
+       ],
+       [],
+       [
+        "_pageContent_809q8_151",
+        "_pageContentWidth_809q8_184",
+        "_footerPadding_809q8_115"
+       ]
+      ],
+      "classes": [
+       "_button_r6b2u_20",
+       "_small_r6b2u_72",
+       "_tertiary_r6b2u_153"
+      ],
+      "data": {},
+      "heading": "Drawdown Recipient",
+      "landmark": {
+       "name": "",
+       "role": "main"
+      },
+      "layer": "top",
+      "name": "",
+      "rect": [
+       1226,
+       523,
+       32,
+       32
+      ],
+      "role": "button",
+      "tag": "button",
+      "xpath": "/html/body/div[1]/main[1]/div[1]/div[1]/div[4]/div[1]/div[2]/div[2]/div[1]/div[2]/div[1]/div[1]/div[5]/div[1]/button[1]"
+     },
+     "state": "payments.wire-drawdown-detail"
+    }
+   ],
+   "evidenceHash": "b7200cea9be073705647c0c9df1632681420fd7f5ddf784cc419d0e71085e8fd",
+   "facts": {
+    "announced": "button \"\"",
+    "axeSummary": "Element does not have inner text that is visible to screen readers; aria-label attribute does not exist or is empty; aria-labelledby attribute does not exist,…",
+    "criterion": "4.1.2",
+    "criterionName": "Name, Role, Value",
+    "element": "button in \"Customers\"",
+    "rule": "button-name",
+    "screen": "Customers"
+   },
+   "family": "name",
+   "guidance": "High for an unnamed form control or the sole primary action.",
+   "issueId": null,
+   "key": "name:button-name:105c98ccb585",
+   "measured": false,
+   "primary": "invoicing.customers-index",
+   "proposals": [
+    {
+     "family": "name",
+     "finding": "name:button-name:105c98ccb585",
+     "handFound": "invoicing.i-unlabeled-controls",
+     "id": "05d9a7f4ddb4d38548feaacefe2047b70d2ba3d9173aa466e6cbe2dba5f878bd",
+     "overlap": 0.5
+    }
+   ],
+   "rule": "button-name",
+   "screens": 3,
+   "severityDefault": "medium",
+   "source": "scanner",
+   "states": [
+    "invoicing.customers-index",
+    "payments.wire-drawdown-detail"
+   ],
+   "summary": "button-name: announced as button \"\". Element does not have inner text that is visible to screen readers; aria-label attribute does not exist or is empty; aria-labelledby attribute does not exist,…",
+   "title": "Missing or unclear name: button in \"Customers\""
+  }
+ ],
+ "primaries": [
+  "invoicing.customers-index"
+ ],
+ "reach": {
+  "baseUrl": "https://demo.mercury.com",
+  "data": "data",
+  "map": "build/map.json",
+  "run": "2026-10-03-1525",
+  "workspace": "a11y"
+ },
+ "run": "2026-10-03-1525"
+}

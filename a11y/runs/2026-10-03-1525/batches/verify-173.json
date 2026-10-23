@@ -1,0 +1,118 @@
+{
+ "area": "home",
+ "batch": "verify-173",
+ "findings": [
+  {
+   "attachments": [],
+   "attempt": 1,
+   "basis": "candidate",
+   "criteria": [
+    "2.1.1"
+   ],
+   "evidence": [
+    {
+     "evidence": {
+      "end": "body",
+      "focusable": true,
+      "source": "ax",
+      "stops": 105
+     },
+     "occurrence": {
+      "ancestors": [
+       [
+        "_buttonWithDivider_1xt6d_80"
+       ],
+       [
+        "_container_1xt6d_3",
+        "_large_1xt6d_15"
+       ],
+       [
+        "_toggleMode_q3oue_47"
+       ],
+       [
+        "_controls_q3oue_37"
+       ],
+       [
+        "_topSection_q3oue_12",
+        "_borderBottom_q3oue_21"
+       ],
+       [
+        "_container_q3oue_1"
+       ],
+       [
+        "_large_kwlx6_9",
+        "_noHover_3n0se_28",
+        "_border_3n0se_35",
+        "_raisedBackground_3n0se_45",
+        "_graph_ct6b5_91"
+       ],
+       [
+        "_row_ct6b5_42"
+       ]
+      ],
+      "classes": [
+       "_segment_1xt6d_7",
+       "_selected_1xt6d_60",
+       "_last_1xt6d_76"
+      ],
+      "data": {},
+      "heading": "Welcome, Jane",
+      "landmark": {
+       "name": "",
+       "role": "main"
+      },
+      "layer": "document",
+      "name": "Balance table",
+      "rect": [
+       750,
+       269,
+       43,
+       40
+      ],
+      "role": "button",
+      "tag": "button",
+      "xpath": "/html/body/div[1]/main[1]/div[1]/div[1]/div[4]/div[1]/div[2]/div[1]/div[1]/div[4]/div[1]/div[1]/div[1]/div[1]/div[2]/div[1]/div[1]/div[2]/button[1]"
+     },
+     "state": "home.balance-table"
+    }
+   ],
+   "evidenceHash": "a16a66b22398676752138b57ce74099b54f75fa8f82b0a4bed0f4389105a4bd9",
+   "facts": {
+    "axeSummary": "",
+    "criterion": "2.1.1",
+    "criterionName": "Keyboard",
+    "element": "button \"Balance table\"",
+    "rule": "not-reached",
+    "screen": "Mercury balance: table view",
+    "stops": "105"
+   },
+   "family": "keyboard",
+   "guidance": "High if a task cannot be completed without a mouse.",
+   "issueId": null,
+   "key": "keyboard:not-reached:3a2e7d11eab0",
+   "measured": false,
+   "primary": "home.balance-table",
+   "proposals": [],
+   "rule": "not-reached",
+   "screens": 1,
+   "severityDefault": "medium",
+   "source": "scanner",
+   "states": [
+    "home.balance-table"
+   ],
+   "summary": "The Tab walk visited 105 stops and never reached the button \"Balance table\", which responds to a click.",
+   "title": "Not reachable by keyboard: button \"Balance table\""
+  }
+ ],
+ "primaries": [
+  "home.balance-table"
+ ],
+ "reach": {
+  "baseUrl": "https://demo.mercury.com",
+  "data": "data",
+  "map": "build/map.json",
+  "run": "2026-10-03-1525",
+  "workspace": "a11y"
+ },
+ "run": "2026-10-03-1525"
+}

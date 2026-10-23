@@ -1,0 +1,101 @@
+{
+ "cards.edit-limit-modal": {
+  "fingerprint": {
+   "controls": [
+    "ATM limit",
+    "Cancel",
+    "Daily limit",
+    "Monthly limit",
+    "Save"
+   ],
+   "headings": [
+    "Edit card limits"
+   ],
+   "path": "/app/cards",
+   "structure": "dialog",
+   "top": {
+    "name": "Edit card limits",
+    "role": "dialog"
+   }
+  },
+  "hop": [
+   {
+    "click": {
+     "name": "Edit limits",
+     "role": "button"
+    }
+   }
+  ],
+  "mutates": false,
+  "parent": "cards.index",
+  "recordedBy": "hand",
+  "review": null,
+  "similarity": null,
+  "source": "baec9a1356a13477d7e9a8d471bb1099b3c0a581",
+  "status": "accepted"
+ },
+ "cards.freeze-modal": {
+  "fingerprint": {
+   "controls": [
+    "Cancel",
+    "Freeze card"
+   ],
+   "headings": [
+    "Freeze card"
+   ],
+   "path": "/app/cards",
+   "structure": "dialog",
+   "top": {
+    "name": "Freeze card",
+    "role": "dialog"
+   }
+  },
+  "hop": [
+   {
+    "click": {
+     "name": "Freeze card",
+     "role": "button"
+    }
+   }
+  ],
+  "mutates": true,
+  "parent": "cards.index",
+  "recordedBy": "hand",
+  "review": null,
+  "similarity": null,
+  "source": "0279ff84b0743750429f7f4eea3be1228625023b",
+  "status": "accepted"
+ },
+ "cards.index": {
+  "fingerprint": {
+   "controls": [
+    "Cards",
+    "Dashboard",
+    "Edit limits",
+    "Freeze card",
+    "Logout",
+    "Reports",
+    "Transactions"
+   ],
+   "headings": [
+    "Cards",
+    "Ada Lovelace •• <n>",
+    "Grace Hopper •• <n>"
+   ],
+   "path": "/app/cards",
+   "structure": "document",
+   "top": {
+    "name": "",
+    "role": "document"
+   }
+  },
+  "hop": [],
+  "mutates": false,
+  "parent": "/app/cards",
+  "recordedBy": "hand",
+  "review": null,
+  "similarity": null,
+  "source": "97d170e1550eee4afc0af065b78cda302a97674c",
+  "status": "accepted"
+ }
+}

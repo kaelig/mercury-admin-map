@@ -1,0 +1,214 @@
+{
+ "area": "books",
+ "batch": "verify-112",
+ "findings": [
+  {
+   "attachments": [],
+   "attempt": 1,
+   "basis": "failure",
+   "criteria": [
+    "2.4.7",
+    "2.4.3"
+   ],
+   "evidence": [
+    {
+     "evidence": {
+      "box": [
+       945,
+       352,
+       422,
+       24
+      ],
+      "focus": {
+       "ancestors": [
+        [
+         "_inputBox_q7hf7_93"
+        ],
+        [
+         "_inputBoxWrapper_q7hf7_93"
+        ],
+        [
+         "_textInputWrapper_q7hf7_24"
+        ],
+        [
+         "_provideDSTextInput_q7hf7_6"
+        ],
+        [
+         "_formBody_3hr8f_43"
+        ],
+        [
+         "_formContainer_3hr8f_36"
+        ],
+        [
+         "_container_3hr8f_1"
+        ],
+        [
+         "_creationCard_16qcz_1"
+        ]
+       ],
+       "classes": [
+        "_input_q7hf7_93"
+       ],
+       "data": {},
+       "heading": "",
+       "landmark": {
+        "name": "",
+        "role": "form"
+       },
+       "layer": "top",
+       "name": "Tag name",
+       "rect": [
+        945,
+        352,
+        422,
+        24
+       ],
+       "role": "textbox",
+       "tag": "input",
+       "xpath": "/html/body/div[1]/main[1]/div[1]/div[1]/div[1]/div[4]/div[1]/div[2]/div[1]/div[2]/div[1]/div[2]/div[1]/form[1]/div[1]/div[2]/div[1]/div[1]/div[1]/input[1]"
+      },
+      "hidden": "invisible",
+      "previous": {
+       "ancestors": [
+        [
+         "_tooltipAnchor_18bac_4"
+        ],
+        [
+         "_rightActions_11kg3_69"
+        ],
+        [
+         "_actionsRow_11kg3_18"
+        ],
+        [
+         "_actionsBar_11kg3_1"
+        ],
+        [
+         "_entityPanel_1pqcl_77"
+        ],
+        [
+         "_container_1pqcl_3"
+        ],
+        [
+         "_booksLayout_1pthq_31"
+        ],
+        [
+         "_layout_1pthq_16"
+        ]
+       ],
+       "classes": [
+        "_button_r6b2u_20",
+        "_small_r6b2u_72",
+        "_secondary_r6b2u_126",
+        "_actionButton_11kg3_14"
+       ],
+       "data": {},
+       "heading": "",
+       "landmark": {
+        "name": "",
+        "role": "main"
+       },
+       "layer": "top",
+       "name": "",
+       "rect": [
+        1408,
+        88,
+        32,
+        32
+       ],
+       "role": "button",
+       "tag": "button",
+       "xpath": "/html/body/div[1]/main[1]/div[1]/div[1]/div[1]/div[4]/div[1]/div[2]/div[1]/div[1]/div[4]/div[2]/div[2]/button[1]"
+      },
+      "stop": 21,
+      "stops": 22
+     },
+     "occurrence": {
+      "ancestors": [
+       [
+        "_inputBox_q7hf7_93"
+       ],
+       [
+        "_inputBoxWrapper_q7hf7_93"
+       ],
+       [
+        "_textInputWrapper_q7hf7_24"
+       ],
+       [
+        "_provideDSTextInput_q7hf7_6"
+       ],
+       [
+        "_formBody_3hr8f_43"
+       ],
+       [
+        "_formContainer_3hr8f_36"
+       ],
+       [
+        "_container_3hr8f_1"
+       ],
+       [
+        "_creationCard_16qcz_1"
+       ]
+      ],
+      "classes": [
+       "_input_q7hf7_93"
+      ],
+      "data": {},
+      "heading": "",
+      "landmark": {
+       "name": "",
+       "role": "form"
+      },
+      "layer": "top",
+      "name": "Tag name",
+      "rect": [
+       945,
+       352,
+       422,
+       24
+      ],
+      "role": "textbox",
+      "tag": "input",
+      "xpath": "/html/body/div[1]/main[1]/div[1]/div[1]/div[1]/div[4]/div[1]/div[2]/div[1]/div[2]/div[1]/div[2]/div[1]/form[1]/div[1]/div[2]/div[1]/div[1]/div[1]/input[1]"
+     },
+     "state": "books.tag-create"
+    }
+   ],
+   "evidenceHash": "2d2d32ade6cb7940a70975fc995201c7d79c5a689cb8c4c6a5ca59a768fb95de",
+   "facts": {
+    "criterion": "2.4.7",
+    "criterionName": "Focus Visible",
+    "element": "textbox \"Tag name\"",
+    "screen": "Create tag drawer",
+    "screens": 1,
+    "stop": "21"
+   },
+   "family": "focus-visible",
+   "guidance": "High on shared components on primary paths.",
+   "issueId": null,
+   "key": "focus-visible:focus-hidden:412d29315697",
+   "measured": true,
+   "primary": "books.tag-create",
+   "proposals": [],
+   "rule": "focus-hidden",
+   "screens": 1,
+   "severityDefault": "medium",
+   "source": "scanner",
+   "states": [
+    "books.tag-create"
+   ],
+   "summary": "Tab stop 21 focused the textbox \"Tag name\", which is invisible, has no size, or sits off screen.",
+   "title": "Tab stops on hidden element: textbox \"Tag name\""
+  }
+ ],
+ "primaries": [
+  "books.tag-create"
+ ],
+ "reach": {
+  "baseUrl": "https://demo.mercury.com",
+  "data": "data",
+  "map": "build/map.json",
+  "run": "2026-10-03-1525",
+  "workspace": "a11y"
+ },
+ "run": "2026-10-03-1525"
+}

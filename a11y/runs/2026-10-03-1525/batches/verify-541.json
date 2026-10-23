@@ -1,0 +1,114 @@
+{
+ "area": "transactions",
+ "batch": "verify-541",
+ "findings": [
+  {
+   "attachments": [],
+   "attempt": 1,
+   "basis": "candidate",
+   "criteria": [
+    "4.1.2"
+   ],
+   "evidence": [
+    {
+     "evidence": {
+      "description": "",
+      "name": "",
+      "role": "listbox",
+      "states": {},
+      "template": "listbox \"\""
+     },
+     "occurrence": {
+      "ancestors": [
+       [],
+       [
+        "_rangePickerSection_1q0q9_5"
+       ],
+       [
+        "_container_1q0q9_1"
+       ],
+       [
+        "_wrapper_ce40d_3"
+       ],
+       [],
+       [
+        "_filterTabPanelContainer_veh3u_29"
+       ],
+       [
+        "_filterMenuMainContent_veh3u_21",
+        "_noTopBorderRadius_veh3u_25"
+       ],
+       [
+        "_filterMenu_veh3u_4",
+        "_transactionFilterMenu_54yyd_19"
+       ]
+      ],
+      "classes": [
+       "_popover_17c8a_5",
+       "_zIndexDefault_1fl3q_5"
+      ],
+      "data": {
+       "data-dialog": "",
+       "data-enter": "true",
+       "data-open": "true"
+      },
+      "heading": "",
+      "landmark": {
+       "name": "",
+       "role": "form"
+      },
+      "layer": "top",
+      "name": "",
+      "rect": [
+       704,
+       379,
+       328,
+       290
+      ],
+      "role": "listbox",
+      "tag": "div",
+      "xpath": "/html/body/div[16]/div[1]/div[1]/div[2]/div[2]/div[1]/div[1]/form[1]/section[1]/div[2]/div[1]"
+     },
+     "state": "transactions.filter-date-presets"
+    }
+   ],
+   "evidenceHash": "c8bea00ac42af4423282a11eff828f092046f839a00d9f9d183d10c8f4ca6e79",
+   "facts": {
+    "announced": "listbox \"\"",
+    "axeSummary": "",
+    "criterion": "4.1.2",
+    "criterionName": "Name, Role, Value",
+    "element": "listbox in the form landmark",
+    "rule": "announced-as",
+    "screen": "Date preset dropdown"
+   },
+   "family": "name",
+   "guidance": "High for an unnamed form control or the sole primary action.",
+   "issueId": null,
+   "key": "name:announced-as:3af582c548c3",
+   "measured": false,
+   "primary": "transactions.filter-date-presets",
+   "proposals": [],
+   "rule": "announced-as",
+   "screens": 1,
+   "severityDefault": "medium",
+   "source": "scanner",
+   "states": [
+    "transactions.filter-date-presets"
+   ],
+   "summary": "announced-as: announced as listbox \"\".",
+   "title": "Missing or unclear name: listbox in the form landmark"
+  }
+ ],
+ "primaries": [
+  "transactions.filter-date-presets"
+ ],
+ "reach": {
+  "baseUrl": "https://demo.mercury.com",
+  "data": "data",
+  "map": "build/map.json",
+  "run": "2026-10-03-1525",
+  "workspace": "a11y"
+ },
+ "run": "2026-10-03-1525"
+}

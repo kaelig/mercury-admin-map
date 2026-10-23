@@ -1,0 +1,463 @@
+{
+ "area": "accounts",
+ "batch": "verify-011",
+ "findings": [
+  {
+   "attachments": [],
+   "attempt": 1,
+   "basis": "violation",
+   "criteria": [
+    "1.4.3"
+   ],
+   "evidence": [
+    {
+     "evidence": {
+      "bgColor": "#f1f1f4",
+      "contrastRatio": 4.32,
+      "expectedContrastRatio": "4.5:1",
+      "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 4.32 (foreground color: #70707d, background color: #f1f1f4, font size: 11.3pt (15px), font weight: normal). Expected contrast ratio of 4.5:1",
+      "fgColor": "#70707d",
+      "fontSize": "11.3pt (15px)",
+      "fontWeight": "normal",
+      "messageKey": null
+     },
+     "occurrence": {
+      "ancestors": [
+       [
+        "_button_1qfzw_3"
+       ],
+       [],
+       [],
+       [
+        "_creditMeterAndEditAutopay_1lez4_35"
+       ],
+       [
+        "_creditUsageVisuals_1lez4_12"
+       ],
+       [
+        "_headerContainer_1lez4_18"
+       ],
+       [
+        "_accountDashboard_1lez4_1",
+        "_pageContent_809q8_151",
+        "_pageContentWidth_809q8_184"
+       ],
+       [
+        "_dashboardContent_809q8_29"
+       ]
+      ],
+      "classes": [
+       "_bodyDefault_qaod7_40",
+       "_secondaryCopy_1qfzw_62"
+      ],
+      "data": {},
+      "heading": "Credit Card",
+      "landmark": {
+       "name": "",
+       "role": "main"
+      },
+      "layer": "document",
+      "name": "",
+      "rect": [
+       560,
+       434,
+       66,
+       24
+      ],
+      "role": "",
+      "tag": "span",
+      "xpath": "/html/body/div[1]/main[1]/div[1]/div[1]/div[4]/div[1]/div[2]/div[2]/div[1]/div[1]/div[2]/div[2]/button[1]/span[2]"
+     },
+     "state": "accounts.credit"
+    },
+    {
+     "evidence": {
+      "bgColor": "#f1f1f4",
+      "contrastRatio": 4.32,
+      "expectedContrastRatio": "4.5:1",
+      "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 4.32 (foreground color: #70707d, background color: #f1f1f4, font size: 11.3pt (15px), font weight: normal). Expected contrast ratio of 4.5:1",
+      "fgColor": "#70707d",
+      "fontSize": "11.3pt (15px)",
+      "fontWeight": "normal",
+      "messageKey": null
+     },
+     "occurrence": {
+      "ancestors": [
+       [
+        "_button_1qfzw_3"
+       ],
+       [],
+       [],
+       [
+        "_creditMeterAndEditAutopay_1lez4_35"
+       ],
+       [
+        "_creditUsageVisuals_1lez4_12"
+       ],
+       [
+        "_headerContainer_1lez4_18"
+       ],
+       [
+        "_accountDashboard_1lez4_1",
+        "_pageContent_809q8_151",
+        "_pageContentWidth_809q8_184"
+       ],
+       [
+        "_dashboardContent_809q8_29"
+       ]
+      ],
+      "classes": [
+       "_bodyDefault_qaod7_40",
+       "_secondaryCopy_1qfzw_62"
+      ],
+      "data": {},
+      "heading": "Credit Card",
+      "landmark": {
+       "name": "",
+       "role": "main"
+      },
+      "layer": "document",
+      "name": "",
+      "rect": [
+       560,
+       434,
+       66,
+       24
+      ],
+      "role": "",
+      "tag": "span",
+      "xpath": "/html/body/div[1]/main[1]/div[1]/div[1]/div[4]/div[1]/div[2]/div[2]/div[1]/div[1]/div[2]/div[2]/button[1]/span[2]"
+     },
+     "state": "accounts.credit-last-month"
+    }
+   ],
+   "evidenceHash": "6d77726aba3513562bb2a4d7b7214e36618f3a234432fe78eb76a12ed0aafe6c",
+   "facts": {
+    "bg": "#f1f1f4",
+    "criterion": "1.4.3",
+    "criterionName": "Contrast (Minimum)",
+    "element": "text in \"Credit Card\"",
+    "fg": "#70707d",
+    "ratio": "4.32",
+    "required": "4.5",
+    "rule": "color-contrast",
+    "screen": "Credit Card account",
+    "screens": 3
+   },
+   "family": "contrast",
+   "guidance": "High under 2:1, or under 3:1 for essential text.",
+   "issueId": null,
+   "key": "contrast:color-contrast:9d7e14822055",
+   "measured": true,
+   "primary": "accounts.credit",
+   "proposals": [],
+   "rule": "color-contrast",
+   "screens": 3,
+   "severityDefault": "medium",
+   "source": "scanner",
+   "states": [
+    "accounts.credit",
+    "accounts.credit-last-month"
+   ],
+   "summary": "axe color-contrast: #70707d on #f1f1f4 measures 4.32:1; AA needs 4.5:1.",
+   "title": "Low contrast: text in \"Credit Card\""
+  },
+  {
+   "attachments": [],
+   "attempt": 1,
+   "basis": "candidate",
+   "criteria": [
+    "2.4.3",
+    "1.3.2"
+   ],
+   "evidence": [
+    {
+     "evidence": {
+      "band": 48,
+      "overlay": "accounts.credit.tabstops.png",
+      "previous": {
+       "ancestors": [
+        [],
+        [],
+        [],
+        [
+         "_creditActivityLogTable_1nuw4_170"
+        ],
+        [
+         "_activityLogTable_1nuw4_1"
+        ],
+        [],
+        [
+         "_accountDashboard_1lez4_1",
+         "_pageContent_809q8_151",
+         "_pageContentWidth_809q8_184"
+        ],
+        [
+         "_dashboardContent_809q8_29"
+        ]
+       ],
+       "classes": [
+        "_activityLogRow_1nuw4_13",
+        "_noStyleLink_njx8v_1"
+       ],
+       "data": {
+        "data-discover": "true"
+       },
+       "heading": "Credit Card",
+       "landmark": {
+        "name": "",
+        "role": "main"
+       },
+       "layer": "document",
+       "name": "",
+       "rect": [
+        332,
+        780,
+        996,
+        48
+       ],
+       "role": "row",
+       "tag": "a",
+       "xpath": "/html/body/div[1]/main[1]/div[1]/div[1]/div[4]/div[1]/div[2]/div[3]/div[2]/div[2]/div[1]/div[3]/div[1]/a[4]"
+      },
+      "rise": 144,
+      "stop": 68,
+      "stops": 152
+     },
+     "occurrence": {
+      "ancestors": [
+       [],
+       [],
+       [],
+       [
+        "_creditActivityLogTable_1nuw4_170"
+       ],
+       [
+        "_activityLogTable_1nuw4_1"
+       ],
+       [],
+       [
+        "_accountDashboard_1lez4_1",
+        "_pageContent_809q8_151",
+        "_pageContentWidth_809q8_184"
+       ],
+       [
+        "_dashboardContent_809q8_29"
+       ]
+      ],
+      "classes": [
+       "_activityLogRow_1nuw4_13",
+       "_noStyleLink_njx8v_1"
+      ],
+      "data": {
+       "data-discover": "true"
+      },
+      "heading": "Credit Card",
+      "landmark": {
+       "name": "",
+       "role": "main"
+      },
+      "layer": "document",
+      "name": "",
+      "rect": [
+       332,
+       636,
+       996,
+       48
+      ],
+      "role": "row",
+      "tag": "a",
+      "xpath": "/html/body/div[1]/main[1]/div[1]/div[1]/div[4]/div[1]/div[2]/div[3]/div[2]/div[2]/div[1]/div[2]/div[1]/a[5]"
+     },
+     "state": "accounts.credit"
+    }
+   ],
+   "evidenceHash": "8b5445042ba97ee63d989879a49726021d528c18b7e77e637d4e9655180e167b",
+   "facts": {
+    "criterion": "2.4.3",
+    "criterionName": "Focus Order",
+    "element": "row in \"Credit Card\"",
+    "previous": "row in \"Credit Card\"",
+    "screen": "Credit Card account",
+    "stop": "68"
+   },
+   "family": "focus-order",
+   "guidance": "High if the order skips a required control.",
+   "issueId": null,
+   "key": "focus-order:backward-jump:3e6db8bf7c41",
+   "measured": false,
+   "primary": "accounts.credit",
+   "proposals": [],
+   "rule": "backward-jump",
+   "screens": 1,
+   "severityDefault": "medium",
+   "source": "scanner",
+   "states": [
+    "accounts.credit"
+   ],
+   "summary": "Tab stop 68 jumped backward on screen, from the row in \"Credit Card\" to the row in \"Credit Card\".",
+   "title": "Tab order jumps backward at row in \"Credit Card\""
+  },
+  {
+   "attachments": [],
+   "attempt": 1,
+   "basis": "violation",
+   "criteria": [
+    "4.1.2",
+    "2.4.4"
+   ],
+   "evidence": [
+    {
+     "evidence": {
+      "failureSummary": "Fix all of the following:\n  Element is in tab order and does not have accessible text\n\nFix any of the following:\n  Element does not have text that is visible to screen readers\n  aria-label attribute does not exist or is empty\n  aria-labelledby attribute does not exist, references elements that do not exist or references elements that are empty\n  Element has no title attribute",
+      "messageKey": "noAttr"
+     },
+     "occurrence": {
+      "ancestors": [
+       [],
+       [
+        "_tooltipAnchor_18bac_4",
+        "_wrapper_1vqgb_4"
+       ],
+       [
+        "_cashbackEarned_1nuw4_102",
+        "_cashbackEarnedHeader_1nuw4_107",
+        "_columnHeader_1nuw4_166"
+       ],
+       [
+        "_activityLogRow_1nuw4_13",
+        "_activityLogHeaderRow_1nuw4_29"
+       ],
+       [],
+       [
+        "_activityLogTable_1nuw4_1"
+       ],
+       [],
+       [
+        "_accountDashboard_1lez4_1",
+        "_pageContent_809q8_151",
+        "_pageContentWidth_809q8_184"
+       ]
+      ],
+      "classes": [
+       "_link_ual8v_4",
+       "_underlineOnHover_ual8v_15"
+      ],
+      "data": {},
+      "heading": "Credit Card",
+      "landmark": {
+       "name": "",
+       "role": "main"
+      },
+      "layer": "document",
+      "name": "",
+      "rect": [
+       1300,
+       564,
+       12,
+       19
+      ],
+      "role": "link",
+      "tag": "a",
+      "xpath": "/html/body/div[1]/main[1]/div[1]/div[1]/div[4]/div[1]/div[2]/div[3]/div[2]/div[1]/div[1]/div[1]/div[1]/span[1]/a[1]"
+     },
+     "state": "accounts.credit"
+    },
+    {
+     "evidence": {
+      "failureSummary": "Fix all of the following:\n  Element is in tab order and does not have accessible text\n\nFix any of the following:\n  Element does not have text that is visible to screen readers\n  aria-label attribute does not exist or is empty\n  aria-labelledby attribute does not exist, references elements that do not exist or references elements that are empty\n  Element has no title attribute",
+      "messageKey": "noAttr"
+     },
+     "occurrence": {
+      "ancestors": [
+       [],
+       [
+        "_tooltipAnchor_18bac_4",
+        "_wrapper_1vqgb_4"
+       ],
+       [
+        "_cashbackEarned_1nuw4_102",
+        "_cashbackEarnedHeader_1nuw4_107",
+        "_columnHeader_1nuw4_166"
+       ],
+       [
+        "_activityLogRow_1nuw4_13",
+        "_activityLogHeaderRow_1nuw4_29"
+       ],
+       [],
+       [
+        "_activityLogTable_1nuw4_1"
+       ],
+       [],
+       [
+        "_accountDashboard_1lez4_1",
+        "_pageContent_809q8_151",
+        "_pageContentWidth_809q8_184"
+       ]
+      ],
+      "classes": [
+       "_link_ual8v_4",
+       "_underlineOnHover_ual8v_15"
+      ],
+      "data": {},
+      "heading": "Credit Card",
+      "landmark": {
+       "name": "",
+       "role": "main"
+      },
+      "layer": "document",
+      "name": "",
+      "rect": [
+       1300,
+       564,
+       12,
+       19
+      ],
+      "role": "link",
+      "tag": "a",
+      "xpath": "/html/body/div[1]/main[1]/div[1]/div[1]/div[4]/div[1]/div[2]/div[3]/div[2]/div[1]/div[1]/div[1]/div[1]/span[1]/a[1]"
+     },
+     "state": "accounts.credit-last-month"
+    }
+   ],
+   "evidenceHash": "97ce56da3a37a707b7abf94468318e9b3ac6c63ce789e5d84103f90bede34df2",
+   "facts": {
+    "announced": "link \"\"",
+    "axeSummary": "Element is in tab order and does not have accessible text; Element does not have text that is visible to screen readers; aria-label attribute does not exist or…",
+    "criterion": "4.1.2",
+    "criterionName": "Name, Role, Value",
+    "element": "link in \"Credit Card\"",
+    "rule": "link-name",
+    "screen": "Credit Card account"
+   },
+   "family": "name",
+   "guidance": "High for an unnamed form control or the sole primary action.",
+   "issueId": null,
+   "key": "name:link-name:b0f75e3717e8",
+   "measured": false,
+   "primary": "accounts.credit",
+   "proposals": [],
+   "rule": "link-name",
+   "screens": 3,
+   "severityDefault": "medium",
+   "source": "scanner",
+   "states": [
+    "accounts.credit",
+    "accounts.credit-last-month"
+   ],
+   "summary": "link-name: announced as link \"\". Element is in tab order and does not have accessible text; Element does not have text that is visible to screen readers; aria-label attribute does not exist or…",
+   "title": "Missing or unclear name: link in \"Credit Card\""
+  }
+ ],
+ "primaries": [
+  "accounts.credit"
+ ],
+ "reach": {
+  "baseUrl": "https://demo.mercury.com",
+  "data": "data",
+  "map": "build/map.json",
+  "run": "2026-10-03-1525",
+  "workspace": "a11y"
+ },
+ "run": "2026-10-03-1525"
+}

@@ -1,0 +1,213 @@
+{
+ "area": "invoicing",
+ "batch": "verify-211",
+ "findings": [
+  {
+   "attachments": [],
+   "attempt": 1,
+   "basis": "failure",
+   "criteria": [
+    "2.1.1"
+   ],
+   "evidence": [
+    {
+     "evidence": {
+      "focus": {
+       "ancestors": [
+        [
+         "_textboxWrapper_1a7mr_158",
+         "_focus_1a7mr_178"
+        ],
+        [
+         "_selectWrapper_1a7mr_150"
+        ],
+        [
+         "_comboboxWrapper_1a7mr_6",
+         "_focus_1a7mr_178"
+        ],
+        [],
+        [
+         "_row_2qrq0_16"
+        ],
+        [],
+        [],
+        []
+       ],
+       "classes": [
+        "_textboxInput_1a7mr_250",
+        "_focus_1a7mr_178",
+        "_comboboxInput_1ic4i_1"
+       ],
+       "data": {},
+       "heading": "Invoice set up",
+       "landmark": {
+        "name": "",
+        "role": "main"
+       },
+       "layer": "document",
+       "name": "Product Search",
+       "rect": [
+        121,
+        443,
+        230,
+        37
+       ],
+       "role": "combobox",
+       "tag": "input",
+       "xpath": "/html/body/div[2]/main[1]/div[1]/div[2]/div[2]/div[3]/div[1]/div[1]/div[1]/div[1]/div[1]/div[1]/div[2]/div[2]/div[2]/div[2]/div[1]/div[1]/div[1]/div[1]/div[1]/div[1]/div[1]/div[1]/input[1]"
+      },
+      "stops": 4,
+      "trace": [
+       {
+        "focus": "body",
+        "key": "start",
+        "where": "body"
+       },
+       {
+        "focus": {
+         "label": "Edit",
+         "tag": "div",
+         "xpath": "/html/body/div[1]/main[1]/div[1]/div[2]/div[2]/div[3]/div[1]/div[1]/div[1]/div[1]/div[1]/div[1]/div[2]/div[1]/div[2]/div[2]"
+        },
+        "key": "Tab",
+        "where": "outside"
+       },
+       {
+        "focus": {
+         "label": "Edit",
+         "tag": "button",
+         "xpath": "/html/body/div[1]/main[1]/div[1]/div[2]/div[2]/div[3]/div[1]/div[1]/div[1]/div[1]/div[1]/div[1]/div[2]/div[1]/div[2]/div[2]/button[1]"
+        },
+        "key": "Tab",
+        "where": "outside"
+       },
+       {
+        "focus": {
+         "label": "United States Dollar",
+         "tag": "input",
+         "xpath": "/html/body/div[1]/main[1]/div[1]/div[2]/div[2]/div[3]/div[1]/div[1]/div[1]/div[1]/div[1]/div[1]/div[2]/div[2]/div[1]/div[1]/div[1]/input[1]"
+        },
+        "key": "Tab",
+        "where": "outside"
+       },
+       {
+        "focus": {
+         "label": "",
+         "tag": "input",
+         "xpath": "/html/body/div[1]/main[1]/div[1]/div[2]/div[2]/div[3]/div[1]/div[1]/div[1]/div[1]/div[1]/div[1]/div[2]/div[2]/div[2]/div[2]/div[1]/div[1]/div[1]/div[1]/div[1]/div[1]/div[1]/div[1]/input[1]"
+        },
+        "key": "Tab",
+        "where": "trigger"
+       },
+       {
+        "focus": {
+         "label": "Add New Catalog Item Item name Unit price $ Description (optional) Close Create ",
+         "tag": "div",
+         "xpath": "/html/body/div[9]/div[1]/div[1]"
+        },
+        "key": "Enter",
+        "where": "outside"
+       },
+       {
+        "focus": {
+         "label": "",
+         "tag": "input",
+         "xpath": "/html/body/div[2]/main[1]/div[1]/div[2]/div[2]/div[3]/div[1]/div[1]/div[1]/div[1]/div[1]/div[1]/div[2]/div[2]/div[2]/div[2]/div[1]/div[1]/div[1]/div[1]/div[1]/div[1]/div[1]/div[1]/input[1]"
+        },
+        "key": "focus",
+        "where": "trigger"
+       },
+       {
+        "focus": {
+         "label": "",
+         "tag": "input",
+         "xpath": "/html/body/div[2]/main[1]/div[1]/div[2]/div[2]/div[3]/div[1]/div[1]/div[1]/div[1]/div[1]/div[1]/div[2]/div[2]/div[2]/div[2]/div[1]/div[1]/div[1]/div[1]/div[1]/div[1]/div[1]/div[1]/input[1]"
+        },
+        "key": "Space",
+        "where": "trigger"
+       }
+      ]
+     },
+     "occurrence": {
+      "ancestors": [
+       [
+        "_textboxWrapper_1a7mr_158"
+       ],
+       [
+        "_selectWrapper_1a7mr_150"
+       ],
+       [
+        "_comboboxWrapper_1a7mr_6"
+       ],
+       [],
+       [
+        "_row_2qrq0_16"
+       ],
+       [],
+       [],
+       []
+      ],
+      "classes": [
+       "_textboxInput_1a7mr_250",
+       "_comboboxInput_1ic4i_1"
+      ],
+      "data": {},
+      "heading": "Invoice set up",
+      "landmark": {
+       "name": "",
+       "role": "main"
+      },
+      "layer": "document",
+      "name": "Product Search",
+      "rect": [
+       121,
+       443,
+       230,
+       38
+      ],
+      "role": "combobox",
+      "tag": "input",
+      "xpath": "/html/body/div[1]/main[1]/div[1]/div[2]/div[2]/div[3]/div[1]/div[1]/div[1]/div[1]/div[1]/div[1]/div[2]/div[2]/div[2]/div[2]/div[1]/div[1]/div[1]/div[1]/div[1]/div[1]/div[1]/div[1]/input[1]"
+     },
+     "state": "invoicing.create-catalog-picker"
+    }
+   ],
+   "evidenceHash": "939175ba9a83e82e9c115aef3eda847a99b4d6898f6911f6a503833c6e1b2eb3",
+   "facts": {
+    "criterion": "2.1.1",
+    "criterionName": "Keyboard",
+    "element": "combobox \"Product Search\"",
+    "overlay": "listbox \"Options\"",
+    "screen": "Line item catalog picker",
+    "stops": "4"
+   },
+   "family": "dialog-trigger",
+   "guidance": "Lower only when an equivalent keyboard path exists.",
+   "issueId": null,
+   "key": "dialog-trigger:dialog-trigger-not-operable:33265cc82624",
+   "measured": false,
+   "primary": "invoicing.create-catalog-picker",
+   "proposals": [],
+   "rule": "dialog-trigger-not-operable",
+   "screens": 1,
+   "severityDefault": "high",
+   "source": "scanner",
+   "states": [
+    "invoicing.create-catalog-picker"
+   ],
+   "summary": "Tab focused the combobox \"Product Search\", but neither Enter nor Space opened the listbox \"Options\".",
+   "title": "Opens only with a mouse: combobox \"Product Search\""
+  }
+ ],
+ "primaries": [
+  "invoicing.create-catalog-picker"
+ ],
+ "reach": {
+  "baseUrl": "https://demo.mercury.com",
+  "data": "data",
+  "map": "build/map.json",
+  "run": "2026-10-03-1525",
+  "workspace": "a11y"
+ },
+ "run": "2026-10-03-1525"
+}

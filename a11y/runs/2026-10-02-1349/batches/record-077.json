@@ -1,0 +1,76 @@
+{
+ "batch": "record-077",
+ "reach": {
+  "baseUrl": "https://demo.mercury.com",
+  "data": "data",
+  "map": "build/map.json",
+  "run": "2026-10-02-1349",
+  "workspace": "a11y"
+ },
+ "run": "2026-10-02-1349",
+ "states": [
+  {
+   "area": "home",
+   "draft": "not drafted: its parent had no accepted recipe when the drafter ran",
+   "image": "screens/home/82-command-restrictions-question.png",
+   "kind": "form-state",
+   "labels": [
+    "Click 'Issue new card'",
+    "Enter 500 and submit",
+    "Choose 'Monthly'"
+   ],
+   "mutates": true,
+   "note": "Question 3 of 3 in the same card: 'Any restrictions for the card?', free text with placeholder 'e.g. online only, merchant types, or none'. Command's replies vary by run; in other runs it asks this after a summary card, or skips it.",
+   "parent": "home.command-question-2",
+   "state": "home.command-restrictions",
+   "title": "Command \u2014 restrictions question (3 of 3)"
+  },
+  {
+   "area": "home",
+   "draft": "not drafted: its parent had no accepted recipe when the drafter ran",
+   "image": "screens/home/20-accounts-add-filled.png",
+   "kind": "form-state",
+   "labels": [
+    "Click '+' on Accounts widget",
+    "Click Create account with no type",
+    "Select Savings, type nickname"
+   ],
+   "mutates": true,
+   "note": "Savings selected and nickname entered, Create account enabled.",
+   "parent": "home.create-account-invalid",
+   "state": "home.create-account-filled",
+   "title": "Create account: filled"
+  },
+  {
+   "area": "home",
+   "draft": "not drafted: its parent had no accepted recipe when the drafter ran; the conductor rejected the previous recipe: extra layer: the replay lands on Settings > Team (Settings sidebar) with Bruce Collins' invite detail panel open; the capture shows the plain Team list under the main app nav, no panel; a previous recorder failed: review: below-threshold. Clicking Confirm changes replays to Settings > Team with the Settings sidebar and an open invite detail panel; the capture shows the Team list under the main app nav. Reaching it would need actions no label records (closing the detail panel, navigating through the main nav).",
+   "image": "screens/home/46-task-invite-confirmed.png",
+   "kind": "confirmation",
+   "labels": [
+    "Click Confirm changes"
+   ],
+   "mutates": true,
+   "note": "Confirm changes returns to Settings > Team, listing members with role badges.",
+   "parent": "home.task-invite-review",
+   "state": "home.task-invite-confirmed",
+   "title": "Invite approved, Team list"
+  },
+  {
+   "area": "home",
+   "draft": "not drafted: its parent had no accepted recipe when the drafter ran",
+   "image": "screens/home/63-tx-sorted-amount.png",
+   "kind": "page",
+   "labels": [
+    "Scroll to the Transactions widget",
+    "Click 'Operating expenses'",
+    "Click Amount column header",
+    "Click 'High to low'"
+   ],
+   "mutates": false,
+   "note": "After 'High to low' the widget lists Gusto (Payroll) \u2212$90,122.53 first and the header shows a sort icon.",
+   "parent": "home.tx-sort-menu",
+   "state": "home.tx-sorted",
+   "title": "Transactions sorted by amount"
+  }
+ ]
+}

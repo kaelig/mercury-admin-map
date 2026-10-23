@@ -1,0 +1,21 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><title>Popovers</title>
+<style>
+  body { font: 16px/1.4 sans-serif; margin: 24px; color: #111; background: #fff; }
+  button, input { font: inherit; margin: 8px; }
+  .wrap { position: relative; display: inline-block; }
+  .pop { position: absolute; top: 48px; left: 0; width: 220px; padding: 8px; background: #fff; border: 1px solid #ccc; }
+</style></head>
+<body>
+<main>
+  <h1>Card</h1>
+  <!-- Hover only: nothing appears on focus, Enter or Space. -->
+  <span class="wrap" id="fees-wrap"><button id="fees">Fees info</button><span class="pop" role="tooltip" id="fees-tip" hidden>No fees on ACH transfers</span></span>
+  <!-- Shows on hover and on focus; Tab moves from the trigger into it. -->
+  <span class="wrap" id="art-wrap"><button id="art">Card art</button><span class="pop" id="art-pop" hidden>Custom card art <a href="#art-help">Learn more</a></span></span>
+  <!-- WAI-ARIA APG disclosure: Enter toggles it, focus stays on the button, Tab enters it. -->
+  <span class="wrap"><button id="filters" aria-expanded="false" aria-controls="filters-panel">Filters</button><span class="pop" id="filters-panel" hidden><label><input type="checkbox"> Pending</label><label><input type="checkbox"> Posted</label></span></span>
+  <button>Done</button>
+</main>
+<script src="popovers.js"></script>
+</body></html>

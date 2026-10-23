@@ -1,0 +1,218 @@
+{
+ "area": "settings",
+ "batch": "verify-534",
+ "findings": [
+  {
+   "attachments": [],
+   "attempt": 1,
+   "basis": "candidate",
+   "criteria": [
+    "4.1.2"
+   ],
+   "evidence": [
+    {
+     "evidence": {
+      "description": "",
+      "name": "Read Only Can view all accounts and transactions, and be issued cards",
+      "role": "button",
+      "states": {
+       "expanded": true
+      },
+      "template": "button \"Read Only Can view all accounts and transactions, and be issued cards\" [expanded=true]"
+     },
+     "occurrence": {
+      "ancestors": [
+       [
+        "_bodyDefault_qaod7_40"
+       ],
+       [
+        "_accordionWrapper_1q1xu_3",
+        "_accordionBorder_1q1xu_7",
+        "_accordionWrapper_bnhk7_1"
+       ],
+       [
+        "_radioGroup_phe2n_23",
+        "_radioGroup_9dnjl_1",
+        "_columnLayout_phe2n_28"
+       ],
+       [],
+       [
+        "_contentArea_1xvys_1",
+        "_contentLayout_1xvys_23"
+       ],
+       [],
+       [
+        "_contentDiv_bcpsw_53",
+        "_contentDivHeightPreset_bcpsw_62"
+       ],
+       [
+        "_fullScreenWorkspaceLayout_bcpsw_14",
+        "_fullScreenWorkspaceLayoutBackground_bcpsw_32",
+        "_noScrollbar_bcpsw_27"
+       ]
+      ],
+      "classes": [
+       "_accordionItemHeader_1q1xu_16",
+       "_accordionHeader_bnhk7_47"
+      ],
+      "data": {},
+      "heading": "Permissions",
+      "landmark": {
+       "name": "",
+       "role": "form"
+      },
+      "layer": "document",
+      "name": "Read Only Can view all accounts and transactions, and be issued cards",
+      "rect": [
+       503,
+       366,
+       494,
+       68
+      ],
+      "role": "button",
+      "tag": "button",
+      "xpath": "/html/body/div[1]/main[1]/div[1]/div[2]/div[2]/div[3]/form[1]/section[1]/div[2]/fieldset[1]/div[7]/h2[1]/button[1]"
+     },
+     "state": "settings.role-read-only"
+    }
+   ],
+   "evidenceHash": "6ac52c4129f6a88f5a685ff3f2ac6144cb3d67ed3f387e026afb0c0709ffb7b8",
+   "facts": {
+    "announced": "button \"Read Only Can view all accounts and transactions, and be issued cards\"…",
+    "axeSummary": "",
+    "criterion": "4.1.2",
+    "criterionName": "Name, Role, Value",
+    "element": "button \"Read Only Can view all accounts and tran…\"",
+    "rule": "announced-as",
+    "screen": "Assign Role — Read Only"
+   },
+   "family": "role-state",
+   "guidance": "Low for optional ARIA or an invalid autocomplete token; high when aria-hidden hides the whole page.",
+   "issueId": null,
+   "key": "role-state:announced-as:0b07051e4808",
+   "measured": false,
+   "primary": "settings.role-read-only",
+   "proposals": [],
+   "rule": "announced-as",
+   "screens": 1,
+   "severityDefault": "medium",
+   "source": "scanner",
+   "states": [
+    "settings.role-read-only"
+   ],
+   "summary": "announced-as: announced as button \"Read Only Can view all accounts and transactions, and be issued cards\"….",
+   "title": "Wrong role or state: button \"Read Only Can view all accounts and tran…\""
+  },
+  {
+   "attachments": [],
+   "attempt": 1,
+   "basis": "candidate",
+   "criteria": [
+    "4.1.2"
+   ],
+   "evidence": [
+    {
+     "evidence": {
+      "description": "Can view all accounts and transactions, and be issued cards",
+      "name": "Read Only Can view all accounts and transactions, and be issued cards",
+      "role": "radio",
+      "states": {
+       "checked": true
+      },
+      "template": "radio \"Read Only Can view all accounts and transactions, and be issued cards\" [checked=true] (Can view all accounts and transactions, and be issued cards)"
+     },
+     "occurrence": {
+      "ancestors": [
+       [
+        "_radioButtonWrapper_ial95_4"
+       ],
+       [],
+       [
+        "_accordionItemHeader_1q1xu_16",
+        "_accordionHeader_bnhk7_47"
+       ],
+       [
+        "_bodyDefault_qaod7_40"
+       ],
+       [
+        "_accordionWrapper_1q1xu_3",
+        "_accordionBorder_1q1xu_7",
+        "_accordionWrapper_bnhk7_1"
+       ],
+       [
+        "_radioGroup_phe2n_23",
+        "_radioGroup_9dnjl_1",
+        "_columnLayout_phe2n_28"
+       ],
+       [],
+       [
+        "_contentArea_1xvys_1",
+        "_contentLayout_1xvys_23"
+       ]
+      ],
+      "classes": [
+       "_radioButton_ial95_4"
+      ],
+      "data": {
+       "data-active-item": "true"
+      },
+      "heading": "Permissions",
+      "landmark": {
+       "name": "",
+       "role": "form"
+      },
+      "layer": "document",
+      "name": "Read Only Can view all accounts and transactions, and be issued cards",
+      "rect": [
+       523,
+       381,
+       18,
+       18
+      ],
+      "role": "radio",
+      "tag": "input",
+      "xpath": "/html/body/div[1]/main[1]/div[1]/div[2]/div[2]/div[3]/form[1]/section[1]/div[2]/fieldset[1]/div[7]/h2[1]/button[1]/div[1]/label[1]/input[1]"
+     },
+     "state": "settings.role-read-only"
+    }
+   ],
+   "evidenceHash": "1dc78b5d4ab9806454f22fb1336369fa404cd3898c9a2ad315c73f13137eb570",
+   "facts": {
+    "announced": "radio \"Read Only Can view all accounts and transactions, and be issued cards\" […",
+    "axeSummary": "",
+    "criterion": "4.1.2",
+    "criterionName": "Name, Role, Value",
+    "element": "radio \"Read Only Can view all accounts and trans…\"",
+    "rule": "announced-as",
+    "screen": "Assign Role — Read Only"
+   },
+   "family": "role-state",
+   "guidance": "Low for optional ARIA or an invalid autocomplete token; high when aria-hidden hides the whole page.",
+   "issueId": null,
+   "key": "role-state:announced-as:3e8fa3b33798",
+   "measured": false,
+   "primary": "settings.role-read-only",
+   "proposals": [],
+   "rule": "announced-as",
+   "screens": 1,
+   "severityDefault": "medium",
+   "source": "scanner",
+   "states": [
+    "settings.role-read-only"
+   ],
+   "summary": "announced-as: announced as radio \"Read Only Can view all accounts and transactions, and be issued cards\" [….",
+   "title": "Wrong role or state: radio \"Read Only Can view all accounts and trans…\""
+  }
+ ],
+ "primaries": [
+  "settings.role-read-only"
+ ],
+ "reach": {
+  "baseUrl": "https://demo.mercury.com",
+  "data": "data",
+  "map": "build/map.json",
+  "run": "2026-10-03-1525",
+  "workspace": "a11y"
+ },
+ "run": "2026-10-03-1525"
+}

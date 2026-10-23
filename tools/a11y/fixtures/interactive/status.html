@@ -1,0 +1,24 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><title>Status messages</title>
+<style>
+  body { font: 16px/1.4 sans-serif; margin: 24px; color: #111; background: #fff; }
+  button { font: inherit; margin: 8px; }
+  .toasts { position: fixed; top: 16px; right: 16px; width: 280px; }
+  .toast { padding: 12px; margin-bottom: 8px; background: #222; color: #fff; border-radius: 6px; }
+  .toast.alone { position: fixed; top: 120px; right: 16px; width: 256px; }
+</style></head>
+<body>
+<main>
+  <h1>Account</h1>
+  <!-- Into the role=status region that exists from page load: announced. -->
+  <button id="save">Save</button>
+  <!-- With its own new aria-live container: created together with the message, so not announced. -->
+  <button id="send">Send</button>
+  <!-- Outside any region, but it takes focus. -->
+  <button id="archive">Archive</button>
+  <!-- Into the existing region, removed after 1 s. -->
+  <button id="copy">Copy account number</button>
+</main>
+<div role="status" class="toasts" id="status"></div>
+<script src="status.js"></script>
+</body></html>

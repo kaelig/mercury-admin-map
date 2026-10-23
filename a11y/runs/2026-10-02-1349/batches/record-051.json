@@ -1,0 +1,162 @@
+{
+ "batch": "record-051",
+ "reach": {
+  "baseUrl": "https://demo.mercury.com",
+  "data": "data",
+  "map": "build/map.json",
+  "run": "2026-10-02-1349",
+  "workspace": "a11y"
+ },
+ "run": "2026-10-02-1349",
+ "states": [
+  {
+   "area": "settings",
+   "draft": "not drafted: its parent had no accepted recipe when the drafter ran",
+   "image": "screens/settings/45-invite-issue-card.png",
+   "kind": "page",
+   "labels": [
+    "Open Job title select",
+    "Pick a title, fill name/email, click Next",
+    "Select Money Mover",
+    "Click Next"
+   ],
+   "mutates": false,
+   "note": "Money Mover adds an Issue Card step: nickname, usage note, Credit/Debit and Virtual/Physical radio tiles, spend controls; 'Or, skip issuing card'.",
+   "parent": "settings.role-money-mover",
+   "state": "settings.invite-issue-card",
+   "title": "Invite a user \u2014 Issue Card"
+  },
+  {
+   "area": "settings",
+   "draft": "not drafted: its parent had no accepted recipe when the drafter ran",
+   "image": "screens/settings/46-invite-issue-card-errors.png",
+   "kind": "validation-error",
+   "labels": [
+    "Open Job title select",
+    "Pick a title, fill name/email, click Next",
+    "Select Money Mover",
+    "Click Next",
+    "Click Next without a control type"
+   ],
+   "mutates": false,
+   "note": "Next without a spend Control type shows 'Please complete this field' under the Control type select.",
+   "parent": "settings.invite-issue-card",
+   "state": "settings.invite-issue-card-error",
+   "title": "Issue Card \u2014 control type required"
+  },
+  {
+   "area": "settings",
+   "draft": "not drafted: its parent had no accepted recipe when the drafter ran",
+   "image": "screens/settings/47-invite-review.png",
+   "kind": "page",
+   "labels": [
+    "Open Job title select",
+    "Pick a title, fill name/email, click Next",
+    "Select Money Mover",
+    "Click Next",
+    "Click 'Or, skip issuing card'"
+   ],
+   "mutates": false,
+   "note": "Summary of Riley Park (email, job title) and the Money Mover role with Back / Send invite.",
+   "parent": "settings.invite-issue-card",
+   "state": "settings.invite-review",
+   "title": "Invite a user \u2014 Review & Send"
+  },
+  {
+   "area": "settings",
+   "draft": "not drafted: its parent had no accepted recipe when the drafter ran",
+   "image": "screens/settings/48-invite-sent.png",
+   "kind": "confirmation",
+   "labels": [
+    "Open Job title select",
+    "Pick a title, fill name/email, click Next",
+    "Select Money Mover",
+    "Click Next",
+    "Click 'Or, skip issuing card'",
+    "Click Send invite"
+   ],
+   "mutates": true,
+   "note": "Full-screen 'Invite sent' page with card-grid illustration, Done inviting / Invite your team; the demo banner is absent here.",
+   "parent": "settings.invite-review",
+   "state": "settings.invite-sent",
+   "title": "Invite sent"
+  },
+  {
+   "area": "settings",
+   "draft": "not drafted: its parent had no accepted recipe when the drafter ran",
+   "image": "screens/settings/117-change-password.png",
+   "kind": "modal",
+   "labels": [
+    "Scroll to Account recovery",
+    "Click Change password"
+   ],
+   "mutates": false,
+   "note": "'Change Password' heading, Old / New / Repeat New Password fields with show toggles, a pre-ticked 'Log out of all other devices' checkbox, Cancel / 'Change password'.",
+   "parent": "settings.personal-security-lower",
+   "state": "settings.change-password",
+   "title": "Change Password modal"
+  },
+  {
+   "area": "settings",
+   "draft": "not drafted: its parent had no accepted recipe when the drafter ran",
+   "image": "screens/settings/118-change-password-errors.png",
+   "kind": "validation-error",
+   "labels": [
+    "Scroll to Account recovery",
+    "Click Change password",
+    "Enter short passwords and submit"
+   ],
+   "mutates": true,
+   "note": "Short new passwords flag New and Repeat fields with 'Minimum 10 characters'.",
+   "parent": "settings.change-password",
+   "state": "settings.change-password-short",
+   "title": "Change password \u2014 too short"
+  },
+  {
+   "area": "settings",
+   "draft": "not drafted: its parent had no accepted recipe when the drafter ran",
+   "image": "screens/settings/123-add-verification-method.png",
+   "kind": "modal",
+   "labels": [
+    "Scroll to Account recovery",
+    "Click + Add another verification method"
+   ],
+   "mutates": false,
+   "note": "'+ Add another verification method' first asks for a backup code (placeholder 'ABCD-EFGH-IJKL-MNOP'), with left-aligned Cancel / Submit, 'Use passkey instead', 'Use 2FA code instead', 'Backup code guide' and 'Unable to log in?'.",
+   "parent": "settings.personal-security-lower",
+   "state": "settings.verify-identity",
+   "title": "Verify your identity first"
+  },
+  {
+   "area": "settings",
+   "draft": "not drafted: its parent had no accepted recipe when the drafter ran",
+   "image": "screens/settings/124-verify-identity-result.png",
+   "kind": "modal",
+   "labels": [
+    "Scroll to Account recovery",
+    "Click + Add another verification method",
+    "Enter a backup code and click Submit"
+   ],
+   "mutates": true,
+   "note": "Any code (tested 'AAAA-BBBB-CCCC-DDDD') is accepted and the modal becomes a spinner: 'Waiting for security key \u2014 Follow browser instructions to complete setup'. The WebAuthn prompt was not pursued.",
+   "parent": "settings.verify-identity",
+   "state": "settings.waiting-security-key",
+   "title": "Waiting for security key"
+  },
+  {
+   "area": "settings",
+   "draft": "not drafted: its parent had no accepted recipe when the drafter ran",
+   "image": "screens/settings/121-backup-codes.png",
+   "kind": "modal",
+   "labels": [
+    "Scroll to Account recovery",
+    "Click Generate New Codes"
+   ],
+   "mutates": true,
+   "note": "Full-screen takeover with an 'esc' close: eight monospace codes, Print / Download / Copy, and a required checkbox 'I\u2019ve saved my backup codes in a secure place' that enables Done.",
+   "parent": "settings.personal-security-lower",
+   "state": "settings.backup-codes",
+   "title": "Save your new backup codes"
+  }
+ ]
+}

@@ -1,0 +1,111 @@
+{
+ "area": "settings",
+ "batch": "verify-527",
+ "findings": [
+  {
+   "attachments": [],
+   "attempt": 1,
+   "basis": "candidate",
+   "criteria": [
+    "2.4.4"
+   ],
+   "evidence": [
+    {
+     "evidence": {
+      "description": "",
+      "name": "$123.66",
+      "role": "link",
+      "states": {},
+      "template": "link \"<amount>\""
+     },
+     "occurrence": {
+      "ancestors": [
+       [],
+       [
+        "_tooltipAnchor_18bac_4"
+       ],
+       [
+        "_lastPaidInvoice_1re4j_73"
+       ],
+       [
+        "_lastPaidSection_1re4j_66"
+       ],
+       [
+        "_panel_1re4j_1"
+       ],
+       [
+        "_sidePanel_1gf6r_102"
+       ],
+       [
+        "_pageContent_1gf6r_10"
+       ],
+       [
+        "_pageContent_809q8_151",
+        "_pageContentWidth_809q8_184"
+       ]
+      ],
+      "classes": [
+       "_link_ual8v_4",
+       "_underlineOnHover_ual8v_15"
+      ],
+      "data": {},
+      "heading": "Plan & Billing",
+      "landmark": {
+       "name": "",
+       "role": "main"
+      },
+      "layer": "document",
+      "name": "$123.66",
+      "rect": [
+       1242,
+       468,
+       72,
+       19
+      ],
+      "role": "link",
+      "tag": "a",
+      "xpath": "/html/body/div[1]/main[1]/div[1]/div[1]/div[4]/div[1]/div[2]/div[3]/div[2]/div[1]/div[2]/div[2]/div[1]/span[1]/a[1]"
+     },
+     "state": "settings.plan-billing"
+    }
+   ],
+   "evidenceHash": "54893c9d44b309cdf4d98632eb2d11d57a0b395ed1eaa3fe352a469bd50f791b",
+   "facts": {
+    "announced": "link \"<amount>\"",
+    "axeSummary": "",
+    "criterion": "2.4.4",
+    "criterionName": "Link Purpose (In Context)",
+    "element": "link \"<amount>\"",
+    "rule": "announced-as",
+    "screen": "Plan & Billing"
+   },
+   "family": "name",
+   "guidance": "High for an unnamed form control or the sole primary action.",
+   "issueId": null,
+   "key": "name:announced-as:b9e83a94188b",
+   "measured": false,
+   "primary": "settings.plan-billing",
+   "proposals": [],
+   "rule": "announced-as",
+   "screens": 1,
+   "severityDefault": "medium",
+   "source": "scanner",
+   "states": [
+    "settings.plan-billing"
+   ],
+   "summary": "announced-as: announced as link \"<amount>\".",
+   "title": "Missing or unclear name: link \"<amount>\""
+  }
+ ],
+ "primaries": [
+  "settings.plan-billing"
+ ],
+ "reach": {
+  "baseUrl": "https://demo.mercury.com",
+  "data": "data",
+  "map": "build/map.json",
+  "run": "2026-10-03-1525",
+  "workspace": "a11y"
+ },
+ "run": "2026-10-03-1525"
+}

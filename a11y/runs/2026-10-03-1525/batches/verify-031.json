@@ -1,0 +1,115 @@
+{
+ "area": "accounts",
+ "batch": "verify-031",
+ "findings": [
+  {
+   "attachments": [],
+   "attempt": 1,
+   "basis": "violation",
+   "criteria": [
+    "1.4.3"
+   ],
+   "evidence": [
+    {
+     "evidence": {
+      "bgColor": "#ffffff",
+      "contrastRatio": 2.68,
+      "expectedContrastRatio": "4.5:1",
+      "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 2.68 (foreground color: #9d9da8, background color: #ffffff, font size: 11.3pt (15px), font weight: normal). Expected contrast ratio of 4.5:1",
+      "fgColor": "#9d9da8",
+      "fontSize": "11.3pt (15px)",
+      "fontWeight": "normal",
+      "messageKey": null
+     },
+     "occurrence": {
+      "ancestors": [
+       [
+        "_bankData_5aot3_52"
+       ],
+       [
+        "_accountData_5aot3_44"
+       ],
+       [
+        "_content_regdh_24"
+       ],
+       [
+        "_contentWrapper_regdh_24"
+       ],
+       [
+        "_item_regdh_5",
+        "_optionWrapper_5aot3_1",
+        "_appearDisabled_5aot3_58"
+       ],
+       [
+        "_popover_17c8a_5",
+        "_zIndexAboveModal_1fl3q_9"
+       ],
+       [],
+       []
+      ],
+      "classes": [
+       "_bodyDefault_qaod7_40",
+       "_ellipsis_qaod7_116",
+       "_text-disabled_12t49_1"
+      ],
+      "data": {},
+      "heading": "",
+      "landmark": null,
+      "layer": "top",
+      "name": "",
+      "rect": [
+       679,
+       538,
+       60,
+       24
+      ],
+      "role": "paragraph",
+      "tag": "p",
+      "xpath": "/html/body/div[12]/div[1]/div[1]/div[6]/div[2]/div[1]/div[1]/div[1]/p[1]"
+     },
+     "state": "accounts.rule-account-dropdown"
+    }
+   ],
+   "evidenceHash": "e6857f98a98b232193895f714d0e414cc7d19b5542f6880507aebfae2971e0aa",
+   "facts": {
+    "bg": "#ffffff",
+    "criterion": "1.4.3",
+    "criterionName": "Contrast (Minimum)",
+    "element": "paragraph",
+    "fg": "#9d9da8",
+    "ratio": "2.68",
+    "required": "4.5",
+    "rule": "color-contrast",
+    "screen": "Rule account dropdown",
+    "screens": 1
+   },
+   "family": "contrast",
+   "guidance": "High under 2:1, or under 3:1 for essential text.",
+   "issueId": null,
+   "key": "contrast:color-contrast:845c7839b793",
+   "measured": true,
+   "primary": "accounts.rule-account-dropdown",
+   "proposals": [],
+   "rule": "color-contrast",
+   "screens": 1,
+   "severityDefault": "medium",
+   "source": "scanner",
+   "states": [
+    "accounts.rule-account-dropdown"
+   ],
+   "summary": "axe color-contrast: #9d9da8 on #ffffff measures 2.68:1; AA needs 4.5:1.",
+   "title": "Low contrast: paragraph"
+  }
+ ],
+ "primaries": [
+  "accounts.rule-account-dropdown"
+ ],
+ "reach": {
+  "baseUrl": "https://demo.mercury.com",
+  "data": "data",
+  "map": "build/map.json",
+  "run": "2026-10-03-1525",
+  "workspace": "a11y"
+ },
+ "run": "2026-10-03-1525"
+}

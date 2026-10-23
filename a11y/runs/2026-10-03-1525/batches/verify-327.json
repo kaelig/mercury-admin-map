@@ -1,0 +1,119 @@
+{
+ "area": "settings",
+ "batch": "verify-327",
+ "findings": [
+  {
+   "attachments": [],
+   "attempt": 1,
+   "basis": "violation",
+   "criteria": [
+    "4.1.2"
+   ],
+   "evidence": [
+    {
+     "evidence": {
+      "aria-errormessage": [
+       "phonenumber-mercury-utils-id-26-errormessage"
+      ],
+      "failureSummary": "Fix all of the following:\n  aria-errormessage value `phonenumber-mercury-utils-id-26-errormessage` must use a technique to announce the message (e.g., aria-live, aria-describedby, role=alert, etc.)"
+     },
+     "occurrence": {
+      "ancestors": [
+       [
+        "_inputBox_q7hf7_93",
+        "_inputBoxWithJoinedPrefix_q7hf7_247",
+        "_hasValue_q7hf7_171",
+        "_error_q7hf7_41"
+       ],
+       [
+        "_inputBoxWrapper_q7hf7_93"
+       ],
+       [
+        "_textInputWrapper_q7hf7_24"
+       ],
+       [
+        "_provideDSTextInput_q7hf7_6"
+       ],
+       [
+        "_formFieldWrapperMargin_1wpdc_5"
+       ],
+       [],
+       [
+        "_large_kwlx6_9",
+        "_noHover_3n0se_28",
+        "_shadow_3n0se_25",
+        "_raisedBackground_3n0se_45",
+        "_card_lo4oy_4",
+        "_defaultPadding_lo4oy_27",
+        "_small_lo4oy_11"
+       ],
+       [
+        "ReactModal__Content",
+        "ReactModal__Content--after-open",
+        "_modal_lo4oy_73"
+       ]
+      ],
+      "classes": [
+       "_input_q7hf7_93"
+      ],
+      "data": {},
+      "heading": "Edit phone number",
+      "landmark": {
+       "name": "",
+       "role": "form"
+      },
+      "layer": "top",
+      "name": "Phone number",
+      "rect": [
+       615,
+       428,
+       276,
+       24
+      ],
+      "role": "textbox",
+      "tag": "input",
+      "xpath": "/html/body/div[10]/div[1]/div[1]/div[1]/form[1]/div[1]/div[1]/div[1]/div[1]/div[2]/input[1]"
+     },
+     "state": "settings.edit-phone-invalid"
+    }
+   ],
+   "evidenceHash": "ffb865fc5cc7dbcd40906cb2d9f5010459647013a08760a52bb21f08242bd03e",
+   "facts": {
+    "announced": "textbox \"Phone number\" [invalid=true, errormessage=Phone number is too short.]",
+    "axeSummary": "aria-errormessage value `phonenumber-mercury-utils-id-26-errormessage` must use a technique to announce the message (e.g., aria-live, aria-describedby, role=al…",
+    "criterion": "4.1.2",
+    "criterionName": "Name, Role, Value",
+    "element": "textbox \"Phone number\"",
+    "rule": "aria-valid-attr-value",
+    "screen": "Edit phone number — too short"
+   },
+   "family": "role-state",
+   "guidance": "Low for optional ARIA or an invalid autocomplete token; high when aria-hidden hides the whole page.",
+   "issueId": null,
+   "key": "role-state:aria-valid-attr-value:53662bb66b6d",
+   "measured": false,
+   "primary": "settings.edit-phone-invalid",
+   "proposals": [],
+   "rule": "aria-valid-attr-value",
+   "screens": 1,
+   "severityDefault": "medium",
+   "source": "scanner",
+   "states": [
+    "settings.edit-phone-invalid"
+   ],
+   "summary": "aria-valid-attr-value: announced as textbox \"Phone number\" [invalid=true, errormessage=Phone number is too short.]. aria-errormessage value `phonenumber-mercury-utils-id-26-errormessage` must use a technique to announce the message (e.g., aria-live, aria-describedby, role=al…",
+   "title": "Wrong role or state: textbox \"Phone number\""
+  }
+ ],
+ "primaries": [
+  "settings.edit-phone-invalid"
+ ],
+ "reach": {
+  "baseUrl": "https://demo.mercury.com",
+  "data": "data",
+  "map": "build/map.json",
+  "run": "2026-10-03-1525",
+  "workspace": "a11y"
+ },
+ "run": "2026-10-03-1525"
+}

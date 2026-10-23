@@ -1,0 +1,222 @@
+{
+ "area": "billpay",
+ "batch": "verify-421",
+ "findings": [
+  {
+   "attachments": [],
+   "attempt": 1,
+   "basis": "candidate",
+   "criteria": [
+    "4.1.2"
+   ],
+   "evidence": [
+    {
+     "evidence": {
+      "description": "",
+      "name": "",
+      "role": "button",
+      "states": {},
+      "template": "button \"\""
+     },
+     "occurrence": {
+      "ancestors": [
+       [
+        "_topRow_1ml1o_114",
+        "_openUpwards_1ml1o_81"
+       ],
+       [
+        "_calendarControlsWrapper_12lgb_1"
+       ],
+       [
+        "_calendarPopupWrapper_1ml1o_59",
+        "_visible_1ml1o_109",
+        "_openUpwards_1ml1o_81"
+       ],
+       [
+        "_calendarInputWrapper_1ml1o_11",
+        "_open_1ml1o_15"
+       ],
+       [
+        "_popperContent_12lgb_23"
+       ],
+       [],
+       [
+        "_editComponent_1isei_40"
+       ],
+       [
+        "_detailRow_1isei_10",
+        "_editing_1isei_30",
+        "_unstyledButtonWithoutFocus_1isei_102"
+       ]
+      ],
+      "classes": [
+       "_button-wrapper_1rzdg_13",
+       "_button_1rzdg_13",
+       "_tertiary-with-icon_1rzdg_76",
+       "undefined",
+       "_monthArrowBtn_1ml1o_145",
+       "_left_1ml1o_5"
+      ],
+      "data": {},
+      "heading": "",
+      "landmark": {
+       "name": "",
+       "role": "complementary"
+      },
+      "layer": "top",
+      "name": "",
+      "rect": [
+       1408,
+       670,
+       28,
+       28
+      ],
+      "role": "button",
+      "tag": "button",
+      "xpath": "/html/body/div[1]/main[1]/div[1]/div[1]/div[4]/div[1]/div[2]/div[2]/div[2]/div[2]/div[2]/div[1]/form[1]/aside[1]/div[1]/div[1]/section[2]/div[1]/button[1]/div[1]/div[2]/div[1]/div[1]/div[1]/div[2]/div[2]/button[1]"
+     },
+     "state": "billpay.bill-due-date-picker"
+    }
+   ],
+   "evidenceHash": "351115c3a481caedd8b16e4638a4880ad4970fb63b032db848f8d8ff26bf1d3a",
+   "facts": {
+    "announced": "button \"\"",
+    "axeSummary": "",
+    "criterion": "4.1.2",
+    "criterionName": "Name, Role, Value",
+    "element": "button in the complementary landmark",
+    "rule": "announced-as",
+    "screen": "Due date picker"
+   },
+   "family": "name",
+   "guidance": "High for an unnamed form control or the sole primary action.",
+   "issueId": null,
+   "key": "name:announced-as:0b289425e023",
+   "measured": false,
+   "primary": "billpay.bill-due-date-picker",
+   "proposals": [],
+   "rule": "announced-as",
+   "screens": 1,
+   "severityDefault": "medium",
+   "source": "scanner",
+   "states": [
+    "billpay.bill-due-date-picker"
+   ],
+   "summary": "announced-as: announced as button \"\".",
+   "title": "Missing or unclear name: button in the complementary landmark"
+  },
+  {
+   "attachments": [],
+   "attempt": 1,
+   "basis": "candidate",
+   "criteria": [
+    "4.1.2"
+   ],
+   "evidence": [
+    {
+     "evidence": {
+      "description": "",
+      "name": "",
+      "role": "button",
+      "states": {},
+      "template": "button \"\""
+     },
+     "occurrence": {
+      "ancestors": [
+       [
+        "_topRow_1ml1o_114",
+        "_openUpwards_1ml1o_81"
+       ],
+       [
+        "_calendarControlsWrapper_12lgb_1"
+       ],
+       [
+        "_calendarPopupWrapper_1ml1o_59",
+        "_visible_1ml1o_109",
+        "_openUpwards_1ml1o_81"
+       ],
+       [
+        "_calendarInputWrapper_1ml1o_11",
+        "_open_1ml1o_15"
+       ],
+       [
+        "_popperContent_12lgb_23"
+       ],
+       [],
+       [
+        "_editComponent_1isei_40"
+       ],
+       [
+        "_detailRow_1isei_10",
+        "_editing_1isei_30",
+        "_unstyledButtonWithoutFocus_1isei_102"
+       ]
+      ],
+      "classes": [
+       "_button-wrapper_1rzdg_13",
+       "_button_1rzdg_13",
+       "_tertiary-with-icon_1rzdg_76",
+       "undefined",
+       "_monthArrowBtn_1ml1o_145"
+      ],
+      "data": {},
+      "heading": "",
+      "landmark": {
+       "name": "",
+       "role": "complementary"
+      },
+      "layer": "top",
+      "name": "",
+      "rect": [
+       1440,
+       670,
+       28,
+       28
+      ],
+      "role": "button",
+      "tag": "button",
+      "xpath": "/html/body/div[1]/main[1]/div[1]/div[1]/div[4]/div[1]/div[2]/div[2]/div[2]/div[2]/div[2]/div[1]/form[1]/aside[1]/div[1]/div[1]/section[2]/div[1]/button[1]/div[1]/div[2]/div[1]/div[1]/div[1]/div[2]/div[2]/button[2]"
+     },
+     "state": "billpay.bill-due-date-picker"
+    }
+   ],
+   "evidenceHash": "351115c3a481caedd8b16e4638a4880ad4970fb63b032db848f8d8ff26bf1d3a",
+   "facts": {
+    "announced": "button \"\"",
+    "axeSummary": "",
+    "criterion": "4.1.2",
+    "criterionName": "Name, Role, Value",
+    "element": "button in the complementary landmark",
+    "rule": "announced-as",
+    "screen": "Due date picker"
+   },
+   "family": "name",
+   "guidance": "High for an unnamed form control or the sole primary action.",
+   "issueId": null,
+   "key": "name:announced-as:cc70a9c921f6",
+   "measured": false,
+   "primary": "billpay.bill-due-date-picker",
+   "proposals": [],
+   "rule": "announced-as",
+   "screens": 1,
+   "severityDefault": "medium",
+   "source": "scanner",
+   "states": [
+    "billpay.bill-due-date-picker"
+   ],
+   "summary": "announced-as: announced as button \"\".",
+   "title": "Missing or unclear name: button in the complementary landmark"
+  }
+ ],
+ "primaries": [
+  "billpay.bill-due-date-picker"
+ ],
+ "reach": {
+  "baseUrl": "https://demo.mercury.com",
+  "data": "data",
+  "map": "build/map.json",
+  "run": "2026-10-03-1525",
+  "workspace": "a11y"
+ },
+ "run": "2026-10-03-1525"
+}

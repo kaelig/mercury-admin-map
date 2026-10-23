@@ -1,0 +1,766 @@
+{
+ "area": "transactions",
+ "batch": "verify-374",
+ "findings": [
+  {
+   "attachments": [],
+   "attempt": 1,
+   "basis": "violation",
+   "criteria": [
+    "4.1.2"
+   ],
+   "evidence": [
+    {
+     "evidence": {
+      "failureSummary": "Fix all of the following:\n  Focusable content should have tabindex=\"-1\" or be removed from the DOM"
+     },
+     "occurrence": {
+      "ancestors": [
+       []
+      ],
+      "classes": [
+       "__focus-trap-inner-before"
+      ],
+      "data": {
+       "data-focus-trap": ":rmk:"
+      },
+      "heading": "Transactions",
+      "landmark": null,
+      "layer": "document",
+      "name": "",
+      "rect": [
+       -1,
+       -1,
+       1,
+       1
+      ],
+      "role": "",
+      "tag": "span",
+      "xpath": "/html/body/div[15]/span[1]"
+     },
+     "state": "transactions.filter-no-results"
+    },
+    {
+     "evidence": {
+      "failureSummary": "Fix all of the following:\n  Focusable content should have tabindex=\"-1\" or be removed from the DOM"
+     },
+     "occurrence": {
+      "ancestors": [
+       []
+      ],
+      "classes": [
+       "__focus-trap-inner-before"
+      ],
+      "data": {
+       "data-focus-trap": ":rho:"
+      },
+      "heading": "Always transparent",
+      "landmark": null,
+      "layer": "document",
+      "name": "",
+      "rect": [
+       -1,
+       -1,
+       1,
+       1
+      ],
+      "role": "",
+      "tag": "span",
+      "xpath": "/html/body/div[8]/span[1]"
+     },
+     "state": "books.to-review"
+    }
+   ],
+   "evidenceHash": "fe21d8faf0f7045738d1d63f8f79f1a250773b145f7e3896733b50791003e9b4",
+   "facts": {
+    "announced": " \"\"",
+    "axeSummary": "Focusable content should have tabindex=\"-1\" or be removed from the DOM",
+    "criterion": "4.1.2",
+    "criterionName": "Name, Role, Value",
+    "element": "text in \"Transactions\"",
+    "rule": "aria-hidden-focus",
+    "screen": "No matching transactions"
+   },
+   "family": "role-state",
+   "guidance": "Low for optional ARIA or an invalid autocomplete token; high when aria-hidden hides the whole page.",
+   "issueId": null,
+   "key": "role-state:aria-hidden-focus:1bd813f0e421",
+   "measured": false,
+   "primary": "transactions.filter-no-results",
+   "proposals": [],
+   "rule": "aria-hidden-focus",
+   "screens": 2,
+   "severityDefault": "medium",
+   "source": "scanner",
+   "states": [
+    "transactions.filter-no-results",
+    "books.to-review"
+   ],
+   "summary": "aria-hidden-focus: announced as  \"\". Focusable content should have tabindex=\"-1\" or be removed from the DOM",
+   "title": "Focusable but hidden: text in \"Transactions\""
+  },
+  {
+   "attachments": [],
+   "attempt": 1,
+   "basis": "violation",
+   "criteria": [
+    "4.1.2"
+   ],
+   "evidence": [
+    {
+     "evidence": {
+      "failureSummary": "Fix all of the following:\n  Focusable content should have tabindex=\"-1\" or be removed from the DOM"
+     },
+     "occurrence": {
+      "ancestors": [
+       [],
+       [
+        "_chip_1xw00_8",
+        "_active_1xw00_161"
+       ],
+       [],
+       [
+        "_filters_grqat_29"
+       ],
+       [
+        "_tableViewsAndFilters_grqat_82"
+       ],
+       [
+        "_toolbarContainer_grqat_4"
+       ],
+       [
+        "_filtersAndExportButton_1ow20_72"
+       ],
+       [
+        "_topContent_1ow20_3"
+       ]
+      ],
+      "classes": [
+       "__focus-trap-outer-before"
+      ],
+      "data": {
+       "data-focus-trap": ":rmk:"
+      },
+      "heading": "Transactions",
+      "landmark": {
+       "name": "",
+       "role": "main"
+      },
+      "layer": "document",
+      "name": "",
+      "rect": [
+       219,
+       103,
+       1,
+       1
+      ],
+      "role": "",
+      "tag": "span",
+      "xpath": "/html/body/div[1]/main[1]/div[1]/div[1]/div[4]/div[1]/div[2]/div[2]/div[1]/div[1]/span[1]/span[4]/span[1]/span[1]/span[1]/span[1]"
+     },
+     "state": "transactions.filter-no-results"
+    },
+    {
+     "evidence": {
+      "failureSummary": "Fix all of the following:\n  Focusable content should have tabindex=\"-1\" or be removed from the DOM"
+     },
+     "occurrence": {
+      "ancestors": [
+       [],
+       [
+        "_chip_1xw00_8",
+        "_active_1xw00_161"
+       ],
+       [
+        "_reviewFilterActions_1wffd_11"
+       ],
+       [
+        "_actionBar_1q2lg_25"
+       ],
+       [
+        "_toolbar_1q2lg_1",
+        "_outerBorder_1q2lg_9",
+        "_borderRadius_1q2lg_14",
+        "_guttersEnabled_1q2lg_18"
+       ],
+       [
+        "_externalStickyHeaderContent_7rfk9_57"
+       ],
+       [
+        "_stickyHeader_7rfk9_50"
+       ],
+       [
+        "_virtualizerContainer_7rfk9_25"
+       ]
+      ],
+      "classes": [
+       "__focus-trap-outer-before"
+      ],
+      "data": {
+       "data-focus-trap": ":rho:"
+      },
+      "heading": "Always transparent",
+      "landmark": {
+       "name": "",
+       "role": "main"
+      },
+      "layer": "document",
+      "name": "",
+      "rect": [
+       -1,
+       -1,
+       1,
+       1
+      ],
+      "role": "",
+      "tag": "span",
+      "xpath": "/html/body/div[1]/main[1]/div[1]/div[1]/div[1]/div[4]/div[1]/div[1]/div[2]/div[1]/div[1]/div[2]/div[1]/div[2]/div[1]/div[1]/div[1]/div[1]/div[2]/div[1]/div[2]/div[1]/div[2]/span[1]/span[1]/span[1]"
+     },
+     "state": "books.to-review"
+    }
+   ],
+   "evidenceHash": "fe21d8faf0f7045738d1d63f8f79f1a250773b145f7e3896733b50791003e9b4",
+   "facts": {
+    "announced": " \"\"",
+    "axeSummary": "Focusable content should have tabindex=\"-1\" or be removed from the DOM",
+    "criterion": "4.1.2",
+    "criterionName": "Name, Role, Value",
+    "element": "text in \"Transactions\"",
+    "rule": "aria-hidden-focus",
+    "screen": "No matching transactions"
+   },
+   "family": "role-state",
+   "guidance": "Low for optional ARIA or an invalid autocomplete token; high when aria-hidden hides the whole page.",
+   "issueId": null,
+   "key": "role-state:aria-hidden-focus:792eeac43837",
+   "measured": false,
+   "primary": "transactions.filter-no-results",
+   "proposals": [],
+   "rule": "aria-hidden-focus",
+   "screens": 2,
+   "severityDefault": "medium",
+   "source": "scanner",
+   "states": [
+    "transactions.filter-no-results",
+    "books.to-review"
+   ],
+   "summary": "aria-hidden-focus: announced as  \"\". Focusable content should have tabindex=\"-1\" or be removed from the DOM",
+   "title": "Focusable but hidden: text in \"Transactions\""
+  },
+  {
+   "attachments": [],
+   "attempt": 1,
+   "basis": "violation",
+   "criteria": [
+    "4.1.2"
+   ],
+   "evidence": [
+    {
+     "evidence": {
+      "failureSummary": "Fix all of the following:\n  Focusable content should have tabindex=\"-1\" or be removed from the DOM"
+     },
+     "occurrence": {
+      "ancestors": [
+       []
+      ],
+      "classes": [
+       "__focus-trap-inner-after"
+      ],
+      "data": {
+       "data-focus-trap": ":rmk:"
+      },
+      "heading": "Transactions",
+      "landmark": null,
+      "layer": "document",
+      "name": "",
+      "rect": [
+       -1,
+       -1,
+       1,
+       1
+      ],
+      "role": "",
+      "tag": "span",
+      "xpath": "/html/body/div[15]/span[2]"
+     },
+     "state": "transactions.filter-no-results"
+    },
+    {
+     "evidence": {
+      "failureSummary": "Fix all of the following:\n  Focusable content should have tabindex=\"-1\" or be removed from the DOM"
+     },
+     "occurrence": {
+      "ancestors": [
+       []
+      ],
+      "classes": [
+       "__focus-trap-inner-after"
+      ],
+      "data": {
+       "data-focus-trap": ":rho:"
+      },
+      "heading": "Always transparent",
+      "landmark": null,
+      "layer": "document",
+      "name": "",
+      "rect": [
+       -1,
+       -1,
+       1,
+       1
+      ],
+      "role": "",
+      "tag": "span",
+      "xpath": "/html/body/div[8]/span[2]"
+     },
+     "state": "books.to-review"
+    }
+   ],
+   "evidenceHash": "fe21d8faf0f7045738d1d63f8f79f1a250773b145f7e3896733b50791003e9b4",
+   "facts": {
+    "announced": " \"\"",
+    "axeSummary": "Focusable content should have tabindex=\"-1\" or be removed from the DOM",
+    "criterion": "4.1.2",
+    "criterionName": "Name, Role, Value",
+    "element": "text in \"Transactions\"",
+    "rule": "aria-hidden-focus",
+    "screen": "No matching transactions"
+   },
+   "family": "role-state",
+   "guidance": "Low for optional ARIA or an invalid autocomplete token; high when aria-hidden hides the whole page.",
+   "issueId": null,
+   "key": "role-state:aria-hidden-focus:8b3312c325e7",
+   "measured": false,
+   "primary": "transactions.filter-no-results",
+   "proposals": [],
+   "rule": "aria-hidden-focus",
+   "screens": 2,
+   "severityDefault": "medium",
+   "source": "scanner",
+   "states": [
+    "transactions.filter-no-results",
+    "books.to-review"
+   ],
+   "summary": "aria-hidden-focus: announced as  \"\". Focusable content should have tabindex=\"-1\" or be removed from the DOM",
+   "title": "Focusable but hidden: text in \"Transactions\""
+  },
+  {
+   "attachments": [],
+   "attempt": 1,
+   "basis": "violation",
+   "criteria": [
+    "4.1.2"
+   ],
+   "evidence": [
+    {
+     "evidence": {
+      "failureSummary": "Fix all of the following:\n  Focusable content should have tabindex=\"-1\" or be removed from the DOM"
+     },
+     "occurrence": {
+      "ancestors": [
+       [],
+       [
+        "_chip_1xw00_8",
+        "_active_1xw00_161"
+       ],
+       [],
+       [
+        "_filters_grqat_29"
+       ],
+       [
+        "_tableViewsAndFilters_grqat_82"
+       ],
+       [
+        "_toolbarContainer_grqat_4"
+       ],
+       [
+        "_filtersAndExportButton_1ow20_72"
+       ],
+       [
+        "_topContent_1ow20_3"
+       ]
+      ],
+      "classes": [
+       "__focus-trap-outer-after"
+      ],
+      "data": {
+       "data-focus-trap": ":rmk:"
+      },
+      "heading": "Transactions",
+      "landmark": {
+       "name": "",
+       "role": "main"
+      },
+      "layer": "document",
+      "name": "",
+      "rect": [
+       219,
+       103,
+       1,
+       1
+      ],
+      "role": "",
+      "tag": "span",
+      "xpath": "/html/body/div[1]/main[1]/div[1]/div[1]/div[4]/div[1]/div[2]/div[2]/div[1]/div[1]/span[1]/span[4]/span[1]/span[1]/span[1]/span[3]"
+     },
+     "state": "transactions.filter-no-results"
+    },
+    {
+     "evidence": {
+      "failureSummary": "Fix all of the following:\n  Focusable content should have tabindex=\"-1\" or be removed from the DOM"
+     },
+     "occurrence": {
+      "ancestors": [
+       [],
+       [
+        "_chip_1xw00_8",
+        "_active_1xw00_161"
+       ],
+       [
+        "_reviewFilterActions_1wffd_11"
+       ],
+       [
+        "_actionBar_1q2lg_25"
+       ],
+       [
+        "_toolbar_1q2lg_1",
+        "_outerBorder_1q2lg_9",
+        "_borderRadius_1q2lg_14",
+        "_guttersEnabled_1q2lg_18"
+       ],
+       [
+        "_externalStickyHeaderContent_7rfk9_57"
+       ],
+       [
+        "_stickyHeader_7rfk9_50"
+       ],
+       [
+        "_virtualizerContainer_7rfk9_25"
+       ]
+      ],
+      "classes": [
+       "__focus-trap-outer-after"
+      ],
+      "data": {
+       "data-focus-trap": ":rho:"
+      },
+      "heading": "Always transparent",
+      "landmark": {
+       "name": "",
+       "role": "main"
+      },
+      "layer": "document",
+      "name": "",
+      "rect": [
+       -1,
+       -1,
+       1,
+       1
+      ],
+      "role": "",
+      "tag": "span",
+      "xpath": "/html/body/div[1]/main[1]/div[1]/div[1]/div[1]/div[4]/div[1]/div[1]/div[2]/div[1]/div[1]/div[2]/div[1]/div[2]/div[1]/div[1]/div[1]/div[1]/div[2]/div[1]/div[2]/div[1]/div[2]/span[1]/span[1]/span[3]"
+     },
+     "state": "books.to-review"
+    }
+   ],
+   "evidenceHash": "fe21d8faf0f7045738d1d63f8f79f1a250773b145f7e3896733b50791003e9b4",
+   "facts": {
+    "announced": " \"\"",
+    "axeSummary": "Focusable content should have tabindex=\"-1\" or be removed from the DOM",
+    "criterion": "4.1.2",
+    "criterionName": "Name, Role, Value",
+    "element": "text in \"Transactions\"",
+    "rule": "aria-hidden-focus",
+    "screen": "No matching transactions"
+   },
+   "family": "role-state",
+   "guidance": "Low for optional ARIA or an invalid autocomplete token; high when aria-hidden hides the whole page.",
+   "issueId": null,
+   "key": "role-state:aria-hidden-focus:f3a75db04099",
+   "measured": false,
+   "primary": "transactions.filter-no-results",
+   "proposals": [],
+   "rule": "aria-hidden-focus",
+   "screens": 2,
+   "severityDefault": "medium",
+   "source": "scanner",
+   "states": [
+    "transactions.filter-no-results",
+    "books.to-review"
+   ],
+   "summary": "aria-hidden-focus: announced as  \"\". Focusable content should have tabindex=\"-1\" or be removed from the DOM",
+   "title": "Focusable but hidden: text in \"Transactions\""
+  },
+  {
+   "attachments": [],
+   "attempt": 1,
+   "basis": "violation",
+   "criteria": [
+    "1.3.1"
+   ],
+   "evidence": [
+    {
+     "evidence": {
+      "failureSummary": "Fix any of the following:\n  Element has children which are not allowed: [role=radiogroup], button, input[aria-describedby]",
+      "messageKey": "unallowed",
+      "values": "[role=radiogroup], button, input[aria-describedby]"
+     },
+     "occurrence": {
+      "ancestors": [
+       [],
+       []
+      ],
+      "classes": [
+       "_menu_14lgn_4"
+      ],
+      "data": {
+       "data-dialog": "",
+       "data-enter": "true",
+       "data-open": "true"
+      },
+      "heading": "Transactions",
+      "landmark": null,
+      "layer": "document",
+      "name": "= $2,000,000",
+      "rect": [
+       525,
+       220,
+       376,
+       404
+      ],
+      "role": "menu",
+      "tag": "div",
+      "xpath": "/html/body/div[15]/div[1]/div[1]"
+     },
+     "state": "transactions.filter-no-results"
+    }
+   ],
+   "evidenceHash": "96cf173f386350ec83e3d82845fd657d9ac3646e4d0f766f1a02534dcfa2c6bd",
+   "facts": {
+    "announced": "menu \"= <amount>\"",
+    "axeSummary": "Element has children which are not allowed: [role=radiogroup], button, input[aria-describedby]",
+    "criterion": "1.3.1",
+    "criterionName": "Info and Relationships",
+    "element": "menu \"= <amount>\"",
+    "rule": "aria-required-children",
+    "screen": "No matching transactions"
+   },
+   "family": "role-state",
+   "guidance": "Low for optional ARIA or an invalid autocomplete token; high when aria-hidden hides the whole page.",
+   "issueId": null,
+   "key": "role-state:aria-required-children:e376f6884955",
+   "measured": false,
+   "primary": "transactions.filter-no-results",
+   "proposals": [],
+   "rule": "aria-required-children",
+   "screens": 1,
+   "severityDefault": "medium",
+   "source": "scanner",
+   "states": [
+    "transactions.filter-no-results"
+   ],
+   "summary": "aria-required-children: announced as menu \"= <amount>\". Element has children which are not allowed: [role=radiogroup], button, input[aria-describedby]",
+   "title": "Wrong role or state: menu \"= <amount>\""
+  },
+  {
+   "attachments": [],
+   "attempt": 1,
+   "basis": "violation",
+   "criteria": [
+    "4.1.2"
+   ],
+   "evidence": [
+    {
+     "evidence": {
+      "failureSummary": "Fix any of the following:\n  Element has focusable descendants"
+     },
+     "occurrence": {
+      "ancestors": [
+       [
+        "_topContent_1ow20_3"
+       ],
+       [
+        "_transactionsPageDashboardWrapper_1ow20_48"
+       ],
+       [
+        "_dashboardContent_809q8_29",
+        "_scrollContainer_809q8_29"
+       ],
+       [
+        "_layout_809q8_18"
+       ],
+       [
+        "_wrapper_809q8_3"
+       ],
+       [],
+       [
+        "_main_1gb3b_1"
+       ],
+       [
+        "mercury-root"
+       ]
+      ],
+      "classes": [
+       "_wrapper_1apo0_1",
+       "session-replay-block",
+       "_collapsed_1apo0_24",
+       "_clickableWhenCollapsed_1apo0_109"
+      ],
+      "data": {},
+      "heading": "Transactions",
+      "landmark": {
+       "name": "",
+       "role": "main"
+      },
+      "layer": "document",
+      "name": "Show graphs Net change $ 0 . 0 0 Money in $ 0 . 0 0 Money out $ 0 . 0 0",
+      "rect": [
+       220,
+       232,
+       1220,
+       76
+      ],
+      "role": "button",
+      "tag": "div",
+      "xpath": "/html/body/div[1]/main[1]/div[1]/div[1]/div[4]/div[1]/div[2]/div[2]/div[2]"
+     },
+     "state": "transactions.filter-no-results"
+    }
+   ],
+   "evidenceHash": "51d0defa6c12e1b6101ca591efb67aa579b349d34c16c29cfd9b0a2fbcc780b1",
+   "facts": {
+    "announced": "button \"Show graphs Net change <amount> . <n> Money in <amount> . <n> Money out…",
+    "axeSummary": "Element has focusable descendants",
+    "criterion": "4.1.2",
+    "criterionName": "Name, Role, Value",
+    "element": "button \"Show graphs Net change <amount> . <n> Mo…\"",
+    "rule": "nested-interactive",
+    "screen": "No matching transactions"
+   },
+   "family": "role-state",
+   "guidance": "Low for optional ARIA or an invalid autocomplete token; high when aria-hidden hides the whole page.",
+   "issueId": null,
+   "key": "role-state:nested-interactive:95de074e6f19",
+   "measured": false,
+   "primary": "transactions.filter-no-results",
+   "proposals": [],
+   "rule": "nested-interactive",
+   "screens": 1,
+   "severityDefault": "medium",
+   "source": "scanner",
+   "states": [
+    "transactions.filter-no-results"
+   ],
+   "summary": "nested-interactive: announced as button \"Show graphs Net change <amount> . <n> Money in <amount> . <n> Money out…. Element has focusable descendants",
+   "title": "Control nested in a control: button \"Show graphs Net change <amount> . <n> Mo…\""
+  },
+  {
+   "attachments": [],
+   "attempt": 1,
+   "basis": "candidate",
+   "criteria": [
+    "2.5.8"
+   ],
+   "evidence": [
+    {
+     "evidence": {
+      "agree": false,
+      "axe": "pass",
+      "exception": null,
+      "height": 18,
+      "offset": 0,
+      "own": "fail",
+      "passedBy": null,
+      "width": 18
+     },
+     "occurrence": {
+      "ancestors": [
+       [
+        "_wrapper_v0ae1_3",
+        "_alignStart_v0ae1_12"
+       ],
+       [
+        "_defaultStyle_1v12x_3"
+       ],
+       [
+        "_columnLayout_g37pd_4",
+        "_radioButtons_1txk6_9"
+       ],
+       [],
+       [
+        "_outerWrapper_g37pd_13"
+       ],
+       [],
+       [
+        "_wrapper_1txk6_3"
+       ],
+       []
+      ],
+      "classes": [
+       "_input_v0ae1_14",
+       "_ds-radio_v0ae1_42"
+      ],
+      "data": {},
+      "disabled": false,
+      "heading": "Transactions",
+      "landmark": {
+       "name": "",
+       "role": "form"
+      },
+      "layer": "document",
+      "name": "Any",
+      "rect": [
+       549,
+       275,
+       18,
+       18
+      ],
+      "role": "radio",
+      "tag": "input",
+      "xpath": "/html/body/div[15]/div[1]/div[1]/form[1]/div[1]/fieldset[1]/div[1]/div[1]/div[1]/div[1]/label[1]/input[1]"
+     },
+     "state": "transactions.filter-no-results"
+    }
+   ],
+   "evidenceHash": "9a6597a9e203bebf327462d28568ea1317a8698a10c994dae9ffd4ed9a031aee",
+   "facts": {
+    "criterion": "2.5.8",
+    "criterionName": "Target Size (Minimum)",
+    "element": "radio \"Any\"",
+    "offset": "0",
+    "rule": "target-size-own",
+    "screen": "No matching transactions",
+    "screens": 1,
+    "size": "18×18"
+   },
+   "family": "target-size",
+   "guidance": "Medium next to destructive or financial controls.",
+   "issueId": null,
+   "key": "target-size:target-size-own:9640e7eecbcb",
+   "measured": true,
+   "primary": "transactions.filter-no-results",
+   "proposals": [],
+   "rule": "target-size-own",
+   "screens": 1,
+   "severityDefault": "low",
+   "source": "scanner",
+   "states": [
+    "transactions.filter-no-results"
+   ],
+   "summary": "target-size-own: 18×18 px; the widest circle centered on it that clears other targets is 0 px, and the spacing exception needs 24 px.",
+   "title": "Target under 24×24 px: radio \"Any\""
+  }
+ ],
+ "primaries": [
+  "transactions.filter-no-results"
+ ],
+ "reach": {
+  "baseUrl": "https://demo.mercury.com",
+  "data": "data",
+  "map": "build/map.json",
+  "run": "2026-10-03-1525",
+  "workspace": "a11y"
+ },
+ "run": "2026-10-03-1525"
+}

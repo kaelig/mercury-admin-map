@@ -1,0 +1,494 @@
+{
+ "area": "accounts",
+ "batch": "verify-404",
+ "findings": [
+  {
+   "attachments": [],
+   "attempt": 1,
+   "basis": "candidate",
+   "criteria": [
+    "2.4.4"
+   ],
+   "evidence": [
+    {
+     "evidence": {
+      "description": "",
+      "name": "View all",
+      "role": "link",
+      "states": {},
+      "template": "link \"View all\""
+     },
+     "occurrence": {
+      "ancestors": [
+       [],
+       [
+        "_header_1m27d_3"
+       ],
+       [],
+       [
+        "_pageContent_809q8_151",
+        "_pageContentWidth_809q8_184",
+        "_footerPadding_809q8_115"
+       ],
+       [
+        "_dashboardContent_809q8_29"
+       ],
+       [
+        "_layout_809q8_18"
+       ],
+       [
+        "_wrapper_809q8_3"
+       ],
+       []
+      ],
+      "classes": [
+       "_link_ual8v_4",
+       "_variantPrimary_ual8v_33"
+      ],
+      "data": {
+       "data-discover": "true"
+      },
+      "heading": "",
+      "landmark": {
+       "name": "",
+       "role": "main"
+      },
+      "layer": "document",
+      "name": "View all",
+      "rect": [
+       543,
+       479,
+       68,
+       19
+      ],
+      "role": "link",
+      "tag": "a",
+      "xpath": "/html/body/div[1]/main[1]/div[1]/div[1]/div[4]/div[1]/div[2]/div[2]/div[2]/span[2]/a[1]"
+     },
+     "state": "accounts.checking-detail"
+    },
+    {
+     "evidence": {
+      "description": "",
+      "name": "View all",
+      "role": "link",
+      "states": {},
+      "template": "link \"View all\""
+     },
+     "occurrence": {
+      "ancestors": [
+       [],
+       [
+        "_header_1m27d_3"
+       ],
+       [],
+       [
+        "_pageContent_809q8_151",
+        "_pageContentWidth_809q8_184",
+        "_footerPadding_809q8_115"
+       ],
+       [
+        "_dashboardContent_809q8_29"
+       ],
+       [
+        "_layout_809q8_18"
+       ],
+       [
+        "_wrapper_809q8_3"
+       ],
+       []
+      ],
+      "classes": [
+       "_link_ual8v_4",
+       "_variantPrimary_ual8v_33"
+      ],
+      "data": {
+       "data-discover": "true"
+      },
+      "heading": "",
+      "landmark": {
+       "name": "",
+       "role": "main"
+      },
+      "layer": "document",
+      "name": "View all",
+      "rect": [
+       543,
+       479,
+       68,
+       19
+      ],
+      "role": "link",
+      "tag": "a",
+      "xpath": "/html/body/div[1]/main[1]/div[1]/div[1]/div[4]/div[1]/div[2]/div[2]/div[2]/span[2]/a[1]"
+     },
+     "state": "accounts.account-number-revealed"
+    }
+   ],
+   "evidenceHash": "912abe807110621b7c4a74b1ce1ee98b0a8c433d99dd6615ddced8bdbf8642ad",
+   "facts": {
+    "announced": "link \"View all\"",
+    "axeSummary": "",
+    "criterion": "2.4.4",
+    "criterionName": "Link Purpose (In Context)",
+    "element": "link \"View all\"",
+    "rule": "announced-as",
+    "screen": "Checking account detail"
+   },
+   "family": "name",
+   "guidance": "High for an unnamed form control or the sole primary action.",
+   "issueId": null,
+   "key": "name:announced-as:42b675f472e3",
+   "measured": false,
+   "primary": "accounts.checking-detail",
+   "proposals": [],
+   "rule": "announced-as",
+   "screens": 4,
+   "severityDefault": "medium",
+   "source": "scanner",
+   "states": [
+    "accounts.checking-detail",
+    "accounts.account-number-revealed"
+   ],
+   "summary": "announced-as: announced as link \"View all\".",
+   "title": "Missing or unclear name: link \"View all\""
+  },
+  {
+   "attachments": [],
+   "attempt": 1,
+   "basis": "candidate",
+   "criteria": [
+    "4.1.2"
+   ],
+   "evidence": [
+    {
+     "evidence": {
+      "description": "",
+      "name": "",
+      "role": "button",
+      "states": {},
+      "template": "button \"\""
+     },
+     "occurrence": {
+      "ancestors": [
+       [
+        "_textWithIcon_tttvr_83"
+       ],
+       [
+        "_row_tttvr_15"
+       ],
+       [
+        "_accountNumbersWrapper_tttvr_10"
+       ],
+       [
+        "_topOfCard_tttvr_102"
+       ],
+       [
+        "_large_kwlx6_9",
+        "_noHover_3n0se_28",
+        "_shadow_3n0se_25",
+        "_raisedBackground_3n0se_45",
+        "_accountDetailsCard_tttvr_3"
+       ],
+       [
+        "_container_1mevc_1"
+       ],
+       [],
+       [
+        "_pageContent_809q8_151",
+        "_pageContentWidth_809q8_184",
+        "_footerPadding_809q8_115"
+       ]
+      ],
+      "classes": [
+       "_accountNumberReveal_tttvr_33"
+      ],
+      "data": {},
+      "heading": "",
+      "landmark": {
+       "name": "",
+       "role": "main"
+      },
+      "layer": "document",
+      "name": "",
+      "rect": [
+       1073,
+       250,
+       15,
+       16
+      ],
+      "role": "button",
+      "tag": "button",
+      "xpath": "/html/body/div[1]/main[1]/div[1]/div[1]/div[4]/div[1]/div[2]/div[2]/div[1]/div[2]/div[1]/div[1]/div[2]/div[1]/button[1]"
+     },
+     "state": "accounts.checking-detail"
+    },
+    {
+     "evidence": {
+      "description": "",
+      "name": "",
+      "role": "button",
+      "states": {},
+      "template": "button \"\""
+     },
+     "occurrence": {
+      "ancestors": [
+       [
+        "_textWithIcon_tttvr_83"
+       ],
+       [
+        "_row_tttvr_15"
+       ],
+       [
+        "_accountNumbersWrapper_tttvr_10"
+       ],
+       [
+        "_topOfCard_tttvr_102"
+       ],
+       [
+        "_large_kwlx6_9",
+        "_noHover_3n0se_28",
+        "_shadow_3n0se_25",
+        "_raisedBackground_3n0se_45",
+        "_accountDetailsCard_tttvr_3"
+       ],
+       [
+        "_container_1mevc_1"
+       ],
+       [],
+       [
+        "_pageContent_809q8_151",
+        "_pageContentWidth_809q8_184",
+        "_footerPadding_809q8_115"
+       ]
+      ],
+      "classes": [
+       "_accountNumberReveal_tttvr_33"
+      ],
+      "data": {},
+      "heading": "",
+      "landmark": {
+       "name": "",
+       "role": "main"
+      },
+      "layer": "document",
+      "name": "",
+      "rect": [
+       1073,
+       250,
+       15,
+       16
+      ],
+      "role": "button",
+      "tag": "button",
+      "xpath": "/html/body/div[1]/main[1]/div[1]/div[1]/div[4]/div[1]/div[2]/div[2]/div[1]/div[2]/div[1]/div[1]/div[2]/div[1]/button[1]"
+     },
+     "state": "accounts.account-number-revealed"
+    }
+   ],
+   "evidenceHash": "853517ea635dbc8da316e3d90a13177018413872b7965bb927dfe10c9619aa9b",
+   "facts": {
+    "announced": "button \"\"",
+    "axeSummary": "",
+    "criterion": "4.1.2",
+    "criterionName": "Name, Role, Value",
+    "element": "button in the main landmark",
+    "rule": "announced-as",
+    "screen": "Checking account detail"
+   },
+   "family": "name",
+   "guidance": "High for an unnamed form control or the sole primary action.",
+   "issueId": null,
+   "key": "name:announced-as:a0327d8395b7",
+   "measured": false,
+   "primary": "accounts.checking-detail",
+   "proposals": [],
+   "rule": "announced-as",
+   "screens": 4,
+   "severityDefault": "medium",
+   "source": "scanner",
+   "states": [
+    "accounts.checking-detail",
+    "accounts.account-number-revealed"
+   ],
+   "summary": "announced-as: announced as button \"\".",
+   "title": "Missing or unclear name: button in the main landmark"
+  },
+  {
+   "attachments": [],
+   "attempt": 1,
+   "basis": "candidate",
+   "criteria": [
+    "2.4.4"
+   ],
+   "evidence": [
+    {
+     "evidence": {
+      "description": "",
+      "name": "$2,023,267.12",
+      "role": "link",
+      "states": {},
+      "template": "link \"<amount>\""
+     },
+     "occurrence": {
+      "ancestors": [
+       [],
+       [
+        "_entry_1mevc_42"
+       ],
+       [
+        "_row_1mevc_32",
+        "_availableAndButtons_1mevc_37"
+       ],
+       [
+        "_topOfCard_1mevc_28"
+       ],
+       [
+        "_large_kwlx6_9",
+        "_noHover_3n0se_28",
+        "_shadow_3n0se_25",
+        "_raisedBackground_3n0se_45",
+        "_card_1mevc_23"
+       ],
+       [
+        "_container_1mevc_1"
+       ],
+       [],
+       [
+        "_pageContent_809q8_151",
+        "_pageContentWidth_809q8_184",
+        "_footerPadding_809q8_115"
+       ]
+      ],
+      "classes": [
+       "_link_ual8v_4",
+       "_underlineOnHover_ual8v_15"
+      ],
+      "data": {
+       "data-discover": "true"
+      },
+      "heading": "",
+      "landmark": {
+       "name": "",
+       "role": "main"
+      },
+      "layer": "document",
+      "name": "$2,023,267.12",
+      "rect": [
+       370,
+       232,
+       207,
+       47
+      ],
+      "role": "link",
+      "tag": "a",
+      "xpath": "/html/body/div[1]/main[1]/div[1]/div[1]/div[4]/div[1]/div[2]/div[2]/div[1]/div[1]/div[1]/div[1]/div[1]/span[1]/a[1]"
+     },
+     "state": "accounts.checking-detail"
+    },
+    {
+     "evidence": {
+      "description": "",
+      "name": "$2,023,267.12",
+      "role": "link",
+      "states": {},
+      "template": "link \"<amount>\""
+     },
+     "occurrence": {
+      "ancestors": [
+       [],
+       [
+        "_entry_1mevc_42"
+       ],
+       [
+        "_row_1mevc_32",
+        "_availableAndButtons_1mevc_37"
+       ],
+       [
+        "_topOfCard_1mevc_28"
+       ],
+       [
+        "_large_kwlx6_9",
+        "_noHover_3n0se_28",
+        "_shadow_3n0se_25",
+        "_raisedBackground_3n0se_45",
+        "_card_1mevc_23"
+       ],
+       [
+        "_container_1mevc_1"
+       ],
+       [],
+       [
+        "_pageContent_809q8_151",
+        "_pageContentWidth_809q8_184",
+        "_footerPadding_809q8_115"
+       ]
+      ],
+      "classes": [
+       "_link_ual8v_4",
+       "_underlineOnHover_ual8v_15"
+      ],
+      "data": {
+       "data-discover": "true"
+      },
+      "heading": "",
+      "landmark": {
+       "name": "",
+       "role": "main"
+      },
+      "layer": "document",
+      "name": "$2,023,267.12",
+      "rect": [
+       370,
+       232,
+       207,
+       47
+      ],
+      "role": "link",
+      "tag": "a",
+      "xpath": "/html/body/div[1]/main[1]/div[1]/div[1]/div[4]/div[1]/div[2]/div[2]/div[1]/div[1]/div[1]/div[1]/div[1]/span[1]/a[1]"
+     },
+     "state": "accounts.account-number-revealed"
+    }
+   ],
+   "evidenceHash": "a6e58e6d571f735d6a28b9e817f17a33569dc3d8ef81a607e7a20287969942f2",
+   "facts": {
+    "announced": "link \"<amount>\"",
+    "axeSummary": "",
+    "criterion": "2.4.4",
+    "criterionName": "Link Purpose (In Context)",
+    "element": "link \"<amount>\"",
+    "rule": "announced-as",
+    "screen": "Checking account detail"
+   },
+   "family": "name",
+   "guidance": "High for an unnamed form control or the sole primary action.",
+   "issueId": null,
+   "key": "name:announced-as:e13113a7eb55",
+   "measured": false,
+   "primary": "accounts.checking-detail",
+   "proposals": [],
+   "rule": "announced-as",
+   "screens": 4,
+   "severityDefault": "medium",
+   "source": "scanner",
+   "states": [
+    "accounts.checking-detail",
+    "accounts.account-number-revealed"
+   ],
+   "summary": "announced-as: announced as link \"<amount>\".",
+   "title": "Missing or unclear name: link \"<amount>\""
+  }
+ ],
+ "primaries": [
+  "accounts.checking-detail"
+ ],
+ "reach": {
+  "baseUrl": "https://demo.mercury.com",
+  "data": "data",
+  "map": "build/map.json",
+  "run": "2026-10-03-1525",
+  "workspace": "a11y"
+ },
+ "run": "2026-10-03-1525"
+}

@@ -1,0 +1,123 @@
+{
+ "area": "accounts",
+ "batch": "verify-406",
+ "findings": [
+  {
+   "attachments": [],
+   "attempt": 1,
+   "basis": "candidate",
+   "criteria": [
+    "4.1.2"
+   ],
+   "evidence": [
+    {
+     "evidence": {
+      "description": "",
+      "name": "",
+      "role": "link",
+      "states": {},
+      "template": "link \"\""
+     },
+     "occurrence": {
+      "ancestors": [
+       [],
+       [
+        "_tooltipAnchor_18bac_4"
+       ],
+       [
+        "_headingContainer_18dih_15"
+       ],
+       [],
+       [
+        "_large_kwlx6_9",
+        "_noHover_3n0se_28",
+        "_shadow_3n0se_25",
+        "_raisedBackground_3n0se_45",
+        "_card_lo4oy_4",
+        "_modal_18dih_3"
+       ],
+       [
+        "ReactModal__Content",
+        "ReactModal__Content--after-open",
+        "_modal_lo4oy_73"
+       ],
+       [
+        "ReactModal__Overlay",
+        "ReactModal__Overlay--after-open",
+        "_overlay_lo4oy_89",
+        "_backgroundColor_lo4oy_103"
+       ],
+       [
+        "ReactModalPortal"
+       ]
+      ],
+      "classes": [
+       "_button_r6b2u_20",
+       "_small_r6b2u_72",
+       "_secondary_r6b2u_126",
+       "_link_ual8v_4",
+       "_underlineNever_ual8v_7"
+      ],
+      "data": {
+       "data-discover": "true"
+      },
+      "heading": "Linked accounts",
+      "landmark": {
+       "name": "",
+       "role": "dialog"
+      },
+      "layer": "top",
+      "name": "",
+      "rect": [
+       948,
+       346,
+       32,
+       32
+      ],
+      "role": "link",
+      "tag": "a",
+      "xpath": "/html/body/div[11]/div[1]/div[1]/div[1]/div[2]/div[2]/div[1]/span[1]/a[1]"
+     },
+     "state": "accounts.credit-linked-accounts"
+    }
+   ],
+   "evidenceHash": "dfaf4e821517cd181849f6b22883dfc617a22d631da4cba66995ccdb9f2a70b6",
+   "facts": {
+    "announced": "link \"\"",
+    "axeSummary": "",
+    "criterion": "4.1.2",
+    "criterionName": "Name, Role, Value",
+    "element": "link in \"Linked accounts\"",
+    "rule": "announced-as",
+    "screen": "Linked accounts for IO limit"
+   },
+   "family": "name",
+   "guidance": "High for an unnamed form control or the sole primary action.",
+   "issueId": null,
+   "key": "name:announced-as:da72c8f07a73",
+   "measured": false,
+   "primary": "accounts.credit-linked-accounts",
+   "proposals": [],
+   "rule": "announced-as",
+   "screens": 1,
+   "severityDefault": "medium",
+   "source": "scanner",
+   "states": [
+    "accounts.credit-linked-accounts"
+   ],
+   "summary": "announced-as: announced as link \"\".",
+   "title": "Missing or unclear name: link in \"Linked accounts\""
+  }
+ ],
+ "primaries": [
+  "accounts.credit-linked-accounts"
+ ],
+ "reach": {
+  "baseUrl": "https://demo.mercury.com",
+  "data": "data",
+  "map": "build/map.json",
+  "run": "2026-10-03-1525",
+  "workspace": "a11y"
+ },
+ "run": "2026-10-03-1525"
+}

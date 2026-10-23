@@ -1,0 +1,45 @@
+{
+ "batch": "record-052",
+ "reach": {
+  "baseUrl": "https://demo.mercury.com",
+  "data": "data",
+  "map": "build/map.json",
+  "run": "2026-10-02-1349",
+  "workspace": "a11y"
+ },
+ "run": "2026-10-02-1349",
+ "states": [
+  {
+   "area": "payments",
+   "draft": "not drafted: its parent had no accepted recipe when the drafter ran",
+   "image": "screens/payments/35-deposit-bank-transfer.png",
+   "kind": "form-state",
+   "labels": [
+    "Expand Domestic Transfer Details",
+    "Click Choose method in stepper",
+    "Click Bank Transfer"
+   ],
+   "mutates": false,
+   "note": "Bank Transfer option opens the Transfer funds form with Transfer to pre-set to Ops / Payroll.",
+   "parent": "payments.deposit",
+   "state": "payments.deposit-bank-transfer",
+   "title": "Deposit: bank transfer"
+  },
+  {
+   "area": "payments",
+   "draft": "not drafted: its parent had no accepted recipe when the drafter ran",
+   "image": "screens/payments/45-deposit-safe.png",
+   "kind": "page",
+   "labels": [
+    "Expand Domestic Transfer Details",
+    "Click Choose method in stepper",
+    "Click SAFE Investment"
+   ],
+   "mutates": false,
+   "note": "SAFE Investment option: 4-step SAFE flow, step 1 amount, date, destination account, SAFE type.",
+   "parent": "payments.deposit",
+   "state": "payments.deposit-safe",
+   "title": "Create a new SAFE"
+  }
+ ]
+}

@@ -1,0 +1,29 @@
+{
+ "batch": "record-124",
+ "reach": {
+  "baseUrl": "https://demo.mercury.com",
+  "data": "data",
+  "map": "build/map.json",
+  "run": "2026-10-02-1349",
+  "workspace": "a11y"
+ },
+ "run": "2026-10-02-1349",
+ "states": [
+  {
+   "area": "cards",
+   "draft": "not drafted: its parent had no accepted recipe when the drafter ran; a previous recorder failed: policy (now retry: policy.fixtureValues gained empty \"\", 2000000, 10000, 2500, 500, 150, card, a, zzqxnothing, Lunch, Deli 77, 12/31/2099, http://example.invalid/a11y-audit): The label types 50 in the receipt amount field; 50 is not a fixture value (amountTarget is 50000, amount is 1.00).",
+   "image": "screens/cards/72-policy-receipt-saved.png",
+   "kind": "confirmation",
+   "labels": [
+    "Click Edit on Receipt requirement",
+    "Clear amount, click Save",
+    "Type 50, click Save"
+   ],
+   "mutates": true,
+   "note": "Rule saved at $50: the Receipt requirement row now reads 'exceeds $50' and keeps its five excluded merchants; an 'Upload receipts from your inbox' promo popover opens bottom-left.",
+   "parent": "cards.policy-receipt-error",
+   "state": "cards.policy-receipt-saved",
+   "title": "Receipt rule updated"
+  }
+ ]
+}

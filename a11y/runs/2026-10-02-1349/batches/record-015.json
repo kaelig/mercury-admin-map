@@ -1,0 +1,244 @@
+{
+ "batch": "record-015",
+ "reach": {
+  "baseUrl": "https://demo.mercury.com",
+  "data": "data",
+  "map": "build/map.json",
+  "run": "2026-10-02-1349",
+  "workspace": "a11y"
+ },
+ "run": "2026-10-02-1349",
+ "states": [
+  {
+   "area": "home",
+   "draft": "cannot parse \"Type 'card'\"",
+   "image": "screens/home/29-search-pages-filter.png",
+   "kind": "modal",
+   "labels": [
+    "Click 'Search for anything' (or Cmd+K)",
+    "Type 'card'"
+   ],
+   "mutates": false,
+   "note": "Query 'card' with the All chip: a Pages group (Cards, Create a card, Change password) above Transactions groups (Cards, Card Expenses, Debit Card).",
+   "parent": "home.search-open",
+   "state": "home.search-card-all",
+   "title": "Search 'card' \u2014 All results"
+  },
+  {
+   "area": "home",
+   "draft": "not drafted: its parent had no accepted recipe when the drafter ran",
+   "image": "screens/home/73-search-pages-chip.png",
+   "kind": "modal",
+   "labels": [
+    "Click 'Search for anything' (or Cmd+K)",
+    "Type 'card'",
+    "Click 'Pages' chip"
+   ],
+   "mutates": false,
+   "note": "With 'card' typed, the Pages chip narrows results to three pages: Cards, Create a card, Change password.",
+   "parent": "home.search-card-all",
+   "state": "home.search-pages",
+   "title": "Search \u2014 Pages filter"
+  },
+  {
+   "area": "home",
+   "draft": "not drafted: its parent had no accepted recipe when the drafter ran",
+   "image": "screens/home/74-search-cards-chip.png",
+   "kind": "modal",
+   "labels": [
+    "Click 'Search for anything' (or Cmd+K)",
+    "Type 'card'",
+    "Click 'Pages' chip",
+    "Click 'Cards' chip"
+   ],
+   "mutates": false,
+   "note": "Cards chip lists matching cards with holder, last four and '$0.00 spent this week'; an 'Agent Card' badge marks one.",
+   "parent": "home.search-pages",
+   "state": "home.search-cards",
+   "title": "Search \u2014 Cards filter"
+  },
+  {
+   "area": "home",
+   "draft": "not drafted: its parent had no accepted recipe when the drafter ran",
+   "image": "screens/home/75-search-filters-scrolled.png",
+   "kind": "modal",
+   "labels": [
+    "Click 'Search for anything' (or Cmd+K)",
+    "Type 'card'",
+    "Click 'Pages' chip",
+    "Click 'Cards' chip",
+    "Click chip-row right arrow"
+   ],
+   "mutates": false,
+   "note": "The right arrow scrolls the chip row to reveal Scheduled, Approvals, Users and Departments, with a left arrow to go back.",
+   "parent": "home.search-cards",
+   "state": "home.search-filters-scrolled",
+   "title": "Search \u2014 filter chips scrolled"
+  },
+  {
+   "area": "home",
+   "draft": "nothing on home.index matches {\"click\":{\"name\":\"map launcher\"}}",
+   "image": "screens/home/02-try-panel-startup.png",
+   "kind": "popover",
+   "labels": [
+    "Click map launcher (bottom right)"
+   ],
+   "mutates": false,
+   "note": "Bottom-right onboarding panel with Startup/Ecommerce/Agency/More tabs; Startup lists contractor payments, team invites, cards, vendor details, SAFE.",
+   "parent": "home.index",
+   "state": "home.try-panel-startup",
+   "title": "Try out Mercury panel: Startup"
+  },
+  {
+   "area": "home",
+   "draft": "not drafted: its parent had no accepted recipe when the drafter ran",
+   "image": "screens/home/03-try-panel-ecommerce.png",
+   "kind": "popover",
+   "labels": [
+    "Click map launcher (bottom right)",
+    "Click Ecommerce tab"
+   ],
+   "mutates": false,
+   "note": "Ecommerce tab of the Try-out panel with commerce-oriented suggested tasks.",
+   "parent": "home.try-panel-startup",
+   "state": "home.try-panel-ecommerce",
+   "title": "Try out panel: Ecommerce tab"
+  },
+  {
+   "area": "home",
+   "draft": "not drafted: its parent had no accepted recipe when the drafter ran",
+   "image": "screens/home/04-try-panel-agency.png",
+   "kind": "popover",
+   "labels": [
+    "Click map launcher (bottom right)",
+    "Click Ecommerce tab",
+    "Click Agency tab"
+   ],
+   "mutates": false,
+   "note": "Agency tab of the Try-out panel with agency-oriented suggested tasks.",
+   "parent": "home.try-panel-ecommerce",
+   "state": "home.try-panel-agency",
+   "title": "Try out panel: Agency tab"
+  },
+  {
+   "area": "home",
+   "draft": "not drafted: its parent had no accepted recipe when the drafter ran",
+   "image": "screens/home/05-try-panel-more.png",
+   "kind": "popover",
+   "labels": [
+    "Click map launcher (bottom right)",
+    "Click Ecommerce tab",
+    "Click Agency tab",
+    "Click More tab"
+   ],
+   "mutates": false,
+   "note": "More tab: Make a payment, View transactions, Create a card, Send an invoice, Track tasks; plus 'Understand your data' with Try Command.",
+   "parent": "home.try-panel-agency",
+   "state": "home.try-panel-more",
+   "title": "Try out panel: More tab"
+  },
+  {
+   "area": "home",
+   "draft": "cannot parse \"Scroll down\"",
+   "image": "screens/home/07-index-scrolled-mid.png",
+   "kind": "page",
+   "labels": [
+    "Scroll down"
+   ],
+   "mutates": false,
+   "note": "Scrolled Home showing Money movement (month picker, Money in / Money out top sources, 3-month averages) and the start of the Transactions widget.",
+   "parent": "home.index",
+   "state": "home.index-money-movement",
+   "title": "Home: Money movement section"
+  },
+  {
+   "area": "home",
+   "draft": "not drafted: its parent had no accepted recipe when the drafter ran",
+   "image": "screens/home/57-money-movement-prev-month.png",
+   "kind": "page",
+   "labels": [
+    "Scroll down",
+    "Click previous-month arrow"
+   ],
+   "mutates": false,
+   "note": "Clicking the left arrow switches Money movement to Aug 2026 (Money in $164,236.08, Money out \u2212$272,194.88) and enables the right arrow.",
+   "parent": "home.index-money-movement",
+   "state": "home.money-movement-prev",
+   "title": "Money movement \u2014 previous month"
+  },
+  {
+   "area": "home",
+   "draft": "not drafted: its parent had no accepted recipe when the drafter ran",
+   "image": "screens/home/58-money-out-info-tooltip.png",
+   "kind": "popover",
+   "labels": [
+    "Scroll down",
+    "Click previous-month arrow",
+    "Hover Money out info icon"
+   ],
+   "mutates": false,
+   "note": "The info icon next to 'Money out' explains it excludes internal transfers and Credit payments.",
+   "parent": "home.money-movement-prev",
+   "state": "home.money-out-tooltip",
+   "title": "Money out info tooltip"
+  },
+  {
+   "area": "home",
+   "draft": "nothing on home.index matches {\"click\":{\"name\":\"avatar\"}}",
+   "image": "screens/home/33-avatar-menu.png",
+   "kind": "menu",
+   "labels": [
+    "Click avatar"
+   ],
+   "mutates": false,
+   "note": "Avatar menu: Jane Black / email, Profile, Notifications, Security, Privacy and Perks (external), Appearance, Log out.",
+   "parent": "home.index",
+   "state": "home.avatar-menu",
+   "title": "Profile menu"
+  },
+  {
+   "area": "home",
+   "draft": "not drafted: its parent had no accepted recipe when the drafter ran",
+   "image": "screens/home/34-avatar-appearance-submenu.png",
+   "kind": "menu",
+   "labels": [
+    "Click avatar",
+    "Hover/ArrowRight on Appearance"
+   ],
+   "mutates": false,
+   "note": "Appearance flyout: System default (checked), Dark mode, Light mode.",
+   "parent": "home.avatar-menu",
+   "state": "home.appearance-submenu",
+   "title": "Appearance submenu"
+  },
+  {
+   "area": "home",
+   "draft": "cannot parse \"Hover a bookmark\"",
+   "image": "screens/home/36-bookmark-hover-handles.png",
+   "kind": "form-state",
+   "labels": [
+    "Hover a bookmark"
+   ],
+   "mutates": false,
+   "note": "Hovering a sidebar bookmark reveals a drag handle on the left and an x (Remove bookmark) on the right.",
+   "parent": "home.index",
+   "state": "home.bookmark-hover",
+   "title": "Bookmark hover: reorder handle + remove"
+  },
+  {
+   "area": "home",
+   "draft": "not drafted: its parent had no accepted recipe when the drafter ran",
+   "image": "screens/home/37-bookmark-reordered.png",
+   "kind": "confirmation",
+   "labels": [
+    "Hover a bookmark",
+    "Drag reorder handle below Insights"
+   ],
+   "mutates": false,
+   "note": "After dragging the Credit Card handle below Insights, the bookmark list order persists as Ops / Payroll, Bill Pay, Insights, Credit Card.",
+   "parent": "home.bookmark-hover",
+   "state": "home.bookmark-reordered",
+   "title": "Bookmarks reordered"
+  }
+ ]
+}

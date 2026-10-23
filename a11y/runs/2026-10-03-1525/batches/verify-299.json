@@ -1,0 +1,156 @@
+{
+ "area": "payments",
+ "batch": "verify-299",
+ "findings": [
+  {
+   "attachments": [],
+   "attempt": 1,
+   "basis": "failure",
+   "criteria": [
+    "2.4.3"
+   ],
+   "evidence": [
+    {
+     "evidence": {
+      "closedBy": "escape",
+      "focus": "body",
+      "stops": 1,
+      "trace": [
+       {
+        "focus": {
+         "label": "",
+         "tag": "input",
+         "xpath": "/html/body/div[1]/main[1]/div[1]/div[2]/div[2]/div[3]/div[1]/div[2]/div[1]/div[1]/form[1]/div[1]/div[1]/div[1]/div[1]/div[1]/input[1]"
+        },
+        "key": "start",
+        "where": "outside"
+       },
+       {
+        "focus": {
+         "label": "Select an account",
+         "tag": "button",
+         "xpath": "/html/body/div[1]/main[1]/div[1]/div[2]/div[2]/div[3]/div[1]/div[2]/div[1]/div[1]/form[1]/div[1]/div[2]/div[1]/div[1]/button[1]"
+        },
+        "key": "Tab",
+        "where": "trigger"
+       },
+       {
+        "focus": {
+         "label": "Treasury $200,000.00 Ops / Payroll $2,023,267.12 / Checking ••1038 AP $226,767.8",
+         "tag": "div",
+         "xpath": "/html/body/div[4]/div[1]/div[1]"
+        },
+        "key": "Enter",
+        "where": "outside"
+       },
+       {
+        "focus": {
+         "label": "Treasury $200,000.00 Ops / Payroll $2,023,267.12 / Checking ••1038 AP $226,767.8",
+         "tag": "div",
+         "xpath": "/html/body/div[4]/div[1]/div[1]"
+        },
+        "key": "settle",
+        "where": "inside"
+       },
+       {
+        "focus": "body",
+        "key": "Escape",
+        "where": "body"
+       },
+       {
+        "focus": "body",
+        "key": "settle",
+        "where": "body"
+       }
+      ]
+     },
+     "occurrence": {
+      "ancestors": [
+       [
+        "_accountSelectorWrapper_dd0l7_6"
+       ],
+       [],
+       [
+        "_disabledUiWrapper_n1ehf_8"
+       ],
+       [
+        "_transferFormCardContent_n1ehf_134"
+       ],
+       [],
+       [
+        "_transferFormCard_n1ehf_127"
+       ],
+       [
+        "_large_kwlx6_9",
+        "_shadow_3n0se_25",
+        "_raisedBackground_3n0se_45"
+       ],
+       [
+        "_transferMethodWrapper_n1ehf_119"
+       ]
+      ],
+      "classes": [
+       "_selectButton_dd0l7_11",
+       "_selectButtonWrapper_dd0l7_11",
+       "session-replay-mask"
+      ],
+      "data": {},
+      "heading": "One-time transfer",
+      "landmark": {
+       "name": "",
+       "role": "form"
+      },
+      "layer": "document",
+      "name": "Transfer from",
+      "rect": [
+       496,
+       428,
+       448,
+       68
+      ],
+      "role": "combobox",
+      "tag": "button",
+      "xpath": "/html/body/div[1]/main[1]/div[1]/div[2]/div[2]/div[3]/div[1]/div[2]/div[1]/div[1]/form[1]/div[1]/div[2]/div[1]/div[1]/button[1]"
+     },
+     "state": "payments.transfer-from-dropdown"
+    }
+   ],
+   "evidenceHash": "a01630be0b248be1b04924a1339d394b120944cd04d90b29d2c9b382f109f19a",
+   "facts": {
+    "criterion": "2.4.3",
+    "criterionName": "Focus Order",
+    "element": "combobox \"Transfer from\"",
+    "focus": "page body",
+    "overlay": "unnamed listbox",
+    "screen": "Transfer: from account list"
+   },
+   "family": "dialog-focus",
+   "guidance": "High when controls inside are unreachable.",
+   "issueId": null,
+   "key": "dialog-focus:dialog-focus-not-returned:828649fe0076",
+   "measured": false,
+   "primary": "payments.transfer-from-dropdown",
+   "proposals": [],
+   "rule": "dialog-focus-not-returned",
+   "screens": 1,
+   "severityDefault": "low",
+   "source": "scanner",
+   "states": [
+    "payments.transfer-from-dropdown"
+   ],
+   "summary": "Esc closed the unnamed listbox and focus went to the page body, not back to the combobox \"Transfer from\".",
+   "title": "Focus lost after closing unnamed listbox"
+  }
+ ],
+ "primaries": [
+  "payments.transfer-from-dropdown"
+ ],
+ "reach": {
+  "baseUrl": "https://demo.mercury.com",
+  "data": "data",
+  "map": "build/map.json",
+  "run": "2026-10-03-1525",
+  "workspace": "a11y"
+ },
+ "run": "2026-10-03-1525"
+}

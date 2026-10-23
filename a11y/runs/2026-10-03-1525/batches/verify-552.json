@@ -1,0 +1,707 @@
+{
+ "area": "transactions",
+ "batch": "verify-552",
+ "findings": [
+  {
+   "attachments": [],
+   "attempt": 1,
+   "basis": "candidate",
+   "criteria": [
+    "2.5.3"
+   ],
+   "evidence": [
+    {
+     "evidence": {
+      "description": "",
+      "name": "Enabled",
+      "role": "switch",
+      "states": {
+       "checked": true
+      },
+      "template": "switch \"Enabled\" [checked=true]"
+     },
+     "occurrence": {
+      "ancestors": [
+       [
+        "_dsToggleSwitchWrapper_3k8xy_3",
+        "_checked_3k8xy_50",
+        "_rightLabel_3k8xy_34"
+       ],
+       [
+        "_header_7wi0o_8"
+       ],
+       [
+        "_container_7wi0o_1"
+       ],
+       [
+        "_contentContainer_h5n2h_5"
+       ],
+       [
+        "_large_kwlx6_9",
+        "_noHover_3n0se_28",
+        "_shadow_3n0se_25",
+        "_raisedBackground_3n0se_45",
+        "_card_lo4oy_4",
+        "_modalContainer_h5n2h_1",
+        "_xlarge_lo4oy_23"
+       ],
+       [
+        "ReactModal__Content",
+        "ReactModal__Content--after-open",
+        "_modal_lo4oy_73"
+       ],
+       [
+        "ReactModal__Overlay",
+        "ReactModal__Overlay--after-open",
+        "_overlay_lo4oy_89",
+        "_backgroundColor_lo4oy_103"
+       ],
+       [
+        "ReactModalPortal"
+       ]
+      ],
+      "classes": [
+       "_switch_3k8xy_11"
+      ],
+      "data": {},
+      "heading": "",
+      "landmark": {
+       "name": "",
+       "role": "dialog"
+      },
+      "layer": "top",
+      "name": "Enabled",
+      "rect": [
+       1151,
+       -46,
+       40,
+       20
+      ],
+      "role": "switch",
+      "tag": "input",
+      "xpath": "/html/body/div[11]/div[1]/div[1]/div[1]/div[2]/div[3]/div[1]/div[2]/input[1]"
+     },
+     "state": "transactions.insights-exclusions"
+    },
+    {
+     "evidence": {
+      "description": "",
+      "name": "Enabled",
+      "role": "switch",
+      "states": {
+       "checked": true
+      },
+      "template": "switch \"Enabled\" [checked=true]"
+     },
+     "occurrence": {
+      "ancestors": [
+       [
+        "_dsToggleSwitchWrapper_3k8xy_3",
+        "_checked_3k8xy_50",
+        "_rightLabel_3k8xy_34"
+       ],
+       [
+        "_header_7wi0o_8"
+       ],
+       [
+        "_container_7wi0o_1"
+       ],
+       [
+        "_contentContainer_h5n2h_5"
+       ],
+       [
+        "_large_kwlx6_9",
+        "_noHover_3n0se_28",
+        "_shadow_3n0se_25",
+        "_raisedBackground_3n0se_45",
+        "_card_lo4oy_4",
+        "_modalContainer_h5n2h_1",
+        "_xlarge_lo4oy_23"
+       ],
+       [
+        "ReactModal__Content",
+        "ReactModal__Content--after-open",
+        "_modal_lo4oy_73"
+       ],
+       [
+        "ReactModal__Overlay",
+        "ReactModal__Overlay--after-open",
+        "_overlay_lo4oy_89",
+        "_backgroundColor_lo4oy_103"
+       ],
+       [
+        "ReactModalPortal"
+       ]
+      ],
+      "classes": [
+       "_switch_3k8xy_11"
+      ],
+      "data": {},
+      "heading": "",
+      "landmark": {
+       "name": "",
+       "role": "dialog"
+      },
+      "layer": "top",
+      "name": "Enabled",
+      "rect": [
+       1151,
+       308,
+       40,
+       20
+      ],
+      "role": "switch",
+      "tag": "input",
+      "xpath": "/html/body/div[11]/div[1]/div[1]/div[1]/div[2]/div[3]/div[1]/div[2]/input[1]"
+     },
+     "state": "transactions.insights-settings-modal"
+    }
+   ],
+   "evidenceHash": "237a48de637b13685ac915e6587d3d39e59db1d33c806526adbb006addca2ab3",
+   "facts": {
+    "announced": "switch \"Enabled\" [checked=true]",
+    "axeSummary": "",
+    "criterion": "2.5.3",
+    "criterionName": "Label in Name",
+    "element": "switch \"Enabled\"",
+    "rule": "announced-as",
+    "screen": "Transaction exclusions (empty)"
+   },
+   "family": "name",
+   "guidance": "High for an unnamed form control or the sole primary action.",
+   "issueId": null,
+   "key": "name:announced-as:645e50a70e91",
+   "measured": false,
+   "primary": "transactions.insights-exclusions",
+   "proposals": [],
+   "rule": "announced-as",
+   "screens": 3,
+   "severityDefault": "medium",
+   "source": "scanner",
+   "states": [
+    "transactions.insights-exclusions",
+    "transactions.insights-settings-modal"
+   ],
+   "summary": "announced-as: announced as switch \"Enabled\" [checked=true].",
+   "title": "Missing or unclear name: switch \"Enabled\""
+  },
+  {
+   "attachments": [],
+   "attempt": 1,
+   "basis": "candidate",
+   "criteria": [
+    "4.1.2"
+   ],
+   "evidence": [
+    {
+     "evidence": {
+      "description": "",
+      "name": "3M",
+      "role": "button",
+      "states": {},
+      "template": "button \"<n>M\""
+     },
+     "occurrence": {
+      "ancestors": [
+       [
+        "_buttonWithDivider_1xt6d_80"
+       ],
+       [
+        "_container_1xt6d_3",
+        "_large_1xt6d_15"
+       ],
+       [
+        "_segmentedControlWrapper_7wi0o_41"
+       ],
+       [
+        "_settingRow_7wi0o_29"
+       ],
+       [
+        "_body_7wi0o_21"
+       ],
+       [
+        "_container_7wi0o_1"
+       ],
+       [
+        "_contentContainer_h5n2h_5"
+       ],
+       [
+        "_large_kwlx6_9",
+        "_noHover_3n0se_28",
+        "_shadow_3n0se_25",
+        "_raisedBackground_3n0se_45",
+        "_card_lo4oy_4",
+        "_modalContainer_h5n2h_1",
+        "_xlarge_lo4oy_23"
+       ]
+      ],
+      "classes": [
+       "_segment_1xt6d_7",
+       "_selected_1xt6d_60",
+       "_first_1xt6d_73"
+      ],
+      "data": {},
+      "heading": "",
+      "landmark": {
+       "name": "",
+       "role": "dialog"
+      },
+      "layer": "top",
+      "name": "3M",
+      "rect": [
+       791,
+       23,
+       135,
+       40
+      ],
+      "role": "button",
+      "tag": "button",
+      "xpath": "/html/body/div[11]/div[1]/div[1]/div[1]/div[2]/div[3]/div[2]/div[1]/div[2]/div[1]/div[1]/button[1]"
+     },
+     "state": "transactions.insights-exclusions"
+    },
+    {
+     "evidence": {
+      "description": "",
+      "name": "3M",
+      "role": "button",
+      "states": {},
+      "template": "button \"<n>M\""
+     },
+     "occurrence": {
+      "ancestors": [
+       [
+        "_buttonWithDivider_1xt6d_80"
+       ],
+       [
+        "_container_1xt6d_3",
+        "_large_1xt6d_15"
+       ],
+       [
+        "_segmentedControlWrapper_7wi0o_41"
+       ],
+       [
+        "_settingRow_7wi0o_29"
+       ],
+       [
+        "_body_7wi0o_21"
+       ],
+       [
+        "_container_7wi0o_1"
+       ],
+       [
+        "_contentContainer_h5n2h_5"
+       ],
+       [
+        "_large_kwlx6_9",
+        "_noHover_3n0se_28",
+        "_shadow_3n0se_25",
+        "_raisedBackground_3n0se_45",
+        "_card_lo4oy_4",
+        "_modalContainer_h5n2h_1",
+        "_xlarge_lo4oy_23"
+       ]
+      ],
+      "classes": [
+       "_segment_1xt6d_7",
+       "_selected_1xt6d_60",
+       "_first_1xt6d_73"
+      ],
+      "data": {},
+      "heading": "",
+      "landmark": {
+       "name": "",
+       "role": "dialog"
+      },
+      "layer": "top",
+      "name": "3M",
+      "rect": [
+       791,
+       377,
+       135,
+       40
+      ],
+      "role": "button",
+      "tag": "button",
+      "xpath": "/html/body/div[11]/div[1]/div[1]/div[1]/div[2]/div[3]/div[2]/div[1]/div[2]/div[1]/div[1]/button[1]"
+     },
+     "state": "transactions.insights-settings-modal"
+    }
+   ],
+   "evidenceHash": "6964e126c996cbca8b6d48331fd3482f8a3cbe0cc0745af5b5e9b19c70176f2d",
+   "facts": {
+    "announced": "button \"<n>M\"",
+    "axeSummary": "",
+    "criterion": "4.1.2",
+    "criterionName": "Name, Role, Value",
+    "element": "button \"<n>M\"",
+    "rule": "announced-as",
+    "screen": "Transaction exclusions (empty)"
+   },
+   "family": "role-state",
+   "guidance": "Low for optional ARIA or an invalid autocomplete token; high when aria-hidden hides the whole page.",
+   "issueId": null,
+   "key": "role-state:announced-as:4384c00605ab",
+   "measured": false,
+   "primary": "transactions.insights-exclusions",
+   "proposals": [],
+   "rule": "announced-as",
+   "screens": 3,
+   "severityDefault": "medium",
+   "source": "scanner",
+   "states": [
+    "transactions.insights-exclusions",
+    "transactions.insights-settings-modal"
+   ],
+   "summary": "announced-as: announced as button \"<n>M\".",
+   "title": "Wrong role or state: button \"<n>M\""
+  },
+  {
+   "attachments": [],
+   "attempt": 1,
+   "basis": "candidate",
+   "criteria": [
+    "4.1.2"
+   ],
+   "evidence": [
+    {
+     "evidence": {
+      "description": "",
+      "name": "6M",
+      "role": "button",
+      "states": {},
+      "template": "button \"<n>M\""
+     },
+     "occurrence": {
+      "ancestors": [
+       [
+        "_buttonWithDivider_1xt6d_80"
+       ],
+       [
+        "_container_1xt6d_3",
+        "_large_1xt6d_15"
+       ],
+       [
+        "_segmentedControlWrapper_7wi0o_41"
+       ],
+       [
+        "_settingRow_7wi0o_29"
+       ],
+       [
+        "_body_7wi0o_21"
+       ],
+       [
+        "_container_7wi0o_1"
+       ],
+       [
+        "_contentContainer_h5n2h_5"
+       ],
+       [
+        "_large_kwlx6_9",
+        "_noHover_3n0se_28",
+        "_shadow_3n0se_25",
+        "_raisedBackground_3n0se_45",
+        "_card_lo4oy_4",
+        "_modalContainer_h5n2h_1",
+        "_xlarge_lo4oy_23"
+       ]
+      ],
+      "classes": [
+       "_segment_1xt6d_7"
+      ],
+      "data": {},
+      "heading": "",
+      "landmark": {
+       "name": "",
+       "role": "dialog"
+      },
+      "layer": "top",
+      "name": "6M",
+      "rect": [
+       925,
+       24,
+       133,
+       38
+      ],
+      "role": "button",
+      "tag": "button",
+      "xpath": "/html/body/div[11]/div[1]/div[1]/div[1]/div[2]/div[3]/div[2]/div[1]/div[2]/div[1]/div[2]/button[1]"
+     },
+     "state": "transactions.insights-exclusions"
+    },
+    {
+     "evidence": {
+      "description": "",
+      "name": "6M",
+      "role": "button",
+      "states": {},
+      "template": "button \"<n>M\""
+     },
+     "occurrence": {
+      "ancestors": [
+       [
+        "_buttonWithDivider_1xt6d_80"
+       ],
+       [
+        "_container_1xt6d_3",
+        "_large_1xt6d_15"
+       ],
+       [
+        "_segmentedControlWrapper_7wi0o_41"
+       ],
+       [
+        "_settingRow_7wi0o_29"
+       ],
+       [
+        "_body_7wi0o_21"
+       ],
+       [
+        "_container_7wi0o_1"
+       ],
+       [
+        "_contentContainer_h5n2h_5"
+       ],
+       [
+        "_large_kwlx6_9",
+        "_noHover_3n0se_28",
+        "_shadow_3n0se_25",
+        "_raisedBackground_3n0se_45",
+        "_card_lo4oy_4",
+        "_modalContainer_h5n2h_1",
+        "_xlarge_lo4oy_23"
+       ]
+      ],
+      "classes": [
+       "_segment_1xt6d_7"
+      ],
+      "data": {},
+      "heading": "",
+      "landmark": {
+       "name": "",
+       "role": "dialog"
+      },
+      "layer": "top",
+      "name": "6M",
+      "rect": [
+       925,
+       378,
+       133,
+       38
+      ],
+      "role": "button",
+      "tag": "button",
+      "xpath": "/html/body/div[11]/div[1]/div[1]/div[1]/div[2]/div[3]/div[2]/div[1]/div[2]/div[1]/div[2]/button[1]"
+     },
+     "state": "transactions.insights-settings-modal"
+    }
+   ],
+   "evidenceHash": "1944f407b6e19abb6753a497b5521894424d1a5dac4954446f8fce5121093a4b",
+   "facts": {
+    "announced": "button \"<n>M\"",
+    "axeSummary": "",
+    "criterion": "4.1.2",
+    "criterionName": "Name, Role, Value",
+    "element": "button \"<n>M\"",
+    "rule": "announced-as",
+    "screen": "Transaction exclusions (empty)"
+   },
+   "family": "role-state",
+   "guidance": "Low for optional ARIA or an invalid autocomplete token; high when aria-hidden hides the whole page.",
+   "issueId": null,
+   "key": "role-state:announced-as:4e74594650db",
+   "measured": false,
+   "primary": "transactions.insights-exclusions",
+   "proposals": [],
+   "rule": "announced-as",
+   "screens": 3,
+   "severityDefault": "medium",
+   "source": "scanner",
+   "states": [
+    "transactions.insights-exclusions",
+    "transactions.insights-settings-modal"
+   ],
+   "summary": "announced-as: announced as button \"<n>M\".",
+   "title": "Wrong role or state: button \"<n>M\""
+  },
+  {
+   "attachments": [],
+   "attempt": 1,
+   "basis": "candidate",
+   "criteria": [
+    "4.1.2"
+   ],
+   "evidence": [
+    {
+     "evidence": {
+      "description": "",
+      "name": "12M",
+      "role": "button",
+      "states": {},
+      "template": "button \"<n>M\""
+     },
+     "occurrence": {
+      "ancestors": [
+       [
+        "_buttonWithDivider_1xt6d_80"
+       ],
+       [
+        "_container_1xt6d_3",
+        "_large_1xt6d_15"
+       ],
+       [
+        "_segmentedControlWrapper_7wi0o_41"
+       ],
+       [
+        "_settingRow_7wi0o_29"
+       ],
+       [
+        "_body_7wi0o_21"
+       ],
+       [
+        "_container_7wi0o_1"
+       ],
+       [
+        "_contentContainer_h5n2h_5"
+       ],
+       [
+        "_large_kwlx6_9",
+        "_noHover_3n0se_28",
+        "_shadow_3n0se_25",
+        "_raisedBackground_3n0se_45",
+        "_card_lo4oy_4",
+        "_modalContainer_h5n2h_1",
+        "_xlarge_lo4oy_23"
+       ]
+      ],
+      "classes": [
+       "_segment_1xt6d_7",
+       "_last_1xt6d_76"
+      ],
+      "data": {},
+      "heading": "",
+      "landmark": {
+       "name": "",
+       "role": "dialog"
+      },
+      "layer": "top",
+      "name": "12M",
+      "rect": [
+       1057,
+       24,
+       133,
+       38
+      ],
+      "role": "button",
+      "tag": "button",
+      "xpath": "/html/body/div[11]/div[1]/div[1]/div[1]/div[2]/div[3]/div[2]/div[1]/div[2]/div[1]/div[3]/button[1]"
+     },
+     "state": "transactions.insights-exclusions"
+    },
+    {
+     "evidence": {
+      "description": "",
+      "name": "12M",
+      "role": "button",
+      "states": {},
+      "template": "button \"<n>M\""
+     },
+     "occurrence": {
+      "ancestors": [
+       [
+        "_buttonWithDivider_1xt6d_80"
+       ],
+       [
+        "_container_1xt6d_3",
+        "_large_1xt6d_15"
+       ],
+       [
+        "_segmentedControlWrapper_7wi0o_41"
+       ],
+       [
+        "_settingRow_7wi0o_29"
+       ],
+       [
+        "_body_7wi0o_21"
+       ],
+       [
+        "_container_7wi0o_1"
+       ],
+       [
+        "_contentContainer_h5n2h_5"
+       ],
+       [
+        "_large_kwlx6_9",
+        "_noHover_3n0se_28",
+        "_shadow_3n0se_25",
+        "_raisedBackground_3n0se_45",
+        "_card_lo4oy_4",
+        "_modalContainer_h5n2h_1",
+        "_xlarge_lo4oy_23"
+       ]
+      ],
+      "classes": [
+       "_segment_1xt6d_7",
+       "_last_1xt6d_76"
+      ],
+      "data": {},
+      "heading": "",
+      "landmark": {
+       "name": "",
+       "role": "dialog"
+      },
+      "layer": "top",
+      "name": "12M",
+      "rect": [
+       1057,
+       378,
+       133,
+       38
+      ],
+      "role": "button",
+      "tag": "button",
+      "xpath": "/html/body/div[11]/div[1]/div[1]/div[1]/div[2]/div[3]/div[2]/div[1]/div[2]/div[1]/div[3]/button[1]"
+     },
+     "state": "transactions.insights-settings-modal"
+    }
+   ],
+   "evidenceHash": "e5c7fcce880bcfffa1724550cfe2a66e6507258411244f7dd7797b05ff461a34",
+   "facts": {
+    "announced": "button \"<n>M\"",
+    "axeSummary": "",
+    "criterion": "4.1.2",
+    "criterionName": "Name, Role, Value",
+    "element": "button \"<n>M\"",
+    "rule": "announced-as",
+    "screen": "Transaction exclusions (empty)"
+   },
+   "family": "role-state",
+   "guidance": "Low for optional ARIA or an invalid autocomplete token; high when aria-hidden hides the whole page.",
+   "issueId": null,
+   "key": "role-state:announced-as:50c058b7a669",
+   "measured": false,
+   "primary": "transactions.insights-exclusions",
+   "proposals": [],
+   "rule": "announced-as",
+   "screens": 3,
+   "severityDefault": "medium",
+   "source": "scanner",
+   "states": [
+    "transactions.insights-exclusions",
+    "transactions.insights-settings-modal"
+   ],
+   "summary": "announced-as: announced as button \"<n>M\".",
+   "title": "Wrong role or state: button \"<n>M\""
+  }
+ ],
+ "primaries": [
+  "transactions.insights-exclusions"
+ ],
+ "reach": {
+  "baseUrl": "https://demo.mercury.com",
+  "data": "data",
+  "map": "build/map.json",
+  "run": "2026-10-03-1525",
+  "workspace": "a11y"
+ },
+ "run": "2026-10-03-1525"
+}

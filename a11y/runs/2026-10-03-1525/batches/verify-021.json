@@ -1,0 +1,201 @@
+{
+ "area": "accounts",
+ "batch": "verify-021",
+ "findings": [
+  {
+   "attachments": [],
+   "attempt": 1,
+   "basis": "failure",
+   "criteria": [
+    "4.1.3"
+   ],
+   "evidence": [
+    {
+     "evidence": {
+      "focus": "body",
+      "focused": false,
+      "message": "Done",
+      "region": null
+     },
+     "occurrence": {
+      "ancestors": [
+       [
+        "_large_kwlx6_9",
+        "_noHover_3n0se_28",
+        "_shadow_3n0se_25",
+        "_raisedBackground_3n0se_45",
+        "_card_lo4oy_4",
+        "_defaultPadding_lo4oy_27",
+        "_small_lo4oy_11"
+       ],
+       [
+        "ReactModal__Content",
+        "ReactModal__Content--after-open",
+        "_modal_lo4oy_73"
+       ],
+       [
+        "ReactModal__Overlay",
+        "ReactModal__Overlay--after-open",
+        "_overlay_lo4oy_89",
+        "_backgroundColor_lo4oy_103"
+       ],
+       [
+        "ReactModalPortal"
+       ]
+      ],
+      "classes": [
+       "_buttonWrapper_1dfdn_29"
+      ],
+      "data": {},
+      "heading": "",
+      "landmark": {
+       "name": "",
+       "role": "dialog"
+      },
+      "layer": "top",
+      "name": "",
+      "rect": [
+       536,
+       497,
+       368,
+       40
+      ],
+      "role": "",
+      "tag": "div",
+      "xpath": "/html/body/div[11]/div[1]/div[1]/div[1]/div[3]"
+     },
+     "state": "accounts.limit-increase-sent"
+    }
+   ],
+   "evidenceHash": "72a8aa3ad37fb8b2102be8b6beeaa4ee021cc126301fdd083f192f0bc44095c6",
+   "facts": {
+    "criterion": "4.1.3",
+    "criterionName": "Status Messages",
+    "focus": "page body",
+    "message": "\"Done\"",
+    "screen": "Limit increase requested"
+   },
+   "family": "status-message",
+   "guidance": "High when it is the only confirmation of a money movement.",
+   "issueId": null,
+   "key": "status-message:status-not-announced:00a4b4aa0513",
+   "measured": false,
+   "primary": "accounts.limit-increase-sent",
+   "proposals": [],
+   "rule": "status-not-announced",
+   "screens": 1,
+   "severityDefault": "medium",
+   "source": "scanner",
+   "states": [
+    "accounts.limit-increase-sent"
+   ],
+   "summary": "\"Done\" appeared outside any live region, alert or status role that existed before it, and focus stayed on the page body.",
+   "title": "Status message not announced: \"Done\""
+  },
+  {
+   "attachments": [],
+   "attempt": 1,
+   "basis": "failure",
+   "criteria": [
+    "4.1.3"
+   ],
+   "evidence": [
+    {
+     "evidence": {
+      "focus": "body",
+      "focused": false,
+      "message": "Your IO limit increase request has been received and is currently under review. We will notify you once a decision is available. Learn more about how our IO Credit Limit works.",
+      "region": null
+     },
+     "occurrence": {
+      "ancestors": [
+       [
+        "_modalTitleAndDescription_1dfdn_1"
+       ],
+       [
+        "_large_kwlx6_9",
+        "_noHover_3n0se_28",
+        "_shadow_3n0se_25",
+        "_raisedBackground_3n0se_45",
+        "_card_lo4oy_4",
+        "_defaultPadding_lo4oy_27",
+        "_small_lo4oy_11"
+       ],
+       [
+        "ReactModal__Content",
+        "ReactModal__Content--after-open",
+        "_modal_lo4oy_73"
+       ],
+       [
+        "ReactModal__Overlay",
+        "ReactModal__Overlay--after-open",
+        "_overlay_lo4oy_89",
+        "_backgroundColor_lo4oy_103"
+       ],
+       [
+        "ReactModalPortal"
+       ]
+      ],
+      "classes": [
+       "_bodyDefault_qaod7_40",
+       "_text-default_12t49_1"
+      ],
+      "data": {},
+      "heading": "",
+      "landmark": {
+       "name": "",
+       "role": "dialog"
+      },
+      "layer": "top",
+      "name": "",
+      "rect": [
+       536,
+       400,
+       368,
+       97
+      ],
+      "role": "generic",
+      "tag": "div",
+      "xpath": "/html/body/div[11]/div[1]/div[1]/div[1]/div[2]/div[2]"
+     },
+     "state": "accounts.limit-increase-sent"
+    }
+   ],
+   "evidenceHash": "9db89429f3de59044455b9887089362a298df2c263c27045c56b9c818639d945",
+   "facts": {
+    "criterion": "4.1.3",
+    "criterionName": "Status Messages",
+    "focus": "page body",
+    "message": "\"Your IO limit increase request has been receive…\"",
+    "screen": "Limit increase requested"
+   },
+   "family": "status-message",
+   "guidance": "High when it is the only confirmation of a money movement.",
+   "issueId": null,
+   "key": "status-message:status-not-announced:268f512b6fc3",
+   "measured": false,
+   "primary": "accounts.limit-increase-sent",
+   "proposals": [],
+   "rule": "status-not-announced",
+   "screens": 1,
+   "severityDefault": "medium",
+   "source": "scanner",
+   "states": [
+    "accounts.limit-increase-sent"
+   ],
+   "summary": "\"Your IO limit increase request has been receive…\" appeared outside any live region, alert or status role that existed before it, and focus stayed on the page body.",
+   "title": "Status message not announced: \"Your IO limit increase request has been receive…\""
+  }
+ ],
+ "primaries": [
+  "accounts.limit-increase-sent"
+ ],
+ "reach": {
+  "baseUrl": "https://demo.mercury.com",
+  "data": "data",
+  "map": "build/map.json",
+  "run": "2026-10-03-1525",
+  "workspace": "a11y"
+ },
+ "run": "2026-10-03-1525"
+}

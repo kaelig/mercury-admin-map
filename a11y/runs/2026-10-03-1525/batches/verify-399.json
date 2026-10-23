@@ -1,0 +1,227 @@
+{
+ "area": "transactions",
+ "batch": "verify-399",
+ "findings": [
+  {
+   "attachments": [],
+   "attempt": 1,
+   "basis": "failure",
+   "criteria": [
+    "2.4.3"
+   ],
+   "evidence": [
+    {
+     "evidence": {
+      "closedBy": "escape",
+      "focus": {
+       "ancestors": [
+        [
+         "_toolbarButtonsContainer_54yyd_221"
+        ],
+        [
+         "_filtersAndExportButton_1ow20_72"
+        ],
+        [
+         "_topContent_1ow20_3"
+        ],
+        [
+         "_transactionsPageDashboardWrapper_1ow20_48"
+        ],
+        [
+         "_dashboardContent_809q8_29",
+         "_scrollContainer_809q8_29"
+        ],
+        [
+         "_layout_809q8_18"
+        ],
+        [
+         "_wrapper_809q8_3"
+        ],
+        []
+       ],
+       "classes": [
+        "_button_r6b2u_20",
+        "_small_r6b2u_72",
+        "_tertiary_r6b2u_153",
+        "_tooltipAnchor_18bac_4",
+        "_roundedTooltipAnchor_54yyd_217",
+        "_menuButton_54yyd_84"
+       ],
+       "data": {
+        "data-focus-visible": "true"
+       },
+       "heading": "",
+       "landmark": {
+        "name": "",
+        "role": "main"
+       },
+       "layer": "document",
+       "name": "Settings",
+       "rect": [
+        1267,
+        184,
+        32,
+        32
+       ],
+       "role": "button",
+       "tag": "button",
+       "xpath": "/html/body/div[1]/main[1]/div[1]/div[1]/div[4]/div[1]/div[2]/div[2]/div[1]/div[2]/button[3]"
+      },
+      "stops": 2,
+      "trace": [
+       {
+        "focus": {
+         "label": "Show graph Show graph Time zone PDT Manage categories",
+         "tag": "div",
+         "xpath": "/html/body/div[1]/main[1]/div[1]/div[1]/div[4]/div[1]/div[2]/div[2]/div[1]/div[2]/div[3]/div[1]"
+        },
+        "key": "start",
+        "where": "trigger"
+       },
+       {
+        "focus": {
+         "label": "on",
+         "tag": "input",
+         "xpath": "/html/body/div[1]/main[1]/div[1]/div[1]/div[4]/div[1]/div[2]/div[2]/div[1]/div[2]/div[3]/div[1]/div[1]/div[1]/div[1]/input[1]"
+        },
+        "key": "Tab",
+        "where": "outside"
+       },
+       {
+        "focus": {
+         "label": "Time zone PDT",
+         "tag": "div",
+         "xpath": "/html/body/div[1]/main[1]/div[1]/div[1]/div[4]/div[1]/div[2]/div[2]/div[1]/div[2]/div[3]/div[1]/div[2]"
+        },
+        "key": "Tab",
+        "where": "trigger"
+       },
+       {
+        "focus": {
+         "label": "UTC",
+         "tag": "div",
+         "xpath": "/html/body/div[1]/main[1]/div[1]/div[1]/div[4]/div[1]/div[2]/div[2]/div[1]/div[2]/div[3]/div[1]/div[3]/div[1]/div[1]"
+        },
+        "key": "Enter",
+        "where": "outside"
+       },
+       {
+        "focus": {
+         "label": "UTC",
+         "tag": "div",
+         "xpath": "/html/body/div[1]/main[1]/div[1]/div[1]/div[4]/div[1]/div[2]/div[2]/div[1]/div[2]/div[3]/div[1]/div[3]/div[1]/div[1]"
+        },
+        "key": "settle",
+        "where": "inside"
+       },
+       {
+        "focus": {
+         "label": "Settings",
+         "tag": "button",
+         "xpath": "/html/body/div[1]/main[1]/div[1]/div[1]/div[4]/div[1]/div[2]/div[2]/div[1]/div[2]/button[3]"
+        },
+        "key": "Escape",
+        "where": "outside"
+       },
+       {
+        "focus": {
+         "label": "Settings",
+         "tag": "button",
+         "xpath": "/html/body/div[1]/main[1]/div[1]/div[1]/div[4]/div[1]/div[2]/div[2]/div[1]/div[2]/button[3]"
+        },
+        "key": "settle",
+        "where": "outside"
+       }
+      ]
+     },
+     "occurrence": {
+      "ancestors": [
+       [
+        "_menu_54yyd_84",
+        "_mainMenu_54yyd_120",
+        "_withGroupBy_54yyd_123"
+       ],
+       [],
+       [
+        "_toolbarButtonsContainer_54yyd_221"
+       ],
+       [
+        "_filtersAndExportButton_1ow20_72"
+       ],
+       [
+        "_topContent_1ow20_3"
+       ],
+       [
+        "_transactionsPageDashboardWrapper_1ow20_48"
+       ],
+       [
+        "_dashboardContent_809q8_29",
+        "_scrollContainer_809q8_29"
+       ],
+       [
+        "_layout_809q8_18"
+       ]
+      ],
+      "classes": [
+       "_menuItem_54yyd_128"
+      ],
+      "data": {},
+      "heading": "Transactions",
+      "landmark": {
+       "name": "",
+       "role": "main"
+      },
+      "layer": "document",
+      "name": "Time zone PDT",
+      "rect": [
+       963,
+       268,
+       332,
+       40
+      ],
+      "role": "menuitem",
+      "tag": "div",
+      "xpath": "/html/body/div[1]/main[1]/div[1]/div[1]/div[4]/div[1]/div[2]/div[2]/div[1]/div[2]/div[3]/div[1]/div[2]"
+     },
+     "state": "transactions.time-zone-submenu"
+    }
+   ],
+   "evidenceHash": "b52e1a933792dd58465ff0826f00250511caeae1c17cdf2a70ed1af08d15afed",
+   "facts": {
+    "criterion": "2.4.3",
+    "criterionName": "Focus Order",
+    "element": "menuitem \"Time zone PDT\"",
+    "focus": "button \"Settings\"",
+    "overlay": "menu \"Time zone PDT\"",
+    "screen": "Time zone submenu"
+   },
+   "family": "dialog-focus",
+   "guidance": "High when controls inside are unreachable.",
+   "issueId": null,
+   "key": "dialog-focus:dialog-focus-not-returned:96033b7c351d",
+   "measured": false,
+   "primary": "transactions.time-zone-submenu",
+   "proposals": [],
+   "rule": "dialog-focus-not-returned",
+   "screens": 1,
+   "severityDefault": "low",
+   "source": "scanner",
+   "states": [
+    "transactions.time-zone-submenu"
+   ],
+   "summary": "Esc closed the menu \"Time zone PDT\" and focus went to the button \"Settings\", not back to the menuitem \"Time zone PDT\".",
+   "title": "Focus lost after closing menu \"Time zone PDT\""
+  }
+ ],
+ "primaries": [
+  "transactions.time-zone-submenu"
+ ],
+ "reach": {
+  "baseUrl": "https://demo.mercury.com",
+  "data": "data",
+  "map": "build/map.json",
+  "run": "2026-10-03-1525",
+  "workspace": "a11y"
+ },
+ "run": "2026-10-03-1525"
+}

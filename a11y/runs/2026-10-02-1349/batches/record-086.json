@@ -1,0 +1,53 @@
+{
+ "batch": "record-086",
+ "reach": {
+  "baseUrl": "https://demo.mercury.com",
+  "data": "data",
+  "map": "build/map.json",
+  "run": "2026-10-02-1349",
+  "workspace": "a11y"
+ },
+ "run": "2026-10-02-1349",
+ "states": [
+  {
+   "area": "invoicing",
+   "draft": "not drafted: its parent had no accepted recipe when the drafter ran; the conductor rejected the previous recipe: missing required value: the second line item is blank (no name, unit price 0.00 placeholder) and Next is disabled, while the capture shows two filled line items and Next enabled; the index-1 '0.00' fill appears to land on row one's quantity (shows 1.00) and not on row two's price",
+   "image": "screens/invoicing/15-create-line-items-filled.png",
+   "kind": "form-state",
+   "labels": [
+    "Click Request money",
+    "Click the Name combobox",
+    "Pick a customer",
+    "Click Next",
+    "Click the line item field",
+    "Type a custom item name",
+    "Enter quantity, unit price and memo"
+   ],
+   "mutates": false,
+   "note": "Two line items (catalog Advisory Retainer and a custom Onboarding workshop x2) plus memo; preview and total update to $7,500.00.",
+   "parent": "invoicing.create-line-item-typed",
+   "state": "invoicing.create-line-items-filled",
+   "title": "Line items filled"
+  },
+  {
+   "area": "invoicing",
+   "draft": "not drafted: its parent had no accepted recipe when the drafter ran",
+   "image": "screens/invoicing/76-payment-link-filled.png",
+   "kind": "form-state",
+   "labels": [
+    "Click Request money",
+    "Click the Name combobox",
+    "Pick a customer",
+    "Select Request money without an invoice",
+    "Click Next",
+    "Click Create & send with no amount",
+    "Enter an amount and memo"
+   ],
+   "mutates": true,
+   "note": "Amount $2,500 and memo entered; payer preview shows the amount.",
+   "parent": "invoicing.payment-link-error",
+   "state": "invoicing.payment-link-filled",
+   "title": "Payment link filled"
+  }
+ ]
+}

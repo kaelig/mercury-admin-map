@@ -1,0 +1,19 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Small buttons beside text</title>
+<style>
+  body { font: 16px/1.5 Arial, sans-serif; color: #1a1a1a; background: #ffffff; margin: 24px; }
+  /* Three 16x16 inline-block buttons with no gap: the centers are 16 px apart, so each 24 px circle
+     overlaps its neighbor. They sit in a paragraph with text, so axe's target-size skips them. */
+  .s { width: 16px; height: 16px; padding: 0; margin: 0; border: 1px solid #1a1a1a; background: #ffffff; vertical-align: middle; box-sizing: border-box; }
+</style>
+</head>
+<body>
+<main>
+  <h1>Filters</h1>
+  <p>Sort by <button type="button" class="s" aria-label="Date"></button><button type="button" class="s" aria-label="Amount"></button><button type="button" class="s" aria-label="Name"></button></p>
+</main>
+</body>
+</html>

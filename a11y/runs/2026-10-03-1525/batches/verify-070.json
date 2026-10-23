@@ -1,0 +1,1412 @@
+{
+ "area": "billpay",
+ "batch": "verify-070",
+ "findings": [
+  {
+   "attachments": [],
+   "attempt": 1,
+   "basis": "violation",
+   "criteria": [
+    "1.4.3"
+   ],
+   "evidence": [
+    {
+     "evidence": {
+      "bgColor": "#ffffff",
+      "contrastRatio": 2.68,
+      "expectedContrastRatio": "4.5:1",
+      "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 2.68 (foreground color: #9d9da8, background color: #ffffff, font size: 11.3pt (15px), font weight: normal). Expected contrast ratio of 4.5:1",
+      "fgColor": "#9d9da8",
+      "fontSize": "11.3pt (15px)",
+      "fontWeight": "normal",
+      "messageKey": null
+     },
+     "occurrence": {
+      "ancestors": [
+       [
+        "_conditionRow_1dpae_115"
+       ],
+       [
+        "_stack_1dpae_105"
+       ],
+       [
+        "_tableData_1u4jr_5",
+        "_alignmentStart_1u4jr_12",
+        "_collapsibleColumn_1acga_26"
+       ],
+       [
+        "_tableRow_137xu_3",
+        "_interactiveRows_137xu_35"
+       ],
+       [
+        "_tableBody_1cp5b_1"
+       ],
+       [
+        "_table_1acga_4",
+        "_table_1dpae_4"
+       ],
+       [
+        "_tableWrapper_1acga_4"
+       ],
+       [
+        "_contentSection_1g3sn_100"
+       ]
+      ],
+      "classes": [
+       "_bodyDefault_qaod7_40",
+       "_text-disabled_12t49_1"
+      ],
+      "data": {},
+      "heading": "Accounting Settings",
+      "landmark": {
+       "name": "",
+       "role": "main"
+      },
+      "layer": "document",
+      "name": "",
+      "rect": [
+       856,
+       697,
+       128,
+       24
+      ],
+      "role": "generic",
+      "tag": "div",
+      "xpath": "/html/body/div[1]/main[1]/div[1]/div[1]/div[4]/div[1]/div[2]/div[3]/div[2]/div[1]/table[1]/tbody[1]/tr[6]/td[4]/div[1]/div[1]/div[1]"
+     },
+     "state": "billpay.categorization-rules"
+    },
+    {
+     "evidence": {
+      "bgColor": "#ffffff",
+      "contrastRatio": 2.68,
+      "expectedContrastRatio": "4.5:1",
+      "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 2.68 (foreground color: #9d9da8, background color: #ffffff, font size: 11.3pt (15px), font weight: normal). Expected contrast ratio of 4.5:1",
+      "fgColor": "#9d9da8",
+      "fontSize": "11.3pt (15px)",
+      "fontWeight": "normal",
+      "messageKey": null
+     },
+     "occurrence": {
+      "ancestors": [
+       [
+        "_conditionRow_1dpae_115"
+       ],
+       [
+        "_stack_1dpae_105"
+       ],
+       [
+        "_tableData_1u4jr_5",
+        "_alignmentStart_1u4jr_12"
+       ],
+       [
+        "_tableRow_137xu_3",
+        "_interactiveRows_137xu_35"
+       ],
+       [
+        "_tableBody_1cp5b_1"
+       ],
+       [
+        "_table_1acga_4",
+        "_table_1dpae_4",
+        "_tableCondensed_1dpae_93"
+       ],
+       [
+        "_isCondensed_1acga_61",
+        "_tableWrapper_1acga_4"
+       ],
+       [
+        "_contentSection_1g3sn_100"
+       ]
+      ],
+      "classes": [
+       "_bodyDefault_qaod7_40",
+       "_text-disabled_12t49_1"
+      ],
+      "data": {},
+      "heading": "Accounting Settings",
+      "landmark": {
+       "name": "",
+       "role": "main"
+      },
+      "layer": "document",
+      "name": "",
+      "rect": [
+       450,
+       632,
+       106,
+       48
+      ],
+      "role": "generic",
+      "tag": "div",
+      "xpath": "/html/body/div[1]/main[1]/div[1]/div[1]/div[4]/div[1]/div[2]/div[3]/div[2]/div[1]/table[1]/tbody[1]/tr[6]/td[2]/div[1]/div[1]/div[1]"
+     },
+     "state": "billpay.edit-rule"
+    }
+   ],
+   "evidenceHash": "727e978911dc2d9ea8e97ab286b25b49cce35ed8a3d88c468dd4e9537eb55fb3",
+   "facts": {
+    "bg": "#ffffff",
+    "criterion": "1.4.3",
+    "criterionName": "Contrast (Minimum)",
+    "element": "text in \"Accounting Settings\"",
+    "fg": "#9d9da8",
+    "ratio": "2.68",
+    "required": "4.5",
+    "rule": "color-contrast",
+    "screen": "Categorization rules",
+    "screens": 6
+   },
+   "family": "contrast",
+   "guidance": "High under 2:1, or under 3:1 for essential text.",
+   "issueId": null,
+   "key": "contrast:color-contrast:beef839786d9",
+   "measured": true,
+   "primary": "billpay.categorization-rules",
+   "proposals": [],
+   "rule": "color-contrast",
+   "screens": 6,
+   "severityDefault": "medium",
+   "source": "scanner",
+   "states": [
+    "billpay.categorization-rules",
+    "billpay.edit-rule"
+   ],
+   "summary": "axe color-contrast: #9d9da8 on #ffffff measures 2.68:1; AA needs 4.5:1.",
+   "title": "Low contrast: text in \"Accounting Settings\""
+  },
+  {
+   "attachments": [],
+   "attempt": 1,
+   "basis": "failure",
+   "criteria": [
+    "2.4.7",
+    "2.4.3"
+   ],
+   "evidence": [
+    {
+     "evidence": {
+      "box": [
+       1170,
+       540,
+       320,
+       40
+      ],
+      "focus": {
+       "ancestors": [
+        [
+         "_selectWrapper_1m31o_7"
+        ],
+        [
+         "_enrichmentSelect_16juw_78"
+        ],
+        [
+         "_enrichmentRow_16juw_67"
+        ],
+        [
+         "_enrichment_16juw_60"
+        ],
+        [
+         "_container_16juw_6"
+        ],
+        [
+         "_panelSection_d3i56_148"
+        ],
+        [
+         "_panelBody_d3i56_64",
+         "_body_16juw_1"
+        ],
+        [
+         "_large_kwlx6_9",
+         "_noHover_3n0se_28",
+         "_shadow_3n0se_25",
+         "_raisedBackground_3n0se_45",
+         "_panel_d3i56_55"
+        ]
+       ],
+       "classes": [
+        "_select_1m31o_7"
+       ],
+       "data": {
+        "data-focus-visible": "true"
+       },
+       "heading": "Accounting Settings",
+       "landmark": {
+        "name": "",
+        "role": "complementary"
+       },
+       "layer": "document",
+       "name": "Outcome",
+       "rect": [
+        1170,
+        540,
+        320,
+        40
+       ],
+       "role": "combobox",
+       "tag": "button",
+       "xpath": "/html/body/div[1]/main[1]/div[1]/div[1]/div[4]/div[1]/div[2]/div[3]/div[2]/aside[1]/div[1]/div[1]/section[1]/div[1]/div[2]/div[2]/div[1]/div[1]/button[1]"
+      },
+      "hidden": "invisible",
+      "previous": {
+       "ancestors": [
+        [
+         "_container_16juw_6"
+        ],
+        [
+         "_panelSection_d3i56_148"
+        ],
+        [
+         "_panelBody_d3i56_64",
+         "_body_16juw_1"
+        ],
+        [
+         "_large_kwlx6_9",
+         "_noHover_3n0se_28",
+         "_shadow_3n0se_25",
+         "_raisedBackground_3n0se_45",
+         "_panel_d3i56_55"
+        ],
+        [
+         "_transitionWrapper_d3i56_5"
+        ],
+        [
+         "_contentSection_1g3sn_100"
+        ],
+        [
+         "_lowerPageWrapper_1g3sn_95"
+        ],
+        [
+         "_mappingPageDashboardWrapper_2fzjz_3",
+         "_pageContent_809q8_151",
+         "_pageContentWidth_809q8_184",
+         "_footerPadding_809q8_115"
+        ]
+       ],
+       "classes": [
+        "_button_r6b2u_20",
+        "_small_r6b2u_72",
+        "_secondary_r6b2u_126",
+        "_appearDisabled_r6b2u_16",
+        "_addConditionButton_16juw_55"
+       ],
+       "data": {},
+       "heading": "Accounting Settings",
+       "landmark": {
+        "name": "",
+        "role": "complementary"
+       },
+       "layer": "document",
+       "name": "Add condition",
+       "rect": [
+        1146,
+        456,
+        32,
+        32
+       ],
+       "role": "button",
+       "tag": "button",
+       "xpath": "/html/body/div[1]/main[1]/div[1]/div[1]/div[4]/div[1]/div[2]/div[3]/div[2]/aside[1]/div[1]/div[1]/section[1]/div[1]/button[1]"
+      },
+      "stop": 56,
+      "stops": 61
+     },
+     "occurrence": {
+      "ancestors": [
+       [
+        "_selectWrapper_1m31o_7"
+       ],
+       [
+        "_enrichmentSelect_16juw_78"
+       ],
+       [
+        "_enrichmentRow_16juw_67"
+       ],
+       [
+        "_enrichment_16juw_60"
+       ],
+       [
+        "_container_16juw_6"
+       ],
+       [
+        "_panelSection_d3i56_148"
+       ],
+       [
+        "_panelBody_d3i56_64",
+        "_body_16juw_1"
+       ],
+       [
+        "_large_kwlx6_9",
+        "_noHover_3n0se_28",
+        "_shadow_3n0se_25",
+        "_raisedBackground_3n0se_45",
+        "_panel_d3i56_55"
+       ]
+      ],
+      "classes": [
+       "_select_1m31o_7"
+      ],
+      "data": {
+       "data-focus-visible": "true"
+      },
+      "heading": "Accounting Settings",
+      "landmark": {
+       "name": "",
+       "role": "complementary"
+      },
+      "layer": "document",
+      "name": "Outcome",
+      "rect": [
+       1170,
+       540,
+       320,
+       40
+      ],
+      "role": "combobox",
+      "tag": "button",
+      "xpath": "/html/body/div[1]/main[1]/div[1]/div[1]/div[4]/div[1]/div[2]/div[3]/div[2]/aside[1]/div[1]/div[1]/section[1]/div[1]/div[2]/div[2]/div[1]/div[1]/button[1]"
+     },
+     "state": "billpay.categorization-rules"
+    }
+   ],
+   "evidenceHash": "36a5b2fb226509d6967cf67364c9ee1e870baec9c2f3200a1c784c8ad7afef6d",
+   "facts": {
+    "criterion": "2.4.7",
+    "criterionName": "Focus Visible",
+    "element": "combobox \"Outcome\"",
+    "screen": "Categorization rules",
+    "screens": 1,
+    "stop": "56"
+   },
+   "family": "focus-visible",
+   "guidance": "High on shared components on primary paths.",
+   "issueId": null,
+   "key": "focus-visible:focus-hidden:14f276823b56",
+   "measured": true,
+   "primary": "billpay.categorization-rules",
+   "proposals": [],
+   "rule": "focus-hidden",
+   "screens": 1,
+   "severityDefault": "medium",
+   "source": "scanner",
+   "states": [
+    "billpay.categorization-rules"
+   ],
+   "summary": "Tab stop 56 focused the combobox \"Outcome\", which is invisible, has no size, or sits off screen.",
+   "title": "Tab stops on hidden element: combobox \"Outcome\""
+  },
+  {
+   "attachments": [],
+   "attempt": 1,
+   "basis": "failure",
+   "criteria": [
+    "2.4.7",
+    "2.4.3"
+   ],
+   "evidence": [
+    {
+     "evidence": {
+      "box": [
+       1431,
+       461,
+       59,
+       32
+      ],
+      "focus": {
+       "ancestors": [
+        [
+         "_callToActionButtons_1cqpy_35"
+        ],
+        [
+         "_callToActionContainer_1cqpy_30"
+        ],
+        [
+         "_panelFooter_d3i56_66"
+        ],
+        [
+         "_large_kwlx6_9",
+         "_noHover_3n0se_28",
+         "_shadow_3n0se_25",
+         "_raisedBackground_3n0se_45",
+         "_panel_d3i56_55"
+        ],
+        [
+         "_transitionWrapper_d3i56_5"
+        ],
+        [
+         "_contentSection_1g3sn_100"
+        ],
+        [
+         "_lowerPageWrapper_1g3sn_95"
+        ],
+        [
+         "_mappingPageDashboardWrapper_2fzjz_3",
+         "_pageContent_809q8_151",
+         "_pageContentWidth_809q8_184",
+         "_footerPadding_809q8_115"
+        ]
+       ],
+       "classes": [
+        "_button_r6b2u_20",
+        "_small_r6b2u_72",
+        "_primary_r6b2u_104",
+        "_appearDisabled_r6b2u_16",
+        "_tooltipAnchor_18bac_4"
+       ],
+       "data": {
+        "data-focus-visible": "true"
+       },
+       "heading": "Accounting Settings",
+       "landmark": {
+        "name": "",
+        "role": "complementary"
+       },
+       "layer": "document",
+       "name": "Edit",
+       "rect": [
+        1431,
+        461,
+        59,
+        32
+       ],
+       "role": "button",
+       "tag": "button",
+       "xpath": "/html/body/div[1]/main[1]/div[1]/div[1]/div[4]/div[1]/div[2]/div[3]/div[2]/aside[2]/div[1]/section[2]/div[1]/div[1]/button[2]"
+      },
+      "hidden": "invisible",
+      "previous": {
+       "ancestors": [
+        [
+         "_callToActionButtons_1cqpy_35"
+        ],
+        [
+         "_callToActionContainer_1cqpy_30"
+        ],
+        [
+         "_panelFooter_d3i56_66"
+        ],
+        [
+         "_large_kwlx6_9",
+         "_noHover_3n0se_28",
+         "_shadow_3n0se_25",
+         "_raisedBackground_3n0se_45",
+         "_panel_d3i56_55"
+        ],
+        [
+         "_transitionWrapper_d3i56_5"
+        ],
+        [
+         "_contentSection_1g3sn_100"
+        ],
+        [
+         "_lowerPageWrapper_1g3sn_95"
+        ],
+        [
+         "_mappingPageDashboardWrapper_2fzjz_3",
+         "_pageContent_809q8_151",
+         "_pageContentWidth_809q8_184",
+         "_footerPadding_809q8_115"
+        ]
+       ],
+       "classes": [
+        "_button_r6b2u_20",
+        "_small_r6b2u_72",
+        "_destructive_r6b2u_186"
+       ],
+       "data": {},
+       "heading": "Accounting Settings",
+       "landmark": {
+        "name": "",
+        "role": "complementary"
+       },
+       "layer": "document",
+       "name": "Delete rule",
+       "rect": [
+        1299,
+        461,
+        120,
+        32
+       ],
+       "role": "button",
+       "tag": "button",
+       "xpath": "/html/body/div[1]/main[1]/div[1]/div[1]/div[4]/div[1]/div[2]/div[3]/div[2]/aside[2]/div[1]/section[2]/div[1]/div[1]/button[1]"
+      },
+      "stop": 59,
+      "stops": 61
+     },
+     "occurrence": {
+      "ancestors": [
+       [
+        "_callToActionButtons_1cqpy_35"
+       ],
+       [
+        "_callToActionContainer_1cqpy_30"
+       ],
+       [
+        "_panelFooter_d3i56_66"
+       ],
+       [
+        "_large_kwlx6_9",
+        "_noHover_3n0se_28",
+        "_shadow_3n0se_25",
+        "_raisedBackground_3n0se_45",
+        "_panel_d3i56_55"
+       ],
+       [
+        "_transitionWrapper_d3i56_5"
+       ],
+       [
+        "_contentSection_1g3sn_100"
+       ],
+       [
+        "_lowerPageWrapper_1g3sn_95"
+       ],
+       [
+        "_mappingPageDashboardWrapper_2fzjz_3",
+        "_pageContent_809q8_151",
+        "_pageContentWidth_809q8_184",
+        "_footerPadding_809q8_115"
+       ]
+      ],
+      "classes": [
+       "_button_r6b2u_20",
+       "_small_r6b2u_72",
+       "_primary_r6b2u_104",
+       "_appearDisabled_r6b2u_16",
+       "_tooltipAnchor_18bac_4"
+      ],
+      "data": {
+       "data-focus-visible": "true"
+      },
+      "heading": "Accounting Settings",
+      "landmark": {
+       "name": "",
+       "role": "complementary"
+      },
+      "layer": "document",
+      "name": "Edit",
+      "rect": [
+       1431,
+       461,
+       59,
+       32
+      ],
+      "role": "button",
+      "tag": "button",
+      "xpath": "/html/body/div[1]/main[1]/div[1]/div[1]/div[4]/div[1]/div[2]/div[3]/div[2]/aside[2]/div[1]/section[2]/div[1]/div[1]/button[2]"
+     },
+     "state": "billpay.categorization-rules"
+    }
+   ],
+   "evidenceHash": "bec32c5ece55352683c14d9e54b3afc8034a5d55a62288ed3f47cd72c8bb38d2",
+   "facts": {
+    "criterion": "2.4.7",
+    "criterionName": "Focus Visible",
+    "element": "button \"Edit\"",
+    "screen": "Categorization rules",
+    "screens": 1,
+    "stop": "59"
+   },
+   "family": "focus-visible",
+   "guidance": "High on shared components on primary paths.",
+   "issueId": null,
+   "key": "focus-visible:focus-hidden:5d23381d5d5a",
+   "measured": true,
+   "primary": "billpay.categorization-rules",
+   "proposals": [],
+   "rule": "focus-hidden",
+   "screens": 1,
+   "severityDefault": "medium",
+   "source": "scanner",
+   "states": [
+    "billpay.categorization-rules"
+   ],
+   "summary": "Tab stop 59 focused the button \"Edit\", which is invisible, has no size, or sits off screen.",
+   "title": "Tab stops on hidden element: button \"Edit\""
+  },
+  {
+   "attachments": [],
+   "attempt": 1,
+   "basis": "failure",
+   "criteria": [
+    "2.4.7",
+    "2.4.3"
+   ],
+   "evidence": [
+    {
+     "evidence": {
+      "box": [
+       1146,
+       456,
+       32,
+       32
+      ],
+      "focus": {
+       "ancestors": [
+        [
+         "_container_16juw_6"
+        ],
+        [
+         "_panelSection_d3i56_148"
+        ],
+        [
+         "_panelBody_d3i56_64",
+         "_body_16juw_1"
+        ],
+        [
+         "_large_kwlx6_9",
+         "_noHover_3n0se_28",
+         "_shadow_3n0se_25",
+         "_raisedBackground_3n0se_45",
+         "_panel_d3i56_55"
+        ],
+        [
+         "_transitionWrapper_d3i56_5"
+        ],
+        [
+         "_contentSection_1g3sn_100"
+        ],
+        [
+         "_lowerPageWrapper_1g3sn_95"
+        ],
+        [
+         "_mappingPageDashboardWrapper_2fzjz_3",
+         "_pageContent_809q8_151",
+         "_pageContentWidth_809q8_184",
+         "_footerPadding_809q8_115"
+        ]
+       ],
+       "classes": [
+        "_button_r6b2u_20",
+        "_small_r6b2u_72",
+        "_secondary_r6b2u_126",
+        "_appearDisabled_r6b2u_16",
+        "_addConditionButton_16juw_55"
+       ],
+       "data": {},
+       "heading": "Accounting Settings",
+       "landmark": {
+        "name": "",
+        "role": "complementary"
+       },
+       "layer": "document",
+       "name": "Add condition",
+       "rect": [
+        1146,
+        456,
+        32,
+        32
+       ],
+       "role": "button",
+       "tag": "button",
+       "xpath": "/html/body/div[1]/main[1]/div[1]/div[1]/div[4]/div[1]/div[2]/div[3]/div[2]/aside[1]/div[1]/div[1]/section[1]/div[1]/button[1]"
+      },
+      "hidden": "invisible",
+      "previous": {
+       "ancestors": [
+        [
+         "_inputWrapper_11c85_6"
+        ],
+        [
+         "_wrapper_1xgdp_8"
+        ],
+        [
+         "_condition_16juw_12"
+        ],
+        [
+         "_conditions_16juw_12"
+        ],
+        [
+         "_container_16juw_6"
+        ],
+        [
+         "_panelSection_d3i56_148"
+        ],
+        [
+         "_panelBody_d3i56_64",
+         "_body_16juw_1"
+        ],
+        [
+         "_large_kwlx6_9",
+         "_noHover_3n0se_28",
+         "_shadow_3n0se_25",
+         "_raisedBackground_3n0se_45",
+         "_panel_d3i56_55"
+        ]
+       ],
+       "classes": [
+        "_input_11c85_6"
+       ],
+       "data": {
+        "data-1p-ignore": "true",
+        "data-active-item": "true",
+        "data-bwignore": "true",
+        "data-focus-visible": "true",
+        "data-lpignore": "true"
+       },
+       "heading": "Accounting Settings",
+       "landmark": {
+        "name": "",
+        "role": "complementary"
+       },
+       "layer": "document",
+       "name": "Condition 1",
+       "rect": [
+        1146,
+        392,
+        311,
+        40
+       ],
+       "role": "combobox",
+       "tag": "input",
+       "xpath": "/html/body/div[1]/main[1]/div[1]/div[1]/div[4]/div[1]/div[2]/div[3]/div[2]/aside[1]/div[1]/div[1]/section[1]/div[1]/div[1]/div[1]/div[2]/div[1]/input[1]"
+      },
+      "stop": 55,
+      "stops": 61
+     },
+     "occurrence": {
+      "ancestors": [
+       [
+        "_container_16juw_6"
+       ],
+       [
+        "_panelSection_d3i56_148"
+       ],
+       [
+        "_panelBody_d3i56_64",
+        "_body_16juw_1"
+       ],
+       [
+        "_large_kwlx6_9",
+        "_noHover_3n0se_28",
+        "_shadow_3n0se_25",
+        "_raisedBackground_3n0se_45",
+        "_panel_d3i56_55"
+       ],
+       [
+        "_transitionWrapper_d3i56_5"
+       ],
+       [
+        "_contentSection_1g3sn_100"
+       ],
+       [
+        "_lowerPageWrapper_1g3sn_95"
+       ],
+       [
+        "_mappingPageDashboardWrapper_2fzjz_3",
+        "_pageContent_809q8_151",
+        "_pageContentWidth_809q8_184",
+        "_footerPadding_809q8_115"
+       ]
+      ],
+      "classes": [
+       "_button_r6b2u_20",
+       "_small_r6b2u_72",
+       "_secondary_r6b2u_126",
+       "_appearDisabled_r6b2u_16",
+       "_addConditionButton_16juw_55"
+      ],
+      "data": {},
+      "heading": "Accounting Settings",
+      "landmark": {
+       "name": "",
+       "role": "complementary"
+      },
+      "layer": "document",
+      "name": "Add condition",
+      "rect": [
+       1146,
+       456,
+       32,
+       32
+      ],
+      "role": "button",
+      "tag": "button",
+      "xpath": "/html/body/div[1]/main[1]/div[1]/div[1]/div[4]/div[1]/div[2]/div[3]/div[2]/aside[1]/div[1]/div[1]/section[1]/div[1]/button[1]"
+     },
+     "state": "billpay.categorization-rules"
+    }
+   ],
+   "evidenceHash": "2410eb81cfcf17c2141934ed7c3d478c53f515a6c220bb4dd256d83ddc85f2ec",
+   "facts": {
+    "criterion": "2.4.7",
+    "criterionName": "Focus Visible",
+    "element": "button \"Add condition\"",
+    "screen": "Categorization rules",
+    "screens": 1,
+    "stop": "55"
+   },
+   "family": "focus-visible",
+   "guidance": "High on shared components on primary paths.",
+   "issueId": null,
+   "key": "focus-visible:focus-hidden:c8b80d56c997",
+   "measured": true,
+   "primary": "billpay.categorization-rules",
+   "proposals": [],
+   "rule": "focus-hidden",
+   "screens": 1,
+   "severityDefault": "medium",
+   "source": "scanner",
+   "states": [
+    "billpay.categorization-rules"
+   ],
+   "summary": "Tab stop 55 focused the button \"Add condition\", which is invisible, has no size, or sits off screen.",
+   "title": "Tab stops on hidden element: button \"Add condition\""
+  },
+  {
+   "attachments": [],
+   "attempt": 1,
+   "basis": "failure",
+   "criteria": [
+    "2.4.7",
+    "2.4.3"
+   ],
+   "evidence": [
+    {
+     "evidence": {
+      "box": [
+       1146,
+       392,
+       311,
+       40
+      ],
+      "focus": {
+       "ancestors": [
+        [
+         "_inputWrapper_11c85_6"
+        ],
+        [
+         "_wrapper_1xgdp_8"
+        ],
+        [
+         "_condition_16juw_12"
+        ],
+        [
+         "_conditions_16juw_12"
+        ],
+        [
+         "_container_16juw_6"
+        ],
+        [
+         "_panelSection_d3i56_148"
+        ],
+        [
+         "_panelBody_d3i56_64",
+         "_body_16juw_1"
+        ],
+        [
+         "_large_kwlx6_9",
+         "_noHover_3n0se_28",
+         "_shadow_3n0se_25",
+         "_raisedBackground_3n0se_45",
+         "_panel_d3i56_55"
+        ]
+       ],
+       "classes": [
+        "_input_11c85_6"
+       ],
+       "data": {
+        "data-1p-ignore": "true",
+        "data-active-item": "true",
+        "data-bwignore": "true",
+        "data-focus-visible": "true",
+        "data-lpignore": "true"
+       },
+       "heading": "Accounting Settings",
+       "landmark": {
+        "name": "",
+        "role": "complementary"
+       },
+       "layer": "document",
+       "name": "Condition 1",
+       "rect": [
+        1146,
+        392,
+        311,
+        40
+       ],
+       "role": "combobox",
+       "tag": "input",
+       "xpath": "/html/body/div[1]/main[1]/div[1]/div[1]/div[4]/div[1]/div[2]/div[3]/div[2]/aside[1]/div[1]/div[1]/section[1]/div[1]/div[1]/div[1]/div[2]/div[1]/input[1]"
+      },
+      "hidden": "invisible",
+      "previous": {
+       "ancestors": [
+        [
+         "_closeButtonWrapper_d3i56_118"
+        ],
+        [
+         "_headerActionsWrapper_d3i56_93"
+        ],
+        [
+         "_panelHeader_d3i56_65"
+        ],
+        [
+         "_large_kwlx6_9",
+         "_noHover_3n0se_28",
+         "_shadow_3n0se_25",
+         "_raisedBackground_3n0se_45",
+         "_panel_d3i56_55"
+        ],
+        [
+         "_transitionWrapper_d3i56_5"
+        ],
+        [
+         "_contentSection_1g3sn_100"
+        ],
+        [
+         "_lowerPageWrapper_1g3sn_95"
+        ],
+        [
+         "_mappingPageDashboardWrapper_2fzjz_3",
+         "_pageContent_809q8_151",
+         "_pageContentWidth_809q8_184",
+         "_footerPadding_809q8_115"
+        ]
+       ],
+       "classes": [
+        "_additionalActionsButton_d3i56_99"
+       ],
+       "data": {},
+       "heading": "Accounting Settings",
+       "landmark": {
+        "name": "",
+        "role": "complementary"
+       },
+       "layer": "document",
+       "name": "Close detail panel",
+       "rect": [
+        1466,
+        302,
+        24,
+        24
+       ],
+       "role": "button",
+       "tag": "button",
+       "xpath": "/html/body/div[1]/main[1]/div[1]/div[1]/div[4]/div[1]/div[2]/div[3]/div[2]/aside[1]/div[1]/section[1]/div[2]/span[1]/button[1]"
+      },
+      "stop": 54,
+      "stops": 61
+     },
+     "occurrence": {
+      "ancestors": [
+       [
+        "_inputWrapper_11c85_6"
+       ],
+       [
+        "_wrapper_1xgdp_8"
+       ],
+       [
+        "_condition_16juw_12"
+       ],
+       [
+        "_conditions_16juw_12"
+       ],
+       [
+        "_container_16juw_6"
+       ],
+       [
+        "_panelSection_d3i56_148"
+       ],
+       [
+        "_panelBody_d3i56_64",
+        "_body_16juw_1"
+       ],
+       [
+        "_large_kwlx6_9",
+        "_noHover_3n0se_28",
+        "_shadow_3n0se_25",
+        "_raisedBackground_3n0se_45",
+        "_panel_d3i56_55"
+       ]
+      ],
+      "classes": [
+       "_input_11c85_6"
+      ],
+      "data": {
+       "data-1p-ignore": "true",
+       "data-active-item": "true",
+       "data-bwignore": "true",
+       "data-focus-visible": "true",
+       "data-lpignore": "true"
+      },
+      "heading": "Accounting Settings",
+      "landmark": {
+       "name": "",
+       "role": "complementary"
+      },
+      "layer": "document",
+      "name": "Condition 1",
+      "rect": [
+       1146,
+       392,
+       311,
+       40
+      ],
+      "role": "combobox",
+      "tag": "input",
+      "xpath": "/html/body/div[1]/main[1]/div[1]/div[1]/div[4]/div[1]/div[2]/div[3]/div[2]/aside[1]/div[1]/div[1]/section[1]/div[1]/div[1]/div[1]/div[2]/div[1]/input[1]"
+     },
+     "state": "billpay.categorization-rules"
+    },
+    {
+     "evidence": {
+      "box": [
+       916,
+       236,
+       431,
+       40
+      ],
+      "focus": {
+       "ancestors": [
+        [
+         "_inputWrapper_11c85_6"
+        ],
+        [
+         "_wrapper_1xgdp_8"
+        ],
+        [
+         "_condition_1izbt_22"
+        ],
+        [
+         "_conditions_1izbt_22"
+        ],
+        [
+         "_form_1izbt_10"
+        ],
+        [
+         "_container_1izbt_3"
+        ],
+        [
+         "_creationCard_16qcz_1"
+        ],
+        [
+         "_entityCardCarousel_1pqcl_168"
+        ]
+       ],
+       "classes": [
+        "_input_11c85_6"
+       ],
+       "data": {
+        "data-1p-ignore": "true",
+        "data-active-item": "true",
+        "data-bwignore": "true",
+        "data-focus-visible": "true",
+        "data-lpignore": "true"
+       },
+       "heading": "",
+       "landmark": {
+        "name": "",
+        "role": "main"
+       },
+       "layer": "top",
+       "name": "Condition",
+       "rect": [
+        916,
+        236,
+        431,
+        40
+       ],
+       "role": "combobox",
+       "tag": "input",
+       "xpath": "/html/body/div[1]/main[1]/div[1]/div[1]/div[1]/div[4]/div[1]/div[2]/div[1]/div[2]/div[1]/div[2]/div[1]/div[1]/div[1]/div[1]/div[2]/div[1]/input[1]"
+      },
+      "hidden": "invisible",
+      "previous": {
+       "ancestors": [
+        [
+         "_tooltipAnchor_18bac_4"
+        ],
+        [
+         "_rightActions_11kg3_69"
+        ],
+        [
+         "_actionsRow_11kg3_18"
+        ],
+        [
+         "_actionsBar_11kg3_1"
+        ],
+        [
+         "_entityPanel_1pqcl_77"
+        ],
+        [
+         "_container_1pqcl_3"
+        ],
+        [
+         "_booksLayout_1pthq_31"
+        ],
+        [
+         "_layout_1pthq_16"
+        ]
+       ],
+       "classes": [
+        "_button_r6b2u_20",
+        "_small_r6b2u_72",
+        "_secondary_r6b2u_126",
+        "_actionButton_11kg3_14"
+       ],
+       "data": {},
+       "heading": "",
+       "landmark": {
+        "name": "",
+        "role": "main"
+       },
+       "layer": "top",
+       "name": "",
+       "rect": [
+        1408,
+        88,
+        32,
+        32
+       ],
+       "role": "button",
+       "tag": "button",
+       "xpath": "/html/body/div[1]/main[1]/div[1]/div[1]/div[1]/div[4]/div[1]/div[2]/div[1]/div[1]/div[4]/div[2]/div[2]/button[1]"
+      },
+      "stop": 21,
+      "stops": 24
+     },
+     "occurrence": {
+      "ancestors": [
+       [
+        "_inputWrapper_11c85_6"
+       ],
+       [
+        "_wrapper_1xgdp_8"
+       ],
+       [
+        "_condition_1izbt_22"
+       ],
+       [
+        "_conditions_1izbt_22"
+       ],
+       [
+        "_form_1izbt_10"
+       ],
+       [
+        "_container_1izbt_3"
+       ],
+       [
+        "_creationCard_16qcz_1"
+       ],
+       [
+        "_entityCardCarousel_1pqcl_168"
+       ]
+      ],
+      "classes": [
+       "_input_11c85_6"
+      ],
+      "data": {
+       "data-1p-ignore": "true",
+       "data-active-item": "true",
+       "data-bwignore": "true",
+       "data-focus-visible": "true",
+       "data-lpignore": "true"
+      },
+      "heading": "",
+      "landmark": {
+       "name": "",
+       "role": "main"
+      },
+      "layer": "top",
+      "name": "Condition",
+      "rect": [
+       916,
+       236,
+       431,
+       40
+      ],
+      "role": "combobox",
+      "tag": "input",
+      "xpath": "/html/body/div[1]/main[1]/div[1]/div[1]/div[1]/div[4]/div[1]/div[2]/div[1]/div[2]/div[1]/div[2]/div[1]/div[1]/div[1]/div[1]/div[2]/div[1]/input[1]"
+     },
+     "state": "books.rule-create"
+    }
+   ],
+   "evidenceHash": "de7cf10620579399581399d19a0ce3f30f27a26b2c6f86d7f97dd2126a698d8f",
+   "facts": {
+    "criterion": "2.4.7",
+    "criterionName": "Focus Visible",
+    "element": "combobox \"Condition <n>\"",
+    "screen": "Categorization rules",
+    "screens": 7,
+    "stop": "54"
+   },
+   "family": "focus-visible",
+   "guidance": "High on shared components on primary paths.",
+   "issueId": null,
+   "key": "focus-visible:focus-hidden:f36111205bd8",
+   "measured": true,
+   "primary": "billpay.categorization-rules",
+   "proposals": [],
+   "rule": "focus-hidden",
+   "screens": 7,
+   "severityDefault": "medium",
+   "source": "scanner",
+   "states": [
+    "billpay.categorization-rules",
+    "books.rule-create"
+   ],
+   "summary": "Tab stop 54 focused the combobox \"Condition <n>\", which is invisible, has no size, or sits off screen.",
+   "title": "Tab stops on hidden element: combobox \"Condition <n>\""
+  },
+  {
+   "attachments": [],
+   "attempt": 1,
+   "basis": "violation",
+   "criteria": [
+    "4.1.2"
+   ],
+   "evidence": [
+    {
+     "evidence": {
+      "failureSummary": "Fix all of the following:\n  Focusable content should be disabled or be removed from the DOM"
+     },
+     "occurrence": {
+      "ancestors": [
+       [
+        "_contentSection_1g3sn_100"
+       ],
+       [
+        "_lowerPageWrapper_1g3sn_95"
+       ],
+       [
+        "_mappingPageDashboardWrapper_2fzjz_3",
+        "_pageContent_809q8_151",
+        "_pageContentWidth_809q8_184",
+        "_footerPadding_809q8_115"
+       ],
+       [
+        "_dashboardContent_809q8_29"
+       ],
+       [
+        "_layout_809q8_18"
+       ],
+       [
+        "_wrapper_809q8_3"
+       ],
+       [],
+       [
+        "_main_1gb3b_1"
+       ]
+      ],
+      "classes": [
+       "_transitionWrapper_d3i56_5"
+      ],
+      "data": {},
+      "heading": "Accounting Settings",
+      "landmark": {
+       "name": "",
+       "role": "main"
+      },
+      "layer": "document",
+      "name": "",
+      "rect": [
+       1122,
+       280,
+       392,
+       477
+      ],
+      "role": "",
+      "tag": "aside",
+      "xpath": "/html/body/div[1]/main[1]/div[1]/div[1]/div[4]/div[1]/div[2]/div[3]/div[2]/aside[1]"
+     },
+     "state": "billpay.categorization-rules"
+    },
+    {
+     "evidence": {
+      "failureSummary": "Fix all of the following:\n  Focusable content should be disabled or be removed from the DOM"
+     },
+     "occurrence": {
+      "ancestors": [
+       [
+        "_contentSection_1g3sn_100"
+       ],
+       [
+        "_lowerPageWrapper_1g3sn_95"
+       ],
+       [
+        "_mappingPageDashboardWrapper_2fzjz_3",
+        "_pageContent_809q8_151",
+        "_pageContentWidth_809q8_184",
+        "_footerPadding_809q8_115"
+       ],
+       [
+        "_dashboardContent_809q8_29"
+       ],
+       [
+        "_layout_809q8_18"
+       ],
+       [
+        "_wrapper_809q8_3"
+       ],
+       [],
+       [
+        "_main_1gb3b_1"
+       ]
+      ],
+      "classes": [
+       "_transitionWrapper_d3i56_5"
+      ],
+      "data": {},
+      "heading": "Accounting Settings",
+      "landmark": {
+       "name": "",
+       "role": "main"
+      },
+      "layer": "document",
+      "name": "",
+      "rect": [
+       1122,
+       280,
+       392,
+       412
+      ],
+      "role": "",
+      "tag": "aside",
+      "xpath": "/html/body/div[1]/main[1]/div[1]/div[1]/div[4]/div[1]/div[2]/div[3]/div[2]/aside[1]"
+     },
+     "state": "billpay.edit-rule"
+    }
+   ],
+   "evidenceHash": "1a7fdd64aed5857353771726b2bf83c105ad42ea9f4a6488c613cc52195cd308",
+   "facts": {
+    "announced": " \"\"",
+    "axeSummary": "Focusable content should be disabled or be removed from the DOM",
+    "criterion": "4.1.2",
+    "criterionName": "Name, Role, Value",
+    "element": "text in \"Accounting Settings\"",
+    "rule": "aria-hidden-focus",
+    "screen": "Categorization rules"
+   },
+   "family": "role-state",
+   "guidance": "Low for optional ARIA or an invalid autocomplete token; high when aria-hidden hides the whole page.",
+   "issueId": null,
+   "key": "role-state:aria-hidden-focus:40ffc6743078",
+   "measured": false,
+   "primary": "billpay.categorization-rules",
+   "proposals": [],
+   "rule": "aria-hidden-focus",
+   "screens": 3,
+   "severityDefault": "medium",
+   "source": "scanner",
+   "states": [
+    "billpay.categorization-rules",
+    "billpay.edit-rule"
+   ],
+   "summary": "aria-hidden-focus: announced as  \"\". Focusable content should be disabled or be removed from the DOM",
+   "title": "Focusable but hidden: text in \"Accounting Settings\""
+  }
+ ],
+ "primaries": [
+  "billpay.categorization-rules"
+ ],
+ "reach": {
+  "baseUrl": "https://demo.mercury.com",
+  "data": "data",
+  "map": "build/map.json",
+  "run": "2026-10-03-1525",
+  "workspace": "a11y"
+ },
+ "run": "2026-10-03-1525"
+}

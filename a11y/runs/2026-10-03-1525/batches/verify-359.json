@@ -1,0 +1,317 @@
+{
+ "area": "settings",
+ "batch": "verify-359",
+ "findings": [
+  {
+   "attachments": [],
+   "attempt": 1,
+   "basis": "candidate",
+   "criteria": [
+    "2.1.1"
+   ],
+   "evidence": [
+    {
+     "evidence": {
+      "end": "body",
+      "focusable": false,
+      "source": "pointer",
+      "stops": 41
+     },
+     "occurrence": {
+      "ancestors": [
+       [
+        "_dsTabView_95hq1_3"
+       ],
+       [
+        "_pageContent_809q8_151",
+        "_pageContentWidth_809q8_184",
+        "_footerPadding_809q8_115"
+       ],
+       [
+        "_dashboardContent_809q8_29"
+       ],
+       [
+        "_layout_809q8_18"
+       ],
+       [
+        "_wrapper_809q8_3"
+       ],
+       [],
+       [
+        "_main_1gb3b_1"
+       ],
+       [
+        "mercury-root"
+       ]
+      ],
+      "classes": [
+       "_bodySecondary_qaod7_51",
+       "_dsTabViewTab_95hq1_9"
+      ],
+      "data": {},
+      "heading": "Webhooks",
+      "landmark": {
+       "name": "",
+       "role": "main"
+      },
+      "layer": "document",
+      "name": "",
+      "rect": [
+       346,
+       220,
+       64,
+       40
+      ],
+      "role": "generic",
+      "tag": "div",
+      "xpath": "/html/body/div[1]/main[1]/div[1]/div[1]/div[4]/div[1]/div[2]/div[2]/div[1]"
+     },
+     "state": "settings.webhook-deliveries"
+    },
+    {
+     "evidence": {
+      "end": "body",
+      "focusable": false,
+      "source": "pointer",
+      "stops": 56
+     },
+     "occurrence": {
+      "ancestors": [
+       [
+        "_dsTabView_95hq1_3"
+       ],
+       [
+        "_pageContent_809q8_151",
+        "_pageContentWidth_809q8_184",
+        "_footerPadding_809q8_115"
+       ],
+       [
+        "_dashboardContent_809q8_29"
+       ],
+       [
+        "_layout_809q8_18"
+       ],
+       [
+        "_wrapper_809q8_3"
+       ],
+       [],
+       [
+        "_main_1gb3b_1"
+       ],
+       [
+        "mercury-root"
+       ]
+      ],
+      "classes": [
+       "_bodySecondary_qaod7_51",
+       "_dsTabViewTab_95hq1_9"
+      ],
+      "data": {},
+      "heading": "Webhooks",
+      "landmark": {
+       "name": "",
+       "role": "main"
+      },
+      "layer": "document",
+      "name": "",
+      "rect": [
+       434,
+       220,
+       101,
+       40
+      ],
+      "role": "generic",
+      "tag": "div",
+      "xpath": "/html/body/div[1]/main[1]/div[1]/div[1]/div[4]/div[1]/div[2]/div[2]/div[2]"
+     },
+     "state": "settings.webhooks"
+    }
+   ],
+   "evidenceHash": "c45a6b500a48d407b301f1ec8cd048963499456f0c5544a0d5a08eb74f2215ff",
+   "facts": {
+    "axeSummary": "",
+    "criterion": "2.1.1",
+    "criterionName": "Keyboard",
+    "element": "text in \"Webhooks\"",
+    "rule": "not-reached",
+    "screen": "Webhooks — Event deliveries",
+    "stops": "41"
+   },
+   "family": "keyboard",
+   "guidance": "High if a task cannot be completed without a mouse.",
+   "issueId": null,
+   "key": "keyboard:not-reached:5c1aeae2c2ed",
+   "measured": false,
+   "primary": "settings.webhook-deliveries",
+   "proposals": [],
+   "rule": "not-reached",
+   "screens": 2,
+   "severityDefault": "medium",
+   "source": "scanner",
+   "states": [
+    "settings.webhook-deliveries",
+    "settings.webhooks"
+   ],
+   "summary": "The Tab walk visited 41 stops and never reached the text in \"Webhooks\", which responds to a click.",
+   "title": "Not reachable by keyboard: text in \"Webhooks\""
+  },
+  {
+   "attachments": [],
+   "attempt": 1,
+   "basis": "violation",
+   "criteria": [
+    "4.1.2"
+   ],
+   "evidence": [
+    {
+     "evidence": {
+      "failureSummary": "Fix all of the following:\n  Focusable content should be disabled or be removed from the DOM"
+     },
+     "occurrence": {
+      "ancestors": [
+       [
+        "_tabContentWrapper_bkmh4_5"
+       ],
+       [
+        "_pageContent_809q8_151",
+        "_pageContentWidth_809q8_184",
+        "_footerPadding_809q8_115"
+       ],
+       [
+        "_dashboardContent_809q8_29"
+       ],
+       [
+        "_layout_809q8_18"
+       ],
+       [
+        "_wrapper_809q8_3"
+       ],
+       [],
+       [
+        "_main_1gb3b_1"
+       ],
+       [
+        "mercury-root"
+       ]
+      ],
+      "classes": [
+       "_transitionWrapper_d3i56_5",
+       "_detailPanelWrapper_1a03z_1"
+      ],
+      "data": {},
+      "heading": "Webhooks",
+      "landmark": {
+       "name": "",
+       "role": "main"
+      },
+      "layer": "document",
+      "name": "",
+      "rect": [
+       1142,
+       284,
+       372,
+       375
+      ],
+      "role": "",
+      "tag": "aside",
+      "xpath": "/html/body/div[1]/main[1]/div[1]/div[1]/div[4]/div[1]/div[2]/div[3]/aside[1]"
+     },
+     "state": "settings.webhook-deliveries"
+    },
+    {
+     "evidence": {
+      "failureSummary": "Fix all of the following:\n  Focusable content should be disabled or be removed from the DOM"
+     },
+     "occurrence": {
+      "ancestors": [
+       [
+        "_tabContentWrapper_bkmh4_5"
+       ],
+       [
+        "_pageContent_809q8_151",
+        "_pageContentWidth_809q8_184",
+        "_footerPadding_809q8_115"
+       ],
+       [
+        "_dashboardContent_809q8_29"
+       ],
+       [
+        "_layout_809q8_18"
+       ],
+       [
+        "_wrapper_809q8_3"
+       ],
+       [],
+       [
+        "_main_1gb3b_1"
+       ],
+       [
+        "mercury-root"
+       ]
+      ],
+      "classes": [
+       "_transitionWrapper_d3i56_5",
+       "_detailPanelWrapper_1a03z_1"
+      ],
+      "data": {},
+      "heading": "Webhooks",
+      "landmark": {
+       "name": "",
+       "role": "main"
+      },
+      "layer": "document",
+      "name": "",
+      "rect": [
+       1142,
+       284,
+       372,
+       336
+      ],
+      "role": "",
+      "tag": "aside",
+      "xpath": "/html/body/div[1]/main[1]/div[1]/div[1]/div[4]/div[1]/div[2]/div[3]/aside[1]"
+     },
+     "state": "settings.webhooks"
+    }
+   ],
+   "evidenceHash": "fde326aefaa810c59a3d613bf83b4238b64d1da5317e4a43daf62a80bff0f648",
+   "facts": {
+    "announced": " \"\"",
+    "axeSummary": "Focusable content should be disabled or be removed from the DOM",
+    "criterion": "4.1.2",
+    "criterionName": "Name, Role, Value",
+    "element": "text in \"Webhooks\"",
+    "rule": "aria-hidden-focus",
+    "screen": "Webhooks — Event deliveries"
+   },
+   "family": "role-state",
+   "guidance": "Low for optional ARIA or an invalid autocomplete token; high when aria-hidden hides the whole page.",
+   "issueId": null,
+   "key": "role-state:aria-hidden-focus:5a75d8811c41",
+   "measured": false,
+   "primary": "settings.webhook-deliveries",
+   "proposals": [],
+   "rule": "aria-hidden-focus",
+   "screens": 2,
+   "severityDefault": "medium",
+   "source": "scanner",
+   "states": [
+    "settings.webhook-deliveries",
+    "settings.webhooks"
+   ],
+   "summary": "aria-hidden-focus: announced as  \"\". Focusable content should be disabled or be removed from the DOM",
+   "title": "Focusable but hidden: text in \"Webhooks\""
+  }
+ ],
+ "primaries": [
+  "settings.webhook-deliveries"
+ ],
+ "reach": {
+  "baseUrl": "https://demo.mercury.com",
+  "data": "data",
+  "map": "build/map.json",
+  "run": "2026-10-03-1525",
+  "workspace": "a11y"
+ },
+ "run": "2026-10-03-1525"
+}

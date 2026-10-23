@@ -1,0 +1,97 @@
+{
+ "batch": "record-121",
+ "reach": {
+  "baseUrl": "https://demo.mercury.com",
+  "data": "data",
+  "map": "build/map.json",
+  "run": "2026-10-02-1349",
+  "workspace": "a11y"
+ },
+ "run": "2026-10-02-1349",
+ "states": [
+  {
+   "area": "settings",
+   "draft": "not drafted: its parent had no accepted recipe when the drafter ran",
+   "image": "screens/settings/119-change-password-mismatch.png",
+   "kind": "validation-error",
+   "labels": [
+    "Scroll to Account recovery",
+    "Click Change password",
+    "Enter short passwords and submit",
+    "Enter two different long passwords and submit"
+   ],
+   "mutates": true,
+   "note": "Two different 14-character passwords show 'Passwords don\u2019t match' under Repeat New Password.",
+   "parent": "settings.change-password-short",
+   "state": "settings.change-password-mismatch",
+   "title": "Change password \u2014 mismatch"
+  },
+  {
+   "area": "settings",
+   "draft": "cannot parse \"Enter a From date after today\"; the conductor rejected the previous recipe: missing error: replay shows From 'Dec 31, 2099' with two calendar popovers open and no 'Please choose a day on or before' error; capture shows one calendar plus the error; a previous recorder failed: Filling From with 12/31/2099 opens the calendar over the Download button (click times out), and Enter or Tab shows no 'Please choose a day' error; last candidate (fill, Enter) scored 0.7952 and shows the calendar without the error.",
+   "image": "screens/settings/16-custom-statement-invalid.png",
+   "kind": "validation-error",
+   "labels": [
+    "Click Generate a custom statement",
+    "Enter a From date after today and click Download"
+   ],
+   "mutates": true,
+   "note": "From date after today shows 'Please choose a day on or before Sep 24, 2026' with the calendar popover open.",
+   "parent": "settings.custom-statement",
+   "state": "settings.custom-statement-invalid",
+   "title": "Custom statement \u2014 date out of range"
+  },
+  {
+   "area": "settings",
+   "draft": "not drafted: its parent had no accepted recipe when the drafter ran; the conductor rejected the previous recipe: error not visible: the replay's Issue Test a card form stays at the top (Basics/Type), so the Control type 'Please complete this field' error under Spend controls is never on screen. The hop clicks Next as the label says, and its wait shows the error text is in the DOM, but the scroll step leaves the inner container where it was. The fix is a scroll that works (scrollIntoView on the error), not a different hop",
+   "image": "screens/settings/46-invite-issue-card-errors.png",
+   "kind": "validation-error",
+   "labels": [
+    "Open Job title select",
+    "Pick a title, fill name/email, click Next",
+    "Select Money Mover",
+    "Click Next",
+    "Click Next without a control type"
+   ],
+   "mutates": false,
+   "note": "Next without a spend Control type shows 'Please complete this field' under the Control type select.",
+   "parent": "settings.invite-issue-card",
+   "state": "settings.invite-issue-card-error",
+   "title": "Issue Card \u2014 control type required"
+  },
+  {
+   "area": "settings",
+   "draft": "not drafted: its parent had no accepted recipe when the drafter ran",
+   "image": "screens/settings/96-token-scopes-list.png",
+   "kind": "menu",
+   "labels": [
+    "Click + Create an API token",
+    "Click Create token with the form empty",
+    "Enter a nickname and open Permissions",
+    "Choose Custom Scopes",
+    "Open the Scopes combobox"
+   ],
+   "mutates": true,
+   "note": "28 Title Case scopes grouped by resource (Accounts, Cards, Categories, Invoices, Recipients, Transactions, Webhooks\u2026); asterisked ones need an IP whitelist and one carries an 'Experimental' tag. The list opens upward, spills out of the modal and its top slides under the demo banner.",
+   "parent": "settings.token-custom-scopes",
+   "state": "settings.token-scopes-list",
+   "title": "Custom scopes list"
+  },
+  {
+   "area": "settings",
+   "draft": "not drafted: its parent had no accepted recipe when the drafter ran",
+   "image": "screens/settings/84-webhook-verify-endpoint.png",
+   "kind": "form-state",
+   "labels": [
+    "Click + Create webhook",
+    "Enter an http:// URL and tab away",
+    "Switch to https:// and click Verify endpoint"
+   ],
+   "mutates": true,
+   "note": "After entering an https URL and clicking Verify endpoint, the button is replaced by a green check and 'Verified'. Create endpoint only enables after verification.",
+   "parent": "settings.create-webhook-http-error",
+   "state": "settings.webhook-verified",
+   "title": "Create webhook \u2014 endpoint verified"
+  }
+ ]
+}

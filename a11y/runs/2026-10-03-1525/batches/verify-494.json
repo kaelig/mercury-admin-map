@@ -1,0 +1,604 @@
+{
+ "area": "invoicing",
+ "batch": "verify-494",
+ "findings": [
+  {
+   "attachments": [],
+   "attempt": 1,
+   "basis": "candidate",
+   "criteria": [
+    "4.1.2"
+   ],
+   "evidence": [
+    {
+     "evidence": {
+      "description": "",
+      "name": "",
+      "role": "button",
+      "states": {},
+      "template": "button \"\""
+     },
+     "occurrence": {
+      "ancestors": [
+       [
+        "_buttonGroup_16t7w_1",
+        "_horizontal_16t7w_11"
+       ],
+       [
+        "_actionWrapper_irpp8_29",
+        "_buttonGroup_16t7w_1",
+        "_horizontal_16t7w_11"
+       ],
+       [
+        "_headerWrapper_irpp8_1"
+       ],
+       [],
+       [
+        "_contentDiv_bcpsw_53",
+        "_contentDivHeightPreset_bcpsw_62",
+        "_contentArea_1yubm_1",
+        "_fullWidthContentDiv_bcpsw_40"
+       ],
+       [
+        "_fullScreenWorkspaceLayout_bcpsw_14",
+        "_fullScreenWorkspaceLayoutBackground_bcpsw_32"
+       ],
+       [
+        "_wrapper_bcpsw_3"
+       ],
+       []
+      ],
+      "classes": [
+       "_button_r6b2u_20",
+       "_small_r6b2u_72",
+       "_secondary_r6b2u_126"
+      ],
+      "data": {},
+      "heading": "Meridian Consulting",
+      "landmark": {
+       "name": "",
+       "role": "main"
+      },
+      "layer": "document",
+      "name": "",
+      "rect": [
+       1306,
+       208,
+       32,
+       32
+      ],
+      "role": "button",
+      "tag": "button",
+      "xpath": "/html/body/div[1]/main[1]/div[1]/div[2]/div[2]/div[3]/div[1]/div[1]/div[2]/div[1]/button[2]"
+     },
+     "state": "invoicing.series-detail"
+    },
+    {
+     "evidence": {
+      "description": "",
+      "name": "",
+      "role": "button",
+      "states": {},
+      "template": "button \"\""
+     },
+     "occurrence": {
+      "ancestors": [
+       [
+        "_buttonGroup_16t7w_1",
+        "_horizontal_16t7w_11"
+       ],
+       [
+        "_actionWrapper_irpp8_29",
+        "_buttonGroup_16t7w_1",
+        "_horizontal_16t7w_11"
+       ],
+       [
+        "_headerWrapper_irpp8_1"
+       ],
+       [],
+       [
+        "_contentDiv_bcpsw_53",
+        "_contentDivHeightPreset_bcpsw_62",
+        "_contentArea_1yubm_1",
+        "_fullWidthContentDiv_bcpsw_40"
+       ],
+       [
+        "_fullScreenWorkspaceLayout_bcpsw_14",
+        "_fullScreenWorkspaceLayoutBackground_bcpsw_32"
+       ],
+       [
+        "_wrapper_bcpsw_3"
+       ],
+       []
+      ],
+      "classes": [
+       "_button_r6b2u_20",
+       "_small_r6b2u_72",
+       "_secondary_r6b2u_126"
+      ],
+      "data": {},
+      "heading": "Astral Creative Co",
+      "landmark": {
+       "name": "",
+       "role": "main"
+      },
+      "layer": "document",
+      "name": "",
+      "rect": [
+       1306,
+       208,
+       32,
+       32
+      ],
+      "role": "button",
+      "tag": "button",
+      "xpath": "/html/body/div[1]/main[1]/div[1]/div[2]/div[2]/div[3]/div[1]/div[1]/div[2]/div[1]/button[2]"
+     },
+     "state": "invoicing.series-detail-new"
+    }
+   ],
+   "evidenceHash": "81d44da30f92ee26cc3de15dc015d3ed8b78f48ba7747a39524c8782b50b3a57",
+   "facts": {
+    "announced": "button \"\"",
+    "axeSummary": "",
+    "criterion": "4.1.2",
+    "criterionName": "Name, Role, Value",
+    "element": "button in \"Meridian Consulting\"",
+    "rule": "announced-as",
+    "screen": "Series detail"
+   },
+   "family": "name",
+   "guidance": "High for an unnamed form control or the sole primary action.",
+   "issueId": null,
+   "key": "name:announced-as:59677db0d41d",
+   "measured": false,
+   "primary": "invoicing.series-detail",
+   "proposals": [],
+   "rule": "announced-as",
+   "screens": 2,
+   "severityDefault": "medium",
+   "source": "scanner",
+   "states": [
+    "invoicing.series-detail",
+    "invoicing.series-detail-new"
+   ],
+   "summary": "announced-as: announced as button \"\".",
+   "title": "Missing or unclear name: button in \"Meridian Consulting\""
+  },
+  {
+   "attachments": [],
+   "attempt": 1,
+   "basis": "candidate",
+   "criteria": [
+    "4.1.2"
+   ],
+   "evidence": [
+    {
+     "evidence": {
+      "description": "",
+      "name": "",
+      "role": "button",
+      "states": {},
+      "template": "button \"\""
+     },
+     "occurrence": {
+      "ancestors": [
+       [
+        "_tableData_1u4jr_5",
+        "_alignmentCenter_1u4jr_17",
+        "_cell_1vbuk_1"
+       ],
+       [
+        "_tableRow_137xu_3",
+        "_large_137xu_29"
+       ],
+       [
+        "_tableBody_1cp5b_1"
+       ],
+       [
+        "_table_1acga_4",
+        "_gridTable_8ihn2_1"
+       ],
+       [
+        "_tableWrapper_1acga_4"
+       ],
+       [
+        "_tableWrapper_8ihn2_15"
+       ],
+       [
+        "_tableWrapper_1yubm_22"
+       ],
+       [
+        "_grid_1yubm_10"
+       ]
+      ],
+      "classes": [
+       "_button_r6b2u_20",
+       "_small_r6b2u_72",
+       "_tertiary_r6b2u_153"
+      ],
+      "data": {},
+      "heading": "Meridian Consulting",
+      "landmark": {
+       "name": "",
+       "role": "main"
+      },
+      "layer": "document",
+      "name": "",
+      "rect": [
+       856,
+       537,
+       32,
+       32
+      ],
+      "role": "button",
+      "tag": "button",
+      "xpath": "/html/body/div[1]/main[1]/div[1]/div[2]/div[2]/div[3]/div[1]/div[2]/div[1]/div[2]/div[1]/table[1]/tbody[1]/tr[2]/td[6]/button[1]"
+     },
+     "state": "invoicing.series-detail"
+    }
+   ],
+   "evidenceHash": "14ec173b61c58161133b8ed12765c3b50d0912d1d62d73e88208395c06afaf4d",
+   "facts": {
+    "announced": "button \"\"",
+    "axeSummary": "",
+    "criterion": "4.1.2",
+    "criterionName": "Name, Role, Value",
+    "element": "button in \"Meridian Consulting\"",
+    "rule": "announced-as",
+    "screen": "Series detail"
+   },
+   "family": "name",
+   "guidance": "High for an unnamed form control or the sole primary action.",
+   "issueId": null,
+   "key": "name:announced-as:c24b6bb7e140",
+   "measured": false,
+   "primary": "invoicing.series-detail",
+   "proposals": [],
+   "rule": "announced-as",
+   "screens": 1,
+   "severityDefault": "medium",
+   "source": "scanner",
+   "states": [
+    "invoicing.series-detail"
+   ],
+   "summary": "announced-as: announced as button \"\".",
+   "title": "Missing or unclear name: button in \"Meridian Consulting\""
+  },
+  {
+   "attachments": [],
+   "attempt": 1,
+   "basis": "candidate",
+   "criteria": [
+    "4.1.2"
+   ],
+   "evidence": [
+    {
+     "evidence": {
+      "description": "",
+      "name": "",
+      "role": "link",
+      "states": {},
+      "template": "link \"\""
+     },
+     "occurrence": {
+      "ancestors": [
+       [
+        "_logoSection_w6xr5_28",
+        "_orgNameWrapper_w6xr5_59"
+       ],
+       [
+        "_container_w6xr5_1"
+       ],
+       [
+        "_sidebarContainer_bcpsw_45"
+       ],
+       [
+        "_fullScreenWorkspaceLayout_bcpsw_14",
+        "_fullScreenWorkspaceLayoutBackground_bcpsw_32"
+       ],
+       [
+        "_wrapper_bcpsw_3"
+       ],
+       [],
+       [
+        "_main_1gb3b_1"
+       ],
+       [
+        "mercury-root"
+       ]
+      ],
+      "classes": [
+       "_logoOnly_w6xr5_38",
+       "_noStyleLink_njx8v_1"
+      ],
+      "data": {
+       "data-discover": "true"
+      },
+      "heading": "",
+      "landmark": {
+       "name": "",
+       "role": "main"
+      },
+      "layer": "document",
+      "name": "",
+      "rect": [
+       80,
+       104,
+       32,
+       35
+      ],
+      "role": "link",
+      "tag": "a",
+      "xpath": "/html/body/div[1]/main[1]/div[1]/div[2]/div[2]/div[1]/div[1]/div[1]/a[1]"
+     },
+     "state": "invoicing.series-detail"
+    },
+    {
+     "evidence": {
+      "description": "",
+      "name": "",
+      "role": "link",
+      "states": {},
+      "template": "link \"\""
+     },
+     "occurrence": {
+      "ancestors": [
+       [
+        "_logoSection_w6xr5_28",
+        "_orgNameWrapper_w6xr5_59"
+       ],
+       [
+        "_container_w6xr5_1"
+       ],
+       [
+        "_sidebarContainer_bcpsw_45"
+       ],
+       [
+        "_fullScreenWorkspaceLayout_bcpsw_14",
+        "_fullScreenWorkspaceLayoutBackground_bcpsw_32"
+       ],
+       [
+        "_wrapper_bcpsw_3"
+       ],
+       [],
+       [
+        "_main_1gb3b_1"
+       ],
+       [
+        "mercury-root"
+       ]
+      ],
+      "classes": [
+       "_logoOnly_w6xr5_38",
+       "_noStyleLink_njx8v_1"
+      ],
+      "data": {
+       "data-discover": "true"
+      },
+      "heading": "",
+      "landmark": {
+       "name": "",
+       "role": "main"
+      },
+      "layer": "document",
+      "name": "",
+      "rect": [
+       80,
+       104,
+       32,
+       35
+      ],
+      "role": "link",
+      "tag": "a",
+      "xpath": "/html/body/div[1]/main[1]/div[1]/div[2]/div[2]/div[1]/div[1]/div[1]/a[1]"
+     },
+     "state": "invoicing.series-detail-new"
+    }
+   ],
+   "evidenceHash": "122756e583348801819feef9c63777764e1489a1a3560f1f233c6b4aab17dfa9",
+   "facts": {
+    "announced": "link \"\"",
+    "axeSummary": "",
+    "criterion": "4.1.2",
+    "criterionName": "Name, Role, Value",
+    "element": "link in the main landmark",
+    "rule": "announced-as",
+    "screen": "Series detail"
+   },
+   "family": "name",
+   "guidance": "High for an unnamed form control or the sole primary action.",
+   "issueId": null,
+   "key": "name:announced-as:ceca728f75ee",
+   "measured": false,
+   "primary": "invoicing.series-detail",
+   "proposals": [],
+   "rule": "announced-as",
+   "screens": 2,
+   "severityDefault": "medium",
+   "source": "scanner",
+   "states": [
+    "invoicing.series-detail",
+    "invoicing.series-detail-new"
+   ],
+   "summary": "announced-as: announced as link \"\".",
+   "title": "Missing or unclear name: link in the main landmark"
+  },
+  {
+   "attachments": [],
+   "attempt": 1,
+   "basis": "candidate",
+   "criteria": [
+    "1.3.1"
+   ],
+   "evidence": [
+    {
+     "evidence": {
+      "description": "",
+      "name": "Invoice date Click to sort",
+      "role": "button",
+      "states": {
+       "expanded": false,
+       "haspopup": "menu"
+      },
+      "template": "button \"Invoice date Click to sort\" [expanded=false, haspopup=menu]"
+     },
+     "occurrence": {
+      "ancestors": [
+       [
+        "_tableHead_hi0p4_3",
+        "_alignmentStart_hi0p4_11",
+        "_cell_1vbuk_1"
+       ],
+       [
+        "_tableHeadRow_1rlph_21"
+       ],
+       [
+        "_tableHead_1rlph_1"
+       ],
+       [
+        "_table_1acga_4",
+        "_gridTable_8ihn2_1"
+       ],
+       [
+        "_tableWrapper_1acga_4"
+       ],
+       [
+        "_tableWrapper_8ihn2_15"
+       ],
+       [
+        "_tableWrapper_1yubm_22"
+       ],
+       [
+        "_grid_1yubm_10"
+       ]
+      ],
+      "classes": [
+       "_sortableHeader_cc9i4_3"
+      ],
+      "data": {},
+      "heading": "Meridian Consulting",
+      "landmark": {
+       "name": "",
+       "role": "main"
+      },
+      "layer": "document",
+      "name": "Invoice date Click to sort",
+      "rect": [
+       113,
+       422,
+       102,
+       25
+      ],
+      "role": "button",
+      "tag": "button",
+      "xpath": "/html/body/div[1]/main[1]/div[1]/div[2]/div[2]/div[3]/div[1]/div[2]/div[1]/div[2]/div[1]/table[1]/thead[1]/tr[1]/th[1]/button[1]"
+     },
+     "state": "invoicing.series-detail"
+    },
+    {
+     "evidence": {
+      "description": "",
+      "name": "Invoice date Click to sort",
+      "role": "button",
+      "states": {
+       "expanded": false,
+       "haspopup": "menu"
+      },
+      "template": "button \"Invoice date Click to sort\" [expanded=false, haspopup=menu]"
+     },
+     "occurrence": {
+      "ancestors": [
+       [
+        "_tableHead_hi0p4_3",
+        "_alignmentStart_hi0p4_11",
+        "_cell_1vbuk_1"
+       ],
+       [
+        "_tableHeadRow_1rlph_21"
+       ],
+       [
+        "_tableHead_1rlph_1"
+       ],
+       [
+        "_table_1acga_4",
+        "_gridTable_8ihn2_1"
+       ],
+       [
+        "_tableWrapper_1acga_4"
+       ],
+       [
+        "_tableWrapper_8ihn2_15"
+       ],
+       [
+        "_tableWrapper_1yubm_22"
+       ],
+       [
+        "_grid_1yubm_10"
+       ]
+      ],
+      "classes": [
+       "_sortableHeader_cc9i4_3"
+      ],
+      "data": {},
+      "heading": "Astral Creative Co",
+      "landmark": {
+       "name": "",
+       "role": "main"
+      },
+      "layer": "document",
+      "name": "Invoice date Click to sort",
+      "rect": [
+       113,
+       422,
+       102,
+       25
+      ],
+      "role": "button",
+      "tag": "button",
+      "xpath": "/html/body/div[1]/main[1]/div[1]/div[2]/div[2]/div[3]/div[1]/div[2]/div[1]/div[2]/div[1]/table[1]/thead[1]/tr[1]/th[1]/button[1]"
+     },
+     "state": "invoicing.series-detail-new"
+    }
+   ],
+   "evidenceHash": "91f14e2041710ea9785c602ec8cbe0e4685f294ef3f2ba3c99c648d87891f9c9",
+   "facts": {
+    "announced": "button \"Invoice date Click to sort\" [expanded=false, haspopup=menu]",
+    "axeSummary": "",
+    "criterion": "1.3.1",
+    "criterionName": "Info and Relationships",
+    "element": "button \"Invoice date Click to sort\"",
+    "rule": "announced-as",
+    "screen": "Series detail"
+   },
+   "family": "role-state",
+   "guidance": "Low for optional ARIA or an invalid autocomplete token; high when aria-hidden hides the whole page.",
+   "issueId": null,
+   "key": "role-state:announced-as:7ddd13bf641a",
+   "measured": false,
+   "primary": "invoicing.series-detail",
+   "proposals": [],
+   "rule": "announced-as",
+   "screens": 2,
+   "severityDefault": "medium",
+   "source": "scanner",
+   "states": [
+    "invoicing.series-detail",
+    "invoicing.series-detail-new"
+   ],
+   "summary": "announced-as: announced as button \"Invoice date Click to sort\" [expanded=false, haspopup=menu].",
+   "title": "Wrong role or state: button \"Invoice date Click to sort\""
+  }
+ ],
+ "primaries": [
+  "invoicing.series-detail"
+ ],
+ "reach": {
+  "baseUrl": "https://demo.mercury.com",
+  "data": "data",
+  "map": "build/map.json",
+  "run": "2026-10-03-1525",
+  "workspace": "a11y"
+ },
+ "run": "2026-10-03-1525"
+}

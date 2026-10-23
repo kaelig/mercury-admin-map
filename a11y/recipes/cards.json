@@ -1,0 +1,5330 @@
+{
+ "cards.assign-budget-cards": {
+  "checked": "2026-10-02-1349",
+  "fingerprint": {
+   "controls": [
+    "Abigail Kyte",
+    "Assign",
+    "Back",
+    "Open combobox menu"
+   ],
+   "headings": [
+    "Set up budget cards",
+    "Choose the card each team member’s budget spend comes from."
+   ],
+   "path": "/team-spend",
+   "structure": "dialog",
+   "top": {
+    "name": "",
+    "role": "dialog"
+   }
+  },
+  "hop": [
+   {
+    "click": {
+     "name": "Next",
+     "role": "button"
+    }
+   }
+  ],
+  "mutates": true,
+  "parent": "cards.assign-budget-selected",
+  "recordedBy": "agent",
+  "review": {
+   "by": "conductor",
+   "date": "2026-10-03",
+   "decision": "accept",
+   "note": "same Set up budget cards step (Abigail Kyte -> New virtual credit card, Back and Assign); hop clicks Next as the label says",
+   "reason": "mutating"
+  },
+  "similarity": 0.9936,
+  "source": "59b22c428a47f51b6517d7d93c99abf0c7f6f67b",
+  "status": "accepted"
+ },
+ "cards.assign-budget-done": {
+  "checked": "2026-10-02-1349",
+  "fingerprint": {
+   "controls": [
+    "Actions for Hardware",
+    "Actions for Learning & Development",
+    "Actions for Q<n> Company Offsite",
+    "Actions for Software Subscriptions",
+    "Actions for Team Lunch",
+    "Assign budget to employees"
+   ],
+   "headings": [],
+   "path": "/team-spend",
+   "structure": "status",
+   "top": {
+    "name": "Employee budgets table",
+    "role": "table"
+   }
+  },
+  "hop": [
+   {
+    "click": {
+     "name": "Assign",
+     "role": "button"
+    }
+   }
+  ],
+  "mutates": true,
+  "parent": "cards.assign-budget-cards",
+  "recordedBy": "agent",
+  "review": {
+   "by": "conductor",
+   "date": "2026-10-03",
+   "decision": "accept",
+   "note": "same Team Spend list after Assign: Team Lunch row highlighted with +17 assignees and 18% spent; the 'Team Lunch assigned to 1 team member' toast shows in the replay and is fading in the capture; the hop clicks Assign as the label says",
+   "reason": "mutating"
+  },
+  "similarity": 0.9638,
+  "source": "ed68def4c5f0503b06e8832112ee81d964598e35",
+  "status": "accepted"
+ },
+ "cards.assign-budget-error": {
+  "checked": "2026-10-02-1349",
+  "fingerprint": {
+   "controls": [
+    "Assign",
+    "Cancel",
+    "Import a CSV list",
+    "Open combobox menu",
+    "Select team members"
+   ],
+   "headings": [
+    "Assign Team Lunch"
+   ],
+   "path": "/team-spend",
+   "structure": "dialog",
+   "top": {
+    "name": "",
+    "role": "dialog"
+   }
+  },
+  "hop": [
+   {
+    "click": {
+     "name": "Close combobox menu",
+     "role": "button"
+    }
+   }
+  ],
+  "mutates": true,
+  "parent": "cards.assign-budget-members",
+  "recordedBy": "agent",
+  "review": {
+   "by": "conductor",
+   "date": "2026-10-03",
+   "decision": "reject",
+   "note": "missing validation error: the replay shows the Assign Team Lunch picker focused with no pink field and no 'Add at least one team member or invite'. Clicking 'Close combobox menu' leaves focus in the field, so the blur validation never fires",
+   "reason": "mutating"
+  },
+  "similarity": 0.9456,
+  "source": "df6ed819213ab5de7a195a8496f6786455f1ee5e",
+  "status": "rejected"
+ },
+ "cards.assign-budget-members": {
+  "checked": "2026-10-02-1349",
+  "fingerprint": {
+   "controls": [
+    "Abigail Kyte abigail@demo.mercury.com",
+    "Alice Chen alice@demo.mercury.com Assigned",
+    "Anthony Buteo anthony@demo.mercury.com Assigned",
+    "Bruce Collins bruce@demo.mercury.com Assigned",
+    "Carry Beck carry@demo.mercury.com Assigned",
+    "Dave Walker dave@demo.mercury.com Assigned",
+    "Emmett Brown doc@demo.mercury.com Assigned",
+    "Invite new team member",
+    "Jane Black jane@demo.mercury.com Assigned",
+    "Jessica Awad jessica@demo.mercury.com Assigned",
+    "John Miller john@demo.mercury.com Assigned",
+    "Landon Shepherd landon@demo.mercury.com Assigned",
+    "Mary Metcalfe mary@demo.mercury.com Assigned",
+    "Multiple Pending Employee multiple-pending@demo.mercury.com Assigned",
+    "No Engagement no-engagement@demo.mercury.com Assigned",
+    "Noel Kim noel@demo.mercury.com Assigned",
+    "Onboarding Incomplete onboarding-incomplete@demo.mercury.com Assigned",
+    "Phil Coulson phil@demo.mercury.com Invited",
+    "Sally Park sally@demo.mercury.com Assigned",
+    "Select All team members",
+    "Starting Soon starting-soon@demo.mercury.com Assigned",
+    "Stephen Miles stephen@demo.mercury.com Assigned",
+    "Thomas Brown thomas@demo.mercury.com Assigned"
+   ],
+   "headings": [],
+   "path": "/team-spend",
+   "structure": "listbox",
+   "top": {
+    "name": "",
+    "role": "listbox"
+   }
+  },
+  "hop": [
+   {
+    "click": {
+     "name": "Open combobox menu",
+     "role": "button"
+    }
+   }
+  ],
+  "mutates": true,
+  "parent": "cards.assign-budget-modal",
+  "recordedBy": "agent",
+  "review": {
+   "by": "conductor",
+   "date": "2026-10-03",
+   "decision": "accept",
+   "note": "same Assign Team Lunch member picker open (Invite new team member, Select All, Jane Black / Landon Shepherd / Mary Metcalfe greyed 'Assigned'); hop opens the Select team members combobox as labeled",
+   "reason": "mutating"
+  },
+  "similarity": 0.9937,
+  "source": "77561ce9987568ba96e7ce96f70ca8b044038532",
+  "status": "accepted"
+ },
+ "cards.assign-budget-modal": {
+  "checked": "2026-10-02-1349",
+  "fingerprint": {
+   "controls": [
+    "Assign",
+    "Cancel",
+    "Import a CSV list",
+    "Open combobox menu",
+    "Select team members"
+   ],
+   "headings": [
+    "Assign Team Lunch"
+   ],
+   "path": "/team-spend",
+   "structure": "dialog",
+   "top": {
+    "name": "",
+    "role": "dialog"
+   }
+  },
+  "hop": [
+   {
+    "click": {
+     "index": 0,
+     "name": "Assign budget to employees",
+     "role": "button"
+    }
+   }
+  ],
+  "mutates": true,
+  "parent": "cards.team-spend",
+  "recordedBy": "agent",
+  "review": {
+   "by": "conductor",
+   "date": "2026-10-03",
+   "decision": "accept",
+   "note": "same 'Assign Team Lunch' modal (Select team members search, Import a CSV list, Cancel, disabled Assign); hop clicks Assign budget to employees on row 0 as the label says and submits nothing",
+   "reason": "mutating"
+  },
+  "similarity": 0.9937,
+  "source": "f7dc5bf8d6806004c46e1603d2adeda09c21f16e",
+  "status": "accepted"
+ },
+ "cards.assign-budget-selected": {
+  "checked": "2026-10-02-1349",
+  "fingerprint": {
+   "controls": [
+    "Abigail Kyte",
+    "Cancel",
+    "Import a CSV list",
+    "Next",
+    "Open combobox menu",
+    "Select team members"
+   ],
+   "headings": [
+    "Assign Team Lunch"
+   ],
+   "path": "/team-spend",
+   "structure": "dialog",
+   "top": {
+    "name": "",
+    "role": "dialog"
+   }
+  },
+  "hop": [
+   {
+    "click": {
+     "name": "Abigail Kyte abigail@demo.mercury.com",
+     "role": "option"
+    }
+   },
+   {
+    "click": {
+     "name": "Assign Team Lunch",
+     "role": "heading"
+    }
+   }
+  ],
+  "mutates": true,
+  "parent": "cards.assign-budget-members",
+  "recordedBy": "agent",
+  "review": {
+   "by": "conductor",
+   "date": "2026-10-03",
+   "decision": "accept",
+   "note": "same Assign Team Lunch dialog with the Abigail Kyte chip and Next button. The hop picks the Abigail Kyte option, then clicks the dialog heading to close the list.",
+   "reason": "mutating"
+  },
+  "similarity": 0.9875,
+  "source": "9ee0e30a44a064317dc3415e67188d11e88d5411",
+  "status": "accepted"
+ },
+ "cards.budget-actions-menu": {
+  "checked": "2026-10-02-1349",
+  "fingerprint": {
+   "controls": [
+    "Edit budget",
+    "Potentially dangerous action: Archive budget",
+    "View details"
+   ],
+   "headings": [],
+   "path": "/team-spend",
+   "structure": "menu",
+   "top": {
+    "name": "Actions for Test Person",
+    "role": "menu"
+   }
+  },
+  "hop": [
+   {
+    "click": {
+     "name": "Actions for Test Person",
+     "role": "button"
+    }
+   }
+  ],
+  "mutates": true,
+  "parent": "cards.create-budget-done",
+  "recordedBy": "agent",
+  "review": {
+   "by": "conductor",
+   "date": "2026-10-03",
+   "decision": "accept",
+   "note": "same row Actions menu (View details, Edit budget, Archive budget) on the newly created top budget; replay row is fixture 'Test Person' from the accepted parent instead of Conference travel",
+   "reason": "mutating"
+  },
+  "similarity": 0.9713,
+  "source": "cd7e09e4cf1d966de2246098cc55f554d5d11012",
+  "status": "accepted"
+ },
+ "cards.budget-archive-confirm": {
+  "checked": "2026-10-02-1349",
+  "fingerprint": {
+   "controls": [
+    "Cancel",
+    "Yes, archive"
+   ],
+   "headings": [
+    "Archive budget?"
+   ],
+   "path": "/team-spend/budget/<id>",
+   "structure": "dialog",
+   "top": {
+    "name": "",
+    "role": "dialog"
+   }
+  },
+  "hop": [
+   {
+    "click": {
+     "name": "Potentially dangerous action: Archive",
+     "role": "menuitem"
+    }
+   }
+  ],
+  "mutates": true,
+  "parent": "cards.budget-edit-menu",
+  "recordedBy": "draft",
+  "review": null,
+  "similarity": 0.9987,
+  "source": "fde5acd6ce112dad8fca1bcb77cfd621e8fc6617",
+  "status": "accepted"
+ },
+ "cards.budget-detail": {
+  "checked": "2026-10-02-1349",
+  "fingerprint": {
+   "controls": [
+    "Accounting",
+    "Accounts",
+    "All details",
+    "Assign budget",
+    "Banking",
+    "Bill Pay",
+    "Books",
+    "Cards",
+    "Command New",
+    "Credit Card",
+    "Current spend Click to sort",
+    "Customize your experience",
+    "Edit",
+    "Home",
+    "Insights",
+    "Invoicing",
+    "Learn about bookmarks",
+    "Mercury Demo Pro",
+    "Move money",
+    "Navigate to Settings",
+    "Next cycle",
+    "Open account",
+    "Ops / Payroll <amount>",
+    "Payments",
+    "Policies",
+    "Previous cycle",
+    "Reimbursements",
+    "Remove bookmark",
+    "Reorder Bill Pay bookmark",
+    "Reorder Credit Card bookmark",
+    "Reorder Insights bookmark",
+    "Reorder Ops / Payroll bookmark",
+    "Search for anything",
+    "Tasks <n>",
+    "Team Spend",
+    "Team member Click to sort",
+    "Toggle Private Mode",
+    "Transactions",
+    "Viewing as Admin",
+    "updates"
+   ],
+   "headings": [
+    "Software Subscriptions"
+   ],
+   "path": "/team-spend/budget/<id>",
+   "structure": "document",
+   "top": {
+    "name": "",
+    "role": "document"
+   }
+  },
+  "hop": [],
+  "mutates": false,
+  "parent": "/team-spend/budget/budget_5",
+  "recordedBy": "root",
+  "review": null,
+  "similarity": 0.9978,
+  "source": "97d170e1550eee4afc0af065b78cda302a97674c",
+  "status": "accepted"
+ },
+ "cards.budget-edit": {
+  "checked": "2026-10-02-1349",
+  "fingerprint": {
+   "controls": [
+    "Additional options",
+    "Allowed merchants",
+    "Cancel",
+    "Category",
+    "Clear combobox selection",
+    "Close",
+    "Customize your experience",
+    "Description",
+    "Figma",
+    "GitHub",
+    "Name",
+    "Notion",
+    "Open account",
+    "Open combobox menu",
+    "Repeats",
+    "Save changes",
+    "Slack",
+    "Spend controls",
+    "Spend limit per person",
+    "This budget ends",
+    "This budget starts",
+    "Viewing as Admin",
+    "bolt selected"
+   ],
+   "headings": [
+    "Edit budget",
+    "Additional options",
+    "Software Subscriptions"
+   ],
+   "path": "/team-spend/budget/<id>/edit",
+   "structure": "document",
+   "top": {
+    "name": "",
+    "role": "document"
+   }
+  },
+  "hop": [],
+  "mutates": false,
+  "parent": "/team-spend/budget/budget_5/edit",
+  "recordedBy": "root",
+  "review": null,
+  "similarity": 0.999,
+  "source": "97d170e1550eee4afc0af065b78cda302a97674c",
+  "status": "accepted"
+ },
+ "cards.budget-edit-error": {
+  "checked": "2026-10-02-1349",
+  "fingerprint": {
+   "controls": [
+    "Additional options",
+    "Allowed merchants",
+    "Cancel",
+    "Category",
+    "Clear combobox selection",
+    "Close",
+    "Customize your experience",
+    "Description",
+    "Figma",
+    "GitHub",
+    "Name",
+    "Notion",
+    "Open account",
+    "Open combobox menu",
+    "Repeats",
+    "Save changes",
+    "Slack",
+    "Spend controls",
+    "Spend limit per person",
+    "This budget ends",
+    "This budget starts",
+    "Viewing as Admin",
+    "bolt selected"
+   ],
+   "headings": [
+    "Edit budget",
+    "Additional options",
+    "Budget name"
+   ],
+   "path": "/team-spend/budget/<id>/edit",
+   "structure": "document",
+   "top": {
+    "name": "",
+    "role": "document"
+   }
+  },
+  "hop": [
+   {
+    "fill": {
+     "locator": {
+      "label": "Name"
+     },
+     "value": ""
+    }
+   },
+   {
+    "click": {
+     "name": "Save changes",
+     "role": "button"
+    }
+   }
+  ],
+  "mutates": true,
+  "parent": "cards.budget-edit",
+  "recordedBy": "agent",
+  "review": {
+   "by": "conductor",
+   "date": "2026-10-03",
+   "decision": "accept",
+   "note": "same Edit budget validation error: Name empty with 'Please complete this field', preview title falls back to 'Budget name', Save changes disabled; hop clears Name and clicks Save changes",
+   "reason": "mutating"
+  },
+  "similarity": 0.9981,
+  "source": "389785d35b7e428c912cd3086a574bea5269f475",
+  "status": "accepted"
+ },
+ "cards.budget-edit-menu": {
+  "checked": "2026-10-02-1349",
+  "fingerprint": {
+   "controls": [
+    "Edit",
+    "Potentially dangerous action: Archive"
+   ],
+   "headings": [],
+   "path": "/team-spend/budget/<id>",
+   "structure": "menu",
+   "top": {
+    "name": "Edit",
+    "role": "menu"
+   }
+  },
+  "hop": [
+   {
+    "click": {
+     "name": "Edit",
+     "role": "button"
+    }
+   }
+  ],
+  "mutates": false,
+  "parent": "cards.budget-detail",
+  "recordedBy": "draft",
+  "review": null,
+  "similarity": 0.9978,
+  "source": "0653c249dc0418b086b6a69b2266a5eea358ca69",
+  "status": "accepted"
+ },
+ "cards.budget-saving": {
+  "checked": "2026-10-02-1349",
+  "fingerprint": {
+   "controls": [
+    "Accounting",
+    "Accounts",
+    "All details",
+    "Assign budget",
+    "Banking",
+    "Bill Pay",
+    "Books",
+    "Cards",
+    "Command New",
+    "Credit Card",
+    "Current spend Click to sort",
+    "Customize your experience",
+    "Edit",
+    "Home",
+    "Insights",
+    "Invoicing",
+    "Learn about bookmarks",
+    "Mercury Demo Pro",
+    "Move money",
+    "Navigate to Settings",
+    "Next cycle",
+    "Open account",
+    "Ops / Payroll <amount>",
+    "Payments",
+    "Policies",
+    "Previous cycle",
+    "Reimbursements",
+    "Remove bookmark",
+    "Reorder Bill Pay bookmark",
+    "Reorder Credit Card bookmark",
+    "Reorder Insights bookmark",
+    "Reorder Ops / Payroll bookmark",
+    "Search for anything",
+    "Tasks <n>",
+    "Team Spend",
+    "Team member Click to sort",
+    "Toggle Private Mode",
+    "Transactions",
+    "Viewing as Admin",
+    "updates"
+   ],
+   "headings": [
+    "Software Subscriptions"
+   ],
+   "path": "/team-spend/budget/<id>",
+   "structure": "document",
+   "top": {
+    "name": "",
+    "role": "document"
+   }
+  },
+  "hop": [
+   {
+    "click": {
+     "name": "Save changes",
+     "role": "button"
+    }
+   }
+  ],
+  "mutates": true,
+  "parent": "cards.budget-edit",
+  "recordedBy": "agent",
+  "review": {
+   "by": "conductor",
+   "date": "2026-10-03",
+   "decision": "reject",
+   "note": "transient saving state (three-dot Save changes button) with 0 descendants; replay shows the settled Software Subscriptions budget page with a 'Changes saved' toast",
+   "reason": "below-threshold"
+  },
+  "similarity": 0.3633,
+  "source": "462dc211ee9d2a7e21db94996d3bdc4c80de9c58",
+  "status": "rejected"
+ },
+ "cards.cancel-card-confirm": {
+  "checked": "2026-10-02-1349",
+  "fingerprint": {
+   "controls": [
+    "Cancel card",
+    "Go back",
+    "View Subscription"
+   ],
+   "headings": [
+    "Are you sure you want to cancel this card? This cannot be undone."
+   ],
+   "path": "/cards/<id>",
+   "structure": "dialog",
+   "top": {
+    "name": "",
+    "role": "dialog"
+   }
+  },
+  "hop": [
+   {
+    "click": {
+     "name": "Cancel card",
+     "role": "menuitem"
+    }
+   }
+  ],
+  "mutates": false,
+  "parent": "cards.more-menu",
+  "recordedBy": "draft",
+  "review": null,
+  "similarity": 0.9185,
+  "source": "57b9c1b18fe5b2cd55280b372ee32219e06c0b12",
+  "status": "accepted"
+ },
+ "cards.card-frozen": {
+  "checked": "2026-10-02-1349",
+  "fingerprint": {
+   "controls": [
+    "<amount>",
+    "<n>",
+    "<n> Market St",
+    "Accounting",
+    "Accounts",
+    "Add filter",
+    "Amazon Web Services",
+    "Banking",
+    "Bill Pay",
+    "Billing address",
+    "Books",
+    "CA",
+    "Cards",
+    "Command New",
+    "Create card",
+    "Credit Card",
+    "Customize your experience",
+    "Expand details for Alice Chen’s card ending with <n>",
+    "Expand details for Bruce Collins’s card",
+    "Expand details for Carry Beck’s card ending with <n>",
+    "Expand details for Dave Walker’s card ending with <n>",
+    "Expand details for Emmett Brown’s card ending with <n>",
+    "Expand details for Jane Black’s card ending with <n>",
+    "Expand details for Jessica Awad’s card ending with <n>",
+    "Home",
+    "Insights",
+    "Invoicing",
+    "Jane Black",
+    "Learn about bookmarks",
+    "Mercury Demo Pro",
+    "More",
+    "Move money",
+    "Navigate to Settings",
+    "Open account",
+    "Ops / Payroll <amount>",
+    "Payments",
+    "Policies page",
+    "Remove bookmark",
+    "Reorder Bill Pay bookmark",
+    "Reorder Credit Card bookmark",
+    "Reorder Insights bookmark",
+    "Reorder Ops / Payroll bookmark",
+    "Require receipts for card transactions over <amount>",
+    "San Francisco",
+    "Search for anything",
+    "Show details <amount>k available · <amount>k spend limit",
+    "Suite <n>",
+    "Tasks <n>",
+    "Team Spend",
+    "Toggle Private Mode",
+    "Transactions",
+    "Unfreeze",
+    "Viewing as Admin",
+    "updates"
+   ],
+   "headings": [
+    "Cards"
+   ],
+   "path": "/cards/<id>",
+   "structure": "document",
+   "top": {
+    "name": "",
+    "role": "document"
+   }
+  },
+  "hop": [
+   {
+    "click": {
+     "name": "Freeze card",
+     "role": "button"
+    }
+   }
+  ],
+  "mutates": true,
+  "parent": "cards.freeze-confirm",
+  "recordedBy": "draft",
+  "review": {
+   "by": "conductor",
+   "date": "2026-10-03",
+   "decision": "accept",
+   "note": "same Facebook ads ••3054 panel, frozen: Frozen badge, dimmed card art, Unfreeze; details collapsed instead of expanded",
+   "reason": "below-threshold"
+  },
+  "similarity": 0.8593,
+  "source": "b18831a9e159047c064e89cdba826d6a98386029",
+  "status": "accepted"
+ },
+ "cards.card-revealed": {
+  "checked": "2026-10-02-1349",
+  "fingerprint": {
+   "controls": [
+    "<n>",
+    "<n> Market St",
+    "Accounting",
+    "Accounts",
+    "Activate physical card",
+    "Add filter",
+    "Banking",
+    "Bill Pay",
+    "Billing address",
+    "Books",
+    "CA",
+    "Cards",
+    "Click to copy <date>",
+    "Click to copy <n>",
+    "Command New",
+    "Create card",
+    "Credit Card",
+    "Customize your experience",
+    "Expand details for Alice Chen’s card ending with <n>",
+    "Expand details for Jane Black’s card ending with <n>",
+    "Freeze",
+    "Hardware <amount> left this month",
+    "Home",
+    "Insights",
+    "Invoicing",
+    "Jane Black",
+    "Learn about bookmarks",
+    "Mercury Demo Pro",
+    "More",
+    "Move money",
+    "Navigate to Settings",
+    "Open account",
+    "Ops / Payroll <amount>",
+    "Payments",
+    "Policies page",
+    "Remove bookmark",
+    "Reorder Bill Pay bookmark",
+    "Reorder Credit Card bookmark",
+    "Reorder Insights bookmark",
+    "Reorder Ops / Payroll bookmark",
+    "Require receipts for card transactions over <amount>",
+    "San Francisco",
+    "Search for anything",
+    "Suite <n>",
+    "Tasks <n>",
+    "Team Lunch <amount> left this week",
+    "Team Spend",
+    "Toggle Private Mode",
+    "Transactions",
+    "Viewing as Admin",
+    "updates"
+   ],
+   "headings": [
+    "Cards",
+    "Budgets"
+   ],
+   "path": "/cards/<id>",
+   "structure": "document",
+   "top": {
+    "name": "",
+    "role": "document"
+   }
+  },
+  "hop": [
+   {
+    "click": {
+     "name": "Click to reveal",
+     "role": "button"
+    }
+   },
+   {
+    "wait": {
+     "locator": {
+      "text": "4111 1111 1111 1111"
+     }
+    }
+   },
+   {
+    "scroll": {
+     "text": "Manage"
+    }
+   }
+  ],
+  "mutates": false,
+  "parent": "cards.detail-physical",
+  "recordedBy": "agent",
+  "review": {
+   "by": "conductor",
+   "date": "2026-10-03",
+   "decision": "accept",
+   "note": "same Jane's IO card panel with PAN revealed (4111 1111 1111 1111, exp 12/99, CVC 123); the parent shows it masked; only the scroll differs (Recommended banner still in view)",
+   "reason": "below-threshold"
+  },
+  "similarity": 0.5775,
+  "source": "5c39722629dc9c0fd5adb48167665862f4b5fbe4",
+  "status": "accepted"
+ },
+ "cards.card-unfrozen": {
+  "checked": "2026-10-02-1349",
+  "fingerprint": {
+   "controls": [
+    "<amount>",
+    "<n>",
+    "<n> Market St",
+    "Accounting",
+    "Accounts",
+    "Add filter",
+    "Amazon Web Services",
+    "Banking",
+    "Bill Pay",
+    "Billing address",
+    "Books",
+    "CA",
+    "Cards",
+    "Click to reveal",
+    "Command New",
+    "Create card",
+    "Credit Card",
+    "Customize your experience",
+    "Expand details for Alice Chen’s card ending with <n>",
+    "Expand details for Bruce Collins’s card",
+    "Expand details for Carry Beck’s card ending with <n>",
+    "Expand details for Dave Walker’s card ending with <n>",
+    "Expand details for Emmett Brown’s card ending with <n>",
+    "Expand details for Jane Black’s card ending with <n>",
+    "Expand details for Jessica Awad’s card ending with <n>",
+    "Freeze",
+    "Home",
+    "Insights",
+    "Invoicing",
+    "Jane Black",
+    "Learn about bookmarks",
+    "Mercury Demo Pro",
+    "More",
+    "Move money",
+    "Navigate to Settings",
+    "Open account",
+    "Ops / Payroll <amount>",
+    "Payments",
+    "Policies page",
+    "Remove bookmark",
+    "Reorder Bill Pay bookmark",
+    "Reorder Credit Card bookmark",
+    "Reorder Insights bookmark",
+    "Reorder Ops / Payroll bookmark",
+    "Require receipts for card transactions over <amount>",
+    "San Francisco",
+    "Search for anything",
+    "Show details <amount>k available · <amount>k spend limit",
+    "Suite <n>",
+    "Tasks <n>",
+    "Team Spend",
+    "Toggle Private Mode",
+    "Transactions",
+    "Viewing as Admin",
+    "updates"
+   ],
+   "headings": [
+    "Cards"
+   ],
+   "path": "/cards/<id>",
+   "structure": "document",
+   "top": {
+    "name": "",
+    "role": "document"
+   }
+  },
+  "hop": [
+   {
+    "click": {
+     "name": "Unfreeze",
+     "role": "button"
+    }
+   }
+  ],
+  "mutates": true,
+  "parent": "cards.card-frozen",
+  "recordedBy": "draft",
+  "review": {
+   "by": "conductor",
+   "date": "2026-10-03",
+   "decision": "accept",
+   "note": "same Facebook ads ••3054 panel back to active: no Frozen badge, Freeze button; limit details differ with session data",
+   "reason": "below-threshold"
+  },
+  "similarity": 0.8601,
+  "source": "ca38e9cc3570dc060be78cfacccfd627131da08e",
+  "status": "accepted"
+ },
+ "cards.create-budget": {
+  "checked": "2026-10-02-1349",
+  "fingerprint": {
+   "controls": [
+    "Additional options",
+    "Cancel",
+    "Close",
+    "Customize your experience",
+    "Description",
+    "Name",
+    "Next",
+    "Open account",
+    "Open combobox menu",
+    "Repeats",
+    "Spend controls",
+    "Spend limit per person",
+    "This budget ends",
+    "This budget starts",
+    "Viewing as Admin",
+    "dollar sign selected"
+   ],
+   "headings": [
+    "Create a budget",
+    "Additional options",
+    "Budget name"
+   ],
+   "path": "/team-spend/budget/create",
+   "structure": "document",
+   "top": {
+    "name": "",
+    "role": "document"
+   }
+  },
+  "hop": [],
+  "mutates": false,
+  "parent": "/team-spend/budget/create",
+  "recordedBy": "root",
+  "review": null,
+  "similarity": 0.9953,
+  "source": "97d170e1550eee4afc0af065b78cda302a97674c",
+  "status": "accepted"
+ },
+ "cards.create-budget-assign": {
+  "checked": "2026-10-02-1349",
+  "fingerprint": {
+   "controls": [
+    "Abigail Kyte <n> cards",
+    "Alice Chen <n> cards",
+    "Anthony Buteo <n> cards",
+    "Back",
+    "Bruce Collins Invited",
+    "Budget card for Abigail Kyte",
+    "Budget card for Alice Chen",
+    "Budget card for Anthony Buteo",
+    "Budget card for Bruce Collins",
+    "Budget card for Carry Beck",
+    "Budget card for Dave Walker",
+    "Budget card for Emmett Brown",
+    "Budget card for Jane Black",
+    "Budget card for Jessica Awad",
+    "Budget card for John Miller",
+    "Budget card for Landon Shepherd",
+    "Budget card for Mary Metcalfe",
+    "Budget card for Multiple Pending Employee",
+    "Budget card for No Engagement",
+    "Budget card for Noel Kim",
+    "Budget card for Onboarding Incomplete",
+    "Budget card for Phil Coulson",
+    "Budget card for Sally Park",
+    "Budget card for Starting Soon",
+    "Budget card for Stephen Miles",
+    "Budget card for Thomas Brown",
+    "Carry Beck <n> card",
+    "Close",
+    "Customize your experience",
+    "Dave Walker <n> card",
+    "Emmett Brown <n> cards",
+    "Invite team member",
+    "Jane Black <n> cards",
+    "Jessica Awad <n> card",
+    "John Miller <n> cards",
+    "Landon Shepherd <n> card",
+    "Mary Metcalfe <n> card",
+    "Multiple Pending Employee <n> cards",
+    "Next",
+    "No Engagement <n> cards",
+    "Noel Kim <n> cards",
+    "Onboarding Incomplete <n> cards",
+    "Open account",
+    "Open combobox menu",
+    "Phil Coulson Invited",
+    "Sally Park <n> card",
+    "Save as draft",
+    "Search team members",
+    "Select all team members",
+    "Starting Soon <n> cards",
+    "Stephen Miles <n> cards",
+    "Thomas Brown <n> cards",
+    "Viewing as Admin",
+    "import a CSV list"
+   ],
+   "headings": [
+    "Assign Test Person to your team",
+    "Test Person"
+   ],
+   "path": "/team-spend/budget/create",
+   "structure": "document",
+   "top": {
+    "name": "",
+    "role": "document"
+   }
+  },
+  "hop": [
+   {
+    "click": {
+     "name": "Next",
+     "role": "button"
+    }
+   }
+  ],
+  "mutates": false,
+  "parent": "cards.create-budget-filled",
+  "recordedBy": "draft",
+  "review": null,
+  "similarity": 0.9547,
+  "source": "cbb754d0e95f59ba6bf3719918c7c33226dc06b1",
+  "status": "accepted"
+ },
+ "cards.create-budget-done": {
+  "checked": "2026-10-02-1349",
+  "fingerprint": {
+   "controls": [
+    "Actions for Hardware",
+    "Actions for Learning & Development",
+    "Actions for Q<n> Company Offsite",
+    "Actions for Software Subscriptions",
+    "Actions for Team Lunch",
+    "Actions for Test Person",
+    "Assign budget to employees"
+   ],
+   "headings": [],
+   "path": "/team-spend",
+   "structure": "status",
+   "top": {
+    "name": "Employee budgets table",
+    "role": "table"
+   }
+  },
+  "hop": [
+   {
+    "click": {
+     "name": "Create budget",
+     "role": "button"
+    }
+   }
+  ],
+  "mutates": true,
+  "parent": "cards.create-budget-review",
+  "recordedBy": "agent",
+  "review": {
+   "by": "conductor",
+   "date": "2026-10-03",
+   "decision": "accept",
+   "note": "same Team Spend budgets table with 'Budget published' toast; new budget at top is fixture 'Test Person' $1.00 monthly instead of Conference travel $500; hop clicks Create budget as labeled",
+   "reason": "mutating"
+  },
+  "similarity": 0.9772,
+  "source": "da915730c5aaf44f83a7d31f147ea73165137f47",
+  "status": "accepted"
+ },
+ "cards.create-budget-errors": {
+  "checked": "2026-10-02-1349",
+  "fingerprint": {
+   "controls": [
+    "Additional options",
+    "Cancel",
+    "Close",
+    "Customize your experience",
+    "Description",
+    "Name",
+    "Next",
+    "Open account",
+    "Open combobox menu",
+    "Repeats",
+    "Spend controls",
+    "Spend limit per person",
+    "This budget ends",
+    "This budget starts",
+    "Viewing as Admin",
+    "dollar sign selected"
+   ],
+   "headings": [
+    "Create a budget",
+    "Additional options",
+    "Budget name"
+   ],
+   "path": "/team-spend/budget/create",
+   "structure": "document",
+   "top": {
+    "name": "",
+    "role": "document"
+   }
+  },
+  "hop": [
+   {
+    "click": {
+     "name": "Next",
+     "role": "button"
+    }
+   }
+  ],
+  "mutates": false,
+  "parent": "cards.create-budget",
+  "recordedBy": "agent",
+  "review": null,
+  "similarity": 0.9965,
+  "source": "30f86da48c6aa57861e2d885a112114bba741037",
+  "status": "accepted"
+ },
+ "cards.create-budget-filled": {
+  "checked": "2026-10-02-1349",
+  "fingerprint": {
+   "controls": [
+    "Additional options",
+    "Cancel",
+    "Close",
+    "Customize your experience",
+    "Description",
+    "Name",
+    "Next",
+    "Open account",
+    "Open combobox menu",
+    "Repeats",
+    "Spend controls",
+    "Spend limit per person",
+    "This budget ends",
+    "This budget starts",
+    "Viewing as Admin",
+    "dollar sign selected"
+   ],
+   "headings": [
+    "Create a budget",
+    "Additional options",
+    "Test Person"
+   ],
+   "path": "/team-spend/budget/create",
+   "structure": "document",
+   "top": {
+    "name": "",
+    "role": "document"
+   }
+  },
+  "hop": [
+   {
+    "fill": {
+     "locator": {
+      "name": "Name",
+      "role": "textbox"
+     },
+     "value": "Test Person"
+    }
+   },
+   {
+    "fill": {
+     "locator": {
+      "name": "Spend limit per person",
+      "role": "textbox"
+     },
+     "value": "1.00"
+    }
+   },
+   {
+    "fill": {
+     "locator": {
+      "name": "Description",
+      "role": "textbox"
+     },
+     "value": "A11y audit test description"
+    }
+   }
+  ],
+  "mutates": false,
+  "parent": "cards.create-budget-errors",
+  "recordedBy": "agent",
+  "review": null,
+  "similarity": 0.9784,
+  "source": "95412ec9ce71eac25c369743b604764b5dcd148c",
+  "status": "accepted"
+ },
+ "cards.create-budget-review": {
+  "checked": "2026-10-02-1349",
+  "fingerprint": {
+   "controls": [
+    "Back",
+    "Close",
+    "Create budget",
+    "Customize your experience",
+    "Open account",
+    "Viewing as Admin"
+   ],
+   "headings": [
+    "Let's review everything"
+   ],
+   "path": "/team-spend/budget/create",
+   "structure": "document",
+   "top": {
+    "name": "",
+    "role": "document"
+   }
+  },
+  "hop": [
+   {
+    "click": {
+     "text": "Jane Black<n> cards"
+    }
+   },
+   {
+    "click": {
+     "text": "Landon Shepherd<n> card"
+    }
+   },
+   {
+    "click": {
+     "name": "Next",
+     "role": "button"
+    }
+   },
+   {
+    "wait": {
+     "locator": {
+      "name": "Let's review everything",
+      "role": "heading"
+     }
+    }
+   }
+  ],
+  "mutates": false,
+  "parent": "cards.create-budget-assign",
+  "recordedBy": "agent",
+  "review": null,
+  "similarity": 0.9943,
+  "source": "f481e6fdc27eb69cd77ee0982aed48a089856efe",
+  "status": "accepted"
+ },
+ "cards.detail-physical": {
+  "checked": "2026-10-02-1349",
+  "fingerprint": {
+   "controls": [
+    "<n>",
+    "<n> Market St",
+    "Activate physical card",
+    "Billing address",
+    "CA",
+    "Click to reveal",
+    "Credit Card",
+    "Freeze",
+    "Hardware <amount> left this month",
+    "Jane Black",
+    "More",
+    "San Francisco",
+    "Suite <n>",
+    "Team Lunch <amount> left this week",
+    "Transactions"
+   ],
+   "headings": [
+    "Budgets"
+   ],
+   "path": "/cards/<id>",
+   "structure": "dialog",
+   "top": {
+    "name": "",
+    "role": "generic"
+   }
+  },
+  "hop": [
+   {
+    "click": {
+     "name": "Card ending with: <n> Jane's IO card",
+     "role": "cell"
+    }
+   }
+  ],
+  "mutates": false,
+  "parent": "cards.index",
+  "recordedBy": "agent",
+  "review": {
+   "by": "conductor",
+   "date": "2026-10-03",
+   "decision": "accept",
+   "note": "same detail panel for Jane's IO card ••5555; the capture is scrolled further down the panel",
+   "reason": "below-threshold"
+  },
+  "similarity": 0.5341,
+  "source": "67d8e54d296b9bf2eb1bf8385b6a57560fd50514",
+  "status": "accepted"
+ },
+ "cards.detail-virtual": {
+  "checked": "2026-10-02-1349",
+  "fingerprint": {
+   "controls": [
+    "<amount>",
+    "<n>",
+    "<n> Market St",
+    "Amazon Web Services",
+    "Billing address",
+    "CA",
+    "Click to reveal",
+    "Credit Card",
+    "Freeze",
+    "Jane Black",
+    "More",
+    "San Francisco",
+    "Show details <amount>k available · <amount>k spend limit",
+    "Suite <n>",
+    "Transactions"
+   ],
+   "headings": [],
+   "path": "/cards/<id>",
+   "structure": "dialog",
+   "top": {
+    "name": "",
+    "role": "generic"
+   }
+  },
+  "hop": [
+   {
+    "click": {
+     "name": "Card ending with: <n> Facebook ads",
+     "role": "cell"
+    }
+   },
+   {
+    "wait": {
+     "locator": {
+      "text": "Billing address"
+     }
+    }
+   },
+   {
+    "scroll": {
+     "name": "Card ending with: <n> Travel expenses Suspended",
+     "role": "cell"
+    }
+   }
+  ],
+  "mutates": false,
+  "parent": "cards.index",
+  "recordedBy": "agent",
+  "review": null,
+  "similarity": 0.9959,
+  "source": "f3d31c8ccefe8780256054920e29b857d7a962ab",
+  "status": "accepted"
+ },
+ "cards.edit-limit-error": {
+  "checked": "2026-10-02-1349",
+  "fingerprint": {
+   "controls": [
+    "Cancel",
+    "Limit type",
+    "Save Limit",
+    "Spend limit",
+    "This is a temporary change Automatically restore existing card limits after a period of time"
+   ],
+   "headings": [],
+   "path": "/cards/<id>",
+   "structure": "dialog",
+   "top": {
+    "name": "",
+    "role": "dialog"
+   }
+  },
+  "hop": [
+   {
+    "click": {
+     "name": "More",
+     "role": "button"
+    }
+   },
+   {
+    "click": {
+     "name": "Edit limit",
+     "role": "menuitem"
+    }
+   },
+   {
+    "fill": {
+     "locator": {
+      "label": "Spend limit"
+     },
+     "value": ""
+    }
+   },
+   {
+    "click": {
+     "name": "Save Limit",
+     "role": "button"
+    }
+   }
+  ],
+  "mutates": true,
+  "parent": "cards.limit-saved",
+  "recordedBy": "agent",
+  "review": {
+   "by": "conductor",
+   "date": "2026-10-03",
+   "decision": "accept",
+   "note": "same Edit card limits dialog (Weekly, empty Spend limit, red 'Must be a dollar value.' error, Save Limit disabled); hop does More > Edit limit > clear > Save Limit as labeled",
+   "reason": "mutating"
+  },
+  "similarity": 0.9204,
+  "source": "0d9720ec079314984fd07d699dccaaf8b6fdb860",
+  "status": "accepted"
+ },
+ "cards.edit-limit-modal": {
+  "checked": "2026-10-02-1349",
+  "fingerprint": {
+   "controls": [
+    "Cancel",
+    "Limit type",
+    "Save Limit",
+    "Spend limit"
+   ],
+   "headings": [],
+   "path": "/cards/<id>",
+   "structure": "dialog",
+   "top": {
+    "name": "",
+    "role": "dialog"
+   }
+  },
+  "hop": [
+   {
+    "click": {
+     "name": "Edit limit",
+     "role": "menuitem"
+    }
+   }
+  ],
+  "mutates": false,
+  "parent": "cards.more-menu",
+  "recordedBy": "draft",
+  "review": null,
+  "similarity": 0.9209,
+  "source": "cd9120dbb30a4bd70643074328df856eb23aa677",
+  "status": "accepted"
+ },
+ "cards.edit-limit-temporary": {
+  "checked": "2026-10-02-1349",
+  "fingerprint": {
+   "controls": [
+    "Cancel",
+    "From",
+    "Limit type",
+    "Save Limit",
+    "Spend limit",
+    "This is a temporary change",
+    "To"
+   ],
+   "headings": [],
+   "path": "/cards/<id>",
+   "structure": "dialog",
+   "top": {
+    "name": "",
+    "role": "dialog"
+   }
+  },
+  "hop": [
+   {
+    "fill": {
+     "locator": {
+      "name": "Spend limit",
+      "role": "textbox"
+     },
+     "value": "2500"
+    }
+   },
+   {
+    "check": {
+     "name": "This is a temporary change Automatically restore existing card limits after a period of time",
+     "role": "checkbox"
+    }
+   }
+  ],
+  "mutates": true,
+  "parent": "cards.edit-limit-error",
+  "recordedBy": "agent",
+  "review": {
+   "by": "conductor",
+   "date": "2026-10-03",
+   "decision": "accept",
+   "note": "same Edit card limits dialog (Weekly, $2,500, 'This is a temporary change' checked, From/To dates shown; dates drifted to Oct 3-Oct 10); hop fills 2500 and checks the box as labeled, no save",
+   "reason": "mutating"
+  },
+  "similarity": 0.9199,
+  "source": "fc1d85f451a210caf13dd5eca8dc8433869ae5f0",
+  "status": "accepted"
+ },
+ "cards.edit-nickname": {
+  "checked": "2026-10-02-1349",
+  "fingerprint": {
+   "controls": [
+    "Go back",
+    "Jane’s Credit Card",
+    "Save"
+   ],
+   "headings": [
+    "Change Card Nickname"
+   ],
+   "path": "/cards/<id>",
+   "structure": "dialog",
+   "top": {
+    "name": "",
+    "role": "dialog"
+   }
+  },
+  "hop": [
+   {
+    "click": {
+     "name": "Edit nickname",
+     "role": "menuitem"
+    }
+   }
+  ],
+  "mutates": false,
+  "parent": "cards.more-menu",
+  "recordedBy": "draft",
+  "review": null,
+  "similarity": 0.9102,
+  "source": "3e71925f093310069d7a001e024b8d5a73149dea",
+  "status": "accepted"
+ },
+ "cards.expense-approved": {
+  "checked": "2026-10-02-1349",
+  "fingerprint": {
+   "controls": [],
+   "headings": [],
+   "path": "/expenses/all-expenses",
+   "structure": "status",
+   "top": {
+    "name": "All Expenses",
+    "role": "table"
+   }
+  },
+  "hop": [
+   {
+    "click": {
+     "index": 0,
+     "name": "Approve",
+     "role": "button"
+    }
+   }
+  ],
+  "mutates": true,
+  "parent": "cards.expense-detail-receipt",
+  "recordedBy": "agent",
+  "review": {
+   "by": "conductor",
+   "date": "2026-10-03",
+   "decision": "accept",
+   "note": "same Reimbursements list after Approve: Oct 1 Mary Metcalfe row is Payment Pending, All expenses 3, 'Reimbursement payment approved' toast still showing; row dates drifted",
+   "reason": "mutating"
+  },
+  "similarity": 0.997,
+  "source": "b2fcc297eb1bd4afbf87b8ce2727780d97b2d482",
+  "status": "accepted"
+ },
+ "cards.expense-decline": {
+  "checked": "2026-10-02-1349",
+  "fingerprint": {
+   "controls": [
+    "Cancel",
+    "Decline",
+    "Reason"
+   ],
+   "headings": [
+    "Decline reimbursement?"
+   ],
+   "path": "/expenses/all-expenses",
+   "structure": "dialog",
+   "top": {
+    "name": "",
+    "role": "dialog"
+   }
+  },
+  "hop": [
+   {
+    "click": {
+     "name": "Decline",
+     "role": "button"
+    }
+   }
+  ],
+  "mutates": true,
+  "parent": "cards.expense-detail",
+  "recordedBy": "draft",
+  "review": null,
+  "similarity": 0.9973,
+  "source": "9937372fc04991b914e038a0550b63f58d4ae117",
+  "status": "accepted"
+ },
+ "cards.expense-declined": {
+  "checked": "2026-10-02-1349",
+  "fingerprint": {
+   "controls": [],
+   "headings": [],
+   "path": "/expenses/all-expenses",
+   "structure": "status",
+   "top": {
+    "name": "All Expenses",
+    "role": "table"
+   }
+  },
+  "hop": [
+   {
+    "fill": {
+     "locator": {
+      "label": "Reason"
+     },
+     "value": "A11y audit test reason"
+    }
+   },
+   {
+    "click": {
+     "name": "Decline",
+     "role": "button",
+     "within": {
+      "role": "dialog"
+     }
+    }
+   }
+  ],
+  "mutates": true,
+  "parent": "cards.expense-decline",
+  "recordedBy": "agent",
+  "review": {
+   "by": "conductor",
+   "date": "2026-10-03",
+   "decision": "accept",
+   "note": "same Reimbursements list after decline: All expenses 4, $16.75 Jane Black row Declined, 'Reimbursement request declined' toast; hop fills Reason and clicks Decline in the dialog",
+   "reason": "mutating"
+  },
+  "similarity": 0.9971,
+  "source": "8b6aeb1a5bb86e9af651e3c4b3efc35eabb6a321",
+  "status": "accepted"
+ },
+ "cards.expense-detail": {
+  "checked": "2026-10-02-1349",
+  "fingerprint": {
+   "controls": [
+    "Approve",
+    "Choose Files",
+    "Close detail panel",
+    "Decline",
+    "Drag and drop here or click to upload You may upload PDF, PNG, or JPEG files",
+    "Jane Black",
+    "More",
+    "Reimburse from"
+   ],
+   "headings": [],
+   "path": "/expenses/all-expenses",
+   "structure": "dialog",
+   "top": {
+    "name": "",
+    "role": "complementary"
+   }
+  },
+  "hop": [
+   {
+    "click": {
+     "name": "<date> Jane Black Pending Review <amount> Travel - Vehicles — —",
+     "role": "row"
+    }
+   }
+  ],
+  "mutates": false,
+  "parent": "cards.expenses",
+  "recordedBy": "agent",
+  "review": null,
+  "similarity": 0.9962,
+  "source": "56aef248e390324626d95f8fe7a86338808b075d",
+  "status": "accepted"
+ },
+ "cards.expense-detail-receipt": {
+  "checked": "2026-10-02-1349",
+  "fingerprint": {
+   "controls": [
+    "Approve",
+    "Choose Files",
+    "Close detail panel",
+    "Decline",
+    "Drag and drop here or click to upload You may upload PDF, PNG, or JPEG files",
+    "Mary Metcalfe",
+    "More",
+    "demo-receipt.pdf"
+   ],
+   "headings": [],
+   "path": "/expenses/all-expenses",
+   "structure": "dialog",
+   "top": {
+    "name": "",
+    "role": "complementary"
+   }
+  },
+  "hop": [
+   {
+    "click": {
+     "index": 0,
+     "name": "Mary Metcalfe",
+     "role": "cell"
+    }
+   }
+  ],
+  "mutates": true,
+  "parent": "cards.expense-declined",
+  "recordedBy": "agent",
+  "review": {
+   "by": "conductor",
+   "date": "2026-10-03",
+   "decision": "accept",
+   "note": "same Reimbursement drawer for the Oct 1 Mary Metcalfe $338.62 row (Approve/Decline, Oct 1 2024, Luxury Inn, Travel - Accommodation, demo-receipt.pdf); hop clicks the first Mary Metcalfe cell = the $338.62 row; the parent's 'Reimbursement request declined' toast still showing is fine",
+   "reason": "mutating"
+  },
+  "similarity": 0.9679,
+  "source": "a46797e6619c5c15859d561efbec6a11473422df",
+  "status": "accepted"
+ },
+ "cards.expense-more-menu": {
+  "checked": "2026-10-02-1349",
+  "fingerprint": {
+   "controls": [
+    "Edit",
+    "Request details"
+   ],
+   "headings": [],
+   "path": "/expenses/all-expenses",
+   "structure": "menu",
+   "top": {
+    "name": "More",
+    "role": "menu"
+   }
+  },
+  "hop": [
+   {
+    "click": {
+     "name": "More",
+     "role": "button"
+    }
+   }
+  ],
+  "mutates": false,
+  "parent": "cards.expense-detail",
+  "recordedBy": "agent",
+  "review": null,
+  "similarity": 0.9961,
+  "source": "d845a35345774cb3bfb9b8f84717c12c58380e3a",
+  "status": "accepted"
+ },
+ "cards.expenses": {
+  "checked": "2026-10-02-1349",
+  "fingerprint": {
+   "controls": [
+    "Accounting",
+    "Accounts",
+    "Add filter",
+    "All",
+    "Approve",
+    "Banking",
+    "Bill Pay",
+    "Books",
+    "Cards",
+    "Command New",
+    "Credit Card",
+    "Customize your experience",
+    "Export all",
+    "Home",
+    "Insights",
+    "Invoicing",
+    "Learn about bookmarks",
+    "Mercury Demo Pro",
+    "Move money",
+    "Navigate to Settings",
+    "Open account",
+    "Ops / Payroll <amount>",
+    "Payments",
+    "Pending Review",
+    "Policies",
+    "Reimbursements",
+    "Remove bookmark",
+    "Reorder Bill Pay bookmark",
+    "Reorder Credit Card bookmark",
+    "Reorder Insights bookmark",
+    "Reorder Ops / Payroll bookmark",
+    "Search for anything",
+    "Settings",
+    "Submit expense",
+    "Tasks <n>",
+    "Team Spend",
+    "Toggle Private Mode",
+    "Transactions",
+    "Viewing as Admin",
+    "updates"
+   ],
+   "headings": [
+    "Reimbursements"
+   ],
+   "path": "/expenses/all-expenses",
+   "structure": "document",
+   "top": {
+    "name": "",
+    "role": "document"
+   }
+  },
+  "hop": [],
+  "mutates": false,
+  "parent": "/expenses/all-expenses",
+  "recordedBy": "root",
+  "review": null,
+  "similarity": 0.9972,
+  "source": "97d170e1550eee4afc0af065b78cda302a97674c",
+  "status": "accepted"
+ },
+ "cards.expenses-approve-own-blocked": {
+  "checked": "2026-10-02-1349",
+  "fingerprint": {
+   "controls": [
+    "Approve"
+   ],
+   "headings": [],
+   "path": "/expenses/all-expenses",
+   "structure": "dialog",
+   "top": {
+    "name": "<n> request selected",
+    "role": "dialog"
+   }
+  },
+  "hop": [
+   {
+    "hover": {
+     "name": "Approve",
+     "role": "button"
+    }
+   }
+  ],
+  "mutates": true,
+  "parent": "cards.expenses-bulk-select",
+  "recordedBy": "agent",
+  "review": {
+   "by": "conductor",
+   "date": "2026-10-03",
+   "decision": "accept",
+   "note": "same tooltip 'Approvers cannot approve their own expenses' over the disabled Approve in the '1 request selected $16.75' bar; the parent already checked the own Pending Review row, the hop only hovers Approve (it does not mutate anything)",
+   "reason": "mutating"
+  },
+  "similarity": 0.9413,
+  "source": "7002e3548920a06eededa22029287ee99bceabcc",
+  "status": "accepted"
+ },
+ "cards.expenses-bulk-approved": {
+  "checked": "2026-10-02-1349",
+  "fingerprint": {
+   "controls": [],
+   "headings": [],
+   "path": "/expenses/all-expenses",
+   "structure": "status",
+   "top": {
+    "name": "All Expenses",
+    "role": "table"
+   }
+  },
+  "hop": [
+   {
+    "click": {
+     "index": 2,
+     "role": "checkbox"
+    }
+   },
+   {
+    "check": {
+     "role": "checkbox",
+     "within": {
+      "name": "<date> Mary Metcalfe Pending Review <amount> Travel - Accommodation —",
+      "role": "row"
+     }
+    }
+   },
+   {
+    "click": {
+     "name": "Approve",
+     "role": "button"
+    }
+   }
+  ],
+  "mutates": true,
+  "parent": "cards.expenses-approve-own-blocked",
+  "recordedBy": "agent",
+  "review": {
+   "by": "conductor",
+   "date": "2026-10-03",
+   "decision": "accept",
+   "note": "same Reimbursements list: Mary Metcalfe's Oct 1 $338.62 Accommodation row went from Pending Review to Payment Pending, Jane Black's $16.75 row stays Pending Review, and the toast faded. The hop matches the label: it unticks the parent's own row (checkbox index 2), ticks Mary's row and clicks Approve. The leftover 'By clicking Approve, I authorize Mercury...' tooltip is a hover leftover from the pointer resting where the Approve button was, not an open menu, panel or dialog, so it doesn't change which screen or state this is.",
+   "reason": "mutating"
+  },
+  "similarity": 0.9486,
+  "source": "8370295a05356c8aefbf740219ec881bf5144757",
+  "status": "accepted"
+ },
+ "cards.expenses-bulk-select": {
+  "checked": "2026-10-02-1349",
+  "fingerprint": {
+   "controls": [
+    "Approve"
+   ],
+   "headings": [],
+   "path": "/expenses/all-expenses",
+   "structure": "dialog",
+   "top": {
+    "name": "<n> request selected",
+    "role": "dialog"
+   }
+  },
+  "hop": [
+   {
+    "check": {
+     "role": "checkbox",
+     "within": {
+      "name": "<date> Jane Black Pending Review <amount> Travel - Vehicles — —",
+      "role": "row"
+     }
+    }
+   }
+  ],
+  "mutates": false,
+  "parent": "cards.expenses",
+  "recordedBy": "agent",
+  "review": {
+   "by": "conductor",
+   "date": "2026-10-03",
+   "decision": "accept",
+   "note": "same screen: one Pending Review row checked, header checkbox mixed, '1 request selected $16.75' bar; dates drifted",
+   "reason": "sample"
+  },
+  "similarity": 0.9974,
+  "source": "8c1fe6c09ad8f8b56ec52c9887674bb3f7cfd641",
+  "status": "accepted"
+ },
+ "cards.filter-menu": {
+  "checked": "2026-10-02-1349",
+  "fingerprint": {
+   "controls": [
+    "AP",
+    "AR",
+    "Budget",
+    "Cardholder",
+    "Checking ••<n>",
+    "Credit",
+    "Date Created",
+    "Debit",
+    "Either",
+    "Ops / Payroll",
+    "Physical only",
+    "Restriction",
+    "Savings ••<n>",
+    "Select All",
+    "Spending",
+    "Status",
+    "Type",
+    "Virtual only"
+   ],
+   "headings": [],
+   "path": "/cards",
+   "structure": "dialog",
+   "top": {
+    "name": "",
+    "role": "generic"
+   }
+  },
+  "hop": [
+   {
+    "click": {
+     "name": "Add filter",
+     "role": "button"
+    }
+   }
+  ],
+  "mutates": false,
+  "parent": "cards.index",
+  "recordedBy": "draft",
+  "review": null,
+  "similarity": 0.998,
+  "source": "87f47a637b9af797dd4e9a1694fb4eec79ec2491",
+  "status": "accepted"
+ },
+ "cards.filtered-virtual": {
+  "checked": "2026-10-02-1349",
+  "fingerprint": {
+   "controls": [
+    "Accounting",
+    "Accounts",
+    "Add filter",
+    "Banking",
+    "Bill Pay",
+    "Books",
+    "Cards",
+    "Command New",
+    "Create card",
+    "Credit Card",
+    "Customize your experience",
+    "Expand details for Alice Chen’s card ending with <n>",
+    "Expand details for Bruce Collins’s card",
+    "Expand details for Jane Black’s card ending with <n>",
+    "Expand details for Jessica Awad’s card ending with <n>",
+    "Expand details for Landon Shepherd’s card ending with <n>",
+    "Home",
+    "Insights",
+    "Invoicing",
+    "Learn about bookmarks",
+    "Mercury Demo Pro",
+    "Move money",
+    "Navigate to Settings",
+    "Open account",
+    "Ops / Payroll <amount>",
+    "Payments",
+    "Policies page",
+    "Remove Tag",
+    "Remove bookmark",
+    "Reorder Bill Pay bookmark",
+    "Reorder Credit Card bookmark",
+    "Reorder Insights bookmark",
+    "Reorder Ops / Payroll bookmark",
+    "Require receipts for card transactions over <amount>",
+    "Search for anything",
+    "Tasks <n>",
+    "Team Spend",
+    "Toggle Private Mode",
+    "Transactions",
+    "Viewing as Admin",
+    "Virtual Cards Remove Tag",
+    "updates"
+   ],
+   "headings": [
+    "Cards"
+   ],
+   "path": "/cards",
+   "structure": "document",
+   "top": {
+    "name": "",
+    "role": "document"
+   }
+  },
+  "hop": [
+   {
+    "click": {
+     "text": "Virtual only"
+    }
+   },
+   {
+    "press": "Escape"
+   }
+  ],
+  "mutates": false,
+  "parent": "cards.filter-menu",
+  "recordedBy": "agent",
+  "review": {
+   "by": "conductor",
+   "date": "2026-10-03",
+   "decision": "accept",
+   "note": "same Cards list with 'Virtual Cards' filter chip and virtual rows only (••0330 AWS billing, ••3054 Facebook ads); the hop clicks Virtual only, then Escape closes the menu",
+   "reason": "sample"
+  },
+  "similarity": 0.9992,
+  "source": "903636005bde49f9334633fe813b4561db3ce8a6",
+  "status": "accepted"
+ },
+ "cards.freeze-confirm": {
+  "checked": "2026-10-02-1349",
+  "fingerprint": {
+   "controls": [
+    "Freeze card",
+    "Go back",
+    "View Subscription"
+   ],
+   "headings": [
+    "Are you sure you want to freeze this card?"
+   ],
+   "path": "/cards/<id>",
+   "structure": "dialog",
+   "top": {
+    "name": "",
+    "role": "dialog"
+   }
+  },
+  "hop": [
+   {
+    "click": {
+     "name": "Freeze",
+     "role": "button"
+    }
+   }
+  ],
+  "mutates": true,
+  "parent": "cards.detail-virtual",
+  "recordedBy": "draft",
+  "review": null,
+  "similarity": 0.9104,
+  "source": "9a1122bb26ee14a4bf3fd8d0629d29d142270d2f",
+  "status": "accepted"
+ },
+ "cards.index": {
+  "checked": "2026-10-02-1349",
+  "fingerprint": {
+   "controls": [
+    "Accounting",
+    "Accounts",
+    "Add filter",
+    "Banking",
+    "Bill Pay",
+    "Books",
+    "Cards",
+    "Command New",
+    "Create card",
+    "Credit Card",
+    "Customize your experience",
+    "Expand details for Alice Chen’s card ending with <n>",
+    "Expand details for Jane Black’s card ending with <n>",
+    "Home",
+    "Insights",
+    "Invoicing",
+    "Learn about bookmarks",
+    "Mercury Demo Pro",
+    "Move money",
+    "Navigate to Settings",
+    "Open account",
+    "Ops / Payroll <amount>",
+    "Payments",
+    "Policies page",
+    "Remove bookmark",
+    "Reorder Bill Pay bookmark",
+    "Reorder Credit Card bookmark",
+    "Reorder Insights bookmark",
+    "Reorder Ops / Payroll bookmark",
+    "Require receipts for card transactions over <amount>",
+    "Search for anything",
+    "Tasks <n>",
+    "Team Spend",
+    "Toggle Private Mode",
+    "Transactions",
+    "Viewing as Admin",
+    "updates"
+   ],
+   "headings": [
+    "Cards"
+   ],
+   "path": "/cards",
+   "structure": "document",
+   "top": {
+    "name": "",
+    "role": "document"
+   }
+  },
+  "hop": [],
+  "mutates": false,
+  "parent": "/cards",
+  "recordedBy": "root",
+  "review": null,
+  "similarity": 0.9991,
+  "source": "97d170e1550eee4afc0af065b78cda302a97674c",
+  "status": "accepted"
+ },
+ "cards.issue-card": {
+  "checked": "2026-10-02-1349",
+  "fingerprint": {
+   "controls": [
+    "Agent Card",
+    "Card nickname",
+    "Cardholder",
+    "Close",
+    "Control type",
+    "Create card",
+    "Credit",
+    "Customize your experience",
+    "Debit",
+    "Open account",
+    "Open combobox menu",
+    "Physical",
+    "Viewing as Admin",
+    "Virtual"
+   ],
+   "headings": [],
+   "path": "/issue-card",
+   "structure": "document",
+   "top": {
+    "name": "",
+    "role": "document"
+   }
+  },
+  "hop": [],
+  "mutates": false,
+  "parent": "/issue-card",
+  "recordedBy": "root",
+  "review": null,
+  "similarity": 0.9572,
+  "source": "97d170e1550eee4afc0af065b78cda302a97674c",
+  "status": "accepted"
+ },
+ "cards.issue-card-agent-card": {
+  "checked": "2026-10-02-1349",
+  "fingerprint": {
+   "controls": [
+    "Agent Card",
+    "Card nickname",
+    "Cardholder",
+    "Close",
+    "Control type",
+    "Create card",
+    "Credit",
+    "Customize your experience",
+    "Debit",
+    "Open account",
+    "Open combobox menu",
+    "Physical",
+    "Viewing as Admin",
+    "Virtual"
+   ],
+   "headings": [],
+   "path": "/issue-card",
+   "structure": "document",
+   "top": {
+    "name": "",
+    "role": "document"
+   }
+  },
+  "hop": [
+   {
+    "check": {
+     "name": "Agent Card",
+     "role": "checkbox"
+    }
+   }
+  ],
+  "mutates": false,
+  "parent": "cards.issue-card",
+  "recordedBy": "draft",
+  "review": null,
+  "similarity": 0.9996,
+  "source": "aeffb4a50bc440d3a7044764e35b5bc03d8bd3ae",
+  "status": "accepted"
+ },
+ "cards.issue-card-cardholder": {
+  "checked": "2026-10-02-1349",
+  "fingerprint": {
+   "controls": [
+    "Abigail Kyte abigail@demo.mercury.com",
+    "Alice Chen alice@demo.mercury.com",
+    "Anthony Buteo anthony@demo.mercury.com",
+    "Bruce Collins bruce@demo.mercury.com Invited",
+    "Carry Beck carry@demo.mercury.com",
+    "Dave Walker dave@demo.mercury.com",
+    "Emmett Brown doc@demo.mercury.com",
+    "Invite new team member",
+    "Jane Black (you) jane@demo.mercury.com",
+    "Jessica Awad jessica@demo.mercury.com",
+    "John Miller john@demo.mercury.com",
+    "Landon Shepherd landon@demo.mercury.com",
+    "Mary Metcalfe mary@demo.mercury.com",
+    "Multiple Pending Employee multiple-pending@demo.mercury.com",
+    "No Engagement no-engagement@demo.mercury.com",
+    "Noel Kim noel@demo.mercury.com",
+    "Onboarding Incomplete onboarding-incomplete@demo.mercury.com",
+    "Phil Coulson phil@demo.mercury.com Invited",
+    "Sally Park sally@demo.mercury.com",
+    "Starting Soon starting-soon@demo.mercury.com",
+    "Stephen Miles stephen@demo.mercury.com",
+    "Thomas Brown thomas@demo.mercury.com"
+   ],
+   "headings": [],
+   "path": "/issue-card",
+   "structure": "listbox",
+   "top": {
+    "name": "",
+    "role": "listbox"
+   }
+  },
+  "hop": [
+   {
+    "click": {
+     "name": "Cardholder",
+     "role": "combobox"
+    }
+   }
+  ],
+  "mutates": false,
+  "parent": "cards.issue-card",
+  "recordedBy": "draft",
+  "review": null,
+  "similarity": 0.9996,
+  "source": "d46909832972e4ec2d28552e6598e3f35f6aa298",
+  "status": "accepted"
+ },
+ "cards.issue-card-control-type": {
+  "checked": "2026-10-02-1349",
+  "fingerprint": {
+   "controls": [
+    "Existing budgets",
+    "Spending limit"
+   ],
+   "headings": [],
+   "path": "/issue-card",
+   "structure": "listbox",
+   "top": {
+    "name": "",
+    "role": "listbox"
+   }
+  },
+  "hop": [
+   {
+    "click": {
+     "name": "Control type",
+     "role": "combobox"
+    }
+   }
+  ],
+  "mutates": true,
+  "parent": "cards.issue-card-error",
+  "recordedBy": "agent",
+  "review": {
+   "by": "conductor",
+   "date": "2026-10-03",
+   "decision": "accept",
+   "note": "same Create a card form with Control type menu open (Existing budgets, Spending limit) and red Control type label; nickname is empty in the replay because the parent label clears it (the capture shows the default nickname), not this state's condition",
+   "reason": "mutating"
+  },
+  "similarity": 0.9619,
+  "source": "16313c2794ee18c6edf095dac382a67237d37f3f",
+  "status": "accepted"
+ },
+ "cards.issue-card-error": {
+  "checked": "2026-10-02-1349",
+  "fingerprint": {
+   "controls": [
+    "Agent Card",
+    "Card nickname",
+    "Cardholder",
+    "Close",
+    "Control type",
+    "Create card",
+    "Credit",
+    "Customize your experience",
+    "Debit",
+    "Open account",
+    "Open combobox menu",
+    "Physical",
+    "Viewing as Admin",
+    "Virtual"
+   ],
+   "headings": [],
+   "path": "/issue-card",
+   "structure": "document",
+   "top": {
+    "name": "",
+    "role": "document"
+   }
+  },
+  "hop": [
+   {
+    "fill": {
+     "locator": {
+      "label": "Card nickname"
+     },
+     "value": ""
+    }
+   },
+   {
+    "click": {
+     "name": "Create card",
+     "role": "button"
+    }
+   },
+   {
+    "wait": {
+     "locator": {
+      "text": "Please complete this field"
+     }
+    }
+   },
+   {
+    "scroll": {
+     "text": "Please complete this field"
+    }
+   }
+  ],
+  "mutates": true,
+  "parent": "cards.issue-card",
+  "recordedBy": "agent",
+  "review": {
+   "by": "conductor",
+   "date": "2026-10-03",
+   "decision": "accept",
+   "note": "same Create a card form with Control type 'Please complete this field' error; replay clears nickname to the 'e.g. Lunch Card' placeholder as the label says, while the capture still shows Jane Black's Credit Card",
+   "reason": "mutating"
+  },
+  "similarity": 0.962,
+  "source": "ac0eac9aeada2530b5a09030414c95afafd7aad5",
+  "status": "accepted"
+ },
+ "cards.issue-card-existing-budgets": {
+  "checked": "2026-10-02-1349",
+  "fingerprint": {
+   "controls": [
+    "Agent Card",
+    "Card nickname",
+    "Cardholder",
+    "Close",
+    "Control type",
+    "Create card",
+    "Credit",
+    "Customize your experience",
+    "Debit",
+    "Open account",
+    "Open combobox menu",
+    "Physical",
+    "Select budgets",
+    "Viewing as Admin",
+    "Virtual"
+   ],
+   "headings": [],
+   "path": "/issue-card",
+   "structure": "document",
+   "top": {
+    "name": "",
+    "role": "document"
+   }
+  },
+  "hop": [
+   {
+    "click": {
+     "name": "Control type",
+     "role": "combobox"
+    }
+   },
+   {
+    "click": {
+     "name": "Existing budgets",
+     "role": "option"
+    }
+   },
+   {
+    "scroll": {
+     "text": "Select budgets"
+    }
+   }
+  ],
+  "mutates": false,
+  "parent": "cards.issue-card",
+  "recordedBy": "agent",
+  "review": null,
+  "similarity": 0.9972,
+  "source": "83ed9fca9e94f2846b7beef2f117963411c1b8f8",
+  "status": "accepted"
+ },
+ "cards.issue-card-merchant-controls": {
+  "checked": "2026-10-02-1349",
+  "fingerprint": {
+   "controls": [
+    "Merchant restrictions Allow transactions only at a particular merchant",
+    "Merchant type restrictions Allow transactions only at particular merchant types",
+    "None"
+   ],
+   "headings": [],
+   "path": "/issue-card",
+   "structure": "listbox",
+   "top": {
+    "name": "",
+    "role": "listbox"
+   }
+  },
+  "hop": [
+   {
+    "click": {
+     "name": "Merchant controls",
+     "role": "combobox"
+    }
+   },
+   {
+    "wait": {
+     "locator": {
+      "name": "Merchant restrictions Allow transactions only at a particular merchant",
+      "role": "option"
+     }
+    }
+   }
+  ],
+  "mutates": true,
+  "parent": "cards.issue-card-spending-limit",
+  "recordedBy": "agent",
+  "review": {
+   "by": "conductor",
+   "date": "2026-10-03",
+   "decision": "accept",
+   "note": "same Merchant controls listbox open (None, Merchant restrictions, Merchant type restrictions) under Spending limit; hop clicks the Merchant controls combobox as labeled",
+   "reason": "mutating"
+  },
+  "similarity": 0.9828,
+  "source": "4e19a499af0496cd95ec9dc6e88a11e236a4961b",
+  "status": "accepted"
+ },
+ "cards.issue-card-physical-debit": {
+  "checked": "2026-10-02-1349",
+  "fingerprint": {
+   "controls": [
+    "Card nickname",
+    "Cardholder",
+    "Close",
+    "Control type",
+    "Create card",
+    "Credit",
+    "Customize your experience",
+    "Debit",
+    "Open account",
+    "Open combobox menu",
+    "Physical",
+    "Source account",
+    "Use a different address",
+    "Viewing as Admin",
+    "Virtual"
+   ],
+   "headings": [],
+   "path": "/issue-card",
+   "structure": "document",
+   "top": {
+    "name": "",
+    "role": "document"
+   }
+  },
+  "hop": [
+   {
+    "click": {
+     "name": "Debit",
+     "role": "radio"
+    }
+   },
+   {
+    "click": {
+     "name": "Physical",
+     "role": "radio"
+    }
+   },
+   {
+    "scroll": {
+     "name": "Control type",
+     "role": "combobox"
+    }
+   }
+  ],
+  "mutates": false,
+  "parent": "cards.issue-card",
+  "recordedBy": "agent",
+  "review": null,
+  "similarity": 0.9997,
+  "source": "83dc59b5aa1e3bc009a9247fa4a8d11782b7eb80",
+  "status": "accepted"
+ },
+ "cards.issue-card-ship-address": {
+  "checked": "2026-10-02-1349",
+  "fingerprint": {
+   "controls": [
+    "Company mailing address <n> SW Example Ave Floor <n> Portland, OR <n> United States",
+    "Custom address Used to ship this card and not saved",
+    "Edit",
+    "Go back",
+    "Use address",
+    "Your personal mailing address <n> Bloor St Unit #<n> Toronto, ON M<n>S <n>M<n> Canada Edit"
+   ],
+   "headings": [],
+   "path": "/issue-card",
+   "structure": "dialog",
+   "top": {
+    "name": "",
+    "role": "dialog"
+   }
+  },
+  "hop": [
+   {
+    "click": {
+     "name": "Use a different address",
+     "role": "button"
+    }
+   }
+  ],
+  "mutates": false,
+  "parent": "cards.issue-card-physical-debit",
+  "recordedBy": "agent",
+  "review": null,
+  "similarity": 0.9995,
+  "source": "5aae54ce321dd4ec3f157c1b4cd6320d09044e69",
+  "status": "accepted"
+ },
+ "cards.issue-card-spending-limit": {
+  "checked": "2026-10-02-1349",
+  "fingerprint": {
+   "controls": [
+    "Agent Card",
+    "Card nickname",
+    "Cardholder",
+    "Close",
+    "Control type",
+    "Create card",
+    "Credit",
+    "Customize your experience",
+    "Daily spending limit",
+    "Debit",
+    "Limit type",
+    "Merchant controls",
+    "Open account",
+    "Open combobox menu",
+    "Physical",
+    "Set a custom card expiration date Default is <n> years, or set it to expire sooner",
+    "Viewing as Admin",
+    "Virtual"
+   ],
+   "headings": [],
+   "path": "/issue-card",
+   "structure": "document",
+   "top": {
+    "name": "",
+    "role": "document"
+   }
+  },
+  "hop": [
+   {
+    "click": {
+     "name": "Spending limit",
+     "role": "option"
+    }
+   },
+   {
+    "wait": {
+     "locator": {
+      "text": "Set a custom card expiration date"
+     }
+    }
+   },
+   {
+    "scroll": {
+     "text": "Set a custom card expiration date"
+    }
+   }
+  ],
+  "mutates": true,
+  "parent": "cards.issue-card-control-type",
+  "recordedBy": "agent",
+  "review": {
+   "by": "conductor",
+   "date": "2026-10-03",
+   "decision": "accept",
+   "note": "same Create card form with Spending limit chosen (Merchant controls None, Limit type Daily, $1,000, custom expiration checkbox); preview has no Nickname row because an earlier step cleared it, and the expiration date drifted",
+   "reason": "mutating"
+  },
+  "similarity": 0.983,
+  "source": "955a1cc6a48f9b7ac7d35ea0da2918c5f971b9e2",
+  "status": "accepted"
+ },
+ "cards.issue-card-success": {
+  "checked": "2026-10-02-1349",
+  "fingerprint": {
+   "controls": [
+    "Agent Card",
+    "Card nickname",
+    "Cardholder",
+    "Click to reveal",
+    "Close",
+    "Control type",
+    "Create another",
+    "Create card",
+    "Credit",
+    "Customize your experience",
+    "Daily spending limit",
+    "Debit",
+    "Limit type",
+    "Merchant controls",
+    "Open account",
+    "Open combobox menu",
+    "Physical",
+    "Policies page",
+    "Require receipts for card transactions over <amount>",
+    "Set a custom card expiration date Default is <n> years, or set it to expire sooner",
+    "View card details",
+    "Viewing as Admin",
+    "Virtual"
+   ],
+   "headings": [
+    "You’re all set"
+   ],
+   "path": "/issue-card",
+   "structure": "document",
+   "top": {
+    "name": "",
+    "role": "document"
+   }
+  },
+  "hop": [
+   {
+    "click": {
+     "name": "None",
+     "role": "option"
+    }
+   },
+   {
+    "click": {
+     "name": "Create card",
+     "role": "button"
+    }
+   }
+  ],
+  "mutates": true,
+  "parent": "cards.issue-card-merchant-controls",
+  "recordedBy": "agent",
+  "review": {
+   "by": "conductor",
+   "date": "2026-10-03",
+   "decision": "accept",
+   "note": "same 'You're all set' screen (virtual card ••0330, Create another / View card details, receipts toggle); the hop picks None, then clicks Create card, as the label says",
+   "reason": "mutating"
+  },
+  "similarity": 0.9998,
+  "source": "cc304ad1ada07c0e8b0fe4b2559196b767d349aa",
+  "status": "accepted"
+ },
+ "cards.limit-saved": {
+  "checked": "2026-10-02-1349",
+  "fingerprint": {
+   "controls": [
+    "<amount>",
+    "<n>",
+    "<n> Market St",
+    "Accounting",
+    "Accounts",
+    "Add filter",
+    "Amazon Web Services",
+    "Banking",
+    "Bill Pay",
+    "Billing address",
+    "Books",
+    "CA",
+    "Cards",
+    "Click to reveal",
+    "Command New",
+    "Create card",
+    "Credit Card",
+    "Customize your experience",
+    "Expand details for Alice Chen’s card ending with <n>",
+    "Expand details for Bruce Collins’s card",
+    "Expand details for Carry Beck’s card ending with <n>",
+    "Expand details for Dave Walker’s card ending with <n>",
+    "Expand details for Emmett Brown’s card ending with <n>",
+    "Expand details for Jane Black’s card ending with <n>",
+    "Expand details for Jessica Awad’s card ending with <n>",
+    "Freeze",
+    "Home",
+    "Insights",
+    "Invoicing",
+    "Jane Black",
+    "Learn about bookmarks",
+    "Mercury Demo Pro",
+    "More",
+    "Move money",
+    "Navigate to Settings",
+    "Open account",
+    "Ops / Payroll <amount>",
+    "Payments",
+    "Policies page",
+    "Remove bookmark",
+    "Reorder Bill Pay bookmark",
+    "Reorder Credit Card bookmark",
+    "Reorder Insights bookmark",
+    "Reorder Ops / Payroll bookmark",
+    "Require receipts for card transactions over <amount>",
+    "San Francisco",
+    "Search for anything",
+    "Show details <amount>k available · <amount>k spend limit",
+    "Suite <n>",
+    "Tasks <n>",
+    "Team Spend",
+    "Toggle Private Mode",
+    "Transactions",
+    "Viewing as Admin",
+    "updates"
+   ],
+   "headings": [
+    "Cards"
+   ],
+   "path": "/cards/<id>",
+   "structure": "document",
+   "top": {
+    "name": "",
+    "role": "document"
+   }
+  },
+  "hop": [
+   {
+    "click": {
+     "name": "Weekly Resets at midnight UTC each Sunday",
+     "role": "option"
+    }
+   },
+   {
+    "click": {
+     "name": "Save Limit",
+     "role": "button"
+    }
+   }
+  ],
+  "mutates": true,
+  "parent": "cards.limit-type-dropdown",
+  "recordedBy": "draft",
+  "review": {
+   "by": "conductor",
+   "date": "2026-10-03",
+   "decision": "accept",
+   "note": "same panel after saving a weekly limit: Spent this week, Weekly spend limit $5,000.00",
+   "reason": "below-threshold"
+  },
+  "similarity": 0.8609,
+  "source": "d856b5d854cde53975ff45e41785a8773befaa81",
+  "status": "accepted"
+ },
+ "cards.limit-temporary-saved": {
+  "checked": "2026-10-02-1349",
+  "fingerprint": {
+   "controls": [
+    "<amount>",
+    "<n>",
+    "<n> Market St",
+    "Accounting",
+    "Accounts",
+    "Add filter",
+    "Amazon Web Services",
+    "Banking",
+    "Bill Pay",
+    "Billing address",
+    "Books",
+    "CA",
+    "Cards",
+    "Click to reveal",
+    "Command New",
+    "Create card",
+    "Credit Card",
+    "Customize your experience",
+    "Expand details for Alice Chen’s card ending with <n>",
+    "Expand details for Bruce Collins’s card",
+    "Expand details for Carry Beck’s card ending with <n>",
+    "Expand details for Dave Walker’s card ending with <n>",
+    "Expand details for Emmett Brown’s card ending with <n>",
+    "Expand details for Jane Black’s card ending with <n>",
+    "Expand details for Jessica Awad’s card ending with <n>",
+    "Freeze",
+    "Hide details <amount>k available · <amount>k spend limit",
+    "Home",
+    "Insights",
+    "Invoicing",
+    "Jane Black",
+    "Learn about bookmarks",
+    "Mercury Demo Pro",
+    "More",
+    "Move money",
+    "Navigate to Settings",
+    "Open account",
+    "Ops / Payroll <amount>",
+    "Payments",
+    "Policies page",
+    "Remove bookmark",
+    "Reorder Bill Pay bookmark",
+    "Reorder Credit Card bookmark",
+    "Reorder Insights bookmark",
+    "Reorder Ops / Payroll bookmark",
+    "Require receipts for card transactions over <amount>",
+    "San Francisco",
+    "Search for anything",
+    "Suite <n>",
+    "Tasks <n>",
+    "Team Spend",
+    "Toggle Private Mode",
+    "Transactions",
+    "Viewing as Admin",
+    "updates"
+   ],
+   "headings": [
+    "Cards"
+   ],
+   "path": "/cards/<id>",
+   "structure": "document",
+   "top": {
+    "name": "",
+    "role": "document"
+   }
+  },
+  "hop": [
+   {
+    "click": {
+     "name": "Save Limit",
+     "role": "button"
+    }
+   },
+   {
+    "click": {
+     "text": "Show details"
+    }
+   }
+  ],
+  "mutates": true,
+  "parent": "cards.edit-limit-temporary",
+  "recordedBy": "agent",
+  "review": {
+   "by": "conductor",
+   "date": "2026-10-03",
+   "decision": "accept",
+   "note": "same Facebook ads ••3054 panel after Save Limit: Weekly spending limit $2,500.00 with clock icon, Available to spend $2,200.00, details expanded; hop clicks Save Limit as labeled, and the extra 'Show details' click only reopens the disclosure the capture and parent capture show open (it can only match when details are collapsed), so it changes no state the label covers",
+   "reason": "mutating"
+  },
+  "similarity": 0.9958,
+  "source": "5b3ea8fe68fc80dad6cbedeac8732616a332d44d",
+  "status": "accepted"
+ },
+ "cards.limit-type-dropdown": {
+  "checked": "2026-10-02-1349",
+  "fingerprint": {
+   "controls": [
+    "Daily Resets midnight UTC",
+    "Monthly Resets at the start of every calendar month",
+    "Options",
+    "Weekly Resets at midnight UTC each Sunday",
+    "Yearly Resets at the start of each calendar year"
+   ],
+   "headings": [],
+   "path": "/cards/<id>",
+   "structure": "listbox",
+   "top": {
+    "name": "Options",
+    "role": "listbox"
+   }
+  },
+  "hop": [
+   {
+    "click": {
+     "name": "Limit type",
+     "role": "combobox"
+    }
+   }
+  ],
+  "mutates": false,
+  "parent": "cards.edit-limit-modal",
+  "recordedBy": "draft",
+  "review": null,
+  "similarity": 0.9206,
+  "source": "2ccc3ad4a986262ac56eadbb3f535cf9a3221c1a",
+  "status": "accepted"
+ },
+ "cards.more-menu": {
+  "checked": "2026-10-02-1349",
+  "fingerprint": {
+   "controls": [
+    "Cancel card",
+    "Edit limit",
+    "Edit nickname",
+    "Reset PIN",
+    "Transfer card"
+   ],
+   "headings": [],
+   "path": "/cards/<id>",
+   "structure": "menu",
+   "top": {
+    "name": "",
+    "role": "menu"
+   }
+  },
+  "hop": [
+   {
+    "click": {
+     "name": "More",
+     "role": "button"
+    }
+   }
+  ],
+  "mutates": false,
+  "parent": "cards.detail-virtual",
+  "recordedBy": "draft",
+  "review": {
+   "by": "conductor",
+   "date": "2026-10-03",
+   "decision": "accept",
+   "note": "same More menu on the Facebook ads card panel (Edit nickname, Edit limit, Reset PIN, Transfer card, Cancel card)",
+   "reason": "below-threshold"
+  },
+  "similarity": 0.8714,
+  "source": "224c78bfc1c590ef233f2d05c03affdf1b886f11",
+  "status": "accepted"
+ },
+ "cards.my-expenses": {
+  "checked": "2026-10-02-1349",
+  "fingerprint": {
+   "controls": [
+    "Accounting",
+    "Accounts",
+    "Add filter",
+    "Banking",
+    "Bill Pay",
+    "Books",
+    "Cards",
+    "Choose Files",
+    "Command New",
+    "Credit Card",
+    "Customize your experience",
+    "Delete draft reimbursement",
+    "Details Requested",
+    "Edit draft reimbursement",
+    "Export filtered",
+    "Home",
+    "Insights",
+    "Invoicing",
+    "Learn about bookmarks",
+    "Mercury Demo Pro",
+    "Move money",
+    "Navigate to Settings",
+    "Open account",
+    "Ops / Payroll <amount>",
+    "Payments",
+    "Policies",
+    "Reimbursements",
+    "Remove bookmark",
+    "Remove filter",
+    "Reorder Bill Pay bookmark",
+    "Reorder Credit Card bookmark",
+    "Reorder Insights bookmark",
+    "Reorder Ops / Payroll bookmark",
+    "Search for anything",
+    "Select all draft reimbursements for bulk actions",
+    "Select draft reimbursement for bulk actions",
+    "Settings",
+    "Submit",
+    "Submit expense",
+    "Tasks <n>",
+    "Team Spend",
+    "Toggle Private Mode",
+    "Transactions",
+    "Viewing as Admin",
+    "updates"
+   ],
+   "headings": [
+    "Reimbursements",
+    "Drafts",
+    "Submitted Expenses"
+   ],
+   "path": "/expenses/my-expenses",
+   "structure": "document",
+   "top": {
+    "name": "",
+    "role": "document"
+   }
+  },
+  "hop": [],
+  "mutates": false,
+  "parent": "/expenses/my-expenses",
+  "recordedBy": "root",
+  "review": null,
+  "similarity": 0.9992,
+  "source": "97d170e1550eee4afc0af065b78cda302a97674c",
+  "status": "accepted"
+ },
+ "cards.nickname-saved": {
+  "checked": "2026-10-02-1349",
+  "fingerprint": {
+   "controls": [
+    "<amount>",
+    "<n>",
+    "<n> Market St",
+    "Accounting",
+    "Accounts",
+    "Add filter",
+    "Amazon Web Services",
+    "Banking",
+    "Bill Pay",
+    "Billing address",
+    "Books",
+    "CA",
+    "Cards",
+    "Click to reveal",
+    "Command New",
+    "Create card",
+    "Credit Card",
+    "Customize your experience",
+    "Expand details for Alice Chen’s card ending with <n>",
+    "Expand details for Bruce Collins’s card",
+    "Expand details for Carry Beck’s card ending with <n>",
+    "Expand details for Dave Walker’s card ending with <n>",
+    "Expand details for Emmett Brown’s card ending with <n>",
+    "Expand details for Jane Black’s card ending with <n>",
+    "Expand details for Jessica Awad’s card ending with <n>",
+    "Freeze",
+    "Home",
+    "Insights",
+    "Invoicing",
+    "Jane Black",
+    "Learn about bookmarks",
+    "Mercury Demo Pro",
+    "More",
+    "Move money",
+    "Navigate to Settings",
+    "Open account",
+    "Ops / Payroll <amount>",
+    "Payments",
+    "Policies page",
+    "Remove bookmark",
+    "Reorder Bill Pay bookmark",
+    "Reorder Credit Card bookmark",
+    "Reorder Insights bookmark",
+    "Reorder Ops / Payroll bookmark",
+    "Require receipts for card transactions over <amount>",
+    "San Francisco",
+    "Search for anything",
+    "Show details <amount>k available · <amount>k spend limit",
+    "Suite <n>",
+    "Tasks <n>",
+    "Team Spend",
+    "Toggle Private Mode",
+    "Transactions",
+    "Viewing as Admin",
+    "updates"
+   ],
+   "headings": [
+    "Cards"
+   ],
+   "path": "/cards/<id>",
+   "structure": "document",
+   "top": {
+    "name": "",
+    "role": "document"
+   }
+  },
+  "hop": [
+   {
+    "fill": {
+     "locator": {
+      "name": "Jane’s Credit Card",
+      "role": "textbox"
+     },
+     "value": "A11y Test"
+    }
+   },
+   {
+    "click": {
+     "name": "Save",
+     "role": "button"
+    }
+   }
+  ],
+  "mutates": true,
+  "parent": "cards.edit-nickname",
+  "recordedBy": "agent",
+  "review": {
+   "by": "conductor",
+   "date": "2026-10-03",
+   "decision": "accept",
+   "note": "same renamed card ••3054 in the row and the panel header (A11y Test vs Meta ads), no toast; the hop fills the nickname and clicks Save. Spend details are collapsed in the replay but were left expanded in the capture; limit amounts drifted",
+   "reason": "below-threshold"
+  },
+  "similarity": 0.8588,
+  "source": "d19306947563ec9dd924d90a6b382fcc80f0c20f",
+  "status": "accepted"
+ },
+ "cards.personal-address-edit": {
+  "checked": "2026-10-02-1349",
+  "fingerprint": {
+   "controls": [
+    "Address line <n>",
+    "City",
+    "Country",
+    "Go back",
+    "Open combobox menu",
+    "Postal code",
+    "Province",
+    "Save address"
+   ],
+   "headings": [],
+   "path": "/issue-card",
+   "structure": "dialog",
+   "top": {
+    "name": "",
+    "role": "dialog"
+   }
+  },
+  "hop": [
+   {
+    "click": {
+     "name": "Edit",
+     "role": "button",
+     "within": {
+      "role": "dialog"
+     }
+    }
+   }
+  ],
+  "mutates": false,
+  "parent": "cards.issue-card-ship-address",
+  "recordedBy": "agent",
+  "review": null,
+  "similarity": 0.9995,
+  "source": "a04cfae1cb14419343e3fd9bd0edbd8aa017aedf",
+  "status": "accepted"
+ },
+ "cards.policies": {
+  "checked": "2026-10-02-1349",
+  "fingerprint": {
+   "controls": [
+    "Accounting",
+    "Accounts",
+    "Banking",
+    "Bill Pay",
+    "Books",
+    "Card spend",
+    "Cards",
+    "Command New",
+    "Credit Card",
+    "Customize your experience",
+    "Disable",
+    "Edit",
+    "Home",
+    "Insights",
+    "Invoicing",
+    "Learn about bookmarks",
+    "Mercury Demo Pro",
+    "Move money",
+    "Navigate to Settings",
+    "Open account",
+    "Ops / Payroll <amount>",
+    "Payments",
+    "Policies",
+    "Reimbursements",
+    "Remove bookmark",
+    "Reorder Bill Pay bookmark",
+    "Reorder Credit Card bookmark",
+    "Reorder Insights bookmark",
+    "Reorder Ops / Payroll bookmark",
+    "Search for anything",
+    "Tasks <n>",
+    "Team Spend",
+    "Toggle Private Mode",
+    "Transactions",
+    "Viewing as Admin",
+    "updates"
+   ],
+   "headings": [
+    "Spend Policies"
+   ],
+   "path": "/team-spend/policies/card-spend",
+   "structure": "document",
+   "top": {
+    "name": "",
+    "role": "document"
+   }
+  },
+  "hop": [],
+  "mutates": false,
+  "parent": "/team-spend/policies/card-spend",
+  "recordedBy": "root",
+  "review": null,
+  "similarity": 0.9996,
+  "source": "97d170e1550eee4afc0af065b78cda302a97674c",
+  "status": "accepted"
+ },
+ "cards.policies-reimbursements": {
+  "checked": "2026-10-02-1349",
+  "fingerprint": {
+   "controls": [
+    "Accounting",
+    "Accounts",
+    "Banking",
+    "Bill Pay",
+    "Books",
+    "Card spend",
+    "Cards",
+    "Command New",
+    "Credit Card",
+    "Customize your experience",
+    "Disable",
+    "Edit",
+    "Enable",
+    "Home",
+    "Insights",
+    "Invoicing",
+    "Learn about bookmarks",
+    "Mercury Demo Pro",
+    "Move money",
+    "Navigate to Settings",
+    "Open account",
+    "Ops / Payroll <amount>",
+    "Payments",
+    "Policies",
+    "Reimbursements",
+    "Remove bookmark",
+    "Reorder Bill Pay bookmark",
+    "Reorder Credit Card bookmark",
+    "Reorder Insights bookmark",
+    "Reorder Ops / Payroll bookmark",
+    "Search for anything",
+    "Tasks <n>",
+    "Team Spend",
+    "Toggle Private Mode",
+    "Transactions",
+    "Viewing as Admin",
+    "updates"
+   ],
+   "headings": [
+    "Spend Policies"
+   ],
+   "path": "/team-spend/policies/reimbursements",
+   "structure": "document",
+   "top": {
+    "name": "",
+    "role": "document"
+   }
+  },
+  "hop": [],
+  "mutates": false,
+  "parent": "/team-spend/policies/reimbursements",
+  "recordedBy": "root",
+  "review": null,
+  "similarity": 0.9995,
+  "source": "97d170e1550eee4afc0af065b78cda302a97674c",
+  "status": "accepted"
+ },
+ "cards.policy-disable-confirm": {
+  "checked": "2026-10-02-1349",
+  "fingerprint": {
+   "controls": [
+    "Go back",
+    "Yes, disable"
+   ],
+   "headings": [
+    "Disable rule?"
+   ],
+   "path": "/team-spend/policies/reimbursements",
+   "structure": "dialog",
+   "top": {
+    "name": "",
+    "role": "dialog"
+   }
+  },
+  "hop": [
+   {
+    "click": {
+     "index": 1,
+     "name": "Disable",
+     "role": "button"
+    }
+   }
+  ],
+  "mutates": true,
+  "parent": "cards.policies-reimbursements",
+  "recordedBy": "agent",
+  "review": {
+   "by": "conductor",
+   "date": "2026-10-03",
+   "decision": "accept",
+   "note": "same 'Disable rule?' dialog (Go back, Yes, disable) over the Reimbursements tab; nth(1) is the second Disable, which is Notes requirement in the parent capture",
+   "reason": "mutating"
+  },
+  "similarity": 0.9992,
+  "source": "bb4df7b38cff1db4dff7378729cd1eea8769d3fe",
+  "status": "accepted"
+ },
+ "cards.policy-disabled": {
+  "checked": "2026-10-02-1349",
+  "fingerprint": {
+   "controls": [
+    "Accounting",
+    "Accounts",
+    "Banking",
+    "Bill Pay",
+    "Books",
+    "Card spend",
+    "Cards",
+    "Command New",
+    "Credit Card",
+    "Customize your experience",
+    "Disable",
+    "Edit",
+    "Enable",
+    "Home",
+    "Insights",
+    "Invoicing",
+    "Learn about bookmarks",
+    "Mercury Demo Pro",
+    "Move money",
+    "Navigate to Settings",
+    "Open account",
+    "Ops / Payroll <amount>",
+    "Payments",
+    "Policies",
+    "Reimbursements",
+    "Remove bookmark",
+    "Reorder Bill Pay bookmark",
+    "Reorder Credit Card bookmark",
+    "Reorder Insights bookmark",
+    "Reorder Ops / Payroll bookmark",
+    "Search for anything",
+    "Tasks <n>",
+    "Team Spend",
+    "Toggle Private Mode",
+    "Transactions",
+    "Viewing as Admin",
+    "updates"
+   ],
+   "headings": [
+    "Spend Policies"
+   ],
+   "path": "/team-spend/policies/reimbursements",
+   "structure": "document",
+   "top": {
+    "name": "",
+    "role": "document"
+   }
+  },
+  "hop": [
+   {
+    "click": {
+     "name": "Yes, disable",
+     "role": "button"
+    }
+   }
+  ],
+  "mutates": true,
+  "parent": "cards.policy-disable-confirm",
+  "recordedBy": "agent",
+  "review": {
+   "by": "conductor",
+   "date": "2026-10-03",
+   "decision": "accept",
+   "note": "same Reimbursements policies list: Notes requirement collapsed to its title with only Enable; the replay also shows a 'Rule disabled' toast, which is fine; the hop clicks 'Yes, disable' as the label says",
+   "reason": "mutating"
+  },
+  "similarity": 0.9809,
+  "source": "4eccc6c74aa1175366a83bedcd47dcbfece268cd",
+  "status": "accepted"
+ },
+ "cards.policy-merchant-types-menu": {
+  "checked": "2026-10-02-1349",
+  "fingerprint": {
+   "controls": [
+    "Advertising",
+    "Airlines",
+    "Alcohol and Bars",
+    "Books and Newspapers",
+    "Car Rental",
+    "Charity",
+    "Clothing",
+    "Conferences",
+    "Education",
+    "Electronics",
+    "Entertainment",
+    "Facilities Expenses",
+    "Financial Institutions and Fees",
+    "Food Delivery",
+    "Fuel and Gas",
+    "Gambling",
+    "Government Services",
+    "Grocery",
+    "Ground Transportation",
+    "Insurance",
+    "Internet and Telephone",
+    "Legal",
+    "Lodging",
+    "Medical",
+    "Memberships",
+    "Office Supplies",
+    "Other",
+    "Other Travel",
+    "Parking",
+    "Political",
+    "Professional Services",
+    "Restaurants",
+    "Retail",
+    "Rideshare and Taxis",
+    "Shipping",
+    "Software",
+    "Taxes",
+    "Utilities",
+    "Vehicle Expenses"
+   ],
+   "headings": [],
+   "path": "/team-spend/policies/card-spend",
+   "structure": "listbox",
+   "top": {
+    "name": "",
+    "role": "listbox"
+   }
+  },
+  "hop": [
+   {
+    "click": {
+     "name": "Merchant types to block",
+     "role": "combobox"
+    }
+   }
+  ],
+  "mutates": false,
+  "parent": "cards.policy-spend-controls-edit",
+  "recordedBy": "draft",
+  "review": null,
+  "similarity": 0.9995,
+  "source": "0d9c33f00d9fdeec024155c5dbeda55e418733c6",
+  "status": "accepted"
+ },
+ "cards.policy-receipt-edit": {
+  "checked": "2026-10-02-1349",
+  "fingerprint": {
+   "controls": [
+    "Accounting",
+    "Accounts",
+    "Amazon Web Services",
+    "Banking",
+    "Bill Pay",
+    "Books",
+    "Cancel",
+    "Card spend",
+    "Cards",
+    "Command New",
+    "Credit Card",
+    "Customize your experience",
+    "Disable",
+    "Edit",
+    "Facebook",
+    "Github",
+    "Google",
+    "Home",
+    "Insights",
+    "Invoicing",
+    "Learn about bookmarks",
+    "Merchants to exclude (optional)",
+    "Merchants to exclude (optional) Merchants to exclude (optional)",
+    "Mercury Demo Pro",
+    "Move money",
+    "Navigate to Settings",
+    "Notion",
+    "Open account",
+    "Open combobox menu",
+    "Ops / Payroll <amount>",
+    "Payments",
+    "Policies",
+    "Receipt required if transaction amount exceeds",
+    "Reimbursements",
+    "Remove bookmark",
+    "Reorder Bill Pay bookmark",
+    "Reorder Credit Card bookmark",
+    "Reorder Insights bookmark",
+    "Reorder Ops / Payroll bookmark",
+    "Save",
+    "Search for anything",
+    "Tasks <n>",
+    "Team Spend",
+    "Toggle Private Mode",
+    "Transactions",
+    "Viewing as Admin",
+    "updates"
+   ],
+   "headings": [
+    "Spend Policies"
+   ],
+   "path": "/team-spend/policies/card-spend",
+   "structure": "document",
+   "top": {
+    "name": "",
+    "role": "document"
+   }
+  },
+  "hop": [
+   {
+    "click": {
+     "index": 0,
+     "name": "Edit",
+     "role": "button"
+    }
+   }
+  ],
+  "mutates": false,
+  "parent": "cards.policies",
+  "recordedBy": "agent",
+  "review": null,
+  "similarity": 0.9995,
+  "source": "845855355d3911bcfdb091644e90dfea63ead6a1",
+  "status": "accepted"
+ },
+ "cards.policy-receipt-error": {
+  "checked": "2026-10-02-1349",
+  "fingerprint": {
+   "controls": [],
+   "headings": [
+    "Error"
+   ],
+   "path": "/team-spend/policies/card-spend",
+   "structure": "dialog",
+   "top": {
+    "name": "Error",
+    "role": "dialog"
+   }
+  },
+  "hop": [
+   {
+    "fill": {
+     "locator": {
+      "label": "Receipt required if transaction amount exceeds"
+     },
+     "value": ""
+    }
+   },
+   {
+    "click": {
+     "name": "Save",
+     "role": "button"
+    }
+   }
+  ],
+  "mutates": true,
+  "parent": "cards.policy-receipt-edit",
+  "recordedBy": "agent",
+  "review": {
+   "by": "conductor",
+   "date": "2026-10-03",
+   "decision": "accept",
+   "note": "same Receipt requirement edit form: amount cleared, warning icon, 'Please complete this field' tooltip, Save disabled; hop clears the amount and clicks Save as the label says",
+   "reason": "mutating"
+  },
+  "similarity": 0.9995,
+  "source": "8370e14689f25cbb7b8620e36498be86cefa70a7",
+  "status": "accepted"
+ },
+ "cards.policy-receipt-saved": {
+  "checked": "2026-10-02-1349",
+  "fingerprint": {
+   "controls": [
+    "Accounting",
+    "Accounts",
+    "Banking",
+    "Bill Pay",
+    "Books",
+    "Card spend",
+    "Cards",
+    "Command New",
+    "Credit Card",
+    "Customize your experience",
+    "Disable",
+    "Edit",
+    "Home",
+    "Insights",
+    "Invoicing",
+    "Learn about bookmarks",
+    "Learn more",
+    "Mercury Demo Pro",
+    "Move money",
+    "Navigate to Settings",
+    "Open account",
+    "Ops / Payroll <amount>",
+    "Payments",
+    "Policies",
+    "Reimbursements",
+    "Remove bookmark",
+    "Reorder Bill Pay bookmark",
+    "Reorder Credit Card bookmark",
+    "Reorder Insights bookmark",
+    "Reorder Ops / Payroll bookmark",
+    "Search for anything",
+    "Tasks <n>",
+    "Team Spend",
+    "Toggle Private Mode",
+    "Transactions",
+    "Try now",
+    "Viewing as Admin",
+    "receipts@mercury.com",
+    "updates"
+   ],
+   "headings": [
+    "Spend Policies"
+   ],
+   "path": "/team-spend/policies/card-spend",
+   "structure": "document",
+   "top": {
+    "name": "",
+    "role": "document"
+   }
+  },
+  "hop": [
+   {
+    "fill": {
+     "locator": {
+      "label": "Receipt required if transaction amount exceeds"
+     },
+     "value": "50"
+    }
+   },
+   {
+    "click": {
+     "name": "Save",
+     "role": "button"
+    }
+   }
+  ],
+  "mutates": true,
+  "parent": "cards.policy-receipt-error",
+  "recordedBy": "agent",
+  "review": {
+   "by": "conductor",
+   "date": "2026-10-03",
+   "decision": "accept",
+   "note": "same Spend Policies page: the Receipt requirement row reads 'exceeds $50' with its five excluded merchants (Amazon Web Services, Facebook, Google, Notion, Github), and the 'Upload receipts from your inbox' popover is open bottom-left. The hop fills 50 and clicks Save as the label says, and a 'Rule updated' toast is still showing in the replay",
+   "reason": "mutating"
+  },
+  "similarity": 0.9809,
+  "source": "835ec28302ca1ac6c027ad05f0b5481fdfd5bddb",
+  "status": "accepted"
+ },
+ "cards.policy-spend-controls-edit": {
+  "checked": "2026-10-02-1349",
+  "fingerprint": {
+   "controls": [
+    "Accounting",
+    "Accounts",
+    "Alcohol and Bars",
+    "Allow Block everything else",
+    "Amazon Web Services",
+    "Banking",
+    "Bill Pay",
+    "Block Allow everything else",
+    "Books",
+    "Cancel",
+    "Card spend",
+    "Cards",
+    "Command New",
+    "Credit Card",
+    "Customize your experience",
+    "Disable",
+    "Edit",
+    "Facebook",
+    "Gambling",
+    "Github",
+    "Google",
+    "Home",
+    "Insights",
+    "Invoicing",
+    "Learn about bookmarks",
+    "Merchant types to block",
+    "Merchants to block",
+    "Mercury Demo Pro",
+    "Move money",
+    "Navigate to Settings",
+    "Notion",
+    "Open account",
+    "Open combobox menu",
+    "Ops / Payroll <amount>",
+    "Payments",
+    "Policies",
+    "Reimbursements",
+    "Remove bookmark",
+    "Reorder Bill Pay bookmark",
+    "Reorder Credit Card bookmark",
+    "Reorder Insights bookmark",
+    "Reorder Ops / Payroll bookmark",
+    "Save",
+    "Search for anything",
+    "Tasks <n>",
+    "Team Spend",
+    "Toggle Private Mode",
+    "Transactions",
+    "Viewing as Admin",
+    "updates"
+   ],
+   "headings": [
+    "Spend Policies"
+   ],
+   "path": "/team-spend/policies/card-spend",
+   "structure": "document",
+   "top": {
+    "name": "",
+    "role": "document"
+   }
+  },
+  "hop": [
+   {
+    "click": {
+     "index": 3,
+     "name": "Edit",
+     "role": "button"
+    }
+   },
+   {
+    "scroll": {
+     "text": "Changes only apply to future transactions"
+    }
+   }
+  ],
+  "mutates": false,
+  "parent": "cards.policies",
+  "recordedBy": "agent",
+  "review": null,
+  "similarity": 0.9994,
+  "source": "acefe844da404a0fd5e23f907cd29bfe3765859b",
+  "status": "accepted"
+ },
+ "cards.policy-spend-controls-saved": {
+  "checked": "2026-10-02-1349",
+  "fingerprint": {
+   "controls": [
+    "Accounting",
+    "Accounts",
+    "Banking",
+    "Bill Pay",
+    "Books",
+    "Card spend",
+    "Cards",
+    "Command New",
+    "Credit Card",
+    "Customize your experience",
+    "Disable",
+    "Edit",
+    "Home",
+    "Insights",
+    "Invoicing",
+    "Learn about bookmarks",
+    "Mercury Demo Pro",
+    "Move money",
+    "Navigate to Settings",
+    "Open account",
+    "Ops / Payroll <amount>",
+    "Payments",
+    "Policies",
+    "Reimbursements",
+    "Remove bookmark",
+    "Reorder Bill Pay bookmark",
+    "Reorder Credit Card bookmark",
+    "Reorder Insights bookmark",
+    "Reorder Ops / Payroll bookmark",
+    "Search for anything",
+    "Tasks <n>",
+    "Team Spend",
+    "Toggle Private Mode",
+    "Transactions",
+    "Viewing as Admin",
+    "updates"
+   ],
+   "headings": [
+    "Spend Policies"
+   ],
+   "path": "/team-spend/policies/card-spend",
+   "structure": "document",
+   "top": {
+    "name": "",
+    "role": "document"
+   }
+  },
+  "hop": [
+   {
+    "click": {
+     "name": "Airlines",
+     "role": "option"
+    }
+   },
+   {
+    "click": {
+     "name": "Save",
+     "role": "button"
+    }
+   }
+  ],
+  "mutates": true,
+  "parent": "cards.policy-merchant-types-menu",
+  "recordedBy": "agent",
+  "review": {
+   "by": "conductor",
+   "date": "2026-10-03",
+   "decision": "accept",
+   "note": "same Spend Policies Card spend list, Spend controls row blocks Alcohol and Bars, Gambling, Airlines; hop checks Airlines then clicks Save as the label says; the replay's 'Rule updated' toast is the self-dismissing confirmation of that same save, which had faded before the capture, not a different or lingering layer",
+   "reason": "mutating"
+  },
+  "similarity": 0.9809,
+  "source": "a288297b38857706c26c8fd87cacf87afb5b9fe8",
+  "status": "accepted"
+ },
+ "cards.reimbursement-settings": {
+  "checked": "2026-10-02-1349",
+  "fingerprint": {
+   "controls": [
+    "Checking ••<n>",
+    "Done",
+    "Edit",
+    "Pay reimbursements from",
+    "Self-approval",
+    "Team submissions"
+   ],
+   "headings": [
+    "Reimbursement settings",
+    "Your team can submit expenses",
+    "Policy",
+    "Self-approval",
+    "Reimbursable categories",
+    "Accounts"
+   ],
+   "path": "/expenses/my-expenses",
+   "structure": "dialog",
+   "top": {
+    "name": "",
+    "role": "dialog"
+   }
+  },
+  "hop": [
+   {
+    "click": {
+     "name": "Settings",
+     "role": "button"
+    }
+   }
+  ],
+  "mutates": false,
+  "parent": "cards.my-expenses",
+  "recordedBy": "draft",
+  "review": {
+   "by": "conductor",
+   "date": "2026-10-03",
+   "decision": "accept",
+   "note": "same Reimbursement settings dialog; the demo added the team-submit and self-approval toggles since the capture",
+   "reason": "below-threshold"
+  },
+  "similarity": 0.8186,
+  "source": "728a96e72c981d33ca2ce128e3a313cb6972e0f1",
+  "status": "accepted"
+ },
+ "cards.replace-address": {
+  "checked": "2026-10-02-1349",
+  "fingerprint": {
+   "controls": [
+    "Close",
+    "Confirm",
+    "Customize your experience",
+    "Open account",
+    "Use a different address",
+    "Viewing as Admin"
+   ],
+   "headings": [],
+   "path": "/cards/<id>/replace",
+   "structure": "document",
+   "top": {
+    "name": "",
+    "role": "document"
+   }
+  },
+  "hop": [
+   {
+    "click": {
+     "name": "Lost",
+     "role": "radio"
+    }
+   },
+   {
+    "click": {
+     "name": "Next",
+     "role": "button"
+    }
+   }
+  ],
+  "mutates": false,
+  "parent": "cards.replace-reason",
+  "recordedBy": "agent",
+  "review": null,
+  "similarity": 0.9999,
+  "source": "29c5b601619e1e96f4fb96474aad385284fc051a",
+  "status": "accepted"
+ },
+ "cards.replace-address-picker": {
+  "checked": "2026-10-02-1349",
+  "fingerprint": {
+   "controls": [
+    "Company mailing address <n> SW Example Ave Floor <n> Portland, OR <n> United States",
+    "Custom address Used to ship this card and not saved",
+    "Edit",
+    "Go back",
+    "Use address",
+    "Your personal mailing address <n> Bloor St Unit #<n> Toronto, ON M<n>S <n>M<n> Canada Edit"
+   ],
+   "headings": [],
+   "path": "/cards/<id>/replace",
+   "structure": "dialog",
+   "top": {
+    "name": "",
+    "role": "dialog"
+   }
+  },
+  "hop": [
+   {
+    "click": {
+     "name": "Use a different address",
+     "role": "button"
+    }
+   }
+  ],
+  "mutates": false,
+  "parent": "cards.replace-address",
+  "recordedBy": "agent",
+  "review": null,
+  "similarity": 0.9953,
+  "source": "06f636dd04129e3009b866c32d03c923eee0fa46",
+  "status": "accepted"
+ },
+ "cards.replace-custom-address": {
+  "checked": "2026-10-02-1349",
+  "fingerprint": {
+   "controls": [
+    "Address line <n>",
+    "City",
+    "Country",
+    "Go back",
+    "Open combobox menu",
+    "State",
+    "Use address",
+    "ZIP Code"
+   ],
+   "headings": [],
+   "path": "/cards/<id>/replace",
+   "structure": "dialog",
+   "top": {
+    "name": "",
+    "role": "dialog"
+   }
+  },
+  "hop": [
+   {
+    "click": {
+     "name": "Custom address Used to ship this card and not saved",
+     "role": "radio"
+    }
+   },
+   {
+    "click": {
+     "name": "Continue",
+     "role": "button"
+    }
+   }
+  ],
+  "mutates": false,
+  "parent": "cards.replace-address-picker",
+  "recordedBy": "agent",
+  "review": null,
+  "similarity": 0.9997,
+  "source": "49a6b82bd13166719bef6b60764963caad80fe86",
+  "status": "accepted"
+ },
+ "cards.replace-custom-address-error": {
+  "checked": "2026-10-02-1349",
+  "fingerprint": {
+   "controls": [
+    "Address line <n>",
+    "City",
+    "Country",
+    "Go back",
+    "Open combobox menu",
+    "State",
+    "Use address",
+    "ZIP Code"
+   ],
+   "headings": [],
+   "path": "/cards/<id>/replace",
+   "structure": "dialog",
+   "top": {
+    "name": "",
+    "role": "dialog"
+   }
+  },
+  "hop": [
+   {
+    "click": {
+     "name": "Use address",
+     "role": "button"
+    }
+   }
+  ],
+  "mutates": false,
+  "parent": "cards.replace-custom-address",
+  "recordedBy": "agent",
+  "review": null,
+  "similarity": 0.9996,
+  "source": "bdfb8f23ac2c24ef8aba162535d0b1880f5e9475",
+  "status": "accepted"
+ },
+ "cards.replace-done": {
+  "checked": "2026-10-02-1349",
+  "fingerprint": {
+   "controls": [
+    "Close",
+    "Customize your experience",
+    "Finish",
+    "Open account",
+    "Viewing as Admin",
+    "help@mercury.com"
+   ],
+   "headings": [
+    "Check the latest transactions on the card"
+   ],
+   "path": "/cards/<id>/replace",
+   "structure": "document",
+   "top": {
+    "name": "",
+    "role": "document"
+   }
+  },
+  "hop": [
+   {
+    "click": {
+     "name": "Confirm",
+     "role": "button"
+    }
+   }
+  ],
+  "mutates": true,
+  "parent": "cards.replace-address",
+  "recordedBy": "agent",
+  "review": {
+   "by": "conductor",
+   "date": "2026-10-03",
+   "decision": "accept",
+   "note": "same 'Your new card is on the way' banner with the ••5555 transaction list and Finish button; hop clicks Confirm as the label says",
+   "reason": "mutating"
+  },
+  "similarity": 0.9824,
+  "source": "4a5f8da760380fa72a950591ee0701f2b02afacf",
+  "status": "accepted"
+ },
+ "cards.replace-reason": {
+  "checked": "2026-10-02-1349",
+  "fingerprint": {
+   "controls": [
+    "Close",
+    "Customize your experience",
+    "Damaged",
+    "Lost",
+    "Never Received",
+    "Next",
+    "Open account",
+    "Other",
+    "Stolen",
+    "Viewing as Admin"
+   ],
+   "headings": [],
+   "path": "/cards/<id>/replace",
+   "structure": "document",
+   "top": {
+    "name": "",
+    "role": "document"
+   }
+  },
+  "hop": [
+   {
+    "click": {
+     "name": "More",
+     "role": "button"
+    }
+   },
+   {
+    "click": {
+     "name": "Order replacement",
+     "role": "menuitem"
+    }
+   }
+  ],
+  "mutates": false,
+  "parent": "cards.detail-physical",
+  "recordedBy": "agent",
+  "review": null,
+  "similarity": 0.9938,
+  "source": "0da288f662ef23969965e0e42885bc12edd9bb27",
+  "status": "accepted"
+ },
+ "cards.reset-pin": {
+  "checked": "2026-10-02-1349",
+  "fingerprint": {
+   "controls": [
+    "Close",
+    "Customize your experience",
+    "Open account",
+    "Viewing as Admin",
+    "save"
+   ],
+   "headings": [],
+   "path": "/cards/<id>/change-pin",
+   "structure": "document",
+   "top": {
+    "name": "",
+    "role": "document"
+   }
+  },
+  "hop": [],
+  "mutates": false,
+  "parent": "/cards/cardid-credit-1m/change-pin",
+  "recordedBy": "root",
+  "review": null,
+  "similarity": 0.9957,
+  "source": "97d170e1550eee4afc0af065b78cda302a97674c",
+  "status": "accepted"
+ },
+ "cards.reset-pin-error": {
+  "checked": "2026-10-02-1349",
+  "fingerprint": {
+   "controls": [
+    "Close",
+    "Customize your experience",
+    "Open account",
+    "Viewing as Admin",
+    "save"
+   ],
+   "headings": [],
+   "path": "/cards/<id>/change-pin",
+   "structure": "document",
+   "top": {
+    "name": "",
+    "role": "document"
+   }
+  },
+  "hop": [
+   {
+    "fill": {
+     "locator": {
+      "role": "textbox"
+     },
+     "value": "12"
+    }
+   },
+   {
+    "click": {
+     "name": "save",
+     "role": "button"
+    }
+   }
+  ],
+  "mutates": true,
+  "parent": "cards.reset-pin",
+  "recordedBy": "agent",
+  "review": {
+   "by": "conductor",
+   "date": "2026-10-03",
+   "decision": "accept",
+   "note": "same Change PIN screen for card ••3054: '12' entered, pink underline and 'Must be 4 digits'; hop fills 2 digits and clicks save",
+   "reason": "mutating"
+  },
+  "similarity": 0.9998,
+  "source": "ec8cca5a46ae593823e9548abe39b14d8149217d",
+  "status": "accepted"
+ },
+ "cards.self-approval-enabled": {
+  "checked": "2026-10-02-1349",
+  "fingerprint": {
+   "controls": [
+    "Accounting",
+    "Accounts",
+    "Banking",
+    "Bill Pay",
+    "Books",
+    "Card spend",
+    "Cards",
+    "Command New",
+    "Credit Card",
+    "Customize your experience",
+    "Disable",
+    "Edit",
+    "Home",
+    "Insights",
+    "Invoicing",
+    "Learn about bookmarks",
+    "Mercury Demo Pro",
+    "Move money",
+    "Navigate to Settings",
+    "Open account",
+    "Ops / Payroll <amount>",
+    "Payments",
+    "Policies",
+    "Reimbursements",
+    "Remove bookmark",
+    "Reorder Bill Pay bookmark",
+    "Reorder Credit Card bookmark",
+    "Reorder Insights bookmark",
+    "Reorder Ops / Payroll bookmark",
+    "Search for anything",
+    "Tasks <n>",
+    "Team Spend",
+    "Toggle Private Mode",
+    "Transactions",
+    "Viewing as Admin",
+    "updates"
+   ],
+   "headings": [
+    "Spend Policies"
+   ],
+   "path": "/team-spend/policies/reimbursements",
+   "structure": "document",
+   "top": {
+    "name": "",
+    "role": "document"
+   }
+  },
+  "hop": [
+   {
+    "click": {
+     "name": "Enable",
+     "role": "button"
+    }
+   }
+  ],
+  "mutates": true,
+  "parent": "cards.policies-reimbursements",
+  "recordedBy": "agent",
+  "review": {
+   "by": "conductor",
+   "date": "2026-10-03",
+   "decision": "accept",
+   "note": "same Spend Policies Reimbursements tab with Self-approval flipped to a pink Disable (parent showed Enable); the hop clicks the only Enable button, as the label says. The replay's 'Self-approval enabled' toast is the auto-dismissing feedback from that same click, not a leftover menu or dialog. The capture was taken after the toast faded.",
+   "reason": "mutating"
+  },
+  "similarity": 0.9752,
+  "source": "5bcbe9265479feec1654bc6de5d618002d7f5019",
+  "status": "accepted"
+ },
+ "cards.spend-details": {
+  "checked": "2026-10-02-1349",
+  "fingerprint": {
+   "controls": [
+    "<amount>",
+    "<n>",
+    "<n> Market St",
+    "Accounting",
+    "Accounts",
+    "Add filter",
+    "Amazon Web Services",
+    "Banking",
+    "Bill Pay",
+    "Billing address",
+    "Books",
+    "CA",
+    "Cards",
+    "Click to reveal",
+    "Command New",
+    "Create card",
+    "Credit Card",
+    "Customize your experience",
+    "Expand details for Alice Chen’s card ending with <n>",
+    "Expand details for Bruce Collins’s card",
+    "Expand details for Carry Beck’s card ending with <n>",
+    "Expand details for Dave Walker’s card ending with <n>",
+    "Expand details for Emmett Brown’s card ending with <n>",
+    "Expand details for Jane Black’s card ending with <n>",
+    "Expand details for Jessica Awad’s card ending with <n>",
+    "Freeze",
+    "Hide details <amount>k available · <amount>k spend limit",
+    "Home",
+    "Insights",
+    "Invoicing",
+    "Jane Black",
+    "Learn about bookmarks",
+    "Mercury Demo Pro",
+    "More",
+    "Move money",
+    "Navigate to Settings",
+    "Open account",
+    "Ops / Payroll <amount>",
+    "Payments",
+    "Policies page",
+    "Remove bookmark",
+    "Reorder Bill Pay bookmark",
+    "Reorder Credit Card bookmark",
+    "Reorder Insights bookmark",
+    "Reorder Ops / Payroll bookmark",
+    "Require receipts for card transactions over <amount>",
+    "San Francisco",
+    "Search for anything",
+    "Suite <n>",
+    "Tasks <n>",
+    "Team Spend",
+    "Toggle Private Mode",
+    "Transactions",
+    "Viewing as Admin",
+    "updates"
+   ],
+   "headings": [
+    "Cards"
+   ],
+   "path": "/cards/<id>",
+   "structure": "document",
+   "top": {
+    "name": "",
+    "role": "document"
+   }
+  },
+  "hop": [
+   {
+    "click": {
+     "name": "Show details <amount>K available · <amount>K spend limit",
+     "role": "button"
+    }
+   }
+  ],
+  "mutates": false,
+  "parent": "cards.detail-virtual",
+  "recordedBy": "draft",
+  "review": null,
+  "similarity": 0.9958,
+  "source": "911e20915a02fbe5d7ab0f921a57e80a525ffde5",
+  "status": "accepted"
+ },
+ "cards.submit-expense": {
+  "checked": "2026-10-02-1349",
+  "fingerprint": {
+   "controls": [
+    "Amount",
+    "Close",
+    "Customize your experience",
+    "Expense",
+    "Expense category",
+    "Expense date",
+    "Go back",
+    "Merchant",
+    "Mileage",
+    "Notes",
+    "Open account",
+    "Participants",
+    "Receipt",
+    "Reimburse from",
+    "Review",
+    "USD",
+    "Viewing as Admin",
+    "reimbursements@mercury.com"
+   ],
+   "headings": [],
+   "path": "/expenses/draft/<id>",
+   "structure": "document",
+   "top": {
+    "name": "",
+    "role": "document"
+   }
+  },
+  "hop": [
+   {
+    "click": {
+     "name": "Submit expense",
+     "role": "button"
+    }
+   }
+  ],
+  "mutates": true,
+  "parent": "cards.expenses",
+  "recordedBy": "draft",
+  "review": null,
+  "similarity": 0.9989,
+  "source": "951f6706860fc14a66164ccf70940ce68329ded3",
+  "status": "accepted"
+ },
+ "cards.submit-expense-errors": {
+  "checked": "2026-10-02-1349",
+  "fingerprint": {
+   "controls": [
+    "Amount",
+    "Close",
+    "Customize your experience",
+    "Expense",
+    "Expense category",
+    "Expense date",
+    "Go back",
+    "Merchant",
+    "Mileage",
+    "Notes",
+    "Open account",
+    "Participants",
+    "Receipt",
+    "Reimburse from",
+    "Review",
+    "USD",
+    "Viewing as Admin",
+    "reimbursements@mercury.com"
+   ],
+   "headings": [],
+   "path": "/expenses/draft/<id>",
+   "structure": "document",
+   "top": {
+    "name": "",
+    "role": "document"
+   }
+  },
+  "hop": [
+   {
+    "click": {
+     "name": "Review",
+     "role": "button"
+    }
+   }
+  ],
+  "mutates": true,
+  "parent": "cards.submit-expense",
+  "recordedBy": "agent",
+  "review": {
+   "by": "conductor",
+   "date": "2026-10-03",
+   "decision": "accept",
+   "note": "same empty Submit expense form with 'Must be a dollar value.' under Amount and 'Please complete this field' under Merchant; hop clicks Review",
+   "reason": "mutating"
+  },
+  "similarity": 0.9985,
+  "source": "02ec111f1b81ac763280e63d6180008e65d95226",
+  "status": "accepted"
+ },
+ "cards.submit-expense-filled": {
+  "checked": "2026-10-02-1349",
+  "fingerprint": {
+   "controls": [
+    "Amount",
+    "Close",
+    "Customize your experience",
+    "Expense",
+    "Expense category",
+    "Expense date",
+    "Go back",
+    "Merchant",
+    "Mileage",
+    "Notes",
+    "Open account",
+    "Participants",
+    "Receipt",
+    "Reimburse from",
+    "Review",
+    "USD",
+    "Viewing as Admin",
+    "reimbursements@mercury.com"
+   ],
+   "headings": [],
+   "path": "/expenses/draft/<id>",
+   "structure": "document",
+   "top": {
+    "name": "",
+    "role": "document"
+   }
+  },
+  "hop": [
+   {
+    "fill": {
+     "locator": {
+      "label": "Amount"
+     },
+     "value": "1.00"
+    }
+   },
+   {
+    "fill": {
+     "locator": {
+      "label": "Merchant"
+     },
+     "value": "Google"
+    }
+   },
+   {
+    "fill": {
+     "locator": {
+      "label": "Notes"
+     },
+     "value": "A11y audit test note"
+    }
+   }
+  ],
+  "mutates": true,
+  "parent": "cards.submit-expense-errors",
+  "recordedBy": "agent",
+  "review": {
+   "by": "conductor",
+   "date": "2026-10-03",
+   "decision": "accept",
+   "note": "same Submit expense form with amount, merchant and notes filled and errors cleared (fixture values 1.00 / Google / 'A11y audit test note' instead of 42.50 / Blue Bottle Coffee)",
+   "reason": "mutating"
+  },
+  "similarity": 0.9845,
+  "source": "9c29ac25f1e4b89d9fa104226ab39f629e1e3689",
+  "status": "accepted"
+ },
+ "cards.submit-expense-review": {
+  "checked": "2026-10-02-1349",
+  "fingerprint": {
+   "controls": [
+    "Back",
+    "Close",
+    "Customize your experience",
+    "Open account",
+    "Submit",
+    "Viewing as Admin"
+   ],
+   "headings": [],
+   "path": "/expenses/draft/<id>",
+   "structure": "document",
+   "top": {
+    "name": "",
+    "role": "document"
+   }
+  },
+  "hop": [
+   {
+    "fill": {
+     "locator": {
+      "label": "Amount"
+     },
+     "value": "2500"
+    }
+   },
+   {
+    "click": {
+     "name": "Review",
+     "role": "button"
+    }
+   }
+  ],
+  "mutates": true,
+  "parent": "cards.submit-expense-filled",
+  "recordedBy": "agent",
+  "review": {
+   "by": "conductor",
+   "date": "2026-10-03",
+   "decision": "reject",
+   "note": "form-state condition missing: the capture warns 'Expense is missing a category' ($42.50); at the 2500 fixture the replay warns 'Expense is missing information' instead, likely because $2,500 also crosses the receipt threshold",
+   "reason": "mutating"
+  },
+  "similarity": 0.9831,
+  "source": "7c62671961191897b0b1cf10a2e88720572cd3bc",
+  "status": "rejected"
+ },
+ "cards.subscription-detail": {
+  "checked": "2026-10-02-1349",
+  "fingerprint": {
+   "controls": [
+    "<date> <amount>",
+    "<date> Pending <amount>",
+    "Adyen N.V.",
+    "Cancel subscription",
+    "Close subscription details",
+    "Jane B. ••<n>",
+    "View merchant website",
+    "View other transactions"
+   ],
+   "headings": [],
+   "path": "/subscriptions/subscription/<id>",
+   "structure": "dialog",
+   "top": {
+    "name": "",
+    "role": "generic"
+   }
+  },
+  "hop": [
+   {
+    "click": {
+     "text": "Adyen N.V."
+    }
+   }
+  ],
+  "mutates": false,
+  "parent": "cards.subscriptions",
+  "recordedBy": "agent",
+  "review": null,
+  "similarity": 0.9985,
+  "source": "0daaa3f04aeb77681106ecabc7b113eefd622790",
+  "status": "accepted"
+ },
+ "cards.subscriptions": {
+  "checked": "2026-10-02-1349",
+  "fingerprint": {
+   "controls": [
+    "Accounting",
+    "Accounts",
+    "Add filter",
+    "Banking",
+    "Bill Pay",
+    "Books",
+    "Build a Software Stack",
+    "Cards",
+    "Command New",
+    "Create Merchant Card",
+    "Create card",
+    "Credit Card",
+    "Customize your experience",
+    "Home",
+    "Insights",
+    "Invoicing",
+    "Learn about bookmarks",
+    "Mercury Demo Pro",
+    "Move money",
+    "Navigate to Settings",
+    "Open account",
+    "Ops / Payroll <amount>",
+    "Payments",
+    "Remove bookmark",
+    "Reorder Bill Pay bookmark",
+    "Reorder Credit Card bookmark",
+    "Reorder Insights bookmark",
+    "Reorder Ops / Payroll bookmark",
+    "Search for anything",
+    "Tasks <n>",
+    "Team Spend",
+    "Toggle Private Mode",
+    "Transactions",
+    "Viewing as Admin",
+    "updates"
+   ],
+   "headings": [
+    "Cards"
+   ],
+   "path": "/subscriptions",
+   "structure": "document",
+   "top": {
+    "name": "",
+    "role": "document"
+   }
+  },
+  "hop": [],
+  "mutates": false,
+  "parent": "/subscriptions",
+  "recordedBy": "root",
+  "review": null,
+  "similarity": 0.9984,
+  "source": "97d170e1550eee4afc0af065b78cda302a97674c",
+  "status": "accepted"
+ },
+ "cards.team-members": {
+  "checked": "2026-10-02-1349",
+  "fingerprint": {
+   "controls": [
+    "<n> expenses",
+    "<n> receipt exception request",
+    "Accounting",
+    "Accounts",
+    "Assign a budget",
+    "Assign another budget",
+    "Banking",
+    "Bill Pay",
+    "Books",
+    "Budget",
+    "Budget details for Abigail Kyte",
+    "Budget details for Alice Chen",
+    "Budget details for Anthony Buteo",
+    "Budget details for Carry Beck",
+    "Budget details for Dave Walker",
+    "Budget details for Emmett Brown",
+    "Budget details for Jane Black",
+    "Budget details for Jessica Awad",
+    "Budget details for John Miller",
+    "Budget details for Landon Shepherd",
+    "Budget details for Mary Metcalfe",
+    "Budget details for Multiple Pending Employee",
+    "Budget details for No Engagement",
+    "Budget details for Noel Kim",
+    "Budget details for Onboarding Incomplete",
+    "Budget details for Sally Park",
+    "Budget details for Starting Soon",
+    "Budget details for Stephen Miles",
+    "Budget details for Thomas Brown",
+    "Cards",
+    "Command New",
+    "Create budget",
+    "Credit Card",
+    "Customize your experience",
+    "Department",
+    "Home",
+    "Insights",
+    "Invoicing",
+    "Last <n> days",
+    "Learn about bookmarks",
+    "Mercury Demo Pro",
+    "Move money",
+    "Navigate to Settings",
+    "Open account",
+    "Ops / Payroll <amount>",
+    "Payments",
+    "Policies",
+    "Reimbursements",
+    "Remove bookmark",
+    "Reorder Bill Pay bookmark",
+    "Reorder Credit Card bookmark",
+    "Reorder Insights bookmark",
+    "Reorder Ops / Payroll bookmark",
+    "Search for anything",
+    "Search team members",
+    "Share feedback",
+    "Spend summary display options",
+    "Tasks <n>",
+    "Team Spend",
+    "Toggle Private Mode",
+    "Transactions",
+    "View all",
+    "Viewing as Admin",
+    "updates"
+   ],
+   "headings": [
+    "Team Spend"
+   ],
+   "path": "/team-spend/team-members",
+   "structure": "document",
+   "top": {
+    "name": "",
+    "role": "document"
+   }
+  },
+  "hop": [],
+  "mutates": false,
+  "parent": "/team-spend/team-members",
+  "recordedBy": "root",
+  "review": null,
+  "similarity": 0.9306,
+  "source": "97d170e1550eee4afc0af065b78cda302a97674c",
+  "status": "accepted"
+ },
+ "cards.team-spend": {
+  "checked": "2026-10-02-1349",
+  "fingerprint": {
+   "controls": [
+    "<n> expenses",
+    "<n> receipt exception request",
+    "Accounting",
+    "Accounts",
+    "Actions for Hardware",
+    "Actions for Learning & Development",
+    "Actions for Q<n> Company Offsite",
+    "Actions for Software Subscriptions",
+    "Actions for Team Lunch",
+    "Active dates",
+    "Assign budget to employees",
+    "Banking",
+    "Bill Pay",
+    "Books",
+    "Cards",
+    "Command New",
+    "Create budget",
+    "Credit Card",
+    "Customize your experience",
+    "Home",
+    "Insights",
+    "Invoicing",
+    "Last <n> days",
+    "Learn about bookmarks",
+    "Mercury Demo Pro",
+    "Move money",
+    "Navigate to Settings",
+    "Open account",
+    "Ops / Payroll <amount>",
+    "Payments",
+    "Policies",
+    "Reimbursements",
+    "Remove bookmark",
+    "Reorder Bill Pay bookmark",
+    "Reorder Credit Card bookmark",
+    "Reorder Insights bookmark",
+    "Reorder Ops / Payroll bookmark",
+    "Search for anything",
+    "Share feedback",
+    "Spend summary display options",
+    "Status",
+    "Tasks <n>",
+    "Team Spend",
+    "Toggle Private Mode",
+    "Transactions",
+    "View all",
+    "Viewing as Admin",
+    "updates"
+   ],
+   "headings": [
+    "Team Spend"
+   ],
+   "path": "/team-spend",
+   "structure": "document",
+   "top": {
+    "name": "",
+    "role": "document"
+   }
+  },
+  "hop": [],
+  "mutates": false,
+  "parent": "/team-spend",
+  "recordedBy": "root",
+  "review": null,
+  "similarity": 0.9929,
+  "source": "97d170e1550eee4afc0af065b78cda302a97674c",
+  "status": "accepted"
+ },
+ "cards.team-spend-display-options": {
+  "checked": "2026-10-02-1349",
+  "fingerprint": {
+   "controls": [
+    "Include non-budget spend"
+   ],
+   "headings": [],
+   "path": "/team-spend",
+   "structure": "menu",
+   "top": {
+    "name": "Spend summary display options",
+    "role": "menu"
+   }
+  },
+  "hop": [
+   {
+    "click": {
+     "name": "Spend summary display options",
+     "role": "button"
+    }
+   }
+  ],
+  "mutates": false,
+  "parent": "cards.team-spend",
+  "recordedBy": "agent",
+  "review": null,
+  "similarity": 0.9926,
+  "source": "5b35352e0745c8e4fbebc228b38cbf12d0916599",
+  "status": "accepted"
+ },
+ "cards.team-spend-non-budget": {
+  "checked": "2026-10-02-1349",
+  "fingerprint": {
+   "controls": [
+    "<n> expenses",
+    "<n> receipt exception request",
+    "Accounting",
+    "Accounts",
+    "Actions for Hardware",
+    "Actions for Learning & Development",
+    "Actions for Q<n> Company Offsite",
+    "Actions for Software Subscriptions",
+    "Actions for Team Lunch",
+    "Active dates",
+    "Assign budget to employees",
+    "Banking",
+    "Bill Pay",
+    "Books",
+    "Cards",
+    "Command New",
+    "Create budget",
+    "Credit Card",
+    "Customize your experience",
+    "Home",
+    "Include non-budget spend",
+    "Insights",
+    "Invoicing",
+    "Last <n> days",
+    "Learn about bookmarks",
+    "Mercury Demo Pro",
+    "Move money",
+    "Navigate to Settings",
+    "Open account",
+    "Ops / Payroll <amount>",
+    "Payments",
+    "Policies",
+    "Reimbursements",
+    "Remove bookmark",
+    "Reorder Bill Pay bookmark",
+    "Reorder Credit Card bookmark",
+    "Reorder Insights bookmark",
+    "Reorder Ops / Payroll bookmark",
+    "Search for anything",
+    "Share feedback",
+    "Spend summary display options",
+    "Status",
+    "Tasks <n>",
+    "Team Spend",
+    "Toggle Private Mode",
+    "Transactions",
+    "View all",
+    "Viewing as Admin",
+    "updates"
+   ],
+   "headings": [
+    "Team Spend"
+   ],
+   "path": "/team-spend",
+   "structure": "document",
+   "top": {
+    "name": "",
+    "role": "document"
+   }
+  },
+  "hop": [
+   {
+    "click": {
+     "name": "Include non-budget spend",
+     "role": "switch"
+    }
+   }
+  ],
+  "mutates": false,
+  "parent": "cards.team-spend-display-options",
+  "recordedBy": "agent",
+  "review": null,
+  "similarity": 0.9788,
+  "source": "ab20bf4a0211037cd1c820f46739ca548d269f8f",
+  "status": "accepted"
+ },
+ "cards.team-spend-period": {
+  "checked": "2026-10-02-1349",
+  "fingerprint": {
+   "controls": [
+    "Last <n> days"
+   ],
+   "headings": [],
+   "path": "/team-spend",
+   "structure": "menu",
+   "top": {
+    "name": "Last <n> days",
+    "role": "menu"
+   }
+  },
+  "hop": [
+   {
+    "click": {
+     "name": "Last <n> days",
+     "role": "button"
+    }
+   }
+  ],
+  "mutates": false,
+  "parent": "cards.team-spend",
+  "recordedBy": "draft",
+  "review": null,
+  "similarity": 0.9913,
+  "source": "e15f292888edddcfa62f7f37da0e131f994b2fd6",
+  "status": "accepted"
+ },
+ "cards.transfer-card": {
+  "checked": "2026-10-02-1349",
+  "fingerprint": {
+   "controls": [
+    "Go back",
+    "Open combobox menu",
+    "Transfer",
+    "Transfer to"
+   ],
+   "headings": [
+    "Transfer card?"
+   ],
+   "path": "/cards/<id>",
+   "structure": "dialog",
+   "top": {
+    "name": "",
+    "role": "dialog"
+   }
+  },
+  "hop": [
+   {
+    "click": {
+     "name": "Transfer card",
+     "role": "menuitem"
+    }
+   }
+  ],
+  "mutates": true,
+  "parent": "cards.more-menu",
+  "recordedBy": "draft",
+  "review": {
+   "by": "conductor",
+   "date": "2026-10-03",
+   "decision": "accept",
+   "note": "same Transfer card? dialog for ••3054 with the Transfer to select",
+   "reason": "below-threshold"
+  },
+  "similarity": 0.7733,
+  "source": "fc3a91fd8ade8bd19da241beb219d9809130c696",
+  "status": "accepted"
+ },
+ "cards.transfer-card-done": {
+  "checked": "2026-10-02-1349",
+  "fingerprint": {
+   "controls": [],
+   "headings": [],
+   "path": "/cards/<id>",
+   "structure": "status",
+   "top": {
+    "name": "",
+    "role": "generic"
+   }
+  },
+  "hop": [
+   {
+    "click": {
+     "name": "Alice Chen alice@demo.mercury.com",
+     "role": "option"
+    }
+   },
+   {
+    "click": {
+     "name": "Transfer",
+     "role": "button"
+    }
+   }
+  ],
+  "mutates": true,
+  "parent": "cards.transfer-card-dropdown",
+  "recordedBy": "agent",
+  "review": {
+   "by": "conductor",
+   "date": "2026-10-03",
+   "decision": "accept",
+   "note": "same card ••3054 now listed under Alice Chen, panel shows Alice Chen as holder, 'Card transferred' toast still showing; the card's name drifted (Facebook ads vs Meta ads), the list scroll differs, and the hop picks Alice Chen and clicks Transfer as the label says",
+   "reason": "below-threshold"
+  },
+  "similarity": 0.5857,
+  "source": "bf80d660c91e8f1d20bbe61b6d3b4ef4cc18019f",
+  "status": "accepted"
+ },
+ "cards.transfer-card-dropdown": {
+  "checked": "2026-10-02-1349",
+  "fingerprint": {
+   "controls": [
+    "Abigail Kyte abigail@demo.mercury.com",
+    "Alice Chen alice@demo.mercury.com",
+    "Anthony Buteo anthony@demo.mercury.com",
+    "Carry Beck carry@demo.mercury.com",
+    "Dave Walker dave@demo.mercury.com",
+    "Emmett Brown doc@demo.mercury.com",
+    "Jessica Awad jessica@demo.mercury.com",
+    "John Miller john@demo.mercury.com",
+    "Landon Shepherd landon@demo.mercury.com",
+    "Mary Metcalfe mary@demo.mercury.com",
+    "Multiple Pending Employee multiple-pending@demo.mercury.com",
+    "No Engagement no-engagement@demo.mercury.com",
+    "Noel Kim noel@demo.mercury.com",
+    "Onboarding Incomplete onboarding-incomplete@demo.mercury.com",
+    "Sally Park sally@demo.mercury.com",
+    "Starting Soon starting-soon@demo.mercury.com",
+    "Stephen Miles stephen@demo.mercury.com",
+    "Thomas Brown thomas@demo.mercury.com"
+   ],
+   "headings": [],
+   "path": "/cards/<id>",
+   "structure": "listbox",
+   "top": {
+    "name": "",
+    "role": "listbox"
+   }
+  },
+  "hop": [
+   {
+    "click": {
+     "name": "Open combobox menu",
+     "role": "button"
+    }
+   }
+  ],
+  "mutates": true,
+  "parent": "cards.transfer-card-error",
+  "recordedBy": "agent",
+  "review": {
+   "by": "conductor",
+   "date": "2026-10-03",
+   "decision": "accept",
+   "note": "same open Transfer to member list in the Transfer card? dialog for Credit Card ••3054 (Abigail Kyte, Alice Chen, Anthony Buteo, Carry Beck, Dave Walker); the hop clicks the dialog's only combobox button. The score gap comes from the theme and the blurred page behind the dialog",
+   "reason": "below-threshold"
+  },
+  "similarity": 0.8119,
+  "source": "32bc88e46f99809fa8657e5c8d60e866e3c24862",
+  "status": "accepted"
+ },
+ "cards.transfer-card-error": {
+  "checked": "2026-10-02-1349",
+  "fingerprint": {
+   "controls": [
+    "Go back",
+    "Open combobox menu",
+    "Transfer",
+    "Transfer to"
+   ],
+   "headings": [
+    "Transfer card?"
+   ],
+   "path": "/cards/<id>",
+   "structure": "dialog",
+   "top": {
+    "name": "",
+    "role": "dialog"
+   }
+  },
+  "hop": [
+   {
+    "click": {
+     "name": "Transfer",
+     "role": "button",
+     "within": {
+      "role": "dialog"
+     }
+    }
+   }
+  ],
+  "mutates": true,
+  "parent": "cards.transfer-card",
+  "recordedBy": "agent",
+  "review": {
+   "by": "conductor",
+   "date": "2026-10-03",
+   "decision": "accept",
+   "note": "same Transfer card? dialog (Credit Card ••3054) with pink Transfer to field and 'Please complete this field'; the hop clicks the dialog's Transfer button as the label says; the low score comes from the blurred card panel behind the dialog",
+   "reason": "below-threshold"
+  },
+  "similarity": 0.7778,
+  "source": "d549be410d8206c43df968a718129d4b38f128de",
+  "status": "accepted"
+ },
+ "cards.view-new-card": {
+  "checked": "2026-10-02-1349",
+  "fingerprint": {
+   "controls": [
+    "Accounting",
+    "Accounts",
+    "Banking",
+    "Bill Pay",
+    "Books",
+    "Cards",
+    "Command New",
+    "Credit Card",
+    "Home",
+    "Insights",
+    "Invoicing",
+    "Learn about bookmarks",
+    "Mercury Demo Pro",
+    "Ops / Payroll <amount>",
+    "Payments",
+    "Remove bookmark",
+    "Reorder Bill Pay bookmark",
+    "Reorder Credit Card bookmark",
+    "Reorder Insights bookmark",
+    "Reorder Ops / Payroll bookmark",
+    "Tasks <n>",
+    "Team Spend",
+    "Transactions"
+   ],
+   "headings": [],
+   "path": "/cards/<id>",
+   "structure": "dialog",
+   "top": {
+    "name": "",
+    "role": "navigation"
+   }
+  },
+  "hop": [
+   {
+    "click": {
+     "name": "View card details",
+     "role": "link"
+    }
+   },
+   {
+    "wait": {
+     "locator": {
+      "text": "AWS billing"
+     }
+    }
+   },
+   {
+    "scroll": {
+     "text": "Manage"
+    }
+   }
+  ],
+  "mutates": true,
+  "parent": "cards.issue-card-success",
+  "recordedBy": "agent",
+  "review": {
+   "by": "conductor",
+   "date": "2026-10-03",
+   "decision": "accept",
+   "note": "same Cards list with the AWS billing ••0330 drawer open and that row selected, same rows; only the scroll position differs (the capture is scrolled past the Recommended banner); the hop clicks View card details as labeled",
+   "reason": "below-threshold"
+  },
+  "similarity": 0.542,
+  "source": "a86a043f7378223b57eff7f80a42a6a77197234e",
+  "status": "accepted"
+ }
+}

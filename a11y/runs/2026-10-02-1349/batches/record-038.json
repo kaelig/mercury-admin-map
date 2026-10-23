@@ -1,0 +1,282 @@
+{
+ "batch": "record-038",
+ "reach": {
+  "baseUrl": "https://demo.mercury.com",
+  "data": "data",
+  "map": "build/map.json",
+  "run": "2026-10-02-1349",
+  "workspace": "a11y"
+ },
+ "run": "2026-10-02-1349",
+ "states": [
+  {
+   "area": "billpay",
+   "draft": "not drafted: its parent had no accepted recipe when the drafter ran",
+   "image": "screens/billpay/31-pay-bill-categorization.png",
+   "kind": "form-state",
+   "labels": [
+    "Click inbox bill row",
+    "Click Review",
+    "Click Continue with matched recipient",
+    "Click Next",
+    "Click Next"
+   ],
+   "mutates": false,
+   "note": "Categorization step with Single / Multiple GL Code segmented control and a GL Code combobox prefilled with '782 - Expense Account'.",
+   "parent": "billpay.pay-amount",
+   "state": "billpay.pay-categorization",
+   "title": "Pay bill: categorization"
+  },
+  {
+   "area": "billpay",
+   "draft": "not drafted: its parent had no accepted recipe when the drafter ran",
+   "image": "screens/billpay/34-pay-bill-details.png",
+   "kind": "form-state",
+   "labels": [
+    "Click inbox bill row",
+    "Click Review",
+    "Click Continue with matched recipient",
+    "Click Next",
+    "Click Next",
+    "Click Next"
+   ],
+   "mutates": false,
+   "note": "Details step: display name, memo, email receipt, include attachments and a Bill details section (invoice number, dates, department, note, attachment).",
+   "parent": "billpay.pay-categorization",
+   "state": "billpay.pay-details",
+   "title": "Pay bill: details"
+  },
+  {
+   "area": "billpay",
+   "draft": "not drafted: its parent had no accepted recipe when the drafter ran",
+   "image": "screens/billpay/35-pay-bill-review.png",
+   "kind": "form-state",
+   "labels": [
+    "Click inbox bill row",
+    "Click Review",
+    "Click Continue with matched recipient",
+    "Click Next",
+    "Click Next",
+    "Click Next",
+    "Click Next"
+   ],
+   "mutates": false,
+   "note": "Review step: amount card, ACH delivery estimate, recipient bank details (unmasked) and sending account, with Schedule payment.",
+   "parent": "billpay.pay-details",
+   "state": "billpay.pay-review",
+   "title": "Pay bill: review"
+  },
+  {
+   "area": "billpay",
+   "draft": "not drafted: its parent had no accepted recipe when the drafter ran",
+   "image": "screens/billpay/36-pay-bill-success.png",
+   "kind": "confirmation",
+   "labels": [
+    "Click inbox bill row",
+    "Click Review",
+    "Click Continue with matched recipient",
+    "Click Next",
+    "Click Next",
+    "Click Next",
+    "Click Next",
+    "Click Schedule payment"
+   ],
+   "mutates": true,
+   "note": "Confirmation 'You've scheduled an ACH payment' with a 1099 document request card and Back to Bill Pay.",
+   "parent": "billpay.pay-review",
+   "state": "billpay.pay-success",
+   "title": "Bill payment scheduled"
+  },
+  {
+   "area": "billpay",
+   "draft": "not drafted: its parent had no accepted recipe when the drafter ran",
+   "image": "screens/billpay/32-pay-bill-multiple-gl.png",
+   "kind": "form-state",
+   "labels": [
+    "Click inbox bill row",
+    "Click Review",
+    "Click Continue with matched recipient",
+    "Click Next",
+    "Click Next",
+    "Click Multiple GL Codes"
+   ],
+   "mutates": false,
+   "note": "Multiple GL Codes: break line items by amount, per-line item name, unit price and GL code, Add line item and total.",
+   "parent": "billpay.pay-categorization",
+   "state": "billpay.pay-multiple-gl",
+   "title": "Pay bill: multiple GL codes"
+  },
+  {
+   "area": "billpay",
+   "draft": "not drafted: its parent had no accepted recipe when the drafter ran",
+   "image": "screens/billpay/33-pay-bill-line-items-error.png",
+   "kind": "validation-error",
+   "labels": [
+    "Click inbox bill row",
+    "Click Review",
+    "Click Continue with matched recipient",
+    "Click Next",
+    "Click Next",
+    "Click Multiple GL Codes",
+    "Add empty line item, click Next"
+   ],
+   "mutates": false,
+   "note": "An empty second line item blocks Next with 'Please complete all fields'.",
+   "parent": "billpay.pay-multiple-gl",
+   "state": "billpay.pay-line-items-error",
+   "title": "Pay bill: incomplete line item"
+  },
+  {
+   "area": "billpay",
+   "draft": "not drafted: its parent had no accepted recipe when the drafter ran",
+   "image": "screens/billpay/91-recipient-card-menu.png",
+   "kind": "menu",
+   "labels": [
+    "Click inbox bill row",
+    "Click Review",
+    "Click Continue with matched recipient",
+    "Click \u2022\u2022\u2022 on recipient card"
+   ],
+   "mutates": false,
+   "note": "The \u2022\u2022\u2022 button on the recipient card opens Edit recipient details / Pay different recipient.",
+   "parent": "billpay.pay-recipient",
+   "state": "billpay.recipient-card-menu",
+   "title": "Recipient card menu"
+  },
+  {
+   "area": "billpay",
+   "draft": "not drafted: its parent had no accepted recipe when the drafter ran",
+   "image": "screens/billpay/92-edit-recipient-details.png",
+   "kind": "form-state",
+   "labels": [
+    "Click inbox bill row",
+    "Click Review",
+    "Click Continue with matched recipient",
+    "Click \u2022\u2022\u2022 on recipient card",
+    "Click Edit recipient details"
+   ],
+   "mutates": false,
+   "note": "Full-screen form over the flow (it also covers the demo banner): person/business, legal name, email, nickname and address, with Go back / Save.",
+   "parent": "billpay.recipient-card-menu",
+   "state": "billpay.edit-recipient-details",
+   "title": "Edit recipient details"
+  },
+  {
+   "area": "billpay",
+   "draft": "not drafted: its parent had no accepted recipe when the drafter ran",
+   "image": "screens/billpay/93-recipient-updated.png",
+   "kind": "toast",
+   "labels": [
+    "Click inbox bill row",
+    "Click Review",
+    "Click Continue with matched recipient",
+    "Click \u2022\u2022\u2022 on recipient card",
+    "Click Edit recipient details",
+    "Click Save"
+   ],
+   "mutates": true,
+   "note": "Save returns to the recipient step with a 'Recipient updated' toast; the card now says 'Last paid on Aug 25, 2026' instead of Sep 24, 2026.",
+   "parent": "billpay.edit-recipient-details",
+   "state": "billpay.recipient-updated",
+   "title": "Recipient updated"
+  },
+  {
+   "area": "billpay",
+   "draft": "not drafted: its parent had no accepted recipe when the drafter ran",
+   "image": "screens/billpay/85-approvals-bulk-review-loading.png",
+   "kind": "form-state",
+   "labels": [
+    "Check a request",
+    "Click Review Request"
+   ],
+   "mutates": false,
+   "note": "After Review Request the bar's buttons disable and the primary button shows a dot loader for 15 to 20 seconds before the review opens.",
+   "parent": "billpay.approvals-bulk-select",
+   "state": "billpay.approvals-bulk-loading",
+   "title": "Review Request loading"
+  },
+  {
+   "area": "billpay",
+   "draft": "not drafted: its parent had no accepted recipe when the drafter ran",
+   "image": "screens/billpay/86-bulk-approval-review.png",
+   "kind": "page",
+   "labels": [
+    "Check a request",
+    "Click Review Request",
+    "Wait for review to load"
+   ],
+   "mutates": false,
+   "note": "Review opened from the bulk bar: 'APPROVAL 1 OF 1' eyebrow, payment rule and schedule, with Decline, Approve and Skip.",
+   "parent": "billpay.approvals-bulk-loading",
+   "state": "billpay.bulk-approval-review",
+   "title": "Bulk approval review"
+  },
+  {
+   "area": "billpay",
+   "draft": "not drafted: its parent had no accepted recipe when the drafter ran",
+   "image": "screens/billpay/27-pay-bill-method-dropdown.png",
+   "kind": "menu",
+   "labels": [
+    "Click inbox bill row",
+    "Click Review",
+    "Click Continue with matched recipient",
+    "Open Payment method"
+   ],
+   "mutates": false,
+   "note": "Payment method dropdown: Real-Time Payment (New), ACH, Wire, International Wire, Check with delivery times.",
+   "parent": "billpay.pay-recipient",
+   "state": "billpay.pay-method-menu",
+   "title": "Payment method menu"
+  },
+  {
+   "area": "billpay",
+   "draft": "not drafted: its parent had no accepted recipe when the drafter ran",
+   "image": "screens/billpay/96-pay-method-check.png",
+   "kind": "form-state",
+   "labels": [
+    "Click inbox bill row",
+    "Click Review",
+    "Click Continue with matched recipient",
+    "Open Payment method",
+    "Choose Check"
+   ],
+   "mutates": false,
+   "note": "Choosing Check replaces bank details with a 'Check mailing address' block (country, legal address, suite) and '7-10 business days \u00b7 No fee'.",
+   "parent": "billpay.pay-method-menu",
+   "state": "billpay.pay-method-check",
+   "title": "Check payment method"
+  },
+  {
+   "area": "billpay",
+   "draft": "not drafted: its parent had no accepted recipe when the drafter ran",
+   "image": "screens/billpay/12-approval-confirmed.png",
+   "kind": "confirmation",
+   "labels": [
+    "Click request row",
+    "Click Review",
+    "Click Approve payments"
+   ],
+   "mutates": true,
+   "note": "Confirmation: 'You've approved a recurring ACH payment' with the payment rule summary and Back to Needs Approval.",
+   "parent": "billpay.approval-review",
+   "state": "billpay.approval-success",
+   "title": "Payment approved"
+  },
+  {
+   "area": "billpay",
+   "draft": "not drafted: its parent had no accepted recipe when the drafter ran",
+   "image": "screens/billpay/22-bill-due-date-picker.png",
+   "kind": "popover",
+   "labels": [
+    "Click inbox bill row",
+    "Click a field value",
+    "Click Due date input"
+   ],
+   "mutates": false,
+   "note": "Calendar popover for the due date; it overflows the right edge of the viewport.",
+   "parent": "billpay.bill-panel-edit",
+   "state": "billpay.bill-due-date-picker",
+   "title": "Due date picker"
+  }
+ ]
+}

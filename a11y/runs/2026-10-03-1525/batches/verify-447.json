@@ -1,0 +1,114 @@
+{
+ "area": "cards",
+ "batch": "verify-447",
+ "findings": [
+  {
+   "attachments": [],
+   "attempt": 1,
+   "basis": "candidate",
+   "criteria": [
+    "4.1.2"
+   ],
+   "evidence": [
+    {
+     "evidence": {
+      "description": "",
+      "name": "",
+      "role": "button",
+      "states": {},
+      "template": "button \"\""
+     },
+     "occurrence": {
+      "ancestors": [
+       [
+        "_splitButton_mzjr7_3"
+       ],
+       [
+        "_splitButtonContainer_mzjr7_3"
+       ],
+       [
+        "_attachmentWrapper_1jvrn_34"
+       ],
+       [
+        "_attachments_1jvrn_22"
+       ],
+       [
+        "_expenseCardSection_egeg9_1"
+       ],
+       [],
+       [
+        "_panelBody_d3i56_64"
+       ],
+       [
+        "_large_kwlx6_9",
+        "_noHover_3n0se_28",
+        "_shadow_3n0se_25",
+        "_raisedBackground_3n0se_45",
+        "_panel_d3i56_55"
+       ]
+      ],
+      "classes": [
+       "_tooltipAnchor_18bac_4",
+       "_removeButton_mzjr7_118"
+      ],
+      "data": {},
+      "heading": "",
+      "landmark": {
+       "name": "",
+       "role": "complementary"
+      },
+      "layer": "top",
+      "name": "",
+      "rect": [
+       1247,
+       801,
+       42,
+       38
+      ],
+      "role": "button",
+      "tag": "button",
+      "xpath": "/html/body/div[1]/main[1]/div[1]/div[1]/div[4]/div[1]/div[2]/div[4]/div[2]/aside[1]/div[1]/div[1]/div[1]/div[3]/div[2]/div[1]/div[1]/div[1]/button[2]"
+     },
+     "state": "cards.expense-detail-receipt"
+    }
+   ],
+   "evidenceHash": "0cea2117ea950857300c47489fd91e8f3a0c759d03aa589583bd7e179d2d7903",
+   "facts": {
+    "announced": "button \"\"",
+    "axeSummary": "",
+    "criterion": "4.1.2",
+    "criterionName": "Name, Role, Value",
+    "element": "button in the complementary landmark",
+    "rule": "announced-as",
+    "screen": "Expense with receipt"
+   },
+   "family": "name",
+   "guidance": "High for an unnamed form control or the sole primary action.",
+   "issueId": null,
+   "key": "name:announced-as:1c13393d5fcd",
+   "measured": false,
+   "primary": "cards.expense-detail-receipt",
+   "proposals": [],
+   "rule": "announced-as",
+   "screens": 1,
+   "severityDefault": "medium",
+   "source": "scanner",
+   "states": [
+    "cards.expense-detail-receipt"
+   ],
+   "summary": "announced-as: announced as button \"\".",
+   "title": "Missing or unclear name: button in the complementary landmark"
+  }
+ ],
+ "primaries": [
+  "cards.expense-detail-receipt"
+ ],
+ "reach": {
+  "baseUrl": "https://demo.mercury.com",
+  "data": "data",
+  "map": "build/map.json",
+  "run": "2026-10-03-1525",
+  "workspace": "a11y"
+ },
+ "run": "2026-10-03-1525"
+}

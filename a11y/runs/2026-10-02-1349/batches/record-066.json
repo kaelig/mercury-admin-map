@@ -1,0 +1,97 @@
+{
+ "batch": "record-066",
+ "reach": {
+  "baseUrl": "https://demo.mercury.com",
+  "data": "data",
+  "map": "build/map.json",
+  "run": "2026-10-02-1349",
+  "workspace": "a11y"
+ },
+ "run": "2026-10-02-1349",
+ "states": [
+  {
+   "area": "cards",
+   "draft": "not drafted: its parent had no accepted recipe when the drafter ran",
+   "image": "screens/cards/86-assign-budget-error.png",
+   "kind": "validation-error",
+   "labels": [
+    "Click Assign budget to employees on a row",
+    "Open Select team members",
+    "Close the picker with nothing chosen"
+   ],
+   "mutates": true,
+   "note": "Closing the picker without a choice turns the field pink with 'Add at least one team member or invite'; Assign stays disabled.",
+   "parent": "cards.assign-budget-members",
+   "state": "cards.assign-budget-error",
+   "title": "Assign budget: no member chosen"
+  },
+  {
+   "area": "cards",
+   "draft": "not drafted: its parent had no accepted recipe when the drafter ran",
+   "image": "screens/cards/87-assign-budget-selected.png",
+   "kind": "form-state",
+   "labels": [
+    "Click Assign budget to employees on a row",
+    "Open Select team members",
+    "Search and pick Abigail Kyte"
+   ],
+   "mutates": true,
+   "note": "Abigail Kyte added as a removable chip; the primary button changes from Assign to Next.",
+   "parent": "cards.assign-budget-members",
+   "state": "cards.assign-budget-selected",
+   "title": "Assign budget: member selected"
+  },
+  {
+   "area": "cards",
+   "draft": "not drafted: its parent had no accepted recipe when the drafter ran; a previous recorder failed: policy (now retry: policy.fixtureValues gained empty \"\", 2000000, 10000, 2500, 500, 150, card, a, Lunch, Deli 77, 12/31/2099): The label types 2500 in the amount field; 2500 is not a policy.fixtureValues entry (rule: type only fixture values).",
+   "image": "screens/cards/11-edit-limit-temporary.png",
+   "kind": "form-state",
+   "labels": [
+    "Click a virtual card row",
+    "Click More",
+    "Click Edit limit",
+    "Click Limit type",
+    "Choose Weekly, click Save Limit",
+    "More > Edit limit, clear amount, click Save Limit",
+    "Type 2500, check This is a temporary change"
+   ],
+   "mutates": true,
+   "note": "Amount set to 2,500 with 'This is a temporary change' checked, revealing From/To date inputs (Sep 24, 2026 - Oct 1, 2026).",
+   "parent": "cards.edit-limit-error",
+   "state": "cards.edit-limit-temporary",
+   "title": "Edit limit: temporary change"
+  },
+  {
+   "area": "cards",
+   "draft": "not drafted: its parent had no accepted recipe when the drafter ran; a previous recorder failed: reach failed: step-failed cards.expense-declined in session record-049 at https://demo.mercury.com/expenses/all-expenses: cards.expense-declined hop 1: click {\"name\":\"Decline\",\"role\":\"button\",\"within\":{\"role\":\"dialog\"}}: locator.click: Timeout 5000ms exceeded.",
+   "image": "screens/cards/62-expense-detail-receipt.png",
+   "kind": "drawer",
+   "labels": [
+    "Click an expense row",
+    "Click Decline",
+    "Enter a reason, click Decline",
+    "Click the Oct 1 Mary Metcalfe row"
+   ],
+   "mutates": true,
+   "note": "Mary Metcalfe's $338.62 Luxury Inn expense: Approve enabled, Date of expense Oct 1, 2024, merchant/category rows and an attached demo-receipt.pdf.",
+   "parent": "cards.expense-declined",
+   "state": "cards.expense-detail-receipt",
+   "title": "Expense with receipt"
+  },
+  {
+   "area": "cards",
+   "draft": "not drafted: its parent had no accepted recipe when the drafter ran",
+   "image": "screens/cards/37-issue-card-control-type.png",
+   "kind": "menu",
+   "labels": [
+    "Clear nickname, click Create card",
+    "Open Control type"
+   ],
+   "mutates": true,
+   "note": "Control type combobox open with Existing budgets and Spending limit.",
+   "parent": "cards.issue-card-error",
+   "state": "cards.issue-card-control-type",
+   "title": "Control type options"
+  }
+ ]
+}

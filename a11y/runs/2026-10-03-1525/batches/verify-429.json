@@ -1,0 +1,180 @@
+{
+ "area": "billpay",
+ "batch": "verify-429",
+ "findings": [
+  {
+   "attachments": [],
+   "attempt": 1,
+   "basis": "candidate",
+   "criteria": [
+    "4.1.2"
+   ],
+   "evidence": [
+    {
+     "evidence": {
+      "description": "",
+      "name": "",
+      "role": "button",
+      "states": {},
+      "template": "button \"\""
+     },
+     "occurrence": {
+      "ancestors": [
+       [
+        "_resizeHandleContainer_15al5_246",
+        "_preview-open_15al5_94"
+       ],
+       [
+        "_tooltipAnchor_18bac_4",
+        "_preview_15al5_94",
+        "_attachmentViewerBackground_15al5_359",
+        "_withAttachment_15al5_86"
+       ],
+       [
+        "_container_15al5_4",
+        "_container_10wfz_3",
+        "_preview-open_15al5_94"
+       ],
+       [
+        "_dropzone_15al5_74"
+       ],
+       [
+        "_pageWrapper_1avu1_1"
+       ],
+       [
+        "_sessionReplayUnmask_1avu1_8",
+        "session-replay-unmask"
+       ],
+       [],
+       [
+        "_main_1gb3b_1"
+       ]
+      ],
+      "classes": [
+       "_resizeHandle_15al5_86"
+      ],
+      "data": {},
+      "heading": "Recipient match",
+      "landmark": {
+       "name": "",
+       "role": "main"
+      },
+      "layer": "document",
+      "name": "",
+      "rect": [
+       696,
+       454,
+       48,
+       48
+      ],
+      "role": "button",
+      "tag": "button",
+      "xpath": "/html/body/div[1]/main[1]/div[1]/div[2]/div[2]/div[1]/div[2]/section[3]/div[1]/button[1]"
+     },
+     "state": "billpay.pay-recipient-match"
+    },
+    {
+     "evidence": {
+      "description": "",
+      "name": "",
+      "role": "button",
+      "states": {},
+      "template": "button \"\""
+     },
+     "occurrence": {
+      "ancestors": [
+       [
+        "_resizeHandleContainer_15al5_246",
+        "_preview-open_15al5_94"
+       ],
+       [
+        "_tooltipAnchor_18bac_4",
+        "_preview_15al5_94",
+        "_attachmentViewerBackground_15al5_359",
+        "_withAttachment_15al5_86"
+       ],
+       [
+        "_container_15al5_4",
+        "_container_10wfz_3",
+        "_preview-open_15al5_94"
+       ],
+       [
+        "_dropzone_15al5_74"
+       ],
+       [
+        "_pageWrapper_1avu1_1"
+       ],
+       [
+        "_sessionReplayUnmask_1avu1_8",
+        "session-replay-unmask"
+       ],
+       [],
+       [
+        "_main_1gb3b_1"
+       ]
+      ],
+      "classes": [
+       "_resizeHandle_15al5_86"
+      ],
+      "data": {},
+      "heading": "Recipient",
+      "landmark": {
+       "name": "",
+       "role": "main"
+      },
+      "layer": "document",
+      "name": "",
+      "rect": [
+       696,
+       454,
+       48,
+       48
+      ],
+      "role": "button",
+      "tag": "button",
+      "xpath": "/html/body/div[1]/main[1]/div[1]/div[2]/div[2]/div[1]/div[2]/section[3]/div[1]/button[1]"
+     },
+     "state": "billpay.pay-recipient"
+    }
+   ],
+   "evidenceHash": "cbbba81f410724a2f40bea80512f3f735c207ac2e74f78abc353b6ceb8d65fc4",
+   "facts": {
+    "announced": "button \"\"",
+    "axeSummary": "",
+    "criterion": "4.1.2",
+    "criterionName": "Name, Role, Value",
+    "element": "button in \"Recipient match\"",
+    "rule": "announced-as",
+    "screen": "Pay bill: recipient match"
+   },
+   "family": "name",
+   "guidance": "High for an unnamed form control or the sole primary action.",
+   "issueId": null,
+   "key": "name:announced-as:2c13f6db3f51",
+   "measured": false,
+   "primary": "billpay.pay-recipient-match",
+   "proposals": [],
+   "rule": "announced-as",
+   "screens": 14,
+   "severityDefault": "medium",
+   "source": "scanner",
+   "states": [
+    "billpay.pay-recipient-match",
+    "billpay.pay-recipient"
+   ],
+   "summary": "announced-as: announced as button \"\".",
+   "title": "Missing or unclear name: button in \"Recipient match\""
+  }
+ ],
+ "primaries": [
+  "billpay.pay-recipient-match"
+ ],
+ "reach": {
+  "baseUrl": "https://demo.mercury.com",
+  "data": "data",
+  "map": "build/map.json",
+  "run": "2026-10-03-1525",
+  "workspace": "a11y"
+ },
+ "run": "2026-10-03-1525"
+}

@@ -1,0 +1,88 @@
+{
+ "area": "billpay",
+ "batch": "verify-080",
+ "findings": [
+  {
+   "attachments": [],
+   "attempt": 1,
+   "basis": "failure",
+   "criteria": [
+    "4.1.2"
+   ],
+   "evidence": [],
+   "evidenceHash": "00cf8dd955fa33dd10d3c2b6b2bb72d77d2c23114c6a1989ec378f22a36aa9d3",
+   "facts": {},
+   "family": "name",
+   "guidance": "High for an unnamed form control or the sole primary action.",
+   "issueId": "billpay.i-unlabeled-controls",
+   "key": "hand:billpay.i-unlabeled-controls",
+   "measured": false,
+   "primary": "billpay.index",
+   "proposals": [
+    {
+     "family": "name",
+     "finding": "name:button-name:886c98c8a9e3",
+     "handFound": "billpay.i-unlabeled-controls",
+     "id": "028b158168db7f8030b273197250acdfb75b7abf24804efc9395703d46e1e432",
+     "overlap": 0.6667
+    },
+    {
+     "family": "name",
+     "finding": "name:button-name:b9268695c292",
+     "handFound": "billpay.i-unlabeled-controls",
+     "id": "db3e7ac88a52e7329977183a94dadf49443bd03b569c7ecdd2a8a1d925423697",
+     "overlap": 0.6667
+    },
+    {
+     "family": "name",
+     "finding": "name:button-name:e440427419da",
+     "handFound": "billpay.i-unlabeled-controls",
+     "id": "08661a52cb4cf908f1b8eef1ab20c0403910953241d6c1e9a5d5272496ce0b4b",
+     "overlap": 0.6667
+    },
+    {
+     "family": "name",
+     "finding": "name:button-name:fe45f7d639a6",
+     "handFound": "billpay.i-unlabeled-controls",
+     "id": "e2c473c9f6d8876a3da1d6783ff6519cf01d8694c334d55352bbb353661664a3",
+     "overlap": 0.6667
+    },
+    {
+     "family": "name",
+     "finding": "name:label:0301c256f732",
+     "handFound": "billpay.i-unlabeled-controls",
+     "id": "2fa67175bd6c0f16e1026fe745142d2217c0f70b841d4ac16cdfa0db31031c42",
+     "overlap": 0.6667
+    },
+    {
+     "family": "name",
+     "finding": "name:label:50f8f0d5c53f",
+     "handFound": "billpay.i-unlabeled-controls",
+     "id": "6d8821e45481dc44e93a7078a25a1cbd8f86c13f18f14e65acd7a9d51d9e92ea",
+     "overlap": 0.6667
+    }
+   ],
+   "rule": "hand-found",
+   "screens": 3,
+   "severityDefault": "medium",
+   "source": "hand-found",
+   "states": [
+    "billpay.index",
+    "billpay.row-hover"
+   ],
+   "summary": "Row delete button <button class=\"_button_r6b2u_20 _small_r6b2u_72 _destructive_r6b2u_186\"> with aria-label null, title '' and only svg[data-icon=trash][aria-hidden=true]; tabs are DIV with role=null (snapshot 'generic \"Inbox 3\"', 'generic \"Sync Error3\"'); bill edit amount input's only name is its placeholder '0.00'.",
+   "title": "Icon buttons and tabs lack accessible names/roles"
+  }
+ ],
+ "primaries": [
+  "billpay.index"
+ ],
+ "reach": {
+  "baseUrl": "https://demo.mercury.com",
+  "data": "data",
+  "map": "build/map.json",
+  "run": "2026-10-03-1525",
+  "workspace": "a11y"
+ },
+ "run": "2026-10-03-1525"
+}

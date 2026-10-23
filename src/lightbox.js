@@ -2,7 +2,10 @@
 // background, focus trapping and focus return for free. The image is moved with a single CSS
 // transform (translate + scale, origin 0 0); it grows out of the drawer thumbnail on open and
 // shrinks back into it on close.
+import { zoomTool } from "./zoomtool.js";
+
 const MAX_ZOOM = 4; // 400% of capture size (1 CSS px per screenshot px at 2x = 100%)
+const STEP = 1.5; // per click of +/−, key press or Z-click
 const PAD = 24, BAR = 56;
 
 export function createLightbox({ closeIcon, extIcon, fitIcon }) {
@@ -10,7 +13,7 @@ export function createLightbox({ closeIcon, extIcon, fitIcon }) {
   d.className = "lightbox";
   d.setAttribute("aria-label", "Screenshot");
   d.innerHTML = `<div class="lb-bg"></div><div class="lb-stage"><img alt="" draggable="false"></div>
-    <div class="lb-bar"><span class="lb-title"></span><span class="lb-hint">Click, scroll or pinch to zoom · drag to pan · Esc to close</span>
+    <div class="lb-bar"><span class="lb-title"></span><span class="lb-hint">Click, scroll or pinch to zoom · Z+click to zoom in, Z+Option+click to zoom out · drag to pan · Esc to close</span>
       <div class="lb-tools">
         <button class="icon-btn" type="button" data-act="out" aria-label="Zoom out" title="Zoom out (−)">−</button>
         <span class="lb-z" aria-live="polite">100%</span>
@@ -89,13 +92,13 @@ export function createLightbox({ closeIcon, extIcon, fitIcon }) {
     const act = e.target.closest("[data-act]")?.dataset.act;
     if (act === "close") close();
     else if (act === "fit") fit(true);
-    else if (act) set(s * (act === "in" ? 1.5 : 1 / 1.5), ...center(), true);
+    else if (act) set(s * (act === "in" ? STEP : 1 / STEP), ...center(), true);
   });
   d.addEventListener("keydown", (e) => {
     if (e.metaKey || e.ctrlKey || e.altKey) return;
     const k = e.key, step = 80;
-    if (k === "+" || k === "=") set(s * 1.5, ...center(), true);
-    else if (k === "-" || k === "_") set(s / 1.5, ...center(), true);
+    if (k === "+" || k === "=") set(s * STEP, ...center(), true);
+    else if (k === "-" || k === "_") set(s / STEP, ...center(), true);
     else if (k === "0") fit(true);
     else if (k.startsWith("Arrow")) { x -= k === "ArrowRight" ? step : k === "ArrowLeft" ? -step : 0; y -= k === "ArrowDown" ? step : k === "ArrowUp" ? -step : 0; clampPan(); img.classList.add("anim"); apply(); }
     else return;
@@ -124,7 +127,9 @@ export function createLightbox({ closeIcon, extIcon, fitIcon }) {
     g = { moved: g?.moved || pts.size > 1, sx: e.clientX, sy: e.clientY, onImg: e.target === img, pinch: null };
     stage.classList.add("dragging");
   });
+  zoomTool.bindCursor(stage);
   stage.addEventListener("pointermove", (e) => {
+    zoomTool.syncAlt(e.altKey);
     const p = pts.get(e.pointerId); if (!p || !g) return;
     const dx = e.clientX - p.x, dy = e.clientY - p.y;
     p.x = e.clientX; p.y = e.clientY;
@@ -139,7 +144,8 @@ export function createLightbox({ closeIcon, extIcon, fitIcon }) {
     if (pts.size) { g.pinch = null; return; }
     stage.classList.remove("dragging");
     const click = e.type === "pointerup" && !g.moved;
-    if (click && g.onImg && (e.metaKey || e.ctrlKey)) open_(ext.href);
+    if (click && zoomTool.on) set(s * (zoomTool.out ? 1 / STEP : STEP), e.clientX, e.clientY, true); // anywhere, backdrop included
+    else if (click && g.onImg && (e.metaKey || e.ctrlKey)) open_(ext.href);
     else if (click && g.onImg) toggleZoom(e.clientX, e.clientY);
     else if (click && !g.onImg) close();
     g = null;

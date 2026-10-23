@@ -1,0 +1,46 @@
+{
+ "batch": "record-049",
+ "reach": {
+  "baseUrl": "https://demo.mercury.com",
+  "data": "data",
+  "map": "build/map.json",
+  "run": "2026-10-02-1349",
+  "workspace": "a11y"
+ },
+ "run": "2026-10-02-1349",
+ "states": [
+  {
+   "area": "cards",
+   "draft": "not drafted: its parent had no accepted recipe when the drafter ran",
+   "image": "screens/cards/62-expense-detail-receipt.png",
+   "kind": "drawer",
+   "labels": [
+    "Click an expense row",
+    "Click Decline",
+    "Enter a reason, click Decline",
+    "Click the Oct 1 Mary Metcalfe row"
+   ],
+   "mutates": true,
+   "note": "Mary Metcalfe's $338.62 Luxury Inn expense: Approve enabled, Date of expense Oct 1, 2024, merchant/category rows and an attached demo-receipt.pdf.",
+   "parent": "cards.expense-declined",
+   "state": "cards.expense-detail-receipt",
+   "title": "Expense with receipt"
+  },
+  {
+   "area": "cards",
+   "draft": "not drafted: its parent had no accepted recipe when the drafter ran",
+   "image": "screens/cards/96-expenses-bulk-approved.png",
+   "kind": "toast",
+   "labels": [
+    "Check a row",
+    "Select your own Pending Review expense, hover Approve",
+    "Select Mary Metcalfe's request, click Approve"
+   ],
+   "mutates": true,
+   "note": "Selecting Mary Metcalfe's Oct 1 request and pressing Approve shows the toast '1 reimbursement payment approved'.",
+   "parent": "cards.expenses-approve-own-blocked",
+   "state": "cards.expenses-bulk-approved",
+   "title": "Bulk approval done"
+  }
+ ]
+}

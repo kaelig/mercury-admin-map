@@ -1,0 +1,160 @@
+{
+ "area": "invoicing",
+ "batch": "verify-221",
+ "findings": [
+  {
+   "attachments": [],
+   "attempt": 1,
+   "basis": "violation",
+   "criteria": [
+    "4.1.2"
+   ],
+   "evidence": [
+    {
+     "evidence": {
+      "explicitLabel": "",
+      "failureSummary": "Fix any of the following:\n  Element does not have an implicit (wrapped) <label>\n  Element does not have an explicit <label>\n  aria-label attribute does not exist or is empty\n  aria-labelledby attribute does not exist, references elements that do not exist or references elements that are empty\n  Element has no title attribute\n  Element has no placeholder attribute\n  Element's default semantics were not overridden with role=\"none\" or role=\"presentation\"",
+      "messageKey": "noAttr"
+     },
+     "occurrence": {
+      "ancestors": [
+       [
+        "_dsToggleSwitchWrapper_3k8xy_3",
+        "_checked_3k8xy_50",
+        "_leftLabel_3k8xy_39"
+       ],
+       [
+        "_accountNumberToggle_1fapw_9"
+       ],
+       [],
+       [
+        "_wrapper_1ojdq_8"
+       ],
+       [],
+       [
+        "_leftInnerContainer_12jyu_3"
+       ],
+       [
+        "_left_yg1rf_39"
+       ],
+       [
+        "_leftScrollArea_yg1rf_57"
+       ]
+      ],
+      "classes": [
+       "_switch_3k8xy_11"
+      ],
+      "data": {},
+      "heading": "Methods Manual Transfer (ACH/Wire), Pay with Mercury, International wires",
+      "landmark": {
+       "name": "",
+       "role": "main"
+      },
+      "layer": "document",
+      "name": "",
+      "rect": [
+       560,
+       674,
+       40,
+       20
+      ],
+      "role": "switch",
+      "tag": "input",
+      "xpath": "/html/body/div[1]/main[1]/div[1]/div[2]/div[2]/div[3]/div[1]/div[1]/div[1]/div[1]/div[1]/div[1]/div[2]/div[2]/div[2]/div[2]/input[1]"
+     },
+     "state": "invoicing.create-series-payment"
+    },
+    {
+     "evidence": {
+      "explicitLabel": "",
+      "failureSummary": "Fix any of the following:\n  Element does not have an implicit (wrapped) <label>\n  Element does not have an explicit <label>\n  aria-label attribute does not exist or is empty\n  aria-labelledby attribute does not exist, references elements that do not exist or references elements that are empty\n  Element has no title attribute\n  Element has no placeholder attribute\n  Element's default semantics were not overridden with role=\"none\" or role=\"presentation\"",
+      "messageKey": "noAttr"
+     },
+     "occurrence": {
+      "ancestors": [
+       [
+        "_dsToggleSwitchWrapper_3k8xy_3",
+        "_checked_3k8xy_50",
+        "_leftLabel_3k8xy_39"
+       ],
+       [
+        "_accountNumberToggle_1fapw_9"
+       ],
+       [],
+       [],
+       [
+        "_contentWrapper_kogp0_1"
+       ],
+       [
+        "_wrapper_1ojdq_8"
+       ],
+       [],
+       [
+        "_leftInnerContainer_12jyu_3"
+       ]
+      ],
+      "classes": [
+       "_switch_3k8xy_11"
+      ],
+      "data": {},
+      "heading": "Invoice totals",
+      "landmark": {
+       "name": "",
+       "role": "main"
+      },
+      "layer": "document",
+      "name": "",
+      "rect": [
+       560,
+       874,
+       40,
+       20
+      ],
+      "role": "switch",
+      "tag": "input",
+      "xpath": "/html/body/div[1]/main[1]/div[1]/div[2]/div[2]/div[3]/div[1]/div[1]/div[1]/div[1]/div[1]/div[1]/div[2]/div[2]/div[4]/div[1]/div[2]/div[2]/input[1]"
+     },
+     "state": "invoicing.create-setup-error"
+    }
+   ],
+   "evidenceHash": "4019123138f2a983429ed7f46d952b5d810fc6999098f44721ca228163cf61e6",
+   "facts": {
+    "announced": "switch \"\" [checked=true]",
+    "axeSummary": "Element does not have an implicit (wrapped) <label>; Element does not have an explicit <label>; aria-label attribute does not exist or is empty; aria-labelledb…",
+    "criterion": "4.1.2",
+    "criterionName": "Name, Role, Value",
+    "element": "switch in \"Methods Manual Transfer (ACH/Wire), P…\"",
+    "rule": "label",
+    "screen": "Series payment details"
+   },
+   "family": "name",
+   "guidance": "High for an unnamed form control or the sole primary action.",
+   "issueId": null,
+   "key": "name:label:c46029e30e93",
+   "measured": false,
+   "primary": "invoicing.create-series-payment",
+   "proposals": [],
+   "rule": "label",
+   "screens": 6,
+   "severityDefault": "medium",
+   "source": "scanner",
+   "states": [
+    "invoicing.create-series-payment",
+    "invoicing.create-setup-error"
+   ],
+   "summary": "label: announced as switch \"\" [checked=true]. Element does not have an implicit (wrapped) <label>; Element does not have an explicit <label>; aria-label attribute does not exist or is empty; aria-labelledb…",
+   "title": "Missing or unclear name: switch in \"Methods Manual Transfer (ACH/Wire), P…\""
+  }
+ ],
+ "primaries": [
+  "invoicing.create-series-payment"
+ ],
+ "reach": {
+  "baseUrl": "https://demo.mercury.com",
+  "data": "data",
+  "map": "build/map.json",
+  "run": "2026-10-03-1525",
+  "workspace": "a11y"
+ },
+ "run": "2026-10-03-1525"
+}

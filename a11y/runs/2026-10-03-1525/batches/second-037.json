@@ -1,0 +1,479 @@
+{
+ "area": "settings",
+ "batch": "second-037",
+ "findings": [
+  {
+   "attachments": [],
+   "attempt": 1,
+   "basis": "candidate",
+   "criteria": [
+    "4.1.2"
+   ],
+   "evidence": [
+    {
+     "evidence": {
+      "description": "",
+      "name": "",
+      "role": "button",
+      "states": {},
+      "template": "button \"\""
+     },
+     "occurrence": {
+      "ancestors": [
+       [
+        "_tableRow_2f0es_21",
+        "_tableRow_1waxt_94"
+       ],
+       [
+        "_cardTable_1waxt_4"
+       ],
+       [
+        "_tableAndLoadingStateWrapper_1waxt_313"
+       ],
+       [
+        "_tableWrapper_1waxt_304",
+        "_tableAndCardWrapper_2f0es_27"
+       ],
+       [
+        "_contents_2f0es_11"
+       ],
+       [
+        "_page_15h2q_38"
+       ],
+       [
+        "_dashboardContent_15h2q_45"
+       ],
+       [
+        "_layout_15h2q_18"
+       ]
+      ],
+      "classes": [
+       "_arrow_1waxt_173"
+      ],
+      "data": {},
+      "heading": "6 accounts",
+      "landmark": {
+       "name": "",
+       "role": "main"
+      },
+      "layer": "document",
+      "name": "",
+      "rect": [
+       748,
+       300,
+       32,
+       48
+      ],
+      "role": "button",
+      "tag": "button",
+      "xpath": "/html/body/div[1]/main[1]/div[1]/div[1]/div[4]/div[1]/div[1]/div[3]/div[1]/div[1]/div[1]/div[4]/button[1]"
+     },
+     "state": "settings.panorama"
+    }
+   ],
+   "evidenceHash": "874aad2c2eac33db7c63fe8397176cb9ba28ac997b581a0959761322f8a89c18",
+   "facts": {
+    "announced": "button \"\"",
+    "axeSummary": "",
+    "criterion": "4.1.2",
+    "criterionName": "Name, Role, Value",
+    "element": "button in \"<n> accounts\"",
+    "rule": "announced-as",
+    "screen": "All Accounts (panorama)"
+   },
+   "family": "name",
+   "guidance": "High for an unnamed form control or the sole primary action.",
+   "issueId": null,
+   "key": "name:announced-as:6babfd3ce09e",
+   "measured": false,
+   "primary": "settings.panorama",
+   "proposals": [],
+   "rule": "announced-as",
+   "screens": 1,
+   "severityDefault": "medium",
+   "source": "scanner",
+   "states": [
+    "settings.panorama"
+   ],
+   "summary": "announced-as: announced as button \"\".",
+   "title": "Missing or unclear name: button in \"<n> accounts\""
+  },
+  {
+   "attachments": [],
+   "attempt": 1,
+   "basis": "candidate",
+   "criteria": [
+    "4.1.2"
+   ],
+   "evidence": [
+    {
+     "evidence": {
+      "description": "",
+      "name": "",
+      "role": "button",
+      "states": {},
+      "template": "button \"\""
+     },
+     "occurrence": {
+      "ancestors": [
+       [
+        "_tableRow_2f0es_21",
+        "_tableRow_1waxt_94",
+        "_hoverDisabled_1waxt_108",
+        "_selectDisabled_1waxt_106"
+       ],
+       [
+        "_cardTable_1waxt_4"
+       ],
+       [
+        "_tableAndLoadingStateWrapper_1waxt_313"
+       ],
+       [
+        "_tableWrapper_1waxt_304",
+        "_tableAndCardWrapper_2f0es_27"
+       ],
+       [
+        "_contents_2f0es_11"
+       ],
+       [
+        "_page_15h2q_38"
+       ],
+       [
+        "_dashboardContent_15h2q_45"
+       ],
+       [
+        "_layout_15h2q_18"
+       ]
+      ],
+      "classes": [
+       "_arrow_1waxt_173"
+      ],
+      "data": {},
+      "heading": "6 accounts",
+      "landmark": {
+       "name": "",
+       "role": "main"
+      },
+      "layer": "document",
+      "name": "",
+      "rect": [
+       748,
+       252,
+       32,
+       48
+      ],
+      "role": "button",
+      "tag": "button",
+      "xpath": "/html/body/div[1]/main[1]/div[1]/div[1]/div[4]/div[1]/div[1]/div[3]/div[1]/div[1]/div[1]/div[3]/button[1]"
+     },
+     "state": "settings.panorama"
+    }
+   ],
+   "evidenceHash": "874aad2c2eac33db7c63fe8397176cb9ba28ac997b581a0959761322f8a89c18",
+   "facts": {
+    "announced": "button \"\"",
+    "axeSummary": "",
+    "criterion": "4.1.2",
+    "criterionName": "Name, Role, Value",
+    "element": "button in \"<n> accounts\"",
+    "rule": "announced-as",
+    "screen": "All Accounts (panorama)"
+   },
+   "family": "name",
+   "guidance": "High for an unnamed form control or the sole primary action.",
+   "issueId": null,
+   "key": "name:announced-as:f64044aeed2f",
+   "measured": false,
+   "primary": "settings.panorama",
+   "proposals": [],
+   "rule": "announced-as",
+   "screens": 1,
+   "severityDefault": "medium",
+   "source": "scanner",
+   "states": [
+    "settings.panorama"
+   ],
+   "summary": "announced-as: announced as button \"\".",
+   "title": "Missing or unclear name: button in \"<n> accounts\""
+  },
+  {
+   "attachments": [],
+   "attempt": 1,
+   "basis": "candidate",
+   "criteria": [
+    "4.1.2"
+   ],
+   "evidence": [
+    {
+     "evidence": {
+      "description": "",
+      "name": "Search by name",
+      "role": "menuitem",
+      "states": {
+       "expanded": false,
+       "haspopup": "menu"
+      },
+      "template": "menuitem \"Search by name\" [expanded=false, haspopup=menu]"
+     },
+     "occurrence": {
+      "ancestors": [
+       [
+        "_chip_1xw00_8",
+        "_inactive_1xw00_119"
+       ],
+       [],
+       [
+        "_filters_grqat_29"
+       ],
+       [
+        "_tableViewsAndFilters_grqat_82"
+       ],
+       [
+        "_toolbarContainer_grqat_4"
+       ],
+       [
+        "_toolbar_dikva_1"
+       ],
+       [
+        "_page_15h2q_38"
+       ],
+       [
+        "_dashboardContent_15h2q_45"
+       ]
+      ],
+      "classes": [
+       "_mainElement_1xw00_24",
+       "_interactive_1xw00_134",
+       "_dropdownChip_r52w9_7"
+      ],
+      "data": {},
+      "heading": "6 accounts",
+      "landmark": {
+       "name": "",
+       "role": "main"
+      },
+      "layer": "document",
+      "name": "Search by name",
+      "rect": [
+       237,
+       172,
+       154,
+       32
+      ],
+      "role": "menuitem",
+      "tag": "button",
+      "xpath": "/html/body/div[1]/main[1]/div[1]/div[1]/div[4]/div[1]/div[1]/div[2]/div[1]/span[1]/span[1]/span[1]/span[1]/button[1]"
+     },
+     "state": "settings.panorama"
+    }
+   ],
+   "evidenceHash": "4bee68df01d4152ac198096c6c74b15c4ad838c250b01110eea001048d2f313a",
+   "facts": {
+    "announced": "menuitem \"Search by name\" [expanded=false, haspopup=menu]",
+    "axeSummary": "",
+    "criterion": "4.1.2",
+    "criterionName": "Name, Role, Value",
+    "element": "menuitem \"Search by name\"",
+    "rule": "announced-as",
+    "screen": "All Accounts (panorama)"
+   },
+   "family": "role-state",
+   "guidance": "Low for optional ARIA or an invalid autocomplete token; high when aria-hidden hides the whole page.",
+   "issueId": null,
+   "key": "role-state:announced-as:90aa4aeb5059",
+   "measured": false,
+   "primary": "settings.panorama",
+   "proposals": [],
+   "rule": "announced-as",
+   "screens": 1,
+   "severityDefault": "medium",
+   "source": "scanner",
+   "states": [
+    "settings.panorama"
+   ],
+   "summary": "announced-as: announced as menuitem \"Search by name\" [expanded=false, haspopup=menu].",
+   "title": "Wrong role or state: menuitem \"Search by name\""
+  },
+  {
+   "attachments": [],
+   "attempt": 1,
+   "basis": "candidate",
+   "criteria": [
+    "2.4.4"
+   ],
+   "evidence": [
+    {
+     "evidence": {
+      "description": "",
+      "name": "$123.66",
+      "role": "link",
+      "states": {},
+      "template": "link \"<amount>\""
+     },
+     "occurrence": {
+      "ancestors": [
+       [],
+       [
+        "_tooltipAnchor_18bac_4"
+       ],
+       [
+        "_lastPaidInvoice_1re4j_73"
+       ],
+       [
+        "_lastPaidSection_1re4j_66"
+       ],
+       [
+        "_panel_1re4j_1"
+       ],
+       [
+        "_sidePanel_1gf6r_102"
+       ],
+       [
+        "_pageContent_1gf6r_10"
+       ],
+       [
+        "_pageContent_809q8_151",
+        "_pageContentWidth_809q8_184"
+       ]
+      ],
+      "classes": [
+       "_link_ual8v_4",
+       "_underlineOnHover_ual8v_15"
+      ],
+      "data": {},
+      "heading": "Plan & Billing",
+      "landmark": {
+       "name": "",
+       "role": "main"
+      },
+      "layer": "document",
+      "name": "$123.66",
+      "rect": [
+       1242,
+       468,
+       72,
+       19
+      ],
+      "role": "link",
+      "tag": "a",
+      "xpath": "/html/body/div[1]/main[1]/div[1]/div[1]/div[4]/div[1]/div[2]/div[3]/div[2]/div[1]/div[2]/div[2]/div[1]/span[1]/a[1]"
+     },
+     "state": "settings.plan-billing"
+    }
+   ],
+   "evidenceHash": "54893c9d44b309cdf4d98632eb2d11d57a0b395ed1eaa3fe352a469bd50f791b",
+   "facts": {
+    "announced": "link \"<amount>\"",
+    "axeSummary": "",
+    "criterion": "2.4.4",
+    "criterionName": "Link Purpose (In Context)",
+    "element": "link \"<amount>\"",
+    "rule": "announced-as",
+    "screen": "Plan & Billing"
+   },
+   "family": "name",
+   "guidance": "High for an unnamed form control or the sole primary action.",
+   "issueId": null,
+   "key": "name:announced-as:b9e83a94188b",
+   "measured": false,
+   "primary": "settings.plan-billing",
+   "proposals": [],
+   "rule": "announced-as",
+   "screens": 1,
+   "severityDefault": "medium",
+   "source": "scanner",
+   "states": [
+    "settings.plan-billing"
+   ],
+   "summary": "announced-as: announced as link \"<amount>\".",
+   "title": "Missing or unclear name: link \"<amount>\""
+  },
+  {
+   "attachments": [],
+   "attempt": 1,
+   "basis": "candidate",
+   "criteria": [
+    "4.1.2"
+   ],
+   "evidence": [
+    {
+     "evidence": {
+      "description": "",
+      "name": "Error",
+      "role": "dialog",
+      "states": {},
+      "template": "dialog \"Error\""
+     },
+     "occurrence": {
+      "ancestors": [
+       [],
+       []
+      ],
+      "classes": [
+       "_popoverErrorBubble_1w4pk_20",
+       "_zIndexAboveModalAndSiblingPopover_1fl3q_27"
+      ],
+      "data": {
+       "data-dialog": "",
+       "data-enter": "true",
+       "data-open": "true"
+      },
+      "heading": "",
+      "landmark": null,
+      "layer": "top",
+      "name": "Error",
+      "rect": [
+       856,
+       132,
+       186,
+       36
+      ],
+      "role": "dialog",
+      "tag": "div",
+      "xpath": "/html/body/div[12]/div[1]/div[1]"
+     },
+     "state": "settings.referral-invalid-email"
+    }
+   ],
+   "evidenceHash": "9cbe966486d57dd7d8022d5cc3b29547def84182f64a78817127ab4438a37c92",
+   "facts": {
+    "announced": "dialog \"Error\"",
+    "axeSummary": "",
+    "criterion": "4.1.2",
+    "criterionName": "Name, Role, Value",
+    "element": "dialog \"Error\"",
+    "rule": "announced-as",
+    "screen": "Referral — invalid email"
+   },
+   "family": "role-state",
+   "guidance": "Low for optional ARIA or an invalid autocomplete token; high when aria-hidden hides the whole page.",
+   "issueId": null,
+   "key": "role-state:announced-as:0772ee0e6b0a",
+   "measured": false,
+   "primary": "settings.referral-invalid-email",
+   "proposals": [],
+   "rule": "announced-as",
+   "screens": 1,
+   "severityDefault": "medium",
+   "source": "scanner",
+   "states": [
+    "settings.referral-invalid-email"
+   ],
+   "summary": "announced-as: announced as dialog \"Error\".",
+   "title": "Wrong role or state: dialog \"Error\""
+  }
+ ],
+ "primaries": [
+  "settings.panorama",
+  "settings.plan-billing",
+  "settings.referral-invalid-email"
+ ],
+ "reach": {
+  "baseUrl": "https://demo.mercury.com",
+  "data": "data",
+  "map": "build/map.json",
+  "run": "2026-10-03-1525",
+  "workspace": "a11y"
+ },
+ "run": "2026-10-03-1525"
+}

@@ -1,0 +1,340 @@
+{
+ "area": "invoicing",
+ "batch": "verify-228",
+ "findings": [
+  {
+   "attachments": [],
+   "attempt": 1,
+   "basis": "violation",
+   "criteria": [
+    "4.1.2"
+   ],
+   "evidence": [
+    {
+     "evidence": {
+      "aria-errormessage": [
+       "mercury-utils-id-53-error-message"
+      ],
+      "failureSummary": "Fix all of the following:\n  aria-errormessage value `mercury-utils-id-53-error-message` must use a technique to announce the message (e.g., aria-live, aria-describedby, role=alert, etc.)"
+     },
+     "occurrence": {
+      "ancestors": [
+       [
+        "_textboxWrapper_1a7mr_158",
+        "_textboxWrapperError_1a7mr_227"
+       ],
+       [
+        "_selectWrapper_1a7mr_150"
+       ],
+       [
+        "_comboboxWrapper_1a7mr_6"
+       ],
+       [],
+       [
+        "_row_2qrq0_16"
+       ],
+       [],
+       [],
+       []
+      ],
+      "classes": [
+       "_textboxInput_1a7mr_250",
+       "_comboboxInput_1ic4i_1"
+      ],
+      "data": {},
+      "heading": "Invoice set up",
+      "landmark": {
+       "name": "",
+       "role": "main"
+      },
+      "layer": "document",
+      "name": "Product Search",
+      "rect": [
+       121,
+       443,
+       230,
+       38
+      ],
+      "role": "combobox",
+      "tag": "input",
+      "xpath": "/html/body/div[1]/main[1]/div[1]/div[2]/div[2]/div[3]/div[1]/div[1]/div[1]/div[1]/div[1]/div[1]/div[2]/div[2]/div[2]/div[2]/div[1]/div[1]/div[1]/div[1]/div[1]/div[1]/div[1]/div[1]/input[1]"
+     },
+     "state": "invoicing.create-setup-error"
+    }
+   ],
+   "evidenceHash": "3568fabb4206b969841a7bad163ebd55ba53ec6698daeaea93468d86bfc9faa8",
+   "facts": {
+    "announced": "combobox \"Product Search\" [expanded=false, haspopup=listbox, invalid=true, erro…",
+    "axeSummary": "aria-errormessage value `mercury-utils-id-53-error-message` must use a technique to announce the message (e.g., aria-live, aria-describedby, role=alert, etc.)",
+    "criterion": "4.1.2",
+    "criterionName": "Name, Role, Value",
+    "element": "combobox \"Product Search\"",
+    "rule": "aria-valid-attr-value",
+    "screen": "Invoice set up: empty line item"
+   },
+   "family": "role-state",
+   "guidance": "Low for optional ARIA or an invalid autocomplete token; high when aria-hidden hides the whole page.",
+   "issueId": null,
+   "key": "role-state:aria-valid-attr-value:0fb51a3eaf02",
+   "measured": false,
+   "primary": "invoicing.create-setup-error",
+   "proposals": [],
+   "rule": "aria-valid-attr-value",
+   "screens": 1,
+   "severityDefault": "medium",
+   "source": "scanner",
+   "states": [
+    "invoicing.create-setup-error"
+   ],
+   "summary": "aria-valid-attr-value: announced as combobox \"Product Search\" [expanded=false, haspopup=listbox, invalid=true, erro…. aria-errormessage value `mercury-utils-id-53-error-message` must use a technique to announce the message (e.g., aria-live, aria-describedby, role=alert, etc.)",
+   "title": "Wrong role or state: combobox \"Product Search\""
+  },
+  {
+   "attachments": [],
+   "attempt": 1,
+   "basis": "violation",
+   "criteria": [
+    "4.1.2"
+   ],
+   "evidence": [
+    {
+     "evidence": {
+      "aria-errormessage": [
+       "amount-mercury-utils-id-66-errormessage"
+      ],
+      "failureSummary": "Fix all of the following:\n  aria-errormessage value `amount-mercury-utils-id-66-errormessage` must use a technique to announce the message (e.g., aria-live, aria-describedby, role=alert, etc.)"
+     },
+     "occurrence": {
+      "ancestors": [
+       [
+        "_inputBox_q7hf7_93",
+        "_error_q7hf7_41"
+       ],
+       [
+        "_inputBoxWrapper_q7hf7_93"
+       ],
+       [
+        "_textInputWrapper_q7hf7_24"
+       ],
+       [
+        "_provideDSTextInput_q7hf7_6"
+       ],
+       [],
+       [
+        "_row_2qrq0_16"
+       ],
+       [],
+       []
+      ],
+      "classes": [
+       "_input_q7hf7_93",
+       "_rightAlignedInput_2qrq0_87"
+      ],
+      "data": {},
+      "heading": "Invoice set up",
+      "landmark": {
+       "name": "",
+       "role": "main"
+      },
+      "layer": "document",
+      "name": "0.00",
+      "rect": [
+       454,
+       450,
+       133,
+       24
+      ],
+      "role": "textbox",
+      "tag": "input",
+      "xpath": "/html/body/div[1]/main[1]/div[1]/div[2]/div[2]/div[3]/div[1]/div[1]/div[1]/div[1]/div[1]/div[1]/div[2]/div[2]/div[2]/div[2]/div[1]/div[1]/div[1]/div[1]/div[3]/div[1]/div[1]/div[1]/div[1]/input[1]"
+     },
+     "state": "invoicing.create-setup-error"
+    }
+   ],
+   "evidenceHash": "b2df1c617be5943a485d5d87c8619eeab5f2cb6d5bfb0d3662a0bdcdabedb90c",
+   "facts": {
+    "announced": "textbox \"<amount>\" [invalid=true, errormessage=Please complete this field]",
+    "axeSummary": "aria-errormessage value `amount-mercury-utils-id-66-errormessage` must use a technique to announce the message (e.g., aria-live, aria-describedby, role=alert,…",
+    "criterion": "4.1.2",
+    "criterionName": "Name, Role, Value",
+    "element": "textbox \"<amount>\"",
+    "rule": "aria-valid-attr-value",
+    "screen": "Invoice set up: empty line item"
+   },
+   "family": "role-state",
+   "guidance": "Low for optional ARIA or an invalid autocomplete token; high when aria-hidden hides the whole page.",
+   "issueId": null,
+   "key": "role-state:aria-valid-attr-value:e8aaee260548",
+   "measured": false,
+   "primary": "invoicing.create-setup-error",
+   "proposals": [],
+   "rule": "aria-valid-attr-value",
+   "screens": 1,
+   "severityDefault": "medium",
+   "source": "scanner",
+   "states": [
+    "invoicing.create-setup-error"
+   ],
+   "summary": "aria-valid-attr-value: announced as textbox \"<amount>\" [invalid=true, errormessage=Please complete this field]. aria-errormessage value `amount-mercury-utils-id-66-errormessage` must use a technique to announce the message (e.g., aria-live, aria-describedby, role=alert,…",
+   "title": "Wrong role or state: textbox \"<amount>\""
+  },
+  {
+   "attachments": [],
+   "attempt": 1,
+   "basis": "failure",
+   "criteria": [
+    "4.1.3"
+   ],
+   "evidence": [
+    {
+     "evidence": {
+      "focus": {
+       "ancestors": [
+        [
+         "_buttonWrapper_1a350_1",
+         "_buttonGroup_16t7w_1",
+         "_horizontal_16t7w_11"
+        ],
+        [
+         "_formNavigationButtonsWrapper_1a350_15"
+        ],
+        [
+         "_bottom_yg1rf_99"
+        ],
+        [
+         "_bottomContainer_yg1rf_99",
+         "_mobileStickyBottom_12jyu_16"
+        ],
+        [
+         "_leftContainer_yg1rf_39",
+         "_splitVariant_yg1rf_82",
+         "_leftBoxShadow_12jyu_10"
+        ],
+        [
+         "_containerBase_yg1rf_1",
+         "_container_yg1rf_1",
+         "_containerWithBanner_yg1rf_12"
+        ],
+        [
+         "_contentDiv_bcpsw_53",
+         "_contentDivHeightPreset_bcpsw_62",
+         "_layout_uyfdj_1",
+         "_fullWidthContentDiv_bcpsw_40"
+        ],
+        [
+         "_fullScreenWorkspaceLayout_bcpsw_14",
+         "_fullScreenWorkspaceLayoutBackground_bcpsw_32",
+         "_noScrollbar_bcpsw_27"
+        ]
+       ],
+       "classes": [
+        "_button_r6b2u_20",
+        "_large_r6b2u_88",
+        "_primary_r6b2u_104",
+        "_appearDisabled_r6b2u_16",
+        "session-replay-unmask"
+       ],
+       "data": {},
+       "heading": "Invoice totals",
+       "landmark": {
+        "name": "",
+        "role": "main"
+       },
+       "layer": "document",
+       "name": "Next",
+       "rect": [
+        491,
+        836,
+        109,
+        40
+       ],
+       "role": "button",
+       "tag": "button",
+       "xpath": "/html/body/div[1]/main[1]/div[1]/div[2]/div[2]/div[3]/div[1]/div[1]/div[2]/div[1]/div[1]/div[1]/button[2]"
+      },
+      "focused": false,
+      "message": "Please complete this field",
+      "region": null
+     },
+     "occurrence": {
+      "ancestors": [
+       [
+        "_comboboxWrapper_1a7mr_6"
+       ],
+       [],
+       [
+        "_row_2qrq0_16"
+       ],
+       [],
+       [],
+       [],
+       [
+        "_lineItems_2qrq0_4"
+       ],
+       []
+      ],
+      "classes": [
+       "_defaultErrorContainer_1tnh5_1",
+       "_errorMessage_1a7mr_448"
+      ],
+      "data": {
+       "data-session-replay-unmask": "true"
+      },
+      "heading": "Invoice set up",
+      "landmark": {
+       "name": "",
+       "role": "main"
+      },
+      "layer": "document",
+      "name": "",
+      "rect": [
+       120,
+       486,
+       232,
+       20
+      ],
+      "role": "",
+      "tag": "div",
+      "xpath": "/html/body/div[1]/main[1]/div[1]/div[2]/div[2]/div[3]/div[1]/div[1]/div[1]/div[1]/div[1]/div[1]/div[2]/div[2]/div[2]/div[2]/div[1]/div[1]/div[1]/div[1]/div[1]/div[1]/div[2]"
+     },
+     "state": "invoicing.create-setup-error"
+    }
+   ],
+   "evidenceHash": "f364e39d771e5b94427b3a9d36ca72517e8265c51c4a0f52a3f3f5b6054b0ee3",
+   "facts": {
+    "criterion": "4.1.3",
+    "criterionName": "Status Messages",
+    "focus": "button \"Next\"",
+    "message": "\"Please complete this field\"",
+    "screen": "Invoice set up: empty line item"
+   },
+   "family": "status-message",
+   "guidance": "High when it is the only confirmation of a money movement.",
+   "issueId": null,
+   "key": "status-message:status-not-announced:5e3c7630d7b1",
+   "measured": false,
+   "primary": "invoicing.create-setup-error",
+   "proposals": [],
+   "rule": "status-not-announced",
+   "screens": 1,
+   "severityDefault": "medium",
+   "source": "scanner",
+   "states": [
+    "invoicing.create-setup-error"
+   ],
+   "summary": "\"Please complete this field\" appeared outside any live region, alert or status role that existed before it, and focus stayed on the button \"Next\".",
+   "title": "Status message not announced: \"Please complete this field\""
+  }
+ ],
+ "primaries": [
+  "invoicing.create-setup-error"
+ ],
+ "reach": {
+  "baseUrl": "https://demo.mercury.com",
+  "data": "data",
+  "map": "build/map.json",
+  "run": "2026-10-03-1525",
+  "workspace": "a11y"
+ },
+ "run": "2026-10-03-1525"
+}

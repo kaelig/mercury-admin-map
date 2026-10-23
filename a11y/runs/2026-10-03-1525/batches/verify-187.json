@@ -1,0 +1,2358 @@
+{
+ "area": "home",
+ "batch": "verify-187",
+ "findings": [
+  {
+   "attachments": [],
+   "attempt": 1,
+   "basis": "incomplete",
+   "criteria": [
+    "1.4.3"
+   ],
+   "evidence": [
+    {
+     "evidence": {
+      "contrastRatio": 0,
+      "expectedContrastRatio": "4.5:1",
+      "failureSummary": "Fix any of the following:\n  Element's background color could not be determined due to a background gradient",
+      "fontSize": "11.3pt (15px)",
+      "fontWeight": "normal",
+      "messageKey": "bgGradient"
+     },
+     "occurrence": {
+      "ancestors": [
+       [
+        "_bodyDefault_qaod7_40",
+        "_text-money-in_12t49_1",
+        "_dollarDisplay_1of3b_3"
+       ],
+       [
+        "_tableData_1u4jr_5",
+        "_alignmentEnd_1u4jr_22",
+        "_body_4sbgh_40",
+        "_amount_4sbgh_11"
+       ],
+       [
+        "_tableRow_137xu_3",
+        "_interactiveRows_137xu_35",
+        "_row_165jq_2"
+       ],
+       [
+        "_tableBody_1cp5b_1"
+       ],
+       [
+        "_table_1acga_4"
+       ],
+       [
+        "_tableWrapper_1acga_4"
+       ],
+       [
+        "_scrollableTableWrapper_ebsnk_1"
+       ],
+       []
+      ],
+      "classes": [
+       "_strikethrough_1of3b_15"
+      ],
+      "data": {},
+      "heading": "Welcome, Jane",
+      "landmark": {
+       "name": "",
+       "role": "main"
+      },
+      "layer": "document",
+      "name": "",
+      "rect": [
+       867,
+       1755,
+       54,
+       18
+      ],
+      "role": "",
+      "tag": "span",
+      "xpath": "/html/body/div[1]/main[1]/div[1]/div[1]/div[4]/div[1]/div[2]/div[1]/div[1]/div[4]/div[4]/div[3]/div[1]/table[1]/tbody[1]/tr[4]/td[3]/div[1]/span[1]"
+     },
+     "state": "home.index"
+    },
+    {
+     "evidence": {
+      "contrastRatio": 0,
+      "expectedContrastRatio": "4.5:1",
+      "failureSummary": "Fix any of the following:\n  Element's background color could not be determined due to a background gradient",
+      "fontSize": "10.5pt (14px)",
+      "fontWeight": "normal",
+      "messageKey": "bgGradient"
+     },
+     "occurrence": {
+      "ancestors": [
+       [
+        "_dsTabView_95hq1_3",
+        "_tabBar_1j9lo_3"
+       ],
+       [
+        "_tabBarWrapper_1j9lo_3"
+       ],
+       [
+        "_previewInner_10wfz_47"
+       ],
+       [
+        "_previewOuter_10wfz_20",
+        "_themeWhite_10wfz_53"
+       ],
+       [
+        "_container_10wfz_3"
+       ],
+       [
+        "_rightContainer_yg1rf_40",
+        "_splitVariant_yg1rf_82"
+       ],
+       [
+        "_containerBase_yg1rf_1",
+        "_container_yg1rf_1",
+        "_containerWithBanner_yg1rf_12"
+       ],
+       [
+        "_contentDiv_bcpsw_53",
+        "_contentDivHeightPreset_bcpsw_62",
+        "_layout_uyfdj_1",
+        "_fullWidthContentDiv_bcpsw_40"
+       ]
+      ],
+      "classes": [
+       "_bodySecondary_qaod7_51",
+       "_dsTabViewTab_95hq1_9",
+       "_selected_95hq1_21"
+      ],
+      "data": {},
+      "heading": "Frequency",
+      "landmark": {
+       "name": "",
+       "role": "main"
+      },
+      "layer": "document",
+      "name": "",
+      "rect": [
+       774,
+       110,
+       46,
+       40
+      ],
+      "role": "generic",
+      "tag": "div",
+      "xpath": "/html/body/div[1]/main[1]/div[1]/div[2]/div[2]/div[3]/div[1]/div[2]/div[1]/div[1]/div[1]/div[1]/div[1]/div[1]"
+     },
+     "state": "invoicing.create-series-ends-after"
+    }
+   ],
+   "evidenceHash": "4c3bc8b8ace8349324a66e4a861e84e065c3f72acba274cdf32c9e8b690e7e63",
+   "facts": {
+    "criterion": "1.4.3",
+    "criterionName": "Contrast (Minimum)",
+    "elements": "12 elements",
+    "messageKey": "bgGradient",
+    "rule": "color-contrast",
+    "screen": "Home dashboard",
+    "why": "it sits on a background gradient"
+   },
+   "family": "contrast",
+   "guidance": "High under 2:1, or under 3:1 for essential text.",
+   "issueId": null,
+   "key": "contrast:color-contrast:0f3893042bc0",
+   "measured": true,
+   "primary": "home.index",
+   "proposals": [],
+   "rule": "color-contrast",
+   "screens": 42,
+   "severityDefault": "medium",
+   "source": "scanner",
+   "states": [
+    "home.index",
+    "invoicing.create-series-ends-after"
+   ],
+   "summary": "axe color-contrast could not decide 12 elements (bgGradient): it sits on a background gradient.",
+   "title": "Needs review: color-contrast, it sits on a background gradient"
+  },
+  {
+   "attachments": [],
+   "attempt": 1,
+   "basis": "candidate",
+   "criteria": [
+    "2.4.3",
+    "1.3.2"
+   ],
+   "evidence": [
+    {
+     "evidence": {
+      "band": 32,
+      "overlay": "home.index.tabstops.png",
+      "previous": {
+       "ancestors": [
+        [],
+        [
+         "_bottomRow_1dp3n_34"
+        ],
+        [
+         "_large_kwlx6_9",
+         "_noHover_3n0se_28",
+         "_border_3n0se_35",
+         "_raisedBackground_3n0se_45",
+         "_card_1ym9q_1",
+         "_card_1dp3n_1"
+        ],
+        [
+         "_moduleRow_ct6b5_48",
+         "_moduleRowThreeColumns_ct6b5_61"
+        ],
+        [
+         "_analyticsDashboard_ct6b5_36"
+        ],
+        [
+         "_fullWidthWrapper_ct6b5_9"
+        ],
+        [
+         "_outerWrapper_ct6b5_1"
+        ],
+        [
+         "_dashboardContentWrapper_ct6b5_108",
+         "_pageContent_809q8_151",
+         "_footerPadding_809q8_115"
+        ]
+       ],
+       "classes": [
+        "_button_r6b2u_20",
+        "_small_r6b2u_72",
+        "_secondary_r6b2u_126",
+        "_link_ual8v_4",
+        "_underlineNever_ual8v_7"
+       ],
+       "data": {
+        "data-discover": "true"
+       },
+       "heading": "Welcome, Jane",
+       "landmark": {
+        "name": "",
+        "role": "main"
+       },
+       "layer": "document",
+       "name": "Pay",
+       "rect": [
+        571,
+        809,
+        56,
+        32
+       ],
+       "role": "link",
+       "tag": "a",
+       "xpath": "/html/body/div[1]/main[1]/div[1]/div[1]/div[4]/div[1]/div[2]/div[1]/div[1]/div[4]/div[2]/div[1]/div[3]/span[1]/a[1]"
+      },
+      "rise": 139,
+      "stop": 66,
+      "stops": 103
+     },
+     "occurrence": {
+      "ancestors": [
+       [],
+       [
+        "_bodyDefault_qaod7_40",
+        "_text-default_12t49_1"
+       ],
+       [
+        "_topRow_ypfxy_2"
+       ],
+       [
+        "_large_kwlx6_9",
+        "_noHover_3n0se_28",
+        "_border_3n0se_35",
+        "_raisedBackground_3n0se_45",
+        "_card_1ym9q_1",
+        "_card_ypfxy_1"
+       ],
+       [
+        "_moduleRow_ct6b5_48",
+        "_moduleRowThreeColumns_ct6b5_61"
+       ],
+       [
+        "_analyticsDashboard_ct6b5_36"
+       ],
+       [
+        "_fullWidthWrapper_ct6b5_9"
+       ],
+       [
+        "_outerWrapper_ct6b5_1"
+       ]
+      ],
+      "classes": [
+       "_link_ual8v_4",
+       "_underlineOnHover_ual8v_15"
+      ],
+      "data": {
+       "data-discover": "true"
+      },
+      "heading": "Welcome, Jane",
+      "landmark": {
+       "name": "",
+       "role": "main"
+      },
+      "layer": "document",
+      "name": "Bill Pay",
+      "rect": [
+       702,
+       670,
+       49,
+       18
+      ],
+      "role": "link",
+      "tag": "a",
+      "xpath": "/html/body/div[1]/main[1]/div[1]/div[1]/div[4]/div[1]/div[2]/div[1]/div[1]/div[4]/div[2]/div[2]/div[1]/span[1]/span[1]/a[1]"
+     },
+     "state": "home.index"
+    },
+    {
+     "evidence": {
+      "band": 32,
+      "overlay": "home.index-disputes.tabstops.png",
+      "previous": {
+       "ancestors": [
+        [],
+        [
+         "_bottomRow_1dp3n_34"
+        ],
+        [
+         "_large_kwlx6_9",
+         "_noHover_3n0se_28",
+         "_border_3n0se_35",
+         "_raisedBackground_3n0se_45",
+         "_card_1ym9q_1",
+         "_card_1dp3n_1"
+        ],
+        [
+         "_moduleRow_ct6b5_48",
+         "_moduleRowTwoColumns_ct6b5_57"
+        ],
+        [
+         "_analyticsDashboard_ct6b5_36"
+        ],
+        [
+         "_fullWidthWrapper_ct6b5_9"
+        ],
+        [
+         "_outerWrapper_ct6b5_1"
+        ],
+        [
+         "_dashboardContentWrapper_ct6b5_108",
+         "_pageContent_809q8_151",
+         "_footerPadding_809q8_115"
+        ]
+       ],
+       "classes": [
+        "_button_r6b2u_20",
+        "_small_r6b2u_72",
+        "_secondary_r6b2u_126",
+        "_link_ual8v_4",
+        "_underlineNever_ual8v_7"
+       ],
+       "data": {
+        "data-discover": "true"
+       },
+       "heading": "Welcome, Jane",
+       "landmark": {
+        "name": "",
+        "role": "main"
+       },
+       "layer": "document",
+       "name": "Pay",
+       "rect": [
+        1233,
+        809,
+        56,
+        32
+       ],
+       "role": "link",
+       "tag": "a",
+       "xpath": "/html/body/div[1]/main[1]/div[1]/div[1]/div[4]/div[1]/div[2]/div[1]/div[1]/div[4]/div[2]/div[2]/div[3]/span[1]/a[1]"
+      },
+      "rise": 340,
+      "stop": 71,
+      "stops": 108
+     },
+     "occurrence": {
+      "ancestors": [
+       [],
+       [
+        "_bodyDefault_qaod7_40",
+        "_text-default_12t49_1"
+       ],
+       [
+        "_topRow_ypfxy_2"
+       ],
+       [
+        "_large_kwlx6_9",
+        "_noHover_3n0se_28",
+        "_border_3n0se_35",
+        "_raisedBackground_3n0se_45",
+        "_card_1ym9q_1",
+        "_card_ypfxy_1"
+       ],
+       [
+        "_moduleRow_ct6b5_48",
+        "_moduleRowTwoColumns_ct6b5_57"
+       ],
+       [
+        "_analyticsDashboard_ct6b5_36"
+       ],
+       [
+        "_fullWidthWrapper_ct6b5_9"
+       ],
+       [
+        "_outerWrapper_ct6b5_1"
+       ]
+      ],
+      "classes": [
+       "_link_ual8v_4",
+       "_underlineOnHover_ual8v_15"
+      ],
+      "data": {
+       "data-discover": "true"
+      },
+      "heading": "Welcome, Jane",
+      "landmark": {
+       "name": "",
+       "role": "main"
+      },
+      "layer": "document",
+      "name": "Bill Pay",
+      "rect": [
+       371,
+       469,
+       49,
+       18
+      ],
+      "role": "link",
+      "tag": "a",
+      "xpath": "/html/body/div[1]/main[1]/div[1]/div[1]/div[4]/div[1]/div[2]/div[1]/div[1]/div[4]/div[2]/div[3]/div[1]/span[1]/span[1]/a[1]"
+     },
+     "state": "home.index-disputes"
+    }
+   ],
+   "evidenceHash": "70787c4370a4d9d93f993c26e65a83de63d89684af7e857551bfa9d7ec37f9cd",
+   "facts": {
+    "criterion": "2.4.3",
+    "criterionName": "Focus Order",
+    "element": "link \"Bill Pay\"",
+    "previous": "link \"Pay\"",
+    "screen": "Home dashboard",
+    "stop": "66"
+   },
+   "family": "focus-order",
+   "guidance": "High if the order skips a required control.",
+   "issueId": null,
+   "key": "focus-order:backward-jump:0fee95ec4b74",
+   "measured": false,
+   "primary": "home.index",
+   "proposals": [],
+   "rule": "backward-jump",
+   "screens": 14,
+   "severityDefault": "medium",
+   "source": "scanner",
+   "states": [
+    "home.index",
+    "home.index-disputes"
+   ],
+   "summary": "Tab stop 66 jumped backward on screen, from the link \"Pay\" to the link \"Bill Pay\".",
+   "title": "Tab order jumps backward at link \"Bill Pay\""
+  },
+  {
+   "attachments": [],
+   "attempt": 1,
+   "basis": "candidate",
+   "criteria": [
+    "2.4.3",
+    "1.3.2"
+   ],
+   "evidence": [
+    {
+     "evidence": {
+      "band": 18,
+      "overlay": "home.index.tabstops.png",
+      "previous": {
+       "ancestors": [
+        [
+         "_text-link_12t49_1"
+        ],
+        [
+         "_bottomRowRight_ypfxy_55"
+        ],
+        [
+         "_bottomRow_ypfxy_30"
+        ],
+        [
+         "_large_kwlx6_9",
+         "_noHover_3n0se_28",
+         "_border_3n0se_35",
+         "_raisedBackground_3n0se_45",
+         "_card_1ym9q_1",
+         "_card_ypfxy_1"
+        ],
+        [
+         "_moduleRow_ct6b5_48",
+         "_moduleRowThreeColumns_ct6b5_61"
+        ],
+        [
+         "_analyticsDashboard_ct6b5_36"
+        ],
+        [
+         "_fullWidthWrapper_ct6b5_9"
+        ],
+        [
+         "_outerWrapper_ct6b5_1"
+        ]
+       ],
+       "classes": [
+        "_link_ual8v_4",
+        "_underlineOnHover_ual8v_15",
+        "_sizeDefault_ual8v_25"
+       ],
+       "data": {
+        "data-discover": "true"
+       },
+       "heading": "Welcome, Jane",
+       "landmark": {
+        "name": "",
+        "role": "main"
+       },
+       "layer": "document",
+       "name": "View",
+       "rect": [
+        910,
+        816,
+        48,
+        18
+       ],
+       "role": "link",
+       "tag": "a",
+       "xpath": "/html/body/div[1]/main[1]/div[1]/div[1]/div[4]/div[1]/div[2]/div[1]/div[1]/div[4]/div[2]/div[2]/div[3]/div[2]/span[1]/a[1]"
+      },
+      "rise": 146,
+      "stop": 70,
+      "stops": 103
+     },
+     "occurrence": {
+      "ancestors": [
+       [],
+       [
+        "_bodyDefault_qaod7_40",
+        "_text-default_12t49_1"
+       ],
+       [
+        "_topRow_1dk39_2"
+       ],
+       [
+        "_large_kwlx6_9",
+        "_noHover_3n0se_28",
+        "_border_3n0se_35",
+        "_raisedBackground_3n0se_45",
+        "_card_1ym9q_1",
+        "_card_1dk39_1"
+       ],
+       [
+        "_moduleRow_ct6b5_48",
+        "_moduleRowThreeColumns_ct6b5_61"
+       ],
+       [
+        "_analyticsDashboard_ct6b5_36"
+       ],
+       [
+        "_fullWidthWrapper_ct6b5_9"
+       ],
+       [
+        "_outerWrapper_ct6b5_1"
+       ]
+      ],
+      "classes": [
+       "_link_ual8v_4",
+       "_underlineOnHover_ual8v_15"
+      ],
+      "data": {
+       "data-discover": "true"
+      },
+      "heading": "Welcome, Jane",
+      "landmark": {
+       "name": "",
+       "role": "main"
+      },
+      "layer": "document",
+      "name": "Invoicing",
+      "rect": [
+       1032,
+       670,
+       61,
+       18
+      ],
+      "role": "link",
+      "tag": "a",
+      "xpath": "/html/body/div[1]/main[1]/div[1]/div[1]/div[4]/div[1]/div[2]/div[1]/div[1]/div[4]/div[2]/div[3]/div[1]/span[1]/span[1]/a[1]"
+     },
+     "state": "home.index"
+    },
+    {
+     "evidence": {
+      "band": 18,
+      "overlay": "home.index-disputes.tabstops.png",
+      "previous": {
+       "ancestors": [
+        [
+         "_text-link_12t49_1"
+        ],
+        [
+         "_bottomRowRight_ypfxy_55"
+        ],
+        [
+         "_bottomRow_ypfxy_30"
+        ],
+        [
+         "_large_kwlx6_9",
+         "_noHover_3n0se_28",
+         "_border_3n0se_35",
+         "_raisedBackground_3n0se_45",
+         "_card_1ym9q_1",
+         "_card_ypfxy_1"
+        ],
+        [
+         "_moduleRow_ct6b5_48",
+         "_moduleRowTwoColumns_ct6b5_57"
+        ],
+        [
+         "_analyticsDashboard_ct6b5_36"
+        ],
+        [
+         "_fullWidthWrapper_ct6b5_9"
+        ],
+        [
+         "_outerWrapper_ct6b5_1"
+        ]
+       ],
+       "classes": [
+        "_link_ual8v_4",
+        "_underlineOnHover_ual8v_15",
+        "_sizeDefault_ual8v_25"
+       ],
+       "data": {
+        "data-discover": "true"
+       },
+       "heading": "Welcome, Jane",
+       "landmark": {
+        "name": "",
+        "role": "main"
+       },
+       "layer": "document",
+       "name": "View",
+       "rect": [
+        745,
+        615,
+        48,
+        18
+       ],
+       "role": "link",
+       "tag": "a",
+       "xpath": "/html/body/div[1]/main[1]/div[1]/div[1]/div[4]/div[1]/div[2]/div[1]/div[1]/div[4]/div[2]/div[3]/div[3]/div[2]/span[1]/a[1]"
+      },
+      "rise": 146,
+      "stop": 75,
+      "stops": 108
+     },
+     "occurrence": {
+      "ancestors": [
+       [],
+       [
+        "_bodyDefault_qaod7_40",
+        "_text-default_12t49_1"
+       ],
+       [
+        "_topRow_1dk39_2"
+       ],
+       [
+        "_large_kwlx6_9",
+        "_noHover_3n0se_28",
+        "_border_3n0se_35",
+        "_raisedBackground_3n0se_45",
+        "_card_1ym9q_1",
+        "_card_1dk39_1"
+       ],
+       [
+        "_moduleRow_ct6b5_48",
+        "_moduleRowTwoColumns_ct6b5_57"
+       ],
+       [
+        "_analyticsDashboard_ct6b5_36"
+       ],
+       [
+        "_fullWidthWrapper_ct6b5_9"
+       ],
+       [
+        "_outerWrapper_ct6b5_1"
+       ]
+      ],
+      "classes": [
+       "_link_ual8v_4",
+       "_underlineOnHover_ual8v_15"
+      ],
+      "data": {
+       "data-discover": "true"
+      },
+      "heading": "Welcome, Jane",
+      "landmark": {
+       "name": "",
+       "role": "main"
+      },
+      "layer": "document",
+      "name": "Invoicing",
+      "rect": [
+       867,
+       469,
+       61,
+       18
+      ],
+      "role": "link",
+      "tag": "a",
+      "xpath": "/html/body/div[1]/main[1]/div[1]/div[1]/div[4]/div[1]/div[2]/div[1]/div[1]/div[4]/div[2]/div[4]/div[1]/span[1]/span[1]/a[1]"
+     },
+     "state": "home.index-disputes"
+    }
+   ],
+   "evidenceHash": "11331b58646b4ac509a3dd8672bb7c23b514ab5f13208273323ea36d8e22df84",
+   "facts": {
+    "criterion": "2.4.3",
+    "criterionName": "Focus Order",
+    "element": "link \"Invoicing\"",
+    "previous": "link \"View\"",
+    "screen": "Home dashboard",
+    "stop": "70"
+   },
+   "family": "focus-order",
+   "guidance": "High if the order skips a required control.",
+   "issueId": null,
+   "key": "focus-order:backward-jump:766897942903",
+   "measured": false,
+   "primary": "home.index",
+   "proposals": [],
+   "rule": "backward-jump",
+   "screens": 15,
+   "severityDefault": "medium",
+   "source": "scanner",
+   "states": [
+    "home.index",
+    "home.index-disputes"
+   ],
+   "summary": "Tab stop 70 jumped backward on screen, from the link \"View\" to the link \"Invoicing\".",
+   "title": "Tab order jumps backward at link \"Invoicing\""
+  },
+  {
+   "attachments": [],
+   "attempt": 1,
+   "basis": "candidate",
+   "criteria": [
+    "2.4.3",
+    "1.3.2"
+   ],
+   "evidence": [
+    {
+     "evidence": {
+      "band": 44,
+      "overlay": "home.index.tabstops.png",
+      "previous": {
+       "ancestors": [
+        [
+         "_partySection_1euis_90"
+        ],
+        [
+         "_large_kwlx6_9",
+         "_noHover_3n0se_28",
+         "_border_3n0se_35",
+         "_raisedBackground_3n0se_45",
+         "_card_1euis_1"
+        ],
+        [
+         "_moneyFlowCards_ct6b5_76"
+        ],
+        [
+         "_moneyFlowRow_ct6b5_65"
+        ],
+        [
+         "_analyticsDashboard_ct6b5_36"
+        ],
+        [
+         "_fullWidthWrapper_ct6b5_9"
+        ],
+        [
+         "_outerWrapper_ct6b5_1"
+        ],
+        [
+         "_dashboardContentWrapper_ct6b5_108",
+         "_pageContent_809q8_151",
+         "_footerPadding_809q8_115"
+        ]
+       ],
+       "classes": [
+        "_partyRow_1euis_119",
+        "_noStyleLink_njx8v_1"
+       ],
+       "data": {
+        "data-discover": "true"
+       },
+       "heading": "Welcome, Jane",
+       "landmark": {
+        "name": "",
+        "role": "main"
+       },
+       "layer": "document",
+       "name": "View all",
+       "rect": [
+        363,
+        823,
+        438,
+        44
+       ],
+       "role": "link",
+       "tag": "a",
+       "xpath": "/html/body/div[1]/main[1]/div[1]/div[1]/div[4]/div[1]/div[2]/div[1]/div[1]/div[4]/div[3]/div[2]/div[1]/div[2]/a[5]"
+      },
+      "rise": 294,
+      "stop": 80,
+      "stops": 103
+     },
+     "occurrence": {
+      "ancestors": [
+       [
+        "_labelWithTooltipQuestion_in1lv_4"
+       ],
+       [
+        "_moneyFlowAmount_1euis_14"
+       ],
+       [
+        "_topHalf_1euis_9"
+       ],
+       [
+        "_large_kwlx6_9",
+        "_noHover_3n0se_28",
+        "_border_3n0se_35",
+        "_raisedBackground_3n0se_45",
+        "_card_1euis_1"
+       ],
+       [
+        "_moneyFlowCards_ct6b5_76"
+       ],
+       [
+        "_moneyFlowRow_ct6b5_65"
+       ],
+       [
+        "_analyticsDashboard_ct6b5_36"
+       ],
+       [
+        "_fullWidthWrapper_ct6b5_9"
+       ]
+      ],
+      "classes": [
+       "_tooltipAnchor_18bac_4",
+       "_tooltipAnchor_in1lv_9"
+      ],
+      "data": {
+       "data-focus-visible": "true"
+      },
+      "heading": "Welcome, Jane",
+      "landmark": {
+       "name": "",
+       "role": "main"
+      },
+      "layer": "document",
+      "name": "Money out",
+      "rect": [
+       944,
+       529,
+       14,
+       24
+      ],
+      "role": "generic",
+      "tag": "div",
+      "xpath": "/html/body/div[1]/main[1]/div[1]/div[1]/div[4]/div[1]/div[2]/div[1]/div[1]/div[4]/div[3]/div[2]/div[2]/div[1]/div[1]/div[1]/div[2]"
+     },
+     "state": "home.index"
+    },
+    {
+     "evidence": {
+      "band": 44,
+      "overlay": "home.index-money-movement.tabstops.png",
+      "previous": {
+       "ancestors": [
+        [
+         "_partySection_1euis_90"
+        ],
+        [
+         "_large_kwlx6_9",
+         "_noHover_3n0se_28",
+         "_border_3n0se_35",
+         "_raisedBackground_3n0se_45",
+         "_card_1euis_1"
+        ],
+        [
+         "_moneyFlowCards_ct6b5_76"
+        ],
+        [
+         "_moneyFlowRow_ct6b5_65"
+        ],
+        [
+         "_analyticsDashboard_ct6b5_36"
+        ],
+        [
+         "_fullWidthWrapper_ct6b5_9"
+        ],
+        [
+         "_outerWrapper_ct6b5_1"
+        ],
+        [
+         "_dashboardContentWrapper_ct6b5_108",
+         "_pageContent_809q8_151",
+         "_footerPadding_809q8_115"
+        ]
+       ],
+       "classes": [
+        "_partyRow_1euis_119",
+        "_noStyleLink_njx8v_1"
+       ],
+       "data": {
+        "data-discover": "true"
+       },
+       "heading": "Welcome, Jane",
+       "landmark": {
+        "name": "",
+        "role": "main"
+       },
+       "layer": "document",
+       "name": "View all",
+       "rect": [
+        363,
+        823,
+        438,
+        44
+       ],
+       "role": "link",
+       "tag": "a",
+       "xpath": "/html/body/div[1]/main[1]/div[1]/div[1]/div[4]/div[1]/div[2]/div[1]/div[1]/div[4]/div[3]/div[2]/div[1]/div[2]/a[5]"
+      },
+      "rise": 294,
+      "stop": 80,
+      "stops": 103
+     },
+     "occurrence": {
+      "ancestors": [
+       [
+        "_labelWithTooltipQuestion_in1lv_4"
+       ],
+       [
+        "_moneyFlowAmount_1euis_14"
+       ],
+       [
+        "_topHalf_1euis_9"
+       ],
+       [
+        "_large_kwlx6_9",
+        "_noHover_3n0se_28",
+        "_border_3n0se_35",
+        "_raisedBackground_3n0se_45",
+        "_card_1euis_1"
+       ],
+       [
+        "_moneyFlowCards_ct6b5_76"
+       ],
+       [
+        "_moneyFlowRow_ct6b5_65"
+       ],
+       [
+        "_analyticsDashboard_ct6b5_36"
+       ],
+       [
+        "_fullWidthWrapper_ct6b5_9"
+       ]
+      ],
+      "classes": [
+       "_tooltipAnchor_18bac_4",
+       "_tooltipAnchor_in1lv_9"
+      ],
+      "data": {
+       "data-focus-visible": "true"
+      },
+      "heading": "Welcome, Jane",
+      "landmark": {
+       "name": "",
+       "role": "main"
+      },
+      "layer": "document",
+      "name": "Money out",
+      "rect": [
+       944,
+       529,
+       14,
+       24
+      ],
+      "role": "generic",
+      "tag": "div",
+      "xpath": "/html/body/div[1]/main[1]/div[1]/div[1]/div[4]/div[1]/div[2]/div[1]/div[1]/div[4]/div[3]/div[2]/div[2]/div[1]/div[1]/div[1]/div[2]"
+     },
+     "state": "home.index-money-movement"
+    }
+   ],
+   "evidenceHash": "c15d39daaa12dfb24821993026343122891a7e32c65f6975ee1db3101d40ac2e",
+   "facts": {
+    "criterion": "2.4.3",
+    "criterionName": "Focus Order",
+    "element": "text \"Money out\"",
+    "previous": "link \"View all\"",
+    "screen": "Home dashboard",
+    "stop": "80"
+   },
+   "family": "focus-order",
+   "guidance": "High if the order skips a required control.",
+   "issueId": null,
+   "key": "focus-order:backward-jump:76a1abe66787",
+   "measured": false,
+   "primary": "home.index",
+   "proposals": [],
+   "rule": "backward-jump",
+   "screens": 15,
+   "severityDefault": "medium",
+   "source": "scanner",
+   "states": [
+    "home.index",
+    "home.index-money-movement"
+   ],
+   "summary": "Tab stop 80 jumped backward on screen, from the link \"View all\" to the text \"Money out\".",
+   "title": "Tab order jumps backward at text \"Money out\""
+  },
+  {
+   "attachments": [],
+   "attempt": 1,
+   "basis": "candidate",
+   "criteria": [
+    "2.4.3",
+    "1.3.2"
+   ],
+   "evidence": [
+    {
+     "evidence": {
+      "band": 32,
+      "overlay": "home.index.tabstops.png",
+      "previous": {
+       "ancestors": [
+        [
+         "_dropdownContainer_5swj3_1"
+        ],
+        [
+         "_deltaRow_q3oue_61"
+        ],
+        [
+         "_container_q3oue_1"
+        ],
+        [
+         "_large_kwlx6_9",
+         "_noHover_3n0se_28",
+         "_border_3n0se_35",
+         "_raisedBackground_3n0se_45",
+         "_graph_ct6b5_91"
+        ],
+        [
+         "_row_ct6b5_42"
+        ],
+        [
+         "_analyticsDashboard_ct6b5_36"
+        ],
+        [
+         "_fullWidthWrapper_ct6b5_9"
+        ],
+        [
+         "_outerWrapper_ct6b5_1"
+        ]
+       ],
+       "classes": [
+        "_button_r6b2u_20",
+        "_small_r6b2u_72",
+        "_tertiary_r6b2u_153",
+        "_menuButton_ok3n2_7"
+       ],
+       "data": {
+        "data-focus-visible": "true"
+       },
+       "heading": "Welcome, Jane",
+       "landmark": {
+        "name": "",
+        "role": "main"
+       },
+       "layer": "document",
+       "name": "Last 30 days",
+       "rect": [
+        355,
+        340,
+        134,
+        32
+       ],
+       "role": "button",
+       "tag": "button",
+       "xpath": "/html/body/div[1]/main[1]/div[1]/div[1]/div[4]/div[1]/div[2]/div[1]/div[1]/div[4]/div[1]/div[1]/div[1]/div[2]/div[1]/button[1]"
+      },
+      "rise": 71,
+      "stop": 46,
+      "stops": 103
+     },
+     "occurrence": {
+      "ancestors": [
+       [
+        "_titleRowButtons_3hpqe_27"
+       ],
+       [
+        "_titleRow_3hpqe_17"
+       ],
+       [
+        "_accountsCard_3hpqe_1"
+       ],
+       [
+        "_accountsCardWrapper_3hpqe_1"
+       ],
+       [
+        "_large_kwlx6_9",
+        "_noHover_3n0se_28",
+        "_border_3n0se_35",
+        "_raisedBackground_3n0se_45"
+       ],
+       [
+        "_row_ct6b5_42"
+       ],
+       [
+        "_analyticsDashboard_ct6b5_36"
+       ],
+       [
+        "_fullWidthWrapper_ct6b5_9"
+       ]
+      ],
+      "classes": [
+       "_tooltipAnchor_18bac_4",
+       "_titleRowButtonWrapper_3hpqe_31"
+      ],
+      "data": {
+       "data-focus-visible": "true"
+      },
+      "heading": "Welcome, Jane",
+      "landmark": {
+       "name": "",
+       "role": "main"
+      },
+      "layer": "document",
+      "name": "",
+      "rect": [
+       1213,
+       269,
+       32,
+       32
+      ],
+      "role": "generic",
+      "tag": "div",
+      "xpath": "/html/body/div[1]/main[1]/div[1]/div[1]/div[4]/div[1]/div[2]/div[1]/div[1]/div[4]/div[1]/div[2]/div[1]/div[1]/div[1]/div[1]/div[1]"
+     },
+     "state": "home.index"
+    },
+    {
+     "evidence": {
+      "band": 32,
+      "overlay": "home.index-money-movement.tabstops.png",
+      "previous": {
+       "ancestors": [
+        [
+         "_dropdownContainer_5swj3_1"
+        ],
+        [
+         "_deltaRow_q3oue_61"
+        ],
+        [
+         "_container_q3oue_1"
+        ],
+        [
+         "_large_kwlx6_9",
+         "_noHover_3n0se_28",
+         "_border_3n0se_35",
+         "_raisedBackground_3n0se_45",
+         "_graph_ct6b5_91"
+        ],
+        [
+         "_row_ct6b5_42"
+        ],
+        [
+         "_analyticsDashboard_ct6b5_36"
+        ],
+        [
+         "_fullWidthWrapper_ct6b5_9"
+        ],
+        [
+         "_outerWrapper_ct6b5_1"
+        ]
+       ],
+       "classes": [
+        "_button_r6b2u_20",
+        "_small_r6b2u_72",
+        "_tertiary_r6b2u_153",
+        "_menuButton_ok3n2_7"
+       ],
+       "data": {},
+       "heading": "Welcome, Jane",
+       "landmark": {
+        "name": "",
+        "role": "main"
+       },
+       "layer": "document",
+       "name": "Last 30 days",
+       "rect": [
+        355,
+        340,
+        134,
+        32
+       ],
+       "role": "button",
+       "tag": "button",
+       "xpath": "/html/body/div[1]/main[1]/div[1]/div[1]/div[4]/div[1]/div[2]/div[1]/div[1]/div[4]/div[1]/div[1]/div[1]/div[2]/div[1]/button[1]"
+      },
+      "rise": 71,
+      "stop": 46,
+      "stops": 103
+     },
+     "occurrence": {
+      "ancestors": [
+       [
+        "_titleRowButtons_3hpqe_27"
+       ],
+       [
+        "_titleRow_3hpqe_17"
+       ],
+       [
+        "_accountsCard_3hpqe_1"
+       ],
+       [
+        "_accountsCardWrapper_3hpqe_1"
+       ],
+       [
+        "_large_kwlx6_9",
+        "_noHover_3n0se_28",
+        "_border_3n0se_35",
+        "_raisedBackground_3n0se_45"
+       ],
+       [
+        "_row_ct6b5_42"
+       ],
+       [
+        "_analyticsDashboard_ct6b5_36"
+       ],
+       [
+        "_fullWidthWrapper_ct6b5_9"
+       ]
+      ],
+      "classes": [
+       "_tooltipAnchor_18bac_4",
+       "_titleRowButtonWrapper_3hpqe_31"
+      ],
+      "data": {
+       "data-focus-visible": "true"
+      },
+      "heading": "Welcome, Jane",
+      "landmark": {
+       "name": "",
+       "role": "main"
+      },
+      "layer": "document",
+      "name": "",
+      "rect": [
+       1213,
+       269,
+       32,
+       32
+      ],
+      "role": "generic",
+      "tag": "div",
+      "xpath": "/html/body/div[1]/main[1]/div[1]/div[1]/div[4]/div[1]/div[2]/div[1]/div[1]/div[4]/div[1]/div[2]/div[1]/div[1]/div[1]/div[1]/div[1]"
+     },
+     "state": "home.index-money-movement"
+    }
+   ],
+   "evidenceHash": "4ef690c191553f54578c73977bdcdf1e56ac1e66cb780317786c517b15519332",
+   "facts": {
+    "criterion": "2.4.3",
+    "criterionName": "Focus Order",
+    "element": "text in \"Welcome, Jane\"",
+    "previous": "button \"Last <n> days\"",
+    "screen": "Home dashboard",
+    "stop": "46"
+   },
+   "family": "focus-order",
+   "guidance": "High if the order skips a required control.",
+   "issueId": null,
+   "key": "focus-order:backward-jump:b37265dec606",
+   "measured": false,
+   "primary": "home.index",
+   "proposals": [],
+   "rule": "backward-jump",
+   "screens": 15,
+   "severityDefault": "medium",
+   "source": "scanner",
+   "states": [
+    "home.index",
+    "home.index-money-movement"
+   ],
+   "summary": "Tab stop 46 jumped backward on screen, from the button \"Last <n> days\" to the text in \"Welcome, Jane\".",
+   "title": "Tab order jumps backward at text in \"Welcome, Jane\""
+  },
+  {
+   "attachments": [],
+   "attempt": 1,
+   "basis": "candidate",
+   "criteria": [
+    "2.4.3",
+    "1.3.2"
+   ],
+   "evidence": [
+    {
+     "evidence": {
+      "band": 44,
+      "overlay": "home.index.tabstops.png",
+      "previous": {
+       "ancestors": [
+        [
+         "_partySection_1euis_90"
+        ],
+        [
+         "_large_kwlx6_9",
+         "_noHover_3n0se_28",
+         "_border_3n0se_35",
+         "_raisedBackground_3n0se_45",
+         "_card_1euis_1"
+        ],
+        [
+         "_moneyFlowCards_ct6b5_76"
+        ],
+        [
+         "_moneyFlowRow_ct6b5_65"
+        ],
+        [
+         "_analyticsDashboard_ct6b5_36"
+        ],
+        [
+         "_fullWidthWrapper_ct6b5_9"
+        ],
+        [
+         "_outerWrapper_ct6b5_1"
+        ],
+        [
+         "_dashboardContentWrapper_ct6b5_108",
+         "_pageContent_809q8_151",
+         "_footerPadding_809q8_115"
+        ]
+       ],
+       "classes": [
+        "_partyRow_1euis_119",
+        "_noStyleLink_njx8v_1"
+       ],
+       "data": {
+        "data-discover": "true"
+       },
+       "heading": "Welcome, Jane",
+       "landmark": {
+        "name": "",
+        "role": "main"
+       },
+       "layer": "document",
+       "name": "View all",
+       "rect": [
+        859,
+        823,
+        438,
+        44
+       ],
+       "role": "link",
+       "tag": "a",
+       "xpath": "/html/body/div[1]/main[1]/div[1]/div[1]/div[4]/div[1]/div[2]/div[1]/div[1]/div[4]/div[3]/div[2]/div[2]/div[2]/a[5]"
+      },
+      "rise": 354,
+      "stop": 86,
+      "stops": 103
+     },
+     "occurrence": {
+      "ancestors": [
+       [],
+       [
+        "_sectionHeader_165jq_6"
+       ],
+       [],
+       [
+        "_analyticsDashboard_ct6b5_36"
+       ],
+       [
+        "_fullWidthWrapper_ct6b5_9"
+       ],
+       [
+        "_outerWrapper_ct6b5_1"
+       ],
+       [
+        "_dashboardContentWrapper_ct6b5_108",
+        "_pageContent_809q8_151",
+        "_footerPadding_809q8_115"
+       ],
+       [
+        "_dashboardContent_809q8_29",
+        "_hasMobileDesigns_809q8_136"
+       ]
+      ],
+      "classes": [
+       "_link_ual8v_4",
+       "_variantPrimary_ual8v_33",
+       "_sizeDefault_ual8v_25"
+      ],
+      "data": {
+       "data-discover": "true"
+      },
+      "heading": "Welcome, Jane",
+      "landmark": {
+       "name": "",
+       "role": "main"
+      },
+      "layer": "document",
+      "name": "View all",
+      "rect": [
+       473,
+       469,
+       67,
+       18
+      ],
+      "role": "link",
+      "tag": "a",
+      "xpath": "/html/body/div[1]/main[1]/div[1]/div[1]/div[4]/div[1]/div[2]/div[1]/div[1]/div[4]/div[4]/div[1]/span[2]/a[1]"
+     },
+     "state": "home.index"
+    },
+    {
+     "evidence": {
+      "band": 44,
+      "overlay": "home.index-money-movement.tabstops.png",
+      "previous": {
+       "ancestors": [
+        [
+         "_partySection_1euis_90"
+        ],
+        [
+         "_large_kwlx6_9",
+         "_noHover_3n0se_28",
+         "_border_3n0se_35",
+         "_raisedBackground_3n0se_45",
+         "_card_1euis_1"
+        ],
+        [
+         "_moneyFlowCards_ct6b5_76"
+        ],
+        [
+         "_moneyFlowRow_ct6b5_65"
+        ],
+        [
+         "_analyticsDashboard_ct6b5_36"
+        ],
+        [
+         "_fullWidthWrapper_ct6b5_9"
+        ],
+        [
+         "_outerWrapper_ct6b5_1"
+        ],
+        [
+         "_dashboardContentWrapper_ct6b5_108",
+         "_pageContent_809q8_151",
+         "_footerPadding_809q8_115"
+        ]
+       ],
+       "classes": [
+        "_partyRow_1euis_119",
+        "_noStyleLink_njx8v_1"
+       ],
+       "data": {
+        "data-discover": "true"
+       },
+       "heading": "Welcome, Jane",
+       "landmark": {
+        "name": "",
+        "role": "main"
+       },
+       "layer": "document",
+       "name": "View all",
+       "rect": [
+        859,
+        823,
+        438,
+        44
+       ],
+       "role": "link",
+       "tag": "a",
+       "xpath": "/html/body/div[1]/main[1]/div[1]/div[1]/div[4]/div[1]/div[2]/div[1]/div[1]/div[4]/div[3]/div[2]/div[2]/div[2]/a[5]"
+      },
+      "rise": 354,
+      "stop": 86,
+      "stops": 103
+     },
+     "occurrence": {
+      "ancestors": [
+       [],
+       [
+        "_sectionHeader_165jq_6"
+       ],
+       [],
+       [
+        "_analyticsDashboard_ct6b5_36"
+       ],
+       [
+        "_fullWidthWrapper_ct6b5_9"
+       ],
+       [
+        "_outerWrapper_ct6b5_1"
+       ],
+       [
+        "_dashboardContentWrapper_ct6b5_108",
+        "_pageContent_809q8_151",
+        "_footerPadding_809q8_115"
+       ],
+       [
+        "_dashboardContent_809q8_29",
+        "_hasMobileDesigns_809q8_136"
+       ]
+      ],
+      "classes": [
+       "_link_ual8v_4",
+       "_variantPrimary_ual8v_33",
+       "_sizeDefault_ual8v_25"
+      ],
+      "data": {
+       "data-discover": "true"
+      },
+      "heading": "Welcome, Jane",
+      "landmark": {
+       "name": "",
+       "role": "main"
+      },
+      "layer": "document",
+      "name": "View all",
+      "rect": [
+       473,
+       469,
+       67,
+       18
+      ],
+      "role": "link",
+      "tag": "a",
+      "xpath": "/html/body/div[1]/main[1]/div[1]/div[1]/div[4]/div[1]/div[2]/div[1]/div[1]/div[4]/div[4]/div[1]/span[2]/a[1]"
+     },
+     "state": "home.index-money-movement"
+    }
+   ],
+   "evidenceHash": "979ce0eb9871a67395e4647caa722f175524681f95b7680dade547400a263622",
+   "facts": {
+    "criterion": "2.4.3",
+    "criterionName": "Focus Order",
+    "element": "link \"View all\"",
+    "previous": "link \"View all\"",
+    "screen": "Home dashboard",
+    "stop": "86"
+   },
+   "family": "focus-order",
+   "guidance": "High if the order skips a required control.",
+   "issueId": null,
+   "key": "focus-order:backward-jump:d7a887db37a1",
+   "measured": false,
+   "primary": "home.index",
+   "proposals": [],
+   "rule": "backward-jump",
+   "screens": 14,
+   "severityDefault": "medium",
+   "source": "scanner",
+   "states": [
+    "home.index",
+    "home.index-money-movement"
+   ],
+   "summary": "Tab stop 86 jumped backward on screen, from the link \"View all\" to the link \"View all\".",
+   "title": "Tab order jumps backward at link \"View all\""
+  },
+  {
+   "attachments": [],
+   "attempt": 1,
+   "basis": "candidate",
+   "criteria": [
+    "2.4.3",
+    "1.3.2"
+   ],
+   "evidence": [
+    {
+     "evidence": {
+      "band": 32,
+      "overlay": "home.index.tabstops.png",
+      "previous": {
+       "ancestors": [
+        [
+         "_text-link_12t49_1"
+        ],
+        [
+         "_bottomRowRight_1dk39_42"
+        ],
+        [
+         "_bottomRow_1dk39_36"
+        ],
+        [
+         "_large_kwlx6_9",
+         "_noHover_3n0se_28",
+         "_border_3n0se_35",
+         "_raisedBackground_3n0se_45",
+         "_card_1ym9q_1",
+         "_card_1dk39_1"
+        ],
+        [
+         "_moduleRow_ct6b5_48",
+         "_moduleRowThreeColumns_ct6b5_61"
+        ],
+        [
+         "_analyticsDashboard_ct6b5_36"
+        ],
+        [
+         "_fullWidthWrapper_ct6b5_9"
+        ],
+        [
+         "_outerWrapper_ct6b5_1"
+        ]
+       ],
+       "classes": [
+        "_link_ual8v_4",
+        "_underlineOnHover_ual8v_15",
+        "_sizeDefault_ual8v_25"
+       ],
+       "data": {
+        "data-discover": "true"
+       },
+       "heading": "Welcome, Jane",
+       "landmark": {
+        "name": "",
+        "role": "main"
+       },
+       "layer": "document",
+       "name": "View",
+       "rect": [
+        1241,
+        816,
+        48,
+        18
+       ],
+       "role": "link",
+       "tag": "a",
+       "xpath": "/html/body/div[1]/main[1]/div[1]/div[1]/div[4]/div[1]/div[2]/div[1]/div[1]/div[4]/div[2]/div[3]/div[3]/div[2]/span[1]/a[1]"
+      },
+      "rise": 354,
+      "stop": 74,
+      "stops": 103
+     },
+     "occurrence": {
+      "ancestors": [
+       [
+        "_periodPicker_4rdgw_1"
+       ],
+       [
+        "_moneyFlowHeader_ct6b5_83"
+       ],
+       [
+        "_moneyFlowRow_ct6b5_65"
+       ],
+       [
+        "_analyticsDashboard_ct6b5_36"
+       ],
+       [
+        "_fullWidthWrapper_ct6b5_9"
+       ],
+       [
+        "_outerWrapper_ct6b5_1"
+       ],
+       [
+        "_dashboardContentWrapper_ct6b5_108",
+        "_pageContent_809q8_151",
+        "_footerPadding_809q8_115"
+       ],
+       [
+        "_dashboardContent_809q8_29",
+        "_hasMobileDesigns_809q8_136"
+       ]
+      ],
+      "classes": [
+       "_button_r6b2u_20",
+       "_small_r6b2u_72",
+       "_tertiary_r6b2u_153"
+      ],
+      "data": {},
+      "heading": "Welcome, Jane",
+      "landmark": {
+       "name": "",
+       "role": "main"
+      },
+      "layer": "document",
+      "name": "",
+      "rect": [
+       518,
+       462,
+       32,
+       32
+      ],
+      "role": "button",
+      "tag": "button",
+      "xpath": "/html/body/div[1]/main[1]/div[1]/div[1]/div[4]/div[1]/div[2]/div[1]/div[1]/div[4]/div[3]/div[1]/div[1]/button[1]"
+     },
+     "state": "home.index"
+    },
+    {
+     "evidence": {
+      "band": 32,
+      "overlay": "home.index-money-movement.tabstops.png",
+      "previous": {
+       "ancestors": [
+        [
+         "_text-link_12t49_1"
+        ],
+        [
+         "_bottomRowRight_1dk39_42"
+        ],
+        [
+         "_bottomRow_1dk39_36"
+        ],
+        [
+         "_large_kwlx6_9",
+         "_noHover_3n0se_28",
+         "_border_3n0se_35",
+         "_raisedBackground_3n0se_45",
+         "_card_1ym9q_1",
+         "_card_1dk39_1"
+        ],
+        [
+         "_moduleRow_ct6b5_48",
+         "_moduleRowThreeColumns_ct6b5_61"
+        ],
+        [
+         "_analyticsDashboard_ct6b5_36"
+        ],
+        [
+         "_fullWidthWrapper_ct6b5_9"
+        ],
+        [
+         "_outerWrapper_ct6b5_1"
+        ]
+       ],
+       "classes": [
+        "_link_ual8v_4",
+        "_underlineOnHover_ual8v_15",
+        "_sizeDefault_ual8v_25"
+       ],
+       "data": {
+        "data-discover": "true"
+       },
+       "heading": "Welcome, Jane",
+       "landmark": {
+        "name": "",
+        "role": "main"
+       },
+       "layer": "document",
+       "name": "View",
+       "rect": [
+        1241,
+        816,
+        48,
+        18
+       ],
+       "role": "link",
+       "tag": "a",
+       "xpath": "/html/body/div[1]/main[1]/div[1]/div[1]/div[4]/div[1]/div[2]/div[1]/div[1]/div[4]/div[2]/div[3]/div[3]/div[2]/span[1]/a[1]"
+      },
+      "rise": 354,
+      "stop": 74,
+      "stops": 103
+     },
+     "occurrence": {
+      "ancestors": [
+       [
+        "_periodPicker_4rdgw_1"
+       ],
+       [
+        "_moneyFlowHeader_ct6b5_83"
+       ],
+       [
+        "_moneyFlowRow_ct6b5_65"
+       ],
+       [
+        "_analyticsDashboard_ct6b5_36"
+       ],
+       [
+        "_fullWidthWrapper_ct6b5_9"
+       ],
+       [
+        "_outerWrapper_ct6b5_1"
+       ],
+       [
+        "_dashboardContentWrapper_ct6b5_108",
+        "_pageContent_809q8_151",
+        "_footerPadding_809q8_115"
+       ],
+       [
+        "_dashboardContent_809q8_29",
+        "_hasMobileDesigns_809q8_136"
+       ]
+      ],
+      "classes": [
+       "_button_r6b2u_20",
+       "_small_r6b2u_72",
+       "_tertiary_r6b2u_153"
+      ],
+      "data": {},
+      "heading": "Welcome, Jane",
+      "landmark": {
+       "name": "",
+       "role": "main"
+      },
+      "layer": "document",
+      "name": "",
+      "rect": [
+       518,
+       462,
+       32,
+       32
+      ],
+      "role": "button",
+      "tag": "button",
+      "xpath": "/html/body/div[1]/main[1]/div[1]/div[1]/div[4]/div[1]/div[2]/div[1]/div[1]/div[4]/div[3]/div[1]/div[1]/button[1]"
+     },
+     "state": "home.index-money-movement"
+    }
+   ],
+   "evidenceHash": "44584ac5be5a3c093cdd224976b154119907cfc015216ec073bd796df31ffbad",
+   "facts": {
+    "criterion": "2.4.3",
+    "criterionName": "Focus Order",
+    "element": "button in \"Welcome, Jane\"",
+    "previous": "link \"View\"",
+    "screen": "Home dashboard",
+    "stop": "74"
+   },
+   "family": "focus-order",
+   "guidance": "High if the order skips a required control.",
+   "issueId": null,
+   "key": "focus-order:backward-jump:eedb1d62eb02",
+   "measured": false,
+   "primary": "home.index",
+   "proposals": [],
+   "rule": "backward-jump",
+   "screens": 14,
+   "severityDefault": "medium",
+   "source": "scanner",
+   "states": [
+    "home.index",
+    "home.index-money-movement"
+   ],
+   "summary": "Tab stop 74 jumped backward on screen, from the link \"View\" to the button in \"Welcome, Jane\".",
+   "title": "Tab order jumps backward at button in \"Welcome, Jane\""
+  },
+  {
+   "attachments": [],
+   "attempt": 1,
+   "basis": "candidate",
+   "criteria": [
+    "2.1.1"
+   ],
+   "evidence": [
+    {
+     "evidence": {
+      "end": "body",
+      "focusable": true,
+      "source": "ax",
+      "stops": 103
+     },
+     "occurrence": {
+      "ancestors": [
+       [
+        "_buttonWithDivider_1xt6d_80"
+       ],
+       [
+        "_container_1xt6d_3",
+        "_large_1xt6d_15"
+       ],
+       [
+        "_toggleMode_q3oue_47"
+       ],
+       [
+        "_controls_q3oue_37"
+       ],
+       [
+        "_topSection_q3oue_12"
+       ],
+       [
+        "_container_q3oue_1"
+       ],
+       [
+        "_large_kwlx6_9",
+        "_noHover_3n0se_28",
+        "_border_3n0se_35",
+        "_raisedBackground_3n0se_45",
+        "_graph_ct6b5_91"
+       ],
+       [
+        "_row_ct6b5_42"
+       ]
+      ],
+      "classes": [
+       "_segment_1xt6d_7",
+       "_selected_1xt6d_60",
+       "_first_1xt6d_73"
+      ],
+      "data": {},
+      "heading": "Welcome, Jane",
+      "landmark": {
+       "name": "",
+       "role": "main"
+      },
+      "layer": "document",
+      "name": "Balance graph",
+      "rect": [
+       710,
+       269,
+       43,
+       40
+      ],
+      "role": "button",
+      "tag": "button",
+      "xpath": "/html/body/div[1]/main[1]/div[1]/div[1]/div[4]/div[1]/div[2]/div[1]/div[1]/div[4]/div[1]/div[1]/div[1]/div[1]/div[2]/div[1]/div[1]/div[1]/button[1]"
+     },
+     "state": "home.index"
+    },
+    {
+     "evidence": {
+      "end": "body",
+      "focusable": true,
+      "source": "ax",
+      "stops": 103
+     },
+     "occurrence": {
+      "ancestors": [
+       [
+        "_buttonWithDivider_1xt6d_80"
+       ],
+       [
+        "_container_1xt6d_3",
+        "_large_1xt6d_15"
+       ],
+       [
+        "_toggleMode_q3oue_47"
+       ],
+       [
+        "_controls_q3oue_37"
+       ],
+       [
+        "_topSection_q3oue_12"
+       ],
+       [
+        "_container_q3oue_1"
+       ],
+       [
+        "_large_kwlx6_9",
+        "_noHover_3n0se_28",
+        "_border_3n0se_35",
+        "_raisedBackground_3n0se_45",
+        "_graph_ct6b5_91"
+       ],
+       [
+        "_row_ct6b5_42"
+       ]
+      ],
+      "classes": [
+       "_segment_1xt6d_7",
+       "_selected_1xt6d_60",
+       "_first_1xt6d_73"
+      ],
+      "data": {},
+      "heading": "Welcome, Jane",
+      "landmark": {
+       "name": "",
+       "role": "main"
+      },
+      "layer": "document",
+      "name": "Balance graph",
+      "rect": [
+       710,
+       -774,
+       43,
+       40
+      ],
+      "role": "button",
+      "tag": "button",
+      "xpath": "/html/body/div[1]/main[1]/div[1]/div[1]/div[4]/div[1]/div[2]/div[1]/div[1]/div[4]/div[1]/div[1]/div[1]/div[1]/div[2]/div[1]/div[1]/div[1]/button[1]"
+     },
+     "state": "home.index-money-movement"
+    }
+   ],
+   "evidenceHash": "f1b24ecbd28bbb9cc84604dbf0ac3bbf90238d188b0cabaaa8a64d3056382da0",
+   "facts": {
+    "axeSummary": "",
+    "criterion": "2.1.1",
+    "criterionName": "Keyboard",
+    "element": "button \"Balance graph\"",
+    "rule": "not-reached",
+    "screen": "Home dashboard",
+    "stops": "103"
+   },
+   "family": "keyboard",
+   "guidance": "High if a task cannot be completed without a mouse.",
+   "issueId": null,
+   "key": "keyboard:not-reached:5cc637728414",
+   "measured": false,
+   "primary": "home.index",
+   "proposals": [],
+   "rule": "not-reached",
+   "screens": 14,
+   "severityDefault": "medium",
+   "source": "scanner",
+   "states": [
+    "home.index",
+    "home.index-money-movement"
+   ],
+   "summary": "The Tab walk visited 103 stops and never reached the button \"Balance graph\", which responds to a click.",
+   "title": "Not reachable by keyboard: button \"Balance graph\""
+  },
+  {
+   "attachments": [],
+   "attempt": 1,
+   "basis": "violation",
+   "criteria": [
+    "4.1.2"
+   ],
+   "evidence": [
+    {
+     "evidence": {
+      "failureSummary": "Fix any of the following:\n  Element does not have inner text that is visible to screen readers\n  aria-label attribute does not exist or is empty\n  aria-labelledby attribute does not exist, references elements that do not exist or references elements that are empty\n  Element has no title attribute\n  Element does not have an implicit (wrapped) <label>\n  Element does not have an explicit <label>\n  Element's default semantics were not overridden with role=\"none\" or role=\"presentation\"",
+      "messageKey": "noAttr"
+     },
+     "occurrence": {
+      "ancestors": [
+       [
+        "_periodPicker_4rdgw_1"
+       ],
+       [
+        "_moneyFlowHeader_ct6b5_83"
+       ],
+       [
+        "_moneyFlowRow_ct6b5_65"
+       ],
+       [
+        "_analyticsDashboard_ct6b5_36"
+       ],
+       [
+        "_fullWidthWrapper_ct6b5_9"
+       ],
+       [
+        "_outerWrapper_ct6b5_1"
+       ],
+       [
+        "_dashboardContentWrapper_ct6b5_108",
+        "_pageContent_809q8_151",
+        "_footerPadding_809q8_115"
+       ],
+       [
+        "_dashboardContent_809q8_29",
+        "_hasMobileDesigns_809q8_136"
+       ]
+      ],
+      "classes": [
+       "_button_r6b2u_20",
+       "_small_r6b2u_72",
+       "_tertiary_r6b2u_153",
+       "_appearDisabled_r6b2u_16"
+      ],
+      "data": {},
+      "heading": "Welcome, Jane",
+      "landmark": {
+       "name": "",
+       "role": "main"
+      },
+      "layer": "document",
+      "name": "",
+      "rect": [
+       638,
+       910,
+       32,
+       32
+      ],
+      "role": "button",
+      "tag": "button",
+      "xpath": "/html/body/div[1]/main[1]/div[1]/div[1]/div[4]/div[1]/div[2]/div[1]/div[1]/div[4]/div[3]/div[1]/div[1]/button[2]"
+     },
+     "state": "home.index"
+    },
+    {
+     "evidence": {
+      "failureSummary": "Fix any of the following:\n  Element does not have inner text that is visible to screen readers\n  aria-label attribute does not exist or is empty\n  aria-labelledby attribute does not exist, references elements that do not exist or references elements that are empty\n  Element has no title attribute\n  Element does not have an implicit (wrapped) <label>\n  Element does not have an explicit <label>\n  Element's default semantics were not overridden with role=\"none\" or role=\"presentation\"",
+      "messageKey": "noAttr"
+     },
+     "occurrence": {
+      "ancestors": [
+       [
+        "_periodPicker_4rdgw_1"
+       ],
+       [
+        "_modalTitle_kf9td_51"
+       ],
+       [
+        "_large_kwlx6_9",
+        "_noHover_3n0se_28",
+        "_shadow_3n0se_25",
+        "_raisedBackground_3n0se_45",
+        "_card_lo4oy_4",
+        "_defaultPadding_lo4oy_27",
+        "_modalContainer_kf9td_3",
+        "_small_lo4oy_11"
+       ],
+       [
+        "ReactModal__Content",
+        "ReactModal__Content--after-open",
+        "_modal_lo4oy_73"
+       ],
+       [
+        "ReactModal__Overlay",
+        "ReactModal__Overlay--after-open",
+        "_overlay_lo4oy_89",
+        "_backgroundColor_lo4oy_103"
+       ],
+       [
+        "ReactModalPortal"
+       ]
+      ],
+      "classes": [
+       "_button_r6b2u_20",
+       "_small_r6b2u_72",
+       "_tertiary_r6b2u_153",
+       "_appearDisabled_r6b2u_16"
+      ],
+      "data": {},
+      "heading": "",
+      "landmark": {
+       "name": "",
+       "role": "dialog"
+      },
+      "layer": "top",
+      "name": "",
+      "rect": [
+       896,
+       367,
+       32,
+       32
+      ],
+      "role": "button",
+      "tag": "button",
+      "xpath": "/html/body/div[8]/div[1]/div[1]/div[1]/div[2]/div[1]/button[2]"
+     },
+     "state": "settings.panorama-statements"
+    }
+   ],
+   "evidenceHash": "5ad4cca1ec3aa41e524e6be03e3482671973ffdeb4dd5c0c2e6240f2bb55d3b3",
+   "facts": {
+    "announced": "button \"\" [disabled=true]",
+    "axeSummary": "Element does not have inner text that is visible to screen readers; aria-label attribute does not exist or is empty; aria-labelledby attribute does not exist,…",
+    "criterion": "4.1.2",
+    "criterionName": "Name, Role, Value",
+    "element": "button in \"Welcome, Jane\"",
+    "rule": "button-name",
+    "screen": "Home dashboard"
+   },
+   "family": "name",
+   "guidance": "High for an unnamed form control or the sole primary action.",
+   "issueId": null,
+   "key": "name:button-name:ca4f7de49117",
+   "measured": false,
+   "primary": "home.index",
+   "proposals": [],
+   "rule": "button-name",
+   "screens": 20,
+   "severityDefault": "medium",
+   "source": "scanner",
+   "states": [
+    "home.index",
+    "settings.panorama-statements"
+   ],
+   "summary": "button-name: announced as button \"\" [disabled=true]. Element does not have inner text that is visible to screen readers; aria-label attribute does not exist or is empty; aria-labelledby attribute does not exist,…",
+   "title": "Missing or unclear name: button in \"Welcome, Jane\""
+  },
+  {
+   "attachments": [],
+   "attempt": 1,
+   "basis": "violation",
+   "criteria": [
+    "4.1.2"
+   ],
+   "evidence": [
+    {
+     "evidence": {
+      "failureSummary": "Fix any of the following:\n  Element does not have inner text that is visible to screen readers\n  aria-label attribute does not exist or is empty\n  aria-labelledby attribute does not exist, references elements that do not exist or references elements that are empty\n  Element has no title attribute\n  Element does not have an implicit (wrapped) <label>\n  Element does not have an explicit <label>\n  Element's default semantics were not overridden with role=\"none\" or role=\"presentation\"",
+      "messageKey": "noAttr"
+     },
+     "occurrence": {
+      "ancestors": [
+       [
+        "_periodPicker_4rdgw_1"
+       ],
+       [
+        "_moneyFlowHeader_ct6b5_83"
+       ],
+       [
+        "_moneyFlowRow_ct6b5_65"
+       ],
+       [
+        "_analyticsDashboard_ct6b5_36"
+       ],
+       [
+        "_fullWidthWrapper_ct6b5_9"
+       ],
+       [
+        "_outerWrapper_ct6b5_1"
+       ],
+       [
+        "_dashboardContentWrapper_ct6b5_108",
+        "_pageContent_809q8_151",
+        "_footerPadding_809q8_115"
+       ],
+       [
+        "_dashboardContent_809q8_29",
+        "_hasMobileDesigns_809q8_136"
+       ]
+      ],
+      "classes": [
+       "_button_r6b2u_20",
+       "_small_r6b2u_72",
+       "_tertiary_r6b2u_153"
+      ],
+      "data": {},
+      "heading": "Welcome, Jane",
+      "landmark": {
+       "name": "",
+       "role": "main"
+      },
+      "layer": "document",
+      "name": "",
+      "rect": [
+       518,
+       910,
+       32,
+       32
+      ],
+      "role": "button",
+      "tag": "button",
+      "xpath": "/html/body/div[1]/main[1]/div[1]/div[1]/div[4]/div[1]/div[2]/div[1]/div[1]/div[4]/div[3]/div[1]/div[1]/button[1]"
+     },
+     "state": "home.index"
+    },
+    {
+     "evidence": {
+      "failureSummary": "Fix any of the following:\n  Element does not have inner text that is visible to screen readers\n  aria-label attribute does not exist or is empty\n  aria-labelledby attribute does not exist, references elements that do not exist or references elements that are empty\n  Element has no title attribute\n  Element does not have an implicit (wrapped) <label>\n  Element does not have an explicit <label>\n  Element's default semantics were not overridden with role=\"none\" or role=\"presentation\"",
+      "messageKey": "noAttr"
+     },
+     "occurrence": {
+      "ancestors": [
+       [
+        "_periodPicker_4rdgw_1"
+       ],
+       [
+        "_modalTitle_kf9td_51"
+       ],
+       [
+        "_large_kwlx6_9",
+        "_noHover_3n0se_28",
+        "_shadow_3n0se_25",
+        "_raisedBackground_3n0se_45",
+        "_card_lo4oy_4",
+        "_defaultPadding_lo4oy_27",
+        "_modalContainer_kf9td_3",
+        "_small_lo4oy_11"
+       ],
+       [
+        "ReactModal__Content",
+        "ReactModal__Content--after-open",
+        "_modal_lo4oy_73"
+       ],
+       [
+        "ReactModal__Overlay",
+        "ReactModal__Overlay--after-open",
+        "_overlay_lo4oy_89",
+        "_backgroundColor_lo4oy_103"
+       ],
+       [
+        "ReactModalPortal"
+       ]
+      ],
+      "classes": [
+       "_button_r6b2u_20",
+       "_small_r6b2u_72",
+       "_tertiary_r6b2u_153"
+      ],
+      "data": {},
+      "heading": "",
+      "landmark": {
+       "name": "",
+       "role": "dialog"
+      },
+      "layer": "top",
+      "name": "",
+      "rect": [
+       776,
+       367,
+       32,
+       32
+      ],
+      "role": "button",
+      "tag": "button",
+      "xpath": "/html/body/div[8]/div[1]/div[1]/div[1]/div[2]/div[1]/button[1]"
+     },
+     "state": "settings.panorama-statements"
+    }
+   ],
+   "evidenceHash": "5ad4cca1ec3aa41e524e6be03e3482671973ffdeb4dd5c0c2e6240f2bb55d3b3",
+   "facts": {
+    "announced": "button \"\"",
+    "axeSummary": "Element does not have inner text that is visible to screen readers; aria-label attribute does not exist or is empty; aria-labelledby attribute does not exist,…",
+    "criterion": "4.1.2",
+    "criterionName": "Name, Role, Value",
+    "element": "button in \"Welcome, Jane\"",
+    "rule": "button-name",
+    "screen": "Home dashboard"
+   },
+   "family": "name",
+   "guidance": "High for an unnamed form control or the sole primary action.",
+   "issueId": null,
+   "key": "name:button-name:cb6e7bff69dd",
+   "measured": false,
+   "primary": "home.index",
+   "proposals": [],
+   "rule": "button-name",
+   "screens": 21,
+   "severityDefault": "medium",
+   "source": "scanner",
+   "states": [
+    "home.index",
+    "settings.panorama-statements"
+   ],
+   "summary": "button-name: announced as button \"\". Element does not have inner text that is visible to screen readers; aria-label attribute does not exist or is empty; aria-labelledby attribute does not exist,…",
+   "title": "Missing or unclear name: button in \"Welcome, Jane\""
+  }
+ ],
+ "primaries": [
+  "home.index"
+ ],
+ "reach": {
+  "baseUrl": "https://demo.mercury.com",
+  "data": "data",
+  "map": "build/map.json",
+  "run": "2026-10-03-1525",
+  "workspace": "a11y"
+ },
+ "run": "2026-10-03-1525"
+}

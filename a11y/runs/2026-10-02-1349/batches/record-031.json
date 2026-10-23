@@ -1,0 +1,55 @@
+{
+ "batch": "record-031",
+ "reach": {
+  "baseUrl": "https://demo.mercury.com",
+  "data": "data",
+  "map": "build/map.json",
+  "run": "2026-10-02-1349",
+  "workspace": "a11y"
+ },
+ "run": "2026-10-02-1349",
+ "states": [
+  {
+   "area": "settings",
+   "draft": "nothing on settings.account-security matches {\"click\":{\"name\":\"month chip above Activity history\"}}",
+   "image": "screens/settings/75-security-activity-filters.png",
+   "kind": "popover",
+   "labels": [
+    "Click the month chip above Activity history"
+   ],
+   "mutates": false,
+   "note": "Clicking the 'September 2026' chip opens a Month range picker with 2025 and 2026 grids; future months (Oct\u2013Dec 2026) are dimmed.",
+   "parent": "settings.account-security",
+   "state": "settings.security-activity-month",
+   "title": "Activity history month picker"
+  },
+  {
+   "area": "settings",
+   "draft": "nothing on settings.account-security matches {\"click\":{\"name\":\"\u22ee on a suggested action\"}}",
+   "image": "screens/settings/73-security-suggestion-menu.png",
+   "kind": "menu",
+   "labels": [
+    "Click \u22ee on a suggested action"
+   ],
+   "mutates": false,
+   "note": "The \u22ee on a suggested action opens 'Mark as resolved' and 'Ignore issue'.",
+   "parent": "settings.account-security",
+   "state": "settings.security-suggestion-menu",
+   "title": "Suggested action menu"
+  },
+  {
+   "area": "settings",
+   "draft": "nothing on settings.integrations matches {\"click\":{\"name\":\"Third party connections\",\"role\":\"tab\"}}",
+   "image": "screens/settings/27-third-party-connections.png",
+   "kind": "page",
+   "labels": [
+    "Click Third party connections tab"
+   ],
+   "mutates": false,
+   "note": "Tab lists Working Capital store connections; AMAZON Store shows a pink 'No connection' badge with a Reconnect button, others plain 'Connected' text.",
+   "parent": "settings.integrations",
+   "state": "settings.third-party-connections",
+   "title": "Integrations \u2014 Third party connections"
+  }
+ ]
+}

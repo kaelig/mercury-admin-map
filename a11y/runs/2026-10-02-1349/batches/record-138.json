@@ -1,0 +1,35 @@
+{
+ "batch": "record-138",
+ "reach": {
+  "baseUrl": "https://demo.mercury.com",
+  "data": "data",
+  "map": "build/map.json",
+  "run": "2026-10-02-1349",
+  "workspace": "a11y"
+ },
+ "run": "2026-10-02-1349",
+ "states": [
+  {
+   "area": "accounts",
+   "draft": "not drafted: its parent had no accepted recipe when the drafter ran; a previous recorder failed: reach accounts.rule-created failed: fingerprint-mismatch accounts.rule-created in session record-135 at https://demo.mercury.com/accounts#auto-transfers: controls overlap 0.00, below 0.6",
+   "image": "screens/accounts/16-rule-kebab-menu.png",
+   "kind": "menu",
+   "labels": [
+    "Click Auto transfer rules tab",
+    "Click Create rule",
+    "Click Maintain a target balance",
+    "Click Next with empty fields",
+    "Open Account dropdown",
+    "Pick AP, enter $50,000, supporting account and frequency",
+    "Click Next",
+    "Click Create rule",
+    "Click rule kebab"
+   ],
+   "mutates": true,
+   "note": "Per-rule menu with Edit rule and Remove rule.",
+   "parent": "accounts.rule-created",
+   "state": "accounts.rule-kebab-menu",
+   "title": "Rule kebab menu"
+  }
+ ]
+}

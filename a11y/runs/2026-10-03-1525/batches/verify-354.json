@@ -1,0 +1,538 @@
+{
+ "area": "settings",
+ "batch": "verify-354",
+ "findings": [
+  {
+   "attachments": [],
+   "attempt": 1,
+   "basis": "violation",
+   "criteria": [
+    "1.4.1"
+   ],
+   "evidence": [
+    {
+     "evidence": {
+      "contrastRatio": 2.88,
+      "failureSummary": "Fix any of the following:\n  The link has insufficient color contrast of 2.88:1 with the surrounding text. (Minimum contrast is 3:1, link text: #465bd1, surrounding text: #1e1e2a)\n  The link has no styling (such as underline) to distinguish it from the surrounding text",
+      "messageKey": "fgContrast",
+      "nodeColor": "#465bd1",
+      "parentColor": "#1e1e2a",
+      "requiredContrastRatio": 3
+     },
+     "occurrence": {
+      "ancestors": [
+       [
+        "_text-link_12t49_1"
+       ],
+       [
+        "_bodySecondary_qaod7_51"
+       ],
+       [
+        "_details_166u7_5"
+       ],
+       [],
+       [
+        "_pageContent_809q8_151",
+        "_pageContentWidth_809q8_184",
+        "_footerPadding_809q8_115"
+       ],
+       [
+        "_dashboardContent_809q8_29"
+       ],
+       [
+        "_layout_809q8_18"
+       ],
+       [
+        "_wrapper_809q8_3"
+       ]
+      ],
+      "classes": [
+       "_link_ual8v_4",
+       "_underlineOnHover_ual8v_15"
+      ],
+      "data": {},
+      "heading": "API Tokens",
+      "landmark": {
+       "name": "",
+       "role": "main"
+      },
+      "layer": "document",
+      "name": "API Documentation",
+      "rect": [
+       623,
+       214,
+       124,
+       16
+      ],
+      "role": "link",
+      "tag": "a",
+      "xpath": "/html/body/div[1]/main[1]/div[1]/div[1]/div[4]/div[1]/div[2]/div[2]/div[1]/p[2]/span[1]/a[1]"
+     },
+     "state": "settings.tokens"
+    },
+    {
+     "evidence": {
+      "contrastRatio": 2.88,
+      "failureSummary": "Fix any of the following:\n  The link has insufficient color contrast of 2.88:1 with the surrounding text. (Minimum contrast is 3:1, link text: #465bd1, surrounding text: #1e1e2a)\n  The link has no styling (such as underline) to distinguish it from the surrounding text",
+      "messageKey": "fgContrast",
+      "nodeColor": "#465bd1",
+      "parentColor": "#1e1e2a",
+      "requiredContrastRatio": 3
+     },
+     "occurrence": {
+      "ancestors": [
+       [
+        "_text-link_12t49_1"
+       ],
+       [
+        "_bodySecondary_qaod7_51"
+       ],
+       [
+        "_details_166u7_5"
+       ],
+       [],
+       [
+        "_pageContent_809q8_151",
+        "_pageContentWidth_809q8_184",
+        "_footerPadding_809q8_115"
+       ],
+       [
+        "_dashboardContent_809q8_29"
+       ],
+       [
+        "_layout_809q8_18"
+       ],
+       [
+        "_wrapper_809q8_3"
+       ]
+      ],
+      "classes": [
+       "_link_ual8v_4",
+       "_underlineOnHover_ual8v_15"
+      ],
+      "data": {},
+      "heading": "API Tokens",
+      "landmark": {
+       "name": "",
+       "role": "main"
+      },
+      "layer": "document",
+      "name": "API Documentation",
+      "rect": [
+       623,
+       214,
+       124,
+       16
+      ],
+      "role": "link",
+      "tag": "a",
+      "xpath": "/html/body/div[1]/main[1]/div[1]/div[1]/div[4]/div[1]/div[2]/div[2]/div[1]/p[2]/span[1]/a[1]"
+     },
+     "state": "settings.tokens-new-row"
+    }
+   ],
+   "evidenceHash": "595d4caf15e2eb4efd6b21626c30d77c1840b29213a61a1a4a46dc165e14c276",
+   "facts": {
+    "bg": "#1e1e2a",
+    "criterion": "1.4.1",
+    "criterionName": "Use of Color",
+    "element": "link \"API Documentation\"",
+    "fg": "#465bd1",
+    "ratio": "2.88",
+    "required": "3",
+    "rule": "link-in-text-block",
+    "screen": "API Tokens",
+    "screens": 2
+   },
+   "family": "contrast",
+   "guidance": "High under 2:1, or under 3:1 for essential text.",
+   "issueId": null,
+   "key": "contrast:link-in-text-block:0e4cd9a1801e",
+   "measured": true,
+   "primary": "settings.tokens",
+   "proposals": [],
+   "rule": "link-in-text-block",
+   "screens": 2,
+   "severityDefault": "medium",
+   "source": "scanner",
+   "states": [
+    "settings.tokens",
+    "settings.tokens-new-row"
+   ],
+   "summary": "axe link-in-text-block: link #465bd1 against text #1e1e2a measures 2.88:1 with no other visual cue; AA needs 3:1 or a cue such as an underline.",
+   "title": "Link shown by color only: link \"API Documentation\""
+  },
+  {
+   "attachments": [],
+   "attempt": 1,
+   "basis": "failure",
+   "criteria": [
+    "4.1.2"
+   ],
+   "evidence": [],
+   "evidenceHash": "f49b9c3870824c18a257213cadae24f212d8ebc8153c41f6b195be04ba261227",
+   "facts": {},
+   "family": "name",
+   "guidance": "High for an unnamed form control or the sole primary action.",
+   "issueId": "settings.i-unnamed-row-buttons",
+   "key": "hand:settings.i-unnamed-row-buttons",
+   "measured": false,
+   "primary": "settings.tokens",
+   "proposals": [
+    {
+     "family": "name",
+     "finding": "name:aria-command-name:89b381ac8034",
+     "handFound": "settings.i-unnamed-row-buttons",
+     "id": "fb17643a1174d200f894a2227156c0e455771ca5875fcbc7957d616110459e5b",
+     "overlap": 0.5
+    },
+    {
+     "family": "name",
+     "finding": "name:button-name:46339c5d1852",
+     "handFound": "settings.i-unnamed-row-buttons",
+     "id": "525c077dbed3471c3b389918ae945d1f20d3d22ca7e4b8c66d7d93b18c4f8e89",
+     "overlap": 0.5
+    },
+    {
+     "family": "name",
+     "finding": "name:button-name:b9268695c292",
+     "handFound": "settings.i-unnamed-row-buttons",
+     "id": "482af33155155b71dcd284a978818083400fa8448acceb6739236c781e85c664",
+     "overlap": 0.5
+    },
+    {
+     "family": "name",
+     "finding": "name:button-name:e440427419da",
+     "handFound": "settings.i-unnamed-row-buttons",
+     "id": "70820e9bcd012a133cc5a5b1262d7642aa6c47ba662240c1e9dbefeb555a21f7",
+     "overlap": 0.5
+    }
+   ],
+   "rule": "hand-found",
+   "screens": 2,
+   "severityDefault": "medium",
+   "source": "hand-found",
+   "states": [
+    "settings.tokens",
+    "settings.token-menu"
+   ],
+   "summary": "Accessibility snapshot: each token row ends with 'button [expanded=false]' containing 'button' with no name. eval: 11 buttons in the page with empty innerText and no aria-label.",
+   "title": "API token row menus have no accessible name"
+  },
+  {
+   "attachments": [],
+   "attempt": 1,
+   "basis": "violation",
+   "criteria": [
+    "4.1.2"
+   ],
+   "evidence": [
+    {
+     "evidence": {
+      "failureSummary": "Fix any of the following:\n  Element does not have inner text that is visible to screen readers\n  aria-label attribute does not exist or is empty\n  aria-labelledby attribute does not exist, references elements that do not exist or references elements that are empty\n  Element has no title attribute\n  Element does not have an implicit (wrapped) <label>\n  Element does not have an explicit <label>\n  Element's default semantics were not overridden with role=\"none\" or role=\"presentation\"",
+      "messageKey": "noAttr"
+     },
+     "occurrence": {
+      "ancestors": [
+       [],
+       [
+        "_kebab_166u7_111"
+       ],
+       [
+        "_iconRow_166u7_20"
+       ],
+       [
+        "_tableData_1u4jr_5",
+        "_alignmentStart_1u4jr_12"
+       ],
+       [
+        "_tableRow_137xu_3",
+        "_tokenRow_166u7_11"
+       ],
+       [
+        "_tableBody_1cp5b_1"
+       ],
+       [
+        "_table_1acga_4"
+       ],
+       [
+        "_tokenTableWrapper_166u7_60",
+        "_tableWrapper_1acga_4"
+       ]
+      ],
+      "classes": [
+       "_button_r6b2u_20",
+       "_small_r6b2u_72",
+       "_secondary_r6b2u_126"
+      ],
+      "data": {},
+      "heading": "API Tokens",
+      "landmark": {
+       "name": "",
+       "role": "main"
+      },
+      "layer": "document",
+      "name": "",
+      "rect": [
+       1192,
+       302,
+       45,
+       32
+      ],
+      "role": "button",
+      "tag": "button",
+      "xpath": "/html/body/div[1]/main[1]/div[1]/div[1]/div[4]/div[1]/div[2]/div[2]/div[2]/div[1]/table[1]/tbody[1]/tr[1]/td[7]/div[1]/div[1]/span[1]/button[1]"
+     },
+     "state": "settings.tokens"
+    },
+    {
+     "evidence": {
+      "failureSummary": "Fix any of the following:\n  Element does not have inner text that is visible to screen readers\n  aria-label attribute does not exist or is empty\n  aria-labelledby attribute does not exist, references elements that do not exist or references elements that are empty\n  Element has no title attribute\n  Element does not have an implicit (wrapped) <label>\n  Element does not have an explicit <label>\n  Element's default semantics were not overridden with role=\"none\" or role=\"presentation\"",
+      "messageKey": "noAttr"
+     },
+     "occurrence": {
+      "ancestors": [
+       [],
+       [
+        "_kebab_166u7_111"
+       ],
+       [
+        "_iconRow_166u7_20"
+       ],
+       [
+        "_tableData_1u4jr_5",
+        "_alignmentStart_1u4jr_12"
+       ],
+       [
+        "_tableRow_137xu_3",
+        "_tokenRow_166u7_11"
+       ],
+       [
+        "_tableBody_1cp5b_1"
+       ],
+       [
+        "_table_1acga_4"
+       ],
+       [
+        "_tokenTableWrapper_166u7_60",
+        "_tableWrapper_1acga_4"
+       ]
+      ],
+      "classes": [
+       "_button_r6b2u_20",
+       "_small_r6b2u_72",
+       "_secondary_r6b2u_126"
+      ],
+      "data": {},
+      "heading": "API Tokens",
+      "landmark": {
+       "name": "",
+       "role": "main"
+      },
+      "layer": "document",
+      "name": "",
+      "rect": [
+       1192,
+       302,
+       45,
+       32
+      ],
+      "role": "button",
+      "tag": "button",
+      "xpath": "/html/body/div[1]/main[1]/div[1]/div[1]/div[4]/div[1]/div[2]/div[2]/div[2]/div[1]/table[1]/tbody[1]/tr[1]/td[7]/div[1]/div[1]/span[1]/button[1]"
+     },
+     "state": "settings.tokens-new-row"
+    }
+   ],
+   "evidenceHash": "062e3626fb717752e51062ae5aa1d8eedbe20b151364b7a0c60bf686bdd0534b",
+   "facts": {
+    "announced": "button \"\"",
+    "axeSummary": "Element does not have inner text that is visible to screen readers; aria-label attribute does not exist or is empty; aria-labelledby attribute does not exist,…",
+    "criterion": "4.1.2",
+    "criterionName": "Name, Role, Value",
+    "element": "button in \"API Tokens\"",
+    "rule": "button-name",
+    "screen": "API Tokens"
+   },
+   "family": "name",
+   "guidance": "High for an unnamed form control or the sole primary action.",
+   "issueId": null,
+   "key": "name:button-name:46339c5d1852",
+   "measured": false,
+   "primary": "settings.tokens",
+   "proposals": [
+    {
+     "family": "name",
+     "finding": "name:button-name:46339c5d1852",
+     "handFound": "settings.i-unnamed-row-buttons",
+     "id": "525c077dbed3471c3b389918ae945d1f20d3d22ca7e4b8c66d7d93b18c4f8e89",
+     "overlap": 0.5
+    }
+   ],
+   "rule": "button-name",
+   "screens": 2,
+   "severityDefault": "medium",
+   "source": "scanner",
+   "states": [
+    "settings.tokens",
+    "settings.tokens-new-row"
+   ],
+   "summary": "button-name: announced as button \"\". Element does not have inner text that is visible to screen readers; aria-label attribute does not exist or is empty; aria-labelledby attribute does not exist,…",
+   "title": "Missing or unclear name: button in \"API Tokens\""
+  },
+  {
+   "attachments": [],
+   "attempt": 1,
+   "basis": "violation",
+   "criteria": [
+    "4.1.2"
+   ],
+   "evidence": [
+    {
+     "evidence": {
+      "failureSummary": "Fix any of the following:\n  Element has focusable descendants"
+     },
+     "occurrence": {
+      "ancestors": [
+       [
+        "_kebab_166u7_111"
+       ],
+       [
+        "_iconRow_166u7_20"
+       ],
+       [
+        "_tableData_1u4jr_5",
+        "_alignmentStart_1u4jr_12"
+       ],
+       [
+        "_tableRow_137xu_3",
+        "_tokenRow_166u7_11"
+       ],
+       [
+        "_tableBody_1cp5b_1"
+       ],
+       [
+        "_table_1acga_4"
+       ],
+       [
+        "_tokenTableWrapper_166u7_60",
+        "_tableWrapper_1acga_4"
+       ],
+       []
+      ],
+      "classes": [],
+      "data": {},
+      "heading": "API Tokens",
+      "landmark": {
+       "name": "",
+       "role": "main"
+      },
+      "layer": "document",
+      "name": "",
+      "rect": [
+       1192,
+       308,
+       45,
+       19
+      ],
+      "role": "button",
+      "tag": "span",
+      "xpath": "/html/body/div[1]/main[1]/div[1]/div[1]/div[4]/div[1]/div[2]/div[2]/div[2]/div[1]/table[1]/tbody[1]/tr[1]/td[7]/div[1]/div[1]/span[1]"
+     },
+     "state": "settings.tokens"
+    },
+    {
+     "evidence": {
+      "failureSummary": "Fix any of the following:\n  Element has focusable descendants"
+     },
+     "occurrence": {
+      "ancestors": [
+       [
+        "_kebab_166u7_111"
+       ],
+       [
+        "_iconRow_166u7_20"
+       ],
+       [
+        "_tableData_1u4jr_5",
+        "_alignmentStart_1u4jr_12"
+       ],
+       [
+        "_tableRow_137xu_3",
+        "_tokenRow_166u7_11"
+       ],
+       [
+        "_tableBody_1cp5b_1"
+       ],
+       [
+        "_table_1acga_4"
+       ],
+       [
+        "_tokenTableWrapper_166u7_60",
+        "_tableWrapper_1acga_4"
+       ],
+       []
+      ],
+      "classes": [],
+      "data": {},
+      "heading": "API Tokens",
+      "landmark": {
+       "name": "",
+       "role": "main"
+      },
+      "layer": "document",
+      "name": "",
+      "rect": [
+       1192,
+       308,
+       45,
+       19
+      ],
+      "role": "button",
+      "tag": "span",
+      "xpath": "/html/body/div[1]/main[1]/div[1]/div[1]/div[4]/div[1]/div[2]/div[2]/div[2]/div[1]/table[1]/tbody[1]/tr[1]/td[7]/div[1]/div[1]/span[1]"
+     },
+     "state": "settings.tokens-new-row"
+    }
+   ],
+   "evidenceHash": "0feaadfeafa43dbf4f9b0efebaaced08992a169db8a20530e909b0598d349d9e",
+   "facts": {
+    "announced": "button \"\" [expanded=false, haspopup=menu]",
+    "axeSummary": "Element has focusable descendants",
+    "criterion": "4.1.2",
+    "criterionName": "Name, Role, Value",
+    "element": "button in \"API Tokens\"",
+    "rule": "nested-interactive",
+    "screen": "API Tokens"
+   },
+   "family": "role-state",
+   "guidance": "Low for optional ARIA or an invalid autocomplete token; high when aria-hidden hides the whole page.",
+   "issueId": null,
+   "key": "role-state:nested-interactive:a85ea4562b22",
+   "measured": false,
+   "primary": "settings.tokens",
+   "proposals": [],
+   "rule": "nested-interactive",
+   "screens": 2,
+   "severityDefault": "medium",
+   "source": "scanner",
+   "states": [
+    "settings.tokens",
+    "settings.tokens-new-row"
+   ],
+   "summary": "nested-interactive: announced as button \"\" [expanded=false, haspopup=menu]. Element has focusable descendants",
+   "title": "Control nested in a control: button in \"API Tokens\""
+  }
+ ],
+ "primaries": [
+  "settings.tokens"
+ ],
+ "reach": {
+  "baseUrl": "https://demo.mercury.com",
+  "data": "data",
+  "map": "build/map.json",
+  "run": "2026-10-03-1525",
+  "workspace": "a11y"
+ },
+ "run": "2026-10-03-1525"
+}

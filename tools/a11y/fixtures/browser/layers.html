@@ -1,0 +1,28 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><title>Layers</title>
+<style>
+  aside.drawer { position: fixed; top: 0; right: 0; width: 400px; height: 100vh; background: #fff; }
+  .menu { position: absolute; top: 80px; left: 20px; background: #fff; }
+  .spot { position: fixed; bottom: 20px; left: 20px; }
+  [hidden] { display: none !important; }
+</style></head>
+<body>
+<nav aria-label="Primary"><a href="#">Home</a></nav>
+<main>
+  <h1>Cards</h1>
+  <h2>Card limits</h2>
+  <div class="_footer_x9y8z_12"><button id="edit" class="_root_ab12c_3 _ghost_ab12c_9" data-testid="edit-limits" data-row="r12">Edit limits</button></div>
+  <button id="open-modal">Open modal</button>
+  <button id="open-drawer">Open drawer</button>
+  <button id="open-menu" aria-haspopup="menu" aria-expanded="false">Move money</button>
+  <button id="toast">Save</button>
+  <button id="show-aside">Show details</button>
+  <button id="toast-live">Send</button>
+  <button id="copy-ghost">Copy address</button>
+  <div role="status" id="live"></div>
+  <aside id="ghost" aria-hidden="true" style="opacity:0;position:fixed;top:40px;left:0;width:300px;height:200px" hidden><div style="position:absolute">Draft bill <button>Edit draft</button></div></aside>
+</main>
+<aside class="drawer" id="details" hidden><section><h2>Payment details</h2><div><span style="position:absolute">Pending</span></div><button>Close</button></section></aside>
+<div role="alert" class="spot">Tip: try bookmarks</div>
+<script src="layers.js"></script>
+</body></html>

@@ -1,0 +1,189 @@
+{
+ "area": "invoicing",
+ "batch": "verify-488",
+ "findings": [
+  {
+   "attachments": [],
+   "attempt": 1,
+   "basis": "candidate",
+   "criteria": [
+    "4.1.2"
+   ],
+   "evidence": [
+    {
+     "evidence": {
+      "description": "",
+      "name": "",
+      "role": "button",
+      "states": {},
+      "template": "button \"\""
+     },
+     "occurrence": {
+      "ancestors": [
+       [
+        "_tooltipAnchor_18bac_4"
+       ],
+       [
+        "_actionButtonGroup_1ig9o_1",
+        "_buttonGroup_16t7w_1",
+        "_horizontal_16t7w_11"
+       ],
+       [
+        "_tableData_1u4jr_5",
+        "_alignmentStart_1u4jr_12",
+        "_collapsibleColumn_1acga_26"
+       ],
+       [
+        "_tableRow_137xu_3",
+        "_interactiveRows_137xu_35"
+       ],
+       [
+        "_tableBody_1cp5b_1"
+       ],
+       [
+        "_table_1acga_4"
+       ],
+       [
+        "_tableWrapper_1acga_4"
+       ],
+       [
+        "_tableWrapper_1q8c8_1"
+       ]
+      ],
+      "classes": [
+       "_button_r6b2u_20",
+       "_small_r6b2u_72",
+       "_tertiary_r6b2u_153"
+      ],
+      "data": {},
+      "heading": "Customers",
+      "landmark": {
+       "name": "",
+       "role": "main"
+      },
+      "layer": "document",
+      "name": "",
+      "rect": [
+       1214,
+       230,
+       32,
+       32
+      ],
+      "role": "button",
+      "tag": "button",
+      "xpath": "/html/body/div[1]/main[1]/div[1]/div[1]/div[4]/div[1]/div[2]/div[2]/div[1]/table[1]/tbody[1]/tr[1]/td[4]/div[1]/div[1]/button[1]"
+     },
+     "state": "invoicing.customers-index"
+    },
+    {
+     "evidence": {
+      "description": "",
+      "name": "",
+      "role": "button",
+      "states": {},
+      "template": "button \"\""
+     },
+     "occurrence": {
+      "ancestors": [
+       [
+        "_tooltipAnchor_18bac_4"
+       ],
+       [
+        "_footerContainer_qm7tc_100"
+       ],
+       [
+        "_card_qm7tc_4"
+       ],
+       [
+        "_transactionsDetailsCardWrapper_jcxwg_3"
+       ],
+       [
+        "_wrapperColumn_k8dlh_4",
+        "_visible_k8dlh_16",
+        "_elevateZIndex_k8dlh_32"
+       ],
+       [
+        "_tableWrapper_1waxt_304"
+       ],
+       [],
+       [
+        "_pageContent_809q8_151",
+        "_pageContentWidth_809q8_184",
+        "_footerPadding_809q8_115"
+       ]
+      ],
+      "classes": [
+       "_button_r6b2u_20",
+       "_small_r6b2u_72",
+       "_tertiary_r6b2u_153"
+      ],
+      "data": {},
+      "heading": "Drawdown Recipient",
+      "landmark": {
+       "name": "",
+       "role": "main"
+      },
+      "layer": "top",
+      "name": "",
+      "rect": [
+       1226,
+       523,
+       32,
+       32
+      ],
+      "role": "button",
+      "tag": "button",
+      "xpath": "/html/body/div[1]/main[1]/div[1]/div[1]/div[4]/div[1]/div[2]/div[2]/div[1]/div[2]/div[1]/div[1]/div[5]/div[1]/button[1]"
+     },
+     "state": "payments.wire-drawdown-detail"
+    }
+   ],
+   "evidenceHash": "4b2419f12667f897b3adf1eb052d9632edcbb873eab23001dd5b8e833c4c26d2",
+   "facts": {
+    "announced": "button \"\"",
+    "axeSummary": "",
+    "criterion": "4.1.2",
+    "criterionName": "Name, Role, Value",
+    "element": "button in \"Customers\"",
+    "rule": "announced-as",
+    "screen": "Customers"
+   },
+   "family": "name",
+   "guidance": "High for an unnamed form control or the sole primary action.",
+   "issueId": null,
+   "key": "name:announced-as:b277730fe590",
+   "measured": false,
+   "primary": "invoicing.customers-index",
+   "proposals": [
+    {
+     "family": "name",
+     "finding": "name:announced-as:b277730fe590",
+     "handFound": "invoicing.i-unlabeled-controls",
+     "id": "082bf3dfb1c2c5f5b682d30ff8795eb69c8af2f41c5bd77198f6b518f521c20c",
+     "overlap": 0.5
+    }
+   ],
+   "rule": "announced-as",
+   "screens": 3,
+   "severityDefault": "medium",
+   "source": "scanner",
+   "states": [
+    "invoicing.customers-index",
+    "payments.wire-drawdown-detail"
+   ],
+   "summary": "announced-as: announced as button \"\".",
+   "title": "Missing or unclear name: button in \"Customers\""
+  }
+ ],
+ "primaries": [
+  "invoicing.customers-index"
+ ],
+ "reach": {
+  "baseUrl": "https://demo.mercury.com",
+  "data": "data",
+  "map": "build/map.json",
+  "run": "2026-10-03-1525",
+  "workspace": "a11y"
+ },
+ "run": "2026-10-03-1525"
+}

@@ -1,0 +1,382 @@
+{
+ "area": "cards",
+ "batch": "verify-460",
+ "findings": [
+  {
+   "attachments": [],
+   "attempt": 1,
+   "basis": "candidate",
+   "criteria": [
+    "2.4.4"
+   ],
+   "evidence": [
+    {
+     "evidence": {
+      "description": "",
+      "name": "View all",
+      "role": "link",
+      "states": {},
+      "template": "link \"View all\""
+     },
+     "occurrence": {
+      "ancestors": [
+       [],
+       [
+        "_header_1ijqy_15"
+       ],
+       [
+        "_large_kwlx6_9",
+        "_noHover_3n0se_28",
+        "_border_3n0se_35",
+        "_raisedBackground_3n0se_45",
+        "_card_1ijqy_1"
+       ],
+       [
+        "_metricsRow_v40hk_25"
+       ],
+       [
+        "_pageContent_809q8_151",
+        "_pageContentWidth_809q8_184",
+        "_footerPadding_809q8_115"
+       ],
+       [
+        "_dashboardContent_809q8_29"
+       ],
+       [
+        "_layout_809q8_18"
+       ],
+       [
+        "_wrapper_809q8_3"
+       ]
+      ],
+      "classes": [
+       "_link_ual8v_4",
+       "_variantPrimary_ual8v_33",
+       "_sizeSmall_ual8v_29"
+      ],
+      "data": {
+       "data-discover": "true"
+      },
+      "heading": "Team Spend",
+      "landmark": {
+       "name": "",
+       "role": "main"
+      },
+      "layer": "document",
+      "name": "View all",
+      "rect": [
+       1242,
+       217,
+       47,
+       15
+      ],
+      "role": "link",
+      "tag": "a",
+      "xpath": "/html/body/div[1]/main[1]/div[1]/div[1]/div[4]/div[1]/div[2]/div[2]/div[2]/div[1]/span[1]/a[1]"
+     },
+     "state": "cards.team-members"
+    },
+    {
+     "evidence": {
+      "description": "",
+      "name": "View all",
+      "role": "link",
+      "states": {},
+      "template": "link \"View all\""
+     },
+     "occurrence": {
+      "ancestors": [
+       [],
+       [
+        "_header_1ijqy_15"
+       ],
+       [
+        "_large_kwlx6_9",
+        "_noHover_3n0se_28",
+        "_border_3n0se_35",
+        "_raisedBackground_3n0se_45",
+        "_card_1ijqy_1"
+       ],
+       [
+        "_metricsRow_v40hk_25"
+       ],
+       [
+        "_pageContent_809q8_151",
+        "_pageContentWidth_809q8_184",
+        "_footerPadding_809q8_115"
+       ],
+       [
+        "_dashboardContent_809q8_29"
+       ],
+       [
+        "_layout_809q8_18"
+       ],
+       [
+        "_wrapper_809q8_3"
+       ]
+      ],
+      "classes": [
+       "_link_ual8v_4",
+       "_variantPrimary_ual8v_33",
+       "_sizeSmall_ual8v_29"
+      ],
+      "data": {
+       "data-discover": "true"
+      },
+      "heading": "Team Spend",
+      "landmark": {
+       "name": "",
+       "role": "main"
+      },
+      "layer": "document",
+      "name": "View all",
+      "rect": [
+       1242,
+       217,
+       47,
+       15
+      ],
+      "role": "link",
+      "tag": "a",
+      "xpath": "/html/body/div[1]/main[1]/div[1]/div[1]/div[4]/div[1]/div[2]/div[2]/div[2]/div[1]/span[1]/a[1]"
+     },
+     "state": "cards.team-spend-non-budget"
+    }
+   ],
+   "evidenceHash": "2329214a6e1f95ce936ac8477a60f7aa62d1be4aa52425aaabe0826f4b8a4e76",
+   "facts": {
+    "announced": "link \"View all\"",
+    "axeSummary": "",
+    "criterion": "2.4.4",
+    "criterionName": "Link Purpose (In Context)",
+    "element": "link \"View all\"",
+    "rule": "announced-as",
+    "screen": "Team Spend: team members"
+   },
+   "family": "name",
+   "guidance": "High for an unnamed form control or the sole primary action.",
+   "issueId": null,
+   "key": "name:announced-as:f3b430e160b4",
+   "measured": false,
+   "primary": "cards.team-members",
+   "proposals": [],
+   "rule": "announced-as",
+   "screens": 3,
+   "severityDefault": "medium",
+   "source": "scanner",
+   "states": [
+    "cards.team-members",
+    "cards.team-spend-non-budget"
+   ],
+   "summary": "announced-as: announced as link \"View all\".",
+   "title": "Missing or unclear name: link \"View all\""
+  },
+  {
+   "attachments": [],
+   "attempt": 1,
+   "basis": "candidate",
+   "criteria": [
+    "4.1.2"
+   ],
+   "evidence": [
+    {
+     "evidence": {
+      "description": "",
+      "name": "Department",
+      "role": "menuitem",
+      "states": {
+       "expanded": false,
+       "haspopup": "menu"
+      },
+      "template": "menuitem \"Department\" [expanded=false, haspopup=menu]"
+     },
+     "occurrence": {
+      "ancestors": [
+       [
+        "_chip_1xw00_8",
+        "_inactive_1xw00_119"
+       ],
+       [],
+       [
+        "_filters_grqat_29"
+       ],
+       [
+        "_tableViewsAndFilters_grqat_82"
+       ],
+       [
+        "_toolbarContainer_grqat_4"
+       ],
+       [
+        "_toolbarSlot_402ec_10"
+       ],
+       [
+        "_root_402ec_1"
+       ],
+       [
+        "_tableWrapper_kyw76_3"
+       ]
+      ],
+      "classes": [
+       "_mainElement_1xw00_24",
+       "_interactive_1xw00_134",
+       "_dropdownChip_r52w9_7"
+      ],
+      "data": {},
+      "heading": "Team Spend",
+      "landmark": {
+       "name": "",
+       "role": "main"
+      },
+      "layer": "document",
+      "name": "Department",
+      "rect": [
+       347,
+       463,
+       126,
+       32
+      ],
+      "role": "menuitem",
+      "tag": "button",
+      "xpath": "/html/body/div[1]/main[1]/div[1]/div[1]/div[4]/div[1]/div[2]/div[4]/div[1]/div[1]/div[1]/span[1]/span[1]/span[1]/span[1]/button[1]"
+     },
+     "state": "cards.team-members"
+    }
+   ],
+   "evidenceHash": "ffd0f30d37f6686a1532ea15c140c48253c83616e072d5aa65c42db057b6f5a8",
+   "facts": {
+    "announced": "menuitem \"Department\" [expanded=false, haspopup=menu]",
+    "axeSummary": "",
+    "criterion": "4.1.2",
+    "criterionName": "Name, Role, Value",
+    "element": "menuitem \"Department\"",
+    "rule": "announced-as",
+    "screen": "Team Spend: team members"
+   },
+   "family": "role-state",
+   "guidance": "Low for optional ARIA or an invalid autocomplete token; high when aria-hidden hides the whole page.",
+   "issueId": null,
+   "key": "role-state:announced-as:dca3b2e6e3db",
+   "measured": false,
+   "primary": "cards.team-members",
+   "proposals": [],
+   "rule": "announced-as",
+   "screens": 1,
+   "severityDefault": "medium",
+   "source": "scanner",
+   "states": [
+    "cards.team-members"
+   ],
+   "summary": "announced-as: announced as menuitem \"Department\" [expanded=false, haspopup=menu].",
+   "title": "Wrong role or state: menuitem \"Department\""
+  },
+  {
+   "attachments": [],
+   "attempt": 1,
+   "basis": "candidate",
+   "criteria": [
+    "4.1.2"
+   ],
+   "evidence": [
+    {
+     "evidence": {
+      "description": "",
+      "name": "Budget",
+      "role": "menuitem",
+      "states": {
+       "expanded": false,
+       "haspopup": "menu"
+      },
+      "template": "menuitem \"Budget\" [expanded=false, haspopup=menu]"
+     },
+     "occurrence": {
+      "ancestors": [
+       [
+        "_chip_1xw00_8",
+        "_inactive_1xw00_119"
+       ],
+       [],
+       [
+        "_filters_grqat_29"
+       ],
+       [
+        "_tableViewsAndFilters_grqat_82"
+       ],
+       [
+        "_toolbarContainer_grqat_4"
+       ],
+       [
+        "_toolbarSlot_402ec_10"
+       ],
+       [
+        "_root_402ec_1"
+       ],
+       [
+        "_tableWrapper_kyw76_3"
+       ]
+      ],
+      "classes": [
+       "_mainElement_1xw00_24",
+       "_interactive_1xw00_134",
+       "_dropdownChip_r52w9_7"
+      ],
+      "data": {},
+      "heading": "Team Spend",
+      "landmark": {
+       "name": "",
+       "role": "main"
+      },
+      "layer": "document",
+      "name": "Budget",
+      "rect": [
+       483,
+       463,
+       92,
+       32
+      ],
+      "role": "menuitem",
+      "tag": "button",
+      "xpath": "/html/body/div[1]/main[1]/div[1]/div[1]/div[4]/div[1]/div[2]/div[4]/div[1]/div[1]/div[1]/span[1]/span[1]/span[2]/span[1]/button[1]"
+     },
+     "state": "cards.team-members"
+    }
+   ],
+   "evidenceHash": "a76aad2c1304643553835f60b70a3d5e46d86e2c00fe8a70bafc3f5c75452ee0",
+   "facts": {
+    "announced": "menuitem \"Budget\" [expanded=false, haspopup=menu]",
+    "axeSummary": "",
+    "criterion": "4.1.2",
+    "criterionName": "Name, Role, Value",
+    "element": "menuitem \"Budget\"",
+    "rule": "announced-as",
+    "screen": "Team Spend: team members"
+   },
+   "family": "role-state",
+   "guidance": "Low for optional ARIA or an invalid autocomplete token; high when aria-hidden hides the whole page.",
+   "issueId": null,
+   "key": "role-state:announced-as:ed24a9fa11d1",
+   "measured": false,
+   "primary": "cards.team-members",
+   "proposals": [],
+   "rule": "announced-as",
+   "screens": 1,
+   "severityDefault": "medium",
+   "source": "scanner",
+   "states": [
+    "cards.team-members"
+   ],
+   "summary": "announced-as: announced as menuitem \"Budget\" [expanded=false, haspopup=menu].",
+   "title": "Wrong role or state: menuitem \"Budget\""
+  }
+ ],
+ "primaries": [
+  "cards.team-members"
+ ],
+ "reach": {
+  "baseUrl": "https://demo.mercury.com",
+  "data": "data",
+  "map": "build/map.json",
+  "run": "2026-10-03-1525",
+  "workspace": "a11y"
+ },
+ "run": "2026-10-03-1525"
+}

@@ -1,0 +1,32 @@
+{
+ "batch": "record-120",
+ "reach": {
+  "baseUrl": "https://demo.mercury.com",
+  "data": "data",
+  "map": "build/map.json",
+  "run": "2026-10-02-1349",
+  "workspace": "a11y"
+ },
+ "run": "2026-10-02-1349",
+ "states": [
+  {
+   "area": "payments",
+   "draft": "not drafted: its parent had no accepted recipe when the drafter ran",
+   "image": "screens/payments/30-transfer-review.png",
+   "kind": "form-state",
+   "labels": [
+    "Click Move money",
+    "Click Transfer",
+    "Open Transfer from",
+    "Pick source, open Transfer to",
+    "Pick destination, toggle Add more details",
+    "Click Next"
+   ],
+   "mutates": true,
+   "note": "Review: 'Transfer from Ops / Payroll to Treasury', $5,000.00, From/To accounts, internal note, Transfer button and legal copy.",
+   "parent": "payments.transfer-more-details",
+   "state": "payments.transfer-review",
+   "title": "Review transfer"
+  }
+ ]
+}

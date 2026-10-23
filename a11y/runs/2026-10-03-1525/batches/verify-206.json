@@ -1,0 +1,99 @@
+{
+ "area": "home",
+ "batch": "verify-206",
+ "findings": [
+  {
+   "attachments": [],
+   "attempt": 1,
+   "basis": "violation",
+   "criteria": [
+    "4.1.2"
+   ],
+   "evidence": [
+    {
+     "evidence": {
+      "failureSummary": "Fix any of the following:\n  Element does not have inner text that is visible to screen readers\n  aria-label attribute does not exist or is empty\n  aria-labelledby attribute does not exist, references elements that do not exist or references elements that are empty\n  Element has no title attribute\n  Element does not have an implicit (wrapped) <label>\n  Element does not have an explicit <label>\n  Element's default semantics were not overridden with role=\"none\" or role=\"presentation\"",
+      "messageKey": "noAttr"
+     },
+     "occurrence": {
+      "ancestors": [
+       [
+        "_updatesControls_ffzkb_120"
+       ],
+       [
+        "_header_ffzkb_107",
+        "session-replay-unmask"
+       ],
+       [
+        "_menu_ffzkb_4",
+        "_updatesMenu_ffzkb_81"
+       ],
+       [],
+       []
+      ],
+      "classes": [
+       "_button_r6b2u_20",
+       "_small_r6b2u_72",
+       "_secondary_r6b2u_126",
+       "_appearDisabled_r6b2u_16",
+       "_tooltipAnchor_18bac_4",
+       "_dismissAllItem_ffzkb_124"
+      ],
+      "data": {},
+      "heading": "",
+      "landmark": null,
+      "layer": "top",
+      "name": "",
+      "rect": [
+       1328,
+       116,
+       32,
+       32
+      ],
+      "role": "menuitem",
+      "tag": "button",
+      "xpath": "/html/body/div[5]/div[1]/div[1]/div[1]/div[1]/button[1]"
+     },
+     "state": "home.updates-popover"
+    }
+   ],
+   "evidenceHash": "2bef5376ee75e6062b3b46810ea88dafd8f40ba03f3831d49962353ab8fb3b57",
+   "facts": {
+    "announced": "menuitem \"\" [disabled=true]",
+    "axeSummary": "Element does not have inner text that is visible to screen readers; aria-label attribute does not exist or is empty; aria-labelledby attribute does not exist,…",
+    "criterion": "4.1.2",
+    "criterionName": "Name, Role, Value",
+    "element": "menuitem",
+    "rule": "button-name",
+    "screen": "Updates popover"
+   },
+   "family": "name",
+   "guidance": "High for an unnamed form control or the sole primary action.",
+   "issueId": null,
+   "key": "name:button-name:6b9de53ce592",
+   "measured": false,
+   "primary": "home.updates-popover",
+   "proposals": [],
+   "rule": "button-name",
+   "screens": 1,
+   "severityDefault": "medium",
+   "source": "scanner",
+   "states": [
+    "home.updates-popover"
+   ],
+   "summary": "button-name: announced as menuitem \"\" [disabled=true]. Element does not have inner text that is visible to screen readers; aria-label attribute does not exist or is empty; aria-labelledby attribute does not exist,…",
+   "title": "Missing or unclear name: menuitem"
+  }
+ ],
+ "primaries": [
+  "home.updates-popover"
+ ],
+ "reach": {
+  "baseUrl": "https://demo.mercury.com",
+  "data": "data",
+  "map": "build/map.json",
+  "run": "2026-10-03-1525",
+  "workspace": "a11y"
+ },
+ "run": "2026-10-03-1525"
+}

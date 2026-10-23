@@ -1,0 +1,1136 @@
+{
+ "area": "accounts",
+ "batch": "verify-016",
+ "findings": [
+  {
+   "attachments": [],
+   "attempt": 1,
+   "basis": "incomplete",
+   "criteria": [
+    "1.4.3"
+   ],
+   "evidence": [
+    {
+     "evidence": {
+      "contrastRatio": 0,
+      "expectedContrastRatio": "4.5:1",
+      "failureSummary": "Fix any of the following:\n  Element's background color could not be determined because it is overlapped by another element",
+      "fontSize": "11.3pt (15px)",
+      "fontWeight": "normal",
+      "messageKey": "bgOverlap"
+     },
+     "occurrence": {
+      "ancestors": [
+       [
+        "_logoSection_w6xr5_28",
+        "_orgNameWrapper_w6xr5_59"
+       ],
+       [
+        "_container_w6xr5_1"
+       ],
+       [
+        "_sidebarContainer_bcpsw_45"
+       ],
+       [
+        "_fullScreenWorkspaceLayout_bcpsw_14",
+        "_fullScreenWorkspaceLayoutBackground_bcpsw_32"
+       ],
+       [
+        "_wrapper_bcpsw_3"
+       ],
+       [],
+       [
+        "_main_1gb3b_1"
+       ],
+       [
+        "mercury-root"
+       ]
+      ],
+      "classes": [
+       "_bodyDefault_qaod7_40",
+       "_orgName_w6xr5_54"
+      ],
+      "data": {},
+      "heading": "",
+      "landmark": {
+       "name": "",
+       "role": "main"
+      },
+      "layer": "document",
+      "name": "",
+      "rect": [
+       121,
+       110,
+       102,
+       24
+      ],
+      "role": "generic",
+      "tag": "div",
+      "xpath": "/html/body/div[1]/main[1]/div[1]/div[2]/div[2]/div[1]/div[1]/div[1]/div[2]"
+     },
+     "state": "accounts.edit-portfolio"
+    },
+    {
+     "evidence": {
+      "contrastRatio": 0,
+      "expectedContrastRatio": "4.5:1",
+      "failureSummary": "Fix any of the following:\n  Element's background color could not be determined because it is overlapped by another element",
+      "fontSize": "9.8pt (13px)",
+      "fontWeight": "normal",
+      "messageKey": "bgOverlap"
+     },
+     "occurrence": {
+      "ancestors": [
+       [
+        "_uploadButton_3soht_107"
+       ],
+       [
+        "_dropzoneCompact_3soht_93",
+        "_hasFiles_3soht_78"
+       ],
+       [
+        "_outerWrapper_3soht_14",
+        "session-replay-mask"
+       ],
+       [
+        "_attachmentsContainer_tphkj_1"
+       ],
+       [
+        "_panelSection_d3i56_148",
+        "_metaSection_nfv0v_1"
+       ],
+       [
+        "_panelBody_d3i56_64"
+       ],
+       [
+        "_large_kwlx6_9",
+        "_noHover_3n0se_28",
+        "_shadow_3n0se_25",
+        "_raisedBackground_3n0se_45",
+        "_panel_d3i56_55"
+       ],
+       [
+        "_transitionWrapper_d3i56_5",
+        "_visible_d3i56_19",
+        "_draftCardWrapper_nfv0v_7"
+       ]
+      ],
+      "classes": [
+       "_label_qaod7_59"
+      ],
+      "data": {},
+      "heading": "",
+      "landmark": {
+       "name": "",
+       "role": "complementary"
+      },
+      "layer": "top",
+      "name": "",
+      "rect": [
+       946,
+       1240,
+       115,
+       15
+      ],
+      "role": "",
+      "tag": "span",
+      "xpath": "/html/body/div[1]/main[1]/div[1]/div[1]/div[4]/div[1]/div[2]/div[2]/div[2]/div[2]/div[2]/div[1]/form[1]/aside[1]/div[1]/div[1]/section[3]/div[3]/div[1]/div[2]/button[1]/span[1]"
+     },
+     "state": "billpay.bill-panel"
+    }
+   ],
+   "evidenceHash": "e1b7f426d22abfe77f7de0da7e01c5caafc5ccdc639fee52efc49908ca13cca9",
+   "facts": {
+    "criterion": "1.4.3",
+    "criterionName": "Contrast (Minimum)",
+    "elements": "136 elements",
+    "messageKey": "bgOverlap",
+    "rule": "color-contrast",
+    "screen": "Edit portfolio",
+    "why": "an element overlaps its background"
+   },
+   "family": "contrast",
+   "guidance": "High under 2:1, or under 3:1 for essential text.",
+   "issueId": null,
+   "key": "contrast:color-contrast:d86379f9a58f",
+   "measured": true,
+   "primary": "accounts.edit-portfolio",
+   "proposals": [],
+   "rule": "color-contrast",
+   "screens": 142,
+   "severityDefault": "medium",
+   "source": "scanner",
+   "states": [
+    "accounts.edit-portfolio",
+    "billpay.bill-panel"
+   ],
+   "summary": "axe color-contrast could not decide 136 elements (bgOverlap): an element overlaps its background.",
+   "title": "Needs review: color-contrast, an element overlaps its background"
+  },
+  {
+   "attachments": [],
+   "attempt": 1,
+   "basis": "failure",
+   "criteria": [
+    "2.4.7"
+   ],
+   "evidence": [
+    {
+     "evidence": {
+      "diff": 0,
+      "floor": 16,
+      "focusVisible": true,
+      "previous": {
+       "ancestors": [
+        [
+         "_logoSection_w6xr5_28",
+         "_orgNameWrapper_w6xr5_59"
+        ],
+        [
+         "_container_w6xr5_1"
+        ],
+        [
+         "_sidebarContainer_bcpsw_45"
+        ],
+        [
+         "_fullScreenWorkspaceLayout_bcpsw_14",
+         "_fullScreenWorkspaceLayoutBackground_bcpsw_32"
+        ],
+        [
+         "_wrapper_bcpsw_3"
+        ],
+        [],
+        [
+         "_main_1gb3b_1"
+        ],
+        [
+         "mercury-root"
+        ]
+       ],
+       "classes": [
+        "_noStyleLink_njx8v_1"
+       ],
+       "data": {
+        "data-discover": "true"
+       },
+       "heading": "",
+       "landmark": {
+        "name": "",
+        "role": "main"
+       },
+       "layer": "document",
+       "name": "",
+       "rect": [
+        48,
+        104,
+        32,
+        35
+       ],
+       "role": "link",
+       "tag": "a",
+       "xpath": "/html/body/div[1]/main[1]/div[1]/div[2]/div[2]/div[1]/div[1]/div[1]/a[1]"
+      },
+      "stop": 5,
+      "stops": 23,
+      "style": []
+     },
+     "occurrence": {
+      "ancestors": [
+       [
+        "_slider_vx921_3"
+       ],
+       [
+        "_allocationSlider_11pa7_1"
+       ],
+       [
+        "_netYieldSliderGroup_1lh3y_71"
+       ],
+       [
+        "_contentOuter_1lh3y_1",
+        "_wrapper_1lh3y_21",
+        "_stack_1lh3y_60"
+       ],
+       [
+        "_pageWithFooterMain_1lh3y_32"
+       ],
+       [
+        "_pageWithFooter_1lh3y_25"
+       ],
+       [
+        "_contentDiv_bcpsw_53",
+        "_contentDivHeightPreset_bcpsw_62",
+        "_fullWidthContentDiv_bcpsw_40"
+       ],
+       [
+        "_fullScreenWorkspaceLayout_bcpsw_14",
+        "_fullScreenWorkspaceLayoutBackground_bcpsw_32"
+       ]
+      ],
+      "classes": [
+       "_track_vx921_22"
+      ],
+      "data": {},
+      "heading": "Edit portfolio",
+      "landmark": {
+       "name": "",
+       "role": "main"
+      },
+      "layer": "document",
+      "name": "Select your portfolio allocation",
+      "rect": [
+       472,
+       332,
+       496,
+       40
+      ],
+      "role": "slider",
+      "tag": "div",
+      "xpath": "/html/body/div[1]/main[1]/div[1]/div[2]/div[2]/div[3]/div[1]/div[1]/div[1]/div[2]/div[2]/div[1]/div[2]"
+     },
+     "state": "accounts.edit-portfolio"
+    }
+   ],
+   "evidenceHash": "1b4b51c625c4fc46b52078b7ea319f469e5979fc2d278d8688fa1ca6c83b57bc",
+   "facts": {
+    "criterion": "2.4.7",
+    "criterionName": "Focus Visible",
+    "element": "slider \"Select your portfolio allocation\"",
+    "screen": "Edit portfolio",
+    "screens": 1,
+    "stop": "5"
+   },
+   "family": "focus-visible",
+   "guidance": "High on shared components on primary paths.",
+   "issueId": null,
+   "key": "focus-visible:focus-not-visible:e30a057c8c9f",
+   "measured": true,
+   "primary": "accounts.edit-portfolio",
+   "proposals": [],
+   "rule": "focus-not-visible",
+   "screens": 1,
+   "severityDefault": "medium",
+   "source": "scanner",
+   "states": [
+    "accounts.edit-portfolio"
+   ],
+   "summary": "Tab stop 5: focusing the slider \"Select your portfolio allocation\" changed no pixels within 8 px of it.",
+   "title": "No visible focus: slider \"Select your portfolio allocation\""
+  },
+  {
+   "attachments": [],
+   "attempt": 1,
+   "basis": "failure",
+   "criteria": [
+    "2.4.7"
+   ],
+   "evidence": [
+    {
+     "evidence": {
+      "diff": 0,
+      "floor": 16,
+      "focusVisible": true,
+      "previous": {
+       "ancestors": [
+        [
+         "_ticks_vx921_62"
+        ],
+        [
+         "_track_vx921_22"
+        ],
+        [
+         "_slider_vx921_3"
+        ],
+        [
+         "_allocationSlider_11pa7_1"
+        ],
+        [
+         "_netYieldSliderGroup_1lh3y_71"
+        ],
+        [
+         "_contentOuter_1lh3y_1",
+         "_wrapper_1lh3y_21",
+         "_stack_1lh3y_60"
+        ],
+        [
+         "_pageWithFooterMain_1lh3y_32"
+        ],
+        [
+         "_pageWithFooter_1lh3y_25"
+        ]
+       ],
+       "classes": [
+        "_tick_vx921_62"
+       ],
+       "data": {},
+       "heading": "Edit portfolio",
+       "landmark": {
+        "name": "",
+        "role": "main"
+       },
+       "layer": "document",
+       "name": "Tier 6",
+       "rect": [
+        769,
+        348,
+        1,
+        8
+       ],
+       "role": "button",
+       "tag": "button",
+       "xpath": "/html/body/div[1]/main[1]/div[1]/div[2]/div[2]/div[3]/div[1]/div[1]/div[1]/div[2]/div[2]/div[1]/div[2]/div[2]/button[6]"
+      },
+      "stop": 12,
+      "stops": 23,
+      "style": [
+       "box-shadow",
+       "outline"
+      ]
+     },
+     "occurrence": {
+      "ancestors": [
+       [
+        "_ticks_vx921_62"
+       ],
+       [
+        "_track_vx921_22"
+       ],
+       [
+        "_slider_vx921_3"
+       ],
+       [
+        "_allocationSlider_11pa7_1"
+       ],
+       [
+        "_netYieldSliderGroup_1lh3y_71"
+       ],
+       [
+        "_contentOuter_1lh3y_1",
+        "_wrapper_1lh3y_21",
+        "_stack_1lh3y_60"
+       ],
+       [
+        "_pageWithFooterMain_1lh3y_32"
+       ],
+       [
+        "_pageWithFooter_1lh3y_25"
+       ]
+      ],
+      "classes": [
+       "_tick_vx921_62"
+      ],
+      "data": {},
+      "heading": "Edit portfolio",
+      "landmark": {
+       "name": "",
+       "role": "main"
+      },
+      "layer": "document",
+      "name": "Tier 7",
+      "rect": [
+       819,
+       348,
+       1,
+       8
+      ],
+      "role": "button",
+      "tag": "button",
+      "xpath": "/html/body/div[1]/main[1]/div[1]/div[2]/div[2]/div[3]/div[1]/div[1]/div[1]/div[2]/div[2]/div[1]/div[2]/div[2]/button[7]"
+     },
+     "state": "accounts.edit-portfolio"
+    }
+   ],
+   "evidenceHash": "b06a3a426a52c07e29275278ec7e6482bca7a2ceaaa3c445fdf09da948179a4c",
+   "facts": {
+    "criterion": "2.4.7",
+    "criterionName": "Focus Visible",
+    "element": "button \"Tier <n>\"",
+    "screen": "Edit portfolio",
+    "screens": 1,
+    "stop": "12"
+   },
+   "family": "focus-visible",
+   "guidance": "High on shared components on primary paths.",
+   "issueId": null,
+   "key": "focus-visible:focus-not-visible:e740b3e9e35c",
+   "measured": true,
+   "primary": "accounts.edit-portfolio",
+   "proposals": [],
+   "rule": "focus-not-visible",
+   "screens": 1,
+   "severityDefault": "medium",
+   "source": "scanner",
+   "states": [
+    "accounts.edit-portfolio"
+   ],
+   "summary": "Tab stop 12: focusing the button \"Tier <n>\" changed no pixels within 8 px of it.",
+   "title": "No visible focus: button \"Tier <n>\""
+  },
+  {
+   "attachments": [],
+   "attempt": 1,
+   "basis": "incomplete",
+   "criteria": [
+    "4.1.2"
+   ],
+   "evidence": [
+    {
+     "evidence": {
+      "failureSummary": "Fix all of the following:\n  aria-label attribute is not well supported on a span with no valid role attribute.",
+      "messageKey": "noRoleSingular",
+      "nodeName": "span",
+      "prohibited": [
+       "aria-label"
+      ],
+      "role": null
+     },
+     "occurrence": {
+      "ancestors": [
+       [
+        "_titleSecondary_qaod7_20",
+        "_text-success_12t49_1",
+        "_netYieldValue_1lh3y_89"
+       ],
+       [
+        "_netYieldBox_1lh3y_81"
+       ],
+       [
+        "_netYieldSliderGroup_1lh3y_71"
+       ],
+       [
+        "_contentOuter_1lh3y_1",
+        "_wrapper_1lh3y_21",
+        "_stack_1lh3y_60"
+       ],
+       [
+        "_pageWithFooterMain_1lh3y_32"
+       ],
+       [
+        "_pageWithFooter_1lh3y_25"
+       ],
+       [
+        "_contentDiv_bcpsw_53",
+        "_contentDivHeightPreset_bcpsw_62",
+        "_fullWidthContentDiv_bcpsw_40"
+       ],
+       [
+        "_fullScreenWorkspaceLayout_bcpsw_14",
+        "_fullScreenWorkspaceLayoutBackground_bcpsw_32"
+       ]
+      ],
+      "classes": [
+       "_counterAnimationContainer_1csuv_1"
+      ],
+      "data": {},
+      "heading": "Edit portfolio",
+      "landmark": {
+       "name": "",
+       "role": "main"
+      },
+      "layer": "document",
+      "name": "3.64 percent",
+      "rect": [
+       912,
+       304,
+       56,
+       28
+      ],
+      "role": "generic",
+      "tag": "span",
+      "xpath": "/html/body/div[1]/main[1]/div[1]/div[2]/div[2]/div[3]/div[1]/div[1]/div[1]/div[2]/div[1]/span[2]/span[1]"
+     },
+     "state": "accounts.edit-portfolio"
+    },
+    {
+     "evidence": {
+      "failureSummary": "Fix all of the following:\n  aria-label attribute is not well supported on a span with no valid role attribute.",
+      "messageKey": "noRoleSingular",
+      "nodeName": "span",
+      "prohibited": [
+       "aria-label"
+      ],
+      "role": null
+     },
+     "occurrence": {
+      "ancestors": [
+       [
+        "_tableData_1u4jr_5",
+        "_alignmentCenter_1u4jr_17",
+        "_collapsibleColumn_1acga_26"
+       ],
+       [
+        "_tableRow_137xu_3",
+        "_interactiveRows_137xu_35",
+        "_selectedRow_137xu_64"
+       ],
+       [
+        "_tableBody_1cp5b_1"
+       ],
+       [
+        "_table_1acga_4",
+        "_table_1dpae_4",
+        "_tableCondensed_1dpae_93"
+       ],
+       [
+        "_isCondensed_1acga_61",
+        "_tableWrapper_1acga_4"
+       ],
+       [
+        "_contentSection_1g3sn_100"
+       ],
+       [
+        "_lowerPageWrapper_1g3sn_95"
+       ],
+       [
+        "_mappingPageDashboardWrapper_2fzjz_3",
+        "_pageContent_809q8_151",
+        "_pageContentWidth_809q8_184",
+        "_footerPadding_809q8_115"
+       ]
+      ],
+      "classes": [
+       "_bodyDefault_qaod7_40",
+       "_text-tertiary_12t49_1"
+      ],
+      "data": {},
+      "heading": "Accounting Settings",
+      "landmark": {
+       "name": "",
+       "role": "main"
+      },
+      "layer": "document",
+      "name": "Does not auto-mark ready",
+      "rect": [
+       971,
+       341,
+       13,
+       24
+      ],
+      "role": "generic",
+      "tag": "span",
+      "xpath": "/html/body/div[1]/main[1]/div[1]/div[1]/div[4]/div[1]/div[2]/div[3]/div[2]/div[1]/table[1]/tbody[1]/tr[1]/td[6]/span[1]"
+     },
+     "state": "billpay.edit-rule"
+    }
+   ],
+   "evidenceHash": "a5c0ea9382a4ab3e551ece7e0c1348fe6983542db4936540db4003291990c184",
+   "facts": {
+    "criterion": "4.1.2",
+    "criterionName": "Name, Role, Value",
+    "elements": "7 elements",
+    "messageKey": "noRoleSingular",
+    "rule": "aria-prohibited-attr",
+    "screen": "Edit portfolio",
+    "why": "it has an ARIA label but no role"
+   },
+   "family": "role-state",
+   "guidance": "Low for optional ARIA or an invalid autocomplete token; high when aria-hidden hides the whole page.",
+   "issueId": null,
+   "key": "role-state:aria-prohibited-attr:9092c84c3a25",
+   "measured": false,
+   "primary": "accounts.edit-portfolio",
+   "proposals": [],
+   "rule": "aria-prohibited-attr",
+   "screens": 24,
+   "severityDefault": "medium",
+   "source": "scanner",
+   "states": [
+    "accounts.edit-portfolio",
+    "billpay.edit-rule"
+   ],
+   "summary": "axe aria-prohibited-attr could not decide 7 elements (noRoleSingular): it has an ARIA label but no role.",
+   "title": "Needs review: aria-prohibited-attr, it has an ARIA label but no role"
+  },
+  {
+   "attachments": [],
+   "attempt": 1,
+   "basis": "violation",
+   "criteria": [
+    "4.1.2"
+   ],
+   "evidence": [
+    {
+     "evidence": {
+      "failureSummary": "Fix any of the following:\n  Element has focusable descendants"
+     },
+     "occurrence": {
+      "ancestors": [
+       [
+        "_slider_vx921_3"
+       ],
+       [
+        "_allocationSlider_11pa7_1"
+       ],
+       [
+        "_netYieldSliderGroup_1lh3y_71"
+       ],
+       [
+        "_contentOuter_1lh3y_1",
+        "_wrapper_1lh3y_21",
+        "_stack_1lh3y_60"
+       ],
+       [
+        "_pageWithFooterMain_1lh3y_32"
+       ],
+       [
+        "_pageWithFooter_1lh3y_25"
+       ],
+       [
+        "_contentDiv_bcpsw_53",
+        "_contentDivHeightPreset_bcpsw_62",
+        "_fullWidthContentDiv_bcpsw_40"
+       ],
+       [
+        "_fullScreenWorkspaceLayout_bcpsw_14",
+        "_fullScreenWorkspaceLayoutBackground_bcpsw_32"
+       ]
+      ],
+      "classes": [
+       "_track_vx921_22"
+      ],
+      "data": {},
+      "heading": "Edit portfolio",
+      "landmark": {
+       "name": "",
+       "role": "main"
+      },
+      "layer": "document",
+      "name": "Select your portfolio allocation",
+      "rect": [
+       472,
+       332,
+       496,
+       40
+      ],
+      "role": "slider",
+      "tag": "div",
+      "xpath": "/html/body/div[1]/main[1]/div[1]/div[2]/div[2]/div[3]/div[1]/div[1]/div[1]/div[2]/div[2]/div[1]/div[2]"
+     },
+     "state": "accounts.edit-portfolio"
+    },
+    {
+     "evidence": {
+      "failureSummary": "Fix any of the following:\n  Element has focusable descendants"
+     },
+     "occurrence": {
+      "ancestors": [
+       [
+        "_slider_vx921_3"
+       ],
+       [
+        "_allocationSlider_11pa7_1"
+       ],
+       [
+        "_netYieldSliderGroup_1lh3y_71"
+       ],
+       [
+        "_contentOuter_1lh3y_1",
+        "_wrapper_1lh3y_21",
+        "_stack_1lh3y_60"
+       ],
+       [
+        "_pageWithFooterMain_1lh3y_32"
+       ],
+       [
+        "_pageWithFooter_1lh3y_25"
+       ],
+       [
+        "_contentDiv_bcpsw_53",
+        "_contentDivHeightPreset_bcpsw_62",
+        "_fullWidthContentDiv_bcpsw_40"
+       ],
+       [
+        "_fullScreenWorkspaceLayout_bcpsw_14",
+        "_fullScreenWorkspaceLayoutBackground_bcpsw_32"
+       ]
+      ],
+      "classes": [
+       "_track_vx921_22"
+      ],
+      "data": {},
+      "heading": "Edit portfolio",
+      "landmark": {
+       "name": "",
+       "role": "main"
+      },
+      "layer": "document",
+      "name": "Select your portfolio allocation",
+      "rect": [
+       472,
+       332,
+       496,
+       40
+      ],
+      "role": "slider",
+      "tag": "div",
+      "xpath": "/html/body/div[1]/main[1]/div[1]/div[2]/div[2]/div[3]/div[1]/div[1]/div[1]/div[2]/div[2]/div[1]/div[2]"
+     },
+     "state": "accounts.edit-portfolio-tier5"
+    }
+   ],
+   "evidenceHash": "46c7f012231d401271ed47e1d56f981eed04d89661d0fc895b7091c84285dd39",
+   "facts": {
+    "announced": "slider \"Select your portfolio allocation\" [valuenow=7] (Current allocation: Cur…",
+    "axeSummary": "Element has focusable descendants",
+    "criterion": "4.1.2",
+    "criterionName": "Name, Role, Value",
+    "element": "slider \"Select your portfolio allocation\"",
+    "rule": "nested-interactive",
+    "screen": "Edit portfolio"
+   },
+   "family": "role-state",
+   "guidance": "Low for optional ARIA or an invalid autocomplete token; high when aria-hidden hides the whole page.",
+   "issueId": null,
+   "key": "role-state:nested-interactive:91253fa0cb27",
+   "measured": false,
+   "primary": "accounts.edit-portfolio",
+   "proposals": [],
+   "rule": "nested-interactive",
+   "screens": 2,
+   "severityDefault": "medium",
+   "source": "scanner",
+   "states": [
+    "accounts.edit-portfolio",
+    "accounts.edit-portfolio-tier5"
+   ],
+   "summary": "nested-interactive: announced as slider \"Select your portfolio allocation\" [valuenow=7] (Current allocation: Cur…. Element has focusable descendants",
+   "title": "Control nested in a control: slider \"Select your portfolio allocation\""
+  },
+  {
+   "attachments": [],
+   "attempt": 1,
+   "basis": "candidate",
+   "criteria": [
+    "2.5.8"
+   ],
+   "evidence": [
+    {
+     "evidence": {
+      "agree": false,
+      "axe": "violation",
+      "exception": null,
+      "height": 8,
+      "offset": 75.19,
+      "own": "pass",
+      "passedBy": "spacing",
+      "width": 1
+     },
+     "occurrence": {
+      "ancestors": [
+       [
+        "_ticks_vx921_62"
+       ],
+       [
+        "_track_vx921_22"
+       ],
+       [
+        "_slider_vx921_3"
+       ],
+       [
+        "_allocationSlider_11pa7_1"
+       ],
+       [
+        "_netYieldSliderGroup_1lh3y_71"
+       ],
+       [
+        "_contentOuter_1lh3y_1",
+        "_wrapper_1lh3y_21",
+        "_stack_1lh3y_60"
+       ],
+       [
+        "_pageWithFooterMain_1lh3y_32"
+       ],
+       [
+        "_pageWithFooter_1lh3y_25"
+       ]
+      ],
+      "classes": [
+       "_tick_vx921_62"
+      ],
+      "data": {},
+      "disabled": false,
+      "heading": "Edit portfolio",
+      "landmark": {
+       "name": "",
+       "role": "main"
+      },
+      "layer": "document",
+      "name": "Tier 1",
+      "rect": [
+       521,
+       348,
+       1,
+       8
+      ],
+      "role": "button",
+      "tag": "button",
+      "xpath": "/html/body/div[1]/main[1]/div[1]/div[2]/div[2]/div[3]/div[1]/div[1]/div[1]/div[2]/div[2]/div[1]/div[2]/div[2]/button[1]"
+     },
+     "state": "accounts.edit-portfolio"
+    },
+    {
+     "evidence": {
+      "agree": false,
+      "axe": "violation",
+      "exception": null,
+      "height": 8,
+      "offset": 75.19,
+      "own": "pass",
+      "passedBy": "spacing",
+      "width": 1
+     },
+     "occurrence": {
+      "ancestors": [
+       [
+        "_ticks_vx921_62"
+       ],
+       [
+        "_track_vx921_22"
+       ],
+       [
+        "_slider_vx921_3"
+       ],
+       [
+        "_allocationSlider_11pa7_1"
+       ],
+       [
+        "_netYieldSliderGroup_1lh3y_71"
+       ],
+       [
+        "_contentOuter_1lh3y_1",
+        "_wrapper_1lh3y_21",
+        "_stack_1lh3y_60"
+       ],
+       [
+        "_pageWithFooterMain_1lh3y_32"
+       ],
+       [
+        "_pageWithFooter_1lh3y_25"
+       ]
+      ],
+      "classes": [
+       "_tick_vx921_62"
+      ],
+      "data": {},
+      "disabled": false,
+      "heading": "Edit portfolio",
+      "landmark": {
+       "name": "",
+       "role": "main"
+      },
+      "layer": "document",
+      "name": "Tier 2",
+      "rect": [
+       571,
+       348,
+       1,
+       8
+      ],
+      "role": "button",
+      "tag": "button",
+      "xpath": "/html/body/div[1]/main[1]/div[1]/div[2]/div[2]/div[3]/div[1]/div[1]/div[1]/div[2]/div[2]/div[1]/div[2]/div[2]/button[2]"
+     },
+     "state": "accounts.edit-portfolio-tier5"
+    }
+   ],
+   "evidenceHash": "70871ef3319120d17765ca80361006262d8fe49203a2b2fbb5e2f6b8ac696478",
+   "facts": {
+    "criterion": "2.5.8",
+    "criterionName": "Target Size (Minimum)",
+    "element": "button \"Tier <n>\"",
+    "offset": "75",
+    "rule": "target-size-own",
+    "screen": "Edit portfolio",
+    "screens": 2,
+    "size": "1×8"
+   },
+   "family": "target-size",
+   "guidance": "Medium next to destructive or financial controls.",
+   "issueId": null,
+   "key": "target-size:target-size-own:35c6e1020ccf",
+   "measured": true,
+   "primary": "accounts.edit-portfolio",
+   "proposals": [],
+   "rule": "target-size-own",
+   "screens": 2,
+   "severityDefault": "low",
+   "source": "scanner",
+   "states": [
+    "accounts.edit-portfolio",
+    "accounts.edit-portfolio-tier5"
+   ],
+   "summary": "target-size-own: 1×8 px; the widest circle centered on it that clears other targets is 75 px, and the spacing exception needs 24 px.",
+   "title": "Target under 24×24 px: button \"Tier <n>\""
+  },
+  {
+   "attachments": [],
+   "attempt": 1,
+   "basis": "violation",
+   "criteria": [
+    "2.5.8"
+   ],
+   "evidence": [
+    {
+     "evidence": {
+      "closestOffset": 0,
+      "failureSummary": "Fix any of the following:\n  Target has insufficient size (1px by 8px, should be at least 24px by 24px)\n  Target has insufficient space to its closest neighbors. Safe clickable space has a diameter of 0px instead of at least 24px.",
+      "height": 8,
+      "minOffset": 24,
+      "minSize": 24,
+      "width": 1
+     },
+     "occurrence": {
+      "ancestors": [
+       [
+        "_ticks_vx921_62"
+       ],
+       [
+        "_track_vx921_22"
+       ],
+       [
+        "_slider_vx921_3"
+       ],
+       [
+        "_allocationSlider_11pa7_1"
+       ],
+       [
+        "_netYieldSliderGroup_1lh3y_71"
+       ],
+       [
+        "_contentOuter_1lh3y_1",
+        "_wrapper_1lh3y_21",
+        "_stack_1lh3y_60"
+       ],
+       [
+        "_pageWithFooterMain_1lh3y_32"
+       ],
+       [
+        "_pageWithFooter_1lh3y_25"
+       ]
+      ],
+      "classes": [
+       "_tick_vx921_62"
+      ],
+      "data": {},
+      "heading": "Edit portfolio",
+      "landmark": {
+       "name": "",
+       "role": "main"
+      },
+      "layer": "document",
+      "name": "Tier 5",
+      "rect": [
+       720,
+       348,
+       1,
+       8
+      ],
+      "role": "button",
+      "tag": "button",
+      "xpath": "/html/body/div[1]/main[1]/div[1]/div[2]/div[2]/div[3]/div[1]/div[1]/div[1]/div[2]/div[2]/div[1]/div[2]/div[2]/button[5]"
+     },
+     "state": "accounts.edit-portfolio"
+    },
+    {
+     "evidence": {
+      "closestOffset": 0,
+      "failureSummary": "Fix any of the following:\n  Target has insufficient size (1px by 8px, should be at least 24px by 24px)\n  Target has insufficient space to its closest neighbors. Safe clickable space has a diameter of 0px instead of at least 24px.",
+      "height": 8,
+      "minOffset": 24,
+      "minSize": 24,
+      "width": 1
+     },
+     "occurrence": {
+      "ancestors": [
+       [
+        "_ticks_vx921_62"
+       ],
+       [
+        "_track_vx921_22"
+       ],
+       [
+        "_slider_vx921_3"
+       ],
+       [
+        "_allocationSlider_11pa7_1"
+       ],
+       [
+        "_netYieldSliderGroup_1lh3y_71"
+       ],
+       [
+        "_contentOuter_1lh3y_1",
+        "_wrapper_1lh3y_21",
+        "_stack_1lh3y_60"
+       ],
+       [
+        "_pageWithFooterMain_1lh3y_32"
+       ],
+       [
+        "_pageWithFooter_1lh3y_25"
+       ]
+      ],
+      "classes": [
+       "_tick_vx921_62"
+      ],
+      "data": {},
+      "heading": "Edit portfolio",
+      "landmark": {
+       "name": "",
+       "role": "main"
+      },
+      "layer": "document",
+      "name": "Tier 5",
+      "rect": [
+       720,
+       348,
+       1,
+       8
+      ],
+      "role": "button",
+      "tag": "button",
+      "xpath": "/html/body/div[1]/main[1]/div[1]/div[2]/div[2]/div[3]/div[1]/div[1]/div[1]/div[2]/div[2]/div[1]/div[2]/div[2]/button[5]"
+     },
+     "state": "accounts.edit-portfolio-tier5"
+    }
+   ],
+   "evidenceHash": "596bb99f5b28d1299b933ca94693c56a29fe25d2af1bdaefeee6c2c5cbf94ccd",
+   "facts": {
+    "criterion": "2.5.8",
+    "criterionName": "Target Size (Minimum)",
+    "element": "button \"Tier <n>\"",
+    "offset": "0",
+    "rule": "target-size",
+    "screen": "Edit portfolio",
+    "screens": 2,
+    "size": "1×8"
+   },
+   "family": "target-size",
+   "guidance": "Medium next to destructive or financial controls.",
+   "issueId": null,
+   "key": "target-size:target-size:17ced52b0079",
+   "measured": true,
+   "primary": "accounts.edit-portfolio",
+   "proposals": [],
+   "rule": "target-size",
+   "screens": 2,
+   "severityDefault": "low",
+   "source": "scanner",
+   "states": [
+    "accounts.edit-portfolio",
+    "accounts.edit-portfolio-tier5"
+   ],
+   "summary": "target-size: 1×8 px; the widest circle centered on it that clears other targets is 0 px, and the spacing exception needs 24 px.",
+   "title": "Target under 24×24 px: button \"Tier <n>\""
+  }
+ ],
+ "primaries": [
+  "accounts.edit-portfolio"
+ ],
+ "reach": {
+  "baseUrl": "https://demo.mercury.com",
+  "data": "data",
+  "map": "build/map.json",
+  "run": "2026-10-03-1525",
+  "workspace": "a11y"
+ },
+ "run": "2026-10-03-1525"
+}

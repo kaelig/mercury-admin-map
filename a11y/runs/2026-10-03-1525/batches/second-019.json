@@ -1,0 +1,311 @@
+{
+ "area": "books",
+ "batch": "second-019",
+ "findings": [
+  {
+   "attachments": [],
+   "attempt": 1,
+   "basis": "failure",
+   "criteria": [
+    "2.4.7",
+    "2.4.3"
+   ],
+   "evidence": [
+    {
+     "evidence": {
+      "box": [
+       231,
+       152,
+       32,
+       32
+      ],
+      "focus": {
+       "ancestors": [
+        [
+         "_wrapper_1pfu3_4"
+        ],
+        [
+         "_timelineWrapper_13hxk_19"
+        ],
+        [
+         "_page_13hxk_3"
+        ],
+        [
+         "_noAnimationPageContent_1pthq_100"
+        ],
+        [
+         "_pageContent_1pthq_192"
+        ],
+        [
+         "_page_1pthq_37"
+        ],
+        [
+         "_booksLayout_1pthq_31"
+        ],
+        [
+         "_layout_1pthq_16"
+        ]
+       ],
+       "classes": [
+        "_button_r6b2u_20",
+        "_small_r6b2u_72",
+        "_floating_r6b2u_16",
+        "_scrollButton_1pfu3_15",
+        "_scrollButton-left_1pfu3_26"
+       ],
+       "data": {},
+       "heading": "Add other bank or credit accounts",
+       "landmark": {
+        "name": "",
+        "role": "main"
+       },
+       "layer": "document",
+       "name": "",
+       "rect": [
+        231,
+        152,
+        32,
+        32
+       ],
+       "role": "button",
+       "tag": "button",
+       "xpath": "/html/body/div[1]/main[1]/div[1]/div[1]/div[1]/div[4]/div[1]/div[1]/div[2]/div[1]/div[1]/div[1]/div[1]/button[1]"
+      },
+      "hidden": "invisible",
+      "previous": {
+       "ancestors": [
+        [
+         "_range_1pfu3_199",
+         "_selectedRange_1pfu3_208"
+        ],
+        [
+         "_timelineContainer_1pfu3_43"
+        ],
+        [
+         "_wrapper_1pfu3_4"
+        ],
+        [
+         "_timelineWrapper_13hxk_19"
+        ],
+        [
+         "_page_13hxk_3"
+        ],
+        [
+         "_noAnimationPageContent_1pthq_100"
+        ],
+        [
+         "_pageContent_1pthq_192"
+        ],
+        [
+         "_page_1pthq_37"
+        ]
+       ],
+       "classes": [
+        "_rangeContentWrapper_1pfu3_341"
+       ],
+       "data": {
+        "data-focus-visible": "true"
+       },
+       "heading": "Add other bank or credit accounts",
+       "landmark": {
+        "name": "",
+        "role": "main"
+       },
+       "layer": "document",
+       "name": "Jul 04 - Oct 04",
+       "rect": [
+        1137,
+        145,
+        228,
+        45
+       ],
+       "role": "generic",
+       "tag": "div",
+       "xpath": "/html/body/div[1]/main[1]/div[1]/div[1]/div[1]/div[4]/div[1]/div[1]/div[2]/div[1]/div[1]/div[1]/div[1]/div[1]/div[2]/div[1]"
+      },
+      "stop": 28,
+      "stops": 103
+     },
+     "occurrence": {
+      "ancestors": [
+       [
+        "_wrapper_1pfu3_4"
+       ],
+       [
+        "_timelineWrapper_13hxk_19"
+       ],
+       [
+        "_page_13hxk_3"
+       ],
+       [
+        "_noAnimationPageContent_1pthq_100"
+       ],
+       [
+        "_pageContent_1pthq_192"
+       ],
+       [
+        "_page_1pthq_37"
+       ],
+       [
+        "_booksLayout_1pthq_31"
+       ],
+       [
+        "_layout_1pthq_16"
+       ]
+      ],
+      "classes": [
+       "_button_r6b2u_20",
+       "_small_r6b2u_72",
+       "_floating_r6b2u_16",
+       "_scrollButton_1pfu3_15",
+       "_scrollButton-left_1pfu3_26"
+      ],
+      "data": {},
+      "heading": "Add other bank or credit accounts",
+      "landmark": {
+       "name": "",
+       "role": "main"
+      },
+      "layer": "document",
+      "name": "",
+      "rect": [
+       231,
+       152,
+       32,
+       32
+      ],
+      "role": "button",
+      "tag": "button",
+      "xpath": "/html/body/div[1]/main[1]/div[1]/div[1]/div[1]/div[4]/div[1]/div[1]/div[2]/div[1]/div[1]/div[1]/div[1]/button[1]"
+     },
+     "state": "books.home"
+    }
+   ],
+   "evidenceHash": "8897fefa90ad436e6763a72542eaf3c116fd1eb498c307fbe228b2a31bcbcb5e",
+   "facts": {
+    "criterion": "2.4.7",
+    "criterionName": "Focus Visible",
+    "element": "button in \"Add other bank or credit accounts\"",
+    "screen": "Books home",
+    "screens": 1,
+    "stop": "28"
+   },
+   "family": "focus-visible",
+   "guidance": "High on shared components on primary paths.",
+   "issueId": null,
+   "key": "focus-visible:focus-hidden:cd86074a469a",
+   "measured": true,
+   "primary": "books.home",
+   "proposals": [],
+   "rule": "focus-hidden",
+   "screens": 1,
+   "severityDefault": "medium",
+   "source": "scanner",
+   "states": [
+    "books.home"
+   ],
+   "summary": "Tab stop 28 focused the button in \"Add other bank or credit accounts\", which is invisible, has no size, or sits off screen.",
+   "title": "Tab stops on hidden element: button in \"Add other bank or credit accounts\""
+  },
+  {
+   "attachments": [],
+   "attempt": 1,
+   "basis": "candidate",
+   "criteria": [
+    "2.1.1"
+   ],
+   "evidence": [
+    {
+     "evidence": {
+      "end": "body",
+      "focusable": false,
+      "source": "pointer",
+      "stops": 103
+     },
+     "occurrence": {
+      "ancestors": [
+       [],
+       [
+        "_barChartContainer_1c0zc_4"
+       ],
+       [],
+       [
+        "_section_1ey0q_16"
+       ],
+       [
+        "_hoverCharts_fz76o_17"
+       ],
+       [
+        "_hoverZone_fz76o_3"
+       ],
+       [
+        "_card_1ey0q_1"
+       ],
+       [
+        "_content_13hxk_25"
+       ]
+      ],
+      "classes": [
+       "_plotHitTarget_1c0zc_39"
+      ],
+      "data": {},
+      "heading": "Cash in vs out",
+      "landmark": {
+       "name": "",
+       "role": "main"
+      },
+      "layer": "document",
+      "name": "",
+      "rect": [
+       252,
+       788,
+       343,
+       160
+      ],
+      "role": "graphics-symbol",
+      "tag": "rect",
+      "xpath": "/html/body/div[1]/main[1]/div[1]/div[1]/div[1]/div[4]/div[1]/div[1]/div[2]/div[1]/div[1]/div[3]/section[1]/div[3]/div[1]/div[4]/div[1]/div[1]/svg[1]/rect[1]"
+     },
+     "state": "books.home"
+    }
+   ],
+   "evidenceHash": "39b6215f30b48285c4b5af9b54c231bb716cfaef3b5090b14878c63d9db40391",
+   "facts": {
+    "axeSummary": "",
+    "criterion": "2.1.1",
+    "criterionName": "Keyboard",
+    "element": "graphics-symbol in \"Cash in vs out\"",
+    "rule": "not-reached",
+    "screen": "Books home",
+    "stops": "103"
+   },
+   "family": "keyboard",
+   "guidance": "High if a task cannot be completed without a mouse.",
+   "issueId": null,
+   "key": "keyboard:not-reached:50048e35346b",
+   "measured": false,
+   "primary": "books.home",
+   "proposals": [],
+   "rule": "not-reached",
+   "screens": 1,
+   "severityDefault": "medium",
+   "source": "scanner",
+   "states": [
+    "books.home"
+   ],
+   "summary": "The Tab walk visited 103 stops and never reached the graphics-symbol in \"Cash in vs out\", which responds to a click.",
+   "title": "Not reachable by keyboard: graphics-symbol in \"Cash in vs out\""
+  }
+ ],
+ "primaries": [
+  "books.home"
+ ],
+ "reach": {
+  "baseUrl": "https://demo.mercury.com",
+  "data": "data",
+  "map": "build/map.json",
+  "run": "2026-10-03-1525",
+  "workspace": "a11y"
+ },
+ "run": "2026-10-03-1525"
+}

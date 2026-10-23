@@ -1,0 +1,478 @@
+{
+ "area": "books",
+ "batch": "verify-109",
+ "findings": [
+  {
+   "attachments": [],
+   "attempt": 1,
+   "basis": "failure",
+   "criteria": [
+    "2.4.7",
+    "2.4.3"
+   ],
+   "evidence": [
+    {
+     "evidence": {
+      "box": [
+       916,
+       300,
+       32,
+       32
+      ],
+      "focus": {
+       "ancestors": [
+        [
+         "_form_1izbt_10"
+        ],
+        [
+         "_container_1izbt_3"
+        ],
+        [
+         "_creationCard_16qcz_1"
+        ],
+        [
+         "_entityCardCarousel_1pqcl_168"
+        ],
+        [
+         "_entityCards_1pqcl_143"
+        ],
+        [
+         "_entityPanel_1pqcl_77"
+        ],
+        [
+         "_container_1pqcl_3"
+        ],
+        [
+         "_booksLayout_1pthq_31"
+        ]
+       ],
+       "classes": [
+        "_button_r6b2u_20",
+        "_small_r6b2u_72",
+        "_secondary_r6b2u_126",
+        "_addConditionButton_1izbt_67"
+       ],
+       "data": {},
+       "heading": "",
+       "landmark": {
+        "name": "",
+        "role": "main"
+       },
+       "layer": "top",
+       "name": "Add condition",
+       "rect": [
+        916,
+        300,
+        32,
+        32
+       ],
+       "role": "button",
+       "tag": "button",
+       "xpath": "/html/body/div[1]/main[1]/div[1]/div[1]/div[1]/div[4]/div[1]/div[2]/div[1]/div[2]/div[1]/div[2]/div[1]/div[1]/button[1]"
+      },
+      "hidden": "invisible",
+      "previous": {
+       "ancestors": [
+        [
+         "_inputWrapper_11c85_6"
+        ],
+        [
+         "_wrapper_1xgdp_8"
+        ],
+        [
+         "_condition_1izbt_22"
+        ],
+        [
+         "_conditions_1izbt_22"
+        ],
+        [
+         "_form_1izbt_10"
+        ],
+        [
+         "_container_1izbt_3"
+        ],
+        [
+         "_creationCard_16qcz_1"
+        ],
+        [
+         "_entityCardCarousel_1pqcl_168"
+        ]
+       ],
+       "classes": [
+        "_input_11c85_6"
+       ],
+       "data": {
+        "data-1p-ignore": "true",
+        "data-active-item": "true",
+        "data-bwignore": "true",
+        "data-focus-visible": "true",
+        "data-lpignore": "true"
+       },
+       "heading": "",
+       "landmark": {
+        "name": "",
+        "role": "main"
+       },
+       "layer": "top",
+       "name": "Condition",
+       "rect": [
+        916,
+        236,
+        431,
+        40
+       ],
+       "role": "combobox",
+       "tag": "input",
+       "xpath": "/html/body/div[1]/main[1]/div[1]/div[1]/div[1]/div[4]/div[1]/div[2]/div[1]/div[2]/div[1]/div[2]/div[1]/div[1]/div[1]/div[1]/div[2]/div[1]/input[1]"
+      },
+      "stop": 22,
+      "stops": 24
+     },
+     "occurrence": {
+      "ancestors": [
+       [
+        "_form_1izbt_10"
+       ],
+       [
+        "_container_1izbt_3"
+       ],
+       [
+        "_creationCard_16qcz_1"
+       ],
+       [
+        "_entityCardCarousel_1pqcl_168"
+       ],
+       [
+        "_entityCards_1pqcl_143"
+       ],
+       [
+        "_entityPanel_1pqcl_77"
+       ],
+       [
+        "_container_1pqcl_3"
+       ],
+       [
+        "_booksLayout_1pthq_31"
+       ]
+      ],
+      "classes": [
+       "_button_r6b2u_20",
+       "_small_r6b2u_72",
+       "_secondary_r6b2u_126",
+       "_addConditionButton_1izbt_67"
+      ],
+      "data": {},
+      "heading": "",
+      "landmark": {
+       "name": "",
+       "role": "main"
+      },
+      "layer": "top",
+      "name": "Add condition",
+      "rect": [
+       916,
+       300,
+       32,
+       32
+      ],
+      "role": "button",
+      "tag": "button",
+      "xpath": "/html/body/div[1]/main[1]/div[1]/div[1]/div[1]/div[4]/div[1]/div[2]/div[1]/div[2]/div[1]/div[2]/div[1]/div[1]/button[1]"
+     },
+     "state": "books.rule-create"
+    }
+   ],
+   "evidenceHash": "0b4f731c4873b3a81e1eb86c9b4ab55860fb99dd5bd87768d8390561a5ba9942",
+   "facts": {
+    "criterion": "2.4.7",
+    "criterionName": "Focus Visible",
+    "element": "button \"Add condition\"",
+    "screen": "Create categorization rule",
+    "screens": 1,
+    "stop": "22"
+   },
+   "family": "focus-visible",
+   "guidance": "High on shared components on primary paths.",
+   "issueId": null,
+   "key": "focus-visible:focus-hidden:725b366ec12f",
+   "measured": true,
+   "primary": "books.rule-create",
+   "proposals": [],
+   "rule": "focus-hidden",
+   "screens": 1,
+   "severityDefault": "medium",
+   "source": "scanner",
+   "states": [
+    "books.rule-create"
+   ],
+   "summary": "Tab stop 22 focused the button \"Add condition\", which is invisible, has no size, or sits off screen.",
+   "title": "Tab stops on hidden element: button \"Add condition\""
+  },
+  {
+   "attachments": [],
+   "attempt": 1,
+   "basis": "failure",
+   "criteria": [
+    "4.1.2"
+   ],
+   "evidence": [],
+   "evidenceHash": "ddc40e4e4d1f1fac3e3ca18f90a766ae182c26fb469f39311ccb70ee3fd62545",
+   "facts": {},
+   "family": "role-state",
+   "guidance": "Low for optional ARIA or an invalid autocomplete token; high when aria-hidden hides the whole page.",
+   "issueId": "books.i-fake-disabled-save",
+   "key": "hand:books.i-fake-disabled-save",
+   "measured": false,
+   "primary": "books.rule-create",
+   "proposals": [
+    {
+     "family": "role-state",
+     "finding": "role-state:aria-valid-attr-value:ef390dee7390",
+     "handFound": "books.i-fake-disabled-save",
+     "id": "2c7e48753e5de86f029c9846b50304ccfabb354ada1bdceef333b2a379197630",
+     "overlap": 1
+    },
+    {
+     "family": "role-state",
+     "finding": "role-state:autocomplete-valid:40a304735fca",
+     "handFound": "books.i-fake-disabled-save",
+     "id": "e0ad9886676d7dd99e056f43663bc0c01370234bc9dd3b859b178256d9b448c1",
+     "overlap": 1
+    },
+    {
+     "family": "role-state",
+     "finding": "role-state:autocomplete-valid:a80c2a760f33",
+     "handFound": "books.i-fake-disabled-save",
+     "id": "a00f033a3e6fad34e547f5cf080887b770ed7f4407ce26c4d083eeabbac23c9f",
+     "overlap": 1
+    }
+   ],
+   "rule": "hand-found",
+   "screens": 1,
+   "severityDefault": "medium",
+   "source": "hand-found",
+   "states": [
+    "books.rule-create"
+   ],
+   "summary": "getComputedStyle(Save): opacity '0.4', background-color 'rgb(82, 102, 235)'; button.disabled false; aria-disabled null.",
+   "title": "Rule Save looks disabled but is not"
+  },
+  {
+   "attachments": [],
+   "attempt": 1,
+   "basis": "violation",
+   "criteria": [
+    "1.3.5"
+   ],
+   "evidence": [
+    {
+     "evidence": {
+      "failureSummary": "Fix all of the following:\n  the autocomplete attribute is incorrectly formatted"
+     },
+     "occurrence": {
+      "ancestors": [
+       [
+        "_inputWrapper_11c85_6"
+       ],
+       [
+        "_wrapper_1xgdp_8"
+       ],
+       [
+        "_condition_1izbt_22"
+       ],
+       [
+        "_conditions_1izbt_22"
+       ],
+       [
+        "_form_1izbt_10"
+       ],
+       [
+        "_container_1izbt_3"
+       ],
+       [
+        "_creationCard_16qcz_1"
+       ],
+       [
+        "_entityCardCarousel_1pqcl_168"
+       ]
+      ],
+      "classes": [
+       "_input_11c85_6"
+      ],
+      "data": {
+       "data-1p-ignore": "true",
+       "data-active-item": "true",
+       "data-bwignore": "true",
+       "data-lpignore": "true"
+      },
+      "heading": "",
+      "landmark": {
+       "name": "",
+       "role": "main"
+      },
+      "layer": "top",
+      "name": "Condition",
+      "rect": [
+       916,
+       236,
+       431,
+       40
+      ],
+      "role": "combobox",
+      "tag": "input",
+      "xpath": "/html/body/div[1]/main[1]/div[1]/div[1]/div[1]/div[4]/div[1]/div[2]/div[1]/div[2]/div[1]/div[2]/div[1]/div[1]/div[1]/div[1]/div[2]/div[1]/input[1]"
+     },
+     "state": "books.rule-create"
+    }
+   ],
+   "evidenceHash": "dc356715ebb1eb3254ec7f5b8b1e48c2bc4a87afe165d548c5a15540f52835f1",
+   "facts": {
+    "announced": "combobox \"Condition\" [expanded=false, haspopup=listbox]",
+    "axeSummary": "the autocomplete attribute is incorrectly formatted",
+    "criterion": "1.3.5",
+    "criterionName": "Identify Input Purpose",
+    "element": "combobox \"Condition\"",
+    "rule": "autocomplete-valid",
+    "screen": "Create categorization rule"
+   },
+   "family": "role-state",
+   "guidance": "Low for optional ARIA or an invalid autocomplete token; high when aria-hidden hides the whole page.",
+   "issueId": null,
+   "key": "role-state:autocomplete-valid:40a304735fca",
+   "measured": false,
+   "primary": "books.rule-create",
+   "proposals": [
+    {
+     "family": "role-state",
+     "finding": "role-state:autocomplete-valid:40a304735fca",
+     "handFound": "books.i-fake-disabled-save",
+     "id": "e0ad9886676d7dd99e056f43663bc0c01370234bc9dd3b859b178256d9b448c1",
+     "overlap": 1
+    }
+   ],
+   "rule": "autocomplete-valid",
+   "screens": 1,
+   "severityDefault": "medium",
+   "source": "scanner",
+   "states": [
+    "books.rule-create"
+   ],
+   "summary": "autocomplete-valid: announced as combobox \"Condition\" [expanded=false, haspopup=listbox]. the autocomplete attribute is incorrectly formatted",
+   "title": "Invalid autocomplete value: combobox \"Condition\""
+  },
+  {
+   "attachments": [],
+   "attempt": 1,
+   "basis": "violation",
+   "criteria": [
+    "1.3.5"
+   ],
+   "evidence": [
+    {
+     "evidence": {
+      "failureSummary": "Fix all of the following:\n  the autocomplete attribute is incorrectly formatted"
+     },
+     "occurrence": {
+      "ancestors": [
+       [
+        "_inputWrapper_11c85_6"
+       ],
+       [
+        "_wrapper_1xgdp_8"
+       ],
+       [
+        "_enrichmentSelect_1izbt_91"
+       ],
+       [
+        "_enrichmentRow_1izbt_80"
+       ],
+       [
+        "_enrichment_1izbt_72"
+       ],
+       [
+        "_form_1izbt_10"
+       ],
+       [
+        "_container_1izbt_3"
+       ],
+       [
+        "_creationCard_16qcz_1"
+       ]
+      ],
+      "classes": [
+       "_input_11c85_6"
+      ],
+      "data": {
+       "data-1p-ignore": "true",
+       "data-active-item": "true",
+       "data-bwignore": "true",
+       "data-lpignore": "true"
+      },
+      "heading": "",
+      "landmark": {
+       "name": "",
+       "role": "main"
+      },
+      "layer": "top",
+      "name": "Enrichment",
+      "rect": [
+       940,
+       384,
+       407,
+       40
+      ],
+      "role": "combobox",
+      "tag": "input",
+      "xpath": "/html/body/div[1]/main[1]/div[1]/div[1]/div[1]/div[4]/div[1]/div[2]/div[1]/div[2]/div[1]/div[2]/div[1]/div[1]/div[2]/div[2]/div[1]/div[1]/div[1]/input[1]"
+     },
+     "state": "books.rule-create"
+    }
+   ],
+   "evidenceHash": "dc356715ebb1eb3254ec7f5b8b1e48c2bc4a87afe165d548c5a15540f52835f1",
+   "facts": {
+    "announced": "combobox \"Enrichment\" [expanded=false, haspopup=listbox]",
+    "axeSummary": "the autocomplete attribute is incorrectly formatted",
+    "criterion": "1.3.5",
+    "criterionName": "Identify Input Purpose",
+    "element": "combobox \"Enrichment\"",
+    "rule": "autocomplete-valid",
+    "screen": "Create categorization rule"
+   },
+   "family": "role-state",
+   "guidance": "Low for optional ARIA or an invalid autocomplete token; high when aria-hidden hides the whole page.",
+   "issueId": null,
+   "key": "role-state:autocomplete-valid:a80c2a760f33",
+   "measured": false,
+   "primary": "books.rule-create",
+   "proposals": [
+    {
+     "family": "role-state",
+     "finding": "role-state:autocomplete-valid:a80c2a760f33",
+     "handFound": "books.i-fake-disabled-save",
+     "id": "a00f033a3e6fad34e547f5cf080887b770ed7f4407ce26c4d083eeabbac23c9f",
+     "overlap": 1
+    }
+   ],
+   "rule": "autocomplete-valid",
+   "screens": 1,
+   "severityDefault": "medium",
+   "source": "scanner",
+   "states": [
+    "books.rule-create"
+   ],
+   "summary": "autocomplete-valid: announced as combobox \"Enrichment\" [expanded=false, haspopup=listbox]. the autocomplete attribute is incorrectly formatted",
+   "title": "Invalid autocomplete value: combobox \"Enrichment\""
+  }
+ ],
+ "primaries": [
+  "books.rule-create"
+ ],
+ "reach": {
+  "baseUrl": "https://demo.mercury.com",
+  "data": "data",
+  "map": "build/map.json",
+  "run": "2026-10-03-1525",
+  "workspace": "a11y"
+ },
+ "run": "2026-10-03-1525"
+}

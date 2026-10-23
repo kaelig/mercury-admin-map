@@ -1,0 +1,170 @@
+{
+ "area": "payments",
+ "batch": "verify-266",
+ "findings": [
+  {
+   "attachments": [],
+   "attempt": 1,
+   "basis": "candidate",
+   "criteria": [
+    "2.1.1"
+   ],
+   "evidence": [
+    {
+     "evidence": {
+      "end": "body",
+      "focusable": false,
+      "source": "pointer",
+      "stops": 11
+     },
+     "occurrence": {
+      "ancestors": [
+       [
+        "_dsTabViewVertical_95hq1_49"
+       ],
+       [
+        "_progressBarSection_w6xr5_9"
+       ],
+       [
+        "_container_w6xr5_1",
+        "_responsive_w6xr5_66"
+       ],
+       [
+        "_sidebarContainer_bcpsw_45"
+       ],
+       [
+        "_fullScreenWorkspaceLayout_bcpsw_14",
+        "_fullScreenWorkspaceLayoutBackground_bcpsw_32"
+       ],
+       [
+        "_wrapper_bcpsw_3",
+        "_responsive_bcpsw_88"
+       ],
+       [],
+       [
+        "_main_1gb3b_1"
+       ]
+      ],
+      "classes": [
+       "_bodyDefault_qaod7_40",
+       "_dsTabViewTab_95hq1_9"
+      ],
+      "data": {},
+      "heading": "",
+      "landmark": {
+       "name": "",
+       "role": "main"
+      },
+      "layer": "document",
+      "name": "",
+      "rect": [
+       96,
+       199,
+       142,
+       32
+      ],
+      "role": "generic",
+      "tag": "div",
+      "xpath": "/html/body/div[1]/main[1]/div[1]/div[2]/div[2]/div[1]/div[1]/div[2]/div[1]/div[1]"
+     },
+     "state": "payments.deposit-wire-details"
+    },
+    {
+     "evidence": {
+      "end": "body",
+      "focusable": false,
+      "source": "pointer",
+      "stops": 10
+     },
+     "occurrence": {
+      "ancestors": [
+       [
+        "_dsTabViewVertical_95hq1_49"
+       ],
+       [
+        "_progressBarSection_w6xr5_9"
+       ],
+       [
+        "_container_w6xr5_1"
+       ],
+       [
+        "_sidebarContainer_bcpsw_45"
+       ],
+       [
+        "_fullScreenWorkspaceLayout_bcpsw_14",
+        "_fullScreenWorkspaceLayoutBackground_bcpsw_32"
+       ],
+       [
+        "_wrapper_bcpsw_3"
+       ],
+       [],
+       [
+        "_main_1gb3b_1"
+       ]
+      ],
+      "classes": [
+       "_bodyDefault_qaod7_40",
+       "_dsTabViewTab_95hq1_9"
+      ],
+      "data": {},
+      "heading": "",
+      "landmark": {
+       "name": "",
+       "role": "main"
+      },
+      "layer": "document",
+      "name": "",
+      "rect": [
+       96,
+       199,
+       118,
+       32
+      ],
+      "role": "generic",
+      "tag": "div",
+      "xpath": "/html/body/div[1]/main[1]/div[1]/div[2]/div[2]/div[1]/div[1]/div[2]/div[1]/div[1]"
+     },
+     "state": "accounts.safe-review"
+    }
+   ],
+   "evidenceHash": "485c459d8f0fb5856aedfaedbd0b7f44f0b0b2425a7d6c73e994509261eb86fc",
+   "facts": {
+    "axeSummary": "",
+    "criterion": "2.1.1",
+    "criterionName": "Keyboard",
+    "element": "text in the main landmark",
+    "rule": "not-reached",
+    "screen": "Payment Details (wire)",
+    "stops": "11"
+   },
+   "family": "keyboard",
+   "guidance": "High if a task cannot be completed without a mouse.",
+   "issueId": null,
+   "key": "keyboard:not-reached:c020f7bd51c2",
+   "measured": false,
+   "primary": "payments.deposit-wire-details",
+   "proposals": [],
+   "rule": "not-reached",
+   "screens": 2,
+   "severityDefault": "medium",
+   "source": "scanner",
+   "states": [
+    "payments.deposit-wire-details",
+    "accounts.safe-review"
+   ],
+   "summary": "The Tab walk visited 11 stops and never reached the text in the main landmark, which responds to a click.",
+   "title": "Not reachable by keyboard: text in the main landmark"
+  }
+ ],
+ "primaries": [
+  "payments.deposit-wire-details"
+ ],
+ "reach": {
+  "baseUrl": "https://demo.mercury.com",
+  "data": "data",
+  "map": "build/map.json",
+  "run": "2026-10-03-1525",
+  "workspace": "a11y"
+ },
+ "run": "2026-10-03-1525"
+}

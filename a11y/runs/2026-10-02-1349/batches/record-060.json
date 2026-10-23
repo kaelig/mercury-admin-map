@@ -1,0 +1,58 @@
+{
+ "batch": "record-060",
+ "reach": {
+  "baseUrl": "https://demo.mercury.com",
+  "data": "data",
+  "map": "build/map.json",
+  "run": "2026-10-02-1349",
+  "workspace": "a11y"
+ },
+ "run": "2026-10-02-1349",
+ "states": [
+  {
+   "area": "settings",
+   "draft": "not drafted: its parent had no accepted recipe when the drafter ran",
+   "image": "screens/settings/83-create-webhook-http-error.png",
+   "kind": "validation-error",
+   "labels": [
+    "Click + Create webhook",
+    "Enter an http:// URL and tab away"
+   ],
+   "mutates": true,
+   "note": "An http:// URL shows 'Please enter a valid HTTPS URL (e.g. https://example.com/webhook)'; Create endpoint stays disabled.",
+   "parent": "settings.create-webhook",
+   "state": "settings.create-webhook-http-error",
+   "title": "Create webhook \u2014 http URL rejected"
+  },
+  {
+   "area": "settings",
+   "draft": "not drafted: its parent had no accepted recipe when the drafter ran",
+   "image": "screens/settings/129-referral-sent.png",
+   "kind": "toast",
+   "labels": [
+    "Click Invite via email",
+    "Type an invalid address and press Enter",
+    "Enter a valid address and click Confirm"
+   ],
+   "mutates": true,
+   "note": "Confirm with a valid address closes the modal and shows 'Invite sent'.",
+   "parent": "settings.referral-invalid-email",
+   "state": "settings.referral-sent",
+   "title": "Invite sent toast"
+  },
+  {
+   "area": "settings",
+   "draft": "nothing on settings.personal-security matches {\"click\":{\"name\":\"Remove on a passkey\"}}; the conductor rejected the previous recipe: different record: the hop clicks Remove index 0 (Apple Passwords, first row on the parent), so the dialog asks to remove Apple Passwords; the capture removes 1Password, the second row (index 1)",
+   "image": "screens/settings/125-remove-passkey-confirm.png",
+   "kind": "modal",
+   "labels": [
+    "Click Remove on a passkey"
+   ],
+   "mutates": true,
+   "note": "'Remove passkey' \u2014 'Are you sure you want to remove 1Password? It can\u2019t be used to log in once removed. This cannot be undone.' with Cancel / Remove.",
+   "parent": "settings.personal-security",
+   "state": "settings.remove-passkey-confirm",
+   "title": "Remove passkey confirmation"
+  }
+ ]
+}

@@ -1,0 +1,219 @@
+{
+ "area": "accounts",
+ "batch": "verify-028",
+ "findings": [
+  {
+   "attachments": [],
+   "attempt": 1,
+   "basis": "failure",
+   "criteria": [
+    "2.1.1"
+   ],
+   "evidence": [
+    {
+     "evidence": {
+      "focus": {
+       "ancestors": [
+        [
+         "ReactModal__Overlay",
+         "ReactModal__Overlay--after-open",
+         "_overlay_lo4oy_89",
+         "_backgroundColor_lo4oy_103"
+        ],
+        [
+         "ReactModalPortal"
+        ]
+       ],
+       "classes": [
+        "ReactModal__Content",
+        "ReactModal__Content--after-open",
+        "_modal_lo4oy_73"
+       ],
+       "data": {},
+       "heading": "Credit Card",
+       "landmark": null,
+       "layer": "document",
+       "name": "",
+       "rect": [
+        496,
+        210,
+        448,
+        480
+       ],
+       "role": "dialog",
+       "tag": "div",
+       "xpath": "/html/body/div[11]/div[1]/div[1]"
+      },
+      "stops": 4,
+      "trace": [
+       {
+        "focus": {
+         "label": "Make a credit payment Once confirmed, your payment will be applied to your credi",
+         "tag": "div",
+         "xpath": "/html/body/div[11]/div[1]/div[1]"
+        },
+        "key": "start",
+        "where": "trigger"
+       },
+       {
+        "focus": {
+         "label": "12,505.87",
+         "tag": "input",
+         "xpath": "/html/body/div[11]/div[1]/div[1]/div[1]/form[1]/div[1]/div[1]/div[1]/div[1]/div[1]/div[1]/input[1]"
+        },
+        "key": "Tab",
+        "where": "outside"
+       },
+       {
+        "focus": {
+         "label": "Ops / Payroll $2,023,267.12 / Checking ••1038",
+         "tag": "button",
+         "xpath": "/html/body/div[11]/div[1]/div[1]/div[1]/form[1]/div[1]/div[2]/div[1]/div[1]/button[1]"
+        },
+        "key": "Tab",
+        "where": "outside"
+       },
+       {
+        "focus": {
+         "label": "Go back",
+         "tag": "button",
+         "xpath": "/html/body/div[11]/div[1]/div[1]/div[1]/form[1]/div[1]/div[3]/button[1]"
+        },
+        "key": "Tab",
+        "where": "outside"
+       },
+       {
+        "focus": {
+         "label": "Review",
+         "tag": "button",
+         "xpath": "/html/body/div[11]/div[1]/div[1]/div[1]/form[1]/div[1]/div[3]/button[2]"
+        },
+        "key": "Tab",
+        "where": "trigger"
+       },
+       {
+        "focus": "body",
+        "key": "Enter",
+        "where": "body"
+       },
+       {
+        "focus": {
+         "label": "Make a credit payment Once confirmed, your payment will be applied to your credi",
+         "tag": "div",
+         "xpath": "/html/body/div[11]/div[1]/div[1]"
+        },
+        "key": "focus",
+        "where": "outside"
+       },
+       {
+        "focus": {
+         "label": "Make a credit payment Once confirmed, your payment will be applied to your credi",
+         "tag": "div",
+         "xpath": "/html/body/div[11]/div[1]/div[1]"
+        },
+        "key": "Space",
+        "where": "outside"
+       }
+      ]
+     },
+     "occurrence": {
+      "ancestors": [
+       [
+        "_buttonContainer_1e8hk_73"
+       ],
+       [
+        "_container_1e8hk_6",
+        "_setPaymentStep_1e8hk_24"
+       ],
+       [],
+       [
+        "_large_kwlx6_9",
+        "_noHover_3n0se_28",
+        "_shadow_3n0se_25",
+        "_raisedBackground_3n0se_45",
+        "_card_lo4oy_4",
+        "_defaultPadding_lo4oy_27",
+        "_small_lo4oy_11"
+       ],
+       [
+        "ReactModal__Content",
+        "ReactModal__Content--after-open",
+        "_modal_lo4oy_73"
+       ],
+       [
+        "ReactModal__Overlay",
+        "ReactModal__Overlay--after-open",
+        "_overlay_lo4oy_89",
+        "_backgroundColor_lo4oy_103"
+       ],
+       [
+        "ReactModalPortal"
+       ]
+      ],
+      "classes": [
+       "_button_r6b2u_20",
+       "_large_r6b2u_88",
+       "_primary_r6b2u_104",
+       "_confirmButton_1e8hk_78",
+       "session-replay-unmask"
+      ],
+      "data": {},
+      "heading": "Credit Card",
+      "landmark": {
+       "name": "",
+       "role": "form"
+      },
+      "layer": "document",
+      "name": "Review",
+      "rect": [
+       778,
+       596,
+       126,
+       40
+      ],
+      "role": "button",
+      "tag": "button",
+      "xpath": "/html/body/div[11]/div[1]/div[1]/div[1]/form[1]/div[1]/div[3]/button[2]"
+     },
+     "state": "accounts.pay-credit-review"
+    }
+   ],
+   "evidenceHash": "9e3b5d75794b1506d8c9c9cbea4e76444a1fafe0623eafe410c0b2e1d612f0f0",
+   "facts": {
+    "criterion": "2.1.1",
+    "criterionName": "Keyboard",
+    "element": "button \"Review\"",
+    "overlay": "unnamed dialog",
+    "screen": "Credit payment review",
+    "stops": "4"
+   },
+   "family": "dialog-trigger",
+   "guidance": "Lower only when an equivalent keyboard path exists.",
+   "issueId": null,
+   "key": "dialog-trigger:dialog-trigger-not-operable:35b4c96d5693",
+   "measured": false,
+   "primary": "accounts.pay-credit-review",
+   "proposals": [],
+   "rule": "dialog-trigger-not-operable",
+   "screens": 1,
+   "severityDefault": "high",
+   "source": "scanner",
+   "states": [
+    "accounts.pay-credit-review"
+   ],
+   "summary": "Tab focused the button \"Review\", but neither Enter nor Space opened the unnamed dialog.",
+   "title": "Opens only with a mouse: button \"Review\""
+  }
+ ],
+ "primaries": [
+  "accounts.pay-credit-review"
+ ],
+ "reach": {
+  "baseUrl": "https://demo.mercury.com",
+  "data": "data",
+  "map": "build/map.json",
+  "run": "2026-10-03-1525",
+  "workspace": "a11y"
+ },
+ "run": "2026-10-03-1525"
+}

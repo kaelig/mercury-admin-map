@@ -1,0 +1,44 @@
+{
+ "batch": "record-118",
+ "reach": {
+  "baseUrl": "https://demo.mercury.com",
+  "data": "data",
+  "map": "build/map.json",
+  "run": "2026-10-02-1349",
+  "workspace": "a11y"
+ },
+ "run": "2026-10-02-1349",
+ "states": [
+  {
+   "area": "home",
+   "draft": "not drafted: its parent had no accepted recipe when the drafter ran; a previous recorder failed: second replay: home.command-card-proposal hop 1: wait {\"role\":\"button\",\"name\":\"Confirm\"}: no element matches. Parent chain (command-question-2, command-restrictions) is flaky across replays: earlier attempts failed in parent hops (option Monthly missing, fill timeout).",
+   "image": "screens/home/83-command-card-proposal.png",
+   "kind": "form-state",
+   "labels": [
+    "Click 'Issue new card'",
+    "Enter 500 and submit",
+    "Choose 'Monthly'",
+    "Enter 'Software only' and submit"
+   ],
+   "mutates": true,
+   "note": "Answers are echoed in a summary card, then the 'Issue debit card' proposal: the card has no name, so 'Jane Black' shows as both title and cardholder; $500.00 per month, Virtual Debit, with Make edits / Cancel / Confirm.",
+   "parent": "home.command-restrictions",
+   "state": "home.command-card-proposal",
+   "title": "Command \u2014 Issue debit card proposal"
+  },
+  {
+   "area": "home",
+   "draft": "not drafted: its parent had no accepted recipe when the drafter ran; the conductor rejected the previous recipe: extra layer: the Bruce Collins invite detail panel (Remove Invite / Resend Invite) is still open over Settings > Team; the capture shows the plain Team list; a previous recorder failed: review: below-threshold. Clicking Confirm changes replays to Settings > Team with the Settings sidebar and an open invite detail panel; the capture shows the Team list under the main app nav. Reaching it would need actions no label records (closing the detail panel, navigating through the main nav).",
+   "image": "screens/home/46-task-invite-confirmed.png",
+   "kind": "confirmation",
+   "labels": [
+    "Click Confirm changes"
+   ],
+   "mutates": true,
+   "note": "Confirm changes returns to Settings > Team, listing members with role badges.",
+   "parent": "home.task-invite-review",
+   "state": "home.task-invite-confirmed",
+   "title": "Invite approved, Team list"
+  }
+ ]
+}

@@ -1,0 +1,254 @@
+{
+ "advisory": [],
+ "findings": [
+  {
+   "basis": "violation",
+   "criteria": [
+    "1.4.3"
+   ],
+   "evidenceHash": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+   "facts": {
+    "bg": "#ffffff",
+    "criterion": "1.4.3",
+    "criterionName": "Contrast (Minimum)",
+    "element": "text \"Pending\"",
+    "fg": "#9d9da8",
+    "ratio": "2.85",
+    "required": "4.5",
+    "rule": "color-contrast",
+    "screen": "Cards",
+    "screens": 3
+   },
+   "family": "contrast",
+   "issueId": null,
+   "key": "contrast:color-contrast:0a1b2c3d4e5f",
+   "occurrences": [
+    {
+     "index": 0,
+     "state": "cards.detail"
+    },
+    {
+     "index": 0,
+     "state": "cards.index"
+    },
+    {
+     "index": 0,
+     "state": "settings.tokens"
+    }
+   ],
+   "primary": "cards.index",
+   "recordSig": null,
+   "rule": "color-contrast",
+   "sample": [
+    "cards.index",
+    "settings.tokens"
+   ],
+   "severityDefault": "medium",
+   "source": "scanner",
+   "states": [
+    "cards.detail",
+    "cards.index",
+    "settings.tokens"
+   ],
+   "summary": "axe color-contrast: #9d9da8 on #ffffff measures 2.85:1; AA needs 4.5:1.",
+   "title": "Low contrast: text \"Pending\""
+  },
+  {
+   "basis": "failure",
+   "criteria": [
+    "2.4.7"
+   ],
+   "evidenceHash": "eeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeee",
+   "facts": {},
+   "family": "focus-visible",
+   "issueId": null,
+   "key": "focus-visible:focus-not-visible:4d5e6f7a8b9c",
+   "occurrences": [
+    {
+     "index": 1,
+     "state": "home.index"
+    }
+   ],
+   "primary": "home.index",
+   "recordSig": null,
+   "rule": "focus-not-visible",
+   "sample": [
+    "home.index"
+   ],
+   "severityDefault": "medium",
+   "source": "scanner",
+   "states": [
+    "home.index"
+   ],
+   "summary": "Tab walk: stop 4 changed no pixels.",
+   "title": "No visible focus: link \"Help\""
+  },
+  {
+   "basis": "failure",
+   "criteria": [
+    "2.1.1",
+    "4.1.2"
+   ],
+   "evidenceHash": "ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff",
+   "facts": {},
+   "family": "keyboard",
+   "issueId": "accounts.i-tabs-not-tabs",
+   "key": "hand:accounts.i-tabs-not-tabs",
+   "occurrences": [],
+   "primary": "accounts.index",
+   "recordSig": null,
+   "rule": "hand-found",
+   "sample": [
+    "accounts.index",
+    "accounts.treasury"
+   ],
+   "severityDefault": "medium",
+   "source": "hand-found",
+   "states": [
+    "accounts.index",
+    "accounts.treasury"
+   ],
+   "summary": "Tab bars are divs with click handlers and no tabindex.",
+   "title": "Tabs and inline actions are clickable divs"
+  },
+  {
+   "basis": "failure",
+   "criteria": [
+    "4.1.2"
+   ],
+   "evidenceHash": "0000000000000000000000000000000000000000000000000000000000000000",
+   "facts": {},
+   "family": "name",
+   "issueId": "settings.i-unnamed-row-buttons",
+   "key": "hand:settings.i-unnamed-row-buttons",
+   "occurrences": [],
+   "primary": "settings.tokens",
+   "recordSig": null,
+   "rule": "hand-found",
+   "sample": [
+    "settings.tokens",
+    "settings.token-menu"
+   ],
+   "severityDefault": "medium",
+   "source": "hand-found",
+   "states": [
+    "settings.token-menu",
+    "settings.tokens"
+   ],
+   "summary": "Row menu buttons have no aria-label.",
+   "title": "API token row menus have no accessible name"
+  },
+  {
+   "basis": "failure",
+   "criteria": [
+    "2.1.2"
+   ],
+   "evidenceHash": "cccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccc",
+   "facts": {},
+   "family": "keyboard-trap",
+   "issueId": null,
+   "key": "keyboard-trap:keyboard-trap:2b3c4d5e6f7a",
+   "occurrences": [
+    {
+     "index": 0,
+     "state": "cards.edit-limit-modal"
+    }
+   ],
+   "primary": "cards.edit-limit-modal",
+   "recordSig": null,
+   "rule": "keyboard-trap",
+   "sample": [
+    "cards.edit-limit-modal"
+   ],
+   "severityDefault": "high",
+   "source": "scanner",
+   "states": [
+    "cards.edit-limit-modal"
+   ],
+   "summary": "Tab walk: focus stayed inside the date picker for 40 presses.",
+   "title": "Keyboard trap in dialog \"Edit card limits\""
+  },
+  {
+   "basis": "violation",
+   "criteria": [
+    "4.1.2"
+   ],
+   "evidenceHash": "bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb",
+   "facts": {
+    "element": "button in \"API Tokens\""
+   },
+   "family": "name",
+   "issueId": "settings.i-a11y-name-button-in-api-tokens",
+   "key": "name:button-name:1a2b3c4d5e6f",
+   "occurrences": [
+    {
+     "index": 1,
+     "state": "settings.tokens"
+    }
+   ],
+   "primary": "settings.tokens",
+   "recordSig": null,
+   "rule": "button-name",
+   "sample": [
+    "settings.tokens"
+   ],
+   "severityDefault": "medium",
+   "source": "scanner",
+   "states": [
+    "settings.tokens"
+   ],
+   "summary": "axe button-name: Element does not have inner text that is visible to screen readers",
+   "title": "Missing or unclear name: button in \"API Tokens\""
+  },
+  {
+   "basis": "violation",
+   "criteria": [
+    "2.5.8"
+   ],
+   "evidenceHash": "dddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddd",
+   "facts": {
+    "offset": "18",
+    "size": "18×18"
+   },
+   "family": "target-size",
+   "issueId": null,
+   "key": "target-size:target-size:3c4d5e6f7a8b",
+   "occurrences": [
+    {
+     "index": 1,
+     "state": "cards.index"
+    },
+    {
+     "index": 0,
+     "state": "home.index"
+    }
+   ],
+   "primary": "cards.index",
+   "recordSig": null,
+   "rule": "target-size",
+   "sample": [
+    "cards.index",
+    "home.index"
+   ],
+   "severityDefault": "low",
+   "source": "scanner",
+   "states": [
+    "cards.index",
+    "home.index"
+   ],
+   "summary": "axe target-size: 18×18 with an 18px clear circle; AA needs 24.",
+   "title": "Small target: button \"Filter\""
+  }
+ ],
+ "flags": [],
+ "proposals": [
+  {
+   "family": "name",
+   "finding": "name:button-name:1a2b3c4d5e6f",
+   "handFound": "settings.i-unnamed-row-buttons",
+   "id": "9901629559316e5f5f4093e8504520fc06b1e9ca5755251916d802c8cceb8410",
+   "overlap": 0.5
+  }
+ ],
+ "run": "2026-10-02-1400"
+}

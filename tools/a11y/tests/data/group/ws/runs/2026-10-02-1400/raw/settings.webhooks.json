@@ -1,0 +1,99 @@
+{
+ "build": "fixture",
+ "checks": {
+  "axe": {
+   "inapplicable": [],
+   "rulesRan": [
+    "button-name",
+    "color-contrast"
+   ]
+  }
+ },
+ "env": {
+  "axe": "4.13.0",
+  "chromium": "fixture",
+  "colorScheme": "light",
+  "dpr": 1,
+  "locale": "en-US",
+  "playwright": "1.62.1",
+  "reducedMotion": "reduce",
+  "timezone": "America/Los_Angeles",
+  "viewport": [
+   1440,
+   900
+  ]
+ },
+ "families": {
+  "completed": [
+   "axe",
+   "records",
+   "interactive",
+   "target"
+  ],
+  "incomplete": []
+ },
+ "frames": [],
+ "harness": "0000000000000000",
+ "kind": "page",
+ "layer": {
+  "name": "",
+  "role": "document",
+  "scope": "document",
+  "xpath": "/html"
+ },
+ "reason": null,
+ "reasonDetail": null,
+ "recipeHash": "0000000000000000000000000000000000000000000000000000000000000000",
+ "records": [],
+ "results": [
+  {
+   "basis": "violation",
+   "check": "axe",
+   "criteria": [
+    "4.1.2"
+   ],
+   "evidence": {
+    "failureSummary": "Fix any of the following:\n  Element does not have inner text that is visible to screen readers\n  aria-label attribute does not exist or is empty"
+   },
+   "messageKey": null,
+   "occurrence": {
+    "ancestors": [
+     [
+      "_header_web33_2"
+     ],
+     [
+      "_settingsPage_set99_1"
+     ]
+    ],
+    "classes": [
+     "_iconButton_btn01_5",
+     "fa",
+     "fa-ellipsis",
+     "svg-inline--fa"
+    ],
+    "data": {},
+    "heading": "Webhooks",
+    "landmark": {
+     "name": "",
+     "role": "main"
+    },
+    "layer": "document",
+    "name": "",
+    "rect": [
+     10,
+     10,
+     24,
+     24
+    ],
+    "role": "button",
+    "tag": "button",
+    "xpath": "/html/body/div/main/header/button[1]"
+   },
+   "rule": "button-name"
+  }
+ ],
+ "schema": 1,
+ "state": "settings.webhooks",
+ "status": "audited",
+ "url": "/settings/webhooks"
+}

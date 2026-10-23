@@ -1,0 +1,406 @@
+{
+ "area": "invoicing",
+ "batch": "verify-489",
+ "findings": [
+  {
+   "attachments": [],
+   "attempt": 1,
+   "basis": "candidate",
+   "criteria": [
+    "3.3.2"
+   ],
+   "evidence": [
+    {
+     "evidence": {
+      "description": "",
+      "name": "0.00",
+      "role": "textbox",
+      "states": {},
+      "template": "textbox \"<amount>\""
+     },
+     "occurrence": {
+      "ancestors": [
+       [
+        "_inputBox_q7hf7_93",
+        "_hasValue_q7hf7_171"
+       ],
+       [
+        "_inputBoxWrapper_q7hf7_93"
+       ],
+       [
+        "_textInputWrapper_q7hf7_24"
+       ],
+       [
+        "_provideDSTextInput_q7hf7_6"
+       ],
+       [],
+       [
+        "_row_2qrq0_16"
+       ],
+       [],
+       []
+      ],
+      "classes": [
+       "_input_q7hf7_93",
+       "_rightAlignedInput_2qrq0_87"
+      ],
+      "data": {},
+      "heading": "Edit Invoice",
+      "landmark": {
+       "name": "",
+       "role": "main"
+      },
+      "layer": "document",
+      "name": "0.00",
+      "rect": [
+       454,
+       450,
+       133,
+       24
+      ],
+      "role": "textbox",
+      "tag": "input",
+      "xpath": "/html/body/div[1]/main[1]/div[1]/div[2]/div[2]/div[3]/div[1]/div[1]/div[1]/div[1]/div[1]/div[1]/div[2]/div[2]/div[2]/div[2]/div[1]/div[1]/div[1]/div[1]/div[4]/div[1]/div[1]/div[1]/div[1]/input[1]"
+     },
+     "state": "invoicing.edit-invoice"
+    },
+    {
+     "evidence": {
+      "description": "",
+      "name": "0.00",
+      "role": "textbox",
+      "states": {},
+      "template": "textbox \"<amount>\""
+     },
+     "occurrence": {
+      "ancestors": [
+       [
+        "_inputBox_q7hf7_93",
+        "_hasValue_q7hf7_171"
+       ],
+       [
+        "_inputBoxWrapper_q7hf7_93"
+       ],
+       [
+        "_textInputWrapper_q7hf7_24"
+       ],
+       [
+        "_provideDSTextInput_q7hf7_6"
+       ],
+       [
+        "_row_1wsk7_22",
+        "_hideQuantity_1wsk7_29"
+       ],
+       [],
+       [
+        "ReactVirtualized__Grid__innerScrollContainer"
+       ],
+       [
+        "ReactVirtualized__Grid",
+        "ReactVirtualized__List"
+       ]
+      ],
+      "classes": [
+       "_input_q7hf7_93",
+       "_rightAlignedInput_1wsk7_181"
+      ],
+      "data": {},
+      "heading": "Categorization",
+      "landmark": {
+       "name": "",
+       "role": "form"
+      },
+      "layer": "document",
+      "name": "0.00",
+      "rect": [
+       432,
+       396,
+       195,
+       24
+      ],
+      "role": "textbox",
+      "tag": "input",
+      "xpath": "/html/body/div[1]/main[1]/div[1]/div[2]/div[2]/div[1]/div[2]/section[2]/div[1]/div[1]/form[1]/div[1]/div[2]/div[2]/div[1]/div[1]/div[1]/div[1]/div[1]/div[1]/div[2]/div[2]/div[1]/div[1]/div[1]/input[1]"
+     },
+     "state": "billpay.pay-multiple-gl"
+    }
+   ],
+   "evidenceHash": "49e77efd9676a7e2c855ca657b3454042e2e5a70948b687508d536a7b070aa7e",
+   "facts": {
+    "announced": "textbox \"<amount>\"",
+    "axeSummary": "",
+    "criterion": "3.3.2",
+    "criterionName": "Labels or Instructions",
+    "element": "textbox \"<amount>\"",
+    "rule": "announced-as",
+    "screen": "Edit Invoice"
+   },
+   "family": "name",
+   "guidance": "High for an unnamed form control or the sole primary action.",
+   "issueId": null,
+   "key": "name:announced-as:0daff9962af9",
+   "measured": false,
+   "primary": "invoicing.edit-invoice",
+   "proposals": [],
+   "rule": "announced-as",
+   "screens": 12,
+   "severityDefault": "medium",
+   "source": "scanner",
+   "states": [
+    "invoicing.edit-invoice",
+    "billpay.pay-multiple-gl"
+   ],
+   "summary": "announced-as: announced as textbox \"<amount>\".",
+   "title": "Missing or unclear name: textbox \"<amount>\""
+  },
+  {
+   "attachments": [],
+   "attempt": 1,
+   "basis": "candidate",
+   "criteria": [
+    "4.1.2"
+   ],
+   "evidence": [
+    {
+     "evidence": {
+      "description": "",
+      "name": "",
+      "role": "switch",
+      "states": {
+       "checked": true,
+       "disabled": true
+      },
+      "template": "switch \"\" [checked=true, disabled=true]"
+     },
+     "occurrence": {
+      "ancestors": [
+       [
+        "_dsToggleSwitchWrapper_3k8xy_3",
+        "_checked_3k8xy_50",
+        "_leftLabel_3k8xy_39"
+       ],
+       [
+        "_accountNumberToggle_1fapw_9"
+       ],
+       [],
+       [],
+       [
+        "_contentWrapper_kogp0_1"
+       ],
+       [
+        "_wrapper_1ojdq_8"
+       ],
+       [],
+       [
+        "_leftInnerContainer_12jyu_3"
+       ]
+      ],
+      "classes": [
+       "_switch_3k8xy_11"
+      ],
+      "data": {},
+      "heading": "Invoice totals",
+      "landmark": {
+       "name": "",
+       "role": "main"
+      },
+      "layer": "document",
+      "name": "",
+      "rect": [
+       560,
+       898,
+       40,
+       20
+      ],
+      "role": "switch",
+      "tag": "input",
+      "xpath": "/html/body/div[1]/main[1]/div[1]/div[2]/div[2]/div[3]/div[1]/div[1]/div[1]/div[1]/div[1]/div[1]/div[2]/div[2]/div[4]/div[1]/div[2]/div[2]/input[1]"
+     },
+     "state": "invoicing.edit-invoice"
+    }
+   ],
+   "evidenceHash": "f5e23150d1b4463297f3f65c38da88699b331ea6eae427c59c511fde84b8d089",
+   "facts": {
+    "announced": "switch \"\" [checked=true, disabled=true]",
+    "axeSummary": "",
+    "criterion": "4.1.2",
+    "criterionName": "Name, Role, Value",
+    "element": "switch in \"Invoice totals\"",
+    "rule": "announced-as",
+    "screen": "Edit Invoice"
+   },
+   "family": "name",
+   "guidance": "High for an unnamed form control or the sole primary action.",
+   "issueId": null,
+   "key": "name:announced-as:157a28e96c03",
+   "measured": false,
+   "primary": "invoicing.edit-invoice",
+   "proposals": [],
+   "rule": "announced-as",
+   "screens": 1,
+   "severityDefault": "medium",
+   "source": "scanner",
+   "states": [
+    "invoicing.edit-invoice"
+   ],
+   "summary": "announced-as: announced as switch \"\" [checked=true, disabled=true].",
+   "title": "Missing or unclear name: switch in \"Invoice totals\""
+  },
+  {
+   "attachments": [],
+   "attempt": 1,
+   "basis": "candidate",
+   "criteria": [
+    "3.3.2"
+   ],
+   "evidence": [
+    {
+     "evidence": {
+      "description": "",
+      "name": "1",
+      "role": "textbox",
+      "states": {},
+      "template": "textbox \"<n>\""
+     },
+     "occurrence": {
+      "ancestors": [
+       [
+        "_inputBox_q7hf7_93",
+        "_hasValue_q7hf7_171"
+       ],
+       [
+        "_inputBoxWrapper_q7hf7_93"
+       ],
+       [
+        "_textInputWrapper_q7hf7_24"
+       ],
+       [
+        "_provideDSTextInput_q7hf7_6"
+       ],
+       [],
+       [
+        "_row_2qrq0_16"
+       ],
+       [],
+       []
+      ],
+      "classes": [
+       "_input_q7hf7_93",
+       "_rightAlignedInput_2qrq0_87"
+      ],
+      "data": {},
+      "heading": "Edit Invoice",
+      "landmark": {
+       "name": "",
+       "role": "main"
+      },
+      "layer": "document",
+      "name": "1",
+      "rect": [
+       373,
+       450,
+       32,
+       24
+      ],
+      "role": "textbox",
+      "tag": "input",
+      "xpath": "/html/body/div[1]/main[1]/div[1]/div[2]/div[2]/div[3]/div[1]/div[1]/div[1]/div[1]/div[1]/div[1]/div[2]/div[2]/div[2]/div[2]/div[1]/div[1]/div[1]/div[1]/div[3]/div[1]/div[1]/div[1]/div[1]/input[1]"
+     },
+     "state": "invoicing.edit-invoice"
+    },
+    {
+     "evidence": {
+      "description": "",
+      "name": "1",
+      "role": "textbox",
+      "states": {},
+      "template": "textbox \"<n>\""
+     },
+     "occurrence": {
+      "ancestors": [
+       [
+        "_inputBox_q7hf7_93",
+        "_hasValue_q7hf7_171"
+       ],
+       [
+        "_inputBoxWrapper_q7hf7_93"
+       ],
+       [
+        "_textInputWrapper_q7hf7_24"
+       ],
+       [
+        "_provideDSTextInput_q7hf7_6"
+       ],
+       [],
+       [
+        "_row_2qrq0_16"
+       ],
+       [],
+       []
+      ],
+      "classes": [
+       "_input_q7hf7_93",
+       "_rightAlignedInput_2qrq0_87"
+      ],
+      "data": {},
+      "heading": "Invoice set up",
+      "landmark": {
+       "name": "",
+       "role": "main"
+      },
+      "layer": "document",
+      "name": "1",
+      "rect": [
+       373,
+       450,
+       32,
+       24
+      ],
+      "role": "textbox",
+      "tag": "input",
+      "xpath": "/html/body/div[1]/main[1]/div[1]/div[2]/div[2]/div[3]/div[1]/div[1]/div[1]/div[1]/div[1]/div[1]/div[2]/div[2]/div[2]/div[2]/div[1]/div[1]/div[1]/div[1]/div[2]/div[1]/div[1]/div[1]/div[1]/input[1]"
+     },
+     "state": "invoicing.create-setup-error"
+    }
+   ],
+   "evidenceHash": "c05280e322be24d1a296b01b1ead348f3abe5438058a006cd56a5a9b81540867",
+   "facts": {
+    "announced": "textbox \"<n>\"",
+    "axeSummary": "",
+    "criterion": "3.3.2",
+    "criterionName": "Labels or Instructions",
+    "element": "textbox \"<n>\"",
+    "rule": "announced-as",
+    "screen": "Edit Invoice"
+   },
+   "family": "name",
+   "guidance": "High for an unnamed form control or the sole primary action.",
+   "issueId": null,
+   "key": "name:announced-as:c656254ac486",
+   "measured": false,
+   "primary": "invoicing.edit-invoice",
+   "proposals": [],
+   "rule": "announced-as",
+   "screens": 11,
+   "severityDefault": "medium",
+   "source": "scanner",
+   "states": [
+    "invoicing.edit-invoice",
+    "invoicing.create-setup-error"
+   ],
+   "summary": "announced-as: announced as textbox \"<n>\".",
+   "title": "Missing or unclear name: textbox \"<n>\""
+  }
+ ],
+ "primaries": [
+  "invoicing.edit-invoice"
+ ],
+ "reach": {
+  "baseUrl": "https://demo.mercury.com",
+  "data": "data",
+  "map": "build/map.json",
+  "run": "2026-10-03-1525",
+  "workspace": "a11y"
+ },
+ "run": "2026-10-03-1525"
+}

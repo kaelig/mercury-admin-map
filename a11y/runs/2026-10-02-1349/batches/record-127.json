@@ -1,0 +1,32 @@
+{
+ "batch": "record-127",
+ "reach": {
+  "baseUrl": "https://demo.mercury.com",
+  "data": "data",
+  "map": "build/map.json",
+  "run": "2026-10-02-1349",
+  "workspace": "a11y"
+ },
+ "run": "2026-10-02-1349",
+ "states": [
+  {
+   "area": "cards",
+   "draft": "not drafted: its parent had no accepted recipe when the drafter ran",
+   "image": "screens/cards/41-view-new-card.png",
+   "kind": "drawer",
+   "labels": [
+    "Clear nickname, click Create card",
+    "Open Control type",
+    "Choose Spending limit",
+    "Open Merchant controls",
+    "Keep None, click Create card",
+    "Click View card details"
+   ],
+   "mutates": true,
+   "note": "View card details lands on the Cards list with the existing AWS billing \u2022\u20220330 card open, not a new 'Marketing' card; the list has no new row.",
+   "parent": "cards.issue-card-success",
+   "state": "cards.view-new-card",
+   "title": "View card details after creation"
+  }
+ ]
+}

@@ -1,0 +1,115 @@
+{
+ "area": "payments",
+ "batch": "verify-506",
+ "findings": [
+  {
+   "attachments": [],
+   "attempt": 1,
+   "basis": "candidate",
+   "criteria": [
+    "4.1.2"
+   ],
+   "evidence": [
+    {
+     "evidence": {
+      "description": "",
+      "name": "",
+      "role": "listbox",
+      "states": {},
+      "template": "listbox \"\""
+     },
+     "occurrence": {
+      "ancestors": [
+       [],
+       [
+        "_formWrapper_17xei_3"
+       ],
+       [],
+       [
+        "_routeContainer_15al5_228"
+       ],
+       [
+        "_routes_15al5_220"
+       ],
+       [
+        "_routeSection_15al5_207"
+       ],
+       [
+        "_container_15al5_4",
+        "_container_10wfz_3",
+        "_closed_15al5_75"
+       ],
+       [
+        "_dropzone_15al5_74"
+       ]
+      ],
+      "classes": [
+       "_popover_17c8a_5",
+       "_zIndexDefault_1fl3q_5",
+       "_currencyPopover_qpczo_3"
+      ],
+      "data": {
+       "data-dialog": "",
+       "data-enter": "true",
+       "data-open": "true"
+      },
+      "heading": "Recipient",
+      "landmark": {
+       "name": "",
+       "role": "form"
+      },
+      "layer": "document",
+      "name": "",
+      "rect": [
+       440,
+       664,
+       560,
+       230
+      ],
+      "role": "listbox",
+      "tag": "div",
+      "xpath": "/html/body/div[1]/main[1]/div[1]/div[2]/div[2]/div[1]/div[2]/section[2]/div[1]/div[1]/form[1]/div[1]/div[4]/div[1]"
+     },
+     "state": "payments.send-method-intl-wire"
+    }
+   ],
+   "evidenceHash": "066a1e5e0b4ffb487e58d94fadcc218cdb391eac055ff8c29e5cab6994e7e9ae",
+   "facts": {
+    "announced": "listbox \"\"",
+    "axeSummary": "",
+    "criterion": "4.1.2",
+    "criterionName": "Name, Role, Value",
+    "element": "listbox in \"Recipient\"",
+    "rule": "announced-as",
+    "screen": "Send: International wire currency"
+   },
+   "family": "name",
+   "guidance": "High for an unnamed form control or the sole primary action.",
+   "issueId": null,
+   "key": "name:announced-as:6f3ddb4558cb",
+   "measured": false,
+   "primary": "payments.send-method-intl-wire",
+   "proposals": [],
+   "rule": "announced-as",
+   "screens": 1,
+   "severityDefault": "medium",
+   "source": "scanner",
+   "states": [
+    "payments.send-method-intl-wire"
+   ],
+   "summary": "announced-as: announced as listbox \"\".",
+   "title": "Missing or unclear name: listbox in \"Recipient\""
+  }
+ ],
+ "primaries": [
+  "payments.send-method-intl-wire"
+ ],
+ "reach": {
+  "baseUrl": "https://demo.mercury.com",
+  "data": "data",
+  "map": "build/map.json",
+  "run": "2026-10-03-1525",
+  "workspace": "a11y"
+ },
+ "run": "2026-10-03-1525"
+}

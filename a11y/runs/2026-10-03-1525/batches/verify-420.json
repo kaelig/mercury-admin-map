@@ -1,0 +1,115 @@
+{
+ "area": "accounts",
+ "batch": "verify-420",
+ "findings": [
+  {
+   "attachments": [],
+   "attempt": 1,
+   "basis": "candidate",
+   "criteria": [
+    "3.3.2"
+   ],
+   "evidence": [
+    {
+     "evidence": {
+      "description": "",
+      "name": "0.00",
+      "role": "textbox",
+      "states": {},
+      "template": "textbox \"<amount>\""
+     },
+     "occurrence": {
+      "ancestors": [
+       [
+        "_inputLine_1clpw_53"
+       ],
+       [
+        "_labelAndInputWrapper_1clpw_19"
+       ],
+       [
+        "_provideLabeledLineInput_1clpw_4"
+       ],
+       [
+        "_provideLabeledLineInputWrapper_1clpw_4",
+        "_amountField_1ghbz_18"
+       ],
+       [],
+       [
+        "_drawFundsLayoutWrapper_1ghbz_1"
+       ],
+       [
+        "_contentDiv_bcpsw_53",
+        "_contentDivHeightPreset_bcpsw_62"
+       ],
+       [
+        "_fullScreenWorkspaceLayout_bcpsw_14",
+        "_fullScreenWorkspaceLayoutBackground_bcpsw_32"
+       ]
+      ],
+      "classes": [
+       "_input_1clpw_53",
+       "_xlarge_1clpw_131",
+       "_amountFieldInputEmpty_18135_3",
+       "_input_13xp4_1"
+      ],
+      "data": {},
+      "heading": "",
+      "landmark": {
+       "name": "",
+       "role": "form"
+      },
+      "layer": "document",
+      "name": "0.00",
+      "rect": [
+       543,
+       196,
+       377,
+       49
+      ],
+      "role": "textbox",
+      "tag": "input",
+      "xpath": "/html/body/div[1]/main[1]/div[1]/div[1]/div[2]/div[2]/div[3]/div[1]/form[1]/div[2]/div[1]/div[1]/div[1]/input[1]"
+     },
+     "state": "accounts.vd-request-funds"
+    }
+   ],
+   "evidenceHash": "603d7cf67bd6e6dfe08bfef2a046e24066303dc363baacbed3e491ffe2b17054",
+   "facts": {
+    "announced": "textbox \"<amount>\"",
+    "axeSummary": "",
+    "criterion": "3.3.2",
+    "criterionName": "Labels or Instructions",
+    "element": "textbox \"<amount>\"",
+    "rule": "announced-as",
+    "screen": "Venture debt draw: amount"
+   },
+   "family": "name",
+   "guidance": "High for an unnamed form control or the sole primary action.",
+   "issueId": null,
+   "key": "name:announced-as:92a5cbce4f54",
+   "measured": false,
+   "primary": "accounts.vd-request-funds",
+   "proposals": [],
+   "rule": "announced-as",
+   "screens": 1,
+   "severityDefault": "medium",
+   "source": "scanner",
+   "states": [
+    "accounts.vd-request-funds"
+   ],
+   "summary": "announced-as: announced as textbox \"<amount>\".",
+   "title": "Missing or unclear name: textbox \"<amount>\""
+  }
+ ],
+ "primaries": [
+  "accounts.vd-request-funds"
+ ],
+ "reach": {
+  "baseUrl": "https://demo.mercury.com",
+  "data": "data",
+  "map": "build/map.json",
+  "run": "2026-10-03-1525",
+  "workspace": "a11y"
+ },
+ "run": "2026-10-03-1525"
+}

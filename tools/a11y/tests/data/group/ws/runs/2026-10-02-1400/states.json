@@ -1,0 +1,213 @@
+{
+ "map": {
+  "nodes": 11,
+  "sha": "fixture"
+ },
+ "roots": [
+  "cards.index",
+  "home.index",
+  "settings.index"
+ ],
+ "run": "2026-10-02-1400",
+ "states": {
+  "cards.detail-physical": {
+   "area": "cards",
+   "kind": "page",
+   "labels": [
+    "Open cards.detail-physical"
+   ],
+   "mutates": false,
+   "needsRecipe": true,
+   "parent": "cards.index",
+   "path": [
+    "cards.index",
+    "cards.detail-physical"
+   ],
+   "root": false,
+   "rootUrl": null,
+   "source": "0000000000000000000000000000000000000000",
+   "unreachable": null,
+   "url": "/cards/<id>"
+  },
+  "cards.edit-limit-modal": {
+   "area": "cards",
+   "kind": "modal",
+   "labels": [
+    "Open cards.detail-physical",
+    "Open cards.edit-limit-modal"
+   ],
+   "mutates": false,
+   "needsRecipe": true,
+   "parent": "cards.detail-physical",
+   "path": [
+    "cards.index",
+    "cards.detail-physical",
+    "cards.edit-limit-modal"
+   ],
+   "root": false,
+   "rootUrl": null,
+   "source": "0000000000000000000000000000000000000000",
+   "unreachable": null,
+   "url": "/cards/<id>"
+  },
+  "cards.index": {
+   "area": "cards",
+   "kind": "page",
+   "labels": [],
+   "mutates": false,
+   "needsRecipe": false,
+   "parent": null,
+   "path": [
+    "cards.index"
+   ],
+   "root": true,
+   "rootUrl": "/cards",
+   "source": "0000000000000000000000000000000000000000",
+   "unreachable": null,
+   "url": "/cards"
+  },
+  "home.index": {
+   "area": "home",
+   "kind": "page",
+   "labels": [],
+   "mutates": false,
+   "needsRecipe": false,
+   "parent": null,
+   "path": [
+    "home.index"
+   ],
+   "root": true,
+   "rootUrl": "/dashboard",
+   "source": "0000000000000000000000000000000000000000",
+   "unreachable": null,
+   "url": "/dashboard"
+  },
+  "home.index-transactions": {
+   "area": "home",
+   "kind": "page",
+   "labels": [
+    "Open home.index-transactions"
+   ],
+   "mutates": false,
+   "needsRecipe": true,
+   "parent": "home.index",
+   "path": [
+    "home.index",
+    "home.index-transactions"
+   ],
+   "root": false,
+   "rootUrl": null,
+   "source": "0000000000000000000000000000000000000000",
+   "unreachable": null,
+   "url": "/dashboard"
+  },
+  "home.tasks": {
+   "area": "home",
+   "kind": "page",
+   "labels": [
+    "Open home.tasks"
+   ],
+   "mutates": false,
+   "needsRecipe": true,
+   "parent": "home.index",
+   "path": [
+    "home.index",
+    "home.tasks"
+   ],
+   "root": false,
+   "rootUrl": null,
+   "source": "0000000000000000000000000000000000000000",
+   "unreachable": null,
+   "url": "/tasks"
+  },
+  "settings.index": {
+   "area": "settings",
+   "kind": "page",
+   "labels": [],
+   "mutates": false,
+   "needsRecipe": false,
+   "parent": null,
+   "path": [
+    "settings.index"
+   ],
+   "root": true,
+   "rootUrl": "/settings",
+   "source": "0000000000000000000000000000000000000000",
+   "unreachable": null,
+   "url": "/settings"
+  },
+  "settings.token-menu": {
+   "area": "settings",
+   "kind": "menu",
+   "labels": [
+    "Open settings.tokens",
+    "Open settings.token-menu"
+   ],
+   "mutates": false,
+   "needsRecipe": true,
+   "parent": "settings.tokens",
+   "path": [
+    "settings.index",
+    "settings.tokens",
+    "settings.token-menu"
+   ],
+   "root": false,
+   "rootUrl": null,
+   "source": "0000000000000000000000000000000000000000",
+   "unreachable": null,
+   "url": "/settings/tokens"
+  },
+  "settings.tokens": {
+   "area": "settings",
+   "kind": "page",
+   "labels": [
+    "Open settings.tokens"
+   ],
+   "mutates": false,
+   "needsRecipe": true,
+   "parent": "settings.index",
+   "path": [
+    "settings.index",
+    "settings.tokens"
+   ],
+   "root": false,
+   "rootUrl": null,
+   "source": "0000000000000000000000000000000000000000",
+   "unreachable": null,
+   "url": "/settings/tokens"
+  },
+  "settings.unreachable-drawer": {
+   "area": "settings",
+   "kind": "drawer",
+   "labels": null,
+   "mutates": false,
+   "needsRecipe": true,
+   "parent": null,
+   "path": null,
+   "root": false,
+   "rootUrl": null,
+   "source": null,
+   "unreachable": "no-path",
+   "url": "/settings"
+  },
+  "settings.webhooks": {
+   "area": "settings",
+   "kind": "page",
+   "labels": [
+    "Open settings.webhooks"
+   ],
+   "mutates": false,
+   "needsRecipe": true,
+   "parent": "settings.index",
+   "path": [
+    "settings.index",
+    "settings.webhooks"
+   ],
+   "root": false,
+   "rootUrl": null,
+   "source": "0000000000000000000000000000000000000000",
+   "unreachable": null,
+   "url": "/settings/webhooks"
+  }
+ }
+}

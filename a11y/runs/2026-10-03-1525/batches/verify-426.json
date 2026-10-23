@@ -1,0 +1,329 @@
+{
+ "area": "billpay",
+ "batch": "verify-426",
+ "findings": [
+  {
+   "attachments": [],
+   "attempt": 1,
+   "basis": "candidate",
+   "criteria": [
+    "4.1.2"
+   ],
+   "evidence": [
+    {
+     "evidence": {
+      "description": "",
+      "name": "",
+      "role": "button",
+      "states": {},
+      "template": "button \"\""
+     },
+     "occurrence": {
+      "ancestors": [
+       [
+        "_actionButtons_1pbh4_58"
+       ],
+       [
+        "_contentContainer_1pbh4_46"
+       ],
+       [
+        "_floatingBulkActionsInnerContainer_1pbh4_35"
+       ],
+       [
+        "_floatingBulkActionsOuterContainer_1pbh4_4",
+        "_floatingBulkActionsOuterContainerOverride_3gsdp_1"
+       ],
+       [],
+       [],
+       [
+        "_tabContent_a2zac_49"
+       ],
+       [
+        "session-replay-unmask"
+       ]
+      ],
+      "classes": [
+       "_button_r6b2u_20",
+       "_small_r6b2u_72",
+       "_destructive_r6b2u_186",
+       "_tooltipAnchor_18bac_4"
+      ],
+      "data": {},
+      "heading": "Due in next 7 days",
+      "landmark": {
+       "name": "0 requests selected",
+       "role": "dialog"
+      },
+      "layer": "document",
+      "name": "",
+      "rect": [
+       830,
+       932,
+       32,
+       32
+      ],
+      "role": "button",
+      "tag": "button",
+      "xpath": "/html/body/div[1]/main[1]/div[1]/div[1]/div[4]/div[1]/div[2]/div[2]/div[2]/div[2]/div[2]/dialog[1]/div[1]/div[1]/div[2]/button[1]"
+     },
+     "state": "billpay.needs-approval"
+    },
+    {
+     "evidence": {
+      "description": "",
+      "name": "",
+      "role": "button",
+      "states": {},
+      "template": "button \"\""
+     },
+     "occurrence": {
+      "ancestors": [
+       [
+        "_actionButtons_1pbh4_58"
+       ],
+       [
+        "_contentContainer_1pbh4_46"
+       ],
+       [
+        "_floatingBulkActionsInnerContainer_1pbh4_35"
+       ],
+       [
+        "_floatingBulkActionsOuterContainer_1pbh4_4",
+        "_floatingBulkActionsOuterContainerOverride_3gsdp_1",
+        "_visible_1pbh4_30"
+       ],
+       [],
+       [],
+       [
+        "_tabContent_a2zac_49"
+       ],
+       [
+        "_pageContent_809q8_151",
+        "_pageContentWidth_809q8_184",
+        "_footerPadding_809q8_115"
+       ]
+      ],
+      "classes": [
+       "_button_r6b2u_20",
+       "_small_r6b2u_72",
+       "_destructive_r6b2u_186",
+       "_tooltipAnchor_18bac_4"
+      ],
+      "data": {},
+      "heading": "",
+      "landmark": {
+       "name": "2 requests selected",
+       "role": "dialog"
+      },
+      "layer": "top",
+      "name": "",
+      "rect": [
+       847,
+       782,
+       32,
+       32
+      ],
+      "role": "button",
+      "tag": "button",
+      "xpath": "/html/body/div[1]/main[1]/div[1]/div[1]/div[4]/div[1]/div[2]/div[3]/div[2]/div[2]/dialog[1]/div[1]/div[1]/div[2]/button[1]"
+     },
+     "state": "payments.approvals-bulk"
+    }
+   ],
+   "evidenceHash": "0df73f62e88f49c8f006128d6b7fc57e56ab4e0184c810b8e4459356c7a511c7",
+   "facts": {
+    "announced": "button \"\"",
+    "axeSummary": "",
+    "criterion": "4.1.2",
+    "criterionName": "Name, Role, Value",
+    "element": "button in \"Due in next <n> days\"",
+    "rule": "announced-as",
+    "screen": "Needs Approval tab"
+   },
+   "family": "name",
+   "guidance": "High for an unnamed form control or the sole primary action.",
+   "issueId": null,
+   "key": "name:announced-as:2fd6543b7a4d",
+   "measured": false,
+   "primary": "billpay.needs-approval",
+   "proposals": [],
+   "rule": "announced-as",
+   "screens": 4,
+   "severityDefault": "medium",
+   "source": "scanner",
+   "states": [
+    "billpay.needs-approval",
+    "payments.approvals-bulk"
+   ],
+   "summary": "announced-as: announced as button \"\".",
+   "title": "Missing or unclear name: button in \"Due in next <n> days\""
+  },
+  {
+   "attachments": [],
+   "attempt": 1,
+   "basis": "candidate",
+   "criteria": [
+    "4.1.2"
+   ],
+   "evidence": [
+    {
+     "evidence": {
+      "description": "",
+      "name": "",
+      "role": "button",
+      "states": {},
+      "template": "button \"\""
+     },
+     "occurrence": {
+      "ancestors": [
+       [
+        "_actionButtons_1pbh4_58"
+       ],
+       [
+        "_contentContainer_1pbh4_46"
+       ],
+       [
+        "_floatingBulkActionsInnerContainer_1pbh4_35"
+       ],
+       [
+        "_floatingBulkActionsOuterContainer_1pbh4_4",
+        "_floatingBulkActionsOuterContainerOverride_3gsdp_1"
+       ],
+       [],
+       [],
+       [
+        "_tabContent_a2zac_49"
+       ],
+       [
+        "session-replay-unmask"
+       ]
+      ],
+      "classes": [
+       "_button_r6b2u_20",
+       "_small_r6b2u_72",
+       "_secondary_r6b2u_126",
+       "_tooltipAnchor_18bac_4"
+      ],
+      "data": {},
+      "heading": "Due in next 7 days",
+      "landmark": {
+       "name": "0 requests selected",
+       "role": "dialog"
+      },
+      "layer": "document",
+      "name": "",
+      "rect": [
+       874,
+       932,
+       32,
+       32
+      ],
+      "role": "button",
+      "tag": "button",
+      "xpath": "/html/body/div[1]/main[1]/div[1]/div[1]/div[4]/div[1]/div[2]/div[2]/div[2]/div[2]/div[2]/dialog[1]/div[1]/div[1]/div[2]/button[2]"
+     },
+     "state": "billpay.needs-approval"
+    },
+    {
+     "evidence": {
+      "description": "",
+      "name": "",
+      "role": "button",
+      "states": {},
+      "template": "button \"\""
+     },
+     "occurrence": {
+      "ancestors": [
+       [
+        "_actionButtons_1pbh4_58"
+       ],
+       [
+        "_contentContainer_1pbh4_46"
+       ],
+       [
+        "_floatingBulkActionsInnerContainer_1pbh4_35"
+       ],
+       [
+        "_floatingBulkActionsOuterContainer_1pbh4_4",
+        "_floatingBulkActionsOuterContainerOverride_3gsdp_1",
+        "_visible_1pbh4_30"
+       ],
+       [],
+       [],
+       [
+        "_tabContent_a2zac_49"
+       ],
+       [
+        "_pageContent_809q8_151",
+        "_pageContentWidth_809q8_184",
+        "_footerPadding_809q8_115"
+       ]
+      ],
+      "classes": [
+       "_button_r6b2u_20",
+       "_small_r6b2u_72",
+       "_secondary_r6b2u_126",
+       "_tooltipAnchor_18bac_4"
+      ],
+      "data": {},
+      "heading": "",
+      "landmark": {
+       "name": "2 requests selected",
+       "role": "dialog"
+      },
+      "layer": "top",
+      "name": "",
+      "rect": [
+       891,
+       782,
+       32,
+       32
+      ],
+      "role": "button",
+      "tag": "button",
+      "xpath": "/html/body/div[1]/main[1]/div[1]/div[1]/div[4]/div[1]/div[2]/div[3]/div[2]/div[2]/dialog[1]/div[1]/div[1]/div[2]/button[2]"
+     },
+     "state": "payments.approvals-bulk"
+    }
+   ],
+   "evidenceHash": "0df73f62e88f49c8f006128d6b7fc57e56ab4e0184c810b8e4459356c7a511c7",
+   "facts": {
+    "announced": "button \"\"",
+    "axeSummary": "",
+    "criterion": "4.1.2",
+    "criterionName": "Name, Role, Value",
+    "element": "button in \"Due in next <n> days\"",
+    "rule": "announced-as",
+    "screen": "Needs Approval tab"
+   },
+   "family": "name",
+   "guidance": "High for an unnamed form control or the sole primary action.",
+   "issueId": null,
+   "key": "name:announced-as:30835309b9a2",
+   "measured": false,
+   "primary": "billpay.needs-approval",
+   "proposals": [],
+   "rule": "announced-as",
+   "screens": 4,
+   "severityDefault": "medium",
+   "source": "scanner",
+   "states": [
+    "billpay.needs-approval",
+    "payments.approvals-bulk"
+   ],
+   "summary": "announced-as: announced as button \"\".",
+   "title": "Missing or unclear name: button in \"Due in next <n> days\""
+  }
+ ],
+ "primaries": [
+  "billpay.needs-approval"
+ ],
+ "reach": {
+  "baseUrl": "https://demo.mercury.com",
+  "data": "data",
+  "map": "build/map.json",
+  "run": "2026-10-03-1525",
+  "workspace": "a11y"
+ },
+ "run": "2026-10-03-1525"
+}

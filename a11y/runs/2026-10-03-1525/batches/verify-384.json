@@ -1,0 +1,272 @@
+{
+ "area": "transactions",
+ "batch": "verify-384",
+ "findings": [
+  {
+   "attachments": [],
+   "attempt": 1,
+   "basis": "violation",
+   "criteria": [
+    "4.1.2"
+   ],
+   "evidence": [
+    {
+     "evidence": {
+      "explicitLabel": "",
+      "failureSummary": "Fix any of the following:\n  Element does not have an implicit (wrapped) <label>\n  Element does not have an explicit <label>\n  aria-label attribute does not exist or is empty\n  aria-labelledby attribute does not exist, references elements that do not exist or references elements that are empty\n  Element has no title attribute\n  Element has no placeholder attribute\n  Element's default semantics were not overridden with role=\"none\" or role=\"presentation\"",
+      "messageKey": "noAttr"
+     },
+     "occurrence": {
+      "ancestors": [
+       [
+        "_inputWrapper_11c85_6"
+       ],
+       [
+        "_wrapper_1xgdp_8"
+       ],
+       [
+        "_rangePickerSection_1q0q9_5"
+       ],
+       [
+        "_container_1q0q9_1"
+       ],
+       [
+        "_tabPanel_1p8lo_8"
+       ],
+       [
+        "_menu_14lgn_4"
+       ],
+       [],
+       []
+      ],
+      "classes": [
+       "_input_11c85_6"
+      ],
+      "data": {
+       "data-1p-ignore": "true",
+       "data-active-item": "true",
+       "data-bwignore": "true",
+       "data-lpignore": "true"
+      },
+      "heading": "",
+      "landmark": {
+       "name": "",
+       "role": "form"
+      },
+      "layer": "top",
+      "name": "",
+      "rect": [
+       529,
+       260,
+       295,
+       40
+      ],
+      "role": "combobox",
+      "tag": "input",
+      "xpath": "/html/body/div[9]/div[1]/div[1]/div[1]/form[1]/section[1]/div[1]/div[1]/input[1]"
+     },
+     "state": "transactions.insights-date-menu"
+    }
+   ],
+   "evidenceHash": "afdf4d69dd36fed4ee4ae8edb64a3517de831c4baeaa5394bfa8472292753f38",
+   "facts": {
+    "announced": "combobox \"\" [expanded=false, haspopup=listbox]",
+    "axeSummary": "Element does not have an implicit (wrapped) <label>; Element does not have an explicit <label>; aria-label attribute does not exist or is empty; aria-labelledb…",
+    "criterion": "4.1.2",
+    "criterionName": "Name, Role, Value",
+    "element": "combobox in the form landmark",
+    "rule": "label",
+    "screen": "Insights date range menu"
+   },
+   "family": "name",
+   "guidance": "High for an unnamed form control or the sole primary action.",
+   "issueId": null,
+   "key": "name:label:b565c281853a",
+   "measured": false,
+   "primary": "transactions.insights-date-menu",
+   "proposals": [],
+   "rule": "label",
+   "screens": 1,
+   "severityDefault": "medium",
+   "source": "scanner",
+   "states": [
+    "transactions.insights-date-menu"
+   ],
+   "summary": "label: announced as combobox \"\" [expanded=false, haspopup=listbox]. Element does not have an implicit (wrapped) <label>; Element does not have an explicit <label>; aria-label attribute does not exist or is empty; aria-labelledb…",
+   "title": "Missing or unclear name: combobox in the form landmark"
+  },
+  {
+   "attachments": [],
+   "attempt": 1,
+   "basis": "violation",
+   "criteria": [
+    "1.3.1"
+   ],
+   "evidence": [
+    {
+     "evidence": {
+      "failureSummary": "Fix any of the following:\n  Element has children which are not allowed: div[aria-live], [role=combobox], button[aria-controls], input[aria-describedby], div[aria-hidden]",
+      "messageKey": "unallowed",
+      "values": "div[aria-live], [role=combobox], button[aria-controls], input[aria-describedby], div[aria-hidden]"
+     },
+     "occurrence": {
+      "ancestors": [
+       [],
+       []
+      ],
+      "classes": [
+       "_menu_14lgn_4"
+      ],
+      "data": {
+       "data-dialog": "",
+       "data-enter": "true",
+       "data-open": "true"
+      },
+      "heading": "",
+      "landmark": null,
+      "layer": "top",
+      "name": "Jun 26–Today",
+      "rect": [
+       505,
+       232,
+       376,
+       400
+      ],
+      "role": "menu",
+      "tag": "div",
+      "xpath": "/html/body/div[9]/div[1]/div[1]"
+     },
+     "state": "transactions.insights-date-menu"
+    }
+   ],
+   "evidenceHash": "babb2060bd967b640ff2c63e01370ce683bdbe9f82170b699b9d9939224b54fc",
+   "facts": {
+    "announced": "menu \"<date>\"",
+    "axeSummary": "Element has children which are not allowed: div[aria-live], [role=combobox], button[aria-controls], input[aria-describedby], div[aria-hidden]",
+    "criterion": "1.3.1",
+    "criterionName": "Info and Relationships",
+    "element": "menu \"<date>\"",
+    "rule": "aria-required-children",
+    "screen": "Insights date range menu"
+   },
+   "family": "role-state",
+   "guidance": "Low for optional ARIA or an invalid autocomplete token; high when aria-hidden hides the whole page.",
+   "issueId": null,
+   "key": "role-state:aria-required-children:7e5572f8bcc2",
+   "measured": false,
+   "primary": "transactions.insights-date-menu",
+   "proposals": [],
+   "rule": "aria-required-children",
+   "screens": 1,
+   "severityDefault": "medium",
+   "source": "scanner",
+   "states": [
+    "transactions.insights-date-menu"
+   ],
+   "summary": "aria-required-children: announced as menu \"<date>\". Element has children which are not allowed: div[aria-live], [role=combobox], button[aria-controls], input[aria-describedby], div[aria-hidden]",
+   "title": "Wrong role or state: menu \"<date>\""
+  },
+  {
+   "attachments": [],
+   "attempt": 1,
+   "basis": "violation",
+   "criteria": [
+    "1.3.5"
+   ],
+   "evidence": [
+    {
+     "evidence": {
+      "failureSummary": "Fix all of the following:\n  the autocomplete attribute is incorrectly formatted"
+     },
+     "occurrence": {
+      "ancestors": [
+       [
+        "_inputWrapper_11c85_6"
+       ],
+       [
+        "_wrapper_1xgdp_8"
+       ],
+       [
+        "_rangePickerSection_1q0q9_5"
+       ],
+       [
+        "_container_1q0q9_1"
+       ],
+       [
+        "_tabPanel_1p8lo_8"
+       ],
+       [
+        "_menu_14lgn_4"
+       ],
+       [],
+       []
+      ],
+      "classes": [
+       "_input_11c85_6"
+      ],
+      "data": {
+       "data-1p-ignore": "true",
+       "data-active-item": "true",
+       "data-bwignore": "true",
+       "data-lpignore": "true"
+      },
+      "heading": "",
+      "landmark": {
+       "name": "",
+       "role": "form"
+      },
+      "layer": "top",
+      "name": "",
+      "rect": [
+       529,
+       260,
+       295,
+       40
+      ],
+      "role": "combobox",
+      "tag": "input",
+      "xpath": "/html/body/div[9]/div[1]/div[1]/div[1]/form[1]/section[1]/div[1]/div[1]/input[1]"
+     },
+     "state": "transactions.insights-date-menu"
+    }
+   ],
+   "evidenceHash": "1fbc62d600c57daddc0e29554719289e59e1d3a0d94c20a650e7e90305781b79",
+   "facts": {
+    "announced": "combobox \"\" [expanded=false, haspopup=listbox]",
+    "axeSummary": "the autocomplete attribute is incorrectly formatted",
+    "criterion": "1.3.5",
+    "criterionName": "Identify Input Purpose",
+    "element": "combobox in the form landmark",
+    "rule": "autocomplete-valid",
+    "screen": "Insights date range menu"
+   },
+   "family": "role-state",
+   "guidance": "Low for optional ARIA or an invalid autocomplete token; high when aria-hidden hides the whole page.",
+   "issueId": null,
+   "key": "role-state:autocomplete-valid:e85116d142ee",
+   "measured": false,
+   "primary": "transactions.insights-date-menu",
+   "proposals": [],
+   "rule": "autocomplete-valid",
+   "screens": 1,
+   "severityDefault": "medium",
+   "source": "scanner",
+   "states": [
+    "transactions.insights-date-menu"
+   ],
+   "summary": "autocomplete-valid: announced as combobox \"\" [expanded=false, haspopup=listbox]. the autocomplete attribute is incorrectly formatted",
+   "title": "Invalid autocomplete value: combobox in the form landmark"
+  }
+ ],
+ "primaries": [
+  "transactions.insights-date-menu"
+ ],
+ "reach": {
+  "baseUrl": "https://demo.mercury.com",
+  "data": "data",
+  "map": "build/map.json",
+  "run": "2026-10-03-1525",
+  "workspace": "a11y"
+ },
+ "run": "2026-10-03-1525"
+}

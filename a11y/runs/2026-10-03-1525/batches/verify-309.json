@@ -1,0 +1,177 @@
+{
+ "area": "settings",
+ "batch": "verify-309",
+ "findings": [
+  {
+   "attachments": [],
+   "attempt": 1,
+   "basis": "candidate",
+   "criteria": [
+    "2.4.3",
+    "1.3.2"
+   ],
+   "evidence": [
+    {
+     "evidence": {
+      "band": 32,
+      "overlay": "settings.approvals.tabstops.png",
+      "previous": {
+       "ancestors": [
+        [],
+        [
+         "_approverInputReadOnly_1vvq0_148"
+        ],
+        [],
+        [
+         "_approverInputContainer_1vvq0_162"
+        ],
+        [
+         "_stack_il1fi_18",
+         "_direction-column_il1fi_24",
+         "_policyCardApproverRows_1vvq0_167",
+         "_requiredApproversContainer_1vvq0_153"
+        ],
+        [
+         "_stack_il1fi_18",
+         "_direction-column_il1fi_24"
+        ],
+        [
+         "_stack_il1fi_18",
+         "_direction-column_il1fi_24",
+         "_rulesContent_kz29b_1"
+        ],
+        [
+         "_stack_il1fi_18",
+         "_direction-row_il1fi_27",
+         "_align-flex-start_il1fi_41",
+         "_gap-space-200_il1fi_1"
+        ]
+       ],
+       "classes": [
+        "_link_ual8v_4",
+        "_variantSecondary_ual8v_44"
+       ],
+       "data": {
+        "data-discover": "true"
+       },
+       "heading": "Approval Rules",
+       "landmark": {
+        "name": "",
+        "role": "main"
+       },
+       "layer": "document",
+       "name": "Mary Metcalfe",
+       "rect": [
+        867,
+        631,
+        101,
+        19
+       ],
+       "role": "link",
+       "tag": "a",
+       "xpath": "/html/body/div[1]/main[1]/div[1]/div[1]/div[4]/div[1]/div[2]/div[2]/div[1]/div[1]/div[1]/div[3]/div[1]/div[1]/div[3]/div[2]/div[3]/span[1]/span[2]/span[3]/a[1]"
+      },
+      "rise": 298,
+      "stop": 40,
+      "stops": 42
+     },
+     "occurrence": {
+      "ancestors": [
+       [
+        "_stack_il1fi_18",
+        "_direction-row_il1fi_27",
+        "_align-flex-start_il1fi_41",
+        "_gap-space-200_il1fi_1"
+       ],
+       [
+        "_stack_il1fi_18",
+        "_direction-column_il1fi_24",
+        "_padding-space-300_il1fi_1",
+        "_card_kz29b_8"
+       ],
+       [
+        "_rulesPageContainer_ow7sz_1"
+       ],
+       [
+        "_approvalsSection_w1wbn_19"
+       ],
+       [
+        "_approvalsPageContent_w1wbn_10"
+       ],
+       [
+        "_approvalsPageWrapper_w1wbn_1"
+       ],
+       [
+        "_pageContent_809q8_151",
+        "_pageContentWidth_809q8_184",
+        "_footerPadding_809q8_115"
+       ],
+       [
+        "_dashboardContent_809q8_29"
+       ]
+      ],
+      "classes": [
+       "_button_r6b2u_20",
+       "_small_r6b2u_72",
+       "_secondary_r6b2u_126"
+      ],
+      "data": {},
+      "heading": "Approval Rules",
+      "landmark": {
+       "name": "",
+       "role": "main"
+      },
+      "layer": "document",
+      "name": "Edit",
+      "rect": [
+       1230,
+       333,
+       59,
+       32
+      ],
+      "role": "button",
+      "tag": "button",
+      "xpath": "/html/body/div[1]/main[1]/div[1]/div[1]/div[4]/div[1]/div[2]/div[2]/div[1]/div[1]/div[1]/div[3]/div[1]/button[1]"
+     },
+     "state": "settings.approvals"
+    }
+   ],
+   "evidenceHash": "b7419dafecf44cd6b4a2285ae19544468b27d1b8e2b09597b09c72921521d2e6",
+   "facts": {
+    "criterion": "2.4.3",
+    "criterionName": "Focus Order",
+    "element": "button \"Edit\"",
+    "previous": "link \"Mary Metcalfe\"",
+    "screen": "Approval Rules — Per-payment",
+    "stop": "40"
+   },
+   "family": "focus-order",
+   "guidance": "High if the order skips a required control.",
+   "issueId": null,
+   "key": "focus-order:backward-jump:d26e41177a1e",
+   "measured": false,
+   "primary": "settings.approvals",
+   "proposals": [],
+   "rule": "backward-jump",
+   "screens": 1,
+   "severityDefault": "medium",
+   "source": "scanner",
+   "states": [
+    "settings.approvals"
+   ],
+   "summary": "Tab stop 40 jumped backward on screen, from the link \"Mary Metcalfe\" to the button \"Edit\".",
+   "title": "Tab order jumps backward at button \"Edit\""
+  }
+ ],
+ "primaries": [
+  "settings.approvals"
+ ],
+ "reach": {
+  "baseUrl": "https://demo.mercury.com",
+  "data": "data",
+  "map": "build/map.json",
+  "run": "2026-10-03-1525",
+  "workspace": "a11y"
+ },
+ "run": "2026-10-03-1525"
+}

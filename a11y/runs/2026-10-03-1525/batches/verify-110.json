@@ -1,0 +1,208 @@
+{
+ "area": "books",
+ "batch": "verify-110",
+ "findings": [
+  {
+   "attachments": [],
+   "attempt": 1,
+   "basis": "candidate",
+   "criteria": [
+    "2.1.1"
+   ],
+   "evidence": [
+    {
+     "evidence": {
+      "end": "repeat",
+      "focusable": false,
+      "source": "ax",
+      "stops": 9
+     },
+     "occurrence": {
+      "ancestors": [
+       [
+        "_inputAndResultsContainer_16edb_80"
+       ],
+       [
+        "_large_kwlx6_9",
+        "_noHover_3n0se_28",
+        "_shadow_3n0se_25",
+        "_raisedBackground_3n0se_45",
+        "_card_lo4oy_4",
+        "_omnisearchCard_16edb_36"
+       ],
+       [
+        "ReactModal__Content",
+        "ReactModal__Content--after-open",
+        "_modal_lo4oy_73",
+        "_disableAutoCenter_lo4oy_79",
+        "_omnisearchModal_16edb_27"
+       ],
+       [
+        "ReactModal__Overlay",
+        "ReactModal__Overlay--after-open",
+        "_overlay_lo4oy_89",
+        "_omnisearchOverlay_16edb_40"
+       ],
+       [
+        "ReactModalPortal"
+       ]
+      ],
+      "classes": [
+       "_menu_16edb_182"
+      ],
+      "data": {},
+      "heading": "",
+      "landmark": {
+       "name": "",
+       "role": "dialog"
+      },
+      "layer": "top",
+      "name": "Payments to review Uncategorized transactions",
+      "rect": [
+       320,
+       240,
+       800,
+       422
+      ],
+      "role": "listbox",
+      "tag": "div",
+      "xpath": "/html/body/div[9]/div[1]/div[1]/div[1]/div[2]/div[3]"
+     },
+     "state": "books.search"
+    }
+   ],
+   "evidenceHash": "0f52f30008eecff6c0723a9e1bbb3b7f2a715ac0d0ec8a530c7d471fc84d7382",
+   "facts": {
+    "axeSummary": "",
+    "criterion": "2.1.1",
+    "criterionName": "Keyboard",
+    "element": "listbox \"Payments to review Uncategorized transa…\"",
+    "rule": "not-reached",
+    "screen": "Search or jump to",
+    "stops": "9"
+   },
+   "family": "keyboard",
+   "guidance": "High if a task cannot be completed without a mouse.",
+   "issueId": null,
+   "key": "keyboard:not-reached:4523d4464026",
+   "measured": false,
+   "primary": "books.search",
+   "proposals": [],
+   "rule": "not-reached",
+   "screens": 1,
+   "severityDefault": "medium",
+   "source": "scanner",
+   "states": [
+    "books.search"
+   ],
+   "summary": "The Tab walk visited 9 stops and never reached the listbox \"Payments to review Uncategorized transa…\", which responds to a click.",
+   "title": "Not reachable by keyboard: listbox \"Payments to review Uncategorized transa…\""
+  },
+  {
+   "attachments": [],
+   "attempt": 1,
+   "basis": "violation",
+   "criteria": [
+    "1.3.1"
+   ],
+   "evidence": [
+    {
+     "evidence": {
+      "failureSummary": "Fix any of the following:\n  Element has children which are not allowed: ul",
+      "messageKey": "unallowed",
+      "values": "ul"
+     },
+     "occurrence": {
+      "ancestors": [
+       [
+        "_inputAndResultsContainer_16edb_80"
+       ],
+       [
+        "_large_kwlx6_9",
+        "_noHover_3n0se_28",
+        "_shadow_3n0se_25",
+        "_raisedBackground_3n0se_45",
+        "_card_lo4oy_4",
+        "_omnisearchCard_16edb_36"
+       ],
+       [
+        "ReactModal__Content",
+        "ReactModal__Content--after-open",
+        "_modal_lo4oy_73",
+        "_disableAutoCenter_lo4oy_79",
+        "_omnisearchModal_16edb_27"
+       ],
+       [
+        "ReactModal__Overlay",
+        "ReactModal__Overlay--after-open",
+        "_overlay_lo4oy_89",
+        "_omnisearchOverlay_16edb_40"
+       ],
+       [
+        "ReactModalPortal"
+       ]
+      ],
+      "classes": [
+       "_menu_16edb_182"
+      ],
+      "data": {},
+      "heading": "",
+      "landmark": {
+       "name": "",
+       "role": "dialog"
+      },
+      "layer": "top",
+      "name": "Payments to review Uncategorized transactions",
+      "rect": [
+       320,
+       240,
+       800,
+       422
+      ],
+      "role": "listbox",
+      "tag": "div",
+      "xpath": "/html/body/div[9]/div[1]/div[1]/div[1]/div[2]/div[3]"
+     },
+     "state": "books.search"
+    }
+   ],
+   "evidenceHash": "4f8ee0b8ff732a0238b1927eb0ca7481b7b96c74842cdcad216ab361f0bb61f6",
+   "facts": {
+    "announced": "listbox \"Payments to review Uncategorized transactions\"",
+    "axeSummary": "Element has children which are not allowed: ul",
+    "criterion": "1.3.1",
+    "criterionName": "Info and Relationships",
+    "element": "listbox \"Payments to review Uncategorized transa…\"",
+    "rule": "aria-required-children",
+    "screen": "Search or jump to"
+   },
+   "family": "role-state",
+   "guidance": "Low for optional ARIA or an invalid autocomplete token; high when aria-hidden hides the whole page.",
+   "issueId": null,
+   "key": "role-state:aria-required-children:9f9278af21e5",
+   "measured": false,
+   "primary": "books.search",
+   "proposals": [],
+   "rule": "aria-required-children",
+   "screens": 1,
+   "severityDefault": "medium",
+   "source": "scanner",
+   "states": [
+    "books.search"
+   ],
+   "summary": "aria-required-children: announced as listbox \"Payments to review Uncategorized transactions\". Element has children which are not allowed: ul",
+   "title": "Wrong role or state: listbox \"Payments to review Uncategorized transa…\""
+  }
+ ],
+ "primaries": [
+  "books.search"
+ ],
+ "reach": {
+  "baseUrl": "https://demo.mercury.com",
+  "data": "data",
+  "map": "build/map.json",
+  "run": "2026-10-03-1525",
+  "workspace": "a11y"
+ },
+ "run": "2026-10-03-1525"
+}

@@ -1,0 +1,732 @@
+{
+ "area": "accounts",
+ "batch": "verify-052",
+ "findings": [
+  {
+   "attachments": [],
+   "attempt": 1,
+   "basis": "candidate",
+   "criteria": [
+    "2.4.3",
+    "1.3.2"
+   ],
+   "evidence": [
+    {
+     "evidence": {
+      "band": 52,
+      "overlay": "accounts.treasury.tabstops.png",
+      "previous": {
+       "ancestors": [
+        [
+         "_actionableRowWrapper_ytp3g_75"
+        ],
+        [],
+        [
+         "_dailyActivityTable_ytp3g_16"
+        ],
+        [
+         "_activityTab_ytp3g_3"
+        ],
+        [
+         "_portfolioTabContentWrapper_1gorc_92"
+        ],
+        [],
+        [
+         "_pageContent_809q8_151",
+         "_pageContentWidth_809q8_184",
+         "_footerPadding_809q8_115"
+        ],
+        [
+         "_dashboardContent_809q8_29"
+        ]
+       ],
+       "classes": [
+        "_row_ytp3g_19",
+        "_actionableRow_ytp3g_41",
+        "_link_ual8v_4",
+        "_underlineNever_ual8v_7"
+       ],
+       "data": {
+        "data-discover": "true"
+       },
+       "heading": "Treasury",
+       "landmark": {
+        "name": "",
+        "role": "main"
+       },
+       "layer": "document",
+       "name": "Aug 29 Transfer to Primary Checking −$7,500.00",
+       "rect": [
+        346,
+        848,
+        968,
+        52
+       ],
+       "role": "link",
+       "tag": "a",
+       "xpath": "/html/body/div[1]/main[1]/div[1]/div[1]/div[4]/div[1]/div[2]/div[2]/div[4]/div[1]/div[1]/div[2]/span[5]/a[1]"
+      },
+      "rise": 396,
+      "stop": 57,
+      "stops": 62
+     },
+     "occurrence": {
+      "ancestors": [
+       [
+        "_actionableRowWrapper_ytp3g_75"
+       ],
+       [],
+       [
+        "_dailyActivityTable_ytp3g_16"
+       ],
+       [
+        "_activityTab_ytp3g_3"
+       ],
+       [
+        "_portfolioTabContentWrapper_1gorc_92"
+       ],
+       [],
+       [
+        "_pageContent_809q8_151",
+        "_pageContentWidth_809q8_184",
+        "_footerPadding_809q8_115"
+       ],
+       [
+        "_dashboardContent_809q8_29"
+       ]
+      ],
+      "classes": [
+       "_row_ytp3g_19",
+       "_actionableRow_ytp3g_41",
+       "_link_ual8v_4",
+       "_underlineNever_ual8v_7"
+      ],
+      "data": {
+       "data-discover": "true"
+      },
+      "heading": "Treasury",
+      "landmark": {
+       "name": "",
+       "role": "main"
+      },
+      "layer": "document",
+      "name": "Transfer from Primary Checking $301,000.00",
+      "rect": [
+       346,
+       452,
+       968,
+       52
+      ],
+      "role": "link",
+      "tag": "a",
+      "xpath": "/html/body/div[1]/main[1]/div[1]/div[1]/div[4]/div[1]/div[2]/div[2]/div[4]/div[1]/div[1]/div[2]/span[6]/a[1]"
+     },
+     "state": "accounts.treasury"
+    }
+   ],
+   "evidenceHash": "570485546a0e47d7ce83cbea48476678154637d2ccbed13e74235b11dc798d12",
+   "facts": {
+    "criterion": "2.4.3",
+    "criterionName": "Focus Order",
+    "element": "link \"Transfer from Primary Checking <amount>\"",
+    "previous": "link \"<date> Transfer to Primary Checking <amoun…\"",
+    "screen": "Treasury account",
+    "stop": "57"
+   },
+   "family": "focus-order",
+   "guidance": "High if the order skips a required control.",
+   "issueId": null,
+   "key": "focus-order:backward-jump:19c4f96b3f7f",
+   "measured": false,
+   "primary": "accounts.treasury",
+   "proposals": [],
+   "rule": "backward-jump",
+   "screens": 1,
+   "severityDefault": "medium",
+   "source": "scanner",
+   "states": [
+    "accounts.treasury"
+   ],
+   "summary": "Tab stop 57 jumped backward on screen, from the link \"<date> Transfer to Primary Checking <amoun…\" to the link \"Transfer from Primary Checking <amount>\".",
+   "title": "Tab order jumps backward at link \"Transfer from Primary Checking <amount>\""
+  },
+  {
+   "attachments": [],
+   "attempt": 1,
+   "basis": "candidate",
+   "criteria": [
+    "2.4.3",
+    "1.3.2"
+   ],
+   "evidence": [
+    {
+     "evidence": {
+      "band": 35,
+      "overlay": "accounts.treasury.tabstops.png",
+      "previous": {
+       "ancestors": [
+        [
+         "_ruleTextAndTimingTextWrapper_grc5i_31",
+         "_horizontal_grc5i_33"
+        ],
+        [
+         "_autoTransferRuleCard_grc5i_1",
+         "_noStyleLink_njx8v_1"
+        ],
+        [
+         "_autoTransferRuleCard_grc5i_1"
+        ],
+        [
+         "_portfolioCompositionSecondRow_1kp0q_5"
+        ],
+        [
+         "_frame_19qwa_3"
+        ],
+        [
+         "_portfolioAdjustmentWrapper_1kp0q_1"
+        ],
+        [
+         "_column_17io9_10"
+        ],
+        [
+         "_wrapper_17io9_1"
+        ]
+       ],
+       "classes": [
+        "_tooltipAnchor_18bac_4",
+        "_ruleTextTooltipAnchor_grc5i_23",
+        "_ruleText_grc5i_11",
+        "_hoveredRuleText_grc5i_62"
+       ],
+       "data": {
+        "data-focus-visible": "true"
+       },
+       "heading": "Treasury",
+       "landmark": {
+        "name": "",
+        "role": "main"
+       },
+       "layer": "document",
+       "name": "Set up an auto transfer rule",
+       "rect": [
+        369,
+        329,
+        201,
+        24
+       ],
+       "role": "generic",
+       "tag": "div",
+       "xpath": "/html/body/div[1]/main[1]/div[1]/div[1]/div[4]/div[1]/div[2]/div[2]/div[2]/div[1]/div[1]/div[1]/div[2]/div[1]/a[1]/div[2]/div[1]"
+      },
+      "rise": 123,
+      "stop": 47,
+      "stops": 62
+     },
+     "occurrence": {
+      "ancestors": [
+       [
+        "_editPortfolioWrapper_16jux_98"
+       ],
+       [
+        "_portfolioCompositionFirstRow_16jux_8"
+       ],
+       [
+        "_frame_19qwa_3"
+       ],
+       [
+        "_column_17io9_10"
+       ],
+       [
+        "_wrapper_17io9_1"
+       ],
+       [],
+       [
+        "_pageContent_809q8_151",
+        "_pageContentWidth_809q8_184",
+        "_footerPadding_809q8_115"
+       ],
+       [
+        "_dashboardContent_809q8_29"
+       ]
+      ],
+      "classes": [
+       "_tooltipAnchor_18bac_4"
+      ],
+      "data": {
+       "data-focus-visible": "true"
+      },
+      "heading": "Treasury",
+      "landmark": {
+       "name": "",
+       "role": "main"
+      },
+      "layer": "document",
+      "name": "Edit portfolio",
+      "rect": [
+       1258,
+       206,
+       32,
+       35
+      ],
+      "role": "generic",
+      "tag": "div",
+      "xpath": "/html/body/div[1]/main[1]/div[1]/div[1]/div[4]/div[1]/div[2]/div[2]/div[2]/div[2]/div[1]/div[1]/div[2]/div[1]"
+     },
+     "state": "accounts.treasury"
+    },
+    {
+     "evidence": {
+      "band": 35,
+      "overlay": "accounts.treasury-portfolio.tabstops.png",
+      "previous": {
+       "ancestors": [
+        [
+         "_ruleTextAndTimingTextWrapper_grc5i_31",
+         "_horizontal_grc5i_33"
+        ],
+        [
+         "_autoTransferRuleCard_grc5i_1",
+         "_noStyleLink_njx8v_1"
+        ],
+        [
+         "_autoTransferRuleCard_grc5i_1"
+        ],
+        [
+         "_portfolioCompositionSecondRow_1kp0q_5"
+        ],
+        [
+         "_frame_19qwa_3"
+        ],
+        [
+         "_portfolioAdjustmentWrapper_1kp0q_1"
+        ],
+        [
+         "_column_17io9_10"
+        ],
+        [
+         "_wrapper_17io9_1"
+        ]
+       ],
+       "classes": [
+        "_tooltipAnchor_18bac_4",
+        "_ruleTextTooltipAnchor_grc5i_23",
+        "_ruleText_grc5i_11",
+        "_hoveredRuleText_grc5i_62"
+       ],
+       "data": {
+        "data-focus-visible": "true"
+       },
+       "heading": "Treasury",
+       "landmark": {
+        "name": "",
+        "role": "main"
+       },
+       "layer": "document",
+       "name": "Set up an auto transfer rule",
+       "rect": [
+        369,
+        329,
+        201,
+        24
+       ],
+       "role": "generic",
+       "tag": "div",
+       "xpath": "/html/body/div[1]/main[1]/div[1]/div[1]/div[4]/div[1]/div[2]/div[2]/div[2]/div[1]/div[1]/div[1]/div[2]/div[1]/a[1]/div[2]/div[1]"
+      },
+      "rise": 123,
+      "stop": 47,
+      "stops": 58
+     },
+     "occurrence": {
+      "ancestors": [
+       [
+        "_editPortfolioWrapper_16jux_98"
+       ],
+       [
+        "_portfolioCompositionFirstRow_16jux_8"
+       ],
+       [
+        "_frame_19qwa_3"
+       ],
+       [
+        "_column_17io9_10"
+       ],
+       [
+        "_wrapper_17io9_1"
+       ],
+       [],
+       [
+        "_pageContent_809q8_151",
+        "_pageContentWidth_809q8_184",
+        "_footerPadding_809q8_115"
+       ],
+       [
+        "_dashboardContent_809q8_29"
+       ]
+      ],
+      "classes": [
+       "_tooltipAnchor_18bac_4"
+      ],
+      "data": {},
+      "heading": "Treasury",
+      "landmark": {
+       "name": "",
+       "role": "main"
+      },
+      "layer": "document",
+      "name": "Edit portfolio",
+      "rect": [
+       1258,
+       206,
+       32,
+       35
+      ],
+      "role": "generic",
+      "tag": "div",
+      "xpath": "/html/body/div[1]/main[1]/div[1]/div[1]/div[4]/div[1]/div[2]/div[2]/div[2]/div[2]/div[1]/div[1]/div[2]/div[1]"
+     },
+     "state": "accounts.treasury-portfolio"
+    }
+   ],
+   "evidenceHash": "c33e44d317a49c22f2172d28a5442175b8f66cd86c6c6af73c7ba829f1ca5061",
+   "facts": {
+    "criterion": "2.4.3",
+    "criterionName": "Focus Order",
+    "element": "text \"Edit portfolio\"",
+    "previous": "text \"Set up an auto transfer rule\"",
+    "screen": "Treasury account",
+    "stop": "47"
+   },
+   "family": "focus-order",
+   "guidance": "High if the order skips a required control.",
+   "issueId": null,
+   "key": "focus-order:backward-jump:d8e2a865e517",
+   "measured": false,
+   "primary": "accounts.treasury",
+   "proposals": [],
+   "rule": "backward-jump",
+   "screens": 2,
+   "severityDefault": "medium",
+   "source": "scanner",
+   "states": [
+    "accounts.treasury",
+    "accounts.treasury-portfolio"
+   ],
+   "summary": "Tab stop 47 jumped backward on screen, from the text \"Set up an auto transfer rule\" to the text \"Edit portfolio\".",
+   "title": "Tab order jumps backward at text \"Edit portfolio\""
+  },
+  {
+   "attachments": [],
+   "attempt": 1,
+   "basis": "candidate",
+   "criteria": [
+    "2.1.1"
+   ],
+   "evidence": [
+    {
+     "evidence": {
+      "end": "body",
+      "focusable": false,
+      "source": "pointer",
+      "stops": 62
+     },
+     "occurrence": {
+      "ancestors": [
+       [
+        "_dsTabView_95hq1_3",
+        "_portfolioTabs_1gorc_79"
+       ],
+       [],
+       [
+        "_pageContent_809q8_151",
+        "_pageContentWidth_809q8_184",
+        "_footerPadding_809q8_115"
+       ],
+       [
+        "_dashboardContent_809q8_29"
+       ],
+       [
+        "_layout_809q8_18"
+       ],
+       [
+        "_wrapper_809q8_3"
+       ],
+       [],
+       [
+        "_main_1gb3b_1"
+       ]
+      ],
+      "classes": [
+       "_bodySecondary_qaod7_51",
+       "_dsTabViewTab_95hq1_9"
+      ],
+      "data": {},
+      "heading": "Treasury",
+      "landmark": {
+       "name": "",
+       "role": "main"
+      },
+      "layer": "document",
+      "name": "",
+      "rect": [
+       419,
+       405,
+       55,
+       40
+      ],
+      "role": "generic",
+      "tag": "div",
+      "xpath": "/html/body/div[1]/main[1]/div[1]/div[1]/div[4]/div[1]/div[2]/div[2]/div[3]/div[2]"
+     },
+     "state": "accounts.treasury"
+    },
+    {
+     "evidence": {
+      "end": "body",
+      "focusable": false,
+      "source": "pointer",
+      "stops": 58
+     },
+     "occurrence": {
+      "ancestors": [
+       [
+        "_dsTabView_95hq1_3",
+        "_portfolioTabs_1gorc_79"
+       ],
+       [],
+       [
+        "_pageContent_809q8_151",
+        "_pageContentWidth_809q8_184",
+        "_footerPadding_809q8_115"
+       ],
+       [
+        "_dashboardContent_809q8_29"
+       ],
+       [
+        "_layout_809q8_18"
+       ],
+       [
+        "_wrapper_809q8_3"
+       ],
+       [],
+       [
+        "_main_1gb3b_1"
+       ]
+      ],
+      "classes": [
+       "_bodySecondary_qaod7_51",
+       "_dsTabViewTab_95hq1_9"
+      ],
+      "data": {},
+      "heading": "Treasury",
+      "landmark": {
+       "name": "",
+       "role": "main"
+      },
+      "layer": "document",
+      "name": "",
+      "rect": [
+       346,
+       405,
+       49,
+       40
+      ],
+      "role": "generic",
+      "tag": "div",
+      "xpath": "/html/body/div[1]/main[1]/div[1]/div[1]/div[4]/div[1]/div[2]/div[2]/div[3]/div[1]"
+     },
+     "state": "accounts.treasury-portfolio"
+    }
+   ],
+   "evidenceHash": "4ac4540900b1ef94535d4a78136fcea4b27fe342b59710c5dcbabbc5eaef1a69",
+   "facts": {
+    "axeSummary": "",
+    "criterion": "2.1.1",
+    "criterionName": "Keyboard",
+    "element": "text in \"Treasury\"",
+    "rule": "not-reached",
+    "screen": "Treasury account",
+    "stops": "62"
+   },
+   "family": "keyboard",
+   "guidance": "High if a task cannot be completed without a mouse.",
+   "issueId": null,
+   "key": "keyboard:not-reached:ead289f02b88",
+   "measured": false,
+   "primary": "accounts.treasury",
+   "proposals": [],
+   "rule": "not-reached",
+   "screens": 2,
+   "severityDefault": "medium",
+   "source": "scanner",
+   "states": [
+    "accounts.treasury",
+    "accounts.treasury-portfolio"
+   ],
+   "summary": "The Tab walk visited 62 stops and never reached the text in \"Treasury\", which responds to a click.",
+   "title": "Not reachable by keyboard: text in \"Treasury\""
+  },
+  {
+   "attachments": [],
+   "attempt": 1,
+   "basis": "violation",
+   "criteria": [
+    "1.3.1"
+   ],
+   "evidence": [
+    {
+     "evidence": {
+      "aria-required-parent": [
+       "row"
+      ],
+      "failureSummary": "Fix any of the following:\n  Required ARIA parent role not present: row"
+     },
+     "occurrence": {
+      "ancestors": [
+       [
+        "_portfolioCompositionSecondRow_1kp0q_5"
+       ],
+       [
+        "_frame_19qwa_3"
+       ],
+       [
+        "_portfolioAdjustmentWrapper_1kp0q_1"
+       ],
+       [
+        "_column_17io9_10"
+       ],
+       [
+        "_wrapper_17io9_1"
+       ],
+       [],
+       [
+        "_pageContent_809q8_151",
+        "_pageContentWidth_809q8_184",
+        "_footerPadding_809q8_115"
+       ],
+       [
+        "_dashboardContent_809q8_29"
+       ]
+      ],
+      "classes": [
+       "_autoTransferRuleCard_grc5i_1"
+      ],
+      "data": {},
+      "heading": "Treasury",
+      "landmark": {
+       "name": "",
+       "role": "main"
+      },
+      "layer": "document",
+      "name": "Set up an auto transfer rule",
+      "rect": [
+       361,
+       329,
+       434,
+       24
+      ],
+      "role": "cell",
+      "tag": "div",
+      "xpath": "/html/body/div[1]/main[1]/div[1]/div[1]/div[4]/div[1]/div[2]/div[2]/div[2]/div[1]/div[1]/div[1]/div[2]/div[1]"
+     },
+     "state": "accounts.treasury"
+    },
+    {
+     "evidence": {
+      "aria-required-parent": [
+       "row"
+      ],
+      "failureSummary": "Fix any of the following:\n  Required ARIA parent role not present: row"
+     },
+     "occurrence": {
+      "ancestors": [
+       [
+        "_portfolioCompositionSecondRow_1kp0q_5"
+       ],
+       [
+        "_frame_19qwa_3"
+       ],
+       [
+        "_portfolioAdjustmentWrapper_1kp0q_1"
+       ],
+       [
+        "_column_17io9_10"
+       ],
+       [
+        "_wrapper_17io9_1"
+       ],
+       [],
+       [
+        "_pageContent_809q8_151",
+        "_pageContentWidth_809q8_184",
+        "_footerPadding_809q8_115"
+       ],
+       [
+        "_dashboardContent_809q8_29"
+       ]
+      ],
+      "classes": [
+       "_autoTransferRuleCard_grc5i_1"
+      ],
+      "data": {},
+      "heading": "Treasury",
+      "landmark": {
+       "name": "",
+       "role": "main"
+      },
+      "layer": "document",
+      "name": "Set up an auto transfer rule",
+      "rect": [
+       361,
+       329,
+       434,
+       24
+      ],
+      "role": "cell",
+      "tag": "div",
+      "xpath": "/html/body/div[1]/main[1]/div[1]/div[1]/div[4]/div[1]/div[2]/div[2]/div[2]/div[1]/div[1]/div[1]/div[2]/div[1]"
+     },
+     "state": "accounts.treasury-portfolio"
+    }
+   ],
+   "evidenceHash": "9409770186bff1c645d7a044fed44521c054d627f69414cfbc3c53b5fd6d64ac",
+   "facts": {
+    "announced": "cell \"Set up an auto transfer rule\"",
+    "axeSummary": "Required ARIA parent role not present: row",
+    "criterion": "1.3.1",
+    "criterionName": "Info and Relationships",
+    "element": "cell \"Set up an auto transfer rule\"",
+    "rule": "aria-required-parent",
+    "screen": "Treasury account"
+   },
+   "family": "role-state",
+   "guidance": "Low for optional ARIA or an invalid autocomplete token; high when aria-hidden hides the whole page.",
+   "issueId": null,
+   "key": "role-state:aria-required-parent:3ac7f1a2931c",
+   "measured": false,
+   "primary": "accounts.treasury",
+   "proposals": [],
+   "rule": "aria-required-parent",
+   "screens": 2,
+   "severityDefault": "medium",
+   "source": "scanner",
+   "states": [
+    "accounts.treasury",
+    "accounts.treasury-portfolio"
+   ],
+   "summary": "aria-required-parent: announced as cell \"Set up an auto transfer rule\". Required ARIA parent role not present: row",
+   "title": "Wrong role or state: cell \"Set up an auto transfer rule\""
+  }
+ ],
+ "primaries": [
+  "accounts.treasury"
+ ],
+ "reach": {
+  "baseUrl": "https://demo.mercury.com",
+  "data": "data",
+  "map": "build/map.json",
+  "run": "2026-10-03-1525",
+  "workspace": "a11y"
+ },
+ "run": "2026-10-03-1525"
+}

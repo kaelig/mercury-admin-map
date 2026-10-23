@@ -1,0 +1,33 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Open dialog</title>
+<style>
+  body { font: 16px/1.5 Arial, sans-serif; color: #1a1a1a; background: #ffffff; margin: 24px; }
+  button { font: 14px Arial, sans-serif; padding: 8px 16px; }
+  .muted { color: #aaaaaa; }
+  .tiny { width: 16px; height: 16px; padding: 0; margin: 0; border: 1px solid #1a1a1a; background: #ffffff; box-sizing: border-box; font: 10px Arial, sans-serif; color: #1a1a1a; }
+  .pointer { cursor: pointer; }
+  .dialog { position: fixed; top: 120px; left: 600px; width: 480px; padding: 24px; background: #ffffff; border: 1px solid #1a1a1a; }
+</style>
+</head>
+<body>
+<!-- Behind the dialog: failures that must not appear, because the scan covers the open dialog. -->
+<main>
+  <h1>Cards</h1>
+  <p class="muted">Behind the dialog</p>
+  <div><button type="button" class="tiny" aria-label="Previous">&lt;</button><button type="button" class="tiny" aria-label="Next">&gt;</button></div>
+  <div class="pointer" id="behind-card">Card behind the dialog</div>
+  <button type="button" aria-haspopup="menu" aria-expanded="false" aria-controls="gone-behind">More</button>
+</main>
+<div role="dialog" aria-modal="true" aria-labelledby="dialog-title" class="dialog" id="dialog">
+  <h2 id="dialog-title">Edit card limits</h2>
+  <p class="muted">Limits reset monthly</p>
+  <div><button type="button" class="tiny" aria-label="Decrease">-</button><button type="button" class="tiny" aria-label="Increase">+</button></div>
+  <div class="pointer" id="dialog-option">Monthly</div>
+  <button type="button" aria-haspopup="menu" aria-expanded="false" aria-controls="gone">Move money</button>
+  <button type="button">Save</button>
+</div>
+</body>
+</html>

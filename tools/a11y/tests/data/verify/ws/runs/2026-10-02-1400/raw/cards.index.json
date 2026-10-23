@@ -1,0 +1,131 @@
+{
+ "build": "b1d2e3",
+ "checks": {},
+ "env": {
+  "axe": "4.13.0",
+  "chromium": "151.0.7000.0",
+  "colorScheme": "light",
+  "dpr": 1,
+  "locale": "en-US",
+  "playwright": "1.62.1",
+  "reducedMotion": "reduce",
+  "timezone": "America/Los_Angeles",
+  "viewport": [
+   1440,
+   900
+  ]
+ },
+ "families": {
+  "completed": [
+   "axe",
+   "records",
+   "interactive",
+   "target"
+  ],
+  "incomplete": []
+ },
+ "frames": [],
+ "harness": "0000000000000000",
+ "kind": "page",
+ "layer": {
+  "name": "",
+  "role": "document",
+  "scope": "document",
+  "xpath": "/html"
+ },
+ "reason": null,
+ "reasonDetail": null,
+ "recipeHash": "0000000000000000000000000000000000000000000000000000000000000000",
+ "records": [],
+ "results": [
+  {
+   "basis": "violation",
+   "check": "axe",
+   "criteria": [
+    "1.4.3"
+   ],
+   "evidence": {
+    "bgColor": "#ffffff",
+    "contrastRatio": 2.85,
+    "expectedContrastRatio": "4.5:1",
+    "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 2.85",
+    "fgColor": "#9d9da8",
+    "fontSize": "10.5pt (14px)",
+    "fontWeight": "normal"
+   },
+   "messageKey": null,
+   "occurrence": {
+    "ancestors": [
+     [
+      "_cell_tb001_8"
+     ]
+    ],
+    "classes": [
+     "_muted_ab12c_3"
+    ],
+    "data": {},
+    "heading": "",
+    "landmark": {
+     "name": "",
+     "role": "main"
+    },
+    "layer": "document",
+    "name": "Pending",
+    "rect": [
+     400,
+     300,
+     52,
+     16
+    ],
+    "role": "",
+    "tag": "span",
+    "xpath": "/html/body/div/main/table/tbody/tr[1]/td[3]/span"
+   },
+   "rule": "color-contrast"
+  },
+  {
+   "basis": "violation",
+   "check": "axe",
+   "criteria": [
+    "2.5.8"
+   ],
+   "evidence": {
+    "failureSummary": "Fix any of the following:\n  Target has insufficient size (18px by 18px, should be at least 24px by 24px)",
+    "offset": 18
+   },
+   "messageKey": null,
+   "occurrence": {
+    "ancestors": [
+     [
+      "_toolbar_tb001_1"
+     ]
+    ],
+    "classes": [
+     "_chip_chp11_2"
+    ],
+    "data": {},
+    "heading": "",
+    "landmark": {
+     "name": "",
+     "role": "main"
+    },
+    "layer": "document",
+    "name": "Filter",
+    "rect": [
+     200,
+     120,
+     18,
+     18
+    ],
+    "role": "button",
+    "tag": "button",
+    "xpath": "/html/body/div/main/div[1]/button[2]"
+   },
+   "rule": "target-size"
+  }
+ ],
+ "schema": 1,
+ "state": "cards.index",
+ "status": "audited",
+ "url": "/cards"
+}

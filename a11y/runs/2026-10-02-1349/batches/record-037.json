@@ -1,0 +1,217 @@
+{
+ "batch": "record-037",
+ "reach": {
+  "baseUrl": "https://demo.mercury.com",
+  "data": "data",
+  "map": "build/map.json",
+  "run": "2026-10-02-1349",
+  "workspace": "a11y"
+ },
+ "run": "2026-10-02-1349",
+ "states": [
+  {
+   "area": "accounts",
+   "draft": "structure-missing: a popover needs an open layer; the replay found none; the conductor rejected the previous recipe: different screen: the hop clicks a button named '<n>' and opens the 'Customize the Mercury demo' dialog; the label means the routing number, and the replay shows no 'Copied' tooltip",
+   "image": "screens/accounts/20-routing-copied.png",
+   "kind": "popover",
+   "labels": [
+    "Click eye icon next to Account number",
+    "Click routing number"
+   ],
+   "mutates": false,
+   "note": "Clicking the routing number copies it and shows a \"Copied\" tooltip.",
+   "parent": "accounts.account-number-revealed",
+   "state": "accounts.routing-copied",
+   "title": "Routing number copied"
+  },
+  {
+   "area": "accounts",
+   "draft": "not drafted: its parent had no accepted recipe when the drafter ran",
+   "image": "screens/accounts/21-documents-menu.png",
+   "kind": "menu",
+   "labels": [
+    "Click eye icon next to Account number",
+    "Click routing number",
+    "Click Documents"
+   ],
+   "mutates": false,
+   "note": "Account Documents dropdown: Statements, Bank Letters, Wire Details.",
+   "parent": "accounts.routing-copied",
+   "state": "accounts.documents-menu",
+   "title": "Documents menu"
+  },
+  {
+   "area": "accounts",
+   "draft": "not drafted: its parent had no accepted recipe when the drafter ran; a previous recorder failed: policy (now retry: policy.fixtureValues gained empty \"\", 2000000, 10000, 500, 150, card): The label enters $10,000; 10,000 is not a fixture value (amount is 1.00).",
+   "image": "screens/accounts/47-treasury-transfer-review.png",
+   "kind": "page",
+   "labels": [
+    "Click Next with empty form",
+    "Enter $10,000, pick Ops / Payroll, click Next"
+   ],
+   "mutates": false,
+   "note": "$10,000.00 from Ops / Payroll to Treasury, with authorization and Apex Clearing disclosures.",
+   "parent": "accounts.treasury-transfer-error",
+   "state": "accounts.treasury-transfer-review",
+   "title": "Review transfer"
+  },
+  {
+   "area": "accounts",
+   "draft": "not drafted: its parent had no accepted recipe when the drafter ran; a previous recorder failed: policy (now retry: policy.fixtureValues gained empty \"\", 2000000, 10000, 500, 150, card): Parent accounts.treasury-transfer-review needs the non-fixture value $10,000.",
+   "image": "screens/accounts/48-treasury-transfer-success.png",
+   "kind": "confirmation",
+   "labels": [
+    "Click Next with empty form",
+    "Enter $10,000, pick Ops / Payroll, click Next",
+    "Click Transfer"
+   ],
+   "mutates": true,
+   "note": "\"Your transfer is on the way\" with arrival window, amount card, Make another transfer and Go to dashboard.",
+   "parent": "accounts.treasury-transfer-review",
+   "state": "accounts.treasury-transfer-success",
+   "title": "Transfer on the way"
+  },
+  {
+   "area": "accounts",
+   "draft": "not drafted: its parent had no accepted recipe when the drafter ran; a previous recorder failed: policy (now retry: policy.fixtureValues gained empty \"\", 2000000, 10000, 500, 150, card): The label types 150 in the threshold field; 150 is not a fixture value.",
+   "image": "screens/accounts/37-autopay-threshold-saving.png",
+   "kind": "form-state",
+   "labels": [
+    "Click Autopay Oct 22 pill",
+    "Click Edit on Less than 80% of limit left",
+    "Type 150 and click Save"
+   ],
+   "mutates": true,
+   "note": "Typing 150 is silently truncated to 15%; preview text updates and Save shows a spinner.",
+   "parent": "accounts.autopay-threshold-edit",
+   "state": "accounts.autopay-threshold-saving",
+   "title": "Limit-based autopay saving"
+  },
+  {
+   "area": "accounts",
+   "draft": "not drafted: its parent had no accepted recipe when the drafter ran",
+   "image": "screens/accounts/05-create-account-filled.png",
+   "kind": "form-state",
+   "labels": [
+    "Click Add account",
+    "Click Create account",
+    "Click Create account with no type",
+    "Select Checking and type nickname"
+   ],
+   "mutates": true,
+   "note": "Checking selected and nickname 'Taxes' entered; Create account button enabled.",
+   "parent": "accounts.create-account-error",
+   "state": "accounts.create-account-filled",
+   "title": "Create account \u2014 filled"
+  },
+  {
+   "area": "accounts",
+   "draft": "not drafted: its parent had no accepted recipe when the drafter ran",
+   "image": "screens/accounts/95-limit-increase-sent.png",
+   "kind": "confirmation",
+   "labels": [
+    "Click Request a limit increase",
+    "Click Request Increase with no amount",
+    "Enter amount, click Request Increase"
+   ],
+   "mutates": true,
+   "note": "Same dialog swaps to \"Your IO limit increase request has been received and is currently under review.\" with Done.",
+   "parent": "accounts.limit-increase-error",
+   "state": "accounts.limit-increase-sent",
+   "title": "Limit increase requested"
+  },
+  {
+   "area": "accounts",
+   "draft": "not drafted: its parent had no accepted recipe when the drafter ran",
+   "image": "screens/accounts/89-rule-distribute.png",
+   "kind": "modal",
+   "labels": [
+    "Click Auto transfer rules tab",
+    "Click Create rule",
+    "Click Distribute funds out"
+   ],
+   "mutates": true,
+   "note": "\"Distribute funds across accounts\": percentage of balance from a starting account to one or more destinations, split bar and frequency.",
+   "parent": "accounts.create-rule",
+   "state": "accounts.rule-distribute",
+   "title": "Distribute funds rule form"
+  },
+  {
+   "area": "accounts",
+   "draft": "not drafted: its parent had no accepted recipe when the drafter ran",
+   "image": "screens/accounts/90-rule-recurring.png",
+   "kind": "modal",
+   "labels": [
+    "Click Auto transfer rules tab",
+    "Click Create rule",
+    "Click Send recurring transfers"
+   ],
+   "mutates": true,
+   "note": "\"Schedule recurring transfers\": set amount from a starting account to destinations on a frequency. The picker calls it \"Send recurring transfers\".",
+   "parent": "accounts.create-rule",
+   "state": "accounts.rule-recurring",
+   "title": "Recurring transfer rule form"
+  },
+  {
+   "area": "accounts",
+   "draft": "not drafted: its parent had no accepted recipe when the drafter ran",
+   "image": "screens/accounts/91-rule-redirect.png",
+   "kind": "modal",
+   "labels": [
+    "Click Auto transfer rules tab",
+    "Click Create rule",
+    "Click Redirect incoming funds"
+   ],
+   "mutates": true,
+   "note": "\"Redirect incoming funds\": percentage of incoming ACH, wire and check deposits swept to destination accounts; no frequency field.",
+   "parent": "accounts.create-rule",
+   "state": "accounts.rule-redirect",
+   "title": "Redirect incoming funds rule form"
+  },
+  {
+   "area": "accounts",
+   "draft": "not drafted: its parent had no accepted recipe when the drafter ran",
+   "image": "screens/accounts/10-rule-target-balance.png",
+   "kind": "form-state",
+   "labels": [
+    "Click Auto transfer rules tab",
+    "Click Create rule",
+    "Click Maintain a target balance"
+   ],
+   "mutates": true,
+   "note": "Rule form: account, bound (is not exactly / above / below), target amount, supporting account and frequency.",
+   "parent": "accounts.create-rule",
+   "state": "accounts.rule-target-balance",
+   "title": "Maintain a target balance form"
+  },
+  {
+   "area": "accounts",
+   "draft": "not drafted: its parent had no accepted recipe when the drafter ran",
+   "image": "screens/accounts/49-treasury-transfer-out.png",
+   "kind": "page",
+   "labels": [
+    "Click Transfer funds chevron",
+    "Click Transfer out"
+   ],
+   "mutates": true,
+   "note": "Same transfer form with Treasury preset as the source.",
+   "parent": "accounts.treasury-transfer-menu",
+   "state": "accounts.treasury-transfer-out",
+   "title": "Withdraw from Treasury"
+  },
+  {
+   "area": "accounts",
+   "draft": "cannot parse \"Type $2,000,000\"; a previous recorder failed: policy (now retry: policy.fixtureValues gained empty \"\", 2000000, 10000, 500, 150, card): The label types $2,000,000; no fixture value matches 2000000, and typing it is refused by the fixtureValues rule.",
+   "image": "screens/accounts/101-vd-request-validation.png",
+   "kind": "validation-error",
+   "labels": [
+    "Type $2,000,000"
+   ],
+   "mutates": false,
+   "note": "$2,000,000 shows \"Request amount may not exceed $1,000,000.00.\" but Next stays enabled.",
+   "parent": "accounts.vd-request-funds",
+   "state": "accounts.vd-request-error",
+   "title": "Venture debt draw over limit"
+  }
+ ]
+}

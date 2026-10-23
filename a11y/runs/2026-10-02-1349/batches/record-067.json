@@ -1,0 +1,105 @@
+{
+ "batch": "record-067",
+ "reach": {
+  "baseUrl": "https://demo.mercury.com",
+  "data": "data",
+  "map": "build/map.json",
+  "run": "2026-10-02-1349",
+  "workspace": "a11y"
+ },
+ "run": "2026-10-02-1349",
+ "states": [
+  {
+   "area": "home",
+   "draft": "nothing on home.index matches {\"click\":{\"name\":\"map launcher\"}}; a previous recorder failed: structure-missing: a popover needs an open layer; the replay found none (click [class*=\"_menuIcon_\"] opens the panel live, with waits and hover too)",
+   "image": "screens/home/02-try-panel-startup.png",
+   "kind": "popover",
+   "labels": [
+    "Click map launcher (bottom right)"
+   ],
+   "mutates": false,
+   "note": "Bottom-right onboarding panel with Startup/Ecommerce/Agency/More tabs; Startup lists contractor payments, team invites, cards, vendor details, SAFE.",
+   "parent": "home.index",
+   "state": "home.try-panel-startup",
+   "title": "Try out Mercury panel: Startup"
+  },
+  {
+   "area": "home",
+   "draft": "not drafted: its parent had no accepted recipe when the drafter ran",
+   "image": "screens/home/03-try-panel-ecommerce.png",
+   "kind": "popover",
+   "labels": [
+    "Click map launcher (bottom right)",
+    "Click Ecommerce tab"
+   ],
+   "mutates": false,
+   "note": "Ecommerce tab of the Try-out panel with commerce-oriented suggested tasks.",
+   "parent": "home.try-panel-startup",
+   "state": "home.try-panel-ecommerce",
+   "title": "Try out panel: Ecommerce tab"
+  },
+  {
+   "area": "home",
+   "draft": "not drafted: its parent had no accepted recipe when the drafter ran",
+   "image": "screens/home/04-try-panel-agency.png",
+   "kind": "popover",
+   "labels": [
+    "Click map launcher (bottom right)",
+    "Click Ecommerce tab",
+    "Click Agency tab"
+   ],
+   "mutates": false,
+   "note": "Agency tab of the Try-out panel with agency-oriented suggested tasks.",
+   "parent": "home.try-panel-ecommerce",
+   "state": "home.try-panel-agency",
+   "title": "Try out panel: Agency tab"
+  },
+  {
+   "area": "home",
+   "draft": "not drafted: its parent had no accepted recipe when the drafter ran",
+   "image": "screens/home/05-try-panel-more.png",
+   "kind": "popover",
+   "labels": [
+    "Click map launcher (bottom right)",
+    "Click Ecommerce tab",
+    "Click Agency tab",
+    "Click More tab"
+   ],
+   "mutates": false,
+   "note": "More tab: Make a payment, View transactions, Create a card, Send an invoice, Track tasks; plus 'Understand your data' with Try Command.",
+   "parent": "home.try-panel-agency",
+   "state": "home.try-panel-more",
+   "title": "Try out panel: More tab"
+  },
+  {
+   "area": "home",
+   "draft": "cannot parse \"Hover an account row\"; a previous recorder failed: structure-missing: a popover needs an open layer; the replay found none",
+   "image": "screens/home/55-account-row-tooltip.png",
+   "kind": "popover",
+   "labels": [
+    "Hover an account row"
+   ],
+   "mutates": false,
+   "note": "Hovering an account row shows Pending in / Pending out / Available for that account.",
+   "parent": "home.index",
+   "state": "home.account-row-tooltip",
+   "title": "Account row hover breakdown"
+  },
+  {
+   "area": "home",
+   "draft": "not drafted: its parent had no accepted recipe when the drafter ran; a previous recorder failed: policy (now retry: policy.fixtureValues gained empty \"\", 2000000, 10000, 2500, 500, 150, card, a, Lunch, Deli 77, 12/31/2099): The label replaces the query with gibberish (zzqxnothing); that is not a fixture value.",
+   "image": "screens/home/28-search-no-results.png",
+   "kind": "empty-state",
+   "labels": [
+    "Click 'Search for anything' (or Cmd+K)",
+    "Type 'Google'",
+    "Replace query with gibberish"
+   ],
+   "mutates": false,
+   "note": "A nonsense query shows only 'Search all transactions for \"zzqxnothing\"' with no 'no results' message.",
+   "parent": "home.search-results",
+   "state": "home.search-no-results",
+   "title": "Search: no matches"
+  }
+ ]
+}

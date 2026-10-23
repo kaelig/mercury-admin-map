@@ -1,0 +1,323 @@
+{
+ "area": "accounts",
+ "batch": "verify-025",
+ "findings": [
+  {
+   "attachments": [],
+   "attempt": 1,
+   "basis": "incomplete",
+   "criteria": [
+    "1.4.3"
+   ],
+   "evidence": [
+    {
+     "evidence": {
+      "expectedContrastRatio": "3:1",
+      "failureSummary": "Fix any of the following:\n  Element's background color could not be determined due to a pseudo element",
+      "fontSize": "18.8pt (25px)",
+      "fontWeight": "normal",
+      "messageKey": "pseudoContent"
+     },
+     "occurrence": {
+      "ancestors": [
+       [
+        "_check_1qegu_23",
+        "_checkImageLoaded_1qegu_40"
+       ],
+       [
+        "_rightPanel_j8648_20"
+       ],
+       [
+        "_base_1o3a2_3"
+       ],
+       [
+        "_rightSide_12wmm_18"
+       ],
+       [
+        "_container_12wmm_1"
+       ],
+       [
+        "_container_d2ugs_1"
+       ],
+       [],
+       [
+        "_main_1gb3b_1"
+       ]
+      ],
+      "classes": [
+       "_micrAccount_1qegu_383"
+      ],
+      "data": {},
+      "heading": "Order a Checkbook",
+      "landmark": {
+       "name": "",
+       "role": "main"
+      },
+      "layer": "document",
+      "name": "",
+      "rect": [
+       991,
+       480,
+       125,
+       25
+      ],
+      "role": "generic",
+      "tag": "div",
+      "xpath": "/html/body/div[1]/main[1]/div[1]/div[2]/div[1]/section[2]/div[1]/div[4]/div[1]/div[21]"
+     },
+     "state": "accounts.order-checkbook"
+    },
+    {
+     "evidence": {
+      "expectedContrastRatio": "4.5:1",
+      "failureSummary": "Fix any of the following:\n  Element's background color could not be determined due to a pseudo element",
+      "fontSize": "11.3pt (15px)",
+      "fontWeight": "normal",
+      "messageKey": "pseudoContent"
+     },
+     "occurrence": {
+      "ancestors": [
+       [
+        "_bodyDefault_qaod7_40",
+        "_dollarDisplay_1of3b_3"
+       ],
+       [
+        "_padRight_1rihk_3"
+       ],
+       [
+        "_tableData_1u4jr_5",
+        "_alignmentStart_1u4jr_12",
+        "_amountCell_fuxy9_82",
+        "_collapsibleColumn_1acga_26"
+       ],
+       [
+        "_tableRow_137xu_3",
+        "_interactiveRows_137xu_35",
+        "_large_137xu_29",
+        "_showHoverActions_1o7vl_18"
+       ],
+       [
+        "_tableBody_1cp5b_1"
+       ],
+       [
+        "_table_1acga_4"
+       ],
+       [
+        "_tableWrapper_1acga_4"
+       ],
+       [
+        "_draftsTableContainer_1o7vl_1"
+       ]
+      ],
+      "classes": [],
+      "data": {},
+      "heading": "Due in next 7 days",
+      "landmark": {
+       "name": "",
+       "role": "main"
+      },
+      "layer": "document",
+      "name": "",
+      "rect": [
+       956,
+       513,
+       54,
+       18
+      ],
+      "role": "",
+      "tag": "span",
+      "xpath": "/html/body/div[1]/main[1]/div[1]/div[1]/div[4]/div[1]/div[2]/div[2]/div[2]/div[2]/div[2]/div[1]/div[1]/table[1]/tbody[1]/tr[1]/td[5]/div[1]/div[1]/span[1]"
+     },
+     "state": "billpay.row-hover"
+    }
+   ],
+   "evidenceHash": "e627610fc7a518d53599673d7b737ee4f95173172ecb2c562db2150b13e27e3b",
+   "facts": {
+    "criterion": "1.4.3",
+    "criterionName": "Contrast (Minimum)",
+    "elements": "49 elements",
+    "messageKey": "pseudoContent",
+    "rule": "color-contrast",
+    "screen": "Order a Checkbook",
+    "why": "a pseudo-element changes its look"
+   },
+   "family": "contrast",
+   "guidance": "High under 2:1, or under 3:1 for essential text.",
+   "issueId": null,
+   "key": "contrast:color-contrast:007caca2012e",
+   "measured": true,
+   "primary": "accounts.order-checkbook",
+   "proposals": [],
+   "rule": "color-contrast",
+   "screens": 35,
+   "severityDefault": "medium",
+   "source": "scanner",
+   "states": [
+    "accounts.order-checkbook",
+    "billpay.row-hover"
+   ],
+   "summary": "axe color-contrast could not decide 49 elements (pseudoContent): a pseudo-element changes its look.",
+   "title": "Needs review: color-contrast, a pseudo-element changes its look"
+  },
+  {
+   "attachments": [],
+   "attempt": 1,
+   "basis": "candidate",
+   "criteria": [
+    "2.4.3",
+    "1.3.2"
+   ],
+   "evidence": [
+    {
+     "evidence": {
+      "band": 24,
+      "overlay": "accounts.order-checkbook.tabstops.png",
+      "previous": {
+       "ancestors": [
+        [
+         "_inputBox_q7hf7_93"
+        ],
+        [
+         "_inputBoxWrapper_q7hf7_93"
+        ],
+        [
+         "_textInputWrapper_q7hf7_24"
+        ],
+        [
+         "_provideDSTextInput_q7hf7_6",
+         "_addWrapperMargin_q7hf7_19"
+        ],
+        [
+         "_nicknameField_j8648_12"
+        ],
+        [
+         "_nameAndNumberRow_j8648_7"
+        ],
+        [],
+        [
+         "_body_d2ugs_7",
+         "_formFields_j8648_1"
+        ]
+       ],
+       "classes": [
+        "_input_q7hf7_93"
+       ],
+       "data": {},
+       "heading": "Order a Checkbook",
+       "landmark": {
+        "name": "",
+        "role": "main"
+       },
+       "layer": "document",
+       "name": "Checkbook nickname",
+       "rect": [
+        112,
+        312,
+        242,
+        24
+       ],
+       "role": "textbox",
+       "tag": "input",
+       "xpath": "/html/body/div[1]/main[1]/div[1]/div[2]/div[1]/section[1]/section[1]/div[2]/div[1]/div[1]/div[1]/div[1]/div[1]/div[1]/input[1]"
+      },
+      "rise": 28,
+      "stop": 4,
+      "stops": 13
+     },
+     "occurrence": {
+      "ancestors": [
+       [
+        "_startNumberLabel_j8648_34"
+       ],
+       [
+        "_label_qaod7_59",
+        "_label_1nilg_3",
+        "_label_q7hf7_41"
+       ],
+       [
+        "_textInputWrapper_q7hf7_24"
+       ],
+       [
+        "_provideDSTextInput_q7hf7_6",
+        "_addWrapperMargin_q7hf7_19"
+       ],
+       [
+        "_startNumberField_j8648_16"
+       ],
+       [
+        "_nameAndNumberRow_j8648_7"
+       ],
+       [],
+       [
+        "_body_d2ugs_7",
+        "_formFields_j8648_1"
+       ]
+      ],
+      "classes": [
+       "_tooltipAnchor_18bac_4",
+       "_tooltipAnchorIcon_1fb2p_8",
+       "_tooltipAnchor_1fb2p_4",
+       "_tooltipAnchor_j8648_30"
+      ],
+      "data": {
+       "data-focus-visible": "true"
+      },
+      "heading": "Order a Checkbook",
+      "landmark": {
+       "name": "",
+       "role": "main"
+      },
+      "layer": "document",
+      "name": "More info",
+      "rect": [
+       469,
+       284,
+       11,
+       11
+      ],
+      "role": "generic",
+      "tag": "div",
+      "xpath": "/html/body/div[1]/main[1]/div[1]/div[2]/div[1]/section[1]/section[1]/div[2]/div[1]/div[2]/div[1]/div[1]/label[1]/span[1]/div[1]"
+     },
+     "state": "accounts.order-checkbook"
+    }
+   ],
+   "evidenceHash": "52c317ee956534ad1e8adfc5616f4cbc4e6cc8478b84ccfe0423f60bbaee5f71",
+   "facts": {
+    "criterion": "2.4.3",
+    "criterionName": "Focus Order",
+    "element": "text \"More info\"",
+    "previous": "textbox \"Checkbook nickname\"",
+    "screen": "Order a Checkbook",
+    "stop": "4"
+   },
+   "family": "focus-order",
+   "guidance": "High if the order skips a required control.",
+   "issueId": null,
+   "key": "focus-order:backward-jump:6af788e4b5de",
+   "measured": false,
+   "primary": "accounts.order-checkbook",
+   "proposals": [],
+   "rule": "backward-jump",
+   "screens": 1,
+   "severityDefault": "medium",
+   "source": "scanner",
+   "states": [
+    "accounts.order-checkbook"
+   ],
+   "summary": "Tab stop 4 jumped backward on screen, from the textbox \"Checkbook nickname\" to the text \"More info\".",
+   "title": "Tab order jumps backward at text \"More info\""
+  }
+ ],
+ "primaries": [
+  "accounts.order-checkbook"
+ ],
+ "reach": {
+  "baseUrl": "https://demo.mercury.com",
+  "data": "data",
+  "map": "build/map.json",
+  "run": "2026-10-03-1525",
+  "workspace": "a11y"
+ },
+ "run": "2026-10-03-1525"
+}

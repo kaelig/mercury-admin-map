@@ -1,0 +1,23 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><title>Focus rings</title>
+<style>
+  body { font: 16px/1.4 sans-serif; margin: 24px; color: #111; background: #fff; }
+  button { font: inherit; margin: 16px; padding: 6px 12px; border: 1px solid #555; border-radius: 4px; background: #fff; color: #111; }
+  /* 1: the browser's default ring. 2: a custom box-shadow ring. 3: outline removed, nothing in its place. */
+  #ring:focus-visible { outline: none; box-shadow: 0 0 0 3px #1d4ed8; }
+  #none:focus { outline: none; }
+  /* 4: the input draws no ring; its wrapper's :focus-within border does, 16 px from the input. */
+  .field { display: inline-block; margin: 16px; padding: 14px 16px; border: 2px solid #ccc; border-radius: 6px; }
+  .field:focus-within { border-color: #1d4ed8; }
+  .field input { border: 0; outline: none; padding: 0; font: inherit; width: 160px; background: #f3f3f3; }
+</style></head>
+<body>
+<main>
+  <h1>Focus rings</h1>
+  <button id="default">Default ring</button>
+  <button id="ring">Custom ring</button>
+  <button id="none">No ring</button>
+  <label for="amount">Amount</label>
+  <div class="field"><input id="amount"></div>
+</main>
+</body></html>

@@ -1,0 +1,500 @@
+{
+ "area": "home",
+ "batch": "second-028",
+ "findings": [
+  {
+   "attachments": [],
+   "attempt": 1,
+   "basis": "candidate",
+   "criteria": [
+    "4.1.2"
+   ],
+   "evidence": [
+    {
+     "evidence": {
+      "description": "",
+      "name": "",
+      "role": "button",
+      "states": {},
+      "template": "button \"\""
+     },
+     "occurrence": {
+      "ancestors": [
+       [
+        "_sizeControlsContainer_1udi3_71",
+        "_controlSection_1udi3_22"
+       ],
+       [
+        "_controls_1udi3_5"
+       ],
+       [
+        "_controlsContainer_1udi3_46"
+       ],
+       [
+        "_viewerAndControlsWrapper_1lhz4_14"
+       ],
+       [],
+       [
+        "_pdfRenderer_smemz_99"
+       ],
+       [
+        "_rightWrapper_usdau_39",
+        "_attachmentViewerBackground_15al5_359"
+       ],
+       [
+        "_contentsWrapper_usdau_1",
+        "_container_15al5_4"
+       ]
+      ],
+      "classes": [
+       "_button_r6b2u_20",
+       "_small_r6b2u_72",
+       "_tertiary_r6b2u_153"
+      ],
+      "data": {},
+      "heading": "",
+      "landmark": {
+       "name": "",
+       "role": "main"
+      },
+      "layer": "document",
+      "name": "",
+      "rect": [
+       1121,
+       840,
+       32,
+       32
+      ],
+      "role": "button",
+      "tag": "button",
+      "xpath": "/html/body/div[1]/main[1]/div[1]/div[2]/div[2]/div[3]/div[1]/div[1]/div[2]/div[1]/div[1]/div[1]/div[2]/div[1]/div[2]/button[1]"
+     },
+     "state": "home.task-payment-review"
+    },
+    {
+     "evidence": {
+      "description": "",
+      "name": "",
+      "role": "button",
+      "states": {},
+      "template": "button \"\""
+     },
+     "occurrence": {
+      "ancestors": [
+       [
+        "_sizeControlsContainer_1udi3_71",
+        "_controlSection_1udi3_22"
+       ],
+       [
+        "_controls_1udi3_5"
+       ],
+       [
+        "_controlsContainer_1udi3_46"
+       ],
+       [
+        "_viewerAndControlsWrapper_1lhz4_14"
+       ],
+       [],
+       [
+        "_pdfRenderer_smemz_99"
+       ],
+       [
+        "_attachmentWrapper_15al5_161"
+       ],
+       [
+        "_tooltipAnchor_18bac_4",
+        "_preview_15al5_94",
+        "_attachmentViewerBackground_15al5_359",
+        "_withAttachment_15al5_86"
+       ]
+      ],
+      "classes": [
+       "_button_r6b2u_20",
+       "_small_r6b2u_72",
+       "_tertiary_r6b2u_153"
+      ],
+      "data": {},
+      "heading": "Recipient",
+      "landmark": {
+       "name": "",
+       "role": "main"
+      },
+      "layer": "document",
+      "name": "",
+      "rect": [
+       1151,
+       840,
+       32,
+       32
+      ],
+      "role": "button",
+      "tag": "button",
+      "xpath": "/html/body/div[1]/main[1]/div[1]/div[2]/div[2]/div[1]/div[2]/section[3]/div[2]/div[1]/div[1]/div[1]/div[2]/div[1]/div[3]/button[1]"
+     },
+     "state": "billpay.pay-recipient"
+    }
+   ],
+   "evidenceHash": "9b34fbb097dd313eec2ca73c6945f8bb2b767977c734576b5a125fd7e1f7e67b",
+   "facts": {
+    "announced": "button \"\"",
+    "axeSummary": "",
+    "criterion": "4.1.2",
+    "criterionName": "Name, Role, Value",
+    "element": "button in the main landmark",
+    "rule": "announced-as",
+    "screen": "Task: payment approval review"
+   },
+   "family": "name",
+   "guidance": "High for an unnamed form control or the sole primary action.",
+   "issueId": null,
+   "key": "name:announced-as:29ea716bf610",
+   "measured": false,
+   "primary": "home.task-payment-review",
+   "proposals": [],
+   "rule": "announced-as",
+   "screens": 19,
+   "severityDefault": "medium",
+   "source": "scanner",
+   "states": [
+    "home.task-payment-review",
+    "billpay.pay-recipient"
+   ],
+   "summary": "announced-as: announced as button \"\".",
+   "title": "Missing or unclear name: button in the main landmark"
+  },
+  {
+   "attachments": [],
+   "attempt": 1,
+   "basis": "candidate",
+   "criteria": [
+    "2.4.4"
+   ],
+   "evidence": [
+    {
+     "evidence": {
+      "description": "",
+      "name": "Manage",
+      "role": "link",
+      "states": {},
+      "template": "link \"Manage\""
+     },
+     "occurrence": {
+      "ancestors": [
+       [],
+       [
+        "_bodySecondary_qaod7_51",
+        "_text-link_12t49_1",
+        "_editButton_mup67_23"
+       ],
+       [
+        "_contentWrapper_mup67_17"
+       ],
+       [
+        "_settingsProfileSection_mup67_3"
+       ],
+       [],
+       [
+        "_pageContent_809q8_151",
+        "_pageContentWidth_809q8_184",
+        "_footerPadding_809q8_115"
+       ],
+       [
+        "_dashboardContent_809q8_29"
+       ],
+       [
+        "_layout_809q8_18"
+       ]
+      ],
+      "classes": [
+       "_link_ual8v_4",
+       "_underlineOnHover_ual8v_15"
+      ],
+      "data": {
+       "data-discover": "true"
+      },
+      "heading": "Jane Black",
+      "landmark": {
+       "name": "",
+       "role": "main"
+      },
+      "layer": "document",
+      "name": "Manage",
+      "rect": [
+       722,
+       -2,
+       63,
+       16
+      ],
+      "role": "link",
+      "tag": "a",
+      "xpath": "/html/body/div[1]/main[1]/div[1]/div[1]/div[4]/div[1]/div[2]/div[2]/div[11]/div[2]/span[1]/span[1]/a[1]"
+     },
+     "state": "home.task-receipt-forwarding"
+    },
+    {
+     "evidence": {
+      "description": "",
+      "name": "Manage",
+      "role": "link",
+      "states": {},
+      "template": "link \"Manage\""
+     },
+     "occurrence": {
+      "ancestors": [
+       [],
+       [
+        "_bodySecondary_qaod7_51",
+        "_text-link_12t49_1",
+        "_editButton_mup67_23"
+       ],
+       [
+        "_contentWrapper_mup67_17"
+       ],
+       [
+        "_settingsProfileSection_mup67_3"
+       ],
+       [],
+       [
+        "_pageContent_809q8_151",
+        "_pageContentWidth_809q8_184",
+        "_footerPadding_809q8_115"
+       ],
+       [
+        "_dashboardContent_809q8_29"
+       ],
+       [
+        "_layout_809q8_18"
+       ]
+      ],
+      "classes": [
+       "_link_ual8v_4",
+       "_underlineOnHover_ual8v_15"
+      ],
+      "data": {
+       "data-discover": "true"
+      },
+      "heading": "Jane Black",
+      "landmark": {
+       "name": "",
+       "role": "main"
+      },
+      "layer": "document",
+      "name": "Manage",
+      "rect": [
+       722,
+       1425,
+       63,
+       16
+      ],
+      "role": "link",
+      "tag": "a",
+      "xpath": "/html/body/div[1]/main[1]/div[1]/div[1]/div[4]/div[1]/div[2]/div[2]/div[11]/div[2]/span[1]/span[1]/a[1]"
+     },
+     "state": "settings.my-profile"
+    }
+   ],
+   "evidenceHash": "16ab8b2fd6e6087dbf6365ea2353650880d54bfbaaeab0c11ab6e1b55928a3c0",
+   "facts": {
+    "announced": "link \"Manage\"",
+    "axeSummary": "",
+    "criterion": "2.4.4",
+    "criterionName": "Link Purpose (In Context)",
+    "element": "link \"Manage\"",
+    "rule": "announced-as",
+    "screen": "Task — receipt forwarding"
+   },
+   "family": "name",
+   "guidance": "High for an unnamed form control or the sole primary action.",
+   "issueId": null,
+   "key": "name:announced-as:4a9ac8207c0b",
+   "measured": false,
+   "primary": "home.task-receipt-forwarding",
+   "proposals": [],
+   "rule": "announced-as",
+   "screens": 4,
+   "severityDefault": "medium",
+   "source": "scanner",
+   "states": [
+    "home.task-receipt-forwarding",
+    "settings.my-profile"
+   ],
+   "summary": "announced-as: announced as link \"Manage\".",
+   "title": "Missing or unclear name: link \"Manage\""
+  },
+  {
+   "attachments": [],
+   "attempt": 1,
+   "basis": "candidate",
+   "criteria": [
+    "4.1.2"
+   ],
+   "evidence": [
+    {
+     "evidence": {
+      "description": "",
+      "name": "United States flag",
+      "role": "button",
+      "states": {},
+      "template": "button \"United States flag\""
+     },
+     "occurrence": {
+      "ancestors": [
+       [
+        "_connectedExternalPrefix_q7hf7_74"
+       ],
+       [
+        "_inputBoxWrapper_q7hf7_93"
+       ],
+       [
+        "_textInputWrapper_q7hf7_24"
+       ],
+       [
+        "_provideDSTextInput_q7hf7_6"
+       ],
+       [
+        "_formFieldWrapperMargin_1wpdc_5"
+       ],
+       [
+        "_optInForm_u86as_14"
+       ],
+       [],
+       [
+        "_container_u86as_1"
+       ]
+      ],
+      "classes": [
+       "_interactiveLeft_zrbz9_27",
+       "_affix_zrbz9_11",
+       "_buttonContent_zrbz9_40",
+       "_tooltipAnchor_18bac_4"
+      ],
+      "data": {},
+      "heading": "Jane Black",
+      "landmark": {
+       "name": "",
+       "role": "form"
+      },
+      "layer": "document",
+      "name": "United States flag",
+      "rect": [
+       722,
+       882,
+       67,
+       40
+      ],
+      "role": "button",
+      "tag": "button",
+      "xpath": "/html/body/div[1]/main[1]/div[1]/div[1]/div[4]/div[1]/div[2]/div[2]/div[17]/div[2]/div[1]/form[1]/div[1]/div[1]/div[1]/div[1]/div[1]/div[1]/button[1]"
+     },
+     "state": "home.task-receipt-forwarding"
+    },
+    {
+     "evidence": {
+      "description": "",
+      "name": "United States flag",
+      "role": "button",
+      "states": {},
+      "template": "button \"United States flag\""
+     },
+     "occurrence": {
+      "ancestors": [
+       [
+        "_connectedExternalPrefix_q7hf7_74"
+       ],
+       [
+        "_inputBoxWrapper_q7hf7_93"
+       ],
+       [
+        "_textInputWrapper_q7hf7_24"
+       ],
+       [
+        "_provideDSTextInput_q7hf7_6"
+       ],
+       [
+        "_formFieldWrapperMargin_1wpdc_5"
+       ],
+       [],
+       [
+        "_large_kwlx6_9",
+        "_noHover_3n0se_28",
+        "_shadow_3n0se_25",
+        "_raisedBackground_3n0se_45",
+        "_card_lo4oy_4",
+        "_defaultPadding_lo4oy_27",
+        "_small_lo4oy_11"
+       ],
+       [
+        "ReactModal__Content",
+        "ReactModal__Content--after-open",
+        "_modal_lo4oy_73"
+       ]
+      ],
+      "classes": [
+       "_interactiveLeft_zrbz9_27",
+       "_affix_zrbz9_11",
+       "_buttonContent_zrbz9_40",
+       "_tooltipAnchor_18bac_4"
+      ],
+      "data": {},
+      "heading": "Edit phone number",
+      "landmark": {
+       "name": "",
+       "role": "form"
+      },
+      "layer": "top",
+      "name": "United States flag",
+      "rect": [
+       536,
+       420,
+       66,
+       40
+      ],
+      "role": "button",
+      "tag": "button",
+      "xpath": "/html/body/div[10]/div[1]/div[1]/div[1]/form[1]/div[1]/div[1]/div[1]/div[1]/div[1]/button[1]"
+     },
+     "state": "settings.edit-phone-invalid"
+    }
+   ],
+   "evidenceHash": "02520c584da842dd062b795de0f7897e1f176b8e5d21589ce5658b3d41c0ee6b",
+   "facts": {
+    "announced": "button \"United States flag\"",
+    "axeSummary": "",
+    "criterion": "4.1.2",
+    "criterionName": "Name, Role, Value",
+    "element": "button \"United States flag\"",
+    "rule": "announced-as",
+    "screen": "Task — receipt forwarding"
+   },
+   "family": "name",
+   "guidance": "High for an unnamed form control or the sole primary action.",
+   "issueId": null,
+   "key": "name:announced-as:f1cc7bb1ce27",
+   "measured": false,
+   "primary": "home.task-receipt-forwarding",
+   "proposals": [],
+   "rule": "announced-as",
+   "screens": 5,
+   "severityDefault": "medium",
+   "source": "scanner",
+   "states": [
+    "home.task-receipt-forwarding",
+    "settings.edit-phone-invalid"
+   ],
+   "summary": "announced-as: announced as button \"United States flag\".",
+   "title": "Missing or unclear name: button \"United States flag\""
+  }
+ ],
+ "primaries": [
+  "home.task-payment-review",
+  "home.task-receipt-forwarding"
+ ],
+ "reach": {
+  "baseUrl": "https://demo.mercury.com",
+  "data": "data",
+  "map": "build/map.json",
+  "run": "2026-10-03-1525",
+  "workspace": "a11y"
+ },
+ "run": "2026-10-03-1525"
+}

@@ -1,0 +1,163 @@
+{
+ "area": "home",
+ "batch": "verify-177",
+ "findings": [
+  {
+   "attachments": [],
+   "attempt": 1,
+   "basis": "failure",
+   "criteria": [
+    "4.1.3"
+   ],
+   "evidence": [
+    {
+     "evidence": {
+      "focus": {
+       "ancestors": [
+        [
+         "_inputContainer_k7l4x_3",
+         "_inputContainer_1wl79_73",
+         "_inputContainerMounted_1wl79_113",
+         "_conversationInputContainer_s7zbk_379"
+        ],
+        [
+         "_dropTarget_zk6jr_1"
+        ],
+        [
+         "_wrapper_1wl79_5"
+        ],
+        [
+         "_footerContainer_s7zbk_317"
+        ],
+        [
+         "_conversationView_s7zbk_222"
+        ],
+        [
+         "_commandConversationWrapper_s7zbk_8"
+        ],
+        [
+         "_dashboardContent_809q8_29",
+         "_fullHeight_809q8_128",
+         "_hasMobileDesigns_809q8_136"
+        ],
+        [
+         "_layout_809q8_18"
+        ]
+       ],
+       "classes": [
+        "_textarea_1wl79_84",
+        "amp-mask"
+       ],
+       "data": {
+        "data-command-stop-generation-escape-target": "true"
+       },
+       "heading": "",
+       "landmark": {
+        "name": "",
+        "role": "main"
+       },
+       "layer": "document",
+       "name": "Command message",
+       "rect": [
+        529,
+        831,
+        570,
+        24
+       ],
+       "role": "textbox",
+       "tag": "textarea",
+       "xpath": "/html/body/div[1]/main[1]/div[1]/div[1]/div[4]/div[1]/div[1]/div[1]/div[3]/div[1]/div[1]/div[1]/textarea[1]"
+      },
+      "focused": false,
+      "message": "Compare my account balances month over month for the last 6 months. Highlight any significant swings, flag months where balances dropped sharply, and note any trends worth paying attention to. 5:11 PM Thought process Mapping out a plan 2s I only have the current account balances and a spending/cashf",
+      "region": null
+     },
+     "occurrence": {
+      "ancestors": [
+       [
+        "_conversationView_s7zbk_222"
+       ],
+       [
+        "_commandConversationWrapper_s7zbk_8"
+       ],
+       [
+        "_dashboardContent_809q8_29",
+        "_fullHeight_809q8_128",
+        "_hasMobileDesigns_809q8_136"
+       ],
+       [
+        "_layout_809q8_18"
+       ],
+       [
+        "_wrapper_809q8_3"
+       ],
+       [],
+       [
+        "_main_1gb3b_1"
+       ],
+       [
+        "mercury-root"
+       ]
+      ],
+      "classes": [
+       "_messagesViewport_s7zbk_293"
+      ],
+      "data": {},
+      "heading": "",
+      "landmark": {
+       "name": "",
+       "role": "main"
+      },
+      "layer": "document",
+      "name": "",
+      "rect": [
+       220,
+       104,
+       1220,
+       714
+      ],
+      "role": "",
+      "tag": "div",
+      "xpath": "/html/body/div[1]/main[1]/div[1]/div[1]/div[4]/div[1]/div[1]/div[1]/div[2]"
+     },
+     "state": "home.command-chart"
+    }
+   ],
+   "evidenceHash": "109aa07d5538a9a0ea8563d5ce0bfbf0853fdc3e060d1387f203c996935e4f7f",
+   "facts": {
+    "criterion": "4.1.3",
+    "criterionName": "Status Messages",
+    "focus": "textbox \"Command message\"",
+    "message": "\"Compare my account balances month over month fo…\"",
+    "screen": "Command: chart answer"
+   },
+   "family": "status-message",
+   "guidance": "High when it is the only confirmation of a money movement.",
+   "issueId": null,
+   "key": "status-message:status-not-announced:c380acf43aae",
+   "measured": false,
+   "primary": "home.command-chart",
+   "proposals": [],
+   "rule": "status-not-announced",
+   "screens": 1,
+   "severityDefault": "medium",
+   "source": "scanner",
+   "states": [
+    "home.command-chart"
+   ],
+   "summary": "\"Compare my account balances month over month fo…\" appeared outside any live region, alert or status role that existed before it, and focus stayed on the textbox \"Command message\".",
+   "title": "Status message not announced: \"Compare my account balances month over month fo…\""
+  }
+ ],
+ "primaries": [
+  "home.command-chart"
+ ],
+ "reach": {
+  "baseUrl": "https://demo.mercury.com",
+  "data": "data",
+  "map": "build/map.json",
+  "run": "2026-10-03-1525",
+  "workspace": "a11y"
+ },
+ "run": "2026-10-03-1525"
+}

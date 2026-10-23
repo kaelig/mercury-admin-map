@@ -1,0 +1,544 @@
+{
+ "area": "payments",
+ "batch": "verify-280",
+ "findings": [
+  {
+   "attachments": [],
+   "attempt": 1,
+   "basis": "violation",
+   "criteria": [
+    "1.4.3"
+   ],
+   "evidence": [
+    {
+     "evidence": {
+      "bgColor": "#ffffff",
+      "contrastRatio": 2.68,
+      "expectedContrastRatio": "4.5:1",
+      "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 2.68 (foreground color: #9d9da8, background color: #ffffff, font size: 9.0pt (12px), font weight: normal). Expected contrast ratio of 4.5:1",
+      "fgColor": "#9d9da8",
+      "fontSize": "9.0pt (12px)",
+      "fontWeight": "normal",
+      "messageKey": null
+     },
+     "occurrence": {
+      "ancestors": [
+       [
+        "_textInputWrapper_q7hf7_24"
+       ],
+       [
+        "_provideDSTextInput_q7hf7_6"
+       ],
+       [
+        "_amount_5tgj6_6"
+       ],
+       [
+        "_editingCard_5tgj6_1"
+       ],
+       [],
+       [
+        "_panelBody_d3i56_64"
+       ],
+       [
+        "_large_kwlx6_9",
+        "_noHover_3n0se_28",
+        "_shadow_3n0se_25",
+        "_raisedBackground_3n0se_45",
+        "_panel_d3i56_55"
+       ],
+       [
+        "_transitionWrapper_d3i56_5",
+        "_visible_d3i56_19",
+        "_wrapperContainer_rrj6q_1"
+       ]
+      ],
+      "classes": [
+       "_tiny_qaod7_67",
+       "_helpText_943ne_3",
+       "_disabled_943ne_8"
+      ],
+      "data": {},
+      "heading": "Payments",
+      "landmark": {
+       "name": "",
+       "role": "form"
+      },
+      "layer": "document",
+      "name": "",
+      "rect": [
+       954,
+       429,
+       328,
+       40
+      ],
+      "role": "generic",
+      "tag": "span",
+      "xpath": "/html/body/div[1]/main[1]/div[1]/div[1]/div[4]/div[1]/div[2]/div[3]/div[2]/div[2]/aside[1]/div[1]/div[1]/form[1]/div[1]/div[1]/div[1]/div[1]/span[1]"
+     },
+     "state": "payments.scheduled-edit"
+    }
+   ],
+   "evidenceHash": "65af0acf97760319e6d62bc19f0d3ed4fd276493658e324db5324805da440643",
+   "facts": {
+    "bg": "#ffffff",
+    "criterion": "1.4.3",
+    "criterionName": "Contrast (Minimum)",
+    "element": "text in \"Payments\"",
+    "fg": "#9d9da8",
+    "ratio": "2.68",
+    "required": "4.5",
+    "rule": "color-contrast",
+    "screen": "Edit scheduled payment",
+    "screens": 1
+   },
+   "family": "contrast",
+   "guidance": "High under 2:1, or under 3:1 for essential text.",
+   "issueId": null,
+   "key": "contrast:color-contrast:837316b9ad44",
+   "measured": true,
+   "primary": "payments.scheduled-edit",
+   "proposals": [],
+   "rule": "color-contrast",
+   "screens": 1,
+   "severityDefault": "medium",
+   "source": "scanner",
+   "states": [
+    "payments.scheduled-edit"
+   ],
+   "summary": "axe color-contrast: #9d9da8 on #ffffff measures 2.68:1; AA needs 4.5:1.",
+   "title": "Low contrast: text in \"Payments\""
+  },
+  {
+   "attachments": [],
+   "attempt": 1,
+   "basis": "violation",
+   "criteria": [
+    "1.3.5"
+   ],
+   "evidence": [
+    {
+     "evidence": {
+      "failureSummary": "Fix all of the following:\n  the autocomplete attribute is incorrectly formatted"
+     },
+     "occurrence": {
+      "ancestors": [
+       [
+        "_inputWrapper_11c85_6"
+       ],
+       [
+        "_wrapper_1xgdp_8"
+       ],
+       [
+        "_flexDiv_17brw_13"
+       ],
+       [],
+       [],
+       [
+        "_rrule_5tgj6_42"
+       ],
+       [
+        "_editingCard_5tgj6_1"
+       ],
+       []
+      ],
+      "classes": [
+       "_input_11c85_6"
+      ],
+      "data": {
+       "data-1p-ignore": "true",
+       "data-active-item": "true",
+       "data-bwignore": "true",
+       "data-lpignore": "true"
+      },
+      "heading": "Payments",
+      "landmark": {
+       "name": "",
+       "role": "form"
+      },
+      "layer": "document",
+      "name": "Repeat count unit",
+      "rect": [
+       1066,
+       737,
+       179,
+       40
+      ],
+      "role": "combobox",
+      "tag": "input",
+      "xpath": "/html/body/div[1]/main[1]/div[1]/div[1]/div[4]/div[1]/div[2]/div[3]/div[2]/div[2]/aside[1]/div[1]/div[1]/form[1]/div[1]/div[3]/div[1]/div[3]/div[3]/div[2]/div[1]/input[1]"
+     },
+     "state": "payments.scheduled-edit"
+    }
+   ],
+   "evidenceHash": "9caec21b6f9a3601c5a9fe8abc2fa623b7802609f21929fde46901aebdce3a95",
+   "facts": {
+    "announced": "combobox \"Repeat count unit\" [expanded=false, haspopup=listbox]",
+    "axeSummary": "the autocomplete attribute is incorrectly formatted",
+    "criterion": "1.3.5",
+    "criterionName": "Identify Input Purpose",
+    "element": "combobox \"Repeat count unit\"",
+    "rule": "autocomplete-valid",
+    "screen": "Edit scheduled payment"
+   },
+   "family": "role-state",
+   "guidance": "Low for optional ARIA or an invalid autocomplete token; high when aria-hidden hides the whole page.",
+   "issueId": null,
+   "key": "role-state:autocomplete-valid:078184a82146",
+   "measured": false,
+   "primary": "payments.scheduled-edit",
+   "proposals": [],
+   "rule": "autocomplete-valid",
+   "screens": 1,
+   "severityDefault": "medium",
+   "source": "scanner",
+   "states": [
+    "payments.scheduled-edit"
+   ],
+   "summary": "autocomplete-valid: announced as combobox \"Repeat count unit\" [expanded=false, haspopup=listbox]. the autocomplete attribute is incorrectly formatted",
+   "title": "Invalid autocomplete value: combobox \"Repeat count unit\""
+  },
+  {
+   "attachments": [],
+   "attempt": 1,
+   "basis": "violation",
+   "criteria": [
+    "1.3.5"
+   ],
+   "evidence": [
+    {
+     "evidence": {
+      "failureSummary": "Fix all of the following:\n  the autocomplete attribute is incorrectly formatted"
+     },
+     "occurrence": {
+      "ancestors": [
+       [
+        "_inputBox_q7hf7_93",
+        "_inline_q7hf7_201",
+        "_hasValue_q7hf7_171"
+       ],
+       [
+        "_inputBoxWrapper_q7hf7_93"
+       ],
+       [
+        "_textInputWrapper_q7hf7_24"
+       ],
+       [
+        "_provideDSTextInput_q7hf7_6",
+        "_endAfterCount_17brw_59"
+       ],
+       [
+        "_flexDiv_17brw_13"
+       ],
+       [
+        "_radioGroup_phe2n_23",
+        "_columnLayout_phe2n_28"
+       ],
+       [
+        "_scheme_17brw_51"
+       ],
+       []
+      ],
+      "classes": [
+       "_input_q7hf7_93"
+      ],
+      "data": {
+       "data-testid": "endAfterCount"
+      },
+      "heading": "Payments",
+      "landmark": {
+       "name": "",
+       "role": "form"
+      },
+      "layer": "document",
+      "name": "Number of payments before ending",
+      "rect": [
+       1039,
+       957,
+       20,
+       24
+      ],
+      "role": "textbox",
+      "tag": "input",
+      "xpath": "/html/body/div[1]/main[1]/div[1]/div[1]/div[4]/div[1]/div[2]/div[3]/div[2]/div[2]/aside[1]/div[1]/div[1]/form[1]/div[1]/div[3]/div[1]/div[3]/div[6]/fieldset[1]/div[2]/div[1]/div[1]/div[1]/div[1]/input[1]"
+     },
+     "state": "payments.scheduled-edit"
+    }
+   ],
+   "evidenceHash": "9caec21b6f9a3601c5a9fe8abc2fa623b7802609f21929fde46901aebdce3a95",
+   "facts": {
+    "announced": "textbox \"Number of payments before ending\"",
+    "axeSummary": "the autocomplete attribute is incorrectly formatted",
+    "criterion": "1.3.5",
+    "criterionName": "Identify Input Purpose",
+    "element": "textbox \"Number of payments before ending\"",
+    "rule": "autocomplete-valid",
+    "screen": "Edit scheduled payment"
+   },
+   "family": "role-state",
+   "guidance": "Low for optional ARIA or an invalid autocomplete token; high when aria-hidden hides the whole page.",
+   "issueId": null,
+   "key": "role-state:autocomplete-valid:35c1e1e589e5",
+   "measured": false,
+   "primary": "payments.scheduled-edit",
+   "proposals": [],
+   "rule": "autocomplete-valid",
+   "screens": 1,
+   "severityDefault": "medium",
+   "source": "scanner",
+   "states": [
+    "payments.scheduled-edit"
+   ],
+   "summary": "autocomplete-valid: announced as textbox \"Number of payments before ending\". the autocomplete attribute is incorrectly formatted",
+   "title": "Invalid autocomplete value: textbox \"Number of payments before ending\""
+  },
+  {
+   "attachments": [],
+   "attempt": 1,
+   "basis": "violation",
+   "criteria": [
+    "1.3.5"
+   ],
+   "evidence": [
+    {
+     "evidence": {
+      "failureSummary": "Fix all of the following:\n  the autocomplete attribute is incorrectly formatted"
+     },
+     "occurrence": {
+      "ancestors": [
+       [
+        "_inputWrapper_11c85_6"
+       ],
+       [
+        "_wrapper_1xgdp_8",
+        "_numberInputs_17brw_9"
+       ],
+       [
+        "_flexDiv_17brw_13"
+       ],
+       [],
+       [],
+       [
+        "_rrule_5tgj6_42"
+       ],
+       [
+        "_editingCard_5tgj6_1"
+       ],
+       []
+      ],
+      "classes": [
+       "_input_11c85_6"
+      ],
+      "data": {
+       "data-1p-ignore": "true",
+       "data-active-item": "true",
+       "data-bwignore": "true",
+       "data-lpignore": "true"
+      },
+      "heading": "Payments",
+      "landmark": {
+       "name": "",
+       "role": "form"
+      },
+      "layer": "document",
+      "name": "Repeat count",
+      "rect": [
+       954,
+       737,
+       67,
+       40
+      ],
+      "role": "combobox",
+      "tag": "input",
+      "xpath": "/html/body/div[1]/main[1]/div[1]/div[1]/div[4]/div[1]/div[2]/div[3]/div[2]/div[2]/aside[1]/div[1]/div[1]/form[1]/div[1]/div[3]/div[1]/div[3]/div[3]/div[1]/div[1]/input[1]"
+     },
+     "state": "payments.scheduled-edit"
+    }
+   ],
+   "evidenceHash": "9caec21b6f9a3601c5a9fe8abc2fa623b7802609f21929fde46901aebdce3a95",
+   "facts": {
+    "announced": "combobox \"Repeat count\" [expanded=false, haspopup=listbox]",
+    "axeSummary": "the autocomplete attribute is incorrectly formatted",
+    "criterion": "1.3.5",
+    "criterionName": "Identify Input Purpose",
+    "element": "combobox \"Repeat count\"",
+    "rule": "autocomplete-valid",
+    "screen": "Edit scheduled payment"
+   },
+   "family": "role-state",
+   "guidance": "Low for optional ARIA or an invalid autocomplete token; high when aria-hidden hides the whole page.",
+   "issueId": null,
+   "key": "role-state:autocomplete-valid:649b3f794d6a",
+   "measured": false,
+   "primary": "payments.scheduled-edit",
+   "proposals": [],
+   "rule": "autocomplete-valid",
+   "screens": 1,
+   "severityDefault": "medium",
+   "source": "scanner",
+   "states": [
+    "payments.scheduled-edit"
+   ],
+   "summary": "autocomplete-valid: announced as combobox \"Repeat count\" [expanded=false, haspopup=listbox]. the autocomplete attribute is incorrectly formatted",
+   "title": "Invalid autocomplete value: combobox \"Repeat count\""
+  },
+  {
+   "attachments": [],
+   "attempt": 1,
+   "basis": "violation",
+   "criteria": [
+    "1.3.5"
+   ],
+   "evidence": [
+    {
+     "evidence": {
+      "failureSummary": "Fix all of the following:\n  the autocomplete attribute is incorrectly formatted"
+     },
+     "occurrence": {
+      "ancestors": [
+       [
+        "_inputWrapper_11c85_6"
+       ],
+       [
+        "_wrapper_1xgdp_8"
+       ],
+       [],
+       [],
+       [
+        "_rrule_5tgj6_42"
+       ],
+       [
+        "_editingCard_5tgj6_1"
+       ],
+       [],
+       [
+        "_panelBody_d3i56_64"
+       ]
+      ],
+      "classes": [
+       "_input_11c85_6"
+      ],
+      "data": {
+       "data-1p-ignore": "true",
+       "data-active-item": "true",
+       "data-bwignore": "true",
+       "data-lpignore": "true"
+      },
+      "heading": "Payments",
+      "landmark": {
+       "name": "",
+       "role": "form"
+      },
+      "layer": "document",
+      "name": "Repeat",
+      "rect": [
+       954,
+       649,
+       295,
+       40
+      ],
+      "role": "combobox",
+      "tag": "input",
+      "xpath": "/html/body/div[1]/main[1]/div[1]/div[1]/div[4]/div[1]/div[2]/div[3]/div[2]/div[2]/aside[1]/div[1]/div[1]/form[1]/div[1]/div[3]/div[1]/div[3]/div[1]/div[1]/input[1]"
+     },
+     "state": "payments.scheduled-edit"
+    },
+    {
+     "evidence": {
+      "failureSummary": "Fix all of the following:\n  the autocomplete attribute is incorrectly formatted"
+     },
+     "occurrence": {
+      "ancestors": [
+       [
+        "_inputWrapper_11c85_6"
+       ],
+       [
+        "_wrapper_1xgdp_8"
+       ],
+       [
+        "_recurringFormContainer_fn75q_53"
+       ],
+       [
+        "_label_fn75q_3"
+       ],
+       [],
+       [
+        "_amountAndSourceContainer_8dg5w_1"
+       ],
+       [
+        "_routeContainer_15al5_228"
+       ],
+       [
+        "_routes_15al5_220"
+       ]
+      ],
+      "classes": [
+       "_input_11c85_6"
+      ],
+      "data": {
+       "data-1p-ignore": "true",
+       "data-active-item": "true",
+       "data-bwignore": "true",
+       "data-focus-visible": "true",
+       "data-lpignore": "true"
+      },
+      "heading": "Amount",
+      "landmark": {
+       "name": "",
+       "role": "form"
+      },
+      "layer": "document",
+      "name": "Repeat",
+      "rect": [
+       105,
+       645,
+       477,
+       40
+      ],
+      "role": "combobox",
+      "tag": "input",
+      "xpath": "/html/body/div[1]/main[1]/div[1]/div[2]/div[2]/div[1]/div[2]/section[2]/div[1]/div[1]/div[1]/form[1]/div[3]/div[3]/div[1]/div[1]/input[1]"
+     },
+     "state": "billpay.pay-repeat"
+    }
+   ],
+   "evidenceHash": "740a90d5658565bc21ef500963bae65fc8253473a3e7f84be1d969fe6ab02f6c",
+   "facts": {
+    "announced": "combobox \"Repeat\" [expanded=false, haspopup=listbox]",
+    "axeSummary": "the autocomplete attribute is incorrectly formatted",
+    "criterion": "1.3.5",
+    "criterionName": "Identify Input Purpose",
+    "element": "combobox \"Repeat\"",
+    "rule": "autocomplete-valid",
+    "screen": "Edit scheduled payment"
+   },
+   "family": "role-state",
+   "guidance": "Low for optional ARIA or an invalid autocomplete token; high when aria-hidden hides the whole page.",
+   "issueId": null,
+   "key": "role-state:autocomplete-valid:8b76a9292b7c",
+   "measured": false,
+   "primary": "payments.scheduled-edit",
+   "proposals": [],
+   "rule": "autocomplete-valid",
+   "screens": 3,
+   "severityDefault": "medium",
+   "source": "scanner",
+   "states": [
+    "payments.scheduled-edit",
+    "billpay.pay-repeat"
+   ],
+   "summary": "autocomplete-valid: announced as combobox \"Repeat\" [expanded=false, haspopup=listbox]. the autocomplete attribute is incorrectly formatted",
+   "title": "Invalid autocomplete value: combobox \"Repeat\""
+  }
+ ],
+ "primaries": [
+  "payments.scheduled-edit"
+ ],
+ "reach": {
+  "baseUrl": "https://demo.mercury.com",
+  "data": "data",
+  "map": "build/map.json",
+  "run": "2026-10-03-1525",
+  "workspace": "a11y"
+ },
+ "run": "2026-10-03-1525"
+}

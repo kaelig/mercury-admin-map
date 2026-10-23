@@ -1,0 +1,359 @@
+{
+ "area": "payments",
+ "batch": "verify-503",
+ "findings": [
+  {
+   "attachments": [],
+   "attempt": 1,
+   "basis": "candidate",
+   "criteria": [
+    "4.1.2"
+   ],
+   "evidence": [
+    {
+     "evidence": {
+      "description": "",
+      "name": "",
+      "role": "button",
+      "states": {},
+      "template": "button \"\""
+     },
+     "occurrence": {
+      "ancestors": [
+       [
+        "_topRow_1ml1o_114",
+        "_topRowExtraPadding_1ml1o_137"
+       ],
+       [
+        "_calendarPopupWrapper_1ml1o_59",
+        "_visible_1ml1o_109"
+       ],
+       [
+        "_calendarInputWrapper_1ml1o_11",
+        "_open_1ml1o_15",
+        "_calendarInput_17brw_73"
+       ],
+       [
+        "_calendarDateInputContainer_1ml1o_5",
+        "_calendarInput_17brw_73"
+       ],
+       [
+        "_startDayWithTooltip_17brw_82"
+       ],
+       [
+        "_helpTextWrapper_17brw_90"
+       ],
+       [
+        "_label_fn75q_3"
+       ],
+       []
+      ],
+      "classes": [
+       "_button-wrapper_1rzdg_13",
+       "_button_1rzdg_13",
+       "_tertiary-with-icon_1rzdg_76",
+       "undefined",
+       "_monthArrowBtn_1ml1o_145"
+      ],
+      "data": {},
+      "heading": "",
+      "landmark": {
+       "name": "",
+       "role": "form"
+      },
+      "layer": "top",
+      "name": "",
+      "rect": [
+       734,
+       489,
+       28,
+       28
+      ],
+      "role": "button",
+      "tag": "button",
+      "xpath": "/html/body/div[1]/main[1]/div[1]/div[2]/div[2]/div[1]/div[2]/section[2]/div[1]/div[1]/div[1]/form[1]/div[3]/div[1]/div[1]/div[1]/div[1]/div[2]/div[1]/button[2]"
+     },
+     "state": "payments.send-date-picker"
+    },
+    {
+     "evidence": {
+      "description": "",
+      "name": "",
+      "role": "button",
+      "states": {},
+      "template": "button \"\""
+     },
+     "occurrence": {
+      "ancestors": [
+       [
+        "_topRow_1ml1o_114",
+        "_topRowExtraPadding_1ml1o_137"
+       ],
+       [
+        "_calendarPopupWrapper_1ml1o_59",
+        "_visible_1ml1o_109"
+       ],
+       [
+        "_calendarInputWrapper_1ml1o_11",
+        "_open_1ml1o_15",
+        "_calendarInput_17brw_73"
+       ],
+       [
+        "_calendarDateInputContainer_1ml1o_5",
+        "_calendarInput_17brw_73"
+       ],
+       [
+        "_startDayWithTooltip_17brw_82"
+       ],
+       [
+        "_helpTextWrapper_17brw_90"
+       ],
+       [
+        "_label_fn75q_3"
+       ],
+       []
+      ],
+      "classes": [
+       "_button-wrapper_1rzdg_13",
+       "_button_1rzdg_13",
+       "_tertiary-with-icon_1rzdg_76",
+       "undefined",
+       "_monthArrowBtn_1ml1o_145"
+      ],
+      "data": {},
+      "heading": "",
+      "landmark": {
+       "name": "",
+       "role": "form"
+      },
+      "layer": "top",
+      "name": "",
+      "rect": [
+       374,
+       489,
+       28,
+       28
+      ],
+      "role": "button",
+      "tag": "button",
+      "xpath": "/html/body/div[1]/main[1]/div[1]/div[2]/div[2]/div[1]/div[2]/section[2]/div[1]/div[1]/div[1]/form[1]/div[3]/div[1]/div[1]/div[1]/div[1]/div[2]/div[1]/button[2]"
+     },
+     "state": "billpay.send-on-date-picker"
+    }
+   ],
+   "evidenceHash": "a094f45cf04f1ff802b65144f2acfa61e3cdba58a7ce25351c7ef4944df557ab",
+   "facts": {
+    "announced": "button \"\"",
+    "axeSummary": "",
+    "criterion": "4.1.2",
+    "criterionName": "Name, Role, Value",
+    "element": "button in the form landmark",
+    "rule": "announced-as",
+    "screen": "Send: Send on calendar"
+   },
+   "family": "name",
+   "guidance": "High for an unnamed form control or the sole primary action.",
+   "issueId": null,
+   "key": "name:announced-as:78e628121f3b",
+   "measured": false,
+   "primary": "payments.send-date-picker",
+   "proposals": [],
+   "rule": "announced-as",
+   "screens": 2,
+   "severityDefault": "medium",
+   "source": "scanner",
+   "states": [
+    "payments.send-date-picker",
+    "billpay.send-on-date-picker"
+   ],
+   "summary": "announced-as: announced as button \"\".",
+   "title": "Missing or unclear name: button in the form landmark"
+  },
+  {
+   "attachments": [],
+   "attempt": 1,
+   "basis": "candidate",
+   "criteria": [
+    "4.1.2"
+   ],
+   "evidence": [
+    {
+     "evidence": {
+      "description": "",
+      "name": "",
+      "role": "button",
+      "states": {
+       "disabled": true
+      },
+      "template": "button \"\" [disabled=true]"
+     },
+     "occurrence": {
+      "ancestors": [
+       [
+        "_topRow_1ml1o_114",
+        "_topRowExtraPadding_1ml1o_137"
+       ],
+       [
+        "_calendarPopupWrapper_1ml1o_59",
+        "_visible_1ml1o_109"
+       ],
+       [
+        "_calendarInputWrapper_1ml1o_11",
+        "_open_1ml1o_15",
+        "_calendarInput_17brw_73"
+       ],
+       [
+        "_calendarDateInputContainer_1ml1o_5",
+        "_calendarInput_17brw_73"
+       ],
+       [
+        "_startDayWithTooltip_17brw_82"
+       ],
+       [
+        "_helpTextWrapper_17brw_90"
+       ],
+       [
+        "_label_fn75q_3"
+       ],
+       []
+      ],
+      "classes": [
+       "_button-wrapper_1rzdg_13",
+       "_button_1rzdg_13",
+       "_tertiary-with-icon_1rzdg_76",
+       "_disabled_1rzdg_20",
+       "undefined",
+       "_monthArrowBtn_1ml1o_145",
+       "_left_1ml1o_5"
+      ],
+      "data": {},
+      "heading": "",
+      "landmark": {
+       "name": "",
+       "role": "form"
+      },
+      "layer": "top",
+      "name": "",
+      "rect": [
+       702,
+       489,
+       28,
+       28
+      ],
+      "role": "button",
+      "tag": "button",
+      "xpath": "/html/body/div[1]/main[1]/div[1]/div[2]/div[2]/div[1]/div[2]/section[2]/div[1]/div[1]/div[1]/form[1]/div[3]/div[1]/div[1]/div[1]/div[1]/div[2]/div[1]/button[1]"
+     },
+     "state": "payments.send-date-picker"
+    },
+    {
+     "evidence": {
+      "description": "",
+      "name": "",
+      "role": "button",
+      "states": {
+       "disabled": true
+      },
+      "template": "button \"\" [disabled=true]"
+     },
+     "occurrence": {
+      "ancestors": [
+       [
+        "_topRow_1ml1o_114",
+        "_topRowExtraPadding_1ml1o_137"
+       ],
+       [
+        "_calendarPopupWrapper_1ml1o_59",
+        "_visible_1ml1o_109"
+       ],
+       [
+        "_calendarInputWrapper_1ml1o_11",
+        "_open_1ml1o_15",
+        "_calendarInput_17brw_73"
+       ],
+       [
+        "_calendarDateInputContainer_1ml1o_5",
+        "_calendarInput_17brw_73"
+       ],
+       [
+        "_startDayWithTooltip_17brw_82"
+       ],
+       [
+        "_helpTextWrapper_17brw_90"
+       ],
+       [
+        "_label_fn75q_3"
+       ],
+       []
+      ],
+      "classes": [
+       "_button-wrapper_1rzdg_13",
+       "_button_1rzdg_13",
+       "_tertiary-with-icon_1rzdg_76",
+       "_disabled_1rzdg_20",
+       "undefined",
+       "_monthArrowBtn_1ml1o_145",
+       "_left_1ml1o_5"
+      ],
+      "data": {},
+      "heading": "",
+      "landmark": {
+       "name": "",
+       "role": "form"
+      },
+      "layer": "top",
+      "name": "",
+      "rect": [
+       342,
+       489,
+       28,
+       28
+      ],
+      "role": "button",
+      "tag": "button",
+      "xpath": "/html/body/div[1]/main[1]/div[1]/div[2]/div[2]/div[1]/div[2]/section[2]/div[1]/div[1]/div[1]/form[1]/div[3]/div[1]/div[1]/div[1]/div[1]/div[2]/div[1]/button[1]"
+     },
+     "state": "billpay.send-on-date-picker"
+    }
+   ],
+   "evidenceHash": "990f621544aa4b9ecaee94de6d903988bf7cdf132b4b9743465bd216f3e4f72e",
+   "facts": {
+    "announced": "button \"\" [disabled=true]",
+    "axeSummary": "",
+    "criterion": "4.1.2",
+    "criterionName": "Name, Role, Value",
+    "element": "button in the form landmark",
+    "rule": "announced-as",
+    "screen": "Send: Send on calendar"
+   },
+   "family": "name",
+   "guidance": "High for an unnamed form control or the sole primary action.",
+   "issueId": null,
+   "key": "name:announced-as:b537d3bae2ec",
+   "measured": false,
+   "primary": "payments.send-date-picker",
+   "proposals": [],
+   "rule": "announced-as",
+   "screens": 2,
+   "severityDefault": "medium",
+   "source": "scanner",
+   "states": [
+    "payments.send-date-picker",
+    "billpay.send-on-date-picker"
+   ],
+   "summary": "announced-as: announced as button \"\" [disabled=true].",
+   "title": "Missing or unclear name: button in the form landmark"
+  }
+ ],
+ "primaries": [
+  "payments.send-date-picker"
+ ],
+ "reach": {
+  "baseUrl": "https://demo.mercury.com",
+  "data": "data",
+  "map": "build/map.json",
+  "run": "2026-10-03-1525",
+  "workspace": "a11y"
+ },
+ "run": "2026-10-03-1525"
+}

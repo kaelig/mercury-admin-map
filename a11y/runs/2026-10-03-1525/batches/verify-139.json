@@ -1,0 +1,476 @@
+{
+ "area": "cards",
+ "batch": "verify-139",
+ "findings": [
+  {
+   "attachments": [],
+   "attempt": 1,
+   "basis": "candidate",
+   "criteria": [
+    "2.1.1"
+   ],
+   "evidence": [
+    {
+     "evidence": {
+      "end": "body",
+      "focusable": false,
+      "source": "pointer",
+      "stops": 108
+     },
+     "occurrence": {
+      "ancestors": [
+       [
+        "_dsTabView_95hq1_3"
+       ],
+       [
+        "_tabsBarPaddingBottom_1xwnf_1"
+       ],
+       [
+        "_pageContent_809q8_151",
+        "_pageContentWidth_809q8_184",
+        "_footerPadding_809q8_115"
+       ],
+       [
+        "_dashboardContent_809q8_29"
+       ],
+       [
+        "_layout_809q8_18"
+       ],
+       [
+        "_wrapper_809q8_3"
+       ],
+       [],
+       [
+        "_main_1gb3b_1"
+       ]
+      ],
+      "classes": [
+       "_bodySecondary_qaod7_51",
+       "_dsTabViewTab_95hq1_9"
+      ],
+      "data": {
+       "data-testid": "reimbursements-tab-my-expenses"
+      },
+      "heading": "Reimbursements",
+      "landmark": {
+       "name": "",
+       "role": "main"
+      },
+      "layer": "document",
+      "name": "",
+      "rect": [
+       478,
+       184,
+       109,
+       41
+      ],
+      "role": "generic",
+      "tag": "div",
+      "xpath": "/html/body/div[1]/main[1]/div[1]/div[1]/div[4]/div[1]/div[2]/div[3]/div[1]/div[2]"
+     },
+     "state": "cards.expenses"
+    },
+    {
+     "evidence": {
+      "end": "body",
+      "focusable": false,
+      "source": "pointer",
+      "stops": 79
+     },
+     "occurrence": {
+      "ancestors": [
+       [
+        "_dsTabView_95hq1_3"
+       ],
+       [
+        "_tabsBarPaddingBottom_1xwnf_1"
+       ],
+       [
+        "_pageContent_809q8_151",
+        "_pageContentWidth_809q8_184",
+        "_footerPadding_809q8_115"
+       ],
+       [
+        "_dashboardContent_809q8_29"
+       ],
+       [
+        "_layout_809q8_18"
+       ],
+       [
+        "_wrapper_809q8_3"
+       ],
+       [],
+       [
+        "_main_1gb3b_1"
+       ]
+      ],
+      "classes": [
+       "_bodySecondary_qaod7_51",
+       "_dsTabViewTab_95hq1_9"
+      ],
+      "data": {
+       "data-testid": "reimbursements-tab-all-expenses"
+      },
+      "heading": "Reimbursements",
+      "landmark": {
+       "name": "",
+       "role": "main"
+      },
+      "layer": "document",
+      "name": "",
+      "rect": [
+       346,
+       184,
+       108,
+       41
+      ],
+      "role": "generic",
+      "tag": "div",
+      "xpath": "/html/body/div[1]/main[1]/div[1]/div[1]/div[4]/div[1]/div[2]/div[3]/div[1]/div[1]"
+     },
+     "state": "cards.my-expenses"
+    }
+   ],
+   "evidenceHash": "8c1644d6db440ea81f5ac32dbd38592c48f3acf652def98d7a02377c1da93c00",
+   "facts": {
+    "axeSummary": "",
+    "criterion": "2.1.1",
+    "criterionName": "Keyboard",
+    "element": "text in \"Reimbursements\"",
+    "rule": "not-reached",
+    "screen": "Reimbursements: all expenses",
+    "stops": "108"
+   },
+   "family": "keyboard",
+   "guidance": "High if a task cannot be completed without a mouse.",
+   "issueId": null,
+   "key": "keyboard:not-reached:3b46f00e69ec",
+   "measured": false,
+   "primary": "cards.expenses",
+   "proposals": [],
+   "rule": "not-reached",
+   "screens": 2,
+   "severityDefault": "medium",
+   "source": "scanner",
+   "states": [
+    "cards.expenses",
+    "cards.my-expenses"
+   ],
+   "summary": "The Tab walk visited 108 stops and never reached the text in \"Reimbursements\", which responds to a click.",
+   "title": "Not reachable by keyboard: text in \"Reimbursements\""
+  },
+  {
+   "attachments": [],
+   "attempt": 1,
+   "basis": "violation",
+   "criteria": [
+    "4.1.2"
+   ],
+   "evidence": [
+    {
+     "evidence": {
+      "failureSummary": "Fix any of the following:\n  Element does not have text that is visible to screen readers\n  aria-label attribute does not exist or is empty\n  aria-labelledby attribute does not exist, references elements that do not exist or references elements that are empty\n  Element has no title attribute",
+      "messageKey": "noAttr"
+     },
+     "occurrence": {
+      "ancestors": [
+       [
+        "_tooltipAnchor_18bac_4"
+       ],
+       [
+        "_tableData_1u4jr_5",
+        "_alignmentCenter_1u4jr_17",
+        "_collapsibleColumn_1acga_26"
+       ],
+       [
+        "_tableRow_137xu_3",
+        "_interactiveRows_137xu_35",
+        "_large_137xu_29"
+       ],
+       [
+        "_tableBody_1cp5b_1"
+       ],
+       [
+        "_table_1acga_4"
+       ],
+       [
+        "_tableWrapper_1acga_4"
+       ],
+       [
+        "_tableWrapper_1j2wi_1"
+       ],
+       [
+        "_expensesTableContainer_1hmn7_1"
+       ]
+      ],
+      "classes": [
+       "_link_ual8v_4",
+       "_underlineOnHover_ual8v_15"
+      ],
+      "data": {},
+      "heading": "Reimbursements",
+      "landmark": {
+       "name": "",
+       "role": "main"
+      },
+      "layer": "document",
+      "name": "",
+      "rect": [
+       1195,
+       493,
+       12,
+       19
+      ],
+      "role": "button",
+      "tag": "span",
+      "xpath": "/html/body/div[1]/main[1]/div[1]/div[1]/div[4]/div[1]/div[2]/div[4]/div[2]/div[1]/table[1]/tbody[1]/tr[3]/td[8]/div[1]/span[1]"
+     },
+     "state": "cards.expenses"
+    },
+    {
+     "evidence": {
+      "failureSummary": "Fix any of the following:\n  Element does not have text that is visible to screen readers\n  aria-label attribute does not exist or is empty\n  aria-labelledby attribute does not exist, references elements that do not exist or references elements that are empty\n  Element has no title attribute",
+      "messageKey": "noAttr"
+     },
+     "occurrence": {
+      "ancestors": [
+       [
+        "_tooltipAnchor_18bac_4"
+       ],
+       [
+        "_tableData_1u4jr_5",
+        "_alignmentCenter_1u4jr_17",
+        "_collapsibleColumn_1acga_26"
+       ],
+       [
+        "_tableRow_137xu_3",
+        "_interactiveRows_137xu_35",
+        "_large_137xu_29"
+       ],
+       [
+        "_tableBody_1cp5b_1"
+       ],
+       [
+        "_table_1acga_4"
+       ],
+       [
+        "_tableWrapper_1acga_4"
+       ],
+       [
+        "_tableWrapper_1j2wi_1"
+       ],
+       [
+        "_expensesTableContainer_1hmn7_1"
+       ]
+      ],
+      "classes": [
+       "_link_ual8v_4",
+       "_underlineOnHover_ual8v_15"
+      ],
+      "data": {},
+      "heading": "",
+      "landmark": {
+       "name": "",
+       "role": "main"
+      },
+      "layer": "top",
+      "name": "",
+      "rect": [
+       1195,
+       493,
+       12,
+       19
+      ],
+      "role": "button",
+      "tag": "span",
+      "xpath": "/html/body/div[1]/main[1]/div[1]/div[1]/div[4]/div[1]/div[2]/div[4]/div[2]/div[1]/table[1]/tbody[1]/tr[3]/td[8]/div[1]/span[1]"
+     },
+     "state": "home.task-reimbursement-approved"
+    }
+   ],
+   "evidenceHash": "db1b47b7a13c67bd426e7a75dff55688456b2e0cb9a266c794cfd1b25e4915b4",
+   "facts": {
+    "announced": "button \"\"",
+    "axeSummary": "Element does not have text that is visible to screen readers; aria-label attribute does not exist or is empty; aria-labelledby attribute does not exist, refere…",
+    "criterion": "4.1.2",
+    "criterionName": "Name, Role, Value",
+    "element": "button in \"Reimbursements\"",
+    "rule": "aria-command-name",
+    "screen": "Reimbursements: all expenses"
+   },
+   "family": "name",
+   "guidance": "High for an unnamed form control or the sole primary action.",
+   "issueId": null,
+   "key": "name:aria-command-name:2d69eb53163f",
+   "measured": false,
+   "primary": "cards.expenses",
+   "proposals": [],
+   "rule": "aria-command-name",
+   "screens": 6,
+   "severityDefault": "medium",
+   "source": "scanner",
+   "states": [
+    "cards.expenses",
+    "home.task-reimbursement-approved"
+   ],
+   "summary": "aria-command-name: announced as button \"\". Element does not have text that is visible to screen readers; aria-label attribute does not exist or is empty; aria-labelledby attribute does not exist, refere…",
+   "title": "Missing or unclear name: button in \"Reimbursements\""
+  },
+  {
+   "attachments": [],
+   "attempt": 1,
+   "basis": "violation",
+   "criteria": [
+    "4.1.2"
+   ],
+   "evidence": [
+    {
+     "evidence": {
+      "failureSummary": "Fix all of the following:\n  Focusable content should be disabled or be removed from the DOM"
+     },
+     "occurrence": {
+      "ancestors": [
+       [
+        "_tableWrapper_1j2wi_1"
+       ],
+       [
+        "_expensesTableContainer_1hmn7_1"
+       ],
+       [
+        "_pageContent_809q8_151",
+        "_pageContentWidth_809q8_184",
+        "_footerPadding_809q8_115"
+       ],
+       [
+        "_dashboardContent_809q8_29"
+       ],
+       [
+        "_layout_809q8_18"
+       ],
+       [
+        "_wrapper_809q8_3"
+       ],
+       [],
+       [
+        "_main_1gb3b_1"
+       ]
+      ],
+      "classes": [
+       "_transitionWrapper_d3i56_5"
+      ],
+      "data": {},
+      "heading": "Reimbursements",
+      "landmark": {
+       "name": "",
+       "role": "main"
+      },
+      "layer": "document",
+      "name": "",
+      "rect": [
+       1122,
+       297,
+       392,
+       767
+      ],
+      "role": "",
+      "tag": "aside",
+      "xpath": "/html/body/div[1]/main[1]/div[1]/div[1]/div[4]/div[1]/div[2]/div[4]/div[2]/aside[1]"
+     },
+     "state": "cards.expenses"
+    },
+    {
+     "evidence": {
+      "failureSummary": "Fix all of the following:\n  Focusable content should be disabled or be removed from the DOM"
+     },
+     "occurrence": {
+      "ancestors": [
+       [
+        "_tableWrapper_m6btx_36"
+       ],
+       [
+        "_invoiceDashboardWrapper_17p45_1",
+        "_pageContent_809q8_151",
+        "_pageContentWidth_809q8_184"
+       ],
+       [
+        "_dashboardContent_809q8_29"
+       ],
+       [
+        "_layout_809q8_18"
+       ],
+       [
+        "_wrapper_809q8_3"
+       ],
+       [],
+       [
+        "_main_1gb3b_1"
+       ],
+       [
+        "mercury-root"
+       ]
+      ],
+      "classes": [
+       "_transitionWrapper_d3i56_5"
+      ],
+      "data": {},
+      "heading": "Invoicing",
+      "landmark": {
+       "name": "",
+       "role": "main"
+      },
+      "layer": "document",
+      "name": "",
+      "rect": [
+       1122,
+       396,
+       392,
+       1310
+      ],
+      "role": "",
+      "tag": "aside",
+      "xpath": "/html/body/div[1]/main[1]/div[1]/div[1]/div[4]/div[1]/div[2]/div[3]/aside[1]"
+     },
+     "state": "invoicing.paid-card-filter"
+    }
+   ],
+   "evidenceHash": "5eb35cd6efc8fcaebebfb8e2747078e5d36ee19d55453357cd12897214153130",
+   "facts": {
+    "announced": " \"\"",
+    "axeSummary": "Focusable content should be disabled or be removed from the DOM",
+    "criterion": "4.1.2",
+    "criterionName": "Name, Role, Value",
+    "element": "text in \"Reimbursements\"",
+    "rule": "aria-hidden-focus",
+    "screen": "Reimbursements: all expenses"
+   },
+   "family": "role-state",
+   "guidance": "Low for optional ARIA or an invalid autocomplete token; high when aria-hidden hides the whole page.",
+   "issueId": null,
+   "key": "role-state:aria-hidden-focus:632281e0e9a7",
+   "measured": false,
+   "primary": "cards.expenses",
+   "proposals": [],
+   "rule": "aria-hidden-focus",
+   "screens": 8,
+   "severityDefault": "medium",
+   "source": "scanner",
+   "states": [
+    "cards.expenses",
+    "invoicing.paid-card-filter"
+   ],
+   "summary": "aria-hidden-focus: announced as  \"\". Focusable content should be disabled or be removed from the DOM",
+   "title": "Focusable but hidden: text in \"Reimbursements\""
+  }
+ ],
+ "primaries": [
+  "cards.expenses"
+ ],
+ "reach": {
+  "baseUrl": "https://demo.mercury.com",
+  "data": "data",
+  "map": "build/map.json",
+  "run": "2026-10-03-1525",
+  "workspace": "a11y"
+ },
+ "run": "2026-10-03-1525"
+}

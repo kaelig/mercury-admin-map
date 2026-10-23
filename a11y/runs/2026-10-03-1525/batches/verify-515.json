@@ -1,0 +1,144 @@
+{
+ "area": "settings",
+ "batch": "verify-515",
+ "findings": [
+  {
+   "attachments": [],
+   "attempt": 1,
+   "basis": "candidate",
+   "criteria": [
+    "4.1.2"
+   ],
+   "evidence": [
+    {
+     "evidence": {
+      "description": "",
+      "name": "",
+      "role": "dialog",
+      "states": {
+       "modal": true
+      },
+      "template": "dialog \"\" [modal=true]"
+     },
+     "occurrence": {
+      "ancestors": [
+       [
+        "ReactModal__Overlay",
+        "ReactModal__Overlay--after-open",
+        "_overlay_lo4oy_89",
+        "_modalOverlay_1s2co_3"
+       ],
+       [
+        "ReactModalPortal"
+       ]
+      ],
+      "classes": [
+       "ReactModal__Content",
+       "ReactModal__Content--after-open",
+       "_modal_lo4oy_73",
+       "_modalContentOuter_1s2co_9"
+      ],
+      "data": {},
+      "heading": "",
+      "landmark": null,
+      "layer": "top",
+      "name": "",
+      "rect": [
+       432,
+       136,
+       576,
+       629
+      ],
+      "role": "dialog",
+      "tag": "div",
+      "xpath": "/html/body/div[10]/div[1]/div[1]"
+     },
+     "state": "settings.cash-flow-notifications"
+    },
+    {
+     "evidence": {
+      "description": "",
+      "name": "",
+      "role": "dialog",
+      "states": {
+       "modal": true
+      },
+      "template": "dialog \"\" [modal=true]"
+     },
+     "occurrence": {
+      "ancestors": [
+       [
+        "ReactModal__Overlay",
+        "ReactModal__Overlay--after-open",
+        "_overlay_lo4oy_89",
+        "_modalOverlay_1s2co_3"
+       ],
+       [
+        "ReactModalPortal"
+       ]
+      ],
+      "classes": [
+       "ReactModal__Content",
+       "ReactModal__Content--after-open",
+       "_modal_lo4oy_73",
+       "_modalContentOuter_1s2co_9"
+      ],
+      "data": {},
+      "heading": "",
+      "landmark": null,
+      "layer": "top",
+      "name": "",
+      "rect": [
+       432,
+       153,
+       576,
+       595
+      ],
+      "role": "dialog",
+      "tag": "div",
+      "xpath": "/html/body/div[10]/div[1]/div[1]"
+     },
+     "state": "settings.cash-flow-edited"
+    }
+   ],
+   "evidenceHash": "e2ef4322d904eea53cb8e1819b0b194e376095ca617ffff42eb68ce8cdb936c2",
+   "facts": {
+    "announced": "dialog \"\" [modal=true]",
+    "axeSummary": "",
+    "criterion": "4.1.2",
+    "criterionName": "Name, Role, Value",
+    "element": "dialog",
+    "rule": "announced-as",
+    "screen": "Cash flow notification settings"
+   },
+   "family": "name",
+   "guidance": "High for an unnamed form control or the sole primary action.",
+   "issueId": null,
+   "key": "name:announced-as:9dad2a38de37",
+   "measured": false,
+   "primary": "settings.cash-flow-notifications",
+   "proposals": [],
+   "rule": "announced-as",
+   "screens": 3,
+   "severityDefault": "medium",
+   "source": "scanner",
+   "states": [
+    "settings.cash-flow-notifications",
+    "settings.cash-flow-edited"
+   ],
+   "summary": "announced-as: announced as dialog \"\" [modal=true].",
+   "title": "Missing or unclear name: dialog"
+  }
+ ],
+ "primaries": [
+  "settings.cash-flow-notifications"
+ ],
+ "reach": {
+  "baseUrl": "https://demo.mercury.com",
+  "data": "data",
+  "map": "build/map.json",
+  "run": "2026-10-03-1525",
+  "workspace": "a11y"
+ },
+ "run": "2026-10-03-1525"
+}

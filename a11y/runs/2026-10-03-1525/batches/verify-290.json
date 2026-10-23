@@ -1,0 +1,249 @@
+{
+ "area": "payments",
+ "batch": "verify-290",
+ "findings": [
+  {
+   "attachments": [],
+   "attempt": 1,
+   "basis": "violation",
+   "criteria": [
+    "4.1.2"
+   ],
+   "evidence": [
+    {
+     "evidence": {
+      "aria-allowed-attr": [
+       "aria-readonly=\"true\""
+      ],
+      "failureSummary": "Fix all of the following:\n  ARIA attribute is not allowed: aria-readonly=\"true\""
+     },
+     "occurrence": {
+      "ancestors": [
+       [],
+       [],
+       [
+        "_lineItems_1wsk7_3"
+       ],
+       [
+        "_lineItemWrapper_8i915_29"
+       ],
+       [
+        "_lineItemFormContainer_8i915_33"
+       ],
+       [
+        "_formWrapper_8i915_9"
+       ],
+       [],
+       [
+        "_routeContainer_15al5_228"
+       ]
+      ],
+      "classes": [
+       "ReactVirtualized__Grid",
+       "ReactVirtualized__List"
+      ],
+      "data": {},
+      "heading": "Categorization",
+      "landmark": {
+       "name": "",
+       "role": "form"
+      },
+      "layer": "document",
+      "name": "grid",
+      "rect": [
+       440,
+       360,
+       560,
+       0
+      ],
+      "role": "generic",
+      "tag": "div",
+      "xpath": "/html/body/div[1]/main[1]/div[1]/div[2]/div[2]/div[1]/div[2]/section[2]/div[1]/div[1]/form[1]/div[1]/div[2]/div[2]/div[1]/div[1]/div[1]/div[1]"
+     },
+     "state": "payments.send-multiple-gl"
+    },
+    {
+     "evidence": {
+      "aria-allowed-attr": [
+       "aria-readonly=\"true\""
+      ],
+      "failureSummary": "Fix all of the following:\n  ARIA attribute is not allowed: aria-readonly=\"true\""
+     },
+     "occurrence": {
+      "ancestors": [
+       [],
+       [],
+       [
+        "_lineItems_1wsk7_3"
+       ],
+       [
+        "_lineItemWrapper_8i915_29"
+       ],
+       [
+        "_lineItemFormContainer_8i915_33"
+       ],
+       [
+        "_formWrapper_8i915_9"
+       ],
+       [],
+       [
+        "_routeContainer_15al5_228"
+       ]
+      ],
+      "classes": [
+       "ReactVirtualized__Grid",
+       "ReactVirtualized__List"
+      ],
+      "data": {},
+      "heading": "Categorization",
+      "landmark": {
+       "name": "",
+       "role": "form"
+      },
+      "layer": "document",
+      "name": "grid",
+      "rect": [
+       80,
+       360,
+       560,
+       248
+      ],
+      "role": "generic",
+      "tag": "div",
+      "xpath": "/html/body/div[1]/main[1]/div[1]/div[2]/div[2]/div[1]/div[2]/section[2]/div[1]/div[1]/form[1]/div[1]/div[2]/div[2]/div[1]/div[1]/div[1]/div[1]"
+     },
+     "state": "billpay.pay-line-items-error"
+    }
+   ],
+   "evidenceHash": "2fbe66967f5440784af9322316322b50cdcec5168076fd9cefed72aa2be01766",
+   "facts": {
+    "announced": "generic \"grid\"",
+    "axeSummary": "ARIA attribute is not allowed: aria-readonly=\"true\"",
+    "criterion": "4.1.2",
+    "criterionName": "Name, Role, Value",
+    "element": "text \"grid\"",
+    "rule": "aria-allowed-attr",
+    "screen": "Send: Multiple GL codes"
+   },
+   "family": "role-state",
+   "guidance": "Low for optional ARIA or an invalid autocomplete token; high when aria-hidden hides the whole page.",
+   "issueId": null,
+   "key": "role-state:aria-allowed-attr:9bd5713de2c3",
+   "measured": false,
+   "primary": "payments.send-multiple-gl",
+   "proposals": [],
+   "rule": "aria-allowed-attr",
+   "screens": 3,
+   "severityDefault": "medium",
+   "source": "scanner",
+   "states": [
+    "payments.send-multiple-gl",
+    "billpay.pay-line-items-error"
+   ],
+   "summary": "aria-allowed-attr: announced as generic \"grid\". ARIA attribute is not allowed: aria-readonly=\"true\"",
+   "title": "Wrong role or state: text \"grid\""
+  },
+  {
+   "attachments": [],
+   "attempt": 1,
+   "basis": "violation",
+   "criteria": [
+    "4.1.2"
+   ],
+   "evidence": [
+    {
+     "evidence": {
+      "failureSummary": "Fix all of the following:\n  aria-label attribute cannot be used on a div with no valid role attribute.",
+      "messageKey": "noRoleSingular",
+      "nodeName": "div",
+      "prohibited": [
+       "aria-label"
+      ],
+      "role": null
+     },
+     "occurrence": {
+      "ancestors": [
+       [],
+       [],
+       [
+        "_lineItems_1wsk7_3"
+       ],
+       [
+        "_lineItemWrapper_8i915_29"
+       ],
+       [
+        "_lineItemFormContainer_8i915_33"
+       ],
+       [
+        "_formWrapper_8i915_9"
+       ],
+       [],
+       [
+        "_routeContainer_15al5_228"
+       ]
+      ],
+      "classes": [
+       "ReactVirtualized__Grid",
+       "ReactVirtualized__List"
+      ],
+      "data": {},
+      "heading": "Categorization",
+      "landmark": {
+       "name": "",
+       "role": "form"
+      },
+      "layer": "document",
+      "name": "grid",
+      "rect": [
+       440,
+       360,
+       560,
+       0
+      ],
+      "role": "generic",
+      "tag": "div",
+      "xpath": "/html/body/div[1]/main[1]/div[1]/div[2]/div[2]/div[1]/div[2]/section[2]/div[1]/div[1]/form[1]/div[1]/div[2]/div[2]/div[1]/div[1]/div[1]/div[1]"
+     },
+     "state": "payments.send-multiple-gl"
+    }
+   ],
+   "evidenceHash": "6814c1f66b465ffff54c39dc93d522b180e136393b8b8c5f262452a180ab5673",
+   "facts": {
+    "announced": "generic \"grid\"",
+    "axeSummary": "aria-label attribute cannot be used on a div with no valid role attribute.",
+    "criterion": "4.1.2",
+    "criterionName": "Name, Role, Value",
+    "element": "text \"grid\"",
+    "rule": "aria-prohibited-attr",
+    "screen": "Send: Multiple GL codes"
+   },
+   "family": "role-state",
+   "guidance": "Low for optional ARIA or an invalid autocomplete token; high when aria-hidden hides the whole page.",
+   "issueId": null,
+   "key": "role-state:aria-prohibited-attr:25827976ba31",
+   "measured": false,
+   "primary": "payments.send-multiple-gl",
+   "proposals": [],
+   "rule": "aria-prohibited-attr",
+   "screens": 1,
+   "severityDefault": "medium",
+   "source": "scanner",
+   "states": [
+    "payments.send-multiple-gl"
+   ],
+   "summary": "aria-prohibited-attr: announced as generic \"grid\". aria-label attribute cannot be used on a div with no valid role attribute.",
+   "title": "Wrong role or state: text \"grid\""
+  }
+ ],
+ "primaries": [
+  "payments.send-multiple-gl"
+ ],
+ "reach": {
+  "baseUrl": "https://demo.mercury.com",
+  "data": "data",
+  "map": "build/map.json",
+  "run": "2026-10-03-1525",
+  "workspace": "a11y"
+ },
+ "run": "2026-10-03-1525"
+}

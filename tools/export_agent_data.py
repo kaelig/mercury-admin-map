@@ -30,13 +30,27 @@ import sys
 import urllib.parse
 from collections import Counter, defaultdict, deque
 
+import mapdata
+
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 DEMO_ORIGIN = "https://demo.mercury.com"
 AUDIT_SLUG = "mercury-admin-ux-audit"
 AUDIT_LABEL = "audit:mercury-admin-2026-09"
 CAPTURED = "2026-09-24"  # capture date of the screenshots (see project folder name)
 CAPTURE_SETUP = "1440x900 viewport at 2x, headless Chrome"
-SCHEMA_VERSION = 1
+SCHEMA_VERSION = 2
+A11Y_SOURCE_LABEL = "source:a11y-audit"
+# Caps for issues on many screens (KTD23): affectedScreens entries per record, which is what issues.json
+# and issues.jsonl carry, and table rows in the ticket. Records at or under the cap keep full lists and tables.
+SCREEN_CAP = 25
+TICKET_SCREEN_ROWS = 15
+VERDICT_PHRASE = {"confirm": "confirmed", "rerate": "re-rated", "drop": "not reproduced"}
+STATUS_PHRASE = {"not-retested": "not retested", "not-reproduced": "not reproduced", "first-audited": "first audited"}
+TOMBSTONE_REASON = {
+    "fixed": "fixed. The accessibility audit no longer finds it on the public demo.",
+    "withdrawn": "withdrawn. The verifier did not reproduce it on the live demo, or it is not an AA failure.",
+    "attached": "attached. It matched a hand-found issue, which now carries it.",
+}
 
 CAVEAT = (
     "This audit was produced by black-box testing of the public demo at demo.mercury.com, "
@@ -6401,16 +6415,29 @@ CURATED = {'accounts.i-account-masking': {'title': 'Mask account numbers the sam
 # ---------------------------------------------------------------------------
 
 def load_inputs():
-    areas = []
-    for path in sorted(glob.glob(os.path.join(ROOT, "data", "*.json"))):
-        with open(path, encoding="utf-8") as f:
-            areas.append(json.load(f))
+    # data/*.json through the shared loader (KTD22), merged with the published accessibility snapshot
+    # when there is one: A11Y_SNAPSHOT, else a11y/published/.
+    areas = mapdata.load_areas()
     with open(os.path.join(ROOT, "patterns.json"), encoding="utf-8") as f:
         patterns = json.load(f)
     inputs = glob.glob(os.path.join(ROOT, "data", "*.json")) + [os.path.join(ROOT, "patterns.json")]
     mtime = max(os.path.getmtime(p) for p in inputs)
     generated = datetime.datetime.fromtimestamp(mtime, datetime.timezone.utc).strftime("%Y-%m-%d")
     return areas, patterns, generated
+
+
+def load_tombstones():
+    """Ids the accessibility audit closed, from the snapshot's registry.json (KTD16); {} without a snapshot."""
+    path = os.path.join(mapdata.snapshot_path(), "registry.json")
+    if not os.path.isfile(path):
+        return {}
+    with open(path, encoding="utf-8") as f:
+        return json.load(f).get("tombstones") or {}
+
+
+def has_report():
+    """True when the snapshot holds the report model that the build renders to a11y/index.html."""
+    return os.path.isfile(os.path.join(mapdata.snapshot_path(), "report.json"))
 
 
 class Urls:
@@ -6431,6 +6458,10 @@ class Urls:
 
     def viewer(self, node_id):
         return self.site("index.html") + "#" + urllib.parse.quote(node_id, safe="._-")
+
+    def issue(self, issue_id):
+        """The viewer with every screen of one issue highlighted."""
+        return self.site("index.html") + "?issue=" + urllib.parse.quote(issue_id, safe="._-")
 
     def screenshot(self, image, size="full"):
         # screens/<area>/<name>.png -> img/<area>/<name>.<size>.webp
@@ -6544,19 +6575,29 @@ def open_step(node):
             f"'Viewing as Admin', switch to Admin there if it does not).")
 
 
-def reproduction(issue, nodes, edges, incoming, journeys):
+def journeys_by_node(journeys):
+    """Node id -> [(journey, index of the node's first step in it)], in journey order."""
+    by_node = defaultdict(list)
+    for j in journeys:
+        first = {}
+        for idx, step in enumerate(j["steps"]):
+            first.setdefault(step, idx)
+        for step, idx in first.items():
+            by_node[step].append((j, idx))
+    return by_node
+
+
+def reproduction(issue, nodes, edges, incoming, by_node):
     targets = issue["nodeIds"]
 
     # 1. A journey that reaches one of the affected screens. Prefer the first
     #    (primary) screen, then the shortest route, then a journey in the same area.
     best = None
     for rank, target in enumerate(targets):
-        for j in journeys:
-            if target in j["steps"]:
-                idx = j["steps"].index(target)
-                key = (rank, idx, j["area"] != issue["area"])
-                if best is None or key < best[0]:
-                    best = (key, j, idx, target)
+        for j, idx in by_node.get(target, ()):
+            key = (rank, idx, j["area"] != issue["area"])
+            if best is None or key < best[0]:
+                best = (key, j, idx, target)
         if best is not None and best[0][0] == rank:
             break
     if best:
@@ -6604,7 +6645,8 @@ def observe_step(issue, target, nodes):
     others = [nid for nid in issue["nodeIds"] if nid != target]
     s = f"Compare what you see with the audit screenshot of '{nodes[target]['title']}' and the evidence."
     if others:
-        s += f" The finding spans {len(others)} other screen{'s' if len(others) != 1 else ''}, listed in affectedScreens."
+        field = "affectedScreenIds" if len(issue["nodeIds"]) > SCREEN_CAP else "affectedScreens"
+        s += f" The finding spans {len(others)} other screen{'s' if len(others) != 1 else ''}, listed in {field}."
     return s
 
 
@@ -6622,9 +6664,19 @@ def screen_ref(node, urls):
     }
 
 
+def screen_refs(issue, nodes, urls):
+    """screen_ref for the issue's first SCREEN_CAP screens (KTD23); affectedScreenIds keeps them all.
+    Every id is still looked up, so a stale one fails the build."""
+    screens = [nodes[n] for n in issue["nodeIds"]]
+    return [screen_ref(node, urls) for node in screens[:SCREEN_CAP]]
+
+
 def verify_list(issue, copy, pattern_refs):
+    audit_date = (issue.get("audit") or {}).get("date")
+    seen = (f"The accessibility audit checked the public demo on {audit_date}" if audit_date
+            else f"The audit captured the public demo on {CAPTURED}")
     items = [
-        f"Reproduce it on the current product in a logged-in browser. The audit captured the public demo on {CAPTURED}; the UI may have changed since.",
+        f"Reproduce it on the current product in a logged-in browser. {seen}; the UI may have changed since.",
         f"Search the tracker for an existing ticket: first the dedupe key, then the searchTerms. If one exists, add this evidence as a comment instead of filing a new ticket.",
         IMPACT_CHECKS.get(copy["impact"]) or CATEGORY_CHECKS.get(issue["category"], CATEGORY_CHECKS["component"]),
     ]
@@ -6641,7 +6693,36 @@ def md_escape(s):
     return s.replace("|", "\\|").replace("\n", " ")
 
 
-def ticket_markdown(r):
+def audit_section(r, urls):
+    """The '## Accessibility audit' lines of an audited issue's ticket (KTD23)."""
+    a = r["audit"]
+    criteria = a.get("criteria") or []
+    names = ", ".join(f"[{c['number']} {c['name']}]({c['url']})" if c.get("url") else f"{c['number']} {c['name']}"
+                      for c in criteria)
+    reason = a.get("reason")
+    status = a.get("status")
+    audited = f"- Audited: {a.get('date')}, demo build `{a.get('build')}`, run `{a.get('run')}`."
+    if status:
+        audited += f" Status: {STATUS_PHRASE.get(status, status)}."
+    if status == "not-retested":
+        audited += " The latest run could not retest it; these are its last verified results."
+    checked = ", ".join(f"[`{s}`]({urls.viewer(s)})" for s in a.get("checkedStates") or [])
+    lines = [
+        "## Accessibility audit",
+        f"- WCAG 2.2 success criteri{'on' if len(criteria) == 1 else 'a'}: {names}",
+        f"- Check: {a.get('family')}",
+        f"- Verdict: {VERDICT_PHRASE.get(a.get('verdict'), a.get('verdict'))}." + (f" {reason}" if reason else ""),
+        audited,
+        f"- Screens the verifier checked: {checked or 'none'}",
+    ]
+    if r.get("history"):
+        lines.append(f"- Rating history: {r['history']}")
+    return lines + [""]
+
+
+def ticket_markdown(r, urls):
+    """The ticket body for one record as the writers emit it: capped records list TICKET_SCREEN_ROWS screens."""
+    evidence = (r.get("audit") or {}).get("evidence") or r["evidence"]
     lines = [
         f"# {r['title']}",
         "",
@@ -6656,16 +6737,25 @@ def ticket_markdown(r):
         f"**Why it matters:** {r['userImpact']}",
         "",
         "## Evidence (verbatim from the audit)",
-        "> " + r["evidence"].replace("\n", "\n> "),
+        "> " + evidence.replace("\n", "\n> "),
         "",
         f"Evidence type: {r['evidenceType']}. Confidence: {r['confidence']}. {r['confidenceReason']}",
         "",
+    ]
+    if r.get("audit"):
+        lines += audit_section(r, urls)
+    lines += [
         "## Affected screens",
         "| Screen | Product path | Screenshot | Audit viewer |",
         "|---|---|---|---|",
     ]
-    for s in r["affectedScreens"]:
+    total = r["affectedScreenCount"]
+    shown = r["affectedScreens"][:TICKET_SCREEN_ROWS] if total > SCREEN_CAP else r["affectedScreens"]
+    for s in shown:
         lines.append(f"| {md_escape(s['title'])} | `{md_escape(s['urlPath'])}` | [screenshot]({s['screenshot']}) | [open]({s['viewer']}) |")
+    if total > SCREEN_CAP:
+        lines += ["", f"{len(shown)} of {total} screens listed, and {total - len(shown)} more: "
+                      f"[show all {total} screens]({urls.issue(r['id'])}) in the audit viewer."]
     lines += ["", "## Steps to reproduce"]
     lines += [f"{i}. {step}" for i, step in enumerate(r["reproduce"]["steps"], 1)]
     lines += ["", "## Suggested fix (hypothesis)", r["fixHypothesis"], "", "## Acceptance criteria"]
@@ -6682,6 +6772,23 @@ def ticket_markdown(r):
     return "\n".join(lines)
 
 
+def stub_markdown(iid, tomb, urls):
+    """The stub at tickets/<id>.md for an id the accessibility audit closed, so tracker links keep working."""
+    since = f"No longer open since run {tomb.get('run')}" + (f" ({tomb['date']})" if tomb.get("date") else "") + "."
+    reason, hid = tomb.get("reason"), tomb.get("attachedTo")
+    if reason == "attached" and hid:
+        why = (f"Reason: attached. It matched the hand-found issue `{hid}`, which now carries it. "
+               f"Use [its ticket]({urls.site(f'{urls.agent_prefix}tickets/{hid}.md')}) instead.")
+    else:
+        why = f"Reason: {TOMBSTONE_REASON.get(reason, f'{reason}.')}"
+    lines = [f"# No longer open: {iid}", "",
+             f"> {since} The accessibility audit closed this issue (audit id `{iid}`). Do not file it.", "", why]
+    if reason in ("fixed", "withdrawn"):
+        lines += ["", "If a ticket was filed from it, check the current product, then close that ticket with this reason."]
+    lines += ["", "---", f"Dedupe key: `{AUDIT_SLUG}:{iid}`"]
+    return "\n".join(lines)
+
+
 # ---------------------------------------------------------------------------
 # Builders
 # ---------------------------------------------------------------------------
@@ -6689,10 +6796,13 @@ def ticket_markdown(r):
 REQUIRED_ISSUE_FIELDS = [
     "id", "dedupeKey", "title", "auditTitle", "summary", "problem", "auditDetail", "userImpact",
     "evidence", "evidenceType", "severity", "priority", "impact", "category", "area", "areaTitle",
-    "patterns", "confidence", "confidenceReason", "demoArtifactRisk", "affectedScreens", "reproduce",
+    "patterns", "confidence", "confidenceReason", "demoArtifactRisk", "affectedScreens",
+    "affectedScreenCount", "affectedScreenIds", "reproduce",
     "fixHypothesis", "acceptanceCriteria", "labels", "searchTerms", "verifyBeforeFiling",
     "ticketUrl", "curated",
 ]
+# Only on issues the accessibility audit verified (KTD23); `history` only on hand-found ones it re-rated or dropped.
+AUDIT_FIELDS = list(mapdata.OVERLAY_FIELDS)
 # Fields allowed to be empty lists or false.
 MAY_BE_EMPTY = {"patterns", "demoArtifactRisk", "curated"}
 
@@ -6703,21 +6813,29 @@ def build_issues(areas, patterns, nodes, edges, incoming, journeys, urls):
         for iid in p["issueIds"]:
             issue_patterns[iid].append({"id": p["id"], "title": p["title"]})
     area_titles = {a["area"]: a["title"] for a in areas}
+    by_node = journeys_by_node(journeys)
 
     records, warnings = [], []
     for a in areas:
         for issue in a["issues"]:
             issue = dict(issue, area=a["area"])
-            etype = evidence_type(issue["evidence"])
-            copy = CURATED.get(issue["id"])
+            audit = issue.get("audit")
+            # Generated accessibility issues come only from the sweep's measurements.
+            etype = "devtools" if audit and issue.get("copy") else evidence_type(issue["evidence"])
+            # Generated accessibility issues carry copy built from templates and their facts (KTD23).
+            copy = issue.get("copy") or CURATED.get(issue["id"])
             curated = copy is not None
             if not curated:
                 warnings.append(f"no curated copy for {issue['id']}; using generated fallback")
                 copy = fallback_copy(issue, etype)
+            wcag = (list(issue.get("wcag") or [c["number"] for c in audit.get("criteria") or []])
+                    if audit else [])
             pats = issue_patterns.get(issue["id"], [])
             prio = priority_for(copy["impact"], issue["severity"], copy["confidence"], copy["demoArtifactRisk"])
-            labels = ["source:ux-audit", AUDIT_LABEL, f"area:{a['area']}", f"category:{issue['category']}",
-                      f"impact:{copy['impact']}", "needs-verification"] + [f"pattern:{p['id']}" for p in pats]
+            labels = (["source:ux-audit"] + ([A11Y_SOURCE_LABEL] if audit else []) +
+                      [AUDIT_LABEL, f"area:{a['area']}", f"category:{issue['category']}", f"impact:{copy['impact']}"] +
+                      [f"wcag:{n}" for n in wcag] +
+                      ["needs-verification"] + [f"pattern:{p['id']}" for p in pats])
             r = {
                 "id": issue["id"],
                 "dedupeKey": f"{AUDIT_SLUG}:{issue['id']}",
@@ -6739,8 +6857,10 @@ def build_issues(areas, patterns, nodes, edges, incoming, journeys, urls):
                 "confidence": copy["confidence"],
                 "confidenceReason": copy["confidenceReason"],
                 "demoArtifactRisk": bool(copy["demoArtifactRisk"]),
-                "affectedScreens": [screen_ref(nodes[n], urls) for n in issue["nodeIds"]],
-                "reproduce": reproduction(issue, nodes, edges, incoming, journeys),
+                "affectedScreens": screen_refs(issue, nodes, urls),
+                "affectedScreenCount": len(issue["nodeIds"]),
+                "affectedScreenIds": list(issue["nodeIds"]),
+                "reproduce": reproduction(issue, nodes, edges, incoming, by_node),
                 "fixHypothesis": copy["fixHypothesis"],
                 "acceptanceCriteria": list(copy["acceptance"]),
                 "labels": labels,
@@ -6749,7 +6869,12 @@ def build_issues(areas, patterns, nodes, edges, incoming, journeys, urls):
                 "curated": curated,
             }
             r["ticketUrl"] = urls.site(f"{urls.agent_prefix}tickets/{issue['id']}.md")
-            records.append({k: r[k] for k in REQUIRED_ISSUE_FIELDS})
+            if audit:
+                r["wcag"] = wcag
+                r["audit"] = audit
+            if issue.get("history"):
+                r["history"] = issue["history"]
+            records.append({k: r[k] for k in REQUIRED_ISSUE_FIELDS + AUDIT_FIELDS if k in r})
     known = {r["id"] for r in records}
     for iid in CURATED:
         if iid not in known:
@@ -6841,8 +6966,8 @@ def build_patterns(patterns, records, areas):
 def build_screens(areas, nodes, outgoing, journeys, records, urls):
     issue_ids = defaultdict(list)
     for r in records:
-        for s in r["affectedScreens"]:
-            issue_ids[s["nodeId"]].append(r["id"])
+        for nid in r["affectedScreenIds"]:
+            issue_ids[nid].append(r["id"])
     journey_ids = defaultdict(list)
     for j in journeys:
         for s in dict.fromkeys(j["steps"]):
@@ -6862,8 +6987,8 @@ def build_screens(areas, nodes, outgoing, journeys, records, urls):
 def build_journeys(journeys, nodes, edges, records, urls):
     touching = defaultdict(set)
     for r in records:
-        for s in r["affectedScreens"]:
-            touching[s["nodeId"]].add(r["id"])
+        for nid in r["affectedScreenIds"]:
+            touching[nid].add(r["id"])
     out = []
     for j in journeys:
         steps = []
@@ -6930,10 +7055,10 @@ Counts: severity (as audited) high {sev['high']}, medium {sev['medium']}, low {s
 | `llms.txt` | Short index of these files (a copy also sits at the site root) |
 | `README.md`, `AGENTS.md` | This document (identical) |
 | `patterns.json` | {meta['counts']['patterns']} cross-area patterns, each framed as an epic with its child issues, plus area-specific issues grouped by area |
-| `issues-index.json` | One short row per issue (id, title, priority, severity, impact, confidence, area, patterns, ticket link). Small enough to read whole; start triage here |
+| `issues-index.json` | One short row per issue (id, title, priority, severity, impact, confidence, area, patterns, WCAG criteria for audited accessibility issues, screen count, ticket link). Small enough to read whole; start triage here |
 | `issues.json` | All {meta['counts']['issues']} full issue records under `issues`, with `meta` (caveat, counts, schema version). Over 1 MB; prefer the index plus single tickets if your context is limited |
 | `issues.jsonl` | The same records, one JSON object per line, no meta. Use it with `grep` or `jq` |
-| `tickets/<id>.md` | Ready-to-paste Markdown ticket body for one issue, following the template below |
+| `tickets/<id>.md` | Ready-to-paste Markdown ticket body for one issue, following the template below. An id the accessibility audit closed keeps a short stub that says since which run and why, so tracker links keep working |
 | `screens.json` | Every captured screen: path, screenshot, viewer link, issues on it, journeys through it, outgoing actions |
 | `journeys.json` | The {meta['counts']['journeys']} journeys with ordered steps and the action that leads to each step |
 
@@ -6964,7 +7089,7 @@ Linear mapping: `title` to title, the ticket Markdown to description, `priority.
 | `auditDetail` | string | The auditor's full description, verbatim |
 | `userImpact` | string | The concrete consequence for an admin |
 | `evidence` | string | Verbatim evidence from the audit: rendered text, computed styles, DOM attributes |
-| `evidenceType` | `devtools` \\| `rendered-text` \\| `observed` | Strongest kind of evidence, detected from the evidence text: `devtools` has measured values (computed styles, classes, DOM or accessibility-tree attributes, clock, geometry); `rendered-text` quotes on-screen text verbatim; `observed` describes behavior or visuals without either |
+| `evidenceType` | `devtools` \\| `rendered-text` \\| `observed` | Strongest kind of evidence, detected from the evidence text: `devtools` has measured values (computed styles, classes, DOM or accessibility-tree attributes, clock, geometry); `rendered-text` quotes on-screen text verbatim; `observed` describes behavior or visuals without either. Generated accessibility issues are always `devtools`: the sweep measured them |
 | `severity` | `high` \\| `medium` \\| `low` | As audited |
 | `priority` | object | `level` (P1-P4), `rank` (1-4), `rationale` (one line) |
 | `impact` | enum | `data-integrity`, `broken-task`, `accessibility`, `consistency`, `cosmetic`. Drives priority |
@@ -6974,15 +7099,20 @@ Linear mapping: `title` to title, the ticket Markdown to description, `priority.
 | `confidence` | `high` \\| `medium` \\| `low` | How sure we are the finding is real and reproducible as described |
 | `confidenceReason` | string | What the confidence rests on |
 | `demoArtifactRisk` | boolean | True when demo data, the demo clock or the sandbox could explain it |
-| `affectedScreens` | array | `{{nodeId, title, kind, urlPath, productUrl, screenshot, thumbnail, viewer, note}}`; the first is the primary screen |
+| `affectedScreens` | array | `{{nodeId, title, kind, urlPath, productUrl, screenshot, thumbnail, viewer, note}}`; the first is the primary screen. An issue on more than {SCREEN_CAP} screens lists its first {SCREEN_CAP} here |
+| `affectedScreenCount` | number | How many screens the issue is on, always the full count |
+| `affectedScreenIds` | string[] | The `nodeId` of every affected screen, primary first, always the full list. `screens.json` and `journeys.json` use it |
 | `reproduce` | object | `method` (`journey`, `edge-path` or `url`), `journeyId`, `journeyName`, `targetNodeId`, `steps[]` |
 | `fixHypothesis` | string | Suggested direction, phrased as a hypothesis |
 | `acceptanceCriteria` | string[] | Observable conditions that are true when the issue is fixed |
-| `labels` | string[] | Suggested labels, including `needs-verification` |
+| `labels` | string[] | Suggested labels, including `needs-verification`. Audited accessibility issues add `source:a11y-audit` and one `wcag:<number>` per success criterion |
 | `searchTerms` | string[] | Phrases for duplicate search |
 | `verifyBeforeFiling` | string[] | Checklist to complete before filing |
 | `ticketUrl` | string | Link to `tickets/<id>.md`, the ready-to-paste ticket body built from the fields above |
-| `curated` | boolean | True when the copy was written for this issue; false when generated as a fallback |
+| `curated` | boolean | True when the copy was written for this issue, by hand or by the accessibility audit from its templates and measured facts; false when generated as a fallback |
+| `wcag` | string[] | Audited accessibility issues only. The WCAG 2.2 success criteria the issue is about, by number (`1.4.3`) |
+| `audit` | object | Audited accessibility issues only: generated ones and re-verified hand-found ones. `criteria[]` {{`number`, `name`, `url` (the W3C Understanding page)}}, `family` (the check, such as `contrast` or `keyboard`), `verdict` (`confirm`, `rerate` or `drop`), `reason` (the verifier's), `date` (the audit date), `build` (the demo build hash), `evidence` (the full live evidence over several lines: measured values, accessibility-tree attributes or focus trace, then the verifier's reason), `checkedStates[]` (the screens the verifier checked), `run`, `status` (`new`, `persisting`, `re-rated`, `reappeared` or `not-retested` for generated issues; `first-audited`, `confirmed`, `re-rated`, `not-reproduced` or `not-retested` for hand-found ones). With `not-retested`, `date` and `evidence` are from the last run that verified it |
+| `history` | string | Hand-found issues the accessibility audit re-rated or did not reproduce: `rated high on <date>, previously medium`, or `not reproduced on <date>: <reason>`. A hand-found issue it did not reproduce stays open with its original copy |
 
 `reproduce.method`: `journey` means the steps follow a recorded journey that reaches the screen, with the recorded action between each step. `edge-path` means the shortest recorded route from a page to the screen. `url` means only the product path is known.
 
@@ -7004,7 +7134,7 @@ Linear mapping: `title` to title, the ticket Markdown to description, `priority.
 
 ## Ticket template
 
-Use this when you build the body yourself. The files in `tickets/` already follow it.
+Use this when you build the body yourself. The files in `tickets/` already follow it. The Accessibility audit section appears only on issues with an `audit`, and its Rating history line only with a `history`.
 
 ```markdown
 > Found in a black-box UX audit of the public Mercury demo (audit id `<id>`). Filed after the checks in Verification below.
@@ -7018,14 +7148,24 @@ Use this when you build the body yourself. The files in `tickets/` already follo
 **Why it matters:** <userImpact>
 
 ## Evidence (verbatim from the audit)
-> <evidence>
+> <evidence, or audit.evidence for audited accessibility issues>
 
 Evidence type: <evidenceType>. Confidence: <confidence>. <confidenceReason>
+
+## Accessibility audit
+- WCAG 2.2 success criterion: [<audit.criteria[].number> <name>](<url>)
+- Check: <audit.family>
+- Verdict: <confirmed, re-rated or not reproduced>. <audit.reason>
+- Audited: <audit.date>, demo build `<audit.build>`, run `<audit.run>`. Status: <audit.status>.
+- Screens the verifier checked: <audit.checkedStates>
+- Rating history: <history>
 
 ## Affected screens
 | Screen | Product path | Screenshot | Audit viewer |
 |---|---|---|---|
 | <title> | `<urlPath>` | [screenshot](<screenshot>) | [open](<viewer>) |
+
+<for an issue on more than {SCREEN_CAP} screens: the first {TICKET_SCREEN_ROWS} rows, then "{TICKET_SCREEN_ROWS} of <affectedScreenCount> screens listed, and <the rest> more", with a link to the viewer's ?issue=<id> view>
 
 ## Steps to reproduce
 1. <reproduce.steps[0]>
@@ -7083,11 +7223,15 @@ Generated {meta['generatedAt']} from the audit manifests, schema version {SCHEMA
 """
 
 
-def llms_txt(urls, meta, prefix):
+def llms_txt(urls, meta, prefix, report=False):
+    """report: the build writes the accessibility report (a11y/index.html) because a snapshot exists."""
     def link(name):
         return urls.site(f"{prefix}{name}") if prefix or urls.base else name
 
     viewer = urls.site("index.html")
+    report_line = (f"- [Accessibility report]({urls.site('a11y/index.html')}): the latest WCAG 2.2 AA audit, with "
+                   "coverage, changes since the previous run and a priority fix list; each finding links to its "
+                   "screens on the map\n") if report else ""
     return f"""# Mercury Admin UX audit
 
 > Black-box UX and design-system audit of the public demo at demo.mercury.com (Admin view): {meta['counts']['screens']} screens, {meta['counts']['journeys']} journeys and {meta['counts']['issues']} issues in {meta['counts']['patterns']} cross-area patterns. Findings are hypotheses to verify against Mercury's internal conventions, not confirmed defects.
@@ -7109,7 +7253,7 @@ The auditor had no access to Mercury's design system, component library, content
 
 - [Interactive viewer]({viewer}): pan-and-zoom map of all screens; append #<nodeId> to open one screen
 - [AGENTS.md]({link('AGENTS.md')}): same content as the agent README
-"""
+{report_line}"""
 
 
 # ---------------------------------------------------------------------------
@@ -7130,8 +7274,9 @@ def index_row(r):
         "area": r["area"],
         "category": r["category"],
         "patterns": [p["id"] for p in r["patterns"]],
+        **({"wcag": r["wcag"]} if "wcag" in r else {}),
         "demoArtifactRisk": r["demoArtifactRisk"],
-        "screens": len(r["affectedScreens"]),
+        "screens": r["affectedScreenCount"],
         "ticketUrl": r["ticketUrl"],
     }
 
@@ -7199,7 +7344,13 @@ def main():
         os.remove(old)
     for r in ticket_records:
         with open(os.path.join(tickets_dir, f"{r['id']}.md"), "w", encoding="utf-8") as f:
-            f.write(ticket_markdown(r) + "\n")
+            f.write(ticket_markdown(r, ticket_urls) + "\n")
+    # A closed accessibility id keeps a stub so tracker links keep working; one that is live again has its ticket.
+    live = {r["id"] for r in records}
+    for iid, tomb in sorted(load_tombstones().items()):
+        if iid not in live:
+            with open(os.path.join(tickets_dir, f"{iid}.md"), "w", encoding="utf-8") as f:
+                f.write(stub_markdown(iid, tomb, ticket_urls) + "\n")
 
     example = next((r for r in records if r["id"] == EXAMPLE_ID), records[0])
     doc = readme(meta, records, patterns_out, standalone, example)
@@ -7207,11 +7358,12 @@ def main():
         with open(os.path.join(out_dir, name), "w", encoding="utf-8") as f:
             f.write(doc)
 
+    report = has_report()
     with open(os.path.join(out_dir, "llms.txt"), "w", encoding="utf-8") as f:
-        f.write(llms_txt(urls, meta, ""))
+        f.write(llms_txt(urls, meta, "", report))
     root_urls = Urls(site_root, site_root, args.base_url, prefix)
     with open(os.path.join(site_root, "llms.txt"), "w", encoding="utf-8") as f:
-        f.write(llms_txt(root_urls, meta, prefix))
+        f.write(llms_txt(root_urls, meta, prefix, report))
 
     for w in warnings:
         print(f"warning: {w}", file=sys.stderr)

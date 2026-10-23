@@ -1,0 +1,23 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><title>Transactions table</title>
+<style>
+  body { font: 16px/1.4 sans-serif; margin: 24px; color: #111; background: #fff; }
+  table { border-collapse: collapse; }
+  td { padding: 4px 12px; border-bottom: 1px solid #eee; }
+  button { font: inherit; }
+</style></head>
+<body>
+<main>
+  <h1>Transactions</h1>
+  <!-- The largest walk: 30 rows, each with a link and a button, all with default focus rings. -->
+  <table><tbody id="rows"></tbody></table>
+</main>
+<script>
+  const rows = document.getElementById('rows');
+  for (let i = 1; i <= 30; i++) {
+    const tr = document.createElement('tr');
+    tr.innerHTML = `<td><a href="#t${i}">Transaction ${i}</a></td><td>$${i}.00</td><td><button>Receipt ${i}</button></td>`;
+    rows.append(tr);
+  }
+</script>
+</body></html>

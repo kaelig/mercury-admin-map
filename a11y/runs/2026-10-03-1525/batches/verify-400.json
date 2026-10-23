@@ -1,0 +1,366 @@
+{
+ "area": "accounts",
+ "batch": "verify-400",
+ "findings": [
+  {
+   "attachments": [],
+   "attempt": 1,
+   "basis": "candidate",
+   "criteria": [
+    "4.1.2"
+   ],
+   "evidence": [
+    {
+     "evidence": {
+      "description": "",
+      "name": "",
+      "role": "button",
+      "states": {},
+      "template": "button \"\""
+     },
+     "occurrence": {
+      "ancestors": [
+       [
+        "_tooltipAnchor_18bac_4",
+        "_tooltipWrapper_1cgg7_75"
+       ],
+       [
+        "_menuContainer_1cgg7_8",
+        "session-replay-unmask"
+       ],
+       [],
+       [
+        "_main_1gb3b_1"
+       ],
+       [
+        "mercury-root"
+       ]
+      ],
+      "classes": [
+       "_menuIcon_1cgg7_33"
+      ],
+      "data": {},
+      "heading": "",
+      "landmark": {
+       "name": "",
+       "role": "main"
+      },
+      "layer": "document",
+      "name": "",
+      "rect": [
+       1364,
+       832,
+       48,
+       48
+      ],
+      "role": "button",
+      "tag": "button",
+      "xpath": "/html/body/div[1]/main[1]/div[1]/div[4]/div[2]/button[1]"
+     },
+     "state": "accounts.add-funds"
+    },
+    {
+     "evidence": {
+      "description": "",
+      "name": "",
+      "role": "button",
+      "states": {},
+      "template": "button \"\""
+     },
+     "occurrence": {
+      "ancestors": [
+       [
+        "_tooltipAnchor_18bac_4",
+        "_tooltipWrapper_1cgg7_75"
+       ],
+       [
+        "_menuContainer_1cgg7_8",
+        "session-replay-unmask"
+       ],
+       [
+        "_wrapper_809q8_3"
+       ],
+       [],
+       [
+        "_main_1gb3b_1"
+       ],
+       [
+        "mercury-root"
+       ]
+      ],
+      "classes": [
+       "_menuIcon_1cgg7_33"
+      ],
+      "data": {},
+      "heading": "Due in next 7 days",
+      "landmark": {
+       "name": "",
+       "role": "main"
+      },
+      "layer": "document",
+      "name": "",
+      "rect": [
+       1364,
+       832,
+       48,
+       48
+      ],
+      "role": "button",
+      "tag": "button",
+      "xpath": "/html/body/div[1]/main[1]/div[1]/div[1]/div[6]/div[2]/button[1]"
+     },
+     "state": "billpay.inbox-sorted"
+    }
+   ],
+   "evidenceHash": "6a222e55ac7056b0a19524847e2ec7f8124604debd89c32742b267071f840647",
+   "facts": {
+    "announced": "button \"\"",
+    "axeSummary": "",
+    "criterion": "4.1.2",
+    "criterionName": "Name, Role, Value",
+    "element": "button in the main landmark",
+    "rule": "announced-as",
+    "screen": "Add funds to your accounts"
+   },
+   "family": "name",
+   "guidance": "High for an unnamed form control or the sole primary action.",
+   "issueId": null,
+   "key": "name:announced-as:3b250889f60f",
+   "measured": false,
+   "primary": "accounts.add-funds",
+   "proposals": [
+    {
+     "family": "name",
+     "finding": "name:announced-as:3b250889f60f",
+     "handFound": "accounts.i-rule-cards-hidden-period",
+     "id": "5efdaa5d3f0629cabba98cdde8eb4367af8f0115e4d1dd533ecdb8a5c763b0ff",
+     "overlap": 1
+    },
+    {
+     "family": "name",
+     "finding": "name:announced-as:3b250889f60f",
+     "handFound": "billpay.i-date-input-label",
+     "id": "bf3c673e2778add15f01d0515b049557ffd918ddcc42150d8c5aae1777e6bed6",
+     "overlap": 1
+    },
+    {
+     "family": "name",
+     "finding": "name:announced-as:3b250889f60f",
+     "handFound": "billpay.i-unlabeled-controls",
+     "id": "a95a5f57e5ae02d4dbd91f238f994d4c8cf6506ed526ff8f091a6d51836b58e2",
+     "overlap": 0.6667
+    },
+    {
+     "family": "name",
+     "finding": "name:announced-as:3b250889f60f",
+     "handFound": "cards.i-subscription-actions-unlabeled",
+     "id": "1e3f493debb35e26c8f1ee49e503216d5c5c66e0c83df102c59bd2c24cd86d74",
+     "overlap": 1
+    },
+    {
+     "family": "name",
+     "finding": "name:announced-as:3b250889f60f",
+     "handFound": "invoicing.i-unlabeled-controls",
+     "id": "5ed7effe4b50ed47eed05c528ea9beb9d36e029b55bbb2b757bc780bf4d17457",
+     "overlap": 1
+    },
+    {
+     "family": "name",
+     "finding": "name:announced-as:3b250889f60f",
+     "handFound": "payments.i-icon-links-a11y",
+     "id": "418de829c110aca49b758d480fc6b8a0f3e0a83f0b6542df5660b3b5c1564603",
+     "overlap": 1
+    },
+    {
+     "family": "name",
+     "finding": "name:announced-as:3b250889f60f",
+     "handFound": "settings.i-unnamed-row-buttons",
+     "id": "08a32967bc978fd0d9cdc012e013600e6522b97cd84d4f23245033fdc00d3fd8",
+     "overlap": 0.5
+    }
+   ],
+   "rule": "announced-as",
+   "screens": 337,
+   "severityDefault": "medium",
+   "source": "scanner",
+   "states": [
+    "accounts.add-funds",
+    "billpay.inbox-sorted"
+   ],
+   "summary": "announced-as: announced as button \"\".",
+   "title": "Missing or unclear name: button in the main landmark"
+  },
+  {
+   "attachments": [],
+   "attempt": 1,
+   "basis": "candidate",
+   "criteria": [
+    "4.1.2"
+   ],
+   "evidence": [
+    {
+     "evidence": {
+      "description": "",
+      "name": "",
+      "role": "link",
+      "states": {},
+      "template": "link \"\""
+     },
+     "occurrence": {
+      "ancestors": [
+       [
+        "_logoSection_w6xr5_28",
+        "_orgNameWrapper_w6xr5_59"
+       ],
+       [
+        "_container_w6xr5_1",
+        "_responsive_w6xr5_66"
+       ],
+       [
+        "_sidebarContainer_bcpsw_45"
+       ],
+       [
+        "_fullScreenWorkspaceLayout_bcpsw_14",
+        "_fullScreenWorkspaceLayoutBackground_bcpsw_32"
+       ],
+       [
+        "_wrapper_bcpsw_3",
+        "_responsive_bcpsw_88"
+       ],
+       [],
+       [
+        "_main_1gb3b_1"
+       ],
+       [
+        "mercury-root"
+       ]
+      ],
+      "classes": [
+       "_noStyleLink_njx8v_1"
+      ],
+      "data": {
+       "data-discover": "true"
+      },
+      "heading": "",
+      "landmark": {
+       "name": "",
+       "role": "main"
+      },
+      "layer": "document",
+      "name": "",
+      "rect": [
+       48,
+       104,
+       32,
+       35
+      ],
+      "role": "link",
+      "tag": "a",
+      "xpath": "/html/body/div[1]/main[1]/div[1]/div[2]/div[2]/div[1]/div[1]/div[1]/a[1]"
+     },
+     "state": "accounts.add-funds"
+    },
+    {
+     "evidence": {
+      "description": "",
+      "name": "",
+      "role": "link",
+      "states": {},
+      "template": "link \"\""
+     },
+     "occurrence": {
+      "ancestors": [
+       [
+        "_logoSection_w6xr5_28",
+        "_orgNameWrapper_w6xr5_59"
+       ],
+       [
+        "_container_w6xr5_1"
+       ],
+       [
+        "_logoHeader_yg1rf_127"
+       ],
+       [
+        "_leftScrollArea_yg1rf_57"
+       ],
+       [
+        "_leftContainer_yg1rf_39",
+        "_splitVariant_yg1rf_82"
+       ],
+       [
+        "_containerBase_yg1rf_1",
+        "_container_yg1rf_1",
+        "_containerWithBanner_yg1rf_12"
+       ],
+       [
+        "session-replay-unmask"
+       ],
+       []
+      ],
+      "classes": [
+       "_noStyleLink_njx8v_1"
+      ],
+      "data": {
+       "data-discover": "true"
+      },
+      "heading": "",
+      "landmark": {
+       "name": "",
+       "role": "form"
+      },
+      "layer": "document",
+      "name": "",
+      "rect": [
+       48,
+       104,
+       32,
+       35
+      ],
+      "role": "link",
+      "tag": "a",
+      "xpath": "/html/body/div[1]/main[1]/div[1]/div[2]/div[2]/div[3]/form[1]/div[1]/div[1]/div[1]/div[1]/div[1]/div[1]/div[1]/a[1]"
+     },
+     "state": "cards.issue-card-agent-card"
+    }
+   ],
+   "evidenceHash": "d7f5bcc883dca1b2d7368e781e28ee5b1f8d2813a70c11bb5acf1f726d6ae88f",
+   "facts": {
+    "announced": "link \"\"",
+    "axeSummary": "",
+    "criterion": "4.1.2",
+    "criterionName": "Name, Role, Value",
+    "element": "link in the main landmark",
+    "rule": "announced-as",
+    "screen": "Add funds to your accounts"
+   },
+   "family": "name",
+   "guidance": "High for an unnamed form control or the sole primary action.",
+   "issueId": null,
+   "key": "name:announced-as:c45d2c92ee87",
+   "measured": false,
+   "primary": "accounts.add-funds",
+   "proposals": [],
+   "rule": "announced-as",
+   "screens": 112,
+   "severityDefault": "medium",
+   "source": "scanner",
+   "states": [
+    "accounts.add-funds",
+    "cards.issue-card-agent-card"
+   ],
+   "summary": "announced-as: announced as link \"\".",
+   "title": "Missing or unclear name: link in the main landmark"
+  }
+ ],
+ "primaries": [
+  "accounts.add-funds"
+ ],
+ "reach": {
+  "baseUrl": "https://demo.mercury.com",
+  "data": "data",
+  "map": "build/map.json",
+  "run": "2026-10-03-1525",
+  "workspace": "a11y"
+ },
+ "run": "2026-10-03-1525"
+}

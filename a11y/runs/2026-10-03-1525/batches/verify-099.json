@@ -1,0 +1,1195 @@
+{
+ "area": "books",
+ "batch": "verify-099",
+ "findings": [
+  {
+   "attachments": [],
+   "attempt": 1,
+   "basis": "violation",
+   "criteria": [
+    "1.4.3"
+   ],
+   "evidence": [
+    {
+     "evidence": {
+      "bgColor": "#ffffff",
+      "contrastRatio": 2.68,
+      "expectedContrastRatio": "4.5:1",
+      "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 2.68 (foreground color: #9d9da8, background color: #ffffff, font size: 7.5pt (10px), font weight: normal). Expected contrast ratio of 4.5:1",
+      "fgColor": "#9d9da8",
+      "fontSize": "7.5pt (10px)",
+      "fontWeight": "normal",
+      "messageKey": null
+     },
+     "occurrence": {
+      "ancestors": [
+       [
+        "_colorLayer_i14b5_10",
+        "_hoverLayer_i14b5_93"
+       ],
+       [
+        "_markerCellContent_i14b5_23",
+        "_outerBorder_i14b5_44",
+        "_bottomLeftRadius_i14b5_48",
+        "_markersOnly_i14b5_61"
+       ],
+       [
+        "_colorLayer_i14b5_10"
+       ],
+       [
+        "_gridMarkerCell_i14b5_3"
+       ],
+       [
+        "_gridUtilityRow_7qmwc_1",
+        "_animateOut_7qmwc_14"
+       ],
+       [
+        "_virtualizerContainer_7rfk9_25"
+       ],
+       [
+        "_grid_7rfk9_1"
+       ],
+       [
+        "_csvImportGate_hp7ar_25"
+       ]
+      ],
+      "classes": [
+       "_micro_qaod7_79",
+       "_text-disabled_12t49_1",
+       "_rowMarker_i14b5_66"
+      ],
+      "data": {},
+      "heading": "Add other bank or credit accounts",
+      "landmark": {
+       "name": "",
+       "role": "main"
+      },
+      "layer": "document",
+      "name": "",
+      "rect": [
+       257,
+       574,
+       11,
+       20
+      ],
+      "role": "",
+      "tag": "span",
+      "xpath": "/html/body/div[1]/main[1]/div[1]/div[1]/div[1]/div[4]/div[1]/div[1]/div[2]/div[1]/div[1]/div[2]/div[1]/div[1]/div[1]/div[1]/div[13]/div[2]/div[1]/div[1]/div[1]/span[1]"
+     },
+     "state": "books.bills"
+    },
+    {
+     "evidence": {
+      "bgColor": "#ffffff",
+      "contrastRatio": 2.68,
+      "expectedContrastRatio": "4.5:1",
+      "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 2.68 (foreground color: #9d9da8, background color: #ffffff, font size: 7.5pt (10px), font weight: normal). Expected contrast ratio of 4.5:1",
+      "fgColor": "#9d9da8",
+      "fontSize": "7.5pt (10px)",
+      "fontWeight": "normal",
+      "messageKey": null
+     },
+     "occurrence": {
+      "ancestors": [
+       [
+        "_colorLayer_i14b5_10",
+        "_hoverLayer_i14b5_93"
+       ],
+       [
+        "_markerCellContent_i14b5_23",
+        "_outerBorder_i14b5_44"
+       ],
+       [
+        "_colorLayer_i14b5_10"
+       ],
+       [
+        "_gridMarkerCell_i14b5_3"
+       ],
+       [
+        "_gridRow_1ixju_1"
+       ],
+       [
+        "_virtualizerContainer_7rfk9_25"
+       ],
+       [
+        "_grid_7rfk9_1"
+       ],
+       [
+        "_csvImportGate_hp7ar_25"
+       ]
+      ],
+      "classes": [
+       "_micro_qaod7_79",
+       "_text-disabled_12t49_1",
+       "_rowMarker_i14b5_66"
+      ],
+      "data": {},
+      "heading": "Always transparent",
+      "landmark": {
+       "name": "",
+       "role": "main"
+      },
+      "layer": "document",
+      "name": "",
+      "rect": [
+       257,
+       829,
+       11,
+       20
+      ],
+      "role": "",
+      "tag": "span",
+      "xpath": "/html/body/div[1]/main[1]/div[1]/div[1]/div[1]/div[4]/div[1]/div[1]/div[2]/div[1]/div[1]/div[2]/div[1]/div[2]/div[1]/div[1]/div[1]/div[1]/div[13]/div[2]/div[1]/div[1]/div[1]/span[1]"
+     },
+     "state": "books.to-review"
+    }
+   ],
+   "evidenceHash": "0408f00b3c564c956f4773a291c729f6f6f0edbbc8e855f5975c69d4669bf41d",
+   "facts": {
+    "bg": "#ffffff",
+    "criterion": "1.4.3",
+    "criterionName": "Contrast (Minimum)",
+    "element": "text in \"Add other bank or credit accounts\"",
+    "fg": "#9d9da8",
+    "ratio": "2.68",
+    "required": "4.5",
+    "rule": "color-contrast",
+    "screen": "Bills",
+    "screens": 7
+   },
+   "family": "contrast",
+   "guidance": "High under 2:1, or under 3:1 for essential text.",
+   "issueId": null,
+   "key": "contrast:color-contrast:f6d78a365843",
+   "measured": true,
+   "primary": "books.bills",
+   "proposals": [],
+   "rule": "color-contrast",
+   "screens": 7,
+   "severityDefault": "medium",
+   "source": "scanner",
+   "states": [
+    "books.bills",
+    "books.to-review"
+   ],
+   "summary": "axe color-contrast: #9d9da8 on #ffffff measures 2.68:1; AA needs 4.5:1.",
+   "title": "Low contrast: text in \"Add other bank or credit accounts\""
+  },
+  {
+   "attachments": [],
+   "attempt": 1,
+   "basis": "failure",
+   "criteria": [
+    "2.4.7"
+   ],
+   "evidence": [
+    {
+     "evidence": {
+      "diff": 0,
+      "floor": 16,
+      "focusVisible": true,
+      "previous": {
+       "ancestors": [
+        [
+         "_colorLayer_1d8xb_12",
+         "_hoverLayer_1d8xb_61"
+        ],
+        [
+         "_auxiliaryColumnCellContent_1d8xb_25",
+         "_outerBorderRight_1d8xb_45",
+         "_bottomRightRadius_1d8xb_49"
+        ],
+        [
+         "_colorLayer_1d8xb_12"
+        ],
+        [
+         "_auxiliaryColumnCell_1d8xb_4"
+        ],
+        [
+         "_gridRow_1ixju_1"
+        ],
+        [
+         "_virtualizerContainer_7rfk9_25"
+        ],
+        [
+         "_grid_7rfk9_1"
+        ],
+        [
+         "_csvImportGate_hp7ar_25"
+        ]
+       ],
+       "classes": [
+        "_tooltipAnchor_18bac_4",
+        "_iconTooltipAnchor_1d8xb_131"
+       ],
+       "data": {
+        "data-focus-visible": "true"
+       },
+       "heading": "Add other bank or credit accounts",
+       "landmark": {
+        "name": "",
+        "role": "main"
+       },
+       "layer": "document",
+       "name": "",
+       "rect": [
+        1386,
+        495,
+        29,
+        34
+       ],
+       "role": "generic",
+       "tag": "div",
+       "xpath": "/html/body/div[1]/main[1]/div[1]/div[1]/div[1]/div[4]/div[1]/div[1]/div[2]/div[1]/div[1]/div[2]/div[1]/div[1]/div[1]/div[1]/div[11]/div[10]/div[1]/div[1]/div[1]/div[1]"
+      },
+      "stop": 57,
+      "stops": 59,
+      "style": [
+       "box-shadow",
+       "outline"
+      ]
+     },
+     "occurrence": {
+      "ancestors": [
+       [
+        "_tooltipAnchor_18bac_4",
+        "_iconTooltipAnchor_1d8xb_131"
+       ],
+       [
+        "_colorLayer_1d8xb_12",
+        "_hoverLayer_1d8xb_61"
+       ],
+       [
+        "_auxiliaryColumnCellContent_1d8xb_25",
+        "_outerBorderRight_1d8xb_45",
+        "_bottomRightRadius_1d8xb_49"
+       ],
+       [
+        "_colorLayer_1d8xb_12"
+       ],
+       [
+        "_auxiliaryColumnCell_1d8xb_4"
+       ],
+       [
+        "_gridRow_1ixju_1"
+       ],
+       [
+        "_virtualizerContainer_7rfk9_25"
+       ],
+       [
+        "_grid_7rfk9_1"
+       ]
+      ],
+      "classes": [
+       "_actionButton_1d8xb_80"
+      ],
+      "data": {},
+      "heading": "Add other bank or credit accounts",
+      "landmark": {
+       "name": "",
+       "role": "main"
+      },
+      "layer": "document",
+      "name": "",
+      "rect": [
+       1386,
+       495,
+       29,
+       34
+      ],
+      "role": "button",
+      "tag": "button",
+      "xpath": "/html/body/div[1]/main[1]/div[1]/div[1]/div[1]/div[4]/div[1]/div[1]/div[2]/div[1]/div[1]/div[2]/div[1]/div[1]/div[1]/div[1]/div[11]/div[10]/div[1]/div[1]/div[1]/div[1]/button[1]"
+     },
+     "state": "books.bills"
+    },
+    {
+     "evidence": {
+      "diff": 0,
+      "floor": 16,
+      "focusVisible": true,
+      "previous": {
+       "ancestors": [
+        [
+         "_colorLayer_1d8xb_12",
+         "_hoverLayer_1d8xb_61"
+        ],
+        [
+         "_auxiliaryColumnCellContent_1d8xb_25",
+         "_outerBorderRight_1d8xb_45"
+        ],
+        [
+         "_colorLayer_1d8xb_12"
+        ],
+        [
+         "_auxiliaryColumnCell_1d8xb_4"
+        ],
+        [
+         "_gridRow_1ixju_1",
+         "_animateIn_1ixju_12"
+        ],
+        [
+         "_virtualizerContainer_7rfk9_25"
+        ],
+        [
+         "_grid_7rfk9_1"
+        ],
+        [
+         "_csvImportGate_hp7ar_25"
+        ]
+       ],
+       "classes": [
+        "_tooltipAnchor_18bac_4",
+        "_iconTooltipAnchor_1d8xb_131"
+       ],
+       "data": {
+        "data-focus-visible": "true"
+       },
+       "heading": "Add other bank or credit accounts",
+       "landmark": {
+        "name": "",
+        "role": "main"
+       },
+       "layer": "document",
+       "name": "",
+       "rect": [
+        1386,
+        243,
+        29,
+        34
+       ],
+       "role": "generic",
+       "tag": "div",
+       "xpath": "/html/body/div[1]/main[1]/div[1]/div[1]/div[1]/div[4]/div[1]/div[1]/div[2]/div[1]/div[1]/div[1]/div[1]/div[1]/div[14]/div[10]/div[1]/div[1]/div[1]/div[1]"
+      },
+      "stop": 48,
+      "stops": 221,
+      "style": [
+       "box-shadow",
+       "outline"
+      ]
+     },
+     "occurrence": {
+      "ancestors": [
+       [
+        "_tooltipAnchor_18bac_4",
+        "_iconTooltipAnchor_1d8xb_131"
+       ],
+       [
+        "_colorLayer_1d8xb_12",
+        "_hoverLayer_1d8xb_61"
+       ],
+       [
+        "_auxiliaryColumnCellContent_1d8xb_25",
+        "_outerBorderRight_1d8xb_45"
+       ],
+       [
+        "_colorLayer_1d8xb_12"
+       ],
+       [
+        "_auxiliaryColumnCell_1d8xb_4"
+       ],
+       [
+        "_gridRow_1ixju_1",
+        "_animateIn_1ixju_12"
+       ],
+       [
+        "_virtualizerContainer_7rfk9_25"
+       ],
+       [
+        "_grid_7rfk9_1"
+       ]
+      ],
+      "classes": [
+       "_actionButton_1d8xb_80"
+      ],
+      "data": {},
+      "heading": "Add other bank or credit accounts",
+      "landmark": {
+       "name": "",
+       "role": "main"
+      },
+      "layer": "document",
+      "name": "",
+      "rect": [
+       1386,
+       243,
+       29,
+       34
+      ],
+      "role": "button",
+      "tag": "button",
+      "xpath": "/html/body/div[1]/main[1]/div[1]/div[1]/div[1]/div[4]/div[1]/div[1]/div[2]/div[1]/div[1]/div[1]/div[1]/div[1]/div[14]/div[10]/div[1]/div[1]/div[1]/div[1]/button[1]"
+     },
+     "state": "books.general-ledger"
+    }
+   ],
+   "evidenceHash": "e6853e9e4ba8a402930404acd29e595c09d592e5fb39cac4e27f2c6c2e779fef",
+   "facts": {
+    "criterion": "2.4.7",
+    "criterionName": "Focus Visible",
+    "element": "button in \"Add other bank or credit accounts\"",
+    "screen": "Bills",
+    "screens": 6,
+    "stop": "57"
+   },
+   "family": "focus-visible",
+   "guidance": "High on shared components on primary paths.",
+   "issueId": null,
+   "key": "focus-visible:focus-not-visible:f83cd0c5efb8",
+   "measured": true,
+   "primary": "books.bills",
+   "proposals": [],
+   "rule": "focus-not-visible",
+   "screens": 6,
+   "severityDefault": "medium",
+   "source": "scanner",
+   "states": [
+    "books.bills",
+    "books.general-ledger"
+   ],
+   "summary": "Tab stop 57: focusing the button in \"Add other bank or credit accounts\" changed no pixels within 8 px of it.",
+   "title": "No visible focus: button in \"Add other bank or credit accounts\""
+  },
+  {
+   "attachments": [],
+   "attempt": 1,
+   "basis": "candidate",
+   "criteria": [
+    "2.1.1"
+   ],
+   "evidence": [
+    {
+     "evidence": {
+      "end": "body",
+      "focusable": false,
+      "source": "pointer",
+      "stops": 59
+     },
+     "occurrence": {
+      "ancestors": [
+       [
+        "_markerCellContent_i14b5_23",
+        "_outerBorder_i14b5_44",
+        "_bottomLeftRadius_i14b5_48",
+        "_markersOnly_i14b5_61"
+       ],
+       [
+        "_colorLayer_i14b5_10"
+       ],
+       [
+        "_gridMarkerCell_i14b5_3"
+       ],
+       [
+        "_gridRow_1ixju_1",
+        "_animateIn_1ixju_12"
+       ],
+       [
+        "_virtualizerContainer_7rfk9_25"
+       ],
+       [
+        "_grid_7rfk9_1"
+       ],
+       [
+        "_csvImportGate_hp7ar_25"
+       ],
+       [
+        "_gridContainer_hp7ar_3"
+       ]
+      ],
+      "classes": [
+       "_colorLayer_i14b5_10",
+       "_hoverLayer_i14b5_93"
+      ],
+      "data": {},
+      "heading": "Add other bank or credit accounts",
+      "landmark": {
+       "name": "",
+       "role": "main"
+      },
+      "layer": "document",
+      "name": "",
+      "rect": [
+       245,
+       495,
+       34,
+       34
+      ],
+      "role": "",
+      "tag": "div",
+      "xpath": "/html/body/div[1]/main[1]/div[1]/div[1]/div[1]/div[4]/div[1]/div[1]/div[2]/div[1]/div[1]/div[2]/div[1]/div[1]/div[1]/div[1]/div[21]/div[2]/div[1]/div[1]/div[1]"
+     },
+     "state": "books.bills"
+    },
+    {
+     "evidence": {
+      "end": "body",
+      "focusable": false,
+      "source": "pointer",
+      "stops": 45
+     },
+     "occurrence": {
+      "ancestors": [
+       [
+        "_markerCellContent_i14b5_23",
+        "_outerBorder_i14b5_44",
+        "_bottomLeftRadius_i14b5_48",
+        "_markersOnly_i14b5_61"
+       ],
+       [
+        "_colorLayer_i14b5_10"
+       ],
+       [
+        "_gridMarkerCell_i14b5_3"
+       ],
+       [
+        "_gridRow_1ixju_1",
+        "_animateIn_1ixju_12"
+       ],
+       [
+        "_virtualizerContainer_7rfk9_25"
+       ],
+       [
+        "_grid_7rfk9_1"
+       ],
+       [
+        "_csvImportGate_hp7ar_25"
+       ],
+       [
+        "_gridContainer_hp7ar_3"
+       ]
+      ],
+      "classes": [
+       "_colorLayer_i14b5_10",
+       "_hoverLayer_i14b5_93"
+      ],
+      "data": {},
+      "heading": "Add other bank or credit accounts",
+      "landmark": {
+       "name": "",
+       "role": "main"
+      },
+      "layer": "document",
+      "name": "",
+      "rect": [
+       245,
+       315,
+       34,
+       34
+      ],
+      "role": "",
+      "tag": "div",
+      "xpath": "/html/body/div[1]/main[1]/div[1]/div[1]/div[1]/div[4]/div[1]/div[1]/div[2]/div[1]/div[1]/div[2]/div[1]/div[1]/div[1]/div[1]/div[6]/div[2]/div[1]/div[1]/div[1]"
+     },
+     "state": "books.vendors"
+    }
+   ],
+   "evidenceHash": "a39c0e61b56363931f9da7252eb4c9eea024e119719fa06d341df34a61512761",
+   "facts": {
+    "axeSummary": "",
+    "criterion": "2.1.1",
+    "criterionName": "Keyboard",
+    "element": "text in \"Add other bank or credit accounts\"",
+    "rule": "not-reached",
+    "screen": "Bills",
+    "stops": "59"
+   },
+   "family": "keyboard",
+   "guidance": "High if a task cannot be completed without a mouse.",
+   "issueId": null,
+   "key": "keyboard:not-reached:13f49d79a3ad",
+   "measured": false,
+   "primary": "books.bills",
+   "proposals": [],
+   "rule": "not-reached",
+   "screens": 2,
+   "severityDefault": "medium",
+   "source": "scanner",
+   "states": [
+    "books.bills",
+    "books.vendors"
+   ],
+   "summary": "The Tab walk visited 59 stops and never reached the text in \"Add other bank or credit accounts\", which responds to a click.",
+   "title": "Not reachable by keyboard: text in \"Add other bank or credit accounts\""
+  },
+  {
+   "attachments": [],
+   "attempt": 1,
+   "basis": "candidate",
+   "criteria": [
+    "2.1.1"
+   ],
+   "evidence": [
+    {
+     "evidence": {
+      "end": "body",
+      "focusable": true,
+      "source": "ax",
+      "stops": 59
+     },
+     "occurrence": {
+      "ancestors": [
+       [
+        "_tooltipAnchor_18bac_4",
+        "_iconTooltipAnchor_1d8xb_131"
+       ],
+       [
+        "_colorLayer_1d8xb_12",
+        "_hoverLayer_1d8xb_61"
+       ],
+       [
+        "_auxiliaryColumnCellContent_1d8xb_25",
+        "_outerBorderRight_1d8xb_45",
+        "_bottomRightRadius_1d8xb_49"
+       ],
+       [
+        "_colorLayer_1d8xb_12"
+       ],
+       [
+        "_auxiliaryColumnCell_1d8xb_4"
+       ],
+       [
+        "_gridRow_1ixju_1",
+        "_animateIn_1ixju_12"
+       ],
+       [
+        "_virtualizerContainer_7rfk9_25"
+       ],
+       [
+        "_grid_7rfk9_1"
+       ]
+      ],
+      "classes": [
+       "_actionButton_1d8xb_80"
+      ],
+      "data": {},
+      "heading": "Add other bank or credit accounts",
+      "landmark": {
+       "name": "",
+       "role": "main"
+      },
+      "layer": "document",
+      "name": "",
+      "rect": [
+       1386,
+       495,
+       29,
+       34
+      ],
+      "role": "button",
+      "tag": "button",
+      "xpath": "/html/body/div[1]/main[1]/div[1]/div[1]/div[1]/div[4]/div[1]/div[1]/div[2]/div[1]/div[1]/div[2]/div[1]/div[1]/div[1]/div[1]/div[21]/div[10]/div[1]/div[1]/div[1]/div[1]/button[1]"
+     },
+     "state": "books.bills"
+    },
+    {
+     "evidence": {
+      "end": "body",
+      "focusable": true,
+      "source": "ax",
+      "stops": 156
+     },
+     "occurrence": {
+      "ancestors": [
+       [
+        "_tooltipAnchor_18bac_4",
+        "_iconTooltipAnchor_1d8xb_131"
+       ],
+       [
+        "_colorLayer_1d8xb_12",
+        "_hoverLayer_1d8xb_61"
+       ],
+       [
+        "_auxiliaryColumnCellContent_1d8xb_25",
+        "_outerBorderRight_1d8xb_45"
+       ],
+       [
+        "_colorLayer_1d8xb_12"
+       ],
+       [
+        "_auxiliaryColumnCell_1d8xb_4"
+       ],
+       [
+        "_gridRow_1ixju_1",
+        "_animateIn_1ixju_12"
+       ],
+       [
+        "_virtualizerContainer_7rfk9_25"
+       ],
+       [
+        "_grid_7rfk9_1"
+       ]
+      ],
+      "classes": [
+       "_actionButton_1d8xb_80"
+      ],
+      "data": {},
+      "heading": "Add other bank or credit accounts",
+      "landmark": {
+       "name": "",
+       "role": "main"
+      },
+      "layer": "document",
+      "name": "",
+      "rect": [
+       1386,
+       1256,
+       29,
+       34
+      ],
+      "role": "button",
+      "tag": "button",
+      "xpath": "/html/body/div[1]/main[1]/div[1]/div[1]/div[1]/div[4]/div[1]/div[1]/div[2]/div[1]/div[1]/div[2]/div[1]/div[1]/div[1]/div[1]/div[36]/div[8]/div[1]/div[1]/div[1]/div[1]/button[1]"
+     },
+     "state": "books.reconciliation"
+    }
+   ],
+   "evidenceHash": "54e5cf02a252068c1e3aab1f345a714ad43194e264a52f38a5402064f2dd3335",
+   "facts": {
+    "axeSummary": "",
+    "criterion": "2.1.1",
+    "criterionName": "Keyboard",
+    "element": "button in \"Add other bank or credit accounts\"",
+    "rule": "not-reached",
+    "screen": "Bills",
+    "stops": "59"
+   },
+   "family": "keyboard",
+   "guidance": "High if a task cannot be completed without a mouse.",
+   "issueId": null,
+   "key": "keyboard:not-reached:1f7d4446f426",
+   "measured": false,
+   "primary": "books.bills",
+   "proposals": [],
+   "rule": "not-reached",
+   "screens": 2,
+   "severityDefault": "medium",
+   "source": "scanner",
+   "states": [
+    "books.bills",
+    "books.reconciliation"
+   ],
+   "summary": "The Tab walk visited 59 stops and never reached the button in \"Add other bank or credit accounts\", which responds to a click.",
+   "title": "Not reachable by keyboard: button in \"Add other bank or credit accounts\""
+  },
+  {
+   "attachments": [],
+   "attempt": 1,
+   "basis": "candidate",
+   "criteria": [
+    "2.1.1"
+   ],
+   "evidence": [
+    {
+     "evidence": {
+      "end": "body",
+      "focusable": false,
+      "source": "pointer",
+      "stops": 59
+     },
+     "occurrence": {
+      "ancestors": [
+       [
+        "_markerCellContent_i14b5_23",
+        "_outerBorder_i14b5_44",
+        "_bottomLeftRadius_i14b5_48",
+        "_markersOnly_i14b5_61"
+       ],
+       [
+        "_colorLayer_i14b5_10"
+       ],
+       [
+        "_gridMarkerCell_i14b5_3"
+       ],
+       [
+        "_gridUtilityRow_7qmwc_1",
+        "_animateOut_7qmwc_14"
+       ],
+       [
+        "_virtualizerContainer_7rfk9_25"
+       ],
+       [
+        "_grid_7rfk9_1"
+       ],
+       [
+        "_csvImportGate_hp7ar_25"
+       ],
+       [
+        "_gridContainer_hp7ar_3"
+       ]
+      ],
+      "classes": [
+       "_colorLayer_i14b5_10",
+       "_hoverLayer_i14b5_93"
+      ],
+      "data": {},
+      "heading": "Add other bank or credit accounts",
+      "landmark": {
+       "name": "",
+       "role": "main"
+      },
+      "layer": "document",
+      "name": "",
+      "rect": [
+       245,
+       567,
+       34,
+       34
+      ],
+      "role": "",
+      "tag": "div",
+      "xpath": "/html/body/div[1]/main[1]/div[1]/div[1]/div[1]/div[4]/div[1]/div[1]/div[2]/div[1]/div[1]/div[2]/div[1]/div[1]/div[1]/div[1]/div[13]/div[2]/div[1]/div[1]/div[1]"
+     },
+     "state": "books.bills"
+    }
+   ],
+   "evidenceHash": "58e184dcdb703889cbc7fbe94fa7c5b47f93c46cb001fa366803deef2b1959f7",
+   "facts": {
+    "axeSummary": "",
+    "criterion": "2.1.1",
+    "criterionName": "Keyboard",
+    "element": "text in \"Add other bank or credit accounts\"",
+    "rule": "not-reached",
+    "screen": "Bills",
+    "stops": "59"
+   },
+   "family": "keyboard",
+   "guidance": "High if a task cannot be completed without a mouse.",
+   "issueId": null,
+   "key": "keyboard:not-reached:a3a4a163fef4",
+   "measured": false,
+   "primary": "books.bills",
+   "proposals": [],
+   "rule": "not-reached",
+   "screens": 1,
+   "severityDefault": "medium",
+   "source": "scanner",
+   "states": [
+    "books.bills"
+   ],
+   "summary": "The Tab walk visited 59 stops and never reached the text in \"Add other bank or credit accounts\", which responds to a click.",
+   "title": "Not reachable by keyboard: text in \"Add other bank or credit accounts\""
+  },
+  {
+   "attachments": [],
+   "attempt": 1,
+   "basis": "violation",
+   "criteria": [
+    "4.1.2"
+   ],
+   "evidence": [
+    {
+     "evidence": {
+      "failureSummary": "Fix any of the following:\n  Element does not have inner text that is visible to screen readers\n  aria-label attribute does not exist or is empty\n  aria-labelledby attribute does not exist, references elements that do not exist or references elements that are empty\n  Element has no title attribute\n  Element does not have an implicit (wrapped) <label>\n  Element does not have an explicit <label>\n  Element's default semantics were not overridden with role=\"none\" or role=\"presentation\"",
+      "messageKey": "noAttr"
+     },
+     "occurrence": {
+      "ancestors": [
+       [
+        "_titleCellContent_1quew_12",
+        "_hasRightAction_1quew_68",
+        "_innerColumn_1quew_63"
+       ],
+       [
+        "_tooltipAnchor_18bac_4",
+        "_tooltipAnchor_1quew_30"
+       ],
+       [
+        "_gridTitleCell_1quew_4"
+       ],
+       [
+        "_gridTitleRow_1dzfu_3"
+       ],
+       [
+        "_stickyHeader_7rfk9_50"
+       ],
+       [
+        "_virtualizerContainer_7rfk9_25"
+       ],
+       [
+        "_grid_7rfk9_1"
+       ],
+       [
+        "_csvImportGate_hp7ar_25"
+       ]
+      ],
+      "classes": [
+       "_sortButton_1quew_104"
+      ],
+      "data": {},
+      "heading": "Add other bank or credit accounts",
+      "landmark": {
+       "name": "",
+       "role": "main"
+      },
+      "layer": "document",
+      "name": "",
+      "rect": [
+       1087,
+       214,
+       20,
+       20
+      ],
+      "role": "button",
+      "tag": "button",
+      "xpath": "/html/body/div[1]/main[1]/div[1]/div[1]/div[1]/div[4]/div[1]/div[1]/div[2]/div[1]/div[1]/div[2]/div[1]/div[1]/div[1]/div[1]/div[2]/div[2]/div[7]/div[1]/div[1]/button[1]"
+     },
+     "state": "books.bills"
+    },
+    {
+     "evidence": {
+      "failureSummary": "Fix any of the following:\n  Element does not have inner text that is visible to screen readers\n  aria-label attribute does not exist or is empty\n  aria-labelledby attribute does not exist, references elements that do not exist or references elements that are empty\n  Element has no title attribute\n  Element does not have an implicit (wrapped) <label>\n  Element does not have an explicit <label>\n  Element's default semantics were not overridden with role=\"none\" or role=\"presentation\"",
+      "messageKey": "noAttr"
+     },
+     "occurrence": {
+      "ancestors": [
+       [
+        "_titleCellContent_1quew_12",
+        "_hasRightAction_1quew_68",
+        "_innerColumn_1quew_63",
+        "_outerBorderRight_1quew_64"
+       ],
+       [
+        "_tooltipAnchor_18bac_4",
+        "_tooltipAnchor_1quew_30"
+       ],
+       [
+        "_gridTitleCell_1quew_4",
+        "_topRightRadius_1quew_17"
+       ],
+       [
+        "_gridTitleRow_1dzfu_3"
+       ],
+       [
+        "_stickyHeader_7rfk9_50"
+       ],
+       [
+        "_virtualizerContainer_7rfk9_25"
+       ],
+       [
+        "_grid_7rfk9_1"
+       ],
+       [
+        "_csvImportGate_hp7ar_25"
+       ]
+      ],
+      "classes": [
+       "_sortButton_1quew_104"
+      ],
+      "data": {},
+      "heading": "Default (Recommended) chart of accounts",
+      "landmark": {
+       "name": "Default (Recommended) chart of accounts",
+       "role": "dialog"
+      },
+      "layer": "top",
+      "name": "",
+      "rect": [
+       1179,
+       190,
+       20,
+       20
+      ],
+      "role": "button",
+      "tag": "button",
+      "xpath": "/html/body/div[7]/div[1]/div[1]/div[1]/div[3]/div[1]/div[1]/div[1]/div[1]/div[2]/div[7]/div[1]/div[1]/button[1]"
+     },
+     "state": "books.coa-preview"
+    }
+   ],
+   "evidenceHash": "761fabbce6a5b2c3d888aa4108275f04aa6b82074310e533fff9d4bfe3406808",
+   "facts": {
+    "announced": "button \"\"",
+    "axeSummary": "Element does not have inner text that is visible to screen readers; aria-label attribute does not exist or is empty; aria-labelledby attribute does not exist,…",
+    "criterion": "4.1.2",
+    "criterionName": "Name, Role, Value",
+    "element": "button in \"Add other bank or credit accounts\"",
+    "rule": "button-name",
+    "screen": "Bills"
+   },
+   "family": "name",
+   "guidance": "High for an unnamed form control or the sole primary action.",
+   "issueId": null,
+   "key": "name:button-name:9274c57cd9e7",
+   "measured": false,
+   "primary": "books.bills",
+   "proposals": [],
+   "rule": "button-name",
+   "screens": 9,
+   "severityDefault": "medium",
+   "source": "scanner",
+   "states": [
+    "books.bills",
+    "books.coa-preview"
+   ],
+   "summary": "button-name: announced as button \"\". Element does not have inner text that is visible to screen readers; aria-label attribute does not exist or is empty; aria-labelledby attribute does not exist,…",
+   "title": "Missing or unclear name: button in \"Add other bank or credit accounts\""
+  },
+  {
+   "attachments": [],
+   "attempt": 1,
+   "basis": "violation",
+   "criteria": [
+    "4.1.2"
+   ],
+   "evidence": [
+    {
+     "evidence": {
+      "failureSummary": "Fix any of the following:\n  Element does not have inner text that is visible to screen readers\n  aria-label attribute does not exist or is empty\n  aria-labelledby attribute does not exist, references elements that do not exist or references elements that are empty\n  Element has no title attribute\n  Element does not have an implicit (wrapped) <label>\n  Element does not have an explicit <label>\n  Element's default semantics were not overridden with role=\"none\" or role=\"presentation\"",
+      "messageKey": "noAttr"
+     },
+     "occurrence": {
+      "ancestors": [
+       [
+        "_tooltipAnchor_18bac_4",
+        "_iconTooltipAnchor_1d8xb_131"
+       ],
+       [
+        "_colorLayer_1d8xb_12",
+        "_hoverLayer_1d8xb_61"
+       ],
+       [
+        "_auxiliaryColumnCellContent_1d8xb_25",
+        "_outerBorderRight_1d8xb_45",
+        "_bottomRightRadius_1d8xb_49"
+       ],
+       [
+        "_colorLayer_1d8xb_12"
+       ],
+       [
+        "_auxiliaryColumnCell_1d8xb_4"
+       ],
+       [
+        "_gridRow_1ixju_1",
+        "_animateIn_1ixju_12"
+       ],
+       [
+        "_virtualizerContainer_7rfk9_25"
+       ],
+       [
+        "_grid_7rfk9_1"
+       ]
+      ],
+      "classes": [
+       "_actionButton_1d8xb_80"
+      ],
+      "data": {},
+      "heading": "Add other bank or credit accounts",
+      "landmark": {
+       "name": "",
+       "role": "main"
+      },
+      "layer": "document",
+      "name": "",
+      "rect": [
+       1386,
+       495,
+       29,
+       34
+      ],
+      "role": "button",
+      "tag": "button",
+      "xpath": "/html/body/div[1]/main[1]/div[1]/div[1]/div[1]/div[4]/div[1]/div[1]/div[2]/div[1]/div[1]/div[2]/div[1]/div[1]/div[1]/div[1]/div[21]/div[10]/div[1]/div[1]/div[1]/div[1]/button[1]"
+     },
+     "state": "books.bills"
+    },
+    {
+     "evidence": {
+      "failureSummary": "Fix any of the following:\n  Element does not have inner text that is visible to screen readers\n  aria-label attribute does not exist or is empty\n  aria-labelledby attribute does not exist, references elements that do not exist or references elements that are empty\n  Element has no title attribute\n  Element does not have an implicit (wrapped) <label>\n  Element does not have an explicit <label>\n  Element's default semantics were not overridden with role=\"none\" or role=\"presentation\"",
+      "messageKey": "noAttr"
+     },
+     "occurrence": {
+      "ancestors": [
+       [
+        "_tooltipAnchor_18bac_4",
+        "_iconTooltipAnchor_1d8xb_131"
+       ],
+       [
+        "_colorLayer_1d8xb_12",
+        "_hoverLayer_1d8xb_61"
+       ],
+       [
+        "_auxiliaryColumnCellContent_1d8xb_25",
+        "_outerBorderRight_1d8xb_45"
+       ],
+       [
+        "_colorLayer_1d8xb_12"
+       ],
+       [
+        "_auxiliaryColumnCell_1d8xb_4"
+       ],
+       [
+        "_gridRow_1ixju_1"
+       ],
+       [
+        "_virtualizerContainer_7rfk9_25"
+       ],
+       [
+        "_grid_7rfk9_1"
+       ]
+      ],
+      "classes": [
+       "_actionButton_1d8xb_80"
+      ],
+      "data": {},
+      "heading": "Always transparent",
+      "landmark": {
+       "name": "",
+       "role": "main"
+      },
+      "layer": "document",
+      "name": "",
+      "rect": [
+       1386,
+       1002,
+       29,
+       34
+      ],
+      "role": "button",
+      "tag": "button",
+      "xpath": "/html/body/div[1]/main[1]/div[1]/div[1]/div[1]/div[4]/div[1]/div[1]/div[2]/div[1]/div[1]/div[2]/div[1]/div[2]/div[1]/div[1]/div[1]/div[1]/div[18]/div[9]/div[1]/div[1]/div[1]/div[1]/button[1]"
+     },
+     "state": "books.to-review"
+    }
+   ],
+   "evidenceHash": "6151d39fb0c82a1ea36f235ed277bf424e66008a478c836ab6e3083056d38057",
+   "facts": {
+    "announced": "button \"\"",
+    "axeSummary": "Element does not have inner text that is visible to screen readers; aria-label attribute does not exist or is empty; aria-labelledby attribute does not exist,…",
+    "criterion": "4.1.2",
+    "criterionName": "Name, Role, Value",
+    "element": "button in \"Add other bank or credit accounts\"",
+    "rule": "button-name",
+    "screen": "Bills"
+   },
+   "family": "name",
+   "guidance": "High for an unnamed form control or the sole primary action.",
+   "issueId": null,
+   "key": "name:button-name:d7c20943950f",
+   "measured": false,
+   "primary": "books.bills",
+   "proposals": [],
+   "rule": "button-name",
+   "screens": 7,
+   "severityDefault": "medium",
+   "source": "scanner",
+   "states": [
+    "books.bills",
+    "books.to-review"
+   ],
+   "summary": "button-name: announced as button \"\". Element does not have inner text that is visible to screen readers; aria-label attribute does not exist or is empty; aria-labelledby attribute does not exist,…",
+   "title": "Missing or unclear name: button in \"Add other bank or credit accounts\""
+  }
+ ],
+ "primaries": [
+  "books.bills"
+ ],
+ "reach": {
+  "baseUrl": "https://demo.mercury.com",
+  "data": "data",
+  "map": "build/map.json",
+  "run": "2026-10-03-1525",
+  "workspace": "a11y"
+ },
+ "run": "2026-10-03-1525"
+}

@@ -1,0 +1,226 @@
+{
+ "batch": "record-014",
+ "reach": {
+  "baseUrl": "https://demo.mercury.com",
+  "data": "data",
+  "map": "build/map.json",
+  "run": "2026-10-02-1349",
+  "workspace": "a11y"
+ },
+ "run": "2026-10-02-1349",
+ "states": [
+  {
+   "area": "home",
+   "draft": "nothing on home.index matches {\"click\":{\"name\":\"'Customize your experience' in banner\"}}",
+   "image": "screens/home/10-customize-demo-modal.png",
+   "kind": "modal",
+   "labels": [
+    "Click 'Customize your experience' in banner"
+   ],
+   "mutates": false,
+   "note": "Banner link opens a lead form (name, email, company, industry, balance, email opt-in) to get a customized demo link.",
+   "parent": "home.index",
+   "state": "home.customize-demo-modal",
+   "title": "Customize the Mercury demo modal"
+  },
+  {
+   "area": "home",
+   "draft": "not drafted: its parent had no accepted recipe when the drafter ran",
+   "image": "screens/home/76-customize-demo-industry-menu.png",
+   "kind": "form-state",
+   "labels": [
+    "Click 'Customize your experience' in banner",
+    "Open Industry dropdown"
+   ],
+   "mutates": false,
+   "note": "Industry combobox open with Startup, Ecommerce, Crypto, Consulting, Investing.",
+   "parent": "home.customize-demo-modal",
+   "state": "home.customize-demo-industry",
+   "title": "Customize demo \u2014 Industry menu"
+  },
+  {
+   "area": "home",
+   "draft": "not drafted: its parent had no accepted recipe when the drafter ran",
+   "image": "screens/home/77-customize-demo-filled.png",
+   "kind": "form-state",
+   "labels": [
+    "Click 'Customize your experience' in banner",
+    "Open Industry dropdown",
+    "Pick 'Startup' and enter balance"
+   ],
+   "mutates": false,
+   "note": "All fields filled (Test Reviewer, example.com email, Acme Test Co, Startup, $250,000); Submit at full opacity.",
+   "parent": "home.customize-demo-industry",
+   "state": "home.customize-demo-filled",
+   "title": "Customize demo \u2014 filled"
+  },
+  {
+   "area": "home",
+   "draft": "not drafted: its parent had no accepted recipe when the drafter ran",
+   "image": "screens/home/78-customize-demo-submitted.png",
+   "kind": "confirmation",
+   "labels": [
+    "Click 'Customize your experience' in banner",
+    "Open Industry dropdown",
+    "Pick 'Startup' and enter balance",
+    "Click Submit"
+   ],
+   "mutates": true,
+   "note": "After Submit the modal closes and the demo re-renders as 'Acme Test Co' / 'Welcome, Test' with a $250,000.00 balance; the Try-out panel pops open.",
+   "parent": "home.customize-demo-filled",
+   "state": "home.customize-demo-success",
+   "title": "Customize demo \u2014 applied"
+  },
+  {
+   "area": "home",
+   "draft": "not drafted: its parent had no accepted recipe when the drafter ran",
+   "image": "screens/home/11-customize-demo-invalid.png",
+   "kind": "validation-error",
+   "labels": [
+    "Click 'Customize your experience' in banner",
+    "Enter invalid email, click Submit"
+   ],
+   "mutates": true,
+   "note": "Submitting with an invalid email shows 'Please complete this field' on every field and 'Please submit a valid email'.",
+   "parent": "home.customize-demo-modal",
+   "state": "home.customize-demo-invalid",
+   "title": "Customize demo: validation errors"
+  },
+  {
+   "area": "home",
+   "draft": "cannot parse \"Scroll to the Transactions widget\"",
+   "image": "screens/home/08-index-scrolled-bottom.png",
+   "kind": "page",
+   "labels": [
+    "Scroll to the Transactions widget"
+   ],
+   "mutates": false,
+   "note": "Transactions widget with Recent/My transactions/Monthly money in/Monthly money out/Operating expenses chips and a 10-row table.",
+   "parent": "home.index",
+   "state": "home.index-transactions",
+   "title": "Home: Transactions widget (Recent)"
+  },
+  {
+   "area": "home",
+   "draft": "not drafted: its parent had no accepted recipe when the drafter ran",
+   "image": "screens/home/09-index-tx-my-transactions.png",
+   "kind": "page",
+   "labels": [
+    "Scroll to the Transactions widget",
+    "Click 'My transactions' chip"
+   ],
+   "mutates": false,
+   "note": "Same widget filtered to My transactions (Jane B. cards).",
+   "parent": "home.index-transactions",
+   "state": "home.index-tx-my",
+   "title": "Home: Transactions widget (My transactions)"
+  },
+  {
+   "area": "home",
+   "draft": "not drafted: its parent had no accepted recipe when the drafter ran",
+   "image": "screens/home/59-tx-monthly-money-in.png",
+   "kind": "page",
+   "labels": [
+    "Scroll to the Transactions widget",
+    "Click 'Monthly money in'"
+   ],
+   "mutates": false,
+   "note": "Monthly money in chip lists only incoming card and payment credits (green amounts).",
+   "parent": "home.index-transactions",
+   "state": "home.tx-monthly-in",
+   "title": "Transactions \u2014 Monthly money in"
+  },
+  {
+   "area": "home",
+   "draft": "not drafted: its parent had no accepted recipe when the drafter ran",
+   "image": "screens/home/60-tx-monthly-money-out.png",
+   "kind": "page",
+   "labels": [
+    "Scroll to the Transactions widget",
+    "Click 'Monthly money out'"
+   ],
+   "mutates": false,
+   "note": "Monthly money out chip lists outgoing transactions for the month.",
+   "parent": "home.index-transactions",
+   "state": "home.tx-monthly-out",
+   "title": "Transactions \u2014 Monthly money out"
+  },
+  {
+   "area": "home",
+   "draft": "not drafted: its parent had no accepted recipe when the drafter ran",
+   "image": "screens/home/61-tx-operating-expenses.png",
+   "kind": "page",
+   "labels": [
+    "Scroll to the Transactions widget",
+    "Click 'Operating expenses'"
+   ],
+   "mutates": false,
+   "note": "Operating expenses chip lists card and ACH spend from Ops / Payroll.",
+   "parent": "home.index-transactions",
+   "state": "home.tx-operating-expenses",
+   "title": "Transactions \u2014 Operating expenses"
+  },
+  {
+   "area": "home",
+   "draft": "cannot parse \"Type a prompt\"",
+   "image": "screens/home/49-command-typed.png",
+   "kind": "form-state",
+   "labels": [
+    "Type a prompt"
+   ],
+   "mutates": false,
+   "note": "Prompt typed; send arrow enabled and input focused.",
+   "parent": "home.command",
+   "state": "home.command-typed",
+   "title": "Command: prompt typed"
+  },
+  {
+   "area": "home",
+   "draft": "not drafted: its parent had no accepted recipe when the drafter ran",
+   "image": "screens/home/50-command-thinking.png",
+   "kind": "form-state",
+   "labels": [
+    "Type a prompt",
+    "Press Enter"
+   ],
+   "mutates": false,
+   "note": "After Enter the view becomes a 'New conversation' thread; the user bubble is shown with a timestamp and the input reads 'Esc to cancel' with a stop button.",
+   "parent": "home.command-typed",
+   "state": "home.command-thinking",
+   "title": "Command: thinking"
+  },
+  {
+   "area": "home",
+   "draft": "not drafted: its parent had no accepted recipe when the drafter ran",
+   "image": "screens/home/51-command-response.png",
+   "kind": "confirmation",
+   "labels": [
+    "Type a prompt",
+    "Press Enter",
+    "Wait for answer"
+   ],
+   "mutates": false,
+   "note": "Mercury AI answers with a collapsible 'Thought process', two paragraphs and copy / like / dislike actions.",
+   "parent": "home.command-thinking",
+   "state": "home.command-response",
+   "title": "Command: text answer"
+  },
+  {
+   "area": "home",
+   "draft": "not drafted: its parent had no accepted recipe when the drafter ran",
+   "image": "screens/home/52-command-thought-process.png",
+   "kind": "form-state",
+   "labels": [
+    "Type a prompt",
+    "Press Enter",
+    "Wait for answer",
+    "Click 'Thought process'"
+   ],
+   "mutates": false,
+   "note": "Expanded 'Thought process' reveals the step 'Evaluating options 2s'.",
+   "parent": "home.command-response",
+   "state": "home.command-thought-process",
+   "title": "Command: thought process expanded"
+  }
+ ]
+}

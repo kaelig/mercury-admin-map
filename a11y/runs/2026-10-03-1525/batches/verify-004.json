@@ -1,0 +1,646 @@
+{
+ "area": "accounts",
+ "batch": "verify-004",
+ "findings": [
+  {
+   "attachments": [],
+   "attempt": 1,
+   "basis": "violation",
+   "criteria": [
+    "1.4.3"
+   ],
+   "evidence": [
+    {
+     "evidence": {
+      "bgColor": "#f1f1f4",
+      "contrastRatio": 4.32,
+      "expectedContrastRatio": "4.5:1",
+      "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 4.32 (foreground color: #70707d, background color: #f1f1f4, font size: 10.5pt (14px), font weight: normal). Expected contrast ratio of 4.5:1",
+      "fgColor": "#70707d",
+      "fontSize": "10.5pt (14px)",
+      "fontWeight": "normal",
+      "messageKey": null
+     },
+     "occurrence": {
+      "ancestors": [
+       [
+        "_paymentSectionRow_67bhq_6"
+       ],
+       [
+        "_paymentSection_67bhq_1",
+        "_oneTimePayment_67bhq_17"
+       ],
+       [
+        "_recurringPaymentSummary_rcara_176"
+       ],
+       [
+        "_container_rcara_12"
+       ],
+       [],
+       [],
+       [
+        "_large_kwlx6_9",
+        "_noHover_3n0se_28",
+        "_shadow_3n0se_25",
+        "_raisedBackground_3n0se_45",
+        "_card_lo4oy_4",
+        "_modal_rcara_3",
+        "_small_lo4oy_11"
+       ],
+       [
+        "ReactModal__Content",
+        "ReactModal__Content--after-open",
+        "_modal_lo4oy_73"
+       ]
+      ],
+      "classes": [
+       "_bodySecondary_qaod7_51",
+       "_text-tertiary_12t49_1",
+       "_daysUntil_67bhq_20"
+      ],
+      "data": {},
+      "heading": "",
+      "landmark": {
+       "name": "",
+       "role": "form"
+      },
+      "layer": "top",
+      "name": "",
+      "rect": [
+       806,
+       448,
+       74,
+       19
+      ],
+      "role": "",
+      "tag": "span",
+      "xpath": "/html/body/div[11]/div[1]/div[1]/div[1]/form[1]/div[1]/div[2]/div[3]/div[1]/div[1]/span[1]"
+     },
+     "state": "accounts.autopay-rule-edit"
+    }
+   ],
+   "evidenceHash": "65a2cb3af35159a54ebcd9fed8bff52f3488165db0ae8dc85aa55476a2119710",
+   "facts": {
+    "bg": "#f1f1f4",
+    "criterion": "1.4.3",
+    "criterionName": "Contrast (Minimum)",
+    "element": "text in the form landmark",
+    "fg": "#70707d",
+    "ratio": "4.32",
+    "required": "4.5",
+    "rule": "color-contrast",
+    "screen": "Edit recurring autopay",
+    "screens": 1
+   },
+   "family": "contrast",
+   "guidance": "High under 2:1, or under 3:1 for essential text.",
+   "issueId": null,
+   "key": "contrast:color-contrast:6084f32de2ef",
+   "measured": true,
+   "primary": "accounts.autopay-rule-edit",
+   "proposals": [],
+   "rule": "color-contrast",
+   "screens": 1,
+   "severityDefault": "medium",
+   "source": "scanner",
+   "states": [
+    "accounts.autopay-rule-edit"
+   ],
+   "summary": "axe color-contrast: #70707d on #f1f1f4 measures 4.32:1; AA needs 4.5:1.",
+   "title": "Low contrast: text in the form landmark"
+  },
+  {
+   "attachments": [],
+   "attempt": 1,
+   "basis": "failure",
+   "criteria": [
+    "2.1.1"
+   ],
+   "evidence": [
+    {
+     "evidence": {
+      "focus": {
+       "ancestors": [
+        [
+         "_buttonContainer_rcara_16",
+         "_buttonContainerFoyer_rcara_25"
+        ],
+        [],
+        [],
+        [
+         "_large_kwlx6_9",
+         "_noHover_3n0se_28",
+         "_shadow_3n0se_25",
+         "_raisedBackground_3n0se_45",
+         "_card_lo4oy_4",
+         "_modal_rcara_3",
+         "_small_lo4oy_11"
+        ],
+        [
+         "ReactModal__Content",
+         "ReactModal__Content--after-open",
+         "_modal_lo4oy_73"
+        ],
+        [
+         "ReactModal__Overlay",
+         "ReactModal__Overlay--after-open",
+         "_overlay_lo4oy_89",
+         "_backgroundColor_lo4oy_103"
+        ],
+        [
+         "ReactModalPortal"
+        ]
+       ],
+       "classes": [
+        "_button_r6b2u_20",
+        "_large_r6b2u_88",
+        "_primary_r6b2u_104"
+       ],
+       "data": {},
+       "heading": "Autopay settings",
+       "landmark": {
+        "name": "",
+        "role": "form"
+       },
+       "layer": "document",
+       "name": "Done",
+       "rect": [
+        791,
+        642,
+        101,
+        40
+       ],
+       "role": "button",
+       "tag": "button",
+       "xpath": "/html/body/div[11]/div[1]/div[1]/div[1]/form[1]/div[1]/div[3]/button[1]"
+      },
+      "stops": 1,
+      "trace": [
+       {
+        "focus": {
+         "label": "Autopay settings Keep your credit active by setting autopay rules that are trigg",
+         "tag": "div",
+         "xpath": "/html/body/div[11]/div[1]/div[1]"
+        },
+        "key": "start",
+        "where": "trigger"
+       },
+       {
+        "focus": {
+         "label": "Done",
+         "tag": "button",
+         "xpath": "/html/body/div[11]/div[1]/div[1]/div[1]/form[1]/div[1]/div[3]/button[1]"
+        },
+        "key": "Tab",
+        "where": "outside"
+       },
+       {
+        "focus": {
+         "label": "Done",
+         "tag": "button",
+         "xpath": "/html/body/div[11]/div[1]/div[1]/div[1]/form[1]/div[1]/div[3]/button[1]"
+        },
+        "key": "Tab",
+        "where": "outside"
+       }
+      ]
+     },
+     "occurrence": {
+      "ancestors": [
+       [
+        "_autopayTypeAction_rcara_169"
+       ],
+       [
+        "_autopayType_rcara_55",
+        "_clickable_rcara_143"
+       ],
+       [
+        "_autopayTypeWrapper_rcara_55"
+       ],
+       [],
+       [],
+       [
+        "_large_kwlx6_9",
+        "_noHover_3n0se_28",
+        "_shadow_3n0se_25",
+        "_raisedBackground_3n0se_45",
+        "_card_lo4oy_4",
+        "_modal_rcara_3",
+        "_small_lo4oy_11"
+       ],
+       [
+        "ReactModal__Content",
+        "ReactModal__Content--after-open",
+        "_modal_lo4oy_73"
+       ],
+       [
+        "ReactModal__Overlay",
+        "ReactModal__Overlay--after-open",
+        "_overlay_lo4oy_89",
+        "_backgroundColor_lo4oy_103"
+       ]
+      ],
+      "classes": [
+       "_bodyDefaultDemi_qaod7_47",
+       "_text-link_12t49_1"
+      ],
+      "data": {},
+      "heading": "Autopay settings",
+      "landmark": {
+       "name": "",
+       "role": "form"
+      },
+      "layer": "document",
+      "name": "",
+      "rect": [
+       836,
+       496,
+       27,
+       24
+      ],
+      "role": "",
+      "tag": "span",
+      "xpath": "/html/body/div[11]/div[1]/div[1]/div[1]/form[1]/div[1]/div[2]/div[1]/div[2]/span[1]"
+     },
+     "state": "accounts.autopay-rule-edit"
+    },
+    {
+     "evidence": {
+      "focus": {
+       "ancestors": [
+        [
+         "_buttonContainer_rcara_16",
+         "_buttonContainerFoyer_rcara_25"
+        ],
+        [],
+        [],
+        [
+         "_large_kwlx6_9",
+         "_noHover_3n0se_28",
+         "_shadow_3n0se_25",
+         "_raisedBackground_3n0se_45",
+         "_card_lo4oy_4",
+         "_modal_rcara_3",
+         "_small_lo4oy_11"
+        ],
+        [
+         "ReactModal__Content",
+         "ReactModal__Content--after-open",
+         "_modal_lo4oy_73"
+        ],
+        [
+         "ReactModal__Overlay",
+         "ReactModal__Overlay--after-open",
+         "_overlay_lo4oy_89",
+         "_backgroundColor_lo4oy_103"
+        ],
+        [
+         "ReactModalPortal"
+        ]
+       ],
+       "classes": [
+        "_button_r6b2u_20",
+        "_large_r6b2u_88",
+        "_primary_r6b2u_104"
+       ],
+       "data": {},
+       "heading": "Autopay settings",
+       "landmark": {
+        "name": "",
+        "role": "form"
+       },
+       "layer": "document",
+       "name": "Done",
+       "rect": [
+        791,
+        642,
+        101,
+        40
+       ],
+       "role": "button",
+       "tag": "button",
+       "xpath": "/html/body/div[11]/div[1]/div[1]/div[1]/form[1]/div[1]/div[3]/button[1]"
+      },
+      "stops": 1,
+      "trace": [
+       {
+        "focus": {
+         "label": "Autopay settings Keep your credit active by setting autopay rules that are trigg",
+         "tag": "div",
+         "xpath": "/html/body/div[11]/div[1]/div[1]"
+        },
+        "key": "start",
+        "where": "trigger"
+       },
+       {
+        "focus": {
+         "label": "Done",
+         "tag": "button",
+         "xpath": "/html/body/div[11]/div[1]/div[1]/div[1]/form[1]/div[1]/div[3]/button[1]"
+        },
+        "key": "Tab",
+        "where": "outside"
+       },
+       {
+        "focus": {
+         "label": "Done",
+         "tag": "button",
+         "xpath": "/html/body/div[11]/div[1]/div[1]/div[1]/form[1]/div[1]/div[3]/button[1]"
+        },
+        "key": "Tab",
+        "where": "outside"
+       }
+      ]
+     },
+     "occurrence": {
+      "ancestors": [
+       [
+        "_autopayTypeAction_rcara_169"
+       ],
+       [
+        "_autopayType_rcara_55",
+        "_clickable_rcara_143"
+       ],
+       [
+        "_accountContainer_rcara_83"
+       ],
+       [],
+       [],
+       [
+        "_large_kwlx6_9",
+        "_noHover_3n0se_28",
+        "_shadow_3n0se_25",
+        "_raisedBackground_3n0se_45",
+        "_card_lo4oy_4",
+        "_modal_rcara_3",
+        "_small_lo4oy_11"
+       ],
+       [
+        "ReactModal__Content",
+        "ReactModal__Content--after-open",
+        "_modal_lo4oy_73"
+       ],
+       [
+        "ReactModal__Overlay",
+        "ReactModal__Overlay--after-open",
+        "_overlay_lo4oy_89",
+        "_backgroundColor_lo4oy_103"
+       ]
+      ],
+      "classes": [
+       "_bodyDefaultDemi_qaod7_47",
+       "_text-link_12t49_1"
+      ],
+      "data": {},
+      "heading": "Autopay settings",
+      "landmark": {
+       "name": "",
+       "role": "form"
+      },
+      "layer": "document",
+      "name": "",
+      "rect": [
+       836,
+       368,
+       27,
+       24
+      ],
+      "role": "",
+      "tag": "span",
+      "xpath": "/html/body/div[11]/div[1]/div[1]/div[1]/form[1]/div[1]/div[1]/div[1]/div[2]/span[1]"
+     },
+     "state": "accounts.autopay-source-edit"
+    }
+   ],
+   "evidenceHash": "6a484f4a35debc02a1c0bc8149d2f7f5957be328f7d9099ce4ef02560de84caf",
+   "facts": {
+    "criterion": "2.1.1",
+    "criterionName": "Keyboard",
+    "element": "text in \"Autopay settings\"",
+    "overlay": "unnamed dialog",
+    "screen": "Edit recurring autopay",
+    "stops": "1"
+   },
+   "family": "dialog-trigger",
+   "guidance": "Lower only when an equivalent keyboard path exists.",
+   "issueId": null,
+   "key": "dialog-trigger:dialog-trigger-not-focusable:998eedfbb0bc",
+   "measured": false,
+   "primary": "accounts.autopay-rule-edit",
+   "proposals": [],
+   "rule": "dialog-trigger-not-focusable",
+   "screens": 3,
+   "severityDefault": "high",
+   "source": "scanner",
+   "states": [
+    "accounts.autopay-rule-edit",
+    "accounts.autopay-source-edit"
+   ],
+   "summary": "Tab never focused the text in \"Autopay settings\" in 1 stops, so the unnamed dialog could not be opened from the keyboard.",
+   "title": "Opens only with a mouse: text in \"Autopay settings\""
+  },
+  {
+   "attachments": [],
+   "attempt": 1,
+   "basis": "violation",
+   "criteria": [
+    "1.3.5"
+   ],
+   "evidence": [
+    {
+     "evidence": {
+      "failureSummary": "Fix all of the following:\n  the autocomplete attribute is incorrectly formatted"
+     },
+     "occurrence": {
+      "ancestors": [
+       [
+        "_textboxWrapper_1a7mr_158"
+       ],
+       [
+        "_selectWrapper_1a7mr_150"
+       ],
+       [
+        "_comboboxWrapper_1a7mr_6",
+        "_occurrenceField_rcara_74",
+        "session-replay-block"
+       ],
+       [
+        "_formRow_rcara_50",
+        "_formRowDouble_rcara_69"
+       ],
+       [
+        "_container_rcara_12"
+       ],
+       [],
+       [],
+       [
+        "_large_kwlx6_9",
+        "_noHover_3n0se_28",
+        "_shadow_3n0se_25",
+        "_raisedBackground_3n0se_45",
+        "_card_lo4oy_4",
+        "_modal_rcara_3",
+        "_small_lo4oy_11"
+       ]
+      ],
+      "classes": [
+       "_textboxInput_1a7mr_250",
+       "_selectedPlaceholder_1a7mr_293"
+      ],
+      "data": {},
+      "heading": "",
+      "landmark": {
+       "name": "",
+       "role": "form"
+      },
+      "layer": "top",
+      "name": "On",
+      "rect": [
+       730,
+       369,
+       137,
+       38
+      ],
+      "role": "combobox",
+      "tag": "input",
+      "xpath": "/html/body/div[11]/div[1]/div[1]/div[1]/form[1]/div[1]/div[2]/div[1]/div[2]/div[1]/div[1]/input[1]"
+     },
+     "state": "accounts.autopay-rule-edit"
+    }
+   ],
+   "evidenceHash": "2143eeb891690c1a9d974cdc9bd2d368e0d74f213fe1ffce1c53914109edab46",
+   "facts": {
+    "announced": "combobox \"On\" [expanded=false, haspopup=listbox]",
+    "axeSummary": "the autocomplete attribute is incorrectly formatted",
+    "criterion": "1.3.5",
+    "criterionName": "Identify Input Purpose",
+    "element": "combobox \"On\"",
+    "rule": "autocomplete-valid",
+    "screen": "Edit recurring autopay"
+   },
+   "family": "role-state",
+   "guidance": "Low for optional ARIA or an invalid autocomplete token; high when aria-hidden hides the whole page.",
+   "issueId": null,
+   "key": "role-state:autocomplete-valid:3071c8089f54",
+   "measured": false,
+   "primary": "accounts.autopay-rule-edit",
+   "proposals": [],
+   "rule": "autocomplete-valid",
+   "screens": 1,
+   "severityDefault": "medium",
+   "source": "scanner",
+   "states": [
+    "accounts.autopay-rule-edit"
+   ],
+   "summary": "autocomplete-valid: announced as combobox \"On\" [expanded=false, haspopup=listbox]. the autocomplete attribute is incorrectly formatted",
+   "title": "Invalid autocomplete value: combobox \"On\""
+  },
+  {
+   "attachments": [],
+   "attempt": 1,
+   "basis": "violation",
+   "criteria": [
+    "1.3.5"
+   ],
+   "evidence": [
+    {
+     "evidence": {
+      "failureSummary": "Fix all of the following:\n  the autocomplete attribute is incorrectly formatted"
+     },
+     "occurrence": {
+      "ancestors": [
+       [
+        "_textboxWrapper_1a7mr_158"
+       ],
+       [
+        "_selectWrapper_1a7mr_150"
+       ],
+       [
+        "_comboboxWrapper_1a7mr_6",
+        "_paymentFrequencyField_rcara_63",
+        "session-replay-block"
+       ],
+       [
+        "_formRow_rcara_50",
+        "_formRowDouble_rcara_69"
+       ],
+       [
+        "_container_rcara_12"
+       ],
+       [],
+       [],
+       [
+        "_large_kwlx6_9",
+        "_noHover_3n0se_28",
+        "_shadow_3n0se_25",
+        "_raisedBackground_3n0se_45",
+        "_card_lo4oy_4",
+        "_modal_rcara_3",
+        "_small_lo4oy_11"
+       ]
+      ],
+      "classes": [
+       "_textboxInput_1a7mr_250",
+       "_selectedPlaceholder_1a7mr_293"
+      ],
+      "data": {},
+      "heading": "",
+      "landmark": {
+       "name": "",
+       "role": "form"
+      },
+      "layer": "top",
+      "name": "Payment frequency",
+      "rect": [
+       537,
+       369,
+       131,
+       38
+      ],
+      "role": "combobox",
+      "tag": "input",
+      "xpath": "/html/body/div[11]/div[1]/div[1]/div[1]/form[1]/div[1]/div[2]/div[1]/div[1]/div[1]/div[1]/input[1]"
+     },
+     "state": "accounts.autopay-rule-edit"
+    }
+   ],
+   "evidenceHash": "2143eeb891690c1a9d974cdc9bd2d368e0d74f213fe1ffce1c53914109edab46",
+   "facts": {
+    "announced": "combobox \"Payment frequency\" [expanded=false, haspopup=listbox]",
+    "axeSummary": "the autocomplete attribute is incorrectly formatted",
+    "criterion": "1.3.5",
+    "criterionName": "Identify Input Purpose",
+    "element": "combobox \"Payment frequency\"",
+    "rule": "autocomplete-valid",
+    "screen": "Edit recurring autopay"
+   },
+   "family": "role-state",
+   "guidance": "Low for optional ARIA or an invalid autocomplete token; high when aria-hidden hides the whole page.",
+   "issueId": null,
+   "key": "role-state:autocomplete-valid:6fce6e8d3541",
+   "measured": false,
+   "primary": "accounts.autopay-rule-edit",
+   "proposals": [],
+   "rule": "autocomplete-valid",
+   "screens": 1,
+   "severityDefault": "medium",
+   "source": "scanner",
+   "states": [
+    "accounts.autopay-rule-edit"
+   ],
+   "summary": "autocomplete-valid: announced as combobox \"Payment frequency\" [expanded=false, haspopup=listbox]. the autocomplete attribute is incorrectly formatted",
+   "title": "Invalid autocomplete value: combobox \"Payment frequency\""
+  }
+ ],
+ "primaries": [
+  "accounts.autopay-rule-edit"
+ ],
+ "reach": {
+  "baseUrl": "https://demo.mercury.com",
+  "data": "data",
+  "map": "build/map.json",
+  "run": "2026-10-03-1525",
+  "workspace": "a11y"
+ },
+ "run": "2026-10-03-1525"
+}

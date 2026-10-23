@@ -1,0 +1,231 @@
+{
+ "batch": "record-016",
+ "reach": {
+  "baseUrl": "https://demo.mercury.com",
+  "data": "data",
+  "map": "build/map.json",
+  "run": "2026-10-02-1349",
+  "workspace": "a11y"
+ },
+ "run": "2026-10-02-1349",
+ "states": [
+  {
+   "area": "home",
+   "draft": "nothing on home.index matches {\"click\":{\"name\":\"'+' on Accounts widget\"}}",
+   "image": "screens/home/18-accounts-add.png",
+   "kind": "modal",
+   "labels": [
+    "Click '+' on Accounts widget"
+   ],
+   "mutates": false,
+   "note": "'+' on Accounts opens Create account: Checking/Savings radio cards, optional nickname.",
+   "parent": "home.index",
+   "state": "home.create-account-modal",
+   "title": "Create account modal"
+  },
+  {
+   "area": "home",
+   "draft": "not drafted: its parent had no accepted recipe when the drafter ran",
+   "image": "screens/home/19-accounts-add-validation.png",
+   "kind": "validation-error",
+   "labels": [
+    "Click '+' on Accounts widget",
+    "Click Create account with no type"
+   ],
+   "mutates": true,
+   "note": "Submitting without a type shows 'You must make a selection.'",
+   "parent": "home.create-account-modal",
+   "state": "home.create-account-invalid",
+   "title": "Create account: validation"
+  },
+  {
+   "area": "home",
+   "draft": "nothing on home.index matches {\"click\":{\"name\":\"Invoicing widget kebab\"}}",
+   "image": "screens/home/24-invoicing-kebab.png",
+   "kind": "menu",
+   "labels": [
+    "Click Invoicing widget kebab"
+   ],
+   "mutates": false,
+   "note": "Invoicing widget kebab: Invoice settings, Hide from Home.",
+   "parent": "home.index",
+   "state": "home.invoicing-kebab",
+   "title": "Invoicing widget menu"
+  },
+  {
+   "area": "home",
+   "draft": "not drafted: its parent had no accepted recipe when the drafter ran",
+   "image": "screens/home/25-index-invoicing-hidden.png",
+   "kind": "page",
+   "labels": [
+    "Click Invoicing widget kebab",
+    "Click 'Hide from Home'"
+   ],
+   "mutates": false,
+   "note": "After 'Hide from Home' the Invoicing widget is gone and Credit Card / Bill Pay reflow to two columns.",
+   "parent": "home.invoicing-kebab",
+   "state": "home.index-invoicing-hidden",
+   "title": "Home with Invoicing hidden"
+  },
+  {
+   "area": "home",
+   "draft": "cannot parse \"Type 'Google'\"",
+   "image": "screens/home/27-search-results.png",
+   "kind": "modal",
+   "labels": [
+    "Click 'Search for anything' (or Cmd+K)",
+    "Type 'Google'"
+   ],
+   "mutates": false,
+   "note": "Typing 'Google' groups matching transactions under each Google counterparty with card, last-4 and date, plus 'Search all transactions for \"Google\"'.",
+   "parent": "home.search-open",
+   "state": "home.search-results",
+   "title": "Search results: 'Google'"
+  },
+  {
+   "area": "home",
+   "draft": "not drafted: its parent had no accepted recipe when the drafter ran",
+   "image": "screens/home/28-search-no-results.png",
+   "kind": "empty-state",
+   "labels": [
+    "Click 'Search for anything' (or Cmd+K)",
+    "Type 'Google'",
+    "Replace query with gibberish"
+   ],
+   "mutates": false,
+   "note": "A nonsense query shows only 'Search all transactions for \"zzqxnothing\"' with no 'no results' message.",
+   "parent": "home.search-results",
+   "state": "home.search-no-results",
+   "title": "Search: no matches"
+  },
+  {
+   "area": "home",
+   "draft": "nothing on home.tasks matches {\"click\":{\"name\":\"payment approval task\"}}",
+   "image": "screens/home/47-task-payment-approval.png",
+   "kind": "page",
+   "labels": [
+    "Click payment approval task"
+   ],
+   "mutates": false,
+   "note": "Approval task opens the payment review: $1,042.95 ACH to Jason Green with bank details, source account, memo and a receipt PDF preview.",
+   "parent": "home.tasks",
+   "state": "home.task-payment-review",
+   "title": "Task: payment approval review"
+  },
+  {
+   "area": "home",
+   "draft": "not drafted: its parent had no accepted recipe when the drafter ran",
+   "image": "screens/home/86-task-payment-approved.png",
+   "kind": "confirmation",
+   "labels": [
+    "Click payment approval task",
+    "Click 'Approve payment'"
+   ],
+   "mutates": true,
+   "note": "Full-page success after 'Approve payment': 'You\u2019ve approved an ACH payment', 'The payment will be sent immediately.', the $1,042.95 Jason Green summary with a receipt download icon, and 'Back to Needs Approval'.",
+   "parent": "home.task-payment-review",
+   "state": "home.task-payment-approved",
+   "title": "Tasks \u2014 payment approved"
+  },
+  {
+   "area": "home",
+   "draft": "nothing on home.tasks matches {\"click\":{\"name\":\"reimbursement approval task\"}}",
+   "image": "screens/home/72-task-reimbursement.png",
+   "kind": "drawer",
+   "labels": [
+    "Click reimbursement approval task"
+   ],
+   "mutates": false,
+   "note": "Reimbursement task opens Team Spend > Reimbursements with the $375.87 Bayside Bistro expense panel: Approve / Decline / More and a 'Missing attachment field.' banner.",
+   "parent": "home.tasks",
+   "state": "home.task-reimbursement",
+   "title": "Task \u2014 reimbursement approval"
+  },
+  {
+   "area": "home",
+   "draft": "not drafted: its parent had no accepted recipe when the drafter ran",
+   "image": "screens/home/87-task-reimbursement-approved.png",
+   "kind": "toast",
+   "labels": [
+    "Click reimbursement approval task",
+    "Click Approve"
+   ],
+   "mutates": true,
+   "note": "Approve in the reimbursement panel closes it and shows a 'Reimbursement payment approved' toast over the Reimbursements list; the $375.87 Jessica Awad expense moves to 'Payment Pending'.",
+   "parent": "home.task-reimbursement",
+   "state": "home.task-reimbursement-approved",
+   "title": "Tasks \u2014 reimbursement approved"
+  },
+  {
+   "area": "home",
+   "draft": "cannot parse \"Hover a task row\"",
+   "image": "screens/home/42-tasks-row-hover.png",
+   "kind": "form-state",
+   "labels": [
+    "Hover a task row"
+   ],
+   "mutates": false,
+   "note": "Hovering a task row replaces its date with a blue action link (Approve / View / Review).",
+   "parent": "home.tasks",
+   "state": "home.tasks-row-hover",
+   "title": "Tasks: row hover action"
+  },
+  {
+   "area": "home",
+   "draft": "not drafted: its parent had no accepted recipe when the drafter ran",
+   "image": "screens/home/44-task-detail-overspend.png",
+   "kind": "drawer",
+   "labels": [
+    "Hover a task row",
+    "Click 'Approve' on overspend task"
+   ],
+   "mutates": true,
+   "note": "The overspend task deep-links to Transactions filtered to My transactions + Hardware budget with the $50.08 Lily's Eatery drawer open; it offers only 'Cancel request', no approve action.",
+   "parent": "home.tasks-row-hover",
+   "state": "home.task-overspend",
+   "title": "Task: overspend opens transaction"
+  },
+  {
+   "area": "home",
+   "draft": "cannot parse \"Hover an account row\"",
+   "image": "screens/home/55-account-row-tooltip.png",
+   "kind": "popover",
+   "labels": [
+    "Hover an account row"
+   ],
+   "mutates": false,
+   "note": "Hovering an account row shows Pending in / Pending out / Available for that account.",
+   "parent": "home.index",
+   "state": "home.account-row-tooltip",
+   "title": "Account row hover breakdown"
+  },
+  {
+   "area": "home",
+   "draft": "nothing on home.index matches {\"click\":{\"name\":\"Accounts kebab\"}}",
+   "image": "screens/home/17-accounts-kebab-menu.png",
+   "kind": "menu",
+   "labels": [
+    "Click Accounts kebab"
+   ],
+   "mutates": false,
+   "note": "Accounts widget kebab: Statements, Auto transfer rules.",
+   "parent": "home.index",
+   "state": "home.accounts-kebab",
+   "title": "Accounts widget menu"
+  },
+  {
+   "area": "home",
+   "draft": "cannot parse \"Hover balance graph\"",
+   "image": "screens/home/85-balance-graph-hover.png",
+   "kind": "form-state",
+   "labels": [
+    "Hover balance graph"
+   ],
+   "mutates": false,
+   "note": "Hovering the graph swaps the header to the point's balance ($212,246.36), date 'September 14, 2026' and daily delta.",
+   "parent": "home.index",
+   "state": "home.balance-graph-hover",
+   "title": "Balance graph hover"
+  }
+ ]
+}

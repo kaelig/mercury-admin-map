@@ -1,0 +1,273 @@
+{
+ "batch": "record-097",
+ "reach": {
+  "baseUrl": "https://demo.mercury.com",
+  "data": "data",
+  "map": "build/map.json",
+  "run": "2026-10-02-1349",
+  "workspace": "a11y"
+ },
+ "run": "2026-10-02-1349",
+ "states": [
+  {
+   "area": "books",
+   "draft": "not drafted: its parent had no accepted recipe when the drafter ran",
+   "image": "screens/books/17-je-date-picker.png",
+   "kind": "popover",
+   "labels": [
+    "Toggle Books",
+    "Click Try Mercury Books",
+    "Books created",
+    "Dismiss spotlight",
+    "Click Add",
+    "Journal entry",
+    "Open Date"
+   ],
+   "mutates": false,
+   "note": "Calendar popover for the Date field, defaulting to Sep 25, 2026.",
+   "parent": "books.je-create",
+   "state": "books.je-date-picker",
+   "title": "Journal entry date picker"
+  },
+  {
+   "area": "books",
+   "draft": "not drafted: its parent had no accepted recipe when the drafter ran",
+   "image": "screens/books/18-je-filling.png",
+   "kind": "form-state",
+   "labels": [
+    "Toggle Books",
+    "Click Try Mercury Books",
+    "Books created",
+    "Dismiss spotlight",
+    "Click Add",
+    "Journal entry",
+    "Open Date",
+    "Pick Sep 24"
+   ],
+   "mutates": false,
+   "note": "Rent debit 1,250.00 and Cash and Cash Equivalents credit 1,250.00, totals balanced.",
+   "parent": "books.je-date-picker",
+   "state": "books.je-filled",
+   "title": "Balanced journal entry"
+  },
+  {
+   "area": "books",
+   "draft": "not drafted: its parent had no accepted recipe when the drafter ran",
+   "image": "screens/books/19-je-saved.png",
+   "kind": "confirmation",
+   "labels": [
+    "Toggle Books",
+    "Click Try Mercury Books",
+    "Books created",
+    "Dismiss spotlight",
+    "Click Add",
+    "Journal entry",
+    "Open Date",
+    "Pick Sep 24",
+    "Save"
+   ],
+   "mutates": true,
+   "note": "After Save a \"Successfully created the journal entry\" toast appears and the drawer turns into the read-only entry with edit, delete and duplicate icons.",
+   "parent": "books.je-filled",
+   "state": "books.je-detail",
+   "title": "Journal entry created"
+  },
+  {
+   "area": "books",
+   "draft": "not drafted: its parent had no accepted recipe when the drafter ran; a previous recorder failed: structure-missing: a menu needs an open layer; the replay found none. The live picker opens as a list of links with no menu role.",
+   "image": "screens/books/57-reconciliation-account-menu.png",
+   "kind": "menu",
+   "labels": [
+    "Toggle Books",
+    "Click Try Mercury Books",
+    "Books created",
+    "Dismiss spotlight",
+    "Sidebar: Reconciliation",
+    "Open account picker"
+   ],
+   "mutates": false,
+   "note": "Searchable account list grouped Bank accounts / Credit cards, each with Auto-reconciled or Not reconciled.",
+   "parent": "books.reconciliation",
+   "state": "books.reconciliation-account-menu",
+   "title": "Reconciliation account picker"
+  },
+  {
+   "area": "books",
+   "draft": "not drafted: its parent had no accepted recipe when the drafter ran",
+   "image": "screens/books/58-reconciliation-not-reconciled.png",
+   "kind": "page",
+   "labels": [
+    "Toggle Books",
+    "Click Try Mercury Books",
+    "Books created",
+    "Dismiss spotlight",
+    "Sidebar: Reconciliation",
+    "Open account picker",
+    "Pick Citi Checking 9384"
+   ],
+   "mutates": false,
+   "note": "Citi Checking 9384, Not reconciled: \"Sep 1, 2023 - Now\" with Needs reconciliation badge, Start reconciliation and Import transactions.",
+   "parent": "books.reconciliation-account-menu",
+   "state": "books.reconciliation-pending",
+   "title": "Account needing reconciliation"
+  },
+  {
+   "area": "books",
+   "draft": "not drafted: its parent had no accepted recipe when the drafter ran; a previous recorder failed: not recorded: the transaction rows do not appear in snapshot -i (only the Select all rows checkbox) and I found no locator for a row.",
+   "image": "screens/books/43-transaction-drawer.png",
+   "kind": "drawer",
+   "labels": [
+    "Toggle Books",
+    "Click Try Mercury Books",
+    "Books created",
+    "Dismiss spotlight",
+    "Sidebar: Transactions",
+    "Open row"
+   ],
+   "mutates": false,
+   "note": "$14,934.67 Money out, Transaction / Journal Entry tabs, account, type, date, description, memo, line items and ACH metadata; the grid behind narrows so Ledger cells show \"Un\u2026\" and \"C\".",
+   "parent": "books.transactions",
+   "state": "books.transaction-drawer",
+   "title": "Transaction detail"
+  },
+  {
+   "area": "books",
+   "draft": "not drafted: its parent had no accepted recipe when the drafter ran",
+   "image": "screens/books/44-transaction-je-tab.png",
+   "kind": "drawer",
+   "labels": [
+    "Toggle Books",
+    "Click Try Mercury Books",
+    "Books created",
+    "Dismiss spotlight",
+    "Sidebar: Transactions",
+    "Open row",
+    "Journal Entry tab"
+   ],
+   "mutates": false,
+   "note": "Journal Entry tab: Date, Description and a \"Line entries\" debit/credit table (Ops / Payroll credit, Uncategorized Cash Outflow debit).",
+   "parent": "books.transaction-drawer",
+   "state": "books.transaction-je-tab",
+   "title": "Transaction journal entry tab"
+  },
+  {
+   "area": "books",
+   "draft": "not drafted: its parent had no accepted recipe when the drafter ran; the conductor rejected the previous recipe: missing content: the drawer opens on the BILL-001 row, but its body is blank in both replays, with no BILL-001 details, status, amount or line items; descendants 0",
+   "image": "screens/books/48-bill-drawer.png",
+   "kind": "drawer",
+   "labels": [
+    "Toggle Books",
+    "Click Try Mercury Books",
+    "Books created",
+    "Dismiss spotlight",
+    "Sidebar: Bills",
+    "Open BILL-001"
+   ],
+   "mutates": false,
+   "note": "BILL-001 (Open, $8,250.55): Due date shows \"-\" although the list shows 08/31/2026; line items table has no Amount column value in Total.",
+   "parent": "books.bills",
+   "state": "books.bill-drawer",
+   "title": "Bill detail"
+  },
+  {
+   "area": "books",
+   "draft": "not drafted: its parent had no accepted recipe when the drafter ran",
+   "image": "screens/books/15-journal-entry-empty-save.png",
+   "kind": "validation-error",
+   "labels": [
+    "Toggle Books",
+    "Click Try Mercury Books",
+    "Books created",
+    "Dismiss spotlight",
+    "Click Add",
+    "Journal entry",
+    "Save with no lines"
+   ],
+   "mutates": true,
+   "note": "Saving the blank entry shows a single \"Please complete all required fields.\" line under the grid; no field is marked.",
+   "parent": "books.je-create",
+   "state": "books.je-empty-save",
+   "title": "Journal entry empty-save error"
+  },
+  {
+   "area": "books",
+   "draft": "not drafted: its parent had no accepted recipe when the drafter ran",
+   "image": "screens/books/16-je-ledger-picker.png",
+   "kind": "menu",
+   "labels": [
+    "Toggle Books",
+    "Click Try Mercury Books",
+    "Books created",
+    "Dismiss spotlight",
+    "Click Add",
+    "Journal entry",
+    "Edit Ledger account cell"
+   ],
+   "mutates": false,
+   "note": "Editing a Ledger account cell opens a narrow grouped combobox; typing \"Rent\" ranks Other Current Assets first and the exact Rent match last.",
+   "parent": "books.je-create",
+   "state": "books.je-ledger-picker",
+   "title": "Ledger account picker"
+  },
+  {
+   "area": "books",
+   "draft": "not drafted: its parent had no accepted recipe when the drafter ran; the conductor rejected the previous recipe: missing content: row 10003 is highlighted and the drawer opens with only its toolbar (up/down/edit/delete/expand/close); the '10003 \u2014 Citi Checking 9384' details (code, type, subtype, opening balance) never render in either theme. The working-tree recipe already has a different hop (an action-button click on ledger-6) and also records empty controls and headings; a previous recorder failed: not recorded: the 10003 row does not appear in snapshot -i or by text, and I found no locator for it.",
+   "image": "screens/books/54-ledger-account-drawer.png",
+   "kind": "drawer",
+   "labels": [
+    "Toggle Books",
+    "Click Try Mercury Books",
+    "Books created",
+    "Dismiss spotlight",
+    "Sidebar: Chart of Accounts",
+    "Open 10003 row"
+   ],
+   "mutates": false,
+   "note": "\"10003 \u2014 Citi Checking 9384\": code, account, type, subtype, Debit or credit, Parent (em dash), Opening balance $0.00.",
+   "parent": "books.chart-of-accounts",
+   "state": "books.ledger-drawer",
+   "title": "Ledger account detail"
+  },
+  {
+   "area": "books",
+   "draft": "not drafted: its parent had no accepted recipe when the drafter ran",
+   "image": "screens/books/39-rule-condition-menu.png",
+   "kind": "menu",
+   "labels": [
+    "Toggle Books",
+    "Click Try Mercury Books",
+    "Books created",
+    "Dismiss spotlight",
+    "Sidebar: Rules",
+    "Click Create rule",
+    "Open If select"
+   ],
+   "mutates": true,
+   "note": "If options with helper text: Amount, Description, To/From, Card, Team member, Category.",
+   "parent": "books.rule-create",
+   "state": "books.rule-condition-menu",
+   "title": "Rule condition menu"
+  },
+  {
+   "area": "books",
+   "draft": "not drafted: its parent had no accepted recipe when the drafter ran",
+   "image": "screens/books/52-create-tag-empty-save.png",
+   "kind": "validation-error",
+   "labels": [
+    "Toggle Books",
+    "Click Try Mercury Books",
+    "Books created",
+    "Dismiss spotlight",
+    "Sidebar: Settings",
+    "Sidebar: Tags",
+    "Click Create tag",
+    "Save with empty name"
+   ],
+   "mutates": true,
+   "note": "Inline error under the field: \"Tag name cannot be empty\" in pink, field outlined.",
+   "parent": "books.tag-create",
+   "state": "books.tag-empty-save",
+   "title": "Tag empty-save error"
+  }
+ ]
+}

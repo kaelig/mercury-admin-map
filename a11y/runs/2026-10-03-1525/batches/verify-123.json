@@ -1,0 +1,329 @@
+{
+ "area": "cards",
+ "batch": "verify-123",
+ "findings": [
+  {
+   "attachments": [],
+   "attempt": 1,
+   "basis": "violation",
+   "criteria": [
+    "4.1.2"
+   ],
+   "evidence": [
+    {
+     "evidence": {
+      "aria-errormessage": [
+       "name-mercury-utils-id-24-errormessage"
+      ],
+      "failureSummary": "Fix all of the following:\n  aria-errormessage value `name-mercury-utils-id-24-errormessage` must use a technique to announce the message (e.g., aria-live, aria-describedby, role=alert, etc.)"
+     },
+     "occurrence": {
+      "ancestors": [
+       [
+        "_inputBox_q7hf7_93",
+        "_error_q7hf7_41"
+       ],
+       [
+        "_inputBoxWrapper_q7hf7_93"
+       ],
+       [
+        "_textInputWrapper_q7hf7_24"
+       ],
+       [
+        "_provideDSTextInput_q7hf7_6"
+       ],
+       [
+        "_nameField_112ku_41"
+       ],
+       [
+        "_row_112ku_33"
+       ],
+       [
+        "_fieldGroup_112ku_27"
+       ],
+       [
+        "_fields_112ku_18"
+       ]
+      ],
+      "classes": [
+       "_input_q7hf7_93"
+      ],
+      "data": {},
+      "heading": "Edit budget",
+      "landmark": {
+       "name": "",
+       "role": "main"
+      },
+      "layer": "document",
+      "name": "Name",
+      "rect": [
+       113,
+       271,
+       418,
+       24
+      ],
+      "role": "textbox",
+      "tag": "input",
+      "xpath": "/html/body/div[1]/main[1]/div[1]/div[2]/div[2]/div[3]/div[1]/div[1]/div[1]/div[2]/div[1]/div[2]/div[1]/div[1]/div[1]/div[1]/div[1]/div[1]/div[1]/input[1]"
+     },
+     "state": "cards.budget-edit-error"
+    },
+    {
+     "evidence": {
+      "aria-errormessage": [
+       "name-mercury-utils-id-24-errormessage"
+      ],
+      "failureSummary": "Fix all of the following:\n  aria-errormessage value `name-mercury-utils-id-24-errormessage` must use a technique to announce the message (e.g., aria-live, aria-describedby, role=alert, etc.)"
+     },
+     "occurrence": {
+      "ancestors": [
+       [
+        "_inputBox_q7hf7_93",
+        "_error_q7hf7_41"
+       ],
+       [
+        "_inputBoxWrapper_q7hf7_93"
+       ],
+       [
+        "_textInputWrapper_q7hf7_24"
+       ],
+       [
+        "_provideDSTextInput_q7hf7_6"
+       ],
+       [
+        "_nameField_112ku_41"
+       ],
+       [
+        "_row_112ku_33"
+       ],
+       [
+        "_fieldGroup_112ku_27"
+       ],
+       [
+        "_fields_112ku_18"
+       ]
+      ],
+      "classes": [
+       "_input_q7hf7_93"
+      ],
+      "data": {},
+      "heading": "Create a budget",
+      "landmark": {
+       "name": "",
+       "role": "main"
+      },
+      "layer": "document",
+      "name": "Name",
+      "rect": [
+       113,
+       271,
+       418,
+       24
+      ],
+      "role": "textbox",
+      "tag": "input",
+      "xpath": "/html/body/div[1]/main[1]/div[1]/div[2]/div[2]/div[3]/div[1]/div[1]/div[1]/div[2]/div[1]/div[2]/div[1]/div[1]/div[1]/div[1]/div[1]/div[1]/div[1]/input[1]"
+     },
+     "state": "cards.create-budget-errors"
+    }
+   ],
+   "evidenceHash": "8dc58945242b3d436f4b7866c5247229570c2ea6aef3062e6662eb64fa482209",
+   "facts": {
+    "announced": "textbox \"Name\" [invalid=true, errormessage=Please complete this field]",
+    "axeSummary": "aria-errormessage value `name-mercury-utils-id-24-errormessage` must use a technique to announce the message (e.g., aria-live, aria-describedby, role=alert, et…",
+    "criterion": "4.1.2",
+    "criterionName": "Name, Role, Value",
+    "element": "textbox \"Name\"",
+    "rule": "aria-valid-attr-value",
+    "screen": "Edit budget: name required"
+   },
+   "family": "role-state",
+   "guidance": "Low for optional ARIA or an invalid autocomplete token; high when aria-hidden hides the whole page.",
+   "issueId": null,
+   "key": "role-state:aria-valid-attr-value:918e3f3aa441",
+   "measured": false,
+   "primary": "cards.budget-edit-error",
+   "proposals": [],
+   "rule": "aria-valid-attr-value",
+   "screens": 2,
+   "severityDefault": "medium",
+   "source": "scanner",
+   "states": [
+    "cards.budget-edit-error",
+    "cards.create-budget-errors"
+   ],
+   "summary": "aria-valid-attr-value: announced as textbox \"Name\" [invalid=true, errormessage=Please complete this field]. aria-errormessage value `name-mercury-utils-id-24-errormessage` must use a technique to announce the message (e.g., aria-live, aria-describedby, role=alert, et…",
+   "title": "Wrong role or state: textbox \"Name\""
+  },
+  {
+   "attachments": [],
+   "attempt": 1,
+   "basis": "failure",
+   "criteria": [
+    "4.1.3"
+   ],
+   "evidence": [
+    {
+     "evidence": {
+      "focus": {
+       "ancestors": [
+        [
+         "_footerRight_112ku_67"
+        ],
+        [
+         "_footer_112ku_59"
+        ],
+        [
+         "_bottom_yg1rf_99"
+        ],
+        [
+         "_bottomContainer_yg1rf_99"
+        ],
+        [
+         "_leftContainer_yg1rf_39",
+         "_splitVariant_yg1rf_82"
+        ],
+        [
+         "_containerBase_yg1rf_1",
+         "_container_yg1rf_1",
+         "_containerWithBanner_yg1rf_12"
+        ],
+        [
+         "_contentDiv_bcpsw_53",
+         "_noBottomPadding_bcpsw_57",
+         "_contentDivHeightPreset_bcpsw_62",
+         "_fullWidthContentDiv_bcpsw_40"
+        ],
+        [
+         "_fullScreenWorkspaceLayout_bcpsw_14",
+         "_fullScreenWorkspaceLayoutBackground_bcpsw_32",
+         "_noScrollbar_bcpsw_27"
+        ]
+       ],
+       "classes": [
+        "_button_r6b2u_20",
+        "_large_r6b2u_88",
+        "_primary_r6b2u_104",
+        "_appearDisabled_r6b2u_16",
+        "session-replay-unmask"
+       ],
+       "data": {},
+       "heading": "Additional options",
+       "landmark": {
+        "name": "",
+        "role": "main"
+       },
+       "layer": "document",
+       "name": "Save changes",
+       "rect": [
+        502,
+        836,
+        158,
+        40
+       ],
+       "role": "button",
+       "tag": "button",
+       "xpath": "/html/body/div[1]/main[1]/div[1]/div[2]/div[2]/div[3]/div[1]/div[1]/div[2]/div[1]/div[1]/div[1]/button[2]"
+      },
+      "focused": false,
+      "message": "Budget name",
+      "region": null
+     },
+     "occurrence": {
+      "ancestors": [
+       [
+        "_headerSection_l1dvt_132"
+       ],
+       [
+        "_large_kwlx6_9",
+        "_noHover_3n0se_28",
+        "_raisedBackground_3n0se_45",
+        "_card_l1dvt_19",
+        "_cardThemeGreen_l1dvt_55"
+       ],
+       [
+        "_cardWrapper_l1dvt_19"
+       ],
+       [
+        "_container_l1dvt_4"
+       ],
+       [
+        "_rightPaneContent_112ku_82"
+       ],
+       [
+        "_rightPane_112ku_76"
+       ],
+       [
+        "_rightContainer_yg1rf_40",
+        "_splitVariant_yg1rf_82"
+       ],
+       [
+        "_containerBase_yg1rf_1",
+        "_container_yg1rf_1",
+        "_containerWithBanner_yg1rf_12"
+       ]
+      ],
+      "classes": [
+       "_titleMain_qaod7_16",
+       "_text-placeholder_12t49_1",
+       "_name_l1dvt_141"
+      ],
+      "data": {},
+      "heading": "Additional options",
+      "landmark": {
+       "name": "",
+       "role": "main"
+      },
+      "layer": "document",
+      "name": "Budget name",
+      "rect": [
+       912,
+       207,
+       336,
+       36
+      ],
+      "role": "heading",
+      "tag": "h2",
+      "xpath": "/html/body/div[1]/main[1]/div[1]/div[2]/div[2]/div[3]/div[1]/div[2]/div[1]/div[2]/div[1]/div[1]/div[2]/div[1]/h2[1]"
+     },
+     "state": "cards.budget-edit-error"
+    }
+   ],
+   "evidenceHash": "e30c4d5e559a2c64bcbee0b0ff93af18b2e2270348bd8398b193e9e2f91f861c",
+   "facts": {
+    "criterion": "4.1.3",
+    "criterionName": "Status Messages",
+    "focus": "button \"Save changes\"",
+    "message": "\"Budget name\"",
+    "screen": "Edit budget: name required"
+   },
+   "family": "status-message",
+   "guidance": "High when it is the only confirmation of a money movement.",
+   "issueId": null,
+   "key": "status-message:status-not-announced:17f1d9555daf",
+   "measured": false,
+   "primary": "cards.budget-edit-error",
+   "proposals": [],
+   "rule": "status-not-announced",
+   "screens": 1,
+   "severityDefault": "medium",
+   "source": "scanner",
+   "states": [
+    "cards.budget-edit-error"
+   ],
+   "summary": "\"Budget name\" appeared outside any live region, alert or status role that existed before it, and focus stayed on the button \"Save changes\".",
+   "title": "Status message not announced: \"Budget name\""
+  }
+ ],
+ "primaries": [
+  "cards.budget-edit-error"
+ ],
+ "reach": {
+  "baseUrl": "https://demo.mercury.com",
+  "data": "data",
+  "map": "build/map.json",
+  "run": "2026-10-03-1525",
+  "workspace": "a11y"
+ },
+ "run": "2026-10-03-1525"
+}

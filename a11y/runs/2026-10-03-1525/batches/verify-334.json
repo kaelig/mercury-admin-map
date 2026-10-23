@@ -1,0 +1,599 @@
+{
+ "area": "settings",
+ "batch": "verify-334",
+ "findings": [
+  {
+   "attachments": [],
+   "attempt": 1,
+   "basis": "violation",
+   "criteria": [
+    "4.1.2"
+   ],
+   "evidence": [
+    {
+     "evidence": {
+      "aria-errormessage": [
+       "firstname-mercury-utils-id-24-errormessage"
+      ],
+      "failureSummary": "Fix all of the following:\n  aria-errormessage value `firstname-mercury-utils-id-24-errormessage` must use a technique to announce the message (e.g., aria-live, aria-describedby, role=alert, etc.)"
+     },
+     "occurrence": {
+      "ancestors": [
+       [
+        "_inputBox_q7hf7_93",
+        "_error_q7hf7_41"
+       ],
+       [
+        "_inputBoxWrapper_q7hf7_93"
+       ],
+       [
+        "_textInputWrapper_q7hf7_24"
+       ],
+       [
+        "_provideDSTextInput_q7hf7_6"
+       ],
+       [
+        "_nameFieldsRow_1atvp_1"
+       ],
+       [
+        "_stack_il1fi_18",
+        "_direction-column_il1fi_24",
+        "_gap-space-300_il1fi_1"
+       ],
+       [
+        "_contentArea_1xvys_1",
+        "_contentLayout_1xvys_23"
+       ],
+       []
+      ],
+      "classes": [
+       "_input_q7hf7_93"
+      ],
+      "data": {},
+      "heading": "Invite a user",
+      "landmark": {
+       "name": "",
+       "role": "form"
+      },
+      "layer": "document",
+      "name": "Legal first name",
+      "rect": [
+       515,
+       320,
+       210,
+       24
+      ],
+      "role": "textbox",
+      "tag": "input",
+      "xpath": "/html/body/div[1]/main[1]/div[1]/div[2]/div[2]/div[3]/form[1]/section[1]/div[2]/div[1]/div[1]/div[1]/div[1]/div[1]/input[1]"
+     },
+     "state": "settings.invite-details-errors"
+    }
+   ],
+   "evidenceHash": "43db0626301fef47ee06240a9843057bb13314e6d647bee0d6e688fd0ea10597",
+   "facts": {
+    "announced": "textbox \"Legal first name\" [invalid=true, errormessage=Please complete this fie…",
+    "axeSummary": "aria-errormessage value `firstname-mercury-utils-id-24-errormessage` must use a technique to announce the message (e.g., aria-live, aria-describedby, role=aler…",
+    "criterion": "4.1.2",
+    "criterionName": "Name, Role, Value",
+    "element": "textbox \"Legal first name\"",
+    "rule": "aria-valid-attr-value",
+    "screen": "Invite a user — required fields"
+   },
+   "family": "role-state",
+   "guidance": "Low for optional ARIA or an invalid autocomplete token; high when aria-hidden hides the whole page.",
+   "issueId": null,
+   "key": "role-state:aria-valid-attr-value:09bc173d7e09",
+   "measured": false,
+   "primary": "settings.invite-details-errors",
+   "proposals": [],
+   "rule": "aria-valid-attr-value",
+   "screens": 1,
+   "severityDefault": "medium",
+   "source": "scanner",
+   "states": [
+    "settings.invite-details-errors"
+   ],
+   "summary": "aria-valid-attr-value: announced as textbox \"Legal first name\" [invalid=true, errormessage=Please complete this fie…. aria-errormessage value `firstname-mercury-utils-id-24-errormessage` must use a technique to announce the message (e.g., aria-live, aria-describedby, role=aler…",
+   "title": "Wrong role or state: textbox \"Legal first name\""
+  },
+  {
+   "attachments": [],
+   "attempt": 1,
+   "basis": "violation",
+   "criteria": [
+    "4.1.2"
+   ],
+   "evidence": [
+    {
+     "evidence": {
+      "aria-errormessage": [
+       "email-mercury-utils-id-26-errormessage"
+      ],
+      "failureSummary": "Fix all of the following:\n  aria-errormessage value `email-mercury-utils-id-26-errormessage` must use a technique to announce the message (e.g., aria-live, aria-describedby, role=alert, etc.)"
+     },
+     "occurrence": {
+      "ancestors": [
+       [
+        "_inputBox_q7hf7_93",
+        "_error_q7hf7_41"
+       ],
+       [
+        "_inputBoxWrapper_q7hf7_93"
+       ],
+       [
+        "_textInputWrapper_q7hf7_24"
+       ],
+       [
+        "_provideDSTextInput_q7hf7_6"
+       ],
+       [
+        "_stack_il1fi_18",
+        "_direction-column_il1fi_24",
+        "_gap-space-300_il1fi_1"
+       ],
+       [
+        "_contentArea_1xvys_1",
+        "_contentLayout_1xvys_23"
+       ],
+       [],
+       [
+        "_contentDiv_bcpsw_53",
+        "_contentDivHeightPreset_bcpsw_62"
+       ]
+      ],
+      "classes": [
+       "_input_q7hf7_93"
+      ],
+      "data": {},
+      "heading": "Invite a user",
+      "landmark": {
+       "name": "",
+       "role": "form"
+      },
+      "layer": "document",
+      "name": "Email",
+      "rect": [
+       515,
+       432,
+       470,
+       24
+      ],
+      "role": "textbox",
+      "tag": "input",
+      "xpath": "/html/body/div[1]/main[1]/div[1]/div[2]/div[2]/div[3]/form[1]/section[1]/div[2]/div[2]/div[1]/div[1]/div[1]/input[1]"
+     },
+     "state": "settings.invite-details-errors"
+    }
+   ],
+   "evidenceHash": "4aab2a859ece0b4428657fd726b3a5f12a0613a118340e0ceb55f7638d87362c",
+   "facts": {
+    "announced": "textbox \"Email\" [invalid=true, errormessage=Please complete this field]",
+    "axeSummary": "aria-errormessage value `email-mercury-utils-id-26-errormessage` must use a technique to announce the message (e.g., aria-live, aria-describedby, role=alert, e…",
+    "criterion": "4.1.2",
+    "criterionName": "Name, Role, Value",
+    "element": "textbox \"Email\"",
+    "rule": "aria-valid-attr-value",
+    "screen": "Invite a user — required fields"
+   },
+   "family": "role-state",
+   "guidance": "Low for optional ARIA or an invalid autocomplete token; high when aria-hidden hides the whole page.",
+   "issueId": null,
+   "key": "role-state:aria-valid-attr-value:35f4333fd239",
+   "measured": false,
+   "primary": "settings.invite-details-errors",
+   "proposals": [],
+   "rule": "aria-valid-attr-value",
+   "screens": 1,
+   "severityDefault": "medium",
+   "source": "scanner",
+   "states": [
+    "settings.invite-details-errors"
+   ],
+   "summary": "aria-valid-attr-value: announced as textbox \"Email\" [invalid=true, errormessage=Please complete this field]. aria-errormessage value `email-mercury-utils-id-26-errormessage` must use a technique to announce the message (e.g., aria-live, aria-describedby, role=alert, e…",
+   "title": "Wrong role or state: textbox \"Email\""
+  },
+  {
+   "attachments": [],
+   "attempt": 1,
+   "basis": "violation",
+   "criteria": [
+    "4.1.2"
+   ],
+   "evidence": [
+    {
+     "evidence": {
+      "aria-errormessage": [
+       "lastname-mercury-utils-id-25-errormessage"
+      ],
+      "failureSummary": "Fix all of the following:\n  aria-errormessage value `lastname-mercury-utils-id-25-errormessage` must use a technique to announce the message (e.g., aria-live, aria-describedby, role=alert, etc.)"
+     },
+     "occurrence": {
+      "ancestors": [
+       [
+        "_inputBox_q7hf7_93",
+        "_error_q7hf7_41"
+       ],
+       [
+        "_inputBoxWrapper_q7hf7_93"
+       ],
+       [
+        "_textInputWrapper_q7hf7_24"
+       ],
+       [
+        "_provideDSTextInput_q7hf7_6"
+       ],
+       [
+        "_nameFieldsRow_1atvp_1"
+       ],
+       [
+        "_stack_il1fi_18",
+        "_direction-column_il1fi_24",
+        "_gap-space-300_il1fi_1"
+       ],
+       [
+        "_contentArea_1xvys_1",
+        "_contentLayout_1xvys_23"
+       ],
+       []
+      ],
+      "classes": [
+       "_input_q7hf7_93"
+      ],
+      "data": {},
+      "heading": "Invite a user",
+      "landmark": {
+       "name": "",
+       "role": "form"
+      },
+      "layer": "document",
+      "name": "Legal last name",
+      "rect": [
+       775,
+       320,
+       210,
+       24
+      ],
+      "role": "textbox",
+      "tag": "input",
+      "xpath": "/html/body/div[1]/main[1]/div[1]/div[2]/div[2]/div[3]/form[1]/section[1]/div[2]/div[1]/div[2]/div[1]/div[1]/div[1]/input[1]"
+     },
+     "state": "settings.invite-details-errors"
+    }
+   ],
+   "evidenceHash": "22098ca53d96fb798f5bd00ea60c8371386e2e567be2689bbf8f4126044b540d",
+   "facts": {
+    "announced": "textbox \"Legal last name\" [invalid=true, errormessage=Please complete this fiel…",
+    "axeSummary": "aria-errormessage value `lastname-mercury-utils-id-25-errormessage` must use a technique to announce the message (e.g., aria-live, aria-describedby, role=alert…",
+    "criterion": "4.1.2",
+    "criterionName": "Name, Role, Value",
+    "element": "textbox \"Legal last name\"",
+    "rule": "aria-valid-attr-value",
+    "screen": "Invite a user — required fields"
+   },
+   "family": "role-state",
+   "guidance": "Low for optional ARIA or an invalid autocomplete token; high when aria-hidden hides the whole page.",
+   "issueId": null,
+   "key": "role-state:aria-valid-attr-value:96ffeb5ad5ce",
+   "measured": false,
+   "primary": "settings.invite-details-errors",
+   "proposals": [],
+   "rule": "aria-valid-attr-value",
+   "screens": 1,
+   "severityDefault": "medium",
+   "source": "scanner",
+   "states": [
+    "settings.invite-details-errors"
+   ],
+   "summary": "aria-valid-attr-value: announced as textbox \"Legal last name\" [invalid=true, errormessage=Please complete this fiel…. aria-errormessage value `lastname-mercury-utils-id-25-errormessage` must use a technique to announce the message (e.g., aria-live, aria-describedby, role=alert…",
+   "title": "Wrong role or state: textbox \"Legal last name\""
+  },
+  {
+   "attachments": [],
+   "attempt": 1,
+   "basis": "failure",
+   "criteria": [
+    "4.1.3"
+   ],
+   "evidence": [
+    {
+     "evidence": {
+      "focus": {
+       "ancestors": [
+        [
+         "_buttonGroup_16t7w_1",
+         "_horizontal_16t7w_11"
+        ],
+        [
+         "_fixedFooterContent_usgjh_12"
+        ],
+        [
+         "_fixedFooter_usgjh_1"
+        ],
+        [],
+        [
+         "_contentDiv_bcpsw_53",
+         "_contentDivHeightPreset_bcpsw_62"
+        ],
+        [
+         "_fullScreenWorkspaceLayout_bcpsw_14",
+         "_fullScreenWorkspaceLayoutBackground_bcpsw_32",
+         "_noScrollbar_bcpsw_27"
+        ],
+        [
+         "_wrapper_bcpsw_3"
+        ],
+        []
+       ],
+       "classes": [
+        "_button_r6b2u_20",
+        "_large_r6b2u_88",
+        "_primary_r6b2u_104",
+        "_appearDisabled_r6b2u_16"
+       ],
+       "data": {},
+       "heading": "Invite a user",
+       "landmark": {
+        "name": "",
+        "role": "form"
+       },
+       "layer": "document",
+       "name": "Next",
+       "rect": [
+        889,
+        836,
+        109,
+        40
+       ],
+       "role": "button",
+       "tag": "button",
+       "xpath": "/html/body/div[1]/main[1]/div[1]/div[2]/div[2]/div[3]/form[1]/div[1]/div[1]/div[1]/button[2]"
+      },
+      "focused": false,
+      "message": "Please complete this field",
+      "region": null
+     },
+     "occurrence": {
+      "ancestors": [
+       [
+        "_textInputWrapper_q7hf7_24"
+       ],
+       [
+        "_provideDSTextInput_q7hf7_6"
+       ],
+       [
+        "_stack_il1fi_18",
+        "_direction-column_il1fi_24",
+        "_gap-space-300_il1fi_1"
+       ],
+       [
+        "_contentArea_1xvys_1",
+        "_contentLayout_1xvys_23"
+       ],
+       [],
+       [
+        "_contentDiv_bcpsw_53",
+        "_contentDivHeightPreset_bcpsw_62"
+       ],
+       [
+        "_fullScreenWorkspaceLayout_bcpsw_14",
+        "_fullScreenWorkspaceLayoutBackground_bcpsw_32",
+        "_noScrollbar_bcpsw_27"
+       ],
+       [
+        "_wrapper_bcpsw_3"
+       ]
+      ],
+      "classes": [
+       "_defaultErrorContainer_1tnh5_1",
+       "_errorMessage_q7hf7_303"
+      ],
+      "data": {
+       "data-session-replay-unmask": "true"
+      },
+      "heading": "Invite a user",
+      "landmark": {
+       "name": "",
+       "role": "form"
+      },
+      "layer": "document",
+      "name": "",
+      "rect": [
+       502,
+       468,
+       496,
+       20
+      ],
+      "role": "",
+      "tag": "div",
+      "xpath": "/html/body/div[1]/main[1]/div[1]/div[2]/div[2]/div[3]/form[1]/section[1]/div[2]/div[2]/div[1]/div[2]"
+     },
+     "state": "settings.invite-details-errors"
+    }
+   ],
+   "evidenceHash": "2f3515e2670cb73df8fa68cf41b944c067c8aafdf34fcb519358fb53780e46bc",
+   "facts": {
+    "criterion": "4.1.3",
+    "criterionName": "Status Messages",
+    "focus": "button \"Next\"",
+    "message": "\"Please complete this field\"",
+    "screen": "Invite a user — required fields"
+   },
+   "family": "status-message",
+   "guidance": "High when it is the only confirmation of a money movement.",
+   "issueId": null,
+   "key": "status-message:status-not-announced:1fcfe3db9418",
+   "measured": false,
+   "primary": "settings.invite-details-errors",
+   "proposals": [],
+   "rule": "status-not-announced",
+   "screens": 1,
+   "severityDefault": "medium",
+   "source": "scanner",
+   "states": [
+    "settings.invite-details-errors"
+   ],
+   "summary": "\"Please complete this field\" appeared outside any live region, alert or status role that existed before it, and focus stayed on the button \"Next\".",
+   "title": "Status message not announced: \"Please complete this field\""
+  },
+  {
+   "attachments": [],
+   "attempt": 1,
+   "basis": "failure",
+   "criteria": [
+    "4.1.3"
+   ],
+   "evidence": [
+    {
+     "evidence": {
+      "focus": {
+       "ancestors": [
+        [
+         "_buttonGroup_16t7w_1",
+         "_horizontal_16t7w_11"
+        ],
+        [
+         "_fixedFooterContent_usgjh_12"
+        ],
+        [
+         "_fixedFooter_usgjh_1"
+        ],
+        [],
+        [
+         "_contentDiv_bcpsw_53",
+         "_contentDivHeightPreset_bcpsw_62"
+        ],
+        [
+         "_fullScreenWorkspaceLayout_bcpsw_14",
+         "_fullScreenWorkspaceLayoutBackground_bcpsw_32",
+         "_noScrollbar_bcpsw_27"
+        ],
+        [
+         "_wrapper_bcpsw_3"
+        ],
+        []
+       ],
+       "classes": [
+        "_button_r6b2u_20",
+        "_large_r6b2u_88",
+        "_primary_r6b2u_104",
+        "_appearDisabled_r6b2u_16"
+       ],
+       "data": {},
+       "heading": "Invite a user",
+       "landmark": {
+        "name": "",
+        "role": "form"
+       },
+       "layer": "document",
+       "name": "Next",
+       "rect": [
+        889,
+        836,
+        109,
+        40
+       ],
+       "role": "button",
+       "tag": "button",
+       "xpath": "/html/body/div[1]/main[1]/div[1]/div[2]/div[2]/div[3]/form[1]/div[1]/div[1]/div[1]/button[2]"
+      },
+      "focused": false,
+      "message": "Please complete this field",
+      "region": null
+     },
+     "occurrence": {
+      "ancestors": [
+       [
+        "_textInputWrapper_q7hf7_24"
+       ],
+       [
+        "_provideDSTextInput_q7hf7_6"
+       ],
+       [
+        "_nameFieldsRow_1atvp_1"
+       ],
+       [
+        "_stack_il1fi_18",
+        "_direction-column_il1fi_24",
+        "_gap-space-300_il1fi_1"
+       ],
+       [
+        "_contentArea_1xvys_1",
+        "_contentLayout_1xvys_23"
+       ],
+       [],
+       [
+        "_contentDiv_bcpsw_53",
+        "_contentDivHeightPreset_bcpsw_62"
+       ],
+       [
+        "_fullScreenWorkspaceLayout_bcpsw_14",
+        "_fullScreenWorkspaceLayoutBackground_bcpsw_32",
+        "_noScrollbar_bcpsw_27"
+       ]
+      ],
+      "classes": [
+       "_defaultErrorContainer_1tnh5_1",
+       "_errorMessage_q7hf7_303"
+      ],
+      "data": {
+       "data-session-replay-unmask": "true"
+      },
+      "heading": "Invite a user",
+      "landmark": {
+       "name": "",
+       "role": "form"
+      },
+      "layer": "document",
+      "name": "",
+      "rect": [
+       502,
+       356,
+       236,
+       20
+      ],
+      "role": "",
+      "tag": "div",
+      "xpath": "/html/body/div[1]/main[1]/div[1]/div[2]/div[2]/div[3]/form[1]/section[1]/div[2]/div[1]/div[1]/div[1]/div[2]"
+     },
+     "state": "settings.invite-details-errors"
+    }
+   ],
+   "evidenceHash": "2f3515e2670cb73df8fa68cf41b944c067c8aafdf34fcb519358fb53780e46bc",
+   "facts": {
+    "criterion": "4.1.3",
+    "criterionName": "Status Messages",
+    "focus": "button \"Next\"",
+    "message": "\"Please complete this field\"",
+    "screen": "Invite a user — required fields"
+   },
+   "family": "status-message",
+   "guidance": "High when it is the only confirmation of a money movement.",
+   "issueId": null,
+   "key": "status-message:status-not-announced:c142be06517e",
+   "measured": false,
+   "primary": "settings.invite-details-errors",
+   "proposals": [],
+   "rule": "status-not-announced",
+   "screens": 1,
+   "severityDefault": "medium",
+   "source": "scanner",
+   "states": [
+    "settings.invite-details-errors"
+   ],
+   "summary": "\"Please complete this field\" appeared outside any live region, alert or status role that existed before it, and focus stayed on the button \"Next\".",
+   "title": "Status message not announced: \"Please complete this field\""
+  }
+ ],
+ "primaries": [
+  "settings.invite-details-errors"
+ ],
+ "reach": {
+  "baseUrl": "https://demo.mercury.com",
+  "data": "data",
+  "map": "build/map.json",
+  "run": "2026-10-03-1525",
+  "workspace": "a11y"
+ },
+ "run": "2026-10-03-1525"
+}

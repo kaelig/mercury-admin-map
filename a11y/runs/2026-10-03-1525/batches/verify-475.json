@@ -1,0 +1,114 @@
+{
+ "area": "home",
+ "batch": "verify-475",
+ "findings": [
+  {
+   "attachments": [],
+   "attempt": 1,
+   "basis": "candidate",
+   "criteria": [
+    "4.1.2"
+   ],
+   "evidence": [
+    {
+     "evidence": {
+      "description": "",
+      "name": "Google",
+      "role": "listbox",
+      "states": {},
+      "template": "listbox \"Google\""
+     },
+     "occurrence": {
+      "ancestors": [
+       [
+        "_inputAndResultsContainer_16edb_80"
+       ],
+       [
+        "_large_kwlx6_9",
+        "_noHover_3n0se_28",
+        "_shadow_3n0se_25",
+        "_raisedBackground_3n0se_45",
+        "_card_lo4oy_4",
+        "_omnisearchCard_16edb_36"
+       ],
+       [
+        "ReactModal__Content",
+        "ReactModal__Content--after-open",
+        "_modal_lo4oy_73",
+        "_disableAutoCenter_lo4oy_79",
+        "_omnisearchModal_16edb_27"
+       ],
+       [
+        "ReactModal__Overlay",
+        "ReactModal__Overlay--after-open",
+        "_overlay_lo4oy_89",
+        "_omnisearchOverlay_16edb_40"
+       ],
+       [
+        "ReactModalPortal"
+       ]
+      ],
+      "classes": [
+       "_menu_16edb_182"
+      ],
+      "data": {},
+      "heading": "",
+      "landmark": {
+       "name": "",
+       "role": "dialog"
+      },
+      "layer": "top",
+      "name": "Google",
+      "rect": [
+       320,
+       240,
+       800,
+       422
+      ],
+      "role": "listbox",
+      "tag": "div",
+      "xpath": "/html/body/div[15]/div[1]/div[1]/div[1]/div[2]/div[4]"
+     },
+     "state": "home.search-results"
+    }
+   ],
+   "evidenceHash": "a50f88a4ee5356f2e3c3984ec1a801d2ea3f67f3fe41a69b522e3d174aad7447",
+   "facts": {
+    "announced": "listbox \"Google\"",
+    "axeSummary": "",
+    "criterion": "4.1.2",
+    "criterionName": "Name, Role, Value",
+    "element": "listbox \"Google\"",
+    "rule": "announced-as",
+    "screen": "Search results: 'Google'"
+   },
+   "family": "role-state",
+   "guidance": "Low for optional ARIA or an invalid autocomplete token; high when aria-hidden hides the whole page.",
+   "issueId": null,
+   "key": "role-state:announced-as:16a242009e85",
+   "measured": false,
+   "primary": "home.search-results",
+   "proposals": [],
+   "rule": "announced-as",
+   "screens": 1,
+   "severityDefault": "medium",
+   "source": "scanner",
+   "states": [
+    "home.search-results"
+   ],
+   "summary": "announced-as: announced as listbox \"Google\".",
+   "title": "Wrong role or state: listbox \"Google\""
+  }
+ ],
+ "primaries": [
+  "home.search-results"
+ ],
+ "reach": {
+  "baseUrl": "https://demo.mercury.com",
+  "data": "data",
+  "map": "build/map.json",
+  "run": "2026-10-03-1525",
+  "workspace": "a11y"
+ },
+ "run": "2026-10-03-1525"
+}

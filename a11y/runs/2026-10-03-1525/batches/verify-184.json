@@ -1,0 +1,505 @@
+{
+ "area": "home",
+ "batch": "verify-184",
+ "findings": [
+  {
+   "attachments": [],
+   "attempt": 1,
+   "basis": "violation",
+   "criteria": [
+    "1.4.3"
+   ],
+   "evidence": [
+    {
+     "evidence": {
+      "bgColor": "#bac2f7",
+      "contrastRatio": 1.72,
+      "expectedContrastRatio": "4.5:1",
+      "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 1.72 (foreground color: #ffffff, background color: #bac2f7, font size: 11.3pt (15px), font weight: normal). Expected contrast ratio of 4.5:1",
+      "fgColor": "#ffffff",
+      "fontSize": "11.3pt (15px)",
+      "fontWeight": "normal",
+      "messageKey": null
+     },
+     "occurrence": {
+      "ancestors": [
+       [],
+       [
+        "_button-wrapper_1rzdg_13",
+        "_button_1rzdg_13",
+        "_primary_1rzdg_101",
+        "_disabled_1rzdg_20",
+        "_small_1rzdg_88"
+       ],
+       [
+        "_container_1ieyt_1",
+        "_rightAlign_1ieyt_9",
+        "_buttons_i6wom_1"
+       ],
+       [],
+       [],
+       [
+        "_large_kwlx6_9",
+        "_noHover_3n0se_28",
+        "_shadow_3n0se_25",
+        "_raisedBackground_3n0se_45",
+        "_card_lo4oy_4",
+        "_defaultPadding_lo4oy_27",
+        "_small_lo4oy_11"
+       ],
+       [
+        "ReactModal__Content",
+        "ReactModal__Content--after-open",
+        "_modal_lo4oy_73"
+       ],
+       [
+        "ReactModal__Overlay",
+        "ReactModal__Overlay--after-open",
+        "_overlay_lo4oy_89",
+        "_backgroundColor_lo4oy_103"
+       ]
+      ],
+      "classes": [],
+      "data": {},
+      "heading": "Customize the Mercury demo",
+      "landmark": {
+       "name": "",
+       "role": "form"
+      },
+      "layer": "top",
+      "name": "",
+      "rect": [
+       819,
+       756,
+       53,
+       24
+      ],
+      "role": "generic",
+      "tag": "div",
+      "xpath": "/html/body/div[15]/div[1]/div[1]/div[1]/form[1]/div[1]/div[8]/button[2]/div[1]/div[1]"
+     },
+     "state": "home.customize-demo-modal"
+    },
+    {
+     "evidence": {
+      "bgColor": "#bac2f7",
+      "contrastRatio": 1.72,
+      "expectedContrastRatio": "4.5:1",
+      "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 1.72 (foreground color: #ffffff, background color: #bac2f7, font size: 11.3pt (15px), font weight: normal). Expected contrast ratio of 4.5:1",
+      "fgColor": "#ffffff",
+      "fontSize": "11.3pt (15px)",
+      "fontWeight": "normal",
+      "messageKey": null
+     },
+     "occurrence": {
+      "ancestors": [
+       [],
+       [],
+       [
+        "_button-wrapper_1rzdg_13",
+        "_button_1rzdg_13",
+        "_primary_1rzdg_101",
+        "_disabled_1rzdg_20",
+        "_small_1rzdg_88"
+       ],
+       [
+        "_bottomButtons_80via_5"
+       ],
+       [],
+       [
+        "_wrapper_80via_1"
+       ],
+       [
+        "_contentDiv_bcpsw_53",
+        "_contentDivHeightPreset_bcpsw_62",
+        "_addFundsFlowContent_1wxi3_1"
+       ],
+       [
+        "_fullScreenWorkspaceLayout_bcpsw_14",
+        "_fullScreenWorkspaceLayoutBackground_bcpsw_32"
+       ]
+      ],
+      "classes": [],
+      "data": {},
+      "heading": "",
+      "landmark": {
+       "name": "",
+       "role": "form"
+      },
+      "layer": "document",
+      "name": "",
+      "rect": [
+       675,
+       590,
+       75,
+       24
+      ],
+      "role": "generic",
+      "tag": "div",
+      "xpath": "/html/body/div[1]/main[1]/div[1]/div[2]/div[2]/div[3]/div[1]/form[1]/div[2]/button[2]/div[1]/div[1]/div[1]"
+     },
+     "state": "payments.deposit-check-images"
+    }
+   ],
+   "evidenceHash": "7c5de65d74e74c3a10f40f0384f73a2559c421ce15f8ed98e2c008e402fb12a7",
+   "facts": {
+    "bg": "#bac2f7",
+    "criterion": "1.4.3",
+    "criterionName": "Contrast (Minimum)",
+    "element": "text in \"Customize the Mercury demo\"",
+    "fg": "#ffffff",
+    "ratio": "1.72",
+    "required": "4.5",
+    "rule": "color-contrast",
+    "screen": "Customize the Mercury demo modal",
+    "screens": 3
+   },
+   "family": "contrast",
+   "guidance": "High under 2:1, or under 3:1 for essential text.",
+   "issueId": null,
+   "key": "contrast:color-contrast:26cfcc22b1b2",
+   "measured": true,
+   "primary": "home.customize-demo-modal",
+   "proposals": [],
+   "rule": "color-contrast",
+   "screens": 3,
+   "severityDefault": "medium",
+   "source": "scanner",
+   "states": [
+    "home.customize-demo-modal",
+    "payments.deposit-check-images"
+   ],
+   "summary": "axe color-contrast: #ffffff on #bac2f7 measures 1.72:1; AA needs 4.5:1.",
+   "title": "Low contrast: text in \"Customize the Mercury demo\""
+  },
+  {
+   "attachments": [],
+   "attempt": 1,
+   "basis": "violation",
+   "criteria": [
+    "4.1.2"
+   ],
+   "evidence": [
+    {
+     "evidence": {
+      "failureSummary": "Fix any of the following:\n  Element does not have an implicit (wrapped) <label>\n  Element does not have an explicit <label>\n  aria-label attribute does not exist or is empty\n  aria-labelledby attribute does not exist, references elements that do not exist or references elements that are empty\n  Element has no title attribute\n  Element has no placeholder attribute\n  Element's default semantics were not overridden with role=\"none\" or role=\"presentation\"",
+      "messageKey": "noAttr"
+     },
+     "occurrence": {
+      "ancestors": [
+       [
+        "_inputBox_q7hf7_93"
+       ],
+       [
+        "_inputBoxWrapper_q7hf7_93"
+       ],
+       [
+        "_textInputWrapper_q7hf7_24"
+       ],
+       [
+        "_provideDSTextInput_q7hf7_6",
+        "_balanceInput_i6wom_23"
+       ],
+       [
+        "_inputMargin_i6wom_19"
+       ],
+       [],
+       [],
+       [
+        "_large_kwlx6_9",
+        "_noHover_3n0se_28",
+        "_shadow_3n0se_25",
+        "_raisedBackground_3n0se_45",
+        "_card_lo4oy_4",
+        "_defaultPadding_lo4oy_27",
+        "_small_lo4oy_11"
+       ]
+      ],
+      "classes": [
+       "_input_q7hf7_93"
+      ],
+      "data": {},
+      "heading": "Customize the Mercury demo",
+      "landmark": {
+       "name": "",
+       "role": "form"
+      },
+      "layer": "top",
+      "name": "",
+      "rect": [
+       564,
+       652,
+       327,
+       24
+      ],
+      "role": "textbox",
+      "tag": "input",
+      "xpath": "/html/body/div[15]/div[1]/div[1]/div[1]/form[1]/div[1]/div[7]/div[1]/div[1]/div[1]/div[1]/input[1]"
+     },
+     "state": "home.customize-demo-modal"
+    },
+    {
+     "evidence": {
+      "failureSummary": "Fix any of the following:\n  Element does not have an implicit (wrapped) <label>\n  Element does not have an explicit <label>\n  aria-label attribute does not exist or is empty\n  aria-labelledby attribute does not exist, references elements that do not exist or references elements that are empty\n  Element has no title attribute\n  Element has no placeholder attribute\n  Element's default semantics were not overridden with role=\"none\" or role=\"presentation\"",
+      "messageKey": "noAttr"
+     },
+     "occurrence": {
+      "ancestors": [
+       [
+        "_inputBox_q7hf7_93",
+        "_error_q7hf7_41"
+       ],
+       [
+        "_inputBoxWrapper_q7hf7_93"
+       ],
+       [
+        "_textInputWrapper_q7hf7_24"
+       ],
+       [
+        "_provideDSTextInput_q7hf7_6",
+        "_balanceInput_i6wom_23"
+       ],
+       [
+        "_inputMargin_i6wom_19"
+       ],
+       [],
+       [],
+       [
+        "_large_kwlx6_9",
+        "_noHover_3n0se_28",
+        "_shadow_3n0se_25",
+        "_raisedBackground_3n0se_45",
+        "_card_lo4oy_4",
+        "_defaultPadding_lo4oy_27",
+        "_small_lo4oy_11"
+       ]
+      ],
+      "classes": [
+       "_input_q7hf7_93"
+      ],
+      "data": {},
+      "heading": "Customize the Mercury demo",
+      "landmark": {
+       "name": "",
+       "role": "form"
+      },
+      "layer": "top",
+      "name": "",
+      "rect": [
+       564,
+       700,
+       327,
+       24
+      ],
+      "role": "textbox",
+      "tag": "input",
+      "xpath": "/html/body/div[15]/div[1]/div[1]/div[1]/form[1]/div[1]/div[7]/div[1]/div[1]/div[1]/div[1]/input[1]"
+     },
+     "state": "home.customize-demo-invalid"
+    }
+   ],
+   "evidenceHash": "111f2256352ba401d462a3540c0ae45fdf5d4817182a57830063de3228689c8a",
+   "facts": {
+    "announced": "textbox \"\"",
+    "axeSummary": "Element does not have an implicit (wrapped) <label>; Element does not have an explicit <label>; aria-label attribute does not exist or is empty; aria-labelledb…",
+    "criterion": "4.1.2",
+    "criterionName": "Name, Role, Value",
+    "element": "textbox in \"Customize the Mercury demo\"",
+    "rule": "label",
+    "screen": "Customize the Mercury demo modal"
+   },
+   "family": "name",
+   "guidance": "High for an unnamed form control or the sole primary action.",
+   "issueId": null,
+   "key": "name:label:8135a5f5a1a3",
+   "measured": false,
+   "primary": "home.customize-demo-modal",
+   "proposals": [],
+   "rule": "label",
+   "screens": 4,
+   "severityDefault": "medium",
+   "source": "scanner",
+   "states": [
+    "home.customize-demo-modal",
+    "home.customize-demo-invalid"
+   ],
+   "summary": "label: announced as textbox \"\". Element does not have an implicit (wrapped) <label>; Element does not have an explicit <label>; aria-label attribute does not exist or is empty; aria-labelledb…",
+   "title": "Missing or unclear name: textbox in \"Customize the Mercury demo\""
+  },
+  {
+   "attachments": [],
+   "attempt": 1,
+   "basis": "violation",
+   "criteria": [
+    "1.3.5"
+   ],
+   "evidence": [
+    {
+     "evidence": {
+      "failureSummary": "Fix all of the following:\n  the autocomplete attribute is incorrectly formatted"
+     },
+     "occurrence": {
+      "ancestors": [
+       [
+        "_textboxWrapper_1a7mr_158"
+       ],
+       [
+        "_selectWrapper_1a7mr_150"
+       ],
+       [
+        "_comboboxWrapper_1a7mr_6",
+        "_dropDown_i6wom_27",
+        "session-replay-block"
+       ],
+       [],
+       [],
+       [
+        "_large_kwlx6_9",
+        "_noHover_3n0se_28",
+        "_shadow_3n0se_25",
+        "_raisedBackground_3n0se_45",
+        "_card_lo4oy_4",
+        "_defaultPadding_lo4oy_27",
+        "_small_lo4oy_11"
+       ],
+       [
+        "ReactModal__Content",
+        "ReactModal__Content--after-open",
+        "_modal_lo4oy_73"
+       ],
+       [
+        "ReactModal__Overlay",
+        "ReactModal__Overlay--after-open",
+        "_overlay_lo4oy_89",
+        "_backgroundColor_lo4oy_103"
+       ]
+      ],
+      "classes": [
+       "_textboxInput_1a7mr_250"
+      ],
+      "data": {},
+      "heading": "Customize the Mercury demo",
+      "landmark": {
+       "name": "",
+       "role": "form"
+      },
+      "layer": "top",
+      "name": "Industry",
+      "rect": [
+       537,
+       565,
+       330,
+       38
+      ],
+      "role": "combobox",
+      "tag": "input",
+      "xpath": "/html/body/div[15]/div[1]/div[1]/div[1]/form[1]/div[1]/div[6]/div[1]/div[1]/input[1]"
+     },
+     "state": "home.customize-demo-modal"
+    },
+    {
+     "evidence": {
+      "failureSummary": "Fix all of the following:\n  the autocomplete attribute is incorrectly formatted"
+     },
+     "occurrence": {
+      "ancestors": [
+       [
+        "_textboxWrapper_1a7mr_158",
+        "_textboxWrapperError_1a7mr_227"
+       ],
+       [
+        "_selectWrapper_1a7mr_150"
+       ],
+       [
+        "_comboboxWrapper_1a7mr_6",
+        "_dropDown_i6wom_27",
+        "session-replay-block"
+       ],
+       [],
+       [],
+       [
+        "_large_kwlx6_9",
+        "_noHover_3n0se_28",
+        "_shadow_3n0se_25",
+        "_raisedBackground_3n0se_45",
+        "_card_lo4oy_4",
+        "_defaultPadding_lo4oy_27",
+        "_small_lo4oy_11"
+       ],
+       [
+        "ReactModal__Content",
+        "ReactModal__Content--after-open",
+        "_modal_lo4oy_73"
+       ],
+       [
+        "ReactModal__Overlay",
+        "ReactModal__Overlay--after-open",
+        "_overlay_lo4oy_89",
+        "_backgroundColor_lo4oy_103"
+       ]
+      ],
+      "classes": [
+       "_textboxInput_1a7mr_250"
+      ],
+      "data": {},
+      "heading": "Customize the Mercury demo",
+      "landmark": {
+       "name": "",
+       "role": "form"
+      },
+      "layer": "top",
+      "name": "Industry",
+      "rect": [
+       537,
+       589,
+       330,
+       38
+      ],
+      "role": "combobox",
+      "tag": "input",
+      "xpath": "/html/body/div[15]/div[1]/div[1]/div[1]/form[1]/div[1]/div[6]/div[1]/div[1]/input[1]"
+     },
+     "state": "home.customize-demo-invalid"
+    }
+   ],
+   "evidenceHash": "aa0d19a78305e248a1ca0ab5ecdf5448ed86cd076529eef1abbc14a3fc9af8e8",
+   "facts": {
+    "announced": "combobox \"Industry\" [expanded=false, haspopup=listbox]",
+    "axeSummary": "the autocomplete attribute is incorrectly formatted",
+    "criterion": "1.3.5",
+    "criterionName": "Identify Input Purpose",
+    "element": "combobox \"Industry\"",
+    "rule": "autocomplete-valid",
+    "screen": "Customize the Mercury demo modal"
+   },
+   "family": "role-state",
+   "guidance": "Low for optional ARIA or an invalid autocomplete token; high when aria-hidden hides the whole page.",
+   "issueId": null,
+   "key": "role-state:autocomplete-valid:08fc2d04ed29",
+   "measured": false,
+   "primary": "home.customize-demo-modal",
+   "proposals": [],
+   "rule": "autocomplete-valid",
+   "screens": 2,
+   "severityDefault": "medium",
+   "source": "scanner",
+   "states": [
+    "home.customize-demo-modal",
+    "home.customize-demo-invalid"
+   ],
+   "summary": "autocomplete-valid: announced as combobox \"Industry\" [expanded=false, haspopup=listbox]. the autocomplete attribute is incorrectly formatted",
+   "title": "Invalid autocomplete value: combobox \"Industry\""
+  }
+ ],
+ "primaries": [
+  "home.customize-demo-modal"
+ ],
+ "reach": {
+  "baseUrl": "https://demo.mercury.com",
+  "data": "data",
+  "map": "build/map.json",
+  "run": "2026-10-03-1525",
+  "workspace": "a11y"
+ },
+ "run": "2026-10-03-1525"
+}

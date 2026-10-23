@@ -1,0 +1,133 @@
+{
+ "area": "books",
+ "batch": "verify-111",
+ "findings": [
+  {
+   "attachments": [],
+   "attempt": 1,
+   "basis": "failure",
+   "criteria": [
+    "2.4.7"
+   ],
+   "evidence": [
+    {
+     "evidence": {
+      "diff": 0,
+      "floor": 16,
+      "focusVisible": true,
+      "previous": null,
+      "stop": 1,
+      "stops": 3,
+      "style": [
+       "::after border-color",
+       "::after color",
+       "::after outline",
+       "::after text-decoration",
+       "::before border-color",
+       "::before color",
+       "::before outline",
+       "::before text-decoration",
+       "^1 border-color",
+       "^1 color",
+       "^1 outline",
+       "^1 text-decoration",
+       "border-color",
+       "color",
+       "text-decoration"
+      ]
+     },
+     "occurrence": {
+      "ancestors": [
+       [
+        "_searchBar_17deh_123"
+       ],
+       [
+        "_large_kwlx6_9",
+        "_noHover_3n0se_28",
+        "_shadow_3n0se_25",
+        "_raisedBackground_3n0se_45",
+        "_card_lo4oy_4",
+        "_modal_17deh_74",
+        "session-replay-unmask",
+        "_large_lo4oy_19"
+       ],
+       [
+        "ReactModal__Content",
+        "ReactModal__Content--after-open",
+        "_modal_lo4oy_73",
+        "_disableAutoCenter_lo4oy_79",
+        "_modalContent_17deh_92"
+       ],
+       [
+        "ReactModal__Overlay",
+        "ReactModal__Overlay--after-open",
+        "_overlay_lo4oy_89",
+        "_overlay_17deh_98"
+       ],
+       [
+        "ReactModalPortal"
+       ]
+      ],
+      "classes": [
+       "_searchInput_17deh_144"
+      ],
+      "data": {},
+      "heading": "Keyboard shortcuts",
+      "landmark": {
+       "name": "Keyboard shortcuts",
+       "role": "dialog"
+      },
+      "layer": "top",
+      "name": "Search keyboard shortcuts",
+      "rect": [
+       369,
+       146,
+       734,
+       28
+      ],
+      "role": "textbox",
+      "tag": "input",
+      "xpath": "/html/body/div[9]/div[1]/div[1]/div[1]/label[1]/input[1]"
+     },
+     "state": "books.shortcuts"
+    }
+   ],
+   "evidenceHash": "68227c770e49c49f8c6c5f870f2a1adbacc6d8820fcbc3806684aec6c9618bd2",
+   "facts": {
+    "criterion": "2.4.7",
+    "criterionName": "Focus Visible",
+    "element": "textbox \"Search keyboard shortcuts\"",
+    "screen": "Keyboard shortcuts",
+    "screens": 1,
+    "stop": "1"
+   },
+   "family": "focus-visible",
+   "guidance": "High on shared components on primary paths.",
+   "issueId": null,
+   "key": "focus-visible:focus-not-visible:9417042cc52e",
+   "measured": true,
+   "primary": "books.shortcuts",
+   "proposals": [],
+   "rule": "focus-not-visible",
+   "screens": 1,
+   "severityDefault": "medium",
+   "source": "scanner",
+   "states": [
+    "books.shortcuts"
+   ],
+   "summary": "Tab stop 1: focusing the textbox \"Search keyboard shortcuts\" changed no pixels within 8 px of it.",
+   "title": "No visible focus: textbox \"Search keyboard shortcuts\""
+  }
+ ],
+ "primaries": [
+  "books.shortcuts"
+ ],
+ "reach": {
+  "baseUrl": "https://demo.mercury.com",
+  "data": "data",
+  "map": "build/map.json",
+  "run": "2026-10-03-1525",
+  "workspace": "a11y"
+ },
+ "run": "2026-10-03-1525"
+}

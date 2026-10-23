@@ -1,0 +1,1083 @@
+{
+ "area": "settings",
+ "batch": "verify-524",
+ "findings": [
+  {
+   "attachments": [],
+   "attempt": 1,
+   "basis": "candidate",
+   "criteria": [
+    "4.1.2"
+   ],
+   "evidence": [
+    {
+     "evidence": {
+      "description": "Full control including policies, accounts, and settings",
+      "name": "Admin Full control including policies, accounts, and settings",
+      "role": "radio",
+      "states": {
+       "checked": false
+      },
+      "template": "radio \"Admin Full control including policies, accounts, and settings\" [checked=false] (Full control including policies, accounts, and settings)"
+     },
+     "occurrence": {
+      "ancestors": [
+       [
+        "_radioButtonWrapper_ial95_4"
+       ],
+       [],
+       [
+        "_accordionItemHeader_1q1xu_16",
+        "_accordionHeader_bnhk7_47"
+       ],
+       [
+        "_bodyDefault_qaod7_40"
+       ],
+       [
+        "_accordionWrapper_1q1xu_3",
+        "_accordionBorder_1q1xu_7",
+        "_accordionWrapper_bnhk7_1"
+       ],
+       [
+        "_radioGroup_phe2n_23",
+        "_radioGroup_9dnjl_1",
+        "_columnLayout_phe2n_28"
+       ],
+       [],
+       [
+        "_contentArea_1xvys_1",
+        "_contentLayout_1xvys_23"
+       ]
+      ],
+      "classes": [
+       "_radioButton_ial95_4"
+      ],
+      "data": {},
+      "heading": "Permissions",
+      "landmark": {
+       "name": "",
+       "role": "form"
+      },
+      "layer": "document",
+      "name": "Admin Full control including policies, accounts, and settings",
+      "rect": [
+       523,
+       543,
+       18,
+       18
+      ],
+      "role": "radio",
+      "tag": "input",
+      "xpath": "/html/body/div[1]/main[1]/div[1]/div[2]/div[2]/div[3]/form[1]/section[1]/div[2]/fieldset[1]/div[2]/h2[1]/button[1]/div[1]/label[1]/input[1]"
+     },
+     "state": "settings.invite-role"
+    },
+    {
+     "evidence": {
+      "description": "Full control including policies, accounts, and settings",
+      "name": "Admin Full control including policies, accounts, and settings",
+      "role": "radio",
+      "states": {
+       "checked": false
+      },
+      "template": "radio \"Admin Full control including policies, accounts, and settings\" [checked=false] (Full control including policies, accounts, and settings)"
+     },
+     "occurrence": {
+      "ancestors": [
+       [
+        "_radioButtonWrapper_ial95_4"
+       ],
+       [],
+       [
+        "_accordionItemHeader_1q1xu_16",
+        "_accordionHeader_bnhk7_47"
+       ],
+       [
+        "_bodyDefault_qaod7_40"
+       ],
+       [
+        "_accordionWrapper_1q1xu_3",
+        "_accordionBorder_1q1xu_7",
+        "_accordionWrapper_bnhk7_1"
+       ],
+       [
+        "_radioGroup_phe2n_23",
+        "_radioGroup_9dnjl_1",
+        "_columnLayout_phe2n_28"
+       ],
+       [],
+       [
+        "_contentArea_1xvys_1",
+        "_contentLayout_1xvys_23"
+       ]
+      ],
+      "classes": [
+       "_radioButton_ial95_4"
+      ],
+      "data": {},
+      "heading": "Permissions",
+      "landmark": {
+       "name": "",
+       "role": "form"
+      },
+      "layer": "document",
+      "name": "Admin Full control including policies, accounts, and settings",
+      "rect": [
+       523,
+       378,
+       18,
+       18
+      ],
+      "role": "radio",
+      "tag": "input",
+      "xpath": "/html/body/div[1]/main[1]/div[1]/div[2]/div[2]/div[3]/form[1]/section[1]/div[2]/fieldset[1]/div[2]/h2[1]/button[1]/div[1]/label[1]/input[1]"
+     },
+     "state": "settings.role-accountant"
+    }
+   ],
+   "evidenceHash": "6c7fdce8f54d0eb9d2a18d4f24cc9ee86cd75770c42103faf16e978dd2aed61f",
+   "facts": {
+    "announced": "radio \"Admin Full control including policies, accounts, and settings\" [checked=…",
+    "axeSummary": "",
+    "criterion": "4.1.2",
+    "criterionName": "Name, Role, Value",
+    "element": "radio \"Admin Full control including policies, ac…\"",
+    "rule": "announced-as",
+    "screen": "Invite a user — Assign Role (Employee)"
+   },
+   "family": "role-state",
+   "guidance": "Low for optional ARIA or an invalid autocomplete token; high when aria-hidden hides the whole page.",
+   "issueId": null,
+   "key": "role-state:announced-as:10ea5f3347eb",
+   "measured": false,
+   "primary": "settings.invite-role",
+   "proposals": [],
+   "rule": "announced-as",
+   "screens": 6,
+   "severityDefault": "medium",
+   "source": "scanner",
+   "states": [
+    "settings.invite-role",
+    "settings.role-accountant"
+   ],
+   "summary": "announced-as: announced as radio \"Admin Full control including policies, accounts, and settings\" [checked=….",
+   "title": "Wrong role or state: radio \"Admin Full control including policies, ac…\""
+  },
+  {
+   "attachments": [],
+   "attempt": 1,
+   "basis": "candidate",
+   "criteria": [
+    "4.1.2"
+   ],
+   "evidence": [
+    {
+     "evidence": {
+      "description": "Can view all accounts and transactions, and manage books",
+      "name": "Accountant Can view all accounts and transactions, and manage books",
+      "role": "radio",
+      "states": {
+       "checked": false
+      },
+      "template": "radio \"Accountant Can view all accounts and transactions, and manage books\" [checked=false] (Can view all accounts and transactions, and manage books)"
+     },
+     "occurrence": {
+      "ancestors": [
+       [
+        "_radioButtonWrapper_ial95_4"
+       ],
+       [],
+       [
+        "_accordionItemHeader_1q1xu_16",
+        "_accordionHeader_bnhk7_47"
+       ],
+       [
+        "_bodyDefault_qaod7_40"
+       ],
+       [
+        "_accordionWrapper_1q1xu_3",
+        "_accordionBorder_1q1xu_7",
+        "_accordionWrapper_bnhk7_1"
+       ],
+       [
+        "_radioGroup_phe2n_23",
+        "_radioGroup_9dnjl_1",
+        "_columnLayout_phe2n_28"
+       ],
+       [],
+       [
+        "_contentArea_1xvys_1",
+        "_contentLayout_1xvys_23"
+       ]
+      ],
+      "classes": [
+       "_radioButton_ial95_4"
+      ],
+      "data": {},
+      "heading": "Permissions",
+      "landmark": {
+       "name": "",
+       "role": "form"
+      },
+      "layer": "document",
+      "name": "Accountant Can view all accounts and transactions, and manage books",
+      "rect": [
+       523,
+       621,
+       18,
+       18
+      ],
+      "role": "radio",
+      "tag": "input",
+      "xpath": "/html/body/div[1]/main[1]/div[1]/div[2]/div[2]/div[3]/form[1]/section[1]/div[2]/fieldset[1]/div[3]/h2[1]/button[1]/div[1]/label[1]/input[1]"
+     },
+     "state": "settings.invite-role"
+    },
+    {
+     "evidence": {
+      "description": "Can view all accounts and transactions, and manage books",
+      "name": "Accountant Can view all accounts and transactions, and manage books",
+      "role": "radio",
+      "states": {
+       "checked": false
+      },
+      "template": "radio \"Accountant Can view all accounts and transactions, and manage books\" [checked=false] (Can view all accounts and transactions, and manage books)"
+     },
+     "occurrence": {
+      "ancestors": [
+       [
+        "_radioButtonWrapper_ial95_4"
+       ],
+       [],
+       [
+        "_accordionItemHeader_1q1xu_16",
+        "_accordionHeader_bnhk7_47"
+       ],
+       [
+        "_bodyDefault_qaod7_40"
+       ],
+       [
+        "_accordionWrapper_1q1xu_3",
+        "_accordionBorder_1q1xu_7",
+        "_accordionWrapper_bnhk7_1"
+       ],
+       [
+        "_radioGroup_phe2n_23",
+        "_radioGroup_9dnjl_1",
+        "_columnLayout_phe2n_28"
+       ],
+       [],
+       [
+        "_contentArea_1xvys_1",
+        "_contentLayout_1xvys_23"
+       ]
+      ],
+      "classes": [
+       "_radioButton_ial95_4"
+      ],
+      "data": {},
+      "heading": "Permissions",
+      "landmark": {
+       "name": "",
+       "role": "form"
+      },
+      "layer": "document",
+      "name": "Accountant Can view all accounts and transactions, and manage books",
+      "rect": [
+       523,
+       733,
+       18,
+       18
+      ],
+      "role": "radio",
+      "tag": "input",
+      "xpath": "/html/body/div[1]/main[1]/div[1]/div[2]/div[2]/div[3]/form[1]/section[1]/div[2]/fieldset[1]/div[3]/h2[1]/button[1]/div[1]/label[1]/input[1]"
+     },
+     "state": "settings.role-admin"
+    }
+   ],
+   "evidenceHash": "91a13c275c4137a719f7fa0be959854f22e9df70975a1eb697d711e6551e5366",
+   "facts": {
+    "announced": "radio \"Accountant Can view all accounts and transactions, and manage books\" [ch…",
+    "axeSummary": "",
+    "criterion": "4.1.2",
+    "criterionName": "Name, Role, Value",
+    "element": "radio \"Accountant Can view all accounts and tran…\"",
+    "rule": "announced-as",
+    "screen": "Invite a user — Assign Role (Employee)"
+   },
+   "family": "role-state",
+   "guidance": "Low for optional ARIA or an invalid autocomplete token; high when aria-hidden hides the whole page.",
+   "issueId": null,
+   "key": "role-state:announced-as:235f5fe5cb55",
+   "measured": false,
+   "primary": "settings.invite-role",
+   "proposals": [],
+   "rule": "announced-as",
+   "screens": 6,
+   "severityDefault": "medium",
+   "source": "scanner",
+   "states": [
+    "settings.invite-role",
+    "settings.role-admin"
+   ],
+   "summary": "announced-as: announced as radio \"Accountant Can view all accounts and transactions, and manage books\" [ch….",
+   "title": "Wrong role or state: radio \"Accountant Can view all accounts and tran…\""
+  },
+  {
+   "attachments": [],
+   "attempt": 1,
+   "basis": "candidate",
+   "criteria": [
+    "4.1.2"
+   ],
+   "evidence": [
+    {
+     "evidence": {
+      "description": "Can view all accounts and transactions, and be issued cards",
+      "name": "Read Only Can view all accounts and transactions, and be issued cards",
+      "role": "radio",
+      "states": {
+       "checked": false
+      },
+      "template": "radio \"Read Only Can view all accounts and transactions, and be issued cards\" [checked=false] (Can view all accounts and transactions, and be issued cards)"
+     },
+     "occurrence": {
+      "ancestors": [
+       [
+        "_radioButtonWrapper_ial95_4"
+       ],
+       [],
+       [
+        "_accordionItemHeader_1q1xu_16",
+        "_accordionHeader_bnhk7_47"
+       ],
+       [
+        "_bodyDefault_qaod7_40"
+       ],
+       [
+        "_accordionWrapper_1q1xu_3",
+        "_accordionBorder_1q1xu_7",
+        "_accordionWrapper_bnhk7_1"
+       ],
+       [
+        "_radioGroup_phe2n_23",
+        "_radioGroup_9dnjl_1",
+        "_columnLayout_phe2n_28"
+       ],
+       [],
+       [
+        "_contentArea_1xvys_1",
+        "_contentLayout_1xvys_23"
+       ]
+      ],
+      "classes": [
+       "_radioButton_ial95_4"
+      ],
+      "data": {},
+      "heading": "Permissions",
+      "landmark": {
+       "name": "",
+       "role": "form"
+      },
+      "layer": "document",
+      "name": "Read Only Can view all accounts and transactions, and be issued cards",
+      "rect": [
+       523,
+       973,
+       18,
+       18
+      ],
+      "role": "radio",
+      "tag": "input",
+      "xpath": "/html/body/div[1]/main[1]/div[1]/div[2]/div[2]/div[3]/form[1]/section[1]/div[2]/fieldset[1]/div[7]/h2[1]/button[1]/div[1]/label[1]/input[1]"
+     },
+     "state": "settings.invite-role"
+    },
+    {
+     "evidence": {
+      "description": "Can view all accounts and transactions, and be issued cards",
+      "name": "Read Only Can view all accounts and transactions, and be issued cards",
+      "role": "radio",
+      "states": {
+       "checked": false
+      },
+      "template": "radio \"Read Only Can view all accounts and transactions, and be issued cards\" [checked=false] (Can view all accounts and transactions, and be issued cards)"
+     },
+     "occurrence": {
+      "ancestors": [
+       [
+        "_radioButtonWrapper_ial95_4"
+       ],
+       [],
+       [
+        "_accordionItemHeader_1q1xu_16",
+        "_accordionHeader_bnhk7_47"
+       ],
+       [
+        "_bodyDefault_qaod7_40"
+       ],
+       [
+        "_accordionWrapper_1q1xu_3",
+        "_accordionBorder_1q1xu_7",
+        "_accordionWrapper_bnhk7_1"
+       ],
+       [
+        "_radioGroup_phe2n_23",
+        "_radioGroup_9dnjl_1",
+        "_columnLayout_phe2n_28"
+       ],
+       [],
+       [
+        "_contentArea_1xvys_1",
+        "_contentLayout_1xvys_23"
+       ]
+      ],
+      "classes": [
+       "_radioButton_ial95_4"
+      ],
+      "data": {},
+      "heading": "Permissions",
+      "landmark": {
+       "name": "",
+       "role": "form"
+      },
+      "layer": "document",
+      "name": "Read Only Can view all accounts and transactions, and be issued cards",
+      "rect": [
+       523,
+       1029,
+       18,
+       18
+      ],
+      "role": "radio",
+      "tag": "input",
+      "xpath": "/html/body/div[1]/main[1]/div[1]/div[2]/div[2]/div[3]/form[1]/section[1]/div[2]/fieldset[1]/div[7]/h2[1]/button[1]/div[1]/label[1]/input[1]"
+     },
+     "state": "settings.role-accountant"
+    }
+   ],
+   "evidenceHash": "ab099d0364c70c385a7be6602c13a088a89be6796a4a4d07cd118ecadcdb549d",
+   "facts": {
+    "announced": "radio \"Read Only Can view all accounts and transactions, and be issued cards\" […",
+    "axeSummary": "",
+    "criterion": "4.1.2",
+    "criterionName": "Name, Role, Value",
+    "element": "radio \"Read Only Can view all accounts and trans…\"",
+    "rule": "announced-as",
+    "screen": "Invite a user — Assign Role (Employee)"
+   },
+   "family": "role-state",
+   "guidance": "Low for optional ARIA or an invalid autocomplete token; high when aria-hidden hides the whole page.",
+   "issueId": null,
+   "key": "role-state:announced-as:539f16754146",
+   "measured": false,
+   "primary": "settings.invite-role",
+   "proposals": [],
+   "rule": "announced-as",
+   "screens": 6,
+   "severityDefault": "medium",
+   "source": "scanner",
+   "states": [
+    "settings.invite-role",
+    "settings.role-accountant"
+   ],
+   "summary": "announced-as: announced as radio \"Read Only Can view all accounts and transactions, and be issued cards\" [….",
+   "title": "Wrong role or state: radio \"Read Only Can view all accounts and trans…\""
+  },
+  {
+   "attachments": [],
+   "attempt": 1,
+   "basis": "candidate",
+   "criteria": [
+    "4.1.2"
+   ],
+   "evidence": [
+    {
+     "evidence": {
+      "description": "Can initiate payments and transfers, and manage recipients on selected accounts",
+      "name": "Money Mover Can initiate payments and transfers, and manage recipients on selected accounts",
+      "role": "radio",
+      "states": {
+       "checked": false
+      },
+      "template": "radio \"Money Mover Can initiate payments and transfers, and manage recipients on selected accounts\" [checked=false] (Can initiate payments and transfers, and manage recipients on selected accounts)"
+     },
+     "occurrence": {
+      "ancestors": [
+       [
+        "_radioButtonWrapper_ial95_4"
+       ],
+       [],
+       [
+        "_accordionItemHeader_1q1xu_16",
+        "_accordionHeader_bnhk7_47"
+       ],
+       [
+        "_bodyDefault_qaod7_40"
+       ],
+       [
+        "_accordionWrapper_1q1xu_3",
+        "_accordionBorder_1q1xu_7",
+        "_accordionWrapper_bnhk7_1"
+       ],
+       [
+        "_radioGroup_phe2n_23",
+        "_radioGroup_9dnjl_1",
+        "_columnLayout_phe2n_28"
+       ],
+       [],
+       [
+        "_contentArea_1xvys_1",
+        "_contentLayout_1xvys_23"
+       ]
+      ],
+      "classes": [
+       "_radioButton_ial95_4"
+      ],
+      "data": {},
+      "heading": "Permissions",
+      "landmark": {
+       "name": "",
+       "role": "form"
+      },
+      "layer": "document",
+      "name": "Money Mover Can initiate payments and transfers, and manage recipients on selected accounts",
+      "rect": [
+       523,
+       875,
+       18,
+       18
+      ],
+      "role": "radio",
+      "tag": "input",
+      "xpath": "/html/body/div[1]/main[1]/div[1]/div[2]/div[2]/div[3]/form[1]/section[1]/div[2]/fieldset[1]/div[6]/h2[1]/button[1]/div[1]/label[1]/input[1]"
+     },
+     "state": "settings.invite-role"
+    },
+    {
+     "evidence": {
+      "description": "Can initiate payments and transfers, and manage recipients on selected accounts",
+      "name": "Money Mover Can initiate payments and transfers, and manage recipients on selected accounts",
+      "role": "radio",
+      "states": {
+       "checked": false
+      },
+      "template": "radio \"Money Mover Can initiate payments and transfers, and manage recipients on selected accounts\" [checked=false] (Can initiate payments and transfers, and manage recipients on selected accounts)"
+     },
+     "occurrence": {
+      "ancestors": [
+       [
+        "_radioButtonWrapper_ial95_4"
+       ],
+       [],
+       [
+        "_accordionItemHeader_1q1xu_16",
+        "_accordionHeader_bnhk7_47"
+       ],
+       [
+        "_bodyDefault_qaod7_40"
+       ],
+       [
+        "_accordionWrapper_1q1xu_3",
+        "_accordionBorder_1q1xu_7",
+        "_accordionWrapper_bnhk7_1"
+       ],
+       [
+        "_radioGroup_phe2n_23",
+        "_radioGroup_9dnjl_1",
+        "_columnLayout_phe2n_28"
+       ],
+       [],
+       [
+        "_contentArea_1xvys_1",
+        "_contentLayout_1xvys_23"
+       ]
+      ],
+      "classes": [
+       "_radioButton_ial95_4"
+      ],
+      "data": {},
+      "heading": "Permissions",
+      "landmark": {
+       "name": "",
+       "role": "form"
+      },
+      "layer": "document",
+      "name": "Money Mover Can initiate payments and transfers, and manage recipients on selected accounts",
+      "rect": [
+       523,
+       931,
+       18,
+       18
+      ],
+      "role": "radio",
+      "tag": "input",
+      "xpath": "/html/body/div[1]/main[1]/div[1]/div[2]/div[2]/div[3]/form[1]/section[1]/div[2]/fieldset[1]/div[6]/h2[1]/button[1]/div[1]/label[1]/input[1]"
+     },
+     "state": "settings.role-accountant"
+    }
+   ],
+   "evidenceHash": "f77b2bf2c8677ad97f384b7e99c361cd0125aeae711f7c78d95fe1462cbb2aa0",
+   "facts": {
+    "announced": "radio \"Money Mover Can initiate payments and transfers, and manage recipients o…",
+    "axeSummary": "",
+    "criterion": "4.1.2",
+    "criterionName": "Name, Role, Value",
+    "element": "radio \"Money Mover Can initiate payments and tra…\"",
+    "rule": "announced-as",
+    "screen": "Invite a user — Assign Role (Employee)"
+   },
+   "family": "role-state",
+   "guidance": "Low for optional ARIA or an invalid autocomplete token; high when aria-hidden hides the whole page.",
+   "issueId": null,
+   "key": "role-state:announced-as:bf5996ff727b",
+   "measured": false,
+   "primary": "settings.invite-role",
+   "proposals": [],
+   "rule": "announced-as",
+   "screens": 6,
+   "severityDefault": "medium",
+   "source": "scanner",
+   "states": [
+    "settings.invite-role",
+    "settings.role-accountant"
+   ],
+   "summary": "announced-as: announced as radio \"Money Mover Can initiate payments and transfers, and manage recipients o….",
+   "title": "Wrong role or state: radio \"Money Mover Can initiate payments and tra…\""
+  },
+  {
+   "attachments": [],
+   "attempt": 1,
+   "basis": "candidate",
+   "criteria": [
+    "4.1.2"
+   ],
+   "evidence": [
+    {
+     "evidence": {
+      "description": "Full non-admin access to accounts, payments, cards, and users",
+      "name": "Finance Lead Full non-admin access to accounts, payments, cards, and users",
+      "role": "radio",
+      "states": {
+       "checked": false
+      },
+      "template": "radio \"Finance Lead Full non-admin access to accounts, payments, cards, and users\" [checked=false] (Full non-admin access to accounts, payments, cards, and users)"
+     },
+     "occurrence": {
+      "ancestors": [
+       [
+        "_radioButtonWrapper_ial95_4"
+       ],
+       [],
+       [
+        "_accordionItemHeader_1q1xu_16",
+        "_accordionHeader_bnhk7_47"
+       ],
+       [
+        "_bodyDefault_qaod7_40"
+       ],
+       [
+        "_accordionWrapper_1q1xu_3",
+        "_accordionBorder_1q1xu_7",
+        "_accordionWrapper_bnhk7_1"
+       ],
+       [
+        "_radioGroup_phe2n_23",
+        "_radioGroup_9dnjl_1",
+        "_columnLayout_phe2n_28"
+       ],
+       [],
+       [
+        "_contentArea_1xvys_1",
+        "_contentLayout_1xvys_23"
+       ]
+      ],
+      "classes": [
+       "_radioButton_ial95_4"
+      ],
+      "data": {},
+      "heading": "Permissions",
+      "landmark": {
+       "name": "",
+       "role": "form"
+      },
+      "layer": "document",
+      "name": "Finance Lead Full non-admin access to accounts, payments, cards, and users",
+      "rect": [
+       523,
+       699,
+       18,
+       18
+      ],
+      "role": "radio",
+      "tag": "input",
+      "xpath": "/html/body/div[1]/main[1]/div[1]/div[2]/div[2]/div[3]/form[1]/section[1]/div[2]/fieldset[1]/div[4]/h2[1]/button[1]/div[1]/label[1]/input[1]"
+     },
+     "state": "settings.invite-role"
+    },
+    {
+     "evidence": {
+      "description": "Full non-admin access to accounts, payments, cards, and users",
+      "name": "Finance Lead Full non-admin access to accounts, payments, cards, and users",
+      "role": "radio",
+      "states": {
+       "checked": false
+      },
+      "template": "radio \"Finance Lead Full non-admin access to accounts, payments, cards, and users\" [checked=false] (Full non-admin access to accounts, payments, cards, and users)"
+     },
+     "occurrence": {
+      "ancestors": [
+       [
+        "_radioButtonWrapper_ial95_4"
+       ],
+       [],
+       [
+        "_accordionItemHeader_1q1xu_16",
+        "_accordionHeader_bnhk7_47"
+       ],
+       [
+        "_bodyDefault_qaod7_40"
+       ],
+       [
+        "_accordionWrapper_1q1xu_3",
+        "_accordionBorder_1q1xu_7",
+        "_accordionWrapper_bnhk7_1"
+       ],
+       [
+        "_radioGroup_phe2n_23",
+        "_radioGroup_9dnjl_1",
+        "_columnLayout_phe2n_28"
+       ],
+       [],
+       [
+        "_contentArea_1xvys_1",
+        "_contentLayout_1xvys_23"
+       ]
+      ],
+      "classes": [
+       "_radioButton_ial95_4"
+      ],
+      "data": {},
+      "heading": "Permissions",
+      "landmark": {
+       "name": "",
+       "role": "form"
+      },
+      "layer": "document",
+      "name": "Finance Lead Full non-admin access to accounts, payments, cards, and users",
+      "rect": [
+       523,
+       755,
+       18,
+       18
+      ],
+      "role": "radio",
+      "tag": "input",
+      "xpath": "/html/body/div[1]/main[1]/div[1]/div[2]/div[2]/div[3]/form[1]/section[1]/div[2]/fieldset[1]/div[4]/h2[1]/button[1]/div[1]/label[1]/input[1]"
+     },
+     "state": "settings.role-accountant"
+    }
+   ],
+   "evidenceHash": "2c1c832be95a4dac7f459a09c513086c96ff7c141808deade429b16e01f90aad",
+   "facts": {
+    "announced": "radio \"Finance Lead Full non-admin access to accounts, payments, cards, and use…",
+    "axeSummary": "",
+    "criterion": "4.1.2",
+    "criterionName": "Name, Role, Value",
+    "element": "radio \"Finance Lead Full non-admin access to acc…\"",
+    "rule": "announced-as",
+    "screen": "Invite a user — Assign Role (Employee)"
+   },
+   "family": "role-state",
+   "guidance": "Low for optional ARIA or an invalid autocomplete token; high when aria-hidden hides the whole page.",
+   "issueId": null,
+   "key": "role-state:announced-as:c1b561d7458d",
+   "measured": false,
+   "primary": "settings.invite-role",
+   "proposals": [],
+   "rule": "announced-as",
+   "screens": 6,
+   "severityDefault": "medium",
+   "source": "scanner",
+   "states": [
+    "settings.invite-role",
+    "settings.role-accountant"
+   ],
+   "summary": "announced-as: announced as radio \"Finance Lead Full non-admin access to accounts, payments, cards, and use….",
+   "title": "Wrong role or state: radio \"Finance Lead Full non-admin access to acc…\""
+  },
+  {
+   "attachments": [],
+   "attempt": 1,
+   "basis": "candidate",
+   "criteria": [
+    "4.1.2"
+   ],
+   "evidence": [
+    {
+     "evidence": {
+      "description": "Manages bookkeeping, transaction coding, ACH processing, and ledger integrations",
+      "name": "Finance Manager Manages bookkeeping, transaction coding, ACH processing, and ledger integrations",
+      "role": "radio",
+      "states": {
+       "checked": false
+      },
+      "template": "radio \"Finance Manager Manages bookkeeping, transaction coding, ACH processing, and ledger integrations\" [checked=false] (Manages bookkeeping, transaction coding, ACH processing, and ledger integrations)"
+     },
+     "occurrence": {
+      "ancestors": [
+       [
+        "_radioButtonWrapper_ial95_4"
+       ],
+       [],
+       [
+        "_accordionItemHeader_1q1xu_16",
+        "_accordionHeader_bnhk7_47"
+       ],
+       [
+        "_bodyDefault_qaod7_40"
+       ],
+       [
+        "_accordionWrapper_1q1xu_3",
+        "_accordionBorder_1q1xu_7",
+        "_accordionWrapper_bnhk7_1"
+       ],
+       [
+        "_radioGroup_phe2n_23",
+        "_radioGroup_9dnjl_1",
+        "_columnLayout_phe2n_28"
+       ],
+       [],
+       [
+        "_contentArea_1xvys_1",
+        "_contentLayout_1xvys_23"
+       ]
+      ],
+      "classes": [
+       "_radioButton_ial95_4"
+      ],
+      "data": {},
+      "heading": "Permissions",
+      "landmark": {
+       "name": "",
+       "role": "form"
+      },
+      "layer": "document",
+      "name": "Finance Manager Manages bookkeeping, transaction coding, ACH processing, and ledger integrations",
+      "rect": [
+       523,
+       777,
+       18,
+       18
+      ],
+      "role": "radio",
+      "tag": "input",
+      "xpath": "/html/body/div[1]/main[1]/div[1]/div[2]/div[2]/div[3]/form[1]/section[1]/div[2]/fieldset[1]/div[5]/h2[1]/button[1]/div[1]/label[1]/input[1]"
+     },
+     "state": "settings.invite-role"
+    },
+    {
+     "evidence": {
+      "description": "Manages bookkeeping, transaction coding, ACH processing, and ledger integrations",
+      "name": "Finance Manager Manages bookkeeping, transaction coding, ACH processing, and ledger integrations",
+      "role": "radio",
+      "states": {
+       "checked": false
+      },
+      "template": "radio \"Finance Manager Manages bookkeeping, transaction coding, ACH processing, and ledger integrations\" [checked=false] (Manages bookkeeping, transaction coding, ACH processing, and ledger integrations)"
+     },
+     "occurrence": {
+      "ancestors": [
+       [
+        "_radioButtonWrapper_ial95_4"
+       ],
+       [],
+       [
+        "_accordionItemHeader_1q1xu_16",
+        "_accordionHeader_bnhk7_47"
+       ],
+       [
+        "_bodyDefault_qaod7_40"
+       ],
+       [
+        "_accordionWrapper_1q1xu_3",
+        "_accordionBorder_1q1xu_7",
+        "_accordionWrapper_bnhk7_1"
+       ],
+       [
+        "_radioGroup_phe2n_23",
+        "_radioGroup_9dnjl_1",
+        "_columnLayout_phe2n_28"
+       ],
+       [],
+       [
+        "_contentArea_1xvys_1",
+        "_contentLayout_1xvys_23"
+       ]
+      ],
+      "classes": [
+       "_radioButton_ial95_4"
+      ],
+      "data": {},
+      "heading": "Permissions",
+      "landmark": {
+       "name": "",
+       "role": "form"
+      },
+      "layer": "document",
+      "name": "Finance Manager Manages bookkeeping, transaction coding, ACH processing, and ledger integrations",
+      "rect": [
+       523,
+       833,
+       18,
+       18
+      ],
+      "role": "radio",
+      "tag": "input",
+      "xpath": "/html/body/div[1]/main[1]/div[1]/div[2]/div[2]/div[3]/form[1]/section[1]/div[2]/fieldset[1]/div[5]/h2[1]/button[1]/div[1]/label[1]/input[1]"
+     },
+     "state": "settings.role-accountant"
+    }
+   ],
+   "evidenceHash": "26415645d358856c9639d3d58e4c5ea1b220e74dd2d4c9e5f9b4c2e514ab2709",
+   "facts": {
+    "announced": "radio \"Finance Manager Manages bookkeeping, transaction coding, ACH processing,…",
+    "axeSummary": "",
+    "criterion": "4.1.2",
+    "criterionName": "Name, Role, Value",
+    "element": "radio \"Finance Manager Manages bookkeeping, tran…\"",
+    "rule": "announced-as",
+    "screen": "Invite a user — Assign Role (Employee)"
+   },
+   "family": "role-state",
+   "guidance": "Low for optional ARIA or an invalid autocomplete token; high when aria-hidden hides the whole page.",
+   "issueId": null,
+   "key": "role-state:announced-as:e9c37da46e67",
+   "measured": false,
+   "primary": "settings.invite-role",
+   "proposals": [],
+   "rule": "announced-as",
+   "screens": 6,
+   "severityDefault": "medium",
+   "source": "scanner",
+   "states": [
+    "settings.invite-role",
+    "settings.role-accountant"
+   ],
+   "summary": "announced-as: announced as radio \"Finance Manager Manages bookkeeping, transaction coding, ACH processing,….",
+   "title": "Wrong role or state: radio \"Finance Manager Manages bookkeeping, tran…\""
+  },
+  {
+   "attachments": [],
+   "attempt": 1,
+   "basis": "candidate",
+   "criteria": [
+    "4.1.2"
+   ],
+   "evidence": [
+    {
+     "evidence": {
+      "description": "Can be issued cards, but cannot view sensitive bank account info",
+      "name": "Employee Can be issued cards, but cannot view sensitive bank account info",
+      "role": "radio",
+      "states": {
+       "checked": true
+      },
+      "template": "radio \"Employee Can be issued cards, but cannot view sensitive bank account info\" [checked=true] (Can be issued cards, but cannot view sensitive bank account info)"
+     },
+     "occurrence": {
+      "ancestors": [
+       [
+        "_radioButtonWrapper_ial95_4"
+       ],
+       [],
+       [
+        "_accordionItemHeader_1q1xu_16",
+        "_accordionHeader_bnhk7_47"
+       ],
+       [
+        "_bodyDefault_qaod7_40"
+       ],
+       [
+        "_accordionWrapper_1q1xu_3",
+        "_accordionBorder_1q1xu_7",
+        "_accordionWrapper_bnhk7_1"
+       ],
+       [
+        "_radioGroup_phe2n_23",
+        "_radioGroup_9dnjl_1",
+        "_columnLayout_phe2n_28"
+       ],
+       [],
+       [
+        "_contentArea_1xvys_1",
+        "_contentLayout_1xvys_23"
+       ]
+      ],
+      "classes": [
+       "_radioButton_ial95_4"
+      ],
+      "data": {
+       "data-active-item": "true"
+      },
+      "heading": "Assign Test to a role",
+      "landmark": {
+       "name": "",
+       "role": "form"
+      },
+      "layer": "document",
+      "name": "Employee Can be issued cards, but cannot view sensitive bank account info",
+      "rect": [
+       523,
+       300,
+       18,
+       18
+      ],
+      "role": "radio",
+      "tag": "input",
+      "xpath": "/html/body/div[1]/main[1]/div[1]/div[2]/div[2]/div[3]/form[1]/section[1]/div[2]/fieldset[1]/div[1]/h2[1]/button[1]/div[1]/label[1]/input[1]"
+     },
+     "state": "settings.invite-role"
+    }
+   ],
+   "evidenceHash": "4479bed8898534b6feaae3d92d95d678273d057078321e541ae75779ef6bddbf",
+   "facts": {
+    "announced": "radio \"Employee Can be issued cards, but cannot view sensitive bank account inf…",
+    "axeSummary": "",
+    "criterion": "4.1.2",
+    "criterionName": "Name, Role, Value",
+    "element": "radio \"Employee Can be issued cards, but cannot…\"",
+    "rule": "announced-as",
+    "screen": "Invite a user — Assign Role (Employee)"
+   },
+   "family": "role-state",
+   "guidance": "Low for optional ARIA or an invalid autocomplete token; high when aria-hidden hides the whole page.",
+   "issueId": null,
+   "key": "role-state:announced-as:f411e8a9f8d0",
+   "measured": false,
+   "primary": "settings.invite-role",
+   "proposals": [],
+   "rule": "announced-as",
+   "screens": 1,
+   "severityDefault": "medium",
+   "source": "scanner",
+   "states": [
+    "settings.invite-role"
+   ],
+   "summary": "announced-as: announced as radio \"Employee Can be issued cards, but cannot view sensitive bank account inf….",
+   "title": "Wrong role or state: radio \"Employee Can be issued cards, but cannot…\""
+  }
+ ],
+ "primaries": [
+  "settings.invite-role"
+ ],
+ "reach": {
+  "baseUrl": "https://demo.mercury.com",
+  "data": "data",
+  "map": "build/map.json",
+  "run": "2026-10-03-1525",
+  "workspace": "a11y"
+ },
+ "run": "2026-10-03-1525"
+}

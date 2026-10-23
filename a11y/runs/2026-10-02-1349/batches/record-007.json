@@ -1,0 +1,241 @@
+{
+ "batch": "record-007",
+ "reach": {
+  "baseUrl": "https://demo.mercury.com",
+  "data": "data",
+  "map": "build/map.json",
+  "run": "2026-10-02-1349",
+  "workspace": "a11y"
+ },
+ "run": "2026-10-02-1349",
+ "states": [
+  {
+   "area": "billpay",
+   "draft": "step-failed: billpay.approval-panel hop 0: click {\"role\":\"button\",\"name\":\"Review Requests\"}: locator.click: Timeout 5000ms exceeded.",
+   "image": "screens/billpay/10-approval-detail.png",
+   "kind": "drawer",
+   "labels": [
+    "Click request row"
+   ],
+   "mutates": false,
+   "note": "Side panel for a recurring $5,000 request with Review / Approve / Decline buttons and bill metadata.",
+   "parent": "billpay.needs-approval",
+   "state": "billpay.approval-panel",
+   "title": "Approval request panel"
+  },
+  {
+   "area": "billpay",
+   "draft": "not drafted: its parent had no accepted recipe when the drafter ran",
+   "image": "screens/billpay/11-approval-review.png",
+   "kind": "page",
+   "labels": [
+    "Click request row",
+    "Click Review"
+   ],
+   "mutates": false,
+   "note": "Full-screen review of the recurring payment (schedule preview, delivery estimate, recipient) beside the attached PDF, with Decline / Approve payments.",
+   "parent": "billpay.approval-panel",
+   "state": "billpay.approval-review",
+   "title": "Review approval"
+  },
+  {
+   "area": "billpay",
+   "draft": "not drafted: its parent had no accepted recipe when the drafter ran",
+   "image": "screens/billpay/12-approval-confirmed.png",
+   "kind": "confirmation",
+   "labels": [
+    "Click request row",
+    "Click Review",
+    "Click Approve payments"
+   ],
+   "mutates": true,
+   "note": "Confirmation: 'You've approved a recurring ACH payment' with the payment rule summary and Back to Needs Approval.",
+   "parent": "billpay.approval-review",
+   "state": "billpay.approval-success",
+   "title": "Payment approved"
+  },
+  {
+   "area": "billpay",
+   "draft": "not drafted: its parent had no accepted recipe when the drafter ran",
+   "image": "screens/billpay/87-decline-confirm.png",
+   "kind": "modal",
+   "labels": [
+    "Click request row",
+    "Click Review",
+    "Click Decline"
+   ],
+   "mutates": true,
+   "note": "Decline on the review page asks 'Are you sure you want to decline this request?' with Go back / Yes, decline.",
+   "parent": "billpay.approval-review",
+   "state": "billpay.decline-confirm",
+   "title": "Decline confirmation"
+  },
+  {
+   "area": "billpay",
+   "draft": "not drafted: its parent had no accepted recipe when the drafter ran",
+   "image": "screens/billpay/54-quick-approve.png",
+   "kind": "toast",
+   "labels": [
+    "Click request row",
+    "Click Approve"
+   ],
+   "mutates": true,
+   "note": "Approve in the approval panel skips the review page and shows a 'Request approved' toast.",
+   "parent": "billpay.approval-panel",
+   "state": "billpay.quick-approve",
+   "title": "Request approved"
+  },
+  {
+   "area": "billpay",
+   "draft": "not drafted: its parent had no accepted recipe when the drafter ran",
+   "image": "screens/billpay/53-request-declined.png",
+   "kind": "toast",
+   "labels": [
+    "Click request row",
+    "Click Decline"
+   ],
+   "mutates": true,
+   "note": "Decline in the approval panel acts immediately: 'Request declined' toast and the queue empties, with no confirmation step.",
+   "parent": "billpay.approval-panel",
+   "state": "billpay.request-declined",
+   "title": "Request declined"
+  },
+  {
+   "area": "billpay",
+   "draft": "nothing on billpay.index matches {\"click\":{\"name\":\"settings gear\"}}",
+   "image": "screens/billpay/03-settings-modal.png",
+   "kind": "modal",
+   "labels": [
+    "Click settings gear"
+   ],
+   "mutates": false,
+   "note": "Settings modal: bill forwarding email with copy button, email alert link and approval rules summary.",
+   "parent": "billpay.index",
+   "state": "billpay.settings",
+   "title": "Bill Pay settings"
+  },
+  {
+   "area": "billpay",
+   "draft": "not drafted: its parent had no accepted recipe when the drafter ran",
+   "image": "screens/billpay/05-forwarding-email-edit.png",
+   "kind": "form-state",
+   "labels": [
+    "Click settings gear",
+    "Click Edit on Bill forwarding email"
+   ],
+   "mutates": false,
+   "note": "Forwarding email becomes an input with a fixed @ap.mercury.com suffix and Cancel / Save buttons.",
+   "parent": "billpay.settings",
+   "state": "billpay.forwarding-email-edit",
+   "title": "Edit forwarding email"
+  },
+  {
+   "area": "billpay",
+   "draft": "not drafted: its parent had no accepted recipe when the drafter ran",
+   "image": "screens/billpay/06-forwarding-email-invalid.png",
+   "kind": "validation-error",
+   "labels": [
+    "Click settings gear",
+    "Click Edit on Bill forwarding email",
+    "Type invalid characters"
+   ],
+   "mutates": false,
+   "note": "Invalid local part ('bad name!!') turns the field pink, disables Save and shows 'Please enter a valid email address' only as a tooltip on a warning icon.",
+   "parent": "billpay.forwarding-email-edit",
+   "state": "billpay.forwarding-email-invalid",
+   "title": "Forwarding email invalid"
+  },
+  {
+   "area": "billpay",
+   "draft": "not drafted: its parent had no accepted recipe when the drafter ran",
+   "image": "screens/billpay/07-forwarding-email-saved.png",
+   "kind": "toast",
+   "labels": [
+    "Click settings gear",
+    "Click Edit on Bill forwarding email",
+    "Click Save"
+   ],
+   "mutates": true,
+   "note": "After Save the new address shows read-only and a 'Settings saved' toast appears at the bottom.",
+   "parent": "billpay.forwarding-email-edit",
+   "state": "billpay.forwarding-email-saved",
+   "title": "Settings saved"
+  },
+  {
+   "area": "billpay",
+   "draft": "not drafted: its parent had no accepted recipe when the drafter ran",
+   "image": "screens/billpay/04-settings-modal-bottom.png",
+   "kind": "modal",
+   "labels": [
+    "Click settings gear",
+    "Scroll modal"
+   ],
+   "mutates": false,
+   "note": "Lower half of the settings modal: approval rules, approved senders (19) and accounting sync Connect link.",
+   "parent": "billpay.settings",
+   "state": "billpay.settings-bottom",
+   "title": "Bill Pay settings (lower)"
+  },
+  {
+   "area": "billpay",
+   "draft": "not drafted: its parent had no accepted recipe when the drafter ran",
+   "image": "screens/billpay/08-approved-senders-edit.png",
+   "kind": "form-state",
+   "labels": [
+    "Click settings gear",
+    "Scroll modal",
+    "Click Edit on Approved senders"
+   ],
+   "mutates": false,
+   "note": "Approved senders expands into an 'Allow bills from' token field of removable email chips.",
+   "parent": "billpay.settings-bottom",
+   "state": "billpay.approved-senders-edit",
+   "title": "Edit approved senders"
+  },
+  {
+   "area": "billpay",
+   "draft": "nothing on billpay.needs-approval matches {\"check\":{\"name\":\"a request\"}}",
+   "image": "screens/billpay/84-approvals-bulk-select.png",
+   "kind": "form-state",
+   "labels": [
+    "Check a request"
+   ],
+   "mutates": false,
+   "note": "Checking a request shows a floating bar: '1 request selected $5,000.00 total' with icon-only decline and approve buttons and Review Request.",
+   "parent": "billpay.needs-approval",
+   "state": "billpay.approvals-bulk-select",
+   "title": "Approvals bulk selection"
+  },
+  {
+   "area": "billpay",
+   "draft": "not drafted: its parent had no accepted recipe when the drafter ran",
+   "image": "screens/billpay/85-approvals-bulk-review-loading.png",
+   "kind": "form-state",
+   "labels": [
+    "Check a request",
+    "Click Review Request"
+   ],
+   "mutates": false,
+   "note": "After Review Request the bar's buttons disable and the primary button shows a dot loader for 15 to 20 seconds before the review opens.",
+   "parent": "billpay.approvals-bulk-select",
+   "state": "billpay.approvals-bulk-loading",
+   "title": "Review Request loading"
+  },
+  {
+   "area": "billpay",
+   "draft": "not drafted: its parent had no accepted recipe when the drafter ran",
+   "image": "screens/billpay/86-bulk-approval-review.png",
+   "kind": "page",
+   "labels": [
+    "Check a request",
+    "Click Review Request",
+    "Wait for review to load"
+   ],
+   "mutates": false,
+   "note": "Review opened from the bulk bar: 'APPROVAL 1 OF 1' eyebrow, payment rule and schedule, with Decline, Approve and Skip.",
+   "parent": "billpay.approvals-bulk-loading",
+   "state": "billpay.bulk-approval-review",
+   "title": "Bulk approval review"
+  }
+ ]
+}

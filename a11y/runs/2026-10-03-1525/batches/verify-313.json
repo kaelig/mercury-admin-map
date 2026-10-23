@@ -1,0 +1,306 @@
+{
+ "area": "settings",
+ "batch": "verify-313",
+ "findings": [
+  {
+   "attachments": [],
+   "attempt": 1,
+   "basis": "violation",
+   "criteria": [
+    "4.1.2"
+   ],
+   "evidence": [
+    {
+     "evidence": {
+      "aria-errormessage": [
+       "confirmnewpassword-mercury-utils-id-159-errormessage"
+      ],
+      "failureSummary": "Fix all of the following:\n  aria-errormessage value `confirmnewpassword-mercury-utils-id-159-errormessage` must use a technique to announce the message (e.g., aria-live, aria-describedby, role=alert, etc.)"
+     },
+     "occurrence": {
+      "ancestors": [
+       [
+        "_inputBox_q7hf7_93",
+        "_inputBoxWithJoinedSuffix_q7hf7_236",
+        "_hasValue_q7hf7_171",
+        "_error_q7hf7_41"
+       ],
+       [
+        "_inputBoxWrapper_q7hf7_93"
+       ],
+       [
+        "_textInputWrapper_q7hf7_24"
+       ],
+       [
+        "_provideDSTextInput_q7hf7_6",
+        "_passwordInput_t6231_129"
+       ],
+       [],
+       [
+        "_large_kwlx6_9",
+        "_noHover_3n0se_28",
+        "_shadow_3n0se_25",
+        "_raisedBackground_3n0se_45",
+        "_card_lo4oy_4",
+        "_defaultPadding_lo4oy_27",
+        "_small_lo4oy_11"
+       ],
+       [
+        "ReactModal__Content",
+        "ReactModal__Content--after-open",
+        "_modal_lo4oy_73"
+       ],
+       [
+        "ReactModal__Overlay",
+        "ReactModal__Overlay--after-open",
+        "_overlay_lo4oy_89",
+        "_backgroundColor_lo4oy_103"
+       ]
+      ],
+      "classes": [
+       "_input_q7hf7_93",
+       "session-replay-ignore",
+       "session-replay-block"
+      ],
+      "data": {},
+      "heading": "Change Password",
+      "landmark": {
+       "name": "",
+       "role": "form"
+      },
+      "layer": "top",
+      "name": "Repeat New Password",
+      "rect": [
+       549,
+       496,
+       301,
+       24
+      ],
+      "role": "textbox",
+      "tag": "input",
+      "xpath": "/html/body/div[10]/div[1]/div[1]/div[1]/form[1]/div[3]/div[1]/div[1]/div[1]/input[1]"
+     },
+     "state": "settings.change-password-short"
+    },
+    {
+     "evidence": {
+      "aria-errormessage": [
+       "confirmnewpassword-mercury-utils-id-159-errormessage"
+      ],
+      "failureSummary": "Fix all of the following:\n  aria-errormessage value `confirmnewpassword-mercury-utils-id-159-errormessage` must use a technique to announce the message (e.g., aria-live, aria-describedby, role=alert, etc.)"
+     },
+     "occurrence": {
+      "ancestors": [
+       [
+        "_inputBox_q7hf7_93",
+        "_inputBoxWithJoinedSuffix_q7hf7_236",
+        "_hasValue_q7hf7_171",
+        "_error_q7hf7_41"
+       ],
+       [
+        "_inputBoxWrapper_q7hf7_93"
+       ],
+       [
+        "_textInputWrapper_q7hf7_24"
+       ],
+       [
+        "_provideDSTextInput_q7hf7_6",
+        "_passwordInput_t6231_129"
+       ],
+       [],
+       [
+        "_large_kwlx6_9",
+        "_noHover_3n0se_28",
+        "_shadow_3n0se_25",
+        "_raisedBackground_3n0se_45",
+        "_card_lo4oy_4",
+        "_defaultPadding_lo4oy_27",
+        "_small_lo4oy_11"
+       ],
+       [
+        "ReactModal__Content",
+        "ReactModal__Content--after-open",
+        "_modal_lo4oy_73"
+       ],
+       [
+        "ReactModal__Overlay",
+        "ReactModal__Overlay--after-open",
+        "_overlay_lo4oy_89",
+        "_backgroundColor_lo4oy_103"
+       ]
+      ],
+      "classes": [
+       "_input_q7hf7_93",
+       "session-replay-ignore",
+       "session-replay-block"
+      ],
+      "data": {},
+      "heading": "Change Password",
+      "landmark": {
+       "name": "",
+       "role": "form"
+      },
+      "layer": "top",
+      "name": "Repeat New Password",
+      "rect": [
+       549,
+       484,
+       301,
+       24
+      ],
+      "role": "textbox",
+      "tag": "input",
+      "xpath": "/html/body/div[10]/div[1]/div[1]/div[1]/form[1]/div[3]/div[1]/div[1]/div[1]/input[1]"
+     },
+     "state": "settings.change-password-mismatch"
+    }
+   ],
+   "evidenceHash": "bc8ec6f4bf4a49d140f6b3d4173e26f81f95be165d75ceb51aaee426af63835c",
+   "facts": {
+    "announced": "textbox \"Repeat New Password\" [invalid=true, errormessage=Minimum <n> character…",
+    "axeSummary": "aria-errormessage value `confirmnewpassword-mercury-utils-id-159-errormessage` must use a technique to announce the message (e.g., aria-live, aria-describedby,…",
+    "criterion": "4.1.2",
+    "criterionName": "Name, Role, Value",
+    "element": "textbox \"Repeat New Password\"",
+    "rule": "aria-valid-attr-value",
+    "screen": "Change password — too short"
+   },
+   "family": "role-state",
+   "guidance": "Low for optional ARIA or an invalid autocomplete token; high when aria-hidden hides the whole page.",
+   "issueId": null,
+   "key": "role-state:aria-valid-attr-value:42fc8b5112f3",
+   "measured": false,
+   "primary": "settings.change-password-short",
+   "proposals": [],
+   "rule": "aria-valid-attr-value",
+   "screens": 2,
+   "severityDefault": "medium",
+   "source": "scanner",
+   "states": [
+    "settings.change-password-short",
+    "settings.change-password-mismatch"
+   ],
+   "summary": "aria-valid-attr-value: announced as textbox \"Repeat New Password\" [invalid=true, errormessage=Minimum <n> character…. aria-errormessage value `confirmnewpassword-mercury-utils-id-159-errormessage` must use a technique to announce the message (e.g., aria-live, aria-describedby,…",
+   "title": "Wrong role or state: textbox \"Repeat New Password\""
+  },
+  {
+   "attachments": [],
+   "attempt": 1,
+   "basis": "violation",
+   "criteria": [
+    "4.1.2"
+   ],
+   "evidence": [
+    {
+     "evidence": {
+      "aria-errormessage": [
+       "newpassword-mercury-utils-id-158-errormessage"
+      ],
+      "failureSummary": "Fix all of the following:\n  aria-errormessage value `newpassword-mercury-utils-id-158-errormessage` must use a technique to announce the message (e.g., aria-live, aria-describedby, role=alert, etc.)"
+     },
+     "occurrence": {
+      "ancestors": [
+       [
+        "_inputBox_q7hf7_93",
+        "_inputBoxWithJoinedSuffix_q7hf7_236",
+        "_hasValue_q7hf7_171",
+        "_error_q7hf7_41"
+       ],
+       [
+        "_inputBoxWrapper_q7hf7_93"
+       ],
+       [
+        "_textInputWrapper_q7hf7_24"
+       ],
+       [
+        "_provideDSTextInput_q7hf7_6",
+        "_passwordInput_t6231_129"
+       ],
+       [],
+       [
+        "_large_kwlx6_9",
+        "_noHover_3n0se_28",
+        "_shadow_3n0se_25",
+        "_raisedBackground_3n0se_45",
+        "_card_lo4oy_4",
+        "_defaultPadding_lo4oy_27",
+        "_small_lo4oy_11"
+       ],
+       [
+        "ReactModal__Content",
+        "ReactModal__Content--after-open",
+        "_modal_lo4oy_73"
+       ],
+       [
+        "ReactModal__Overlay",
+        "ReactModal__Overlay--after-open",
+        "_overlay_lo4oy_89",
+        "_backgroundColor_lo4oy_103"
+       ]
+      ],
+      "classes": [
+       "_input_q7hf7_93",
+       "session-replay-ignore",
+       "session-replay-block"
+      ],
+      "data": {},
+      "heading": "Change Password",
+      "landmark": {
+       "name": "",
+       "role": "form"
+      },
+      "layer": "top",
+      "name": "New Password",
+      "rect": [
+       549,
+       396,
+       301,
+       24
+      ],
+      "role": "textbox",
+      "tag": "input",
+      "xpath": "/html/body/div[10]/div[1]/div[1]/div[1]/form[1]/div[2]/div[1]/div[1]/div[1]/input[1]"
+     },
+     "state": "settings.change-password-short"
+    }
+   ],
+   "evidenceHash": "dc93f5cc4bdea5107c5f05db5630c5d8d2ef8edf4fc0d58427c2d88631f8204c",
+   "facts": {
+    "announced": "textbox \"New Password\" [invalid=true, errormessage=Minimum <n> characters]",
+    "axeSummary": "aria-errormessage value `newpassword-mercury-utils-id-158-errormessage` must use a technique to announce the message (e.g., aria-live, aria-describedby, role=a…",
+    "criterion": "4.1.2",
+    "criterionName": "Name, Role, Value",
+    "element": "textbox \"New Password\"",
+    "rule": "aria-valid-attr-value",
+    "screen": "Change password — too short"
+   },
+   "family": "role-state",
+   "guidance": "Low for optional ARIA or an invalid autocomplete token; high when aria-hidden hides the whole page.",
+   "issueId": null,
+   "key": "role-state:aria-valid-attr-value:7eda30998b1c",
+   "measured": false,
+   "primary": "settings.change-password-short",
+   "proposals": [],
+   "rule": "aria-valid-attr-value",
+   "screens": 1,
+   "severityDefault": "medium",
+   "source": "scanner",
+   "states": [
+    "settings.change-password-short"
+   ],
+   "summary": "aria-valid-attr-value: announced as textbox \"New Password\" [invalid=true, errormessage=Minimum <n> characters]. aria-errormessage value `newpassword-mercury-utils-id-158-errormessage` must use a technique to announce the message (e.g., aria-live, aria-describedby, role=a…",
+   "title": "Wrong role or state: textbox \"New Password\""
+  }
+ ],
+ "primaries": [
+  "settings.change-password-short"
+ ],
+ "reach": {
+  "baseUrl": "https://demo.mercury.com",
+  "data": "data",
+  "map": "build/map.json",
+  "run": "2026-10-03-1525",
+  "workspace": "a11y"
+ },
+ "run": "2026-10-03-1525"
+}

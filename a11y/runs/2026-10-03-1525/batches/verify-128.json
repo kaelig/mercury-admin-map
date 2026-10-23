@@ -1,0 +1,108 @@
+{
+ "area": "cards",
+ "batch": "verify-128",
+ "findings": [
+  {
+   "attachments": [],
+   "attempt": 1,
+   "basis": "violation",
+   "criteria": [
+    "1.3.5"
+   ],
+   "evidence": [
+    {
+     "evidence": {
+      "failureSummary": "Fix all of the following:\n  the autocomplete attribute is incorrectly formatted"
+     },
+     "occurrence": {
+      "ancestors": [
+       [
+        "_inputBox_q7hf7_93"
+       ],
+       [
+        "_inputBoxWrapper_q7hf7_93"
+       ],
+       [
+        "_textInputWrapper_q7hf7_24"
+       ],
+       [
+        "_provideDSTextInput_q7hf7_6"
+       ],
+       [
+        "_list_14wdt_38"
+       ],
+       [
+        "_leftContent_14wdt_3"
+       ],
+       [
+        "_left_yg1rf_39",
+        "_wideLeftColumn_evx13_10"
+       ],
+       [
+        "_leftScrollArea_yg1rf_57"
+       ]
+      ],
+      "classes": [
+       "_input_q7hf7_93"
+      ],
+      "data": {},
+      "heading": "Assign Test Person to your team",
+      "landmark": {
+       "name": "",
+       "role": "main"
+      },
+      "layer": "document",
+      "name": "Search team members",
+      "rect": [
+       140,
+       279,
+       467,
+       24
+      ],
+      "role": "textbox",
+      "tag": "input",
+      "xpath": "/html/body/div[1]/main[1]/div[1]/div[2]/div[2]/div[3]/div[1]/div[1]/div[1]/div[2]/div[1]/div[2]/div[1]/div[1]/div[1]/div[1]/input[1]"
+     },
+     "state": "cards.create-budget-assign"
+    }
+   ],
+   "evidenceHash": "fa008a2bee1ec0a4017d79c6c71806dd3aa13186a3c5bd521d7049a8ed75fb35",
+   "facts": {
+    "announced": "textbox \"Search team members\"",
+    "axeSummary": "the autocomplete attribute is incorrectly formatted",
+    "criterion": "1.3.5",
+    "criterionName": "Identify Input Purpose",
+    "element": "textbox \"Search team members\"",
+    "rule": "autocomplete-valid",
+    "screen": "Create budget: assign team"
+   },
+   "family": "role-state",
+   "guidance": "Low for optional ARIA or an invalid autocomplete token; high when aria-hidden hides the whole page.",
+   "issueId": null,
+   "key": "role-state:autocomplete-valid:e498f8a8f6b4",
+   "measured": false,
+   "primary": "cards.create-budget-assign",
+   "proposals": [],
+   "rule": "autocomplete-valid",
+   "screens": 1,
+   "severityDefault": "medium",
+   "source": "scanner",
+   "states": [
+    "cards.create-budget-assign"
+   ],
+   "summary": "autocomplete-valid: announced as textbox \"Search team members\". the autocomplete attribute is incorrectly formatted",
+   "title": "Invalid autocomplete value: textbox \"Search team members\""
+  }
+ ],
+ "primaries": [
+  "cards.create-budget-assign"
+ ],
+ "reach": {
+  "baseUrl": "https://demo.mercury.com",
+  "data": "data",
+  "map": "build/map.json",
+  "run": "2026-10-03-1525",
+  "workspace": "a11y"
+ },
+ "run": "2026-10-03-1525"
+}

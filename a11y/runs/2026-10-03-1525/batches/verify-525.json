@@ -1,0 +1,144 @@
+{
+ "area": "settings",
+ "batch": "verify-525",
+ "findings": [
+  {
+   "attachments": [],
+   "attempt": 1,
+   "basis": "candidate",
+   "criteria": [
+    "4.1.2"
+   ],
+   "evidence": [
+    {
+     "evidence": {
+      "description": "",
+      "name": "",
+      "role": "dialog",
+      "states": {
+       "modal": true
+      },
+      "template": "dialog \"\" [modal=true]"
+     },
+     "occurrence": {
+      "ancestors": [
+       [
+        "ReactModal__Overlay",
+        "ReactModal__Overlay--after-open",
+        "_overlay_lo4oy_89",
+        "_backgroundColor_lo4oy_103"
+       ],
+       [
+        "ReactModalPortal"
+       ]
+      ],
+      "classes": [
+       "ReactModal__Content",
+       "ReactModal__Content--after-open",
+       "_modal_lo4oy_73",
+       "_top96_lo4oy_84"
+      ],
+      "data": {},
+      "heading": "",
+      "landmark": null,
+      "layer": "top",
+      "name": "",
+      "rect": [
+       396,
+       96,
+       648,
+       931
+      ],
+      "role": "dialog",
+      "tag": "div",
+      "xpath": "/html/body/div[10]/div[1]/div[1]"
+     },
+     "state": "settings.netsuite-step1"
+    },
+    {
+     "evidence": {
+      "description": "",
+      "name": "",
+      "role": "dialog",
+      "states": {
+       "modal": true
+      },
+      "template": "dialog \"\" [modal=true]"
+     },
+     "occurrence": {
+      "ancestors": [
+       [
+        "ReactModal__Overlay",
+        "ReactModal__Overlay--after-open",
+        "_overlay_lo4oy_89",
+        "_backgroundColor_lo4oy_103"
+       ],
+       [
+        "ReactModalPortal"
+       ]
+      ],
+      "classes": [
+       "ReactModal__Content",
+       "ReactModal__Content--after-open",
+       "_modal_lo4oy_73",
+       "_top96_lo4oy_84"
+      ],
+      "data": {},
+      "heading": "",
+      "landmark": null,
+      "layer": "top",
+      "name": "",
+      "rect": [
+       364,
+       96,
+       712,
+       486
+      ],
+      "role": "dialog",
+      "tag": "div",
+      "xpath": "/html/body/div[11]/div[1]/div[1]"
+     },
+     "state": "accounts.rule-target-balance"
+    }
+   ],
+   "evidenceHash": "2e477979eecb04750d55f37e4eb24da58064d34fd4d05818f85d7dbf8c6a4826",
+   "facts": {
+    "announced": "dialog \"\" [modal=true]",
+    "axeSummary": "",
+    "criterion": "4.1.2",
+    "criterionName": "Name, Role, Value",
+    "element": "dialog",
+    "rule": "announced-as",
+    "screen": "NetSuite setup — Step 1 of 3"
+   },
+   "family": "name",
+   "guidance": "High for an unnamed form control or the sole primary action.",
+   "issueId": null,
+   "key": "name:announced-as:1520c123908d",
+   "measured": false,
+   "primary": "settings.netsuite-step1",
+   "proposals": [],
+   "rule": "announced-as",
+   "screens": 8,
+   "severityDefault": "medium",
+   "source": "scanner",
+   "states": [
+    "settings.netsuite-step1",
+    "accounts.rule-target-balance"
+   ],
+   "summary": "announced-as: announced as dialog \"\" [modal=true].",
+   "title": "Missing or unclear name: dialog"
+  }
+ ],
+ "primaries": [
+  "settings.netsuite-step1"
+ ],
+ "reach": {
+  "baseUrl": "https://demo.mercury.com",
+  "data": "data",
+  "map": "build/map.json",
+  "run": "2026-10-03-1525",
+  "workspace": "a11y"
+ },
+ "run": "2026-10-03-1525"
+}

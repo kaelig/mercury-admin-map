@@ -1,0 +1,120 @@
+{
+ "area": "cards",
+ "batch": "verify-451",
+ "findings": [
+  {
+   "attachments": [],
+   "attempt": 1,
+   "basis": "candidate",
+   "criteria": [
+    "2.5.3"
+   ],
+   "evidence": [
+    {
+     "evidence": {
+      "description": "",
+      "name": "Click to reveal",
+      "role": "button",
+      "states": {},
+      "template": "button \"Click to reveal\""
+     },
+     "occurrence": {
+      "ancestors": [
+       [
+        "_cardInfoContainer_2x89r_53"
+       ],
+       [
+        "_mercuryCard_2x89r_26",
+        "_creditVirtual_2x89r_100"
+       ],
+       [
+        "_cardWrapper_2x89r_4"
+       ],
+       [
+        "_rightContainer_6va6k_8"
+       ],
+       [
+        "_rightContent_6va6k_30"
+       ],
+       [
+        "_rightContainer_yg1rf_40",
+        "_rightVariant_yg1rf_89",
+        "_previewBgConfirmation_6va6k_153"
+       ],
+       [
+        "_containerBase_yg1rf_1",
+        "_container_yg1rf_1",
+        "_containerWithBanner_yg1rf_12"
+       ],
+       [
+        "session-replay-unmask"
+       ]
+      ],
+      "classes": [
+       "_tooltipAnchor_18bac_4",
+       "_cardField_2x89r_147",
+       "_tooltipAnchor_2x89r_397",
+       "_underlineOnHover_2x89r_398",
+       "_revealableField_2x89r_403"
+      ],
+      "data": {},
+      "heading": "",
+      "landmark": {
+       "name": "",
+       "role": "form"
+      },
+      "layer": "document",
+      "name": "Click to reveal",
+      "rect": [
+       584,
+       487,
+       147,
+       42
+      ],
+      "role": "button",
+      "tag": "button",
+      "xpath": "/html/body/div[1]/main[1]/div[1]/div[2]/div[2]/div[3]/form[1]/div[1]/div[1]/div[2]/div[1]/div[1]/div[1]/div[1]/div[1]/button[1]"
+     },
+     "state": "cards.issue-card-success"
+    }
+   ],
+   "evidenceHash": "a32f292b51b9f66b3961971d30fe8cfd5a2b14e7395cb5707113599ecf96d40e",
+   "facts": {
+    "announced": "button \"Click to reveal\"",
+    "axeSummary": "",
+    "criterion": "2.5.3",
+    "criterionName": "Label in Name",
+    "element": "button \"Click to reveal\"",
+    "rule": "announced-as",
+    "screen": "Card created"
+   },
+   "family": "name",
+   "guidance": "High for an unnamed form control or the sole primary action.",
+   "issueId": null,
+   "key": "name:announced-as:b2fc8810530c",
+   "measured": false,
+   "primary": "cards.issue-card-success",
+   "proposals": [],
+   "rule": "announced-as",
+   "screens": 1,
+   "severityDefault": "medium",
+   "source": "scanner",
+   "states": [
+    "cards.issue-card-success"
+   ],
+   "summary": "announced-as: announced as button \"Click to reveal\".",
+   "title": "Missing or unclear name: button \"Click to reveal\""
+  }
+ ],
+ "primaries": [
+  "cards.issue-card-success"
+ ],
+ "reach": {
+  "baseUrl": "https://demo.mercury.com",
+  "data": "data",
+  "map": "build/map.json",
+  "run": "2026-10-03-1525",
+  "workspace": "a11y"
+ },
+ "run": "2026-10-03-1525"
+}

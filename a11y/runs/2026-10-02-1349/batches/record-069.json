@@ -1,0 +1,217 @@
+{
+ "batch": "record-069",
+ "reach": {
+  "baseUrl": "https://demo.mercury.com",
+  "data": "data",
+  "map": "build/map.json",
+  "run": "2026-10-02-1349",
+  "workspace": "a11y"
+ },
+ "run": "2026-10-02-1349",
+ "states": [
+  {
+   "area": "payments",
+   "draft": "not drafted: its parent had no accepted recipe when the drafter ran; a previous recorder failed: payments.ach-add hop 0: click {\"name\":\"Add ACH authorization\",\"role\":\"link\"}: locator.click: Timeout 5000ms exceeded (parent chain replay fails)",
+   "image": "screens/payments/73-ach-authorization-review.png",
+   "kind": "form-state",
+   "labels": [
+    "Click Add ACH authorization",
+    "Pick a vendor",
+    "Click Next"
+   ],
+   "mutates": false,
+   "note": "Review vendor, ACH Company ID, account and limit; Authorize.",
+   "parent": "payments.ach-add-details",
+   "state": "payments.ach-add-review",
+   "title": "Review and authorize"
+  },
+  {
+   "area": "payments",
+   "draft": "not drafted: its parent had no accepted recipe when the drafter ran",
+   "image": "screens/payments/74-ach-authorization-success.png",
+   "kind": "confirmation",
+   "labels": [
+    "Click Add ACH authorization",
+    "Pick a vendor",
+    "Click Next",
+    "Click Authorize"
+   ],
+   "mutates": true,
+   "note": "Returns to the list with PG&E added; no toast or success message.",
+   "parent": "payments.ach-add-review",
+   "state": "payments.ach-add-success",
+   "title": "ACH list with new vendor"
+  },
+  {
+   "area": "payments",
+   "draft": "not drafted: its parent had no accepted recipe when the drafter ran; a previous recorder failed: reach payments.approvals-bulk failed: payments.approvals-bulk hop 0: check {\"index\":2,\"role\":\"checkbox\"}: Timeout 5000ms exceeded",
+   "image": "screens/payments/100-batch-approval-review.png",
+   "kind": "page",
+   "labels": [
+    "Tick two request checkboxes",
+    "Click Review Requests"
+   ],
+   "mutates": false,
+   "note": "Full-screen reviewer: 'Approval 1 of 2', wire total, from account, send on Tomorrow, batch link, Decline / Approve / Skip, attachment pane.",
+   "parent": "payments.approvals-bulk",
+   "state": "payments.batch-review",
+   "title": "Review batch payment"
+  },
+  {
+   "area": "payments",
+   "draft": "not drafted: its parent had no accepted recipe when the drafter ran",
+   "image": "screens/payments/101-batch-approval-next.png",
+   "kind": "form-state",
+   "labels": [
+    "Tick two request checkboxes",
+    "Click Review Requests",
+    "Click Approve"
+   ],
+   "mutates": true,
+   "note": "After approving the first item: advances to 'Approval 2 of 2' with an 'Approved' toast.",
+   "parent": "payments.batch-review",
+   "state": "payments.batch-review-next",
+   "title": "Batch review: next item"
+  },
+  {
+   "area": "payments",
+   "draft": "not drafted: its parent had no accepted recipe when the drafter ran; a previous recorder failed: payments.send-review hop 0: click {\"role\":\"button\",\"name\":\"Next\"}: locator.click: Timeout 5000ms exceeded (the parent chain through payments.send-amount also timed out intermittently)",
+   "image": "screens/payments/22-send-review.png",
+   "kind": "form-state",
+   "labels": [
+    "Click a recently paid recipient",
+    "Click Next (ACH)",
+    "Enter amount, click Next",
+    "Click Next",
+    "Click Next"
+   ],
+   "mutates": false,
+   "note": "Step 5: amount hero card, ACH delivery estimate, recipient bank and source account summary, Schedule payment.",
+   "parent": "payments.send-details",
+   "state": "payments.send-review",
+   "title": "Send: Review step"
+  },
+  {
+   "area": "payments",
+   "draft": "not drafted: its parent had no accepted recipe when the drafter ran",
+   "image": "screens/payments/23-send-submitting.png",
+   "kind": "form-state",
+   "labels": [
+    "Click a recently paid recipient",
+    "Click Next (ACH)",
+    "Enter amount, click Next",
+    "Click Next",
+    "Click Next",
+    "Click Schedule payment"
+   ],
+   "mutates": true,
+   "note": "Schedule payment pressed: primary button shows loading dots and Back is disabled.",
+   "parent": "payments.send-review",
+   "state": "payments.send-submitting",
+   "title": "Send: submitting"
+  },
+  {
+   "area": "payments",
+   "draft": "not drafted: its parent had no accepted recipe when the drafter ran",
+   "image": "screens/payments/113-send-wire-review.png",
+   "kind": "form-state",
+   "labels": [
+    "Click a recently paid recipient",
+    "Click Next (ACH)",
+    "Enter amount, click Next",
+    "Click Next",
+    "Click Next (wire)"
+   ],
+   "mutates": false,
+   "note": "Wire review: $500.00 hero, delivery estimate, bank, full account and routing numbers, from account; Schedule wire.",
+   "parent": "payments.send-details",
+   "state": "payments.send-wire-review",
+   "title": "Send: wire review"
+  },
+  {
+   "area": "payments",
+   "draft": "not drafted: its parent had no accepted recipe when the drafter ran",
+   "image": "screens/payments/114-send-wire-success.png",
+   "kind": "confirmation",
+   "labels": [
+    "Click a recently paid recipient",
+    "Click Next (ACH)",
+    "Enter amount, click Next",
+    "Click Next",
+    "Click Next (wire)",
+    "Click Schedule wire"
+   ],
+   "mutates": true,
+   "note": "'You've scheduled a wire payment' with receipt download and a 1099 prompt to request the recipient's tax documents by email.",
+   "parent": "payments.send-wire-review",
+   "state": "payments.send-wire-success",
+   "title": "Send: wire scheduled"
+  },
+  {
+   "area": "payments",
+   "draft": "not drafted: its parent had no accepted recipe when the drafter ran; a previous recorder failed: reach of parent payments.checkbook-order-review failed: payments.checkbooks hop 0: click {\"name\":\"Checkbooks\",\"role\":\"link\"}: locator.click: Timeout 5000ms exceeded; the hop also needs a check on the authority checkbox before Confirm",
+   "image": "screens/payments/81-checkbook-order-success.png",
+   "kind": "confirmation",
+   "labels": [
+    "Click Checkbooks in sidebar",
+    "Click Order Checkbook",
+    "Fill account + nickname, click Next",
+    "Tick authority box, click Confirm"
+   ],
+   "mutates": true,
+   "note": "Centered 'We're getting your checkbook ready' with check preview and Done.",
+   "parent": "payments.checkbook-order-review",
+   "state": "payments.checkbook-order-success",
+   "title": "Checkbook ordered"
+  },
+  {
+   "area": "payments",
+   "draft": "not drafted: its parent had no accepted recipe when the drafter ran; a previous recorder failed: step-failed: payments.recipient-create hop 0: click Create recipient: Timeout 5000ms exceeded (parent chain; the same step failed once in reach)",
+   "image": "screens/payments/61-recipient-created.png",
+   "kind": "drawer",
+   "labels": [
+    "Click Create recipient",
+    "Type street in Recipient legal address",
+    "Pick suggestion, click Create recipient"
+   ],
+   "mutates": true,
+   "note": "New recipient opens in the side panel with no payment details and a 'Recipient created / Send Payment' toast.",
+   "parent": "payments.recipient-address-autocomplete",
+   "state": "payments.recipient-created",
+   "title": "Recipient created"
+  },
+  {
+   "area": "payments",
+   "draft": "not drafted: its parent had no accepted recipe when the drafter ran; the conductor rejected the previous recipe: missing validation error: the replay's Request tax documents dialog has an empty Email field with no 'Please complete this field'. It also shows a different recipient (Lighthouse Properties #..., not Anil Kapoor); a previous recorder failed: reach of parent payments.recipients-request-tax-docs failed: payments.recipients-bulk hop 1: check {\"index\":2,\"role\":\"checkbox\"}: locator.check: Timeout 5000ms exceeded",
+   "image": "screens/payments/95-recipients-request-tax-docs-validation.png",
+   "kind": "validation-error",
+   "labels": [
+    "Tick two recipient checkboxes",
+    "Click Request tax docs",
+    "Select a recipient with no email"
+   ],
+   "mutates": false,
+   "note": "Recipient without an email: 'Please complete this field' and Send requests disabled.",
+   "parent": "payments.recipients-request-tax-docs",
+   "state": "payments.recipients-request-tax-docs-validation",
+   "title": "Request tax docs: email missing"
+  },
+  {
+   "area": "payments",
+   "draft": "not drafted: its parent had no accepted recipe when the drafter ran; a previous recorder failed: reach failed: step-failed payments.send-categorization at /send-money/pay/amount: payments.send-amount hop 0: click {\"name\":\"Next\",\"role\":\"button\"}: Timeout 5000ms exceeded",
+   "image": "screens/payments/112-send-wire-purpose.png",
+   "kind": "menu",
+   "labels": [
+    "Click a recently paid recipient",
+    "Click Next (ACH)",
+    "Enter amount, click Next",
+    "Click Next (wire)"
+   ],
+   "mutates": false,
+   "note": "Extra wire-only step: 'Who or what is this payment for?' options Employee, Contractor, Vendor, Landlord, Transferring to subsidiary, Other.",
+   "parent": "payments.send-categorization",
+   "state": "payments.send-wire-purpose",
+   "title": "Send: Wire purpose"
+  }
+ ]
+}

@@ -1,0 +1,177 @@
+{
+ "area": "settings",
+ "batch": "verify-337",
+ "findings": [
+  {
+   "attachments": [],
+   "attempt": 1,
+   "basis": "violation",
+   "criteria": [
+    "4.1.2"
+   ],
+   "evidence": [
+    {
+     "evidence": {
+      "aria-errormessage": [
+       "postalcode-mercury-utils-id-28-errormessage"
+      ],
+      "failureSummary": "Fix all of the following:\n  aria-errormessage value `postalcode-mercury-utils-id-28-errormessage` must use a technique to announce the message (e.g., aria-live, aria-describedby, role=alert, etc.)"
+     },
+     "occurrence": {
+      "ancestors": [
+       [
+        "_inputBox_q7hf7_93",
+        "_hasValue_q7hf7_171",
+        "_error_q7hf7_41"
+       ],
+       [
+        "_inputBoxWrapper_q7hf7_93"
+       ],
+       [
+        "_textInputWrapper_q7hf7_24"
+       ],
+       [
+        "_provideDSTextInput_q7hf7_6",
+        "_addWrapperMargin_q7hf7_19",
+        "_sharedLineItem_1w1uo_26"
+       ],
+       [
+        "_sharedLine_1w1uo_16"
+       ],
+       [
+        "_wrapper_1w1uo_3"
+       ],
+       [],
+       [
+        "_large_kwlx6_9",
+        "_noHover_3n0se_28",
+        "_shadow_3n0se_25",
+        "_raisedBackground_3n0se_45",
+        "_card_lo4oy_4",
+        "_defaultPadding_lo4oy_27",
+        "_small_lo4oy_11"
+       ]
+      ],
+      "classes": [
+       "_input_q7hf7_93"
+      ],
+      "data": {},
+      "heading": "Edit company mailing address",
+      "landmark": {
+       "name": "",
+       "role": "form"
+      },
+      "layer": "top",
+      "name": "ZIP Code",
+      "rect": [
+       749,
+       553,
+       142,
+       24
+      ],
+      "role": "textbox",
+      "tag": "input",
+      "xpath": "/html/body/div[10]/div[1]/div[1]/div[1]/form[1]/div[1]/div[5]/div[2]/div[1]/div[1]/div[1]/input[1]"
+     },
+     "state": "settings.mailing-address-zip-error"
+    },
+    {
+     "evidence": {
+      "aria-errormessage": [
+       "postalcode-mercury-utils-id-36-errormessage"
+      ],
+      "failureSummary": "Fix all of the following:\n  aria-errormessage value `postalcode-mercury-utils-id-36-errormessage` must use a technique to announce the message (e.g., aria-live, aria-describedby, role=alert, etc.)"
+     },
+     "occurrence": {
+      "ancestors": [
+       [
+        "_inputBox_q7hf7_93",
+        "_error_q7hf7_41"
+       ],
+       [
+        "_inputBoxWrapper_q7hf7_93"
+       ],
+       [
+        "_textInputWrapper_q7hf7_24"
+       ],
+       [
+        "_provideDSTextInput_q7hf7_6",
+        "_addWrapperMargin_q7hf7_19",
+        "_sharedLineItem_1w1uo_26"
+       ],
+       [
+        "_sharedLine_1w1uo_16"
+       ],
+       [
+        "_wrapper_1w1uo_3"
+       ],
+       [
+        "_formWrapper_u3f2o_17"
+       ],
+       []
+      ],
+      "classes": [
+       "_input_q7hf7_93"
+      ],
+      "data": {},
+      "heading": "",
+      "landmark": {
+       "name": "",
+       "role": "form"
+      },
+      "layer": "top",
+      "name": "ZIP Code",
+      "rect": [
+       749,
+       644,
+       154,
+       24
+      ],
+      "role": "textbox",
+      "tag": "input",
+      "xpath": "/html/body/div[7]/div[1]/div[1]/div[1]/div[2]/form[1]/div[1]/div[1]/div[5]/div[2]/div[1]/div[1]/div[1]/input[1]"
+     },
+     "state": "cards.replace-custom-address-error"
+    }
+   ],
+   "evidenceHash": "eec4d9ae075e0657f9d767405127efd58c2091c162c69e55c2507ccbf2dd7226",
+   "facts": {
+    "announced": "textbox \"ZIP Code\" [invalid=true, errormessage=Must be a valid <n>-digit number]",
+    "axeSummary": "aria-errormessage value `postalcode-mercury-utils-id-28-errormessage` must use a technique to announce the message (e.g., aria-live, aria-describedby, role=ale…",
+    "criterion": "4.1.2",
+    "criterionName": "Name, Role, Value",
+    "element": "textbox \"ZIP Code\"",
+    "rule": "aria-valid-attr-value",
+    "screen": "Mailing address — invalid ZIP"
+   },
+   "family": "role-state",
+   "guidance": "Low for optional ARIA or an invalid autocomplete token; high when aria-hidden hides the whole page.",
+   "issueId": null,
+   "key": "role-state:aria-valid-attr-value:24ace887dad0",
+   "measured": false,
+   "primary": "settings.mailing-address-zip-error",
+   "proposals": [],
+   "rule": "aria-valid-attr-value",
+   "screens": 2,
+   "severityDefault": "medium",
+   "source": "scanner",
+   "states": [
+    "settings.mailing-address-zip-error",
+    "cards.replace-custom-address-error"
+   ],
+   "summary": "aria-valid-attr-value: announced as textbox \"ZIP Code\" [invalid=true, errormessage=Must be a valid <n>-digit number]. aria-errormessage value `postalcode-mercury-utils-id-28-errormessage` must use a technique to announce the message (e.g., aria-live, aria-describedby, role=ale…",
+   "title": "Wrong role or state: textbox \"ZIP Code\""
+  }
+ ],
+ "primaries": [
+  "settings.mailing-address-zip-error"
+ ],
+ "reach": {
+  "baseUrl": "https://demo.mercury.com",
+  "data": "data",
+  "map": "build/map.json",
+  "run": "2026-10-03-1525",
+  "workspace": "a11y"
+ },
+ "run": "2026-10-03-1525"
+}

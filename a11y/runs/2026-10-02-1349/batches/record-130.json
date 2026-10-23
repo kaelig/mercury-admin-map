@@ -1,0 +1,66 @@
+{
+ "batch": "record-130",
+ "reach": {
+  "baseUrl": "https://demo.mercury.com",
+  "data": "data",
+  "map": "build/map.json",
+  "run": "2026-10-02-1349",
+  "workspace": "a11y"
+ },
+ "run": "2026-10-02-1349",
+ "states": [
+  {
+   "area": "settings",
+   "draft": "not drafted: its parent had no accepted recipe when the drafter ran; the conductor rejected the previous recipe: extra error: the replay shows 'New password must be different' under New Password as well as 'Passwords don't match'. The hop's New Password 'Test-Password-123!' is the same value the parent typed into Old Password. The capture shows only the mismatch error; the 'Show password' tooltip is cursor noise.",
+   "image": "screens/settings/119-change-password-mismatch.png",
+   "kind": "validation-error",
+   "labels": [
+    "Scroll to Account recovery",
+    "Click Change password",
+    "Enter short passwords and submit",
+    "Enter two different long passwords and submit"
+   ],
+   "mutates": true,
+   "note": "Two different 14-character passwords show 'Passwords don\u2019t match' under Repeat New Password.",
+   "parent": "settings.change-password-short",
+   "state": "settings.change-password-mismatch",
+   "title": "Change password \u2014 mismatch"
+  },
+  {
+   "area": "settings",
+   "draft": "not drafted: its parent had no accepted recipe when the drafter ran",
+   "image": "screens/settings/97-token-ip-required.png",
+   "kind": "validation-error",
+   "labels": [
+    "Click + Create an API token",
+    "Click Create token with the form empty",
+    "Enter a nickname and open Permissions",
+    "Choose Custom Scopes",
+    "Open the Scopes combobox",
+    "Pick Send Money * and click Create token without an IP"
+   ],
+   "mutates": true,
+   "note": "With 'Send Money *' selected and no IP, Create token flags IP whitelist with the format message 'Enter a comma-separated list of IPv4/6 addresses or CIDR ranges.' rather than a required-field message.",
+   "parent": "settings.token-scopes-list",
+   "state": "settings.token-ip-required",
+   "title": "Create token \u2014 IP whitelist required"
+  },
+  {
+   "area": "settings",
+   "draft": "not drafted: its parent had no accepted recipe when the drafter ran",
+   "image": "screens/settings/85-webhook-event-types.png",
+   "kind": "menu",
+   "labels": [
+    "Click + Create webhook",
+    "Enter an http:// URL and tab away",
+    "Switch to https:// and click Verify endpoint",
+    "Open the Event types combobox"
+   ],
+   "mutates": true,
+   "note": "Checkbox list grouped under Transactions (transaction.created, transaction.updated) and Account balances (checking/savings/treasury/investment/credit account .balance.updated). The list extends past the bottom of the modal.",
+   "parent": "settings.webhook-verified",
+   "state": "settings.webhook-event-types",
+   "title": "Event types list"
+  }
+ ]
+}

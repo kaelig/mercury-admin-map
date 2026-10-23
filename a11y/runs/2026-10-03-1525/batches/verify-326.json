@@ -1,0 +1,484 @@
+{
+ "area": "settings",
+ "batch": "verify-326",
+ "findings": [
+  {
+   "attachments": [],
+   "attempt": 1,
+   "basis": "violation",
+   "criteria": [
+    "4.1.2"
+   ],
+   "evidence": [
+    {
+     "evidence": {
+      "failureSummary": "Fix any of the following:\n  Element does not have inner text that is visible to screen readers\n  aria-label attribute does not exist or is empty\n  aria-labelledby attribute does not exist, references elements that do not exist or references elements that are empty\n  Element has no title attribute\n  Element does not have an implicit (wrapped) <label>\n  Element does not have an explicit <label>\n  Element's default semantics were not overridden with role=\"none\" or role=\"presentation\"",
+      "messageKey": "noAttr"
+     },
+     "occurrence": {
+      "ancestors": [
+       [
+        "_teamRow_1u40e_256",
+        "_tableRow_1waxt_94",
+        "_selected_1waxt_106"
+       ],
+       [
+        "_cardTable_1waxt_4",
+        "_condensed_1waxt_31"
+       ],
+       [
+        "_tableAndLoadingStateWrapper_1waxt_313"
+       ],
+       [
+        "_tableWrapper_1waxt_304",
+        "_tableWrapper_1u40e_1",
+        "_withCardDisplayed_1u40e_67"
+       ],
+       [],
+       [],
+       [
+        "_pageContent_809q8_151",
+        "_pageContentWidth_809q8_184",
+        "_footerPadding_809q8_115"
+       ],
+       [
+        "_dashboardContent_809q8_29"
+       ]
+      ],
+      "classes": [
+       "_arrow_1waxt_173"
+      ],
+      "data": {},
+      "heading": "Team",
+      "landmark": {
+       "name": "",
+       "role": "main"
+      },
+      "layer": "document",
+      "name": "",
+      "rect": [
+       878,
+       340,
+       32,
+       64
+      ],
+      "role": "button",
+      "tag": "button",
+      "xpath": "/html/body/div[1]/main[1]/div[1]/div[1]/div[4]/div[1]/div[2]/div[2]/div[1]/div[2]/div[1]/div[1]/div[4]/button[1]"
+     },
+     "state": "settings.edit-member"
+    },
+    {
+     "evidence": {
+      "failureSummary": "Fix any of the following:\n  Element does not have inner text that is visible to screen readers\n  aria-label attribute does not exist or is empty\n  aria-labelledby attribute does not exist, references elements that do not exist or references elements that are empty\n  Element has no title attribute\n  Element does not have an implicit (wrapped) <label>\n  Element does not have an explicit <label>\n  Element's default semantics were not overridden with role=\"none\" or role=\"presentation\"",
+      "messageKey": "noAttr"
+     },
+     "occurrence": {
+      "ancestors": [
+       [
+        "_teamRow_1u40e_256",
+        "_tableRow_1waxt_94",
+        "_selected_1waxt_106"
+       ],
+       [
+        "_cardTable_1waxt_4",
+        "_condensed_1waxt_31"
+       ],
+       [
+        "_tableAndLoadingStateWrapper_1waxt_313"
+       ],
+       [
+        "_tableWrapper_1waxt_304",
+        "_tableWrapper_1u40e_1",
+        "_withCardDisplayed_1u40e_67"
+       ],
+       [],
+       [],
+       [
+        "_pageContent_809q8_151",
+        "_pageContentWidth_809q8_184",
+        "_footerPadding_809q8_115"
+       ],
+       [
+        "_dashboardContent_809q8_29"
+       ]
+      ],
+      "classes": [
+       "_arrow_1waxt_173"
+      ],
+      "data": {},
+      "heading": "Team",
+      "landmark": {
+       "name": "",
+       "role": "main"
+      },
+      "layer": "document",
+      "name": "",
+      "rect": [
+       878,
+       340,
+       32,
+       64
+      ],
+      "role": "button",
+      "tag": "button",
+      "xpath": "/html/body/div[1]/main[1]/div[1]/div[1]/div[4]/div[1]/div[2]/div[2]/div[1]/div[2]/div[1]/div[1]/div[4]/button[1]"
+     },
+     "state": "settings.edit-member-dirty"
+    }
+   ],
+   "evidenceHash": "72335d4de1c1497cf787bdc5fcb1589681690213ac9293f451383325964c5523",
+   "facts": {
+    "announced": "button \"\"",
+    "axeSummary": "Element does not have inner text that is visible to screen readers; aria-label attribute does not exist or is empty; aria-labelledby attribute does not exist,…",
+    "criterion": "4.1.2",
+    "criterionName": "Name, Role, Value",
+    "element": "button in \"Team\"",
+    "rule": "button-name",
+    "screen": "Edit member panel"
+   },
+   "family": "name",
+   "guidance": "High for an unnamed form control or the sole primary action.",
+   "issueId": null,
+   "key": "name:button-name:f9a7529c326b",
+   "measured": false,
+   "primary": "settings.edit-member",
+   "proposals": [],
+   "rule": "button-name",
+   "screens": 2,
+   "severityDefault": "medium",
+   "source": "scanner",
+   "states": [
+    "settings.edit-member",
+    "settings.edit-member-dirty"
+   ],
+   "summary": "button-name: announced as button \"\". Element does not have inner text that is visible to screen readers; aria-label attribute does not exist or is empty; aria-labelledby attribute does not exist,…",
+   "title": "Missing or unclear name: button in \"Team\""
+  },
+  {
+   "attachments": [],
+   "attempt": 1,
+   "basis": "violation",
+   "criteria": [
+    "1.3.5"
+   ],
+   "evidence": [
+    {
+     "evidence": {
+      "failureSummary": "Fix all of the following:\n  the autocomplete attribute is incorrectly formatted"
+     },
+     "occurrence": {
+      "ancestors": [
+       [
+        "_textboxWrapper_1a7mr_158"
+       ],
+       [
+        "_selectWrapper_1a7mr_150"
+       ],
+       [
+        "_comboboxWrapper_1a7mr_6",
+        "_userRoleCombobox_v8izy_1",
+        "session-replay-block"
+       ],
+       [
+        "_userRoleComboboxWrapper_v8izy_1"
+       ],
+       [
+        "_inputsWrapper_1mzu2_51"
+       ],
+       [
+        "_roleInfoSection_1mzu2_9"
+       ],
+       [
+        "_formWrapper_1mzu2_100",
+        "_inviteFormRoot_xolpa_214"
+       ],
+       []
+      ],
+      "classes": [
+       "_textboxInput_1a7mr_250",
+       "_selectedPlaceholder_1a7mr_293"
+      ],
+      "data": {},
+      "heading": "Edit member",
+      "landmark": {
+       "name": "",
+       "role": "form"
+      },
+      "layer": "document",
+      "name": "Role",
+      "rect": [
+       947,
+       781,
+       306,
+       38
+      ],
+      "role": "combobox",
+      "tag": "input",
+      "xpath": "/html/body/div[1]/main[1]/div[1]/div[1]/div[4]/div[1]/div[2]/div[2]/div[1]/div[2]/div[2]/div[1]/aside[1]/div[1]/div[1]/div[1]/form[1]/div[1]/div[2]/div[1]/div[1]/div[1]/div[1]/div[1]/input[1]"
+     },
+     "state": "settings.edit-member"
+    },
+    {
+     "evidence": {
+      "failureSummary": "Fix all of the following:\n  the autocomplete attribute is incorrectly formatted"
+     },
+     "occurrence": {
+      "ancestors": [
+       [
+        "_textboxWrapper_1a7mr_158"
+       ],
+       [
+        "_selectWrapper_1a7mr_150"
+       ],
+       [
+        "_comboboxWrapper_1a7mr_6",
+        "_userRoleCombobox_v8izy_1",
+        "session-replay-block"
+       ],
+       [
+        "_userRoleComboboxWrapper_v8izy_1"
+       ],
+       [
+        "_inputsWrapper_1mzu2_51"
+       ],
+       [
+        "_roleInfoSection_1mzu2_9"
+       ],
+       [
+        "_formWrapper_1mzu2_100",
+        "_inviteFormRoot_xolpa_214"
+       ],
+       []
+      ],
+      "classes": [
+       "_textboxInput_1a7mr_250",
+       "_selectedPlaceholder_1a7mr_293"
+      ],
+      "data": {},
+      "heading": "Edit member",
+      "landmark": {
+       "name": "",
+       "role": "form"
+      },
+      "layer": "document",
+      "name": "Role",
+      "rect": [
+       947,
+       309,
+       306,
+       38
+      ],
+      "role": "combobox",
+      "tag": "input",
+      "xpath": "/html/body/div[1]/main[1]/div[1]/div[1]/div[4]/div[1]/div[2]/div[2]/div[1]/div[2]/div[2]/div[1]/aside[1]/div[1]/div[1]/div[1]/form[1]/div[1]/div[2]/div[1]/div[1]/div[1]/div[1]/div[1]/input[1]"
+     },
+     "state": "settings.edit-member-dirty"
+    }
+   ],
+   "evidenceHash": "508d6f0e19cdd2738dde30be8d654d5510f4c99a676aacff8cc3bdc50a2012e4",
+   "facts": {
+    "announced": "combobox \"Role\" [expanded=false, haspopup=listbox]",
+    "axeSummary": "the autocomplete attribute is incorrectly formatted",
+    "criterion": "1.3.5",
+    "criterionName": "Identify Input Purpose",
+    "element": "combobox \"Role\"",
+    "rule": "autocomplete-valid",
+    "screen": "Edit member panel"
+   },
+   "family": "role-state",
+   "guidance": "Low for optional ARIA or an invalid autocomplete token; high when aria-hidden hides the whole page.",
+   "issueId": null,
+   "key": "role-state:autocomplete-valid:5900e07667a3",
+   "measured": false,
+   "primary": "settings.edit-member",
+   "proposals": [],
+   "rule": "autocomplete-valid",
+   "screens": 2,
+   "severityDefault": "medium",
+   "source": "scanner",
+   "states": [
+    "settings.edit-member",
+    "settings.edit-member-dirty"
+   ],
+   "summary": "autocomplete-valid: announced as combobox \"Role\" [expanded=false, haspopup=listbox]. the autocomplete attribute is incorrectly formatted",
+   "title": "Invalid autocomplete value: combobox \"Role\""
+  },
+  {
+   "attachments": [],
+   "attempt": 1,
+   "basis": "violation",
+   "criteria": [
+    "1.3.5"
+   ],
+   "evidence": [
+    {
+     "evidence": {
+      "failureSummary": "Fix all of the following:\n  the autocomplete attribute is incorrectly formatted"
+     },
+     "occurrence": {
+      "ancestors": [
+       [
+        "_inputWrapper_11c85_6"
+       ],
+       [
+        "_wrapper_1xgdp_8"
+       ],
+       [
+        "_inputsWrapper_1mzu2_51",
+        "_inputsWrapperEdit_1mzu2_89"
+       ],
+       [
+        "_formWrapper_1mzu2_100",
+        "_inviteFormRoot_xolpa_214"
+       ],
+       [],
+       [
+        "_editFormWrapper_xolpa_21",
+        "_editFormWrapper_1mstp_12"
+       ],
+       [
+        "_panelBody_d3i56_64"
+       ],
+       [
+        "_large_kwlx6_9",
+        "_noHover_3n0se_28",
+        "_shadow_3n0se_25",
+        "_raisedBackground_3n0se_45",
+        "_panel_d3i56_55"
+       ]
+      ],
+      "classes": [
+       "_input_11c85_6"
+      ],
+      "data": {
+       "data-1p-ignore": "true",
+       "data-active-item": "true",
+       "data-bwignore": "true",
+       "data-lpignore": "true"
+      },
+      "heading": "Edit member",
+      "landmark": {
+       "name": "",
+       "role": "form"
+      },
+      "layer": "document",
+      "name": "Department",
+      "rect": [
+       946,
+       632,
+       311,
+       40
+      ],
+      "role": "combobox",
+      "tag": "input",
+      "xpath": "/html/body/div[1]/main[1]/div[1]/div[1]/div[4]/div[1]/div[2]/div[2]/div[1]/div[2]/div[2]/div[1]/aside[1]/div[1]/div[1]/div[1]/form[1]/div[1]/div[1]/div[3]/div[1]/input[1]"
+     },
+     "state": "settings.edit-member"
+    },
+    {
+     "evidence": {
+      "failureSummary": "Fix all of the following:\n  the autocomplete attribute is incorrectly formatted"
+     },
+     "occurrence": {
+      "ancestors": [
+       [
+        "_inputWrapper_11c85_6"
+       ],
+       [
+        "_wrapper_1xgdp_8"
+       ],
+       [
+        "_inputsWrapper_1mzu2_51",
+        "_inputsWrapperEdit_1mzu2_89"
+       ],
+       [
+        "_formWrapper_1mzu2_100",
+        "_inviteFormRoot_xolpa_214"
+       ],
+       [],
+       [
+        "_editFormWrapper_xolpa_21",
+        "_editFormWrapper_1mstp_12"
+       ],
+       [
+        "_panelBody_d3i56_64"
+       ],
+       [
+        "_large_kwlx6_9",
+        "_noHover_3n0se_28",
+        "_shadow_3n0se_25",
+        "_raisedBackground_3n0se_45",
+        "_panel_d3i56_55"
+       ]
+      ],
+      "classes": [
+       "_input_11c85_6"
+      ],
+      "data": {
+       "data-1p-ignore": "true",
+       "data-active-item": "true",
+       "data-bwignore": "true",
+       "data-lpignore": "true"
+      },
+      "heading": "Edit member",
+      "landmark": {
+       "name": "",
+       "role": "form"
+      },
+      "layer": "document",
+      "name": "Department",
+      "rect": [
+       946,
+       160,
+       311,
+       40
+      ],
+      "role": "combobox",
+      "tag": "input",
+      "xpath": "/html/body/div[1]/main[1]/div[1]/div[1]/div[4]/div[1]/div[2]/div[2]/div[1]/div[2]/div[2]/div[1]/aside[1]/div[1]/div[1]/div[1]/form[1]/div[1]/div[1]/div[3]/div[1]/input[1]"
+     },
+     "state": "settings.edit-member-dirty"
+    }
+   ],
+   "evidenceHash": "508d6f0e19cdd2738dde30be8d654d5510f4c99a676aacff8cc3bdc50a2012e4",
+   "facts": {
+    "announced": "combobox \"Department\" [expanded=false, haspopup=listbox]",
+    "axeSummary": "the autocomplete attribute is incorrectly formatted",
+    "criterion": "1.3.5",
+    "criterionName": "Identify Input Purpose",
+    "element": "combobox \"Department\"",
+    "rule": "autocomplete-valid",
+    "screen": "Edit member panel"
+   },
+   "family": "role-state",
+   "guidance": "Low for optional ARIA or an invalid autocomplete token; high when aria-hidden hides the whole page.",
+   "issueId": null,
+   "key": "role-state:autocomplete-valid:702ef9e6f1bd",
+   "measured": false,
+   "primary": "settings.edit-member",
+   "proposals": [],
+   "rule": "autocomplete-valid",
+   "screens": 2,
+   "severityDefault": "medium",
+   "source": "scanner",
+   "states": [
+    "settings.edit-member",
+    "settings.edit-member-dirty"
+   ],
+   "summary": "autocomplete-valid: announced as combobox \"Department\" [expanded=false, haspopup=listbox]. the autocomplete attribute is incorrectly formatted",
+   "title": "Invalid autocomplete value: combobox \"Department\""
+  }
+ ],
+ "primaries": [
+  "settings.edit-member"
+ ],
+ "reach": {
+  "baseUrl": "https://demo.mercury.com",
+  "data": "data",
+  "map": "build/map.json",
+  "run": "2026-10-03-1525",
+  "workspace": "a11y"
+ },
+ "run": "2026-10-03-1525"
+}

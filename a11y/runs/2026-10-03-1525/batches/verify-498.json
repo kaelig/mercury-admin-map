@@ -1,0 +1,339 @@
+{
+ "area": "payments",
+ "batch": "verify-498",
+ "findings": [
+  {
+   "attachments": [],
+   "attempt": 1,
+   "basis": "candidate",
+   "criteria": [
+    "4.1.2"
+   ],
+   "evidence": [
+    {
+     "evidence": {
+      "description": "",
+      "name": "",
+      "role": "button",
+      "states": {},
+      "template": "button \"\""
+     },
+     "occurrence": {
+      "ancestors": [
+       [
+        "_recipientCardFooter_1w34n_887"
+       ],
+       [
+        "_panelFooter_d3i56_66",
+        "_recipientCardFooterPadding_1w34n_887"
+       ],
+       [
+        "_large_kwlx6_9",
+        "_noHover_3n0se_28",
+        "_shadow_3n0se_25",
+        "_raisedBackground_3n0se_45",
+        "_panel_d3i56_55",
+        "_recipientCardPanel_1w34n_886"
+       ],
+       [
+        "_transitionWrapper_d3i56_5",
+        "_visible_d3i56_19",
+        "_recipientCardWrapper_1w34n_885"
+       ],
+       [
+        "_tableWrapper_1prwn_1"
+       ],
+       [
+        "_pageContent_809q8_151",
+        "_pageContentWidth_809q8_184",
+        "_footerPadding_809q8_115"
+       ],
+       [
+        "_dashboardContent_809q8_29"
+       ],
+       [
+        "_layout_809q8_18"
+       ]
+      ],
+      "classes": [
+       "_button_r6b2u_20",
+       "_small_r6b2u_72",
+       "_tertiary_r6b2u_153",
+       "_tooltipAnchor_18bac_4",
+       "_recipientCardFooterDelete_1w34n_897"
+      ],
+      "data": {},
+      "heading": "Recipient’s Profile",
+      "landmark": {
+       "name": "",
+       "role": "complementary"
+      },
+      "layer": "top",
+      "name": "",
+      "rect": [
+       1258,
+       844,
+       32,
+       32
+      ],
+      "role": "button",
+      "tag": "button",
+      "xpath": "/html/body/div[1]/main[1]/div[1]/div[1]/div[4]/div[1]/div[2]/div[3]/aside[1]/div[1]/section[2]/div[1]/button[4]"
+     },
+     "state": "payments.recipient-detail"
+    }
+   ],
+   "evidenceHash": "09c91ed8f99085354acab841fbd7d30911fc64ba69a7ebd7fb116a7646cb6c8e",
+   "facts": {
+    "announced": "button \"\"",
+    "axeSummary": "",
+    "criterion": "4.1.2",
+    "criterionName": "Name, Role, Value",
+    "element": "button in \"Recipient’s Profile\"",
+    "rule": "announced-as",
+    "screen": "Recipient detail panel"
+   },
+   "family": "name",
+   "guidance": "High for an unnamed form control or the sole primary action.",
+   "issueId": null,
+   "key": "name:announced-as:00811886712e",
+   "measured": false,
+   "primary": "payments.recipient-detail",
+   "proposals": [],
+   "rule": "announced-as",
+   "screens": 1,
+   "severityDefault": "medium",
+   "source": "scanner",
+   "states": [
+    "payments.recipient-detail"
+   ],
+   "summary": "announced-as: announced as button \"\".",
+   "title": "Missing or unclear name: button in \"Recipient’s Profile\""
+  },
+  {
+   "attachments": [],
+   "attempt": 1,
+   "basis": "candidate",
+   "criteria": [
+    "2.4.4"
+   ],
+   "evidence": [
+    {
+     "evidence": {
+      "description": "",
+      "name": "View All",
+      "role": "link",
+      "states": {},
+      "template": "link \"View All\""
+     },
+     "occurrence": {
+      "ancestors": [
+       [
+        "_text-link_12t49_1"
+       ],
+       [
+        "_titleRow_1ycij_9"
+       ],
+       [
+        "_paymentHistory_1ycij_1"
+       ],
+       [
+        "_panelBody_d3i56_64"
+       ],
+       [
+        "_large_kwlx6_9",
+        "_noHover_3n0se_28",
+        "_shadow_3n0se_25",
+        "_raisedBackground_3n0se_45",
+        "_panel_d3i56_55",
+        "_recipientCardPanel_1w34n_886"
+       ],
+       [
+        "_transitionWrapper_d3i56_5",
+        "_visible_d3i56_19",
+        "_recipientCardWrapper_1w34n_885"
+       ],
+       [
+        "_tableWrapper_1prwn_1"
+       ],
+       [
+        "_pageContent_809q8_151",
+        "_pageContentWidth_809q8_184",
+        "_footerPadding_809q8_115"
+       ]
+      ],
+      "classes": [
+       "_link_ual8v_4",
+       "_underlineOnHover_ual8v_15",
+       "_sizeSmall_ual8v_29"
+      ],
+      "data": {
+       "data-discover": "true"
+      },
+      "heading": "Recipient’s Profile",
+      "landmark": {
+       "name": "",
+       "role": "complementary"
+      },
+      "layer": "top",
+      "name": "View All",
+      "rect": [
+       1229,
+       545,
+       61,
+       15
+      ],
+      "role": "link",
+      "tag": "a",
+      "xpath": "/html/body/div[1]/main[1]/div[1]/div[1]/div[4]/div[1]/div[2]/div[3]/aside[1]/div[1]/div[1]/div[3]/div[1]/span[2]/a[1]"
+     },
+     "state": "payments.recipient-detail"
+    }
+   ],
+   "evidenceHash": "da84ea6a72b0280c8c4dd1f3929e0c1e4db5907ca1d9257899f48d72df46ce65",
+   "facts": {
+    "announced": "link \"View All\"",
+    "axeSummary": "",
+    "criterion": "2.4.4",
+    "criterionName": "Link Purpose (In Context)",
+    "element": "link \"View All\"",
+    "rule": "announced-as",
+    "screen": "Recipient detail panel"
+   },
+   "family": "name",
+   "guidance": "High for an unnamed form control or the sole primary action.",
+   "issueId": null,
+   "key": "name:announced-as:580fc3db2c81",
+   "measured": false,
+   "primary": "payments.recipient-detail",
+   "proposals": [],
+   "rule": "announced-as",
+   "screens": 1,
+   "severityDefault": "medium",
+   "source": "scanner",
+   "states": [
+    "payments.recipient-detail"
+   ],
+   "summary": "announced-as: announced as link \"View All\".",
+   "title": "Missing or unclear name: link \"View All\""
+  },
+  {
+   "attachments": [],
+   "attempt": 1,
+   "basis": "candidate",
+   "criteria": [
+    "4.1.2"
+   ],
+   "evidence": [
+    {
+     "evidence": {
+      "description": "",
+      "name": "",
+      "role": "button",
+      "states": {},
+      "template": "button \"\""
+     },
+     "occurrence": {
+      "ancestors": [
+       [
+        "_recipientCardFooter_1w34n_887"
+       ],
+       [
+        "_panelFooter_d3i56_66",
+        "_recipientCardFooterPadding_1w34n_887"
+       ],
+       [
+        "_large_kwlx6_9",
+        "_noHover_3n0se_28",
+        "_shadow_3n0se_25",
+        "_raisedBackground_3n0se_45",
+        "_panel_d3i56_55",
+        "_recipientCardPanel_1w34n_886"
+       ],
+       [
+        "_transitionWrapper_d3i56_5",
+        "_visible_d3i56_19",
+        "_recipientCardWrapper_1w34n_885"
+       ],
+       [
+        "_tableWrapper_1prwn_1"
+       ],
+       [
+        "_pageContent_809q8_151",
+        "_pageContentWidth_809q8_184",
+        "_footerPadding_809q8_115"
+       ],
+       [
+        "_dashboardContent_809q8_29"
+       ],
+       [
+        "_layout_809q8_18"
+       ]
+      ],
+      "classes": [
+       "_button_r6b2u_20",
+       "_small_r6b2u_72",
+       "_tertiary_r6b2u_153",
+       "_tooltipAnchor_18bac_4"
+      ],
+      "data": {},
+      "heading": "Recipient’s Profile",
+      "landmark": {
+       "name": "",
+       "role": "complementary"
+      },
+      "layer": "top",
+      "name": "",
+      "rect": [
+       1026,
+       844,
+       32,
+       32
+      ],
+      "role": "button",
+      "tag": "button",
+      "xpath": "/html/body/div[1]/main[1]/div[1]/div[1]/div[4]/div[1]/div[2]/div[3]/aside[1]/div[1]/section[2]/div[1]/button[3]"
+     },
+     "state": "payments.recipient-detail"
+    }
+   ],
+   "evidenceHash": "09c91ed8f99085354acab841fbd7d30911fc64ba69a7ebd7fb116a7646cb6c8e",
+   "facts": {
+    "announced": "button \"\"",
+    "axeSummary": "",
+    "criterion": "4.1.2",
+    "criterionName": "Name, Role, Value",
+    "element": "button in \"Recipient’s Profile\"",
+    "rule": "announced-as",
+    "screen": "Recipient detail panel"
+   },
+   "family": "name",
+   "guidance": "High for an unnamed form control or the sole primary action.",
+   "issueId": null,
+   "key": "name:announced-as:fa1356c233a2",
+   "measured": false,
+   "primary": "payments.recipient-detail",
+   "proposals": [],
+   "rule": "announced-as",
+   "screens": 1,
+   "severityDefault": "medium",
+   "source": "scanner",
+   "states": [
+    "payments.recipient-detail"
+   ],
+   "summary": "announced-as: announced as button \"\".",
+   "title": "Missing or unclear name: button in \"Recipient’s Profile\""
+  }
+ ],
+ "primaries": [
+  "payments.recipient-detail"
+ ],
+ "reach": {
+  "baseUrl": "https://demo.mercury.com",
+  "data": "data",
+  "map": "build/map.json",
+  "run": "2026-10-03-1525",
+  "workspace": "a11y"
+ },
+ "run": "2026-10-03-1525"
+}

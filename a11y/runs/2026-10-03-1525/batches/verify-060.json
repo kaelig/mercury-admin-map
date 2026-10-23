@@ -1,0 +1,172 @@
+{
+ "area": "billpay",
+ "batch": "verify-060",
+ "findings": [
+  {
+   "attachments": [],
+   "attempt": 1,
+   "basis": "candidate",
+   "criteria": [
+    "2.1.1"
+   ],
+   "evidence": [
+    {
+     "evidence": {
+      "end": "body",
+      "focusable": false,
+      "source": "pointer",
+      "stops": 40
+     },
+     "occurrence": {
+      "ancestors": [
+       [
+        "_dsTabView_95hq1_3"
+       ],
+       [
+        "_lowerPageWrapper_1g3sn_95"
+       ],
+       [
+        "_mappingPageDashboardWrapper_2fzjz_3",
+        "_pageContent_809q8_151",
+        "_pageContentWidth_809q8_184",
+        "_footerPadding_809q8_115"
+       ],
+       [
+        "_dashboardContent_809q8_29"
+       ],
+       [
+        "_layout_809q8_18"
+       ],
+       [
+        "_wrapper_809q8_3"
+       ],
+       [],
+       [
+        "_main_1gb3b_1"
+       ]
+      ],
+      "classes": [
+       "_bodySecondary_qaod7_51",
+       "_dsTabViewTab_95hq1_9"
+      ],
+      "data": {},
+      "heading": "Accounting Settings",
+      "landmark": {
+       "name": "",
+       "role": "main"
+      },
+      "layer": "document",
+      "name": "",
+      "rect": [
+       431,
+       216,
+       128,
+       40
+      ],
+      "role": "generic",
+      "tag": "div",
+      "xpath": "/html/body/div[1]/main[1]/div[1]/div[1]/div[4]/div[1]/div[2]/div[3]/div[1]/div[2]"
+     },
+     "state": "billpay.accounting-settings"
+    },
+    {
+     "evidence": {
+      "end": "body",
+      "focusable": false,
+      "source": "pointer",
+      "stops": 40
+     },
+     "occurrence": {
+      "ancestors": [
+       [
+        "_dsTabView_95hq1_3"
+       ],
+       [
+        "_lowerPageWrapper_1g3sn_95"
+       ],
+       [
+        "_mappingPageDashboardWrapper_2fzjz_3",
+        "_pageContent_809q8_151",
+        "_pageContentWidth_809q8_184",
+        "_footerPadding_809q8_115"
+       ],
+       [
+        "_dashboardContent_809q8_29"
+       ],
+       [
+        "_layout_809q8_18"
+       ],
+       [
+        "_wrapper_809q8_3"
+       ],
+       [],
+       [
+        "_main_1gb3b_1"
+       ]
+      ],
+      "classes": [
+       "_bodySecondary_qaod7_51",
+       "_dsTabViewTab_95hq1_9"
+      ],
+      "data": {},
+      "heading": "Accounting Settings",
+      "landmark": {
+       "name": "",
+       "role": "main"
+      },
+      "layer": "document",
+      "name": "",
+      "rect": [
+       346,
+       216,
+       61,
+       40
+      ],
+      "role": "generic",
+      "tag": "div",
+      "xpath": "/html/body/div[1]/main[1]/div[1]/div[1]/div[4]/div[1]/div[2]/div[3]/div[1]/div[1]"
+     },
+     "state": "billpay.automation-settings"
+    }
+   ],
+   "evidenceHash": "7592451b62cf542496d325f6cdd7d438246e0f67ddaef5d8007368eb723e9695",
+   "facts": {
+    "axeSummary": "",
+    "criterion": "2.1.1",
+    "criterionName": "Keyboard",
+    "element": "text in \"Accounting Settings\"",
+    "rule": "not-reached",
+    "screen": "Accounting Settings: GL codes",
+    "stops": "40"
+   },
+   "family": "keyboard",
+   "guidance": "High if a task cannot be completed without a mouse.",
+   "issueId": null,
+   "key": "keyboard:not-reached:d245bff04b0f",
+   "measured": false,
+   "primary": "billpay.accounting-settings",
+   "proposals": [],
+   "rule": "not-reached",
+   "screens": 3,
+   "severityDefault": "medium",
+   "source": "scanner",
+   "states": [
+    "billpay.accounting-settings",
+    "billpay.automation-settings"
+   ],
+   "summary": "The Tab walk visited 40 stops and never reached the text in \"Accounting Settings\", which responds to a click.",
+   "title": "Not reachable by keyboard: text in \"Accounting Settings\""
+  }
+ ],
+ "primaries": [
+  "billpay.accounting-settings"
+ ],
+ "reach": {
+  "baseUrl": "https://demo.mercury.com",
+  "data": "data",
+  "map": "build/map.json",
+  "run": "2026-10-03-1525",
+  "workspace": "a11y"
+ },
+ "run": "2026-10-03-1525"
+}

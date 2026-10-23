@@ -1,0 +1,353 @@
+{
+ "area": "home",
+ "batch": "verify-471",
+ "findings": [
+  {
+   "attachments": [],
+   "attempt": 1,
+   "basis": "candidate",
+   "criteria": [
+    "4.1.2"
+   ],
+   "evidence": [
+    {
+     "evidence": {
+      "description": "",
+      "name": "",
+      "role": "combobox",
+      "states": {
+       "expanded": true,
+       "haspopup": "listbox"
+      },
+      "template": "combobox \"\" [expanded=true, haspopup=listbox]"
+     },
+     "occurrence": {
+      "ancestors": [
+       [
+        "_searchBar_16edb_96"
+       ],
+       [
+        "_searchBarWrapper_16edb_189"
+       ],
+       [
+        "_inputAndResultsContainer_16edb_80"
+       ],
+       [
+        "_large_kwlx6_9",
+        "_noHover_3n0se_28",
+        "_shadow_3n0se_25",
+        "_raisedBackground_3n0se_45",
+        "_card_lo4oy_4",
+        "_omnisearchCard_16edb_36"
+       ],
+       [
+        "ReactModal__Content",
+        "ReactModal__Content--after-open",
+        "_modal_lo4oy_73",
+        "_disableAutoCenter_lo4oy_79",
+        "_omnisearchModal_16edb_27"
+       ],
+       [
+        "ReactModal__Overlay",
+        "ReactModal__Overlay--after-open",
+        "_overlay_lo4oy_89",
+        "_omnisearchOverlay_16edb_40"
+       ],
+       [
+        "ReactModalPortal"
+       ]
+      ],
+      "classes": [
+       "_searchBarInput_16edb_99"
+      ],
+      "data": {},
+      "heading": "",
+      "landmark": {
+       "name": "",
+       "role": "dialog"
+      },
+      "layer": "top",
+      "name": "",
+      "rect": [
+       320,
+       135,
+       794,
+       48
+      ],
+      "role": "combobox",
+      "tag": "input",
+      "xpath": "/html/body/div[15]/div[1]/div[1]/div[1]/div[2]/div[2]/label[1]/input[1]"
+     },
+     "state": "home.search-card-all"
+    },
+    {
+     "evidence": {
+      "description": "",
+      "name": "",
+      "role": "combobox",
+      "states": {
+       "expanded": true,
+       "haspopup": "listbox"
+      },
+      "template": "combobox \"\" [expanded=true, haspopup=listbox]"
+     },
+     "occurrence": {
+      "ancestors": [
+       [
+        "_searchBar_16edb_96"
+       ],
+       [
+        "_searchBarWrapper_16edb_189"
+       ],
+       [
+        "_inputAndResultsContainer_16edb_80"
+       ],
+       [
+        "_large_kwlx6_9",
+        "_noHover_3n0se_28",
+        "_shadow_3n0se_25",
+        "_raisedBackground_3n0se_45",
+        "_card_lo4oy_4",
+        "_omnisearchCard_16edb_36"
+       ],
+       [
+        "ReactModal__Content",
+        "ReactModal__Content--after-open",
+        "_modal_lo4oy_73",
+        "_disableAutoCenter_lo4oy_79",
+        "_omnisearchModal_16edb_27"
+       ],
+       [
+        "ReactModal__Overlay",
+        "ReactModal__Overlay--after-open",
+        "_overlay_lo4oy_89",
+        "_omnisearchOverlay_16edb_40"
+       ],
+       [
+        "ReactModalPortal"
+       ]
+      ],
+      "classes": [
+       "_searchBarInput_16edb_99"
+      ],
+      "data": {},
+      "heading": "",
+      "landmark": {
+       "name": "",
+       "role": "dialog"
+      },
+      "layer": "top",
+      "name": "",
+      "rect": [
+       320,
+       135,
+       794,
+       48
+      ],
+      "role": "combobox",
+      "tag": "input",
+      "xpath": "/html/body/div[15]/div[1]/div[1]/div[1]/div[2]/div[2]/label[1]/input[1]"
+     },
+     "state": "home.search-no-results"
+    }
+   ],
+   "evidenceHash": "596037822adc33825cd5c5a78b88edbf92584acc672994d934ac1905eddfc268",
+   "facts": {
+    "announced": "combobox \"\" [expanded=true, haspopup=listbox]",
+    "axeSummary": "",
+    "criterion": "4.1.2",
+    "criterionName": "Name, Role, Value",
+    "element": "combobox in the dialog landmark",
+    "rule": "announced-as",
+    "screen": "Search 'card' — All results"
+   },
+   "family": "name",
+   "guidance": "High for an unnamed form control or the sole primary action.",
+   "issueId": null,
+   "key": "name:announced-as:3369fe8959ab",
+   "measured": false,
+   "primary": "home.search-card-all",
+   "proposals": [],
+   "rule": "announced-as",
+   "screens": 6,
+   "severityDefault": "medium",
+   "source": "scanner",
+   "states": [
+    "home.search-card-all",
+    "home.search-no-results"
+   ],
+   "summary": "announced-as: announced as combobox \"\" [expanded=true, haspopup=listbox].",
+   "title": "Missing or unclear name: combobox in the dialog landmark"
+  },
+  {
+   "attachments": [],
+   "attempt": 1,
+   "basis": "candidate",
+   "criteria": [
+    "4.1.2"
+   ],
+   "evidence": [
+    {
+     "evidence": {
+      "description": "",
+      "name": "card",
+      "role": "listbox",
+      "states": {},
+      "template": "listbox \"card\""
+     },
+     "occurrence": {
+      "ancestors": [
+       [
+        "_inputAndResultsContainer_16edb_80"
+       ],
+       [
+        "_large_kwlx6_9",
+        "_noHover_3n0se_28",
+        "_shadow_3n0se_25",
+        "_raisedBackground_3n0se_45",
+        "_card_lo4oy_4",
+        "_omnisearchCard_16edb_36"
+       ],
+       [
+        "ReactModal__Content",
+        "ReactModal__Content--after-open",
+        "_modal_lo4oy_73",
+        "_disableAutoCenter_lo4oy_79",
+        "_omnisearchModal_16edb_27"
+       ],
+       [
+        "ReactModal__Overlay",
+        "ReactModal__Overlay--after-open",
+        "_overlay_lo4oy_89",
+        "_omnisearchOverlay_16edb_40"
+       ],
+       [
+        "ReactModalPortal"
+       ]
+      ],
+      "classes": [
+       "_menu_16edb_182"
+      ],
+      "data": {},
+      "heading": "",
+      "landmark": {
+       "name": "",
+       "role": "dialog"
+      },
+      "layer": "top",
+      "name": "card",
+      "rect": [
+       320,
+       240,
+       800,
+       422
+      ],
+      "role": "listbox",
+      "tag": "div",
+      "xpath": "/html/body/div[15]/div[1]/div[1]/div[1]/div[2]/div[4]"
+     },
+     "state": "home.search-card-all"
+    },
+    {
+     "evidence": {
+      "description": "",
+      "name": "card",
+      "role": "listbox",
+      "states": {},
+      "template": "listbox \"card\""
+     },
+     "occurrence": {
+      "ancestors": [
+       [
+        "_inputAndResultsContainer_16edb_80"
+       ],
+       [
+        "_large_kwlx6_9",
+        "_noHover_3n0se_28",
+        "_shadow_3n0se_25",
+        "_raisedBackground_3n0se_45",
+        "_card_lo4oy_4",
+        "_omnisearchCard_16edb_36"
+       ],
+       [
+        "ReactModal__Content",
+        "ReactModal__Content--after-open",
+        "_modal_lo4oy_73",
+        "_disableAutoCenter_lo4oy_79",
+        "_omnisearchModal_16edb_27"
+       ],
+       [
+        "ReactModal__Overlay",
+        "ReactModal__Overlay--after-open",
+        "_overlay_lo4oy_89",
+        "_omnisearchOverlay_16edb_40"
+       ],
+       [
+        "ReactModalPortal"
+       ]
+      ],
+      "classes": [
+       "_menu_16edb_182"
+      ],
+      "data": {},
+      "heading": "",
+      "landmark": {
+       "name": "",
+       "role": "dialog"
+      },
+      "layer": "top",
+      "name": "card",
+      "rect": [
+       320,
+       240,
+       800,
+       422
+      ],
+      "role": "listbox",
+      "tag": "div",
+      "xpath": "/html/body/div[15]/div[1]/div[1]/div[1]/div[2]/div[4]"
+     },
+     "state": "home.search-pages"
+    }
+   ],
+   "evidenceHash": "cf2e11c6a50653ced73fbe18eef81a0ec48257cb112915f65e25bc3a5349031a",
+   "facts": {
+    "announced": "listbox \"card\"",
+    "axeSummary": "",
+    "criterion": "4.1.2",
+    "criterionName": "Name, Role, Value",
+    "element": "listbox \"card\"",
+    "rule": "announced-as",
+    "screen": "Search 'card' — All results"
+   },
+   "family": "role-state",
+   "guidance": "Low for optional ARIA or an invalid autocomplete token; high when aria-hidden hides the whole page.",
+   "issueId": null,
+   "key": "role-state:announced-as:07934e204c9d",
+   "measured": false,
+   "primary": "home.search-card-all",
+   "proposals": [],
+   "rule": "announced-as",
+   "screens": 4,
+   "severityDefault": "medium",
+   "source": "scanner",
+   "states": [
+    "home.search-card-all",
+    "home.search-pages"
+   ],
+   "summary": "announced-as: announced as listbox \"card\".",
+   "title": "Wrong role or state: listbox \"card\""
+  }
+ ],
+ "primaries": [
+  "home.search-card-all"
+ ],
+ "reach": {
+  "baseUrl": "https://demo.mercury.com",
+  "data": "data",
+  "map": "build/map.json",
+  "run": "2026-10-03-1525",
+  "workspace": "a11y"
+ },
+ "run": "2026-10-03-1525"
+}

@@ -1,0 +1,772 @@
+{
+ "area": "invoicing",
+ "batch": "second-044",
+ "findings": [
+  {
+   "attachments": [],
+   "attempt": 1,
+   "basis": "candidate",
+   "criteria": [
+    "2.1.1"
+   ],
+   "evidence": [
+    {
+     "evidence": {
+      "end": "body",
+      "focusable": false,
+      "source": "ax",
+      "stops": 13
+     },
+     "occurrence": {
+      "ancestors": [
+       [
+        "_input_11c85_6",
+        "_tagList_1fujv_4"
+       ],
+       [
+        "_inputWrapper_11c85_6"
+       ],
+       [
+        "_wrapper_1xgdp_8",
+        "session-replay-mask"
+       ],
+       [
+        "_wrapper_1ojdq_8"
+       ],
+       [],
+       [
+        "_contentDiv_bcpsw_53",
+        "_contentDivHeightPreset_bcpsw_62",
+        "_contentArea_1hss9_1"
+       ],
+       [
+        "_fullScreenWorkspaceLayout_bcpsw_14",
+        "_fullScreenWorkspaceLayoutBackground_bcpsw_32"
+       ],
+       [
+        "_wrapper_bcpsw_3"
+       ]
+      ],
+      "classes": [],
+      "data": {},
+      "heading": "Add customer",
+      "landmark": {
+       "name": "",
+       "role": "form"
+      },
+      "layer": "document",
+      "name": "Additional emails (optional)",
+      "rect": [
+       490,
+       445,
+       0,
+       0
+      ],
+      "role": "listbox",
+      "tag": "div",
+      "xpath": "/html/body/div[1]/main[1]/div[1]/div[2]/div[2]/div[3]/form[1]/div[2]/div[3]/div[1]/div[1]/div[1]"
+     },
+     "state": "invoicing.add-customer"
+    }
+   ],
+   "evidenceHash": "258243dc753771934a038cb8e00b6249e1f63a05db58d1e251c45e98f40c0748",
+   "facts": {
+    "axeSummary": "",
+    "criterion": "2.1.1",
+    "criterionName": "Keyboard",
+    "element": "listbox \"Additional emails (optional)\"",
+    "rule": "not-reached",
+    "screen": "Add customer",
+    "stops": "13"
+   },
+   "family": "keyboard",
+   "guidance": "High if a task cannot be completed without a mouse.",
+   "issueId": null,
+   "key": "keyboard:not-reached:86402fec1dc3",
+   "measured": false,
+   "primary": "invoicing.add-customer",
+   "proposals": [],
+   "rule": "not-reached",
+   "screens": 1,
+   "severityDefault": "medium",
+   "source": "scanner",
+   "states": [
+    "invoicing.add-customer"
+   ],
+   "summary": "The Tab walk visited 13 stops and never reached the listbox \"Additional emails (optional)\", which responds to a click.",
+   "title": "Not reachable by keyboard: listbox \"Additional emails (optional)\""
+  },
+  {
+   "attachments": [],
+   "attempt": 1,
+   "basis": "incomplete",
+   "criteria": [
+    "1.3.1"
+   ],
+   "evidence": [
+    {
+     "evidence": {
+      "aria-required-children": [
+       "group",
+       "option"
+      ],
+      "failureSummary": "Fix any of the following:\n  Expecting ARIA children role to be added: group, option"
+     },
+     "occurrence": {
+      "ancestors": [
+       [
+        "_input_11c85_6",
+        "_tagList_1fujv_4"
+       ],
+       [
+        "_inputWrapper_11c85_6"
+       ],
+       [
+        "_wrapper_1xgdp_8",
+        "session-replay-mask"
+       ],
+       [
+        "_wrapper_1ojdq_8"
+       ],
+       [],
+       [
+        "_contentDiv_bcpsw_53",
+        "_contentDivHeightPreset_bcpsw_62",
+        "_contentArea_1hss9_1"
+       ],
+       [
+        "_fullScreenWorkspaceLayout_bcpsw_14",
+        "_fullScreenWorkspaceLayoutBackground_bcpsw_32"
+       ],
+       [
+        "_wrapper_bcpsw_3"
+       ]
+      ],
+      "classes": [],
+      "data": {},
+      "heading": "Add customer",
+      "landmark": {
+       "name": "",
+       "role": "form"
+      },
+      "layer": "document",
+      "name": "Additional emails (optional)",
+      "rect": [
+       490,
+       445,
+       0,
+       0
+      ],
+      "role": "listbox",
+      "tag": "div",
+      "xpath": "/html/body/div[1]/main[1]/div[1]/div[2]/div[2]/div[3]/form[1]/div[2]/div[3]/div[1]/div[1]/div[1]"
+     },
+     "state": "invoicing.add-customer"
+    },
+    {
+     "evidence": {
+      "aria-required-children": [
+       "rowgroup",
+       "row"
+      ],
+      "failureSummary": "Fix any of the following:\n  Expecting ARIA children role to be added: rowgroup, row"
+     },
+     "occurrence": {
+      "ancestors": [
+       [],
+       [],
+       [
+        "_cardTable_1waxt_4"
+       ],
+       [
+        "_tableAndLoadingStateWrapper_1waxt_313"
+       ],
+       [
+        "_tableWrapper_1waxt_304"
+       ],
+       [
+        "_wrapper_1hteo_1"
+       ],
+       [
+        "_wrapper_sot9h_1",
+        "_pageContent_809q8_151",
+        "_pageContentWidth_809q8_184"
+       ],
+       [
+        "_dashboardContent_809q8_29"
+       ]
+      ],
+      "classes": [
+       "ReactVirtualized__Grid",
+       "ReactVirtualized__List"
+      ],
+      "data": {},
+      "heading": "Financing",
+      "landmark": {
+       "name": "",
+       "role": "main"
+      },
+      "layer": "document",
+      "name": "grid",
+      "rect": [
+       346,
+       444,
+       968,
+       0
+      ],
+      "role": "grid",
+      "tag": "div",
+      "xpath": "/html/body/div[1]/main[1]/div[1]/div[1]/div[1]/div[4]/div[1]/div[2]/div[4]/div[3]/div[1]/div[1]/div[4]/div[1]/div[1]"
+     },
+     "state": "accounts.safe-filter-cancelled"
+    }
+   ],
+   "evidenceHash": "4f0a94ea97b3aa731b9879b8ca7cd12520fe50d05d6b7ecef73428f7cd83c206",
+   "facts": {
+    "criterion": "1.3.1",
+    "criterionName": "Info and Relationships",
+    "elements": "7 elements",
+    "messageKey": "none",
+    "rule": "aria-required-children",
+    "screen": "Add customer",
+    "why": "axe gave no reason"
+   },
+   "family": "role-state",
+   "guidance": "Low for optional ARIA or an invalid autocomplete token; high when aria-hidden hides the whole page.",
+   "issueId": null,
+   "key": "role-state:aria-required-children:b3d4ec6ab2fe",
+   "measured": false,
+   "primary": "invoicing.add-customer",
+   "proposals": [],
+   "rule": "aria-required-children",
+   "screens": 11,
+   "severityDefault": "medium",
+   "source": "scanner",
+   "states": [
+    "invoicing.add-customer",
+    "accounts.safe-filter-cancelled"
+   ],
+   "summary": "axe aria-required-children could not decide 7 elements (none): axe gave no reason.",
+   "title": "Needs review: aria-required-children, axe gave no reason"
+  },
+  {
+   "attachments": [],
+   "attempt": 1,
+   "basis": "violation",
+   "criteria": [
+    "4.1.2"
+   ],
+   "evidence": [
+    {
+     "evidence": {
+      "aria-errormessage": [
+       "email-mercury-utils-id-25-errormessage"
+      ],
+      "failureSummary": "Fix all of the following:\n  aria-errormessage value `email-mercury-utils-id-25-errormessage` must use a technique to announce the message (e.g., aria-live, aria-describedby, role=alert, etc.)"
+     },
+     "occurrence": {
+      "ancestors": [
+       [
+        "_inputBox_q7hf7_93",
+        "_hasValue_q7hf7_171",
+        "_error_q7hf7_41"
+       ],
+       [
+        "_inputBoxWrapper_q7hf7_93"
+       ],
+       [
+        "_textInputWrapper_q7hf7_24"
+       ],
+       [
+        "_provideDSTextInput_q7hf7_6"
+       ],
+       [
+        "_wrapper_1ojdq_8"
+       ],
+       [],
+       [
+        "_contentDiv_bcpsw_53",
+        "_contentDivHeightPreset_bcpsw_62",
+        "_contentArea_1hss9_1"
+       ],
+       [
+        "_fullScreenWorkspaceLayout_bcpsw_14",
+        "_fullScreenWorkspaceLayoutBackground_bcpsw_32"
+       ]
+      ],
+      "classes": [
+       "_input_q7hf7_93",
+       "session-replay-mask"
+      ],
+      "data": {
+       "data-testid": "customer-email-input"
+      },
+      "heading": "Add customer",
+      "landmark": {
+       "name": "",
+       "role": "form"
+      },
+      "layer": "document",
+      "name": "Primary customer email",
+      "rect": [
+       498,
+       368,
+       444,
+       24
+      ],
+      "role": "textbox",
+      "tag": "input",
+      "xpath": "/html/body/div[1]/main[1]/div[1]/div[2]/div[2]/div[3]/form[1]/div[2]/div[2]/div[1]/div[1]/div[1]/input[1]"
+     },
+     "state": "invoicing.add-customer-invalid"
+    }
+   ],
+   "evidenceHash": "3aa2232c11cbc1f211ecc27bc8518721e8829ea75c40687e1b016a977e85466f",
+   "facts": {
+    "announced": "textbox \"Primary customer email\" [invalid=true, errormessage=Please submit a va…",
+    "axeSummary": "aria-errormessage value `email-mercury-utils-id-25-errormessage` must use a technique to announce the message (e.g., aria-live, aria-describedby, role=alert, e…",
+    "criterion": "4.1.2",
+    "criterionName": "Name, Role, Value",
+    "element": "textbox \"Primary customer email\"",
+    "rule": "aria-valid-attr-value",
+    "screen": "Add customer: invalid email"
+   },
+   "family": "role-state",
+   "guidance": "Low for optional ARIA or an invalid autocomplete token; high when aria-hidden hides the whole page.",
+   "issueId": null,
+   "key": "role-state:aria-valid-attr-value:e57fbb9fb3e3",
+   "measured": false,
+   "primary": "invoicing.add-customer-invalid",
+   "proposals": [],
+   "rule": "aria-valid-attr-value",
+   "screens": 1,
+   "severityDefault": "medium",
+   "source": "scanner",
+   "states": [
+    "invoicing.add-customer-invalid"
+   ],
+   "summary": "aria-valid-attr-value: announced as textbox \"Primary customer email\" [invalid=true, errormessage=Please submit a va…. aria-errormessage value `email-mercury-utils-id-25-errormessage` must use a technique to announce the message (e.g., aria-live, aria-describedby, role=alert, e…",
+   "title": "Wrong role or state: textbox \"Primary customer email\""
+  },
+  {
+   "attachments": [],
+   "attempt": 1,
+   "basis": "violation",
+   "criteria": [
+    "4.1.2"
+   ],
+   "evidence": [
+    {
+     "evidence": {
+      "failureSummary": "Fix all of the following:\n  Focusable content should be disabled or be removed from the DOM"
+     },
+     "occurrence": {
+      "ancestors": [
+       [
+        "_tableWrapper_1o84k_1"
+       ],
+       [
+        "_pageContent_809q8_151",
+        "_pageContentWidth_809q8_184"
+       ],
+       [
+        "_dashboardContent_809q8_29"
+       ],
+       [
+        "_layout_809q8_18"
+       ],
+       [
+        "_wrapper_809q8_3"
+       ],
+       [],
+       [
+        "_main_1gb3b_1"
+       ],
+       [
+        "mercury-root"
+       ]
+      ],
+      "classes": [
+       "_transitionWrapper_d3i56_5",
+       "_detailPanel_t5x20_1"
+      ],
+      "data": {},
+      "heading": "Catalog",
+      "landmark": {
+       "name": "",
+       "role": "main"
+      },
+      "layer": "document",
+      "name": "",
+      "rect": [
+       1140,
+       184,
+       392,
+       546
+      ],
+      "role": "",
+      "tag": "aside",
+      "xpath": "/html/body/div[1]/main[1]/div[1]/div[1]/div[4]/div[1]/div[2]/div[2]/aside[1]"
+     },
+     "state": "invoicing.catalog-index"
+    },
+    {
+     "evidence": {
+      "failureSummary": "Fix all of the following:\n  Focusable content should be disabled or be removed from the DOM"
+     },
+     "occurrence": {
+      "ancestors": [
+       [
+        "_tableWrapper_1q8c8_1"
+       ],
+       [
+        "_pageContent_809q8_151",
+        "_pageContentWidth_809q8_184"
+       ],
+       [
+        "_dashboardContent_809q8_29"
+       ],
+       [
+        "_layout_809q8_18"
+       ],
+       [
+        "_wrapper_809q8_3"
+       ],
+       [],
+       [
+        "_main_1gb3b_1"
+       ],
+       [
+        "mercury-root"
+       ]
+      ],
+      "classes": [
+       "_transitionWrapper_d3i56_5",
+       "_detailPanel_1hf6c_1"
+      ],
+      "data": {},
+      "heading": "Customers",
+      "landmark": {
+       "name": "",
+       "role": "main"
+      },
+      "layer": "document",
+      "name": "",
+      "rect": [
+       1140,
+       184,
+       392,
+       546
+      ],
+      "role": "",
+      "tag": "aside",
+      "xpath": "/html/body/div[1]/main[1]/div[1]/div[1]/div[4]/div[1]/div[2]/div[2]/aside[1]"
+     },
+     "state": "invoicing.customers-index"
+    }
+   ],
+   "evidenceHash": "15938d826b26d21b49a64f3a8a61b5ed2bfac11f1ee3f095f7b1b1237579fd87",
+   "facts": {
+    "announced": " \"\"",
+    "axeSummary": "Focusable content should be disabled or be removed from the DOM",
+    "criterion": "4.1.2",
+    "criterionName": "Name, Role, Value",
+    "element": "text in \"Catalog\"",
+    "rule": "aria-hidden-focus",
+    "screen": "Catalog"
+   },
+   "family": "role-state",
+   "guidance": "Low for optional ARIA or an invalid autocomplete token; high when aria-hidden hides the whole page.",
+   "issueId": null,
+   "key": "role-state:aria-hidden-focus:52992907cb4b",
+   "measured": false,
+   "primary": "invoicing.catalog-index",
+   "proposals": [],
+   "rule": "aria-hidden-focus",
+   "screens": 2,
+   "severityDefault": "medium",
+   "source": "scanner",
+   "states": [
+    "invoicing.catalog-index",
+    "invoicing.customers-index"
+   ],
+   "summary": "aria-hidden-focus: announced as  \"\". Focusable content should be disabled or be removed from the DOM",
+   "title": "Focusable but hidden: text in \"Catalog\""
+  },
+  {
+   "attachments": [],
+   "attempt": 1,
+   "basis": "failure",
+   "criteria": [
+    "4.1.3"
+   ],
+   "evidence": [
+    {
+     "evidence": {
+      "focus": {
+       "ancestors": [
+        [
+         "_closeButtonWrapper_d3i56_118"
+        ],
+        [
+         "_headerActionsWrapper_d3i56_93"
+        ],
+        [
+         "_panelHeader_d3i56_65"
+        ],
+        [
+         "_large_kwlx6_9",
+         "_noHover_3n0se_28",
+         "_shadow_3n0se_25",
+         "_raisedBackground_3n0se_45",
+         "_panel_d3i56_55"
+        ],
+        [
+         "_transitionWrapper_d3i56_5",
+         "_visible_d3i56_19",
+         "_detailPanel_t5x20_1"
+        ],
+        [
+         "_tableWrapper_1o84k_1"
+        ],
+        [
+         "_pageContent_809q8_151",
+         "_pageContentWidth_809q8_184"
+        ],
+        [
+         "_dashboardContent_809q8_29"
+        ]
+       ],
+       "classes": [
+        "_additionalActionsButton_d3i56_99"
+       ],
+       "data": {},
+       "heading": "",
+       "landmark": {
+        "name": "",
+        "role": "complementary"
+       },
+       "layer": "document",
+       "name": "Close detail panel",
+       "rect": [
+        1284,
+        204,
+        24,
+        24
+       ],
+       "role": "button",
+       "tag": "button",
+       "xpath": "/html/body/div[1]/main[1]/div[1]/div[1]/div[4]/div[1]/div[2]/div[2]/aside[1]/div[1]/section[1]/div[2]/span[1]/button[1]"
+      },
+      "focused": false,
+      "message": "Catalog items Item Description Unit price Last updated Advisory Retainer Strategic advisory services, billed monthly $5,000.00 Sep 28 Brand Strategy Deliverable Comprehensive brand strategy and guidelines package $8,500.00 Sep 28 Consulting Package — 10H 10-hour consulting engagement block $3,500.00",
+      "region": null
+     },
+     "occurrence": {
+      "ancestors": [
+       [
+        "_tableWrapper_1o84k_1"
+       ],
+       [
+        "_pageContent_809q8_151",
+        "_pageContentWidth_809q8_184"
+       ],
+       [
+        "_dashboardContent_809q8_29"
+       ],
+       [
+        "_layout_809q8_18"
+       ],
+       [
+        "_wrapper_809q8_3"
+       ],
+       [],
+       [
+        "_main_1gb3b_1"
+       ],
+       [
+        "mercury-root"
+       ]
+      ],
+      "classes": [
+       "_isCondensed_1acga_61",
+       "_tableWrapper_1acga_4"
+      ],
+      "data": {
+       "data-collapsible-animations-enabled": "true"
+      },
+      "heading": "",
+      "landmark": {
+       "name": "",
+       "role": "main"
+      },
+      "layer": "document",
+      "name": "",
+      "rect": [
+       346,
+       184,
+       592,
+       597
+      ],
+      "role": "generic",
+      "tag": "div",
+      "xpath": "/html/body/div[1]/main[1]/div[1]/div[1]/div[4]/div[1]/div[2]/div[2]/div[1]"
+     },
+     "state": "invoicing.catalog-item-created"
+    },
+    {
+     "evidence": {
+      "focus": {
+       "ancestors": [
+        [
+         "_closeButtonWrapper_d3i56_118"
+        ],
+        [
+         "_headerActionsWrapper_d3i56_93"
+        ],
+        [
+         "_panelHeader_d3i56_65"
+        ],
+        [
+         "_large_kwlx6_9",
+         "_noHover_3n0se_28",
+         "_shadow_3n0se_25",
+         "_raisedBackground_3n0se_45",
+         "_panel_d3i56_55"
+        ],
+        [
+         "_transitionWrapper_d3i56_5",
+         "_visible_d3i56_19",
+         "_detailPanel_1hf6c_1"
+        ],
+        [
+         "_tableWrapper_1q8c8_1"
+        ],
+        [
+         "_pageContent_809q8_151",
+         "_pageContentWidth_809q8_184"
+        ],
+        [
+         "_dashboardContent_809q8_29"
+        ]
+       ],
+       "classes": [
+        "_additionalActionsButton_d3i56_99"
+       ],
+       "data": {},
+       "heading": "",
+       "landmark": {
+        "name": "",
+        "role": "complementary"
+       },
+       "layer": "document",
+       "name": "Close detail panel",
+       "rect": [
+        1284,
+        204,
+        24,
+        24
+       ],
+       "role": "button",
+       "tag": "button",
+       "xpath": "/html/body/div[1]/main[1]/div[1]/div[1]/div[4]/div[1]/div[2]/div[2]/aside[1]/div[1]/section[1]/div[2]/span[1]/button[1]"
+      },
+      "focused": false,
+      "message": "Customers table Name Email Last paid you Actions Aphelion Financial Advisors billing@aphelionfa.com Sep 11 Astral Creative Co finance@astralcreative.co - Meridian Consulting invoices@meridianconsulting.co Sep 28 Nebula Strategy Group ap@nebulastrategy.co Sep 30 Orbital Advisory Partners invoices@orb",
+      "region": null
+     },
+     "occurrence": {
+      "ancestors": [
+       [
+        "_tableWrapper_1q8c8_1"
+       ],
+       [
+        "_pageContent_809q8_151",
+        "_pageContentWidth_809q8_184"
+       ],
+       [
+        "_dashboardContent_809q8_29"
+       ],
+       [
+        "_layout_809q8_18"
+       ],
+       [
+        "_wrapper_809q8_3"
+       ],
+       [],
+       [
+        "_main_1gb3b_1"
+       ],
+       [
+        "mercury-root"
+       ]
+      ],
+      "classes": [
+       "_isCondensed_1acga_61",
+       "_tableWrapper_1acga_4"
+      ],
+      "data": {
+       "data-collapsible-animations-enabled": "true"
+      },
+      "heading": "",
+      "landmark": {
+       "name": "",
+       "role": "main"
+      },
+      "layer": "document",
+      "name": "",
+      "rect": [
+       346,
+       184,
+       592,
+       597
+      ],
+      "role": "generic",
+      "tag": "div",
+      "xpath": "/html/body/div[1]/main[1]/div[1]/div[1]/div[4]/div[1]/div[2]/div[2]/div[1]"
+     },
+     "state": "invoicing.customer-created"
+    }
+   ],
+   "evidenceHash": "37895e43e05a10d11df1e53f57641f8bf5cf12c6fc842642acfe7ea385e9beed",
+   "facts": {
+    "criterion": "4.1.3",
+    "criterionName": "Status Messages",
+    "focus": "button \"Close detail panel\"",
+    "message": "\"Catalog items Item Description Unit price Last…\"",
+    "screen": "Catalog item added"
+   },
+   "family": "status-message",
+   "guidance": "High when it is the only confirmation of a money movement.",
+   "issueId": null,
+   "key": "status-message:status-not-announced:f6fb4c55e67c",
+   "measured": false,
+   "primary": "invoicing.catalog-item-created",
+   "proposals": [],
+   "rule": "status-not-announced",
+   "screens": 2,
+   "severityDefault": "medium",
+   "source": "scanner",
+   "states": [
+    "invoicing.catalog-item-created",
+    "invoicing.customer-created"
+   ],
+   "summary": "\"Catalog items Item Description Unit price Last…\" appeared outside any live region, alert or status role that existed before it, and focus stayed on the button \"Close detail panel\".",
+   "title": "Status message not announced: \"Catalog items Item Description Unit price Last…\""
+  }
+ ],
+ "primaries": [
+  "invoicing.add-customer",
+  "invoicing.add-customer-invalid",
+  "invoicing.catalog-index",
+  "invoicing.catalog-item-created"
+ ],
+ "reach": {
+  "baseUrl": "https://demo.mercury.com",
+  "data": "data",
+  "map": "build/map.json",
+  "run": "2026-10-03-1525",
+  "workspace": "a11y"
+ },
+ "run": "2026-10-03-1525"
+}

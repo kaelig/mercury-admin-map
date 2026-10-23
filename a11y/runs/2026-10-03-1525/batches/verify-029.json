@@ -1,0 +1,377 @@
+{
+ "area": "accounts",
+ "batch": "verify-029",
+ "findings": [
+  {
+   "attachments": [],
+   "attempt": 1,
+   "basis": "failure",
+   "criteria": [
+    "4.1.3"
+   ],
+   "evidence": [
+    {
+     "evidence": {
+      "focus": {
+       "ancestors": [
+        [
+         "ReactModal__Overlay",
+         "ReactModal__Overlay--after-open",
+         "_overlay_lo4oy_89",
+         "_backgroundColor_lo4oy_103"
+        ],
+        [
+         "ReactModalPortal"
+        ]
+       ],
+       "classes": [
+        "ReactModal__Content",
+        "ReactModal__Content--after-open",
+        "_modal_lo4oy_73"
+       ],
+       "data": {},
+       "heading": "",
+       "landmark": null,
+       "layer": "top",
+       "name": "",
+       "rect": [
+        496,
+        280,
+        448,
+        340
+       ],
+       "role": "dialog",
+       "tag": "div",
+       "xpath": "/html/body/div[11]/div[1]/div[1]"
+      },
+      "focused": false,
+      "message": "$2,010,761.25",
+      "region": null
+     },
+     "occurrence": {
+      "ancestors": [
+       [
+        "_label_qaod7_59",
+        "_text-tertiary_12t49_1",
+        "_dollarDisplay_1of3b_3",
+        "_bookmarkValue_1irs1_170"
+       ],
+       [
+        "_bookmarkLinkContent_1irs1_131"
+       ],
+       [
+        "_bookmarkLink_1irs1_38",
+        "_noStyleLink_njx8v_1"
+       ],
+       [
+        "_bookmarkWrapper_1irs1_6"
+       ],
+       [
+        "_list_1l8yn_1"
+       ],
+       [
+        "_bookmarksSection_184ve_46"
+       ],
+       [
+        "_navContainer_184ve_12"
+       ],
+       [
+        "_sidebar_11y1x_4",
+        "_narrowSidebar_184ve_7"
+       ]
+      ],
+      "classes": [],
+      "data": {},
+      "heading": "",
+      "landmark": {
+       "name": "",
+       "role": "navigation"
+      },
+      "layer": "document",
+      "name": "",
+      "rect": [
+       40,
+       664,
+       89,
+       15
+      ],
+      "role": "",
+      "tag": "span",
+      "xpath": "/html/body/div[2]/main[1]/div[1]/div[1]/div[4]/nav[1]/div[2]/div[4]/ul[1]/li[1]/a[1]/div[1]/div[1]/span[1]"
+     },
+     "state": "accounts.pay-credit-success"
+    }
+   ],
+   "evidenceHash": "7029fd70401f79bfd2c42cd9b1a924e20aca7c35bd620fdf585e4cf45d5b2ca3",
+   "facts": {
+    "criterion": "4.1.3",
+    "criterionName": "Status Messages",
+    "focus": "dialog",
+    "message": "\"<amount>\"",
+    "screen": "Payment applied"
+   },
+   "family": "status-message",
+   "guidance": "High when it is the only confirmation of a money movement.",
+   "issueId": null,
+   "key": "status-message:status-not-announced:3800d7d93487",
+   "measured": false,
+   "primary": "accounts.pay-credit-success",
+   "proposals": [],
+   "rule": "status-not-announced",
+   "screens": 1,
+   "severityDefault": "medium",
+   "source": "scanner",
+   "states": [
+    "accounts.pay-credit-success"
+   ],
+   "summary": "\"<amount>\" appeared outside any live region, alert or status role that existed before it, and focus stayed on the dialog.",
+   "title": "Status message not announced: \"<amount>\""
+  },
+  {
+   "attachments": [],
+   "attempt": 1,
+   "basis": "failure",
+   "criteria": [
+    "4.1.3"
+   ],
+   "evidence": [
+    {
+     "evidence": {
+      "focus": {
+       "ancestors": [
+        [
+         "ReactModal__Overlay",
+         "ReactModal__Overlay--after-open",
+         "_overlay_lo4oy_89",
+         "_backgroundColor_lo4oy_103"
+        ],
+        [
+         "ReactModalPortal"
+        ]
+       ],
+       "classes": [
+        "ReactModal__Content",
+        "ReactModal__Content--after-open",
+        "_modal_lo4oy_73"
+       ],
+       "data": {},
+       "heading": "",
+       "landmark": null,
+       "layer": "top",
+       "name": "",
+       "rect": [
+        496,
+        280,
+        448,
+        340
+       ],
+       "role": "dialog",
+       "tag": "div",
+       "xpath": "/html/body/div[11]/div[1]/div[1]"
+      },
+      "focused": false,
+      "message": "$0.00",
+      "region": null
+     },
+     "occurrence": {
+      "ancestors": [
+       [
+        "_titleMain_qaod7_16",
+        "_text-emphasized_12t49_1"
+       ],
+       [
+        "_balance_fz6jh_11"
+       ],
+       [
+        "_creditUsageMeter_fz6jh_1"
+       ],
+       [],
+       [
+        "_creditMeterAndEditAutopay_1lez4_35"
+       ],
+       [
+        "_creditUsageVisuals_1lez4_12"
+       ],
+       [
+        "_headerContainer_1lez4_18"
+       ],
+       [
+        "_accountDashboard_1lez4_1",
+        "_pageContent_809q8_151",
+        "_pageContentWidth_809q8_184"
+       ]
+      ],
+      "classes": [],
+      "data": {},
+      "heading": "",
+      "landmark": {
+       "name": "",
+       "role": "main"
+      },
+      "layer": "document",
+      "name": "",
+      "rect": [
+       346,
+       213,
+       71,
+       34
+      ],
+      "role": "",
+      "tag": "span",
+      "xpath": "/html/body/div[2]/main[1]/div[1]/div[1]/div[4]/div[1]/div[2]/div[2]/div[1]/div[1]/div[1]/div[1]/div[1]/span[2]/span[1]"
+     },
+     "state": "accounts.pay-credit-success"
+    },
+    {
+     "evidence": {
+      "focus": {
+       "ancestors": [
+        [
+         "_root_ted14_1",
+         "_open_ted14_50"
+        ],
+        [
+         "_headerSectionText_re3p4_40"
+        ],
+        [
+         "_headerSection_re3p4_16",
+         "_open_re3p4_53"
+        ],
+        [
+         "_cardRoot_ihrj0_28"
+        ],
+        [
+         "_large_kwlx6_9",
+         "_noHover_3n0se_28",
+         "_shadow_3n0se_25",
+         "_raisedBackground_3n0se_45",
+         "_cardDetailsBox_1f9jt_47"
+        ],
+        [
+         "_cardDetailsCardWrapper_1f9jt_13",
+         "_visible_1f9jt_26"
+        ],
+        [
+         "_contents_1f9jt_1",
+         "_withTabView_1f9jt_8"
+        ],
+        [
+         "_pageContent_809q8_151",
+         "_pageContentWidth_809q8_184",
+         "_footerPadding_809q8_115"
+        ]
+       ],
+       "classes": [
+        "_usageDescription_ted14_19"
+       ],
+       "data": {},
+       "heading": "Cards",
+       "landmark": {
+        "name": "",
+        "role": "main"
+       },
+       "layer": "document",
+       "name": "Hide details $2.2k available · $2.5k spend limit",
+       "rect": [
+        954,
+        196,
+        320,
+        28
+       ],
+       "role": "button",
+       "tag": "button",
+       "xpath": "/html/body/div[1]/main[1]/div[1]/div[1]/div[4]/div[1]/div[2]/div[6]/div[2]/div[1]/div[1]/div[1]/div[1]/section[1]/button[1]"
+      },
+      "focused": false,
+      "message": "$1,500.00",
+      "region": null
+     },
+     "occurrence": {
+      "ancestors": [
+       [
+        "_bodyDefaultDemi_qaod7_47",
+        "_text-emphasized_12t49_1"
+       ],
+       [
+        "_link_ual8v_4",
+        "_underlineNever_ual8v_7"
+       ],
+       [
+        "_text-emphasized_12t49_1"
+       ],
+       [
+        "_tooltipAnchor_18bac_4"
+       ],
+       [],
+       [
+        "_headerSectionText_re3p4_40"
+       ],
+       [
+        "_headerSection_re3p4_16",
+        "_open_re3p4_53"
+       ],
+       [
+        "_cardRoot_ihrj0_28"
+       ]
+      ],
+      "classes": [],
+      "data": {},
+      "heading": "Cards",
+      "landmark": {
+       "name": "",
+       "role": "main"
+      },
+      "layer": "document",
+      "name": "",
+      "rect": [
+       1203,
+       131,
+       71,
+       18
+      ],
+      "role": "",
+      "tag": "span",
+      "xpath": "/html/body/div[1]/main[1]/div[1]/div[1]/div[4]/div[1]/div[2]/div[6]/div[2]/div[1]/div[1]/div[1]/div[1]/div[1]/div[2]/span[1]/a[1]/div[1]/span[1]"
+     },
+     "state": "cards.limit-temporary-saved"
+    }
+   ],
+   "evidenceHash": "544081a2a333995097934aed1dbd4ea5dfee4d5be58d6dc2e5664db610e1cf13",
+   "facts": {
+    "criterion": "4.1.3",
+    "criterionName": "Status Messages",
+    "focus": "dialog",
+    "message": "\"<amount>\"",
+    "screen": "Payment applied"
+   },
+   "family": "status-message",
+   "guidance": "High when it is the only confirmation of a money movement.",
+   "issueId": null,
+   "key": "status-message:status-not-announced:d5ac677b9ad4",
+   "measured": false,
+   "primary": "accounts.pay-credit-success",
+   "proposals": [],
+   "rule": "status-not-announced",
+   "screens": 3,
+   "severityDefault": "medium",
+   "source": "scanner",
+   "states": [
+    "accounts.pay-credit-success",
+    "cards.limit-temporary-saved"
+   ],
+   "summary": "\"<amount>\" appeared outside any live region, alert or status role that existed before it, and focus stayed on the dialog.",
+   "title": "Status message not announced: \"<amount>\""
+  }
+ ],
+ "primaries": [
+  "accounts.pay-credit-success"
+ ],
+ "reach": {
+  "baseUrl": "https://demo.mercury.com",
+  "data": "data",
+  "map": "build/map.json",
+  "run": "2026-10-03-1525",
+  "workspace": "a11y"
+ },
+ "run": "2026-10-03-1525"
+}

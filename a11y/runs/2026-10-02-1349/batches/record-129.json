@@ -1,0 +1,33 @@
+{
+ "batch": "record-129",
+ "reach": {
+  "baseUrl": "https://demo.mercury.com",
+  "data": "data",
+  "map": "build/map.json",
+  "run": "2026-10-02-1349",
+  "workspace": "a11y"
+ },
+ "run": "2026-10-02-1349",
+ "states": [
+  {
+   "area": "payments",
+   "draft": "not drafted: its parent had no accepted recipe when the drafter ran",
+   "image": "screens/payments/31-transfer-success.png",
+   "kind": "confirmation",
+   "labels": [
+    "Click Move money",
+    "Click Transfer",
+    "Open Transfer from",
+    "Pick source, open Transfer to",
+    "Pick destination, toggle Add more details",
+    "Click Next",
+    "Click Transfer"
+   ],
+   "mutates": true,
+   "note": "'Your transfer is on the way' with arrival window, amount card, Make another transfer, Go to dashboard.",
+   "parent": "payments.transfer-review",
+   "state": "payments.transfer-success",
+   "title": "Transfer on the way"
+  }
+ ]
+}

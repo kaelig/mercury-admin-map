@@ -1,0 +1,14 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><title>Note editor</title>
+<style>body { font: 16px/1.4 sans-serif; margin: 8px; background: #fff; } button { font: inherit; margin: 8px; }</style></head>
+<body><button>Bold</button><button>Italic</button><button>Link</button>
+<script>
+  document.addEventListener('keydown', (e) => {
+    if (e.key !== 'Tab') return;
+    e.preventDefault();
+    const items = [...document.querySelectorAll('button')];
+    const i = items.indexOf(document.activeElement);
+    items[(i + (e.shiftKey ? items.length - 1 : 1)) % items.length].focus();
+  });
+</script>
+</body></html>

@@ -1,0 +1,142 @@
+{
+ "area": "accounts",
+ "batch": "verify-415",
+ "findings": [
+  {
+   "attachments": [],
+   "attempt": 1,
+   "basis": "candidate",
+   "criteria": [
+    "4.1.2"
+   ],
+   "evidence": [
+    {
+     "evidence": {
+      "description": "",
+      "name": "",
+      "role": "dialog",
+      "states": {
+       "modal": true
+      },
+      "template": "dialog \"\" [modal=true]"
+     },
+     "occurrence": {
+      "ancestors": [
+       [
+        "ReactModal__Overlay",
+        "ReactModal__Overlay--after-open",
+        "_overlay_cjx1n_39",
+        "_successOverlay_152f5_50"
+       ],
+       [
+        "ReactModalPortal"
+       ]
+      ],
+      "classes": [
+       "ReactModal__Content",
+       "ReactModal__Content--after-open",
+       "_modal_cjx1n_34"
+      ],
+      "data": {},
+      "heading": "",
+      "landmark": null,
+      "layer": "top",
+      "name": "",
+      "rect": [
+       0,
+       0,
+       1440,
+       718
+      ],
+      "role": "dialog",
+      "tag": "div",
+      "xpath": "/html/body/div[12]/div[1]/div[1]"
+     },
+     "state": "accounts.statement-shared"
+    },
+    {
+     "evidence": {
+      "description": "",
+      "name": "",
+      "role": "dialog",
+      "states": {
+       "modal": true
+      },
+      "template": "dialog \"\" [modal=true]"
+     },
+     "occurrence": {
+      "ancestors": [
+       [
+        "ReactModal__Overlay",
+        "ReactModal__Overlay--after-open",
+        "_overlay_cjx1n_39",
+        "_successOverlay_152f5_50"
+       ],
+       [
+        "ReactModalPortal"
+       ]
+      ],
+      "classes": [
+       "ReactModal__Content",
+       "ReactModal__Content--after-open",
+       "_modal_cjx1n_34"
+      ],
+      "data": {},
+      "heading": "",
+      "landmark": null,
+      "layer": "top",
+      "name": "",
+      "rect": [
+       0,
+       0,
+       1440,
+       718
+      ],
+      "role": "dialog",
+      "tag": "div",
+      "xpath": "/html/body/div[11]/div[1]/div[1]"
+     },
+     "state": "settings.share-email-sent"
+    }
+   ],
+   "evidenceHash": "ef72c023379e3b4da444752eec6562bcd11ef4d9c68b9cf6ff70fd22bcdd545d",
+   "facts": {
+    "announced": "dialog \"\" [modal=true]",
+    "axeSummary": "",
+    "criterion": "4.1.2",
+    "criterionName": "Name, Role, Value",
+    "element": "dialog",
+    "rule": "announced-as",
+    "screen": "Statement shared"
+   },
+   "family": "name",
+   "guidance": "High for an unnamed form control or the sole primary action.",
+   "issueId": null,
+   "key": "name:announced-as:0194187cad2f",
+   "measured": false,
+   "primary": "accounts.statement-shared",
+   "proposals": [],
+   "rule": "announced-as",
+   "screens": 2,
+   "severityDefault": "medium",
+   "source": "scanner",
+   "states": [
+    "accounts.statement-shared",
+    "settings.share-email-sent"
+   ],
+   "summary": "announced-as: announced as dialog \"\" [modal=true].",
+   "title": "Missing or unclear name: dialog"
+  }
+ ],
+ "primaries": [
+  "accounts.statement-shared"
+ ],
+ "reach": {
+  "baseUrl": "https://demo.mercury.com",
+  "data": "data",
+  "map": "build/map.json",
+  "run": "2026-10-03-1525",
+  "workspace": "a11y"
+ },
+ "run": "2026-10-03-1525"
+}

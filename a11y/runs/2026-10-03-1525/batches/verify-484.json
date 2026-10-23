@@ -1,0 +1,110 @@
+{
+ "area": "invoicing",
+ "batch": "verify-484",
+ "findings": [
+  {
+   "attachments": [],
+   "attempt": 1,
+   "basis": "candidate",
+   "criteria": [
+    "4.1.2"
+   ],
+   "evidence": [
+    {
+     "evidence": {
+      "description": "",
+      "name": "Monthly on the 3rd",
+      "role": "menuitem",
+      "states": {},
+      "template": "menuitem \"Monthly on the <n>rd\""
+     },
+     "occurrence": {
+      "ancestors": [
+       [
+        "_dropdownMenu_vz05y_4",
+        "_zIndexDefault_1fl3q_5",
+        "_dropdownMenu_sixj2_10"
+       ],
+       [],
+       [
+        "_dropdownContainer_sixj2_2"
+       ],
+       [
+        "_sentenceRow_38qef_1"
+       ],
+       [
+        "_wrapper_1ojdq_8"
+       ],
+       [],
+       [
+        "_leftInnerContainer_12jyu_3"
+       ],
+       [
+        "_left_yg1rf_39"
+       ]
+      ],
+      "classes": [
+       "_selectedOption_sixj2_35",
+       "_menuItem_1yc9d_56"
+      ],
+      "data": {},
+      "heading": "",
+      "landmark": {
+       "name": "",
+       "role": "main"
+      },
+      "layer": "top",
+      "name": "Monthly on the 3rd",
+      "rect": [
+       215,
+       461,
+       214,
+       40
+      ],
+      "role": "menuitem",
+      "tag": "div",
+      "xpath": "/html/body/div[1]/main[1]/div[1]/div[2]/div[2]/div[3]/div[1]/div[1]/div[1]/div[1]/div[1]/div[1]/div[2]/div[3]/div[1]/div[1]/div[1]/div[2]"
+     },
+     "state": "invoicing.create-series-frequency-menu"
+    }
+   ],
+   "evidenceHash": "da6350cf1de5e6d32e563f3443f4bb0c03f66461038723c6cd51d91ac40d04a4",
+   "facts": {
+    "announced": "menuitem \"Monthly on the <n>rd\"",
+    "axeSummary": "",
+    "criterion": "4.1.2",
+    "criterionName": "Name, Role, Value",
+    "element": "menuitem \"Monthly on the <n>rd\"",
+    "rule": "announced-as",
+    "screen": "Frequency options menu"
+   },
+   "family": "role-state",
+   "guidance": "Low for optional ARIA or an invalid autocomplete token; high when aria-hidden hides the whole page.",
+   "issueId": null,
+   "key": "role-state:announced-as:b3be4d051f73",
+   "measured": false,
+   "primary": "invoicing.create-series-frequency-menu",
+   "proposals": [],
+   "rule": "announced-as",
+   "screens": 1,
+   "severityDefault": "medium",
+   "source": "scanner",
+   "states": [
+    "invoicing.create-series-frequency-menu"
+   ],
+   "summary": "announced-as: announced as menuitem \"Monthly on the <n>rd\".",
+   "title": "Wrong role or state: menuitem \"Monthly on the <n>rd\""
+  }
+ ],
+ "primaries": [
+  "invoicing.create-series-frequency-menu"
+ ],
+ "reach": {
+  "baseUrl": "https://demo.mercury.com",
+  "data": "data",
+  "map": "build/map.json",
+  "run": "2026-10-03-1525",
+  "workspace": "a11y"
+ },
+ "run": "2026-10-03-1525"
+}

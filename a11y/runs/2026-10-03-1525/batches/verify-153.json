@@ -1,0 +1,855 @@
+{
+ "area": "cards",
+ "batch": "verify-153",
+ "findings": [
+  {
+   "attachments": [],
+   "attempt": 1,
+   "basis": "incomplete",
+   "criteria": [
+    "1.4.3"
+   ],
+   "evidence": [
+    {
+     "evidence": {
+      "bgColor": "#ffffff",
+      "contrastRatio": 1,
+      "expectedContrastRatio": "4.5:1",
+      "failureSummary": "Fix any of the following:\n  Element has a 1:1 contrast ratio with the background",
+      "fgColor": "#ffffff",
+      "fontSize": "10.0pt (13.3333px)",
+      "fontWeight": "normal",
+      "messageKey": "equalRatio"
+     },
+     "occurrence": {
+      "ancestors": [
+       [
+        "_dropzone_17gl6_1"
+       ],
+       [
+        "_expensesTableContainer_1hmn7_1"
+       ],
+       [
+        "_pageContent_809q8_151",
+        "_pageContentWidth_809q8_184",
+        "_footerPadding_809q8_115"
+       ],
+       [
+        "_dashboardContent_809q8_29"
+       ],
+       [
+        "_layout_809q8_18"
+       ],
+       [
+        "_wrapper_809q8_3"
+       ],
+       [],
+       [
+        "_main_1gb3b_1"
+       ]
+      ],
+      "classes": [],
+      "data": {},
+      "heading": "Drafts",
+      "landmark": {
+       "name": "",
+       "role": "main"
+      },
+      "layer": "document",
+      "name": "Choose Files",
+      "rect": [
+       346,
+       293,
+       968,
+       239
+      ],
+      "role": "button",
+      "tag": "input",
+      "xpath": "/html/body/div[1]/main[1]/div[1]/div[1]/div[4]/div[1]/div[2]/div[4]/div[2]/input[1]"
+     },
+     "state": "cards.my-expenses"
+    },
+    {
+     "evidence": {
+      "bgColor": "#fbfcfd",
+      "contrastRatio": 1,
+      "expectedContrastRatio": "4.5:1",
+      "failureSummary": "Fix any of the following:\n  Element has a 1:1 contrast ratio with the background",
+      "fgColor": "#fbfcfd",
+      "fontSize": "10.0pt (13.3333px)",
+      "fontWeight": "normal",
+      "messageKey": "equalRatio"
+     },
+     "occurrence": {
+      "ancestors": [
+       [
+        "_dropzoneDefault_3soht_22"
+       ],
+       [
+        "_outerWrapper_3soht_14"
+       ],
+       [
+        "_modalChildren_w8i0h_10"
+       ],
+       [
+        "_content_1l7i0_1"
+       ],
+       [
+        "_large_kwlx6_9",
+        "_noHover_3n0se_28",
+        "_shadow_3n0se_25",
+        "_raisedBackground_3n0se_45",
+        "_card_lo4oy_4",
+        "_defaultPadding_lo4oy_27",
+        "_container_w8i0h_17"
+       ],
+       [
+        "ReactModal__Content",
+        "ReactModal__Content--after-open",
+        "_modal_lo4oy_73"
+       ],
+       [
+        "ReactModal__Overlay",
+        "ReactModal__Overlay--after-open",
+        "_overlay_lo4oy_89",
+        "_backgroundColor_lo4oy_103"
+       ],
+       [
+        "ReactModalPortal"
+       ]
+      ],
+      "classes": [],
+      "data": {},
+      "heading": "Upload GL codes",
+      "landmark": {
+       "name": "",
+       "role": "dialog"
+      },
+      "layer": "top",
+      "name": "Choose File",
+      "rect": [
+       513,
+       363,
+       398,
+       106
+      ],
+      "role": "button",
+      "tag": "input",
+      "xpath": "/html/body/div[11]/div[1]/div[1]/div[1]/div[2]/div[1]/div[1]/div[1]/input[1]"
+     },
+     "state": "billpay.accounting-upload-csv"
+    }
+   ],
+   "evidenceHash": "c864d4f0534bd7ff64a315cacebe6acd70f9e751dcc5579fe505f9abbb1ee13c",
+   "facts": {
+    "criterion": "1.4.3",
+    "criterionName": "Contrast (Minimum)",
+    "elements": "2 elements",
+    "messageKey": "equalRatio",
+    "rule": "color-contrast",
+    "screen": "Reimbursements: my expenses",
+    "why": "its text matches its background"
+   },
+   "family": "contrast",
+   "guidance": "High under 2:1, or under 3:1 for essential text.",
+   "issueId": null,
+   "key": "contrast:color-contrast:a2b1eb6a270a",
+   "measured": true,
+   "primary": "cards.my-expenses",
+   "proposals": [],
+   "rule": "color-contrast",
+   "screens": 51,
+   "severityDefault": "medium",
+   "source": "scanner",
+   "states": [
+    "cards.my-expenses",
+    "billpay.accounting-upload-csv"
+   ],
+   "summary": "axe color-contrast could not decide 2 elements (equalRatio): its text matches its background.",
+   "title": "Needs review: color-contrast, its text matches its background"
+  },
+  {
+   "attachments": [],
+   "attempt": 1,
+   "basis": "violation",
+   "criteria": [
+    "4.1.2"
+   ],
+   "evidence": [
+    {
+     "evidence": {
+      "failureSummary": "Fix any of the following:\n  Element does not have inner text that is visible to screen readers\n  aria-label attribute does not exist or is empty\n  aria-labelledby attribute does not exist, references elements that do not exist or references elements that are empty\n  Element has no title attribute\n  Element does not have an implicit (wrapped) <label>\n  Element does not have an explicit <label>\n  Element's default semantics were not overridden with role=\"none\" or role=\"presentation\"",
+      "messageKey": "noAttr"
+     },
+     "occurrence": {
+      "ancestors": [
+       [
+        "_tooltipAnchor_18bac_4"
+       ],
+       [
+        "_actionButtons_1pbh4_58"
+       ],
+       [
+        "_contentContainer_1pbh4_46"
+       ],
+       [
+        "_floatingBulkActionsInnerContainer_1pbh4_35"
+       ],
+       [
+        "_floatingBulkActionsOuterContainer_1pbh4_4"
+       ],
+       [
+        "_expensesTableContainer_1hmn7_1"
+       ],
+       [
+        "_pageContent_809q8_151",
+        "_pageContentWidth_809q8_184",
+        "_footerPadding_809q8_115"
+       ],
+       [
+        "_dashboardContent_809q8_29"
+       ]
+      ],
+      "classes": [
+       "_button_r6b2u_20",
+       "_small_r6b2u_72",
+       "_destructive_r6b2u_186"
+      ],
+      "data": {},
+      "heading": "Drafts",
+      "landmark": {
+       "name": "0 drafts selected",
+       "role": "dialog"
+      },
+      "layer": "document",
+      "name": "",
+      "rect": [
+       814,
+       932,
+       32,
+       32
+      ],
+      "role": "button",
+      "tag": "button",
+      "xpath": "/html/body/div[1]/main[1]/div[1]/div[1]/div[4]/div[1]/div[2]/div[4]/dialog[1]/div[1]/div[1]/div[2]/div[1]/button[1]"
+     },
+     "state": "cards.my-expenses"
+    },
+    {
+     "evidence": {
+      "failureSummary": "Fix any of the following:\n  Element does not have inner text that is visible to screen readers\n  aria-label attribute does not exist or is empty\n  aria-labelledby attribute does not exist, references elements that do not exist or references elements that are empty\n  Element has no title attribute\n  Element does not have an implicit (wrapped) <label>\n  Element does not have an explicit <label>\n  Element's default semantics were not overridden with role=\"none\" or role=\"presentation\"",
+      "messageKey": "noAttr"
+     },
+     "occurrence": {
+      "ancestors": [
+       [
+        "_tooltipAnchor_18bac_4"
+       ],
+       [
+        "_actionButtons_1pbh4_58"
+       ],
+       [
+        "_contentContainer_1pbh4_46"
+       ],
+       [
+        "_floatingBulkActionsInnerContainer_1pbh4_35"
+       ],
+       [
+        "_floatingBulkActionsOuterContainer_1pbh4_4",
+        "_bulkActionIsland_5iyfd_1",
+        "_visible_1pbh4_30"
+       ],
+       [
+        "_pageContent_809q8_151",
+        "_pageContentWidth_809q8_184",
+        "_footerPadding_809q8_115"
+       ],
+       [
+        "_dashboardContent_809q8_29"
+       ],
+       [
+        "_layout_809q8_18"
+       ]
+      ],
+      "classes": [
+       "_button_r6b2u_20",
+       "_small_r6b2u_72",
+       "_destructive_r6b2u_186"
+      ],
+      "data": {},
+      "heading": "",
+      "landmark": {
+       "name": "2 recipients selected",
+       "role": "dialog"
+      },
+      "layer": "top",
+      "name": "",
+      "rect": [
+       744,
+       782,
+       32,
+       32
+      ],
+      "role": "button",
+      "tag": "button",
+      "xpath": "/html/body/div[1]/main[1]/div[1]/div[1]/div[4]/div[1]/div[2]/dialog[1]/div[1]/div[1]/div[2]/div[1]/button[1]"
+     },
+     "state": "payments.recipients-bulk"
+    }
+   ],
+   "evidenceHash": "b9f376bfe5debe684e62ed9c76bca8908420a31b7eb39aaed4f35e7d2a7a6f66",
+   "facts": {
+    "announced": "button \"\"",
+    "axeSummary": "Element does not have inner text that is visible to screen readers; aria-label attribute does not exist or is empty; aria-labelledby attribute does not exist,…",
+    "criterion": "4.1.2",
+    "criterionName": "Name, Role, Value",
+    "element": "button in \"Drafts\"",
+    "rule": "button-name",
+    "screen": "Reimbursements: my expenses"
+   },
+   "family": "name",
+   "guidance": "High for an unnamed form control or the sole primary action.",
+   "issueId": null,
+   "key": "name:button-name:3d4668744d01",
+   "measured": false,
+   "primary": "cards.my-expenses",
+   "proposals": [],
+   "rule": "button-name",
+   "screens": 2,
+   "severityDefault": "medium",
+   "source": "scanner",
+   "states": [
+    "cards.my-expenses",
+    "payments.recipients-bulk"
+   ],
+   "summary": "button-name: announced as button \"\". Element does not have inner text that is visible to screen readers; aria-label attribute does not exist or is empty; aria-labelledby attribute does not exist,…",
+   "title": "Missing or unclear name: button in \"Drafts\""
+  },
+  {
+   "attachments": [],
+   "attempt": 1,
+   "basis": "violation",
+   "criteria": [
+    "4.1.2"
+   ],
+   "evidence": [
+    {
+     "evidence": {
+      "failureSummary": "Fix any of the following:\n  Element does not have inner text that is visible to screen readers\n  aria-label attribute does not exist or is empty\n  aria-labelledby attribute does not exist, references elements that do not exist or references elements that are empty\n  Element has no title attribute\n  Element does not have an implicit (wrapped) <label>\n  Element does not have an explicit <label>\n  Element's default semantics were not overridden with role=\"none\" or role=\"presentation\"",
+      "messageKey": "noAttr"
+     },
+     "occurrence": {
+      "ancestors": [
+       [
+        "_tooltipAnchor_18bac_4"
+       ],
+       [
+        "_actionButtons_1pbh4_58"
+       ],
+       [
+        "_contentContainer_1pbh4_46"
+       ],
+       [
+        "_floatingBulkActionsInnerContainer_1pbh4_35"
+       ],
+       [
+        "_floatingBulkActionsOuterContainer_1pbh4_4"
+       ],
+       [
+        "_expensesTableContainer_1hmn7_1"
+       ],
+       [
+        "_pageContent_809q8_151",
+        "_pageContentWidth_809q8_184",
+        "_footerPadding_809q8_115"
+       ],
+       [
+        "_dashboardContent_809q8_29"
+       ]
+      ],
+      "classes": [
+       "_button_r6b2u_20",
+       "_small_r6b2u_72",
+       "_secondary_r6b2u_126"
+      ],
+      "data": {},
+      "heading": "Drafts",
+      "landmark": {
+       "name": "0 drafts selected",
+       "role": "dialog"
+      },
+      "layer": "document",
+      "name": "",
+      "rect": [
+       858,
+       932,
+       32,
+       32
+      ],
+      "role": "button",
+      "tag": "button",
+      "xpath": "/html/body/div[1]/main[1]/div[1]/div[1]/div[4]/div[1]/div[2]/div[4]/dialog[1]/div[1]/div[1]/div[2]/div[2]/button[1]"
+     },
+     "state": "cards.my-expenses"
+    },
+    {
+     "evidence": {
+      "failureSummary": "Fix any of the following:\n  Element does not have inner text that is visible to screen readers\n  aria-label attribute does not exist or is empty\n  aria-labelledby attribute does not exist, references elements that do not exist or references elements that are empty\n  Element has no title attribute\n  Element does not have an implicit (wrapped) <label>\n  Element does not have an explicit <label>\n  Element's default semantics were not overridden with role=\"none\" or role=\"presentation\"",
+      "messageKey": "noAttr"
+     },
+     "occurrence": {
+      "ancestors": [
+       [
+        "_tooltipAnchor_18bac_4"
+       ],
+       [
+        "_actionButtons_1pbh4_58"
+       ],
+       [
+        "_contentContainer_1pbh4_46"
+       ],
+       [
+        "_floatingBulkActionsInnerContainer_1pbh4_35"
+       ],
+       [
+        "_floatingBulkActionsOuterContainer_1pbh4_4",
+        "_bulkActionIsland_5iyfd_1",
+        "_visible_1pbh4_30"
+       ],
+       [
+        "_pageContent_809q8_151",
+        "_pageContentWidth_809q8_184",
+        "_footerPadding_809q8_115"
+       ],
+       [
+        "_dashboardContent_809q8_29"
+       ],
+       [
+        "_layout_809q8_18"
+       ]
+      ],
+      "classes": [
+       "_button_r6b2u_20",
+       "_small_r6b2u_72",
+       "_secondary_r6b2u_126"
+      ],
+      "data": {},
+      "heading": "",
+      "landmark": {
+       "name": "2 recipients selected",
+       "role": "dialog"
+      },
+      "layer": "top",
+      "name": "",
+      "rect": [
+       788,
+       782,
+       32,
+       32
+      ],
+      "role": "button",
+      "tag": "button",
+      "xpath": "/html/body/div[1]/main[1]/div[1]/div[1]/div[4]/div[1]/div[2]/dialog[1]/div[1]/div[1]/div[2]/div[2]/button[1]"
+     },
+     "state": "payments.recipients-bulk"
+    }
+   ],
+   "evidenceHash": "b9f376bfe5debe684e62ed9c76bca8908420a31b7eb39aaed4f35e7d2a7a6f66",
+   "facts": {
+    "announced": "button \"\"",
+    "axeSummary": "Element does not have inner text that is visible to screen readers; aria-label attribute does not exist or is empty; aria-labelledby attribute does not exist,…",
+    "criterion": "4.1.2",
+    "criterionName": "Name, Role, Value",
+    "element": "button in \"Drafts\"",
+    "rule": "button-name",
+    "screen": "Reimbursements: my expenses"
+   },
+   "family": "name",
+   "guidance": "High for an unnamed form control or the sole primary action.",
+   "issueId": null,
+   "key": "name:button-name:3eaef2a68cc1",
+   "measured": false,
+   "primary": "cards.my-expenses",
+   "proposals": [],
+   "rule": "button-name",
+   "screens": 2,
+   "severityDefault": "medium",
+   "source": "scanner",
+   "states": [
+    "cards.my-expenses",
+    "payments.recipients-bulk"
+   ],
+   "summary": "button-name: announced as button \"\". Element does not have inner text that is visible to screen readers; aria-label attribute does not exist or is empty; aria-labelledby attribute does not exist,…",
+   "title": "Missing or unclear name: button in \"Drafts\""
+  },
+  {
+   "attachments": [],
+   "attempt": 1,
+   "basis": "violation",
+   "criteria": [
+    "1.3.1"
+   ],
+   "evidence": [
+    {
+     "evidence": {
+      "failureSummary": "Fix any of the following:\n  Element has children which are not allowed: button[aria-label]",
+      "messageKey": "unallowed",
+      "values": "button[aria-label]"
+     },
+     "occurrence": {
+      "ancestors": [
+       [
+        "_actionBar_1hmn7_9"
+       ],
+       [
+        "_expensesTableContainer_1hmn7_1"
+       ],
+       [
+        "_pageContent_809q8_151",
+        "_pageContentWidth_809q8_184",
+        "_footerPadding_809q8_115"
+       ],
+       [
+        "_dashboardContent_809q8_29"
+       ],
+       [
+        "_layout_809q8_18"
+       ],
+       [
+        "_wrapper_809q8_3"
+       ],
+       [],
+       [
+        "_main_1gb3b_1"
+       ]
+      ],
+      "classes": [
+       "_toolbarContainer_grqat_4"
+      ],
+      "data": {
+       "data-ds-table-toolbar-menubar": "true"
+      },
+      "heading": "Submitted Expenses",
+      "landmark": {
+       "name": "",
+       "role": "main"
+      },
+      "layer": "document",
+      "name": "",
+      "rect": [
+       346,
+       623,
+       802,
+       32
+      ],
+      "role": "menubar",
+      "tag": "div",
+      "xpath": "/html/body/div[1]/main[1]/div[1]/div[1]/div[4]/div[1]/div[2]/div[6]/div[2]/div[1]"
+     },
+     "state": "cards.my-expenses"
+    }
+   ],
+   "evidenceHash": "bc9a2ea95bc04de13a8d0bbde96006fecf8f2a28cff94e7469fafbbbe8589d44",
+   "facts": {
+    "announced": "menubar \"\"",
+    "axeSummary": "Element has children which are not allowed: button[aria-label]",
+    "criterion": "1.3.1",
+    "criterionName": "Info and Relationships",
+    "element": "menubar in \"Submitted Expenses\"",
+    "rule": "aria-required-children",
+    "screen": "Reimbursements: my expenses"
+   },
+   "family": "role-state",
+   "guidance": "Low for optional ARIA or an invalid autocomplete token; high when aria-hidden hides the whole page.",
+   "issueId": null,
+   "key": "role-state:aria-required-children:5a79cdca15ac",
+   "measured": false,
+   "primary": "cards.my-expenses",
+   "proposals": [],
+   "rule": "aria-required-children",
+   "screens": 1,
+   "severityDefault": "medium",
+   "source": "scanner",
+   "states": [
+    "cards.my-expenses"
+   ],
+   "summary": "aria-required-children: announced as menubar \"\". Element has children which are not allowed: button[aria-label]",
+   "title": "Wrong role or state: menubar in \"Submitted Expenses\""
+  },
+  {
+   "attachments": [],
+   "attempt": 1,
+   "basis": "candidate",
+   "criteria": [
+    "2.5.8"
+   ],
+   "evidence": [
+    {
+     "evidence": {
+      "agree": false,
+      "axe": "incomplete",
+      "exception": null,
+      "height": 19,
+      "offset": 0,
+      "own": "fail",
+      "passedBy": null,
+      "width": 12
+     },
+     "occurrence": {
+      "ancestors": [
+       [
+        "_tooltipAnchor_18bac_4"
+       ],
+       [
+        "_tableData_1u4jr_5",
+        "_alignmentCenter_1u4jr_17",
+        "_collapsibleColumn_1acga_26"
+       ],
+       [
+        "_tableRow_137xu_3",
+        "_interactiveRows_137xu_35",
+        "_large_137xu_29",
+        "_row_uj3z8_6"
+       ],
+       [
+        "_tableBody_1cp5b_1"
+       ],
+       [
+        "_table_1acga_4"
+       ],
+       [
+        "_tableWrapper_1acga_4"
+       ],
+       [
+        "_tableWrapper_uj3z8_1"
+       ],
+       [
+        "_dropzone_17gl6_1"
+       ]
+      ],
+      "classes": [
+       "_link_ual8v_4",
+       "_underlineOnHover_ual8v_15"
+      ],
+      "data": {},
+      "disabled": false,
+      "heading": "Submitted Expenses",
+      "landmark": {
+       "name": "",
+       "role": "main"
+      },
+      "layer": "document",
+      "name": "",
+      "rect": [
+       1175,
+       731,
+       12,
+       19
+      ],
+      "role": "button",
+      "tag": "span",
+      "xpath": "/html/body/div[1]/main[1]/div[1]/div[1]/div[4]/div[1]/div[2]/div[6]/div[3]/div[1]/div[1]/table[1]/tbody[1]/tr[1]/td[7]/div[1]/span[1]"
+     },
+     "state": "cards.my-expenses"
+    }
+   ],
+   "evidenceHash": "426faf9bf9c2689ebb03ae7c949cc809d0edaf1ff901fae971ae5a5f9a24c2dd",
+   "facts": {
+    "criterion": "2.5.8",
+    "criterionName": "Target Size (Minimum)",
+    "element": "button in \"Submitted Expenses\"",
+    "offset": "0",
+    "rule": "target-size-own",
+    "screen": "Reimbursements: my expenses",
+    "screens": 1,
+    "size": "12×19"
+   },
+   "family": "target-size",
+   "guidance": "Medium next to destructive or financial controls.",
+   "issueId": null,
+   "key": "target-size:target-size-own:f740eb4eb965",
+   "measured": true,
+   "primary": "cards.my-expenses",
+   "proposals": [],
+   "rule": "target-size-own",
+   "screens": 1,
+   "severityDefault": "low",
+   "source": "scanner",
+   "states": [
+    "cards.my-expenses"
+   ],
+   "summary": "target-size-own: 12×19 px; the widest circle centered on it that clears other targets is 0 px, and the spacing exception needs 24 px.",
+   "title": "Target under 24×24 px: button in \"Submitted Expenses\""
+  },
+  {
+   "attachments": [],
+   "attempt": 1,
+   "basis": "incomplete",
+   "criteria": [
+    "2.5.8"
+   ],
+   "evidence": [
+    {
+     "evidence": {
+      "closestOffset": 0,
+      "failureSummary": "Fix any of the following:\n  Target has insufficient space to its closest neighbors. Safe clickable space has a diameter of 0px instead of at least 24px. Is the neighbor a target?",
+      "messageKey": "nonTabbableNeighbor",
+      "minOffset": 24
+     },
+     "occurrence": {
+      "ancestors": [
+       [
+        "_tooltipAnchor_18bac_4"
+       ],
+       [
+        "_tableData_1u4jr_5",
+        "_alignmentCenter_1u4jr_17",
+        "_collapsibleColumn_1acga_26"
+       ],
+       [
+        "_tableRow_137xu_3",
+        "_interactiveRows_137xu_35",
+        "_large_137xu_29",
+        "_row_uj3z8_6"
+       ],
+       [
+        "_tableBody_1cp5b_1"
+       ],
+       [
+        "_table_1acga_4"
+       ],
+       [
+        "_tableWrapper_1acga_4"
+       ],
+       [
+        "_tableWrapper_uj3z8_1"
+       ],
+       [
+        "_dropzone_17gl6_1"
+       ]
+      ],
+      "classes": [
+       "_link_ual8v_4",
+       "_underlineOnHover_ual8v_15"
+      ],
+      "data": {},
+      "heading": "Submitted Expenses",
+      "landmark": {
+       "name": "",
+       "role": "main"
+      },
+      "layer": "document",
+      "name": "",
+      "rect": [
+       1175,
+       731,
+       12,
+       19
+      ],
+      "role": "button",
+      "tag": "span",
+      "xpath": "/html/body/div[1]/main[1]/div[1]/div[1]/div[4]/div[1]/div[2]/div[6]/div[3]/div[1]/div[1]/table[1]/tbody[1]/tr[1]/td[7]/div[1]/span[1]"
+     },
+     "state": "cards.my-expenses"
+    },
+    {
+     "evidence": {
+      "closestOffset": 0,
+      "failureSummary": "Fix any of the following:\n  Target has insufficient space to its closest neighbors. Safe clickable space has a diameter of 0px instead of at least 24px. Is the neighbor a target?",
+      "messageKey": "nonTabbableNeighbor",
+      "minOffset": 24
+     },
+     "occurrence": {
+      "ancestors": [
+       [
+        "_dsToggleSwitchWrapper_3k8xy_3",
+        "_rightLabel_3k8xy_34",
+        "_repeatPaymentsToggle_17brw_1"
+       ],
+       [
+        "_label_fn75q_3"
+       ],
+       [],
+       [
+        "_amountAndSourceContainer_8dg5w_1"
+       ],
+       [
+        "_routeContainer_15al5_228"
+       ],
+       [
+        "_routes_15al5_220"
+       ],
+       [
+        "_routeSection_15al5_207"
+       ],
+       [
+        "_container_15al5_4",
+        "_container_10wfz_3",
+        "_closed_15al5_75"
+       ]
+      ],
+      "classes": [
+       "_switch_3k8xy_11"
+      ],
+      "data": {},
+      "heading": "Amount",
+      "landmark": {
+       "name": "",
+       "role": "form"
+      },
+      "layer": "document",
+      "name": "Repeat this payment",
+      "rect": [
+       440,
+       566,
+       40,
+       20
+      ],
+      "role": "switch",
+      "tag": "input",
+      "xpath": "/html/body/div[1]/main[1]/div[1]/div[2]/div[2]/div[1]/div[2]/section[2]/div[1]/div[1]/div[1]/form[1]/div[3]/div[2]/input[1]"
+     },
+     "state": "payments.send-amount"
+    }
+   ],
+   "evidenceHash": "2fa461c0dcce360ef3e67356fcc7491b5ac98ff6912a2e358697bc2c98089fc0",
+   "facts": {
+    "criterion": "2.5.8",
+    "criterionName": "Target Size (Minimum)",
+    "elements": "3 elements",
+    "messageKey": "nonTabbableNeighbor",
+    "rule": "target-size",
+    "screen": "Reimbursements: my expenses",
+    "why": "its neighbor may not be a target"
+   },
+   "family": "target-size",
+   "guidance": "Medium next to destructive or financial controls.",
+   "issueId": null,
+   "key": "target-size:target-size:7387c3024c33",
+   "measured": true,
+   "primary": "cards.my-expenses",
+   "proposals": [],
+   "rule": "target-size",
+   "screens": 27,
+   "severityDefault": "low",
+   "source": "scanner",
+   "states": [
+    "cards.my-expenses",
+    "payments.send-amount"
+   ],
+   "summary": "axe target-size could not decide 3 elements (nonTabbableNeighbor): its neighbor may not be a target.",
+   "title": "Needs review: target-size, its neighbor may not be a target"
+  }
+ ],
+ "primaries": [
+  "cards.my-expenses"
+ ],
+ "reach": {
+  "baseUrl": "https://demo.mercury.com",
+  "data": "data",
+  "map": "build/map.json",
+  "run": "2026-10-03-1525",
+  "workspace": "a11y"
+ },
+ "run": "2026-10-03-1525"
+}

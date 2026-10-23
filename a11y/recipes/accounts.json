@@ -1,0 +1,5427 @@
+{
+ "accounts.account-number-revealed": {
+  "checked": "2026-10-02-1349",
+  "fingerprint": {
+   "controls": [
+    "<amount>",
+    "<date> Contractor <amount> Mercury ACH Payment",
+    "<date> Deli <n> <amount> Jane B. ••<n>",
+    "<date> Domestic Ads <amount> Real-Time Payment",
+    "<date> From AR <amount> Transfer",
+    "<date> Lily's Eatery <amount> Alice C. ••<n>",
+    "<date> Mercury Working Capital <amount> Working Capital Loan Payment",
+    "<date> Office Stop Co. <amount> Jessica A. ••<n>",
+    "<date> The Plant Organic Cafe <amount> Landon S. ••<n>",
+    "<date> To Ops / Payroll <amount> Transfer",
+    "<date> Trader John's <amount> Alice C. ••<n>",
+    "<n>",
+    "<n> Letterman Drive Building A, Suite A<n> San Francisco, CA <n>",
+    "Accounting",
+    "Accounts",
+    "Banking",
+    "Bill Pay",
+    "Books",
+    "Cards",
+    "Column N.A.",
+    "Command New",
+    "Credit Card",
+    "Customize your experience",
+    "Deposit",
+    "Documents",
+    "Edit account nickname",
+    "Financing",
+    "Home",
+    "Insights",
+    "Invoicing",
+    "Learn about bookmarks",
+    "Mercury Demo Pro",
+    "Move money",
+    "Navigate to Settings",
+    "Open Menu",
+    "Open account",
+    "Ops / Payroll <amount>",
+    "Order Checkbook",
+    "Payments",
+    "Remove bookmark",
+    "Remove from bookmarks",
+    "Reorder Bill Pay bookmark",
+    "Reorder Credit Card bookmark",
+    "Reorder Insights bookmark",
+    "Reorder Ops / Payroll bookmark",
+    "Search for anything",
+    "Set up an auto transfer rule",
+    "Tasks <n>",
+    "Team Spend",
+    "Toggle Private Mode",
+    "Transactions",
+    "Transfer",
+    "Treasury",
+    "View all",
+    "View as Employee",
+    "Viewing as Admin",
+    "updates",
+    "••••••<n>"
+   ],
+   "headings": [],
+   "path": "/accounts/depository/<id>",
+   "structure": "document",
+   "top": {
+    "name": "",
+    "role": "document"
+   }
+  },
+  "hop": [
+   {
+    "click": {
+     "index": 1,
+     "name": "",
+     "role": "button"
+    }
+   }
+  ],
+  "mutates": false,
+  "parent": "accounts.checking-detail",
+  "recordedBy": "agent",
+  "review": null,
+  "similarity": 0.9302,
+  "source": "10d376cc9b971c1302849d58e739aa1b251f4d59",
+  "status": "accepted"
+ },
+ "accounts.account-type-saved": {
+  "checked": "2026-10-02-1349",
+  "fingerprint": null,
+  "hop": [
+   {
+    "click": {
+     "name": "Save",
+     "role": "button",
+     "within": {
+      "name": "Edit account type<n>",
+      "role": "dialog"
+     }
+    }
+   }
+  ],
+  "mutates": false,
+  "parent": "accounts.edit-account-type-changed",
+  "recordedBy": "agent",
+  "review": null,
+  "similarity": null,
+  "source": null,
+  "status": "draft"
+ },
+ "accounts.add-account-menu": {
+  "checked": "2026-10-02-1349",
+  "fingerprint": {
+   "controls": [
+    "Create account",
+    "Link Credit account",
+    "Link bank account"
+   ],
+   "headings": [],
+   "path": "/accounts",
+   "structure": "menu",
+   "top": {
+    "name": "Add account",
+    "role": "menu"
+   }
+  },
+  "hop": [
+   {
+    "click": {
+     "name": "Add account",
+     "role": "button"
+    }
+   }
+  ],
+  "mutates": false,
+  "parent": "accounts.index",
+  "recordedBy": "draft",
+  "review": null,
+  "similarity": 0.9988,
+  "source": "871bd3d25b8adce8e8e6dcab439510b7f7f9f81a",
+  "status": "accepted"
+ },
+ "accounts.add-funds": {
+  "checked": "2026-10-02-1349",
+  "fingerprint": {
+   "controls": [
+    "Bank Transfer Most common Arrives in <n> business days.",
+    "Check Deposit Appears in <n> to <n> business days.",
+    "Click to copy",
+    "Close",
+    "Customize your experience",
+    "Invoice",
+    "Open account",
+    "Receiving account",
+    "SAFE Investment",
+    "View More Details",
+    "Viewing as Admin",
+    "Wire Instructions"
+   ],
+   "headings": [],
+   "path": "/add-funds",
+   "structure": "document",
+   "top": {
+    "name": "",
+    "role": "document"
+   }
+  },
+  "hop": [],
+  "mutates": false,
+  "parent": "/add-funds",
+  "recordedBy": "root",
+  "review": null,
+  "similarity": 0.9987,
+  "source": "97d170e1550eee4afc0af065b78cda302a97674c",
+  "status": "accepted"
+ },
+ "accounts.auto-transfer-rules": {
+  "checked": "2026-10-02-1349",
+  "fingerprint": {
+   "controls": [
+    "Accounting",
+    "Accounts",
+    "Add account",
+    "Banking",
+    "Bill Pay",
+    "Books",
+    "Cards",
+    "Command New",
+    "Create rule",
+    "Credit Card",
+    "Customize your experience",
+    "Distribute funds across accounts .",
+    "Feedback",
+    "Financing",
+    "Home",
+    "Insights",
+    "Invoicing",
+    "Learn about bookmarks",
+    "Maintain a target account balance .",
+    "Mercury Demo Pro",
+    "Move money",
+    "Navigate to Settings",
+    "Open account",
+    "Ops / Payroll <amount>",
+    "Payments",
+    "Redirect incoming funds .",
+    "Remove bookmark",
+    "Reorder Bill Pay bookmark",
+    "Reorder Credit Card bookmark",
+    "Reorder Insights bookmark",
+    "Reorder Ops / Payroll bookmark",
+    "Schedule recurring transfers .",
+    "Search for anything",
+    "Tasks <n>",
+    "Team Spend",
+    "Toggle Private Mode",
+    "Transactions",
+    "Transfer funds",
+    "Treasury",
+    "Viewing as Admin",
+    "updates"
+   ],
+   "headings": [
+    "Accounts"
+   ],
+   "path": "/accounts",
+   "structure": "document",
+   "top": {
+    "name": "",
+    "role": "document"
+   }
+  },
+  "hop": [
+   {
+    "click": {
+     "text": "Auto transfer rules"
+    }
+   }
+  ],
+  "mutates": false,
+  "parent": "accounts.index",
+  "recordedBy": "agent",
+  "review": null,
+  "similarity": 0.9995,
+  "source": "b7e624ab261eafdb500b85f00d19577740b5cab5",
+  "status": "accepted"
+ },
+ "accounts.autopay-day-select": {
+  "checked": "2026-10-02-1349",
+  "fingerprint": {
+   "controls": [
+    "<n>nd of the month",
+    "<n>rd of the month",
+    "<n>st of the month",
+    "<n>th of the month",
+    "Options"
+   ],
+   "headings": [],
+   "path": "/accounts/credit",
+   "structure": "listbox",
+   "top": {
+    "name": "Options",
+    "role": "listbox"
+   }
+  },
+  "hop": [
+   {
+    "click": {
+     "name": "On",
+     "role": "combobox"
+    }
+   }
+  ],
+  "mutates": false,
+  "parent": "accounts.autopay-rule-edit",
+  "recordedBy": "agent",
+  "review": null,
+  "similarity": 0.9948,
+  "source": "abb93c2f4bfce02d23f94896aff5d935f2c94fff",
+  "status": "accepted"
+ },
+ "accounts.autopay-rule-edit": {
+  "checked": "2026-10-02-1349",
+  "fingerprint": {
+   "controls": [
+    "Cancel",
+    "On",
+    "Payment frequency",
+    "Save"
+   ],
+   "headings": [],
+   "path": "/accounts/credit",
+   "structure": "dialog",
+   "top": {
+    "name": "",
+    "role": "dialog"
+   }
+  },
+  "hop": [
+   {
+    "click": {
+     "text": "Edit",
+     "within": {
+      "text": "Monthly on the 22ndAutopay full balanceEdit"
+     }
+    }
+   }
+  ],
+  "mutates": false,
+  "parent": "accounts.edit-autopay",
+  "recordedBy": "agent",
+  "review": null,
+  "similarity": 0.9958,
+  "source": "62e881fbe6cf8e9a68f066286c4db198eb6f2f54",
+  "status": "accepted"
+ },
+ "accounts.autopay-rule-saving": {
+  "checked": "2026-10-02-1349",
+  "fingerprint": {
+   "controls": [
+    "Done"
+   ],
+   "headings": [
+    "Autopay settings"
+   ],
+   "path": "/accounts/credit",
+   "structure": "dialog",
+   "top": {
+    "name": "",
+    "role": "dialog"
+   }
+  },
+  "hop": [
+   {
+    "click": {
+     "name": "5th of the month",
+     "role": "option"
+    }
+   },
+   {
+    "click": {
+     "name": "Save",
+     "role": "button"
+    }
+   }
+  ],
+  "mutates": true,
+  "parent": "accounts.autopay-day-select",
+  "recordedBy": "agent",
+  "review": {
+   "by": "conductor",
+   "date": "2026-10-03",
+   "decision": "reject",
+   "note": "transient Save spinner with 0 descendants; replay shows the settled Autopay settings dialog, not Edit recurring autopay with 5th of the month and a spinning Save",
+   "reason": "below-threshold"
+  },
+  "similarity": 0.8524,
+  "source": "a8ccadf29b75ac54428334127d1d6c5a3142f310",
+  "status": "rejected"
+ },
+ "accounts.autopay-source-edit": {
+  "checked": "2026-10-02-1349",
+  "fingerprint": {
+   "controls": [
+    "Backup autopay account (recommended) Backup autopay account (recommended)",
+    "Go back",
+    "Primary autopay account (required)",
+    "Save",
+    "add an auto-transfer rule."
+   ],
+   "headings": [
+    "Edit autopay accounts"
+   ],
+   "path": "/accounts/credit",
+   "structure": "dialog",
+   "top": {
+    "name": "",
+    "role": "dialog"
+   }
+  },
+  "hop": [
+   {
+    "click": {
+     "index": 0,
+     "text": "Edit"
+    }
+   }
+  ],
+  "mutates": false,
+  "parent": "accounts.edit-autopay",
+  "recordedBy": "agent",
+  "review": {
+   "by": "conductor",
+   "date": "2026-10-03",
+   "decision": "accept",
+   "note": "same Edit autopay accounts dialog (primary Ops / Payroll ••1038, backup Savings ••7658); the hop clicks Edit, which the label names",
+   "reason": "sample"
+  },
+  "similarity": 0.9955,
+  "source": "7418034815dac89f50859c15064b09d7c164d554",
+  "status": "accepted"
+ },
+ "accounts.autopay-threshold-edit": {
+  "checked": "2026-10-02-1349",
+  "fingerprint": {
+   "controls": [
+    "Cancel",
+    "Maximum daily payment",
+    "Rule",
+    "Save",
+    "Turn off this rule"
+   ],
+   "headings": [],
+   "path": "/accounts/credit",
+   "structure": "dialog",
+   "top": {
+    "name": "",
+    "role": "dialog"
+   }
+  },
+  "hop": [
+   {
+    "click": {
+     "index": 2,
+     "text": "Edit"
+    }
+   }
+  ],
+  "mutates": false,
+  "parent": "accounts.edit-autopay",
+  "recordedBy": "agent",
+  "review": null,
+  "similarity": 0.9913,
+  "source": "7df81dd9b18c9d73a89d779fcbd7e87511639b57",
+  "status": "accepted"
+ },
+ "accounts.autopay-threshold-saving": {
+  "checked": "2026-10-02-1349",
+  "fingerprint": {
+   "controls": [
+    "Done"
+   ],
+   "headings": [
+    "Autopay settings"
+   ],
+   "path": "/accounts/credit",
+   "structure": "dialog",
+   "top": {
+    "name": "",
+    "role": "dialog"
+   }
+  },
+  "hop": [
+   {
+    "fill": {
+     "locator": {
+      "label": "Rule"
+     },
+     "value": "150"
+    }
+   },
+   {
+    "click": {
+     "name": "Save",
+     "role": "button"
+    }
+   }
+  ],
+  "mutates": true,
+  "parent": "accounts.autopay-threshold-edit",
+  "recordedBy": "agent",
+  "review": {
+   "by": "conductor",
+   "date": "2026-10-03",
+   "decision": "reject",
+   "note": "transient Save spinner with 0 descendants; replay shows the settled Autopay settings dialog (rule still 'Less than 80% of limit left'), not Set up limit-based autopay at 15% with a spinning Save",
+   "reason": "below-threshold"
+  },
+  "similarity": 0.8653,
+  "source": "6544c083870b10c9a19ab970d2e667e1dde439b6",
+  "status": "rejected"
+ },
+ "accounts.bank-letter-customize": {
+  "checked": "2026-10-02-1349",
+  "fingerprint": {
+   "controls": [
+    "Account signatories",
+    "Average account balance",
+    "Business name",
+    "Cancel",
+    "Column",
+    "Current account balance",
+    "Debit card",
+    "Download",
+    "Include business phone number",
+    "Include secondary Column routing number",
+    "Mercury",
+    "Mercury phone number",
+    "Most recent bank statement",
+    "Open combobox menu"
+   ],
+   "headings": [
+    "Custom bank letter for Ops / Payroll",
+    "Letterhead logo",
+    "Customer details",
+    "Account details",
+    "Bank details"
+   ],
+   "path": "/settings/documents/bank-letters",
+   "structure": "dialog",
+   "top": {
+    "name": "",
+    "role": "dialog"
+   }
+  },
+  "hop": [
+   {
+    "click": {
+     "name": "Customize",
+     "role": "button"
+    }
+   }
+  ],
+  "mutates": false,
+  "parent": "accounts.bank-letters",
+  "recordedBy": "draft",
+  "review": null,
+  "similarity": 0.9992,
+  "source": "98462c545fca86bef3b278124bc1c5329b6a015f",
+  "status": "accepted"
+ },
+ "accounts.bank-letters": {
+  "checked": "2026-10-02-1349",
+  "fingerprint": {
+   "controls": [
+    "Account Security",
+    "Accounts",
+    "Advisors <n>",
+    "Agreements",
+    "All",
+    "Approval Rules",
+    "Bank letters",
+    "Billing history",
+    "Categories",
+    "Company Profile",
+    "Company documents",
+    "Controls",
+    "Customize",
+    "Customize your experience",
+    "Departments",
+    "Documents",
+    "Download",
+    "Integrations",
+    "Investment tax forms",
+    "Legal",
+    "Mercury Demo Pro",
+    "Move money",
+    "Navigate to Settings",
+    "Notices",
+    "Notifications",
+    "Open account",
+    "Operations",
+    "Other",
+    "Perks",
+    "Plan & Billing",
+    "Profile",
+    "Receipts & attachments",
+    "Recipient tax forms",
+    "Referrals",
+    "Search for anything",
+    "Security",
+    "Settings",
+    "Statements",
+    "Support requests",
+    "Tax",
+    "Team",
+    "Toggle Private Mode",
+    "Tokens",
+    "Trade confirmations",
+    "Vault",
+    "Viewing as Admin",
+    "Webhooks",
+    "Wire details",
+    "updates"
+   ],
+   "headings": [
+    "Documents & Data"
+   ],
+   "path": "/settings/documents/bank-letters",
+   "structure": "document",
+   "top": {
+    "name": "",
+    "role": "document"
+   }
+  },
+  "hop": [],
+  "mutates": false,
+  "parent": "/settings/documents/bank-letters?accountIds=mercurybankid2",
+  "recordedBy": "root",
+  "review": null,
+  "similarity": 0.9588,
+  "source": "97d170e1550eee4afc0af065b78cda302a97674c",
+  "status": "accepted"
+ },
+ "accounts.checkbook-ordered": {
+  "checked": "2026-10-02-1349",
+  "fingerprint": {
+   "controls": [
+    "Close",
+    "Done"
+   ],
+   "headings": [
+    "We’re getting your checkbook ready"
+   ],
+   "path": "/checkbooks/ordering/success",
+   "structure": "document",
+   "top": {
+    "name": "",
+    "role": "document"
+   }
+  },
+  "hop": [
+   {
+    "check": {
+     "name": "By checking this box, I, Jane Black, confirm I have the authority to agree to these terms on behalf of Mercury Demo, Incorporated and agree to the Deposit Account Agreement, which governs the Checkbooks feature.",
+     "role": "checkbox"
+    }
+   },
+   {
+    "click": {
+     "name": "Confirm",
+     "role": "button"
+    }
+   }
+  ],
+  "mutates": true,
+  "parent": "accounts.order-checkbook-review",
+  "recordedBy": "agent",
+  "review": {
+   "by": "conductor",
+   "date": "2026-10-03",
+   "decision": "accept",
+   "note": "same 'We're getting your checkbook ready' confirmation with pink check and Done; hop ticks the authority box and clicks Confirm as labeled",
+   "reason": "mutating"
+  },
+  "similarity": 0.9984,
+  "source": "fe768902b6e7f2c769b8962fc63835073c60866f",
+  "status": "accepted"
+ },
+ "accounts.checkbooks-hub": {
+  "checked": "2026-10-02-1349",
+  "fingerprint": {
+   "controls": [
+    "ACH Authorizations",
+    "Accounting",
+    "Accounts",
+    "Add to bookmarks",
+    "Approve",
+    "Banking",
+    "Bill Pay",
+    "Books",
+    "Cards",
+    "Checkbooks",
+    "Command New",
+    "Credit Card",
+    "Customize your experience",
+    "Home",
+    "Insights",
+    "Invoicing",
+    "Learn about bookmarks",
+    "Mercury Demo Pro",
+    "Move money",
+    "Navigate to Settings",
+    "Open account",
+    "Ops / Payroll <amount>",
+    "Order Checkbook",
+    "Payments",
+    "Recipients",
+    "Reject",
+    "Remove bookmark",
+    "Reorder Bill Pay bookmark",
+    "Reorder Credit Card bookmark",
+    "Reorder Insights bookmark",
+    "Reorder Ops / Payroll bookmark",
+    "Search for anything",
+    "Settings",
+    "Tasks <n>",
+    "Taxes",
+    "Team Spend",
+    "Toggle Private Mode",
+    "Transactions",
+    "View all check payments",
+    "Viewing as Admin",
+    "Wire Drawdowns",
+    "updates"
+   ],
+   "headings": [
+    "Checkbooks"
+   ],
+   "path": "/checkbooks/hub",
+   "structure": "document",
+   "top": {
+    "name": "",
+    "role": "document"
+   }
+  },
+  "hop": [],
+  "mutates": false,
+  "parent": "/checkbooks/hub",
+  "recordedBy": "root",
+  "review": null,
+  "similarity": 0.9995,
+  "source": "97d170e1550eee4afc0af065b78cda302a97674c",
+  "status": "accepted"
+ },
+ "accounts.checking-detail": {
+  "checked": "2026-10-02-1349",
+  "fingerprint": {
+   "controls": [
+    "<amount>",
+    "<date> Deli <n> <amount> Jane B. ••<n>",
+    "<date> Domestic Ads <amount> Real-Time Payment",
+    "<date> From AR <amount> Transfer",
+    "<date> Lily's Eatery <amount> Alice C. ••<n>",
+    "<date> Mercury Working Capital <amount> Working Capital Loan Payment",
+    "<date> Milgram Brokerage <amount> Jane B. ••<n>",
+    "<date> Office Stop Co. <amount> Jessica A. ••<n>",
+    "<date> The Plant Organic Cafe <amount> Landon S. ••<n>",
+    "<date> To Ops / Payroll <amount> Transfer",
+    "<date> Trader John's <amount> Alice C. ••<n>",
+    "<n>",
+    "<n> Letterman Drive Building A, Suite A<n> San Francisco, CA <n>",
+    "Accounting",
+    "Accounts",
+    "Banking",
+    "Bill Pay",
+    "Books",
+    "Cards",
+    "Column N.A.",
+    "Command New",
+    "Credit Card",
+    "Customize your experience",
+    "Deposit",
+    "Documents",
+    "Edit account nickname",
+    "Financing",
+    "Home",
+    "Insights",
+    "Invoicing",
+    "Learn about bookmarks",
+    "Mercury Demo Pro",
+    "Move money",
+    "Navigate to Settings",
+    "Open Menu",
+    "Open account",
+    "Ops / Payroll <amount>",
+    "Order Checkbook",
+    "Payments",
+    "Remove bookmark",
+    "Remove from bookmarks",
+    "Reorder Bill Pay bookmark",
+    "Reorder Credit Card bookmark",
+    "Reorder Insights bookmark",
+    "Reorder Ops / Payroll bookmark",
+    "Search for anything",
+    "Set up an auto transfer rule",
+    "Tasks <n>",
+    "Team Spend",
+    "Toggle Private Mode",
+    "Transactions",
+    "Transfer",
+    "Treasury",
+    "View all",
+    "Viewing as Admin",
+    "updates",
+    "••••••<n>"
+   ],
+   "headings": [],
+   "path": "/accounts/depository/<id>",
+   "structure": "document",
+   "top": {
+    "name": "",
+    "role": "document"
+   }
+  },
+  "hop": [],
+  "mutates": false,
+  "parent": "/accounts/depository/party-mercurybankid2",
+  "recordedBy": "root",
+  "review": null,
+  "similarity": 0.9988,
+  "source": "97d170e1550eee4afc0af065b78cda302a97674c",
+  "status": "accepted"
+ },
+ "accounts.create-account": {
+  "checked": "2026-10-02-1349",
+  "fingerprint": {
+   "controls": [
+    "Apply here",
+    "Cancel",
+    "Checking",
+    "Create account",
+    "Nickname (optional)",
+    "Savings"
+   ],
+   "headings": [
+    "Create account"
+   ],
+   "path": "/accounts",
+   "structure": "dialog",
+   "top": {
+    "name": "",
+    "role": "dialog"
+   }
+  },
+  "hop": [
+   {
+    "click": {
+     "name": "Create account",
+     "role": "menuitem"
+    }
+   }
+  ],
+  "mutates": true,
+  "parent": "accounts.add-account-menu",
+  "recordedBy": "draft",
+  "review": null,
+  "similarity": 0.9991,
+  "source": "5a5749c36a550868309770aa9d7f11161092da26",
+  "status": "accepted"
+ },
+ "accounts.create-account-error": {
+  "checked": "2026-10-02-1349",
+  "fingerprint": {
+   "controls": [
+    "Apply here",
+    "Cancel",
+    "Checking",
+    "Create account",
+    "Nickname (optional)",
+    "Savings"
+   ],
+   "headings": [
+    "Create account"
+   ],
+   "path": "/accounts",
+   "structure": "dialog",
+   "top": {
+    "name": "",
+    "role": "dialog"
+   }
+  },
+  "hop": [
+   {
+    "click": {
+     "name": "Create account",
+     "role": "button"
+    }
+   }
+  ],
+  "mutates": true,
+  "parent": "accounts.create-account",
+  "recordedBy": "agent",
+  "review": {
+   "by": "conductor",
+   "date": "2026-10-03",
+   "decision": "accept",
+   "note": "same Create account modal with 'You must make a selection.' under Type; the hop clicks the modal's Create account submit with no type chosen",
+   "reason": "mutating"
+  },
+  "similarity": 0.999,
+  "source": "ab7e6956ab43bd3a89024a291ce0e1492bdb36f1",
+  "status": "accepted"
+ },
+ "accounts.create-account-filled": {
+  "checked": "2026-10-02-1349",
+  "fingerprint": {
+   "controls": [
+    "Apply here",
+    "Cancel",
+    "Checking",
+    "Create account",
+    "Nickname (optional)",
+    "Savings"
+   ],
+   "headings": [
+    "Create account"
+   ],
+   "path": "/accounts",
+   "structure": "dialog",
+   "top": {
+    "name": "",
+    "role": "dialog"
+   }
+  },
+  "hop": [
+   {
+    "check": {
+     "name": "Checking",
+     "role": "radio"
+    }
+   },
+   {
+    "fill": {
+     "locator": {
+      "label": "Nickname (optional)"
+     },
+     "value": "A11y Test"
+    }
+   }
+  ],
+  "mutates": true,
+  "parent": "accounts.create-account-error",
+  "recordedBy": "agent",
+  "review": {
+   "by": "conductor",
+   "date": "2026-10-03",
+   "decision": "accept",
+   "note": "same Create account dialog: Checking selected, nickname filled with fixture 'A11y Test' instead of 'Taxes', Create account enabled; the hop checks and fills but submits nothing",
+   "reason": "mutating"
+  },
+  "similarity": 0.9978,
+  "source": "f1eea3d6a817a0e266c5abcc424442667af1e2a0",
+  "status": "accepted"
+ },
+ "accounts.create-account-success": {
+  "checked": "2026-10-02-1349",
+  "fingerprint": {
+   "controls": [
+    "<amount>",
+    "A<n>y Test Checking ••<n>",
+    "AP Checking ••<n>",
+    "AR Checking ••<n>",
+    "Autopay from Ops / Payroll Every <n>nd of the month or if <<n>% of limit left",
+    "Checking ••<n>",
+    "Create rule",
+    "Credit Card Mercury IO",
+    "Ops / Payroll Checking ••<n>",
+    "Savings ••<n>",
+    "Treasury"
+   ],
+   "headings": [],
+   "path": "/accounts",
+   "structure": "status",
+   "top": {
+    "name": "Mercury Accounts",
+    "role": "table"
+   }
+  },
+  "hop": [
+   {
+    "click": {
+     "name": "Create account",
+     "role": "button"
+    }
+   }
+  ],
+  "mutates": true,
+  "parent": "accounts.create-account-filled",
+  "recordedBy": "agent",
+  "review": {
+   "by": "conductor",
+   "date": "2026-10-03",
+   "decision": "accept",
+   "note": "same 'Your new account is ready to use. View Account' toast over the Mercury accounts list; the new row shows the fixture nickname (A11y Test) instead of Taxes, and the hop clicks Create account",
+   "reason": "mutating"
+  },
+  "similarity": 0.9687,
+  "source": "5ec3c82a0e69d86f0bb2f282223699e1a03475ad",
+  "status": "accepted"
+ },
+ "accounts.create-rule": {
+  "checked": "2026-10-02-1349",
+  "fingerprint": {
+   "controls": [
+    "Cancel",
+    "Create custom rule",
+    "Describe the rule in your own words",
+    "Distribute funds out",
+    "Generate rule",
+    "Maintain a target balance",
+    "Redirect incoming funds",
+    "Send recurring transfers"
+   ],
+   "headings": [
+    "Create a new auto transfer rule"
+   ],
+   "path": "/accounts",
+   "structure": "dialog",
+   "top": {
+    "name": "",
+    "role": "dialog"
+   }
+  },
+  "hop": [
+   {
+    "click": {
+     "name": "Create rule",
+     "role": "button"
+    }
+   }
+  ],
+  "mutates": true,
+  "parent": "accounts.auto-transfer-rules",
+  "recordedBy": "agent",
+  "review": {
+   "by": "conductor",
+   "date": "2026-10-03",
+   "decision": "accept",
+   "note": "same Create a new auto transfer rule dialog (four rule types, custom rule, Generate rule); the hop clicks the Create rule button the label names and only opens the dialog",
+   "reason": "mutating"
+  },
+  "similarity": 0.9993,
+  "source": "0ddb7ebef76b7f43bd22e66932b73f9f77d9589f",
+  "status": "accepted"
+ },
+ "accounts.credit": {
+  "checked": "2026-10-02-1349",
+  "fingerprint": {
+   "controls": [
+    "<amount>K Intl. Transaction Fees",
+    "<amount>K cashback",
+    "<amount>M spent",
+    "<n> cards added",
+    "Accounting",
+    "Accounts",
+    "Autopay <date> Every <n>nd",
+    "Banking",
+    "Bill Pay",
+    "Books",
+    "Cards",
+    "Command New",
+    "Credit Card",
+    "Customize your experience",
+    "Home",
+    "How limits work",
+    "Insights",
+    "Invoicing",
+    "Learn about bookmarks",
+    "Linked Accounts <n> account",
+    "Mercury Demo Pro",
+    "Move money",
+    "Navigate to Settings",
+    "Open account",
+    "Ops / Payroll <amount>",
+    "Pay",
+    "Payments",
+    "Remove bookmark",
+    "Remove from bookmarks",
+    "Reorder Bill Pay bookmark",
+    "Reorder Credit Card bookmark",
+    "Reorder Insights bookmark",
+    "Reorder Ops / Payroll bookmark",
+    "Request a limit increase",
+    "Search for anything",
+    "Tasks <n>",
+    "Team Spend",
+    "Toggle Private Mode",
+    "Transactions",
+    "Viewing as Admin",
+    "updates"
+   ],
+   "headings": [
+    "Credit Card"
+   ],
+   "path": "/accounts/credit",
+   "structure": "document",
+   "top": {
+    "name": "",
+    "role": "document"
+   }
+  },
+  "hop": [],
+  "mutates": false,
+  "parent": "/accounts/credit",
+  "recordedBy": "root",
+  "review": null,
+  "similarity": 0.99,
+  "source": "97d170e1550eee4afc0af065b78cda302a97674c",
+  "status": "accepted"
+ },
+ "accounts.credit-how-limits": {
+  "checked": "2026-10-02-1349",
+  "fingerprint": {
+   "controls": [
+    "Got it"
+   ],
+   "headings": [
+    "How your IO limit works",
+    "What you can spend",
+    "What affects your limit",
+    "How your limit changes",
+    "How repayment works"
+   ],
+   "path": "/accounts/credit",
+   "structure": "dialog",
+   "top": {
+    "name": "",
+    "role": "dialog"
+   }
+  },
+  "hop": [
+   {
+    "click": {
+     "name": "How limits work",
+     "role": "button"
+    }
+   }
+  ],
+  "mutates": false,
+  "parent": "accounts.credit",
+  "recordedBy": "draft",
+  "review": null,
+  "similarity": 0.9932,
+  "source": "4ca65ff7832a662ade97b45d8c25ba55744e16db",
+  "status": "accepted"
+ },
+ "accounts.credit-last-month": {
+  "checked": "2026-10-02-1349",
+  "fingerprint": {
+   "controls": [
+    "<amount>K Intl. Transaction Fees",
+    "<amount>K cashback",
+    "<amount>M spent",
+    "<n> cards added",
+    "Accounting",
+    "Accounts",
+    "Autopay <date> Every <n>nd",
+    "Banking",
+    "Bill Pay",
+    "Books",
+    "Cards",
+    "Command New",
+    "Credit Card",
+    "Customize your experience",
+    "Home",
+    "How limits work",
+    "Insights",
+    "Invoicing",
+    "Learn about bookmarks",
+    "Linked Accounts <n> account",
+    "Mercury Demo Pro",
+    "Move money",
+    "Navigate to Settings",
+    "Open account",
+    "Ops / Payroll <amount>",
+    "Pay",
+    "Payments",
+    "Remove bookmark",
+    "Remove from bookmarks",
+    "Reorder Bill Pay bookmark",
+    "Reorder Credit Card bookmark",
+    "Reorder Insights bookmark",
+    "Reorder Ops / Payroll bookmark",
+    "Request a limit increase",
+    "Search for anything",
+    "Tasks <n>",
+    "Team Spend",
+    "Toggle Private Mode",
+    "Transactions",
+    "Viewing as Admin",
+    "updates"
+   ],
+   "headings": [
+    "Credit Card"
+   ],
+   "path": "/accounts/credit",
+   "structure": "document",
+   "top": {
+    "name": "",
+    "role": "document"
+   }
+  },
+  "hop": [
+   {
+    "click": {
+     "text": "Last Month"
+    }
+   }
+  ],
+  "mutates": false,
+  "parent": "accounts.credit",
+  "recordedBy": "agent",
+  "review": null,
+  "similarity": 0.9873,
+  "source": "cb8caff180dc4ec0a7f59510cbfd3b5450fd4eb5",
+  "status": "accepted"
+ },
+ "accounts.credit-limit-details": {
+  "checked": "2026-10-02-1349",
+  "fingerprint": {
+   "controls": [
+    "<amount>K Intl. Transaction Fees",
+    "<amount>K cashback",
+    "<amount>M spent",
+    "<n> cards added",
+    "Accounting",
+    "Accounts",
+    "Autopay <date> Every <n>nd",
+    "Banking",
+    "Bill Pay",
+    "Books",
+    "Cards",
+    "Command New",
+    "Credit Card",
+    "Customize your experience",
+    "Home",
+    "How limits work",
+    "Insights",
+    "Invoicing",
+    "Learn about bookmarks",
+    "Linked Accounts <n> account",
+    "Mercury Demo Pro",
+    "Move money",
+    "Navigate to Settings",
+    "Open account",
+    "Ops / Payroll <amount>",
+    "Pay",
+    "Payments",
+    "Remove bookmark",
+    "Remove from bookmarks",
+    "Reorder Bill Pay bookmark",
+    "Reorder Credit Card bookmark",
+    "Reorder Insights bookmark",
+    "Reorder Ops / Payroll bookmark",
+    "Request a limit increase",
+    "Search for anything",
+    "Tasks <n>",
+    "Team Spend",
+    "Toggle Private Mode",
+    "Transactions",
+    "Viewing as Admin",
+    "updates"
+   ],
+   "headings": [
+    "Credit Card"
+   ],
+   "path": "/accounts/credit",
+   "structure": "document",
+   "top": {
+    "name": "",
+    "role": "document"
+   }
+  },
+  "hop": [
+   {
+    "click": {
+     "text": "Show details"
+    }
+   }
+  ],
+  "mutates": false,
+  "parent": "accounts.credit",
+  "recordedBy": "draft",
+  "review": null,
+  "similarity": 0.9866,
+  "source": "53c6fc7c8e527b2aca16e556a50d821a1f11ca51",
+  "status": "accepted"
+ },
+ "accounts.credit-linked-accounts": {
+  "checked": "2026-10-02-1349",
+  "fingerprint": {
+   "controls": [
+    "Close",
+    "Exclude all accounts"
+   ],
+   "headings": [
+    "Linked accounts"
+   ],
+   "path": "/accounts/credit",
+   "structure": "dialog",
+   "top": {
+    "name": "",
+    "role": "dialog"
+   }
+  },
+  "hop": [
+   {
+    "click": {
+     "name": "Linked Accounts <n> account",
+     "role": "button"
+    }
+   }
+  ],
+  "mutates": false,
+  "parent": "accounts.credit",
+  "recordedBy": "agent",
+  "review": {
+   "by": "conductor",
+   "date": "2026-10-03",
+   "decision": "accept",
+   "note": "same Linked accounts dialog (Checking ••5231, Capital One)",
+   "reason": "below-threshold"
+  },
+  "similarity": 0.894,
+  "source": "e6c292b5115fd4683d686ef63a93aeb97ea260f3",
+  "status": "accepted"
+ },
+ "accounts.custom-statement": {
+  "checked": "2026-10-02-1349",
+  "fingerprint": {
+   "controls": [
+    "Account",
+    "Cancel",
+    "Download",
+    "From",
+    "To"
+   ],
+   "headings": [
+    "Generate a custom statement"
+   ],
+   "path": "/settings/documents/statements",
+   "structure": "dialog",
+   "top": {
+    "name": "",
+    "role": "dialog"
+   }
+  },
+  "hop": [
+   {
+    "click": {
+     "name": "Generate a custom statement",
+     "role": "button"
+    }
+   }
+  ],
+  "mutates": true,
+  "parent": "accounts.statements",
+  "recordedBy": "draft",
+  "review": null,
+  "similarity": 0.9923,
+  "source": "3baaebfe4dfe31307cc1c7d008e3a27837bc8f71",
+  "status": "accepted"
+ },
+ "accounts.documents-menu": {
+  "checked": "2026-10-02-1349",
+  "fingerprint": {
+   "controls": [
+    "Bank Letters",
+    "Statements",
+    "Wire Details"
+   ],
+   "headings": [],
+   "path": "/accounts/depository/<id>",
+   "structure": "menu",
+   "top": {
+    "name": "Documents",
+    "role": "menu"
+   }
+  },
+  "hop": [
+   {
+    "click": {
+     "name": "Documents",
+     "role": "button"
+    }
+   },
+   {
+    "wait": {
+     "ms": 500
+    }
+   }
+  ],
+  "mutates": false,
+  "parent": "accounts.routing-copied",
+  "recordedBy": "agent",
+  "review": null,
+  "similarity": 0.9349,
+  "source": "9938253a456db20100171a8704e25b24b720124a",
+  "status": "accepted"
+ },
+ "accounts.edit-account-type": {
+  "checked": "2026-10-02-1349",
+  "fingerprint": {
+   "controls": [
+    "Business",
+    "Cancel",
+    "Personal",
+    "Save"
+   ],
+   "headings": [
+    "Edit account type"
+   ],
+   "path": "/accounts",
+   "structure": "dialog",
+   "top": {
+    "name": "",
+    "role": "dialog"
+   }
+  },
+  "hop": [
+   {
+    "click": {
+     "name": "Edit account type",
+     "role": "menuitem"
+    }
+   }
+  ],
+  "mutates": false,
+  "parent": "accounts.linked-account-kebab",
+  "recordedBy": "agent",
+  "review": null,
+  "similarity": 0.97,
+  "source": "97324df4342b0136b5168c63daed885709921292",
+  "status": "accepted"
+ },
+ "accounts.edit-account-type-changed": {
+  "checked": "2026-10-02-1349",
+  "fingerprint": {
+   "controls": [
+    "Business",
+    "Cancel",
+    "Personal",
+    "Save"
+   ],
+   "headings": [
+    "Edit account type"
+   ],
+   "path": "/accounts",
+   "structure": "dialog",
+   "top": {
+    "name": "",
+    "role": "dialog"
+   }
+  },
+  "hop": [
+   {
+    "check": {
+     "name": "Business",
+     "role": "radio"
+    }
+   }
+  ],
+  "mutates": false,
+  "parent": "accounts.edit-account-type",
+  "recordedBy": "agent",
+  "review": {
+   "by": "conductor",
+   "date": "2026-10-03",
+   "decision": "reject",
+   "note": "form-state not visible: the replay opens Checking ••9876, which is already Business, so checking Business changes nothing and Save stays disabled; the capture shows Chase Freedom Unlimited 1 switched from Personal to Business with Save enabled (the parent recipe opens the wrong row; the parent capture shows Chase Freedom Unlimited 1)",
+   "reason": "sample"
+  },
+  "similarity": 0.9681,
+  "source": "c7b70c7208009802124919e0be4867100e8f2d4e",
+  "status": "rejected"
+ },
+ "accounts.edit-autopay": {
+  "checked": "2026-10-02-1349",
+  "fingerprint": {
+   "controls": [
+    "Done"
+   ],
+   "headings": [
+    "Autopay settings"
+   ],
+   "path": "/accounts/credit",
+   "structure": "dialog",
+   "top": {
+    "name": "",
+    "role": "dialog"
+   }
+  },
+  "hop": [
+   {
+    "click": {
+     "name": "Autopay Oct <n> Every <n>",
+     "role": "button"
+    }
+   }
+  ],
+  "mutates": false,
+  "parent": "accounts.credit",
+  "recordedBy": "agent",
+  "review": null,
+  "similarity": 0.9952,
+  "source": "d5350d699053005d915a37614880f1fb40b8749e",
+  "status": "accepted"
+ },
+ "accounts.edit-portfolio": {
+  "checked": "2026-10-02-1349",
+  "fingerprint": {
+   "controls": [
+    "Close",
+    "Customize your experience",
+    "Go Back",
+    "More about these funds Fund data as of <date>",
+    "Open account",
+    "Select your portfolio allocation",
+    "Tier <n>",
+    "Update portfolio",
+    "Viewing as Admin"
+   ],
+   "headings": [
+    "Edit portfolio"
+   ],
+   "path": "/accounts/treasury/<id>/portfolio/edit",
+   "structure": "document",
+   "top": {
+    "name": "",
+    "role": "document"
+   }
+  },
+  "hop": [],
+  "mutates": false,
+  "parent": "/accounts/treasury/party-treasury-id-0/portfolio/edit",
+  "recordedBy": "root",
+  "review": null,
+  "similarity": 0.9788,
+  "source": "97d170e1550eee4afc0af065b78cda302a97674c",
+  "status": "accepted"
+ },
+ "accounts.edit-portfolio-tier5": {
+  "checked": "2026-10-02-1349",
+  "fingerprint": {
+   "controls": [
+    "Close",
+    "Customize your experience",
+    "Go Back",
+    "More about these funds Fund data as of <date>",
+    "Open account",
+    "Select your portfolio allocation",
+    "Tier <n>",
+    "Update portfolio",
+    "Viewing as Admin"
+   ],
+   "headings": [
+    "Edit portfolio"
+   ],
+   "path": "/accounts/treasury/<id>/portfolio/edit",
+   "structure": "document",
+   "top": {
+    "name": "",
+    "role": "document"
+   }
+  },
+  "hop": [
+   {
+    "click": {
+     "name": "Tier 5",
+     "role": "button"
+    }
+   }
+  ],
+  "mutates": false,
+  "parent": "accounts.edit-portfolio",
+  "recordedBy": "agent",
+  "review": null,
+  "similarity": 0.9743,
+  "source": "1093f38fb46ada7c3e27fc58df1f3636a06043e8",
+  "status": "accepted"
+ },
+ "accounts.financing": {
+  "checked": "2026-10-02-1349",
+  "fingerprint": {
+   "controls": [
+    "Accounting",
+    "Accounts",
+    "Add to bookmarks",
+    "Banking",
+    "Bill Pay",
+    "Books",
+    "Cards",
+    "Command New",
+    "Credit Card",
+    "Customize your experience",
+    "Download loan agreement",
+    "Edit autopay",
+    "Financing",
+    "Home",
+    "Insights",
+    "Invoicing",
+    "Learn about bookmarks",
+    "Mercury Demo Pro",
+    "Move money",
+    "Navigate to Settings",
+    "Open account",
+    "Ops / Payroll <amount>",
+    "Payments",
+    "Remove bookmark",
+    "Reorder Bill Pay bookmark",
+    "Reorder Credit Card bookmark",
+    "Reorder Insights bookmark",
+    "Reorder Ops / Payroll bookmark",
+    "Search for anything",
+    "Tasks <n>",
+    "Team Spend",
+    "Toggle Private Mode",
+    "Transactions",
+    "Treasury",
+    "View full schedule",
+    "Viewing as Admin",
+    "updates"
+   ],
+   "headings": [
+    "Financing",
+    "Activity"
+   ],
+   "path": "/capital/ecommerce",
+   "structure": "document",
+   "top": {
+    "name": "",
+    "role": "document"
+   }
+  },
+  "hop": [],
+  "mutates": false,
+  "parent": "/capital/ecommerce",
+  "recordedBy": "root",
+  "review": null,
+  "similarity": 0.9976,
+  "source": "97d170e1550eee4afc0af065b78cda302a97674c",
+  "status": "accepted"
+ },
+ "accounts.financing-home": {
+  "checked": "2026-10-02-1349",
+  "fingerprint": {
+   "controls": [
+    "Accounting",
+    "Accounts",
+    "Add to bookmarks",
+    "Banking",
+    "Bill Pay",
+    "Books",
+    "Cards",
+    "Command New",
+    "Contact us",
+    "Credit Card",
+    "Customize your experience",
+    "Financing",
+    "Home",
+    "Insights",
+    "Invoicing",
+    "Learn about bookmarks",
+    "Mercury Demo Pro",
+    "Move money",
+    "Navigate to Settings",
+    "Open account",
+    "Ops / Payroll <amount>",
+    "Payments",
+    "Remove bookmark",
+    "Reorder Bill Pay bookmark",
+    "Reorder Credit Card bookmark",
+    "Reorder Insights bookmark",
+    "Reorder Ops / Payroll bookmark",
+    "SAFE A simple tool for early-stage fundraising. Start now",
+    "Search for anything",
+    "Tasks <n>",
+    "Team Spend",
+    "Toggle Private Mode",
+    "Transactions",
+    "Treasury",
+    "Venture Debt Runway extension for VC-backed companies. See if you qualify",
+    "Viewing as Admin",
+    "Working Capital Grow your ecom business with a working capital loan. Apply for more capital",
+    "updates"
+   ],
+   "headings": [
+    "Financing",
+    "Working Capital"
+   ],
+   "path": "/capital",
+   "structure": "document",
+   "top": {
+    "name": "",
+    "role": "document"
+   }
+  },
+  "hop": [],
+  "mutates": false,
+  "parent": "/capital",
+  "recordedBy": "root",
+  "review": null,
+  "similarity": 0.999,
+  "source": "97d170e1550eee4afc0af065b78cda302a97674c",
+  "status": "accepted"
+ },
+ "accounts.index": {
+  "checked": "2026-10-02-1349",
+  "fingerprint": {
+   "controls": [
+    "<amount>",
+    "AP Checking ••<n>",
+    "AR Checking ••<n>",
+    "Accounting",
+    "Accounts",
+    "Add account",
+    "Autopay from Ops / Payroll Every <n>nd of the month or if <<n>% of limit left",
+    "Banking",
+    "Bill Pay",
+    "Books",
+    "Cards",
+    "Checking ••<n>",
+    "Command New",
+    "Create rule",
+    "Credit Card",
+    "Credit Card Mercury IO",
+    "Customize your experience",
+    "Feedback",
+    "Financing",
+    "Home",
+    "Insights",
+    "Invoicing",
+    "Learn about bookmarks",
+    "Mercury Demo Pro",
+    "Move money",
+    "Navigate to Settings",
+    "Open account",
+    "Ops / Payroll <amount>",
+    "Ops / Payroll Checking ••<n>",
+    "Payments",
+    "Remove bookmark",
+    "Reorder Bill Pay bookmark",
+    "Reorder Credit Card bookmark",
+    "Reorder Insights bookmark",
+    "Reorder Ops / Payroll bookmark",
+    "Savings ••<n>",
+    "Search for anything",
+    "Tasks <n>",
+    "Team Spend",
+    "Toggle Private Mode",
+    "Transactions",
+    "Transfer funds",
+    "Treasury",
+    "Viewing as Admin",
+    "updates"
+   ],
+   "headings": [
+    "Accounts",
+    "Available"
+   ],
+   "path": "/accounts",
+   "structure": "document",
+   "top": {
+    "name": "",
+    "role": "document"
+   }
+  },
+  "hop": [],
+  "mutates": false,
+  "parent": "/accounts",
+  "recordedBy": "root",
+  "review": null,
+  "similarity": 0.9994,
+  "source": "97d170e1550eee4afc0af065b78cda302a97674c",
+  "status": "accepted"
+ },
+ "accounts.limit-increase": {
+  "checked": "2026-10-02-1349",
+  "fingerprint": {
+   "controls": [
+    "Cancel",
+    "Learn more about how our IO Credit Limit works.",
+    "Reason (optional)",
+    "Request Increase",
+    "Requested Amount"
+   ],
+   "headings": [],
+   "path": "/accounts/credit",
+   "structure": "dialog",
+   "top": {
+    "name": "",
+    "role": "dialog"
+   }
+  },
+  "hop": [
+   {
+    "click": {
+     "name": "Request a limit increase",
+     "role": "button"
+    }
+   }
+  ],
+  "mutates": false,
+  "parent": "accounts.credit",
+  "recordedBy": "draft",
+  "review": null,
+  "similarity": 0.9951,
+  "source": "56439721c3b99ef36ae7990eb39da2231d138eb2",
+  "status": "accepted"
+ },
+ "accounts.limit-increase-error": {
+  "checked": "2026-10-02-1349",
+  "fingerprint": {
+   "controls": [
+    "Cancel",
+    "Learn more about how our IO Credit Limit works.",
+    "Reason (optional)",
+    "Request Increase",
+    "Requested Amount"
+   ],
+   "headings": [],
+   "path": "/accounts/credit",
+   "structure": "dialog",
+   "top": {
+    "name": "",
+    "role": "dialog"
+   }
+  },
+  "hop": [
+   {
+    "click": {
+     "name": "Request Increase",
+     "role": "button"
+    }
+   }
+  ],
+  "mutates": true,
+  "parent": "accounts.limit-increase",
+  "recordedBy": "agent",
+  "review": {
+   "by": "conductor",
+   "date": "2026-10-03",
+   "decision": "accept",
+   "note": "same credit limit increase dialog with 'Must be a dollar value.' under an empty Requested Amount; the hop clicks Request Increase",
+   "reason": "mutating"
+  },
+  "similarity": 0.9963,
+  "source": "66af54e8ff1a8ed554bf569caa64c304356b7726",
+  "status": "accepted"
+ },
+ "accounts.limit-increase-sent": {
+  "checked": "2026-10-02-1349",
+  "fingerprint": {
+   "controls": [
+    "Done",
+    "Learn more about how our IO Credit Limit works."
+   ],
+   "headings": [],
+   "path": "/accounts/credit",
+   "structure": "dialog",
+   "top": {
+    "name": "",
+    "role": "dialog"
+   }
+  },
+  "hop": [
+   {
+    "fill": {
+     "locator": {
+      "label": "Requested Amount"
+     },
+     "value": "250000"
+    }
+   },
+   {
+    "click": {
+     "name": "Request Increase",
+     "role": "button"
+    }
+   }
+  ],
+  "mutates": true,
+  "parent": "accounts.limit-increase-error",
+  "recordedBy": "agent",
+  "review": {
+   "by": "conductor",
+   "date": "2026-10-03",
+   "decision": "accept",
+   "note": "same 'Request a credit limit increase' dialog showing 'request has been received and is under review' with Done; hop fills Requested Amount and clicks Request Increase",
+   "reason": "mutating"
+  },
+  "similarity": 0.9937,
+  "source": "59ead94341f43593bc90af100c00df77e3473bf6",
+  "status": "accepted"
+ },
+ "accounts.link-bank": {
+  "checked": "2026-10-02-1349",
+  "fingerprint": {
+   "controls": [
+    "Business",
+    "Personal",
+    "Save"
+   ],
+   "headings": [
+    "What type of account is Iron Bank Checking <n>?"
+   ],
+   "path": "/accounts",
+   "structure": "dialog",
+   "top": {
+    "name": "",
+    "role": "dialog"
+   }
+  },
+  "hop": [
+   {
+    "click": {
+     "name": "Link bank account",
+     "role": "menuitem"
+    }
+   },
+   {
+    "wait": {
+     "ms": 2000
+    }
+   }
+  ],
+  "mutates": false,
+  "parent": "accounts.add-account-menu",
+  "recordedBy": "agent",
+  "review": null,
+  "similarity": 0.9992,
+  "source": "f0b246ddf879734ec7bce51cf53cd255c65b7159",
+  "status": "accepted"
+ },
+ "accounts.link-credit": {
+  "checked": "2026-10-02-1349",
+  "fingerprint": {
+   "controls": [
+    "Business",
+    "Personal",
+    "Save"
+   ],
+   "headings": [
+    "What type of account is Chase Freedom Unlimited <n>?"
+   ],
+   "path": "/accounts",
+   "structure": "dialog",
+   "top": {
+    "name": "",
+    "role": "dialog"
+   }
+  },
+  "hop": [
+   {
+    "click": {
+     "name": "Link Credit account",
+     "role": "menuitem"
+    }
+   },
+   {
+    "wait": {
+     "locator": {
+      "name": "Save",
+      "role": "button"
+     }
+    }
+   }
+  ],
+  "mutates": false,
+  "parent": "accounts.add-account-menu",
+  "recordedBy": "agent",
+  "review": null,
+  "similarity": 0.9841,
+  "source": "961740b96be529c7e32fd38eba829ad8761889d1",
+  "status": "accepted"
+ },
+ "accounts.linked-account-kebab": {
+  "checked": "2026-10-02-1349",
+  "fingerprint": {
+   "controls": [
+    "Edit account type",
+    "Edit nickname",
+    "Unlink account"
+   ],
+   "headings": [],
+   "path": "/accounts",
+   "structure": "menu",
+   "top": {
+    "name": "",
+    "role": "menu"
+   }
+  },
+  "hop": [
+   {
+    "click": {
+     "css": "[class*=\"_accountActionsMenu_\"] [class*=\"_kebab_\"]",
+     "index": 0
+    }
+   }
+  ],
+  "mutates": false,
+  "parent": "accounts.linked-accounts",
+  "recordedBy": "agent",
+  "review": null,
+  "similarity": 0.9993,
+  "source": "ff42064b9809da142ce9fbb74a0e5cc5f7d6c91c",
+  "status": "accepted"
+ },
+ "accounts.linked-accounts": {
+  "checked": "2026-10-02-1349",
+  "fingerprint": {
+   "controls": [
+    "<n>",
+    "Accounting",
+    "Accounts",
+    "Add account",
+    "Banking",
+    "Bill Pay",
+    "Books",
+    "Cards",
+    "Command New",
+    "Credit Card",
+    "Customize your experience",
+    "Feedback",
+    "Financing",
+    "Home",
+    "Insights",
+    "Invoicing",
+    "Learn about bookmarks",
+    "Mercury Demo Pro",
+    "Move money",
+    "Navigate to Settings",
+    "Open account",
+    "Ops / Payroll <amount>",
+    "Payments",
+    "Remove bookmark",
+    "Reorder Bill Pay bookmark",
+    "Reorder Credit Card bookmark",
+    "Reorder Insights bookmark",
+    "Reorder Ops / Payroll bookmark",
+    "Search for anything",
+    "Tasks <n>",
+    "Team Spend",
+    "Toggle Private Mode",
+    "Transactions",
+    "Transfer",
+    "Transfer funds",
+    "Treasury",
+    "Viewing as Admin",
+    "updates",
+    "••••••<n>"
+   ],
+   "headings": [
+    "Accounts"
+   ],
+   "path": "/accounts",
+   "structure": "document",
+   "top": {
+    "name": "",
+    "role": "document"
+   }
+  },
+  "hop": [],
+  "mutates": false,
+  "parent": "/accounts#external-accounts",
+  "recordedBy": "root",
+  "review": null,
+  "similarity": 0.9993,
+  "source": "97d170e1550eee4afc0af065b78cda302a97674c",
+  "status": "accepted"
+ },
+ "accounts.linked-credit-account": {
+  "checked": "2026-10-02-1349",
+  "fingerprint": {
+   "controls": [
+    "<n>",
+    "Accounting",
+    "Accounts",
+    "Add account",
+    "Banking",
+    "Bill Pay",
+    "Books",
+    "Cards",
+    "Command New",
+    "Credit Card",
+    "Customize your experience",
+    "Feedback",
+    "Financing",
+    "Home",
+    "Insights",
+    "Invoicing",
+    "Learn about bookmarks",
+    "Mercury Demo Pro",
+    "Move money",
+    "Navigate to Settings",
+    "Open account",
+    "Ops / Payroll <amount>",
+    "Payments",
+    "Remove bookmark",
+    "Reorder Bill Pay bookmark",
+    "Reorder Credit Card bookmark",
+    "Reorder Insights bookmark",
+    "Reorder Ops / Payroll bookmark",
+    "Search for anything",
+    "Tasks <n>",
+    "Team Spend",
+    "Toggle Private Mode",
+    "Transactions",
+    "Transfer",
+    "Transfer funds",
+    "Treasury",
+    "Viewing as Admin",
+    "updates",
+    "••••••<n>"
+   ],
+   "headings": [
+    "Accounts"
+   ],
+   "path": "/accounts",
+   "structure": "document",
+   "top": {
+    "name": "",
+    "role": "document"
+   }
+  },
+  "hop": [
+   {
+    "click": {
+     "name": "Personal",
+     "role": "radio"
+    }
+   },
+   {
+    "click": {
+     "name": "Save",
+     "role": "button"
+    }
+   },
+   {
+    "click": {
+     "text": "Linked accounts"
+    }
+   }
+  ],
+  "mutates": true,
+  "parent": "accounts.link-credit",
+  "recordedBy": "agent",
+  "review": {
+   "by": "conductor",
+   "date": "2026-10-03",
+   "decision": "accept",
+   "note": "same Linked accounts tab with Chase Freedom Unlimited 1 (Personal Credit Card ••7249) as the last row, no Transfer button; hop picks Personal, clicks Save, opens Linked accounts as the label says",
+   "reason": "mutating"
+  },
+  "similarity": 0.9993,
+  "source": "5f38f0bc3cf49acce25d0ecfe10544773f3c11c0",
+  "status": "accepted"
+ },
+ "accounts.linked-transfer-menu": {
+  "checked": "2026-10-02-1349",
+  "fingerprint": {
+   "controls": [
+    "Transfer in",
+    "Transfer out"
+   ],
+   "headings": [],
+   "path": "/accounts",
+   "structure": "menu",
+   "top": {
+    "name": "Transfer",
+    "role": "menu"
+   }
+  },
+  "hop": [
+   {
+    "click": {
+     "index": 0,
+     "name": "Transfer",
+     "role": "button"
+    }
+   }
+  ],
+  "mutates": true,
+  "parent": "accounts.linked-accounts",
+  "recordedBy": "agent",
+  "review": {
+   "by": "conductor",
+   "date": "2026-10-03",
+   "decision": "accept",
+   "note": "same Transfer in / Transfer out menu open under Checking ••9876 on the Linked accounts tab; the hop clicks the first Transfer button",
+   "reason": "mutating"
+  },
+  "similarity": 0.9987,
+  "source": "68caaaa8cf71596311503cbf25071963e25f7314",
+  "status": "accepted"
+ },
+ "accounts.loan-autopay": {
+  "checked": "2026-10-02-1349",
+  "fingerprint": {
+   "controls": [
+    "Back up autopay account",
+    "Cancel",
+    "Confirm",
+    "Primary autopay account"
+   ],
+   "headings": [
+    "Autopay settings"
+   ],
+   "path": "/capital/ecommerce",
+   "structure": "dialog",
+   "top": {
+    "name": "",
+    "role": "dialog"
+   }
+  },
+  "hop": [
+   {
+    "click": {
+     "name": "Edit autopay",
+     "role": "button"
+    }
+   }
+  ],
+  "mutates": false,
+  "parent": "accounts.financing",
+  "recordedBy": "draft",
+  "review": null,
+  "similarity": 0.9986,
+  "source": "0263e5c52ec069d1fb05c9dd99c2988a6ff8615c",
+  "status": "accepted"
+ },
+ "accounts.loan-autopay-saved": {
+  "checked": "2026-10-02-1349",
+  "fingerprint": {
+   "controls": [
+    "Accounting",
+    "Accounts",
+    "Add to bookmarks",
+    "Banking",
+    "Bill Pay",
+    "Books",
+    "Cards",
+    "Command New",
+    "Credit Card",
+    "Customize your experience",
+    "Download loan agreement",
+    "Edit autopay",
+    "Financing",
+    "Home",
+    "Insights",
+    "Invoicing",
+    "Learn about bookmarks",
+    "Mercury Demo Pro",
+    "Move money",
+    "Navigate to Settings",
+    "Open account",
+    "Ops / Payroll <amount>",
+    "Payments",
+    "Remove bookmark",
+    "Reorder Bill Pay bookmark",
+    "Reorder Credit Card bookmark",
+    "Reorder Insights bookmark",
+    "Reorder Ops / Payroll bookmark",
+    "Search for anything",
+    "Tasks <n>",
+    "Team Spend",
+    "Toggle Private Mode",
+    "Transactions",
+    "Treasury",
+    "View full schedule",
+    "Viewing as Admin",
+    "updates"
+   ],
+   "headings": [
+    "Financing",
+    "Activity"
+   ],
+   "path": "/capital/ecommerce",
+   "structure": "document",
+   "top": {
+    "name": "",
+    "role": "document"
+   }
+  },
+  "hop": [
+   {
+    "click": {
+     "name": "Confirm",
+     "role": "button"
+    }
+   }
+  ],
+  "mutates": true,
+  "parent": "accounts.loan-autopay",
+  "recordedBy": "draft",
+  "review": null,
+  "similarity": 0.9649,
+  "source": "31eb5e1da82077faa6c906ec0cb3b62d12a1fed0",
+  "status": "accepted"
+ },
+ "accounts.loan-schedule": {
+  "checked": "2026-10-02-1349",
+  "fingerprint": {
+   "controls": [
+    "Close",
+    "Export"
+   ],
+   "headings": [],
+   "path": "/capital/ecommerce",
+   "structure": "dialog",
+   "top": {
+    "name": "",
+    "role": "dialog"
+   }
+  },
+  "hop": [
+   {
+    "click": {
+     "name": "View full schedule",
+     "role": "button"
+    }
+   }
+  ],
+  "mutates": true,
+  "parent": "accounts.financing",
+  "recordedBy": "draft",
+  "review": null,
+  "similarity": 0.9973,
+  "source": "7863807eb77d27c2a28d39aa293eeceb362c6149",
+  "status": "accepted"
+ },
+ "accounts.manage-shared-docs": {
+  "checked": "2026-10-02-1349",
+  "fingerprint": {
+   "controls": [
+    "Close",
+    "rotem@gmail.com <n> documents shared",
+    "thom@cooley.com <n> documents shared"
+   ],
+   "headings": [],
+   "path": "/settings/documents/statements",
+   "structure": "dialog",
+   "top": {
+    "name": "",
+    "role": "dialog"
+   }
+  },
+  "hop": [
+   {
+    "click": {
+     "name": "Manage shared documents",
+     "role": "button"
+    }
+   }
+  ],
+  "mutates": false,
+  "parent": "accounts.statements",
+  "recordedBy": "draft",
+  "review": null,
+  "similarity": 0.9928,
+  "source": "39913b7544b816fb14c223a92e141f3151804e3e",
+  "status": "accepted"
+ },
+ "accounts.nickname-edit": {
+  "checked": "2026-10-02-1349",
+  "fingerprint": {
+   "controls": [
+    "<amount>",
+    "<date> Contractor <amount> Real-Time Payment",
+    "<date> From Mercury Savings ••<n> <amount> Transfer",
+    "<date> Jordi O'Donnell <amount> Intl. Wire",
+    "<date> Lighthouse Properties #<n> <amount> Mercury ACH Payment",
+    "<date> Miles Davidson <amount> Check Payment",
+    "<date> Nutritionist <amount> Intl. Wire",
+    "<date> Pending Deposit <amount> Check Deposit",
+    "<date> Stefanie Katz <amount> Check Payment",
+    "<date> To AP <amount> Transfer",
+    "<n>",
+    "<n> Letterman Drive Building A, Suite A<n> San Francisco, CA <n>",
+    "Accounting",
+    "Accounts",
+    "Add to bookmarks",
+    "Banking",
+    "Bill Pay",
+    "Books",
+    "Cards",
+    "Column N.A.",
+    "Command New",
+    "Credit Card",
+    "Customize your experience",
+    "Deposit",
+    "Documents",
+    "Edit account nickname",
+    "Financing",
+    "Home",
+    "Insights",
+    "Invoicing",
+    "Learn about bookmarks",
+    "Mercury Demo Pro",
+    "Move money",
+    "Navigate to Settings",
+    "Open Menu",
+    "Open account",
+    "Ops / Payroll <amount>",
+    "Order Checkbook",
+    "Payments",
+    "Remove bookmark",
+    "Reorder Bill Pay bookmark",
+    "Reorder Credit Card bookmark",
+    "Reorder Insights bookmark",
+    "Reorder Ops / Payroll bookmark",
+    "Search for anything",
+    "Set up an auto transfer rule",
+    "Tasks <n>",
+    "Team Spend",
+    "Toggle Private Mode",
+    "Transactions",
+    "Transfer",
+    "Treasury",
+    "View all",
+    "Viewing as Admin",
+    "updates",
+    "••••••<n>"
+   ],
+   "headings": [],
+   "path": "/accounts/depository/<id>",
+   "structure": "document",
+   "top": {
+    "name": "",
+    "role": "document"
+   }
+  },
+  "hop": [
+   {
+    "click": {
+     "name": "AP Checking ••<n>",
+     "role": "cell"
+    }
+   },
+   {
+    "click": {
+     "name": "Edit account nickname",
+     "role": "textbox"
+    }
+   }
+  ],
+  "mutates": false,
+  "parent": "accounts.index",
+  "recordedBy": "agent",
+  "review": null,
+  "similarity": 0.9562,
+  "source": "02e7f1cb4d130fb49a6de2d5e146b25b27c3c85b",
+  "status": "accepted"
+ },
+ "accounts.nickname-saved": {
+  "checked": "2026-10-02-1349",
+  "fingerprint": {
+   "controls": [],
+   "headings": [],
+   "path": "/accounts/depository/<id>",
+   "structure": "status",
+   "top": {
+    "name": "",
+    "role": "LabelText"
+   }
+  },
+  "hop": [
+   {
+    "fill": {
+     "locator": {
+      "name": "Edit account nickname",
+      "role": "textbox"
+     },
+     "value": "A11y Test"
+    }
+   },
+   {
+    "press": "Enter"
+   }
+  ],
+  "mutates": false,
+  "parent": "accounts.nickname-edit",
+  "recordedBy": "agent",
+  "review": null,
+  "similarity": 0.9523,
+  "source": "e7a8d9dda1c976fbc58d68be5ee8c5335ec00de1",
+  "status": "accepted"
+ },
+ "accounts.order-checkbook": {
+  "checked": "2026-10-02-1349",
+  "fingerprint": {
+   "controls": [
+    "Account",
+    "Cancel",
+    "Checkbook nickname",
+    "Close",
+    "Next",
+    "Start number More info",
+    "Use a different address",
+    "blue check color",
+    "green check color",
+    "pink check color"
+   ],
+   "headings": [
+    "Order a Checkbook"
+   ],
+   "path": "/checkbooks/ordering/order",
+   "structure": "document",
+   "top": {
+    "name": "",
+    "role": "document"
+   }
+  },
+  "hop": [],
+  "mutates": false,
+  "parent": "/checkbooks/ordering/order?accountId=party-mercurybankid2&from=account-details",
+  "recordedBy": "root",
+  "review": null,
+  "similarity": 0.9989,
+  "source": "97d170e1550eee4afc0af065b78cda302a97674c",
+  "status": "accepted"
+ },
+ "accounts.order-checkbook-error": {
+  "checked": "2026-10-02-1349",
+  "fingerprint": {
+   "controls": [
+    "Account",
+    "Cancel",
+    "Checkbook nickname",
+    "Close",
+    "Next",
+    "Start number More info",
+    "Use a different address",
+    "blue check color",
+    "green check color",
+    "pink check color"
+   ],
+   "headings": [
+    "Order a Checkbook"
+   ],
+   "path": "/checkbooks/ordering/order",
+   "structure": "document",
+   "top": {
+    "name": "",
+    "role": "document"
+   }
+  },
+  "hop": [
+   {
+    "click": {
+     "name": "Next",
+     "role": "button"
+    }
+   }
+  ],
+  "mutates": false,
+  "parent": "accounts.order-checkbook",
+  "recordedBy": "agent",
+  "review": null,
+  "similarity": 0.9987,
+  "source": "411d4b42de49b06b29549ac65336209425fa74a1",
+  "status": "accepted"
+ },
+ "accounts.order-checkbook-filled": {
+  "checked": "2026-10-02-1349",
+  "fingerprint": {
+   "controls": [
+    "Account",
+    "Cancel",
+    "Checkbook nickname",
+    "Close",
+    "Next",
+    "Start number More info",
+    "Use a different address",
+    "blue check color",
+    "green check color",
+    "pink check color"
+   ],
+   "headings": [
+    "Order a Checkbook"
+   ],
+   "path": "/checkbooks/ordering/order",
+   "structure": "document",
+   "top": {
+    "name": "",
+    "role": "document"
+   }
+  },
+  "hop": [
+   {
+    "fill": {
+     "locator": {
+      "label": "Checkbook nickname"
+     },
+     "value": "A11y Test"
+    }
+   },
+   {
+    "click": {
+     "name": "pink check color",
+     "role": "button"
+    }
+   }
+  ],
+  "mutates": false,
+  "parent": "accounts.order-checkbook-error",
+  "recordedBy": "agent",
+  "review": null,
+  "similarity": 0.9965,
+  "source": "25cdfa5997bfd335172256ff98ec8b8d59457a98",
+  "status": "accepted"
+ },
+ "accounts.order-checkbook-review": {
+  "checked": "2026-10-02-1349",
+  "fingerprint": {
+   "controls": [
+    "Back",
+    "By checking this box, I, Jane Black, confirm I have the authority to agree to these terms on behalf of Mercury Demo, Incorporated and agree to the Deposit Account Agreement, which governs the Checkbooks feature.",
+    "Close",
+    "Confirm",
+    "Deposit Account Agreement"
+   ],
+   "headings": [
+    "Review"
+   ],
+   "path": "/checkbooks/ordering/review",
+   "structure": "document",
+   "top": {
+    "name": "",
+    "role": "document"
+   }
+  },
+  "hop": [
+   {
+    "click": {
+     "name": "Next",
+     "role": "button"
+    }
+   }
+  ],
+  "mutates": false,
+  "parent": "accounts.order-checkbook-filled",
+  "recordedBy": "agent",
+  "review": null,
+  "similarity": 0.9944,
+  "source": "8888a27e81fed4f6060e7efb586ff7386258531e",
+  "status": "accepted"
+ },
+ "accounts.pay-credit": {
+  "checked": "2026-10-02-1349",
+  "fingerprint": {
+   "controls": [
+    "Amount",
+    "Go back",
+    "Make payment from",
+    "Review"
+   ],
+   "headings": [],
+   "path": "/accounts/credit",
+   "structure": "dialog",
+   "top": {
+    "name": "",
+    "role": "dialog"
+   }
+  },
+  "hop": [
+   {
+    "click": {
+     "name": "Pay",
+     "role": "button"
+    }
+   }
+  ],
+  "mutates": false,
+  "parent": "accounts.credit",
+  "recordedBy": "draft",
+  "review": null,
+  "similarity": 0.9972,
+  "source": "19d275f9f16f2817e5bf4460a5f713584801ca5d",
+  "status": "accepted"
+ },
+ "accounts.pay-credit-error": {
+  "checked": "2026-10-02-1349",
+  "fingerprint": {
+   "controls": [
+    "Amount",
+    "Go back",
+    "Make payment from",
+    "Review"
+   ],
+   "headings": [],
+   "path": "/accounts/credit",
+   "structure": "dialog",
+   "top": {
+    "name": "",
+    "role": "dialog"
+   }
+  },
+  "hop": [
+   {
+    "click": {
+     "name": "Edit",
+     "role": "button",
+     "within": {
+      "role": "dialog"
+     }
+    }
+   },
+   {
+    "fill": {
+     "locator": {
+      "name": "Amount",
+      "role": "textbox"
+     },
+     "value": "250000"
+    }
+   },
+   {
+    "press": "Tab"
+   }
+  ],
+  "mutates": false,
+  "parent": "accounts.pay-credit-review",
+  "recordedBy": "agent",
+  "review": null,
+  "similarity": 0.9726,
+  "source": "66616c4d6a3e91064580745cef29f3f5e899bc56",
+  "status": "accepted"
+ },
+ "accounts.pay-credit-review": {
+  "checked": "2026-10-02-1349",
+  "fingerprint": {
+   "controls": [
+    "Confirm payment",
+    "Edit"
+   ],
+   "headings": [],
+   "path": "/accounts/credit",
+   "structure": "dialog",
+   "top": {
+    "name": "",
+    "role": "dialog"
+   }
+  },
+  "hop": [
+   {
+    "click": {
+     "name": "Review",
+     "role": "button"
+    }
+   }
+  ],
+  "mutates": false,
+  "parent": "accounts.pay-credit",
+  "recordedBy": "draft",
+  "review": null,
+  "similarity": 0.9954,
+  "source": "09ea8830d432a20cf649348e3e2bf8b31dc0d619",
+  "status": "accepted"
+ },
+ "accounts.pay-credit-success": {
+  "checked": "2026-10-02-1349",
+  "fingerprint": {
+   "controls": [
+    "All done"
+   ],
+   "headings": [
+    "Payment applied"
+   ],
+   "path": "/accounts/credit",
+   "structure": "dialog",
+   "top": {
+    "name": "",
+    "role": "dialog"
+   }
+  },
+  "hop": [
+   {
+    "click": {
+     "name": "Confirm payment",
+     "role": "button"
+    }
+   }
+  ],
+  "mutates": true,
+  "parent": "accounts.pay-credit-review",
+  "recordedBy": "draft",
+  "review": null,
+  "similarity": 0.9861,
+  "source": "06531834d50b3ebc1d67ed8c230cfb7badc39f41",
+  "status": "accepted"
+ },
+ "accounts.portfolio-updated": {
+  "checked": "2026-10-02-1349",
+  "fingerprint": {
+   "controls": [
+    "Accounting",
+    "Accounts",
+    "Banking",
+    "Bill Pay",
+    "Books",
+    "Cards",
+    "Command New",
+    "Credit Card",
+    "Financing",
+    "Home",
+    "Insights",
+    "Invoicing",
+    "Learn about bookmarks",
+    "Mercury Demo Pro",
+    "Ops / Payroll <amount>",
+    "Payments",
+    "Remove bookmark",
+    "Reorder Bill Pay bookmark",
+    "Reorder Credit Card bookmark",
+    "Reorder Insights bookmark",
+    "Reorder Ops / Payroll bookmark",
+    "Tasks <n>",
+    "Team Spend",
+    "Transactions",
+    "Treasury"
+   ],
+   "headings": [],
+   "path": "/accounts/treasury/<id>",
+   "structure": "status",
+   "top": {
+    "name": "",
+    "role": "navigation"
+   }
+  },
+  "hop": [
+   {
+    "click": {
+     "name": "Update portfolio",
+     "role": "button"
+    }
+   }
+  ],
+  "mutates": true,
+  "parent": "accounts.edit-portfolio-tier5",
+  "recordedBy": "draft",
+  "review": null,
+  "similarity": 0.9188,
+  "source": "775fcc385577a7714640fd3e48965390b3e6f68b",
+  "status": "accepted"
+ },
+ "accounts.routing-copied": {
+  "checked": "2026-10-02-1349",
+  "fingerprint": {
+   "controls": [],
+   "headings": [],
+   "path": "/accounts/depository/<id>",
+   "structure": "dialog",
+   "top": {
+    "name": "",
+    "role": "generic"
+   }
+  },
+  "hop": [
+   {
+    "click": {
+     "css": "[class*=\"_underlineOnHover_\"]",
+     "index": 1
+    }
+   },
+   {
+    "wait": {
+     "ms": 500
+    }
+   }
+  ],
+  "mutates": false,
+  "parent": "accounts.account-number-revealed",
+  "recordedBy": "agent",
+  "review": null,
+  "similarity": 0.9358,
+  "source": "0a8aa6288779b0f84013feb1af3a74fe1e9a7f71",
+  "status": "accepted"
+ },
+ "accounts.rule-account-dropdown": {
+  "checked": "2026-10-02-1349",
+  "fingerprint": {
+   "controls": [
+    "AP Column N.A. <amount> / Checking ••<n>",
+    "AR Column N.A. <amount> / Checking ••<n>",
+    "Checking ••<n> Column N.A. <amount>",
+    "Checking ••<n> Unable to maintain target balance",
+    "Ops / Payroll Column N.A. <amount> / Checking ••<n>",
+    "Savings ••<n> Column N.A. <amount>",
+    "Savings ••<n> Unable to maintain target balance",
+    "Treasury Unable to maintain target balance"
+   ],
+   "headings": [],
+   "path": "/accounts",
+   "structure": "listbox",
+   "top": {
+    "name": "",
+    "role": "listbox"
+   }
+  },
+  "hop": [
+   {
+    "click": {
+     "name": "Account",
+     "role": "combobox"
+    }
+   },
+   {
+    "wait": {
+     "locator": {
+      "role": "listbox"
+     }
+    }
+   }
+  ],
+  "mutates": true,
+  "parent": "accounts.rule-target-balance-error",
+  "recordedBy": "agent",
+  "review": {
+   "by": "conductor",
+   "date": "2026-10-03",
+   "decision": "accept",
+   "note": "same target-balance dialog with the Account listbox open (Ops / Payroll, AP, AR, Checking ••0297, Savings ••7658), the 'Enter a target balance' tooltip and the 'Select rule frequency' error; the hop clicks the Account combobox as the label says",
+   "reason": "mutating"
+  },
+  "similarity": 0.9989,
+  "source": "dbf0230a9232604d5aceae5062c8ea21c07dee46",
+  "status": "accepted"
+ },
+ "accounts.rule-created": {
+  "checked": "2026-10-02-1349",
+  "fingerprint": {
+   "controls": [],
+   "headings": [],
+   "path": "/accounts",
+   "structure": "status",
+   "top": {
+    "name": "",
+    "role": "generic"
+   }
+  },
+  "hop": [
+   {
+    "click": {
+     "name": "Create rule",
+     "role": "button"
+    }
+   }
+  ],
+  "mutates": true,
+  "parent": "accounts.rule-review",
+  "recordedBy": "agent",
+  "review": {
+   "by": "conductor",
+   "date": "2026-10-03",
+   "decision": "accept",
+   "note": "re-checked after the layer-detection fixes of 2026-10-03 (fingerprint refreshed); same hop the conductor's review panel accepted earlier today, similarity 0.9993",
+   "reason": "mutating"
+  },
+  "similarity": 0.9993,
+  "source": "42326433b7708f81c5d98c60c749d05e0d39e20b",
+  "status": "accepted"
+ },
+ "accounts.rule-distribute": {
+  "checked": "2026-10-02-1349",
+  "fingerprint": {
+   "controls": [
+    "Add destination account",
+    "Back",
+    "Destination account",
+    "Next",
+    "Open combobox menu",
+    "Percentage distribution for row <n>",
+    "Starting account",
+    "Transfer",
+    "frequency",
+    "profit first method"
+   ],
+   "headings": [
+    "Distribute funds across accounts"
+   ],
+   "path": "/accounts",
+   "structure": "dialog",
+   "top": {
+    "name": "",
+    "role": "dialog"
+   }
+  },
+  "hop": [
+   {
+    "click": {
+     "name": "Distribute funds out",
+     "role": "button"
+    }
+   },
+   {
+    "wait": {
+     "ms": 500
+    }
+   }
+  ],
+  "mutates": true,
+  "parent": "accounts.create-rule",
+  "recordedBy": "agent",
+  "review": {
+   "by": "conductor",
+   "date": "2026-10-03",
+   "decision": "accept",
+   "note": "same empty 'Distribute funds across accounts' form (percentage of account balance, split bar, Frequency); the replay footer says Back where the capture says Cancel",
+   "reason": "mutating"
+  },
+  "similarity": 0.9987,
+  "source": "e0dadb610f4d3ab014682e8c94d50b3e0843176c",
+  "status": "accepted"
+ },
+ "accounts.rule-recurring": {
+  "checked": "2026-10-02-1349",
+  "fingerprint": {
+   "controls": [
+    "Add destination account",
+    "Back",
+    "Destination account",
+    "Next",
+    "Open combobox menu",
+    "Starting account",
+    "Transfer",
+    "frequency"
+   ],
+   "headings": [
+    "Schedule recurring transfers"
+   ],
+   "path": "/accounts",
+   "structure": "dialog",
+   "top": {
+    "name": "",
+    "role": "dialog"
+   }
+  },
+  "hop": [
+   {
+    "click": {
+     "name": "Send recurring transfers",
+     "role": "button"
+    }
+   },
+   {
+    "wait": {
+     "ms": 500
+    }
+   }
+  ],
+  "mutates": true,
+  "parent": "accounts.create-rule",
+  "recordedBy": "agent",
+  "review": {
+   "by": "conductor",
+   "date": "2026-10-03",
+   "decision": "accept",
+   "note": "same empty 'Schedule recurring transfers' form (a set amount of funds, $ field, Frequency); the replay footer says Back where the capture says Cancel",
+   "reason": "mutating"
+  },
+  "similarity": 0.9985,
+  "source": "7536122260fec665ec35ac8dc8e296c24cb4c6fb",
+  "status": "accepted"
+ },
+ "accounts.rule-redirect": {
+  "checked": "2026-10-02-1349",
+  "fingerprint": {
+   "controls": [
+    "Add destination account",
+    "Back",
+    "Destination account",
+    "Next",
+    "Open combobox menu",
+    "Percentage distribution for row <n>",
+    "Starting account",
+    "Transfer"
+   ],
+   "headings": [
+    "Redirect incoming funds"
+   ],
+   "path": "/accounts",
+   "structure": "dialog",
+   "top": {
+    "name": "",
+    "role": "dialog"
+   }
+  },
+  "hop": [
+   {
+    "click": {
+     "name": "Redirect incoming funds",
+     "role": "button"
+    }
+   },
+   {
+    "wait": {
+     "ms": 500
+    }
+   }
+  ],
+  "mutates": true,
+  "parent": "accounts.create-rule",
+  "recordedBy": "agent",
+  "review": {
+   "by": "conductor",
+   "date": "2026-10-03",
+   "decision": "accept",
+   "note": "same empty 'Redirect incoming funds' form (percentage of incoming funds, ACH/wire/check note, split bar, no frequency); the replay footer says Back where the capture says Cancel",
+   "reason": "mutating"
+  },
+  "similarity": 0.9986,
+  "source": "057ca370b3e5f5dbc387ace2772b7d8e35b364fa",
+  "status": "accepted"
+ },
+ "accounts.rule-review": {
+  "checked": "2026-10-02-1349",
+  "fingerprint": {
+   "controls": [
+    "Back",
+    "Create rule",
+    "Nickname"
+   ],
+   "headings": [
+    "Review auto transfer rule"
+   ],
+   "path": "/accounts",
+   "structure": "dialog",
+   "top": {
+    "name": "",
+    "role": "dialog"
+   }
+  },
+  "hop": [
+   {
+    "click": {
+     "name": "Next",
+     "role": "button"
+    }
+   }
+  ],
+  "mutates": true,
+  "parent": "accounts.rule-target-balance-filled",
+  "recordedBy": "agent",
+  "review": {
+   "by": "conductor",
+   "date": "2026-10-03",
+   "decision": "accept",
+   "note": "same Review auto transfer rule modal (AP at $50,000 from Ops / Payroll, nickname 'Maintain AP at $50k'); the hop clicks Next as the label says",
+   "reason": "mutating"
+  },
+  "similarity": 0.9991,
+  "source": "ea6063d5f77dca7fe725c94b75b69f652bea9311",
+  "status": "accepted"
+ },
+ "accounts.rule-target-balance": {
+  "checked": "2026-10-02-1349",
+  "fingerprint": {
+   "controls": [
+    "Account",
+    "Amount",
+    "Back",
+    "Bound option",
+    "Next",
+    "Open combobox menu",
+    "Supporting account",
+    "frequency"
+   ],
+   "headings": [
+    "Maintain a target account balance"
+   ],
+   "path": "/accounts",
+   "structure": "dialog",
+   "top": {
+    "name": "",
+    "role": "dialog"
+   }
+  },
+  "hop": [
+   {
+    "click": {
+     "name": "Maintain a target balance",
+     "role": "button"
+    }
+   },
+   {
+    "wait": {
+     "ms": 500
+    }
+   }
+  ],
+  "mutates": true,
+  "parent": "accounts.create-rule",
+  "recordedBy": "agent",
+  "review": {
+   "by": "conductor",
+   "date": "2026-10-03",
+   "decision": "accept",
+   "note": "same 'Maintain a target account balance' form (Account, is not exactly, Target balance, Supporting account, Frequency; Next disabled); hop clicks the 'Maintain a target balance' button the label names, and it only opens the form",
+   "reason": "mutating"
+  },
+  "similarity": 0.9992,
+  "source": "48d7c27a3338ce8350891a89e660ae8dd3822150",
+  "status": "accepted"
+ },
+ "accounts.rule-target-balance-error": {
+  "checked": "2026-10-02-1349",
+  "fingerprint": {
+   "controls": [],
+   "headings": [
+    "Error"
+   ],
+   "path": "/accounts",
+   "structure": "dialog",
+   "top": {
+    "name": "Error",
+    "role": "dialog"
+   }
+  },
+  "hop": [
+   {
+    "click": {
+     "name": "Next",
+     "role": "button"
+    }
+   }
+  ],
+  "mutates": true,
+  "parent": "accounts.rule-target-balance",
+  "recordedBy": "agent",
+  "review": {
+   "by": "conductor",
+   "date": "2026-10-03",
+   "decision": "accept",
+   "note": "same Maintain a target balance errors (Select an account, Select a supporting account, Select rule frequency) with the 'Enter a target balance' tooltip; the hop clicks Next",
+   "reason": "mutating"
+  },
+  "similarity": 0.9972,
+  "source": "54e615aa8553c19bf040ad94b50c1164d9d494a7",
+  "status": "accepted"
+ },
+ "accounts.rule-target-balance-filled": {
+  "checked": "2026-10-02-1349",
+  "fingerprint": {
+   "controls": [
+    "Account",
+    "Amount",
+    "Back",
+    "Bound option",
+    "Next",
+    "Open combobox menu",
+    "Supporting account",
+    "frequency"
+   ],
+   "headings": [
+    "Maintain a target account balance"
+   ],
+   "path": "/accounts",
+   "structure": "dialog",
+   "top": {
+    "name": "",
+    "role": "dialog"
+   }
+  },
+  "hop": [
+   {
+    "click": {
+     "name": "AP Column N.A. $226,767.82 / Checking ••1794",
+     "role": "option"
+    }
+   },
+   {
+    "fill": {
+     "locator": {
+      "label": "Amount"
+     },
+     "value": "50000"
+    }
+   },
+   {
+    "click": {
+     "name": "Supporting account",
+     "role": "combobox"
+    }
+   },
+   {
+    "click": {
+     "name": "Ops / Payroll Column N.A. $2,023,267.12 / Checking ••1038",
+     "role": "option"
+    }
+   },
+   {
+    "click": {
+     "name": "frequency",
+     "role": "combobox"
+    }
+   },
+   {
+    "click": {
+     "name": "every business day",
+     "role": "option"
+    }
+   }
+  ],
+  "mutates": true,
+  "parent": "accounts.rule-account-dropdown",
+  "recordedBy": "agent",
+  "review": {
+   "by": "conductor",
+   "date": "2026-10-03",
+   "decision": "accept",
+   "note": "same Maintain a target account balance form (AP, is not exactly $50,000.00, Ops / Payroll, every business day); the hop picks exactly what the label names and submits nothing",
+   "reason": "mutating"
+  },
+  "similarity": 0.9992,
+  "source": "dae0bfc16386b9a51348fd185cf534789e191239",
+  "status": "accepted"
+ },
+ "accounts.safe-company-details": {
+  "checked": "2026-10-02-1349",
+  "fingerprint": {
+   "controls": [
+    "Beneficial owner (as signatory)",
+    "Beneficial owner email",
+    "Close",
+    "Company Profile",
+    "Customize your experience",
+    "Go back",
+    "Next",
+    "Open account",
+    "State of governance",
+    "Viewing as Admin"
+   ],
+   "headings": [],
+   "path": "/safe/create/company-details",
+   "structure": "document",
+   "top": {
+    "name": "",
+    "role": "document"
+   }
+  },
+  "hop": [
+   {
+    "click": {
+     "name": "Post-money",
+     "role": "option"
+    }
+   },
+   {
+    "fill": {
+     "locator": {
+      "css": "input[id*=\"valuationcap\"]"
+     },
+     "value": "2000000"
+    }
+   },
+   {
+    "click": {
+     "name": "Next",
+     "role": "button"
+    }
+   }
+  ],
+  "mutates": false,
+  "parent": "accounts.safe-type-dropdown",
+  "recordedBy": "agent",
+  "review": {
+   "by": "conductor",
+   "date": "2026-10-03",
+   "decision": "accept",
+   "note": "same SAFE Company details step (Acme Inc., CA, Jonathan Summit signatory); hop does Post-money, valuation cap, Next as labeled; State of governance reads California in the replay vs Delaware in the capture, but no recorded edge or label sets that dropdown",
+   "reason": "sample"
+  },
+  "similarity": 0.9997,
+  "source": "322abfeedd3dadeb5adf0723438974108bfed568",
+  "status": "accepted"
+ },
+ "accounts.safe-create": {
+  "checked": "2026-10-02-1349",
+  "fingerprint": {
+   "controls": [
+    "Close",
+    "Customize your experience",
+    "Destination account",
+    "Go back",
+    "Investment amount",
+    "Investment date",
+    "Learn More About SAFE Types",
+    "Next",
+    "Open account",
+    "SAFE type Learn More About SAFE Types",
+    "Viewing as Admin"
+   ],
+   "headings": [],
+   "path": "/safe/create",
+   "structure": "document",
+   "top": {
+    "name": "",
+    "role": "document"
+   }
+  },
+  "hop": [],
+  "mutates": false,
+  "parent": "/safe/create",
+  "recordedBy": "root",
+  "review": null,
+  "similarity": 0.9983,
+  "source": "97d170e1550eee4afc0af065b78cda302a97674c",
+  "status": "accepted"
+ },
+ "accounts.safe-create-error": {
+  "checked": "2026-10-02-1349",
+  "fingerprint": {
+   "controls": [
+    "Close",
+    "Customize your experience",
+    "Destination account",
+    "Go back",
+    "Investment amount",
+    "Investment date",
+    "Learn More About SAFE Types",
+    "Next",
+    "Open account",
+    "SAFE type Learn More About SAFE Types",
+    "Viewing as Admin"
+   ],
+   "headings": [],
+   "path": "/safe/create",
+   "structure": "document",
+   "top": {
+    "name": "",
+    "role": "document"
+   }
+  },
+  "hop": [
+   {
+    "click": {
+     "name": "Next",
+     "role": "button"
+    }
+   }
+  ],
+  "mutates": false,
+  "parent": "accounts.safe-create",
+  "recordedBy": "agent",
+  "review": null,
+  "similarity": 0.9983,
+  "source": "b4ae13160e6835ad1ee21ff4b27425f9da2c5215",
+  "status": "accepted"
+ },
+ "accounts.safe-detail": {
+  "checked": "2026-10-02-1349",
+  "fingerprint": {
+   "controls": [
+    ".../safe/status/iAmAsLuG",
+    "Cancel SAFE",
+    "Logan_Roy_SAFE_<n>.pdf"
+   ],
+   "headings": [],
+   "path": "/capital/safe",
+   "structure": "dialog",
+   "top": {
+    "name": "",
+    "role": "generic"
+   }
+  },
+  "hop": [
+   {
+    "click": {
+     "name": "Logan Roy logan@roy.co",
+     "role": "gridcell"
+    }
+   }
+  ],
+  "mutates": false,
+  "parent": "accounts.safes",
+  "recordedBy": "agent",
+  "review": null,
+  "similarity": 0.998,
+  "source": "dcb1e2033b7804d2583df54cb99671b3ba9ff5ff",
+  "status": "accepted"
+ },
+ "accounts.safe-filter-cancelled": {
+  "checked": "2026-10-02-1349",
+  "fingerprint": {
+   "controls": [
+    "Accounting",
+    "Accounts",
+    "Active",
+    "Add to bookmarks",
+    "All",
+    "Banking",
+    "Bill Pay",
+    "Books",
+    "Canceled",
+    "Cards",
+    "Command New",
+    "Create new SAFE",
+    "Credit Card",
+    "Customize your experience",
+    "Expired",
+    "Financing",
+    "Home",
+    "Insights",
+    "Invoicing",
+    "Learn about bookmarks",
+    "Mercury Demo Pro",
+    "Move money",
+    "Navigate to Settings",
+    "Open account",
+    "Ops / Payroll <amount>",
+    "Payments",
+    "Remove bookmark",
+    "Reorder Bill Pay bookmark",
+    "Reorder Credit Card bookmark",
+    "Reorder Insights bookmark",
+    "Reorder Ops / Payroll bookmark",
+    "Search for anything",
+    "Tasks <n>",
+    "Team Spend",
+    "Toggle Private Mode",
+    "Transactions",
+    "Treasury",
+    "Viewing as Admin",
+    "updates"
+   ],
+   "headings": [
+    "Financing"
+   ],
+   "path": "/capital/safe",
+   "structure": "document",
+   "top": {
+    "name": "",
+    "role": "document"
+   }
+  },
+  "hop": [
+   {
+    "click": {
+     "name": "Canceled",
+     "role": "menuitem"
+    }
+   }
+  ],
+  "mutates": false,
+  "parent": "accounts.safes",
+  "recordedBy": "agent",
+  "review": null,
+  "similarity": 0.9853,
+  "source": "07705e410ec68e10d951d912401963d02d389751",
+  "status": "accepted"
+ },
+ "accounts.safe-investor-details": {
+  "checked": "2026-10-02-1349",
+  "fingerprint": {
+   "controls": [
+    "Address (optional)",
+    "Close",
+    "Customize your experience",
+    "Go back",
+    "Investor (Legal entity name)",
+    "Investor email",
+    "Investor type",
+    "Note to investor (optional)",
+    "Open account",
+    "Review",
+    "Viewing as Admin"
+   ],
+   "headings": [],
+   "path": "/safe/create/investor-details",
+   "structure": "document",
+   "top": {
+    "name": "",
+    "role": "document"
+   }
+  },
+  "hop": [
+   {
+    "click": {
+     "name": "State of governance",
+     "role": "combobox"
+    }
+   },
+   {
+    "click": {
+     "name": "Delaware",
+     "role": "option"
+    }
+   },
+   {
+    "click": {
+     "name": "Beneficial owner (as signatory)",
+     "role": "combobox"
+    }
+   },
+   {
+    "click": {
+     "name": "Jonathan Summit",
+     "role": "option"
+    }
+   },
+   {
+    "click": {
+     "name": "Next",
+     "role": "button"
+    }
+   }
+  ],
+  "mutates": false,
+  "parent": "accounts.safe-company-details",
+  "recordedBy": "agent",
+  "review": null,
+  "similarity": 0.9998,
+  "source": "2bb9ee804e441afc0b5d35b5f8ba7ff6b9b27b07",
+  "status": "accepted"
+ },
+ "accounts.safe-investor-error": {
+  "checked": "2026-10-02-1349",
+  "fingerprint": {
+   "controls": [
+    "Address (optional)",
+    "Close",
+    "Customize your experience",
+    "Go back",
+    "Investor (Legal entity name)",
+    "Investor email",
+    "Investor type",
+    "Note to investor (optional)",
+    "Open account",
+    "Review",
+    "Viewing as Admin"
+   ],
+   "headings": [],
+   "path": "/safe/create/investor-details",
+   "structure": "document",
+   "top": {
+    "name": "",
+    "role": "document"
+   }
+  },
+  "hop": [
+   {
+    "fill": {
+     "locator": {
+      "label": "Investor email"
+     },
+     "value": "notanemail"
+    }
+   },
+   {
+    "click": {
+     "name": "Review",
+     "role": "button"
+    }
+   }
+  ],
+  "mutates": false,
+  "parent": "accounts.safe-investor-details",
+  "recordedBy": "agent",
+  "review": null,
+  "similarity": 0.9993,
+  "source": "c8e94dd66b4c83d6b48512291828308fc18d6fd2",
+  "status": "accepted"
+ },
+ "accounts.safe-review": {
+  "checked": "2026-10-02-1349",
+  "fingerprint": {
+   "controls": [
+    "Close",
+    "Customize your experience",
+    "Email",
+    "Go back",
+    "Open account",
+    "Send SAFE",
+    "Test_Person_SAFE_<n>.pdf",
+    "Viewing as Admin"
+   ],
+   "headings": [],
+   "path": "/safe/create/review",
+   "structure": "document",
+   "top": {
+    "name": "",
+    "role": "document"
+   }
+  },
+  "hop": [
+   {
+    "fill": {
+     "locator": {
+      "label": "Investor (Legal entity name)"
+     },
+     "value": "Test Person"
+    }
+   },
+   {
+    "fill": {
+     "locator": {
+      "label": "Investor email"
+     },
+     "value": "a11y-audit@example.invalid"
+    }
+   },
+   {
+    "click": {
+     "name": "Review",
+     "role": "button"
+    }
+   }
+  ],
+  "mutates": false,
+  "parent": "accounts.safe-investor-error",
+  "recordedBy": "agent",
+  "review": null,
+  "similarity": 0.9771,
+  "source": "93227746f71070f7b70d6b0b840fd4ee043ff627",
+  "status": "accepted"
+ },
+ "accounts.safe-sent": {
+  "checked": "2026-10-02-1349",
+  "fingerprint": {
+   "controls": [
+    "Accounting",
+    "Accounts",
+    "Banking",
+    "Bill Pay",
+    "Books",
+    "Cards",
+    "Command New",
+    "Credit Card",
+    "Financing",
+    "Home",
+    "Insights",
+    "Invoicing",
+    "Learn about bookmarks",
+    "Mercury Demo Pro",
+    "Ops / Payroll <amount>",
+    "Payments",
+    "Remove bookmark",
+    "Reorder Bill Pay bookmark",
+    "Reorder Credit Card bookmark",
+    "Reorder Insights bookmark",
+    "Reorder Ops / Payroll bookmark",
+    "Tasks <n>",
+    "Team Spend",
+    "Transactions",
+    "Treasury"
+   ],
+   "headings": [],
+   "path": "/capital/safe",
+   "structure": "status",
+   "top": {
+    "name": "",
+    "role": "navigation"
+   }
+  },
+  "hop": [
+   {
+    "click": {
+     "name": "Send SAFE",
+     "role": "button"
+    }
+   }
+  ],
+  "mutates": true,
+  "parent": "accounts.safe-review",
+  "recordedBy": "agent",
+  "review": {
+   "by": "conductor",
+   "date": "2026-10-03",
+   "decision": "accept",
+   "note": "same 'SAFE sent to ...' toast (fixture name Test Person instead of Arthur Rock) with the Logan Roy detail drawer open and 3 SAFEs listed; the hop clicks Send SAFE",
+   "reason": "mutating"
+  },
+  "similarity": 0.9736,
+  "source": "5d3e05063e30d9acd5ef233f4778448fe9e42bb5",
+  "status": "accepted"
+ },
+ "accounts.safe-type-dropdown": {
+  "checked": "2026-10-02-1349",
+  "fingerprint": {
+   "controls": [
+    "Discount only",
+    "Most Favored Nation only",
+    "Post-money",
+    "Pre-money",
+    "SAFE type Learn More About SAFE Types"
+   ],
+   "headings": [],
+   "path": "/safe/create",
+   "structure": "listbox",
+   "top": {
+    "name": "SAFE type Learn More About SAFE Types",
+    "role": "listbox"
+   }
+  },
+  "hop": [
+   {
+    "fill": {
+     "locator": {
+      "label": "Investment amount"
+     },
+     "value": "1.00"
+    }
+   },
+   {
+    "click": {
+     "name": "SAFE type Learn More About SAFE Types",
+     "role": "combobox"
+    }
+   }
+  ],
+  "mutates": false,
+  "parent": "accounts.safe-create-error",
+  "recordedBy": "agent",
+  "review": null,
+  "similarity": 0.9546,
+  "source": "e6a5c7a5939d0b4d2af3a1fed51a9370c05355d3",
+  "status": "accepted"
+ },
+ "accounts.safes": {
+  "checked": "2026-10-02-1349",
+  "fingerprint": {
+   "controls": [
+    "Accounting",
+    "Accounts",
+    "Active",
+    "Add to bookmarks",
+    "All",
+    "Banking",
+    "Bill Pay",
+    "Books",
+    "Canceled",
+    "Cards",
+    "Command New",
+    "Create new SAFE",
+    "Credit Card",
+    "Customize your experience",
+    "Expired",
+    "Financing",
+    "Home",
+    "Insights",
+    "Invoicing",
+    "Learn about bookmarks",
+    "Mercury Demo Pro",
+    "Move money",
+    "Navigate to Settings",
+    "Open account",
+    "Ops / Payroll <amount>",
+    "Payments",
+    "Remove bookmark",
+    "Reorder Bill Pay bookmark",
+    "Reorder Credit Card bookmark",
+    "Reorder Insights bookmark",
+    "Reorder Ops / Payroll bookmark",
+    "Search for anything",
+    "Tasks <n>",
+    "Team Spend",
+    "Toggle Private Mode",
+    "Transactions",
+    "Treasury",
+    "Viewing as Admin",
+    "updates"
+   ],
+   "headings": [
+    "Financing"
+   ],
+   "path": "/capital/safe",
+   "structure": "document",
+   "top": {
+    "name": "",
+    "role": "document"
+   }
+  },
+  "hop": [],
+  "mutates": false,
+  "parent": "/capital/safe",
+  "recordedBy": "root",
+  "review": null,
+  "similarity": 0.999,
+  "source": "97d170e1550eee4afc0af065b78cda302a97674c",
+  "status": "accepted"
+ },
+ "accounts.savings-detail": {
+  "checked": "2026-10-02-1349",
+  "fingerprint": {
+   "controls": [
+    "<amount>",
+    "<date> From AR <amount> Transfer",
+    "<date> From Mercury Savings ••<n> <amount> Transfer",
+    "<date> To AP <amount> Transfer",
+    "<date> To Mercury Savings ••<n> <amount> Transfer",
+    "<date> To Ops / Payroll <amount> Transfer",
+    "<n>",
+    "<n> Letterman Drive Building A, Suite A<n> San Francisco, CA <n>",
+    "Accounting",
+    "Accounts",
+    "Add account nickname",
+    "Add to bookmarks",
+    "Banking",
+    "Bill Pay",
+    "Books",
+    "Cards",
+    "Column N.A.",
+    "Command New",
+    "Credit Card",
+    "Customize your experience",
+    "Deposit",
+    "Documents",
+    "Financing",
+    "Home",
+    "Insights",
+    "Invoicing",
+    "Learn about bookmarks",
+    "Mercury Demo Pro",
+    "Move money",
+    "Navigate to Settings",
+    "Open Menu",
+    "Open account",
+    "Ops / Payroll <amount>",
+    "Payments",
+    "Remove bookmark",
+    "Reorder Bill Pay bookmark",
+    "Reorder Credit Card bookmark",
+    "Reorder Insights bookmark",
+    "Reorder Ops / Payroll bookmark",
+    "Search for anything",
+    "Set up an auto transfer rule",
+    "Tasks <n>",
+    "Team Spend",
+    "Toggle Private Mode",
+    "Transactions",
+    "Transfer",
+    "Treasury",
+    "View all",
+    "Viewing as Admin",
+    "updates",
+    "•••••<n>"
+   ],
+   "headings": [],
+   "path": "/accounts/depository/<id>",
+   "structure": "document",
+   "top": {
+    "name": "",
+    "role": "document"
+   }
+  },
+  "hop": [],
+  "mutates": false,
+  "parent": "/accounts/depository/party-mercurybankid4",
+  "recordedBy": "root",
+  "review": null,
+  "similarity": 0.9975,
+  "source": "97d170e1550eee4afc0af065b78cda302a97674c",
+  "status": "accepted"
+ },
+ "accounts.share-recipient-menu": {
+  "checked": "2026-10-02-1349",
+  "fingerprint": {
+   "controls": [
+    "aliyah@mcmahon.com",
+    "jason@green.com",
+    "jordi@mercury.com",
+    "mercury-utils-id-<n>-label"
+   ],
+   "headings": [],
+   "path": "/settings/documents/statements",
+   "structure": "listbox",
+   "top": {
+    "name": "mercury-utils-id-<n>-label",
+    "role": "listbox"
+   }
+  },
+  "hop": [
+   {
+    "click": {
+     "name": "Recipient emails",
+     "role": "combobox"
+    }
+   }
+  ],
+  "mutates": false,
+  "parent": "accounts.share-statement",
+  "recordedBy": "draft",
+  "review": null,
+  "similarity": 0.9998,
+  "source": "1ae739f3eb3dde1a6479a9bbebbcacc19f9d7613",
+  "status": "accepted"
+ },
+ "accounts.share-statement": {
+  "checked": "2026-10-02-1349",
+  "fingerprint": {
+   "controls": [
+    "Back",
+    "Recipient emails",
+    "Share via email"
+   ],
+   "headings": [],
+   "path": "/settings/documents/statements",
+   "structure": "dialog",
+   "top": {
+    "name": "",
+    "role": "dialog"
+   }
+  },
+  "hop": [
+   {
+    "click": {
+     "name": "Share document",
+     "role": "button"
+    }
+   }
+  ],
+  "mutates": false,
+  "parent": "accounts.statement-selected",
+  "recordedBy": "draft",
+  "review": null,
+  "similarity": 0.9997,
+  "source": "c1256e1e861e92bfe0267e89b6e52b9af1537c35",
+  "status": "accepted"
+ },
+ "accounts.shared-link-removed": {
+  "checked": "2026-10-02-1349",
+  "fingerprint": {
+   "controls": [],
+   "headings": [],
+   "path": "/settings/documents/statements",
+   "structure": "status",
+   "top": {
+    "name": "",
+    "role": "generic"
+   }
+  },
+  "hop": [
+   {
+    "click": {
+     "name": "Remove access to <n> document link",
+     "role": "button"
+    }
+   }
+  ],
+  "mutates": true,
+  "parent": "accounts.shared-link-selected",
+  "recordedBy": "draft",
+  "review": null,
+  "similarity": 0.9835,
+  "source": "66db613a7c4597c9a3f6ce52c6c4a1cd761da4c7",
+  "status": "accepted"
+ },
+ "accounts.shared-link-selected": {
+  "checked": "2026-10-02-1349",
+  "fingerprint": {
+   "controls": [
+    "Cancel",
+    "Remove access to <n> document link",
+    "rotem@gmail.com <n> documents shared",
+    "thom@cooley.com <n> documents shared"
+   ],
+   "headings": [],
+   "path": "/settings/documents/statements",
+   "structure": "dialog",
+   "top": {
+    "name": "",
+    "role": "dialog"
+   }
+  },
+  "hop": [
+   {
+    "check": {
+     "name": "rotem@gmail.com <n> documents shared",
+     "role": "checkbox"
+    }
+   }
+  ],
+  "mutates": false,
+  "parent": "accounts.manage-shared-docs",
+  "recordedBy": "agent",
+  "review": null,
+  "similarity": 0.9928,
+  "source": "834843752140126a4e3952fdbea6885eb450ac6a",
+  "status": "accepted"
+ },
+ "accounts.statement-export-menu": {
+  "checked": "2026-10-02-1349",
+  "fingerprint": {
+   "controls": [
+    "View as Employee"
+   ],
+   "headings": [],
+   "path": "/settings/documents/statements",
+   "structure": "menu",
+   "top": {
+    "name": "Viewing as Admin",
+    "role": "menu"
+   }
+  },
+  "hop": [
+   {
+    "click": {
+     "index": 1,
+     "name": "",
+     "role": "button"
+    }
+   }
+  ],
+  "mutates": false,
+  "parent": "accounts.statements",
+  "recordedBy": "agent",
+  "review": null,
+  "similarity": 0.9472,
+  "source": "1dc13dde7b875ddbdc08827acfbe4da8194d04e1",
+  "status": "accepted"
+ },
+ "accounts.statement-selected": {
+  "checked": "2026-10-02-1349",
+  "fingerprint": {
+   "controls": [
+    "Download",
+    "Share document"
+   ],
+   "headings": [],
+   "path": "/settings/documents/statements",
+   "structure": "dialog",
+   "top": {
+    "name": "<n> document selected",
+    "role": "dialog"
+   }
+  },
+  "hop": [
+   {
+    "check": {
+     "index": 2,
+     "name": "",
+     "role": "checkbox"
+    }
+   }
+  ],
+  "mutates": false,
+  "parent": "accounts.statements",
+  "recordedBy": "agent",
+  "review": null,
+  "similarity": 0.9664,
+  "source": "7179d8da1554924496c175558e21f034425829e8",
+  "status": "accepted"
+ },
+ "accounts.statement-shared": {
+  "checked": "2026-10-02-1349",
+  "fingerprint": {
+   "controls": [
+    "Invite",
+    "Return to documents & data"
+   ],
+   "headings": [
+    "Email sent",
+    "All document links expire <n> days after they are sent"
+   ],
+   "path": "/settings/documents/statements",
+   "structure": "dialog",
+   "top": {
+    "name": "",
+    "role": "dialog"
+   }
+  },
+  "hop": [
+   {
+    "click": {
+     "name": "jason@green.com",
+     "role": "option"
+    }
+   },
+   {
+    "click": {
+     "name": "Share via email",
+     "role": "button"
+    }
+   },
+   {
+    "wait": {
+     "ms": 1500
+    }
+   }
+  ],
+  "mutates": true,
+  "parent": "accounts.share-recipient-menu",
+  "recordedBy": "agent",
+  "review": {
+   "by": "conductor",
+   "date": "2026-10-03",
+   "decision": "accept",
+   "note": "same 'Email sent' page (1 shared document, August 2026; jason@green.com invite upsell; Return to documents & data); hop picks jason@green.com, then clicks Share via email",
+   "reason": "mutating"
+  },
+  "similarity": 0.9587,
+  "source": "044b4c44c7e2645ecd466fc6cae06021cbf4256b",
+  "status": "accepted"
+ },
+ "accounts.statements": {
+  "checked": "2026-10-02-1349",
+  "fingerprint": {
+   "controls": [
+    "Account Security",
+    "Accounts",
+    "Advisors <n>",
+    "Agreements",
+    "All",
+    "Approval Rules",
+    "Bank letters",
+    "Billing history",
+    "Categories",
+    "Company Profile",
+    "Company documents",
+    "Controls",
+    "Customize your experience",
+    "Departments",
+    "Documents",
+    "Download",
+    "Generate a custom statement",
+    "Integrations",
+    "Investment tax forms",
+    "Legal",
+    "Manage shared documents",
+    "Mercury Demo Pro",
+    "Move money",
+    "Navigate to Settings",
+    "Notices",
+    "Notifications",
+    "Open account",
+    "Operations",
+    "Other",
+    "Perks",
+    "Plan & Billing",
+    "Profile",
+    "Receipts & attachments",
+    "Recipient tax forms",
+    "Referrals",
+    "Search for anything",
+    "Security",
+    "Settings",
+    "Share document",
+    "Statements",
+    "Support requests",
+    "Tax",
+    "Team",
+    "Toggle Private Mode",
+    "Tokens",
+    "Trade confirmations",
+    "Vault",
+    "Viewing as Admin",
+    "Webhooks",
+    "Wire details",
+    "Year",
+    "updates"
+   ],
+   "headings": [
+    "Documents & Data"
+   ],
+   "path": "/settings/documents/statements",
+   "structure": "document",
+   "top": {
+    "name": "",
+    "role": "document"
+   }
+  },
+  "hop": [],
+  "mutates": false,
+  "parent": "/settings/documents/statements?accountIds=mercurybankid2",
+  "recordedBy": "root",
+  "review": null,
+  "similarity": 0.9684,
+  "source": "97d170e1550eee4afc0af065b78cda302a97674c",
+  "status": "accepted"
+ },
+ "accounts.statements-account-filter": {
+  "checked": "2026-10-02-1349",
+  "fingerprint": {
+   "controls": [
+    "AP",
+    "AR",
+    "All Accounts",
+    "Checking ••<n>",
+    "Checking ••<n> Closed",
+    "Credit",
+    "Ops / Payroll",
+    "Options",
+    "Savings ••<n>",
+    "Sweep Statements",
+    "Treasury"
+   ],
+   "headings": [],
+   "path": "/settings/documents/statements",
+   "structure": "listbox",
+   "top": {
+    "name": "Options",
+    "role": "listbox"
+   }
+  },
+  "hop": [
+   {
+    "click": {
+     "name": "Accounts",
+     "role": "combobox"
+    }
+   }
+  ],
+  "mutates": false,
+  "parent": "accounts.statements",
+  "recordedBy": "agent",
+  "review": null,
+  "similarity": 0.9889,
+  "source": "8051a8723568facdf65340328a6fa1d8b9cee29f",
+  "status": "accepted"
+ },
+ "accounts.transfer-split-menu": {
+  "checked": "2026-10-02-1349",
+  "fingerprint": {
+   "controls": [
+    "Transfer in",
+    "Transfer out"
+   ],
+   "headings": [],
+   "path": "/accounts/depository/<id>",
+   "structure": "menu",
+   "top": {
+    "name": "Close Menu",
+    "role": "menu"
+   }
+  },
+  "hop": [
+   {
+    "click": {
+     "text": "Open Menu"
+    }
+   }
+  ],
+  "mutates": true,
+  "parent": "accounts.checking-detail",
+  "recordedBy": "agent",
+  "review": {
+   "by": "conductor",
+   "date": "2026-10-03",
+   "decision": "accept",
+   "note": "same Ops / Payroll detail with the Transfer split-button menu open (Transfer in / Transfer out); 'Open Menu' is the Transfer chevron, and only the recent-transactions data has drifted",
+   "reason": "mutating"
+  },
+  "similarity": 0.9366,
+  "source": "54fc6c988046ab9f8f350d5f2fdb8e172e8f8a23",
+  "status": "accepted"
+ },
+ "accounts.treasury": {
+  "checked": "2026-10-02-1349",
+  "fingerprint": {
+   "controls": [
+    "<date> Transfer from Primary Checking <amount>",
+    "<date> Transfer from Primary Checking Pending <amount>",
+    "<date> Transfer to Primary Checking <amount>",
+    "Accounting",
+    "Accounts",
+    "Add to bookmarks",
+    "Banking",
+    "Bill Pay",
+    "Books",
+    "Cards",
+    "Command New",
+    "Credit Card",
+    "Customize your experience",
+    "Documents",
+    "Edit portfolio",
+    "Financing",
+    "Home",
+    "Insights",
+    "Invoicing",
+    "Learn about bookmarks",
+    "Mercury Demo Pro",
+    "Move money",
+    "Navigate to Settings",
+    "Open Menu",
+    "Open account",
+    "Ops / Payroll <amount>",
+    "Payments",
+    "Remove bookmark",
+    "Reorder Bill Pay bookmark",
+    "Reorder Credit Card bookmark",
+    "Reorder Insights bookmark",
+    "Reorder Ops / Payroll bookmark",
+    "Search for anything",
+    "Set up an auto transfer rule",
+    "Tasks <n>",
+    "Team Spend",
+    "Toggle Private Mode",
+    "Transactions",
+    "Transfer from Primary Checking <amount>",
+    "Transfer funds",
+    "Treasury",
+    "Viewing as Admin",
+    "updates"
+   ],
+   "headings": [
+    "Treasury"
+   ],
+   "path": "/accounts/treasury/<id>",
+   "structure": "document",
+   "top": {
+    "name": "",
+    "role": "document"
+   }
+  },
+  "hop": [],
+  "mutates": false,
+  "parent": "/accounts/treasury/party-treasury-id-0",
+  "recordedBy": "root",
+  "review": null,
+  "similarity": 0.9237,
+  "source": "97d170e1550eee4afc0af065b78cda302a97674c",
+  "status": "accepted"
+ },
+ "accounts.treasury-net-return": {
+  "checked": "2026-10-02-1349",
+  "fingerprint": {
+   "controls": [
+    "Done"
+   ],
+   "headings": [],
+   "path": "/accounts/treasury/<id>",
+   "structure": "dialog",
+   "top": {
+    "name": "",
+    "role": "dialog"
+   }
+  },
+  "hop": [
+   {
+    "click": {
+     "text": "<date>September net return<amount>"
+    }
+   }
+  ],
+  "mutates": false,
+  "parent": "accounts.treasury",
+  "recordedBy": "agent",
+  "review": null,
+  "similarity": 0.9595,
+  "source": "584ac6e6ef452f6f9dd0f9d94aeb8a289af5e034",
+  "status": "accepted"
+ },
+ "accounts.treasury-portfolio": {
+  "checked": "2026-10-02-1349",
+  "fingerprint": {
+   "controls": [
+    "Accounting",
+    "Accounts",
+    "Add to bookmarks",
+    "Banking",
+    "Bill Pay",
+    "Books",
+    "Cards",
+    "Command New",
+    "Credit Card",
+    "Customize your experience",
+    "Documents",
+    "Edit portfolio",
+    "Financing",
+    "Home",
+    "Insights",
+    "Invoicing",
+    "Learn about bookmarks",
+    "Mercury Demo Pro",
+    "Move money",
+    "Navigate to Settings",
+    "Open Menu",
+    "Open account",
+    "Ops / Payroll <amount>",
+    "Payments",
+    "Prospectus",
+    "Remove bookmark",
+    "Reorder Bill Pay bookmark",
+    "Reorder Credit Card bookmark",
+    "Reorder Insights bookmark",
+    "Reorder Ops / Payroll bookmark",
+    "Search for anything",
+    "Set up an auto transfer rule",
+    "Tasks <n>",
+    "Team Spend",
+    "Toggle Private Mode",
+    "Transactions",
+    "Transfer funds",
+    "Treasury",
+    "Viewing as Admin",
+    "here.",
+    "updates"
+   ],
+   "headings": [
+    "Treasury"
+   ],
+   "path": "/accounts/treasury/<id>",
+   "structure": "document",
+   "top": {
+    "name": "",
+    "role": "document"
+   }
+  },
+  "hop": [
+   {
+    "click": {
+     "text": "Portfolio"
+    }
+   }
+  ],
+  "mutates": false,
+  "parent": "accounts.treasury",
+  "recordedBy": "agent",
+  "review": {
+   "by": "conductor",
+   "date": "2026-10-03",
+   "decision": "accept",
+   "note": "same Treasury Portfolio tab (MRGXX and MCRYX fund cards); allocation drifted from 70/30 to 20/80, so the cards swap order",
+   "reason": "below-threshold"
+  },
+  "similarity": 0.8576,
+  "source": "5657ebd8a7aed07d1dd490a457ad33018bb8445c",
+  "status": "accepted"
+ },
+ "accounts.treasury-statements": {
+  "checked": "2026-10-02-1349",
+  "fingerprint": {
+   "controls": [
+    "Account Security",
+    "Accounts",
+    "Advisors <n>",
+    "Agreements",
+    "All",
+    "Approval Rules",
+    "Bank letters",
+    "Billing history",
+    "Categories",
+    "Company Profile",
+    "Company documents",
+    "Controls",
+    "Customize your experience",
+    "Departments",
+    "Documents",
+    "Download",
+    "Generate a custom statement",
+    "Integrations",
+    "Investment tax forms",
+    "Legal",
+    "Manage shared documents",
+    "Mercury Demo Pro",
+    "Move money",
+    "Navigate to Settings",
+    "Notices",
+    "Notifications",
+    "Open account",
+    "Operations",
+    "Other",
+    "Perks",
+    "Plan & Billing",
+    "Profile",
+    "Receipts & attachments",
+    "Recipient tax forms",
+    "Referrals",
+    "Search for anything",
+    "Security",
+    "Settings",
+    "Share document",
+    "Statements",
+    "Support requests",
+    "Tax",
+    "Team",
+    "Toggle Private Mode",
+    "Tokens",
+    "Trade confirmations",
+    "Vault",
+    "Viewing as Admin",
+    "Webhooks",
+    "Wire details",
+    "Year",
+    "updates"
+   ],
+   "headings": [
+    "Documents & Data"
+   ],
+   "path": "/settings/documents/statements",
+   "structure": "document",
+   "top": {
+    "name": "",
+    "role": "document"
+   }
+  },
+  "hop": [],
+  "mutates": false,
+  "parent": "/settings/documents/statements?accountIds=party-treasury-id-0",
+  "recordedBy": "root",
+  "review": null,
+  "similarity": 0.9982,
+  "source": "97d170e1550eee4afc0af065b78cda302a97674c",
+  "status": "accepted"
+ },
+ "accounts.treasury-transfer-error": {
+  "checked": "2026-10-02-1349",
+  "fingerprint": {
+   "controls": [
+    "Add more details",
+    "Amount",
+    "Back",
+    "Close",
+    "Customize your experience",
+    "Next",
+    "Open account",
+    "Transfer from",
+    "Transfer to",
+    "Viewing as Admin"
+   ],
+   "headings": [
+    "Transfer funds",
+    "One-time transfer",
+    "Auto transfer rule"
+   ],
+   "path": "/send-money/transfer",
+   "structure": "document",
+   "top": {
+    "name": "",
+    "role": "document"
+   }
+  },
+  "hop": [
+   {
+    "click": {
+     "name": "Next",
+     "role": "button"
+    }
+   }
+  ],
+  "mutates": false,
+  "parent": "accounts.treasury-transfer-in",
+  "recordedBy": "agent",
+  "review": {
+   "by": "conductor",
+   "date": "2026-10-03",
+   "decision": "accept",
+   "note": "same Transfer form validation state after Next on an empty form, as the label says; the capture had Treasury preset in Transfer to from the person's path, so the replay shows one more 'Please choose an account' error",
+   "reason": "sample"
+  },
+  "similarity": 0.9403,
+  "source": "89f5ea0ce2a4b708c0c3a1cedab26a7e1cf395ac",
+  "status": "accepted"
+ },
+ "accounts.treasury-transfer-in": {
+  "checked": "2026-10-02-1349",
+  "fingerprint": {
+   "controls": [
+    "Add more details",
+    "Amount",
+    "Back",
+    "Close",
+    "Customize your experience",
+    "Next",
+    "Open account",
+    "Transfer from",
+    "Transfer to",
+    "Viewing as Admin"
+   ],
+   "headings": [
+    "Transfer funds",
+    "One-time transfer",
+    "Auto transfer rule"
+   ],
+   "path": "/send-money/transfer",
+   "structure": "document",
+   "top": {
+    "name": "",
+    "role": "document"
+   }
+  },
+  "hop": [],
+  "mutates": false,
+  "parent": "/send-money/transfer",
+  "recordedBy": "root",
+  "review": null,
+  "similarity": 0.9932,
+  "source": "97d170e1550eee4afc0af065b78cda302a97674c",
+  "status": "accepted"
+ },
+ "accounts.treasury-transfer-menu": {
+  "checked": "2026-10-02-1349",
+  "fingerprint": {
+   "controls": [
+    "Transfer in",
+    "Transfer out"
+   ],
+   "headings": [],
+   "path": "/accounts/treasury/<id>",
+   "structure": "menu",
+   "top": {
+    "name": "Close Menu",
+    "role": "menu"
+   }
+  },
+  "hop": [
+   {
+    "click": {
+     "text": "Open Menu"
+    }
+   }
+  ],
+  "mutates": true,
+  "parent": "accounts.treasury",
+  "recordedBy": "agent",
+  "review": {
+   "by": "conductor",
+   "date": "2026-10-03",
+   "decision": "accept",
+   "note": "same Transfer funds split-button menu (Transfer in, Transfer out); the hop clicks the chevron ('Open Menu') and nothing is submitted",
+   "reason": "mutating"
+  },
+  "similarity": 0.9281,
+  "source": "c32cc949564e9747f62a962f559d2703fb6d3dd0",
+  "status": "accepted"
+ },
+ "accounts.treasury-transfer-out": {
+  "checked": "2026-10-02-1349",
+  "fingerprint": {
+   "controls": [
+    "Add more details",
+    "Amount",
+    "Back",
+    "Close",
+    "Customize your experience",
+    "Next",
+    "Open account",
+    "Transfer from",
+    "Transfer to",
+    "Viewing as Admin"
+   ],
+   "headings": [
+    "Transfer funds",
+    "One-time transfer",
+    "Auto transfer rule"
+   ],
+   "path": "/send-money/transfer",
+   "structure": "document",
+   "top": {
+    "name": "",
+    "role": "document"
+   }
+  },
+  "hop": [
+   {
+    "click": {
+     "name": "Transfer out",
+     "role": "menuitem"
+    }
+   },
+   {
+    "wait": {
+     "ms": 500
+    }
+   }
+  ],
+  "mutates": true,
+  "parent": "accounts.treasury-transfer-menu",
+  "recordedBy": "agent",
+  "review": {
+   "by": "conductor",
+   "date": "2026-10-03",
+   "decision": "accept",
+   "note": "same Transfer funds form with Treasury ($200,000.00) preset as Transfer from, Amount focused; hop clicks the 'Transfer out' menuitem the label names, and it only opens the form",
+   "reason": "mutating"
+  },
+  "similarity": 0.9996,
+  "source": "2737fea1eafd733ae79b72e34b92b11c112a5e33",
+  "status": "accepted"
+ },
+ "accounts.treasury-transfer-review": {
+  "checked": "2026-10-02-1349",
+  "fingerprint": {
+   "controls": [
+    "Back",
+    "Close",
+    "Customize your experience",
+    "Open account",
+    "Transfer",
+    "Viewing as Admin"
+   ],
+   "headings": [],
+   "path": "/send-money/review/transfer/<id>/amount/<id>/<id>",
+   "structure": "document",
+   "top": {
+    "name": "",
+    "role": "document"
+   }
+  },
+  "hop": [
+   {
+    "fill": {
+     "locator": {
+      "label": "Amount"
+     },
+     "value": "10000"
+    }
+   },
+   {
+    "click": {
+     "name": "Transfer from",
+     "role": "combobox"
+    }
+   },
+   {
+    "click": {
+     "name": "Ops / Payroll $<amount> / Checking ••<n>",
+     "role": "option"
+    }
+   },
+   {
+    "click": {
+     "name": "Transfer to",
+     "role": "combobox"
+    }
+   },
+   {
+    "click": {
+     "name": "Treasury $<amount>",
+     "role": "option"
+    }
+   },
+   {
+    "click": {
+     "name": "Next",
+     "role": "button"
+    }
+   },
+   {
+    "wait": {
+     "ms": 500
+    }
+   }
+  ],
+  "mutates": false,
+  "parent": "accounts.treasury-transfer-error",
+  "recordedBy": "agent",
+  "review": null,
+  "similarity": 0.9998,
+  "source": "2b49c98afbbb82bea517eeb3705852223eb0b5c1",
+  "status": "accepted"
+ },
+ "accounts.treasury-transfer-success": {
+  "checked": "2026-10-02-1349",
+  "fingerprint": {
+   "controls": [
+    "Close",
+    "Customize your experience",
+    "Go to dashboard",
+    "Make another transfer",
+    "Open account",
+    "Viewing as Admin"
+   ],
+   "headings": [
+    "Your transfer is on the way",
+    "The money should arrive between <date>-<n>."
+   ],
+   "path": "/send-money/success/transfer",
+   "structure": "document",
+   "top": {
+    "name": "",
+    "role": "document"
+   }
+  },
+  "hop": [
+   {
+    "click": {
+     "name": "Transfer",
+     "role": "button"
+    }
+   },
+   {
+    "wait": {
+     "ms": 800
+    }
+   }
+  ],
+  "mutates": true,
+  "parent": "accounts.treasury-transfer-review",
+  "recordedBy": "agent",
+  "review": {
+   "by": "conductor",
+   "date": "2026-10-03",
+   "decision": "accept",
+   "note": "same 'Your transfer is on the way' confirmation ($10,000.00 Ops / Payroll to Treasury); hop clicks Transfer as labeled; only arrival dates drift",
+   "reason": "mutating"
+  },
+  "similarity": 0.9989,
+  "source": "dfb12c37c4d02451d0ccc8de1e8cb8e7e17fc7ab",
+  "status": "accepted"
+ },
+ "accounts.unlink-confirm": {
+  "checked": "2026-10-02-1349",
+  "fingerprint": {
+   "controls": [
+    "Account",
+    "Cancel",
+    "Yes, unlink"
+   ],
+   "headings": [
+    "Do you want to unlink this account?"
+   ],
+   "path": "/accounts",
+   "structure": "dialog",
+   "top": {
+    "name": "",
+    "role": "dialog"
+   }
+  },
+  "hop": [
+   {
+    "click": {
+     "name": "Unlink account",
+     "role": "menuitem"
+    }
+   }
+  ],
+  "mutates": true,
+  "parent": "accounts.linked-account-kebab",
+  "recordedBy": "agent",
+  "review": {
+   "by": "conductor",
+   "date": "2026-10-03",
+   "decision": "accept",
+   "note": "same 'Do you want to unlink this account?' dialog (Checking ••9876, Business Checking – Iron Bank) with Cancel and Yes, unlink",
+   "reason": "mutating"
+  },
+  "similarity": 0.9992,
+  "source": "f7b618f29a28fa521b901811f172c83ea8cc402a",
+  "status": "accepted"
+ },
+ "accounts.unlinked": {
+  "checked": "2026-10-02-1349",
+  "fingerprint": {
+   "controls": [
+    "<n>",
+    "Transfer",
+    "••••••<n>"
+   ],
+   "headings": [],
+   "path": "/accounts",
+   "structure": "status",
+   "top": {
+    "name": "Linked Accounts",
+    "role": "table"
+   }
+  },
+  "hop": [
+   {
+    "click": {
+     "name": "Yes, unlink",
+     "role": "button"
+    }
+   }
+  ],
+  "mutates": true,
+  "parent": "accounts.unlink-confirm",
+  "recordedBy": "agent",
+  "review": {
+   "by": "conductor",
+   "date": "2026-10-03",
+   "decision": "accept",
+   "note": "same Linked accounts list with Checking ••9876 removed and the 'Checking ••9876 unlinked' toast; the hop clicks Yes, unlink as the label names",
+   "reason": "mutating"
+  },
+  "similarity": 0.9994,
+  "source": "05a661f0fce2db61f537b5b1f21967c15fd4185b",
+  "status": "accepted"
+ },
+ "accounts.vd-destination": {
+  "checked": "2026-10-02-1349",
+  "fingerprint": {
+   "controls": [
+    "Close",
+    "Customize your experience",
+    "Deposit In",
+    "Go back",
+    "Next",
+    "Open account",
+    "Viewing as Admin"
+   ],
+   "headings": [],
+   "path": "/capital/venture-debt/draw-funds",
+   "structure": "document",
+   "top": {
+    "name": "",
+    "role": "document"
+   }
+  },
+  "hop": [
+   {
+    "click": {
+     "name": "Next",
+     "role": "button"
+    }
+   }
+  ],
+  "mutates": false,
+  "parent": "accounts.vd-request-calculator",
+  "recordedBy": "draft",
+  "review": null,
+  "similarity": 0.9999,
+  "source": "7459131acaf0c5a73db43d8cd5a899b38b6ec419",
+  "status": "accepted"
+ },
+ "accounts.vd-disbursement-agreement": {
+  "checked": "2026-10-02-1349",
+  "fingerprint": {
+   "controls": [
+    "Agree",
+    "Cancel"
+   ],
+   "headings": [
+    "Disbursement Agreement"
+   ],
+   "path": "/capital/venture-debt/draw-funds",
+   "structure": "dialog",
+   "top": {
+    "name": "",
+    "role": "dialog"
+   }
+  },
+  "hop": [
+   {
+    "click": {
+     "name": "Request funds",
+     "role": "button"
+    }
+   }
+  ],
+  "mutates": false,
+  "parent": "accounts.vd-review",
+  "recordedBy": "draft",
+  "review": null,
+  "similarity": 0.9995,
+  "source": "721e0cfef8035f9bc4d8d61434069265b4203b44",
+  "status": "accepted"
+ },
+ "accounts.vd-draw-pending": {
+  "checked": "2026-10-02-1349",
+  "fingerprint": {
+   "controls": [
+    "Accounting",
+    "Accounts",
+    "Add to bookmarks",
+    "Banking",
+    "Bill Pay",
+    "Books",
+    "Cards",
+    "Command New",
+    "Credit Card",
+    "Customize your experience",
+    "Download loan agreement",
+    "Financing",
+    "Home",
+    "Insights",
+    "Invoicing",
+    "Learn about bookmarks",
+    "Mercury Demo Pro",
+    "Move money",
+    "Navigate to Settings",
+    "Open account",
+    "Ops / Payroll <amount>",
+    "Payments",
+    "Remove bookmark",
+    "Reorder Bill Pay bookmark",
+    "Reorder Credit Card bookmark",
+    "Reorder Insights bookmark",
+    "Reorder Ops / Payroll bookmark",
+    "Search for anything",
+    "Tasks <n>",
+    "Team Spend",
+    "Toggle Private Mode",
+    "Transactions",
+    "Treasury",
+    "View more",
+    "Viewing as Admin",
+    "updates"
+   ],
+   "headings": [
+    "Financing"
+   ],
+   "path": "/capital/venture-debt",
+   "structure": "document",
+   "top": {
+    "name": "",
+    "role": "document"
+   }
+  },
+  "hop": [
+   {
+    "click": {
+     "name": "View loan details",
+     "role": "link"
+    }
+   }
+  ],
+  "mutates": true,
+  "parent": "accounts.vd-funds-requested",
+  "recordedBy": "draft",
+  "review": null,
+  "similarity": 0.9982,
+  "source": "26f7d4ec7156ecf5cdf739459b46f691c29f72c4",
+  "status": "accepted"
+ },
+ "accounts.vd-funds-requested": {
+  "checked": "2026-10-02-1349",
+  "fingerprint": {
+   "controls": [
+    "Make Another Request",
+    "View loan details",
+    "support@mercury.com"
+   ],
+   "headings": [],
+   "path": "/capital/venture-debt/draw-funds",
+   "structure": "document",
+   "top": {
+    "name": "",
+    "role": "document"
+   }
+  },
+  "hop": [
+   {
+    "click": {
+     "name": "Agree",
+     "role": "button"
+    }
+   }
+  ],
+  "mutates": true,
+  "parent": "accounts.vd-disbursement-agreement",
+  "recordedBy": "draft",
+  "review": null,
+  "similarity": 0.9999,
+  "source": "46348d4bb9cd7193f7bd587c44f79a0a4ddfc83d",
+  "status": "accepted"
+ },
+ "accounts.vd-projected-payments": {
+  "checked": "2026-10-02-1349",
+  "fingerprint": {
+   "controls": [
+    "Close"
+   ],
+   "headings": [
+    "Projected Payments"
+   ],
+   "path": "/capital/venture-debt",
+   "structure": "dialog",
+   "top": {
+    "name": "",
+    "role": "dialog"
+   }
+  },
+  "hop": [
+   {
+    "click": {
+     "name": "View more",
+     "role": "button"
+    }
+   }
+  ],
+  "mutates": false,
+  "parent": "accounts.venture-debt",
+  "recordedBy": "draft",
+  "review": null,
+  "similarity": 0.9403,
+  "source": "822c48b5fbe2e5d691248595196b21064067e160",
+  "status": "accepted"
+ },
+ "accounts.vd-request-calculator": {
+  "checked": "2026-10-02-1349",
+  "fingerprint": {
+   "controls": [
+    "<amount>",
+    "Close",
+    "Customize your experience",
+    "Next",
+    "Open account",
+    "Viewing as Admin"
+   ],
+   "headings": [],
+   "path": "/capital/venture-debt/draw-funds",
+   "structure": "document",
+   "top": {
+    "name": "",
+    "role": "document"
+   }
+  },
+  "hop": [
+   {
+    "fill": {
+     "locator": {
+      "name": "0.00",
+      "role": "textbox"
+     },
+     "value": "250000"
+    }
+   }
+  ],
+  "mutates": false,
+  "parent": "accounts.vd-request-funds",
+  "recordedBy": "agent",
+  "review": null,
+  "similarity": 0.9995,
+  "source": "18cc092596b1bd3cecfc233ad350a6f7d75f9ee1",
+  "status": "accepted"
+ },
+ "accounts.vd-request-error": {
+  "checked": "2026-10-02-1349",
+  "fingerprint": {
+   "controls": [
+    "<amount>",
+    "Close",
+    "Customize your experience",
+    "Next",
+    "Open account",
+    "Viewing as Admin"
+   ],
+   "headings": [],
+   "path": "/capital/venture-debt/draw-funds",
+   "structure": "document",
+   "top": {
+    "name": "",
+    "role": "document"
+   }
+  },
+  "hop": [
+   {
+    "fill": {
+     "locator": {
+      "name": "0.00",
+      "role": "textbox"
+     },
+     "value": "2000000"
+    }
+   },
+   {
+    "wait": {
+     "ms": 500
+    }
+   }
+  ],
+  "mutates": false,
+  "parent": "accounts.vd-request-funds",
+  "recordedBy": "agent",
+  "review": {
+   "by": "conductor",
+   "date": "2026-10-03",
+   "decision": "accept",
+   "note": "same venture debt calculator with $2,000,000 and 'Request amount may not exceed $1,000,000.00.' error, Next still enabled",
+   "reason": "sample"
+  },
+  "similarity": 0.9998,
+  "source": "1efe19a13beea5b0bd866f1c999ce1db8e3f4cd5",
+  "status": "accepted"
+ },
+ "accounts.vd-request-funds": {
+  "checked": "2026-10-02-1349",
+  "fingerprint": {
+   "controls": [
+    "<amount>",
+    "Close",
+    "Customize your experience",
+    "Next",
+    "Open account",
+    "Viewing as Admin"
+   ],
+   "headings": [],
+   "path": "/capital/venture-debt/draw-funds",
+   "structure": "document",
+   "top": {
+    "name": "",
+    "role": "document"
+   }
+  },
+  "hop": [],
+  "mutates": false,
+  "parent": "/capital/venture-debt/draw-funds",
+  "recordedBy": "root",
+  "review": null,
+  "similarity": 0.9996,
+  "source": "97d170e1550eee4afc0af065b78cda302a97674c",
+  "status": "accepted"
+ },
+ "accounts.vd-review": {
+  "checked": "2026-10-02-1349",
+  "fingerprint": {
+   "controls": [
+    "Close",
+    "Customize your experience",
+    "Go back",
+    "Open account",
+    "Request funds",
+    "Viewing as Admin"
+   ],
+   "headings": [],
+   "path": "/capital/venture-debt/draw-funds",
+   "structure": "document",
+   "top": {
+    "name": "",
+    "role": "document"
+   }
+  },
+  "hop": [
+   {
+    "click": {
+     "name": "Next",
+     "role": "button"
+    }
+   }
+  ],
+  "mutates": false,
+  "parent": "accounts.vd-destination",
+  "recordedBy": "draft",
+  "review": null,
+  "similarity": 0.9998,
+  "source": "72de41208d6c229ee6a7c19dc0131cc7e52d57cc",
+  "status": "accepted"
+ },
+ "accounts.venture-debt": {
+  "checked": "2026-10-02-1349",
+  "fingerprint": {
+   "controls": [
+    "Accounting",
+    "Accounts",
+    "Add to bookmarks",
+    "Banking",
+    "Bill Pay",
+    "Books",
+    "Cards",
+    "Command New",
+    "Credit Card",
+    "Customize your experience",
+    "Download loan agreement",
+    "Financing",
+    "Home",
+    "Insights",
+    "Invoicing",
+    "Learn about bookmarks",
+    "Mercury Demo Pro",
+    "Move money",
+    "Navigate to Settings",
+    "Open account",
+    "Ops / Payroll <amount>",
+    "Payments",
+    "Remove bookmark",
+    "Reorder Bill Pay bookmark",
+    "Reorder Credit Card bookmark",
+    "Reorder Insights bookmark",
+    "Reorder Ops / Payroll bookmark",
+    "Request funds",
+    "Search for anything",
+    "Tasks <n>",
+    "Team Spend",
+    "Toggle Private Mode",
+    "Transactions",
+    "Treasury",
+    "View more",
+    "Viewing as Admin",
+    "updates"
+   ],
+   "headings": [
+    "Financing"
+   ],
+   "path": "/capital/venture-debt",
+   "structure": "document",
+   "top": {
+    "name": "",
+    "role": "document"
+   }
+  },
+  "hop": [],
+  "mutates": false,
+  "parent": "/capital/venture-debt",
+  "recordedBy": "root",
+  "review": null,
+  "similarity": 0.9986,
+  "source": "97d170e1550eee4afc0af065b78cda302a97674c",
+  "status": "accepted"
+ },
+ "accounts.wire-details": {
+  "checked": "2026-10-02-1349",
+  "fingerprint": {
+   "controls": [
+    "Account Security",
+    "Accounts",
+    "Advisors <n>",
+    "Agreements",
+    "All",
+    "Approval Rules",
+    "Bank letters",
+    "Billing history",
+    "Categories",
+    "Company Profile",
+    "Company documents",
+    "Controls",
+    "Customize your experience",
+    "Departments",
+    "Documents",
+    "Download",
+    "Integrations",
+    "Investment tax forms",
+    "Legal",
+    "Mercury Demo Pro",
+    "Move money",
+    "Navigate to Settings",
+    "Notices",
+    "Notifications",
+    "Open account",
+    "Operations",
+    "Other",
+    "Perks",
+    "Plan & Billing",
+    "Profile",
+    "Receipts & attachments",
+    "Recipient tax forms",
+    "Referrals",
+    "Search for anything",
+    "Security",
+    "Settings",
+    "Statements",
+    "Support requests",
+    "Tax",
+    "Team",
+    "Toggle Private Mode",
+    "Tokens",
+    "Trade confirmations",
+    "Vault",
+    "Viewing as Admin",
+    "Webhooks",
+    "Wire details",
+    "updates"
+   ],
+   "headings": [
+    "Documents & Data"
+   ],
+   "path": "/settings/documents/wire-details",
+   "structure": "document",
+   "top": {
+    "name": "",
+    "role": "document"
+   }
+  },
+  "hop": [],
+  "mutates": false,
+  "parent": "/settings/documents/wire-details?accountIds=mercurybankid2",
+  "recordedBy": "root",
+  "review": null,
+  "similarity": 0.9982,
+  "source": "97d170e1550eee4afc0af065b78cda302a97674c",
+  "status": "accepted"
+ }
+}

@@ -1,0 +1,121 @@
+{
+ "area": "accounts",
+ "batch": "verify-012",
+ "findings": [
+  {
+   "attachments": [],
+   "attempt": 1,
+   "basis": "violation",
+   "criteria": [
+    "4.1.2",
+    "2.4.4"
+   ],
+   "evidence": [
+    {
+     "evidence": {
+      "failureSummary": "Fix all of the following:\n  Element is in tab order and does not have accessible text\n\nFix any of the following:\n  Element does not have text that is visible to screen readers\n  aria-label attribute does not exist or is empty\n  aria-labelledby attribute does not exist, references elements that do not exist or references elements that are empty\n  Element has no title attribute",
+      "messageKey": "noAttr"
+     },
+     "occurrence": {
+      "ancestors": [
+       [],
+       [
+        "_tooltipAnchor_18bac_4"
+       ],
+       [
+        "_headingContainer_18dih_15"
+       ],
+       [],
+       [
+        "_large_kwlx6_9",
+        "_noHover_3n0se_28",
+        "_shadow_3n0se_25",
+        "_raisedBackground_3n0se_45",
+        "_card_lo4oy_4",
+        "_modal_18dih_3"
+       ],
+       [
+        "ReactModal__Content",
+        "ReactModal__Content--after-open",
+        "_modal_lo4oy_73"
+       ],
+       [
+        "ReactModal__Overlay",
+        "ReactModal__Overlay--after-open",
+        "_overlay_lo4oy_89",
+        "_backgroundColor_lo4oy_103"
+       ],
+       [
+        "ReactModalPortal"
+       ]
+      ],
+      "classes": [
+       "_button_r6b2u_20",
+       "_small_r6b2u_72",
+       "_secondary_r6b2u_126",
+       "_link_ual8v_4",
+       "_underlineNever_ual8v_7"
+      ],
+      "data": {
+       "data-discover": "true"
+      },
+      "heading": "Linked accounts",
+      "landmark": {
+       "name": "",
+       "role": "dialog"
+      },
+      "layer": "top",
+      "name": "",
+      "rect": [
+       948,
+       346,
+       32,
+       32
+      ],
+      "role": "link",
+      "tag": "a",
+      "xpath": "/html/body/div[11]/div[1]/div[1]/div[1]/div[2]/div[2]/div[1]/span[1]/a[1]"
+     },
+     "state": "accounts.credit-linked-accounts"
+    }
+   ],
+   "evidenceHash": "68c235e05898a33a14234c2ee59458691c8372f814567a352aa4c13f7539cc59",
+   "facts": {
+    "announced": "link \"\"",
+    "axeSummary": "Element is in tab order and does not have accessible text; Element does not have text that is visible to screen readers; aria-label attribute does not exist or…",
+    "criterion": "4.1.2",
+    "criterionName": "Name, Role, Value",
+    "element": "link in \"Linked accounts\"",
+    "rule": "link-name",
+    "screen": "Linked accounts for IO limit"
+   },
+   "family": "name",
+   "guidance": "High for an unnamed form control or the sole primary action.",
+   "issueId": null,
+   "key": "name:link-name:4546ff176da0",
+   "measured": false,
+   "primary": "accounts.credit-linked-accounts",
+   "proposals": [],
+   "rule": "link-name",
+   "screens": 1,
+   "severityDefault": "medium",
+   "source": "scanner",
+   "states": [
+    "accounts.credit-linked-accounts"
+   ],
+   "summary": "link-name: announced as link \"\". Element is in tab order and does not have accessible text; Element does not have text that is visible to screen readers; aria-label attribute does not exist or…",
+   "title": "Missing or unclear name: link in \"Linked accounts\""
+  }
+ ],
+ "primaries": [
+  "accounts.credit-linked-accounts"
+ ],
+ "reach": {
+  "baseUrl": "https://demo.mercury.com",
+  "data": "data",
+  "map": "build/map.json",
+  "run": "2026-10-03-1525",
+  "workspace": "a11y"
+ },
+ "run": "2026-10-03-1525"
+}

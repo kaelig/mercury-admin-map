@@ -1,0 +1,32 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><title>Menus</title>
+<style>
+  body { font: 16px/1.4 sans-serif; margin: 24px; color: #111; background: #fff; }
+  button { font: inherit; margin: 8px; }
+  .wrap { position: relative; display: inline-block; }
+  [role=menu] { position: absolute; margin: 0; padding: 4px 0; list-style: none; background: #fff; border: 1px solid #ccc; }
+  [role=menu] li { padding: 4px 12px; }
+  #export-menu { top: 120px; left: 140px; }
+</style></head>
+<body>
+<main>
+  <h1>Statements</h1>
+  <!-- Correct (WAI-ARIA APG menu button): Enter opens and focuses the first item, Esc returns focus. -->
+  <div class="wrap">
+    <button id="actions" aria-haspopup="menu" aria-expanded="false" aria-controls="actions-menu">Actions</button>
+    <ul role="menu" id="actions-menu" aria-labelledby="actions" hidden>
+      <li role="menuitem" tabindex="-1">Copy</li>
+      <li role="menuitem" tabindex="-1">Rename</li>
+      <li role="menuitem" tabindex="-1">Delete</li>
+    </ul>
+  </div>
+  <!-- Opens a menu at the end of the page and leaves focus on the button; the next Tab goes to Help. -->
+  <button id="export" aria-haspopup="menu" aria-expanded="false">Export</button>
+  <button>Help</button>
+</main>
+<ul role="menu" id="export-menu" aria-label="Export" hidden>
+  <li role="none"><a role="menuitem" href="#csv">CSV</a></li>
+  <li role="none"><a role="menuitem" href="#pdf">PDF</a></li>
+</ul>
+<script src="menus.js"></script>
+</body></html>

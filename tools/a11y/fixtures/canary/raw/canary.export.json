@@ -1,0 +1,205 @@
+{
+ "build": "unknown",
+ "checks": {
+  "axe": {
+   "inapplicable": [
+    "area-alt",
+    "aria-allowed-attr",
+    "aria-braille-equivalent",
+    "aria-command-name",
+    "aria-conditional-attr",
+    "aria-input-field-name",
+    "aria-meter-name",
+    "aria-progressbar-name",
+    "aria-prohibited-attr",
+    "aria-required-children",
+    "aria-required-parent",
+    "aria-tab-name",
+    "aria-toggle-field-name",
+    "aria-tooltip-name",
+    "aria-valid-attr",
+    "aria-valid-attr-value",
+    "autocomplete-valid",
+    "blink",
+    "bypass",
+    "definition-list",
+    "dlitem",
+    "duplicate-id-aria",
+    "form-field-multiple-labels",
+    "frame-focusable-content",
+    "frame-title",
+    "frame-title-unique",
+    "html-xml-lang-mismatch",
+    "image-alt",
+    "input-button-name",
+    "input-image-alt",
+    "label",
+    "label-content-name-mismatch",
+    "link-in-text-block",
+    "link-name",
+    "list",
+    "listitem",
+    "marquee",
+    "meta-refresh",
+    "meta-viewport",
+    "no-autoplay-audio",
+    "object-alt",
+    "role-img-alt",
+    "scrollable-region-focusable",
+    "select-name",
+    "server-side-image-map",
+    "summary-name",
+    "svg-img-alt",
+    "td-headers-attr",
+    "th-has-data-cells",
+    "valid-lang",
+    "video-caption"
+   ],
+   "rulesRan": [
+    "area-alt",
+    "aria-allowed-attr",
+    "aria-braille-equivalent",
+    "aria-command-name",
+    "aria-conditional-attr",
+    "aria-deprecated-role",
+    "aria-hidden-body",
+    "aria-hidden-focus",
+    "aria-input-field-name",
+    "aria-meter-name",
+    "aria-progressbar-name",
+    "aria-prohibited-attr",
+    "aria-required-attr",
+    "aria-required-children",
+    "aria-required-parent",
+    "aria-roles",
+    "aria-tab-name",
+    "aria-toggle-field-name",
+    "aria-tooltip-name",
+    "aria-valid-attr",
+    "aria-valid-attr-value",
+    "autocomplete-valid",
+    "blink",
+    "button-name",
+    "bypass",
+    "color-contrast",
+    "definition-list",
+    "dlitem",
+    "document-title",
+    "duplicate-id-aria",
+    "form-field-multiple-labels",
+    "frame-focusable-content",
+    "frame-title",
+    "frame-title-unique",
+    "html-has-lang",
+    "html-lang-valid",
+    "html-xml-lang-mismatch",
+    "image-alt",
+    "input-button-name",
+    "input-image-alt",
+    "label",
+    "label-content-name-mismatch",
+    "link-in-text-block",
+    "link-name",
+    "list",
+    "listitem",
+    "marquee",
+    "meta-refresh",
+    "meta-viewport",
+    "nested-interactive",
+    "no-autoplay-audio",
+    "object-alt",
+    "role-img-alt",
+    "scrollable-region-focusable",
+    "select-name",
+    "server-side-image-map",
+    "summary-name",
+    "svg-img-alt",
+    "target-size",
+    "td-headers-attr",
+    "th-has-data-cells",
+    "valid-lang",
+    "video-caption"
+   ]
+  }
+ },
+ "env": {
+  "axe": "4.13.0",
+  "chromium": "151.0.7922.34",
+  "colorScheme": "light",
+  "dpr": 1,
+  "locale": "en-US",
+  "playwright": "1.62.1",
+  "reducedMotion": "reduce",
+  "timezone": "America/Los_Angeles",
+  "viewport": [
+   1440,
+   900
+  ]
+ },
+ "families": {
+  "completed": [
+   "axe"
+  ],
+  "incomplete": []
+ },
+ "frames": [],
+ "harness": "canary",
+ "kind": "page",
+ "layer": {
+  "name": "",
+  "role": "document",
+  "scope": "document",
+  "xpath": null
+ },
+ "reason": null,
+ "reasonDetail": null,
+ "recipeHash": "0000000000000000000000000000000000000000000000000000000000000000",
+ "records": [],
+ "results": [
+  {
+   "basis": "violation",
+   "check": "axe",
+   "criteria": [
+    "4.1.2"
+   ],
+   "evidence": {
+    "failureSummary": "Fix any of the following:\n  Element does not have inner text that is visible to screen readers\n  aria-label attribute does not exist or is empty\n  aria-labelledby attribute does not exist, references elements that do not exist or references elements that are empty\n  Element has no title attribute\n  Element does not have an implicit (wrapped) <label>\n  Element does not have an explicit <label>\n  Element's default semantics were not overridden with role=\"none\" or role=\"presentation\"",
+    "messageKey": "noAttr"
+   },
+   "messageKey": null,
+   "occurrence": {
+    "ancestors": [
+     [
+      "_exportControl_cnry2_3"
+     ],
+     []
+    ],
+    "classes": [
+     "_iconButton_cnry2_9"
+    ],
+    "data": {},
+    "heading": "Statements",
+    "landmark": {
+     "name": "",
+     "role": "main"
+    },
+    "layer": "document",
+    "name": "",
+    "rect": [
+     53,
+     97,
+     28,
+     28
+    ],
+    "role": "button",
+    "tag": "button",
+    "xpath": "/html/body/main[1]/div[1]/button[1]"
+   },
+   "rule": "button-name"
+  }
+ ],
+ "schema": 1,
+ "state": "canary.export",
+ "status": "audited",
+ "url": "/canary/export.html"
+}

@@ -1,0 +1,105 @@
+{
+ "area": "cards",
+ "batch": "verify-129",
+ "findings": [
+  {
+   "attachments": [],
+   "attempt": 1,
+   "basis": "failure",
+   "criteria": [
+    "4.1.3"
+   ],
+   "evidence": [
+    {
+     "evidence": {
+      "focus": "body",
+      "focused": false,
+      "message": "Employee budgets table Name Spend limit Spend cycle Assigned to Actions Test Person $1.00 monthly 0% spent Actions for Test Person Team Lunch $200.00 weekly 19% spent S P +16 Actions for Team Lunch Hardware $1,000.00 monthly 49% spent +3 Actions for Hardware Learning & Development $300.00 monthly 13",
+      "region": null
+     },
+     "occurrence": {
+      "ancestors": [
+       [
+        "_pageContent_809q8_151",
+        "_pageContentWidth_809q8_184",
+        "_footerPadding_809q8_115"
+       ],
+       [
+        "_dashboardContent_809q8_29"
+       ],
+       [
+        "_layout_809q8_18"
+       ],
+       [
+        "_wrapper_809q8_3"
+       ],
+       [],
+       [
+        "_main_1gb3b_1"
+       ],
+       [
+        "mercury-root"
+       ]
+      ],
+      "classes": [
+       "_tableWrapper_1acga_4"
+      ],
+      "data": {},
+      "heading": "",
+      "landmark": {
+       "name": "",
+       "role": "main"
+      },
+      "layer": "document",
+      "name": "",
+      "rect": [
+       346,
+       511,
+       968,
+       625
+      ],
+      "role": "generic",
+      "tag": "div",
+      "xpath": "/html/body/div[1]/main[1]/div[1]/div[1]/div[4]/div[1]/div[2]/div[5]"
+     },
+     "state": "cards.create-budget-done"
+    }
+   ],
+   "evidenceHash": "8f391840f215ef25a800fbe6c321c0ff462a829c19895fed97826a2e5a519ab7",
+   "facts": {
+    "criterion": "4.1.3",
+    "criterionName": "Status Messages",
+    "focus": "page body",
+    "message": "\"Employee budgets table Name Spend limit Spend c…\"",
+    "screen": "Budget published"
+   },
+   "family": "status-message",
+   "guidance": "High when it is the only confirmation of a money movement.",
+   "issueId": null,
+   "key": "status-message:status-not-announced:65a7f1d44562",
+   "measured": false,
+   "primary": "cards.create-budget-done",
+   "proposals": [],
+   "rule": "status-not-announced",
+   "screens": 1,
+   "severityDefault": "medium",
+   "source": "scanner",
+   "states": [
+    "cards.create-budget-done"
+   ],
+   "summary": "\"Employee budgets table Name Spend limit Spend c…\" appeared outside any live region, alert or status role that existed before it, and focus stayed on the page body.",
+   "title": "Status message not announced: \"Employee budgets table Name Spend limit Spend c…\""
+  }
+ ],
+ "primaries": [
+  "cards.create-budget-done"
+ ],
+ "reach": {
+  "baseUrl": "https://demo.mercury.com",
+  "data": "data",
+  "map": "build/map.json",
+  "run": "2026-10-03-1525",
+  "workspace": "a11y"
+ },
+ "run": "2026-10-03-1525"
+}

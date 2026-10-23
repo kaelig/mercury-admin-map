@@ -1,0 +1,19 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Frames</title>
+<style>
+  body { font: 16px/1.5 Arial, sans-serif; color: #1a1a1a; background: #ffffff; margin: 24px; }
+  iframe { width: 400px; height: 200px; border: 1px solid #1a1a1a; }
+</style>
+</head>
+<body>
+<main>
+  <h1>Connect a bank</h1>
+  <!-- A cross-origin frame, like Plaid, and a first-party one. Both hold failures that must not appear. -->
+  <iframe src="{{origin2}}/static/frame-content.html" title="Bank login"></iframe>
+  <iframe src="{{origin}}/static/frame-content.html" title="Help"></iframe>
+</main>
+</body>
+</html>

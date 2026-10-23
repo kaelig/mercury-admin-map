@@ -1,0 +1,215 @@
+{
+ "area": "accounts",
+ "batch": "verify-034",
+ "findings": [
+  {
+   "attachments": [],
+   "attempt": 1,
+   "basis": "failure",
+   "criteria": [
+    "2.1.1"
+   ],
+   "evidence": [
+    {
+     "evidence": {
+      "focus": {
+       "ancestors": [
+        [
+         "_large_kwlx6_9",
+         "_noHover_3n0se_28",
+         "_shadow_3n0se_25",
+         "_raisedBackground_3n0se_45",
+         "_card_lo4oy_4",
+         "_defaultPadding_lo4oy_27",
+         "_autoTransferTabModalContainer_11bzg_25",
+         "_small_lo4oy_11"
+        ],
+        [
+         "ReactModal__Content",
+         "ReactModal__Content--after-open",
+         "_modal_lo4oy_73",
+         "_top96_lo4oy_84"
+        ],
+        [
+         "ReactModal__Overlay",
+         "ReactModal__Overlay--after-open",
+         "_overlay_lo4oy_89",
+         "_backgroundColor_lo4oy_103"
+        ],
+        [
+         "ReactModalPortal"
+        ]
+       ],
+       "classes": [],
+       "data": {},
+       "heading": "Accounts",
+       "landmark": {
+        "name": "",
+        "role": "dialog"
+       },
+       "layer": "document",
+       "name": "Review auto transfer rule Every business day, if the balance of AP is not exactly $50,000, restore the balance to $50,000 by transferring funds to or from Ops / Payroll Transfers start on Oct 5 and settle instantly Nickname By clicking 'Create rule,' I authorize Mercury to initiate transfers as specified in this rule. Back Create rule",
+       "rect": [
+        404,
+        136,
+        632,
+        312
+       ],
+       "role": "generic",
+       "tag": "div",
+       "xpath": "/html/body/div[11]/div[1]/div[1]/div[1]/div[2]"
+      },
+      "stops": 2,
+      "trace": [
+       {
+        "focus": "body",
+        "key": "start",
+        "where": "body"
+       },
+       {
+        "focus": {
+         "label": "Back",
+         "tag": "button",
+         "xpath": "/html/body/div[11]/div[1]/div[1]/div[1]/div[2]/form[1]/div[2]/button[1]"
+        },
+        "key": "Tab",
+        "where": "outside"
+       },
+       {
+        "focus": {
+         "label": "Next",
+         "tag": "button",
+         "xpath": "/html/body/div[11]/div[1]/div[1]/div[1]/div[2]/form[1]/div[2]/button[2]"
+        },
+        "key": "Tab",
+        "where": "trigger"
+       },
+       {
+        "focus": {
+         "label": "Review auto transfer rule Nickname By clicking 'Create rule,' I authorize Mercur",
+         "tag": "div",
+         "xpath": "/html/body/div[11]/div[1]/div[1]/div[1]/div[2]"
+        },
+        "key": "Enter",
+        "where": "outside"
+       },
+       {
+        "focus": {
+         "label": "Review auto transfer rule Every business day, if the balance of AP is not exactl",
+         "tag": "div",
+         "xpath": "/html/body/div[11]/div[1]/div[1]/div[1]/div[2]"
+        },
+        "key": "focus",
+        "where": "outside"
+       },
+       {
+        "focus": {
+         "label": "Review auto transfer rule Every business day, if the balance of AP is not exactl",
+         "tag": "div",
+         "xpath": "/html/body/div[11]/div[1]/div[1]/div[1]/div[2]"
+        },
+        "key": "Space",
+        "where": "outside"
+       }
+      ]
+     },
+     "occurrence": {
+      "ancestors": [
+       [
+        "_container_1ieyt_1",
+        "_rightAlign_1ieyt_9"
+       ],
+       [],
+       [],
+       [
+        "_large_kwlx6_9",
+        "_noHover_3n0se_28",
+        "_shadow_3n0se_25",
+        "_raisedBackground_3n0se_45",
+        "_card_lo4oy_4",
+        "_defaultPadding_lo4oy_27",
+        "_autoTransferTabModalContainer_11bzg_25",
+        "_small_lo4oy_11"
+       ],
+       [
+        "ReactModal__Content",
+        "ReactModal__Content--after-open",
+        "_modal_lo4oy_73",
+        "_top96_lo4oy_84"
+       ],
+       [
+        "ReactModal__Overlay",
+        "ReactModal__Overlay--after-open",
+        "_overlay_lo4oy_89",
+        "_backgroundColor_lo4oy_103"
+       ],
+       [
+        "ReactModalPortal"
+       ]
+      ],
+      "classes": [
+       "_button_r6b2u_20",
+       "_large_r6b2u_88",
+       "_primary_r6b2u_104",
+       "session-replay-unmask"
+      ],
+      "data": {},
+      "heading": "Maintain a target account balance",
+      "landmark": {
+       "name": "",
+       "role": "form"
+      },
+      "layer": "document",
+      "name": "Next",
+      "rect": [
+       939,
+       502,
+       97,
+       40
+      ],
+      "role": "button",
+      "tag": "button",
+      "xpath": "/html/body/div[11]/div[1]/div[1]/div[1]/div[2]/form[1]/div[2]/button[2]"
+     },
+     "state": "accounts.rule-review"
+    }
+   ],
+   "evidenceHash": "56efed96078b3dbfca876a2d4bea84d6f1117c48eaf1c983d4a6d67be807aa06",
+   "facts": {
+    "criterion": "2.1.1",
+    "criterionName": "Keyboard",
+    "element": "button \"Next\"",
+    "overlay": "unnamed dialog",
+    "screen": "Review auto transfer rule",
+    "stops": "2"
+   },
+   "family": "dialog-trigger",
+   "guidance": "Lower only when an equivalent keyboard path exists.",
+   "issueId": null,
+   "key": "dialog-trigger:dialog-trigger-not-operable:72fb252eb099",
+   "measured": false,
+   "primary": "accounts.rule-review",
+   "proposals": [],
+   "rule": "dialog-trigger-not-operable",
+   "screens": 1,
+   "severityDefault": "high",
+   "source": "scanner",
+   "states": [
+    "accounts.rule-review"
+   ],
+   "summary": "Tab focused the button \"Next\", but neither Enter nor Space opened the unnamed dialog.",
+   "title": "Opens only with a mouse: button \"Next\""
+  }
+ ],
+ "primaries": [
+  "accounts.rule-review"
+ ],
+ "reach": {
+  "baseUrl": "https://demo.mercury.com",
+  "data": "data",
+  "map": "build/map.json",
+  "run": "2026-10-03-1525",
+  "workspace": "a11y"
+ },
+ "run": "2026-10-03-1525"
+}

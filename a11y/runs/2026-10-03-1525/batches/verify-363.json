@@ -1,0 +1,238 @@
+{
+ "area": "transactions",
+ "batch": "verify-363",
+ "findings": [
+  {
+   "attachments": [],
+   "attempt": 1,
+   "basis": "violation",
+   "criteria": [
+    "1.3.1"
+   ],
+   "evidence": [
+    {
+     "evidence": {
+      "failureSummary": "Fix any of the following:\n  Element has children which are not allowed: div[aria-live], [role=combobox], button[aria-controls], input[aria-describedby], div[aria-hidden]",
+      "messageKey": "unallowed",
+      "values": "div[aria-live], [role=combobox], button[aria-controls], input[aria-describedby], div[aria-hidden]"
+     },
+     "occurrence": {
+      "ancestors": [
+       [],
+       []
+      ],
+      "classes": [
+       "_menu_14lgn_4"
+      ],
+      "data": {
+       "data-dialog": "",
+       "data-enter": "true",
+       "data-open": "true"
+      },
+      "heading": "",
+      "landmark": null,
+      "layer": "top",
+      "name": "Date",
+      "rect": [
+       505,
+       220,
+       376,
+       400
+      ],
+      "role": "menu",
+      "tag": "div",
+      "xpath": "/html/body/div[16]/div[1]/div[1]"
+     },
+     "state": "transactions.date-chip"
+    }
+   ],
+   "evidenceHash": "a5fd22ad5a3d257e0dc34208ea6d8a16211325c18eef4089b1d9ea577e9fa990",
+   "facts": {
+    "announced": "menu \"Date\"",
+    "axeSummary": "Element has children which are not allowed: div[aria-live], [role=combobox], button[aria-controls], input[aria-describedby], div[aria-hidden]",
+    "criterion": "1.3.1",
+    "criterionName": "Info and Relationships",
+    "element": "menu \"Date\"",
+    "rule": "aria-required-children",
+    "screen": "Date chip dropdown"
+   },
+   "family": "role-state",
+   "guidance": "Low for optional ARIA or an invalid autocomplete token; high when aria-hidden hides the whole page.",
+   "issueId": null,
+   "key": "role-state:aria-required-children:f67a0a5998a9",
+   "measured": false,
+   "primary": "transactions.date-chip",
+   "proposals": [],
+   "rule": "aria-required-children",
+   "screens": 1,
+   "severityDefault": "medium",
+   "source": "scanner",
+   "states": [
+    "transactions.date-chip"
+   ],
+   "summary": "aria-required-children: announced as menu \"Date\". Element has children which are not allowed: div[aria-live], [role=combobox], button[aria-controls], input[aria-describedby], div[aria-hidden]",
+   "title": "Wrong role or state: menu \"Date\""
+  },
+  {
+   "attachments": [],
+   "attempt": 1,
+   "basis": "violation",
+   "criteria": [
+    "1.3.5"
+   ],
+   "evidence": [
+    {
+     "evidence": {
+      "failureSummary": "Fix all of the following:\n  the autocomplete attribute is incorrectly formatted"
+     },
+     "occurrence": {
+      "ancestors": [
+       [
+        "_inputWrapper_11c85_6"
+       ],
+       [
+        "_wrapper_1xgdp_8"
+       ],
+       [
+        "_rangePickerSection_1q0q9_5"
+       ],
+       [
+        "_container_1q0q9_1"
+       ],
+       [
+        "_wrapper_ce40d_3"
+       ],
+       [
+        "_menu_14lgn_4"
+       ],
+       [],
+       []
+      ],
+      "classes": [
+       "_input_11c85_6"
+      ],
+      "data": {
+       "data-1p-ignore": "true",
+       "data-active-item": "true",
+       "data-bwignore": "true",
+       "data-lpignore": "true"
+      },
+      "heading": "",
+      "landmark": {
+       "name": "",
+       "role": "form"
+      },
+      "layer": "top",
+      "name": "Show transactions for",
+      "rect": [
+       529,
+       268,
+       295,
+       40
+      ],
+      "role": "combobox",
+      "tag": "input",
+      "xpath": "/html/body/div[16]/div[1]/div[1]/div[1]/form[1]/section[1]/div[1]/div[1]/input[1]"
+     },
+     "state": "transactions.date-chip"
+    },
+    {
+     "evidence": {
+      "failureSummary": "Fix all of the following:\n  the autocomplete attribute is incorrectly formatted"
+     },
+     "occurrence": {
+      "ancestors": [
+       [
+        "_inputWrapper_11c85_6"
+       ],
+       [
+        "_wrapper_1xgdp_8"
+       ],
+       [
+        "_rangePickerSection_1q0q9_5"
+       ],
+       [
+        "_container_1q0q9_1"
+       ],
+       [
+        "_wrapper_ce40d_3"
+       ],
+       [],
+       [
+        "_filterTabPanelContainer_veh3u_29"
+       ],
+       [
+        "_filterMenuMainContent_veh3u_21",
+        "_noTopBorderRadius_veh3u_25"
+       ]
+      ],
+      "classes": [
+       "_input_11c85_6"
+      ],
+      "data": {
+       "data-1p-ignore": "true",
+       "data-active-item": "true",
+       "data-bwignore": "true",
+       "data-lpignore": "true"
+      },
+      "heading": "",
+      "landmark": {
+       "name": "",
+       "role": "form"
+      },
+      "layer": "top",
+      "name": "Show transactions for",
+      "rect": [
+       704,
+       337,
+       295,
+       40
+      ],
+      "role": "combobox",
+      "tag": "input",
+      "xpath": "/html/body/div[16]/div[1]/div[1]/div[2]/div[2]/div[1]/div[1]/form[1]/section[1]/div[1]/div[1]/input[1]"
+     },
+     "state": "transactions.filters-panel"
+    }
+   ],
+   "evidenceHash": "d37ac9cf6ab8d9ad36a375b52593b5e382c59652feed0077cab0ab131318f487",
+   "facts": {
+    "announced": "combobox \"Show transactions for\" [expanded=false, haspopup=listbox]",
+    "axeSummary": "the autocomplete attribute is incorrectly formatted",
+    "criterion": "1.3.5",
+    "criterionName": "Identify Input Purpose",
+    "element": "combobox \"Show transactions for\"",
+    "rule": "autocomplete-valid",
+    "screen": "Date chip dropdown"
+   },
+   "family": "role-state",
+   "guidance": "Low for optional ARIA or an invalid autocomplete token; high when aria-hidden hides the whole page.",
+   "issueId": null,
+   "key": "role-state:autocomplete-valid:31dc2cd81be8",
+   "measured": false,
+   "primary": "transactions.date-chip",
+   "proposals": [],
+   "rule": "autocomplete-valid",
+   "screens": 2,
+   "severityDefault": "medium",
+   "source": "scanner",
+   "states": [
+    "transactions.date-chip",
+    "transactions.filters-panel"
+   ],
+   "summary": "autocomplete-valid: announced as combobox \"Show transactions for\" [expanded=false, haspopup=listbox]. the autocomplete attribute is incorrectly formatted",
+   "title": "Invalid autocomplete value: combobox \"Show transactions for\""
+  }
+ ],
+ "primaries": [
+  "transactions.date-chip"
+ ],
+ "reach": {
+  "baseUrl": "https://demo.mercury.com",
+  "data": "data",
+  "map": "build/map.json",
+  "run": "2026-10-03-1525",
+  "workspace": "a11y"
+ },
+ "run": "2026-10-03-1525"
+}

@@ -1,0 +1,223 @@
+{
+ "batch": "record-033",
+ "reach": {
+  "baseUrl": "https://demo.mercury.com",
+  "data": "data",
+  "map": "build/map.json",
+  "run": "2026-10-02-1349",
+  "workspace": "a11y"
+ },
+ "run": "2026-10-02-1349",
+ "states": [
+  {
+   "area": "transactions",
+   "draft": "cannot parse \"Scroll down\"",
+   "image": "screens/transactions/53-insights-overview-breakdown.png",
+   "kind": "page",
+   "labels": [
+    "Scroll down"
+   ],
+   "mutates": false,
+   "note": "Below the chart: Money in by Source and Money out by Recipient tables with % of total bars.",
+   "parent": "transactions.insights",
+   "state": "transactions.insights-breakdown",
+   "title": "Insights: money in/out breakdown"
+  },
+  {
+   "area": "transactions",
+   "draft": "not drafted: its parent had no accepted recipe when the drafter ran",
+   "image": "screens/transactions/54-insights-breakdown-category.png",
+   "kind": "page",
+   "labels": [
+    "Scroll down",
+    "Click Category segment"
+   ],
+   "mutates": false,
+   "note": "Money in card switched to the Category segment, plus a \"Get better insights\" categorize prompt.",
+   "parent": "transactions.insights-breakdown",
+   "state": "transactions.insights-breakdown-category",
+   "title": "Breakdown by category"
+  },
+  {
+   "area": "transactions",
+   "draft": "not drafted: its parent had no accepted recipe when the drafter ran",
+   "image": "screens/transactions/89-insights-drilldown-transactions.png",
+   "kind": "page",
+   "labels": [
+    "Scroll down",
+    "Click a recipient row"
+   ],
+   "mutates": false,
+   "note": "Clicking GUSTO in Money out by Recipient opens Transactions filtered to Gusto (Payroll): Filters (5), All time and Gusto (Payroll) chips, +3 more, Money out all time -$268,986.75 and 3 transactions.",
+   "parent": "transactions.insights-breakdown",
+   "state": "transactions.insights-drilldown",
+   "title": "Breakdown drill-down"
+  },
+  {
+   "area": "transactions",
+   "draft": "not drafted: its parent had no accepted recipe when the drafter ran",
+   "image": "screens/transactions/99-detail-ach-pull.png",
+   "kind": "drawer",
+   "labels": [
+    "Scroll down",
+    "Click a recipient row",
+    "Click a Gusto (Payroll) row"
+   ],
+   "mutates": false,
+   "note": "ACH Pull panel opened from the drill-down: -$90,122.53 from Ops / Payroll to Gusto (Payroll), Category Employee Gifts, GL Code 782 - Expense Account.",
+   "parent": "transactions.insights-drilldown",
+   "state": "transactions.detail-ach-pull",
+   "title": "ACH pull detail"
+  },
+  {
+   "area": "transactions",
+   "draft": "nothing on transactions.index matches {\"click\":{\"name\":\"a row Category combobox\"}}",
+   "image": "screens/transactions/49-row-category-dropdown.png",
+   "kind": "menu",
+   "labels": [
+    "Click a row Category combobox"
+   ],
+   "mutates": false,
+   "note": "Inline Category combobox in a table row opened, listing categories.",
+   "parent": "transactions.index",
+   "state": "transactions.row-category-dropdown",
+   "title": "Row category dropdown"
+  },
+  {
+   "area": "transactions",
+   "draft": "not drafted: its parent had no accepted recipe when the drafter ran",
+   "image": "screens/transactions/75-row-category-search.png",
+   "kind": "form-state",
+   "labels": [
+    "Click a row Category combobox",
+    "Type to search categories"
+   ],
+   "mutates": false,
+   "note": "Typing \"Lunch\" in a row's Category combobox filters the list to Lunch Perks with a + Create category action.",
+   "parent": "transactions.row-category-dropdown",
+   "state": "transactions.row-category-search",
+   "title": "Row category search"
+  },
+  {
+   "area": "transactions",
+   "draft": "not drafted: its parent had no accepted recipe when the drafter ran",
+   "image": "screens/transactions/50-row-category-set.png",
+   "kind": "toast",
+   "labels": [
+    "Click a row Category combobox",
+    "Choose a category"
+   ],
+   "mutates": false,
+   "note": "Row shows the chosen category and a toast \"Category updated. We'll learn from this for similar transactions.\" with Review similar.",
+   "parent": "transactions.row-category-dropdown",
+   "state": "transactions.row-category-set",
+   "title": "Row category updated"
+  },
+  {
+   "area": "transactions",
+   "draft": "not drafted: its parent had no accepted recipe when the drafter ran",
+   "image": "screens/transactions/76-review-similar.png",
+   "kind": "page",
+   "labels": [
+    "Click a row Category combobox",
+    "Choose a category",
+    "Click Review similar"
+   ],
+   "mutates": false,
+   "note": "Review similar from the category toast filters the table to the same counterparty and method (Stefanie Katz x, Check Payment x, Filters (2)) with Create view.",
+   "parent": "transactions.row-category-set",
+   "state": "transactions.review-similar",
+   "title": "Review similar transactions"
+  },
+  {
+   "area": "transactions",
+   "draft": "nothing on transactions.index matches {\"click\":{\"name\":\"a Wire In\"}}",
+   "image": "screens/transactions/44-detail-wire-in.png",
+   "kind": "drawer",
+   "labels": [
+    "Click a Wire In row"
+   ],
+   "mutates": false,
+   "note": "Wire In panel: +$244.99 from Deshaun Moore to Ops / Payroll, empty Category, GL Code 318 - Unbilled Receivables.",
+   "parent": "transactions.index",
+   "state": "transactions.detail-wire-in",
+   "title": "Incoming wire detail"
+  },
+  {
+   "area": "transactions",
+   "draft": "not drafted: its parent had no accepted recipe when the drafter ran",
+   "image": "screens/transactions/45-detail-category-dropdown.png",
+   "kind": "menu",
+   "labels": [
+    "Click a Wire In row",
+    "Click Category field"
+   ],
+   "mutates": false,
+   "note": "Category combobox open in the panel listing categories and a Create category action.",
+   "parent": "transactions.detail-wire-in",
+   "state": "transactions.detail-category-dropdown",
+   "title": "Detail category dropdown"
+  },
+  {
+   "area": "transactions",
+   "draft": "not drafted: its parent had no accepted recipe when the drafter ran",
+   "image": "screens/transactions/46-create-category-modal.png",
+   "kind": "modal",
+   "labels": [
+    "Click a Wire In row",
+    "Click Category field",
+    "Click Create category"
+   ],
+   "mutates": true,
+   "note": "Create category dialog: unlabeled name input, visibility checkboxes (Card transactions, Reimbursements, Other) and a disabled Create category button.",
+   "parent": "transactions.detail-category-dropdown",
+   "state": "transactions.create-category-modal",
+   "title": "Create category modal"
+  },
+  {
+   "area": "transactions",
+   "draft": "nothing on transactions.insights matches {\"click\":{\"name\":\"date chip\"}}",
+   "image": "screens/transactions/60-insights-date-range-menu.png",
+   "kind": "popover",
+   "labels": [
+    "Click date chip"
+   ],
+   "mutates": false,
+   "note": "Date chip opened: Custom preset, From Jun 17, 2026 / To Today and month grid.",
+   "parent": "transactions.insights",
+   "state": "transactions.insights-date-menu",
+   "title": "Insights date range menu"
+  },
+  {
+   "area": "transactions",
+   "draft": "not drafted: its parent had no accepted recipe when the drafter ran",
+   "image": "screens/transactions/81-insights-compare-to-menu.png",
+   "kind": "menu",
+   "labels": [
+    "Click date chip",
+    "Pick August, open Compare to"
+   ],
+   "mutates": false,
+   "note": "With a single month (August 2026) selected, Compare to becomes active and offers No comparison or Previous month.",
+   "parent": "transactions.insights-date-menu",
+   "state": "transactions.insights-compare-menu",
+   "title": "Compare to menu"
+  },
+  {
+   "area": "transactions",
+   "draft": "not drafted: its parent had no accepted recipe when the drafter ran",
+   "image": "screens/transactions/82-insights-compare-previous-month.png",
+   "kind": "page",
+   "labels": [
+    "Click date chip",
+    "Pick August, open Compare to",
+    "Choose Previous month"
+   ],
+   "mutates": false,
+   "note": "Previous month comparison: Net cashflow vs. previous month with a 30% delta chip, Money out 81% chip, daily chart with the prior month drawn as a second series and a 2 notable transactions note.",
+   "parent": "transactions.insights-compare-menu",
+   "state": "transactions.insights-compare",
+   "title": "Compared to previous month"
+  }
+ ]
+}

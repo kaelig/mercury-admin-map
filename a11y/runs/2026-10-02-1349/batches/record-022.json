@@ -1,0 +1,243 @@
+{
+ "batch": "record-022",
+ "reach": {
+  "baseUrl": "https://demo.mercury.com",
+  "data": "data",
+  "map": "build/map.json",
+  "run": "2026-10-02-1349",
+  "workspace": "a11y"
+ },
+ "run": "2026-10-02-1349",
+ "states": [
+  {
+   "area": "payments",
+   "draft": "nothing on payments.index matches {\"click\":{\"name\":\"Checkbooks in sidebar\"}}",
+   "image": "screens/payments/75-checkbooks-hub.png",
+   "kind": "page",
+   "labels": [
+    "Click Checkbooks in sidebar"
+   ],
+   "mutates": false,
+   "note": "Incoming check payments with review status timers; Settings and Order Checkbook.",
+   "parent": "payments.index",
+   "state": "payments.checkbooks",
+   "title": "Checkbooks"
+  },
+  {
+   "area": "payments",
+   "draft": "not drafted: its parent had no accepted recipe when the drafter ran",
+   "image": "screens/payments/76-checkbook-check-detail.png",
+   "kind": "drawer",
+   "labels": [
+    "Click Checkbooks in sidebar",
+    "Click a check row"
+   ],
+   "mutates": false,
+   "note": "Check image, Approve / Reject, check number, date received, time left, memo.",
+   "parent": "payments.checkbooks",
+   "state": "payments.checkbook-check-detail",
+   "title": "Check payment panel"
+  },
+  {
+   "area": "payments",
+   "draft": "not drafted: its parent had no accepted recipe when the drafter ran",
+   "image": "screens/payments/77-checkbook-check-approved.png",
+   "kind": "confirmation",
+   "labels": [
+    "Click Checkbooks in sidebar",
+    "Click a check row",
+    "Click Approve"
+   ],
+   "mutates": true,
+   "note": "Panel after Approve: Processing badge and 'approved on September 24, 2026' banner.",
+   "parent": "payments.checkbook-check-detail",
+   "state": "payments.checkbook-check-approved",
+   "title": "Check approved"
+  },
+  {
+   "area": "payments",
+   "draft": "not drafted: its parent had no accepted recipe when the drafter ran",
+   "image": "screens/payments/78-checkbook-order.png",
+   "kind": "form-state",
+   "labels": [
+    "Click Checkbooks in sidebar",
+    "Click Order Checkbook"
+   ],
+   "mutates": false,
+   "note": "Account, nickname, start number, check color, shipping address, live check preview.",
+   "parent": "payments.checkbooks",
+   "state": "payments.checkbook-order",
+   "title": "Order a Checkbook"
+  },
+  {
+   "area": "payments",
+   "draft": "not drafted: its parent had no accepted recipe when the drafter ran",
+   "image": "screens/payments/80-checkbook-order-review.png",
+   "kind": "form-state",
+   "labels": [
+    "Click Checkbooks in sidebar",
+    "Click Order Checkbook",
+    "Fill account + nickname, click Next"
+   ],
+   "mutates": false,
+   "note": "Nickname, account, shipping address, cost Free, authority checkbox gating Confirm.",
+   "parent": "payments.checkbook-order",
+   "state": "payments.checkbook-order-review",
+   "title": "Checkbook order review"
+  },
+  {
+   "area": "payments",
+   "draft": "not drafted: its parent had no accepted recipe when the drafter ran",
+   "image": "screens/payments/79-checkbook-order-validation.png",
+   "kind": "validation-error",
+   "labels": [
+    "Click Checkbooks in sidebar",
+    "Click Order Checkbook",
+    "Click Next empty"
+   ],
+   "mutates": false,
+   "note": "Next empty: 'Please complete this field' under Account and Checkbook nickname.",
+   "parent": "payments.checkbook-order",
+   "state": "payments.checkbook-order-validation",
+   "title": "Order checkbook: errors"
+  },
+  {
+   "area": "payments",
+   "draft": "nothing on payments.scheduled matches {\"click\":{\"name\":\"a scheduled\"}}",
+   "image": "screens/payments/103-scheduled-detail.png",
+   "kind": "drawer",
+   "labels": [
+    "Click a scheduled row"
+   ],
+   "mutates": false,
+   "note": "Recurring CAD payment: amount with USD estimate, requester, Edit / Cancel payment, schedule details, progress 5 of 6, GL code, notes.",
+   "parent": "payments.scheduled",
+   "state": "payments.scheduled-detail",
+   "title": "Scheduled payment panel"
+  },
+  {
+   "area": "payments",
+   "draft": "not drafted: its parent had no accepted recipe when the drafter ran",
+   "image": "screens/payments/104-scheduled-cancel-modal.png",
+   "kind": "modal",
+   "labels": [
+    "Click a scheduled row",
+    "Click Cancel payment"
+   ],
+   "mutates": true,
+   "note": "Confirmation modal with payment rule, next payment and total, Go back / Cancel payment.",
+   "parent": "payments.scheduled-detail",
+   "state": "payments.scheduled-cancel",
+   "title": "Cancel recurring payment"
+  },
+  {
+   "area": "payments",
+   "draft": "not drafted: its parent had no accepted recipe when the drafter ran",
+   "image": "screens/payments/106-scheduled-edit.png",
+   "kind": "form-state",
+   "labels": [
+    "Click a scheduled row",
+    "Click Edit"
+   ],
+   "mutates": false,
+   "note": "Inline edit in the panel: amount, source account, start date, repeat rule (Custom, every 1 month, on day / nth weekday), end, memo; Review enables after a change.",
+   "parent": "payments.scheduled-detail",
+   "state": "payments.scheduled-edit",
+   "title": "Edit scheduled payment"
+  },
+  {
+   "area": "payments",
+   "draft": "not drafted: its parent had no accepted recipe when the drafter ran",
+   "image": "screens/payments/107-scheduled-edit-review.png",
+   "kind": "modal",
+   "labels": [
+    "Click a scheduled row",
+    "Click Edit",
+    "Change amount, click Review"
+   ],
+   "mutates": false,
+   "note": "Review modal: send-from account, plain-language payment rule, next three dates with amounts, no end date; Cancel / Confirm.",
+   "parent": "payments.scheduled-edit",
+   "state": "payments.scheduled-edit-review",
+   "title": "Review new payment details"
+  },
+  {
+   "area": "payments",
+   "draft": "not drafted: its parent had no accepted recipe when the drafter ran",
+   "image": "screens/payments/108-scheduled-updated-toast.png",
+   "kind": "toast",
+   "labels": [
+    "Click a scheduled row",
+    "Click Edit",
+    "Change amount, click Review",
+    "Click Confirm"
+   ],
+   "mutates": true,
+   "note": "After Confirm: 'Payment(s) updated' toast, new rule in the panel, and every row in the table now shows 'No due date'.",
+   "parent": "payments.scheduled-edit-review",
+   "state": "payments.scheduled-updated",
+   "title": "Payment(s) updated"
+  },
+  {
+   "area": "payments",
+   "draft": "cannot parse \"Expand Domestic Transfer Details\"",
+   "image": "screens/payments/34-deposit-domestic-details.png",
+   "kind": "form-state",
+   "labels": [
+    "Expand Domestic Transfer Details"
+   ],
+   "mutates": false,
+   "note": "Domestic accordion open: beneficiary name, account number, type, address, ABA routing, bank name and address.",
+   "parent": "payments.deposit-wire-details",
+   "state": "payments.deposit-domestic-details",
+   "title": "Domestic transfer details"
+  },
+  {
+   "area": "payments",
+   "draft": "not drafted: its parent had no accepted recipe when the drafter ran",
+   "image": "screens/payments/32-deposit-options.png",
+   "kind": "page",
+   "labels": [
+    "Expand Domestic Transfer Details",
+    "Click Choose method in stepper"
+   ],
+   "mutates": false,
+   "note": "Deposit options: Wire Transfer (routing/account numbers, Wire Instructions), Bank Transfer, Check Deposit, Invoice, SAFE Investment.",
+   "parent": "payments.deposit-domestic-details",
+   "state": "payments.deposit",
+   "title": "Add funds"
+  },
+  {
+   "area": "payments",
+   "draft": "not drafted: its parent had no accepted recipe when the drafter ran",
+   "image": "screens/payments/35-deposit-bank-transfer.png",
+   "kind": "form-state",
+   "labels": [
+    "Expand Domestic Transfer Details",
+    "Click Choose method in stepper",
+    "Click Bank Transfer"
+   ],
+   "mutates": false,
+   "note": "Bank Transfer option opens the Transfer funds form with Transfer to pre-set to Ops / Payroll.",
+   "parent": "payments.deposit",
+   "state": "payments.deposit-bank-transfer",
+   "title": "Deposit: bank transfer"
+  },
+  {
+   "area": "payments",
+   "draft": "not drafted: its parent had no accepted recipe when the drafter ran",
+   "image": "screens/payments/45-deposit-safe.png",
+   "kind": "page",
+   "labels": [
+    "Expand Domestic Transfer Details",
+    "Click Choose method in stepper",
+    "Click SAFE Investment"
+   ],
+   "mutates": false,
+   "note": "SAFE Investment option: 4-step SAFE flow, step 1 amount, date, destination account, SAFE type.",
+   "parent": "payments.deposit",
+   "state": "payments.deposit-safe",
+   "title": "Create a new SAFE"
+  }
+ ]
+}

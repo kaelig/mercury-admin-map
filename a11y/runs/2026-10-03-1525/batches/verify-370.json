@@ -1,0 +1,110 @@
+{
+ "area": "transactions",
+ "batch": "verify-370",
+ "findings": [
+  {
+   "attachments": [],
+   "attempt": 1,
+   "basis": "violation",
+   "criteria": [
+    "1.3.1"
+   ],
+   "evidence": [
+    {
+     "evidence": {
+      "failureSummary": "Fix any of the following:\n  Description list item does not have a <dl> parent element"
+     },
+     "occurrence": {
+      "ancestors": [
+       [
+        "_container_16ibf_1"
+       ],
+       [
+        "_panelSection_d3i56_148"
+       ],
+       [
+        "_panelBody_d3i56_64"
+       ],
+       [
+        "_large_kwlx6_9",
+        "_noHover_3n0se_28",
+        "_shadow_3n0se_25",
+        "_raisedBackground_3n0se_45",
+        "_panel_d3i56_55",
+        "_detailsCardPanel_15kl9_287"
+       ],
+       [
+        "_transitionWrapper_d3i56_5",
+        "_visible_d3i56_19",
+        "_detailsCardWrapper_15kl9_247"
+       ],
+       [
+        "_drawerRoot_15kl9_6"
+       ]
+      ],
+      "classes": [
+       "_tiny_qaod7_67",
+       "_text-tertiary_12t49_1",
+       "_leftSide_16ibf_13"
+      ],
+      "data": {},
+      "heading": "",
+      "landmark": {
+       "name": "",
+       "role": "complementary"
+      },
+      "layer": "top",
+      "name": "Failure reason",
+      "rect": [
+       1012,
+       360,
+       80,
+       20
+      ],
+      "role": "term",
+      "tag": "dt",
+      "xpath": "/html/body/div[3]/aside[1]/div[1]/div[1]/section[2]/div[1]/dt[1]"
+     },
+     "state": "transactions.detail-failed"
+    }
+   ],
+   "evidenceHash": "e2cb30b19ac274ba60cf3156a94939f24080a3d5f9b576d452604c9849e01299",
+   "facts": {
+    "announced": "term \"Failure reason\"",
+    "axeSummary": "Description list item does not have a <dl> parent element",
+    "criterion": "1.3.1",
+    "criterionName": "Info and Relationships",
+    "element": "term \"Failure reason\"",
+    "rule": "dlitem",
+    "screen": "Failed payment detail"
+   },
+   "family": "structure",
+   "guidance": "Medium when a data table's headers do not reach its cells, or when structure is the only way to tell sections or steps apart.",
+   "issueId": null,
+   "key": "structure:dlitem:cc4834191173",
+   "measured": false,
+   "primary": "transactions.detail-failed",
+   "proposals": [],
+   "rule": "dlitem",
+   "screens": 1,
+   "severityDefault": "low",
+   "source": "scanner",
+   "states": [
+    "transactions.detail-failed"
+   ],
+   "summary": "dlitem: announced as term \"Failure reason\". Description list item does not have a <dl> parent element",
+   "title": "Markup misstates structure: term \"Failure reason\""
+  }
+ ],
+ "primaries": [
+  "transactions.detail-failed"
+ ],
+ "reach": {
+  "baseUrl": "https://demo.mercury.com",
+  "data": "data",
+  "map": "build/map.json",
+  "run": "2026-10-03-1525",
+  "workspace": "a11y"
+ },
+ "run": "2026-10-03-1525"
+}

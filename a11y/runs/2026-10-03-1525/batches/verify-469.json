@@ -1,0 +1,1725 @@
+{
+ "area": "home",
+ "batch": "verify-469",
+ "findings": [
+  {
+   "attachments": [],
+   "attempt": 1,
+   "basis": "candidate",
+   "criteria": [
+    "4.1.2"
+   ],
+   "evidence": [
+    {
+     "evidence": {
+      "description": "",
+      "name": "",
+      "role": "button",
+      "states": {},
+      "template": "button \"\""
+     },
+     "occurrence": {
+      "ancestors": [
+       [
+        "_periodPicker_4rdgw_1"
+       ],
+       [
+        "_moneyFlowHeader_ct6b5_83"
+       ],
+       [
+        "_moneyFlowRow_ct6b5_65"
+       ],
+       [
+        "_analyticsDashboard_ct6b5_36"
+       ],
+       [
+        "_fullWidthWrapper_ct6b5_9"
+       ],
+       [
+        "_outerWrapper_ct6b5_1"
+       ],
+       [
+        "_dashboardContentWrapper_ct6b5_108",
+        "_pageContent_809q8_151",
+        "_footerPadding_809q8_115"
+       ],
+       [
+        "_dashboardContent_809q8_29",
+        "_hasMobileDesigns_809q8_136"
+       ]
+      ],
+      "classes": [
+       "_button_r6b2u_20",
+       "_small_r6b2u_72",
+       "_tertiary_r6b2u_153"
+      ],
+      "data": {},
+      "heading": "Welcome, Jane",
+      "landmark": {
+       "name": "",
+       "role": "main"
+      },
+      "layer": "document",
+      "name": "",
+      "rect": [
+       518,
+       910,
+       32,
+       32
+      ],
+      "role": "button",
+      "tag": "button",
+      "xpath": "/html/body/div[1]/main[1]/div[1]/div[1]/div[4]/div[1]/div[2]/div[1]/div[1]/div[4]/div[3]/div[1]/div[1]/button[1]"
+     },
+     "state": "home.index"
+    },
+    {
+     "evidence": {
+      "description": "",
+      "name": "",
+      "role": "button",
+      "states": {},
+      "template": "button \"\""
+     },
+     "occurrence": {
+      "ancestors": [
+       [
+        "_periodPicker_4rdgw_1"
+       ],
+       [
+        "_modalTitle_kf9td_51"
+       ],
+       [
+        "_large_kwlx6_9",
+        "_noHover_3n0se_28",
+        "_shadow_3n0se_25",
+        "_raisedBackground_3n0se_45",
+        "_card_lo4oy_4",
+        "_defaultPadding_lo4oy_27",
+        "_modalContainer_kf9td_3",
+        "_small_lo4oy_11"
+       ],
+       [
+        "ReactModal__Content",
+        "ReactModal__Content--after-open",
+        "_modal_lo4oy_73"
+       ],
+       [
+        "ReactModal__Overlay",
+        "ReactModal__Overlay--after-open",
+        "_overlay_lo4oy_89",
+        "_backgroundColor_lo4oy_103"
+       ],
+       [
+        "ReactModalPortal"
+       ]
+      ],
+      "classes": [
+       "_button_r6b2u_20",
+       "_small_r6b2u_72",
+       "_tertiary_r6b2u_153"
+      ],
+      "data": {},
+      "heading": "",
+      "landmark": {
+       "name": "",
+       "role": "dialog"
+      },
+      "layer": "top",
+      "name": "",
+      "rect": [
+       776,
+       367,
+       32,
+       32
+      ],
+      "role": "button",
+      "tag": "button",
+      "xpath": "/html/body/div[8]/div[1]/div[1]/div[1]/div[2]/div[1]/button[1]"
+     },
+     "state": "settings.panorama-statements"
+    }
+   ],
+   "evidenceHash": "2d0968f7b591c6fd5a792ba056f7afa79858623f4ab23ffb19b8678ad3e3589f",
+   "facts": {
+    "announced": "button \"\"",
+    "axeSummary": "",
+    "criterion": "4.1.2",
+    "criterionName": "Name, Role, Value",
+    "element": "button in \"Welcome, Jane\"",
+    "rule": "announced-as",
+    "screen": "Home dashboard"
+   },
+   "family": "name",
+   "guidance": "High for an unnamed form control or the sole primary action.",
+   "issueId": null,
+   "key": "name:announced-as:1307f3a41056",
+   "measured": false,
+   "primary": "home.index",
+   "proposals": [],
+   "rule": "announced-as",
+   "screens": 21,
+   "severityDefault": "medium",
+   "source": "scanner",
+   "states": [
+    "home.index",
+    "settings.panorama-statements"
+   ],
+   "summary": "announced-as: announced as button \"\".",
+   "title": "Missing or unclear name: button in \"Welcome, Jane\""
+  },
+  {
+   "attachments": [],
+   "attempt": 1,
+   "basis": "candidate",
+   "criteria": [
+    "2.4.4"
+   ],
+   "evidence": [
+    {
+     "evidence": {
+      "description": "",
+      "name": "View",
+      "role": "link",
+      "states": {},
+      "template": "link \"View\""
+     },
+     "occurrence": {
+      "ancestors": [
+       [
+        "_text-link_12t49_1"
+       ],
+       [
+        "_bottomRowRight_1dk39_42"
+       ],
+       [
+        "_bottomRow_1dk39_36"
+       ],
+       [
+        "_large_kwlx6_9",
+        "_noHover_3n0se_28",
+        "_border_3n0se_35",
+        "_raisedBackground_3n0se_45",
+        "_card_1ym9q_1",
+        "_card_1dk39_1"
+       ],
+       [
+        "_moduleRow_ct6b5_48",
+        "_moduleRowThreeColumns_ct6b5_61"
+       ],
+       [
+        "_analyticsDashboard_ct6b5_36"
+       ],
+       [
+        "_fullWidthWrapper_ct6b5_9"
+       ],
+       [
+        "_outerWrapper_ct6b5_1"
+       ]
+      ],
+      "classes": [
+       "_link_ual8v_4",
+       "_underlineOnHover_ual8v_15",
+       "_sizeDefault_ual8v_25"
+      ],
+      "data": {
+       "data-discover": "true"
+      },
+      "heading": "Welcome, Jane",
+      "landmark": {
+       "name": "",
+       "role": "main"
+      },
+      "layer": "document",
+      "name": "View",
+      "rect": [
+       1241,
+       816,
+       48,
+       18
+      ],
+      "role": "link",
+      "tag": "a",
+      "xpath": "/html/body/div[1]/main[1]/div[1]/div[1]/div[4]/div[1]/div[2]/div[1]/div[1]/div[4]/div[2]/div[3]/div[3]/div[2]/span[1]/a[1]"
+     },
+     "state": "home.index"
+    },
+    {
+     "evidence": {
+      "description": "",
+      "name": "View",
+      "role": "link",
+      "states": {},
+      "template": "link \"View\""
+     },
+     "occurrence": {
+      "ancestors": [
+       [
+        "_text-link_12t49_1"
+       ],
+       [
+        "_bottomRowRight_1dk39_42"
+       ],
+       [
+        "_bottomRow_1dk39_36"
+       ],
+       [
+        "_large_kwlx6_9",
+        "_noHover_3n0se_28",
+        "_border_3n0se_35",
+        "_raisedBackground_3n0se_45",
+        "_card_1ym9q_1",
+        "_card_1dk39_1"
+       ],
+       [
+        "_moduleRow_ct6b5_48",
+        "_moduleRowThreeColumns_ct6b5_61"
+       ],
+       [
+        "_analyticsDashboard_ct6b5_36"
+       ],
+       [
+        "_fullWidthWrapper_ct6b5_9"
+       ],
+       [
+        "_outerWrapper_ct6b5_1"
+       ]
+      ],
+      "classes": [
+       "_link_ual8v_4",
+       "_underlineOnHover_ual8v_15",
+       "_sizeDefault_ual8v_25"
+      ],
+      "data": {
+       "data-discover": "true"
+      },
+      "heading": "Welcome, Jane",
+      "landmark": {
+       "name": "",
+       "role": "main"
+      },
+      "layer": "document",
+      "name": "View",
+      "rect": [
+       1241,
+       816,
+       48,
+       18
+      ],
+      "role": "link",
+      "tag": "a",
+      "xpath": "/html/body/div[1]/main[1]/div[1]/div[1]/div[4]/div[1]/div[2]/div[1]/div[1]/div[4]/div[2]/div[3]/div[3]/div[2]/span[1]/a[1]"
+     },
+     "state": "home.balance-graph-hover"
+    }
+   ],
+   "evidenceHash": "6920f8d9adc5cf6e449ded19c01e8bed6d041b90505fb6472e963071a5c4080b",
+   "facts": {
+    "announced": "link \"View\"",
+    "axeSummary": "",
+    "criterion": "2.4.4",
+    "criterionName": "Link Purpose (In Context)",
+    "element": "link \"View\"",
+    "rule": "announced-as",
+    "screen": "Home dashboard"
+   },
+   "family": "name",
+   "guidance": "High for an unnamed form control or the sole primary action.",
+   "issueId": null,
+   "key": "name:announced-as:69575d58ae2a",
+   "measured": false,
+   "primary": "home.index",
+   "proposals": [],
+   "rule": "announced-as",
+   "screens": 19,
+   "severityDefault": "medium",
+   "source": "scanner",
+   "states": [
+    "home.index",
+    "home.balance-graph-hover"
+   ],
+   "summary": "announced-as: announced as link \"View\".",
+   "title": "Missing or unclear name: link \"View\""
+  },
+  {
+   "attachments": [],
+   "attempt": 1,
+   "basis": "candidate",
+   "criteria": [
+    "4.1.2"
+   ],
+   "evidence": [
+    {
+     "evidence": {
+      "description": "",
+      "name": "",
+      "role": "button",
+      "states": {},
+      "template": "button \"\""
+     },
+     "occurrence": {
+      "ancestors": [
+       [
+        "_tooltipAnchor_18bac_4",
+        "_titleRowButtonWrapper_3hpqe_31"
+       ],
+       [
+        "_titleRowButtons_3hpqe_27"
+       ],
+       [
+        "_titleRow_3hpqe_17"
+       ],
+       [
+        "_accountsCard_3hpqe_1"
+       ],
+       [
+        "_accountsCardWrapper_3hpqe_1"
+       ],
+       [
+        "_large_kwlx6_9",
+        "_noHover_3n0se_28",
+        "_border_3n0se_35",
+        "_raisedBackground_3n0se_45"
+       ],
+       [
+        "_row_ct6b5_42"
+       ],
+       [
+        "_analyticsDashboard_ct6b5_36"
+       ]
+      ],
+      "classes": [
+       "_button_r6b2u_20",
+       "_small_r6b2u_72",
+       "_secondary_r6b2u_126"
+      ],
+      "data": {},
+      "heading": "Welcome, Jane",
+      "landmark": {
+       "name": "",
+       "role": "main"
+      },
+      "layer": "document",
+      "name": "",
+      "rect": [
+       1213,
+       269,
+       32,
+       32
+      ],
+      "role": "button",
+      "tag": "button",
+      "xpath": "/html/body/div[1]/main[1]/div[1]/div[1]/div[4]/div[1]/div[2]/div[1]/div[1]/div[4]/div[1]/div[2]/div[1]/div[1]/div[1]/div[1]/div[1]/button[1]"
+     },
+     "state": "home.index"
+    },
+    {
+     "evidence": {
+      "description": "",
+      "name": "",
+      "role": "button",
+      "states": {},
+      "template": "button \"\""
+     },
+     "occurrence": {
+      "ancestors": [
+       [
+        "_tooltipAnchor_18bac_4",
+        "_titleRowButtonWrapper_3hpqe_31"
+       ],
+       [
+        "_titleRowButtons_3hpqe_27"
+       ],
+       [
+        "_titleRow_3hpqe_17"
+       ],
+       [
+        "_accountsCard_3hpqe_1"
+       ],
+       [
+        "_accountsCardWrapper_3hpqe_1"
+       ],
+       [
+        "_large_kwlx6_9",
+        "_noHover_3n0se_28",
+        "_border_3n0se_35",
+        "_raisedBackground_3n0se_45"
+       ],
+       [
+        "_row_ct6b5_42"
+       ],
+       [
+        "_analyticsDashboard_ct6b5_36"
+       ]
+      ],
+      "classes": [
+       "_button_r6b2u_20",
+       "_small_r6b2u_72",
+       "_secondary_r6b2u_126"
+      ],
+      "data": {},
+      "heading": "Welcome, Jane",
+      "landmark": {
+       "name": "",
+       "role": "main"
+      },
+      "layer": "document",
+      "name": "",
+      "rect": [
+       1213,
+       269,
+       32,
+       32
+      ],
+      "role": "button",
+      "tag": "button",
+      "xpath": "/html/body/div[1]/main[1]/div[1]/div[1]/div[4]/div[1]/div[2]/div[1]/div[1]/div[4]/div[1]/div[2]/div[1]/div[1]/div[1]/div[1]/div[1]/button[1]"
+     },
+     "state": "home.balance-graph-hover"
+    }
+   ],
+   "evidenceHash": "46e1f55d807c59d4716d74b8bc2e7cbf845f04f9d6f8466a2cf7537e9ac707f1",
+   "facts": {
+    "announced": "button \"\"",
+    "axeSummary": "",
+    "criterion": "4.1.2",
+    "criterionName": "Name, Role, Value",
+    "element": "button in \"Welcome, Jane\"",
+    "rule": "announced-as",
+    "screen": "Home dashboard"
+   },
+   "family": "name",
+   "guidance": "High for an unnamed form control or the sole primary action.",
+   "issueId": null,
+   "key": "name:announced-as:89e5bfabd294",
+   "measured": false,
+   "primary": "home.index",
+   "proposals": [],
+   "rule": "announced-as",
+   "screens": 19,
+   "severityDefault": "medium",
+   "source": "scanner",
+   "states": [
+    "home.index",
+    "home.balance-graph-hover"
+   ],
+   "summary": "announced-as: announced as button \"\".",
+   "title": "Missing or unclear name: button in \"Welcome, Jane\""
+  },
+  {
+   "attachments": [],
+   "attempt": 1,
+   "basis": "candidate",
+   "criteria": [
+    "2.4.4"
+   ],
+   "evidence": [
+    {
+     "evidence": {
+      "description": "",
+      "name": "Oct 8",
+      "role": "link",
+      "states": {},
+      "template": "link \"<date>\""
+     },
+     "occurrence": {
+      "ancestors": [
+       [
+        "_text-emphasized_12t49_1"
+       ],
+       [],
+       [
+        "_bottomRow_1dp3n_34"
+       ],
+       [
+        "_large_kwlx6_9",
+        "_noHover_3n0se_28",
+        "_border_3n0se_35",
+        "_raisedBackground_3n0se_45",
+        "_card_1ym9q_1",
+        "_card_1dp3n_1"
+       ],
+       [
+        "_moduleRow_ct6b5_48",
+        "_moduleRowThreeColumns_ct6b5_61"
+       ],
+       [
+        "_analyticsDashboard_ct6b5_36"
+       ],
+       [
+        "_fullWidthWrapper_ct6b5_9"
+       ],
+       [
+        "_outerWrapper_ct6b5_1"
+       ]
+      ],
+      "classes": [
+       "_tooltipAnchor_18bac_4",
+       "_inlineBlock_1dp3n_97",
+       "_link_ual8v_4",
+       "_underlineOnHover_ual8v_15",
+       "_sizeDefault_ual8v_25"
+      ],
+      "data": {
+       "data-discover": "true"
+      },
+      "heading": "Welcome, Jane",
+      "landmark": {
+       "name": "",
+       "role": "main"
+      },
+      "layer": "document",
+      "name": "Oct 8",
+      "rect": [
+       371,
+       823,
+       39,
+       24
+      ],
+      "role": "link",
+      "tag": "a",
+      "xpath": "/html/body/div[1]/main[1]/div[1]/div[1]/div[4]/div[1]/div[2]/div[1]/div[1]/div[4]/div[2]/div[1]/div[3]/div[1]/span[1]/a[1]"
+     },
+     "state": "home.index"
+    },
+    {
+     "evidence": {
+      "description": "",
+      "name": "Oct 8",
+      "role": "link",
+      "states": {},
+      "template": "link \"<date>\""
+     },
+     "occurrence": {
+      "ancestors": [
+       [
+        "_text-emphasized_12t49_1"
+       ],
+       [],
+       [
+        "_bottomRow_1dp3n_34"
+       ],
+       [
+        "_large_kwlx6_9",
+        "_noHover_3n0se_28",
+        "_border_3n0se_35",
+        "_raisedBackground_3n0se_45",
+        "_card_1ym9q_1",
+        "_card_1dp3n_1"
+       ],
+       [
+        "_moduleRow_ct6b5_48",
+        "_moduleRowThreeColumns_ct6b5_61"
+       ],
+       [
+        "_analyticsDashboard_ct6b5_36"
+       ],
+       [
+        "_fullWidthWrapper_ct6b5_9"
+       ],
+       [
+        "_outerWrapper_ct6b5_1"
+       ]
+      ],
+      "classes": [
+       "_tooltipAnchor_18bac_4",
+       "_inlineBlock_1dp3n_97",
+       "_link_ual8v_4",
+       "_underlineOnHover_ual8v_15",
+       "_sizeDefault_ual8v_25"
+      ],
+      "data": {
+       "data-discover": "true"
+      },
+      "heading": "Welcome, Jane",
+      "landmark": {
+       "name": "",
+       "role": "main"
+      },
+      "layer": "document",
+      "name": "Oct 8",
+      "rect": [
+       371,
+       823,
+       39,
+       24
+      ],
+      "role": "link",
+      "tag": "a",
+      "xpath": "/html/body/div[1]/main[1]/div[1]/div[1]/div[4]/div[1]/div[2]/div[1]/div[1]/div[4]/div[2]/div[1]/div[3]/div[1]/span[1]/a[1]"
+     },
+     "state": "home.balance-graph-hover"
+    }
+   ],
+   "evidenceHash": "ea11c84d77763e16aef5c06548c50d29e70c44af4fb6fe0101909cbbb956cc02",
+   "facts": {
+    "announced": "link \"<date>\"",
+    "axeSummary": "",
+    "criterion": "2.4.4",
+    "criterionName": "Link Purpose (In Context)",
+    "element": "link \"<date>\"",
+    "rule": "announced-as",
+    "screen": "Home dashboard"
+   },
+   "family": "name",
+   "guidance": "High for an unnamed form control or the sole primary action.",
+   "issueId": null,
+   "key": "name:announced-as:a16dc8966786",
+   "measured": false,
+   "primary": "home.index",
+   "proposals": [],
+   "rule": "announced-as",
+   "screens": 19,
+   "severityDefault": "medium",
+   "source": "scanner",
+   "states": [
+    "home.index",
+    "home.balance-graph-hover"
+   ],
+   "summary": "announced-as: announced as link \"<date>\".",
+   "title": "Missing or unclear name: link \"<date>\""
+  },
+  {
+   "attachments": [],
+   "attempt": 1,
+   "basis": "candidate",
+   "criteria": [
+    "4.1.2"
+   ],
+   "evidence": [
+    {
+     "evidence": {
+      "description": "",
+      "name": "",
+      "role": "link",
+      "states": {},
+      "template": "link \"\""
+     },
+     "occurrence": {
+      "ancestors": [
+       [
+        "_createInvoiceButton_1dk39_50"
+       ],
+       [
+        "_buttons_1dk39_8"
+       ],
+       [
+        "_topRow_1dk39_2"
+       ],
+       [
+        "_large_kwlx6_9",
+        "_noHover_3n0se_28",
+        "_border_3n0se_35",
+        "_raisedBackground_3n0se_45",
+        "_card_1ym9q_1",
+        "_card_1dk39_1"
+       ],
+       [
+        "_moduleRow_ct6b5_48",
+        "_moduleRowThreeColumns_ct6b5_61"
+       ],
+       [
+        "_analyticsDashboard_ct6b5_36"
+       ],
+       [
+        "_fullWidthWrapper_ct6b5_9"
+       ],
+       [
+        "_outerWrapper_ct6b5_1"
+       ]
+      ],
+      "classes": [
+       "_button_r6b2u_20",
+       "_small_r6b2u_72",
+       "_secondary_r6b2u_126",
+       "_tooltipAnchor_18bac_4",
+       "_buttonTooltipWrapper_1dk39_49",
+       "_link_ual8v_4",
+       "_underlineNever_ual8v_7"
+      ],
+      "data": {
+       "data-discover": "true"
+      },
+      "heading": "Welcome, Jane",
+      "landmark": {
+       "name": "",
+       "role": "main"
+      },
+      "layer": "document",
+      "name": "",
+      "rect": [
+       1217,
+       663,
+       32,
+       32
+      ],
+      "role": "link",
+      "tag": "a",
+      "xpath": "/html/body/div[1]/main[1]/div[1]/div[1]/div[4]/div[1]/div[2]/div[1]/div[1]/div[4]/div[2]/div[3]/div[1]/div[1]/span[1]/a[1]"
+     },
+     "state": "home.index"
+    },
+    {
+     "evidence": {
+      "description": "",
+      "name": "",
+      "role": "link",
+      "states": {},
+      "template": "link \"\""
+     },
+     "occurrence": {
+      "ancestors": [
+       [
+        "_createInvoiceButton_1dk39_50"
+       ],
+       [
+        "_buttons_1dk39_8"
+       ],
+       [
+        "_topRow_1dk39_2"
+       ],
+       [
+        "_large_kwlx6_9",
+        "_noHover_3n0se_28",
+        "_border_3n0se_35",
+        "_raisedBackground_3n0se_45",
+        "_card_1ym9q_1",
+        "_card_1dk39_1"
+       ],
+       [
+        "_moduleRow_ct6b5_48",
+        "_moduleRowThreeColumns_ct6b5_61"
+       ],
+       [
+        "_analyticsDashboard_ct6b5_36"
+       ],
+       [
+        "_fullWidthWrapper_ct6b5_9"
+       ],
+       [
+        "_outerWrapper_ct6b5_1"
+       ]
+      ],
+      "classes": [
+       "_button_r6b2u_20",
+       "_small_r6b2u_72",
+       "_secondary_r6b2u_126",
+       "_tooltipAnchor_18bac_4",
+       "_buttonTooltipWrapper_1dk39_49",
+       "_link_ual8v_4",
+       "_underlineNever_ual8v_7"
+      ],
+      "data": {
+       "data-discover": "true"
+      },
+      "heading": "Welcome, Jane",
+      "landmark": {
+       "name": "",
+       "role": "main"
+      },
+      "layer": "document",
+      "name": "",
+      "rect": [
+       1217,
+       663,
+       32,
+       32
+      ],
+      "role": "link",
+      "tag": "a",
+      "xpath": "/html/body/div[1]/main[1]/div[1]/div[1]/div[4]/div[1]/div[2]/div[1]/div[1]/div[4]/div[2]/div[3]/div[1]/div[1]/span[1]/a[1]"
+     },
+     "state": "home.balance-graph-hover"
+    }
+   ],
+   "evidenceHash": "cc9a317ca65a1d52bca5fcd06baf12fa1399b52e57b1f6ffc72e0420c8671b03",
+   "facts": {
+    "announced": "link \"\"",
+    "axeSummary": "",
+    "criterion": "4.1.2",
+    "criterionName": "Name, Role, Value",
+    "element": "link in \"Welcome, Jane\"",
+    "rule": "announced-as",
+    "screen": "Home dashboard"
+   },
+   "family": "name",
+   "guidance": "High for an unnamed form control or the sole primary action.",
+   "issueId": null,
+   "key": "name:announced-as:a7a9f0ebca57",
+   "measured": false,
+   "primary": "home.index",
+   "proposals": [],
+   "rule": "announced-as",
+   "screens": 19,
+   "severityDefault": "medium",
+   "source": "scanner",
+   "states": [
+    "home.index",
+    "home.balance-graph-hover"
+   ],
+   "summary": "announced-as: announced as link \"\".",
+   "title": "Missing or unclear name: link in \"Welcome, Jane\""
+  },
+  {
+   "attachments": [],
+   "attempt": 1,
+   "basis": "candidate",
+   "criteria": [
+    "4.1.2"
+   ],
+   "evidence": [
+    {
+     "evidence": {
+      "description": "",
+      "name": "",
+      "role": "link",
+      "states": {},
+      "template": "link \"\""
+     },
+     "occurrence": {
+      "ancestors": [
+       [
+        "_createCardButton_1dp3n_84"
+       ],
+       [
+        "_buttons_1dp3n_17"
+       ],
+       [
+        "_topRow_1dp3n_2"
+       ],
+       [
+        "_large_kwlx6_9",
+        "_noHover_3n0se_28",
+        "_border_3n0se_35",
+        "_raisedBackground_3n0se_45",
+        "_card_1ym9q_1",
+        "_card_1dp3n_1"
+       ],
+       [
+        "_moduleRow_ct6b5_48",
+        "_moduleRowThreeColumns_ct6b5_61"
+       ],
+       [
+        "_analyticsDashboard_ct6b5_36"
+       ],
+       [
+        "_fullWidthWrapper_ct6b5_9"
+       ],
+       [
+        "_outerWrapper_ct6b5_1"
+       ]
+      ],
+      "classes": [
+       "_button_r6b2u_20",
+       "_small_r6b2u_72",
+       "_secondary_r6b2u_126",
+       "_tooltipAnchor_18bac_4",
+       "_link_ual8v_4",
+       "_underlineNever_ual8v_7"
+      ],
+      "data": {
+       "data-discover": "true"
+      },
+      "heading": "Welcome, Jane",
+      "landmark": {
+       "name": "",
+       "role": "main"
+      },
+      "layer": "document",
+      "name": "",
+      "rect": [
+       556,
+       663,
+       32,
+       32
+      ],
+      "role": "link",
+      "tag": "a",
+      "xpath": "/html/body/div[1]/main[1]/div[1]/div[1]/div[4]/div[1]/div[2]/div[1]/div[1]/div[4]/div[2]/div[1]/div[1]/div[2]/span[1]/a[1]"
+     },
+     "state": "home.index"
+    },
+    {
+     "evidence": {
+      "description": "",
+      "name": "",
+      "role": "link",
+      "states": {},
+      "template": "link \"\""
+     },
+     "occurrence": {
+      "ancestors": [
+       [
+        "_createCardButton_1dp3n_84"
+       ],
+       [
+        "_buttons_1dp3n_17"
+       ],
+       [
+        "_topRow_1dp3n_2"
+       ],
+       [
+        "_large_kwlx6_9",
+        "_noHover_3n0se_28",
+        "_border_3n0se_35",
+        "_raisedBackground_3n0se_45",
+        "_card_1ym9q_1",
+        "_card_1dp3n_1"
+       ],
+       [
+        "_moduleRow_ct6b5_48",
+        "_moduleRowThreeColumns_ct6b5_61"
+       ],
+       [
+        "_analyticsDashboard_ct6b5_36"
+       ],
+       [
+        "_fullWidthWrapper_ct6b5_9"
+       ],
+       [
+        "_outerWrapper_ct6b5_1"
+       ]
+      ],
+      "classes": [
+       "_button_r6b2u_20",
+       "_small_r6b2u_72",
+       "_secondary_r6b2u_126",
+       "_tooltipAnchor_18bac_4",
+       "_link_ual8v_4",
+       "_underlineNever_ual8v_7"
+      ],
+      "data": {
+       "data-discover": "true"
+      },
+      "heading": "Welcome, Jane",
+      "landmark": {
+       "name": "",
+       "role": "main"
+      },
+      "layer": "document",
+      "name": "",
+      "rect": [
+       556,
+       663,
+       32,
+       32
+      ],
+      "role": "link",
+      "tag": "a",
+      "xpath": "/html/body/div[1]/main[1]/div[1]/div[1]/div[4]/div[1]/div[2]/div[1]/div[1]/div[4]/div[2]/div[1]/div[1]/div[2]/span[1]/a[1]"
+     },
+     "state": "home.balance-graph-hover"
+    }
+   ],
+   "evidenceHash": "cc9a317ca65a1d52bca5fcd06baf12fa1399b52e57b1f6ffc72e0420c8671b03",
+   "facts": {
+    "announced": "link \"\"",
+    "axeSummary": "",
+    "criterion": "4.1.2",
+    "criterionName": "Name, Role, Value",
+    "element": "link in \"Welcome, Jane\"",
+    "rule": "announced-as",
+    "screen": "Home dashboard"
+   },
+   "family": "name",
+   "guidance": "High for an unnamed form control or the sole primary action.",
+   "issueId": null,
+   "key": "name:announced-as:a95586349f54",
+   "measured": false,
+   "primary": "home.index",
+   "proposals": [],
+   "rule": "announced-as",
+   "screens": 19,
+   "severityDefault": "medium",
+   "source": "scanner",
+   "states": [
+    "home.index",
+    "home.balance-graph-hover"
+   ],
+   "summary": "announced-as: announced as link \"\".",
+   "title": "Missing or unclear name: link in \"Welcome, Jane\""
+  },
+  {
+   "attachments": [],
+   "attempt": 1,
+   "basis": "candidate",
+   "criteria": [
+    "4.1.2"
+   ],
+   "evidence": [
+    {
+     "evidence": {
+      "description": "",
+      "name": "",
+      "role": "link",
+      "states": {},
+      "template": "link \"\""
+     },
+     "occurrence": {
+      "ancestors": [
+       [
+        "_addBillButton_ypfxy_67"
+       ],
+       [
+        "_buttons_ypfxy_8"
+       ],
+       [
+        "_topRow_ypfxy_2"
+       ],
+       [
+        "_large_kwlx6_9",
+        "_noHover_3n0se_28",
+        "_border_3n0se_35",
+        "_raisedBackground_3n0se_45",
+        "_card_1ym9q_1",
+        "_card_ypfxy_1"
+       ],
+       [
+        "_moduleRow_ct6b5_48",
+        "_moduleRowThreeColumns_ct6b5_61"
+       ],
+       [
+        "_analyticsDashboard_ct6b5_36"
+       ],
+       [
+        "_fullWidthWrapper_ct6b5_9"
+       ],
+       [
+        "_outerWrapper_ct6b5_1"
+       ]
+      ],
+      "classes": [
+       "_button_r6b2u_20",
+       "_small_r6b2u_72",
+       "_secondary_r6b2u_126",
+       "_tooltipAnchor_18bac_4",
+       "_link_ual8v_4",
+       "_underlineNever_ual8v_7"
+      ],
+      "data": {
+       "data-discover": "true"
+      },
+      "heading": "Welcome, Jane",
+      "landmark": {
+       "name": "",
+       "role": "main"
+      },
+      "layer": "document",
+      "name": "",
+      "rect": [
+       886,
+       663,
+       32,
+       32
+      ],
+      "role": "link",
+      "tag": "a",
+      "xpath": "/html/body/div[1]/main[1]/div[1]/div[1]/div[4]/div[1]/div[2]/div[1]/div[1]/div[4]/div[2]/div[2]/div[1]/div[1]/span[1]/a[1]"
+     },
+     "state": "home.index"
+    },
+    {
+     "evidence": {
+      "description": "",
+      "name": "",
+      "role": "link",
+      "states": {},
+      "template": "link \"\""
+     },
+     "occurrence": {
+      "ancestors": [
+       [
+        "_addBillButton_ypfxy_67"
+       ],
+       [
+        "_buttons_ypfxy_8"
+       ],
+       [
+        "_topRow_ypfxy_2"
+       ],
+       [
+        "_large_kwlx6_9",
+        "_noHover_3n0se_28",
+        "_border_3n0se_35",
+        "_raisedBackground_3n0se_45",
+        "_card_1ym9q_1",
+        "_card_ypfxy_1"
+       ],
+       [
+        "_moduleRow_ct6b5_48",
+        "_moduleRowThreeColumns_ct6b5_61"
+       ],
+       [
+        "_analyticsDashboard_ct6b5_36"
+       ],
+       [
+        "_fullWidthWrapper_ct6b5_9"
+       ],
+       [
+        "_outerWrapper_ct6b5_1"
+       ]
+      ],
+      "classes": [
+       "_button_r6b2u_20",
+       "_small_r6b2u_72",
+       "_secondary_r6b2u_126",
+       "_tooltipAnchor_18bac_4",
+       "_link_ual8v_4",
+       "_underlineNever_ual8v_7"
+      ],
+      "data": {
+       "data-discover": "true"
+      },
+      "heading": "Welcome, Jane",
+      "landmark": {
+       "name": "",
+       "role": "main"
+      },
+      "layer": "document",
+      "name": "",
+      "rect": [
+       886,
+       663,
+       32,
+       32
+      ],
+      "role": "link",
+      "tag": "a",
+      "xpath": "/html/body/div[1]/main[1]/div[1]/div[1]/div[4]/div[1]/div[2]/div[1]/div[1]/div[4]/div[2]/div[2]/div[1]/div[1]/span[1]/a[1]"
+     },
+     "state": "home.balance-graph-hover"
+    }
+   ],
+   "evidenceHash": "cc9a317ca65a1d52bca5fcd06baf12fa1399b52e57b1f6ffc72e0420c8671b03",
+   "facts": {
+    "announced": "link \"\"",
+    "axeSummary": "",
+    "criterion": "4.1.2",
+    "criterionName": "Name, Role, Value",
+    "element": "link in \"Welcome, Jane\"",
+    "rule": "announced-as",
+    "screen": "Home dashboard"
+   },
+   "family": "name",
+   "guidance": "High for an unnamed form control or the sole primary action.",
+   "issueId": null,
+   "key": "name:announced-as:a958a16c6691",
+   "measured": false,
+   "primary": "home.index",
+   "proposals": [],
+   "rule": "announced-as",
+   "screens": 18,
+   "severityDefault": "medium",
+   "source": "scanner",
+   "states": [
+    "home.index",
+    "home.balance-graph-hover"
+   ],
+   "summary": "announced-as: announced as link \"\".",
+   "title": "Missing or unclear name: link in \"Welcome, Jane\""
+  },
+  {
+   "attachments": [],
+   "attempt": 1,
+   "basis": "candidate",
+   "criteria": [
+    "4.1.2"
+   ],
+   "evidence": [
+    {
+     "evidence": {
+      "description": "",
+      "name": "",
+      "role": "button",
+      "states": {
+       "disabled": true
+      },
+      "template": "button \"\" [disabled=true]"
+     },
+     "occurrence": {
+      "ancestors": [
+       [
+        "_periodPicker_4rdgw_1"
+       ],
+       [
+        "_moneyFlowHeader_ct6b5_83"
+       ],
+       [
+        "_moneyFlowRow_ct6b5_65"
+       ],
+       [
+        "_analyticsDashboard_ct6b5_36"
+       ],
+       [
+        "_fullWidthWrapper_ct6b5_9"
+       ],
+       [
+        "_outerWrapper_ct6b5_1"
+       ],
+       [
+        "_dashboardContentWrapper_ct6b5_108",
+        "_pageContent_809q8_151",
+        "_footerPadding_809q8_115"
+       ],
+       [
+        "_dashboardContent_809q8_29",
+        "_hasMobileDesigns_809q8_136"
+       ]
+      ],
+      "classes": [
+       "_button_r6b2u_20",
+       "_small_r6b2u_72",
+       "_tertiary_r6b2u_153",
+       "_appearDisabled_r6b2u_16"
+      ],
+      "data": {},
+      "heading": "Welcome, Jane",
+      "landmark": {
+       "name": "",
+       "role": "main"
+      },
+      "layer": "document",
+      "name": "",
+      "rect": [
+       638,
+       910,
+       32,
+       32
+      ],
+      "role": "button",
+      "tag": "button",
+      "xpath": "/html/body/div[1]/main[1]/div[1]/div[1]/div[4]/div[1]/div[2]/div[1]/div[1]/div[4]/div[3]/div[1]/div[1]/button[2]"
+     },
+     "state": "home.index"
+    },
+    {
+     "evidence": {
+      "description": "",
+      "name": "",
+      "role": "button",
+      "states": {
+       "disabled": true
+      },
+      "template": "button \"\" [disabled=true]"
+     },
+     "occurrence": {
+      "ancestors": [
+       [
+        "_periodPicker_4rdgw_1"
+       ],
+       [
+        "_modalTitle_kf9td_51"
+       ],
+       [
+        "_large_kwlx6_9",
+        "_noHover_3n0se_28",
+        "_shadow_3n0se_25",
+        "_raisedBackground_3n0se_45",
+        "_card_lo4oy_4",
+        "_defaultPadding_lo4oy_27",
+        "_modalContainer_kf9td_3",
+        "_small_lo4oy_11"
+       ],
+       [
+        "ReactModal__Content",
+        "ReactModal__Content--after-open",
+        "_modal_lo4oy_73"
+       ],
+       [
+        "ReactModal__Overlay",
+        "ReactModal__Overlay--after-open",
+        "_overlay_lo4oy_89",
+        "_backgroundColor_lo4oy_103"
+       ],
+       [
+        "ReactModalPortal"
+       ]
+      ],
+      "classes": [
+       "_button_r6b2u_20",
+       "_small_r6b2u_72",
+       "_tertiary_r6b2u_153",
+       "_appearDisabled_r6b2u_16"
+      ],
+      "data": {},
+      "heading": "",
+      "landmark": {
+       "name": "",
+       "role": "dialog"
+      },
+      "layer": "top",
+      "name": "",
+      "rect": [
+       896,
+       367,
+       32,
+       32
+      ],
+      "role": "button",
+      "tag": "button",
+      "xpath": "/html/body/div[8]/div[1]/div[1]/div[1]/div[2]/div[1]/button[2]"
+     },
+     "state": "settings.panorama-statements"
+    }
+   ],
+   "evidenceHash": "f1df882e85e29b8c31fe83ea4ad29c69d2cb0fedcc45269f68ffc7133af62ea2",
+   "facts": {
+    "announced": "button \"\" [disabled=true]",
+    "axeSummary": "",
+    "criterion": "4.1.2",
+    "criterionName": "Name, Role, Value",
+    "element": "button in \"Welcome, Jane\"",
+    "rule": "announced-as",
+    "screen": "Home dashboard"
+   },
+   "family": "name",
+   "guidance": "High for an unnamed form control or the sole primary action.",
+   "issueId": null,
+   "key": "name:announced-as:eec8c09cc0aa",
+   "measured": false,
+   "primary": "home.index",
+   "proposals": [],
+   "rule": "announced-as",
+   "screens": 20,
+   "severityDefault": "medium",
+   "source": "scanner",
+   "states": [
+    "home.index",
+    "settings.panorama-statements"
+   ],
+   "summary": "announced-as: announced as button \"\" [disabled=true].",
+   "title": "Missing or unclear name: button in \"Welcome, Jane\""
+  },
+  {
+   "attachments": [],
+   "attempt": 1,
+   "basis": "candidate",
+   "criteria": [
+    "4.1.2"
+   ],
+   "evidence": [
+    {
+     "evidence": {
+      "description": "",
+      "name": "Operating expenses",
+      "role": "menuitem",
+      "states": {},
+      "template": "menuitem \"Operating expenses\""
+     },
+     "occurrence": {
+      "ancestors": [
+       [
+        "_chip_1xw00_8",
+        "_inactive_1xw00_119",
+        "_truncateText_1xw00_16"
+       ],
+       [
+        "_facets_grqat_22"
+       ],
+       [
+        "_facetChipsContainer_165jq_14"
+       ],
+       [
+        "_facetsAndLinkContainer_165jq_18"
+       ],
+       [],
+       [
+        "_analyticsDashboard_ct6b5_36"
+       ],
+       [
+        "_fullWidthWrapper_ct6b5_9"
+       ],
+       [
+        "_outerWrapper_ct6b5_1"
+       ]
+      ],
+      "classes": [
+       "_mainElement_1xw00_24",
+       "_interactive_1xw00_134"
+      ],
+      "data": {},
+      "heading": "Welcome, Jane",
+      "landmark": {
+       "name": "",
+       "role": "main"
+      },
+      "layer": "document",
+      "name": "Operating expenses",
+      "rect": [
+       895,
+       1505,
+       161,
+       32
+      ],
+      "role": "menuitem",
+      "tag": "button",
+      "xpath": "/html/body/div[1]/main[1]/div[1]/div[1]/div[4]/div[1]/div[2]/div[1]/div[1]/div[4]/div[4]/div[2]/div[1]/span[1]/span[5]/button[1]"
+     },
+     "state": "home.index"
+    },
+    {
+     "evidence": {
+      "description": "",
+      "name": "Operating expenses",
+      "role": "menuitem",
+      "states": {},
+      "template": "menuitem \"Operating expenses\""
+     },
+     "occurrence": {
+      "ancestors": [
+       [
+        "_chip_1xw00_8",
+        "_inactive_1xw00_119",
+        "_truncateText_1xw00_16"
+       ],
+       [
+        "_facets_grqat_22"
+       ],
+       [
+        "_facetChipsContainer_165jq_14"
+       ],
+       [
+        "_facetsAndLinkContainer_165jq_18"
+       ],
+       [],
+       [
+        "_analyticsDashboard_ct6b5_36"
+       ],
+       [
+        "_fullWidthWrapper_ct6b5_9"
+       ],
+       [
+        "_outerWrapper_ct6b5_1"
+       ]
+      ],
+      "classes": [
+       "_mainElement_1xw00_24",
+       "_interactive_1xw00_134"
+      ],
+      "data": {},
+      "heading": "Welcome, Jane",
+      "landmark": {
+       "name": "",
+       "role": "main"
+      },
+      "layer": "document",
+      "name": "Operating expenses",
+      "rect": [
+       895,
+       1505,
+       161,
+       32
+      ],
+      "role": "menuitem",
+      "tag": "button",
+      "xpath": "/html/body/div[1]/main[1]/div[1]/div[1]/div[4]/div[1]/div[2]/div[1]/div[1]/div[4]/div[4]/div[2]/div[1]/span[1]/span[5]/button[1]"
+     },
+     "state": "home.balance-graph-hover"
+    }
+   ],
+   "evidenceHash": "05ea1d7a4c1459de87eeea4ac4af1ac99626e16981a4eedb64f939dea95220e5",
+   "facts": {
+    "announced": "menuitem \"Operating expenses\"",
+    "axeSummary": "",
+    "criterion": "4.1.2",
+    "criterionName": "Name, Role, Value",
+    "element": "menuitem \"Operating expenses\"",
+    "rule": "announced-as",
+    "screen": "Home dashboard"
+   },
+   "family": "role-state",
+   "guidance": "Low for optional ARIA or an invalid autocomplete token; high when aria-hidden hides the whole page.",
+   "issueId": null,
+   "key": "role-state:announced-as:444f350f28ff",
+   "measured": false,
+   "primary": "home.index",
+   "proposals": [],
+   "rule": "announced-as",
+   "screens": 19,
+   "severityDefault": "medium",
+   "source": "scanner",
+   "states": [
+    "home.index",
+    "home.balance-graph-hover"
+   ],
+   "summary": "announced-as: announced as menuitem \"Operating expenses\".",
+   "title": "Wrong role or state: menuitem \"Operating expenses\""
+  },
+  {
+   "attachments": [],
+   "attempt": 1,
+   "basis": "candidate",
+   "criteria": [
+    "4.1.2"
+   ],
+   "evidence": [
+    {
+     "evidence": {
+      "description": "",
+      "name": "Balance table",
+      "role": "button",
+      "states": {},
+      "template": "button \"Balance table\""
+     },
+     "occurrence": {
+      "ancestors": [
+       [
+        "_buttonWithDivider_1xt6d_80"
+       ],
+       [
+        "_container_1xt6d_3",
+        "_large_1xt6d_15"
+       ],
+       [
+        "_toggleMode_q3oue_47"
+       ],
+       [
+        "_controls_q3oue_37"
+       ],
+       [
+        "_topSection_q3oue_12"
+       ],
+       [
+        "_container_q3oue_1"
+       ],
+       [
+        "_large_kwlx6_9",
+        "_noHover_3n0se_28",
+        "_border_3n0se_35",
+        "_raisedBackground_3n0se_45",
+        "_graph_ct6b5_91"
+       ],
+       [
+        "_row_ct6b5_42"
+       ]
+      ],
+      "classes": [
+       "_segment_1xt6d_7",
+       "_last_1xt6d_76"
+      ],
+      "data": {},
+      "heading": "Welcome, Jane",
+      "landmark": {
+       "name": "",
+       "role": "main"
+      },
+      "layer": "document",
+      "name": "Balance table",
+      "rect": [
+       751,
+       270,
+       41,
+       38
+      ],
+      "role": "button",
+      "tag": "button",
+      "xpath": "/html/body/div[1]/main[1]/div[1]/div[1]/div[4]/div[1]/div[2]/div[1]/div[1]/div[4]/div[1]/div[1]/div[1]/div[1]/div[2]/div[1]/div[1]/div[2]/button[1]"
+     },
+     "state": "home.index"
+    },
+    {
+     "evidence": {
+      "description": "",
+      "name": "Balance table",
+      "role": "button",
+      "states": {},
+      "template": "button \"Balance table\""
+     },
+     "occurrence": {
+      "ancestors": [
+       [
+        "_buttonWithDivider_1xt6d_80"
+       ],
+       [
+        "_container_1xt6d_3",
+        "_large_1xt6d_15"
+       ],
+       [
+        "_toggleMode_q3oue_47"
+       ],
+       [
+        "_controls_q3oue_37"
+       ],
+       [
+        "_topSection_q3oue_12"
+       ],
+       [
+        "_container_q3oue_1"
+       ],
+       [
+        "_large_kwlx6_9",
+        "_noHover_3n0se_28",
+        "_border_3n0se_35",
+        "_raisedBackground_3n0se_45",
+        "_graph_ct6b5_91"
+       ],
+       [
+        "_row_ct6b5_42"
+       ]
+      ],
+      "classes": [
+       "_segment_1xt6d_7",
+       "_last_1xt6d_76"
+      ],
+      "data": {},
+      "heading": "Welcome, Jane",
+      "landmark": {
+       "name": "",
+       "role": "main"
+      },
+      "layer": "document",
+      "name": "Balance table",
+      "rect": [
+       751,
+       270,
+       41,
+       38
+      ],
+      "role": "button",
+      "tag": "button",
+      "xpath": "/html/body/div[1]/main[1]/div[1]/div[1]/div[4]/div[1]/div[2]/div[1]/div[1]/div[4]/div[1]/div[1]/div[1]/div[1]/div[2]/div[1]/div[1]/div[2]/button[1]"
+     },
+     "state": "home.balance-graph-hover"
+    }
+   ],
+   "evidenceHash": "d2f2a44eac5a7891ffb690c38ca87676f53ff4a41f5ab02037e83f018460027d",
+   "facts": {
+    "announced": "button \"Balance table\"",
+    "axeSummary": "",
+    "criterion": "4.1.2",
+    "criterionName": "Name, Role, Value",
+    "element": "button \"Balance table\"",
+    "rule": "announced-as",
+    "screen": "Home dashboard"
+   },
+   "family": "role-state",
+   "guidance": "Low for optional ARIA or an invalid autocomplete token; high when aria-hidden hides the whole page.",
+   "issueId": null,
+   "key": "role-state:announced-as:5f14a544ec72",
+   "measured": false,
+   "primary": "home.index",
+   "proposals": [],
+   "rule": "announced-as",
+   "screens": 18,
+   "severityDefault": "medium",
+   "source": "scanner",
+   "states": [
+    "home.index",
+    "home.balance-graph-hover"
+   ],
+   "summary": "announced-as: announced as button \"Balance table\".",
+   "title": "Wrong role or state: button \"Balance table\""
+  }
+ ],
+ "primaries": [
+  "home.index"
+ ],
+ "reach": {
+  "baseUrl": "https://demo.mercury.com",
+  "data": "data",
+  "map": "build/map.json",
+  "run": "2026-10-03-1525",
+  "workspace": "a11y"
+ },
+ "run": "2026-10-03-1525"
+}

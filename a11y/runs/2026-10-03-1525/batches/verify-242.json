@@ -1,0 +1,170 @@
+{
+ "area": "invoicing",
+ "batch": "verify-242",
+ "findings": [
+  {
+   "attachments": [],
+   "attempt": 1,
+   "basis": "violation",
+   "criteria": [
+    "1.3.1"
+   ],
+   "evidence": [
+    {
+     "evidence": {
+      "failureSummary": "Fix any of the following:\n  Element has children which are not allowed: button, button[aria-label]",
+      "messageKey": "unallowed",
+      "values": "button, button[aria-label]"
+     },
+     "occurrence": {
+      "ancestors": [
+       [
+        "_toolbarWrapper_xyqax_1"
+       ],
+       [
+        "_invoiceDashboardWrapper_17p45_1",
+        "_pageContent_809q8_151",
+        "_pageContentWidth_809q8_184"
+       ],
+       [
+        "_dashboardContent_809q8_29"
+       ],
+       [
+        "_layout_809q8_18"
+       ],
+       [
+        "_wrapper_809q8_3"
+       ],
+       [],
+       [
+        "_main_1gb3b_1"
+       ],
+       [
+        "mercury-root"
+       ]
+      ],
+      "classes": [
+       "_toolbarContainer_grqat_4"
+      ],
+      "data": {
+       "data-ds-table-toolbar-menubar": "true"
+      },
+      "heading": "Invoicing",
+      "landmark": {
+       "name": "",
+       "role": "main"
+      },
+      "layer": "document",
+      "name": "",
+      "rect": [
+       346,
+       348,
+       814,
+       32
+      ],
+      "role": "menubar",
+      "tag": "div",
+      "xpath": "/html/body/div[1]/main[1]/div[1]/div[1]/div[4]/div[1]/div[2]/div[2]/div[1]"
+     },
+     "state": "invoicing.paid-card-filter"
+    },
+    {
+     "evidence": {
+      "failureSummary": "Fix any of the following:\n  Element has children which are not allowed: button, button[aria-label]",
+      "messageKey": "unallowed",
+      "values": "button, button[aria-label]"
+     },
+     "occurrence": {
+      "ancestors": [
+       [
+        "_toolbarWrapper_xyqax_1"
+       ],
+       [
+        "_invoiceDashboardWrapper_17p45_1",
+        "_pageContent_809q8_151",
+        "_pageContentWidth_809q8_184"
+       ],
+       [
+        "_dashboardContent_809q8_29"
+       ],
+       [
+        "_layout_809q8_18"
+       ],
+       [
+        "_wrapper_809q8_3"
+       ],
+       [],
+       [
+        "_main_1gb3b_1"
+       ],
+       [
+        "mercury-root"
+       ]
+      ],
+      "classes": [
+       "_toolbarContainer_grqat_4"
+      ],
+      "data": {
+       "data-ds-table-toolbar-menubar": "true"
+      },
+      "heading": "Invoicing",
+      "landmark": {
+       "name": "",
+       "role": "main"
+      },
+      "layer": "document",
+      "name": "",
+      "rect": [
+       346,
+       348,
+       814,
+       32
+      ],
+      "role": "menubar",
+      "tag": "div",
+      "xpath": "/html/body/div[1]/main[1]/div[1]/div[1]/div[4]/div[1]/div[2]/div[2]/div[1]"
+     },
+     "state": "invoicing.filtered-overdue"
+    }
+   ],
+   "evidenceHash": "76072220080e8f62f763729da8266f933916695011b7c170e417fdac6aca0c77",
+   "facts": {
+    "announced": "menubar \"\"",
+    "axeSummary": "Element has children which are not allowed: button, button[aria-label]",
+    "criterion": "1.3.1",
+    "criterionName": "Info and Relationships",
+    "element": "menubar in \"Invoicing\"",
+    "rule": "aria-required-children",
+    "screen": "Paid card filter"
+   },
+   "family": "role-state",
+   "guidance": "Low for optional ARIA or an invalid autocomplete token; high when aria-hidden hides the whole page.",
+   "issueId": null,
+   "key": "role-state:aria-required-children:75e408df268e",
+   "measured": false,
+   "primary": "invoicing.paid-card-filter",
+   "proposals": [],
+   "rule": "aria-required-children",
+   "screens": 3,
+   "severityDefault": "medium",
+   "source": "scanner",
+   "states": [
+    "invoicing.paid-card-filter",
+    "invoicing.filtered-overdue"
+   ],
+   "summary": "aria-required-children: announced as menubar \"\". Element has children which are not allowed: button, button[aria-label]",
+   "title": "Wrong role or state: menubar in \"Invoicing\""
+  }
+ ],
+ "primaries": [
+  "invoicing.paid-card-filter"
+ ],
+ "reach": {
+  "baseUrl": "https://demo.mercury.com",
+  "data": "data",
+  "map": "build/map.json",
+  "run": "2026-10-03-1525",
+  "workspace": "a11y"
+ },
+ "run": "2026-10-03-1525"
+}

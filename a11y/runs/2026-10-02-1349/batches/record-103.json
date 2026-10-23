@@ -1,0 +1,48 @@
+{
+ "batch": "record-103",
+ "reach": {
+  "baseUrl": "https://demo.mercury.com",
+  "data": "data",
+  "map": "build/map.json",
+  "run": "2026-10-02-1349",
+  "workspace": "a11y"
+ },
+ "run": "2026-10-02-1349",
+ "states": [
+  {
+   "area": "transactions",
+   "draft": "not drafted: its parent had no accepted recipe when the drafter ran",
+   "image": "screens/transactions/17-create-view-modal.png",
+   "kind": "modal",
+   "labels": [
+    "Click Saved views",
+    "Choose Monthly money out",
+    "Click Filters (3)",
+    "Click Amount tab",
+    "Open Save menu",
+    "Click Create New View"
+   ],
+   "mutates": true,
+   "note": "Save view dialog listing applied filter chips and an empty Saved view name field; Save stays disabled until a name is typed.",
+   "parent": "transactions.save-view-menu",
+   "state": "transactions.create-view-modal",
+   "title": "Save view modal"
+  },
+  {
+   "area": "transactions",
+   "draft": "not drafted: its parent had no accepted recipe when the drafter ran",
+   "image": "screens/transactions/82-insights-compare-previous-month.png",
+   "kind": "page",
+   "labels": [
+    "Click date chip",
+    "Pick August, open Compare to",
+    "Choose Previous month"
+   ],
+   "mutates": false,
+   "note": "Previous month comparison: Net cashflow vs. previous month with a 30% delta chip, Money out 81% chip, daily chart with the prior month drawn as a second series and a 2 notable transactions note.",
+   "parent": "transactions.insights-compare-menu",
+   "state": "transactions.insights-compare",
+   "title": "Compared to previous month"
+  }
+ ]
+}

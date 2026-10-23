@@ -1,0 +1,40 @@
+{
+ "area": "home",
+ "blocked": [],
+ "edges": [],
+ "issues": [
+  {
+   "category": "a11y",
+   "detail": "The Transactions widget chips and Tasks Incomplete/Completed chips behave like tabs but are exposed as role=menuitem buttons with no tablist or selected state. The avatar menu button and the four widget kebab buttons have no accessible name.",
+   "evidence": "Dashboard: 5 <button role=\"menuitem\"> chips (Recent … Operating expenses), 0 [role=tablist]. Avatar <button aria-haspopup=\"menu\" class=\"_menuButton_ko7ja_21\"> with no aria-label, img alt=\"\". Kebabs: 4× <button aria-haspopup=\"menu\" class=\"… _menuButton_ok3n2_7\"> with no aria-label or text.",
+   "id": "home.i-chips-as-menuitems",
+   "nodeIds": [
+    "home.index-transactions",
+    "home.tasks",
+    "home.avatar-menu",
+    "home.accounts-kebab"
+   ],
+   "severity": "medium",
+   "title": "Filter chips, avatar and widget kebabs lack proper semantics"
+  },
+  {
+   "category": "data-format",
+   "detail": "The same widget family mixes superscript cents, inline cents and abbreviated amounts. Accounts rows show '$200,000.00' with superscript cents, but the hover tooltip for that same row shows '$200,000.00' inline; the Disputes widget shows '$3,444.23' inline; the balance table's 'Pending transfers $71,764.10' is inline while its siblings are superscript; the Invoicing widget puts 'Overdue 4 · $950.00' (superscript) next to 'Paid 12 · $6K' and 'Open 12 items · $12.3K' (abbreviated). Search results and the payment review hero ('$1,042.95', 34px Arcadia Display) also drop the superscript used by the Home hero.",
+   "evidence": "Accounts row: span._superscript_1of3b_35 (15px parent, 10.95px sup, top -2.9px). Hero: 28px Arcadia Display, sup 20.44px. Pending transfers: 13px, fraction span has no _superscript class. Disputes '$3,444.23 at 3 merchants': plain 12px text node. Search '$1,952.15': 15px, fraction span with empty class. Payment review: span._titleHero_qaod7_12 34px/380 plain text '$1,042.95'.",
+   "id": "home.i-cents-format",
+   "nodeIds": [
+    "home.index",
+    "home.balance-table",
+    "home.index-disputes",
+    "home.account-row-tooltip",
+    "home.search-results",
+    "home.task-payment-review"
+   ],
+   "severity": "medium",
+   "title": "Cents shown three different ways on Home"
+  }
+ ],
+ "journeys": [],
+ "nodes": [],
+ "title": "Home & global chrome"
+}

@@ -1,0 +1,45 @@
+{
+ "batch": "record-110",
+ "reach": {
+  "baseUrl": "https://demo.mercury.com",
+  "data": "data",
+  "map": "build/map.json",
+  "run": "2026-10-02-1349",
+  "workspace": "a11y"
+ },
+ "run": "2026-10-02-1349",
+ "states": [
+  {
+   "area": "transactions",
+   "draft": "not drafted: its parent had no accepted recipe when the drafter ran",
+   "image": "screens/transactions/85-bulk-gl-code-applied.png",
+   "kind": "confirmation",
+   "labels": [
+    "Tick row checkboxes",
+    "Open the field dropdown",
+    "Choose GL Code, open values",
+    "Choose 400 - Inventory"
+   ],
+   "mutates": false,
+   "note": "400 - Inventory applied to the selection; a prompt offers \"Apply 400 - Inventory to all future Contractor transactions?\" with Create rule.",
+   "parent": "transactions.bulk-gl-code-values",
+   "state": "transactions.bulk-gl-code-applied",
+   "title": "Bulk GL code applied"
+  },
+  {
+   "area": "transactions",
+   "draft": "not drafted: its parent had no accepted recipe when the drafter ran; the conductor rejected the previous recipe: form-state missing: 'Lunch' typed into the Mercury Working Capital row's Category combobox (the parent's row, which is fine), but the list shows only '+ Create category'. The capture's filtered 'Lunch Perks' match is absent. A term that matches this row's categories (e.g. 'Soft' for Software) would show a real filtered result; a previous recorder failed: policy (now retry: policy.fixtureValues gained empty \"\", 2000000, 10000, 2500, 500, 150, card, a, zzqxnothing, Lunch, Deli 77, 12/31/2099, http://example.invalid/a11y-audit): The label types \"Lunch\" in the row Category combobox; \"Lunch\" is not a fixture value.",
+   "image": "screens/transactions/75-row-category-search.png",
+   "kind": "form-state",
+   "labels": [
+    "Click a row Category combobox",
+    "Type to search categories"
+   ],
+   "mutates": false,
+   "note": "Typing \"Lunch\" in a row's Category combobox filters the list to Lunch Perks with a + Create category action.",
+   "parent": "transactions.row-category-dropdown",
+   "state": "transactions.row-category-search",
+   "title": "Row category search"
+  }
+ ]
+}

@@ -1,0 +1,678 @@
+{
+ "area": "cards",
+ "batch": "verify-144",
+ "findings": [
+  {
+   "attachments": [],
+   "attempt": 1,
+   "basis": "incomplete",
+   "criteria": [
+    "1.4.3"
+   ],
+   "evidence": [
+    {
+     "evidence": {
+      "contrastRatio": 0,
+      "expectedContrastRatio": "4.5:1",
+      "failureSummary": "Fix any of the following:\n  Element's background color could not be determined due to a background image",
+      "fontSize": "9.0pt (12px)",
+      "fontWeight": "normal",
+      "messageKey": "bgImage"
+     },
+     "occurrence": {
+      "ancestors": [
+       [
+        "_cardInfoContainer_2x89r_53"
+       ],
+       [
+        "_mercuryCard_2x89r_26",
+        "_creditVirtual_2x89r_100"
+       ],
+       [
+        "_cardWrapper_2x89r_4"
+       ],
+       [
+        "_cardVariantDissolve_1o1hl_49"
+       ],
+       [
+        "_cardDesignRevealPending_1o1hl_29",
+        "_cardDesignRevealAnimated_1o1hl_33"
+       ],
+       [
+        "_cardWithOverlap_1o1hl_20"
+       ],
+       [
+        "_previewStack_1o1hl_9"
+       ],
+       [
+        "_rightContainer_6va6k_8"
+       ]
+      ],
+      "classes": [
+       "_tiny_qaod7_67",
+       "_cardholderName_2x89r_151"
+      ],
+      "data": {},
+      "heading": "",
+      "landmark": {
+       "name": "",
+       "role": "form"
+      },
+      "layer": "document",
+      "name": "",
+      "rect": [
+       944,
+       485,
+       84,
+       20
+      ],
+      "role": "",
+      "tag": "span",
+      "xpath": "/html/body/div[1]/main[1]/div[1]/div[2]/div[2]/div[3]/form[1]/div[1]/div[1]/div[2]/div[1]/div[1]/div[1]/div[1]/div[1]/div[1]/div[1]/div[1]/div[1]/span[1]"
+     },
+     "state": "cards.issue-card"
+    },
+    {
+     "evidence": {
+      "contrastRatio": 0,
+      "expectedContrastRatio": "4.5:1",
+      "failureSummary": "Fix any of the following:\n  Element's background color could not be determined due to a background image",
+      "fontSize": "10.0pt (13.3333px)",
+      "fontWeight": "normal",
+      "messageKey": "bgImage"
+     },
+     "occurrence": {
+      "ancestors": [
+       [
+        "_dropzone_ex01s_1"
+       ],
+       [
+        "_tabContent_a2zac_49"
+       ],
+       [
+        "session-replay-unmask"
+       ],
+       [
+        "_pageContent_809q8_151",
+        "_pageContentWidth_809q8_184",
+        "_footerPadding_809q8_115"
+       ],
+       [
+        "_dashboardContent_809q8_29"
+       ],
+       [
+        "_layout_809q8_18"
+       ],
+       [
+        "_wrapper_809q8_3"
+       ],
+       []
+      ],
+      "classes": [],
+      "data": {},
+      "heading": "All your bills are paid!",
+      "landmark": {
+       "name": "",
+       "role": "main"
+      },
+      "layer": "document",
+      "name": "Choose Files",
+      "rect": [
+       346,
+       409,
+       968,
+       508
+      ],
+      "role": "button",
+      "tag": "input",
+      "xpath": "/html/body/div[1]/main[1]/div[1]/div[1]/div[4]/div[1]/div[2]/div[2]/div[2]/div[2]/input[1]"
+     },
+     "state": "billpay.inbox-zero"
+    }
+   ],
+   "evidenceHash": "f5a65d8d266aaf4917dcca9db191f451aa36565a0c2386430e7ca3073880edc5",
+   "facts": {
+    "criterion": "1.4.3",
+    "criterionName": "Contrast (Minimum)",
+    "elements": "11 elements",
+    "messageKey": "bgImage",
+    "rule": "color-contrast",
+    "screen": "Create a card form",
+    "why": "it sits on a background image"
+   },
+   "family": "contrast",
+   "guidance": "High under 2:1, or under 3:1 for essential text.",
+   "issueId": null,
+   "key": "contrast:color-contrast:b749a64c75d6",
+   "measured": true,
+   "primary": "cards.issue-card",
+   "proposals": [],
+   "rule": "color-contrast",
+   "screens": 26,
+   "severityDefault": "medium",
+   "source": "scanner",
+   "states": [
+    "cards.issue-card",
+    "billpay.inbox-zero"
+   ],
+   "summary": "axe color-contrast could not decide 11 elements (bgImage): it sits on a background image.",
+   "title": "Needs review: color-contrast, it sits on a background image"
+  },
+  {
+   "attachments": [],
+   "attempt": 1,
+   "basis": "failure",
+   "criteria": [
+    "2.4.7",
+    "2.4.3"
+   ],
+   "evidence": [
+    {
+     "evidence": {
+      "box": [
+       288,
+       678,
+       18,
+       18
+      ],
+      "focus": {
+       "ancestors": [
+        [
+         "_checkboxHeightFix_1wfxj_6",
+         "_spendManagementCheckbox_bj3b2_50",
+         "_checkboxWrapper_1758n_62",
+         "_blockCheckboxWrapper_1km7i_77",
+         "_fillContainer_1km7i_33"
+        ],
+        [
+         "_spendManagementOptions_bj3b2_43"
+        ],
+        [
+         "_childContainer_6kwxg_17"
+        ],
+        [
+         "_container_6kwxg_1"
+        ],
+        [],
+        [
+         "_left_yg1rf_39"
+        ],
+        [
+         "_leftScrollArea_yg1rf_57"
+        ],
+        [
+         "_leftContainer_yg1rf_39",
+         "_splitVariant_yg1rf_82"
+        ]
+       ],
+       "classes": [
+        "_input_1758n_13"
+       ],
+       "data": {},
+       "heading": "",
+       "landmark": {
+        "name": "",
+        "role": "form"
+       },
+       "layer": "document",
+       "name": "Agent Card",
+       "rect": [
+        288,
+        678,
+        18,
+        18
+       ],
+       "role": "checkbox",
+       "tag": "input",
+       "xpath": "/html/body/div[1]/main[1]/div[1]/div[2]/div[2]/div[3]/form[1]/div[1]/div[1]/div[1]/div[1]/div[2]/div[1]/div[3]/div[2]/div[3]/label[1]/input[1]"
+      },
+      "hidden": "invisible",
+      "previous": {
+       "ancestors": [
+        [
+         "_wrapper_v0ae1_3"
+        ],
+        [
+         "_blockStyle_1v12x_10",
+         "_radioButton_12hgs_5"
+        ],
+        [
+         "_blockStyle_g37pd_3",
+         "_rowLayout_g37pd_8"
+        ],
+        [],
+        [
+         "_outerWrapper_g37pd_13"
+        ],
+        [],
+        [
+         "_sectionInput_12hgs_1"
+        ],
+        [
+         "_childContainer_6kwxg_17"
+        ]
+       ],
+       "classes": [
+        "_input_v0ae1_14",
+        "_ds-radio_v0ae1_42",
+        "_hover_v0ae1_51",
+        "_hideFocus_v0ae1_56"
+       ],
+       "data": {},
+       "heading": "",
+       "landmark": {
+        "name": "",
+        "role": "form"
+       },
+       "layer": "document",
+       "name": "Virtual",
+       "rect": [
+        288,
+        587,
+        18,
+        18
+       ],
+       "role": "radio",
+       "tag": "input",
+       "xpath": "/html/body/div[1]/main[1]/div[1]/div[2]/div[2]/div[3]/form[1]/div[1]/div[1]/div[1]/div[1]/div[2]/div[1]/div[3]/div[2]/div[2]/fieldset[1]/div[1]/div[1]/div[1]/div[1]/label[1]/input[1]"
+      },
+      "stop": 9,
+      "stops": 15
+     },
+     "occurrence": {
+      "ancestors": [
+       [
+        "_checkboxHeightFix_1wfxj_6",
+        "_spendManagementCheckbox_bj3b2_50",
+        "_checkboxWrapper_1758n_62",
+        "_blockCheckboxWrapper_1km7i_77",
+        "_fillContainer_1km7i_33"
+       ],
+       [
+        "_spendManagementOptions_bj3b2_43"
+       ],
+       [
+        "_childContainer_6kwxg_17"
+       ],
+       [
+        "_container_6kwxg_1"
+       ],
+       [],
+       [
+        "_left_yg1rf_39"
+       ],
+       [
+        "_leftScrollArea_yg1rf_57"
+       ],
+       [
+        "_leftContainer_yg1rf_39",
+        "_splitVariant_yg1rf_82"
+       ]
+      ],
+      "classes": [
+       "_input_1758n_13"
+      ],
+      "data": {},
+      "heading": "",
+      "landmark": {
+       "name": "",
+       "role": "form"
+      },
+      "layer": "document",
+      "name": "Agent Card",
+      "rect": [
+       288,
+       678,
+       18,
+       18
+      ],
+      "role": "checkbox",
+      "tag": "input",
+      "xpath": "/html/body/div[1]/main[1]/div[1]/div[2]/div[2]/div[3]/form[1]/div[1]/div[1]/div[1]/div[1]/div[2]/div[1]/div[3]/div[2]/div[3]/label[1]/input[1]"
+     },
+     "state": "cards.issue-card"
+    }
+   ],
+   "evidenceHash": "d7987642c3251767fcba129246f4f303dee5c2971840ee9bf0a58f9cc1794430",
+   "facts": {
+    "criterion": "2.4.7",
+    "criterionName": "Focus Visible",
+    "element": "checkbox \"Agent Card\"",
+    "screen": "Create a card form",
+    "screens": 1,
+    "stop": "9"
+   },
+   "family": "focus-visible",
+   "guidance": "High on shared components on primary paths.",
+   "issueId": null,
+   "key": "focus-visible:focus-hidden:f75f2d0faf58",
+   "measured": true,
+   "primary": "cards.issue-card",
+   "proposals": [],
+   "rule": "focus-hidden",
+   "screens": 1,
+   "severityDefault": "medium",
+   "source": "scanner",
+   "states": [
+    "cards.issue-card"
+   ],
+   "summary": "Tab stop 9 focused the checkbox \"Agent Card\", which is invisible, has no size, or sits off screen.",
+   "title": "Tab stops on hidden element: checkbox \"Agent Card\""
+  },
+  {
+   "attachments": [],
+   "attempt": 1,
+   "basis": "violation",
+   "criteria": [
+    "1.3.5"
+   ],
+   "evidence": [
+    {
+     "evidence": {
+      "failureSummary": "Fix all of the following:\n  the autocomplete attribute is incorrectly formatted"
+     },
+     "occurrence": {
+      "ancestors": [
+       [
+        "_inputWrapper_11c85_6"
+       ],
+       [
+        "_wrapper_1xgdp_8"
+       ],
+       [
+        "_sectionInput_12hgs_1"
+       ],
+       [
+        "_sectionInput_1j8bf_1"
+       ],
+       [
+        "_childContainer_6kwxg_17"
+       ],
+       [
+        "_container_6kwxg_1",
+        "_lastSectionPadding_1j8bf_12"
+       ],
+       [],
+       [
+        "_left_yg1rf_39"
+       ]
+      ],
+      "classes": [
+       "_input_11c85_6"
+      ],
+      "data": {
+       "data-1p-ignore": "true",
+       "data-active-item": "true",
+       "data-bwignore": "true",
+       "data-lpignore": "true"
+      },
+      "heading": "",
+      "landmark": {
+       "name": "",
+       "role": "form"
+      },
+      "layer": "document",
+      "name": "Control type",
+      "rect": [
+       267,
+       784,
+       300,
+       40
+      ],
+      "role": "combobox",
+      "tag": "input",
+      "xpath": "/html/body/div[1]/main[1]/div[1]/div[2]/div[2]/div[3]/form[1]/div[1]/div[1]/div[1]/div[1]/div[2]/div[1]/div[5]/div[2]/div[1]/div[1]/div[1]/div[1]/input[1]"
+     },
+     "state": "cards.issue-card"
+    },
+    {
+     "evidence": {
+      "failureSummary": "Fix all of the following:\n  the autocomplete attribute is incorrectly formatted"
+     },
+     "occurrence": {
+      "ancestors": [
+       [
+        "_inputWrapper_11c85_6"
+       ],
+       [
+        "_wrapper_1xgdp_8"
+       ],
+       [
+        "_sectionInput_12hgs_1"
+       ],
+       [
+        "_sectionInput_1j8bf_1"
+       ],
+       [
+        "_childContainer_6kwxg_17"
+       ],
+       [
+        "_container_6kwxg_1",
+        "_lastSectionPadding_1j8bf_12"
+       ],
+       [],
+       [
+        "_createCardContainer_1uuen_2"
+       ]
+      ],
+      "classes": [
+       "_input_11c85_6"
+      ],
+      "data": {
+       "data-1p-ignore": "true",
+       "data-active-item": "true",
+       "data-bwignore": "true",
+       "data-lpignore": "true"
+      },
+      "heading": "Issue Test a card",
+      "landmark": {
+       "name": "",
+       "role": "form"
+      },
+      "layer": "document",
+      "name": "Control type",
+      "rect": [
+       640,
+       845,
+       300,
+       40
+      ],
+      "role": "combobox",
+      "tag": "input",
+      "xpath": "/html/body/div[1]/main[1]/div[1]/div[2]/div[2]/div[3]/form[1]/section[1]/div[2]/div[1]/div[4]/div[2]/div[1]/div[1]/div[1]/div[1]/input[1]"
+     },
+     "state": "settings.invite-issue-card"
+    }
+   ],
+   "evidenceHash": "30de4882b5ac545faf1b14ec3daf704b6c8cd261d1ddb1e9d1fa6f7160c3b5bd",
+   "facts": {
+    "announced": "combobox \"Control type\" [expanded=false, haspopup=listbox]",
+    "axeSummary": "the autocomplete attribute is incorrectly formatted",
+    "criterion": "1.3.5",
+    "criterionName": "Identify Input Purpose",
+    "element": "combobox \"Control type\"",
+    "rule": "autocomplete-valid",
+    "screen": "Create a card form"
+   },
+   "family": "role-state",
+   "guidance": "Low for optional ARIA or an invalid autocomplete token; high when aria-hidden hides the whole page.",
+   "issueId": null,
+   "key": "role-state:autocomplete-valid:9b2b454a571a",
+   "measured": false,
+   "primary": "cards.issue-card",
+   "proposals": [],
+   "rule": "autocomplete-valid",
+   "screens": 8,
+   "severityDefault": "medium",
+   "source": "scanner",
+   "states": [
+    "cards.issue-card",
+    "settings.invite-issue-card"
+   ],
+   "summary": "autocomplete-valid: announced as combobox \"Control type\" [expanded=false, haspopup=listbox]. the autocomplete attribute is incorrectly formatted",
+   "title": "Invalid autocomplete value: combobox \"Control type\""
+  },
+  {
+   "attachments": [],
+   "attempt": 1,
+   "basis": "violation",
+   "criteria": [
+    "1.3.5"
+   ],
+   "evidence": [
+    {
+     "evidence": {
+      "failureSummary": "Fix all of the following:\n  the autocomplete attribute is incorrectly formatted"
+     },
+     "occurrence": {
+      "ancestors": [
+       [
+        "_inputWrapper_11c85_6"
+       ],
+       [
+        "_wrapper_1xgdp_8",
+        "_sectionInputUserSelectionComboBox_17ueg_7",
+        "session-replay-mask"
+       ],
+       [
+        "_sectionInputUserSelection_17ueg_1"
+       ],
+       [],
+       [
+        "_sectionInput_6va6k_117"
+       ],
+       [
+        "_childContainer_6kwxg_17"
+       ],
+       [
+        "_container_6kwxg_1"
+       ],
+       []
+      ],
+      "classes": [
+       "_input_11c85_6"
+      ],
+      "data": {
+       "data-1p-ignore": "true",
+       "data-active-item": "true",
+       "data-bwignore": "true",
+       "data-lpignore": "true"
+      },
+      "heading": "",
+      "landmark": {
+       "name": "",
+       "role": "form"
+      },
+      "layer": "document",
+      "name": "Cardholder",
+      "rect": [
+       267,
+       280,
+       300,
+       40
+      ],
+      "role": "combobox",
+      "tag": "input",
+      "xpath": "/html/body/div[1]/main[1]/div[1]/div[2]/div[2]/div[3]/form[1]/div[1]/div[1]/div[1]/div[1]/div[2]/div[1]/div[2]/div[2]/div[1]/div[1]/div[1]/div[1]/div[1]/input[1]"
+     },
+     "state": "cards.issue-card"
+    },
+    {
+     "evidence": {
+      "failureSummary": "Fix all of the following:\n  the autocomplete attribute is incorrectly formatted"
+     },
+     "occurrence": {
+      "ancestors": [
+       [
+        "_inputWrapper_11c85_6"
+       ],
+       [
+        "_wrapper_1xgdp_8",
+        "_sectionInputUserSelectionComboBox_17ueg_7",
+        "session-replay-mask"
+       ],
+       [
+        "_sectionInputUserSelection_17ueg_1"
+       ],
+       [],
+       [
+        "_sectionInput_6va6k_117"
+       ],
+       [
+        "_childContainer_6kwxg_17"
+       ],
+       [
+        "_container_6kwxg_1"
+       ],
+       []
+      ],
+      "classes": [
+       "_input_11c85_6"
+      ],
+      "data": {
+       "data-1p-ignore": "true",
+       "data-active-item": "true",
+       "data-bwignore": "true",
+       "data-lpignore": "true"
+      },
+      "heading": "",
+      "landmark": {
+       "name": "",
+       "role": "form"
+      },
+      "layer": "document",
+      "name": "Cardholder",
+      "rect": [
+       267,
+       280,
+       300,
+       40
+      ],
+      "role": "combobox",
+      "tag": "input",
+      "xpath": "/html/body/div[1]/main[1]/div[1]/div[2]/div[2]/div[3]/form[1]/div[1]/div[1]/div[1]/div[1]/div[2]/div[1]/div[2]/div[2]/div[1]/div[1]/div[1]/div[1]/div[1]/input[1]"
+     },
+     "state": "cards.issue-card-agent-card"
+    }
+   ],
+   "evidenceHash": "4bf14814d46b260240495ccce6455187dfdc68101b432e5b6249389e4cff863c",
+   "facts": {
+    "announced": "combobox \"Cardholder\" [expanded=false, haspopup=listbox]",
+    "axeSummary": "the autocomplete attribute is incorrectly formatted",
+    "criterion": "1.3.5",
+    "criterionName": "Identify Input Purpose",
+    "element": "combobox \"Cardholder\"",
+    "rule": "autocomplete-valid",
+    "screen": "Create a card form"
+   },
+   "family": "role-state",
+   "guidance": "Low for optional ARIA or an invalid autocomplete token; high when aria-hidden hides the whole page.",
+   "issueId": null,
+   "key": "role-state:autocomplete-valid:e31e8c11915a",
+   "measured": false,
+   "primary": "cards.issue-card",
+   "proposals": [],
+   "rule": "autocomplete-valid",
+   "screens": 7,
+   "severityDefault": "medium",
+   "source": "scanner",
+   "states": [
+    "cards.issue-card",
+    "cards.issue-card-agent-card"
+   ],
+   "summary": "autocomplete-valid: announced as combobox \"Cardholder\" [expanded=false, haspopup=listbox]. the autocomplete attribute is incorrectly formatted",
+   "title": "Invalid autocomplete value: combobox \"Cardholder\""
+  }
+ ],
+ "primaries": [
+  "cards.issue-card"
+ ],
+ "reach": {
+  "baseUrl": "https://demo.mercury.com",
+  "data": "data",
+  "map": "build/map.json",
+  "run": "2026-10-03-1525",
+  "workspace": "a11y"
+ },
+ "run": "2026-10-03-1525"
+}

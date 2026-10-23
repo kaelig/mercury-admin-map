@@ -1,0 +1,168 @@
+{
+ "area": "invoicing",
+ "batch": "verify-481",
+ "findings": [
+  {
+   "attachments": [],
+   "attempt": 1,
+   "basis": "candidate",
+   "criteria": [
+    "3.3.2"
+   ],
+   "evidence": [
+    {
+     "evidence": {
+      "description": "",
+      "name": "0.000",
+      "role": "textbox",
+      "states": {},
+      "template": "textbox \"<n>\""
+     },
+     "occurrence": {
+      "ancestors": [
+       [
+        "_inputBox_q7hf7_93"
+       ],
+       [
+        "_inputBoxWrapper_q7hf7_93"
+       ],
+       [
+        "_textInputWrapper_q7hf7_24"
+       ],
+       [
+        "_provideDSTextInput_q7hf7_6"
+       ],
+       [],
+       [
+        "_salesTaxRow_2qrq0_96"
+       ],
+       [
+        "_lineItems_2qrq0_4"
+       ],
+       []
+      ],
+      "classes": [
+       "_input_q7hf7_93",
+       "_rightAlignedInputWithMargin_2qrq0_123"
+      ],
+      "data": {
+       "data-testid": "sales-tax-input"
+      },
+      "heading": "Invoice set up",
+      "landmark": {
+       "name": "",
+       "role": "main"
+      },
+      "layer": "document",
+      "name": "0.000",
+      "rect": [
+       439,
+       498,
+       117,
+       24
+      ],
+      "role": "textbox",
+      "tag": "input",
+      "xpath": "/html/body/div[1]/main[1]/div[1]/div[2]/div[2]/div[3]/div[1]/div[1]/div[1]/div[1]/div[1]/div[1]/div[2]/div[2]/div[2]/div[2]/div[4]/div[3]/div[1]/div[1]/div[1]/div[1]/input[1]"
+     },
+     "state": "invoicing.create-sales-tax"
+    },
+    {
+     "evidence": {
+      "description": "",
+      "name": "0.000",
+      "role": "textbox",
+      "states": {},
+      "template": "textbox \"<n>\""
+     },
+     "occurrence": {
+      "ancestors": [
+       [
+        "_inputBox_q7hf7_93"
+       ],
+       [
+        "_inputBoxWrapper_q7hf7_93"
+       ],
+       [
+        "_textInputWrapper_q7hf7_24"
+       ],
+       [
+        "_provideDSTextInput_q7hf7_6"
+       ],
+       [],
+       [
+        "_salesTaxRow_2qrq0_96"
+       ],
+       [
+        "_lineItems_2qrq0_4"
+       ],
+       []
+      ],
+      "classes": [
+       "_input_q7hf7_93",
+       "_rightAlignedInputWithMargin_2qrq0_123"
+      ],
+      "data": {
+       "data-testid": "sales-tax-input"
+      },
+      "heading": "Invoice set up",
+      "landmark": {
+       "name": "",
+       "role": "main"
+      },
+      "layer": "document",
+      "name": "0.000",
+      "rect": [
+       439,
+       498,
+       117,
+       24
+      ],
+      "role": "textbox",
+      "tag": "input",
+      "xpath": "/html/body/div[1]/main[1]/div[1]/div[2]/div[2]/div[3]/div[1]/div[1]/div[1]/div[1]/div[1]/div[1]/div[2]/div[2]/div[2]/div[2]/div[4]/div[3]/div[1]/div[1]/div[1]/div[1]/input[1]"
+     },
+     "state": "invoicing.create-preview-payer"
+    }
+   ],
+   "evidenceHash": "aefb716301b5b8329617affa8b94857c7d9546d072f55a1193eee1c4cda543e6",
+   "facts": {
+    "announced": "textbox \"<n>\"",
+    "axeSummary": "",
+    "criterion": "3.3.2",
+    "criterionName": "Labels or Instructions",
+    "element": "textbox \"<n>\"",
+    "rule": "announced-as",
+    "screen": "Sales tax added"
+   },
+   "family": "name",
+   "guidance": "High for an unnamed form control or the sole primary action.",
+   "issueId": null,
+   "key": "name:announced-as:66c235b0f01f",
+   "measured": false,
+   "primary": "invoicing.create-sales-tax",
+   "proposals": [],
+   "rule": "announced-as",
+   "screens": 4,
+   "severityDefault": "medium",
+   "source": "scanner",
+   "states": [
+    "invoicing.create-sales-tax",
+    "invoicing.create-preview-payer"
+   ],
+   "summary": "announced-as: announced as textbox \"<n>\".",
+   "title": "Missing or unclear name: textbox \"<n>\""
+  }
+ ],
+ "primaries": [
+  "invoicing.create-sales-tax"
+ ],
+ "reach": {
+  "baseUrl": "https://demo.mercury.com",
+  "data": "data",
+  "map": "build/map.json",
+  "run": "2026-10-03-1525",
+  "workspace": "a11y"
+ },
+ "run": "2026-10-03-1525"
+}

@@ -1,0 +1,325 @@
+{
+ "area": "home",
+ "batch": "verify-202",
+ "findings": [
+  {
+   "attachments": [],
+   "attempt": 1,
+   "basis": "violation",
+   "criteria": [
+    "4.1.2"
+   ],
+   "evidence": [
+    {
+     "evidence": {
+      "failureSummary": "Fix any of the following:\n  Element does not have inner text that is visible to screen readers\n  aria-label attribute does not exist or is empty\n  aria-labelledby attribute does not exist, references elements that do not exist or references elements that are empty\n  Element has no title attribute\n  Element does not have an implicit (wrapped) <label>\n  Element does not have an explicit <label>\n  Element's default semantics were not overridden with role=\"none\" or role=\"presentation\"",
+      "messageKey": "noAttr"
+     },
+     "occurrence": {
+      "ancestors": [
+       [
+        "_sizeControlsContainer_1udi3_71",
+        "_controlSection_1udi3_22"
+       ],
+       [
+        "_controls_1udi3_5"
+       ],
+       [
+        "_controlsContainer_1udi3_46"
+       ],
+       [
+        "_viewerAndControlsWrapper_1lhz4_14"
+       ],
+       [],
+       [
+        "_pdfRenderer_smemz_99"
+       ],
+       [
+        "_rightWrapper_usdau_39",
+        "_attachmentViewerBackground_15al5_359"
+       ],
+       [
+        "_contentsWrapper_usdau_1",
+        "_container_15al5_4"
+       ]
+      ],
+      "classes": [
+       "_button_r6b2u_20",
+       "_small_r6b2u_72",
+       "_tertiary_r6b2u_153"
+      ],
+      "data": {},
+      "heading": "",
+      "landmark": {
+       "name": "",
+       "role": "main"
+      },
+      "layer": "document",
+      "name": "",
+      "rect": [
+       1121,
+       840,
+       32,
+       32
+      ],
+      "role": "button",
+      "tag": "button",
+      "xpath": "/html/body/div[1]/main[1]/div[1]/div[2]/div[2]/div[3]/div[1]/div[1]/div[2]/div[1]/div[1]/div[1]/div[2]/div[1]/div[2]/button[1]"
+     },
+     "state": "home.task-payment-review"
+    },
+    {
+     "evidence": {
+      "failureSummary": "Fix any of the following:\n  Element does not have inner text that is visible to screen readers\n  aria-label attribute does not exist or is empty\n  aria-labelledby attribute does not exist, references elements that do not exist or references elements that are empty\n  Element has no title attribute\n  Element does not have an implicit (wrapped) <label>\n  Element does not have an explicit <label>\n  Element's default semantics were not overridden with role=\"none\" or role=\"presentation\"",
+      "messageKey": "noAttr"
+     },
+     "occurrence": {
+      "ancestors": [
+       [
+        "_sizeControlsContainer_1udi3_71",
+        "_controlSection_1udi3_22"
+       ],
+       [
+        "_controls_1udi3_5"
+       ],
+       [
+        "_controlsContainer_1udi3_46"
+       ],
+       [
+        "_viewerAndControlsWrapper_1lhz4_14"
+       ],
+       [],
+       [
+        "_pdfRenderer_smemz_99"
+       ],
+       [
+        "_attachmentWrapper_15al5_161"
+       ],
+       [
+        "_tooltipAnchor_18bac_4",
+        "_preview_15al5_94",
+        "_attachmentViewerBackground_15al5_359",
+        "_withAttachment_15al5_86"
+       ]
+      ],
+      "classes": [
+       "_button_r6b2u_20",
+       "_small_r6b2u_72",
+       "_tertiary_r6b2u_153"
+      ],
+      "data": {},
+      "heading": "Recipient",
+      "landmark": {
+       "name": "",
+       "role": "main"
+      },
+      "layer": "document",
+      "name": "",
+      "rect": [
+       1151,
+       840,
+       32,
+       32
+      ],
+      "role": "button",
+      "tag": "button",
+      "xpath": "/html/body/div[1]/main[1]/div[1]/div[2]/div[2]/div[1]/div[2]/section[3]/div[2]/div[1]/div[1]/div[1]/div[2]/div[1]/div[3]/button[1]"
+     },
+     "state": "billpay.pay-recipient"
+    }
+   ],
+   "evidenceHash": "f045e83ffc7af96cf74a4bddbacd38037474764344e315d7ed9f5f79f578b822",
+   "facts": {
+    "announced": "button \"\"",
+    "axeSummary": "Element does not have inner text that is visible to screen readers; aria-label attribute does not exist or is empty; aria-labelledby attribute does not exist,…",
+    "criterion": "4.1.2",
+    "criterionName": "Name, Role, Value",
+    "element": "button in the main landmark",
+    "rule": "button-name",
+    "screen": "Task: payment approval review"
+   },
+   "family": "name",
+   "guidance": "High for an unnamed form control or the sole primary action.",
+   "issueId": null,
+   "key": "name:button-name:a64c26a65d4c",
+   "measured": false,
+   "primary": "home.task-payment-review",
+   "proposals": [],
+   "rule": "button-name",
+   "screens": 19,
+   "severityDefault": "medium",
+   "source": "scanner",
+   "states": [
+    "home.task-payment-review",
+    "billpay.pay-recipient"
+   ],
+   "summary": "button-name: announced as button \"\". Element does not have inner text that is visible to screen readers; aria-label attribute does not exist or is empty; aria-labelledby attribute does not exist,…",
+   "title": "Missing or unclear name: button in the main landmark"
+  },
+  {
+   "attachments": [],
+   "attempt": 1,
+   "basis": "violation",
+   "criteria": [
+    "4.1.2"
+   ],
+   "evidence": [
+    {
+     "evidence": {
+      "failureSummary": "Fix any of the following:\n  Element does not have inner text that is visible to screen readers\n  aria-label attribute does not exist or is empty\n  aria-labelledby attribute does not exist, references elements that do not exist or references elements that are empty\n  Element has no title attribute\n  Element does not have an implicit (wrapped) <label>\n  Element does not have an explicit <label>\n  Element's default semantics were not overridden with role=\"none\" or role=\"presentation\"",
+      "messageKey": "noAttr"
+     },
+     "occurrence": {
+      "ancestors": [
+       [
+        "_documentNameContainer_1udi3_69",
+        "_controlSection_1udi3_22"
+       ],
+       [
+        "_controls_1udi3_5"
+       ],
+       [
+        "_controlsContainer_1udi3_46"
+       ],
+       [
+        "_viewerAndControlsWrapper_1lhz4_14"
+       ],
+       [],
+       [
+        "_pdfRenderer_smemz_99"
+       ],
+       [
+        "_rightWrapper_usdau_39",
+        "_attachmentViewerBackground_15al5_359"
+       ],
+       [
+        "_contentsWrapper_usdau_1",
+        "_container_15al5_4"
+       ]
+      ],
+      "classes": [
+       "_button_r6b2u_20",
+       "_small_r6b2u_72",
+       "_tertiary_r6b2u_153"
+      ],
+      "data": {},
+      "heading": "",
+      "landmark": {
+       "name": "",
+       "role": "main"
+      },
+      "layer": "document",
+      "name": "",
+      "rect": [
+       1056,
+       840,
+       32,
+       32
+      ],
+      "role": "button",
+      "tag": "button",
+      "xpath": "/html/body/div[1]/main[1]/div[1]/div[2]/div[2]/div[3]/div[1]/div[1]/div[2]/div[1]/div[1]/div[1]/div[2]/div[1]/div[1]/button[1]"
+     },
+     "state": "home.task-payment-review"
+    },
+    {
+     "evidence": {
+      "failureSummary": "Fix any of the following:\n  Element does not have inner text that is visible to screen readers\n  aria-label attribute does not exist or is empty\n  aria-labelledby attribute does not exist, references elements that do not exist or references elements that are empty\n  Element has no title attribute\n  Element does not have an implicit (wrapped) <label>\n  Element does not have an explicit <label>\n  Element's default semantics were not overridden with role=\"none\" or role=\"presentation\"",
+      "messageKey": "noAttr"
+     },
+     "occurrence": {
+      "ancestors": [
+       [
+        "_documentNameContainer_1udi3_69",
+        "_controlSection_1udi3_22"
+       ],
+       [
+        "_controls_1udi3_5"
+       ],
+       [
+        "_controlsContainer_1udi3_46"
+       ],
+       [
+        "_viewerAndControlsWrapper_1lhz4_14"
+       ],
+       [],
+       [
+        "_pdfRenderer_smemz_99"
+       ],
+       [
+        "_attachmentWrapper_15al5_161"
+       ],
+       [
+        "_tooltipAnchor_18bac_4",
+        "_preview_15al5_94",
+        "_attachmentViewerBackground_15al5_359",
+        "_withAttachment_15al5_86"
+       ]
+      ],
+      "classes": [
+       "_button_r6b2u_20",
+       "_small_r6b2u_72",
+       "_tertiary_r6b2u_153"
+      ],
+      "data": {},
+      "heading": "Recipient",
+      "landmark": {
+       "name": "",
+       "role": "main"
+      },
+      "layer": "document",
+      "name": "",
+      "rect": [
+       1086,
+       840,
+       32,
+       32
+      ],
+      "role": "button",
+      "tag": "button",
+      "xpath": "/html/body/div[1]/main[1]/div[1]/div[2]/div[2]/div[1]/div[2]/section[3]/div[2]/div[1]/div[1]/div[1]/div[2]/div[1]/div[2]/button[1]"
+     },
+     "state": "billpay.pay-recipient"
+    }
+   ],
+   "evidenceHash": "f045e83ffc7af96cf74a4bddbacd38037474764344e315d7ed9f5f79f578b822",
+   "facts": {
+    "announced": "button \"\"",
+    "axeSummary": "Element does not have inner text that is visible to screen readers; aria-label attribute does not exist or is empty; aria-labelledby attribute does not exist,…",
+    "criterion": "4.1.2",
+    "criterionName": "Name, Role, Value",
+    "element": "button in the main landmark",
+    "rule": "button-name",
+    "screen": "Task: payment approval review"
+   },
+   "family": "name",
+   "guidance": "High for an unnamed form control or the sole primary action.",
+   "issueId": null,
+   "key": "name:button-name:cac4c1d56e5e",
+   "measured": false,
+   "primary": "home.task-payment-review",
+   "proposals": [],
+   "rule": "button-name",
+   "screens": 19,
+   "severityDefault": "medium",
+   "source": "scanner",
+   "states": [
+    "home.task-payment-review",
+    "billpay.pay-recipient"
+   ],
+   "summary": "button-name: announced as button \"\". Element does not have inner text that is visible to screen readers; aria-label attribute does not exist or is empty; aria-labelledby attribute does not exist,…",
+   "title": "Missing or unclear name: button in the main landmark"
+  }
+ ],
+ "primaries": [
+  "home.task-payment-review"
+ ],
+ "reach": {
+  "baseUrl": "https://demo.mercury.com",
+  "data": "data",
+  "map": "build/map.json",
+  "run": "2026-10-03-1525",
+  "workspace": "a11y"
+ },
+ "run": "2026-10-03-1525"
+}

@@ -1,6 +1,6 @@
 # Mercury Admin Map
 
-A map of demo.mercury.com in the Admin view: 915 screens (pages, modals, drawers, menus, form states, validation errors, confirmations), 1,125 links between them, 66 user journeys and 232 design-system issues, shown on a pan-and-zoom canvas.
+A map of demo.mercury.com in the Admin view: 915 screens (pages, modals, drawers, menus, form states, validation errors, confirmations), 1,125 links between them, 66 user journeys and 236 design-system issues, shown on a pan-and-zoom canvas.
 
 ## Open it
 
@@ -8,13 +8,13 @@ Live at <https://mercury-admin-map.netlify.app> (public, `noindex`). Locally, op
 
 - **Journeys** view: each journey is a row of numbered screenshots joined by the action that leads to the next screen. States outside any journey sit under "Other screens" in each area.
 - **Flow graph** view: every screen and link in an area, laid out as a graph.
-- Click a screen to open its full screenshot, notes, issues, and where it leads to and comes from. Arrow keys step through a journey.
-- **Audit** tab: 14 patterns that recur across areas come first, then every issue by category and severity. Clicking one highlights the screens where it shows up.
-- Drag to pan; scroll, pinch or Shift+scroll to zoom; F to fit. Zoom in and sharper screenshots load in place of thumbnails.
-- **Links**: the URL always describes what is on screen, so any view can be shared or bookmarked, and Back/Forward step through selections. Parameters: `view=graph`, `q=<search>`, `journey=`, `issue=` or `pattern=<id>` (highlight), `screen=<nodeId>` (open screen), `lane=<journeyId>` (which journey row that screen sits in), `at=<x>,<y>,<zoom>` (viewport centre in map units; added once you pan or zoom). Example: `?view=graph&journey=home.j-clear-approvals&screen=home.task-invite-review`. Old `#<nodeId>` links still work.
-- **C** centres the selected screen; **Esc** closes the panel, then clears the highlight.
-- Click the screenshot in the panel to view it full screen: click, scroll, pinch or **+**/**−** to zoom, drag or arrow keys to pan, **0** to fit, **Esc** to close. Cmd/Ctrl-click or middle-click opens the image in a new tab. The path under the title opens that page on demo.mercury.com.
-- **Data for agents**: `agent/README.md` (also `llms.txt` at the root) explains the ticket-ready export. It is a black-box audit; findings must be verified against Mercury's internal conventions before anyone files them.
+- Click a screen to open its full screenshot, notes, and where it leads to and comes from (plus its design issues in Dev mode). Arrow keys step through a journey.
+- **Dev mode** (switch at the bottom of the sidebar, off by default, remembered per browser) shows the design-system audit: issue badges on the cards, each screen's issues in the panel, the **Data for agents** link, and the **Audit** tab, where 15 patterns that recur across areas come first, then every issue by category and severity. Clicking one highlights the screens where it shows up.
+- Drag to pan; scroll, pinch or Shift+scroll to zoom; F to fit. Hold **Z** and click to zoom in on that point, or **Z**+**Option** and click to zoom out. Zoom in, up to 800%, and sharper screenshots load in place of thumbnails, up to the lossless original.
+- **Links**: the URL always describes what is on screen, so any view can be shared or bookmarked, and Back/Forward step through selections. Parameters: `view=graph`, `q=<search>`, `journey=`, `issue=` or `pattern=<id>` (highlight; opening an `issue=` or `pattern=` link turns Dev mode on, while Back/Forward leave it as you set it), `screen=<nodeId>` (open screen), `lane=<journeyId>` (which journey row that screen sits in), `at=<x>,<y>,<zoom>` (viewport centre in map units; added once you pan or zoom). Example: `?view=graph&journey=home.j-clear-approvals&screen=home.task-invite-review`. Old `#<nodeId>` links still work.
+- **⌘K** (Ctrl+K on Windows and Linux) jumps to search. **1** and **2** switch to Journeys and Flow graph. **C** centres the selected screen; **Esc** closes the panel, then clears the highlight.
+- Click the screenshot in the panel to view it full screen: click, scroll, pinch or **+**/**−** to zoom, drag or arrow keys to pan, **0** to fit, **Esc** to close. Z+click and Z+Option+click zoom in and out there too. Cmd/Ctrl-click or middle-click opens the image in a new tab. The path under the title opens that page on demo.mercury.com.
+- **Data for agents** (Dev mode): `agent/README.md` (also `llms.txt` at the root) explains the ticket-ready export. Each issue in the screen panel, and the banner while an issue is highlighted, links to its ticket under `agent/tickets/<issue id>.md` ("Agent instructions"). It is a black-box audit; findings must be verified against Mercury's internal conventions before anyone files them.
 
 ## Files
 
@@ -30,6 +30,8 @@ Live at <https://mercury-admin-map.netlify.app> (public, `noindex`). Locally, op
 | `assets/` | Mercury's Arcadia webfonts and the `--ds-*` token dump they came with (`mercury-theme.json`) |
 | `build.py` | The whole pipeline, see below |
 | `audit/` | Chrome DevTools MCP scans used to check cross-page findings |
+| `a11y/` | Committed accessibility-audit data: the mutation policy, replay recipes, each run's ledger (`runs/<id>/`, without its raw files and screenshots) and the published snapshot (`published/`) that `build.py` merges |
+| `tools/a11y/` | The accessibility-audit tooling: `audit.py` runs every stage, see [`tools/a11y/README.md`](tools/a11y/README.md) |
 | `screens-1x/`, `data-1x-backup/` | First pass at 1x, kept for reference; safe to delete |
 
 ## Build and deploy
@@ -41,7 +43,17 @@ MAP_BASE_URL=https://mercury-admin-map.netlify.app python3 build.py   # absolute
 netlify deploy --prod --dir dist
 ```
 
-`build.py` merges the manifests, encodes each screenshot three ways (400px and 800px lossy, 2880px lossless WebP; only changed PNGs are re-encoded), packs every screen into one 128×80 sprite sheet, runs the layout prerender and esbuild, inlines data, layouts, app and fonts into `dist/index.html`, writes the agent export, and adds `robots.txt` and Netlify `_headers` (`X-Robots-Tag: noindex`).
+`build.py` merges the manifests, encodes each screenshot three ways (400px and 800px lossy, 2880px lossless WebP; only changed PNGs are re-encoded), packs every screen into one 128×80 sprite sheet, runs the layout prerender and esbuild, inlines data, layouts, app and fonts into `dist/index.html`, writes the agent export, renders the accessibility report when `a11y/published/` exists, and adds `robots.txt` and Netlify `_headers` (`X-Robots-Tag: noindex`). A `data/*.json` file that does not parse is left out of the map and the agent export, and the build prints `WARN <file>: invalid JSON (<error>)` as it finishes. `tools/export_agent_data.py` run on its own stops on that file instead.
+
+## Accessibility audit
+
+A repeatable WCAG 2.2 AA audit of every screen in the map. A scripted Playwright sweep replays each screen on demo.mercury.com and measures it, Sonnet agents try to disprove every finding on the live demo, and the verified findings are published to `a11y/published/`. `build.py` merges that snapshot into the map, as `a11y` issues on their screens, and into the agent export.
+
+Published run `2026-10-03-1525` (demo build `0c71cd6`): 796 of 915 states audited, 835 verified failures (52 high, 418 medium, 365 low; 818 from the scripted checks, 17 hand-found), 433 scanner findings withdrawn by verifiers.
+
+- **Report:** [`dist/a11y/index.html`](dist/a11y/index.html), built only when `a11y/published/` exists. It covers what was tested and what was not, findings by WCAG principle, and what changed since the last published run. Each row opens the map with that issue's screens highlighted.
+- **Run, resume or refresh it** with the `a11y-audit` skill in Claude Code: [`.agents/skills/a11y-audit/SKILL.md`](.agents/skills/a11y-audit/SKILL.md). It stops before anything reaches an audience and never deploys.
+- **Run stages by hand,** read the file formats, or follow a fixture run from plan to publish: [`tools/a11y/README.md`](tools/a11y/README.md). `npm run a11y:test` runs the tooling's tests.
 
 ## How the viewer renders
 

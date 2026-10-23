@@ -1,0 +1,231 @@
+{
+ "area": "settings",
+ "batch": "verify-353",
+ "findings": [
+  {
+   "attachments": [],
+   "attempt": 1,
+   "basis": "failure",
+   "criteria": [
+    "2.4.3"
+   ],
+   "evidence": [
+    {
+     "evidence": {
+      "closedBy": "escape",
+      "focus": {
+       "ancestors": [
+        [
+         "_tableBody_1cp5b_1"
+        ],
+        [
+         "_table_1acga_4"
+        ],
+        [
+         "_tokenTableWrapper_166u7_60",
+         "_tableWrapper_1acga_4"
+        ],
+        [],
+        [],
+        [
+         "_pageContent_809q8_151",
+         "_pageContentWidth_809q8_184",
+         "_footerPadding_809q8_115"
+        ],
+        [
+         "_dashboardContent_809q8_29"
+        ],
+        [
+         "_layout_809q8_18"
+        ]
+       ],
+       "classes": [
+        "_tableRow_137xu_3"
+       ],
+       "data": {},
+       "heading": "API Tokens",
+       "landmark": {
+        "name": "",
+        "role": "main"
+       },
+       "layer": "document",
+       "name": "",
+       "rect": [
+        346,
+        442,
+        968,
+        51
+       ],
+       "role": "row",
+       "tag": "tr",
+       "xpath": "/html/body/div[1]/main[1]/div[1]/div[1]/div[4]/div[1]/div[2]/div[2]/div[2]/div[1]/table[1]/tbody[1]/tr[4]"
+      },
+      "stops": 1,
+      "trace": [
+       {
+        "focus": {
+         "label": "Custom Scopes",
+         "tag": "input",
+         "xpath": "/html/body/div[10]/div[1]/div[1]/div[1]/form[1]/div[1]/section[1]/div[2]/div[1]/input[1]"
+        },
+        "key": "start",
+        "where": "outside"
+       },
+       {
+        "focus": {
+         "label": "",
+         "tag": "input",
+         "xpath": "/html/body/div[10]/div[1]/div[1]/div[1]/form[1]/div[1]/section[1]/div[3]/div[1]/input[1]"
+        },
+        "key": "Tab",
+        "where": "trigger"
+       },
+       {
+        "focus": {
+         "label": "",
+         "tag": "input",
+         "xpath": "/html/body/div[10]/div[1]/div[1]/div[1]/form[1]/div[1]/section[1]/div[3]/div[1]/input[1]"
+        },
+        "key": "Enter",
+        "where": "trigger"
+       },
+       {
+        "focus": {
+         "label": "",
+         "tag": "input",
+         "xpath": "/html/body/div[10]/div[1]/div[1]/div[1]/form[1]/div[1]/section[1]/div[3]/div[1]/input[1]"
+        },
+        "key": "Space",
+        "where": "trigger"
+       },
+       {
+        "focus": {
+         "label": "",
+         "tag": "input",
+         "xpath": "/html/body/div[10]/div[1]/div[1]/div[1]/form[1]/div[1]/section[1]/div[3]/div[1]/input[1]"
+        },
+        "key": "settle",
+        "where": "trigger"
+       },
+       {
+        "focus": {
+         "label": "Create an API token",
+         "tag": "tr",
+         "xpath": "/html/body/div[1]/main[1]/div[1]/div[1]/div[4]/div[1]/div[2]/div[2]/div[2]/div[1]/table[1]/tbody[1]/tr[4]"
+        },
+        "key": "Escape",
+        "where": "outside"
+       },
+       {
+        "focus": {
+         "label": "Create an API token",
+         "tag": "tr",
+         "xpath": "/html/body/div[1]/main[1]/div[1]/div[1]/div[4]/div[1]/div[2]/div[2]/div[2]/div[1]/table[1]/tbody[1]/tr[4]"
+        },
+        "key": "settle",
+        "where": "outside"
+       }
+      ]
+     },
+     "occurrence": {
+      "ancestors": [
+       [
+        "_inputWrapper_11c85_6"
+       ],
+       [
+        "_wrapper_1xgdp_8"
+       ],
+       [
+        "_createTokenForm_w7jji_1"
+       ],
+       [],
+       [],
+       [
+        "_large_kwlx6_9",
+        "_noHover_3n0se_28",
+        "_shadow_3n0se_25",
+        "_raisedBackground_3n0se_45",
+        "_card_lo4oy_4",
+        "_defaultPadding_lo4oy_27",
+        "_small_lo4oy_11"
+       ],
+       [
+        "ReactModal__Content",
+        "ReactModal__Content--after-open",
+        "_modal_lo4oy_73"
+       ],
+       [
+        "ReactModal__Overlay",
+        "ReactModal__Overlay--after-open",
+        "_overlay_lo4oy_89",
+        "_backgroundColor_lo4oy_103"
+       ]
+      ],
+      "classes": [
+       "_input_11c85_6"
+      ],
+      "data": {
+       "data-1p-ignore": "true",
+       "data-active-item": "true",
+       "data-bwignore": "true",
+       "data-lpignore": "true"
+      },
+      "heading": "Create an API token",
+      "landmark": {
+       "name": "",
+       "role": "form"
+      },
+      "layer": "document",
+      "name": "Scopes",
+      "rect": [
+       536,
+       452,
+       335,
+       40
+      ],
+      "role": "combobox",
+      "tag": "input",
+      "xpath": "/html/body/div[10]/div[1]/div[1]/div[1]/form[1]/div[1]/section[1]/div[3]/div[1]/input[1]"
+     },
+     "state": "settings.token-scopes-list"
+    }
+   ],
+   "evidenceHash": "c2738432358b86f49c0da053645fe9717ea67ec789356bdeb602007f5bb77dea",
+   "facts": {
+    "criterion": "2.4.3",
+    "criterionName": "Focus Order",
+    "element": "combobox \"Scopes\"",
+    "focus": "row in \"API Tokens\"",
+    "overlay": "unnamed listbox",
+    "screen": "Custom scopes list"
+   },
+   "family": "dialog-focus",
+   "guidance": "High when controls inside are unreachable.",
+   "issueId": null,
+   "key": "dialog-focus:dialog-focus-not-returned:ae7a755389f4",
+   "measured": false,
+   "primary": "settings.token-scopes-list",
+   "proposals": [],
+   "rule": "dialog-focus-not-returned",
+   "screens": 1,
+   "severityDefault": "low",
+   "source": "scanner",
+   "states": [
+    "settings.token-scopes-list"
+   ],
+   "summary": "Esc closed the unnamed listbox and focus went to the row in \"API Tokens\", not back to the combobox \"Scopes\".",
+   "title": "Focus lost after closing unnamed listbox"
+  }
+ ],
+ "primaries": [
+  "settings.token-scopes-list"
+ ],
+ "reach": {
+  "baseUrl": "https://demo.mercury.com",
+  "data": "data",
+  "map": "build/map.json",
+  "run": "2026-10-03-1525",
+  "workspace": "a11y"
+ },
+ "run": "2026-10-03-1525"
+}

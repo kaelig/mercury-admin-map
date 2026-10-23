@@ -1,0 +1,232 @@
+{
+ "area": "settings",
+ "batch": "verify-517",
+ "findings": [
+  {
+   "attachments": [],
+   "attempt": 1,
+   "basis": "candidate",
+   "criteria": [
+    "4.1.2"
+   ],
+   "evidence": [
+    {
+     "evidence": {
+      "description": "",
+      "name": "Pay annually Pay annually -15%",
+      "role": "button",
+      "states": {},
+      "template": "button \"Pay annually Pay annually -<n>%\""
+     },
+     "occurrence": {
+      "ancestors": [
+       [
+        "_buttonWithDivider_1xt6d_80"
+       ],
+       [
+        "_container_1xt6d_3",
+        "_large_1xt6d_15"
+       ],
+       [
+        "_billingPlanToggle_ijyce_30"
+       ],
+       [
+        "_headerRow_ijyce_20"
+       ],
+       [
+        "_container_ijyce_4"
+       ],
+       [
+        "_large_kwlx6_9",
+        "_noHover_3n0se_28",
+        "_shadow_3n0se_25",
+        "_raisedBackground_3n0se_45",
+        "_card_lo4oy_4",
+        "_card_94z7m_10"
+       ],
+       [
+        "ReactModal__Content",
+        "ReactModal__Content--after-open",
+        "_modal_lo4oy_73",
+        "_modalContent_94z7m_6"
+       ],
+       [
+        "ReactModal__Overlay",
+        "ReactModal__Overlay--after-open",
+        "_overlay_lo4oy_89",
+        "_overlay_94z7m_1"
+       ]
+      ],
+      "classes": [
+       "_segment_1xt6d_7",
+       "_selected_1xt6d_60",
+       "_last_1xt6d_76"
+      ],
+      "data": {},
+      "heading": "",
+      "landmark": {
+       "name": "",
+       "role": "dialog"
+      },
+      "layer": "top",
+      "name": "Pay annually Pay annually -15%",
+      "rect": [
+       978,
+       99,
+       176,
+       40
+      ],
+      "role": "button",
+      "tag": "button",
+      "xpath": "/html/body/div[10]/div[1]/div[1]/div[1]/div[2]/div[1]/div[1]/div[1]/div[2]/button[1]"
+     },
+     "state": "settings.choose-plan-annual"
+    }
+   ],
+   "evidenceHash": "4878657d7f337f58054c0015c0ed8deb1ca03bad96ef78b07b36a9616b480794",
+   "facts": {
+    "announced": "button \"Pay annually Pay annually -<n>%\"",
+    "axeSummary": "",
+    "criterion": "4.1.2",
+    "criterionName": "Name, Role, Value",
+    "element": "button \"Pay annually Pay annually -<n>%\"",
+    "rule": "announced-as",
+    "screen": "Choose a Plan — annual"
+   },
+   "family": "role-state",
+   "guidance": "Low for optional ARIA or an invalid autocomplete token; high when aria-hidden hides the whole page.",
+   "issueId": null,
+   "key": "role-state:announced-as:64ea1188a606",
+   "measured": false,
+   "primary": "settings.choose-plan-annual",
+   "proposals": [],
+   "rule": "announced-as",
+   "screens": 1,
+   "severityDefault": "medium",
+   "source": "scanner",
+   "states": [
+    "settings.choose-plan-annual"
+   ],
+   "summary": "announced-as: announced as button \"Pay annually Pay annually -<n>%\".",
+   "title": "Wrong role or state: button \"Pay annually Pay annually -<n>%\""
+  },
+  {
+   "attachments": [],
+   "attempt": 1,
+   "basis": "candidate",
+   "criteria": [
+    "4.1.2"
+   ],
+   "evidence": [
+    {
+     "evidence": {
+      "description": "",
+      "name": "Pay monthly",
+      "role": "button",
+      "states": {},
+      "template": "button \"Pay monthly\""
+     },
+     "occurrence": {
+      "ancestors": [
+       [
+        "_buttonWithDivider_1xt6d_80"
+       ],
+       [
+        "_container_1xt6d_3",
+        "_large_1xt6d_15"
+       ],
+       [
+        "_billingPlanToggle_ijyce_30"
+       ],
+       [
+        "_headerRow_ijyce_20"
+       ],
+       [
+        "_container_ijyce_4"
+       ],
+       [
+        "_large_kwlx6_9",
+        "_noHover_3n0se_28",
+        "_shadow_3n0se_25",
+        "_raisedBackground_3n0se_45",
+        "_card_lo4oy_4",
+        "_card_94z7m_10"
+       ],
+       [
+        "ReactModal__Content",
+        "ReactModal__Content--after-open",
+        "_modal_lo4oy_73",
+        "_modalContent_94z7m_6"
+       ],
+       [
+        "ReactModal__Overlay",
+        "ReactModal__Overlay--after-open",
+        "_overlay_lo4oy_89",
+        "_overlay_94z7m_1"
+       ]
+      ],
+      "classes": [
+       "_segment_1xt6d_7",
+       "_first_1xt6d_73"
+      ],
+      "data": {},
+      "heading": "",
+      "landmark": {
+       "name": "",
+       "role": "dialog"
+      },
+      "layer": "top",
+      "name": "Pay monthly",
+      "rect": [
+       805,
+       100,
+       174,
+       38
+      ],
+      "role": "button",
+      "tag": "button",
+      "xpath": "/html/body/div[10]/div[1]/div[1]/div[1]/div[2]/div[1]/div[1]/div[1]/div[1]/button[1]"
+     },
+     "state": "settings.choose-plan-annual"
+    }
+   ],
+   "evidenceHash": "a6213fe9098faa0b07a343888cd408ec1a7210c8070c8c1612425c603b2099fa",
+   "facts": {
+    "announced": "button \"Pay monthly\"",
+    "axeSummary": "",
+    "criterion": "4.1.2",
+    "criterionName": "Name, Role, Value",
+    "element": "button \"Pay monthly\"",
+    "rule": "announced-as",
+    "screen": "Choose a Plan — annual"
+   },
+   "family": "role-state",
+   "guidance": "Low for optional ARIA or an invalid autocomplete token; high when aria-hidden hides the whole page.",
+   "issueId": null,
+   "key": "role-state:announced-as:7a5b0c9b9f02",
+   "measured": false,
+   "primary": "settings.choose-plan-annual",
+   "proposals": [],
+   "rule": "announced-as",
+   "screens": 1,
+   "severityDefault": "medium",
+   "source": "scanner",
+   "states": [
+    "settings.choose-plan-annual"
+   ],
+   "summary": "announced-as: announced as button \"Pay monthly\".",
+   "title": "Wrong role or state: button \"Pay monthly\""
+  }
+ ],
+ "primaries": [
+  "settings.choose-plan-annual"
+ ],
+ "reach": {
+  "baseUrl": "https://demo.mercury.com",
+  "data": "data",
+  "map": "build/map.json",
+  "run": "2026-10-03-1525",
+  "workspace": "a11y"
+ },
+ "run": "2026-10-03-1525"
+}

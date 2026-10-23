@@ -1,0 +1,185 @@
+{
+ "area": "accounts",
+ "batch": "verify-416",
+ "findings": [
+  {
+   "attachments": [],
+   "attempt": 1,
+   "basis": "candidate",
+   "criteria": [
+    "4.1.2"
+   ],
+   "evidence": [
+    {
+     "evidence": {
+      "description": "",
+      "name": "",
+      "role": "button",
+      "states": {
+       "expanded": false,
+       "haspopup": "menu"
+      },
+      "template": "button \"\" [expanded=false, haspopup=menu]"
+     },
+     "occurrence": {
+      "ancestors": [
+       [
+        "_dropdownContainer_5swj3_1",
+        "_dropdownContainer_cz562_132"
+       ],
+       [
+        "_downloadColumn_cz562_62"
+       ],
+       [
+        "_cursorAsPointer_cz562_21"
+       ],
+       [],
+       [
+        "_table_cz562_1"
+       ],
+       [
+        "_container_1ygn3_10"
+       ],
+       [],
+       [
+        "_documentsRoot_7ux9c_6"
+       ]
+      ],
+      "classes": [
+       "_button_r6b2u_20",
+       "_small_r6b2u_72",
+       "_tertiary_r6b2u_153",
+       "_menuButton_ok3n2_7"
+      ],
+      "data": {},
+      "heading": "Documents & Data",
+      "landmark": {
+       "name": "",
+       "role": "main"
+      },
+      "layer": "document",
+      "name": "",
+      "rect": [
+       1274,
+       471,
+       32,
+       32
+      ],
+      "role": "button",
+      "tag": "button",
+      "xpath": "/html/body/div[1]/main[1]/div[1]/div[1]/div[4]/div[1]/div[2]/div[2]/div[2]/div[1]/div[1]/table[1]/tbody[1]/tr[1]/td[4]/div[1]/button[1]"
+     },
+     "state": "accounts.statements"
+    },
+    {
+     "evidence": {
+      "description": "",
+      "name": "",
+      "role": "button",
+      "states": {
+       "expanded": false,
+       "haspopup": "menu"
+      },
+      "template": "button \"\" [expanded=false, haspopup=menu]"
+     },
+     "occurrence": {
+      "ancestors": [
+       [
+        "_dropdownContainer_5swj3_1"
+       ],
+       [
+        "_buttons_1dk39_8"
+       ],
+       [
+        "_topRow_1dk39_2"
+       ],
+       [
+        "_large_kwlx6_9",
+        "_noHover_3n0se_28",
+        "_border_3n0se_35",
+        "_raisedBackground_3n0se_45",
+        "_card_1ym9q_1",
+        "_card_1dk39_1"
+       ],
+       [
+        "_moduleRow_ct6b5_48",
+        "_moduleRowThreeColumns_ct6b5_61"
+       ],
+       [
+        "_analyticsDashboard_ct6b5_36"
+       ],
+       [
+        "_fullWidthWrapper_ct6b5_9"
+       ],
+       [
+        "_outerWrapper_ct6b5_1"
+       ]
+      ],
+      "classes": [
+       "_button_r6b2u_20",
+       "_small_r6b2u_72",
+       "_tertiary_r6b2u_153",
+       "_menuButton_ok3n2_7"
+      ],
+      "data": {},
+      "heading": "Welcome, Jane",
+      "landmark": {
+       "name": "",
+       "role": "main"
+      },
+      "layer": "document",
+      "name": "",
+      "rect": [
+       1257,
+       663,
+       32,
+       32
+      ],
+      "role": "button",
+      "tag": "button",
+      "xpath": "/html/body/div[1]/main[1]/div[1]/div[1]/div[4]/div[1]/div[2]/div[1]/div[1]/div[4]/div[2]/div[3]/div[1]/div[1]/div[1]/button[1]"
+     },
+     "state": "home.balance-graph-hover"
+    }
+   ],
+   "evidenceHash": "4e8b31daa79f7be790911e8b6ba888789ab805c566524a101868e3e781a00b8e",
+   "facts": {
+    "announced": "button \"\" [expanded=false, haspopup=menu]",
+    "axeSummary": "",
+    "criterion": "4.1.2",
+    "criterionName": "Name, Role, Value",
+    "element": "button in \"Documents & Data\"",
+    "rule": "announced-as",
+    "screen": "Statements (Documents & Data)"
+   },
+   "family": "name",
+   "guidance": "High for an unnamed form control or the sole primary action.",
+   "issueId": null,
+   "key": "name:announced-as:de86f55bfc8d",
+   "measured": false,
+   "primary": "accounts.statements",
+   "proposals": [],
+   "rule": "announced-as",
+   "screens": 41,
+   "severityDefault": "medium",
+   "source": "scanner",
+   "states": [
+    "accounts.statements",
+    "home.balance-graph-hover"
+   ],
+   "summary": "announced-as: announced as button \"\" [expanded=false, haspopup=menu].",
+   "title": "Missing or unclear name: button in \"Documents & Data\""
+  }
+ ],
+ "primaries": [
+  "accounts.statements"
+ ],
+ "reach": {
+  "baseUrl": "https://demo.mercury.com",
+  "data": "data",
+  "map": "build/map.json",
+  "run": "2026-10-03-1525",
+  "workspace": "a11y"
+ },
+ "run": "2026-10-03-1525"
+}

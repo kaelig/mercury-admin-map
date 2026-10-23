@@ -1,0 +1,1226 @@
+{
+ "area": "payments",
+ "batch": "verify-500",
+ "findings": [
+  {
+   "attachments": [],
+   "attempt": 1,
+   "basis": "candidate",
+   "criteria": [
+    "4.1.2"
+   ],
+   "evidence": [
+    {
+     "evidence": {
+      "description": "",
+      "name": "",
+      "role": "button",
+      "states": {},
+      "template": "button \"\""
+     },
+     "occurrence": {
+      "ancestors": [
+       [
+        "_tableData_1u4jr_5",
+        "_alignmentCenter_1u4jr_17",
+        "_collapsibleColumn_1acga_26",
+        "_centeredColumn_1prwn_41"
+       ],
+       [
+        "_tableRow_137xu_3",
+        "_interactiveRows_137xu_35"
+       ],
+       [
+        "_tableBody_1cp5b_1"
+       ],
+       [
+        "_table_1acga_4"
+       ],
+       [
+        "_tableWrapper_1acga_4"
+       ],
+       [
+        "_tableWrapper_1prwn_1"
+       ],
+       [
+        "_pageContent_809q8_151",
+        "_pageContentWidth_809q8_184",
+        "_footerPadding_809q8_115"
+       ],
+       [
+        "_dashboardContent_809q8_29"
+       ]
+      ],
+      "classes": [
+       "_button_r6b2u_20",
+       "_small_r6b2u_72",
+       "_secondary_r6b2u_126"
+      ],
+      "data": {},
+      "heading": "Recipients",
+      "landmark": {
+       "name": "",
+       "role": "main"
+      },
+      "layer": "document",
+      "name": "",
+      "rect": [
+       1090,
+       1043,
+       32,
+       32
+      ],
+      "role": "button",
+      "tag": "button",
+      "xpath": "/html/body/div[1]/main[1]/div[1]/div[1]/div[4]/div[1]/div[2]/div[3]/div[1]/table[1]/tbody[1]/tr[16]/td[6]/button[1]"
+     },
+     "state": "payments.recipients"
+    },
+    {
+     "evidence": {
+      "description": "",
+      "name": "",
+      "role": "button",
+      "states": {},
+      "template": "button \"\""
+     },
+     "occurrence": {
+      "ancestors": [
+       [
+        "_tableData_1u4jr_5",
+        "_alignmentCenter_1u4jr_17",
+        "_collapsibleColumn_1acga_26",
+        "_centeredColumn_1prwn_41"
+       ],
+       [
+        "_tableRow_137xu_3",
+        "_interactiveRows_137xu_35"
+       ],
+       [
+        "_tableBody_1cp5b_1"
+       ],
+       [
+        "_table_1acga_4"
+       ],
+       [
+        "_tableWrapper_1acga_4"
+       ],
+       [
+        "_tableWrapper_1prwn_1"
+       ],
+       [
+        "_pageContent_809q8_151",
+        "_pageContentWidth_809q8_184",
+        "_footerPadding_809q8_115"
+       ],
+       [
+        "_dashboardContent_809q8_29"
+       ]
+      ],
+      "classes": [
+       "_button_r6b2u_20",
+       "_small_r6b2u_72",
+       "_secondary_r6b2u_126"
+      ],
+      "data": {},
+      "heading": "",
+      "landmark": {
+       "name": "",
+       "role": "main"
+      },
+      "layer": "top",
+      "name": "",
+      "rect": [
+       1090,
+       1043,
+       32,
+       32
+      ],
+      "role": "button",
+      "tag": "button",
+      "xpath": "/html/body/div[1]/main[1]/div[1]/div[1]/div[4]/div[1]/div[2]/div[3]/div[1]/table[1]/tbody[1]/tr[16]/td[6]/button[1]"
+     },
+     "state": "payments.recipient-invite-sent"
+    }
+   ],
+   "evidenceHash": "facb39cfa6a897dd2303a14174c7509f732392ffbc758df2ec6f0d7f9e932728",
+   "facts": {
+    "announced": "button \"\"",
+    "axeSummary": "",
+    "criterion": "4.1.2",
+    "criterionName": "Name, Role, Value",
+    "element": "button in \"Recipients\"",
+    "rule": "announced-as",
+    "screen": "Recipients"
+   },
+   "family": "name",
+   "guidance": "High for an unnamed form control or the sole primary action.",
+   "issueId": null,
+   "key": "name:announced-as:249793a2326c",
+   "measured": false,
+   "primary": "payments.recipients",
+   "proposals": [
+    {
+     "family": "name",
+     "finding": "name:announced-as:249793a2326c",
+     "handFound": "payments.i-icon-links-a11y",
+     "id": "ab3e0771fb348b9ac27ba7350c5db3ec3ae9cf97778daa677574b9a9ba6104a8",
+     "overlap": 1
+    }
+   ],
+   "rule": "announced-as",
+   "screens": 3,
+   "severityDefault": "medium",
+   "source": "scanner",
+   "states": [
+    "payments.recipients",
+    "payments.recipient-invite-sent"
+   ],
+   "summary": "announced-as: announced as button \"\".",
+   "title": "Missing or unclear name: button in \"Recipients\""
+  },
+  {
+   "attachments": [],
+   "attempt": 1,
+   "basis": "candidate",
+   "criteria": [
+    "4.1.2"
+   ],
+   "evidence": [
+    {
+     "evidence": {
+      "description": "",
+      "name": "",
+      "role": "button",
+      "states": {
+       "disabled": true
+      },
+      "template": "button \"\" [disabled=true]"
+     },
+     "occurrence": {
+      "ancestors": [
+       [
+        "_tooltipAnchor_18bac_4"
+       ],
+       [
+        "_actionButtons_1pbh4_58"
+       ],
+       [
+        "_contentContainer_1pbh4_46"
+       ],
+       [
+        "_floatingBulkActionsInnerContainer_1pbh4_35"
+       ],
+       [
+        "_floatingBulkActionsOuterContainer_1pbh4_4",
+        "_bulkActionIsland_5iyfd_1"
+       ],
+       [
+        "_pageContent_809q8_151",
+        "_pageContentWidth_809q8_184",
+        "_footerPadding_809q8_115"
+       ],
+       [
+        "_dashboardContent_809q8_29"
+       ],
+       [
+        "_layout_809q8_18"
+       ]
+      ],
+      "classes": [
+       "_button_r6b2u_20",
+       "_small_r6b2u_72",
+       "_destructive_r6b2u_186",
+       "_appearDisabled_r6b2u_16"
+      ],
+      "data": {},
+      "heading": "Recipients",
+      "landmark": {
+       "name": "0 recipients selected",
+       "role": "dialog"
+      },
+      "layer": "document",
+      "name": "",
+      "rect": [
+       744,
+       932,
+       32,
+       32
+      ],
+      "role": "button",
+      "tag": "button",
+      "xpath": "/html/body/div[1]/main[1]/div[1]/div[1]/div[4]/div[1]/div[2]/dialog[1]/div[1]/div[1]/div[2]/div[1]/button[1]"
+     },
+     "state": "payments.recipients"
+    },
+    {
+     "evidence": {
+      "description": "",
+      "name": "",
+      "role": "button",
+      "states": {
+       "disabled": true
+      },
+      "template": "button \"\" [disabled=true]"
+     },
+     "occurrence": {
+      "ancestors": [
+       [
+        "_tooltipAnchor_18bac_4"
+       ],
+       [
+        "_actionButtons_1pbh4_58"
+       ],
+       [
+        "_contentContainer_1pbh4_46"
+       ],
+       [
+        "_floatingBulkActionsInnerContainer_1pbh4_35"
+       ],
+       [
+        "_floatingBulkActionsOuterContainer_1pbh4_4",
+        "_bulkActionIsland_5iyfd_1"
+       ],
+       [
+        "_pageContent_809q8_151",
+        "_pageContentWidth_809q8_184",
+        "_footerPadding_809q8_115"
+       ],
+       [
+        "_dashboardContent_809q8_29"
+       ],
+       [
+        "_layout_809q8_18"
+       ]
+      ],
+      "classes": [
+       "_button_r6b2u_20",
+       "_small_r6b2u_72",
+       "_destructive_r6b2u_186",
+       "_appearDisabled_r6b2u_16"
+      ],
+      "data": {},
+      "heading": "Recipients",
+      "landmark": {
+       "name": "0 recipients selected",
+       "role": "dialog"
+      },
+      "layer": "document",
+      "name": "",
+      "rect": [
+       744,
+       932,
+       32,
+       32
+      ],
+      "role": "button",
+      "tag": "button",
+      "xpath": "/html/body/div[1]/main[1]/div[1]/div[1]/div[4]/div[1]/div[2]/dialog[1]/div[1]/div[1]/div[2]/div[1]/button[1]"
+     },
+     "state": "payments.recipients-needs-tax-docs"
+    }
+   ],
+   "evidenceHash": "2e2a563b4c356f8bfd6b53bc29f9dc87dd1247a8b271fd9dd15cc91e291ddcba",
+   "facts": {
+    "announced": "button \"\" [disabled=true]",
+    "axeSummary": "",
+    "criterion": "4.1.2",
+    "criterionName": "Name, Role, Value",
+    "element": "button in \"Recipients\"",
+    "rule": "announced-as",
+    "screen": "Recipients"
+   },
+   "family": "name",
+   "guidance": "High for an unnamed form control or the sole primary action.",
+   "issueId": null,
+   "key": "name:announced-as:63f1b59770d5",
+   "measured": false,
+   "primary": "payments.recipients",
+   "proposals": [
+    {
+     "family": "name",
+     "finding": "name:announced-as:63f1b59770d5",
+     "handFound": "payments.i-icon-links-a11y",
+     "id": "fa6805cee7551c8d2cf4831a23a4464b918e7c1e53f1cc1e584c51836ba064a2",
+     "overlap": 1
+    }
+   ],
+   "rule": "announced-as",
+   "screens": 2,
+   "severityDefault": "medium",
+   "source": "scanner",
+   "states": [
+    "payments.recipients",
+    "payments.recipients-needs-tax-docs"
+   ],
+   "summary": "announced-as: announced as button \"\" [disabled=true].",
+   "title": "Missing or unclear name: button in \"Recipients\""
+  },
+  {
+   "attachments": [],
+   "attempt": 1,
+   "basis": "candidate",
+   "criteria": [
+    "4.1.2"
+   ],
+   "evidence": [
+    {
+     "evidence": {
+      "description": "",
+      "name": "",
+      "role": "button",
+      "states": {
+       "disabled": true
+      },
+      "template": "button \"\" [disabled=true]"
+     },
+     "occurrence": {
+      "ancestors": [
+       [
+        "_tooltipAnchor_18bac_4"
+       ],
+       [
+        "_actionButtons_1pbh4_58"
+       ],
+       [
+        "_contentContainer_1pbh4_46"
+       ],
+       [
+        "_floatingBulkActionsInnerContainer_1pbh4_35"
+       ],
+       [
+        "_floatingBulkActionsOuterContainer_1pbh4_4",
+        "_bulkActionIsland_5iyfd_1"
+       ],
+       [
+        "_pageContent_809q8_151",
+        "_pageContentWidth_809q8_184",
+        "_footerPadding_809q8_115"
+       ],
+       [
+        "_dashboardContent_809q8_29"
+       ],
+       [
+        "_layout_809q8_18"
+       ]
+      ],
+      "classes": [
+       "_button_r6b2u_20",
+       "_small_r6b2u_72",
+       "_secondary_r6b2u_126",
+       "_appearDisabled_r6b2u_16"
+      ],
+      "data": {},
+      "heading": "Recipients",
+      "landmark": {
+       "name": "0 recipients selected",
+       "role": "dialog"
+      },
+      "layer": "document",
+      "name": "",
+      "rect": [
+       788,
+       932,
+       32,
+       32
+      ],
+      "role": "button",
+      "tag": "button",
+      "xpath": "/html/body/div[1]/main[1]/div[1]/div[1]/div[4]/div[1]/div[2]/dialog[1]/div[1]/div[1]/div[2]/div[2]/button[1]"
+     },
+     "state": "payments.recipients"
+    },
+    {
+     "evidence": {
+      "description": "",
+      "name": "",
+      "role": "button",
+      "states": {
+       "disabled": true
+      },
+      "template": "button \"\" [disabled=true]"
+     },
+     "occurrence": {
+      "ancestors": [
+       [
+        "_tooltipAnchor_18bac_4"
+       ],
+       [
+        "_actionButtons_1pbh4_58"
+       ],
+       [
+        "_contentContainer_1pbh4_46"
+       ],
+       [
+        "_floatingBulkActionsInnerContainer_1pbh4_35"
+       ],
+       [
+        "_floatingBulkActionsOuterContainer_1pbh4_4",
+        "_floatingButtonContainer_1922m_3",
+        "_noLabel_1922m_8",
+        "_visible_1pbh4_30"
+       ],
+       [
+        "_sectionCards_1mvy3_1"
+       ],
+       [],
+       [
+        "_contentDiv_bcpsw_53",
+        "_contentDivHeightPreset_bcpsw_62",
+        "_contentArea_1hgnz_1"
+       ]
+      ],
+      "classes": [
+       "_button_r6b2u_20",
+       "_small_r6b2u_72",
+       "_secondary_r6b2u_126",
+       "_appearDisabled_r6b2u_16"
+      ],
+      "data": {},
+      "heading": "",
+      "landmark": {
+       "name": "1 selected",
+       "role": "dialog"
+      },
+      "layer": "top",
+      "name": "",
+      "rect": [
+       822,
+       782,
+       32,
+       32
+      ],
+      "role": "button",
+      "tag": "button",
+      "xpath": "/html/body/div[1]/main[1]/div[1]/div[2]/div[2]/div[3]/div[1]/div[2]/dialog[1]/div[1]/div[1]/div[2]/div[2]/button[1]"
+     },
+     "state": "payments.taxes-edit-filing"
+    }
+   ],
+   "evidenceHash": "0649ef284be88c1517fd0f2d0247b13771dac7bb427dc206774114043069dabe",
+   "facts": {
+    "announced": "button \"\" [disabled=true]",
+    "axeSummary": "",
+    "criterion": "4.1.2",
+    "criterionName": "Name, Role, Value",
+    "element": "button in \"Recipients\"",
+    "rule": "announced-as",
+    "screen": "Recipients"
+   },
+   "family": "name",
+   "guidance": "High for an unnamed form control or the sole primary action.",
+   "issueId": null,
+   "key": "name:announced-as:b6252f0d91ce",
+   "measured": false,
+   "primary": "payments.recipients",
+   "proposals": [
+    {
+     "family": "name",
+     "finding": "name:announced-as:b6252f0d91ce",
+     "handFound": "payments.i-icon-links-a11y",
+     "id": "3fa2a413f58982756c22850d78473666cb09c3152aa7e45105cf7572f1139201",
+     "overlap": 1
+    }
+   ],
+   "rule": "announced-as",
+   "screens": 3,
+   "severityDefault": "medium",
+   "source": "scanner",
+   "states": [
+    "payments.recipients",
+    "payments.taxes-edit-filing"
+   ],
+   "summary": "announced-as: announced as button \"\" [disabled=true].",
+   "title": "Missing or unclear name: button in \"Recipients\""
+  },
+  {
+   "attachments": [],
+   "attempt": 1,
+   "basis": "candidate",
+   "criteria": [
+    "4.1.2"
+   ],
+   "evidence": [
+    {
+     "evidence": {
+      "description": "",
+      "name": "",
+      "role": "link",
+      "states": {},
+      "template": "link \"\""
+     },
+     "occurrence": {
+      "ancestors": [
+       [],
+       [
+        "_tableData_1u4jr_5",
+        "_alignmentEnd_1u4jr_22",
+        "_collapsibleColumn_1acga_26"
+       ],
+       [
+        "_tableRow_137xu_3",
+        "_interactiveRows_137xu_35"
+       ],
+       [
+        "_tableBody_1cp5b_1"
+       ],
+       [
+        "_table_1acga_4"
+       ],
+       [
+        "_tableWrapper_1acga_4"
+       ],
+       [
+        "_tableWrapper_1prwn_1"
+       ],
+       [
+        "_pageContent_809q8_151",
+        "_pageContentWidth_809q8_184",
+        "_footerPadding_809q8_115"
+       ]
+      ],
+      "classes": [
+       "_button_r6b2u_20",
+       "_small_r6b2u_72",
+       "_tertiary_r6b2u_153",
+       "_tooltipAnchor_18bac_4",
+       "_showOnHover_1w34n_128",
+       "_link_ual8v_4",
+       "_underlineNever_ual8v_7"
+      ],
+      "data": {
+       "data-discover": "true"
+      },
+      "heading": "Recipients",
+      "landmark": {
+       "name": "",
+       "role": "main"
+      },
+      "layer": "document",
+      "name": "",
+      "rect": [
+       1234,
+       1041,
+       32,
+       32
+      ],
+      "role": "link",
+      "tag": "a",
+      "xpath": "/html/body/div[1]/main[1]/div[1]/div[1]/div[4]/div[1]/div[2]/div[3]/div[1]/table[1]/tbody[1]/tr[16]/td[8]/span[1]/a[1]"
+     },
+     "state": "payments.recipients"
+    },
+    {
+     "evidence": {
+      "description": "",
+      "name": "",
+      "role": "link",
+      "states": {},
+      "template": "link \"\""
+     },
+     "occurrence": {
+      "ancestors": [
+       [],
+       [
+        "_tableData_1u4jr_5",
+        "_alignmentEnd_1u4jr_22",
+        "_collapsibleColumn_1acga_26"
+       ],
+       [
+        "_tableRow_137xu_3",
+        "_interactiveRows_137xu_35"
+       ],
+       [
+        "_tableBody_1cp5b_1"
+       ],
+       [
+        "_table_1acga_4"
+       ],
+       [
+        "_tableWrapper_1acga_4"
+       ],
+       [
+        "_tableWrapper_1prwn_1"
+       ],
+       [
+        "_pageContent_809q8_151",
+        "_pageContentWidth_809q8_184",
+        "_footerPadding_809q8_115"
+       ]
+      ],
+      "classes": [
+       "_button_r6b2u_20",
+       "_small_r6b2u_72",
+       "_tertiary_r6b2u_153",
+       "_tooltipAnchor_18bac_4",
+       "_showOnHover_1w34n_128",
+       "_link_ual8v_4",
+       "_underlineNever_ual8v_7"
+      ],
+      "data": {
+       "data-discover": "true"
+      },
+      "heading": "",
+      "landmark": {
+       "name": "",
+       "role": "main"
+      },
+      "layer": "top",
+      "name": "",
+      "rect": [
+       1234,
+       1041,
+       32,
+       32
+      ],
+      "role": "link",
+      "tag": "a",
+      "xpath": "/html/body/div[1]/main[1]/div[1]/div[1]/div[4]/div[1]/div[2]/div[3]/div[1]/table[1]/tbody[1]/tr[16]/td[8]/span[1]/a[1]"
+     },
+     "state": "payments.recipient-invite-sent"
+    }
+   ],
+   "evidenceHash": "37710ca928d8975267ca1132d710673158ba642a5135b82a501b64e31f27a469",
+   "facts": {
+    "announced": "link \"\"",
+    "axeSummary": "",
+    "criterion": "4.1.2",
+    "criterionName": "Name, Role, Value",
+    "element": "link in \"Recipients\"",
+    "rule": "announced-as",
+    "screen": "Recipients"
+   },
+   "family": "name",
+   "guidance": "High for an unnamed form control or the sole primary action.",
+   "issueId": null,
+   "key": "name:announced-as:ce14ab6c7d89",
+   "measured": false,
+   "primary": "payments.recipients",
+   "proposals": [
+    {
+     "family": "name",
+     "finding": "name:announced-as:ce14ab6c7d89",
+     "handFound": "payments.i-icon-links-a11y",
+     "id": "ffd5970cdd7c54d97b1aabe857e7a5b6f69337cc4339be72911da100f662b601",
+     "overlap": 1
+    }
+   ],
+   "rule": "announced-as",
+   "screens": 3,
+   "severityDefault": "medium",
+   "source": "scanner",
+   "states": [
+    "payments.recipients",
+    "payments.recipient-invite-sent"
+   ],
+   "summary": "announced-as: announced as link \"\".",
+   "title": "Missing or unclear name: link in \"Recipients\""
+  },
+  {
+   "attachments": [],
+   "attempt": 1,
+   "basis": "candidate",
+   "criteria": [
+    "4.1.2"
+   ],
+   "evidence": [
+    {
+     "evidence": {
+      "description": "",
+      "name": "Needs Tax Docs",
+      "role": "menuitem",
+      "states": {},
+      "template": "menuitem \"Needs Tax Docs\""
+     },
+     "occurrence": {
+      "ancestors": [
+       [
+        "_chip_1xw00_8",
+        "_inactive_1xw00_119",
+        "_truncateText_1xw00_16"
+       ],
+       [
+        "_facets_grqat_22"
+       ],
+       [
+        "_tableViewsAndFilters_grqat_82"
+       ],
+       [
+        "_toolbarContainer_grqat_4"
+       ],
+       [
+        "_toolbarWrapper_1d0qt_10"
+       ],
+       [
+        "_toolbar_1c4er_1"
+       ],
+       [
+        "_pageContent_809q8_151",
+        "_pageContentWidth_809q8_184",
+        "_footerPadding_809q8_115"
+       ],
+       [
+        "_dashboardContent_809q8_29"
+       ]
+      ],
+      "classes": [
+       "_mainElement_1xw00_24",
+       "_interactive_1xw00_134"
+      ],
+      "data": {},
+      "heading": "Recipients",
+      "landmark": {
+       "name": "",
+       "role": "main"
+      },
+      "layer": "document",
+      "name": "Needs Tax Docs",
+      "rect": [
+       525,
+       184,
+       134,
+       32
+      ],
+      "role": "menuitem",
+      "tag": "button",
+      "xpath": "/html/body/div[1]/main[1]/div[1]/div[1]/div[4]/div[1]/div[2]/div[2]/div[1]/div[1]/span[1]/span[1]/span[3]/button[1]"
+     },
+     "state": "payments.recipients"
+    },
+    {
+     "evidence": {
+      "description": "",
+      "name": "Needs Tax Docs",
+      "role": "menuitem",
+      "states": {},
+      "template": "menuitem \"Needs Tax Docs\""
+     },
+     "occurrence": {
+      "ancestors": [
+       [
+        "_chip_1xw00_8",
+        "_active_1xw00_161",
+        "_truncateText_1xw00_16"
+       ],
+       [
+        "_facets_grqat_22"
+       ],
+       [
+        "_tableViewsAndFilters_grqat_82"
+       ],
+       [
+        "_toolbarContainer_grqat_4"
+       ],
+       [
+        "_toolbarWrapper_1d0qt_10"
+       ],
+       [
+        "_toolbar_1c4er_1"
+       ],
+       [
+        "_pageContent_809q8_151",
+        "_pageContentWidth_809q8_184",
+        "_footerPadding_809q8_115"
+       ],
+       [
+        "_dashboardContent_809q8_29"
+       ]
+      ],
+      "classes": [
+       "_mainElement_1xw00_24",
+       "_interactive_1xw00_134"
+      ],
+      "data": {},
+      "heading": "Recipients",
+      "landmark": {
+       "name": "",
+       "role": "main"
+      },
+      "layer": "document",
+      "name": "Needs Tax Docs",
+      "rect": [
+       525,
+       184,
+       134,
+       32
+      ],
+      "role": "menuitem",
+      "tag": "button",
+      "xpath": "/html/body/div[1]/main[1]/div[1]/div[1]/div[4]/div[1]/div[2]/div[2]/div[1]/div[1]/span[1]/span[1]/span[3]/button[1]"
+     },
+     "state": "payments.recipients-needs-tax-docs"
+    }
+   ],
+   "evidenceHash": "b34e1f5047efb89a79efa4e91523f3809ba83989148c15b81ef35a08d84d342a",
+   "facts": {
+    "announced": "menuitem \"Needs Tax Docs\"",
+    "axeSummary": "",
+    "criterion": "4.1.2",
+    "criterionName": "Name, Role, Value",
+    "element": "menuitem \"Needs Tax Docs\"",
+    "rule": "announced-as",
+    "screen": "Recipients"
+   },
+   "family": "role-state",
+   "guidance": "Low for optional ARIA or an invalid autocomplete token; high when aria-hidden hides the whole page.",
+   "issueId": null,
+   "key": "role-state:announced-as:02f721860fd9",
+   "measured": false,
+   "primary": "payments.recipients",
+   "proposals": [],
+   "rule": "announced-as",
+   "screens": 2,
+   "severityDefault": "medium",
+   "source": "scanner",
+   "states": [
+    "payments.recipients",
+    "payments.recipients-needs-tax-docs"
+   ],
+   "summary": "announced-as: announced as menuitem \"Needs Tax Docs\".",
+   "title": "Wrong role or state: menuitem \"Needs Tax Docs\""
+  },
+  {
+   "attachments": [],
+   "attempt": 1,
+   "basis": "candidate",
+   "criteria": [
+    "1.3.1"
+   ],
+   "evidence": [
+    {
+     "evidence": {
+      "description": "",
+      "name": "Last paid Click to sort",
+      "role": "button",
+      "states": {
+       "expanded": false,
+       "haspopup": "menu"
+      },
+      "template": "button \"Last paid Click to sort\" [expanded=false, haspopup=menu]"
+     },
+     "occurrence": {
+      "ancestors": [
+       [
+        "_tableHead_hi0p4_3",
+        "_alignmentStart_hi0p4_11",
+        "_headerFlex_1prwn_29",
+        "_collapsibleColumn_1acga_26"
+       ],
+       [
+        "_tableHeadRow_1rlph_21"
+       ],
+       [
+        "_tableHead_1rlph_1"
+       ],
+       [
+        "_table_1acga_4"
+       ],
+       [
+        "_tableWrapper_1acga_4"
+       ],
+       [
+        "_tableWrapper_1prwn_1"
+       ],
+       [
+        "_pageContent_809q8_151",
+        "_pageContentWidth_809q8_184",
+        "_footerPadding_809q8_115"
+       ],
+       [
+        "_dashboardContent_809q8_29"
+       ]
+      ],
+      "classes": [
+       "_sortableHeader_cc9i4_3"
+      ],
+      "data": {},
+      "heading": "Recipients",
+      "landmark": {
+       "name": "",
+       "role": "main"
+      },
+      "layer": "document",
+      "name": "Last paid Click to sort",
+      "rect": [
+       817,
+       236,
+       84,
+       25
+      ],
+      "role": "button",
+      "tag": "button",
+      "xpath": "/html/body/div[1]/main[1]/div[1]/div[1]/div[4]/div[1]/div[2]/div[3]/div[1]/table[1]/thead[1]/tr[1]/th[4]/button[1]"
+     },
+     "state": "payments.recipients"
+    },
+    {
+     "evidence": {
+      "description": "",
+      "name": "Last paid Click to sort",
+      "role": "button",
+      "states": {
+       "expanded": false,
+       "haspopup": "menu"
+      },
+      "template": "button \"Last paid Click to sort\" [expanded=false, haspopup=menu]"
+     },
+     "occurrence": {
+      "ancestors": [
+       [
+        "_tableHead_hi0p4_3",
+        "_alignmentStart_hi0p4_11",
+        "_headerFlex_1prwn_29",
+        "_collapsibleColumn_1acga_26"
+       ],
+       [
+        "_tableHeadRow_1rlph_21"
+       ],
+       [
+        "_tableHead_1rlph_1"
+       ],
+       [
+        "_table_1acga_4"
+       ],
+       [
+        "_tableWrapper_1acga_4"
+       ],
+       [
+        "_tableWrapper_1prwn_1"
+       ],
+       [
+        "_pageContent_809q8_151",
+        "_pageContentWidth_809q8_184",
+        "_footerPadding_809q8_115"
+       ],
+       [
+        "_dashboardContent_809q8_29"
+       ]
+      ],
+      "classes": [
+       "_sortableHeader_cc9i4_3"
+      ],
+      "data": {},
+      "heading": "",
+      "landmark": {
+       "name": "",
+       "role": "main"
+      },
+      "layer": "top",
+      "name": "Last paid Click to sort",
+      "rect": [
+       817,
+       236,
+       84,
+       25
+      ],
+      "role": "button",
+      "tag": "button",
+      "xpath": "/html/body/div[1]/main[1]/div[1]/div[1]/div[4]/div[1]/div[2]/div[3]/div[1]/table[1]/thead[1]/tr[1]/th[4]/button[1]"
+     },
+     "state": "payments.recipient-invite-sent"
+    }
+   ],
+   "evidenceHash": "aa143256b7d76d0945abbc9ec213d05c719295a6e1d43065f92c9e6086e05d81",
+   "facts": {
+    "announced": "button \"Last paid Click to sort\" [expanded=false, haspopup=menu]",
+    "axeSummary": "",
+    "criterion": "1.3.1",
+    "criterionName": "Info and Relationships",
+    "element": "button \"Last paid Click to sort\"",
+    "rule": "announced-as",
+    "screen": "Recipients"
+   },
+   "family": "role-state",
+   "guidance": "Low for optional ARIA or an invalid autocomplete token; high when aria-hidden hides the whole page.",
+   "issueId": null,
+   "key": "role-state:announced-as:0b75f2601f71",
+   "measured": false,
+   "primary": "payments.recipients",
+   "proposals": [],
+   "rule": "announced-as",
+   "screens": 3,
+   "severityDefault": "medium",
+   "source": "scanner",
+   "states": [
+    "payments.recipients",
+    "payments.recipient-invite-sent"
+   ],
+   "summary": "announced-as: announced as button \"Last paid Click to sort\" [expanded=false, haspopup=menu].",
+   "title": "Wrong role or state: button \"Last paid Click to sort\""
+  },
+  {
+   "attachments": [],
+   "attempt": 1,
+   "basis": "candidate",
+   "criteria": [
+    "4.1.2"
+   ],
+   "evidence": [
+    {
+     "evidence": {
+      "description": "",
+      "name": "Has Tax Docs",
+      "role": "menuitem",
+      "states": {},
+      "template": "menuitem \"Has Tax Docs\""
+     },
+     "occurrence": {
+      "ancestors": [
+       [
+        "_chip_1xw00_8",
+        "_inactive_1xw00_119",
+        "_truncateText_1xw00_16"
+       ],
+       [
+        "_facets_grqat_22"
+       ],
+       [
+        "_tableViewsAndFilters_grqat_82"
+       ],
+       [
+        "_toolbarContainer_grqat_4"
+       ],
+       [
+        "_toolbarWrapper_1d0qt_10"
+       ],
+       [
+        "_toolbar_1c4er_1"
+       ],
+       [
+        "_pageContent_809q8_151",
+        "_pageContentWidth_809q8_184",
+        "_footerPadding_809q8_115"
+       ],
+       [
+        "_dashboardContent_809q8_29"
+       ]
+      ],
+      "classes": [
+       "_mainElement_1xw00_24",
+       "_interactive_1xw00_134"
+      ],
+      "data": {},
+      "heading": "Recipients",
+      "landmark": {
+       "name": "",
+       "role": "main"
+      },
+      "layer": "document",
+      "name": "Has Tax Docs",
+      "rect": [
+       399,
+       184,
+       116,
+       32
+      ],
+      "role": "menuitem",
+      "tag": "button",
+      "xpath": "/html/body/div[1]/main[1]/div[1]/div[1]/div[4]/div[1]/div[2]/div[2]/div[1]/div[1]/span[1]/span[1]/span[2]/button[1]"
+     },
+     "state": "payments.recipients"
+    },
+    {
+     "evidence": {
+      "description": "",
+      "name": "Has Tax Docs",
+      "role": "menuitem",
+      "states": {},
+      "template": "menuitem \"Has Tax Docs\""
+     },
+     "occurrence": {
+      "ancestors": [
+       [
+        "_chip_1xw00_8",
+        "_inactive_1xw00_119",
+        "_truncateText_1xw00_16"
+       ],
+       [
+        "_facets_grqat_22"
+       ],
+       [
+        "_tableViewsAndFilters_grqat_82"
+       ],
+       [
+        "_toolbarContainer_grqat_4"
+       ],
+       [
+        "_toolbarWrapper_1d0qt_10"
+       ],
+       [
+        "_toolbar_1c4er_1"
+       ],
+       [
+        "_pageContent_809q8_151",
+        "_pageContentWidth_809q8_184",
+        "_footerPadding_809q8_115"
+       ],
+       [
+        "_dashboardContent_809q8_29"
+       ]
+      ],
+      "classes": [
+       "_mainElement_1xw00_24",
+       "_interactive_1xw00_134"
+      ],
+      "data": {},
+      "heading": "Recipients",
+      "landmark": {
+       "name": "",
+       "role": "main"
+      },
+      "layer": "document",
+      "name": "Has Tax Docs",
+      "rect": [
+       399,
+       184,
+       116,
+       32
+      ],
+      "role": "menuitem",
+      "tag": "button",
+      "xpath": "/html/body/div[1]/main[1]/div[1]/div[1]/div[4]/div[1]/div[2]/div[2]/div[1]/div[1]/span[1]/span[1]/span[2]/button[1]"
+     },
+     "state": "payments.recipients-needs-tax-docs"
+    }
+   ],
+   "evidenceHash": "75a49c5450eff92f3f026ea86d2999e1bc40c8f0e4252803c035a01bc1c5c1b2",
+   "facts": {
+    "announced": "menuitem \"Has Tax Docs\"",
+    "axeSummary": "",
+    "criterion": "4.1.2",
+    "criterionName": "Name, Role, Value",
+    "element": "menuitem \"Has Tax Docs\"",
+    "rule": "announced-as",
+    "screen": "Recipients"
+   },
+   "family": "role-state",
+   "guidance": "Low for optional ARIA or an invalid autocomplete token; high when aria-hidden hides the whole page.",
+   "issueId": null,
+   "key": "role-state:announced-as:9038918d78e7",
+   "measured": false,
+   "primary": "payments.recipients",
+   "proposals": [],
+   "rule": "announced-as",
+   "screens": 2,
+   "severityDefault": "medium",
+   "source": "scanner",
+   "states": [
+    "payments.recipients",
+    "payments.recipients-needs-tax-docs"
+   ],
+   "summary": "announced-as: announced as menuitem \"Has Tax Docs\".",
+   "title": "Wrong role or state: menuitem \"Has Tax Docs\""
+  }
+ ],
+ "primaries": [
+  "payments.recipients"
+ ],
+ "reach": {
+  "baseUrl": "https://demo.mercury.com",
+  "data": "data",
+  "map": "build/map.json",
+  "run": "2026-10-03-1525",
+  "workspace": "a11y"
+ },
+ "run": "2026-10-03-1525"
+}

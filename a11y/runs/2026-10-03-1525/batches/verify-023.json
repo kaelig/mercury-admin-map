@@ -1,0 +1,325 @@
+{
+ "area": "accounts",
+ "batch": "verify-023",
+ "findings": [
+  {
+   "attachments": [],
+   "attempt": 1,
+   "basis": "candidate",
+   "criteria": [
+    "2.1.1"
+   ],
+   "evidence": [
+    {
+     "evidence": {
+      "end": "body",
+      "focusable": true,
+      "source": "ax",
+      "stops": 52
+     },
+     "occurrence": {
+      "ancestors": [
+       [
+        "_accountActionsMenu_lus07_194"
+       ],
+       [
+        "_tableData_1u4jr_5",
+        "_alignmentStart_1u4jr_12"
+       ],
+       [
+        "_tableRow_137xu_3",
+        "_large_137xu_29"
+       ],
+       [
+        "_tableBody_1cp5b_1"
+       ],
+       [
+        "_table_1acga_4",
+        "_table_gcd1a_3"
+       ],
+       [
+        "_tableWrapper_1acga_4"
+       ],
+       [],
+       [
+        "_pageContent_809q8_151",
+        "_pageContentWidth_809q8_184",
+        "_footerPadding_809q8_115"
+       ]
+      ],
+      "classes": [],
+      "data": {},
+      "heading": "Accounts",
+      "landmark": {
+       "name": "",
+       "role": "main"
+      },
+      "layer": "document",
+      "name": "",
+      "rect": [
+       1281,
+       312,
+       28,
+       28
+      ],
+      "role": "button",
+      "tag": "span",
+      "xpath": "/html/body/div[1]/main[1]/div[1]/div[1]/div[4]/div[1]/div[2]/div[3]/div[1]/table[1]/tbody[1]/tr[1]/td[5]/div[1]/span[1]"
+     },
+     "state": "accounts.linked-accounts"
+    },
+    {
+     "evidence": {
+      "end": "body",
+      "focusable": true,
+      "source": "ax",
+      "stops": 53
+     },
+     "occurrence": {
+      "ancestors": [
+       [
+        "_accountActionsMenu_lus07_194"
+       ],
+       [
+        "_tableData_1u4jr_5",
+        "_alignmentStart_1u4jr_12"
+       ],
+       [
+        "_tableRow_137xu_3",
+        "_large_137xu_29"
+       ],
+       [
+        "_tableBody_1cp5b_1"
+       ],
+       [
+        "_table_1acga_4",
+        "_table_gcd1a_3"
+       ],
+       [
+        "_tableWrapper_1acga_4"
+       ],
+       [],
+       [
+        "_pageContent_809q8_151",
+        "_pageContentWidth_809q8_184",
+        "_footerPadding_809q8_115"
+       ]
+      ],
+      "classes": [],
+      "data": {},
+      "heading": "Accounts",
+      "landmark": {
+       "name": "",
+       "role": "main"
+      },
+      "layer": "document",
+      "name": "",
+      "rect": [
+       1281,
+       312,
+       28,
+       28
+      ],
+      "role": "button",
+      "tag": "span",
+      "xpath": "/html/body/div[1]/main[1]/div[1]/div[1]/div[4]/div[1]/div[2]/div[3]/div[1]/table[1]/tbody[1]/tr[1]/td[5]/div[1]/span[1]"
+     },
+     "state": "accounts.linked-credit-account"
+    }
+   ],
+   "evidenceHash": "6fd2089faffc11686dbd7a808c3cf2da9c89273898d3dae90837a6dc8d4a3a64",
+   "facts": {
+    "axeSummary": "",
+    "criterion": "2.1.1",
+    "criterionName": "Keyboard",
+    "element": "button in \"Accounts\"",
+    "rule": "not-reached",
+    "screen": "Linked accounts tab",
+    "stops": "52"
+   },
+   "family": "keyboard",
+   "guidance": "High if a task cannot be completed without a mouse.",
+   "issueId": null,
+   "key": "keyboard:not-reached:b3a38759c882",
+   "measured": false,
+   "primary": "accounts.linked-accounts",
+   "proposals": [],
+   "rule": "not-reached",
+   "screens": 2,
+   "severityDefault": "medium",
+   "source": "scanner",
+   "states": [
+    "accounts.linked-accounts",
+    "accounts.linked-credit-account"
+   ],
+   "summary": "The Tab walk visited 52 stops and never reached the button in \"Accounts\", which responds to a click.",
+   "title": "Not reachable by keyboard: button in \"Accounts\""
+  },
+  {
+   "attachments": [],
+   "attempt": 1,
+   "basis": "violation",
+   "criteria": [
+    "4.1.2"
+   ],
+   "evidence": [
+    {
+     "evidence": {
+      "failureSummary": "Fix any of the following:\n  Element does not have text that is visible to screen readers\n  aria-label attribute does not exist or is empty\n  aria-labelledby attribute does not exist, references elements that do not exist or references elements that are empty\n  Element has no title attribute",
+      "messageKey": "noAttr"
+     },
+     "occurrence": {
+      "ancestors": [
+       [
+        "_accountActionsMenu_lus07_194"
+       ],
+       [
+        "_tableData_1u4jr_5",
+        "_alignmentStart_1u4jr_12"
+       ],
+       [
+        "_tableRow_137xu_3",
+        "_large_137xu_29"
+       ],
+       [
+        "_tableBody_1cp5b_1"
+       ],
+       [
+        "_table_1acga_4",
+        "_table_gcd1a_3"
+       ],
+       [
+        "_tableWrapper_1acga_4"
+       ],
+       [],
+       [
+        "_pageContent_809q8_151",
+        "_pageContentWidth_809q8_184",
+        "_footerPadding_809q8_115"
+       ]
+      ],
+      "classes": [],
+      "data": {},
+      "heading": "Accounts",
+      "landmark": {
+       "name": "",
+       "role": "main"
+      },
+      "layer": "document",
+      "name": "",
+      "rect": [
+       1281,
+       312,
+       28,
+       28
+      ],
+      "role": "button",
+      "tag": "span",
+      "xpath": "/html/body/div[1]/main[1]/div[1]/div[1]/div[4]/div[1]/div[2]/div[3]/div[1]/table[1]/tbody[1]/tr[1]/td[5]/div[1]/span[1]"
+     },
+     "state": "accounts.linked-accounts"
+    },
+    {
+     "evidence": {
+      "failureSummary": "Fix any of the following:\n  Element does not have text that is visible to screen readers\n  aria-label attribute does not exist or is empty\n  aria-labelledby attribute does not exist, references elements that do not exist or references elements that are empty\n  Element has no title attribute",
+      "messageKey": "noAttr"
+     },
+     "occurrence": {
+      "ancestors": [
+       [
+        "_kebab_166u7_111"
+       ],
+       [
+        "_iconRow_166u7_20"
+       ],
+       [
+        "_tableData_1u4jr_5",
+        "_alignmentStart_1u4jr_12"
+       ],
+       [
+        "_tableRow_137xu_3",
+        "_tokenRow_166u7_11"
+       ],
+       [
+        "_tableBody_1cp5b_1"
+       ],
+       [
+        "_table_1acga_4"
+       ],
+       [
+        "_tokenTableWrapper_166u7_60",
+        "_tableWrapper_1acga_4"
+       ],
+       []
+      ],
+      "classes": [],
+      "data": {},
+      "heading": "API Tokens",
+      "landmark": {
+       "name": "",
+       "role": "main"
+      },
+      "layer": "document",
+      "name": "",
+      "rect": [
+       1192,
+       308,
+       45,
+       19
+      ],
+      "role": "button",
+      "tag": "span",
+      "xpath": "/html/body/div[1]/main[1]/div[1]/div[1]/div[4]/div[1]/div[2]/div[2]/div[2]/div[1]/table[1]/tbody[1]/tr[1]/td[7]/div[1]/div[1]/span[1]"
+     },
+     "state": "settings.tokens-new-row"
+    }
+   ],
+   "evidenceHash": "bf025fc1f3f18192b4ff017abb362ffd4681fd8e4d50e3867f9d097147aa9040",
+   "facts": {
+    "announced": "button \"\" [expanded=false, haspopup=menu]",
+    "axeSummary": "Element does not have text that is visible to screen readers; aria-label attribute does not exist or is empty; aria-labelledby attribute does not exist, refere…",
+    "criterion": "4.1.2",
+    "criterionName": "Name, Role, Value",
+    "element": "button in \"Accounts\"",
+    "rule": "aria-command-name",
+    "screen": "Linked accounts tab"
+   },
+   "family": "name",
+   "guidance": "High for an unnamed form control or the sole primary action.",
+   "issueId": null,
+   "key": "name:aria-command-name:89b381ac8034",
+   "measured": false,
+   "primary": "accounts.linked-accounts",
+   "proposals": [
+    {
+     "family": "name",
+     "finding": "name:aria-command-name:89b381ac8034",
+     "handFound": "settings.i-unnamed-row-buttons",
+     "id": "fb17643a1174d200f894a2227156c0e455771ca5875fcbc7957d616110459e5b",
+     "overlap": 0.5
+    }
+   ],
+   "rule": "aria-command-name",
+   "screens": 5,
+   "severityDefault": "medium",
+   "source": "scanner",
+   "states": [
+    "accounts.linked-accounts",
+    "settings.tokens-new-row"
+   ],
+   "summary": "aria-command-name: announced as button \"\" [expanded=false, haspopup=menu]. Element does not have text that is visible to screen readers; aria-label attribute does not exist or is empty; aria-labelledby attribute does not exist, refere…",
+   "title": "Missing or unclear name: button in \"Accounts\""
+  }
+ ],
+ "primaries": [
+  "accounts.linked-accounts"
+ ],
+ "reach": {
+  "baseUrl": "https://demo.mercury.com",
+  "data": "data",
+  "map": "build/map.json",
+  "run": "2026-10-03-1525",
+  "workspace": "a11y"
+ },
+ "run": "2026-10-03-1525"
+}

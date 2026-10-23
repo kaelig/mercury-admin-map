@@ -1,0 +1,113 @@
+{
+ "area": "payments",
+ "batch": "verify-509",
+ "findings": [
+  {
+   "attachments": [],
+   "attempt": 1,
+   "basis": "candidate",
+   "criteria": [
+    "2.5.3"
+   ],
+   "evidence": [
+    {
+     "evidence": {
+      "description": "",
+      "name": "Choose File",
+      "role": "button",
+      "states": {},
+      "template": "button \"Choose File\""
+     },
+     "occurrence": {
+      "ancestors": [
+       [
+        "_dropzoneDefault_3soht_22"
+       ],
+       [
+        "_outerWrapper_3soht_14"
+       ],
+       [],
+       [
+        "_sectionContainer_ajzls_31"
+       ],
+       [
+        "_container_ajzls_8"
+       ],
+       [
+        "_contentDiv_bcpsw_53",
+        "_noBottomPadding_bcpsw_57",
+        "_contentDivHeightPreset_bcpsw_62",
+        "_contentArea_ajzls_105"
+       ],
+       [
+        "_fullScreenWorkspaceLayout_bcpsw_14",
+        "_fullScreenWorkspaceLayoutBackground_bcpsw_32",
+        "_background_ajzls_3"
+       ],
+       [
+        "_wrapper_bcpsw_3",
+        "_responsive_bcpsw_88"
+       ]
+      ],
+      "classes": [],
+      "data": {},
+      "heading": "Use this to automatically pre-fill your recipient’s payment details.",
+      "landmark": {
+       "name": "",
+       "role": "main"
+      },
+      "layer": "document",
+      "name": "Choose File",
+      "rect": [
+       441,
+       325,
+       558,
+       106
+      ],
+      "role": "button",
+      "tag": "input",
+      "xpath": "/html/body/div[1]/main[1]/div[1]/div[1]/div[3]/div[2]/div[3]/div[1]/div[1]/div[1]/div[1]/div[1]/input[1]"
+     },
+     "state": "payments.send-start"
+    }
+   ],
+   "evidenceHash": "057393c6f8fe38dacf269bbbe71e62f8406e1ed6ef6d912fb65494ef9a1b26f1",
+   "facts": {
+    "announced": "button \"Choose File\"",
+    "axeSummary": "",
+    "criterion": "2.5.3",
+    "criterionName": "Label in Name",
+    "element": "button \"Choose File\"",
+    "rule": "announced-as",
+    "screen": "Send: how to start"
+   },
+   "family": "name",
+   "guidance": "High for an unnamed form control or the sole primary action.",
+   "issueId": null,
+   "key": "name:announced-as:f84483987c0d",
+   "measured": false,
+   "primary": "payments.send-start",
+   "proposals": [],
+   "rule": "announced-as",
+   "screens": 1,
+   "severityDefault": "medium",
+   "source": "scanner",
+   "states": [
+    "payments.send-start"
+   ],
+   "summary": "announced-as: announced as button \"Choose File\".",
+   "title": "Missing or unclear name: button \"Choose File\""
+  }
+ ],
+ "primaries": [
+  "payments.send-start"
+ ],
+ "reach": {
+  "baseUrl": "https://demo.mercury.com",
+  "data": "data",
+  "map": "build/map.json",
+  "run": "2026-10-03-1525",
+  "workspace": "a11y"
+ },
+ "run": "2026-10-03-1525"
+}

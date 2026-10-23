@@ -1,0 +1,2778 @@
+{
+ "books.accounts": {
+  "checked": "2026-10-02-1349",
+  "fingerprint": {
+   "controls": [
+    "<n> of <n> setup steps complete Finalize setup",
+    "Accounts",
+    "Add account",
+    "Banking",
+    "Bills",
+    "Books",
+    "Chart of Accounts",
+    "Command",
+    "Customize your experience",
+    "Home",
+    "Invoices",
+    "Journal Entries",
+    "Keyboard shortcuts",
+    "Mercury Demo Pro",
+    "Open Menu",
+    "Open account",
+    "Payroll",
+    "Reconciliation",
+    "Reports",
+    "Rules",
+    "Search or jump to",
+    "Settings",
+    "Transactions",
+    "Viewing as Admin"
+   ],
+   "headings": [
+    "Accounts"
+   ],
+   "path": "/books/<id>/accounts",
+   "structure": "document",
+   "top": {
+    "name": "",
+    "role": "document"
+   }
+  },
+  "hop": [
+   {
+    "click": {
+     "name": "Accounts",
+     "role": "link"
+    }
+   }
+  ],
+  "mutates": false,
+  "parent": "books.home",
+  "recordedBy": "agent",
+  "review": null,
+  "similarity": 0.9531,
+  "source": "8818349960ea0059dd3531b8c1abd76ec03d3a26",
+  "status": "accepted"
+ },
+ "books.add-menu": {
+  "checked": "2026-10-02-1349",
+  "fingerprint": {
+   "controls": [
+    "Bill",
+    "Customer",
+    "Invoice",
+    "Journal entries",
+    "Journal entry",
+    "Ledger account",
+    "Rule",
+    "Tag",
+    "Transactions",
+    "Vendor"
+   ],
+   "headings": [],
+   "path": "/books/<id>",
+   "structure": "menu",
+   "top": {
+    "name": "Add",
+    "role": "menu"
+   }
+  },
+  "hop": [
+   {
+    "click": {
+     "name": "Add",
+     "role": "button"
+    }
+   },
+   {
+    "wait": {
+     "locator": {
+      "name": "Journal entry",
+      "role": "menuitem"
+     }
+    }
+   },
+   {
+    "wait": {
+     "ms": 500
+    }
+   }
+  ],
+  "mutates": false,
+  "parent": "books.home",
+  "recordedBy": "agent",
+  "review": {
+   "by": "conductor",
+   "date": "2026-10-03",
+   "decision": "accept",
+   "note": "same global Add menu (Create, Import and Add sections); the replay drops the 'Account' item under Add and shows a 'Finalize setup' pill because the Books setup state differs; the descendant edge 'Journal entry' is still there",
+   "reason": "below-threshold"
+  },
+  "similarity": 0.8987,
+  "source": "47b195f929e8fa811b5ea174903fff5d2b91095a",
+  "status": "accepted"
+ },
+ "books.avatar-menu": {
+  "checked": "2026-10-02-1349",
+  "fingerprint": {
+   "controls": [
+    "Appearance System default",
+    "Log out",
+    "Notifications",
+    "Perks",
+    "Privacy",
+    "Profile",
+    "Security"
+   ],
+   "headings": [],
+   "path": "/books/<id>",
+   "structure": "menu",
+   "top": {
+    "name": "",
+    "role": "menu"
+   }
+  },
+  "hop": [
+   {
+    "click": {
+     "css": "[class*=\"_menuButton_ko7ja\"]"
+    }
+   },
+   {
+    "wait": {
+     "locator": {
+      "name": "Profile",
+      "role": "menuitem"
+     }
+    }
+   }
+  ],
+  "mutates": false,
+  "parent": "books.home",
+  "recordedBy": "agent",
+  "review": {
+   "by": "conductor",
+   "date": "2026-10-03",
+   "decision": "accept",
+   "note": "same Jane Black avatar menu (Profile, Notifications, Security, Privacy, Perks, Appearance System default, Log out) opened over Books home, the accepted parent's screen; the person captured it over Reconciliation, which the label 'Click avatar' does not name, and the hop clicks the avatar button as the label says",
+   "reason": "below-threshold"
+  },
+  "similarity": 0.4706,
+  "source": "e90a7f740c4656b2bc1a6bfcab73d592861c08e1",
+  "status": "accepted"
+ },
+ "books.balance-sheet": {
+  "checked": "2026-10-02-1349",
+  "fingerprint": {
+   "controls": [
+    "<amount>",
+    "<date>: <amount>M",
+    "<date>: Current assets <amount>M, Long-term assets <amount>M, Total assets <amount>M, Liabilities <amount>M, Equity <amount>M, Liabilities + Equity <amount>M",
+    "<n> of <n> setup steps complete Finalize setup",
+    "Accounts",
+    "Add",
+    "Apr",
+    "Aug",
+    "Balance Sheet",
+    "Banking",
+    "Bills",
+    "Books",
+    "Cash Flow Analysis",
+    "Chart of Accounts",
+    "Collapse report",
+    "Command",
+    "Customize your experience",
+    "Download report",
+    "Feb",
+    "Filters",
+    "General Ledger",
+    "Home",
+    "Invoices",
+    "Jan",
+    "Journal Entries",
+    "Jul",
+    "Jun",
+    "Keyboard shortcuts",
+    "Mar",
+    "May",
+    "Mercury Demo Pro",
+    "Oct",
+    "Oct MTD: <amount>M",
+    "Oct MTD: Current assets <amount>M, Long-term assets <amount>M, Total assets <amount>M, Liabilities <amount>M, Equity <amount>M, Liabilities + Equity <amount>M",
+    "Open account",
+    "Open combobox menu",
+    "Payroll",
+    "Profit & Loss",
+    "Reconciliation",
+    "Reports",
+    "Rules",
+    "Search or jump to",
+    "Sep",
+    "Settings",
+    "Transactions",
+    "Viewing as Admin",
+    "frequency",
+    "years"
+   ],
+   "headings": [
+    "Balance Sheet"
+   ],
+   "path": "/books/<id>/reports/balance-sheet",
+   "structure": "document",
+   "top": {
+    "name": "",
+    "role": "document"
+   }
+  },
+  "hop": [
+   {
+    "click": {
+     "name": "Reports",
+     "role": "link"
+    }
+   }
+  ],
+  "mutates": false,
+  "parent": "books.home",
+  "recordedBy": "agent",
+  "review": null,
+  "similarity": 0.9068,
+  "source": "89d1b6fff0731dd9bc4c1be5f05d436b796c9b84",
+  "status": "accepted"
+ },
+ "books.balance-sheet-quarterly": {
+  "checked": "2026-10-02-1349",
+  "fingerprint": {
+   "controls": [
+    "<amount>",
+    "<n> of <n> setup steps complete Finalize setup",
+    "Accounts",
+    "Add",
+    "Balance Sheet",
+    "Banking",
+    "Bills",
+    "Books",
+    "Cash Flow Analysis",
+    "Chart of Accounts",
+    "Collapse report",
+    "Command",
+    "Customize your experience",
+    "Download report",
+    "Filters",
+    "General Ledger",
+    "Home",
+    "Invoices",
+    "Journal Entries",
+    "Keyboard shortcuts",
+    "Mercury Demo Pro",
+    "Open account",
+    "Open combobox menu",
+    "Payroll",
+    "Profit & Loss",
+    "Q<n>",
+    "Q<n> QTD: <amount>M",
+    "Q<n> QTD: Current assets <amount>M, Long-term assets <amount>M, Total assets <amount>M, Liabilities <amount>M, Equity <amount>M, Liabilities + Equity <amount>M",
+    "Q<n>: <amount>M",
+    "Q<n>: Current assets <amount>M, Long-term assets <amount>M, Total assets <amount>M, Liabilities <amount>M, Equity <amount>M, Liabilities + Equity <amount>M",
+    "Reconciliation",
+    "Reports",
+    "Rules",
+    "Search or jump to",
+    "Settings",
+    "Transactions",
+    "Viewing as Admin",
+    "frequency",
+    "years"
+   ],
+   "headings": [
+    "Balance Sheet"
+   ],
+   "path": "/books/<id>/reports/balance-sheet",
+   "structure": "document",
+   "top": {
+    "name": "",
+    "role": "document"
+   }
+  },
+  "hop": [
+   {
+    "click": {
+     "name": "Quarterly",
+     "role": "option"
+    }
+   }
+  ],
+  "mutates": false,
+  "parent": "books.report-frequency",
+  "recordedBy": "agent",
+  "review": {
+   "by": "conductor",
+   "date": "2026-10-03",
+   "decision": "accept",
+   "note": "same Balance Sheet in Quarterly view with the frequency menu closed; the replay's Q1-Q4 columns and chips (vs Q1-Q3 in the capture) are date drift; hop clicks the Quarterly option the label names",
+   "reason": "below-threshold"
+  },
+  "similarity": 0.8817,
+  "source": "d5d72f6839ea46bdb604885617aaa06691e46960",
+  "status": "accepted"
+ },
+ "books.basis-tooltip": {
+  "checked": "2026-10-02-1349",
+  "fingerprint": {
+   "controls": [],
+   "headings": [],
+   "path": "/books/signup",
+   "structure": "dialog",
+   "top": {
+    "name": "",
+    "role": "generic"
+   }
+  },
+  "hop": [
+   {
+    "hover": {
+     "css": "svg.fa-circle-info"
+    }
+   }
+  ],
+  "mutates": false,
+  "parent": "books.index",
+  "recordedBy": "agent",
+  "review": null,
+  "similarity": 0.9642,
+  "source": "b94bbc47710671e3351fb189afe6bb6da2ae6d2f",
+  "status": "accepted"
+ },
+ "books.bill-drawer": {
+  "checked": "2026-10-02-1349",
+  "fingerprint": {
+   "controls": [],
+   "headings": [],
+   "path": "/books/<id>/bills",
+   "structure": "dialog",
+   "top": {
+    "name": "",
+    "role": "generic"
+   }
+  },
+  "hop": [
+   {
+    "click": {
+     "css": "[data-icon=\"chevron-right\"]",
+     "index": 1
+    }
+   },
+   {
+    "wait": {
+     "ms": 8000
+    }
+   }
+  ],
+  "mutates": false,
+  "parent": "books.bills",
+  "recordedBy": "agent",
+  "review": {
+   "by": "conductor",
+   "date": "2026-10-03",
+   "decision": "reject",
+   "note": "missing layer: the drawer opens over the Bills list with BILL-001 selected, but its body stays blank; none of the BILL-001 details, tabs or line items render (descendants 0)",
+   "reason": "below-threshold"
+  },
+  "similarity": 0.7049,
+  "source": "5508925fcfd9197f71ebec9bee2c7c3fd1f2c5cd",
+  "status": "rejected"
+ },
+ "books.bills": {
+  "checked": "2026-10-02-1349",
+  "fingerprint": {
+   "controls": [
+    "<n> of <n> setup steps complete Finalize setup",
+    "Accounts",
+    "Banking",
+    "Bills",
+    "Books",
+    "Chart of Accounts",
+    "Command",
+    "Create bill",
+    "Customize your experience",
+    "Filters",
+    "Home",
+    "Invoices",
+    "Journal Entries",
+    "Keyboard shortcuts",
+    "Mercury Demo Pro",
+    "Open Menu",
+    "Open account",
+    "Payroll",
+    "Reconciliation",
+    "Reports",
+    "Rules",
+    "Search or jump to",
+    "Settings",
+    "Transactions",
+    "Vendors",
+    "Viewing as Admin"
+   ],
+   "headings": [
+    "Bills"
+   ],
+   "path": "/books/<id>/bills",
+   "structure": "document",
+   "top": {
+    "name": "",
+    "role": "document"
+   }
+  },
+  "hop": [
+   {
+    "click": {
+     "name": "Bills",
+     "role": "link"
+    }
+   }
+  ],
+  "mutates": false,
+  "parent": "books.home",
+  "recordedBy": "agent",
+  "review": null,
+  "similarity": 0.9255,
+  "source": "ed186f45ef3792bfa6ca41c0ff33da2500d16094",
+  "status": "accepted"
+ },
+ "books.books-details": {
+  "checked": "2026-10-02-1349",
+  "fingerprint": {
+   "controls": [
+    "<n> of <n> setup steps complete Finalize setup",
+    "Accounts",
+    "Add",
+    "Banking",
+    "Bills",
+    "Books",
+    "Books Details",
+    "Chart of Accounts",
+    "Command",
+    "Customize your experience",
+    "Edit",
+    "Home",
+    "Invoices",
+    "Journal Entries",
+    "Keyboard shortcuts",
+    "Manage subscription",
+    "Mercury Demo Pro",
+    "Open account",
+    "Payroll",
+    "Reconciliation",
+    "Reports",
+    "Rules",
+    "Search or jump to",
+    "Settings",
+    "Tags",
+    "Transactions",
+    "Viewing as Admin",
+    "contact support"
+   ],
+   "headings": [
+    "Books Details"
+   ],
+   "path": "/books/<id>/books-details",
+   "structure": "document",
+   "top": {
+    "name": "",
+    "role": "document"
+   }
+  },
+  "hop": [
+   {
+    "click": {
+     "name": "Settings",
+     "role": "link"
+    }
+   }
+  ],
+  "mutates": false,
+  "parent": "books.home",
+  "recordedBy": "agent",
+  "review": null,
+  "similarity": 0.9619,
+  "source": "557f1ebb98234c851affc84d4f4701e5838ee0c6",
+  "status": "accepted"
+ },
+ "books.cash-flow": {
+  "checked": "2026-10-02-1349",
+  "fingerprint": {
+   "controls": [
+    "<amount>",
+    "<date>: <amount>M",
+    "<date>: Movement <amount>K",
+    "<date>: Movement <amount>M",
+    "<n> of <n> setup steps complete Finalize setup",
+    "Accounts",
+    "Add",
+    "Apr",
+    "Aug",
+    "Balance Sheet",
+    "Banking",
+    "Bills",
+    "Books",
+    "Cash Flow Analysis",
+    "Chart of Accounts",
+    "Collapse report",
+    "Command",
+    "Customize your experience",
+    "Download report",
+    "Feb",
+    "Filters",
+    "General Ledger",
+    "Home",
+    "Invoices",
+    "Jan",
+    "Journal Entries",
+    "Jul",
+    "Jun",
+    "Keyboard shortcuts",
+    "Mar",
+    "May",
+    "Mercury Demo Pro",
+    "Oct",
+    "Oct MTD: <amount>M",
+    "Oct MTD: Movement <amount>K",
+    "Open account",
+    "Open combobox menu",
+    "Payroll",
+    "Profit & Loss",
+    "Reconciliation",
+    "Reports",
+    "Rules",
+    "Search or jump to",
+    "Sep",
+    "Settings",
+    "Transactions",
+    "Viewing as Admin",
+    "frequency",
+    "years",
+    "−<amount>"
+   ],
+   "headings": [
+    "Cash Flow Analysis"
+   ],
+   "path": "/books/<id>/reports/cash-flow-analysis",
+   "structure": "document",
+   "top": {
+    "name": "",
+    "role": "document"
+   }
+  },
+  "hop": [
+   {
+    "click": {
+     "name": "Cash Flow Analysis",
+     "role": "link"
+    }
+   }
+  ],
+  "mutates": false,
+  "parent": "books.profit-loss",
+  "recordedBy": "agent",
+  "review": null,
+  "similarity": 0.9049,
+  "source": "9bee2255a469dfc96a9f482a0c4ec53eb2bd2d2e",
+  "status": "accepted"
+ },
+ "books.chart-of-accounts": {
+  "checked": "2026-10-02-1349",
+  "fingerprint": {
+   "controls": [
+    "<n> of <n> setup steps complete Finalize setup",
+    "Accounts",
+    "Add ledger account",
+    "All",
+    "Assets",
+    "Banking",
+    "Bills",
+    "Books",
+    "Chart of Accounts",
+    "Command",
+    "Customize your experience",
+    "Equity",
+    "Expenses",
+    "Filters",
+    "Home",
+    "Invoices",
+    "Journal Entries",
+    "Keyboard shortcuts",
+    "Liabilities",
+    "Mercury Demo Pro",
+    "Open Menu",
+    "Open account",
+    "Payroll",
+    "Reconciliation",
+    "Reports",
+    "Revenues",
+    "Rules",
+    "Search or jump to",
+    "Select all rows",
+    "Settings",
+    "Transactions",
+    "Viewing as Admin"
+   ],
+   "headings": [
+    "Chart of Accounts"
+   ],
+   "path": "/books/<id>/chart-of-accounts",
+   "structure": "document",
+   "top": {
+    "name": "",
+    "role": "document"
+   }
+  },
+  "hop": [
+   {
+    "click": {
+     "name": "Chart of Accounts",
+     "role": "link"
+    }
+   }
+  ],
+  "mutates": false,
+  "parent": "books.home",
+  "recordedBy": "agent",
+  "review": null,
+  "similarity": 0.9828,
+  "source": "1473d82ef0785a3ff007efa00e29c926fc81c9b5",
+  "status": "accepted"
+ },
+ "books.coa-dropdown": {
+  "checked": "2026-10-02-1349",
+  "fingerprint": {
+   "controls": [
+    "Chart of accounts",
+    "Default (Recommended)",
+    "Import template"
+   ],
+   "headings": [],
+   "path": "/books/signup",
+   "structure": "listbox",
+   "top": {
+    "name": "Chart of accounts",
+    "role": "listbox"
+   }
+  },
+  "hop": [
+   {
+    "click": {
+     "name": "Chart of accounts",
+     "role": "combobox"
+    }
+   }
+  ],
+  "mutates": false,
+  "parent": "books.index",
+  "recordedBy": "agent",
+  "review": null,
+  "similarity": 0.9636,
+  "source": "ad7833badbc3b634db20abb4f5b4670211f9bda2",
+  "status": "accepted"
+ },
+ "books.coa-preview": {
+  "checked": "2026-10-02-1349",
+  "fingerprint": {
+   "controls": [
+    "Close preview"
+   ],
+   "headings": [
+    "Default (Recommended) chart of accounts"
+   ],
+   "path": "/books/signup",
+   "structure": "dialog",
+   "top": {
+    "name": "Default (Recommended) chart of accounts",
+    "role": "dialog"
+   }
+  },
+  "hop": [
+   {
+    "click": {
+     "name": "Preview chart of accounts",
+     "role": "button"
+    }
+   }
+  ],
+  "mutates": false,
+  "parent": "books.index",
+  "recordedBy": "draft",
+  "review": null,
+  "similarity": 0.9689,
+  "source": "d9adf24de6f4b0f3806c9a78dfbb69727f612a0c",
+  "status": "accepted"
+ },
+ "books.command": {
+  "checked": "2026-10-02-1349",
+  "fingerprint": {
+   "controls": [
+    "<n> of <n> setup steps complete Finalize setup",
+    "Accounts",
+    "Add",
+    "Banking",
+    "Bills",
+    "Books",
+    "Chart of Accounts",
+    "Command",
+    "Command message",
+    "Compare monthly balances",
+    "Customize your experience",
+    "Home",
+    "Invoices",
+    "Issue new card",
+    "Journal Entries",
+    "Keyboard shortcuts",
+    "Mercury Demo Pro",
+    "Open account",
+    "Payroll",
+    "Reconciliation",
+    "Reports",
+    "Rules",
+    "Search or jump to",
+    "Send message",
+    "Settings",
+    "Transactions",
+    "Viewing as Admin"
+   ],
+   "headings": [
+    "Command",
+    "Let’s cross off some to-dos"
+   ],
+   "path": "/books/<id>/command",
+   "structure": "document",
+   "top": {
+    "name": "",
+    "role": "document"
+   }
+  },
+  "hop": [
+   {
+    "click": {
+     "name": "Command",
+     "role": "link"
+    }
+   }
+  ],
+  "mutates": false,
+  "parent": "books.home",
+  "recordedBy": "agent",
+  "review": {
+   "by": "conductor",
+   "date": "2026-10-03",
+   "decision": "accept",
+   "note": "same Command page ('Ask anything about your money' prompt with Issue new card and Compare monthly balances chips); hop clicks the Command sidebar link",
+   "reason": "below-threshold"
+  },
+  "similarity": 0.8561,
+  "source": "9d6d769a9318acc78e6c020970654573817d48cb",
+  "status": "accepted"
+ },
+ "books.customers": {
+  "checked": "2026-10-02-1349",
+  "fingerprint": null,
+  "hop": [
+   {
+    "click": {
+     "name": "Customers",
+     "role": "link"
+    }
+   },
+   {
+    "wait": {
+     "locator": {
+      "text": "Add a customer"
+     }
+    }
+   }
+  ],
+  "mutates": false,
+  "parent": "books.invoices",
+  "recordedBy": "agent",
+  "review": null,
+  "similarity": null,
+  "source": null,
+  "status": "draft"
+ },
+ "books.finalize-step1": {
+  "checked": "2026-10-02-1349",
+  "fingerprint": null,
+  "hop": [
+   {
+    "click": {
+     "name": "<n> of <n> setup steps complete Finalize setup",
+     "role": "button"
+    }
+   }
+  ],
+  "mutates": false,
+  "parent": "books.home",
+  "recordedBy": "agent",
+  "review": null,
+  "similarity": null,
+  "source": null,
+  "status": "draft"
+ },
+ "books.general-ledger": {
+  "checked": "2026-10-02-1349",
+  "fingerprint": {
+   "controls": [
+    "<n> of <n> setup steps complete Finalize setup",
+    "Accounts",
+    "Add",
+    "Balance Sheet",
+    "Banking",
+    "Bills",
+    "Books",
+    "Cash Flow Analysis",
+    "Chart of Accounts",
+    "Command",
+    "Customize your experience",
+    "Download report",
+    "Filters",
+    "General Ledger",
+    "Home",
+    "Invoices",
+    "Journal Entries",
+    "Keyboard shortcuts",
+    "Mercury Demo Pro",
+    "Open account",
+    "Payroll",
+    "Profit & Loss",
+    "Reconciliation",
+    "Reports",
+    "Rules",
+    "Search or jump to",
+    "Select all rows",
+    "Settings",
+    "This Month",
+    "Transactions",
+    "Viewing as Admin"
+   ],
+   "headings": [
+    "General Ledger"
+   ],
+   "path": "/books/<id>/reports/general-ledger",
+   "structure": "document",
+   "top": {
+    "name": "",
+    "role": "document"
+   }
+  },
+  "hop": [
+   {
+    "click": {
+     "name": "General Ledger",
+     "role": "link"
+    }
+   }
+  ],
+  "mutates": false,
+  "parent": "books.cash-flow",
+  "recordedBy": "agent",
+  "review": {
+   "by": "conductor",
+   "date": "2026-10-03",
+   "decision": "accept",
+   "note": "same General Ledger page (This Month filter; Date, Ledger account, Contra accounts, Memo, Vendor/customer, Debit, Credit grid); only the dates and rows have drifted (10/01 vs 09/01)",
+   "reason": "below-threshold"
+  },
+  "similarity": 0.8459,
+  "source": "c12584debb80c036dc5b62b6f5183ca2c4abdc09",
+  "status": "accepted"
+ },
+ "books.home": {
+  "checked": "2026-10-02-1349",
+  "fingerprint": {
+   "controls": [
+    "<date> – <n>: In <amount> Out <amount> Net <amount>. Press Enter or Space to view report details.",
+    "<date> – <n>: Total <amount>. Press Enter or Space to view report details.",
+    "<date>: Total <amount>. Press Enter or Space to view report details.",
+    "<n> of <n> setup steps complete Finalize setup",
+    "Accounting, Tax, and Audit <amount> <n>%",
+    "Accounts",
+    "Add",
+    "Advertising <amount> <n>%",
+    "Banking",
+    "Benefits Expense <amount> <<n>%",
+    "Bills",
+    "Books",
+    "Business Insurance <amount> <n>%",
+    "Chart of Accounts",
+    "Chase Credit Card <n> <amount>",
+    "Citi Checking <n> <amount>",
+    "Command",
+    "Computers and Hardware <amount> −<n>%",
+    "Cost of Revenue: Contractors <amount> <n>%",
+    "Cost of Revenue: Hosting and Infrastructure <amount> <<n>%",
+    "Cost of Revenue: Inventory <amount> <n>%",
+    "Customize your experience",
+    "Employee Reimbursements <amount> <<n>%",
+    "Home",
+    "Interest Paid <amount> <n>%",
+    "Invoices",
+    "Journal Entries",
+    "Jupiter Checking <n> <amount>",
+    "Keyboard shortcuts",
+    "Legal <amount> <n>%",
+    "Mercury Demo Pro",
+    "Mercury IO <amount>",
+    "Neptune Checking <n> <amount>",
+    "Open account",
+    "Ops / Payroll <amount>",
+    "Other Operating Expenses <amount> <n>%",
+    "Other Professional Services <amount> <n>%",
+    "Payroll",
+    "Payroll Taxes <amount> <<n>%",
+    "Petty Cash <amount>",
+    "Pluto Checking <n> <amount>",
+    "Product Revenue <amount> <n>%",
+    "Reconciliation",
+    "Rent <amount> <n>%",
+    "Repairs and Maintenance <amount> <n>%",
+    "Reports",
+    "Rules",
+    "Salaries and Wages <amount> <n>%",
+    "Search or jump to",
+    "Services Revenue <amount> <n>%",
+    "Settings",
+    "Stripe Payments Account <amount>",
+    "Subscription Revenue <amount> <n>%",
+    "Transactions",
+    "Uncategorized Cash Inflow <amount> <<n>%",
+    "Uncategorized Cash Outflow <amount> <<n>%",
+    "Venus Credit Card <n> <amount>",
+    "View Cash Flow Analysis",
+    "View expenses",
+    "View revenue",
+    "Viewing as Admin",
+    "Wells Fargo Checking <n> <amount>",
+    "Wells Fargo Credit Card <n> <amount>"
+   ],
+   "headings": [
+    "Mercury Demo",
+    "Cash",
+    "Net cash flow trend",
+    "Cash in vs out",
+    "By ledger account",
+    "Expenses",
+    "Revenue",
+    "Revenue trend"
+   ],
+   "path": "/books/<id>",
+   "structure": "document",
+   "top": {
+    "name": "",
+    "role": "document"
+   }
+  },
+  "hop": [
+   {
+    "click": {
+     "name": "Dismiss spotlight",
+     "role": "button"
+    }
+   }
+  ],
+  "mutates": false,
+  "parent": "books.home-setup-popover",
+  "recordedBy": "agent",
+  "review": null,
+  "similarity": 0.9018,
+  "source": "0994bd5f2b3c58555762e870b7e1bfc65d56cff3",
+  "status": "accepted"
+ },
+ "books.home-returning": {
+  "checked": "2026-10-02-1349",
+  "fingerprint": {
+   "controls": [
+    "Accrual",
+    "Banking",
+    "Books",
+    "Cash",
+    "Chart of accounts",
+    "Customize your experience",
+    "Learn more about Books",
+    "Mercury Demo Pro",
+    "Open account",
+    "Preview chart of accounts",
+    "Try Mercury Books",
+    "Viewing as Admin"
+   ],
+   "headings": [
+    "Intelligent accounting built into Mercury"
+   ],
+   "path": "/books/signup",
+   "structure": "document",
+   "top": {
+    "name": "",
+    "role": "document"
+   }
+  },
+  "hop": [
+   {
+    "click": {
+     "name": "Books",
+     "role": "button"
+    }
+   },
+   {
+    "wait": {
+     "ms": 1500
+    }
+   },
+   {
+    "click": {
+     "name": "Banking",
+     "role": "button"
+    }
+   },
+   {
+    "wait": {
+     "ms": 1500
+    }
+   },
+   {
+    "click": {
+     "name": "Books",
+     "role": "button"
+    }
+   },
+   {
+    "wait": {
+     "ms": 2000
+    }
+   }
+  ],
+  "mutates": false,
+  "parent": "home.index",
+  "recordedBy": "agent",
+  "review": {
+   "by": "conductor",
+   "date": "2026-10-03",
+   "decision": "reject",
+   "note": "different screen: the replay lands on the Books signup page ('Intelligent accounting built into Mercury', Try Mercury Books); the capture shows the Books dashboard (Cash/Expenses/Revenue, Last month)",
+   "reason": "below-threshold"
+  },
+  "similarity": 0.4987,
+  "source": "c86856aabf9c27715a35f596cc72c3bd9a27e791",
+  "status": "rejected"
+ },
+ "books.home-setup-popover": {
+  "checked": "2026-10-02-1349",
+  "fingerprint": {
+   "controls": [
+    "Dismiss spotlight"
+   ],
+   "headings": [],
+   "path": "/books/<id>",
+   "structure": "status",
+   "top": {
+    "name": "Finish setting up Books",
+    "role": "alert"
+   }
+  },
+  "hop": [
+   {
+    "wait": {
+     "locator": {
+      "name": "Dismiss spotlight",
+      "role": "button"
+     }
+    }
+   }
+  ],
+  "mutates": false,
+  "parent": "books.setup-transition",
+  "recordedBy": "agent",
+  "review": {
+   "by": "conductor",
+   "date": "2026-10-03",
+   "decision": "accept",
+   "note": "re-checked after the layer-detection fixes of 2026-10-03 (fingerprint refreshed); same hop the conductor's review panel accepted earlier today, similarity 0.912",
+   "reason": "sample"
+  },
+  "similarity": 0.912,
+  "source": "a2c3d1e98391c4565e532fba90562a5a3a1ef595",
+  "status": "accepted"
+ },
+ "books.index": {
+  "checked": "2026-10-02-1349",
+  "fingerprint": {
+   "controls": [
+    "Accrual",
+    "Banking",
+    "Books",
+    "Cash",
+    "Chart of accounts",
+    "Customize your experience",
+    "Learn more about Books",
+    "Mercury Demo Pro",
+    "Open account",
+    "Preview chart of accounts",
+    "Try Mercury Books",
+    "Viewing as Admin"
+   ],
+   "headings": [
+    "Intelligent accounting built into Mercury"
+   ],
+   "path": "/books/signup",
+   "structure": "document",
+   "top": {
+    "name": "",
+    "role": "document"
+   }
+  },
+  "hop": [
+   {
+    "click": {
+     "name": "Books",
+     "role": "button"
+    }
+   }
+  ],
+  "mutates": false,
+  "parent": "home.index",
+  "recordedBy": "draft",
+  "review": null,
+  "similarity": 0.9648,
+  "source": "ef121c3afd25ca6e182ff6cc6f4af979480e4a10",
+  "status": "accepted"
+ },
+ "books.invoice-drawer": {
+  "checked": "2026-10-02-1349",
+  "fingerprint": null,
+  "hop": [
+   {
+    "click": {
+     "name": "<n> INV-OVERDUE-001 Polaris Legal Services <date> <date> Overdue <amount> <amount>",
+     "role": "row"
+    }
+   }
+  ],
+  "mutates": false,
+  "parent": "books.invoices",
+  "recordedBy": "agent",
+  "review": null,
+  "similarity": null,
+  "source": null,
+  "status": "draft"
+ },
+ "books.invoices": {
+  "checked": "2026-10-02-1349",
+  "fingerprint": {
+   "controls": [
+    "<n> of <n> setup steps complete Finalize setup",
+    "Accounts",
+    "Banking",
+    "Bills",
+    "Books",
+    "Chart of Accounts",
+    "Command",
+    "Create invoice",
+    "Customers",
+    "Customize your experience",
+    "Dismiss banner",
+    "Filters",
+    "Home",
+    "Invoices",
+    "Journal Entries",
+    "Keyboard shortcuts",
+    "Mercury Demo Pro",
+    "Open Menu",
+    "Open account",
+    "Payroll",
+    "Reconciliation",
+    "Reports",
+    "Rules",
+    "Search or jump to",
+    "Settings",
+    "Transactions",
+    "View invoices",
+    "Viewing as Admin"
+   ],
+   "headings": [
+    "Invoices"
+   ],
+   "path": "/books/<id>/invoices",
+   "structure": "document",
+   "top": {
+    "name": "",
+    "role": "document"
+   }
+  },
+  "hop": [
+   {
+    "click": {
+     "name": "Invoices",
+     "role": "link"
+    }
+   },
+   {
+    "wait": {
+     "locator": {
+      "name": "Create invoice",
+      "role": "button"
+     }
+    }
+   },
+   {
+    "wait": {
+     "locator": {
+      "name": "Dismiss banner",
+      "role": "button"
+     }
+    }
+   }
+  ],
+  "mutates": false,
+  "parent": "books.home",
+  "recordedBy": "agent",
+  "review": {
+   "by": "conductor",
+   "date": "2026-10-03",
+   "decision": "reject",
+   "note": "missing layer: the replay stays on the 'Finalize setup' spinner, with no 'You have 3 non-USD invoices' warning banner and an empty Create invoice button; the invoice grid matches",
+   "reason": "below-threshold"
+  },
+  "similarity": 0.2215,
+  "source": "fac304ec03cc79985432588bc35f033b5add266a",
+  "status": "rejected"
+ },
+ "books.je-create": {
+  "checked": "2026-10-02-1349",
+  "fingerprint": {
+   "controls": [
+    "Cancel",
+    "Date",
+    "Description",
+    "Save",
+    "Select all rows"
+   ],
+   "headings": [],
+   "path": "/books/<id>",
+   "structure": "dialog",
+   "top": {
+    "name": "",
+    "role": "generic"
+   }
+  },
+  "hop": [
+   {
+    "click": {
+     "name": "Journal entry",
+     "role": "menuitem"
+    }
+   },
+   {
+    "wait": {
+     "locator": {
+      "label": "Description"
+     }
+    }
+   },
+   {
+    "wait": {
+     "ms": 1500
+    }
+   }
+  ],
+  "mutates": false,
+  "parent": "books.add-menu",
+  "recordedBy": "agent",
+  "review": {
+   "by": "conductor",
+   "date": "2026-10-03",
+   "decision": "accept",
+   "note": "re-checked after the layer-detection fixes of 2026-10-03 (fingerprint refreshed); same hop the conductor accepted earlier today, similarity 0.5046 (blank body: reduced-motion defect)",
+   "reason": "below-threshold"
+  },
+  "similarity": 0.5046,
+  "source": "5bb3ff4315553dd1a60ab0f81b1852326c3632d7",
+  "status": "accepted"
+ },
+ "books.je-date-picker": {
+  "checked": "2026-10-02-1349",
+  "fingerprint": {
+   "controls": [
+    "Date"
+   ],
+   "headings": [],
+   "path": "/books/<id>",
+   "structure": "dialog",
+   "top": {
+    "name": "",
+    "role": "generic"
+   }
+  },
+  "hop": [
+   {
+    "click": {
+     "label": "Date"
+    }
+   }
+  ],
+  "mutates": false,
+  "parent": "books.je-create",
+  "recordedBy": "agent",
+  "review": {
+   "by": "conductor",
+   "date": "2026-10-03",
+   "decision": "accept",
+   "note": "reached: re-checked after the layer-detection fix; clicking Date opens the calendar popover as captured. Score is low because the replay shows the demo clock month (October 2026) and the reduced-motion blank drawer behind it (the books creation-drawer defect), not the capture's Sep 25 and loaded drawer (conductor compared sheets 2026-10-03)",
+   "reason": "below-threshold"
+  },
+  "similarity": 0.5025,
+  "source": "3b169f68421bb812328d3471d9db6a456fa07fbb",
+  "status": "accepted"
+ },
+ "books.je-detail": {
+  "checked": "2026-10-02-1349",
+  "fingerprint": null,
+  "hop": [
+   {
+    "click": {
+     "name": "Save",
+     "role": "button"
+    }
+   }
+  ],
+  "mutates": false,
+  "parent": "books.je-filled",
+  "recordedBy": "agent",
+  "review": null,
+  "similarity": null,
+  "source": null,
+  "status": "draft"
+ },
+ "books.je-empty-save": {
+  "checked": "2026-10-02-1349",
+  "fingerprint": {
+   "controls": [
+    "<date> – <n>: In <amount> Out <amount> Net <amount>. Press Enter or Space to view report details.",
+    "<date> – <n>: Total <amount>. Press Enter or Space to view report details.",
+    "<date>: Total <amount>. Press Enter or Space to view report details.",
+    "<n> of <n> setup steps complete Finalize setup",
+    "Accounting, Tax, and Audit <amount> <n>%",
+    "Accounts",
+    "Add",
+    "Advertising <amount> <n>%",
+    "Banking",
+    "Benefits Expense <amount> <<n>%",
+    "Bills",
+    "Books",
+    "Business Insurance <amount> <n>%",
+    "Cancel",
+    "Chart of Accounts",
+    "Chase Credit Card <n> <amount>",
+    "Citi Checking <n> <amount>",
+    "Command",
+    "Computers and Hardware <amount> −<n>%",
+    "Cost of Revenue: Contractors <amount> <n>%",
+    "Cost of Revenue: Hosting and Infrastructure <amount> <<n>%",
+    "Cost of Revenue: Inventory <amount> <n>%",
+    "Customize your experience",
+    "Date",
+    "Description",
+    "Employee Reimbursements <amount> <<n>%",
+    "Home",
+    "Interest Paid <amount> <n>%",
+    "Invoices",
+    "Journal Entries",
+    "Jupiter Checking <n> <amount>",
+    "Keyboard shortcuts",
+    "Legal <amount> <n>%",
+    "Mercury Demo Pro",
+    "Mercury IO <amount>",
+    "Neptune Checking <n> <amount>",
+    "Open account",
+    "Ops / Payroll <amount>",
+    "Other Operating Expenses <amount> <n>%",
+    "Other Professional Services <amount> <n>%",
+    "Payroll",
+    "Payroll Taxes <amount> <<n>%",
+    "Petty Cash <amount>",
+    "Pluto Checking <n> <amount>",
+    "Product Revenue <amount> <n>%",
+    "Reconciliation",
+    "Rent <amount> <n>%",
+    "Repairs and Maintenance <amount> <n>%",
+    "Reports",
+    "Rules",
+    "Salaries and Wages <amount> <n>%",
+    "Save",
+    "Search or jump to",
+    "Select all rows",
+    "Services Revenue <amount> <n>%",
+    "Settings",
+    "Stripe Payments Account <amount>",
+    "Subscription Revenue <amount> <n>%",
+    "Transactions",
+    "Uncategorized Cash Inflow <amount> <<n>%",
+    "Uncategorized Cash Outflow <amount> <<n>%",
+    "Venus Credit Card <n> <amount>",
+    "View Cash Flow Analysis",
+    "View expenses",
+    "View revenue",
+    "Viewing as Admin",
+    "Wells Fargo Checking <n> <amount>",
+    "Wells Fargo Credit Card <n> <amount>"
+   ],
+   "headings": [
+    "Mercury Demo",
+    "Cash",
+    "Net cash flow trend",
+    "Cash in vs out",
+    "By ledger account",
+    "Expenses",
+    "Revenue",
+    "Revenue trend"
+   ],
+   "path": "/books/<id>",
+   "structure": "document",
+   "top": {
+    "name": "",
+    "role": "document"
+   }
+  },
+  "hop": [
+   {
+    "click": {
+     "index": 0,
+     "name": "Save",
+     "role": "button"
+    }
+   },
+   {
+    "wait": {
+     "ms": 500
+    }
+   }
+  ],
+  "mutates": true,
+  "parent": "books.je-create",
+  "recordedBy": "agent",
+  "review": {
+   "by": "conductor",
+   "date": "2026-10-03",
+   "decision": "accept",
+   "note": "same empty-save error, hidden only by the reduced-motion opacity-0 defect seen on the accepted books.je-create: both replay panels show the blank drawer body, but I replayed it live with reach.mjs on 2026-10-03 in three of four sessions and found 'Please complete all required fields.' in the DOM at effective opacity 0. The hop clicks Save, which matches 'Save with no lines'. The error clears about 4.8 s after Save, so the sweep has to run its checks inside that window. One session missed it because I checked after it had cleared.",
+   "reason": "below-threshold"
+  },
+  "similarity": 0.5038,
+  "source": "68b7fbdfbc485465495d6b015df230935304c216",
+  "status": "accepted"
+ },
+ "books.je-filled": {
+  "checked": "2026-10-02-1349",
+  "fingerprint": {
+   "controls": [
+    "<date> – <n>: In <amount> Out <amount> Net <amount>. Press Enter or Space to view report details.",
+    "<date> – <n>: Total <amount>. Press Enter or Space to view report details.",
+    "<date>: Total <amount>. Press Enter or Space to view report details.",
+    "<n> of <n> setup steps complete Finalize setup",
+    "Accounting, Tax, and Audit <amount> <n>%",
+    "Accounts",
+    "Add",
+    "Advertising <amount> <n>%",
+    "Banking",
+    "Benefits Expense <amount> <<n>%",
+    "Bills",
+    "Books",
+    "Business Insurance <amount> <n>%",
+    "Cancel",
+    "Chart of Accounts",
+    "Chase Credit Card <n> <amount>",
+    "Citi Checking <n> <amount>",
+    "Command",
+    "Computers and Hardware <amount> −<n>%",
+    "Cost of Revenue: Contractors <amount> <n>%",
+    "Cost of Revenue: Hosting and Infrastructure <amount> <<n>%",
+    "Cost of Revenue: Inventory <amount> <n>%",
+    "Customize your experience",
+    "Date",
+    "Description",
+    "Employee Reimbursements <amount> <<n>%",
+    "Home",
+    "Interest Paid <amount> <n>%",
+    "Invoices",
+    "Journal Entries",
+    "Jupiter Checking <n> <amount>",
+    "Keyboard shortcuts",
+    "Legal <amount> <n>%",
+    "Mercury Demo Pro",
+    "Mercury IO <amount>",
+    "Neptune Checking <n> <amount>",
+    "Open account",
+    "Ops / Payroll <amount>",
+    "Other Operating Expenses <amount> <n>%",
+    "Other Professional Services <amount> <n>%",
+    "Payroll",
+    "Payroll Taxes <amount> <<n>%",
+    "Petty Cash <amount>",
+    "Pluto Checking <n> <amount>",
+    "Product Revenue <amount> <n>%",
+    "Reconciliation",
+    "Rent <amount> <n>%",
+    "Repairs and Maintenance <amount> <n>%",
+    "Reports",
+    "Rules",
+    "Salaries and Wages <amount> <n>%",
+    "Save",
+    "Search or jump to",
+    "Select all rows",
+    "Services Revenue <amount> <n>%",
+    "Settings",
+    "Stripe Payments Account <amount>",
+    "Subscription Revenue <amount> <n>%",
+    "Transactions",
+    "Uncategorized Cash Inflow <amount> <<n>%",
+    "Uncategorized Cash Outflow <amount> <<n>%",
+    "Venus Credit Card <n> <amount>",
+    "View Cash Flow Analysis",
+    "View expenses",
+    "View revenue",
+    "Viewing as Admin",
+    "Wells Fargo Checking <n> <amount>",
+    "Wells Fargo Credit Card <n> <amount>"
+   ],
+   "headings": [
+    "Mercury Demo",
+    "Cash",
+    "Net cash flow trend",
+    "Cash in vs out",
+    "By ledger account",
+    "Expenses",
+    "Revenue",
+    "Revenue trend"
+   ],
+   "path": "/books/<id>",
+   "structure": "document",
+   "top": {
+    "name": "",
+    "role": "document"
+   }
+  },
+  "hop": [
+   {
+    "click": {
+     "text": "24"
+    }
+   },
+   {
+    "wait": {
+     "locator": {
+      "label": "Description"
+     }
+    }
+   },
+   {
+    "wait": {
+     "ms": 1500
+    }
+   }
+  ],
+  "mutates": false,
+  "parent": "books.je-date-picker",
+  "recordedBy": "agent",
+  "review": {
+   "by": "conductor",
+   "date": "2026-10-03",
+   "decision": "reject",
+   "note": "form state not reproduced: the hop only clicks day '24' and never types the description or the balanced Rent/Cash 1,250.00 lines the capture shows, and the drawer body is blank in both replays (the known reduced-motion opacity-0 defect), so no filled form is visible; 2 descendants start from a form this hop never fills",
+   "reason": "below-threshold"
+  },
+  "similarity": 0.5006,
+  "source": "a6930c83083b6ad8855dc43a80b6d5e746188c9e",
+  "status": "rejected"
+ },
+ "books.je-ledger-picker": {
+  "checked": "2026-10-02-1349",
+  "fingerprint": null,
+  "hop": [
+   {
+    "click": {
+     "css": "[class*=\"_cell_\"]",
+     "index": 0
+    }
+   },
+   {
+    "press": "Enter"
+   },
+   {
+    "wait": {
+     "locator": {
+      "role": "listbox"
+     }
+    }
+   }
+  ],
+  "mutates": false,
+  "parent": "books.je-create",
+  "recordedBy": "agent",
+  "review": null,
+  "similarity": null,
+  "source": null,
+  "status": "draft"
+ },
+ "books.ledger-drawer": {
+  "checked": "2026-10-02-1349",
+  "fingerprint": {
+   "controls": [],
+   "headings": [],
+   "path": "/books/<id>/chart-of-accounts",
+   "structure": "dialog",
+   "top": {
+    "name": "",
+    "role": "generic"
+   }
+  },
+  "hop": [
+   {
+    "click": {
+     "css": "[class*=\"_actionButton_\"]",
+     "within": {
+      "css": "[data-row-id=\"ledger-6\"]"
+     }
+    }
+   },
+   {
+    "wait": {
+     "ms": 3000
+    }
+   }
+  ],
+  "mutates": false,
+  "parent": "books.chart-of-accounts",
+  "recordedBy": "agent",
+  "review": {
+   "by": "conductor",
+   "date": "2026-10-03",
+   "decision": "reject",
+   "note": "missing content: row 10003 is highlighted and the drawer opens with only its toolbar (up/down/edit/delete/expand/close); the '10003 — Citi Checking 9384' details (code, type, subtype, opening balance) never render in either theme. The working-tree recipe already has a different hop (an action-button click on ledger-6) and also records empty controls and headings",
+   "reason": "below-threshold"
+  },
+  "similarity": 0.7392,
+  "source": "5a0c721b4fa50dba193f6a99203dee045a421674",
+  "status": "rejected"
+ },
+ "books.payroll": {
+  "checked": "2026-10-02-1349",
+  "fingerprint": {
+   "controls": [
+    "<n> of <n> setup steps complete Finalize setup",
+    "Accounts",
+    "Add",
+    "Banking",
+    "Bills",
+    "Books",
+    "Chart of Accounts",
+    "Command",
+    "Connect payroll",
+    "Customize your experience",
+    "Filters",
+    "Home",
+    "Invoices",
+    "Journal Entries",
+    "Keyboard shortcuts",
+    "Mercury Demo Pro",
+    "Open account",
+    "Payroll",
+    "Reconciliation",
+    "Reports",
+    "Rules",
+    "Search or jump to",
+    "Settings",
+    "Transactions",
+    "Viewing as Admin"
+   ],
+   "headings": [
+    "Payroll"
+   ],
+   "path": "/books/<id>/payroll",
+   "structure": "document",
+   "top": {
+    "name": "",
+    "role": "document"
+   }
+  },
+  "hop": [
+   {
+    "click": {
+     "name": "Payroll",
+     "role": "link"
+    }
+   }
+  ],
+  "mutates": false,
+  "parent": "books.home",
+  "recordedBy": "agent",
+  "review": null,
+  "similarity": 0.9913,
+  "source": "f8028d6050e9ff63c935604d3575d16a645ea9d3",
+  "status": "accepted"
+ },
+ "books.profit-loss": {
+  "checked": "2026-10-02-1349",
+  "fingerprint": {
+   "controls": [
+    "<amount>",
+    "<date>: Revenue <amount>K, Expenses <amount>M, Net profit <amount>K",
+    "<date>: Revenue <amount>M, Expenses <amount>K, Net profit <amount>K",
+    "<date>: Revenue <amount>M, Expenses <amount>M, Net profit <amount>K",
+    "<n> of <n> setup steps complete Finalize setup",
+    "Accounts",
+    "Add",
+    "Apr",
+    "Aug",
+    "Balance Sheet",
+    "Banking",
+    "Bills",
+    "Books",
+    "Cash Flow Analysis",
+    "Chart of Accounts",
+    "Collapse report",
+    "Command",
+    "Customize your experience",
+    "Download report",
+    "Feb",
+    "Filters",
+    "General Ledger",
+    "Home",
+    "Invoices",
+    "Jan",
+    "Journal Entries",
+    "Jul",
+    "Jun",
+    "Keyboard shortcuts",
+    "Mar",
+    "May",
+    "Mercury Demo Pro",
+    "Oct",
+    "Oct MTD: Revenue <amount>K, Expenses <amount>K, Net profit <amount>K",
+    "Open account",
+    "Open combobox menu",
+    "Payroll",
+    "Profit & Loss",
+    "Reconciliation",
+    "Reports",
+    "Rules",
+    "Search or jump to",
+    "Sep",
+    "Settings",
+    "Transactions",
+    "Viewing as Admin",
+    "frequency",
+    "years"
+   ],
+   "headings": [
+    "Profit & Loss"
+   ],
+   "path": "/books/<id>/reports/profit-and-loss",
+   "structure": "document",
+   "top": {
+    "name": "",
+    "role": "document"
+   }
+  },
+  "hop": [
+   {
+    "click": {
+     "name": "Profit & Loss",
+     "role": "link"
+    }
+   }
+  ],
+  "mutates": false,
+  "parent": "books.balance-sheet",
+  "recordedBy": "agent",
+  "review": {
+   "by": "conductor",
+   "date": "2026-10-03",
+   "decision": "accept",
+   "note": "same Profit & Loss report (Revenue/Expenses/Net profit bars and a monthly grid with a Total column; Reports > Profit & Loss selected in the sidebar); the figures differ and an Oct column appears because of date drift",
+   "reason": "below-threshold"
+  },
+  "similarity": 0.8594,
+  "source": "df22d2cbf0895c859d23b5cd48335289585d23b4",
+  "status": "accepted"
+ },
+ "books.reconciliation": {
+  "checked": "2026-10-02-1349",
+  "fingerprint": {
+   "controls": [
+    "<n> of <n> setup steps complete Finalize setup",
+    "Accounts",
+    "Add",
+    "Apr",
+    "Aug",
+    "Banking",
+    "Bills",
+    "Books",
+    "Chart of Accounts",
+    "Command",
+    "Customize your experience",
+    "Dismiss banner",
+    "Download statement",
+    "Feb",
+    "Filters",
+    "Home",
+    "Invoices",
+    "Jan",
+    "Journal Entries",
+    "Jul",
+    "Jun",
+    "Jupiter Checking <n> Auto-reconciled",
+    "Keyboard shortcuts",
+    "Mar",
+    "May",
+    "Mercury Demo Pro",
+    "October - Now",
+    "Open account",
+    "Open combobox menu",
+    "Payroll",
+    "Reconciliation",
+    "Reconciliation years",
+    "Reports",
+    "Rules",
+    "Search or jump to",
+    "Select all rows",
+    "Sep",
+    "Settings",
+    "Transactions",
+    "Viewing as Admin"
+   ],
+   "headings": [
+    "Reconciliation"
+   ],
+   "path": "/books/<id>/reconciliations/<id>/reconciliation/<id>",
+   "structure": "document",
+   "top": {
+    "name": "",
+    "role": "document"
+   }
+  },
+  "hop": [
+   {
+    "click": {
+     "name": "Reconciliation",
+     "role": "link"
+    }
+   }
+  ],
+  "mutates": false,
+  "parent": "books.home",
+  "recordedBy": "agent",
+  "review": {
+   "by": "conductor",
+   "date": "2026-10-03",
+   "decision": "accept",
+   "note": "same Reconciliation page (Jupiter Checking 4455, Auto-reconciled); latest month chip drifted Aug to Sep, and the 'Ledger accounts for linked banks have been added' info banner is absent (inline banner, not a layer)",
+   "reason": "below-threshold"
+  },
+  "similarity": 0.4032,
+  "source": "4b0ac9dff974e664a85c3eab3758991c844ca8bb",
+  "status": "accepted"
+ },
+ "books.reconciliation-account-menu": {
+  "checked": "2026-10-02-1349",
+  "fingerprint": null,
+  "hop": [
+   {
+    "click": {
+     "name": "Jupiter Checking <n> Auto-reconciled",
+     "role": "button"
+    }
+   }
+  ],
+  "mutates": false,
+  "parent": "books.reconciliation",
+  "recordedBy": "agent",
+  "review": null,
+  "similarity": null,
+  "source": null,
+  "status": "draft"
+ },
+ "books.report-frequency": {
+  "checked": "2026-10-02-1349",
+  "fingerprint": {
+   "controls": [
+    "Annual",
+    "Custom",
+    "Monthly",
+    "Quarterly"
+   ],
+   "headings": [],
+   "path": "/books/<id>/reports/balance-sheet",
+   "structure": "listbox",
+   "top": {
+    "name": "",
+    "role": "listbox"
+   }
+  },
+  "hop": [
+   {
+    "click": {
+     "name": "frequency",
+     "role": "combobox"
+    }
+   },
+   {
+    "wait": {
+     "locator": {
+      "name": "Quarterly",
+      "role": "option"
+     }
+    }
+   }
+  ],
+  "mutates": false,
+  "parent": "books.balance-sheet",
+  "recordedBy": "agent",
+  "review": null,
+  "similarity": 0.9146,
+  "source": "5927e0a155eff3a44e19a65e0b8c644836086787",
+  "status": "accepted"
+ },
+ "books.review-menu": {
+  "checked": "2026-10-02-1349",
+  "fingerprint": {
+   "controls": [
+    "Reviewed",
+    "To review"
+   ],
+   "headings": [],
+   "path": "/books/<id>/transactions",
+   "structure": "menu",
+   "top": {
+    "name": "Review",
+    "role": "menu"
+   }
+  },
+  "hop": [
+   {
+    "click": {
+     "name": "Review",
+     "role": "button"
+    }
+   },
+   {
+    "wait": {
+     "locator": {
+      "name": "To review",
+      "role": "menuitemradio"
+     }
+    }
+   }
+  ],
+  "mutates": false,
+  "parent": "books.transactions",
+  "recordedBy": "agent",
+  "review": {
+   "by": "conductor",
+   "date": "2026-10-03",
+   "decision": "accept",
+   "note": "same Review menu open with To review and Reviewed over Books transactions; the header shows 'Finalize setup' instead of Import transactions, carried over from the parent",
+   "reason": "below-threshold"
+  },
+  "similarity": 0.8807,
+  "source": "c3d04acdd54c3feef36d8d9dd76550aeaf0b6e25",
+  "status": "accepted"
+ },
+ "books.rule-condition-menu": {
+  "checked": "2026-10-02-1349",
+  "fingerprint": {
+   "controls": [
+    "Amount At most, at least, equal to, or between two values",
+    "Card A specific debit or credit card",
+    "Category A category you’ve created",
+    "Description Text found anywhere in the description (case-insensitive)",
+    "Team member Who made the transaction",
+    "To/From The transaction’s To/From name, matched exactly"
+   ],
+   "headings": [],
+   "path": "/books/<id>/rules",
+   "structure": "listbox",
+   "top": {
+    "name": "",
+    "role": "listbox"
+   }
+  },
+  "hop": [
+   {
+    "click": {
+     "index": 0,
+     "name": "Open combobox menu",
+     "role": "button"
+    }
+   },
+   {
+    "wait": {
+     "ms": 500
+    }
+   }
+  ],
+  "mutates": true,
+  "parent": "books.rule-create",
+  "recordedBy": "agent",
+  "review": {
+   "by": "conductor",
+   "date": "2026-10-03",
+   "decision": "accept",
+   "note": "same If condition menu (All transactions: Amount, Description; Mercury transactions only: To/From, Card, Team member, Category), opened by the first combobox, which is If. The drawer body is blank because the demo leaves the form card at opacity 0 and translateY(40px) under reduced motion. The conductor confirmed this live on the accepted parent books.rule-create, and the 40px shift explains why the menu sits lower than in the capture.",
+   "reason": "below-threshold"
+  },
+  "similarity": 0.5244,
+  "source": "00d7135bfcc71296ffe02fbe13367d31fe96f858",
+  "status": "accepted"
+ },
+ "books.rule-create": {
+  "checked": "2026-10-02-1349",
+  "fingerprint": {
+   "controls": [
+    "Add condition",
+    "Cancel",
+    "Condition",
+    "Enrichment",
+    "Open combobox menu",
+    "Save"
+   ],
+   "headings": [],
+   "path": "/books/<id>/rules",
+   "structure": "dialog",
+   "top": {
+    "name": "",
+    "role": "generic"
+   }
+  },
+  "hop": [
+   {
+    "click": {
+     "name": "Create rule",
+     "role": "button"
+    }
+   },
+   {
+    "wait": {
+     "ms": 3000
+    }
+   }
+  ],
+  "mutates": true,
+  "parent": "books.rules",
+  "recordedBy": "agent",
+  "review": {
+   "by": "conductor",
+   "date": "2026-10-03",
+   "decision": "accept",
+   "note": "re-checked after the layer-detection fixes of 2026-10-03 (fingerprint refreshed); same hop the conductor accepted earlier today, similarity 0.5509 (blank body: reduced-motion defect)",
+   "reason": "below-threshold"
+  },
+  "similarity": 0.5509,
+  "source": "cc790aa50fbaccb2205e3941197a70eab76190de",
+  "status": "accepted"
+ },
+ "books.rules": {
+  "checked": "2026-10-02-1349",
+  "fingerprint": {
+   "controls": [
+    "<n> of <n> setup steps complete Finalize setup",
+    "Accounts",
+    "Banking",
+    "Bills",
+    "Books",
+    "Chart of Accounts",
+    "Command",
+    "Create rule",
+    "Customize your experience",
+    "Drag to reorder rule",
+    "Home",
+    "Invoices",
+    "Journal Entries",
+    "Keyboard shortcuts",
+    "Mercury Demo Pro",
+    "Open Menu",
+    "Open account",
+    "Payroll",
+    "Reconciliation",
+    "Reports",
+    "Rules",
+    "Search or jump to",
+    "Settings",
+    "Transactions",
+    "Viewing as Admin"
+   ],
+   "headings": [
+    "Rules"
+   ],
+   "path": "/books/<id>/rules",
+   "structure": "document",
+   "top": {
+    "name": "",
+    "role": "document"
+   }
+  },
+  "hop": [
+   {
+    "click": {
+     "name": "Rules",
+     "role": "link"
+    }
+   }
+  ],
+  "mutates": false,
+  "parent": "books.home",
+  "recordedBy": "agent",
+  "review": null,
+  "similarity": 0.9572,
+  "source": "0dca6636b9b8d8a7858183a07c0e13fb4a2d6939",
+  "status": "accepted"
+ },
+ "books.search": {
+  "checked": "2026-10-02-1349",
+  "fingerprint": {
+   "controls": [
+    "Accounts",
+    "All",
+    "Bills",
+    "Invoices",
+    "Journal entries",
+    "Ledgers",
+    "Pages",
+    "Payments to review Uncategorized transactions",
+    "Transactions"
+   ],
+   "headings": [],
+   "path": "/books/<id>",
+   "structure": "dialog",
+   "top": {
+    "name": "",
+    "role": "dialog"
+   }
+  },
+  "hop": [
+   {
+    "click": {
+     "name": "Search or jump to",
+     "role": "button"
+    }
+   }
+  ],
+  "mutates": false,
+  "parent": "books.home",
+  "recordedBy": "agent",
+  "review": {
+   "by": "conductor",
+   "date": "2026-10-03",
+   "decision": "accept",
+   "note": "same 'Search or jump to' modal (All/Pages/Accounts/Ledgers/Transactions/Journal entries/Invoices/Bills chips), and the hop clicks the 'Search or jump to' button as 'Click Search' says. The empty-query Examples/Recent items view is what 'Click Search' opens. The capture's 'rent' query and its Cur-rent ledger results come from a later step the label doesn't name, and the capture was taken over Bills, not Books home. To audit the 'rent' results (where the Rent ledger is missing), record a separate typed-query state",
+   "reason": "below-threshold"
+  },
+  "similarity": 0.6632,
+  "source": "70f051b6acc11d369807df6e08bb8a5e036468d8",
+  "status": "accepted"
+ },
+ "books.setup-transition": {
+  "checked": "2026-10-02-1349",
+  "fingerprint": {
+   "controls": [
+    "<date> – <n>: In <amount> Out <amount> Net <amount>. Press Enter or Space to view report details.",
+    "<date> – <n>: Total <amount>. Press Enter or Space to view report details.",
+    "<date>: Total <amount>. Press Enter or Space to view report details.",
+    "<n> of <n> setup steps complete Finalize setup",
+    "Accounting, Tax, and Audit <amount> <n>%",
+    "Accounts",
+    "Add",
+    "Advertising <amount> <n>%",
+    "Banking",
+    "Benefits Expense <amount> <<n>%",
+    "Bills",
+    "Books",
+    "Business Insurance <amount> <n>%",
+    "Chart of Accounts",
+    "Chase Credit Card <n> <amount>",
+    "Citi Checking <n> <amount>",
+    "Command",
+    "Computers and Hardware <amount> −<n>%",
+    "Cost of Revenue: Contractors <amount> <n>%",
+    "Cost of Revenue: Hosting and Infrastructure <amount> <<n>%",
+    "Cost of Revenue: Inventory <amount> <n>%",
+    "Customize your experience",
+    "Dismiss spotlight",
+    "Employee Reimbursements <amount> <<n>%",
+    "Home",
+    "Interest Paid <amount> <n>%",
+    "Invoices",
+    "Journal Entries",
+    "Jupiter Checking <n> <amount>",
+    "Keyboard shortcuts",
+    "Legal <amount> <n>%",
+    "Mercury Demo Pro",
+    "Mercury IO <amount>",
+    "Neptune Checking <n> <amount>",
+    "Open account",
+    "Ops / Payroll <amount>",
+    "Other Operating Expenses <amount> <n>%",
+    "Other Professional Services <amount> <n>%",
+    "Payroll",
+    "Payroll Taxes <amount> <<n>%",
+    "Petty Cash <amount>",
+    "Pluto Checking <n> <amount>",
+    "Product Revenue <amount> <n>%",
+    "Reconciliation",
+    "Rent <amount> <n>%",
+    "Repairs and Maintenance <amount> <n>%",
+    "Reports",
+    "Rules",
+    "Salaries and Wages <amount> <n>%",
+    "Search or jump to",
+    "Services Revenue <amount> <n>%",
+    "Settings",
+    "Stripe Payments Account <amount>",
+    "Subscription Revenue <amount> <n>%",
+    "Transactions",
+    "Uncategorized Cash Inflow <amount> <<n>%",
+    "Uncategorized Cash Outflow <amount> <<n>%",
+    "Venus Credit Card <n> <amount>",
+    "View Cash Flow Analysis",
+    "View expenses",
+    "View revenue",
+    "Viewing as Admin",
+    "Wells Fargo Checking <n> <amount>",
+    "Wells Fargo Credit Card <n> <amount>"
+   ],
+   "headings": [
+    "Mercury Demo",
+    "Cash",
+    "Net cash flow trend",
+    "Cash in vs out",
+    "By ledger account",
+    "Expenses",
+    "Revenue",
+    "Revenue trend"
+   ],
+   "path": "/books/<id>",
+   "structure": "document",
+   "top": {
+    "name": "",
+    "role": "document"
+   }
+  },
+  "hop": [
+   {
+    "click": {
+     "name": "Try Mercury Books",
+     "role": "button"
+    }
+   }
+  ],
+  "mutates": false,
+  "parent": "books.index",
+  "recordedBy": "agent",
+  "review": {
+   "by": "conductor",
+   "date": "2026-10-03",
+   "decision": "accept",
+   "note": "transient spinner a settled replay cannot hold; the replay reaches the Books home with the setup spotlight, where the next edge (Books created) starts. Accepted as the chain link for the 54 Books states below it; this state is measured in its settled form",
+   "reason": "below-threshold"
+  },
+  "similarity": 0.4645,
+  "source": "1751fe9f08c683957a280b24b3209e5cd360d40e",
+  "status": "accepted"
+ },
+ "books.shortcuts": {
+  "checked": "2026-10-02-1349",
+  "fingerprint": {
+   "controls": [
+    "Escape key Esc Close menu",
+    "Search keyboard shortcuts"
+   ],
+   "headings": [
+    "Keyboard shortcuts",
+    "GENERAL",
+    "GRID",
+    "TRANSACTION REVIEW",
+    "SIDE PANEL"
+   ],
+   "path": "/books/<id>",
+   "structure": "dialog",
+   "top": {
+    "name": "Keyboard shortcuts",
+    "role": "dialog"
+   }
+  },
+  "hop": [
+   {
+    "click": {
+     "name": "Keyboard shortcuts",
+     "role": "button"
+    }
+   }
+  ],
+  "mutates": false,
+  "parent": "books.home",
+  "recordedBy": "agent",
+  "review": {
+   "by": "conductor",
+   "date": "2026-10-03",
+   "decision": "accept",
+   "note": "same Keyboard shortcuts sheet (General: Search everywhere, Show keyboard shortcuts; Grid list), opened over Books home (the parent) rather than Bills",
+   "reason": "below-threshold"
+  },
+  "similarity": 0.7362,
+  "source": "4ddd354107294af31b473a5134e62be7f9c0dc19",
+  "status": "accepted"
+ },
+ "books.tag-create": {
+  "checked": "2026-10-02-1349",
+  "fingerprint": {
+   "controls": [
+    "Cancel",
+    "Save",
+    "Tag name"
+   ],
+   "headings": [],
+   "path": "/books/<id>/tags",
+   "structure": "dialog",
+   "top": {
+    "name": "",
+    "role": "generic"
+   }
+  },
+  "hop": [
+   {
+    "click": {
+     "name": "Create tag",
+     "role": "button"
+    }
+   },
+   {
+    "wait": {
+     "ms": 8000
+    }
+   },
+   {
+    "wait": {
+     "locator": {
+      "name": "Tag name",
+      "role": "textbox"
+     }
+    }
+   }
+  ],
+  "mutates": true,
+  "parent": "books.tags",
+  "recordedBy": "agent",
+  "review": {
+   "by": "conductor",
+   "date": "2026-10-03",
+   "decision": "accept",
+   "note": "re-checked after the layer-detection fixes of 2026-10-03 (fingerprint refreshed); same hop the conductor accepted earlier today, similarity 0.7772 (blank body: reduced-motion defect)",
+   "reason": "below-threshold"
+  },
+  "similarity": 0.7772,
+  "source": "76e774e5b142f2173cbc5b1aaf133cbc62132e1b",
+  "status": "accepted"
+ },
+ "books.tag-created": {
+  "checked": "2026-10-02-1349",
+  "fingerprint": {
+   "controls": [
+    "Status Click to sort",
+    "Tag group Click to sort",
+    "Tag name Click to sort"
+   ],
+   "headings": [],
+   "path": "/books/<id>/tags",
+   "structure": "status",
+   "top": {
+    "name": "Books tags",
+    "role": "table"
+   }
+  },
+  "hop": [
+   {
+    "fill": {
+     "locator": {
+      "label": "Tag name"
+     },
+     "value": "A11y Test"
+    }
+   },
+   {
+    "click": {
+     "name": "Save",
+     "role": "button"
+    }
+   }
+  ],
+  "mutates": true,
+  "parent": "books.tag-empty-save",
+  "recordedBy": "agent",
+  "review": {
+   "by": "conductor",
+   "date": "2026-10-03",
+   "decision": "accept",
+   "note": "same Tags list with the new tag added (#A11y-Test, the fixture value, instead of #Finance) and the 'Tag created' toast; the drawer opens in read-only mode (edit/delete/expand/close header) but its body is blank, the known reduced-motion defect from books.tag-create; the hop fills Tag name and clicks Save as the label says",
+   "reason": "below-threshold"
+  },
+  "similarity": 0.7587,
+  "source": "a78f8bcaa2e0c993e08f509aead74d62361a97ac",
+  "status": "accepted"
+ },
+ "books.tag-empty-save": {
+  "checked": "2026-10-02-1349",
+  "fingerprint": {
+   "controls": [
+    "<n> of <n> setup steps complete Finalize setup",
+    "Accounts",
+    "Banking",
+    "Bills",
+    "Books",
+    "Books Details",
+    "Cancel",
+    "Chart of Accounts",
+    "Command",
+    "Create tag",
+    "Customize your experience",
+    "Home",
+    "Invoices",
+    "Journal Entries",
+    "Keyboard shortcuts",
+    "Mercury Demo Pro",
+    "Open Menu",
+    "Open account",
+    "Payroll",
+    "Reconciliation",
+    "Reports",
+    "Rules",
+    "Save",
+    "Search or jump to",
+    "Settings",
+    "Status Click to sort",
+    "Tag group Click to sort",
+    "Tag name",
+    "Tag name Click to sort",
+    "Tags",
+    "Transactions",
+    "Viewing as Admin"
+   ],
+   "headings": [
+    "Tags"
+   ],
+   "path": "/books/<id>/tags",
+   "structure": "document",
+   "top": {
+    "name": "",
+    "role": "document"
+   }
+  },
+  "hop": [
+   {
+    "click": {
+     "index": 0,
+     "name": "Save",
+     "role": "button"
+    }
+   },
+   {
+    "wait": {
+     "ms": 500
+    }
+   }
+  ],
+  "mutates": true,
+  "parent": "books.tag-create",
+  "recordedBy": "agent",
+  "review": {
+   "by": "conductor",
+   "date": "2026-10-03",
+   "decision": "accept",
+   "note": "reached: Save on the empty Create tag form puts Tag name cannot be empty in the DOM at effective opacity 0 (conductor checked live 2026-10-03); the drawer body is blank under prefers-reduced-motion, the demo defect seen on books.tag-create, so the screenshots show nothing",
+   "reason": "below-threshold"
+  },
+  "similarity": 0.7751,
+  "source": "d7750ef70c2dc226b2a557e86f4018c51e2f2d40",
+  "status": "accepted"
+ },
+ "books.tags": {
+  "checked": "2026-10-02-1349",
+  "fingerprint": {
+   "controls": [
+    "<n> of <n> setup steps complete Finalize setup",
+    "Accounts",
+    "Banking",
+    "Bills",
+    "Books",
+    "Books Details",
+    "Chart of Accounts",
+    "Command",
+    "Create tag",
+    "Customize your experience",
+    "Home",
+    "Invoices",
+    "Journal Entries",
+    "Keyboard shortcuts",
+    "Mercury Demo Pro",
+    "Open Menu",
+    "Open account",
+    "Payroll",
+    "Reconciliation",
+    "Reports",
+    "Rules",
+    "Search or jump to",
+    "Settings",
+    "Status Click to sort",
+    "Tag group Click to sort",
+    "Tag name Click to sort",
+    "Tags",
+    "Transactions",
+    "Viewing as Admin"
+   ],
+   "headings": [
+    "Tags"
+   ],
+   "path": "/books/<id>/tags",
+   "structure": "document",
+   "top": {
+    "name": "",
+    "role": "document"
+   }
+  },
+  "hop": [
+   {
+    "click": {
+     "name": "Tags",
+     "role": "link"
+    }
+   }
+  ],
+  "mutates": false,
+  "parent": "books.books-details",
+  "recordedBy": "agent",
+  "review": null,
+  "similarity": 0.9858,
+  "source": "37bf4754f906421efe8b8e904146367882e39a01",
+  "status": "accepted"
+ },
+ "books.to-review": {
+  "checked": "2026-10-02-1349",
+  "fingerprint": {
+   "controls": [
+    "<n> of <n> setup steps complete Finalize setup",
+    "Accounts",
+    "All",
+    "Applied by rule",
+    "Bank",
+    "Banking",
+    "Bills",
+    "Books",
+    "Categorization method",
+    "Chart of Accounts",
+    "Command",
+    "Credit card",
+    "Customize your experience",
+    "Dismiss",
+    "Filters (<n>)",
+    "Home",
+    "Import transactions",
+    "Invoices",
+    "Journal Entries",
+    "Keyboard shortcuts",
+    "Loans",
+    "Mercury Demo Pro",
+    "Open Menu",
+    "Open account",
+    "Payments",
+    "Payroll",
+    "Reconciliation",
+    "Reports",
+    "Reviewed",
+    "Rules",
+    "Search or jump to",
+    "Select all rows",
+    "Settings",
+    "To review",
+    "Transactions",
+    "Viewing as Admin"
+   ],
+   "headings": [
+    "Transactions",
+    "Categorization that keeps up with you",
+    "Automatic from the start",
+    "Learns from you",
+    "Always transparent"
+   ],
+   "path": "/books/<id>/transactions",
+   "structure": "document",
+   "top": {
+    "name": "",
+    "role": "document"
+   }
+  },
+  "hop": [
+   {
+    "click": {
+     "name": "To review",
+     "role": "menuitemradio"
+    }
+   }
+  ],
+  "mutates": false,
+  "parent": "books.review-menu",
+  "recordedBy": "agent",
+  "review": {
+   "by": "conductor",
+   "date": "2026-10-03",
+   "decision": "accept",
+   "note": "same To review filter applied: 'To review' radio checked in the open menu, Filters (1); only the (7975) count is missing from the control, and drifted counts are allowed",
+   "reason": "below-threshold"
+  },
+  "similarity": 0.8656,
+  "source": "c9cfd99a03dbfaeb1aa48e3f3aea706acc48b25d",
+  "status": "accepted"
+ },
+ "books.transactions": {
+  "checked": "2026-10-02-1349",
+  "fingerprint": {
+   "controls": [
+    "<n> of <n> setup steps complete Finalize setup",
+    "Accounts",
+    "All",
+    "Applied by rule",
+    "Bank",
+    "Banking",
+    "Bills",
+    "Books",
+    "Categorization method",
+    "Chart of Accounts",
+    "Command",
+    "Credit card",
+    "Customize your experience",
+    "Dismiss",
+    "Filters",
+    "Home",
+    "Import transactions",
+    "Invoices",
+    "Journal Entries",
+    "Keyboard shortcuts",
+    "Loans",
+    "Mercury Demo Pro",
+    "Open Menu",
+    "Open account",
+    "Payments",
+    "Payroll",
+    "Reconciliation",
+    "Reports",
+    "Review",
+    "Rules",
+    "Search or jump to",
+    "Select all rows",
+    "Settings",
+    "Transactions",
+    "Viewing as Admin"
+   ],
+   "headings": [
+    "Transactions",
+    "Categorization that keeps up with you",
+    "Automatic from the start",
+    "Learns from you",
+    "Always transparent"
+   ],
+   "path": "/books/<id>/transactions",
+   "structure": "document",
+   "top": {
+    "name": "",
+    "role": "document"
+   }
+  },
+  "hop": [
+   {
+    "click": {
+     "name": "Transactions",
+     "role": "link"
+    }
+   }
+  ],
+  "mutates": false,
+  "parent": "books.home",
+  "recordedBy": "agent",
+  "review": {
+   "by": "conductor",
+   "date": "2026-10-03",
+   "decision": "accept",
+   "note": "same Books Transactions page (All/Bank/Credit card/Payments/Loans tabs, 'Categorization that keeps up with you' explainer, Review/Filters/Categorization method controls, grid); only row dates and the Finalize setup / Import button loading states differ",
+   "reason": "below-threshold"
+  },
+  "similarity": 0.8819,
+  "source": "48aafc9533494f3302b742e0f98741ec9485367e",
+  "status": "accepted"
+ },
+ "books.vendors": {
+  "checked": "2026-10-02-1349",
+  "fingerprint": {
+   "controls": [
+    "<n> of <n> setup steps complete Finalize setup",
+    "Accounts",
+    "Add a vendor",
+    "Banking",
+    "Bills",
+    "Books",
+    "Chart of Accounts",
+    "Command",
+    "Customize your experience",
+    "Dismiss banner",
+    "Filters",
+    "Home",
+    "Invoices",
+    "Journal Entries",
+    "Keyboard shortcuts",
+    "Mercury Demo Pro",
+    "Open Menu",
+    "Open account",
+    "Payroll",
+    "Reconciliation",
+    "Reports",
+    "Rules",
+    "Search or jump to",
+    "Settings",
+    "Transactions",
+    "Vendors",
+    "Viewing as Admin"
+   ],
+   "headings": [
+    "Vendors"
+   ],
+   "path": "/books/<id>/bills/vendors",
+   "structure": "document",
+   "top": {
+    "name": "",
+    "role": "document"
+   }
+  },
+  "hop": [
+   {
+    "click": {
+     "name": "Vendors",
+     "role": "link"
+    }
+   }
+  ],
+  "mutates": false,
+  "parent": "books.bills",
+  "recordedBy": "agent",
+  "review": {
+   "by": "conductor",
+   "date": "2026-10-03",
+   "decision": "accept",
+   "note": "same Vendors list (Debug LLC, Molitor Ventures, Nano Tech LLC; Name/Email/Type/Address); the hop clicks the Vendors link as the label says. The replay was taken mid-load: the 'Finalize setup' spinner is still turning, the Add a vendor button is an empty pill, and the 'Payment recipients automatically appear as vendors' banner has not rendered yet. That is a settle-timing problem in the sweep, not a wrong recipe. Have the sweep wait for the spinner to clear, or it will log the empty button as a false unlabeled-control finding",
+   "reason": "below-threshold"
+  },
+  "similarity": 0.7659,
+  "source": "d374c7fc209f977557bb1c8ece60e9d091b751b3",
+  "status": "accepted"
+ }
+}

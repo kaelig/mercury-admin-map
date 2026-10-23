@@ -1,0 +1,348 @@
+{
+ "area": "payments",
+ "batch": "verify-293",
+ "findings": [
+  {
+   "attachments": [],
+   "attempt": 1,
+   "basis": "violation",
+   "criteria": [
+    "1.3.5"
+   ],
+   "evidence": [
+    {
+     "evidence": {
+      "failureSummary": "Fix all of the following:\n  the autocomplete attribute is incorrectly formatted"
+     },
+     "occurrence": {
+      "ancestors": [
+       [
+        "_inputBox_q7hf7_93",
+        "_hasValue_q7hf7_171"
+       ],
+       [
+        "_inputBoxWrapper_q7hf7_93"
+       ],
+       [
+        "_textInputWrapper_q7hf7_24"
+       ],
+       [
+        "_provideDSTextInput_q7hf7_6",
+        "_calendarDateInput_1ml1o_5",
+        "_fullWidthInput_1ml1o_54"
+       ],
+       [
+        "_calendarInputWrapper_1ml1o_11",
+        "_fullWidthCalendarInput_17brw_77"
+       ],
+       [
+        "_calendarDateInputContainer_1ml1o_5",
+        "_fullWidthCalendarInput_17brw_77"
+       ],
+       [
+        "_startDayWithTooltip_17brw_82"
+       ],
+       [
+        "_helpTextWrapper_17brw_90"
+       ]
+      ],
+      "classes": [
+       "_input_q7hf7_93"
+      ],
+      "data": {},
+      "heading": "Amount",
+      "landmark": {
+       "name": "",
+       "role": "form"
+      },
+      "layer": "document",
+      "name": "Start on",
+      "rect": [
+       453,
+       492,
+       534,
+       24
+      ],
+      "role": "textbox",
+      "tag": "input",
+      "xpath": "/html/body/div[1]/main[1]/div[1]/div[2]/div[2]/div[1]/div[2]/section[2]/div[1]/div[1]/div[1]/form[1]/div[3]/div[1]/div[1]/div[1]/div[1]/div[1]/div[1]/div[1]/div[1]/input[1]"
+     },
+     "state": "payments.send-repeat"
+    },
+    {
+     "evidence": {
+      "failureSummary": "Fix all of the following:\n  the autocomplete attribute is incorrectly formatted"
+     },
+     "occurrence": {
+      "ancestors": [
+       [
+        "_inputBox_q7hf7_93",
+        "_hasValue_q7hf7_171"
+       ],
+       [
+        "_inputBoxWrapper_q7hf7_93"
+       ],
+       [
+        "_textInputWrapper_q7hf7_24"
+       ],
+       [
+        "_provideDSTextInput_q7hf7_6",
+        "_calendarDateInput_1ml1o_5",
+        "_fullWidthInput_1ml1o_54"
+       ],
+       [
+        "_calendarInputWrapper_1ml1o_11",
+        "_fullWidthCalendarInput_17brw_77"
+       ],
+       [
+        "_calendarDateInputContainer_1ml1o_5",
+        "_fullWidthCalendarInput_17brw_77"
+       ],
+       [
+        "_formFieldWrapper_b92ke_1"
+       ],
+       [
+        "_startDayWithTooltip_17brw_82"
+       ]
+      ],
+      "classes": [
+       "_input_q7hf7_93"
+      ],
+      "data": {},
+      "heading": "Amount",
+      "landmark": {
+       "name": "",
+       "role": "form"
+      },
+      "layer": "document",
+      "name": "Start on",
+      "rect": [
+       93,
+       492,
+       534,
+       24
+      ],
+      "role": "textbox",
+      "tag": "input",
+      "xpath": "/html/body/div[1]/main[1]/div[1]/div[2]/div[2]/div[1]/div[2]/section[2]/div[1]/div[1]/div[1]/form[1]/div[3]/div[1]/div[1]/div[1]/div[1]/div[1]/div[1]/div[1]/div[1]/div[1]/input[1]"
+     },
+     "state": "billpay.pay-repeat"
+    }
+   ],
+   "evidenceHash": "bb8e7e6266a6a93ecd6188e399061173f4a9e04803eac15da8d3c89856041ff7",
+   "facts": {
+    "announced": "textbox \"Start on\"",
+    "axeSummary": "the autocomplete attribute is incorrectly formatted",
+    "criterion": "1.3.5",
+    "criterionName": "Identify Input Purpose",
+    "element": "textbox \"Start on\"",
+    "rule": "autocomplete-valid",
+    "screen": "Send: Repeat payment"
+   },
+   "family": "role-state",
+   "guidance": "Low for optional ARIA or an invalid autocomplete token; high when aria-hidden hides the whole page.",
+   "issueId": null,
+   "key": "role-state:autocomplete-valid:286efcef310e",
+   "measured": false,
+   "primary": "payments.send-repeat",
+   "proposals": [],
+   "rule": "autocomplete-valid",
+   "screens": 2,
+   "severityDefault": "medium",
+   "source": "scanner",
+   "states": [
+    "payments.send-repeat",
+    "billpay.pay-repeat"
+   ],
+   "summary": "autocomplete-valid: announced as textbox \"Start on\". the autocomplete attribute is incorrectly formatted",
+   "title": "Invalid autocomplete value: textbox \"Start on\""
+  },
+  {
+   "attachments": [],
+   "attempt": 1,
+   "basis": "candidate",
+   "criteria": [
+    "2.5.8"
+   ],
+   "evidence": [
+    {
+     "evidence": {
+      "agree": false,
+      "axe": "inapplicable",
+      "exception": null,
+      "height": 24,
+      "offset": 0,
+      "own": "fail",
+      "passedBy": null,
+      "width": 20
+     },
+     "occurrence": {
+      "ancestors": [
+       [
+        "_inputBox_q7hf7_93",
+        "_inline_q7hf7_201",
+        "_hasValue_q7hf7_171",
+        "_disabled_q7hf7_55"
+       ],
+       [
+        "_inputBoxWrapper_q7hf7_93"
+       ],
+       [
+        "_textInputWrapper_q7hf7_24"
+       ],
+       [
+        "_provideDSTextInput_q7hf7_6",
+        "_endAfterCount_17brw_59"
+       ],
+       [
+        "_flexDiv_17brw_13"
+       ],
+       [
+        "_radioGroup_phe2n_23",
+        "_columnLayout_phe2n_28"
+       ],
+       [
+        "_scheme_17brw_51"
+       ],
+       [
+        "_recurringFormContainer_fn75q_53"
+       ]
+      ],
+      "classes": [
+       "_input_q7hf7_93"
+      ],
+      "data": {
+       "data-testid": "endAfterCount"
+      },
+      "disabled": true,
+      "heading": "Amount",
+      "landmark": {
+       "name": "",
+       "role": "form"
+      },
+      "layer": "document",
+      "name": "Number of payments before ending",
+      "rect": [
+       550,
+       785,
+       20,
+       24
+      ],
+      "role": "textbox",
+      "tag": "input",
+      "xpath": "/html/body/div[1]/main[1]/div[1]/div[2]/div[2]/div[1]/div[2]/section[2]/div[1]/div[1]/div[1]/form[1]/div[3]/div[3]/div[2]/fieldset[1]/div[2]/div[1]/div[1]/div[1]/div[1]/input[1]"
+     },
+     "state": "payments.send-repeat"
+    },
+    {
+     "evidence": {
+      "agree": false,
+      "axe": "inapplicable",
+      "exception": null,
+      "height": 24,
+      "offset": 0,
+      "own": "fail",
+      "passedBy": null,
+      "width": 20
+     },
+     "occurrence": {
+      "ancestors": [
+       [
+        "_inputBox_q7hf7_93",
+        "_inline_q7hf7_201",
+        "_hasValue_q7hf7_171",
+        "_disabled_q7hf7_55"
+       ],
+       [
+        "_inputBoxWrapper_q7hf7_93"
+       ],
+       [
+        "_textInputWrapper_q7hf7_24"
+       ],
+       [
+        "_provideDSTextInput_q7hf7_6",
+        "_endAfterCount_17brw_59"
+       ],
+       [
+        "_flexDiv_17brw_13"
+       ],
+       [
+        "_radioGroup_phe2n_23",
+        "_columnLayout_phe2n_28"
+       ],
+       [
+        "_scheme_17brw_51"
+       ],
+       [
+        "_recurringFormContainer_fn75q_53"
+       ]
+      ],
+      "classes": [
+       "_input_q7hf7_93"
+      ],
+      "data": {
+       "data-testid": "endAfterCount"
+      },
+      "disabled": true,
+      "heading": "Amount",
+      "landmark": {
+       "name": "",
+       "role": "form"
+      },
+      "layer": "document",
+      "name": "Number of payments before ending",
+      "rect": [
+       190,
+       785,
+       20,
+       24
+      ],
+      "role": "textbox",
+      "tag": "input",
+      "xpath": "/html/body/div[1]/main[1]/div[1]/div[2]/div[2]/div[1]/div[2]/section[2]/div[1]/div[1]/div[1]/form[1]/div[3]/div[3]/div[2]/fieldset[1]/div[2]/div[1]/div[1]/div[1]/div[1]/input[1]"
+     },
+     "state": "billpay.pay-repeat"
+    }
+   ],
+   "evidenceHash": "6c6e4ec48f3a64ed40e021103ad6482489f649d49e7995ffa1c82480b128aae4",
+   "facts": {
+    "criterion": "2.5.8",
+    "criterionName": "Target Size (Minimum)",
+    "element": "textbox \"Number of payments before ending\"",
+    "offset": "0",
+    "rule": "target-size-own",
+    "screen": "Send: Repeat payment",
+    "screens": 2,
+    "size": "20×24"
+   },
+   "family": "target-size",
+   "guidance": "Medium next to destructive or financial controls.",
+   "issueId": null,
+   "key": "target-size:target-size-own:fdef4f5103b4",
+   "measured": true,
+   "primary": "payments.send-repeat",
+   "proposals": [],
+   "rule": "target-size-own",
+   "screens": 2,
+   "severityDefault": "low",
+   "source": "scanner",
+   "states": [
+    "payments.send-repeat",
+    "billpay.pay-repeat"
+   ],
+   "summary": "target-size-own: 20×24 px; the widest circle centered on it that clears other targets is 0 px, and the spacing exception needs 24 px.",
+   "title": "Target under 24×24 px: textbox \"Number of payments before ending\""
+  }
+ ],
+ "primaries": [
+  "payments.send-repeat"
+ ],
+ "reach": {
+  "baseUrl": "https://demo.mercury.com",
+  "data": "data",
+  "map": "build/map.json",
+  "run": "2026-10-03-1525",
+  "workspace": "a11y"
+ },
+ "run": "2026-10-03-1525"
+}

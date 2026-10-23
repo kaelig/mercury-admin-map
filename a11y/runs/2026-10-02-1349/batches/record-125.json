@@ -1,0 +1,33 @@
+{
+ "batch": "record-125",
+ "reach": {
+  "baseUrl": "https://demo.mercury.com",
+  "data": "data",
+  "map": "build/map.json",
+  "run": "2026-10-02-1349",
+  "workspace": "a11y"
+ },
+ "run": "2026-10-02-1349",
+ "states": [
+  {
+   "area": "accounts",
+   "draft": "not drafted: its parent had no accepted recipe when the drafter ran",
+   "image": "screens/accounts/14-rule-review.png",
+   "kind": "modal",
+   "labels": [
+    "Click Auto transfer rules tab",
+    "Click Create rule",
+    "Click Maintain a target balance",
+    "Click Next with empty fields",
+    "Open Account dropdown",
+    "Pick AP, enter $50,000, supporting account and frequency",
+    "Click Next"
+   ],
+   "mutates": true,
+   "note": "Plain-language summary of the rule, prefilled nickname \"Maintain AP at $50k\" and authorization copy.",
+   "parent": "accounts.rule-target-balance-filled",
+   "state": "accounts.rule-review",
+   "title": "Review auto transfer rule"
+  }
+ ]
+}

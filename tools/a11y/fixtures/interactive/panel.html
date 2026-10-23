@@ -1,0 +1,23 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><title>Detail panel</title>
+<style>
+  body { font: 16px/1.4 sans-serif; margin: 24px; color: #111; background: #fff; }
+  button, a { font: inherit; margin: 8px; }
+  /* A non-modal detail panel in the middle of the DOM, like the demo's transaction <aside>. */
+  aside { position: absolute; top: 24px; right: 24px; width: 320px; padding: 16px; border: 1px solid #ccc; background: #fff; }
+</style></head>
+<body>
+<main>
+  <h1>Transactions</h1>
+  <button id="show">Show details</button>
+  <aside id="details" hidden>
+    <h2>Payment to Acme</h2>
+    <a href="#receipt">View receipt</a>
+    <button>Download</button>
+  </aside>
+  <button>Next page</button>
+</main>
+<script>
+  document.getElementById('show').addEventListener('click', () => { document.getElementById('details').hidden = false; });
+</script>
+</body></html>

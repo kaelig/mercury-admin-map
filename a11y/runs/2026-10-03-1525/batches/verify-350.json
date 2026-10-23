@@ -1,0 +1,856 @@
+{
+ "area": "settings",
+ "batch": "verify-350",
+ "findings": [
+  {
+   "attachments": [],
+   "attempt": 1,
+   "basis": "violation",
+   "criteria": [
+    "1.4.3"
+   ],
+   "evidence": [
+    {
+     "evidence": {
+      "bgColor": "#ffffff",
+      "contrastRatio": 2.18,
+      "expectedContrastRatio": "4.5:1",
+      "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 2.18 (foreground color: #afafb4, background color: #ffffff, font size: 9.8pt (13px), font weight: normal). Expected contrast ratio of 4.5:1",
+      "fgColor": "#afafb4",
+      "fontSize": "9.8pt (13px)",
+      "fontWeight": "normal",
+      "messageKey": null
+     },
+     "occurrence": {
+      "ancestors": [
+       [
+        "_tableCell_1waxt_102",
+        "_notCollapsible_1waxt_40",
+        "_roleCell_1u40e_190",
+        "_notFirstRow_1waxt_142",
+        "_lastNonCollapsingColumn_1waxt_158"
+       ],
+       [
+        "_teamRow_1u40e_256",
+        "_tableRow_1waxt_94"
+       ],
+       [
+        "_cardTable_1waxt_4"
+       ],
+       [
+        "_tableAndLoadingStateWrapper_1waxt_313"
+       ],
+       [
+        "_tableWrapper_1waxt_304",
+        "_tableWrapper_1u40e_1"
+       ],
+       [],
+       [],
+       [
+        "_pageContent_809q8_151",
+        "_pageContentWidth_809q8_184",
+        "_footerPadding_809q8_115"
+       ]
+      ],
+      "classes": [
+       "_label_qaod7_59",
+       "_ellipsis_qaod7_116",
+       "_text-default_12t49_1",
+       "_removed_1u40e_335"
+      ],
+      "data": {},
+      "heading": "Team",
+      "landmark": {
+       "name": "",
+       "role": "main"
+      },
+      "layer": "document",
+      "name": "",
+      "rect": [
+       646,
+       1642,
+       23,
+       20
+      ],
+      "role": "",
+      "tag": "span",
+      "xpath": "/html/body/div[1]/main[1]/div[1]/div[1]/div[4]/div[1]/div[2]/div[2]/div[1]/div[2]/div[1]/div[1]/div[24]/div[2]/span[1]"
+     },
+     "state": "settings.team"
+    },
+    {
+     "evidence": {
+      "bgColor": "#ffffff",
+      "contrastRatio": 2.18,
+      "expectedContrastRatio": "4.5:1",
+      "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 2.18 (foreground color: #afafb4, background color: #ffffff, font size: 9.8pt (13px), font weight: normal). Expected contrast ratio of 4.5:1",
+      "fgColor": "#afafb4",
+      "fontSize": "9.8pt (13px)",
+      "fontWeight": "normal",
+      "messageKey": null
+     },
+     "occurrence": {
+      "ancestors": [
+       [
+        "_tableCell_1waxt_102",
+        "_notCollapsible_1waxt_40",
+        "_roleCell_1u40e_190",
+        "_notFirstRow_1waxt_142",
+        "_lastNonCollapsingColumn_1waxt_158"
+       ],
+       [
+        "_teamRow_1u40e_256",
+        "_tableRow_1waxt_94"
+       ],
+       [
+        "_cardTable_1waxt_4",
+        "_condensed_1waxt_31"
+       ],
+       [
+        "_tableAndLoadingStateWrapper_1waxt_313"
+       ],
+       [
+        "_tableWrapper_1waxt_304",
+        "_tableWrapper_1u40e_1",
+        "_withCardDisplayed_1u40e_67"
+       ],
+       [],
+       [],
+       [
+        "_pageContent_809q8_151",
+        "_pageContentWidth_809q8_184",
+        "_footerPadding_809q8_115"
+       ]
+      ],
+      "classes": [
+       "_label_qaod7_59",
+       "_ellipsis_qaod7_116",
+       "_text-default_12t49_1",
+       "_removed_1u40e_335"
+      ],
+      "data": {},
+      "heading": "Team",
+      "landmark": {
+       "name": "",
+       "role": "main"
+      },
+      "layer": "document",
+      "name": "",
+      "rect": [
+       646,
+       1642,
+       23,
+       20
+      ],
+      "role": "",
+      "tag": "span",
+      "xpath": "/html/body/div[1]/main[1]/div[1]/div[1]/div[4]/div[1]/div[2]/div[2]/div[1]/div[2]/div[1]/div[1]/div[24]/div[2]/span[1]"
+     },
+     "state": "settings.edit-member"
+    }
+   ],
+   "evidenceHash": "82c73ad4e008e2d4e957474ee6053dded21d66ba8de87786f952e566333848a4",
+   "facts": {
+    "bg": "#ffffff",
+    "criterion": "1.4.3",
+    "criterionName": "Contrast (Minimum)",
+    "element": "text in \"Team\"",
+    "fg": "#afafb4",
+    "ratio": "2.18",
+    "required": "4.5",
+    "rule": "color-contrast",
+    "screen": "Team",
+    "screens": 3
+   },
+   "family": "contrast",
+   "guidance": "High under 2:1, or under 3:1 for essential text.",
+   "issueId": null,
+   "key": "contrast:color-contrast:08091607b379",
+   "measured": true,
+   "primary": "settings.team",
+   "proposals": [],
+   "rule": "color-contrast",
+   "screens": 3,
+   "severityDefault": "medium",
+   "source": "scanner",
+   "states": [
+    "settings.team",
+    "settings.edit-member"
+   ],
+   "summary": "axe color-contrast: #afafb4 on #ffffff measures 2.18:1; AA needs 4.5:1.",
+   "title": "Low contrast: text in \"Team\""
+  },
+  {
+   "attachments": [],
+   "attempt": 1,
+   "basis": "violation",
+   "criteria": [
+    "1.4.3"
+   ],
+   "evidence": [
+    {
+     "evidence": {
+      "bgColor": "#ffffff",
+      "contrastRatio": 2.18,
+      "expectedContrastRatio": "4.5:1",
+      "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 2.18 (foreground color: #afafb4, background color: #ffffff, font size: 10.5pt (14px), font weight: normal). Expected contrast ratio of 4.5:1",
+      "fgColor": "#afafb4",
+      "fontSize": "10.5pt (14px)",
+      "fontWeight": "normal",
+      "messageKey": null
+     },
+     "occurrence": {
+      "ancestors": [
+       [
+        "_tableCell_1waxt_102",
+        "_collapsible_1waxt_24",
+        "_jobTitleCell_1u40e_214",
+        "_notFirstRow_1waxt_142"
+       ],
+       [
+        "_teamRow_1u40e_256",
+        "_tableRow_1waxt_94"
+       ],
+       [
+        "_cardTable_1waxt_4"
+       ],
+       [
+        "_tableAndLoadingStateWrapper_1waxt_313"
+       ],
+       [
+        "_tableWrapper_1waxt_304",
+        "_tableWrapper_1u40e_1"
+       ],
+       [],
+       [],
+       [
+        "_pageContent_809q8_151",
+        "_pageContentWidth_809q8_184",
+        "_footerPadding_809q8_115"
+       ]
+      ],
+      "classes": [
+       "_bodySecondary_qaod7_51",
+       "_ellipsis_qaod7_116",
+       "_text-default_12t49_1",
+       "_removed_1u40e_335"
+      ],
+      "data": {},
+      "heading": "Team",
+      "landmark": {
+       "name": "",
+       "role": "main"
+      },
+      "layer": "document",
+      "name": "",
+      "rect": [
+       850,
+       1642,
+       128,
+       20
+      ],
+      "role": "",
+      "tag": "span",
+      "xpath": "/html/body/div[1]/main[1]/div[1]/div[1]/div[4]/div[1]/div[2]/div[2]/div[1]/div[2]/div[1]/div[1]/div[24]/div[3]/span[1]"
+     },
+     "state": "settings.team"
+    }
+   ],
+   "evidenceHash": "0cf06ed346d00b66b77cc0a41cf19982b9e2e27058048703889f75d554305171",
+   "facts": {
+    "bg": "#ffffff",
+    "criterion": "1.4.3",
+    "criterionName": "Contrast (Minimum)",
+    "element": "text in \"Team\"",
+    "fg": "#afafb4",
+    "ratio": "2.18",
+    "required": "4.5",
+    "rule": "color-contrast",
+    "screen": "Team",
+    "screens": 1
+   },
+   "family": "contrast",
+   "guidance": "High under 2:1, or under 3:1 for essential text.",
+   "issueId": null,
+   "key": "contrast:color-contrast:162a41d15af5",
+   "measured": true,
+   "primary": "settings.team",
+   "proposals": [],
+   "rule": "color-contrast",
+   "screens": 1,
+   "severityDefault": "medium",
+   "source": "scanner",
+   "states": [
+    "settings.team"
+   ],
+   "summary": "axe color-contrast: #afafb4 on #ffffff measures 2.18:1; AA needs 4.5:1.",
+   "title": "Low contrast: text in \"Team\""
+  },
+  {
+   "attachments": [],
+   "attempt": 1,
+   "basis": "candidate",
+   "criteria": [
+    "2.4.3",
+    "1.3.2"
+   ],
+   "evidence": [
+    {
+     "evidence": {
+      "band": 24,
+      "overlay": "settings.team.tabstops.png",
+      "previous": {
+       "ancestors": [
+        [],
+        [
+         "_stack_il1fi_18",
+         "_direction-column_il1fi_24",
+         "_gap-block-xs_il1fi_159"
+        ],
+        [
+         "_stack_il1fi_18",
+         "_direction-column_il1fi_24",
+         "_gap-block-lg_il1fi_168"
+        ],
+        [
+         "_stack_il1fi_18",
+         "_direction-column_il1fi_24",
+         "_gap-block-4xl_il1fi_180"
+        ],
+        [
+         "_formColumn_1g176_52"
+        ],
+        [
+         "_stack_il1fi_18",
+         "_direction-row_il1fi_27",
+         "_align-flex-start_il1fi_41",
+         "_justify-space-between_il1fi_61",
+         "_gap-inline-2xl_il1fi_204"
+        ],
+        [
+         "_stack_il1fi_18",
+         "_direction-column_il1fi_24",
+         "_padding-surface-md_il1fi_1",
+         "_marginTop-2xl_il1fi_1",
+         "_container_1g176_1"
+        ],
+        []
+       ],
+       "classes": [
+        "_bodyDefault_qaod7_40",
+        "_text-link_12t49_1",
+        "_link_ual8v_4",
+        "_underlineOnHover_ual8v_15"
+       ],
+       "data": {},
+       "heading": "Invite your team to spend, without bank access",
+       "landmark": {
+        "name": "",
+        "role": "main"
+       },
+       "layer": "document",
+       "name": "Learn about roles",
+       "rect": [
+        370,
+        877,
+        133,
+        18
+       ],
+       "role": "button",
+       "tag": "span",
+       "xpath": "/html/body/div[1]/main[1]/div[1]/div[1]/div[4]/div[1]/div[2]/div[2]/div[1]/section[1]/div[1]/div[1]/div[1]/div[1]/div[1]/div[1]/span[1]"
+      },
+      "rise": 257,
+      "stop": 58,
+      "stops": 62
+     },
+     "occurrence": {
+      "ancestors": [
+       [
+        "_inputBox_q7hf7_93",
+        "_inputBoxWithJoinedSuffix_q7hf7_236"
+       ],
+       [
+        "_inputBoxWrapper_q7hf7_93"
+       ],
+       [
+        "_textInputWrapper_q7hf7_24"
+       ],
+       [
+        "_provideDSTextInput_q7hf7_6",
+        "_addWrapperMargin_q7hf7_19"
+       ],
+       [
+        "_stack_il1fi_18",
+        "_direction-column_il1fi_24",
+        "_gap-block-xl_il1fi_171"
+       ],
+       [
+        "_stack_il1fi_18",
+        "_direction-column_il1fi_24",
+        "_gap-block-lg_il1fi_168"
+       ],
+       [
+        "_stack_il1fi_18",
+        "_direction-column_il1fi_24",
+        "_gap-block-4xl_il1fi_180"
+       ],
+       [
+        "_formColumn_1g176_52"
+       ]
+      ],
+      "classes": [
+       "_input_q7hf7_93"
+      ],
+      "data": {},
+      "heading": "Invite your team to spend, without bank access",
+      "landmark": {
+       "name": "",
+       "role": "main"
+      },
+      "layer": "document",
+      "name": "Enter an email",
+      "rect": [
+       383,
+       620,
+       504,
+       24
+      ],
+      "role": "textbox",
+      "tag": "input",
+      "xpath": "/html/body/div[1]/main[1]/div[1]/div[1]/div[4]/div[1]/div[2]/div[2]/div[1]/section[1]/div[1]/div[1]/div[1]/div[1]/div[2]/div[1]/div[1]/div[1]/div[1]/input[1]"
+     },
+     "state": "settings.team"
+    }
+   ],
+   "evidenceHash": "36fc3355e283e29177b77b22f86c77e9337866fe395f36cc28a520994553b540",
+   "facts": {
+    "criterion": "2.4.3",
+    "criterionName": "Focus Order",
+    "element": "textbox \"Enter an email\"",
+    "previous": "button \"Learn about roles\"",
+    "screen": "Team",
+    "stop": "58"
+   },
+   "family": "focus-order",
+   "guidance": "High if the order skips a required control.",
+   "issueId": null,
+   "key": "focus-order:backward-jump:29cff5803a6a",
+   "measured": false,
+   "primary": "settings.team",
+   "proposals": [],
+   "rule": "backward-jump",
+   "screens": 1,
+   "severityDefault": "medium",
+   "source": "scanner",
+   "states": [
+    "settings.team"
+   ],
+   "summary": "Tab stop 58 jumped backward on screen, from the button \"Learn about roles\" to the textbox \"Enter an email\".",
+   "title": "Tab order jumps backward at textbox \"Enter an email\""
+  },
+  {
+   "attachments": [],
+   "attempt": 1,
+   "basis": "candidate",
+   "criteria": [
+    "2.1.1"
+   ],
+   "evidence": [
+    {
+     "evidence": {
+      "end": "body",
+      "focusable": false,
+      "source": "pointer",
+      "stops": 62
+     },
+     "occurrence": {
+      "ancestors": [
+       [
+        "_tiny_qaod7_67",
+        "_text-tertiary_12t49_1",
+        "_tableHeader_1waxt_60",
+        "_notCollapsible_1waxt_40",
+        "_roleHeader_1u40e_185"
+       ],
+       [
+        "_tableHeaders_1waxt_60"
+       ],
+       [
+        "_cardTable_1waxt_4"
+       ],
+       [
+        "_tableAndLoadingStateWrapper_1waxt_313"
+       ],
+       [
+        "_tableWrapper_1waxt_304",
+        "_tableWrapper_1u40e_1"
+       ],
+       [],
+       [],
+       [
+        "_pageContent_809q8_151",
+        "_pageContentWidth_809q8_184",
+        "_footerPadding_809q8_115"
+       ]
+      ],
+      "classes": [
+       "_tiny_qaod7_67",
+       "_text-tertiary_12t49_1",
+       "_header_1uc6n_1"
+      ],
+      "data": {},
+      "heading": "Team",
+      "landmark": {
+       "name": "",
+       "role": "main"
+      },
+      "layer": "document",
+      "name": "",
+      "rect": [
+       646,
+       248,
+       73,
+       20
+      ],
+      "role": "generic",
+      "tag": "div",
+      "xpath": "/html/body/div[1]/main[1]/div[1]/div[1]/div[4]/div[1]/div[2]/div[2]/div[1]/div[2]/div[1]/div[1]/div[2]/div[2]/div[1]"
+     },
+     "state": "settings.team"
+    }
+   ],
+   "evidenceHash": "bd07726e8c61d76bc3739dbafce631bd3a9182631a61707d02e44dac93e79e69",
+   "facts": {
+    "axeSummary": "",
+    "criterion": "2.1.1",
+    "criterionName": "Keyboard",
+    "element": "text in \"Team\"",
+    "rule": "not-reached",
+    "screen": "Team",
+    "stops": "62"
+   },
+   "family": "keyboard",
+   "guidance": "High if a task cannot be completed without a mouse.",
+   "issueId": null,
+   "key": "keyboard:not-reached:0d98eba69368",
+   "measured": false,
+   "primary": "settings.team",
+   "proposals": [],
+   "rule": "not-reached",
+   "screens": 1,
+   "severityDefault": "medium",
+   "source": "scanner",
+   "states": [
+    "settings.team"
+   ],
+   "summary": "The Tab walk visited 62 stops and never reached the text in \"Team\", which responds to a click.",
+   "title": "Not reachable by keyboard: text in \"Team\""
+  },
+  {
+   "attachments": [],
+   "attempt": 1,
+   "basis": "candidate",
+   "criteria": [
+    "2.1.1"
+   ],
+   "evidence": [
+    {
+     "evidence": {
+      "end": "body",
+      "focusable": false,
+      "source": "pointer",
+      "stops": 62
+     },
+     "occurrence": {
+      "ancestors": [
+       [
+        "_tiny_qaod7_67",
+        "_text-tertiary_12t49_1",
+        "_tableHeader_1waxt_60",
+        "_collapsible_1waxt_24",
+        "_departmentHeader_1u40e_223"
+       ],
+       [
+        "_tableHeaders_1waxt_60"
+       ],
+       [
+        "_cardTable_1waxt_4"
+       ],
+       [
+        "_tableAndLoadingStateWrapper_1waxt_313"
+       ],
+       [
+        "_tableWrapper_1waxt_304",
+        "_tableWrapper_1u40e_1"
+       ],
+       [],
+       [],
+       [
+        "_pageContent_809q8_151",
+        "_pageContentWidth_809q8_184",
+        "_footerPadding_809q8_115"
+       ]
+      ],
+      "classes": [
+       "_tiny_qaod7_67",
+       "_text-tertiary_12t49_1",
+       "_header_1uc6n_1"
+      ],
+      "data": {},
+      "heading": "Team",
+      "landmark": {
+       "name": "",
+       "role": "main"
+      },
+      "layer": "document",
+      "name": "",
+      "rect": [
+       1002,
+       248,
+       68,
+       20
+      ],
+      "role": "generic",
+      "tag": "div",
+      "xpath": "/html/body/div[1]/main[1]/div[1]/div[1]/div[4]/div[1]/div[2]/div[2]/div[1]/div[2]/div[1]/div[1]/div[2]/div[4]/div[1]"
+     },
+     "state": "settings.team"
+    }
+   ],
+   "evidenceHash": "bd07726e8c61d76bc3739dbafce631bd3a9182631a61707d02e44dac93e79e69",
+   "facts": {
+    "axeSummary": "",
+    "criterion": "2.1.1",
+    "criterionName": "Keyboard",
+    "element": "text in \"Team\"",
+    "rule": "not-reached",
+    "screen": "Team",
+    "stops": "62"
+   },
+   "family": "keyboard",
+   "guidance": "High if a task cannot be completed without a mouse.",
+   "issueId": null,
+   "key": "keyboard:not-reached:514bf7143dfe",
+   "measured": false,
+   "primary": "settings.team",
+   "proposals": [],
+   "rule": "not-reached",
+   "screens": 1,
+   "severityDefault": "medium",
+   "source": "scanner",
+   "states": [
+    "settings.team"
+   ],
+   "summary": "The Tab walk visited 62 stops and never reached the text in \"Team\", which responds to a click.",
+   "title": "Not reachable by keyboard: text in \"Team\""
+  },
+  {
+   "attachments": [],
+   "attempt": 1,
+   "basis": "candidate",
+   "criteria": [
+    "2.1.1"
+   ],
+   "evidence": [
+    {
+     "evidence": {
+      "end": "body",
+      "focusable": false,
+      "source": "pointer",
+      "stops": 62
+     },
+     "occurrence": {
+      "ancestors": [
+       [
+        "_tiny_qaod7_67",
+        "_text-tertiary_12t49_1",
+        "_tableHeader_1waxt_60",
+        "_collapsible_1waxt_24",
+        "_statusHeader_1u40e_313"
+       ],
+       [
+        "_tableHeaders_1waxt_60"
+       ],
+       [
+        "_cardTable_1waxt_4"
+       ],
+       [
+        "_tableAndLoadingStateWrapper_1waxt_313"
+       ],
+       [
+        "_tableWrapper_1waxt_304",
+        "_tableWrapper_1u40e_1"
+       ],
+       [],
+       [],
+       [
+        "_pageContent_809q8_151",
+        "_pageContentWidth_809q8_184",
+        "_footerPadding_809q8_115"
+       ]
+      ],
+      "classes": [
+       "_tiny_qaod7_67",
+       "_text-tertiary_12t49_1",
+       "_header_1uc6n_1"
+      ],
+      "data": {},
+      "heading": "Team",
+      "landmark": {
+       "name": "",
+       "role": "main"
+      },
+      "layer": "document",
+      "name": "",
+      "rect": [
+       1186,
+       248,
+       54,
+       20
+      ],
+      "role": "generic",
+      "tag": "div",
+      "xpath": "/html/body/div[1]/main[1]/div[1]/div[1]/div[4]/div[1]/div[2]/div[2]/div[1]/div[2]/div[1]/div[1]/div[2]/div[5]/div[1]"
+     },
+     "state": "settings.team"
+    }
+   ],
+   "evidenceHash": "bd07726e8c61d76bc3739dbafce631bd3a9182631a61707d02e44dac93e79e69",
+   "facts": {
+    "axeSummary": "",
+    "criterion": "2.1.1",
+    "criterionName": "Keyboard",
+    "element": "text in \"Team\"",
+    "rule": "not-reached",
+    "screen": "Team",
+    "stops": "62"
+   },
+   "family": "keyboard",
+   "guidance": "High if a task cannot be completed without a mouse.",
+   "issueId": null,
+   "key": "keyboard:not-reached:65fbb7f36ba7",
+   "measured": false,
+   "primary": "settings.team",
+   "proposals": [],
+   "rule": "not-reached",
+   "screens": 1,
+   "severityDefault": "medium",
+   "source": "scanner",
+   "states": [
+    "settings.team"
+   ],
+   "summary": "The Tab walk visited 62 stops and never reached the text in \"Team\", which responds to a click.",
+   "title": "Not reachable by keyboard: text in \"Team\""
+  },
+  {
+   "attachments": [],
+   "attempt": 1,
+   "basis": "candidate",
+   "criteria": [
+    "2.1.1"
+   ],
+   "evidence": [
+    {
+     "evidence": {
+      "end": "body",
+      "focusable": false,
+      "source": "pointer",
+      "stops": 62
+     },
+     "occurrence": {
+      "ancestors": [
+       [
+        "_tiny_qaod7_67",
+        "_text-tertiary_12t49_1",
+        "_tableHeader_1waxt_60",
+        "_collapsible_1waxt_24",
+        "_jobTitleHeader_1u40e_209"
+       ],
+       [
+        "_tableHeaders_1waxt_60"
+       ],
+       [
+        "_cardTable_1waxt_4"
+       ],
+       [
+        "_tableAndLoadingStateWrapper_1waxt_313"
+       ],
+       [
+        "_tableWrapper_1waxt_304",
+        "_tableWrapper_1u40e_1"
+       ],
+       [],
+       [],
+       [
+        "_pageContent_809q8_151",
+        "_pageContentWidth_809q8_184",
+        "_footerPadding_809q8_115"
+       ]
+      ],
+      "classes": [
+       "_tiny_qaod7_67",
+       "_text-tertiary_12t49_1",
+       "_header_1uc6n_1"
+      ],
+      "data": {},
+      "heading": "Team",
+      "landmark": {
+       "name": "",
+       "role": "main"
+      },
+      "layer": "document",
+      "name": "",
+      "rect": [
+       850,
+       248,
+       47,
+       20
+      ],
+      "role": "generic",
+      "tag": "div",
+      "xpath": "/html/body/div[1]/main[1]/div[1]/div[1]/div[4]/div[1]/div[2]/div[2]/div[1]/div[2]/div[1]/div[1]/div[2]/div[3]/div[1]"
+     },
+     "state": "settings.team"
+    }
+   ],
+   "evidenceHash": "bd07726e8c61d76bc3739dbafce631bd3a9182631a61707d02e44dac93e79e69",
+   "facts": {
+    "axeSummary": "",
+    "criterion": "2.1.1",
+    "criterionName": "Keyboard",
+    "element": "text in \"Team\"",
+    "rule": "not-reached",
+    "screen": "Team",
+    "stops": "62"
+   },
+   "family": "keyboard",
+   "guidance": "High if a task cannot be completed without a mouse.",
+   "issueId": null,
+   "key": "keyboard:not-reached:c8613fddd065",
+   "measured": false,
+   "primary": "settings.team",
+   "proposals": [],
+   "rule": "not-reached",
+   "screens": 1,
+   "severityDefault": "medium",
+   "source": "scanner",
+   "states": [
+    "settings.team"
+   ],
+   "summary": "The Tab walk visited 62 stops and never reached the text in \"Team\", which responds to a click.",
+   "title": "Not reachable by keyboard: text in \"Team\""
+  }
+ ],
+ "primaries": [
+  "settings.team"
+ ],
+ "reach": {
+  "baseUrl": "https://demo.mercury.com",
+  "data": "data",
+  "map": "build/map.json",
+  "run": "2026-10-03-1525",
+  "workspace": "a11y"
+ },
+ "run": "2026-10-03-1525"
+}

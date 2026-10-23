@@ -1,0 +1,227 @@
+{
+ "batch": "record-002",
+ "reach": {
+  "baseUrl": "https://demo.mercury.com",
+  "data": "data",
+  "map": "build/map.json",
+  "run": "2026-10-02-1349",
+  "workspace": "a11y"
+ },
+ "run": "2026-10-02-1349",
+ "states": [
+  {
+   "area": "accounts",
+   "draft": "nothing on accounts.checking-detail matches {\"click\":{\"name\":\"eye icon next to Account number\"}}",
+   "image": "screens/accounts/19-account-number-revealed.png",
+   "kind": "form-state",
+   "labels": [
+    "Click eye icon next to Account number"
+   ],
+   "mutates": false,
+   "note": "Clicking the eye icon reveals the full account number 3631271038 and switches to an eye-off icon.",
+   "parent": "accounts.checking-detail",
+   "state": "accounts.account-number-revealed",
+   "title": "Account number revealed"
+  },
+  {
+   "area": "accounts",
+   "draft": "nothing on accounts.credit matches {\"click\":{\"name\":\"Linked Accounts pill\"}}",
+   "image": "screens/accounts/97-credit-linked-accounts.png",
+   "kind": "modal",
+   "labels": [
+    "Click Linked Accounts pill"
+   ],
+   "mutates": false,
+   "note": "External accounts counted toward the IO limit (Checking \u2022\u20225231, Capital One) with Exclude all accounts.",
+   "parent": "accounts.credit",
+   "state": "accounts.credit-linked-accounts",
+   "title": "Linked accounts for IO limit"
+  },
+  {
+   "area": "accounts",
+   "draft": "nothing on accounts.credit matches {\"click\":{\"name\":\"Autopay Oct 22 pill\"}}",
+   "image": "screens/accounts/32-edit-autopay.png",
+   "kind": "modal",
+   "labels": [
+    "Click Autopay Oct 22 pill"
+   ],
+   "mutates": false,
+   "note": "Credit autopay overview: funding account with backup, monthly full-balance rule and a less-than-80%-of-limit rule, each with Edit.",
+   "parent": "accounts.credit",
+   "state": "accounts.edit-autopay",
+   "title": "Autopay settings"
+  },
+  {
+   "area": "accounts",
+   "draft": "cannot parse \"Drag slider to tier 5\"",
+   "image": "screens/accounts/43-edit-portfolio-tier5.png",
+   "kind": "form-state",
+   "labels": [
+    "Drag slider to tier 5"
+   ],
+   "mutates": false,
+   "note": "Slider moved to a 50/50 split; fund comparison table and enabled Update portfolio.",
+   "parent": "accounts.edit-portfolio",
+   "state": "accounts.edit-portfolio-tier5",
+   "title": "Edit portfolio \u2014 tier 5"
+  },
+  {
+   "area": "accounts",
+   "draft": "nothing on accounts.index matches {\"click\":{\"name\":\"title\"}}",
+   "image": "screens/accounts/72-nickname-edit.png",
+   "kind": "form-state",
+   "labels": [
+    "Open AP row, click the title"
+   ],
+   "mutates": false,
+   "note": "Clicking the account title turns it into an input with \"Enter to save / Esc to cancel\".",
+   "parent": "accounts.index",
+   "state": "accounts.nickname-edit",
+   "title": "Inline nickname edit"
+  },
+  {
+   "area": "accounts",
+   "draft": "nothing on accounts.safe-create matches {\"click\":{\"name\":\"Next with empty fields\"}}",
+   "image": "screens/accounts/59-safe-validation.png",
+   "kind": "validation-error",
+   "labels": [
+    "Click Next with empty fields"
+   ],
+   "mutates": false,
+   "note": "\"Please complete this field\" under amount and SAFE type plus a second \"Select a SAFE Type to continue\" warning.",
+   "parent": "accounts.safe-create",
+   "state": "accounts.safe-create-error",
+   "title": "SAFE details \u2014 empty submit"
+  },
+  {
+   "area": "accounts",
+   "draft": "nothing on accounts.safes matches {\"click\":{\"name\":\"a SAFE\"}}",
+   "image": "screens/accounts/108-safe-detail.png",
+   "kind": "drawer",
+   "labels": [
+    "Click a SAFE row"
+   ],
+   "mutates": false,
+   "note": "Clicking Logan Roy opens a drawer with shareable link, amount, valuation cap, discount, valuation type, pro-rata, MFN and the signed PDF.",
+   "parent": "accounts.safes",
+   "state": "accounts.safe-detail",
+   "title": "SAFE detail drawer"
+  },
+  {
+   "area": "accounts",
+   "draft": "nothing on accounts.statements matches {\"click\":{\"name\":\"row kebab\"}}",
+   "image": "screens/accounts/24-statement-export-menu.png",
+   "kind": "menu",
+   "labels": [
+    "Click row kebab"
+   ],
+   "mutates": false,
+   "note": "Row kebab with QuickBooks CSV and NetSuite CSV exports.",
+   "parent": "accounts.statements",
+   "state": "accounts.statement-export-menu",
+   "title": "Statement export menu"
+  },
+  {
+   "area": "accounts",
+   "draft": "nothing on accounts.statements matches {\"check\":{\"name\":\"a statement\"}}",
+   "image": "screens/accounts/115-statement-selected.png",
+   "kind": "form-state",
+   "labels": [
+    "Tick a statement row"
+   ],
+   "mutates": false,
+   "note": "Ticking Aug 2026 shows a floating \"1 document selected\" bar with Share document and Download.",
+   "parent": "accounts.statements",
+   "state": "accounts.statement-selected",
+   "title": "Statement selected"
+  },
+  {
+   "area": "accounts",
+   "draft": "nothing on accounts.statements matches {\"click\":{\"name\":\"Accounts filter\"}}",
+   "image": "screens/accounts/111-statements-account-filter.png",
+   "kind": "menu",
+   "labels": [
+    "Open Accounts filter"
+   ],
+   "mutates": false,
+   "note": "Accounts multi-select: All Accounts, Sweep Statements, each account, and a closed Checking \u2022\u20224311.",
+   "parent": "accounts.statements",
+   "state": "accounts.statements-account-filter",
+   "title": "Statements account filter"
+  },
+  {
+   "area": "accounts",
+   "draft": "cannot parse \"Type $250,000\"",
+   "image": "screens/accounts/100-vd-request-calculator.png",
+   "kind": "form-state",
+   "labels": [
+    "Type $250,000"
+   ],
+   "mutates": false,
+   "note": "$250,000 entered; Next enabled. The payment preview does not change until the Review step.",
+   "parent": "accounts.vd-request-funds",
+   "state": "accounts.vd-request-calculator",
+   "title": "Venture debt draw: amount entered"
+  },
+  {
+   "area": "accounts",
+   "draft": "cannot parse \"Type $2,000,000\"",
+   "image": "screens/accounts/101-vd-request-validation.png",
+   "kind": "validation-error",
+   "labels": [
+    "Type $2,000,000"
+   ],
+   "mutates": false,
+   "note": "$2,000,000 shows \"Request amount may not exceed $1,000,000.00.\" but Next stays enabled.",
+   "parent": "accounts.vd-request-funds",
+   "state": "accounts.vd-request-error",
+   "title": "Venture debt draw over limit"
+  },
+  {
+   "area": "accounts",
+   "draft": "structure-missing: a modal needs an open layer; the replay found none",
+   "image": "screens/accounts/74-link-bank.png",
+   "kind": "modal",
+   "labels": [
+    "Click Add account",
+    "Click Link bank account"
+   ],
+   "mutates": false,
+   "note": "Demo links a mock \"Iron Bank Checking 1\" immediately (\"Account Linked\" toast) and asks Business or Personal.",
+   "parent": "accounts.add-account-menu",
+   "state": "accounts.link-bank",
+   "title": "Link bank account \u2014 account type"
+  },
+  {
+   "area": "accounts",
+   "draft": "nothing on accounts.manage-shared-docs matches {\"check\":{\"name\":\"a recipient\"}}",
+   "image": "screens/accounts/113-shared-link-selected.png",
+   "kind": "form-state",
+   "labels": [
+    "Click Manage shared documents",
+    "Tick a recipient"
+   ],
+   "mutates": false,
+   "note": "Ticking rotem@gmail.com turns Close into Cancel and adds a destructive \"Remove access to 1 document link\".",
+   "parent": "accounts.manage-shared-docs",
+   "state": "accounts.shared-link-selected",
+   "title": "Shared link selected for removal"
+  },
+  {
+   "area": "accounts",
+   "draft": "cannot parse \"enter amount above balance\"",
+   "image": "screens/accounts/30-pay-credit-validation.png",
+   "kind": "validation-error",
+   "labels": [
+    "Click Pay",
+    "Click Review",
+    "Click Edit and enter amount above balance"
+   ],
+   "mutates": false,
+   "note": "Amount above the balance shows \"Must be <= $12,505.87\" and disables Review.",
+   "parent": "accounts.pay-credit-review",
+   "state": "accounts.pay-credit-error",
+   "title": "Credit payment \u2014 amount too high"
+  }
+ ]
+}

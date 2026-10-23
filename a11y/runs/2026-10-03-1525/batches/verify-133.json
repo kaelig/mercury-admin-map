@@ -1,0 +1,372 @@
+{
+ "area": "cards",
+ "batch": "verify-133",
+ "findings": [
+  {
+   "attachments": [],
+   "attempt": 1,
+   "basis": "failure",
+   "criteria": [
+    "3.3.1"
+   ],
+   "evidence": [
+    {
+     "evidence": {
+      "describedBy": "",
+      "errorMessage": "Must be a dollar value.",
+      "message": "Spend limit"
+     },
+     "occurrence": {
+      "ancestors": [
+       [
+        "_inputBox_q7hf7_93",
+        "_error_q7hf7_41"
+       ],
+       [
+        "_inputBoxWrapper_q7hf7_93"
+       ],
+       [
+        "_textInputWrapper_q7hf7_24"
+       ],
+       [
+        "_provideDSTextInput_q7hf7_6",
+        "_addWrapperMargin_q7hf7_19"
+       ],
+       [
+        "_limitEntry_xhpdc_1"
+       ],
+       [],
+       [],
+       [
+        "_large_kwlx6_9",
+        "_noHover_3n0se_28",
+        "_shadow_3n0se_25",
+        "_raisedBackground_3n0se_45",
+        "_card_lo4oy_4",
+        "_defaultPadding_lo4oy_27",
+        "_modal_acg5o_1",
+        "_small_lo4oy_11"
+       ]
+      ],
+      "classes": [
+       "_input_q7hf7_93"
+      ],
+      "data": {},
+      "heading": "",
+      "landmark": {
+       "name": "",
+       "role": "form"
+      },
+      "layer": "top",
+      "name": "Spend limit",
+      "rect": [
+       564,
+       432,
+       327,
+       24
+      ],
+      "role": "textbox",
+      "tag": "input",
+      "xpath": "/html/body/div[11]/div[1]/div[1]/div[1]/form[1]/div[1]/div[2]/div[1]/div[1]/div[1]/div[1]/input[1]"
+     },
+     "state": "cards.edit-limit-error"
+    }
+   ],
+   "evidenceHash": "cd10cd2812f67cf1e5be32ba514e3e0569a3e8d9fcb02e8eeef471c2071dabb7",
+   "facts": {
+    "criterion": "3.3.1",
+    "criterionName": "Error Identification",
+    "element": "textbox \"Spend limit\"",
+    "message": "\"Spend limit\"",
+    "screen": "Edit limit: empty amount error"
+   },
+   "family": "error-association",
+   "guidance": "High when errors are shown by color or position only.",
+   "issueId": null,
+   "key": "error-association:error-not-associated:aca43a9aabdb",
+   "measured": false,
+   "primary": "cards.edit-limit-error",
+   "proposals": [],
+   "rule": "error-not-associated",
+   "screens": 1,
+   "severityDefault": "medium",
+   "source": "scanner",
+   "states": [
+    "cards.edit-limit-error"
+   ],
+   "summary": "The textbox \"Spend limit\" has aria-invalid=true, and neither its description nor its error message includes \"Spend limit\".",
+   "title": "Error not tied to its field: textbox \"Spend limit\""
+  },
+  {
+   "attachments": [],
+   "attempt": 1,
+   "basis": "violation",
+   "criteria": [
+    "4.1.2"
+   ],
+   "evidence": [
+    {
+     "evidence": {
+      "aria-errormessage": [
+       "transactionlimit-mercury-utils-id-64-errormessage"
+      ],
+      "failureSummary": "Fix all of the following:\n  aria-errormessage value `transactionlimit-mercury-utils-id-64-errormessage` must use a technique to announce the message (e.g., aria-live, aria-describedby, role=alert, etc.)"
+     },
+     "occurrence": {
+      "ancestors": [
+       [
+        "_inputBox_q7hf7_93",
+        "_error_q7hf7_41"
+       ],
+       [
+        "_inputBoxWrapper_q7hf7_93"
+       ],
+       [
+        "_textInputWrapper_q7hf7_24"
+       ],
+       [
+        "_provideDSTextInput_q7hf7_6",
+        "_addWrapperMargin_q7hf7_19"
+       ],
+       [
+        "_limitEntry_xhpdc_1"
+       ],
+       [],
+       [],
+       [
+        "_large_kwlx6_9",
+        "_noHover_3n0se_28",
+        "_shadow_3n0se_25",
+        "_raisedBackground_3n0se_45",
+        "_card_lo4oy_4",
+        "_defaultPadding_lo4oy_27",
+        "_modal_acg5o_1",
+        "_small_lo4oy_11"
+       ]
+      ],
+      "classes": [
+       "_input_q7hf7_93"
+      ],
+      "data": {},
+      "heading": "",
+      "landmark": {
+       "name": "",
+       "role": "form"
+      },
+      "layer": "top",
+      "name": "Spend limit",
+      "rect": [
+       564,
+       432,
+       327,
+       24
+      ],
+      "role": "textbox",
+      "tag": "input",
+      "xpath": "/html/body/div[11]/div[1]/div[1]/div[1]/form[1]/div[1]/div[2]/div[1]/div[1]/div[1]/div[1]/input[1]"
+     },
+     "state": "cards.edit-limit-error"
+    }
+   ],
+   "evidenceHash": "0f95a6e075d994039a1caa71a8802eca45daa7593dfefd9121533a490d82182e",
+   "facts": {
+    "announced": "textbox \"Spend limit\" [invalid=true, errormessage=Must be a dollar value.]",
+    "axeSummary": "aria-errormessage value `transactionlimit-mercury-utils-id-64-errormessage` must use a technique to announce the message (e.g., aria-live, aria-describedby, ro…",
+    "criterion": "4.1.2",
+    "criterionName": "Name, Role, Value",
+    "element": "textbox \"Spend limit\"",
+    "rule": "aria-valid-attr-value",
+    "screen": "Edit limit: empty amount error"
+   },
+   "family": "role-state",
+   "guidance": "Low for optional ARIA or an invalid autocomplete token; high when aria-hidden hides the whole page.",
+   "issueId": null,
+   "key": "role-state:aria-valid-attr-value:4048c32685f3",
+   "measured": false,
+   "primary": "cards.edit-limit-error",
+   "proposals": [],
+   "rule": "aria-valid-attr-value",
+   "screens": 1,
+   "severityDefault": "medium",
+   "source": "scanner",
+   "states": [
+    "cards.edit-limit-error"
+   ],
+   "summary": "aria-valid-attr-value: announced as textbox \"Spend limit\" [invalid=true, errormessage=Must be a dollar value.]. aria-errormessage value `transactionlimit-mercury-utils-id-64-errormessage` must use a technique to announce the message (e.g., aria-live, aria-describedby, ro…",
+   "title": "Wrong role or state: textbox \"Spend limit\""
+  },
+  {
+   "attachments": [],
+   "attempt": 1,
+   "basis": "failure",
+   "criteria": [
+    "4.1.3"
+   ],
+   "evidence": [
+    {
+     "evidence": {
+      "focus": {
+       "ancestors": [
+        [
+         "_saveSettingsSection_xhpdc_5"
+        ],
+        [],
+        [
+         "_large_kwlx6_9",
+         "_noHover_3n0se_28",
+         "_shadow_3n0se_25",
+         "_raisedBackground_3n0se_45",
+         "_card_lo4oy_4",
+         "_defaultPadding_lo4oy_27",
+         "_modal_acg5o_1",
+         "_small_lo4oy_11"
+        ],
+        [
+         "ReactModal__Content",
+         "ReactModal__Content--after-open",
+         "_modal_lo4oy_73"
+        ],
+        [
+         "ReactModal__Overlay",
+         "ReactModal__Overlay--after-open",
+         "_overlay_lo4oy_89",
+         "_backgroundColor_lo4oy_103"
+        ],
+        [
+         "ReactModalPortal"
+        ]
+       ],
+       "classes": [
+        "_button_r6b2u_20",
+        "_large_r6b2u_88",
+        "_primary_r6b2u_104",
+        "_appearDisabled_r6b2u_16",
+        "_actionButton_xhpdc_15",
+        "session-replay-unmask"
+       ],
+       "data": {},
+       "heading": "",
+       "landmark": {
+        "name": "",
+        "role": "form"
+       },
+       "layer": "top",
+       "name": "Save Limit",
+       "rect": [
+        785,
+        592,
+        119,
+        40
+       ],
+       "role": "button",
+       "tag": "button",
+       "xpath": "/html/body/div[11]/div[1]/div[1]/div[1]/form[1]/div[2]/button[2]"
+      },
+      "focused": false,
+      "message": "Spend limit",
+      "region": null
+     },
+     "occurrence": {
+      "ancestors": [
+       [
+        "_textInputWrapper_q7hf7_24"
+       ],
+       [
+        "_provideDSTextInput_q7hf7_6",
+        "_addWrapperMargin_q7hf7_19"
+       ],
+       [
+        "_limitEntry_xhpdc_1"
+       ],
+       [],
+       [],
+       [
+        "_large_kwlx6_9",
+        "_noHover_3n0se_28",
+        "_shadow_3n0se_25",
+        "_raisedBackground_3n0se_45",
+        "_card_lo4oy_4",
+        "_defaultPadding_lo4oy_27",
+        "_modal_acg5o_1",
+        "_small_lo4oy_11"
+       ],
+       [
+        "ReactModal__Content",
+        "ReactModal__Content--after-open",
+        "_modal_lo4oy_73"
+       ],
+       [
+        "ReactModal__Overlay",
+        "ReactModal__Overlay--after-open",
+        "_overlay_lo4oy_89",
+        "_backgroundColor_lo4oy_103"
+       ]
+      ],
+      "classes": [
+       "_label_qaod7_59",
+       "_label_1nilg_3",
+       "_error_1nilg_6",
+       "_label_q7hf7_41",
+       "_error_q7hf7_41"
+      ],
+      "data": {
+       "data-session-replay-unmask": "true"
+      },
+      "heading": "",
+      "landmark": {
+       "name": "",
+       "role": "form"
+      },
+      "layer": "top",
+      "name": "",
+      "rect": [
+       536,
+       400,
+       368,
+       20
+      ],
+      "role": "LabelText",
+      "tag": "label",
+      "xpath": "/html/body/div[11]/div[1]/div[1]/div[1]/form[1]/div[1]/div[2]/div[1]/div[1]/label[1]"
+     },
+     "state": "cards.edit-limit-error"
+    }
+   ],
+   "evidenceHash": "43060285b4c3dacd530d76cb26a2d23f8608d988b374646adb3eee5fa5909c50",
+   "facts": {
+    "criterion": "4.1.3",
+    "criterionName": "Status Messages",
+    "focus": "button \"Save Limit\"",
+    "message": "\"Spend limit\"",
+    "screen": "Edit limit: empty amount error"
+   },
+   "family": "status-message",
+   "guidance": "High when it is the only confirmation of a money movement.",
+   "issueId": null,
+   "key": "status-message:status-not-announced:97c053228154",
+   "measured": false,
+   "primary": "cards.edit-limit-error",
+   "proposals": [],
+   "rule": "status-not-announced",
+   "screens": 1,
+   "severityDefault": "medium",
+   "source": "scanner",
+   "states": [
+    "cards.edit-limit-error"
+   ],
+   "summary": "\"Spend limit\" appeared outside any live region, alert or status role that existed before it, and focus stayed on the button \"Save Limit\".",
+   "title": "Status message not announced: \"Spend limit\""
+  }
+ ],
+ "primaries": [
+  "cards.edit-limit-error"
+ ],
+ "reach": {
+  "baseUrl": "https://demo.mercury.com",
+  "data": "data",
+  "map": "build/map.json",
+  "run": "2026-10-03-1525",
+  "workspace": "a11y"
+ },
+ "run": "2026-10-03-1525"
+}

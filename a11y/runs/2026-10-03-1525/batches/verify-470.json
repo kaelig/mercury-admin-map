@@ -1,0 +1,804 @@
+{
+ "area": "home",
+ "batch": "verify-470",
+ "findings": [
+  {
+   "attachments": [],
+   "attempt": 1,
+   "basis": "candidate",
+   "criteria": [
+    "4.1.2"
+   ],
+   "evidence": [
+    {
+     "evidence": {
+      "description": "",
+      "name": "Balance graph",
+      "role": "button",
+      "states": {},
+      "template": "button \"Balance graph\""
+     },
+     "occurrence": {
+      "ancestors": [
+       [
+        "_buttonWithDivider_1xt6d_80"
+       ],
+       [
+        "_container_1xt6d_3",
+        "_large_1xt6d_15"
+       ],
+       [
+        "_toggleMode_q3oue_47"
+       ],
+       [
+        "_controls_q3oue_37"
+       ],
+       [
+        "_topSection_q3oue_12"
+       ],
+       [
+        "_container_q3oue_1"
+       ],
+       [
+        "_large_kwlx6_9",
+        "_noHover_3n0se_28",
+        "_border_3n0se_35",
+        "_raisedBackground_3n0se_45",
+        "_graph_ct6b5_91"
+       ],
+       [
+        "_row_ct6b5_42"
+       ]
+      ],
+      "classes": [
+       "_segment_1xt6d_7",
+       "_selected_1xt6d_60",
+       "_first_1xt6d_73"
+      ],
+      "data": {},
+      "heading": "Welcome, Jane",
+      "landmark": {
+       "name": "",
+       "role": "main"
+      },
+      "layer": "document",
+      "name": "Balance graph",
+      "rect": [
+       710,
+       269,
+       43,
+       40
+      ],
+      "role": "button",
+      "tag": "button",
+      "xpath": "/html/body/div[1]/main[1]/div[1]/div[1]/div[4]/div[1]/div[2]/div[1]/div[1]/div[4]/div[1]/div[1]/div[1]/div[1]/div[2]/div[1]/div[1]/div[1]/button[1]"
+     },
+     "state": "home.index"
+    },
+    {
+     "evidence": {
+      "description": "",
+      "name": "Balance graph",
+      "role": "button",
+      "states": {},
+      "template": "button \"Balance graph\""
+     },
+     "occurrence": {
+      "ancestors": [
+       [
+        "_buttonWithDivider_1xt6d_80"
+       ],
+       [
+        "_container_1xt6d_3",
+        "_large_1xt6d_15"
+       ],
+       [
+        "_toggleMode_q3oue_47"
+       ],
+       [
+        "_controls_q3oue_37"
+       ],
+       [
+        "_topSection_q3oue_12"
+       ],
+       [
+        "_container_q3oue_1"
+       ],
+       [
+        "_large_kwlx6_9",
+        "_noHover_3n0se_28",
+        "_border_3n0se_35",
+        "_raisedBackground_3n0se_45",
+        "_graph_ct6b5_91"
+       ],
+       [
+        "_row_ct6b5_42"
+       ]
+      ],
+      "classes": [
+       "_segment_1xt6d_7",
+       "_selected_1xt6d_60",
+       "_first_1xt6d_73"
+      ],
+      "data": {},
+      "heading": "Welcome, Jane",
+      "landmark": {
+       "name": "",
+       "role": "main"
+      },
+      "layer": "document",
+      "name": "Balance graph",
+      "rect": [
+       710,
+       269,
+       43,
+       40
+      ],
+      "role": "button",
+      "tag": "button",
+      "xpath": "/html/body/div[1]/main[1]/div[1]/div[1]/div[4]/div[1]/div[2]/div[1]/div[1]/div[4]/div[1]/div[1]/div[1]/div[1]/div[2]/div[1]/div[1]/div[1]/button[1]"
+     },
+     "state": "home.balance-graph-hover"
+    }
+   ],
+   "evidenceHash": "3425b479a37cc7c67e7c06c6ed3e349a4fa7c82407cc827ef9ed3ee0b0a90e1e",
+   "facts": {
+    "announced": "button \"Balance graph\"",
+    "axeSummary": "",
+    "criterion": "4.1.2",
+    "criterionName": "Name, Role, Value",
+    "element": "button \"Balance graph\"",
+    "rule": "announced-as",
+    "screen": "Home dashboard"
+   },
+   "family": "role-state",
+   "guidance": "Low for optional ARIA or an invalid autocomplete token; high when aria-hidden hides the whole page.",
+   "issueId": null,
+   "key": "role-state:announced-as:60df828a1635",
+   "measured": false,
+   "primary": "home.index",
+   "proposals": [],
+   "rule": "announced-as",
+   "screens": 18,
+   "severityDefault": "medium",
+   "source": "scanner",
+   "states": [
+    "home.index",
+    "home.balance-graph-hover"
+   ],
+   "summary": "announced-as: announced as button \"Balance graph\".",
+   "title": "Wrong role or state: button \"Balance graph\""
+  },
+  {
+   "attachments": [],
+   "attempt": 1,
+   "basis": "candidate",
+   "criteria": [
+    "4.1.2"
+   ],
+   "evidence": [
+    {
+     "evidence": {
+      "description": "",
+      "name": "Monthly money out",
+      "role": "menuitem",
+      "states": {},
+      "template": "menuitem \"Monthly money out\""
+     },
+     "occurrence": {
+      "ancestors": [
+       [
+        "_chip_1xw00_8",
+        "_inactive_1xw00_119",
+        "_truncateText_1xw00_16"
+       ],
+       [
+        "_facets_grqat_22"
+       ],
+       [
+        "_facetChipsContainer_165jq_14"
+       ],
+       [
+        "_facetsAndLinkContainer_165jq_18"
+       ],
+       [],
+       [
+        "_analyticsDashboard_ct6b5_36"
+       ],
+       [
+        "_fullWidthWrapper_ct6b5_9"
+       ],
+       [
+        "_outerWrapper_ct6b5_1"
+       ]
+      ],
+      "classes": [
+       "_mainElement_1xw00_24",
+       "_interactive_1xw00_134"
+      ],
+      "data": {},
+      "heading": "Welcome, Jane",
+      "landmark": {
+       "name": "",
+       "role": "main"
+      },
+      "layer": "document",
+      "name": "Monthly money out",
+      "rect": [
+       729,
+       1505,
+       156,
+       32
+      ],
+      "role": "menuitem",
+      "tag": "button",
+      "xpath": "/html/body/div[1]/main[1]/div[1]/div[1]/div[4]/div[1]/div[2]/div[1]/div[1]/div[4]/div[4]/div[2]/div[1]/span[1]/span[4]/button[1]"
+     },
+     "state": "home.index"
+    },
+    {
+     "evidence": {
+      "description": "",
+      "name": "Monthly money out",
+      "role": "menuitem",
+      "states": {},
+      "template": "menuitem \"Monthly money out\""
+     },
+     "occurrence": {
+      "ancestors": [
+       [
+        "_chip_1xw00_8",
+        "_inactive_1xw00_119",
+        "_truncateText_1xw00_16"
+       ],
+       [
+        "_facets_grqat_22"
+       ],
+       [
+        "_facetChipsContainer_165jq_14"
+       ],
+       [
+        "_facetsAndLinkContainer_165jq_18"
+       ],
+       [],
+       [
+        "_analyticsDashboard_ct6b5_36"
+       ],
+       [
+        "_fullWidthWrapper_ct6b5_9"
+       ],
+       [
+        "_outerWrapper_ct6b5_1"
+       ]
+      ],
+      "classes": [
+       "_mainElement_1xw00_24",
+       "_interactive_1xw00_134"
+      ],
+      "data": {},
+      "heading": "Welcome, Jane",
+      "landmark": {
+       "name": "",
+       "role": "main"
+      },
+      "layer": "document",
+      "name": "Monthly money out",
+      "rect": [
+       729,
+       1505,
+       156,
+       32
+      ],
+      "role": "menuitem",
+      "tag": "button",
+      "xpath": "/html/body/div[1]/main[1]/div[1]/div[1]/div[4]/div[1]/div[2]/div[1]/div[1]/div[4]/div[4]/div[2]/div[1]/span[1]/span[4]/button[1]"
+     },
+     "state": "home.balance-graph-hover"
+    }
+   ],
+   "evidenceHash": "a711b41afa7384be01340470b9192568f30b2fc53c9bfb8e40620efb1d942e14",
+   "facts": {
+    "announced": "menuitem \"Monthly money out\"",
+    "axeSummary": "",
+    "criterion": "4.1.2",
+    "criterionName": "Name, Role, Value",
+    "element": "menuitem \"Monthly money out\"",
+    "rule": "announced-as",
+    "screen": "Home dashboard"
+   },
+   "family": "role-state",
+   "guidance": "Low for optional ARIA or an invalid autocomplete token; high when aria-hidden hides the whole page.",
+   "issueId": null,
+   "key": "role-state:announced-as:78c8beb988b0",
+   "measured": false,
+   "primary": "home.index",
+   "proposals": [],
+   "rule": "announced-as",
+   "screens": 19,
+   "severityDefault": "medium",
+   "source": "scanner",
+   "states": [
+    "home.index",
+    "home.balance-graph-hover"
+   ],
+   "summary": "announced-as: announced as menuitem \"Monthly money out\".",
+   "title": "Wrong role or state: menuitem \"Monthly money out\""
+  },
+  {
+   "attachments": [],
+   "attempt": 1,
+   "basis": "candidate",
+   "criteria": [
+    "4.1.2"
+   ],
+   "evidence": [
+    {
+     "evidence": {
+      "description": "",
+      "name": "Monthly money in",
+      "role": "menuitem",
+      "states": {},
+      "template": "menuitem \"Monthly money in\""
+     },
+     "occurrence": {
+      "ancestors": [
+       [
+        "_chip_1xw00_8",
+        "_inactive_1xw00_119",
+        "_truncateText_1xw00_16"
+       ],
+       [
+        "_facets_grqat_22"
+       ],
+       [
+        "_facetChipsContainer_165jq_14"
+       ],
+       [
+        "_facetsAndLinkContainer_165jq_18"
+       ],
+       [],
+       [
+        "_analyticsDashboard_ct6b5_36"
+       ],
+       [
+        "_fullWidthWrapper_ct6b5_9"
+       ],
+       [
+        "_outerWrapper_ct6b5_1"
+       ]
+      ],
+      "classes": [
+       "_mainElement_1xw00_24",
+       "_interactive_1xw00_134"
+      ],
+      "data": {},
+      "heading": "Welcome, Jane",
+      "landmark": {
+       "name": "",
+       "role": "main"
+      },
+      "layer": "document",
+      "name": "Monthly money in",
+      "rect": [
+       573,
+       1505,
+       146,
+       32
+      ],
+      "role": "menuitem",
+      "tag": "button",
+      "xpath": "/html/body/div[1]/main[1]/div[1]/div[1]/div[4]/div[1]/div[2]/div[1]/div[1]/div[4]/div[4]/div[2]/div[1]/span[1]/span[3]/button[1]"
+     },
+     "state": "home.index"
+    },
+    {
+     "evidence": {
+      "description": "",
+      "name": "Monthly money in",
+      "role": "menuitem",
+      "states": {},
+      "template": "menuitem \"Monthly money in\""
+     },
+     "occurrence": {
+      "ancestors": [
+       [
+        "_chip_1xw00_8",
+        "_inactive_1xw00_119",
+        "_truncateText_1xw00_16"
+       ],
+       [
+        "_facets_grqat_22"
+       ],
+       [
+        "_facetChipsContainer_165jq_14"
+       ],
+       [
+        "_facetsAndLinkContainer_165jq_18"
+       ],
+       [],
+       [
+        "_analyticsDashboard_ct6b5_36"
+       ],
+       [
+        "_fullWidthWrapper_ct6b5_9"
+       ],
+       [
+        "_outerWrapper_ct6b5_1"
+       ]
+      ],
+      "classes": [
+       "_mainElement_1xw00_24",
+       "_interactive_1xw00_134"
+      ],
+      "data": {},
+      "heading": "Welcome, Jane",
+      "landmark": {
+       "name": "",
+       "role": "main"
+      },
+      "layer": "document",
+      "name": "Monthly money in",
+      "rect": [
+       573,
+       1505,
+       146,
+       32
+      ],
+      "role": "menuitem",
+      "tag": "button",
+      "xpath": "/html/body/div[1]/main[1]/div[1]/div[1]/div[4]/div[1]/div[2]/div[1]/div[1]/div[4]/div[4]/div[2]/div[1]/span[1]/span[3]/button[1]"
+     },
+     "state": "home.balance-graph-hover"
+    }
+   ],
+   "evidenceHash": "901e3cd45f263d5a8100dcb0bcd1d6d911c3f3505f71107546588dc99a798cbb",
+   "facts": {
+    "announced": "menuitem \"Monthly money in\"",
+    "axeSummary": "",
+    "criterion": "4.1.2",
+    "criterionName": "Name, Role, Value",
+    "element": "menuitem \"Monthly money in\"",
+    "rule": "announced-as",
+    "screen": "Home dashboard"
+   },
+   "family": "role-state",
+   "guidance": "Low for optional ARIA or an invalid autocomplete token; high when aria-hidden hides the whole page.",
+   "issueId": null,
+   "key": "role-state:announced-as:850694885593",
+   "measured": false,
+   "primary": "home.index",
+   "proposals": [],
+   "rule": "announced-as",
+   "screens": 19,
+   "severityDefault": "medium",
+   "source": "scanner",
+   "states": [
+    "home.index",
+    "home.balance-graph-hover"
+   ],
+   "summary": "announced-as: announced as menuitem \"Monthly money in\".",
+   "title": "Wrong role or state: menuitem \"Monthly money in\""
+  },
+  {
+   "attachments": [],
+   "attempt": 1,
+   "basis": "candidate",
+   "criteria": [
+    "4.1.2"
+   ],
+   "evidence": [
+    {
+     "evidence": {
+      "description": "",
+      "name": "Recent",
+      "role": "menuitem",
+      "states": {},
+      "template": "menuitem \"Recent\""
+     },
+     "occurrence": {
+      "ancestors": [
+       [
+        "_chip_1xw00_8",
+        "_active_1xw00_161",
+        "_truncateText_1xw00_16"
+       ],
+       [
+        "_facets_grqat_22"
+       ],
+       [
+        "_facetChipsContainer_165jq_14"
+       ],
+       [
+        "_facetsAndLinkContainer_165jq_18"
+       ],
+       [],
+       [
+        "_analyticsDashboard_ct6b5_36"
+       ],
+       [
+        "_fullWidthWrapper_ct6b5_9"
+       ],
+       [
+        "_outerWrapper_ct6b5_1"
+       ]
+      ],
+      "classes": [
+       "_mainElement_1xw00_24",
+       "_interactive_1xw00_134"
+      ],
+      "data": {},
+      "heading": "Welcome, Jane",
+      "landmark": {
+       "name": "",
+       "role": "main"
+      },
+      "layer": "document",
+      "name": "Recent",
+      "rect": [
+       347,
+       1505,
+       72,
+       32
+      ],
+      "role": "menuitem",
+      "tag": "button",
+      "xpath": "/html/body/div[1]/main[1]/div[1]/div[1]/div[4]/div[1]/div[2]/div[1]/div[1]/div[4]/div[4]/div[2]/div[1]/span[1]/span[1]/button[1]"
+     },
+     "state": "home.index"
+    },
+    {
+     "evidence": {
+      "description": "",
+      "name": "Recent",
+      "role": "menuitem",
+      "states": {},
+      "template": "menuitem \"Recent\""
+     },
+     "occurrence": {
+      "ancestors": [
+       [
+        "_chip_1xw00_8",
+        "_active_1xw00_161",
+        "_truncateText_1xw00_16"
+       ],
+       [
+        "_facets_grqat_22"
+       ],
+       [
+        "_facetChipsContainer_165jq_14"
+       ],
+       [
+        "_facetsAndLinkContainer_165jq_18"
+       ],
+       [],
+       [
+        "_analyticsDashboard_ct6b5_36"
+       ],
+       [
+        "_fullWidthWrapper_ct6b5_9"
+       ],
+       [
+        "_outerWrapper_ct6b5_1"
+       ]
+      ],
+      "classes": [
+       "_mainElement_1xw00_24",
+       "_interactive_1xw00_134"
+      ],
+      "data": {},
+      "heading": "Welcome, Jane",
+      "landmark": {
+       "name": "",
+       "role": "main"
+      },
+      "layer": "document",
+      "name": "Recent",
+      "rect": [
+       347,
+       1505,
+       72,
+       32
+      ],
+      "role": "menuitem",
+      "tag": "button",
+      "xpath": "/html/body/div[1]/main[1]/div[1]/div[1]/div[4]/div[1]/div[2]/div[1]/div[1]/div[4]/div[4]/div[2]/div[1]/span[1]/span[1]/button[1]"
+     },
+     "state": "home.balance-graph-hover"
+    }
+   ],
+   "evidenceHash": "c0bac04cc8bd5875deeef7e4236074511e3fbc6644c59462710528a7d86fe3cc",
+   "facts": {
+    "announced": "menuitem \"Recent\"",
+    "axeSummary": "",
+    "criterion": "4.1.2",
+    "criterionName": "Name, Role, Value",
+    "element": "menuitem \"Recent\"",
+    "rule": "announced-as",
+    "screen": "Home dashboard"
+   },
+   "family": "role-state",
+   "guidance": "Low for optional ARIA or an invalid autocomplete token; high when aria-hidden hides the whole page.",
+   "issueId": null,
+   "key": "role-state:announced-as:d0c115d2df66",
+   "measured": false,
+   "primary": "home.index",
+   "proposals": [],
+   "rule": "announced-as",
+   "screens": 19,
+   "severityDefault": "medium",
+   "source": "scanner",
+   "states": [
+    "home.index",
+    "home.balance-graph-hover"
+   ],
+   "summary": "announced-as: announced as menuitem \"Recent\".",
+   "title": "Wrong role or state: menuitem \"Recent\""
+  },
+  {
+   "attachments": [],
+   "attempt": 1,
+   "basis": "candidate",
+   "criteria": [
+    "4.1.2"
+   ],
+   "evidence": [
+    {
+     "evidence": {
+      "description": "",
+      "name": "My transactions",
+      "role": "menuitem",
+      "states": {},
+      "template": "menuitem \"My transactions\""
+     },
+     "occurrence": {
+      "ancestors": [
+       [
+        "_chip_1xw00_8",
+        "_inactive_1xw00_119",
+        "_truncateText_1xw00_16"
+       ],
+       [
+        "_facets_grqat_22"
+       ],
+       [
+        "_facetChipsContainer_165jq_14"
+       ],
+       [
+        "_facetsAndLinkContainer_165jq_18"
+       ],
+       [],
+       [
+        "_analyticsDashboard_ct6b5_36"
+       ],
+       [
+        "_fullWidthWrapper_ct6b5_9"
+       ],
+       [
+        "_outerWrapper_ct6b5_1"
+       ]
+      ],
+      "classes": [
+       "_mainElement_1xw00_24",
+       "_interactive_1xw00_134"
+      ],
+      "data": {},
+      "heading": "Welcome, Jane",
+      "landmark": {
+       "name": "",
+       "role": "main"
+      },
+      "layer": "document",
+      "name": "My transactions",
+      "rect": [
+       429,
+       1505,
+       134,
+       32
+      ],
+      "role": "menuitem",
+      "tag": "button",
+      "xpath": "/html/body/div[1]/main[1]/div[1]/div[1]/div[4]/div[1]/div[2]/div[1]/div[1]/div[4]/div[4]/div[2]/div[1]/span[1]/span[2]/button[1]"
+     },
+     "state": "home.index"
+    },
+    {
+     "evidence": {
+      "description": "",
+      "name": "My transactions",
+      "role": "menuitem",
+      "states": {},
+      "template": "menuitem \"My transactions\""
+     },
+     "occurrence": {
+      "ancestors": [
+       [
+        "_chip_1xw00_8",
+        "_inactive_1xw00_119",
+        "_truncateText_1xw00_16"
+       ],
+       [
+        "_facets_grqat_22"
+       ],
+       [
+        "_facetChipsContainer_165jq_14"
+       ],
+       [
+        "_facetsAndLinkContainer_165jq_18"
+       ],
+       [],
+       [
+        "_analyticsDashboard_ct6b5_36"
+       ],
+       [
+        "_fullWidthWrapper_ct6b5_9"
+       ],
+       [
+        "_outerWrapper_ct6b5_1"
+       ]
+      ],
+      "classes": [
+       "_mainElement_1xw00_24",
+       "_interactive_1xw00_134"
+      ],
+      "data": {},
+      "heading": "Welcome, Jane",
+      "landmark": {
+       "name": "",
+       "role": "main"
+      },
+      "layer": "document",
+      "name": "My transactions",
+      "rect": [
+       429,
+       1505,
+       134,
+       32
+      ],
+      "role": "menuitem",
+      "tag": "button",
+      "xpath": "/html/body/div[1]/main[1]/div[1]/div[1]/div[4]/div[1]/div[2]/div[1]/div[1]/div[4]/div[4]/div[2]/div[1]/span[1]/span[2]/button[1]"
+     },
+     "state": "home.balance-graph-hover"
+    }
+   ],
+   "evidenceHash": "a2c8d2bdc4c57c32c07f9f2efb594771e552e96b72b9542fe72c264df028ead7",
+   "facts": {
+    "announced": "menuitem \"My transactions\"",
+    "axeSummary": "",
+    "criterion": "4.1.2",
+    "criterionName": "Name, Role, Value",
+    "element": "menuitem \"My transactions\"",
+    "rule": "announced-as",
+    "screen": "Home dashboard"
+   },
+   "family": "role-state",
+   "guidance": "Low for optional ARIA or an invalid autocomplete token; high when aria-hidden hides the whole page.",
+   "issueId": null,
+   "key": "role-state:announced-as:df8e382e8187",
+   "measured": false,
+   "primary": "home.index",
+   "proposals": [],
+   "rule": "announced-as",
+   "screens": 19,
+   "severityDefault": "medium",
+   "source": "scanner",
+   "states": [
+    "home.index",
+    "home.balance-graph-hover"
+   ],
+   "summary": "announced-as: announced as menuitem \"My transactions\".",
+   "title": "Wrong role or state: menuitem \"My transactions\""
+  }
+ ],
+ "primaries": [
+  "home.index"
+ ],
+ "reach": {
+  "baseUrl": "https://demo.mercury.com",
+  "data": "data",
+  "map": "build/map.json",
+  "run": "2026-10-03-1525",
+  "workspace": "a11y"
+ },
+ "run": "2026-10-03-1525"
+}

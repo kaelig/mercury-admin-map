@@ -1,0 +1,777 @@
+{
+ "area": "books",
+ "batch": "second-017",
+ "findings": [
+  {
+   "attachments": [],
+   "attempt": 1,
+   "basis": "violation",
+   "criteria": [
+    "1.3.5"
+   ],
+   "evidence": [
+    {
+     "evidence": {
+      "failureSummary": "Fix all of the following:\n  the autocomplete attribute is incorrectly formatted"
+     },
+     "occurrence": {
+      "ancestors": [
+       [
+        "_inputWrapper_11c85_6"
+       ],
+       [
+        "_wrapper_1xgdp_8",
+        "_periodInput_iv194_17",
+        "_comboboxInput_iv194_34"
+       ],
+       [
+        "_inputContainer_iv194_3"
+       ],
+       [
+        "_customStickyHeader_7rfk9_63"
+       ],
+       [
+        "_externalStickyHeaderContent_7rfk9_57"
+       ],
+       [
+        "_stickyHeader_7rfk9_50"
+       ],
+       [
+        "_virtualizerContainer_7rfk9_25"
+       ],
+       [
+        "_grid_7rfk9_1"
+       ]
+      ],
+      "classes": [
+       "_input_11c85_6"
+      ],
+      "data": {
+       "data-1p-ignore": "true",
+       "data-active-item": "true",
+       "data-bwignore": "true",
+       "data-lpignore": "true"
+      },
+      "heading": "Add other bank or credit accounts",
+      "landmark": {
+       "name": "",
+       "role": "main"
+      },
+      "layer": "document",
+      "name": "frequency",
+      "rect": [
+       348,
+       400,
+       92,
+       32
+      ],
+      "role": "combobox",
+      "tag": "input",
+      "xpath": "/html/body/div[1]/main[1]/div[1]/div[1]/div[1]/div[4]/div[1]/div[1]/div[2]/div[1]/div[1]/div[1]/div[1]/div[1]/div[2]/div[1]/div[1]/div[1]/div[2]/div[1]/input[1]"
+     },
+     "state": "books.balance-sheet"
+    },
+    {
+     "evidence": {
+      "failureSummary": "Fix all of the following:\n  the autocomplete attribute is incorrectly formatted"
+     },
+     "occurrence": {
+      "ancestors": [
+       [
+        "_inputWrapper_11c85_6"
+       ],
+       [
+        "_wrapper_1xgdp_8",
+        "_periodInput_iv194_17",
+        "_comboboxInput_iv194_34"
+       ],
+       [
+        "_inputContainer_iv194_3"
+       ],
+       [
+        "_customStickyHeader_7rfk9_63"
+       ],
+       [
+        "_externalStickyHeaderContent_7rfk9_57"
+       ],
+       [
+        "_stickyHeader_7rfk9_50"
+       ],
+       [
+        "_virtualizerContainer_7rfk9_25"
+       ],
+       [
+        "_grid_7rfk9_1"
+       ]
+      ],
+      "classes": [
+       "_input_11c85_6"
+      ],
+      "data": {
+       "data-1p-ignore": "true",
+       "data-active-item": "true",
+       "data-bwignore": "true",
+       "data-lpignore": "true"
+      },
+      "heading": "Add other bank or credit accounts",
+      "landmark": {
+       "name": "",
+       "role": "main"
+      },
+      "layer": "document",
+      "name": "frequency",
+      "rect": [
+       348,
+       400,
+       92,
+       32
+      ],
+      "role": "combobox",
+      "tag": "input",
+      "xpath": "/html/body/div[1]/main[1]/div[1]/div[1]/div[1]/div[4]/div[1]/div[1]/div[2]/div[1]/div[1]/div[1]/div[1]/div[1]/div[2]/div[1]/div[1]/div[1]/div[2]/div[1]/input[1]"
+     },
+     "state": "books.profit-loss"
+    }
+   ],
+   "evidenceHash": "fc8f820fab4628bcf2e68d4abf9bb8979f7dac9645fceb04c120c5acbeb232ef",
+   "facts": {
+    "announced": "combobox \"frequency\" [expanded=false, haspopup=listbox]",
+    "axeSummary": "the autocomplete attribute is incorrectly formatted",
+    "criterion": "1.3.5",
+    "criterionName": "Identify Input Purpose",
+    "element": "combobox \"frequency\"",
+    "rule": "autocomplete-valid",
+    "screen": "Balance Sheet"
+   },
+   "family": "role-state",
+   "guidance": "Low for optional ARIA or an invalid autocomplete token; high when aria-hidden hides the whole page.",
+   "issueId": null,
+   "key": "role-state:autocomplete-valid:3fbd14ca6aad",
+   "measured": false,
+   "primary": "books.balance-sheet",
+   "proposals": [],
+   "rule": "autocomplete-valid",
+   "screens": 4,
+   "severityDefault": "medium",
+   "source": "scanner",
+   "states": [
+    "books.balance-sheet",
+    "books.profit-loss"
+   ],
+   "summary": "autocomplete-valid: announced as combobox \"frequency\" [expanded=false, haspopup=listbox]. the autocomplete attribute is incorrectly formatted",
+   "title": "Invalid autocomplete value: combobox \"frequency\""
+  },
+  {
+   "attachments": [],
+   "attempt": 1,
+   "basis": "violation",
+   "criteria": [
+    "1.3.5"
+   ],
+   "evidence": [
+    {
+     "evidence": {
+      "failureSummary": "Fix all of the following:\n  the autocomplete attribute is incorrectly formatted"
+     },
+     "occurrence": {
+      "ancestors": [
+       [
+        "_inputWrapper_11c85_6"
+       ],
+       [
+        "_wrapper_1xgdp_8",
+        "_yearInput_iv194_12",
+        "_comboboxInput_iv194_34"
+       ],
+       [
+        "_inputContainer_iv194_3"
+       ],
+       [
+        "_customStickyHeader_7rfk9_63"
+       ],
+       [
+        "_externalStickyHeaderContent_7rfk9_57"
+       ],
+       [
+        "_stickyHeader_7rfk9_50"
+       ],
+       [
+        "_virtualizerContainer_7rfk9_25"
+       ],
+       [
+        "_grid_7rfk9_1"
+       ]
+      ],
+      "classes": [
+       "_input_11c85_6"
+      ],
+      "data": {
+       "data-1p-ignore": "true",
+       "data-active-item": "true",
+       "data-bwignore": "true",
+       "data-lpignore": "true"
+      },
+      "heading": "Add other bank or credit accounts",
+      "landmark": {
+       "name": "",
+       "role": "main"
+      },
+      "layer": "document",
+      "name": "years",
+      "rect": [
+       491,
+       400,
+       97,
+       32
+      ],
+      "role": "combobox",
+      "tag": "input",
+      "xpath": "/html/body/div[1]/main[1]/div[1]/div[1]/div[1]/div[4]/div[1]/div[1]/div[2]/div[1]/div[1]/div[1]/div[1]/div[1]/div[2]/div[1]/div[1]/div[1]/div[4]/div[1]/input[1]"
+     },
+     "state": "books.balance-sheet"
+    },
+    {
+     "evidence": {
+      "failureSummary": "Fix all of the following:\n  the autocomplete attribute is incorrectly formatted"
+     },
+     "occurrence": {
+      "ancestors": [
+       [
+        "_inputWrapper_11c85_6"
+       ],
+       [
+        "_wrapper_1xgdp_8",
+        "_yearInput_iv194_12",
+        "_comboboxInput_iv194_34"
+       ],
+       [
+        "_inputContainer_iv194_3"
+       ],
+       [
+        "_customStickyHeader_7rfk9_63"
+       ],
+       [
+        "_externalStickyHeaderContent_7rfk9_57"
+       ],
+       [
+        "_stickyHeader_7rfk9_50"
+       ],
+       [
+        "_virtualizerContainer_7rfk9_25"
+       ],
+       [
+        "_grid_7rfk9_1"
+       ]
+      ],
+      "classes": [
+       "_input_11c85_6"
+      ],
+      "data": {
+       "data-1p-ignore": "true",
+       "data-active-item": "true",
+       "data-bwignore": "true",
+       "data-lpignore": "true"
+      },
+      "heading": "Add other bank or credit accounts",
+      "landmark": {
+       "name": "",
+       "role": "main"
+      },
+      "layer": "document",
+      "name": "years",
+      "rect": [
+       491,
+       400,
+       97,
+       32
+      ],
+      "role": "combobox",
+      "tag": "input",
+      "xpath": "/html/body/div[1]/main[1]/div[1]/div[1]/div[1]/div[4]/div[1]/div[1]/div[2]/div[1]/div[1]/div[1]/div[1]/div[1]/div[2]/div[1]/div[1]/div[1]/div[4]/div[1]/input[1]"
+     },
+     "state": "books.profit-loss"
+    }
+   ],
+   "evidenceHash": "fc8f820fab4628bcf2e68d4abf9bb8979f7dac9645fceb04c120c5acbeb232ef",
+   "facts": {
+    "announced": "combobox \"years\" [expanded=false, haspopup=listbox]",
+    "axeSummary": "the autocomplete attribute is incorrectly formatted",
+    "criterion": "1.3.5",
+    "criterionName": "Identify Input Purpose",
+    "element": "combobox \"years\"",
+    "rule": "autocomplete-valid",
+    "screen": "Balance Sheet"
+   },
+   "family": "role-state",
+   "guidance": "Low for optional ARIA or an invalid autocomplete token; high when aria-hidden hides the whole page.",
+   "issueId": null,
+   "key": "role-state:autocomplete-valid:9b8cd9b9153f",
+   "measured": false,
+   "primary": "books.balance-sheet",
+   "proposals": [],
+   "rule": "autocomplete-valid",
+   "screens": 4,
+   "severityDefault": "medium",
+   "source": "scanner",
+   "states": [
+    "books.balance-sheet",
+    "books.profit-loss"
+   ],
+   "summary": "autocomplete-valid: announced as combobox \"years\" [expanded=false, haspopup=listbox]. the autocomplete attribute is incorrectly formatted",
+   "title": "Invalid autocomplete value: combobox \"years\""
+  },
+  {
+   "attachments": [],
+   "attempt": 1,
+   "basis": "candidate",
+   "criteria": [
+    "2.4.3",
+    "1.3.2"
+   ],
+   "evidence": [
+    {
+     "evidence": {
+      "band": 30,
+      "overlay": "books.home.tabstops.png",
+      "previous": {
+       "ancestors": [
+        [
+         "_l1Wrapper_f938i_5"
+        ],
+        [],
+        [
+         "_section_184ve_22"
+        ],
+        [
+         "_mainSection_184ve_32"
+        ],
+        [
+         "_navContainer_184ve_12"
+        ],
+        [
+         "_sidebar_11y1x_4",
+         "_narrowSidebar_184ve_7"
+        ],
+        [
+         "_booksLayout_1pthq_31"
+        ],
+        [
+         "_layout_1pthq_16"
+        ]
+       ],
+       "classes": [
+        "_l1Link_f938i_28",
+        "_noStyleLink_njx8v_1"
+       ],
+       "data": {
+        "data-discover": "true",
+        "data-state-active": "false"
+       },
+       "heading": "",
+       "landmark": {
+        "name": "",
+        "role": "navigation"
+       },
+       "layer": "document",
+       "name": "Settings",
+       "rect": [
+        8,
+        634,
+        203,
+        30
+       ],
+       "role": "link",
+       "tag": "a",
+       "xpath": "/html/body/div[1]/main[1]/div[1]/div[1]/div[1]/div[4]/div[1]/nav[1]/div[2]/div[3]/div[2]/div[1]/div[1]/a[1]"
+      },
+      "rise": 524,
+      "stop": 20,
+      "stops": 103
+     },
+     "occurrence": {
+      "ancestors": [
+       [
+        "_periodRow_1qe7f_1"
+       ],
+       [
+        "_fadingIdentity_eo5wu_20"
+       ],
+       [
+        "_identity_eo5wu_3"
+       ],
+       [
+        "_identity_8kee9_39"
+       ],
+       [
+        "_leading_8kee9_20"
+       ],
+       [
+        "_topBar_8kee9_1"
+       ],
+       [
+        "_booksTopBar_1pthq_42"
+       ],
+       [
+        "_page_1pthq_37"
+       ]
+      ],
+      "classes": [
+       "_tooltipAnchor_18bac_4"
+      ],
+      "data": {
+       "data-focus-visible": "true"
+      },
+      "heading": "Mercury Demo",
+      "landmark": {
+       "name": "",
+       "role": "main"
+      },
+      "layer": "document",
+      "name": "Pending close",
+      "rect": [
+       393,
+       110,
+       10,
+       16
+      ],
+      "role": "generic",
+      "tag": "div",
+      "xpath": "/html/body/div[1]/main[1]/div[1]/div[1]/div[1]/div[4]/div[1]/div[1]/div[1]/div[1]/div[1]/div[1]/div[1]/div[1]/div[2]/div[1]"
+     },
+     "state": "books.home"
+    }
+   ],
+   "evidenceHash": "7918830698881a1e66f59e2c61485ae958656deffa06da23422b59352180a7ad",
+   "facts": {
+    "criterion": "2.4.3",
+    "criterionName": "Focus Order",
+    "element": "text \"Pending close\"",
+    "previous": "link \"Settings\"",
+    "screen": "Books home",
+    "stop": "20"
+   },
+   "family": "focus-order",
+   "guidance": "High if the order skips a required control.",
+   "issueId": null,
+   "key": "focus-order:backward-jump:19b8cf681aad",
+   "measured": false,
+   "primary": "books.home",
+   "proposals": [],
+   "rule": "backward-jump",
+   "screens": 1,
+   "severityDefault": "medium",
+   "source": "scanner",
+   "states": [
+    "books.home"
+   ],
+   "summary": "Tab stop 20 jumped backward on screen, from the link \"Settings\" to the text \"Pending close\".",
+   "title": "Tab order jumps backward at text \"Pending close\""
+  },
+  {
+   "attachments": [],
+   "attempt": 1,
+   "basis": "candidate",
+   "criteria": [
+    "2.4.3",
+    "1.3.2"
+   ],
+   "evidence": [
+    {
+     "evidence": {
+      "band": 58,
+      "overlay": "books.home.tabstops.png",
+      "previous": {
+       "ancestors": [
+        [
+         "_rows_j2jrx_85"
+        ],
+        [
+         "_section_j2jrx_3"
+        ],
+        [
+         "_hoverCharts_fz76o_17"
+        ],
+        [
+         "_hoverZone_fz76o_3"
+        ],
+        [
+         "_card_1ey0q_1"
+        ],
+        [
+         "_content_13hxk_25"
+        ],
+        [
+         "_page_13hxk_3"
+        ],
+        [
+         "_noAnimationPageContent_1pthq_100"
+        ]
+       ],
+       "classes": [
+        "_row_j2jrx_18",
+        "_rowEnter_j2jrx_109",
+        "_interactiveRow_j2jrx_26"
+       ],
+       "data": {},
+       "heading": "By ledger account",
+       "landmark": {
+        "name": "",
+        "role": "main"
+       },
+       "layer": "document",
+       "name": "Computers and Hardware −$379,284 −11%",
+       "rect": [
+        643,
+        699,
+        375,
+        58
+       ],
+       "role": "button",
+       "tag": "button",
+       "xpath": "/html/body/div[1]/main[1]/div[1]/div[1]/div[1]/div[4]/div[1]/div[1]/div[2]/div[1]/div[1]/div[3]/section[2]/div[3]/div[1]/div[3]/div[2]/button[18]"
+      },
+      "rise": 475,
+      "stop": 82,
+      "stops": 103
+     },
+     "occurrence": {
+      "ancestors": [
+       [
+        "_header_1ey0q_9"
+       ],
+       [
+        "_card_1ey0q_1"
+       ],
+       [
+        "_content_13hxk_25"
+       ],
+       [
+        "_page_13hxk_3"
+       ],
+       [
+        "_noAnimationPageContent_1pthq_100"
+       ],
+       [
+        "_pageContent_1pthq_192"
+       ],
+       [
+        "_page_1pthq_37"
+       ],
+       [
+        "_booksLayout_1pthq_31"
+       ]
+      ],
+      "classes": [
+       "_button_r6b2u_20",
+       "_small_r6b2u_72",
+       "_tertiary_r6b2u_153"
+      ],
+      "data": {},
+      "heading": "Revenue",
+      "landmark": {
+       "name": "",
+       "role": "main"
+      },
+      "layer": "document",
+      "name": "View revenue",
+      "rect": [
+       1384,
+       224,
+       32,
+       32
+      ],
+      "role": "button",
+      "tag": "button",
+      "xpath": "/html/body/div[1]/main[1]/div[1]/div[1]/div[1]/div[4]/div[1]/div[1]/div[2]/div[1]/div[1]/div[3]/section[3]/div[1]/button[1]"
+     },
+     "state": "books.home"
+    }
+   ],
+   "evidenceHash": "7f794b58ee3f690c60efc4fa77dcc9a22f4ddcfc5a34b53615d4a734bd0f5958",
+   "facts": {
+    "criterion": "2.4.3",
+    "criterionName": "Focus Order",
+    "element": "button \"View revenue\"",
+    "previous": "button \"Computers and Hardware <amount> −<n>%\"",
+    "screen": "Books home",
+    "stop": "82"
+   },
+   "family": "focus-order",
+   "guidance": "High if the order skips a required control.",
+   "issueId": null,
+   "key": "focus-order:backward-jump:2cb3ab0d67f3",
+   "measured": false,
+   "primary": "books.home",
+   "proposals": [],
+   "rule": "backward-jump",
+   "screens": 1,
+   "severityDefault": "medium",
+   "source": "scanner",
+   "states": [
+    "books.home"
+   ],
+   "summary": "Tab stop 82 jumped backward on screen, from the button \"Computers and Hardware <amount> −<n>%\" to the button \"View revenue\".",
+   "title": "Tab order jumps backward at button \"View revenue\""
+  },
+  {
+   "attachments": [],
+   "attempt": 1,
+   "basis": "candidate",
+   "criteria": [
+    "2.4.3",
+    "1.3.2"
+   ],
+   "evidence": [
+    {
+     "evidence": {
+      "band": 45,
+      "overlay": "books.home.tabstops.png",
+      "previous": {
+       "ancestors": [
+        [
+         "_rows_j2jrx_85"
+        ],
+        [
+         "_section_j2jrx_3"
+        ],
+        [
+         "_card_1ey0q_1"
+        ],
+        [
+         "_content_13hxk_25"
+        ],
+        [
+         "_page_13hxk_3"
+        ],
+        [
+         "_noAnimationPageContent_1pthq_100"
+        ],
+        [
+         "_pageContent_1pthq_192"
+        ],
+        [
+         "_page_1pthq_37"
+        ]
+       ],
+       "classes": [
+        "_row_j2jrx_18",
+        "_rowEnter_j2jrx_109",
+        "_rowWithDivider_j2jrx_90",
+        "_interactiveRow_j2jrx_26"
+       ],
+       "data": {},
+       "heading": "By ledger account",
+       "landmark": {
+        "name": "",
+        "role": "main"
+       },
+       "layer": "document",
+       "name": "Ops / Payroll −$891,804",
+       "rect": [
+        236,
+        855,
+        375,
+        45
+       ],
+       "role": "button",
+       "tag": "button",
+       "xpath": "/html/body/div[1]/main[1]/div[1]/div[1]/div[1]/div[4]/div[1]/div[1]/div[2]/div[1]/div[1]/div[3]/section[1]/div[4]/div[2]/button[9]"
+      },
+      "rise": 101,
+      "stop": 59,
+      "stops": 103
+     },
+     "occurrence": {
+      "ancestors": [
+       [
+        "_rows_j2jrx_85"
+       ],
+       [
+        "_section_j2jrx_3"
+       ],
+       [
+        "_card_1ey0q_1"
+       ],
+       [
+        "_content_13hxk_25"
+       ],
+       [
+        "_page_13hxk_3"
+       ],
+       [
+        "_noAnimationPageContent_1pthq_100"
+       ],
+       [
+        "_pageContent_1pthq_192"
+       ],
+       [
+        "_page_1pthq_37"
+       ]
+      ],
+      "classes": [
+       "_row_j2jrx_18",
+       "_rowEnter_j2jrx_109",
+       "_rowWithDivider_j2jrx_90",
+       "_interactiveRow_j2jrx_26"
+      ],
+      "data": {},
+      "heading": "By ledger account",
+      "landmark": {
+       "name": "",
+       "role": "main"
+      },
+      "layer": "document",
+      "name": "Venus Credit Card 2460 $370,807",
+      "rect": [
+       236,
+       754,
+       375,
+       45
+      ],
+      "role": "button",
+      "tag": "button",
+      "xpath": "/html/body/div[1]/main[1]/div[1]/div[1]/div[1]/div[4]/div[1]/div[1]/div[2]/div[1]/div[1]/div[3]/section[1]/div[4]/div[2]/button[10]"
+     },
+     "state": "books.home"
+    }
+   ],
+   "evidenceHash": "8a975c9cffec8ff631cf4303ac8480c8f99434a7a5e794f5ee8aeeeb6ced99e3",
+   "facts": {
+    "criterion": "2.4.3",
+    "criterionName": "Focus Order",
+    "element": "button \"Venus Credit Card <n> <amount>\"",
+    "previous": "button \"Ops / Payroll <amount>\"",
+    "screen": "Books home",
+    "stop": "59"
+   },
+   "family": "focus-order",
+   "guidance": "High if the order skips a required control.",
+   "issueId": null,
+   "key": "focus-order:backward-jump:71a3ac2daf2f",
+   "measured": false,
+   "primary": "books.home",
+   "proposals": [],
+   "rule": "backward-jump",
+   "screens": 1,
+   "severityDefault": "medium",
+   "source": "scanner",
+   "states": [
+    "books.home"
+   ],
+   "summary": "Tab stop 59 jumped backward on screen, from the button \"Ops / Payroll <amount>\" to the button \"Venus Credit Card <n> <amount>\".",
+   "title": "Tab order jumps backward at button \"Venus Credit Card <n> <amount>\""
+  }
+ ],
+ "primaries": [
+  "books.balance-sheet",
+  "books.home"
+ ],
+ "reach": {
+  "baseUrl": "https://demo.mercury.com",
+  "data": "data",
+  "map": "build/map.json",
+  "run": "2026-10-03-1525",
+  "workspace": "a11y"
+ },
+ "run": "2026-10-03-1525"
+}

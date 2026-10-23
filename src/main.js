@@ -2,11 +2,13 @@ import { CARD_W, CARD_H, LABEL_W, prepare } from "./layout.js";
 import { Renderer, buildScene, AREA_COLORS, FLAGS } from "./render.js";
 import { ImageStore } from "./images.js";
 import { createLightbox } from "./lightbox.js";
+import { zoomTool } from "./zoomtool.js";
 
 const $ = (s) => document.querySelector(s);
 const EXT_ICON = `<svg viewBox="0 0 16 16" width="11" height="11" aria-hidden="true"><path d="M6.5 3.5H3.5v9h9v-3M9.5 3.5h3v3M12.5 3.5 7 9" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" fill="none"/></svg>`;
 const DEMO_ORIGIN = "https://demo.mercury.com";
 const X_ICON = `<svg viewBox="0 0 16 16" width="14" height="14" aria-hidden="true"><path d="M4 4l8 8M12 4l-8 8" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" fill="none"/></svg>`;
+const LOCATE_ICON = `<svg viewBox="0 0 16 16" width="16" height="16" aria-hidden="true"><circle cx="8" cy="8" r="4.5" stroke="currentColor" stroke-width="1.6" fill="none"/><circle cx="8" cy="8" r="1.4" fill="currentColor"/><path d="M8 1.5v2M8 12.5v2M1.5 8h2M12.5 8h2" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" fill="none"/></svg>`;
 const FIT_ICON = `<svg viewBox="0 0 16 16" width="16" height="16" aria-hidden="true"><path d="M2.5 6V2.5H6M10 2.5h3.5V6M13.5 10v3.5H10M6 13.5H2.5V10" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" fill="none"/></svg>`;
 const lightbox = createLightbox({ closeIcon: X_ICON, fitIcon: FIT_ICON, extIcon: EXT_ICON.replaceAll('"11"', '"14"') });
 const esc = (s) => String(s ?? "").replace(/[&<>"]/g, (c) => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;" }[c]));
@@ -31,6 +33,9 @@ const M = { nodes, areaByKey, issuesByNode, journeyById };
 // ---------- state ----------
 let view = "journeys"; // set from the URL at boot
 let tab = "j", query = "", sevFilter = new Set(["high", "medium", "low"]);
+// Dev mode shows the design-system audit (Audit tab, issue badges, per-screen issues). Per-viewer, remembered locally.
+const DEV_KEY = "map.dev";
+let dev = false; try { dev = localStorage.getItem(DEV_KEY) === "1"; } catch {}
 const T = { x: 0, y: 0, k: 0.2 };
 let focus = null, current = null, hover = null, drawerLane = null;
 let scene, focusIdsCache = null, gSteps = new Map(), lastMove = 0;
@@ -109,9 +114,11 @@ function render() {
 }
 
 // ---------- transform ----------
+// Max zoom: at 8 a 360-unit card is 2880 CSS px wide, so one screenshot fills even a 5K display.
+const clampK = (k) => Math.min(8, Math.max(0.02, k));
 function zoomAt(f, cx, cy) {
   viewTouched = true;
-  const k = Math.min(2.5, Math.max(0.02, T.k * f));
+  const k = clampK(T.k * f);
   T.x = cx - (cx - T.x) * (k / T.k); T.y = cy - (cy - T.y) * (k / T.k); T.k = k; moved();
 }
 function fitRect(r, pad = 60, maxK = 1) {
@@ -131,6 +138,8 @@ function hit(clientX, clientY) {
 }
 
 let drag = null; const pointers = new Map();
+const Z_STEP = 2; // per Z-click, like the Figma and Photoshop zoom tools
+zoomTool.bindCursor(stage);
 canvas.addEventListener("pointerdown", (e) => {
   pointers.set(e.pointerId, { x: e.clientX, y: e.clientY });
   canvas.setPointerCapture(e.pointerId);
@@ -138,6 +147,7 @@ canvas.addEventListener("pointerdown", (e) => {
   if (pointers.size === 2) { const [p, q] = [...pointers.values()]; drag.pinch = { d: Math.hypot(p.x - q.x, p.y - q.y), k: T.k }; }
 });
 canvas.addEventListener("pointermove", (e) => {
+  zoomTool.syncAlt(e.altKey);
   if (!drag) { // hover
     const c = e.pointerType === "mouse" ? hit(e.clientX, e.clientY) : null;
     if (c !== hover) { hover = c; canvas.style.cursor = c ? "pointer" : ""; invalidate(); }
@@ -158,8 +168,9 @@ const end = (e) => {
   if (!drag) return;
   stage.classList.remove("panning");
   if (!drag.moved && pointers.size === 0 && e.type === "pointerup") {
-    const c = hit(e.clientX, e.clientY);
-    if (c) openNode(c.id, false, c.lane);
+    // Z+click zooms in, Z+Option+click zooms out, centred on the click. It never opens the screen underneath.
+    if (zoomTool.on) zoomAt(zoomTool.out ? 1 / Z_STEP : Z_STEP, e.clientX - SR.left, e.clientY - SR.top);
+    else { const c = hit(e.clientX, e.clientY); if (c) openNode(c.id, false, c.lane); }
   }
   if (pointers.size === 0) drag = null;
 };
@@ -179,14 +190,21 @@ canvas.addEventListener("wheel", (e) => {
 $("#zin").onclick = () => zoomAt(1.4, stage.clientWidth / 2, stage.clientHeight / 2);
 $("#zout").onclick = () => zoomAt(1 / 1.4, stage.clientWidth / 2, stage.clientHeight / 2);
 $("#zfit").onclick = () => fit();
+const MAC = /mac|iphone|ipad|ipod/i.test(navigator.userAgentData?.platform || navigator.platform);
+$("#q").setAttribute("aria-keyshortcuts", MAC ? "Meta+K" : "Control+K"); $("#q-kbd").textContent = MAC ? "⌘K" : "Ctrl K";
 addEventListener("keydown", (e) => {
-  if (lightbox.isOpen() || e.target.matches("input, textarea")) return;
+  if (lightbox.isOpen()) return; // the modal makes the sidebar inert
+  if ((MAC ? e.metaKey : e.ctrlKey) && !e.altKey && !e.shiftKey && e.key.toLowerCase() === "k") { e.preventDefault(); $("#q").focus(); $("#q").select(); return; }
+  if (e.target.matches("input:not([type=checkbox]), textarea")) return;
   if (e.metaKey || e.ctrlKey || e.altKey) return;
   if (e.key === "f" || e.key === "F") fit();
   if ((e.key === "c" || e.key === "C") && current) centerSelected();
   if (e.key === "Escape") { if (drawerOpen()) closeDrawer(); else clearFocus(); }
   if (e.key === "+" || e.key === "=") $("#zin").click();
   if (e.key === "-") $("#zout").click();
+  // Match the digit or its key, so AZERTY layouts (where the unshifted key types "&" or "é") work too.
+  if (e.key === "1" || (!e.shiftKey && e.code === "Digit1")) setView("journeys");
+  if (e.key === "2" || (!e.shiftKey && e.code === "Digit2")) setView("graph");
   if (drawerOpen() && (e.key === "ArrowRight" || e.key === "ArrowLeft")) stepJourney(e.key === "ArrowRight" ? 1 : -1);
 });
 
@@ -250,6 +268,8 @@ function applyFocus() {
   if (focus) {
     b.hidden = false;
     $("#banner-t").textContent = focus.type === "journey" ? `Journey: ${j?.name}` : focus.type === "issue" ? `Issue: ${issueById.get(focus.id)?.title}` : focus.type === "pattern" ? `Pattern: ${patternById.get(focus.id)?.title} · ${ids.size} screens` : `${ids.size} screens match “${query}”`;
+    const iss = focus.type === "issue" && issueById.get(focus.id);
+    $("#banner-link").innerHTML = iss ? ticketLink(iss.id, "banner-a") : "";
   } else b.hidden = true;
   renderList();
   invalidate();
@@ -279,13 +299,13 @@ function openNode(id, frameIt, lane, highlightIssue) {
   const iss = issuesByNode.get(id) || [], js = MAP.journeys.filter((j) => j.steps.includes(id));
   const j = drawerLane && MAP.journeys.find((x) => x.id === drawerLane && x.steps.includes(id));
   const d = $("#drawer");
-  d.innerHTML = `<header><div><h3>${esc(n.title)}</h3></div><div class="x"><button class="icon-btn" id="d-frame" aria-label="Center on canvas" title="Center on canvas (C)">◎</button><button class="icon-btn" id="d-close" aria-label="Close panel" title="Close (Esc)">${X_ICON}</button></div>
+  d.innerHTML = `<header><div><h3>${esc(n.title)}</h3></div><div class="x"><button class="icon-btn" id="d-frame" aria-label="Center on canvas" title="Center on canvas (C)">${LOCATE_ICON}</button><button class="icon-btn" id="d-close" aria-label="Close panel" title="Close (Esc)">${X_ICON}</button></div>
     <div class="u">${esc(a.title)} · ${esc(n.kind || "page")}${n.url ? ` · <a class="path" href="${esc(DEMO_ORIGIN + n.url)}" target="_blank" rel="noopener noreferrer" title="Open on demo.mercury.com (new tab)">${esc(n.url)}${EXT_ICON}<span class="sr">(opens in a new tab)</span></a>` : ""}</div></header>
     <div class="body">
       ${j ? `<div class="jnav"><button id="j-prev" ${j.steps.indexOf(id) === 0 ? "disabled" : ""}>← Prev</button><span>Step ${j.steps.indexOf(id) + 1} of ${j.steps.length} · ${esc(j.name)}</span><button id="j-next" ${j.steps.indexOf(id) === j.steps.length - 1 ? "disabled" : ""}>Next →</button></div>` : ""}
       <a class="full" href="${esc(n.full)}" target="_blank" rel="noopener" title="View full screen" style="aspect-ratio:${n.w}/${n.h}"><img alt="${esc(n.title)} screenshot" decoding="async" src="${esc(n.thumb)}" data-full="${esc(n.full)}" width="${n.w}" height="${n.h}"></a>
       ${n.note ? `<p class="note">${esc(n.note)}</p>` : ""}
-      ${iss.length ? `<div><h4>Design issues on this screen</h4><div class="links">${iss.map((i) => issueHTML(i, i.id === highlightIssue)).join("")}</div></div>` : ""}
+      ${iss.length ? `<div class="d-issues"${dev ? "" : " hidden"}><h4>Design issues on this screen</h4><div class="links">${iss.map((i) => issueHTML(i, i.id === highlightIssue)).join("")}</div></div>` : ""}
       ${outs.length ? `<div><h4>Leads to</h4><div class="links">${outs.map((e) => linkHTML(e.to, e.label)).join("")}</div></div>` : ""}
       ${ins.length ? `<div><h4>Reached from</h4><div class="links">${ins.map((e) => linkHTML(e.from, e.label)).join("")}</div></div>` : ""}
       ${js.length ? `<div><h4>Part of journeys</h4><div class="links">${js.map((j) => `<button data-journey="${esc(j.id)}"><span>${esc(j.name)}</span><small>step ${j.steps.indexOf(id) + 1} of ${j.steps.length}</small></button>`).join("")}</div></div>` : ""}
@@ -313,8 +333,10 @@ function openNode(id, frameIt, lane, highlightIssue) {
   syncUrl();
 }
 function linkHTML(id, label) { const n = nodes.get(id); if (!n) return ""; return `<button data-node="${esc(id)}"><span>${esc(n.title)}</span><small>${esc(label || "")} · ${esc(areaOf.get(id).title)}</small></button>`; }
+const ticketHref = (id) => "agent/tickets/" + encodeURIComponent(id) + ".md";
+const ticketLink = (id, cls) => `<a class="${cls}" href="${esc(ticketHref(id))}" target="_blank" rel="noopener" title="Open the Markdown ticket for coding agents (new tab)">Agent instructions${EXT_ICON}<span class="sr">(opens in a new tab)</span></a>`;
 function issueHTML(i, hi) {
-  return `<div class="issue" ${hi ? 'style="border-color:var(--accent)"' : ""}><div class="meta"><span class="sev ${esc(i.severity)}">${esc(i.severity)}</span><span>${esc(i.category)}</span>${i.nodeIds.length > 1 ? `<button class="chip" data-issue="${esc(i.id)}">Show all ${i.nodeIds.length} screens</button>` : ""}</div><b>${esc(i.title)}</b><p>${esc(i.detail)}</p>${i.evidence ? `<code>${esc(i.evidence)}</code>` : ""}</div>`;
+  return `<div class="issue" ${hi ? 'style="border-color:var(--accent)"' : ""}><div class="meta"><span class="sev ${esc(i.severity)}">${esc(i.severity)}</span><span>${esc(i.category)}</span>${i.nodeIds.length > 1 ? `<button class="chip" data-issue="${esc(i.id)}">Show all ${i.nodeIds.length} screens</button>` : ""}${ticketLink(i.id, "ticket")}</div><b>${esc(i.title)}</b><p>${esc(i.detail)}</p>${i.evidence ? `<code>${esc(i.evidence)}</code>` : ""}</div>`;
 }
 function stepJourney(dir) {
   const j = drawerLane && journeyById.get(drawerLane); if (!j) return;
@@ -370,8 +392,19 @@ $("#list").addEventListener("click", (e) => {
   else if (b.dataset.p) focusPattern(b.dataset.p);
   else if (b.dataset.sev) { sevFilter.has(b.dataset.sev) ? sevFilter.delete(b.dataset.sev) : sevFilter.add(b.dataset.sev); renderList(); }
 });
-function setTab(t) { tab = t; ["j", "s", "i"].forEach((x) => $("#t-" + x).setAttribute("aria-selected", x === t)); renderList(); }
+function setTab(t, quiet) { tab = t; ["j", "s", "i"].forEach((x) => $("#t-" + x).setAttribute("aria-selected", x === t)); if (!quiet) renderList(); }
 $("#t-j").onclick = () => setTab("j"); $("#t-s").onclick = () => setTab("s"); $("#t-i").onclick = () => setTab("i");
+// Updates state only; callers re-render (applyFocus) and sync the URL.
+function setDev(on, save = true) {
+  dev = on; $("#dev").checked = on;
+  if (save) try { localStorage.setItem(DEV_KEY, on ? "1" : "0"); } catch {}
+  $("#t-i").hidden = $("#agent-link").hidden = !on;
+  const td = $(".test-data"); if (td) td.hidden = !on; // the test-data strip only explains findings Dev mode shows
+  $("#q").placeholder = on ? "Search screens, URLs, issues" : "Search screens and URLs";
+  R.setIssues(on); $("#drawer .d-issues")?.toggleAttribute("hidden", !on);
+  if (!on) { if (tab === "i") setTab("j", true); if (focus?.type === "issue" || focus?.type === "pattern") focus = null; document.querySelectorAll("#drawer .d-issues .issue[style]").forEach((el) => el.removeAttribute("style")); }
+}
+$("#dev").onchange = (e) => { setDev(e.target.checked); applyFocus(); syncUrl(); };
 function searchFocus() { return { type: "search", ids: new Set([...nodes.values()].filter((n) => matches(n.title, n.url, n.note)).map((n) => n.id)) }; }
 function runSearch() {
   query = $("#q").value.trim().toLowerCase();
@@ -381,7 +414,7 @@ function runSearch() {
   syncUrl("replace"); // typing refines one history entry instead of adding one per keystroke
 }
 const qClear = $("#q-clear");
-function syncClear() { qClear.hidden = !$("#q").value; }
+function syncClear() { $("#q-kbd").hidden = !(qClear.hidden = !$("#q").value); }
 let qt; $("#q").addEventListener("input", () => { syncClear(); clearTimeout(qt); qt = setTimeout(runSearch, 150); });
 $("#q").addEventListener("keydown", (e) => { if (e.key === "Escape" && e.target.value) { e.stopPropagation(); clearSearch(); } });
 function clearSearch() { $("#q").value = ""; syncClear(); clearTimeout(qt); runSearch(); $("#q").focus(); }
@@ -401,6 +434,8 @@ $("#v-journeys").onclick = () => setView("journeys"); $("#v-graph").onclick = ()
 
 // ---------- URL state ----------
 // ?view=graph  &q=search  &journey= | &issue= | &pattern=  &screen=<node>&lane=<journey row>  &at=x,y,zoom
+// Opening an issue= or pattern= link turns dev mode on (and remembers it), so shared audit links keep working;
+// Back/Forward never flip it, and while it is off those parameters are ignored and dropped.
 // Discrete navigation (select, close, focus, switch view) pushes a history entry so Back/Forward work;
 // typing and panning replace the current one. Old #<nodeId> links still open that screen.
 let urlPending = null, urlQueued = false, urlSuppress = false;
@@ -429,8 +464,9 @@ function flushUrl() {
   if (url === location.pathname + location.search + location.hash) return;
   try { history[mode === "push" ? "pushState" : "replaceState"](null, "", url); } catch {}
 }
-function applyUrl() {
+function applyUrl(boot) {
   const p = new URLSearchParams(location.search);
+  let dropped = false;
   const legacy = decodeURIComponent(location.hash.slice(1));
   urlSuppress = true;
   try {
@@ -439,9 +475,12 @@ function applyUrl() {
     $("#q").value = p.get("q") || ""; syncClear();
     query = $("#q").value.trim().toLowerCase();
     const has = (k, m) => p.get(k) && m.has(p.get(k));
+    const audit = has("issue", issueById) || has("pattern", patternById);
+    if (audit && !dev && boot) setDev(true); // only a freshly opened link; Back/Forward keep the viewer's choice
+    if (audit && !dev) dropped = true;
     focus = has("journey", journeyById) ? { type: "journey", id: p.get("journey") }
-      : has("issue", issueById) ? { type: "issue", id: p.get("issue") }
-      : has("pattern", patternById) ? { type: "pattern", id: p.get("pattern") }
+      : dev && has("issue", issueById) ? { type: "issue", id: p.get("issue") }
+      : dev && has("pattern", patternById) ? { type: "pattern", id: p.get("pattern") }
       : query ? searchFocus() : null;
     applyFocus();
     const at = (p.get("at") || "").split(",").map(Number);
@@ -451,7 +490,7 @@ function applyUrl() {
     else if (drawerOpen()) closeDrawer();
     if (hasAt) {
       viewTouched = true;
-      T.k = Math.min(2.5, Math.max(0.02, at[2])); T.x = R.W / 2 - at[0] * T.k; T.y = R.H / 2 - at[1] * T.k; moved();
+      T.k = clampK(at[2]); T.x = R.W / 2 - at[0] * T.k; T.y = R.H / 2 - at[1] * T.k; moved();
     } else {
       viewTouched = false;
       if (current) centerSelected();
@@ -460,9 +499,9 @@ function applyUrl() {
       else fit();
     }
   } finally { urlSuppress = false; }
-  if (legacy) syncUrl("replace"); // rewrite old #node links into the canonical form
+  if (legacy || dropped) syncUrl("replace"); // rewrite old #node links, and drop audit params while Dev mode is off
 }
-addEventListener("popstate", applyUrl);
+addEventListener("popstate", () => applyUrl(false));
 
 // Test hook for the benchmark: screen rect of the first card showing a node.
 window.__map = {
@@ -487,11 +526,10 @@ window.__map = {
 };
 
 // ---------- boot ----------
-const s = MAP.stats;
-$("#stats").innerHTML = [["screens", s.screens], ["journeys", MAP.journeys.length], ["links", MAP.edges.length], ["issues", s.issues]].map(([l, v]) => `<div><b>${v}</b><span>${l}</span></div>`).join("");
 $("#c-j").textContent = MAP.journeys.length; $("#c-s").textContent = nodes.size; $("#c-i").textContent = MAP.issues.length;
 R.setTheme(getComputedStyle(document.documentElement)); themeColors();
-resize(); applyUrl();
+setDev(dev, false);
+resize(); applyUrl(true);
 zlabel.textContent = Math.round(T.k * 100) + "%";
 // Canvas text never triggers a webfont load by itself: request the faces explicitly, then
 // re-measure and repaint (setTheme clears the text caches and invalidates the cached layers).

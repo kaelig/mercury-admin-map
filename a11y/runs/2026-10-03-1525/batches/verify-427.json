@@ -1,0 +1,115 @@
+{
+ "area": "billpay",
+ "batch": "verify-427",
+ "findings": [
+  {
+   "attachments": [],
+   "attempt": 1,
+   "basis": "candidate",
+   "criteria": [
+    "3.3.2"
+   ],
+   "evidence": [
+    {
+     "evidence": {
+      "description": "",
+      "name": "0.00",
+      "role": "textbox",
+      "states": {
+       "invalid": true
+      },
+      "template": "textbox \"<amount>\" [invalid=true]"
+     },
+     "occurrence": {
+      "ancestors": [
+       [
+        "_inputBox_q7hf7_93",
+        "_error_q7hf7_41"
+       ],
+       [
+        "_inputBoxWrapper_q7hf7_93"
+       ],
+       [
+        "_textInputWrapper_q7hf7_24"
+       ],
+       [
+        "_provideDSTextInput_q7hf7_6"
+       ],
+       [
+        "_row_1wsk7_22",
+        "_hideQuantity_1wsk7_29"
+       ],
+       [],
+       [
+        "ReactVirtualized__Grid__innerScrollContainer"
+       ],
+       [
+        "ReactVirtualized__Grid",
+        "ReactVirtualized__List"
+       ]
+      ],
+      "classes": [
+       "_input_q7hf7_93",
+       "_rightAlignedInput_1wsk7_181"
+      ],
+      "data": {},
+      "heading": "Categorization",
+      "landmark": {
+       "name": "",
+       "role": "form"
+      },
+      "layer": "document",
+      "name": "0.00",
+      "rect": [
+       432,
+       520,
+       195,
+       24
+      ],
+      "role": "textbox",
+      "tag": "input",
+      "xpath": "/html/body/div[1]/main[1]/div[1]/div[2]/div[2]/div[1]/div[2]/section[2]/div[1]/div[1]/form[1]/div[1]/div[2]/div[2]/div[1]/div[1]/div[1]/div[1]/div[1]/div[2]/div[2]/div[2]/div[1]/div[1]/div[1]/input[1]"
+     },
+     "state": "billpay.pay-line-items-error"
+    }
+   ],
+   "evidenceHash": "784ec77ac9a0023750e2362fe6ce3f2263dcae4cd886bed3116d500960143a04",
+   "facts": {
+    "announced": "textbox \"<amount>\" [invalid=true]",
+    "axeSummary": "",
+    "criterion": "3.3.2",
+    "criterionName": "Labels or Instructions",
+    "element": "textbox \"<amount>\"",
+    "rule": "announced-as",
+    "screen": "Pay bill: incomplete line item"
+   },
+   "family": "name",
+   "guidance": "High for an unnamed form control or the sole primary action.",
+   "issueId": null,
+   "key": "name:announced-as:2efed9047f83",
+   "measured": false,
+   "primary": "billpay.pay-line-items-error",
+   "proposals": [],
+   "rule": "announced-as",
+   "screens": 1,
+   "severityDefault": "medium",
+   "source": "scanner",
+   "states": [
+    "billpay.pay-line-items-error"
+   ],
+   "summary": "announced-as: announced as textbox \"<amount>\" [invalid=true].",
+   "title": "Missing or unclear name: textbox \"<amount>\""
+  }
+ ],
+ "primaries": [
+  "billpay.pay-line-items-error"
+ ],
+ "reach": {
+  "baseUrl": "https://demo.mercury.com",
+  "data": "data",
+  "map": "build/map.json",
+  "run": "2026-10-03-1525",
+  "workspace": "a11y"
+ },
+ "run": "2026-10-03-1525"
+}

@@ -1,0 +1,184 @@
+{
+ "batch": "record-017",
+ "reach": {
+  "baseUrl": "https://demo.mercury.com",
+  "data": "data",
+  "map": "build/map.json",
+  "run": "2026-10-02-1349",
+  "workspace": "a11y"
+ },
+ "run": "2026-10-02-1349",
+ "states": [
+  {
+   "area": "home",
+   "draft": "cannot parse \"Customize > Hide Dispute Status\"",
+   "image": "screens/home/14-balance-table.png",
+   "kind": "page",
+   "labels": [
+    "Click Customize",
+    "Click 'Show Dispute Status'",
+    "Customize > Hide Dispute Status, then click Balance table toggle"
+   ],
+   "mutates": false,
+   "note": "Balance widget in table mode: Total current, Total available, Pending transfers, Pending deposits; toast 'Dispute Status was hidden from home' with Undo.",
+   "parent": "home.index-disputes",
+   "state": "home.balance-table",
+   "title": "Mercury balance: table view"
+  },
+  {
+   "area": "home",
+   "draft": "nothing on home.index matches {\"click\":{\"name\":\"Bill Pay widget kebab\"}}",
+   "image": "screens/home/23-bill-pay-kebab.png",
+   "kind": "menu",
+   "labels": [
+    "Click Bill Pay widget kebab"
+   ],
+   "mutates": false,
+   "note": "Bill Pay widget kebab: Settings, Hide from Home.",
+   "parent": "home.index",
+   "state": "home.bill-pay-kebab",
+   "title": "Bill Pay widget menu"
+  },
+  {
+   "area": "home",
+   "draft": "nothing on home.index matches {\"click\":{\"name\":\"'Learn about bookmarks' icon\"}}",
+   "image": "screens/home/35-bookmarks-popover.png",
+   "kind": "popover",
+   "labels": [
+    "Click 'Learn about bookmarks' icon"
+   ],
+   "mutates": false,
+   "note": "Bookmarks info icon opens an education popover with an illustration of the 'Add bookmark' icon next to a page title.",
+   "parent": "home.index",
+   "state": "home.bookmarks-popover",
+   "title": "Learn about bookmarks popover"
+  },
+  {
+   "area": "home",
+   "draft": "cannot parse \"Enter 500 and submit\"",
+   "image": "screens/home/81-command-question-2.png",
+   "kind": "form-state",
+   "labels": [
+    "Click 'Issue new card'",
+    "Enter 500 and submit"
+   ],
+   "mutates": true,
+   "note": "Question 2 of 3, 'How often should that limit reset?', with numbered Daily / Weekly / Monthly / Yearly options and a '/' free-text option.",
+   "parent": "home.command-issue-card",
+   "state": "home.command-question-2",
+   "title": "Command \u2014 limit reset question"
+  },
+  {
+   "area": "home",
+   "draft": "nothing on home.index matches {\"click\":{\"name\":\"Credit Card widget kebab\"}}",
+   "image": "screens/home/22-credit-card-kebab.png",
+   "kind": "menu",
+   "labels": [
+    "Click Credit Card widget kebab"
+   ],
+   "mutates": false,
+   "note": "Credit Card widget kebab: Autopay settings, Statements, Hide from Home.",
+   "parent": "home.index",
+   "state": "home.credit-card-kebab",
+   "title": "Credit Card widget menu"
+  },
+  {
+   "area": "home",
+   "draft": "nothing on home.index matches {\"click\":{\"name\":\"eye icon\"}}",
+   "image": "screens/home/31-private-mode-on.png",
+   "kind": "page",
+   "labels": [
+    "Click eye icon (Toggle Private Mode)"
+   ],
+   "mutates": false,
+   "note": "Eye toggle masks every dollar amount with dots ('$\u2022\u2022\u2022\u2022\u2022\u2022\u2022\u2022\u2022', '$\u2022\u2022M'); tooltip flips to 'Show dollar amounts'.",
+   "parent": "home.index",
+   "state": "home.private-mode-on",
+   "title": "Private Mode on"
+  },
+  {
+   "area": "home",
+   "draft": "cannot parse \"Hover settings gear\"",
+   "image": "screens/home/56-settings-gear-tooltip.png",
+   "kind": "popover",
+   "labels": [
+    "Hover settings gear"
+   ],
+   "mutates": false,
+   "note": "Hovering the gear icon shows a 'Settings' tooltip; clicking it navigates to Settings.",
+   "parent": "home.index",
+   "state": "home.settings-gear-tooltip",
+   "title": "Settings gear tooltip"
+  },
+  {
+   "area": "home",
+   "draft": "nothing on home.tasks matches {\"click\":{\"name\":\"'Review category\u2026' task\"}}",
+   "image": "screens/home/68-task-category-review.png",
+   "kind": "drawer",
+   "labels": [
+    "Click 'Review category\u2026' task"
+   ],
+   "mutates": false,
+   "note": "'Review category for your $300.03 Uber Eats transaction' opens a $300.03 Mercury ACH Payment to Domestic Ads, categorized Legal Fees.",
+   "parent": "home.tasks",
+   "state": "home.task-category-review",
+   "title": "Task \u2014 category review"
+  },
+  {
+   "area": "home",
+   "draft": "not drafted: its parent had no accepted recipe when the drafter ran; the conductor rejected the previous recipe: extra layer: an invite detail panel (Bruce Collins) is open over the Team list; the capture shows the list alone",
+   "image": "screens/home/46-task-invite-confirmed.png",
+   "kind": "confirmation",
+   "labels": [
+    "Click Confirm changes"
+   ],
+   "mutates": true,
+   "note": "Confirm changes returns to Settings > Team, listing members with role badges.",
+   "parent": "home.task-invite-review",
+   "state": "home.task-invite-confirmed",
+   "title": "Invite approved, Team list"
+  },
+  {
+   "area": "home",
+   "draft": "nothing on home.tasks matches {\"click\":{\"name\":\"receipt policy exemption task\"}}",
+   "image": "screens/home/67-task-receipt-exemption.png",
+   "kind": "drawer",
+   "labels": [
+    "Click receipt policy exemption task"
+   ],
+   "mutates": false,
+   "note": "Receipt exemption task opens the Monarch Books drawer with the quoted reason and Reject / Approve exception buttons, plus a 'Receipt required' warning.",
+   "parent": "home.tasks",
+   "state": "home.task-receipt-exemption",
+   "title": "Task \u2014 receipt policy exemption"
+  },
+  {
+   "area": "home",
+   "draft": "nothing on home.tasks matches {\"click\":{\"name\":\"recurring payment approval task\"}}",
+   "image": "screens/home/69-task-recurring-payment.png",
+   "kind": "page",
+   "labels": [
+    "Click recurring payment approval task"
+   ],
+   "mutates": false,
+   "note": "Full-screen review of a $5,000.00 monthly payment to Jason Green with schedule (Oct 5, Nov 2, Dec 7), receipt PDF preview and Decline / Approve payments.",
+   "parent": "home.tasks",
+   "state": "home.task-recurring-payment",
+   "title": "Task \u2014 recurring payment approval"
+  },
+  {
+   "area": "home",
+   "draft": "nothing on home.index matches {\"click\":{\"name\":\"bell\"}}",
+   "image": "screens/home/32-updates-popover.png",
+   "kind": "popover",
+   "labels": [
+    "Click bell (updates)"
+   ],
+   "mutates": false,
+   "note": "Bell opens Updates with a mark-all-read check and a bare 'No updates' empty state.",
+   "parent": "home.index",
+   "state": "home.updates-popover",
+   "title": "Updates popover"
+  }
+ ]
+}

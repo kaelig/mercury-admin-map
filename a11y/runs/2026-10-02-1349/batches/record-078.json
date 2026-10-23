@@ -1,0 +1,46 @@
+{
+ "batch": "record-078",
+ "reach": {
+  "baseUrl": "https://demo.mercury.com",
+  "data": "data",
+  "map": "build/map.json",
+  "run": "2026-10-02-1349",
+  "workspace": "a11y"
+ },
+ "run": "2026-10-02-1349",
+ "states": [
+  {
+   "area": "invoicing",
+   "draft": "not drafted: its parent had no accepted recipe when the drafter ran",
+   "image": "screens/invoicing/67-catalog-item-deleted.png",
+   "kind": "toast",
+   "labels": [
+    "Fill name, price and description",
+    "Click Create item",
+    "Click Delete",
+    "Click Delete item"
+   ],
+   "mutates": true,
+   "note": "Catalog list without the item and a 'Product deleted' toast.",
+   "parent": "invoicing.delete-catalog-item-modal",
+   "state": "invoicing.catalog-item-deleted",
+   "title": "Catalog item deleted"
+  },
+  {
+   "area": "invoicing",
+   "draft": "not drafted: its parent had no accepted recipe when the drafter ran; the conductor rejected the previous recipe: different screen: replay stays on Recurring series set up with an empty unit price ('Please complete this field'), Next disabled and '1.00' typed into Invoice prefix; it never reaches the Frequency step",
+   "image": "screens/invoicing/46-create-series-schedule.png",
+   "kind": "page",
+   "labels": [
+    "Click Create series",
+    "Pick a customer and click Next",
+    "Add a line item and click Next"
+   ],
+   "mutates": true,
+   "note": "Sentence-style frequency step: send first invoice on a date, series ends 'when I cancel', sent 'monthly on the 24th', terms 'due on receipt'.",
+   "parent": "invoicing.create-series-setup",
+   "state": "invoicing.create-series-frequency",
+   "title": "Series frequency"
+  }
+ ]
+}

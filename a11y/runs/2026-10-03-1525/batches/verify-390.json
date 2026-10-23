@@ -1,0 +1,203 @@
+{
+ "area": "transactions",
+ "batch": "verify-390",
+ "findings": [
+  {
+   "attachments": [],
+   "attempt": 1,
+   "basis": "candidate",
+   "criteria": [
+    "2.1.1"
+   ],
+   "evidence": [
+    {
+     "evidence": {
+      "end": "body",
+      "focusable": false,
+      "source": "pointer",
+      "stops": 92
+     },
+     "occurrence": {
+      "ancestors": [
+       [],
+       [],
+       [
+        "_chartSvg_p32nu_1"
+       ],
+       [
+        "_fadeIn_p32nu_7",
+        "_chartBody_1enfw_30"
+       ],
+       [
+        "_cartesianFrame_1enfw_4"
+       ],
+       [
+        "_insightsGraphWrapper_snsic_35"
+       ],
+       [
+        "_recapAndInsightsGraphContainer_snsic_9"
+       ],
+       [
+        "_overviewContainer_snsic_3"
+       ]
+      ],
+      "classes": [
+       "_stackedBar_1g9m2_3"
+      ],
+      "data": {},
+      "heading": "Insights",
+      "landmark": {
+       "name": "",
+       "role": "main"
+      },
+      "layer": "document",
+      "name": "",
+      "rect": [
+       1036,
+       624,
+       49,
+       0
+      ],
+      "role": "",
+      "tag": "g",
+      "xpath": "/html/body/div[1]/main[1]/div[1]/div[1]/div[4]/div[1]/div[2]/div[3]/div[1]/div[1]/div[3]/div[1]/div[2]/svg[1]/g[1]/g[3]/g[2]"
+     },
+     "state": "transactions.insights-stacked-bar"
+    }
+   ],
+   "evidenceHash": "23491297a40bcb4af264b7b5343b13cd5bfcf71dd9dae437efd3f5409187f017",
+   "facts": {
+    "axeSummary": "",
+    "criterion": "2.1.1",
+    "criterionName": "Keyboard",
+    "element": "text in \"Insights\"",
+    "rule": "not-reached",
+    "screen": "Stacked bar mode",
+    "stops": "92"
+   },
+   "family": "keyboard",
+   "guidance": "High if a task cannot be completed without a mouse.",
+   "issueId": null,
+   "key": "keyboard:not-reached:608e21f02c6a",
+   "measured": false,
+   "primary": "transactions.insights-stacked-bar",
+   "proposals": [],
+   "rule": "not-reached",
+   "screens": 1,
+   "severityDefault": "medium",
+   "source": "scanner",
+   "states": [
+    "transactions.insights-stacked-bar"
+   ],
+   "summary": "The Tab walk visited 92 stops and never reached the text in \"Insights\", which responds to a click.",
+   "title": "Not reachable by keyboard: text in \"Insights\""
+  },
+  {
+   "attachments": [],
+   "attempt": 1,
+   "basis": "candidate",
+   "criteria": [
+    "2.1.1"
+   ],
+   "evidence": [
+    {
+     "evidence": {
+      "end": "body",
+      "focusable": true,
+      "source": "ax",
+      "stops": 92
+     },
+     "occurrence": {
+      "ancestors": [
+       [
+        "_buttonWithDivider_1xt6d_80"
+       ],
+       [
+        "_container_1xt6d_3",
+        "_small_1xt6d_4",
+        "_segmentWrapper_1m7e5_1"
+       ],
+       [
+        "_insightsIntervalSelectorWrapper_snsic_70"
+       ],
+       [
+        "_headlinesWrapper_snsic_60"
+       ],
+       [
+        "_recapAndInsightsGraphContainer_snsic_9"
+       ],
+       [
+        "_overviewContainer_snsic_3"
+       ],
+       [
+        "_tabContent_almxf_77"
+       ],
+       [
+        "_insightsPageDashboardWrapper_almxf_4"
+       ]
+      ],
+      "classes": [
+       "_segment_1xt6d_7",
+       "_selected_1xt6d_60"
+      ],
+      "data": {},
+      "heading": "Insights",
+      "landmark": {
+       "name": "",
+       "role": "main"
+      },
+      "layer": "document",
+      "name": "Show stacked bar chart",
+      "rect": [
+       1338,
+       355,
+       39,
+       32
+      ],
+      "role": "button",
+      "tag": "button",
+      "xpath": "/html/body/div[1]/main[1]/div[1]/div[1]/div[4]/div[1]/div[2]/div[3]/div[1]/div[1]/div[1]/div[1]/div[3]/div[3]/button[1]"
+     },
+     "state": "transactions.insights-stacked-bar"
+    }
+   ],
+   "evidenceHash": "c9abec3bd196fd0f91619ef0b97226dcb8039ba3740c0be1b205ef5ce4e515fd",
+   "facts": {
+    "axeSummary": "",
+    "criterion": "2.1.1",
+    "criterionName": "Keyboard",
+    "element": "button \"Show stacked bar chart\"",
+    "rule": "not-reached",
+    "screen": "Stacked bar mode",
+    "stops": "92"
+   },
+   "family": "keyboard",
+   "guidance": "High if a task cannot be completed without a mouse.",
+   "issueId": null,
+   "key": "keyboard:not-reached:c2f13a4f6e02",
+   "measured": false,
+   "primary": "transactions.insights-stacked-bar",
+   "proposals": [],
+   "rule": "not-reached",
+   "screens": 1,
+   "severityDefault": "medium",
+   "source": "scanner",
+   "states": [
+    "transactions.insights-stacked-bar"
+   ],
+   "summary": "The Tab walk visited 92 stops and never reached the button \"Show stacked bar chart\", which responds to a click.",
+   "title": "Not reachable by keyboard: button \"Show stacked bar chart\""
+  }
+ ],
+ "primaries": [
+  "transactions.insights-stacked-bar"
+ ],
+ "reach": {
+  "baseUrl": "https://demo.mercury.com",
+  "data": "data",
+  "map": "build/map.json",
+  "run": "2026-10-03-1525",
+  "workspace": "a11y"
+ },
+ "run": "2026-10-03-1525"
+}

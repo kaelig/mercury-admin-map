@@ -1,0 +1,154 @@
+{
+ "batch": "record-063",
+ "reach": {
+  "baseUrl": "https://demo.mercury.com",
+  "data": "data",
+  "map": "build/map.json",
+  "run": "2026-10-02-1349",
+  "workspace": "a11y"
+ },
+ "run": "2026-10-02-1349",
+ "states": [
+  {
+   "area": "billpay",
+   "draft": "not drafted: its parent had no accepted recipe when the drafter ran",
+   "image": "screens/billpay/86-bulk-approval-review.png",
+   "kind": "page",
+   "labels": [
+    "Check a request",
+    "Click Review Request",
+    "Wait for review to load"
+   ],
+   "mutates": false,
+   "note": "Review opened from the bulk bar: 'APPROVAL 1 OF 1' eyebrow, payment rule and schedule, with Decline, Approve and Skip.",
+   "parent": "billpay.approvals-bulk-loading",
+   "state": "billpay.bulk-approval-review",
+   "title": "Bulk approval review"
+  },
+  {
+   "area": "billpay",
+   "draft": "not drafted: its parent had no accepted recipe when the drafter ran",
+   "image": "screens/billpay/88-bulk-review-skipped.png",
+   "kind": "confirmation",
+   "labels": [
+    "Check a request",
+    "Click Review Request",
+    "Wait for review to load",
+    "Click Skip"
+   ],
+   "mutates": false,
+   "note": "Skipping the only request ends on 'You've reviewed 0 payments' with a $0.00 card and a primary 'Back to needs approval' button.",
+   "parent": "billpay.bulk-approval-review",
+   "state": "billpay.bulk-review-skipped",
+   "title": "Bulk review done (skipped)"
+  },
+  {
+   "area": "billpay",
+   "draft": "not drafted: its parent had no accepted recipe when the drafter ran; a previous recorder failed: structure-missing: a menu needs an open layer; the replay found none (click, click+wait, click+ArrowDown, Tab+double click all tried; the combobox expands but shows no Recently paid list)",
+   "image": "screens/billpay/89-recipient-search-menu.png",
+   "kind": "menu",
+   "labels": [
+    "Click inbox bill row",
+    "Click Review",
+    "Focus Search for another recipient"
+   ],
+   "mutates": false,
+   "note": "'Search for another recipient' opens a Recently paid list (Contractor, Domestic Ads, Nutritionist, Lighthouse Properties).",
+   "parent": "billpay.pay-recipient-match",
+   "state": "billpay.recipient-search-menu",
+   "title": "Recipient search menu"
+  },
+  {
+   "area": "billpay",
+   "draft": "not drafted: its parent had no accepted recipe when the drafter ran",
+   "image": "screens/billpay/90-recipient-search-no-results.png",
+   "kind": "empty-state",
+   "labels": [
+    "Click inbox bill row",
+    "Click Review",
+    "Focus Search for another recipient",
+    "Type a name with no match"
+   ],
+   "mutates": false,
+   "note": "Typing a name with no match closes the list silently; only the 'Adding someone new? Create recipient' link remains.",
+   "parent": "billpay.recipient-search-menu",
+   "state": "billpay.recipient-search-no-results",
+   "title": "Recipient search, no results"
+  },
+  {
+   "area": "billpay",
+   "draft": "not drafted: its parent had no accepted recipe when the drafter ran",
+   "image": "screens/billpay/24-bill-edit-saved.png",
+   "kind": "toast",
+   "labels": [
+    "Click inbox bill row",
+    "Click a field value",
+    "Clear amount, click Save edits",
+    "Enter amount, click Save edits"
+   ],
+   "mutates": true,
+   "note": "Panel returns to read mode with the new amount ($350.00) and a 'Changes saved' toast.",
+   "parent": "billpay.bill-edit-amount-error",
+   "state": "billpay.bill-edit-saved",
+   "title": "Bill changes saved"
+  },
+  {
+   "area": "billpay",
+   "draft": "not drafted: its parent had no accepted recipe when the drafter ran",
+   "image": "screens/billpay/36-pay-bill-success.png",
+   "kind": "confirmation",
+   "labels": [
+    "Click inbox bill row",
+    "Click Review",
+    "Click Continue with matched recipient",
+    "Click Next",
+    "Click Next",
+    "Click Next",
+    "Click Next",
+    "Click Schedule payment"
+   ],
+   "mutates": true,
+   "note": "Confirmation 'You've scheduled an ACH payment' with a 1099 document request card and Back to Bill Pay.",
+   "parent": "billpay.pay-review",
+   "state": "billpay.pay-success",
+   "title": "Bill payment scheduled"
+  },
+  {
+   "area": "billpay",
+   "draft": "not drafted: its parent had no accepted recipe when the drafter ran",
+   "image": "screens/billpay/99-repeat-frequency-menu.png",
+   "kind": "menu",
+   "labels": [
+    "Click inbox bill row",
+    "Click Review",
+    "Click Continue with matched recipient",
+    "Click Next",
+    "Toggle Repeat this payment",
+    "Open Repeat select"
+   ],
+   "mutates": false,
+   "note": "With Repeat on, the Repeat combobox offers Weekly on Thursday, Monthly on the 24th, Monthly on the last Thursday and Custom.",
+   "parent": "billpay.pay-repeat",
+   "state": "billpay.repeat-frequency-menu",
+   "title": "Repeat frequency menu"
+  },
+  {
+   "area": "billpay",
+   "draft": "not drafted: its parent had no accepted recipe when the drafter ran",
+   "image": "screens/billpay/113-rule-deleted.png",
+   "kind": "toast",
+   "labels": [
+    "Click a rule row",
+    "Click Edit",
+    "Change the value, click Update",
+    "Click Delete rule",
+    "Click Yes, delete rule"
+   ],
+   "mutates": true,
+   "note": "'Rule deleted' toast; the list renumbers to five rules and the hovered row reveals its If / = / < / then connector chips.",
+   "parent": "billpay.delete-rule-confirm",
+   "state": "billpay.rule-deleted",
+   "title": "Rule deleted"
+  }
+ ]
+}

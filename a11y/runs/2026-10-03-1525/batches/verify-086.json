@@ -1,0 +1,301 @@
+{
+ "area": "billpay",
+ "batch": "verify-086",
+ "findings": [
+  {
+   "attachments": [],
+   "attempt": 1,
+   "basis": "failure",
+   "criteria": [
+    "1.3.1"
+   ],
+   "evidence": [],
+   "evidenceHash": "131d60393dee2105697ee3d64c8c05fc3475af3dccb6a94b93e24b51016da7be",
+   "facts": {},
+   "family": "structure",
+   "guidance": "Medium when a data table's headers do not reach its cells, or when structure is the only way to tell sections or steps apart.",
+   "issueId": "billpay.i-pay-dialog-name",
+   "key": "hand:billpay.i-pay-dialog-name",
+   "measured": false,
+   "primary": "billpay.pay-recipient-match",
+   "proposals": [],
+   "rule": "hand-found",
+   "screens": 3,
+   "severityDefault": "low",
+   "source": "hand-found",
+   "states": [
+    "billpay.pay-recipient-match",
+    "billpay.pay-amount"
+   ],
+   "summary": "Snapshot on /send-money/pay/recipient-match: heading 'Upload an attachment' [level=2] then heading 'Recipient match' [level=1]; the h2 is inside ._fullScreenOverlay with opacity 0 and pointer-events none, no aria-hidden.",
+   "title": "Hidden 'Upload an attachment' heading precedes every pay-flow step"
+  },
+  {
+   "attachments": [],
+   "attempt": 1,
+   "basis": "violation",
+   "criteria": [
+    "4.1.2"
+   ],
+   "evidence": [
+    {
+     "evidence": {
+      "failureSummary": "Fix any of the following:\n  Element does not have inner text that is visible to screen readers\n  aria-label attribute does not exist or is empty\n  aria-labelledby attribute does not exist, references elements that do not exist or references elements that are empty\n  Element has no title attribute\n  Element does not have an implicit (wrapped) <label>\n  Element does not have an explicit <label>\n  Element's default semantics were not overridden with role=\"none\" or role=\"presentation\"",
+      "messageKey": "noAttr"
+     },
+     "occurrence": {
+      "ancestors": [
+       [
+        "_resizeHandleContainer_15al5_246",
+        "_preview-open_15al5_94"
+       ],
+       [
+        "_tooltipAnchor_18bac_4",
+        "_preview_15al5_94",
+        "_attachmentViewerBackground_15al5_359",
+        "_withAttachment_15al5_86"
+       ],
+       [
+        "_container_15al5_4",
+        "_container_10wfz_3",
+        "_preview-open_15al5_94"
+       ],
+       [
+        "_dropzone_15al5_74"
+       ],
+       [
+        "_pageWrapper_1avu1_1"
+       ],
+       [
+        "_sessionReplayUnmask_1avu1_8",
+        "session-replay-unmask"
+       ],
+       [],
+       [
+        "_main_1gb3b_1"
+       ]
+      ],
+      "classes": [
+       "_resizeHandle_15al5_86"
+      ],
+      "data": {},
+      "heading": "Recipient match",
+      "landmark": {
+       "name": "",
+       "role": "main"
+      },
+      "layer": "document",
+      "name": "",
+      "rect": [
+       696,
+       454,
+       48,
+       48
+      ],
+      "role": "button",
+      "tag": "button",
+      "xpath": "/html/body/div[1]/main[1]/div[1]/div[2]/div[2]/div[1]/div[2]/section[3]/div[1]/button[1]"
+     },
+     "state": "billpay.pay-recipient-match"
+    },
+    {
+     "evidence": {
+      "failureSummary": "Fix any of the following:\n  Element does not have inner text that is visible to screen readers\n  aria-label attribute does not exist or is empty\n  aria-labelledby attribute does not exist, references elements that do not exist or references elements that are empty\n  Element has no title attribute\n  Element does not have an implicit (wrapped) <label>\n  Element does not have an explicit <label>\n  Element's default semantics were not overridden with role=\"none\" or role=\"presentation\"",
+      "messageKey": "noAttr"
+     },
+     "occurrence": {
+      "ancestors": [
+       [
+        "_resizeHandleContainer_15al5_246",
+        "_preview-open_15al5_94"
+       ],
+       [
+        "_tooltipAnchor_18bac_4",
+        "_preview_15al5_94",
+        "_attachmentViewerBackground_15al5_359",
+        "_withAttachment_15al5_86"
+       ],
+       [
+        "_container_15al5_4",
+        "_container_10wfz_3",
+        "_preview-open_15al5_94"
+       ],
+       [
+        "_dropzone_15al5_74"
+       ],
+       [
+        "_pageWrapper_1avu1_1"
+       ],
+       [
+        "_sessionReplayUnmask_1avu1_8",
+        "session-replay-unmask"
+       ],
+       [],
+       [
+        "_main_1gb3b_1"
+       ]
+      ],
+      "classes": [
+       "_resizeHandle_15al5_86"
+      ],
+      "data": {},
+      "heading": "Recipient",
+      "landmark": {
+       "name": "",
+       "role": "main"
+      },
+      "layer": "document",
+      "name": "",
+      "rect": [
+       696,
+       454,
+       48,
+       48
+      ],
+      "role": "button",
+      "tag": "button",
+      "xpath": "/html/body/div[1]/main[1]/div[1]/div[2]/div[2]/div[1]/div[2]/section[3]/div[1]/button[1]"
+     },
+     "state": "billpay.pay-recipient"
+    }
+   ],
+   "evidenceHash": "72358c339334d94180be7cbc8cbf5a404d57c56a9d087e190f0c5f3ed1eab3a4",
+   "facts": {
+    "announced": "button \"\"",
+    "axeSummary": "Element does not have inner text that is visible to screen readers; aria-label attribute does not exist or is empty; aria-labelledby attribute does not exist,…",
+    "criterion": "4.1.2",
+    "criterionName": "Name, Role, Value",
+    "element": "button in \"Recipient match\"",
+    "rule": "button-name",
+    "screen": "Pay bill: recipient match"
+   },
+   "family": "name",
+   "guidance": "High for an unnamed form control or the sole primary action.",
+   "issueId": null,
+   "key": "name:button-name:1443f8c9db0c",
+   "measured": false,
+   "primary": "billpay.pay-recipient-match",
+   "proposals": [],
+   "rule": "button-name",
+   "screens": 14,
+   "severityDefault": "medium",
+   "source": "scanner",
+   "states": [
+    "billpay.pay-recipient-match",
+    "billpay.pay-recipient"
+   ],
+   "summary": "button-name: announced as button \"\". Element does not have inner text that is visible to screen readers; aria-label attribute does not exist or is empty; aria-labelledby attribute does not exist,…",
+   "title": "Missing or unclear name: button in \"Recipient match\""
+  },
+  {
+   "attachments": [],
+   "attempt": 1,
+   "basis": "candidate",
+   "criteria": [
+    "2.5.8"
+   ],
+   "evidence": [
+    {
+     "evidence": {
+      "agree": false,
+      "axe": "pass",
+      "exception": null,
+      "height": 20,
+      "offset": 0,
+      "own": "fail",
+      "passedBy": null,
+      "width": 103.64
+     },
+     "occurrence": {
+      "ancestors": [
+       [
+        "_createNewRecipient_kgbbb_21"
+       ],
+       [],
+       [
+        "_routeContainer_15al5_228"
+       ],
+       [
+        "_routes_15al5_220"
+       ],
+       [
+        "_routeSection_15al5_207"
+       ],
+       [
+        "_container_15al5_4",
+        "_container_10wfz_3",
+        "_preview-open_15al5_94"
+       ],
+       [
+        "_dropzone_15al5_74"
+       ],
+       [
+        "_pageWrapper_1avu1_1"
+       ]
+      ],
+      "classes": [
+       "_createNewRecipientButtonLink_kgbbb_27"
+      ],
+      "data": {},
+      "disabled": false,
+      "heading": "Recipient match",
+      "landmark": {
+       "name": "",
+       "role": "main"
+      },
+      "layer": "document",
+      "name": "Create recipient",
+      "rect": [
+       230,
+       731,
+       104,
+       20
+      ],
+      "role": "button",
+      "tag": "button",
+      "xpath": "/html/body/div[1]/main[1]/div[1]/div[2]/div[2]/div[1]/div[2]/section[2]/div[1]/div[1]/div[1]/div[4]/button[1]"
+     },
+     "state": "billpay.pay-recipient-match"
+    }
+   ],
+   "evidenceHash": "04efc1352d5ea6163e2bee04f014c5e09539540f1abca0be496bfaf49a39cb45",
+   "facts": {
+    "criterion": "2.5.8",
+    "criterionName": "Target Size (Minimum)",
+    "element": "button \"Create recipient\"",
+    "offset": "0",
+    "rule": "target-size-own",
+    "screen": "Pay bill: recipient match",
+    "screens": 1,
+    "size": "104×20"
+   },
+   "family": "target-size",
+   "guidance": "Medium next to destructive or financial controls.",
+   "issueId": null,
+   "key": "target-size:target-size-own:92568f0d5253",
+   "measured": true,
+   "primary": "billpay.pay-recipient-match",
+   "proposals": [],
+   "rule": "target-size-own",
+   "screens": 1,
+   "severityDefault": "low",
+   "source": "scanner",
+   "states": [
+    "billpay.pay-recipient-match"
+   ],
+   "summary": "target-size-own: 104×20 px; the widest circle centered on it that clears other targets is 0 px, and the spacing exception needs 24 px.",
+   "title": "Target under 24×24 px: button \"Create recipient\""
+  }
+ ],
+ "primaries": [
+  "billpay.pay-recipient-match"
+ ],
+ "reach": {
+  "baseUrl": "https://demo.mercury.com",
+  "data": "data",
+  "map": "build/map.json",
+  "run": "2026-10-03-1525",
+  "workspace": "a11y"
+ },
+ "run": "2026-10-03-1525"
+}

@@ -1,0 +1,1442 @@
+{
+ "area": "settings",
+ "batch": "verify-336",
+ "findings": [
+  {
+   "attachments": [],
+   "attempt": 1,
+   "basis": "violation",
+   "criteria": [
+    "4.1.2"
+   ],
+   "evidence": [
+    {
+     "evidence": {
+      "failureSummary": "Fix any of the following:\n  Using a negative tabindex on an element inside an interactive control does not prevent assistive technologies from focusing the element (even with aria-hidden=\"true\")",
+      "messageKey": "notHidden"
+     },
+     "occurrence": {
+      "ancestors": [
+       [
+        "_bodyDefault_qaod7_40"
+       ],
+       [
+        "_accordionWrapper_1q1xu_3",
+        "_accordionBorder_1q1xu_7",
+        "_accordionWrapper_bnhk7_1"
+       ],
+       [
+        "_radioGroup_phe2n_23",
+        "_radioGroup_9dnjl_1",
+        "_columnLayout_phe2n_28"
+       ],
+       [],
+       [
+        "_contentArea_1xvys_1",
+        "_contentLayout_1xvys_23"
+       ],
+       [],
+       [
+        "_contentDiv_bcpsw_53",
+        "_contentDivHeightPreset_bcpsw_62"
+       ],
+       [
+        "_fullScreenWorkspaceLayout_bcpsw_14",
+        "_fullScreenWorkspaceLayoutBackground_bcpsw_32",
+        "_noScrollbar_bcpsw_27"
+       ]
+      ],
+      "classes": [
+       "_accordionItemHeader_1q1xu_16",
+       "_accordionHeader_bnhk7_47"
+      ],
+      "data": {},
+      "heading": "Permissions",
+      "landmark": {
+       "name": "",
+       "role": "form"
+      },
+      "layer": "document",
+      "name": "Money Mover Can initiate payments and transfers, and manage recipients on selected accounts",
+      "rect": [
+       503,
+       860,
+       494,
+       88
+      ],
+      "role": "button",
+      "tag": "button",
+      "xpath": "/html/body/div[1]/main[1]/div[1]/div[2]/div[2]/div[3]/form[1]/section[1]/div[2]/fieldset[1]/div[6]/h2[1]/button[1]"
+     },
+     "state": "settings.invite-role"
+    },
+    {
+     "evidence": {
+      "failureSummary": "Fix any of the following:\n  Using a negative tabindex on an element inside an interactive control does not prevent assistive technologies from focusing the element (even with aria-hidden=\"true\")",
+      "messageKey": "notHidden"
+     },
+     "occurrence": {
+      "ancestors": [
+       [
+        "_bodyDefault_qaod7_40"
+       ],
+       [
+        "_accordionWrapper_1q1xu_3",
+        "_accordionBorder_1q1xu_7",
+        "_accordionWrapper_bnhk7_1"
+       ],
+       [
+        "_radioGroup_phe2n_23",
+        "_radioGroup_9dnjl_1",
+        "_columnLayout_phe2n_28"
+       ],
+       [],
+       [
+        "_contentArea_1xvys_1",
+        "_contentLayout_1xvys_23"
+       ],
+       [],
+       [
+        "_contentDiv_bcpsw_53",
+        "_contentDivHeightPreset_bcpsw_62"
+       ],
+       [
+        "_fullScreenWorkspaceLayout_bcpsw_14",
+        "_fullScreenWorkspaceLayoutBackground_bcpsw_32",
+        "_noScrollbar_bcpsw_27"
+       ]
+      ],
+      "classes": [
+       "_accordionItemHeader_1q1xu_16",
+       "_accordionHeader_bnhk7_47"
+      ],
+      "data": {},
+      "heading": "Permissions",
+      "landmark": {
+       "name": "",
+       "role": "form"
+      },
+      "layer": "document",
+      "name": "Money Mover Can initiate payments and transfers, and manage recipients on selected accounts",
+      "rect": [
+       503,
+       916,
+       494,
+       88
+      ],
+      "role": "button",
+      "tag": "button",
+      "xpath": "/html/body/div[1]/main[1]/div[1]/div[2]/div[2]/div[3]/form[1]/section[1]/div[2]/fieldset[1]/div[6]/h2[1]/button[1]"
+     },
+     "state": "settings.role-accountant"
+    }
+   ],
+   "evidenceHash": "f9852899fbac88780582daa68bd04e38a48a76d2c7c25b9f6e7ab688be3f4e67",
+   "facts": {
+    "announced": "button \"Money Mover Can initiate payments and transfers, and manage recipients…",
+    "axeSummary": "Using a negative tabindex on an element inside an interactive control does not prevent assistive technologies from focusing the element (even with aria-hidden=…",
+    "criterion": "4.1.2",
+    "criterionName": "Name, Role, Value",
+    "element": "button \"Money Mover Can initiate payments and tr…\"",
+    "rule": "nested-interactive",
+    "screen": "Invite a user — Assign Role (Employee)"
+   },
+   "family": "role-state",
+   "guidance": "Low for optional ARIA or an invalid autocomplete token; high when aria-hidden hides the whole page.",
+   "issueId": null,
+   "key": "role-state:nested-interactive:26ae66119613",
+   "measured": false,
+   "primary": "settings.invite-role",
+   "proposals": [],
+   "rule": "nested-interactive",
+   "screens": 7,
+   "severityDefault": "medium",
+   "source": "scanner",
+   "states": [
+    "settings.invite-role",
+    "settings.role-accountant"
+   ],
+   "summary": "nested-interactive: announced as button \"Money Mover Can initiate payments and transfers, and manage recipients…. Using a negative tabindex on an element inside an interactive control does not prevent assistive technologies from focusing the element (even with aria-hidden=…",
+   "title": "Control nested in a control: button \"Money Mover Can initiate payments and tr…\""
+  },
+  {
+   "attachments": [],
+   "attempt": 1,
+   "basis": "violation",
+   "criteria": [
+    "4.1.2"
+   ],
+   "evidence": [
+    {
+     "evidence": {
+      "failureSummary": "Fix any of the following:\n  Element has focusable descendants"
+     },
+     "occurrence": {
+      "ancestors": [
+       [
+        "_bodyDefault_qaod7_40"
+       ],
+       [
+        "_accordionWrapper_1q1xu_3",
+        "_accordionBorder_1q1xu_7",
+        "_accordionWrapper_bnhk7_1"
+       ],
+       [
+        "_radioGroup_phe2n_23",
+        "_radioGroup_9dnjl_1",
+        "_columnLayout_phe2n_28"
+       ],
+       [],
+       [
+        "_contentArea_1xvys_1",
+        "_contentLayout_1xvys_23"
+       ],
+       [],
+       [
+        "_contentDiv_bcpsw_53",
+        "_contentDivHeightPreset_bcpsw_62"
+       ],
+       [
+        "_fullScreenWorkspaceLayout_bcpsw_14",
+        "_fullScreenWorkspaceLayoutBackground_bcpsw_32",
+        "_noScrollbar_bcpsw_27"
+       ]
+      ],
+      "classes": [
+       "_accordionItemHeader_1q1xu_16",
+       "_accordionHeader_bnhk7_47"
+      ],
+      "data": {},
+      "heading": "Assign Test to a role",
+      "landmark": {
+       "name": "",
+       "role": "form"
+      },
+      "layer": "document",
+      "name": "Employee Can be issued cards, but cannot view sensitive bank account info",
+      "rect": [
+       503,
+       285,
+       494,
+       68
+      ],
+      "role": "button",
+      "tag": "button",
+      "xpath": "/html/body/div[1]/main[1]/div[1]/div[2]/div[2]/div[3]/form[1]/section[1]/div[2]/fieldset[1]/div[1]/h2[1]/button[1]"
+     },
+     "state": "settings.invite-role"
+    },
+    {
+     "evidence": {
+      "failureSummary": "Fix any of the following:\n  Using a negative tabindex on an element inside an interactive control does not prevent assistive technologies from focusing the element (even with aria-hidden=\"true\")",
+      "messageKey": "notHidden"
+     },
+     "occurrence": {
+      "ancestors": [
+       [
+        "_bodyDefault_qaod7_40"
+       ],
+       [
+        "_accordionWrapper_1q1xu_3",
+        "_accordionBorder_1q1xu_7",
+        "_accordionWrapper_bnhk7_1"
+       ],
+       [
+        "_radioGroup_phe2n_23",
+        "_radioGroup_9dnjl_1",
+        "_columnLayout_phe2n_28"
+       ],
+       [],
+       [
+        "_contentArea_1xvys_1",
+        "_contentLayout_1xvys_23"
+       ],
+       [],
+       [
+        "_contentDiv_bcpsw_53",
+        "_contentDivHeightPreset_bcpsw_62"
+       ],
+       [
+        "_fullScreenWorkspaceLayout_bcpsw_14",
+        "_fullScreenWorkspaceLayoutBackground_bcpsw_32",
+        "_noScrollbar_bcpsw_27"
+       ]
+      ],
+      "classes": [
+       "_accordionItemHeader_1q1xu_16",
+       "_accordionHeader_bnhk7_47"
+      ],
+      "data": {},
+      "heading": "Assign Test to a role",
+      "landmark": {
+       "name": "",
+       "role": "form"
+      },
+      "layer": "document",
+      "name": "Employee Can be issued cards, but cannot view sensitive bank account info",
+      "rect": [
+       503,
+       285,
+       494,
+       68
+      ],
+      "role": "button",
+      "tag": "button",
+      "xpath": "/html/body/div[1]/main[1]/div[1]/div[2]/div[2]/div[3]/form[1]/section[1]/div[2]/fieldset[1]/div[1]/h2[1]/button[1]"
+     },
+     "state": "settings.role-accountant"
+    }
+   ],
+   "evidenceHash": "1e23df6310c5e77249bd1f6147994dc9587baeeadb1561dbc784e5450ee79ee9",
+   "facts": {
+    "announced": "button \"Employee Can be issued cards, but cannot view sensitive bank account in…",
+    "axeSummary": "Element has focusable descendants",
+    "criterion": "4.1.2",
+    "criterionName": "Name, Role, Value",
+    "element": "button \"Employee Can be issued cards, but cannot…\"",
+    "rule": "nested-interactive",
+    "screen": "Invite a user — Assign Role (Employee)"
+   },
+   "family": "role-state",
+   "guidance": "Low for optional ARIA or an invalid autocomplete token; high when aria-hidden hides the whole page.",
+   "issueId": null,
+   "key": "role-state:nested-interactive:452a9f84ad8c",
+   "measured": false,
+   "primary": "settings.invite-role",
+   "proposals": [],
+   "rule": "nested-interactive",
+   "screens": 7,
+   "severityDefault": "medium",
+   "source": "scanner",
+   "states": [
+    "settings.invite-role",
+    "settings.role-accountant"
+   ],
+   "summary": "nested-interactive: announced as button \"Employee Can be issued cards, but cannot view sensitive bank account in…. Element has focusable descendants",
+   "title": "Control nested in a control: button \"Employee Can be issued cards, but cannot…\""
+  },
+  {
+   "attachments": [],
+   "attempt": 1,
+   "basis": "violation",
+   "criteria": [
+    "4.1.2"
+   ],
+   "evidence": [
+    {
+     "evidence": {
+      "failureSummary": "Fix any of the following:\n  Using a negative tabindex on an element inside an interactive control does not prevent assistive technologies from focusing the element (even with aria-hidden=\"true\")",
+      "messageKey": "notHidden"
+     },
+     "occurrence": {
+      "ancestors": [
+       [
+        "_bodyDefault_qaod7_40"
+       ],
+       [
+        "_accordionWrapper_1q1xu_3",
+        "_accordionBorder_1q1xu_7",
+        "_accordionWrapper_bnhk7_1"
+       ],
+       [
+        "_radioGroup_phe2n_23",
+        "_radioGroup_9dnjl_1",
+        "_columnLayout_phe2n_28"
+       ],
+       [],
+       [
+        "_contentArea_1xvys_1",
+        "_contentLayout_1xvys_23"
+       ],
+       [],
+       [
+        "_contentDiv_bcpsw_53",
+        "_contentDivHeightPreset_bcpsw_62"
+       ],
+       [
+        "_fullScreenWorkspaceLayout_bcpsw_14",
+        "_fullScreenWorkspaceLayoutBackground_bcpsw_32",
+        "_noScrollbar_bcpsw_27"
+       ]
+      ],
+      "classes": [
+       "_accordionItemHeader_1q1xu_16",
+       "_accordionHeader_bnhk7_47"
+      ],
+      "data": {},
+      "heading": "Permissions",
+      "landmark": {
+       "name": "",
+       "role": "form"
+      },
+      "layer": "document",
+      "name": "Accountant Can view all accounts and transactions, and manage books",
+      "rect": [
+       503,
+       606,
+       494,
+       68
+      ],
+      "role": "button",
+      "tag": "button",
+      "xpath": "/html/body/div[1]/main[1]/div[1]/div[2]/div[2]/div[3]/form[1]/section[1]/div[2]/fieldset[1]/div[3]/h2[1]/button[1]"
+     },
+     "state": "settings.invite-role"
+    },
+    {
+     "evidence": {
+      "failureSummary": "Fix any of the following:\n  Element has focusable descendants"
+     },
+     "occurrence": {
+      "ancestors": [
+       [
+        "_bodyDefault_qaod7_40"
+       ],
+       [
+        "_accordionWrapper_1q1xu_3",
+        "_accordionBorder_1q1xu_7",
+        "_accordionWrapper_bnhk7_1"
+       ],
+       [
+        "_radioGroup_phe2n_23",
+        "_radioGroup_9dnjl_1",
+        "_columnLayout_phe2n_28"
+       ],
+       [],
+       [
+        "_contentArea_1xvys_1",
+        "_contentLayout_1xvys_23"
+       ],
+       [],
+       [
+        "_contentDiv_bcpsw_53",
+        "_contentDivHeightPreset_bcpsw_62"
+       ],
+       [
+        "_fullScreenWorkspaceLayout_bcpsw_14",
+        "_fullScreenWorkspaceLayoutBackground_bcpsw_32",
+        "_noScrollbar_bcpsw_27"
+       ]
+      ],
+      "classes": [
+       "_accordionItemHeader_1q1xu_16",
+       "_accordionHeader_bnhk7_47"
+      ],
+      "data": {},
+      "heading": "Permissions",
+      "landmark": {
+       "name": "",
+       "role": "form"
+      },
+      "layer": "document",
+      "name": "Accountant Can view all accounts and transactions, and manage books",
+      "rect": [
+       503,
+       441,
+       494,
+       68
+      ],
+      "role": "button",
+      "tag": "button",
+      "xpath": "/html/body/div[1]/main[1]/div[1]/div[2]/div[2]/div[3]/form[1]/section[1]/div[2]/fieldset[1]/div[3]/h2[1]/button[1]"
+     },
+     "state": "settings.role-accountant"
+    }
+   ],
+   "evidenceHash": "1904e9eae076d00350744800945d02036fdefe5a0bc13d90b3d49690f5bb7206",
+   "facts": {
+    "announced": "button \"Accountant Can view all accounts and transactions, and manage books\" [e…",
+    "axeSummary": "Using a negative tabindex on an element inside an interactive control does not prevent assistive technologies from focusing the element (even with aria-hidden=…",
+    "criterion": "4.1.2",
+    "criterionName": "Name, Role, Value",
+    "element": "button \"Accountant Can view all accounts and tra…\"",
+    "rule": "nested-interactive",
+    "screen": "Invite a user — Assign Role (Employee)"
+   },
+   "family": "role-state",
+   "guidance": "Low for optional ARIA or an invalid autocomplete token; high when aria-hidden hides the whole page.",
+   "issueId": null,
+   "key": "role-state:nested-interactive:8991e2e62412",
+   "measured": false,
+   "primary": "settings.invite-role",
+   "proposals": [],
+   "rule": "nested-interactive",
+   "screens": 7,
+   "severityDefault": "medium",
+   "source": "scanner",
+   "states": [
+    "settings.invite-role",
+    "settings.role-accountant"
+   ],
+   "summary": "nested-interactive: announced as button \"Accountant Can view all accounts and transactions, and manage books\" [e…. Using a negative tabindex on an element inside an interactive control does not prevent assistive technologies from focusing the element (even with aria-hidden=…",
+   "title": "Control nested in a control: button \"Accountant Can view all accounts and tra…\""
+  },
+  {
+   "attachments": [],
+   "attempt": 1,
+   "basis": "violation",
+   "criteria": [
+    "4.1.2"
+   ],
+   "evidence": [
+    {
+     "evidence": {
+      "failureSummary": "Fix any of the following:\n  Using a negative tabindex on an element inside an interactive control does not prevent assistive technologies from focusing the element (even with aria-hidden=\"true\")",
+      "messageKey": "notHidden"
+     },
+     "occurrence": {
+      "ancestors": [
+       [
+        "_bodyDefault_qaod7_40"
+       ],
+       [
+        "_accordionWrapper_1q1xu_3",
+        "_accordionBorder_1q1xu_7",
+        "_accordionWrapper_bnhk7_1"
+       ],
+       [
+        "_radioGroup_phe2n_23",
+        "_radioGroup_9dnjl_1",
+        "_columnLayout_phe2n_28"
+       ],
+       [],
+       [
+        "_contentArea_1xvys_1",
+        "_contentLayout_1xvys_23"
+       ],
+       [],
+       [
+        "_contentDiv_bcpsw_53",
+        "_contentDivHeightPreset_bcpsw_62"
+       ],
+       [
+        "_fullScreenWorkspaceLayout_bcpsw_14",
+        "_fullScreenWorkspaceLayoutBackground_bcpsw_32",
+        "_noScrollbar_bcpsw_27"
+       ]
+      ],
+      "classes": [
+       "_accordionItemHeader_1q1xu_16",
+       "_accordionHeader_bnhk7_47"
+      ],
+      "data": {},
+      "heading": "Permissions",
+      "landmark": {
+       "name": "",
+       "role": "form"
+      },
+      "layer": "document",
+      "name": "Read Only Can view all accounts and transactions, and be issued cards",
+      "rect": [
+       503,
+       958,
+       494,
+       68
+      ],
+      "role": "button",
+      "tag": "button",
+      "xpath": "/html/body/div[1]/main[1]/div[1]/div[2]/div[2]/div[3]/form[1]/section[1]/div[2]/fieldset[1]/div[7]/h2[1]/button[1]"
+     },
+     "state": "settings.invite-role"
+    },
+    {
+     "evidence": {
+      "failureSummary": "Fix any of the following:\n  Using a negative tabindex on an element inside an interactive control does not prevent assistive technologies from focusing the element (even with aria-hidden=\"true\")",
+      "messageKey": "notHidden"
+     },
+     "occurrence": {
+      "ancestors": [
+       [
+        "_bodyDefault_qaod7_40"
+       ],
+       [
+        "_accordionWrapper_1q1xu_3",
+        "_accordionBorder_1q1xu_7",
+        "_accordionWrapper_bnhk7_1"
+       ],
+       [
+        "_radioGroup_phe2n_23",
+        "_radioGroup_9dnjl_1",
+        "_columnLayout_phe2n_28"
+       ],
+       [],
+       [
+        "_contentArea_1xvys_1",
+        "_contentLayout_1xvys_23"
+       ],
+       [],
+       [
+        "_contentDiv_bcpsw_53",
+        "_contentDivHeightPreset_bcpsw_62"
+       ],
+       [
+        "_fullScreenWorkspaceLayout_bcpsw_14",
+        "_fullScreenWorkspaceLayoutBackground_bcpsw_32",
+        "_noScrollbar_bcpsw_27"
+       ]
+      ],
+      "classes": [
+       "_accordionItemHeader_1q1xu_16",
+       "_accordionHeader_bnhk7_47"
+      ],
+      "data": {},
+      "heading": "Permissions",
+      "landmark": {
+       "name": "",
+       "role": "form"
+      },
+      "layer": "document",
+      "name": "Read Only Can view all accounts and transactions, and be issued cards",
+      "rect": [
+       503,
+       1014,
+       494,
+       68
+      ],
+      "role": "button",
+      "tag": "button",
+      "xpath": "/html/body/div[1]/main[1]/div[1]/div[2]/div[2]/div[3]/form[1]/section[1]/div[2]/fieldset[1]/div[7]/h2[1]/button[1]"
+     },
+     "state": "settings.role-accountant"
+    }
+   ],
+   "evidenceHash": "f9852899fbac88780582daa68bd04e38a48a76d2c7c25b9f6e7ab688be3f4e67",
+   "facts": {
+    "announced": "button \"Read Only Can view all accounts and transactions, and be issued cards\"…",
+    "axeSummary": "Using a negative tabindex on an element inside an interactive control does not prevent assistive technologies from focusing the element (even with aria-hidden=…",
+    "criterion": "4.1.2",
+    "criterionName": "Name, Role, Value",
+    "element": "button \"Read Only Can view all accounts and tran…\"",
+    "rule": "nested-interactive",
+    "screen": "Invite a user — Assign Role (Employee)"
+   },
+   "family": "role-state",
+   "guidance": "Low for optional ARIA or an invalid autocomplete token; high when aria-hidden hides the whole page.",
+   "issueId": null,
+   "key": "role-state:nested-interactive:aa8d5f161d33",
+   "measured": false,
+   "primary": "settings.invite-role",
+   "proposals": [],
+   "rule": "nested-interactive",
+   "screens": 7,
+   "severityDefault": "medium",
+   "source": "scanner",
+   "states": [
+    "settings.invite-role",
+    "settings.role-accountant"
+   ],
+   "summary": "nested-interactive: announced as button \"Read Only Can view all accounts and transactions, and be issued cards\"…. Using a negative tabindex on an element inside an interactive control does not prevent assistive technologies from focusing the element (even with aria-hidden=…",
+   "title": "Control nested in a control: button \"Read Only Can view all accounts and tran…\""
+  },
+  {
+   "attachments": [],
+   "attempt": 1,
+   "basis": "violation",
+   "criteria": [
+    "4.1.2"
+   ],
+   "evidence": [
+    {
+     "evidence": {
+      "failureSummary": "Fix any of the following:\n  Using a negative tabindex on an element inside an interactive control does not prevent assistive technologies from focusing the element (even with aria-hidden=\"true\")",
+      "messageKey": "notHidden"
+     },
+     "occurrence": {
+      "ancestors": [
+       [
+        "_bodyDefault_qaod7_40"
+       ],
+       [
+        "_accordionWrapper_1q1xu_3",
+        "_accordionBorder_1q1xu_7",
+        "_accordionWrapper_bnhk7_1"
+       ],
+       [
+        "_radioGroup_phe2n_23",
+        "_radioGroup_9dnjl_1",
+        "_columnLayout_phe2n_28"
+       ],
+       [],
+       [
+        "_contentArea_1xvys_1",
+        "_contentLayout_1xvys_23"
+       ],
+       [],
+       [
+        "_contentDiv_bcpsw_53",
+        "_contentDivHeightPreset_bcpsw_62"
+       ],
+       [
+        "_fullScreenWorkspaceLayout_bcpsw_14",
+        "_fullScreenWorkspaceLayoutBackground_bcpsw_32",
+        "_noScrollbar_bcpsw_27"
+       ]
+      ],
+      "classes": [
+       "_accordionItemHeader_1q1xu_16",
+       "_accordionHeader_bnhk7_47"
+      ],
+      "data": {},
+      "heading": "Permissions",
+      "landmark": {
+       "name": "",
+       "role": "form"
+      },
+      "layer": "document",
+      "name": "Finance Lead Full non-admin access to accounts, payments, cards, and users",
+      "rect": [
+       503,
+       684,
+       494,
+       68
+      ],
+      "role": "button",
+      "tag": "button",
+      "xpath": "/html/body/div[1]/main[1]/div[1]/div[2]/div[2]/div[3]/form[1]/section[1]/div[2]/fieldset[1]/div[4]/h2[1]/button[1]"
+     },
+     "state": "settings.invite-role"
+    },
+    {
+     "evidence": {
+      "failureSummary": "Fix any of the following:\n  Using a negative tabindex on an element inside an interactive control does not prevent assistive technologies from focusing the element (even with aria-hidden=\"true\")",
+      "messageKey": "notHidden"
+     },
+     "occurrence": {
+      "ancestors": [
+       [
+        "_bodyDefault_qaod7_40"
+       ],
+       [
+        "_accordionWrapper_1q1xu_3",
+        "_accordionBorder_1q1xu_7",
+        "_accordionWrapper_bnhk7_1"
+       ],
+       [
+        "_radioGroup_phe2n_23",
+        "_radioGroup_9dnjl_1",
+        "_columnLayout_phe2n_28"
+       ],
+       [],
+       [
+        "_contentArea_1xvys_1",
+        "_contentLayout_1xvys_23"
+       ],
+       [],
+       [
+        "_contentDiv_bcpsw_53",
+        "_contentDivHeightPreset_bcpsw_62"
+       ],
+       [
+        "_fullScreenWorkspaceLayout_bcpsw_14",
+        "_fullScreenWorkspaceLayoutBackground_bcpsw_32",
+        "_noScrollbar_bcpsw_27"
+       ]
+      ],
+      "classes": [
+       "_accordionItemHeader_1q1xu_16",
+       "_accordionHeader_bnhk7_47"
+      ],
+      "data": {},
+      "heading": "Permissions",
+      "landmark": {
+       "name": "",
+       "role": "form"
+      },
+      "layer": "document",
+      "name": "Finance Lead Full non-admin access to accounts, payments, cards, and users",
+      "rect": [
+       503,
+       740,
+       494,
+       68
+      ],
+      "role": "button",
+      "tag": "button",
+      "xpath": "/html/body/div[1]/main[1]/div[1]/div[2]/div[2]/div[3]/form[1]/section[1]/div[2]/fieldset[1]/div[4]/h2[1]/button[1]"
+     },
+     "state": "settings.role-accountant"
+    }
+   ],
+   "evidenceHash": "f9852899fbac88780582daa68bd04e38a48a76d2c7c25b9f6e7ab688be3f4e67",
+   "facts": {
+    "announced": "button \"Finance Lead Full non-admin access to accounts, payments, cards, and us…",
+    "axeSummary": "Using a negative tabindex on an element inside an interactive control does not prevent assistive technologies from focusing the element (even with aria-hidden=…",
+    "criterion": "4.1.2",
+    "criterionName": "Name, Role, Value",
+    "element": "button \"Finance Lead Full non-admin access to ac…\"",
+    "rule": "nested-interactive",
+    "screen": "Invite a user — Assign Role (Employee)"
+   },
+   "family": "role-state",
+   "guidance": "Low for optional ARIA or an invalid autocomplete token; high when aria-hidden hides the whole page.",
+   "issueId": null,
+   "key": "role-state:nested-interactive:c67a311fde97",
+   "measured": false,
+   "primary": "settings.invite-role",
+   "proposals": [],
+   "rule": "nested-interactive",
+   "screens": 7,
+   "severityDefault": "medium",
+   "source": "scanner",
+   "states": [
+    "settings.invite-role",
+    "settings.role-accountant"
+   ],
+   "summary": "nested-interactive: announced as button \"Finance Lead Full non-admin access to accounts, payments, cards, and us…. Using a negative tabindex on an element inside an interactive control does not prevent assistive technologies from focusing the element (even with aria-hidden=…",
+   "title": "Control nested in a control: button \"Finance Lead Full non-admin access to ac…\""
+  },
+  {
+   "attachments": [],
+   "attempt": 1,
+   "basis": "violation",
+   "criteria": [
+    "4.1.2"
+   ],
+   "evidence": [
+    {
+     "evidence": {
+      "failureSummary": "Fix any of the following:\n  Using a negative tabindex on an element inside an interactive control does not prevent assistive technologies from focusing the element (even with aria-hidden=\"true\")",
+      "messageKey": "notHidden"
+     },
+     "occurrence": {
+      "ancestors": [
+       [
+        "_bodyDefault_qaod7_40"
+       ],
+       [
+        "_accordionWrapper_1q1xu_3",
+        "_accordionBorder_1q1xu_7",
+        "_accordionWrapper_bnhk7_1"
+       ],
+       [
+        "_radioGroup_phe2n_23",
+        "_radioGroup_9dnjl_1",
+        "_columnLayout_phe2n_28"
+       ],
+       [],
+       [
+        "_contentArea_1xvys_1",
+        "_contentLayout_1xvys_23"
+       ],
+       [],
+       [
+        "_contentDiv_bcpsw_53",
+        "_contentDivHeightPreset_bcpsw_62"
+       ],
+       [
+        "_fullScreenWorkspaceLayout_bcpsw_14",
+        "_fullScreenWorkspaceLayoutBackground_bcpsw_32",
+        "_noScrollbar_bcpsw_27"
+       ]
+      ],
+      "classes": [
+       "_accordionItemHeader_1q1xu_16",
+       "_accordionHeader_bnhk7_47"
+      ],
+      "data": {},
+      "heading": "Permissions",
+      "landmark": {
+       "name": "",
+       "role": "form"
+      },
+      "layer": "document",
+      "name": "Admin Full control including policies, accounts, and settings",
+      "rect": [
+       503,
+       528,
+       494,
+       68
+      ],
+      "role": "button",
+      "tag": "button",
+      "xpath": "/html/body/div[1]/main[1]/div[1]/div[2]/div[2]/div[3]/form[1]/section[1]/div[2]/fieldset[1]/div[2]/h2[1]/button[1]"
+     },
+     "state": "settings.invite-role"
+    },
+    {
+     "evidence": {
+      "failureSummary": "Fix any of the following:\n  Using a negative tabindex on an element inside an interactive control does not prevent assistive technologies from focusing the element (even with aria-hidden=\"true\")",
+      "messageKey": "notHidden"
+     },
+     "occurrence": {
+      "ancestors": [
+       [
+        "_bodyDefault_qaod7_40"
+       ],
+       [
+        "_accordionWrapper_1q1xu_3",
+        "_accordionBorder_1q1xu_7",
+        "_accordionWrapper_bnhk7_1"
+       ],
+       [
+        "_radioGroup_phe2n_23",
+        "_radioGroup_9dnjl_1",
+        "_columnLayout_phe2n_28"
+       ],
+       [],
+       [
+        "_contentArea_1xvys_1",
+        "_contentLayout_1xvys_23"
+       ],
+       [],
+       [
+        "_contentDiv_bcpsw_53",
+        "_contentDivHeightPreset_bcpsw_62"
+       ],
+       [
+        "_fullScreenWorkspaceLayout_bcpsw_14",
+        "_fullScreenWorkspaceLayoutBackground_bcpsw_32",
+        "_noScrollbar_bcpsw_27"
+       ]
+      ],
+      "classes": [
+       "_accordionItemHeader_1q1xu_16",
+       "_accordionHeader_bnhk7_47"
+      ],
+      "data": {},
+      "heading": "Permissions",
+      "landmark": {
+       "name": "",
+       "role": "form"
+      },
+      "layer": "document",
+      "name": "Admin Full control including policies, accounts, and settings",
+      "rect": [
+       503,
+       363,
+       494,
+       68
+      ],
+      "role": "button",
+      "tag": "button",
+      "xpath": "/html/body/div[1]/main[1]/div[1]/div[2]/div[2]/div[3]/form[1]/section[1]/div[2]/fieldset[1]/div[2]/h2[1]/button[1]"
+     },
+     "state": "settings.role-accountant"
+    }
+   ],
+   "evidenceHash": "f9852899fbac88780582daa68bd04e38a48a76d2c7c25b9f6e7ab688be3f4e67",
+   "facts": {
+    "announced": "button \"Admin Full control including policies, accounts, and settings\" [expande…",
+    "axeSummary": "Using a negative tabindex on an element inside an interactive control does not prevent assistive technologies from focusing the element (even with aria-hidden=…",
+    "criterion": "4.1.2",
+    "criterionName": "Name, Role, Value",
+    "element": "button \"Admin Full control including policies, a…\"",
+    "rule": "nested-interactive",
+    "screen": "Invite a user — Assign Role (Employee)"
+   },
+   "family": "role-state",
+   "guidance": "Low for optional ARIA or an invalid autocomplete token; high when aria-hidden hides the whole page.",
+   "issueId": null,
+   "key": "role-state:nested-interactive:eec2c2dc0032",
+   "measured": false,
+   "primary": "settings.invite-role",
+   "proposals": [],
+   "rule": "nested-interactive",
+   "screens": 7,
+   "severityDefault": "medium",
+   "source": "scanner",
+   "states": [
+    "settings.invite-role",
+    "settings.role-accountant"
+   ],
+   "summary": "nested-interactive: announced as button \"Admin Full control including policies, accounts, and settings\" [expande…. Using a negative tabindex on an element inside an interactive control does not prevent assistive technologies from focusing the element (even with aria-hidden=…",
+   "title": "Control nested in a control: button \"Admin Full control including policies, a…\""
+  },
+  {
+   "attachments": [],
+   "attempt": 1,
+   "basis": "violation",
+   "criteria": [
+    "4.1.2"
+   ],
+   "evidence": [
+    {
+     "evidence": {
+      "failureSummary": "Fix any of the following:\n  Using a negative tabindex on an element inside an interactive control does not prevent assistive technologies from focusing the element (even with aria-hidden=\"true\")",
+      "messageKey": "notHidden"
+     },
+     "occurrence": {
+      "ancestors": [
+       [
+        "_bodyDefault_qaod7_40"
+       ],
+       [
+        "_accordionWrapper_1q1xu_3",
+        "_accordionBorder_1q1xu_7",
+        "_accordionWrapper_bnhk7_1"
+       ],
+       [
+        "_radioGroup_phe2n_23",
+        "_radioGroup_9dnjl_1",
+        "_columnLayout_phe2n_28"
+       ],
+       [],
+       [
+        "_contentArea_1xvys_1",
+        "_contentLayout_1xvys_23"
+       ],
+       [],
+       [
+        "_contentDiv_bcpsw_53",
+        "_contentDivHeightPreset_bcpsw_62"
+       ],
+       [
+        "_fullScreenWorkspaceLayout_bcpsw_14",
+        "_fullScreenWorkspaceLayoutBackground_bcpsw_32",
+        "_noScrollbar_bcpsw_27"
+       ]
+      ],
+      "classes": [
+       "_accordionItemHeader_1q1xu_16",
+       "_accordionHeader_bnhk7_47"
+      ],
+      "data": {},
+      "heading": "Permissions",
+      "landmark": {
+       "name": "",
+       "role": "form"
+      },
+      "layer": "document",
+      "name": "Finance Manager Manages bookkeeping, transaction coding, ACH processing, and ledger integrations",
+      "rect": [
+       503,
+       762,
+       494,
+       88
+      ],
+      "role": "button",
+      "tag": "button",
+      "xpath": "/html/body/div[1]/main[1]/div[1]/div[2]/div[2]/div[3]/form[1]/section[1]/div[2]/fieldset[1]/div[5]/h2[1]/button[1]"
+     },
+     "state": "settings.invite-role"
+    },
+    {
+     "evidence": {
+      "failureSummary": "Fix any of the following:\n  Using a negative tabindex on an element inside an interactive control does not prevent assistive technologies from focusing the element (even with aria-hidden=\"true\")",
+      "messageKey": "notHidden"
+     },
+     "occurrence": {
+      "ancestors": [
+       [
+        "_bodyDefault_qaod7_40"
+       ],
+       [
+        "_accordionWrapper_1q1xu_3",
+        "_accordionBorder_1q1xu_7",
+        "_accordionWrapper_bnhk7_1"
+       ],
+       [
+        "_radioGroup_phe2n_23",
+        "_radioGroup_9dnjl_1",
+        "_columnLayout_phe2n_28"
+       ],
+       [],
+       [
+        "_contentArea_1xvys_1",
+        "_contentLayout_1xvys_23"
+       ],
+       [],
+       [
+        "_contentDiv_bcpsw_53",
+        "_contentDivHeightPreset_bcpsw_62"
+       ],
+       [
+        "_fullScreenWorkspaceLayout_bcpsw_14",
+        "_fullScreenWorkspaceLayoutBackground_bcpsw_32",
+        "_noScrollbar_bcpsw_27"
+       ]
+      ],
+      "classes": [
+       "_accordionItemHeader_1q1xu_16",
+       "_accordionHeader_bnhk7_47"
+      ],
+      "data": {},
+      "heading": "Permissions",
+      "landmark": {
+       "name": "",
+       "role": "form"
+      },
+      "layer": "document",
+      "name": "Finance Manager Manages bookkeeping, transaction coding, ACH processing, and ledger integrations",
+      "rect": [
+       503,
+       818,
+       494,
+       88
+      ],
+      "role": "button",
+      "tag": "button",
+      "xpath": "/html/body/div[1]/main[1]/div[1]/div[2]/div[2]/div[3]/form[1]/section[1]/div[2]/fieldset[1]/div[5]/h2[1]/button[1]"
+     },
+     "state": "settings.role-accountant"
+    }
+   ],
+   "evidenceHash": "f9852899fbac88780582daa68bd04e38a48a76d2c7c25b9f6e7ab688be3f4e67",
+   "facts": {
+    "announced": "button \"Finance Manager Manages bookkeeping, transaction coding, ACH processing…",
+    "axeSummary": "Using a negative tabindex on an element inside an interactive control does not prevent assistive technologies from focusing the element (even with aria-hidden=…",
+    "criterion": "4.1.2",
+    "criterionName": "Name, Role, Value",
+    "element": "button \"Finance Manager Manages bookkeeping, tra…\"",
+    "rule": "nested-interactive",
+    "screen": "Invite a user — Assign Role (Employee)"
+   },
+   "family": "role-state",
+   "guidance": "Low for optional ARIA or an invalid autocomplete token; high when aria-hidden hides the whole page.",
+   "issueId": null,
+   "key": "role-state:nested-interactive:efa19be0625c",
+   "measured": false,
+   "primary": "settings.invite-role",
+   "proposals": [],
+   "rule": "nested-interactive",
+   "screens": 7,
+   "severityDefault": "medium",
+   "source": "scanner",
+   "states": [
+    "settings.invite-role",
+    "settings.role-accountant"
+   ],
+   "summary": "nested-interactive: announced as button \"Finance Manager Manages bookkeeping, transaction coding, ACH processing…. Using a negative tabindex on an element inside an interactive control does not prevent assistive technologies from focusing the element (even with aria-hidden=…",
+   "title": "Control nested in a control: button \"Finance Manager Manages bookkeeping, tra…\""
+  },
+  {
+   "attachments": [],
+   "attempt": 1,
+   "basis": "candidate",
+   "criteria": [
+    "2.5.8"
+   ],
+   "evidence": [
+    {
+     "evidence": {
+      "agree": false,
+      "axe": "violation",
+      "exception": null,
+      "height": 18,
+      "offset": 279.55,
+      "own": "pass",
+      "passedBy": "spacing",
+      "width": 18
+     },
+     "occurrence": {
+      "ancestors": [
+       [
+        "_radioButtonWrapper_ial95_4"
+       ],
+       [],
+       [
+        "_accordionItemHeader_1q1xu_16",
+        "_accordionHeader_bnhk7_47"
+       ],
+       [
+        "_bodyDefault_qaod7_40"
+       ],
+       [
+        "_accordionWrapper_1q1xu_3",
+        "_accordionBorder_1q1xu_7",
+        "_accordionWrapper_bnhk7_1"
+       ],
+       [
+        "_radioGroup_phe2n_23",
+        "_radioGroup_9dnjl_1",
+        "_columnLayout_phe2n_28"
+       ],
+       [],
+       [
+        "_contentArea_1xvys_1",
+        "_contentLayout_1xvys_23"
+       ]
+      ],
+      "classes": [
+       "_radioButton_ial95_4"
+      ],
+      "data": {
+       "data-active-item": "true"
+      },
+      "disabled": false,
+      "heading": "Assign Test to a role",
+      "landmark": {
+       "name": "",
+       "role": "form"
+      },
+      "layer": "document",
+      "name": "Employee Can be issued cards, but cannot view sensitive bank account info",
+      "rect": [
+       523,
+       300,
+       18,
+       18
+      ],
+      "role": "radio",
+      "tag": "input",
+      "xpath": "/html/body/div[1]/main[1]/div[1]/div[2]/div[2]/div[3]/form[1]/section[1]/div[2]/fieldset[1]/div[1]/h2[1]/button[1]/div[1]/label[1]/input[1]"
+     },
+     "state": "settings.invite-role"
+    },
+    {
+     "evidence": {
+      "agree": false,
+      "axe": "pass",
+      "exception": null,
+      "height": 18,
+      "offset": 0,
+      "own": "fail",
+      "passedBy": null,
+      "width": 18
+     },
+     "occurrence": {
+      "ancestors": [
+       [
+        "_radioButtonWrapper_ial95_4",
+        "_radioWrapper_162lh_6",
+        "_blockVariant_ial95_189"
+       ],
+       [
+        "_radioGroup_phe2n_23",
+        "_rowLayout_phe2n_32"
+       ],
+       [],
+       [
+        "_mainContent_162lh_37"
+       ],
+       [
+        "_sectionContent_162lh_19"
+       ],
+       [
+        "_sectionWrapper_162lh_13"
+       ],
+       [],
+       [
+        "_formContainer_c9ign_31"
+       ]
+      ],
+      "classes": [
+       "_radioButton_ial95_4"
+      ],
+      "data": {
+       "data-active-item": "true"
+      },
+      "disabled": false,
+      "heading": "Profile",
+      "landmark": null,
+      "layer": "document",
+      "name": "Business",
+      "rect": [
+       573,
+       260,
+       18,
+       18
+      ],
+      "role": "radio",
+      "tag": "input",
+      "xpath": "/html/body/div[7]/div[1]/div[1]/div[3]/div[1]/div[1]/div[1]/section[1]/div[1]/div[1]/fieldset[1]/label[2]/input[1]"
+     },
+     "state": "billpay.edit-recipient-details"
+    }
+   ],
+   "evidenceHash": "8d3c777f1a437a641ef0912bd5ec3d1b5a01afdd4b39ee30dd013efa7f68345f",
+   "facts": {
+    "criterion": "2.5.8",
+    "criterionName": "Target Size (Minimum)",
+    "element": "radio \"Employee Can be issued cards, but cannot…\"",
+    "offset": "280",
+    "rule": "target-size-own",
+    "screen": "Invite a user — Assign Role (Employee)",
+    "screens": 10,
+    "size": "18×18"
+   },
+   "family": "target-size",
+   "guidance": "Medium next to destructive or financial controls.",
+   "issueId": null,
+   "key": "target-size:target-size-own:d5652d9adad4",
+   "measured": true,
+   "primary": "settings.invite-role",
+   "proposals": [],
+   "rule": "target-size-own",
+   "screens": 10,
+   "severityDefault": "low",
+   "source": "scanner",
+   "states": [
+    "settings.invite-role",
+    "billpay.edit-recipient-details"
+   ],
+   "summary": "target-size-own: 18×18 px; the widest circle centered on it that clears other targets is 280 px, and the spacing exception needs 24 px.",
+   "title": "Target under 24×24 px: radio \"Employee Can be issued cards, but cannot…\""
+  },
+  {
+   "attachments": [],
+   "attempt": 1,
+   "basis": "violation",
+   "criteria": [
+    "2.5.8"
+   ],
+   "evidence": [
+    {
+     "evidence": {
+      "closestOffset": 18,
+      "failureSummary": "Fix any of the following:\n  Target has insufficient size (18px by 18px, should be at least 24px by 24px)\n  Target has insufficient space to its closest neighbors. Safe clickable space has a diameter of 18px instead of at least 24px.",
+      "height": 18,
+      "minOffset": 24,
+      "minSize": 24,
+      "width": 18
+     },
+     "occurrence": {
+      "ancestors": [
+       [
+        "_radioButtonWrapper_ial95_4"
+       ],
+       [],
+       [
+        "_accordionItemHeader_1q1xu_16",
+        "_accordionHeader_bnhk7_47"
+       ],
+       [
+        "_bodyDefault_qaod7_40"
+       ],
+       [
+        "_accordionWrapper_1q1xu_3",
+        "_accordionBorder_1q1xu_7",
+        "_accordionWrapper_bnhk7_1"
+       ],
+       [
+        "_radioGroup_phe2n_23",
+        "_radioGroup_9dnjl_1",
+        "_columnLayout_phe2n_28"
+       ],
+       [],
+       [
+        "_contentArea_1xvys_1",
+        "_contentLayout_1xvys_23"
+       ]
+      ],
+      "classes": [
+       "_radioButton_ial95_4"
+      ],
+      "data": {
+       "data-active-item": "true"
+      },
+      "heading": "Assign Test to a role",
+      "landmark": {
+       "name": "",
+       "role": "form"
+      },
+      "layer": "document",
+      "name": "Employee Can be issued cards, but cannot view sensitive bank account info",
+      "rect": [
+       523,
+       300,
+       18,
+       18
+      ],
+      "role": "radio",
+      "tag": "input",
+      "xpath": "/html/body/div[1]/main[1]/div[1]/div[2]/div[2]/div[3]/form[1]/section[1]/div[2]/fieldset[1]/div[1]/h2[1]/button[1]/div[1]/label[1]/input[1]"
+     },
+     "state": "settings.invite-role"
+    },
+    {
+     "evidence": {
+      "closestOffset": 18,
+      "failureSummary": "Fix any of the following:\n  Target has insufficient size (18px by 18px, should be at least 24px by 24px)\n  Target has insufficient space to its closest neighbors. Safe clickable space has a diameter of 18px instead of at least 24px.",
+      "height": 18,
+      "minOffset": 24,
+      "minSize": 24,
+      "width": 18
+     },
+     "occurrence": {
+      "ancestors": [
+       [
+        "_radioButtonWrapper_ial95_4"
+       ],
+       [],
+       [
+        "_accordionItemHeader_1q1xu_16",
+        "_accordionHeader_bnhk7_47"
+       ],
+       [
+        "_bodyDefault_qaod7_40"
+       ],
+       [
+        "_accordionWrapper_1q1xu_3",
+        "_accordionBorder_1q1xu_7",
+        "_accordionWrapper_bnhk7_1"
+       ],
+       [
+        "_radioGroup_phe2n_23",
+        "_radioGroup_9dnjl_1",
+        "_columnLayout_phe2n_28"
+       ],
+       [],
+       [
+        "_contentArea_1xvys_1",
+        "_contentLayout_1xvys_23"
+       ]
+      ],
+      "classes": [
+       "_radioButton_ial95_4"
+      ],
+      "data": {
+       "data-active-item": "true"
+      },
+      "heading": "Permissions",
+      "landmark": {
+       "name": "",
+       "role": "form"
+      },
+      "layer": "document",
+      "name": "Accountant Can view all accounts and transactions, and manage books",
+      "rect": [
+       523,
+       456,
+       18,
+       18
+      ],
+      "role": "radio",
+      "tag": "input",
+      "xpath": "/html/body/div[1]/main[1]/div[1]/div[2]/div[2]/div[3]/form[1]/section[1]/div[2]/fieldset[1]/div[3]/h2[1]/button[1]/div[1]/label[1]/input[1]"
+     },
+     "state": "settings.role-accountant"
+    }
+   ],
+   "evidenceHash": "7413af92d9818b235a785fdbbe184bd59e9e0c304de67ba7060627ae3372422e",
+   "facts": {
+    "criterion": "2.5.8",
+    "criterionName": "Target Size (Minimum)",
+    "element": "radio \"Employee Can be issued cards, but cannot…\"",
+    "offset": "18",
+    "rule": "target-size",
+    "screen": "Invite a user — Assign Role (Employee)",
+    "screens": 7,
+    "size": "18×18"
+   },
+   "family": "target-size",
+   "guidance": "Medium next to destructive or financial controls.",
+   "issueId": null,
+   "key": "target-size:target-size:ac74d4860154",
+   "measured": true,
+   "primary": "settings.invite-role",
+   "proposals": [],
+   "rule": "target-size",
+   "screens": 7,
+   "severityDefault": "low",
+   "source": "scanner",
+   "states": [
+    "settings.invite-role",
+    "settings.role-accountant"
+   ],
+   "summary": "target-size: 18×18 px; the widest circle centered on it that clears other targets is 18 px, and the spacing exception needs 24 px.",
+   "title": "Target under 24×24 px: radio \"Employee Can be issued cards, but cannot…\""
+  }
+ ],
+ "primaries": [
+  "settings.invite-role"
+ ],
+ "reach": {
+  "baseUrl": "https://demo.mercury.com",
+  "data": "data",
+  "map": "build/map.json",
+  "run": "2026-10-03-1525",
+  "workspace": "a11y"
+ },
+ "run": "2026-10-03-1525"
+}

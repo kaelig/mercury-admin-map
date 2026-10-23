@@ -1,0 +1,363 @@
+{
+ "area": "payments",
+ "batch": "verify-278",
+ "findings": [
+  {
+   "attachments": [],
+   "attempt": 1,
+   "basis": "violation",
+   "criteria": [
+    "1.4.3"
+   ],
+   "evidence": [
+    {
+     "evidence": {
+      "bgColor": "#ffffff",
+      "contrastRatio": 2.68,
+      "expectedContrastRatio": "4.5:1",
+      "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 2.68 (foreground color: #9d9da8, background color: #ffffff, font size: 8.2pt (10.95px), font weight: normal). Expected contrast ratio of 4.5:1",
+      "fgColor": "#9d9da8",
+      "fontSize": "8.2pt (10.95px)",
+      "fontWeight": "normal",
+      "messageKey": null
+     },
+     "occurrence": {
+      "ancestors": [
+       [],
+       [
+        "_bodyDefault_qaod7_40",
+        "_text-disabled_12t49_1",
+        "_dollarDisplay_1of3b_3"
+       ],
+       [
+        "_padRight_1rihk_3"
+       ],
+       [
+        "_tableData_1u4jr_5",
+        "_alignmentStart_1u4jr_12",
+        "_amountCell_1czwv_22",
+        "_collapsibleColumn_1acga_26"
+       ],
+       [
+        "_tableRow_137xu_3",
+        "_interactiveRows_137xu_35",
+        "_large_137xu_29"
+       ],
+       [
+        "_tableBody_1cp5b_1"
+       ],
+       [
+        "_table_1acga_4"
+       ],
+       [
+        "_tableWrapper_1acga_4"
+       ]
+      ],
+      "classes": [
+       "_superscript_1of3b_35"
+      ],
+      "data": {},
+      "heading": "Payments",
+      "landmark": {
+       "name": "",
+       "role": "main"
+      },
+      "layer": "document",
+      "name": "",
+      "rect": [
+       999,
+       741,
+       18,
+       13
+      ],
+      "role": "",
+      "tag": "span",
+      "xpath": "/html/body/div[1]/main[1]/div[1]/div[1]/div[4]/div[1]/div[2]/div[3]/div[2]/div[2]/div[1]/table[1]/tbody[1]/tr[7]/td[5]/div[1]/div[1]/span[1]/span[1]"
+     },
+     "state": "payments.scheduled"
+    },
+    {
+     "evidence": {
+      "bgColor": "#f9f9fb",
+      "contrastRatio": 2.55,
+      "expectedContrastRatio": "4.5:1",
+      "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 2.55 (foreground color: #9d9da8, background color: #f9f9fb, font size: 15.3pt (20.44px), font weight: normal). Expected contrast ratio of 4.5:1",
+      "fgColor": "#9d9da8",
+      "fontSize": "15.3pt (20.44px)",
+      "fontWeight": "normal",
+      "messageKey": null
+     },
+     "occurrence": {
+      "ancestors": [
+       [],
+       [
+        "_titleMain_qaod7_16",
+        "_dollarDisplay_1of3b_3",
+        "_totalAmount_1f7uf_142",
+        "_disabledAmount_1f7uf_157"
+       ],
+       [
+        "_headline_1f7uf_136"
+       ],
+       [
+        "_topSection_1f7uf_129"
+       ],
+       [
+        "_cardWrapper_1f7uf_119",
+        "_bg_c4u0a_60"
+       ],
+       [
+        "_themeContainer_c4u0a_4"
+       ],
+       [
+        "_cardTop_1f7uf_1",
+        "_readOnly_1f7uf_11"
+       ],
+       [
+        "_large_kwlx6_9",
+        "_noHover_3n0se_28",
+        "_shadow_3n0se_25",
+        "_raisedBackground_3n0se_45"
+       ]
+      ],
+      "classes": [
+       "_superscript_1of3b_35"
+      ],
+      "data": {},
+      "heading": "Mercury Demo sent you a payment link",
+      "landmark": {
+       "name": "",
+       "role": "main"
+      },
+      "layer": "document",
+      "name": "",
+      "rect": [
+       1022,
+       379,
+       19,
+       15
+      ],
+      "role": "",
+      "tag": "span",
+      "xpath": "/html/body/div[1]/main[1]/div[1]/div[2]/div[2]/div[3]/div[1]/div[2]/div[1]/div[1]/div[1]/div[1]/div[1]/div[1]/div[1]/div[2]/div[1]/div[1]/div[1]/div[1]/div[1]/div[1]/div[1]/div[1]/div[1]/span[1]/span[1]"
+     },
+     "state": "invoicing.payment-link-option"
+    }
+   ],
+   "evidenceHash": "b6c9d95e96250c4d382802b8d73c38e25a769cff83cf887e2e3e1e311a87ebf4",
+   "facts": {
+    "bg": "#ffffff",
+    "criterion": "1.4.3",
+    "criterionName": "Contrast (Minimum)",
+    "element": "text in \"Payments\"",
+    "fg": "#9d9da8",
+    "ratio": "2.68",
+    "required": "4.5",
+    "rule": "color-contrast",
+    "screen": "Scheduled tab",
+    "screens": 5
+   },
+   "family": "contrast",
+   "guidance": "High under 2:1, or under 3:1 for essential text.",
+   "issueId": null,
+   "key": "contrast:color-contrast:0bfb9aa21401",
+   "measured": true,
+   "primary": "payments.scheduled",
+   "proposals": [],
+   "rule": "color-contrast",
+   "screens": 5,
+   "severityDefault": "medium",
+   "source": "scanner",
+   "states": [
+    "payments.scheduled",
+    "invoicing.payment-link-option"
+   ],
+   "summary": "axe color-contrast: #9d9da8 on #ffffff measures 2.68:1; AA needs 4.5:1.",
+   "title": "Low contrast: text in \"Payments\""
+  },
+  {
+   "attachments": [],
+   "attempt": 1,
+   "basis": "violation",
+   "criteria": [
+    "1.4.3"
+   ],
+   "evidence": [
+    {
+     "evidence": {
+      "bgColor": "#ffffff",
+      "contrastRatio": 2.68,
+      "expectedContrastRatio": "4.5:1",
+      "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 2.68 (foreground color: #9d9da8, background color: #ffffff, font size: 11.3pt (15px), font weight: normal). Expected contrast ratio of 4.5:1",
+      "fgColor": "#9d9da8",
+      "fontSize": "11.3pt (15px)",
+      "fontWeight": "normal",
+      "messageKey": null
+     },
+     "occurrence": {
+      "ancestors": [
+       [
+        "_label_1u4jr_118"
+       ],
+       [
+        "_textCell_1u4jr_112"
+       ],
+       [
+        "_tableData_1u4jr_5",
+        "_alignmentStart_1u4jr_12",
+        "_accountCell_1czwv_29",
+        "_collapsibleColumn_1acga_26"
+       ],
+       [
+        "_tableRow_137xu_3",
+        "_interactiveRows_137xu_35",
+        "_large_137xu_29"
+       ],
+       [
+        "_tableBody_1cp5b_1"
+       ],
+       [
+        "_table_1acga_4"
+       ],
+       [
+        "_tableWrapper_1acga_4"
+       ],
+       [
+        "_scheduledTableContainer_1ru0g_5"
+       ]
+      ],
+      "classes": [
+       "_bodyDefault_qaod7_40",
+       "_text-disabled_12t49_1"
+      ],
+      "data": {},
+      "heading": "Payments",
+      "landmark": {
+       "name": "",
+       "role": "main"
+      },
+      "layer": "document",
+      "name": "",
+      "rect": [
+       1052,
+       738,
+       20,
+       24
+      ],
+      "role": "",
+      "tag": "span",
+      "xpath": "/html/body/div[1]/main[1]/div[1]/div[1]/div[4]/div[1]/div[2]/div[3]/div[2]/div[2]/div[1]/table[1]/tbody[1]/tr[7]/td[6]/div[1]/div[1]/span[1]"
+     },
+     "state": "payments.scheduled"
+    },
+    {
+     "evidence": {
+      "bgColor": "#ffffff",
+      "contrastRatio": 2.68,
+      "expectedContrastRatio": "4.5:1",
+      "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 2.68 (foreground color: #9d9da8, background color: #ffffff, font size: 11.3pt (15px), font weight: normal). Expected contrast ratio of 4.5:1",
+      "fgColor": "#9d9da8",
+      "fontSize": "11.3pt (15px)",
+      "fontWeight": "normal",
+      "messageKey": null
+     },
+     "occurrence": {
+      "ancestors": [
+       [],
+       [
+        "_recentChargeRow_1ff2k_111",
+        "_noStyleLink_njx8v_1"
+       ],
+       [],
+       [
+        "_recentCharges_1ff2k_97"
+       ],
+       [
+        "_large_kwlx6_9",
+        "_noHover_3n0se_28",
+        "_shadow_3n0se_25",
+        "_raisedBackground_3n0se_45",
+        "_card_1ff2k_1"
+       ],
+       [
+        "_detailsWrapper_fhqdr_108"
+       ],
+       [
+        "_wrapperColumn_k8dlh_4",
+        "_visible_k8dlh_16",
+        "_elevateZIndex_k8dlh_32"
+       ],
+       [
+        "_tableWrapper_1waxt_304",
+        "_tableWrapper_fhqdr_113"
+       ]
+      ],
+      "classes": [
+       "_bodyDefault_qaod7_40",
+       "_text-disabled_12t49_1"
+      ],
+      "data": {},
+      "heading": "",
+      "landmark": {
+       "name": "",
+       "role": "main"
+      },
+      "layer": "top",
+      "name": "",
+      "rect": [
+       978,
+       1026,
+       39,
+       24
+      ],
+      "role": "",
+      "tag": "span",
+      "xpath": "/html/body/div[1]/main[1]/div[1]/div[1]/div[4]/div[1]/div[2]/div[5]/div[2]/div[1]/div[1]/div[3]/div[2]/a[3]/div[1]/span[1]"
+     },
+     "state": "cards.subscription-detail"
+    }
+   ],
+   "evidenceHash": "8bc12b71fdf17196c3683bce55ba021279e3dd41a3b22ff0d90d481b084aaa52",
+   "facts": {
+    "bg": "#ffffff",
+    "criterion": "1.4.3",
+    "criterionName": "Contrast (Minimum)",
+    "element": "text in \"Payments\"",
+    "fg": "#9d9da8",
+    "ratio": "2.68",
+    "required": "4.5",
+    "rule": "color-contrast",
+    "screen": "Scheduled tab",
+    "screens": 4
+   },
+   "family": "contrast",
+   "guidance": "High under 2:1, or under 3:1 for essential text.",
+   "issueId": null,
+   "key": "contrast:color-contrast:9e469f41fa8d",
+   "measured": true,
+   "primary": "payments.scheduled",
+   "proposals": [],
+   "rule": "color-contrast",
+   "screens": 4,
+   "severityDefault": "medium",
+   "source": "scanner",
+   "states": [
+    "payments.scheduled",
+    "cards.subscription-detail"
+   ],
+   "summary": "axe color-contrast: #9d9da8 on #ffffff measures 2.68:1; AA needs 4.5:1.",
+   "title": "Low contrast: text in \"Payments\""
+  }
+ ],
+ "primaries": [
+  "payments.scheduled"
+ ],
+ "reach": {
+  "baseUrl": "https://demo.mercury.com",
+  "data": "data",
+  "map": "build/map.json",
+  "run": "2026-10-03-1525",
+  "workspace": "a11y"
+ },
+ "run": "2026-10-03-1525"
+}

@@ -1,0 +1,258 @@
+{
+ "batch": "record-070",
+ "reach": {
+  "baseUrl": "https://demo.mercury.com",
+  "data": "data",
+  "map": "build/map.json",
+  "run": "2026-10-02-1349",
+  "workspace": "a11y"
+ },
+ "run": "2026-10-02-1349",
+ "states": [
+  {
+   "area": "settings",
+   "draft": "not drafted: its parent had no accepted recipe when the drafter ran; a previous recorder failed: reach settings.role-money-mover: step-failed settings.invite-job-title hop 0: click {\"name\":\"Job title - optional\",\"role\":\"combobox\"}: no element matches",
+   "image": "screens/settings/45-invite-issue-card.png",
+   "kind": "page",
+   "labels": [
+    "Open Job title select",
+    "Pick a title, fill name/email, click Next",
+    "Select Money Mover",
+    "Click Next"
+   ],
+   "mutates": false,
+   "note": "Money Mover adds an Issue Card step: nickname, usage note, Credit/Debit and Virtual/Physical radio tiles, spend controls; 'Or, skip issuing card'.",
+   "parent": "settings.role-money-mover",
+   "state": "settings.invite-issue-card",
+   "title": "Invite a user \u2014 Issue Card"
+  },
+  {
+   "area": "settings",
+   "draft": "not drafted: its parent had no accepted recipe when the drafter ran",
+   "image": "screens/settings/46-invite-issue-card-errors.png",
+   "kind": "validation-error",
+   "labels": [
+    "Open Job title select",
+    "Pick a title, fill name/email, click Next",
+    "Select Money Mover",
+    "Click Next",
+    "Click Next without a control type"
+   ],
+   "mutates": false,
+   "note": "Next without a spend Control type shows 'Please complete this field' under the Control type select.",
+   "parent": "settings.invite-issue-card",
+   "state": "settings.invite-issue-card-error",
+   "title": "Issue Card \u2014 control type required"
+  },
+  {
+   "area": "settings",
+   "draft": "not drafted: its parent had no accepted recipe when the drafter ran",
+   "image": "screens/settings/47-invite-review.png",
+   "kind": "page",
+   "labels": [
+    "Open Job title select",
+    "Pick a title, fill name/email, click Next",
+    "Select Money Mover",
+    "Click Next",
+    "Click 'Or, skip issuing card'"
+   ],
+   "mutates": false,
+   "note": "Summary of Riley Park (email, job title) and the Money Mover role with Back / Send invite.",
+   "parent": "settings.invite-issue-card",
+   "state": "settings.invite-review",
+   "title": "Invite a user \u2014 Review & Send"
+  },
+  {
+   "area": "settings",
+   "draft": "not drafted: its parent had no accepted recipe when the drafter ran",
+   "image": "screens/settings/48-invite-sent.png",
+   "kind": "confirmation",
+   "labels": [
+    "Open Job title select",
+    "Pick a title, fill name/email, click Next",
+    "Select Money Mover",
+    "Click Next",
+    "Click 'Or, skip issuing card'",
+    "Click Send invite"
+   ],
+   "mutates": true,
+   "note": "Full-screen 'Invite sent' page with card-grid illustration, Done inviting / Invite your team; the demo banner is absent here.",
+   "parent": "settings.invite-review",
+   "state": "settings.invite-sent",
+   "title": "Invite sent"
+  },
+  {
+   "area": "settings",
+   "draft": "not drafted: its parent had no accepted recipe when the drafter ran; a previous recorder failed: reach settings.user-detail failed: settings.user-detail hop 0: click {\"text\":\"Alice Chen alice@demo.mercury.comMoney MoverSoftware EngineerFinanceActive\"}: locator.click: Timeout 5000ms exceeded.",
+   "image": "screens/settings/50-edit-user.png",
+   "kind": "form-state",
+   "labels": [
+    "Click a team member row",
+    "Click Edit"
+   ],
+   "mutates": false,
+   "note": "Panel in edit mode: job title select (Other) + free-text title, department combobox, role select and permission toggles.",
+   "parent": "settings.user-detail",
+   "state": "settings.edit-member",
+   "title": "Edit member panel"
+  },
+  {
+   "area": "settings",
+   "draft": "not drafted: its parent had no accepted recipe when the drafter ran",
+   "image": "screens/settings/51-edit-user-dirty.png",
+   "kind": "form-state",
+   "labels": [
+    "Click a team member row",
+    "Click Edit",
+    "Change Specify job title"
+   ],
+   "mutates": false,
+   "note": "After changing the job title, the panel footer's Cancel/Save become active (Save was disabled until a change).",
+   "parent": "settings.edit-member",
+   "state": "settings.edit-member-dirty",
+   "title": "Edit member \u2014 changed, Save enabled"
+  },
+  {
+   "area": "settings",
+   "draft": "not drafted: its parent had no accepted recipe when the drafter ran",
+   "image": "screens/settings/52-user-saved.png",
+   "kind": "toast",
+   "labels": [
+    "Click a team member row",
+    "Click Edit",
+    "Change Specify job title",
+    "Click Save"
+   ],
+   "mutates": true,
+   "note": "Panel returns to read view showing 'Senior Software Engineer' and a 'Job title updated' toast.",
+   "parent": "settings.edit-member-dirty",
+   "state": "settings.member-saved",
+   "title": "Job title updated toast"
+  },
+  {
+   "area": "settings",
+   "draft": "not drafted: its parent had no accepted recipe when the drafter ran; a previous recorder failed: reach settings.personal-security-lower: step-failed settings.personal-security-lower hop 0: scroll {\"name\":\"Generate New Codes\",\"role\":\"button\"}: no element matches",
+   "image": "screens/settings/117-change-password.png",
+   "kind": "modal",
+   "labels": [
+    "Scroll to Account recovery",
+    "Click Change password"
+   ],
+   "mutates": false,
+   "note": "'Change Password' heading, Old / New / Repeat New Password fields with show toggles, a pre-ticked 'Log out of all other devices' checkbox, Cancel / 'Change password'.",
+   "parent": "settings.personal-security-lower",
+   "state": "settings.change-password",
+   "title": "Change Password modal"
+  },
+  {
+   "area": "settings",
+   "draft": "not drafted: its parent had no accepted recipe when the drafter ran",
+   "image": "screens/settings/118-change-password-errors.png",
+   "kind": "validation-error",
+   "labels": [
+    "Scroll to Account recovery",
+    "Click Change password",
+    "Enter short passwords and submit"
+   ],
+   "mutates": true,
+   "note": "Short new passwords flag New and Repeat fields with 'Minimum 10 characters'.",
+   "parent": "settings.change-password",
+   "state": "settings.change-password-short",
+   "title": "Change password \u2014 too short"
+  },
+  {
+   "area": "settings",
+   "draft": "not drafted: its parent had no accepted recipe when the drafter ran; a previous recorder failed: reach settings.personal-security-lower: step-failed settings.personal-security-lower hop 0: scroll {\"name\":\"Generate New Codes\",\"role\":\"button\"}: no element matches",
+   "image": "screens/settings/123-add-verification-method.png",
+   "kind": "modal",
+   "labels": [
+    "Scroll to Account recovery",
+    "Click + Add another verification method"
+   ],
+   "mutates": false,
+   "note": "'+ Add another verification method' first asks for a backup code (placeholder 'ABCD-EFGH-IJKL-MNOP'), with left-aligned Cancel / Submit, 'Use passkey instead', 'Use 2FA code instead', 'Backup code guide' and 'Unable to log in?'.",
+   "parent": "settings.personal-security-lower",
+   "state": "settings.verify-identity",
+   "title": "Verify your identity first"
+  },
+  {
+   "area": "settings",
+   "draft": "not drafted: its parent had no accepted recipe when the drafter ran",
+   "image": "screens/settings/124-verify-identity-result.png",
+   "kind": "modal",
+   "labels": [
+    "Scroll to Account recovery",
+    "Click + Add another verification method",
+    "Enter a backup code and click Submit"
+   ],
+   "mutates": true,
+   "note": "Any code (tested 'AAAA-BBBB-CCCC-DDDD') is accepted and the modal becomes a spinner: 'Waiting for security key \u2014 Follow browser instructions to complete setup'. The WebAuthn prompt was not pursued.",
+   "parent": "settings.verify-identity",
+   "state": "settings.waiting-security-key",
+   "title": "Waiting for security key"
+  },
+  {
+   "area": "settings",
+   "draft": "not drafted: its parent had no accepted recipe when the drafter ran; a previous recorder failed: reach settings.personal-security-lower: step-failed settings.personal-security-lower hop 0: scroll {\"name\":\"Generate New Codes\",\"role\":\"button\"}: no element matches",
+   "image": "screens/settings/121-backup-codes.png",
+   "kind": "modal",
+   "labels": [
+    "Scroll to Account recovery",
+    "Click Generate New Codes"
+   ],
+   "mutates": true,
+   "note": "Full-screen takeover with an 'esc' close: eight monospace codes, Print / Download / Copy, and a required checkbox 'I\u2019ve saved my backup codes in a secure place' that enables Done.",
+   "parent": "settings.personal-security-lower",
+   "state": "settings.backup-codes",
+   "title": "Save your new backup codes"
+  },
+  {
+   "area": "settings",
+   "draft": "not drafted: its parent had no accepted recipe when the drafter ran; a previous recorder failed: policy (now retry: policy.fixtureValues gained empty \"\", 2000000, 10000, 2500, 500, 150, card, a, Lunch, Deli 77, 12/31/2099): The label types an http:// URL in Endpoint URL; no http:// value is in fixtureValues (url is https, invalidUrl is 'not a url').",
+   "image": "screens/settings/83-create-webhook-http-error.png",
+   "kind": "validation-error",
+   "labels": [
+    "Click + Create webhook",
+    "Enter an http:// URL and tab away"
+   ],
+   "mutates": true,
+   "note": "An http:// URL shows 'Please enter a valid HTTPS URL (e.g. https://example.com/webhook)'; Create endpoint stays disabled.",
+   "parent": "settings.create-webhook",
+   "state": "settings.create-webhook-http-error",
+   "title": "Create webhook \u2014 http URL rejected"
+  },
+  {
+   "area": "settings",
+   "draft": "not drafted: its parent had no accepted recipe when the drafter ran; a previous recorder failed: second replay: settings.netsuite-step2 hop 0: click {\"name\":\"Mercury Checking (7772)\",\"role\":\"option\"}: locator.evaluate: Timeout 30000ms exceeded. (ancestor recipe unstable; my hop is a single click on Start sync)",
+   "image": "screens/settings/32-netsuite-synced.png",
+   "kind": "toast",
+   "labels": [
+    "Click the NetSuite row",
+    "Open the Treasury GL code select",
+    "Pick a GL code and click Next",
+    "Choose a Bill pay GL code and click Next",
+    "Click Start sync"
+   ],
+   "mutates": true,
+   "note": "Back on Integrations, NetSuite leaves the browse list and a toast says 'Your Mercury account is now connected to NetSuite.'",
+   "parent": "settings.netsuite-step3",
+   "state": "settings.netsuite-connected",
+   "title": "NetSuite connected toast"
+  },
+  {
+   "area": "settings",
+   "draft": "not drafted: its parent had no accepted recipe when the drafter ran",
+   "image": "screens/settings/53-remove-user.png",
+   "kind": "modal",
+   "labels": [
+    "Click a team member row",
+    "Click Remove"
+   ],
+   "mutates": true,
+   "note": "'Remove Alice?' warns cards will be canceled and 6 subscriptions affected; Go back / pink 'Remove Alice'.",
+   "parent": "settings.user-detail",
+   "state": "settings.remove-member-confirm",
+   "title": "Remove member confirmation"
+  }
+ ]
+}

@@ -1,0 +1,119 @@
+{
+ "area": "invoicing",
+ "batch": "verify-491",
+ "findings": [
+  {
+   "attachments": [],
+   "attempt": 1,
+   "basis": "candidate",
+   "criteria": [
+    "4.1.2"
+   ],
+   "evidence": [
+    {
+     "evidence": {
+      "description": "",
+      "name": "Overdue",
+      "role": "menuitem",
+      "states": {
+       "expanded": false,
+       "haspopup": "menu"
+      },
+      "template": "menuitem \"Overdue\" [expanded=false, haspopup=menu]"
+     },
+     "occurrence": {
+      "ancestors": [
+       [
+        "_chip_1xw00_8",
+        "_active_1xw00_161"
+       ],
+       [],
+       [
+        "_filters_grqat_29"
+       ],
+       [
+        "_tableViewsAndFilters_grqat_82"
+       ],
+       [
+        "_toolbarContainer_grqat_4"
+       ],
+       [
+        "_toolbarWrapper_xyqax_1"
+       ],
+       [
+        "_invoiceDashboardWrapper_17p45_1",
+        "_pageContent_809q8_151",
+        "_pageContentWidth_809q8_184"
+       ],
+       [
+        "_dashboardContent_809q8_29"
+       ]
+      ],
+      "classes": [
+       "_mainElement_1xw00_24",
+       "_interactive_1xw00_134",
+       "_dropdownChip_r52w9_7"
+      ],
+      "data": {
+       "data-focus-visible": "true"
+      },
+      "heading": "Invoicing",
+      "landmark": {
+       "name": "",
+       "role": "main"
+      },
+      "layer": "document",
+      "name": "Overdue",
+      "rect": [
+       462,
+       348,
+       76,
+       32
+      ],
+      "role": "menuitem",
+      "tag": "button",
+      "xpath": "/html/body/div[1]/main[1]/div[1]/div[1]/div[4]/div[1]/div[2]/div[2]/div[1]/span[1]/span[2]/span[1]/span[1]/button[1]"
+     },
+     "state": "invoicing.filtered-overdue"
+    }
+   ],
+   "evidenceHash": "78c91cdaed3380b61556ad1354cf19101fa2b081628d022f97c73c41c89cc771",
+   "facts": {
+    "announced": "menuitem \"Overdue\" [expanded=false, haspopup=menu]",
+    "axeSummary": "",
+    "criterion": "4.1.2",
+    "criterionName": "Name, Role, Value",
+    "element": "menuitem \"Overdue\"",
+    "rule": "announced-as",
+    "screen": "List filtered to Overdue"
+   },
+   "family": "role-state",
+   "guidance": "Low for optional ARIA or an invalid autocomplete token; high when aria-hidden hides the whole page.",
+   "issueId": null,
+   "key": "role-state:announced-as:5e42e04d8158",
+   "measured": false,
+   "primary": "invoicing.filtered-overdue",
+   "proposals": [],
+   "rule": "announced-as",
+   "screens": 1,
+   "severityDefault": "medium",
+   "source": "scanner",
+   "states": [
+    "invoicing.filtered-overdue"
+   ],
+   "summary": "announced-as: announced as menuitem \"Overdue\" [expanded=false, haspopup=menu].",
+   "title": "Wrong role or state: menuitem \"Overdue\""
+  }
+ ],
+ "primaries": [
+  "invoicing.filtered-overdue"
+ ],
+ "reach": {
+  "baseUrl": "https://demo.mercury.com",
+  "data": "data",
+  "map": "build/map.json",
+  "run": "2026-10-03-1525",
+  "workspace": "a11y"
+ },
+ "run": "2026-10-03-1525"
+}

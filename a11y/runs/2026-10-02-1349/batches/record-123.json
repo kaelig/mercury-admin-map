@@ -1,0 +1,77 @@
+{
+ "batch": "record-123",
+ "reach": {
+  "baseUrl": "https://demo.mercury.com",
+  "data": "data",
+  "map": "build/map.json",
+  "run": "2026-10-02-1349",
+  "workspace": "a11y"
+ },
+ "run": "2026-10-02-1349",
+ "states": [
+  {
+   "area": "books",
+   "draft": "not drafted: its parent had no accepted recipe when the drafter ran; a previous recorder failed: The label is only \"Pick Sep 24\": pick that day in the open Date calendar (any Sep 24 cell). The capture also shows a typed description and amounts, which came from steps no label records, so do not type them; the conductor reviews this recipe against the label, not those values.",
+   "image": "screens/books/18-je-filling.png",
+   "kind": "form-state",
+   "labels": [
+    "Toggle Books",
+    "Click Try Mercury Books",
+    "Books created",
+    "Dismiss spotlight",
+    "Click Add",
+    "Journal entry",
+    "Open Date",
+    "Pick Sep 24"
+   ],
+   "mutates": false,
+   "note": "Rent debit 1,250.00 and Cash and Cash Equivalents credit 1,250.00, totals balanced.",
+   "parent": "books.je-date-picker",
+   "state": "books.je-filled",
+   "title": "Balanced journal entry"
+  },
+  {
+   "area": "books",
+   "draft": "not drafted: its parent had no accepted recipe when the drafter ran",
+   "image": "screens/books/19-je-saved.png",
+   "kind": "confirmation",
+   "labels": [
+    "Toggle Books",
+    "Click Try Mercury Books",
+    "Books created",
+    "Dismiss spotlight",
+    "Click Add",
+    "Journal entry",
+    "Open Date",
+    "Pick Sep 24",
+    "Save"
+   ],
+   "mutates": true,
+   "note": "After Save a \"Successfully created the journal entry\" toast appears and the drawer turns into the read-only entry with edit, delete and duplicate icons.",
+   "parent": "books.je-filled",
+   "state": "books.je-detail",
+   "title": "Journal entry created"
+  },
+  {
+   "area": "books",
+   "draft": "not drafted: its parent had no accepted recipe when the drafter ran; a previous recorder failed: policy (now retry: policy.fixtureValues gained empty \"\", 2000000, 10000, 2500, 500, 150, card, a, zzqxnothing, Lunch, Deli 77, 12/31/2099, http://example.invalid/a11y-audit): The label types a value into the rule condition and filters the Then select by 'Software'. The note shows that value, and it is not a fixture value.",
+   "image": "screens/books/40-rule-ledger-menu.png",
+   "kind": "menu",
+   "labels": [
+    "Toggle Books",
+    "Click Try Mercury Books",
+    "Books created",
+    "Dismiss spotlight",
+    "Sidebar: Rules",
+    "Click Create rule",
+    "Open If select",
+    "Pick Description, type value, open Then"
+   ],
+   "mutates": true,
+   "note": "Then select filtered by \"Software\", grouped under Expense.",
+   "parent": "books.rule-condition-menu",
+   "state": "books.rule-ledger-menu",
+   "title": "Rule outcome ledger picker"
+  }
+ ]
+}
