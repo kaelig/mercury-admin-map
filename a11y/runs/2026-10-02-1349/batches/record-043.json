@@ -1,0 +1,240 @@
+{
+ "batch": "record-043",
+ "reach": {
+  "baseUrl": "https://demo.mercury.com",
+  "data": "data",
+  "map": "build/map.json",
+  "run": "2026-10-02-1349",
+  "workspace": "a11y"
+ },
+ "run": "2026-10-02-1349",
+ "states": [
+  {
+   "area": "home",
+   "draft": "cannot parse \"Type 'card'\"; a previous recorder failed: policy (now retry: policy.fixtureValues gained empty \"\", 2000000, 10000, 500, 150, card): The label types 'card' in search; 'card' is not a fixture value (only searchTerm 'Google').",
+   "image": "screens/home/29-search-pages-filter.png",
+   "kind": "modal",
+   "labels": [
+    "Click 'Search for anything' (or Cmd+K)",
+    "Type 'card'"
+   ],
+   "mutates": false,
+   "note": "Query 'card' with the All chip: a Pages group (Cards, Create a card, Change password) above Transactions groups (Cards, Card Expenses, Debit Card).",
+   "parent": "home.search-open",
+   "state": "home.search-card-all",
+   "title": "Search 'card' \u2014 All results"
+  },
+  {
+   "area": "home",
+   "draft": "not drafted: its parent had no accepted recipe when the drafter ran",
+   "image": "screens/home/73-search-pages-chip.png",
+   "kind": "modal",
+   "labels": [
+    "Click 'Search for anything' (or Cmd+K)",
+    "Type 'card'",
+    "Click 'Pages' chip"
+   ],
+   "mutates": false,
+   "note": "With 'card' typed, the Pages chip narrows results to three pages: Cards, Create a card, Change password.",
+   "parent": "home.search-card-all",
+   "state": "home.search-pages",
+   "title": "Search \u2014 Pages filter"
+  },
+  {
+   "area": "home",
+   "draft": "not drafted: its parent had no accepted recipe when the drafter ran",
+   "image": "screens/home/74-search-cards-chip.png",
+   "kind": "modal",
+   "labels": [
+    "Click 'Search for anything' (or Cmd+K)",
+    "Type 'card'",
+    "Click 'Pages' chip",
+    "Click 'Cards' chip"
+   ],
+   "mutates": false,
+   "note": "Cards chip lists matching cards with holder, last four and '$0.00 spent this week'; an 'Agent Card' badge marks one.",
+   "parent": "home.search-pages",
+   "state": "home.search-cards",
+   "title": "Search \u2014 Cards filter"
+  },
+  {
+   "area": "home",
+   "draft": "not drafted: its parent had no accepted recipe when the drafter ran",
+   "image": "screens/home/75-search-filters-scrolled.png",
+   "kind": "modal",
+   "labels": [
+    "Click 'Search for anything' (or Cmd+K)",
+    "Type 'card'",
+    "Click 'Pages' chip",
+    "Click 'Cards' chip",
+    "Click chip-row right arrow"
+   ],
+   "mutates": false,
+   "note": "The right arrow scrolls the chip row to reveal Scheduled, Approvals, Users and Departments, with a left arrow to go back.",
+   "parent": "home.search-cards",
+   "state": "home.search-filters-scrolled",
+   "title": "Search \u2014 filter chips scrolled"
+  },
+  {
+   "area": "home",
+   "draft": "nothing on home.index matches {\"click\":{\"name\":\"map launcher\"}}",
+   "image": "screens/home/02-try-panel-startup.png",
+   "kind": "popover",
+   "labels": [
+    "Click map launcher (bottom right)"
+   ],
+   "mutates": false,
+   "note": "Bottom-right onboarding panel with Startup/Ecommerce/Agency/More tabs; Startup lists contractor payments, team invites, cards, vendor details, SAFE.",
+   "parent": "home.index",
+   "state": "home.try-panel-startup",
+   "title": "Try out Mercury panel: Startup"
+  },
+  {
+   "area": "home",
+   "draft": "not drafted: its parent had no accepted recipe when the drafter ran",
+   "image": "screens/home/03-try-panel-ecommerce.png",
+   "kind": "popover",
+   "labels": [
+    "Click map launcher (bottom right)",
+    "Click Ecommerce tab"
+   ],
+   "mutates": false,
+   "note": "Ecommerce tab of the Try-out panel with commerce-oriented suggested tasks.",
+   "parent": "home.try-panel-startup",
+   "state": "home.try-panel-ecommerce",
+   "title": "Try out panel: Ecommerce tab"
+  },
+  {
+   "area": "home",
+   "draft": "not drafted: its parent had no accepted recipe when the drafter ran",
+   "image": "screens/home/04-try-panel-agency.png",
+   "kind": "popover",
+   "labels": [
+    "Click map launcher (bottom right)",
+    "Click Ecommerce tab",
+    "Click Agency tab"
+   ],
+   "mutates": false,
+   "note": "Agency tab of the Try-out panel with agency-oriented suggested tasks.",
+   "parent": "home.try-panel-ecommerce",
+   "state": "home.try-panel-agency",
+   "title": "Try out panel: Agency tab"
+  },
+  {
+   "area": "home",
+   "draft": "not drafted: its parent had no accepted recipe when the drafter ran",
+   "image": "screens/home/05-try-panel-more.png",
+   "kind": "popover",
+   "labels": [
+    "Click map launcher (bottom right)",
+    "Click Ecommerce tab",
+    "Click Agency tab",
+    "Click More tab"
+   ],
+   "mutates": false,
+   "note": "More tab: Make a payment, View transactions, Create a card, Send an invoice, Track tasks; plus 'Understand your data' with Try Command.",
+   "parent": "home.try-panel-agency",
+   "state": "home.try-panel-more",
+   "title": "Try out panel: More tab"
+  },
+  {
+   "area": "home",
+   "draft": "not drafted: its parent had no accepted recipe when the drafter ran",
+   "image": "screens/home/50-command-thinking.png",
+   "kind": "form-state",
+   "labels": [
+    "Type a prompt",
+    "Press Enter"
+   ],
+   "mutates": false,
+   "note": "After Enter the view becomes a 'New conversation' thread; the user bubble is shown with a timestamp and the input reads 'Esc to cancel' with a stop button.",
+   "parent": "home.command-typed",
+   "state": "home.command-thinking",
+   "title": "Command: thinking"
+  },
+  {
+   "area": "home",
+   "draft": "not drafted: its parent had no accepted recipe when the drafter ran",
+   "image": "screens/home/51-command-response.png",
+   "kind": "confirmation",
+   "labels": [
+    "Type a prompt",
+    "Press Enter",
+    "Wait for answer"
+   ],
+   "mutates": false,
+   "note": "Mercury AI answers with a collapsible 'Thought process', two paragraphs and copy / like / dislike actions.",
+   "parent": "home.command-thinking",
+   "state": "home.command-response",
+   "title": "Command: text answer"
+  },
+  {
+   "area": "home",
+   "draft": "not drafted: its parent had no accepted recipe when the drafter ran",
+   "image": "screens/home/52-command-thought-process.png",
+   "kind": "form-state",
+   "labels": [
+    "Type a prompt",
+    "Press Enter",
+    "Wait for answer",
+    "Click 'Thought process'"
+   ],
+   "mutates": false,
+   "note": "Expanded 'Thought process' reveals the step 'Evaluating options 2s'.",
+   "parent": "home.command-response",
+   "state": "home.command-thought-process",
+   "title": "Command: thought process expanded"
+  },
+  {
+   "area": "home",
+   "draft": "not drafted: its parent had no accepted recipe when the drafter ran",
+   "image": "screens/home/62-tx-amount-sort-menu.png",
+   "kind": "menu",
+   "labels": [
+    "Scroll to the Transactions widget",
+    "Click 'Operating expenses'",
+    "Click Amount column header"
+   ],
+   "mutates": false,
+   "note": "Clicking the Amount header opens Low to high / High to low / Clear sort (disabled).",
+   "parent": "home.tx-operating-expenses",
+   "state": "home.tx-sort-menu",
+   "title": "Amount column sort menu"
+  },
+  {
+   "area": "home",
+   "draft": "not drafted: its parent had no accepted recipe when the drafter ran",
+   "image": "screens/home/63-tx-sorted-amount.png",
+   "kind": "page",
+   "labels": [
+    "Scroll to the Transactions widget",
+    "Click 'Operating expenses'",
+    "Click Amount column header",
+    "Click 'High to low'"
+   ],
+   "mutates": false,
+   "note": "After 'High to low' the widget lists Gusto (Payroll) \u2212$90,122.53 first and the header shows a sort icon.",
+   "parent": "home.tx-sort-menu",
+   "state": "home.tx-sorted",
+   "title": "Transactions sorted by amount"
+  },
+  {
+   "area": "home",
+   "draft": "not drafted: its parent had no accepted recipe when the drafter ran",
+   "image": "screens/home/64-tx-row-drawer.png",
+   "kind": "drawer",
+   "labels": [
+    "Scroll to the Transactions widget",
+    "Click 'Operating expenses'",
+    "Click Amount column header",
+    "Click 'High to low'",
+    "Click a transaction row"
+   ],
+   "mutates": false,
+   "note": "Clicking a Home transaction row opens Transactions with the 'Operating expenses' saved view and the ACH Pull detail drawer (category, GL code, department, comments).",
+   "parent": "home.tx-sorted",
+   "state": "home.tx-row-drawer",
+   "title": "Transaction detail from Home"
+  }
+ ]
+}

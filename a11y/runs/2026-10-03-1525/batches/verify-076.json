@@ -1,0 +1,113 @@
+{
+ "area": "billpay",
+ "batch": "verify-076",
+ "findings": [
+  {
+   "attachments": [],
+   "attempt": 1,
+   "basis": "violation",
+   "criteria": [
+    "1.3.1"
+   ],
+   "evidence": [
+    {
+     "evidence": {
+      "failureSummary": "Fix any of the following:\n  Element has children which are not allowed: button, button[aria-label]",
+      "messageKey": "unallowed",
+      "values": "button, button[aria-label]"
+     },
+     "occurrence": {
+      "ancestors": [
+       [
+        "_leftToolbar_55yn8_12"
+       ],
+       [
+        "_toolbarWrapper_55yn8_1"
+       ],
+       [
+        "_dropzone_ex01s_1"
+       ],
+       [
+        "_tabContent_a2zac_49"
+       ],
+       [
+        "session-replay-unmask"
+       ],
+       [
+        "_pageContent_809q8_151",
+        "_pageContentWidth_809q8_184",
+        "_footerPadding_809q8_115"
+       ],
+       [
+        "_dashboardContent_809q8_29"
+       ],
+       [
+        "_layout_809q8_18"
+       ]
+      ],
+      "classes": [
+       "_toolbarContainer_grqat_4"
+      ],
+      "data": {
+       "data-ds-table-toolbar-menubar": "true"
+      },
+      "heading": "Due in next 7 days",
+      "landmark": {
+       "name": "",
+       "role": "main"
+      },
+      "layer": "document",
+      "name": "",
+      "rect": [
+       346,
+       409,
+       968,
+       32
+      ],
+      "role": "menubar",
+      "tag": "div",
+      "xpath": "/html/body/div[1]/main[1]/div[1]/div[1]/div[4]/div[1]/div[2]/div[2]/div[2]/div[2]/div[1]/span[1]/div[1]"
+     },
+     "state": "billpay.filter-empty"
+    }
+   ],
+   "evidenceHash": "ee3583106ac4fd5866691329d284596eeedd00503af7c88d867a19285c3aea08",
+   "facts": {
+    "announced": "menubar \"\"",
+    "axeSummary": "Element has children which are not allowed: button, button[aria-label]",
+    "criterion": "1.3.1",
+    "criterionName": "Info and Relationships",
+    "element": "menubar in \"Due in next <n> days\"",
+    "rule": "aria-required-children",
+    "screen": "Filtered empty state"
+   },
+   "family": "role-state",
+   "guidance": "Low for optional ARIA or an invalid autocomplete token; high when aria-hidden hides the whole page.",
+   "issueId": null,
+   "key": "role-state:aria-required-children:3baa76bc0884",
+   "measured": false,
+   "primary": "billpay.filter-empty",
+   "proposals": [],
+   "rule": "aria-required-children",
+   "screens": 1,
+   "severityDefault": "medium",
+   "source": "scanner",
+   "states": [
+    "billpay.filter-empty"
+   ],
+   "summary": "aria-required-children: announced as menubar \"\". Element has children which are not allowed: button, button[aria-label]",
+   "title": "Wrong role or state: menubar in \"Due in next <n> days\""
+  }
+ ],
+ "primaries": [
+  "billpay.filter-empty"
+ ],
+ "reach": {
+  "baseUrl": "https://demo.mercury.com",
+  "data": "data",
+  "map": "build/map.json",
+  "run": "2026-10-03-1525",
+  "workspace": "a11y"
+ },
+ "run": "2026-10-03-1525"
+}

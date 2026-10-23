@@ -1,0 +1,335 @@
+{
+ "areas": [
+  {
+   "area": "interactive",
+   "title": "Interaction checks",
+   "nodes": [
+    {
+     "id": "interactive.focus-rings",
+     "title": "Focus rings",
+     "url": "/interactive/focus-rings.html",
+     "kind": "page",
+     "note": "Three buttons (default ring, custom box-shadow ring, outline removed) and an input whose wrapper draws the ring with :focus-within."
+    },
+    {
+     "id": "interactive.hidden",
+     "title": "Hidden focus",
+     "url": "/interactive/hidden.html",
+     "kind": "page",
+     "note": "A skip link that appears on focus, then a clipped link, an off-screen button and a transparent button that all take focus while hidden."
+    },
+    {
+     "id": "interactive.order",
+     "title": "Tab order",
+     "url": "/interactive/order.html",
+     "kind": "page",
+     "note": "Download, Share and Print buttons where Print is drawn a row above the other two, a clickable card with no tab stop, and Done."
+    },
+    {
+     "id": "interactive.trap",
+     "title": "Keyboard trap",
+     "url": "/interactive/trap.html",
+     "kind": "page",
+     "note": "A non-modal filter bar that keeps Tab and Shift+Tab inside itself and ignores Esc."
+    },
+    {
+     "id": "interactive.iframe",
+     "title": "Embedded form",
+     "url": "/interactive/iframe.html",
+     "kind": "page",
+     "note": "A cross-origin frame with three buttons between two page buttons."
+    },
+    {
+     "id": "interactive.iframe-trap",
+     "title": "Embedded editor",
+     "url": "/interactive/iframe-trap.html",
+     "kind": "page",
+     "note": "A cross-origin frame that keeps every Tab press inside itself."
+    },
+    {
+     "id": "interactive.table",
+     "title": "Transactions table",
+     "url": "/interactive/table.html",
+     "kind": "page",
+     "note": "Thirty rows, each with a link and a button."
+    },
+    {
+     "id": "interactive.dialogs",
+     "title": "Dialogs",
+     "url": "/interactive/dialogs.html",
+     "kind": "page",
+     "note": "Three modal dialog triggers: a correct APG dialog, one that ignores Esc, one that drops focus on close."
+    },
+    {
+     "id": "interactive.drawers",
+     "title": "Drawers",
+     "url": "/interactive/drawers.html",
+     "kind": "page",
+     "note": "Drawer triggers: two that drop focus to the body, a clickable row with no tab stop, and a div button that only a click opens."
+    },
+    {
+     "id": "interactive.menus",
+     "title": "Menus",
+     "url": "/interactive/menus.html",
+     "kind": "page",
+     "note": "A correct APG menu button and a menu that leaves focus on its button."
+    },
+    {
+     "id": "interactive.popovers",
+     "title": "Popovers",
+     "url": "/interactive/popovers.html",
+     "kind": "page",
+     "note": "A hover-only tooltip, a popover shown on hover and focus, and an APG disclosure."
+    },
+    {
+     "id": "interactive.status",
+     "title": "Status messages",
+     "url": "/interactive/status.html",
+     "kind": "page",
+     "note": "Buttons that show toasts: into an existing status region, with a new live container, taking focus, and one removed after 1 s."
+    },
+    {
+     "id": "interactive.form",
+     "title": "Card nickname form",
+     "url": "/interactive/form.html",
+     "kind": "page",
+     "note": "Two fields; Save marks both invalid, with one error tied by aria-errormessage and one only next to its field."
+    },
+    {
+     "id": "interactive.composite",
+     "title": "Composite widgets",
+     "url": "/interactive/composite.html",
+     "kind": "page",
+     "note": "An APG tablist with roving tabindex, a toolbar that leaves all three buttons in the tab order, and Done."
+    },
+    {
+     "id": "interactive.panel",
+     "title": "Detail panel",
+     "url": "/interactive/panel.html",
+     "kind": "page",
+     "note": "Show details reveals a non-modal aside in the middle of the DOM, followed by Next page."
+    },
+    {
+     "id": "interactive.dialog-address",
+     "title": "Delivery address dialog",
+     "url": "/interactive/dialogs.html",
+     "kind": "modal",
+     "note": "Correct modal dialog: focus moves to Street, Tab wraps inside, Esc closes and returns focus."
+    },
+    {
+     "id": "interactive.dialog-nickname",
+     "title": "Card nickname dialog",
+     "url": "/interactive/dialogs.html",
+     "kind": "modal",
+     "note": "Modal dialog that ignores Esc; Cancel closes it and returns focus."
+    },
+    {
+     "id": "interactive.dialog-pin",
+     "title": "Change PIN dialog",
+     "url": "/interactive/dialogs.html",
+     "kind": "modal",
+     "note": "Modal dialog that closes on Esc and leaves focus on the page body."
+    },
+    {
+     "id": "interactive.drawer-limits",
+     "title": "Card limits drawer",
+     "url": "/interactive/drawers.html",
+     "kind": "drawer",
+     "note": "Drawer that opens with focus on the page body; Tab reaches its controls later."
+    },
+    {
+     "id": "interactive.drawer-address",
+     "title": "Billing address drawer",
+     "url": "/interactive/drawers.html",
+     "kind": "drawer",
+     "note": "Drawer that opens with focus on the page body and holds nothing focusable."
+    },
+    {
+     "id": "interactive.drawer-payment",
+     "title": "Payment details drawer",
+     "url": "/interactive/drawers.html",
+     "kind": "drawer",
+     "note": "Drawer opened from a clickable row with no tab stop."
+    },
+    {
+     "id": "interactive.drawer-settings",
+     "title": "Card settings drawer",
+     "url": "/interactive/drawers.html",
+     "kind": "drawer",
+     "note": "Drawer opened from a div button that Enter and Space do not operate."
+    },
+    {
+     "id": "interactive.menu-actions",
+     "title": "Actions menu",
+     "url": "/interactive/menus.html",
+     "kind": "menu",
+     "note": "APG menu: focus on Copy, Esc returns focus to Actions."
+    },
+    {
+     "id": "interactive.menu-export",
+     "title": "Export menu",
+     "url": "/interactive/menus.html",
+     "kind": "menu",
+     "note": "Menu that leaves focus on Export; the next Tab goes to Help."
+    },
+    {
+     "id": "interactive.popover-fees",
+     "title": "Fees tooltip",
+     "url": "/interactive/popovers.html",
+     "kind": "popover",
+     "note": "Tooltip shown only on hover."
+    },
+    {
+     "id": "interactive.popover-card-art",
+     "title": "Card art popover",
+     "url": "/interactive/popovers.html",
+     "kind": "popover",
+     "note": "Popover shown on hover and on focus, with a Learn more link."
+    },
+    {
+     "id": "interactive.popover-filters",
+     "title": "Filters panel",
+     "url": "/interactive/popovers.html",
+     "kind": "popover",
+     "note": "APG disclosure panel with two checkboxes."
+    },
+    {
+     "id": "interactive.toast-saved",
+     "title": "Changes saved toast",
+     "url": "/interactive/status.html",
+     "kind": "toast",
+     "note": "Toast inserted into the status region that exists from page load."
+    },
+    {
+     "id": "interactive.toast-sent",
+     "title": "Payment sent toast",
+     "url": "/interactive/status.html",
+     "kind": "toast",
+     "note": "Toast inserted together with its own aria-live container."
+    },
+    {
+     "id": "interactive.toast-archived",
+     "title": "Card archived toast",
+     "url": "/interactive/status.html",
+     "kind": "toast",
+     "note": "Toast outside any live region that takes focus."
+    },
+    {
+     "id": "interactive.toast-copied",
+     "title": "Account number copied toast",
+     "url": "/interactive/status.html",
+     "kind": "toast",
+     "note": "Toast inserted into the status region and removed after 1 s."
+    },
+    {
+     "id": "interactive.form-errors",
+     "title": "Card nickname errors",
+     "url": "/interactive/form.html",
+     "kind": "validation-error",
+     "note": "Both fields marked invalid; the nickname error is tied by aria-errormessage, the ZIP error only sits next to its field."
+    },
+    {
+     "id": "interactive.panel-details",
+     "title": "Payment details panel",
+     "url": "/interactive/panel.html",
+     "kind": "drawer",
+     "note": "Non-modal aside with View receipt and Download; Tab leaves it for Next page."
+    }
+   ],
+   "edges": [
+    {
+     "from": "interactive.dialogs",
+     "to": "interactive.dialog-address",
+     "label": "Click Add delivery address"
+    },
+    {
+     "from": "interactive.dialogs",
+     "to": "interactive.dialog-nickname",
+     "label": "Click Edit nickname"
+    },
+    {
+     "from": "interactive.dialogs",
+     "to": "interactive.dialog-pin",
+     "label": "Click Change PIN"
+    },
+    {
+     "from": "interactive.drawers",
+     "to": "interactive.drawer-limits",
+     "label": "Click Edit limits"
+    },
+    {
+     "from": "interactive.drawers",
+     "to": "interactive.drawer-address",
+     "label": "Click Edit address"
+    },
+    {
+     "from": "interactive.drawers",
+     "to": "interactive.drawer-payment",
+     "label": "Click Payment details"
+    },
+    {
+     "from": "interactive.drawers",
+     "to": "interactive.drawer-settings",
+     "label": "Click Card settings"
+    },
+    {
+     "from": "interactive.menus",
+     "to": "interactive.menu-actions",
+     "label": "Click Actions"
+    },
+    {
+     "from": "interactive.menus",
+     "to": "interactive.menu-export",
+     "label": "Click Export"
+    },
+    {
+     "from": "interactive.popovers",
+     "to": "interactive.popover-fees",
+     "label": "Hover Fees info"
+    },
+    {
+     "from": "interactive.popovers",
+     "to": "interactive.popover-card-art",
+     "label": "Hover Card art"
+    },
+    {
+     "from": "interactive.popovers",
+     "to": "interactive.popover-filters",
+     "label": "Click Filters"
+    },
+    {
+     "from": "interactive.status",
+     "to": "interactive.toast-saved",
+     "label": "Click Save"
+    },
+    {
+     "from": "interactive.status",
+     "to": "interactive.toast-sent",
+     "label": "Click Send"
+    },
+    {
+     "from": "interactive.status",
+     "to": "interactive.toast-archived",
+     "label": "Click Archive"
+    },
+    {
+     "from": "interactive.status",
+     "to": "interactive.toast-copied",
+     "label": "Click Copy account number"
+    },
+    {
+     "from": "interactive.form",
+     "to": "interactive.form-errors",
+     "label": "Click Save"
+    },
+    {
+     "from": "interactive.panel",
+     "to": "interactive.panel-details",
+     "label": "Click Show details"
+    }
+   ],
+   "journeys": [],
+   "issues": []
+  }
+ ]
+}

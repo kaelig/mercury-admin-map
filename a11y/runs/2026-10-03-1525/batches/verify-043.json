@@ -1,0 +1,113 @@
+{
+ "area": "accounts",
+ "batch": "verify-043",
+ "findings": [
+  {
+   "attachments": [],
+   "attempt": 1,
+   "basis": "violation",
+   "criteria": [
+    "4.1.2"
+   ],
+   "evidence": [
+    {
+     "evidence": {
+      "aria-errormessage": [
+       "email-mercury-utils-id-161-errormessage"
+      ],
+      "failureSummary": "Fix all of the following:\n  aria-errormessage value `email-mercury-utils-id-161-errormessage` must use a technique to announce the message (e.g., aria-live, aria-describedby, role=alert, etc.)"
+     },
+     "occurrence": {
+      "ancestors": [
+       [
+        "_inputBox_q7hf7_93",
+        "_hasValue_q7hf7_171",
+        "_error_q7hf7_41"
+       ],
+       [
+        "_inputBoxWrapper_q7hf7_93"
+       ],
+       [
+        "_textInputWrapper_q7hf7_24"
+       ],
+       [
+        "_provideDSTextInput_q7hf7_6"
+       ],
+       [
+        "_form_orybx_22",
+        "_gap16_orybx_31"
+       ],
+       [
+        "_contentArea_orybx_1"
+       ],
+       [],
+       [
+        "_contentDiv_bcpsw_53",
+        "_contentDivHeightPreset_bcpsw_62",
+        "_contentArea_nbnhd_1"
+       ]
+      ],
+      "classes": [
+       "_input_q7hf7_93"
+      ],
+      "data": {},
+      "heading": "",
+      "landmark": {
+       "name": "",
+       "role": "form"
+      },
+      "layer": "document",
+      "name": "Investor email",
+      "rect": [
+       521,
+       533,
+       398,
+       24
+      ],
+      "role": "textbox",
+      "tag": "input",
+      "xpath": "/html/body/div[1]/main[1]/div[1]/div[2]/div[2]/div[3]/form[1]/div[1]/div[2]/div[4]/div[1]/div[1]/div[1]/input[1]"
+     },
+     "state": "accounts.safe-investor-error"
+    }
+   ],
+   "evidenceHash": "28786a3f3d1564be2a67d29be37faf5be56f0082322e1a3d440b74e229ded83a",
+   "facts": {
+    "announced": "textbox \"Investor email\" [invalid=true, errormessage=Please submit a valid emai…",
+    "axeSummary": "aria-errormessage value `email-mercury-utils-id-161-errormessage` must use a technique to announce the message (e.g., aria-live, aria-describedby, role=alert,…",
+    "criterion": "4.1.2",
+    "criterionName": "Name, Role, Value",
+    "element": "textbox \"Investor email\"",
+    "rule": "aria-valid-attr-value",
+    "screen": "SAFE investor — invalid email"
+   },
+   "family": "role-state",
+   "guidance": "Low for optional ARIA or an invalid autocomplete token; high when aria-hidden hides the whole page.",
+   "issueId": null,
+   "key": "role-state:aria-valid-attr-value:ba31230c09c4",
+   "measured": false,
+   "primary": "accounts.safe-investor-error",
+   "proposals": [],
+   "rule": "aria-valid-attr-value",
+   "screens": 1,
+   "severityDefault": "medium",
+   "source": "scanner",
+   "states": [
+    "accounts.safe-investor-error"
+   ],
+   "summary": "aria-valid-attr-value: announced as textbox \"Investor email\" [invalid=true, errormessage=Please submit a valid emai…. aria-errormessage value `email-mercury-utils-id-161-errormessage` must use a technique to announce the message (e.g., aria-live, aria-describedby, role=alert,…",
+   "title": "Wrong role or state: textbox \"Investor email\""
+  }
+ ],
+ "primaries": [
+  "accounts.safe-investor-error"
+ ],
+ "reach": {
+  "baseUrl": "https://demo.mercury.com",
+  "data": "data",
+  "map": "build/map.json",
+  "run": "2026-10-03-1525",
+  "workspace": "a11y"
+ },
+ "run": "2026-10-03-1525"
+}

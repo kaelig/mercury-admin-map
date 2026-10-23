@@ -1,0 +1,226 @@
+{
+ "batch": "record-030",
+ "reach": {
+  "baseUrl": "https://demo.mercury.com",
+  "data": "data",
+  "map": "build/map.json",
+  "run": "2026-10-02-1349",
+  "workspace": "a11y"
+ },
+ "run": "2026-10-02-1349",
+ "states": [
+  {
+   "area": "settings",
+   "draft": "cannot parse \"Scroll to Linked profiles\"",
+   "image": "screens/settings/107-my-profile-lower.png",
+   "kind": "page",
+   "labels": [
+    "Scroll to Linked profiles"
+   ],
+   "mutates": false,
+   "note": "Further down: Linked profiles (three emails, 'Manage >'), Linked reimbursement bank account, Appearance theme select, Gmail receipt matching with 'Actively scanning' (green) and 'Needs attention' (pink) tags, Receipt forwarding approval banners with Allow / Dismiss and an outlined 'Unverified' tag.",
+   "parent": "settings.my-profile",
+   "state": "settings.my-profile-linked",
+   "title": "Profile \u2014 linked accounts and receipts"
+  },
+  {
+   "area": "settings",
+   "draft": "not drafted: its parent had no accepted recipe when the drafter ran",
+   "image": "screens/settings/108-my-profile-bottom.png",
+   "kind": "page",
+   "labels": [
+    "Scroll to Linked profiles",
+    "Scroll to SMS receipt matching"
+   ],
+   "mutates": false,
+   "note": "Bottom of the page: 'Match receipts for all transactions' switch and SMS receipt matching with a phone field, an 'Opt In' button and consent copy.",
+   "parent": "settings.my-profile-linked",
+   "state": "settings.my-profile-sms",
+   "title": "Profile \u2014 SMS receipt matching"
+  },
+  {
+   "area": "settings",
+   "draft": "nothing on settings.my-profile matches {\"click\":{\"name\":\"Add under Job title\"}}",
+   "image": "screens/settings/106-add-job-title.png",
+   "kind": "modal",
+   "labels": [
+    "Click Add under Job title"
+   ],
+   "mutates": false,
+   "note": "'Add job title' with a Job title select, helper 'Select the title that most aligns with the person\u2019s role' (third person on your own profile) and Cancel / Save.",
+   "parent": "settings.my-profile",
+   "state": "settings.add-job-title",
+   "title": "Add job title modal"
+  },
+  {
+   "area": "settings",
+   "draft": "nothing on settings.plan-billing matches {\"click\":{\"name\":\"\u2022\u2022\u2022 on Next Bill card\"}}",
+   "image": "screens/settings/09-billing-more-menu.png",
+   "kind": "menu",
+   "labels": [
+    "Click \u2022\u2022\u2022 on Next Bill card"
+   ],
+   "mutates": false,
+   "note": "The \u2022\u2022\u2022 button on the Next Bill card opens 'Billing history' and 'Payment method'.",
+   "parent": "settings.plan-billing",
+   "state": "settings.billing-more-menu",
+   "title": "Billing overflow menu"
+  },
+  {
+   "area": "settings",
+   "draft": "nothing on settings.create-role matches {\"click\":{\"name\":\"Save New Role with empty form\"}}",
+   "image": "screens/settings/56-create-role-errors.png",
+   "kind": "validation-error",
+   "labels": [
+    "Click Save New Role with empty form"
+   ],
+   "mutates": true,
+   "note": "Save New Role on an empty form flags Role name with 'Please complete this field'.",
+   "parent": "settings.create-role",
+   "state": "settings.create-role-errors",
+   "title": "Create role \u2014 name required"
+  },
+  {
+   "area": "settings",
+   "draft": "nothing on settings.tokens matches {\"click\":{\"name\":\"+ Create an API token\"}}",
+   "image": "screens/settings/92-create-token.png",
+   "kind": "modal",
+   "labels": [
+    "Click + Create an API token"
+   ],
+   "mutates": true,
+   "note": "Nickname, Permissions combobox, IP whitelist with the current-IP helper, Cancel and an enabled 'Create token'.",
+   "parent": "settings.tokens",
+   "state": "settings.create-token",
+   "title": "Create an API token modal"
+  },
+  {
+   "area": "settings",
+   "draft": "nothing on settings.webhooks matches {\"click\":{\"name\":\"+ Create webhook\"}}",
+   "image": "screens/settings/82-create-webhook.png",
+   "kind": "modal",
+   "labels": [
+    "Click + Create webhook"
+   ],
+   "mutates": true,
+   "note": "Empty Endpoint URL, a disabled 'Verify endpoint' button, Event types combobox (placeholder 'All events'), Cancel and a disabled 'Create endpoint'. Leaving the URL empty and blurring shows no error.",
+   "parent": "settings.webhooks",
+   "state": "settings.create-webhook",
+   "title": "Create a webhook endpoint modal"
+  },
+  {
+   "area": "settings",
+   "draft": "cannot parse \"Enter a From date after today\"",
+   "image": "screens/settings/16-custom-statement-invalid.png",
+   "kind": "validation-error",
+   "labels": [
+    "Click Generate a custom statement",
+    "Enter a From date after today and click Download"
+   ],
+   "mutates": true,
+   "note": "From date after today shows 'Please choose a day on or before Sep 24, 2026' with the calendar popover open.",
+   "parent": "settings.custom-statement",
+   "state": "settings.custom-statement-invalid",
+   "title": "Custom statement \u2014 date out of range"
+  },
+  {
+   "area": "settings",
+   "draft": "nothing on settings.categories matches {\"click\":{\"name\":\"trash icon on a\"}}",
+   "image": "screens/settings/25-delete-category.png",
+   "kind": "modal",
+   "labels": [
+    "Click the trash icon on a row"
+   ],
+   "mutates": false,
+   "note": "'Delete Business Client Meals?' explains past transactions keep the category and the GL mapping rule is deleted; Cancel / Yes, delete.",
+   "parent": "settings.categories",
+   "state": "settings.delete-category-confirm",
+   "title": "Delete category confirmation"
+  },
+  {
+   "area": "settings",
+   "draft": "nothing on settings.documents matches {\"check\":{\"name\":\"statement rows\"}}",
+   "image": "screens/settings/18-documents-selected.png",
+   "kind": "form-state",
+   "labels": [
+    "Check statement rows"
+   ],
+   "mutates": false,
+   "note": "Two statements checked; footer shows '2 documents selected', ZIP file, Share documents and Download.",
+   "parent": "settings.documents",
+   "state": "settings.documents-selected",
+   "title": "Statements \u2014 rows selected"
+  },
+  {
+   "area": "settings",
+   "draft": "cannot parse \"enter a short number\"",
+   "image": "screens/settings/04-edit-phone-invalid.png",
+   "kind": "validation-error",
+   "labels": [
+    "Click Edit under Phone number, enter a short number, click Update"
+   ],
+   "mutates": true,
+   "note": "Phone modal with country flag picker; submitting '+1 2' shows red label/border and 'Phone number is too short.'",
+   "parent": "settings.index",
+   "state": "settings.edit-phone-invalid",
+   "title": "Edit phone number \u2014 too short"
+  },
+  {
+   "area": "settings",
+   "draft": "nothing on settings.my-profile matches {\"click\":{\"name\":\"Edit under Profile picture\"}}",
+   "image": "screens/settings/104-edit-profile-picture.png",
+   "kind": "modal",
+   "labels": [
+    "Click Edit under Profile picture"
+   ],
+   "mutates": false,
+   "note": "'Images should be at least 256x256 pixels\u2026', current avatar with Remove, a drag-and-drop upload zone ('You may upload one JPEG or PNG file'), Cancel / Save.",
+   "parent": "settings.my-profile",
+   "state": "settings.edit-profile-picture",
+   "title": "Edit profile picture modal"
+  },
+  {
+   "area": "settings",
+   "draft": "nothing on settings.invite-details matches {\"click\":{\"name\":\"Next with empty fields\"}}",
+   "image": "screens/settings/36-invite-user-errors.png",
+   "kind": "validation-error",
+   "labels": [
+    "Click Next with empty fields"
+   ],
+   "mutates": false,
+   "note": "Next with empty form flags first name, last name and email with 'Please complete this field'.",
+   "parent": "settings.invite-details",
+   "state": "settings.invite-details-errors",
+   "title": "Invite a user \u2014 required fields"
+  },
+  {
+   "area": "settings",
+   "draft": "cannot parse \"Type an invalid address\"",
+   "image": "screens/settings/128-referral-invalid-email.png",
+   "kind": "validation-error",
+   "labels": [
+    "Click Invite via email",
+    "Type an invalid address and press Enter"
+   ],
+   "mutates": true,
+   "note": "Typing 'notanemail' shows a 'Create option \"notanemail\"' row and a pink warning icon whose tooltip reads 'Please submit a valid email'.",
+   "parent": "settings.referral-invite",
+   "state": "settings.referral-invalid-email",
+   "title": "Referral \u2014 invalid email"
+  },
+  {
+   "area": "settings",
+   "draft": "nothing on settings.personal-security matches {\"click\":{\"name\":\"Remove on a passkey\"}}",
+   "image": "screens/settings/125-remove-passkey-confirm.png",
+   "kind": "modal",
+   "labels": [
+    "Click Remove on a passkey"
+   ],
+   "mutates": true,
+   "note": "'Remove passkey' \u2014 'Are you sure you want to remove 1Password? It can\u2019t be used to log in once removed. This cannot be undone.' with Cancel / Remove.",
+   "parent": "settings.personal-security",
+   "state": "settings.remove-passkey-confirm",
+   "title": "Remove passkey confirmation"
+  }
+ ]
+}

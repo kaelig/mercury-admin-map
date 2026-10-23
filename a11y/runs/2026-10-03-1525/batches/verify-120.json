@@ -1,0 +1,1535 @@
+{
+ "area": "cards",
+ "batch": "verify-120",
+ "findings": [
+  {
+   "attachments": [],
+   "attempt": 1,
+   "basis": "candidate",
+   "criteria": [
+    "2.4.3",
+    "1.3.2"
+   ],
+   "evidence": [
+    {
+     "evidence": {
+      "band": 24,
+      "overlay": "cards.budget-detail.tabstops.png",
+      "previous": {
+       "ancestors": [
+        [
+         "_tableData_1u4jr_5",
+         "_alignmentStart_1u4jr_12",
+         "_teamMemberCell_nz37g_46",
+         "_animatedCell_nz37g_42"
+        ],
+        [
+         "_tableRow_137xu_3",
+         "_interactiveRows_137xu_35"
+        ],
+        [
+         "_tableBody_1cp5b_1"
+        ],
+        [
+         "_table_1acga_4"
+        ],
+        [
+         "_tableWrapper_1acga_4"
+        ],
+        [
+         "_tableWrapper_nz37g_14"
+        ],
+        [
+         "_container_nz37g_3"
+        ],
+        [
+         "_tableContainer_1ttyr_11"
+        ]
+       ],
+       "classes": [
+        "_tooltipAnchor_18bac_4",
+        "_tooltipWrapper_kxnb0_1"
+       ],
+       "data": {},
+       "heading": "Software Subscriptions",
+       "landmark": {
+        "name": "",
+        "role": "main"
+       },
+       "layer": "document",
+       "name": "Sally Park",
+       "rect": [
+        386,
+        590,
+        67,
+        24
+       ],
+       "role": "generic",
+       "tag": "div",
+       "xpath": "/html/body/div[1]/main[1]/div[1]/div[1]/div[4]/div[1]/div[2]/div[3]/div[1]/div[1]/div[1]/div[1]/table[1]/tbody[1]/tr[7]/td[1]/div[2]"
+      },
+      "rise": 338,
+      "stop": 72,
+      "stops": 75
+     },
+     "occurrence": {
+      "ancestors": [
+       [
+        "_titleWithTooltip_1ybxa_23"
+       ],
+       [
+        "_header_1ybxa_7"
+       ],
+       [
+        "_card_1ybxa_1"
+       ],
+       [
+        "_panel_5bhrz_1"
+       ],
+       [
+        "_container_1ttyr_1"
+       ],
+       [
+        "_pageContent_809q8_151",
+        "_pageContentWidth_809q8_184",
+        "_footerPadding_809q8_115"
+       ],
+       [
+        "_dashboardContent_809q8_29"
+       ],
+       [
+        "_layout_809q8_18"
+       ]
+      ],
+      "classes": [
+       "_tooltipAnchor_18bac_4"
+      ],
+      "data": {},
+      "heading": "Software Subscriptions",
+      "landmark": {
+       "name": "",
+       "role": "main"
+      },
+      "layer": "document",
+      "name": "",
+      "rect": [
+       1107,
+       252,
+       12,
+       16
+      ],
+      "role": "generic",
+      "tag": "div",
+      "xpath": "/html/body/div[1]/main[1]/div[1]/div[1]/div[4]/div[1]/div[2]/div[3]/div[2]/div[1]/div[1]/div[1]/div[2]"
+     },
+     "state": "cards.budget-detail"
+    }
+   ],
+   "evidenceHash": "bdbc75f6cbeefe327de5c539dc4b41cfe593389845b8028c557501dc55c9ed79",
+   "facts": {
+    "criterion": "2.4.3",
+    "criterionName": "Focus Order",
+    "element": "text in \"Software Subscriptions\"",
+    "previous": "text \"Sally Park\"",
+    "screen": "Budget detail",
+    "stop": "72"
+   },
+   "family": "focus-order",
+   "guidance": "High if the order skips a required control.",
+   "issueId": null,
+   "key": "focus-order:backward-jump:577bb45db7d4",
+   "measured": false,
+   "primary": "cards.budget-detail",
+   "proposals": [],
+   "rule": "backward-jump",
+   "screens": 1,
+   "severityDefault": "medium",
+   "source": "scanner",
+   "states": [
+    "cards.budget-detail"
+   ],
+   "summary": "Tab stop 72 jumped backward on screen, from the text \"Sally Park\" to the text in \"Software Subscriptions\".",
+   "title": "Tab order jumps backward at text in \"Software Subscriptions\""
+  },
+  {
+   "attachments": [],
+   "attempt": 1,
+   "basis": "failure",
+   "criteria": [
+    "2.4.7",
+    "2.4.3"
+   ],
+   "evidence": [
+    {
+     "evidence": {
+      "box": [
+       1072,
+       285,
+       0,
+       0
+      ],
+      "focus": {
+       "ancestors": [
+        [
+         "_emailAndBadge_1lvcc_24"
+        ],
+        [
+         "_nameAndAmountRow_1lvcc_14"
+        ],
+        [
+         "_spendInfo_1lvcc_9"
+        ],
+        [
+         "_panelSection_d3i56_148",
+         "_headerSection_1lvcc_5"
+        ],
+        [
+         "_panelBody_d3i56_64"
+        ],
+        [
+         "_large_kwlx6_9",
+         "_noHover_3n0se_28",
+         "_shadow_3n0se_25",
+         "_raisedBackground_3n0se_45",
+         "_panel_d3i56_55"
+        ],
+        [
+         "_transitionWrapper_d3i56_5",
+         "_detailPanelWrapper_1lvcc_1"
+        ],
+        [
+         "_container_nz37g_3"
+        ]
+       ],
+       "classes": [
+        "_tooltipAnchor_18bac_4",
+        "_tooltipWrapper_kxnb0_1"
+       ],
+       "data": {
+        "data-focus-visible": "true"
+       },
+       "heading": "Software Subscriptions",
+       "landmark": {
+        "name": "",
+        "role": "complementary"
+       },
+       "layer": "document",
+       "name": "",
+       "rect": [
+        1072,
+        285,
+        0,
+        0
+       ],
+       "role": "generic",
+       "tag": "div",
+       "xpath": "/html/body/div[1]/main[1]/div[1]/div[1]/div[4]/div[1]/div[2]/div[3]/div[1]/div[1]/aside[2]/div[1]/div[1]/section[1]/div[1]/div[1]/div[1]/div[1]"
+      },
+      "hidden": "invisible",
+      "previous": {
+       "ancestors": [
+        [
+         "_closeButtonWrapper_d3i56_118"
+        ],
+        [
+         "_headerActionsWrapper_d3i56_93"
+        ],
+        [
+         "_panelHeader_d3i56_65"
+        ],
+        [
+         "_large_kwlx6_9",
+         "_noHover_3n0se_28",
+         "_shadow_3n0se_25",
+         "_raisedBackground_3n0se_45",
+         "_panel_d3i56_55"
+        ],
+        [
+         "_transitionWrapper_d3i56_5",
+         "_detailPanelWrapper_1lvcc_1"
+        ],
+        [
+         "_container_nz37g_3"
+        ],
+        [
+         "_tableContainer_1ttyr_11"
+        ],
+        [
+         "_container_1ttyr_1"
+        ]
+       ],
+       "classes": [
+        "_additionalActionsButton_d3i56_99"
+       ],
+       "data": {},
+       "heading": "Software Subscriptions",
+       "landmark": {
+        "name": "",
+        "role": "complementary"
+       },
+       "layer": "document",
+       "name": "Close detail panel",
+       "rect": [
+        1392,
+        236,
+        24,
+        24
+       ],
+       "role": "button",
+       "tag": "button",
+       "xpath": "/html/body/div[1]/main[1]/div[1]/div[1]/div[4]/div[1]/div[2]/div[3]/div[1]/div[1]/aside[2]/div[1]/section[1]/div[2]/span[1]/button[1]"
+      },
+      "stop": 70,
+      "stops": 75
+     },
+     "occurrence": {
+      "ancestors": [
+       [
+        "_emailAndBadge_1lvcc_24"
+       ],
+       [
+        "_nameAndAmountRow_1lvcc_14"
+       ],
+       [
+        "_spendInfo_1lvcc_9"
+       ],
+       [
+        "_panelSection_d3i56_148",
+        "_headerSection_1lvcc_5"
+       ],
+       [
+        "_panelBody_d3i56_64"
+       ],
+       [
+        "_large_kwlx6_9",
+        "_noHover_3n0se_28",
+        "_shadow_3n0se_25",
+        "_raisedBackground_3n0se_45",
+        "_panel_d3i56_55"
+       ],
+       [
+        "_transitionWrapper_d3i56_5",
+        "_detailPanelWrapper_1lvcc_1"
+       ],
+       [
+        "_container_nz37g_3"
+       ]
+      ],
+      "classes": [
+       "_tooltipAnchor_18bac_4",
+       "_tooltipWrapper_kxnb0_1"
+      ],
+      "data": {
+       "data-focus-visible": "true"
+      },
+      "heading": "Software Subscriptions",
+      "landmark": {
+       "name": "",
+       "role": "complementary"
+      },
+      "layer": "document",
+      "name": "",
+      "rect": [
+       1072,
+       285,
+       0,
+       0
+      ],
+      "role": "generic",
+      "tag": "div",
+      "xpath": "/html/body/div[1]/main[1]/div[1]/div[1]/div[4]/div[1]/div[2]/div[3]/div[1]/div[1]/aside[2]/div[1]/div[1]/section[1]/div[1]/div[1]/div[1]/div[1]"
+     },
+     "state": "cards.budget-detail"
+    }
+   ],
+   "evidenceHash": "2c60af5398ab4c9ae225dd0fb28b123aff87968e5528cfaad83e7fb7c3f52f8a",
+   "facts": {
+    "criterion": "2.4.7",
+    "criterionName": "Focus Visible",
+    "element": "text in \"Software Subscriptions\"",
+    "screen": "Budget detail",
+    "screens": 1,
+    "stop": "70"
+   },
+   "family": "focus-visible",
+   "guidance": "High on shared components on primary paths.",
+   "issueId": null,
+   "key": "focus-visible:focus-hidden:0e63994a24b6",
+   "measured": true,
+   "primary": "cards.budget-detail",
+   "proposals": [],
+   "rule": "focus-hidden",
+   "screens": 1,
+   "severityDefault": "medium",
+   "source": "scanner",
+   "states": [
+    "cards.budget-detail"
+   ],
+   "summary": "Tab stop 70 focused the text in \"Software Subscriptions\", which is invisible, has no size, or sits off screen.",
+   "title": "Tab stops on hidden element: text in \"Software Subscriptions\""
+  },
+  {
+   "attachments": [],
+   "attempt": 1,
+   "basis": "failure",
+   "criteria": [
+    "2.4.7",
+    "2.4.3"
+   ],
+   "evidence": [
+    {
+     "evidence": {
+      "box": [
+       1072,
+       358,
+       344,
+       32
+      ],
+      "focus": {
+       "ancestors": [
+        [
+         "_removeFromBudgetButtonContainer_1lvcc_43"
+        ],
+        [
+         "_panelSection_d3i56_148",
+         "_headerSection_1lvcc_5"
+        ],
+        [
+         "_panelBody_d3i56_64"
+        ],
+        [
+         "_large_kwlx6_9",
+         "_noHover_3n0se_28",
+         "_shadow_3n0se_25",
+         "_raisedBackground_3n0se_45",
+         "_panel_d3i56_55"
+        ],
+        [
+         "_transitionWrapper_d3i56_5",
+         "_detailPanelWrapper_1lvcc_1"
+        ],
+        [
+         "_container_nz37g_3"
+        ],
+        [
+         "_tableContainer_1ttyr_11"
+        ],
+        [
+         "_container_1ttyr_1"
+        ]
+       ],
+       "classes": [
+        "_button_r6b2u_20",
+        "_small_r6b2u_72",
+        "_secondary_r6b2u_126",
+        "_removeFromBudgetButton_1lvcc_43"
+       ],
+       "data": {},
+       "heading": "Software Subscriptions",
+       "landmark": {
+        "name": "",
+        "role": "complementary"
+       },
+       "layer": "document",
+       "name": "Remove From Budget",
+       "rect": [
+        1072,
+        358,
+        344,
+        32
+       ],
+       "role": "button",
+       "tag": "button",
+       "xpath": "/html/body/div[1]/main[1]/div[1]/div[1]/div[4]/div[1]/div[2]/div[3]/div[1]/div[1]/aside[2]/div[1]/div[1]/section[1]/div[2]/button[1]"
+      },
+      "hidden": "invisible",
+      "previous": {
+       "ancestors": [
+        [
+         "_emailAndBadge_1lvcc_24"
+        ],
+        [
+         "_nameAndAmountRow_1lvcc_14"
+        ],
+        [
+         "_spendInfo_1lvcc_9"
+        ],
+        [
+         "_panelSection_d3i56_148",
+         "_headerSection_1lvcc_5"
+        ],
+        [
+         "_panelBody_d3i56_64"
+        ],
+        [
+         "_large_kwlx6_9",
+         "_noHover_3n0se_28",
+         "_shadow_3n0se_25",
+         "_raisedBackground_3n0se_45",
+         "_panel_d3i56_55"
+        ],
+        [
+         "_transitionWrapper_d3i56_5",
+         "_detailPanelWrapper_1lvcc_1"
+        ],
+        [
+         "_container_nz37g_3"
+        ]
+       ],
+       "classes": [
+        "_tooltipAnchor_18bac_4",
+        "_tooltipWrapper_kxnb0_1"
+       ],
+       "data": {
+        "data-focus-visible": "true"
+       },
+       "heading": "Software Subscriptions",
+       "landmark": {
+        "name": "",
+        "role": "complementary"
+       },
+       "layer": "document",
+       "name": "",
+       "rect": [
+        1072,
+        285,
+        0,
+        0
+       ],
+       "role": "generic",
+       "tag": "div",
+       "xpath": "/html/body/div[1]/main[1]/div[1]/div[1]/div[4]/div[1]/div[2]/div[3]/div[1]/div[1]/aside[2]/div[1]/div[1]/section[1]/div[1]/div[1]/div[1]/div[1]"
+      },
+      "stop": 71,
+      "stops": 75
+     },
+     "occurrence": {
+      "ancestors": [
+       [
+        "_removeFromBudgetButtonContainer_1lvcc_43"
+       ],
+       [
+        "_panelSection_d3i56_148",
+        "_headerSection_1lvcc_5"
+       ],
+       [
+        "_panelBody_d3i56_64"
+       ],
+       [
+        "_large_kwlx6_9",
+        "_noHover_3n0se_28",
+        "_shadow_3n0se_25",
+        "_raisedBackground_3n0se_45",
+        "_panel_d3i56_55"
+       ],
+       [
+        "_transitionWrapper_d3i56_5",
+        "_detailPanelWrapper_1lvcc_1"
+       ],
+       [
+        "_container_nz37g_3"
+       ],
+       [
+        "_tableContainer_1ttyr_11"
+       ],
+       [
+        "_container_1ttyr_1"
+       ]
+      ],
+      "classes": [
+       "_button_r6b2u_20",
+       "_small_r6b2u_72",
+       "_secondary_r6b2u_126",
+       "_removeFromBudgetButton_1lvcc_43"
+      ],
+      "data": {},
+      "heading": "Software Subscriptions",
+      "landmark": {
+       "name": "",
+       "role": "complementary"
+      },
+      "layer": "document",
+      "name": "Remove From Budget",
+      "rect": [
+       1072,
+       358,
+       344,
+       32
+      ],
+      "role": "button",
+      "tag": "button",
+      "xpath": "/html/body/div[1]/main[1]/div[1]/div[1]/div[4]/div[1]/div[2]/div[3]/div[1]/div[1]/aside[2]/div[1]/div[1]/section[1]/div[2]/button[1]"
+     },
+     "state": "cards.budget-detail"
+    }
+   ],
+   "evidenceHash": "0d774bf933b426f73b9b464cf9f524743fec34616e001570a79bae37329e4776",
+   "facts": {
+    "criterion": "2.4.7",
+    "criterionName": "Focus Visible",
+    "element": "button \"Remove From Budget\"",
+    "screen": "Budget detail",
+    "screens": 1,
+    "stop": "71"
+   },
+   "family": "focus-visible",
+   "guidance": "High on shared components on primary paths.",
+   "issueId": null,
+   "key": "focus-visible:focus-hidden:2b8998ff5db5",
+   "measured": true,
+   "primary": "cards.budget-detail",
+   "proposals": [],
+   "rule": "focus-hidden",
+   "screens": 1,
+   "severityDefault": "medium",
+   "source": "scanner",
+   "states": [
+    "cards.budget-detail"
+   ],
+   "summary": "Tab stop 71 focused the button \"Remove From Budget\", which is invisible, has no size, or sits off screen.",
+   "title": "Tab stops on hidden element: button \"Remove From Budget\""
+  },
+  {
+   "attachments": [],
+   "attempt": 1,
+   "basis": "failure",
+   "criteria": [
+    "2.4.7",
+    "2.4.3"
+   ],
+   "evidence": [
+    {
+     "evidence": {
+      "box": [
+       1072,
+       374,
+       158,
+       32
+      ],
+      "focus": {
+       "ancestors": [
+        [
+         "_detailActionsRow_1shev_51"
+        ],
+        [
+         "_panelSection_d3i56_148",
+         "_headerSection_1shev_5"
+        ],
+        [
+         "_panelBody_d3i56_64"
+        ],
+        [
+         "_large_kwlx6_9",
+         "_noHover_3n0se_28",
+         "_shadow_3n0se_25",
+         "_raisedBackground_3n0se_45",
+         "_panel_d3i56_55"
+        ],
+        [
+         "_transitionWrapper_d3i56_5",
+         "_detailPanelWrapper_1shev_1"
+        ],
+        [
+         "_container_nz37g_3"
+        ],
+        [
+         "_tableContainer_1ttyr_11"
+        ],
+        [
+         "_container_1ttyr_1"
+        ]
+       ],
+       "classes": [
+        "_button_r6b2u_20",
+        "_small_r6b2u_72",
+        "_secondary_r6b2u_126",
+        "_detailActionButton_1shev_58"
+       ],
+       "data": {},
+       "heading": "Software Subscriptions",
+       "landmark": {
+        "name": "",
+        "role": "complementary"
+       },
+       "layer": "document",
+       "name": "Customize",
+       "rect": [
+        1072,
+        374,
+        158,
+        32
+       ],
+       "role": "button",
+       "tag": "button",
+       "xpath": "/html/body/div[1]/main[1]/div[1]/div[1]/div[4]/div[1]/div[2]/div[3]/div[1]/div[1]/aside[1]/div[1]/div[1]/section[1]/div[2]/button[1]"
+      },
+      "hidden": "invisible",
+      "previous": {
+       "ancestors": [
+        [
+         "_nameAndAmountRow_1shev_14"
+        ],
+        [
+         "_spendInfo_1shev_9"
+        ],
+        [
+         "_panelSection_d3i56_148",
+         "_headerSection_1shev_5"
+        ],
+        [
+         "_panelBody_d3i56_64"
+        ],
+        [
+         "_large_kwlx6_9",
+         "_noHover_3n0se_28",
+         "_shadow_3n0se_25",
+         "_raisedBackground_3n0se_45",
+         "_panel_d3i56_55"
+        ],
+        [
+         "_transitionWrapper_d3i56_5",
+         "_detailPanelWrapper_1shev_1"
+        ],
+        [
+         "_container_nz37g_3"
+        ],
+        [
+         "_tableContainer_1ttyr_11"
+        ]
+       ],
+       "classes": [
+        "_tooltipAnchor_18bac_4",
+        "_tooltipWrapper_kxnb0_1"
+       ],
+       "data": {
+        "data-focus-visible": "true"
+       },
+       "heading": "Software Subscriptions",
+       "landmark": {
+        "name": "",
+        "role": "complementary"
+       },
+       "layer": "document",
+       "name": "",
+       "rect": [
+        1072,
+        305,
+        0,
+        0
+       ],
+       "role": "generic",
+       "tag": "div",
+       "xpath": "/html/body/div[1]/main[1]/div[1]/div[1]/div[4]/div[1]/div[2]/div[3]/div[1]/div[1]/aside[1]/div[1]/div[1]/section[1]/div[1]/div[1]/div[1]"
+      },
+      "stop": 60,
+      "stops": 75
+     },
+     "occurrence": {
+      "ancestors": [
+       [
+        "_detailActionsRow_1shev_51"
+       ],
+       [
+        "_panelSection_d3i56_148",
+        "_headerSection_1shev_5"
+       ],
+       [
+        "_panelBody_d3i56_64"
+       ],
+       [
+        "_large_kwlx6_9",
+        "_noHover_3n0se_28",
+        "_shadow_3n0se_25",
+        "_raisedBackground_3n0se_45",
+        "_panel_d3i56_55"
+       ],
+       [
+        "_transitionWrapper_d3i56_5",
+        "_detailPanelWrapper_1shev_1"
+       ],
+       [
+        "_container_nz37g_3"
+       ],
+       [
+        "_tableContainer_1ttyr_11"
+       ],
+       [
+        "_container_1ttyr_1"
+       ]
+      ],
+      "classes": [
+       "_button_r6b2u_20",
+       "_small_r6b2u_72",
+       "_secondary_r6b2u_126",
+       "_detailActionButton_1shev_58"
+      ],
+      "data": {},
+      "heading": "Software Subscriptions",
+      "landmark": {
+       "name": "",
+       "role": "complementary"
+      },
+      "layer": "document",
+      "name": "Customize",
+      "rect": [
+       1072,
+       374,
+       158,
+       32
+      ],
+      "role": "button",
+      "tag": "button",
+      "xpath": "/html/body/div[1]/main[1]/div[1]/div[1]/div[4]/div[1]/div[2]/div[3]/div[1]/div[1]/aside[1]/div[1]/div[1]/section[1]/div[2]/button[1]"
+     },
+     "state": "cards.budget-detail"
+    }
+   ],
+   "evidenceHash": "c821278f33edf6c300c93c54c91a46c76d6671f425a5caf35ac679f79fe3e319",
+   "facts": {
+    "criterion": "2.4.7",
+    "criterionName": "Focus Visible",
+    "element": "button \"Customize\"",
+    "screen": "Budget detail",
+    "screens": 1,
+    "stop": "60"
+   },
+   "family": "focus-visible",
+   "guidance": "High on shared components on primary paths.",
+   "issueId": null,
+   "key": "focus-visible:focus-hidden:8efed3e89be6",
+   "measured": true,
+   "primary": "cards.budget-detail",
+   "proposals": [],
+   "rule": "focus-hidden",
+   "screens": 1,
+   "severityDefault": "medium",
+   "source": "scanner",
+   "states": [
+    "cards.budget-detail"
+   ],
+   "summary": "Tab stop 60 focused the button \"Customize\", which is invisible, has no size, or sits off screen.",
+   "title": "Tab stops on hidden element: button \"Customize\""
+  },
+  {
+   "attachments": [],
+   "attempt": 1,
+   "basis": "failure",
+   "criteria": [
+    "2.4.7",
+    "2.4.3"
+   ],
+   "evidence": [
+    {
+     "evidence": {
+      "box": [
+       1072,
+       628,
+       344,
+       67
+      ],
+      "focus": {
+       "ancestors": [
+        [
+         "_tableBody_1cp5b_1",
+         "_transactionList_y5o46_35"
+        ],
+        [
+         "_table_1acga_4",
+         "_table_y5o46_31"
+        ],
+        [
+         "_tableWrapper_1acga_4"
+        ],
+        [
+         "_recentActivitySection_y5o46_1"
+        ],
+        [
+         "_panelSection_d3i56_148"
+        ],
+        [
+         "_panelBody_d3i56_64"
+        ],
+        [
+         "_large_kwlx6_9",
+         "_noHover_3n0se_28",
+         "_shadow_3n0se_25",
+         "_raisedBackground_3n0se_45",
+         "_panel_d3i56_55"
+        ],
+        [
+         "_transitionWrapper_d3i56_5",
+         "_detailPanelWrapper_1shev_1"
+        ]
+       ],
+       "classes": [
+        "_tableRow_137xu_3",
+        "_interactiveRows_137xu_35",
+        "_large_137xu_29",
+        "_transactionRow_y5o46_48"
+       ],
+       "data": {},
+       "heading": "Software Subscriptions",
+       "landmark": {
+        "name": "",
+        "role": "complementary"
+       },
+       "layer": "document",
+       "name": "",
+       "rect": [
+        1072,
+        628,
+        344,
+        67
+       ],
+       "role": "row",
+       "tag": "tr",
+       "xpath": "/html/body/div[1]/main[1]/div[1]/div[1]/div[4]/div[1]/div[2]/div[3]/div[1]/div[1]/aside[1]/div[1]/div[1]/section[3]/div[1]/div[1]/table[1]/tbody[1]/tr[1]"
+      },
+      "hidden": "invisible",
+      "previous": {
+       "ancestors": [
+        [
+         "_spendingFromSection_u014v_1"
+        ],
+        [
+         "_panelSection_d3i56_148"
+        ],
+        [
+         "_panelBody_d3i56_64"
+        ],
+        [
+         "_large_kwlx6_9",
+         "_noHover_3n0se_28",
+         "_shadow_3n0se_25",
+         "_raisedBackground_3n0se_45",
+         "_panel_d3i56_55"
+        ],
+        [
+         "_transitionWrapper_d3i56_5",
+         "_detailPanelWrapper_1shev_1"
+        ],
+        [
+         "_container_nz37g_3"
+        ],
+        [
+         "_tableContainer_1ttyr_11"
+        ],
+        [
+         "_container_1ttyr_1"
+        ]
+       ],
+       "classes": [
+        "_bodyDefault_qaod7_40",
+        "_text-link_12t49_1",
+        "_link_ual8v_4",
+        "_underlineOnHover_ual8v_15"
+       ],
+       "data": {},
+       "heading": "Software Subscriptions",
+       "landmark": {
+        "name": "",
+        "role": "complementary"
+       },
+       "layer": "document",
+       "name": "Edit",
+       "rect": [
+        1072,
+        523,
+        344,
+        24
+       ],
+       "role": "button",
+       "tag": "span",
+       "xpath": "/html/body/div[1]/main[1]/div[1]/div[1]/div[4]/div[1]/div[2]/div[3]/div[1]/div[1]/aside[1]/div[1]/div[1]/section[2]/div[1]/span[2]"
+      },
+      "stop": 63,
+      "stops": 75
+     },
+     "occurrence": {
+      "ancestors": [
+       [
+        "_tableBody_1cp5b_1",
+        "_transactionList_y5o46_35"
+       ],
+       [
+        "_table_1acga_4",
+        "_table_y5o46_31"
+       ],
+       [
+        "_tableWrapper_1acga_4"
+       ],
+       [
+        "_recentActivitySection_y5o46_1"
+       ],
+       [
+        "_panelSection_d3i56_148"
+       ],
+       [
+        "_panelBody_d3i56_64"
+       ],
+       [
+        "_large_kwlx6_9",
+        "_noHover_3n0se_28",
+        "_shadow_3n0se_25",
+        "_raisedBackground_3n0se_45",
+        "_panel_d3i56_55"
+       ],
+       [
+        "_transitionWrapper_d3i56_5",
+        "_detailPanelWrapper_1shev_1"
+       ]
+      ],
+      "classes": [
+       "_tableRow_137xu_3",
+       "_interactiveRows_137xu_35",
+       "_large_137xu_29",
+       "_transactionRow_y5o46_48"
+      ],
+      "data": {},
+      "heading": "Software Subscriptions",
+      "landmark": {
+       "name": "",
+       "role": "complementary"
+      },
+      "layer": "document",
+      "name": "",
+      "rect": [
+       1072,
+       628,
+       344,
+       67
+      ],
+      "role": "row",
+      "tag": "tr",
+      "xpath": "/html/body/div[1]/main[1]/div[1]/div[1]/div[4]/div[1]/div[2]/div[3]/div[1]/div[1]/aside[1]/div[1]/div[1]/section[3]/div[1]/div[1]/table[1]/tbody[1]/tr[1]"
+     },
+     "state": "cards.budget-detail"
+    }
+   ],
+   "evidenceHash": "3604df402caed06076aeeecc57b05a8ae7d5b5f778faa06e238c5e557329addf",
+   "facts": {
+    "criterion": "2.4.7",
+    "criterionName": "Focus Visible",
+    "element": "row in \"Software Subscriptions\"",
+    "screen": "Budget detail",
+    "screens": 1,
+    "stop": "63"
+   },
+   "family": "focus-visible",
+   "guidance": "High on shared components on primary paths.",
+   "issueId": null,
+   "key": "focus-visible:focus-hidden:bfa56aa21f62",
+   "measured": true,
+   "primary": "cards.budget-detail",
+   "proposals": [],
+   "rule": "focus-hidden",
+   "screens": 1,
+   "severityDefault": "medium",
+   "source": "scanner",
+   "states": [
+    "cards.budget-detail"
+   ],
+   "summary": "Tab stop 63 focused the row in \"Software Subscriptions\", which is invisible, has no size, or sits off screen.",
+   "title": "Tab stops on hidden element: row in \"Software Subscriptions\""
+  },
+  {
+   "attachments": [],
+   "attempt": 1,
+   "basis": "failure",
+   "criteria": [
+    "2.4.7",
+    "2.4.3"
+   ],
+   "evidence": [
+    {
+     "evidence": {
+      "box": [
+       1072,
+       523,
+       344,
+       24
+      ],
+      "focus": {
+       "ancestors": [
+        [
+         "_spendingFromSection_u014v_1"
+        ],
+        [
+         "_panelSection_d3i56_148"
+        ],
+        [
+         "_panelBody_d3i56_64"
+        ],
+        [
+         "_large_kwlx6_9",
+         "_noHover_3n0se_28",
+         "_shadow_3n0se_25",
+         "_raisedBackground_3n0se_45",
+         "_panel_d3i56_55"
+        ],
+        [
+         "_transitionWrapper_d3i56_5",
+         "_detailPanelWrapper_1shev_1"
+        ],
+        [
+         "_container_nz37g_3"
+        ],
+        [
+         "_tableContainer_1ttyr_11"
+        ],
+        [
+         "_container_1ttyr_1"
+        ]
+       ],
+       "classes": [
+        "_bodyDefault_qaod7_40",
+        "_text-link_12t49_1",
+        "_link_ual8v_4",
+        "_underlineOnHover_ual8v_15"
+       ],
+       "data": {},
+       "heading": "Software Subscriptions",
+       "landmark": {
+        "name": "",
+        "role": "complementary"
+       },
+       "layer": "document",
+       "name": "Edit",
+       "rect": [
+        1072,
+        523,
+        344,
+        24
+       ],
+       "role": "button",
+       "tag": "span",
+       "xpath": "/html/body/div[1]/main[1]/div[1]/div[1]/div[4]/div[1]/div[2]/div[3]/div[1]/div[1]/aside[1]/div[1]/div[1]/section[2]/div[1]/span[2]"
+      },
+      "hidden": "invisible",
+      "previous": {
+       "ancestors": [
+        [
+         "_detailActionsRow_1shev_51"
+        ],
+        [
+         "_panelSection_d3i56_148",
+         "_headerSection_1shev_5"
+        ],
+        [
+         "_panelBody_d3i56_64"
+        ],
+        [
+         "_large_kwlx6_9",
+         "_noHover_3n0se_28",
+         "_shadow_3n0se_25",
+         "_raisedBackground_3n0se_45",
+         "_panel_d3i56_55"
+        ],
+        [
+         "_transitionWrapper_d3i56_5",
+         "_detailPanelWrapper_1shev_1"
+        ],
+        [
+         "_container_nz37g_3"
+        ],
+        [
+         "_tableContainer_1ttyr_11"
+        ],
+        [
+         "_container_1ttyr_1"
+        ]
+       ],
+       "classes": [
+        "_button_r6b2u_20",
+        "_small_r6b2u_72",
+        "_secondary_r6b2u_126",
+        "_detailActionButton_1shev_58"
+       ],
+       "data": {},
+       "heading": "Software Subscriptions",
+       "landmark": {
+        "name": "",
+        "role": "complementary"
+       },
+       "layer": "document",
+       "name": "Remove From Budget",
+       "rect": [
+        1238,
+        374,
+        178,
+        32
+       ],
+       "role": "button",
+       "tag": "button",
+       "xpath": "/html/body/div[1]/main[1]/div[1]/div[1]/div[4]/div[1]/div[2]/div[3]/div[1]/div[1]/aside[1]/div[1]/div[1]/section[1]/div[2]/button[2]"
+      },
+      "stop": 62,
+      "stops": 75
+     },
+     "occurrence": {
+      "ancestors": [
+       [
+        "_spendingFromSection_u014v_1"
+       ],
+       [
+        "_panelSection_d3i56_148"
+       ],
+       [
+        "_panelBody_d3i56_64"
+       ],
+       [
+        "_large_kwlx6_9",
+        "_noHover_3n0se_28",
+        "_shadow_3n0se_25",
+        "_raisedBackground_3n0se_45",
+        "_panel_d3i56_55"
+       ],
+       [
+        "_transitionWrapper_d3i56_5",
+        "_detailPanelWrapper_1shev_1"
+       ],
+       [
+        "_container_nz37g_3"
+       ],
+       [
+        "_tableContainer_1ttyr_11"
+       ],
+       [
+        "_container_1ttyr_1"
+       ]
+      ],
+      "classes": [
+       "_bodyDefault_qaod7_40",
+       "_text-link_12t49_1",
+       "_link_ual8v_4",
+       "_underlineOnHover_ual8v_15"
+      ],
+      "data": {},
+      "heading": "Software Subscriptions",
+      "landmark": {
+       "name": "",
+       "role": "complementary"
+      },
+      "layer": "document",
+      "name": "Edit",
+      "rect": [
+       1072,
+       523,
+       344,
+       24
+      ],
+      "role": "button",
+      "tag": "span",
+      "xpath": "/html/body/div[1]/main[1]/div[1]/div[1]/div[4]/div[1]/div[2]/div[3]/div[1]/div[1]/aside[1]/div[1]/div[1]/section[2]/div[1]/span[2]"
+     },
+     "state": "cards.budget-detail"
+    },
+    {
+     "evidence": {
+      "box": [
+       1207,
+       426,
+       66,
+       18
+      ],
+      "focus": {
+       "ancestors": [
+        [
+         "_inlineAction_wo6ub_55"
+        ],
+        [
+         "_tableData_1u4jr_5",
+         "_alignmentEnd_1u4jr_22"
+        ],
+        [
+         "_tableRow_137xu_3",
+         "_interactiveRows_137xu_35",
+         "_updateItem_wo6ub_1"
+        ],
+        [
+         "_tableBody_1cp5b_1"
+        ],
+        [
+         "_table_1acga_4",
+         "_noTableBackground_1lriz_111"
+        ],
+        [
+         "_tableWrapper_1acga_4"
+        ],
+        [
+         "_updatesList_1lriz_28"
+        ],
+        [
+         "_cardContent_1lriz_11"
+        ]
+       ],
+       "classes": [
+        "_bodyDefault_qaod7_40",
+        "_text-link_12t49_1",
+        "_link_ual8v_4",
+        "_underlineOnHover_ual8v_15"
+       ],
+       "data": {},
+       "heading": "Filing updates and tasks",
+       "landmark": {
+        "name": "",
+        "role": "main"
+       },
+       "layer": "document",
+       "name": "Edit Filing",
+       "rect": [
+        1207,
+        426,
+        66,
+        18
+       ],
+       "role": "button",
+       "tag": "span",
+       "xpath": "/html/body/div[1]/main[1]/div[1]/div[1]/div[4]/div[1]/div[2]/div[2]/div[2]/section[2]/div[1]/div[1]/div[1]/div[1]/table[1]/tbody[1]/tr[2]/td[2]/div[1]/span[1]"
+      },
+      "hidden": "invisible",
+      "previous": {
+       "ancestors": [
+        [
+         "_tableBody_1cp5b_1"
+        ],
+        [
+         "_table_1acga_4",
+         "_noTableBackground_1lriz_111"
+        ],
+        [
+         "_tableWrapper_1acga_4"
+        ],
+        [
+         "_updatesList_1lriz_28"
+        ],
+        [
+         "_cardContent_1lriz_11"
+        ],
+        [
+         "_large_kwlx6_9",
+         "_noHover_3n0se_28",
+         "_raisedBackground_3n0se_45"
+        ],
+        [
+         "_banner_1lriz_1"
+        ],
+        [
+         "_filingTabContent_l4eet_1"
+        ]
+       ],
+       "classes": [
+        "_tableRow_137xu_3",
+        "_interactiveRows_137xu_35",
+        "_updateItem_wo6ub_1"
+       ],
+       "data": {},
+       "heading": "Filing updates and tasks",
+       "landmark": {
+        "name": "",
+        "role": "main"
+       },
+       "layer": "document",
+       "name": "",
+       "rect": [
+        387,
+        414,
+        886,
+        42
+       ],
+       "role": "row",
+       "tag": "tr",
+       "xpath": "/html/body/div[1]/main[1]/div[1]/div[1]/div[4]/div[1]/div[2]/div[2]/div[2]/section[2]/div[1]/div[1]/div[1]/div[1]/table[1]/tbody[1]/tr[2]"
+      },
+      "stop": 52,
+      "stops": 201
+     },
+     "occurrence": {
+      "ancestors": [
+       [
+        "_inlineAction_wo6ub_55"
+       ],
+       [
+        "_tableData_1u4jr_5",
+        "_alignmentEnd_1u4jr_22"
+       ],
+       [
+        "_tableRow_137xu_3",
+        "_interactiveRows_137xu_35",
+        "_updateItem_wo6ub_1"
+       ],
+       [
+        "_tableBody_1cp5b_1"
+       ],
+       [
+        "_table_1acga_4",
+        "_noTableBackground_1lriz_111"
+       ],
+       [
+        "_tableWrapper_1acga_4"
+       ],
+       [
+        "_updatesList_1lriz_28"
+       ],
+       [
+        "_cardContent_1lriz_11"
+       ]
+      ],
+      "classes": [
+       "_bodyDefault_qaod7_40",
+       "_text-link_12t49_1",
+       "_link_ual8v_4",
+       "_underlineOnHover_ual8v_15"
+      ],
+      "data": {},
+      "heading": "Filing updates and tasks",
+      "landmark": {
+       "name": "",
+       "role": "main"
+      },
+      "layer": "document",
+      "name": "Edit Filing",
+      "rect": [
+       1207,
+       426,
+       66,
+       18
+      ],
+      "role": "button",
+      "tag": "span",
+      "xpath": "/html/body/div[1]/main[1]/div[1]/div[1]/div[4]/div[1]/div[2]/div[2]/div[2]/section[2]/div[1]/div[1]/div[1]/div[1]/table[1]/tbody[1]/tr[2]/td[2]/div[1]/span[1]"
+     },
+     "state": "payments.taxes"
+    }
+   ],
+   "evidenceHash": "c8356bd29219742fb4da187af34fd92b30524d503d5706ef1a5289f5c39358b1",
+   "facts": {
+    "criterion": "2.4.7",
+    "criterionName": "Focus Visible",
+    "element": "button \"Edit\"",
+    "screen": "Budget detail",
+    "screens": 2,
+    "stop": "62"
+   },
+   "family": "focus-visible",
+   "guidance": "High on shared components on primary paths.",
+   "issueId": null,
+   "key": "focus-visible:focus-hidden:fcb862713328",
+   "measured": true,
+   "primary": "cards.budget-detail",
+   "proposals": [],
+   "rule": "focus-hidden",
+   "screens": 2,
+   "severityDefault": "medium",
+   "source": "scanner",
+   "states": [
+    "cards.budget-detail",
+    "payments.taxes"
+   ],
+   "summary": "Tab stop 62 focused the button \"Edit\", which is invisible, has no size, or sits off screen.",
+   "title": "Tab stops on hidden element: button \"Edit\""
+  },
+  {
+   "attachments": [],
+   "attempt": 1,
+   "basis": "violation",
+   "criteria": [
+    "4.1.2"
+   ],
+   "evidence": [
+    {
+     "evidence": {
+      "failureSummary": "Fix all of the following:\n  Focusable content should be disabled or be removed from the DOM"
+     },
+     "occurrence": {
+      "ancestors": [
+       [
+        "_container_nz37g_3"
+       ],
+       [
+        "_tableContainer_1ttyr_11"
+       ],
+       [
+        "_container_1ttyr_1"
+       ],
+       [
+        "_pageContent_809q8_151",
+        "_pageContentWidth_809q8_184",
+        "_footerPadding_809q8_115"
+       ],
+       [
+        "_dashboardContent_809q8_29"
+       ],
+       [
+        "_layout_809q8_18"
+       ],
+       [
+        "_wrapper_809q8_3"
+       ],
+       []
+      ],
+      "classes": [
+       "_transitionWrapper_d3i56_5",
+       "_detailPanelWrapper_1lvcc_1"
+      ],
+      "data": {},
+      "heading": "Software Subscriptions",
+      "landmark": {
+       "name": "",
+       "role": "main"
+      },
+      "layer": "document",
+      "name": "",
+      "rect": [
+       1146,
+       216,
+       392,
+       468
+      ],
+      "role": "",
+      "tag": "aside",
+      "xpath": "/html/body/div[1]/main[1]/div[1]/div[1]/div[4]/div[1]/div[2]/div[3]/div[1]/div[1]/aside[2]"
+     },
+     "state": "cards.budget-detail"
+    }
+   ],
+   "evidenceHash": "73382055a3b996e166dc7b00b0b48a4eac6da7487b00c89045158fde66261692",
+   "facts": {
+    "announced": " \"\"",
+    "axeSummary": "Focusable content should be disabled or be removed from the DOM",
+    "criterion": "4.1.2",
+    "criterionName": "Name, Role, Value",
+    "element": "text in \"Software Subscriptions\"",
+    "rule": "aria-hidden-focus",
+    "screen": "Budget detail"
+   },
+   "family": "role-state",
+   "guidance": "Low for optional ARIA or an invalid autocomplete token; high when aria-hidden hides the whole page.",
+   "issueId": null,
+   "key": "role-state:aria-hidden-focus:953c3720f2f8",
+   "measured": false,
+   "primary": "cards.budget-detail",
+   "proposals": [],
+   "rule": "aria-hidden-focus",
+   "screens": 1,
+   "severityDefault": "medium",
+   "source": "scanner",
+   "states": [
+    "cards.budget-detail"
+   ],
+   "summary": "aria-hidden-focus: announced as  \"\". Focusable content should be disabled or be removed from the DOM",
+   "title": "Focusable but hidden: text in \"Software Subscriptions\""
+  }
+ ],
+ "primaries": [
+  "cards.budget-detail"
+ ],
+ "reach": {
+  "baseUrl": "https://demo.mercury.com",
+  "data": "data",
+  "map": "build/map.json",
+  "run": "2026-10-03-1525",
+  "workspace": "a11y"
+ },
+ "run": "2026-10-03-1525"
+}

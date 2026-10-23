@@ -1,0 +1,790 @@
+{
+ "area": "billpay",
+ "batch": "second-014",
+ "findings": [
+  {
+   "attachments": [],
+   "attempt": 1,
+   "basis": "candidate",
+   "criteria": [
+    "2.1.1"
+   ],
+   "evidence": [
+    {
+     "evidence": {
+      "end": "body",
+      "focusable": false,
+      "source": "pointer",
+      "stops": 82
+     },
+     "occurrence": {
+      "ancestors": [
+       [
+        "_tableHeadRow_1rlph_21"
+       ],
+       [
+        "_tableHead_1rlph_1"
+       ],
+       [
+        "_table_1acga_4"
+       ],
+       [
+        "_tableWrapper_1acga_4"
+       ],
+       [
+        "_draftsTableContainer_1o7vl_1"
+       ],
+       [],
+       [
+        "_dropzone_ex01s_1"
+       ],
+       [
+        "_tabContent_a2zac_49"
+       ]
+      ],
+      "classes": [
+       "_tableHead_hi0p4_3",
+       "_alignmentStart_hi0p4_11",
+       "_sortableHeaderCell_fuxy9_114",
+       "_statusCell_fuxy9_9"
+      ],
+      "data": {},
+      "heading": "Due in next 7 days",
+      "landmark": {
+       "name": "",
+       "role": "main"
+      },
+      "layer": "document",
+      "name": "Status",
+      "rect": [
+       496,
+       449,
+       120,
+       40
+      ],
+      "role": "columnheader",
+      "tag": "th",
+      "xpath": "/html/body/div[1]/main[1]/div[1]/div[1]/div[4]/div[1]/div[2]/div[2]/div[2]/div[2]/div[2]/div[1]/div[1]/table[1]/thead[1]/tr[1]/th[3]"
+     },
+     "state": "billpay.inbox-after-payment"
+    },
+    {
+     "evidence": {
+      "end": "body",
+      "focusable": false,
+      "source": "pointer",
+      "stops": 82
+     },
+     "occurrence": {
+      "ancestors": [
+       [
+        "_tableHeadRow_1rlph_21"
+       ],
+       [
+        "_tableHead_1rlph_1"
+       ],
+       [
+        "_table_1acga_4"
+       ],
+       [
+        "_tableWrapper_1acga_4"
+       ],
+       [],
+       [],
+       [
+        "_tabContent_a2zac_49"
+       ],
+       [
+        "_pageContent_809q8_151",
+        "_pageContentWidth_809q8_184",
+        "_footerPadding_809q8_115"
+       ]
+      ],
+      "classes": [
+       "_tableHead_hi0p4_3",
+       "_alignmentStart_hi0p4_11",
+       "_sortableHeaderCell_fuxy9_114",
+       "_statusCell_198e9_31"
+      ],
+      "data": {},
+      "heading": "Payments",
+      "landmark": {
+       "name": "",
+       "role": "main"
+      },
+      "layer": "document",
+      "name": "Status",
+      "rect": [
+       602,
+       281,
+       104,
+       40
+      ],
+      "role": "columnheader",
+      "tag": "th",
+      "xpath": "/html/body/div[1]/main[1]/div[1]/div[1]/div[4]/div[1]/div[2]/div[3]/div[2]/div[2]/div[1]/table[1]/thead[1]/tr[1]/th[4]"
+     },
+     "state": "payments.needs-approval"
+    }
+   ],
+   "evidenceHash": "f4948716d5e9da98d487c9f8facfd1106b59fca8c8239ea0dfb39c3f8bcd397f",
+   "facts": {
+    "axeSummary": "",
+    "criterion": "2.1.1",
+    "criterionName": "Keyboard",
+    "element": "columnheader \"Status\"",
+    "rule": "not-reached",
+    "screen": "Inbox after paying",
+    "stops": "82"
+   },
+   "family": "keyboard",
+   "guidance": "High if a task cannot be completed without a mouse.",
+   "issueId": null,
+   "key": "keyboard:not-reached:d8e41fb773c8",
+   "measured": false,
+   "primary": "billpay.inbox-after-payment",
+   "proposals": [],
+   "rule": "not-reached",
+   "screens": 6,
+   "severityDefault": "medium",
+   "source": "scanner",
+   "states": [
+    "billpay.inbox-after-payment",
+    "payments.needs-approval"
+   ],
+   "summary": "The Tab walk visited 82 stops and never reached the columnheader \"Status\", which responds to a click.",
+   "title": "Not reachable by keyboard: columnheader \"Status\""
+  },
+  {
+   "attachments": [],
+   "attempt": 1,
+   "basis": "candidate",
+   "criteria": [
+    "2.1.1"
+   ],
+   "evidence": [
+    {
+     "evidence": {
+      "end": "body",
+      "focusable": false,
+      "source": "pointer",
+      "stops": 82
+     },
+     "occurrence": {
+      "ancestors": [
+       [
+        "_tableHeadRow_1rlph_21"
+       ],
+       [
+        "_tableHead_1rlph_1"
+       ],
+       [
+        "_table_1acga_4"
+       ],
+       [
+        "_tableWrapper_1acga_4"
+       ],
+       [
+        "_draftsTableContainer_1o7vl_1"
+       ],
+       [],
+       [
+        "_dropzone_ex01s_1"
+       ],
+       [
+        "_tabContent_a2zac_49"
+       ]
+      ],
+      "classes": [
+       "_tableHead_hi0p4_3",
+       "_alignmentStart_hi0p4_11",
+       "_sortableHeaderCell_fuxy9_114",
+       "_amountCell_fuxy9_82",
+       "_collapsibleColumn_1acga_26"
+      ],
+      "data": {},
+      "heading": "Due in next 7 days",
+      "landmark": {
+       "name": "",
+       "role": "main"
+      },
+      "layer": "document",
+      "name": "Amount",
+      "rect": [
+       896,
+       449,
+       149,
+       40
+      ],
+      "role": "columnheader",
+      "tag": "th",
+      "xpath": "/html/body/div[1]/main[1]/div[1]/div[1]/div[4]/div[1]/div[2]/div[2]/div[2]/div[2]/div[2]/div[1]/div[1]/table[1]/thead[1]/tr[1]/th[5]"
+     },
+     "state": "billpay.inbox-after-payment"
+    },
+    {
+     "evidence": {
+      "end": "body",
+      "focusable": false,
+      "source": "pointer",
+      "stops": 82
+     },
+     "occurrence": {
+      "ancestors": [
+       [
+        "_tableHeadRow_1rlph_21"
+       ],
+       [
+        "_tableHead_1rlph_1"
+       ],
+       [
+        "_table_1acga_4"
+       ],
+       [
+        "_tableWrapper_1acga_4"
+       ],
+       [],
+       [],
+       [
+        "_tabContent_a2zac_49"
+       ],
+       [
+        "_pageContent_809q8_151",
+        "_pageContentWidth_809q8_184",
+        "_footerPadding_809q8_115"
+       ]
+      ],
+      "classes": [
+       "_tableHead_hi0p4_3",
+       "_alignmentStart_hi0p4_11",
+       "_sortableHeaderCell_fuxy9_114",
+       "_amountCell_198e9_50",
+       "_collapsibleColumn_1acga_26"
+      ],
+      "data": {},
+      "heading": "Payments",
+      "landmark": {
+       "name": "",
+       "role": "main"
+      },
+      "layer": "document",
+      "name": "Amount",
+      "rect": [
+       936,
+       281,
+       140,
+       40
+      ],
+      "role": "columnheader",
+      "tag": "th",
+      "xpath": "/html/body/div[1]/main[1]/div[1]/div[1]/div[4]/div[1]/div[2]/div[3]/div[2]/div[2]/div[1]/table[1]/thead[1]/tr[1]/th[6]"
+     },
+     "state": "payments.needs-approval"
+    }
+   ],
+   "evidenceHash": "f4948716d5e9da98d487c9f8facfd1106b59fca8c8239ea0dfb39c3f8bcd397f",
+   "facts": {
+    "axeSummary": "",
+    "criterion": "2.1.1",
+    "criterionName": "Keyboard",
+    "element": "columnheader \"Amount\"",
+    "rule": "not-reached",
+    "screen": "Inbox after paying",
+    "stops": "82"
+   },
+   "family": "keyboard",
+   "guidance": "High if a task cannot be completed without a mouse.",
+   "issueId": null,
+   "key": "keyboard:not-reached:e187baabb780",
+   "measured": false,
+   "primary": "billpay.inbox-after-payment",
+   "proposals": [],
+   "rule": "not-reached",
+   "screens": 6,
+   "severityDefault": "medium",
+   "source": "scanner",
+   "states": [
+    "billpay.inbox-after-payment",
+    "payments.needs-approval"
+   ],
+   "summary": "The Tab walk visited 82 stops and never reached the columnheader \"Amount\", which responds to a click.",
+   "title": "Not reachable by keyboard: columnheader \"Amount\""
+  },
+  {
+   "attachments": [],
+   "attempt": 1,
+   "basis": "candidate",
+   "criteria": [
+    "2.1.1"
+   ],
+   "evidence": [
+    {
+     "evidence": {
+      "end": "body",
+      "focusable": false,
+      "source": "pointer",
+      "stops": 82
+     },
+     "occurrence": {
+      "ancestors": [
+       [
+        "_tableHeadRow_1rlph_21"
+       ],
+       [
+        "_tableHead_1rlph_1"
+       ],
+       [
+        "_table_1acga_4"
+       ],
+       [
+        "_tableWrapper_1acga_4"
+       ],
+       [
+        "_draftsTableContainer_1o7vl_1"
+       ],
+       [],
+       [
+        "_dropzone_ex01s_1"
+       ],
+       [
+        "_tabContent_a2zac_49"
+       ]
+      ],
+      "classes": [
+       "_tableHead_hi0p4_3",
+       "_alignmentStart_hi0p4_11",
+       "_sortableHeaderCell_fuxy9_114",
+       "_lastUpdatedOnCell_fuxy9_99",
+       "_collapsibleColumn_1acga_26"
+      ],
+      "data": {},
+      "heading": "Due in next 7 days",
+      "landmark": {
+       "name": "",
+       "role": "main"
+      },
+      "layer": "document",
+      "name": "Last updated",
+      "rect": [
+       1194,
+       449,
+       114,
+       40
+      ],
+      "role": "columnheader",
+      "tag": "th",
+      "xpath": "/html/body/div[1]/main[1]/div[1]/div[1]/div[4]/div[1]/div[2]/div[2]/div[2]/div[2]/div[2]/div[1]/div[1]/table[1]/thead[1]/tr[1]/th[7]"
+     },
+     "state": "billpay.inbox-after-payment"
+    },
+    {
+     "evidence": {
+      "end": "body",
+      "focusable": false,
+      "source": "pointer",
+      "stops": 82
+     },
+     "occurrence": {
+      "ancestors": [
+       [
+        "_tableHeadRow_1rlph_21"
+       ],
+       [
+        "_tableHead_1rlph_1"
+       ],
+       [
+        "_table_1acga_4"
+       ],
+       [
+        "_tableWrapper_1acga_4"
+       ],
+       [
+        "_draftsTableContainer_1o7vl_1"
+       ],
+       [],
+       [
+        "_dropzone_ex01s_1"
+       ],
+       [
+        "_tabContent_a2zac_49"
+       ]
+      ],
+      "classes": [
+       "_tableHead_hi0p4_3",
+       "_alignmentStart_hi0p4_11",
+       "_sortableHeaderCell_fuxy9_114",
+       "_lastUpdatedOnCell_fuxy9_99",
+       "_collapsibleColumn_1acga_26"
+      ],
+      "data": {},
+      "heading": "Payments",
+      "landmark": {
+       "name": "",
+       "role": "main"
+      },
+      "layer": "document",
+      "name": "Last updated",
+      "rect": [
+       1194,
+       281,
+       114,
+       40
+      ],
+      "role": "columnheader",
+      "tag": "th",
+      "xpath": "/html/body/div[1]/main[1]/div[1]/div[1]/div[4]/div[1]/div[2]/div[3]/div[2]/div[2]/div[1]/div[1]/table[1]/thead[1]/tr[1]/th[7]"
+     },
+     "state": "payments.index"
+    }
+   ],
+   "evidenceHash": "daa5d5226dd78a0ff085f20fbdcf3d7da5c8130e71a2589ef2737e56254e174d",
+   "facts": {
+    "axeSummary": "",
+    "criterion": "2.1.1",
+    "criterionName": "Keyboard",
+    "element": "columnheader \"Last updated\"",
+    "rule": "not-reached",
+    "screen": "Inbox after paying",
+    "stops": "82"
+   },
+   "family": "keyboard",
+   "guidance": "High if a task cannot be completed without a mouse.",
+   "issueId": null,
+   "key": "keyboard:not-reached:eed6c15bb1cd",
+   "measured": false,
+   "primary": "billpay.inbox-after-payment",
+   "proposals": [],
+   "rule": "not-reached",
+   "screens": 4,
+   "severityDefault": "medium",
+   "source": "scanner",
+   "states": [
+    "billpay.inbox-after-payment",
+    "payments.index"
+   ],
+   "summary": "The Tab walk visited 82 stops and never reached the columnheader \"Last updated\", which responds to a click.",
+   "title": "Not reachable by keyboard: columnheader \"Last updated\""
+  },
+  {
+   "attachments": [],
+   "attempt": 1,
+   "basis": "candidate",
+   "criteria": [
+    "2.1.1"
+   ],
+   "evidence": [
+    {
+     "evidence": {
+      "end": "body",
+      "focusable": false,
+      "source": "pointer",
+      "stops": 82
+     },
+     "occurrence": {
+      "ancestors": [
+       [
+        "_dsTabView_95hq1_3"
+       ],
+       [
+        "_tabbarContainer_qtx5m_1",
+        "_tabbarContainer_a2zac_28"
+       ],
+       [
+        "_tabContent_a2zac_49"
+       ],
+       [
+        "session-replay-unmask"
+       ],
+       [
+        "_pageContent_809q8_151",
+        "_pageContentWidth_809q8_184",
+        "_footerPadding_809q8_115"
+       ],
+       [
+        "_dashboardContent_809q8_29"
+       ],
+       [
+        "_layout_809q8_18"
+       ],
+       [
+        "_wrapper_809q8_3"
+       ]
+      ],
+      "classes": [
+       "_bodySecondary_qaod7_51",
+       "_dsTabViewTab_95hq1_9"
+      ],
+      "data": {},
+      "heading": "Due in next 7 days",
+      "landmark": {
+       "name": "",
+       "role": "main"
+      },
+      "layer": "document",
+      "name": "",
+      "rect": [
+       433,
+       352,
+       127,
+       41
+      ],
+      "role": "generic",
+      "tag": "div",
+      "xpath": "/html/body/div[1]/main[1]/div[1]/div[1]/div[4]/div[1]/div[2]/div[2]/div[2]/div[1]/div[1]/div[2]"
+     },
+     "state": "billpay.inbox-after-payment"
+    },
+    {
+     "evidence": {
+      "end": "body",
+      "focusable": false,
+      "source": "pointer",
+      "stops": 82
+     },
+     "occurrence": {
+      "ancestors": [
+       [
+        "_dsTabView_95hq1_3"
+       ],
+       [
+        "_tabbarContainer_qtx5m_1",
+        "_tabbarContainer_a2zac_28"
+       ],
+       [
+        "_tabContent_a2zac_49"
+       ],
+       [
+        "_pageContent_809q8_151",
+        "_pageContentWidth_809q8_184",
+        "_footerPadding_809q8_115"
+       ],
+       [
+        "_dashboardContent_809q8_29"
+       ],
+       [
+        "_layout_809q8_18"
+       ],
+       [
+        "_wrapper_809q8_3"
+       ],
+       []
+      ],
+      "classes": [
+       "_bodySecondary_qaod7_51",
+       "_dsTabViewTab_95hq1_9"
+      ],
+      "data": {},
+      "heading": "Payments",
+      "landmark": {
+       "name": "",
+       "role": "main"
+      },
+      "layer": "document",
+      "name": "",
+      "rect": [
+       450,
+       184,
+       129,
+       41
+      ],
+      "role": "generic",
+      "tag": "div",
+      "xpath": "/html/body/div[1]/main[1]/div[1]/div[1]/div[4]/div[1]/div[2]/div[3]/div[1]/div[1]/div[2]"
+     },
+     "state": "payments.index"
+    }
+   ],
+   "evidenceHash": "daa5d5226dd78a0ff085f20fbdcf3d7da5c8130e71a2589ef2737e56254e174d",
+   "facts": {
+    "axeSummary": "",
+    "criterion": "2.1.1",
+    "criterionName": "Keyboard",
+    "element": "text in \"Due in next <n> days\"",
+    "rule": "not-reached",
+    "screen": "Inbox after paying",
+    "stops": "82"
+   },
+   "family": "keyboard",
+   "guidance": "High if a task cannot be completed without a mouse.",
+   "issueId": null,
+   "key": "keyboard:not-reached:f0c4913e6ad6",
+   "measured": false,
+   "primary": "billpay.inbox-after-payment",
+   "proposals": [],
+   "rule": "not-reached",
+   "screens": 10,
+   "severityDefault": "medium",
+   "source": "scanner",
+   "states": [
+    "billpay.inbox-after-payment",
+    "payments.index"
+   ],
+   "summary": "The Tab walk visited 82 stops and never reached the text in \"Due in next <n> days\", which responds to a click.",
+   "title": "Not reachable by keyboard: text in \"Due in next <n> days\""
+  },
+  {
+   "attachments": [],
+   "attempt": 1,
+   "basis": "violation",
+   "criteria": [
+    "4.1.2"
+   ],
+   "evidence": [
+    {
+     "evidence": {
+      "failureSummary": "Fix any of the following:\n  Element does not have inner text that is visible to screen readers\n  aria-label attribute does not exist or is empty\n  aria-labelledby attribute does not exist, references elements that do not exist or references elements that are empty\n  Element has no title attribute\n  Element does not have an implicit (wrapped) <label>\n  Element does not have an explicit <label>\n  Element's default semantics were not overridden with role=\"none\" or role=\"presentation\"",
+      "messageKey": "noAttr"
+     },
+     "occurrence": {
+      "ancestors": [
+       [
+        "_rowHoverActions_affr2_1"
+       ],
+       [
+        "_tableRow_137xu_3",
+        "_interactiveRows_137xu_35",
+        "_large_137xu_29",
+        "_showHoverActions_1o7vl_18"
+       ],
+       [
+        "_tableBody_1cp5b_1"
+       ],
+       [
+        "_table_1acga_4"
+       ],
+       [
+        "_tableWrapper_1acga_4"
+       ],
+       [
+        "_draftsTableContainer_1o7vl_1"
+       ],
+       [],
+       [
+        "_dropzone_ex01s_1"
+       ]
+      ],
+      "classes": [
+       "_button_r6b2u_20",
+       "_small_r6b2u_72",
+       "_destructive_r6b2u_186"
+      ],
+      "data": {},
+      "heading": "Due in next 7 days",
+      "landmark": {
+       "name": "",
+       "role": "main"
+      },
+      "layer": "document",
+      "name": "",
+      "rect": [
+       1170,
+       507,
+       32,
+       32
+      ],
+      "role": "button",
+      "tag": "button",
+      "xpath": "/html/body/div[1]/main[1]/div[1]/div[1]/div[4]/div[1]/div[2]/div[2]/div[2]/div[2]/div[2]/div[1]/div[1]/table[1]/tbody[1]/tr[1]/td[8]/button[1]"
+     },
+     "state": "billpay.inbox-after-payment"
+    },
+    {
+     "evidence": {
+      "failureSummary": "Fix any of the following:\n  Element does not have inner text that is visible to screen readers\n  aria-label attribute does not exist or is empty\n  aria-labelledby attribute does not exist, references elements that do not exist or references elements that are empty\n  Element has no title attribute\n  Element does not have an implicit (wrapped) <label>\n  Element does not have an explicit <label>\n  Element's default semantics were not overridden with role=\"none\" or role=\"presentation\"",
+      "messageKey": "noAttr"
+     },
+     "occurrence": {
+      "ancestors": [
+       [
+        "_rowHoverActions_affr2_1"
+       ],
+       [
+        "_tableRow_137xu_3",
+        "_interactiveRows_137xu_35",
+        "_large_137xu_29",
+        "_showHoverActions_1o7vl_18"
+       ],
+       [
+        "_tableBody_1cp5b_1"
+       ],
+       [
+        "_table_1acga_4"
+       ],
+       [
+        "_tableWrapper_1acga_4"
+       ],
+       [
+        "_draftsTableContainer_1o7vl_1"
+       ],
+       [],
+       [
+        "_dropzone_ex01s_1"
+       ]
+      ],
+      "classes": [
+       "_button_r6b2u_20",
+       "_small_r6b2u_72",
+       "_destructive_r6b2u_186"
+      ],
+      "data": {},
+      "heading": "Payments",
+      "landmark": {
+       "name": "",
+       "role": "main"
+      },
+      "layer": "document",
+      "name": "",
+      "rect": [
+       1170,
+       339,
+       32,
+       32
+      ],
+      "role": "button",
+      "tag": "button",
+      "xpath": "/html/body/div[1]/main[1]/div[1]/div[1]/div[4]/div[1]/div[2]/div[3]/div[2]/div[2]/div[1]/div[1]/table[1]/tbody[1]/tr[1]/td[8]/button[1]"
+     },
+     "state": "payments.index"
+    }
+   ],
+   "evidenceHash": "0fc874513aa8949b10cb6b4474759a93ffbb354a191e7362a9c7fac840492bf7",
+   "facts": {
+    "announced": "button \"\"",
+    "axeSummary": "Element does not have inner text that is visible to screen readers; aria-label attribute does not exist or is empty; aria-labelledby attribute does not exist,…",
+    "criterion": "4.1.2",
+    "criterionName": "Name, Role, Value",
+    "element": "button in \"Due in next <n> days\"",
+    "rule": "button-name",
+    "screen": "Inbox after paying"
+   },
+   "family": "name",
+   "guidance": "High for an unnamed form control or the sole primary action.",
+   "issueId": null,
+   "key": "name:button-name:886c98c8a9e3",
+   "measured": false,
+   "primary": "billpay.inbox-after-payment",
+   "proposals": [],
+   "rule": "button-name",
+   "screens": 6,
+   "severityDefault": "medium",
+   "source": "scanner",
+   "states": [
+    "billpay.inbox-after-payment",
+    "payments.index"
+   ],
+   "summary": "button-name: announced as button \"\". Element does not have inner text that is visible to screen readers; aria-label attribute does not exist or is empty; aria-labelledby attribute does not exist,…",
+   "title": "Missing or unclear name: button in \"Due in next <n> days\""
+  }
+ ],
+ "primaries": [
+  "billpay.inbox-after-payment"
+ ],
+ "reach": {
+  "baseUrl": "https://demo.mercury.com",
+  "data": "data",
+  "map": "build/map.json",
+  "run": "2026-10-03-1525",
+  "workspace": "a11y"
+ },
+ "run": "2026-10-03-1525"
+}

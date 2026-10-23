@@ -1,0 +1,6575 @@
+{
+ "settings.account-security": {
+  "checked": "2026-10-02-1349",
+  "fingerprint": {
+   "controls": [
+    "Account Security",
+    "Advisors <n>",
+    "Approval Rules",
+    "Ask team members to set up a passkey",
+    "Categories",
+    "Company Profile",
+    "Controls",
+    "Customize your experience",
+    "Departments",
+    "Documents",
+    "Enable separation of duties",
+    "Export filtered",
+    "Filters",
+    "Integrations",
+    "Mercury Demo Pro",
+    "Move money",
+    "Navigate to Settings",
+    "Notifications",
+    "Open account",
+    "Perks",
+    "Plan & Billing",
+    "Profile",
+    "Referrals",
+    "Review Mercury access for inactive team member",
+    "Run check-in",
+    "Search for anything",
+    "Security",
+    "Settings",
+    "Team",
+    "Toggle Private Mode",
+    "Tokens",
+    "Vault",
+    "View all suggestions",
+    "Viewing as Admin",
+    "Webhooks",
+    "updates"
+   ],
+   "headings": [
+    "Account Security",
+    "Suggested actions",
+    "Activity history from all team members"
+   ],
+   "path": "/settings/account-security",
+   "structure": "document",
+   "top": {
+    "name": "",
+    "role": "document"
+   }
+  },
+  "hop": [],
+  "mutates": false,
+  "parent": "/settings/account-security",
+  "recordedBy": "root",
+  "review": null,
+  "similarity": 0.9965,
+  "source": "97d170e1550eee4afc0af065b78cda302a97674c",
+  "status": "accepted"
+ },
+ "settings.add-job-title": {
+  "checked": "2026-10-02-1349",
+  "fingerprint": {
+   "controls": [
+    "Cancel",
+    "Job title",
+    "Open combobox menu",
+    "Save"
+   ],
+   "headings": [
+    "Add job title"
+   ],
+   "path": "/settings/my-profile",
+   "structure": "dialog",
+   "top": {
+    "name": "",
+    "role": "dialog"
+   }
+  },
+  "hop": [
+   {
+    "click": {
+     "index": 0,
+     "name": "Add",
+     "role": "button"
+    }
+   }
+  ],
+  "mutates": false,
+  "parent": "settings.my-profile",
+  "recordedBy": "agent",
+  "review": null,
+  "similarity": 0.9993,
+  "source": "f8d7550df41b8e638f1cbd742c194f655c9a1ac6",
+  "status": "accepted"
+ },
+ "settings.advisors": {
+  "checked": "2026-10-02-1349",
+  "fingerprint": {
+   "controls": [
+    "Account Security",
+    "Add filter",
+    "Advisors <n>",
+    "Approval Rules",
+    "Categories",
+    "Company Profile",
+    "Controls",
+    "Customize your experience",
+    "Decline",
+    "Departments",
+    "Documents",
+    "Integrations",
+    "Invite advisor team",
+    "Mercury Demo Pro",
+    "Move money",
+    "Navigate to Settings",
+    "Notifications",
+    "Open account",
+    "Perks",
+    "Plan & Billing",
+    "Profile",
+    "Referrals",
+    "Review",
+    "Roles",
+    "Search for anything",
+    "Security",
+    "Settings",
+    "Team",
+    "Toggle Private Mode",
+    "Tokens",
+    "Vault",
+    "Viewing as Admin",
+    "Webhooks",
+    "updates"
+   ],
+   "headings": [
+    "Advisors"
+   ],
+   "path": "/settings/users/advisors",
+   "structure": "document",
+   "top": {
+    "name": "",
+    "role": "document"
+   }
+  },
+  "hop": [],
+  "mutates": false,
+  "parent": "/settings/users/advisors",
+  "recordedBy": "root",
+  "review": null,
+  "similarity": 0.9992,
+  "source": "97d170e1550eee4afc0af065b78cda302a97674c",
+  "status": "accepted"
+ },
+ "settings.approval-policy-edit": {
+  "checked": "2026-10-02-1349",
+  "fingerprint": {
+   "controls": [
+    "Add rule",
+    "Cancel",
+    "Close",
+    "Customize your experience",
+    "Jane Black",
+    "Jessica Awad",
+    "Mary Metcalfe",
+    "Open account",
+    "Save",
+    "Viewing as Admin"
+   ],
+   "headings": [
+    "Modify approval policy",
+    "Rules"
+   ],
+   "path": "/settings/approvals/edit-policy",
+   "structure": "document",
+   "top": {
+    "name": "",
+    "role": "document"
+   }
+  },
+  "hop": [],
+  "mutates": false,
+  "parent": "/settings/approvals/edit-policy",
+  "recordedBy": "root",
+  "review": null,
+  "similarity": 0.9997,
+  "source": "97d170e1550eee4afc0af065b78cda302a97674c",
+  "status": "accepted"
+ },
+ "settings.approval-rule-editing": {
+  "checked": "2026-10-02-1349",
+  "fingerprint": {
+   "controls": [
+    "<amount>",
+    "Add another approver",
+    "Add rule",
+    "Cancel",
+    "Close",
+    "Customize your experience",
+    "Jane Black",
+    "Jessica Awad",
+    "Mary Metcalfe",
+    "No limit",
+    "Open account",
+    "Remove Tag",
+    "Require approval from",
+    "Save",
+    "Viewing as Admin"
+   ],
+   "headings": [
+    "Modify approval policy",
+    "Rules"
+   ],
+   "path": "/settings/approvals/edit-policy",
+   "structure": "document",
+   "top": {
+    "name": "",
+    "role": "document"
+   }
+  },
+  "hop": [
+   {
+    "click": {
+     "index": 0,
+     "name": "Edit rule",
+     "role": "menuitem"
+    }
+   }
+  ],
+  "mutates": false,
+  "parent": "settings.approval-rule-menu",
+  "recordedBy": "agent",
+  "review": null,
+  "similarity": 0.9998,
+  "source": "4c90265ec53649c9525b385b66426915bcc7ae62",
+  "status": "accepted"
+ },
+ "settings.approval-rule-menu": {
+  "checked": "2026-10-02-1349",
+  "fingerprint": {
+   "controls": [
+    "Delete rule",
+    "Edit rule"
+   ],
+   "headings": [],
+   "path": "/settings/approvals/edit-policy",
+   "structure": "menu",
+   "top": {
+    "name": "",
+    "role": "menu"
+   }
+  },
+  "hop": [
+   {
+    "click": {
+     "css": "[class*=\"_menuButton_\"]",
+     "index": 1
+    }
+   }
+  ],
+  "mutates": false,
+  "parent": "settings.approval-policy-edit",
+  "recordedBy": "agent",
+  "review": null,
+  "similarity": 0.9996,
+  "source": "2afa9a385c110edd858f2206079b94e7fd7a27b2",
+  "status": "accepted"
+ },
+ "settings.approvals": {
+  "checked": "2026-10-02-1349",
+  "fingerprint": {
+   "controls": [
+    "Account Security",
+    "Advisors <n>",
+    "Approval Rules",
+    "Categories",
+    "Company Profile",
+    "Controls",
+    "Customize your experience",
+    "Daily maximum",
+    "Departments",
+    "Documents",
+    "Dual admin",
+    "Edit",
+    "Integrations",
+    "Jane Black",
+    "Jessica Awad",
+    "Mary Metcalfe",
+    "Mercury Demo Pro",
+    "Move money",
+    "Navigate to Settings",
+    "Notifications",
+    "Open account",
+    "Per-payment",
+    "Perks",
+    "Plan & Billing",
+    "Profile",
+    "Referrals",
+    "Search for anything",
+    "Security",
+    "Separation of duties",
+    "Separation of duties prevents a payment requester from approving their own payment.",
+    "Settings",
+    "Team",
+    "Toggle Private Mode",
+    "Tokens",
+    "Vault",
+    "Viewing as Admin",
+    "Webhooks",
+    "updates"
+   ],
+   "headings": [
+    "Approval Rules"
+   ],
+   "path": "/settings/approvals",
+   "structure": "document",
+   "top": {
+    "name": "",
+    "role": "document"
+   }
+  },
+  "hop": [],
+  "mutates": false,
+  "parent": "/settings/approvals",
+  "recordedBy": "root",
+  "review": null,
+  "similarity": 0.9995,
+  "source": "97d170e1550eee4afc0af065b78cda302a97674c",
+  "status": "accepted"
+ },
+ "settings.backup-codes": {
+  "checked": "2026-10-02-1349",
+  "fingerprint": {
+   "controls": [
+    "Copy",
+    "Done",
+    "Download",
+    "I’ve saved my backup codes in a secure place",
+    "Print",
+    "WADOUET<n>WE<n>L<n>A<n>S <n>LFKMBIAPHOVELVV WUFMR<n>LDJLHXUK<n>V IDIH<n>LTPQ<n>CNGK<n>G CA<n>YGZVER<n>DSHUD BGEMLEO<n>MKJDMMJR ZQUN<n>EDK<n>IAFSQ LSQGZMJKU<n>AECKJS",
+    "here"
+   ],
+   "headings": [
+    "Save your new backup codes"
+   ],
+   "path": "/settings/security",
+   "structure": "dialog",
+   "top": {
+    "name": "",
+    "role": "dialog"
+   }
+  },
+  "hop": [
+   {
+    "click": {
+     "name": "Generate New Codes",
+     "role": "button"
+    }
+   }
+  ],
+  "mutates": true,
+  "parent": "settings.personal-security-lower",
+  "recordedBy": "agent",
+  "review": {
+   "by": "conductor",
+   "date": "2026-10-03",
+   "decision": "accept",
+   "note": "same 'Save your new backup codes' takeover (eight codes, Print/Download/Copy, unchecked checkbox, disabled Done); hop clicks Generate New Codes as labeled",
+   "reason": "mutating"
+  },
+  "similarity": 0.9999,
+  "source": "2aae05aa451868783601f0e06849aa3f2cb66b02",
+  "status": "accepted"
+ },
+ "settings.backup-codes-regenerated": {
+  "checked": "2026-10-02-1349",
+  "fingerprint": {
+   "controls": [
+    "+ Add another verification method",
+    "+ Add passkey",
+    "+ Add passkey via QR Code",
+    "Account Security",
+    "Advisors <n>",
+    "Approval Rules",
+    "Categories",
+    "Change password",
+    "Company Profile",
+    "Controls",
+    "Customize your experience",
+    "Departments",
+    "Documents",
+    "Edit nickname",
+    "Forget",
+    "Forget mobile app logins",
+    "Forget other devices",
+    "Generate New Codes",
+    "Integrations",
+    "Learn more",
+    "Log out other sessions",
+    "Mercury Demo Pro",
+    "Move money",
+    "Navigate to Settings",
+    "Notifications",
+    "Open account",
+    "Perks",
+    "Plan & Billing",
+    "Profile",
+    "Referrals",
+    "Remove",
+    "Reset",
+    "Search for anything",
+    "Security",
+    "Settings",
+    "Sign out",
+    "Team",
+    "Toggle Private Mode",
+    "Tokens",
+    "Unlink",
+    "Use passkeys only",
+    "Vault",
+    "Viewing as Admin",
+    "Webhooks",
+    "updates"
+   ],
+   "headings": [
+    "Security",
+    "Use passkeys instead of one-time codes"
+   ],
+   "path": "/settings/security",
+   "structure": "document",
+   "top": {
+    "name": "",
+    "role": "document"
+   }
+  },
+  "hop": [
+   {
+    "check": {
+     "label": "I’ve saved my backup codes in a secure place"
+    }
+   },
+   {
+    "click": {
+     "name": "Done",
+     "role": "button"
+    }
+   }
+  ],
+  "mutates": true,
+  "parent": "settings.backup-codes",
+  "recordedBy": "agent",
+  "review": {
+   "by": "conductor",
+   "date": "2026-10-03",
+   "decision": "accept",
+   "note": "same Account recovery row 'Backup codes (8/8 remaining)' with the dialog closed and no toast; the hop ticks the confirmation and clicks Done as the label says; only scroll position and dates differ",
+   "reason": "below-threshold"
+  },
+  "similarity": 0.5094,
+  "source": "6d1b2c7114680962b75706770d69e6cb1894bd50",
+  "status": "accepted"
+ },
+ "settings.billing-history": {
+  "checked": "2026-10-02-1349",
+  "fingerprint": {
+   "controls": [
+    "Account Security",
+    "Accounts",
+    "Advisors <n>",
+    "Agreements",
+    "All",
+    "Approval Rules",
+    "Bank letters",
+    "Billing history",
+    "Categories",
+    "Company Profile",
+    "Company documents",
+    "Controls",
+    "Customize your experience",
+    "Departments",
+    "Documents",
+    "Download",
+    "Integrations",
+    "Investment tax forms",
+    "Legal",
+    "Mercury Demo Pro",
+    "Move money",
+    "Navigate to Settings",
+    "Notices",
+    "Notifications",
+    "Open account",
+    "Operations",
+    "Other",
+    "Perks",
+    "Plan & Billing",
+    "Profile",
+    "Receipts & attachments",
+    "Recipient tax forms",
+    "Referrals",
+    "Search for anything",
+    "Security",
+    "Settings",
+    "Statements",
+    "Support requests",
+    "Tax",
+    "Team",
+    "Toggle Private Mode",
+    "Tokens",
+    "Trade confirmations",
+    "Vault",
+    "Viewing as Admin",
+    "Webhooks",
+    "Wire details",
+    "Year",
+    "updates"
+   ],
+   "headings": [
+    "Documents & Data"
+   ],
+   "path": "/settings/documents/billing-history",
+   "structure": "document",
+   "top": {
+    "name": "",
+    "role": "document"
+   }
+  },
+  "hop": [],
+  "mutates": false,
+  "parent": "/settings/documents/billing-history",
+  "recordedBy": "root",
+  "review": null,
+  "similarity": 0.9992,
+  "source": "97d170e1550eee4afc0af065b78cda302a97674c",
+  "status": "accepted"
+ },
+ "settings.billing-more-menu": {
+  "checked": "2026-10-02-1349",
+  "fingerprint": {
+   "controls": [
+    "Potentially dangerous action: Unsubscribe",
+    "View all plans"
+   ],
+   "headings": [],
+   "path": "/settings/plan-and-billing",
+   "structure": "menu",
+   "top": {
+    "name": "Manage",
+    "role": "menu"
+   }
+  },
+  "hop": [
+   {
+    "click": {
+     "css": "[class*=\"_menuButton_\"]",
+     "index": 4
+    }
+   }
+  ],
+  "mutates": false,
+  "parent": "settings.plan-billing",
+  "recordedBy": "agent",
+  "review": null,
+  "similarity": 0.968,
+  "source": "bd47752b4ce6c41cdbf5a06661e96b9483b0f903",
+  "status": "accepted"
+ },
+ "settings.cash-flow-edited": {
+  "checked": "2026-10-02-1349",
+  "fingerprint": {
+   "controls": [
+    "Cash flow insights",
+    "Done",
+    "End-of-month cash flow digest",
+    "Incoming transactions that exceed",
+    "Outgoing transactions that exceed"
+   ],
+   "headings": [
+    "Email",
+    "Push"
+   ],
+   "path": "/settings/notifications/cashFlow",
+   "structure": "dialog",
+   "top": {
+    "name": "",
+    "role": "dialog"
+   }
+  },
+  "hop": [
+   {
+    "click": {
+     "index": 1,
+     "name": "Outgoing transactions that exceed",
+     "role": "switch"
+    }
+   },
+   {
+    "fill": {
+     "locator": {
+      "index": 0,
+      "name": "Incoming transactions that exceed",
+      "role": "textbox"
+     },
+     "value": "150"
+    }
+   }
+  ],
+  "mutates": false,
+  "parent": "settings.cash-flow-notifications",
+  "recordedBy": "agent",
+  "review": null,
+  "similarity": 0.9975,
+  "source": "b72b05c8f6c145cc1eaa9e0f0f14c7b58417324f",
+  "status": "accepted"
+ },
+ "settings.cash-flow-notifications": {
+  "checked": "2026-10-02-1349",
+  "fingerprint": {
+   "controls": [
+    "Cash flow insights",
+    "Done",
+    "End-of-month cash flow digest",
+    "Incoming transactions that exceed",
+    "Outgoing transactions that exceed"
+   ],
+   "headings": [
+    "Email",
+    "Push"
+   ],
+   "path": "/settings/notifications/cashFlow",
+   "structure": "dialog",
+   "top": {
+    "name": "",
+    "role": "dialog"
+   }
+  },
+  "hop": [
+   {
+    "click": {
+     "name": "Edit Cash flow notifications",
+     "role": "button"
+    }
+   }
+  ],
+  "mutates": false,
+  "parent": "settings.notifications",
+  "recordedBy": "agent",
+  "review": null,
+  "similarity": 0.9989,
+  "source": "ecbc8a4e28e503ffb93e17a759dd2d695a2415b5",
+  "status": "accepted"
+ },
+ "settings.categories": {
+  "checked": "2026-10-02-1349",
+  "fingerprint": {
+   "controls": [
+    "Account Security",
+    "Advisors <n>",
+    "Approval Rules",
+    "Categories",
+    "Company Profile",
+    "Controls",
+    "Create category",
+    "Customize your experience",
+    "Departments",
+    "Documents",
+    "Integrations",
+    "Mercury Demo Pro",
+    "Move money",
+    "Navigate to Settings",
+    "Notifications",
+    "Open account",
+    "Perks",
+    "Plan & Billing",
+    "Profile",
+    "Referrals",
+    "Search for anything",
+    "Security",
+    "Settings",
+    "Team",
+    "Toggle Private Mode",
+    "Tokens",
+    "Vault",
+    "Viewing as Admin",
+    "Webhooks",
+    "accounting settings.",
+    "updates"
+   ],
+   "headings": [
+    "Categories"
+   ],
+   "path": "/settings/categories",
+   "structure": "document",
+   "top": {
+    "name": "",
+    "role": "document"
+   }
+  },
+  "hop": [],
+  "mutates": false,
+  "parent": "/settings/categories",
+  "recordedBy": "root",
+  "review": null,
+  "similarity": 0.9995,
+  "source": "97d170e1550eee4afc0af065b78cda302a97674c",
+  "status": "accepted"
+ },
+ "settings.change-password": {
+  "checked": "2026-10-02-1349",
+  "fingerprint": {
+   "controls": [
+    "Cancel",
+    "Change password",
+    "Log out of all other devices Log out of all other devices",
+    "New Password",
+    "Old Password",
+    "Repeat New Password",
+    "Show password"
+   ],
+   "headings": [
+    "Change Password"
+   ],
+   "path": "/settings/security",
+   "structure": "dialog",
+   "top": {
+    "name": "",
+    "role": "dialog"
+   }
+  },
+  "hop": [
+   {
+    "click": {
+     "name": "Change password",
+     "role": "button"
+    }
+   }
+  ],
+  "mutates": false,
+  "parent": "settings.personal-security-lower",
+  "recordedBy": "agent",
+  "review": {
+   "by": "conductor",
+   "date": "2026-10-03",
+   "decision": "accept",
+   "note": "same Change Password modal (Old/New/Repeat fields, pre-ticked 'Log out of all other devices', Cancel/Change password); only the background scroll differs",
+   "reason": "below-threshold"
+  },
+  "similarity": 0.7838,
+  "source": "5e32bd1edbd15f789a591b942b5899d9f5e08ee8",
+  "status": "accepted"
+ },
+ "settings.change-password-mismatch": {
+  "checked": "2026-10-02-1349",
+  "fingerprint": {
+   "controls": [
+    "Cancel",
+    "Change password",
+    "Log out of all other devices Log out of all other devices",
+    "New Password",
+    "Old Password",
+    "Repeat New Password",
+    "Show password"
+   ],
+   "headings": [
+    "Change Password"
+   ],
+   "path": "/settings/security",
+   "structure": "dialog",
+   "top": {
+    "name": "",
+    "role": "dialog"
+   }
+  },
+  "hop": [
+   {
+    "fill": {
+     "locator": {
+      "label": "New Password"
+     },
+     "value": "Test-Password-456!"
+    }
+   },
+   {
+    "fill": {
+     "locator": {
+      "label": "Repeat New Password"
+     },
+     "value": "Test-Password-123!"
+    }
+   },
+   {
+    "click": {
+     "name": "Change password",
+     "role": "button",
+     "within": {
+      "role": "dialog"
+     }
+    }
+   }
+  ],
+  "mutates": true,
+  "parent": "settings.change-password-short",
+  "recordedBy": "agent",
+  "review": {
+   "by": "conductor",
+   "date": "2026-10-03",
+   "decision": "accept",
+   "note": "same Change Password dialog with 'Passwords don't match' under Repeat New Password; the hop fills two different passwords and clicks Change password; the capture's 'Show password' tooltip is a stray hover the label doesn't name",
+   "reason": "below-threshold"
+  },
+  "similarity": 0.7745,
+  "source": "f3c4b6579ceb7cedf742b7af5ae003d0d79d7c01",
+  "status": "accepted"
+ },
+ "settings.change-password-short": {
+  "checked": "2026-10-02-1349",
+  "fingerprint": {
+   "controls": [
+    "Cancel",
+    "Change password",
+    "Log out of all other devices Log out of all other devices",
+    "New Password",
+    "Old Password",
+    "Repeat New Password",
+    "Show password"
+   ],
+   "headings": [
+    "Change Password"
+   ],
+   "path": "/settings/security",
+   "structure": "dialog",
+   "top": {
+    "name": "",
+    "role": "dialog"
+   }
+  },
+  "hop": [
+   {
+    "fill": {
+     "locator": {
+      "label": "Old Password"
+     },
+     "value": "Test-Password-123!"
+    }
+   },
+   {
+    "fill": {
+     "locator": {
+      "label": "New Password"
+     },
+     "value": "abc"
+    }
+   },
+   {
+    "fill": {
+     "locator": {
+      "label": "Repeat New Password"
+     },
+     "value": "abc"
+    }
+   },
+   {
+    "click": {
+     "name": "Change password",
+     "role": "button",
+     "within": {
+      "role": "dialog"
+     }
+    }
+   }
+  ],
+  "mutates": true,
+  "parent": "settings.change-password",
+  "recordedBy": "agent",
+  "review": {
+   "by": "conductor",
+   "date": "2026-10-03",
+   "decision": "accept",
+   "note": "same Change Password dialog with 'Minimum 10 characters' under New and Repeat after the hop fills 'abc' twice and clicks the dialog's Change password; the capture's 'Show password' tooltip and focus ring on the Repeat eye button come from where the person's cursor happened to be. Neither the label, the note nor the next edge (mismatch) names that tooltip, so it is not part of this state.",
+   "reason": "below-threshold"
+  },
+  "similarity": 0.7812,
+  "source": "ee83d835be6aa64549d81acd6b63a4175446c65f",
+  "status": "accepted"
+ },
+ "settings.choose-plan-annual": {
+  "checked": "2026-10-02-1349",
+  "fingerprint": {
+   "controls": [
+    "Contact Sales",
+    "Explore Pricing",
+    "Pay annually Pay annually -<n>%",
+    "Pay monthly",
+    "Upgrade"
+   ],
+   "headings": [],
+   "path": "/settings/plan-and-billing",
+   "structure": "dialog",
+   "top": {
+    "name": "",
+    "role": "dialog"
+   }
+  },
+  "hop": [
+   {
+    "click": {
+     "name": "Pay annually Pay annually -<n>%",
+     "role": "button"
+    }
+   }
+  ],
+  "mutates": false,
+  "parent": "settings.choose-plan-monthly",
+  "recordedBy": "draft",
+  "review": null,
+  "similarity": 0.9986,
+  "source": "77d324ff11d00a651c9a56343ed40d1be9bd90e3",
+  "status": "accepted"
+ },
+ "settings.choose-plan-monthly": {
+  "checked": "2026-10-02-1349",
+  "fingerprint": {
+   "controls": [
+    "Contact Sales",
+    "Explore Pricing",
+    "Pay annually Pay annually -<n>%",
+    "Pay monthly",
+    "Select",
+    "Selected"
+   ],
+   "headings": [],
+   "path": "/settings/plan-and-billing",
+   "structure": "dialog",
+   "top": {
+    "name": "",
+    "role": "dialog"
+   }
+  },
+  "hop": [
+   {
+    "click": {
+     "name": "View all plans",
+     "role": "menuitem"
+    }
+   }
+  ],
+  "mutates": false,
+  "parent": "settings.plan-manage-menu",
+  "recordedBy": "draft",
+  "review": null,
+  "similarity": 0.9986,
+  "source": "9eecfcc4b041434f3cdc3e2327c372a4d44c84e5",
+  "status": "accepted"
+ },
+ "settings.company-name-updated": {
+  "checked": "2026-10-02-1349",
+  "fingerprint": {
+   "controls": [],
+   "headings": [],
+   "path": "/settings/company-profile",
+   "structure": "status",
+   "top": {
+    "name": "",
+    "role": "generic"
+   }
+  },
+  "hop": [
+   {
+    "fill": {
+     "locator": {
+      "label": "Company name"
+     },
+     "value": "Acme Test Co"
+    }
+   },
+   {
+    "click": {
+     "name": "Update",
+     "role": "button"
+    }
+   }
+  ],
+  "mutates": true,
+  "parent": "settings.edit-company-name",
+  "recordedBy": "agent",
+  "review": {
+   "by": "conductor",
+   "date": "2026-10-03",
+   "decision": "accept",
+   "note": "same Company name page after Update (header reads Acme Test Co); the toast shows in the light replay and fades before the dark one. The sweep arms its status observer before the final hop, so the toast is measured live, not from the screenshot",
+   "reason": "mutating"
+  },
+  "similarity": 0.9644,
+  "source": "7c216848d66e39791d2b1080b646ac6f01da1eee",
+  "status": "accepted"
+ },
+ "settings.controls": {
+  "checked": "2026-10-02-1349",
+  "fingerprint": {
+   "controls": [
+    "Account Security",
+    "Advisors <n>",
+    "Approval Rules",
+    "Categories",
+    "Company Profile",
+    "Controls",
+    "Customize your experience",
+    "Departments",
+    "Disable",
+    "Documents",
+    "Edit",
+    "Integrations",
+    "Learn more",
+    "Mercury Demo Pro",
+    "Move money",
+    "Navigate to Settings",
+    "Notifications",
+    "Open account",
+    "Perks",
+    "Plan & Billing",
+    "Profile",
+    "Referrals",
+    "Search for anything",
+    "Security",
+    "Settings",
+    "Team",
+    "Toggle Private Mode",
+    "Tokens",
+    "Vault",
+    "Viewing as Admin",
+    "Webhooks",
+    "updates"
+   ],
+   "headings": [
+    "Controls"
+   ],
+   "path": "/settings/controls",
+   "structure": "document",
+   "top": {
+    "name": "",
+    "role": "document"
+   }
+  },
+  "hop": [],
+  "mutates": false,
+  "parent": "/settings/controls",
+  "recordedBy": "root",
+  "review": null,
+  "similarity": 0.9997,
+  "source": "97d170e1550eee4afc0af065b78cda302a97674c",
+  "status": "accepted"
+ },
+ "settings.controls-edit": {
+  "checked": "2026-10-02-1349",
+  "fingerprint": {
+   "controls": [
+    "Account Security",
+    "Advisors <n>",
+    "Approval Rules",
+    "Cancel",
+    "Categories",
+    "Company Profile",
+    "Controls",
+    "Customize your experience",
+    "Departments",
+    "Documents",
+    "Integrations",
+    "Learn more",
+    "Manual review expiration behavior",
+    "Mercury Demo Pro",
+    "Move money",
+    "Navigate to Settings",
+    "Notifications",
+    "Open account",
+    "Perks",
+    "Plan & Billing",
+    "Profile",
+    "Referrals",
+    "Save",
+    "Search for anything",
+    "Security",
+    "Settings",
+    "Team",
+    "Toggle Private Mode",
+    "Tokens",
+    "Vault",
+    "Viewing as Admin",
+    "Webhooks",
+    "updates"
+   ],
+   "headings": [
+    "Controls"
+   ],
+   "path": "/settings/controls",
+   "structure": "document",
+   "top": {
+    "name": "",
+    "role": "document"
+   }
+  },
+  "hop": [
+   {
+    "click": {
+     "name": "Edit",
+     "role": "button"
+    }
+   }
+  ],
+  "mutates": false,
+  "parent": "settings.controls",
+  "recordedBy": "draft",
+  "review": null,
+  "similarity": 0.9997,
+  "source": "256134cd97dae36ebc865f6a513cc1c8a097bbe3",
+  "status": "accepted"
+ },
+ "settings.create-category-row": {
+  "checked": "2026-10-02-1349",
+  "fingerprint": {
+   "controls": [
+    "Account Security",
+    "Advisors <n>",
+    "Approval Rules",
+    "Cancel",
+    "Categories",
+    "Company Profile",
+    "Controls",
+    "Create category",
+    "Customize your experience",
+    "Departments",
+    "Documents",
+    "Integrations",
+    "Mercury Demo Pro",
+    "Move money",
+    "Navigate to Settings",
+    "Notifications",
+    "Open account",
+    "Perks",
+    "Plan & Billing",
+    "Profile",
+    "Referrals",
+    "Save",
+    "Search for anything",
+    "Security",
+    "Settings",
+    "Team",
+    "Toggle Private Mode",
+    "Tokens",
+    "Vault",
+    "Viewing as Admin",
+    "Webhooks",
+    "accounting settings.",
+    "updates"
+   ],
+   "headings": [
+    "Categories"
+   ],
+   "path": "/settings/categories",
+   "structure": "document",
+   "top": {
+    "name": "",
+    "role": "document"
+   }
+  },
+  "hop": [
+   {
+    "click": {
+     "name": "Create category",
+     "role": "button"
+    }
+   }
+  ],
+  "mutates": true,
+  "parent": "settings.categories",
+  "recordedBy": "draft",
+  "review": null,
+  "similarity": 0.9993,
+  "source": "2a9cc3354451e458d4d506616b24bd4d8b59ba43",
+  "status": "accepted"
+ },
+ "settings.create-role": {
+  "checked": "2026-10-02-1349",
+  "fingerprint": {
+   "controls": [
+    "ACH authorizations",
+    "AP",
+    "AR",
+    "Accounting More info",
+    "Check depositing",
+    "Checking ••<n>",
+    "Close",
+    "Credit",
+    "Customize your experience",
+    "Internal transfers",
+    "Invoice creation More info",
+    "Mercury Books More info",
+    "Open account",
+    "Open combobox menu",
+    "Ops / Payroll",
+    "Recipient management More info",
+    "Role description",
+    "Role name",
+    "Save New Role",
+    "Savings ••<n>",
+    "Select All",
+    "Select template",
+    "Send money",
+    "Spend",
+    "Spend management More info",
+    "Treasury",
+    "User management - anyone but admins More info",
+    "Viewing as Admin"
+   ],
+   "headings": [
+    "Create a new role"
+   ],
+   "path": "/settings/roles/create",
+   "structure": "document",
+   "top": {
+    "name": "",
+    "role": "document"
+   }
+  },
+  "hop": [],
+  "mutates": false,
+  "parent": "/settings/roles/create",
+  "recordedBy": "root",
+  "review": null,
+  "similarity": 0.9996,
+  "source": "97d170e1550eee4afc0af065b78cda302a97674c",
+  "status": "accepted"
+ },
+ "settings.create-role-account-error": {
+  "checked": "2026-10-02-1349",
+  "fingerprint": {
+   "controls": [
+    "ACH authorizations",
+    "AP",
+    "AR",
+    "Accounting More info",
+    "Check depositing",
+    "Checking ••<n>",
+    "Close",
+    "Credit",
+    "Customize your experience",
+    "Internal transfers",
+    "Invoice creation More info",
+    "Mercury Books More info",
+    "None",
+    "Open account",
+    "Open combobox menu",
+    "Ops / Payroll",
+    "Recipient management More info",
+    "Role description",
+    "Role name",
+    "Save New Role",
+    "Savings ••<n>",
+    "Select All",
+    "Select template",
+    "Send money",
+    "Spend",
+    "Spend management More info",
+    "Treasury",
+    "User management - anyone but admins More info",
+    "Viewing as Admin"
+   ],
+   "headings": [
+    "Create a new role"
+   ],
+   "path": "/settings/roles/create",
+   "structure": "document",
+   "top": {
+    "name": "",
+    "role": "document"
+   }
+  },
+  "hop": [
+   {
+    "fill": {
+     "locator": {
+      "name": "Role name",
+      "role": "textbox"
+     },
+     "value": "Test Person"
+    }
+   },
+   {
+    "check": {
+     "name": "Send money",
+     "role": "checkbox"
+    }
+   },
+   {
+    "click": {
+     "name": "Save New Role",
+     "role": "button"
+    }
+   },
+   {
+    "wait": {
+     "locator": {
+      "text": "Please select at least one checking account."
+     }
+    }
+   },
+   {
+    "scroll": {
+     "name": "Savings ••7658",
+     "role": "checkbox"
+    }
+   }
+  ],
+  "mutates": true,
+  "parent": "settings.create-role-errors",
+  "recordedBy": "agent",
+  "review": {
+   "by": "conductor",
+   "date": "2026-10-03",
+   "decision": "accept",
+   "note": "same Create role form with 'Please select at least one checking account.' above Account access, scrolled to Savings ••7658; hop fills name, ticks Send money, clicks Save New Role as labelled",
+   "reason": "mutating"
+  },
+  "similarity": 0.9998,
+  "source": "526bbe8adf95f89f9f4a56152dedd987ba976a0b",
+  "status": "accepted"
+ },
+ "settings.create-role-errors": {
+  "checked": "2026-10-02-1349",
+  "fingerprint": {
+   "controls": [
+    "ACH authorizations",
+    "AP",
+    "AR",
+    "Accounting More info",
+    "Check depositing",
+    "Checking ••<n>",
+    "Close",
+    "Credit",
+    "Customize your experience",
+    "Internal transfers",
+    "Invoice creation More info",
+    "Mercury Books More info",
+    "Open account",
+    "Open combobox menu",
+    "Ops / Payroll",
+    "Recipient management More info",
+    "Role description",
+    "Role name",
+    "Save New Role",
+    "Savings ••<n>",
+    "Select All",
+    "Select template",
+    "Send money",
+    "Spend",
+    "Spend management More info",
+    "Treasury",
+    "User management - anyone but admins More info",
+    "Viewing as Admin"
+   ],
+   "headings": [
+    "Create a new role"
+   ],
+   "path": "/settings/roles/create",
+   "structure": "document",
+   "top": {
+    "name": "",
+    "role": "document"
+   }
+  },
+  "hop": [
+   {
+    "click": {
+     "name": "Save New Role",
+     "role": "button"
+    }
+   }
+  ],
+  "mutates": true,
+  "parent": "settings.create-role",
+  "recordedBy": "agent",
+  "review": {
+   "by": "conductor",
+   "date": "2026-10-03",
+   "decision": "accept",
+   "note": "same Create a new role form with 'Please complete this field' under an empty Role name; hop clicks Save New Role as labeled",
+   "reason": "mutating"
+  },
+  "similarity": 0.9998,
+  "source": "8f262d078f89abfec88b9610073e2c30d0928b8e",
+  "status": "accepted"
+ },
+ "settings.create-token": {
+  "checked": "2026-10-02-1349",
+  "fingerprint": {
+   "controls": [
+    "Cancel",
+    "Create token",
+    "IP whitelist",
+    "Nickname",
+    "Open combobox menu",
+    "Permissions"
+   ],
+   "headings": [
+    "Create an API token"
+   ],
+   "path": "/settings/tokens",
+   "structure": "dialog",
+   "top": {
+    "name": "",
+    "role": "dialog"
+   }
+  },
+  "hop": [
+   {
+    "click": {
+     "name": "Create an API token",
+     "role": "row"
+    }
+   }
+  ],
+  "mutates": true,
+  "parent": "settings.tokens",
+  "recordedBy": "agent",
+  "review": {
+   "by": "conductor",
+   "date": "2026-10-03",
+   "decision": "accept",
+   "note": "same Create an API token modal (empty Nickname, Permissions combobox, IP whitelist with 'Current IP: 192.168.1.1', Cancel / Create token); the hop clicks the 'Create an API token' row the label names and submits nothing",
+   "reason": "mutating"
+  },
+  "similarity": 0.9993,
+  "source": "377ee3d26e5f78ed384f3692e2535fefe3b2d228",
+  "status": "accepted"
+ },
+ "settings.create-token-errors": {
+  "checked": "2026-10-02-1349",
+  "fingerprint": {
+   "controls": [
+    "Cancel",
+    "Create token",
+    "IP whitelist",
+    "Nickname",
+    "Open combobox menu",
+    "Permissions"
+   ],
+   "headings": [
+    "Create an API token"
+   ],
+   "path": "/settings/tokens",
+   "structure": "dialog",
+   "top": {
+    "name": "",
+    "role": "dialog"
+   }
+  },
+  "hop": [
+   {
+    "click": {
+     "name": "Create token",
+     "role": "button"
+    }
+   }
+  ],
+  "mutates": true,
+  "parent": "settings.create-token",
+  "recordedBy": "agent",
+  "review": {
+   "by": "conductor",
+   "date": "2026-10-03",
+   "decision": "accept",
+   "note": "same Create an API token modal with 'Please complete this field' under Nickname and Permissions; hop clicks Create token on the empty form",
+   "reason": "mutating"
+  },
+  "similarity": 0.9991,
+  "source": "e6761d3d4870245250b77488fb17b6f8a61af2b1",
+  "status": "accepted"
+ },
+ "settings.create-webhook": {
+  "checked": "2026-10-02-1349",
+  "fingerprint": {
+   "controls": [
+    "Cancel",
+    "Create endpoint",
+    "Endpoint URL",
+    "Event types",
+    "Open combobox menu",
+    "Verify endpoint"
+   ],
+   "headings": [
+    "Create a webhook endpoint"
+   ],
+   "path": "/settings/webhooks",
+   "structure": "dialog",
+   "top": {
+    "name": "",
+    "role": "dialog"
+   }
+  },
+  "hop": [
+   {
+    "click": {
+     "name": "Create webhook",
+     "role": "button"
+    }
+   }
+  ],
+  "mutates": true,
+  "parent": "settings.webhooks",
+  "recordedBy": "agent",
+  "review": {
+   "by": "conductor",
+   "date": "2026-10-03",
+   "decision": "accept",
+   "note": "same Create a webhook endpoint modal (empty Endpoint URL, disabled Verify endpoint, All events, disabled Create endpoint); hop clicks Create webhook as labeled",
+   "reason": "mutating"
+  },
+  "similarity": 0.9995,
+  "source": "944167214c250889bc41e613da130ce5ba946e83",
+  "status": "accepted"
+ },
+ "settings.create-webhook-filled": {
+  "checked": "2026-10-02-1349",
+  "fingerprint": {
+   "controls": [
+    "Cancel",
+    "Create endpoint",
+    "Endpoint URL",
+    "Event types",
+    "Open combobox menu"
+   ],
+   "headings": [
+    "Create a webhook endpoint"
+   ],
+   "path": "/settings/webhooks",
+   "structure": "dialog",
+   "top": {
+    "name": "",
+    "role": "dialog"
+   }
+  },
+  "hop": [
+   {
+    "click": {
+     "name": "transaction.created",
+     "role": "option"
+    }
+   },
+   {
+    "click": {
+     "name": "transaction.updated",
+     "role": "option"
+    }
+   },
+   {
+    "click": {
+     "name": "Close combobox menu",
+     "role": "button"
+    }
+   }
+  ],
+  "mutates": true,
+  "parent": "settings.webhook-event-types",
+  "recordedBy": "agent",
+  "review": {
+   "by": "conductor",
+   "date": "2026-10-03",
+   "decision": "accept",
+   "note": "same Create a webhook endpoint dialog: Verified URL, Event types '2 selected', list closed, Create endpoint shown; the URL is the fixture https://example.invalid/a11y-audit. The hop ticks transaction.created and transaction.updated, then closes the combobox, as labeled.",
+   "reason": "mutating"
+  },
+  "similarity": 0.9881,
+  "source": "5d650c604f046fda05dbb269e5e1e66b649b8c20",
+  "status": "accepted"
+ },
+ "settings.create-webhook-http-error": {
+  "checked": "2026-10-02-1349",
+  "fingerprint": {
+   "controls": [
+    "Cancel",
+    "Create endpoint",
+    "Endpoint URL",
+    "Event types",
+    "Open combobox menu",
+    "Verify endpoint"
+   ],
+   "headings": [
+    "Create a webhook endpoint"
+   ],
+   "path": "/settings/webhooks",
+   "structure": "dialog",
+   "top": {
+    "name": "",
+    "role": "dialog"
+   }
+  },
+  "hop": [
+   {
+    "fill": {
+     "locator": {
+      "label": "Endpoint URL"
+     },
+     "value": "http://example.invalid/a11y-audit"
+    }
+   },
+   {
+    "press": "Tab"
+   }
+  ],
+  "mutates": true,
+  "parent": "settings.create-webhook",
+  "recordedBy": "agent",
+  "review": {
+   "by": "conductor",
+   "date": "2026-10-03",
+   "decision": "accept",
+   "note": "same Create a webhook endpoint modal with 'Please enter a valid HTTPS URL' under an http:// Endpoint URL; hop fills http URL and tabs away as labeled (fixture URL differs)",
+   "reason": "mutating"
+  },
+  "similarity": 0.9971,
+  "source": "6bbf2cc5a5e563d0edce03fad581f3d20d2939bf",
+  "status": "accepted"
+ },
+ "settings.custom-statement": {
+  "checked": "2026-10-02-1349",
+  "fingerprint": {
+   "controls": [
+    "Account",
+    "Cancel",
+    "Download",
+    "From",
+    "To"
+   ],
+   "headings": [
+    "Generate a custom statement"
+   ],
+   "path": "/settings/documents",
+   "structure": "dialog",
+   "top": {
+    "name": "",
+    "role": "dialog"
+   }
+  },
+  "hop": [
+   {
+    "click": {
+     "name": "Generate a custom statement",
+     "role": "button"
+    }
+   }
+  ],
+  "mutates": true,
+  "parent": "settings.documents",
+  "recordedBy": "draft",
+  "review": null,
+  "similarity": 0.9984,
+  "source": "3d9f57fad0e219c19baa8f700969ed8d55df5e72",
+  "status": "accepted"
+ },
+ "settings.custom-statement-invalid": {
+  "checked": "2026-10-02-1349",
+  "fingerprint": {
+   "controls": [
+    "Account",
+    "Cancel",
+    "Download",
+    "From",
+    "To"
+   ],
+   "headings": [
+    "Generate a custom statement"
+   ],
+   "path": "/settings/documents",
+   "structure": "dialog",
+   "top": {
+    "name": "",
+    "role": "dialog"
+   }
+  },
+  "hop": [
+   {
+    "fill": {
+     "locator": {
+      "label": "From"
+     },
+     "value": "12/31/2099"
+    }
+   },
+   {
+    "press": "Tab"
+   },
+   {
+    "press": "Tab"
+   },
+   {
+    "press": "Tab"
+   },
+   {
+    "press": "Enter"
+   }
+  ],
+  "mutates": true,
+  "parent": "settings.custom-statement",
+  "recordedBy": "agent",
+  "review": {
+   "by": "conductor",
+   "date": "2026-10-03",
+   "decision": "reject",
+   "note": "missing error: replay shows From 'Dec 31, 2099' with two calendar popovers open and no 'Please choose a day on or before' error; capture shows one calendar plus the error",
+   "reason": "below-threshold"
+  },
+  "similarity": 0.8078,
+  "source": "1416d8a2175d744ec39d5d065a5b8a8727b5740b",
+  "status": "rejected"
+ },
+ "settings.delete-category-confirm": {
+  "checked": "2026-10-02-1349",
+  "fingerprint": {
+   "controls": [
+    "Cancel",
+    "GL code mapping rule",
+    "Yes, delete"
+   ],
+   "headings": [
+    "Delete Business Client Meals?"
+   ],
+   "path": "/settings/categories",
+   "structure": "dialog",
+   "top": {
+    "name": "",
+    "role": "dialog"
+   }
+  },
+  "hop": [
+   {
+    "click": {
+     "css": "button[class*=\"_destructive_\"]",
+     "index": 0
+    }
+   }
+  ],
+  "mutates": false,
+  "parent": "settings.categories",
+  "recordedBy": "agent",
+  "review": null,
+  "similarity": 0.999,
+  "source": "19a295f8d00a119dfa4a1b60d71858eaa7f82d55",
+  "status": "accepted"
+ },
+ "settings.delete-token-confirm": {
+  "checked": "2026-10-02-1349",
+  "fingerprint": {
+   "controls": [
+    "Cancel",
+    "Delete Token"
+   ],
+   "headings": [
+    "Delete API Token"
+   ],
+   "path": "/settings/tokens",
+   "structure": "dialog",
+   "top": {
+    "name": "",
+    "role": "dialog"
+   }
+  },
+  "hop": [
+   {
+    "click": {
+     "name": "Delete",
+     "role": "menuitem"
+    }
+   }
+  ],
+  "mutates": true,
+  "parent": "settings.token-menu",
+  "recordedBy": "agent",
+  "review": {
+   "by": "conductor",
+   "date": "2026-10-03",
+   "decision": "accept",
+   "note": "same Delete API Token dialog (Cancel / Delete Token), for 'Token with long IPv6 address' instead of 'Map audit token'. The capture's table has a fourth row, a token the person created during capture that a fresh browser doesn't have. The parent menu capture (89-token-kebab-menu) is opened on the 'Token with lon…' row, so the replay follows the recorded chain. The hop clicks the Delete menuitem the label names and doesn't confirm. The token's name in the dialog text is the only difference.",
+   "reason": "mutating"
+  },
+  "similarity": 0.9329,
+  "source": "5e0fea69e67ba45f78db0c41b0a0906d201c8178",
+  "status": "accepted"
+ },
+ "settings.delete-webhook-confirm": {
+  "checked": "2026-10-02-1349",
+  "fingerprint": {
+   "controls": [
+    "Cancel",
+    "Delete"
+   ],
+   "headings": [
+    "Delete endpoint?"
+   ],
+   "path": "/settings/webhooks",
+   "structure": "dialog",
+   "top": {
+    "name": "",
+    "role": "dialog"
+   }
+  },
+  "hop": [
+   {
+    "click": {
+     "name": "Delete",
+     "role": "button"
+    }
+   }
+  ],
+  "mutates": true,
+  "parent": "settings.webhook-detail",
+  "recordedBy": "agent",
+  "review": {
+   "by": "conductor",
+   "date": "2026-10-03",
+   "decision": "accept",
+   "note": "same 'Delete endpoint?' dialog for https://api.acme.com/webhooks/mercury (Cancel / Delete) over the webhook detail panel; the hop clicks the Delete button the label names and does not confirm",
+   "reason": "mutating"
+  },
+  "similarity": 0.9994,
+  "source": "26fbf4fa2cfaa0326137f5cbc9bff4d6d3bed466",
+  "status": "accepted"
+ },
+ "settings.departments": {
+  "checked": "2026-10-02-1349",
+  "fingerprint": {
+   "controls": [
+    "Account Security",
+    "Add department",
+    "Advisors <n>",
+    "Approval Rules",
+    "Categories",
+    "Company Profile",
+    "Connect HR system",
+    "Controls",
+    "Customize your experience",
+    "Departments",
+    "Documents",
+    "Executive",
+    "Finance Accounting · Audit +<n>",
+    "Integrations",
+    "Mercury Demo Pro",
+    "Move money",
+    "Navigate to Settings",
+    "Notifications",
+    "Open account",
+    "Perks",
+    "Plan & Billing",
+    "Product Design",
+    "Profile",
+    "Referrals",
+    "Search for anything",
+    "Security",
+    "Settings",
+    "Team",
+    "Toggle Private Mode",
+    "Tokens",
+    "Vault",
+    "Viewing as Admin",
+    "Webhooks",
+    "updates"
+   ],
+   "headings": [
+    "Departments",
+    "Executive",
+    "Finance",
+    "Product"
+   ],
+   "path": "/settings/departments",
+   "structure": "document",
+   "top": {
+    "name": "",
+    "role": "document"
+   }
+  },
+  "hop": [],
+  "mutates": false,
+  "parent": "/settings/departments",
+  "recordedBy": "root",
+  "review": null,
+  "similarity": 0.9994,
+  "source": "97d170e1550eee4afc0af065b78cda302a97674c",
+  "status": "accepted"
+ },
+ "settings.documents": {
+  "checked": "2026-10-02-1349",
+  "fingerprint": {
+   "controls": [
+    "Account Security",
+    "Accounts",
+    "Advisors",
+    "Agreements",
+    "All",
+    "Approval Rules",
+    "Bank letters",
+    "Billing history",
+    "Categories",
+    "Company Profile",
+    "Company documents",
+    "Controls",
+    "Customize your experience",
+    "Departments",
+    "Documents",
+    "Download",
+    "Generate a custom statement",
+    "Integrations",
+    "Investment tax forms",
+    "Legal",
+    "Mercury Demo Pro",
+    "Move money",
+    "Navigate to Settings",
+    "Notices",
+    "Notifications",
+    "Open account",
+    "Operations",
+    "Other",
+    "Perks",
+    "Plan & Billing",
+    "Profile",
+    "Receipts & attachments",
+    "Recipient tax forms",
+    "Referrals",
+    "Search for anything",
+    "Security",
+    "Settings",
+    "Share document",
+    "Statements",
+    "Support requests",
+    "Tax",
+    "Team",
+    "Toggle Private Mode",
+    "Tokens",
+    "Trade confirmations",
+    "Vault",
+    "Viewing as Admin",
+    "Webhooks",
+    "Wire details",
+    "Year",
+    "updates"
+   ],
+   "headings": [
+    "Documents & Data"
+   ],
+   "path": "/settings/documents",
+   "structure": "document",
+   "top": {
+    "name": "",
+    "role": "document"
+   }
+  },
+  "hop": [],
+  "mutates": false,
+  "parent": "/settings/documents",
+  "recordedBy": "root",
+  "review": null,
+  "similarity": 0.9982,
+  "source": "97d170e1550eee4afc0af065b78cda302a97674c",
+  "status": "accepted"
+ },
+ "settings.documents-selected": {
+  "checked": "2026-10-02-1349",
+  "fingerprint": {
+   "controls": [
+    "Download",
+    "Share documents"
+   ],
+   "headings": [],
+   "path": "/settings/documents",
+   "structure": "dialog",
+   "top": {
+    "name": "<n> documents selected",
+    "role": "dialog"
+   }
+  },
+  "hop": [
+   {
+    "check": {
+     "css": "input[type=\"checkbox\"]",
+     "index": 1
+    }
+   },
+   {
+    "check": {
+     "css": "input[type=\"checkbox\"]",
+     "index": 2
+    }
+   }
+  ],
+  "mutates": false,
+  "parent": "settings.documents",
+  "recordedBy": "agent",
+  "review": null,
+  "similarity": 0.9985,
+  "source": "1f96d9a46ef3094c2fc711a3b32943e120a674da",
+  "status": "accepted"
+ },
+ "settings.edit-company-name": {
+  "checked": "2026-10-02-1349",
+  "fingerprint": {
+   "controls": [
+    "Cancel",
+    "Company name",
+    "Update"
+   ],
+   "headings": [
+    "Edit company name"
+   ],
+   "path": "/settings/company-profile",
+   "structure": "dialog",
+   "top": {
+    "name": "",
+    "role": "dialog"
+   }
+  },
+  "hop": [
+   {
+    "click": {
+     "index": 0,
+     "name": "Edit",
+     "role": "button"
+    }
+   }
+  ],
+  "mutates": false,
+  "parent": "settings.index",
+  "recordedBy": "agent",
+  "review": null,
+  "similarity": 0.9993,
+  "source": "68abaff8b7348f727dcbe6b22f744c076c86c079",
+  "status": "accepted"
+ },
+ "settings.edit-mailing-address": {
+  "checked": "2026-10-02-1349",
+  "fingerprint": {
+   "controls": [
+    "Cancel",
+    "City",
+    "Copy from legal address",
+    "Country / Territory",
+    "Mailing address line <n>",
+    "Open combobox menu",
+    "State",
+    "Update",
+    "ZIP Code"
+   ],
+   "headings": [
+    "Edit company mailing address"
+   ],
+   "path": "/settings/company-profile",
+   "structure": "dialog",
+   "top": {
+    "name": "",
+    "role": "dialog"
+   }
+  },
+  "hop": [
+   {
+    "click": {
+     "index": 4,
+     "name": "Edit",
+     "role": "button"
+    }
+   }
+  ],
+  "mutates": false,
+  "parent": "settings.index",
+  "recordedBy": "agent",
+  "review": null,
+  "similarity": 0.9992,
+  "source": "869b2c0ff87650055131c019152c5e082ebc10d4",
+  "status": "accepted"
+ },
+ "settings.edit-member": {
+  "checked": "2026-10-02-1349",
+  "fingerprint": {
+   "controls": [
+    "Account Security",
+    "Add filter",
+    "Advisors <n>",
+    "All",
+    "Approval Rules",
+    "Cancel",
+    "Categories",
+    "Clear combobox selection",
+    "Close detail panel",
+    "Company Profile",
+    "Controls",
+    "Customize your experience",
+    "Department",
+    "Departments",
+    "Documents",
+    "Integrations",
+    "Invite",
+    "Job title",
+    "Mercury Demo Pro",
+    "Move money",
+    "Navigate to Settings",
+    "Needs review",
+    "Notifications",
+    "Open account",
+    "Open combobox menu",
+    "Perks",
+    "Plan & Billing",
+    "Profile",
+    "Referrals",
+    "Role",
+    "Roles",
+    "Save",
+    "Search for anything",
+    "Security",
+    "Settings",
+    "Share link",
+    "Specify job title",
+    "Team",
+    "Toggle Private Mode",
+    "Tokens",
+    "Vault",
+    "Viewing as Admin",
+    "Webhooks",
+    "updates"
+   ],
+   "headings": [
+    "Team",
+    "Edit member",
+    "Money movement",
+    "Operations",
+    "Spend",
+    "Document"
+   ],
+   "path": "/settings/users/<id>",
+   "structure": "document",
+   "top": {
+    "name": "",
+    "role": "document"
+   }
+  },
+  "hop": [
+   {
+    "click": {
+     "name": "Edit",
+     "role": "button"
+    }
+   }
+  ],
+  "mutates": false,
+  "parent": "settings.user-detail",
+  "recordedBy": "agent",
+  "review": null,
+  "similarity": 0.9158,
+  "source": "56b5cf17b120d9b9e33b176a2642adefd1fbbc36",
+  "status": "accepted"
+ },
+ "settings.edit-member-dirty": {
+  "checked": "2026-10-02-1349",
+  "fingerprint": {
+   "controls": [
+    "Account Security",
+    "Add filter",
+    "Advisors <n>",
+    "All",
+    "Approval Rules",
+    "Cancel",
+    "Categories",
+    "Clear combobox selection",
+    "Close detail panel",
+    "Company Profile",
+    "Controls",
+    "Customize your experience",
+    "Department",
+    "Departments",
+    "Documents",
+    "Integrations",
+    "Invite",
+    "Job title",
+    "Mercury Demo Pro",
+    "Move money",
+    "Navigate to Settings",
+    "Needs review",
+    "Notifications",
+    "Open account",
+    "Open combobox menu",
+    "Perks",
+    "Plan & Billing",
+    "Profile",
+    "Referrals",
+    "Role",
+    "Roles",
+    "Save",
+    "Search for anything",
+    "Security",
+    "Settings",
+    "Share link",
+    "Specify job title",
+    "Team",
+    "Toggle Private Mode",
+    "Tokens",
+    "Vault",
+    "Viewing as Admin",
+    "Webhooks",
+    "updates"
+   ],
+   "headings": [
+    "Team",
+    "Edit member",
+    "Money movement",
+    "Operations",
+    "Spend",
+    "Document"
+   ],
+   "path": "/settings/users/<id>",
+   "structure": "document",
+   "top": {
+    "name": "",
+    "role": "document"
+   }
+  },
+  "hop": [
+   {
+    "fill": {
+     "locator": {
+      "name": "Specify job title",
+      "role": "textbox"
+     },
+     "value": "Test Lead"
+    }
+   },
+   {
+    "scroll": {
+     "name": "Document",
+     "role": "heading"
+    }
+   }
+  ],
+  "mutates": false,
+  "parent": "settings.edit-member",
+  "recordedBy": "agent",
+  "review": {
+   "by": "conductor",
+   "date": "2026-10-03",
+   "decision": "accept",
+   "note": "same Edit member panel for Alice Chen (as the parent capture), footer Save enabled after the hop fills Specify job title; panel scrolled slightly further, Department field above view",
+   "reason": "below-threshold"
+  },
+  "similarity": 0.6351,
+  "source": "8f8cc60d0223d1125e2ad13f21722d94c98b2c92",
+  "status": "accepted"
+ },
+ "settings.edit-phone-invalid": {
+  "checked": "2026-10-02-1349",
+  "fingerprint": {
+   "controls": [
+    "Cancel",
+    "Phone number",
+    "United States flag",
+    "Update"
+   ],
+   "headings": [
+    "Edit phone number"
+   ],
+   "path": "/settings/company-profile",
+   "structure": "dialog",
+   "top": {
+    "name": "",
+    "role": "dialog"
+   }
+  },
+  "hop": [
+   {
+    "click": {
+     "index": 2,
+     "name": "Edit",
+     "role": "button"
+    }
+   },
+   {
+    "fill": {
+     "locator": {
+      "name": "Phone number",
+      "role": "textbox"
+     },
+     "value": "+1 2"
+    }
+   },
+   {
+    "click": {
+     "name": "Update",
+     "role": "button"
+    }
+   }
+  ],
+  "mutates": true,
+  "parent": "settings.index",
+  "recordedBy": "agent",
+  "review": {
+   "by": "conductor",
+   "date": "2026-10-03",
+   "decision": "accept",
+   "note": "same Edit phone number modal with '+1 2' and 'Phone number is too short.'; hop clicks the third Edit (Phone number), fills, clicks Update",
+   "reason": "mutating"
+  },
+  "similarity": 0.9992,
+  "source": "77c5d90ae94b71c62e2a31e727599bb6c65214e0",
+  "status": "accepted"
+ },
+ "settings.edit-preferred-name": {
+  "checked": "2026-10-02-1349",
+  "fingerprint": {
+   "controls": [
+    "Cancel",
+    "Preferred first name",
+    "Preferred last name",
+    "Update"
+   ],
+   "headings": [
+    "Edit preferred name"
+   ],
+   "path": "/settings/my-profile",
+   "structure": "dialog",
+   "top": {
+    "name": "",
+    "role": "dialog"
+   }
+  },
+  "hop": [
+   {
+    "click": {
+     "index": 2,
+     "name": "Edit",
+     "role": "button"
+    }
+   }
+  ],
+  "mutates": false,
+  "parent": "settings.my-profile",
+  "recordedBy": "agent",
+  "review": null,
+  "similarity": 0.9982,
+  "source": "17cabe02ac7c68e6060c1183f8cddb36bc264c93",
+  "status": "accepted"
+ },
+ "settings.edit-profile-picture": {
+  "checked": "2026-10-02-1349",
+  "fingerprint": {
+   "controls": [
+    "Cancel",
+    "Choose File",
+    "Remove",
+    "Save"
+   ],
+   "headings": [
+    "Edit profile picture"
+   ],
+   "path": "/settings/my-profile",
+   "structure": "dialog",
+   "top": {
+    "name": "",
+    "role": "dialog"
+   }
+  },
+  "hop": [
+   {
+    "click": {
+     "index": 0,
+     "name": "Edit",
+     "role": "button"
+    }
+   }
+  ],
+  "mutates": false,
+  "parent": "settings.my-profile",
+  "recordedBy": "agent",
+  "review": null,
+  "similarity": 0.9977,
+  "source": "5ff79ce4010d72f84fa50df67bf1fd3cf5642990",
+  "status": "accepted"
+ },
+ "settings.edit-token": {
+  "checked": "2026-10-02-1349",
+  "fingerprint": {
+   "controls": [
+    "Cancel",
+    "IP whitelist",
+    "Nickname",
+    "Update token"
+   ],
+   "headings": [
+    "Edit API token"
+   ],
+   "path": "/settings/tokens",
+   "structure": "dialog",
+   "top": {
+    "name": "",
+    "role": "dialog"
+   }
+  },
+  "hop": [
+   {
+    "click": {
+     "name": "Edit",
+     "role": "menuitem"
+    }
+   }
+  ],
+  "mutates": false,
+  "parent": "settings.token-menu",
+  "recordedBy": "agent",
+  "review": null,
+  "similarity": 0.9993,
+  "source": "c1ac24ec7760af1d4cae724b44dedbd2d02bc60c",
+  "status": "accepted"
+ },
+ "settings.edit-token-invalid": {
+  "checked": "2026-10-02-1349",
+  "fingerprint": {
+   "controls": [
+    "Cancel",
+    "IP whitelist",
+    "Nickname",
+    "Update token"
+   ],
+   "headings": [
+    "Edit API token"
+   ],
+   "path": "/settings/tokens",
+   "structure": "dialog",
+   "top": {
+    "name": "",
+    "role": "dialog"
+   }
+  },
+  "hop": [
+   {
+    "fill": {
+     "locator": {
+      "label": "IP whitelist"
+     },
+     "value": "999.1.1"
+    }
+   },
+   {
+    "press": "Tab"
+   }
+  ],
+  "mutates": true,
+  "parent": "settings.edit-token",
+  "recordedBy": "agent",
+  "review": {
+   "by": "conductor",
+   "date": "2026-10-03",
+   "decision": "accept",
+   "note": "same Edit API token validation error: IP whitelist '999.1.1', 'Enter a comma-separated list of IPv4/6 addresses or CIDR ranges.', Update token disabled. The hop blurs the field with Tab where the label says 'click Update token', which is disabled and cannot submit. The Tab leaves a focus ring on Cancel; no extra layer.",
+   "reason": "mutating"
+  },
+  "similarity": 0.9917,
+  "source": "c13cf14fffecaa6408bae357611884369ec0b2c2",
+  "status": "accepted"
+ },
+ "settings.edit-webhook": {
+  "checked": "2026-10-02-1349",
+  "fingerprint": {
+   "controls": [
+    "Active",
+    "Cancel",
+    "Endpoint URL",
+    "Event types",
+    "Open combobox menu",
+    "Save changes"
+   ],
+   "headings": [
+    "Edit webhook endpoint"
+   ],
+   "path": "/settings/webhooks",
+   "structure": "dialog",
+   "top": {
+    "name": "",
+    "role": "dialog"
+   }
+  },
+  "hop": [
+   {
+    "click": {
+     "name": "Edit",
+     "role": "button"
+    }
+   }
+  ],
+  "mutates": false,
+  "parent": "settings.webhook-detail",
+  "recordedBy": "agent",
+  "review": null,
+  "similarity": 0.9994,
+  "source": "cc24fea7f0be6c1af771688cfd23271310e1fba8",
+  "status": "accepted"
+ },
+ "settings.edit-webhook-invalid": {
+  "checked": "2026-10-02-1349",
+  "fingerprint": {
+   "controls": [
+    "Active",
+    "Cancel",
+    "Endpoint URL",
+    "Event types",
+    "Open combobox menu",
+    "Save changes",
+    "Verify endpoint"
+   ],
+   "headings": [
+    "Edit webhook endpoint"
+   ],
+   "path": "/settings/webhooks",
+   "structure": "dialog",
+   "top": {
+    "name": "",
+    "role": "dialog"
+   }
+  },
+  "hop": [
+   {
+    "fill": {
+     "locator": {
+      "label": "Endpoint URL"
+     },
+     "value": "not a url"
+    }
+   },
+   {
+    "press": "Tab"
+   }
+  ],
+  "mutates": false,
+  "parent": "settings.edit-webhook",
+  "recordedBy": "agent",
+  "review": null,
+  "similarity": 0.9993,
+  "source": "9fdd47f0e36c85a44e4a084cea714bb51c2c63a7",
+  "status": "accepted"
+ },
+ "settings.index": {
+  "checked": "2026-10-02-1349",
+  "fingerprint": {
+   "controls": [
+    "Account Security",
+    "Advisors <n>",
+    "Approval Rules",
+    "Categories",
+    "Company Profile",
+    "Controls",
+    "Customize your experience",
+    "Departments",
+    "Documents",
+    "Edit",
+    "Edit logo",
+    "Integrations",
+    "Legal",
+    "Mercury Demo Pro",
+    "Move money",
+    "Navigate to Settings",
+    "Notifications",
+    "Open account",
+    "Perks",
+    "Plan & Billing",
+    "Profile",
+    "Referrals",
+    "Search for anything",
+    "Security",
+    "Settings",
+    "Team",
+    "Toggle Private Mode",
+    "Tokens",
+    "Vault",
+    "Viewing as Admin",
+    "Webhooks",
+    "legal addresses",
+    "updates",
+    "•••••••••"
+   ],
+   "headings": [
+    "Mercury Demo"
+   ],
+   "path": "/settings/company-profile",
+   "structure": "document",
+   "top": {
+    "name": "",
+    "role": "document"
+   }
+  },
+  "hop": [],
+  "mutates": false,
+  "parent": "/settings/company-profile",
+  "recordedBy": "root",
+  "review": null,
+  "similarity": 0.9996,
+  "source": "97d170e1550eee4afc0af065b78cda302a97674c",
+  "status": "accepted"
+ },
+ "settings.integrations": {
+  "checked": "2026-10-02-1349",
+  "fingerprint": {
+   "controls": [
+    "Account Security",
+    "Accounting",
+    "Advisors <n>",
+    "All",
+    "Approval Rules",
+    "Categories",
+    "Company Profile",
+    "Connect",
+    "Controls",
+    "Customize your experience",
+    "Departments",
+    "Disabled",
+    "Documents",
+    "Integrations",
+    "Mercury Demo Pro",
+    "Move money",
+    "Navigate to Settings",
+    "Notifications",
+    "Open account",
+    "Other",
+    "Perks",
+    "Plan & Billing",
+    "Profile",
+    "Referrals",
+    "Search for anything",
+    "Security",
+    "Settings",
+    "Team",
+    "Team Management",
+    "Toggle Private Mode",
+    "Tokens",
+    "Vault",
+    "Viewing as Admin",
+    "Webhooks",
+    "updates"
+   ],
+   "headings": [
+    "Integrations"
+   ],
+   "path": "/settings/integrations",
+   "structure": "document",
+   "top": {
+    "name": "",
+    "role": "document"
+   }
+  },
+  "hop": [],
+  "mutates": false,
+  "parent": "/settings/integrations",
+  "recordedBy": "root",
+  "review": null,
+  "similarity": 0.9996,
+  "source": "97d170e1550eee4afc0af065b78cda302a97674c",
+  "status": "accepted"
+ },
+ "settings.invite-details": {
+  "checked": "2026-10-02-1349",
+  "fingerprint": {
+   "controls": [
+    "Back",
+    "Close",
+    "Customize your experience",
+    "Department - optional",
+    "Email",
+    "Inviting multiple users or an advisor team?",
+    "Job title - optional",
+    "Legal first name",
+    "Legal last name",
+    "Next",
+    "Open account",
+    "Open combobox menu",
+    "Viewing as Admin"
+   ],
+   "headings": [
+    "Invite a user"
+   ],
+   "path": "/settings/users/invite/individual/details",
+   "structure": "document",
+   "top": {
+    "name": "",
+    "role": "document"
+   }
+  },
+  "hop": [],
+  "mutates": false,
+  "parent": "/settings/users/invite/individual/details",
+  "recordedBy": "root",
+  "review": null,
+  "similarity": 0.9999,
+  "source": "97d170e1550eee4afc0af065b78cda302a97674c",
+  "status": "accepted"
+ },
+ "settings.invite-details-errors": {
+  "checked": "2026-10-02-1349",
+  "fingerprint": {
+   "controls": [
+    "Back",
+    "Close",
+    "Customize your experience",
+    "Department - optional",
+    "Email",
+    "Inviting multiple users or an advisor team?",
+    "Job title - optional",
+    "Legal first name",
+    "Legal last name",
+    "Next",
+    "Open account",
+    "Open combobox menu",
+    "Viewing as Admin"
+   ],
+   "headings": [
+    "Invite a user"
+   ],
+   "path": "/settings/users/invite/individual/details",
+   "structure": "document",
+   "top": {
+    "name": "",
+    "role": "document"
+   }
+  },
+  "hop": [
+   {
+    "click": {
+     "name": "Next",
+     "role": "button"
+    }
+   }
+  ],
+  "mutates": false,
+  "parent": "settings.invite-details",
+  "recordedBy": "agent",
+  "review": {
+   "by": "conductor",
+   "date": "2026-10-03",
+   "decision": "accept",
+   "note": "same Invite a user form, User Details step, with 'Please complete this field' under first name, last name and email; the hop clicks Next as the label says",
+   "reason": "sample"
+  },
+  "similarity": 0.9997,
+  "source": "cce0476ca3fed9d171f7f9457b49a791bea33739",
+  "status": "accepted"
+ },
+ "settings.invite-issue-card": {
+  "checked": "2026-10-02-1349",
+  "fingerprint": {
+   "controls": [
+    "Back",
+    "Card nickname",
+    "Close",
+    "Control type",
+    "Credit",
+    "Customize your experience",
+    "Debit",
+    "Let Test know how to use this card (optional)",
+    "Next",
+    "Open account",
+    "Open combobox menu",
+    "Or, skip issuing card",
+    "Physical",
+    "Viewing as Admin",
+    "Virtual"
+   ],
+   "headings": [
+    "Issue Test a card"
+   ],
+   "path": "/settings/users/invite/individual/card",
+   "structure": "document",
+   "top": {
+    "name": "",
+    "role": "document"
+   }
+  },
+  "hop": [
+   {
+    "click": {
+     "name": "Next",
+     "role": "button"
+    }
+   }
+  ],
+  "mutates": false,
+  "parent": "settings.role-money-mover",
+  "recordedBy": "agent",
+  "review": null,
+  "similarity": 0.9969,
+  "source": "2237acf1c25347970fd876293cd7c3b1c95d522b",
+  "status": "accepted"
+ },
+ "settings.invite-issue-card-error": {
+  "checked": "2026-10-02-1349",
+  "fingerprint": {
+   "controls": [
+    "Back",
+    "Card nickname",
+    "Close",
+    "Control type",
+    "Credit",
+    "Customize your experience",
+    "Debit",
+    "Let Test know how to use this card (optional)",
+    "Next",
+    "Open account",
+    "Open combobox menu",
+    "Or, skip issuing card",
+    "Physical",
+    "Viewing as Admin",
+    "Virtual"
+   ],
+   "headings": [
+    "Issue Test a card"
+   ],
+   "path": "/settings/users/invite/individual/card",
+   "structure": "document",
+   "top": {
+    "name": "",
+    "role": "document"
+   }
+  },
+  "hop": [
+   {
+    "click": {
+     "name": "Next",
+     "role": "button"
+    }
+   },
+   {
+    "wait": {
+     "locator": {
+      "text": "Please complete this field"
+     }
+    }
+   },
+   {
+    "scroll": {
+     "name": "Open combobox menu",
+     "role": "button"
+    }
+   },
+   {
+    "wait": {
+     "ms": 500
+    }
+   }
+  ],
+  "mutates": false,
+  "parent": "settings.invite-issue-card",
+  "recordedBy": "agent",
+  "review": {
+   "by": "conductor",
+   "date": "2026-10-03",
+   "decision": "reject",
+   "note": "error not visible: the replay's Issue Test a card form stays at the top (Basics/Type), so the Control type 'Please complete this field' error under Spend controls is never on screen. The hop clicks Next as the label says, and its wait shows the error text is in the DOM, but the scroll step leaves the inner container where it was. The fix is a scroll that works (scrollIntoView on the error), not a different hop",
+   "reason": "below-threshold"
+  },
+  "similarity": 0.7036,
+  "source": "4836c3fb488aca70268dab536638cc1ce1332cb3",
+  "status": "rejected"
+ },
+ "settings.invite-job-title": {
+  "checked": "2026-10-02-1349",
+  "fingerprint": {
+   "controls": [
+    "AI Engineer",
+    "AI Engineer Intern",
+    "Account Executive",
+    "Account Manager",
+    "Advisor",
+    "Backend Engineer",
+    "Bookkeeper",
+    "Business Analyst",
+    "Business Development Representative",
+    "Business Operations",
+    "CEO, Founder, Owner, Partner, President",
+    "CFO",
+    "Chief AI Officer",
+    "Chief Executive Officer (CEO)",
+    "Chief Financial Officer (CFO)",
+    "Chief Growth Officer",
+    "Chief Information Officer (CIO)",
+    "Chief Marketing Officer (CMO)",
+    "Chief Operating Officer (COO)",
+    "Chief Product Officer (CPO)",
+    "Chief Revenue Officer",
+    "Chief Scientist",
+    "Chief Technology Officer (CTO)",
+    "Chief of Staff",
+    "Co-Chief Executive Officer (Co-CEO)",
+    "Co-Founder",
+    "Consultant",
+    "Content Creator",
+    "Content Writer",
+    "Contractor",
+    "Controller",
+    "Creative Director",
+    "Customer Success",
+    "Customer Success Associate",
+    "Customer Success Manager",
+    "Data Engineer",
+    "Data Scientist",
+    "Design Contractor",
+    "Design Engineer",
+    "Designer",
+    "DevOps Engineer",
+    "Director of Engineering",
+    "Director of Operations",
+    "Electrical Engineer",
+    "Engineer",
+    "Engineering Contractor",
+    "Engineering Intern",
+    "Executive Assistant",
+    "Finance Manager",
+    "Forward Deployed Engineer",
+    "Founder",
+    "Founding AI Engineer",
+    "Founding Account Executive",
+    "Founding Designer",
+    "Founding Engineer",
+    "Founding GTM",
+    "Founding Operations",
+    "Founding Recruiter",
+    "Founding Sales",
+    "Founding Software Engineer",
+    "Fractional CFO",
+    "Frontend Engineer",
+    "Full Stack Engineer",
+    "GTM",
+    "GTM Engineer",
+    "GTM Intern",
+    "General Manager",
+    "Graphic Designer",
+    "Growth",
+    "Growth Intern",
+    "Growth Lead",
+    "Head of Customer Success",
+    "Head of Design",
+    "Head of Engineering",
+    "Head of Growth",
+    "Head of Marketing",
+    "Head of Operations",
+    "Head of Product",
+    "Head of Sales",
+    "Human Resources Director",
+    "Intern",
+    "Machine Learning Engineer",
+    "Marketing Associate",
+    "Marketing Consultant",
+    "Marketing Intern",
+    "Marketing Manager",
+    "Mechanical Engineer",
+    "Member of Technical Staff",
+    "Office Manager",
+    "Operations",
+    "Operations Associate",
+    "Operations Lead",
+    "Operations Manager",
+    "Other",
+    "Other C-Level (e.g. COO, CTO)",
+    "Outsourced Bookkeeper",
+    "President",
+    "Principal Engineer",
+    "Product",
+    "Product Designer",
+    "Product Engineer",
+    "Product Manager",
+    "Product Operations",
+    "Project Manager",
+    "QA Engineer",
+    "Recruiter",
+    "Research Engineer",
+    "Research Intern",
+    "Researcher",
+    "Sales",
+    "Sales Contractor",
+    "Sales Development Representative",
+    "Sales Manager",
+    "Senior Software Engineer",
+    "Social Media Manager",
+    "Software Engineer",
+    "Software Engineer Intern",
+    "Staff Software Engineer",
+    "Tech Lead",
+    "Technical Support Engineer",
+    "UX Designer",
+    "VP of Engineering",
+    "VP of Finance",
+    "VP, Director, Manager",
+    "Work Trial"
+   ],
+   "headings": [],
+   "path": "/settings/users/invite/individual/details",
+   "structure": "listbox",
+   "top": {
+    "name": "",
+    "role": "listbox"
+   }
+  },
+  "hop": [
+   {
+    "click": {
+     "name": "Job title - optional",
+     "role": "combobox"
+    }
+   }
+  ],
+  "mutates": false,
+  "parent": "settings.invite-details",
+  "recordedBy": "agent",
+  "review": null,
+  "similarity": 0.9849,
+  "source": "daa0032ae866d321860e0c20d64f4fef81a875e5",
+  "status": "accepted"
+ },
+ "settings.invite-menu": {
+  "checked": "2026-10-02-1349",
+  "fingerprint": {
+   "controls": [
+    "Invite a user",
+    "Invite multiple users"
+   ],
+   "headings": [],
+   "path": "/settings/users",
+   "structure": "menu",
+   "top": {
+    "name": "Invite",
+    "role": "menu"
+   }
+  },
+  "hop": [
+   {
+    "click": {
+     "name": "Invite",
+     "role": "button"
+    }
+   }
+  ],
+  "mutates": true,
+  "parent": "settings.team",
+  "recordedBy": "draft",
+  "review": null,
+  "similarity": 0.9986,
+  "source": "f98e8c6f7db137e2241a487ce9e992636bd9d7e0",
+  "status": "accepted"
+ },
+ "settings.invite-review": {
+  "checked": "2026-10-02-1349",
+  "fingerprint": {
+   "controls": [
+    "Back",
+    "Close",
+    "Customize your experience",
+    "Money Mover role Can initiate payments and transfers, and manage recipients on selected accounts",
+    "Open account",
+    "Send invite",
+    "Viewing as Admin"
+   ],
+   "headings": [
+    "Review and send invite",
+    "Money Mover role Can initiate payments and transfers, and manage recipients on selected accounts"
+   ],
+   "path": "/settings/users/invite/individual/review",
+   "structure": "document",
+   "top": {
+    "name": "",
+    "role": "document"
+   }
+  },
+  "hop": [
+   {
+    "click": {
+     "name": "Or, skip issuing card",
+     "role": "button"
+    }
+   }
+  ],
+  "mutates": false,
+  "parent": "settings.invite-issue-card",
+  "recordedBy": "agent",
+  "review": null,
+  "similarity": 0.9983,
+  "source": "5d75737af89d454bd977881670459355d3fed2a5",
+  "status": "accepted"
+ },
+ "settings.invite-role": {
+  "checked": "2026-10-02-1349",
+  "fingerprint": {
+   "controls": [
+    "Accountant Can view all accounts and transactions, and manage books",
+    "Admin Full control including policies, accounts, and settings",
+    "Back",
+    "Close",
+    "Customize your experience",
+    "Employee Can be issued cards, but cannot view sensitive bank account info",
+    "Finance Lead Full non-admin access to accounts, payments, cards, and users",
+    "Finance Manager Manages bookkeeping, transaction coding, ACH processing, and ledger integrations",
+    "Money Mover Can initiate payments and transfers, and manage recipients on selected accounts",
+    "Next",
+    "Open account",
+    "Read Only Can view all accounts and transactions, and be issued cards",
+    "View all Employee details",
+    "Viewing as Admin",
+    "create a new role"
+   ],
+   "headings": [
+    "Assign Test to a role",
+    "Employee Can be issued cards, but cannot view sensitive bank account info",
+    "Permissions",
+    "Admin Full control including policies, accounts, and settings",
+    "Accountant Can view all accounts and transactions, and manage books",
+    "Finance Lead Full non-admin access to accounts, payments, cards, and users",
+    "Finance Manager Manages bookkeeping, transaction coding, ACH processing, and ledger integrations",
+    "Money Mover Can initiate payments and transfers, and manage recipients on selected accounts",
+    "Read Only Can view all accounts and transactions, and be issued cards"
+   ],
+   "path": "/settings/users/invite/individual/role",
+   "structure": "document",
+   "top": {
+    "name": "",
+    "role": "document"
+   }
+  },
+  "hop": [
+   {
+    "click": {
+     "name": "Controller",
+     "role": "option"
+    }
+   },
+   {
+    "fill": {
+     "locator": {
+      "label": "Legal first name"
+     },
+     "value": "Test"
+    }
+   },
+   {
+    "fill": {
+     "locator": {
+      "label": "Legal last name"
+     },
+     "value": "Person"
+    }
+   },
+   {
+    "fill": {
+     "locator": {
+      "label": "Email"
+     },
+     "value": "a11y-audit@example.invalid"
+    }
+   },
+   {
+    "click": {
+     "name": "Next",
+     "role": "button"
+    }
+   },
+   {
+    "wait": {
+     "ms": 800
+    }
+   }
+  ],
+  "mutates": false,
+  "parent": "settings.invite-job-title",
+  "recordedBy": "agent",
+  "review": null,
+  "similarity": 0.9973,
+  "source": "167ea24d3d81d140c71dff4737763ab6d93fd3fb",
+  "status": "accepted"
+ },
+ "settings.invite-sent": {
+  "checked": "2026-10-02-1349",
+  "fingerprint": {
+   "controls": [
+    "Done inviting",
+    "Invite your team"
+   ],
+   "headings": [
+    "Invite sent"
+   ],
+   "path": "/settings/users/invite/more",
+   "structure": "dialog",
+   "top": {
+    "name": "",
+    "role": "dialog"
+   }
+  },
+  "hop": [
+   {
+    "click": {
+     "name": "Send invite",
+     "role": "button"
+    }
+   }
+  ],
+  "mutates": true,
+  "parent": "settings.invite-review",
+  "recordedBy": "agent",
+  "review": {
+   "by": "conductor",
+   "date": "2026-10-03",
+   "decision": "accept",
+   "note": "same full-screen 'Invite sent' page (card-grid illustration, Done inviting / Invite your team); the replay also shows an 'Invite sent' toast. The hop clicks Send invite as the label says.",
+   "reason": "mutating"
+  },
+  "similarity": 0.988,
+  "source": "681926cb47c07a30d3140117f3705033b3b1f28f",
+  "status": "accepted"
+ },
+ "settings.mailing-address-zip-error": {
+  "checked": "2026-10-02-1349",
+  "fingerprint": {
+   "controls": [
+    "Cancel",
+    "City",
+    "Copy from legal address",
+    "Country / Territory",
+    "Mailing address line <n>",
+    "Open combobox menu",
+    "State",
+    "Update",
+    "ZIP Code"
+   ],
+   "headings": [
+    "Edit company mailing address"
+   ],
+   "path": "/settings/company-profile",
+   "structure": "dialog",
+   "top": {
+    "name": "",
+    "role": "dialog"
+   }
+  },
+  "hop": [
+   {
+    "fill": {
+     "locator": {
+      "label": "ZIP Code"
+     },
+     "value": "12"
+    }
+   },
+   {
+    "click": {
+     "name": "Update",
+     "role": "button"
+    }
+   }
+  ],
+  "mutates": true,
+  "parent": "settings.edit-mailing-address",
+  "recordedBy": "agent",
+  "review": {
+   "by": "conductor",
+   "date": "2026-10-03",
+   "decision": "accept",
+   "note": "same Edit company mailing address modal with ZIP '12' and 'Must be a valid 5-digit number'; the hop fills ZIP and clicks Update as the label says; the capture's dimmed Update is likely the moment just after submit, while the error state the label names is fully present",
+   "reason": "mutating"
+  },
+  "similarity": 0.994,
+  "source": "efdffeb62c537b31a7c1691ba6f26e568e433668",
+  "status": "accepted"
+ },
+ "settings.manage-shared-docs": {
+  "checked": "2026-10-02-1349",
+  "fingerprint": {
+   "controls": [
+    "Close",
+    "rotem@gmail.com <n> documents shared",
+    "thom@cooley.com <n> documents shared"
+   ],
+   "headings": [],
+   "path": "/settings/documents",
+   "structure": "dialog",
+   "top": {
+    "name": "",
+    "role": "dialog"
+   }
+  },
+  "hop": [
+   {
+    "click": {
+     "name": "Manage shared documents",
+     "role": "button"
+    }
+   }
+  ],
+  "mutates": false,
+  "parent": "settings.documents",
+  "recordedBy": "draft",
+  "review": null,
+  "similarity": 0.9989,
+  "source": "7749e433e1a64cb31057ccc75dcc6f73e0bb61d4",
+  "status": "accepted"
+ },
+ "settings.member-saved": {
+  "checked": "2026-10-02-1349",
+  "fingerprint": {
+   "controls": [
+    "Assign Budget",
+    "Card ending with: <n>",
+    "Close detail panel",
+    "Contractor Expenses Frozen Card ending with: <n>",
+    "Edit",
+    "Finance",
+    "Office Card Card ending with: <n>",
+    "Remove",
+    "Share link",
+    "Software Subscriptions <amount> monthly",
+    "Team Lunch <amount> weekly",
+    "View all Money Mover details"
+   ],
+   "headings": [
+    "Alice Chen"
+   ],
+   "path": "/settings/users/<id>",
+   "structure": "status",
+   "top": {
+    "name": "",
+    "role": "generic"
+   }
+  },
+  "hop": [
+   {
+    "click": {
+     "name": "Save",
+     "role": "button"
+    }
+   },
+   {
+    "wait": {
+     "ms": 500
+    }
+   }
+  ],
+  "mutates": true,
+  "parent": "settings.edit-member-dirty",
+  "recordedBy": "agent",
+  "review": {
+   "by": "conductor",
+   "date": "2026-10-03",
+   "decision": "accept",
+   "note": "same Team page with Alice Chen's panel back in read view and a 'Job title updated' toast; job title is the fixture 'Test Lead' instead of 'Senior Software Engineer'. Capture scroll and main-nav sidebar differ, as in the accepted parent. The hop clicks Save as the label says.",
+   "reason": "below-threshold"
+  },
+  "similarity": 0.4884,
+  "source": "2f3fda0f8a130637d4de897bad283a156463033c",
+  "status": "accepted"
+ },
+ "settings.my-profile": {
+  "checked": "2026-10-02-1349",
+  "fingerprint": {
+   "controls": [
+    "Account Security",
+    "Add",
+    "Add or edit",
+    "Advisors <n>",
+    "Allow",
+    "Approval Rules",
+    "Categories",
+    "Company Profile",
+    "Controls",
+    "Customize your experience",
+    "Departments",
+    "Dismiss",
+    "Documents",
+    "Edit",
+    "Integrations",
+    "Manage",
+    "Match receipts for all transactions",
+    "Mercury Demo Pro",
+    "Move money",
+    "Navigate to Settings",
+    "Notifications",
+    "Open account",
+    "Opt In",
+    "Perks",
+    "Phone number",
+    "Plan & Billing",
+    "Privacy Policy",
+    "Profile",
+    "Referrals",
+    "Search for anything",
+    "Security",
+    "Settings",
+    "Team",
+    "Theme",
+    "Toggle Private Mode",
+    "Tokens",
+    "United States flag",
+    "Vault",
+    "View Terms",
+    "Viewing as Admin",
+    "Webhooks",
+    "receipts@mercury.com",
+    "updates"
+   ],
+   "headings": [
+    "Jane Black"
+   ],
+   "path": "/settings/my-profile",
+   "structure": "document",
+   "top": {
+    "name": "",
+    "role": "document"
+   }
+  },
+  "hop": [],
+  "mutates": false,
+  "parent": "/settings/my-profile",
+  "recordedBy": "root",
+  "review": null,
+  "similarity": 0.9996,
+  "source": "97d170e1550eee4afc0af065b78cda302a97674c",
+  "status": "accepted"
+ },
+ "settings.my-profile-linked": {
+  "checked": "2026-10-02-1349",
+  "fingerprint": {
+   "controls": [
+    "Account Security",
+    "Add",
+    "Add or edit",
+    "Advisors <n>",
+    "Allow",
+    "Approval Rules",
+    "Categories",
+    "Company Profile",
+    "Controls",
+    "Customize your experience",
+    "Departments",
+    "Dismiss",
+    "Documents",
+    "Edit",
+    "Integrations",
+    "Manage",
+    "Match receipts for all transactions",
+    "Mercury Demo Pro",
+    "Move money",
+    "Navigate to Settings",
+    "Notifications",
+    "Open account",
+    "Opt In",
+    "Perks",
+    "Phone number",
+    "Plan & Billing",
+    "Privacy Policy",
+    "Profile",
+    "Referrals",
+    "Search for anything",
+    "Security",
+    "Settings",
+    "Team",
+    "Theme",
+    "Toggle Private Mode",
+    "Tokens",
+    "United States flag",
+    "Vault",
+    "View Terms",
+    "Viewing as Admin",
+    "Webhooks",
+    "receipts@mercury.com",
+    "updates"
+   ],
+   "headings": [
+    "Jane Black"
+   ],
+   "path": "/settings/my-profile",
+   "structure": "document",
+   "top": {
+    "name": "",
+    "role": "document"
+   }
+  },
+  "hop": [
+   {
+    "scroll": {
+     "text": "34 receipts matched so far"
+    }
+   }
+  ],
+  "mutates": false,
+  "parent": "settings.my-profile",
+  "recordedBy": "agent",
+  "review": {
+   "by": "conductor",
+   "date": "2026-10-03",
+   "decision": "accept",
+   "note": "same Profile section scrolled to Linked profiles (three emails, Personal Checking ••6789, Gmail receipt matching tags, Allow/Dismiss forwarding banners)",
+   "reason": "below-threshold"
+  },
+  "similarity": 0.8873,
+  "source": "3ee112051cde739425769442c5f76f1d3931bd44",
+  "status": "accepted"
+ },
+ "settings.my-profile-sms": {
+  "checked": "2026-10-02-1349",
+  "fingerprint": {
+   "controls": [
+    "Account Security",
+    "Add",
+    "Add or edit",
+    "Advisors <n>",
+    "Allow",
+    "Approval Rules",
+    "Categories",
+    "Company Profile",
+    "Controls",
+    "Customize your experience",
+    "Departments",
+    "Dismiss",
+    "Documents",
+    "Edit",
+    "Integrations",
+    "Manage",
+    "Match receipts for all transactions",
+    "Mercury Demo Pro",
+    "Move money",
+    "Navigate to Settings",
+    "Notifications",
+    "Open account",
+    "Opt In",
+    "Perks",
+    "Phone number",
+    "Plan & Billing",
+    "Privacy Policy",
+    "Profile",
+    "Referrals",
+    "Search for anything",
+    "Security",
+    "Settings",
+    "Team",
+    "Theme",
+    "Toggle Private Mode",
+    "Tokens",
+    "United States flag",
+    "Vault",
+    "View Terms",
+    "Viewing as Admin",
+    "Webhooks",
+    "receipts@mercury.com",
+    "updates"
+   ],
+   "headings": [
+    "Jane Black"
+   ],
+   "path": "/settings/my-profile",
+   "structure": "document",
+   "top": {
+    "name": "",
+    "role": "document"
+   }
+  },
+  "hop": [
+   {
+    "scroll": {
+     "name": "Opt In",
+     "role": "button"
+    }
+   }
+  ],
+  "mutates": false,
+  "parent": "settings.my-profile-linked",
+  "recordedBy": "agent",
+  "review": null,
+  "similarity": 0.9991,
+  "source": "595aa96aef363677ba2925913a5bbd17b699f431",
+  "status": "accepted"
+ },
+ "settings.netsuite-connected": {
+  "checked": "2026-10-02-1349",
+  "fingerprint": null,
+  "hop": [
+   {
+    "click": {
+     "name": "Start sync",
+     "role": "button"
+    }
+   },
+   {
+    "wait": {
+     "ms": 1000
+    }
+   }
+  ],
+  "mutates": false,
+  "parent": "settings.netsuite-step3",
+  "recordedBy": "agent",
+  "review": null,
+  "similarity": null,
+  "source": null,
+  "status": "draft"
+ },
+ "settings.netsuite-gl-dropdown": {
+  "checked": "2026-10-02-1349",
+  "fingerprint": {
+   "controls": [
+    "<n> - Accounts Receivable",
+    "<n> - Inventory",
+    "Mercury Checking (<n>)",
+    "Mercury Savings (<n>)"
+   ],
+   "headings": [],
+   "path": "/settings/integrations",
+   "structure": "listbox",
+   "top": {
+    "name": "",
+    "role": "listbox"
+   }
+  },
+  "hop": [
+   {
+    "click": {
+     "index": 0,
+     "name": "GL Code",
+     "role": "combobox"
+    }
+   },
+   {
+    "wait": {
+     "locator": {
+      "name": "Mercury Savings (7774)",
+      "role": "option"
+     }
+    }
+   }
+  ],
+  "mutates": false,
+  "parent": "settings.netsuite-step1",
+  "recordedBy": "agent",
+  "review": null,
+  "similarity": 0.9556,
+  "source": "e5983f5fb88de858872df3f9b36d03fdfd11e113",
+  "status": "accepted"
+ },
+ "settings.netsuite-step1": {
+  "checked": "2026-10-02-1349",
+  "fingerprint": {
+   "controls": [
+    "Clear combobox selection",
+    "GL Code",
+    "Next",
+    "Open combobox menu",
+    "Save For Later"
+   ],
+   "headings": [],
+   "path": "/settings/integrations",
+   "structure": "dialog",
+   "top": {
+    "name": "",
+    "role": "dialog"
+   }
+  },
+  "hop": [
+   {
+    "click": {
+     "name": "NetSuite Categorize transactions and sync your bank feed Accounting Connect",
+     "role": "row"
+    }
+   },
+   {
+    "wait": {
+     "ms": 1500
+    }
+   }
+  ],
+  "mutates": false,
+  "parent": "settings.integrations",
+  "recordedBy": "agent",
+  "review": null,
+  "similarity": 0.9553,
+  "source": "87289d13c48f93d13aa6b46c1898035d75942c0b",
+  "status": "accepted"
+ },
+ "settings.netsuite-step2": {
+  "checked": "2026-10-02-1349",
+  "fingerprint": {
+   "controls": [
+    "Back",
+    "NetSuite GL code",
+    "Next"
+   ],
+   "headings": [],
+   "path": "/settings/integrations",
+   "structure": "dialog",
+   "top": {
+    "name": "",
+    "role": "dialog"
+   }
+  },
+  "hop": [
+   {
+    "click": {
+     "name": "Mercury Checking (7772)",
+     "role": "option"
+    }
+   },
+   {
+    "click": {
+     "name": "Next",
+     "role": "button"
+    }
+   },
+   {
+    "wait": {
+     "ms": 1000
+    }
+   }
+  ],
+  "mutates": false,
+  "parent": "settings.netsuite-gl-dropdown",
+  "recordedBy": "agent",
+  "review": null,
+  "similarity": 0.9029,
+  "source": "1f1e70ef4574ce167f8780faee8a678409218c56",
+  "status": "accepted"
+ },
+ "settings.netsuite-step3": {
+  "checked": "2026-10-02-1349",
+  "fingerprint": {
+   "controls": [
+    "Back",
+    "Select a date in the past",
+    "Start sync",
+    "Start syncing from <date>"
+   ],
+   "headings": [],
+   "path": "/settings/integrations",
+   "structure": "dialog",
+   "top": {
+    "name": "",
+    "role": "dialog"
+   }
+  },
+  "hop": [
+   {
+    "click": {
+     "name": "NetSuite GL code",
+     "role": "combobox"
+    }
+   },
+   {
+    "click": {
+     "name": "912 - Bill pay",
+     "role": "option"
+    }
+   },
+   {
+    "click": {
+     "name": "Next",
+     "role": "button"
+    }
+   },
+   {
+    "wait": {
+     "ms": 1000
+    }
+   }
+  ],
+  "mutates": false,
+  "parent": "settings.netsuite-step2",
+  "recordedBy": "agent",
+  "review": {
+   "by": "conductor",
+   "date": "2026-10-03",
+   "decision": "accept",
+   "note": "same NetSuite Step 3 of 3 dialog ('When do you want to sync from?', Back / Start sync); hop picks 912 - Bill pay and clicks Next as the label says",
+   "reason": "below-threshold"
+  },
+  "similarity": 0.8944,
+  "source": "716309b0ed36e1bf8ad264c2f44ddfdc5dd4fbe8",
+  "status": "accepted"
+ },
+ "settings.notifications": {
+  "checked": "2026-10-02-1349",
+  "fingerprint": {
+   "controls": [
+    "Account Security",
+    "Account balances Alerts you when low-balance thresholds are reached Email Push",
+    "Accounting Notifies you when transactions fail to sync Email",
+    "Advisors <n>",
+    "Approval Rules",
+    "Bill pay Notifies you when a bill is being processed or ready for review Email",
+    "Categories",
+    "Check payments Notifies you of any checks that haven't been cashed for <n> days Email Push",
+    "Collaboration Tracks transaction comments and replies Email",
+    "Company Profile",
+    "Controls",
+    "Credit account Notifies you of any balance or limit changes, upcoming payments, and autopay warnings Email Push",
+    "Customize your experience",
+    "Departments",
+    "Documents",
+    "Edit Cash flow notifications",
+    "Edit Suspicious activity notifications",
+    "Edit Tasks and approvals notifications",
+    "Integrations",
+    "Invoicing Tracks the status of payments Email Push",
+    "Mercury Demo Pro",
+    "Mercury subscription Notifies you of renewals, insufficient balances, or potential disruptions to your account Email",
+    "Move money",
+    "Navigate to Settings",
+    "Notifications",
+    "Open account",
+    "Perks",
+    "Plan & Billing",
+    "Profile",
+    "Referrals",
+    "Reimbursements Tracks the status of reimbursements Email Push",
+    "Search for anything",
+    "Security",
+    "Settings",
+    "Team",
+    "Toggle Private Mode",
+    "Tokens",
+    "Transfers Notifies you when auto transfer rules are created or changed Off",
+    "User management Notifies you when new people are added Email Push",
+    "Vault",
+    "Viewing as Admin",
+    "Webhooks",
+    "Your spending Tracks expenses, reimbursements, card limits, and transactions needing more info Email Push",
+    "updates"
+   ],
+   "headings": [
+    "Notifications",
+    "Important Updates",
+    "General Updates"
+   ],
+   "path": "/settings/notifications",
+   "structure": "document",
+   "top": {
+    "name": "",
+    "role": "document"
+   }
+  },
+  "hop": [],
+  "mutates": false,
+  "parent": "/settings/notifications",
+  "recordedBy": "root",
+  "review": null,
+  "similarity": 0.9994,
+  "source": "97d170e1550eee4afc0af065b78cda302a97674c",
+  "status": "accepted"
+ },
+ "settings.notifications-general": {
+  "checked": "2026-10-02-1349",
+  "fingerprint": {
+   "controls": [
+    "Account Security",
+    "Account balances Alerts you when low-balance thresholds are reached Email Push",
+    "Accounting Notifies you when transactions fail to sync Email",
+    "Advisors <n>",
+    "Approval Rules",
+    "Bill pay Notifies you when a bill is being processed or ready for review Email",
+    "Categories",
+    "Check payments Notifies you of any checks that haven't been cashed for <n> days Email Push",
+    "Collaboration Tracks transaction comments and replies Email",
+    "Company Profile",
+    "Controls",
+    "Credit account Notifies you of any balance or limit changes, upcoming payments, and autopay warnings Email Push",
+    "Customize your experience",
+    "Departments",
+    "Documents",
+    "Edit Cash flow notifications",
+    "Edit Suspicious activity notifications",
+    "Edit Tasks and approvals notifications",
+    "Integrations",
+    "Invoicing Tracks the status of payments Email Push",
+    "Mercury Demo Pro",
+    "Mercury subscription Notifies you of renewals, insufficient balances, or potential disruptions to your account Email",
+    "Move money",
+    "Navigate to Settings",
+    "Notifications",
+    "Open account",
+    "Perks",
+    "Plan & Billing",
+    "Profile",
+    "Referrals",
+    "Reimbursements Tracks the status of reimbursements Email Push",
+    "Search for anything",
+    "Security",
+    "Settings",
+    "Team",
+    "Toggle Private Mode",
+    "Tokens",
+    "Transfers Notifies you when auto transfer rules are created or changed Off",
+    "User management Notifies you when new people are added Email Push",
+    "Vault",
+    "Viewing as Admin",
+    "Webhooks",
+    "Your spending Tracks expenses, reimbursements, card limits, and transactions needing more info Email Push",
+    "updates"
+   ],
+   "headings": [
+    "Notifications",
+    "Important Updates",
+    "General Updates"
+   ],
+   "path": "/settings/notifications",
+   "structure": "document",
+   "top": {
+    "name": "",
+    "role": "document"
+   }
+  },
+  "hop": [
+   {
+    "scroll": {
+     "name": "User management Notifies you when new people are added Email Push",
+     "role": "button"
+    }
+   }
+  ],
+  "mutates": false,
+  "parent": "settings.notifications",
+  "recordedBy": "agent",
+  "review": null,
+  "similarity": 0.9994,
+  "source": "18c45a65e0e11481fa36381f85b975d2b4a5d354",
+  "status": "accepted"
+ },
+ "settings.panorama": {
+  "checked": "2026-10-02-1349",
+  "fingerprint": {
+   "controls": [
+    "All Accounts",
+    "Customize your experience",
+    "Download statements",
+    "Jane Black",
+    "Open Banking",
+    "Open Dashboard",
+    "Open account",
+    "Search by name",
+    "Set as default view",
+    "Viewing as Admin"
+   ],
+   "headings": [
+    "<n> accounts"
+   ],
+   "path": "/panorama",
+   "structure": "document",
+   "top": {
+    "name": "",
+    "role": "document"
+   }
+  },
+  "hop": [],
+  "mutates": false,
+  "parent": "/panorama",
+  "recordedBy": "root",
+  "review": null,
+  "similarity": 0.9995,
+  "source": "97d170e1550eee4afc0af065b78cda302a97674c",
+  "status": "accepted"
+ },
+ "settings.panorama-statements": {
+  "checked": "2026-10-02-1349",
+  "fingerprint": {
+   "controls": [
+    "Close",
+    "Download PDF zip (<n> orgs)"
+   ],
+   "headings": [
+    "Download PDF zip (<n> orgs)"
+   ],
+   "path": "/panorama",
+   "structure": "dialog",
+   "top": {
+    "name": "",
+    "role": "dialog"
+   }
+  },
+  "hop": [
+   {
+    "click": {
+     "name": "Download statements",
+     "role": "button"
+    }
+   }
+  ],
+  "mutates": false,
+  "parent": "settings.panorama",
+  "recordedBy": "draft",
+  "review": null,
+  "similarity": 0.9995,
+  "source": "5e5e89f91aa1c595f3822da062110c4fb6e1da06",
+  "status": "accepted"
+ },
+ "settings.personal-security": {
+  "checked": "2026-10-02-1349",
+  "fingerprint": {
+   "controls": [
+    "+ Add another verification method",
+    "+ Add passkey",
+    "+ Add passkey via QR Code",
+    "Account Security",
+    "Advisors <n>",
+    "Approval Rules",
+    "Categories",
+    "Change password",
+    "Company Profile",
+    "Controls",
+    "Customize your experience",
+    "Departments",
+    "Documents",
+    "Edit nickname",
+    "Forget",
+    "Forget mobile app logins",
+    "Forget other devices",
+    "Generate New Codes",
+    "Integrations",
+    "Learn more",
+    "Log out other sessions",
+    "Mercury Demo Pro",
+    "Move money",
+    "Navigate to Settings",
+    "Notifications",
+    "Open account",
+    "Perks",
+    "Plan & Billing",
+    "Profile",
+    "Referrals",
+    "Remove",
+    "Reset",
+    "Search for anything",
+    "Security",
+    "Settings",
+    "Sign out",
+    "Team",
+    "Toggle Private Mode",
+    "Tokens",
+    "Unlink",
+    "Use passkeys only",
+    "Vault",
+    "Viewing as Admin",
+    "Webhooks",
+    "updates"
+   ],
+   "headings": [
+    "Security",
+    "Use passkeys instead of one-time codes"
+   ],
+   "path": "/settings/security",
+   "structure": "document",
+   "top": {
+    "name": "",
+    "role": "document"
+   }
+  },
+  "hop": [],
+  "mutates": false,
+  "parent": "/settings/security",
+  "recordedBy": "root",
+  "review": null,
+  "similarity": 0.9977,
+  "source": "97d170e1550eee4afc0af065b78cda302a97674c",
+  "status": "accepted"
+ },
+ "settings.personal-security-lower": {
+  "checked": "2026-10-02-1349",
+  "fingerprint": {
+   "controls": [
+    "+ Add another verification method",
+    "+ Add passkey",
+    "+ Add passkey via QR Code",
+    "Account Security",
+    "Advisors <n>",
+    "Approval Rules",
+    "Categories",
+    "Change password",
+    "Company Profile",
+    "Controls",
+    "Customize your experience",
+    "Departments",
+    "Documents",
+    "Edit nickname",
+    "Forget",
+    "Forget mobile app logins",
+    "Forget other devices",
+    "Generate New Codes",
+    "Integrations",
+    "Learn more",
+    "Log out other sessions",
+    "Mercury Demo Pro",
+    "Move money",
+    "Navigate to Settings",
+    "Notifications",
+    "Open account",
+    "Perks",
+    "Plan & Billing",
+    "Profile",
+    "Referrals",
+    "Remove",
+    "Reset",
+    "Search for anything",
+    "Security",
+    "Settings",
+    "Sign out",
+    "Team",
+    "Toggle Private Mode",
+    "Tokens",
+    "Unlink",
+    "Use passkeys only",
+    "Vault",
+    "Viewing as Admin",
+    "Webhooks",
+    "updates"
+   ],
+   "headings": [
+    "Security",
+    "Use passkeys instead of one-time codes"
+   ],
+   "path": "/settings/security",
+   "structure": "document",
+   "top": {
+    "name": "",
+    "role": "document"
+   }
+  },
+  "hop": [
+   {
+    "scroll": {
+     "name": "Generate New Codes",
+     "role": "button"
+    }
+   }
+  ],
+  "mutates": false,
+  "parent": "settings.personal-security",
+  "recordedBy": "agent",
+  "review": {
+   "by": "conductor",
+   "date": "2026-10-03",
+   "decision": "accept",
+   "note": "same Security lower section (2FA rows, Account recovery Backup codes 6/8 Required, Change password, Where you're signed in); only scroll offset differs",
+   "reason": "below-threshold"
+  },
+  "similarity": 0.5094,
+  "source": "1ddd046288701080c0ac7226509530fcae62d55d",
+  "status": "accepted"
+ },
+ "settings.plan-billing": {
+  "checked": "2026-10-02-1349",
+  "fingerprint": {
+   "controls": [
+    "<amount>",
+    "Account Security",
+    "Advisors <n>",
+    "Approval Rules",
+    "Categories",
+    "Company Profile",
+    "Controls",
+    "Customize your experience",
+    "Departments",
+    "Documents",
+    "Integrations",
+    "Manage",
+    "Mercury Demo Pro",
+    "Move money",
+    "Navigate to Settings",
+    "Notifications",
+    "Open account",
+    "Perks",
+    "Plan & Billing",
+    "Profile",
+    "Referrals",
+    "Search for anything",
+    "Security",
+    "Settings",
+    "Team",
+    "Toggle Private Mode",
+    "Tokens",
+    "Vault",
+    "View all features",
+    "Viewing as Admin",
+    "Webhooks",
+    "get in touch",
+    "updates"
+   ],
+   "headings": [
+    "Plan & Billing"
+   ],
+   "path": "/settings/plan-and-billing",
+   "structure": "document",
+   "top": {
+    "name": "",
+    "role": "document"
+   }
+  },
+  "hop": [],
+  "mutates": false,
+  "parent": "/settings/plan-and-billing",
+  "recordedBy": "root",
+  "review": null,
+  "similarity": 0.9981,
+  "source": "97d170e1550eee4afc0af065b78cda302a97674c",
+  "status": "accepted"
+ },
+ "settings.plan-manage-menu": {
+  "checked": "2026-10-02-1349",
+  "fingerprint": {
+   "controls": [
+    "Potentially dangerous action: Unsubscribe",
+    "View all plans"
+   ],
+   "headings": [],
+   "path": "/settings/plan-and-billing",
+   "structure": "menu",
+   "top": {
+    "name": "Manage",
+    "role": "menu"
+   }
+  },
+  "hop": [
+   {
+    "click": {
+     "name": "Manage",
+     "role": "button"
+    }
+   }
+  ],
+  "mutates": false,
+  "parent": "settings.plan-billing",
+  "recordedBy": "draft",
+  "review": null,
+  "similarity": 0.9977,
+  "source": "525b2e9d6902cee7e69c404f10c9800114290035",
+  "status": "accepted"
+ },
+ "settings.preferred-name-required": {
+  "checked": "2026-10-02-1349",
+  "fingerprint": {
+   "controls": [
+    "Cancel",
+    "Preferred first name",
+    "Preferred last name",
+    "Update"
+   ],
+   "headings": [
+    "Edit preferred name"
+   ],
+   "path": "/settings/my-profile",
+   "structure": "dialog",
+   "top": {
+    "name": "",
+    "role": "dialog"
+   }
+  },
+  "hop": [
+   {
+    "fill": {
+     "locator": {
+      "label": "Preferred first name"
+     },
+     "value": ""
+    }
+   },
+   {
+    "click": {
+     "name": "Update",
+     "role": "button"
+    }
+   }
+  ],
+  "mutates": true,
+  "parent": "settings.edit-preferred-name",
+  "recordedBy": "agent",
+  "review": {
+   "by": "conductor",
+   "date": "2026-10-03",
+   "decision": "accept",
+   "note": "same Edit preferred name modal: empty first name, 'This field is required' error, last name Black; the hop clears the field and clicks Update as labelled",
+   "reason": "mutating"
+  },
+  "similarity": 0.9983,
+  "source": "7c742dc99b835d4842acbd3603db6f629661b423",
+  "status": "accepted"
+ },
+ "settings.preferred-name-updated": {
+  "checked": "2026-10-02-1349",
+  "fingerprint": {
+   "controls": [],
+   "headings": [],
+   "path": "/settings/my-profile",
+   "structure": "status",
+   "top": {
+    "name": "",
+    "role": "generic"
+   }
+  },
+  "hop": [
+   {
+    "fill": {
+     "locator": {
+      "label": "Preferred first name"
+     },
+     "value": "Test"
+    }
+   },
+   {
+    "click": {
+     "name": "Update",
+     "role": "button"
+    }
+   }
+  ],
+  "mutates": true,
+  "parent": "settings.edit-preferred-name",
+  "recordedBy": "agent",
+  "review": {
+   "by": "conductor",
+   "date": "2026-10-03",
+   "decision": "accept",
+   "note": "same 'Your preferred name has been updated.' toast on Profile; hop fills Preferred first name and clicks Update (fixture name 'Test' instead of 'Jan' is fine)",
+   "reason": "mutating"
+  },
+  "similarity": 0.9979,
+  "source": "dd0860b87a7df167e188099c4bb5cf3911f08801",
+  "status": "accepted"
+ },
+ "settings.referral-invalid-email": {
+  "checked": "2026-10-02-1349",
+  "fingerprint": {
+   "controls": [],
+   "headings": [
+    "Error"
+   ],
+   "path": "/settings/referrals",
+   "structure": "dialog",
+   "top": {
+    "name": "Error",
+    "role": "dialog"
+   }
+  },
+  "hop": [
+   {
+    "fill": {
+     "locator": {
+      "name": "Send to",
+      "role": "combobox"
+     },
+     "value": "notanemail"
+    }
+   },
+   {
+    "press": "Enter"
+   }
+  ],
+  "mutates": true,
+  "parent": "settings.referral-invite",
+  "recordedBy": "agent",
+  "review": {
+   "by": "conductor",
+   "date": "2026-10-03",
+   "decision": "accept",
+   "note": "same Share your Mercury Referral modal: 'notanemail' typed, 'Create option \"notanemail\"' row, warning icon and 'Please submit a valid email' tooltip; the hop types into Send to and presses Enter",
+   "reason": "mutating"
+  },
+  "similarity": 0.9991,
+  "source": "9d69bf19d883dddb555b73a5abcc8cc8687ce787",
+  "status": "accepted"
+ },
+ "settings.referral-invite": {
+  "checked": "2026-10-02-1349",
+  "fingerprint": {
+   "controls": [
+    "Cancel",
+    "Confirm",
+    "Open combobox menu",
+    "Send to"
+   ],
+   "headings": [
+    "Share your Mercury Referral"
+   ],
+   "path": "/settings/referrals",
+   "structure": "dialog",
+   "top": {
+    "name": "",
+    "role": "dialog"
+   }
+  },
+  "hop": [
+   {
+    "click": {
+     "name": "Invite via email",
+     "role": "button"
+    }
+   }
+  ],
+  "mutates": true,
+  "parent": "settings.referrals",
+  "recordedBy": "draft",
+  "review": null,
+  "similarity": 0.9991,
+  "source": "ca654c1f3ddb06d6dc0f7229a13f46e41457c237",
+  "status": "accepted"
+ },
+ "settings.referral-sent": {
+  "checked": "2026-10-02-1349",
+  "fingerprint": {
+   "controls": [],
+   "headings": [],
+   "path": "/settings/referrals",
+   "structure": "status",
+   "top": {
+    "name": "",
+    "role": "generic"
+   }
+  },
+  "hop": [
+   {
+    "fill": {
+     "locator": {
+      "name": "Send to",
+      "role": "combobox"
+     },
+     "value": "a11y-audit@example.invalid"
+    }
+   },
+   {
+    "press": "Enter"
+   },
+   {
+    "click": {
+     "name": "Confirm",
+     "role": "button"
+    }
+   }
+  ],
+  "mutates": true,
+  "parent": "settings.referral-invalid-email",
+  "recordedBy": "agent",
+  "review": {
+   "by": "conductor",
+   "date": "2026-10-03",
+   "decision": "accept",
+   "note": "same Referrals page with the invite modal closed and the 'Invite sent' toast; hop enters a valid address and clicks Confirm",
+   "reason": "mutating"
+  },
+  "similarity": 0.9993,
+  "source": "1bd7316864d9498cc71757a547f58301f781f1c2",
+  "status": "accepted"
+ },
+ "settings.referrals": {
+  "checked": "2026-10-02-1349",
+  "fingerprint": {
+   "controls": [
+    "Account Security",
+    "Advisors <n>",
+    "Approval Rules",
+    "Categories",
+    "Company Profile",
+    "Controls",
+    "Customize your experience",
+    "Departments",
+    "Documents",
+    "Integrations",
+    "Invite via email",
+    "Mercury Demo Pro",
+    "Mercury Referral Agreement",
+    "Move money",
+    "Navigate to Settings",
+    "Notifications",
+    "Open account",
+    "Perks",
+    "Plan & Billing",
+    "Profile",
+    "Referrals",
+    "Search for anything",
+    "Security",
+    "Settings",
+    "Team",
+    "Toggle Private Mode",
+    "Tokens",
+    "Vault",
+    "Viewing as Admin",
+    "Webhooks",
+    "mercury.com/r/mercury",
+    "updates"
+   ],
+   "headings": [
+    "Referrals",
+    "Refer businesses to unlock the <amount> Gold bonus"
+   ],
+   "path": "/settings/referrals",
+   "structure": "document",
+   "top": {
+    "name": "",
+    "role": "document"
+   }
+  },
+  "hop": [],
+  "mutates": false,
+  "parent": "/settings/referrals",
+  "recordedBy": "root",
+  "review": null,
+  "similarity": 0.9993,
+  "source": "97d170e1550eee4afc0af065b78cda302a97674c",
+  "status": "accepted"
+ },
+ "settings.remove-member-confirm": {
+  "checked": "2026-10-02-1349",
+  "fingerprint": {
+   "controls": [
+    "Go back",
+    "Remove Alice",
+    "Show list of active subscriptions",
+    "Trying to reset <n>FA?"
+   ],
+   "headings": [
+    "Remove Alice?"
+   ],
+   "path": "/settings/users/<id>",
+   "structure": "dialog",
+   "top": {
+    "name": "",
+    "role": "dialog"
+   }
+  },
+  "hop": [
+   {
+    "click": {
+     "name": "Remove",
+     "role": "button"
+    }
+   }
+  ],
+  "mutates": true,
+  "parent": "settings.user-detail",
+  "recordedBy": "agent",
+  "review": {
+   "by": "conductor",
+   "date": "2026-10-03",
+   "decision": "accept",
+   "note": "same 'Remove Alice?' confirmation (6 active subscriptions warning, Go back / Remove Alice); hop clicks Remove as labeled and stops at the confirm",
+   "reason": "below-threshold"
+  },
+  "similarity": 0.7353,
+  "source": "559f5665694aad9c0e68d591ce634eab22fb1007",
+  "status": "accepted"
+ },
+ "settings.remove-passkey-confirm": {
+  "checked": "2026-10-02-1349",
+  "fingerprint": {
+   "controls": [
+    "Cancel",
+    "Remove"
+   ],
+   "headings": [
+    "Remove passkey"
+   ],
+   "path": "/settings/security",
+   "structure": "dialog",
+   "top": {
+    "name": "",
+    "role": "dialog"
+   }
+  },
+  "hop": [
+   {
+    "click": {
+     "index": 1,
+     "name": "Remove",
+     "role": "button"
+    }
+   }
+  ],
+  "mutates": true,
+  "parent": "settings.personal-security",
+  "recordedBy": "agent",
+  "review": {
+   "by": "conductor",
+   "date": "2026-10-03",
+   "decision": "accept",
+   "note": "same Remove passkey confirmation for 1Password (Cancel / Remove); the hop clicks Remove on the second row, as in the capture, and does not confirm",
+   "reason": "mutating"
+  },
+  "similarity": 0.999,
+  "source": "7b796970588a2fd356804537a7b95fbb869ddfe1",
+  "status": "accepted"
+ },
+ "settings.role-accountant": {
+  "checked": "2026-10-02-1349",
+  "fingerprint": {
+   "controls": [
+    "Accountant Can view all accounts and transactions, and manage books",
+    "Admin Full control including policies, accounts, and settings",
+    "Back",
+    "Close",
+    "Customize your experience",
+    "Employee Can be issued cards, but cannot view sensitive bank account info",
+    "Finance Lead Full non-admin access to accounts, payments, cards, and users",
+    "Finance Manager Manages bookkeeping, transaction coding, ACH processing, and ledger integrations",
+    "Money Mover Can initiate payments and transfers, and manage recipients on selected accounts",
+    "Next",
+    "Open account",
+    "Read Only Can view all accounts and transactions, and be issued cards",
+    "View all Accountant details",
+    "View all Employee details",
+    "Viewing as Admin",
+    "create a new role"
+   ],
+   "headings": [
+    "Assign Test to a role",
+    "Employee Can be issued cards, but cannot view sensitive bank account info",
+    "Permissions",
+    "Admin Full control including policies, accounts, and settings",
+    "Accountant Can view all accounts and transactions, and manage books",
+    "Finance Lead Full non-admin access to accounts, payments, cards, and users",
+    "Finance Manager Manages bookkeeping, transaction coding, ACH processing, and ledger integrations",
+    "Money Mover Can initiate payments and transfers, and manage recipients on selected accounts",
+    "Read Only Can view all accounts and transactions, and be issued cards"
+   ],
+   "path": "/settings/users/invite/individual/role",
+   "structure": "document",
+   "top": {
+    "name": "",
+    "role": "document"
+   }
+  },
+  "hop": [
+   {
+    "click": {
+     "name": "Accountant Can view all accounts and transactions, and manage books",
+     "role": "radio"
+    }
+   }
+  ],
+  "mutates": false,
+  "parent": "settings.invite-role",
+  "recordedBy": "agent",
+  "review": {
+   "by": "conductor",
+   "date": "2026-10-03",
+   "decision": "accept",
+   "note": "same Assign Role step with the Accountant radio selected and its permissions expanded (Accounting, Download docs and statements, Reimbursement view only); only the name (Test vs Riley) and scroll offset differ",
+   "reason": "below-threshold"
+  },
+  "similarity": 0.6871,
+  "source": "7c8ca33e5ebe9cc760255329714231b7334d5f85",
+  "status": "accepted"
+ },
+ "settings.role-admin": {
+  "checked": "2026-10-02-1349",
+  "fingerprint": {
+   "controls": [
+    "Accountant Can view all accounts and transactions, and manage books",
+    "Admin Full control including policies, accounts, and settings",
+    "Back",
+    "Close",
+    "Customize your experience",
+    "Employee Can be issued cards, but cannot view sensitive bank account info",
+    "Finance Lead Full non-admin access to accounts, payments, cards, and users",
+    "Finance Manager Manages bookkeeping, transaction coding, ACH processing, and ledger integrations",
+    "Money Mover Can initiate payments and transfers, and manage recipients on selected accounts",
+    "Next",
+    "Open account",
+    "Read Only Can view all accounts and transactions, and be issued cards",
+    "View all Admin details",
+    "View all Employee details",
+    "Viewing as Admin",
+    "create a new role"
+   ],
+   "headings": [
+    "Assign Test to a role",
+    "Employee Can be issued cards, but cannot view sensitive bank account info",
+    "Permissions",
+    "Admin Full control including policies, accounts, and settings",
+    "Accountant Can view all accounts and transactions, and manage books",
+    "Finance Lead Full non-admin access to accounts, payments, cards, and users",
+    "Finance Manager Manages bookkeeping, transaction coding, ACH processing, and ledger integrations",
+    "Money Mover Can initiate payments and transfers, and manage recipients on selected accounts",
+    "Read Only Can view all accounts and transactions, and be issued cards"
+   ],
+   "path": "/settings/users/invite/individual/role",
+   "structure": "document",
+   "top": {
+    "name": "",
+    "role": "document"
+   }
+  },
+  "hop": [
+   {
+    "click": {
+     "name": "Admin Full control including policies, accounts, and settings",
+     "role": "radio"
+    }
+   }
+  ],
+  "mutates": false,
+  "parent": "settings.invite-role",
+  "recordedBy": "agent",
+  "review": {
+   "by": "conductor",
+   "date": "2026-10-03",
+   "decision": "accept",
+   "note": "same Assign Role step with the Admin radio selected and its permissions expanded (Send money, User management, +9 more); only the name (Test vs Riley) and scroll offset differ",
+   "reason": "below-threshold"
+  },
+  "similarity": 0.6988,
+  "source": "8ea6452169e209ff63b04ce5a0997c10ed973cad",
+  "status": "accepted"
+ },
+ "settings.role-created": {
+  "checked": "2026-10-02-1349",
+  "fingerprint": {
+   "controls": [],
+   "headings": [],
+   "path": "/settings/roles",
+   "structure": "status",
+   "top": {
+    "name": "Roles",
+    "role": "table"
+   }
+  },
+  "hop": [
+   {
+    "check": {
+     "name": "Ops / Payroll",
+     "role": "checkbox"
+    }
+   },
+   {
+    "click": {
+     "name": "Save New Role",
+     "role": "button"
+    }
+   }
+  ],
+  "mutates": true,
+  "parent": "settings.create-role-account-error",
+  "recordedBy": "agent",
+  "review": {
+   "by": "conductor",
+   "date": "2026-10-03",
+   "decision": "accept",
+   "note": "same Roles list with new custom role and toast 'New role created: Test Person' (capture typed 'AP Clerk', a non-fixture name); hop ticks Ops / Payroll then Save New Role as labeled; replay shows the Settings sidebar instead of the main nav, same Team / Roles page",
+   "reason": "below-threshold"
+  },
+  "similarity": 0.8228,
+  "source": "98459d1c3a409472d89a08e9c61bf826a91dc8cd",
+  "status": "accepted"
+ },
+ "settings.role-finance-lead": {
+  "checked": "2026-10-02-1349",
+  "fingerprint": {
+   "controls": [
+    "Accountant Can view all accounts and transactions, and manage books",
+    "Admin Full control including policies, accounts, and settings",
+    "Back",
+    "Close",
+    "Customize your experience",
+    "Employee Can be issued cards, but cannot view sensitive bank account info",
+    "Finance Lead Full non-admin access to accounts, payments, cards, and users",
+    "Finance Manager Manages bookkeeping, transaction coding, ACH processing, and ledger integrations",
+    "Money Mover Can initiate payments and transfers, and manage recipients on selected accounts",
+    "Next",
+    "Open account",
+    "Read Only Can view all accounts and transactions, and be issued cards",
+    "View all Employee details",
+    "View all Finance Lead details",
+    "Viewing as Admin",
+    "create a new role"
+   ],
+   "headings": [
+    "Assign Test to a role",
+    "Employee Can be issued cards, but cannot view sensitive bank account info",
+    "Permissions",
+    "Admin Full control including policies, accounts, and settings",
+    "Accountant Can view all accounts and transactions, and manage books",
+    "Finance Lead Full non-admin access to accounts, payments, cards, and users",
+    "Finance Manager Manages bookkeeping, transaction coding, ACH processing, and ledger integrations",
+    "Money Mover Can initiate payments and transfers, and manage recipients on selected accounts",
+    "Read Only Can view all accounts and transactions, and be issued cards"
+   ],
+   "path": "/settings/users/invite/individual/role",
+   "structure": "document",
+   "top": {
+    "name": "",
+    "role": "document"
+   }
+  },
+  "hop": [
+   {
+    "click": {
+     "name": "Finance Lead Full non-admin access to accounts, payments, cards, and users",
+     "role": "radio"
+    }
+   }
+  ],
+  "mutates": false,
+  "parent": "settings.invite-role",
+  "recordedBy": "agent",
+  "review": {
+   "by": "conductor",
+   "date": "2026-10-03",
+   "decision": "accept",
+   "note": "same Assign Role step with the Finance Lead radio selected and its permissions expanded (Send money, User management - anyone but admins, +6 more); only the name (Test vs Riley) and scroll offset differ",
+   "reason": "below-threshold"
+  },
+  "similarity": 0.6959,
+  "source": "523fef8429af1a067c93e31c14b1fdc91d413b1c",
+  "status": "accepted"
+ },
+ "settings.role-finance-manager": {
+  "checked": "2026-10-02-1349",
+  "fingerprint": {
+   "controls": [
+    "Accountant Can view all accounts and transactions, and manage books",
+    "Admin Full control including policies, accounts, and settings",
+    "Back",
+    "Close",
+    "Customize your experience",
+    "Employee Can be issued cards, but cannot view sensitive bank account info",
+    "Finance Lead Full non-admin access to accounts, payments, cards, and users",
+    "Finance Manager Manages bookkeeping, transaction coding, ACH processing, and ledger integrations",
+    "Money Mover Can initiate payments and transfers, and manage recipients on selected accounts",
+    "Next",
+    "Open account",
+    "Read Only Can view all accounts and transactions, and be issued cards",
+    "View all Employee details",
+    "View all Finance Manager details",
+    "Viewing as Admin",
+    "create a new role"
+   ],
+   "headings": [
+    "Assign Test to a role",
+    "Employee Can be issued cards, but cannot view sensitive bank account info",
+    "Permissions",
+    "Admin Full control including policies, accounts, and settings",
+    "Accountant Can view all accounts and transactions, and manage books",
+    "Finance Lead Full non-admin access to accounts, payments, cards, and users",
+    "Finance Manager Manages bookkeeping, transaction coding, ACH processing, and ledger integrations",
+    "Money Mover Can initiate payments and transfers, and manage recipients on selected accounts",
+    "Read Only Can view all accounts and transactions, and be issued cards"
+   ],
+   "path": "/settings/users/invite/individual/role",
+   "structure": "document",
+   "top": {
+    "name": "",
+    "role": "document"
+   }
+  },
+  "hop": [
+   {
+    "click": {
+     "name": "Finance Manager Manages bookkeeping, transaction coding, ACH processing, and ledger integrations",
+     "role": "radio"
+    }
+   }
+  ],
+  "mutates": false,
+  "parent": "settings.invite-role",
+  "recordedBy": "agent",
+  "review": {
+   "by": "conductor",
+   "date": "2026-10-03",
+   "decision": "accept",
+   "note": "same Assign Role step with Finance Manager radio selected and its permissions list (ACH authorizations, Accounting, docs); scrolled higher, which shows the heading and Employee/Admin rows",
+   "reason": "below-threshold"
+  },
+  "similarity": 0.671,
+  "source": "f69b69a4f54726e40082bfc25e496f9d69f5cfb3",
+  "status": "accepted"
+ },
+ "settings.role-money-mover": {
+  "checked": "2026-10-02-1349",
+  "fingerprint": {
+   "controls": [
+    "Accountant Can view all accounts and transactions, and manage books",
+    "Admin Full control including policies, accounts, and settings",
+    "Back",
+    "Close",
+    "Customize your experience",
+    "Employee Can be issued cards, but cannot view sensitive bank account info",
+    "Finance Lead Full non-admin access to accounts, payments, cards, and users",
+    "Finance Manager Manages bookkeeping, transaction coding, ACH processing, and ledger integrations",
+    "Money Mover Can initiate payments and transfers, and manage recipients on selected accounts",
+    "Next",
+    "Open account",
+    "Read Only Can view all accounts and transactions, and be issued cards",
+    "View all Employee details",
+    "View all Money Mover details",
+    "Viewing as Admin",
+    "create a new role"
+   ],
+   "headings": [
+    "Assign Test to a role",
+    "Employee Can be issued cards, but cannot view sensitive bank account info",
+    "Permissions",
+    "Admin Full control including policies, accounts, and settings",
+    "Accountant Can view all accounts and transactions, and manage books",
+    "Finance Lead Full non-admin access to accounts, payments, cards, and users",
+    "Finance Manager Manages bookkeeping, transaction coding, ACH processing, and ledger integrations",
+    "Money Mover Can initiate payments and transfers, and manage recipients on selected accounts",
+    "Read Only Can view all accounts and transactions, and be issued cards"
+   ],
+   "path": "/settings/users/invite/individual/role",
+   "structure": "document",
+   "top": {
+    "name": "",
+    "role": "document"
+   }
+  },
+  "hop": [
+   {
+    "click": {
+     "name": "Money Mover Can initiate payments and transfers, and manage recipients on selected accounts",
+     "role": "radio"
+    }
+   }
+  ],
+  "mutates": false,
+  "parent": "settings.invite-role",
+  "recordedBy": "agent",
+  "review": {
+   "by": "conductor",
+   "date": "2026-10-03",
+   "decision": "accept",
+   "note": "same Assign Role step with Money Mover selected and its permissions (Send money, Recipient management, Access 3 of 7 accounts, +1 more); only the scroll offset differs",
+   "reason": "below-threshold"
+  },
+  "similarity": 0.7977,
+  "source": "5c7d2c21aff04fab77a4da4f70cc657f1422dbf7",
+  "status": "accepted"
+ },
+ "settings.role-read-only": {
+  "checked": "2026-10-02-1349",
+  "fingerprint": {
+   "controls": [
+    "Accountant Can view all accounts and transactions, and manage books",
+    "Admin Full control including policies, accounts, and settings",
+    "Back",
+    "Close",
+    "Customize your experience",
+    "Employee Can be issued cards, but cannot view sensitive bank account info",
+    "Finance Lead Full non-admin access to accounts, payments, cards, and users",
+    "Finance Manager Manages bookkeeping, transaction coding, ACH processing, and ledger integrations",
+    "Money Mover Can initiate payments and transfers, and manage recipients on selected accounts",
+    "Next",
+    "Open account",
+    "Read Only Can view all accounts and transactions, and be issued cards",
+    "View all Employee details",
+    "View all Read Only details",
+    "Viewing as Admin",
+    "create a new role"
+   ],
+   "headings": [
+    "Assign Test to a role",
+    "Employee Can be issued cards, but cannot view sensitive bank account info",
+    "Permissions",
+    "Admin Full control including policies, accounts, and settings",
+    "Accountant Can view all accounts and transactions, and manage books",
+    "Finance Lead Full non-admin access to accounts, payments, cards, and users",
+    "Finance Manager Manages bookkeeping, transaction coding, ACH processing, and ledger integrations",
+    "Money Mover Can initiate payments and transfers, and manage recipients on selected accounts",
+    "Read Only Can view all accounts and transactions, and be issued cards"
+   ],
+   "path": "/settings/users/invite/individual/role",
+   "structure": "document",
+   "top": {
+    "name": "",
+    "role": "document"
+   }
+  },
+  "hop": [
+   {
+    "click": {
+     "name": "Read Only Can view all accounts and transactions, and be issued cards",
+     "role": "radio"
+    }
+   }
+  ],
+  "mutates": false,
+  "parent": "settings.invite-role",
+  "recordedBy": "agent",
+  "review": {
+   "by": "conductor",
+   "date": "2026-10-03",
+   "decision": "accept",
+   "note": "same Assign Role step with Read Only selected and its permissions (Download docs, Reimbursement view only, Access all accounts); only the scroll offset differs",
+   "reason": "below-threshold"
+  },
+  "similarity": 0.8453,
+  "source": "27e6bc0f8b150b2053bbb5c6882b5fda4f3739a2",
+  "status": "accepted"
+ },
+ "settings.roles": {
+  "checked": "2026-10-02-1349",
+  "fingerprint": {
+   "controls": [
+    "Account Security",
+    "Advisors <n>",
+    "Approval Rules",
+    "Categories",
+    "Company Profile",
+    "Controls",
+    "Create role",
+    "Customize your experience",
+    "Departments",
+    "Documents",
+    "Integrations",
+    "Mercury Demo Pro",
+    "Move money",
+    "Navigate to Settings",
+    "Notifications",
+    "Open account",
+    "Perks",
+    "Plan & Billing",
+    "Profile",
+    "Referrals",
+    "Search for anything",
+    "Security",
+    "Settings",
+    "Team",
+    "Toggle Private Mode",
+    "Tokens",
+    "Vault",
+    "Viewing as Admin",
+    "Webhooks",
+    "updates"
+   ],
+   "headings": [
+    "Roles"
+   ],
+   "path": "/settings/roles",
+   "structure": "document",
+   "top": {
+    "name": "",
+    "role": "document"
+   }
+  },
+  "hop": [],
+  "mutates": false,
+  "parent": "/settings/roles",
+  "recordedBy": "root",
+  "review": null,
+  "similarity": 0.9165,
+  "source": "97d170e1550eee4afc0af065b78cda302a97674c",
+  "status": "accepted"
+ },
+ "settings.run-check-in": {
+  "checked": "2026-10-02-1349",
+  "fingerprint": {
+   "controls": [],
+   "headings": [],
+   "path": "/settings/account-security",
+   "structure": "status",
+   "top": {
+    "name": "Suggested actions to reduce security risk",
+    "role": "table"
+   }
+  },
+  "hop": [
+   {
+    "click": {
+     "name": "Run check-in",
+     "role": "button"
+    }
+   }
+  ],
+  "mutates": true,
+  "parent": "settings.account-security",
+  "recordedBy": "draft",
+  "review": null,
+  "similarity": 0.9745,
+  "source": "6694d64cd94cb5dabcdb58284131e026aec7a4c5",
+  "status": "accepted"
+ },
+ "settings.security-activity-month": {
+  "checked": "2026-10-02-1349",
+  "fingerprint": {
+   "controls": [
+    "Go to previous year",
+    "Month"
+   ],
+   "headings": [],
+   "path": "/settings/account-security",
+   "structure": "dialog",
+   "top": {
+    "name": "",
+    "role": "generic"
+   }
+  },
+  "hop": [
+   {
+    "click": {
+     "name": "Filters",
+     "role": "button"
+    }
+   },
+   {
+    "wait": {
+     "locator": {
+      "name": "Month",
+      "role": "tab"
+     }
+    }
+   }
+  ],
+  "mutates": false,
+  "parent": "settings.account-security",
+  "recordedBy": "agent",
+  "review": null,
+  "similarity": 0.9905,
+  "source": "733bb26caac83d8125a2d3cc7939f5feb616c24a",
+  "status": "accepted"
+ },
+ "settings.security-suggestion-menu": {
+  "checked": "2026-10-02-1349",
+  "fingerprint": {
+   "controls": [
+    "Ignore issue",
+    "Mark as resolved"
+   ],
+   "headings": [],
+   "path": "/settings/account-security",
+   "structure": "menu",
+   "top": {
+    "name": "",
+    "role": "menu"
+   }
+  },
+  "hop": [
+   {
+    "click": {
+     "css": "button[aria-expanded]",
+     "within": {
+      "name": "Account is large enough to benefit from separation of duties<n>",
+      "role": "row"
+     }
+    }
+   },
+   {
+    "wait": {
+     "locator": {
+      "name": "Mark as resolved",
+      "role": "menuitem"
+     }
+    }
+   }
+  ],
+  "mutates": false,
+  "parent": "settings.account-security",
+  "recordedBy": "agent",
+  "review": null,
+  "similarity": 0.995,
+  "source": "89083e36d1e00a9c2951f7755487b0f14b6d24ef",
+  "status": "accepted"
+ },
+ "settings.share-documents": {
+  "checked": "2026-10-02-1349",
+  "fingerprint": {
+   "controls": [
+    "Back",
+    "Recipient emails",
+    "Share via email"
+   ],
+   "headings": [],
+   "path": "/settings/documents",
+   "structure": "dialog",
+   "top": {
+    "name": "",
+    "role": "dialog"
+   }
+  },
+  "hop": [
+   {
+    "click": {
+     "name": "Share documents",
+     "role": "button"
+    }
+   }
+  ],
+  "mutates": false,
+  "parent": "settings.documents-selected",
+  "recordedBy": "agent",
+  "review": null,
+  "similarity": 0.9961,
+  "source": "b461b7922a82a105a6f58b796e394d41fcf78d8d",
+  "status": "accepted"
+ },
+ "settings.share-documents-error": {
+  "checked": "2026-10-02-1349",
+  "fingerprint": {
+   "controls": [
+    "Back",
+    "Recipient emails",
+    "Share via email"
+   ],
+   "headings": [],
+   "path": "/settings/documents",
+   "structure": "dialog",
+   "top": {
+    "name": "",
+    "role": "dialog"
+   }
+  },
+  "hop": [
+   {
+    "click": {
+     "name": "Share via email",
+     "role": "button"
+    }
+   }
+  ],
+  "mutates": true,
+  "parent": "settings.share-documents",
+  "recordedBy": "agent",
+  "review": {
+   "by": "conductor",
+   "date": "2026-10-03",
+   "decision": "accept",
+   "note": "same Share documents validation banner 'Please enter one or more email addresses.' over an empty Recipient emails field, Sharing 2 documents (Credit, Treasury); only the month drifted (Aug to Sep 2026)",
+   "reason": "mutating"
+  },
+  "similarity": 0.9959,
+  "source": "d6ea12d0283b7c9138cc64ee0bdb7d423f416d3e",
+  "status": "accepted"
+ },
+ "settings.share-email-sent": {
+  "checked": "2026-10-02-1349",
+  "fingerprint": {
+   "controls": [
+    "Invite",
+    "Return to documents & data"
+   ],
+   "headings": [
+    "Email sent",
+    "All document links expire <n> days after they are sent"
+   ],
+   "path": "/settings/documents",
+   "structure": "dialog",
+   "top": {
+    "name": "",
+    "role": "dialog"
+   }
+  },
+  "hop": [
+   {
+    "click": {
+     "name": "Share via email",
+     "role": "button"
+    }
+   }
+  ],
+  "mutates": true,
+  "parent": "settings.share-recipient-suggest",
+  "recordedBy": "agent",
+  "review": {
+   "by": "conductor",
+   "date": "2026-10-03",
+   "decision": "accept",
+   "note": "same 'Email sent' confirmation with 2 shared documents and accountant invite upsell; hop clicks Share via email as labeled (fixture email, statement month drifted)",
+   "reason": "mutating"
+  },
+  "similarity": 0.9982,
+  "source": "94df2917d2db0a26e434038c6c11e33def0f975d",
+  "status": "accepted"
+ },
+ "settings.share-recipient-suggest": {
+  "checked": "2026-10-02-1349",
+  "fingerprint": {
+   "controls": [
+    "Back",
+    "Recipient emails",
+    "Remove Tag",
+    "Share via email",
+    "a<n>y-audit@example.invalid",
+    "aliyah@mcmahon.com",
+    "jason@green.com",
+    "jordi@mercury.com",
+    "mercury-utils-id-<n>-label"
+   ],
+   "headings": [],
+   "path": "/settings/documents",
+   "structure": "dialog",
+   "top": {
+    "name": "",
+    "role": "dialog"
+   }
+  },
+  "hop": [
+   {
+    "fill": {
+     "locator": {
+      "name": "Recipient emails",
+      "role": "combobox"
+     },
+     "value": "a11y-audit@example.invalid"
+    }
+   },
+   {
+    "press": "Enter"
+   }
+  ],
+  "mutates": true,
+  "parent": "settings.share-documents-error",
+  "recordedBy": "agent",
+  "review": {
+   "by": "conductor",
+   "date": "2026-10-03",
+   "decision": "accept",
+   "note": "same Share documents recipient listbox: typed email as removable tag, jason/aliyah/jordi suggestions, typed address checked, 'Please enter one or more email addresses' banner still shown (fixture email instead of accountant@example.com)",
+   "reason": "mutating"
+  },
+  "similarity": 0.9969,
+  "source": "5c45ea252addcc0b3364197d451abb2b184a9f50",
+  "status": "accepted"
+ },
+ "settings.sms-opted-in": {
+  "checked": "2026-10-02-1349",
+  "fingerprint": {
+   "controls": [],
+   "headings": [],
+   "path": "/settings/my-profile",
+   "structure": "status",
+   "top": {
+    "name": "",
+    "role": "generic"
+   }
+  },
+  "hop": [
+   {
+    "click": {
+     "name": "Opt In",
+     "role": "button"
+    }
+   },
+   {
+    "wait": {
+     "ms": 500
+    }
+   }
+  ],
+  "mutates": true,
+  "parent": "settings.my-profile-sms",
+  "recordedBy": "agent",
+  "review": {
+   "by": "conductor",
+   "date": "2026-10-03",
+   "decision": "accept",
+   "note": "re-checked after the layer-detection fixes of 2026-10-03 (fingerprint refreshed); same hop the conductor accepted earlier today, similarity 0.9993",
+   "reason": "mutating"
+  },
+  "similarity": 0.9993,
+  "source": "e686be175edf13dbf70b78c59215ec265ae0bc8d",
+  "status": "accepted"
+ },
+ "settings.team": {
+  "checked": "2026-10-02-1349",
+  "fingerprint": {
+   "controls": [
+    "Account Security",
+    "Add email",
+    "Add filter",
+    "Advisors <n>",
+    "All",
+    "Approval Rules",
+    "Categories",
+    "Company Profile",
+    "Controls",
+    "Customize your experience",
+    "Departments",
+    "Documents",
+    "Enter an email",
+    "Integrations",
+    "Invite",
+    "Learn about roles",
+    "Mercury Demo Pro",
+    "Move money",
+    "Navigate to Settings",
+    "Needs review",
+    "Next",
+    "Notifications",
+    "Open account",
+    "Perks",
+    "Plan & Billing",
+    "Profile",
+    "Referrals",
+    "Roles",
+    "Search for anything",
+    "Security",
+    "Settings",
+    "Team",
+    "Toggle Private Mode",
+    "Tokens",
+    "Vault",
+    "Viewing as Admin",
+    "Webhooks",
+    "updates"
+   ],
+   "headings": [
+    "Team",
+    "Invite your team to spend, without bank access"
+   ],
+   "path": "/settings/users",
+   "structure": "document",
+   "top": {
+    "name": "",
+    "role": "document"
+   }
+  },
+  "hop": [],
+  "mutates": false,
+  "parent": "/settings/users",
+  "recordedBy": "root",
+  "review": null,
+  "similarity": 0.9991,
+  "source": "97d170e1550eee4afc0af065b78cda302a97674c",
+  "status": "accepted"
+ },
+ "settings.third-party-connections": {
+  "checked": "2026-10-02-1349",
+  "fingerprint": {
+   "controls": [
+    "Account Security",
+    "Accounting",
+    "Advisors <n>",
+    "All",
+    "Approval Rules",
+    "Categories",
+    "Company Profile",
+    "Connect",
+    "Controls",
+    "Customize your experience",
+    "Departments",
+    "Disabled",
+    "Documents",
+    "Integrations",
+    "Mercury Demo Pro",
+    "Move money",
+    "Navigate to Settings",
+    "Notifications",
+    "Open account",
+    "Other",
+    "Perks",
+    "Plan & Billing",
+    "Profile",
+    "Reconnect",
+    "Referrals",
+    "Search for anything",
+    "Security",
+    "Settings",
+    "Team",
+    "Team Management",
+    "Toggle Private Mode",
+    "Tokens",
+    "Vault",
+    "Viewing as Admin",
+    "Webhooks",
+    "updates"
+   ],
+   "headings": [
+    "Integrations"
+   ],
+   "path": "/settings/integrations",
+   "structure": "document",
+   "top": {
+    "name": "",
+    "role": "document"
+   }
+  },
+  "hop": [
+   {
+    "click": {
+     "text": "Third party connections<n>"
+    }
+   },
+   {
+    "wait": {
+     "locator": {
+      "text": "AMAZON Store"
+     }
+    }
+   }
+  ],
+  "mutates": false,
+  "parent": "settings.integrations",
+  "recordedBy": "agent",
+  "review": null,
+  "similarity": 0.9996,
+  "source": "f56dfa659ce51db3b3a56f8e7c959a9ab1d42771",
+  "status": "accepted"
+ },
+ "settings.token-created": {
+  "checked": "2026-10-02-1349",
+  "fingerprint": {
+   "controls": [
+    "Bn<n>HD<n>jDezx<n>t<n>bSXAAgNRF<n>vfc<n>o<n>l+<n>V<n>ScpgKT<n>",
+    "Close"
+   ],
+   "headings": [
+    "Here is your API token"
+   ],
+   "path": "/settings/tokens",
+   "structure": "dialog",
+   "top": {
+    "name": "",
+    "role": "dialog"
+   }
+  },
+  "hop": [
+   {
+    "fill": {
+     "locator": {
+      "label": "IP whitelist"
+     },
+     "value": "192.0.2.1"
+    }
+   },
+   {
+    "click": {
+     "name": "Create token",
+     "role": "button"
+    }
+   }
+  ],
+  "mutates": true,
+  "parent": "settings.token-ip-required",
+  "recordedBy": "agent",
+  "review": {
+   "by": "conductor",
+   "date": "2026-10-03",
+   "decision": "accept",
+   "note": "same 'Here is your API token' dialog with the same token string, the 'copy and save' line and an X close. The hop fills IP whitelist with 192.0.2.1 and clicks Create token, as labeled.",
+   "reason": "mutating"
+  },
+  "similarity": 0.9991,
+  "source": "c21d14d299833d1bfe97170f41527f1523841083",
+  "status": "accepted"
+ },
+ "settings.token-custom-scopes": {
+  "checked": "2026-10-02-1349",
+  "fingerprint": {
+   "controls": [
+    "Cancel",
+    "Create token",
+    "IP whitelist",
+    "Nickname",
+    "Open combobox menu",
+    "Permissions",
+    "Scopes"
+   ],
+   "headings": [
+    "Create an API token"
+   ],
+   "path": "/settings/tokens",
+   "structure": "dialog",
+   "top": {
+    "name": "",
+    "role": "dialog"
+   }
+  },
+  "hop": [
+   {
+    "click": {
+     "name": "Custom Scopes",
+     "role": "option"
+    }
+   }
+  ],
+  "mutates": true,
+  "parent": "settings.token-permissions",
+  "recordedBy": "agent",
+  "review": {
+   "by": "conductor",
+   "date": "2026-10-03",
+   "decision": "accept",
+   "note": "same Create an API token dialog with Permissions set to Custom Scopes, the Scopes combobox ('Select routes for custom token') and the IP whitelist helper; the hop clicks the Custom Scopes option and saves nothing; the nickname is a fixture value (A11y Test vs Map audit token)",
+   "reason": "mutating"
+  },
+  "similarity": 0.9955,
+  "source": "4771d5d2f1143c0d561945ba69b405014ab9fc7c",
+  "status": "accepted"
+ },
+ "settings.token-ip-required": {
+  "checked": "2026-10-02-1349",
+  "fingerprint": {
+   "controls": [
+    "Cancel",
+    "Create token",
+    "IP whitelist",
+    "Nickname",
+    "Open combobox menu",
+    "Permissions",
+    "Scopes"
+   ],
+   "headings": [
+    "Create an API token"
+   ],
+   "path": "/settings/tokens",
+   "structure": "dialog",
+   "top": {
+    "name": "",
+    "role": "dialog"
+   }
+  },
+  "hop": [
+   {
+    "click": {
+     "name": "Send Money *",
+     "role": "option"
+    }
+   },
+   {
+    "click": {
+     "name": "Create token",
+     "role": "button",
+     "within": {
+      "role": "dialog"
+     }
+    }
+   }
+  ],
+  "mutates": true,
+  "parent": "settings.token-scopes-list",
+  "recordedBy": "agent",
+  "review": {
+   "by": "conductor",
+   "date": "2026-10-03",
+   "decision": "accept",
+   "note": "same Create an API token dialog: Custom Scopes, Send Money * selected, empty IP whitelist flagged 'Enter a comma-separated list of IPv4/6 addresses or CIDR ranges.'; nickname is the fixture 'A11y Test'",
+   "reason": "mutating"
+  },
+  "similarity": 0.9968,
+  "source": "e0d56c8161fea5928f8c5a7974cee4b9929b8f77",
+  "status": "accepted"
+ },
+ "settings.token-menu": {
+  "checked": "2026-10-02-1349",
+  "fingerprint": {
+   "controls": [
+    "Delete",
+    "Edit"
+   ],
+   "headings": [],
+   "path": "/settings/tokens",
+   "structure": "menu",
+   "top": {
+    "name": "",
+    "role": "menu"
+   }
+  },
+  "hop": [
+   {
+    "click": {
+     "css": "[class*=\"_kebab_\"] button",
+     "index": 0
+    }
+   }
+  ],
+  "mutates": false,
+  "parent": "settings.tokens",
+  "recordedBy": "agent",
+  "review": null,
+  "similarity": 0.9913,
+  "source": "c59e4896f38ee9993e347ce37463e7e87d2636d1",
+  "status": "accepted"
+ },
+ "settings.token-permissions": {
+  "checked": "2026-10-02-1349",
+  "fingerprint": {
+   "controls": [
+    "Custom Scopes",
+    "Read Only",
+    "Read and Write"
+   ],
+   "headings": [],
+   "path": "/settings/tokens",
+   "structure": "listbox",
+   "top": {
+    "name": "",
+    "role": "listbox"
+   }
+  },
+  "hop": [
+   {
+    "fill": {
+     "locator": {
+      "name": "Nickname",
+      "role": "textbox"
+     },
+     "value": "A11y Test"
+    }
+   },
+   {
+    "click": {
+     "name": "Permissions",
+     "role": "combobox"
+    }
+   },
+   {
+    "wait": {
+     "locator": {
+      "name": "Read Only",
+      "role": "option"
+     }
+    }
+   }
+  ],
+  "mutates": true,
+  "parent": "settings.create-token-errors",
+  "recordedBy": "agent",
+  "review": {
+   "by": "conductor",
+   "date": "2026-10-03",
+   "decision": "accept",
+   "note": "same Create an API token modal with Permissions dropdown open (Custom Scopes, Read and Write, Read Only); nickname 'A11y Test' instead of 'Map audit token'",
+   "reason": "mutating"
+  },
+  "similarity": 0.9972,
+  "source": "3c6fa421a83d7d3a3c9ff38da2c9ca0d9f585f60",
+  "status": "accepted"
+ },
+ "settings.token-scopes-list": {
+  "checked": "2026-10-02-1349",
+  "fingerprint": {
+   "controls": [
+    "Create Cards *",
+    "Create Recipient Invites *",
+    "Create Recipients *",
+    "Create Webhooks",
+    "Edit Recipient Invites *",
+    "Edit Recipients *",
+    "Fetch Account Statements Experimental",
+    "Fetch Cards",
+    "Fetch Categories",
+    "Fetch Credit Accounts",
+    "Fetch Depository Accounts",
+    "Fetch Invoices",
+    "Fetch Organization",
+    "Fetch Recipient Invites",
+    "Fetch Recipients",
+    "Fetch Send Money Requests",
+    "Fetch Transactions",
+    "Fetch Treasury Accounts",
+    "Fetch Treasury Statements",
+    "Fetch Treasury Transactions",
+    "Fetch Webhooks",
+    "Manage Cards *",
+    "Modify Invoices *",
+    "Reveal Card PAN *",
+    "Send Money *",
+    "Send Money with Approval",
+    "Update Transactions *",
+    "Update Webhooks"
+   ],
+   "headings": [],
+   "path": "/settings/tokens",
+   "structure": "listbox",
+   "top": {
+    "name": "",
+    "role": "listbox"
+   }
+  },
+  "hop": [
+   {
+    "click": {
+     "name": "Scopes",
+     "role": "combobox"
+    }
+   }
+  ],
+  "mutates": true,
+  "parent": "settings.token-custom-scopes",
+  "recordedBy": "agent",
+  "review": {
+   "by": "conductor",
+   "date": "2026-10-03",
+   "decision": "accept",
+   "note": "same upward-opening Custom scopes list (Fetch Account Statements 'Experimental', Accounts, Cards, Categories, Invoices) spilling out of the Create token modal; the hop only clicks the Scopes combobox the label names",
+   "reason": "mutating"
+  },
+  "similarity": 0.9992,
+  "source": "c774e5d281386594fdf2a75c23efa1b1e428b5e1",
+  "status": "accepted"
+ },
+ "settings.tokens": {
+  "checked": "2026-10-02-1349",
+  "fingerprint": {
+   "controls": [
+    "API Documentation",
+    "Account Security",
+    "Advisors <n>",
+    "Approval Rules",
+    "Categories",
+    "Company Profile",
+    "Controls",
+    "Customize your experience",
+    "Departments",
+    "Documents",
+    "Integrations",
+    "Mercury Demo Pro",
+    "Move money",
+    "Navigate to Settings",
+    "Notifications",
+    "Open account",
+    "Perks",
+    "Plan & Billing",
+    "Profile",
+    "Referrals",
+    "Search for anything",
+    "Security",
+    "Settings",
+    "Team",
+    "Toggle Private Mode",
+    "Tokens",
+    "Vault",
+    "Viewing as Admin",
+    "Webhooks",
+    "updates"
+   ],
+   "headings": [
+    "API Tokens"
+   ],
+   "path": "/settings/tokens",
+   "structure": "document",
+   "top": {
+    "name": "",
+    "role": "document"
+   }
+  },
+  "hop": [],
+  "mutates": false,
+  "parent": "/settings/tokens",
+  "recordedBy": "root",
+  "review": null,
+  "similarity": 0.9996,
+  "source": "97d170e1550eee4afc0af065b78cda302a97674c",
+  "status": "accepted"
+ },
+ "settings.tokens-new-row": {
+  "checked": "2026-10-02-1349",
+  "fingerprint": {
+   "controls": [
+    "API Documentation",
+    "Account Security",
+    "Advisors <n>",
+    "Approval Rules",
+    "Categories",
+    "Company Profile",
+    "Controls",
+    "Customize your experience",
+    "Departments",
+    "Documents",
+    "Integrations",
+    "Mercury Demo Pro",
+    "Move money",
+    "Navigate to Settings",
+    "Notifications",
+    "Open account",
+    "Perks",
+    "Plan & Billing",
+    "Profile",
+    "Referrals",
+    "Search for anything",
+    "Security",
+    "Settings",
+    "Team",
+    "Toggle Private Mode",
+    "Tokens",
+    "Vault",
+    "Viewing as Admin",
+    "Webhooks",
+    "updates"
+   ],
+   "headings": [
+    "API Tokens"
+   ],
+   "path": "/settings/tokens",
+   "structure": "document",
+   "top": {
+    "name": "",
+    "role": "document"
+   }
+  },
+  "hop": [
+   {
+    "click": {
+     "name": "Close",
+     "role": "button",
+     "within": {
+      "role": "dialog"
+     }
+    }
+   }
+  ],
+  "mutates": true,
+  "parent": "settings.token-created",
+  "recordedBy": "agent",
+  "review": {
+   "by": "conductor",
+   "date": "2026-10-03",
+   "decision": "accept",
+   "note": "same API Tokens list with the new Custom token row (fixture nickname 'A11y Test', 'Today' instead of 'Tomorrow', 1 IP whitelisted); the hop clicks the dialog's Close as the label says",
+   "reason": "mutating"
+  },
+  "similarity": 0.9852,
+  "source": "e93fd6391148dbd584e459cd5f5b9855d03f2f1a",
+  "status": "accepted"
+ },
+ "settings.transfers-email-on": {
+  "checked": "2026-10-02-1349",
+  "fingerprint": {
+   "controls": [
+    "Account Security",
+    "Account balances Alerts you when low-balance thresholds are reached Email Push",
+    "Accounting Notifies you when transactions fail to sync Email",
+    "Advisors <n>",
+    "Approval Rules",
+    "Bill pay Notifies you when a bill is being processed or ready for review Email",
+    "Categories",
+    "Check payments Notifies you of any checks that haven't been cashed for <n> days Email Push",
+    "Collaboration Tracks transaction comments and replies Email",
+    "Company Profile",
+    "Controls",
+    "Credit account Notifies you of any balance or limit changes, upcoming payments, and autopay warnings Email Push",
+    "Customize your experience",
+    "Departments",
+    "Documents",
+    "Edit Cash flow notifications",
+    "Edit Suspicious activity notifications",
+    "Edit Tasks and approvals notifications",
+    "Integrations",
+    "Invoicing Tracks the status of payments Email Push",
+    "Mercury Demo Pro",
+    "Mercury subscription Notifies you of renewals, insufficient balances, or potential disruptions to your account Email",
+    "Move money",
+    "Navigate to Settings",
+    "Notifications",
+    "Open account",
+    "Perks",
+    "Plan & Billing",
+    "Profile",
+    "Referrals",
+    "Reimbursements Tracks the status of reimbursements Email Push",
+    "Search for anything",
+    "Security",
+    "Settings",
+    "Team",
+    "Toggle Private Mode",
+    "Tokens",
+    "Transfers Notifies you when auto transfer rules are created or changed Email",
+    "User management Notifies you when new people are added Email Push",
+    "Vault",
+    "Viewing as Admin",
+    "Webhooks",
+    "Your spending Tracks expenses, reimbursements, card limits, and transactions needing more info Email Push",
+    "updates"
+   ],
+   "headings": [
+    "Notifications",
+    "Important Updates",
+    "General Updates"
+   ],
+   "path": "/settings/notifications",
+   "structure": "document",
+   "top": {
+    "name": "",
+    "role": "document"
+   }
+  },
+  "hop": [
+   {
+    "check": {
+     "name": "Updates to auto transfer rules",
+     "role": "switch"
+    }
+   },
+   {
+    "click": {
+     "name": "Done",
+     "role": "button"
+    }
+   }
+  ],
+  "mutates": false,
+  "parent": "settings.transfers-notifications",
+  "recordedBy": "agent",
+  "review": null,
+  "similarity": 0.9994,
+  "source": "50df1d574267b9f2bc6e0a3e84ec506cbe4310cb",
+  "status": "accepted"
+ },
+ "settings.transfers-notifications": {
+  "checked": "2026-10-02-1349",
+  "fingerprint": {
+   "controls": [
+    "Done",
+    "Updates to auto transfer rules"
+   ],
+   "headings": [
+    "Email"
+   ],
+   "path": "/settings/notifications/transfers",
+   "structure": "dialog",
+   "top": {
+    "name": "",
+    "role": "dialog"
+   }
+  },
+  "hop": [
+   {
+    "click": {
+     "name": "Transfers Notifies you when auto transfer rules are created or changed Off",
+     "role": "button"
+    }
+   }
+  ],
+  "mutates": false,
+  "parent": "settings.notifications-general",
+  "recordedBy": "agent",
+  "review": null,
+  "similarity": 0.9992,
+  "source": "28d94bbfd2db804649d2c3b17a75fc8239fe6baa",
+  "status": "accepted"
+ },
+ "settings.unsubscribe-confirm": {
+  "checked": "2026-10-02-1349",
+  "fingerprint": {
+   "controls": [
+    "Nevermind",
+    "Yes, cancel"
+   ],
+   "headings": [],
+   "path": "/settings/plan-and-billing",
+   "structure": "dialog",
+   "top": {
+    "name": "",
+    "role": "dialog"
+   }
+  },
+  "hop": [
+   {
+    "click": {
+     "name": "Potentially dangerous action: Unsubscribe",
+     "role": "menuitem"
+    }
+   }
+  ],
+  "mutates": false,
+  "parent": "settings.plan-manage-menu",
+  "recordedBy": "draft",
+  "review": null,
+  "similarity": 0.998,
+  "source": "d60c64bb7611f55435dcadf2dcf7fd202b35725b",
+  "status": "accepted"
+ },
+ "settings.user-detail": {
+  "checked": "2026-10-02-1349",
+  "fingerprint": {
+   "controls": [
+    "Assign Budget",
+    "Card ending with: <n>",
+    "Close detail panel",
+    "Contractor Expenses Frozen Card ending with: <n>",
+    "Edit",
+    "Finance",
+    "Office Card Card ending with: <n>",
+    "Remove",
+    "Share link",
+    "Software Subscriptions <amount> monthly",
+    "Team Lunch <amount> weekly",
+    "View all Money Mover details"
+   ],
+   "headings": [
+    "Alice Chen"
+   ],
+   "path": "/settings/users/<id>",
+   "structure": "dialog",
+   "top": {
+    "name": "",
+    "role": "generic"
+   }
+  },
+  "hop": [
+   {
+    "click": {
+     "text": "Alice Chen alice@demo.mercury.comMoney MoverSoftware EngineerFinanceActive"
+    }
+   }
+  ],
+  "mutates": false,
+  "parent": "settings.team",
+  "recordedBy": "agent",
+  "review": {
+   "by": "conductor",
+   "date": "2026-10-03",
+   "decision": "accept",
+   "note": "same Alice Chen detail panel (Money Mover, Assign Budget/Edit/Remove, Software Engineer, Finance, Money Mover permissions) open over Team; the hop clicks Alice's row as the label says; the left rail keeps the Settings nav, as on the parent, where the capture shows Banking nav. That is a chrome difference, not a different screen or layer",
+   "reason": "sample"
+  },
+  "similarity": 0.9108,
+  "source": "cd5f071b9d5038744911caa31eab735205b5f6a7",
+  "status": "accepted"
+ },
+ "settings.vault": {
+  "checked": "2026-10-02-1349",
+  "fingerprint": {
+   "controls": [
+    "Account Security",
+    "Advisors <n>",
+    "Approval Rules",
+    "Categories",
+    "Choice Financial Group",
+    "Column N.A.",
+    "Company Profile",
+    "Controls",
+    "Customize your experience",
+    "Departments",
+    "Documents",
+    "Integrations",
+    "Learn More",
+    "Mercury Advisory, LLC",
+    "Mercury Demo Pro",
+    "Move money",
+    "Navigate to Settings",
+    "Notifications",
+    "Open account",
+    "Perks",
+    "Plan & Billing",
+    "Profile",
+    "Referrals",
+    "Search for anything",
+    "Security",
+    "Settings",
+    "Team",
+    "Toggle Private Mode",
+    "Tokens",
+    "Vault",
+    "Viewing as Admin",
+    "Webhooks",
+    "here",
+    "mercury.com/treasury",
+    "not an FDIC-insured bank",
+    "updates"
+   ],
+   "headings": [
+    "Mercury Vault",
+    "<amount>"
+   ],
+   "path": "/settings/vault",
+   "structure": "document",
+   "top": {
+    "name": "",
+    "role": "document"
+   }
+  },
+  "hop": [],
+  "mutates": false,
+  "parent": "/settings/vault",
+  "recordedBy": "root",
+  "review": null,
+  "similarity": 0.9985,
+  "source": "97d170e1550eee4afc0af065b78cda302a97674c",
+  "status": "accepted"
+ },
+ "settings.verify-identity": {
+  "checked": "2026-10-02-1349",
+  "fingerprint": {
+   "controls": [],
+   "headings": [],
+   "path": "/settings/security",
+   "structure": "dialog",
+   "top": {
+    "name": "",
+    "role": "dialog"
+   }
+  },
+  "hop": [
+   {
+    "click": {
+     "name": "+ Add another verification method",
+     "role": "button"
+    }
+   }
+  ],
+  "mutates": false,
+  "parent": "settings.personal-security-lower",
+  "recordedBy": "agent",
+  "review": {
+   "by": "conductor",
+   "date": "2026-10-03",
+   "decision": "accept",
+   "note": "same 'Verify your identity first' modal (backup code field ABCD-EFGH-IJKL-MNOP, Cancel/Submit, Use passkey / Use 2FA code instead, Backup code guide, Unable to log in?); only the blurred background scroll differs",
+   "reason": "below-threshold"
+  },
+  "similarity": 0.8624,
+  "source": "59004e4275cee0ce1ed9fb9b5be823f717a24065",
+  "status": "accepted"
+ },
+ "settings.waiting-security-key": {
+  "checked": "2026-10-02-1349",
+  "fingerprint": {
+   "controls": [],
+   "headings": [],
+   "path": "/settings/security",
+   "structure": "dialog",
+   "top": {
+    "name": "",
+    "role": "dialog"
+   }
+  },
+  "hop": [
+   {
+    "fill": {
+     "locator": {
+      "name": "backup code",
+      "role": "textbox"
+     },
+     "value": "000000"
+    }
+   },
+   {
+    "click": {
+     "name": "Submit",
+     "role": "button"
+    }
+   }
+  ],
+  "mutates": true,
+  "parent": "settings.verify-identity",
+  "recordedBy": "agent",
+  "review": {
+   "by": "conductor",
+   "date": "2026-10-03",
+   "decision": "reject",
+   "note": "different state: the replay still shows the 'Verify your identity first' dialog with an empty backup-code field and the error 'Please complete this field', not the 'Waiting for security key' spinner. The fill of 000000 does not take in this field. The capture is transient and has 0 descendants",
+   "reason": "below-threshold"
+  },
+  "similarity": 0.712,
+  "source": "9d8da47354c88b508c0482cd246b71da350ea8df",
+  "status": "rejected"
+ },
+ "settings.webhook-deliveries": {
+  "checked": "2026-10-02-1349",
+  "fingerprint": {
+   "controls": [
+    "Account Security",
+    "Advisors <n>",
+    "Approval Rules",
+    "Categories",
+    "Company Profile",
+    "Controls",
+    "Create webhook",
+    "Customize your experience",
+    "Departments",
+    "Documents",
+    "Endpoint",
+    "Integrations",
+    "Mercury Demo Pro",
+    "Move money",
+    "Navigate to Settings",
+    "Notifications",
+    "Open account",
+    "Perks",
+    "Plan & Billing",
+    "Profile",
+    "Referrals",
+    "Search for anything",
+    "Security",
+    "Settings",
+    "Team",
+    "Toggle Private Mode",
+    "Tokens",
+    "Vault",
+    "Viewing as Admin",
+    "Webhooks",
+    "updates",
+    "webhooks API documentation"
+   ],
+   "headings": [
+    "Webhooks"
+   ],
+   "path": "/settings/webhooks",
+   "structure": "document",
+   "top": {
+    "name": "",
+    "role": "document"
+   }
+  },
+  "hop": [],
+  "mutates": false,
+  "parent": "/settings/webhooks?endpoint=whep_01&tab=deliveries",
+  "recordedBy": "root",
+  "review": null,
+  "similarity": 0.9995,
+  "source": "97d170e1550eee4afc0af065b78cda302a97674c",
+  "status": "accepted"
+ },
+ "settings.webhook-detail": {
+  "checked": "2026-10-02-1349",
+  "fingerprint": {
+   "controls": [
+    "Close detail panel",
+    "Delete",
+    "Edit",
+    "View deliveries"
+   ],
+   "headings": [],
+   "path": "/settings/webhooks",
+   "structure": "dialog",
+   "top": {
+    "name": "",
+    "role": "complementary"
+   }
+  },
+  "hop": [
+   {
+    "click": {
+     "name": "https://api.acme.com/webhooks/mercury",
+     "role": "cell"
+    }
+   }
+  ],
+  "mutates": false,
+  "parent": "settings.webhooks",
+  "recordedBy": "agent",
+  "review": null,
+  "similarity": 0.9994,
+  "source": "a7ce6ed6369a245224d8bc678281ff9bb95429b7",
+  "status": "accepted"
+ },
+ "settings.webhook-event-types": {
+  "checked": "2026-10-02-1349",
+  "fingerprint": {
+   "controls": [
+    "checkingAccount.balance.updated",
+    "creditAccount.balance.updated",
+    "investmentAccount.balance.updated",
+    "savingsAccount.balance.updated",
+    "transaction.created",
+    "transaction.updated",
+    "treasuryAccount.balance.updated"
+   ],
+   "headings": [],
+   "path": "/settings/webhooks",
+   "structure": "listbox",
+   "top": {
+    "name": "",
+    "role": "listbox"
+   }
+  },
+  "hop": [
+   {
+    "click": {
+     "name": "Event types",
+     "role": "combobox"
+    }
+   },
+   {
+    "wait": {
+     "locator": {
+      "role": "listbox"
+     }
+    }
+   }
+  ],
+  "mutates": true,
+  "parent": "settings.webhook-verified",
+  "recordedBy": "agent",
+  "review": {
+   "by": "conductor",
+   "date": "2026-10-03",
+   "decision": "accept",
+   "note": "same open Event types listbox (Transactions, Account balances checkboxes) in the verified Create a webhook endpoint dialog; endpoint URL is the fixture https://example.invalid/a11y-audit",
+   "reason": "mutating"
+  },
+  "similarity": 0.9966,
+  "source": "61ccb078291a3a067d9533e14da597b24a10b39c",
+  "status": "accepted"
+ },
+ "settings.webhook-secret-copied": {
+  "checked": "2026-10-02-1349",
+  "fingerprint": {
+   "controls": [],
+   "headings": [],
+   "path": "/settings/webhooks",
+   "structure": "dialog",
+   "top": {
+    "name": "",
+    "role": "generic"
+   }
+  },
+  "hop": [
+   {
+    "click": {
+     "name": "whsec_mock_dGhpcyBpcyBhIG1vY2sgc2VjcmV0",
+     "role": "button"
+    }
+   },
+   {
+    "wait": {
+     "ms": 500
+    }
+   }
+  ],
+  "mutates": true,
+  "parent": "settings.webhook-signing-secret",
+  "recordedBy": "agent",
+  "review": {
+   "by": "conductor",
+   "date": "2026-10-03",
+   "decision": "accept",
+   "note": "same Signing secret modal with the 'Copied' tooltip over the whsec_mock secret; the hop clicks the secret button; only the capture's focus outline on the block is missing",
+   "reason": "mutating"
+  },
+  "similarity": 0.9884,
+  "source": "ad258a3948d195ae83f89d90d6f56d819ef5b742",
+  "status": "accepted"
+ },
+ "settings.webhook-signing-secret": {
+  "checked": "2026-10-02-1349",
+  "fingerprint": {
+   "controls": [
+    "Close",
+    "whsec_mock_dGhpcyBpcyBhIG<n>vY<n>sgc<n>VjcmV<n>"
+   ],
+   "headings": [
+    "Signing secret"
+   ],
+   "path": "/settings/webhooks",
+   "structure": "dialog",
+   "top": {
+    "name": "",
+    "role": "dialog"
+   }
+  },
+  "hop": [
+   {
+    "click": {
+     "name": "Create endpoint",
+     "role": "button"
+    }
+   },
+   {
+    "wait": {
+     "locator": {
+      "text": "Signing secret"
+     }
+    }
+   }
+  ],
+  "mutates": true,
+  "parent": "settings.create-webhook-filled",
+  "recordedBy": "agent",
+  "review": {
+   "by": "conductor",
+   "date": "2026-10-03",
+   "decision": "accept",
+   "note": "same Signing secret modal (whsec_mock_dGhpcyBpcyBhIG1vY2sgc2VjcmV0, 'copy and save' line, X) over Webhooks; hop submits Create endpoint as labeled",
+   "reason": "mutating"
+  },
+  "similarity": 0.9995,
+  "source": "cae6c23e91b6d88b890b3be2e64fc427e28d369f",
+  "status": "accepted"
+ },
+ "settings.webhook-verified": {
+  "checked": "2026-10-02-1349",
+  "fingerprint": {
+   "controls": [
+    "Cancel",
+    "Create endpoint",
+    "Endpoint URL",
+    "Event types",
+    "Open combobox menu"
+   ],
+   "headings": [
+    "Create a webhook endpoint"
+   ],
+   "path": "/settings/webhooks",
+   "structure": "dialog",
+   "top": {
+    "name": "",
+    "role": "dialog"
+   }
+  },
+  "hop": [
+   {
+    "fill": {
+     "locator": {
+      "label": "Endpoint URL"
+     },
+     "value": "https://example.invalid/a11y-audit"
+    }
+   },
+   {
+    "click": {
+     "name": "Verify endpoint",
+     "role": "button"
+    }
+   },
+   {
+    "wait": {
+     "locator": {
+      "text": "Verified"
+     }
+    }
+   }
+  ],
+  "mutates": true,
+  "parent": "settings.create-webhook-http-error",
+  "recordedBy": "agent",
+  "review": {
+   "by": "conductor",
+   "date": "2026-10-03",
+   "decision": "accept",
+   "note": "same Create a webhook endpoint dialog with a green 'Verified' check and Create endpoint enabled; the typed https URL is a fixture value (example.invalid instead of hooks.demo-startup.com)",
+   "reason": "mutating"
+  },
+  "similarity": 0.9967,
+  "source": "699512bf1c5e1a1d1deadc36e553651b4359df1d",
+  "status": "accepted"
+ },
+ "settings.webhooks": {
+  "checked": "2026-10-02-1349",
+  "fingerprint": {
+   "controls": [
+    "Account Security",
+    "Advisors <n>",
+    "Approval Rules",
+    "Categories",
+    "Company Profile",
+    "Controls",
+    "Create webhook",
+    "Customize your experience",
+    "Departments",
+    "Documents",
+    "Integrations",
+    "Mercury Demo Pro",
+    "Move money",
+    "Navigate to Settings",
+    "Notifications",
+    "Open account",
+    "Perks",
+    "Plan & Billing",
+    "Profile",
+    "Referrals",
+    "Search for anything",
+    "Security",
+    "Settings",
+    "Team",
+    "Toggle Private Mode",
+    "Tokens",
+    "Vault",
+    "Viewing as Admin",
+    "Webhooks",
+    "updates",
+    "webhooks API documentation"
+   ],
+   "headings": [
+    "Webhooks"
+   ],
+   "path": "/settings/webhooks",
+   "structure": "document",
+   "top": {
+    "name": "",
+    "role": "document"
+   }
+  },
+  "hop": [],
+  "mutates": false,
+  "parent": "/settings/webhooks",
+  "recordedBy": "root",
+  "review": null,
+  "similarity": 0.9995,
+  "source": "97d170e1550eee4afc0af065b78cda302a97674c",
+  "status": "accepted"
+ }
+}

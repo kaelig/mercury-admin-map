@@ -1,0 +1,79 @@
+{
+ "batch": "record-099",
+ "reach": {
+  "baseUrl": "https://demo.mercury.com",
+  "data": "data",
+  "map": "build/map.json",
+  "run": "2026-10-02-1349",
+  "workspace": "a11y"
+ },
+ "run": "2026-10-02-1349",
+ "states": [
+  {
+   "area": "home",
+   "draft": "not drafted: its parent had no accepted recipe when the drafter ran",
+   "image": "screens/home/83-command-card-proposal.png",
+   "kind": "form-state",
+   "labels": [
+    "Click 'Issue new card'",
+    "Enter 500 and submit",
+    "Choose 'Monthly'",
+    "Enter 'Software only' and submit"
+   ],
+   "mutates": true,
+   "note": "Answers are echoed in a summary card, then the 'Issue debit card' proposal: the card has no name, so 'Jane Black' shows as both title and cardholder; $500.00 per month, Virtual Debit, with Make edits / Cancel / Confirm.",
+   "parent": "home.command-restrictions",
+   "state": "home.command-card-proposal",
+   "title": "Command \u2014 Issue debit card proposal"
+  },
+  {
+   "area": "home",
+   "draft": "not drafted: its parent had no accepted recipe when the drafter ran",
+   "image": "screens/home/21-accounts-add-success.png",
+   "kind": "toast",
+   "labels": [
+    "Click '+' on Accounts widget",
+    "Click Create account with no type",
+    "Select Savings, type nickname",
+    "Click Create account"
+   ],
+   "mutates": true,
+   "note": "Toast 'Your new account is ready to use. View Account'; account count badge goes from +2 to +3.",
+   "parent": "home.create-account-filled",
+   "state": "home.create-account-success",
+   "title": "Account created toast"
+  },
+  {
+   "area": "home",
+   "draft": "not drafted: its parent had no accepted recipe when the drafter ran; the conductor rejected the previous recipe: extra layer: the replay lands on Settings > Team with the Bruce Collins invite panel (Remove Invite / Resend Invite) open; the capture shows the plain Team list with Job title, Department and Status columns; a previous recorder failed: review: below-threshold. Clicking Confirm changes replays to Settings > Team with the Settings sidebar and an open invite detail panel; the capture shows the Team list under the main app nav. Reaching it would need actions no label records (closing the detail panel, navigating through the main nav).",
+   "image": "screens/home/46-task-invite-confirmed.png",
+   "kind": "confirmation",
+   "labels": [
+    "Click Confirm changes"
+   ],
+   "mutates": true,
+   "note": "Confirm changes returns to Settings > Team, listing members with role badges.",
+   "parent": "home.task-invite-review",
+   "state": "home.task-invite-confirmed",
+   "title": "Invite approved, Team list"
+  },
+  {
+   "area": "home",
+   "draft": "not drafted: its parent had no accepted recipe when the drafter ran",
+   "image": "screens/home/64-tx-row-drawer.png",
+   "kind": "drawer",
+   "labels": [
+    "Scroll to the Transactions widget",
+    "Click 'Operating expenses'",
+    "Click Amount column header",
+    "Click 'High to low'",
+    "Click a transaction row"
+   ],
+   "mutates": false,
+   "note": "Clicking a Home transaction row opens Transactions with the 'Operating expenses' saved view and the ACH Pull detail drawer (category, GL code, department, comments).",
+   "parent": "home.tx-sorted",
+   "state": "home.tx-row-drawer",
+   "title": "Transaction detail from Home"
+  }
+ ]
+}

@@ -1,0 +1,183 @@
+{
+ "area": "cards",
+ "batch": "verify-444",
+ "findings": [
+  {
+   "attachments": [],
+   "attempt": 1,
+   "basis": "candidate",
+   "criteria": [
+    "2.4.4"
+   ],
+   "evidence": [
+    {
+     "evidence": {
+      "description": "",
+      "name": "$1,500.00",
+      "role": "link",
+      "states": {},
+      "template": "link \"<amount>\""
+     },
+     "occurrence": {
+      "ancestors": [
+       [
+        "_text-emphasized_12t49_1"
+       ],
+       [
+        "_tooltipAnchor_18bac_4"
+       ],
+       [],
+       [
+        "_headerSectionText_re3p4_40"
+       ],
+       [
+        "_headerSection_re3p4_16"
+       ],
+       [
+        "_cardRoot_ihrj0_28"
+       ],
+       [
+        "_large_kwlx6_9",
+        "_noHover_3n0se_28",
+        "_shadow_3n0se_25",
+        "_raisedBackground_3n0se_45",
+        "_cardDetailsBox_1f9jt_47"
+       ],
+       [
+        "_cardDetailsCardWrapper_1f9jt_13",
+        "_visible_1f9jt_26"
+       ]
+      ],
+      "classes": [
+       "_link_ual8v_4",
+       "_underlineNever_ual8v_7"
+      ],
+      "data": {
+       "data-discover": "true"
+      },
+      "heading": "",
+      "landmark": {
+       "name": "",
+       "role": "main"
+      },
+      "layer": "top",
+      "name": "$1,500.00",
+      "rect": [
+       1203,
+       128,
+       71,
+       24
+      ],
+      "role": "link",
+      "tag": "a",
+      "xpath": "/html/body/div[1]/main[1]/div[1]/div[1]/div[4]/div[1]/div[2]/div[6]/div[2]/div[1]/div[1]/div[1]/div[1]/div[1]/div[2]/span[1]/a[1]"
+     },
+     "state": "cards.detail-virtual"
+    },
+    {
+     "evidence": {
+      "description": "",
+      "name": "$1,500.00",
+      "role": "link",
+      "states": {},
+      "template": "link \"<amount>\""
+     },
+     "occurrence": {
+      "ancestors": [
+       [
+        "_text-emphasized_12t49_1"
+       ],
+       [
+        "_tooltipAnchor_18bac_4"
+       ],
+       [],
+       [
+        "_headerSectionText_re3p4_40"
+       ],
+       [
+        "_headerSection_re3p4_16",
+        "_open_re3p4_53"
+       ],
+       [
+        "_cardRoot_ihrj0_28"
+       ],
+       [
+        "_large_kwlx6_9",
+        "_noHover_3n0se_28",
+        "_shadow_3n0se_25",
+        "_raisedBackground_3n0se_45",
+        "_cardDetailsBox_1f9jt_47"
+       ],
+       [
+        "_cardDetailsCardWrapper_1f9jt_13",
+        "_visible_1f9jt_26"
+       ]
+      ],
+      "classes": [
+       "_link_ual8v_4",
+       "_underlineNever_ual8v_7"
+      ],
+      "data": {
+       "data-discover": "true"
+      },
+      "heading": "Cards",
+      "landmark": {
+       "name": "",
+       "role": "main"
+      },
+      "layer": "document",
+      "name": "$1,500.00",
+      "rect": [
+       1203,
+       128,
+       71,
+       24
+      ],
+      "role": "link",
+      "tag": "a",
+      "xpath": "/html/body/div[1]/main[1]/div[1]/div[1]/div[4]/div[1]/div[2]/div[6]/div[2]/div[1]/div[1]/div[1]/div[1]/div[1]/div[2]/span[1]/a[1]"
+     },
+     "state": "cards.spend-details"
+    }
+   ],
+   "evidenceHash": "c609b815d1c1c4efa8720f51680a91d6bc71e355bca5e1790daaf3305967a69c",
+   "facts": {
+    "announced": "link \"<amount>\"",
+    "axeSummary": "",
+    "criterion": "2.4.4",
+    "criterionName": "Link Purpose (In Context)",
+    "element": "link \"<amount>\"",
+    "rule": "announced-as",
+    "screen": "Card detail: virtual card with limit"
+   },
+   "family": "name",
+   "guidance": "High for an unnamed form control or the sole primary action.",
+   "issueId": null,
+   "key": "name:announced-as:752923d29c23",
+   "measured": false,
+   "primary": "cards.detail-virtual",
+   "proposals": [],
+   "rule": "announced-as",
+   "screens": 7,
+   "severityDefault": "medium",
+   "source": "scanner",
+   "states": [
+    "cards.detail-virtual",
+    "cards.spend-details"
+   ],
+   "summary": "announced-as: announced as link \"<amount>\".",
+   "title": "Missing or unclear name: link \"<amount>\""
+  }
+ ],
+ "primaries": [
+  "cards.detail-virtual"
+ ],
+ "reach": {
+  "baseUrl": "https://demo.mercury.com",
+  "data": "data",
+  "map": "build/map.json",
+  "run": "2026-10-03-1525",
+  "workspace": "a11y"
+ },
+ "run": "2026-10-03-1525"
+}

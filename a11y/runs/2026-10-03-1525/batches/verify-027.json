@@ -1,0 +1,276 @@
+{
+ "area": "accounts",
+ "batch": "verify-027",
+ "findings": [
+  {
+   "attachments": [],
+   "attempt": 1,
+   "basis": "violation",
+   "criteria": [
+    "4.1.2"
+   ],
+   "evidence": [
+    {
+     "evidence": {
+      "aria-errormessage": [
+       "amount-mercury-utils-id-34-errormessage"
+      ],
+      "failureSummary": "Fix all of the following:\n  aria-errormessage value `amount-mercury-utils-id-34-errormessage` must use a technique to announce the message (e.g., aria-live, aria-describedby, role=alert, etc.)"
+     },
+     "occurrence": {
+      "ancestors": [
+       [
+        "_inputBox_q7hf7_93",
+        "_hasValue_q7hf7_171",
+        "_error_q7hf7_41"
+       ],
+       [
+        "_inputBoxWrapper_q7hf7_93"
+       ],
+       [
+        "_textInputWrapper_q7hf7_24"
+       ],
+       [
+        "_provideDSTextInput_q7hf7_6",
+        "_addWrapperMargin_q7hf7_19"
+       ],
+       [],
+       [
+        "_container_1e8hk_6",
+        "_setPaymentStep_1e8hk_24"
+       ],
+       [],
+       [
+        "_large_kwlx6_9",
+        "_noHover_3n0se_28",
+        "_shadow_3n0se_25",
+        "_raisedBackground_3n0se_45",
+        "_card_lo4oy_4",
+        "_defaultPadding_lo4oy_27",
+        "_small_lo4oy_11"
+       ]
+      ],
+      "classes": [
+       "_input_q7hf7_93"
+      ],
+      "data": {},
+      "heading": "",
+      "landmark": {
+       "name": "",
+       "role": "form"
+      },
+      "layer": "top",
+      "name": "Amount",
+      "rect": [
+       564,
+       392,
+       327,
+       24
+      ],
+      "role": "textbox",
+      "tag": "input",
+      "xpath": "/html/body/div[11]/div[1]/div[1]/div[1]/form[1]/div[1]/div[1]/div[1]/div[1]/div[1]/div[1]/input[1]"
+     },
+     "state": "accounts.pay-credit-error"
+    }
+   ],
+   "evidenceHash": "0600c5332bf9c3380d760f4482f100a96bec36396a97e3b9b0339000cdb6edb4",
+   "facts": {
+    "announced": "textbox \"Amount\" [invalid=true, errormessage=Must be <= <amount>]",
+    "axeSummary": "aria-errormessage value `amount-mercury-utils-id-34-errormessage` must use a technique to announce the message (e.g., aria-live, aria-describedby, role=alert,…",
+    "criterion": "4.1.2",
+    "criterionName": "Name, Role, Value",
+    "element": "textbox \"Amount\"",
+    "rule": "aria-valid-attr-value",
+    "screen": "Credit payment — amount too high"
+   },
+   "family": "role-state",
+   "guidance": "Low for optional ARIA or an invalid autocomplete token; high when aria-hidden hides the whole page.",
+   "issueId": null,
+   "key": "role-state:aria-valid-attr-value:746f0a72bf0e",
+   "measured": false,
+   "primary": "accounts.pay-credit-error",
+   "proposals": [],
+   "rule": "aria-valid-attr-value",
+   "screens": 1,
+   "severityDefault": "medium",
+   "source": "scanner",
+   "states": [
+    "accounts.pay-credit-error"
+   ],
+   "summary": "aria-valid-attr-value: announced as textbox \"Amount\" [invalid=true, errormessage=Must be <= <amount>]. aria-errormessage value `amount-mercury-utils-id-34-errormessage` must use a technique to announce the message (e.g., aria-live, aria-describedby, role=alert,…",
+   "title": "Wrong role or state: textbox \"Amount\""
+  },
+  {
+   "attachments": [],
+   "attempt": 1,
+   "basis": "failure",
+   "criteria": [
+    "4.1.3"
+   ],
+   "evidence": [
+    {
+     "evidence": {
+      "focus": {
+       "ancestors": [
+        [
+         "_accountSelectorWrapper_dd0l7_6"
+        ],
+        [],
+        [],
+        [
+         "_container_1e8hk_6",
+         "_setPaymentStep_1e8hk_24"
+        ],
+        [],
+        [
+         "_large_kwlx6_9",
+         "_noHover_3n0se_28",
+         "_shadow_3n0se_25",
+         "_raisedBackground_3n0se_45",
+         "_card_lo4oy_4",
+         "_defaultPadding_lo4oy_27",
+         "_small_lo4oy_11"
+        ],
+        [
+         "ReactModal__Content",
+         "ReactModal__Content--after-open",
+         "_modal_lo4oy_73"
+        ],
+        [
+         "ReactModal__Overlay",
+         "ReactModal__Overlay--after-open",
+         "_overlay_lo4oy_89",
+         "_backgroundColor_lo4oy_103"
+        ]
+       ],
+       "classes": [
+        "_selectButton_dd0l7_11",
+        "_selectButtonWrapper_dd0l7_11",
+        "session-replay-mask"
+       ],
+       "data": {
+        "data-focus-visible": "true"
+       },
+       "heading": "",
+       "landmark": {
+        "name": "",
+        "role": "form"
+       },
+       "layer": "top",
+       "name": "Make payment from",
+       "rect": [
+        536,
+        516,
+        368,
+        68
+       ],
+       "role": "combobox",
+       "tag": "button",
+       "xpath": "/html/body/div[11]/div[1]/div[1]/div[1]/form[1]/div[1]/div[2]/div[1]/div[1]/button[1]"
+      },
+      "focused": false,
+      "message": "Review",
+      "region": null
+     },
+     "occurrence": {
+      "ancestors": [
+       [
+        "_buttonContainer_1e8hk_73"
+       ],
+       [
+        "_container_1e8hk_6",
+        "_setPaymentStep_1e8hk_24"
+       ],
+       [],
+       [
+        "_large_kwlx6_9",
+        "_noHover_3n0se_28",
+        "_shadow_3n0se_25",
+        "_raisedBackground_3n0se_45",
+        "_card_lo4oy_4",
+        "_defaultPadding_lo4oy_27",
+        "_small_lo4oy_11"
+       ],
+       [
+        "ReactModal__Content",
+        "ReactModal__Content--after-open",
+        "_modal_lo4oy_73"
+       ],
+       [
+        "ReactModal__Overlay",
+        "ReactModal__Overlay--after-open",
+        "_overlay_lo4oy_89",
+        "_backgroundColor_lo4oy_103"
+       ],
+       [
+        "ReactModalPortal"
+       ]
+      ],
+      "classes": [
+       "_button_r6b2u_20",
+       "_large_r6b2u_88",
+       "_primary_r6b2u_104",
+       "_appearDisabled_r6b2u_16",
+       "_confirmButton_1e8hk_78",
+       "session-replay-unmask"
+      ],
+      "data": {},
+      "heading": "",
+      "landmark": {
+       "name": "",
+       "role": "form"
+      },
+      "layer": "top",
+      "name": "Review",
+      "rect": [
+       778,
+       608,
+       126,
+       40
+      ],
+      "role": "button",
+      "tag": "button",
+      "xpath": "/html/body/div[11]/div[1]/div[1]/div[1]/form[1]/div[1]/div[3]/button[2]"
+     },
+     "state": "accounts.pay-credit-error"
+    }
+   ],
+   "evidenceHash": "b24d7c707eef43dd660232ffeb8083870a51ce1e91271cb8825c2b62cbf267aa",
+   "facts": {
+    "criterion": "4.1.3",
+    "criterionName": "Status Messages",
+    "focus": "combobox \"Make payment from\"",
+    "message": "\"Review\"",
+    "screen": "Credit payment — amount too high"
+   },
+   "family": "status-message",
+   "guidance": "High when it is the only confirmation of a money movement.",
+   "issueId": null,
+   "key": "status-message:status-not-announced:343a7122ae73",
+   "measured": false,
+   "primary": "accounts.pay-credit-error",
+   "proposals": [],
+   "rule": "status-not-announced",
+   "screens": 1,
+   "severityDefault": "medium",
+   "source": "scanner",
+   "states": [
+    "accounts.pay-credit-error"
+   ],
+   "summary": "\"Review\" appeared outside any live region, alert or status role that existed before it, and focus stayed on the combobox \"Make payment from\".",
+   "title": "Status message not announced: \"Review\""
+  }
+ ],
+ "primaries": [
+  "accounts.pay-credit-error"
+ ],
+ "reach": {
+  "baseUrl": "https://demo.mercury.com",
+  "data": "data",
+  "map": "build/map.json",
+  "run": "2026-10-03-1525",
+  "workspace": "a11y"
+ },
+ "run": "2026-10-03-1525"
+}

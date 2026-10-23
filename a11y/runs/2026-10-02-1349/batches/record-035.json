@@ -1,0 +1,233 @@
+{
+ "batch": "record-035",
+ "reach": {
+  "baseUrl": "https://demo.mercury.com",
+  "data": "data",
+  "map": "build/map.json",
+  "run": "2026-10-02-1349",
+  "workspace": "a11y"
+ },
+ "run": "2026-10-02-1349",
+ "states": [
+  {
+   "area": "transactions",
+   "draft": "not drafted: its parent had no accepted recipe when the drafter ran; the conductor rejected the previous recipe: different row and panel: a Request or Invoice Payment panel for NASA with the first-visit tip over it; the capture is a failed Real-Time Payment with a Failure reason",
+   "image": "screens/transactions/48-detail-failed-rtp.png",
+   "kind": "drawer",
+   "labels": [
+    "Click a Failed row"
+   ],
+   "mutates": false,
+   "note": "Real-Time Payment panel for a failed transfer: struck-through amount, red \"Failed\" timestamp and a Failure reason block.",
+   "parent": "transactions.index",
+   "state": "transactions.detail-failed",
+   "title": "Failed payment detail"
+  },
+  {
+   "area": "transactions",
+   "draft": "nothing on transactions.index matches {\"click\":{\"name\":\"an Intl. Wire\"}}",
+   "image": "screens/transactions/43-detail-intl-wire.png",
+   "kind": "drawer",
+   "labels": [
+    "Click an Intl. Wire row"
+   ],
+   "mutates": false,
+   "note": "Intl. Wire panel: \u2212$1,010.00 with a Converted to 1,372.30 CAD step (rate and $10 fee) and a copyable tracking link.",
+   "parent": "transactions.index",
+   "state": "transactions.detail-intl-wire",
+   "title": "International wire detail"
+  },
+  {
+   "area": "transactions",
+   "draft": "nothing on transactions.index matches {\"click\":{\"name\":\"a pending check deposit\"}}",
+   "image": "screens/transactions/91-detail-pending-check-deposit.png",
+   "kind": "drawer",
+   "labels": [
+    "Click a pending check deposit row"
+   ],
+   "mutates": false,
+   "note": "Check Deposit panel for a pending $1,000.00 deposit into AP: timeline, front/back check images, Category and GL Code (404 - Inactive GL Code warning).",
+   "parent": "transactions.index",
+   "state": "transactions.detail-pending-deposit",
+   "title": "Pending check deposit detail"
+  },
+  {
+   "area": "transactions",
+   "draft": "cannot parse \"Enter At least 1,000 and No more than 100\"",
+   "image": "screens/transactions/08-filter-amount-invalid-range.png",
+   "kind": "validation-error",
+   "labels": [
+    "Click Saved views",
+    "Choose Monthly money out",
+    "Click Filters (3)",
+    "Click Amount tab",
+    "Enter At least 1,000 and No more than 100"
+   ],
+   "mutates": false,
+   "note": "At least $1,000 with No more than $100 turns both labels red and shows the tooltip \"Should be greater than 'At least' amount.\"",
+   "parent": "transactions.filter-amount",
+   "state": "transactions.filter-amount-invalid",
+   "title": "Amount range validation"
+  },
+  {
+   "area": "transactions",
+   "draft": "cannot parse \"Set Amount to a value with no matches\"",
+   "image": "screens/transactions/90-filter-no-results.png",
+   "kind": "empty-state",
+   "labels": [
+    "Set Amount to a value with no matches"
+   ],
+   "mutates": false,
+   "note": "A Specific amount of $12,345.67 matches nothing: totals drop to $0.00 and the table shows \"No transactions matching those filters. Try adjusting filters or reset.\" under faded placeholder rows.",
+   "parent": "transactions.index",
+   "state": "transactions.filter-no-results",
+   "title": "No matching transactions"
+  },
+  {
+   "area": "transactions",
+   "draft": "nothing on transactions.index matches {\"click\":{\"name\":\"Show graphs chevron\"}}",
+   "image": "screens/transactions/28-graphs-shown.png",
+   "kind": "page",
+   "labels": [
+    "Click Show graphs chevron"
+   ],
+   "mutates": false,
+   "note": "Summary strip expanded into a cumulative money in/out line chart and a bar chart with a grouping dropdown (Category in this capture), with month-over-month comparison.",
+   "parent": "transactions.index",
+   "state": "transactions.graphs-shown",
+   "title": "Graphs expanded"
+  },
+  {
+   "area": "transactions",
+   "draft": "not drafted: its parent had no accepted recipe when the drafter ran; the conductor rejected the previous recipe: different screen: the replay shows the idle Export button; the capture is the transient loading pill",
+   "image": "screens/transactions/88-insights-export-in-progress.png",
+   "kind": "form-state",
+   "labels": [
+    "Click Export"
+   ],
+   "mutates": false,
+   "note": "Clicking Export turns the header button into a loading pill with three dots; the download then finishes with no toast or confirmation.",
+   "parent": "transactions.insights",
+   "state": "transactions.insights-exporting",
+   "title": "Insights export in progress"
+  },
+  {
+   "area": "transactions",
+   "draft": "cannot parse \"Scroll down\"",
+   "image": "screens/transactions/67-insights-money-in-breakdown.png",
+   "kind": "page",
+   "labels": [
+    "Scroll down"
+   ],
+   "mutates": false,
+   "note": "Money in summary (Transactions 545, Invoices 14/19, Credit Cashback, Treasury earnings) next to Money in by Source.",
+   "parent": "transactions.insights-money-in",
+   "state": "transactions.insights-money-in-summary",
+   "title": "Money in summary"
+  },
+  {
+   "area": "transactions",
+   "draft": "cannot parse \"Scroll down\"",
+   "image": "screens/transactions/65-insights-spending-summary.png",
+   "kind": "page",
+   "labels": [
+    "Scroll down"
+   ],
+   "mutates": false,
+   "note": "Spending summary card (Transactions 564, Cards used 18, Fees paid) next to Money out by Recipient.",
+   "parent": "transactions.insights-spending",
+   "state": "transactions.insights-spending-summary",
+   "title": "Spending summary"
+  },
+  {
+   "area": "transactions",
+   "draft": "cannot parse \"Hover an empty month on the timeline\"",
+   "image": "screens/transactions/83-insights-chart-tooltip.png",
+   "kind": "popover",
+   "labels": [
+    "Hover an empty month on the timeline"
+   ],
+   "mutates": false,
+   "note": "Hovering a month on the timeline scrubber that has no transactions shows a \"No data available\" tooltip.",
+   "parent": "transactions.insights",
+   "state": "transactions.insights-timeline-no-data",
+   "title": "Timeline: no data tooltip"
+  },
+  {
+   "area": "transactions",
+   "draft": "cannot parse \"type a term with no match\"",
+   "image": "screens/transactions/19-keyword-no-matches.png",
+   "kind": "empty-state",
+   "labels": [
+    "Open Keyword and type a term with no match"
+   ],
+   "mutates": false,
+   "note": "Keyword popover with \"Amazon\": \"No matches in last 500 transactions.\" plus a Filter for any matching link.",
+   "parent": "transactions.index",
+   "state": "transactions.keyword-no-matches",
+   "title": "Keyword search: no matches"
+  },
+  {
+   "area": "transactions",
+   "draft": "nothing on transactions.saved-views-menu matches {\"click\":{\"name\":\"pencil on a custom view\"}}",
+   "image": "screens/transactions/97-rename-view-modal.png",
+   "kind": "modal",
+   "labels": [
+    "Click Saved views",
+    "Click pencil on a custom view"
+   ],
+   "mutates": false,
+   "note": "Pencil icon on a saved view opens \"Rename View\" with a New saved view name field (current name as placeholder) and a disabled Save.",
+   "parent": "transactions.saved-views-menu",
+   "state": "transactions.rename-view-modal",
+   "title": "Rename view modal"
+  },
+  {
+   "area": "transactions",
+   "draft": "nothing on transactions.filter-amount matches {\"click\":{\"name\":\"Save\",\"role\":\"button\"}}",
+   "image": "screens/transactions/16-save-view-menu.png",
+   "kind": "menu",
+   "labels": [
+    "Click Saved views",
+    "Choose Monthly money out",
+    "Click Filters (3)",
+    "Click Amount tab",
+    "Open Save menu"
+   ],
+   "mutates": true,
+   "note": "Save split button opened on an edited saved view, offering Create New View.",
+   "parent": "transactions.filter-amount",
+   "state": "transactions.save-view-menu",
+   "title": "Save view split menu"
+  },
+  {
+   "area": "transactions",
+   "draft": "nothing on transactions.index matches {\"click\":{\"name\":\"Sort icon\"}}",
+   "image": "screens/transactions/26-sort-menu.png",
+   "kind": "menu",
+   "labels": [
+    "Click Sort icon"
+   ],
+   "mutates": false,
+   "note": "Sort transactions by popover with field (Date) and order (New to old) dropdowns.",
+   "parent": "transactions.index",
+   "state": "transactions.sort-menu",
+   "title": "Sort menu"
+  },
+  {
+   "area": "transactions",
+   "draft": "the conductor rejected the previous recipe: different screen: the replay shows the loaded table; the capture is the transient loading skeleton",
+   "image": "screens/transactions/21-table-loading.png",
+   "kind": "form-state",
+   "labels": [
+    "Click Saved views",
+    "Choose Operating expenses"
+   ],
+   "mutates": false,
+   "note": "Picking the Operating expenses saved view: the toolbar switches to the saved-view pill with Filters (5), Reset and Export filtered while the table shows skeleton rows and the Money out total animates in.",
+   "parent": "transactions.saved-views-menu",
+   "state": "transactions.table-loading",
+   "title": "Table loading skeleton"
+  }
+ ]
+}

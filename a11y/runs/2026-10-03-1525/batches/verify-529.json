@@ -1,0 +1,278 @@
+{
+ "area": "settings",
+ "batch": "verify-529",
+ "findings": [
+  {
+   "attachments": [],
+   "attempt": 1,
+   "basis": "candidate",
+   "criteria": [
+    "4.1.2"
+   ],
+   "evidence": [
+    {
+     "evidence": {
+      "description": "Can view all accounts and transactions, and manage books",
+      "name": "Accountant Can view all accounts and transactions, and manage books",
+      "role": "radio",
+      "states": {
+       "checked": true
+      },
+      "template": "radio \"Accountant Can view all accounts and transactions, and manage books\" [checked=true] (Can view all accounts and transactions, and manage books)"
+     },
+     "occurrence": {
+      "ancestors": [
+       [
+        "_radioButtonWrapper_ial95_4"
+       ],
+       [],
+       [
+        "_accordionItemHeader_1q1xu_16",
+        "_accordionHeader_bnhk7_47"
+       ],
+       [
+        "_bodyDefault_qaod7_40"
+       ],
+       [
+        "_accordionWrapper_1q1xu_3",
+        "_accordionBorder_1q1xu_7",
+        "_accordionWrapper_bnhk7_1"
+       ],
+       [
+        "_radioGroup_phe2n_23",
+        "_radioGroup_9dnjl_1",
+        "_columnLayout_phe2n_28"
+       ],
+       [],
+       [
+        "_contentArea_1xvys_1",
+        "_contentLayout_1xvys_23"
+       ]
+      ],
+      "classes": [
+       "_radioButton_ial95_4"
+      ],
+      "data": {
+       "data-active-item": "true"
+      },
+      "heading": "Permissions",
+      "landmark": {
+       "name": "",
+       "role": "form"
+      },
+      "layer": "document",
+      "name": "Accountant Can view all accounts and transactions, and manage books",
+      "rect": [
+       523,
+       456,
+       18,
+       18
+      ],
+      "role": "radio",
+      "tag": "input",
+      "xpath": "/html/body/div[1]/main[1]/div[1]/div[2]/div[2]/div[3]/form[1]/section[1]/div[2]/fieldset[1]/div[3]/h2[1]/button[1]/div[1]/label[1]/input[1]"
+     },
+     "state": "settings.role-accountant"
+    }
+   ],
+   "evidenceHash": "ae6d0771bad4c3f2398ad96cc609941c942acf5b1c2959a091ff723b05ff770f",
+   "facts": {
+    "announced": "radio \"Accountant Can view all accounts and transactions, and manage books\" [ch…",
+    "axeSummary": "",
+    "criterion": "4.1.2",
+    "criterionName": "Name, Role, Value",
+    "element": "radio \"Accountant Can view all accounts and tran…\"",
+    "rule": "announced-as",
+    "screen": "Assign Role — Accountant"
+   },
+   "family": "role-state",
+   "guidance": "Low for optional ARIA or an invalid autocomplete token; high when aria-hidden hides the whole page.",
+   "issueId": null,
+   "key": "role-state:announced-as:698c86bcb504",
+   "measured": false,
+   "primary": "settings.role-accountant",
+   "proposals": [],
+   "rule": "announced-as",
+   "screens": 1,
+   "severityDefault": "medium",
+   "source": "scanner",
+   "states": [
+    "settings.role-accountant"
+   ],
+   "summary": "announced-as: announced as radio \"Accountant Can view all accounts and transactions, and manage books\" [ch….",
+   "title": "Wrong role or state: radio \"Accountant Can view all accounts and tran…\""
+  },
+  {
+   "attachments": [],
+   "attempt": 1,
+   "basis": "candidate",
+   "criteria": [
+    "4.1.2"
+   ],
+   "evidence": [
+    {
+     "evidence": {
+      "description": "Can be issued cards, but cannot view sensitive bank account info",
+      "name": "Employee Can be issued cards, but cannot view sensitive bank account info",
+      "role": "radio",
+      "states": {
+       "checked": false
+      },
+      "template": "radio \"Employee Can be issued cards, but cannot view sensitive bank account info\" [checked=false] (Can be issued cards, but cannot view sensitive bank account info)"
+     },
+     "occurrence": {
+      "ancestors": [
+       [
+        "_radioButtonWrapper_ial95_4"
+       ],
+       [],
+       [
+        "_accordionItemHeader_1q1xu_16",
+        "_accordionHeader_bnhk7_47"
+       ],
+       [
+        "_bodyDefault_qaod7_40"
+       ],
+       [
+        "_accordionWrapper_1q1xu_3",
+        "_accordionBorder_1q1xu_7",
+        "_accordionWrapper_bnhk7_1"
+       ],
+       [
+        "_radioGroup_phe2n_23",
+        "_radioGroup_9dnjl_1",
+        "_columnLayout_phe2n_28"
+       ],
+       [],
+       [
+        "_contentArea_1xvys_1",
+        "_contentLayout_1xvys_23"
+       ]
+      ],
+      "classes": [
+       "_radioButton_ial95_4"
+      ],
+      "data": {},
+      "heading": "Assign Test to a role",
+      "landmark": {
+       "name": "",
+       "role": "form"
+      },
+      "layer": "document",
+      "name": "Employee Can be issued cards, but cannot view sensitive bank account info",
+      "rect": [
+       523,
+       300,
+       18,
+       18
+      ],
+      "role": "radio",
+      "tag": "input",
+      "xpath": "/html/body/div[1]/main[1]/div[1]/div[2]/div[2]/div[3]/form[1]/section[1]/div[2]/fieldset[1]/div[1]/h2[1]/button[1]/div[1]/label[1]/input[1]"
+     },
+     "state": "settings.role-accountant"
+    },
+    {
+     "evidence": {
+      "description": "Can be issued cards, but cannot view sensitive bank account info",
+      "name": "Employee Can be issued cards, but cannot view sensitive bank account info",
+      "role": "radio",
+      "states": {
+       "checked": false
+      },
+      "template": "radio \"Employee Can be issued cards, but cannot view sensitive bank account info\" [checked=false] (Can be issued cards, but cannot view sensitive bank account info)"
+     },
+     "occurrence": {
+      "ancestors": [
+       [
+        "_radioButtonWrapper_ial95_4"
+       ],
+       [],
+       [
+        "_accordionItemHeader_1q1xu_16",
+        "_accordionHeader_bnhk7_47"
+       ],
+       [
+        "_bodyDefault_qaod7_40"
+       ],
+       [
+        "_accordionWrapper_1q1xu_3",
+        "_accordionBorder_1q1xu_7",
+        "_accordionWrapper_bnhk7_1"
+       ],
+       [
+        "_radioGroup_phe2n_23",
+        "_radioGroup_9dnjl_1",
+        "_columnLayout_phe2n_28"
+       ],
+       [],
+       [
+        "_contentArea_1xvys_1",
+        "_contentLayout_1xvys_23"
+       ]
+      ],
+      "classes": [
+       "_radioButton_ial95_4"
+      ],
+      "data": {},
+      "heading": "Assign Test to a role",
+      "landmark": {
+       "name": "",
+       "role": "form"
+      },
+      "layer": "document",
+      "name": "Employee Can be issued cards, but cannot view sensitive bank account info",
+      "rect": [
+       523,
+       300,
+       18,
+       18
+      ],
+      "role": "radio",
+      "tag": "input",
+      "xpath": "/html/body/div[1]/main[1]/div[1]/div[2]/div[2]/div[3]/form[1]/section[1]/div[2]/fieldset[1]/div[1]/h2[1]/button[1]/div[1]/label[1]/input[1]"
+     },
+     "state": "settings.role-admin"
+    }
+   ],
+   "evidenceHash": "5093d2599a6ff120f89968f4a0dfe63649e182335d1cc710c4f83577064d2b68",
+   "facts": {
+    "announced": "radio \"Employee Can be issued cards, but cannot view sensitive bank account inf…",
+    "axeSummary": "",
+    "criterion": "4.1.2",
+    "criterionName": "Name, Role, Value",
+    "element": "radio \"Employee Can be issued cards, but cannot…\"",
+    "rule": "announced-as",
+    "screen": "Assign Role — Accountant"
+   },
+   "family": "role-state",
+   "guidance": "Low for optional ARIA or an invalid autocomplete token; high when aria-hidden hides the whole page.",
+   "issueId": null,
+   "key": "role-state:announced-as:e85c93507213",
+   "measured": false,
+   "primary": "settings.role-accountant",
+   "proposals": [],
+   "rule": "announced-as",
+   "screens": 6,
+   "severityDefault": "medium",
+   "source": "scanner",
+   "states": [
+    "settings.role-accountant",
+    "settings.role-admin"
+   ],
+   "summary": "announced-as: announced as radio \"Employee Can be issued cards, but cannot view sensitive bank account inf….",
+   "title": "Wrong role or state: radio \"Employee Can be issued cards, but cannot…\""
+  }
+ ],
+ "primaries": [
+  "settings.role-accountant"
+ ],
+ "reach": {
+  "baseUrl": "https://demo.mercury.com",
+  "data": "data",
+  "map": "build/map.json",
+  "run": "2026-10-03-1525",
+  "workspace": "a11y"
+ },
+ "run": "2026-10-03-1525"
+}

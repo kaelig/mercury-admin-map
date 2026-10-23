@@ -1,0 +1,1595 @@
+{
+ "area": "home",
+ "batch": "verify-473",
+ "findings": [
+  {
+   "attachments": [],
+   "attempt": 1,
+   "basis": "candidate",
+   "criteria": [
+    "4.1.2"
+   ],
+   "evidence": [
+    {
+     "evidence": {
+      "description": "",
+      "name": "",
+      "role": "dialog",
+      "states": {
+       "modal": true
+      },
+      "template": "dialog \"\" [modal=true]"
+     },
+     "occurrence": {
+      "ancestors": [
+       [
+        "ReactModal__Overlay",
+        "ReactModal__Overlay--after-open",
+        "_overlay_lo4oy_89",
+        "_omnisearchOverlay_16edb_40"
+       ],
+       [
+        "ReactModalPortal"
+       ]
+      ],
+      "classes": [
+       "ReactModal__Content",
+       "ReactModal__Content--after-open",
+       "_modal_lo4oy_73",
+       "_disableAutoCenter_lo4oy_79",
+       "_omnisearchModal_16edb_27"
+      ],
+      "data": {},
+      "heading": "",
+      "landmark": null,
+      "layer": "top",
+      "name": "",
+      "rect": [
+       320,
+       135,
+       800,
+       564
+      ],
+      "role": "dialog",
+      "tag": "div",
+      "xpath": "/html/body/div[15]/div[1]/div[1]"
+     },
+     "state": "home.search-open"
+    },
+    {
+     "evidence": {
+      "description": "",
+      "name": "",
+      "role": "dialog",
+      "states": {
+       "modal": true
+      },
+      "template": "dialog \"\" [modal=true]"
+     },
+     "occurrence": {
+      "ancestors": [
+       [
+        "ReactModal__Overlay",
+        "ReactModal__Overlay--after-open",
+        "_overlay_lo4oy_89",
+        "_omnisearchOverlay_16edb_40"
+       ],
+       [
+        "ReactModalPortal"
+       ]
+      ],
+      "classes": [
+       "ReactModal__Content",
+       "ReactModal__Content--after-open",
+       "_modal_lo4oy_73",
+       "_disableAutoCenter_lo4oy_79",
+       "_omnisearchModal_16edb_27"
+      ],
+      "data": {},
+      "heading": "",
+      "landmark": null,
+      "layer": "top",
+      "name": "",
+      "rect": [
+       320,
+       135,
+       800,
+       564
+      ],
+      "role": "dialog",
+      "tag": "div",
+      "xpath": "/html/body/div[9]/div[1]/div[1]"
+     },
+     "state": "books.search"
+    }
+   ],
+   "evidenceHash": "83b25d3106a72c84e5bea2701a0ba79777e96a6dc677eb5758c5b449fb9918e9",
+   "facts": {
+    "announced": "dialog \"\" [modal=true]",
+    "axeSummary": "",
+    "criterion": "4.1.2",
+    "criterionName": "Name, Role, Value",
+    "element": "dialog",
+    "rule": "announced-as",
+    "screen": "Search dialog (empty)"
+   },
+   "family": "name",
+   "guidance": "High for an unnamed form control or the sole primary action.",
+   "issueId": null,
+   "key": "name:announced-as:b7f628c109a7",
+   "measured": false,
+   "primary": "home.search-open",
+   "proposals": [],
+   "rule": "announced-as",
+   "screens": 8,
+   "severityDefault": "medium",
+   "source": "scanner",
+   "states": [
+    "home.search-open",
+    "books.search"
+   ],
+   "summary": "announced-as: announced as dialog \"\" [modal=true].",
+   "title": "Missing or unclear name: dialog"
+  },
+  {
+   "attachments": [],
+   "attempt": 1,
+   "basis": "candidate",
+   "criteria": [
+    "4.1.2"
+   ],
+   "evidence": [
+    {
+     "evidence": {
+      "description": "",
+      "name": "Recipients",
+      "role": "button",
+      "states": {},
+      "template": "button \"Recipients\""
+     },
+     "occurrence": {
+      "ancestors": [
+       [
+        "_chip_1xw00_8",
+        "_inactive_1xw00_119",
+        "_truncateText_1xw00_16"
+       ],
+       [],
+       [
+        "_facets_4ah12_118"
+       ],
+       [
+        "_filterScrollContent_4ah12_19"
+       ],
+       [
+        "_filterScrollContainer_4ah12_12"
+       ],
+       [
+        "_filterChipsContainer_4ah12_2"
+       ],
+       [
+        "_inputAndResultsContainer_16edb_80"
+       ],
+       [
+        "_large_kwlx6_9",
+        "_noHover_3n0se_28",
+        "_shadow_3n0se_25",
+        "_raisedBackground_3n0se_45",
+        "_card_lo4oy_4",
+        "_omnisearchCard_16edb_36"
+       ]
+      ],
+      "classes": [
+       "_mainElement_1xw00_24",
+       "_interactive_1xw00_134"
+      ],
+      "data": {
+       "data-filter-id": "recipients"
+      },
+      "heading": "",
+      "landmark": {
+       "name": "",
+       "role": "dialog"
+      },
+      "layer": "top",
+      "name": "Recipients",
+      "rect": [
+       756,
+       196,
+       96,
+       32
+      ],
+      "role": "button",
+      "tag": "button",
+      "xpath": "/html/body/div[15]/div[1]/div[1]/div[1]/div[2]/div[3]/div[1]/div[2]/span[1]/span[6]/span[1]/button[1]"
+     },
+     "state": "home.search-open"
+    },
+    {
+     "evidence": {
+      "description": "",
+      "name": "Recipients",
+      "role": "button",
+      "states": {},
+      "template": "button \"Recipients\""
+     },
+     "occurrence": {
+      "ancestors": [
+       [
+        "_chip_1xw00_8",
+        "_inactive_1xw00_119",
+        "_truncateText_1xw00_16"
+       ],
+       [],
+       [
+        "_facets_4ah12_118"
+       ],
+       [
+        "_filterScrollContent_4ah12_19"
+       ],
+       [
+        "_filterScrollContainer_4ah12_12"
+       ],
+       [
+        "_filterChipsContainer_4ah12_2"
+       ],
+       [
+        "_inputAndResultsContainer_16edb_80"
+       ],
+       [
+        "_large_kwlx6_9",
+        "_noHover_3n0se_28",
+        "_shadow_3n0se_25",
+        "_raisedBackground_3n0se_45",
+        "_card_lo4oy_4",
+        "_omnisearchCard_16edb_36"
+       ]
+      ],
+      "classes": [
+       "_mainElement_1xw00_24",
+       "_interactive_1xw00_134"
+      ],
+      "data": {
+       "data-filter-id": "recipients"
+      },
+      "heading": "",
+      "landmark": {
+       "name": "",
+       "role": "dialog"
+      },
+      "layer": "top",
+      "name": "Recipients",
+      "rect": [
+       756,
+       196,
+       96,
+       32
+      ],
+      "role": "button",
+      "tag": "button",
+      "xpath": "/html/body/div[15]/div[1]/div[1]/div[1]/div[2]/div[3]/div[1]/div[2]/span[1]/span[6]/span[1]/button[1]"
+     },
+     "state": "home.search-no-results"
+    }
+   ],
+   "evidenceHash": "0a3f721844f47051bf4f447b79cc8490311d2e96ff081601ec148aa434ea656d",
+   "facts": {
+    "announced": "button \"Recipients\"",
+    "axeSummary": "",
+    "criterion": "4.1.2",
+    "criterionName": "Name, Role, Value",
+    "element": "button \"Recipients\"",
+    "rule": "announced-as",
+    "screen": "Search dialog (empty)"
+   },
+   "family": "role-state",
+   "guidance": "Low for optional ARIA or an invalid autocomplete token; high when aria-hidden hides the whole page.",
+   "issueId": null,
+   "key": "role-state:announced-as:011ff8af2011",
+   "measured": false,
+   "primary": "home.search-open",
+   "proposals": [],
+   "rule": "announced-as",
+   "screens": 7,
+   "severityDefault": "medium",
+   "source": "scanner",
+   "states": [
+    "home.search-open",
+    "home.search-no-results"
+   ],
+   "summary": "announced-as: announced as button \"Recipients\".",
+   "title": "Wrong role or state: button \"Recipients\""
+  },
+  {
+   "attachments": [],
+   "attempt": 1,
+   "basis": "candidate",
+   "criteria": [
+    "4.1.2"
+   ],
+   "evidence": [
+    {
+     "evidence": {
+      "description": "",
+      "name": "Scheduled",
+      "role": "button",
+      "states": {},
+      "template": "button \"Scheduled\""
+     },
+     "occurrence": {
+      "ancestors": [
+       [
+        "_chip_1xw00_8",
+        "_inactive_1xw00_119",
+        "_truncateText_1xw00_16"
+       ],
+       [],
+       [
+        "_facets_4ah12_118"
+       ],
+       [
+        "_filterScrollContent_4ah12_19"
+       ],
+       [
+        "_filterScrollContainer_4ah12_12"
+       ],
+       [
+        "_filterChipsContainer_4ah12_2"
+       ],
+       [
+        "_inputAndResultsContainer_16edb_80"
+       ],
+       [
+        "_large_kwlx6_9",
+        "_noHover_3n0se_28",
+        "_shadow_3n0se_25",
+        "_raisedBackground_3n0se_45",
+        "_card_lo4oy_4",
+        "_omnisearchCard_16edb_36"
+       ]
+      ],
+      "classes": [
+       "_mainElement_1xw00_24",
+       "_interactive_1xw00_134"
+      ],
+      "data": {
+       "data-filter-id": "scheduled"
+      },
+      "heading": "",
+      "landmark": {
+       "name": "",
+       "role": "dialog"
+      },
+      "layer": "top",
+      "name": "Scheduled",
+      "rect": [
+       974,
+       196,
+       97,
+       32
+      ],
+      "role": "button",
+      "tag": "button",
+      "xpath": "/html/body/div[15]/div[1]/div[1]/div[1]/div[2]/div[3]/div[1]/div[2]/span[1]/span[8]/span[1]/button[1]"
+     },
+     "state": "home.search-open"
+    },
+    {
+     "evidence": {
+      "description": "",
+      "name": "Scheduled",
+      "role": "button",
+      "states": {},
+      "template": "button \"Scheduled\""
+     },
+     "occurrence": {
+      "ancestors": [
+       [
+        "_chip_1xw00_8",
+        "_inactive_1xw00_119",
+        "_truncateText_1xw00_16"
+       ],
+       [],
+       [
+        "_facets_4ah12_118"
+       ],
+       [
+        "_filterScrollContent_4ah12_19"
+       ],
+       [
+        "_filterScrollContainer_4ah12_12"
+       ],
+       [
+        "_filterChipsContainer_4ah12_2"
+       ],
+       [
+        "_inputAndResultsContainer_16edb_80"
+       ],
+       [
+        "_large_kwlx6_9",
+        "_noHover_3n0se_28",
+        "_shadow_3n0se_25",
+        "_raisedBackground_3n0se_45",
+        "_card_lo4oy_4",
+        "_omnisearchCard_16edb_36"
+       ]
+      ],
+      "classes": [
+       "_mainElement_1xw00_24",
+       "_interactive_1xw00_134"
+      ],
+      "data": {
+       "data-filter-id": "scheduled"
+      },
+      "heading": "",
+      "landmark": {
+       "name": "",
+       "role": "dialog"
+      },
+      "layer": "top",
+      "name": "Scheduled",
+      "rect": [
+       974,
+       196,
+       97,
+       32
+      ],
+      "role": "button",
+      "tag": "button",
+      "xpath": "/html/body/div[15]/div[1]/div[1]/div[1]/div[2]/div[3]/div[1]/div[2]/span[1]/span[8]/span[1]/button[1]"
+     },
+     "state": "home.search-no-results"
+    }
+   ],
+   "evidenceHash": "9239e774f20b6b46da0335791e60a77d4a56c834257aeaae34f01c3dca175a95",
+   "facts": {
+    "announced": "button \"Scheduled\"",
+    "axeSummary": "",
+    "criterion": "4.1.2",
+    "criterionName": "Name, Role, Value",
+    "element": "button \"Scheduled\"",
+    "rule": "announced-as",
+    "screen": "Search dialog (empty)"
+   },
+   "family": "role-state",
+   "guidance": "Low for optional ARIA or an invalid autocomplete token; high when aria-hidden hides the whole page.",
+   "issueId": null,
+   "key": "role-state:announced-as:23080c1e9a08",
+   "measured": false,
+   "primary": "home.search-open",
+   "proposals": [],
+   "rule": "announced-as",
+   "screens": 7,
+   "severityDefault": "medium",
+   "source": "scanner",
+   "states": [
+    "home.search-open",
+    "home.search-no-results"
+   ],
+   "summary": "announced-as: announced as button \"Scheduled\".",
+   "title": "Wrong role or state: button \"Scheduled\""
+  },
+  {
+   "attachments": [],
+   "attempt": 1,
+   "basis": "candidate",
+   "criteria": [
+    "4.1.2"
+   ],
+   "evidence": [
+    {
+     "evidence": {
+      "description": "",
+      "name": "Approvals",
+      "role": "button",
+      "states": {},
+      "template": "button \"Approvals\""
+     },
+     "occurrence": {
+      "ancestors": [
+       [
+        "_chip_1xw00_8",
+        "_inactive_1xw00_119",
+        "_truncateText_1xw00_16"
+       ],
+       [],
+       [
+        "_facets_4ah12_118"
+       ],
+       [
+        "_filterScrollContent_4ah12_19"
+       ],
+       [
+        "_filterScrollContainer_4ah12_12"
+       ],
+       [
+        "_filterChipsContainer_4ah12_2"
+       ],
+       [
+        "_inputAndResultsContainer_16edb_80"
+       ],
+       [
+        "_large_kwlx6_9",
+        "_noHover_3n0se_28",
+        "_shadow_3n0se_25",
+        "_raisedBackground_3n0se_45",
+        "_card_lo4oy_4",
+        "_omnisearchCard_16edb_36"
+       ]
+      ],
+      "classes": [
+       "_mainElement_1xw00_24",
+       "_interactive_1xw00_134"
+      ],
+      "data": {
+       "data-filter-id": "approvals"
+      },
+      "heading": "",
+      "landmark": {
+       "name": "",
+       "role": "dialog"
+      },
+      "layer": "top",
+      "name": "Approvals",
+      "rect": [
+       1082,
+       196,
+       93,
+       32
+      ],
+      "role": "button",
+      "tag": "button",
+      "xpath": "/html/body/div[15]/div[1]/div[1]/div[1]/div[2]/div[3]/div[1]/div[2]/span[1]/span[9]/span[1]/button[1]"
+     },
+     "state": "home.search-open"
+    },
+    {
+     "evidence": {
+      "description": "",
+      "name": "Approvals",
+      "role": "button",
+      "states": {},
+      "template": "button \"Approvals\""
+     },
+     "occurrence": {
+      "ancestors": [
+       [
+        "_chip_1xw00_8",
+        "_inactive_1xw00_119",
+        "_truncateText_1xw00_16"
+       ],
+       [],
+       [
+        "_facets_4ah12_118"
+       ],
+       [
+        "_filterScrollContent_4ah12_19"
+       ],
+       [
+        "_filterScrollContainer_4ah12_12"
+       ],
+       [
+        "_filterChipsContainer_4ah12_2"
+       ],
+       [
+        "_inputAndResultsContainer_16edb_80"
+       ],
+       [
+        "_large_kwlx6_9",
+        "_noHover_3n0se_28",
+        "_shadow_3n0se_25",
+        "_raisedBackground_3n0se_45",
+        "_card_lo4oy_4",
+        "_omnisearchCard_16edb_36"
+       ]
+      ],
+      "classes": [
+       "_mainElement_1xw00_24",
+       "_interactive_1xw00_134"
+      ],
+      "data": {
+       "data-filter-id": "approvals"
+      },
+      "heading": "",
+      "landmark": {
+       "name": "",
+       "role": "dialog"
+      },
+      "layer": "top",
+      "name": "Approvals",
+      "rect": [
+       1082,
+       196,
+       93,
+       32
+      ],
+      "role": "button",
+      "tag": "button",
+      "xpath": "/html/body/div[15]/div[1]/div[1]/div[1]/div[2]/div[3]/div[1]/div[2]/span[1]/span[9]/span[1]/button[1]"
+     },
+     "state": "home.search-no-results"
+    }
+   ],
+   "evidenceHash": "7ec3fc5209ac51a11a43fbb8f9b62277348176ea963671c45c6ccb94a21ade45",
+   "facts": {
+    "announced": "button \"Approvals\"",
+    "axeSummary": "",
+    "criterion": "4.1.2",
+    "criterionName": "Name, Role, Value",
+    "element": "button \"Approvals\"",
+    "rule": "announced-as",
+    "screen": "Search dialog (empty)"
+   },
+   "family": "role-state",
+   "guidance": "Low for optional ARIA or an invalid autocomplete token; high when aria-hidden hides the whole page.",
+   "issueId": null,
+   "key": "role-state:announced-as:304c56e7b0bd",
+   "measured": false,
+   "primary": "home.search-open",
+   "proposals": [],
+   "rule": "announced-as",
+   "screens": 7,
+   "severityDefault": "medium",
+   "source": "scanner",
+   "states": [
+    "home.search-open",
+    "home.search-no-results"
+   ],
+   "summary": "announced-as: announced as button \"Approvals\".",
+   "title": "Wrong role or state: button \"Approvals\""
+  },
+  {
+   "attachments": [],
+   "attempt": 1,
+   "basis": "candidate",
+   "criteria": [
+    "4.1.2"
+   ],
+   "evidence": [
+    {
+     "evidence": {
+      "description": "",
+      "name": "Pages",
+      "role": "button",
+      "states": {},
+      "template": "button \"Pages\""
+     },
+     "occurrence": {
+      "ancestors": [
+       [
+        "_chip_1xw00_8",
+        "_inactive_1xw00_119",
+        "_truncateText_1xw00_16"
+       ],
+       [],
+       [
+        "_facets_4ah12_118"
+       ],
+       [
+        "_filterScrollContent_4ah12_19"
+       ],
+       [
+        "_filterScrollContainer_4ah12_12"
+       ],
+       [
+        "_filterChipsContainer_4ah12_2"
+       ],
+       [
+        "_inputAndResultsContainer_16edb_80"
+       ],
+       [
+        "_large_kwlx6_9",
+        "_noHover_3n0se_28",
+        "_shadow_3n0se_25",
+        "_raisedBackground_3n0se_45",
+        "_card_lo4oy_4",
+        "_omnisearchCard_16edb_36"
+       ]
+      ],
+      "classes": [
+       "_mainElement_1xw00_24",
+       "_interactive_1xw00_134"
+      ],
+      "data": {
+       "data-filter-id": "pages"
+      },
+      "heading": "",
+      "landmark": {
+       "name": "",
+       "role": "dialog"
+      },
+      "layer": "top",
+      "name": "Pages",
+      "rect": [
+       385,
+       196,
+       64,
+       32
+      ],
+      "role": "button",
+      "tag": "button",
+      "xpath": "/html/body/div[15]/div[1]/div[1]/div[1]/div[2]/div[3]/div[1]/div[2]/span[1]/span[2]/span[1]/button[1]"
+     },
+     "state": "home.search-open"
+    },
+    {
+     "evidence": {
+      "description": "",
+      "name": "Pages",
+      "role": "button",
+      "states": {},
+      "template": "button \"Pages\""
+     },
+     "occurrence": {
+      "ancestors": [
+       [
+        "_chip_1xw00_8",
+        "_inactive_1xw00_119",
+        "_truncateText_1xw00_16"
+       ],
+       [],
+       [
+        "_facets_4ah12_118"
+       ],
+       [
+        "_filterScrollContent_4ah12_19"
+       ],
+       [
+        "_filterScrollContainer_4ah12_12"
+       ],
+       [
+        "_filterChipsContainer_4ah12_2"
+       ],
+       [
+        "_inputAndResultsContainer_16edb_80"
+       ],
+       [
+        "_large_kwlx6_9",
+        "_noHover_3n0se_28",
+        "_shadow_3n0se_25",
+        "_raisedBackground_3n0se_45",
+        "_card_lo4oy_4",
+        "_omnisearchCard_16edb_36"
+       ]
+      ],
+      "classes": [
+       "_mainElement_1xw00_24",
+       "_interactive_1xw00_134"
+      ],
+      "data": {
+       "data-filter-id": "pages"
+      },
+      "heading": "",
+      "landmark": {
+       "name": "",
+       "role": "dialog"
+      },
+      "layer": "top",
+      "name": "Pages",
+      "rect": [
+       385,
+       196,
+       64,
+       32
+      ],
+      "role": "button",
+      "tag": "button",
+      "xpath": "/html/body/div[9]/div[1]/div[1]/div[1]/div[2]/div[2]/div[1]/div[2]/span[1]/span[2]/span[1]/button[1]"
+     },
+     "state": "books.search"
+    }
+   ],
+   "evidenceHash": "6f65232d743c6fa1f4945b3265171c85ac903081332af87233d000aa074bb2b7",
+   "facts": {
+    "announced": "button \"Pages\"",
+    "axeSummary": "",
+    "criterion": "4.1.2",
+    "criterionName": "Name, Role, Value",
+    "element": "button \"Pages\"",
+    "rule": "announced-as",
+    "screen": "Search dialog (empty)"
+   },
+   "family": "role-state",
+   "guidance": "Low for optional ARIA or an invalid autocomplete token; high when aria-hidden hides the whole page.",
+   "issueId": null,
+   "key": "role-state:announced-as:3c2d9ef1f990",
+   "measured": false,
+   "primary": "home.search-open",
+   "proposals": [],
+   "rule": "announced-as",
+   "screens": 8,
+   "severityDefault": "medium",
+   "source": "scanner",
+   "states": [
+    "home.search-open",
+    "books.search"
+   ],
+   "summary": "announced-as: announced as button \"Pages\".",
+   "title": "Wrong role or state: button \"Pages\""
+  },
+  {
+   "attachments": [],
+   "attempt": 1,
+   "basis": "candidate",
+   "criteria": [
+    "4.1.2"
+   ],
+   "evidence": [
+    {
+     "evidence": {
+      "description": "",
+      "name": "Departments",
+      "role": "button",
+      "states": {},
+      "template": "button \"Departments\""
+     },
+     "occurrence": {
+      "ancestors": [
+       [
+        "_chip_1xw00_8",
+        "_inactive_1xw00_119",
+        "_truncateText_1xw00_16"
+       ],
+       [],
+       [
+        "_facets_4ah12_118"
+       ],
+       [
+        "_filterScrollContent_4ah12_19"
+       ],
+       [
+        "_filterScrollContainer_4ah12_12"
+       ],
+       [
+        "_filterChipsContainer_4ah12_2"
+       ],
+       [
+        "_inputAndResultsContainer_16edb_80"
+       ],
+       [
+        "_large_kwlx6_9",
+        "_noHover_3n0se_28",
+        "_shadow_3n0se_25",
+        "_raisedBackground_3n0se_45",
+        "_card_lo4oy_4",
+        "_omnisearchCard_16edb_36"
+       ]
+      ],
+      "classes": [
+       "_mainElement_1xw00_24",
+       "_interactive_1xw00_134"
+      ],
+      "data": {
+       "data-filter-id": "departments"
+      },
+      "heading": "",
+      "landmark": {
+       "name": "",
+       "role": "dialog"
+      },
+      "layer": "top",
+      "name": "Departments",
+      "rect": [
+       1258,
+       196,
+       114,
+       32
+      ],
+      "role": "button",
+      "tag": "button",
+      "xpath": "/html/body/div[15]/div[1]/div[1]/div[1]/div[2]/div[3]/div[1]/div[2]/span[1]/span[11]/span[1]/button[1]"
+     },
+     "state": "home.search-open"
+    },
+    {
+     "evidence": {
+      "description": "",
+      "name": "Departments",
+      "role": "button",
+      "states": {},
+      "template": "button \"Departments\""
+     },
+     "occurrence": {
+      "ancestors": [
+       [
+        "_chip_1xw00_8",
+        "_inactive_1xw00_119",
+        "_truncateText_1xw00_16"
+       ],
+       [],
+       [
+        "_facets_4ah12_118"
+       ],
+       [
+        "_filterScrollContent_4ah12_19"
+       ],
+       [
+        "_filterScrollContainer_4ah12_12"
+       ],
+       [
+        "_filterChipsContainer_4ah12_2"
+       ],
+       [
+        "_inputAndResultsContainer_16edb_80"
+       ],
+       [
+        "_large_kwlx6_9",
+        "_noHover_3n0se_28",
+        "_shadow_3n0se_25",
+        "_raisedBackground_3n0se_45",
+        "_card_lo4oy_4",
+        "_omnisearchCard_16edb_36"
+       ]
+      ],
+      "classes": [
+       "_mainElement_1xw00_24",
+       "_interactive_1xw00_134"
+      ],
+      "data": {
+       "data-filter-id": "departments"
+      },
+      "heading": "",
+      "landmark": {
+       "name": "",
+       "role": "dialog"
+      },
+      "layer": "top",
+      "name": "Departments",
+      "rect": [
+       1258,
+       196,
+       114,
+       32
+      ],
+      "role": "button",
+      "tag": "button",
+      "xpath": "/html/body/div[15]/div[1]/div[1]/div[1]/div[2]/div[3]/div[1]/div[2]/span[1]/span[11]/span[1]/button[1]"
+     },
+     "state": "home.search-no-results"
+    }
+   ],
+   "evidenceHash": "738377c72842ee520b67b81a277639d97edc9f366aafde98fe286acc0700aba8",
+   "facts": {
+    "announced": "button \"Departments\"",
+    "axeSummary": "",
+    "criterion": "4.1.2",
+    "criterionName": "Name, Role, Value",
+    "element": "button \"Departments\"",
+    "rule": "announced-as",
+    "screen": "Search dialog (empty)"
+   },
+   "family": "role-state",
+   "guidance": "Low for optional ARIA or an invalid autocomplete token; high when aria-hidden hides the whole page.",
+   "issueId": null,
+   "key": "role-state:announced-as:58aa06355a53",
+   "measured": false,
+   "primary": "home.search-open",
+   "proposals": [],
+   "rule": "announced-as",
+   "screens": 7,
+   "severityDefault": "medium",
+   "source": "scanner",
+   "states": [
+    "home.search-open",
+    "home.search-no-results"
+   ],
+   "summary": "announced-as: announced as button \"Departments\".",
+   "title": "Wrong role or state: button \"Departments\""
+  },
+  {
+   "attachments": [],
+   "attempt": 1,
+   "basis": "candidate",
+   "criteria": [
+    "4.1.2"
+   ],
+   "evidence": [
+    {
+     "evidence": {
+      "description": "",
+      "name": "Statements",
+      "role": "button",
+      "states": {},
+      "template": "button \"Statements\""
+     },
+     "occurrence": {
+      "ancestors": [
+       [
+        "_chip_1xw00_8",
+        "_inactive_1xw00_119",
+        "_truncateText_1xw00_16"
+       ],
+       [],
+       [
+        "_facets_4ah12_118"
+       ],
+       [
+        "_filterScrollContent_4ah12_19"
+       ],
+       [
+        "_filterScrollContainer_4ah12_12"
+       ],
+       [
+        "_filterChipsContainer_4ah12_2"
+       ],
+       [
+        "_inputAndResultsContainer_16edb_80"
+       ],
+       [
+        "_large_kwlx6_9",
+        "_noHover_3n0se_28",
+        "_shadow_3n0se_25",
+        "_raisedBackground_3n0se_45",
+        "_card_lo4oy_4",
+        "_omnisearchCard_16edb_36"
+       ]
+      ],
+      "classes": [
+       "_mainElement_1xw00_24",
+       "_interactive_1xw00_134"
+      ],
+      "data": {
+       "data-filter-id": "statements"
+      },
+      "heading": "",
+      "landmark": {
+       "name": "",
+       "role": "dialog"
+      },
+      "layer": "top",
+      "name": "Statements",
+      "rect": [
+       862,
+       196,
+       102,
+       32
+      ],
+      "role": "button",
+      "tag": "button",
+      "xpath": "/html/body/div[15]/div[1]/div[1]/div[1]/div[2]/div[3]/div[1]/div[2]/span[1]/span[7]/span[1]/button[1]"
+     },
+     "state": "home.search-open"
+    },
+    {
+     "evidence": {
+      "description": "",
+      "name": "Statements",
+      "role": "button",
+      "states": {},
+      "template": "button \"Statements\""
+     },
+     "occurrence": {
+      "ancestors": [
+       [
+        "_chip_1xw00_8",
+        "_inactive_1xw00_119",
+        "_truncateText_1xw00_16"
+       ],
+       [],
+       [
+        "_facets_4ah12_118"
+       ],
+       [
+        "_filterScrollContent_4ah12_19"
+       ],
+       [
+        "_filterScrollContainer_4ah12_12"
+       ],
+       [
+        "_filterChipsContainer_4ah12_2"
+       ],
+       [
+        "_inputAndResultsContainer_16edb_80"
+       ],
+       [
+        "_large_kwlx6_9",
+        "_noHover_3n0se_28",
+        "_shadow_3n0se_25",
+        "_raisedBackground_3n0se_45",
+        "_card_lo4oy_4",
+        "_omnisearchCard_16edb_36"
+       ]
+      ],
+      "classes": [
+       "_mainElement_1xw00_24",
+       "_interactive_1xw00_134"
+      ],
+      "data": {
+       "data-filter-id": "statements"
+      },
+      "heading": "",
+      "landmark": {
+       "name": "",
+       "role": "dialog"
+      },
+      "layer": "top",
+      "name": "Statements",
+      "rect": [
+       862,
+       196,
+       102,
+       32
+      ],
+      "role": "button",
+      "tag": "button",
+      "xpath": "/html/body/div[15]/div[1]/div[1]/div[1]/div[2]/div[3]/div[1]/div[2]/span[1]/span[7]/span[1]/button[1]"
+     },
+     "state": "home.search-no-results"
+    }
+   ],
+   "evidenceHash": "9fd3d09ebd95dcdccfeb766eb530547b7fb3284af61a44f7bf0172cd6c5ededb",
+   "facts": {
+    "announced": "button \"Statements\"",
+    "axeSummary": "",
+    "criterion": "4.1.2",
+    "criterionName": "Name, Role, Value",
+    "element": "button \"Statements\"",
+    "rule": "announced-as",
+    "screen": "Search dialog (empty)"
+   },
+   "family": "role-state",
+   "guidance": "Low for optional ARIA or an invalid autocomplete token; high when aria-hidden hides the whole page.",
+   "issueId": null,
+   "key": "role-state:announced-as:7f844d21ddcb",
+   "measured": false,
+   "primary": "home.search-open",
+   "proposals": [],
+   "rule": "announced-as",
+   "screens": 7,
+   "severityDefault": "medium",
+   "source": "scanner",
+   "states": [
+    "home.search-open",
+    "home.search-no-results"
+   ],
+   "summary": "announced-as: announced as button \"Statements\".",
+   "title": "Wrong role or state: button \"Statements\""
+  },
+  {
+   "attachments": [],
+   "attempt": 1,
+   "basis": "candidate",
+   "criteria": [
+    "4.1.2"
+   ],
+   "evidence": [
+    {
+     "evidence": {
+      "description": "",
+      "name": "Payments over 1.5k Documents & Statements",
+      "role": "listbox",
+      "states": {},
+      "template": "listbox \"Payments over <n>k Documents & Statements\""
+     },
+     "occurrence": {
+      "ancestors": [
+       [
+        "_inputAndResultsContainer_16edb_80"
+       ],
+       [
+        "_large_kwlx6_9",
+        "_noHover_3n0se_28",
+        "_shadow_3n0se_25",
+        "_raisedBackground_3n0se_45",
+        "_card_lo4oy_4",
+        "_omnisearchCard_16edb_36"
+       ],
+       [
+        "ReactModal__Content",
+        "ReactModal__Content--after-open",
+        "_modal_lo4oy_73",
+        "_disableAutoCenter_lo4oy_79",
+        "_omnisearchModal_16edb_27"
+       ],
+       [
+        "ReactModal__Overlay",
+        "ReactModal__Overlay--after-open",
+        "_overlay_lo4oy_89",
+        "_omnisearchOverlay_16edb_40"
+       ],
+       [
+        "ReactModalPortal"
+       ]
+      ],
+      "classes": [
+       "_menu_16edb_182"
+      ],
+      "data": {},
+      "heading": "",
+      "landmark": {
+       "name": "",
+       "role": "dialog"
+      },
+      "layer": "top",
+      "name": "Payments over 1.5k Documents & Statements",
+      "rect": [
+       320,
+       240,
+       800,
+       422
+      ],
+      "role": "listbox",
+      "tag": "div",
+      "xpath": "/html/body/div[15]/div[1]/div[1]/div[1]/div[2]/div[4]"
+     },
+     "state": "home.search-open"
+    }
+   ],
+   "evidenceHash": "30cf8bff5b249f71df890c8dd2c966a6208857db75e9912948bf156dd547dd37",
+   "facts": {
+    "announced": "listbox \"Payments over <n>k Documents & Statements\"",
+    "axeSummary": "",
+    "criterion": "4.1.2",
+    "criterionName": "Name, Role, Value",
+    "element": "listbox \"Payments over <n>k Documents & Statemen…\"",
+    "rule": "announced-as",
+    "screen": "Search dialog (empty)"
+   },
+   "family": "role-state",
+   "guidance": "Low for optional ARIA or an invalid autocomplete token; high when aria-hidden hides the whole page.",
+   "issueId": null,
+   "key": "role-state:announced-as:81e3f7e8e640",
+   "measured": false,
+   "primary": "home.search-open",
+   "proposals": [],
+   "rule": "announced-as",
+   "screens": 1,
+   "severityDefault": "medium",
+   "source": "scanner",
+   "states": [
+    "home.search-open"
+   ],
+   "summary": "announced-as: announced as listbox \"Payments over <n>k Documents & Statements\".",
+   "title": "Wrong role or state: listbox \"Payments over <n>k Documents & Statemen…\""
+  },
+  {
+   "attachments": [],
+   "attempt": 1,
+   "basis": "candidate",
+   "criteria": [
+    "4.1.2"
+   ],
+   "evidence": [
+    {
+     "evidence": {
+      "description": "",
+      "name": "All",
+      "role": "button",
+      "states": {},
+      "template": "button \"All\""
+     },
+     "occurrence": {
+      "ancestors": [
+       [
+        "_chip_1xw00_8",
+        "_active_1xw00_161",
+        "_truncateText_1xw00_16"
+       ],
+       [],
+       [
+        "_facets_4ah12_118"
+       ],
+       [
+        "_filterScrollContent_4ah12_19"
+       ],
+       [
+        "_filterScrollContainer_4ah12_12"
+       ],
+       [
+        "_filterChipsContainer_4ah12_2"
+       ],
+       [
+        "_inputAndResultsContainer_16edb_80"
+       ],
+       [
+        "_large_kwlx6_9",
+        "_noHover_3n0se_28",
+        "_shadow_3n0se_25",
+        "_raisedBackground_3n0se_45",
+        "_card_lo4oy_4",
+        "_omnisearchCard_16edb_36"
+       ]
+      ],
+      "classes": [
+       "_mainElement_1xw00_24",
+       "_interactive_1xw00_134"
+      ],
+      "data": {
+       "data-filter-id": "all"
+      },
+      "heading": "",
+      "landmark": {
+       "name": "",
+       "role": "dialog"
+      },
+      "layer": "top",
+      "name": "All",
+      "rect": [
+       333,
+       196,
+       42,
+       32
+      ],
+      "role": "button",
+      "tag": "button",
+      "xpath": "/html/body/div[15]/div[1]/div[1]/div[1]/div[2]/div[3]/div[1]/div[2]/span[1]/span[1]/span[1]/button[1]"
+     },
+     "state": "home.search-open"
+    },
+    {
+     "evidence": {
+      "description": "",
+      "name": "All",
+      "role": "button",
+      "states": {},
+      "template": "button \"All\""
+     },
+     "occurrence": {
+      "ancestors": [
+       [
+        "_chip_1xw00_8",
+        "_active_1xw00_161",
+        "_truncateText_1xw00_16"
+       ],
+       [],
+       [
+        "_facets_4ah12_118"
+       ],
+       [
+        "_filterScrollContent_4ah12_19"
+       ],
+       [
+        "_filterScrollContainer_4ah12_12"
+       ],
+       [
+        "_filterChipsContainer_4ah12_2"
+       ],
+       [
+        "_inputAndResultsContainer_16edb_80"
+       ],
+       [
+        "_large_kwlx6_9",
+        "_noHover_3n0se_28",
+        "_shadow_3n0se_25",
+        "_raisedBackground_3n0se_45",
+        "_card_lo4oy_4",
+        "_omnisearchCard_16edb_36"
+       ]
+      ],
+      "classes": [
+       "_mainElement_1xw00_24",
+       "_interactive_1xw00_134"
+      ],
+      "data": {
+       "data-filter-id": "all"
+      },
+      "heading": "",
+      "landmark": {
+       "name": "",
+       "role": "dialog"
+      },
+      "layer": "top",
+      "name": "All",
+      "rect": [
+       333,
+       196,
+       42,
+       32
+      ],
+      "role": "button",
+      "tag": "button",
+      "xpath": "/html/body/div[9]/div[1]/div[1]/div[1]/div[2]/div[2]/div[1]/div[2]/span[1]/span[1]/span[1]/button[1]"
+     },
+     "state": "books.search"
+    }
+   ],
+   "evidenceHash": "90163910b55da87faa9b6478f360a830bdc2f4e893aeebf64defd166c5c928d3",
+   "facts": {
+    "announced": "button \"All\"",
+    "axeSummary": "",
+    "criterion": "4.1.2",
+    "criterionName": "Name, Role, Value",
+    "element": "button \"All\"",
+    "rule": "announced-as",
+    "screen": "Search dialog (empty)"
+   },
+   "family": "role-state",
+   "guidance": "Low for optional ARIA or an invalid autocomplete token; high when aria-hidden hides the whole page.",
+   "issueId": null,
+   "key": "role-state:announced-as:91fcca2b45ab",
+   "measured": false,
+   "primary": "home.search-open",
+   "proposals": [],
+   "rule": "announced-as",
+   "screens": 8,
+   "severityDefault": "medium",
+   "source": "scanner",
+   "states": [
+    "home.search-open",
+    "books.search"
+   ],
+   "summary": "announced-as: announced as button \"All\".",
+   "title": "Wrong role or state: button \"All\""
+  },
+  {
+   "attachments": [],
+   "attempt": 1,
+   "basis": "candidate",
+   "criteria": [
+    "4.1.2"
+   ],
+   "evidence": [
+    {
+     "evidence": {
+      "description": "",
+      "name": "Users",
+      "role": "button",
+      "states": {},
+      "template": "button \"Users\""
+     },
+     "occurrence": {
+      "ancestors": [
+       [
+        "_chip_1xw00_8",
+        "_inactive_1xw00_119",
+        "_truncateText_1xw00_16"
+       ],
+       [],
+       [
+        "_facets_4ah12_118"
+       ],
+       [
+        "_filterScrollContent_4ah12_19"
+       ],
+       [
+        "_filterScrollContainer_4ah12_12"
+       ],
+       [
+        "_filterChipsContainer_4ah12_2"
+       ],
+       [
+        "_inputAndResultsContainer_16edb_80"
+       ],
+       [
+        "_large_kwlx6_9",
+        "_noHover_3n0se_28",
+        "_shadow_3n0se_25",
+        "_raisedBackground_3n0se_45",
+        "_card_lo4oy_4",
+        "_omnisearchCard_16edb_36"
+       ]
+      ],
+      "classes": [
+       "_mainElement_1xw00_24",
+       "_interactive_1xw00_134"
+      ],
+      "data": {
+       "data-filter-id": "users"
+      },
+      "heading": "",
+      "landmark": {
+       "name": "",
+       "role": "dialog"
+      },
+      "layer": "top",
+      "name": "Users",
+      "rect": [
+       1185,
+       196,
+       63,
+       32
+      ],
+      "role": "button",
+      "tag": "button",
+      "xpath": "/html/body/div[15]/div[1]/div[1]/div[1]/div[2]/div[3]/div[1]/div[2]/span[1]/span[10]/span[1]/button[1]"
+     },
+     "state": "home.search-open"
+    },
+    {
+     "evidence": {
+      "description": "",
+      "name": "Users",
+      "role": "button",
+      "states": {},
+      "template": "button \"Users\""
+     },
+     "occurrence": {
+      "ancestors": [
+       [
+        "_chip_1xw00_8",
+        "_inactive_1xw00_119",
+        "_truncateText_1xw00_16"
+       ],
+       [],
+       [
+        "_facets_4ah12_118"
+       ],
+       [
+        "_filterScrollContent_4ah12_19"
+       ],
+       [
+        "_filterScrollContainer_4ah12_12"
+       ],
+       [
+        "_filterChipsContainer_4ah12_2"
+       ],
+       [
+        "_inputAndResultsContainer_16edb_80"
+       ],
+       [
+        "_large_kwlx6_9",
+        "_noHover_3n0se_28",
+        "_shadow_3n0se_25",
+        "_raisedBackground_3n0se_45",
+        "_card_lo4oy_4",
+        "_omnisearchCard_16edb_36"
+       ]
+      ],
+      "classes": [
+       "_mainElement_1xw00_24",
+       "_interactive_1xw00_134"
+      ],
+      "data": {
+       "data-filter-id": "users"
+      },
+      "heading": "",
+      "landmark": {
+       "name": "",
+       "role": "dialog"
+      },
+      "layer": "top",
+      "name": "Users",
+      "rect": [
+       1185,
+       196,
+       63,
+       32
+      ],
+      "role": "button",
+      "tag": "button",
+      "xpath": "/html/body/div[15]/div[1]/div[1]/div[1]/div[2]/div[3]/div[1]/div[2]/span[1]/span[10]/span[1]/button[1]"
+     },
+     "state": "home.search-no-results"
+    }
+   ],
+   "evidenceHash": "252a48e8d23eac4cfdced58ca587ee638eccc56462746c80d243651441695ffd",
+   "facts": {
+    "announced": "button \"Users\"",
+    "axeSummary": "",
+    "criterion": "4.1.2",
+    "criterionName": "Name, Role, Value",
+    "element": "button \"Users\"",
+    "rule": "announced-as",
+    "screen": "Search dialog (empty)"
+   },
+   "family": "role-state",
+   "guidance": "Low for optional ARIA or an invalid autocomplete token; high when aria-hidden hides the whole page.",
+   "issueId": null,
+   "key": "role-state:announced-as:a2eb3860e9fb",
+   "measured": false,
+   "primary": "home.search-open",
+   "proposals": [],
+   "rule": "announced-as",
+   "screens": 7,
+   "severityDefault": "medium",
+   "source": "scanner",
+   "states": [
+    "home.search-open",
+    "home.search-no-results"
+   ],
+   "summary": "announced-as: announced as button \"Users\".",
+   "title": "Wrong role or state: button \"Users\""
+  }
+ ],
+ "primaries": [
+  "home.search-open"
+ ],
+ "reach": {
+  "baseUrl": "https://demo.mercury.com",
+  "data": "data",
+  "map": "build/map.json",
+  "run": "2026-10-03-1525",
+  "workspace": "a11y"
+ },
+ "run": "2026-10-03-1525"
+}

@@ -1,0 +1,118 @@
+{
+ "area": "home",
+ "batch": "verify-178",
+ "findings": [
+  {
+   "attachments": [],
+   "attempt": 1,
+   "basis": "violation",
+   "criteria": [
+    "1.4.3"
+   ],
+   "evidence": [
+    {
+     "evidence": {
+      "bgColor": "#ffffff",
+      "contrastRatio": 2.68,
+      "expectedContrastRatio": "4.5:1",
+      "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 2.68 (foreground color: #9d9da8, background color: #ffffff, font size: 10.5pt (14px), font weight: normal). Expected contrast ratio of 4.5:1",
+      "fgColor": "#9d9da8",
+      "fontSize": "10.5pt (14px)",
+      "fontWeight": "normal",
+      "messageKey": null
+     },
+     "occurrence": {
+      "ancestors": [
+       [
+        "_trailingContent_q3d2q_33"
+       ],
+       [
+        "_trailingAffordance_q3d2q_23"
+       ],
+       [
+        "_root_q3d2q_1"
+       ],
+       [
+        "_reasoningLabel_zjhzz_36"
+       ],
+       [
+        "_wrapper_zjhzz_28"
+       ],
+       [
+        "_workSummaryContent_w11zz_27"
+       ],
+       [
+        "_sectionContentInner_l80wf_78"
+       ],
+       [
+        "_sectionContent_l80wf_61"
+       ]
+      ],
+      "classes": [
+       "_bodySecondary_qaod7_51",
+       "_text-placeholder_12t49_1"
+      ],
+      "data": {},
+      "heading": "",
+      "landmark": {
+       "name": "Thought process",
+       "role": "region"
+      },
+      "layer": "document",
+      "name": "",
+      "rect": [
+       676,
+       264,
+       13,
+       16
+      ],
+      "role": "",
+      "tag": "span",
+      "xpath": "/html/body/div[1]/main[1]/div[1]/div[1]/div[4]/div[1]/div[1]/div[1]/div[2]/div[1]/div[2]/div[1]/div[2]/div[1]/div[1]/div[1]/div[1]/div[1]/div[1]/div[1]/div[1]/span[1]/span[2]/span[1]/span[1]"
+     },
+     "state": "home.command-thought-process"
+    }
+   ],
+   "evidenceHash": "196da1dcb798327b289b7a5b92bdaaa9c881f969a7afc58a80c21e8f4ad85465",
+   "facts": {
+    "bg": "#ffffff",
+    "criterion": "1.4.3",
+    "criterionName": "Contrast (Minimum)",
+    "element": "text in the region landmark",
+    "fg": "#9d9da8",
+    "ratio": "2.68",
+    "required": "4.5",
+    "rule": "color-contrast",
+    "screen": "Command: thought process expanded",
+    "screens": 1
+   },
+   "family": "contrast",
+   "guidance": "High under 2:1, or under 3:1 for essential text.",
+   "issueId": null,
+   "key": "contrast:color-contrast:3c6eb8e13dbe",
+   "measured": true,
+   "primary": "home.command-thought-process",
+   "proposals": [],
+   "rule": "color-contrast",
+   "screens": 1,
+   "severityDefault": "medium",
+   "source": "scanner",
+   "states": [
+    "home.command-thought-process"
+   ],
+   "summary": "axe color-contrast: #9d9da8 on #ffffff measures 2.68:1; AA needs 4.5:1.",
+   "title": "Low contrast: text in the region landmark"
+  }
+ ],
+ "primaries": [
+  "home.command-thought-process"
+ ],
+ "reach": {
+  "baseUrl": "https://demo.mercury.com",
+  "data": "data",
+  "map": "build/map.json",
+  "run": "2026-10-03-1525",
+  "workspace": "a11y"
+ },
+ "run": "2026-10-03-1525"
+}

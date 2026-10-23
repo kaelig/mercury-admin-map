@@ -1,0 +1,257 @@
+{
+ "area": "home",
+ "batch": "verify-462",
+ "findings": [
+  {
+   "attachments": [],
+   "attempt": 1,
+   "basis": "candidate",
+   "criteria": [
+    "4.1.2"
+   ],
+   "evidence": [
+    {
+     "evidence": {
+      "description": "",
+      "name": "Light mode",
+      "role": "menuitem",
+      "states": {},
+      "template": "menuitem \"Light mode\""
+     },
+     "occurrence": {
+      "ancestors": [
+       [
+        "_menu_ko7ja_21"
+       ],
+       [],
+       [
+        "_menu_ko7ja_21",
+        "_userMenu_ko7ja_74"
+       ],
+       [],
+       []
+      ],
+      "classes": [
+       "_menuItem_1svr1_4",
+       "_themeSubmenuItem_s0t7d_10",
+       "_unselected_s0t7d_23",
+       "session-replay-unmask"
+      ],
+      "data": {},
+      "heading": "",
+      "landmark": null,
+      "layer": "top",
+      "name": "Light mode",
+      "rect": [
+       928,
+       558,
+       253,
+       40
+      ],
+      "role": "menuitem",
+      "tag": "div",
+      "xpath": "/html/body/div[6]/div[1]/div[1]/div[8]/div[1]/div[3]"
+     },
+     "state": "home.appearance-submenu"
+    }
+   ],
+   "evidenceHash": "fe58488669a78a609aeb01704998c299758d9495a12b9d4bb5d7f2cf9a6eedc0",
+   "facts": {
+    "announced": "menuitem \"Light mode\"",
+    "axeSummary": "",
+    "criterion": "4.1.2",
+    "criterionName": "Name, Role, Value",
+    "element": "menuitem \"Light mode\"",
+    "rule": "announced-as",
+    "screen": "Appearance submenu"
+   },
+   "family": "role-state",
+   "guidance": "Low for optional ARIA or an invalid autocomplete token; high when aria-hidden hides the whole page.",
+   "issueId": null,
+   "key": "role-state:announced-as:251676fa8f16",
+   "measured": false,
+   "primary": "home.appearance-submenu",
+   "proposals": [],
+   "rule": "announced-as",
+   "screens": 1,
+   "severityDefault": "medium",
+   "source": "scanner",
+   "states": [
+    "home.appearance-submenu"
+   ],
+   "summary": "announced-as: announced as menuitem \"Light mode\".",
+   "title": "Wrong role or state: menuitem \"Light mode\""
+  },
+  {
+   "attachments": [],
+   "attempt": 1,
+   "basis": "candidate",
+   "criteria": [
+    "4.1.2"
+   ],
+   "evidence": [
+    {
+     "evidence": {
+      "description": "",
+      "name": "System default We’ll match your system preferences",
+      "role": "menuitem",
+      "states": {},
+      "template": "menuitem \"System default We’ll match your system preferences\""
+     },
+     "occurrence": {
+      "ancestors": [
+       [
+        "_menu_ko7ja_21"
+       ],
+       [],
+       [
+        "_menu_ko7ja_21",
+        "_userMenu_ko7ja_74"
+       ],
+       [],
+       []
+      ],
+      "classes": [
+       "_menuItem_1svr1_4",
+       "_themeSubmenuItem_s0t7d_10",
+       "_selected_s0t7d_14",
+       "session-replay-unmask"
+      ],
+      "data": {},
+      "heading": "",
+      "landmark": null,
+      "layer": "top",
+      "name": "System default We’ll match your system preferences",
+      "rect": [
+       928,
+       458,
+       253,
+       60
+      ],
+      "role": "menuitem",
+      "tag": "div",
+      "xpath": "/html/body/div[6]/div[1]/div[1]/div[8]/div[1]/div[1]"
+     },
+     "state": "home.appearance-submenu"
+    }
+   ],
+   "evidenceHash": "6279a3e3a3fe585162f73b21d15db29463fc5dc9b712ad7ad3db1f54950bf290",
+   "facts": {
+    "announced": "menuitem \"System default We’ll match your system preferences\"",
+    "axeSummary": "",
+    "criterion": "4.1.2",
+    "criterionName": "Name, Role, Value",
+    "element": "menuitem \"System default We’ll match your system…\"",
+    "rule": "announced-as",
+    "screen": "Appearance submenu"
+   },
+   "family": "role-state",
+   "guidance": "Low for optional ARIA or an invalid autocomplete token; high when aria-hidden hides the whole page.",
+   "issueId": null,
+   "key": "role-state:announced-as:a22514693f9f",
+   "measured": false,
+   "primary": "home.appearance-submenu",
+   "proposals": [],
+   "rule": "announced-as",
+   "screens": 1,
+   "severityDefault": "medium",
+   "source": "scanner",
+   "states": [
+    "home.appearance-submenu"
+   ],
+   "summary": "announced-as: announced as menuitem \"System default We’ll match your system preferences\".",
+   "title": "Wrong role or state: menuitem \"System default We’ll match your system…\""
+  },
+  {
+   "attachments": [],
+   "attempt": 1,
+   "basis": "candidate",
+   "criteria": [
+    "4.1.2"
+   ],
+   "evidence": [
+    {
+     "evidence": {
+      "description": "",
+      "name": "Dark mode",
+      "role": "menuitem",
+      "states": {},
+      "template": "menuitem \"Dark mode\""
+     },
+     "occurrence": {
+      "ancestors": [
+       [
+        "_menu_ko7ja_21"
+       ],
+       [],
+       [
+        "_menu_ko7ja_21",
+        "_userMenu_ko7ja_74"
+       ],
+       [],
+       []
+      ],
+      "classes": [
+       "_menuItem_1svr1_4",
+       "_themeSubmenuItem_s0t7d_10",
+       "_unselected_s0t7d_23",
+       "session-replay-unmask"
+      ],
+      "data": {},
+      "heading": "",
+      "landmark": null,
+      "layer": "top",
+      "name": "Dark mode",
+      "rect": [
+       928,
+       518,
+       253,
+       40
+      ],
+      "role": "menuitem",
+      "tag": "div",
+      "xpath": "/html/body/div[6]/div[1]/div[1]/div[8]/div[1]/div[2]"
+     },
+     "state": "home.appearance-submenu"
+    }
+   ],
+   "evidenceHash": "56134208939741819104a11c33b3f8bb3ebba3fdc5c8b85b95a3c92965cf6a2c",
+   "facts": {
+    "announced": "menuitem \"Dark mode\"",
+    "axeSummary": "",
+    "criterion": "4.1.2",
+    "criterionName": "Name, Role, Value",
+    "element": "menuitem \"Dark mode\"",
+    "rule": "announced-as",
+    "screen": "Appearance submenu"
+   },
+   "family": "role-state",
+   "guidance": "Low for optional ARIA or an invalid autocomplete token; high when aria-hidden hides the whole page.",
+   "issueId": null,
+   "key": "role-state:announced-as:aea6b9a986cb",
+   "measured": false,
+   "primary": "home.appearance-submenu",
+   "proposals": [],
+   "rule": "announced-as",
+   "screens": 1,
+   "severityDefault": "medium",
+   "source": "scanner",
+   "states": [
+    "home.appearance-submenu"
+   ],
+   "summary": "announced-as: announced as menuitem \"Dark mode\".",
+   "title": "Wrong role or state: menuitem \"Dark mode\""
+  }
+ ],
+ "primaries": [
+  "home.appearance-submenu"
+ ],
+ "reach": {
+  "baseUrl": "https://demo.mercury.com",
+  "data": "data",
+  "map": "build/map.json",
+  "run": "2026-10-03-1525",
+  "workspace": "a11y"
+ },
+ "run": "2026-10-03-1525"
+}

@@ -1,0 +1,180 @@
+{
+ "build": "fixture",
+ "checks": {
+  "axe": {
+   "inapplicable": [],
+   "rulesRan": [
+    "button-name",
+    "color-contrast"
+   ]
+  }
+ },
+ "env": {
+  "axe": "4.13.0",
+  "chromium": "fixture",
+  "colorScheme": "light",
+  "dpr": 1,
+  "locale": "en-US",
+  "playwright": "1.62.1",
+  "reducedMotion": "reduce",
+  "timezone": "America/Los_Angeles",
+  "viewport": [
+   1440,
+   900
+  ]
+ },
+ "families": {
+  "completed": [
+   "axe",
+   "records",
+   "interactive",
+   "target"
+  ],
+  "incomplete": []
+ },
+ "frames": [],
+ "harness": "0000000000000000",
+ "kind": "page",
+ "layer": {
+  "name": "",
+  "role": "document",
+  "scope": "document",
+  "xpath": "/html"
+ },
+ "reason": null,
+ "reasonDetail": null,
+ "recipeHash": "0000000000000000000000000000000000000000000000000000000000000000",
+ "records": [
+  {
+   "description": "",
+   "name": "$12,450.00",
+   "occurrence": {
+    "ancestors": [
+     [
+      "_balanceCard_hom22_3"
+     ],
+     [
+      "_dashboard_hom22_1"
+     ]
+    ],
+    "classes": [
+     "_balance_hom22_4"
+    ],
+    "data": {},
+    "heading": "",
+    "landmark": {
+     "name": "",
+     "role": "main"
+    },
+    "layer": "document",
+    "name": "$12,450.00",
+    "rect": [
+     10,
+     10,
+     24,
+     24
+    ],
+    "role": "heading",
+    "tag": "h2",
+    "xpath": "/html/body/div/main/h2[1]"
+   },
+   "role": "heading",
+   "states": {
+    "level": 2
+   },
+   "template": "heading \"<amount>\" [level=2]"
+  },
+  {
+   "description": "",
+   "name": "Move money",
+   "occurrence": {
+    "ancestors": [
+     [
+      "_actions_hom22_2"
+     ]
+    ],
+    "classes": [
+     "_button_btn01_5",
+     "_primary_btn01_7"
+    ],
+    "data": {},
+    "heading": "",
+    "landmark": {
+     "name": "",
+     "role": "main"
+    },
+    "layer": "document",
+    "name": "Move money",
+    "rect": [
+     10,
+     10,
+     24,
+     24
+    ],
+    "role": "button",
+    "tag": "button",
+    "xpath": "/html/body/div[2]/main/button[1]"
+   },
+   "role": "button",
+   "states": {
+    "expanded": false,
+    "haspopup": "menu"
+   },
+   "template": "button \"Move money\" [expanded=false, haspopup=menu]"
+  }
+ ],
+ "results": [
+  {
+   "basis": "violation",
+   "check": "axe",
+   "criteria": [
+    "1.4.3"
+   ],
+   "evidence": {
+    "bgColor": "#ffffff",
+    "contrastRatio": 2.85,
+    "expectedContrastRatio": "4.5:1",
+    "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 2.85 (foreground color: #9d9da8, background color: #ffffff, font size: 10.5pt (14px), font weight: normal). Expected contrast ratio of 4.5:1",
+    "fgColor": "#9d9da8",
+    "fontSize": "10.5pt (14px)",
+    "fontWeight": "normal"
+   },
+   "messageKey": null,
+   "occurrence": {
+    "ancestors": [
+     [
+      "_widget_hom22_6"
+     ],
+     [
+      "_dashboard_hom22_1"
+     ]
+    ],
+    "classes": [
+     "_muted_ab12c_3"
+    ],
+    "data": {},
+    "heading": "",
+    "landmark": {
+     "name": "",
+     "role": "main"
+    },
+    "layer": "document",
+    "name": "Pending",
+    "rect": [
+     300,
+     200,
+     52,
+     17
+    ],
+    "role": "",
+    "tag": "span",
+    "xpath": "/html/body/div/main/div[4]/span[1]"
+   },
+   "rule": "color-contrast"
+  }
+ ],
+ "schema": 1,
+ "state": "home.index",
+ "status": "audited",
+ "url": "/dashboard"
+}

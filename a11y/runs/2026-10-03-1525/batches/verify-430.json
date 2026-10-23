@@ -1,0 +1,198 @@
+{
+ "area": "billpay",
+ "batch": "verify-430",
+ "findings": [
+  {
+   "attachments": [],
+   "attempt": 1,
+   "basis": "candidate",
+   "criteria": [
+    "2.4.4"
+   ],
+   "evidence": [
+    {
+     "evidence": {
+      "description": "",
+      "name": "Edit",
+      "role": "link",
+      "states": {},
+      "template": "link \"Edit\""
+     },
+     "occurrence": {
+      "ancestors": [
+       [],
+       [
+        "_editButtonTop_b9rf7_17"
+       ],
+       [
+        "_settingSection_b9rf7_3"
+       ],
+       [
+        "_scrollContainer_b9rf7_38"
+       ],
+       [
+        "_large_kwlx6_9",
+        "_noHover_3n0se_28",
+        "_shadow_3n0se_25",
+        "_raisedBackground_3n0se_45",
+        "_card_lo4oy_4",
+        "_medium_lo4oy_15"
+       ],
+       [
+        "ReactModal__Content",
+        "ReactModal__Content--after-open",
+        "_modal_lo4oy_73"
+       ],
+       [
+        "ReactModal__Overlay",
+        "ReactModal__Overlay--after-open",
+        "_overlay_lo4oy_89",
+        "_backgroundColor_lo4oy_103"
+       ],
+       [
+        "ReactModalPortal"
+       ]
+      ],
+      "classes": [
+       "_editLink_b9rf7_138",
+       "_link_ual8v_4",
+       "_variantPrimary_ual8v_33",
+       "_sizeDefault_ual8v_25"
+      ],
+      "data": {
+       "data-discover": "true",
+       "data-session-replay-unmask": "true"
+      },
+      "heading": "Bill Pay settings",
+      "landmark": {
+       "name": "",
+       "role": "dialog"
+      },
+      "layer": "top",
+      "name": "Edit",
+      "rect": [
+       941,
+       452,
+       27,
+       18
+      ],
+      "role": "link",
+      "tag": "a",
+      "xpath": "/html/body/div[11]/div[1]/div[1]/div[1]/div[2]/div[3]/div[2]/span[1]/a[1]"
+     },
+     "state": "billpay.settings"
+    },
+    {
+     "evidence": {
+      "description": "",
+      "name": "Edit",
+      "role": "link",
+      "states": {},
+      "template": "link \"Edit\""
+     },
+     "occurrence": {
+      "ancestors": [
+       [],
+       [
+        "_editButtonTop_b9rf7_17"
+       ],
+       [
+        "_settingSection_b9rf7_3"
+       ],
+       [
+        "_scrollContainer_b9rf7_38"
+       ],
+       [
+        "_large_kwlx6_9",
+        "_noHover_3n0se_28",
+        "_shadow_3n0se_25",
+        "_raisedBackground_3n0se_45",
+        "_card_lo4oy_4",
+        "_medium_lo4oy_15"
+       ],
+       [
+        "ReactModal__Content",
+        "ReactModal__Content--after-open",
+        "_modal_lo4oy_73"
+       ],
+       [
+        "ReactModal__Overlay",
+        "ReactModal__Overlay--after-open",
+        "_overlay_lo4oy_89",
+        "_backgroundColor_lo4oy_103"
+       ],
+       [
+        "ReactModalPortal"
+       ]
+      ],
+      "classes": [
+       "_editLink_b9rf7_138",
+       "_link_ual8v_4",
+       "_variantPrimary_ual8v_33",
+       "_sizeDefault_ual8v_25"
+      ],
+      "data": {
+       "data-discover": "true",
+       "data-session-replay-unmask": "true"
+      },
+      "heading": "Payments settings",
+      "landmark": {
+       "name": "",
+       "role": "dialog"
+      },
+      "layer": "top",
+      "name": "Edit",
+      "rect": [
+       941,
+       452,
+       27,
+       18
+      ],
+      "role": "link",
+      "tag": "a",
+      "xpath": "/html/body/div[12]/div[1]/div[1]/div[1]/div[2]/div[3]/div[2]/span[1]/a[1]"
+     },
+     "state": "payments.settings-modal"
+    }
+   ],
+   "evidenceHash": "21c20bf58edf9383237e02412977e51396df30607c9daccf6c47dc7c335f7229",
+   "facts": {
+    "announced": "link \"Edit\"",
+    "axeSummary": "",
+    "criterion": "2.4.4",
+    "criterionName": "Link Purpose (In Context)",
+    "element": "link \"Edit\"",
+    "rule": "announced-as",
+    "screen": "Bill Pay settings"
+   },
+   "family": "name",
+   "guidance": "High for an unnamed form control or the sole primary action.",
+   "issueId": null,
+   "key": "name:announced-as:03829fa7b755",
+   "measured": false,
+   "primary": "billpay.settings",
+   "proposals": [],
+   "rule": "announced-as",
+   "screens": 5,
+   "severityDefault": "medium",
+   "source": "scanner",
+   "states": [
+    "billpay.settings",
+    "payments.settings-modal"
+   ],
+   "summary": "announced-as: announced as link \"Edit\".",
+   "title": "Missing or unclear name: link \"Edit\""
+  }
+ ],
+ "primaries": [
+  "billpay.settings"
+ ],
+ "reach": {
+  "baseUrl": "https://demo.mercury.com",
+  "data": "data",
+  "map": "build/map.json",
+  "run": "2026-10-03-1525",
+  "workspace": "a11y"
+ },
+ "run": "2026-10-03-1525"
+}

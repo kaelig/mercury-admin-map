@@ -1,0 +1,421 @@
+{
+ "area": "cards",
+ "batch": "verify-161",
+ "findings": [
+  {
+   "attachments": [],
+   "attempt": 1,
+   "basis": "violation",
+   "criteria": [
+    "1.4.3"
+   ],
+   "evidence": [
+    {
+     "evidence": {
+      "bgColor": "#fbfcfd",
+      "contrastRatio": 1.41,
+      "expectedContrastRatio": "3:1",
+      "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 1.41 (foreground color: #d5d6db, background color: #fbfcfd, font size: 28.5pt (38px), font weight: normal). Expected contrast ratio of 3:1",
+      "fgColor": "#d5d6db",
+      "fontSize": "28.5pt (38px)",
+      "fontWeight": "normal",
+      "messageKey": null
+     },
+     "occurrence": {
+      "ancestors": [
+       [
+        "_input_1oe90_3",
+        "_defaultInput_1oe90_30",
+        "_inputDupeContainer_1oe90_89"
+       ],
+       [
+        "_inputWrapper_1oe90_3"
+       ],
+       [],
+       [
+        "_formWrapper_1qmer_19"
+       ],
+       [],
+       [
+        "_activateCardInput_1qmer_12"
+       ],
+       [
+        "_activateCardContents_1qmer_1"
+       ],
+       []
+      ],
+      "classes": [
+       "_placeholderText_1oe90_97",
+       "_visiblePlaceholder_1oe90_101"
+      ],
+      "data": {},
+      "heading": "",
+      "landmark": {
+       "name": "",
+       "role": "form"
+      },
+      "layer": "document",
+      "name": "",
+      "rect": [
+       810,
+       250,
+       146,
+       38
+      ],
+      "role": "",
+      "tag": "span",
+      "xpath": "/html/body/div[1]/main[1]/div[1]/div[2]/div[2]/div[3]/div[1]/div[2]/div[2]/div[1]/div[2]/div[2]/form[1]/div[1]/div[1]/div[1]/div[1]/span[2]"
+     },
+     "state": "cards.reset-pin"
+    },
+    {
+     "evidence": {
+      "bgColor": "#fbfcfd",
+      "contrastRatio": 1.41,
+      "expectedContrastRatio": "3:1",
+      "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 1.41 (foreground color: #d5d6db, background color: #fbfcfd, font size: 28.5pt (38px), font weight: normal). Expected contrast ratio of 3:1",
+      "fgColor": "#d5d6db",
+      "fontSize": "28.5pt (38px)",
+      "fontWeight": "normal",
+      "messageKey": null
+     },
+     "occurrence": {
+      "ancestors": [
+       [
+        "_input_1oe90_3",
+        "_defaultInput_1oe90_30",
+        "_inputDupeContainer_1oe90_89"
+       ],
+       [
+        "_inputWrapper_1oe90_3"
+       ],
+       [],
+       [
+        "_formWrapper_1qmer_19"
+       ],
+       [],
+       [
+        "_activateCardInput_1qmer_12"
+       ],
+       [
+        "_activateCardContents_1qmer_1"
+       ],
+       []
+      ],
+      "classes": [
+       "_placeholderText_1oe90_97",
+       "_visiblePlaceholder_1oe90_101"
+      ],
+      "data": {},
+      "heading": "",
+      "landmark": {
+       "name": "",
+       "role": "form"
+      },
+      "layer": "document",
+      "name": "",
+      "rect": [
+       872,
+       250,
+       73,
+       38
+      ],
+      "role": "",
+      "tag": "span",
+      "xpath": "/html/body/div[1]/main[1]/div[1]/div[2]/div[2]/div[3]/div[1]/div[2]/div[2]/div[1]/div[2]/div[2]/form[1]/div[1]/div[1]/div[1]/div[1]/span[2]"
+     },
+     "state": "cards.reset-pin-error"
+    }
+   ],
+   "evidenceHash": "cdc55e4711f5dd7493a731e6ccaab8b17e9b6d46cafb70b86bf8352bfd670a49",
+   "facts": {
+    "bg": "#fbfcfd",
+    "criterion": "1.4.3",
+    "criterionName": "Contrast (Minimum)",
+    "element": "text in the form landmark",
+    "fg": "#d5d6db",
+    "ratio": "1.41",
+    "required": "3",
+    "rule": "color-contrast",
+    "screen": "Change PIN screen",
+    "screens": 2
+   },
+   "family": "contrast",
+   "guidance": "High under 2:1, or under 3:1 for essential text.",
+   "issueId": null,
+   "key": "contrast:color-contrast:8997c53ac9e8",
+   "measured": true,
+   "primary": "cards.reset-pin",
+   "proposals": [],
+   "rule": "color-contrast",
+   "screens": 2,
+   "severityDefault": "medium",
+   "source": "scanner",
+   "states": [
+    "cards.reset-pin",
+    "cards.reset-pin-error"
+   ],
+   "summary": "axe color-contrast: #d5d6db on #fbfcfd measures 1.41:1; AA needs 3:1.",
+   "title": "Low contrast: text in the form landmark"
+  },
+  {
+   "attachments": [],
+   "attempt": 1,
+   "basis": "violation",
+   "criteria": [
+    "1.4.3"
+   ],
+   "evidence": [
+    {
+     "evidence": {
+      "bgColor": "#f9f9fb",
+      "contrastRatio": 1.82,
+      "expectedContrastRatio": "4.5:1",
+      "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 1.82 (foreground color: #babbc0, background color: #f9f9fb, font size: 9.8pt (13px), font weight: normal). Expected contrast ratio of 4.5:1",
+      "fgColor": "#babbc0",
+      "fontSize": "9.8pt (13px)",
+      "fontWeight": "normal",
+      "messageKey": null
+     },
+     "occurrence": {
+      "ancestors": [
+       [
+        "_saveButtonContents_1qmer_24"
+       ],
+       [],
+       [],
+       [
+        "_button-wrapper_1rzdg_13",
+        "_button_1rzdg_13",
+        "_attachedToInput_1rzdg_246",
+        "_disabled_1rzdg_20",
+        "undefined"
+       ],
+       [
+        "_formWrapper_1qmer_19"
+       ],
+       [],
+       [
+        "_activateCardInput_1qmer_12"
+       ],
+       [
+        "_activateCardContents_1qmer_1"
+       ]
+      ],
+      "classes": [
+       "_label_qaod7_59",
+       "_text-secondary_12t49_1"
+      ],
+      "data": {},
+      "heading": "",
+      "landmark": {
+       "name": "",
+       "role": "form"
+      },
+      "layer": "document",
+      "name": "",
+      "rect": [
+       984,
+       268,
+       27,
+       20
+      ],
+      "role": "",
+      "tag": "span",
+      "xpath": "/html/body/div[1]/main[1]/div[1]/div[2]/div[2]/div[3]/div[1]/div[2]/div[2]/div[1]/div[2]/div[2]/form[1]/div[1]/button[1]/div[1]/div[1]/div[1]/span[1]"
+     },
+     "state": "cards.reset-pin"
+    },
+    {
+     "evidence": {
+      "bgColor": "#f9f9fb",
+      "contrastRatio": 1.82,
+      "expectedContrastRatio": "4.5:1",
+      "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 1.82 (foreground color: #babbc0, background color: #f9f9fb, font size: 9.8pt (13px), font weight: normal). Expected contrast ratio of 4.5:1",
+      "fgColor": "#babbc0",
+      "fontSize": "9.8pt (13px)",
+      "fontWeight": "normal",
+      "messageKey": null
+     },
+     "occurrence": {
+      "ancestors": [
+       [
+        "_saveButtonContents_1qmer_24"
+       ],
+       [],
+       [],
+       [
+        "_button-wrapper_1rzdg_13",
+        "_button_1rzdg_13",
+        "_attachedToInput_1rzdg_246",
+        "_disabled_1rzdg_20",
+        "undefined"
+       ],
+       [
+        "_formWrapper_1qmer_19"
+       ],
+       [],
+       [
+        "_activateCardInput_1qmer_12"
+       ],
+       [
+        "_activateCardContents_1qmer_1"
+       ]
+      ],
+      "classes": [
+       "_label_qaod7_59",
+       "_text-secondary_12t49_1"
+      ],
+      "data": {},
+      "heading": "",
+      "landmark": {
+       "name": "",
+       "role": "form"
+      },
+      "layer": "document",
+      "name": "",
+      "rect": [
+       984,
+       268,
+       27,
+       20
+      ],
+      "role": "",
+      "tag": "span",
+      "xpath": "/html/body/div[1]/main[1]/div[1]/div[2]/div[2]/div[3]/div[1]/div[2]/div[2]/div[1]/div[2]/div[2]/form[1]/div[1]/button[1]/div[1]/div[1]/div[1]/span[1]"
+     },
+     "state": "cards.reset-pin-error"
+    }
+   ],
+   "evidenceHash": "d79d622f20198903e9625f7e1a8c3084e429e801605c4364b1641736d8aca3e0",
+   "facts": {
+    "bg": "#f9f9fb",
+    "criterion": "1.4.3",
+    "criterionName": "Contrast (Minimum)",
+    "element": "text in the form landmark",
+    "fg": "#babbc0",
+    "ratio": "1.82",
+    "required": "4.5",
+    "rule": "color-contrast",
+    "screen": "Change PIN screen",
+    "screens": 2
+   },
+   "family": "contrast",
+   "guidance": "High under 2:1, or under 3:1 for essential text.",
+   "issueId": null,
+   "key": "contrast:color-contrast:ac5b471ade60",
+   "measured": true,
+   "primary": "cards.reset-pin",
+   "proposals": [],
+   "rule": "color-contrast",
+   "screens": 2,
+   "severityDefault": "medium",
+   "source": "scanner",
+   "states": [
+    "cards.reset-pin",
+    "cards.reset-pin-error"
+   ],
+   "summary": "axe color-contrast: #babbc0 on #f9f9fb measures 1.82:1; AA needs 4.5:1.",
+   "title": "Low contrast: text in the form landmark"
+  },
+  {
+   "attachments": [],
+   "attempt": 1,
+   "basis": "violation",
+   "criteria": [
+    "4.1.2"
+   ],
+   "evidence": [
+    {
+     "evidence": {
+      "failureSummary": "Fix any of the following:\n  Element does not have an implicit (wrapped) <label>\n  Element does not have an explicit <label>\n  aria-label attribute does not exist or is empty\n  aria-labelledby attribute does not exist, references elements that do not exist or references elements that are empty\n  Element has no title attribute\n  Element has an empty placeholder attribute\n  Element's default semantics were not overridden with role=\"none\" or role=\"presentation\"",
+      "messageKey": "emptyAttr"
+     },
+     "occurrence": {
+      "ancestors": [
+       [
+        "_inputWrapper_1oe90_3"
+       ],
+       [],
+       [
+        "_formWrapper_1qmer_19"
+       ],
+       [],
+       [
+        "_activateCardInput_1qmer_12"
+       ],
+       [
+        "_activateCardContents_1qmer_1"
+       ],
+       [],
+       [
+        "_cardActionsWrapper_1isom_21"
+       ]
+      ],
+      "classes": [
+       "_input_1oe90_3",
+       "_inputField_1oe90_64",
+       "_defaultInput_1oe90_30",
+       "_saveButtonRadius_1oe90_53"
+      ],
+      "data": {},
+      "heading": "",
+      "landmark": {
+       "name": "",
+       "role": "form"
+      },
+      "layer": "document",
+      "name": "",
+      "rect": [
+       795,
+       238,
+       174,
+       64
+      ],
+      "role": "textbox",
+      "tag": "input",
+      "xpath": "/html/body/div[1]/main[1]/div[1]/div[2]/div[2]/div[3]/div[1]/div[2]/div[2]/div[1]/div[2]/div[2]/form[1]/div[1]/div[1]/div[1]/input[1]"
+     },
+     "state": "cards.reset-pin"
+    }
+   ],
+   "evidenceHash": "83ec825c02638159456269525be7f93c2603bc92f11f825bd4b569476fbdf371",
+   "facts": {
+    "announced": "textbox \"\"",
+    "axeSummary": "Element does not have an implicit (wrapped) <label>; Element does not have an explicit <label>; aria-label attribute does not exist or is empty; aria-labelledb…",
+    "criterion": "4.1.2",
+    "criterionName": "Name, Role, Value",
+    "element": "textbox in the form landmark",
+    "rule": "label",
+    "screen": "Change PIN screen"
+   },
+   "family": "name",
+   "guidance": "High for an unnamed form control or the sole primary action.",
+   "issueId": null,
+   "key": "name:label:c6b76a83dbdf",
+   "measured": false,
+   "primary": "cards.reset-pin",
+   "proposals": [],
+   "rule": "label",
+   "screens": 1,
+   "severityDefault": "medium",
+   "source": "scanner",
+   "states": [
+    "cards.reset-pin"
+   ],
+   "summary": "label: announced as textbox \"\". Element does not have an implicit (wrapped) <label>; Element does not have an explicit <label>; aria-label attribute does not exist or is empty; aria-labelledb…",
+   "title": "Missing or unclear name: textbox in the form landmark"
+  }
+ ],
+ "primaries": [
+  "cards.reset-pin"
+ ],
+ "reach": {
+  "baseUrl": "https://demo.mercury.com",
+  "data": "data",
+  "map": "build/map.json",
+  "run": "2026-10-03-1525",
+  "workspace": "a11y"
+ },
+ "run": "2026-10-03-1525"
+}

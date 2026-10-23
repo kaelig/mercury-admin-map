@@ -1,0 +1,334 @@
+{
+ "area": "transactions",
+ "batch": "verify-371",
+ "findings": [
+  {
+   "attachments": [],
+   "attempt": 1,
+   "basis": "candidate",
+   "criteria": [
+    "2.4.3",
+    "1.3.2"
+   ],
+   "evidence": [
+    {
+     "evidence": {
+      "band": 38,
+      "overlay": "transactions.detail-intl-wire.tabstops.png",
+      "previous": {
+       "ancestors": [
+        [
+         "_suffix_11c85_28"
+        ],
+        [
+         "_inputWrapper_11c85_6"
+        ],
+        [
+         "_wrapper_1xgdp_8"
+        ],
+        [
+         "_wrapper_16rxx_1"
+        ],
+        [
+         "_accountingCategorizationSelectComboboxWrapper_lz19l_1"
+        ],
+        [
+         "_panelSection_d3i56_148"
+        ],
+        [
+         "_panelBody_d3i56_64"
+        ],
+        [
+         "_large_kwlx6_9",
+         "_noHover_3n0se_28",
+         "_shadow_3n0se_25",
+         "_raisedBackground_3n0se_45",
+         "_panel_d3i56_55",
+         "_detailsCardPanel_15kl9_287"
+        ]
+       ],
+       "classes": [
+        "_clearButton_racqb_3"
+       ],
+       "data": {
+        "data-focus-visible": "true"
+       },
+       "heading": "",
+       "landmark": {
+        "name": "",
+        "role": "complementary"
+       },
+       "layer": "top",
+       "name": "Clear combobox selection",
+       "rect": [
+        1355,
+        606,
+        32,
+        38
+       ],
+       "role": "button",
+       "tag": "button",
+       "xpath": "/html/body/div[3]/aside[1]/div[1]/div[1]/section[2]/div[2]/div[1]/div[1]/div[1]/div[1]/button[1]"
+      },
+      "rise": 227,
+      "stop": 10,
+      "stops": 21
+     },
+     "occurrence": {
+      "ancestors": [
+       [
+        "_text-link_12t49_1"
+       ],
+       [
+        "_tiny_qaod7_67",
+        "_text-secondary_12t49_1"
+       ],
+       [
+        "_container_ktzvq_3",
+        "_accountingPageCTA_lz19l_14"
+       ],
+       [
+        "_wrapper_16rxx_1"
+       ],
+       [
+        "_accountingCategorizationSelectComboboxWrapper_lz19l_1"
+       ],
+       [
+        "_panelSection_d3i56_148"
+       ],
+       [
+        "_panelBody_d3i56_64"
+       ],
+       [
+        "_large_kwlx6_9",
+        "_noHover_3n0se_28",
+        "_shadow_3n0se_25",
+        "_raisedBackground_3n0se_45",
+        "_panel_d3i56_55",
+        "_detailsCardPanel_15kl9_287"
+       ]
+      ],
+      "classes": [
+       "_link_ual8v_4",
+       "_underlineOnHover_ual8v_15"
+      ],
+      "data": {
+       "data-discover": "true"
+      },
+      "heading": "",
+      "landmark": {
+       "name": "",
+       "role": "complementary"
+      },
+      "layer": "top",
+      "name": "Accounting Page",
+      "rect": [
+       1166,
+       379,
+       95,
+       14
+      ],
+      "role": "link",
+      "tag": "a",
+      "xpath": "/html/body/div[3]/aside[1]/div[1]/div[1]/section[2]/div[2]/div[1]/div[2]/span[1]/span[1]/a[1]"
+     },
+     "state": "transactions.detail-intl-wire"
+    }
+   ],
+   "evidenceHash": "6011f68858303fac40db081a54577833ba4a8a91c694ae3a70597ea37749e4ec",
+   "facts": {
+    "criterion": "2.4.3",
+    "criterionName": "Focus Order",
+    "element": "link \"Accounting Page\"",
+    "previous": "button \"Clear combobox selection\"",
+    "screen": "International wire detail",
+    "stop": "10"
+   },
+   "family": "focus-order",
+   "guidance": "High if the order skips a required control.",
+   "issueId": null,
+   "key": "focus-order:backward-jump:6c0618cc5cb0",
+   "measured": false,
+   "primary": "transactions.detail-intl-wire",
+   "proposals": [],
+   "rule": "backward-jump",
+   "screens": 1,
+   "severityDefault": "medium",
+   "source": "scanner",
+   "states": [
+    "transactions.detail-intl-wire"
+   ],
+   "summary": "Tab stop 10 jumped backward on screen, from the button \"Clear combobox selection\" to the link \"Accounting Page\".",
+   "title": "Tab order jumps backward at link \"Accounting Page\""
+  },
+  {
+   "attachments": [],
+   "attempt": 1,
+   "basis": "candidate",
+   "criteria": [
+    "2.4.3",
+    "1.3.2"
+   ],
+   "evidence": [
+    {
+     "evidence": {
+      "band": 64,
+      "overlay": "transactions.detail-intl-wire.tabstops.png",
+      "previous": {
+       "ancestors": [
+        [
+         "_textareaWrapper_54wwi_16",
+         "_rowSizing_54wwi_149"
+        ],
+        [
+         "_textareaProgressWrapper_54wwi_28"
+        ],
+        [
+         "_textareaBoundingWrapper_54wwi_7"
+        ],
+        [
+         "_notesSectionWrapper_15kl9_120"
+        ],
+        [
+         "_panelSection_d3i56_148"
+        ],
+        [
+         "_panelBody_d3i56_64"
+        ],
+        [
+         "_large_kwlx6_9",
+         "_noHover_3n0se_28",
+         "_shadow_3n0se_25",
+         "_raisedBackground_3n0se_45",
+         "_panel_d3i56_55",
+         "_detailsCardPanel_15kl9_287"
+        ],
+        [
+         "_transitionWrapper_d3i56_5",
+         "_visible_d3i56_19",
+         "_detailsCardWrapper_15kl9_247"
+        ]
+       ],
+       "classes": [
+        "_textarea_54wwi_7"
+       ],
+       "data": {
+        "data-session-replay-mask": "true"
+       },
+       "heading": "",
+       "landmark": {
+        "name": "",
+        "role": "form"
+       },
+       "layer": "top",
+       "name": "Notes",
+       "rect": [
+        1013,
+        537,
+        374,
+        64
+       ],
+       "role": "textbox",
+       "tag": "textarea",
+       "xpath": "/html/body/div[3]/aside[1]/div[1]/div[1]/section[2]/form[1]/div[2]/div[1]/div[1]/textarea[1]"
+      },
+      "rise": 149,
+      "stop": 14,
+      "stops": 21
+     },
+     "occurrence": {
+      "ancestors": [
+       [
+        "_dropzone_1wot7_3"
+       ],
+       [
+        "_fileDropzoneWrapper_1jvrn_1"
+       ],
+       [
+        "_panelSection_d3i56_148"
+       ],
+       [
+        "_panelBody_d3i56_64"
+       ],
+       [
+        "_large_kwlx6_9",
+        "_noHover_3n0se_28",
+        "_shadow_3n0se_25",
+        "_raisedBackground_3n0se_45",
+        "_panel_d3i56_55",
+        "_detailsCardPanel_15kl9_287"
+       ],
+       [
+        "_transitionWrapper_d3i56_5",
+        "_visible_d3i56_19",
+        "_detailsCardWrapper_15kl9_247"
+       ],
+       [
+        "_drawerRoot_15kl9_6"
+       ]
+      ],
+      "classes": [
+       "_insideDropzone_1wot7_30",
+       "_noDefaultPaddingOrMarginsInsideDropzone_1wot7_39",
+       "_fileDropzone_1jvrn_1"
+      ],
+      "data": {},
+      "heading": "",
+      "landmark": {
+       "name": "",
+       "role": "complementary"
+      },
+      "layer": "top",
+      "name": "Drag and drop here or click to upload You may upload PDF, PNG, or JPEG files",
+      "rect": [
+       1013,
+       388,
+       374,
+       64
+      ],
+      "role": "button",
+      "tag": "div",
+      "xpath": "/html/body/div[3]/aside[1]/div[1]/div[1]/section[2]/div[5]/div[1]/div[1]"
+     },
+     "state": "transactions.detail-intl-wire"
+    }
+   ],
+   "evidenceHash": "182eda13282b445480c5ed22a74619c1fc793aa84eb9e9acc3f36057c6921bb3",
+   "facts": {
+    "criterion": "2.4.3",
+    "criterionName": "Focus Order",
+    "element": "button \"Drag and drop here or click to upload Yo…\"",
+    "previous": "textbox \"Notes\"",
+    "screen": "International wire detail",
+    "stop": "14"
+   },
+   "family": "focus-order",
+   "guidance": "High if the order skips a required control.",
+   "issueId": null,
+   "key": "focus-order:backward-jump:cecf5a0966d0",
+   "measured": false,
+   "primary": "transactions.detail-intl-wire",
+   "proposals": [],
+   "rule": "backward-jump",
+   "screens": 1,
+   "severityDefault": "medium",
+   "source": "scanner",
+   "states": [
+    "transactions.detail-intl-wire"
+   ],
+   "summary": "Tab stop 14 jumped backward on screen, from the textbox \"Notes\" to the button \"Drag and drop here or click to upload Yo…\".",
+   "title": "Tab order jumps backward at button \"Drag and drop here or click to upload Yo…\""
+  }
+ ],
+ "primaries": [
+  "transactions.detail-intl-wire"
+ ],
+ "reach": {
+  "baseUrl": "https://demo.mercury.com",
+  "data": "data",
+  "map": "build/map.json",
+  "run": "2026-10-03-1525",
+  "workspace": "a11y"
+ },
+ "run": "2026-10-03-1525"
+}

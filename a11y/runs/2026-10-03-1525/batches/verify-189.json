@@ -1,0 +1,486 @@
+{
+ "area": "home",
+ "batch": "verify-189",
+ "findings": [
+  {
+   "attachments": [],
+   "attempt": 1,
+   "basis": "candidate",
+   "criteria": [
+    "2.4.3",
+    "1.3.2"
+   ],
+   "evidence": [
+    {
+     "evidence": {
+      "band": 51,
+      "overlay": "home.index-disputes.tabstops.png",
+      "previous": {
+       "ancestors": [
+        [
+         "session-replay-unmask"
+        ],
+        [
+         "_tiny_qaod7_67",
+         "_text-tertiary_12t49_1"
+        ],
+        [
+         "_tableHead_hi0p4_3",
+         "_alignmentStart_hi0p4_11",
+         "_header_4sbgh_38",
+         "_account_4sbgh_14"
+        ],
+        [
+         "_tableHeadRow_1rlph_21"
+        ],
+        [
+         "_tableHead_1rlph_1",
+         "_transactionsTableHeader_165jq_1"
+        ],
+        [
+         "_table_1acga_4"
+        ],
+        [
+         "_tableWrapper_1acga_4"
+        ],
+        [
+         "_scrollableTableWrapper_ebsnk_1"
+        ]
+       ],
+       "classes": [
+        "_sortableHeader_cc9i4_3"
+       ],
+       "data": {},
+       "heading": "Welcome, Jane",
+       "landmark": {
+        "name": "",
+        "role": "main"
+       },
+       "layer": "document",
+       "name": "Account Click to sort",
+       "rect": [
+        948,
+        876,
+        77,
+        24
+       ],
+       "role": "button",
+       "tag": "button",
+       "xpath": "/html/body/div[1]/main[1]/div[1]/div[1]/div[4]/div[1]/div[2]/div[1]/div[1]/div[4]/div[4]/div[3]/div[1]/table[1]/thead[1]/tr[1]/th[4]/span[1]/span[1]/button[1]"
+      },
+      "rise": 424,
+      "stop": 97,
+      "stops": 108
+     },
+     "occurrence": {
+      "ancestors": [
+       [
+        "_tableBody_1cp5b_1"
+       ],
+       [
+        "_table_1acga_4"
+       ],
+       [
+        "_tableWrapper_1acga_4"
+       ],
+       [
+        "_scrollableTableWrapper_ebsnk_1"
+       ],
+       [],
+       [
+        "_analyticsDashboard_ct6b5_36"
+       ],
+       [
+        "_fullWidthWrapper_ct6b5_9"
+       ],
+       [
+        "_outerWrapper_ct6b5_1"
+       ]
+      ],
+      "classes": [
+       "_tableRow_137xu_3",
+       "_interactiveRows_137xu_35",
+       "_row_165jq_2"
+      ],
+      "data": {},
+      "heading": "Welcome, Jane",
+      "landmark": {
+       "name": "",
+       "role": "main"
+      },
+      "layer": "document",
+      "name": "",
+      "rect": [
+       346,
+       452,
+       968,
+       51
+      ],
+      "role": "row",
+      "tag": "tr",
+      "xpath": "/html/body/div[1]/main[1]/div[1]/div[1]/div[4]/div[1]/div[2]/div[1]/div[1]/div[4]/div[4]/div[3]/div[1]/table[1]/tbody[1]/tr[1]"
+     },
+     "state": "home.index-disputes"
+    }
+   ],
+   "evidenceHash": "2e34ddde3ed1f58f24be92d9d2d70d6a6226de31556c55a7db48670ca55814ac",
+   "facts": {
+    "criterion": "2.4.3",
+    "criterionName": "Focus Order",
+    "element": "row in \"Welcome, Jane\"",
+    "previous": "button \"Account Click to sort\"",
+    "screen": "Home with Disputes widget",
+    "stop": "97"
+   },
+   "family": "focus-order",
+   "guidance": "High if the order skips a required control.",
+   "issueId": null,
+   "key": "focus-order:backward-jump:178b3d307ccf",
+   "measured": false,
+   "primary": "home.index-disputes",
+   "proposals": [],
+   "rule": "backward-jump",
+   "screens": 1,
+   "severityDefault": "medium",
+   "source": "scanner",
+   "states": [
+    "home.index-disputes"
+   ],
+   "summary": "Tab stop 97 jumped backward on screen, from the button \"Account Click to sort\" to the row in \"Welcome, Jane\".",
+   "title": "Tab order jumps backward at row in \"Welcome, Jane\""
+  },
+  {
+   "attachments": [],
+   "attempt": 1,
+   "basis": "candidate",
+   "criteria": [
+    "2.4.3",
+    "1.3.2"
+   ],
+   "evidence": [
+    {
+     "evidence": {
+      "band": 44,
+      "overlay": "home.index-disputes.tabstops.png",
+      "previous": {
+       "ancestors": [
+        [
+         "_partySection_1euis_90"
+        ],
+        [
+         "_large_kwlx6_9",
+         "_noHover_3n0se_28",
+         "_border_3n0se_35",
+         "_raisedBackground_3n0se_45",
+         "_card_1euis_1"
+        ],
+        [
+         "_moneyFlowCards_ct6b5_76"
+        ],
+        [
+         "_moneyFlowRow_ct6b5_65"
+        ],
+        [
+         "_analyticsDashboard_ct6b5_36"
+        ],
+        [
+         "_fullWidthWrapper_ct6b5_9"
+        ],
+        [
+         "_outerWrapper_ct6b5_1"
+        ],
+        [
+         "_dashboardContentWrapper_ct6b5_108",
+         "_pageContent_809q8_151",
+         "_footerPadding_809q8_115"
+        ]
+       ],
+       "classes": [
+        "_partyRow_1euis_119",
+        "_noStyleLink_njx8v_1"
+       ],
+       "data": {
+        "data-discover": "true"
+       },
+       "heading": "Welcome, Jane",
+       "landmark": {
+        "name": "",
+        "role": "main"
+       },
+       "layer": "document",
+       "name": "Google $12,094.22",
+       "rect": [
+        363,
+        856,
+        438,
+        44
+       ],
+       "role": "link",
+       "tag": "a",
+       "xpath": "/html/body/div[1]/main[1]/div[1]/div[1]/div[4]/div[1]/div[2]/div[1]/div[1]/div[4]/div[3]/div[2]/div[1]/div[2]/a[1]"
+      },
+      "rise": 400,
+      "stop": 81,
+      "stops": 108
+     },
+     "occurrence": {
+      "ancestors": [
+       [
+        "_partySection_1euis_90"
+       ],
+       [
+        "_large_kwlx6_9",
+        "_noHover_3n0se_28",
+        "_border_3n0se_35",
+        "_raisedBackground_3n0se_45",
+        "_card_1euis_1"
+       ],
+       [
+        "_moneyFlowCards_ct6b5_76"
+       ],
+       [
+        "_moneyFlowRow_ct6b5_65"
+       ],
+       [
+        "_analyticsDashboard_ct6b5_36"
+       ],
+       [
+        "_fullWidthWrapper_ct6b5_9"
+       ],
+       [
+        "_outerWrapper_ct6b5_1"
+       ],
+       [
+        "_dashboardContentWrapper_ct6b5_108",
+        "_pageContent_809q8_151",
+        "_footerPadding_809q8_115"
+       ]
+      ],
+      "classes": [
+       "_partyRow_1euis_119",
+       "_noStyleLink_njx8v_1"
+      ],
+      "data": {
+       "data-discover": "true"
+      },
+      "heading": "Welcome, Jane",
+      "landmark": {
+       "name": "",
+       "role": "main"
+      },
+      "layer": "document",
+      "name": "Milgram Brokerage $5,955.63",
+      "rect": [
+       363,
+       456,
+       438,
+       44
+      ],
+      "role": "link",
+      "tag": "a",
+      "xpath": "/html/body/div[1]/main[1]/div[1]/div[1]/div[4]/div[1]/div[2]/div[1]/div[1]/div[4]/div[3]/div[2]/div[1]/div[2]/a[2]"
+     },
+     "state": "home.index-disputes"
+    }
+   ],
+   "evidenceHash": "8a8891997ccb31efa430c89da2918621aebf49e8f16967bbedfe93cb70c4d285",
+   "facts": {
+    "criterion": "2.4.3",
+    "criterionName": "Focus Order",
+    "element": "link \"Milgram Brokerage <amount>\"",
+    "previous": "link \"Google <amount>\"",
+    "screen": "Home with Disputes widget",
+    "stop": "81"
+   },
+   "family": "focus-order",
+   "guidance": "High if the order skips a required control.",
+   "issueId": null,
+   "key": "focus-order:backward-jump:1e77a3469bd9",
+   "measured": false,
+   "primary": "home.index-disputes",
+   "proposals": [],
+   "rule": "backward-jump",
+   "screens": 1,
+   "severityDefault": "medium",
+   "source": "scanner",
+   "states": [
+    "home.index-disputes"
+   ],
+   "summary": "Tab stop 81 jumped backward on screen, from the link \"Google <amount>\" to the link \"Milgram Brokerage <amount>\".",
+   "title": "Tab order jumps backward at link \"Milgram Brokerage <amount>\""
+  },
+  {
+   "attachments": [],
+   "attempt": 1,
+   "basis": "candidate",
+   "criteria": [
+    "2.4.3",
+    "1.3.2"
+   ],
+   "evidence": [
+    {
+     "evidence": {
+      "band": 18,
+      "overlay": "home.index-disputes.tabstops.png",
+      "previous": {
+       "ancestors": [
+        [
+         "_text-link_12t49_1"
+        ],
+        [
+         "_bottomRow_145zk_228"
+        ],
+        [
+         "_large_kwlx6_9",
+         "_noHover_3n0se_28",
+         "_border_3n0se_35",
+         "_raisedBackground_3n0se_45",
+         "_card_1ym9q_1",
+         "_card_145zk_1"
+        ],
+        [
+         "_moduleRow_ct6b5_48",
+         "_moduleRowTwoColumns_ct6b5_57"
+        ],
+        [
+         "_analyticsDashboard_ct6b5_36"
+        ],
+        [
+         "_fullWidthWrapper_ct6b5_9"
+        ],
+        [
+         "_outerWrapper_ct6b5_1"
+        ],
+        [
+         "_dashboardContentWrapper_ct6b5_108",
+         "_pageContent_809q8_151",
+         "_footerPadding_809q8_115"
+        ]
+       ],
+       "classes": [
+        "_link_ual8v_4",
+        "_underlineOnHover_ual8v_15",
+        "_sizeDefault_ual8v_25"
+       ],
+       "data": {
+        "data-discover": "true"
+       },
+       "heading": "Welcome, Jane",
+       "landmark": {
+        "name": "",
+        "role": "main"
+       },
+       "layer": "document",
+       "name": "View",
+       "rect": [
+        745,
+        816,
+        48,
+        18
+       ],
+       "role": "link",
+       "tag": "a",
+       "xpath": "/html/body/div[1]/main[1]/div[1]/div[1]/div[4]/div[1]/div[2]/div[1]/div[1]/div[4]/div[2]/div[1]/div[2]/span[1]/a[1]"
+      },
+      "rise": 150,
+      "stop": 65,
+      "stops": 108
+     },
+     "occurrence": {
+      "ancestors": [
+       [],
+       [
+        "_bodyDefault_qaod7_40",
+        "_text-default_12t49_1"
+       ],
+       [
+        "_titleAndAmount_1dp3n_8"
+       ],
+       [
+        "_topRow_1dp3n_2"
+       ],
+       [
+        "_large_kwlx6_9",
+        "_noHover_3n0se_28",
+        "_border_3n0se_35",
+        "_raisedBackground_3n0se_45",
+        "_card_1ym9q_1",
+        "_card_1dp3n_1"
+       ],
+       [
+        "_moduleRow_ct6b5_48",
+        "_moduleRowTwoColumns_ct6b5_57"
+       ],
+       [
+        "_analyticsDashboard_ct6b5_36"
+       ],
+       [
+        "_fullWidthWrapper_ct6b5_9"
+       ]
+      ],
+      "classes": [
+       "_link_ual8v_4",
+       "_underlineOnHover_ual8v_15"
+      ],
+      "data": {
+       "data-discover": "true"
+      },
+      "heading": "Welcome, Jane",
+      "landmark": {
+       "name": "",
+       "role": "main"
+      },
+      "layer": "document",
+      "name": "Credit Card",
+      "rect": [
+       867,
+       666,
+       81,
+       18
+      ],
+      "role": "link",
+      "tag": "a",
+      "xpath": "/html/body/div[1]/main[1]/div[1]/div[1]/div[4]/div[1]/div[2]/div[1]/div[1]/div[4]/div[2]/div[2]/div[1]/div[1]/span[1]/span[1]/a[1]"
+     },
+     "state": "home.index-disputes"
+    }
+   ],
+   "evidenceHash": "19330438e5be6e98c6057df5eec551659a0044a9d32866048abe372ebc6c08a6",
+   "facts": {
+    "criterion": "2.4.3",
+    "criterionName": "Focus Order",
+    "element": "link \"Credit Card\"",
+    "previous": "link \"View\"",
+    "screen": "Home with Disputes widget",
+    "stop": "65"
+   },
+   "family": "focus-order",
+   "guidance": "High if the order skips a required control.",
+   "issueId": null,
+   "key": "focus-order:backward-jump:dab05566f124",
+   "measured": false,
+   "primary": "home.index-disputes",
+   "proposals": [],
+   "rule": "backward-jump",
+   "screens": 1,
+   "severityDefault": "medium",
+   "source": "scanner",
+   "states": [
+    "home.index-disputes"
+   ],
+   "summary": "Tab stop 65 jumped backward on screen, from the link \"View\" to the link \"Credit Card\".",
+   "title": "Tab order jumps backward at link \"Credit Card\""
+  }
+ ],
+ "primaries": [
+  "home.index-disputes"
+ ],
+ "reach": {
+  "baseUrl": "https://demo.mercury.com",
+  "data": "data",
+  "map": "build/map.json",
+  "run": "2026-10-03-1525",
+  "workspace": "a11y"
+ },
+ "run": "2026-10-03-1525"
+}

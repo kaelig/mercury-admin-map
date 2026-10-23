@@ -1,0 +1,512 @@
+{
+ "area": "transactions",
+ "batch": "verify-546",
+ "findings": [
+  {
+   "attachments": [],
+   "attempt": 1,
+   "basis": "candidate",
+   "criteria": [
+    "4.1.2"
+   ],
+   "evidence": [
+    {
+     "evidence": {
+      "description": "",
+      "name": "All Cashflow",
+      "role": "menuitem",
+      "states": {
+       "expanded": false,
+       "haspopup": "menu"
+      },
+      "template": "menuitem \"All Cashflow\" [expanded=false, haspopup=menu]"
+     },
+     "occurrence": {
+      "ancestors": [
+       [
+        "_chip_1xw00_8",
+        "_inactive_1xw00_119"
+       ],
+       [],
+       [
+        "_filters_grqat_29"
+       ],
+       [
+        "_tableViewsAndFilters_grqat_82"
+       ],
+       [
+        "_toolbarContainer_grqat_4"
+       ],
+       [
+        "_wrapper_1p8lo_1"
+       ],
+       [
+        "_tabBarLeft_almxf_39"
+       ],
+       [
+        "_tabBar_almxf_27"
+       ]
+      ],
+      "classes": [
+       "_mainElement_1xw00_24",
+       "_interactive_1xw00_134",
+       "_dropdownChip_r52w9_7"
+      ],
+      "data": {},
+      "heading": "Insights",
+      "landmark": {
+       "name": "",
+       "role": "main"
+      },
+      "layer": "document",
+      "name": "All Cashflow",
+      "rect": [
+       656,
+       196,
+       130,
+       32
+      ],
+      "role": "menuitem",
+      "tag": "button",
+      "xpath": "/html/body/div[1]/main[1]/div[1]/div[1]/div[4]/div[1]/div[2]/div[2]/div[1]/div[1]/div[1]/div[1]/span[1]/span[4]/span[2]/span[1]/button[1]"
+     },
+     "state": "transactions.insights"
+    },
+    {
+     "evidence": {
+      "description": "",
+      "name": "All Cashflow",
+      "role": "menuitem",
+      "states": {
+       "expanded": false,
+       "haspopup": "menu"
+      },
+      "template": "menuitem \"All Cashflow\" [expanded=false, haspopup=menu]"
+     },
+     "occurrence": {
+      "ancestors": [
+       [
+        "_chip_1xw00_8",
+        "_inactive_1xw00_119"
+       ],
+       [],
+       [
+        "_filters_grqat_29"
+       ],
+       [
+        "_tableViewsAndFilters_grqat_82"
+       ],
+       [
+        "_toolbarContainer_grqat_4"
+       ],
+       [
+        "_wrapper_1p8lo_1"
+       ],
+       [
+        "_tabBarLeft_almxf_39"
+       ],
+       [
+        "_tabBar_almxf_27"
+       ]
+      ],
+      "classes": [
+       "_mainElement_1xw00_24",
+       "_interactive_1xw00_134",
+       "_dropdownChip_r52w9_7"
+      ],
+      "data": {},
+      "heading": "Insights",
+      "landmark": {
+       "name": "",
+       "role": "main"
+      },
+      "layer": "document",
+      "name": "All Cashflow",
+      "rect": [
+       656,
+       196,
+       130,
+       32
+      ],
+      "role": "menuitem",
+      "tag": "button",
+      "xpath": "/html/body/div[1]/main[1]/div[1]/div[1]/div[4]/div[1]/div[2]/div[2]/div[1]/div[1]/div[1]/div[1]/span[1]/span[4]/span[2]/span[1]/button[1]"
+     },
+     "state": "transactions.insights-line"
+    }
+   ],
+   "evidenceHash": "3d5fc03f850b5b77ae24c105ab9f0f081c032a6746ad837ffd6c21f5b90538cc",
+   "facts": {
+    "announced": "menuitem \"All Cashflow\" [expanded=false, haspopup=menu]",
+    "axeSummary": "",
+    "criterion": "4.1.2",
+    "criterionName": "Name, Role, Value",
+    "element": "menuitem \"All Cashflow\"",
+    "rule": "announced-as",
+    "screen": "Insights overview"
+   },
+   "family": "role-state",
+   "guidance": "Low for optional ARIA or an invalid autocomplete token; high when aria-hidden hides the whole page.",
+   "issueId": null,
+   "key": "role-state:announced-as:ba15783831eb",
+   "measured": false,
+   "primary": "transactions.insights",
+   "proposals": [],
+   "rule": "announced-as",
+   "screens": 7,
+   "severityDefault": "medium",
+   "source": "scanner",
+   "states": [
+    "transactions.insights",
+    "transactions.insights-line"
+   ],
+   "summary": "announced-as: announced as menuitem \"All Cashflow\" [expanded=false, haspopup=menu].",
+   "title": "Wrong role or state: menuitem \"All Cashflow\""
+  },
+  {
+   "attachments": [],
+   "attempt": 1,
+   "basis": "candidate",
+   "criteria": [
+    "4.1.2"
+   ],
+   "evidence": [
+    {
+     "evidence": {
+      "description": "",
+      "name": "Recipient",
+      "role": "button",
+      "states": {},
+      "template": "button \"Recipient\""
+     },
+     "occurrence": {
+      "ancestors": [
+       [
+        "_buttonWithDivider_1xt6d_80"
+       ],
+       [
+        "_container_1xt6d_3",
+        "_small_1xt6d_4"
+       ],
+       [
+        "_everythingButTheList_1v7h7_20"
+       ],
+       [
+        "_large_kwlx6_9",
+        "_noHover_3n0se_28",
+        "_border_3n0se_35",
+        "_wrapper_1v7h7_1",
+        "viewCaptureExpand"
+       ],
+       [
+        "_topMoneyOutWrapper_snsic_47"
+       ],
+       [
+        "_moneyInMoneyOutContainer_snsic_25"
+       ],
+       [
+        "_overviewContainer_snsic_3"
+       ],
+       [
+        "_tabContent_almxf_77"
+       ]
+      ],
+      "classes": [
+       "_segment_1xt6d_7",
+       "_selected_1xt6d_60",
+       "_first_1xt6d_73"
+      ],
+      "data": {},
+      "heading": "Insights",
+      "landmark": {
+       "name": "",
+       "role": "main"
+      },
+      "layer": "document",
+      "name": "Recipient",
+      "rect": [
+       863,
+       1046,
+       177,
+       32
+      ],
+      "role": "button",
+      "tag": "button",
+      "xpath": "/html/body/div[1]/main[1]/div[1]/div[1]/div[4]/div[1]/div[2]/div[3]/div[1]/div[3]/div[2]/div[1]/div[1]/div[2]/div[1]/button[1]"
+     },
+     "state": "transactions.insights"
+    },
+    {
+     "evidence": {
+      "description": "",
+      "name": "Recipient",
+      "role": "button",
+      "states": {},
+      "template": "button \"Recipient\""
+     },
+     "occurrence": {
+      "ancestors": [
+       [
+        "_buttonWithDivider_1xt6d_80"
+       ],
+       [
+        "_container_1xt6d_3",
+        "_small_1xt6d_4"
+       ],
+       [
+        "_everythingButTheList_1v7h7_20"
+       ],
+       [
+        "_large_kwlx6_9",
+        "_noHover_3n0se_28",
+        "_border_3n0se_35",
+        "_wrapper_1v7h7_1",
+        "viewCaptureExpand"
+       ],
+       [
+        "_topMoneyOutWrapper_12dqn_46"
+       ],
+       [
+        "_summaryAndTopMoneyOutContainer_12dqn_25"
+       ],
+       [
+        "_moneyOutContainer_12dqn_3"
+       ],
+       [
+        "_tabContent_almxf_77"
+       ]
+      ],
+      "classes": [
+       "_segment_1xt6d_7",
+       "_selected_1xt6d_60",
+       "_first_1xt6d_73"
+      ],
+      "data": {},
+      "heading": "Summary",
+      "landmark": {
+       "name": "",
+       "role": "main"
+      },
+      "layer": "document",
+      "name": "Recipient",
+      "rect": [
+       670,
+       1046,
+       242,
+       32
+      ],
+      "role": "button",
+      "tag": "button",
+      "xpath": "/html/body/div[1]/main[1]/div[1]/div[1]/div[4]/div[1]/div[2]/div[3]/div[1]/div[3]/div[2]/div[1]/div[1]/div[2]/div[1]/button[1]"
+     },
+     "state": "transactions.insights-spending"
+    }
+   ],
+   "evidenceHash": "2880699cdab965f8767470d2cbae310c7999b813f14b98c609271e78960b0ee3",
+   "facts": {
+    "announced": "button \"Recipient\"",
+    "axeSummary": "",
+    "criterion": "4.1.2",
+    "criterionName": "Name, Role, Value",
+    "element": "button \"Recipient\"",
+    "rule": "announced-as",
+    "screen": "Insights overview"
+   },
+   "family": "role-state",
+   "guidance": "Low for optional ARIA or an invalid autocomplete token; high when aria-hidden hides the whole page.",
+   "issueId": null,
+   "key": "role-state:announced-as:f00c515ef77f",
+   "measured": false,
+   "primary": "transactions.insights",
+   "proposals": [],
+   "rule": "announced-as",
+   "screens": 10,
+   "severityDefault": "medium",
+   "source": "scanner",
+   "states": [
+    "transactions.insights",
+    "transactions.insights-spending"
+   ],
+   "summary": "announced-as: announced as button \"Recipient\".",
+   "title": "Wrong role or state: button \"Recipient\""
+  },
+  {
+   "attachments": [],
+   "attempt": 1,
+   "basis": "candidate",
+   "criteria": [
+    "4.1.2"
+   ],
+   "evidence": [
+    {
+     "evidence": {
+      "description": "",
+      "name": "Source",
+      "role": "button",
+      "states": {},
+      "template": "button \"Source\""
+     },
+     "occurrence": {
+      "ancestors": [
+       [
+        "_buttonWithDivider_1xt6d_80"
+       ],
+       [
+        "_container_1xt6d_3",
+        "_small_1xt6d_4"
+       ],
+       [
+        "_everythingButTheList_y4qdi_20"
+       ],
+       [
+        "_large_kwlx6_9",
+        "_noHover_3n0se_28",
+        "_border_3n0se_35",
+        "_wrapper_y4qdi_1",
+        "viewCaptureExpand"
+       ],
+       [
+        "_topMoneyInWrapper_snsic_43"
+       ],
+       [
+        "_moneyInMoneyOutContainer_snsic_25"
+       ],
+       [
+        "_overviewContainer_snsic_3"
+       ],
+       [
+        "_tabContent_almxf_77"
+       ]
+      ],
+      "classes": [
+       "_segment_1xt6d_7",
+       "_selected_1xt6d_60",
+       "_first_1xt6d_73"
+      ],
+      "data": {},
+      "heading": "Insights",
+      "landmark": {
+       "name": "",
+       "role": "main"
+      },
+      "layer": "document",
+      "name": "Source",
+      "rect": [
+       269,
+       1046,
+       177,
+       32
+      ],
+      "role": "button",
+      "tag": "button",
+      "xpath": "/html/body/div[1]/main[1]/div[1]/div[1]/div[4]/div[1]/div[2]/div[3]/div[1]/div[3]/div[1]/div[1]/div[1]/div[2]/div[1]/button[1]"
+     },
+     "state": "transactions.insights"
+    },
+    {
+     "evidence": {
+      "description": "",
+      "name": "Source",
+      "role": "button",
+      "states": {},
+      "template": "button \"Source\""
+     },
+     "occurrence": {
+      "ancestors": [
+       [
+        "_buttonWithDivider_1xt6d_80"
+       ],
+       [
+        "_container_1xt6d_3",
+        "_small_1xt6d_4"
+       ],
+       [
+        "_everythingButTheList_y4qdi_20"
+       ],
+       [
+        "_large_kwlx6_9",
+        "_noHover_3n0se_28",
+        "_border_3n0se_35",
+        "_wrapper_y4qdi_1",
+        "viewCaptureExpand"
+       ],
+       [
+        "_topMoneyInWrapper_ywxis_46"
+       ],
+       [
+        "_summaryAndTopMoneyInContainer_ywxis_25"
+       ],
+       [
+        "_moneyInContainer_ywxis_3"
+       ],
+       [
+        "_tabContent_almxf_77"
+       ]
+      ],
+      "classes": [
+       "_segment_1xt6d_7",
+       "_selected_1xt6d_60",
+       "_first_1xt6d_73"
+      ],
+      "data": {},
+      "heading": "Summary",
+      "landmark": {
+       "name": "",
+       "role": "main"
+      },
+      "layer": "document",
+      "name": "Source",
+      "rect": [
+       670,
+       1046,
+       242,
+       32
+      ],
+      "role": "button",
+      "tag": "button",
+      "xpath": "/html/body/div[1]/main[1]/div[1]/div[1]/div[4]/div[1]/div[2]/div[3]/div[1]/div[3]/div[2]/div[1]/div[1]/div[2]/div[1]/button[1]"
+     },
+     "state": "transactions.insights-money-in"
+    }
+   ],
+   "evidenceHash": "cf11dae754513071fec102dacb8a19cf4642e2e55856e01e83cdc6ba4a3e574e",
+   "facts": {
+    "announced": "button \"Source\"",
+    "axeSummary": "",
+    "criterion": "4.1.2",
+    "criterionName": "Name, Role, Value",
+    "element": "button \"Source\"",
+    "rule": "announced-as",
+    "screen": "Insights overview"
+   },
+   "family": "role-state",
+   "guidance": "Low for optional ARIA or an invalid autocomplete token; high when aria-hidden hides the whole page.",
+   "issueId": null,
+   "key": "role-state:announced-as:fa2554deb4b2",
+   "measured": false,
+   "primary": "transactions.insights",
+   "proposals": [],
+   "rule": "announced-as",
+   "screens": 8,
+   "severityDefault": "medium",
+   "source": "scanner",
+   "states": [
+    "transactions.insights",
+    "transactions.insights-money-in"
+   ],
+   "summary": "announced-as: announced as button \"Source\".",
+   "title": "Wrong role or state: button \"Source\""
+  }
+ ],
+ "primaries": [
+  "transactions.insights"
+ ],
+ "reach": {
+  "baseUrl": "https://demo.mercury.com",
+  "data": "data",
+  "map": "build/map.json",
+  "run": "2026-10-03-1525",
+  "workspace": "a11y"
+ },
+ "run": "2026-10-03-1525"
+}

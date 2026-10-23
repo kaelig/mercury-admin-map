@@ -1,0 +1,36 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Pointer cursors</title>
+<style>
+  body { font: 16px/1.5 Arial, sans-serif; color: #1a1a1a; background: #ffffff; margin: 24px; }
+  button { font: 14px Arial, sans-serif; padding: 8px 16px; }
+  .card, .row { cursor: pointer; padding: 12px; border: 1px solid #1a1a1a; margin-bottom: 12px; }
+  .pointer { cursor: pointer; }
+  input[type=checkbox] { width: 24px; height: 24px; margin: 0 0 0 8px; }
+</style>
+</head>
+<body>
+<main>
+  <h1>Accounts</h1>
+  <!-- In the set: a clickable card with no tabindex. Its children inherit or set the pointer and stay out. -->
+  <div class="card" id="card">
+    <div class="card-title">Checking ••1234</div>
+    <span class="pointer" id="card-child">Available balance</span>
+  </div>
+  <!-- Out: a pointer row with a focusable button inside (the button is in the set through the tree). -->
+  <div class="row" id="row">Savings <button type="button">Transfer</button></div>
+  <!-- Out: a pointer span inside a link (the link is in the set). -->
+  <p><a href="#statements" id="link"><span class="pointer" id="link-child">Statements</span></a></p>
+  <!-- Out: a pointer label for a checkbox (the checkbox is in the set). -->
+  <p><label for="agree" class="pointer" id="agree-label">I agree</label><input type="checkbox" id="agree"></p>
+  <!-- In, through the tree: a role=button that takes no focus. -->
+  <div role="button" id="fake">Fake button</div>
+  <!-- In, flagged disabled: the Tab walk must not expect to reach it. -->
+  <button type="button" id="off" disabled>Archive</button>
+  <!-- Out: not rendered. -->
+  <div class="pointer" id="hidden" style="display: none">Hidden</div>
+</main>
+</body>
+</html>

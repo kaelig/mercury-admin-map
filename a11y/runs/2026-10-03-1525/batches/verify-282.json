@@ -1,0 +1,254 @@
+{
+ "area": "payments",
+ "batch": "verify-282",
+ "findings": [
+  {
+   "attachments": [],
+   "attempt": 1,
+   "basis": "violation",
+   "criteria": [
+    "4.1.2"
+   ],
+   "evidence": [
+    {
+     "evidence": {
+      "aria-errormessage": [
+       "amount-mercury-utils-id-50-errormessage"
+      ],
+      "failureSummary": "Fix all of the following:\n  aria-errormessage value `amount-mercury-utils-id-50-errormessage` must use a technique to announce the message (e.g., aria-live, aria-describedby, role=alert, etc.)"
+     },
+     "occurrence": {
+      "ancestors": [
+       [
+        "_inputBox_q7hf7_93",
+        "_error_q7hf7_41"
+       ],
+       [
+        "_inputBoxWrapper_q7hf7_93"
+       ],
+       [
+        "_textInputWrapper_q7hf7_24"
+       ],
+       [
+        "_provideDSTextInput_q7hf7_6",
+        "_addWrapperMargin_q7hf7_19"
+       ],
+       [],
+       [
+        "_amountAndSourceContainer_8dg5w_1"
+       ],
+       [
+        "_routeContainer_15al5_228"
+       ],
+       [
+        "_routes_15al5_220"
+       ]
+      ],
+      "classes": [
+       "_input_q7hf7_93"
+      ],
+      "data": {},
+      "heading": "Amount",
+      "landmark": {
+       "name": "",
+       "role": "form"
+      },
+      "layer": "document",
+      "name": "Recipient gets",
+      "rect": [
+       468,
+       288,
+       519,
+       24
+      ],
+      "role": "textbox",
+      "tag": "input",
+      "xpath": "/html/body/div[1]/main[1]/div[1]/div[2]/div[2]/div[1]/div[2]/section[2]/div[1]/div[1]/div[1]/form[1]/div[1]/div[1]/div[1]/div[1]/input[1]"
+     },
+     "state": "payments.send-amount-validation"
+    }
+   ],
+   "evidenceHash": "912b70c7869b31988d163d8ac815f296e2a49b4c958d386ccc1371028f48f136",
+   "facts": {
+    "announced": "textbox \"Recipient gets\" [invalid=true, errormessage=Must be a dollar value.]",
+    "axeSummary": "aria-errormessage value `amount-mercury-utils-id-50-errormessage` must use a technique to announce the message (e.g., aria-live, aria-describedby, role=alert,…",
+    "criterion": "4.1.2",
+    "criterionName": "Name, Role, Value",
+    "element": "textbox \"Recipient gets\"",
+    "rule": "aria-valid-attr-value",
+    "screen": "Send: amount required"
+   },
+   "family": "role-state",
+   "guidance": "Low for optional ARIA or an invalid autocomplete token; high when aria-hidden hides the whole page.",
+   "issueId": null,
+   "key": "role-state:aria-valid-attr-value:ec7f14ad1645",
+   "measured": false,
+   "primary": "payments.send-amount-validation",
+   "proposals": [],
+   "rule": "aria-valid-attr-value",
+   "screens": 1,
+   "severityDefault": "medium",
+   "source": "scanner",
+   "states": [
+    "payments.send-amount-validation"
+   ],
+   "summary": "aria-valid-attr-value: announced as textbox \"Recipient gets\" [invalid=true, errormessage=Must be a dollar value.]. aria-errormessage value `amount-mercury-utils-id-50-errormessage` must use a technique to announce the message (e.g., aria-live, aria-describedby, role=alert,…",
+   "title": "Wrong role or state: textbox \"Recipient gets\""
+  },
+  {
+   "attachments": [],
+   "attempt": 1,
+   "basis": "failure",
+   "criteria": [
+    "4.1.3"
+   ],
+   "evidence": [
+    {
+     "evidence": {
+      "focus": {
+       "ancestors": [
+        [
+         "_navigation_g4akw_1"
+        ],
+        [
+         "_navigationButtonContainer_1wq2f_1"
+        ],
+        [],
+        [
+         "_amountAndSourceContainer_8dg5w_1"
+        ],
+        [
+         "_routeContainer_15al5_228"
+        ],
+        [
+         "_routes_15al5_220"
+        ],
+        [
+         "_routeSection_15al5_207"
+        ],
+        [
+         "_container_15al5_4",
+         "_container_10wfz_3",
+         "_closed_15al5_75"
+        ]
+       ],
+       "classes": [
+        "_button_r6b2u_20",
+        "_large_r6b2u_88",
+        "_primary_r6b2u_104"
+       ],
+       "data": {},
+       "heading": "Amount",
+       "landmark": {
+        "name": "",
+        "role": "form"
+       },
+       "layer": "document",
+       "name": "Next",
+       "rect": [
+        562,
+        836,
+        109,
+        40
+       ],
+       "role": "button",
+       "tag": "button",
+       "xpath": "/html/body/div[1]/main[1]/div[1]/div[2]/div[2]/div[1]/div[2]/section[2]/div[1]/div[1]/div[1]/form[1]/div[4]/div[1]/button[2]"
+      },
+      "focused": false,
+      "message": "Must be a dollar value.",
+      "region": null
+     },
+     "occurrence": {
+      "ancestors": [
+       [
+        "_textInputWrapper_q7hf7_24"
+       ],
+       [
+        "_provideDSTextInput_q7hf7_6",
+        "_addWrapperMargin_q7hf7_19"
+       ],
+       [],
+       [
+        "_amountAndSourceContainer_8dg5w_1"
+       ],
+       [
+        "_routeContainer_15al5_228"
+       ],
+       [
+        "_routes_15al5_220"
+       ],
+       [
+        "_routeSection_15al5_207"
+       ],
+       [
+        "_container_15al5_4",
+        "_container_10wfz_3",
+        "_closed_15al5_75"
+       ]
+      ],
+      "classes": [
+       "_defaultErrorContainer_1tnh5_1",
+       "_errorMessage_q7hf7_303"
+      ],
+      "data": {
+       "data-session-replay-unmask": "true"
+      },
+      "heading": "Amount",
+      "landmark": {
+       "name": "",
+       "role": "form"
+      },
+      "layer": "document",
+      "name": "",
+      "rect": [
+       440,
+       324,
+       560,
+       20
+      ],
+      "role": "",
+      "tag": "div",
+      "xpath": "/html/body/div[1]/main[1]/div[1]/div[2]/div[2]/div[1]/div[2]/section[2]/div[1]/div[1]/div[1]/form[1]/div[1]/div[1]/div[2]"
+     },
+     "state": "payments.send-amount-validation"
+    }
+   ],
+   "evidenceHash": "03dd773a279dbf86130db83b32924b269a7c42b3c0172e12ba7471b651800dc5",
+   "facts": {
+    "criterion": "4.1.3",
+    "criterionName": "Status Messages",
+    "focus": "button \"Next\"",
+    "message": "\"Must be a dollar value.\"",
+    "screen": "Send: amount required"
+   },
+   "family": "status-message",
+   "guidance": "High when it is the only confirmation of a money movement.",
+   "issueId": null,
+   "key": "status-message:status-not-announced:883a062330a6",
+   "measured": false,
+   "primary": "payments.send-amount-validation",
+   "proposals": [],
+   "rule": "status-not-announced",
+   "screens": 1,
+   "severityDefault": "medium",
+   "source": "scanner",
+   "states": [
+    "payments.send-amount-validation"
+   ],
+   "summary": "\"Must be a dollar value.\" appeared outside any live region, alert or status role that existed before it, and focus stayed on the button \"Next\".",
+   "title": "Status message not announced: \"Must be a dollar value.\""
+  }
+ ],
+ "primaries": [
+  "payments.send-amount-validation"
+ ],
+ "reach": {
+  "baseUrl": "https://demo.mercury.com",
+  "data": "data",
+  "map": "build/map.json",
+  "run": "2026-10-03-1525",
+  "workspace": "a11y"
+ },
+ "run": "2026-10-03-1525"
+}

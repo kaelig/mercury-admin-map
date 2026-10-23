@@ -1,0 +1,222 @@
+{
+ "area": "transactions",
+ "batch": "verify-538",
+ "findings": [
+  {
+   "attachments": [],
+   "attempt": 1,
+   "basis": "candidate",
+   "criteria": [
+    "4.1.2"
+   ],
+   "evidence": [
+    {
+     "evidence": {
+      "description": "",
+      "name": "",
+      "role": "textbox",
+      "states": {},
+      "template": "textbox \"\""
+     },
+     "occurrence": {
+      "ancestors": [
+       [
+        "_inputBox_q7hf7_93"
+       ],
+       [
+        "_inputBoxWrapper_q7hf7_93"
+       ],
+       [
+        "_textInputWrapper_q7hf7_24"
+       ],
+       [
+        "_provideDSTextInput_q7hf7_6"
+       ],
+       [
+        "_modalContent_1oqqp_33"
+       ],
+       [],
+       [
+        "_large_kwlx6_9",
+        "_noHover_3n0se_28",
+        "_shadow_3n0se_25",
+        "_raisedBackground_3n0se_45",
+        "_card_lo4oy_4",
+        "_defaultPadding_lo4oy_27",
+        "_small_lo4oy_11"
+       ],
+       [
+        "ReactModal__Content",
+        "ReactModal__Content--after-open",
+        "_modal_lo4oy_73"
+       ]
+      ],
+      "classes": [
+       "_input_q7hf7_93"
+      ],
+      "data": {},
+      "heading": "Create a new category from here, or manage all your company’s categories from settings.",
+      "landmark": {
+       "name": "",
+       "role": "form"
+      },
+      "layer": "top",
+      "name": "",
+      "rect": [
+       549,
+       390,
+       342,
+       24
+      ],
+      "role": "textbox",
+      "tag": "input",
+      "xpath": "/html/body/div[18]/div[1]/div[1]/div[1]/form[1]/div[1]/div[1]/div[1]/div[1]/div[1]/input[1]"
+     },
+     "state": "transactions.create-category-modal"
+    }
+   ],
+   "evidenceHash": "1ff43028f8666aaa1eeff8215cf631db773c9396e6c893acdb9d233ca07dc591",
+   "facts": {
+    "announced": "textbox \"\"",
+    "axeSummary": "",
+    "criterion": "4.1.2",
+    "criterionName": "Name, Role, Value",
+    "element": "textbox in \"Create a new category from here, or…\"",
+    "rule": "announced-as",
+    "screen": "Create category modal"
+   },
+   "family": "name",
+   "guidance": "High for an unnamed form control or the sole primary action.",
+   "issueId": null,
+   "key": "name:announced-as:984a2af91dec",
+   "measured": false,
+   "primary": "transactions.create-category-modal",
+   "proposals": [
+    {
+     "family": "name",
+     "finding": "name:announced-as:984a2af91dec",
+     "handFound": "transactions.i-category-name-label",
+     "id": "c80dd8bca21b28ff80a0f929d67ae70480f68006e6a5d3b431282c4799e931b1",
+     "overlap": 1
+    }
+   ],
+   "rule": "announced-as",
+   "screens": 1,
+   "severityDefault": "medium",
+   "source": "scanner",
+   "states": [
+    "transactions.create-category-modal"
+   ],
+   "summary": "announced-as: announced as textbox \"\".",
+   "title": "Missing or unclear name: textbox in \"Create a new category from here, or…\""
+  },
+  {
+   "attachments": [],
+   "attempt": 1,
+   "basis": "candidate",
+   "criteria": [
+    "1.3.1"
+   ],
+   "evidence": [
+    {
+     "evidence": {
+      "description": "",
+      "name": "Create a new category from here, or manage all your company’s categories from settings.",
+      "role": "heading",
+      "states": {
+       "level": 3
+      },
+      "template": "heading \"Create a new category from here, or manage all your company’s categories from settings.\" [level=3]"
+     },
+     "occurrence": {
+      "ancestors": [
+       [
+        "_large_kwlx6_9",
+        "_noHover_3n0se_28",
+        "_shadow_3n0se_25",
+        "_raisedBackground_3n0se_45",
+        "_card_lo4oy_4",
+        "_defaultPadding_lo4oy_27",
+        "_small_lo4oy_11"
+       ],
+       [
+        "ReactModal__Content",
+        "ReactModal__Content--after-open",
+        "_modal_lo4oy_73"
+       ],
+       [
+        "ReactModal__Overlay",
+        "ReactModal__Overlay--after-open",
+        "_overlay_lo4oy_89",
+        "_backgroundColor_lo4oy_103"
+       ],
+       [
+        "ReactModalPortal"
+       ]
+      ],
+      "classes": [
+       "_bodySecondary_qaod7_51",
+       "_text-secondary_12t49_1",
+       "_subHeadingWithChildren_17zd2_6"
+      ],
+      "data": {},
+      "heading": "Create category",
+      "landmark": {
+       "name": "",
+       "role": "dialog"
+      },
+      "layer": "top",
+      "name": "Create a new category from here, or manage all your company’s categories from settings.",
+      "rect": [
+       536,
+       318,
+       368,
+       48
+      ],
+      "role": "heading",
+      "tag": "h3",
+      "xpath": "/html/body/div[18]/div[1]/div[1]/div[1]/h3[1]"
+     },
+     "state": "transactions.create-category-modal"
+    }
+   ],
+   "evidenceHash": "fec78b30ee7000d30dd5fc89a9270b1adccaf8bda7febd29858d90837751c5b9",
+   "facts": {
+    "announced": "heading \"Create a new category from here, or manage all your company’s categori…",
+    "axeSummary": "",
+    "criterion": "1.3.1",
+    "criterionName": "Info and Relationships",
+    "element": "heading \"Create a new category from here, or man…\"",
+    "rule": "announced-as",
+    "screen": "Create category modal"
+   },
+   "family": "structure",
+   "guidance": "Medium when a data table's headers do not reach its cells, or when structure is the only way to tell sections or steps apart.",
+   "issueId": null,
+   "key": "structure:announced-as:f021d033a9ec",
+   "measured": false,
+   "primary": "transactions.create-category-modal",
+   "proposals": [],
+   "rule": "announced-as",
+   "screens": 1,
+   "severityDefault": "low",
+   "source": "scanner",
+   "states": [
+    "transactions.create-category-modal"
+   ],
+   "summary": "announced-as: announced as heading \"Create a new category from here, or manage all your company’s categori….",
+   "title": "Markup misstates structure: heading \"Create a new category from here, or man…\""
+  }
+ ],
+ "primaries": [
+  "transactions.create-category-modal"
+ ],
+ "reach": {
+  "baseUrl": "https://demo.mercury.com",
+  "data": "data",
+  "map": "build/map.json",
+  "run": "2026-10-03-1525",
+  "workspace": "a11y"
+ },
+ "run": "2026-10-03-1525"
+}

@@ -1,0 +1,500 @@
+{
+ "area": "settings",
+ "batch": "verify-321",
+ "findings": [
+  {
+   "attachments": [],
+   "attempt": 1,
+   "basis": "violation",
+   "criteria": [
+    "4.1.2"
+   ],
+   "evidence": [
+    {
+     "evidence": {
+      "aria-errormessage": [
+       "error-message-:r4n:"
+      ],
+      "failureSummary": "Fix all of the following:\n  aria-errormessage value `error-message-:r4n:` must use a technique to announce the message (e.g., aria-live, aria-describedby, role=alert, etc.)"
+     },
+     "occurrence": {
+      "ancestors": [
+       [
+        "_inputWrapper_11c85_6",
+        "_error_11c85_74"
+       ],
+       [
+        "_wrapper_1xgdp_8"
+       ],
+       [
+        "_createTokenForm_w7jji_1"
+       ],
+       [],
+       [],
+       [
+        "_large_kwlx6_9",
+        "_noHover_3n0se_28",
+        "_shadow_3n0se_25",
+        "_raisedBackground_3n0se_45",
+        "_card_lo4oy_4",
+        "_defaultPadding_lo4oy_27",
+        "_small_lo4oy_11"
+       ],
+       [
+        "ReactModal__Content",
+        "ReactModal__Content--after-open",
+        "_modal_lo4oy_73"
+       ],
+       [
+        "ReactModal__Overlay",
+        "ReactModal__Overlay--after-open",
+        "_overlay_lo4oy_89",
+        "_backgroundColor_lo4oy_103"
+       ]
+      ],
+      "classes": [
+       "_input_11c85_6"
+      ],
+      "data": {
+       "data-1p-ignore": "true",
+       "data-active-item": "true",
+       "data-bwignore": "true",
+       "data-lpignore": "true"
+      },
+      "heading": "Create an API token",
+      "landmark": {
+       "name": "",
+       "role": "form"
+      },
+      "layer": "top",
+      "name": "Permissions",
+      "rect": [
+       536,
+       420,
+       335,
+       40
+      ],
+      "role": "combobox",
+      "tag": "input",
+      "xpath": "/html/body/div[10]/div[1]/div[1]/div[1]/form[1]/div[1]/section[1]/div[2]/div[1]/input[1]"
+     },
+     "state": "settings.create-token-errors"
+    }
+   ],
+   "evidenceHash": "c84ac9922e6a71b8fd193f23d9c4d24dd1b8102d1ec6e0807f9b972ebbc996f0",
+   "facts": {
+    "announced": "combobox \"Permissions\" [expanded=false, haspopup=listbox, invalid=true, errorme…",
+    "axeSummary": "aria-errormessage value `error-message-:r4n:` must use a technique to announce the message (e.g., aria-live, aria-describedby, role=alert, etc.)",
+    "criterion": "4.1.2",
+    "criterionName": "Name, Role, Value",
+    "element": "combobox \"Permissions\"",
+    "rule": "aria-valid-attr-value",
+    "screen": "Create API token — empty submit"
+   },
+   "family": "role-state",
+   "guidance": "Low for optional ARIA or an invalid autocomplete token; high when aria-hidden hides the whole page.",
+   "issueId": null,
+   "key": "role-state:aria-valid-attr-value:3f4577b0a77e",
+   "measured": false,
+   "primary": "settings.create-token-errors",
+   "proposals": [],
+   "rule": "aria-valid-attr-value",
+   "screens": 1,
+   "severityDefault": "medium",
+   "source": "scanner",
+   "states": [
+    "settings.create-token-errors"
+   ],
+   "summary": "aria-valid-attr-value: announced as combobox \"Permissions\" [expanded=false, haspopup=listbox, invalid=true, errorme…. aria-errormessage value `error-message-:r4n:` must use a technique to announce the message (e.g., aria-live, aria-describedby, role=alert, etc.)",
+   "title": "Wrong role or state: combobox \"Permissions\""
+  },
+  {
+   "attachments": [],
+   "attempt": 1,
+   "basis": "violation",
+   "criteria": [
+    "4.1.2"
+   ],
+   "evidence": [
+    {
+     "evidence": {
+      "aria-errormessage": [
+       "createtokennickname-mercury-utils-id-25-errormessage"
+      ],
+      "failureSummary": "Fix all of the following:\n  aria-errormessage value `createtokennickname-mercury-utils-id-25-errormessage` must use a technique to announce the message (e.g., aria-live, aria-describedby, role=alert, etc.)"
+     },
+     "occurrence": {
+      "ancestors": [
+       [
+        "_inputBox_q7hf7_93",
+        "_error_q7hf7_41"
+       ],
+       [
+        "_inputBoxWrapper_q7hf7_93"
+       ],
+       [
+        "_textInputWrapper_q7hf7_24"
+       ],
+       [
+        "_provideDSTextInput_q7hf7_6"
+       ],
+       [
+        "_createTokenForm_w7jji_1"
+       ],
+       [],
+       [],
+       [
+        "_large_kwlx6_9",
+        "_noHover_3n0se_28",
+        "_shadow_3n0se_25",
+        "_raisedBackground_3n0se_45",
+        "_card_lo4oy_4",
+        "_defaultPadding_lo4oy_27",
+        "_small_lo4oy_11"
+       ]
+      ],
+      "classes": [
+       "_input_q7hf7_93"
+      ],
+      "data": {},
+      "heading": "Create an API token",
+      "landmark": {
+       "name": "",
+       "role": "form"
+      },
+      "layer": "top",
+      "name": "Nickname",
+      "rect": [
+       549,
+       316,
+       342,
+       24
+      ],
+      "role": "textbox",
+      "tag": "input",
+      "xpath": "/html/body/div[10]/div[1]/div[1]/div[1]/form[1]/div[1]/section[1]/div[1]/div[1]/div[1]/div[1]/input[1]"
+     },
+     "state": "settings.create-token-errors"
+    }
+   ],
+   "evidenceHash": "c768ec1461dd784519aecd2020da263190987e1e0e9afea6d84cc2194a30ad30",
+   "facts": {
+    "announced": "textbox \"Nickname\" [invalid=true, errormessage=Please complete this field]",
+    "axeSummary": "aria-errormessage value `createtokennickname-mercury-utils-id-25-errormessage` must use a technique to announce the message (e.g., aria-live, aria-describedby,…",
+    "criterion": "4.1.2",
+    "criterionName": "Name, Role, Value",
+    "element": "textbox \"Nickname\"",
+    "rule": "aria-valid-attr-value",
+    "screen": "Create API token — empty submit"
+   },
+   "family": "role-state",
+   "guidance": "Low for optional ARIA or an invalid autocomplete token; high when aria-hidden hides the whole page.",
+   "issueId": null,
+   "key": "role-state:aria-valid-attr-value:4a4034f7b141",
+   "measured": false,
+   "primary": "settings.create-token-errors",
+   "proposals": [],
+   "rule": "aria-valid-attr-value",
+   "screens": 1,
+   "severityDefault": "medium",
+   "source": "scanner",
+   "states": [
+    "settings.create-token-errors"
+   ],
+   "summary": "aria-valid-attr-value: announced as textbox \"Nickname\" [invalid=true, errormessage=Please complete this field]. aria-errormessage value `createtokennickname-mercury-utils-id-25-errormessage` must use a technique to announce the message (e.g., aria-live, aria-describedby,…",
+   "title": "Wrong role or state: textbox \"Nickname\""
+  },
+  {
+   "attachments": [],
+   "attempt": 1,
+   "basis": "failure",
+   "criteria": [
+    "4.1.3"
+   ],
+   "evidence": [
+    {
+     "evidence": {
+      "focus": {
+       "ancestors": [
+        [
+         "_container_1ieyt_1",
+         "_rightAlign_1ieyt_9"
+        ],
+        [],
+        [],
+        [
+         "_large_kwlx6_9",
+         "_noHover_3n0se_28",
+         "_shadow_3n0se_25",
+         "_raisedBackground_3n0se_45",
+         "_card_lo4oy_4",
+         "_defaultPadding_lo4oy_27",
+         "_small_lo4oy_11"
+        ],
+        [
+         "ReactModal__Content",
+         "ReactModal__Content--after-open",
+         "_modal_lo4oy_73"
+        ],
+        [
+         "ReactModal__Overlay",
+         "ReactModal__Overlay--after-open",
+         "_overlay_lo4oy_89",
+         "_backgroundColor_lo4oy_103"
+        ],
+        [
+         "ReactModalPortal"
+        ]
+       ],
+       "classes": [
+        "_button_r6b2u_20",
+        "_large_r6b2u_88",
+        "_primary_r6b2u_104",
+        "_appearDisabled_r6b2u_16",
+        "session-replay-unmask"
+       ],
+       "data": {},
+       "heading": "Create an API token",
+       "landmark": {
+        "name": "",
+        "role": "form"
+       },
+       "layer": "top",
+       "name": "Create token",
+       "rect": [
+        750,
+        620,
+        154,
+        40
+       ],
+       "role": "button",
+       "tag": "button",
+       "xpath": "/html/body/div[10]/div[1]/div[1]/div[1]/form[1]/div[1]/div[1]/button[2]"
+      },
+      "focused": false,
+      "message": "Please complete this field",
+      "region": null
+     },
+     "occurrence": {
+      "ancestors": [
+       [
+        "_textInputWrapper_q7hf7_24"
+       ],
+       [
+        "_provideDSTextInput_q7hf7_6"
+       ],
+       [
+        "_createTokenForm_w7jji_1"
+       ],
+       [],
+       [],
+       [
+        "_large_kwlx6_9",
+        "_noHover_3n0se_28",
+        "_shadow_3n0se_25",
+        "_raisedBackground_3n0se_45",
+        "_card_lo4oy_4",
+        "_defaultPadding_lo4oy_27",
+        "_small_lo4oy_11"
+       ],
+       [
+        "ReactModal__Content",
+        "ReactModal__Content--after-open",
+        "_modal_lo4oy_73"
+       ],
+       [
+        "ReactModal__Overlay",
+        "ReactModal__Overlay--after-open",
+        "_overlay_lo4oy_89",
+        "_backgroundColor_lo4oy_103"
+       ]
+      ],
+      "classes": [
+       "_defaultErrorContainer_1tnh5_1",
+       "_errorMessage_q7hf7_303"
+      ],
+      "data": {
+       "data-session-replay-unmask": "true"
+      },
+      "heading": "Create an API token",
+      "landmark": {
+       "name": "",
+       "role": "form"
+      },
+      "layer": "top",
+      "name": "",
+      "rect": [
+       536,
+       352,
+       368,
+       20
+      ],
+      "role": "",
+      "tag": "div",
+      "xpath": "/html/body/div[10]/div[1]/div[1]/div[1]/form[1]/div[1]/section[1]/div[1]/div[1]/div[2]"
+     },
+     "state": "settings.create-token-errors"
+    },
+    {
+     "evidence": {
+      "focus": {
+       "ancestors": [
+        [
+         "_container_1ieyt_1",
+         "_rightAlign_1ieyt_9"
+        ],
+        [],
+        [],
+        [
+         "_large_kwlx6_9",
+         "_noHover_3n0se_28",
+         "_shadow_3n0se_25",
+         "_raisedBackground_3n0se_45",
+         "_card_lo4oy_4",
+         "_defaultPadding_lo4oy_27",
+         "_small_lo4oy_11"
+        ],
+        [
+         "ReactModal__Content",
+         "ReactModal__Content--after-open",
+         "_modal_lo4oy_73"
+        ],
+        [
+         "ReactModal__Overlay",
+         "ReactModal__Overlay--after-open",
+         "_overlay_lo4oy_89",
+         "_backgroundColor_lo4oy_103"
+        ],
+        [
+         "ReactModalPortal"
+        ]
+       ],
+       "classes": [
+        "_button_r6b2u_20",
+        "_large_r6b2u_88",
+        "_primary_r6b2u_104",
+        "_appearDisabled_r6b2u_16",
+        "session-replay-unmask"
+       ],
+       "data": {},
+       "heading": "Create an API token",
+       "landmark": {
+        "name": "",
+        "role": "form"
+       },
+       "layer": "top",
+       "name": "Create token",
+       "rect": [
+        750,
+        661,
+        154,
+        40
+       ],
+       "role": "button",
+       "tag": "button",
+       "xpath": "/html/body/div[10]/div[1]/div[1]/div[1]/form[1]/div[1]/div[1]/button[2]"
+      },
+      "focused": false,
+      "message": "Enter a comma-separated list of IPv4/6 addresses or CIDR ranges.",
+      "region": null
+     },
+     "occurrence": {
+      "ancestors": [
+       [
+        "_textInputWrapper_q7hf7_24"
+       ],
+       [
+        "_provideDSTextInput_q7hf7_6"
+       ],
+       [
+        "_createTokenForm_w7jji_1"
+       ],
+       [],
+       [],
+       [
+        "_large_kwlx6_9",
+        "_noHover_3n0se_28",
+        "_shadow_3n0se_25",
+        "_raisedBackground_3n0se_45",
+        "_card_lo4oy_4",
+        "_defaultPadding_lo4oy_27",
+        "_small_lo4oy_11"
+       ],
+       [
+        "ReactModal__Content",
+        "ReactModal__Content--after-open",
+        "_modal_lo4oy_73"
+       ],
+       [
+        "ReactModal__Overlay",
+        "ReactModal__Overlay--after-open",
+        "_overlay_lo4oy_89",
+        "_backgroundColor_lo4oy_103"
+       ]
+      ],
+      "classes": [
+       "_defaultErrorContainer_1tnh5_1",
+       "_errorMessage_q7hf7_303"
+      ],
+      "data": {
+       "data-session-replay-unmask": "true"
+      },
+      "heading": "Create an API token",
+      "landmark": {
+       "name": "",
+       "role": "form"
+      },
+      "layer": "top",
+      "name": "",
+      "rect": [
+       536,
+       599,
+       368,
+       38
+      ],
+      "role": "",
+      "tag": "div",
+      "xpath": "/html/body/div[10]/div[1]/div[1]/div[1]/form[1]/div[1]/section[1]/div[4]/div[1]/div[2]"
+     },
+     "state": "settings.token-ip-required"
+    }
+   ],
+   "evidenceHash": "4d0ad8dd6003bb3344fd0926cce674f935f55aa8137dd7b99fe998b268f3cad7",
+   "facts": {
+    "criterion": "4.1.3",
+    "criterionName": "Status Messages",
+    "focus": "button \"Create token\"",
+    "message": "\"Please complete this field\"",
+    "screen": "Create API token — empty submit"
+   },
+   "family": "status-message",
+   "guidance": "High when it is the only confirmation of a money movement.",
+   "issueId": null,
+   "key": "status-message:status-not-announced:7de8047a780d",
+   "measured": false,
+   "primary": "settings.create-token-errors",
+   "proposals": [],
+   "rule": "status-not-announced",
+   "screens": 2,
+   "severityDefault": "medium",
+   "source": "scanner",
+   "states": [
+    "settings.create-token-errors",
+    "settings.token-ip-required"
+   ],
+   "summary": "\"Please complete this field\" appeared outside any live region, alert or status role that existed before it, and focus stayed on the button \"Create token\".",
+   "title": "Status message not announced: \"Please complete this field\""
+  }
+ ],
+ "primaries": [
+  "settings.create-token-errors"
+ ],
+ "reach": {
+  "baseUrl": "https://demo.mercury.com",
+  "data": "data",
+  "map": "build/map.json",
+  "run": "2026-10-03-1525",
+  "workspace": "a11y"
+ },
+ "run": "2026-10-03-1525"
+}

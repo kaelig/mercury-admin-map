@@ -1,0 +1,184 @@
+{
+ "area": "accounts",
+ "batch": "verify-408",
+ "findings": [
+  {
+   "attachments": [],
+   "attempt": 1,
+   "basis": "candidate",
+   "criteria": [
+    "4.1.2"
+   ],
+   "evidence": [
+    {
+     "evidence": {
+      "description": "",
+      "name": "",
+      "role": "button",
+      "states": {
+       "expanded": false,
+       "haspopup": "menu"
+      },
+      "template": "button \"\" [expanded=false, haspopup=menu]"
+     },
+     "occurrence": {
+      "ancestors": [
+       [
+        "_accountActionsMenu_lus07_194"
+       ],
+       [
+        "_tableData_1u4jr_5",
+        "_alignmentStart_1u4jr_12"
+       ],
+       [
+        "_tableRow_137xu_3",
+        "_large_137xu_29"
+       ],
+       [
+        "_tableBody_1cp5b_1"
+       ],
+       [
+        "_table_1acga_4",
+        "_table_gcd1a_3"
+       ],
+       [
+        "_tableWrapper_1acga_4"
+       ],
+       [],
+       [
+        "_pageContent_809q8_151",
+        "_pageContentWidth_809q8_184",
+        "_footerPadding_809q8_115"
+       ]
+      ],
+      "classes": [],
+      "data": {},
+      "heading": "Accounts",
+      "landmark": {
+       "name": "",
+       "role": "main"
+      },
+      "layer": "document",
+      "name": "",
+      "rect": [
+       1281,
+       312,
+       28,
+       28
+      ],
+      "role": "button",
+      "tag": "span",
+      "xpath": "/html/body/div[1]/main[1]/div[1]/div[1]/div[4]/div[1]/div[2]/div[3]/div[1]/table[1]/tbody[1]/tr[1]/td[5]/div[1]/span[1]"
+     },
+     "state": "accounts.linked-accounts"
+    },
+    {
+     "evidence": {
+      "description": "",
+      "name": "",
+      "role": "button",
+      "states": {
+       "expanded": false,
+       "haspopup": "menu"
+      },
+      "template": "button \"\" [expanded=false, haspopup=menu]"
+     },
+     "occurrence": {
+      "ancestors": [
+       [
+        "_kebab_166u7_111"
+       ],
+       [
+        "_iconRow_166u7_20"
+       ],
+       [
+        "_tableData_1u4jr_5",
+        "_alignmentStart_1u4jr_12"
+       ],
+       [
+        "_tableRow_137xu_3",
+        "_tokenRow_166u7_11"
+       ],
+       [
+        "_tableBody_1cp5b_1"
+       ],
+       [
+        "_table_1acga_4"
+       ],
+       [
+        "_tokenTableWrapper_166u7_60",
+        "_tableWrapper_1acga_4"
+       ],
+       []
+      ],
+      "classes": [],
+      "data": {},
+      "heading": "API Tokens",
+      "landmark": {
+       "name": "",
+       "role": "main"
+      },
+      "layer": "document",
+      "name": "",
+      "rect": [
+       1192,
+       308,
+       45,
+       19
+      ],
+      "role": "button",
+      "tag": "span",
+      "xpath": "/html/body/div[1]/main[1]/div[1]/div[1]/div[4]/div[1]/div[2]/div[2]/div[2]/div[1]/table[1]/tbody[1]/tr[1]/td[7]/div[1]/div[1]/span[1]"
+     },
+     "state": "settings.tokens-new-row"
+    }
+   ],
+   "evidenceHash": "1fd3b5eaeee4f388e883c32c9cadc6c19747fb8860e47b1b31bddb7818851ccf",
+   "facts": {
+    "announced": "button \"\" [expanded=false, haspopup=menu]",
+    "axeSummary": "",
+    "criterion": "4.1.2",
+    "criterionName": "Name, Role, Value",
+    "element": "button in \"Accounts\"",
+    "rule": "announced-as",
+    "screen": "Linked accounts tab"
+   },
+   "family": "name",
+   "guidance": "High for an unnamed form control or the sole primary action.",
+   "issueId": null,
+   "key": "name:announced-as:2ea943a012bc",
+   "measured": false,
+   "primary": "accounts.linked-accounts",
+   "proposals": [
+    {
+     "family": "name",
+     "finding": "name:announced-as:2ea943a012bc",
+     "handFound": "settings.i-unnamed-row-buttons",
+     "id": "9839f4fc36535c3ffd914e85149f3af3a6c649e651aac40409d6a614e988667b",
+     "overlap": 0.5
+    }
+   ],
+   "rule": "announced-as",
+   "screens": 5,
+   "severityDefault": "medium",
+   "source": "scanner",
+   "states": [
+    "accounts.linked-accounts",
+    "settings.tokens-new-row"
+   ],
+   "summary": "announced-as: announced as button \"\" [expanded=false, haspopup=menu].",
+   "title": "Missing or unclear name: button in \"Accounts\""
+  }
+ ],
+ "primaries": [
+  "accounts.linked-accounts"
+ ],
+ "reach": {
+  "baseUrl": "https://demo.mercury.com",
+  "data": "data",
+  "map": "build/map.json",
+  "run": "2026-10-03-1525",
+  "workspace": "a11y"
+ },
+ "run": "2026-10-03-1525"
+}

@@ -1,0 +1,6 @@
+/* build.py adds this to app.css, with the strip, only when it builds from a test snapshot (meta.json testData). */
+body { display: flex; flex-direction: column; }
+.app { flex: 1; min-height: 0; }
+.test-data { flex: none; padding: 8px 16px; background: var(--med); color: var(--high-ink); font: 500 14px/1.4 var(--ui); text-align: center; text-wrap: balance; }
+/* Stacked layout: the side row keeps its half of the page, so the strip's height comes out of the map row. */
+@media (max-width: 760px) { .app { grid-template-rows: 50svh minmax(0, 1fr); } }

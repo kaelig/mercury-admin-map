@@ -1,0 +1,191 @@
+{
+ "batch": "record-025",
+ "reach": {
+  "baseUrl": "https://demo.mercury.com",
+  "data": "data",
+  "map": "build/map.json",
+  "run": "2026-10-02-1349",
+  "workspace": "a11y"
+ },
+ "run": "2026-10-02-1349",
+ "states": [
+  {
+   "area": "payments",
+   "draft": "nothing on payments.recipient-invite matches {\"click\":{\"name\":\"Send request empty\"}}",
+   "image": "screens/payments/55-recipient-invite-validation.png",
+   "kind": "validation-error",
+   "labels": [
+    "Click Invite recipient",
+    "Click Send request empty"
+   ],
+   "mutates": true,
+   "note": "Send request empty: 'Please complete this field' under Name and Email.",
+   "parent": "payments.recipient-invite",
+   "state": "payments.recipient-invite-validation",
+   "title": "Invite: required fields"
+  },
+  {
+   "area": "payments",
+   "draft": "nothing on payments.recipients matches {\"click\":{\"name\":\"Create recipient chevron\"}}",
+   "image": "screens/payments/53-recipients-create-menu.png",
+   "kind": "menu",
+   "labels": [
+    "Click Create recipient chevron"
+   ],
+   "mutates": true,
+   "note": "Split-button menu: Invite recipient, Bulk invite with CSV.",
+   "parent": "payments.recipients",
+   "state": "payments.recipients-create-menu",
+   "title": "Create recipient menu"
+  },
+  {
+   "area": "payments",
+   "draft": "nothing on payments.recipients-needs-tax-docs matches {\"click\":{\"name\":\"filter icon\"}}",
+   "image": "screens/payments/91-recipients-filters.png",
+   "kind": "popover",
+   "labels": [
+    "Click Needs Tax Docs",
+    "Click filter icon"
+   ],
+   "mutates": false,
+   "note": "Filter menu: Name, Email, Amount Paid, Year Paid, Date Added, Date Last Paid, Pending Details, Tax Document; name search with Select All.",
+   "parent": "payments.recipients-needs-tax-docs",
+   "state": "payments.recipients-filters",
+   "title": "Recipients filter menu"
+  },
+  {
+   "area": "payments",
+   "draft": "nothing on payments.request-start matches {\"click\":{\"name\":\"Next without customer\"}}",
+   "image": "screens/payments/47-request-validation.png",
+   "kind": "validation-error",
+   "labels": [
+    "Click Next without customer"
+   ],
+   "mutates": false,
+   "note": "Next without customer: 'Please complete this field'; Next looks disabled (40% opacity) yet stays clickable.",
+   "parent": "payments.request-start",
+   "state": "payments.request-validation",
+   "title": "Request: customer required"
+  },
+  {
+   "area": "payments",
+   "draft": "cannot parse \"Type in recipient Search\"",
+   "image": "screens/payments/04-send-recipient-search.png",
+   "kind": "popover",
+   "labels": [
+    "Type in recipient Search"
+   ],
+   "mutates": false,
+   "note": "Recipient search combobox open with matching recipients listed.",
+   "parent": "payments.send-start",
+   "state": "payments.send-recipient-search",
+   "title": "Send: recipient search"
+  },
+  {
+   "area": "payments",
+   "draft": "nothing on payments.index matches {\"click\":{\"name\":\"settings gear\"}}",
+   "image": "screens/payments/109-payments-settings-modal.png",
+   "kind": "modal",
+   "labels": [
+    "Click settings gear"
+   ],
+   "mutates": false,
+   "note": "Gear next to the AP email: bill forwarding email with copy, email alert Manage link, approval rules tiers with Edit.",
+   "parent": "payments.index",
+   "state": "payments.settings-modal",
+   "title": "Payments settings"
+  },
+  {
+   "area": "payments",
+   "draft": "nothing on payments.scheduled matches {\"click\":{\"name\":\"Status filter\"}}",
+   "image": "screens/payments/87-payments-status-filter.png",
+   "kind": "popover",
+   "labels": [
+    "Click Status filter"
+   ],
+   "mutates": false,
+   "note": "Status filter popover with checkboxes: Overdue, Due next 7, Not due yet, Missing due date.",
+   "parent": "payments.scheduled",
+   "state": "payments.status-filter",
+   "title": "Status filter"
+  },
+  {
+   "area": "payments",
+   "draft": "replaying the parent payments.transfer-start: step-failed: payments.move-money-menu hop 0: click {\"name\":\"Move money\",\"role\":\"button\"}: no element matches {\"name\":\"Move money\",\"role\":\"button\"}",
+   "image": "screens/payments/27-transfer-from-dropdown.png",
+   "kind": "menu",
+   "labels": [
+    "Click Move money",
+    "Click Transfer",
+    "Open Transfer from"
+   ],
+   "mutates": true,
+   "note": "Source account list: Treasury, Ops / Payroll, AP, Checking, Savings, external banks, Link a Bank Account.",
+   "parent": "payments.transfer-start",
+   "state": "payments.transfer-from-dropdown",
+   "title": "Transfer: from account list"
+  },
+  {
+   "area": "payments",
+   "draft": "nothing on payments.transfer-start matches {\"click\":{\"name\":\"Next with empty form\"}}",
+   "image": "screens/payments/26-transfer-validation.png",
+   "kind": "validation-error",
+   "labels": [
+    "Click Move money",
+    "Click Transfer",
+    "Click Next with empty form"
+   ],
+   "mutates": true,
+   "note": "Next with empty form: 'Must be a dollar value.' and two 'Please choose an account' errors.",
+   "parent": "payments.transfer-start",
+   "state": "payments.transfer-validation",
+   "title": "Transfer: empty submit"
+  },
+  {
+   "area": "payments",
+   "draft": "nothing on payments.wire-drawdowns matches {\"click\":{\"name\":\"a drawdown\"}}",
+   "image": "screens/payments/64-wire-drawdown-detail.png",
+   "kind": "drawer",
+   "labels": [
+    "Click a drawdown row"
+   ],
+   "mutates": false,
+   "note": "Side panel with routing and masked account number, pay from, withdrawal limit, delete and edit.",
+   "parent": "payments.wire-drawdowns",
+   "state": "payments.wire-drawdown-detail",
+   "title": "Drawdown recipient panel"
+  },
+  {
+   "area": "payments",
+   "draft": "nothing on payments.wire-drawdown-payroll matches {\"click\":{\"name\":\"Gusto\"}}",
+   "image": "screens/payments/68-wire-drawdown-funding.png",
+   "kind": "empty-state",
+   "labels": [
+    "Click Create authorization",
+    "Choose Payroll / Benefits",
+    "Choose Gusto, click Next"
+   ],
+   "mutates": true,
+   "note": "Source account select reads 'There are no accounts'; the flow cannot continue in the sandbox.",
+   "parent": "payments.wire-drawdown-payroll",
+   "state": "payments.wire-drawdown-funding",
+   "title": "Drawdown: source account"
+  },
+  {
+   "area": "payments",
+   "draft": "nothing on payments.wire-drawdown-payroll matches {\"click\":{\"name\":\"Next without company\"}}",
+   "image": "screens/payments/67-wire-drawdown-validation.png",
+   "kind": "validation-error",
+   "labels": [
+    "Click Create authorization",
+    "Choose Payroll / Benefits",
+    "Click Next without company"
+   ],
+   "mutates": true,
+   "note": "Next with no company: 'Please choose a recipient.' and Next turns disabled.",
+   "parent": "payments.wire-drawdown-payroll",
+   "state": "payments.wire-drawdown-validation",
+   "title": "Drawdown: recipient required"
+  }
+ ]
+}

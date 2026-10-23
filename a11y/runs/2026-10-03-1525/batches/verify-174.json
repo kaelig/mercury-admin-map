@@ -1,0 +1,113 @@
+{
+ "area": "home",
+ "batch": "verify-174",
+ "findings": [
+  {
+   "attachments": [],
+   "attempt": 1,
+   "basis": "violation",
+   "criteria": [
+    "2.5.8"
+   ],
+   "evidence": [
+    {
+     "evidence": {
+      "closestOffset": 20,
+      "failureSummary": "Fix any of the following:\n  Target has insufficient size (20px by 20px, should be at least 24px by 24px)\n  Target has insufficient space to its closest neighbors. Safe clickable space has a diameter of 20px instead of at least 24px.",
+      "height": 20,
+      "minOffset": 24,
+      "minSize": 24,
+      "width": 20
+     },
+     "occurrence": {
+      "ancestors": [
+       [
+        "_bookmarkWrapper_1irs1_6"
+       ],
+       [
+        "_list_1l8yn_1"
+       ],
+       [
+        "_bookmarksSection_184ve_46"
+       ],
+       [
+        "_navContainer_184ve_12"
+       ],
+       [
+        "_sidebar_11y1x_4",
+        "_narrowSidebar_184ve_7"
+       ],
+       [
+        "_layout_809q8_18",
+        "_homeLayout_ct6b5_100"
+       ],
+       [
+        "_wrapper_809q8_3"
+       ],
+       []
+      ],
+      "classes": [
+       "_bookmarkRemoveButton_1irs1_42"
+      ],
+      "data": {},
+      "heading": "",
+      "landmark": {
+       "name": "",
+       "role": "navigation"
+      },
+      "layer": "document",
+      "name": "Remove bookmark",
+      "rect": [
+       183,
+       738,
+       20,
+       20
+      ],
+      "role": "button",
+      "tag": "button",
+      "xpath": "/html/body/div[1]/main[1]/div[1]/div[1]/div[4]/nav[1]/div[2]/div[4]/ul[1]/li[4]/button[2]"
+     },
+     "state": "home.bookmark-reordered"
+    }
+   ],
+   "evidenceHash": "0379b67d15babf09ab93628d260adc47f5ee1e71cc6df427d95d8541c3b28c66",
+   "facts": {
+    "criterion": "2.5.8",
+    "criterionName": "Target Size (Minimum)",
+    "element": "button \"Remove bookmark\"",
+    "offset": "20",
+    "rule": "target-size",
+    "screen": "Bookmarks reordered",
+    "screens": 1,
+    "size": "20×20"
+   },
+   "family": "target-size",
+   "guidance": "Medium next to destructive or financial controls.",
+   "issueId": null,
+   "key": "target-size:target-size:ae946809d26d",
+   "measured": true,
+   "primary": "home.bookmark-reordered",
+   "proposals": [],
+   "rule": "target-size",
+   "screens": 1,
+   "severityDefault": "low",
+   "source": "scanner",
+   "states": [
+    "home.bookmark-reordered"
+   ],
+   "summary": "target-size: 20×20 px; the widest circle centered on it that clears other targets is 20 px, and the spacing exception needs 24 px.",
+   "title": "Target under 24×24 px: button \"Remove bookmark\""
+  }
+ ],
+ "primaries": [
+  "home.bookmark-reordered"
+ ],
+ "reach": {
+  "baseUrl": "https://demo.mercury.com",
+  "data": "data",
+  "map": "build/map.json",
+  "run": "2026-10-03-1525",
+  "workspace": "a11y"
+ },
+ "run": "2026-10-03-1525"
+}

@@ -1,0 +1,203 @@
+{
+ "area": "invoicing",
+ "batch": "second-030",
+ "findings": [
+  {
+   "attachments": [],
+   "attempt": 1,
+   "basis": "failure",
+   "criteria": [
+    "2.4.3"
+   ],
+   "evidence": [
+    {
+     "evidence": {
+      "closedBy": "escape",
+      "focus": "body",
+      "stops": 4,
+      "trace": [
+       {
+        "focus": {
+         "label": "Close detail panel",
+         "tag": "button",
+         "xpath": "/html/body/div[1]/main[1]/div[1]/div[1]/div[4]/div[1]/div[2]/div[2]/aside[1]/div[1]/section[1]/div[2]/span[1]/button[1]"
+        },
+        "key": "start",
+        "where": "outside"
+       },
+       {
+        "focus": {
+         "label": "Edit",
+         "tag": "button",
+         "xpath": "/html/body/div[1]/main[1]/div[1]/div[1]/div[4]/div[1]/div[2]/div[2]/aside[1]/div[1]/div[1]/section[1]/div[2]/button[1]"
+        },
+        "key": "Tab",
+        "where": "outside"
+       },
+       {
+        "focus": {
+         "label": "Delete",
+         "tag": "button",
+         "xpath": "/html/body/div[1]/main[1]/div[1]/div[1]/div[4]/div[1]/div[2]/div[2]/aside[1]/div[1]/div[1]/section[1]/div[2]/button[2]"
+        },
+        "key": "Tab",
+        "where": "trigger"
+       },
+       {
+        "focus": {
+         "label": "Delete Test Person? Test Person will be removed from your catalog. Any invoice t",
+         "tag": "div",
+         "xpath": "/html/body/div[11]/div[1]/div[1]"
+        },
+        "key": "Enter",
+        "where": "outside"
+       },
+       {
+        "focus": {
+         "label": "Delete Test Person? Test Person will be removed from your catalog. Any invoice t",
+         "tag": "div",
+         "xpath": "/html/body/div[11]/div[1]/div[1]"
+        },
+        "key": "settle",
+        "where": "inside"
+       },
+       {
+        "focus": {
+         "label": "Go back",
+         "tag": "button",
+         "xpath": "/html/body/div[11]/div[1]/div[1]/div[1]/div[2]/div[2]/button[1]"
+        },
+        "key": "Tab",
+        "where": "inside"
+       },
+       {
+        "focus": {
+         "label": "Delete item",
+         "tag": "button",
+         "xpath": "/html/body/div[11]/div[1]/div[1]/div[1]/div[2]/div[2]/button[2]"
+        },
+        "key": "Tab",
+        "where": "inside"
+       },
+       {
+        "focus": {
+         "label": "Go back",
+         "tag": "button",
+         "xpath": "/html/body/div[11]/div[1]/div[1]/div[1]/div[2]/div[2]/button[1]"
+        },
+        "key": "Tab",
+        "where": "inside"
+       },
+       {
+        "focus": "body",
+        "key": "Escape",
+        "where": "body"
+       },
+       {
+        "focus": "body",
+        "key": "settle",
+        "where": "body"
+       }
+      ]
+     },
+     "occurrence": {
+      "ancestors": [
+       [
+        "_buttonGroup_16t7w_1",
+        "_horizontal_16t7w_11"
+       ],
+       [
+        "_panelSection_d3i56_148",
+        "_section_t5x20_5"
+       ],
+       [
+        "_panelBody_d3i56_64"
+       ],
+       [
+        "_large_kwlx6_9",
+        "_noHover_3n0se_28",
+        "_shadow_3n0se_25",
+        "_raisedBackground_3n0se_45",
+        "_panel_d3i56_55"
+       ],
+       [
+        "_transitionWrapper_d3i56_5",
+        "_visible_d3i56_19",
+        "_detailPanel_t5x20_1"
+       ],
+       [
+        "_tableWrapper_1o84k_1"
+       ],
+       [
+        "_pageContent_809q8_151",
+        "_pageContentWidth_809q8_184"
+       ],
+       [
+        "_dashboardContent_809q8_29"
+       ]
+      ],
+      "classes": [
+       "_button_r6b2u_20",
+       "_small_r6b2u_72",
+       "_secondary_r6b2u_126"
+      ],
+      "data": {},
+      "heading": "Item",
+      "landmark": {
+       "name": "",
+       "role": "complementary"
+      },
+      "layer": "document",
+      "name": "Delete",
+      "rect": [
+       1143,
+       316,
+       165,
+       32
+      ],
+      "role": "button",
+      "tag": "button",
+      "xpath": "/html/body/div[1]/main[1]/div[1]/div[1]/div[4]/div[1]/div[2]/div[2]/aside[1]/div[1]/div[1]/section[1]/div[2]/button[2]"
+     },
+     "state": "invoicing.delete-catalog-item-modal"
+    }
+   ],
+   "evidenceHash": "efddd5030414a89204b799b23403c3f2331f4ba1761c08f15e9e03ce908edb9a",
+   "facts": {
+    "criterion": "2.4.3",
+    "criterionName": "Focus Order",
+    "element": "button \"Delete\"",
+    "focus": "page body",
+    "overlay": "unnamed dialog",
+    "screen": "Delete catalog item modal"
+   },
+   "family": "dialog-focus",
+   "guidance": "High when controls inside are unreachable.",
+   "issueId": null,
+   "key": "dialog-focus:dialog-focus-not-returned:ff77e5d38f19",
+   "measured": false,
+   "primary": "invoicing.delete-catalog-item-modal",
+   "proposals": [],
+   "rule": "dialog-focus-not-returned",
+   "screens": 1,
+   "severityDefault": "medium",
+   "source": "scanner",
+   "states": [
+    "invoicing.delete-catalog-item-modal"
+   ],
+   "summary": "Esc closed the unnamed dialog and focus went to the page body, not back to the button \"Delete\".",
+   "title": "Focus lost after closing unnamed dialog"
+  }
+ ],
+ "primaries": [
+  "invoicing.delete-catalog-item-modal"
+ ],
+ "reach": {
+  "baseUrl": "https://demo.mercury.com",
+  "data": "data",
+  "map": "build/map.json",
+  "run": "2026-10-03-1525",
+  "workspace": "a11y"
+ },
+ "run": "2026-10-03-1525"
+}

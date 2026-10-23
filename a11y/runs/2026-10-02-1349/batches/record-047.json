@@ -1,0 +1,262 @@
+{
+ "batch": "record-047",
+ "reach": {
+  "baseUrl": "https://demo.mercury.com",
+  "data": "data",
+  "map": "build/map.json",
+  "run": "2026-10-02-1349",
+  "workspace": "a11y"
+ },
+ "run": "2026-10-02-1349",
+ "states": [
+  {
+   "area": "payments",
+   "draft": "not drafted: its parent had no accepted recipe when the drafter ran",
+   "image": "screens/payments/06-send-method-dropdown.png",
+   "kind": "menu",
+   "labels": [
+    "Click a recently paid recipient",
+    "Open Payment method"
+   ],
+   "mutates": false,
+   "note": "Payment method listbox: Real-Time Payment (New), ACH, Wire, International Wire, Check with delivery estimates.",
+   "parent": "payments.send-recipient-step",
+   "state": "payments.send-method-dropdown",
+   "title": "Send: payment method list"
+  },
+  {
+   "area": "payments",
+   "draft": "not drafted: its parent had no accepted recipe when the drafter ran",
+   "image": "screens/payments/07-send-method-check.png",
+   "kind": "form-state",
+   "labels": [
+    "Click a recently paid recipient",
+    "Open Payment method",
+    "Choose Check"
+   ],
+   "mutates": false,
+   "note": "Check selected: bank details replaced by the check mailing address, 7-10 business days.",
+   "parent": "payments.send-method-dropdown",
+   "state": "payments.send-method-check",
+   "title": "Send: Check method"
+  },
+  {
+   "area": "payments",
+   "draft": "not drafted: its parent had no accepted recipe when the drafter ran",
+   "image": "screens/payments/08-send-method-intl-wire.png",
+   "kind": "form-state",
+   "labels": [
+    "Click a recently paid recipient",
+    "Open Payment method",
+    "Choose International Wire"
+   ],
+   "mutates": false,
+   "note": "International Wire selected: a Currency picker opens with USD most used and other currencies.",
+   "parent": "payments.send-method-dropdown",
+   "state": "payments.send-method-intl-wire",
+   "title": "Send: International wire currency"
+  },
+  {
+   "area": "payments",
+   "draft": "not drafted: its parent had no accepted recipe when the drafter ran",
+   "image": "screens/payments/09-send-intl-validation.png",
+   "kind": "validation-error",
+   "labels": [
+    "Click a recently paid recipient",
+    "Open Payment method",
+    "Choose International Wire",
+    "Click Next without currency"
+   ],
+   "mutates": false,
+   "note": "Next with no currency shows 'Please complete this field' under Currency.",
+   "parent": "payments.send-method-intl-wire",
+   "state": "payments.send-intl-validation",
+   "title": "Send: currency required"
+  },
+  {
+   "area": "payments",
+   "draft": "not drafted: its parent had no accepted recipe when the drafter ran",
+   "image": "screens/payments/110-send-method-wire.png",
+   "kind": "form-state",
+   "labels": [
+    "Click a recently paid recipient",
+    "Open Payment method",
+    "Choose Wire"
+   ],
+   "mutates": false,
+   "note": "Payment method Wire (0-1 business days, No fee) asks for routing and account numbers.",
+   "parent": "payments.send-method-dropdown",
+   "state": "payments.send-method-wire",
+   "title": "Send: domestic Wire"
+  },
+  {
+   "area": "payments",
+   "draft": "not drafted: its parent had no accepted recipe when the drafter ran",
+   "image": "screens/payments/111-send-wire-validation.png",
+   "kind": "validation-error",
+   "labels": [
+    "Click a recently paid recipient",
+    "Open Payment method",
+    "Choose Wire",
+    "Click Next with empty bank details"
+   ],
+   "mutates": false,
+   "note": "Next with empty bank details: 'Routing # should be a 9-digit number', 'Account # should be 4-17 characters'.",
+   "parent": "payments.send-method-wire",
+   "state": "payments.send-wire-validation",
+   "title": "Send: wire bank details required"
+  },
+  {
+   "area": "payments",
+   "draft": "not drafted: its parent had no accepted recipe when the drafter ran",
+   "image": "screens/payments/73-ach-authorization-review.png",
+   "kind": "form-state",
+   "labels": [
+    "Click Add ACH authorization",
+    "Pick a vendor",
+    "Click Next"
+   ],
+   "mutates": false,
+   "note": "Review vendor, ACH Company ID, account and limit; Authorize.",
+   "parent": "payments.ach-add-details",
+   "state": "payments.ach-add-review",
+   "title": "Review and authorize"
+  },
+  {
+   "area": "payments",
+   "draft": "not drafted: its parent had no accepted recipe when the drafter ran",
+   "image": "screens/payments/74-ach-authorization-success.png",
+   "kind": "confirmation",
+   "labels": [
+    "Click Add ACH authorization",
+    "Pick a vendor",
+    "Click Next",
+    "Click Authorize"
+   ],
+   "mutates": true,
+   "note": "Returns to the list with PG&E added; no toast or success message.",
+   "parent": "payments.ach-add-review",
+   "state": "payments.ach-add-success",
+   "title": "ACH list with new vendor"
+  },
+  {
+   "area": "payments",
+   "draft": "not drafted: its parent had no accepted recipe when the drafter ran",
+   "image": "screens/payments/10-send-recipient-more-menu.png",
+   "kind": "menu",
+   "labels": [
+    "Click a recently paid recipient",
+    "Click recipient card ... menu"
+   ],
+   "mutates": false,
+   "note": "Overflow menu on the recipient card: Edit recipient details, Pay different recipient.",
+   "parent": "payments.send-recipient-step",
+   "state": "payments.send-recipient-more-menu",
+   "title": "Send: recipient card menu"
+  },
+  {
+   "area": "payments",
+   "draft": "not drafted: its parent had no accepted recipe when the drafter ran",
+   "image": "screens/payments/11-send-edit-recipient-drawer.png",
+   "kind": "drawer",
+   "labels": [
+    "Click a recently paid recipient",
+    "Click recipient card ... menu",
+    "Click Edit recipient details"
+   ],
+   "mutates": false,
+   "note": "Full-screen overlay to edit recipient profile (person/business, name, email, nickname) and address; covers the demo banner.",
+   "parent": "payments.send-recipient-more-menu",
+   "state": "payments.send-edit-recipient",
+   "title": "Send: Edit recipient details"
+  },
+  {
+   "area": "payments",
+   "draft": "not drafted: its parent had no accepted recipe when the drafter ran",
+   "image": "screens/payments/22-send-review.png",
+   "kind": "form-state",
+   "labels": [
+    "Click a recently paid recipient",
+    "Click Next (ACH)",
+    "Enter amount, click Next",
+    "Click Next",
+    "Click Next"
+   ],
+   "mutates": false,
+   "note": "Step 5: amount hero card, ACH delivery estimate, recipient bank and source account summary, Schedule payment.",
+   "parent": "payments.send-details",
+   "state": "payments.send-review",
+   "title": "Send: Review step"
+  },
+  {
+   "area": "payments",
+   "draft": "not drafted: its parent had no accepted recipe when the drafter ran",
+   "image": "screens/payments/23-send-submitting.png",
+   "kind": "form-state",
+   "labels": [
+    "Click a recently paid recipient",
+    "Click Next (ACH)",
+    "Enter amount, click Next",
+    "Click Next",
+    "Click Next",
+    "Click Schedule payment"
+   ],
+   "mutates": true,
+   "note": "Schedule payment pressed: primary button shows loading dots and Back is disabled.",
+   "parent": "payments.send-review",
+   "state": "payments.send-submitting",
+   "title": "Send: submitting"
+  },
+  {
+   "area": "payments",
+   "draft": "not drafted: its parent had no accepted recipe when the drafter ran",
+   "image": "screens/payments/81-checkbook-order-success.png",
+   "kind": "confirmation",
+   "labels": [
+    "Click Checkbooks in sidebar",
+    "Click Order Checkbook",
+    "Fill account + nickname, click Next",
+    "Tick authority box, click Confirm"
+   ],
+   "mutates": true,
+   "note": "Centered 'We're getting your checkbook ready' with check preview and Done.",
+   "parent": "payments.checkbook-order-review",
+   "state": "payments.checkbook-order-success",
+   "title": "Checkbook ordered"
+  },
+  {
+   "area": "payments",
+   "draft": "not drafted: its parent had no accepted recipe when the drafter ran; the conductor rejected the previous recipe: missing validation error: the replay's Request tax documents dialog has an empty Email field with no 'Please complete this field'. It also shows a different recipient (Lighthouse Properties #..., not Anil Kapoor)",
+   "image": "screens/payments/95-recipients-request-tax-docs-validation.png",
+   "kind": "validation-error",
+   "labels": [
+    "Tick two recipient checkboxes",
+    "Click Request tax docs",
+    "Select a recipient with no email"
+   ],
+   "mutates": false,
+   "note": "Recipient without an email: 'Please complete this field' and Send requests disabled.",
+   "parent": "payments.recipients-request-tax-docs",
+   "state": "payments.recipients-request-tax-docs-validation",
+   "title": "Request tax docs: email missing"
+  },
+  {
+   "area": "payments",
+   "draft": "not drafted: its parent had no accepted recipe when the drafter ran",
+   "image": "screens/payments/21-send-details-bill-expanded.png",
+   "kind": "form-state",
+   "labels": [
+    "Click a recently paid recipient",
+    "Click Next (ACH)",
+    "Enter amount, click Next",
+    "Click Next",
+    "Expand Bill details"
+   ],
+   "mutates": false,
+   "note": "Bill details accordion open: invoice number, invoice/due dates, department, internal note, attachments.",
+   "parent": "payments.send-details",
+   "state": "payments.send-details-bill",
+   "title": "Send: Bill details open"
+  }
+ ]
+}

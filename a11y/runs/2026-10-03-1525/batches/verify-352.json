@@ -1,0 +1,113 @@
+{
+ "area": "settings",
+ "batch": "verify-352",
+ "findings": [
+  {
+   "attachments": [],
+   "attempt": 1,
+   "basis": "violation",
+   "criteria": [
+    "4.1.2"
+   ],
+   "evidence": [
+    {
+     "evidence": {
+      "aria-errormessage": [
+       "createtokenwhitelist-mercury-utils-id-26-errormessage"
+      ],
+      "failureSummary": "Fix all of the following:\n  aria-errormessage value `createtokenwhitelist-mercury-utils-id-26-errormessage` must use a technique to announce the message (e.g., aria-live, aria-describedby, role=alert, etc.)"
+     },
+     "occurrence": {
+      "ancestors": [
+       [
+        "_inputBox_q7hf7_93",
+        "_error_q7hf7_41"
+       ],
+       [
+        "_inputBoxWrapper_q7hf7_93"
+       ],
+       [
+        "_textInputWrapper_q7hf7_24"
+       ],
+       [
+        "_provideDSTextInput_q7hf7_6"
+       ],
+       [
+        "_createTokenForm_w7jji_1"
+       ],
+       [],
+       [],
+       [
+        "_large_kwlx6_9",
+        "_noHover_3n0se_28",
+        "_shadow_3n0se_25",
+        "_raisedBackground_3n0se_45",
+        "_card_lo4oy_4",
+        "_defaultPadding_lo4oy_27",
+        "_small_lo4oy_11"
+       ]
+      ],
+      "classes": [
+       "_input_q7hf7_93"
+      ],
+      "data": {},
+      "heading": "Create an API token",
+      "landmark": {
+       "name": "",
+       "role": "form"
+      },
+      "layer": "top",
+      "name": "IP whitelist",
+      "rect": [
+       549,
+       563,
+       342,
+       24
+      ],
+      "role": "textbox",
+      "tag": "input",
+      "xpath": "/html/body/div[10]/div[1]/div[1]/div[1]/form[1]/div[1]/section[1]/div[4]/div[1]/div[1]/div[1]/input[1]"
+     },
+     "state": "settings.token-ip-required"
+    }
+   ],
+   "evidenceHash": "ee6d30deada975490ec5681e7e298d724ca4db4460c11de72c82df99fcc1d6f7",
+   "facts": {
+    "announced": "textbox \"IP whitelist\" [invalid=true, errormessage=Enter a comma-separated list…",
+    "axeSummary": "aria-errormessage value `createtokenwhitelist-mercury-utils-id-26-errormessage` must use a technique to announce the message (e.g., aria-live, aria-describedby…",
+    "criterion": "4.1.2",
+    "criterionName": "Name, Role, Value",
+    "element": "textbox \"IP whitelist\"",
+    "rule": "aria-valid-attr-value",
+    "screen": "Create token — IP whitelist required"
+   },
+   "family": "role-state",
+   "guidance": "Low for optional ARIA or an invalid autocomplete token; high when aria-hidden hides the whole page.",
+   "issueId": null,
+   "key": "role-state:aria-valid-attr-value:f91c07a705b8",
+   "measured": false,
+   "primary": "settings.token-ip-required",
+   "proposals": [],
+   "rule": "aria-valid-attr-value",
+   "screens": 1,
+   "severityDefault": "medium",
+   "source": "scanner",
+   "states": [
+    "settings.token-ip-required"
+   ],
+   "summary": "aria-valid-attr-value: announced as textbox \"IP whitelist\" [invalid=true, errormessage=Enter a comma-separated list…. aria-errormessage value `createtokenwhitelist-mercury-utils-id-26-errormessage` must use a technique to announce the message (e.g., aria-live, aria-describedby…",
+   "title": "Wrong role or state: textbox \"IP whitelist\""
+  }
+ ],
+ "primaries": [
+  "settings.token-ip-required"
+ ],
+ "reach": {
+  "baseUrl": "https://demo.mercury.com",
+  "data": "data",
+  "map": "build/map.json",
+  "run": "2026-10-03-1525",
+  "workspace": "a11y"
+ },
+ "run": "2026-10-03-1525"
+}

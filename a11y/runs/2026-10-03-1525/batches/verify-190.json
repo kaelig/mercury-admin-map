@@ -1,0 +1,124 @@
+{
+ "area": "home",
+ "batch": "verify-190",
+ "findings": [
+  {
+   "attachments": [],
+   "attempt": 1,
+   "basis": "candidate",
+   "criteria": [
+    "2.1.1"
+   ],
+   "evidence": [
+    {
+     "evidence": {
+      "end": "body",
+      "focusable": true,
+      "source": "ax",
+      "stops": 99
+     },
+     "occurrence": {
+      "ancestors": [
+       [
+        "_toastContainer_570tc_25",
+        "_default_570tc_5"
+       ],
+       []
+      ],
+      "classes": [
+       "_actionButton_570tc_94"
+      ],
+      "data": {},
+      "heading": "Welcome, Jane",
+      "landmark": null,
+      "layer": "document",
+      "name": "Undo",
+      "rect": [
+       934,
+       812,
+       41,
+       28
+      ],
+      "role": "button",
+      "tag": "button",
+      "xpath": "/html/body/div[2]/div[1]/button[1]"
+     },
+     "state": "home.index-invoicing-hidden"
+    },
+    {
+     "evidence": {
+      "end": "body",
+      "focusable": true,
+      "source": "ax",
+      "stops": 105
+     },
+     "occurrence": {
+      "ancestors": [
+       [
+        "_toastContainer_570tc_25",
+        "_default_570tc_5"
+       ],
+       []
+      ],
+      "classes": [
+       "_actionButton_570tc_94"
+      ],
+      "data": {},
+      "heading": "Welcome, Jane",
+      "landmark": null,
+      "layer": "document",
+      "name": "Undo",
+      "rect": [
+       960,
+       812,
+       41,
+       28
+      ],
+      "role": "button",
+      "tag": "button",
+      "xpath": "/html/body/div[2]/div[1]/button[1]"
+     },
+     "state": "home.balance-table"
+    }
+   ],
+   "evidenceHash": "f6ce5a30f2509ec2d1829ffac09537b1b781cd029cd3d5ee2fbaffa9308dac4d",
+   "facts": {
+    "axeSummary": "",
+    "criterion": "2.1.1",
+    "criterionName": "Keyboard",
+    "element": "button \"Undo\"",
+    "rule": "not-reached",
+    "screen": "Home with Invoicing hidden",
+    "stops": "99"
+   },
+   "family": "keyboard",
+   "guidance": "High if a task cannot be completed without a mouse.",
+   "issueId": null,
+   "key": "keyboard:not-reached:3ea7956fc7d4",
+   "measured": false,
+   "primary": "home.index-invoicing-hidden",
+   "proposals": [],
+   "rule": "not-reached",
+   "screens": 2,
+   "severityDefault": "medium",
+   "source": "scanner",
+   "states": [
+    "home.index-invoicing-hidden",
+    "home.balance-table"
+   ],
+   "summary": "The Tab walk visited 99 stops and never reached the button \"Undo\", which responds to a click.",
+   "title": "Not reachable by keyboard: button \"Undo\""
+  }
+ ],
+ "primaries": [
+  "home.index-invoicing-hidden"
+ ],
+ "reach": {
+  "baseUrl": "https://demo.mercury.com",
+  "data": "data",
+  "map": "build/map.json",
+  "run": "2026-10-03-1525",
+  "workspace": "a11y"
+ },
+ "run": "2026-10-03-1525"
+}

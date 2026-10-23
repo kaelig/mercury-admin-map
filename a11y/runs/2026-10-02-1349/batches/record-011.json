@@ -1,0 +1,57 @@
+{
+ "batch": "record-011",
+ "reach": {
+  "baseUrl": "https://demo.mercury.com",
+  "data": "data",
+  "map": "build/map.json",
+  "run": "2026-10-02-1349",
+  "workspace": "a11y"
+ },
+ "run": "2026-10-02-1349",
+ "states": [
+  {
+   "area": "books",
+   "draft": "cannot parse \"Hover Accounting basis info\"",
+   "image": "screens/books/02-basis-tooltip.png",
+   "kind": "popover",
+   "labels": [
+    "Toggle Books",
+    "Hover Accounting basis info"
+   ],
+   "mutates": false,
+   "note": "Hovering the info icon next to Accounting basis explains Cash vs Accrual in two paragraphs.",
+   "parent": "books.index",
+   "state": "books.basis-tooltip",
+   "title": "Accounting basis help tooltip"
+  },
+  {
+   "area": "books",
+   "draft": "step-failed: books.coa-dropdown hop 0: click {\"role\":\"link\",\"name\":\"Chart of Accounts\"}: locator.click: Timeout 5000ms exceeded.",
+   "image": "screens/books/03-coa-dropdown.png",
+   "kind": "menu",
+   "labels": [
+    "Toggle Books",
+    "Open Chart of accounts"
+   ],
+   "mutates": false,
+   "note": "Two options: Default (Recommended) and Import template.",
+   "parent": "books.index",
+   "state": "books.coa-dropdown",
+   "title": "Chart of accounts dropdown"
+  },
+  {
+   "area": "books",
+   "draft": "nothing on home.index matches {\"click\":{\"name\":\"Books after setup\"}}",
+   "image": "screens/books/60-home-returning.png",
+   "kind": "page",
+   "labels": [
+    "Toggle Books after setup"
+   ],
+   "mutates": false,
+   "note": "After toggling Banking then Books again, the toggle lands on the dashboard (not signup) with the range reset to \"Last month\" (Aug 1-31); the org switcher now shows a chevron instead of the Pro badge.",
+   "parent": "home.index",
+   "state": "books.home-returning",
+   "title": "Books home on return"
+  }
+ ]
+}

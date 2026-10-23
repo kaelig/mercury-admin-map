@@ -1,0 +1,63 @@
+{
+ "batch": "record-142",
+ "reach": {
+  "baseUrl": "https://demo.mercury.com",
+  "data": "data",
+  "map": "build/map.json",
+  "run": "2026-10-02-1349",
+  "workspace": "a11y"
+ },
+ "run": "2026-10-02-1349",
+ "states": [
+  {
+   "area": "invoicing",
+   "draft": "not drafted: its parent had no accepted recipe when the drafter ran",
+   "image": "screens/invoicing/20-create-destination-account.png",
+   "kind": "menu",
+   "labels": [
+    "Click Request money",
+    "Click the Name combobox",
+    "Pick a customer",
+    "Click Next",
+    "Click the line item field",
+    "Type a custom item name",
+    "Enter quantity, unit price and memo",
+    "Click Add sales tax",
+    "Click the Payer page preview tab",
+    "Click the Email preview tab",
+    "Scroll to the bottom of the form",
+    "Click Destination account"
+   ],
+   "mutates": false,
+   "note": "Destination account dropdown listing Mercury accounts with balances and masked numbers.",
+   "parent": "invoicing.create-setup-bottom",
+   "state": "invoicing.create-destination-menu",
+   "title": "Destination account picker"
+  },
+  {
+   "area": "invoicing",
+   "draft": "not drafted: its parent had no accepted recipe when the drafter ran",
+   "image": "screens/invoicing/27-index-loading-skeleton.png",
+   "kind": "page",
+   "labels": [
+    "Click Request money",
+    "Click the Name combobox",
+    "Pick a customer",
+    "Click Next",
+    "Click the line item field",
+    "Type a custom item name",
+    "Enter quantity, unit price and memo",
+    "Click Next",
+    "Click Next",
+    "Click Create & send email",
+    "Wait for the invoice to be created",
+    "Click Return to dashboard"
+   ],
+   "mutates": true,
+   "note": "Skeleton placeholders for the summary cards and table while the list reloads after Return to dashboard; an 'Invoice not found' error toast shows for the invoice that was just created.",
+   "parent": "invoicing.create-sent",
+   "state": "invoicing.index-loading",
+   "title": "Invoice list loading"
+  }
+ ]
+}

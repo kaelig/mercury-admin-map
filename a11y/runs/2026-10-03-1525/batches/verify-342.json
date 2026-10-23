@@ -1,0 +1,119 @@
+{
+ "area": "settings",
+ "batch": "verify-342",
+ "findings": [
+  {
+   "attachments": [],
+   "attempt": 1,
+   "basis": "violation",
+   "criteria": [
+    "1.4.1"
+   ],
+   "evidence": [
+    {
+     "evidence": {
+      "contrastRatio": 1.3,
+      "failureSummary": "Fix any of the following:\n  The link has insufficient color contrast of 1.3:1 with the surrounding text. (Minimum contrast is 3:1, link text: #465bd1, surrounding text: #535461)\n  The link has no styling (such as underline) to distinguish it from the surrounding text",
+      "messageKey": "fgContrast",
+      "nodeColor": "#465bd1",
+      "parentColor": "#535461",
+      "requiredContrastRatio": 3
+     },
+     "occurrence": {
+      "ancestors": [
+       [
+        "_text-link_12t49_1"
+       ],
+       [
+        "_label_qaod7_59",
+        "_text-secondary_12t49_1"
+       ],
+       [
+        "_relationshipManagerFallback_1re4j_157"
+       ],
+       [
+        "_panel_1re4j_1"
+       ],
+       [
+        "_sidePanel_1gf6r_102"
+       ],
+       [
+        "_pageContent_1gf6r_10"
+       ],
+       [
+        "_pageContent_809q8_151",
+        "_pageContentWidth_809q8_184"
+       ],
+       [
+        "_dashboardContent_809q8_29"
+       ]
+      ],
+      "classes": [
+       "_link_ual8v_4",
+       "_underlineOnHover_ual8v_15",
+       "_sizeSmall_ual8v_29"
+      ],
+      "data": {},
+      "heading": "Plan & Billing",
+      "landmark": {
+       "name": "",
+       "role": "main"
+      },
+      "layer": "document",
+      "name": "get in touch",
+      "rect": [
+       1093,
+       601,
+       71,
+       15
+      ],
+      "role": "link",
+      "tag": "a",
+      "xpath": "/html/body/div[1]/main[1]/div[1]/div[1]/div[4]/div[1]/div[2]/div[3]/div[2]/div[1]/div[3]/span[2]/span[1]/a[1]"
+     },
+     "state": "settings.plan-billing"
+    }
+   ],
+   "evidenceHash": "a53c764516873134522b1c539c756c6b53327b6bac95d91863c2c1275c7b9753",
+   "facts": {
+    "bg": "#535461",
+    "criterion": "1.4.1",
+    "criterionName": "Use of Color",
+    "element": "link \"get in touch\"",
+    "fg": "#465bd1",
+    "ratio": "1.30",
+    "required": "3",
+    "rule": "link-in-text-block",
+    "screen": "Plan & Billing",
+    "screens": 1
+   },
+   "family": "contrast",
+   "guidance": "High under 2:1, or under 3:1 for essential text.",
+   "issueId": null,
+   "key": "contrast:link-in-text-block:5b576b44d962",
+   "measured": true,
+   "primary": "settings.plan-billing",
+   "proposals": [],
+   "rule": "link-in-text-block",
+   "screens": 1,
+   "severityDefault": "medium",
+   "source": "scanner",
+   "states": [
+    "settings.plan-billing"
+   ],
+   "summary": "axe link-in-text-block: link #465bd1 against text #535461 measures 1.30:1 with no other visual cue; AA needs 3:1 or a cue such as an underline.",
+   "title": "Link shown by color only: link \"get in touch\""
+  }
+ ],
+ "primaries": [
+  "settings.plan-billing"
+ ],
+ "reach": {
+  "baseUrl": "https://demo.mercury.com",
+  "data": "data",
+  "map": "build/map.json",
+  "run": "2026-10-03-1525",
+  "workspace": "a11y"
+ },
+ "run": "2026-10-03-1525"
+}

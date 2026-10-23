@@ -1,0 +1,53 @@
+{
+ "batch": "record-137",
+ "reach": {
+  "baseUrl": "https://demo.mercury.com",
+  "data": "data",
+  "map": "build/map.json",
+  "run": "2026-10-02-1349",
+  "workspace": "a11y"
+ },
+ "run": "2026-10-02-1349",
+ "states": [
+  {
+   "area": "settings",
+   "draft": "not drafted: its parent had no accepted recipe when the drafter ran",
+   "image": "screens/settings/99-token-list-new-token.png",
+   "kind": "form-state",
+   "labels": [
+    "Click + Create an API token",
+    "Click Create token with the form empty",
+    "Enter a nickname and open Permissions",
+    "Choose Custom Scopes",
+    "Open the Scopes combobox",
+    "Pick Send Money * and click Create token without an IP",
+    "Enter an IP and click Create token",
+    "Close the modal"
+   ],
+   "mutates": true,
+   "note": "The new row reads 'Map audit token | Custom | Tomorrow | mocked@mercury.com | Tomorrow | 1 IP whitelisted' while older rows show absolute dates such as 'May 16, 2019'.",
+   "parent": "settings.token-created",
+   "state": "settings.tokens-new-row",
+   "title": "API Tokens \u2014 new token row"
+  },
+  {
+   "area": "settings",
+   "draft": "not drafted: its parent had no accepted recipe when the drafter ran",
+   "image": "screens/settings/87-webhook-created.png",
+   "kind": "confirmation",
+   "labels": [
+    "Click + Create webhook",
+    "Enter an http:// URL and tab away",
+    "Switch to https:// and click Verify endpoint",
+    "Open the Event types combobox",
+    "Tick two event types and close the list",
+    "Click Create endpoint"
+   ],
+   "mutates": true,
+   "note": "Create endpoint closes the form and shows 'Signing secret' with 'Copy it now \u2014 it will not be shown again.', the secret whsec_mock_\u2026 in a monospace block and 'Please copy and save this secret before closing.' The only control besides the block is an X. After closing, the endpoints table still lists the original six rows and no toast appears.",
+   "parent": "settings.create-webhook-filled",
+   "state": "settings.webhook-signing-secret",
+   "title": "Signing secret modal"
+  }
+ ]
+}

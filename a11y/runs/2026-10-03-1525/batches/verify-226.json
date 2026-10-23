@@ -1,0 +1,392 @@
+{
+ "area": "invoicing",
+ "batch": "verify-226",
+ "findings": [
+  {
+   "attachments": [],
+   "attempt": 1,
+   "basis": "failure",
+   "criteria": [
+    "2.4.3"
+   ],
+   "evidence": [
+    {
+     "evidence": {
+      "closedBy": "escape",
+      "focus": "body",
+      "stops": 3,
+      "trace": [
+       {
+        "focus": {
+         "label": "monthly on the 3rd",
+         "tag": "button",
+         "xpath": "/html/body/div[1]/main[1]/div[1]/div[2]/div[2]/div[3]/div[1]/div[1]/div[1]/div[1]/div[1]/div[1]/div[2]/div[3]/div[1]/button[1]"
+        },
+        "key": "start",
+        "where": "outside"
+       },
+       {
+        "focus": {
+         "label": "Weekly on Saturday Monthly on the 3rd Monthly on the 1st Saturday Custom",
+         "tag": "div",
+         "xpath": "/html/body/div[1]/main[1]/div[1]/div[2]/div[2]/div[3]/div[1]/div[1]/div[1]/div[1]/div[1]/div[1]/div[2]/div[3]/div[1]/div[1]/div[1]"
+        },
+        "key": "Tab",
+        "where": "outside"
+       },
+       {
+        "focus": {
+         "label": "due on receipt",
+         "tag": "button",
+         "xpath": "/html/body/div[1]/main[1]/div[1]/div[2]/div[2]/div[3]/div[1]/div[1]/div[1]/div[1]/div[1]/div[1]/div[2]/div[4]/div[1]/button[1]"
+        },
+        "key": "Tab",
+        "where": "trigger"
+       },
+       {
+        "focus": {
+         "label": "due on receipt",
+         "tag": "button",
+         "xpath": "/html/body/div[1]/main[1]/div[1]/div[2]/div[2]/div[3]/div[1]/div[1]/div[1]/div[1]/div[1]/div[1]/div[2]/div[4]/div[1]/button[1]"
+        },
+        "key": "Enter",
+        "where": "trigger"
+       },
+       {
+        "focus": {
+         "label": "due on receipt",
+         "tag": "button",
+         "xpath": "/html/body/div[1]/main[1]/div[1]/div[2]/div[2]/div[3]/div[1]/div[1]/div[1]/div[1]/div[1]/div[1]/div[2]/div[4]/div[1]/button[1]"
+        },
+        "key": "settle",
+        "where": "trigger"
+       },
+       {
+        "focus": "body",
+        "key": "Escape",
+        "where": "body"
+       },
+       {
+        "focus": "body",
+        "key": "settle",
+        "where": "body"
+       },
+       {
+        "focus": "body",
+        "key": "Enter",
+        "where": "body"
+       },
+       {
+        "focus": {
+         "label": "Customize your experience",
+         "tag": "button",
+         "xpath": "/html/body/div[1]/main[1]/div[1]/div[1]/div[1]/div[1]/div[1]/div[1]/div[1]/span[2]/button[1]"
+        },
+        "key": "Tab",
+        "where": "outside"
+       }
+      ]
+     },
+     "occurrence": {
+      "ancestors": [
+       [
+        "_dropdownContainer_sixj2_2"
+       ],
+       [
+        "_sentenceRow_38qef_1"
+       ],
+       [
+        "_wrapper_1ojdq_8"
+       ],
+       [],
+       [
+        "_leftInnerContainer_12jyu_3"
+       ],
+       [
+        "_left_yg1rf_39"
+       ],
+       [
+        "_leftScrollArea_yg1rf_57"
+       ],
+       [
+        "_leftContainer_yg1rf_39",
+        "_splitVariant_yg1rf_82",
+        "_leftBoxShadow_12jyu_10"
+       ]
+      ],
+      "classes": [
+       "_dropdownButton_sixj2_20"
+      ],
+      "data": {},
+      "heading": "Frequency",
+      "landmark": {
+       "name": "",
+       "role": "main"
+      },
+      "layer": "document",
+      "name": "due on receipt",
+      "rect": [
+       284,
+       469,
+       130,
+       24
+      ],
+      "role": "button",
+      "tag": "button",
+      "xpath": "/html/body/div[1]/main[1]/div[1]/div[2]/div[2]/div[3]/div[1]/div[1]/div[1]/div[1]/div[1]/div[1]/div[2]/div[4]/div[1]/button[1]"
+     },
+     "state": "invoicing.create-series-terms-menu"
+    }
+   ],
+   "evidenceHash": "f4a305dda4424f39393dc9d6f61cf0d202285c9d96094d6046c73feff98e0d96",
+   "facts": {
+    "criterion": "2.4.3",
+    "criterionName": "Focus Order",
+    "element": "button \"due on receipt\"",
+    "focus": "page body",
+    "overlay": "menu \"due on receipt\"",
+    "screen": "Payment terms menu"
+   },
+   "family": "dialog-focus",
+   "guidance": "High when controls inside are unreachable.",
+   "issueId": null,
+   "key": "dialog-focus:dialog-focus-not-returned:634e9476d8d2",
+   "measured": false,
+   "primary": "invoicing.create-series-terms-menu",
+   "proposals": [],
+   "rule": "dialog-focus-not-returned",
+   "screens": 1,
+   "severityDefault": "low",
+   "source": "scanner",
+   "states": [
+    "invoicing.create-series-terms-menu"
+   ],
+   "summary": "Esc closed the menu \"due on receipt\" and focus went to the page body, not back to the button \"due on receipt\".",
+   "title": "Focus lost after closing menu \"due on receipt\""
+  },
+  {
+   "attachments": [],
+   "attempt": 1,
+   "basis": "failure",
+   "criteria": [
+    "2.4.3"
+   ],
+   "evidence": [
+    {
+     "evidence": {
+      "focus": {
+       "ancestors": [
+        [
+         "_dropdownContainer_sixj2_2"
+        ],
+        [
+         "_sentenceRow_38qef_1"
+        ],
+        [
+         "_wrapper_1ojdq_8"
+        ],
+        [],
+        [
+         "_leftInnerContainer_12jyu_3"
+        ],
+        [
+         "_left_yg1rf_39"
+        ],
+        [
+         "_leftScrollArea_yg1rf_57"
+        ],
+        [
+         "_leftContainer_yg1rf_39",
+         "_splitVariant_yg1rf_82",
+         "_leftBoxShadow_12jyu_10"
+        ]
+       ],
+       "classes": [
+        "_dropdownButton_sixj2_20"
+       ],
+       "data": {
+        "data-focus-visible": "true"
+       },
+       "heading": "",
+       "landmark": {
+        "name": "",
+        "role": "main"
+       },
+       "layer": "document",
+       "name": "due on receipt",
+       "rect": [
+        284,
+        469,
+        130,
+        24
+       ],
+       "role": "button",
+       "tag": "button",
+       "xpath": "/html/body/div[1]/main[1]/div[1]/div[2]/div[2]/div[3]/div[1]/div[1]/div[1]/div[1]/div[1]/div[1]/div[2]/div[4]/div[1]/button[1]"
+      },
+      "nextTabInside": false,
+      "stops": 3,
+      "trace": [
+       {
+        "focus": {
+         "label": "monthly on the 3rd",
+         "tag": "button",
+         "xpath": "/html/body/div[1]/main[1]/div[1]/div[2]/div[2]/div[3]/div[1]/div[1]/div[1]/div[1]/div[1]/div[1]/div[2]/div[3]/div[1]/button[1]"
+        },
+        "key": "start",
+        "where": "outside"
+       },
+       {
+        "focus": {
+         "label": "Weekly on Saturday Monthly on the 3rd Monthly on the 1st Saturday Custom",
+         "tag": "div",
+         "xpath": "/html/body/div[1]/main[1]/div[1]/div[2]/div[2]/div[3]/div[1]/div[1]/div[1]/div[1]/div[1]/div[1]/div[2]/div[3]/div[1]/div[1]/div[1]"
+        },
+        "key": "Tab",
+        "where": "outside"
+       },
+       {
+        "focus": {
+         "label": "due on receipt",
+         "tag": "button",
+         "xpath": "/html/body/div[1]/main[1]/div[1]/div[2]/div[2]/div[3]/div[1]/div[1]/div[1]/div[1]/div[1]/div[1]/div[2]/div[4]/div[1]/button[1]"
+        },
+        "key": "Tab",
+        "where": "trigger"
+       },
+       {
+        "focus": {
+         "label": "due on receipt",
+         "tag": "button",
+         "xpath": "/html/body/div[1]/main[1]/div[1]/div[2]/div[2]/div[3]/div[1]/div[1]/div[1]/div[1]/div[1]/div[1]/div[2]/div[4]/div[1]/button[1]"
+        },
+        "key": "Enter",
+        "where": "trigger"
+       },
+       {
+        "focus": {
+         "label": "due on receipt",
+         "tag": "button",
+         "xpath": "/html/body/div[1]/main[1]/div[1]/div[2]/div[2]/div[3]/div[1]/div[1]/div[1]/div[1]/div[1]/div[1]/div[2]/div[4]/div[1]/button[1]"
+        },
+        "key": "settle",
+        "where": "trigger"
+       },
+       {
+        "focus": "body",
+        "key": "Escape",
+        "where": "body"
+       },
+       {
+        "focus": "body",
+        "key": "settle",
+        "where": "body"
+       },
+       {
+        "focus": "body",
+        "key": "Enter",
+        "where": "body"
+       },
+       {
+        "focus": {
+         "label": "Customize your experience",
+         "tag": "button",
+         "xpath": "/html/body/div[1]/main[1]/div[1]/div[1]/div[1]/div[1]/div[1]/div[1]/div[1]/span[2]/button[1]"
+        },
+        "key": "Tab",
+        "where": "outside"
+       }
+      ]
+     },
+     "occurrence": {
+      "ancestors": [
+       [],
+       [
+        "_dropdownContainer_sixj2_2"
+       ],
+       [
+        "_sentenceRow_38qef_1"
+       ],
+       [
+        "_wrapper_1ojdq_8"
+       ],
+       [],
+       [
+        "_leftInnerContainer_12jyu_3"
+       ],
+       [
+        "_left_yg1rf_39"
+       ],
+       [
+        "_leftScrollArea_yg1rf_57"
+       ]
+      ],
+      "classes": [
+       "_dropdownMenu_vz05y_4",
+       "_zIndexDefault_1fl3q_5",
+       "_dropdownMenu_sixj2_10"
+      ],
+      "data": {
+       "data-dialog": "",
+       "data-enter": "true",
+       "data-open": "true"
+      },
+      "heading": "",
+      "landmark": {
+       "name": "",
+       "role": "main"
+      },
+      "layer": "top",
+      "name": "due on receipt",
+      "rect": [
+       283,
+       497,
+       133,
+       208
+      ],
+      "role": "menu",
+      "tag": "div",
+      "xpath": "/html/body/div[1]/main[1]/div[1]/div[2]/div[2]/div[3]/div[1]/div[1]/div[1]/div[1]/div[1]/div[1]/div[2]/div[4]/div[1]/div[1]/div[1]"
+     },
+     "state": "invoicing.create-series-terms-menu"
+    }
+   ],
+   "evidenceHash": "caa0fb94578180c09bcc31366f317c69f692f82aaefb8b1d5997daabaa9de378",
+   "facts": {
+    "criterion": "2.4.3",
+    "criterionName": "Focus Order",
+    "element": "menu \"due on receipt\"",
+    "focus": "button \"due on receipt\"",
+    "overlay": "menu \"due on receipt\"",
+    "screen": "Payment terms menu"
+   },
+   "family": "dialog-focus",
+   "guidance": "High when controls inside are unreachable.",
+   "issueId": null,
+   "key": "dialog-focus:menu-focus-not-moved:8bef19f2c3dd",
+   "measured": false,
+   "primary": "invoicing.create-series-terms-menu",
+   "proposals": [],
+   "rule": "menu-focus-not-moved",
+   "screens": 1,
+   "severityDefault": "medium",
+   "source": "scanner",
+   "states": [
+    "invoicing.create-series-terms-menu"
+   ],
+   "summary": "After the menu \"due on receipt\" opened the menu \"due on receipt\", focus was on the button \"due on receipt\", not its first item.",
+   "title": "Focus not on first item of menu \"due on receipt\""
+  }
+ ],
+ "primaries": [
+  "invoicing.create-series-terms-menu"
+ ],
+ "reach": {
+  "baseUrl": "https://demo.mercury.com",
+  "data": "data",
+  "map": "build/map.json",
+  "run": "2026-10-03-1525",
+  "workspace": "a11y"
+ },
+ "run": "2026-10-03-1525"
+}

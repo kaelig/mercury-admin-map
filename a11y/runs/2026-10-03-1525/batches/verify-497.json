@@ -1,0 +1,133 @@
+{
+ "area": "payments",
+ "batch": "verify-497",
+ "findings": [
+  {
+   "attachments": [],
+   "attempt": 1,
+   "basis": "candidate",
+   "criteria": [
+    "4.1.2"
+   ],
+   "evidence": [
+    {
+     "evidence": {
+      "description": "",
+      "name": "",
+      "role": "listbox",
+      "states": {},
+      "template": "listbox \"\""
+     },
+     "occurrence": {
+      "ancestors": [
+       [],
+       []
+      ],
+      "classes": [
+       "_popover_17c8a_5",
+       "_zIndexDefault_1fl3q_5",
+       "_above_17c8a_9"
+      ],
+      "data": {
+       "data-dialog": "",
+       "data-enter": "true",
+       "data-open": "true",
+       "data-session-replay-mask": "true"
+      },
+      "heading": "",
+      "landmark": null,
+      "layer": "top",
+      "name": "",
+      "rect": [
+       428,
+       701,
+       584,
+       169
+      ],
+      "role": "listbox",
+      "tag": "div",
+      "xpath": "/html/body/div[6]/div[1]/div[1]"
+     },
+     "state": "payments.recipient-address-autocomplete"
+    },
+    {
+     "evidence": {
+      "description": "",
+      "name": "",
+      "role": "listbox",
+      "states": {},
+      "template": "listbox \"\""
+     },
+     "occurrence": {
+      "ancestors": [
+       [],
+       []
+      ],
+      "classes": [
+       "_popover_17c8a_5",
+       "_zIndexDefault_1fl3q_5",
+       "_above_17c8a_9"
+      ],
+      "data": {
+       "data-dialog": "",
+       "data-enter": "true",
+       "data-open": "true"
+      },
+      "heading": "",
+      "landmark": null,
+      "layer": "top",
+      "name": "",
+      "rect": [
+       572,
+       697,
+       140,
+       105
+      ],
+      "role": "listbox",
+      "tag": "div",
+      "xpath": "/html/body/div[13]/div[1]/div[1]"
+     },
+     "state": "transactions.bulk-field-picker"
+    }
+   ],
+   "evidenceHash": "039c0d2d9f678808ccfbb6711ec5055ebd775e35313652719602be7e119c05ea",
+   "facts": {
+    "announced": "listbox \"\"",
+    "axeSummary": "",
+    "criterion": "4.1.2",
+    "criterionName": "Name, Role, Value",
+    "element": "listbox",
+    "rule": "announced-as",
+    "screen": "Address autocomplete"
+   },
+   "family": "name",
+   "guidance": "High for an unnamed form control or the sole primary action.",
+   "issueId": null,
+   "key": "name:announced-as:f1b00012f7f3",
+   "measured": false,
+   "primary": "payments.recipient-address-autocomplete",
+   "proposals": [],
+   "rule": "announced-as",
+   "screens": 2,
+   "severityDefault": "medium",
+   "source": "scanner",
+   "states": [
+    "payments.recipient-address-autocomplete",
+    "transactions.bulk-field-picker"
+   ],
+   "summary": "announced-as: announced as listbox \"\".",
+   "title": "Missing or unclear name: listbox"
+  }
+ ],
+ "primaries": [
+  "payments.recipient-address-autocomplete"
+ ],
+ "reach": {
+  "baseUrl": "https://demo.mercury.com",
+  "data": "data",
+  "map": "build/map.json",
+  "run": "2026-10-03-1525",
+  "workspace": "a11y"
+ },
+ "run": "2026-10-03-1525"
+}

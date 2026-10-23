@@ -1,0 +1,327 @@
+{
+ "area": "accounts",
+ "batch": "verify-407",
+ "findings": [
+  {
+   "attachments": [],
+   "attempt": 1,
+   "basis": "candidate",
+   "criteria": [
+    "4.1.2"
+   ],
+   "evidence": [
+    {
+     "evidence": {
+      "description": "",
+      "name": "",
+      "role": "button",
+      "states": {},
+      "template": "button \"\""
+     },
+     "occurrence": {
+      "ancestors": [
+       [],
+       [
+        "_tooltipAnchor_18bac_4"
+       ],
+       [
+        "_sweepTooltipContainer_12cy6_40"
+       ],
+       [
+        "_tooltipRow_12cy6_32"
+       ],
+       [],
+       [
+        "_pageContent_809q8_151",
+        "_pageContentWidth_809q8_184",
+        "_footerPadding_809q8_115"
+       ],
+       [
+        "_dashboardContent_809q8_29"
+       ],
+       [
+        "_layout_809q8_18"
+       ]
+      ],
+      "classes": [
+       "_tooltipButton_165g6_5"
+      ],
+      "data": {},
+      "heading": "Available",
+      "landmark": {
+       "name": "",
+       "role": "main"
+      },
+      "layer": "document",
+      "name": "",
+      "rect": [
+       561,
+       288,
+       24,
+       24
+      ],
+      "role": "button",
+      "tag": "button",
+      "xpath": "/html/body/div[1]/main[1]/div[1]/div[1]/div[4]/div[1]/div[2]/div[3]/div[2]/div[2]/div[1]/div[1]/button[1]"
+     },
+     "state": "accounts.index"
+    },
+    {
+     "evidence": {
+      "description": "",
+      "name": "",
+      "role": "button",
+      "states": {},
+      "template": "button \"\""
+     },
+     "occurrence": {
+      "ancestors": [
+       [],
+       [
+        "_tooltipAnchor_18bac_4"
+       ],
+       [
+        "_mercuryBalance_q3oue_25"
+       ],
+       [],
+       [
+        "_topSection_q3oue_12"
+       ],
+       [
+        "_container_q3oue_1"
+       ],
+       [
+        "_large_kwlx6_9",
+        "_noHover_3n0se_28",
+        "_border_3n0se_35",
+        "_raisedBackground_3n0se_45",
+        "_graph_ct6b5_91"
+       ],
+       [
+        "_row_ct6b5_42"
+       ]
+      ],
+      "classes": [
+       "_tooltipButton_165g6_5"
+      ],
+      "data": {},
+      "heading": "Welcome, Jane",
+      "landmark": {
+       "name": "",
+       "role": "main"
+      },
+      "layer": "document",
+      "name": "",
+      "rect": [
+       494,
+       269,
+       24,
+       24
+      ],
+      "role": "button",
+      "tag": "button",
+      "xpath": "/html/body/div[1]/main[1]/div[1]/div[1]/div[4]/div[1]/div[2]/div[1]/div[1]/div[4]/div[1]/div[1]/div[1]/div[1]/div[1]/div[1]/div[1]/div[1]/button[1]"
+     },
+     "state": "home.balance-graph-hover"
+    }
+   ],
+   "evidenceHash": "9c73d0849233e6c84a86e935a5a6b08558db5dbe8cf5d15c6091ad81fb522ed3",
+   "facts": {
+    "announced": "button \"\"",
+    "axeSummary": "",
+    "criterion": "4.1.2",
+    "criterionName": "Name, Role, Value",
+    "element": "button in \"Available\"",
+    "rule": "announced-as",
+    "screen": "Accounts — Mercury accounts"
+   },
+   "family": "name",
+   "guidance": "High for an unnamed form control or the sole primary action.",
+   "issueId": null,
+   "key": "name:announced-as:4871ffce946d",
+   "measured": false,
+   "primary": "accounts.index",
+   "proposals": [],
+   "rule": "announced-as",
+   "screens": 20,
+   "severityDefault": "medium",
+   "source": "scanner",
+   "states": [
+    "accounts.index",
+    "home.balance-graph-hover"
+   ],
+   "summary": "announced-as: announced as button \"\".",
+   "title": "Missing or unclear name: button in \"Available\""
+  },
+  {
+   "attachments": [],
+   "attempt": 1,
+   "basis": "candidate",
+   "criteria": [
+    "4.1.2"
+   ],
+   "evidence": [
+    {
+     "evidence": {
+      "description": "To pick up a draggable item, press the space bar. While dragging, use the arrow keys to move the item. Press space again to drop the item in its new position, or press escape to cancel.",
+      "name": "",
+      "role": "button",
+      "states": {},
+      "template": "button \"\" (To pick up a draggable item, press the space bar. While dragging, use the arrow keys to move the item. Press space again to drop the item in its new position, or press escape to cancel.)"
+     },
+     "occurrence": {
+      "ancestors": [
+       [
+        "_tableRow_137xu_3",
+        "_interactiveRows_137xu_35",
+        "_large_137xu_29",
+        "_row_tya43_4"
+       ],
+       [
+        "_tableBody_1cp5b_1"
+       ],
+       [
+        "_table_1acga_4"
+       ],
+       [
+        "_tableWrapper_1acga_4"
+       ],
+       [],
+       [
+        "_pageContent_809q8_151",
+        "_pageContentWidth_809q8_184",
+        "_footerPadding_809q8_115"
+       ],
+       [
+        "_dashboardContent_809q8_29"
+       ],
+       [
+        "_layout_809q8_18"
+       ]
+      ],
+      "classes": [
+       "_draggableHandle_tya43_7"
+      ],
+      "data": {},
+      "heading": "Available",
+      "landmark": {
+       "name": "",
+       "role": "main"
+      },
+      "layer": "document",
+      "name": "",
+      "rect": [
+       306,
+       409,
+       24,
+       65
+      ],
+      "role": "button",
+      "tag": "td",
+      "xpath": "/html/body/div[1]/main[1]/div[1]/div[1]/div[4]/div[1]/div[2]/div[3]/div[3]/table[1]/tbody[1]/tr[1]/td[1]"
+     },
+     "state": "accounts.index"
+    },
+    {
+     "evidence": {
+      "description": "To pick up a draggable item, press the space bar. While dragging, use the arrow keys to move the item. Press space again to drop the item in its new position, or press escape to cancel.",
+      "name": "",
+      "role": "button",
+      "states": {},
+      "template": "button \"\" (To pick up a draggable item, press the space bar. While dragging, use the arrow keys to move the item. Press space again to drop the item in its new position, or press escape to cancel.)"
+     },
+     "occurrence": {
+      "ancestors": [
+       [
+        "_tableRow_137xu_3",
+        "_interactiveRows_137xu_35",
+        "_large_137xu_29",
+        "_row_tya43_4"
+       ],
+       [
+        "_tableBody_1cp5b_1"
+       ],
+       [
+        "_table_1acga_4"
+       ],
+       [
+        "_tableWrapper_1acga_4"
+       ],
+       [],
+       [
+        "_pageContent_809q8_151",
+        "_pageContentWidth_809q8_184",
+        "_footerPadding_809q8_115"
+       ],
+       [
+        "_dashboardContent_809q8_29"
+       ],
+       [
+        "_layout_809q8_18"
+       ]
+      ],
+      "classes": [
+       "_draggableHandle_tya43_7"
+      ],
+      "data": {},
+      "heading": "",
+      "landmark": {
+       "name": "",
+       "role": "main"
+      },
+      "layer": "top",
+      "name": "",
+      "rect": [
+       306,
+       409,
+       24,
+       65
+      ],
+      "role": "button",
+      "tag": "td",
+      "xpath": "/html/body/div[1]/main[1]/div[1]/div[1]/div[4]/div[1]/div[2]/div[3]/div[3]/table[1]/tbody[1]/tr[1]/td[1]"
+     },
+     "state": "accounts.create-account-success"
+    }
+   ],
+   "evidenceHash": "40928fa088cc9442b41755e8d5f5a6bbb79f4bd3a4191b78c48dcfff118ab25e",
+   "facts": {
+    "announced": "button \"\" (To pick up a draggable item, press the space bar. While dragging, us…",
+    "axeSummary": "",
+    "criterion": "4.1.2",
+    "criterionName": "Name, Role, Value",
+    "element": "button in \"Available\"",
+    "rule": "announced-as",
+    "screen": "Accounts — Mercury accounts"
+   },
+   "family": "name",
+   "guidance": "High for an unnamed form control or the sole primary action.",
+   "issueId": null,
+   "key": "name:announced-as:99b476ab4c3f",
+   "measured": false,
+   "primary": "accounts.index",
+   "proposals": [],
+   "rule": "announced-as",
+   "screens": 2,
+   "severityDefault": "medium",
+   "source": "scanner",
+   "states": [
+    "accounts.index",
+    "accounts.create-account-success"
+   ],
+   "summary": "announced-as: announced as button \"\" (To pick up a draggable item, press the space bar. While dragging, us….",
+   "title": "Missing or unclear name: button in \"Available\""
+  }
+ ],
+ "primaries": [
+  "accounts.index"
+ ],
+ "reach": {
+  "baseUrl": "https://demo.mercury.com",
+  "data": "data",
+  "map": "build/map.json",
+  "run": "2026-10-03-1525",
+  "workspace": "a11y"
+ },
+ "run": "2026-10-03-1525"
+}

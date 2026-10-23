@@ -1,0 +1,126 @@
+{
+ "accounts.i-heading-levels": {
+  "family": "structure",
+  "criteria": [
+   "1.3.1"
+  ],
+  "why": "Modal titles are h1, h2 or h3 with no relation to their place, and the share sheet has no heading, so the exposed heading structure misstates the visual one."
+ },
+ "accounts.i-rule-cards-hidden-period": {
+  "family": "name",
+  "criteria": [
+   "4.1.2"
+  ],
+  "why": "An invisible period ends each rule card button's accessible name, so screen readers read text the label does not show."
+ },
+ "accounts.i-safe-form-labels": {
+  "family": "name",
+  "criteria": [
+   "4.1.2"
+  ],
+  "why": "A switch is named by a code key, a listbox by an internal id, two inputs and the linked-account kebab buttons have no name, and an amount field is named only by its placeholder."
+ },
+ "accounts.i-tabs-not-tabs": {
+  "family": "keyboard",
+  "criteria": [
+   "2.1.1",
+   "4.1.2"
+  ],
+  "why": "The tab bars, Autopay Edit links and Last Month control are divs or a p with click handlers and no tabindex, so Tab never reaches them; they also have no tab or button role."
+ },
+ "billpay.i-date-input-label": {
+  "family": "name",
+  "criteria": [
+   "2.5.3"
+  ],
+  "why": "The Invoice date input's accessible name is 'Select due date', which does not contain its visible label and names the wrong field."
+ },
+ "billpay.i-manage-link": {
+  "family": "contrast",
+  "criteria": [
+   "1.4.1"
+  ],
+  "why": "The Manage link has the paragraph's color and no underline, so nothing but its position tells it apart from body text; axe's link-in-text-block checks this."
+ },
+ "billpay.i-pay-dialog-name": {
+  "family": "structure",
+  "criteria": [
+   "1.3.1"
+  ],
+  "why": "An invisible overlay's h2 is exposed as the first heading on every pay-flow step, so the heading structure differs from what is shown."
+ },
+ "billpay.i-unlabeled-controls": {
+  "family": "name",
+  "criteria": [
+   "4.1.2"
+  ],
+  "why": "The row delete button has no name, the Inbox to Paid tabs are DIVs with no role, and the amount input is named only by its placeholder."
+ },
+ "books.i-fake-disabled-save": {
+  "family": "role-state",
+  "criteria": [
+   "4.1.2"
+  ],
+  "why": "Save is drawn as disabled but exposed as enabled, so its visible state and its programmatic state disagree."
+ },
+ "books.i-frequency-aria": {
+  "family": "role-state",
+  "criteria": [
+   "4.1.2"
+  ],
+  "why": "The listbox exposes Annual as selected while the combobox shows Monthly."
+ },
+ "cards.i-modal-heading-semantics": {
+  "family": "structure",
+  "criteria": [
+   "1.3.1"
+  ],
+  "why": "The Edit card limits title looks like the other dialogs' h2 titles but is a span with no heading role."
+ },
+ "cards.i-subscription-actions-unlabeled": {
+  "family": "name",
+  "criteria": [
+   "4.1.2",
+   "2.4.4"
+  ],
+  "why": "The Subscriptions row's icon link and buttons have no text, aria-label or title."
+ },
+ "home.i-chips-as-menuitems": {
+  "family": "role-state",
+  "criteria": [
+   "4.1.2",
+   "1.3.1"
+  ],
+  "why": "Tab-like filter chips are menuitems outside any menu with no selected state; the avatar and widget kebab buttons also have no name."
+ },
+ "invoicing.i-unlabeled-controls": {
+  "family": "name",
+  "criteria": [
+   "4.1.2"
+  ],
+  "why": "The Customers row edit and request buttons have no name, and the branding swatches are named by internal ids."
+ },
+ "payments.i-icon-links-a11y": {
+  "family": "name",
+  "criteria": [
+   "4.1.2",
+   "2.4.4"
+  ],
+  "why": "The send and transactions icon links have no text, aria-label, title or SVG title."
+ },
+ "settings.i-unnamed-row-buttons": {
+  "family": "name",
+  "criteria": [
+   "4.1.2"
+  ],
+  "why": "The API token row menu buttons have no text or aria-label."
+ },
+ "transactions.i-category-name-label": {
+  "family": "name",
+  "criteria": [
+   "4.1.2",
+   "3.3.2"
+  ],
+  "why": "The Create category name input has no label, placeholder or aria-label."
+ }
+}

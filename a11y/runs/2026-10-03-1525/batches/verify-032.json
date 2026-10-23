@@ -1,0 +1,619 @@
+{
+ "area": "accounts",
+ "batch": "verify-032",
+ "findings": [
+  {
+   "attachments": [],
+   "attempt": 1,
+   "basis": "violation",
+   "criteria": [
+    "1.3.5"
+   ],
+   "evidence": [
+    {
+     "evidence": {
+      "failureSummary": "Fix all of the following:\n  the autocomplete attribute is incorrectly formatted"
+     },
+     "occurrence": {
+      "ancestors": [
+       [
+        "_inputWrapper_11c85_6"
+       ],
+       [
+        "_wrapper_1xgdp_8"
+       ],
+       [
+        "_distributeRowAccountPicker_15jit_17"
+       ],
+       [
+        "_distributeRow_15jit_1"
+       ],
+       [
+        "_autoTransferTabModal_11bzg_18"
+       ],
+       [
+        "_autoTransferTabModal_11bzg_18"
+       ],
+       [],
+       []
+      ],
+      "classes": [
+       "_input_11c85_6"
+      ],
+      "data": {
+       "data-1p-ignore": "true",
+       "data-active-item": "true",
+       "data-bwignore": "true",
+       "data-lpignore": "true"
+      },
+      "heading": "Distribute funds across accounts",
+      "landmark": {
+       "name": "",
+       "role": "form"
+      },
+      "layer": "top",
+      "name": "Destination account",
+      "rect": [
+       637,
+       324,
+       366,
+       40
+      ],
+      "role": "combobox",
+      "tag": "input",
+      "xpath": "/html/body/div[11]/div[1]/div[1]/div[1]/div[2]/form[1]/div[1]/div[4]/div[1]/div[2]/div[1]/div[1]/input[1]"
+     },
+     "state": "accounts.rule-distribute"
+    },
+    {
+     "evidence": {
+      "failureSummary": "Fix all of the following:\n  the autocomplete attribute is incorrectly formatted"
+     },
+     "occurrence": {
+      "ancestors": [
+       [
+        "_inputWrapper_11c85_6"
+       ],
+       [
+        "_wrapper_1xgdp_8"
+       ],
+       [
+        "_distributeRowAccountPicker_15jit_17"
+       ],
+       [
+        "_distributeRow_15jit_1"
+       ],
+       [
+        "_autoTransferTabModal_11bzg_18"
+       ],
+       [
+        "_autoTransferTabModal_11bzg_18"
+       ],
+       [],
+       []
+      ],
+      "classes": [
+       "_input_11c85_6"
+      ],
+      "data": {
+       "data-1p-ignore": "true",
+       "data-active-item": "true",
+       "data-bwignore": "true",
+       "data-lpignore": "true"
+      },
+      "heading": "Schedule recurring transfers",
+      "landmark": {
+       "name": "",
+       "role": "form"
+      },
+      "layer": "top",
+      "name": "Destination account",
+      "rect": [
+       708,
+       304,
+       295,
+       40
+      ],
+      "role": "combobox",
+      "tag": "input",
+      "xpath": "/html/body/div[11]/div[1]/div[1]/div[1]/div[2]/form[1]/div[1]/div[4]/div[1]/div[2]/div[1]/div[1]/input[1]"
+     },
+     "state": "accounts.rule-recurring"
+    }
+   ],
+   "evidenceHash": "7871fb08caa6a43369f8cf349a70c75ac13ef4e75016bb3ab99207c43f93e0e2",
+   "facts": {
+    "announced": "combobox \"Destination account\" [expanded=false, haspopup=listbox]",
+    "axeSummary": "the autocomplete attribute is incorrectly formatted",
+    "criterion": "1.3.5",
+    "criterionName": "Identify Input Purpose",
+    "element": "combobox \"Destination account\"",
+    "rule": "autocomplete-valid",
+    "screen": "Distribute funds rule form"
+   },
+   "family": "role-state",
+   "guidance": "Low for optional ARIA or an invalid autocomplete token; high when aria-hidden hides the whole page.",
+   "issueId": null,
+   "key": "role-state:autocomplete-valid:099b0f5f7701",
+   "measured": false,
+   "primary": "accounts.rule-distribute",
+   "proposals": [],
+   "rule": "autocomplete-valid",
+   "screens": 3,
+   "severityDefault": "medium",
+   "source": "scanner",
+   "states": [
+    "accounts.rule-distribute",
+    "accounts.rule-recurring"
+   ],
+   "summary": "autocomplete-valid: announced as combobox \"Destination account\" [expanded=false, haspopup=listbox]. the autocomplete attribute is incorrectly formatted",
+   "title": "Invalid autocomplete value: combobox \"Destination account\""
+  },
+  {
+   "attachments": [],
+   "attempt": 1,
+   "basis": "violation",
+   "criteria": [
+    "1.3.5"
+   ],
+   "evidence": [
+    {
+     "evidence": {
+      "failureSummary": "Fix all of the following:\n  the autocomplete attribute is incorrectly formatted"
+     },
+     "occurrence": {
+      "ancestors": [
+       [
+        "_textboxWrapper_1a7mr_158"
+       ],
+       [
+        "_selectWrapper_1a7mr_150"
+       ],
+       [
+        "_comboboxWrapper_1a7mr_6",
+        "session-replay-block"
+       ],
+       [
+        "_frequencyOptionsGrow_953bv_64"
+       ],
+       [
+        "_frequencyRow_953bv_26"
+       ],
+       [
+        "_formSection_953bv_3"
+       ],
+       [
+        "_transferFrequencyContainer_953bv_22"
+       ],
+       [
+        "_modalFormLabelContent_10pzf_6"
+       ]
+      ],
+      "classes": [
+       "_textboxInput_1a7mr_250"
+      ],
+      "data": {},
+      "heading": "Distribute funds across accounts",
+      "landmark": {
+       "name": "",
+       "role": "form"
+      },
+      "layer": "top",
+      "name": "frequency",
+      "rect": [
+       493,
+       518,
+       506,
+       38
+      ],
+      "role": "combobox",
+      "tag": "input",
+      "xpath": "/html/body/div[11]/div[1]/div[1]/div[1]/div[2]/form[1]/div[1]/div[7]/div[1]/div[1]/div[1]/div[1]/div[1]/div[1]/div[1]/div[1]/input[1]"
+     },
+     "state": "accounts.rule-distribute"
+    },
+    {
+     "evidence": {
+      "failureSummary": "Fix all of the following:\n  the autocomplete attribute is incorrectly formatted"
+     },
+     "occurrence": {
+      "ancestors": [
+       [
+        "_textboxWrapper_1a7mr_158"
+       ],
+       [
+        "_selectWrapper_1a7mr_150"
+       ],
+       [
+        "_comboboxWrapper_1a7mr_6",
+        "session-replay-block"
+       ],
+       [
+        "_frequencyOptionsGrow_953bv_64"
+       ],
+       [
+        "_frequencyRow_953bv_26"
+       ],
+       [
+        "_formSection_953bv_3"
+       ],
+       [
+        "_transferFrequencyContainer_953bv_22"
+       ],
+       [
+        "_modalFormLabelContent_10pzf_6"
+       ]
+      ],
+      "classes": [
+       "_textboxInput_1a7mr_250"
+      ],
+      "data": {},
+      "heading": "Maintain a target account balance",
+      "landmark": {
+       "name": "",
+       "role": "form"
+      },
+      "layer": "top",
+      "name": "frequency",
+      "rect": [
+       627,
+       439,
+       372,
+       38
+      ],
+      "role": "combobox",
+      "tag": "input",
+      "xpath": "/html/body/div[11]/div[1]/div[1]/div[1]/div[2]/form[1]/section[3]/div[1]/div[1]/div[1]/div[1]/div[1]/div[1]/div[1]/div[1]/div[1]/input[1]"
+     },
+     "state": "accounts.rule-target-balance"
+    }
+   ],
+   "evidenceHash": "ed4bf4a1b83865338fe999652656c7c3aad603221a43708e9574ae0b8a7f4a97",
+   "facts": {
+    "announced": "combobox \"frequency\" [expanded=false, haspopup=listbox]",
+    "axeSummary": "the autocomplete attribute is incorrectly formatted",
+    "criterion": "1.3.5",
+    "criterionName": "Identify Input Purpose",
+    "element": "combobox \"frequency\"",
+    "rule": "autocomplete-valid",
+    "screen": "Distribute funds rule form"
+   },
+   "family": "role-state",
+   "guidance": "Low for optional ARIA or an invalid autocomplete token; high when aria-hidden hides the whole page.",
+   "issueId": null,
+   "key": "role-state:autocomplete-valid:286a5bd0e289",
+   "measured": false,
+   "primary": "accounts.rule-distribute",
+   "proposals": [],
+   "rule": "autocomplete-valid",
+   "screens": 3,
+   "severityDefault": "medium",
+   "source": "scanner",
+   "states": [
+    "accounts.rule-distribute",
+    "accounts.rule-target-balance"
+   ],
+   "summary": "autocomplete-valid: announced as combobox \"frequency\" [expanded=false, haspopup=listbox]. the autocomplete attribute is incorrectly formatted",
+   "title": "Invalid autocomplete value: combobox \"frequency\""
+  },
+  {
+   "attachments": [],
+   "attempt": 1,
+   "basis": "violation",
+   "criteria": [
+    "1.3.5"
+   ],
+   "evidence": [
+    {
+     "evidence": {
+      "failureSummary": "Fix all of the following:\n  the autocomplete attribute is incorrectly formatted"
+     },
+     "occurrence": {
+      "ancestors": [
+       [
+        "_inputWrapper_11c85_6"
+       ],
+       [
+        "_wrapper_1xgdp_8"
+       ],
+       [
+        "_transferLabelWithHelpText_11bzg_84"
+       ],
+       [
+        "_modalFormLabelContent_10pzf_6"
+       ],
+       [
+        "_modalFormLabel_10pzf_1"
+       ],
+       [
+        "_autoTransferTabModal_11bzg_18"
+       ],
+       [],
+       []
+      ],
+      "classes": [
+       "_input_11c85_6"
+      ],
+      "data": {
+       "data-1p-ignore": "true",
+       "data-active-item": "true",
+       "data-bwignore": "true",
+       "data-lpignore": "true"
+      },
+      "heading": "Distribute funds across accounts",
+      "landmark": {
+       "name": "",
+       "role": "form"
+      },
+      "layer": "top",
+      "name": "Transfer",
+      "rect": [
+       492,
+       220,
+       511,
+       40
+      ],
+      "role": "combobox",
+      "tag": "input",
+      "xpath": "/html/body/div[11]/div[1]/div[1]/div[1]/div[2]/form[1]/div[1]/div[2]/div[1]/div[1]/div[1]/div[1]/input[1]"
+     },
+     "state": "accounts.rule-distribute"
+    },
+    {
+     "evidence": {
+      "failureSummary": "Fix all of the following:\n  the autocomplete attribute is incorrectly formatted"
+     },
+     "occurrence": {
+      "ancestors": [
+       [
+        "_inputWrapper_11c85_6"
+       ],
+       [
+        "_wrapper_1xgdp_8"
+       ],
+       [
+        "_transferLabelWithHelpText_11bzg_84"
+       ],
+       [
+        "_modalFormLabelContent_10pzf_6"
+       ],
+       [
+        "_modalFormLabel_10pzf_1"
+       ],
+       [
+        "_autoTransferTabModal_11bzg_18"
+       ],
+       [],
+       []
+      ],
+      "classes": [
+       "_input_11c85_6"
+      ],
+      "data": {
+       "data-1p-ignore": "true",
+       "data-active-item": "true",
+       "data-bwignore": "true",
+       "data-lpignore": "true"
+      },
+      "heading": "Schedule recurring transfers",
+      "landmark": {
+       "name": "",
+       "role": "form"
+      },
+      "layer": "top",
+      "name": "Transfer",
+      "rect": [
+       492,
+       200,
+       511,
+       40
+      ],
+      "role": "combobox",
+      "tag": "input",
+      "xpath": "/html/body/div[11]/div[1]/div[1]/div[1]/div[2]/form[1]/div[1]/div[2]/div[1]/div[1]/div[1]/div[1]/input[1]"
+     },
+     "state": "accounts.rule-recurring"
+    }
+   ],
+   "evidenceHash": "7871fb08caa6a43369f8cf349a70c75ac13ef4e75016bb3ab99207c43f93e0e2",
+   "facts": {
+    "announced": "combobox \"Transfer\" [expanded=false, haspopup=listbox]",
+    "axeSummary": "the autocomplete attribute is incorrectly formatted",
+    "criterion": "1.3.5",
+    "criterionName": "Identify Input Purpose",
+    "element": "combobox \"Transfer\"",
+    "rule": "autocomplete-valid",
+    "screen": "Distribute funds rule form"
+   },
+   "family": "role-state",
+   "guidance": "Low for optional ARIA or an invalid autocomplete token; high when aria-hidden hides the whole page.",
+   "issueId": null,
+   "key": "role-state:autocomplete-valid:7fd5871930e0",
+   "measured": false,
+   "primary": "accounts.rule-distribute",
+   "proposals": [],
+   "rule": "autocomplete-valid",
+   "screens": 3,
+   "severityDefault": "medium",
+   "source": "scanner",
+   "states": [
+    "accounts.rule-distribute",
+    "accounts.rule-recurring"
+   ],
+   "summary": "autocomplete-valid: announced as combobox \"Transfer\" [expanded=false, haspopup=listbox]. the autocomplete attribute is incorrectly formatted",
+   "title": "Invalid autocomplete value: combobox \"Transfer\""
+  },
+  {
+   "attachments": [],
+   "attempt": 1,
+   "basis": "violation",
+   "criteria": [
+    "1.3.5"
+   ],
+   "evidence": [
+    {
+     "evidence": {
+      "failureSummary": "Fix all of the following:\n  the autocomplete attribute is incorrectly formatted"
+     },
+     "occurrence": {
+      "ancestors": [
+       [
+        "_inputWrapper_11c85_6"
+       ],
+       [
+        "_wrapper_1xgdp_8"
+       ],
+       [
+        "_modalFormLabelContent_10pzf_6"
+       ],
+       [
+        "_modalFormLabel_10pzf_1"
+       ],
+       [
+        "_autoTransferTabModal_11bzg_18"
+       ],
+       [],
+       [],
+       [
+        "_large_kwlx6_9",
+        "_noHover_3n0se_28",
+        "_shadow_3n0se_25",
+        "_raisedBackground_3n0se_45",
+        "_card_lo4oy_4",
+        "_defaultPadding_lo4oy_27",
+        "_autoTransferTabModalContainer_11bzg_25",
+        "_small_lo4oy_11"
+       ]
+      ],
+      "classes": [
+       "_input_11c85_6"
+      ],
+      "data": {
+       "data-1p-ignore": "true",
+       "data-active-item": "true",
+       "data-bwignore": "true",
+       "data-lpignore": "true"
+      },
+      "heading": "Distribute funds across accounts",
+      "landmark": {
+       "name": "",
+       "role": "form"
+      },
+      "layer": "top",
+      "name": "Starting account",
+      "rect": [
+       492,
+       272,
+       511,
+       40
+      ],
+      "role": "combobox",
+      "tag": "input",
+      "xpath": "/html/body/div[11]/div[1]/div[1]/div[1]/div[2]/form[1]/div[1]/div[3]/div[1]/div[1]/div[1]/input[1]"
+     },
+     "state": "accounts.rule-distribute"
+    },
+    {
+     "evidence": {
+      "failureSummary": "Fix all of the following:\n  the autocomplete attribute is incorrectly formatted"
+     },
+     "occurrence": {
+      "ancestors": [
+       [
+        "_inputWrapper_11c85_6"
+       ],
+       [
+        "_wrapper_1xgdp_8"
+       ],
+       [
+        "_modalFormLabelContent_10pzf_6"
+       ],
+       [
+        "_modalFormLabel_10pzf_1"
+       ],
+       [
+        "_autoTransferTabModal_11bzg_18"
+       ],
+       [],
+       [],
+       [
+        "_large_kwlx6_9",
+        "_noHover_3n0se_28",
+        "_shadow_3n0se_25",
+        "_raisedBackground_3n0se_45",
+        "_card_lo4oy_4",
+        "_defaultPadding_lo4oy_27",
+        "_autoTransferTabModalContainer_11bzg_25",
+        "_small_lo4oy_11"
+       ]
+      ],
+      "classes": [
+       "_input_11c85_6"
+      ],
+      "data": {
+       "data-1p-ignore": "true",
+       "data-active-item": "true",
+       "data-bwignore": "true",
+       "data-lpignore": "true"
+      },
+      "heading": "Schedule recurring transfers",
+      "landmark": {
+       "name": "",
+       "role": "form"
+      },
+      "layer": "top",
+      "name": "Starting account",
+      "rect": [
+       492,
+       252,
+       511,
+       40
+      ],
+      "role": "combobox",
+      "tag": "input",
+      "xpath": "/html/body/div[11]/div[1]/div[1]/div[1]/div[2]/form[1]/div[1]/div[3]/div[1]/div[1]/div[1]/input[1]"
+     },
+     "state": "accounts.rule-recurring"
+    }
+   ],
+   "evidenceHash": "7871fb08caa6a43369f8cf349a70c75ac13ef4e75016bb3ab99207c43f93e0e2",
+   "facts": {
+    "announced": "combobox \"Starting account\" [expanded=false, haspopup=listbox]",
+    "axeSummary": "the autocomplete attribute is incorrectly formatted",
+    "criterion": "1.3.5",
+    "criterionName": "Identify Input Purpose",
+    "element": "combobox \"Starting account\"",
+    "rule": "autocomplete-valid",
+    "screen": "Distribute funds rule form"
+   },
+   "family": "role-state",
+   "guidance": "Low for optional ARIA or an invalid autocomplete token; high when aria-hidden hides the whole page.",
+   "issueId": null,
+   "key": "role-state:autocomplete-valid:834108a3d342",
+   "measured": false,
+   "primary": "accounts.rule-distribute",
+   "proposals": [],
+   "rule": "autocomplete-valid",
+   "screens": 3,
+   "severityDefault": "medium",
+   "source": "scanner",
+   "states": [
+    "accounts.rule-distribute",
+    "accounts.rule-recurring"
+   ],
+   "summary": "autocomplete-valid: announced as combobox \"Starting account\" [expanded=false, haspopup=listbox]. the autocomplete attribute is incorrectly formatted",
+   "title": "Invalid autocomplete value: combobox \"Starting account\""
+  }
+ ],
+ "primaries": [
+  "accounts.rule-distribute"
+ ],
+ "reach": {
+  "baseUrl": "https://demo.mercury.com",
+  "data": "data",
+  "map": "build/map.json",
+  "run": "2026-10-03-1525",
+  "workspace": "a11y"
+ },
+ "run": "2026-10-03-1525"
+}

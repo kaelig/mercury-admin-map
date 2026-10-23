@@ -1,0 +1,222 @@
+{
+ "area": "accounts",
+ "batch": "verify-039",
+ "findings": [
+  {
+   "attachments": [],
+   "attempt": 1,
+   "basis": "violation",
+   "criteria": [
+    "1.4.3"
+   ],
+   "evidence": [
+    {
+     "evidence": {
+      "bgColor": "#bac2f7",
+      "contrastRatio": 1.72,
+      "expectedContrastRatio": "4.5:1",
+      "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 1.72 (foreground color: #ffffff, background color: #bac2f7, font size: 11.3pt (15px), font weight: normal). Expected contrast ratio of 4.5:1",
+      "fgColor": "#ffffff",
+      "fontSize": "11.3pt (15px)",
+      "fontWeight": "normal",
+      "messageKey": null
+     },
+     "occurrence": {
+      "ancestors": [
+       [
+        "_button_r6b2u_20",
+        "_large_r6b2u_88",
+        "_primary_r6b2u_104",
+        "_appearDisabled_r6b2u_16",
+        "session-replay-unmask"
+       ],
+       [
+        "_navRow_71kja_87"
+       ],
+       [
+        "_container_71kja_1"
+       ],
+       [],
+       [
+        "_contentDiv_bcpsw_53",
+        "_contentDivHeightPreset_bcpsw_62",
+        "_contentArea_nbnhd_1"
+       ],
+       [
+        "_fullScreenWorkspaceLayout_bcpsw_14",
+        "_fullScreenWorkspaceLayoutBackground_bcpsw_32"
+       ],
+       [
+        "_wrapper_bcpsw_3"
+       ],
+       []
+      ],
+      "classes": [
+       "_bodyDefaultDemi_qaod7_47"
+      ],
+      "data": {},
+      "heading": "",
+      "landmark": {
+       "name": "",
+       "role": "form"
+      },
+      "layer": "document",
+      "name": "",
+      "rect": [
+       674,
+       680,
+       33,
+       24
+      ],
+      "role": "generic",
+      "tag": "div",
+      "xpath": "/html/body/div[1]/main[1]/div[1]/div[2]/div[2]/div[3]/form[1]/div[1]/div[3]/button[2]/div[1]"
+     },
+     "state": "accounts.safe-create"
+    },
+    {
+     "evidence": {
+      "bgColor": "#bac2f7",
+      "contrastRatio": 1.72,
+      "expectedContrastRatio": "4.5:1",
+      "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 1.72 (foreground color: #ffffff, background color: #bac2f7, font size: 11.3pt (15px), font weight: normal). Expected contrast ratio of 4.5:1",
+      "fgColor": "#ffffff",
+      "fontSize": "11.3pt (15px)",
+      "fontWeight": "normal",
+      "messageKey": null
+     },
+     "occurrence": {
+      "ancestors": [
+       [
+        "_button_r6b2u_20",
+        "_large_r6b2u_88",
+        "_primary_r6b2u_104",
+        "_appearDisabled_r6b2u_16",
+        "_actionButton_xhpdc_15",
+        "session-replay-unmask"
+       ],
+       [
+        "_saveSettingsSection_xhpdc_5"
+       ],
+       [],
+       [
+        "_large_kwlx6_9",
+        "_noHover_3n0se_28",
+        "_shadow_3n0se_25",
+        "_raisedBackground_3n0se_45",
+        "_card_lo4oy_4",
+        "_defaultPadding_lo4oy_27",
+        "_modal_acg5o_1",
+        "_small_lo4oy_11"
+       ],
+       [
+        "ReactModal__Content",
+        "ReactModal__Content--after-open",
+        "_modal_lo4oy_73"
+       ],
+       [
+        "ReactModal__Overlay",
+        "ReactModal__Overlay--after-open",
+        "_overlay_lo4oy_89",
+        "_backgroundColor_lo4oy_103"
+       ],
+       [
+        "ReactModalPortal"
+       ]
+      ],
+      "classes": [
+       "_bodyDefaultDemi_qaod7_47"
+      ],
+      "data": {},
+      "heading": "",
+      "landmark": {
+       "name": "",
+       "role": "form"
+      },
+      "layer": "top",
+      "name": "",
+      "rect": [
+       809,
+       600,
+       71,
+       24
+      ],
+      "role": "generic",
+      "tag": "div",
+      "xpath": "/html/body/div[11]/div[1]/div[1]/div[1]/form[1]/div[2]/button[2]/div[1]"
+     },
+     "state": "cards.edit-limit-error"
+    }
+   ],
+   "evidenceHash": "11b1b0bbfca2d9c6ee892fd9e980cfc510369bdc16ab3c8d3861ec6fe4c6f8b7",
+   "facts": {
+    "bg": "#bac2f7",
+    "criterion": "1.4.3",
+    "criterionName": "Contrast (Minimum)",
+    "element": "text in the form landmark",
+    "fg": "#ffffff",
+    "ratio": "1.72",
+    "required": "4.5",
+    "rule": "color-contrast",
+    "screen": "Create a new SAFE — details",
+    "screens": 57
+   },
+   "family": "contrast",
+   "guidance": "High under 2:1, or under 3:1 for essential text.",
+   "issueId": null,
+   "key": "contrast:color-contrast:16c016271ce5",
+   "measured": true,
+   "primary": "accounts.safe-create",
+   "proposals": [],
+   "rule": "color-contrast",
+   "screens": 57,
+   "severityDefault": "medium",
+   "source": "scanner",
+   "states": [
+    "accounts.safe-create",
+    "cards.edit-limit-error"
+   ],
+   "summary": "axe color-contrast: #ffffff on #bac2f7 measures 1.72:1; AA needs 4.5:1.",
+   "title": "Low contrast: text in the form landmark"
+  },
+  {
+   "attachments": [],
+   "attempt": 1,
+   "basis": "failure",
+   "criteria": [
+    "4.1.2"
+   ],
+   "evidence": [],
+   "evidenceHash": "984f614efb4fd5543c4ea7ab3ecfdddae1e23a1636db47f80625c06cb71fdce3",
+   "facts": {},
+   "family": "name",
+   "guidance": "High for an unnamed form control or the sole primary action.",
+   "issueId": "accounts.i-safe-form-labels",
+   "key": "hand:accounts.i-safe-form-labels",
+   "measured": false,
+   "primary": "accounts.safe-create",
+   "proposals": [],
+   "rule": "hand-found",
+   "screens": 5,
+   "severityDefault": "low",
+   "source": "hand-found",
+   "states": [
+    "accounts.safe-create",
+    "accounts.linked-account-kebab"
+   ],
+   "summary": "Snapshots 2026-09-24: switch \"proRataRightsLetter\" [checked=false]; textbox [ref=e29] and textbox [disabled, ref=e30] with empty names; listbox \"mercury-utils-id-78-label\"; textbox \"0.00\" on /capital/venture-debt/draw-funds; linked account rows expose button [expanded=false] with no label.",
+   "title": "Form controls with missing or internal accessible names"
+  }
+ ],
+ "primaries": [
+  "accounts.safe-create"
+ ],
+ "reach": {
+  "baseUrl": "https://demo.mercury.com",
+  "data": "data",
+  "map": "build/map.json",
+  "run": "2026-10-03-1525",
+  "workspace": "a11y"
+ },
+ "run": "2026-10-03-1525"
+}

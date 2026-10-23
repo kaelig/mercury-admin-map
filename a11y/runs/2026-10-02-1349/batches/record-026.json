@@ -1,0 +1,210 @@
+{
+ "batch": "record-026",
+ "reach": {
+  "baseUrl": "https://demo.mercury.com",
+  "data": "data",
+  "map": "build/map.json",
+  "run": "2026-10-02-1349",
+  "workspace": "a11y"
+ },
+ "run": "2026-10-02-1349",
+ "states": [
+  {
+   "area": "settings",
+   "draft": "nothing on settings.invite-details matches {\"click\":{\"name\":\"Job title select\"}}",
+   "image": "screens/settings/37-invite-job-title-options.png",
+   "kind": "menu",
+   "labels": [
+    "Open Job title select"
+   ],
+   "mutates": false,
+   "note": "Job title combobox open on a long predefined list (Bookkeeper, CFO, Chief Financial Officer (CFO), Controller\u2026).",
+   "parent": "settings.invite-details",
+   "state": "settings.invite-job-title",
+   "title": "Invite a user \u2014 Job title options"
+  },
+  {
+   "area": "settings",
+   "draft": "not drafted: its parent had no accepted recipe when the drafter ran",
+   "image": "screens/settings/38-invite-assign-role.png",
+   "kind": "form-state",
+   "labels": [
+    "Open Job title select",
+    "Pick a title, fill name/email, click Next"
+   ],
+   "mutates": false,
+   "note": "Radio cards for 7 roles; Employee preselected and expanded to show its permissions; link to create a new role.",
+   "parent": "settings.invite-job-title",
+   "state": "settings.invite-role",
+   "title": "Invite a user \u2014 Assign Role (Employee)"
+  },
+  {
+   "area": "settings",
+   "draft": "not drafted: its parent had no accepted recipe when the drafter ran",
+   "image": "screens/settings/40-role-accountant.png",
+   "kind": "form-state",
+   "labels": [
+    "Open Job title select",
+    "Pick a title, fill name/email, click Next",
+    "Select Accountant"
+   ],
+   "mutates": false,
+   "note": "Accountant selected: Accounting, Download docs and statements, Reimbursement view only, notes and attachments.",
+   "parent": "settings.invite-role",
+   "state": "settings.role-accountant",
+   "title": "Assign Role \u2014 Accountant"
+  },
+  {
+   "area": "settings",
+   "draft": "not drafted: its parent had no accepted recipe when the drafter ran",
+   "image": "screens/settings/39-role-admin.png",
+   "kind": "form-state",
+   "labels": [
+    "Open Job title select",
+    "Pick a title, fill name/email, click Next",
+    "Select Admin"
+   ],
+   "mutates": false,
+   "note": "Admin selected: Send money, User/Accounts management, Policies and approvals, Recipient management, Access all accounts, +9 more.",
+   "parent": "settings.invite-role",
+   "state": "settings.role-admin",
+   "title": "Assign Role \u2014 Admin"
+  },
+  {
+   "area": "settings",
+   "draft": "not drafted: its parent had no accepted recipe when the drafter ran",
+   "image": "screens/settings/41-role-finance-lead.png",
+   "kind": "form-state",
+   "labels": [
+    "Open Job title select",
+    "Pick a title, fill name/email, click Next",
+    "Select Finance Lead"
+   ],
+   "mutates": false,
+   "note": "Finance Lead selected with its non-admin payments/cards/users permission list.",
+   "parent": "settings.invite-role",
+   "state": "settings.role-finance-lead",
+   "title": "Assign Role \u2014 Finance Lead"
+  },
+  {
+   "area": "settings",
+   "draft": "not drafted: its parent had no accepted recipe when the drafter ran",
+   "image": "screens/settings/42-role-finance-manager.png",
+   "kind": "form-state",
+   "labels": [
+    "Open Job title select",
+    "Pick a title, fill name/email, click Next",
+    "Select Finance Manager"
+   ],
+   "mutates": false,
+   "note": "Finance Manager selected: ACH authorizations, Accounting, docs, reimbursement submission, notes, Access all accounts.",
+   "parent": "settings.invite-role",
+   "state": "settings.role-finance-manager",
+   "title": "Assign Role \u2014 Finance Manager"
+  },
+  {
+   "area": "settings",
+   "draft": "not drafted: its parent had no accepted recipe when the drafter ran",
+   "image": "screens/settings/43-role-money-mover.png",
+   "kind": "form-state",
+   "labels": [
+    "Open Job title select",
+    "Pick a title, fill name/email, click Next",
+    "Select Money Mover"
+   ],
+   "mutates": false,
+   "note": "Money Mover selected: Send money, Recipient management, Internal transfers, docs, Access 3 of 7 accounts, +1 more.",
+   "parent": "settings.invite-role",
+   "state": "settings.role-money-mover",
+   "title": "Assign Role \u2014 Money Mover"
+  },
+  {
+   "area": "settings",
+   "draft": "not drafted: its parent had no accepted recipe when the drafter ran",
+   "image": "screens/settings/45-invite-issue-card.png",
+   "kind": "page",
+   "labels": [
+    "Open Job title select",
+    "Pick a title, fill name/email, click Next",
+    "Select Money Mover",
+    "Click Next"
+   ],
+   "mutates": false,
+   "note": "Money Mover adds an Issue Card step: nickname, usage note, Credit/Debit and Virtual/Physical radio tiles, spend controls; 'Or, skip issuing card'.",
+   "parent": "settings.role-money-mover",
+   "state": "settings.invite-issue-card",
+   "title": "Invite a user \u2014 Issue Card"
+  },
+  {
+   "area": "settings",
+   "draft": "not drafted: its parent had no accepted recipe when the drafter ran",
+   "image": "screens/settings/46-invite-issue-card-errors.png",
+   "kind": "validation-error",
+   "labels": [
+    "Open Job title select",
+    "Pick a title, fill name/email, click Next",
+    "Select Money Mover",
+    "Click Next",
+    "Click Next without a control type"
+   ],
+   "mutates": false,
+   "note": "Next without a spend Control type shows 'Please complete this field' under the Control type select.",
+   "parent": "settings.invite-issue-card",
+   "state": "settings.invite-issue-card-error",
+   "title": "Issue Card \u2014 control type required"
+  },
+  {
+   "area": "settings",
+   "draft": "not drafted: its parent had no accepted recipe when the drafter ran",
+   "image": "screens/settings/47-invite-review.png",
+   "kind": "page",
+   "labels": [
+    "Open Job title select",
+    "Pick a title, fill name/email, click Next",
+    "Select Money Mover",
+    "Click Next",
+    "Click 'Or, skip issuing card'"
+   ],
+   "mutates": false,
+   "note": "Summary of Riley Park (email, job title) and the Money Mover role with Back / Send invite.",
+   "parent": "settings.invite-issue-card",
+   "state": "settings.invite-review",
+   "title": "Invite a user \u2014 Review & Send"
+  },
+  {
+   "area": "settings",
+   "draft": "not drafted: its parent had no accepted recipe when the drafter ran",
+   "image": "screens/settings/48-invite-sent.png",
+   "kind": "confirmation",
+   "labels": [
+    "Open Job title select",
+    "Pick a title, fill name/email, click Next",
+    "Select Money Mover",
+    "Click Next",
+    "Click 'Or, skip issuing card'",
+    "Click Send invite"
+   ],
+   "mutates": true,
+   "note": "Full-screen 'Invite sent' page with card-grid illustration, Done inviting / Invite your team; the demo banner is absent here.",
+   "parent": "settings.invite-review",
+   "state": "settings.invite-sent",
+   "title": "Invite sent"
+  },
+  {
+   "area": "settings",
+   "draft": "not drafted: its parent had no accepted recipe when the drafter ran",
+   "image": "screens/settings/44-role-read-only.png",
+   "kind": "form-state",
+   "labels": [
+    "Open Job title select",
+    "Pick a title, fill name/email, click Next",
+    "Select Read Only"
+   ],
+   "mutates": false,
+   "note": "Read Only selected: Download docs and statements, Reimbursement view only, notes and attachments, Access all accounts.",
+   "parent": "settings.invite-role",
+   "state": "settings.role-read-only",
+   "title": "Assign Role \u2014 Read Only"
+  }
+ ]
+}

@@ -1,0 +1,304 @@
+{
+ "area": "invoicing",
+ "batch": "verify-224",
+ "findings": [
+  {
+   "attachments": [],
+   "attempt": 1,
+   "basis": "candidate",
+   "criteria": [
+    "2.1.1"
+   ],
+   "evidence": [
+    {
+     "evidence": {
+      "end": "body",
+      "focusable": true,
+      "source": "ax",
+      "stops": 9
+     },
+     "occurrence": {
+      "ancestors": [
+       [
+        "_dropzoneCompact_3soht_93"
+       ],
+       [
+        "_outerWrapper_3soht_14",
+        "_fileUpload_1et5t_1"
+       ],
+       [],
+       [],
+       [
+        "_contentWrapper_1w7vj_1"
+       ],
+       [
+        "_wrapper_1ojdq_8"
+       ],
+       [],
+       [
+        "_leftInnerContainer_12jyu_3"
+       ]
+      ],
+      "classes": [
+       "_uploadButton_3soht_107"
+      ],
+      "data": {},
+      "heading": "Invoice totals",
+      "landmark": {
+       "name": "",
+       "role": "main"
+      },
+      "layer": "document",
+      "name": "Upload attachment",
+      "rect": [
+       120,
+       799,
+       132,
+       20
+      ],
+      "role": "button",
+      "tag": "button",
+      "xpath": "/html/body/div[1]/main[1]/div[1]/div[2]/div[2]/div[3]/div[1]/div[1]/div[1]/div[1]/div[1]/div[1]/div[2]/div[2]/div[4]/div[2]/div[1]/div[1]/button[1]"
+     },
+     "state": "invoicing.create-series-setup"
+    },
+    {
+     "evidence": {
+      "end": "body",
+      "focusable": true,
+      "source": "ax",
+      "stops": 7
+     },
+     "occurrence": {
+      "ancestors": [
+       [
+        "_dropzoneCompact_3soht_93"
+       ],
+       [
+        "_outerWrapper_3soht_14",
+        "_fileUpload_1et5t_1"
+       ],
+       [],
+       [],
+       [
+        "_contentWrapper_kogp0_1"
+       ],
+       [
+        "_wrapper_1ojdq_8"
+       ],
+       [],
+       [
+        "_leftInnerContainer_12jyu_3"
+       ]
+      ],
+      "classes": [
+       "_uploadButton_3soht_107"
+      ],
+      "data": {},
+      "heading": "Invoice totals",
+      "landmark": {
+       "name": "",
+       "role": "main"
+      },
+      "layer": "document",
+      "name": "Upload attachment",
+      "rect": [
+       120,
+       706,
+       132,
+       20
+      ],
+      "role": "button",
+      "tag": "button",
+      "xpath": "/html/body/div[1]/main[1]/div[1]/div[2]/div[2]/div[3]/div[1]/div[1]/div[1]/div[1]/div[1]/div[1]/div[2]/div[2]/div[3]/div[2]/div[1]/div[1]/button[1]"
+     },
+     "state": "invoicing.create-setup"
+    }
+   ],
+   "evidenceHash": "c0f90edefad1faa5f5747d8733f8d5a82cb23c44aa58b6ac69a3ca313dd3ee34",
+   "facts": {
+    "axeSummary": "",
+    "criterion": "2.1.1",
+    "criterionName": "Keyboard",
+    "element": "button \"Upload attachment\"",
+    "rule": "not-reached",
+    "screen": "Recurring series set up",
+    "stops": "9"
+   },
+   "family": "keyboard",
+   "guidance": "High if a task cannot be completed without a mouse.",
+   "issueId": null,
+   "key": "keyboard:not-reached:e4dfe951c9d2",
+   "measured": false,
+   "primary": "invoicing.create-series-setup",
+   "proposals": [],
+   "rule": "not-reached",
+   "screens": 2,
+   "severityDefault": "medium",
+   "source": "scanner",
+   "states": [
+    "invoicing.create-series-setup",
+    "invoicing.create-setup"
+   ],
+   "summary": "The Tab walk visited 9 stops and never reached the button \"Upload attachment\", which responds to a click.",
+   "title": "Not reachable by keyboard: button \"Upload attachment\""
+  },
+  {
+   "attachments": [],
+   "attempt": 1,
+   "basis": "violation",
+   "criteria": [
+    "1.3.5"
+   ],
+   "evidence": [
+    {
+     "evidence": {
+      "failureSummary": "Fix all of the following:\n  the autocomplete attribute is incorrectly formatted"
+     },
+     "occurrence": {
+      "ancestors": [
+       [
+        "_inputWrapper_11c85_6"
+       ],
+       [
+        "_wrapper_1xgdp_8"
+       ],
+       [],
+       [
+        "_contentWrapper_1w7vj_1"
+       ],
+       [
+        "_wrapper_1ojdq_8"
+       ],
+       [],
+       [
+        "_leftInnerContainer_12jyu_3"
+       ],
+       [
+        "_left_yg1rf_39"
+       ]
+      ],
+      "classes": [
+       "_input_11c85_6"
+      ],
+      "data": {
+       "data-1p-ignore": "true",
+       "data-active-item": "true",
+       "data-bwignore": "true",
+       "data-lpignore": "true"
+      },
+      "heading": "Recurring series set up",
+      "landmark": {
+       "name": "",
+       "role": "main"
+      },
+      "layer": "document",
+      "name": "Currency",
+      "rect": [
+       197,
+       443,
+       370,
+       40
+      ],
+      "role": "combobox",
+      "tag": "input",
+      "xpath": "/html/body/div[1]/main[1]/div[1]/div[2]/div[2]/div[3]/div[1]/div[1]/div[1]/div[1]/div[1]/div[1]/div[2]/div[2]/div[2]/div[1]/div[1]/input[1]"
+     },
+     "state": "invoicing.create-series-setup"
+    },
+    {
+     "evidence": {
+      "failureSummary": "Fix all of the following:\n  the autocomplete attribute is incorrectly formatted"
+     },
+     "occurrence": {
+      "ancestors": [
+       [
+        "_inputWrapper_11c85_6"
+       ],
+       [
+        "_wrapper_1xgdp_8"
+       ],
+       [],
+       [
+        "_popoverContent_1anh5_1"
+       ],
+       [],
+       [],
+       [
+        "_filterTabPanelContainer_veh3u_29"
+       ],
+       [
+        "_filterMenuMainContent_veh3u_21",
+        "_noTopBorderRadius_veh3u_25"
+       ]
+      ],
+      "classes": [
+       "_input_11c85_6"
+      ],
+      "data": {
+       "data-1p-ignore": "true",
+       "data-active-item": "true",
+       "data-bwignore": "true",
+       "data-lpignore": "true"
+      },
+      "heading": "",
+      "landmark": {
+       "name": "",
+       "role": "form"
+      },
+      "layer": "top",
+      "name": "Currency",
+      "rect": [
+       670,
+       489,
+       218,
+       40
+      ],
+      "role": "combobox",
+      "tag": "input",
+      "xpath": "/html/body/div[1]/main[1]/div[1]/div[1]/div[4]/div[1]/div[2]/div[2]/div[1]/span[1]/div[1]/div[1]/div[2]/div[2]/div[4]/form[1]/div[1]/div[1]/div[1]/div[1]/input[1]"
+     },
+     "state": "invoicing.filters-amount-facet"
+    }
+   ],
+   "evidenceHash": "95c2e26ee2279d9e21ff9e53763ab64dde9fcf1c9433bbf2e32a883d87ddfc8e",
+   "facts": {
+    "announced": "combobox \"Currency\" [expanded=false, haspopup=listbox]",
+    "axeSummary": "the autocomplete attribute is incorrectly formatted",
+    "criterion": "1.3.5",
+    "criterionName": "Identify Input Purpose",
+    "element": "combobox \"Currency\"",
+    "rule": "autocomplete-valid",
+    "screen": "Recurring series set up"
+   },
+   "family": "role-state",
+   "guidance": "Low for optional ARIA or an invalid autocomplete token; high when aria-hidden hides the whole page.",
+   "issueId": null,
+   "key": "role-state:autocomplete-valid:96684018458d",
+   "measured": false,
+   "primary": "invoicing.create-series-setup",
+   "proposals": [],
+   "rule": "autocomplete-valid",
+   "screens": 13,
+   "severityDefault": "medium",
+   "source": "scanner",
+   "states": [
+    "invoicing.create-series-setup",
+    "invoicing.filters-amount-facet"
+   ],
+   "summary": "autocomplete-valid: announced as combobox \"Currency\" [expanded=false, haspopup=listbox]. the autocomplete attribute is incorrectly formatted",
+   "title": "Invalid autocomplete value: combobox \"Currency\""
+  }
+ ],
+ "primaries": [
+  "invoicing.create-series-setup"
+ ],
+ "reach": {
+  "baseUrl": "https://demo.mercury.com",
+  "data": "data",
+  "map": "build/map.json",
+  "run": "2026-10-03-1525",
+  "workspace": "a11y"
+ },
+ "run": "2026-10-03-1525"
+}

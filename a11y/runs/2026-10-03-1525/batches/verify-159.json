@@ -1,0 +1,800 @@
+{
+ "area": "cards",
+ "batch": "verify-159",
+ "findings": [
+  {
+   "attachments": [],
+   "attempt": 1,
+   "basis": "violation",
+   "criteria": [
+    "4.1.2"
+   ],
+   "evidence": [
+    {
+     "evidence": {
+      "aria-errormessage": [
+       "address-input-:r7p:-error"
+      ],
+      "failureSummary": "Fix all of the following:\n  aria-errormessage value `address-input-:r7p:-error` must use a technique to announce the message (e.g., aria-live, aria-describedby, role=alert, etc.)"
+     },
+     "occurrence": {
+      "ancestors": [
+       [
+        "_inputWrapper_11c85_6",
+        "_error_11c85_74"
+       ],
+       [
+        "_addressInputContainer_dtuqe_1"
+       ],
+       [
+        "_soloLine_1w1uo_11"
+       ],
+       [
+        "_wrapper_1w1uo_3"
+       ],
+       [
+        "_formWrapper_u3f2o_17"
+       ],
+       [],
+       [
+        "_step_u3f2o_7"
+       ],
+       [
+        "_large_kwlx6_9",
+        "_noHover_3n0se_28",
+        "_shadow_3n0se_25",
+        "_raisedBackground_3n0se_45",
+        "_card_lo4oy_4",
+        "_defaultPadding_lo4oy_27",
+        "_modalContainer_u3f2o_1"
+       ]
+      ],
+      "classes": [
+       "_input_11c85_6"
+      ],
+      "data": {
+       "data-active-item": "true"
+      },
+      "heading": "",
+      "landmark": {
+       "name": "",
+       "role": "form"
+      },
+      "layer": "top",
+      "name": "Address line 1",
+      "rect": [
+       524,
+       360,
+       392,
+       40
+      ],
+      "role": "combobox",
+      "tag": "input",
+      "xpath": "/html/body/div[7]/div[1]/div[1]/div[1]/div[2]/form[1]/div[1]/div[1]/div[2]/div[1]/div[1]/input[1]"
+     },
+     "state": "cards.replace-custom-address-error"
+    }
+   ],
+   "evidenceHash": "cdaf6a2601498c15658437a8a185c7a223069a1ea2080e363deba40089fb3acf",
+   "facts": {
+    "announced": "combobox \"Address line <n>\" [expanded=false, haspopup=listbox, invalid=true, er…",
+    "axeSummary": "aria-errormessage value `address-input-:r7p:-error` must use a technique to announce the message (e.g., aria-live, aria-describedby, role=alert, etc.)",
+    "criterion": "4.1.2",
+    "criterionName": "Name, Role, Value",
+    "element": "combobox \"Address line <n>\"",
+    "rule": "aria-valid-attr-value",
+    "screen": "Custom address: required fields"
+   },
+   "family": "role-state",
+   "guidance": "Low for optional ARIA or an invalid autocomplete token; high when aria-hidden hides the whole page.",
+   "issueId": null,
+   "key": "role-state:aria-valid-attr-value:2dffd9f03921",
+   "measured": false,
+   "primary": "cards.replace-custom-address-error",
+   "proposals": [],
+   "rule": "aria-valid-attr-value",
+   "screens": 1,
+   "severityDefault": "medium",
+   "source": "scanner",
+   "states": [
+    "cards.replace-custom-address-error"
+   ],
+   "summary": "aria-valid-attr-value: announced as combobox \"Address line <n>\" [expanded=false, haspopup=listbox, invalid=true, er…. aria-errormessage value `address-input-:r7p:-error` must use a technique to announce the message (e.g., aria-live, aria-describedby, role=alert, etc.)",
+   "title": "Wrong role or state: combobox \"Address line <n>\""
+  },
+  {
+   "attachments": [],
+   "attempt": 1,
+   "basis": "violation",
+   "criteria": [
+    "4.1.2"
+   ],
+   "evidence": [
+    {
+     "evidence": {
+      "aria-errormessage": [
+       "city-mercury-utils-id-35-errormessage"
+      ],
+      "failureSummary": "Fix all of the following:\n  aria-errormessage value `city-mercury-utils-id-35-errormessage` must use a technique to announce the message (e.g., aria-live, aria-describedby, role=alert, etc.)"
+     },
+     "occurrence": {
+      "ancestors": [
+       [
+        "_inputBox_q7hf7_93",
+        "_error_q7hf7_41"
+       ],
+       [
+        "_inputBoxWrapper_q7hf7_93"
+       ],
+       [
+        "_textInputWrapper_q7hf7_24"
+       ],
+       [
+        "_provideDSTextInput_q7hf7_6",
+        "_addWrapperMargin_q7hf7_19"
+       ],
+       [
+        "_soloLine_1w1uo_11"
+       ],
+       [
+        "_wrapper_1w1uo_3"
+       ],
+       [
+        "_formWrapper_u3f2o_17"
+       ],
+       []
+      ],
+      "classes": [
+       "_input_q7hf7_93"
+      ],
+      "data": {},
+      "heading": "",
+      "landmark": {
+       "name": "",
+       "role": "form"
+      },
+      "layer": "top",
+      "name": "City",
+      "rect": [
+       537,
+       544,
+       366,
+       24
+      ],
+      "role": "textbox",
+      "tag": "input",
+      "xpath": "/html/body/div[7]/div[1]/div[1]/div[1]/div[2]/form[1]/div[1]/div[1]/div[4]/div[1]/div[1]/div[1]/div[1]/input[1]"
+     },
+     "state": "cards.replace-custom-address-error"
+    }
+   ],
+   "evidenceHash": "39985ae4861e25a1a293fc1c1cd6872edd52d38a0c336b64db5b96adbc10499f",
+   "facts": {
+    "announced": "textbox \"City\" [invalid=true, errormessage=Please complete this field]",
+    "axeSummary": "aria-errormessage value `city-mercury-utils-id-35-errormessage` must use a technique to announce the message (e.g., aria-live, aria-describedby, role=alert, et…",
+    "criterion": "4.1.2",
+    "criterionName": "Name, Role, Value",
+    "element": "textbox \"City\"",
+    "rule": "aria-valid-attr-value",
+    "screen": "Custom address: required fields"
+   },
+   "family": "role-state",
+   "guidance": "Low for optional ARIA or an invalid autocomplete token; high when aria-hidden hides the whole page.",
+   "issueId": null,
+   "key": "role-state:aria-valid-attr-value:6592796827d0",
+   "measured": false,
+   "primary": "cards.replace-custom-address-error",
+   "proposals": [],
+   "rule": "aria-valid-attr-value",
+   "screens": 1,
+   "severityDefault": "medium",
+   "source": "scanner",
+   "states": [
+    "cards.replace-custom-address-error"
+   ],
+   "summary": "aria-valid-attr-value: announced as textbox \"City\" [invalid=true, errormessage=Please complete this field]. aria-errormessage value `city-mercury-utils-id-35-errormessage` must use a technique to announce the message (e.g., aria-live, aria-describedby, role=alert, et…",
+   "title": "Wrong role or state: textbox \"City\""
+  },
+  {
+   "attachments": [],
+   "attempt": 1,
+   "basis": "violation",
+   "criteria": [
+    "4.1.2"
+   ],
+   "evidence": [
+    {
+     "evidence": {
+      "aria-errormessage": [
+       "error-message-:r82:"
+      ],
+      "failureSummary": "Fix all of the following:\n  aria-errormessage value `error-message-:r82:` must use a technique to announce the message (e.g., aria-live, aria-describedby, role=alert, etc.)"
+     },
+     "occurrence": {
+      "ancestors": [
+       [
+        "_inputWrapper_11c85_6",
+        "_error_11c85_74"
+       ],
+       [
+        "_wrapper_1xgdp_8",
+        "_comboboxWrapper_1w1uo_40",
+        "_sharedLineItem_1w1uo_26"
+       ],
+       [
+        "_sharedLine_1w1uo_16"
+       ],
+       [
+        "_wrapper_1w1uo_3"
+       ],
+       [
+        "_formWrapper_u3f2o_17"
+       ],
+       [],
+       [
+        "_step_u3f2o_7"
+       ],
+       [
+        "_large_kwlx6_9",
+        "_noHover_3n0se_28",
+        "_shadow_3n0se_25",
+        "_raisedBackground_3n0se_45",
+        "_card_lo4oy_4",
+        "_defaultPadding_lo4oy_27",
+        "_modalContainer_u3f2o_1"
+       ]
+      ],
+      "classes": [
+       "_input_11c85_6"
+      ],
+      "data": {
+       "data-active-item": "true"
+      },
+      "heading": "",
+      "landmark": {
+       "name": "",
+       "role": "form"
+      },
+      "layer": "top",
+      "name": "State",
+      "rect": [
+       524,
+       636,
+       163,
+       40
+      ],
+      "role": "combobox",
+      "tag": "input",
+      "xpath": "/html/body/div[7]/div[1]/div[1]/div[1]/div[2]/form[1]/div[1]/div[1]/div[5]/div[1]/div[1]/input[1]"
+     },
+     "state": "cards.replace-custom-address-error"
+    }
+   ],
+   "evidenceHash": "0bab7f92ce4836f9764868743d2f62e19854b4abb844aa63797a142101cf6e19",
+   "facts": {
+    "announced": "combobox \"State\" [expanded=false, haspopup=listbox, invalid=true, errormessage=…",
+    "axeSummary": "aria-errormessage value `error-message-:r82:` must use a technique to announce the message (e.g., aria-live, aria-describedby, role=alert, etc.)",
+    "criterion": "4.1.2",
+    "criterionName": "Name, Role, Value",
+    "element": "combobox \"State\"",
+    "rule": "aria-valid-attr-value",
+    "screen": "Custom address: required fields"
+   },
+   "family": "role-state",
+   "guidance": "Low for optional ARIA or an invalid autocomplete token; high when aria-hidden hides the whole page.",
+   "issueId": null,
+   "key": "role-state:aria-valid-attr-value:af4a08f67182",
+   "measured": false,
+   "primary": "cards.replace-custom-address-error",
+   "proposals": [],
+   "rule": "aria-valid-attr-value",
+   "screens": 1,
+   "severityDefault": "medium",
+   "source": "scanner",
+   "states": [
+    "cards.replace-custom-address-error"
+   ],
+   "summary": "aria-valid-attr-value: announced as combobox \"State\" [expanded=false, haspopup=listbox, invalid=true, errormessage=…. aria-errormessage value `error-message-:r82:` must use a technique to announce the message (e.g., aria-live, aria-describedby, role=alert, etc.)",
+   "title": "Wrong role or state: combobox \"State\""
+  },
+  {
+   "attachments": [],
+   "attempt": 1,
+   "basis": "failure",
+   "criteria": [
+    "4.1.3"
+   ],
+   "evidence": [
+    {
+     "evidence": {
+      "focus": {
+       "ancestors": [
+        [
+         "_container_1ieyt_1",
+         "_rightAlign_1ieyt_9",
+         "_buttonContainer_u3f2o_13"
+        ],
+        [
+         "_formWrapper_u3f2o_17"
+        ],
+        [],
+        [
+         "_step_u3f2o_7"
+        ],
+        [
+         "_large_kwlx6_9",
+         "_noHover_3n0se_28",
+         "_shadow_3n0se_25",
+         "_raisedBackground_3n0se_45",
+         "_card_lo4oy_4",
+         "_defaultPadding_lo4oy_27",
+         "_modalContainer_u3f2o_1"
+        ],
+        [
+         "ReactModal__Content",
+         "ReactModal__Content--after-open",
+         "_modal_lo4oy_73"
+        ],
+        [
+         "ReactModal__Overlay",
+         "ReactModal__Overlay--after-open",
+         "_overlay_lo4oy_89",
+         "_backgroundColor_lo4oy_103"
+        ],
+        [
+         "ReactModalPortal"
+        ]
+       ],
+       "classes": [
+        "_button_r6b2u_20",
+        "_large_r6b2u_88",
+        "_primary_r6b2u_104",
+        "_appearDisabled_r6b2u_16",
+        "session-replay-unmask"
+       ],
+       "data": {},
+       "heading": "",
+       "landmark": {
+        "name": "",
+        "role": "form"
+       },
+       "layer": "top",
+       "name": "Use address",
+       "rect": [
+        766,
+        724,
+        150,
+        40
+       ],
+       "role": "button",
+       "tag": "button",
+       "xpath": "/html/body/div[7]/div[1]/div[1]/div[1]/div[2]/form[1]/div[1]/div[2]/button[2]"
+      },
+      "focused": false,
+      "message": "Please complete this field",
+      "region": null
+     },
+     "occurrence": {
+      "ancestors": [
+       [
+        "_textInputWrapper_q7hf7_24"
+       ],
+       [
+        "_provideDSTextInput_q7hf7_6",
+        "_addWrapperMargin_q7hf7_19",
+        "_sharedLineItem_1w1uo_26"
+       ],
+       [
+        "_sharedLine_1w1uo_16"
+       ],
+       [
+        "_wrapper_1w1uo_3"
+       ],
+       [
+        "_formWrapper_u3f2o_17"
+       ],
+       [],
+       [
+        "_step_u3f2o_7"
+       ],
+       [
+        "_large_kwlx6_9",
+        "_noHover_3n0se_28",
+        "_shadow_3n0se_25",
+        "_raisedBackground_3n0se_45",
+        "_card_lo4oy_4",
+        "_defaultPadding_lo4oy_27",
+        "_modalContainer_u3f2o_1"
+       ]
+      ],
+      "classes": [
+       "_defaultErrorContainer_1tnh5_1",
+       "_errorMessage_q7hf7_303"
+      ],
+      "data": {
+       "data-session-replay-unmask": "true"
+      },
+      "heading": "",
+      "landmark": {
+       "name": "",
+       "role": "form"
+      },
+      "layer": "top",
+      "name": "",
+      "rect": [
+       736,
+       680,
+       180,
+       20
+      ],
+      "role": "",
+      "tag": "div",
+      "xpath": "/html/body/div[7]/div[1]/div[1]/div[1]/div[2]/form[1]/div[1]/div[1]/div[5]/div[2]/div[1]/div[2]"
+     },
+     "state": "cards.replace-custom-address-error"
+    }
+   ],
+   "evidenceHash": "892d539d64237bbd5a9c96ad93d3b579442d80730f315e94aa605ff2b1bb4c81",
+   "facts": {
+    "criterion": "4.1.3",
+    "criterionName": "Status Messages",
+    "focus": "button \"Use address\"",
+    "message": "\"Please complete this field\"",
+    "screen": "Custom address: required fields"
+   },
+   "family": "status-message",
+   "guidance": "High when it is the only confirmation of a money movement.",
+   "issueId": null,
+   "key": "status-message:status-not-announced:4c257d0b7716",
+   "measured": false,
+   "primary": "cards.replace-custom-address-error",
+   "proposals": [],
+   "rule": "status-not-announced",
+   "screens": 1,
+   "severityDefault": "medium",
+   "source": "scanner",
+   "states": [
+    "cards.replace-custom-address-error"
+   ],
+   "summary": "\"Please complete this field\" appeared outside any live region, alert or status role that existed before it, and focus stayed on the button \"Use address\".",
+   "title": "Status message not announced: \"Please complete this field\""
+  },
+  {
+   "attachments": [],
+   "attempt": 1,
+   "basis": "failure",
+   "criteria": [
+    "4.1.3"
+   ],
+   "evidence": [
+    {
+     "evidence": {
+      "focus": {
+       "ancestors": [
+        [
+         "_container_1ieyt_1",
+         "_rightAlign_1ieyt_9",
+         "_buttonContainer_u3f2o_13"
+        ],
+        [
+         "_formWrapper_u3f2o_17"
+        ],
+        [],
+        [
+         "_step_u3f2o_7"
+        ],
+        [
+         "_large_kwlx6_9",
+         "_noHover_3n0se_28",
+         "_shadow_3n0se_25",
+         "_raisedBackground_3n0se_45",
+         "_card_lo4oy_4",
+         "_defaultPadding_lo4oy_27",
+         "_modalContainer_u3f2o_1"
+        ],
+        [
+         "ReactModal__Content",
+         "ReactModal__Content--after-open",
+         "_modal_lo4oy_73"
+        ],
+        [
+         "ReactModal__Overlay",
+         "ReactModal__Overlay--after-open",
+         "_overlay_lo4oy_89",
+         "_backgroundColor_lo4oy_103"
+        ],
+        [
+         "ReactModalPortal"
+        ]
+       ],
+       "classes": [
+        "_button_r6b2u_20",
+        "_large_r6b2u_88",
+        "_primary_r6b2u_104",
+        "_appearDisabled_r6b2u_16",
+        "session-replay-unmask"
+       ],
+       "data": {},
+       "heading": "",
+       "landmark": {
+        "name": "",
+        "role": "form"
+       },
+       "layer": "top",
+       "name": "Use address",
+       "rect": [
+        766,
+        724,
+        150,
+        40
+       ],
+       "role": "button",
+       "tag": "button",
+       "xpath": "/html/body/div[7]/div[1]/div[1]/div[1]/div[2]/form[1]/div[1]/div[2]/button[2]"
+      },
+      "focused": false,
+      "message": "Please complete this field",
+      "region": null
+     },
+     "occurrence": {
+      "ancestors": [
+       [
+        "_addressInputContainer_dtuqe_1"
+       ],
+       [
+        "_soloLine_1w1uo_11"
+       ],
+       [
+        "_wrapper_1w1uo_3"
+       ],
+       [
+        "_formWrapper_u3f2o_17"
+       ],
+       [],
+       [
+        "_step_u3f2o_7"
+       ],
+       [
+        "_large_kwlx6_9",
+        "_noHover_3n0se_28",
+        "_shadow_3n0se_25",
+        "_raisedBackground_3n0se_45",
+        "_card_lo4oy_4",
+        "_defaultPadding_lo4oy_27",
+        "_modalContainer_u3f2o_1"
+       ],
+       [
+        "ReactModal__Content",
+        "ReactModal__Content--after-open",
+        "_modal_lo4oy_73"
+       ]
+      ],
+      "classes": [
+       "_defaultErrorContainer_1tnh5_1",
+       "_errorMessage_dtuqe_5"
+      ],
+      "data": {
+       "data-session-replay-unmask": "true"
+      },
+      "heading": "",
+      "landmark": {
+       "name": "",
+       "role": "form"
+      },
+      "layer": "top",
+      "name": "",
+      "rect": [
+       524,
+       404,
+       392,
+       20
+      ],
+      "role": "",
+      "tag": "div",
+      "xpath": "/html/body/div[7]/div[1]/div[1]/div[1]/div[2]/form[1]/div[1]/div[1]/div[2]/div[1]/div[2]"
+     },
+     "state": "cards.replace-custom-address-error"
+    }
+   ],
+   "evidenceHash": "892d539d64237bbd5a9c96ad93d3b579442d80730f315e94aa605ff2b1bb4c81",
+   "facts": {
+    "criterion": "4.1.3",
+    "criterionName": "Status Messages",
+    "focus": "button \"Use address\"",
+    "message": "\"Please complete this field\"",
+    "screen": "Custom address: required fields"
+   },
+   "family": "status-message",
+   "guidance": "High when it is the only confirmation of a money movement.",
+   "issueId": null,
+   "key": "status-message:status-not-announced:e5c17f4f2328",
+   "measured": false,
+   "primary": "cards.replace-custom-address-error",
+   "proposals": [],
+   "rule": "status-not-announced",
+   "screens": 1,
+   "severityDefault": "medium",
+   "source": "scanner",
+   "states": [
+    "cards.replace-custom-address-error"
+   ],
+   "summary": "\"Please complete this field\" appeared outside any live region, alert or status role that existed before it, and focus stayed on the button \"Use address\".",
+   "title": "Status message not announced: \"Please complete this field\""
+  },
+  {
+   "attachments": [],
+   "attempt": 1,
+   "basis": "failure",
+   "criteria": [
+    "4.1.3"
+   ],
+   "evidence": [
+    {
+     "evidence": {
+      "focus": {
+       "ancestors": [
+        [
+         "_container_1ieyt_1",
+         "_rightAlign_1ieyt_9",
+         "_buttonContainer_u3f2o_13"
+        ],
+        [
+         "_formWrapper_u3f2o_17"
+        ],
+        [],
+        [
+         "_step_u3f2o_7"
+        ],
+        [
+         "_large_kwlx6_9",
+         "_noHover_3n0se_28",
+         "_shadow_3n0se_25",
+         "_raisedBackground_3n0se_45",
+         "_card_lo4oy_4",
+         "_defaultPadding_lo4oy_27",
+         "_modalContainer_u3f2o_1"
+        ],
+        [
+         "ReactModal__Content",
+         "ReactModal__Content--after-open",
+         "_modal_lo4oy_73"
+        ],
+        [
+         "ReactModal__Overlay",
+         "ReactModal__Overlay--after-open",
+         "_overlay_lo4oy_89",
+         "_backgroundColor_lo4oy_103"
+        ],
+        [
+         "ReactModalPortal"
+        ]
+       ],
+       "classes": [
+        "_button_r6b2u_20",
+        "_large_r6b2u_88",
+        "_primary_r6b2u_104",
+        "_appearDisabled_r6b2u_16",
+        "session-replay-unmask"
+       ],
+       "data": {},
+       "heading": "",
+       "landmark": {
+        "name": "",
+        "role": "form"
+       },
+       "layer": "top",
+       "name": "Use address",
+       "rect": [
+        766,
+        724,
+        150,
+        40
+       ],
+       "role": "button",
+       "tag": "button",
+       "xpath": "/html/body/div[7]/div[1]/div[1]/div[1]/div[2]/form[1]/div[1]/div[2]/button[2]"
+      },
+      "focused": false,
+      "message": "Please enter a valid US state.",
+      "region": null
+     },
+     "occurrence": {
+      "ancestors": [
+       [
+        "_wrapper_1xgdp_8",
+        "_comboboxWrapper_1w1uo_40",
+        "_sharedLineItem_1w1uo_26"
+       ],
+       [
+        "_sharedLine_1w1uo_16"
+       ],
+       [
+        "_wrapper_1w1uo_3"
+       ],
+       [
+        "_formWrapper_u3f2o_17"
+       ],
+       [],
+       [
+        "_step_u3f2o_7"
+       ],
+       [
+        "_large_kwlx6_9",
+        "_noHover_3n0se_28",
+        "_shadow_3n0se_25",
+        "_raisedBackground_3n0se_45",
+        "_card_lo4oy_4",
+        "_defaultPadding_lo4oy_27",
+        "_modalContainer_u3f2o_1"
+       ],
+       [
+        "ReactModal__Content",
+        "ReactModal__Content--after-open",
+        "_modal_lo4oy_73"
+       ]
+      ],
+      "classes": [
+       "_defaultErrorContainer_1tnh5_1",
+       "_errorMessage_1xgdp_20"
+      ],
+      "data": {
+       "data-session-replay-unmask": "true"
+      },
+      "heading": "",
+      "landmark": {
+       "name": "",
+       "role": "form"
+      },
+      "layer": "top",
+      "name": "",
+      "rect": [
+       524,
+       680,
+       196,
+       20
+      ],
+      "role": "",
+      "tag": "div",
+      "xpath": "/html/body/div[7]/div[1]/div[1]/div[1]/div[2]/form[1]/div[1]/div[1]/div[5]/div[1]/div[2]"
+     },
+     "state": "cards.replace-custom-address-error"
+    }
+   ],
+   "evidenceHash": "18bc9df85953ae2c8f0c35d1d6fdfec0b97843968e9f034fceba2bd7d81eaea9",
+   "facts": {
+    "criterion": "4.1.3",
+    "criterionName": "Status Messages",
+    "focus": "button \"Use address\"",
+    "message": "\"Please enter a valid US state.\"",
+    "screen": "Custom address: required fields"
+   },
+   "family": "status-message",
+   "guidance": "High when it is the only confirmation of a money movement.",
+   "issueId": null,
+   "key": "status-message:status-not-announced:f20cea2e273a",
+   "measured": false,
+   "primary": "cards.replace-custom-address-error",
+   "proposals": [],
+   "rule": "status-not-announced",
+   "screens": 1,
+   "severityDefault": "medium",
+   "source": "scanner",
+   "states": [
+    "cards.replace-custom-address-error"
+   ],
+   "summary": "\"Please enter a valid US state.\" appeared outside any live region, alert or status role that existed before it, and focus stayed on the button \"Use address\".",
+   "title": "Status message not announced: \"Please enter a valid US state.\""
+  }
+ ],
+ "primaries": [
+  "cards.replace-custom-address-error"
+ ],
+ "reach": {
+  "baseUrl": "https://demo.mercury.com",
+  "data": "data",
+  "map": "build/map.json",
+  "run": "2026-10-03-1525",
+  "workspace": "a11y"
+ },
+ "run": "2026-10-03-1525"
+}

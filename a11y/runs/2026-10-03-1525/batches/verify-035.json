@@ -1,0 +1,492 @@
+{
+ "area": "accounts",
+ "batch": "verify-035",
+ "findings": [
+  {
+   "attachments": [],
+   "attempt": 1,
+   "basis": "violation",
+   "criteria": [
+    "1.3.5"
+   ],
+   "evidence": [
+    {
+     "evidence": {
+      "failureSummary": "Fix all of the following:\n  the autocomplete attribute is incorrectly formatted"
+     },
+     "occurrence": {
+      "ancestors": [
+       [
+        "_inputWrapper_11c85_6"
+       ],
+       [
+        "_wrapper_1xgdp_8"
+       ],
+       [
+        "_modalFormLabelContent_10pzf_6"
+       ],
+       [
+        "_modalFormLabel_10pzf_1"
+       ],
+       [
+        "_formSection_1q30s_1"
+       ],
+       [],
+       [],
+       [
+        "_large_kwlx6_9",
+        "_noHover_3n0se_28",
+        "_shadow_3n0se_25",
+        "_raisedBackground_3n0se_45",
+        "_card_lo4oy_4",
+        "_defaultPadding_lo4oy_27",
+        "_autoTransferTabModalContainer_11bzg_25",
+        "_small_lo4oy_11"
+       ]
+      ],
+      "classes": [
+       "_input_11c85_6"
+      ],
+      "data": {
+       "data-1p-ignore": "true",
+       "data-active-item": "true",
+       "data-bwignore": "true",
+       "data-lpignore": "true"
+      },
+      "heading": "Maintain a target account balance",
+      "landmark": {
+       "name": "",
+       "role": "form"
+      },
+      "layer": "top",
+      "name": "Account",
+      "rect": [
+       626,
+       208,
+       377,
+       40
+      ],
+      "role": "combobox",
+      "tag": "input",
+      "xpath": "/html/body/div[11]/div[1]/div[1]/div[1]/div[2]/form[1]/section[1]/div[1]/div[1]/div[1]/div[1]/input[1]"
+     },
+     "state": "accounts.rule-target-balance"
+    },
+    {
+     "evidence": {
+      "failureSummary": "Fix all of the following:\n  the autocomplete attribute is incorrectly formatted"
+     },
+     "occurrence": {
+      "ancestors": [
+       [
+        "_inputWrapper_11c85_6"
+       ],
+       [
+        "_wrapper_1xgdp_8"
+       ],
+       [
+        "_modalFormLabelContent_10pzf_6"
+       ],
+       [
+        "_modalFormLabel_10pzf_1"
+       ],
+       [
+        "_formSection_1q30s_1"
+       ],
+       [],
+       [],
+       [
+        "_large_kwlx6_9",
+        "_noHover_3n0se_28",
+        "_shadow_3n0se_25",
+        "_raisedBackground_3n0se_45",
+        "_card_lo4oy_4",
+        "_defaultPadding_lo4oy_27",
+        "_autoTransferTabModalContainer_11bzg_25",
+        "_small_lo4oy_11"
+       ]
+      ],
+      "classes": [
+       "_input_11c85_6"
+      ],
+      "data": {
+       "data-1p-ignore": "true",
+       "data-active-item": "true",
+       "data-bwignore": "true",
+       "data-lpignore": "true"
+      },
+      "heading": "Maintain a target account balance",
+      "landmark": {
+       "name": "",
+       "role": "form"
+      },
+      "layer": "top",
+      "name": "Account",
+      "rect": [
+       675,
+       208,
+       328,
+       40
+      ],
+      "role": "combobox",
+      "tag": "input",
+      "xpath": "/html/body/div[11]/div[1]/div[1]/div[1]/div[2]/form[1]/section[1]/div[1]/div[1]/div[1]/div[1]/input[1]"
+     },
+     "state": "accounts.rule-target-balance-filled"
+    }
+   ],
+   "evidenceHash": "55af98d4b8450f5ed1240f3888b05bcc077a9666e4696f968908b251a1240cca",
+   "facts": {
+    "announced": "combobox \"Account\" [expanded=false, haspopup=listbox]",
+    "axeSummary": "the autocomplete attribute is incorrectly formatted",
+    "criterion": "1.3.5",
+    "criterionName": "Identify Input Purpose",
+    "element": "combobox \"Account\"",
+    "rule": "autocomplete-valid",
+    "screen": "Maintain a target balance form"
+   },
+   "family": "role-state",
+   "guidance": "Low for optional ARIA or an invalid autocomplete token; high when aria-hidden hides the whole page.",
+   "issueId": null,
+   "key": "role-state:autocomplete-valid:760bbe8959a2",
+   "measured": false,
+   "primary": "accounts.rule-target-balance",
+   "proposals": [],
+   "rule": "autocomplete-valid",
+   "screens": 2,
+   "severityDefault": "medium",
+   "source": "scanner",
+   "states": [
+    "accounts.rule-target-balance",
+    "accounts.rule-target-balance-filled"
+   ],
+   "summary": "autocomplete-valid: announced as combobox \"Account\" [expanded=false, haspopup=listbox]. the autocomplete attribute is incorrectly formatted",
+   "title": "Invalid autocomplete value: combobox \"Account\""
+  },
+  {
+   "attachments": [],
+   "attempt": 1,
+   "basis": "violation",
+   "criteria": [
+    "1.3.5"
+   ],
+   "evidence": [
+    {
+     "evidence": {
+      "failureSummary": "Fix all of the following:\n  the autocomplete attribute is incorrectly formatted"
+     },
+     "occurrence": {
+      "ancestors": [
+       [
+        "_inputWrapper_11c85_6"
+       ],
+       [
+        "_wrapper_1xgdp_8"
+       ],
+       [
+        "_modalFormLabelContent_10pzf_6"
+       ],
+       [
+        "_modalFormLabel_10pzf_1"
+       ],
+       [
+        "_formSection_1q30s_1"
+       ],
+       [],
+       [],
+       [
+        "_large_kwlx6_9",
+        "_noHover_3n0se_28",
+        "_shadow_3n0se_25",
+        "_raisedBackground_3n0se_45",
+        "_card_lo4oy_4",
+        "_defaultPadding_lo4oy_27",
+        "_autoTransferTabModalContainer_11bzg_25",
+        "_small_lo4oy_11"
+       ]
+      ],
+      "classes": [
+       "_input_11c85_6"
+      ],
+      "data": {
+       "data-1p-ignore": "true",
+       "data-active-item": "true",
+       "data-bwignore": "true",
+       "data-lpignore": "true"
+      },
+      "heading": "Maintain a target account balance",
+      "landmark": {
+       "name": "",
+       "role": "form"
+      },
+      "layer": "top",
+      "name": "Supporting account",
+      "rect": [
+       626,
+       349,
+       377,
+       40
+      ],
+      "role": "combobox",
+      "tag": "input",
+      "xpath": "/html/body/div[11]/div[1]/div[1]/div[1]/div[2]/form[1]/section[2]/div[1]/div[1]/div[1]/div[1]/input[1]"
+     },
+     "state": "accounts.rule-target-balance"
+    },
+    {
+     "evidence": {
+      "failureSummary": "Fix all of the following:\n  the autocomplete attribute is incorrectly formatted"
+     },
+     "occurrence": {
+      "ancestors": [
+       [
+        "_inputWrapper_11c85_6"
+       ],
+       [
+        "_wrapper_1xgdp_8"
+       ],
+       [
+        "_modalFormLabelContent_10pzf_6"
+       ],
+       [
+        "_modalFormLabel_10pzf_1"
+       ],
+       [
+        "_formSection_1q30s_1"
+       ],
+       [],
+       [],
+       [
+        "_large_kwlx6_9",
+        "_noHover_3n0se_28",
+        "_shadow_3n0se_25",
+        "_raisedBackground_3n0se_45",
+        "_card_lo4oy_4",
+        "_defaultPadding_lo4oy_27",
+        "_autoTransferTabModalContainer_11bzg_25",
+        "_small_lo4oy_11"
+       ]
+      ],
+      "classes": [
+       "_input_11c85_6"
+      ],
+      "data": {
+       "data-1p-ignore": "true",
+       "data-active-item": "true",
+       "data-bwignore": "true",
+       "data-lpignore": "true"
+      },
+      "heading": "Maintain a target account balance",
+      "landmark": {
+       "name": "",
+       "role": "form"
+      },
+      "layer": "top",
+      "name": "Supporting account",
+      "rect": [
+       675,
+       349,
+       328,
+       40
+      ],
+      "role": "combobox",
+      "tag": "input",
+      "xpath": "/html/body/div[11]/div[1]/div[1]/div[1]/div[2]/form[1]/section[2]/div[1]/div[1]/div[1]/div[1]/input[1]"
+     },
+     "state": "accounts.rule-target-balance-filled"
+    }
+   ],
+   "evidenceHash": "55af98d4b8450f5ed1240f3888b05bcc077a9666e4696f968908b251a1240cca",
+   "facts": {
+    "announced": "combobox \"Supporting account\" [expanded=false, haspopup=listbox]",
+    "axeSummary": "the autocomplete attribute is incorrectly formatted",
+    "criterion": "1.3.5",
+    "criterionName": "Identify Input Purpose",
+    "element": "combobox \"Supporting account\"",
+    "rule": "autocomplete-valid",
+    "screen": "Maintain a target balance form"
+   },
+   "family": "role-state",
+   "guidance": "Low for optional ARIA or an invalid autocomplete token; high when aria-hidden hides the whole page.",
+   "issueId": null,
+   "key": "role-state:autocomplete-valid:e57468808627",
+   "measured": false,
+   "primary": "accounts.rule-target-balance",
+   "proposals": [],
+   "rule": "autocomplete-valid",
+   "screens": 2,
+   "severityDefault": "medium",
+   "source": "scanner",
+   "states": [
+    "accounts.rule-target-balance",
+    "accounts.rule-target-balance-filled"
+   ],
+   "summary": "autocomplete-valid: announced as combobox \"Supporting account\" [expanded=false, haspopup=listbox]. the autocomplete attribute is incorrectly formatted",
+   "title": "Invalid autocomplete value: combobox \"Supporting account\""
+  },
+  {
+   "attachments": [],
+   "attempt": 1,
+   "basis": "violation",
+   "criteria": [
+    "1.3.5"
+   ],
+   "evidence": [
+    {
+     "evidence": {
+      "failureSummary": "Fix all of the following:\n  the autocomplete attribute is incorrectly formatted"
+     },
+     "occurrence": {
+      "ancestors": [
+       [
+        "_inputWrapper_11c85_6"
+       ],
+       [
+        "_wrapper_1xgdp_8",
+        "_boundSelector_1tbm7_8"
+       ],
+       [
+        "_subSection_1tbm7_1"
+       ],
+       [
+        "_modalFormLabelContent_10pzf_6"
+       ],
+       [
+        "_modalFormLabel_10pzf_1"
+       ],
+       [
+        "_boundWrapper_1q30s_17"
+       ],
+       [
+        "_formSection_1q30s_1"
+       ],
+       []
+      ],
+      "classes": [
+       "_input_11c85_6"
+      ],
+      "data": {
+       "data-1p-ignore": "true",
+       "data-active-item": "true",
+       "data-bwignore": "true",
+       "data-lpignore": "true"
+      },
+      "heading": "Maintain a target account balance",
+      "landmark": {
+       "name": "",
+       "role": "form"
+      },
+      "layer": "top",
+      "name": "Bound option",
+      "rect": [
+       626,
+       260,
+       127,
+       40
+      ],
+      "role": "combobox",
+      "tag": "input",
+      "xpath": "/html/body/div[11]/div[1]/div[1]/div[1]/div[2]/form[1]/section[1]/div[2]/div[1]/div[1]/div[1]/div[1]/div[1]/input[1]"
+     },
+     "state": "accounts.rule-target-balance"
+    },
+    {
+     "evidence": {
+      "failureSummary": "Fix all of the following:\n  the autocomplete attribute is incorrectly formatted"
+     },
+     "occurrence": {
+      "ancestors": [
+       [
+        "_inputWrapper_11c85_6"
+       ],
+       [
+        "_wrapper_1xgdp_8",
+        "_boundSelector_1tbm7_8"
+       ],
+       [
+        "_subSection_1tbm7_1"
+       ],
+       [
+        "_modalFormLabelContent_10pzf_6"
+       ],
+       [
+        "_modalFormLabel_10pzf_1"
+       ],
+       [
+        "_boundWrapper_1q30s_17"
+       ],
+       [
+        "_formSection_1q30s_1"
+       ],
+       []
+      ],
+      "classes": [
+       "_input_11c85_6"
+      ],
+      "data": {
+       "data-1p-ignore": "true",
+       "data-active-item": "true",
+       "data-bwignore": "true",
+       "data-lpignore": "true"
+      },
+      "heading": "Maintain a target account balance",
+      "landmark": {
+       "name": "",
+       "role": "form"
+      },
+      "layer": "top",
+      "name": "Bound option",
+      "rect": [
+       626,
+       260,
+       127,
+       40
+      ],
+      "role": "combobox",
+      "tag": "input",
+      "xpath": "/html/body/div[11]/div[1]/div[1]/div[1]/div[2]/form[1]/section[1]/div[2]/div[1]/div[1]/div[1]/div[1]/div[1]/input[1]"
+     },
+     "state": "accounts.rule-target-balance-filled"
+    }
+   ],
+   "evidenceHash": "55af98d4b8450f5ed1240f3888b05bcc077a9666e4696f968908b251a1240cca",
+   "facts": {
+    "announced": "combobox \"Bound option\" [expanded=false, haspopup=listbox]",
+    "axeSummary": "the autocomplete attribute is incorrectly formatted",
+    "criterion": "1.3.5",
+    "criterionName": "Identify Input Purpose",
+    "element": "combobox \"Bound option\"",
+    "rule": "autocomplete-valid",
+    "screen": "Maintain a target balance form"
+   },
+   "family": "role-state",
+   "guidance": "Low for optional ARIA or an invalid autocomplete token; high when aria-hidden hides the whole page.",
+   "issueId": null,
+   "key": "role-state:autocomplete-valid:fd819e98dbbc",
+   "measured": false,
+   "primary": "accounts.rule-target-balance",
+   "proposals": [],
+   "rule": "autocomplete-valid",
+   "screens": 2,
+   "severityDefault": "medium",
+   "source": "scanner",
+   "states": [
+    "accounts.rule-target-balance",
+    "accounts.rule-target-balance-filled"
+   ],
+   "summary": "autocomplete-valid: announced as combobox \"Bound option\" [expanded=false, haspopup=listbox]. the autocomplete attribute is incorrectly formatted",
+   "title": "Invalid autocomplete value: combobox \"Bound option\""
+  }
+ ],
+ "primaries": [
+  "accounts.rule-target-balance"
+ ],
+ "reach": {
+  "baseUrl": "https://demo.mercury.com",
+  "data": "data",
+  "map": "build/map.json",
+  "run": "2026-10-03-1525",
+  "workspace": "a11y"
+ },
+ "run": "2026-10-03-1525"
+}

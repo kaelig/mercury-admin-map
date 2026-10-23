@@ -1,0 +1,234 @@
+{
+ "batch": "record-019",
+ "reach": {
+  "baseUrl": "https://demo.mercury.com",
+  "data": "data",
+  "map": "build/map.json",
+  "run": "2026-10-02-1349",
+  "workspace": "a11y"
+ },
+ "run": "2026-10-02-1349",
+ "states": [
+  {
+   "area": "invoicing",
+   "draft": "cannot parse \"Enter an invalid email\"",
+   "image": "screens/invoicing/58-add-customer-invalid-email.png",
+   "kind": "validation-error",
+   "labels": [
+    "Enter an invalid email"
+   ],
+   "mutates": false,
+   "note": "Entering 'ap@lumen' turns the email field red with 'Please submit a valid email'.",
+   "parent": "invoicing.add-customer",
+   "state": "invoicing.add-customer-invalid",
+   "title": "Add customer: invalid email"
+  },
+  {
+   "area": "invoicing",
+   "draft": "not drafted: its parent had no accepted recipe when the drafter ran",
+   "image": "screens/invoicing/59-add-customer-address.png",
+   "kind": "form-state",
+   "labels": [
+    "Enter an invalid email",
+    "Fix email, toggle Add customer address, fill address"
+   ],
+   "mutates": false,
+   "note": "Address toggle on reveals country, address lines, city, state and ZIP; Create customer becomes enabled.",
+   "parent": "invoicing.add-customer-invalid",
+   "state": "invoicing.add-customer-address",
+   "title": "Add customer: address"
+  },
+  {
+   "area": "invoicing",
+   "draft": "not drafted: its parent had no accepted recipe when the drafter ran",
+   "image": "screens/invoicing/60-customer-created.png",
+   "kind": "toast",
+   "labels": [
+    "Enter an invalid email",
+    "Fix email, toggle Add customer address, fill address",
+    "Click Create customer"
+   ],
+   "mutates": true,
+   "note": "New customer Lumen Robotics selected in the list with its detail panel (address, Total sent 0, No payment history) and a 'Customer added' toast.",
+   "parent": "invoicing.add-customer-address",
+   "state": "invoicing.customer-created",
+   "title": "Customer added"
+  },
+  {
+   "area": "invoicing",
+   "draft": "nothing on invoicing.index matches {\"click\":{\"name\":\"an overdue invoice\"}}",
+   "image": "screens/invoicing/35-invoice-detail-overdue.png",
+   "kind": "drawer",
+   "labels": [
+    "Click an overdue invoice row"
+   ],
+   "mutates": false,
+   "note": "Detail panel for overdue INV-0007 (Aphelion, $16,500.00) with orange Overdue badge, activity timeline and Edit / Remind / More.",
+   "parent": "invoicing.index",
+   "state": "invoicing.invoice-detail-overdue",
+   "title": "Overdue invoice detail"
+  },
+  {
+   "area": "invoicing",
+   "draft": "not drafted: its parent had no accepted recipe when the drafter ran",
+   "image": "screens/invoicing/36-invoice-detail-lower.png",
+   "kind": "drawer",
+   "labels": [
+    "Click an overdue invoice row",
+    "Scroll the detail panel"
+   ],
+   "mutates": false,
+   "note": "Panel scrolled past the actions: Due date, Invoice date, Invoice no., Automated reminders, Recurring, and the invoice payment link field.",
+   "parent": "invoicing.invoice-detail-overdue",
+   "state": "invoicing.invoice-detail-lower",
+   "title": "Invoice detail: details & documents"
+  },
+  {
+   "area": "invoicing",
+   "draft": "not drafted: its parent had no accepted recipe when the drafter ran",
+   "image": "screens/invoicing/37-remind-modal.png",
+   "kind": "modal",
+   "labels": [
+    "Click an overdue invoice row",
+    "Click Remind"
+   ],
+   "mutates": false,
+   "note": "Confirmation to send a manual reminder even though automated reminders are on, showing the recipient chip, Close and 'Yes, Send Now'.",
+   "parent": "invoicing.invoice-detail-overdue",
+   "state": "invoicing.remind-modal",
+   "title": "Send a reminder modal"
+  },
+  {
+   "area": "invoicing",
+   "draft": "step-failed: invoicing.row-selected hop 0: check {\"role\":\"menuitem\",\"name\":\"Status\"}: locator.check: Error: Not a checkbox or radio button",
+   "image": "screens/invoicing/78-row-selected-bulk.png",
+   "kind": "form-state",
+   "labels": [
+    "Check a row"
+   ],
+   "mutates": false,
+   "note": "Checking a row highlights it and shows a floating bar: '1 item selected \u00b7 $12,000.00 total', export, cancel (red trash) and a disabled Send reminder; the header action becomes 'Export 1 item'.",
+   "parent": "invoicing.index",
+   "state": "invoicing.row-selected",
+   "title": "Row selected (bulk actions)"
+  },
+  {
+   "area": "invoicing",
+   "draft": "not drafted: its parent had no accepted recipe when the drafter ran",
+   "image": "screens/invoicing/79-bulk-cancel-modal.png",
+   "kind": "modal",
+   "labels": [
+    "Check a row",
+    "Click the trash icon (Cancel selected items)"
+   ],
+   "mutates": false,
+   "note": "'Cancel invoice for Quasar Design Studio?' confirmation with Close and a red 'Cancel Invoice' button.",
+   "parent": "invoicing.row-selected",
+   "state": "invoicing.bulk-cancel-modal",
+   "title": "Cancel invoice confirmation"
+  },
+  {
+   "area": "invoicing",
+   "draft": "not drafted: its parent had no accepted recipe when the drafter ran",
+   "image": "screens/invoicing/80-bulk-cancel-done.png",
+   "kind": "toast",
+   "labels": [
+    "Check a row",
+    "Click the trash icon (Cancel selected items)",
+    "Click Cancel Invoice"
+   ],
+   "mutates": true,
+   "note": "'Item canceled' toast; INV-0014 disappears from the list even though Show canceled is on, and the Total open card still reads $86.3K / 12 Invoices.",
+   "parent": "invoicing.bulk-cancel-modal",
+   "state": "invoicing.bulk-cancel-done",
+   "title": "Invoice canceled"
+  },
+  {
+   "area": "invoicing",
+   "draft": "cannot parse \"Fill name\"",
+   "image": "screens/invoicing/64-add-catalog-item-filled.png",
+   "kind": "form-state",
+   "labels": [
+    "Fill name, price and description"
+   ],
+   "mutates": false,
+   "note": "Add Item form completed (Onboarding Workshop, $1,250, description) with Create item enabled.",
+   "parent": "invoicing.add-catalog-item",
+   "state": "invoicing.add-catalog-item-filled",
+   "title": "Add Item filled"
+  },
+  {
+   "area": "invoicing",
+   "draft": "not drafted: its parent had no accepted recipe when the drafter ran",
+   "image": "screens/invoicing/65-catalog-item-created.png",
+   "kind": "toast",
+   "labels": [
+    "Fill name, price and description",
+    "Click Create item"
+   ],
+   "mutates": true,
+   "note": "New item highlighted with its detail panel (price, description, last updated, used, last used) and an 'Item added' toast.",
+   "parent": "invoicing.add-catalog-item-filled",
+   "state": "invoicing.catalog-item-created",
+   "title": "Catalog item added"
+  },
+  {
+   "area": "invoicing",
+   "draft": "nothing on invoicing.customers-index matches {\"click\":{\"name\":\"a customer\"}}",
+   "image": "screens/invoicing/55-customer-detail.png",
+   "kind": "drawer",
+   "labels": [
+    "Click a customer row"
+   ],
+   "mutates": false,
+   "note": "Right panel for Aphelion Financial Advisors: Edit, Request, Delete, primary email, total sent (2 \u2022 $17.3K) and last paid date.",
+   "parent": "invoicing.customers-index",
+   "state": "invoicing.customer-detail",
+   "title": "Customer detail panel"
+  },
+  {
+   "area": "invoicing",
+   "draft": "not drafted: its parent had no accepted recipe when the drafter ran",
+   "image": "screens/invoicing/56-edit-customer.png",
+   "kind": "modal",
+   "labels": [
+    "Click a customer row",
+    "Click Edit (customer with pending payment)"
+   ],
+   "mutates": false,
+   "note": "Edit is blocked because the customer has a pending payment; dialog offers Go back or View pending payments.",
+   "parent": "invoicing.customer-detail",
+   "state": "invoicing.edit-customer-blocked",
+   "title": "Edit customer blocked"
+  },
+  {
+   "area": "invoicing",
+   "draft": "structure-missing: a menu needs an open layer; the replay found none",
+   "image": "screens/invoicing/03-status-filter-menu.png",
+   "kind": "menu",
+   "labels": [
+    "Click Status"
+   ],
+   "mutates": false,
+   "note": "Status dropdown with checkbox options Open, Overdue, Scheduled, Active, Processing, Paid, each with a description.",
+   "parent": "invoicing.index",
+   "state": "invoicing.status-filter-menu",
+   "title": "Status filter menu"
+  },
+  {
+   "area": "invoicing",
+   "draft": "not drafted: its parent had no accepted recipe when the drafter ran",
+   "image": "screens/invoicing/04-filtered-overdue.png",
+   "kind": "form-state",
+   "labels": [
+    "Click Status",
+    "Check Overdue"
+   ],
+   "mutates": false,
+   "note": "Table filtered to three overdue invoices, with an 'Overdue x' chip, Filters (1), Reset and 'Export filtered'.",
+   "parent": "invoicing.status-filter-menu",
+   "state": "invoicing.filtered-overdue",
+   "title": "List filtered to Overdue"
+  }
+ ]
+}

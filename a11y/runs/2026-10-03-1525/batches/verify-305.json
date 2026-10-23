@@ -1,0 +1,1172 @@
+{
+ "area": "settings",
+ "batch": "verify-305",
+ "findings": [
+  {
+   "attachments": [],
+   "attempt": 1,
+   "basis": "violation",
+   "criteria": [
+    "1.4.3"
+   ],
+   "evidence": [
+    {
+     "evidence": {
+      "bgColor": "#ffffff",
+      "contrastRatio": 1.7,
+      "expectedContrastRatio": "4.5:1",
+      "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 1.7 (foreground color: #c6c6cb, background color: #ffffff, font size: 9.8pt (13px), font weight: normal). Expected contrast ratio of 4.5:1",
+      "fgColor": "#c6c6cb",
+      "fontSize": "9.8pt (13px)",
+      "fontWeight": "normal",
+      "messageKey": null
+     },
+     "occurrence": {
+      "ancestors": [
+       [
+        "_nameInfoWrapper_3j7w7_15",
+        "_removed_1u40e_335"
+       ],
+       [
+        "_avatarWrapper_3j7w7_1"
+       ],
+       [
+        "_tableCell_1waxt_102",
+        "_notCollapsible_1waxt_40",
+        "_nameCell_1u40e_179",
+        "_notFirstRow_1waxt_142",
+        "_lastNonCollapsingColumn_1waxt_158"
+       ],
+       [
+        "_teamRow_1u40e_256",
+        "_tableRow_1waxt_94"
+       ],
+       [
+        "_cardTable_1waxt_4"
+       ],
+       [
+        "_tableAndLoadingStateWrapper_1waxt_313"
+       ],
+       [
+        "_tableWrapper_1waxt_304",
+        "_tableWrapper_1u40e_1",
+        "_withFirmColumn_1u40e_107"
+       ],
+       []
+      ],
+      "classes": [
+       "_label_qaod7_59",
+       "_ellipsis_qaod7_116",
+       "_text-tertiary_12t49_1",
+       "_fullWidth_3j7w7_11"
+      ],
+      "data": {},
+      "heading": "Advisors",
+      "landmark": {
+       "name": "",
+       "role": "main"
+      },
+      "layer": "document",
+      "name": "",
+      "rect": [
+       614,
+       738,
+       232,
+       20
+      ],
+      "role": "generic",
+      "tag": "span",
+      "xpath": "/html/body/div[1]/main[1]/div[1]/div[1]/div[4]/div[1]/div[2]/div[2]/div[1]/div[4]/div[1]/div[1]/div[7]/div[2]/div[1]/div[2]/span[2]"
+     },
+     "state": "settings.advisors"
+    },
+    {
+     "evidence": {
+      "bgColor": "#ffffff",
+      "contrastRatio": 1.7,
+      "expectedContrastRatio": "4.5:1",
+      "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 1.7 (foreground color: #c6c6cb, background color: #ffffff, font size: 9.8pt (13px), font weight: normal). Expected contrast ratio of 4.5:1",
+      "fgColor": "#c6c6cb",
+      "fontSize": "9.8pt (13px)",
+      "fontWeight": "normal",
+      "messageKey": null
+     },
+     "occurrence": {
+      "ancestors": [
+       [
+        "_nameInfoWrapper_3j7w7_15",
+        "_removed_1u40e_335"
+       ],
+       [
+        "_avatarWrapper_3j7w7_1"
+       ],
+       [
+        "_tableCell_1waxt_102",
+        "_notCollapsible_1waxt_40",
+        "_nameCell_1u40e_179",
+        "_notFirstRow_1waxt_142"
+       ],
+       [
+        "_teamRow_1u40e_256",
+        "_tableRow_1waxt_94"
+       ],
+       [
+        "_cardTable_1waxt_4",
+        "_condensed_1waxt_31"
+       ],
+       [
+        "_tableAndLoadingStateWrapper_1waxt_313"
+       ],
+       [
+        "_tableWrapper_1waxt_304",
+        "_tableWrapper_1u40e_1",
+        "_withCardDisplayed_1u40e_67"
+       ],
+       []
+      ],
+      "classes": [
+       "_label_qaod7_59",
+       "_ellipsis_qaod7_116",
+       "_text-tertiary_12t49_1",
+       "_fullWidth_3j7w7_11"
+      ],
+      "data": {},
+      "heading": "Team",
+      "landmark": {
+       "name": "",
+       "role": "main"
+      },
+      "layer": "document",
+      "name": "",
+      "rect": [
+       406,
+       1654,
+       232,
+       20
+      ],
+      "role": "generic",
+      "tag": "span",
+      "xpath": "/html/body/div[1]/main[1]/div[1]/div[1]/div[4]/div[1]/div[2]/div[2]/div[1]/div[2]/div[1]/div[1]/div[24]/div[1]/div[1]/div[2]/span[2]"
+     },
+     "state": "settings.edit-member"
+    }
+   ],
+   "evidenceHash": "3ac133b7a8f9bb3e58b0a6cfcb77f5be67971db08bbb0dd282e7304e89a313ae",
+   "facts": {
+    "bg": "#ffffff",
+    "criterion": "1.4.3",
+    "criterionName": "Contrast (Minimum)",
+    "element": "text in \"Advisors\"",
+    "fg": "#c6c6cb",
+    "ratio": "1.70",
+    "required": "4.5",
+    "rule": "color-contrast",
+    "screen": "Advisors",
+    "screens": 4
+   },
+   "family": "contrast",
+   "guidance": "High under 2:1, or under 3:1 for essential text.",
+   "issueId": null,
+   "key": "contrast:color-contrast:1436cc3d0dd9",
+   "measured": true,
+   "primary": "settings.advisors",
+   "proposals": [],
+   "rule": "color-contrast",
+   "screens": 4,
+   "severityDefault": "medium",
+   "source": "scanner",
+   "states": [
+    "settings.advisors",
+    "settings.edit-member"
+   ],
+   "summary": "axe color-contrast: #c6c6cb on #ffffff measures 1.70:1; AA needs 4.5:1.",
+   "title": "Low contrast: text in \"Advisors\""
+  },
+  {
+   "attachments": [],
+   "attempt": 1,
+   "basis": "violation",
+   "criteria": [
+    "1.4.3"
+   ],
+   "evidence": [
+    {
+     "evidence": {
+      "bgColor": "#ffffff",
+      "contrastRatio": 2.18,
+      "expectedContrastRatio": "4.5:1",
+      "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 2.18 (foreground color: #afafb4, background color: #ffffff, font size: 11.3pt (15px), font weight: normal). Expected contrast ratio of 4.5:1",
+      "fgColor": "#afafb4",
+      "fontSize": "11.3pt (15px)",
+      "fontWeight": "normal",
+      "messageKey": null
+     },
+     "occurrence": {
+      "ancestors": [
+       [
+        "_nameInfoWrapper_3j7w7_15",
+        "_removed_1u40e_335"
+       ],
+       [
+        "_avatarWrapper_3j7w7_1"
+       ],
+       [
+        "_tableCell_1waxt_102",
+        "_notCollapsible_1waxt_40",
+        "_nameCell_1u40e_179",
+        "_notFirstRow_1waxt_142",
+        "_lastNonCollapsingColumn_1waxt_158"
+       ],
+       [
+        "_teamRow_1u40e_256",
+        "_tableRow_1waxt_94"
+       ],
+       [
+        "_cardTable_1waxt_4"
+       ],
+       [
+        "_tableAndLoadingStateWrapper_1waxt_313"
+       ],
+       [
+        "_tableWrapper_1waxt_304",
+        "_tableWrapper_1u40e_1",
+        "_withFirmColumn_1u40e_107"
+       ],
+       []
+      ],
+      "classes": [
+       "_bodyDefault_qaod7_40",
+       "_ellipsis_qaod7_116",
+       "_text-default_12t49_1",
+       "_fullWidth_3j7w7_11"
+      ],
+      "data": {},
+      "heading": "Advisors",
+      "landmark": {
+       "name": "",
+       "role": "main"
+      },
+      "layer": "document",
+      "name": "",
+      "rect": [
+       614,
+       714,
+       232,
+       24
+      ],
+      "role": "",
+      "tag": "span",
+      "xpath": "/html/body/div[1]/main[1]/div[1]/div[1]/div[4]/div[1]/div[2]/div[2]/div[1]/div[4]/div[1]/div[1]/div[7]/div[2]/div[1]/div[2]/span[1]"
+     },
+     "state": "settings.advisors"
+    },
+    {
+     "evidence": {
+      "bgColor": "#ffffff",
+      "contrastRatio": 2.18,
+      "expectedContrastRatio": "4.5:1",
+      "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 2.18 (foreground color: #afafb4, background color: #ffffff, font size: 11.3pt (15px), font weight: normal). Expected contrast ratio of 4.5:1",
+      "fgColor": "#afafb4",
+      "fontSize": "11.3pt (15px)",
+      "fontWeight": "normal",
+      "messageKey": null
+     },
+     "occurrence": {
+      "ancestors": [
+       [
+        "_nameInfoWrapper_3j7w7_15",
+        "_removed_1u40e_335"
+       ],
+       [
+        "_avatarWrapper_3j7w7_1"
+       ],
+       [
+        "_tableCell_1waxt_102",
+        "_notCollapsible_1waxt_40",
+        "_nameCell_1u40e_179",
+        "_notFirstRow_1waxt_142"
+       ],
+       [
+        "_teamRow_1u40e_256",
+        "_tableRow_1waxt_94"
+       ],
+       [
+        "_cardTable_1waxt_4",
+        "_condensed_1waxt_31"
+       ],
+       [
+        "_tableAndLoadingStateWrapper_1waxt_313"
+       ],
+       [
+        "_tableWrapper_1waxt_304",
+        "_tableWrapper_1u40e_1",
+        "_withCardDisplayed_1u40e_67"
+       ],
+       []
+      ],
+      "classes": [
+       "_bodyDefault_qaod7_40",
+       "_ellipsis_qaod7_116",
+       "_text-default_12t49_1",
+       "_fullWidth_3j7w7_11"
+      ],
+      "data": {},
+      "heading": "Team",
+      "landmark": {
+       "name": "",
+       "role": "main"
+      },
+      "layer": "document",
+      "name": "",
+      "rect": [
+       406,
+       1630,
+       232,
+       24
+      ],
+      "role": "",
+      "tag": "span",
+      "xpath": "/html/body/div[1]/main[1]/div[1]/div[1]/div[4]/div[1]/div[2]/div[2]/div[1]/div[2]/div[1]/div[1]/div[24]/div[1]/div[1]/div[2]/span[1]"
+     },
+     "state": "settings.edit-member"
+    }
+   ],
+   "evidenceHash": "5f03a98068697c761850d0afbdca56862e0ec2d171f7d334f68150c17336b04d",
+   "facts": {
+    "bg": "#ffffff",
+    "criterion": "1.4.3",
+    "criterionName": "Contrast (Minimum)",
+    "element": "text in \"Advisors\"",
+    "fg": "#afafb4",
+    "ratio": "2.18",
+    "required": "4.5",
+    "rule": "color-contrast",
+    "screen": "Advisors",
+    "screens": 4
+   },
+   "family": "contrast",
+   "guidance": "High under 2:1, or under 3:1 for essential text.",
+   "issueId": null,
+   "key": "contrast:color-contrast:6faaa77b65f0",
+   "measured": true,
+   "primary": "settings.advisors",
+   "proposals": [],
+   "rule": "color-contrast",
+   "screens": 4,
+   "severityDefault": "medium",
+   "source": "scanner",
+   "states": [
+    "settings.advisors",
+    "settings.edit-member"
+   ],
+   "summary": "axe color-contrast: #afafb4 on #ffffff measures 2.18:1; AA needs 4.5:1.",
+   "title": "Low contrast: text in \"Advisors\""
+  },
+  {
+   "attachments": [],
+   "attempt": 1,
+   "basis": "candidate",
+   "criteria": [
+    "2.1.1"
+   ],
+   "evidence": [
+    {
+     "evidence": {
+      "end": "body",
+      "focusable": false,
+      "source": "pointer",
+      "stops": 61
+     },
+     "occurrence": {
+      "ancestors": [
+       [
+        "_tiny_qaod7_67",
+        "_text-tertiary_12t49_1",
+        "_tableHeader_1waxt_60",
+        "_collapsible_1waxt_24",
+        "_roleHeader_1u40e_185"
+       ],
+       [
+        "_tableHeaders_1waxt_60"
+       ],
+       [
+        "_cardTable_1waxt_4"
+       ],
+       [
+        "_tableAndLoadingStateWrapper_1waxt_313"
+       ],
+       [
+        "_tableWrapper_1waxt_304",
+        "_tableWrapper_1u40e_1",
+        "_withFirmColumn_1u40e_107"
+       ],
+       [],
+       [],
+       [
+        "_pageContent_809q8_151",
+        "_pageContentWidth_809q8_184",
+        "_footerPadding_809q8_115"
+       ]
+      ],
+      "classes": [
+       "_tiny_qaod7_67",
+       "_text-tertiary_12t49_1",
+       "_header_1uc6n_1"
+      ],
+      "data": {},
+      "heading": "Advisors",
+      "landmark": {
+       "name": "",
+       "role": "main"
+      },
+      "layer": "document",
+      "name": "",
+      "rect": [
+       854,
+       420,
+       73,
+       20
+      ],
+      "role": "generic",
+      "tag": "div",
+      "xpath": "/html/body/div[1]/main[1]/div[1]/div[1]/div[4]/div[1]/div[2]/div[2]/div[1]/div[4]/div[1]/div[1]/div[2]/div[3]/div[1]"
+     },
+     "state": "settings.advisors"
+    }
+   ],
+   "evidenceHash": "32054c59b54c28438be22e02277fab33dac641866dfbb23f86a77eb48c074896",
+   "facts": {
+    "axeSummary": "",
+    "criterion": "2.1.1",
+    "criterionName": "Keyboard",
+    "element": "text in \"Advisors\"",
+    "rule": "not-reached",
+    "screen": "Advisors",
+    "stops": "61"
+   },
+   "family": "keyboard",
+   "guidance": "High if a task cannot be completed without a mouse.",
+   "issueId": null,
+   "key": "keyboard:not-reached:299146d60caf",
+   "measured": false,
+   "primary": "settings.advisors",
+   "proposals": [],
+   "rule": "not-reached",
+   "screens": 1,
+   "severityDefault": "medium",
+   "source": "scanner",
+   "states": [
+    "settings.advisors"
+   ],
+   "summary": "The Tab walk visited 61 stops and never reached the text in \"Advisors\", which responds to a click.",
+   "title": "Not reachable by keyboard: text in \"Advisors\""
+  },
+  {
+   "attachments": [],
+   "attempt": 1,
+   "basis": "candidate",
+   "criteria": [
+    "2.1.1"
+   ],
+   "evidence": [
+    {
+     "evidence": {
+      "end": "body",
+      "focusable": false,
+      "source": "pointer",
+      "stops": 61
+     },
+     "occurrence": {
+      "ancestors": [
+       [
+        "_tiny_qaod7_67",
+        "_text-tertiary_12t49_1",
+        "_tableHeader_1waxt_60",
+        "_notCollapsible_1waxt_40",
+        "_firmHeader_1u40e_164"
+       ],
+       [
+        "_tableHeaders_1waxt_60"
+       ],
+       [
+        "_cardTable_1waxt_4"
+       ],
+       [
+        "_tableAndLoadingStateWrapper_1waxt_313"
+       ],
+       [
+        "_tableWrapper_1waxt_304",
+        "_tableWrapper_1u40e_1",
+        "_withFirmColumn_1u40e_107"
+       ],
+       [],
+       [],
+       [
+        "_pageContent_809q8_151",
+        "_pageContentWidth_809q8_184",
+        "_footerPadding_809q8_115"
+       ]
+      ],
+      "classes": [
+       "_tiny_qaod7_67",
+       "_text-tertiary_12t49_1",
+       "_header_1uc6n_1"
+      ],
+      "data": {},
+      "heading": "Advisors",
+      "landmark": {
+       "name": "",
+       "role": "main"
+      },
+      "layer": "document",
+      "name": "",
+      "rect": [
+       354,
+       420,
+       43,
+       20
+      ],
+      "role": "generic",
+      "tag": "div",
+      "xpath": "/html/body/div[1]/main[1]/div[1]/div[1]/div[4]/div[1]/div[2]/div[2]/div[1]/div[4]/div[1]/div[1]/div[2]/div[1]/div[1]"
+     },
+     "state": "settings.advisors"
+    }
+   ],
+   "evidenceHash": "32054c59b54c28438be22e02277fab33dac641866dfbb23f86a77eb48c074896",
+   "facts": {
+    "axeSummary": "",
+    "criterion": "2.1.1",
+    "criterionName": "Keyboard",
+    "element": "text in \"Advisors\"",
+    "rule": "not-reached",
+    "screen": "Advisors",
+    "stops": "61"
+   },
+   "family": "keyboard",
+   "guidance": "High if a task cannot be completed without a mouse.",
+   "issueId": null,
+   "key": "keyboard:not-reached:933bb1450e5b",
+   "measured": false,
+   "primary": "settings.advisors",
+   "proposals": [],
+   "rule": "not-reached",
+   "screens": 1,
+   "severityDefault": "medium",
+   "source": "scanner",
+   "states": [
+    "settings.advisors"
+   ],
+   "summary": "The Tab walk visited 61 stops and never reached the text in \"Advisors\", which responds to a click.",
+   "title": "Not reachable by keyboard: text in \"Advisors\""
+  },
+  {
+   "attachments": [],
+   "attempt": 1,
+   "basis": "candidate",
+   "criteria": [
+    "2.1.1"
+   ],
+   "evidence": [
+    {
+     "evidence": {
+      "end": "body",
+      "focusable": false,
+      "source": "pointer",
+      "stops": 61
+     },
+     "occurrence": {
+      "ancestors": [
+       [
+        "_tiny_qaod7_67",
+        "_text-tertiary_12t49_1",
+        "_tableHeader_1waxt_60",
+        "_notCollapsible_1waxt_40",
+        "_nameHeader_1u40e_174"
+       ],
+       [
+        "_tableHeaders_1waxt_60"
+       ],
+       [
+        "_cardTable_1waxt_4"
+       ],
+       [
+        "_tableAndLoadingStateWrapper_1waxt_313"
+       ],
+       [
+        "_tableWrapper_1waxt_304",
+        "_tableWrapper_1u40e_1",
+        "_withFirmColumn_1u40e_107"
+       ],
+       [],
+       [],
+       [
+        "_pageContent_809q8_151",
+        "_pageContentWidth_809q8_184",
+        "_footerPadding_809q8_115"
+       ]
+      ],
+      "classes": [
+       "_tiny_qaod7_67",
+       "_text-tertiary_12t49_1",
+       "_header_1uc6n_1"
+      ],
+      "data": {},
+      "heading": "Advisors",
+      "landmark": {
+       "name": "",
+       "role": "main"
+      },
+      "layer": "document",
+      "name": "",
+      "rect": [
+       562,
+       420,
+       33,
+       20
+      ],
+      "role": "generic",
+      "tag": "div",
+      "xpath": "/html/body/div[1]/main[1]/div[1]/div[1]/div[4]/div[1]/div[2]/div[2]/div[1]/div[4]/div[1]/div[1]/div[2]/div[2]/div[1]"
+     },
+     "state": "settings.advisors"
+    },
+    {
+     "evidence": {
+      "end": "body",
+      "focusable": false,
+      "source": "pointer",
+      "stops": 62
+     },
+     "occurrence": {
+      "ancestors": [
+       [
+        "_tiny_qaod7_67",
+        "_text-tertiary_12t49_1",
+        "_tableHeader_1waxt_60",
+        "_notCollapsible_1waxt_40",
+        "_nameHeader_1u40e_174"
+       ],
+       [
+        "_tableHeaders_1waxt_60"
+       ],
+       [
+        "_cardTable_1waxt_4"
+       ],
+       [
+        "_tableAndLoadingStateWrapper_1waxt_313"
+       ],
+       [
+        "_tableWrapper_1waxt_304",
+        "_tableWrapper_1u40e_1"
+       ],
+       [],
+       [],
+       [
+        "_pageContent_809q8_151",
+        "_pageContentWidth_809q8_184",
+        "_footerPadding_809q8_115"
+       ]
+      ],
+      "classes": [
+       "_tiny_qaod7_67",
+       "_text-tertiary_12t49_1",
+       "_header_1uc6n_1"
+      ],
+      "data": {},
+      "heading": "Team",
+      "landmark": {
+       "name": "",
+       "role": "main"
+      },
+      "layer": "document",
+      "name": "",
+      "rect": [
+       354,
+       248,
+       33,
+       20
+      ],
+      "role": "generic",
+      "tag": "div",
+      "xpath": "/html/body/div[1]/main[1]/div[1]/div[1]/div[4]/div[1]/div[2]/div[2]/div[1]/div[2]/div[1]/div[1]/div[2]/div[1]/div[1]"
+     },
+     "state": "settings.team"
+    }
+   ],
+   "evidenceHash": "9f548f788cb195fab0660748f9d464b4fe8e2157e92bf9b45fbbba255f8db29b",
+   "facts": {
+    "axeSummary": "",
+    "criterion": "2.1.1",
+    "criterionName": "Keyboard",
+    "element": "text in \"Advisors\"",
+    "rule": "not-reached",
+    "screen": "Advisors",
+    "stops": "61"
+   },
+   "family": "keyboard",
+   "guidance": "High if a task cannot be completed without a mouse.",
+   "issueId": null,
+   "key": "keyboard:not-reached:b891e42343a4",
+   "measured": false,
+   "primary": "settings.advisors",
+   "proposals": [],
+   "rule": "not-reached",
+   "screens": 2,
+   "severityDefault": "medium",
+   "source": "scanner",
+   "states": [
+    "settings.advisors",
+    "settings.team"
+   ],
+   "summary": "The Tab walk visited 61 stops and never reached the text in \"Advisors\", which responds to a click.",
+   "title": "Not reachable by keyboard: text in \"Advisors\""
+  },
+  {
+   "attachments": [],
+   "attempt": 1,
+   "basis": "candidate",
+   "criteria": [
+    "2.1.1"
+   ],
+   "evidence": [
+    {
+     "evidence": {
+      "end": "body",
+      "focusable": false,
+      "source": "pointer",
+      "stops": 61
+     },
+     "occurrence": {
+      "ancestors": [
+       [
+        "_tiny_qaod7_67",
+        "_text-tertiary_12t49_1",
+        "_tableHeader_1waxt_60",
+        "_collapsible_1waxt_24",
+        "_statusHeader_1u40e_313",
+        "_withAgentColumn_1u40e_289"
+       ],
+       [
+        "_tableHeaders_1waxt_60"
+       ],
+       [
+        "_cardTable_1waxt_4"
+       ],
+       [
+        "_tableAndLoadingStateWrapper_1waxt_313"
+       ],
+       [
+        "_tableWrapper_1waxt_304",
+        "_tableWrapper_1u40e_1",
+        "_withFirmColumn_1u40e_107"
+       ],
+       [],
+       [],
+       [
+        "_pageContent_809q8_151",
+        "_pageContentWidth_809q8_184",
+        "_footerPadding_809q8_115"
+       ]
+      ],
+      "classes": [
+       "_tiny_qaod7_67",
+       "_text-tertiary_12t49_1",
+       "_header_1uc6n_1"
+      ],
+      "data": {},
+      "heading": "Advisors",
+      "landmark": {
+       "name": "",
+       "role": "main"
+      },
+      "layer": "document",
+      "name": "",
+      "rect": [
+       1058,
+       420,
+       36,
+       20
+      ],
+      "role": "generic",
+      "tag": "div",
+      "xpath": "/html/body/div[1]/main[1]/div[1]/div[1]/div[4]/div[1]/div[2]/div[2]/div[1]/div[4]/div[1]/div[1]/div[2]/div[4]/div[1]"
+     },
+     "state": "settings.advisors"
+    }
+   ],
+   "evidenceHash": "32054c59b54c28438be22e02277fab33dac641866dfbb23f86a77eb48c074896",
+   "facts": {
+    "axeSummary": "",
+    "criterion": "2.1.1",
+    "criterionName": "Keyboard",
+    "element": "text in \"Advisors\"",
+    "rule": "not-reached",
+    "screen": "Advisors",
+    "stops": "61"
+   },
+   "family": "keyboard",
+   "guidance": "High if a task cannot be completed without a mouse.",
+   "issueId": null,
+   "key": "keyboard:not-reached:cbe1982ac7fc",
+   "measured": false,
+   "primary": "settings.advisors",
+   "proposals": [],
+   "rule": "not-reached",
+   "screens": 1,
+   "severityDefault": "medium",
+   "source": "scanner",
+   "states": [
+    "settings.advisors"
+   ],
+   "summary": "The Tab walk visited 61 stops and never reached the text in \"Advisors\", which responds to a click.",
+   "title": "Not reachable by keyboard: text in \"Advisors\""
+  },
+  {
+   "attachments": [],
+   "attempt": 1,
+   "basis": "violation",
+   "criteria": [
+    "4.1.2"
+   ],
+   "evidence": [
+    {
+     "evidence": {
+      "failureSummary": "Fix any of the following:\n  Element does not have inner text that is visible to screen readers\n  aria-label attribute does not exist or is empty\n  aria-labelledby attribute does not exist, references elements that do not exist or references elements that are empty\n  Element has no title attribute\n  Element does not have an implicit (wrapped) <label>\n  Element does not have an explicit <label>\n  Element's default semantics were not overridden with role=\"none\" or role=\"presentation\"",
+      "messageKey": "noAttr"
+     },
+     "occurrence": {
+      "ancestors": [
+       [
+        "_avatarWrapper_xu7zc_1"
+       ],
+       [
+        "_tableCell_1waxt_102",
+        "_notCollapsible_1waxt_40",
+        "_firmCell_1u40e_169",
+        "_notFirstRow_1waxt_142"
+       ],
+       [
+        "_teamRow_1u40e_256",
+        "_tableRow_1waxt_94"
+       ],
+       [
+        "_cardTable_1waxt_4"
+       ],
+       [
+        "_tableAndLoadingStateWrapper_1waxt_313"
+       ],
+       [
+        "_tableWrapper_1waxt_304",
+        "_tableWrapper_1u40e_1",
+        "_withFirmColumn_1u40e_107"
+       ],
+       [],
+       []
+      ],
+      "classes": [
+       "_button_r6b2u_20",
+       "_small_r6b2u_72",
+       "_tertiary_r6b2u_153"
+      ],
+      "data": {},
+      "heading": "Advisors",
+      "landmark": {
+       "name": "",
+       "role": "main"
+      },
+      "layer": "document",
+      "name": "",
+      "rect": [
+       518,
+       1232,
+       32,
+       32
+      ],
+      "role": "button",
+      "tag": "button",
+      "xpath": "/html/body/div[1]/main[1]/div[1]/div[1]/div[4]/div[1]/div[2]/div[2]/div[1]/div[4]/div[1]/div[1]/div[15]/div[1]/div[1]/button[1]"
+     },
+     "state": "settings.advisors"
+    }
+   ],
+   "evidenceHash": "6ed1fdd5666304b467d1bcc03489d22fc6b12c10c5d50b0da7e0a704c26f13a8",
+   "facts": {
+    "announced": "button \"\"",
+    "axeSummary": "Element does not have inner text that is visible to screen readers; aria-label attribute does not exist or is empty; aria-labelledby attribute does not exist,…",
+    "criterion": "4.1.2",
+    "criterionName": "Name, Role, Value",
+    "element": "button in \"Advisors\"",
+    "rule": "button-name",
+    "screen": "Advisors"
+   },
+   "family": "name",
+   "guidance": "High for an unnamed form control or the sole primary action.",
+   "issueId": null,
+   "key": "name:button-name:24e6fa9ba325",
+   "measured": false,
+   "primary": "settings.advisors",
+   "proposals": [],
+   "rule": "button-name",
+   "screens": 1,
+   "severityDefault": "medium",
+   "source": "scanner",
+   "states": [
+    "settings.advisors"
+   ],
+   "summary": "button-name: announced as button \"\". Element does not have inner text that is visible to screen readers; aria-label attribute does not exist or is empty; aria-labelledby attribute does not exist,…",
+   "title": "Missing or unclear name: button in \"Advisors\""
+  },
+  {
+   "attachments": [],
+   "attempt": 1,
+   "basis": "violation",
+   "criteria": [
+    "4.1.2"
+   ],
+   "evidence": [
+    {
+     "evidence": {
+      "failureSummary": "Fix any of the following:\n  Element does not have inner text that is visible to screen readers\n  aria-label attribute does not exist or is empty\n  aria-labelledby attribute does not exist, references elements that do not exist or references elements that are empty\n  Element has no title attribute\n  Element does not have an implicit (wrapped) <label>\n  Element does not have an explicit <label>\n  Element's default semantics were not overridden with role=\"none\" or role=\"presentation\"",
+      "messageKey": "noAttr"
+     },
+     "occurrence": {
+      "ancestors": [
+       [
+        "_tableRow_1waxt_94",
+        "_hoverDisabled_1waxt_108",
+        "_selectDisabled_1waxt_106"
+       ],
+       [
+        "_cardTable_1waxt_4"
+       ],
+       [
+        "_tableAndLoadingStateWrapper_1waxt_313",
+        "_pendingApprovalsTableWrapper_yfhpd_1"
+       ],
+       [
+        "_tableWrapper_1waxt_304"
+       ],
+       [
+        "_pendingApprovalsSection_1gbqc_3"
+       ],
+       [
+        "_pendingApprovalsContainer_1g70w_22"
+       ],
+       [],
+       []
+      ],
+      "classes": [
+       "_arrow_1waxt_173"
+      ],
+      "data": {},
+      "heading": "Advisors",
+      "landmark": {
+       "name": "",
+       "role": "main"
+      },
+      "layer": "document",
+      "name": "",
+      "rect": [
+       858,
+       244,
+       32,
+       64
+      ],
+      "role": "button",
+      "tag": "button",
+      "xpath": "/html/body/div[1]/main[1]/div[1]/div[1]/div[4]/div[1]/div[2]/div[2]/div[1]/div[1]/div[1]/div[2]/div[1]/div[1]/div[2]/button[1]"
+     },
+     "state": "settings.advisors"
+    }
+   ],
+   "evidenceHash": "6ed1fdd5666304b467d1bcc03489d22fc6b12c10c5d50b0da7e0a704c26f13a8",
+   "facts": {
+    "announced": "button \"\"",
+    "axeSummary": "Element does not have inner text that is visible to screen readers; aria-label attribute does not exist or is empty; aria-labelledby attribute does not exist,…",
+    "criterion": "4.1.2",
+    "criterionName": "Name, Role, Value",
+    "element": "button in \"Advisors\"",
+    "rule": "button-name",
+    "screen": "Advisors"
+   },
+   "family": "name",
+   "guidance": "High for an unnamed form control or the sole primary action.",
+   "issueId": null,
+   "key": "name:button-name:4d6c87b60b6b",
+   "measured": false,
+   "primary": "settings.advisors",
+   "proposals": [],
+   "rule": "button-name",
+   "screens": 1,
+   "severityDefault": "medium",
+   "source": "scanner",
+   "states": [
+    "settings.advisors"
+   ],
+   "summary": "button-name: announced as button \"\". Element does not have inner text that is visible to screen readers; aria-label attribute does not exist or is empty; aria-labelledby attribute does not exist,…",
+   "title": "Missing or unclear name: button in \"Advisors\""
+  },
+  {
+   "attachments": [],
+   "attempt": 1,
+   "basis": "violation",
+   "criteria": [
+    "4.1.2"
+   ],
+   "evidence": [
+    {
+     "evidence": {
+      "failureSummary": "Fix any of the following:\n  Element does not have inner text that is visible to screen readers\n  aria-label attribute does not exist or is empty\n  aria-labelledby attribute does not exist, references elements that do not exist or references elements that are empty\n  Element has no title attribute\n  Element does not have an implicit (wrapped) <label>\n  Element does not have an explicit <label>\n  Element's default semantics were not overridden with role=\"none\" or role=\"presentation\"",
+      "messageKey": "noAttr"
+     },
+     "occurrence": {
+      "ancestors": [
+       [
+        "_teamRow_1u40e_256",
+        "_tableRow_1waxt_94"
+       ],
+       [
+        "_cardTable_1waxt_4"
+       ],
+       [
+        "_tableAndLoadingStateWrapper_1waxt_313"
+       ],
+       [
+        "_tableWrapper_1waxt_304",
+        "_tableWrapper_1u40e_1",
+        "_withFirmColumn_1u40e_107"
+       ],
+       [],
+       [],
+       [
+        "_pageContent_809q8_151",
+        "_pageContentWidth_809q8_184",
+        "_footerPadding_809q8_115"
+       ],
+       [
+        "_dashboardContent_809q8_29"
+       ]
+      ],
+      "classes": [
+       "_arrow_1waxt_173"
+      ],
+      "data": {},
+      "heading": "Advisors",
+      "landmark": {
+       "name": "",
+       "role": "main"
+      },
+      "layer": "document",
+      "name": "",
+      "rect": [
+       846,
+       1024,
+       32,
+       64
+      ],
+      "role": "button",
+      "tag": "button",
+      "xpath": "/html/body/div[1]/main[1]/div[1]/div[1]/div[4]/div[1]/div[2]/div[2]/div[1]/div[4]/div[1]/div[1]/div[12]/button[1]"
+     },
+     "state": "settings.advisors"
+    },
+    {
+     "evidence": {
+      "failureSummary": "Fix any of the following:\n  Element does not have inner text that is visible to screen readers\n  aria-label attribute does not exist or is empty\n  aria-labelledby attribute does not exist, references elements that do not exist or references elements that are empty\n  Element has no title attribute\n  Element does not have an implicit (wrapped) <label>\n  Element does not have an explicit <label>\n  Element's default semantics were not overridden with role=\"none\" or role=\"presentation\"",
+      "messageKey": "noAttr"
+     },
+     "occurrence": {
+      "ancestors": [
+       [
+        "_teamRow_1u40e_256",
+        "_tableRow_1waxt_94"
+       ],
+       [
+        "_cardTable_1waxt_4",
+        "_condensed_1waxt_31"
+       ],
+       [
+        "_tableAndLoadingStateWrapper_1waxt_313"
+       ],
+       [
+        "_tableWrapper_1waxt_304",
+        "_tableWrapper_1u40e_1",
+        "_withCardDisplayed_1u40e_67"
+       ],
+       [],
+       [],
+       [
+        "_pageContent_809q8_151",
+        "_pageContentWidth_809q8_184",
+        "_footerPadding_809q8_115"
+       ],
+       [
+        "_dashboardContent_809q8_29"
+       ]
+      ],
+      "classes": [
+       "_arrow_1waxt_173"
+      ],
+      "data": {},
+      "heading": "Team",
+      "landmark": {
+       "name": "",
+       "role": "main"
+      },
+      "layer": "document",
+      "name": "",
+      "rect": [
+       846,
+       1044,
+       32,
+       64
+      ],
+      "role": "button",
+      "tag": "button",
+      "xpath": "/html/body/div[1]/main[1]/div[1]/div[1]/div[4]/div[1]/div[2]/div[2]/div[1]/div[2]/div[1]/div[1]/div[15]/button[1]"
+     },
+     "state": "settings.edit-member"
+    }
+   ],
+   "evidenceHash": "b1e0892463b0f2750155aadc6e88552c298bf0227a3ab3853d026b46473983a2",
+   "facts": {
+    "announced": "button \"\"",
+    "axeSummary": "Element does not have inner text that is visible to screen readers; aria-label attribute does not exist or is empty; aria-labelledby attribute does not exist,…",
+    "criterion": "4.1.2",
+    "criterionName": "Name, Role, Value",
+    "element": "button in \"Advisors\"",
+    "rule": "button-name",
+    "screen": "Advisors"
+   },
+   "family": "name",
+   "guidance": "High for an unnamed form control or the sole primary action.",
+   "issueId": null,
+   "key": "name:button-name:871939328eaf",
+   "measured": false,
+   "primary": "settings.advisors",
+   "proposals": [],
+   "rule": "button-name",
+   "screens": 4,
+   "severityDefault": "medium",
+   "source": "scanner",
+   "states": [
+    "settings.advisors",
+    "settings.edit-member"
+   ],
+   "summary": "button-name: announced as button \"\". Element does not have inner text that is visible to screen readers; aria-label attribute does not exist or is empty; aria-labelledby attribute does not exist,…",
+   "title": "Missing or unclear name: button in \"Advisors\""
+  }
+ ],
+ "primaries": [
+  "settings.advisors"
+ ],
+ "reach": {
+  "baseUrl": "https://demo.mercury.com",
+  "data": "data",
+  "map": "build/map.json",
+  "run": "2026-10-03-1525",
+  "workspace": "a11y"
+ },
+ "run": "2026-10-03-1525"
+}

@@ -1,0 +1,64 @@
+{
+ "batch": "record-074",
+ "reach": {
+  "baseUrl": "https://demo.mercury.com",
+  "data": "data",
+  "map": "build/map.json",
+  "run": "2026-10-02-1349",
+  "workspace": "a11y"
+ },
+ "run": "2026-10-02-1349",
+ "states": [
+  {
+   "area": "billpay",
+   "draft": "not drafted: its parent had no accepted recipe when the drafter ran",
+   "image": "screens/billpay/13-needs-approval-empty.png",
+   "kind": "empty-state",
+   "labels": [
+    "Click request row",
+    "Click Review",
+    "Click Approve payments",
+    "Click Back to Needs Approval"
+   ],
+   "mutates": true,
+   "note": "Empty queue over a blurred skeleton table: 'No pending approvals'.",
+   "parent": "billpay.approval-success",
+   "state": "billpay.needs-approval-empty",
+   "title": "Needs Approval empty"
+  },
+  {
+   "area": "billpay",
+   "draft": "not drafted: its parent had no accepted recipe when the drafter ran",
+   "image": "screens/billpay/69-rule-form-filled.png",
+   "kind": "form-state",
+   "labels": [
+    "Click Create a rule",
+    "Open If select",
+    "Pick Bank description, type value, open Then select",
+    "Pick GL code and a code"
+   ],
+   "mutates": true,
+   "note": "Rule 'Bank description has Figma, then GL code Mercury Checking (7772)' with Auto-mark ready to sync on; Create enabled.",
+   "parent": "billpay.rule-outcome-menu",
+   "state": "billpay.rule-filled",
+   "title": "Rule form filled"
+  },
+  {
+   "area": "billpay",
+   "draft": "not drafted: its parent had no accepted recipe when the drafter ran",
+   "image": "screens/billpay/48-zero-inbox-game.png",
+   "kind": "page",
+   "labels": [
+    "Check select-all",
+    "Click Delete",
+    "Click Delete 3 items",
+    "Click Play Zero Inbox"
+   ],
+   "mutates": true,
+   "note": "Easter-egg arcade game replaces the table: how-to-play text, score and a Start button.",
+   "parent": "billpay.inbox-zero",
+   "state": "billpay.zero-inbox-game",
+   "title": "Zero Inbox game"
+  }
+ ]
+}

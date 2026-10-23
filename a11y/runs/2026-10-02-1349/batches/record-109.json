@@ -1,0 +1,31 @@
+{
+ "batch": "record-109",
+ "reach": {
+  "baseUrl": "https://demo.mercury.com",
+  "data": "data",
+  "map": "build/map.json",
+  "run": "2026-10-02-1349",
+  "workspace": "a11y"
+ },
+ "run": "2026-10-02-1349",
+ "states": [
+  {
+   "area": "settings",
+   "draft": "not drafted: its parent had no accepted recipe when the drafter ran; the conductor rejected the previous recipe: error not visible: replay stays at the top of the Issue card form (Basics/Type), and the red Control type 'Please complete this field' error is below the fold. The wait found the text, but the scroll step did not move the inner container.",
+   "image": "screens/settings/46-invite-issue-card-errors.png",
+   "kind": "validation-error",
+   "labels": [
+    "Open Job title select",
+    "Pick a title, fill name/email, click Next",
+    "Select Money Mover",
+    "Click Next",
+    "Click Next without a control type"
+   ],
+   "mutates": false,
+   "note": "Next without a spend Control type shows 'Please complete this field' under the Control type select.",
+   "parent": "settings.invite-issue-card",
+   "state": "settings.invite-issue-card-error",
+   "title": "Issue Card \u2014 control type required"
+  }
+ ]
+}

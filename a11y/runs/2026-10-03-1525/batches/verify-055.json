@@ -1,0 +1,676 @@
+{
+ "area": "accounts",
+ "batch": "verify-055",
+ "findings": [
+  {
+   "attachments": [],
+   "attempt": 1,
+   "basis": "violation",
+   "criteria": [
+    "4.1.2"
+   ],
+   "evidence": [
+    {
+     "evidence": {
+      "aria-errormessage": [
+       "amount-mercury-utils-id-25-errormessage"
+      ],
+      "failureSummary": "Fix all of the following:\n  aria-errormessage value `amount-mercury-utils-id-25-errormessage` must use a technique to announce the message (e.g., aria-live, aria-describedby, role=alert, etc.)"
+     },
+     "occurrence": {
+      "ancestors": [
+       [
+        "_inputBox_q7hf7_93",
+        "_error_q7hf7_41"
+       ],
+       [
+        "_inputBoxWrapper_q7hf7_93"
+       ],
+       [
+        "_textInputWrapper_q7hf7_24"
+       ],
+       [
+        "_provideDSTextInput_q7hf7_6",
+        "_addWrapperMargin_q7hf7_19"
+       ],
+       [
+        "_transferFormCardContent_n1ehf_134"
+       ],
+       [],
+       [
+        "_transferFormCard_n1ehf_127"
+       ],
+       [
+        "_large_kwlx6_9",
+        "_shadow_3n0se_25",
+        "_raisedBackground_3n0se_45"
+       ]
+      ],
+      "classes": [
+       "_input_q7hf7_93"
+      ],
+      "data": {},
+      "heading": "One-time transfer",
+      "landmark": {
+       "name": "",
+       "role": "form"
+      },
+      "layer": "document",
+      "name": "Amount",
+      "rect": [
+       524,
+       356,
+       407,
+       24
+      ],
+      "role": "textbox",
+      "tag": "input",
+      "xpath": "/html/body/div[1]/main[1]/div[1]/div[2]/div[2]/div[3]/div[1]/div[2]/div[1]/div[1]/form[1]/div[1]/div[1]/div[1]/div[1]/div[1]/input[1]"
+     },
+     "state": "accounts.treasury-transfer-error"
+    },
+    {
+     "evidence": {
+      "aria-errormessage": [
+       "amount-mercury-utils-id-29-errormessage"
+      ],
+      "failureSummary": "Fix all of the following:\n  aria-errormessage value `amount-mercury-utils-id-29-errormessage` must use a technique to announce the message (e.g., aria-live, aria-describedby, role=alert, etc.)"
+     },
+     "occurrence": {
+      "ancestors": [
+       [
+        "_inputBox_q7hf7_93",
+        "_error_q7hf7_41"
+       ],
+       [
+        "_inputBoxWrapper_q7hf7_93"
+       ],
+       [
+        "_textInputWrapper_q7hf7_24"
+       ],
+       [
+        "_provideDSTextInput_q7hf7_6",
+        "_addWrapperMargin_q7hf7_19"
+       ],
+       [
+        "_transferFormCardContent_n1ehf_134"
+       ],
+       [],
+       [
+        "_transferFormCard_n1ehf_127"
+       ],
+       [
+        "_large_kwlx6_9",
+        "_shadow_3n0se_25",
+        "_raisedBackground_3n0se_45"
+       ]
+      ],
+      "classes": [
+       "_input_q7hf7_93"
+      ],
+      "data": {},
+      "heading": "One-time transfer",
+      "landmark": {
+       "name": "",
+       "role": "form"
+      },
+      "layer": "document",
+      "name": "Amount",
+      "rect": [
+       524,
+       356,
+       407,
+       24
+      ],
+      "role": "textbox",
+      "tag": "input",
+      "xpath": "/html/body/div[1]/main[1]/div[1]/div[2]/div[2]/div[3]/div[1]/div[2]/div[1]/div[1]/form[1]/div[1]/div[1]/div[1]/div[1]/div[1]/input[1]"
+     },
+     "state": "payments.transfer-validation"
+    }
+   ],
+   "evidenceHash": "2bbff18d76496f798f11365d892857b86a834763ed198e35e38d529aa10b4950",
+   "facts": {
+    "announced": "textbox \"Amount\" [invalid=true, errormessage=Must be a dollar value.]",
+    "axeSummary": "aria-errormessage value `amount-mercury-utils-id-25-errormessage` must use a technique to announce the message (e.g., aria-live, aria-describedby, role=alert,…",
+    "criterion": "4.1.2",
+    "criterionName": "Name, Role, Value",
+    "element": "textbox \"Amount\"",
+    "rule": "aria-valid-attr-value",
+    "screen": "Transfer — empty submit"
+   },
+   "family": "role-state",
+   "guidance": "Low for optional ARIA or an invalid autocomplete token; high when aria-hidden hides the whole page.",
+   "issueId": null,
+   "key": "role-state:aria-valid-attr-value:de0d5556b256",
+   "measured": false,
+   "primary": "accounts.treasury-transfer-error",
+   "proposals": [],
+   "rule": "aria-valid-attr-value",
+   "screens": 2,
+   "severityDefault": "medium",
+   "source": "scanner",
+   "states": [
+    "accounts.treasury-transfer-error",
+    "payments.transfer-validation"
+   ],
+   "summary": "aria-valid-attr-value: announced as textbox \"Amount\" [invalid=true, errormessage=Must be a dollar value.]. aria-errormessage value `amount-mercury-utils-id-25-errormessage` must use a technique to announce the message (e.g., aria-live, aria-describedby, role=alert,…",
+   "title": "Wrong role or state: textbox \"Amount\""
+  },
+  {
+   "attachments": [],
+   "attempt": 1,
+   "basis": "failure",
+   "criteria": [
+    "4.1.3"
+   ],
+   "evidence": [
+    {
+     "evidence": {
+      "focus": {
+       "ancestors": [
+        [
+         "_navigation_g4akw_1"
+        ],
+        [
+         "_disabledUiWrapper_n1ehf_8"
+        ],
+        [
+         "_transferFormCardContent_n1ehf_134"
+        ],
+        [],
+        [
+         "_transferFormCard_n1ehf_127"
+        ],
+        [
+         "_large_kwlx6_9",
+         "_shadow_3n0se_25",
+         "_raisedBackground_3n0se_45"
+        ],
+        [
+         "_transferMethodWrapper_n1ehf_119"
+        ],
+        [
+         "_pageWrapperMarginTop_1f3if_13"
+        ]
+       ],
+       "classes": [
+        "_button_r6b2u_20",
+        "_large_r6b2u_88",
+        "_primary_r6b2u_104"
+       ],
+       "data": {},
+       "heading": "One-time transfer",
+       "landmark": {
+        "name": "",
+        "role": "form"
+       },
+       "layer": "document",
+       "name": "Next",
+       "rect": [
+        606,
+        756,
+        109,
+        40
+       ],
+       "role": "button",
+       "tag": "button",
+       "xpath": "/html/body/div[1]/main[1]/div[1]/div[2]/div[2]/div[3]/div[1]/div[2]/div[1]/div[1]/form[1]/div[1]/div[2]/div[4]/button[2]"
+      },
+      "focused": false,
+      "message": "Please choose an account",
+      "region": null
+     },
+     "occurrence": {
+      "ancestors": [
+       [
+        "_accountSelectorWrapper_dd0l7_6"
+       ],
+       [],
+       [
+        "_disabledUiWrapper_n1ehf_8"
+       ],
+       [
+        "_transferFormCardContent_n1ehf_134"
+       ],
+       [],
+       [
+        "_transferFormCard_n1ehf_127"
+       ],
+       [
+        "_large_kwlx6_9",
+        "_shadow_3n0se_25",
+        "_raisedBackground_3n0se_45"
+       ],
+       [
+        "_transferMethodWrapper_n1ehf_119"
+       ]
+      ],
+      "classes": [
+       "_defaultErrorContainer_1tnh5_1",
+       "_errorBeneath_dd0l7_202"
+      ],
+      "data": {
+       "data-session-replay-unmask": "true"
+      },
+      "heading": "One-time transfer",
+      "landmark": {
+       "name": "",
+       "role": "form"
+      },
+      "layer": "document",
+      "name": "",
+      "rect": [
+       496,
+       524,
+       448,
+       20
+      ],
+      "role": "",
+      "tag": "div",
+      "xpath": "/html/body/div[1]/main[1]/div[1]/div[2]/div[2]/div[3]/div[1]/div[2]/div[1]/div[1]/form[1]/div[1]/div[2]/div[1]/div[1]/div[1]"
+     },
+     "state": "accounts.treasury-transfer-error"
+    },
+    {
+     "evidence": {
+      "focus": {
+       "ancestors": [
+        [
+         "_navigation_g4akw_1"
+        ],
+        [
+         "_disabledUiWrapper_n1ehf_8"
+        ],
+        [
+         "_transferFormCardContent_n1ehf_134"
+        ],
+        [],
+        [
+         "_transferFormCard_n1ehf_127"
+        ],
+        [
+         "_large_kwlx6_9",
+         "_shadow_3n0se_25",
+         "_raisedBackground_3n0se_45"
+        ],
+        [
+         "_transferMethodWrapper_n1ehf_119"
+        ],
+        [
+         "_pageWrapperMarginTop_1f3if_13"
+        ]
+       ],
+       "classes": [
+        "_button_r6b2u_20",
+        "_large_r6b2u_88",
+        "_primary_r6b2u_104"
+       ],
+       "data": {},
+       "heading": "One-time transfer",
+       "landmark": {
+        "name": "",
+        "role": "form"
+       },
+       "layer": "document",
+       "name": "Next",
+       "rect": [
+        606,
+        756,
+        109,
+        40
+       ],
+       "role": "button",
+       "tag": "button",
+       "xpath": "/html/body/div[1]/main[1]/div[1]/div[2]/div[2]/div[3]/div[1]/div[2]/div[1]/div[1]/form[1]/div[1]/div[2]/div[4]/button[2]"
+      },
+      "focused": false,
+      "message": "Please choose an account",
+      "region": null
+     },
+     "occurrence": {
+      "ancestors": [
+       [
+        "_accountSelectorWrapper_dd0l7_6"
+       ],
+       [],
+       [
+        "_disabledUiWrapper_n1ehf_8"
+       ],
+       [
+        "_transferFormCardContent_n1ehf_134"
+       ],
+       [],
+       [
+        "_transferFormCard_n1ehf_127"
+       ],
+       [
+        "_large_kwlx6_9",
+        "_shadow_3n0se_25",
+        "_raisedBackground_3n0se_45"
+       ],
+       [
+        "_transferMethodWrapper_n1ehf_119"
+       ]
+      ],
+      "classes": [
+       "_defaultErrorContainer_1tnh5_1",
+       "_errorBeneath_dd0l7_202"
+      ],
+      "data": {
+       "data-session-replay-unmask": "true"
+      },
+      "heading": "One-time transfer",
+      "landmark": {
+       "name": "",
+       "role": "form"
+      },
+      "layer": "document",
+      "name": "",
+      "rect": [
+       496,
+       524,
+       448,
+       20
+      ],
+      "role": "",
+      "tag": "div",
+      "xpath": "/html/body/div[1]/main[1]/div[1]/div[2]/div[2]/div[3]/div[1]/div[2]/div[1]/div[1]/form[1]/div[1]/div[2]/div[1]/div[1]/div[1]"
+     },
+     "state": "payments.transfer-validation"
+    }
+   ],
+   "evidenceHash": "54a0a21382c29b9e63cecb5b2f5df5264f48ccd7e7c31f487c434ae9ce8c9e16",
+   "facts": {
+    "criterion": "4.1.3",
+    "criterionName": "Status Messages",
+    "focus": "button \"Next\"",
+    "message": "\"Please choose an account\"",
+    "screen": "Transfer — empty submit"
+   },
+   "family": "status-message",
+   "guidance": "High when it is the only confirmation of a money movement.",
+   "issueId": null,
+   "key": "status-message:status-not-announced:1c88d6deb0ff",
+   "measured": false,
+   "primary": "accounts.treasury-transfer-error",
+   "proposals": [],
+   "rule": "status-not-announced",
+   "screens": 2,
+   "severityDefault": "medium",
+   "source": "scanner",
+   "states": [
+    "accounts.treasury-transfer-error",
+    "payments.transfer-validation"
+   ],
+   "summary": "\"Please choose an account\" appeared outside any live region, alert or status role that existed before it, and focus stayed on the button \"Next\".",
+   "title": "Status message not announced: \"Please choose an account\""
+  },
+  {
+   "attachments": [],
+   "attempt": 1,
+   "basis": "failure",
+   "criteria": [
+    "4.1.3"
+   ],
+   "evidence": [
+    {
+     "evidence": {
+      "focus": {
+       "ancestors": [
+        [
+         "_navigation_g4akw_1"
+        ],
+        [
+         "_disabledUiWrapper_n1ehf_8"
+        ],
+        [
+         "_transferFormCardContent_n1ehf_134"
+        ],
+        [],
+        [
+         "_transferFormCard_n1ehf_127"
+        ],
+        [
+         "_large_kwlx6_9",
+         "_shadow_3n0se_25",
+         "_raisedBackground_3n0se_45"
+        ],
+        [
+         "_transferMethodWrapper_n1ehf_119"
+        ],
+        [
+         "_pageWrapperMarginTop_1f3if_13"
+        ]
+       ],
+       "classes": [
+        "_button_r6b2u_20",
+        "_large_r6b2u_88",
+        "_primary_r6b2u_104"
+       ],
+       "data": {},
+       "heading": "One-time transfer",
+       "landmark": {
+        "name": "",
+        "role": "form"
+       },
+       "layer": "document",
+       "name": "Next",
+       "rect": [
+        606,
+        756,
+        109,
+        40
+       ],
+       "role": "button",
+       "tag": "button",
+       "xpath": "/html/body/div[1]/main[1]/div[1]/div[2]/div[2]/div[3]/div[1]/div[2]/div[1]/div[1]/form[1]/div[1]/div[2]/div[4]/button[2]"
+      },
+      "focused": false,
+      "message": "Must be a dollar value.",
+      "region": null
+     },
+     "occurrence": {
+      "ancestors": [
+       [
+        "_textInputWrapper_q7hf7_24"
+       ],
+       [
+        "_provideDSTextInput_q7hf7_6",
+        "_addWrapperMargin_q7hf7_19"
+       ],
+       [
+        "_transferFormCardContent_n1ehf_134"
+       ],
+       [],
+       [
+        "_transferFormCard_n1ehf_127"
+       ],
+       [
+        "_large_kwlx6_9",
+        "_shadow_3n0se_25",
+        "_raisedBackground_3n0se_45"
+       ],
+       [
+        "_transferMethodWrapper_n1ehf_119"
+       ],
+       [
+        "_pageWrapperMarginTop_1f3if_13"
+       ]
+      ],
+      "classes": [
+       "_defaultErrorContainer_1tnh5_1",
+       "_errorMessage_q7hf7_303"
+      ],
+      "data": {
+       "data-session-replay-unmask": "true"
+      },
+      "heading": "One-time transfer",
+      "landmark": {
+       "name": "",
+       "role": "form"
+      },
+      "layer": "document",
+      "name": "",
+      "rect": [
+       496,
+       392,
+       448,
+       20
+      ],
+      "role": "",
+      "tag": "div",
+      "xpath": "/html/body/div[1]/main[1]/div[1]/div[2]/div[2]/div[3]/div[1]/div[2]/div[1]/div[1]/form[1]/div[1]/div[1]/div[1]/div[2]"
+     },
+     "state": "accounts.treasury-transfer-error"
+    },
+    {
+     "evidence": {
+      "focus": {
+       "ancestors": [
+        [
+         "_navigation_g4akw_1"
+        ],
+        [
+         "_disabledUiWrapper_n1ehf_8"
+        ],
+        [
+         "_transferFormCardContent_n1ehf_134"
+        ],
+        [],
+        [
+         "_transferFormCard_n1ehf_127"
+        ],
+        [
+         "_large_kwlx6_9",
+         "_shadow_3n0se_25",
+         "_raisedBackground_3n0se_45"
+        ],
+        [
+         "_transferMethodWrapper_n1ehf_119"
+        ],
+        [
+         "_pageWrapperMarginTop_1f3if_13"
+        ]
+       ],
+       "classes": [
+        "_button_r6b2u_20",
+        "_large_r6b2u_88",
+        "_primary_r6b2u_104"
+       ],
+       "data": {},
+       "heading": "One-time transfer",
+       "landmark": {
+        "name": "",
+        "role": "form"
+       },
+       "layer": "document",
+       "name": "Next",
+       "rect": [
+        606,
+        756,
+        109,
+        40
+       ],
+       "role": "button",
+       "tag": "button",
+       "xpath": "/html/body/div[1]/main[1]/div[1]/div[2]/div[2]/div[3]/div[1]/div[2]/div[1]/div[1]/form[1]/div[1]/div[2]/div[4]/button[2]"
+      },
+      "focused": false,
+      "message": "Must be a dollar value.",
+      "region": null
+     },
+     "occurrence": {
+      "ancestors": [
+       [
+        "_textInputWrapper_q7hf7_24"
+       ],
+       [
+        "_provideDSTextInput_q7hf7_6",
+        "_addWrapperMargin_q7hf7_19"
+       ],
+       [
+        "_transferFormCardContent_n1ehf_134"
+       ],
+       [],
+       [
+        "_transferFormCard_n1ehf_127"
+       ],
+       [
+        "_large_kwlx6_9",
+        "_shadow_3n0se_25",
+        "_raisedBackground_3n0se_45"
+       ],
+       [
+        "_transferMethodWrapper_n1ehf_119"
+       ],
+       [
+        "_pageWrapperMarginTop_1f3if_13"
+       ]
+      ],
+      "classes": [
+       "_defaultErrorContainer_1tnh5_1",
+       "_errorMessage_q7hf7_303"
+      ],
+      "data": {
+       "data-session-replay-unmask": "true"
+      },
+      "heading": "One-time transfer",
+      "landmark": {
+       "name": "",
+       "role": "form"
+      },
+      "layer": "document",
+      "name": "",
+      "rect": [
+       496,
+       392,
+       448,
+       20
+      ],
+      "role": "",
+      "tag": "div",
+      "xpath": "/html/body/div[1]/main[1]/div[1]/div[2]/div[2]/div[3]/div[1]/div[2]/div[1]/div[1]/form[1]/div[1]/div[1]/div[1]/div[2]"
+     },
+     "state": "payments.transfer-validation"
+    }
+   ],
+   "evidenceHash": "7fb42e267ac0165ab4124bb51c1aceeb415e7d0ca0f1b87d9e2d7cf6ff424e3c",
+   "facts": {
+    "criterion": "4.1.3",
+    "criterionName": "Status Messages",
+    "focus": "button \"Next\"",
+    "message": "\"Must be a dollar value.\"",
+    "screen": "Transfer — empty submit"
+   },
+   "family": "status-message",
+   "guidance": "High when it is the only confirmation of a money movement.",
+   "issueId": null,
+   "key": "status-message:status-not-announced:b56b743d4991",
+   "measured": false,
+   "primary": "accounts.treasury-transfer-error",
+   "proposals": [],
+   "rule": "status-not-announced",
+   "screens": 2,
+   "severityDefault": "medium",
+   "source": "scanner",
+   "states": [
+    "accounts.treasury-transfer-error",
+    "payments.transfer-validation"
+   ],
+   "summary": "\"Must be a dollar value.\" appeared outside any live region, alert or status role that existed before it, and focus stayed on the button \"Next\".",
+   "title": "Status message not announced: \"Must be a dollar value.\""
+  }
+ ],
+ "primaries": [
+  "accounts.treasury-transfer-error"
+ ],
+ "reach": {
+  "baseUrl": "https://demo.mercury.com",
+  "data": "data",
+  "map": "build/map.json",
+  "run": "2026-10-03-1525",
+  "workspace": "a11y"
+ },
+ "run": "2026-10-03-1525"
+}

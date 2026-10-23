@@ -1,0 +1,346 @@
+{
+ "area": "transactions",
+ "batch": "verify-555",
+ "findings": [
+  {
+   "attachments": [],
+   "attempt": 1,
+   "basis": "candidate",
+   "criteria": [
+    "4.1.2"
+   ],
+   "evidence": [
+    {
+     "evidence": {
+      "description": "",
+      "name": "Filters (1)",
+      "role": "menuitem",
+      "states": {
+       "expanded": false,
+       "haspopup": "menu"
+      },
+      "template": "menuitem \"Filters (<n>)\" [expanded=false, haspopup=menu]"
+     },
+     "occurrence": {
+      "ancestors": [
+       [
+        "_chip_1xw00_8",
+        "_inactive_1xw00_119"
+       ],
+       [
+        "_tableViewsAndFilters_grqat_82"
+       ],
+       [
+        "_toolbarContainer_grqat_4"
+       ],
+       [
+        "_wrapper_1p8lo_1"
+       ],
+       [
+        "_tabBarLeft_almxf_39"
+       ],
+       [
+        "_tabBar_almxf_27"
+       ],
+       [
+        "_stickyControlsAndTimeline_almxf_14"
+       ],
+       [
+        "_insightsPageDashboardWrapper_almxf_4"
+       ]
+      ],
+      "classes": [
+       "_mainElement_1xw00_24",
+       "_interactive_1xw00_134",
+       "_filterMenuChip_veh3u_4"
+      ],
+      "data": {},
+      "heading": "Insights",
+      "landmark": {
+       "name": "",
+       "role": "main"
+      },
+      "layer": "document",
+      "name": "Filters (1)",
+      "rect": [
+       410,
+       196,
+       105,
+       32
+      ],
+      "role": "menuitem",
+      "tag": "button",
+      "xpath": "/html/body/div[1]/main[1]/div[1]/div[1]/div[4]/div[1]/div[2]/div[2]/div[1]/div[1]/div[1]/div[1]/span[1]/span[3]/button[1]"
+     },
+     "state": "transactions.insights-money-in"
+    },
+    {
+     "evidence": {
+      "description": "",
+      "name": "Filters (1)",
+      "role": "menuitem",
+      "states": {
+       "expanded": false,
+       "haspopup": "menu"
+      },
+      "template": "menuitem \"Filters (<n>)\" [expanded=false, haspopup=menu]"
+     },
+     "occurrence": {
+      "ancestors": [
+       [
+        "_chip_1xw00_8",
+        "_inactive_1xw00_119"
+       ],
+       [
+        "_tableViewsAndFilters_grqat_82"
+       ],
+       [
+        "_toolbarContainer_grqat_4"
+       ],
+       [
+        "_actionBar_1q2lg_25"
+       ],
+       [
+        "_toolbar_1q2lg_1",
+        "_outerBorder_1q2lg_9",
+        "_borderRadius_1q2lg_14",
+        "_guttersEnabled_1q2lg_18"
+       ],
+       [
+        "_externalStickyHeaderContent_7rfk9_57"
+       ],
+       [
+        "_stickyHeader_7rfk9_50"
+       ],
+       [
+        "_virtualizerContainer_7rfk9_25"
+       ]
+      ],
+      "classes": [
+       "_mainElement_1xw00_24",
+       "_interactive_1xw00_134",
+       "_filterMenuChip_veh3u_4"
+      ],
+      "data": {},
+      "heading": "Always transparent",
+      "landmark": {
+       "name": "",
+       "role": "main"
+      },
+      "layer": "document",
+      "name": "Filters (1)",
+      "rect": [
+       395,
+       415,
+       105,
+       32
+      ],
+      "role": "menuitem",
+      "tag": "button",
+      "xpath": "/html/body/div[1]/main[1]/div[1]/div[1]/div[1]/div[4]/div[1]/div[1]/div[2]/div[1]/div[1]/div[2]/div[1]/div[2]/div[1]/div[1]/div[1]/div[1]/div[2]/div[1]/div[2]/div[1]/div[3]/span[1]/span[1]/button[1]"
+     },
+     "state": "books.to-review"
+    }
+   ],
+   "evidenceHash": "58021a56d838f0e677da23a91cff4fc5a098175783ef15c4607226e046ff0741",
+   "facts": {
+    "announced": "menuitem \"Filters (<n>)\" [expanded=false, haspopup=menu]",
+    "axeSummary": "",
+    "criterion": "4.1.2",
+    "criterionName": "Name, Role, Value",
+    "element": "menuitem \"Filters (<n>)\"",
+    "rule": "announced-as",
+    "screen": "Insights: Money in"
+   },
+   "family": "role-state",
+   "guidance": "Low for optional ARIA or an invalid autocomplete token; high when aria-hidden hides the whole page.",
+   "issueId": null,
+   "key": "role-state:announced-as:79ee2e3111ee",
+   "measured": false,
+   "primary": "transactions.insights-money-in",
+   "proposals": [],
+   "rule": "announced-as",
+   "screens": 12,
+   "severityDefault": "medium",
+   "source": "scanner",
+   "states": [
+    "transactions.insights-money-in",
+    "books.to-review"
+   ],
+   "summary": "announced-as: announced as menuitem \"Filters (<n>)\" [expanded=false, haspopup=menu].",
+   "title": "Wrong role or state: menuitem \"Filters (<n>)\""
+  },
+  {
+   "attachments": [],
+   "attempt": 1,
+   "basis": "candidate",
+   "criteria": [
+    "4.1.2"
+   ],
+   "evidence": [
+    {
+     "evidence": {
+      "description": "",
+      "name": "Money In",
+      "role": "menuitem",
+      "states": {
+       "expanded": false,
+       "haspopup": "menu"
+      },
+      "template": "menuitem \"Money In\" [expanded=false, haspopup=menu]"
+     },
+     "occurrence": {
+      "ancestors": [
+       [
+        "_chip_1xw00_8",
+        "_active_1xw00_161"
+       ],
+       [],
+       [
+        "_filters_grqat_29"
+       ],
+       [
+        "_tableViewsAndFilters_grqat_82"
+       ],
+       [
+        "_toolbarContainer_grqat_4"
+       ],
+       [
+        "_wrapper_1p8lo_1"
+       ],
+       [
+        "_tabBarLeft_almxf_39"
+       ],
+       [
+        "_tabBar_almxf_27"
+       ]
+      ],
+      "classes": [
+       "_mainElement_1xw00_24",
+       "_interactive_1xw00_134",
+       "_dropdownChip_r52w9_7"
+      ],
+      "data": {},
+      "heading": "Insights",
+      "landmark": {
+       "name": "",
+       "role": "main"
+      },
+      "layer": "document",
+      "name": "Money In",
+      "rect": [
+       525,
+       196,
+       79,
+       32
+      ],
+      "role": "menuitem",
+      "tag": "button",
+      "xpath": "/html/body/div[1]/main[1]/div[1]/div[1]/div[4]/div[1]/div[2]/div[2]/div[1]/div[1]/div[1]/div[1]/span[1]/span[4]/span[1]/span[1]/button[1]"
+     },
+     "state": "transactions.insights-money-in"
+    },
+    {
+     "evidence": {
+      "description": "",
+      "name": "Money In",
+      "role": "menuitem",
+      "states": {
+       "expanded": false,
+       "haspopup": "menu"
+      },
+      "template": "menuitem \"Money In\" [expanded=false, haspopup=menu]"
+     },
+     "occurrence": {
+      "ancestors": [
+       [
+        "_chip_1xw00_8",
+        "_active_1xw00_161"
+       ],
+       [],
+       [
+        "_filters_grqat_29"
+       ],
+       [
+        "_tableViewsAndFilters_grqat_82"
+       ],
+       [
+        "_toolbarContainer_grqat_4"
+       ],
+       [
+        "_wrapper_1p8lo_1"
+       ],
+       [
+        "_tabBarLeft_almxf_39"
+       ],
+       [
+        "_tabBar_almxf_27"
+       ]
+      ],
+      "classes": [
+       "_mainElement_1xw00_24",
+       "_interactive_1xw00_134",
+       "_dropdownChip_r52w9_7"
+      ],
+      "data": {},
+      "heading": "Insights",
+      "landmark": {
+       "name": "",
+       "role": "main"
+      },
+      "layer": "document",
+      "name": "Money In",
+      "rect": [
+       525,
+       84,
+       79,
+       32
+      ],
+      "role": "menuitem",
+      "tag": "button",
+      "xpath": "/html/body/div[1]/main[1]/div[1]/div[1]/div[4]/div[1]/div[2]/div[2]/div[1]/div[1]/div[1]/div[1]/span[1]/span[4]/span[1]/span[1]/button[1]"
+     },
+     "state": "transactions.insights-money-in-summary"
+    }
+   ],
+   "evidenceHash": "141e6b814d278e4ab9b95335abd4c70f318b1fd26bb286bf021c1329fb8ea4d5",
+   "facts": {
+    "announced": "menuitem \"Money In\" [expanded=false, haspopup=menu]",
+    "axeSummary": "",
+    "criterion": "4.1.2",
+    "criterionName": "Name, Role, Value",
+    "element": "menuitem \"Money In\"",
+    "rule": "announced-as",
+    "screen": "Insights: Money in"
+   },
+   "family": "role-state",
+   "guidance": "Low for optional ARIA or an invalid autocomplete token; high when aria-hidden hides the whole page.",
+   "issueId": null,
+   "key": "role-state:announced-as:d41ff860be16",
+   "measured": false,
+   "primary": "transactions.insights-money-in",
+   "proposals": [],
+   "rule": "announced-as",
+   "screens": 2,
+   "severityDefault": "medium",
+   "source": "scanner",
+   "states": [
+    "transactions.insights-money-in",
+    "transactions.insights-money-in-summary"
+   ],
+   "summary": "announced-as: announced as menuitem \"Money In\" [expanded=false, haspopup=menu].",
+   "title": "Wrong role or state: menuitem \"Money In\""
+  }
+ ],
+ "primaries": [
+  "transactions.insights-money-in"
+ ],
+ "reach": {
+  "baseUrl": "https://demo.mercury.com",
+  "data": "data",
+  "map": "build/map.json",
+  "run": "2026-10-03-1525",
+  "workspace": "a11y"
+ },
+ "run": "2026-10-03-1525"
+}

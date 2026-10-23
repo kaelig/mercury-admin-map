@@ -1,0 +1,87 @@
+{
+ "batch": "record-119",
+ "reach": {
+  "baseUrl": "https://demo.mercury.com",
+  "data": "data",
+  "map": "build/map.json",
+  "run": "2026-10-02-1349",
+  "workspace": "a11y"
+ },
+ "run": "2026-10-02-1349",
+ "states": [
+  {
+   "area": "invoicing",
+   "draft": "not drafted: its parent had no accepted recipe when the drafter ran; the conductor rejected the previous recipe: missing value: the first '0.00' textbox the hop fills is Quantity (now 1.00), so Unit price stays empty, the total reads $0.00 and Next is disabled; the capture shows priced items totalling $7,500 and Next enabled",
+   "image": "screens/invoicing/15-create-line-items-filled.png",
+   "kind": "form-state",
+   "labels": [
+    "Click Request money",
+    "Click the Name combobox",
+    "Pick a customer",
+    "Click Next",
+    "Click the line item field",
+    "Type a custom item name",
+    "Enter quantity, unit price and memo"
+   ],
+   "mutates": false,
+   "note": "Two line items (catalog Advisory Retainer and a custom Onboarding workshop x2) plus memo; preview and total update to $7,500.00.",
+   "parent": "invoicing.create-line-item-typed",
+   "state": "invoicing.create-line-items-filled",
+   "title": "Line items filled"
+  },
+  {
+   "area": "invoicing",
+   "draft": "not drafted: its parent had no accepted recipe when the drafter ran",
+   "image": "screens/invoicing/93-create-series-ends-after.png",
+   "kind": "form-state",
+   "labels": [
+    "Click Create series",
+    "Pick a customer and click Next",
+    "Add a line item and click Next",
+    "Click 'when I cancel'",
+    "Pick After"
+   ],
+   "mutates": true,
+   "note": "Choosing After adds an inline count field: 'The recurring invoice series ends after 12 invoices'.",
+   "parent": "invoicing.create-series-ends-menu",
+   "state": "invoicing.create-series-ends-after",
+   "title": "Series ends after N invoices"
+  },
+  {
+   "area": "invoicing",
+   "draft": "not drafted: its parent had no accepted recipe when the drafter ran",
+   "image": "screens/invoicing/50-create-series-review.png",
+   "kind": "page",
+   "labels": [
+    "Click Create series",
+    "Pick a customer and click Next",
+    "Add a line item and click Next",
+    "Click Next",
+    "Click Next"
+   ],
+   "mutates": true,
+   "note": "Review step with series summary (monthly, start Sep 24, Net 30 days, never ends), email/CC, automated reminders and 'Create series and send'.",
+   "parent": "invoicing.create-series-payment",
+   "state": "invoicing.create-series-review",
+   "title": "Series review and create"
+  },
+  {
+   "area": "invoicing",
+   "draft": "not drafted: its parent had no accepted recipe when the drafter ran",
+   "image": "screens/invoicing/48-create-series-frequency-set.png",
+   "kind": "menu",
+   "labels": [
+    "Click Create series",
+    "Pick a customer and click Next",
+    "Add a line item and click Next",
+    "Click the cadence dropdown",
+    "Pick Monthly, open payment terms"
+   ],
+   "mutates": true,
+   "note": "Inline payment-terms dropdown (Due on receipt, Net 30/60/90, Custom) with Net 30 chosen; preview due date moves to 10/24/2026.",
+   "parent": "invoicing.create-series-frequency-menu",
+   "state": "invoicing.create-series-terms-menu",
+   "title": "Payment terms menu"
+  }
+ ]
+}

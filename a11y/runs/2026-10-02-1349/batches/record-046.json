@@ -1,0 +1,28 @@
+{
+ "batch": "record-046",
+ "reach": {
+  "baseUrl": "https://demo.mercury.com",
+  "data": "data",
+  "map": "build/map.json",
+  "run": "2026-10-02-1349",
+  "workspace": "a11y"
+ },
+ "run": "2026-10-02-1349",
+ "states": [
+  {
+   "area": "invoicing",
+   "draft": "not drafted: its parent had no accepted recipe when the drafter ran",
+   "image": "screens/invoicing/43-series-skip-invoice-modal.png",
+   "kind": "modal",
+   "labels": [
+    "Click the \u2026 on the queued invoice",
+    "Click Skip invoice"
+   ],
+   "mutates": false,
+   "note": "Confirmation dialog explaining that the next invoice will be queued automatically, with Close and Skip invoice.",
+   "parent": "invoicing.series-queued-menu",
+   "state": "invoicing.series-skip-modal",
+   "title": "Skip queued invoice modal"
+  }
+ ]
+}

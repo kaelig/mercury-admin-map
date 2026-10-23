@@ -1,0 +1,66 @@
+{
+ "date": "2026-10-03",
+ "chrome": "154.0.0.0",
+ "lighthouseAxe": "4.12.1",
+ "states": [
+  {
+   "state": "accounts.credit",
+   "kind": "root",
+   "lighthouseFailed": [
+    "button-name",
+    "color-contrast",
+    "link-name"
+   ]
+  },
+  {
+   "state": "billpay.index",
+   "kind": "root",
+   "lighthouseFailed": [
+    "button-name",
+    "label",
+    "td-has-header"
+   ]
+  },
+  {
+   "state": "accounts.statements",
+   "kind": "root",
+   "lighthouseFailed": [
+    "button-name",
+    "label",
+    "td-has-header"
+   ]
+  },
+  {
+   "state": "accounts.limit-increase",
+   "kind": "overlay",
+   "lighthouseFailed": [
+    "aria-dialog-name",
+    "color-contrast",
+    "link-in-text-block"
+   ]
+  },
+  {
+   "state": "billpay.create-rule",
+   "kind": "overlay",
+   "lighthouseFailed": [
+    "autocomplete-valid",
+    "button-name",
+    "color-contrast"
+   ]
+  },
+  {
+   "state": "accounts.add-account-menu",
+   "kind": "overlay",
+   "lighthouseFailed": [
+    "aria-command-name",
+    "aria-prohibited-attr",
+    "button-name"
+   ]
+  }
+ ],
+ "explanations": {
+  "td-has-header": "rule-selection",
+  "aria-dialog-name": "rule-selection",
+  "aria-hidden-focus": "environment"
+ }
+}

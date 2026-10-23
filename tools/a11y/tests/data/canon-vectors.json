@@ -1,0 +1,54 @@
+{
+ "serialize": [
+  {
+   "value": {"b": 1, "a": [1.0, 2.5, -0.0, 0.30000000000000004, 1e-05, 4.56789, -1.23456, -2.5, 0.125], "10": "x", "9": null, "é": "ü\n\t\u0001\"\\"},
+   "canonical": "{\"10\":\"x\",\"9\":null,\"a\":[1,2.5,0,0.3,0,4.5679,-1.2346,-2.5,0.125],\"b\":1,\"é\":\"ü\\n\\t\\u0001\\\"\\\\\"}"
+  },
+  {
+   "value": {"c": {}, "a": [1, {"b": []}], "t": true, "f": false},
+   "canonical": "{\"a\":[1,{\"b\":[]}],\"c\":{},\"f\":false,\"t\":true}",
+   "dump": "{\n \"a\": [\n  1,\n  {\n   \"b\": []\n  }\n ],\n \"c\": {},\n \"f\": false,\n \"t\": true\n}\n"
+  },
+  {
+   "value": [],
+   "canonical": "[]",
+   "dump": "[]\n"
+  }
+ ],
+ "templates": [
+  ["Pay $1,203.00 on Oct 2", "Pay <amount> on <date>"],
+  ["Pay $90.00 on Sep 1", "Pay <amount> on <date>"],
+  ["Paid Yesterday", "Paid <date>"],
+  ["Paid 2 days ago", "Paid <date>"],
+  ["  Edit  limits ", "Edit limits"],
+  ["Showing 1-25 of 214", "Showing <n> of <n>"],
+  ["Sep 24, 2026 at 3:45 PM", "<date> at <time>"],
+  ["Updated 5 minutes ago", "Updated <date>"],
+  ["Balance −$5,000.12", "Balance <amount>"],
+  ["Card ••1234", "Card ••<n>"],
+  ["2026-09-24", "<date>"],
+  ["09/24/2026", "<date>"],
+  ["Invoice INV-0042", "Invoice INV-<n>"],
+  ["1,203.00", "<amount>"],
+  ["May 2026", "<date>"],
+  ["3 June 2026", "<date>"],
+  ["Sept. 3", "<date>"],
+  ["Due in 3 days", "Due <date>"],
+  ["Sent at 12:30pm", "Sent at <time>"],
+  ["TODAY", "<date>"],
+  ["Edit limits", "Edit limits"],
+  ["", ""]
+ ],
+ "regex": [
+  {"template": "Paid <date>", "match": ["Paid Yesterday", "Paid 2 days ago"], "noMatch": ["Unpaid Yesterday", "Paid", "Paid "]},
+  {"template": "Edit limits", "match": ["Edit limits"], "noMatch": ["Edit limits now", "edit limits"]},
+  {"template": "Pay <amount> on <date>", "match": ["Pay $90.00 on Sep 1"], "noMatch": ["Pay on Sep 1"]},
+  {"template": "Price (USD) <amount>", "match": ["Price (USD) $4"], "noMatch": ["Price USD $4"]}
+ ],
+ "buildHash": [
+  ["<script src=\"https://cdn.mercury.com/builds/abc123/app.js\"></script>", "abc123"],
+  ["<script src=\"/app.js\"></script>", "unknown"],
+  ["cdn.mercury.com/builds//x.js", "unknown"],
+  ["", "unknown"]
+ ]
+}

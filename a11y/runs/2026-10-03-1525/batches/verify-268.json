@@ -1,0 +1,894 @@
+{
+ "area": "payments",
+ "batch": "verify-268",
+ "findings": [
+  {
+   "attachments": [],
+   "attempt": 1,
+   "basis": "violation",
+   "criteria": [
+    "4.1.2"
+   ],
+   "evidence": [
+    {
+     "evidence": {
+      "aria-errormessage": [
+       "error-message-:r7n:"
+      ],
+      "failureSummary": "Fix all of the following:\n  aria-errormessage value `error-message-:r7n:` must use a technique to announce the message (e.g., aria-live, aria-describedby, role=alert, etc.)"
+     },
+     "occurrence": {
+      "ancestors": [
+       [
+        "_inputWrapper_11c85_6",
+        "_error_11c85_74"
+       ],
+       [
+        "_wrapper_1xgdp_8",
+        "_inputFieldMargin_96kp4_1",
+        "session-replay-mask"
+       ],
+       [
+        "_mainContent_162lh_37"
+       ],
+       [
+        "_sectionContent_162lh_19",
+        "_sectionContentAfterRequestTaxDoc_162lh_46"
+       ],
+       [
+        "_sectionWrapper_162lh_13"
+       ],
+       [],
+       [
+        "_formContainer_c9ign_31"
+       ],
+       [
+        "_contentDiv_bcpsw_53",
+        "_contentDivHeightPreset_bcpsw_62",
+        "_contentArea_c9ign_19"
+       ]
+      ],
+      "classes": [
+       "_input_11c85_6"
+      ],
+      "data": {
+       "data-active-item": "true"
+      },
+      "heading": "Address",
+      "landmark": {
+       "name": "",
+       "role": "main"
+      },
+      "layer": "document",
+      "name": "State",
+      "rect": [
+       428,
+       920,
+       551,
+       40
+      ],
+      "role": "combobox",
+      "tag": "input",
+      "xpath": "/html/body/div[1]/main[1]/div[1]/div[2]/div[2]/div[3]/div[1]/div[1]/div[1]/section[2]/div[1]/div[5]/div[1]/input[1]"
+     },
+     "state": "payments.recipient-create-validation"
+    }
+   ],
+   "evidenceHash": "dfdb9878fb5b952db8f067bec34f55ceb4ea16c8975de73d9c6cf2545c12b3db",
+   "facts": {
+    "announced": "combobox \"State\" [expanded=false, haspopup=listbox, invalid=true, errormessage=…",
+    "axeSummary": "aria-errormessage value `error-message-:r7n:` must use a technique to announce the message (e.g., aria-live, aria-describedby, role=alert, etc.)",
+    "criterion": "4.1.2",
+    "criterionName": "Name, Role, Value",
+    "element": "combobox \"State\"",
+    "rule": "aria-valid-attr-value",
+    "screen": "Create recipient: errors"
+   },
+   "family": "role-state",
+   "guidance": "Low for optional ARIA or an invalid autocomplete token; high when aria-hidden hides the whole page.",
+   "issueId": null,
+   "key": "role-state:aria-valid-attr-value:12ff6bacf9a3",
+   "measured": false,
+   "primary": "payments.recipient-create-validation",
+   "proposals": [],
+   "rule": "aria-valid-attr-value",
+   "screens": 1,
+   "severityDefault": "medium",
+   "source": "scanner",
+   "states": [
+    "payments.recipient-create-validation"
+   ],
+   "summary": "aria-valid-attr-value: announced as combobox \"State\" [expanded=false, haspopup=listbox, invalid=true, errormessage=…. aria-errormessage value `error-message-:r7n:` must use a technique to announce the message (e.g., aria-live, aria-describedby, role=alert, etc.)",
+   "title": "Wrong role or state: combobox \"State\""
+  },
+  {
+   "attachments": [],
+   "attempt": 1,
+   "basis": "violation",
+   "criteria": [
+    "4.1.2"
+   ],
+   "evidence": [
+    {
+     "evidence": {
+      "aria-errormessage": [
+       "recipientname-mercury-utils-id-25-errormessage"
+      ],
+      "failureSummary": "Fix all of the following:\n  aria-errormessage value `recipientname-mercury-utils-id-25-errormessage` must use a technique to announce the message (e.g., aria-live, aria-describedby, role=alert, etc.)"
+     },
+     "occurrence": {
+      "ancestors": [
+       [
+        "_inputBox_q7hf7_93",
+        "_error_q7hf7_41"
+       ],
+       [
+        "_inputBoxWrapper_q7hf7_93"
+       ],
+       [
+        "_textInputWrapper_q7hf7_24"
+       ],
+       [
+        "_provideDSTextInput_q7hf7_6",
+        "_addWrapperMargin_q7hf7_19",
+        "session-replay-mask"
+       ],
+       [
+        "_mainContent_162lh_37"
+       ],
+       [
+        "_sectionContent_162lh_19"
+       ],
+       [
+        "_sectionWrapper_162lh_13"
+       ],
+       []
+      ],
+      "classes": [
+       "_input_q7hf7_93"
+      ],
+      "data": {},
+      "heading": "Profile",
+      "landmark": {
+       "name": "",
+       "role": "main"
+      },
+      "layer": "document",
+      "name": "Legal name",
+      "rect": [
+       441,
+       166,
+       558,
+       24
+      ],
+      "role": "textbox",
+      "tag": "input",
+      "xpath": "/html/body/div[1]/main[1]/div[1]/div[2]/div[2]/div[3]/div[1]/div[1]/div[1]/section[1]/div[1]/div[2]/div[1]/div[1]/div[1]/input[1]"
+     },
+     "state": "payments.recipient-create-validation"
+    }
+   ],
+   "evidenceHash": "ee2712e2fdd139951c05292cd145cd333e4d22ae63e39a66a2072ee647bc4622",
+   "facts": {
+    "announced": "textbox \"Legal name\" [invalid=true, errormessage=Please complete this field]",
+    "axeSummary": "aria-errormessage value `recipientname-mercury-utils-id-25-errormessage` must use a technique to announce the message (e.g., aria-live, aria-describedby, role=…",
+    "criterion": "4.1.2",
+    "criterionName": "Name, Role, Value",
+    "element": "textbox \"Legal name\"",
+    "rule": "aria-valid-attr-value",
+    "screen": "Create recipient: errors"
+   },
+   "family": "role-state",
+   "guidance": "Low for optional ARIA or an invalid autocomplete token; high when aria-hidden hides the whole page.",
+   "issueId": null,
+   "key": "role-state:aria-valid-attr-value:63945370e8dd",
+   "measured": false,
+   "primary": "payments.recipient-create-validation",
+   "proposals": [],
+   "rule": "aria-valid-attr-value",
+   "screens": 1,
+   "severityDefault": "medium",
+   "source": "scanner",
+   "states": [
+    "payments.recipient-create-validation"
+   ],
+   "summary": "aria-valid-attr-value: announced as textbox \"Legal name\" [invalid=true, errormessage=Please complete this field]. aria-errormessage value `recipientname-mercury-utils-id-25-errormessage` must use a technique to announce the message (e.g., aria-live, aria-describedby, role=…",
+   "title": "Wrong role or state: textbox \"Legal name\""
+  },
+  {
+   "attachments": [],
+   "attempt": 1,
+   "basis": "violation",
+   "criteria": [
+    "4.1.2"
+   ],
+   "evidence": [
+    {
+     "evidence": {
+      "aria-errormessage": [
+       "postalcode-mercury-utils-id-31-errormessage"
+      ],
+      "failureSummary": "Fix all of the following:\n  aria-errormessage value `postalcode-mercury-utils-id-31-errormessage` must use a technique to announce the message (e.g., aria-live, aria-describedby, role=alert, etc.)"
+     },
+     "occurrence": {
+      "ancestors": [
+       [
+        "_inputBox_q7hf7_93",
+        "_error_q7hf7_41"
+       ],
+       [
+        "_inputBoxWrapper_q7hf7_93"
+       ],
+       [
+        "_textInputWrapper_q7hf7_24"
+       ],
+       [
+        "_provideDSTextInput_q7hf7_6",
+        "_addWrapperMargin_q7hf7_19",
+        "session-replay-mask"
+       ],
+       [
+        "_mainContent_162lh_37"
+       ],
+       [
+        "_sectionContent_162lh_19",
+        "_sectionContentAfterRequestTaxDoc_162lh_46"
+       ],
+       [
+        "_sectionWrapper_162lh_13"
+       ],
+       []
+      ],
+      "classes": [
+       "_input_q7hf7_93"
+      ],
+      "data": {
+       "data-testid": "send-money-check-postal"
+      },
+      "heading": "Address",
+      "landmark": {
+       "name": "",
+       "role": "main"
+      },
+      "layer": "document",
+      "name": "Postal / ZIP code",
+      "rect": [
+       441,
+       1028,
+       558,
+       24
+      ],
+      "role": "textbox",
+      "tag": "input",
+      "xpath": "/html/body/div[1]/main[1]/div[1]/div[2]/div[2]/div[3]/div[1]/div[1]/div[1]/section[2]/div[1]/div[6]/div[1]/div[1]/div[1]/input[1]"
+     },
+     "state": "payments.recipient-create-validation"
+    }
+   ],
+   "evidenceHash": "da2dc6c8f305d94fd54cd56b0b163f4d6e6d87e7b59d6d563803fcfc3ef3f60d",
+   "facts": {
+    "announced": "textbox \"Postal / ZIP code\" [invalid=true, errormessage=Please complete this fi…",
+    "axeSummary": "aria-errormessage value `postalcode-mercury-utils-id-31-errormessage` must use a technique to announce the message (e.g., aria-live, aria-describedby, role=ale…",
+    "criterion": "4.1.2",
+    "criterionName": "Name, Role, Value",
+    "element": "textbox \"Postal / ZIP code\"",
+    "rule": "aria-valid-attr-value",
+    "screen": "Create recipient: errors"
+   },
+   "family": "role-state",
+   "guidance": "Low for optional ARIA or an invalid autocomplete token; high when aria-hidden hides the whole page.",
+   "issueId": null,
+   "key": "role-state:aria-valid-attr-value:6b1899f878a3",
+   "measured": false,
+   "primary": "payments.recipient-create-validation",
+   "proposals": [],
+   "rule": "aria-valid-attr-value",
+   "screens": 1,
+   "severityDefault": "medium",
+   "source": "scanner",
+   "states": [
+    "payments.recipient-create-validation"
+   ],
+   "summary": "aria-valid-attr-value: announced as textbox \"Postal / ZIP code\" [invalid=true, errormessage=Please complete this fi…. aria-errormessage value `postalcode-mercury-utils-id-31-errormessage` must use a technique to announce the message (e.g., aria-live, aria-describedby, role=ale…",
+   "title": "Wrong role or state: textbox \"Postal / ZIP code\""
+  },
+  {
+   "attachments": [],
+   "attempt": 1,
+   "basis": "violation",
+   "criteria": [
+    "4.1.2"
+   ],
+   "evidence": [
+    {
+     "evidence": {
+      "aria-errormessage": [
+       ":r6o:-error-message"
+      ],
+      "failureSummary": "Fix all of the following:\n  aria-errormessage value `:r6o:-error-message` must use a technique to announce the message (e.g., aria-live, aria-describedby, role=alert, etc.)"
+     },
+     "occurrence": {
+      "ancestors": [
+       [],
+       [
+        "_mainContent_162lh_37"
+       ],
+       [
+        "_sectionContent_162lh_19"
+       ],
+       [
+        "_sectionWrapper_162lh_13"
+       ],
+       [],
+       [
+        "_formContainer_c9ign_31"
+       ],
+       [
+        "_contentDiv_bcpsw_53",
+        "_contentDivHeightPreset_bcpsw_62",
+        "_contentArea_c9ign_19"
+       ],
+       [
+        "_fullScreenWorkspaceLayout_bcpsw_14",
+        "_fullScreenWorkspaceLayoutBackground_bcpsw_32"
+       ]
+      ],
+      "classes": [
+       "_radioGroup_phe2n_23",
+       "_rowLayout_phe2n_32"
+      ],
+      "data": {},
+      "heading": "Profile",
+      "landmark": {
+       "name": "",
+       "role": "main"
+      },
+      "layer": "document",
+      "name": "Select recipient type",
+      "rect": [
+       428,
+       44,
+       584,
+       50
+      ],
+      "role": "radiogroup",
+      "tag": "fieldset",
+      "xpath": "/html/body/div[1]/main[1]/div[1]/div[2]/div[2]/div[3]/div[1]/div[1]/div[1]/section[1]/div[1]/div[1]/fieldset[1]"
+     },
+     "state": "payments.recipient-create-validation"
+    }
+   ],
+   "evidenceHash": "cae8dd7c6f34d6728c1be3d2e46429265a2ec1a1aca85fdd7401d916f32b8850",
+   "facts": {
+    "announced": "radiogroup \"Select recipient type\"",
+    "axeSummary": "aria-errormessage value `:r6o:-error-message` must use a technique to announce the message (e.g., aria-live, aria-describedby, role=alert, etc.)",
+    "criterion": "4.1.2",
+    "criterionName": "Name, Role, Value",
+    "element": "radiogroup \"Select recipient type\"",
+    "rule": "aria-valid-attr-value",
+    "screen": "Create recipient: errors"
+   },
+   "family": "role-state",
+   "guidance": "Low for optional ARIA or an invalid autocomplete token; high when aria-hidden hides the whole page.",
+   "issueId": null,
+   "key": "role-state:aria-valid-attr-value:8b7735573cd1",
+   "measured": false,
+   "primary": "payments.recipient-create-validation",
+   "proposals": [],
+   "rule": "aria-valid-attr-value",
+   "screens": 1,
+   "severityDefault": "medium",
+   "source": "scanner",
+   "states": [
+    "payments.recipient-create-validation"
+   ],
+   "summary": "aria-valid-attr-value: announced as radiogroup \"Select recipient type\". aria-errormessage value `:r6o:-error-message` must use a technique to announce the message (e.g., aria-live, aria-describedby, role=alert, etc.)",
+   "title": "Wrong role or state: radiogroup \"Select recipient type\""
+  },
+  {
+   "attachments": [],
+   "attempt": 1,
+   "basis": "violation",
+   "criteria": [
+    "4.1.2"
+   ],
+   "evidence": [
+    {
+     "evidence": {
+      "aria-errormessage": [
+       "city-mercury-utils-id-30-errormessage"
+      ],
+      "failureSummary": "Fix all of the following:\n  aria-errormessage value `city-mercury-utils-id-30-errormessage` must use a technique to announce the message (e.g., aria-live, aria-describedby, role=alert, etc.)"
+     },
+     "occurrence": {
+      "ancestors": [
+       [
+        "_inputBox_q7hf7_93",
+        "_error_q7hf7_41"
+       ],
+       [
+        "_inputBoxWrapper_q7hf7_93"
+       ],
+       [
+        "_textInputWrapper_q7hf7_24"
+       ],
+       [
+        "_provideDSTextInput_q7hf7_6",
+        "_addWrapperMargin_q7hf7_19",
+        "session-replay-mask"
+       ],
+       [
+        "_mainContent_162lh_37"
+       ],
+       [
+        "_sectionContent_162lh_19",
+        "_sectionContentAfterRequestTaxDoc_162lh_46"
+       ],
+       [
+        "_sectionWrapper_162lh_13"
+       ],
+       []
+      ],
+      "classes": [
+       "_input_q7hf7_93"
+      ],
+      "data": {
+       "data-testid": "send-money-check-city"
+      },
+      "heading": "Address",
+      "landmark": {
+       "name": "",
+       "role": "main"
+      },
+      "layer": "document",
+      "name": "City",
+      "rect": [
+       441,
+       828,
+       558,
+       24
+      ],
+      "role": "textbox",
+      "tag": "input",
+      "xpath": "/html/body/div[1]/main[1]/div[1]/div[2]/div[2]/div[3]/div[1]/div[1]/div[1]/section[2]/div[1]/div[4]/div[1]/div[1]/div[1]/input[1]"
+     },
+     "state": "payments.recipient-create-validation"
+    }
+   ],
+   "evidenceHash": "9e263990316dd1fccd32880d5df3c0f3df79e3fb513972095db36758c18e564e",
+   "facts": {
+    "announced": "textbox \"City\" [invalid=true, errormessage=Please complete this field]",
+    "axeSummary": "aria-errormessage value `city-mercury-utils-id-30-errormessage` must use a technique to announce the message (e.g., aria-live, aria-describedby, role=alert, et…",
+    "criterion": "4.1.2",
+    "criterionName": "Name, Role, Value",
+    "element": "textbox \"City\"",
+    "rule": "aria-valid-attr-value",
+    "screen": "Create recipient: errors"
+   },
+   "family": "role-state",
+   "guidance": "Low for optional ARIA or an invalid autocomplete token; high when aria-hidden hides the whole page.",
+   "issueId": null,
+   "key": "role-state:aria-valid-attr-value:b1fdb3677c66",
+   "measured": false,
+   "primary": "payments.recipient-create-validation",
+   "proposals": [],
+   "rule": "aria-valid-attr-value",
+   "screens": 1,
+   "severityDefault": "medium",
+   "source": "scanner",
+   "states": [
+    "payments.recipient-create-validation"
+   ],
+   "summary": "aria-valid-attr-value: announced as textbox \"City\" [invalid=true, errormessage=Please complete this field]. aria-errormessage value `city-mercury-utils-id-30-errormessage` must use a technique to announce the message (e.g., aria-live, aria-describedby, role=alert, et…",
+   "title": "Wrong role or state: textbox \"City\""
+  },
+  {
+   "attachments": [],
+   "attempt": 1,
+   "basis": "violation",
+   "criteria": [
+    "4.1.2"
+   ],
+   "evidence": [
+    {
+     "evidence": {
+      "aria-errormessage": [
+       "address-input-:r7e:-error"
+      ],
+      "failureSummary": "Fix all of the following:\n  aria-errormessage value `address-input-:r7e:-error` must use a technique to announce the message (e.g., aria-live, aria-describedby, role=alert, etc.)"
+     },
+     "occurrence": {
+      "ancestors": [
+       [
+        "_inputWrapper_11c85_6",
+        "_error_11c85_74"
+       ],
+       [
+        "_addressInputContainer_dtuqe_1",
+        "session-replay-mask"
+       ],
+       [
+        "_mainContent_162lh_37"
+       ],
+       [
+        "_sectionContent_162lh_19",
+        "_sectionContentAfterRequestTaxDoc_162lh_46"
+       ],
+       [
+        "_sectionWrapper_162lh_13"
+       ],
+       [],
+       [
+        "_formContainer_c9ign_31"
+       ],
+       [
+        "_contentDiv_bcpsw_53",
+        "_contentDivHeightPreset_bcpsw_62",
+        "_contentArea_c9ign_19"
+       ]
+      ],
+      "classes": [
+       "_input_11c85_6"
+      ],
+      "data": {
+       "data-active-item": "true"
+      },
+      "heading": "Address",
+      "landmark": {
+       "name": "",
+       "role": "main"
+      },
+      "layer": "document",
+      "name": "Recipient legal address",
+      "rect": [
+       428,
+       644,
+       584,
+       40
+      ],
+      "role": "combobox",
+      "tag": "input",
+      "xpath": "/html/body/div[1]/main[1]/div[1]/div[2]/div[2]/div[3]/div[1]/div[1]/div[1]/section[2]/div[1]/div[2]/div[1]/input[1]"
+     },
+     "state": "payments.recipient-create-validation"
+    }
+   ],
+   "evidenceHash": "a26863ebdb26f15e8747e96d37327c1da93f56d89ca7146c22f96d5fdb3edf6d",
+   "facts": {
+    "announced": "combobox \"Recipient legal address\" [expanded=false, haspopup=listbox, invalid=t…",
+    "axeSummary": "aria-errormessage value `address-input-:r7e:-error` must use a technique to announce the message (e.g., aria-live, aria-describedby, role=alert, etc.)",
+    "criterion": "4.1.2",
+    "criterionName": "Name, Role, Value",
+    "element": "combobox \"Recipient legal address\"",
+    "rule": "aria-valid-attr-value",
+    "screen": "Create recipient: errors"
+   },
+   "family": "role-state",
+   "guidance": "Low for optional ARIA or an invalid autocomplete token; high when aria-hidden hides the whole page.",
+   "issueId": null,
+   "key": "role-state:aria-valid-attr-value:fd33399c975a",
+   "measured": false,
+   "primary": "payments.recipient-create-validation",
+   "proposals": [],
+   "rule": "aria-valid-attr-value",
+   "screens": 1,
+   "severityDefault": "medium",
+   "source": "scanner",
+   "states": [
+    "payments.recipient-create-validation"
+   ],
+   "summary": "aria-valid-attr-value: announced as combobox \"Recipient legal address\" [expanded=false, haspopup=listbox, invalid=t…. aria-errormessage value `address-input-:r7e:-error` must use a technique to announce the message (e.g., aria-live, aria-describedby, role=alert, etc.)",
+   "title": "Wrong role or state: combobox \"Recipient legal address\""
+  },
+  {
+   "attachments": [],
+   "attempt": 1,
+   "basis": "failure",
+   "criteria": [
+    "4.1.3"
+   ],
+   "evidence": [
+    {
+     "evidence": {
+      "focus": {
+       "ancestors": [
+        [
+         "_navigation_g4akw_1"
+        ],
+        [
+         "_navigationButtonContainer_1wq2f_1",
+         "_navigation_c9ign_58"
+        ],
+        [
+         "_sectionWrapper_162lh_13"
+        ],
+        [],
+        [
+         "_formContainer_c9ign_31"
+        ],
+        [
+         "_contentDiv_bcpsw_53",
+         "_contentDivHeightPreset_bcpsw_62",
+         "_contentArea_c9ign_19"
+        ],
+        [
+         "_fullScreenWorkspaceLayout_bcpsw_14",
+         "_fullScreenWorkspaceLayoutBackground_bcpsw_32"
+        ],
+        [
+         "_wrapper_bcpsw_3",
+         "_responsive_bcpsw_88"
+        ]
+       ],
+       "classes": [
+        "_button_r6b2u_20",
+        "_large_r6b2u_88",
+        "_primary_r6b2u_104"
+       ],
+       "data": {},
+       "heading": "Address",
+       "landmark": {
+        "name": "",
+        "role": "main"
+       },
+       "layer": "document",
+       "name": "Create recipient",
+       "rect": [
+        562,
+        836,
+        177,
+        40
+       ],
+       "role": "button",
+       "tag": "button",
+       "xpath": "/html/body/div[1]/main[1]/div[1]/div[2]/div[2]/div[3]/div[1]/div[1]/div[1]/div[2]/div[1]/button[2]"
+      },
+      "focused": false,
+      "message": "Please complete this field",
+      "region": null
+     },
+     "occurrence": {
+      "ancestors": [
+       [
+        "_addressInputContainer_dtuqe_1",
+        "session-replay-mask"
+       ],
+       [
+        "_mainContent_162lh_37"
+       ],
+       [
+        "_sectionContent_162lh_19",
+        "_sectionContentAfterRequestTaxDoc_162lh_46"
+       ],
+       [
+        "_sectionWrapper_162lh_13"
+       ],
+       [],
+       [
+        "_formContainer_c9ign_31"
+       ],
+       [
+        "_contentDiv_bcpsw_53",
+        "_contentDivHeightPreset_bcpsw_62",
+        "_contentArea_c9ign_19"
+       ],
+       [
+        "_fullScreenWorkspaceLayout_bcpsw_14",
+        "_fullScreenWorkspaceLayoutBackground_bcpsw_32"
+       ]
+      ],
+      "classes": [
+       "_defaultErrorContainer_1tnh5_1",
+       "_errorMessage_dtuqe_5"
+      ],
+      "data": {
+       "data-session-replay-unmask": "true"
+      },
+      "heading": "Address",
+      "landmark": {
+       "name": "",
+       "role": "main"
+      },
+      "layer": "document",
+      "name": "",
+      "rect": [
+       428,
+       688,
+       584,
+       20
+      ],
+      "role": "",
+      "tag": "div",
+      "xpath": "/html/body/div[1]/main[1]/div[1]/div[2]/div[2]/div[3]/div[1]/div[1]/div[1]/section[2]/div[1]/div[2]/div[2]"
+     },
+     "state": "payments.recipient-create-validation"
+    }
+   ],
+   "evidenceHash": "1914d90944d3a4067266c8c28966ce14f8821e0314aa5a8fd773e99fa2c24698",
+   "facts": {
+    "criterion": "4.1.3",
+    "criterionName": "Status Messages",
+    "focus": "button \"Create recipient\"",
+    "message": "\"Please complete this field\"",
+    "screen": "Create recipient: errors"
+   },
+   "family": "status-message",
+   "guidance": "High when it is the only confirmation of a money movement.",
+   "issueId": null,
+   "key": "status-message:status-not-announced:7c461e826807",
+   "measured": false,
+   "primary": "payments.recipient-create-validation",
+   "proposals": [],
+   "rule": "status-not-announced",
+   "screens": 1,
+   "severityDefault": "medium",
+   "source": "scanner",
+   "states": [
+    "payments.recipient-create-validation"
+   ],
+   "summary": "\"Please complete this field\" appeared outside any live region, alert or status role that existed before it, and focus stayed on the button \"Create recipient\".",
+   "title": "Status message not announced: \"Please complete this field\""
+  },
+  {
+   "attachments": [],
+   "attempt": 1,
+   "basis": "failure",
+   "criteria": [
+    "4.1.3"
+   ],
+   "evidence": [
+    {
+     "evidence": {
+      "focus": {
+       "ancestors": [
+        [
+         "_navigation_g4akw_1"
+        ],
+        [
+         "_navigationButtonContainer_1wq2f_1",
+         "_navigation_c9ign_58"
+        ],
+        [
+         "_sectionWrapper_162lh_13"
+        ],
+        [],
+        [
+         "_formContainer_c9ign_31"
+        ],
+        [
+         "_contentDiv_bcpsw_53",
+         "_contentDivHeightPreset_bcpsw_62",
+         "_contentArea_c9ign_19"
+        ],
+        [
+         "_fullScreenWorkspaceLayout_bcpsw_14",
+         "_fullScreenWorkspaceLayoutBackground_bcpsw_32"
+        ],
+        [
+         "_wrapper_bcpsw_3",
+         "_responsive_bcpsw_88"
+        ]
+       ],
+       "classes": [
+        "_button_r6b2u_20",
+        "_large_r6b2u_88",
+        "_primary_r6b2u_104"
+       ],
+       "data": {},
+       "heading": "Address",
+       "landmark": {
+        "name": "",
+        "role": "main"
+       },
+       "layer": "document",
+       "name": "Create recipient",
+       "rect": [
+        562,
+        836,
+        177,
+        40
+       ],
+       "role": "button",
+       "tag": "button",
+       "xpath": "/html/body/div[1]/main[1]/div[1]/div[2]/div[2]/div[3]/div[1]/div[1]/div[1]/div[2]/div[1]/button[2]"
+      },
+      "focused": false,
+      "message": "Please enter a valid US state.",
+      "region": null
+     },
+     "occurrence": {
+      "ancestors": [
+       [
+        "_wrapper_1xgdp_8",
+        "_inputFieldMargin_96kp4_1",
+        "session-replay-mask"
+       ],
+       [
+        "_mainContent_162lh_37"
+       ],
+       [
+        "_sectionContent_162lh_19",
+        "_sectionContentAfterRequestTaxDoc_162lh_46"
+       ],
+       [
+        "_sectionWrapper_162lh_13"
+       ],
+       [],
+       [
+        "_formContainer_c9ign_31"
+       ],
+       [
+        "_contentDiv_bcpsw_53",
+        "_contentDivHeightPreset_bcpsw_62",
+        "_contentArea_c9ign_19"
+       ],
+       [
+        "_fullScreenWorkspaceLayout_bcpsw_14",
+        "_fullScreenWorkspaceLayoutBackground_bcpsw_32"
+       ]
+      ],
+      "classes": [
+       "_defaultErrorContainer_1tnh5_1",
+       "_errorMessage_1xgdp_20"
+      ],
+      "data": {
+       "data-session-replay-unmask": "true"
+      },
+      "heading": "Address",
+      "landmark": {
+       "name": "",
+       "role": "main"
+      },
+      "layer": "document",
+      "name": "",
+      "rect": [
+       428,
+       964,
+       584,
+       20
+      ],
+      "role": "",
+      "tag": "div",
+      "xpath": "/html/body/div[1]/main[1]/div[1]/div[2]/div[2]/div[3]/div[1]/div[1]/div[1]/section[2]/div[1]/div[5]/div[2]"
+     },
+     "state": "payments.recipient-create-validation"
+    }
+   ],
+   "evidenceHash": "237036f00ea753b9ebde30067e591cc7839c9be5463f021c7c59afcb73973115",
+   "facts": {
+    "criterion": "4.1.3",
+    "criterionName": "Status Messages",
+    "focus": "button \"Create recipient\"",
+    "message": "\"Please enter a valid US state.\"",
+    "screen": "Create recipient: errors"
+   },
+   "family": "status-message",
+   "guidance": "High when it is the only confirmation of a money movement.",
+   "issueId": null,
+   "key": "status-message:status-not-announced:8a129112ae91",
+   "measured": false,
+   "primary": "payments.recipient-create-validation",
+   "proposals": [],
+   "rule": "status-not-announced",
+   "screens": 1,
+   "severityDefault": "medium",
+   "source": "scanner",
+   "states": [
+    "payments.recipient-create-validation"
+   ],
+   "summary": "\"Please enter a valid US state.\" appeared outside any live region, alert or status role that existed before it, and focus stayed on the button \"Create recipient\".",
+   "title": "Status message not announced: \"Please enter a valid US state.\""
+  }
+ ],
+ "primaries": [
+  "payments.recipient-create-validation"
+ ],
+ "reach": {
+  "baseUrl": "https://demo.mercury.com",
+  "data": "data",
+  "map": "build/map.json",
+  "run": "2026-10-03-1525",
+  "workspace": "a11y"
+ },
+ "run": "2026-10-03-1525"
+}

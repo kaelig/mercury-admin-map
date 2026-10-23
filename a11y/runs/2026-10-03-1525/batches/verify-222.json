@@ -1,0 +1,162 @@
+{
+ "area": "invoicing",
+ "batch": "verify-222",
+ "findings": [
+  {
+   "attachments": [],
+   "attempt": 1,
+   "basis": "candidate",
+   "criteria": [
+    "2.1.1"
+   ],
+   "evidence": [
+    {
+     "evidence": {
+      "end": "body",
+      "focusable": false,
+      "source": "ax",
+      "stops": 12
+     },
+     "occurrence": {
+      "ancestors": [
+       [
+        "_input_11c85_6",
+        "_tagList_1fujv_4"
+       ],
+       [
+        "_inputWrapper_11c85_6"
+       ],
+       [
+        "_wrapper_1xgdp_8",
+        "session-replay-mask"
+       ],
+       [],
+       [
+        "_wrapper_1ojdq_8",
+        "_reviewStepWrapper_1kmxu_31"
+       ],
+       [],
+       [
+        "_leftInnerContainer_12jyu_3"
+       ],
+       [
+        "_left_yg1rf_39"
+       ]
+      ],
+      "classes": [],
+      "data": {},
+      "heading": "Review and create",
+      "landmark": {
+       "name": "",
+       "role": "main"
+      },
+      "layer": "document",
+      "name": "CC",
+      "rect": [
+       125,
+       545,
+       0,
+       0
+      ],
+      "role": "listbox",
+      "tag": "div",
+      "xpath": "/html/body/div[1]/main[1]/div[1]/div[2]/div[2]/div[3]/div[1]/div[1]/div[1]/div[1]/div[1]/div[1]/div[2]/div[3]/div[2]/div[1]/div[1]/div[1]"
+     },
+     "state": "invoicing.create-series-review"
+    },
+    {
+     "evidence": {
+      "end": "body",
+      "focusable": false,
+      "source": "ax",
+      "stops": 12
+     },
+     "occurrence": {
+      "ancestors": [
+       [
+        "_input_11c85_6",
+        "_tagList_1fujv_4"
+       ],
+       [
+        "_inputWrapper_11c85_6"
+       ],
+       [
+        "_wrapper_1xgdp_8",
+        "session-replay-mask"
+       ],
+       [],
+       [
+        "_wrapper_1ojdq_8",
+        "_reviewStepWrapper_1kmxu_31"
+       ],
+       [],
+       [
+        "_leftInnerContainer_12jyu_3"
+       ],
+       [
+        "_left_yg1rf_39"
+       ]
+      ],
+      "classes": [],
+      "data": {},
+      "heading": "Review and send",
+      "landmark": {
+       "name": "",
+       "role": "main"
+      },
+      "layer": "document",
+      "name": "CC",
+      "rect": [
+       125,
+       501,
+       0,
+       0
+      ],
+      "role": "listbox",
+      "tag": "div",
+      "xpath": "/html/body/div[1]/main[1]/div[1]/div[2]/div[2]/div[3]/div[1]/div[1]/div[1]/div[1]/div[1]/div[1]/div[2]/div[3]/div[2]/div[1]/div[1]/div[1]"
+     },
+     "state": "invoicing.create-review"
+    }
+   ],
+   "evidenceHash": "a16a886d7fdaf367905e87e9f3eb3069ca50073221a9c296f3062b8e9aad3c06",
+   "facts": {
+    "axeSummary": "",
+    "criterion": "2.1.1",
+    "criterionName": "Keyboard",
+    "element": "listbox \"CC\"",
+    "rule": "not-reached",
+    "screen": "Series review and create",
+    "stops": "12"
+   },
+   "family": "keyboard",
+   "guidance": "High if a task cannot be completed without a mouse.",
+   "issueId": null,
+   "key": "keyboard:not-reached:27d4d5ca6a4d",
+   "measured": false,
+   "primary": "invoicing.create-series-review",
+   "proposals": [],
+   "rule": "not-reached",
+   "screens": 2,
+   "severityDefault": "medium",
+   "source": "scanner",
+   "states": [
+    "invoicing.create-series-review",
+    "invoicing.create-review"
+   ],
+   "summary": "The Tab walk visited 12 stops and never reached the listbox \"CC\", which responds to a click.",
+   "title": "Not reachable by keyboard: listbox \"CC\""
+  }
+ ],
+ "primaries": [
+  "invoicing.create-series-review"
+ ],
+ "reach": {
+  "baseUrl": "https://demo.mercury.com",
+  "data": "data",
+  "map": "build/map.json",
+  "run": "2026-10-03-1525",
+  "workspace": "a11y"
+ },
+ "run": "2026-10-03-1525"
+}

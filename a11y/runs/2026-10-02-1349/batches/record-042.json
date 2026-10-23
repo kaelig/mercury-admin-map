@@ -1,0 +1,145 @@
+{
+ "batch": "record-042",
+ "reach": {
+  "baseUrl": "https://demo.mercury.com",
+  "data": "data",
+  "map": "build/map.json",
+  "run": "2026-10-02-1349",
+  "workspace": "a11y"
+ },
+ "run": "2026-10-02-1349",
+ "states": [
+  {
+   "area": "cards",
+   "draft": "not drafted: its parent had no accepted recipe when the drafter ran",
+   "image": "screens/cards/85-assign-budget-members.png",
+   "kind": "menu",
+   "labels": [
+    "Click Assign budget to employees on a row",
+    "Open Select team members"
+   ],
+   "mutates": true,
+   "note": "Member picker open: Invite new team member, Select All team members, and people already on the budget greyed out with an 'Assigned' tag.",
+   "parent": "cards.assign-budget-modal",
+   "state": "cards.assign-budget-members",
+   "title": "Assign budget: member picker"
+  },
+  {
+   "area": "cards",
+   "draft": "not drafted: its parent had no accepted recipe when the drafter ran",
+   "image": "screens/cards/55-budget-actions-menu.png",
+   "kind": "menu",
+   "labels": [
+    "Click Next with empty form",
+    "Fill name, limit and description",
+    "Click Next",
+    "Select Jane Black and Landon Shepherd, click Next",
+    "Click Create budget",
+    "Click the ... Actions button on a budget row"
+   ],
+   "mutates": true,
+   "note": "Row overflow menu on a budget: View details, Edit budget, Archive budget.",
+   "parent": "cards.create-budget-done",
+   "state": "cards.budget-actions-menu",
+   "title": "Budget row actions menu"
+  },
+  {
+   "area": "cards",
+   "draft": "not drafted: its parent had no accepted recipe when the drafter ran",
+   "image": "screens/cards/11-edit-limit-temporary.png",
+   "kind": "form-state",
+   "labels": [
+    "Click a virtual card row",
+    "Click More",
+    "Click Edit limit",
+    "Click Limit type",
+    "Choose Weekly, click Save Limit",
+    "More > Edit limit, clear amount, click Save Limit",
+    "Type 2500, check This is a temporary change"
+   ],
+   "mutates": true,
+   "note": "Amount set to 2,500 with 'This is a temporary change' checked, revealing From/To date inputs (Sep 24, 2026 - Oct 1, 2026).",
+   "parent": "cards.edit-limit-error",
+   "state": "cards.edit-limit-temporary",
+   "title": "Edit limit: temporary change"
+  },
+  {
+   "area": "cards",
+   "draft": "cannot parse \"Clear nickname\"; a previous recorder failed: policy (now retry: policy.fixtureValues gained empty \"\", 2000000, 10000, 500, 150, card): Needs clearing the nickname (typing an empty value); the replay refuses \"\" because it is not a policy.fixtureValues entry.",
+   "image": "screens/cards/36-issue-card-errors.png",
+   "kind": "validation-error",
+   "labels": [
+    "Clear nickname, click Create card"
+   ],
+   "mutates": true,
+   "note": "Create card submitted with nickname cleared and no control type: only Control type errors ('Please complete this field'); nickname is optional and shows placeholder e.g. Lunch Card.",
+   "parent": "cards.issue-card",
+   "state": "cards.issue-card-error",
+   "title": "Create a card: missing control type"
+  },
+  {
+   "area": "cards",
+   "draft": "not drafted: its parent had no accepted recipe when the drafter ran",
+   "image": "screens/cards/75-policy-disabled.png",
+   "kind": "confirmation",
+   "labels": [
+    "Click Disable on Notes requirement",
+    "Click Yes, disable"
+   ],
+   "mutates": true,
+   "note": "Notes requirement collapses to its title with a single Enable button; no toast.",
+   "parent": "cards.policy-disable-confirm",
+   "state": "cards.policy-disabled",
+   "title": "Rule disabled"
+  },
+  {
+   "area": "cards",
+   "draft": "cannot parse \"Clear amount\"; a previous recorder failed: policy (now retry: policy.fixtureValues gained empty \"\", 2000000, 10000, 500, 150, card): Needs clearing the amount (typing an empty value); the replay refuses \"\" because it is not a policy.fixtureValues entry.",
+   "image": "screens/cards/71-policy-receipt-error.png",
+   "kind": "validation-error",
+   "labels": [
+    "Click Edit on Receipt requirement",
+    "Clear amount, click Save"
+   ],
+   "mutates": true,
+   "note": "Amount cleared: the input shows a warning icon and a 'Please complete this field' tooltip above it; Save disabled.",
+   "parent": "cards.policy-receipt-edit",
+   "state": "cards.policy-receipt-error",
+   "title": "Receipt threshold required"
+  },
+  {
+   "area": "cards",
+   "draft": "not drafted: its parent had no accepted recipe when the drafter ran",
+   "image": "screens/cards/66-submit-expense-filled.png",
+   "kind": "form-state",
+   "labels": [
+    "Click Submit expense",
+    "Click Review with empty form",
+    "Fill amount, merchant and notes"
+   ],
+   "mutates": true,
+   "note": "Amount $42.50, merchant Blue Bottle Coffee and notes entered; errors cleared.",
+   "parent": "cards.submit-expense-errors",
+   "state": "cards.submit-expense-filled",
+   "title": "Submit expense: filled"
+  },
+  {
+   "area": "cards",
+   "draft": "not drafted: its parent had no accepted recipe when the drafter ran",
+   "image": "screens/cards/22-transfer-card-dropdown.png",
+   "kind": "menu",
+   "labels": [
+    "Click a virtual card row",
+    "Click More",
+    "Click Transfer card",
+    "Click Transfer with no recipient",
+    "Open Transfer to"
+   ],
+   "mutates": true,
+   "note": "Transfer to combobox open, listing team members with name and email (Abigail Kyte, Alice Chen, Anthony Buteo...).",
+   "parent": "cards.transfer-card-error",
+   "state": "cards.transfer-card-dropdown",
+   "title": "Transfer to member list"
+  }
+ ]
+}

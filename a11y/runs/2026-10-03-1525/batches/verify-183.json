@@ -1,0 +1,1089 @@
+{
+ "area": "home",
+ "batch": "verify-183",
+ "findings": [
+  {
+   "attachments": [],
+   "attempt": 1,
+   "basis": "violation",
+   "criteria": [
+    "4.1.2"
+   ],
+   "evidence": [
+    {
+     "evidence": {
+      "aria-errormessage": [
+       "firstname-mercury-utils-id-32-errormessage"
+      ],
+      "failureSummary": "Fix all of the following:\n  aria-errormessage value `firstname-mercury-utils-id-32-errormessage` must use a technique to announce the message (e.g., aria-live, aria-describedby, role=alert, etc.)"
+     },
+     "occurrence": {
+      "ancestors": [
+       [
+        "_inputBox_q7hf7_93",
+        "_error_q7hf7_41"
+       ],
+       [
+        "_inputBoxWrapper_q7hf7_93"
+       ],
+       [
+        "_textInputWrapper_q7hf7_24"
+       ],
+       [
+        "_provideDSTextInput_q7hf7_6",
+        "_inputMargin_i6wom_19"
+       ],
+       [],
+       [],
+       [
+        "_large_kwlx6_9",
+        "_noHover_3n0se_28",
+        "_shadow_3n0se_25",
+        "_raisedBackground_3n0se_45",
+        "_card_lo4oy_4",
+        "_defaultPadding_lo4oy_27",
+        "_small_lo4oy_11"
+       ],
+       [
+        "ReactModal__Content",
+        "ReactModal__Content--after-open",
+        "_modal_lo4oy_73"
+       ]
+      ],
+      "classes": [
+       "_input_q7hf7_93"
+      ],
+      "data": {},
+      "heading": "Customize the Mercury demo",
+      "landmark": {
+       "name": "",
+       "role": "form"
+      },
+      "layer": "top",
+      "name": "First name",
+      "rect": [
+       549,
+       180,
+       342,
+       24
+      ],
+      "role": "textbox",
+      "tag": "input",
+      "xpath": "/html/body/div[15]/div[1]/div[1]/div[1]/form[1]/div[1]/div[2]/div[1]/div[1]/div[1]/input[1]"
+     },
+     "state": "home.customize-demo-invalid"
+    }
+   ],
+   "evidenceHash": "866914728190eafbb760a9d0d4ec1bacbcea9f42ef974de300e9b028b2f38e2d",
+   "facts": {
+    "announced": "textbox \"First name\" [invalid=true, errormessage=Please complete this field]",
+    "axeSummary": "aria-errormessage value `firstname-mercury-utils-id-32-errormessage` must use a technique to announce the message (e.g., aria-live, aria-describedby, role=aler…",
+    "criterion": "4.1.2",
+    "criterionName": "Name, Role, Value",
+    "element": "textbox \"First name\"",
+    "rule": "aria-valid-attr-value",
+    "screen": "Customize demo: validation errors"
+   },
+   "family": "role-state",
+   "guidance": "Low for optional ARIA or an invalid autocomplete token; high when aria-hidden hides the whole page.",
+   "issueId": null,
+   "key": "role-state:aria-valid-attr-value:022f3aecef60",
+   "measured": false,
+   "primary": "home.customize-demo-invalid",
+   "proposals": [],
+   "rule": "aria-valid-attr-value",
+   "screens": 1,
+   "severityDefault": "medium",
+   "source": "scanner",
+   "states": [
+    "home.customize-demo-invalid"
+   ],
+   "summary": "aria-valid-attr-value: announced as textbox \"First name\" [invalid=true, errormessage=Please complete this field]. aria-errormessage value `firstname-mercury-utils-id-32-errormessage` must use a technique to announce the message (e.g., aria-live, aria-describedby, role=aler…",
+   "title": "Wrong role or state: textbox \"First name\""
+  },
+  {
+   "attachments": [],
+   "attempt": 1,
+   "basis": "violation",
+   "criteria": [
+    "4.1.2"
+   ],
+   "evidence": [
+    {
+     "evidence": {
+      "aria-errormessage": [
+       "companyname-mercury-utils-id-35-errormessage"
+      ],
+      "failureSummary": "Fix all of the following:\n  aria-errormessage value `companyname-mercury-utils-id-35-errormessage` must use a technique to announce the message (e.g., aria-live, aria-describedby, role=alert, etc.)"
+     },
+     "occurrence": {
+      "ancestors": [
+       [
+        "_inputBox_q7hf7_93",
+        "_error_q7hf7_41"
+       ],
+       [
+        "_inputBoxWrapper_q7hf7_93"
+       ],
+       [
+        "_textInputWrapper_q7hf7_24"
+       ],
+       [
+        "_provideDSTextInput_q7hf7_6",
+        "_inputMargin_i6wom_19"
+       ],
+       [],
+       [],
+       [
+        "_large_kwlx6_9",
+        "_noHover_3n0se_28",
+        "_shadow_3n0se_25",
+        "_raisedBackground_3n0se_45",
+        "_card_lo4oy_4",
+        "_defaultPadding_lo4oy_27",
+        "_small_lo4oy_11"
+       ],
+       [
+        "ReactModal__Content",
+        "ReactModal__Content--after-open",
+        "_modal_lo4oy_73"
+       ]
+      ],
+      "classes": [
+       "_input_q7hf7_93"
+      ],
+      "data": {},
+      "heading": "Customize the Mercury demo",
+      "landmark": {
+       "name": "",
+       "role": "form"
+      },
+      "layer": "top",
+      "name": "Company name",
+      "rect": [
+       549,
+       492,
+       342,
+       24
+      ],
+      "role": "textbox",
+      "tag": "input",
+      "xpath": "/html/body/div[15]/div[1]/div[1]/div[1]/form[1]/div[1]/div[5]/div[1]/div[1]/div[1]/input[1]"
+     },
+     "state": "home.customize-demo-invalid"
+    }
+   ],
+   "evidenceHash": "fd615781f96f7bc9bb8b7b2b5a5b5eaf8ef7ba3ef850b3a970ad65c479ddb13d",
+   "facts": {
+    "announced": "textbox \"Company name\" [invalid=true, errormessage=Please complete this field]",
+    "axeSummary": "aria-errormessage value `companyname-mercury-utils-id-35-errormessage` must use a technique to announce the message (e.g., aria-live, aria-describedby, role=al…",
+    "criterion": "4.1.2",
+    "criterionName": "Name, Role, Value",
+    "element": "textbox \"Company name\"",
+    "rule": "aria-valid-attr-value",
+    "screen": "Customize demo: validation errors"
+   },
+   "family": "role-state",
+   "guidance": "Low for optional ARIA or an invalid autocomplete token; high when aria-hidden hides the whole page.",
+   "issueId": null,
+   "key": "role-state:aria-valid-attr-value:197091c717da",
+   "measured": false,
+   "primary": "home.customize-demo-invalid",
+   "proposals": [],
+   "rule": "aria-valid-attr-value",
+   "screens": 1,
+   "severityDefault": "medium",
+   "source": "scanner",
+   "states": [
+    "home.customize-demo-invalid"
+   ],
+   "summary": "aria-valid-attr-value: announced as textbox \"Company name\" [invalid=true, errormessage=Please complete this field]. aria-errormessage value `companyname-mercury-utils-id-35-errormessage` must use a technique to announce the message (e.g., aria-live, aria-describedby, role=al…",
+   "title": "Wrong role or state: textbox \"Company name\""
+  },
+  {
+   "attachments": [],
+   "attempt": 1,
+   "basis": "violation",
+   "criteria": [
+    "4.1.2"
+   ],
+   "evidence": [
+    {
+     "evidence": {
+      "aria-errormessage": [
+       "balance-mercury-utils-id-44-errormessage"
+      ],
+      "failureSummary": "Fix all of the following:\n  aria-errormessage value `balance-mercury-utils-id-44-errormessage` must use a technique to announce the message (e.g., aria-live, aria-describedby, role=alert, etc.)"
+     },
+     "occurrence": {
+      "ancestors": [
+       [
+        "_inputBox_q7hf7_93",
+        "_error_q7hf7_41"
+       ],
+       [
+        "_inputBoxWrapper_q7hf7_93"
+       ],
+       [
+        "_textInputWrapper_q7hf7_24"
+       ],
+       [
+        "_provideDSTextInput_q7hf7_6",
+        "_balanceInput_i6wom_23"
+       ],
+       [
+        "_inputMargin_i6wom_19"
+       ],
+       [],
+       [],
+       [
+        "_large_kwlx6_9",
+        "_noHover_3n0se_28",
+        "_shadow_3n0se_25",
+        "_raisedBackground_3n0se_45",
+        "_card_lo4oy_4",
+        "_defaultPadding_lo4oy_27",
+        "_small_lo4oy_11"
+       ]
+      ],
+      "classes": [
+       "_input_q7hf7_93"
+      ],
+      "data": {},
+      "heading": "Customize the Mercury demo",
+      "landmark": {
+       "name": "",
+       "role": "form"
+      },
+      "layer": "top",
+      "name": "",
+      "rect": [
+       564,
+       700,
+       327,
+       24
+      ],
+      "role": "textbox",
+      "tag": "input",
+      "xpath": "/html/body/div[15]/div[1]/div[1]/div[1]/form[1]/div[1]/div[7]/div[1]/div[1]/div[1]/div[1]/input[1]"
+     },
+     "state": "home.customize-demo-invalid"
+    }
+   ],
+   "evidenceHash": "43a24677c6532436f10fd965bc969704316738f3c135c866bcc6ecaf88365ad2",
+   "facts": {
+    "announced": "textbox \"\" [invalid=true, errormessage=Please complete this field]",
+    "axeSummary": "aria-errormessage value `balance-mercury-utils-id-44-errormessage` must use a technique to announce the message (e.g., aria-live, aria-describedby, role=alert,…",
+    "criterion": "4.1.2",
+    "criterionName": "Name, Role, Value",
+    "element": "textbox in \"Customize the Mercury demo\"",
+    "rule": "aria-valid-attr-value",
+    "screen": "Customize demo: validation errors"
+   },
+   "family": "role-state",
+   "guidance": "Low for optional ARIA or an invalid autocomplete token; high when aria-hidden hides the whole page.",
+   "issueId": null,
+   "key": "role-state:aria-valid-attr-value:7a838339f5b0",
+   "measured": false,
+   "primary": "home.customize-demo-invalid",
+   "proposals": [],
+   "rule": "aria-valid-attr-value",
+   "screens": 1,
+   "severityDefault": "medium",
+   "source": "scanner",
+   "states": [
+    "home.customize-demo-invalid"
+   ],
+   "summary": "aria-valid-attr-value: announced as textbox \"\" [invalid=true, errormessage=Please complete this field]. aria-errormessage value `balance-mercury-utils-id-44-errormessage` must use a technique to announce the message (e.g., aria-live, aria-describedby, role=alert,…",
+   "title": "Wrong role or state: textbox in \"Customize the Mercury demo\""
+  },
+  {
+   "attachments": [],
+   "attempt": 1,
+   "basis": "violation",
+   "criteria": [
+    "4.1.2"
+   ],
+   "evidence": [
+    {
+     "evidence": {
+      "aria-errormessage": [
+       "lastname-mercury-utils-id-33-errormessage"
+      ],
+      "failureSummary": "Fix all of the following:\n  aria-errormessage value `lastname-mercury-utils-id-33-errormessage` must use a technique to announce the message (e.g., aria-live, aria-describedby, role=alert, etc.)"
+     },
+     "occurrence": {
+      "ancestors": [
+       [
+        "_inputBox_q7hf7_93",
+        "_error_q7hf7_41"
+       ],
+       [
+        "_inputBoxWrapper_q7hf7_93"
+       ],
+       [
+        "_textInputWrapper_q7hf7_24"
+       ],
+       [
+        "_provideDSTextInput_q7hf7_6",
+        "_inputMargin_i6wom_19"
+       ],
+       [],
+       [],
+       [
+        "_large_kwlx6_9",
+        "_noHover_3n0se_28",
+        "_shadow_3n0se_25",
+        "_raisedBackground_3n0se_45",
+        "_card_lo4oy_4",
+        "_defaultPadding_lo4oy_27",
+        "_small_lo4oy_11"
+       ],
+       [
+        "ReactModal__Content",
+        "ReactModal__Content--after-open",
+        "_modal_lo4oy_73"
+       ]
+      ],
+      "classes": [
+       "_input_q7hf7_93"
+      ],
+      "data": {},
+      "heading": "Customize the Mercury demo",
+      "landmark": {
+       "name": "",
+       "role": "form"
+      },
+      "layer": "top",
+      "name": "Last name",
+      "rect": [
+       549,
+       284,
+       342,
+       24
+      ],
+      "role": "textbox",
+      "tag": "input",
+      "xpath": "/html/body/div[15]/div[1]/div[1]/div[1]/form[1]/div[1]/div[3]/div[1]/div[1]/div[1]/input[1]"
+     },
+     "state": "home.customize-demo-invalid"
+    }
+   ],
+   "evidenceHash": "7bf002ead9907de4057bd3e6f74f1360d61fdbd50c27281163e03a34590ae31c",
+   "facts": {
+    "announced": "textbox \"Last name\" [invalid=true, errormessage=Please complete this field]",
+    "axeSummary": "aria-errormessage value `lastname-mercury-utils-id-33-errormessage` must use a technique to announce the message (e.g., aria-live, aria-describedby, role=alert…",
+    "criterion": "4.1.2",
+    "criterionName": "Name, Role, Value",
+    "element": "textbox \"Last name\"",
+    "rule": "aria-valid-attr-value",
+    "screen": "Customize demo: validation errors"
+   },
+   "family": "role-state",
+   "guidance": "Low for optional ARIA or an invalid autocomplete token; high when aria-hidden hides the whole page.",
+   "issueId": null,
+   "key": "role-state:aria-valid-attr-value:d8d7c5e32d82",
+   "measured": false,
+   "primary": "home.customize-demo-invalid",
+   "proposals": [],
+   "rule": "aria-valid-attr-value",
+   "screens": 1,
+   "severityDefault": "medium",
+   "source": "scanner",
+   "states": [
+    "home.customize-demo-invalid"
+   ],
+   "summary": "aria-valid-attr-value: announced as textbox \"Last name\" [invalid=true, errormessage=Please complete this field]. aria-errormessage value `lastname-mercury-utils-id-33-errormessage` must use a technique to announce the message (e.g., aria-live, aria-describedby, role=alert…",
+   "title": "Wrong role or state: textbox \"Last name\""
+  },
+  {
+   "attachments": [],
+   "attempt": 1,
+   "basis": "violation",
+   "criteria": [
+    "4.1.2"
+   ],
+   "evidence": [
+    {
+     "evidence": {
+      "aria-errormessage": [
+       "mercury-utils-id-38-error-message"
+      ],
+      "failureSummary": "Fix all of the following:\n  aria-errormessage value `mercury-utils-id-38-error-message` must use a technique to announce the message (e.g., aria-live, aria-describedby, role=alert, etc.)"
+     },
+     "occurrence": {
+      "ancestors": [
+       [
+        "_textboxWrapper_1a7mr_158",
+        "_textboxWrapperError_1a7mr_227"
+       ],
+       [
+        "_selectWrapper_1a7mr_150"
+       ],
+       [
+        "_comboboxWrapper_1a7mr_6",
+        "_dropDown_i6wom_27",
+        "session-replay-block"
+       ],
+       [],
+       [],
+       [
+        "_large_kwlx6_9",
+        "_noHover_3n0se_28",
+        "_shadow_3n0se_25",
+        "_raisedBackground_3n0se_45",
+        "_card_lo4oy_4",
+        "_defaultPadding_lo4oy_27",
+        "_small_lo4oy_11"
+       ],
+       [
+        "ReactModal__Content",
+        "ReactModal__Content--after-open",
+        "_modal_lo4oy_73"
+       ],
+       [
+        "ReactModal__Overlay",
+        "ReactModal__Overlay--after-open",
+        "_overlay_lo4oy_89",
+        "_backgroundColor_lo4oy_103"
+       ]
+      ],
+      "classes": [
+       "_textboxInput_1a7mr_250"
+      ],
+      "data": {},
+      "heading": "Customize the Mercury demo",
+      "landmark": {
+       "name": "",
+       "role": "form"
+      },
+      "layer": "top",
+      "name": "Industry",
+      "rect": [
+       537,
+       589,
+       330,
+       38
+      ],
+      "role": "combobox",
+      "tag": "input",
+      "xpath": "/html/body/div[15]/div[1]/div[1]/div[1]/form[1]/div[1]/div[6]/div[1]/div[1]/input[1]"
+     },
+     "state": "home.customize-demo-invalid"
+    }
+   ],
+   "evidenceHash": "8307aff487eef53ab70353cc72205824045320e9fed34b67cb7779797f439f6b",
+   "facts": {
+    "announced": "combobox \"Industry\" [expanded=false, haspopup=listbox, invalid=true, errormessa…",
+    "axeSummary": "aria-errormessage value `mercury-utils-id-38-error-message` must use a technique to announce the message (e.g., aria-live, aria-describedby, role=alert, etc.)",
+    "criterion": "4.1.2",
+    "criterionName": "Name, Role, Value",
+    "element": "combobox \"Industry\"",
+    "rule": "aria-valid-attr-value",
+    "screen": "Customize demo: validation errors"
+   },
+   "family": "role-state",
+   "guidance": "Low for optional ARIA or an invalid autocomplete token; high when aria-hidden hides the whole page.",
+   "issueId": null,
+   "key": "role-state:aria-valid-attr-value:fbb7fa8a7da6",
+   "measured": false,
+   "primary": "home.customize-demo-invalid",
+   "proposals": [],
+   "rule": "aria-valid-attr-value",
+   "screens": 1,
+   "severityDefault": "medium",
+   "source": "scanner",
+   "states": [
+    "home.customize-demo-invalid"
+   ],
+   "summary": "aria-valid-attr-value: announced as combobox \"Industry\" [expanded=false, haspopup=listbox, invalid=true, errormessa…. aria-errormessage value `mercury-utils-id-38-error-message` must use a technique to announce the message (e.g., aria-live, aria-describedby, role=alert, etc.)",
+   "title": "Wrong role or state: combobox \"Industry\""
+  },
+  {
+   "attachments": [],
+   "attempt": 1,
+   "basis": "violation",
+   "criteria": [
+    "4.1.2"
+   ],
+   "evidence": [
+    {
+     "evidence": {
+      "aria-errormessage": [
+       "email-mercury-utils-id-34-errormessage"
+      ],
+      "failureSummary": "Fix all of the following:\n  aria-errormessage value `email-mercury-utils-id-34-errormessage` must use a technique to announce the message (e.g., aria-live, aria-describedby, role=alert, etc.)"
+     },
+     "occurrence": {
+      "ancestors": [
+       [
+        "_inputBox_q7hf7_93",
+        "_hasValue_q7hf7_171",
+        "_error_q7hf7_41"
+       ],
+       [
+        "_inputBoxWrapper_q7hf7_93"
+       ],
+       [
+        "_textInputWrapper_q7hf7_24"
+       ],
+       [
+        "_provideDSTextInput_q7hf7_6",
+        "_inputMargin_i6wom_19"
+       ],
+       [],
+       [],
+       [
+        "_large_kwlx6_9",
+        "_noHover_3n0se_28",
+        "_shadow_3n0se_25",
+        "_raisedBackground_3n0se_45",
+        "_card_lo4oy_4",
+        "_defaultPadding_lo4oy_27",
+        "_small_lo4oy_11"
+       ],
+       [
+        "ReactModal__Content",
+        "ReactModal__Content--after-open",
+        "_modal_lo4oy_73"
+       ]
+      ],
+      "classes": [
+       "_input_q7hf7_93"
+      ],
+      "data": {},
+      "heading": "Customize the Mercury demo",
+      "landmark": {
+       "name": "",
+       "role": "form"
+      },
+      "layer": "top",
+      "name": "Email address",
+      "rect": [
+       549,
+       388,
+       342,
+       24
+      ],
+      "role": "textbox",
+      "tag": "input",
+      "xpath": "/html/body/div[15]/div[1]/div[1]/div[1]/form[1]/div[1]/div[4]/div[1]/div[1]/div[1]/input[1]"
+     },
+     "state": "home.customize-demo-invalid"
+    }
+   ],
+   "evidenceHash": "f30c6161c8f15e3db46f05d8abb920da30cb8e5878bb849009ff57bfe2382140",
+   "facts": {
+    "announced": "textbox \"Email address\" [invalid=true, errormessage=Please submit a valid email]",
+    "axeSummary": "aria-errormessage value `email-mercury-utils-id-34-errormessage` must use a technique to announce the message (e.g., aria-live, aria-describedby, role=alert, e…",
+    "criterion": "4.1.2",
+    "criterionName": "Name, Role, Value",
+    "element": "textbox \"Email address\"",
+    "rule": "aria-valid-attr-value",
+    "screen": "Customize demo: validation errors"
+   },
+   "family": "role-state",
+   "guidance": "Low for optional ARIA or an invalid autocomplete token; high when aria-hidden hides the whole page.",
+   "issueId": null,
+   "key": "role-state:aria-valid-attr-value:fdb753251b2d",
+   "measured": false,
+   "primary": "home.customize-demo-invalid",
+   "proposals": [],
+   "rule": "aria-valid-attr-value",
+   "screens": 1,
+   "severityDefault": "medium",
+   "source": "scanner",
+   "states": [
+    "home.customize-demo-invalid"
+   ],
+   "summary": "aria-valid-attr-value: announced as textbox \"Email address\" [invalid=true, errormessage=Please submit a valid email]. aria-errormessage value `email-mercury-utils-id-34-errormessage` must use a technique to announce the message (e.g., aria-live, aria-describedby, role=alert, e…",
+   "title": "Wrong role or state: textbox \"Email address\""
+  },
+  {
+   "attachments": [],
+   "attempt": 1,
+   "basis": "failure",
+   "criteria": [
+    "4.1.3"
+   ],
+   "evidence": [
+    {
+     "evidence": {
+      "focus": {
+       "ancestors": [
+        [
+         "_container_1ieyt_1",
+         "_rightAlign_1ieyt_9",
+         "_buttons_i6wom_1"
+        ],
+        [],
+        [],
+        [
+         "_large_kwlx6_9",
+         "_noHover_3n0se_28",
+         "_shadow_3n0se_25",
+         "_raisedBackground_3n0se_45",
+         "_card_lo4oy_4",
+         "_defaultPadding_lo4oy_27",
+         "_small_lo4oy_11"
+        ],
+        [
+         "ReactModal__Content",
+         "ReactModal__Content--after-open",
+         "_modal_lo4oy_73"
+        ],
+        [
+         "ReactModal__Overlay",
+         "ReactModal__Overlay--after-open",
+         "_overlay_lo4oy_89",
+         "_backgroundColor_lo4oy_103"
+        ],
+        [
+         "ReactModalPortal"
+        ]
+       ],
+       "classes": [
+        "_button-wrapper_1rzdg_13",
+        "_button_1rzdg_13",
+        "_primary_1rzdg_101",
+        "_disabled_1rzdg_20",
+        "_small_1rzdg_88"
+       ],
+       "data": {},
+       "heading": "Customize the Mercury demo",
+       "landmark": {
+        "name": "",
+        "role": "form"
+       },
+       "layer": "top",
+       "name": "Submit",
+       "rect": [
+        787,
+        820,
+        117,
+        40
+       ],
+       "role": "button",
+       "tag": "button",
+       "xpath": "/html/body/div[15]/div[1]/div[1]/div[1]/form[1]/div[1]/div[8]/button[2]"
+      },
+      "focused": false,
+      "message": "Please complete this field",
+      "region": null
+     },
+     "occurrence": {
+      "ancestors": [
+       [
+        "_textInputWrapper_q7hf7_24"
+       ],
+       [
+        "_provideDSTextInput_q7hf7_6",
+        "_balanceInput_i6wom_23"
+       ],
+       [
+        "_inputMargin_i6wom_19"
+       ],
+       [],
+       [],
+       [
+        "_large_kwlx6_9",
+        "_noHover_3n0se_28",
+        "_shadow_3n0se_25",
+        "_raisedBackground_3n0se_45",
+        "_card_lo4oy_4",
+        "_defaultPadding_lo4oy_27",
+        "_small_lo4oy_11"
+       ],
+       [
+        "ReactModal__Content",
+        "ReactModal__Content--after-open",
+        "_modal_lo4oy_73"
+       ],
+       [
+        "ReactModal__Overlay",
+        "ReactModal__Overlay--after-open",
+        "_overlay_lo4oy_89",
+        "_backgroundColor_lo4oy_103"
+       ]
+      ],
+      "classes": [
+       "_defaultErrorContainer_1tnh5_1",
+       "_errorMessage_q7hf7_303"
+      ],
+      "data": {
+       "data-session-replay-unmask": "true"
+      },
+      "heading": "Customize the Mercury demo",
+      "landmark": {
+       "name": "",
+       "role": "form"
+      },
+      "layer": "top",
+      "name": "",
+      "rect": [
+       536,
+       736,
+       368,
+       20
+      ],
+      "role": "",
+      "tag": "div",
+      "xpath": "/html/body/div[15]/div[1]/div[1]/div[1]/form[1]/div[1]/div[7]/div[1]/div[1]/div[2]"
+     },
+     "state": "home.customize-demo-invalid"
+    }
+   ],
+   "evidenceHash": "da26ed526bc965121640f5e45553d4f9d68238403f682eba2fa55cbbaeeeb63f",
+   "facts": {
+    "criterion": "4.1.3",
+    "criterionName": "Status Messages",
+    "focus": "button \"Submit\"",
+    "message": "\"Please complete this field\"",
+    "screen": "Customize demo: validation errors"
+   },
+   "family": "status-message",
+   "guidance": "High when it is the only confirmation of a money movement.",
+   "issueId": null,
+   "key": "status-message:status-not-announced:2e22b82e117b",
+   "measured": false,
+   "primary": "home.customize-demo-invalid",
+   "proposals": [],
+   "rule": "status-not-announced",
+   "screens": 1,
+   "severityDefault": "medium",
+   "source": "scanner",
+   "states": [
+    "home.customize-demo-invalid"
+   ],
+   "summary": "\"Please complete this field\" appeared outside any live region, alert or status role that existed before it, and focus stayed on the button \"Submit\".",
+   "title": "Status message not announced: \"Please complete this field\""
+  },
+  {
+   "attachments": [],
+   "attempt": 1,
+   "basis": "failure",
+   "criteria": [
+    "4.1.3"
+   ],
+   "evidence": [
+    {
+     "evidence": {
+      "focus": {
+       "ancestors": [
+        [
+         "_container_1ieyt_1",
+         "_rightAlign_1ieyt_9",
+         "_buttons_i6wom_1"
+        ],
+        [],
+        [],
+        [
+         "_large_kwlx6_9",
+         "_noHover_3n0se_28",
+         "_shadow_3n0se_25",
+         "_raisedBackground_3n0se_45",
+         "_card_lo4oy_4",
+         "_defaultPadding_lo4oy_27",
+         "_small_lo4oy_11"
+        ],
+        [
+         "ReactModal__Content",
+         "ReactModal__Content--after-open",
+         "_modal_lo4oy_73"
+        ],
+        [
+         "ReactModal__Overlay",
+         "ReactModal__Overlay--after-open",
+         "_overlay_lo4oy_89",
+         "_backgroundColor_lo4oy_103"
+        ],
+        [
+         "ReactModalPortal"
+        ]
+       ],
+       "classes": [
+        "_button-wrapper_1rzdg_13",
+        "_button_1rzdg_13",
+        "_primary_1rzdg_101",
+        "_disabled_1rzdg_20",
+        "_small_1rzdg_88"
+       ],
+       "data": {},
+       "heading": "Customize the Mercury demo",
+       "landmark": {
+        "name": "",
+        "role": "form"
+       },
+       "layer": "top",
+       "name": "Submit",
+       "rect": [
+        787,
+        820,
+        117,
+        40
+       ],
+       "role": "button",
+       "tag": "button",
+       "xpath": "/html/body/div[15]/div[1]/div[1]/div[1]/form[1]/div[1]/div[8]/button[2]"
+      },
+      "focused": false,
+      "message": "Please complete this field",
+      "region": null
+     },
+     "occurrence": {
+      "ancestors": [
+       [
+        "_comboboxWrapper_1a7mr_6",
+        "_dropDown_i6wom_27",
+        "session-replay-block"
+       ],
+       [],
+       [],
+       [
+        "_large_kwlx6_9",
+        "_noHover_3n0se_28",
+        "_shadow_3n0se_25",
+        "_raisedBackground_3n0se_45",
+        "_card_lo4oy_4",
+        "_defaultPadding_lo4oy_27",
+        "_small_lo4oy_11"
+       ],
+       [
+        "ReactModal__Content",
+        "ReactModal__Content--after-open",
+        "_modal_lo4oy_73"
+       ],
+       [
+        "ReactModal__Overlay",
+        "ReactModal__Overlay--after-open",
+        "_overlay_lo4oy_89",
+        "_backgroundColor_lo4oy_103"
+       ],
+       [
+        "ReactModalPortal"
+       ]
+      ],
+      "classes": [
+       "_defaultErrorContainer_1tnh5_1",
+       "_errorMessage_1a7mr_448"
+      ],
+      "data": {
+       "data-session-replay-unmask": "true"
+      },
+      "heading": "Customize the Mercury demo",
+      "landmark": {
+       "name": "",
+       "role": "form"
+      },
+      "layer": "top",
+      "name": "",
+      "rect": [
+       536,
+       632,
+       368,
+       20
+      ],
+      "role": "",
+      "tag": "div",
+      "xpath": "/html/body/div[15]/div[1]/div[1]/div[1]/form[1]/div[1]/div[6]/div[2]"
+     },
+     "state": "home.customize-demo-invalid"
+    }
+   ],
+   "evidenceHash": "da26ed526bc965121640f5e45553d4f9d68238403f682eba2fa55cbbaeeeb63f",
+   "facts": {
+    "criterion": "4.1.3",
+    "criterionName": "Status Messages",
+    "focus": "button \"Submit\"",
+    "message": "\"Please complete this field\"",
+    "screen": "Customize demo: validation errors"
+   },
+   "family": "status-message",
+   "guidance": "High when it is the only confirmation of a money movement.",
+   "issueId": null,
+   "key": "status-message:status-not-announced:30e8383d7c9d",
+   "measured": false,
+   "primary": "home.customize-demo-invalid",
+   "proposals": [],
+   "rule": "status-not-announced",
+   "screens": 1,
+   "severityDefault": "medium",
+   "source": "scanner",
+   "states": [
+    "home.customize-demo-invalid"
+   ],
+   "summary": "\"Please complete this field\" appeared outside any live region, alert or status role that existed before it, and focus stayed on the button \"Submit\".",
+   "title": "Status message not announced: \"Please complete this field\""
+  },
+  {
+   "attachments": [],
+   "attempt": 1,
+   "basis": "failure",
+   "criteria": [
+    "4.1.3"
+   ],
+   "evidence": [
+    {
+     "evidence": {
+      "focus": {
+       "ancestors": [
+        [
+         "_container_1ieyt_1",
+         "_rightAlign_1ieyt_9",
+         "_buttons_i6wom_1"
+        ],
+        [],
+        [],
+        [
+         "_large_kwlx6_9",
+         "_noHover_3n0se_28",
+         "_shadow_3n0se_25",
+         "_raisedBackground_3n0se_45",
+         "_card_lo4oy_4",
+         "_defaultPadding_lo4oy_27",
+         "_small_lo4oy_11"
+        ],
+        [
+         "ReactModal__Content",
+         "ReactModal__Content--after-open",
+         "_modal_lo4oy_73"
+        ],
+        [
+         "ReactModal__Overlay",
+         "ReactModal__Overlay--after-open",
+         "_overlay_lo4oy_89",
+         "_backgroundColor_lo4oy_103"
+        ],
+        [
+         "ReactModalPortal"
+        ]
+       ],
+       "classes": [
+        "_button-wrapper_1rzdg_13",
+        "_button_1rzdg_13",
+        "_primary_1rzdg_101",
+        "_disabled_1rzdg_20",
+        "_small_1rzdg_88"
+       ],
+       "data": {},
+       "heading": "Customize the Mercury demo",
+       "landmark": {
+        "name": "",
+        "role": "form"
+       },
+       "layer": "top",
+       "name": "Submit",
+       "rect": [
+        787,
+        820,
+        117,
+        40
+       ],
+       "role": "button",
+       "tag": "button",
+       "xpath": "/html/body/div[15]/div[1]/div[1]/div[1]/form[1]/div[1]/div[8]/button[2]"
+      },
+      "focused": false,
+      "message": "Please complete this field",
+      "region": null
+     },
+     "occurrence": {
+      "ancestors": [
+       [
+        "_textInputWrapper_q7hf7_24"
+       ],
+       [
+        "_provideDSTextInput_q7hf7_6",
+        "_inputMargin_i6wom_19"
+       ],
+       [],
+       [],
+       [
+        "_large_kwlx6_9",
+        "_noHover_3n0se_28",
+        "_shadow_3n0se_25",
+        "_raisedBackground_3n0se_45",
+        "_card_lo4oy_4",
+        "_defaultPadding_lo4oy_27",
+        "_small_lo4oy_11"
+       ],
+       [
+        "ReactModal__Content",
+        "ReactModal__Content--after-open",
+        "_modal_lo4oy_73"
+       ],
+       [
+        "ReactModal__Overlay",
+        "ReactModal__Overlay--after-open",
+        "_overlay_lo4oy_89",
+        "_backgroundColor_lo4oy_103"
+       ],
+       [
+        "ReactModalPortal"
+       ]
+      ],
+      "classes": [
+       "_defaultErrorContainer_1tnh5_1",
+       "_errorMessage_q7hf7_303"
+      ],
+      "data": {
+       "data-session-replay-unmask": "true"
+      },
+      "heading": "Customize the Mercury demo",
+      "landmark": {
+       "name": "",
+       "role": "form"
+      },
+      "layer": "top",
+      "name": "",
+      "rect": [
+       536,
+       216,
+       368,
+       20
+      ],
+      "role": "",
+      "tag": "div",
+      "xpath": "/html/body/div[15]/div[1]/div[1]/div[1]/form[1]/div[1]/div[2]/div[1]/div[2]"
+     },
+     "state": "home.customize-demo-invalid"
+    }
+   ],
+   "evidenceHash": "da26ed526bc965121640f5e45553d4f9d68238403f682eba2fa55cbbaeeeb63f",
+   "facts": {
+    "criterion": "4.1.3",
+    "criterionName": "Status Messages",
+    "focus": "button \"Submit\"",
+    "message": "\"Please complete this field\"",
+    "screen": "Customize demo: validation errors"
+   },
+   "family": "status-message",
+   "guidance": "High when it is the only confirmation of a money movement.",
+   "issueId": null,
+   "key": "status-message:status-not-announced:4e64f6fe2438",
+   "measured": false,
+   "primary": "home.customize-demo-invalid",
+   "proposals": [],
+   "rule": "status-not-announced",
+   "screens": 1,
+   "severityDefault": "medium",
+   "source": "scanner",
+   "states": [
+    "home.customize-demo-invalid"
+   ],
+   "summary": "\"Please complete this field\" appeared outside any live region, alert or status role that existed before it, and focus stayed on the button \"Submit\".",
+   "title": "Status message not announced: \"Please complete this field\""
+  }
+ ],
+ "primaries": [
+  "home.customize-demo-invalid"
+ ],
+ "reach": {
+  "baseUrl": "https://demo.mercury.com",
+  "data": "data",
+  "map": "build/map.json",
+  "run": "2026-10-03-1525",
+  "workspace": "a11y"
+ },
+ "run": "2026-10-03-1525"
+}

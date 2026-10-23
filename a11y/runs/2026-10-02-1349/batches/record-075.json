@@ -1,0 +1,176 @@
+{
+ "batch": "record-075",
+ "reach": {
+  "baseUrl": "https://demo.mercury.com",
+  "data": "data",
+  "map": "build/map.json",
+  "run": "2026-10-02-1349",
+  "workspace": "a11y"
+ },
+ "run": "2026-10-02-1349",
+ "states": [
+  {
+   "area": "books",
+   "draft": "not drafted: its parent had no accepted recipe when the drafter ran",
+   "image": "screens/books/14-new-journal-entry.png",
+   "kind": "drawer",
+   "labels": [
+    "Toggle Books",
+    "Click Try Mercury Books",
+    "Books created",
+    "Dismiss spotlight",
+    "Click Add",
+    "Journal entry"
+   ],
+   "mutates": false,
+   "note": "Right drawer with Date, Description and a spreadsheet-style Line items grid (Ledger account, Debit, Credit, Memo, Tags) with two empty lines and totals row.",
+   "parent": "books.add-menu",
+   "state": "books.je-create",
+   "title": "Create journal entry drawer"
+  },
+  {
+   "area": "books",
+   "draft": "not drafted: its parent had no accepted recipe when the drafter ran",
+   "image": "screens/books/17-je-date-picker.png",
+   "kind": "popover",
+   "labels": [
+    "Toggle Books",
+    "Click Try Mercury Books",
+    "Books created",
+    "Dismiss spotlight",
+    "Click Add",
+    "Journal entry",
+    "Open Date"
+   ],
+   "mutates": false,
+   "note": "Calendar popover for the Date field, defaulting to Sep 25, 2026.",
+   "parent": "books.je-create",
+   "state": "books.je-date-picker",
+   "title": "Journal entry date picker"
+  },
+  {
+   "area": "books",
+   "draft": "not drafted: its parent had no accepted recipe when the drafter ran",
+   "image": "screens/books/18-je-filling.png",
+   "kind": "form-state",
+   "labels": [
+    "Toggle Books",
+    "Click Try Mercury Books",
+    "Books created",
+    "Dismiss spotlight",
+    "Click Add",
+    "Journal entry",
+    "Open Date",
+    "Pick Sep 24"
+   ],
+   "mutates": false,
+   "note": "Rent debit 1,250.00 and Cash and Cash Equivalents credit 1,250.00, totals balanced.",
+   "parent": "books.je-date-picker",
+   "state": "books.je-filled",
+   "title": "Balanced journal entry"
+  },
+  {
+   "area": "books",
+   "draft": "not drafted: its parent had no accepted recipe when the drafter ran",
+   "image": "screens/books/19-je-saved.png",
+   "kind": "confirmation",
+   "labels": [
+    "Toggle Books",
+    "Click Try Mercury Books",
+    "Books created",
+    "Dismiss spotlight",
+    "Click Add",
+    "Journal entry",
+    "Open Date",
+    "Pick Sep 24",
+    "Save"
+   ],
+   "mutates": true,
+   "note": "After Save a \"Successfully created the journal entry\" toast appears and the drawer turns into the read-only entry with edit, delete and duplicate icons.",
+   "parent": "books.je-filled",
+   "state": "books.je-detail",
+   "title": "Journal entry created"
+  },
+  {
+   "area": "books",
+   "draft": "not drafted: its parent had no accepted recipe when the drafter ran",
+   "image": "screens/books/15-journal-entry-empty-save.png",
+   "kind": "validation-error",
+   "labels": [
+    "Toggle Books",
+    "Click Try Mercury Books",
+    "Books created",
+    "Dismiss spotlight",
+    "Click Add",
+    "Journal entry",
+    "Save with no lines"
+   ],
+   "mutates": true,
+   "note": "Saving the blank entry shows a single \"Please complete all required fields.\" line under the grid; no field is marked.",
+   "parent": "books.je-create",
+   "state": "books.je-empty-save",
+   "title": "Journal entry empty-save error"
+  },
+  {
+   "area": "books",
+   "draft": "not drafted: its parent had no accepted recipe when the drafter ran",
+   "image": "screens/books/16-je-ledger-picker.png",
+   "kind": "menu",
+   "labels": [
+    "Toggle Books",
+    "Click Try Mercury Books",
+    "Books created",
+    "Dismiss spotlight",
+    "Click Add",
+    "Journal entry",
+    "Edit Ledger account cell"
+   ],
+   "mutates": false,
+   "note": "Editing a Ledger account cell opens a narrow grouped combobox; typing \"Rent\" ranks Other Current Assets first and the exact Rent match last.",
+   "parent": "books.je-create",
+   "state": "books.je-ledger-picker",
+   "title": "Ledger account picker"
+  },
+  {
+   "area": "books",
+   "draft": "not drafted: its parent had no accepted recipe when the drafter ran",
+   "image": "screens/books/30-cash-flow-analysis.png",
+   "kind": "page",
+   "labels": [
+    "Toggle Books",
+    "Click Try Mercury Books",
+    "Books created",
+    "Dismiss spotlight",
+    "Sidebar: Reports",
+    "Sidebar: Profit & Loss",
+    "Sidebar: Cash Flow Analysis"
+   ],
+   "mutates": false,
+   "note": "Ending balance line and Movement bars, then a per-account monthly grid starting with Starting Balance.",
+   "parent": "books.profit-loss",
+   "state": "books.cash-flow",
+   "title": "Cash Flow Analysis"
+  },
+  {
+   "area": "books",
+   "draft": "not drafted: its parent had no accepted recipe when the drafter ran",
+   "image": "screens/books/31-general-ledger.png",
+   "kind": "page",
+   "labels": [
+    "Toggle Books",
+    "Click Try Mercury Books",
+    "Books created",
+    "Dismiss spotlight",
+    "Sidebar: Reports",
+    "Sidebar: Profit & Loss",
+    "Sidebar: Cash Flow Analysis",
+    "Sidebar: General Ledger"
+   ],
+   "mutates": false,
+   "note": "This Month filter, grid of Date, Ledger account, Contra accounts, Memo, Vendor / customer, Debit, Credit.",
+   "parent": "books.cash-flow",
+   "state": "books.general-ledger",
+   "title": "General Ledger"
+  }
+ ]
+}

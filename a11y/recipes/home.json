@@ -1,0 +1,4803 @@
+{
+ "home.account-row-tooltip": {
+  "checked": "2026-10-02-1349",
+  "fingerprint": null,
+  "hop": [
+   {
+    "hover": {
+     "name": "Ops / Payroll <amount>",
+     "role": "link"
+    }
+   }
+  ],
+  "mutates": false,
+  "parent": "home.index",
+  "recordedBy": "agent",
+  "review": null,
+  "similarity": null,
+  "source": null,
+  "status": "draft"
+ },
+ "home.accounts-kebab": {
+  "checked": "2026-10-02-1349",
+  "fingerprint": {
+   "controls": [
+    "Hide Bill Pay",
+    "Hide Credit Card",
+    "Hide Invoicing",
+    "Request feature",
+    "Show Dispute Status"
+   ],
+   "headings": [],
+   "path": "/dashboard",
+   "structure": "menu",
+   "top": {
+    "name": "Customize",
+    "role": "menu"
+   }
+  },
+  "hop": [
+   {
+    "click": {
+     "css": "[class*=\"_menuButton_\"]:has([data-icon=\"ellipsis-vertical\"])",
+     "index": 0
+    }
+   }
+  ],
+  "mutates": false,
+  "parent": "home.index",
+  "recordedBy": "agent",
+  "review": null,
+  "similarity": 0.933,
+  "source": "7d66b465691c96eaa86b0633b7ce7cef53811ec5",
+  "status": "accepted"
+ },
+ "home.appearance-submenu": {
+  "checked": "2026-10-02-1349",
+  "fingerprint": {
+   "controls": [
+    "Dark mode",
+    "Light mode",
+    "System default We’ll match your system preferences"
+   ],
+   "headings": [],
+   "path": "/dashboard",
+   "structure": "menu",
+   "top": {
+    "name": "Appearance System default",
+    "role": "menu"
+   }
+  },
+  "hop": [
+   {
+    "hover": {
+     "name": "Appearance <n>",
+     "role": "menuitem"
+    }
+   }
+  ],
+  "mutates": false,
+  "parent": "home.avatar-menu",
+  "recordedBy": "agent",
+  "review": null,
+  "similarity": 0.9769,
+  "source": "dbc423721e6dac8d286e9e09e3ea3d9c99f75846",
+  "status": "accepted"
+ },
+ "home.avatar-menu": {
+  "checked": "2026-10-02-1349",
+  "fingerprint": {
+   "controls": [
+    "Appearance System default",
+    "Log out",
+    "Notifications",
+    "Perks",
+    "Privacy",
+    "Profile",
+    "Security"
+   ],
+   "headings": [],
+   "path": "/dashboard",
+   "structure": "menu",
+   "top": {
+    "name": "",
+    "role": "menu"
+   }
+  },
+  "hop": [
+   {
+    "click": {
+     "css": "[class*=\"_menuButton_\"]",
+     "index": 3
+    }
+   }
+  ],
+  "mutates": false,
+  "parent": "home.index",
+  "recordedBy": "agent",
+  "review": null,
+  "similarity": 0.9903,
+  "source": "9bad67c87b07d25bc75e872e1ccde078d9097ec8",
+  "status": "accepted"
+ },
+ "home.balance-365": {
+  "checked": "2026-10-02-1349",
+  "fingerprint": {
+   "controls": [
+    "+<n> View all accounts",
+    "<date>",
+    "AP <amount>",
+    "AR <amount>",
+    "Account Click to sort",
+    "Accounting",
+    "Accounts",
+    "Amount Click to sort",
+    "Balance graph",
+    "Balance table",
+    "Banking",
+    "Bill Pay",
+    "Books",
+    "Cards",
+    "Command New",
+    "Credit Card",
+    "Credit Card <amount>",
+    "Customize",
+    "Customize your experience",
+    "Date Click to sort",
+    "Deposit",
+    "Google <amount>",
+    "Home",
+    "Insights",
+    "Invoicing",
+    "Last <n> days",
+    "Learn about bookmarks",
+    "Lighthouse Properties #<n> <amount>",
+    "Mercury Demo Pro",
+    "Milgram Brokerage <amount>",
+    "Monthly money in",
+    "Monthly money out",
+    "Move money",
+    "My transactions",
+    "Navigate to Settings",
+    "Office Stop Co. <amount>",
+    "Open account",
+    "Operating expenses",
+    "Ops / Payroll <amount>",
+    "Orange, Inc. <amount>",
+    "Pay",
+    "Payments",
+    "Recent",
+    "Remove bookmark",
+    "Reorder Bill Pay bookmark",
+    "Reorder Credit Card bookmark",
+    "Reorder Insights bookmark",
+    "Reorder Ops / Payroll bookmark",
+    "Request",
+    "Search for anything",
+    "Send",
+    "Tasks <n>",
+    "Team Spend",
+    "To/From Click to sort",
+    "Toggle Private Mode",
+    "Transactions",
+    "Transfer",
+    "Treasury <amount>",
+    "Upload bill",
+    "View",
+    "View all",
+    "Viewing as Admin",
+    "updates"
+   ],
+   "headings": [
+    "Welcome, Jane"
+   ],
+   "path": "/dashboard",
+   "structure": "document",
+   "top": {
+    "name": "",
+    "role": "document"
+   }
+  },
+  "hop": [
+   {
+    "click": {
+     "name": "Last <n> days",
+     "role": "button"
+    }
+   }
+  ],
+  "mutates": false,
+  "parent": "home.date-range-menu",
+  "recordedBy": "draft",
+  "review": null,
+  "similarity": 0.9492,
+  "source": "48d5bc3c676695cec7cf03136eda0cb99997b348",
+  "status": "accepted"
+ },
+ "home.balance-graph-hover": {
+  "checked": "2026-10-02-1349",
+  "fingerprint": {
+   "controls": [
+    "+<n> View all accounts",
+    "<date>",
+    "AP <amount>",
+    "AR <amount>",
+    "Account Click to sort",
+    "Accounting",
+    "Accounts",
+    "Amount Click to sort",
+    "Balance graph",
+    "Balance table",
+    "Banking",
+    "Bill Pay",
+    "Books",
+    "Cards",
+    "Command New",
+    "Credit Card",
+    "Credit Card <amount>",
+    "Customize",
+    "Customize your experience",
+    "Date Click to sort",
+    "Deposit",
+    "Google <amount>",
+    "Home",
+    "Insights",
+    "Invoicing",
+    "Learn about bookmarks",
+    "Lighthouse Properties #<n> <amount>",
+    "Mercury Demo Pro",
+    "Milgram Brokerage <amount>",
+    "Monarch Books <amount>",
+    "Monthly money in",
+    "Monthly money out",
+    "Move money",
+    "My transactions",
+    "Navigate to Settings",
+    "Open account",
+    "Operating expenses",
+    "Ops / Payroll <amount>",
+    "Orange, Inc. <amount>",
+    "Pay",
+    "Payments",
+    "Recent",
+    "Remove bookmark",
+    "Reorder Bill Pay bookmark",
+    "Reorder Credit Card bookmark",
+    "Reorder Insights bookmark",
+    "Reorder Ops / Payroll bookmark",
+    "Request",
+    "Search for anything",
+    "Send",
+    "Tasks <n>",
+    "Team Spend",
+    "To/From Click to sort",
+    "Toggle Private Mode",
+    "Transactions",
+    "Transfer",
+    "Treasury <amount>",
+    "Upload bill",
+    "View",
+    "View all",
+    "Viewing as Admin",
+    "updates"
+   ],
+   "headings": [
+    "Welcome, Jane"
+   ],
+   "path": "/dashboard",
+   "structure": "document",
+   "top": {
+    "name": "",
+    "role": "document"
+   }
+  },
+  "hop": [
+   {
+    "hover": {
+     "css": "svg[class*=\"_graph_\"]"
+    }
+   }
+  ],
+  "mutates": false,
+  "parent": "home.index",
+  "recordedBy": "agent",
+  "review": null,
+  "similarity": 0.9829,
+  "source": "0d23981645cb70a09dbd21180ece64d8cbc640c3",
+  "status": "accepted"
+ },
+ "home.balance-table": {
+  "checked": "2026-10-02-1349",
+  "fingerprint": {
+   "controls": [
+    "+<n> View all accounts",
+    "<date>",
+    "AP <amount>",
+    "AR <amount>",
+    "Account Click to sort",
+    "Accounting",
+    "Accounts",
+    "Amount Click to sort",
+    "Balance graph",
+    "Balance table",
+    "Banking",
+    "Bill Pay",
+    "Books",
+    "Cards",
+    "Command New",
+    "Credit Card",
+    "Credit Card <amount>",
+    "Customize",
+    "Customize your experience",
+    "Date Click to sort",
+    "Deposit",
+    "Google <amount>",
+    "Home",
+    "Insights",
+    "Invoicing",
+    "Learn about bookmarks",
+    "Lighthouse Properties #<n> <amount>",
+    "Mercury Demo Pro",
+    "Milgram Brokerage <amount>",
+    "Monarch Books <amount>",
+    "Monthly money in",
+    "Monthly money out",
+    "Move money",
+    "My transactions",
+    "Navigate to Settings",
+    "Open account",
+    "Operating expenses",
+    "Ops / Payroll <amount>",
+    "Orange, Inc. <amount>",
+    "Pay",
+    "Payments",
+    "Pending deposits",
+    "Pending transfers",
+    "Recent",
+    "Remove bookmark",
+    "Reorder Bill Pay bookmark",
+    "Reorder Credit Card bookmark",
+    "Reorder Insights bookmark",
+    "Reorder Ops / Payroll bookmark",
+    "Request",
+    "Search for anything",
+    "Send",
+    "Tasks <n>",
+    "Team Spend",
+    "To/From Click to sort",
+    "Toggle Private Mode",
+    "Total available",
+    "Transactions",
+    "Transfer",
+    "Treasury <amount>",
+    "Undo",
+    "Upload bill",
+    "View",
+    "View all",
+    "Viewing as Admin",
+    "updates"
+   ],
+   "headings": [
+    "Welcome, Jane"
+   ],
+   "path": "/dashboard",
+   "structure": "document",
+   "top": {
+    "name": "",
+    "role": "document"
+   }
+  },
+  "hop": [
+   {
+    "click": {
+     "name": "Customize",
+     "role": "button"
+    }
+   },
+   {
+    "click": {
+     "name": "Hide Dispute Status",
+     "role": "menuitem"
+    }
+   },
+   {
+    "click": {
+     "name": "Balance table",
+     "role": "button"
+    }
+   }
+  ],
+  "mutates": false,
+  "parent": "home.index-disputes",
+  "recordedBy": "agent",
+  "review": null,
+  "similarity": 0.9755,
+  "source": "73a8f8f76db7a9e5da1f655f526f8c00489ec346",
+  "status": "accepted"
+ },
+ "home.bill-pay-kebab": {
+  "checked": "2026-10-02-1349",
+  "fingerprint": {
+   "controls": [
+    "Hide from Home",
+    "Settings"
+   ],
+   "headings": [],
+   "path": "/dashboard",
+   "structure": "menu",
+   "top": {
+    "name": "",
+    "role": "menu"
+   }
+  },
+  "hop": [
+   {
+    "click": {
+     "css": "[class*=\"_menuButton_\"]",
+     "index": 8
+    }
+   }
+  ],
+  "mutates": false,
+  "parent": "home.index",
+  "recordedBy": "agent",
+  "review": null,
+  "similarity": 0.9606,
+  "source": "64b2df68ef8d4060140e72680e1ba5858c4b4c7a",
+  "status": "accepted"
+ },
+ "home.bookmark-hover": {
+  "checked": "2026-10-02-1349",
+  "fingerprint": {
+   "controls": [
+    "+<n> View all accounts",
+    "<date>",
+    "AP <amount>",
+    "AR <amount>",
+    "Account Click to sort",
+    "Accounting",
+    "Accounts",
+    "Amount Click to sort",
+    "Balance graph",
+    "Balance table",
+    "Banking",
+    "Bill Pay",
+    "Books",
+    "Cards",
+    "Command New",
+    "Credit Card",
+    "Credit Card <amount>",
+    "Customize",
+    "Customize your experience",
+    "Date Click to sort",
+    "Deposit",
+    "Google <amount>",
+    "Home",
+    "Insights",
+    "Invoicing",
+    "Last <n> days",
+    "Learn about bookmarks",
+    "Lighthouse Properties #<n> <amount>",
+    "Mercury Demo Pro",
+    "Milgram Brokerage <amount>",
+    "Monarch Books <amount>",
+    "Monthly money in",
+    "Monthly money out",
+    "Move money",
+    "My transactions",
+    "Navigate to Settings",
+    "Open account",
+    "Operating expenses",
+    "Ops / Payroll <amount>",
+    "Orange, Inc. <amount>",
+    "Pay",
+    "Payments",
+    "Recent",
+    "Remove bookmark",
+    "Reorder Bill Pay bookmark",
+    "Reorder Credit Card bookmark",
+    "Reorder Insights bookmark",
+    "Reorder Ops / Payroll bookmark",
+    "Request",
+    "Search for anything",
+    "Send",
+    "Tasks <n>",
+    "Team Spend",
+    "To/From Click to sort",
+    "Toggle Private Mode",
+    "Transactions",
+    "Transfer",
+    "Treasury <amount>",
+    "Upload bill",
+    "View",
+    "View all",
+    "Viewing as Admin",
+    "updates"
+   ],
+   "headings": [
+    "Welcome, Jane"
+   ],
+   "path": "/dashboard",
+   "structure": "document",
+   "top": {
+    "name": "",
+    "role": "document"
+   }
+  },
+  "hop": [
+   {
+    "hover": {
+     "index": 1,
+     "name": "Credit Card",
+     "role": "link"
+    }
+   }
+  ],
+  "mutates": false,
+  "parent": "home.index",
+  "recordedBy": "agent",
+  "review": null,
+  "similarity": 0.9878,
+  "source": "63adeba60b75f38592a58bf80517269feba0cd55",
+  "status": "accepted"
+ },
+ "home.bookmark-reordered": {
+  "checked": "2026-10-02-1349",
+  "fingerprint": {
+   "controls": [
+    "+<n> View all accounts",
+    "<date>",
+    "AP <amount>",
+    "AR <amount>",
+    "Account Click to sort",
+    "Accounting",
+    "Accounts",
+    "Amount Click to sort",
+    "Balance graph",
+    "Balance table",
+    "Banking",
+    "Bill Pay",
+    "Books",
+    "Cards",
+    "Command New",
+    "Credit Card",
+    "Credit Card <amount>",
+    "Customize",
+    "Customize your experience",
+    "Date Click to sort",
+    "Deposit",
+    "Google <amount>",
+    "Home",
+    "Insights",
+    "Invoicing",
+    "Last <n> days",
+    "Learn about bookmarks",
+    "Lighthouse Properties #<n> <amount>",
+    "Mercury Demo Pro",
+    "Milgram Brokerage <amount>",
+    "Monarch Books <amount>",
+    "Monthly money in",
+    "Monthly money out",
+    "Move money",
+    "My transactions",
+    "Navigate to Settings",
+    "Open account",
+    "Operating expenses",
+    "Ops / Payroll <amount>",
+    "Orange, Inc. <amount>",
+    "Pay",
+    "Payments",
+    "Recent",
+    "Remove bookmark",
+    "Reorder Bill Pay bookmark",
+    "Reorder Credit Card bookmark",
+    "Reorder Insights bookmark",
+    "Reorder Ops / Payroll bookmark",
+    "Request",
+    "Search for anything",
+    "Send",
+    "Tasks <n>",
+    "Team Spend",
+    "To/From Click to sort",
+    "Toggle Private Mode",
+    "Transactions",
+    "Transfer",
+    "Treasury <amount>",
+    "Upload bill",
+    "View",
+    "View all",
+    "Viewing as Admin",
+    "updates"
+   ],
+   "headings": [
+    "Welcome, Jane"
+   ],
+   "path": "/dashboard",
+   "structure": "document",
+   "top": {
+    "name": "",
+    "role": "document"
+   }
+  },
+  "hop": [
+   {
+    "click": {
+     "name": "Reorder Credit Card bookmark",
+     "role": "button"
+    }
+   },
+   {
+    "press": "Space"
+   },
+   {
+    "press": "ArrowDown"
+   },
+   {
+    "press": "ArrowDown"
+   },
+   {
+    "press": "Space"
+   }
+  ],
+  "mutates": false,
+  "parent": "home.bookmark-hover",
+  "recordedBy": "agent",
+  "review": null,
+  "similarity": 0.9806,
+  "source": "c6f665b7852bb377e1a1af763f116251321c1397",
+  "status": "accepted"
+ },
+ "home.bookmarks-popover": {
+  "checked": "2026-10-02-1349",
+  "fingerprint": {
+   "controls": [],
+   "headings": [],
+   "path": "/dashboard",
+   "structure": "dialog",
+   "top": {
+    "name": "",
+    "role": "dialog"
+   }
+  },
+  "hop": [
+   {
+    "click": {
+     "name": "Learn about bookmarks",
+     "role": "button"
+    }
+   }
+  ],
+  "mutates": false,
+  "parent": "home.index",
+  "recordedBy": "agent",
+  "review": null,
+  "similarity": 0.9815,
+  "source": "2bf1474214a7d46afb0e3112d317792f43e8d1f9",
+  "status": "accepted"
+ },
+ "home.books-toggle": {
+  "checked": "2026-10-02-1349",
+  "fingerprint": {
+   "controls": [
+    "Accrual",
+    "Banking",
+    "Books",
+    "Cash",
+    "Chart of accounts",
+    "Customize your experience",
+    "Learn more about Books",
+    "Mercury Demo Pro",
+    "Open account",
+    "Preview chart of accounts",
+    "Try Mercury Books",
+    "Viewing as Admin"
+   ],
+   "headings": [
+    "Intelligent accounting built into Mercury"
+   ],
+   "path": "/books/signup",
+   "structure": "document",
+   "top": {
+    "name": "",
+    "role": "document"
+   }
+  },
+  "hop": [],
+  "mutates": false,
+  "parent": "/books/signup",
+  "recordedBy": "root",
+  "review": null,
+  "similarity": 0.9631,
+  "source": "97d170e1550eee4afc0af065b78cda302a97674c",
+  "status": "accepted"
+ },
+ "home.command": {
+  "checked": "2026-10-02-1349",
+  "fingerprint": {
+   "controls": [
+    "Accounting",
+    "Accounts",
+    "Banking",
+    "Bill Pay",
+    "Books",
+    "Cards",
+    "Command New",
+    "Command message",
+    "Compare monthly balances",
+    "Credit Card",
+    "Customize your experience",
+    "Home",
+    "Insights",
+    "Invoicing",
+    "Issue new card",
+    "Learn about bookmarks",
+    "Mercury Demo Pro",
+    "Open account",
+    "Ops / Payroll <amount>",
+    "Payments",
+    "Remove bookmark",
+    "Reorder Bill Pay bookmark",
+    "Reorder Credit Card bookmark",
+    "Reorder Insights bookmark",
+    "Reorder Ops / Payroll bookmark",
+    "Send message",
+    "Tasks <n>",
+    "Team Spend",
+    "Transactions",
+    "Viewing as Admin"
+   ],
+   "headings": [
+    "Hey Jane, ready when you are"
+   ],
+   "path": "/command",
+   "structure": "document",
+   "top": {
+    "name": "",
+    "role": "document"
+   }
+  },
+  "hop": [],
+  "mutates": false,
+  "parent": "/command",
+  "recordedBy": "root",
+  "review": {
+   "by": "conductor",
+   "date": "2026-10-02",
+   "decision": "accept",
+   "note": "same screen; dates, amounts and chart data drifted since the capture",
+   "reason": "below-threshold"
+  },
+  "similarity": 0.8842,
+  "source": "97d170e1550eee4afc0af065b78cda302a97674c",
+  "status": "accepted"
+ },
+ "home.command-card-proposal": {
+  "checked": "2026-10-02-1349",
+  "fingerprint": null,
+  "hop": [
+   {
+    "wait": {
+     "locator": {
+      "name": "Confirm",
+      "role": "button"
+     }
+    }
+   }
+  ],
+  "mutates": false,
+  "parent": "home.command-restrictions",
+  "recordedBy": "agent",
+  "review": null,
+  "similarity": null,
+  "source": null,
+  "status": "draft"
+ },
+ "home.command-chart": {
+  "checked": "2026-10-02-1349",
+  "fingerprint": {
+   "controls": [
+    "Accounting",
+    "Accounts",
+    "Back to new conversation",
+    "Banking",
+    "Bill Pay",
+    "Books",
+    "Cards",
+    "Command New",
+    "Command message",
+    "Copy message",
+    "Credit Card",
+    "Customize your experience",
+    "Dislike message",
+    "Home",
+    "Insights",
+    "Invoicing",
+    "Learn about bookmarks",
+    "Like message",
+    "Mercury Demo Pro",
+    "New conversation",
+    "Open account",
+    "Ops / Payroll <amount>",
+    "Payments",
+    "Remove bookmark",
+    "Reorder Bill Pay bookmark",
+    "Reorder Credit Card bookmark",
+    "Reorder Insights bookmark",
+    "Reorder Ops / Payroll bookmark",
+    "Send message",
+    "Tasks <n>",
+    "Team Spend",
+    "Thought process",
+    "Transactions",
+    "Viewing as Admin"
+   ],
+   "headings": [],
+   "path": "/command",
+   "structure": "document",
+   "top": {
+    "name": "",
+    "role": "document"
+   }
+  },
+  "hop": [
+   {
+    "click": {
+     "name": "Compare monthly balances",
+     "role": "button"
+    }
+   }
+  ],
+  "mutates": false,
+  "parent": "home.command",
+  "recordedBy": "draft",
+  "review": {
+   "by": "conductor",
+   "date": "2026-10-03",
+   "decision": "accept",
+   "note": "same Command answer with the Spending overview chart; response text and bar data drifted",
+   "reason": "below-threshold"
+  },
+  "similarity": 0.8766,
+  "source": "8ef4c5e283fdeb045c5ac992c5b6cb59a5d92f66",
+  "status": "accepted"
+ },
+ "home.command-issue-card": {
+  "checked": "2026-10-02-1349",
+  "fingerprint": {
+   "controls": [
+    "Accounting",
+    "Accounts",
+    "Back to new conversation",
+    "Banking",
+    "Bill Pay",
+    "Books",
+    "Cancel",
+    "Cards",
+    "Command New",
+    "Credit Card",
+    "Customize your experience",
+    "Home",
+    "Insights",
+    "Invoicing",
+    "Learn about bookmarks",
+    "Mercury Demo Pro",
+    "New conversation",
+    "Next question",
+    "Open account",
+    "Ops / Payroll <amount>",
+    "Payments",
+    "Previous question",
+    "Remove bookmark",
+    "Reorder Bill Pay bookmark",
+    "Reorder Credit Card bookmark",
+    "Reorder Insights bookmark",
+    "Reorder Ops / Payroll bookmark",
+    "Submit",
+    "Tasks <n>",
+    "Team Spend",
+    "Transactions",
+    "Viewing as Admin",
+    "What spending limit should the card have?",
+    "Worked for <n>s"
+   ],
+   "headings": [],
+   "path": "/command",
+   "structure": "document",
+   "top": {
+    "name": "",
+    "role": "document"
+   }
+  },
+  "hop": [
+   {
+    "click": {
+     "name": "Issue new card",
+     "role": "button"
+    }
+   }
+  ],
+  "mutates": false,
+  "parent": "home.command",
+  "recordedBy": "draft",
+  "review": null,
+  "similarity": 0.9231,
+  "source": "1603eadb7ed1e7e86e67707eee5a14839a580375",
+  "status": "accepted"
+ },
+ "home.command-question-2": {
+  "checked": "2026-10-02-1349",
+  "fingerprint": {
+   "controls": [
+    "Accounting",
+    "Accounts",
+    "Back to new conversation",
+    "Banking",
+    "Bill Pay",
+    "Books",
+    "Cancel",
+    "Cards",
+    "Command New",
+    "Credit Card",
+    "Customize your experience",
+    "Daily",
+    "Home",
+    "How often should that limit reset?",
+    "Insights",
+    "Invoicing",
+    "Learn about bookmarks",
+    "Mercury Demo Pro",
+    "Monthly",
+    "New conversation",
+    "Next question",
+    "Open account",
+    "Ops / Payroll <amount>",
+    "Payments",
+    "Previous question",
+    "Remove bookmark",
+    "Reorder Bill Pay bookmark",
+    "Reorder Credit Card bookmark",
+    "Reorder Insights bookmark",
+    "Reorder Ops / Payroll bookmark",
+    "Submit",
+    "Tasks <n>",
+    "Team Spend",
+    "Transactions",
+    "Viewing as Admin",
+    "Weekly",
+    "Worked for <n>s",
+    "Yearly"
+   ],
+   "headings": [],
+   "path": "/command",
+   "structure": "document",
+   "top": {
+    "name": "",
+    "role": "document"
+   }
+  },
+  "hop": [
+   {
+    "fill": {
+     "locator": {
+      "css": "textarea, input[type=text]"
+     },
+     "value": "500"
+    }
+   },
+   {
+    "click": {
+     "name": "Submit",
+     "role": "button"
+    }
+   },
+   {
+    "wait": {
+     "ms": 1500
+    }
+   }
+  ],
+  "mutates": true,
+  "parent": "home.command-issue-card",
+  "recordedBy": "agent",
+  "review": {
+   "by": "conductor",
+   "date": "2026-10-03",
+   "decision": "accept",
+   "note": "same Command question 'How often should that limit reset?' with Daily/Weekly/Monthly/Yearly and Daily highlighted; the hop fills 500 and clicks Submit as the label says. The replay's counter reads '2 of 2', the capture's '2 of 3' (the model asked a different number of questions), so check that the 3 descendants still replay",
+   "reason": "mutating"
+  },
+  "similarity": 0.9527,
+  "source": "05b69e05d604635e22c830eda155517315f377e0",
+  "status": "accepted"
+ },
+ "home.command-response": {
+  "checked": "2026-10-02-1349",
+  "fingerprint": {
+   "controls": [
+    "Accounting",
+    "Accounts",
+    "Back to new conversation",
+    "Banking",
+    "Bill Pay",
+    "Books",
+    "Cards",
+    "Command New",
+    "Command message",
+    "Copy message",
+    "Credit Card",
+    "Customize your experience",
+    "Dislike message",
+    "Home",
+    "Insights",
+    "Invoicing",
+    "Learn about bookmarks",
+    "Like message",
+    "Mercury Demo Pro",
+    "New conversation",
+    "Open account",
+    "Ops / Payroll <amount>",
+    "Payments",
+    "Remove bookmark",
+    "Reorder Bill Pay bookmark",
+    "Reorder Credit Card bookmark",
+    "Reorder Insights bookmark",
+    "Reorder Ops / Payroll bookmark",
+    "Send message",
+    "Tasks <n>",
+    "Team Spend",
+    "Thought process",
+    "Transactions",
+    "Viewing as Admin"
+   ],
+   "headings": [],
+   "path": "/command",
+   "structure": "document",
+   "top": {
+    "name": "",
+    "role": "document"
+   }
+  },
+  "hop": [
+   {
+    "wait": {
+     "locator": {
+      "name": "Thought process",
+      "role": "button"
+     }
+    }
+   }
+  ],
+  "mutates": false,
+  "parent": "home.command-thinking",
+  "recordedBy": "agent",
+  "review": null,
+  "similarity": 0.9409,
+  "source": "40eb32aa4f7ae94086edfddeb39fdc1a28a1f967",
+  "status": "accepted"
+ },
+ "home.command-restrictions": {
+  "checked": "2026-10-02-1349",
+  "fingerprint": {
+   "controls": [
+    "Accounting",
+    "Accounts",
+    "Back to new conversation",
+    "Banking",
+    "Bill Pay",
+    "Books",
+    "Cancel",
+    "Cards",
+    "Command New",
+    "Confirm",
+    "Credit Card",
+    "Customize your experience",
+    "Home",
+    "Insights",
+    "Invoicing",
+    "Learn about bookmarks",
+    "Make edits",
+    "Mercury Demo Pro",
+    "New conversation",
+    "Open account",
+    "Ops / Payroll <amount>",
+    "Payments",
+    "Remove bookmark",
+    "Reorder Bill Pay bookmark",
+    "Reorder Credit Card bookmark",
+    "Reorder Insights bookmark",
+    "Reorder Ops / Payroll bookmark",
+    "Tasks <n>",
+    "Team Spend",
+    "Thought process",
+    "Transactions",
+    "Viewing as Admin",
+    "Worked for <n>s"
+   ],
+   "headings": [],
+   "path": "/command",
+   "structure": "document",
+   "top": {
+    "name": "",
+    "role": "document"
+   }
+  },
+  "hop": [
+   {
+    "click": {
+     "name": "Monthly",
+     "role": "option"
+    }
+   },
+   {
+    "wait": {
+     "ms": 2000
+    }
+   }
+  ],
+  "mutates": true,
+  "parent": "home.command-question-2",
+  "recordedBy": "agent",
+  "review": {
+   "by": "conductor",
+   "date": "2026-10-03",
+   "decision": "accept",
+   "note": "same Command restrictions question with a free-text field, Cancel and send; Command's wording varies by run, as the note warns: here the question comes after a Thought process recap (500, Monthly) instead of as card '3 of 3'; the hop clicks Monthly as labeled",
+   "reason": "below-threshold"
+  },
+  "similarity": 0.8981,
+  "source": "5c22e08860c00554aa13349642ec1dcadf22aa8b",
+  "status": "accepted"
+ },
+ "home.command-thinking": {
+  "checked": "2026-10-02-1349",
+  "fingerprint": {
+   "controls": [
+    "Accounting",
+    "Accounts",
+    "Back to new conversation",
+    "Banking",
+    "Bill Pay",
+    "Books",
+    "Cards",
+    "Command New",
+    "Command message",
+    "Copy message",
+    "Credit Card",
+    "Customize your experience",
+    "Dislike message",
+    "Home",
+    "Insights",
+    "Invoicing",
+    "Learn about bookmarks",
+    "Like message",
+    "Mercury Demo Pro",
+    "New conversation",
+    "Open account",
+    "Ops / Payroll <amount>",
+    "Payments",
+    "Remove bookmark",
+    "Reorder Bill Pay bookmark",
+    "Reorder Credit Card bookmark",
+    "Reorder Insights bookmark",
+    "Reorder Ops / Payroll bookmark",
+    "Send message",
+    "Tasks <n>",
+    "Team Spend",
+    "Thought process",
+    "Transactions",
+    "Viewing as Admin"
+   ],
+   "headings": [],
+   "path": "/command",
+   "structure": "document",
+   "top": {
+    "name": "",
+    "role": "document"
+   }
+  },
+  "hop": [
+   {
+    "press": "Enter"
+   }
+  ],
+  "mutates": false,
+  "parent": "home.command-typed",
+  "recordedBy": "agent",
+  "review": null,
+  "similarity": 0.9074,
+  "source": "0b4dfbf947fb6cac550b196a46e05146a73c4c7c",
+  "status": "accepted"
+ },
+ "home.command-thought-process": {
+  "checked": "2026-10-02-1349",
+  "fingerprint": {
+   "controls": [
+    "Accounting",
+    "Accounts",
+    "Back to new conversation",
+    "Banking",
+    "Bill Pay",
+    "Books",
+    "Cards",
+    "Command New",
+    "Command message",
+    "Copy message",
+    "Credit Card",
+    "Customize your experience",
+    "Dislike message",
+    "Home",
+    "Insights",
+    "Invoicing",
+    "Learn about bookmarks",
+    "Like message",
+    "Mercury Demo Pro",
+    "New conversation",
+    "Open account",
+    "Ops / Payroll <amount>",
+    "Payments",
+    "Refocusing on the request <n>s",
+    "Remove bookmark",
+    "Reorder Bill Pay bookmark",
+    "Reorder Credit Card bookmark",
+    "Reorder Insights bookmark",
+    "Reorder Ops / Payroll bookmark",
+    "Send message",
+    "Tasks <n>",
+    "Team Spend",
+    "Thought process",
+    "Transactions",
+    "Viewing as Admin"
+   ],
+   "headings": [],
+   "path": "/command",
+   "structure": "document",
+   "top": {
+    "name": "",
+    "role": "document"
+   }
+  },
+  "hop": [
+   {
+    "click": {
+     "name": "Thought process",
+     "role": "button"
+    }
+   }
+  ],
+  "mutates": false,
+  "parent": "home.command-response",
+  "recordedBy": "agent",
+  "review": null,
+  "similarity": 0.9449,
+  "source": "490f36a9ca5b1ba6f7902cd75e5a697126283e6d",
+  "status": "accepted"
+ },
+ "home.command-typed": {
+  "checked": "2026-10-02-1349",
+  "fingerprint": {
+   "controls": [
+    "Accounting",
+    "Accounts",
+    "Banking",
+    "Bill Pay",
+    "Books",
+    "Cards",
+    "Command New",
+    "Command message",
+    "Compare monthly balances",
+    "Credit Card",
+    "Customize your experience",
+    "Home",
+    "Insights",
+    "Invoicing",
+    "Issue new card",
+    "Learn about bookmarks",
+    "Mercury Demo Pro",
+    "Open account",
+    "Ops / Payroll <amount>",
+    "Payments",
+    "Remove bookmark",
+    "Reorder Bill Pay bookmark",
+    "Reorder Credit Card bookmark",
+    "Reorder Insights bookmark",
+    "Reorder Ops / Payroll bookmark",
+    "Send message",
+    "Tasks <n>",
+    "Team Spend",
+    "Transactions",
+    "Viewing as Admin"
+   ],
+   "headings": [
+    "Ready to dive in"
+   ],
+   "path": "/command",
+   "structure": "document",
+   "top": {
+    "name": "",
+    "role": "document"
+   }
+  },
+  "hop": [
+   {
+    "fill": {
+     "locator": {
+      "name": "Command message",
+      "role": "textbox"
+     },
+     "value": "A11y audit test description"
+    }
+   }
+  ],
+  "mutates": false,
+  "parent": "home.command",
+  "recordedBy": "agent",
+  "review": {
+   "by": "conductor",
+   "date": "2026-10-03",
+   "decision": "accept",
+   "note": "same Command screen with prompt typed and send arrow enabled (fixture 'A11y audit test description'); the heading rotates at random (parent replay shows 'Time to solve something'), so 'Where do you want to start?' is drift",
+   "reason": "below-threshold"
+  },
+  "similarity": 0.8762,
+  "source": "97c1c4838c996345aa727a83286bab535210c7ff",
+  "status": "accepted"
+ },
+ "home.create-account-filled": {
+  "checked": "2026-10-02-1349",
+  "fingerprint": {
+   "controls": [
+    "Apply here",
+    "Cancel",
+    "Checking",
+    "Create account",
+    "Nickname (optional)",
+    "Savings"
+   ],
+   "headings": [
+    "Create account"
+   ],
+   "path": "/dashboard",
+   "structure": "dialog",
+   "top": {
+    "name": "",
+    "role": "dialog"
+   }
+  },
+  "hop": [
+   {
+    "click": {
+     "name": "Savings",
+     "role": "radio"
+    }
+   },
+   {
+    "fill": {
+     "locator": {
+      "label": "Nickname (optional)"
+     },
+     "value": "A11y Test"
+    }
+   }
+  ],
+  "mutates": true,
+  "parent": "home.create-account-invalid",
+  "recordedBy": "agent",
+  "review": {
+   "by": "conductor",
+   "date": "2026-10-03",
+   "decision": "accept",
+   "note": "same Create account dialog with Savings selected, nickname filled ('A11y Test' fixture instead of 'Home map test savings') and Create account enabled; the hop doesn't submit",
+   "reason": "mutating"
+  },
+  "similarity": 0.9926,
+  "source": "f75e01b11c1ed8350b0879447d9ef191abe253dd",
+  "status": "accepted"
+ },
+ "home.create-account-invalid": {
+  "checked": "2026-10-02-1349",
+  "fingerprint": {
+   "controls": [
+    "Apply here",
+    "Cancel",
+    "Checking",
+    "Create account",
+    "Nickname (optional)",
+    "Savings"
+   ],
+   "headings": [
+    "Create account"
+   ],
+   "path": "/dashboard",
+   "structure": "dialog",
+   "top": {
+    "name": "",
+    "role": "dialog"
+   }
+  },
+  "hop": [
+   {
+    "click": {
+     "name": "Create account",
+     "role": "button",
+     "within": {
+      "role": "dialog"
+     }
+    }
+   }
+  ],
+  "mutates": true,
+  "parent": "home.create-account-modal",
+  "recordedBy": "agent",
+  "review": {
+   "by": "conductor",
+   "date": "2026-10-03",
+   "decision": "accept",
+   "note": "same Create account dialog showing 'You must make a selection.' under Type with neither Checking nor Savings picked; the hop clicks Create account inside the dialog",
+   "reason": "mutating"
+  },
+  "similarity": 0.9911,
+  "source": "231c7b3f9a244c2dbff032c85596fb32dcea724b",
+  "status": "accepted"
+ },
+ "home.create-account-modal": {
+  "checked": "2026-10-02-1349",
+  "fingerprint": {
+   "controls": [
+    "Apply here",
+    "Cancel",
+    "Checking",
+    "Create account",
+    "Nickname (optional)",
+    "Savings"
+   ],
+   "headings": [
+    "Create account"
+   ],
+   "path": "/dashboard",
+   "structure": "dialog",
+   "top": {
+    "name": "",
+    "role": "dialog"
+   }
+  },
+  "hop": [
+   {
+    "click": {
+     "css": "button:has([data-icon=\"plus\"])"
+    }
+   }
+  ],
+  "mutates": false,
+  "parent": "home.index",
+  "recordedBy": "agent",
+  "review": null,
+  "similarity": 0.9931,
+  "source": "ab157ff3e5a5104d5a5a3b8be9bbf3d6fd6eeb87",
+  "status": "accepted"
+ },
+ "home.create-account-success": {
+  "checked": "2026-10-02-1349",
+  "fingerprint": {
+   "controls": [
+    "View Account"
+   ],
+   "headings": [],
+   "path": "/dashboard",
+   "structure": "status",
+   "top": {
+    "name": "",
+    "role": "generic"
+   }
+  },
+  "hop": [
+   {
+    "click": {
+     "name": "Create account",
+     "role": "button",
+     "within": {
+      "role": "dialog"
+     }
+    }
+   }
+  ],
+  "mutates": true,
+  "parent": "home.create-account-filled",
+  "recordedBy": "agent",
+  "review": {
+   "by": "conductor",
+   "date": "2026-10-03",
+   "decision": "accept",
+   "note": "same Home dashboard with the 'Your new account is ready to use. View Account' toast; hop clicks Create account in the dialog as the label says (chart period drift ignored)",
+   "reason": "mutating"
+  },
+  "similarity": 0.9518,
+  "source": "1b12a1c841298f4bafbb70b30b2bc9f94f0aa794",
+  "status": "accepted"
+ },
+ "home.credit-card-kebab": {
+  "checked": "2026-10-02-1349",
+  "fingerprint": {
+   "controls": [
+    "Autopay settings",
+    "Hide from Home",
+    "Statements"
+   ],
+   "headings": [],
+   "path": "/dashboard",
+   "structure": "menu",
+   "top": {
+    "name": "",
+    "role": "menu"
+   }
+  },
+  "hop": [
+   {
+    "click": {
+     "css": "[class*=\"_menuButton_\"]",
+     "index": 7
+    }
+   }
+  ],
+  "mutates": false,
+  "parent": "home.index",
+  "recordedBy": "agent",
+  "review": {
+   "by": "conductor",
+   "date": "2026-10-03",
+   "decision": "accept",
+   "note": "same Credit Card widget menu (Autopay settings, Statements, Hide from Home); the hop clicks the 8th _menuButton_ by CSS index, which is fragile but opens the right kebab",
+   "reason": "sample"
+  },
+  "similarity": 0.9552,
+  "source": "e2ed4db83e3a9fa2f773436f512dbdfaf4671f09",
+  "status": "accepted"
+ },
+ "home.customize-demo-filled": {
+  "checked": "2026-10-02-1349",
+  "fingerprint": {
+   "controls": [
+    "Cancel",
+    "Company name",
+    "Email address",
+    "First name",
+    "I'd like to receive Mercury emails",
+    "Industry",
+    "Last name",
+    "Submit"
+   ],
+   "headings": [
+    "Customize the Mercury demo"
+   ],
+   "path": "/dashboard",
+   "structure": "dialog",
+   "top": {
+    "name": "",
+    "role": "dialog"
+   }
+  },
+  "hop": [
+   {
+    "click": {
+     "name": "Startup",
+     "role": "option"
+    }
+   },
+   {
+    "fill": {
+     "locator": {
+      "label": "First name"
+     },
+     "value": "Test"
+    }
+   },
+   {
+    "fill": {
+     "locator": {
+      "label": "Last name"
+     },
+     "value": "Person"
+    }
+   },
+   {
+    "fill": {
+     "locator": {
+      "label": "Email address"
+     },
+     "value": "a11y-audit@example.invalid"
+    }
+   },
+   {
+    "fill": {
+     "locator": {
+      "label": "Company name"
+     },
+     "value": "Acme Test Co"
+    }
+   },
+   {
+    "fill": {
+     "locator": {
+      "index": 4,
+      "role": "textbox"
+     },
+     "value": "250000"
+    }
+   }
+  ],
+  "mutates": false,
+  "parent": "home.customize-demo-industry",
+  "recordedBy": "agent",
+  "review": null,
+  "similarity": 0.9902,
+  "source": "d0f98e23749b8ad8d457f39e0aa889dd5a31d212",
+  "status": "accepted"
+ },
+ "home.customize-demo-industry": {
+  "checked": "2026-10-02-1349",
+  "fingerprint": {
+   "controls": [
+    "Cancel",
+    "Company name",
+    "Consulting",
+    "Crypto",
+    "Ecommerce",
+    "Email address",
+    "First name",
+    "I'd like to receive Mercury emails",
+    "Industry",
+    "Investing",
+    "Last name",
+    "Options",
+    "Startup",
+    "Submit"
+   ],
+   "headings": [
+    "Customize the Mercury demo"
+   ],
+   "path": "/dashboard",
+   "structure": "dialog",
+   "top": {
+    "name": "",
+    "role": "dialog"
+   }
+  },
+  "hop": [
+   {
+    "click": {
+     "name": "Industry",
+     "role": "combobox"
+    }
+   }
+  ],
+  "mutates": false,
+  "parent": "home.customize-demo-modal",
+  "recordedBy": "agent",
+  "review": null,
+  "similarity": 0.9777,
+  "source": "60479babf2b1ee73e97b0f9537c75c19e43e7b1b",
+  "status": "accepted"
+ },
+ "home.customize-demo-invalid": {
+  "checked": "2026-10-02-1349",
+  "fingerprint": {
+   "controls": [
+    "Cancel",
+    "Company name",
+    "Email address",
+    "First name",
+    "I'd like to receive Mercury emails",
+    "Industry",
+    "Last name",
+    "Submit"
+   ],
+   "headings": [
+    "Customize the Mercury demo"
+   ],
+   "path": "/dashboard",
+   "structure": "dialog",
+   "top": {
+    "name": "",
+    "role": "dialog"
+   }
+  },
+  "hop": [
+   {
+    "fill": {
+     "locator": {
+      "label": "Email address"
+     },
+     "value": "notanemail"
+    }
+   },
+   {
+    "click": {
+     "name": "Submit",
+     "role": "button"
+    }
+   }
+  ],
+  "mutates": true,
+  "parent": "home.customize-demo-modal",
+  "recordedBy": "agent",
+  "review": {
+   "by": "conductor",
+   "date": "2026-10-03",
+   "decision": "accept",
+   "note": "same Customize the Mercury demo modal with 'Please complete this field' on every field and 'Please submit a valid email'; the replay typed 'notanemail' where the capture shows 'not-an-email', which is fine; the hop submits the form as the label says",
+   "reason": "mutating"
+  },
+  "similarity": 0.9962,
+  "source": "4c93cb0d3b309ede8e147167e1bf9a6b849a66ca",
+  "status": "accepted"
+ },
+ "home.customize-demo-modal": {
+  "checked": "2026-10-02-1349",
+  "fingerprint": {
+   "controls": [
+    "Cancel",
+    "Company name",
+    "Email address",
+    "First name",
+    "I'd like to receive Mercury emails",
+    "Industry",
+    "Last name",
+    "Submit"
+   ],
+   "headings": [
+    "Customize the Mercury demo"
+   ],
+   "path": "/dashboard",
+   "structure": "dialog",
+   "top": {
+    "name": "",
+    "role": "dialog"
+   }
+  },
+  "hop": [
+   {
+    "click": {
+     "name": "Customize your experience",
+     "role": "button"
+    }
+   }
+  ],
+  "mutates": false,
+  "parent": "home.index",
+  "recordedBy": "agent",
+  "review": null,
+  "similarity": 0.9975,
+  "source": "084f69326b75cbde3fc5099e6ea7de3ec8abcc4c",
+  "status": "accepted"
+ },
+ "home.customize-demo-success": {
+  "checked": "2026-10-02-1349",
+  "fingerprint": {
+   "controls": [
+    "+<n> View all accounts",
+    "<date>",
+    "AP <amount>",
+    "AR <amount>",
+    "Account Click to sort",
+    "Accounting",
+    "Accounts",
+    "Acme Test Co Pro",
+    "Agency",
+    "Amount Click to sort",
+    "AngelList <amount>",
+    "Balance graph",
+    "Balance table",
+    "Banking",
+    "Bill Pay",
+    "Books",
+    "Cards",
+    "Command New",
+    "Create cards for your team",
+    "Credit Card",
+    "Credit Card <amount>",
+    "Customize",
+    "Customize your experience",
+    "Date Click to sort",
+    "Deposit",
+    "Ecommerce",
+    "Google <amount>",
+    "Home",
+    "Insights",
+    "Invite your team members",
+    "Invoicing",
+    "Issue SAFE to investors",
+    "Last <n> days",
+    "Learn about bookmarks",
+    "Milgram Brokerage <amount>",
+    "Monthly money in",
+    "Monthly money out",
+    "More",
+    "Move money",
+    "My transactions",
+    "Navigate to Settings",
+    "Open account",
+    "Operating expenses",
+    "Ops / Payroll <amount>",
+    "Orange, Inc. <amount>",
+    "Pay",
+    "PayPal <amount>",
+    "Payments",
+    "Recent",
+    "Remove bookmark",
+    "Reorder Bill Pay bookmark",
+    "Reorder Credit Card bookmark",
+    "Reorder Insights bookmark",
+    "Reorder Ops / Payroll bookmark",
+    "Request",
+    "Request vendor payment details",
+    "Rippling <amount>",
+    "Search for anything",
+    "Send",
+    "Send money to contractors",
+    "Startup",
+    "Stripe <amount>",
+    "Tasks <n>",
+    "Team Spend",
+    "To/From Click to sort",
+    "Toggle Private Mode",
+    "Transactions",
+    "Transfer",
+    "Treasury <amount>",
+    "Try Command",
+    "Upload bill",
+    "View",
+    "View all",
+    "Viewing as Admin",
+    "Wise Inc <amount>",
+    "updates"
+   ],
+   "headings": [
+    "Welcome, Test"
+   ],
+   "path": "/dashboard",
+   "structure": "document",
+   "top": {
+    "name": "",
+    "role": "document"
+   }
+  },
+  "hop": [
+   {
+    "click": {
+     "name": "Submit",
+     "role": "button"
+    }
+   }
+  ],
+  "mutates": true,
+  "parent": "home.customize-demo-filled",
+  "recordedBy": "agent",
+  "review": {
+   "by": "conductor",
+   "date": "2026-10-03",
+   "decision": "accept",
+   "note": "same customized Home (Acme Test Co, 'Welcome, Test', $250,000.00 balance) with the Try out Mercury for yourself panel open on Startup; the hop clicks Submit as the label says",
+   "reason": "mutating"
+  },
+  "similarity": 0.9857,
+  "source": "ed48c6d94d781a0df79694f85dc617bfbdf55403",
+  "status": "accepted"
+ },
+ "home.customize-menu": {
+  "checked": "2026-10-02-1349",
+  "fingerprint": {
+   "controls": [
+    "Hide Bill Pay",
+    "Hide Credit Card",
+    "Hide Invoicing",
+    "Request feature",
+    "Show Dispute Status"
+   ],
+   "headings": [],
+   "path": "/dashboard",
+   "structure": "menu",
+   "top": {
+    "name": "Customize",
+    "role": "menu"
+   }
+  },
+  "hop": [
+   {
+    "click": {
+     "name": "Customize",
+     "role": "button"
+    }
+   }
+  ],
+  "mutates": false,
+  "parent": "home.index",
+  "recordedBy": "draft",
+  "review": null,
+  "similarity": 0.9818,
+  "source": "0ea4e1d8771942defbe7b056501ce68f107d7a6d",
+  "status": "accepted"
+ },
+ "home.date-range-menu": {
+  "checked": "2026-10-02-1349",
+  "fingerprint": {
+   "controls": [
+    "Last <n> days",
+    "Month to date",
+    "Quarter to date",
+    "Week to date",
+    "Year to date"
+   ],
+   "headings": [],
+   "path": "/dashboard",
+   "structure": "menu",
+   "top": {
+    "name": "Last <n> days",
+    "role": "menu"
+   }
+  },
+  "hop": [
+   {
+    "click": {
+     "name": "Last <n> days",
+     "role": "button"
+    }
+   }
+  ],
+  "mutates": false,
+  "parent": "home.index",
+  "recordedBy": "draft",
+  "review": null,
+  "similarity": 0.9895,
+  "source": "52afabfa34e914ff6962a6a2a3bf1b407a923e1f",
+  "status": "accepted"
+ },
+ "home.feedback-panel": {
+  "checked": "2026-10-02-1349",
+  "fingerprint": {
+   "controls": [
+    "Cancel",
+    "Close help menu",
+    "Conversation history",
+    "New conversation",
+    "Share feedback",
+    "We’d love to hear from you. Please provide your feedback for Dashboard Home below."
+   ],
+   "headings": [],
+   "path": "/dashboard",
+   "structure": "dialog",
+   "top": {
+    "name": "",
+    "role": "generic"
+   }
+  },
+  "hop": [
+   {
+    "click": {
+     "name": "Request feature",
+     "role": "menuitem"
+    }
+   }
+  ],
+  "mutates": false,
+  "parent": "home.customize-menu",
+  "recordedBy": "draft",
+  "review": null,
+  "similarity": 0.9595,
+  "source": "128369baf074a980713675fce1b72fed93d6f7ec",
+  "status": "accepted"
+ },
+ "home.index": {
+  "checked": "2026-10-02-1349",
+  "fingerprint": {
+   "controls": [
+    "+<n> View all accounts",
+    "<date>",
+    "AP <amount>",
+    "AR <amount>",
+    "Account Click to sort",
+    "Accounting",
+    "Accounts",
+    "Amount Click to sort",
+    "Balance graph",
+    "Balance table",
+    "Banking",
+    "Bill Pay",
+    "Books",
+    "Cards",
+    "Command New",
+    "Credit Card",
+    "Credit Card <amount>",
+    "Customize",
+    "Customize your experience",
+    "Date Click to sort",
+    "Deposit",
+    "Google <amount>",
+    "Home",
+    "Insights",
+    "Invoicing",
+    "Last <n> days",
+    "Learn about bookmarks",
+    "Lighthouse Properties #<n> <amount>",
+    "Mercury Demo Pro",
+    "Milgram Brokerage <amount>",
+    "Monthly money in",
+    "Monthly money out",
+    "Move money",
+    "My transactions",
+    "Navigate to Settings",
+    "Office Stop Co. <amount>",
+    "Open account",
+    "Operating expenses",
+    "Ops / Payroll <amount>",
+    "Orange, Inc. <amount>",
+    "Pay",
+    "Payments",
+    "Recent",
+    "Remove bookmark",
+    "Reorder Bill Pay bookmark",
+    "Reorder Credit Card bookmark",
+    "Reorder Insights bookmark",
+    "Reorder Ops / Payroll bookmark",
+    "Request",
+    "Search for anything",
+    "Send",
+    "Tasks <n>",
+    "Team Spend",
+    "To/From Click to sort",
+    "Toggle Private Mode",
+    "Transactions",
+    "Transfer",
+    "Treasury <amount>",
+    "Upload bill",
+    "View",
+    "View all",
+    "Viewing as Admin",
+    "updates"
+   ],
+   "headings": [
+    "Welcome, Jane"
+   ],
+   "path": "/dashboard",
+   "structure": "document",
+   "top": {
+    "name": "",
+    "role": "document"
+   }
+  },
+  "hop": [
+   {
+    "click": {
+     "css": "[class*=\"_headerButton_\"]",
+     "index": 0
+    }
+   }
+  ],
+  "mutates": false,
+  "parent": "/dashboard",
+  "recordedBy": "root",
+  "review": null,
+  "similarity": 0.984,
+  "source": "97d170e1550eee4afc0af065b78cda302a97674c",
+  "status": "accepted",
+  "via": "home.try-panel-more"
+ },
+ "home.index-disputes": {
+  "checked": "2026-10-02-1349",
+  "fingerprint": {
+   "controls": [
+    "+<n> View all accounts",
+    "<date>",
+    "AP <amount>",
+    "AR <amount>",
+    "Account Click to sort",
+    "Accounting",
+    "Accounts",
+    "Amount Click to sort",
+    "Balance graph",
+    "Balance table",
+    "Banking",
+    "Bill Pay",
+    "Books",
+    "Cards",
+    "Command New",
+    "Credit Card",
+    "Credit Card <amount>",
+    "Customize",
+    "Customize your experience",
+    "Date Click to sort",
+    "Deposit",
+    "Dispute request received <amount> at <n> merchants View details",
+    "Disputes",
+    "Google <amount>",
+    "Home",
+    "Insights",
+    "Invoicing",
+    "Last <n> days",
+    "Learn about bookmarks",
+    "Lighthouse Properties #<n> <amount>",
+    "Mercury Demo Pro",
+    "Milgram Brokerage <amount>",
+    "Monthly money in",
+    "Monthly money out",
+    "Move money",
+    "My transactions",
+    "Navigate to Settings",
+    "Next dispute",
+    "Office Stop Co. <amount>",
+    "Open account",
+    "Operating expenses",
+    "Ops / Payroll <amount>",
+    "Orange, Inc. <amount>",
+    "Pay",
+    "Payments",
+    "Previous dispute",
+    "Recent",
+    "Remove bookmark",
+    "Reorder Bill Pay bookmark",
+    "Reorder Credit Card bookmark",
+    "Reorder Insights bookmark",
+    "Reorder Ops / Payroll bookmark",
+    "Request",
+    "Search for anything",
+    "Send",
+    "Tasks <n>",
+    "Team Spend",
+    "To/From Click to sort",
+    "Toggle Private Mode",
+    "Transactions",
+    "Transfer",
+    "Treasury <amount>",
+    "Upload bill",
+    "View",
+    "View all",
+    "Viewing as Admin",
+    "updates"
+   ],
+   "headings": [
+    "Welcome, Jane"
+   ],
+   "path": "/dashboard",
+   "structure": "document",
+   "top": {
+    "name": "",
+    "role": "document"
+   }
+  },
+  "hop": [
+   {
+    "click": {
+     "name": "Show Dispute Status",
+     "role": "menuitem"
+    }
+   }
+  ],
+  "mutates": false,
+  "parent": "home.customize-menu",
+  "recordedBy": "draft",
+  "review": null,
+  "similarity": 0.9794,
+  "source": "940faa5207d7120ecfc8105dbf902a5c8f042fa8",
+  "status": "accepted"
+ },
+ "home.index-invoicing-hidden": {
+  "checked": "2026-10-02-1349",
+  "fingerprint": {
+   "controls": [
+    "+<n> View all accounts",
+    "<date>",
+    "AP <amount>",
+    "AR <amount>",
+    "Account Click to sort",
+    "Accounting",
+    "Accounts",
+    "Amount Click to sort",
+    "Balance graph",
+    "Balance table",
+    "Banking",
+    "Bill Pay",
+    "Books",
+    "Cards",
+    "Command New",
+    "Credit Card",
+    "Credit Card <amount>",
+    "Customize",
+    "Customize your experience",
+    "Date Click to sort",
+    "Deposit",
+    "Google <amount>",
+    "Home",
+    "Insights",
+    "Invoicing",
+    "Last <n> days",
+    "Learn about bookmarks",
+    "Lighthouse Properties #<n> <amount>",
+    "Mercury Demo Pro",
+    "Milgram Brokerage <amount>",
+    "Monarch Books <amount>",
+    "Monthly money in",
+    "Monthly money out",
+    "Move money",
+    "My transactions",
+    "Navigate to Settings",
+    "Open account",
+    "Operating expenses",
+    "Ops / Payroll <amount>",
+    "Orange, Inc. <amount>",
+    "Pay",
+    "Payments",
+    "Recent",
+    "Remove bookmark",
+    "Reorder Bill Pay bookmark",
+    "Reorder Credit Card bookmark",
+    "Reorder Insights bookmark",
+    "Reorder Ops / Payroll bookmark",
+    "Request",
+    "Search for anything",
+    "Send",
+    "Tasks <n>",
+    "Team Spend",
+    "To/From Click to sort",
+    "Toggle Private Mode",
+    "Transactions",
+    "Transfer",
+    "Treasury <amount>",
+    "Undo",
+    "Upload bill",
+    "View",
+    "View all",
+    "Viewing as Admin",
+    "updates"
+   ],
+   "headings": [
+    "Welcome, Jane"
+   ],
+   "path": "/dashboard",
+   "structure": "document",
+   "top": {
+    "name": "",
+    "role": "document"
+   }
+  },
+  "hop": [
+   {
+    "click": {
+     "name": "Hide from Home",
+     "role": "menuitem"
+    }
+   }
+  ],
+  "mutates": false,
+  "parent": "home.invoicing-kebab",
+  "recordedBy": "agent",
+  "review": null,
+  "similarity": 0.9313,
+  "source": "318d47db96a0d3c5b65f8a2ef1f4a0cfbb3e0826",
+  "status": "accepted"
+ },
+ "home.index-money-movement": {
+  "checked": "2026-10-02-1349",
+  "fingerprint": {
+   "controls": [
+    "+<n> View all accounts",
+    "<date>",
+    "AP <amount>",
+    "AR <amount>",
+    "Account Click to sort",
+    "Accounting",
+    "Accounts",
+    "Amount Click to sort",
+    "Balance graph",
+    "Balance table",
+    "Banking",
+    "Bill Pay",
+    "Books",
+    "Cards",
+    "Command New",
+    "Credit Card",
+    "Credit Card <amount>",
+    "Customize",
+    "Customize your experience",
+    "Date Click to sort",
+    "Deposit",
+    "Google <amount>",
+    "Home",
+    "Insights",
+    "Invoicing",
+    "Last <n> days",
+    "Learn about bookmarks",
+    "Lighthouse Properties #<n> <amount>",
+    "Mercury Demo Pro",
+    "Milgram Brokerage <amount>",
+    "Monarch Books <amount>",
+    "Monthly money in",
+    "Monthly money out",
+    "Move money",
+    "My transactions",
+    "Navigate to Settings",
+    "Open account",
+    "Operating expenses",
+    "Ops / Payroll <amount>",
+    "Orange, Inc. <amount>",
+    "Pay",
+    "Payments",
+    "Recent",
+    "Remove bookmark",
+    "Reorder Bill Pay bookmark",
+    "Reorder Credit Card bookmark",
+    "Reorder Insights bookmark",
+    "Reorder Ops / Payroll bookmark",
+    "Request",
+    "Search for anything",
+    "Send",
+    "Tasks <n>",
+    "Team Spend",
+    "To/From Click to sort",
+    "Toggle Private Mode",
+    "Transactions",
+    "Transfer",
+    "Treasury <amount>",
+    "Upload bill",
+    "View",
+    "View all",
+    "Viewing as Admin",
+    "updates"
+   ],
+   "headings": [
+    "Welcome, Jane"
+   ],
+   "path": "/dashboard",
+   "structure": "document",
+   "top": {
+    "name": "",
+    "role": "document"
+   }
+  },
+  "hop": [
+   {
+    "scroll": {
+     "text": "Operating expenses"
+    }
+   }
+  ],
+  "mutates": false,
+  "parent": "home.index",
+  "recordedBy": "agent",
+  "review": {
+   "by": "conductor",
+   "date": "2026-10-03",
+   "decision": "accept",
+   "note": "same Home Money movement section (month picker, Money in/out top sources), scrolled less far so the Transactions widget is below the fold; scroll position and month differ",
+   "reason": "below-threshold"
+  },
+  "similarity": 0.5034,
+  "source": "8d8af18c13f8f495437d1fccaf973c88b0686143",
+  "status": "accepted"
+ },
+ "home.index-personalized": {
+  "checked": "2026-10-02-1349",
+  "fingerprint": {
+   "controls": [
+    "+<n> View all accounts",
+    "<date>",
+    "AP <amount>",
+    "AR <amount>",
+    "Account Click to sort",
+    "Accounting",
+    "Accounts",
+    "Acme Test Co Pro",
+    "Amount Click to sort",
+    "AngelList <amount>",
+    "Balance graph",
+    "Balance table",
+    "Banking",
+    "Bill Pay",
+    "Books",
+    "Cards",
+    "Command New",
+    "Credit Card",
+    "Credit Card <amount>",
+    "Customize",
+    "Customize your experience",
+    "Date Click to sort",
+    "Deposit",
+    "Google <amount>",
+    "Home",
+    "Insights",
+    "Invoicing",
+    "Last <n> days",
+    "Learn about bookmarks",
+    "Milgram Brokerage <amount>",
+    "Monthly money in",
+    "Monthly money out",
+    "Move money",
+    "My transactions",
+    "Navigate to Settings",
+    "Open account",
+    "Operating expenses",
+    "Ops / Payroll <amount>",
+    "Orange, Inc. <amount>",
+    "Pay",
+    "PayPal <amount>",
+    "Payments",
+    "Recent",
+    "Remove bookmark",
+    "Reorder Bill Pay bookmark",
+    "Reorder Credit Card bookmark",
+    "Reorder Insights bookmark",
+    "Reorder Ops / Payroll bookmark",
+    "Request",
+    "Rippling <amount>",
+    "Search for anything",
+    "Send",
+    "Stripe <amount>",
+    "Tasks <n>",
+    "Team Spend",
+    "To/From Click to sort",
+    "Toggle Private Mode",
+    "Transactions",
+    "Transfer",
+    "Treasury <amount>",
+    "Upload bill",
+    "View",
+    "View all",
+    "Viewing as Admin",
+    "Wise Inc <amount>",
+    "updates"
+   ],
+   "headings": [
+    "Welcome, Test"
+   ],
+   "path": "/dashboard",
+   "structure": "document",
+   "top": {
+    "name": "",
+    "role": "document"
+   }
+  },
+  "hop": [
+   {
+    "click": {
+     "css": "[class*=\"_headerButton_\"]",
+     "index": 0
+    }
+   }
+  ],
+  "mutates": true,
+  "parent": "home.customize-demo-success",
+  "recordedBy": "agent",
+  "review": {
+   "by": "conductor",
+   "date": "2026-10-03",
+   "decision": "accept",
+   "note": "same personalized Home (Acme Test Co, 'Welcome, Test', $250,000.00 balance) with the Try-out panel closed; the hop uses the same _headerButton_ panel-close selector as the accepted root recipe",
+   "reason": "mutating"
+  },
+  "similarity": 0.9699,
+  "source": "6fc6bece1eb77935169e635af4b444687955a5ee",
+  "status": "accepted"
+ },
+ "home.index-transactions": {
+  "checked": "2026-10-02-1349",
+  "fingerprint": {
+   "controls": [
+    "+<n> View all accounts",
+    "<date>",
+    "AP <amount>",
+    "AR <amount>",
+    "Account Click to sort",
+    "Accounting",
+    "Accounts",
+    "Amount Click to sort",
+    "Balance graph",
+    "Balance table",
+    "Banking",
+    "Bill Pay",
+    "Books",
+    "Cards",
+    "Command New",
+    "Credit Card",
+    "Credit Card <amount>",
+    "Customize",
+    "Customize your experience",
+    "Date Click to sort",
+    "Deposit",
+    "Google <amount>",
+    "Home",
+    "Insights",
+    "Invoicing",
+    "Last <n> days",
+    "Learn about bookmarks",
+    "Lighthouse Properties #<n> <amount>",
+    "Mercury Demo Pro",
+    "Milgram Brokerage <amount>",
+    "Monarch Books <amount>",
+    "Monthly money in",
+    "Monthly money out",
+    "Move money",
+    "My transactions",
+    "Navigate to Settings",
+    "Open account",
+    "Operating expenses",
+    "Ops / Payroll <amount>",
+    "Orange, Inc. <amount>",
+    "Pay",
+    "Payments",
+    "Recent",
+    "Remove bookmark",
+    "Reorder Bill Pay bookmark",
+    "Reorder Credit Card bookmark",
+    "Reorder Insights bookmark",
+    "Reorder Ops / Payroll bookmark",
+    "Request",
+    "Search for anything",
+    "Send",
+    "Tasks <n>",
+    "Team Spend",
+    "To/From Click to sort",
+    "Toggle Private Mode",
+    "Transactions",
+    "Transfer",
+    "Treasury <amount>",
+    "Upload bill",
+    "View",
+    "View all",
+    "Viewing as Admin",
+    "updates"
+   ],
+   "headings": [
+    "Welcome, Jane"
+   ],
+   "path": "/dashboard",
+   "structure": "document",
+   "top": {
+    "name": "",
+    "role": "document"
+   }
+  },
+  "hop": [
+   {
+    "scroll": {
+     "index": 10,
+     "role": "row"
+    }
+   }
+  ],
+  "mutates": false,
+  "parent": "home.index",
+  "recordedBy": "agent",
+  "review": null,
+  "similarity": 0.9859,
+  "source": "3ade6224e2713f850add372e6027bc0da3547134",
+  "status": "accepted"
+ },
+ "home.index-tx-my": {
+  "checked": "2026-10-02-1349",
+  "fingerprint": {
+   "controls": [
+    "+<n> View all accounts",
+    "<date>",
+    "AP <amount>",
+    "AR <amount>",
+    "Account Click to sort",
+    "Accounting",
+    "Accounts",
+    "Amount Click to sort",
+    "Balance graph",
+    "Balance table",
+    "Banking",
+    "Bill Pay",
+    "Books",
+    "Cards",
+    "Command New",
+    "Credit Card",
+    "Credit Card <amount>",
+    "Customize",
+    "Customize your experience",
+    "Date Click to sort",
+    "Deposit",
+    "Google <amount>",
+    "Home",
+    "Insights",
+    "Invoicing",
+    "Last <n> days",
+    "Learn about bookmarks",
+    "Lighthouse Properties #<n> <amount>",
+    "Mercury Demo Pro",
+    "Milgram Brokerage <amount>",
+    "Monarch Books <amount>",
+    "Monthly money in",
+    "Monthly money out",
+    "Move money",
+    "My transactions",
+    "Navigate to Settings",
+    "Open account",
+    "Operating expenses",
+    "Ops / Payroll <amount>",
+    "Orange, Inc. <amount>",
+    "Pay",
+    "Payments",
+    "Recent",
+    "Remove bookmark",
+    "Reorder Bill Pay bookmark",
+    "Reorder Credit Card bookmark",
+    "Reorder Insights bookmark",
+    "Reorder Ops / Payroll bookmark",
+    "Request",
+    "Search for anything",
+    "Send",
+    "Tasks <n>",
+    "Team Spend",
+    "To/From Click to sort",
+    "Toggle Private Mode",
+    "Transactions",
+    "Transfer",
+    "Treasury <amount>",
+    "Upload bill",
+    "View",
+    "View all",
+    "Viewing as Admin",
+    "updates"
+   ],
+   "headings": [
+    "Welcome, Jane"
+   ],
+   "path": "/dashboard",
+   "structure": "document",
+   "top": {
+    "name": "",
+    "role": "document"
+   }
+  },
+  "hop": [
+   {
+    "click": {
+     "name": "My transactions",
+     "role": "menuitem"
+    }
+   }
+  ],
+  "mutates": false,
+  "parent": "home.index-transactions",
+  "recordedBy": "agent",
+  "review": null,
+  "similarity": 0.9941,
+  "source": "8a189d683bed623fbcda5741e791bf2d2d4a0f5e",
+  "status": "accepted"
+ },
+ "home.invoicing-kebab": {
+  "checked": "2026-10-02-1349",
+  "fingerprint": {
+   "controls": [
+    "Hide from Home",
+    "Settings"
+   ],
+   "headings": [],
+   "path": "/dashboard",
+   "structure": "menu",
+   "top": {
+    "name": "",
+    "role": "menu"
+   }
+  },
+  "hop": [
+   {
+    "click": {
+     "css": "[class*=\"_menuButton_\"]:has([data-icon=\"ellipsis-vertical\"])",
+     "index": 3
+    }
+   }
+  ],
+  "mutates": false,
+  "parent": "home.index",
+  "recordedBy": "agent",
+  "review": null,
+  "similarity": 0.9398,
+  "source": "25fe8e774294daea5de4946428460b8b61e5139a",
+  "status": "accepted"
+ },
+ "home.money-movement-prev": {
+  "checked": "2026-10-02-1349",
+  "fingerprint": {
+   "controls": [
+    "+<n> View all accounts",
+    "<date>",
+    "AP <amount>",
+    "AR <amount>",
+    "Account Click to sort",
+    "Accounting",
+    "Accounts",
+    "Amount Click to sort",
+    "Balance graph",
+    "Balance table",
+    "Banking",
+    "Bill Pay",
+    "Books",
+    "Cards",
+    "Command New",
+    "Credit Card",
+    "Credit Card <amount>",
+    "Customize",
+    "Customize your experience",
+    "Date Click to sort",
+    "Deposit",
+    "GenPro <amount>",
+    "Google <amount>",
+    "Gusto (Payroll) <amount>",
+    "Home",
+    "Insights",
+    "Invoicing",
+    "Jordi O'Donnell <amount>",
+    "Last <n> days",
+    "Learn about bookmarks",
+    "Mercury Demo Pro",
+    "Milgram Brokerage <amount>",
+    "Monthly money in",
+    "Monthly money out",
+    "Move money",
+    "My transactions",
+    "Navigate to Settings",
+    "Open account",
+    "Operating expenses",
+    "Ops / Payroll <amount>",
+    "Pay",
+    "Payments",
+    "Recent",
+    "Remove bookmark",
+    "Reorder Bill Pay bookmark",
+    "Reorder Credit Card bookmark",
+    "Reorder Insights bookmark",
+    "Reorder Ops / Payroll bookmark",
+    "Request",
+    "Search for anything",
+    "Send",
+    "Tasks <n>",
+    "Team Spend",
+    "To/From Click to sort",
+    "Toggle Private Mode",
+    "Transactions",
+    "Transfer",
+    "Treasury <amount>",
+    "Upload bill",
+    "Venture Debt Loan <amount>",
+    "View",
+    "View all",
+    "Viewing as Admin",
+    "updates"
+   ],
+   "headings": [
+    "Welcome, Jane"
+   ],
+   "path": "/dashboard",
+   "structure": "document",
+   "top": {
+    "name": "",
+    "role": "document"
+   }
+  },
+  "hop": [
+   {
+    "click": {
+     "css": "button:has(svg[data-icon=\"chevron-left\"])"
+    }
+   }
+  ],
+  "mutates": false,
+  "parent": "home.index-money-movement",
+  "recordedBy": "agent",
+  "review": null,
+  "similarity": 0.9657,
+  "source": "80c69f65e5af09559f3bd1140e9209b003ea782c",
+  "status": "accepted"
+ },
+ "home.money-out-tooltip": {
+  "checked": "2026-10-02-1349",
+  "fingerprint": {
+   "controls": [],
+   "headings": [],
+   "path": "/dashboard",
+   "structure": "dialog",
+   "top": {
+    "name": "",
+    "role": "generic"
+   }
+  },
+  "hop": [
+   {
+    "hover": {
+     "css": "svg[data-icon=\"circle-info\"]",
+     "index": 0
+    }
+   }
+  ],
+  "mutates": false,
+  "parent": "home.money-movement-prev",
+  "recordedBy": "agent",
+  "review": null,
+  "similarity": 0.9656,
+  "source": "12c83d08c5f4e912d2f6a8bc8f707bb2f79f9ac3",
+  "status": "accepted"
+ },
+ "home.move-money-menu": {
+  "checked": "2026-10-02-1349",
+  "fingerprint": {
+   "controls": [
+    "Deposit",
+    "Request",
+    "Send",
+    "Transfer",
+    "Upload bill"
+   ],
+   "headings": [],
+   "path": "/dashboard",
+   "structure": "menu",
+   "top": {
+    "name": "Move money",
+    "role": "menu"
+   }
+  },
+  "hop": [
+   {
+    "click": {
+     "name": "Move money",
+     "role": "button"
+    }
+   }
+  ],
+  "mutates": false,
+  "parent": "home.index",
+  "recordedBy": "draft",
+  "review": null,
+  "similarity": 0.9744,
+  "source": "6c18e8e10ad0706916174d2cd38e1c54730c9fe3",
+  "status": "accepted"
+ },
+ "home.org-switcher-menu": {
+  "checked": "2026-10-02-1349",
+  "fingerprint": {
+   "controls": [
+    "All Accounts",
+    "All Settings",
+    "Apply for a new account",
+    "Debug, LLC",
+    "Documents & Data",
+    "Jane’s Account",
+    "Link an existing account",
+    "Log out",
+    "Mercury Demo Currently selected Mercury account",
+    "Pico Accountants Advisor Portal",
+    "Plan & Billing",
+    "Pro",
+    "Referrals Earn <amount>",
+    "Team",
+    "TypeCode"
+   ],
+   "headings": [],
+   "path": "/dashboard",
+   "structure": "menu",
+   "top": {
+    "name": "Mercury Demo",
+    "role": "menu"
+   }
+  },
+  "hop": [
+   {
+    "click": {
+     "name": "Mercury Demo Pro",
+     "role": "button"
+    }
+   }
+  ],
+  "mutates": false,
+  "parent": "home.index",
+  "recordedBy": "draft",
+  "review": null,
+  "similarity": 0.97,
+  "source": "a619234064aab19162457115b365044d19149b9e",
+  "status": "accepted"
+ },
+ "home.private-mode-on": {
+  "checked": "2026-10-02-1349",
+  "fingerprint": {
+   "controls": [
+    "+<n> View all accounts",
+    "<date>",
+    "AP $••••••••",
+    "AR $•••",
+    "Account Click to sort",
+    "Accounting",
+    "Accounts",
+    "Amount Click to sort",
+    "Balance graph",
+    "Balance table",
+    "Banking",
+    "Bill Pay",
+    "Books",
+    "Cards",
+    "Command New",
+    "Credit Card",
+    "Credit Card $•••••••",
+    "Customize",
+    "Customize your experience",
+    "Date Click to sort",
+    "Deposit",
+    "Google $•••••••",
+    "Home",
+    "Insights",
+    "Invoicing",
+    "Last <n> days",
+    "Learn about bookmarks",
+    "Lighthouse Properties #<n> $••••••",
+    "Mercury Demo Pro",
+    "Milgram Brokerage $••••••",
+    "Monarch Books $••••••",
+    "Monthly money in",
+    "Monthly money out",
+    "Move money",
+    "My transactions",
+    "Navigate to Settings",
+    "Open account",
+    "Operating expenses",
+    "Ops / Payroll $•••••••••",
+    "Orange, Inc. $••••••",
+    "Pay",
+    "Payments",
+    "Recent",
+    "Remove bookmark",
+    "Reorder Bill Pay bookmark",
+    "Reorder Credit Card bookmark",
+    "Reorder Insights bookmark",
+    "Reorder Ops / Payroll bookmark",
+    "Request",
+    "Search for anything",
+    "Send",
+    "Tasks <n>",
+    "Team Spend",
+    "To/From Click to sort",
+    "Toggle Private Mode",
+    "Transactions",
+    "Transfer",
+    "Treasury $••••••••",
+    "Upload bill",
+    "View",
+    "View all",
+    "Viewing as Admin",
+    "updates"
+   ],
+   "headings": [
+    "Welcome, Jane"
+   ],
+   "path": "/dashboard",
+   "structure": "document",
+   "top": {
+    "name": "",
+    "role": "document"
+   }
+  },
+  "hop": [
+   {
+    "click": {
+     "name": "Toggle Private Mode",
+     "role": "button"
+    }
+   }
+  ],
+  "mutates": false,
+  "parent": "home.index",
+  "recordedBy": "agent",
+  "review": null,
+  "similarity": 0.9821,
+  "source": "fe6768fb5ee32864596f63105e93a0ab02248288",
+  "status": "accepted"
+ },
+ "home.search-card-all": {
+  "checked": "2026-10-02-1349",
+  "fingerprint": {
+   "controls": [
+    "<amount> from Deli <n> Jane B. ••<n> · <date>",
+    "<amount> from Deli <n> Mary M. ••<n> · <date>",
+    "<amount> from Lily's Eatery Alice C. ••<n> · <date>",
+    "<amount> from Trader John's Landon S. ••<n> · <date>",
+    "<amount> to Office Stop Co. Jane B. ••<n> · <date>",
+    "<amount> to Office Stop Co. Jessica A. ••<n> · <date>",
+    "Accounts",
+    "All",
+    "Approvals",
+    "Card Expenses",
+    "Cards",
+    "Carly Avines Bookkeeper · carly@demo.mercury.com Active",
+    "Carry Beck Operations Lead · carry@demo.mercury.com Active",
+    "Carry's Card ••<n> Carry Beck · <amount> spent this week",
+    "Catherine Ndereba",
+    "Change password",
+    "Column Card ••<n> Jane Black · <amount> spent this week",
+    "Create a card",
+    "Credit Card",
+    "Dave's Card ••<n> Dave Walker · <amount> spent this week",
+    "Dave's active card ••<n> Dave Walker · <amount> spent this week",
+    "Debit Card",
+    "Departments",
+    "Jane's IO card ••<n> Jane Black · <amount> spent this week",
+    "Jessica's Card ••<n> Jessica Awad · <amount> spent this week",
+    "Jessica's Debit Card ••<n> Agent Card Jessica Awad · <amount> spent this week",
+    "John's Card ••<n> John Miller · <amount> spent this week",
+    "Landon's IO card ••<n> Landon Shepherd · <amount> spent this week",
+    "Mary's Card ••<n> Mary Metcalfe · <amount> spent this week",
+    "Office Card ••<n> Alice Chen · <amount> spent this week",
+    "Pages",
+    "Physical Card Upgrade Fee",
+    "Recipients",
+    "Sally's Card ••<n> Sally Park · <amount> spent this week",
+    "Scheduled",
+    "Scroll filters right",
+    "Search all transactions for “card”",
+    "Statements",
+    "Team Lunch Debit Card ••<n> Jane Black · <amount> spent this week",
+    "Thomas's Card ••<n> Thomas Brown · <amount> spent this week",
+    "Transactions",
+    "Users",
+    "card"
+   ],
+   "headings": [],
+   "path": "/dashboard",
+   "structure": "dialog",
+   "top": {
+    "name": "",
+    "role": "dialog"
+   }
+  },
+  "hop": [
+   {
+    "fill": {
+     "locator": {
+      "role": "combobox"
+     },
+     "value": "card"
+    }
+   }
+  ],
+  "mutates": false,
+  "parent": "home.search-open",
+  "recordedBy": "agent",
+  "review": null,
+  "similarity": 0.9958,
+  "source": "6cd93396a8d4fe5dbc7c7b58cb387d023448ec29",
+  "status": "accepted"
+ },
+ "home.search-cards": {
+  "checked": "2026-10-02-1349",
+  "fingerprint": {
+   "controls": [
+    "Accounts",
+    "All",
+    "Approvals",
+    "Cards",
+    "Carry's Card ••<n> Carry Beck · <amount> spent this week",
+    "Column Card ••<n> Jane Black · <amount> spent this week",
+    "Dave's Card ••<n> Dave Walker · <amount> spent this week",
+    "Dave's active card ••<n> Dave Walker · <amount> spent this week",
+    "Departments",
+    "Jane's IO card ••<n> Jane Black · <amount> spent this week",
+    "Jessica's Card ••<n> Jessica Awad · <amount> spent this week",
+    "Jessica's Debit Card ••<n> Agent Card Jessica Awad · <amount> spent this week",
+    "John's Card ••<n> John Miller · <amount> spent this week",
+    "Landon's IO card ••<n> Landon Shepherd · <amount> spent this week",
+    "Mary's Card ••<n> Mary Metcalfe · <amount> spent this week",
+    "Office Card ••<n> Alice Chen · <amount> spent this week",
+    "Pages",
+    "Recipients",
+    "Sally's Card ••<n> Sally Park · <amount> spent this week",
+    "Scheduled",
+    "Scroll filters right",
+    "Statements",
+    "Team Lunch Debit Card ••<n> Jane Black · <amount> spent this week",
+    "Thomas's Card ••<n> Thomas Brown · <amount> spent this week",
+    "Transactions",
+    "Users",
+    "card"
+   ],
+   "headings": [],
+   "path": "/dashboard",
+   "structure": "dialog",
+   "top": {
+    "name": "",
+    "role": "dialog"
+   }
+  },
+  "hop": [
+   {
+    "click": {
+     "name": "Cards",
+     "role": "button"
+    }
+   }
+  ],
+  "mutates": false,
+  "parent": "home.search-pages",
+  "recordedBy": "agent",
+  "review": null,
+  "similarity": 0.9987,
+  "source": "aba51aec49a06adbcd5ea837fd87e9beec4b971c",
+  "status": "accepted"
+ },
+ "home.search-filters-scrolled": {
+  "checked": "2026-10-02-1349",
+  "fingerprint": {
+   "controls": [
+    "Accounts",
+    "All",
+    "Approvals",
+    "Cards",
+    "Carry's Card ••<n> Carry Beck · <amount> spent this week",
+    "Column Card ••<n> Jane Black · <amount> spent this week",
+    "Dave's Card ••<n> Dave Walker · <amount> spent this week",
+    "Dave's active card ••<n> Dave Walker · <amount> spent this week",
+    "Departments",
+    "Jane's IO card ••<n> Jane Black · <amount> spent this week",
+    "Jessica's Card ••<n> Jessica Awad · <amount> spent this week",
+    "Jessica's Debit Card ••<n> Agent Card Jessica Awad · <amount> spent this week",
+    "John's Card ••<n> John Miller · <amount> spent this week",
+    "Landon's IO card ••<n> Landon Shepherd · <amount> spent this week",
+    "Mary's Card ••<n> Mary Metcalfe · <amount> spent this week",
+    "Office Card ••<n> Alice Chen · <amount> spent this week",
+    "Pages",
+    "Recipients",
+    "Sally's Card ••<n> Sally Park · <amount> spent this week",
+    "Scheduled",
+    "Scroll filters left",
+    "Statements",
+    "Team Lunch Debit Card ••<n> Jane Black · <amount> spent this week",
+    "Thomas's Card ••<n> Thomas Brown · <amount> spent this week",
+    "Transactions",
+    "Users",
+    "card"
+   ],
+   "headings": [],
+   "path": "/dashboard",
+   "structure": "dialog",
+   "top": {
+    "name": "",
+    "role": "dialog"
+   }
+  },
+  "hop": [
+   {
+    "click": {
+     "name": "Scroll filters right",
+     "role": "button"
+    }
+   }
+  ],
+  "mutates": false,
+  "parent": "home.search-cards",
+  "recordedBy": "agent",
+  "review": null,
+  "similarity": 0.9985,
+  "source": "f67dfeb5962d75549ab18dd7b8f65ed08dd65154",
+  "status": "accepted"
+ },
+ "home.search-no-results": {
+  "checked": "2026-10-02-1349",
+  "fingerprint": {
+   "controls": [
+    "Accounts",
+    "All",
+    "Approvals",
+    "Cards",
+    "Departments",
+    "Pages",
+    "Recipients",
+    "Scheduled",
+    "Scroll filters right",
+    "Search all transactions for “zzqxnothing”",
+    "Statements",
+    "Transactions",
+    "Users",
+    "zzqxnothing"
+   ],
+   "headings": [],
+   "path": "/dashboard",
+   "structure": "dialog",
+   "top": {
+    "name": "",
+    "role": "dialog"
+   }
+  },
+  "hop": [
+   {
+    "fill": {
+     "locator": {
+      "role": "combobox"
+     },
+     "value": "zzqxnothing"
+    }
+   },
+   {
+    "wait": {
+     "ms": 800
+    }
+   }
+  ],
+  "mutates": false,
+  "parent": "home.search-results",
+  "recordedBy": "agent",
+  "review": null,
+  "similarity": 0.9988,
+  "source": "9222d97cc5fdb737b88c29dfbdc22218edc9a6e7",
+  "status": "accepted"
+ },
+ "home.search-open": {
+  "checked": "2026-10-02-1349",
+  "fingerprint": {
+   "controls": [
+    "Accounts",
+    "All",
+    "Approvals",
+    "Cards",
+    "Departments",
+    "Pages",
+    "Payments over <n>k Documents & Statements",
+    "Recipients",
+    "Scheduled",
+    "Scroll filters right",
+    "Statements",
+    "Transactions",
+    "Users"
+   ],
+   "headings": [],
+   "path": "/dashboard",
+   "structure": "dialog",
+   "top": {
+    "name": "",
+    "role": "dialog"
+   }
+  },
+  "hop": [
+   {
+    "click": {
+     "name": "Search for anything",
+     "role": "button"
+    }
+   }
+  ],
+  "mutates": false,
+  "parent": "home.index",
+  "recordedBy": "draft",
+  "review": null,
+  "similarity": 0.9986,
+  "source": "20d2d10921b92c244db42443db7036c878560e4b",
+  "status": "accepted"
+ },
+ "home.search-pages": {
+  "checked": "2026-10-02-1349",
+  "fingerprint": {
+   "controls": [
+    "Accounts",
+    "All",
+    "Approvals",
+    "Cards",
+    "Change password",
+    "Create a card",
+    "Departments",
+    "Pages",
+    "Recipients",
+    "Scheduled",
+    "Scroll filters right",
+    "Statements",
+    "Transactions",
+    "Users",
+    "card"
+   ],
+   "headings": [],
+   "path": "/dashboard",
+   "structure": "dialog",
+   "top": {
+    "name": "",
+    "role": "dialog"
+   }
+  },
+  "hop": [
+   {
+    "click": {
+     "name": "Pages",
+     "role": "button"
+    }
+   }
+  ],
+  "mutates": false,
+  "parent": "home.search-card-all",
+  "recordedBy": "agent",
+  "review": null,
+  "similarity": 0.9987,
+  "source": "0608cb26ae92703e8b38f7047896bb62271fb830",
+  "status": "accepted"
+ },
+ "home.search-results": {
+  "checked": "2026-10-02-1349",
+  "fingerprint": {
+   "controls": [
+    "<amount> Failed Jessica A. ••<n> · <date>",
+    "<amount> Jessica A. ••<n> · <date>",
+    "Accounts",
+    "All",
+    "Approvals",
+    "Cards",
+    "Departments",
+    "Google",
+    "Google View all transactions",
+    "Pages",
+    "Recipients",
+    "Scheduled",
+    "Scroll filters right",
+    "Search all transactions for “Google”",
+    "Statements",
+    "Transactions",
+    "Users"
+   ],
+   "headings": [],
+   "path": "/dashboard",
+   "structure": "dialog",
+   "top": {
+    "name": "",
+    "role": "dialog"
+   }
+  },
+  "hop": [
+   {
+    "fill": {
+     "locator": {
+      "name": "Payments over 1.5k Documents & Statements",
+      "role": "combobox"
+     },
+     "value": "Google"
+    }
+   },
+   {
+    "wait": {
+     "ms": 1000
+    }
+   }
+  ],
+  "mutates": false,
+  "parent": "home.search-open",
+  "recordedBy": "agent",
+  "review": null,
+  "similarity": 0.9919,
+  "source": "a0a4927166a06ea276daa28e4b266729d26f37fc",
+  "status": "accepted"
+ },
+ "home.settings-gear-tooltip": {
+  "checked": "2026-10-02-1349",
+  "fingerprint": {
+   "controls": [],
+   "headings": [],
+   "path": "/dashboard",
+   "structure": "dialog",
+   "top": {
+    "name": "",
+    "role": "generic"
+   }
+  },
+  "hop": [
+   {
+    "hover": {
+     "name": "Navigate to Settings",
+     "role": "link"
+    }
+   }
+  ],
+  "mutates": false,
+  "parent": "home.index",
+  "recordedBy": "agent",
+  "review": null,
+  "similarity": 0.9737,
+  "source": "24e6b8d5e718d301e080e44fc8844ae3a88cf97e",
+  "status": "accepted"
+ },
+ "home.task-category-review": {
+  "checked": "2026-10-02-1349",
+  "fingerprint": {
+   "controls": [
+    "Accounting",
+    "Accounts",
+    "Banking",
+    "Bill Pay",
+    "Books",
+    "Cards",
+    "Command New",
+    "Credit Card",
+    "Home",
+    "Insights",
+    "Invoicing",
+    "Learn about bookmarks",
+    "Mercury Demo Pro",
+    "Ops / Payroll <amount>",
+    "Payments",
+    "Remove bookmark",
+    "Reorder Bill Pay bookmark",
+    "Reorder Credit Card bookmark",
+    "Reorder Insights bookmark",
+    "Reorder Ops / Payroll bookmark",
+    "Tasks <n>",
+    "Team Spend",
+    "Transactions"
+   ],
+   "headings": [],
+   "path": "/transactions/<id>",
+   "structure": "dialog",
+   "top": {
+    "name": "",
+    "role": "navigation"
+   }
+  },
+  "hop": [
+   {
+    "click": {
+     "name": "Review category for your <amount> Uber Eats transaction",
+     "role": "cell"
+    }
+   }
+  ],
+  "mutates": false,
+  "parent": "home.tasks",
+  "recordedBy": "agent",
+  "review": null,
+  "similarity": 0.9337,
+  "source": "b0e305fd044d503991b63626dc77c2310a98e22b",
+  "status": "accepted"
+ },
+ "home.task-daily-maximum": {
+  "checked": "2026-10-02-1349",
+  "fingerprint": {
+   "controls": [
+    "Account Security",
+    "Advisors <n>",
+    "Approval Rules",
+    "Categories",
+    "Company Profile",
+    "Controls",
+    "Customize your experience",
+    "Daily maximum",
+    "Departments",
+    "Documents",
+    "Dual admin",
+    "Integrations",
+    "Mercury Demo Pro",
+    "Move money",
+    "Navigate to Settings",
+    "Notifications",
+    "Open account",
+    "Per-payment",
+    "Perks",
+    "Plan & Billing",
+    "Profile",
+    "Referrals",
+    "Search for anything",
+    "Security",
+    "Set up",
+    "Settings",
+    "Team",
+    "Toggle Private Mode",
+    "Tokens",
+    "Vault",
+    "Viewing as Admin",
+    "Webhooks",
+    "updates"
+   ],
+   "headings": [
+    "Approval Rules",
+    "No daily maximum currently enabled"
+   ],
+   "path": "/settings/approvals/dailyMaximum",
+   "structure": "document",
+   "top": {
+    "name": "",
+    "role": "document"
+   }
+  },
+  "hop": [],
+  "mutates": false,
+  "parent": "/settings/approvals/dailyMaximum",
+  "recordedBy": "root",
+  "review": null,
+  "similarity": 0.9996,
+  "source": "97d170e1550eee4afc0af065b78cda302a97674c",
+  "status": "accepted"
+ },
+ "home.task-dual-admin": {
+  "checked": "2026-10-02-1349",
+  "fingerprint": {
+   "controls": [
+    "Account Security",
+    "Advisors <n>",
+    "Approval Rules",
+    "Approve",
+    "Categories",
+    "Company Profile",
+    "Controls",
+    "Customize your experience",
+    "Daily maximum",
+    "Decline",
+    "Departments",
+    "Documents",
+    "Dual admin",
+    "Dual admin approval requires a second admin to approve sensitive actions—such as payments exceeding the daily maximum (if enabled), inviting users with Admin or money movement access, resetting <n>FA, or editing sensitive policies. Learn more",
+    "Integrations",
+    "Learn more",
+    "Mercury Demo Pro",
+    "Move money",
+    "Navigate to Settings",
+    "Notifications",
+    "Open account",
+    "Per-payment",
+    "Perks",
+    "Plan & Billing",
+    "Profile",
+    "Referrals",
+    "Search for anything",
+    "Security",
+    "Settings",
+    "Team",
+    "Toggle Private Mode",
+    "Tokens",
+    "Vault",
+    "Viewing as Admin",
+    "Webhooks",
+    "updates"
+   ],
+   "headings": [
+    "Approval Rules"
+   ],
+   "path": "/settings/approvals/dualAdmin",
+   "structure": "document",
+   "top": {
+    "name": "",
+    "role": "document"
+   }
+  },
+  "hop": [],
+  "mutates": false,
+  "parent": "/settings/approvals/dualAdmin",
+  "recordedBy": "root",
+  "review": null,
+  "similarity": 0.9997,
+  "source": "97d170e1550eee4afc0af065b78cda302a97674c",
+  "status": "accepted"
+ },
+ "home.task-invite-confirmed": {
+  "checked": "2026-10-02-1349",
+  "fingerprint": {
+   "controls": [
+    "Account Security",
+    "Add filter",
+    "Advisors <n>",
+    "All",
+    "Approval Rules",
+    "Categories",
+    "Close detail panel",
+    "Company Profile",
+    "Controls",
+    "Create card",
+    "Customize your experience",
+    "Departments",
+    "Documents",
+    "Integrations",
+    "Invite",
+    "Mercury Demo Pro",
+    "Move money",
+    "Navigate to Settings",
+    "Needs review",
+    "Notifications",
+    "Open account",
+    "Perks",
+    "Plan & Billing",
+    "Profile",
+    "Referrals",
+    "Remove Invite",
+    "Resend Invite",
+    "Roles",
+    "Search for anything",
+    "Security",
+    "Settings",
+    "Share link",
+    "Team",
+    "Toggle Private Mode",
+    "Tokens",
+    "Vault",
+    "View all Admin details",
+    "Viewing as Admin",
+    "Webhooks",
+    "updates"
+   ],
+   "headings": [
+    "Team",
+    "Bruce Collins"
+   ],
+   "path": "/settings/users/<id>",
+   "structure": "document",
+   "top": {
+    "name": "",
+    "role": "document"
+   }
+  },
+  "hop": [
+   {
+    "click": {
+     "name": "Confirm changes",
+     "role": "button"
+    }
+   }
+  ],
+  "mutates": true,
+  "parent": "home.task-invite-review",
+  "recordedBy": "agent",
+  "review": {
+   "by": "conductor",
+   "date": "2026-10-03",
+   "decision": "reject",
+   "note": "extra layer: the Bruce Collins invite detail panel (Remove Invite / Resend Invite) is still open over Settings > Team; the capture shows the plain Team list",
+   "reason": "below-threshold"
+  },
+  "similarity": 0.7296,
+  "source": "75d078839e4c66daf447ae9c5672cb46f36822bc",
+  "status": "rejected"
+ },
+ "home.task-invite-review": {
+  "checked": "2026-10-02-1349",
+  "fingerprint": {
+   "controls": [
+    "Close",
+    "Confirm changes",
+    "Customize your experience",
+    "Decline",
+    "Open account",
+    "Viewing as Admin"
+   ],
+   "headings": [
+    "Invite admin"
+   ],
+   "path": "/settings/users/review/inviteRevReqId",
+   "structure": "document",
+   "top": {
+    "name": "",
+    "role": "document"
+   }
+  },
+  "hop": [],
+  "mutates": false,
+  "parent": "/settings/users/review/inviteRevReqId",
+  "recordedBy": "root",
+  "review": null,
+  "similarity": 0.9974,
+  "source": "97d170e1550eee4afc0af065b78cda302a97674c",
+  "status": "accepted"
+ },
+ "home.task-overspend": {
+  "checked": "2026-10-02-1349",
+  "fingerprint": {
+   "controls": [
+    "Accounting",
+    "Accounts",
+    "Banking",
+    "Bill Pay",
+    "Books",
+    "Cards",
+    "Command New",
+    "Credit Card",
+    "Home",
+    "Insights",
+    "Invoicing",
+    "Learn about bookmarks",
+    "Mercury Demo Pro",
+    "Ops / Payroll <amount>",
+    "Payments",
+    "Remove bookmark",
+    "Reorder Bill Pay bookmark",
+    "Reorder Credit Card bookmark",
+    "Reorder Insights bookmark",
+    "Reorder Ops / Payroll bookmark",
+    "Tasks <n>",
+    "Team Spend",
+    "Transactions"
+   ],
+   "headings": [],
+   "path": "/transactions/<id>",
+   "structure": "dialog",
+   "top": {
+    "name": "",
+    "role": "navigation"
+   }
+  },
+  "hop": [
+   {
+    "click": {
+     "name": "Approve Jane Black’s overspend on the Hardware budget",
+     "role": "cell"
+    }
+   }
+  ],
+  "mutates": true,
+  "parent": "home.tasks-row-hover",
+  "recordedBy": "agent",
+  "review": {
+   "by": "conductor",
+   "date": "2026-10-03",
+   "decision": "accept",
+   "note": "same Lily's Eatery -$50.08 drawer (Jane B.'s Card ••5555, Hardware budget, only 'Cancel request') on Transactions filtered to My transactions + Hardware; the categorize tip covers part of it. The recorder snapshot shows the task row as the only clickable element and 'Approve' as text inside the row's name, with no separate link or button, so clicking the description cell fires the same row action as clicking 'Approve'",
+   "reason": "mutating"
+  },
+  "similarity": 0.9233,
+  "source": "466e01af77055e61842b2ab63b9a4f03817a72d6",
+  "status": "accepted"
+ },
+ "home.task-payment-approved": {
+  "checked": "2026-10-02-1349",
+  "fingerprint": {
+   "controls": [
+    "Back to Needs Approval",
+    "Close",
+    "Customize your experience",
+    "Open account",
+    "Viewing as Admin"
+   ],
+   "headings": [
+    "You’ve approved an ACH payment",
+    "The payment will be sent immediately."
+   ],
+   "path": "/send-money/pay/success",
+   "structure": "document",
+   "top": {
+    "name": "",
+    "role": "document"
+   }
+  },
+  "hop": [
+   {
+    "click": {
+     "name": "Approve payment",
+     "role": "button"
+    }
+   }
+  ],
+  "mutates": true,
+  "parent": "home.task-payment-review",
+  "recordedBy": "agent",
+  "review": {
+   "by": "conductor",
+   "date": "2026-10-03",
+   "decision": "accept",
+   "note": "same full-page 'You've approved an ACH payment' confirmation ($1,042.95 to Contractor (Jason Green), Back to Needs Approval); the hop clicks 'Approve payment' as the label says",
+   "reason": "mutating"
+  },
+  "similarity": 0.9999,
+  "source": "a0ba9be64fa3fcc0f4191255c27d86e595a7c3ad",
+  "status": "accepted"
+ },
+ "home.task-payment-review": {
+  "checked": "2026-10-02-1349",
+  "fingerprint": {
+   "controls": [
+    "Approve payment",
+    "Ask Mercury Command /",
+    "Close",
+    "Customize your experience",
+    "Decline",
+    "Open account",
+    "Viewing as Admin",
+    "a<n>bdc-<n>ea-<n>e<n>.pdf"
+   ],
+   "headings": [],
+   "path": "/send-money/review/approve/recipient",
+   "structure": "document",
+   "top": {
+    "name": "",
+    "role": "document"
+   }
+  },
+  "hop": [
+   {
+    "click": {
+     "name": "Approve <amount> payment to Jason Green (requested by Alice C.)",
+     "role": "cell"
+    }
+   }
+  ],
+  "mutates": false,
+  "parent": "home.tasks",
+  "recordedBy": "agent",
+  "review": null,
+  "similarity": 0.9981,
+  "source": "38fb47d99cb6cb3b2de0e648c84cb0a4493d5f46",
+  "status": "accepted"
+ },
+ "home.task-receipt-exemption": {
+  "checked": "2026-10-02-1349",
+  "fingerprint": {
+   "controls": [
+    "Accounting",
+    "Accounts",
+    "Banking",
+    "Bill Pay",
+    "Books",
+    "Cards",
+    "Command New",
+    "Credit Card",
+    "Home",
+    "Insights",
+    "Invoicing",
+    "Learn about bookmarks",
+    "Mercury Demo Pro",
+    "Ops / Payroll <amount>",
+    "Payments",
+    "Remove bookmark",
+    "Reorder Bill Pay bookmark",
+    "Reorder Credit Card bookmark",
+    "Reorder Insights bookmark",
+    "Reorder Ops / Payroll bookmark",
+    "Tasks <n>",
+    "Team Spend",
+    "Transactions"
+   ],
+   "headings": [],
+   "path": "/transactions/<id>",
+   "structure": "dialog",
+   "top": {
+    "name": "",
+    "role": "navigation"
+   }
+  },
+  "hop": [
+   {
+    "click": {
+     "name": "Landon Shepherd requested a receipt policy exemption on a transaction at Monarch Books.",
+     "role": "cell"
+    }
+   }
+  ],
+  "mutates": false,
+  "parent": "home.tasks",
+  "recordedBy": "agent",
+  "review": null,
+  "similarity": 0.938,
+  "source": "3a2ab632a916e2259041f1e2308ca2d64af60ee4",
+  "status": "accepted"
+ },
+ "home.task-receipt-forwarding": {
+  "checked": "2026-10-02-1349",
+  "fingerprint": {
+   "controls": [
+    "Account Security",
+    "Add",
+    "Add or edit",
+    "Advisors <n>",
+    "Allow",
+    "Approval Rules",
+    "Categories",
+    "Company Profile",
+    "Controls",
+    "Customize your experience",
+    "Departments",
+    "Dismiss",
+    "Documents",
+    "Edit",
+    "Integrations",
+    "Manage",
+    "Match receipts for all transactions",
+    "Mercury Demo Pro",
+    "Move money",
+    "Navigate to Settings",
+    "Notifications",
+    "Open account",
+    "Opt In",
+    "Perks",
+    "Phone number",
+    "Plan & Billing",
+    "Privacy Policy",
+    "Profile",
+    "Referrals",
+    "Search for anything",
+    "Security",
+    "Settings",
+    "Team",
+    "Theme",
+    "Toggle Private Mode",
+    "Tokens",
+    "United States flag",
+    "Vault",
+    "View Terms",
+    "Viewing as Admin",
+    "Webhooks",
+    "receipts@mercury.com",
+    "updates"
+   ],
+   "headings": [
+    "Jane Black"
+   ],
+   "path": "/settings/my-profile",
+   "structure": "document",
+   "top": {
+    "name": "",
+    "role": "document"
+   }
+  },
+  "hop": [],
+  "mutates": false,
+  "parent": "/settings/my-profile?section=receipt-forwarding",
+  "recordedBy": "root",
+  "review": null,
+  "similarity": 0.9928,
+  "source": "97d170e1550eee4afc0af065b78cda302a97674c",
+  "status": "accepted"
+ },
+ "home.task-recurring-payment": {
+  "checked": "2026-10-02-1349",
+  "fingerprint": {
+   "controls": [
+    "Accounting",
+    "Approve payments",
+    "Ask Mercury Command /",
+    "Close",
+    "Customize your experience",
+    "Decline",
+    "Open account",
+    "Viewing as Admin",
+    "a<n>bdc-<n>ea-<n>e<n>.pdf"
+   ],
+   "headings": [],
+   "path": "/send-money/review/approve/payment",
+   "structure": "document",
+   "top": {
+    "name": "",
+    "role": "document"
+   }
+  },
+  "hop": [
+   {
+    "click": {
+     "name": "Approve <amount> recurring payment to Jason Green (requested by Alice C.)",
+     "role": "cell"
+    }
+   }
+  ],
+  "mutates": false,
+  "parent": "home.tasks",
+  "recordedBy": "agent",
+  "review": null,
+  "similarity": 0.9995,
+  "source": "724f62697210ee689f2d01a6b3cc301809e736ef",
+  "status": "accepted"
+ },
+ "home.task-reimbursement": {
+  "checked": "2026-10-02-1349",
+  "fingerprint": {
+   "controls": [
+    "Approve",
+    "Choose Files",
+    "Close detail panel",
+    "Decline",
+    "Drag and drop here or click to upload You may upload PDF, PNG, or JPEG files",
+    "Jessica Awad",
+    "More",
+    "Reimburse from"
+   ],
+   "headings": [],
+   "path": "/expenses/all-expenses",
+   "structure": "dialog",
+   "top": {
+    "name": "",
+    "role": "complementary"
+   }
+  },
+  "hop": [
+   {
+    "click": {
+     "name": "Approve <amount> reimbursement from Jessica Awad at The Bayside Bistro",
+     "role": "cell"
+    }
+   }
+  ],
+  "mutates": false,
+  "parent": "home.tasks",
+  "recordedBy": "agent",
+  "review": null,
+  "similarity": 0.9935,
+  "source": "0dbacd6933450e123eedeb5dd5da6ad7cbe5ee9d",
+  "status": "accepted"
+ },
+ "home.task-reimbursement-approved": {
+  "checked": "2026-10-02-1349",
+  "fingerprint": {
+   "controls": [],
+   "headings": [],
+   "path": "/expenses/all-expenses",
+   "structure": "status",
+   "top": {
+    "name": "All Expenses",
+    "role": "table"
+   }
+  },
+  "hop": [
+   {
+    "click": {
+     "name": "Approve",
+     "role": "button"
+    }
+   }
+  ],
+  "mutates": true,
+  "parent": "home.task-reimbursement",
+  "recordedBy": "agent",
+  "review": {
+   "by": "conductor",
+   "date": "2026-10-03",
+   "decision": "accept",
+   "note": "same Reimbursements list with the panel closed and All expenses down from 5 to 4; the 'Reimbursement payment approved' toast faded before the screenshot",
+   "reason": "mutating"
+  },
+  "similarity": 0.966,
+  "source": "92cb79d9e2cc3e2dfc442dc2e9891f6ee99c0e22",
+  "status": "accepted"
+ },
+ "home.tasks": {
+  "checked": "2026-10-02-1349",
+  "fingerprint": {
+   "controls": [
+    "Accounting",
+    "Accounts",
+    "Banking",
+    "Bill Pay",
+    "Books",
+    "Cards",
+    "Command New",
+    "Completed",
+    "Credit Card",
+    "Customize your experience",
+    "Home",
+    "Incomplete",
+    "Insights",
+    "Invoicing",
+    "Learn about bookmarks",
+    "Mercury Demo Pro",
+    "Move money",
+    "Navigate to Settings",
+    "Open account",
+    "Ops / Payroll <amount>",
+    "Payments",
+    "Remove bookmark",
+    "Reorder Bill Pay bookmark",
+    "Reorder Credit Card bookmark",
+    "Reorder Insights bookmark",
+    "Reorder Ops / Payroll bookmark",
+    "Search for anything",
+    "Tasks <n>",
+    "Team Spend",
+    "Toggle Private Mode",
+    "Transactions",
+    "Viewing as Admin",
+    "updates"
+   ],
+   "headings": [
+    "Tasks"
+   ],
+   "path": "/tasks",
+   "structure": "document",
+   "top": {
+    "name": "",
+    "role": "document"
+   }
+  },
+  "hop": [],
+  "mutates": false,
+  "parent": "/tasks",
+  "recordedBy": "root",
+  "review": null,
+  "similarity": 0.9768,
+  "source": "97d170e1550eee4afc0af065b78cda302a97674c",
+  "status": "accepted"
+ },
+ "home.tasks-completed": {
+  "checked": "2026-10-02-1349",
+  "fingerprint": {
+   "controls": [
+    "Accounting",
+    "Accounts",
+    "Banking",
+    "Bill Pay",
+    "Books",
+    "Cards",
+    "Command New",
+    "Completed",
+    "Credit Card",
+    "Customize your experience",
+    "Home",
+    "Incomplete",
+    "Insights",
+    "Invoicing",
+    "Learn about bookmarks",
+    "Mercury Demo Pro",
+    "Move money",
+    "Navigate to Settings",
+    "Next page",
+    "Open account",
+    "Ops / Payroll <amount>",
+    "Payments",
+    "Previous page",
+    "Remove bookmark",
+    "Reorder Bill Pay bookmark",
+    "Reorder Credit Card bookmark",
+    "Reorder Insights bookmark",
+    "Reorder Ops / Payroll bookmark",
+    "Search for anything",
+    "Tasks <n>",
+    "Team Spend",
+    "Toggle Private Mode",
+    "Transactions",
+    "Viewing as Admin",
+    "updates"
+   ],
+   "headings": [
+    "Tasks"
+   ],
+   "path": "/tasks",
+   "structure": "document",
+   "top": {
+    "name": "",
+    "role": "document"
+   }
+  },
+  "hop": [
+   {
+    "click": {
+     "name": "Completed",
+     "role": "menuitem"
+    }
+   }
+  ],
+  "mutates": false,
+  "parent": "home.tasks",
+  "recordedBy": "draft",
+  "review": null,
+  "similarity": 0.9939,
+  "source": "16a7ce7f13f1fdd5cbd253a83ab0372bf5c9890e",
+  "status": "accepted"
+ },
+ "home.tasks-row-hover": {
+  "checked": "2026-10-02-1349",
+  "fingerprint": {
+   "controls": [
+    "Accounting",
+    "Accounts",
+    "Banking",
+    "Bill Pay",
+    "Books",
+    "Cards",
+    "Command New",
+    "Completed",
+    "Credit Card",
+    "Customize your experience",
+    "Home",
+    "Incomplete",
+    "Insights",
+    "Invoicing",
+    "Learn about bookmarks",
+    "Mercury Demo Pro",
+    "Move money",
+    "Navigate to Settings",
+    "Open account",
+    "Ops / Payroll <amount>",
+    "Payments",
+    "Remove bookmark",
+    "Reorder Bill Pay bookmark",
+    "Reorder Credit Card bookmark",
+    "Reorder Insights bookmark",
+    "Reorder Ops / Payroll bookmark",
+    "Search for anything",
+    "Tasks <n>",
+    "Team Spend",
+    "Toggle Private Mode",
+    "Transactions",
+    "Viewing as Admin",
+    "updates"
+   ],
+   "headings": [
+    "Tasks"
+   ],
+   "path": "/tasks",
+   "structure": "document",
+   "top": {
+    "name": "",
+    "role": "document"
+   }
+  },
+  "hop": [
+   {
+    "hover": {
+     "name": "Approve Jane Black’s overspend on the Hardware budget",
+     "role": "cell"
+    }
+   }
+  ],
+  "mutates": false,
+  "parent": "home.tasks",
+  "recordedBy": "agent",
+  "review": null,
+  "similarity": 0.9799,
+  "source": "eeae138592588727c0f9a600717e11392c4a7077",
+  "status": "accepted"
+ },
+ "home.try-panel-startup": {
+  "checked": "2026-10-02-1349",
+  "fingerprint": null,
+  "hop": [
+   {
+    "click": {
+     "css": "[class*=\"_menuIcon_\"]"
+    }
+   }
+  ],
+  "mutates": false,
+  "parent": "home.index",
+  "recordedBy": "agent",
+  "review": null,
+  "similarity": null,
+  "source": null,
+  "status": "draft"
+ },
+ "home.tx-monthly-in": {
+  "checked": "2026-10-02-1349",
+  "fingerprint": {
+   "controls": [
+    "+<n> View all accounts",
+    "<date>",
+    "AP <amount>",
+    "AR <amount>",
+    "Account Click to sort",
+    "Accounting",
+    "Accounts",
+    "Amount Click to sort",
+    "Balance graph",
+    "Balance table",
+    "Banking",
+    "Bill Pay",
+    "Books",
+    "Cards",
+    "Command New",
+    "Credit Card",
+    "Credit Card <amount>",
+    "Customize",
+    "Customize your experience",
+    "Date Click to sort",
+    "Deposit",
+    "Google <amount>",
+    "Home",
+    "Insights",
+    "Invoicing",
+    "Last <n> days",
+    "Learn about bookmarks",
+    "Lighthouse Properties #<n> <amount>",
+    "Mercury Demo Pro",
+    "Milgram Brokerage <amount>",
+    "Monarch Books <amount>",
+    "Monthly money in",
+    "Monthly money out",
+    "Move money",
+    "My transactions",
+    "Navigate to Settings",
+    "Open account",
+    "Operating expenses",
+    "Ops / Payroll <amount>",
+    "Orange, Inc. <amount>",
+    "Pay",
+    "Payments",
+    "Recent",
+    "Remove bookmark",
+    "Reorder Bill Pay bookmark",
+    "Reorder Credit Card bookmark",
+    "Reorder Insights bookmark",
+    "Reorder Ops / Payroll bookmark",
+    "Request",
+    "Search for anything",
+    "Send",
+    "Tasks <n>",
+    "Team Spend",
+    "To/From Click to sort",
+    "Toggle Private Mode",
+    "Transactions",
+    "Transfer",
+    "Treasury <amount>",
+    "Upload bill",
+    "View",
+    "View all",
+    "Viewing as Admin",
+    "updates"
+   ],
+   "headings": [
+    "Welcome, Jane"
+   ],
+   "path": "/dashboard",
+   "structure": "document",
+   "top": {
+    "name": "",
+    "role": "document"
+   }
+  },
+  "hop": [
+   {
+    "click": {
+     "name": "Monthly money in",
+     "role": "menuitem"
+    }
+   }
+  ],
+  "mutates": false,
+  "parent": "home.index-transactions",
+  "recordedBy": "agent",
+  "review": {
+   "by": "conductor",
+   "date": "2026-10-03",
+   "decision": "accept",
+   "note": "same Home Transactions widget with 'Monthly money in' chip active and green incoming rows; only scroll position and dates (Sep 24 vs Oct 3) drift",
+   "reason": "below-threshold"
+  },
+  "similarity": 0.635,
+  "source": "20949991a0980d36ca86ef3ad07395cad0904099",
+  "status": "accepted"
+ },
+ "home.tx-monthly-out": {
+  "checked": "2026-10-02-1349",
+  "fingerprint": {
+   "controls": [
+    "+<n> View all accounts",
+    "<date>",
+    "AP <amount>",
+    "AR <amount>",
+    "Account Click to sort",
+    "Accounting",
+    "Accounts",
+    "Amount Click to sort",
+    "Balance graph",
+    "Balance table",
+    "Banking",
+    "Bill Pay",
+    "Books",
+    "Cards",
+    "Command New",
+    "Credit Card",
+    "Credit Card <amount>",
+    "Customize",
+    "Customize your experience",
+    "Date Click to sort",
+    "Deposit",
+    "Google <amount>",
+    "Home",
+    "Insights",
+    "Invoicing",
+    "Last <n> days",
+    "Learn about bookmarks",
+    "Lighthouse Properties #<n> <amount>",
+    "Mercury Demo Pro",
+    "Milgram Brokerage <amount>",
+    "Monarch Books <amount>",
+    "Monthly money in",
+    "Monthly money out",
+    "Move money",
+    "My transactions",
+    "Navigate to Settings",
+    "Open account",
+    "Operating expenses",
+    "Ops / Payroll <amount>",
+    "Orange, Inc. <amount>",
+    "Pay",
+    "Payments",
+    "Recent",
+    "Remove bookmark",
+    "Reorder Bill Pay bookmark",
+    "Reorder Credit Card bookmark",
+    "Reorder Insights bookmark",
+    "Reorder Ops / Payroll bookmark",
+    "Request",
+    "Search for anything",
+    "Send",
+    "Tasks <n>",
+    "Team Spend",
+    "To/From Click to sort",
+    "Toggle Private Mode",
+    "Transactions",
+    "Transfer",
+    "Treasury <amount>",
+    "Upload bill",
+    "View",
+    "View all",
+    "Viewing as Admin",
+    "updates"
+   ],
+   "headings": [
+    "Welcome, Jane"
+   ],
+   "path": "/dashboard",
+   "structure": "document",
+   "top": {
+    "name": "",
+    "role": "document"
+   }
+  },
+  "hop": [
+   {
+    "click": {
+     "name": "Monthly money out",
+     "role": "menuitem"
+    }
+   }
+  ],
+  "mutates": false,
+  "parent": "home.index-transactions",
+  "recordedBy": "agent",
+  "review": {
+   "by": "conductor",
+   "date": "2026-10-03",
+   "decision": "accept",
+   "note": "same Home Transactions widget with 'Monthly money out' chip active and outgoing rows; only scroll position and dates drift",
+   "reason": "below-threshold"
+  },
+  "similarity": 0.6309,
+  "source": "4cf38a71c0a87b22ccd7e021ed46f05016bedd47",
+  "status": "accepted"
+ },
+ "home.tx-operating-expenses": {
+  "checked": "2026-10-02-1349",
+  "fingerprint": {
+   "controls": [
+    "+<n> View all accounts",
+    "<date>",
+    "AP <amount>",
+    "AR <amount>",
+    "Account Click to sort",
+    "Accounting",
+    "Accounts",
+    "Amount Click to sort",
+    "Balance graph",
+    "Balance table",
+    "Banking",
+    "Bill Pay",
+    "Books",
+    "Cards",
+    "Command New",
+    "Credit Card",
+    "Credit Card <amount>",
+    "Customize",
+    "Customize your experience",
+    "Date Click to sort",
+    "Deposit",
+    "Google <amount>",
+    "Home",
+    "Insights",
+    "Invoicing",
+    "Last <n> days",
+    "Learn about bookmarks",
+    "Lighthouse Properties #<n> <amount>",
+    "Mercury Demo Pro",
+    "Milgram Brokerage <amount>",
+    "Monarch Books <amount>",
+    "Monthly money in",
+    "Monthly money out",
+    "Move money",
+    "My transactions",
+    "Navigate to Settings",
+    "Open account",
+    "Operating expenses",
+    "Ops / Payroll <amount>",
+    "Orange, Inc. <amount>",
+    "Pay",
+    "Payments",
+    "Recent",
+    "Remove bookmark",
+    "Reorder Bill Pay bookmark",
+    "Reorder Credit Card bookmark",
+    "Reorder Insights bookmark",
+    "Reorder Ops / Payroll bookmark",
+    "Request",
+    "Search for anything",
+    "Send",
+    "Tasks <n>",
+    "Team Spend",
+    "To/From Click to sort",
+    "Toggle Private Mode",
+    "Transactions",
+    "Transfer",
+    "Treasury <amount>",
+    "Upload bill",
+    "View",
+    "View all",
+    "Viewing as Admin",
+    "updates"
+   ],
+   "headings": [
+    "Welcome, Jane"
+   ],
+   "path": "/dashboard",
+   "structure": "document",
+   "top": {
+    "name": "",
+    "role": "document"
+   }
+  },
+  "hop": [
+   {
+    "click": {
+     "name": "Operating expenses",
+     "role": "menuitem"
+    }
+   }
+  ],
+  "mutates": false,
+  "parent": "home.index-transactions",
+  "recordedBy": "agent",
+  "review": {
+   "by": "conductor",
+   "date": "2026-10-03",
+   "decision": "accept",
+   "note": "same Home Transactions widget with 'Operating expenses' chip active, Ops / Payroll spend rows; only scroll position and dates drift",
+   "reason": "below-threshold"
+  },
+  "similarity": 0.6335,
+  "source": "82a3fc85ddf86bfbfbbcd616ca7a6ce5eab5f851",
+  "status": "accepted"
+ },
+ "home.tx-row-drawer": {
+  "checked": "2026-10-02-1349",
+  "fingerprint": {
+   "controls": [
+    "Accounting",
+    "Accounts",
+    "Banking",
+    "Bill Pay",
+    "Books",
+    "Cards",
+    "Command New",
+    "Credit Card",
+    "Home",
+    "Insights",
+    "Invoicing",
+    "Learn about bookmarks",
+    "Mercury Demo Pro",
+    "Ops / Payroll <amount>",
+    "Payments",
+    "Remove bookmark",
+    "Reorder Bill Pay bookmark",
+    "Reorder Credit Card bookmark",
+    "Reorder Insights bookmark",
+    "Reorder Ops / Payroll bookmark",
+    "Tasks <n>",
+    "Team Spend",
+    "Transactions"
+   ],
+   "headings": [],
+   "path": "/transactions/<id>",
+   "structure": "dialog",
+   "top": {
+    "name": "",
+    "role": "navigation"
+   }
+  },
+  "hop": [
+   {
+    "click": {
+     "css": "tbody tr",
+     "index": 0
+    }
+   }
+  ],
+  "mutates": false,
+  "parent": "home.tx-sorted",
+  "recordedBy": "agent",
+  "review": {
+   "by": "conductor",
+   "date": "2026-10-03",
+   "decision": "accept",
+   "note": "same Transactions page, Operating expenses view, with a transaction detail drawer open; different record: the hop clicks the top row of the high-to-low widget, as the person did (Deshaun Moore Domestic Wire −$2,891.43 now vs Gusto ACH Pull −$90,122.53 in the capture), and the label names no record",
+   "reason": "below-threshold"
+  },
+  "similarity": 0.8815,
+  "source": "4b23c882d8b2436198053563c89718aa8d7b5bed",
+  "status": "accepted"
+ },
+ "home.tx-sort-menu": {
+  "checked": "2026-10-02-1349",
+  "fingerprint": {
+   "controls": [
+    "Clear sort",
+    "High to low",
+    "Low to high"
+   ],
+   "headings": [],
+   "path": "/dashboard",
+   "structure": "menu",
+   "top": {
+    "name": "Amount Click to sort",
+    "role": "menu"
+   }
+  },
+  "hop": [
+   {
+    "click": {
+     "name": "Amount Click to sort",
+     "role": "button"
+    }
+   }
+  ],
+  "mutates": false,
+  "parent": "home.tx-operating-expenses",
+  "recordedBy": "agent",
+  "review": {
+   "by": "conductor",
+   "date": "2026-10-03",
+   "decision": "accept",
+   "note": "same Amount sort menu (Low to high / High to low / Clear sort disabled) open on the Operating expenses tab; rows and dates drifted",
+   "reason": "below-threshold"
+  },
+  "similarity": 0.6181,
+  "source": "dfdc15210dc90ec8633d0def742ff8e4ca251b93",
+  "status": "accepted"
+ },
+ "home.tx-sorted": {
+  "checked": "2026-10-02-1349",
+  "fingerprint": {
+   "controls": [
+    "+<n> View all accounts",
+    "<date>",
+    "AP <amount>",
+    "AR <amount>",
+    "Account Click to sort",
+    "Accounting",
+    "Accounts",
+    "Amount Click to sort",
+    "Balance graph",
+    "Balance table",
+    "Banking",
+    "Bill Pay",
+    "Books",
+    "Cards",
+    "Command New",
+    "Credit Card",
+    "Credit Card <amount>",
+    "Customize",
+    "Customize your experience",
+    "Date Click to sort",
+    "Deposit",
+    "Google <amount>",
+    "Home",
+    "Insights",
+    "Invoicing",
+    "Last <n> days",
+    "Learn about bookmarks",
+    "Lighthouse Properties #<n> <amount>",
+    "Mercury Demo Pro",
+    "Milgram Brokerage <amount>",
+    "Monarch Books <amount>",
+    "Monthly money in",
+    "Monthly money out",
+    "Move money",
+    "My transactions",
+    "Navigate to Settings",
+    "Open account",
+    "Operating expenses",
+    "Ops / Payroll <amount>",
+    "Orange, Inc. <amount>",
+    "Pay",
+    "Payments",
+    "Recent",
+    "Remove bookmark",
+    "Reorder Bill Pay bookmark",
+    "Reorder Credit Card bookmark",
+    "Reorder Insights bookmark",
+    "Reorder Ops / Payroll bookmark",
+    "Request",
+    "Search for anything",
+    "Send",
+    "Tasks <n>",
+    "Team Spend",
+    "To/From Click to sort",
+    "Toggle Private Mode",
+    "Transactions",
+    "Transfer",
+    "Treasury <amount>",
+    "Upload bill",
+    "View",
+    "View all",
+    "Viewing as Admin",
+    "updates"
+   ],
+   "headings": [
+    "Welcome, Jane"
+   ],
+   "path": "/dashboard",
+   "structure": "document",
+   "top": {
+    "name": "",
+    "role": "document"
+   }
+  },
+  "hop": [
+   {
+    "click": {
+     "name": "High to low",
+     "role": "menuitem"
+    }
+   },
+   {
+    "wait": {
+     "ms": 800
+    }
+   }
+  ],
+  "mutates": false,
+  "parent": "home.tx-sort-menu",
+  "recordedBy": "agent",
+  "review": {
+   "by": "conductor",
+   "date": "2026-10-03",
+   "decision": "accept",
+   "note": "same Transactions widget, Operating expenses tab, sorted by Amount high to low (largest outflow first); the hop clicks the 'High to low' menuitem, the menu is closed, and only the dates and rows drifted (Oct vs Sep)",
+   "reason": "below-threshold"
+  },
+  "similarity": 0.6171,
+  "source": "d2b0bd41f3bd8a2712963c6e9eb0671dadba2b5a",
+  "status": "accepted"
+ },
+ "home.updates-popover": {
+  "checked": "2026-10-02-1349",
+  "fingerprint": {
+   "controls": [],
+   "headings": [],
+   "path": "/dashboard",
+   "structure": "menu",
+   "top": {
+    "name": "updates",
+    "role": "menu"
+   }
+  },
+  "hop": [
+   {
+    "click": {
+     "name": "updates",
+     "role": "button"
+    }
+   }
+  ],
+  "mutates": false,
+  "parent": "home.index",
+  "recordedBy": "agent",
+  "review": null,
+  "similarity": 0.992,
+  "source": "ae88ec8457071a4e3d1010365394efe89e8014c9",
+  "status": "accepted"
+ },
+ "home.viewing-as-menu": {
+  "checked": "2026-10-02-1349",
+  "fingerprint": {
+   "controls": [
+    "View as Employee"
+   ],
+   "headings": [],
+   "path": "/dashboard",
+   "structure": "menu",
+   "top": {
+    "name": "Viewing as Admin",
+    "role": "menu"
+   }
+  },
+  "hop": [
+   {
+    "click": {
+     "name": "Viewing as Admin",
+     "role": "button"
+    }
+   }
+  ],
+  "mutates": false,
+  "parent": "home.index",
+  "recordedBy": "draft",
+  "review": null,
+  "similarity": 0.9802,
+  "source": "493623d3dd1a26d045efa38b9005fb138eddcca9",
+  "status": "accepted"
+ }
+}

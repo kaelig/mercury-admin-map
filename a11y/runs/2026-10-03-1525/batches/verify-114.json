@@ -1,0 +1,119 @@
+{
+ "area": "books",
+ "batch": "verify-114",
+ "findings": [
+  {
+   "attachments": [],
+   "attempt": 1,
+   "basis": "candidate",
+   "criteria": [
+    "2.5.8"
+   ],
+   "evidence": [
+    {
+     "evidence": {
+      "agree": false,
+      "axe": "pass",
+      "exception": null,
+      "height": 20,
+      "offset": 0,
+      "own": "fail",
+      "passedBy": null,
+      "width": 20
+     },
+     "occurrence": {
+      "ancestors": [
+       [
+        "_titleCellContent_1quew_12",
+        "_hasRightAction_1quew_68",
+        "_innerColumn_1quew_63"
+       ],
+       [
+        "_tooltipAnchor_18bac_4",
+        "_tooltipAnchor_1quew_30"
+       ],
+       [
+        "_gridTitleCell_1quew_4"
+       ],
+       [
+        "_gridTitleRow_1dzfu_3"
+       ],
+       [
+        "_stickyHeader_7rfk9_50"
+       ],
+       [
+        "_virtualizerContainer_7rfk9_25"
+       ],
+       [
+        "_grid_7rfk9_1"
+       ],
+       [
+        "_csvImportGate_hp7ar_25"
+       ]
+      ],
+      "classes": [
+       "_sortButton_1quew_104"
+      ],
+      "data": {},
+      "disabled": false,
+      "heading": "Always transparent",
+      "landmark": {
+       "name": "",
+       "role": "main"
+      },
+      "layer": "document",
+      "name": "",
+      "rect": [
+       376,
+       469,
+       20,
+       20
+      ],
+      "role": "button",
+      "tag": "button",
+      "xpath": "/html/body/div[1]/main[1]/div[1]/div[1]/div[1]/div[4]/div[1]/div[1]/div[2]/div[1]/div[1]/div[2]/div[1]/div[2]/div[1]/div[1]/div[1]/div[1]/div[2]/div[2]/div[3]/div[1]/div[1]/button[1]"
+     },
+     "state": "books.to-review"
+    }
+   ],
+   "evidenceHash": "6d336bc64a04fd39533bddeb19ca1a4eeb2b45a9c54b571ae93958d60de0c50e",
+   "facts": {
+    "criterion": "2.5.8",
+    "criterionName": "Target Size (Minimum)",
+    "element": "button in \"Always transparent\"",
+    "offset": "0",
+    "rule": "target-size-own",
+    "screen": "To review filter applied",
+    "screens": 1,
+    "size": "20×20"
+   },
+   "family": "target-size",
+   "guidance": "Medium next to destructive or financial controls.",
+   "issueId": null,
+   "key": "target-size:target-size-own:1c187ca387ca",
+   "measured": true,
+   "primary": "books.to-review",
+   "proposals": [],
+   "rule": "target-size-own",
+   "screens": 1,
+   "severityDefault": "low",
+   "source": "scanner",
+   "states": [
+    "books.to-review"
+   ],
+   "summary": "target-size-own: 20×20 px; the widest circle centered on it that clears other targets is 0 px, and the spacing exception needs 24 px.",
+   "title": "Target under 24×24 px: button in \"Always transparent\""
+  }
+ ],
+ "primaries": [
+  "books.to-review"
+ ],
+ "reach": {
+  "baseUrl": "https://demo.mercury.com",
+  "data": "data",
+  "map": "build/map.json",
+  "run": "2026-10-03-1525",
+  "workspace": "a11y"
+ },
+ "run": "2026-10-03-1525"
+}

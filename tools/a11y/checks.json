@@ -1,0 +1,1567 @@
+{
+ "families": {
+  "contrast": {
+   "label": "Text contrast and use of color",
+   "criteria": [
+    "1.4.3",
+    "1.4.1"
+   ],
+   "defaultSeverity": "medium",
+   "guidance": "High under 2:1, or under 3:1 for essential text.",
+   "key": "intrinsic",
+   "facts": [
+    "element",
+    "screen",
+    "screens",
+    "criterion",
+    "criterionName",
+    "rule",
+    "fg",
+    "bg",
+    "ratio",
+    "required"
+   ],
+   "templates": {
+    "title": "Low contrast: {element}",
+    "detail": "The {element} uses {fg} on {bg}, a contrast of {ratio}:1 where AA needs {required}:1, so people with low vision may not be able to read it. WCAG {criterion} {criterionName}.",
+    "evidence": "axe {rule}: {fg} on {bg} measures {ratio}:1; AA needs {required}:1.",
+    "copy": {
+     "title": "Raise the contrast of the {element}",
+     "summary": "On {screen}, the {element} uses {fg} on {bg}, a contrast of {ratio}:1. AA needs {required}:1 for this text. The same style appears on {screens} screens.",
+     "userImpact": "People with low vision, or anyone on a dim or glare-prone screen, may not be able to read this text.",
+     "fixHypothesis": "The color seems to come from a shared muted-text style. Moving that style to a token that reaches {required}:1 on {bg} would likely fix every screen at once.",
+     "acceptance": [
+      "The {element} reaches at least {required}:1 against its background.",
+      "The same style reaches {required}:1 on every screen where it appears."
+     ],
+     "verify": [
+      "Check the design-system color tokens for a muted-text value that reaches {required}:1 on {bg}."
+     ],
+     "searchTerms": [
+      "{fg}",
+      "muted text color",
+      "color contrast"
+     ],
+     "confidence": "high",
+     "confidenceReason": "axe computed both colors and the ratio, and a verifier checked them on the live demo."
+    }
+   },
+   "ruleTemplates": {
+    "link-in-text-block": {
+     "title": "Link shown by color only: {element}",
+     "detail": "The {element} differs from the text around it only by color, {fg} against {bg} ({ratio}:1), so people who see color differently may not notice it is a link. WCAG {criterion} {criterionName}.",
+     "evidence": "axe {rule}: link {fg} against text {bg} measures {ratio}:1 with no other visual cue; AA needs {required}:1 or a cue such as an underline.",
+     "copy": {
+      "title": "Make the {element} look like a link without relying on color",
+      "summary": "On {screen}, the {element} sits in running text and differs from it only by color: {fg} against {bg}, {ratio}:1.",
+      "userImpact": "People with color vision deficiencies or low vision may read it as plain text and miss the action.",
+      "fixHypothesis": "The link seems to lack the underline or color that links use elsewhere. Using the shared link style, or adding an underline, would likely fix it.",
+      "acceptance": [
+       "The {element} has an underline or another cue that does not rely on color, or reaches {required}:1 against the surrounding text."
+      ],
+      "verify": [
+       "Check the design-system link docs for whether an inline link without underline is an approved variant."
+      ],
+      "searchTerms": [
+       "inline link style",
+       "link in text",
+       "{fg}"
+      ]
+     }
+    }
+   }
+  },
+  "target-size": {
+   "label": "Target size",
+   "criteria": [
+    "2.5.8"
+   ],
+   "defaultSeverity": "low",
+   "guidance": "Medium next to destructive or financial controls.",
+   "key": "intrinsic",
+   "facts": [
+    "element",
+    "screen",
+    "screens",
+    "criterion",
+    "criterionName",
+    "rule",
+    "size",
+    "offset"
+   ],
+   "templates": {
+    "title": "Target under 24×24 px: {element}",
+    "detail": "The {element} measures {size} px and sits close to other targets, so people with tremors or limited dexterity may press the wrong control. WCAG {criterion} {criterionName}.",
+    "evidence": "{rule}: {size} px; the widest circle centered on it that clears other targets is {offset} px, and the spacing exception needs 24 px.",
+    "copy": {
+     "title": "Enlarge or space out the {element}",
+     "summary": "On {screen}, the {element} measures {size} px. AA needs 24×24 px, or a 24 px circle around it that clears other targets; the measured circle is {offset} px. It appears on {screens} screens.",
+     "userImpact": "People with tremors or limited dexterity may press a neighboring control by mistake.",
+     "fixHypothesis": "The control seems to use a compact size variant. Growing its hit area to 24×24 px, for example with padding, would likely fix it without changing the icon.",
+     "acceptance": [
+      "The {element} has a hit area of at least 24×24 px, or a 24 px circle centered on it clears every other target."
+     ],
+     "verify": [
+      "Check the design-system icon button docs for a minimum hit-area size."
+     ],
+     "searchTerms": [
+      "icon button size",
+      "target size",
+      "hit area"
+     ],
+     "confidence": "high",
+     "confidenceReason": "The sweep measured the element's box and its neighbors, and a verifier checked the exceptions on the live demo."
+    }
+   }
+  },
+  "focus-visible": {
+   "label": "Focus visibility",
+   "criteria": [
+    "2.4.7",
+    "2.4.3"
+   ],
+   "defaultSeverity": "medium",
+   "guidance": "High on shared components on primary paths.",
+   "key": "intrinsic",
+   "facts": [
+    "element",
+    "screen",
+    "screens",
+    "criterion",
+    "criterionName",
+    "stop"
+   ],
+   "templates": {
+    "title": "No visible focus: {element}",
+    "detail": "When the {element} has keyboard focus, nothing on screen changes, so keyboard users cannot see where they are. WCAG {criterion} {criterionName}.",
+    "evidence": "Tab stop {stop}: focusing the {element} changed no pixels within 8 px of it.",
+    "copy": {
+     "title": "Show a focus indicator on the {element}",
+     "summary": "On {screen}, tab stop {stop} lands on the {element}, and focusing it changes nothing on screen. It appears on {screens} screens.",
+     "userImpact": "Keyboard users cannot see which control has focus, so they may act on the wrong one or lose their place.",
+     "fixHypothesis": "The component seems to remove the browser outline without a replacement. Adding a :focus-visible style that matches the design system's focus ring would likely fix it.",
+     "acceptance": [
+      "Focusing the {element} with Tab shows a visible indicator.",
+      "The indicator shows on every screen where the component appears."
+     ],
+     "verify": [
+      "Check the design-system focus ring docs for the standard indicator."
+     ],
+     "searchTerms": [
+      "focus ring",
+      "focus-visible",
+      "outline: none"
+     ],
+     "confidence": "high",
+     "confidenceReason": "The Tab walk compared screenshots with and without focus, and a verifier checked it on the live demo."
+    }
+   },
+   "ruleTemplates": {
+    "focus-hidden": {
+     "title": "Tab stops on hidden element: {element}",
+     "detail": "Tab moves focus to the {element}, which cannot be seen, so keyboard users lose track of focus. WCAG {criterion} {criterionName}.",
+     "evidence": "Tab stop {stop} focused the {element}, which is invisible, has no size, or sits off screen.",
+     "copy": {
+      "title": "Keep the {element} out of the tab order while it is hidden",
+      "summary": "On {screen}, tab stop {stop} lands on the {element}, which cannot be seen.",
+      "userImpact": "Keyboard users see focus disappear and have to guess where it went.",
+      "fixHypothesis": "The element seems to stay focusable while hidden. Removing it from the tab order while it is hidden, for example with the inert attribute, would likely fix it.",
+      "acceptance": [
+       "Tab never lands on the {element} while it is hidden.",
+       "Every tab stop on {screen} is visible when it has focus."
+      ],
+      "verify": [
+       "Check how the component hides content: opacity 0 or off-screen positioning keeps it focusable."
+      ],
+      "searchTerms": [
+       "hidden focusable",
+       "inert",
+       "tabindex -1"
+      ]
+     }
+    }
+   }
+  },
+  "focus-order": {
+   "label": "Focus order",
+   "criteria": [
+    "2.4.3",
+    "1.3.2"
+   ],
+   "defaultSeverity": "medium",
+   "guidance": "High if the order skips a required control.",
+   "key": "content",
+   "facts": [
+    "element",
+    "screen",
+    "criterion",
+    "criterionName",
+    "stop",
+    "previous"
+   ],
+   "templates": {
+    "title": "Tab order jumps backward at {element}",
+    "detail": "Tab moves focus from the {previous} back to the {element}, against the visual order, so keyboard users meet controls out of sequence. WCAG {criterion} {criterionName}.",
+    "evidence": "Tab stop {stop} jumped backward on screen, from the {previous} to the {element}.",
+    "copy": {
+     "title": "Fix the tab order around the {element}",
+     "summary": "On {screen}, tab stop {stop} jumps backward on screen, from the {previous} to the {element}.",
+     "userImpact": "Keyboard users meet controls out of visual order and may skip or repeat a step.",
+     "fixHypothesis": "The DOM order seems to differ from the visual layout, or a positive tabindex reorders focus. Matching the DOM order to the layout would likely fix it.",
+     "acceptance": [
+      "Tab moves through {screen} in the visual reading order.",
+      "Shift+Tab visits the same stops in reverse."
+     ],
+     "verify": [
+      "Compare the numbered tab-stop overlay with the layout before changing the DOM order."
+     ],
+     "searchTerms": [
+      "tab order",
+      "tabindex",
+      "DOM order"
+     ],
+     "confidence": "medium",
+     "confidenceReason": "Whether a backward jump confuses users is a judgment; a verifier reviewed the numbered tab-stop overlay on the live demo."
+    }
+   }
+  },
+  "keyboard": {
+   "label": "Keyboard operability",
+   "criteria": [
+    "2.1.1"
+   ],
+   "defaultSeverity": "medium",
+   "guidance": "High if a task cannot be completed without a mouse.",
+   "key": "content",
+   "facts": [
+    "element",
+    "screen",
+    "criterion",
+    "criterionName",
+    "rule",
+    "axeSummary",
+    "stops"
+   ],
+   "templates": {
+    "title": "Not reachable by keyboard: {element}",
+    "detail": "Tab never reaches the {element}, so people who use a keyboard or switch device cannot use it. WCAG {criterion} {criterionName}.",
+    "evidence": "The Tab walk visited {stops} stops and never reached the {element}, which responds to a click.",
+    "copy": {
+     "title": "Make the {element} reachable and operable by keyboard",
+     "summary": "On {screen}, the {element} responds to a click, but the Tab walk visited {stops} stops without reaching it.",
+     "userImpact": "Keyboard and switch users cannot use this control, and may be unable to finish the task it belongs to.",
+     "fixHypothesis": "The control seems to be a div or span with a click handler. Using a native button or link, or adding a role, tabindex=0 and Enter and Space handling, would likely fix it.",
+     "acceptance": [
+      "Tab reaches the {element}.",
+      "Enter or Space does what a click does."
+     ],
+     "verify": [
+      "Check whether the design system has a button or tab component this control should use."
+     ],
+     "searchTerms": [
+      "onClick div",
+      "tabindex 0",
+      "clickable div keyboard"
+     ],
+     "confidence": "high",
+     "confidenceReason": "The scripted Tab walk never reached it, and a verifier checked it on the live demo."
+    }
+   },
+   "ruleTemplates": {
+    "scrollable-region-focusable": {
+     "title": "Can't scroll by keyboard: {element}",
+     "detail": "The {element} scrolls but holds nothing that takes focus, so keyboard users cannot scroll it to see the rest of its content. WCAG {criterion} {criterionName}.",
+     "evidence": "axe {rule}: {axeSummary}",
+     "copy": {
+      "title": "Let keyboard users scroll the {element}",
+      "summary": "On {screen}, the {element} scrolls, but neither it nor anything inside it takes keyboard focus.",
+      "userImpact": "Keyboard users cannot reach the content hidden below the edge of this area.",
+      "fixHypothesis": "The scroll container seems to hold only static content. Making it focusable with tabindex=0 and giving it a name would likely fix it.",
+      "acceptance": [
+       "Tab reaches the {element} or a control inside it.",
+       "Arrow keys scroll it once it has focus."
+      ],
+      "verify": [
+       "Check whether the container is a shared scroll-area component."
+      ],
+      "searchTerms": [
+       "scrollable region tabindex",
+       "overflow auto keyboard",
+       "{rule}"
+      ]
+     }
+    },
+    "frame-focusable-content": {
+     "title": "Frame blocks the keyboard: {element}",
+     "detail": "The {element} has tabindex=-1 but holds controls, so keyboard users cannot reach them. WCAG {criterion} {criterionName}.",
+     "evidence": "axe {rule}: {axeSummary}",
+     "copy": {
+      "title": "Let keyboard users reach the controls in the {element}",
+      "summary": "On {screen}, the {element} has tabindex=-1 and holds focusable content.",
+      "fixHypothesis": "The frame seems to be taken out of the tab order on purpose. Removing tabindex=-1 would likely fix it.",
+      "acceptance": [
+       "Tab reaches the controls inside the {element}."
+      ],
+      "searchTerms": [
+       "iframe tabindex",
+       "embedded frame keyboard",
+       "{rule}"
+      ]
+     }
+    },
+    "server-side-image-map": {
+     "evidence": "axe {rule}: {axeSummary}",
+     "copy": {
+      "summary": "On {screen}, the {element} is a server-side image map, which only a mouse can use.",
+      "fixHypothesis": "The image seems to use a server-side image map. Replacing it with links or a client-side map would likely fix it.",
+      "acceptance": [
+       "Every area of the {element} can be reached and used with Tab and Enter."
+      ],
+      "searchTerms": [
+       "ismap",
+       "image map",
+       "{rule}"
+      ]
+     }
+    }
+   }
+  },
+  "keyboard-trap": {
+   "label": "Keyboard trap",
+   "criteria": [
+    "2.1.2"
+   ],
+   "defaultSeverity": "high",
+   "guidance": "None: a trap always blocks the task.",
+   "key": "content",
+   "facts": [
+    "element",
+    "screen",
+    "criterion",
+    "criterionName",
+    "stop",
+    "stops"
+   ],
+   "templates": {
+    "title": "Keyboard focus trapped at {element}",
+    "detail": "Once focus reaches the {element}, Tab, Shift+Tab and Esc cannot move it out, so keyboard users are stuck. WCAG {criterion} {criterionName}.",
+    "evidence": "The Tab walk returned to tab stop {stop} after {stops} stops without reaching the page body, and Esc and Shift+Tab did not leave the loop.",
+    "copy": {
+     "title": "Let keyboard focus leave the {element}",
+     "summary": "On {screen}, focus loops back to tab stop {stop}, the {element}, and Esc and Shift+Tab do not move it out.",
+     "userImpact": "Keyboard users are stuck and must reload the page, losing anything they entered.",
+     "fixHypothesis": "A focus trap seems to stay active outside an open modal, or a key handler seems to swallow Tab. Limiting the trap to an open modal that Esc closes would likely fix it.",
+     "acceptance": [
+      "From the {element}, Tab eventually moves focus past the last control on {screen}.",
+      "Shift+Tab moves focus back out of it."
+     ],
+     "verify": [
+      "Check whether the component uses a focus-trap helper and when it turns on."
+     ],
+     "searchTerms": [
+      "focus trap",
+      "keydown Tab preventDefault",
+      "keyboard trap"
+     ],
+     "confidence": "high",
+     "confidenceReason": "The scripted Tab walk recorded the loop, and a verifier reproduced it on the live demo."
+    }
+   }
+  },
+  "dialog-trigger": {
+   "label": "Dialog trigger operability",
+   "criteria": [
+    "2.1.1"
+   ],
+   "defaultSeverity": "high",
+   "guidance": "Lower only when an equivalent keyboard path exists.",
+   "key": "content",
+   "facts": [
+    "element",
+    "screen",
+    "criterion",
+    "criterionName",
+    "stops",
+    "overlay"
+   ],
+   "templates": {
+    "title": "Opens only with a mouse: {element}",
+    "detail": "Keyboard users cannot open the {overlay} from the {element}, so they cannot reach anything inside it. WCAG {criterion} {criterionName}.",
+    "evidence": "Tab focused the {element}, but neither Enter nor Space opened the {overlay}.",
+    "copy": {
+     "title": "Let keyboard users open the {overlay}",
+     "summary": "On {screen}, a click on the {element} opens the {overlay}, but Enter and Space do not.",
+     "userImpact": "Keyboard and switch users cannot reach anything inside the {overlay}.",
+     "fixHypothesis": "The trigger seems to handle clicks only. Using a native button, or handling Enter and Space, would likely fix it.",
+     "acceptance": [
+      "Tab reaches the {element}.",
+      "Enter and Space on the {element} open the {overlay}."
+     ],
+     "verify": [
+      "Check the design-system menu and popover trigger docs for the expected trigger element."
+     ],
+     "searchTerms": [
+      "menu trigger keyboard",
+      "onClick only",
+      "aria-haspopup"
+     ],
+     "confidence": "high",
+     "confidenceReason": "The dialog check pressed Tab, Enter and Space from a fresh page, and a verifier reproduced it on the live demo."
+    }
+   },
+   "ruleTemplates": {
+    "dialog-trigger-not-focusable": {
+     "evidence": "Tab never focused the {element} in {stops} stops, so the {overlay} could not be opened from the keyboard.",
+     "copy": {
+      "summary": "On {screen}, a click on the {element} opens the {overlay}, but Tab never reaches the {element}.",
+      "fixHypothesis": "The trigger seems to be a div or span with a click handler. Using a native button would likely make it focusable and operable at once."
+     }
+    },
+    "hover-only": {
+     "title": "Opens only on hover: {element}",
+     "detail": "The {overlay} appears when the pointer rests on the {element} but not when it has keyboard focus, so keyboard users never see it. WCAG {criterion} {criterionName}.",
+     "evidence": "Hovering the {element} showed the {overlay}; focusing it with Tab did not.",
+     "copy": {
+      "title": "Show the {overlay} on keyboard focus too",
+      "summary": "On {screen}, the {overlay} appears when the pointer rests on the {element}, and not when the {element} has keyboard focus.",
+      "userImpact": "Keyboard users never see what the {overlay} shows.",
+      "fixHypothesis": "The content seems to be wired to mouse events only. Showing it on focus too, and hiding it on blur and Esc, would likely fix it.",
+      "acceptance": [
+       "Focusing the {element} with Tab shows the {overlay}.",
+       "Esc hides the {overlay} without moving focus."
+      ],
+      "searchTerms": [
+       "tooltip on focus",
+       "onMouseEnter only",
+       "hover card keyboard"
+      ]
+     }
+    }
+   }
+  },
+  "dialog-focus": {
+   "label": "Dialog focus management",
+   "criteria": [
+    "2.4.3"
+   ],
+   "defaultSeverity": "medium",
+   "defaultSeverityByKind": {
+    "menu": {
+     "dialog-focus-not-returned": "low"
+    },
+    "popover": {
+     "dialog-focus-not-returned": "low"
+    }
+   },
+   "guidance": "High when controls inside are unreachable.",
+   "key": "content",
+   "facts": [
+    "element",
+    "screen",
+    "criterion",
+    "criterionName",
+    "overlay",
+    "focus"
+   ],
+   "templates": {
+    "title": "Focus not moved into {overlay}",
+    "detail": "When the {overlay} opens, focus stays outside it, so keyboard and screen-reader users are not taken to it and must find it themselves. WCAG {criterion} {criterionName}.",
+    "evidence": "After the {element} opened the {overlay}, focus was on the {focus}.",
+    "copy": {
+     "title": "Move focus into the {overlay} when it opens",
+     "summary": "On {screen}, opening the {overlay} from the {element} leaves focus on the {focus}.",
+     "userImpact": "Keyboard and screen-reader users are not told the {overlay} opened and have to find it before they can use it.",
+     "fixHypothesis": "The dialog seems to open without setting initial focus. Using the design-system dialog's built-in focus handling would likely fix it.",
+     "acceptance": [
+      "Opening the {overlay} moves focus inside it.",
+      "Tab and Shift+Tab stay inside it while it is open.",
+      "Esc closes it and returns focus to the {element}."
+     ],
+     "verify": [
+      "Check the design-system modal docs for initial-focus and return-focus behavior."
+     ],
+     "searchTerms": [
+      "initial focus",
+      "dialog focus management",
+      "focus return"
+     ],
+     "confidence": "high",
+     "confidenceReason": "The dialog check traced focus from a fresh page, and a verifier reproduced it on the live demo."
+    }
+   },
+   "ruleTemplates": {
+    "dialog-focus-escaped": {
+     "title": "Tab leaves the open {overlay}",
+     "detail": "While the {overlay} is open, Tab moves focus to the page behind it, so keyboard users act on controls they cannot see. WCAG {criterion} {criterionName}.",
+     "evidence": "Tab from inside the open {overlay} moved focus to the {focus}, behind it.",
+     "copy": {
+      "title": "Keep focus inside the {overlay} while it is open",
+      "summary": "On {screen}, Tab from inside the open {overlay} moves focus to the {focus} behind it.",
+      "userImpact": "Keyboard users lose focus behind the {overlay} and may act on the page without seeing it.",
+      "fixHypothesis": "The dialog seems to lack a focus trap, or renders outside the trap's container. Using the design-system modal's focus trap would likely fix it.",
+      "acceptance": [
+       "Tab and Shift+Tab stay inside the {overlay} while it is open."
+      ],
+      "searchTerms": [
+       "focus trap modal",
+       "aria-modal",
+       "dialog focus"
+      ]
+     }
+    },
+    "dialog-focus-not-returned": {
+     "title": "Focus lost after closing {overlay}",
+     "detail": "After the {overlay} closes, focus does not go back to the {element}, so keyboard users lose their place and start again from the top. WCAG {criterion} {criterionName}.",
+     "evidence": "Esc closed the {overlay} and focus went to the {focus}, not back to the {element}.",
+     "copy": {
+      "title": "Return focus to the {element} when the {overlay} closes",
+      "summary": "On {screen}, closing the {overlay} with Esc moves focus to the {focus} instead of back to the {element}.",
+      "userImpact": "Keyboard users lose their place and must Tab through the page again to get back.",
+      "fixHypothesis": "The dialog seems to unmount without restoring focus. Returning focus to the element that opened it would likely fix it.",
+      "acceptance": [
+       "Closing the {overlay} with Esc or its close control returns focus to the {element}."
+      ],
+      "searchTerms": [
+       "restore focus",
+       "focus return on close",
+       "returnFocus"
+      ]
+     }
+    },
+    "menu-focus-not-moved": {
+     "title": "Focus not on first item of {overlay}",
+     "detail": "When the {overlay} opens from the {element}, focus does not move to its first item, so keyboard users cannot step through the items. WCAG {criterion} {criterionName}.",
+     "evidence": "After the {element} opened the {overlay}, focus was on the {focus}, not its first item.",
+     "copy": {
+      "title": "Move focus to the first item when the {overlay} opens",
+      "summary": "On {screen}, opening the {overlay} from the {element} leaves focus on the {focus}.",
+      "userImpact": "Keyboard users have to guess how to get into the menu, and screen-reader users may not know it opened.",
+      "fixHypothesis": "The menu seems to open without moving focus. Using the design-system menu's built-in keyboard handling would likely fix it.",
+      "acceptance": [
+       "Opening the {overlay} with Enter or Space moves focus to its first item.",
+       "Esc closes it and returns focus to the {element}."
+      ],
+      "verify": [
+       "Check the design-system menu docs for the expected keyboard behavior."
+      ],
+      "searchTerms": [
+       "menu first item focus",
+       "menu button keyboard",
+       "roving tabindex"
+      ]
+     }
+    },
+    "popover-not-reachable": {
+     "title": "Can't Tab into {overlay}",
+     "detail": "After the {overlay} opens, neither focus nor the next Tab moves inside it, so keyboard users cannot use what it contains. WCAG {criterion} {criterionName}.",
+     "evidence": "After the {element} opened the {overlay}, focus was on the {focus}, and the next Tab did not land inside it.",
+     "copy": {
+      "title": "Let keyboard users Tab into the {overlay}",
+      "summary": "On {screen}, opening the {overlay} from the {element} leaves focus on the {focus}, and the next Tab does not reach it.",
+      "userImpact": "Keyboard users can open the {overlay} but cannot use anything inside it.",
+      "fixHypothesis": "The popover seems to render at the end of the page, away from its trigger in the tab order. Moving focus into it on open, or rendering it next to its trigger, would likely fix it.",
+      "acceptance": [
+       "After the {overlay} opens, focus or the next Tab lands inside it."
+      ],
+      "searchTerms": [
+       "popover focus",
+       "portal tab order",
+       "non-modal popover"
+      ]
+     }
+    }
+   }
+  },
+  "name": {
+   "label": "Accessible name",
+   "criteria": [
+    "4.1.2",
+    "1.1.1",
+    "2.4.4",
+    "3.3.2",
+    "2.5.3"
+   ],
+   "defaultSeverity": "medium",
+   "guidance": "High for an unnamed form control or the sole primary action.",
+   "key": "content",
+   "facts": [
+    "element",
+    "screen",
+    "criterion",
+    "criterionName",
+    "rule",
+    "announced",
+    "axeSummary"
+   ],
+   "templates": {
+    "title": "Missing or unclear name: {element}",
+    "detail": "Screen readers announce the {element} as {announced}, which does not say what it is or does, so blind users cannot tell what it is for. WCAG {criterion} {criterionName}.",
+    "evidence": "{rule}: announced as {announced}. {axeSummary}",
+    "copy": {
+     "title": "Give the {element} a name that says what it does",
+     "summary": "On {screen}, the {element} is announced as {announced}.",
+     "userImpact": "A screen-reader user hears a control without a usable name and cannot tell what it does or which item it acts on.",
+     "fixHypothesis": "The control seems to rely on an icon, a placeholder or its position for meaning. Adding an aria-label or a visible label that names the action and its target would likely fix it.",
+     "acceptance": [
+      "The {element} has an accessible name that says what it does.",
+      "Repeated controls on {screen} have names that tell them apart."
+     ],
+     "verify": [
+      "Check the design-system icon button and form field docs for the naming pattern."
+     ],
+     "searchTerms": [
+      "aria-label",
+      "accessible name",
+      "{rule}"
+     ],
+     "confidence": "high",
+     "confidenceReason": "Read from the accessibility tree, and a verifier checked it on the live demo."
+    }
+   },
+   "ruleTemplates": {
+    "label-content-name-mismatch": {
+     "title": "Visible label not in name: {element}",
+     "detail": "The accessible name of the {element} does not contain the label shown on screen, so people using voice control who say that label cannot activate it. WCAG {criterion} {criterionName}.",
+     "copy": {
+      "title": "Include the visible label in the name of the {element}",
+      "summary": "On {screen}, the {element} is announced as {announced}, which does not contain its visible label.",
+      "userImpact": "Voice-control users who say the label they see cannot activate the control.",
+      "fixHypothesis": "An aria-label seems to replace the visible text with different words. Starting the accessible name with the visible label would likely fix it.",
+      "acceptance": [
+       "The accessible name of the {element} contains its visible label text."
+      ],
+      "searchTerms": [
+       "label in name",
+       "aria-label mismatch",
+       "voice control"
+      ]
+     }
+    },
+    "form-field-multiple-labels": {
+     "title": "Field has several labels: {element}",
+     "detail": "The {element} has more than one label, so screen readers may announce the wrong one, or all of them. WCAG {criterion} {criterionName}.",
+     "copy": {
+      "title": "Give the {element} a single label",
+      "summary": "On {screen}, more than one label points at the {element}.",
+      "fixHypothesis": "The field seems to sit inside one label while another label points at it. Keeping one label per field would likely fix it.",
+      "acceptance": [
+       "The {element} has exactly one label."
+      ],
+      "searchTerms": [
+       "multiple labels",
+       "label for",
+       "{rule}"
+      ]
+     }
+    }
+   }
+  },
+  "role-state": {
+   "label": "Role and state",
+   "criteria": [
+    "4.1.2",
+    "1.3.1",
+    "1.3.5"
+   ],
+   "defaultSeverity": "medium",
+   "guidance": "Low for optional ARIA or an invalid autocomplete token; high when aria-hidden hides the whole page.",
+   "key": "content",
+   "facts": [
+    "element",
+    "screen",
+    "criterion",
+    "criterionName",
+    "rule",
+    "announced",
+    "axeSummary"
+   ],
+   "templates": {
+    "title": "Wrong role or state: {element}",
+    "detail": "Screen readers announce the {element} as {announced}, which misstates what it is or its current state, so blind users may act on wrong information. WCAG {criterion} {criterionName}.",
+    "evidence": "{rule}: announced as {announced}. {axeSummary}",
+    "copy": {
+     "title": "Expose the right role and state for the {element}",
+     "summary": "On {screen}, the {element} is announced as {announced}.",
+     "userImpact": "Screen-reader users hear the wrong kind of control or the wrong state, so they may not know how to operate it or what is selected.",
+     "fixHypothesis": "The component seems to set roles or states by hand. Using the native element, or the roles and states of the matching WAI-ARIA pattern, would likely fix it.",
+     "acceptance": [
+      "The {element} is announced with the role and state it shows on screen.",
+      "The announced state changes when the visible state changes."
+     ],
+     "verify": [
+      "Check the design-system component docs for the expected role and states before changing ARIA."
+     ],
+     "searchTerms": [
+      "aria role",
+      "aria-selected",
+      "{rule}"
+     ],
+     "confidence": "high",
+     "confidenceReason": "Read from the accessibility tree, and a verifier checked it on the live demo."
+    }
+   },
+   "ruleTemplates": {
+    "nested-interactive": {
+     "title": "Control nested in a control: {element}",
+     "detail": "The {element} contains another interactive control, so screen readers may skip the inner one and keyboard users may land on both. WCAG {criterion} {criterionName}.",
+     "copy": {
+      "title": "Stop nesting controls inside the {element}",
+      "summary": "On {screen}, the {element} contains another interactive control.",
+      "fixHypothesis": "The row or card seems to be a button or link that wraps other buttons. Making only one of them interactive, or moving the inner control out, would likely fix it.",
+      "acceptance": [
+       "The {element} contains no other interactive control."
+      ],
+      "searchTerms": [
+       "nested interactive",
+       "button inside button",
+       "clickable row"
+      ]
+     }
+    },
+    "aria-hidden-focus": {
+     "title": "Focusable but hidden: {element}",
+     "detail": "The {element} takes keyboard focus but is hidden from screen readers, so focus lands on something that announces nothing. WCAG {criterion} {criterionName}.",
+     "copy": {
+      "title": "Remove the {element} from the tab order while it is hidden",
+      "summary": "On {screen}, the {element} sits inside aria-hidden content but can still take focus.",
+      "fixHypothesis": "The element seems to sit inside aria-hidden content while staying focusable. Making it unfocusable while hidden, or dropping aria-hidden, would likely fix it.",
+      "acceptance": [
+       "The {element} cannot take focus while it is hidden from screen readers."
+      ],
+      "searchTerms": [
+       "aria-hidden focusable",
+       "inert",
+       "tabindex -1"
+      ]
+     }
+    },
+    "aria-hidden-body": {
+     "title": "Whole page hidden from screen readers: {screen}",
+     "detail": "The page body carries aria-hidden=true, so screen readers can read nothing on it. WCAG {criterion} {criterionName}.",
+     "copy": {
+      "title": "Remove aria-hidden from the page body on {screen}",
+      "summary": "On {screen}, the body element has aria-hidden=true.",
+      "userImpact": "Screen-reader users cannot read or use anything on the page.",
+      "fixHypothesis": "A modal helper seems to set aria-hidden on the body and not clear it. Hiding only the content behind an open modal would likely fix it.",
+      "acceptance": [
+       "The body has no aria-hidden attribute on {screen}."
+      ],
+      "searchTerms": [
+       "aria-hidden body",
+       "modal aria-hidden",
+       "{rule}"
+      ]
+     }
+    },
+    "autocomplete-valid": {
+     "title": "Invalid autocomplete value: {element}",
+     "detail": "The {element} has an autocomplete value that browsers do not recognize, so autofill cannot help people who find typing hard. WCAG {criterion} {criterionName}.",
+     "copy": {
+      "title": "Use a standard autocomplete token on the {element}",
+      "summary": "On {screen}, the {element} has an autocomplete value browsers do not recognize.",
+      "userImpact": "People with motor or memory impairments lose autofill and must type the value by hand.",
+      "fixHypothesis": "The field seems to use a custom autocomplete token. Using the matching standard token, or off, would likely fix it.",
+      "acceptance": [
+       "The {element} has a valid autocomplete token."
+      ],
+      "searchTerms": [
+       "autocomplete attribute",
+       "autofill",
+       "{rule}"
+      ]
+     }
+    },
+    "duplicate-id-aria": {
+     "title": "Duplicate id used by ARIA: {element}",
+     "detail": "The {element} shares an id that ARIA references with another element, so screen readers may read the wrong label or description. WCAG {criterion} {criterionName}.",
+     "copy": {
+      "title": "Give the {element} a unique id",
+      "summary": "On {screen}, the {element} shares an id that a label or ARIA reference points at.",
+      "fixHypothesis": "The id seems to be fixed in a component rendered more than once. Generating a unique id per instance would likely fix it.",
+      "acceptance": [
+       "Every id that ARIA references on {screen} is unique."
+      ],
+      "searchTerms": [
+       "duplicate id",
+       "aria-labelledby",
+       "useId"
+      ]
+     }
+    }
+   }
+  },
+  "status-message": {
+   "label": "Status messages",
+   "criteria": [
+    "4.1.3"
+   ],
+   "defaultSeverity": "medium",
+   "guidance": "High when it is the only confirmation of a money movement.",
+   "key": "content",
+   "facts": [
+    "screen",
+    "criterion",
+    "criterionName",
+    "focus",
+    "message"
+   ],
+   "templates": {
+    "title": "Status message not announced: {message}",
+    "detail": "The message {message} appears on screen but sits outside any live region and does not take focus, so screen-reader users are not told about it. WCAG {criterion} {criterionName}.",
+    "evidence": "{message} appeared outside any live region, alert or status role that existed before it, and focus stayed on the {focus}.",
+    "copy": {
+     "title": "Announce the {message} message to screen readers",
+     "summary": "On {screen}, the message {message} appears outside any live region, and focus stays on the {focus}.",
+     "userImpact": "Screen-reader users get no confirmation that the action worked and may repeat it.",
+     "fixHypothesis": "The toast container seems to be created together with the message, so screen readers miss it. Rendering an empty status region on page load and inserting messages into it would likely fix it.",
+     "acceptance": [
+      "Screen readers announce {message} when it appears, without moving focus.",
+      "The live region exists before the message is inserted."
+     ],
+     "verify": [
+      "Check the design-system toast docs for the live-region pattern."
+     ],
+     "searchTerms": [
+      "toast aria-live",
+      "role status",
+      "live region"
+     ],
+     "confidence": "high",
+     "confidenceReason": "A mutation observer armed before the action recorded where the message appeared, and a verifier checked it on the live demo."
+    }
+   }
+  },
+  "error-association": {
+   "label": "Error association",
+   "criteria": [
+    "3.3.1"
+   ],
+   "defaultSeverity": "medium",
+   "guidance": "High when errors are shown by color or position only.",
+   "key": "content",
+   "facts": [
+    "element",
+    "screen",
+    "criterion",
+    "criterionName",
+    "message"
+   ],
+   "templates": {
+    "title": "Error not tied to its field: {element}",
+    "detail": "The {element} is marked invalid, but its error {message} is not linked to it, so screen-reader users hear that it is wrong without hearing why. WCAG {criterion} {criterionName}.",
+    "evidence": "The {element} has aria-invalid=true, and neither its description nor its error message includes {message}.",
+    "copy": {
+     "title": "Link the error message to the {element}",
+     "summary": "On {screen}, the {element} is marked invalid, and its error {message} is in neither its description nor its error message.",
+     "userImpact": "Screen-reader users learn the field is wrong but not what is wrong, so fixing it takes guesswork.",
+     "fixHypothesis": "The error text seems to render next to the field without an id reference. Pointing aria-describedby or aria-errormessage at it would likely fix it.",
+     "acceptance": [
+      "When the {element} is invalid, screen readers announce {message} with it."
+     ],
+     "verify": [
+      "Check the design-system form field docs for how errors are linked to inputs."
+     ],
+     "searchTerms": [
+      "aria-describedby error",
+      "aria-errormessage",
+      "form validation"
+     ],
+     "confidence": "high",
+     "confidenceReason": "Read from the accessibility tree after the error appeared, and a verifier checked it on the live demo."
+    }
+   }
+  },
+  "structure": {
+   "label": "Structure and relationships",
+   "criteria": [
+    "1.3.1"
+   ],
+   "defaultSeverity": "low",
+   "guidance": "Medium when a data table's headers do not reach its cells, or when structure is the only way to tell sections or steps apart.",
+   "key": "content",
+   "facts": [
+    "element",
+    "screen",
+    "criterion",
+    "criterionName",
+    "rule",
+    "announced",
+    "axeSummary"
+   ],
+   "templates": {
+    "title": "Markup misstates structure: {element}",
+    "detail": "The {element} shows a structure on screen, such as a list, table or heading, that its markup does not expose, so screen-reader users miss how the parts relate. WCAG {criterion} {criterionName}.",
+    "evidence": "{rule}: announced as {announced}. {axeSummary}",
+    "copy": {
+     "title": "Fix the markup structure of the {element}",
+     "summary": "On {screen}, the {element} is announced as {announced}, which does not match the structure shown on screen.",
+     "userImpact": "Screen-reader users miss how items, headings or table cells relate, which makes the screen slower to understand.",
+     "fixHypothesis": "The component seems to build a list, table or heading from generic elements or incomplete ARIA. Using the native element would likely fix it.",
+     "acceptance": [
+      "The {element} exposes the same structure that it shows on screen."
+     ],
+     "verify": [
+      "Check the design-system list, table and heading docs for the expected markup."
+     ],
+     "searchTerms": [
+      "semantic HTML",
+      "heading levels",
+      "{rule}"
+     ],
+     "confidence": "high",
+     "confidenceReason": "Read from the DOM and the accessibility tree, and a verifier checked it on the live demo."
+    }
+   }
+  },
+  "page": {
+   "label": "Page title, language and display settings",
+   "criteria": [
+    "2.4.2",
+    "3.1.1",
+    "3.1.2",
+    "2.4.1",
+    "1.4.4",
+    "1.3.4",
+    "1.4.12"
+   ],
+   "defaultSeverity": "low",
+   "guidance": "Medium when the page blocks zoom or text spacing, or when 10 or more tab stops come before the main content with no way to skip them.",
+   "key": "intrinsic",
+   "facts": [
+    "element",
+    "screen",
+    "criterion",
+    "criterionName",
+    "rule",
+    "axeSummary"
+   ],
+   "templates": {
+    "title": "Fails {criterion} {criterionName}: {screen}",
+    "detail": "The page misses a setting that screen readers, zoom or personal text settings depend on, so people who rely on them get a worse experience. WCAG {criterion} {criterionName}.",
+    "evidence": "axe {rule}: {axeSummary}",
+    "copy": {
+     "title": "Fix {criterion} {criterionName} on {screen}",
+     "summary": "On {screen}, axe {rule} reports: {axeSummary}",
+     "userImpact": "People who rely on screen readers, zoom or their own text settings get a worse experience on this page.",
+     "fixHypothesis": "The setting seems to come from the shared app shell. Fixing it there would likely fix every screen at once.",
+     "acceptance": [
+      "axe reports no {rule} result on {screen}."
+     ],
+     "verify": [
+      "Check whether the app shell or the page sets this before fixing it per page."
+     ],
+     "searchTerms": [
+      "app shell",
+      "document head",
+      "{rule}"
+     ],
+     "confidence": "high",
+     "confidenceReason": "axe read it from the page, and a verifier checked it on the live demo."
+    }
+   },
+   "ruleTemplates": {
+    "document-title": {
+     "title": "Page has no title: {screen}",
+     "detail": "The page has no useful title, so screen-reader users switching tabs or windows cannot tell which page this is. WCAG {criterion} {criterionName}."
+    },
+    "html-has-lang": {
+     "title": "Page language not set: {screen}",
+     "detail": "The page does not declare its language, so screen readers may read it with the wrong voice and pronunciation. WCAG {criterion} {criterionName}."
+    },
+    "html-lang-valid": {
+     "title": "Page language code is invalid: {screen}",
+     "detail": "The page declares a language code that screen readers do not recognize, so they may read it with the wrong voice. WCAG {criterion} {criterionName}."
+    },
+    "html-xml-lang-mismatch": {
+     "title": "Page language attributes disagree: {screen}",
+     "detail": "The lang and xml:lang attributes name different languages, so screen readers may pick the wrong voice. WCAG {criterion} {criterionName}."
+    },
+    "valid-lang": {
+     "title": "Invalid language code: {element}",
+     "detail": "The {element} declares a language code that screen readers do not recognize, so they may read it with the wrong pronunciation. WCAG {criterion} {criterionName}."
+    },
+    "meta-viewport": {
+     "title": "Page blocks zoom: {screen}",
+     "detail": "The viewport settings stop people from zooming in, so people with low vision on phones and tablets cannot enlarge the text. WCAG {criterion} {criterionName}."
+    },
+    "bypass": {
+     "title": "No way to skip repeated content: {screen}",
+     "detail": "The page has no skip link, landmark or heading before its main content, so keyboard users must Tab through the navigation on every page. WCAG {criterion} {criterionName}."
+    },
+    "css-orientation-lock": {
+     "title": "Locked to one orientation: {screen}",
+     "detail": "The page locks its display to portrait or landscape, so people with a mounted device cannot use it in their orientation. WCAG {criterion} {criterionName}."
+    },
+    "avoid-inline-spacing": {
+     "title": "Text spacing locked: {element}",
+     "detail": "Inline styles on the {element} force its text spacing, so people who widen letter, word or line spacing to read cannot. WCAG {criterion} {criterionName}."
+    }
+   }
+  },
+  "media": {
+   "label": "Media, motion and timing",
+   "criteria": [
+    "1.2.2",
+    "1.2.1",
+    "1.4.2",
+    "2.2.1",
+    "2.2.2"
+   ],
+   "defaultSeverity": "medium",
+   "guidance": "High when audio plays over a screen reader with no way to stop it, or when uncaptioned media carries information the task needs; low for decorative motion.",
+   "key": "content",
+   "facts": [
+    "element",
+    "screen",
+    "criterion",
+    "criterionName",
+    "rule",
+    "axeSummary"
+   ],
+   "templates": {
+    "title": "Media without user control: {element}",
+    "detail": "The {element} plays, moves or refreshes without captions or a way to stop it, so some users miss its content or lose their place. WCAG {criterion} {criterionName}.",
+    "evidence": "axe {rule}: {axeSummary}",
+    "copy": {
+     "title": "Fix {criterion} {criterionName} for the {element}",
+     "summary": "On {screen}, axe {rule} reports for the {element}: {axeSummary}",
+     "userImpact": "Deaf users, screen-reader users and people who are distracted by motion may miss content or lose their place.",
+     "fixHypothesis": "The element seems to start, move or refresh on its own. Adding captions, or a control to pause or stop it, would likely fix it.",
+     "acceptance": [
+      "axe reports no {rule} result for the {element} on {screen}."
+     ],
+     "verify": [
+      "Check whether the content is essential before choosing captions, a pause control or removal."
+     ],
+     "searchTerms": [
+      "autoplay",
+      "captions",
+      "{rule}"
+     ],
+     "confidence": "high",
+     "confidenceReason": "axe read it from the page, and a verifier checked it on the live demo."
+    }
+   },
+   "ruleTemplates": {
+    "video-caption": {
+     "title": "Video has no captions: {element}",
+     "detail": "The {element} has no captions, so deaf and hard-of-hearing users miss what is said. WCAG {criterion} {criterionName}."
+    },
+    "audio-caption": {
+     "title": "Audio has no transcript: {element}",
+     "detail": "The {element} has no transcript or captions, so deaf and hard-of-hearing users miss its content. WCAG {criterion} {criterionName}."
+    },
+    "no-autoplay-audio": {
+     "title": "Audio plays on its own: {element}",
+     "detail": "The {element} plays sound on its own for more than 3 seconds with no way to stop it, so screen-reader users cannot hear their reader. WCAG {criterion} {criterionName}."
+    },
+    "blink": {
+     "title": "Blinking content: {element}",
+     "detail": "The {element} blinks with no way to stop it, so people with attention or vision impairments are distracted or cannot read it. WCAG {criterion} {criterionName}."
+    },
+    "marquee": {
+     "title": "Scrolling marquee: {element}",
+     "detail": "The {element} scrolls on its own with no way to pause it, so people who read slowly or are distracted by motion cannot read it. WCAG {criterion} {criterionName}."
+    },
+    "meta-refresh": {
+     "title": "Page refreshes on a timer: {screen}",
+     "detail": "The page reloads or redirects on a timer, so people who read or type slowly lose their place or their input. WCAG {criterion} {criterionName}."
+    }
+   }
+  }
+ },
+ "axeRules": {
+  "area-alt": "name",
+  "aria-allowed-attr": "role-state",
+  "aria-braille-equivalent": "name",
+  "aria-command-name": "name",
+  "aria-conditional-attr": "role-state",
+  "aria-deprecated-role": "role-state",
+  "aria-hidden-body": "role-state",
+  "aria-hidden-focus": "role-state",
+  "aria-input-field-name": "name",
+  "aria-meter-name": "name",
+  "aria-progressbar-name": "name",
+  "aria-prohibited-attr": "role-state",
+  "aria-required-attr": "role-state",
+  "aria-required-children": "role-state",
+  "aria-required-parent": "role-state",
+  "aria-roledescription": "role-state",
+  "aria-roles": "role-state",
+  "aria-tab-name": "name",
+  "aria-toggle-field-name": "name",
+  "aria-tooltip-name": "name",
+  "aria-valid-attr": "role-state",
+  "aria-valid-attr-value": "role-state",
+  "audio-caption": "media",
+  "autocomplete-valid": "role-state",
+  "avoid-inline-spacing": "page",
+  "blink": "media",
+  "button-name": "name",
+  "bypass": "page",
+  "color-contrast": "contrast",
+  "css-orientation-lock": "page",
+  "definition-list": "structure",
+  "dlitem": "structure",
+  "document-title": "page",
+  "duplicate-id-aria": "role-state",
+  "form-field-multiple-labels": "name",
+  "frame-focusable-content": "keyboard",
+  "frame-title": "name",
+  "frame-title-unique": "name",
+  "html-has-lang": "page",
+  "html-lang-valid": "page",
+  "html-xml-lang-mismatch": "page",
+  "image-alt": "name",
+  "input-button-name": "name",
+  "input-image-alt": "name",
+  "label": "name",
+  "label-content-name-mismatch": "name",
+  "link-in-text-block": "contrast",
+  "link-name": "name",
+  "list": "structure",
+  "listitem": "structure",
+  "marquee": "media",
+  "meta-refresh": "media",
+  "meta-viewport": "page",
+  "nested-interactive": "role-state",
+  "no-autoplay-audio": "media",
+  "object-alt": "name",
+  "p-as-heading": "structure",
+  "role-img-alt": "name",
+  "scrollable-region-focusable": "keyboard",
+  "select-name": "name",
+  "server-side-image-map": "keyboard",
+  "summary-name": "name",
+  "svg-img-alt": "name",
+  "table-fake-caption": "structure",
+  "target-size": "target-size",
+  "td-has-header": "structure",
+  "td-headers-attr": "structure",
+  "th-has-data-cells": "structure",
+  "valid-lang": "page",
+  "video-caption": "media"
+ },
+ "axeCriteria": {
+  "area-alt": [
+   "2.4.4",
+   "4.1.2"
+  ],
+  "aria-allowed-attr": [
+   "4.1.2"
+  ],
+  "aria-braille-equivalent": [
+   "4.1.2"
+  ],
+  "aria-command-name": [
+   "4.1.2"
+  ],
+  "aria-conditional-attr": [
+   "4.1.2"
+  ],
+  "aria-deprecated-role": [
+   "4.1.2"
+  ],
+  "aria-hidden-body": [
+   "1.3.1",
+   "4.1.2"
+  ],
+  "aria-hidden-focus": [
+   "4.1.2"
+  ],
+  "aria-input-field-name": [
+   "4.1.2"
+  ],
+  "aria-meter-name": [
+   "1.1.1"
+  ],
+  "aria-progressbar-name": [
+   "1.1.1"
+  ],
+  "aria-prohibited-attr": [
+   "4.1.2"
+  ],
+  "aria-required-attr": [
+   "4.1.2"
+  ],
+  "aria-required-children": [
+   "1.3.1"
+  ],
+  "aria-required-parent": [
+   "1.3.1"
+  ],
+  "aria-roledescription": [
+   "4.1.2"
+  ],
+  "aria-roles": [
+   "4.1.2"
+  ],
+  "aria-tab-name": [
+   "4.1.2"
+  ],
+  "aria-toggle-field-name": [
+   "4.1.2"
+  ],
+  "aria-tooltip-name": [
+   "4.1.2"
+  ],
+  "aria-valid-attr-value": [
+   "4.1.2"
+  ],
+  "aria-valid-attr": [
+   "4.1.2"
+  ],
+  "audio-caption": [
+   "1.2.1"
+  ],
+  "autocomplete-valid": [
+   "1.3.5"
+  ],
+  "avoid-inline-spacing": [
+   "1.4.12"
+  ],
+  "blink": [
+   "2.2.2"
+  ],
+  "button-name": [
+   "4.1.2"
+  ],
+  "bypass": [
+   "2.4.1"
+  ],
+  "color-contrast": [
+   "1.4.3"
+  ],
+  "css-orientation-lock": [
+   "1.3.4"
+  ],
+  "definition-list": [
+   "1.3.1"
+  ],
+  "dlitem": [
+   "1.3.1"
+  ],
+  "document-title": [
+   "2.4.2"
+  ],
+  "duplicate-id-aria": [
+   "4.1.2"
+  ],
+  "form-field-multiple-labels": [
+   "3.3.2"
+  ],
+  "frame-focusable-content": [
+   "2.1.1"
+  ],
+  "frame-title-unique": [
+   "4.1.2"
+  ],
+  "frame-title": [
+   "4.1.2"
+  ],
+  "html-has-lang": [
+   "3.1.1"
+  ],
+  "html-lang-valid": [
+   "3.1.1"
+  ],
+  "html-xml-lang-mismatch": [
+   "3.1.1"
+  ],
+  "image-alt": [
+   "1.1.1"
+  ],
+  "input-button-name": [
+   "4.1.2"
+  ],
+  "input-image-alt": [
+   "1.1.1",
+   "4.1.2"
+  ],
+  "label-content-name-mismatch": [
+   "2.5.3"
+  ],
+  "label": [
+   "4.1.2"
+  ],
+  "link-in-text-block": [
+   "1.4.1"
+  ],
+  "link-name": [
+   "2.4.4",
+   "4.1.2"
+  ],
+  "list": [
+   "1.3.1"
+  ],
+  "listitem": [
+   "1.3.1"
+  ],
+  "marquee": [
+   "2.2.2"
+  ],
+  "meta-refresh": [
+   "2.2.1"
+  ],
+  "meta-viewport": [
+   "1.4.4"
+  ],
+  "nested-interactive": [
+   "4.1.2"
+  ],
+  "no-autoplay-audio": [
+   "1.4.2"
+  ],
+  "object-alt": [
+   "1.1.1"
+  ],
+  "p-as-heading": [
+   "1.3.1"
+  ],
+  "role-img-alt": [
+   "1.1.1"
+  ],
+  "scrollable-region-focusable": [
+   "2.1.1",
+   "2.1.3"
+  ],
+  "select-name": [
+   "4.1.2"
+  ],
+  "server-side-image-map": [
+   "2.1.1"
+  ],
+  "summary-name": [
+   "4.1.2"
+  ],
+  "svg-img-alt": [
+   "1.1.1"
+  ],
+  "table-fake-caption": [
+   "1.3.1"
+  ],
+  "target-size": [
+   "2.5.8"
+  ],
+  "td-has-header": [
+   "1.3.1"
+  ],
+  "td-headers-attr": [
+   "1.3.1"
+  ],
+  "th-has-data-cells": [
+   "1.3.1"
+  ],
+  "valid-lang": [
+   "3.1.2"
+  ],
+  "video-caption": [
+   "1.2.2"
+  ]
+ },
+ "customRules": {
+  "target-size-own": "target-size",
+  "focus-not-visible": "focus-visible",
+  "focus-hidden": "focus-visible",
+  "keyboard-trap": "keyboard-trap",
+  "not-reached": "keyboard",
+  "backward-jump": "focus-order",
+  "dialog-trigger-not-focusable": "dialog-trigger",
+  "dialog-trigger-not-operable": "dialog-trigger",
+  "dialog-focus-not-moved": "dialog-focus",
+  "dialog-focus-escaped": "dialog-focus",
+  "dialog-focus-not-returned": "dialog-focus",
+  "menu-focus-not-moved": "dialog-focus",
+  "popover-not-reachable": "dialog-focus",
+  "hover-only": "dialog-trigger",
+  "status-not-announced": "status-message",
+  "error-not-associated": "error-association"
+ },
+ "customCriteria": {
+  "target-size-own": [
+   "2.5.8"
+  ],
+  "focus-not-visible": [
+   "2.4.7"
+  ],
+  "focus-hidden": [
+   "2.4.3",
+   "2.4.7"
+  ],
+  "keyboard-trap": [
+   "2.1.2"
+  ],
+  "not-reached": [
+   "2.1.1"
+  ],
+  "backward-jump": [
+   "1.3.2",
+   "2.4.3"
+  ],
+  "dialog-trigger-not-focusable": [
+   "2.1.1"
+  ],
+  "dialog-trigger-not-operable": [
+   "2.1.1"
+  ],
+  "dialog-focus-not-moved": [
+   "2.4.3"
+  ],
+  "dialog-focus-escaped": [
+   "2.4.3"
+  ],
+  "dialog-focus-not-returned": [
+   "2.4.3"
+  ],
+  "menu-focus-not-moved": [
+   "2.4.3"
+  ],
+  "popover-not-reachable": [
+   "2.4.3"
+  ],
+  "hover-only": [
+   "2.1.1"
+  ],
+  "status-not-announced": [
+   "4.1.3"
+  ],
+  "error-not-associated": [
+   "3.3.1"
+  ]
+ },
+ "customChecks": {
+  "target-size-own": "target",
+  "focus-not-visible": "tabwalk",
+  "focus-hidden": "tabwalk",
+  "keyboard-trap": "tabwalk",
+  "not-reached": "tabwalk",
+  "backward-jump": "tabwalk",
+  "dialog-trigger-not-focusable": "dialog",
+  "dialog-trigger-not-operable": "dialog",
+  "dialog-focus-not-moved": "dialog",
+  "dialog-focus-escaped": "dialog",
+  "dialog-focus-not-returned": "dialog",
+  "menu-focus-not-moved": "dialog",
+  "popover-not-reachable": "dialog",
+  "hover-only": "dialog",
+  "status-not-announced": "status",
+  "error-not-associated": "status"
+ },
+ "incomplete": {
+  "facts": [
+   "rule",
+   "messageKey",
+   "why",
+   "elements",
+   "screen",
+   "criterion",
+   "criterionName"
+  ],
+  "messageKeyText": {
+   "bgOverlap": "an element overlaps its background",
+   "bgImage": "it sits on a background image",
+   "bgGradient": "it sits on a background gradient",
+   "pseudoContent": "a pseudo-element changes its look",
+   "elmPartiallyObscured": "another element partly covers it",
+   "elmPartiallyObscuring": "it partly covers other elements",
+   "shortTextContent": "its text is too short to judge",
+   "nonBmp": "it holds only symbols, not text",
+   "equalRatio": "its text matches its background",
+   "controlsWithinPopup": "aria-controls names a closed popup",
+   "noId": "an ARIA attribute names a missing id",
+   "visibleLabelSingular": "its ARIA label is poorly supported",
+   "noRoleSingular": "it has an ARIA label but no role",
+   "nonTabbableNeighbor": "its neighbor may not be a target"
+  },
+  "noMessageKey": "axe gave no reason",
+  "templates": {
+   "title": "Needs review: {rule}, {why}",
+   "detail": "axe could not decide {rule} for {elements}: {why}. A verifier checked a sample on the live demo; the others may pass or fail. WCAG {criterion} {criterionName}.",
+   "evidence": "axe {rule} could not decide {elements} ({messageKey}): {why}.",
+   "copy": {
+    "title": "Review and fix {rule}: {why}",
+    "summary": "axe could not decide {rule} for {elements} ({messageKey}): {why}. A verifier checked a sample on the live demo, starting on {screen}; nobody has checked the other elements by hand.",
+    "userImpact": "Where one of these elements does fail WCAG {criterion} {criterionName}, the people that criterion protects meet the same barrier on every screen it appears on. Which elements fail is not known yet.",
+    "fixHypothesis": "These elements seem to share a pattern axe cannot measure: {why}. Checking the sampled elements by hand, then fixing the pattern in its shared component where it fails, would likely clear most of them.",
+    "acceptance": [
+     "Each element in this group passes WCAG {criterion} {criterionName} when checked by hand.",
+     "A rerun of the audit confirms no failure in this group."
+    ],
+    "verify": [
+     "Start with the sampled screens in the audit evidence, then check the others: the verifier saw only a sample."
+    ],
+    "searchTerms": [
+     "{rule}",
+     "{messageKey}",
+     "needs review"
+    ],
+    "confidence": "medium",
+    "confidenceReason": "axe could not decide these elements, and a verifier checked only a sample of them on the live demo."
+   }
+  }
+ },
+ "factDocs": {
+  "element": "The element in words, at most 50 characters: its role and quoted name template (button \"Edit limits\"), or, when it has no name, its role and where it sits: the nearest heading in quotes, else the nearest landmark (button in \"API Tokens\", link in the main landmark). The role is the occurrence's ARIA role, or text when it has none or a generic one. The name or place is cut with an ellipsis to fit.",
+  "screen": "The map title of the finding's primary state, at most 40 characters (Settings — API Tokens).",
+  "screens": "How many states the finding occurs on (214).",
+  "criterion": "The finding's criterion that comes first in its family's criteria list (4.1.2).",
+  "criterionName": "That criterion's name from wcag.json (Name, Role, Value).",
+  "rule": "The axe rule id or custom check id that produced the finding (button-name, not-reached).",
+  "announced": "The element's announced-as template from the record with the same xpath in the same raw file, at most 80 characters (button \"Move money\" [expanded=false, haspopup=menu]). Falls back to the occurrence's role and quoted name when no record matches.",
+  "axeSummary": "axe's failureSummary for the sampled occurrence, at most 160 characters: the 'Fix any of the following:' and 'Fix all of the following:' lines dropped, the rest trimmed and joined with '; '. Empty when the finding did not come from axe; templates only use it at the end of a string, and the filler trims the result.",
+  "fg": "The foreground color axe measured, as lowercase hex (#9d9da8); for link-in-text-block, the link's color. unknown when axe could not compute it.",
+  "bg": "The background color axe measured, as lowercase hex (#ffffff); for link-in-text-block, the color of the text around the link. unknown when axe could not compute it.",
+  "ratio": "The measured contrast ratio, two decimals, without :1 (2.85). unknown when axe could not compute it.",
+  "required": "The ratio AA requires here, without :1: axe's expectedContrastRatio for color-contrast (4.5 or 3), and 3 for link-in-text-block.",
+  "size": "The target's width and height in CSS px, rounded, as W×H (16×16), from the occurrence's rect.",
+  "offset": "The diameter in CSS px, rounded, of the largest circle centered on the target that touches no other target (14); the spacing exception needs 24. From the target check's own measurement, else axe's closestOffset.",
+  "stop": "The 1-based number of the tab stop where the failure shows, counted from the focus reset (7).",
+  "stops": "How many distinct tab stops the Tab walk, or the dialog check's Tab presses, visited before it ended (31).",
+  "previous": "The tab stop just before stop, in the same words as element, at most 50 characters.",
+  "overlay": "The modal, drawer, menu or popover in words, at most 40 characters: its role and quoted name from the raw file's layer (dialog \"Edit card limits\"), or unnamed and its role (unnamed menu). The name is cut with an ellipsis to fit.",
+  "focus": "Where focus was when the check made its assertion, in the same words as element, or page body when focus fell to the body; at most 50 characters.",
+  "message": "The status or error text as a name template in quotes, at most 50 characters (\"Category created\"), cut with an ellipsis to fit.",
+  "messageKey": "axe's messageKey for an incomplete group: the reason axe could not decide its rule (bgOverlap), or none when axe gave none.",
+  "why": "That reason in words, at most 36 characters: incomplete.messageKeyText for the key (an element overlaps its background), else the key itself cut with an ellipsis to fit, or incomplete.noMessageKey when axe gave none.",
+  "elements": "How many distinct elements an incomplete group holds, with the noun (48 elements, 1 element). Two results are one element when a violation of the rule on them would share a finding key (KTD15)."
+ },
+ "fullCoverage": {
+  "2.5.8": [
+   "target-size-own"
+  ],
+  "3.1.1": [
+   "html-has-lang",
+   "html-lang-valid"
+  ]
+ },
+ "failureModes": {
+  "1.1.1": "Images, icons, SVGs, meters and image inputs with no text alternative.",
+  "1.2.1": "Audio with no transcript.",
+  "1.2.2": "Video with no captions.",
+  "1.3.1": "Lists, tables, headings and ARIA parent-child roles that misstate the structure, and structure judged from Chrome's accessibility tree.",
+  "1.3.2": "Tab order that jumps backward against the visual order.",
+  "1.3.4": "CSS that locks the screen orientation.",
+  "1.3.5": "Invalid autocomplete values.",
+  "1.4.1": "Links that differ from the text around them by color alone.",
+  "1.4.2": "Audio that plays on its own.",
+  "1.4.3": "Text contrast as axe computes it; text over images or gradients goes to the verifier.",
+  "1.4.4": "Viewport settings that block zoom; resizing text itself is not tested.",
+  "2.1.1": "Clickable elements Tab never reaches, triggers that Enter and Space cannot open, and scrollable regions without focusable content. Arrow keys are not tested.",
+  "2.1.2": "Tab loops that Tab, Shift+Tab and Esc cannot leave, on pages, modals and drawers.",
+  "2.2.1": "Meta refresh redirects.",
+  "2.2.2": "Blinking and scrolling marquee content.",
+  "2.4.1": "A way to bypass repeated blocks.",
+  "2.4.2": "A missing or empty page title; whether the title describes the page is not tested.",
+  "2.4.3": "Focus moved into, kept inside and returned from dialogs, menus and popovers, and Tab stops on hidden elements.",
+  "2.4.4": "Links and image-map areas with no name.",
+  "2.4.7": "A visible change around every Tab stop on pages, modals and drawers.",
+  "2.5.3": "Accessible names that leave out the visible label.",
+  "2.5.8": "Every interactive element measured against 24×24 px, with the spacing exception computed; the inline and essential exceptions are judged by the verifier.",
+  "3.1.1": "A missing or invalid page language.",
+  "3.1.2": "Invalid language codes on parts of the page.",
+  "3.3.1": "Fields marked invalid whose error text is not linked to them.",
+  "3.3.2": "Form fields with more than one label.",
+  "4.1.2": "Controls with no name and invalid ARIA roles, states and attributes, plus names, roles and states judged from Chrome's accessibility tree.",
+  "4.1.3": "Messages that appear outside any live region without taking focus, on toasts, confirmations and validation errors."
+ }
+}

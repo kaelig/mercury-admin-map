@@ -1,0 +1,182 @@
+{
+ "area": "transactions",
+ "batch": "verify-540",
+ "findings": [
+  {
+   "attachments": [],
+   "attempt": 1,
+   "basis": "candidate",
+   "criteria": [
+    "4.1.2"
+   ],
+   "evidence": [
+    {
+     "evidence": {
+      "description": "",
+      "name": "",
+      "role": "button",
+      "states": {},
+      "template": "button \"\""
+     },
+     "occurrence": {
+      "ancestors": [
+       [
+        "_tooltipAnchor_18bac_4",
+        "_wrapper_2irs5_5"
+       ],
+       [
+        "_enrichmentTooltipWrapper_la52j_180"
+       ],
+       [
+        "_partyNameWrapper_la52j_20"
+       ],
+       [
+        "_partyWrapper_la52j_1"
+       ],
+       [
+        "_panelSection_d3i56_148"
+       ],
+       [
+        "_panelBody_d3i56_64"
+       ],
+       [
+        "_large_kwlx6_9",
+        "_noHover_3n0se_28",
+        "_shadow_3n0se_25",
+        "_raisedBackground_3n0se_45",
+        "_panel_d3i56_55",
+        "_detailsCardPanel_15kl9_287"
+       ],
+       [
+        "_transitionWrapper_d3i56_5",
+        "_visible_d3i56_19",
+        "_detailsCardWrapper_15kl9_247"
+       ]
+      ],
+      "classes": [],
+      "data": {},
+      "heading": "",
+      "landmark": {
+       "name": "",
+       "role": "complementary"
+      },
+      "layer": "top",
+      "name": "",
+      "rect": [
+       1150,
+       211,
+       13,
+       16
+      ],
+      "role": "button",
+      "tag": "button",
+      "xpath": "/html/body/div[3]/aside[1]/div[1]/div[1]/section[1]/div[2]/div[2]/span[2]/div[1]/button[1]"
+     },
+     "state": "transactions.detail-card"
+    },
+    {
+     "evidence": {
+      "description": "",
+      "name": "",
+      "role": "button",
+      "states": {},
+      "template": "button \"\""
+     },
+     "occurrence": {
+      "ancestors": [
+       [
+        "_tooltipAnchor_18bac_4",
+        "_wrapper_2irs5_5"
+       ],
+       [
+        "_enrichmentTooltipWrapper_la52j_180"
+       ],
+       [
+        "_partyNameWrapper_la52j_20"
+       ],
+       [
+        "_partyWrapper_la52j_1"
+       ],
+       [
+        "_panelSection_d3i56_148"
+       ],
+       [
+        "_panelBody_d3i56_64"
+       ],
+       [
+        "_large_kwlx6_9",
+        "_noHover_3n0se_28",
+        "_shadow_3n0se_25",
+        "_raisedBackground_3n0se_45",
+        "_panel_d3i56_55",
+        "_detailsCardPanel_15kl9_287"
+       ],
+       [
+        "_transitionWrapper_d3i56_5",
+        "_visible_d3i56_19",
+        "_detailsCardWrapper_15kl9_247"
+       ]
+      ],
+      "classes": [],
+      "data": {},
+      "heading": "",
+      "landmark": {
+       "name": "",
+       "role": "complementary"
+      },
+      "layer": "top",
+      "name": "",
+      "rect": [
+       1145,
+       251,
+       13,
+       16
+      ],
+      "role": "button",
+      "tag": "button",
+      "xpath": "/html/body/div[4]/aside[1]/div[1]/div[1]/section[1]/div[3]/div[1]/span[2]/div[1]/button[1]"
+     },
+     "state": "transactions.detail-ach-pull"
+    }
+   ],
+   "evidenceHash": "c5006e27a504ed311e429e564b2a5d6b44b1b4dfab76da1b8033acab09e87410",
+   "facts": {
+    "announced": "button \"\"",
+    "axeSummary": "",
+    "criterion": "4.1.2",
+    "criterionName": "Name, Role, Value",
+    "element": "button in the complementary landmark",
+    "rule": "announced-as",
+    "screen": "Card transaction detail"
+   },
+   "family": "name",
+   "guidance": "High for an unnamed form control or the sole primary action.",
+   "issueId": null,
+   "key": "name:announced-as:6eb555e6c7e8",
+   "measured": false,
+   "primary": "transactions.detail-card",
+   "proposals": [],
+   "rule": "announced-as",
+   "screens": 2,
+   "severityDefault": "medium",
+   "source": "scanner",
+   "states": [
+    "transactions.detail-card",
+    "transactions.detail-ach-pull"
+   ],
+   "summary": "announced-as: announced as button \"\".",
+   "title": "Missing or unclear name: button in the complementary landmark"
+  }
+ ],
+ "primaries": [
+  "transactions.detail-card"
+ ],
+ "reach": {
+  "baseUrl": "https://demo.mercury.com",
+  "data": "data",
+  "map": "build/map.json",
+  "run": "2026-10-03-1525",
+  "workspace": "a11y"
+ },
+ "run": "2026-10-03-1525"
+}

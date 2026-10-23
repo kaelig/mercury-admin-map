@@ -1,0 +1,203 @@
+{
+ "area": "cards",
+ "batch": "verify-453",
+ "findings": [
+  {
+   "attachments": [],
+   "attempt": 1,
+   "basis": "candidate",
+   "criteria": [
+    "4.1.2"
+   ],
+   "evidence": [
+    {
+     "evidence": {
+      "description": "",
+      "name": "",
+      "role": "button",
+      "states": {},
+      "template": "button \"\""
+     },
+     "occurrence": {
+      "ancestors": [
+       [
+        "_large_kwlx6_9",
+        "_shadow_3n0se_25",
+        "_raisedBackground_3n0se_45",
+        "_dsCardOverrides_uqiad_8"
+       ],
+       [
+        "_cornerUpsellContainer_uqiad_1"
+       ],
+       [],
+       [
+        "_main_1gb3b_1"
+       ],
+       [
+        "mercury-root"
+       ]
+      ],
+      "classes": [
+       "_button_r6b2u_20",
+       "_small_r6b2u_72",
+       "_floating_r6b2u_16",
+       "_closeButton_uqiad_27"
+      ],
+      "data": {},
+      "heading": "Spend Policies",
+      "landmark": {
+       "name": "",
+       "role": "main"
+      },
+      "layer": "document",
+      "name": "",
+      "rect": [
+       332,
+       509,
+       32,
+       32
+      ],
+      "role": "button",
+      "tag": "button",
+      "xpath": "/html/body/div[1]/main[1]/div[1]/div[2]/div[1]/button[1]"
+     },
+     "state": "cards.policy-receipt-saved"
+    }
+   ],
+   "evidenceHash": "a6df5a6718cc63c6e40be8505f8b64878f5134d936411448eba98c6207f0f6c0",
+   "facts": {
+    "announced": "button \"\"",
+    "axeSummary": "",
+    "criterion": "4.1.2",
+    "criterionName": "Name, Role, Value",
+    "element": "button in \"Spend Policies\"",
+    "rule": "announced-as",
+    "screen": "Receipt rule updated"
+   },
+   "family": "name",
+   "guidance": "High for an unnamed form control or the sole primary action.",
+   "issueId": null,
+   "key": "name:announced-as:1f147621427a",
+   "measured": false,
+   "primary": "cards.policy-receipt-saved",
+   "proposals": [],
+   "rule": "announced-as",
+   "screens": 1,
+   "severityDefault": "medium",
+   "source": "scanner",
+   "states": [
+    "cards.policy-receipt-saved"
+   ],
+   "summary": "announced-as: announced as button \"\".",
+   "title": "Missing or unclear name: button in \"Spend Policies\""
+  },
+  {
+   "attachments": [],
+   "attempt": 1,
+   "basis": "candidate",
+   "criteria": [
+    "2.4.4"
+   ],
+   "evidence": [
+    {
+     "evidence": {
+      "description": "",
+      "name": "Learn more",
+      "role": "link",
+      "states": {},
+      "template": "link \"Learn more\""
+     },
+     "occurrence": {
+      "ancestors": [
+       [],
+       [
+        "_actionArea_uqiad_59"
+       ],
+       [
+        "_copyArea_uqiad_45"
+       ],
+       [
+        "_contentArea_uqiad_33"
+       ],
+       [
+        "_large_kwlx6_9",
+        "_shadow_3n0se_25",
+        "_raisedBackground_3n0se_45",
+        "_dsCardOverrides_uqiad_8"
+       ],
+       [
+        "_cornerUpsellContainer_uqiad_1"
+       ],
+       [],
+       [
+        "_main_1gb3b_1"
+       ]
+      ],
+      "classes": [
+       "_button_r6b2u_20",
+       "_small_r6b2u_72",
+       "_secondary_r6b2u_126",
+       "_link_ual8v_4",
+       "_underlineNever_ual8v_7"
+      ],
+      "data": {},
+      "heading": "Spend Policies",
+      "landmark": {
+       "name": "",
+       "role": "main"
+      },
+      "layer": "document",
+      "name": "Learn more",
+      "rect": [
+       126,
+       840,
+       124,
+       32
+      ],
+      "role": "link",
+      "tag": "a",
+      "xpath": "/html/body/div[1]/main[1]/div[1]/div[2]/div[1]/div[1]/div[2]/div[1]/span[1]/a[1]"
+     },
+     "state": "cards.policy-receipt-saved"
+    }
+   ],
+   "evidenceHash": "dd2d019e63b2816ba140e3ea5b919067c0a7ab00136f164b1de41ffd9971e37d",
+   "facts": {
+    "announced": "link \"Learn more\"",
+    "axeSummary": "",
+    "criterion": "2.4.4",
+    "criterionName": "Link Purpose (In Context)",
+    "element": "link \"Learn more\"",
+    "rule": "announced-as",
+    "screen": "Receipt rule updated"
+   },
+   "family": "name",
+   "guidance": "High for an unnamed form control or the sole primary action.",
+   "issueId": null,
+   "key": "name:announced-as:50f76406e645",
+   "measured": false,
+   "primary": "cards.policy-receipt-saved",
+   "proposals": [],
+   "rule": "announced-as",
+   "screens": 1,
+   "severityDefault": "medium",
+   "source": "scanner",
+   "states": [
+    "cards.policy-receipt-saved"
+   ],
+   "summary": "announced-as: announced as link \"Learn more\".",
+   "title": "Missing or unclear name: link \"Learn more\""
+  }
+ ],
+ "primaries": [
+  "cards.policy-receipt-saved"
+ ],
+ "reach": {
+  "baseUrl": "https://demo.mercury.com",
+  "data": "data",
+  "map": "build/map.json",
+  "run": "2026-10-03-1525",
+  "workspace": "a11y"
+ },
+ "run": "2026-10-03-1525"
+}

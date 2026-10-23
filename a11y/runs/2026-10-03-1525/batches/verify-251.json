@@ -1,0 +1,109 @@
+{
+ "area": "invoicing",
+ "batch": "verify-251",
+ "findings": [
+  {
+   "attachments": [],
+   "attempt": 1,
+   "basis": "candidate",
+   "criteria": [
+    "2.1.1"
+   ],
+   "evidence": [
+    {
+     "evidence": {
+      "end": "body",
+      "focusable": false,
+      "source": "ax",
+      "stops": 12
+     },
+     "occurrence": {
+      "ancestors": [
+       [
+        "_input_11c85_6",
+        "_tagList_1fujv_4"
+       ],
+       [
+        "_inputWrapper_11c85_6"
+       ],
+       [
+        "_wrapper_1xgdp_8",
+        "session-replay-mask"
+       ],
+       [
+        "_settingsSection_1qq0s_5"
+       ],
+       [
+        "_tabContent_1qq0s_83"
+       ],
+       [
+        "_wrapper_1ojdq_8",
+        "_settingsWrapper_1qq0s_73"
+       ],
+       [],
+       [
+        "_leftInnerContainer_12jyu_3"
+       ]
+      ],
+      "classes": [],
+      "data": {},
+      "heading": "Defaults",
+      "landmark": {
+       "name": "",
+       "role": "form"
+      },
+      "layer": "document",
+      "name": "Default CC emails",
+      "rect": [
+       125,
+       471,
+       0,
+       0
+      ],
+      "role": "listbox",
+      "tag": "div",
+      "xpath": "/html/body/div[1]/main[1]/div[1]/div[2]/div[2]/div[3]/div[1]/div[1]/div[1]/div[1]/div[1]/form[1]/div[2]/div[2]/div[1]/div[3]/div[1]/div[1]/div[1]"
+     },
+     "state": "invoicing.settings-defaults"
+    }
+   ],
+   "evidenceHash": "54333faa920ac21d648feba33fae77a1a2679eedbc719a8b2461706714602640",
+   "facts": {
+    "axeSummary": "",
+    "criterion": "2.1.1",
+    "criterionName": "Keyboard",
+    "element": "listbox \"Default CC emails\"",
+    "rule": "not-reached",
+    "screen": "Invoice settings: Defaults",
+    "stops": "12"
+   },
+   "family": "keyboard",
+   "guidance": "High if a task cannot be completed without a mouse.",
+   "issueId": null,
+   "key": "keyboard:not-reached:7fa787041044",
+   "measured": false,
+   "primary": "invoicing.settings-defaults",
+   "proposals": [],
+   "rule": "not-reached",
+   "screens": 1,
+   "severityDefault": "medium",
+   "source": "scanner",
+   "states": [
+    "invoicing.settings-defaults"
+   ],
+   "summary": "The Tab walk visited 12 stops and never reached the listbox \"Default CC emails\", which responds to a click.",
+   "title": "Not reachable by keyboard: listbox \"Default CC emails\""
+  }
+ ],
+ "primaries": [
+  "invoicing.settings-defaults"
+ ],
+ "reach": {
+  "baseUrl": "https://demo.mercury.com",
+  "data": "data",
+  "map": "build/map.json",
+  "run": "2026-10-03-1525",
+  "workspace": "a11y"
+ },
+ "run": "2026-10-03-1525"
+}

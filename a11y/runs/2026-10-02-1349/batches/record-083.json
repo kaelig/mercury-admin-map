@@ -1,0 +1,302 @@
+{
+ "batch": "record-083",
+ "reach": {
+  "baseUrl": "https://demo.mercury.com",
+  "data": "data",
+  "map": "build/map.json",
+  "run": "2026-10-02-1349",
+  "workspace": "a11y"
+ },
+ "run": "2026-10-02-1349",
+ "states": [
+  {
+   "area": "books",
+   "draft": "not drafted: its parent had no accepted recipe when the drafter ran; a previous recorder failed: structure-missing: a modal needs an open layer; the replay found none. A live click opens a dialog, but the replay never registers it; the button's name is only available after load. Exceeded the 4-submission limit.",
+   "image": "screens/books/08-finalize-setup.png",
+   "kind": "modal",
+   "labels": [
+    "Toggle Books",
+    "Click Try Mercury Books",
+    "Books created",
+    "Dismiss spotlight",
+    "Click Finalize setup"
+   ],
+   "mutates": false,
+   "note": "Add other bank or credit accounts: list of linked external accounts with checkmarks and a + to link more.",
+   "parent": "books.home",
+   "state": "books.finalize-step1",
+   "title": "Finalize setup 1 of 3: linked accounts"
+  },
+  {
+   "area": "books",
+   "draft": "not drafted: its parent had no accepted recipe when the drafter ran",
+   "image": "screens/books/09-finalize-step2.png",
+   "kind": "form-state",
+   "labels": [
+    "Toggle Books",
+    "Click Try Mercury Books",
+    "Books created",
+    "Dismiss spotlight",
+    "Click Finalize setup",
+    "Next"
+   ],
+   "mutates": false,
+   "note": "Right after Next on step 1 the modal keeps showing the linked-accounts list while the Next button turns into a loading pill. Step 2 (Add payment or payroll integrations: Stripe, PayPal, Gusto, each \"Set up on <provider>\u2019s site\") followed; its OAuth tiles were not opened.",
+   "parent": "books.finalize-step1",
+   "state": "books.finalize-step2",
+   "title": "Finalize setup: advancing from step 1"
+  },
+  {
+   "area": "books",
+   "draft": "not drafted: its parent had no accepted recipe when the drafter ran",
+   "image": "screens/books/10-finalize-step3.png",
+   "kind": "form-state",
+   "labels": [
+    "Toggle Books",
+    "Click Try Mercury Books",
+    "Books created",
+    "Dismiss spotlight",
+    "Click Finalize setup",
+    "Next",
+    "Next"
+   ],
+   "mutates": false,
+   "note": "Transition into step 3 shows \"Finalize setup 3 of 3\" with an empty body and a three-dot loader before the accountant options appear.",
+   "parent": "books.finalize-step2",
+   "state": "books.finalize-step3",
+   "title": "Finalize setup: loading step 3"
+  },
+  {
+   "area": "books",
+   "draft": "not drafted: its parent had no accepted recipe when the drafter ran",
+   "image": "screens/books/11-invite-accountant.png",
+   "kind": "form-state",
+   "labels": [
+    "Toggle Books",
+    "Click Try Mercury Books",
+    "Books created",
+    "Dismiss spotlight",
+    "Click Finalize setup",
+    "Next",
+    "Next",
+    "Choose Invite my accountant"
+   ],
+   "mutates": true,
+   "note": "Choosing Invite my accountant reveals a Team member select pre-filled with Xavier Xyloto.",
+   "parent": "books.finalize-step3",
+   "state": "books.finalize-invite",
+   "title": "Invite my accountant selected"
+  },
+  {
+   "area": "books",
+   "draft": "not drafted: its parent had no accepted recipe when the drafter ran; the conductor rejected the previous recipe: missing banner, page still loading: the replay has the right Invoices grid, but the header shows a 'Finalize setup' spinner and a blank Create invoice button, and the 'You have 3 non-USD invoices...' warning with View invoices never appears. The sweep would audit the page before it finishes loading. Fix: in the hop, wait for the View invoices button instead of a fixed 3 s",
+   "image": "screens/books/22-invoices.png",
+   "kind": "page",
+   "labels": [
+    "Toggle Books",
+    "Click Try Mercury Books",
+    "Books created",
+    "Dismiss spotlight",
+    "Sidebar: Invoices"
+   ],
+   "mutates": false,
+   "note": "Warning banner \"You have 3 non-USD invoices that won\u2019t sync to Books\u2026\" with View invoices; grid of invoices with Draft, Overdue, Paid - Needs Action, Cancelled, Processing, Partially Paid, Paid and Open badges.",
+   "parent": "books.home",
+   "state": "books.invoices",
+   "title": "Invoices"
+  },
+  {
+   "area": "books",
+   "draft": "not drafted: its parent had no accepted recipe when the drafter ran",
+   "image": "screens/books/23-invoices-customers.png",
+   "kind": "page",
+   "labels": [
+    "Toggle Books",
+    "Click Try Mercury Books",
+    "Books created",
+    "Dismiss spotlight",
+    "Sidebar: Invoices",
+    "Sidebar: Customers"
+   ],
+   "mutates": false,
+   "note": "Customer list (Name, Email) under Invoices, with Add a customer split button.",
+   "parent": "books.invoices",
+   "state": "books.customers",
+   "title": "Customers"
+  },
+  {
+   "area": "books",
+   "draft": "not drafted: its parent had no accepted recipe when the drafter ran",
+   "image": "screens/books/47-invoice-drawer.png",
+   "kind": "drawer",
+   "labels": [
+    "Toggle Books",
+    "Click Try Mercury Books",
+    "Books created",
+    "Dismiss spotlight",
+    "Sidebar: Invoices",
+    "Open INV-OVERDUE-001"
+   ],
+   "mutates": false,
+   "note": "INV-OVERDUE-001: Details / Payments / Journal Entries tabs, Overdue badge, amount $4,200.00, dates Aug 11, 2026 and Sep 10, 2026, line items, outstanding balance, attachment dropzone.",
+   "parent": "books.invoices",
+   "state": "books.invoice-drawer",
+   "title": "Invoice detail"
+  },
+  {
+   "area": "books",
+   "draft": "not drafted: its parent had no accepted recipe when the drafter ran",
+   "image": "screens/books/57-reconciliation-account-menu.png",
+   "kind": "menu",
+   "labels": [
+    "Toggle Books",
+    "Click Try Mercury Books",
+    "Books created",
+    "Dismiss spotlight",
+    "Sidebar: Reconciliation",
+    "Open account picker"
+   ],
+   "mutates": false,
+   "note": "Searchable account list grouped Bank accounts / Credit cards, each with Auto-reconciled or Not reconciled.",
+   "parent": "books.reconciliation",
+   "state": "books.reconciliation-account-menu",
+   "title": "Reconciliation account picker"
+  },
+  {
+   "area": "books",
+   "draft": "not drafted: its parent had no accepted recipe when the drafter ran",
+   "image": "screens/books/58-reconciliation-not-reconciled.png",
+   "kind": "page",
+   "labels": [
+    "Toggle Books",
+    "Click Try Mercury Books",
+    "Books created",
+    "Dismiss spotlight",
+    "Sidebar: Reconciliation",
+    "Open account picker",
+    "Pick Citi Checking 9384"
+   ],
+   "mutates": false,
+   "note": "Citi Checking 9384, Not reconciled: \"Sep 1, 2023 - Now\" with Needs reconciliation badge, Start reconciliation and Import transactions.",
+   "parent": "books.reconciliation-account-menu",
+   "state": "books.reconciliation-pending",
+   "title": "Account needing reconciliation"
+  },
+  {
+   "area": "books",
+   "draft": "not drafted: its parent had no accepted recipe when the drafter ran",
+   "image": "screens/books/45-review-menu.png",
+   "kind": "menu",
+   "labels": [
+    "Toggle Books",
+    "Click Try Mercury Books",
+    "Books created",
+    "Dismiss spotlight",
+    "Sidebar: Transactions",
+    "Click Review"
+   ],
+   "mutates": false,
+   "note": "Review dropdown with To review and Reviewed radio items.",
+   "parent": "books.transactions",
+   "state": "books.review-menu",
+   "title": "Review filter menu"
+  },
+  {
+   "area": "books",
+   "draft": "not drafted: its parent had no accepted recipe when the drafter ran",
+   "image": "screens/books/46-to-review-filtered.png",
+   "kind": "form-state",
+   "labels": [
+    "Toggle Books",
+    "Click Try Mercury Books",
+    "Books created",
+    "Dismiss spotlight",
+    "Sidebar: Transactions",
+    "Click Review",
+    "To review"
+   ],
+   "mutates": false,
+   "note": "Control reads \"To review (7975)\", Filters becomes \"Filters (1)\"; the menu stays open after picking.",
+   "parent": "books.review-menu",
+   "state": "books.to-review",
+   "title": "To review filter applied"
+  },
+  {
+   "area": "books",
+   "draft": "not drafted: its parent had no accepted recipe when the drafter ran",
+   "image": "screens/books/43-transaction-drawer.png",
+   "kind": "drawer",
+   "labels": [
+    "Toggle Books",
+    "Click Try Mercury Books",
+    "Books created",
+    "Dismiss spotlight",
+    "Sidebar: Transactions",
+    "Open row"
+   ],
+   "mutates": false,
+   "note": "$14,934.67 Money out, Transaction / Journal Entry tabs, account, type, date, description, memo, line items and ACH metadata; the grid behind narrows so Ledger cells show \"Un\u2026\" and \"C\".",
+   "parent": "books.transactions",
+   "state": "books.transaction-drawer",
+   "title": "Transaction detail"
+  },
+  {
+   "area": "books",
+   "draft": "not drafted: its parent had no accepted recipe when the drafter ran",
+   "image": "screens/books/44-transaction-je-tab.png",
+   "kind": "drawer",
+   "labels": [
+    "Toggle Books",
+    "Click Try Mercury Books",
+    "Books created",
+    "Dismiss spotlight",
+    "Sidebar: Transactions",
+    "Open row",
+    "Journal Entry tab"
+   ],
+   "mutates": false,
+   "note": "Journal Entry tab: Date, Description and a \"Line entries\" debit/credit table (Ops / Payroll credit, Uncategorized Cash Outflow debit).",
+   "parent": "books.transaction-drawer",
+   "state": "books.transaction-je-tab",
+   "title": "Transaction journal entry tab"
+  },
+  {
+   "area": "books",
+   "draft": "not drafted: its parent had no accepted recipe when the drafter ran; the conductor rejected the previous recipe: missing content: row 10003 is highlighted and the drawer opens with only its toolbar (up/down/edit/delete/expand/close); the '10003 \u2014 Citi Checking 9384' details (code, type, subtype, opening balance) never render in either theme. The working-tree recipe already has a different hop (an action-button click on ledger-6) and also records empty controls and headings",
+   "image": "screens/books/54-ledger-account-drawer.png",
+   "kind": "drawer",
+   "labels": [
+    "Toggle Books",
+    "Click Try Mercury Books",
+    "Books created",
+    "Dismiss spotlight",
+    "Sidebar: Chart of Accounts",
+    "Open 10003 row"
+   ],
+   "mutates": false,
+   "note": "\"10003 \u2014 Citi Checking 9384\": code, account, type, subtype, Debit or credit, Parent (em dash), Opening balance $0.00.",
+   "parent": "books.chart-of-accounts",
+   "state": "books.ledger-drawer",
+   "title": "Ledger account detail"
+  },
+  {
+   "area": "books",
+   "draft": "not drafted: its parent had no accepted recipe when the drafter ran; the conductor rejected the previous recipe: missing layer content: the Create categorization rule drawer opens but its body is blank in both replays; no If/Then selects, no + button, no 'Applies to future transactions only' footer, even after the 2s wait",
+   "image": "screens/books/38-create-rule.png",
+   "kind": "drawer",
+   "labels": [
+    "Toggle Books",
+    "Click Try Mercury Books",
+    "Books created",
+    "Dismiss spotlight",
+    "Sidebar: Rules",
+    "Click Create rule"
+   ],
+   "mutates": true,
+   "note": "Drawer with empty If and Then selects. Save renders at opacity 0.4 but is not disabled; clicking it with the form empty does nothing and shows no message.",
+   "parent": "books.rules",
+   "state": "books.rule-create",
+   "title": "Create categorization rule"
+  }
+ ]
+}

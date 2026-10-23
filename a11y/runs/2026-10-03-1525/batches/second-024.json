@@ -1,0 +1,717 @@
+{
+ "area": "home",
+ "batch": "second-024",
+ "findings": [
+  {
+   "attachments": [],
+   "attempt": 1,
+   "basis": "candidate",
+   "criteria": [
+    "4.1.2"
+   ],
+   "evidence": [
+    {
+     "evidence": {
+      "description": "",
+      "name": "",
+      "role": "dialog",
+      "states": {},
+      "template": "dialog \"\""
+     },
+     "occurrence": {
+      "ancestors": [
+       [],
+       []
+      ],
+      "classes": [
+       "_popover_fh9km_22"
+      ],
+      "data": {
+       "data-dialog": "",
+       "data-enter": "true",
+       "data-open": "true"
+      },
+      "heading": "",
+      "landmark": null,
+      "layer": "top",
+      "name": "",
+      "rect": [
+       209,
+       539,
+       422,
+       345
+      ],
+      "role": "dialog",
+      "tag": "div",
+      "xpath": "/html/body/div[3]/div[1]/div[1]"
+     },
+     "state": "home.bookmarks-popover"
+    }
+   ],
+   "evidenceHash": "10a3618a75719dff92ae071bd84f2e31c88b51bba653baebb2c1467ea2b70eb1",
+   "facts": {
+    "announced": "dialog \"\"",
+    "axeSummary": "",
+    "criterion": "4.1.2",
+    "criterionName": "Name, Role, Value",
+    "element": "dialog",
+    "rule": "announced-as",
+    "screen": "Learn about bookmarks popover"
+   },
+   "family": "name",
+   "guidance": "High for an unnamed form control or the sole primary action.",
+   "issueId": null,
+   "key": "name:announced-as:56f4d8ce6034",
+   "measured": false,
+   "primary": "home.bookmarks-popover",
+   "proposals": [],
+   "rule": "announced-as",
+   "screens": 1,
+   "severityDefault": "medium",
+   "source": "scanner",
+   "states": [
+    "home.bookmarks-popover"
+   ],
+   "summary": "announced-as: announced as dialog \"\".",
+   "title": "Missing or unclear name: dialog"
+  },
+  {
+   "attachments": [],
+   "attempt": 1,
+   "basis": "candidate",
+   "criteria": [
+    "4.1.2"
+   ],
+   "evidence": [
+    {
+     "evidence": {
+      "description": "",
+      "name": "Books",
+      "role": "button",
+      "states": {},
+      "template": "button \"Books\""
+     },
+     "occurrence": {
+      "ancestors": [
+       [
+        "_track_1o8q5_4"
+       ],
+       [
+        "_wrapper_1o8q5_5"
+       ],
+       [
+        "_navContainer_184ve_12"
+       ],
+       [
+        "_sidebar_11y1x_4",
+        "_narrowSidebar_184ve_7"
+       ],
+       [
+        "_booksLayout_1pthq_31"
+       ],
+       [
+        "_layout_1pthq_16"
+       ],
+       [
+        "_wrapper_1pthq_1"
+       ],
+       []
+      ],
+      "classes": [
+       "_chip_1o8q5_31",
+       "_chipActive_1o8q5_96"
+      ],
+      "data": {},
+      "heading": "",
+      "landmark": {
+       "name": "",
+       "role": "navigation"
+      },
+      "layer": "document",
+      "name": "Books",
+      "rect": [
+       108,
+       118,
+       101,
+       28
+      ],
+      "role": "button",
+      "tag": "button",
+      "xpath": "/html/body/div[1]/main[1]/div[1]/div[1]/div[1]/div[4]/div[1]/nav[1]/div[2]/div[1]/div[1]/button[2]"
+     },
+     "state": "home.books-toggle"
+    },
+    {
+     "evidence": {
+      "description": "",
+      "name": "Books",
+      "role": "button",
+      "states": {},
+      "template": "button \"Books\""
+     },
+     "occurrence": {
+      "ancestors": [
+       [
+        "_track_1o8q5_4"
+       ],
+       [
+        "_wrapper_1o8q5_5"
+       ],
+       [
+        "_navContainer_184ve_12"
+       ],
+       [
+        "_sidebar_11y1x_4",
+        "_narrowSidebar_184ve_7"
+       ],
+       [
+        "_booksLayout_1pthq_31"
+       ],
+       [
+        "_layout_1pthq_16"
+       ],
+       [
+        "_wrapper_1pthq_1"
+       ],
+       []
+      ],
+      "classes": [
+       "_chip_1o8q5_31",
+       "_chipActive_1o8q5_96"
+      ],
+      "data": {},
+      "heading": "",
+      "landmark": {
+       "name": "",
+       "role": "navigation"
+      },
+      "layer": "document",
+      "name": "Books",
+      "rect": [
+       108,
+       118,
+       101,
+       28
+      ],
+      "role": "button",
+      "tag": "button",
+      "xpath": "/html/body/div[1]/main[1]/div[1]/div[1]/div[1]/div[4]/div[1]/nav[1]/div[2]/div[1]/div[1]/button[2]"
+     },
+     "state": "books.setup-transition"
+    }
+   ],
+   "evidenceHash": "d77857bbb5264c9f06603f5c9823e4ff78a2568e6f44a4cf496454a5bafcac3d",
+   "facts": {
+    "announced": "button \"Books\"",
+    "axeSummary": "",
+    "criterion": "4.1.2",
+    "criterionName": "Name, Role, Value",
+    "element": "button \"Books\"",
+    "rule": "announced-as",
+    "screen": "Banking/Books toggle: Books"
+   },
+   "family": "role-state",
+   "guidance": "Low for optional ARIA or an invalid autocomplete token; high when aria-hidden hides the whole page.",
+   "issueId": null,
+   "key": "role-state:announced-as:5715947ad6b7",
+   "measured": false,
+   "primary": "home.books-toggle",
+   "proposals": [],
+   "rule": "announced-as",
+   "screens": 23,
+   "severityDefault": "medium",
+   "source": "scanner",
+   "states": [
+    "home.books-toggle",
+    "books.setup-transition"
+   ],
+   "summary": "announced-as: announced as button \"Books\".",
+   "title": "Wrong role or state: button \"Books\""
+  },
+  {
+   "attachments": [],
+   "attempt": 1,
+   "basis": "candidate",
+   "criteria": [
+    "4.1.2"
+   ],
+   "evidence": [
+    {
+     "evidence": {
+      "description": "",
+      "name": "Cash",
+      "role": "button",
+      "states": {},
+      "template": "button \"Cash\""
+     },
+     "occurrence": {
+      "ancestors": [
+       [
+        "_buttonWithDivider_1xt6d_80"
+       ],
+       [
+        "_container_1xt6d_3",
+        "_large_1xt6d_15"
+       ],
+       [
+        "_field_97ueq_49"
+       ],
+       [
+        "_formFields_97ueq_37"
+       ],
+       [
+        "_form_97ueq_24"
+       ],
+       [
+        "_page_97ueq_1",
+        "_signupFormTransparent_lb7tt_16"
+       ],
+       [
+        "_heroHalo_lb7tt_93"
+       ],
+       [
+        "_signupFormOverlay_lb7tt_64"
+       ]
+      ],
+      "classes": [
+       "_segment_1xt6d_7",
+       "_selected_1xt6d_60",
+       "_first_1xt6d_73"
+      ],
+      "data": {},
+      "heading": "Intelligent accounting built into Mercury",
+      "landmark": {
+       "name": "",
+       "role": "form"
+      },
+      "layer": "document",
+      "name": "Cash",
+      "rect": [
+       284,
+       512,
+       61,
+       40
+      ],
+      "role": "button",
+      "tag": "button",
+      "xpath": "/html/body/div[1]/main[1]/div[1]/div[1]/div[1]/div[4]/div[1]/div[3]/div[1]/div[2]/form[1]/div[1]/div[1]/div[2]/div[1]/button[1]"
+     },
+     "state": "home.books-toggle"
+    },
+    {
+     "evidence": {
+      "description": "",
+      "name": "Cash",
+      "role": "button",
+      "states": {},
+      "template": "button \"Cash\""
+     },
+     "occurrence": {
+      "ancestors": [
+       [
+        "_buttonWithDivider_1xt6d_80"
+       ],
+       [
+        "_container_1xt6d_3",
+        "_large_1xt6d_15"
+       ],
+       [
+        "_field_97ueq_49"
+       ],
+       [
+        "_formFields_97ueq_37"
+       ],
+       [
+        "_form_97ueq_24"
+       ],
+       [
+        "_page_97ueq_1",
+        "_signupFormTransparent_lb7tt_16"
+       ],
+       [
+        "_heroHalo_lb7tt_93"
+       ],
+       [
+        "_signupFormOverlay_lb7tt_64"
+       ]
+      ],
+      "classes": [
+       "_segment_1xt6d_7",
+       "_selected_1xt6d_60",
+       "_first_1xt6d_73"
+      ],
+      "data": {},
+      "heading": "Intelligent accounting built into Mercury",
+      "landmark": {
+       "name": "",
+       "role": "form"
+      },
+      "layer": "document",
+      "name": "Cash",
+      "rect": [
+       284,
+       512,
+       61,
+       40
+      ],
+      "role": "button",
+      "tag": "button",
+      "xpath": "/html/body/div[1]/main[1]/div[1]/div[1]/div[1]/div[4]/div[1]/div[3]/div[1]/div[2]/form[1]/div[1]/div[1]/div[2]/div[1]/button[1]"
+     },
+     "state": "billpay.books-signup"
+    }
+   ],
+   "evidenceHash": "3d975a1c3822b3ccbb3e85291ede4b2ae0b78009fba433738964fb2bae7a0deb",
+   "facts": {
+    "announced": "button \"Cash\"",
+    "axeSummary": "",
+    "criterion": "4.1.2",
+    "criterionName": "Name, Role, Value",
+    "element": "button \"Cash\"",
+    "rule": "announced-as",
+    "screen": "Banking/Books toggle: Books"
+   },
+   "family": "role-state",
+   "guidance": "Low for optional ARIA or an invalid autocomplete token; high when aria-hidden hides the whole page.",
+   "issueId": null,
+   "key": "role-state:announced-as:6bd368245130",
+   "measured": false,
+   "primary": "home.books-toggle",
+   "proposals": [],
+   "rule": "announced-as",
+   "screens": 3,
+   "severityDefault": "medium",
+   "source": "scanner",
+   "states": [
+    "home.books-toggle",
+    "billpay.books-signup"
+   ],
+   "summary": "announced-as: announced as button \"Cash\".",
+   "title": "Wrong role or state: button \"Cash\""
+  },
+  {
+   "attachments": [],
+   "attempt": 1,
+   "basis": "candidate",
+   "criteria": [
+    "4.1.2"
+   ],
+   "evidence": [
+    {
+     "evidence": {
+      "description": "",
+      "name": "Accrual",
+      "role": "button",
+      "states": {},
+      "template": "button \"Accrual\""
+     },
+     "occurrence": {
+      "ancestors": [
+       [
+        "_buttonWithDivider_1xt6d_80"
+       ],
+       [
+        "_container_1xt6d_3",
+        "_large_1xt6d_15"
+       ],
+       [
+        "_field_97ueq_49"
+       ],
+       [
+        "_formFields_97ueq_37"
+       ],
+       [
+        "_form_97ueq_24"
+       ],
+       [
+        "_page_97ueq_1",
+        "_signupFormTransparent_lb7tt_16"
+       ],
+       [
+        "_heroHalo_lb7tt_93"
+       ],
+       [
+        "_signupFormOverlay_lb7tt_64"
+       ]
+      ],
+      "classes": [
+       "_segment_1xt6d_7",
+       "_last_1xt6d_76"
+      ],
+      "data": {},
+      "heading": "Intelligent accounting built into Mercury",
+      "landmark": {
+       "name": "",
+       "role": "form"
+      },
+      "layer": "document",
+      "name": "Accrual",
+      "rect": [
+       344,
+       513,
+       77,
+       38
+      ],
+      "role": "button",
+      "tag": "button",
+      "xpath": "/html/body/div[1]/main[1]/div[1]/div[1]/div[1]/div[4]/div[1]/div[3]/div[1]/div[2]/form[1]/div[1]/div[1]/div[2]/div[2]/button[1]"
+     },
+     "state": "home.books-toggle"
+    },
+    {
+     "evidence": {
+      "description": "",
+      "name": "Accrual",
+      "role": "button",
+      "states": {},
+      "template": "button \"Accrual\""
+     },
+     "occurrence": {
+      "ancestors": [
+       [
+        "_buttonWithDivider_1xt6d_80"
+       ],
+       [
+        "_container_1xt6d_3",
+        "_large_1xt6d_15"
+       ],
+       [
+        "_field_97ueq_49"
+       ],
+       [
+        "_formFields_97ueq_37"
+       ],
+       [
+        "_form_97ueq_24"
+       ],
+       [
+        "_page_97ueq_1",
+        "_signupFormTransparent_lb7tt_16"
+       ],
+       [
+        "_heroHalo_lb7tt_93"
+       ],
+       [
+        "_signupFormOverlay_lb7tt_64"
+       ]
+      ],
+      "classes": [
+       "_segment_1xt6d_7",
+       "_last_1xt6d_76"
+      ],
+      "data": {},
+      "heading": "Intelligent accounting built into Mercury",
+      "landmark": {
+       "name": "",
+       "role": "form"
+      },
+      "layer": "document",
+      "name": "Accrual",
+      "rect": [
+       344,
+       513,
+       77,
+       38
+      ],
+      "role": "button",
+      "tag": "button",
+      "xpath": "/html/body/div[1]/main[1]/div[1]/div[1]/div[1]/div[4]/div[1]/div[3]/div[1]/div[2]/form[1]/div[1]/div[1]/div[2]/div[2]/button[1]"
+     },
+     "state": "billpay.books-signup"
+    }
+   ],
+   "evidenceHash": "99ef09ec3b100645e9eb6338f50c34690640381e7dda6ec3032c4bbfbb8d9baa",
+   "facts": {
+    "announced": "button \"Accrual\"",
+    "axeSummary": "",
+    "criterion": "4.1.2",
+    "criterionName": "Name, Role, Value",
+    "element": "button \"Accrual\"",
+    "rule": "announced-as",
+    "screen": "Banking/Books toggle: Books"
+   },
+   "family": "role-state",
+   "guidance": "Low for optional ARIA or an invalid autocomplete token; high when aria-hidden hides the whole page.",
+   "issueId": null,
+   "key": "role-state:announced-as:71f6e61ce396",
+   "measured": false,
+   "primary": "home.books-toggle",
+   "proposals": [],
+   "rule": "announced-as",
+   "screens": 3,
+   "severityDefault": "medium",
+   "source": "scanner",
+   "states": [
+    "home.books-toggle",
+    "billpay.books-signup"
+   ],
+   "summary": "announced-as: announced as button \"Accrual\".",
+   "title": "Wrong role or state: button \"Accrual\""
+  },
+  {
+   "attachments": [],
+   "attempt": 1,
+   "basis": "candidate",
+   "criteria": [
+    "4.1.2"
+   ],
+   "evidence": [
+    {
+     "evidence": {
+      "description": "",
+      "name": "Banking",
+      "role": "button",
+      "states": {},
+      "template": "button \"Banking\""
+     },
+     "occurrence": {
+      "ancestors": [
+       [
+        "_track_1o8q5_4"
+       ],
+       [
+        "_wrapper_1o8q5_5"
+       ],
+       [
+        "_navContainer_184ve_12"
+       ],
+       [
+        "_sidebar_11y1x_4",
+        "_narrowSidebar_184ve_7"
+       ],
+       [
+        "_booksLayout_1pthq_31"
+       ],
+       [
+        "_layout_1pthq_16"
+       ],
+       [
+        "_wrapper_1pthq_1"
+       ],
+       []
+      ],
+      "classes": [
+       "_chip_1o8q5_31",
+       "_chipInactive_1o8q5_52"
+      ],
+      "data": {},
+      "heading": "",
+      "landmark": {
+       "name": "",
+       "role": "navigation"
+      },
+      "layer": "document",
+      "name": "Banking",
+      "rect": [
+       10,
+       118,
+       96,
+       28
+      ],
+      "role": "button",
+      "tag": "button",
+      "xpath": "/html/body/div[1]/main[1]/div[1]/div[1]/div[1]/div[4]/div[1]/nav[1]/div[2]/div[1]/div[1]/button[1]"
+     },
+     "state": "home.books-toggle"
+    },
+    {
+     "evidence": {
+      "description": "",
+      "name": "Banking",
+      "role": "button",
+      "states": {},
+      "template": "button \"Banking\""
+     },
+     "occurrence": {
+      "ancestors": [
+       [
+        "_track_1o8q5_4"
+       ],
+       [
+        "_wrapper_1o8q5_5"
+       ],
+       [
+        "_navContainer_184ve_12"
+       ],
+       [
+        "_sidebar_11y1x_4",
+        "_narrowSidebar_184ve_7"
+       ],
+       [
+        "_booksLayout_1pthq_31"
+       ],
+       [
+        "_layout_1pthq_16"
+       ],
+       [
+        "_wrapper_1pthq_1"
+       ],
+       []
+      ],
+      "classes": [
+       "_chip_1o8q5_31",
+       "_chipInactive_1o8q5_52"
+      ],
+      "data": {},
+      "heading": "",
+      "landmark": {
+       "name": "",
+       "role": "navigation"
+      },
+      "layer": "document",
+      "name": "Banking",
+      "rect": [
+       10,
+       118,
+       96,
+       28
+      ],
+      "role": "button",
+      "tag": "button",
+      "xpath": "/html/body/div[1]/main[1]/div[1]/div[1]/div[1]/div[4]/div[1]/nav[1]/div[2]/div[1]/div[1]/button[1]"
+     },
+     "state": "books.setup-transition"
+    }
+   ],
+   "evidenceHash": "0fd2d0e74745b84c37211f713749447d0517882b7da2352256201002fcc6afd3",
+   "facts": {
+    "announced": "button \"Banking\"",
+    "axeSummary": "",
+    "criterion": "4.1.2",
+    "criterionName": "Name, Role, Value",
+    "element": "button \"Banking\"",
+    "rule": "announced-as",
+    "screen": "Banking/Books toggle: Books"
+   },
+   "family": "role-state",
+   "guidance": "Low for optional ARIA or an invalid autocomplete token; high when aria-hidden hides the whole page.",
+   "issueId": null,
+   "key": "role-state:announced-as:c188e176f714",
+   "measured": false,
+   "primary": "home.books-toggle",
+   "proposals": [],
+   "rule": "announced-as",
+   "screens": 23,
+   "severityDefault": "medium",
+   "source": "scanner",
+   "states": [
+    "home.books-toggle",
+    "books.setup-transition"
+   ],
+   "summary": "announced-as: announced as button \"Banking\".",
+   "title": "Wrong role or state: button \"Banking\""
+  }
+ ],
+ "primaries": [
+  "home.bookmarks-popover",
+  "home.books-toggle"
+ ],
+ "reach": {
+  "baseUrl": "https://demo.mercury.com",
+  "data": "data",
+  "map": "build/map.json",
+  "run": "2026-10-03-1525",
+  "workspace": "a11y"
+ },
+ "run": "2026-10-03-1525"
+}

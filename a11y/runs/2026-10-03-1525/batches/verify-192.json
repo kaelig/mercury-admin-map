@@ -1,0 +1,112 @@
+{
+ "area": "home",
+ "batch": "verify-192",
+ "findings": [
+  {
+   "attachments": [],
+   "attempt": 1,
+   "basis": "violation",
+   "criteria": [
+    "1.3.1"
+   ],
+   "evidence": [
+    {
+     "evidence": {
+      "failureSummary": "Fix any of the following:\n  Element has children which are not allowed: a",
+      "messageKey": "unallowed",
+      "values": "a"
+     },
+     "occurrence": {
+      "ancestors": [
+       [
+        "_menuWrapper_nhi82_128"
+       ],
+       [
+        "_wrapper_nhi82_5"
+       ],
+       [],
+       [
+        "_sidebar_11y1x_4",
+        "_narrowSidebar_184ve_7"
+       ],
+       [
+        "_layout_809q8_18",
+        "_homeLayout_ct6b5_100"
+       ],
+       [
+        "_wrapper_809q8_3"
+       ],
+       [],
+       [
+        "_main_1gb3b_1"
+       ]
+      ],
+      "classes": [
+       "_menu_nhi82_112",
+       "_orgMenu_nhi82_50"
+      ],
+      "data": {
+       "data-dialog": "",
+       "data-enter": "true",
+       "data-open": "true"
+      },
+      "heading": "",
+      "landmark": {
+       "name": "",
+       "role": "navigation"
+      },
+      "layer": "top",
+      "name": "Mercury Demo",
+      "rect": [
+       9,
+       100,
+       380,
+       696
+      ],
+      "role": "menu",
+      "tag": "div",
+      "xpath": "/html/body/div[1]/main[1]/div[1]/div[1]/div[4]/nav[1]/div[1]/div[1]/div[1]/div[1]"
+     },
+     "state": "home.org-switcher-menu"
+    }
+   ],
+   "evidenceHash": "a5a3a6cfeefc639f74c1875be14ca9a233d1b516a86e4be1c9cd6f13a471e366",
+   "facts": {
+    "announced": "menu \"Mercury Demo\"",
+    "axeSummary": "Element has children which are not allowed: a",
+    "criterion": "1.3.1",
+    "criterionName": "Info and Relationships",
+    "element": "menu \"Mercury Demo\"",
+    "rule": "aria-required-children",
+    "screen": "Organization menu"
+   },
+   "family": "role-state",
+   "guidance": "Low for optional ARIA or an invalid autocomplete token; high when aria-hidden hides the whole page.",
+   "issueId": null,
+   "key": "role-state:aria-required-children:fe0652843f97",
+   "measured": false,
+   "primary": "home.org-switcher-menu",
+   "proposals": [],
+   "rule": "aria-required-children",
+   "screens": 1,
+   "severityDefault": "medium",
+   "source": "scanner",
+   "states": [
+    "home.org-switcher-menu"
+   ],
+   "summary": "aria-required-children: announced as menu \"Mercury Demo\". Element has children which are not allowed: a",
+   "title": "Wrong role or state: menu \"Mercury Demo\""
+  }
+ ],
+ "primaries": [
+  "home.org-switcher-menu"
+ ],
+ "reach": {
+  "baseUrl": "https://demo.mercury.com",
+  "data": "data",
+  "map": "build/map.json",
+  "run": "2026-10-03-1525",
+  "workspace": "a11y"
+ },
+ "run": "2026-10-03-1525"
+}

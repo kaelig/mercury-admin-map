@@ -1,0 +1,122 @@
+{
+ "area": "accounts",
+ "batch": "verify-413",
+ "findings": [
+  {
+   "attachments": [],
+   "attempt": 1,
+   "basis": "candidate",
+   "criteria": [
+    "1.3.1"
+   ],
+   "evidence": [
+    {
+     "evidence": {
+      "description": "",
+      "name": "Add account nickname",
+      "role": "textbox",
+      "states": {
+       "readonly": true
+      },
+      "template": "textbox \"Add account nickname\" [readonly=true]"
+     },
+     "occurrence": {
+      "ancestors": [
+       [
+        "_autoresizeWrapper_conaq_15",
+        "_textFieldHeading_conaq_64"
+       ],
+       [
+        "_tooltipAnchor_18bac_4",
+        "_editableTextTooltipAnchor_conaq_126"
+       ],
+       [
+        "_multiline_conaq_5"
+       ],
+       [
+        "_editableTextContainer_irpp8_24"
+       ],
+       [
+        "_titleWrapper_irpp8_8"
+       ],
+       [
+        "_headerWrapper_irpp8_1",
+        "_pageHeaderWrapper_809q8_70"
+       ],
+       [
+        "_titleRow_809q8_88"
+       ],
+       [
+        "_pageContent_809q8_151",
+        "_pageContentWidth_809q8_184",
+        "_footerPadding_809q8_115"
+       ]
+      ],
+      "classes": [
+       "_editableTextField_conaq_6",
+       "_textFieldHeading_conaq_64",
+       "_textFieldNotEditing_conaq_101",
+       "_textFieldCanEdit_conaq_104",
+       "_autoresizeTextarea_conaq_36"
+      ],
+      "data": {},
+      "heading": "",
+      "landmark": {
+       "name": "",
+       "role": "main"
+      },
+      "layer": "document",
+      "name": "Add account nickname",
+      "rect": [
+       346,
+       130,
+       188,
+       36
+      ],
+      "role": "textbox",
+      "tag": "textarea",
+      "xpath": "/html/body/div[1]/main[1]/div[1]/div[1]/div[4]/div[1]/div[2]/div[1]/div[1]/div[1]/div[1]/div[1]/div[1]/div[1]/textarea[1]"
+     },
+     "state": "accounts.savings-detail"
+    }
+   ],
+   "evidenceHash": "2d890c5a68c2ba9195d3bf7960d9cb979ddbcb23fa1ce0024c9a893687fbab72",
+   "facts": {
+    "announced": "textbox \"Add account nickname\" [readonly=true]",
+    "axeSummary": "",
+    "criterion": "1.3.1",
+    "criterionName": "Info and Relationships",
+    "element": "textbox \"Add account nickname\"",
+    "rule": "announced-as",
+    "screen": "Savings account detail"
+   },
+   "family": "structure",
+   "guidance": "Medium when a data table's headers do not reach its cells, or when structure is the only way to tell sections or steps apart.",
+   "issueId": null,
+   "key": "structure:announced-as:ac717d049d6c",
+   "measured": false,
+   "primary": "accounts.savings-detail",
+   "proposals": [],
+   "rule": "announced-as",
+   "screens": 1,
+   "severityDefault": "low",
+   "source": "scanner",
+   "states": [
+    "accounts.savings-detail"
+   ],
+   "summary": "announced-as: announced as textbox \"Add account nickname\" [readonly=true].",
+   "title": "Markup misstates structure: textbox \"Add account nickname\""
+  }
+ ],
+ "primaries": [
+  "accounts.savings-detail"
+ ],
+ "reach": {
+  "baseUrl": "https://demo.mercury.com",
+  "data": "data",
+  "map": "build/map.json",
+  "run": "2026-10-03-1525",
+  "workspace": "a11y"
+ },
+ "run": "2026-10-03-1525"
+}

@@ -1,0 +1,117 @@
+{
+ "area": "settings",
+ "batch": "verify-511",
+ "findings": [
+  {
+   "attachments": [],
+   "attempt": 1,
+   "basis": "candidate",
+   "criteria": [
+    "4.1.2"
+   ],
+   "evidence": [
+    {
+     "evidence": {
+      "description": "",
+      "name": "View all suggestions",
+      "role": "button",
+      "states": {},
+      "template": "button \"View all suggestions\""
+     },
+     "occurrence": {
+      "ancestors": [
+       [
+        "_stack_il1fi_18",
+        "_direction-column_il1fi_24",
+        "_gap-space-150_il1fi_1",
+        "_marginTop-space-100_il1fi_1"
+       ],
+       [
+        "_stack_il1fi_18",
+        "_direction-column_il1fi_24",
+        "_align-center_il1fi_35",
+        "_padding-space-300_il1fi_1",
+        "_marginBottom-space-500_il1fi_1",
+        "_panel_ya6ip_1"
+       ],
+       [
+        "_pageContent_809q8_151",
+        "_pageContentWidth_809q8_184",
+        "_footerPadding_809q8_115"
+       ],
+       [
+        "_dashboardContent_809q8_29"
+       ],
+       [
+        "_layout_809q8_18"
+       ],
+       [
+        "_wrapper_809q8_3"
+       ],
+       [],
+       [
+        "_main_1gb3b_1"
+       ]
+      ],
+      "classes": [],
+      "data": {},
+      "heading": "Suggested actions",
+      "landmark": {
+       "name": "",
+       "role": "main"
+      },
+      "layer": "document",
+      "name": "View all suggestions",
+      "rect": [
+       372,
+       460,
+       916,
+       24
+      ],
+      "role": "button",
+      "tag": "button",
+      "xpath": "/html/body/div[1]/main[1]/div[1]/div[1]/div[4]/div[1]/div[2]/div[2]/div[2]/button[1]"
+     },
+     "state": "settings.account-security"
+    }
+   ],
+   "evidenceHash": "0a4f012fa6d90b4f53a8efd91918b215185bdeeb6381ff28636be178d5cb5b84",
+   "facts": {
+    "announced": "button \"View all suggestions\"",
+    "axeSummary": "",
+    "criterion": "4.1.2",
+    "criterionName": "Name, Role, Value",
+    "element": "button \"View all suggestions\"",
+    "rule": "announced-as",
+    "screen": "Account Security"
+   },
+   "family": "role-state",
+   "guidance": "Low for optional ARIA or an invalid autocomplete token; high when aria-hidden hides the whole page.",
+   "issueId": null,
+   "key": "role-state:announced-as:247f90565534",
+   "measured": false,
+   "primary": "settings.account-security",
+   "proposals": [],
+   "rule": "announced-as",
+   "screens": 1,
+   "severityDefault": "medium",
+   "source": "scanner",
+   "states": [
+    "settings.account-security"
+   ],
+   "summary": "announced-as: announced as button \"View all suggestions\".",
+   "title": "Wrong role or state: button \"View all suggestions\""
+  }
+ ],
+ "primaries": [
+  "settings.account-security"
+ ],
+ "reach": {
+  "baseUrl": "https://demo.mercury.com",
+  "data": "data",
+  "map": "build/map.json",
+  "run": "2026-10-03-1525",
+  "workspace": "a11y"
+ },
+ "run": "2026-10-03-1525"
+}

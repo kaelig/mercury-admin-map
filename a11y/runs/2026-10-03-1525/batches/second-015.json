@@ -1,0 +1,482 @@
+{
+ "area": "billpay",
+ "batch": "second-015",
+ "findings": [
+  {
+   "attachments": [],
+   "attempt": 1,
+   "basis": "violation",
+   "criteria": [
+    "4.1.2"
+   ],
+   "evidence": [
+    {
+     "evidence": {
+      "failureSummary": "Fix any of the following:\n  Element does not have inner text that is visible to screen readers\n  aria-label attribute does not exist or is empty\n  aria-labelledby attribute does not exist, references elements that do not exist or references elements that are empty\n  Element has no title attribute\n  Element does not have an implicit (wrapped) <label>\n  Element does not have an explicit <label>\n  Element's default semantics were not overridden with role=\"none\" or role=\"presentation\"",
+      "messageKey": "noAttr"
+     },
+     "occurrence": {
+      "ancestors": [
+       [
+        "_settingsArea_a2zac_31"
+       ],
+       [
+        "_tabbarContainer_qtx5m_1",
+        "_tabbarContainer_a2zac_28"
+       ],
+       [
+        "_tabContent_a2zac_49"
+       ],
+       [
+        "session-replay-unmask"
+       ],
+       [
+        "_pageContent_809q8_151",
+        "_pageContentWidth_809q8_184",
+        "_footerPadding_809q8_115"
+       ],
+       [
+        "_dashboardContent_809q8_29"
+       ],
+       [
+        "_layout_809q8_18"
+       ],
+       [
+        "_wrapper_809q8_3"
+       ]
+      ],
+      "classes": [
+       "_button_r6b2u_20",
+       "_small_r6b2u_72",
+       "_tertiary_r6b2u_153"
+      ],
+      "data": {},
+      "heading": "Due in next 7 days",
+      "landmark": {
+       "name": "",
+       "role": "main"
+      },
+      "layer": "document",
+      "name": "",
+      "rect": [
+       1282,
+       352,
+       32,
+       32
+      ],
+      "role": "button",
+      "tag": "button",
+      "xpath": "/html/body/div[1]/main[1]/div[1]/div[1]/div[4]/div[1]/div[2]/div[2]/div[2]/div[1]/div[2]/button[1]"
+     },
+     "state": "billpay.inbox-after-payment"
+    },
+    {
+     "evidence": {
+      "failureSummary": "Fix any of the following:\n  Element does not have inner text that is visible to screen readers\n  aria-label attribute does not exist or is empty\n  aria-labelledby attribute does not exist, references elements that do not exist or references elements that are empty\n  Element has no title attribute\n  Element does not have an implicit (wrapped) <label>\n  Element does not have an explicit <label>\n  Element's default semantics were not overridden with role=\"none\" or role=\"presentation\"",
+      "messageKey": "noAttr"
+     },
+     "occurrence": {
+      "ancestors": [
+       [
+        "_settingsArea_a2zac_31"
+       ],
+       [
+        "_tabbarContainer_qtx5m_1",
+        "_tabbarContainer_a2zac_28"
+       ],
+       [
+        "_tabContent_a2zac_49"
+       ],
+       [
+        "_pageContent_809q8_151",
+        "_pageContentWidth_809q8_184",
+        "_footerPadding_809q8_115"
+       ],
+       [
+        "_dashboardContent_809q8_29"
+       ],
+       [
+        "_layout_809q8_18"
+       ],
+       [
+        "_wrapper_809q8_3"
+       ],
+       []
+      ],
+      "classes": [
+       "_button_r6b2u_20",
+       "_small_r6b2u_72",
+       "_tertiary_r6b2u_153"
+      ],
+      "data": {},
+      "heading": "Payments",
+      "landmark": {
+       "name": "",
+       "role": "main"
+      },
+      "layer": "document",
+      "name": "",
+      "rect": [
+       1282,
+       184,
+       32,
+       32
+      ],
+      "role": "button",
+      "tag": "button",
+      "xpath": "/html/body/div[1]/main[1]/div[1]/div[1]/div[4]/div[1]/div[2]/div[3]/div[1]/div[2]/button[1]"
+     },
+     "state": "payments.scheduled-edit"
+    }
+   ],
+   "evidenceHash": "5e1e9ba1df15977f2b4eb151114ce0481bb1b4cd09c0d609ca88c957d8cf3e4e",
+   "facts": {
+    "announced": "button \"\"",
+    "axeSummary": "Element does not have inner text that is visible to screen readers; aria-label attribute does not exist or is empty; aria-labelledby attribute does not exist,…",
+    "criterion": "4.1.2",
+    "criterionName": "Name, Role, Value",
+    "element": "button in \"Due in next <n> days\"",
+    "rule": "button-name",
+    "screen": "Inbox after paying"
+   },
+   "family": "name",
+   "guidance": "High for an unnamed form control or the sole primary action.",
+   "issueId": null,
+   "key": "name:button-name:fe45f7d639a6",
+   "measured": false,
+   "primary": "billpay.inbox-after-payment",
+   "proposals": [],
+   "rule": "button-name",
+   "screens": 19,
+   "severityDefault": "medium",
+   "source": "scanner",
+   "states": [
+    "billpay.inbox-after-payment",
+    "payments.scheduled-edit"
+   ],
+   "summary": "button-name: announced as button \"\". Element does not have inner text that is visible to screen readers; aria-label attribute does not exist or is empty; aria-labelledby attribute does not exist,…",
+   "title": "Missing or unclear name: button in \"Due in next <n> days\""
+  },
+  {
+   "attachments": [],
+   "attempt": 1,
+   "basis": "violation",
+   "criteria": [
+    "4.1.2"
+   ],
+   "evidence": [
+    {
+     "evidence": {
+      "failureSummary": "Fix any of the following:\n  Element does not have an implicit (wrapped) <label>\n  Element does not have an explicit <label>\n  aria-label attribute does not exist or is empty\n  aria-labelledby attribute does not exist, references elements that do not exist or references elements that are empty\n  Element has no title attribute\n  Element has no placeholder attribute\n  Element's default semantics were not overridden with role=\"none\" or role=\"presentation\"",
+      "messageKey": "noAttr"
+     },
+     "occurrence": {
+      "ancestors": [
+       [
+        "_dropzone_ex01s_1"
+       ],
+       [
+        "_tabContent_a2zac_49"
+       ],
+       [
+        "session-replay-unmask"
+       ],
+       [
+        "_pageContent_809q8_151",
+        "_pageContentWidth_809q8_184",
+        "_footerPadding_809q8_115"
+       ],
+       [
+        "_dashboardContent_809q8_29"
+       ],
+       [
+        "_layout_809q8_18"
+       ],
+       [
+        "_wrapper_809q8_3"
+       ],
+       []
+      ],
+      "classes": [],
+      "data": {},
+      "heading": "Due in next 7 days",
+      "landmark": {
+       "name": "",
+       "role": "main"
+      },
+      "layer": "document",
+      "name": "Choose Files",
+      "rect": [
+       346,
+       409,
+       968,
+       450
+      ],
+      "role": "button",
+      "tag": "input",
+      "xpath": "/html/body/div[1]/main[1]/div[1]/div[1]/div[4]/div[1]/div[2]/div[2]/div[2]/div[2]/input[1]"
+     },
+     "state": "billpay.inbox-after-payment"
+    },
+    {
+     "evidence": {
+      "failureSummary": "Fix any of the following:\n  Element does not have an implicit (wrapped) <label>\n  Element does not have an explicit <label>\n  aria-label attribute does not exist or is empty\n  aria-labelledby attribute does not exist, references elements that do not exist or references elements that are empty\n  Element has no title attribute\n  Element has no placeholder attribute\n  Element's default semantics were not overridden with role=\"none\" or role=\"presentation\"",
+      "messageKey": "noAttr"
+     },
+     "occurrence": {
+      "ancestors": [
+       [
+        "_dropzoneCompact_3soht_93"
+       ],
+       [
+        "_outerWrapper_3soht_14",
+        "_fileUpload_1et5t_1"
+       ],
+       [],
+       [],
+       [
+        "_contentWrapper_kogp0_1"
+       ],
+       [
+        "_wrapper_1ojdq_8"
+       ],
+       [],
+       [
+        "_leftInnerContainer_12jyu_3"
+       ]
+      ],
+      "classes": [],
+      "data": {},
+      "heading": "Invoice totals",
+      "landmark": {
+       "name": "",
+       "role": "main"
+      },
+      "layer": "document",
+      "name": "Choose Files",
+      "rect": [
+       120,
+       730,
+       132,
+       20
+      ],
+      "role": "button",
+      "tag": "input",
+      "xpath": "/html/body/div[1]/main[1]/div[1]/div[2]/div[2]/div[3]/div[1]/div[1]/div[1]/div[1]/div[1]/div[1]/div[2]/div[2]/div[3]/div[2]/div[1]/div[1]/input[1]"
+     },
+     "state": "invoicing.create-setup-error"
+    }
+   ],
+   "evidenceHash": "a676c73887f8ed77d5e7ce7dd8fe39527a772e78576ebe432e779106a4beb8e4",
+   "facts": {
+    "announced": "button \"Choose Files\"",
+    "axeSummary": "Element does not have an implicit (wrapped) <label>; Element does not have an explicit <label>; aria-label attribute does not exist or is empty; aria-labelledb…",
+    "criterion": "4.1.2",
+    "criterionName": "Name, Role, Value",
+    "element": "button \"Choose Files\"",
+    "rule": "label",
+    "screen": "Inbox after paying"
+   },
+   "family": "name",
+   "guidance": "High for an unnamed form control or the sole primary action.",
+   "issueId": null,
+   "key": "name:label:50f8f0d5c53f",
+   "measured": false,
+   "primary": "billpay.inbox-after-payment",
+   "proposals": [],
+   "rule": "label",
+   "screens": 55,
+   "severityDefault": "medium",
+   "source": "scanner",
+   "states": [
+    "billpay.inbox-after-payment",
+    "invoicing.create-setup-error"
+   ],
+   "summary": "label: announced as button \"Choose Files\". Element does not have an implicit (wrapped) <label>; Element does not have an explicit <label>; aria-label attribute does not exist or is empty; aria-labelledb…",
+   "title": "Missing or unclear name: button \"Choose Files\""
+  },
+  {
+   "attachments": [],
+   "attempt": 1,
+   "basis": "violation",
+   "criteria": [
+    "4.1.2"
+   ],
+   "evidence": [
+    {
+     "evidence": {
+      "failureSummary": "Fix all of the following:\n  Focusable content should be disabled or be removed from the DOM\n  Focusable content should have tabindex=\"-1\" or be removed from the DOM"
+     },
+     "occurrence": {
+      "ancestors": [
+       [],
+       [
+        "_draftsTableContainer_1o7vl_1"
+       ],
+       [],
+       [
+        "_dropzone_ex01s_1"
+       ],
+       [
+        "_tabContent_a2zac_49"
+       ],
+       [
+        "session-replay-unmask"
+       ],
+       [
+        "_pageContent_809q8_151",
+        "_pageContentWidth_809q8_184",
+        "_footerPadding_809q8_115"
+       ],
+       [
+        "_dashboardContent_809q8_29"
+       ]
+      ],
+      "classes": [
+       "_transitionWrapper_d3i56_5",
+       "_draftCardWrapper_nfv0v_7"
+      ],
+      "data": {},
+      "heading": "Due in next 7 days",
+      "landmark": {
+       "name": "",
+       "role": "form"
+      },
+      "layer": "document",
+      "name": "",
+      "rect": [
+       1122,
+       449,
+       392,
+       238
+      ],
+      "role": "",
+      "tag": "aside",
+      "xpath": "/html/body/div[1]/main[1]/div[1]/div[1]/div[4]/div[1]/div[2]/div[2]/div[2]/div[2]/div[2]/div[1]/form[1]/aside[1]"
+     },
+     "state": "billpay.inbox-after-payment"
+    },
+    {
+     "evidence": {
+      "failureSummary": "Fix all of the following:\n  Focusable content should be disabled or be removed from the DOM\n  Focusable content should have tabindex=\"-1\" or be removed from the DOM"
+     },
+     "occurrence": {
+      "ancestors": [
+       [],
+       [
+        "_draftsTableContainer_1o7vl_1"
+       ],
+       [],
+       [
+        "_dropzone_ex01s_1"
+       ],
+       [
+        "_tabContent_a2zac_49"
+       ],
+       [
+        "_pageContent_809q8_151",
+        "_pageContentWidth_809q8_184",
+        "_footerPadding_809q8_115"
+       ],
+       [
+        "_dashboardContent_809q8_29"
+       ],
+       [
+        "_layout_809q8_18"
+       ]
+      ],
+      "classes": [
+       "_transitionWrapper_d3i56_5",
+       "_draftCardWrapper_nfv0v_7"
+      ],
+      "data": {},
+      "heading": "Payments",
+      "landmark": {
+       "name": "",
+       "role": "form"
+      },
+      "layer": "document",
+      "name": "",
+      "rect": [
+       1122,
+       281,
+       392,
+       238
+      ],
+      "role": "",
+      "tag": "aside",
+      "xpath": "/html/body/div[1]/main[1]/div[1]/div[1]/div[4]/div[1]/div[2]/div[3]/div[2]/div[2]/div[1]/form[1]/aside[1]"
+     },
+     "state": "payments.index"
+    }
+   ],
+   "evidenceHash": "3ed745346cb6c0782ebd87b27a913d433ac057469ed7f58763870a5e13ca3443",
+   "facts": {
+    "announced": " \"\"",
+    "axeSummary": "Focusable content should be disabled or be removed from the DOM; Focusable content should have tabindex=\"-1\" or be removed from the DOM",
+    "criterion": "4.1.2",
+    "criterionName": "Name, Role, Value",
+    "element": "text in \"Due in next <n> days\"",
+    "rule": "aria-hidden-focus",
+    "screen": "Inbox after paying"
+   },
+   "family": "role-state",
+   "guidance": "Low for optional ARIA or an invalid autocomplete token; high when aria-hidden hides the whole page.",
+   "issueId": null,
+   "key": "role-state:aria-hidden-focus:b494527747c2",
+   "measured": false,
+   "primary": "billpay.inbox-after-payment",
+   "proposals": [],
+   "rule": "aria-hidden-focus",
+   "screens": 7,
+   "severityDefault": "medium",
+   "source": "scanner",
+   "states": [
+    "billpay.inbox-after-payment",
+    "payments.index"
+   ],
+   "summary": "aria-hidden-focus: announced as  \"\". Focusable content should be disabled or be removed from the DOM; Focusable content should have tabindex=\"-1\" or be removed from the DOM",
+   "title": "Focusable but hidden: text in \"Due in next <n> days\""
+  },
+  {
+   "attachments": [],
+   "attempt": 1,
+   "basis": "failure",
+   "criteria": [
+    "4.1.2"
+   ],
+   "evidence": [],
+   "evidenceHash": "00cf8dd955fa33dd10d3c2b6b2bb72d77d2c23114c6a1989ec378f22a36aa9d3",
+   "facts": {},
+   "family": "name",
+   "guidance": "High for an unnamed form control or the sole primary action.",
+   "issueId": "billpay.i-unlabeled-controls",
+   "key": "hand:billpay.i-unlabeled-controls",
+   "measured": false,
+   "primary": "billpay.index",
+   "proposals": [],
+   "rule": "hand-found",
+   "screens": 3,
+   "severityDefault": "medium",
+   "source": "hand-found",
+   "states": [
+    "billpay.index",
+    "billpay.row-hover"
+   ],
+   "summary": "Row delete button <button class=\"_button_r6b2u_20 _small_r6b2u_72 _destructive_r6b2u_186\"> with aria-label null, title '' and only svg[data-icon=trash][aria-hidden=true]; tabs are DIV with role=null (snapshot 'generic \"Inbox 3\"', 'generic \"Sync Error3\"'); bill edit amount input's only name is its placeholder '0.00'.",
+   "title": "Icon buttons and tabs lack accessible names/roles"
+  }
+ ],
+ "primaries": [
+  "billpay.inbox-after-payment",
+  "billpay.index"
+ ],
+ "reach": {
+  "baseUrl": "https://demo.mercury.com",
+  "data": "data",
+  "map": "build/map.json",
+  "run": "2026-10-03-1525",
+  "workspace": "a11y"
+ },
+ "run": "2026-10-03-1525"
+}

@@ -1,0 +1,172 @@
+{
+ "areas": [
+  {
+   "area": "cards",
+   "edges": [],
+   "issues": [],
+   "journeys": [],
+   "nodes": [
+    {
+     "id": "cards.index",
+     "kind": "page",
+     "title": "Cards",
+     "url": "/cards"
+    },
+    {
+     "id": "cards.detail-physical",
+     "kind": "page",
+     "title": "Cards — Physical card detail",
+     "url": "/cards/<id>"
+    },
+    {
+     "id": "cards.edit-limit-modal",
+     "kind": "modal",
+     "title": "Cards — Edit card limits",
+     "url": "/cards/<id>"
+    }
+   ],
+   "title": "Cards"
+  },
+  {
+   "area": "home",
+   "edges": [],
+   "issues": [
+    {
+     "category": "a11y",
+     "detail": "The Transactions widget chips and Tasks Incomplete/Completed chips behave like tabs but are exposed as role=menuitem buttons with no tablist or selected state. The avatar menu button and the four widget kebab buttons have no accessible name.",
+     "evidence": "Dashboard: 5 <button role=\"menuitem\"> chips (Recent … Operating expenses), 0 [role=tablist]. Avatar <button aria-haspopup=\"menu\" class=\"_menuButton_ko7ja_21\"> with no aria-label, img alt=\"\". Kebabs: 4× <button aria-haspopup=\"menu\" class=\"… _menuButton_ok3n2_7\"> with no aria-label or text. Verifier (2026-10-01): confirmed on the live demo.",
+     "id": "home.i-chips-as-menuitems",
+     "nodeIds": [
+      "home.index-transactions",
+      "home.tasks",
+      "home.avatar-menu",
+      "home.accounts-kebab",
+      "home.index"
+     ],
+     "severity": "high",
+     "title": "Filter chips, avatar and widget kebabs lack proper semantics"
+    },
+    {
+     "category": "data-format",
+     "detail": "The same widget family mixes superscript cents, inline cents and abbreviated amounts. Accounts rows show '$200,000.00' with superscript cents, but the hover tooltip for that same row shows '$200,000.00' inline; the Disputes widget shows '$3,444.23' inline; the balance table's 'Pending transfers $71,764.10' is inline while its siblings are superscript; the Invoicing widget puts 'Overdue 4 · $950.00' (superscript) next to 'Paid 12 · $6K' and 'Open 12 items · $12.3K' (abbreviated). Search results and the payment review hero ('$1,042.95', 34px Arcadia Display) also drop the superscript used by the Home hero.",
+     "evidence": "Accounts row: span._superscript_1of3b_35 (15px parent, 10.95px sup, top -2.9px). Hero: 28px Arcadia Display, sup 20.44px. Pending transfers: 13px, fraction span has no _superscript class. Disputes '$3,444.23 at 3 merchants': plain 12px text node. Search '$1,952.15': 15px, fraction span with empty class. Payment review: span._titleHero_qaod7_12 34px/380 plain text '$1,042.95'.",
+     "id": "home.i-cents-format",
+     "nodeIds": [
+      "home.index",
+      "home.balance-table",
+      "home.index-disputes",
+      "home.account-row-tooltip",
+      "home.search-results",
+      "home.task-payment-review"
+     ],
+     "severity": "medium",
+     "title": "Cents shown three different ways on Home"
+    }
+   ],
+   "journeys": [],
+   "nodes": [
+    {
+     "id": "home.index",
+     "kind": "page",
+     "title": "Home dashboard",
+     "url": "/dashboard"
+    },
+    {
+     "id": "home.index-transactions",
+     "kind": "page",
+     "title": "Home — Transactions widget",
+     "url": "/dashboard"
+    },
+    {
+     "id": "home.tasks",
+     "kind": "page",
+     "title": "Home — Tasks",
+     "url": "/tasks"
+    }
+   ],
+   "title": "Home"
+  },
+  {
+   "area": "settings",
+   "edges": [],
+   "issues": [
+    {
+     "category": "a11y",
+     "detail": "The ••• buttons on API Tokens expose no text or aria-label, so a screen reader announces three identical unnamed buttons with no token to tell them apart.",
+     "evidence": "Accessibility snapshot: each token row ends with 'button [expanded=false]' containing 'button' with no name. eval: 11 buttons in the page with empty innerText and no aria-label. Verifier (2026-10-01): confirmed on the live demo.",
+     "id": "settings.i-unnamed-row-buttons",
+     "nodeIds": [
+      "settings.tokens",
+      "settings.token-menu",
+      "settings.webhooks"
+     ],
+     "severity": "high",
+     "title": "API token row menus have no accessible name"
+    },
+    {
+     "category": "copy",
+     "detail": "Settings success toasts use the same component but two sentence styles: full sentences ending in a period, and terse fragments with no period. One toast adds 'successfully'; another uses a colon label.",
+     "evidence": "Exact toast strings: \"Your company name has been updated.\" and \"Your Mercury account is now connected to NetSuite.\" (period) vs \"Job title updated\", \"New role created: AP Clerk\" and \"Security check-in triggered successfully\" (no period). Personal settings add \"Your preferred name has been updated.\" (period) vs \"Opted in to SMS notifications\" and \"Invite sent\" (no period).",
+     "id": "settings.i-toast-punctuation",
+     "nodeIds": [
+      "settings.company-name-updated",
+      "settings.netsuite-connected",
+      "settings.member-saved",
+      "settings.role-created",
+      "settings.run-check-in",
+      "settings.preferred-name-updated",
+      "settings.sms-opted-in",
+      "settings.referral-sent"
+     ],
+     "severity": "low",
+     "title": "Success toasts disagree on punctuation and phrasing"
+    },
+    {
+     "category": "a11y",
+     "detail": "Published by an earlier run.",
+     "evidence": "axe button-name: Element does not have inner text that is visible to screen readers",
+     "id": "settings.i-a11y-name-button-in-api-tokens",
+     "nodeIds": [
+      "settings.tokens"
+     ],
+     "severity": "medium",
+     "title": "Missing or unclear name: button in \"API Tokens\""
+    }
+   ],
+   "journeys": [],
+   "nodes": [
+    {
+     "id": "settings.index",
+     "kind": "page",
+     "title": "Settings",
+     "url": "/settings"
+    },
+    {
+     "id": "settings.tokens",
+     "kind": "page",
+     "title": "Settings — API Tokens",
+     "url": "/settings/tokens"
+    },
+    {
+     "id": "settings.token-menu",
+     "kind": "menu",
+     "title": "Settings — API token row menu",
+     "url": "/settings/tokens"
+    },
+    {
+     "id": "settings.webhooks",
+     "kind": "page",
+     "title": "Settings — Webhooks",
+     "url": "/settings/webhooks"
+    },
+    {
+     "id": "settings.unreachable-drawer",
+     "kind": "drawer",
+     "title": "Settings — Drawer nobody reaches",
+     "url": "/settings"
+    }
+   ],
+   "title": "Settings"
+  }
+ ]
+}

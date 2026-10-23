@@ -1,0 +1,29 @@
+{
+ "batch": "record-115",
+ "reach": {
+  "baseUrl": "https://demo.mercury.com",
+  "data": "data",
+  "map": "build/map.json",
+  "run": "2026-10-02-1349",
+  "workspace": "a11y"
+ },
+ "run": "2026-10-02-1349",
+ "states": [
+  {
+   "area": "payments",
+   "draft": "not drafted: its parent had no accepted recipe when the drafter ran; a previous recorder failed: structure-missing: a drawer needs an open layer; the replay found none. The edit-recipient screen opens (heading and form visible) but it is a full-page overlay with no dialog role.",
+   "image": "screens/payments/11-send-edit-recipient-drawer.png",
+   "kind": "drawer",
+   "labels": [
+    "Click a recently paid recipient",
+    "Click recipient card ... menu",
+    "Click Edit recipient details"
+   ],
+   "mutates": false,
+   "note": "Full-screen overlay to edit recipient profile (person/business, name, email, nickname) and address; covers the demo banner.",
+   "parent": "payments.send-recipient-more-menu",
+   "state": "payments.send-edit-recipient",
+   "title": "Send: Edit recipient details"
+  }
+ ]
+}

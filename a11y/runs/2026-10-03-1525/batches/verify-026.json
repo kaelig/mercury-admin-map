@@ -1,0 +1,421 @@
+{
+ "area": "accounts",
+ "batch": "verify-026",
+ "findings": [
+  {
+   "attachments": [],
+   "attempt": 1,
+   "basis": "violation",
+   "criteria": [
+    "4.1.2"
+   ],
+   "evidence": [
+    {
+     "evidence": {
+      "aria-errormessage": [
+       "nickname-mercury-utils-id-25-errormessage"
+      ],
+      "failureSummary": "Fix all of the following:\n  aria-errormessage value `nickname-mercury-utils-id-25-errormessage` must use a technique to announce the message (e.g., aria-live, aria-describedby, role=alert, etc.)"
+     },
+     "occurrence": {
+      "ancestors": [
+       [
+        "_inputBox_q7hf7_93",
+        "_error_q7hf7_41"
+       ],
+       [
+        "_inputBoxWrapper_q7hf7_93"
+       ],
+       [
+        "_textInputWrapper_q7hf7_24"
+       ],
+       [
+        "_provideDSTextInput_q7hf7_6",
+        "_addWrapperMargin_q7hf7_19"
+       ],
+       [
+        "_nicknameField_j8648_12"
+       ],
+       [
+        "_nameAndNumberRow_j8648_7"
+       ],
+       [],
+       [
+        "_body_d2ugs_7",
+        "_formFields_j8648_1"
+       ]
+      ],
+      "classes": [
+       "_input_q7hf7_93"
+      ],
+      "data": {},
+      "heading": "Order a Checkbook",
+      "landmark": {
+       "name": "",
+       "role": "main"
+      },
+      "layer": "document",
+      "name": "Checkbook nickname",
+      "rect": [
+       112,
+       312,
+       242,
+       24
+      ],
+      "role": "textbox",
+      "tag": "input",
+      "xpath": "/html/body/div[1]/main[1]/div[1]/div[2]/div[1]/section[1]/section[1]/div[2]/div[1]/div[1]/div[1]/div[1]/div[1]/div[1]/input[1]"
+     },
+     "state": "accounts.order-checkbook-error"
+    },
+    {
+     "evidence": {
+      "aria-errormessage": [
+       "nickname-mercury-utils-id-32-errormessage"
+      ],
+      "failureSummary": "Fix all of the following:\n  aria-errormessage value `nickname-mercury-utils-id-32-errormessage` must use a technique to announce the message (e.g., aria-live, aria-describedby, role=alert, etc.)"
+     },
+     "occurrence": {
+      "ancestors": [
+       [
+        "_inputBox_q7hf7_93",
+        "_error_q7hf7_41"
+       ],
+       [
+        "_inputBoxWrapper_q7hf7_93"
+       ],
+       [
+        "_textInputWrapper_q7hf7_24"
+       ],
+       [
+        "_provideDSTextInput_q7hf7_6",
+        "_addWrapperMargin_q7hf7_19"
+       ],
+       [
+        "_nicknameField_j8648_12"
+       ],
+       [
+        "_nameAndNumberRow_j8648_7"
+       ],
+       [],
+       [
+        "_body_d2ugs_7",
+        "_formFields_j8648_1"
+       ]
+      ],
+      "classes": [
+       "_input_q7hf7_93"
+      ],
+      "data": {},
+      "heading": "Order a Checkbook",
+      "landmark": {
+       "name": "",
+       "role": "main"
+      },
+      "layer": "document",
+      "name": "Checkbook nickname",
+      "rect": [
+       112,
+       336,
+       242,
+       24
+      ],
+      "role": "textbox",
+      "tag": "input",
+      "xpath": "/html/body/div[1]/main[1]/div[1]/div[2]/div[1]/section[1]/section[1]/div[2]/div[1]/div[1]/div[1]/div[1]/div[1]/div[1]/input[1]"
+     },
+     "state": "payments.checkbook-order-validation"
+    }
+   ],
+   "evidenceHash": "3175535af485d0d844d0b1296aa874de2b8b1991e9d7cce7e1dd3c4f36996ca9",
+   "facts": {
+    "announced": "textbox \"Checkbook nickname\" [invalid=true, errormessage=Please complete this f…",
+    "axeSummary": "aria-errormessage value `nickname-mercury-utils-id-25-errormessage` must use a technique to announce the message (e.g., aria-live, aria-describedby, role=alert…",
+    "criterion": "4.1.2",
+    "criterionName": "Name, Role, Value",
+    "element": "textbox \"Checkbook nickname\"",
+    "rule": "aria-valid-attr-value",
+    "screen": "Order checkbook — missing nickname"
+   },
+   "family": "role-state",
+   "guidance": "Low for optional ARIA or an invalid autocomplete token; high when aria-hidden hides the whole page.",
+   "issueId": null,
+   "key": "role-state:aria-valid-attr-value:fd996939801a",
+   "measured": false,
+   "primary": "accounts.order-checkbook-error",
+   "proposals": [],
+   "rule": "aria-valid-attr-value",
+   "screens": 2,
+   "severityDefault": "medium",
+   "source": "scanner",
+   "states": [
+    "accounts.order-checkbook-error",
+    "payments.checkbook-order-validation"
+   ],
+   "summary": "aria-valid-attr-value: announced as textbox \"Checkbook nickname\" [invalid=true, errormessage=Please complete this f…. aria-errormessage value `nickname-mercury-utils-id-25-errormessage` must use a technique to announce the message (e.g., aria-live, aria-describedby, role=alert…",
+   "title": "Wrong role or state: textbox \"Checkbook nickname\""
+  },
+  {
+   "attachments": [],
+   "attempt": 1,
+   "basis": "failure",
+   "criteria": [
+    "4.1.3"
+   ],
+   "evidence": [
+    {
+     "evidence": {
+      "focus": {
+       "ancestors": [
+        [
+         "_buttonGroup_16t7w_1",
+         "_horizontal_16t7w_11"
+        ],
+        [
+         "_footer_d2ugs_15"
+        ],
+        [
+         "_leftSide_12wmm_8"
+        ],
+        [
+         "_container_12wmm_1"
+        ],
+        [
+         "_container_d2ugs_1"
+        ],
+        [],
+        [
+         "_main_1gb3b_1"
+        ],
+        [
+         "mercury-root"
+        ]
+       ],
+       "classes": [
+        "_button_r6b2u_20",
+        "_large_r6b2u_88",
+        "_primary_r6b2u_104"
+       ],
+       "data": {},
+       "heading": "Order a Checkbook",
+       "landmark": {
+        "name": "",
+        "role": "contentinfo"
+       },
+       "layer": "document",
+       "name": "Next",
+       "rect": [
+        416,
+        836,
+        109,
+        40
+       ],
+       "role": "button",
+       "tag": "button",
+       "xpath": "/html/body/div[1]/main[1]/div[1]/div[2]/div[1]/section[1]/footer[1]/div[1]/button[2]"
+      },
+      "focused": false,
+      "message": "Please complete this field",
+      "region": null
+     },
+     "occurrence": {
+      "ancestors": [
+       [
+        "_textInputWrapper_q7hf7_24"
+       ],
+       [
+        "_provideDSTextInput_q7hf7_6",
+        "_addWrapperMargin_q7hf7_19"
+       ],
+       [
+        "_nicknameField_j8648_12"
+       ],
+       [
+        "_nameAndNumberRow_j8648_7"
+       ],
+       [],
+       [
+        "_body_d2ugs_7",
+        "_formFields_j8648_1"
+       ],
+       [
+        "_leftSide_12wmm_8"
+       ],
+       [
+        "_container_12wmm_1"
+       ]
+      ],
+      "classes": [
+       "_defaultErrorContainer_1tnh5_1",
+       "_errorMessage_q7hf7_303"
+      ],
+      "data": {
+       "data-session-replay-unmask": "true"
+      },
+      "heading": "Order a Checkbook",
+      "landmark": {
+       "name": "",
+       "role": "main"
+      },
+      "layer": "document",
+      "name": "",
+      "rect": [
+       99,
+       348,
+       268,
+       20
+      ],
+      "role": "",
+      "tag": "div",
+      "xpath": "/html/body/div[1]/main[1]/div[1]/div[2]/div[1]/section[1]/section[1]/div[2]/div[1]/div[1]/div[1]/div[1]/div[2]"
+     },
+     "state": "accounts.order-checkbook-error"
+    },
+    {
+     "evidence": {
+      "focus": {
+       "ancestors": [
+        [
+         "_buttonGroup_16t7w_1",
+         "_horizontal_16t7w_11"
+        ],
+        [
+         "_footer_d2ugs_15"
+        ],
+        [
+         "_leftSide_12wmm_8"
+        ],
+        [
+         "_container_12wmm_1"
+        ],
+        [
+         "_container_d2ugs_1"
+        ],
+        [],
+        [
+         "_main_1gb3b_1"
+        ],
+        [
+         "mercury-root"
+        ]
+       ],
+       "classes": [
+        "_button_r6b2u_20",
+        "_large_r6b2u_88",
+        "_primary_r6b2u_104"
+       ],
+       "data": {},
+       "heading": "Order a Checkbook",
+       "landmark": {
+        "name": "",
+        "role": "contentinfo"
+       },
+       "layer": "document",
+       "name": "Next",
+       "rect": [
+        416,
+        836,
+        109,
+        40
+       ],
+       "role": "button",
+       "tag": "button",
+       "xpath": "/html/body/div[1]/main[1]/div[1]/div[2]/div[1]/section[1]/footer[1]/div[1]/button[2]"
+      },
+      "focused": false,
+      "message": "Please complete this field",
+      "region": null
+     },
+     "occurrence": {
+      "ancestors": [
+       [
+        "_textInputWrapper_q7hf7_24"
+       ],
+       [
+        "_provideDSTextInput_q7hf7_6",
+        "_addWrapperMargin_q7hf7_19"
+       ],
+       [
+        "_nicknameField_j8648_12"
+       ],
+       [
+        "_nameAndNumberRow_j8648_7"
+       ],
+       [],
+       [
+        "_body_d2ugs_7",
+        "_formFields_j8648_1"
+       ],
+       [
+        "_leftSide_12wmm_8"
+       ],
+       [
+        "_container_12wmm_1"
+       ]
+      ],
+      "classes": [
+       "_defaultErrorContainer_1tnh5_1",
+       "_errorMessage_q7hf7_303"
+      ],
+      "data": {
+       "data-session-replay-unmask": "true"
+      },
+      "heading": "Order a Checkbook",
+      "landmark": {
+       "name": "",
+       "role": "main"
+      },
+      "layer": "document",
+      "name": "",
+      "rect": [
+       99,
+       372,
+       268,
+       20
+      ],
+      "role": "",
+      "tag": "div",
+      "xpath": "/html/body/div[1]/main[1]/div[1]/div[2]/div[1]/section[1]/section[1]/div[2]/div[1]/div[1]/div[1]/div[1]/div[2]"
+     },
+     "state": "payments.checkbook-order-validation"
+    }
+   ],
+   "evidenceHash": "aa372a3a0f67b8e90e6f64b78afb3bc76ccdced0ba7c33b3aa700bb66c1a57d7",
+   "facts": {
+    "criterion": "4.1.3",
+    "criterionName": "Status Messages",
+    "focus": "button \"Next\"",
+    "message": "\"Please complete this field\"",
+    "screen": "Order checkbook — missing nickname"
+   },
+   "family": "status-message",
+   "guidance": "High when it is the only confirmation of a money movement.",
+   "issueId": null,
+   "key": "status-message:status-not-announced:ad635c98d444",
+   "measured": false,
+   "primary": "accounts.order-checkbook-error",
+   "proposals": [],
+   "rule": "status-not-announced",
+   "screens": 2,
+   "severityDefault": "medium",
+   "source": "scanner",
+   "states": [
+    "accounts.order-checkbook-error",
+    "payments.checkbook-order-validation"
+   ],
+   "summary": "\"Please complete this field\" appeared outside any live region, alert or status role that existed before it, and focus stayed on the button \"Next\".",
+   "title": "Status message not announced: \"Please complete this field\""
+  }
+ ],
+ "primaries": [
+  "accounts.order-checkbook-error"
+ ],
+ "reach": {
+  "baseUrl": "https://demo.mercury.com",
+  "data": "data",
+  "map": "build/map.json",
+  "run": "2026-10-03-1525",
+  "workspace": "a11y"
+ },
+ "run": "2026-10-03-1525"
+}

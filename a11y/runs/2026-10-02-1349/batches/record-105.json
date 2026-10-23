@@ -1,0 +1,89 @@
+{
+ "batch": "record-105",
+ "reach": {
+  "baseUrl": "https://demo.mercury.com",
+  "data": "data",
+  "map": "build/map.json",
+  "run": "2026-10-02-1349",
+  "workspace": "a11y"
+ },
+ "run": "2026-10-02-1349",
+ "states": [
+  {
+   "area": "books",
+   "draft": "not drafted: its parent had no accepted recipe when the drafter ran; the conductor rejected the previous recipe: different state: replay is stuck on the 'Finalize setup' spinner, with no '3 non-USD invoices' warning banner, no View invoices button and no Create invoice button; the grid matches; a previous recorder failed: review: below-threshold at 0.2215 on every attempt, including waits for Create invoice and View invoices and 20 s of fixed waits. The replay stays on the 'Finalize setup' spinner and never shows the banner, although the live page shows both within 6 s.",
+   "image": "screens/books/22-invoices.png",
+   "kind": "page",
+   "labels": [
+    "Toggle Books",
+    "Click Try Mercury Books",
+    "Books created",
+    "Dismiss spotlight",
+    "Sidebar: Invoices"
+   ],
+   "mutates": false,
+   "note": "Warning banner \"You have 3 non-USD invoices that won\u2019t sync to Books\u2026\" with View invoices; grid of invoices with Draft, Overdue, Paid - Needs Action, Cancelled, Processing, Partially Paid, Paid and Open badges.",
+   "parent": "books.home",
+   "state": "books.invoices",
+   "title": "Invoices"
+  },
+  {
+   "area": "books",
+   "draft": "not drafted: its parent had no accepted recipe when the drafter ran",
+   "image": "screens/books/23-invoices-customers.png",
+   "kind": "page",
+   "labels": [
+    "Toggle Books",
+    "Click Try Mercury Books",
+    "Books created",
+    "Dismiss spotlight",
+    "Sidebar: Invoices",
+    "Sidebar: Customers"
+   ],
+   "mutates": false,
+   "note": "Customer list (Name, Email) under Invoices, with Add a customer split button.",
+   "parent": "books.invoices",
+   "state": "books.customers",
+   "title": "Customers"
+  },
+  {
+   "area": "books",
+   "draft": "not drafted: its parent had no accepted recipe when the drafter ran",
+   "image": "screens/books/47-invoice-drawer.png",
+   "kind": "drawer",
+   "labels": [
+    "Toggle Books",
+    "Click Try Mercury Books",
+    "Books created",
+    "Dismiss spotlight",
+    "Sidebar: Invoices",
+    "Open INV-OVERDUE-001"
+   ],
+   "mutates": false,
+   "note": "INV-OVERDUE-001: Details / Payments / Journal Entries tabs, Overdue badge, amount $4,200.00, dates Aug 11, 2026 and Sep 10, 2026, line items, outstanding balance, attachment dropzone.",
+   "parent": "books.invoices",
+   "state": "books.invoice-drawer",
+   "title": "Invoice detail"
+  },
+  {
+   "area": "books",
+   "draft": "not drafted: its parent had no accepted recipe when the drafter ran",
+   "image": "screens/books/46-to-review-filtered.png",
+   "kind": "form-state",
+   "labels": [
+    "Toggle Books",
+    "Click Try Mercury Books",
+    "Books created",
+    "Dismiss spotlight",
+    "Sidebar: Transactions",
+    "Click Review",
+    "To review"
+   ],
+   "mutates": false,
+   "note": "Control reads \"To review (7975)\", Filters becomes \"Filters (1)\"; the menu stays open after picking.",
+   "parent": "books.review-menu",
+   "state": "books.to-review",
+   "title": "To review filter applied"
+  }
+ ]
+}

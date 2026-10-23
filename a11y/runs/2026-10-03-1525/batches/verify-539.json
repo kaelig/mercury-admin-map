@@ -1,0 +1,991 @@
+{
+ "area": "transactions",
+ "batch": "verify-539",
+ "findings": [
+  {
+   "attachments": [],
+   "attempt": 1,
+   "basis": "candidate",
+   "criteria": [
+    "4.1.2"
+   ],
+   "evidence": [
+    {
+     "evidence": {
+      "description": "",
+      "name": "",
+      "role": "button",
+      "states": {},
+      "template": "button \"\""
+     },
+     "occurrence": {
+      "ancestors": [
+       [
+        "_bottomBarActions_ak1js_5"
+       ],
+       [
+        "_panelFooter_d3i56_66"
+       ],
+       [
+        "_large_kwlx6_9",
+        "_noHover_3n0se_28",
+        "_shadow_3n0se_25",
+        "_raisedBackground_3n0se_45",
+        "_panel_d3i56_55",
+        "_detailsCardPanel_15kl9_287"
+       ],
+       [
+        "_transitionWrapper_d3i56_5",
+        "_visible_d3i56_19",
+        "_detailsCardWrapper_15kl9_247"
+       ],
+       [
+        "_drawerRoot_15kl9_6"
+       ]
+      ],
+      "classes": [
+       "_button_r6b2u_20",
+       "_small_r6b2u_72",
+       "_tertiary_r6b2u_153",
+       "_tooltipAnchor_18bac_4",
+       "_bottomBarTooltipWrapper_ak1js_14"
+      ],
+      "data": {},
+      "heading": "",
+      "landmark": {
+       "name": "",
+       "role": "complementary"
+      },
+      "layer": "top",
+      "name": "",
+      "rect": [
+       1012,
+       748,
+       32,
+       32
+      ],
+      "role": "button",
+      "tag": "button",
+      "xpath": "/html/body/div[3]/aside[1]/div[1]/section[2]/div[2]/button[1]"
+     },
+     "state": "transactions.detail-ach"
+    },
+    {
+     "evidence": {
+      "description": "",
+      "name": "",
+      "role": "button",
+      "states": {},
+      "template": "button \"\""
+     },
+     "occurrence": {
+      "ancestors": [
+       [
+        "_bottomBarActions_ak1js_5"
+       ],
+       [
+        "_panelFooter_d3i56_66"
+       ],
+       [
+        "_large_kwlx6_9",
+        "_noHover_3n0se_28",
+        "_shadow_3n0se_25",
+        "_raisedBackground_3n0se_45",
+        "_panel_d3i56_55",
+        "_detailsCardPanel_15kl9_287"
+       ],
+       [
+        "_transitionWrapper_d3i56_5",
+        "_visible_d3i56_19",
+        "_detailsCardWrapper_15kl9_247"
+       ],
+       [
+        "_drawerRoot_15kl9_6"
+       ]
+      ],
+      "classes": [
+       "_button_r6b2u_20",
+       "_small_r6b2u_72",
+       "_tertiary_r6b2u_153",
+       "_tooltipAnchor_18bac_4",
+       "_bottomBarTooltipWrapper_ak1js_14"
+      ],
+      "data": {},
+      "heading": "",
+      "landmark": {
+       "name": "",
+       "role": "complementary"
+      },
+      "layer": "top",
+      "name": "",
+      "rect": [
+       1048,
+       748,
+       32,
+       32
+      ],
+      "role": "button",
+      "tag": "button",
+      "xpath": "/html/body/div[3]/aside[1]/div[1]/section[2]/div[2]/button[2]"
+     },
+     "state": "transactions.detail-card"
+    }
+   ],
+   "evidenceHash": "bd7af948dd9497ae4fc4621d405519568ed420ce7926d316b8799f42b63979ef",
+   "facts": {
+    "announced": "button \"\"",
+    "axeSummary": "",
+    "criterion": "4.1.2",
+    "criterionName": "Name, Role, Value",
+    "element": "button in the complementary landmark",
+    "rule": "announced-as",
+    "screen": "ACH payment detail"
+   },
+   "family": "name",
+   "guidance": "High for an unnamed form control or the sole primary action.",
+   "issueId": null,
+   "key": "name:announced-as:0f26024fdd82",
+   "measured": false,
+   "primary": "transactions.detail-ach",
+   "proposals": [],
+   "rule": "announced-as",
+   "screens": 8,
+   "severityDefault": "medium",
+   "source": "scanner",
+   "states": [
+    "transactions.detail-ach",
+    "transactions.detail-card"
+   ],
+   "summary": "announced-as: announced as button \"\".",
+   "title": "Missing or unclear name: button in the complementary landmark"
+  },
+  {
+   "attachments": [],
+   "attempt": 1,
+   "basis": "candidate",
+   "criteria": [
+    "4.1.2"
+   ],
+   "evidence": [
+    {
+     "evidence": {
+      "description": "",
+      "name": "",
+      "role": "button",
+      "states": {},
+      "template": "button \"\""
+     },
+     "occurrence": {
+      "ancestors": [
+       [],
+       [],
+       [
+        "_bottomBarActions_ak1js_5"
+       ],
+       [
+        "_panelFooter_d3i56_66"
+       ],
+       [
+        "_large_kwlx6_9",
+        "_noHover_3n0se_28",
+        "_shadow_3n0se_25",
+        "_raisedBackground_3n0se_45",
+        "_panel_d3i56_55",
+        "_detailsCardPanel_15kl9_287"
+       ],
+       [
+        "_transitionWrapper_d3i56_5",
+        "_visible_d3i56_19",
+        "_detailsCardWrapper_15kl9_247"
+       ],
+       [
+        "_drawerRoot_15kl9_6"
+       ]
+      ],
+      "classes": [
+       "_button_r6b2u_20",
+       "_small_r6b2u_72",
+       "_tertiary_r6b2u_153"
+      ],
+      "data": {},
+      "heading": "",
+      "landmark": {
+       "name": "",
+       "role": "complementary"
+      },
+      "layer": "top",
+      "name": "",
+      "rect": [
+       1156,
+       748,
+       32,
+       32
+      ],
+      "role": "button",
+      "tag": "button",
+      "xpath": "/html/body/div[3]/aside[1]/div[1]/section[2]/div[2]/div[1]/span[1]/button[1]"
+     },
+     "state": "transactions.detail-ach"
+    },
+    {
+     "evidence": {
+      "description": "",
+      "name": "",
+      "role": "button",
+      "states": {},
+      "template": "button \"\""
+     },
+     "occurrence": {
+      "ancestors": [
+       [],
+       [],
+       [
+        "_bottomBarActions_ak1js_5"
+       ],
+       [
+        "_panelFooter_d3i56_66"
+       ],
+       [
+        "_large_kwlx6_9",
+        "_noHover_3n0se_28",
+        "_shadow_3n0se_25",
+        "_raisedBackground_3n0se_45",
+        "_panel_d3i56_55",
+        "_detailsCardPanel_15kl9_287"
+       ],
+       [
+        "_transitionWrapper_d3i56_5",
+        "_visible_d3i56_19",
+        "_detailsCardWrapper_15kl9_247"
+       ],
+       [
+        "_drawerRoot_15kl9_6"
+       ]
+      ],
+      "classes": [
+       "_button_r6b2u_20",
+       "_small_r6b2u_72",
+       "_tertiary_r6b2u_153"
+      ],
+      "data": {},
+      "heading": "",
+      "landmark": {
+       "name": "",
+       "role": "complementary"
+      },
+      "layer": "top",
+      "name": "",
+      "rect": [
+       1084,
+       748,
+       32,
+       32
+      ],
+      "role": "button",
+      "tag": "button",
+      "xpath": "/html/body/div[3]/aside[1]/div[1]/section[2]/div[2]/div[1]/span[1]/button[1]"
+     },
+     "state": "transactions.detail-card"
+    }
+   ],
+   "evidenceHash": "bd7af948dd9497ae4fc4621d405519568ed420ce7926d316b8799f42b63979ef",
+   "facts": {
+    "announced": "button \"\"",
+    "axeSummary": "",
+    "criterion": "4.1.2",
+    "criterionName": "Name, Role, Value",
+    "element": "button in the complementary landmark",
+    "rule": "announced-as",
+    "screen": "ACH payment detail"
+   },
+   "family": "name",
+   "guidance": "High for an unnamed form control or the sole primary action.",
+   "issueId": null,
+   "key": "name:announced-as:5870aea8f48d",
+   "measured": false,
+   "primary": "transactions.detail-ach",
+   "proposals": [],
+   "rule": "announced-as",
+   "screens": 8,
+   "severityDefault": "medium",
+   "source": "scanner",
+   "states": [
+    "transactions.detail-ach",
+    "transactions.detail-card"
+   ],
+   "summary": "announced-as: announced as button \"\".",
+   "title": "Missing or unclear name: button in the complementary landmark"
+  },
+  {
+   "attachments": [],
+   "attempt": 1,
+   "basis": "candidate",
+   "criteria": [
+    "4.1.2"
+   ],
+   "evidence": [
+    {
+     "evidence": {
+      "description": "",
+      "name": "",
+      "role": "button",
+      "states": {
+       "expanded": false,
+       "haspopup": "menu"
+      },
+      "template": "button \"\" [expanded=false, haspopup=menu]"
+     },
+     "occurrence": {
+      "ancestors": [
+       [],
+       [
+        "_bottomBarActions_ak1js_5"
+       ],
+       [
+        "_panelFooter_d3i56_66"
+       ],
+       [
+        "_large_kwlx6_9",
+        "_noHover_3n0se_28",
+        "_shadow_3n0se_25",
+        "_raisedBackground_3n0se_45",
+        "_panel_d3i56_55",
+        "_detailsCardPanel_15kl9_287"
+       ],
+       [
+        "_transitionWrapper_d3i56_5",
+        "_visible_d3i56_19",
+        "_detailsCardWrapper_15kl9_247"
+       ],
+       [
+        "_drawerRoot_15kl9_6"
+       ]
+      ],
+      "classes": [],
+      "data": {},
+      "heading": "",
+      "landmark": {
+       "name": "",
+       "role": "complementary"
+      },
+      "layer": "top",
+      "name": "",
+      "rect": [
+       1156,
+       761,
+       32,
+       19
+      ],
+      "role": "button",
+      "tag": "span",
+      "xpath": "/html/body/div[3]/aside[1]/div[1]/section[2]/div[2]/div[1]/span[1]"
+     },
+     "state": "transactions.detail-ach"
+    },
+    {
+     "evidence": {
+      "description": "",
+      "name": "",
+      "role": "button",
+      "states": {
+       "expanded": false,
+       "haspopup": "menu"
+      },
+      "template": "button \"\" [expanded=false, haspopup=menu]"
+     },
+     "occurrence": {
+      "ancestors": [
+       [],
+       [
+        "_bottomBarActions_ak1js_5"
+       ],
+       [
+        "_panelFooter_d3i56_66"
+       ],
+       [
+        "_large_kwlx6_9",
+        "_noHover_3n0se_28",
+        "_shadow_3n0se_25",
+        "_raisedBackground_3n0se_45",
+        "_panel_d3i56_55",
+        "_detailsCardPanel_15kl9_287"
+       ],
+       [
+        "_transitionWrapper_d3i56_5",
+        "_visible_d3i56_19",
+        "_detailsCardWrapper_15kl9_247"
+       ],
+       [
+        "_drawerRoot_15kl9_6"
+       ]
+      ],
+      "classes": [],
+      "data": {},
+      "heading": "",
+      "landmark": {
+       "name": "",
+       "role": "complementary"
+      },
+      "layer": "top",
+      "name": "",
+      "rect": [
+       1084,
+       761,
+       32,
+       19
+      ],
+      "role": "button",
+      "tag": "span",
+      "xpath": "/html/body/div[3]/aside[1]/div[1]/section[2]/div[2]/div[1]/span[1]"
+     },
+     "state": "transactions.detail-card"
+    }
+   ],
+   "evidenceHash": "8116c8dc7eb2a1eb1a569c918549864548f7500021588a5beb25fe177a8fc764",
+   "facts": {
+    "announced": "button \"\" [expanded=false, haspopup=menu]",
+    "axeSummary": "",
+    "criterion": "4.1.2",
+    "criterionName": "Name, Role, Value",
+    "element": "button in the complementary landmark",
+    "rule": "announced-as",
+    "screen": "ACH payment detail"
+   },
+   "family": "name",
+   "guidance": "High for an unnamed form control or the sole primary action.",
+   "issueId": null,
+   "key": "name:announced-as:941da155a527",
+   "measured": false,
+   "primary": "transactions.detail-ach",
+   "proposals": [],
+   "rule": "announced-as",
+   "screens": 8,
+   "severityDefault": "medium",
+   "source": "scanner",
+   "states": [
+    "transactions.detail-ach",
+    "transactions.detail-card"
+   ],
+   "summary": "announced-as: announced as button \"\" [expanded=false, haspopup=menu].",
+   "title": "Missing or unclear name: button in the complementary landmark"
+  },
+  {
+   "attachments": [],
+   "attempt": 1,
+   "basis": "candidate",
+   "criteria": [
+    "4.1.2"
+   ],
+   "evidence": [
+    {
+     "evidence": {
+      "description": "",
+      "name": "",
+      "role": "textbox",
+      "states": {},
+      "template": "textbox \"\""
+     },
+     "occurrence": {
+      "ancestors": [
+       [
+        "_textareaWrapper_54wwi_16",
+        "_inputBox_1r9zc_39"
+       ],
+       [
+        "_textareaProgressWrapper_54wwi_28"
+       ],
+       [
+        "_inputWrapper_1r9zc_6"
+       ],
+       [
+        "_commentInputWrapper_ak1js_1"
+       ],
+       [
+        "_panelFooter_d3i56_66"
+       ],
+       [
+        "_large_kwlx6_9",
+        "_noHover_3n0se_28",
+        "_shadow_3n0se_25",
+        "_raisedBackground_3n0se_45",
+        "_panel_d3i56_55",
+        "_detailsCardPanel_15kl9_287"
+       ],
+       [
+        "_transitionWrapper_d3i56_5",
+        "_visible_d3i56_19",
+        "_detailsCardWrapper_15kl9_247"
+       ],
+       [
+        "_drawerRoot_15kl9_6"
+       ]
+      ],
+      "classes": [
+       "tiptap",
+       "ProseMirror",
+       "_textarea_54wwi_7",
+       "_input_1r9zc_6"
+      ],
+      "data": {},
+      "heading": "",
+      "landmark": {
+       "name": "",
+       "role": "complementary"
+      },
+      "layer": "top",
+      "name": "",
+      "rect": [
+       1013,
+       667,
+       374,
+       40
+      ],
+      "role": "textbox",
+      "tag": "div",
+      "xpath": "/html/body/div[3]/aside[1]/div[1]/section[2]/div[1]/div[1]/div[1]/div[1]/div[1]"
+     },
+     "state": "transactions.detail-ach"
+    },
+    {
+     "evidence": {
+      "description": "",
+      "name": "",
+      "role": "textbox",
+      "states": {},
+      "template": "textbox \"\""
+     },
+     "occurrence": {
+      "ancestors": [
+       [
+        "_textareaWrapper_54wwi_16",
+        "_inputBox_1r9zc_39"
+       ],
+       [
+        "_textareaProgressWrapper_54wwi_28"
+       ],
+       [
+        "_inputWrapper_1r9zc_6"
+       ],
+       [
+        "_commentInputWrapper_ak1js_1"
+       ],
+       [
+        "_panelFooter_d3i56_66"
+       ],
+       [
+        "_large_kwlx6_9",
+        "_noHover_3n0se_28",
+        "_shadow_3n0se_25",
+        "_raisedBackground_3n0se_45",
+        "_panel_d3i56_55",
+        "_detailsCardPanel_15kl9_287"
+       ],
+       [
+        "_transitionWrapper_d3i56_5",
+        "_visible_d3i56_19",
+        "_detailsCardWrapper_15kl9_247"
+       ],
+       [
+        "_drawerRoot_15kl9_6"
+       ]
+      ],
+      "classes": [
+       "tiptap",
+       "ProseMirror",
+       "_textarea_54wwi_7",
+       "_input_1r9zc_6"
+      ],
+      "data": {},
+      "heading": "",
+      "landmark": {
+       "name": "",
+       "role": "complementary"
+      },
+      "layer": "top",
+      "name": "",
+      "rect": [
+       1013,
+       667,
+       374,
+       40
+      ],
+      "role": "textbox",
+      "tag": "div",
+      "xpath": "/html/body/div[3]/aside[1]/div[1]/section[2]/div[1]/div[1]/div[1]/div[1]/div[1]"
+     },
+     "state": "transactions.detail-card"
+    }
+   ],
+   "evidenceHash": "a5e9ac1f91c598a7cd55bca9311f935b986592848150cbf298a1425d1e674815",
+   "facts": {
+    "announced": "textbox \"\"",
+    "axeSummary": "",
+    "criterion": "4.1.2",
+    "criterionName": "Name, Role, Value",
+    "element": "textbox in the complementary landmark",
+    "rule": "announced-as",
+    "screen": "ACH payment detail"
+   },
+   "family": "name",
+   "guidance": "High for an unnamed form control or the sole primary action.",
+   "issueId": null,
+   "key": "name:announced-as:ad8cef381741",
+   "measured": false,
+   "primary": "transactions.detail-ach",
+   "proposals": [],
+   "rule": "announced-as",
+   "screens": 8,
+   "severityDefault": "medium",
+   "source": "scanner",
+   "states": [
+    "transactions.detail-ach",
+    "transactions.detail-card"
+   ],
+   "summary": "announced-as: announced as textbox \"\".",
+   "title": "Missing or unclear name: textbox in the complementary landmark"
+  },
+  {
+   "attachments": [],
+   "attempt": 1,
+   "basis": "candidate",
+   "criteria": [
+    "4.1.2"
+   ],
+   "evidence": [
+    {
+     "evidence": {
+      "description": "",
+      "name": "",
+      "role": "button",
+      "states": {
+       "expanded": false,
+       "haspopup": "menu"
+      },
+      "template": "button \"\" [expanded=false, haspopup=menu]"
+     },
+     "occurrence": {
+      "ancestors": [
+       [
+        "_splitButton_mzjr7_3"
+       ],
+       [
+        "_splitButtonContainer_mzjr7_3"
+       ],
+       [
+        "_attachmentWrapper_1jvrn_34"
+       ],
+       [
+        "_attachments_1jvrn_22"
+       ],
+       [
+        "_panelSection_d3i56_148"
+       ],
+       [
+        "_panelBody_d3i56_64"
+       ],
+       [
+        "_large_kwlx6_9",
+        "_noHover_3n0se_28",
+        "_shadow_3n0se_25",
+        "_raisedBackground_3n0se_45",
+        "_panel_d3i56_55",
+        "_detailsCardPanel_15kl9_287"
+       ],
+       [
+        "_transitionWrapper_d3i56_5",
+        "_visible_d3i56_19",
+        "_detailsCardWrapper_15kl9_247"
+       ]
+      ],
+      "classes": [
+       "_dropdownButton_mzjr7_71"
+      ],
+      "data": {},
+      "heading": "",
+      "landmark": {
+       "name": "",
+       "role": "complementary"
+      },
+      "layer": "top",
+      "name": "",
+      "rect": [
+       1341,
+       821,
+       46,
+       38
+      ],
+      "role": "button",
+      "tag": "button",
+      "xpath": "/html/body/div[3]/aside[1]/div[1]/div[1]/section[2]/div[5]/div[1]/div[1]/div[1]/button[2]"
+     },
+     "state": "transactions.detail-ach"
+    },
+    {
+     "evidence": {
+      "description": "",
+      "name": "",
+      "role": "button",
+      "states": {
+       "expanded": false,
+       "haspopup": "menu"
+      },
+      "template": "button \"\" [expanded=false, haspopup=menu]"
+     },
+     "occurrence": {
+      "ancestors": [
+       [
+        "_splitButton_mzjr7_3"
+       ],
+       [
+        "_splitButtonContainer_mzjr7_3"
+       ],
+       [
+        "_attachmentWrapper_1jvrn_34"
+       ],
+       [
+        "_attachments_1jvrn_22"
+       ],
+       [
+        "_panelSection_d3i56_148"
+       ],
+       [
+        "_panelBody_d3i56_64"
+       ],
+       [
+        "_large_kwlx6_9",
+        "_noHover_3n0se_28",
+        "_shadow_3n0se_25",
+        "_raisedBackground_3n0se_45",
+        "_panel_d3i56_55",
+        "_detailsCardPanel_15kl9_287"
+       ],
+       [
+        "_transitionWrapper_d3i56_5",
+        "_visible_d3i56_19",
+        "_detailsCardWrapper_15kl9_247"
+       ]
+      ],
+      "classes": [
+       "_dropdownButton_mzjr7_71"
+      ],
+      "data": {},
+      "heading": "",
+      "landmark": {
+       "name": "",
+       "role": "complementary"
+      },
+      "layer": "top",
+      "name": "",
+      "rect": [
+       1341,
+       202,
+       46,
+       38
+      ],
+      "role": "button",
+      "tag": "button",
+      "xpath": "/html/body/div[3]/aside[1]/div[1]/div[1]/section[2]/div[5]/div[1]/div[1]/div[1]/button[2]"
+     },
+     "state": "transactions.detail-ach-comments"
+    }
+   ],
+   "evidenceHash": "d32286f3a6b1474a62914b9f3c1f94328b3edc0f3ac1f967434426eafbdea9d8",
+   "facts": {
+    "announced": "button \"\" [expanded=false, haspopup=menu]",
+    "axeSummary": "",
+    "criterion": "4.1.2",
+    "criterionName": "Name, Role, Value",
+    "element": "button in the complementary landmark",
+    "rule": "announced-as",
+    "screen": "ACH payment detail"
+   },
+   "family": "name",
+   "guidance": "High for an unnamed form control or the sole primary action.",
+   "issueId": null,
+   "key": "name:announced-as:b459ff59b8f3",
+   "measured": false,
+   "primary": "transactions.detail-ach",
+   "proposals": [],
+   "rule": "announced-as",
+   "screens": 2,
+   "severityDefault": "medium",
+   "source": "scanner",
+   "states": [
+    "transactions.detail-ach",
+    "transactions.detail-ach-comments"
+   ],
+   "summary": "announced-as: announced as button \"\" [expanded=false, haspopup=menu].",
+   "title": "Missing or unclear name: button in the complementary landmark"
+  },
+  {
+   "attachments": [],
+   "attempt": 1,
+   "basis": "candidate",
+   "criteria": [
+    "4.1.2"
+   ],
+   "evidence": [
+    {
+     "evidence": {
+      "description": "",
+      "name": "",
+      "role": "button",
+      "states": {},
+      "template": "button \"\""
+     },
+     "occurrence": {
+      "ancestors": [
+       [
+        "_bottomBarActions_ak1js_5"
+       ],
+       [
+        "_panelFooter_d3i56_66"
+       ],
+       [
+        "_large_kwlx6_9",
+        "_noHover_3n0se_28",
+        "_shadow_3n0se_25",
+        "_raisedBackground_3n0se_45",
+        "_panel_d3i56_55",
+        "_detailsCardPanel_15kl9_287"
+       ],
+       [
+        "_transitionWrapper_d3i56_5",
+        "_visible_d3i56_19",
+        "_detailsCardWrapper_15kl9_247"
+       ],
+       [
+        "_drawerRoot_15kl9_6"
+       ]
+      ],
+      "classes": [
+       "_button_r6b2u_20",
+       "_small_r6b2u_72",
+       "_tertiary_r6b2u_153",
+       "_tooltipAnchor_18bac_4",
+       "_wrapper_7927n_1",
+       "_bottomBarTooltipWrapper_ak1js_14"
+      ],
+      "data": {},
+      "heading": "",
+      "landmark": {
+       "name": "",
+       "role": "complementary"
+      },
+      "layer": "top",
+      "name": "",
+      "rect": [
+       1084,
+       748,
+       32,
+       32
+      ],
+      "role": "button",
+      "tag": "button",
+      "xpath": "/html/body/div[3]/aside[1]/div[1]/section[2]/div[2]/button[3]"
+     },
+     "state": "transactions.detail-ach"
+    },
+    {
+     "evidence": {
+      "description": "",
+      "name": "",
+      "role": "button",
+      "states": {},
+      "template": "button \"\""
+     },
+     "occurrence": {
+      "ancestors": [
+       [
+        "_bottomBarActions_ak1js_5"
+       ],
+       [
+        "_panelFooter_d3i56_66"
+       ],
+       [
+        "_large_kwlx6_9",
+        "_noHover_3n0se_28",
+        "_shadow_3n0se_25",
+        "_raisedBackground_3n0se_45",
+        "_panel_d3i56_55",
+        "_detailsCardPanel_15kl9_287"
+       ],
+       [
+        "_transitionWrapper_d3i56_5",
+        "_visible_d3i56_19",
+        "_detailsCardWrapper_15kl9_247"
+       ],
+       [
+        "_drawerRoot_15kl9_6"
+       ]
+      ],
+      "classes": [
+       "_button_r6b2u_20",
+       "_small_r6b2u_72",
+       "_tertiary_r6b2u_153",
+       "_tooltipAnchor_18bac_4",
+       "_wrapper_7927n_1",
+       "_bottomBarTooltipWrapper_ak1js_14"
+      ],
+      "data": {},
+      "heading": "",
+      "landmark": {
+       "name": "",
+       "role": "complementary"
+      },
+      "layer": "top",
+      "name": "",
+      "rect": [
+       1012,
+       748,
+       32,
+       32
+      ],
+      "role": "button",
+      "tag": "button",
+      "xpath": "/html/body/div[3]/aside[1]/div[1]/section[2]/div[2]/button[1]"
+     },
+     "state": "transactions.detail-card"
+    }
+   ],
+   "evidenceHash": "bd7af948dd9497ae4fc4621d405519568ed420ce7926d316b8799f42b63979ef",
+   "facts": {
+    "announced": "button \"\"",
+    "axeSummary": "",
+    "criterion": "4.1.2",
+    "criterionName": "Name, Role, Value",
+    "element": "button in the complementary landmark",
+    "rule": "announced-as",
+    "screen": "ACH payment detail"
+   },
+   "family": "name",
+   "guidance": "High for an unnamed form control or the sole primary action.",
+   "issueId": null,
+   "key": "name:announced-as:df1adeaae8b2",
+   "measured": false,
+   "primary": "transactions.detail-ach",
+   "proposals": [],
+   "rule": "announced-as",
+   "screens": 8,
+   "severityDefault": "medium",
+   "source": "scanner",
+   "states": [
+    "transactions.detail-ach",
+    "transactions.detail-card"
+   ],
+   "summary": "announced-as: announced as button \"\".",
+   "title": "Missing or unclear name: button in the complementary landmark"
+  }
+ ],
+ "primaries": [
+  "transactions.detail-ach"
+ ],
+ "reach": {
+  "baseUrl": "https://demo.mercury.com",
+  "data": "data",
+  "map": "build/map.json",
+  "run": "2026-10-03-1525",
+  "workspace": "a11y"
+ },
+ "run": "2026-10-03-1525"
+}

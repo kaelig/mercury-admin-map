@@ -1,0 +1,231 @@
+{
+ "batch": "record-003",
+ "reach": {
+  "baseUrl": "https://demo.mercury.com",
+  "data": "data",
+  "map": "build/map.json",
+  "run": "2026-10-02-1349",
+  "workspace": "a11y"
+ },
+ "run": "2026-10-02-1349",
+ "states": [
+  {
+   "area": "accounts",
+   "draft": "nothing on accounts.linked-accounts matches {\"click\":{\"name\":\"row kebab\"}}",
+   "image": "screens/accounts/67-linked-account-kebab.png",
+   "kind": "menu",
+   "labels": [
+    "Click row kebab"
+   ],
+   "mutates": false,
+   "note": "Edit nickname, Edit account type, Unlink account.",
+   "parent": "accounts.linked-accounts",
+   "state": "accounts.linked-account-kebab",
+   "title": "Linked account kebab menu"
+  },
+  {
+   "area": "accounts",
+   "draft": "not drafted: its parent had no accepted recipe when the drafter ran",
+   "image": "screens/accounts/77-edit-account-type.png",
+   "kind": "modal",
+   "labels": [
+    "Click row kebab",
+    "Click Edit account type"
+   ],
+   "mutates": false,
+   "note": "Kebab > Edit account type opens a Business/Personal radio dialog with Cancel and a disabled Save until the value changes.",
+   "parent": "accounts.linked-account-kebab",
+   "state": "accounts.edit-account-type",
+   "title": "Edit account type"
+  },
+  {
+   "area": "accounts",
+   "draft": "not drafted: its parent had no accepted recipe when the drafter ran",
+   "image": "screens/accounts/78-account-type-changed.png",
+   "kind": "form-state",
+   "labels": [
+    "Click row kebab",
+    "Click Edit account type",
+    "Select Business"
+   ],
+   "mutates": false,
+   "note": "Business selected, Save enabled.",
+   "parent": "accounts.edit-account-type",
+   "state": "accounts.edit-account-type-changed",
+   "title": "Edit account type \u2014 changed"
+  },
+  {
+   "area": "accounts",
+   "draft": "not drafted: its parent had no accepted recipe when the drafter ran",
+   "image": "screens/accounts/79-account-type-saved.png",
+   "kind": "toast",
+   "labels": [
+    "Click row kebab",
+    "Click Edit account type",
+    "Select Business",
+    "Click Save"
+   ],
+   "mutates": true,
+   "note": "Row subtitle now reads Business Credit Card with an \"Account type successfully updated\" toast.",
+   "parent": "accounts.edit-account-type-changed",
+   "state": "accounts.account-type-saved",
+   "title": "Account type updated"
+  },
+  {
+   "area": "accounts",
+   "draft": "not drafted: its parent had no accepted recipe when the drafter ran",
+   "image": "screens/accounts/69-unlink-confirm.png",
+   "kind": "modal",
+   "labels": [
+    "Click row kebab",
+    "Click Unlink account"
+   ],
+   "mutates": true,
+   "note": "\"Do you want to unlink this account?\" with account summary, Cancel and destructive \"Yes, unlink\".",
+   "parent": "accounts.linked-account-kebab",
+   "state": "accounts.unlink-confirm",
+   "title": "Unlink account confirmation"
+  },
+  {
+   "area": "accounts",
+   "draft": "nothing on accounts.edit-autopay matches {\"click\":{\"name\":\"Edit on Monthly on the 22nd\"}}",
+   "image": "screens/accounts/33-autopay-rule-edit.png",
+   "kind": "modal",
+   "labels": [
+    "Click Autopay Oct 22 pill",
+    "Click Edit on Monthly on the 22nd"
+   ],
+   "mutates": false,
+   "note": "Frequency and day selects, statement payment date and next autopays summary, info note and Save.",
+   "parent": "accounts.edit-autopay",
+   "state": "accounts.autopay-rule-edit",
+   "title": "Edit recurring autopay"
+  },
+  {
+   "area": "accounts",
+   "draft": "not drafted: its parent had no accepted recipe when the drafter ran",
+   "image": "screens/accounts/34-autopay-day-select.png",
+   "kind": "menu",
+   "labels": [
+    "Click Autopay Oct 22 pill",
+    "Click Edit on Monthly on the 22nd",
+    "Open On select"
+   ],
+   "mutates": false,
+   "note": "\"On\" select listing 1st to 31st of the month.",
+   "parent": "accounts.autopay-rule-edit",
+   "state": "accounts.autopay-day-select",
+   "title": "Autopay day dropdown"
+  },
+  {
+   "area": "accounts",
+   "draft": "not drafted: its parent had no accepted recipe when the drafter ran",
+   "image": "screens/accounts/35-autopay-rule-saving.png",
+   "kind": "form-state",
+   "labels": [
+    "Click Autopay Oct 22 pill",
+    "Click Edit on Monthly on the 22nd",
+    "Open On select",
+    "Pick 5th of the month and click Save"
+   ],
+   "mutates": true,
+   "note": "5th of the month chosen; Save shows a loading spinner; next autopays read \"October 22, October 5\".",
+   "parent": "accounts.autopay-day-select",
+   "state": "accounts.autopay-rule-saving",
+   "title": "Autopay rule saving"
+  },
+  {
+   "area": "accounts",
+   "draft": "nothing on accounts.order-checkbook matches {\"click\":{\"name\":\"Next with empty nickname\"}}",
+   "image": "screens/accounts/81-order-checkbook-validation.png",
+   "kind": "validation-error",
+   "labels": [
+    "Click Next with empty nickname"
+   ],
+   "mutates": false,
+   "note": "Next with an empty nickname turns the label pink and shows \"Please complete this field\" under the input.",
+   "parent": "accounts.order-checkbook",
+   "state": "accounts.order-checkbook-error",
+   "title": "Order checkbook \u2014 missing nickname"
+  },
+  {
+   "area": "accounts",
+   "draft": "not drafted: its parent had no accepted recipe when the drafter ran",
+   "image": "screens/accounts/82-order-checkbook-filled.png",
+   "kind": "form-state",
+   "labels": [
+    "Click Next with empty nickname",
+    "Type nickname, pick pink check"
+   ],
+   "mutates": false,
+   "note": "Nickname \"Payroll Checkbook\" entered and the pink check color selected; the preview recolors.",
+   "parent": "accounts.order-checkbook-error",
+   "state": "accounts.order-checkbook-filled",
+   "title": "Order checkbook \u2014 filled"
+  },
+  {
+   "area": "accounts",
+   "draft": "not drafted: its parent had no accepted recipe when the drafter ran",
+   "image": "screens/accounts/83-order-checkbook-review.png",
+   "kind": "page",
+   "labels": [
+    "Click Next with empty nickname",
+    "Type nickname, pick pink check",
+    "Click Next"
+   ],
+   "mutates": false,
+   "note": "Review of nickname, account, shipping address and cost (Free) with an authority checkbox; Confirm stays disabled until it is ticked.",
+   "parent": "accounts.order-checkbook-filled",
+   "state": "accounts.order-checkbook-review",
+   "title": "Order checkbook \u2014 review"
+  },
+  {
+   "area": "accounts",
+   "draft": "cannot parse \"Enter amount\"",
+   "image": "screens/accounts/60-safe-type-dropdown.png",
+   "kind": "menu",
+   "labels": [
+    "Click Next with empty fields",
+    "Enter amount and open SAFE type"
+   ],
+   "mutates": false,
+   "note": "Post-money, Pre-money, Most Favored Nation only, Discount only.",
+   "parent": "accounts.safe-create-error",
+   "state": "accounts.safe-type-dropdown",
+   "title": "SAFE type dropdown"
+  },
+  {
+   "area": "accounts",
+   "draft": "not drafted: its parent had no accepted recipe when the drafter ran",
+   "image": "screens/accounts/62-safe-company-details.png",
+   "kind": "form-state",
+   "labels": [
+    "Click Next with empty fields",
+    "Enter amount and open SAFE type",
+    "Pick Post-money, enter valuation cap, click Next"
+   ],
+   "mutates": false,
+   "note": "Step 2: company info pulled from profile, state of governance (Delaware) and beneficial owner signatory.",
+   "parent": "accounts.safe-type-dropdown",
+   "state": "accounts.safe-company-details",
+   "title": "SAFE \u2014 Company details"
+  },
+  {
+   "area": "accounts",
+   "draft": "not drafted: its parent had no accepted recipe when the drafter ran",
+   "image": "screens/accounts/63-safe-investor-details.png",
+   "kind": "form-state",
+   "labels": [
+    "Click Next with empty fields",
+    "Enter amount and open SAFE type",
+    "Pick Post-money, enter valuation cap, click Next",
+    "Pick Delaware and signatory, click Next"
+   ],
+   "mutates": false,
+   "note": "Step 3: investor type, legal name, email, optional address and note.",
+   "parent": "accounts.safe-company-details",
+   "state": "accounts.safe-investor-details",
+   "title": "SAFE \u2014 Investor details"
+  }
+ ]
+}

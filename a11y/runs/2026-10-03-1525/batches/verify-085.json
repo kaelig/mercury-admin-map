@@ -1,0 +1,442 @@
+{
+ "area": "billpay",
+ "batch": "verify-085",
+ "findings": [
+  {
+   "attachments": [],
+   "attempt": 1,
+   "basis": "violation",
+   "criteria": [
+    "4.1.2"
+   ],
+   "evidence": [
+    {
+     "evidence": {
+      "failureSummary": "Fix any of the following:\n  Element does not have text that is visible to screen readers\n  aria-label attribute does not exist or is empty\n  aria-labelledby attribute does not exist, references elements that do not exist or references elements that are empty\n  Element has no title attribute",
+      "messageKey": "noAttr"
+     },
+     "occurrence": {
+      "ancestors": [
+       [
+        "_row_1wsk7_22",
+        "_hideQuantity_1wsk7_29"
+       ],
+       [],
+       [
+        "ReactVirtualized__Grid__innerScrollContainer"
+       ],
+       [
+        "ReactVirtualized__Grid",
+        "ReactVirtualized__List"
+       ],
+       [],
+       [],
+       [
+        "_lineItems_1wsk7_3"
+       ],
+       [
+        "_lineItemWrapper_8i915_29"
+       ]
+      ],
+      "classes": [
+       "_draggableHandle_1wsk7_46"
+      ],
+      "data": {},
+      "heading": "Categorization",
+      "landmark": {
+       "name": "",
+       "role": "form"
+      },
+      "layer": "document",
+      "name": "",
+      "rect": [
+       44,
+       392,
+       32,
+       32
+      ],
+      "role": "button",
+      "tag": "span",
+      "xpath": "/html/body/div[1]/main[1]/div[1]/div[2]/div[2]/div[1]/div[2]/section[2]/div[1]/div[1]/form[1]/div[1]/div[2]/div[2]/div[1]/div[1]/div[1]/div[1]/div[1]/div[1]/div[2]/span[1]"
+     },
+     "state": "billpay.pay-multiple-gl"
+    },
+    {
+     "evidence": {
+      "failureSummary": "Fix any of the following:\n  Element does not have text that is visible to screen readers\n  aria-label attribute does not exist or is empty\n  aria-labelledby attribute does not exist, references elements that do not exist or references elements that are empty\n  Element has no title attribute",
+      "messageKey": "noAttr"
+     },
+     "occurrence": {
+      "ancestors": [
+       [
+        "_row_1wsk7_22",
+        "_hideQuantity_1wsk7_29"
+       ],
+       [],
+       [
+        "ReactVirtualized__Grid__innerScrollContainer"
+       ],
+       [
+        "ReactVirtualized__Grid",
+        "ReactVirtualized__List"
+       ],
+       [],
+       [],
+       [
+        "_lineItems_1wsk7_3"
+       ],
+       [
+        "_lineItemWrapper_8i915_29"
+       ]
+      ],
+      "classes": [
+       "_draggableHandle_1wsk7_46"
+      ],
+      "data": {},
+      "heading": "Categorization",
+      "landmark": {
+       "name": "",
+       "role": "form"
+      },
+      "layer": "document",
+      "name": "",
+      "rect": [
+       44,
+       392,
+       32,
+       32
+      ],
+      "role": "button",
+      "tag": "span",
+      "xpath": "/html/body/div[1]/main[1]/div[1]/div[2]/div[2]/div[1]/div[2]/section[2]/div[1]/div[1]/form[1]/div[1]/div[2]/div[2]/div[1]/div[1]/div[1]/div[1]/div[1]/div[1]/div[2]/span[1]"
+     },
+     "state": "billpay.pay-line-items-error"
+    }
+   ],
+   "evidenceHash": "e137e735127ad5d6c81fbb3cb70fb35ca9e78028b3dbc31169175d9d972662ad",
+   "facts": {
+    "announced": "button \"\" (To pick up a draggable item, press the space bar. While dragging, us…",
+    "axeSummary": "Element does not have text that is visible to screen readers; aria-label attribute does not exist or is empty; aria-labelledby attribute does not exist, refere…",
+    "criterion": "4.1.2",
+    "criterionName": "Name, Role, Value",
+    "element": "button in \"Categorization\"",
+    "rule": "aria-command-name",
+    "screen": "Pay bill: multiple GL codes"
+   },
+   "family": "name",
+   "guidance": "High for an unnamed form control or the sole primary action.",
+   "issueId": null,
+   "key": "name:aria-command-name:756269f06d18",
+   "measured": false,
+   "primary": "billpay.pay-multiple-gl",
+   "proposals": [],
+   "rule": "aria-command-name",
+   "screens": 2,
+   "severityDefault": "medium",
+   "source": "scanner",
+   "states": [
+    "billpay.pay-multiple-gl",
+    "billpay.pay-line-items-error"
+   ],
+   "summary": "aria-command-name: announced as button \"\" (To pick up a draggable item, press the space bar. While dragging, us…. Element does not have text that is visible to screen readers; aria-label attribute does not exist or is empty; aria-labelledby attribute does not exist, refere…",
+   "title": "Missing or unclear name: button in \"Categorization\""
+  },
+  {
+   "attachments": [],
+   "attempt": 1,
+   "basis": "violation",
+   "criteria": [
+    "1.3.1"
+   ],
+   "evidence": [
+    {
+     "evidence": {
+      "failureSummary": "Fix any of the following:\n  Element has children which are not allowed: [role=button], button[aria-label], [role=combobox], input[aria-describedby], button[aria-controls]",
+      "messageKey": "unallowed",
+      "values": "[role=button], button[aria-label], [role=combobox], input[aria-describedby], button[aria-controls]"
+     },
+     "occurrence": {
+      "ancestors": [
+       [
+        "ReactVirtualized__Grid__innerScrollContainer"
+       ],
+       [
+        "ReactVirtualized__Grid",
+        "ReactVirtualized__List"
+       ],
+       [],
+       [],
+       [
+        "_lineItems_1wsk7_3"
+       ],
+       [
+        "_lineItemWrapper_8i915_29"
+       ],
+       [
+        "_lineItemFormContainer_8i915_33"
+       ],
+       [
+        "_formWrapper_8i915_9"
+       ]
+      ],
+      "classes": [],
+      "data": {},
+      "heading": "Categorization",
+      "landmark": {
+       "name": "",
+       "role": "form"
+      },
+      "layer": "document",
+      "name": "",
+      "rect": [
+       80,
+       360,
+       560,
+       124
+      ],
+      "role": "row",
+      "tag": "div",
+      "xpath": "/html/body/div[1]/main[1]/div[1]/div[2]/div[2]/div[1]/div[2]/section[2]/div[1]/div[1]/form[1]/div[1]/div[2]/div[2]/div[1]/div[1]/div[1]/div[1]/div[1]/div[1]"
+     },
+     "state": "billpay.pay-multiple-gl"
+    },
+    {
+     "evidence": {
+      "failureSummary": "Fix any of the following:\n  Element has children which are not allowed: [role=button], button[aria-label], [role=combobox], input[aria-describedby], button[aria-controls]",
+      "messageKey": "unallowed",
+      "values": "[role=button], button[aria-label], [role=combobox], input[aria-describedby], button[aria-controls]"
+     },
+     "occurrence": {
+      "ancestors": [
+       [
+        "ReactVirtualized__Grid__innerScrollContainer"
+       ],
+       [
+        "ReactVirtualized__Grid",
+        "ReactVirtualized__List"
+       ],
+       [],
+       [],
+       [
+        "_lineItems_1wsk7_3"
+       ],
+       [
+        "_lineItemWrapper_8i915_29"
+       ],
+       [
+        "_lineItemFormContainer_8i915_33"
+       ],
+       [
+        "_formWrapper_8i915_9"
+       ]
+      ],
+      "classes": [],
+      "data": {},
+      "heading": "Categorization",
+      "landmark": {
+       "name": "",
+       "role": "form"
+      },
+      "layer": "document",
+      "name": "",
+      "rect": [
+       80,
+       360,
+       560,
+       124
+      ],
+      "role": "row",
+      "tag": "div",
+      "xpath": "/html/body/div[1]/main[1]/div[1]/div[2]/div[2]/div[1]/div[2]/section[2]/div[1]/div[1]/form[1]/div[1]/div[2]/div[2]/div[1]/div[1]/div[1]/div[1]/div[1]/div[1]"
+     },
+     "state": "billpay.pay-line-items-error"
+    }
+   ],
+   "evidenceHash": "7114005e85236a8db3cfaeefdec61399ed689c3ff2a61777541ef232d39d39d2",
+   "facts": {
+    "announced": "row \"\"",
+    "axeSummary": "Element has children which are not allowed: [role=button], button[aria-label], [role=combobox], input[aria-describedby], button[aria-controls]",
+    "criterion": "1.3.1",
+    "criterionName": "Info and Relationships",
+    "element": "row in \"Categorization\"",
+    "rule": "aria-required-children",
+    "screen": "Pay bill: multiple GL codes"
+   },
+   "family": "role-state",
+   "guidance": "Low for optional ARIA or an invalid autocomplete token; high when aria-hidden hides the whole page.",
+   "issueId": null,
+   "key": "role-state:aria-required-children:7c5d1d4e461f",
+   "measured": false,
+   "primary": "billpay.pay-multiple-gl",
+   "proposals": [],
+   "rule": "aria-required-children",
+   "screens": 2,
+   "severityDefault": "medium",
+   "source": "scanner",
+   "states": [
+    "billpay.pay-multiple-gl",
+    "billpay.pay-line-items-error"
+   ],
+   "summary": "aria-required-children: announced as row \"\". Element has children which are not allowed: [role=button], button[aria-label], [role=combobox], input[aria-describedby], button[aria-controls]",
+   "title": "Wrong role or state: row in \"Categorization\""
+  },
+  {
+   "attachments": [],
+   "attempt": 1,
+   "basis": "violation",
+   "criteria": [
+    "1.3.1"
+   ],
+   "evidence": [
+    {
+     "evidence": {
+      "aria-required-parent": [
+       "grid",
+       "rowgroup",
+       "table",
+       "treegrid"
+      ],
+      "failureSummary": "Fix any of the following:\n  Required ARIA parents role not present: grid, rowgroup, table, treegrid"
+     },
+     "occurrence": {
+      "ancestors": [
+       [
+        "ReactVirtualized__Grid__innerScrollContainer"
+       ],
+       [
+        "ReactVirtualized__Grid",
+        "ReactVirtualized__List"
+       ],
+       [],
+       [],
+       [
+        "_lineItems_1wsk7_3"
+       ],
+       [
+        "_lineItemWrapper_8i915_29"
+       ],
+       [
+        "_lineItemFormContainer_8i915_33"
+       ],
+       [
+        "_formWrapper_8i915_9"
+       ]
+      ],
+      "classes": [],
+      "data": {},
+      "heading": "Categorization",
+      "landmark": {
+       "name": "",
+       "role": "form"
+      },
+      "layer": "document",
+      "name": "",
+      "rect": [
+       80,
+       360,
+       560,
+       124
+      ],
+      "role": "row",
+      "tag": "div",
+      "xpath": "/html/body/div[1]/main[1]/div[1]/div[2]/div[2]/div[1]/div[2]/section[2]/div[1]/div[1]/form[1]/div[1]/div[2]/div[2]/div[1]/div[1]/div[1]/div[1]/div[1]/div[1]"
+     },
+     "state": "billpay.pay-multiple-gl"
+    },
+    {
+     "evidence": {
+      "aria-required-parent": [
+       "grid",
+       "rowgroup",
+       "table",
+       "treegrid"
+      ],
+      "failureSummary": "Fix any of the following:\n  Required ARIA parents role not present: grid, rowgroup, table, treegrid"
+     },
+     "occurrence": {
+      "ancestors": [
+       [
+        "ReactVirtualized__Grid__innerScrollContainer"
+       ],
+       [
+        "ReactVirtualized__Grid",
+        "ReactVirtualized__List"
+       ],
+       [],
+       [],
+       [
+        "_lineItems_1wsk7_3"
+       ],
+       [
+        "_lineItemWrapper_8i915_29"
+       ],
+       [
+        "_lineItemFormContainer_8i915_33"
+       ],
+       [
+        "_formWrapper_8i915_9"
+       ]
+      ],
+      "classes": [],
+      "data": {},
+      "heading": "Categorization",
+      "landmark": {
+       "name": "",
+       "role": "form"
+      },
+      "layer": "document",
+      "name": "",
+      "rect": [
+       80,
+       360,
+       560,
+       124
+      ],
+      "role": "row",
+      "tag": "div",
+      "xpath": "/html/body/div[1]/main[1]/div[1]/div[2]/div[2]/div[1]/div[2]/section[2]/div[1]/div[1]/form[1]/div[1]/div[2]/div[2]/div[1]/div[1]/div[1]/div[1]/div[1]/div[1]"
+     },
+     "state": "billpay.pay-line-items-error"
+    }
+   ],
+   "evidenceHash": "e2808ceaf9121b6023c56229813fac4cb769c70700b5a99c4448877c74f25a19",
+   "facts": {
+    "announced": "row \"\"",
+    "axeSummary": "Required ARIA parents role not present: grid, rowgroup, table, treegrid",
+    "criterion": "1.3.1",
+    "criterionName": "Info and Relationships",
+    "element": "row in \"Categorization\"",
+    "rule": "aria-required-parent",
+    "screen": "Pay bill: multiple GL codes"
+   },
+   "family": "role-state",
+   "guidance": "Low for optional ARIA or an invalid autocomplete token; high when aria-hidden hides the whole page.",
+   "issueId": null,
+   "key": "role-state:aria-required-parent:608ed2acb4df",
+   "measured": false,
+   "primary": "billpay.pay-multiple-gl",
+   "proposals": [],
+   "rule": "aria-required-parent",
+   "screens": 2,
+   "severityDefault": "medium",
+   "source": "scanner",
+   "states": [
+    "billpay.pay-multiple-gl",
+    "billpay.pay-line-items-error"
+   ],
+   "summary": "aria-required-parent: announced as row \"\". Required ARIA parents role not present: grid, rowgroup, table, treegrid",
+   "title": "Wrong role or state: row in \"Categorization\""
+  }
+ ],
+ "primaries": [
+  "billpay.pay-multiple-gl"
+ ],
+ "reach": {
+  "baseUrl": "https://demo.mercury.com",
+  "data": "data",
+  "map": "build/map.json",
+  "run": "2026-10-03-1525",
+  "workspace": "a11y"
+ },
+ "run": "2026-10-03-1525"
+}

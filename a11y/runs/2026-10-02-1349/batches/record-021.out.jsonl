@@ -1,0 +1,15 @@
+{"state": "payments.send-recipient-step", "result": "accepted", "similarity": 0.9994, "attempts": 1, "detail": null, "batch": "record-021", "model": "sonnet", "prompt": "recorder@5"}
+{"state": "payments.send-amount", "result": "accepted", "similarity": 0.9989, "attempts": 1, "detail": null, "batch": "record-021", "model": "sonnet", "prompt": "recorder@5"}
+{"state": "payments.send-amount-validation", "result": "accepted", "similarity": 0.9988, "attempts": 1, "detail": null, "batch": "record-021", "model": "sonnet", "prompt": "recorder@5"}
+{"state": "payments.send-categorization", "result": "accepted", "similarity": 0.9998, "attempts": 1, "detail": null, "batch": "record-021", "model": "sonnet", "prompt": "recorder@5"}
+{"state": "payments.send-details", "result": "review", "similarity": 0.9995, "attempts": 1, "detail": "review: sample, score 0.9995", "batch": "record-021", "model": "sonnet", "prompt": "recorder@5"}
+{"state": "payments.send-details-bill", "result": "failed", "similarity": null, "attempts": 1, "detail": "blocked: payments.send-details on its chain is review, not accepted", "batch": "record-021", "model": "sonnet", "prompt": "recorder@5"}
+{"state": "payments.send-review", "result": "failed", "similarity": null, "attempts": 1, "detail": "blocked: payments.send-details on its chain is review, not accepted", "batch": "record-021", "model": "sonnet", "prompt": "recorder@5"}
+{"state": "payments.send-submitting", "result": "failed", "similarity": null, "attempts": 0, "detail": "blocked: payments.send-review has no recipe", "batch": "record-021", "model": "sonnet", "prompt": "recorder@5"}
+{"state": "payments.send-wire-review", "result": "failed", "similarity": null, "attempts": 0, "detail": "blocked: payments.send-details has no accepted recipe (review: sample)", "batch": "record-021", "model": "sonnet", "prompt": "recorder@5"}
+{"state": "payments.send-gl-dropdown", "result": "accepted", "similarity": 0.9998, "attempts": 1, "detail": null, "batch": "record-021", "model": "sonnet", "prompt": "recorder@5"}
+{"state": "payments.send-multiple-gl", "result": "accepted", "similarity": 0.9954, "attempts": 1, "detail": null, "batch": "record-021", "model": "sonnet", "prompt": "recorder@5"}
+{"state": "payments.send-wire-purpose", "result": "failed", "similarity": null, "attempts": 0, "detail": "Not attempted: the wire-only step needs the payment method switched to wire, which no label records; Next from categorization reaches the details step.", "batch": "record-021", "model": "sonnet", "prompt": "recorder@5"}
+{"state": "payments.send-date-picker", "result": "review", "similarity": 0.977, "attempts": 1, "detail": "review: mutating, score 0.977", "batch": "record-021", "model": "sonnet", "prompt": "recorder@5"}
+{"state": "payments.send-from-dropdown", "result": "review", "similarity": 0.9985, "attempts": 1, "detail": "review: mutating, score 0.9985", "batch": "record-021", "model": "sonnet", "prompt": "recorder@5"}
+{"state": "payments.send-repeat", "result": "accepted", "similarity": 0.9975, "attempts": 1, "detail": null, "batch": "record-021", "model": "sonnet", "prompt": "recorder@5"}

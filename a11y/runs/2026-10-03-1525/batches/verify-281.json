@@ -1,0 +1,172 @@
+{
+ "area": "payments",
+ "batch": "verify-281",
+ "findings": [
+  {
+   "attachments": [],
+   "attempt": 1,
+   "basis": "violation",
+   "criteria": [
+    "1.3.5"
+   ],
+   "evidence": [
+    {
+     "evidence": {
+      "failureSummary": "Fix all of the following:\n  the autocomplete attribute is incorrectly formatted"
+     },
+     "occurrence": {
+      "ancestors": [
+       [
+        "_inputBox_q7hf7_93",
+        "_hasValue_q7hf7_171"
+       ],
+       [
+        "_inputBoxWrapper_q7hf7_93"
+       ],
+       [
+        "_textInputWrapper_q7hf7_24"
+       ],
+       [
+        "_provideDSTextInput_q7hf7_6",
+        "_calendarDateInput_1ml1o_5",
+        "_fullWidthInput_1ml1o_54"
+       ],
+       [
+        "_calendarInputWrapper_1ml1o_11",
+        "_fullWidthCalendarInput_17brw_77"
+       ],
+       [
+        "_calendarDateInputContainer_1ml1o_5",
+        "_fullWidthCalendarInput_17brw_77"
+       ],
+       [
+        "_startDayWithTooltip_17brw_82"
+       ],
+       [
+        "_helpTextWrapper_17brw_90"
+       ]
+      ],
+      "classes": [
+       "_input_q7hf7_93"
+      ],
+      "data": {},
+      "heading": "Amount",
+      "landmark": {
+       "name": "",
+       "role": "form"
+      },
+      "layer": "document",
+      "name": "Send on",
+      "rect": [
+       453,
+       492,
+       534,
+       24
+      ],
+      "role": "textbox",
+      "tag": "input",
+      "xpath": "/html/body/div[1]/main[1]/div[1]/div[2]/div[2]/div[1]/div[2]/section[2]/div[1]/div[1]/div[1]/form[1]/div[3]/div[1]/div[1]/div[1]/div[1]/div[1]/div[1]/div[1]/div[1]/input[1]"
+     },
+     "state": "payments.send-amount"
+    },
+    {
+     "evidence": {
+      "failureSummary": "Fix all of the following:\n  the autocomplete attribute is incorrectly formatted"
+     },
+     "occurrence": {
+      "ancestors": [
+       [
+        "_inputBox_q7hf7_93",
+        "_hasValue_q7hf7_171"
+       ],
+       [
+        "_inputBoxWrapper_q7hf7_93"
+       ],
+       [
+        "_textInputWrapper_q7hf7_24"
+       ],
+       [
+        "_provideDSTextInput_q7hf7_6",
+        "_calendarDateInput_1ml1o_5",
+        "_fullWidthInput_1ml1o_54"
+       ],
+       [
+        "_calendarInputWrapper_1ml1o_11",
+        "_fullWidthCalendarInput_17brw_77"
+       ],
+       [
+        "_calendarDateInputContainer_1ml1o_5",
+        "_fullWidthCalendarInput_17brw_77"
+       ],
+       [
+        "_formFieldWrapper_b92ke_1"
+       ],
+       [
+        "_startDayWithTooltip_17brw_82"
+       ]
+      ],
+      "classes": [
+       "_input_q7hf7_93"
+      ],
+      "data": {},
+      "heading": "Amount",
+      "landmark": {
+       "name": "",
+       "role": "form"
+      },
+      "layer": "document",
+      "name": "Send on",
+      "rect": [
+       93,
+       516,
+       534,
+       24
+      ],
+      "role": "textbox",
+      "tag": "input",
+      "xpath": "/html/body/div[1]/main[1]/div[1]/div[2]/div[2]/div[1]/div[2]/section[2]/div[1]/div[1]/div[1]/form[1]/div[3]/div[1]/div[1]/div[1]/div[1]/div[1]/div[1]/div[1]/div[1]/div[1]/input[1]"
+     },
+     "state": "billpay.pay-amount-error"
+    }
+   ],
+   "evidenceHash": "8f19644dd288e8d4aa0e2256a8c7ea4a6ea338a72b0daa353cad633dc2bfbf20",
+   "facts": {
+    "announced": "textbox \"Send on\"",
+    "axeSummary": "the autocomplete attribute is incorrectly formatted",
+    "criterion": "1.3.5",
+    "criterionName": "Identify Input Purpose",
+    "element": "textbox \"Send on\"",
+    "rule": "autocomplete-valid",
+    "screen": "Send: Amount step"
+   },
+   "family": "role-state",
+   "guidance": "Low for optional ARIA or an invalid autocomplete token; high when aria-hidden hides the whole page.",
+   "issueId": null,
+   "key": "role-state:autocomplete-valid:d7c8f064e03f",
+   "measured": false,
+   "primary": "payments.send-amount",
+   "proposals": [],
+   "rule": "autocomplete-valid",
+   "screens": 4,
+   "severityDefault": "medium",
+   "source": "scanner",
+   "states": [
+    "payments.send-amount",
+    "billpay.pay-amount-error"
+   ],
+   "summary": "autocomplete-valid: announced as textbox \"Send on\". the autocomplete attribute is incorrectly formatted",
+   "title": "Invalid autocomplete value: textbox \"Send on\""
+  }
+ ],
+ "primaries": [
+  "payments.send-amount"
+ ],
+ "reach": {
+  "baseUrl": "https://demo.mercury.com",
+  "data": "data",
+  "map": "build/map.json",
+  "run": "2026-10-03-1525",
+  "workspace": "a11y"
+ },
+ "run": "2026-10-03-1525"
+}

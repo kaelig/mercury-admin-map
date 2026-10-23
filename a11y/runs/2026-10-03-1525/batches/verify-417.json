@@ -1,0 +1,339 @@
+{
+ "area": "accounts",
+ "batch": "verify-417",
+ "findings": [
+  {
+   "attachments": [],
+   "attempt": 1,
+   "basis": "candidate",
+   "criteria": [
+    "4.1.2"
+   ],
+   "evidence": [
+    {
+     "evidence": {
+      "description": "",
+      "name": "Transfer from",
+      "role": "combobox",
+      "states": {
+       "expanded": false,
+       "haspopup": "listbox"
+      },
+      "template": "combobox \"Transfer from\" [expanded=false, haspopup=listbox]"
+     },
+     "occurrence": {
+      "ancestors": [
+       [
+        "_accountSelectorWrapper_dd0l7_6"
+       ],
+       [],
+       [
+        "_disabledUiWrapper_n1ehf_8"
+       ],
+       [
+        "_transferFormCardContent_n1ehf_134"
+       ],
+       [],
+       [
+        "_transferFormCard_n1ehf_127"
+       ],
+       [
+        "_large_kwlx6_9",
+        "_shadow_3n0se_25",
+        "_raisedBackground_3n0se_45"
+       ],
+       [
+        "_transferMethodWrapper_n1ehf_119"
+       ]
+      ],
+      "classes": [
+       "_selectButton_dd0l7_11",
+       "_selectButtonWrapper_dd0l7_11",
+       "_error_dd0l7_61",
+       "session-replay-mask"
+      ],
+      "data": {},
+      "heading": "One-time transfer",
+      "landmark": {
+       "name": "",
+       "role": "form"
+      },
+      "layer": "document",
+      "name": "Transfer from",
+      "rect": [
+       496,
+       452,
+       448,
+       68
+      ],
+      "role": "combobox",
+      "tag": "button",
+      "xpath": "/html/body/div[1]/main[1]/div[1]/div[2]/div[2]/div[3]/div[1]/div[2]/div[1]/div[1]/form[1]/div[1]/div[2]/div[1]/div[1]/button[1]"
+     },
+     "state": "accounts.treasury-transfer-error"
+    },
+    {
+     "evidence": {
+      "description": "",
+      "name": "Transfer from",
+      "role": "combobox",
+      "states": {
+       "expanded": false,
+       "haspopup": "listbox"
+      },
+      "template": "combobox \"Transfer from\" [expanded=false, haspopup=listbox]"
+     },
+     "occurrence": {
+      "ancestors": [
+       [
+        "_accountSelectorWrapper_dd0l7_6"
+       ],
+       [],
+       [
+        "_disabledUiWrapper_n1ehf_8"
+       ],
+       [
+        "_transferFormCardContent_n1ehf_134"
+       ],
+       [],
+       [
+        "_transferFormCard_n1ehf_127"
+       ],
+       [
+        "_large_kwlx6_9",
+        "_shadow_3n0se_25",
+        "_raisedBackground_3n0se_45"
+       ],
+       [
+        "_transferMethodWrapper_n1ehf_119"
+       ]
+      ],
+      "classes": [
+       "_selectButton_dd0l7_11",
+       "_selectButtonWrapper_dd0l7_11",
+       "_error_dd0l7_61",
+       "session-replay-mask"
+      ],
+      "data": {},
+      "heading": "One-time transfer",
+      "landmark": {
+       "name": "",
+       "role": "form"
+      },
+      "layer": "document",
+      "name": "Transfer from",
+      "rect": [
+       496,
+       452,
+       448,
+       68
+      ],
+      "role": "combobox",
+      "tag": "button",
+      "xpath": "/html/body/div[1]/main[1]/div[1]/div[2]/div[2]/div[3]/div[1]/div[2]/div[1]/div[1]/form[1]/div[1]/div[2]/div[1]/div[1]/button[1]"
+     },
+     "state": "payments.transfer-validation"
+    }
+   ],
+   "evidenceHash": "b98352ffd7e5785df00945d17903d85a8372e1e74bc01b749564bc8556392e6c",
+   "facts": {
+    "announced": "combobox \"Transfer from\" [expanded=false, haspopup=listbox]",
+    "axeSummary": "",
+    "criterion": "4.1.2",
+    "criterionName": "Name, Role, Value",
+    "element": "combobox \"Transfer from\"",
+    "rule": "announced-as",
+    "screen": "Transfer — empty submit"
+   },
+   "family": "role-state",
+   "guidance": "Low for optional ARIA or an invalid autocomplete token; high when aria-hidden hides the whole page.",
+   "issueId": null,
+   "key": "role-state:announced-as:4f00d71040e1",
+   "measured": false,
+   "primary": "accounts.treasury-transfer-error",
+   "proposals": [],
+   "rule": "announced-as",
+   "screens": 2,
+   "severityDefault": "medium",
+   "source": "scanner",
+   "states": [
+    "accounts.treasury-transfer-error",
+    "payments.transfer-validation"
+   ],
+   "summary": "announced-as: announced as combobox \"Transfer from\" [expanded=false, haspopup=listbox].",
+   "title": "Wrong role or state: combobox \"Transfer from\""
+  },
+  {
+   "attachments": [],
+   "attempt": 1,
+   "basis": "candidate",
+   "criteria": [
+    "4.1.2"
+   ],
+   "evidence": [
+    {
+     "evidence": {
+      "description": "",
+      "name": "Transfer to",
+      "role": "combobox",
+      "states": {
+       "expanded": false,
+       "haspopup": "listbox"
+      },
+      "template": "combobox \"Transfer to\" [expanded=false, haspopup=listbox]"
+     },
+     "occurrence": {
+      "ancestors": [
+       [
+        "_accountSelectorWrapper_dd0l7_6"
+       ],
+       [],
+       [
+        "_disabledUiWrapper_n1ehf_8"
+       ],
+       [
+        "_transferFormCardContent_n1ehf_134"
+       ],
+       [],
+       [
+        "_transferFormCard_n1ehf_127"
+       ],
+       [
+        "_large_kwlx6_9",
+        "_shadow_3n0se_25",
+        "_raisedBackground_3n0se_45"
+       ],
+       [
+        "_transferMethodWrapper_n1ehf_119"
+       ]
+      ],
+      "classes": [
+       "_selectButton_dd0l7_11",
+       "_selectButtonWrapper_dd0l7_11",
+       "_error_dd0l7_61",
+       "session-replay-mask"
+      ],
+      "data": {},
+      "heading": "One-time transfer",
+      "landmark": {
+       "name": "",
+       "role": "form"
+      },
+      "layer": "document",
+      "name": "Transfer to",
+      "rect": [
+       496,
+       584,
+       448,
+       68
+      ],
+      "role": "combobox",
+      "tag": "button",
+      "xpath": "/html/body/div[1]/main[1]/div[1]/div[2]/div[2]/div[3]/div[1]/div[2]/div[1]/div[1]/form[1]/div[1]/div[2]/div[2]/div[1]/button[1]"
+     },
+     "state": "accounts.treasury-transfer-error"
+    },
+    {
+     "evidence": {
+      "description": "",
+      "name": "Transfer to",
+      "role": "combobox",
+      "states": {
+       "expanded": false,
+       "haspopup": "listbox"
+      },
+      "template": "combobox \"Transfer to\" [expanded=false, haspopup=listbox]"
+     },
+     "occurrence": {
+      "ancestors": [
+       [
+        "_accountSelectorWrapper_dd0l7_6"
+       ],
+       [],
+       [
+        "_disabledUiWrapper_n1ehf_8"
+       ],
+       [
+        "_transferFormCardContent_n1ehf_134"
+       ],
+       [],
+       [
+        "_transferFormCard_n1ehf_127"
+       ],
+       [
+        "_large_kwlx6_9",
+        "_shadow_3n0se_25",
+        "_raisedBackground_3n0se_45"
+       ],
+       [
+        "_transferMethodWrapper_n1ehf_119"
+       ]
+      ],
+      "classes": [
+       "_selectButton_dd0l7_11",
+       "_selectButtonWrapper_dd0l7_11",
+       "_error_dd0l7_61",
+       "session-replay-mask"
+      ],
+      "data": {},
+      "heading": "One-time transfer",
+      "landmark": {
+       "name": "",
+       "role": "form"
+      },
+      "layer": "document",
+      "name": "Transfer to",
+      "rect": [
+       496,
+       584,
+       448,
+       68
+      ],
+      "role": "combobox",
+      "tag": "button",
+      "xpath": "/html/body/div[1]/main[1]/div[1]/div[2]/div[2]/div[3]/div[1]/div[2]/div[1]/div[1]/form[1]/div[1]/div[2]/div[2]/div[1]/button[1]"
+     },
+     "state": "payments.transfer-validation"
+    }
+   ],
+   "evidenceHash": "aa755df5c87ff6beef24213c428429743c7913876177f0eff3b6e27bb8dd4d6d",
+   "facts": {
+    "announced": "combobox \"Transfer to\" [expanded=false, haspopup=listbox]",
+    "axeSummary": "",
+    "criterion": "4.1.2",
+    "criterionName": "Name, Role, Value",
+    "element": "combobox \"Transfer to\"",
+    "rule": "announced-as",
+    "screen": "Transfer — empty submit"
+   },
+   "family": "role-state",
+   "guidance": "Low for optional ARIA or an invalid autocomplete token; high when aria-hidden hides the whole page.",
+   "issueId": null,
+   "key": "role-state:announced-as:e983adbf4b13",
+   "measured": false,
+   "primary": "accounts.treasury-transfer-error",
+   "proposals": [],
+   "rule": "announced-as",
+   "screens": 2,
+   "severityDefault": "medium",
+   "source": "scanner",
+   "states": [
+    "accounts.treasury-transfer-error",
+    "payments.transfer-validation"
+   ],
+   "summary": "announced-as: announced as combobox \"Transfer to\" [expanded=false, haspopup=listbox].",
+   "title": "Wrong role or state: combobox \"Transfer to\""
+  }
+ ],
+ "primaries": [
+  "accounts.treasury-transfer-error"
+ ],
+ "reach": {
+  "baseUrl": "https://demo.mercury.com",
+  "data": "data",
+  "map": "build/map.json",
+  "run": "2026-10-03-1525",
+  "workspace": "a11y"
+ },
+ "run": "2026-10-03-1525"
+}

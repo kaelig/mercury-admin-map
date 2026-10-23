@@ -1,0 +1,628 @@
+{
+ "area": "cards",
+ "batch": "verify-122",
+ "findings": [
+  {
+   "attachments": [],
+   "attempt": 1,
+   "basis": "violation",
+   "criteria": [
+    "1.3.5"
+   ],
+   "evidence": [
+    {
+     "evidence": {
+      "failureSummary": "Fix all of the following:\n  the autocomplete attribute is incorrectly formatted"
+     },
+     "occurrence": {
+      "ancestors": [
+       [
+        "_inputBox_q7hf7_93",
+        "_hasValue_q7hf7_171"
+       ],
+       [
+        "_inputBoxWrapper_q7hf7_93"
+       ],
+       [
+        "_textInputWrapper_q7hf7_24"
+       ],
+       [
+        "_provideDSTextInput_q7hf7_6"
+       ],
+       [
+        "_nameField_112ku_41"
+       ],
+       [
+        "_row_112ku_33"
+       ],
+       [
+        "_fieldGroup_112ku_27"
+       ],
+       [
+        "_fields_112ku_18"
+       ]
+      ],
+      "classes": [
+       "_input_q7hf7_93"
+      ],
+      "data": {},
+      "heading": "Edit budget",
+      "landmark": {
+       "name": "",
+       "role": "main"
+      },
+      "layer": "document",
+      "name": "Name",
+      "rect": [
+       113,
+       271,
+       418,
+       24
+      ],
+      "role": "textbox",
+      "tag": "input",
+      "xpath": "/html/body/div[1]/main[1]/div[1]/div[2]/div[2]/div[3]/div[1]/div[1]/div[1]/div[2]/div[1]/div[2]/div[1]/div[1]/div[1]/div[1]/div[1]/div[1]/div[1]/input[1]"
+     },
+     "state": "cards.budget-edit"
+    },
+    {
+     "evidence": {
+      "failureSummary": "Fix all of the following:\n  the autocomplete attribute is incorrectly formatted"
+     },
+     "occurrence": {
+      "ancestors": [
+       [
+        "_inputBox_q7hf7_93",
+        "_error_q7hf7_41"
+       ],
+       [
+        "_inputBoxWrapper_q7hf7_93"
+       ],
+       [
+        "_textInputWrapper_q7hf7_24"
+       ],
+       [
+        "_provideDSTextInput_q7hf7_6"
+       ],
+       [
+        "_nameField_112ku_41"
+       ],
+       [
+        "_row_112ku_33"
+       ],
+       [
+        "_fieldGroup_112ku_27"
+       ],
+       [
+        "_fields_112ku_18"
+       ]
+      ],
+      "classes": [
+       "_input_q7hf7_93"
+      ],
+      "data": {},
+      "heading": "Edit budget",
+      "landmark": {
+       "name": "",
+       "role": "main"
+      },
+      "layer": "document",
+      "name": "Name",
+      "rect": [
+       113,
+       271,
+       418,
+       24
+      ],
+      "role": "textbox",
+      "tag": "input",
+      "xpath": "/html/body/div[1]/main[1]/div[1]/div[2]/div[2]/div[3]/div[1]/div[1]/div[1]/div[2]/div[1]/div[2]/div[1]/div[1]/div[1]/div[1]/div[1]/div[1]/div[1]/input[1]"
+     },
+     "state": "cards.budget-edit-error"
+    }
+   ],
+   "evidenceHash": "6db902cf3783e77beb888ba769cf5dde2669d22c3e4ac18a9a917cb0c921838f",
+   "facts": {
+    "announced": "textbox \"Name\"",
+    "axeSummary": "the autocomplete attribute is incorrectly formatted",
+    "criterion": "1.3.5",
+    "criterionName": "Identify Input Purpose",
+    "element": "textbox \"Name\"",
+    "rule": "autocomplete-valid",
+    "screen": "Edit budget"
+   },
+   "family": "role-state",
+   "guidance": "Low for optional ARIA or an invalid autocomplete token; high when aria-hidden hides the whole page.",
+   "issueId": null,
+   "key": "role-state:autocomplete-valid:3c9432f3887c",
+   "measured": false,
+   "primary": "cards.budget-edit",
+   "proposals": [],
+   "rule": "autocomplete-valid",
+   "screens": 5,
+   "severityDefault": "medium",
+   "source": "scanner",
+   "states": [
+    "cards.budget-edit",
+    "cards.budget-edit-error"
+   ],
+   "summary": "autocomplete-valid: announced as textbox \"Name\". the autocomplete attribute is incorrectly formatted",
+   "title": "Invalid autocomplete value: textbox \"Name\""
+  },
+  {
+   "attachments": [],
+   "attempt": 1,
+   "basis": "violation",
+   "criteria": [
+    "1.3.5"
+   ],
+   "evidence": [
+    {
+     "evidence": {
+      "failureSummary": "Fix all of the following:\n  the autocomplete attribute is incorrectly formatted"
+     },
+     "occurrence": {
+      "ancestors": [
+       [
+        "_inputBox_q7hf7_93",
+        "_hasValue_q7hf7_171"
+       ],
+       [
+        "_inputBoxWrapper_q7hf7_93"
+       ],
+       [
+        "_textInputWrapper_q7hf7_24"
+       ],
+       [
+        "_provideDSTextInput_q7hf7_6",
+        "_flexField_112ku_49"
+       ],
+       [
+        "_row_112ku_33"
+       ],
+       [
+        "_fieldGroup_112ku_27"
+       ],
+       [
+        "_fields_112ku_18"
+       ],
+       [
+        "_formContent_112ku_3"
+       ]
+      ],
+      "classes": [
+       "_input_q7hf7_93"
+      ],
+      "data": {},
+      "heading": "Edit budget",
+      "landmark": {
+       "name": "",
+       "role": "main"
+      },
+      "layer": "document",
+      "name": "Spend limit per person",
+      "rect": [
+       128,
+       351,
+       213,
+       24
+      ],
+      "role": "textbox",
+      "tag": "input",
+      "xpath": "/html/body/div[1]/main[1]/div[1]/div[2]/div[2]/div[3]/div[1]/div[1]/div[1]/div[2]/div[1]/div[2]/div[1]/div[2]/div[1]/div[1]/div[1]/div[1]/input[1]"
+     },
+     "state": "cards.budget-edit"
+    },
+    {
+     "evidence": {
+      "failureSummary": "Fix all of the following:\n  the autocomplete attribute is incorrectly formatted"
+     },
+     "occurrence": {
+      "ancestors": [
+       [
+        "_inputBox_q7hf7_93",
+        "_hasValue_q7hf7_171",
+        "_error_q7hf7_41"
+       ],
+       [
+        "_inputBoxWrapper_q7hf7_93"
+       ],
+       [
+        "_textInputWrapper_q7hf7_24"
+       ],
+       [
+        "_provideDSTextInput_q7hf7_6",
+        "_flexField_112ku_49"
+       ],
+       [
+        "_row_112ku_33"
+       ],
+       [
+        "_fieldGroup_112ku_27"
+       ],
+       [
+        "_fields_112ku_18"
+       ],
+       [
+        "_formContent_112ku_3"
+       ]
+      ],
+      "classes": [
+       "_input_q7hf7_93"
+      ],
+      "data": {},
+      "heading": "Create a budget",
+      "landmark": {
+       "name": "",
+       "role": "main"
+      },
+      "layer": "document",
+      "name": "Spend limit per person",
+      "rect": [
+       128,
+       375,
+       213,
+       24
+      ],
+      "role": "textbox",
+      "tag": "input",
+      "xpath": "/html/body/div[1]/main[1]/div[1]/div[2]/div[2]/div[3]/div[1]/div[1]/div[1]/div[2]/div[1]/div[2]/div[1]/div[2]/div[1]/div[1]/div[1]/div[1]/input[1]"
+     },
+     "state": "cards.create-budget-errors"
+    }
+   ],
+   "evidenceHash": "9676520932cc5147b7e09f759265556cb20701dd11646227857c1c9ddb2b93e3",
+   "facts": {
+    "announced": "textbox \"Spend limit per person\"",
+    "axeSummary": "the autocomplete attribute is incorrectly formatted",
+    "criterion": "1.3.5",
+    "criterionName": "Identify Input Purpose",
+    "element": "textbox \"Spend limit per person\"",
+    "rule": "autocomplete-valid",
+    "screen": "Edit budget"
+   },
+   "family": "role-state",
+   "guidance": "Low for optional ARIA or an invalid autocomplete token; high when aria-hidden hides the whole page.",
+   "issueId": null,
+   "key": "role-state:autocomplete-valid:6a638696dac0",
+   "measured": false,
+   "primary": "cards.budget-edit",
+   "proposals": [],
+   "rule": "autocomplete-valid",
+   "screens": 5,
+   "severityDefault": "medium",
+   "source": "scanner",
+   "states": [
+    "cards.budget-edit",
+    "cards.create-budget-errors"
+   ],
+   "summary": "autocomplete-valid: announced as textbox \"Spend limit per person\". the autocomplete attribute is incorrectly formatted",
+   "title": "Invalid autocomplete value: textbox \"Spend limit per person\""
+  },
+  {
+   "attachments": [],
+   "attempt": 1,
+   "basis": "violation",
+   "criteria": [
+    "1.3.5"
+   ],
+   "evidence": [
+    {
+     "evidence": {
+      "failureSummary": "Fix all of the following:\n  the autocomplete attribute is incorrectly formatted"
+     },
+     "occurrence": {
+      "ancestors": [
+       [
+        "_inputWrapper_11c85_6"
+       ],
+       [
+        "_wrapper_1xgdp_8"
+       ],
+       [
+        "_fields_6qknk_1"
+       ],
+       [
+        "_fields_112ku_18"
+       ],
+       [
+        "_formContent_112ku_3"
+       ],
+       [
+        "_left_yg1rf_39",
+        "_wideLeftColumn_evx13_10"
+       ],
+       [
+        "_leftScrollArea_yg1rf_57"
+       ],
+       [
+        "_leftContainer_yg1rf_39",
+        "_splitVariant_yg1rf_82"
+       ]
+      ],
+      "classes": [
+       "_input_11c85_6"
+      ],
+      "data": {
+       "data-1p-ignore": "true",
+       "data-active-item": "true",
+       "data-bwignore": "true",
+       "data-lpignore": "true"
+      },
+      "heading": "Edit budget",
+      "landmark": {
+       "name": "",
+       "role": "main"
+      },
+      "layer": "document",
+      "name": "Spend controls",
+      "rect": [
+       100,
+       593,
+       487,
+       40
+      ],
+      "role": "combobox",
+      "tag": "input",
+      "xpath": "/html/body/div[1]/main[1]/div[1]/div[2]/div[2]/div[3]/div[1]/div[1]/div[1]/div[2]/div[1]/div[2]/div[2]/div[1]/div[1]/input[1]"
+     },
+     "state": "cards.budget-edit"
+    },
+    {
+     "evidence": {
+      "failureSummary": "Fix all of the following:\n  the autocomplete attribute is incorrectly formatted"
+     },
+     "occurrence": {
+      "ancestors": [
+       [
+        "_inputWrapper_11c85_6"
+       ],
+       [
+        "_wrapper_1xgdp_8"
+       ],
+       [
+        "_fields_6qknk_1"
+       ],
+       [
+        "_fields_112ku_18"
+       ],
+       [
+        "_formContent_112ku_3"
+       ],
+       [
+        "_left_yg1rf_39",
+        "_wideLeftColumn_evx13_10"
+       ],
+       [
+        "_leftScrollArea_yg1rf_57"
+       ],
+       [
+        "_leftContainer_yg1rf_39",
+        "_splitVariant_yg1rf_82"
+       ]
+      ],
+      "classes": [
+       "_input_11c85_6"
+      ],
+      "data": {
+       "data-1p-ignore": "true",
+       "data-active-item": "true",
+       "data-bwignore": "true",
+       "data-lpignore": "true"
+      },
+      "heading": "Edit budget",
+      "landmark": {
+       "name": "",
+       "role": "main"
+      },
+      "layer": "document",
+      "name": "Spend controls",
+      "rect": [
+       100,
+       617,
+       487,
+       40
+      ],
+      "role": "combobox",
+      "tag": "input",
+      "xpath": "/html/body/div[1]/main[1]/div[1]/div[2]/div[2]/div[3]/div[1]/div[1]/div[1]/div[2]/div[1]/div[2]/div[2]/div[1]/div[1]/input[1]"
+     },
+     "state": "cards.budget-edit-error"
+    }
+   ],
+   "evidenceHash": "6db902cf3783e77beb888ba769cf5dde2669d22c3e4ac18a9a917cb0c921838f",
+   "facts": {
+    "announced": "combobox \"Spend controls\" [expanded=false, haspopup=listbox] (Only transactions…",
+    "axeSummary": "the autocomplete attribute is incorrectly formatted",
+    "criterion": "1.3.5",
+    "criterionName": "Identify Input Purpose",
+    "element": "combobox \"Spend controls\"",
+    "rule": "autocomplete-valid",
+    "screen": "Edit budget"
+   },
+   "family": "role-state",
+   "guidance": "Low for optional ARIA or an invalid autocomplete token; high when aria-hidden hides the whole page.",
+   "issueId": null,
+   "key": "role-state:autocomplete-valid:dd553c8de0b0",
+   "measured": false,
+   "primary": "cards.budget-edit",
+   "proposals": [],
+   "rule": "autocomplete-valid",
+   "screens": 5,
+   "severityDefault": "medium",
+   "source": "scanner",
+   "states": [
+    "cards.budget-edit",
+    "cards.budget-edit-error"
+   ],
+   "summary": "autocomplete-valid: announced as combobox \"Spend controls\" [expanded=false, haspopup=listbox] (Only transactions…. the autocomplete attribute is incorrectly formatted",
+   "title": "Invalid autocomplete value: combobox \"Spend controls\""
+  },
+  {
+   "attachments": [],
+   "attempt": 1,
+   "basis": "violation",
+   "criteria": [
+    "1.3.5"
+   ],
+   "evidence": [
+    {
+     "evidence": {
+      "failureSummary": "Fix all of the following:\n  the autocomplete attribute is incorrectly formatted"
+     },
+     "occurrence": {
+      "ancestors": [
+       [
+        "_textareaWrapper_54wwi_16",
+        "_rowSizing_54wwi_149"
+       ],
+       [
+        "_textareaProgressWrapper_54wwi_28"
+       ],
+       [
+        "_textareaBoundingWrapper_54wwi_7"
+       ],
+       [
+        "_fieldGroup_112ku_27"
+       ],
+       [
+        "_fields_112ku_18"
+       ],
+       [
+        "_formContent_112ku_3"
+       ],
+       [
+        "_left_yg1rf_39",
+        "_wideLeftColumn_evx13_10"
+       ],
+       [
+        "_leftScrollArea_yg1rf_57"
+       ]
+      ],
+      "classes": [
+       "_textarea_54wwi_7"
+      ],
+      "data": {
+       "data-session-replay-mask": "true"
+      },
+      "heading": "Edit budget",
+      "landmark": {
+       "name": "",
+       "role": "main"
+      },
+      "layer": "document",
+      "name": "Description",
+      "rect": [
+       101,
+       424,
+       518,
+       88
+      ],
+      "role": "textbox",
+      "tag": "textarea",
+      "xpath": "/html/body/div[1]/main[1]/div[1]/div[2]/div[2]/div[3]/div[1]/div[1]/div[1]/div[2]/div[1]/div[2]/div[1]/div[3]/div[1]/div[1]/textarea[1]"
+     },
+     "state": "cards.budget-edit"
+    },
+    {
+     "evidence": {
+      "failureSummary": "Fix all of the following:\n  the autocomplete attribute is incorrectly formatted"
+     },
+     "occurrence": {
+      "ancestors": [
+       [
+        "_textareaWrapper_54wwi_16",
+        "_error_54wwi_36",
+        "_rowSizing_54wwi_149"
+       ],
+       [
+        "_textareaProgressWrapper_54wwi_28"
+       ],
+       [
+        "_textareaBoundingWrapper_54wwi_7",
+        "_error_54wwi_36"
+       ],
+       [
+        "_fieldGroup_112ku_27"
+       ],
+       [
+        "_fields_112ku_18"
+       ],
+       [
+        "_formContent_112ku_3"
+       ],
+       [
+        "_left_yg1rf_39",
+        "_wideLeftColumn_evx13_10"
+       ],
+       [
+        "_leftScrollArea_yg1rf_57"
+       ]
+      ],
+      "classes": [
+       "_textarea_54wwi_7"
+      ],
+      "data": {
+       "data-session-replay-mask": "true"
+      },
+      "heading": "Create a budget",
+      "landmark": {
+       "name": "",
+       "role": "main"
+      },
+      "layer": "document",
+      "name": "Description",
+      "rect": [
+       101,
+       472,
+       518,
+       88
+      ],
+      "role": "textbox",
+      "tag": "textarea",
+      "xpath": "/html/body/div[1]/main[1]/div[1]/div[2]/div[2]/div[3]/div[1]/div[1]/div[1]/div[2]/div[1]/div[2]/div[1]/div[3]/div[1]/div[1]/textarea[1]"
+     },
+     "state": "cards.create-budget-errors"
+    }
+   ],
+   "evidenceHash": "9676520932cc5147b7e09f759265556cb20701dd11646227857c1c9ddb2b93e3",
+   "facts": {
+    "announced": "textbox \"Description\" (A brief purpose will make this budget smarter)",
+    "axeSummary": "the autocomplete attribute is incorrectly formatted",
+    "criterion": "1.3.5",
+    "criterionName": "Identify Input Purpose",
+    "element": "textbox \"Description\"",
+    "rule": "autocomplete-valid",
+    "screen": "Edit budget"
+   },
+   "family": "role-state",
+   "guidance": "Low for optional ARIA or an invalid autocomplete token; high when aria-hidden hides the whole page.",
+   "issueId": null,
+   "key": "role-state:autocomplete-valid:f35cb7052125",
+   "measured": false,
+   "primary": "cards.budget-edit",
+   "proposals": [],
+   "rule": "autocomplete-valid",
+   "screens": 5,
+   "severityDefault": "medium",
+   "source": "scanner",
+   "states": [
+    "cards.budget-edit",
+    "cards.create-budget-errors"
+   ],
+   "summary": "autocomplete-valid: announced as textbox \"Description\" (A brief purpose will make this budget smarter). the autocomplete attribute is incorrectly formatted",
+   "title": "Invalid autocomplete value: textbox \"Description\""
+  }
+ ],
+ "primaries": [
+  "cards.budget-edit"
+ ],
+ "reach": {
+  "baseUrl": "https://demo.mercury.com",
+  "data": "data",
+  "map": "build/map.json",
+  "run": "2026-10-03-1525",
+  "workspace": "a11y"
+ },
+ "run": "2026-10-03-1525"
+}

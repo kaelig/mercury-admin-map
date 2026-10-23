@@ -1,0 +1,48 @@
+{
+ "batch": "record-122",
+ "reach": {
+  "baseUrl": "https://demo.mercury.com",
+  "data": "data",
+  "map": "build/map.json",
+  "run": "2026-10-02-1349",
+  "workspace": "a11y"
+ },
+ "run": "2026-10-02-1349",
+ "states": [
+  {
+   "area": "transactions",
+   "draft": "not drafted: its parent had no accepted recipe when the drafter ran; the conductor rejected the previous recipe: form-state condition missing: the hop types 'Lunch' into the Mercury Working Capital row's Category combobox (the same row the parent opens, so the row is fine), but nothing matches and the list shows only '+ Create category'; the capture shows 'Lunch' narrowing the list to Lunch Perks. Needs a search term that matches a category on this row (e.g. 'Soft' for Software); a previous recorder failed: policy (now retry: policy.fixtureValues gained empty \"\", 2000000, 10000, 2500, 500, 150, card, a, zzqxnothing, Lunch, Deli 77, 12/31/2099, http://example.invalid/a11y-audit): The label types \"Lunch\" in the row Category combobox; \"Lunch\" is not a fixture value.",
+   "image": "screens/transactions/75-row-category-search.png",
+   "kind": "form-state",
+   "labels": [
+    "Click a row Category combobox",
+    "Type to search categories"
+   ],
+   "mutates": false,
+   "note": "Typing \"Lunch\" in a row's Category combobox filters the list to Lunch Perks with a + Create category action.",
+   "parent": "transactions.row-category-dropdown",
+   "state": "transactions.row-category-search",
+   "title": "Row category search"
+  },
+  {
+   "area": "transactions",
+   "draft": "not drafted: its parent had no accepted recipe when the drafter ran",
+   "image": "screens/transactions/18-view-saved-confirmation.png",
+   "kind": "toast",
+   "labels": [
+    "Click Saved views",
+    "Choose Monthly money out",
+    "Click Filters (3)",
+    "Click Amount tab",
+    "Open Save menu",
+    "Click Create New View",
+    "Type a name and click Save"
+   ],
+   "mutates": true,
+   "note": "New view \"Large payments Q3\" becomes the active chip and a \"View saved\" toast appears.",
+   "parent": "transactions.create-view-modal",
+   "state": "transactions.view-saved",
+   "title": "View saved"
+  }
+ ]
+}

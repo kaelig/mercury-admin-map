@@ -1,0 +1,236 @@
+{
+ "advisory": [],
+ "findings": [
+  {
+   "basis": "violation",
+   "criteria": [
+    "1.4.3"
+   ],
+   "evidenceHash": "67b245be98c6b6687ed681fb1e56aa8d6a2824aef21f9617c63f85791d6320be",
+   "facts": {
+    "bg": "#ffffff",
+    "criterion": "1.4.3",
+    "criterionName": "Contrast (Minimum)",
+    "element": "text in \"Recent activity\"",
+    "fg": "#868692",
+    "ratio": "3.59",
+    "required": "4.5",
+    "rule": "color-contrast",
+    "screen": "Canary — Recent activity",
+    "screens": 1
+   },
+   "family": "contrast",
+   "issueId": null,
+   "key": "contrast:color-contrast:08b19f94d746",
+   "occurrences": [
+    {
+     "index": 0,
+     "state": "canary.activity"
+    }
+   ],
+   "primary": "canary.activity",
+   "recordSig": null,
+   "rule": "color-contrast",
+   "sample": [
+    "canary.activity"
+   ],
+   "severityDefault": "medium",
+   "source": "scanner",
+   "states": [
+    "canary.activity"
+   ],
+   "summary": "axe color-contrast: #868692 on #ffffff measures 3.59:1; AA needs 4.5:1.",
+   "title": "Low contrast: text in \"Recent activity\""
+  },
+  {
+   "basis": "incomplete",
+   "criteria": [
+    "1.4.3"
+   ],
+   "evidenceHash": "87bbacd384a3876cc0344a126cf8d89431513324bcd3f419605e7876627bca59",
+   "facts": {
+    "criterion": "1.4.3",
+    "criterionName": "Contrast (Minimum)",
+    "elements": "1 element",
+    "messageKey": "bgGradient",
+    "rule": "color-contrast",
+    "screen": "Canary — Treasury",
+    "why": "it sits on a background gradient"
+   },
+   "family": "contrast",
+   "issueId": null,
+   "key": "contrast:color-contrast:0f3893042bc0",
+   "occurrences": [
+    {
+     "index": 0,
+     "state": "canary.hero"
+    }
+   ],
+   "primary": "canary.hero",
+   "recordSig": null,
+   "rule": "color-contrast",
+   "sample": [
+    "canary.hero"
+   ],
+   "severityDefault": "medium",
+   "source": "scanner",
+   "states": [
+    "canary.hero"
+   ],
+   "summary": "axe color-contrast could not decide 1 element (bgGradient): it sits on a background gradient.",
+   "title": "Needs review: color-contrast, it sits on a background gradient"
+  },
+  {
+   "basis": "failure",
+   "criteria": [
+    "2.1.1",
+    "4.1.2"
+   ],
+   "evidenceHash": "b49753d57a25e119165c7c8fe09be9d117628ac72b0cabc9c447f0b915330fed",
+   "facts": {},
+   "family": "keyboard",
+   "issueId": "canary.i-tabs-clickable-divs",
+   "key": "hand:canary.i-tabs-clickable-divs",
+   "occurrences": [],
+   "primary": "canary.tabs",
+   "recordSig": null,
+   "rule": "hand-found",
+   "sample": [
+    "canary.tabs"
+   ],
+   "severityDefault": "medium",
+   "source": "hand-found",
+   "states": [
+    "canary.tabs"
+   ],
+   "summary": "Accounts: 3 <div class=\"_tab_cnry3_6\" onclick> tabs, no tabindex, no role=tab, 0 [role=tablist].",
+   "title": "Tabs and inline actions are clickable divs"
+  },
+  {
+   "basis": "violation",
+   "criteria": [
+    "4.1.2"
+   ],
+   "evidenceHash": "91f1a9ffab788a2c5db645bf2f1f29a49811049047431eea4f74855ea9d4543d",
+   "facts": {
+    "announced": "button \"\"",
+    "axeSummary": "Element does not have inner text that is visible to screen readers; aria-label attribute does not exist or is empty; aria-labelledby attribute does not exist,…",
+    "criterion": "4.1.2",
+    "criterionName": "Name, Role, Value",
+    "element": "button in \"Statements\"",
+    "rule": "button-name",
+    "screen": "Canary — Statements"
+   },
+   "family": "name",
+   "issueId": null,
+   "key": "name:button-name:308a5e0e10fb",
+   "occurrences": [
+    {
+     "index": 0,
+     "state": "canary.export"
+    }
+   ],
+   "primary": "canary.export",
+   "recordSig": null,
+   "rule": "button-name",
+   "sample": [
+    "canary.export"
+   ],
+   "severityDefault": "medium",
+   "source": "scanner",
+   "states": [
+    "canary.export"
+   ],
+   "summary": "button-name: announced as button \"\". Element does not have inner text that is visible to screen readers; aria-label attribute does not exist or is empty; aria-labelledby attribute does not exist,…",
+   "title": "Missing or unclear name: button in \"Statements\""
+  },
+  {
+   "basis": "violation",
+   "criteria": [
+    "4.1.2"
+   ],
+   "evidenceHash": "fde37fb6446c16004e3072826f9c76c8b7dde76ae6ce0bce9bc90a4c1aa6b6d3",
+   "facts": {
+    "announced": "button \"\"",
+    "axeSummary": "Element does not have inner text that is visible to screen readers; aria-label attribute does not exist or is empty; aria-labelledby attribute does not exist,…",
+    "criterion": "4.1.2",
+    "criterionName": "Name, Role, Value",
+    "element": "button in \"Recent activity\"",
+    "rule": "button-name",
+    "screen": "Canary — Recent activity"
+   },
+   "family": "name",
+   "issueId": null,
+   "key": "name:button-name:ee11775fbc23",
+   "occurrences": [
+    {
+     "index": 1,
+     "state": "canary.activity"
+    }
+   ],
+   "primary": "canary.activity",
+   "recordSig": null,
+   "rule": "button-name",
+   "sample": [
+    "canary.activity"
+   ],
+   "severityDefault": "medium",
+   "source": "scanner",
+   "states": [
+    "canary.activity"
+   ],
+   "summary": "button-name: announced as button \"\". Element does not have inner text that is visible to screen readers; aria-label attribute does not exist or is empty; aria-labelledby attribute does not exist,…",
+   "title": "Missing or unclear name: button in \"Recent activity\""
+  },
+  {
+   "basis": "violation",
+   "criteria": [
+    "2.5.8"
+   ],
+   "evidenceHash": "144bf2dcd043cbbbb5f140458aac0b44a49adb71cef9bb40b449b6363ad76050",
+   "facts": {
+    "criterion": "2.5.8",
+    "criterionName": "Target Size (Minimum)",
+    "element": "button \"Bold\"",
+    "offset": "12",
+    "rule": "target-size",
+    "screen": "Canary — Notes",
+    "screens": 1,
+    "size": "16×16"
+   },
+   "family": "target-size",
+   "issueId": null,
+   "key": "target-size:target-size:1fe561542e17",
+   "occurrences": [
+    {
+     "index": 0,
+     "state": "canary.toolbar"
+    },
+    {
+     "index": 1,
+     "state": "canary.toolbar"
+    },
+    {
+     "index": 2,
+     "state": "canary.toolbar"
+    }
+   ],
+   "primary": "canary.toolbar",
+   "recordSig": null,
+   "rule": "target-size",
+   "sample": [
+    "canary.toolbar"
+   ],
+   "severityDefault": "low",
+   "source": "scanner",
+   "states": [
+    "canary.toolbar"
+   ],
+   "summary": "target-size: 16×16 px; the widest circle centered on it that clears other targets is 12 px, and the spacing exception needs 24 px.",
+   "title": "Target under 24×24 px: button \"Bold\""
+  }
+ ],
+ "flags": [],
+ "proposals": [],
+ "run": "canary"
+}

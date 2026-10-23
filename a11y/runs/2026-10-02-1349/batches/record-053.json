@@ -1,0 +1,155 @@
+{
+ "batch": "record-053",
+ "reach": {
+  "baseUrl": "https://demo.mercury.com",
+  "data": "data",
+  "map": "build/map.json",
+  "run": "2026-10-02-1349",
+  "workspace": "a11y"
+ },
+ "run": "2026-10-02-1349",
+ "states": [
+  {
+   "area": "settings",
+   "draft": "not drafted: its parent had no accepted recipe when the drafter ran",
+   "image": "screens/settings/50-edit-user.png",
+   "kind": "form-state",
+   "labels": [
+    "Click a team member row",
+    "Click Edit"
+   ],
+   "mutates": false,
+   "note": "Panel in edit mode: job title select (Other) + free-text title, department combobox, role select and permission toggles.",
+   "parent": "settings.user-detail",
+   "state": "settings.edit-member",
+   "title": "Edit member panel"
+  },
+  {
+   "area": "settings",
+   "draft": "not drafted: its parent had no accepted recipe when the drafter ran",
+   "image": "screens/settings/51-edit-user-dirty.png",
+   "kind": "form-state",
+   "labels": [
+    "Click a team member row",
+    "Click Edit",
+    "Change Specify job title"
+   ],
+   "mutates": false,
+   "note": "After changing the job title, the panel footer's Cancel/Save become active (Save was disabled until a change).",
+   "parent": "settings.edit-member",
+   "state": "settings.edit-member-dirty",
+   "title": "Edit member \u2014 changed, Save enabled"
+  },
+  {
+   "area": "settings",
+   "draft": "not drafted: its parent had no accepted recipe when the drafter ran",
+   "image": "screens/settings/52-user-saved.png",
+   "kind": "toast",
+   "labels": [
+    "Click a team member row",
+    "Click Edit",
+    "Change Specify job title",
+    "Click Save"
+   ],
+   "mutates": true,
+   "note": "Panel returns to read view showing 'Senior Software Engineer' and a 'Job title updated' toast.",
+   "parent": "settings.edit-member-dirty",
+   "state": "settings.member-saved",
+   "title": "Job title updated toast"
+  },
+  {
+   "area": "settings",
+   "draft": "not drafted: its parent had no accepted recipe when the drafter ran",
+   "image": "screens/settings/19-share-document.png",
+   "kind": "modal",
+   "labels": [
+    "Check statement rows",
+    "Click Share documents"
+   ],
+   "mutates": false,
+   "note": "Full-screen takeover: recipient emails tag input, summary card of the selected statements, sensitivity warning, Back / Share via email.",
+   "parent": "settings.documents-selected",
+   "state": "settings.share-documents",
+   "title": "Share documents"
+  },
+  {
+   "area": "settings",
+   "draft": "not drafted: its parent had no accepted recipe when the drafter ran",
+   "image": "screens/settings/20-share-empty-error.png",
+   "kind": "validation-error",
+   "labels": [
+    "Check statement rows",
+    "Click Share documents",
+    "Click Share via email with no recipient"
+   ],
+   "mutates": true,
+   "note": "Full-screen share flow; submitting without recipients shows a pink banner 'Please enter one or more email addresses.' above the field.",
+   "parent": "settings.share-documents",
+   "state": "settings.share-documents-error",
+   "title": "Share documents \u2014 no recipient"
+  },
+  {
+   "area": "settings",
+   "draft": "not drafted: its parent had no accepted recipe when the drafter ran",
+   "image": "screens/settings/57-role-account-error.png",
+   "kind": "validation-error",
+   "labels": [
+    "Click Save New Role with empty form",
+    "Enter a name, tick Send money, click Save New Role"
+   ],
+   "mutates": true,
+   "note": "With a name but no account ticked, 'Please select at least one checking account.' appears above Account access.",
+   "parent": "settings.create-role-errors",
+   "state": "settings.create-role-account-error",
+   "title": "Create role \u2014 account access required"
+  },
+  {
+   "area": "settings",
+   "draft": "not drafted: its parent had no accepted recipe when the drafter ran",
+   "image": "screens/settings/93-create-token-errors.png",
+   "kind": "validation-error",
+   "labels": [
+    "Click + Create an API token",
+    "Click Create token with the form empty"
+   ],
+   "mutates": true,
+   "note": "Create token on an empty form flags Nickname and Permissions with 'Please complete this field' (12px, rgb(252,146,180)); IP whitelist is optional.",
+   "parent": "settings.create-token",
+   "state": "settings.create-token-errors",
+   "title": "Create API token \u2014 empty submit"
+  },
+  {
+   "area": "settings",
+   "draft": "not drafted: its parent had no accepted recipe when the drafter ran",
+   "image": "screens/settings/32-netsuite-synced.png",
+   "kind": "toast",
+   "labels": [
+    "Click the NetSuite row",
+    "Open the Treasury GL code select",
+    "Pick a GL code and click Next",
+    "Choose a Bill pay GL code and click Next",
+    "Click Start sync"
+   ],
+   "mutates": true,
+   "note": "Back on Integrations, NetSuite leaves the browse list and a toast says 'Your Mercury account is now connected to NetSuite.'",
+   "parent": "settings.netsuite-step3",
+   "state": "settings.netsuite-connected",
+   "title": "NetSuite connected toast"
+  },
+  {
+   "area": "settings",
+   "draft": "not drafted: its parent had no accepted recipe when the drafter ran",
+   "image": "screens/settings/53-remove-user.png",
+   "kind": "modal",
+   "labels": [
+    "Click a team member row",
+    "Click Remove"
+   ],
+   "mutates": true,
+   "note": "'Remove Alice?' warns cards will be canceled and 6 subscriptions affected; Go back / pink 'Remove Alice'.",
+   "parent": "settings.user-detail",
+   "state": "settings.remove-member-confirm",
+   "title": "Remove member confirmation"
+  }
+ ]
+}

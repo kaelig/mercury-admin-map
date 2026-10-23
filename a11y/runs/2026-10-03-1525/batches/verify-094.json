@@ -1,0 +1,192 @@
+{
+ "area": "billpay",
+ "batch": "verify-094",
+ "findings": [
+  {
+   "attachments": [],
+   "attempt": 1,
+   "basis": "incomplete",
+   "criteria": [
+    "1.4.1"
+   ],
+   "evidence": [
+    {
+     "evidence": {
+      "failureSummary": "Fix any of the following:\n  Element's foreground contrast ratio could not be determined",
+      "messageKey": "elmPartiallyObscured"
+     },
+     "occurrence": {
+      "ancestors": [
+       [
+        "_text-secondary_12t49_1"
+       ],
+       [
+        "_bodySecondary_qaod7_51",
+        "_text-secondary_12t49_1"
+       ],
+       [
+        "_left_b9rf7_6"
+       ],
+       [
+        "_settingSection_b9rf7_3"
+       ],
+       [
+        "_scrollContainer_b9rf7_38"
+       ],
+       [
+        "_large_kwlx6_9",
+        "_noHover_3n0se_28",
+        "_shadow_3n0se_25",
+        "_raisedBackground_3n0se_45",
+        "_card_lo4oy_4",
+        "_medium_lo4oy_15"
+       ],
+       [
+        "ReactModal__Content",
+        "ReactModal__Content--after-open",
+        "_modal_lo4oy_73"
+       ],
+       [
+        "ReactModal__Overlay",
+        "ReactModal__Overlay--after-open",
+        "_overlay_lo4oy_89",
+        "_backgroundColor_lo4oy_103"
+       ]
+      ],
+      "classes": [
+       "_link_ual8v_4",
+       "_underlineOnHover_ual8v_15"
+      ],
+      "data": {
+       "data-discover": "true"
+      },
+      "heading": "Bill Pay settings",
+      "landmark": {
+       "name": "",
+       "role": "dialog"
+      },
+      "layer": "top",
+      "name": "Manage",
+      "rect": [
+       796,
+       96,
+       50,
+       16
+      ],
+      "role": "link",
+      "tag": "a",
+      "xpath": "/html/body/div[11]/div[1]/div[1]/div[1]/div[2]/div[2]/div[1]/span[1]/span[1]/a[1]"
+     },
+     "state": "billpay.settings-bottom"
+    },
+    {
+     "evidence": {
+      "failureSummary": "Fix any of the following:\n  Element's foreground contrast ratio could not be determined",
+      "messageKey": "elmPartiallyObscured"
+     },
+     "occurrence": {
+      "ancestors": [
+       [
+        "_text-secondary_12t49_1"
+       ],
+       [
+        "_bodySecondary_qaod7_51",
+        "_text-secondary_12t49_1"
+       ],
+       [
+        "_left_b9rf7_6"
+       ],
+       [
+        "_settingSection_b9rf7_3"
+       ],
+       [
+        "_scrollContainer_b9rf7_38"
+       ],
+       [
+        "_large_kwlx6_9",
+        "_noHover_3n0se_28",
+        "_shadow_3n0se_25",
+        "_raisedBackground_3n0se_45",
+        "_card_lo4oy_4",
+        "_medium_lo4oy_15"
+       ],
+       [
+        "ReactModal__Content",
+        "ReactModal__Content--after-open",
+        "_modal_lo4oy_73"
+       ],
+       [
+        "ReactModal__Overlay",
+        "ReactModal__Overlay--after-open",
+        "_overlay_lo4oy_89",
+        "_backgroundColor_lo4oy_103"
+       ]
+      ],
+      "classes": [
+       "_link_ual8v_4",
+       "_underlineOnHover_ual8v_15"
+      ],
+      "data": {
+       "data-discover": "true"
+      },
+      "heading": "Bill Pay settings",
+      "landmark": {
+       "name": "",
+       "role": "dialog"
+      },
+      "layer": "top",
+      "name": "Manage",
+      "rect": [
+       796,
+       96,
+       50,
+       16
+      ],
+      "role": "link",
+      "tag": "a",
+      "xpath": "/html/body/div[11]/div[1]/div[1]/div[1]/div[2]/div[2]/div[1]/span[1]/span[1]/a[1]"
+     },
+     "state": "billpay.approved-senders-edit"
+    }
+   ],
+   "evidenceHash": "f0ecd7094846f2abe44aa95e674390c268aad38be0bcc2b823ee54831a4bdd0f",
+   "facts": {
+    "criterion": "1.4.1",
+    "criterionName": "Use of Color",
+    "elements": "1 element",
+    "messageKey": "elmPartiallyObscured",
+    "rule": "link-in-text-block",
+    "screen": "Bill Pay settings (lower)",
+    "why": "another element partly covers it"
+   },
+   "family": "contrast",
+   "guidance": "High under 2:1, or under 3:1 for essential text.",
+   "issueId": null,
+   "key": "contrast:link-in-text-block:50db2a297136",
+   "measured": true,
+   "primary": "billpay.settings-bottom",
+   "proposals": [],
+   "rule": "link-in-text-block",
+   "screens": 2,
+   "severityDefault": "medium",
+   "source": "scanner",
+   "states": [
+    "billpay.settings-bottom",
+    "billpay.approved-senders-edit"
+   ],
+   "summary": "axe link-in-text-block could not decide 1 element (elmPartiallyObscured): another element partly covers it.",
+   "title": "Needs review: link-in-text-block, another element partly covers it"
+  }
+ ],
+ "primaries": [
+  "billpay.settings-bottom"
+ ],
+ "reach": {
+  "baseUrl": "https://demo.mercury.com",
+  "data": "data",
+  "map": "build/map.json",
+  "run": "2026-10-03-1525",
+  "workspace": "a11y"
+ },
+ "run": "2026-10-03-1525"
+}

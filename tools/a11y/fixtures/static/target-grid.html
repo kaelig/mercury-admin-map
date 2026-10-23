@@ -1,0 +1,27 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Icon buttons</title>
+<style>
+  body { font: 16px/1.5 Arial, sans-serif; color: #1a1a1a; background: #ffffff; margin: 24px; }
+  .tools { display: flex; }
+  /* 20x20 icon buttons. With a 4 px gap the centers are 24 px apart: the circles touch but do not
+     intersect, and each circle stays 14 px from the next button. With no gap they are 20 px apart. */
+  .i { width: 20px; height: 20px; padding: 0; margin: 0; border: 0; background: #1a1a1a; box-sizing: border-box; }
+  #spaced { gap: 4px; }
+  #tight { gap: 0; margin-top: 80px; }
+</style>
+</head>
+<body>
+<main>
+  <h1>Toolbar</h1>
+  <div class="tools" id="spaced">
+    <button type="button" class="i" aria-label="Bold"></button><button type="button" class="i" aria-label="Italic"></button><button type="button" class="i" aria-label="Underline"></button><button type="button" class="i" aria-label="Strike"></button><button type="button" class="i" aria-label="Link"></button><button type="button" class="i" aria-label="Quote"></button>
+  </div>
+  <div class="tools" id="tight">
+    <button type="button" class="i" aria-label="Undo"></button><button type="button" class="i" aria-label="Redo"></button><button type="button" class="i" aria-label="Cut"></button><button type="button" class="i" aria-label="Copy"></button><button type="button" class="i" aria-label="Paste"></button><button type="button" class="i" aria-label="Clear"></button>
+  </div>
+</main>
+</body>
+</html>

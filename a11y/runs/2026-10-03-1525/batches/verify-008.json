@@ -1,0 +1,2062 @@
+{
+ "area": "accounts",
+ "batch": "verify-008",
+ "findings": [
+  {
+   "attachments": [],
+   "attempt": 1,
+   "basis": "candidate",
+   "criteria": [
+    "2.4.3",
+    "1.3.2"
+   ],
+   "evidence": [
+    {
+     "evidence": {
+      "band": 24,
+      "overlay": "accounts.checkbooks-hub.tabstops.png",
+      "previous": {
+       "ancestors": [
+        [
+         "_bookmarkWrapper_1irs1_6"
+        ],
+        [
+         "_list_1l8yn_1"
+        ],
+        [
+         "_bookmarksSection_184ve_46"
+        ],
+        [
+         "_navContainer_184ve_12"
+        ],
+        [
+         "_sidebar_11y1x_4",
+         "_narrowSidebar_184ve_7"
+        ],
+        [
+         "_layout_809q8_18"
+        ],
+        [
+         "_wrapper_809q8_3"
+        ],
+        []
+       ],
+       "classes": [
+        "_bookmarkRemoveButton_1irs1_42"
+       ],
+       "data": {},
+       "heading": "",
+       "landmark": {
+        "name": "",
+        "role": "navigation"
+       },
+       "layer": "document",
+       "name": "Remove bookmark",
+       "rect": [
+        183,
+        867,
+        20,
+        20
+       ],
+       "role": "button",
+       "tag": "button",
+       "xpath": "/html/body/div[1]/main[1]/div[1]/div[1]/div[4]/nav[1]/div[2]/div[4]/ul[1]/li[2]/button[2]"
+      },
+      "rise": 73,
+      "stop": 30,
+      "stops": 66
+     },
+     "occurrence": {
+      "ancestors": [
+       [
+        "_bookmarkWrapper_1irs1_6"
+       ],
+       [
+        "_list_1l8yn_1"
+       ],
+       [
+        "_bookmarksSection_184ve_46"
+       ],
+       [
+        "_navContainer_184ve_12"
+       ],
+       [
+        "_sidebar_11y1x_4",
+        "_narrowSidebar_184ve_7"
+       ],
+       [
+        "_layout_809q8_18"
+       ],
+       [
+        "_wrapper_809q8_3"
+       ],
+       []
+      ],
+      "classes": [
+       "_iconContainer_1irs1_89"
+      ],
+      "data": {},
+      "heading": "",
+      "landmark": {
+       "name": "",
+       "role": "navigation"
+      },
+      "layer": "document",
+      "name": "Reorder Bill Pay bookmark",
+      "rect": [
+       10,
+       794,
+       24,
+       24
+      ],
+      "role": "button",
+      "tag": "button",
+      "xpath": "/html/body/div[1]/main[1]/div[1]/div[1]/div[4]/nav[1]/div[2]/div[4]/ul[1]/li[3]/button[1]"
+     },
+     "state": "accounts.checkbooks-hub"
+    },
+    {
+     "evidence": {
+      "band": 24,
+      "overlay": "billpay.inbox-after-payment.tabstops.png",
+      "previous": {
+       "ancestors": [
+        [
+         "_bookmarkWrapper_1irs1_6"
+        ],
+        [
+         "_list_1l8yn_1"
+        ],
+        [
+         "_bookmarksSection_184ve_46"
+        ],
+        [
+         "_navContainer_184ve_12"
+        ],
+        [
+         "_sidebar_11y1x_4",
+         "_narrowSidebar_184ve_7"
+        ],
+        [
+         "_layout_809q8_18"
+        ],
+        [
+         "_wrapper_809q8_3"
+        ],
+        []
+       ],
+       "classes": [
+        "_bookmarkRemoveButton_1irs1_42"
+       ],
+       "data": {},
+       "heading": "",
+       "landmark": {
+        "name": "",
+        "role": "navigation"
+       },
+       "layer": "document",
+       "name": "Remove bookmark",
+       "rect": [
+        183,
+        867,
+        20,
+        20
+       ],
+       "role": "button",
+       "tag": "button",
+       "xpath": "/html/body/div[1]/main[1]/div[1]/div[1]/div[4]/nav[1]/div[2]/div[4]/ul[1]/li[2]/button[2]"
+      },
+      "rise": 73,
+      "stop": 30,
+      "stops": 82
+     },
+     "occurrence": {
+      "ancestors": [
+       [
+        "_bookmarkWrapper_1irs1_6"
+       ],
+       [
+        "_list_1l8yn_1"
+       ],
+       [
+        "_bookmarksSection_184ve_46"
+       ],
+       [
+        "_navContainer_184ve_12"
+       ],
+       [
+        "_sidebar_11y1x_4",
+        "_narrowSidebar_184ve_7"
+       ],
+       [
+        "_layout_809q8_18"
+       ],
+       [
+        "_wrapper_809q8_3"
+       ],
+       []
+      ],
+      "classes": [
+       "_iconContainer_1irs1_89"
+      ],
+      "data": {},
+      "heading": "",
+      "landmark": {
+       "name": "",
+       "role": "navigation"
+      },
+      "layer": "document",
+      "name": "Reorder Bill Pay bookmark",
+      "rect": [
+       10,
+       794,
+       24,
+       24
+      ],
+      "role": "button",
+      "tag": "button",
+      "xpath": "/html/body/div[1]/main[1]/div[1]/div[1]/div[4]/nav[1]/div[2]/div[4]/ul[1]/li[3]/button[1]"
+     },
+     "state": "billpay.inbox-after-payment"
+    }
+   ],
+   "evidenceHash": "7f06a2bf0b0fda8e80d4e3a021c4645a26bb5d8a76237f676fefd7da1cf2c5dc",
+   "facts": {
+    "criterion": "2.4.3",
+    "criterionName": "Focus Order",
+    "element": "button \"Reorder Bill Pay bookmark\"",
+    "previous": "button \"Remove bookmark\"",
+    "screen": "Checkbooks hub (after Done)",
+    "stop": "30"
+   },
+   "family": "focus-order",
+   "guidance": "High if the order skips a required control.",
+   "issueId": null,
+   "key": "focus-order:backward-jump:11b3fc927f98",
+   "measured": false,
+   "primary": "accounts.checkbooks-hub",
+   "proposals": [],
+   "rule": "backward-jump",
+   "screens": 19,
+   "severityDefault": "medium",
+   "source": "scanner",
+   "states": [
+    "accounts.checkbooks-hub",
+    "billpay.inbox-after-payment"
+   ],
+   "summary": "Tab stop 30 jumped backward on screen, from the button \"Remove bookmark\" to the button \"Reorder Bill Pay bookmark\".",
+   "title": "Tab order jumps backward at button \"Reorder Bill Pay bookmark\""
+  },
+  {
+   "attachments": [],
+   "attempt": 1,
+   "basis": "failure",
+   "criteria": [
+    "2.4.7",
+    "2.4.3"
+   ],
+   "evidence": [
+    {
+     "evidence": {
+      "box": [
+       1392,
+       204,
+       24,
+       24
+      ],
+      "focus": {
+       "ancestors": [
+        [
+         "_closeButtonWrapper_d3i56_118"
+        ],
+        [
+         "_headerActionsWrapper_d3i56_93"
+        ],
+        [
+         "_panelHeader_d3i56_65"
+        ],
+        [
+         "_large_kwlx6_9",
+         "_noHover_3n0se_28",
+         "_shadow_3n0se_25",
+         "_raisedBackground_3n0se_45",
+         "_panel_d3i56_55",
+         "_detailPanelPanel_1d15f_16"
+        ],
+        [
+         "_transitionWrapper_d3i56_5",
+         "_detailPanelWrapper_1d15f_12"
+        ],
+        [
+         "_tableWrapper_1d15f_1"
+        ],
+        [
+         "_pageContent_809q8_151",
+         "_pageContentWidth_809q8_184",
+         "_footerPadding_809q8_115"
+        ],
+        [
+         "_dashboardContent_809q8_29"
+        ]
+       ],
+       "classes": [
+        "_additionalActionsButton_d3i56_99"
+       ],
+       "data": {},
+       "heading": "Checkbooks",
+       "landmark": {
+        "name": "",
+        "role": "complementary"
+       },
+       "layer": "document",
+       "name": "Close detail panel",
+       "rect": [
+        1392,
+        204,
+        24,
+        24
+       ],
+       "role": "button",
+       "tag": "button",
+       "xpath": "/html/body/div[1]/main[1]/div[1]/div[1]/div[4]/div[1]/div[2]/div[2]/aside[1]/div[1]/section[1]/div[2]/span[1]/button[1]"
+      },
+      "hidden": "invisible",
+      "previous": {
+       "ancestors": [
+        [],
+        [
+         "_footer_1d15f_30"
+        ],
+        [
+         "_tableWrapper_1d15f_1"
+        ],
+        [
+         "_pageContent_809q8_151",
+         "_pageContentWidth_809q8_184",
+         "_footerPadding_809q8_115"
+        ],
+        [
+         "_dashboardContent_809q8_29"
+        ],
+        [
+         "_layout_809q8_18"
+        ],
+        [
+         "_wrapper_809q8_3"
+        ],
+        []
+       ],
+       "classes": [
+        "_footerLink_1d15f_36",
+        "_link_ual8v_4",
+        "_underlineOnHover_ual8v_15"
+       ],
+       "data": {
+        "data-discover": "true"
+       },
+       "heading": "Checkbooks",
+       "landmark": {
+        "name": "",
+        "role": "main"
+       },
+       "layer": "document",
+       "name": "View all check payments",
+       "rect": [
+        1140,
+        636,
+        174,
+        20
+       ],
+       "role": "link",
+       "tag": "a",
+       "xpath": "/html/body/div[1]/main[1]/div[1]/div[1]/div[4]/div[1]/div[2]/div[2]/div[2]/span[1]/a[1]"
+      },
+      "stop": 62,
+      "stops": 66
+     },
+     "occurrence": {
+      "ancestors": [
+       [
+        "_closeButtonWrapper_d3i56_118"
+       ],
+       [
+        "_headerActionsWrapper_d3i56_93"
+       ],
+       [
+        "_panelHeader_d3i56_65"
+       ],
+       [
+        "_large_kwlx6_9",
+        "_noHover_3n0se_28",
+        "_shadow_3n0se_25",
+        "_raisedBackground_3n0se_45",
+        "_panel_d3i56_55",
+        "_detailPanelPanel_1d15f_16"
+       ],
+       [
+        "_transitionWrapper_d3i56_5",
+        "_detailPanelWrapper_1d15f_12"
+       ],
+       [
+        "_tableWrapper_1d15f_1"
+       ],
+       [
+        "_pageContent_809q8_151",
+        "_pageContentWidth_809q8_184",
+        "_footerPadding_809q8_115"
+       ],
+       [
+        "_dashboardContent_809q8_29"
+       ]
+      ],
+      "classes": [
+       "_additionalActionsButton_d3i56_99"
+      ],
+      "data": {},
+      "heading": "Checkbooks",
+      "landmark": {
+       "name": "",
+       "role": "complementary"
+      },
+      "layer": "document",
+      "name": "Close detail panel",
+      "rect": [
+       1392,
+       204,
+       24,
+       24
+      ],
+      "role": "button",
+      "tag": "button",
+      "xpath": "/html/body/div[1]/main[1]/div[1]/div[1]/div[4]/div[1]/div[2]/div[2]/aside[1]/div[1]/section[1]/div[2]/span[1]/button[1]"
+     },
+     "state": "accounts.checkbooks-hub"
+    },
+    {
+     "evidence": {
+      "box": [
+       1392,
+       92,
+       24,
+       24
+      ],
+      "focus": {
+       "ancestors": [
+        [
+         "_closeButtonWrapper_d3i56_118"
+        ],
+        [
+         "_headerActionsWrapper_d3i56_93"
+        ],
+        [
+         "_panelHeader_d3i56_65",
+         "_detailsCardHeader_15kl9_277"
+        ],
+        [
+         "_large_kwlx6_9",
+         "_noHover_3n0se_28",
+         "_shadow_3n0se_25",
+         "_raisedBackground_3n0se_45",
+         "_panel_d3i56_55",
+         "_detailsCardPanel_15kl9_287"
+        ],
+        [
+         "_transitionWrapper_d3i56_5",
+         "_detailsCardWrapper_15kl9_247"
+        ],
+        [
+         "_drawerRoot_15kl9_6"
+        ]
+       ],
+       "classes": [
+        "_additionalActionsButton_d3i56_99"
+       ],
+       "data": {},
+       "heading": "Transactions",
+       "landmark": {
+        "name": "",
+        "role": "complementary"
+       },
+       "layer": "document",
+       "name": "Close detail panel",
+       "rect": [
+        1392,
+        92,
+        24,
+        24
+       ],
+       "role": "button",
+       "tag": "button",
+       "xpath": "/html/body/div[3]/aside[1]/div[1]/section[1]/div[2]/span[1]/button[1]"
+      },
+      "hidden": "invisible",
+      "previous": {
+       "ancestors": [
+        [
+         "_tooltipAnchor_18bac_4",
+         "_tooltipWrapper_1cgg7_75"
+        ],
+        [
+         "_menuContainer_1cgg7_8",
+         "session-replay-unmask"
+        ],
+        [
+         "_wrapper_809q8_3"
+        ],
+        [],
+        [
+         "_main_1gb3b_1"
+        ],
+        [
+         "mercury-root"
+        ]
+       ],
+       "classes": [
+        "_menuIcon_1cgg7_33"
+       ],
+       "data": {},
+       "heading": "Transactions",
+       "landmark": {
+        "name": "",
+        "role": "main"
+       },
+       "layer": "document",
+       "name": "",
+       "rect": [
+        1364,
+        832,
+        48,
+        48
+       ],
+       "role": "button",
+       "tag": "button",
+       "xpath": "/html/body/div[1]/main[1]/div[1]/div[1]/div[6]/div[2]/button[1]"
+      },
+      "stop": 527,
+      "stops": 536
+     },
+     "occurrence": {
+      "ancestors": [
+       [
+        "_closeButtonWrapper_d3i56_118"
+       ],
+       [
+        "_headerActionsWrapper_d3i56_93"
+       ],
+       [
+        "_panelHeader_d3i56_65",
+        "_detailsCardHeader_15kl9_277"
+       ],
+       [
+        "_large_kwlx6_9",
+        "_noHover_3n0se_28",
+        "_shadow_3n0se_25",
+        "_raisedBackground_3n0se_45",
+        "_panel_d3i56_55",
+        "_detailsCardPanel_15kl9_287"
+       ],
+       [
+        "_transitionWrapper_d3i56_5",
+        "_detailsCardWrapper_15kl9_247"
+       ],
+       [
+        "_drawerRoot_15kl9_6"
+       ]
+      ],
+      "classes": [
+       "_additionalActionsButton_d3i56_99"
+      ],
+      "data": {},
+      "heading": "Transactions",
+      "landmark": {
+       "name": "",
+       "role": "complementary"
+      },
+      "layer": "document",
+      "name": "Close detail panel",
+      "rect": [
+       1392,
+       92,
+       24,
+       24
+      ],
+      "role": "button",
+      "tag": "button",
+      "xpath": "/html/body/div[3]/aside[1]/div[1]/section[1]/div[2]/span[1]/button[1]"
+     },
+     "state": "transactions.index"
+    }
+   ],
+   "evidenceHash": "c75608b5551d7aaa860c5ef7fc15458fa3ab19d91e70584a6106166040f6923d",
+   "facts": {
+    "criterion": "2.4.7",
+    "criterionName": "Focus Visible",
+    "element": "button \"Close detail panel\"",
+    "screen": "Checkbooks hub (after Done)",
+    "screens": 27,
+    "stop": "62"
+   },
+   "family": "focus-visible",
+   "guidance": "High on shared components on primary paths.",
+   "issueId": null,
+   "key": "focus-visible:focus-hidden:0a1623abb3f0",
+   "measured": true,
+   "primary": "accounts.checkbooks-hub",
+   "proposals": [],
+   "rule": "focus-hidden",
+   "screens": 27,
+   "severityDefault": "medium",
+   "source": "scanner",
+   "states": [
+    "accounts.checkbooks-hub",
+    "transactions.index"
+   ],
+   "summary": "Tab stop 62 focused the button \"Close detail panel\", which is invisible, has no size, or sits off screen.",
+   "title": "Tab stops on hidden element: button \"Close detail panel\""
+  },
+  {
+   "attachments": [],
+   "attempt": 1,
+   "basis": "failure",
+   "criteria": [
+    "2.4.7",
+    "2.4.3"
+   ],
+   "evidence": [
+    {
+     "evidence": {
+      "box": [
+       938,
+       932,
+       91,
+       32
+      ],
+      "focus": {
+       "ancestors": [
+        [
+         "_actionButtons_1pbh4_58"
+        ],
+        [
+         "_contentContainer_1pbh4_46"
+        ],
+        [
+         "_floatingBulkActionsInnerContainer_1pbh4_35"
+        ],
+        [
+         "_floatingBulkActionsOuterContainer_1pbh4_4"
+        ],
+        [
+         "_pageContent_809q8_151",
+         "_pageContentWidth_809q8_184",
+         "_footerPadding_809q8_115"
+        ],
+        [
+         "_dashboardContent_809q8_29"
+        ],
+        [
+         "_layout_809q8_18"
+        ],
+        [
+         "_wrapper_809q8_3"
+        ]
+       ],
+       "classes": [
+        "_button_r6b2u_20",
+        "_small_r6b2u_72",
+        "_primary_r6b2u_104"
+       ],
+       "data": {},
+       "heading": "Checkbooks",
+       "landmark": {
+        "name": "0 check payments selected",
+        "role": "dialog"
+       },
+       "layer": "document",
+       "name": "Approve",
+       "rect": [
+        938,
+        932,
+        91,
+        32
+       ],
+       "role": "button",
+       "tag": "button",
+       "xpath": "/html/body/div[1]/main[1]/div[1]/div[1]/div[4]/div[1]/div[2]/dialog[1]/div[1]/div[1]/div[2]/button[2]"
+      },
+      "hidden": "invisible",
+      "previous": {
+       "ancestors": [
+        [
+         "_actionButtons_1pbh4_58"
+        ],
+        [
+         "_contentContainer_1pbh4_46"
+        ],
+        [
+         "_floatingBulkActionsInnerContainer_1pbh4_35"
+        ],
+        [
+         "_floatingBulkActionsOuterContainer_1pbh4_4"
+        ],
+        [
+         "_pageContent_809q8_151",
+         "_pageContentWidth_809q8_184",
+         "_footerPadding_809q8_115"
+        ],
+        [
+         "_dashboardContent_809q8_29"
+        ],
+        [
+         "_layout_809q8_18"
+        ],
+        [
+         "_wrapper_809q8_3"
+        ]
+       ],
+       "classes": [
+        "_button_r6b2u_20",
+        "_small_r6b2u_72",
+        "_destructive_r6b2u_186"
+       ],
+       "data": {},
+       "heading": "Checkbooks",
+       "landmark": {
+        "name": "0 check payments selected",
+        "role": "dialog"
+       },
+       "layer": "document",
+       "name": "Reject",
+       "rect": [
+        851,
+        932,
+        75,
+        32
+       ],
+       "role": "button",
+       "tag": "button",
+       "xpath": "/html/body/div[1]/main[1]/div[1]/div[1]/div[4]/div[1]/div[2]/dialog[1]/div[1]/div[1]/div[2]/button[1]"
+      },
+      "stop": 64,
+      "stops": 66
+     },
+     "occurrence": {
+      "ancestors": [
+       [
+        "_actionButtons_1pbh4_58"
+       ],
+       [
+        "_contentContainer_1pbh4_46"
+       ],
+       [
+        "_floatingBulkActionsInnerContainer_1pbh4_35"
+       ],
+       [
+        "_floatingBulkActionsOuterContainer_1pbh4_4"
+       ],
+       [
+        "_pageContent_809q8_151",
+        "_pageContentWidth_809q8_184",
+        "_footerPadding_809q8_115"
+       ],
+       [
+        "_dashboardContent_809q8_29"
+       ],
+       [
+        "_layout_809q8_18"
+       ],
+       [
+        "_wrapper_809q8_3"
+       ]
+      ],
+      "classes": [
+       "_button_r6b2u_20",
+       "_small_r6b2u_72",
+       "_primary_r6b2u_104"
+      ],
+      "data": {},
+      "heading": "Checkbooks",
+      "landmark": {
+       "name": "0 check payments selected",
+       "role": "dialog"
+      },
+      "layer": "document",
+      "name": "Approve",
+      "rect": [
+       938,
+       932,
+       91,
+       32
+      ],
+      "role": "button",
+      "tag": "button",
+      "xpath": "/html/body/div[1]/main[1]/div[1]/div[1]/div[4]/div[1]/div[2]/dialog[1]/div[1]/div[1]/div[2]/button[2]"
+     },
+     "state": "accounts.checkbooks-hub"
+    },
+    {
+     "evidence": {
+      "box": [
+       1204,
+       461,
+       110,
+       32
+      ],
+      "focus": {
+       "ancestors": [
+        [
+         "_floatingButtonContainer_11b7d_1"
+        ],
+        [
+         "_buttons_g60ex_35"
+        ],
+        [
+         "_filingTableHoverRowActions_17hdp_12"
+        ],
+        [
+         "_tableRow_137xu_3",
+         "_interactiveRows_137xu_35",
+         "_filingTableRow_17hdp_7",
+         "_filingTableRowLoaded_17hdp_11",
+         "_hasHoverActions_17hdp_33"
+        ],
+        [
+         "_tableBody_1cp5b_1"
+        ],
+        [
+         "_table_1acga_4"
+        ],
+        [
+         "_tableWrapper_1acga_4"
+        ],
+        [
+         "_filingTableContainer_17hdp_1"
+        ]
+       ],
+       "classes": [
+        "_button_r6b2u_20",
+        "_small_r6b2u_72",
+        "_primary_r6b2u_104"
+       ],
+       "data": {},
+       "heading": "Filing updates and tasks",
+       "landmark": {
+        "name": "",
+        "role": "main"
+       },
+       "layer": "document",
+       "name": "Edit Filing Button",
+       "rect": [
+        1204,
+        461,
+        110,
+        32
+       ],
+       "role": "button",
+       "tag": "button",
+       "xpath": "/html/body/div[1]/main[1]/div[1]/div[1]/div[4]/div[1]/div[2]/div[2]/div[2]/div[1]/div[1]/table[1]/tbody[1]/tr[15]/div[1]/div[1]/div[2]/button[1]"
+      },
+      "hidden": "invisible",
+      "previous": {
+       "ancestors": [
+        [
+         "_floatingButtonContainer_11b7d_1"
+        ],
+        [
+         "_buttons_g60ex_35"
+        ],
+        [
+         "_filingTableHoverRowActions_17hdp_12"
+        ],
+        [
+         "_tableRow_137xu_3",
+         "_interactiveRows_137xu_35",
+         "_filingTableRow_17hdp_7",
+         "_filingTableRowLoaded_17hdp_11",
+         "_hasHoverActions_17hdp_33"
+        ],
+        [
+         "_tableBody_1cp5b_1"
+        ],
+        [
+         "_table_1acga_4"
+        ],
+        [
+         "_tableWrapper_1acga_4"
+        ],
+        [
+         "_filingTableContainer_17hdp_1"
+        ]
+       ],
+       "classes": [
+        "_button_r6b2u_20",
+        "_small_r6b2u_72",
+        "_destructive_r6b2u_186"
+       ],
+       "data": {},
+       "heading": "Filing updates and tasks",
+       "landmark": {
+        "name": "",
+        "role": "main"
+       },
+       "layer": "document",
+       "name": "Remove Filing Button",
+       "rect": [
+        1164,
+        461,
+        32,
+        32
+       ],
+       "role": "button",
+       "tag": "button",
+       "xpath": "/html/body/div[1]/main[1]/div[1]/div[1]/div[4]/div[1]/div[2]/div[2]/div[2]/div[1]/div[1]/table[1]/tbody[1]/tr[15]/div[1]/div[1]/div[1]/button[1]"
+      },
+      "stop": 155,
+      "stops": 201
+     },
+     "occurrence": {
+      "ancestors": [
+       [
+        "_floatingButtonContainer_11b7d_1"
+       ],
+       [
+        "_buttons_g60ex_35"
+       ],
+       [
+        "_filingTableHoverRowActions_17hdp_12"
+       ],
+       [
+        "_tableRow_137xu_3",
+        "_interactiveRows_137xu_35",
+        "_filingTableRow_17hdp_7",
+        "_filingTableRowLoaded_17hdp_11",
+        "_hasHoverActions_17hdp_33"
+       ],
+       [
+        "_tableBody_1cp5b_1"
+       ],
+       [
+        "_table_1acga_4"
+       ],
+       [
+        "_tableWrapper_1acga_4"
+       ],
+       [
+        "_filingTableContainer_17hdp_1"
+       ]
+      ],
+      "classes": [
+       "_button_r6b2u_20",
+       "_small_r6b2u_72",
+       "_primary_r6b2u_104"
+      ],
+      "data": {},
+      "heading": "Filing updates and tasks",
+      "landmark": {
+       "name": "",
+       "role": "main"
+      },
+      "layer": "document",
+      "name": "Edit Filing Button",
+      "rect": [
+       1204,
+       461,
+       110,
+       32
+      ],
+      "role": "button",
+      "tag": "button",
+      "xpath": "/html/body/div[1]/main[1]/div[1]/div[1]/div[4]/div[1]/div[2]/div[2]/div[2]/div[1]/div[1]/table[1]/tbody[1]/tr[15]/div[1]/div[1]/div[2]/button[1]"
+     },
+     "state": "payments.taxes"
+    }
+   ],
+   "evidenceHash": "7c34b55d08ae5ae34366bb516335437cc9cd0ed8a69827f23edf5e16487e54d4",
+   "facts": {
+    "criterion": "2.4.7",
+    "criterionName": "Focus Visible",
+    "element": "button \"Approve\"",
+    "screen": "Checkbooks hub (after Done)",
+    "screens": 10,
+    "stop": "64"
+   },
+   "family": "focus-visible",
+   "guidance": "High on shared components on primary paths.",
+   "issueId": null,
+   "key": "focus-visible:focus-hidden:d673217c7d52",
+   "measured": true,
+   "primary": "accounts.checkbooks-hub",
+   "proposals": [],
+   "rule": "focus-hidden",
+   "screens": 10,
+   "severityDefault": "medium",
+   "source": "scanner",
+   "states": [
+    "accounts.checkbooks-hub",
+    "payments.taxes"
+   ],
+   "summary": "Tab stop 64 focused the button \"Approve\", which is invisible, has no size, or sits off screen.",
+   "title": "Tab stops on hidden element: button \"Approve\""
+  },
+  {
+   "attachments": [],
+   "attempt": 1,
+   "basis": "failure",
+   "criteria": [
+    "2.4.7",
+    "2.4.3"
+   ],
+   "evidence": [
+    {
+     "evidence": {
+      "box": [
+       851,
+       932,
+       75,
+       32
+      ],
+      "focus": {
+       "ancestors": [
+        [
+         "_actionButtons_1pbh4_58"
+        ],
+        [
+         "_contentContainer_1pbh4_46"
+        ],
+        [
+         "_floatingBulkActionsInnerContainer_1pbh4_35"
+        ],
+        [
+         "_floatingBulkActionsOuterContainer_1pbh4_4"
+        ],
+        [
+         "_pageContent_809q8_151",
+         "_pageContentWidth_809q8_184",
+         "_footerPadding_809q8_115"
+        ],
+        [
+         "_dashboardContent_809q8_29"
+        ],
+        [
+         "_layout_809q8_18"
+        ],
+        [
+         "_wrapper_809q8_3"
+        ]
+       ],
+       "classes": [
+        "_button_r6b2u_20",
+        "_small_r6b2u_72",
+        "_destructive_r6b2u_186"
+       ],
+       "data": {},
+       "heading": "Checkbooks",
+       "landmark": {
+        "name": "0 check payments selected",
+        "role": "dialog"
+       },
+       "layer": "document",
+       "name": "Reject",
+       "rect": [
+        851,
+        932,
+        75,
+        32
+       ],
+       "role": "button",
+       "tag": "button",
+       "xpath": "/html/body/div[1]/main[1]/div[1]/div[1]/div[4]/div[1]/div[2]/dialog[1]/div[1]/div[1]/div[2]/button[1]"
+      },
+      "hidden": "invisible",
+      "previous": {
+       "ancestors": [
+        [
+         "_closeButtonWrapper_d3i56_118"
+        ],
+        [
+         "_headerActionsWrapper_d3i56_93"
+        ],
+        [
+         "_panelHeader_d3i56_65"
+        ],
+        [
+         "_large_kwlx6_9",
+         "_noHover_3n0se_28",
+         "_shadow_3n0se_25",
+         "_raisedBackground_3n0se_45",
+         "_panel_d3i56_55",
+         "_detailPanelPanel_1d15f_16"
+        ],
+        [
+         "_transitionWrapper_d3i56_5",
+         "_detailPanelWrapper_1d15f_12"
+        ],
+        [
+         "_tableWrapper_1d15f_1"
+        ],
+        [
+         "_pageContent_809q8_151",
+         "_pageContentWidth_809q8_184",
+         "_footerPadding_809q8_115"
+        ],
+        [
+         "_dashboardContent_809q8_29"
+        ]
+       ],
+       "classes": [
+        "_additionalActionsButton_d3i56_99"
+       ],
+       "data": {},
+       "heading": "Checkbooks",
+       "landmark": {
+        "name": "",
+        "role": "complementary"
+       },
+       "layer": "document",
+       "name": "Close detail panel",
+       "rect": [
+        1392,
+        204,
+        24,
+        24
+       ],
+       "role": "button",
+       "tag": "button",
+       "xpath": "/html/body/div[1]/main[1]/div[1]/div[1]/div[4]/div[1]/div[2]/div[2]/aside[1]/div[1]/section[1]/div[2]/span[1]/button[1]"
+      },
+      "stop": 63,
+      "stops": 66
+     },
+     "occurrence": {
+      "ancestors": [
+       [
+        "_actionButtons_1pbh4_58"
+       ],
+       [
+        "_contentContainer_1pbh4_46"
+       ],
+       [
+        "_floatingBulkActionsInnerContainer_1pbh4_35"
+       ],
+       [
+        "_floatingBulkActionsOuterContainer_1pbh4_4"
+       ],
+       [
+        "_pageContent_809q8_151",
+        "_pageContentWidth_809q8_184",
+        "_footerPadding_809q8_115"
+       ],
+       [
+        "_dashboardContent_809q8_29"
+       ],
+       [
+        "_layout_809q8_18"
+       ],
+       [
+        "_wrapper_809q8_3"
+       ]
+      ],
+      "classes": [
+       "_button_r6b2u_20",
+       "_small_r6b2u_72",
+       "_destructive_r6b2u_186"
+      ],
+      "data": {},
+      "heading": "Checkbooks",
+      "landmark": {
+       "name": "0 check payments selected",
+       "role": "dialog"
+      },
+      "layer": "document",
+      "name": "Reject",
+      "rect": [
+       851,
+       932,
+       75,
+       32
+      ],
+      "role": "button",
+      "tag": "button",
+      "xpath": "/html/body/div[1]/main[1]/div[1]/div[1]/div[4]/div[1]/div[2]/dialog[1]/div[1]/div[1]/div[2]/button[1]"
+     },
+     "state": "accounts.checkbooks-hub"
+    },
+    {
+     "evidence": {
+      "box": [
+       1309,
+       620,
+       107,
+       32
+      ],
+      "focus": {
+       "ancestors": [
+        [
+         "_buttonContainer_1gwax_34"
+        ],
+        [
+         "_panelSection_d3i56_148"
+        ],
+        [
+         "_panelBody_d3i56_64"
+        ],
+        [
+         "_large_kwlx6_9",
+         "_noHover_3n0se_28",
+         "_shadow_3n0se_25",
+         "_raisedBackground_3n0se_45",
+         "_panel_d3i56_55"
+        ],
+        [
+         "_transitionWrapper_d3i56_5",
+         "_wrapperContainer_rrj6q_1"
+        ],
+        [],
+        [],
+        [
+         "_tabContent_a2zac_49"
+        ]
+       ],
+       "classes": [
+        "_button_r6b2u_20",
+        "_small_r6b2u_72",
+        "_destructive_r6b2u_186"
+       ],
+       "data": {},
+       "heading": "Due in next 7 days",
+       "landmark": {
+        "name": "",
+        "role": "complementary"
+       },
+       "layer": "document",
+       "name": "Decline",
+       "rect": [
+        1309,
+        620,
+        107,
+        32
+       ],
+       "role": "button",
+       "tag": "button",
+       "xpath": "/html/body/div[1]/main[1]/div[1]/div[1]/div[4]/div[1]/div[2]/div[2]/div[2]/div[2]/div[2]/aside[1]/div[1]/div[1]/section[1]/div[3]/button[3]"
+      },
+      "hidden": "invisible",
+      "previous": {
+       "ancestors": [
+        [
+         "_buttonContainer_1gwax_34"
+        ],
+        [
+         "_panelSection_d3i56_148"
+        ],
+        [
+         "_panelBody_d3i56_64"
+        ],
+        [
+         "_large_kwlx6_9",
+         "_noHover_3n0se_28",
+         "_shadow_3n0se_25",
+         "_raisedBackground_3n0se_45",
+         "_panel_d3i56_55"
+        ],
+        [
+         "_transitionWrapper_d3i56_5",
+         "_wrapperContainer_rrj6q_1"
+        ],
+        [],
+        [],
+        [
+         "_tabContent_a2zac_49"
+        ]
+       ],
+       "classes": [
+        "_button_r6b2u_20",
+        "_small_r6b2u_72",
+        "_secondary_r6b2u_126"
+       ],
+       "data": {},
+       "heading": "Due in next 7 days",
+       "landmark": {
+        "name": "",
+        "role": "complementary"
+       },
+       "layer": "document",
+       "name": "Approve",
+       "rect": [
+        1191,
+        620,
+        107,
+        32
+       ],
+       "role": "button",
+       "tag": "button",
+       "xpath": "/html/body/div[1]/main[1]/div[1]/div[1]/div[4]/div[1]/div[2]/div[2]/div[2]/div[2]/div[2]/aside[1]/div[1]/div[1]/section[1]/div[3]/button[2]"
+      },
+      "stop": 59,
+      "stops": 64
+     },
+     "occurrence": {
+      "ancestors": [
+       [
+        "_buttonContainer_1gwax_34"
+       ],
+       [
+        "_panelSection_d3i56_148"
+       ],
+       [
+        "_panelBody_d3i56_64"
+       ],
+       [
+        "_large_kwlx6_9",
+        "_noHover_3n0se_28",
+        "_shadow_3n0se_25",
+        "_raisedBackground_3n0se_45",
+        "_panel_d3i56_55"
+       ],
+       [
+        "_transitionWrapper_d3i56_5",
+        "_wrapperContainer_rrj6q_1"
+       ],
+       [],
+       [],
+       [
+        "_tabContent_a2zac_49"
+       ]
+      ],
+      "classes": [
+       "_button_r6b2u_20",
+       "_small_r6b2u_72",
+       "_destructive_r6b2u_186"
+      ],
+      "data": {},
+      "heading": "Due in next 7 days",
+      "landmark": {
+       "name": "",
+       "role": "complementary"
+      },
+      "layer": "document",
+      "name": "Decline",
+      "rect": [
+       1309,
+       620,
+       107,
+       32
+      ],
+      "role": "button",
+      "tag": "button",
+      "xpath": "/html/body/div[1]/main[1]/div[1]/div[1]/div[4]/div[1]/div[2]/div[2]/div[2]/div[2]/div[2]/aside[1]/div[1]/div[1]/section[1]/div[3]/button[3]"
+     },
+     "state": "billpay.needs-approval"
+    }
+   ],
+   "evidenceHash": "b4acc3d0809da47e0913fcc9f5362e0fed6e458692bc44016ecb88c773f67d69",
+   "facts": {
+    "criterion": "2.4.7",
+    "criterionName": "Focus Visible",
+    "element": "button \"Reject\"",
+    "screen": "Checkbooks hub (after Done)",
+    "screens": 12,
+    "stop": "63"
+   },
+   "family": "focus-visible",
+   "guidance": "High on shared components on primary paths.",
+   "issueId": null,
+   "key": "focus-visible:focus-hidden:da004999a1d5",
+   "measured": true,
+   "primary": "accounts.checkbooks-hub",
+   "proposals": [],
+   "rule": "focus-hidden",
+   "screens": 12,
+   "severityDefault": "medium",
+   "source": "scanner",
+   "states": [
+    "accounts.checkbooks-hub",
+    "billpay.needs-approval"
+   ],
+   "summary": "Tab stop 63 focused the button \"Reject\", which is invisible, has no size, or sits off screen.",
+   "title": "Tab stops on hidden element: button \"Reject\""
+  },
+  {
+   "attachments": [],
+   "attempt": 1,
+   "basis": "violation",
+   "criteria": [
+    "4.1.2"
+   ],
+   "evidence": [
+    {
+     "evidence": {
+      "failureSummary": "Fix any of the following:\n  Element does not have an implicit (wrapped) <label>\n  Element does not have an explicit <label>\n  aria-label attribute does not exist or is empty\n  aria-labelledby attribute does not exist, references elements that do not exist or references elements that are empty\n  Element has no title attribute\n  Element has no placeholder attribute\n  Element's default semantics were not overridden with role=\"none\" or role=\"presentation\"",
+      "messageKey": "noAttr"
+     },
+     "occurrence": {
+      "ancestors": [
+       [
+        "_checkboxHeightFix_1wfxj_6",
+        "_checkboxWrapper_1758n_62",
+        "_defaultCheckboxWrapper_1km7i_14",
+        "_inTable_1758n_108"
+       ],
+       [
+        "_tableData_1u4jr_5",
+        "_alignmentCenter_1u4jr_17",
+        "_checkboxCell_1u4jr_75"
+       ],
+       [
+        "_tableRow_137xu_3",
+        "_interactiveRows_137xu_35",
+        "_large_137xu_29",
+        "_reviewTableRow_1d15f_6"
+       ],
+       [
+        "_tableBody_1cp5b_1"
+       ],
+       [
+        "_table_1acga_4"
+       ],
+       [
+        "_tableWrapper_1acga_4"
+       ],
+       [
+        "_tableWrapper_1d15f_1"
+       ],
+       [
+        "_pageContent_809q8_151",
+        "_pageContentWidth_809q8_184",
+        "_footerPadding_809q8_115"
+       ]
+      ],
+      "classes": [
+       "_input_1758n_13",
+       "_defaultInput_1km7i_44"
+      ],
+      "data": {},
+      "heading": "Checkbooks",
+      "landmark": {
+       "name": "",
+       "role": "main"
+      },
+      "layer": "document",
+      "name": "",
+      "rect": [
+       346,
+       241,
+       40,
+       40
+      ],
+      "role": "checkbox",
+      "tag": "input",
+      "xpath": "/html/body/div[1]/main[1]/div[1]/div[1]/div[4]/div[1]/div[2]/div[2]/div[1]/table[1]/tbody[1]/tr[1]/td[1]/div[1]/input[1]"
+     },
+     "state": "accounts.checkbooks-hub"
+    },
+    {
+     "evidence": {
+      "failureSummary": "Fix any of the following:\n  Element does not have an implicit (wrapped) <label>\n  Element does not have an explicit <label>\n  aria-label attribute does not exist or is empty\n  aria-labelledby attribute does not exist, references elements that do not exist or references elements that are empty\n  Element has no title attribute\n  Element has no placeholder attribute\n  Element's default semantics were not overridden with role=\"none\" or role=\"presentation\"",
+      "messageKey": "noAttr"
+     },
+     "occurrence": {
+      "ancestors": [
+       [
+        "_checkboxHeightFix_1wfxj_6",
+        "_checkboxWrapper_1758n_62",
+        "_defaultCheckboxWrapper_1km7i_14",
+        "_inTable_1758n_108"
+       ],
+       [
+        "_tableHead_hi0p4_3",
+        "_alignmentCenter_hi0p4_15",
+        "_fullWidthTable_4sbgh_49",
+        "_header_4sbgh_38",
+        "_select_4sbgh_2",
+        "_firstColumn_4sbgh_56",
+        "_checkboxCell_hi0p4_31"
+       ],
+       [
+        "_tableHeadRow_1rlph_21"
+       ],
+       [
+        "_tableHead_1rlph_1",
+        "_transactionsTableHeader_1ow20_37",
+        "_fullWidthTable_1ow20_37"
+       ],
+       [
+        "_table_1acga_4"
+       ],
+       [
+        "_tableWrapper_1ow20_26",
+        "_tableWrapper_1acga_4"
+       ],
+       [],
+       [
+        "_transactionsPageDashboardWrapper_1ow20_48"
+       ]
+      ],
+      "classes": [
+       "_input_1758n_13",
+       "_defaultInput_1km7i_44"
+      ],
+      "data": {},
+      "heading": "Transactions",
+      "landmark": {
+       "name": "",
+       "role": "main"
+      },
+      "layer": "document",
+      "name": "",
+      "rect": [
+       230,
+       311,
+       40,
+       40
+      ],
+      "role": "checkbox",
+      "tag": "input",
+      "xpath": "/html/body/div[1]/main[1]/div[1]/div[1]/div[4]/div[1]/div[2]/div[3]/div[1]/table[1]/thead[1]/tr[1]/th[1]/div[1]/input[1]"
+     },
+     "state": "transactions.keyword-no-matches"
+    }
+   ],
+   "evidenceHash": "e0a433cf29e2f8d2ea722690f6674fa95233079489b6ca1034d1a89666233342",
+   "facts": {
+    "announced": "checkbox \"\" [checked=false]",
+    "axeSummary": "Element does not have an implicit (wrapped) <label>; Element does not have an explicit <label>; aria-label attribute does not exist or is empty; aria-labelledb…",
+    "criterion": "4.1.2",
+    "criterionName": "Name, Role, Value",
+    "element": "checkbox in \"Checkbooks\"",
+    "rule": "label",
+    "screen": "Checkbooks hub (after Done)"
+   },
+   "family": "name",
+   "guidance": "High for an unnamed form control or the sole primary action.",
+   "issueId": null,
+   "key": "name:label:0301c256f732",
+   "measured": false,
+   "primary": "accounts.checkbooks-hub",
+   "proposals": [
+    {
+     "family": "name",
+     "finding": "name:label:0301c256f732",
+     "handFound": "billpay.i-date-input-label",
+     "id": "1dd3332443f9dc2af56ca3962affc19228f607aefa90ca85578f409a02fdcb56",
+     "overlap": 1
+    },
+    {
+     "family": "name",
+     "finding": "name:label:0301c256f732",
+     "handFound": "billpay.i-unlabeled-controls",
+     "id": "2fa67175bd6c0f16e1026fe745142d2217c0f70b841d4ac16cdfa0db31031c42",
+     "overlap": 0.6667
+    },
+    {
+     "family": "name",
+     "finding": "name:label:0301c256f732",
+     "handFound": "payments.i-icon-links-a11y",
+     "id": "800752946f6f1662d08721befe78ec6b12c7fe2712d405f9b98e1eae1b447712",
+     "overlap": 1
+    }
+   ],
+   "rule": "label",
+   "screens": 44,
+   "severityDefault": "medium",
+   "source": "scanner",
+   "states": [
+    "accounts.checkbooks-hub",
+    "transactions.keyword-no-matches"
+   ],
+   "summary": "label: announced as checkbox \"\" [checked=false]. Element does not have an implicit (wrapped) <label>; Element does not have an explicit <label>; aria-label attribute does not exist or is empty; aria-labelledb…",
+   "title": "Missing or unclear name: checkbox in \"Checkbooks\""
+  },
+  {
+   "attachments": [],
+   "attempt": 1,
+   "basis": "violation",
+   "criteria": [
+    "4.1.2"
+   ],
+   "evidence": [
+    {
+     "evidence": {
+      "failureSummary": "Fix any of the following:\n  Element does not have an implicit (wrapped) <label>\n  Element does not have an explicit <label>\n  aria-label attribute does not exist or is empty\n  aria-labelledby attribute does not exist, references elements that do not exist or references elements that are empty\n  Element has no title attribute\n  Element has no placeholder attribute\n  Element's default semantics were not overridden with role=\"none\" or role=\"presentation\"",
+      "messageKey": "noAttr"
+     },
+     "occurrence": {
+      "ancestors": [
+       [
+        "_checkboxHeightFix_1wfxj_6",
+        "_checkboxWrapper_1758n_62",
+        "_defaultCheckboxWrapper_1km7i_14",
+        "_disabled_1km7i_21",
+        "_disabled_1758n_85",
+        "_inTable_1758n_108"
+       ],
+       [
+        "_tableData_1u4jr_5",
+        "_alignmentCenter_1u4jr_17",
+        "_checkboxCell_1u4jr_75"
+       ],
+       [
+        "_tableRow_137xu_3",
+        "_interactiveRows_137xu_35",
+        "_large_137xu_29",
+        "_reviewTableRow_1d15f_6"
+       ],
+       [
+        "_tableBody_1cp5b_1"
+       ],
+       [
+        "_table_1acga_4"
+       ],
+       [
+        "_tableWrapper_1acga_4"
+       ],
+       [
+        "_tableWrapper_1d15f_1"
+       ],
+       [
+        "_pageContent_809q8_151",
+        "_pageContentWidth_809q8_184",
+        "_footerPadding_809q8_115"
+       ]
+      ],
+      "classes": [
+       "_input_1758n_13",
+       "_defaultInput_1km7i_44"
+      ],
+      "data": {},
+      "heading": "Checkbooks",
+      "landmark": {
+       "name": "",
+       "role": "main"
+      },
+      "layer": "document",
+      "name": "",
+      "rect": [
+       346,
+       505,
+       40,
+       40
+      ],
+      "role": "checkbox",
+      "tag": "input",
+      "xpath": "/html/body/div[1]/main[1]/div[1]/div[1]/div[4]/div[1]/div[2]/div[2]/div[1]/table[1]/tbody[1]/tr[5]/td[1]/div[1]/input[1]"
+     },
+     "state": "accounts.checkbooks-hub"
+    },
+    {
+     "evidence": {
+      "failureSummary": "Fix any of the following:\n  Element does not have an implicit (wrapped) <label>\n  Element does not have an explicit <label>\n  aria-label attribute does not exist or is empty\n  aria-labelledby attribute does not exist, references elements that do not exist or references elements that are empty\n  Element has no title attribute\n  Element has no placeholder attribute\n  Element's default semantics were not overridden with role=\"none\" or role=\"presentation\"",
+      "messageKey": "noAttr"
+     },
+     "occurrence": {
+      "ancestors": [
+       [
+        "_checkboxHeightFix_1wfxj_6",
+        "_checkboxWrapper_1758n_62",
+        "_defaultCheckboxWrapper_1km7i_14",
+        "_disabled_1km7i_21",
+        "_disabled_1758n_85",
+        "_inTable_1758n_108"
+       ],
+       [
+        "_tableHead_hi0p4_3",
+        "_alignmentCenter_hi0p4_15",
+        "_fullWidthTable_4sbgh_49",
+        "_header_4sbgh_38",
+        "_select_4sbgh_2",
+        "_firstColumn_4sbgh_56",
+        "_checkboxCell_hi0p4_31"
+       ],
+       [
+        "_tableHeadRow_1rlph_21"
+       ],
+       [
+        "_tableHead_1rlph_1",
+        "_transactionsTableHeader_1ow20_37",
+        "_fullWidthTable_1ow20_37"
+       ],
+       [
+        "_table_1acga_4"
+       ],
+       [
+        "_tableWrapper_1ow20_26",
+        "_tableWrapper_1acga_4"
+       ],
+       [],
+       [
+        "_transactionsPageDashboardWrapper_1ow20_48"
+       ]
+      ],
+      "classes": [
+       "_input_1758n_13",
+       "_defaultInput_1km7i_44"
+      ],
+      "data": {},
+      "heading": "Transactions",
+      "landmark": {
+       "name": "",
+       "role": "main"
+      },
+      "layer": "document",
+      "name": "",
+      "rect": [
+       230,
+       311,
+       40,
+       40
+      ],
+      "role": "checkbox",
+      "tag": "input",
+      "xpath": "/html/body/div[1]/main[1]/div[1]/div[1]/div[4]/div[1]/div[2]/div[3]/div[1]/table[1]/thead[1]/tr[1]/th[1]/div[1]/input[1]"
+     },
+     "state": "transactions.filter-no-results"
+    }
+   ],
+   "evidenceHash": "1453d1e6d6afef424470c38c0b7caa8271a229177748c81c84af1ba8828eeb15",
+   "facts": {
+    "announced": "checkbox \"\" [checked=false, disabled=true]",
+    "axeSummary": "Element does not have an implicit (wrapped) <label>; Element does not have an explicit <label>; aria-label attribute does not exist or is empty; aria-labelledb…",
+    "criterion": "4.1.2",
+    "criterionName": "Name, Role, Value",
+    "element": "checkbox in \"Checkbooks\"",
+    "rule": "label",
+    "screen": "Checkbooks hub (after Done)"
+   },
+   "family": "name",
+   "guidance": "High for an unnamed form control or the sole primary action.",
+   "issueId": null,
+   "key": "name:label:4b5e524aff69",
+   "measured": false,
+   "primary": "accounts.checkbooks-hub",
+   "proposals": [],
+   "rule": "label",
+   "screens": 6,
+   "severityDefault": "medium",
+   "source": "scanner",
+   "states": [
+    "accounts.checkbooks-hub",
+    "transactions.filter-no-results"
+   ],
+   "summary": "label: announced as checkbox \"\" [checked=false, disabled=true]. Element does not have an implicit (wrapped) <label>; Element does not have an explicit <label>; aria-label attribute does not exist or is empty; aria-labelledb…",
+   "title": "Missing or unclear name: checkbox in \"Checkbooks\""
+  },
+  {
+   "attachments": [],
+   "attempt": 1,
+   "basis": "violation",
+   "criteria": [
+    "4.1.2"
+   ],
+   "evidence": [
+    {
+     "evidence": {
+      "failureSummary": "Fix all of the following:\n  Focusable content should be disabled or be removed from the DOM"
+     },
+     "occurrence": {
+      "ancestors": [
+       [
+        "_tableWrapper_1d15f_1"
+       ],
+       [
+        "_pageContent_809q8_151",
+        "_pageContentWidth_809q8_184",
+        "_footerPadding_809q8_115"
+       ],
+       [
+        "_dashboardContent_809q8_29"
+       ],
+       [
+        "_layout_809q8_18"
+       ],
+       [
+        "_wrapper_809q8_3"
+       ],
+       [],
+       [
+        "_main_1gb3b_1"
+       ],
+       [
+        "mercury-root"
+       ]
+      ],
+      "classes": [
+       "_transitionWrapper_d3i56_5",
+       "_detailPanelWrapper_1d15f_12"
+      ],
+      "data": {},
+      "heading": "Checkbooks",
+      "landmark": {
+       "name": "",
+       "role": "main"
+      },
+      "layer": "document",
+      "name": "",
+      "rect": [
+       1122,
+       184,
+       392,
+       488
+      ],
+      "role": "",
+      "tag": "aside",
+      "xpath": "/html/body/div[1]/main[1]/div[1]/div[1]/div[4]/div[1]/div[2]/div[2]/aside[1]"
+     },
+     "state": "accounts.checkbooks-hub"
+    },
+    {
+     "evidence": {
+      "failureSummary": "Fix all of the following:\n  Focusable content should be disabled or be removed from the DOM"
+     },
+     "occurrence": {
+      "ancestors": [
+       [
+        "_tableWrapper_1d15f_1"
+       ],
+       [
+        "_pageContent_809q8_151",
+        "_pageContentWidth_809q8_184",
+        "_footerPadding_809q8_115"
+       ],
+       [
+        "_dashboardContent_809q8_29"
+       ],
+       [
+        "_layout_809q8_18"
+       ],
+       [
+        "_wrapper_809q8_3"
+       ],
+       [],
+       [
+        "_main_1gb3b_1"
+       ],
+       [
+        "mercury-root"
+       ]
+      ],
+      "classes": [
+       "_transitionWrapper_d3i56_5",
+       "_detailPanelWrapper_1d15f_12"
+      ],
+      "data": {},
+      "heading": "Checkbooks",
+      "landmark": {
+       "name": "",
+       "role": "main"
+      },
+      "layer": "document",
+      "name": "",
+      "rect": [
+       1122,
+       184,
+       392,
+       488
+      ],
+      "role": "",
+      "tag": "aside",
+      "xpath": "/html/body/div[1]/main[1]/div[1]/div[1]/div[4]/div[1]/div[2]/div[2]/aside[1]"
+     },
+     "state": "payments.checkbooks"
+    }
+   ],
+   "evidenceHash": "4f7daa842b7abb57890a972bb297e86c7c2e978231c2839c29b4b617f3378fad",
+   "facts": {
+    "announced": " \"\"",
+    "axeSummary": "Focusable content should be disabled or be removed from the DOM",
+    "criterion": "4.1.2",
+    "criterionName": "Name, Role, Value",
+    "element": "text in \"Checkbooks\"",
+    "rule": "aria-hidden-focus",
+    "screen": "Checkbooks hub (after Done)"
+   },
+   "family": "role-state",
+   "guidance": "Low for optional ARIA or an invalid autocomplete token; high when aria-hidden hides the whole page.",
+   "issueId": null,
+   "key": "role-state:aria-hidden-focus:dd5d6601f0d4",
+   "measured": false,
+   "primary": "accounts.checkbooks-hub",
+   "proposals": [],
+   "rule": "aria-hidden-focus",
+   "screens": 2,
+   "severityDefault": "medium",
+   "source": "scanner",
+   "states": [
+    "accounts.checkbooks-hub",
+    "payments.checkbooks"
+   ],
+   "summary": "aria-hidden-focus: announced as  \"\". Focusable content should be disabled or be removed from the DOM",
+   "title": "Focusable but hidden: text in \"Checkbooks\""
+  },
+  {
+   "attachments": [],
+   "attempt": 1,
+   "basis": "failure",
+   "criteria": [
+    "2.5.8"
+   ],
+   "evidence": [
+    {
+     "evidence": {
+      "agree": false,
+      "axe": "pass",
+      "exception": null,
+      "height": 20,
+      "offset": 0,
+      "own": "fail",
+      "passedBy": null,
+      "width": 20
+     },
+     "occurrence": {
+      "ancestors": [
+       [
+        "_bookmarkWrapper_1irs1_6"
+       ],
+       [
+        "_list_1l8yn_1"
+       ],
+       [
+        "_bookmarksSection_184ve_46"
+       ],
+       [
+        "_navContainer_184ve_12"
+       ],
+       [
+        "_sidebar_11y1x_4",
+        "_narrowSidebar_184ve_7"
+       ],
+       [
+        "_layout_809q8_18"
+       ],
+       [
+        "_wrapper_809q8_3"
+       ],
+       []
+      ],
+      "classes": [
+       "_bookmarkRemoveButton_1irs1_42"
+      ],
+      "data": {},
+      "disabled": false,
+      "heading": "",
+      "landmark": {
+       "name": "",
+       "role": "navigation"
+      },
+      "layer": "document",
+      "name": "Remove bookmark",
+      "rect": [
+       183,
+       819,
+       20,
+       20
+      ],
+      "role": "button",
+      "tag": "button",
+      "xpath": "/html/body/div[1]/main[1]/div[1]/div[1]/div[4]/nav[1]/div[2]/div[4]/ul[1]/li[1]/button[2]"
+     },
+     "state": "accounts.checkbooks-hub"
+    },
+    {
+     "evidence": {
+      "agree": false,
+      "axe": "pass",
+      "exception": null,
+      "height": 20,
+      "offset": 0,
+      "own": "fail",
+      "passedBy": null,
+      "width": 20
+     },
+     "occurrence": {
+      "ancestors": [
+       [
+        "_bookmarkWrapper_1irs1_6"
+       ],
+       [
+        "_list_1l8yn_1"
+       ],
+       [
+        "_bookmarksSection_184ve_46"
+       ],
+       [
+        "_navContainer_184ve_12"
+       ],
+       [
+        "_sidebar_11y1x_4",
+        "_narrowSidebar_184ve_7"
+       ],
+       [
+        "_layout_809q8_18",
+        "_homeLayout_ct6b5_100"
+       ],
+       [
+        "_wrapper_809q8_3"
+       ],
+       []
+      ],
+      "classes": [
+       "_bookmarkRemoveButton_1irs1_42"
+      ],
+      "data": {},
+      "disabled": false,
+      "heading": "",
+      "landmark": {
+       "name": "",
+       "role": "navigation"
+      },
+      "layer": "document",
+      "name": "Remove bookmark",
+      "rect": [
+       183,
+       614,
+       20,
+       20
+      ],
+      "role": "button",
+      "tag": "button",
+      "xpath": "/html/body/div[1]/main[1]/div[1]/div[1]/div[4]/nav[1]/div[2]/div[4]/ul[1]/li[1]/button[2]"
+     },
+     "state": "home.balance-graph-hover"
+    }
+   ],
+   "evidenceHash": "d6b5f7376d24de72adfcff7bd44feb742bab9a8c1e23f90a5461b82bba93c12c",
+   "facts": {
+    "criterion": "2.5.8",
+    "criterionName": "Target Size (Minimum)",
+    "element": "button \"Remove bookmark\"",
+    "offset": "0",
+    "rule": "target-size-own",
+    "screen": "Checkbooks hub (after Done)",
+    "screens": 149,
+    "size": "20×20"
+   },
+   "family": "target-size",
+   "guidance": "Medium next to destructive or financial controls.",
+   "issueId": null,
+   "key": "target-size:target-size-own:4ee7b042b66a",
+   "measured": true,
+   "primary": "accounts.checkbooks-hub",
+   "proposals": [],
+   "rule": "target-size-own",
+   "screens": 149,
+   "severityDefault": "low",
+   "source": "scanner",
+   "states": [
+    "accounts.checkbooks-hub",
+    "home.balance-graph-hover"
+   ],
+   "summary": "target-size-own: 20×20 px; the widest circle centered on it that clears other targets is 0 px, and the spacing exception needs 24 px.",
+   "title": "Target under 24×24 px: button \"Remove bookmark\""
+  }
+ ],
+ "primaries": [
+  "accounts.checkbooks-hub"
+ ],
+ "reach": {
+  "baseUrl": "https://demo.mercury.com",
+  "data": "data",
+  "map": "build/map.json",
+  "run": "2026-10-03-1525",
+  "workspace": "a11y"
+ },
+ "run": "2026-10-03-1525"
+}

@@ -1,0 +1,240 @@
+{
+ "batch": "record-004",
+ "reach": {
+  "baseUrl": "https://demo.mercury.com",
+  "data": "data",
+  "map": "build/map.json",
+  "run": "2026-10-02-1349",
+  "workspace": "a11y"
+ },
+ "run": "2026-10-02-1349",
+ "states": [
+  {
+   "area": "accounts",
+   "draft": "nothing on accounts.treasury-transfer-in matches {\"click\":{\"name\":\"Next with empty form\"}}",
+   "image": "screens/accounts/46-treasury-transfer-validation.png",
+   "kind": "validation-error",
+   "labels": [
+    "Click Next with empty form"
+   ],
+   "mutates": false,
+   "note": "\"Must be a dollar value.\" under Amount and \"Please choose an account\" under Transfer from.",
+   "parent": "accounts.treasury-transfer-in",
+   "state": "accounts.treasury-transfer-error",
+   "title": "Transfer \u2014 empty submit"
+  },
+  {
+   "area": "accounts",
+   "draft": "not drafted: its parent had no accepted recipe when the drafter ran",
+   "image": "screens/accounts/47-treasury-transfer-review.png",
+   "kind": "page",
+   "labels": [
+    "Click Next with empty form",
+    "Enter $10,000, pick Ops / Payroll, click Next"
+   ],
+   "mutates": false,
+   "note": "$10,000.00 from Ops / Payroll to Treasury, with authorization and Apex Clearing disclosures.",
+   "parent": "accounts.treasury-transfer-error",
+   "state": "accounts.treasury-transfer-review",
+   "title": "Review transfer"
+  },
+  {
+   "area": "accounts",
+   "draft": "not drafted: its parent had no accepted recipe when the drafter ran",
+   "image": "screens/accounts/48-treasury-transfer-success.png",
+   "kind": "confirmation",
+   "labels": [
+    "Click Next with empty form",
+    "Enter $10,000, pick Ops / Payroll, click Next",
+    "Click Transfer"
+   ],
+   "mutates": true,
+   "note": "\"Your transfer is on the way\" with arrival window, amount card, Make another transfer and Go to dashboard.",
+   "parent": "accounts.treasury-transfer-review",
+   "state": "accounts.treasury-transfer-success",
+   "title": "Transfer on the way"
+  },
+  {
+   "area": "accounts",
+   "draft": "not drafted: its parent had no accepted recipe when the drafter ran; the conductor rejected the previous recipe: different screen: the hop clicks an account row and stays on Mercury accounts; the label means the Auto transfer rules tab",
+   "image": "screens/accounts/08-auto-transfer-rules.png",
+   "kind": "empty-state",
+   "labels": [
+    "Click Auto transfer rules tab"
+   ],
+   "mutates": false,
+   "note": "Empty state with four rule templates: distribute funds, maintain a target balance, schedule recurring transfers, redirect incoming funds.",
+   "parent": "accounts.index",
+   "state": "accounts.auto-transfer-rules",
+   "title": "Auto transfer rules \u2014 empty"
+  },
+  {
+   "area": "accounts",
+   "draft": "not drafted: its parent had no accepted recipe when the drafter ran",
+   "image": "screens/accounts/09-create-rule.png",
+   "kind": "modal",
+   "labels": [
+    "Click Auto transfer rules tab",
+    "Click Create rule"
+   ],
+   "mutates": true,
+   "note": "Modal listing rule types plus a free-text custom rule field with a Generate rule button.",
+   "parent": "accounts.auto-transfer-rules",
+   "state": "accounts.create-rule",
+   "title": "Create auto transfer rule \u2014 pick type"
+  },
+  {
+   "area": "accounts",
+   "draft": "nothing on accounts.edit-autopay matches {\"click\":{\"name\":\"Edit on Less than 80% of limit left\"}}",
+   "image": "screens/accounts/36-autopay-threshold-edit.png",
+   "kind": "modal",
+   "labels": [
+    "Click Autopay Oct 22 pill",
+    "Click Edit on Less than 80% of limit left"
+   ],
+   "mutates": false,
+   "note": "Threshold rule editor: % of limit left, maximum daily payment, preview chart and Turn off this rule link.",
+   "parent": "accounts.edit-autopay",
+   "state": "accounts.autopay-threshold-edit",
+   "title": "Set up limit-based autopay"
+  },
+  {
+   "area": "accounts",
+   "draft": "not drafted: its parent had no accepted recipe when the drafter ran",
+   "image": "screens/accounts/37-autopay-threshold-saving.png",
+   "kind": "form-state",
+   "labels": [
+    "Click Autopay Oct 22 pill",
+    "Click Edit on Less than 80% of limit left",
+    "Type 150 and click Save"
+   ],
+   "mutates": true,
+   "note": "Typing 150 is silently truncated to 15%; preview text updates and Save shows a spinner.",
+   "parent": "accounts.autopay-threshold-edit",
+   "state": "accounts.autopay-threshold-saving",
+   "title": "Limit-based autopay saving"
+  },
+  {
+   "area": "accounts",
+   "draft": "structure-missing: a modal needs an open layer; the replay found none",
+   "image": "screens/accounts/75-link-credit.png",
+   "kind": "modal",
+   "labels": [
+    "Click Add account",
+    "Click Link Credit account"
+   ],
+   "mutates": false,
+   "note": "Link Credit account mock-links \"Chase Freedom Unlimited 1\" immediately and asks Business or Personal, with a Save button and no Cancel.",
+   "parent": "accounts.add-account-menu",
+   "state": "accounts.link-credit",
+   "title": "Link credit account \u2014 account type"
+  },
+  {
+   "area": "accounts",
+   "draft": "not drafted: its parent had no accepted recipe when the drafter ran",
+   "image": "screens/accounts/76-linked-credit-account.png",
+   "kind": "page",
+   "labels": [
+    "Click Add account",
+    "Click Link Credit account",
+    "Choose Personal, click Save, open Linked accounts"
+   ],
+   "mutates": true,
+   "note": "After saving, Chase Freedom Unlimited 1 (Personal Credit Card \u2022\u20227249 \u2013 Chase) appears at the bottom of the Linked accounts table; credit rows have no Transfer button.",
+   "parent": "accounts.link-credit",
+   "state": "accounts.linked-credit-account",
+   "title": "Linked accounts with new credit card"
+  },
+  {
+   "area": "accounts",
+   "draft": "structure-missing: a popover needs an open layer; the replay found none",
+   "image": "screens/accounts/20-routing-copied.png",
+   "kind": "popover",
+   "labels": [
+    "Click eye icon next to Account number",
+    "Click routing number"
+   ],
+   "mutates": false,
+   "note": "Clicking the routing number copies it and shows a \"Copied\" tooltip.",
+   "parent": "accounts.account-number-revealed",
+   "state": "accounts.routing-copied",
+   "title": "Routing number copied"
+  },
+  {
+   "area": "accounts",
+   "draft": "not drafted: its parent had no accepted recipe when the drafter ran",
+   "image": "screens/accounts/21-documents-menu.png",
+   "kind": "menu",
+   "labels": [
+    "Click eye icon next to Account number",
+    "Click routing number",
+    "Click Documents"
+   ],
+   "mutates": false,
+   "note": "Account Documents dropdown: Statements, Bank Letters, Wire Details.",
+   "parent": "accounts.routing-copied",
+   "state": "accounts.documents-menu",
+   "title": "Documents menu"
+  },
+  {
+   "area": "accounts",
+   "draft": "nothing on accounts.edit-autopay matches {\"click\":{\"name\":\"Edit on Autopay from\"}}",
+   "image": "screens/accounts/38-autopay-source-edit.png",
+   "kind": "modal",
+   "labels": [
+    "Click Autopay Oct 22 pill",
+    "Click Edit on Autopay from"
+   ],
+   "mutates": false,
+   "note": "Primary (required) and backup (recommended) autopay account pickers.",
+   "parent": "accounts.edit-autopay",
+   "state": "accounts.autopay-source-edit",
+   "title": "Edit autopay accounts"
+  },
+  {
+   "area": "accounts",
+   "draft": "nothing on accounts.create-account matches {\"click\":{\"name\":\"Create account with no type\"}}",
+   "image": "screens/accounts/04-create-account-validation.png",
+   "kind": "validation-error",
+   "labels": [
+    "Click Add account",
+    "Click Create account",
+    "Click Create account with no type"
+   ],
+   "mutates": true,
+   "note": "Submitting without a type shows 'You must make a selection.' under the Type radio cards.",
+   "parent": "accounts.create-account",
+   "state": "accounts.create-account-error",
+   "title": "Create account \u2014 no type selected"
+  },
+  {
+   "area": "accounts",
+   "draft": "not drafted: its parent had no accepted recipe when the drafter ran; the conductor rejected the previous recipe: different screen: the hop clicks 'Customize your experience' and opens the demo form; the label means the Last Month control",
+   "image": "screens/accounts/110-credit-last-month.png",
+   "kind": "form-state",
+   "labels": [
+    "Click Last Month"
+   ],
+   "mutates": false,
+   "note": "Clicking \"Last Month\" swaps the table to Aug 30 rows, but the heading still reads \"This month\" and the control still reads \"Last Month\".",
+   "parent": "accounts.credit",
+   "state": "accounts.credit-last-month",
+   "title": "Credit activity: Last Month"
+  },
+  {
+   "area": "accounts",
+   "draft": "nothing on accounts.limit-increase matches {\"click\":{\"name\":\"Request Increase with no amount\"}}",
+   "image": "screens/accounts/94-limit-increase-validation.png",
+   "kind": "validation-error",
+   "labels": [
+    "Click Request a limit increase",
+    "Click Request Increase with no amount"
+   ],
+   "mutates": true,
+   "note": "Submitting with no amount shows \"Must be a dollar value.\" under Requested Amount.",
+   "parent": "accounts.limit-increase",
+   "state": "accounts.limit-increase-error",
+   "title": "Limit increase validation"
+  }
+ ]
+}

@@ -1,0 +1,180 @@
+{
+ "area": "accounts",
+ "batch": "verify-414",
+ "findings": [
+  {
+   "attachments": [],
+   "attempt": 1,
+   "basis": "candidate",
+   "criteria": [
+    "4.1.2"
+   ],
+   "evidence": [
+    {
+     "evidence": {
+      "description": "",
+      "name": "mercury-utils-id-61-label",
+      "role": "listbox",
+      "states": {},
+      "template": "listbox \"mercury-utils-id-<n>-label\""
+     },
+     "occurrence": {
+      "ancestors": [
+       [
+        "_suggestionPositionWrapper_1g1tn_113"
+       ],
+       [
+        "_tagInputBoundingWrapper_1g1tn_236"
+       ],
+       [
+        "_contentContainer_152f5_12"
+       ],
+       [],
+       [
+        "_wrapper_cjx1n_3"
+       ],
+       [
+        "ReactModal__Content",
+        "ReactModal__Content--after-open",
+        "_modal_cjx1n_34"
+       ],
+       [
+        "ReactModal__Overlay",
+        "ReactModal__Overlay--after-open",
+        "_overlay_cjx1n_39"
+       ],
+       [
+        "ReactModalPortal"
+       ]
+      ],
+      "classes": [
+       "_suggestionsWrapper_1g1tn_121",
+       "_suggestionsOpen_1g1tn_142",
+       "_dropShadow_1g1tn_221",
+       "_subtleHighlightFirstOption_1g1tn_164"
+      ],
+      "data": {},
+      "heading": "",
+      "landmark": {
+       "name": "",
+       "role": "form"
+      },
+      "layer": "top",
+      "name": "mercury-utils-id-61-label",
+      "rect": [
+       470,
+       153,
+       500,
+       105
+      ],
+      "role": "listbox",
+      "tag": "ul",
+      "xpath": "/html/body/div[10]/div[1]/div[1]/div[1]/div[2]/form[1]/div[1]/div[2]/ul[1]"
+     },
+     "state": "accounts.share-recipient-menu"
+    },
+    {
+     "evidence": {
+      "description": "",
+      "name": "mercury-utils-id-61-label",
+      "role": "listbox",
+      "states": {},
+      "template": "listbox \"mercury-utils-id-<n>-label\""
+     },
+     "occurrence": {
+      "ancestors": [
+       [
+        "_suggestionPositionWrapper_1g1tn_113"
+       ],
+       [
+        "_tagInputBoundingWrapper_1g1tn_236"
+       ],
+       [
+        "_contentContainer_152f5_12"
+       ],
+       [],
+       [
+        "_wrapper_cjx1n_3"
+       ],
+       [
+        "ReactModal__Content",
+        "ReactModal__Content--after-open",
+        "_modal_cjx1n_34"
+       ],
+       [
+        "ReactModal__Overlay",
+        "ReactModal__Overlay--after-open",
+        "_overlay_cjx1n_39"
+       ],
+       [
+        "ReactModalPortal"
+       ]
+      ],
+      "classes": [
+       "_suggestionsWrapper_1g1tn_121",
+       "_suggestionsOpen_1g1tn_142",
+       "_dropShadow_1g1tn_221",
+       "_subtleHighlightFirstOption_1g1tn_164"
+      ],
+      "data": {},
+      "heading": "",
+      "landmark": {
+       "name": "",
+       "role": "form"
+      },
+      "layer": "top",
+      "name": "mercury-utils-id-61-label",
+      "rect": [
+       470,
+       245,
+       500,
+       137
+      ],
+      "role": "listbox",
+      "tag": "ul",
+      "xpath": "/html/body/div[10]/div[1]/div[1]/div[1]/div[2]/form[1]/div[2]/div[2]/ul[1]"
+     },
+     "state": "settings.share-recipient-suggest"
+    }
+   ],
+   "evidenceHash": "f43f363f43bff539a4188eb8be0c35f612437bf7978338a0d23af22486e150ac",
+   "facts": {
+    "announced": "listbox \"mercury-utils-id-<n>-label\"",
+    "axeSummary": "",
+    "criterion": "4.1.2",
+    "criterionName": "Name, Role, Value",
+    "element": "listbox \"mercury-utils-id-<n>-label\"",
+    "rule": "announced-as",
+    "screen": "Share recipient picker"
+   },
+   "family": "name",
+   "guidance": "High for an unnamed form control or the sole primary action.",
+   "issueId": null,
+   "key": "name:announced-as:aabab4216a1e",
+   "measured": false,
+   "primary": "accounts.share-recipient-menu",
+   "proposals": [],
+   "rule": "announced-as",
+   "screens": 2,
+   "severityDefault": "medium",
+   "source": "scanner",
+   "states": [
+    "accounts.share-recipient-menu",
+    "settings.share-recipient-suggest"
+   ],
+   "summary": "announced-as: announced as listbox \"mercury-utils-id-<n>-label\".",
+   "title": "Missing or unclear name: listbox \"mercury-utils-id-<n>-label\""
+  }
+ ],
+ "primaries": [
+  "accounts.share-recipient-menu"
+ ],
+ "reach": {
+  "baseUrl": "https://demo.mercury.com",
+  "data": "data",
+  "map": "build/map.json",
+  "run": "2026-10-03-1525",
+  "workspace": "a11y"
+ },
+ "run": "2026-10-03-1525"
+}

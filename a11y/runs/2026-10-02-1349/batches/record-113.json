@@ -1,0 +1,32 @@
+{
+ "batch": "record-113",
+ "reach": {
+  "baseUrl": "https://demo.mercury.com",
+  "data": "data",
+  "map": "build/map.json",
+  "run": "2026-10-02-1349",
+  "workspace": "a11y"
+ },
+ "run": "2026-10-02-1349",
+ "states": [
+  {
+   "area": "accounts",
+   "draft": "not drafted: its parent had no accepted recipe when the drafter ran; a previous recorder failed: previous recorders reported policy before policy.fixtureValues gained the value this label types; it is there now (check with jq)",
+   "image": "screens/accounts/13-rule-target-balance-filled.png",
+   "kind": "form-state",
+   "labels": [
+    "Click Auto transfer rules tab",
+    "Click Create rule",
+    "Click Maintain a target balance",
+    "Click Next with empty fields",
+    "Open Account dropdown",
+    "Pick AP, enter $50,000, supporting account and frequency"
+   ],
+   "mutates": true,
+   "note": "AP kept at $50,000 from Ops / Payroll, every business day.",
+   "parent": "accounts.rule-account-dropdown",
+   "state": "accounts.rule-target-balance-filled",
+   "title": "Target balance rule \u2014 filled"
+  }
+ ]
+}

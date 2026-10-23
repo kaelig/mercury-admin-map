@@ -1,0 +1,149 @@
+{
+ "batch": "record-044",
+ "reach": {
+  "baseUrl": "https://demo.mercury.com",
+  "data": "data",
+  "map": "build/map.json",
+  "run": "2026-10-02-1349",
+  "workspace": "a11y"
+ },
+ "run": "2026-10-02-1349",
+ "states": [
+  {
+   "area": "home",
+   "draft": "nothing on home.index matches {\"click\":{\"name\":\"avatar\"}}",
+   "image": "screens/home/33-avatar-menu.png",
+   "kind": "menu",
+   "labels": [
+    "Click avatar"
+   ],
+   "mutates": false,
+   "note": "Avatar menu: Jane Black / email, Profile, Notifications, Security, Privacy and Perks (external), Appearance, Log out.",
+   "parent": "home.index",
+   "state": "home.avatar-menu",
+   "title": "Profile menu"
+  },
+  {
+   "area": "home",
+   "draft": "not drafted: its parent had no accepted recipe when the drafter ran",
+   "image": "screens/home/34-avatar-appearance-submenu.png",
+   "kind": "menu",
+   "labels": [
+    "Click avatar",
+    "Hover/ArrowRight on Appearance"
+   ],
+   "mutates": false,
+   "note": "Appearance flyout: System default (checked), Dark mode, Light mode.",
+   "parent": "home.avatar-menu",
+   "state": "home.appearance-submenu",
+   "title": "Appearance submenu"
+  },
+  {
+   "area": "home",
+   "draft": "cannot parse \"Hover a bookmark\"; a previous recorder failed: step-failed: hover {\"role\":\"listitem\",\"name\":\"Credit Card\"}: no element matches",
+   "image": "screens/home/36-bookmark-hover-handles.png",
+   "kind": "form-state",
+   "labels": [
+    "Hover a bookmark"
+   ],
+   "mutates": false,
+   "note": "Hovering a sidebar bookmark reveals a drag handle on the left and an x (Remove bookmark) on the right.",
+   "parent": "home.index",
+   "state": "home.bookmark-hover",
+   "title": "Bookmark hover: reorder handle + remove"
+  },
+  {
+   "area": "home",
+   "draft": "not drafted: its parent had no accepted recipe when the drafter ran",
+   "image": "screens/home/37-bookmark-reordered.png",
+   "kind": "confirmation",
+   "labels": [
+    "Hover a bookmark",
+    "Drag reorder handle below Insights"
+   ],
+   "mutates": false,
+   "note": "After dragging the Credit Card handle below Insights, the bookmark list order persists as Ops / Payroll, Bill Pay, Insights, Credit Card.",
+   "parent": "home.bookmark-hover",
+   "state": "home.bookmark-reordered",
+   "title": "Bookmarks reordered"
+  },
+  {
+   "area": "home",
+   "draft": "not drafted: its parent had no accepted recipe when the drafter ran",
+   "image": "screens/home/57-money-movement-prev-month.png",
+   "kind": "page",
+   "labels": [
+    "Scroll down",
+    "Click previous-month arrow"
+   ],
+   "mutates": false,
+   "note": "Clicking the left arrow switches Money movement to Aug 2026 (Money in $164,236.08, Money out \u2212$272,194.88) and enables the right arrow.",
+   "parent": "home.index-money-movement",
+   "state": "home.money-movement-prev",
+   "title": "Money movement \u2014 previous month"
+  },
+  {
+   "area": "home",
+   "draft": "not drafted: its parent had no accepted recipe when the drafter ran",
+   "image": "screens/home/58-money-out-info-tooltip.png",
+   "kind": "popover",
+   "labels": [
+    "Scroll down",
+    "Click previous-month arrow",
+    "Hover Money out info icon"
+   ],
+   "mutates": false,
+   "note": "The info icon next to 'Money out' explains it excludes internal transfers and Credit payments.",
+   "parent": "home.money-movement-prev",
+   "state": "home.money-out-tooltip",
+   "title": "Money out info tooltip"
+  },
+  {
+   "area": "home",
+   "draft": "cannot parse \"Enter 500 and submit\"; a previous recorder failed: policy (now retry: policy.fixtureValues gained empty \"\", 2000000, 10000, 500, 150, card): The label types 500 in the spending limit field; 500 is not a fixture value.",
+   "image": "screens/home/81-command-question-2.png",
+   "kind": "form-state",
+   "labels": [
+    "Click 'Issue new card'",
+    "Enter 500 and submit"
+   ],
+   "mutates": true,
+   "note": "Question 2 of 3, 'How often should that limit reset?', with numbered Daily / Weekly / Monthly / Yearly options and a '/' free-text option.",
+   "parent": "home.command-issue-card",
+   "state": "home.command-question-2",
+   "title": "Command \u2014 limit reset question"
+  },
+  {
+   "area": "home",
+   "draft": "not drafted: its parent had no accepted recipe when the drafter ran",
+   "image": "screens/home/79-index-personalized.png",
+   "kind": "page",
+   "labels": [
+    "Click 'Customize your experience' in banner",
+    "Open Industry dropdown",
+    "Pick 'Startup' and enter balance",
+    "Click Submit",
+    "Close Try-out panel"
+   ],
+   "mutates": true,
+   "note": "Personalized Home: org name and greeting changed, hero balance $250,000.00, while account rows still total about $2.46M.",
+   "parent": "home.customize-demo-success",
+   "state": "home.index-personalized",
+   "title": "Home \u2014 personalized demo"
+  },
+  {
+   "area": "home",
+   "draft": "not drafted: its parent had no accepted recipe when the drafter ran; the conductor rejected the previous recipe: different screen: the replay is plain Settings > Team with the Settings sidebar (matches settings/33-team), while the capture shows the Team list under the main app nav; the hop also clicks 'Close detail panel', which the label 'Click Confirm changes' does not name",
+   "image": "screens/home/46-task-invite-confirmed.png",
+   "kind": "confirmation",
+   "labels": [
+    "Click Confirm changes"
+   ],
+   "mutates": true,
+   "note": "Confirm changes returns to Settings > Team, listing members with role badges.",
+   "parent": "home.task-invite-review",
+   "state": "home.task-invite-confirmed",
+   "title": "Invite approved, Team list"
+  }
+ ]
+}

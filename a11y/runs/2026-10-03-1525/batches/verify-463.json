@@ -1,0 +1,220 @@
+{
+ "area": "home",
+ "batch": "verify-463",
+ "findings": [
+  {
+   "attachments": [],
+   "attempt": 1,
+   "basis": "candidate",
+   "criteria": [
+    "4.1.2"
+   ],
+   "evidence": [
+    {
+     "evidence": {
+      "description": "",
+      "name": "Balance graph",
+      "role": "button",
+      "states": {},
+      "template": "button \"Balance graph\""
+     },
+     "occurrence": {
+      "ancestors": [
+       [
+        "_buttonWithDivider_1xt6d_80"
+       ],
+       [
+        "_container_1xt6d_3",
+        "_large_1xt6d_15"
+       ],
+       [
+        "_toggleMode_q3oue_47"
+       ],
+       [
+        "_controls_q3oue_37"
+       ],
+       [
+        "_topSection_q3oue_12",
+        "_borderBottom_q3oue_21"
+       ],
+       [
+        "_container_q3oue_1"
+       ],
+       [
+        "_large_kwlx6_9",
+        "_noHover_3n0se_28",
+        "_border_3n0se_35",
+        "_raisedBackground_3n0se_45",
+        "_graph_ct6b5_91"
+       ],
+       [
+        "_row_ct6b5_42"
+       ]
+      ],
+      "classes": [
+       "_segment_1xt6d_7",
+       "_first_1xt6d_73"
+      ],
+      "data": {},
+      "heading": "Welcome, Jane",
+      "landmark": {
+       "name": "",
+       "role": "main"
+      },
+      "layer": "document",
+      "name": "Balance graph",
+      "rect": [
+       711,
+       270,
+       41,
+       38
+      ],
+      "role": "button",
+      "tag": "button",
+      "xpath": "/html/body/div[1]/main[1]/div[1]/div[1]/div[4]/div[1]/div[2]/div[1]/div[1]/div[4]/div[1]/div[1]/div[1]/div[1]/div[2]/div[1]/div[1]/div[1]/button[1]"
+     },
+     "state": "home.balance-table"
+    }
+   ],
+   "evidenceHash": "6f70fc2aecf66fd683974f888b95df84c206aba6fdb9bc57b86a22e9dff71dc6",
+   "facts": {
+    "announced": "button \"Balance graph\"",
+    "axeSummary": "",
+    "criterion": "4.1.2",
+    "criterionName": "Name, Role, Value",
+    "element": "button \"Balance graph\"",
+    "rule": "announced-as",
+    "screen": "Mercury balance: table view"
+   },
+   "family": "role-state",
+   "guidance": "Low for optional ARIA or an invalid autocomplete token; high when aria-hidden hides the whole page.",
+   "issueId": null,
+   "key": "role-state:announced-as:0bcfffd0ace7",
+   "measured": false,
+   "primary": "home.balance-table",
+   "proposals": [],
+   "rule": "announced-as",
+   "screens": 1,
+   "severityDefault": "medium",
+   "source": "scanner",
+   "states": [
+    "home.balance-table"
+   ],
+   "summary": "announced-as: announced as button \"Balance graph\".",
+   "title": "Wrong role or state: button \"Balance graph\""
+  },
+  {
+   "attachments": [],
+   "attempt": 1,
+   "basis": "candidate",
+   "criteria": [
+    "4.1.2"
+   ],
+   "evidence": [
+    {
+     "evidence": {
+      "description": "",
+      "name": "Balance table",
+      "role": "button",
+      "states": {},
+      "template": "button \"Balance table\""
+     },
+     "occurrence": {
+      "ancestors": [
+       [
+        "_buttonWithDivider_1xt6d_80"
+       ],
+       [
+        "_container_1xt6d_3",
+        "_large_1xt6d_15"
+       ],
+       [
+        "_toggleMode_q3oue_47"
+       ],
+       [
+        "_controls_q3oue_37"
+       ],
+       [
+        "_topSection_q3oue_12",
+        "_borderBottom_q3oue_21"
+       ],
+       [
+        "_container_q3oue_1"
+       ],
+       [
+        "_large_kwlx6_9",
+        "_noHover_3n0se_28",
+        "_border_3n0se_35",
+        "_raisedBackground_3n0se_45",
+        "_graph_ct6b5_91"
+       ],
+       [
+        "_row_ct6b5_42"
+       ]
+      ],
+      "classes": [
+       "_segment_1xt6d_7",
+       "_selected_1xt6d_60",
+       "_last_1xt6d_76"
+      ],
+      "data": {},
+      "heading": "Welcome, Jane",
+      "landmark": {
+       "name": "",
+       "role": "main"
+      },
+      "layer": "document",
+      "name": "Balance table",
+      "rect": [
+       750,
+       269,
+       43,
+       40
+      ],
+      "role": "button",
+      "tag": "button",
+      "xpath": "/html/body/div[1]/main[1]/div[1]/div[1]/div[4]/div[1]/div[2]/div[1]/div[1]/div[4]/div[1]/div[1]/div[1]/div[1]/div[2]/div[1]/div[1]/div[2]/button[1]"
+     },
+     "state": "home.balance-table"
+    }
+   ],
+   "evidenceHash": "0f3817bf242b69a77c6c7ba82cef6039933a90b6a94f0d2b37f49fd898b2a56a",
+   "facts": {
+    "announced": "button \"Balance table\"",
+    "axeSummary": "",
+    "criterion": "4.1.2",
+    "criterionName": "Name, Role, Value",
+    "element": "button \"Balance table\"",
+    "rule": "announced-as",
+    "screen": "Mercury balance: table view"
+   },
+   "family": "role-state",
+   "guidance": "Low for optional ARIA or an invalid autocomplete token; high when aria-hidden hides the whole page.",
+   "issueId": null,
+   "key": "role-state:announced-as:a950bc54d863",
+   "measured": false,
+   "primary": "home.balance-table",
+   "proposals": [],
+   "rule": "announced-as",
+   "screens": 1,
+   "severityDefault": "medium",
+   "source": "scanner",
+   "states": [
+    "home.balance-table"
+   ],
+   "summary": "announced-as: announced as button \"Balance table\".",
+   "title": "Wrong role or state: button \"Balance table\""
+  }
+ ],
+ "primaries": [
+  "home.balance-table"
+ ],
+ "reach": {
+  "baseUrl": "https://demo.mercury.com",
+  "data": "data",
+  "map": "build/map.json",
+  "run": "2026-10-03-1525",
+  "workspace": "a11y"
+ },
+ "run": "2026-10-03-1525"
+}

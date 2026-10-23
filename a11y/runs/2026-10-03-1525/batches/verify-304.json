@@ -1,0 +1,186 @@
+{
+ "area": "settings",
+ "batch": "verify-304",
+ "findings": [
+  {
+   "attachments": [],
+   "attempt": 1,
+   "basis": "violation",
+   "criteria": [
+    "1.3.5"
+   ],
+   "evidence": [
+    {
+     "evidence": {
+      "failureSummary": "Fix all of the following:\n  the autocomplete attribute is incorrectly formatted"
+     },
+     "occurrence": {
+      "ancestors": [
+       [
+        "_inputWrapper_11c85_6"
+       ],
+       [
+        "_wrapper_1xgdp_8"
+       ],
+       [
+        "_stack_il1fi_18",
+        "_direction-column_il1fi_24",
+        "_gap-space-150_il1fi_1"
+       ],
+       [],
+       [
+        "_large_kwlx6_9",
+        "_noHover_3n0se_28",
+        "_shadow_3n0se_25",
+        "_raisedBackground_3n0se_45",
+        "_card_lo4oy_4",
+        "_defaultPadding_lo4oy_27",
+        "_small_lo4oy_11"
+       ],
+       [
+        "ReactModal__Content",
+        "ReactModal__Content--after-open",
+        "_modal_lo4oy_73"
+       ],
+       [
+        "ReactModal__Overlay",
+        "ReactModal__Overlay--after-open",
+        "_overlay_lo4oy_89",
+        "_backgroundColor_lo4oy_103"
+       ],
+       [
+        "ReactModalPortal"
+       ]
+      ],
+      "classes": [
+       "_input_11c85_6"
+      ],
+      "data": {
+       "data-1p-ignore": "true",
+       "data-active-item": "true",
+       "data-bwignore": "true",
+       "data-lpignore": "true"
+      },
+      "heading": "Add job title",
+      "landmark": {
+       "name": "",
+       "role": "form"
+      },
+      "layer": "top",
+      "name": "Job title",
+      "rect": [
+       536,
+       420,
+       335,
+       40
+      ],
+      "role": "combobox",
+      "tag": "input",
+      "xpath": "/html/body/div[10]/div[1]/div[1]/div[1]/form[1]/div[1]/div[1]/div[1]/input[1]"
+     },
+     "state": "settings.add-job-title"
+    },
+    {
+     "evidence": {
+      "failureSummary": "Fix all of the following:\n  the autocomplete attribute is incorrectly formatted"
+     },
+     "occurrence": {
+      "ancestors": [
+       [
+        "_inputWrapper_11c85_6"
+       ],
+       [
+        "_wrapper_1xgdp_8"
+       ],
+       [
+        "_stack_il1fi_18",
+        "_direction-column_il1fi_24",
+        "_gap-space-150_il1fi_1"
+       ],
+       [
+        "_inputsWrapper_1mzu2_51",
+        "_inputsWrapperEdit_1mzu2_89"
+       ],
+       [
+        "_formWrapper_1mzu2_100",
+        "_inviteFormRoot_xolpa_214"
+       ],
+       [],
+       [
+        "_editFormWrapper_xolpa_21",
+        "_editFormWrapper_1mstp_12"
+       ],
+       [
+        "_panelBody_d3i56_64"
+       ]
+      ],
+      "classes": [
+       "_input_11c85_6"
+      ],
+      "data": {
+       "data-1p-ignore": "true",
+       "data-active-item": "true",
+       "data-bwignore": "true",
+       "data-lpignore": "true"
+      },
+      "heading": "Edit member",
+      "landmark": {
+       "name": "",
+       "role": "form"
+      },
+      "layer": "document",
+      "name": "Job title",
+      "rect": [
+       946,
+       468,
+       311,
+       40
+      ],
+      "role": "combobox",
+      "tag": "input",
+      "xpath": "/html/body/div[1]/main[1]/div[1]/div[1]/div[4]/div[1]/div[2]/div[2]/div[1]/div[2]/div[2]/div[1]/aside[1]/div[1]/div[1]/div[1]/form[1]/div[1]/div[1]/div[2]/div[1]/div[1]/input[1]"
+     },
+     "state": "settings.edit-member"
+    }
+   ],
+   "evidenceHash": "1d98c7c48563cf7c88563896234e9cbd42aa0e8355df1c0569e9dc30e43df7d3",
+   "facts": {
+    "announced": "combobox \"Job title\" [expanded=false, haspopup=listbox] (Select the title that…",
+    "axeSummary": "the autocomplete attribute is incorrectly formatted",
+    "criterion": "1.3.5",
+    "criterionName": "Identify Input Purpose",
+    "element": "combobox \"Job title\"",
+    "rule": "autocomplete-valid",
+    "screen": "Add job title modal"
+   },
+   "family": "role-state",
+   "guidance": "Low for optional ARIA or an invalid autocomplete token; high when aria-hidden hides the whole page.",
+   "issueId": null,
+   "key": "role-state:autocomplete-valid:714ed961ed4f",
+   "measured": false,
+   "primary": "settings.add-job-title",
+   "proposals": [],
+   "rule": "autocomplete-valid",
+   "screens": 3,
+   "severityDefault": "medium",
+   "source": "scanner",
+   "states": [
+    "settings.add-job-title",
+    "settings.edit-member"
+   ],
+   "summary": "autocomplete-valid: announced as combobox \"Job title\" [expanded=false, haspopup=listbox] (Select the title that…. the autocomplete attribute is incorrectly formatted",
+   "title": "Invalid autocomplete value: combobox \"Job title\""
+  }
+ ],
+ "primaries": [
+  "settings.add-job-title"
+ ],
+ "reach": {
+  "baseUrl": "https://demo.mercury.com",
+  "data": "data",
+  "map": "build/map.json",
+  "run": "2026-10-03-1525",
+  "workspace": "a11y"
+ },
+ "run": "2026-10-03-1525"
+}

@@ -1,0 +1,328 @@
+{
+ "area": "accounts",
+ "batch": "verify-036",
+ "findings": [
+  {
+   "attachments": [],
+   "attempt": 1,
+   "basis": "failure",
+   "criteria": [
+    "4.1.3"
+   ],
+   "evidence": [
+    {
+     "evidence": {
+      "focus": {
+       "ancestors": [
+        [
+         "_container_1ieyt_1",
+         "_rightAlign_1ieyt_9"
+        ],
+        [],
+        [],
+        [
+         "_large_kwlx6_9",
+         "_noHover_3n0se_28",
+         "_shadow_3n0se_25",
+         "_raisedBackground_3n0se_45",
+         "_card_lo4oy_4",
+         "_defaultPadding_lo4oy_27",
+         "_autoTransferTabModalContainer_11bzg_25",
+         "_small_lo4oy_11"
+        ],
+        [
+         "ReactModal__Content",
+         "ReactModal__Content--after-open",
+         "_modal_lo4oy_73",
+         "_top96_lo4oy_84"
+        ],
+        [
+         "ReactModal__Overlay",
+         "ReactModal__Overlay--after-open",
+         "_overlay_lo4oy_89",
+         "_backgroundColor_lo4oy_103"
+        ],
+        [
+         "ReactModalPortal"
+        ]
+       ],
+       "classes": [
+        "_button_r6b2u_20",
+        "_large_r6b2u_88",
+        "_primary_r6b2u_104",
+        "_appearDisabled_r6b2u_16",
+        "session-replay-unmask"
+       ],
+       "data": {},
+       "heading": "",
+       "landmark": {
+        "name": "",
+        "role": "form"
+       },
+       "layer": "document",
+       "name": "Next",
+       "rect": [
+        939,
+        574,
+        97,
+        40
+       ],
+       "role": "button",
+       "tag": "button",
+       "xpath": "/html/body/div[11]/div[1]/div[1]/div[1]/div[2]/form[1]/div[2]/button[2]"
+      },
+      "focused": false,
+      "message": "Select rule frequency",
+      "region": null
+     },
+     "occurrence": {
+      "ancestors": [
+       [
+        "_comboboxWrapper_1a7mr_6",
+        "session-replay-block"
+       ],
+       [
+        "_frequencyOptionsGrow_953bv_64"
+       ],
+       [
+        "_frequencyRow_953bv_26"
+       ],
+       [
+        "_formSection_953bv_3"
+       ],
+       [
+        "_transferFrequencyContainer_953bv_22"
+       ],
+       [
+        "_modalFormLabelContent_10pzf_6"
+       ],
+       [
+        "_modalFormLabel_10pzf_1"
+       ],
+       [
+        "_formSection_1q30s_1"
+       ]
+      ],
+      "classes": [
+       "_defaultErrorContainer_1tnh5_1",
+       "_errorMessage_1a7mr_448"
+      ],
+      "data": {
+       "data-session-replay-unmask": "true"
+      },
+      "heading": "",
+      "landmark": {
+       "name": "",
+       "role": "form"
+      },
+      "layer": "document",
+      "name": "",
+      "rect": [
+       626,
+       530,
+       410,
+       20
+      ],
+      "role": "",
+      "tag": "div",
+      "xpath": "/html/body/div[11]/div[1]/div[1]/div[1]/div[2]/form[1]/section[3]/div[1]/div[1]/div[1]/div[1]/div[1]/div[1]/div[1]/div[2]"
+     },
+     "state": "accounts.rule-target-balance-error"
+    }
+   ],
+   "evidenceHash": "cb869eeaa312726a93dd5d87dc60dd53650197de4d8752db4f65e53110ec394e",
+   "facts": {
+    "criterion": "4.1.3",
+    "criterionName": "Status Messages",
+    "focus": "button \"Next\"",
+    "message": "\"Select rule frequency\"",
+    "screen": "Target balance rule — empty submit"
+   },
+   "family": "status-message",
+   "guidance": "High when it is the only confirmation of a money movement.",
+   "issueId": null,
+   "key": "status-message:status-not-announced:6610f6811927",
+   "measured": false,
+   "primary": "accounts.rule-target-balance-error",
+   "proposals": [],
+   "rule": "status-not-announced",
+   "screens": 1,
+   "severityDefault": "medium",
+   "source": "scanner",
+   "states": [
+    "accounts.rule-target-balance-error"
+   ],
+   "summary": "\"Select rule frequency\" appeared outside any live region, alert or status role that existed before it, and focus stayed on the button \"Next\".",
+   "title": "Status message not announced: \"Select rule frequency\""
+  },
+  {
+   "attachments": [],
+   "attempt": 1,
+   "basis": "failure",
+   "criteria": [
+    "4.1.3"
+   ],
+   "evidence": [
+    {
+     "evidence": {
+      "focus": {
+       "ancestors": [
+        [
+         "_container_1ieyt_1",
+         "_rightAlign_1ieyt_9"
+        ],
+        [],
+        [],
+        [
+         "_large_kwlx6_9",
+         "_noHover_3n0se_28",
+         "_shadow_3n0se_25",
+         "_raisedBackground_3n0se_45",
+         "_card_lo4oy_4",
+         "_defaultPadding_lo4oy_27",
+         "_autoTransferTabModalContainer_11bzg_25",
+         "_small_lo4oy_11"
+        ],
+        [
+         "ReactModal__Content",
+         "ReactModal__Content--after-open",
+         "_modal_lo4oy_73",
+         "_top96_lo4oy_84"
+        ],
+        [
+         "ReactModal__Overlay",
+         "ReactModal__Overlay--after-open",
+         "_overlay_lo4oy_89",
+         "_backgroundColor_lo4oy_103"
+        ],
+        [
+         "ReactModalPortal"
+        ]
+       ],
+       "classes": [
+        "_button_r6b2u_20",
+        "_large_r6b2u_88",
+        "_primary_r6b2u_104",
+        "_appearDisabled_r6b2u_16",
+        "session-replay-unmask"
+       ],
+       "data": {},
+       "heading": "",
+       "landmark": {
+        "name": "",
+        "role": "form"
+       },
+       "layer": "document",
+       "name": "Next",
+       "rect": [
+        939,
+        574,
+        97,
+        40
+       ],
+       "role": "button",
+       "tag": "button",
+       "xpath": "/html/body/div[11]/div[1]/div[1]/div[1]/div[2]/form[1]/div[2]/button[2]"
+      },
+      "focused": false,
+      "message": "Select a supporting account",
+      "region": null
+     },
+     "occurrence": {
+      "ancestors": [
+       [
+        "_wrapper_1xgdp_8"
+       ],
+       [
+        "_modalFormLabelContent_10pzf_6"
+       ],
+       [
+        "_modalFormLabel_10pzf_1"
+       ],
+       [
+        "_formSection_1q30s_1"
+       ],
+       [],
+       [],
+       [
+        "_large_kwlx6_9",
+        "_noHover_3n0se_28",
+        "_shadow_3n0se_25",
+        "_raisedBackground_3n0se_45",
+        "_card_lo4oy_4",
+        "_defaultPadding_lo4oy_27",
+        "_autoTransferTabModalContainer_11bzg_25",
+        "_small_lo4oy_11"
+       ],
+       [
+        "ReactModal__Content",
+        "ReactModal__Content--after-open",
+        "_modal_lo4oy_73",
+        "_top96_lo4oy_84"
+       ]
+      ],
+      "classes": [
+       "_defaultErrorContainer_1tnh5_1",
+       "_errorMessage_1xgdp_20"
+      ],
+      "data": {
+       "data-session-replay-unmask": "true"
+      },
+      "heading": "",
+      "landmark": {
+       "name": "",
+       "role": "form"
+      },
+      "layer": "document",
+      "name": "",
+      "rect": [
+       626,
+       417,
+       410,
+       20
+      ],
+      "role": "",
+      "tag": "div",
+      "xpath": "/html/body/div[11]/div[1]/div[1]/div[1]/div[2]/form[1]/section[2]/div[1]/div[1]/div[1]/div[2]"
+     },
+     "state": "accounts.rule-target-balance-error"
+    }
+   ],
+   "evidenceHash": "afb4efb64d6a782d5f2e5db9b3886153f0ace30e7fc7b155fb069d8f45110b17",
+   "facts": {
+    "criterion": "4.1.3",
+    "criterionName": "Status Messages",
+    "focus": "button \"Next\"",
+    "message": "\"Select a supporting account\"",
+    "screen": "Target balance rule — empty submit"
+   },
+   "family": "status-message",
+   "guidance": "High when it is the only confirmation of a money movement.",
+   "issueId": null,
+   "key": "status-message:status-not-announced:b874510bf0f8",
+   "measured": false,
+   "primary": "accounts.rule-target-balance-error",
+   "proposals": [],
+   "rule": "status-not-announced",
+   "screens": 1,
+   "severityDefault": "medium",
+   "source": "scanner",
+   "states": [
+    "accounts.rule-target-balance-error"
+   ],
+   "summary": "\"Select a supporting account\" appeared outside any live region, alert or status role that existed before it, and focus stayed on the button \"Next\".",
+   "title": "Status message not announced: \"Select a supporting account\""
+  }
+ ],
+ "primaries": [
+  "accounts.rule-target-balance-error"
+ ],
+ "reach": {
+  "baseUrl": "https://demo.mercury.com",
+  "data": "data",
+  "map": "build/map.json",
+  "run": "2026-10-03-1525",
+  "workspace": "a11y"
+ },
+ "run": "2026-10-03-1525"
+}

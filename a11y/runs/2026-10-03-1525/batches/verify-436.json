@@ -1,0 +1,339 @@
+{
+ "area": "books",
+ "batch": "verify-436",
+ "findings": [
+  {
+   "attachments": [],
+   "attempt": 1,
+   "basis": "candidate",
+   "criteria": [
+    "4.1.2"
+   ],
+   "evidence": [
+    {
+     "evidence": {
+      "description": "",
+      "name": "",
+      "role": "button",
+      "states": {
+       "expanded": false,
+       "haspopup": "menu"
+      },
+      "template": "button \"\" [expanded=false, haspopup=menu]"
+     },
+     "occurrence": {
+      "ancestors": [
+       [
+        "_wrapper_ko7ja_5",
+        "_userMenuWrapper_8kee9_91"
+       ],
+       [
+        "_actions_8kee9_47"
+       ],
+       [
+        "_topBar_8kee9_1"
+       ],
+       [
+        "_booksTopBar_1pthq_42"
+       ],
+       [
+        "_page_1pthq_37"
+       ],
+       [
+        "_booksLayout_1pthq_31"
+       ],
+       [
+        "_layout_1pthq_16"
+       ],
+       [
+        "_wrapper_1pthq_1"
+       ]
+      ],
+      "classes": [
+       "_menuButton_ko7ja_21"
+      ],
+      "data": {},
+      "heading": "Add other bank or credit accounts",
+      "landmark": {
+       "name": "",
+       "role": "main"
+      },
+      "layer": "document",
+      "name": "",
+      "rect": [
+       1384,
+       88,
+       32,
+       32
+      ],
+      "role": "button",
+      "tag": "button",
+      "xpath": "/html/body/div[1]/main[1]/div[1]/div[1]/div[1]/div[4]/div[1]/div[1]/div[1]/div[1]/div[3]/div[2]/button[1]"
+     },
+     "state": "books.home"
+    },
+    {
+     "evidence": {
+      "description": "",
+      "name": "",
+      "role": "button",
+      "states": {
+       "expanded": false,
+       "haspopup": "menu"
+      },
+      "template": "button \"\" [expanded=false, haspopup=menu]"
+     },
+     "occurrence": {
+      "ancestors": [
+       [
+        "_wrapper_ko7ja_5",
+        "_userMenuWrapper_8kee9_91"
+       ],
+       [
+        "_actions_8kee9_47"
+       ],
+       [
+        "_topBar_8kee9_1"
+       ],
+       [
+        "_booksTopBar_1pthq_42"
+       ],
+       [
+        "_page_1pthq_37"
+       ],
+       [
+        "_booksLayout_1pthq_31"
+       ],
+       [
+        "_layout_1pthq_16"
+       ],
+       [
+        "_wrapper_1pthq_1"
+       ]
+      ],
+      "classes": [
+       "_menuButton_ko7ja_21"
+      ],
+      "data": {},
+      "heading": "Add other bank or credit accounts",
+      "landmark": {
+       "name": "",
+       "role": "main"
+      },
+      "layer": "document",
+      "name": "",
+      "rect": [
+       1384,
+       88,
+       32,
+       32
+      ],
+      "role": "button",
+      "tag": "button",
+      "xpath": "/html/body/div[1]/main[1]/div[1]/div[1]/div[1]/div[4]/div[1]/div[1]/div[1]/div[1]/div[3]/div[2]/button[1]"
+     },
+     "state": "books.setup-transition"
+    }
+   ],
+   "evidenceHash": "365f76279050090dab150390ea1f30f991f0b9e992213735ca1b22610f1a3bb8",
+   "facts": {
+    "announced": "button \"\" [expanded=false, haspopup=menu]",
+    "axeSummary": "",
+    "criterion": "4.1.2",
+    "criterionName": "Name, Role, Value",
+    "element": "button in \"Add other bank or credit accounts\"",
+    "rule": "announced-as",
+    "screen": "Books home"
+   },
+   "family": "name",
+   "guidance": "High for an unnamed form control or the sole primary action.",
+   "issueId": null,
+   "key": "name:announced-as:46f663adb0cf",
+   "measured": false,
+   "primary": "books.home",
+   "proposals": [],
+   "rule": "announced-as",
+   "screens": 20,
+   "severityDefault": "medium",
+   "source": "scanner",
+   "states": [
+    "books.home",
+    "books.setup-transition"
+   ],
+   "summary": "announced-as: announced as button \"\" [expanded=false, haspopup=menu].",
+   "title": "Missing or unclear name: button in \"Add other bank or credit accounts\""
+  },
+  {
+   "attachments": [],
+   "attempt": 1,
+   "basis": "candidate",
+   "criteria": [
+    "4.1.2"
+   ],
+   "evidence": [
+    {
+     "evidence": {
+      "description": "",
+      "name": "",
+      "role": "button",
+      "states": {},
+      "template": "button \"\""
+     },
+     "occurrence": {
+      "ancestors": [
+       [
+        "_wrapper_1pfu3_4"
+       ],
+       [
+        "_timelineWrapper_13hxk_19"
+       ],
+       [
+        "_page_13hxk_3"
+       ],
+       [
+        "_noAnimationPageContent_1pthq_100"
+       ],
+       [
+        "_pageContent_1pthq_192"
+       ],
+       [
+        "_page_1pthq_37"
+       ],
+       [
+        "_booksLayout_1pthq_31"
+       ],
+       [
+        "_layout_1pthq_16"
+       ]
+      ],
+      "classes": [
+       "_button_r6b2u_20",
+       "_small_r6b2u_72",
+       "_floating_r6b2u_16",
+       "_scrollButton_1pfu3_15",
+       "_scrollButton-left_1pfu3_26"
+      ],
+      "data": {},
+      "heading": "Add other bank or credit accounts",
+      "landmark": {
+       "name": "",
+       "role": "main"
+      },
+      "layer": "document",
+      "name": "",
+      "rect": [
+       231,
+       152,
+       32,
+       32
+      ],
+      "role": "button",
+      "tag": "button",
+      "xpath": "/html/body/div[1]/main[1]/div[1]/div[1]/div[1]/div[4]/div[1]/div[1]/div[2]/div[1]/div[1]/div[1]/div[1]/button[1]"
+     },
+     "state": "books.home"
+    },
+    {
+     "evidence": {
+      "description": "",
+      "name": "",
+      "role": "button",
+      "states": {},
+      "template": "button \"\""
+     },
+     "occurrence": {
+      "ancestors": [
+       [
+        "_wrapper_1pfu3_4"
+       ],
+       [
+        "_timelineWrapper_13hxk_19"
+       ],
+       [
+        "_page_13hxk_3"
+       ],
+       [
+        "_noAnimationPageContent_1pthq_100"
+       ],
+       [
+        "_pageContent_1pthq_192"
+       ],
+       [
+        "_page_1pthq_37"
+       ],
+       [
+        "_booksLayout_1pthq_31"
+       ],
+       [
+        "_layout_1pthq_16"
+       ]
+      ],
+      "classes": [
+       "_button_r6b2u_20",
+       "_small_r6b2u_72",
+       "_floating_r6b2u_16",
+       "_scrollButton_1pfu3_15",
+       "_scrollButton-left_1pfu3_26"
+      ],
+      "data": {},
+      "heading": "Add other bank or credit accounts",
+      "landmark": {
+       "name": "",
+       "role": "main"
+      },
+      "layer": "document",
+      "name": "",
+      "rect": [
+       231,
+       152,
+       32,
+       32
+      ],
+      "role": "button",
+      "tag": "button",
+      "xpath": "/html/body/div[1]/main[1]/div[1]/div[1]/div[1]/div[4]/div[1]/div[1]/div[2]/div[1]/div[1]/div[1]/div[1]/button[1]"
+     },
+     "state": "books.setup-transition"
+    }
+   ],
+   "evidenceHash": "e32e75cc85cd03b436081c4483bef1d18347d13dc076bb5558466b5ddf5cd746",
+   "facts": {
+    "announced": "button \"\"",
+    "axeSummary": "",
+    "criterion": "4.1.2",
+    "criterionName": "Name, Role, Value",
+    "element": "button in \"Add other bank or credit accounts\"",
+    "rule": "announced-as",
+    "screen": "Books home"
+   },
+   "family": "name",
+   "guidance": "High for an unnamed form control or the sole primary action.",
+   "issueId": null,
+   "key": "name:announced-as:f29cc2d54ef2",
+   "measured": false,
+   "primary": "books.home",
+   "proposals": [],
+   "rule": "announced-as",
+   "screens": 2,
+   "severityDefault": "medium",
+   "source": "scanner",
+   "states": [
+    "books.home",
+    "books.setup-transition"
+   ],
+   "summary": "announced-as: announced as button \"\".",
+   "title": "Missing or unclear name: button in \"Add other bank or credit accounts\""
+  }
+ ],
+ "primaries": [
+  "books.home"
+ ],
+ "reach": {
+  "baseUrl": "https://demo.mercury.com",
+  "data": "data",
+  "map": "build/map.json",
+  "run": "2026-10-03-1525",
+  "workspace": "a11y"
+ },
+ "run": "2026-10-03-1525"
+}

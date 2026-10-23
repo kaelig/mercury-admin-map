@@ -1,0 +1,218 @@
+{
+ "area": "settings",
+ "batch": "verify-533",
+ "findings": [
+  {
+   "attachments": [],
+   "attempt": 1,
+   "basis": "candidate",
+   "criteria": [
+    "4.1.2"
+   ],
+   "evidence": [
+    {
+     "evidence": {
+      "description": "Can initiate payments and transfers, and manage recipients on selected accounts",
+      "name": "Money Mover Can initiate payments and transfers, and manage recipients on selected accounts",
+      "role": "radio",
+      "states": {
+       "checked": true
+      },
+      "template": "radio \"Money Mover Can initiate payments and transfers, and manage recipients on selected accounts\" [checked=true] (Can initiate payments and transfers, and manage recipients on selected accounts)"
+     },
+     "occurrence": {
+      "ancestors": [
+       [
+        "_radioButtonWrapper_ial95_4"
+       ],
+       [],
+       [
+        "_accordionItemHeader_1q1xu_16",
+        "_accordionHeader_bnhk7_47"
+       ],
+       [
+        "_bodyDefault_qaod7_40"
+       ],
+       [
+        "_accordionWrapper_1q1xu_3",
+        "_accordionBorder_1q1xu_7",
+        "_accordionWrapper_bnhk7_1"
+       ],
+       [
+        "_radioGroup_phe2n_23",
+        "_radioGroup_9dnjl_1",
+        "_columnLayout_phe2n_28"
+       ],
+       [],
+       [
+        "_contentArea_1xvys_1",
+        "_contentLayout_1xvys_23"
+       ]
+      ],
+      "classes": [
+       "_radioButton_ial95_4"
+      ],
+      "data": {
+       "data-active-item": "true"
+      },
+      "heading": "Permissions",
+      "landmark": {
+       "name": "",
+       "role": "form"
+      },
+      "layer": "document",
+      "name": "Money Mover Can initiate payments and transfers, and manage recipients on selected accounts",
+      "rect": [
+       523,
+       283,
+       18,
+       18
+      ],
+      "role": "radio",
+      "tag": "input",
+      "xpath": "/html/body/div[1]/main[1]/div[1]/div[2]/div[2]/div[3]/form[1]/section[1]/div[2]/fieldset[1]/div[6]/h2[1]/button[1]/div[1]/label[1]/input[1]"
+     },
+     "state": "settings.role-money-mover"
+    }
+   ],
+   "evidenceHash": "76932e993565ae6c507d0bea2fa481133012a803fe02a8ff3bd6c34f72863f01",
+   "facts": {
+    "announced": "radio \"Money Mover Can initiate payments and transfers, and manage recipients o…",
+    "axeSummary": "",
+    "criterion": "4.1.2",
+    "criterionName": "Name, Role, Value",
+    "element": "radio \"Money Mover Can initiate payments and tra…\"",
+    "rule": "announced-as",
+    "screen": "Assign Role — Money Mover"
+   },
+   "family": "role-state",
+   "guidance": "Low for optional ARIA or an invalid autocomplete token; high when aria-hidden hides the whole page.",
+   "issueId": null,
+   "key": "role-state:announced-as:5dc81c5000d0",
+   "measured": false,
+   "primary": "settings.role-money-mover",
+   "proposals": [],
+   "rule": "announced-as",
+   "screens": 1,
+   "severityDefault": "medium",
+   "source": "scanner",
+   "states": [
+    "settings.role-money-mover"
+   ],
+   "summary": "announced-as: announced as radio \"Money Mover Can initiate payments and transfers, and manage recipients o….",
+   "title": "Wrong role or state: radio \"Money Mover Can initiate payments and tra…\""
+  },
+  {
+   "attachments": [],
+   "attempt": 1,
+   "basis": "candidate",
+   "criteria": [
+    "4.1.2"
+   ],
+   "evidence": [
+    {
+     "evidence": {
+      "description": "",
+      "name": "Money Mover Can initiate payments and transfers, and manage recipients on selected accounts",
+      "role": "button",
+      "states": {
+       "expanded": true
+      },
+      "template": "button \"Money Mover Can initiate payments and transfers, and manage recipients on selected accounts\" [expanded=true]"
+     },
+     "occurrence": {
+      "ancestors": [
+       [
+        "_bodyDefault_qaod7_40"
+       ],
+       [
+        "_accordionWrapper_1q1xu_3",
+        "_accordionBorder_1q1xu_7",
+        "_accordionWrapper_bnhk7_1"
+       ],
+       [
+        "_radioGroup_phe2n_23",
+        "_radioGroup_9dnjl_1",
+        "_columnLayout_phe2n_28"
+       ],
+       [],
+       [
+        "_contentArea_1xvys_1",
+        "_contentLayout_1xvys_23"
+       ],
+       [],
+       [
+        "_contentDiv_bcpsw_53",
+        "_contentDivHeightPreset_bcpsw_62"
+       ],
+       [
+        "_fullScreenWorkspaceLayout_bcpsw_14",
+        "_fullScreenWorkspaceLayoutBackground_bcpsw_32",
+        "_noScrollbar_bcpsw_27"
+       ]
+      ],
+      "classes": [
+       "_accordionItemHeader_1q1xu_16",
+       "_accordionHeader_bnhk7_47"
+      ],
+      "data": {},
+      "heading": "Permissions",
+      "landmark": {
+       "name": "",
+       "role": "form"
+      },
+      "layer": "document",
+      "name": "Money Mover Can initiate payments and transfers, and manage recipients on selected accounts",
+      "rect": [
+       503,
+       268,
+       494,
+       88
+      ],
+      "role": "button",
+      "tag": "button",
+      "xpath": "/html/body/div[1]/main[1]/div[1]/div[2]/div[2]/div[3]/form[1]/section[1]/div[2]/fieldset[1]/div[6]/h2[1]/button[1]"
+     },
+     "state": "settings.role-money-mover"
+    }
+   ],
+   "evidenceHash": "2526904d2fd4a3efd0f2382923c3cfb0669db69ae8538dcc75ade8f5c3afcd3d",
+   "facts": {
+    "announced": "button \"Money Mover Can initiate payments and transfers, and manage recipients…",
+    "axeSummary": "",
+    "criterion": "4.1.2",
+    "criterionName": "Name, Role, Value",
+    "element": "button \"Money Mover Can initiate payments and tr…\"",
+    "rule": "announced-as",
+    "screen": "Assign Role — Money Mover"
+   },
+   "family": "role-state",
+   "guidance": "Low for optional ARIA or an invalid autocomplete token; high when aria-hidden hides the whole page.",
+   "issueId": null,
+   "key": "role-state:announced-as:c208a8187e74",
+   "measured": false,
+   "primary": "settings.role-money-mover",
+   "proposals": [],
+   "rule": "announced-as",
+   "screens": 1,
+   "severityDefault": "medium",
+   "source": "scanner",
+   "states": [
+    "settings.role-money-mover"
+   ],
+   "summary": "announced-as: announced as button \"Money Mover Can initiate payments and transfers, and manage recipients….",
+   "title": "Wrong role or state: button \"Money Mover Can initiate payments and tr…\""
+  }
+ ],
+ "primaries": [
+  "settings.role-money-mover"
+ ],
+ "reach": {
+  "baseUrl": "https://demo.mercury.com",
+  "data": "data",
+  "map": "build/map.json",
+  "run": "2026-10-03-1525",
+  "workspace": "a11y"
+ },
+ "run": "2026-10-03-1525"
+}

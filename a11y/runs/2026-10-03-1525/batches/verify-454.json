@@ -1,0 +1,229 @@
+{
+ "area": "cards",
+ "batch": "verify-454",
+ "findings": [
+  {
+   "attachments": [],
+   "attempt": 1,
+   "basis": "candidate",
+   "criteria": [
+    "2.5.3"
+   ],
+   "evidence": [
+    {
+     "evidence": {
+      "description": "Your team can submit expenses",
+      "name": "Team submissions",
+      "role": "switch",
+      "states": {
+       "checked": true
+      },
+      "template": "switch \"Team submissions\" [checked=true] (Your team can submit expenses)"
+     },
+     "occurrence": {
+      "ancestors": [
+       [
+        "_dsToggleSwitchWrapper_3k8xy_3",
+        "_checked_3k8xy_50",
+        "_rightLabel_3k8xy_34"
+       ],
+       [
+        "_sectionHeader_1vrb1_23"
+       ],
+       [
+        "_sections_1vrb1_11"
+       ],
+       [
+        "_large_kwlx6_9",
+        "_noHover_3n0se_28",
+        "_shadow_3n0se_25",
+        "_raisedBackground_3n0se_45",
+        "_card_lo4oy_4",
+        "_defaultPadding_lo4oy_27",
+        "_medium_lo4oy_15"
+       ],
+       [
+        "ReactModal__Content",
+        "ReactModal__Content--after-open",
+        "_modal_lo4oy_73"
+       ],
+       [
+        "ReactModal__Overlay",
+        "ReactModal__Overlay--after-open",
+        "_overlay_lo4oy_89",
+        "_backgroundColor_lo4oy_103"
+       ],
+       [
+        "ReactModalPortal"
+       ]
+      ],
+      "classes": [
+       "_switch_3k8xy_11"
+      ],
+      "data": {},
+      "heading": "Your team can submit expenses",
+      "landmark": {
+       "name": "",
+       "role": "dialog"
+      },
+      "layer": "top",
+      "name": "Team submissions",
+      "rect": [
+       928,
+       112,
+       40,
+       20
+      ],
+      "role": "switch",
+      "tag": "input",
+      "xpath": "/html/body/div[11]/div[1]/div[1]/div[1]/div[2]/div[1]/div[2]/input[1]"
+     },
+     "state": "cards.reimbursement-settings"
+    }
+   ],
+   "evidenceHash": "00e6efe5dce98260d9b75c932cd9f600f4c7d5331e7989a10e5ee46620c22405",
+   "facts": {
+    "announced": "switch \"Team submissions\" [checked=true] (Your team can submit expenses)",
+    "axeSummary": "",
+    "criterion": "2.5.3",
+    "criterionName": "Label in Name",
+    "element": "switch \"Team submissions\"",
+    "rule": "announced-as",
+    "screen": "Reimbursement settings"
+   },
+   "family": "name",
+   "guidance": "High for an unnamed form control or the sole primary action.",
+   "issueId": null,
+   "key": "name:announced-as:20dbb1a625a8",
+   "measured": false,
+   "primary": "cards.reimbursement-settings",
+   "proposals": [],
+   "rule": "announced-as",
+   "screens": 1,
+   "severityDefault": "medium",
+   "source": "scanner",
+   "states": [
+    "cards.reimbursement-settings"
+   ],
+   "summary": "announced-as: announced as switch \"Team submissions\" [checked=true] (Your team can submit expenses).",
+   "title": "Missing or unclear name: switch \"Team submissions\""
+  },
+  {
+   "attachments": [],
+   "attempt": 1,
+   "basis": "candidate",
+   "criteria": [
+    "3.3.2"
+   ],
+   "evidence": [
+    {
+     "evidence": {
+      "description": "",
+      "name": "Checking ••4321",
+      "role": "button",
+      "states": {},
+      "template": "button \"Checking ••<n>\""
+     },
+     "occurrence": {
+      "ancestors": [
+       [
+        "_personalAccountContainer_glntk_1"
+       ],
+       [
+        "_section_1vrb1_11"
+       ],
+       [
+        "_sections_1vrb1_11"
+       ],
+       [
+        "_large_kwlx6_9",
+        "_noHover_3n0se_28",
+        "_shadow_3n0se_25",
+        "_raisedBackground_3n0se_45",
+        "_card_lo4oy_4",
+        "_defaultPadding_lo4oy_27",
+        "_medium_lo4oy_15"
+       ],
+       [
+        "ReactModal__Content",
+        "ReactModal__Content--after-open",
+        "_modal_lo4oy_73"
+       ],
+       [
+        "ReactModal__Overlay",
+        "ReactModal__Overlay--after-open",
+        "_overlay_lo4oy_89",
+        "_backgroundColor_lo4oy_103"
+       ],
+       [
+        "ReactModalPortal"
+       ]
+      ],
+      "classes": [
+       "_buttonCard_3n0se_4",
+       "_large_kwlx6_9",
+       "_border_3n0se_35",
+       "_raisedBackground_3n0se_45",
+       "_personalAccountCard_glntk_8"
+      ],
+      "data": {},
+      "heading": "Accounts",
+      "landmark": {
+       "name": "",
+       "role": "dialog"
+      },
+      "layer": "top",
+      "name": "Checking ••4321",
+      "rect": [
+       472,
+       713,
+       496,
+       68
+      ],
+      "role": "button",
+      "tag": "button",
+      "xpath": "/html/body/div[11]/div[1]/div[1]/div[1]/div[2]/div[5]/div[1]/button[1]"
+     },
+     "state": "cards.reimbursement-settings"
+    }
+   ],
+   "evidenceHash": "d4c066dcc3aa7207750550c53315127580160844087b25a46561ca790db2026c",
+   "facts": {
+    "announced": "button \"Checking ••<n>\"",
+    "axeSummary": "",
+    "criterion": "3.3.2",
+    "criterionName": "Labels or Instructions",
+    "element": "button \"Checking ••<n>\"",
+    "rule": "announced-as",
+    "screen": "Reimbursement settings"
+   },
+   "family": "name",
+   "guidance": "High for an unnamed form control or the sole primary action.",
+   "issueId": null,
+   "key": "name:announced-as:629e74f8f2ed",
+   "measured": false,
+   "primary": "cards.reimbursement-settings",
+   "proposals": [],
+   "rule": "announced-as",
+   "screens": 1,
+   "severityDefault": "medium",
+   "source": "scanner",
+   "states": [
+    "cards.reimbursement-settings"
+   ],
+   "summary": "announced-as: announced as button \"Checking ••<n>\".",
+   "title": "Missing or unclear name: button \"Checking ••<n>\""
+  }
+ ],
+ "primaries": [
+  "cards.reimbursement-settings"
+ ],
+ "reach": {
+  "baseUrl": "https://demo.mercury.com",
+  "data": "data",
+  "map": "build/map.json",
+  "run": "2026-10-03-1525",
+  "workspace": "a11y"
+ },
+ "run": "2026-10-03-1525"
+}

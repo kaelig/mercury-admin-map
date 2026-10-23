@@ -1,0 +1,1358 @@
+{
+ "area": "invoicing",
+ "batch": "verify-231",
+ "findings": [
+  {
+   "attachments": [],
+   "attempt": 1,
+   "basis": "violation",
+   "criteria": [
+    "1.4.3"
+   ],
+   "evidence": [
+    {
+     "evidence": {
+      "bgColor": "#fcfcfc",
+      "contrastRatio": 1.65,
+      "expectedContrastRatio": "4.5:1",
+      "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 1.65 (foreground color: #c6c6cb, background color: #fcfcfc, font size: 9.8pt (13px), font weight: normal). Expected contrast ratio of 4.5:1",
+      "fgColor": "#c6c6cb",
+      "fontSize": "9.8pt (13px)",
+      "fontWeight": "normal",
+      "messageKey": null
+     },
+     "occurrence": {
+      "ancestors": [
+       [
+        "_prefixWrapper_1npgx_12",
+        "_selectedPrefix_1npgx_1"
+       ],
+       [
+        "_prefix_11c85_27"
+       ],
+       [
+        "_inputWrapper_11c85_6"
+       ],
+       [
+        "_wrapper_1xgdp_8"
+       ],
+       [],
+       [
+        "_contentWrapper_kogp0_1"
+       ],
+       [
+        "_wrapper_1ojdq_8"
+       ],
+       []
+      ],
+      "classes": [
+       "_label_qaod7_59",
+       "_text-tertiary_12t49_1"
+      ],
+      "data": {},
+      "heading": "Edit Invoice",
+      "landmark": {
+       "name": "",
+       "role": "main"
+      },
+      "layer": "document",
+      "name": "",
+      "rect": [
+       153,
+       360,
+       26,
+       20
+      ],
+      "role": "",
+      "tag": "span",
+      "xpath": "/html/body/div[1]/main[1]/div[1]/div[2]/div[2]/div[3]/div[1]/div[1]/div[1]/div[1]/div[1]/div[1]/div[2]/div[2]/div[1]/div[1]/div[1]/div[1]/div[1]/span[1]"
+     },
+     "state": "invoicing.edit-invoice"
+    },
+    {
+     "evidence": {
+      "bgColor": "#fcfcfc",
+      "contrastRatio": 1.65,
+      "expectedContrastRatio": "4.5:1",
+      "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 1.65 (foreground color: #c6c6cb, background color: #fcfcfc, font size: 9.8pt (13px), font weight: normal). Expected contrast ratio of 4.5:1",
+      "fgColor": "#c6c6cb",
+      "fontSize": "9.8pt (13px)",
+      "fontWeight": "normal",
+      "messageKey": null
+     },
+     "occurrence": {
+      "ancestors": [
+       [
+        "_prefixWrapper_1npgx_12",
+        "_selectedPrefix_1npgx_1"
+       ],
+       [
+        "_prefix_11c85_27"
+       ],
+       [
+        "_inputWrapper_11c85_6"
+       ],
+       [
+        "_wrapper_1xgdp_8"
+       ],
+       [],
+       [
+        "_contentWrapper_1w7vj_1"
+       ],
+       [
+        "_wrapper_1ojdq_8"
+       ],
+       []
+      ],
+      "classes": [
+       "_label_qaod7_59",
+       "_text-tertiary_12t49_1"
+      ],
+      "data": {},
+      "heading": "Edit recurring series",
+      "landmark": {
+       "name": "",
+       "role": "main"
+      },
+      "layer": "document",
+      "name": "",
+      "rect": [
+       153,
+       521,
+       26,
+       20
+      ],
+      "role": "",
+      "tag": "span",
+      "xpath": "/html/body/div[1]/main[1]/div[1]/div[2]/div[2]/div[3]/div[2]/div[1]/div[1]/div[1]/div[1]/div[1]/div[2]/div[2]/div[2]/div[1]/div[1]/div[1]/div[1]/span[1]"
+     },
+     "state": "invoicing.edit-series"
+    }
+   ],
+   "evidenceHash": "ac30f36d613bc329fedc3472ff4690151b55ebc215d3a5e9613355040616aa99",
+   "facts": {
+    "bg": "#fcfcfc",
+    "criterion": "1.4.3",
+    "criterionName": "Contrast (Minimum)",
+    "element": "text in \"Edit Invoice\"",
+    "fg": "#c6c6cb",
+    "ratio": "1.65",
+    "required": "4.5",
+    "rule": "color-contrast",
+    "screen": "Edit Invoice",
+    "screens": 2
+   },
+   "family": "contrast",
+   "guidance": "High under 2:1, or under 3:1 for essential text.",
+   "issueId": null,
+   "key": "contrast:color-contrast:32739ac6b9ef",
+   "measured": true,
+   "primary": "invoicing.edit-invoice",
+   "proposals": [],
+   "rule": "color-contrast",
+   "screens": 2,
+   "severityDefault": "medium",
+   "source": "scanner",
+   "states": [
+    "invoicing.edit-invoice",
+    "invoicing.edit-series"
+   ],
+   "summary": "axe color-contrast: #c6c6cb on #fcfcfc measures 1.65:1; AA needs 4.5:1.",
+   "title": "Low contrast: text in \"Edit Invoice\""
+  },
+  {
+   "attachments": [],
+   "attempt": 1,
+   "basis": "violation",
+   "criteria": [
+    "1.3.1"
+   ],
+   "evidence": [
+    {
+     "evidence": {
+      "failureSummary": "Fix any of the following:\n  Element has children which are not allowed: [role=status], [role=region], button",
+      "messageKey": "unallowed",
+      "values": "[role=status], [role=region], button"
+     },
+     "occurrence": {
+      "ancestors": [
+       [
+        "_contentWrapper_kogp0_1"
+       ],
+       [
+        "_wrapper_1ojdq_8"
+       ],
+       [],
+       [
+        "_leftInnerContainer_12jyu_3"
+       ],
+       [
+        "_left_yg1rf_39"
+       ],
+       [
+        "_leftScrollArea_yg1rf_57"
+       ],
+       [
+        "_leftContainer_yg1rf_39",
+        "_splitVariant_yg1rf_82",
+        "_leftBoxShadow_12jyu_10"
+       ],
+       [
+        "_containerBase_yg1rf_1",
+        "_container_yg1rf_1",
+        "_containerWithBanner_yg1rf_12"
+       ]
+      ],
+      "classes": [],
+      "data": {},
+      "heading": "Edit Invoice",
+      "landmark": {
+       "name": "",
+       "role": "main"
+      },
+      "layer": "document",
+      "name": "Invoice line items",
+      "rect": [
+       120,
+       406,
+       480,
+       234
+      ],
+      "role": "table",
+      "tag": "div",
+      "xpath": "/html/body/div[1]/main[1]/div[1]/div[2]/div[2]/div[3]/div[1]/div[1]/div[1]/div[1]/div[1]/div[1]/div[2]/div[2]/div[2]"
+     },
+     "state": "invoicing.edit-invoice"
+    },
+    {
+     "evidence": {
+      "failureSummary": "Fix any of the following:\n  Element has children which are not allowed: [role=status], [role=region], button",
+      "messageKey": "unallowed",
+      "values": "[role=status], [role=region], button"
+     },
+     "occurrence": {
+      "ancestors": [
+       [
+        "_contentWrapper_kogp0_1"
+       ],
+       [
+        "_wrapper_1ojdq_8"
+       ],
+       [],
+       [
+        "_leftInnerContainer_12jyu_3"
+       ],
+       [
+        "_left_yg1rf_39"
+       ],
+       [
+        "_leftScrollArea_yg1rf_57"
+       ],
+       [
+        "_leftContainer_yg1rf_39",
+        "_splitVariant_yg1rf_82",
+        "_leftBoxShadow_12jyu_10"
+       ],
+       [
+        "_containerBase_yg1rf_1",
+        "_container_yg1rf_1",
+        "_containerWithBanner_yg1rf_12"
+       ]
+      ],
+      "classes": [],
+      "data": {},
+      "heading": "Invoice set up",
+      "landmark": {
+       "name": "",
+       "role": "main"
+      },
+      "layer": "document",
+      "name": "Invoice line items",
+      "rect": [
+       120,
+       406,
+       480,
+       210
+      ],
+      "role": "table",
+      "tag": "div",
+      "xpath": "/html/body/div[1]/main[1]/div[1]/div[2]/div[2]/div[3]/div[1]/div[1]/div[1]/div[1]/div[1]/div[1]/div[2]/div[2]/div[2]"
+     },
+     "state": "invoicing.create-setup-error"
+    }
+   ],
+   "evidenceHash": "3d643c3496b1a91a3d914e521315697fa72c506bcc6815128d99fd1149ff06e6",
+   "facts": {
+    "announced": "table \"Invoice line items\"",
+    "axeSummary": "Element has children which are not allowed: [role=status], [role=region], button",
+    "criterion": "1.3.1",
+    "criterionName": "Info and Relationships",
+    "element": "table \"Invoice line items\"",
+    "rule": "aria-required-children",
+    "screen": "Edit Invoice"
+   },
+   "family": "role-state",
+   "guidance": "Low for optional ARIA or an invalid autocomplete token; high when aria-hidden hides the whole page.",
+   "issueId": null,
+   "key": "role-state:aria-required-children:16049e4c616d",
+   "measured": false,
+   "primary": "invoicing.edit-invoice",
+   "proposals": [],
+   "rule": "aria-required-children",
+   "screens": 11,
+   "severityDefault": "medium",
+   "source": "scanner",
+   "states": [
+    "invoicing.edit-invoice",
+    "invoicing.create-setup-error"
+   ],
+   "summary": "aria-required-children: announced as table \"Invoice line items\". Element has children which are not allowed: [role=status], [role=region], button",
+   "title": "Wrong role or state: table \"Invoice line items\""
+  },
+  {
+   "attachments": [],
+   "attempt": 1,
+   "basis": "violation",
+   "criteria": [
+    "1.3.1"
+   ],
+   "evidence": [
+    {
+     "evidence": {
+      "failureSummary": "Fix any of the following:\n  Element has children which are not allowed: button[aria-label], [role=button]",
+      "messageKey": "unallowed",
+      "values": "button[aria-label], [role=button]"
+     },
+     "occurrence": {
+      "ancestors": [
+       [],
+       [],
+       [],
+       [
+        "_lineItems_2qrq0_4"
+       ],
+       [],
+       [
+        "_contentWrapper_kogp0_1"
+       ],
+       [
+        "_wrapper_1ojdq_8"
+       ],
+       []
+      ],
+      "classes": [
+       "_row_2qrq0_16"
+      ],
+      "data": {},
+      "heading": "Edit Invoice",
+      "landmark": {
+       "name": "",
+       "role": "main"
+      },
+      "layer": "document",
+      "name": "",
+      "rect": [
+       120,
+       434,
+       480,
+       48
+      ],
+      "role": "row",
+      "tag": "div",
+      "xpath": "/html/body/div[1]/main[1]/div[1]/div[2]/div[2]/div[3]/div[1]/div[1]/div[1]/div[1]/div[1]/div[1]/div[2]/div[2]/div[2]/div[2]/div[1]/div[1]/div[1]/div[1]"
+     },
+     "state": "invoicing.edit-invoice"
+    },
+    {
+     "evidence": {
+      "failureSummary": "Fix any of the following:\n  Element has children which are not allowed: button[aria-label]",
+      "messageKey": "unallowed",
+      "values": "button[aria-label]"
+     },
+     "occurrence": {
+      "ancestors": [
+       [],
+       [],
+       [],
+       [
+        "_lineItems_2qrq0_4"
+       ],
+       [],
+       [
+        "_contentWrapper_kogp0_1"
+       ],
+       [
+        "_wrapper_1ojdq_8"
+       ],
+       []
+      ],
+      "classes": [
+       "_row_2qrq0_16"
+      ],
+      "data": {},
+      "heading": "Invoice set up",
+      "landmark": {
+       "name": "",
+       "role": "main"
+      },
+      "layer": "document",
+      "name": "",
+      "rect": [
+       120,
+       434,
+       480,
+       72
+      ],
+      "role": "row",
+      "tag": "div",
+      "xpath": "/html/body/div[1]/main[1]/div[1]/div[2]/div[2]/div[3]/div[1]/div[1]/div[1]/div[1]/div[1]/div[1]/div[2]/div[2]/div[2]/div[2]/div[1]/div[1]/div[1]/div[1]"
+     },
+     "state": "invoicing.create-setup-error"
+    }
+   ],
+   "evidenceHash": "c499345728b7474b5db638e78c26cce87f75f92983a71129a88b7af89d67b85d",
+   "facts": {
+    "announced": "row \"\"",
+    "axeSummary": "Element has children which are not allowed: button[aria-label], [role=button]",
+    "criterion": "1.3.1",
+    "criterionName": "Info and Relationships",
+    "element": "row in \"Edit Invoice\"",
+    "rule": "aria-required-children",
+    "screen": "Edit Invoice"
+   },
+   "family": "role-state",
+   "guidance": "Low for optional ARIA or an invalid autocomplete token; high when aria-hidden hides the whole page.",
+   "issueId": null,
+   "key": "role-state:aria-required-children:54c77973f3ce",
+   "measured": false,
+   "primary": "invoicing.edit-invoice",
+   "proposals": [],
+   "rule": "aria-required-children",
+   "screens": 11,
+   "severityDefault": "medium",
+   "source": "scanner",
+   "states": [
+    "invoicing.edit-invoice",
+    "invoicing.create-setup-error"
+   ],
+   "summary": "aria-required-children: announced as row \"\". Element has children which are not allowed: button[aria-label], [role=button]",
+   "title": "Wrong role or state: row in \"Edit Invoice\""
+  },
+  {
+   "attachments": [],
+   "attempt": 1,
+   "basis": "violation",
+   "criteria": [
+    "1.3.1"
+   ],
+   "evidence": [
+    {
+     "evidence": {
+      "failureSummary": "Fix any of the following:\n  Element has children which are not allowed: [role=status], [role=region], button",
+      "messageKey": "unallowed",
+      "values": "[role=status], [role=region], button"
+     },
+     "occurrence": {
+      "ancestors": [
+       [],
+       [
+        "_contentWrapper_kogp0_1"
+       ],
+       [
+        "_wrapper_1ojdq_8"
+       ],
+       [],
+       [
+        "_leftInnerContainer_12jyu_3"
+       ],
+       [
+        "_left_yg1rf_39"
+       ],
+       [
+        "_leftScrollArea_yg1rf_57"
+       ],
+       [
+        "_leftContainer_yg1rf_39",
+        "_splitVariant_yg1rf_82",
+        "_leftBoxShadow_12jyu_10"
+       ]
+      ],
+      "classes": [
+       "_lineItems_2qrq0_4"
+      ],
+      "data": {},
+      "heading": "Edit Invoice",
+      "landmark": {
+       "name": "",
+       "role": "main"
+      },
+      "layer": "document",
+      "name": "",
+      "rect": [
+       120,
+       434,
+       480,
+       206
+      ],
+      "role": "rowgroup",
+      "tag": "div",
+      "xpath": "/html/body/div[1]/main[1]/div[1]/div[2]/div[2]/div[3]/div[1]/div[1]/div[1]/div[1]/div[1]/div[1]/div[2]/div[2]/div[2]/div[2]"
+     },
+     "state": "invoicing.edit-invoice"
+    },
+    {
+     "evidence": {
+      "failureSummary": "Fix any of the following:\n  Element has children which are not allowed: [role=status], [role=region], button",
+      "messageKey": "unallowed",
+      "values": "[role=status], [role=region], button"
+     },
+     "occurrence": {
+      "ancestors": [
+       [],
+       [
+        "_contentWrapper_kogp0_1"
+       ],
+       [
+        "_wrapper_1ojdq_8"
+       ],
+       [],
+       [
+        "_leftInnerContainer_12jyu_3"
+       ],
+       [
+        "_left_yg1rf_39"
+       ],
+       [
+        "_leftScrollArea_yg1rf_57"
+       ],
+       [
+        "_leftContainer_yg1rf_39",
+        "_splitVariant_yg1rf_82",
+        "_leftBoxShadow_12jyu_10"
+       ]
+      ],
+      "classes": [
+       "_lineItems_2qrq0_4"
+      ],
+      "data": {},
+      "heading": "Invoice set up",
+      "landmark": {
+       "name": "",
+       "role": "main"
+      },
+      "layer": "document",
+      "name": "",
+      "rect": [
+       120,
+       434,
+       480,
+       182
+      ],
+      "role": "rowgroup",
+      "tag": "div",
+      "xpath": "/html/body/div[1]/main[1]/div[1]/div[2]/div[2]/div[3]/div[1]/div[1]/div[1]/div[1]/div[1]/div[1]/div[2]/div[2]/div[2]/div[2]"
+     },
+     "state": "invoicing.create-setup-error"
+    }
+   ],
+   "evidenceHash": "3d643c3496b1a91a3d914e521315697fa72c506bcc6815128d99fd1149ff06e6",
+   "facts": {
+    "announced": "rowgroup \"\"",
+    "axeSummary": "Element has children which are not allowed: [role=status], [role=region], button",
+    "criterion": "1.3.1",
+    "criterionName": "Info and Relationships",
+    "element": "rowgroup in \"Edit Invoice\"",
+    "rule": "aria-required-children",
+    "screen": "Edit Invoice"
+   },
+   "family": "role-state",
+   "guidance": "Low for optional ARIA or an invalid autocomplete token; high when aria-hidden hides the whole page.",
+   "issueId": null,
+   "key": "role-state:aria-required-children:80cc3db44132",
+   "measured": false,
+   "primary": "invoicing.edit-invoice",
+   "proposals": [],
+   "rule": "aria-required-children",
+   "screens": 11,
+   "severityDefault": "medium",
+   "source": "scanner",
+   "states": [
+    "invoicing.edit-invoice",
+    "invoicing.create-setup-error"
+   ],
+   "summary": "aria-required-children: announced as rowgroup \"\". Element has children which are not allowed: [role=status], [role=region], button",
+   "title": "Wrong role or state: rowgroup in \"Edit Invoice\""
+  },
+  {
+   "attachments": [],
+   "attempt": 1,
+   "basis": "violation",
+   "criteria": [
+    "1.3.5"
+   ],
+   "evidence": [
+    {
+     "evidence": {
+      "failureSummary": "Fix all of the following:\n  the autocomplete attribute is incorrectly formatted"
+     },
+     "occurrence": {
+      "ancestors": [
+       [
+        "_inputBox_q7hf7_93",
+        "_hasValue_q7hf7_171"
+       ],
+       [
+        "_inputBoxWrapper_q7hf7_93"
+       ],
+       [
+        "_textInputWrapper_q7hf7_24"
+       ],
+       [
+        "_provideDSTextInput_q7hf7_6"
+       ],
+       [],
+       [
+        "_row_2qrq0_16"
+       ],
+       [],
+       []
+      ],
+      "classes": [
+       "_input_q7hf7_93",
+       "_rightAlignedInput_2qrq0_87"
+      ],
+      "data": {},
+      "heading": "Edit Invoice",
+      "landmark": {
+       "name": "",
+       "role": "main"
+      },
+      "layer": "document",
+      "name": "0.00",
+      "rect": [
+       454,
+       450,
+       133,
+       24
+      ],
+      "role": "textbox",
+      "tag": "input",
+      "xpath": "/html/body/div[1]/main[1]/div[1]/div[2]/div[2]/div[3]/div[1]/div[1]/div[1]/div[1]/div[1]/div[1]/div[2]/div[2]/div[2]/div[2]/div[1]/div[1]/div[1]/div[1]/div[4]/div[1]/div[1]/div[1]/div[1]/input[1]"
+     },
+     "state": "invoicing.edit-invoice"
+    },
+    {
+     "evidence": {
+      "failureSummary": "Fix all of the following:\n  the autocomplete attribute is incorrectly formatted"
+     },
+     "occurrence": {
+      "ancestors": [
+       [
+        "_inputBox_q7hf7_93",
+        "_error_q7hf7_41"
+       ],
+       [
+        "_inputBoxWrapper_q7hf7_93"
+       ],
+       [
+        "_textInputWrapper_q7hf7_24"
+       ],
+       [
+        "_provideDSTextInput_q7hf7_6"
+       ],
+       [],
+       [
+        "_row_2qrq0_16"
+       ],
+       [],
+       []
+      ],
+      "classes": [
+       "_input_q7hf7_93",
+       "_rightAlignedInput_2qrq0_87"
+      ],
+      "data": {},
+      "heading": "Invoice set up",
+      "landmark": {
+       "name": "",
+       "role": "main"
+      },
+      "layer": "document",
+      "name": "0.00",
+      "rect": [
+       454,
+       450,
+       133,
+       24
+      ],
+      "role": "textbox",
+      "tag": "input",
+      "xpath": "/html/body/div[1]/main[1]/div[1]/div[2]/div[2]/div[3]/div[1]/div[1]/div[1]/div[1]/div[1]/div[1]/div[2]/div[2]/div[2]/div[2]/div[1]/div[1]/div[1]/div[1]/div[3]/div[1]/div[1]/div[1]/div[1]/input[1]"
+     },
+     "state": "invoicing.create-setup-error"
+    }
+   ],
+   "evidenceHash": "78b5f4ffce5fb77dce75fd9801badffc514099f1ffa8d992c6bd98d0cd0a7e0e",
+   "facts": {
+    "announced": "textbox \"<amount>\"",
+    "axeSummary": "the autocomplete attribute is incorrectly formatted",
+    "criterion": "1.3.5",
+    "criterionName": "Identify Input Purpose",
+    "element": "textbox \"<amount>\"",
+    "rule": "autocomplete-valid",
+    "screen": "Edit Invoice"
+   },
+   "family": "role-state",
+   "guidance": "Low for optional ARIA or an invalid autocomplete token; high when aria-hidden hides the whole page.",
+   "issueId": null,
+   "key": "role-state:autocomplete-valid:33d32a63777a",
+   "measured": false,
+   "primary": "invoicing.edit-invoice",
+   "proposals": [],
+   "rule": "autocomplete-valid",
+   "screens": 11,
+   "severityDefault": "medium",
+   "source": "scanner",
+   "states": [
+    "invoicing.edit-invoice",
+    "invoicing.create-setup-error"
+   ],
+   "summary": "autocomplete-valid: announced as textbox \"<amount>\". the autocomplete attribute is incorrectly formatted",
+   "title": "Invalid autocomplete value: textbox \"<amount>\""
+  },
+  {
+   "attachments": [],
+   "attempt": 1,
+   "basis": "violation",
+   "criteria": [
+    "1.3.5"
+   ],
+   "evidence": [
+    {
+     "evidence": {
+      "failureSummary": "Fix all of the following:\n  the autocomplete attribute is incorrectly formatted"
+     },
+     "occurrence": {
+      "ancestors": [
+       [
+        "_inputBox_q7hf7_93",
+        "_hasValue_q7hf7_171"
+       ],
+       [
+        "_inputBoxWrapper_q7hf7_93"
+       ],
+       [
+        "_textInputWrapper_q7hf7_24"
+       ],
+       [
+        "_provideDSTextInput_q7hf7_6"
+       ],
+       [],
+       [
+        "_row_2qrq0_16"
+       ],
+       [],
+       []
+      ],
+      "classes": [
+       "_input_q7hf7_93",
+       "_rightAlignedInput_2qrq0_87"
+      ],
+      "data": {},
+      "heading": "Edit Invoice",
+      "landmark": {
+       "name": "",
+       "role": "main"
+      },
+      "layer": "document",
+      "name": "1",
+      "rect": [
+       373,
+       450,
+       32,
+       24
+      ],
+      "role": "textbox",
+      "tag": "input",
+      "xpath": "/html/body/div[1]/main[1]/div[1]/div[2]/div[2]/div[3]/div[1]/div[1]/div[1]/div[1]/div[1]/div[1]/div[2]/div[2]/div[2]/div[2]/div[1]/div[1]/div[1]/div[1]/div[3]/div[1]/div[1]/div[1]/div[1]/input[1]"
+     },
+     "state": "invoicing.edit-invoice"
+    },
+    {
+     "evidence": {
+      "failureSummary": "Fix all of the following:\n  the autocomplete attribute is incorrectly formatted"
+     },
+     "occurrence": {
+      "ancestors": [
+       [
+        "_inputBox_q7hf7_93",
+        "_hasValue_q7hf7_171"
+       ],
+       [
+        "_inputBoxWrapper_q7hf7_93"
+       ],
+       [
+        "_textInputWrapper_q7hf7_24"
+       ],
+       [
+        "_provideDSTextInput_q7hf7_6"
+       ],
+       [],
+       [
+        "_row_2qrq0_16"
+       ],
+       [],
+       []
+      ],
+      "classes": [
+       "_input_q7hf7_93",
+       "_rightAlignedInput_2qrq0_87"
+      ],
+      "data": {},
+      "heading": "Invoice set up",
+      "landmark": {
+       "name": "",
+       "role": "main"
+      },
+      "layer": "document",
+      "name": "1",
+      "rect": [
+       373,
+       450,
+       32,
+       24
+      ],
+      "role": "textbox",
+      "tag": "input",
+      "xpath": "/html/body/div[1]/main[1]/div[1]/div[2]/div[2]/div[3]/div[1]/div[1]/div[1]/div[1]/div[1]/div[1]/div[2]/div[2]/div[2]/div[2]/div[1]/div[1]/div[1]/div[1]/div[2]/div[1]/div[1]/div[1]/div[1]/input[1]"
+     },
+     "state": "invoicing.create-setup-error"
+    }
+   ],
+   "evidenceHash": "78b5f4ffce5fb77dce75fd9801badffc514099f1ffa8d992c6bd98d0cd0a7e0e",
+   "facts": {
+    "announced": "textbox \"<n>\"",
+    "axeSummary": "the autocomplete attribute is incorrectly formatted",
+    "criterion": "1.3.5",
+    "criterionName": "Identify Input Purpose",
+    "element": "textbox \"<n>\"",
+    "rule": "autocomplete-valid",
+    "screen": "Edit Invoice"
+   },
+   "family": "role-state",
+   "guidance": "Low for optional ARIA or an invalid autocomplete token; high when aria-hidden hides the whole page.",
+   "issueId": null,
+   "key": "role-state:autocomplete-valid:c8771717b051",
+   "measured": false,
+   "primary": "invoicing.edit-invoice",
+   "proposals": [],
+   "rule": "autocomplete-valid",
+   "screens": 11,
+   "severityDefault": "medium",
+   "source": "scanner",
+   "states": [
+    "invoicing.edit-invoice",
+    "invoicing.create-setup-error"
+   ],
+   "summary": "autocomplete-valid: announced as textbox \"<n>\". the autocomplete attribute is incorrectly formatted",
+   "title": "Invalid autocomplete value: textbox \"<n>\""
+  },
+  {
+   "attachments": [],
+   "attempt": 1,
+   "basis": "candidate",
+   "criteria": [
+    "2.5.8"
+   ],
+   "evidence": [
+    {
+     "evidence": {
+      "agree": false,
+      "axe": "incomplete",
+      "exception": null,
+      "height": 20,
+      "offset": 0,
+      "own": "fail",
+      "passedBy": null,
+      "width": 131.98
+     },
+     "occurrence": {
+      "ancestors": [
+       [
+        "_dropzoneCompact_3soht_93"
+       ],
+       [
+        "_outerWrapper_3soht_14",
+        "_fileUpload_1et5t_1"
+       ],
+       [],
+       [],
+       [
+        "_contentWrapper_kogp0_1"
+       ],
+       [
+        "_wrapper_1ojdq_8"
+       ],
+       [],
+       [
+        "_leftInnerContainer_12jyu_3"
+       ]
+      ],
+      "classes": [],
+      "data": {},
+      "disabled": false,
+      "heading": "Invoice totals",
+      "landmark": {
+       "name": "",
+       "role": "main"
+      },
+      "layer": "document",
+      "name": "Choose Files",
+      "rect": [
+       120,
+       754,
+       132,
+       20
+      ],
+      "role": "button",
+      "tag": "input",
+      "xpath": "/html/body/div[1]/main[1]/div[1]/div[2]/div[2]/div[3]/div[1]/div[1]/div[1]/div[1]/div[1]/div[1]/div[2]/div[2]/div[3]/div[2]/div[1]/div[1]/input[1]"
+     },
+     "state": "invoicing.edit-invoice"
+    },
+    {
+     "evidence": {
+      "agree": false,
+      "axe": "incomplete",
+      "exception": null,
+      "height": 20,
+      "offset": 0,
+      "own": "fail",
+      "passedBy": null,
+      "width": 131.98
+     },
+     "occurrence": {
+      "ancestors": [
+       [
+        "_dropzoneCompact_3soht_93"
+       ],
+       [
+        "_outerWrapper_3soht_14"
+       ],
+       [
+        "_bodySecondary_qaod7_51",
+        "_text-default_12t49_1",
+        "_valueText_1gwax_61"
+       ],
+       [
+        "_detailRow_1gwax_55"
+       ],
+       [
+        "_panelSection_d3i56_148",
+        "_detailSection_1gwax_47",
+        "_vertical_1gwax_51"
+       ],
+       [
+        "_panelBody_d3i56_64"
+       ],
+       [
+        "_large_kwlx6_9",
+        "_noHover_3n0se_28",
+        "_shadow_3n0se_25",
+        "_raisedBackground_3n0se_45",
+        "_panel_d3i56_55"
+       ],
+       [
+        "_transitionWrapper_d3i56_5",
+        "_visible_d3i56_19",
+        "_wrapperContainer_rrj6q_1"
+       ]
+      ],
+      "classes": [],
+      "data": {},
+      "disabled": false,
+      "heading": "",
+      "landmark": {
+       "name": "",
+       "role": "complementary"
+      },
+      "layer": "top",
+      "name": "Choose Files",
+      "rect": [
+       946,
+       1796,
+       132,
+       20
+      ],
+      "role": "button",
+      "tag": "input",
+      "xpath": "/html/body/div[1]/main[1]/div[1]/div[1]/div[4]/div[1]/div[2]/div[2]/div[2]/div[2]/div[2]/aside[1]/div[1]/div[1]/section[4]/div[3]/span[2]/div[1]/div[1]/input[1]"
+     },
+     "state": "billpay.scheduled-panel"
+    }
+   ],
+   "evidenceHash": "717435c0aadf41393a9c02f61e9ce6097e1403e9bf1fef859eac461dd2d6fec4",
+   "facts": {
+    "criterion": "2.5.8",
+    "criterionName": "Target Size (Minimum)",
+    "element": "button \"Choose Files\"",
+    "offset": "0",
+    "rule": "target-size-own",
+    "screen": "Edit Invoice",
+    "screens": 22,
+    "size": "132×20"
+   },
+   "family": "target-size",
+   "guidance": "Medium next to destructive or financial controls.",
+   "issueId": null,
+   "key": "target-size:target-size-own:2e092ab40491",
+   "measured": true,
+   "primary": "invoicing.edit-invoice",
+   "proposals": [],
+   "rule": "target-size-own",
+   "screens": 22,
+   "severityDefault": "low",
+   "source": "scanner",
+   "states": [
+    "invoicing.edit-invoice",
+    "billpay.scheduled-panel"
+   ],
+   "summary": "target-size-own: 132×20 px; the widest circle centered on it that clears other targets is 0 px, and the spacing exception needs 24 px.",
+   "title": "Target under 24×24 px: button \"Choose Files\""
+  },
+  {
+   "attachments": [],
+   "attempt": 1,
+   "basis": "candidate",
+   "criteria": [
+    "2.5.8"
+   ],
+   "evidence": [
+    {
+     "evidence": {
+      "agree": false,
+      "axe": "incomplete",
+      "exception": null,
+      "height": 20,
+      "offset": 0,
+      "own": "fail",
+      "passedBy": null,
+      "width": 131.98
+     },
+     "occurrence": {
+      "ancestors": [
+       [
+        "_dropzoneCompact_3soht_93"
+       ],
+       [
+        "_outerWrapper_3soht_14",
+        "_fileUpload_1et5t_1"
+       ],
+       [],
+       [],
+       [
+        "_contentWrapper_kogp0_1"
+       ],
+       [
+        "_wrapper_1ojdq_8"
+       ],
+       [],
+       [
+        "_leftInnerContainer_12jyu_3"
+       ]
+      ],
+      "classes": [
+       "_uploadButton_3soht_107"
+      ],
+      "data": {},
+      "disabled": false,
+      "heading": "Invoice totals",
+      "landmark": {
+       "name": "",
+       "role": "main"
+      },
+      "layer": "document",
+      "name": "Upload attachment",
+      "rect": [
+       120,
+       754,
+       132,
+       20
+      ],
+      "role": "button",
+      "tag": "button",
+      "xpath": "/html/body/div[1]/main[1]/div[1]/div[2]/div[2]/div[3]/div[1]/div[1]/div[1]/div[1]/div[1]/div[1]/div[2]/div[2]/div[3]/div[2]/div[1]/div[1]/button[1]"
+     },
+     "state": "invoicing.edit-invoice"
+    },
+    {
+     "evidence": {
+      "agree": false,
+      "axe": "incomplete",
+      "exception": null,
+      "height": 20,
+      "offset": 0,
+      "own": "fail",
+      "passedBy": null,
+      "width": 131.98
+     },
+     "occurrence": {
+      "ancestors": [
+       [
+        "_dropzoneCompact_3soht_93"
+       ],
+       [
+        "_outerWrapper_3soht_14"
+       ],
+       [
+        "_bodySecondary_qaod7_51",
+        "_text-default_12t49_1",
+        "_valueText_1gwax_61"
+       ],
+       [
+        "_detailRow_1gwax_55"
+       ],
+       [
+        "_panelSection_d3i56_148",
+        "_detailSection_1gwax_47",
+        "_vertical_1gwax_51"
+       ],
+       [
+        "_panelBody_d3i56_64"
+       ],
+       [
+        "_large_kwlx6_9",
+        "_noHover_3n0se_28",
+        "_shadow_3n0se_25",
+        "_raisedBackground_3n0se_45",
+        "_panel_d3i56_55"
+       ],
+       [
+        "_transitionWrapper_d3i56_5",
+        "_visible_d3i56_19",
+        "_wrapperContainer_rrj6q_1"
+       ]
+      ],
+      "classes": [
+       "_uploadButton_3soht_107"
+      ],
+      "data": {},
+      "disabled": false,
+      "heading": "",
+      "landmark": {
+       "name": "",
+       "role": "complementary"
+      },
+      "layer": "top",
+      "name": "Upload attachment",
+      "rect": [
+       946,
+       1796,
+       132,
+       20
+      ],
+      "role": "button",
+      "tag": "button",
+      "xpath": "/html/body/div[1]/main[1]/div[1]/div[1]/div[4]/div[1]/div[2]/div[2]/div[2]/div[2]/div[2]/aside[1]/div[1]/div[1]/section[4]/div[3]/span[2]/div[1]/div[1]/button[1]"
+     },
+     "state": "billpay.scheduled-panel"
+    }
+   ],
+   "evidenceHash": "717435c0aadf41393a9c02f61e9ce6097e1403e9bf1fef859eac461dd2d6fec4",
+   "facts": {
+    "criterion": "2.5.8",
+    "criterionName": "Target Size (Minimum)",
+    "element": "button \"Upload attachment\"",
+    "offset": "0",
+    "rule": "target-size-own",
+    "screen": "Edit Invoice",
+    "screens": 22,
+    "size": "132×20"
+   },
+   "family": "target-size",
+   "guidance": "Medium next to destructive or financial controls.",
+   "issueId": null,
+   "key": "target-size:target-size-own:73e986f337af",
+   "measured": true,
+   "primary": "invoicing.edit-invoice",
+   "proposals": [],
+   "rule": "target-size-own",
+   "screens": 22,
+   "severityDefault": "low",
+   "source": "scanner",
+   "states": [
+    "invoicing.edit-invoice",
+    "billpay.scheduled-panel"
+   ],
+   "summary": "target-size-own: 132×20 px; the widest circle centered on it that clears other targets is 0 px, and the spacing exception needs 24 px.",
+   "title": "Target under 24×24 px: button \"Upload attachment\""
+  },
+  {
+   "attachments": [],
+   "attempt": 1,
+   "basis": "incomplete",
+   "criteria": [
+    "2.5.8"
+   ],
+   "evidence": [
+    {
+     "evidence": {
+      "closestOffset": 0,
+      "failureSummary": "Fix any of the following:\n  Element with negative tabindex has insufficient size (132px by 20px, should be at least 24px by 24px). Is this a target?\n  Element with negative tabindex has insufficient space to its closest neighbors. Safe clickable space has a diameter of 0px instead of at least 24px. Is this a target?",
+      "height": 20,
+      "minOffset": 24,
+      "minSize": 24,
+      "width": 132
+     },
+     "occurrence": {
+      "ancestors": [
+       [
+        "_dropzoneCompact_3soht_93"
+       ],
+       [
+        "_outerWrapper_3soht_14",
+        "_fileUpload_1et5t_1"
+       ],
+       [],
+       [],
+       [
+        "_contentWrapper_kogp0_1"
+       ],
+       [
+        "_wrapper_1ojdq_8"
+       ],
+       [],
+       [
+        "_leftInnerContainer_12jyu_3"
+       ]
+      ],
+      "classes": [],
+      "data": {},
+      "heading": "Invoice totals",
+      "landmark": {
+       "name": "",
+       "role": "main"
+      },
+      "layer": "document",
+      "name": "Choose Files",
+      "rect": [
+       120,
+       754,
+       132,
+       20
+      ],
+      "role": "button",
+      "tag": "input",
+      "xpath": "/html/body/div[1]/main[1]/div[1]/div[2]/div[2]/div[3]/div[1]/div[1]/div[1]/div[1]/div[1]/div[1]/div[2]/div[2]/div[3]/div[2]/div[1]/div[1]/input[1]"
+     },
+     "state": "invoicing.edit-invoice"
+    },
+    {
+     "evidence": {
+      "closestOffset": 0,
+      "failureSummary": "Fix any of the following:\n  Element with negative tabindex has insufficient size (132px by 20px, should be at least 24px by 24px). Is this a target?\n  Element with negative tabindex has insufficient space to its closest neighbors. Safe clickable space has a diameter of 0px instead of at least 24px. Is this a target?",
+      "height": 20,
+      "minOffset": 24,
+      "minSize": 24,
+      "width": 132
+     },
+     "occurrence": {
+      "ancestors": [
+       [
+        "_dropzoneCompact_3soht_93"
+       ],
+       [
+        "_outerWrapper_3soht_14"
+       ],
+       [
+        "_bodySecondary_qaod7_51",
+        "_text-default_12t49_1",
+        "_valueText_1gwax_61"
+       ],
+       [
+        "_detailRow_1gwax_55"
+       ],
+       [
+        "_panelSection_d3i56_148",
+        "_detailSection_1gwax_47",
+        "_vertical_1gwax_51"
+       ],
+       [
+        "_panelBody_d3i56_64"
+       ],
+       [
+        "_large_kwlx6_9",
+        "_noHover_3n0se_28",
+        "_shadow_3n0se_25",
+        "_raisedBackground_3n0se_45",
+        "_panel_d3i56_55"
+       ],
+       [
+        "_transitionWrapper_d3i56_5",
+        "_visible_d3i56_19",
+        "_wrapperContainer_rrj6q_1"
+       ]
+      ],
+      "classes": [],
+      "data": {},
+      "heading": "",
+      "landmark": {
+       "name": "",
+       "role": "complementary"
+      },
+      "layer": "top",
+      "name": "Choose Files",
+      "rect": [
+       946,
+       1796,
+       132,
+       20
+      ],
+      "role": "button",
+      "tag": "input",
+      "xpath": "/html/body/div[1]/main[1]/div[1]/div[1]/div[4]/div[1]/div[2]/div[2]/div[2]/div[2]/div[2]/aside[1]/div[1]/div[1]/section[4]/div[3]/span[2]/div[1]/div[1]/input[1]"
+     },
+     "state": "billpay.scheduled-panel"
+    }
+   ],
+   "evidenceHash": "beddd6c7ff3924ef935837bd057c34ebabd6cd212c020e4193b734135c78849c",
+   "facts": {
+    "criterion": "2.5.8",
+    "criterionName": "Target Size (Minimum)",
+    "elements": "1 element",
+    "messageKey": "none",
+    "rule": "target-size",
+    "screen": "Edit Invoice",
+    "why": "axe gave no reason"
+   },
+   "family": "target-size",
+   "guidance": "Medium next to destructive or financial controls.",
+   "issueId": null,
+   "key": "target-size:target-size:f25eca8f2aa3",
+   "measured": true,
+   "primary": "invoicing.edit-invoice",
+   "proposals": [],
+   "rule": "target-size",
+   "screens": 22,
+   "severityDefault": "low",
+   "source": "scanner",
+   "states": [
+    "invoicing.edit-invoice",
+    "billpay.scheduled-panel"
+   ],
+   "summary": "axe target-size could not decide 1 element (none): axe gave no reason.",
+   "title": "Needs review: target-size, axe gave no reason"
+  }
+ ],
+ "primaries": [
+  "invoicing.edit-invoice"
+ ],
+ "reach": {
+  "baseUrl": "https://demo.mercury.com",
+  "data": "data",
+  "map": "build/map.json",
+  "run": "2026-10-03-1525",
+  "workspace": "a11y"
+ },
+ "run": "2026-10-03-1525"
+}

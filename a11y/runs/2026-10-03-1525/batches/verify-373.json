@@ -1,0 +1,187 @@
+{
+ "area": "transactions",
+ "batch": "verify-373",
+ "findings": [
+  {
+   "attachments": [],
+   "attempt": 1,
+   "basis": "failure",
+   "criteria": [
+    "2.4.3"
+   ],
+   "evidence": [
+    {
+     "evidence": {
+      "closedBy": "escape",
+      "focus": "body",
+      "stops": 3,
+      "trace": [
+       {
+        "focus": {
+         "label": "Monthly money out This month, Money out, Methods (11) Reset Date Keyword Amount ",
+         "tag": "div",
+         "xpath": "/html/body/div[16]/div[1]/div[1]"
+        },
+        "key": "start",
+        "where": "trigger"
+       },
+       {
+        "focus": {
+         "label": "Reset",
+         "tag": "button",
+         "xpath": "/html/body/div[16]/div[1]/div[1]/div[1]/div[2]/span[1]/button[1]"
+        },
+        "key": "Tab",
+        "where": "outside"
+       },
+       {
+        "focus": {
+         "label": "Date",
+         "tag": "button",
+         "xpath": "/html/body/div[16]/div[1]/div[1]/div[2]/div[1]/div[1]/button[1]"
+        },
+        "key": "Tab",
+        "where": "outside"
+       },
+       {
+        "focus": {
+         "label": "This month",
+         "tag": "input",
+         "xpath": "/html/body/div[16]/div[1]/div[1]/div[2]/div[2]/div[1]/div[1]/form[1]/section[1]/div[1]/div[1]/input[1]"
+        },
+        "key": "Tab",
+        "where": "trigger"
+       },
+       {
+        "focus": {
+         "label": "This month",
+         "tag": "input",
+         "xpath": "/html/body/div[16]/div[1]/div[1]/div[2]/div[2]/div[1]/div[1]/form[1]/section[1]/div[1]/div[1]/input[1]"
+        },
+        "key": "Enter",
+        "where": "trigger"
+       },
+       {
+        "focus": {
+         "label": "",
+         "tag": "input",
+         "xpath": "/html/body/div[16]/div[1]/div[1]/div[2]/div[2]/div[1]/div[1]/form[1]/section[1]/div[1]/div[1]/input[1]"
+        },
+        "key": "Space",
+        "where": "trigger"
+       },
+       {
+        "focus": {
+         "label": "",
+         "tag": "input",
+         "xpath": "/html/body/div[16]/div[1]/div[1]/div[2]/div[2]/div[1]/div[1]/form[1]/section[1]/div[1]/div[1]/input[1]"
+        },
+        "key": "settle",
+        "where": "trigger"
+       },
+       {
+        "focus": "body",
+        "key": "Escape",
+        "where": "body"
+       },
+       {
+        "focus": "body",
+        "key": "settle",
+        "where": "body"
+       }
+      ]
+     },
+     "occurrence": {
+      "ancestors": [
+       [
+        "_inputWrapper_11c85_6"
+       ],
+       [
+        "_wrapper_1xgdp_8"
+       ],
+       [
+        "_rangePickerSection_1q0q9_5"
+       ],
+       [
+        "_container_1q0q9_1"
+       ],
+       [
+        "_wrapper_ce40d_3"
+       ],
+       [],
+       [
+        "_filterTabPanelContainer_veh3u_29"
+       ],
+       [
+        "_filterMenuMainContent_veh3u_21",
+        "_noTopBorderRadius_veh3u_25"
+       ]
+      ],
+      "classes": [
+       "_input_11c85_6"
+      ],
+      "data": {
+       "data-1p-ignore": "true",
+       "data-active-item": "true",
+       "data-bwignore": "true",
+       "data-lpignore": "true"
+      },
+      "heading": "Transactions",
+      "landmark": {
+       "name": "",
+       "role": "form"
+      },
+      "layer": "document",
+      "name": "Show transactions for",
+      "rect": [
+       704,
+       337,
+       295,
+       40
+      ],
+      "role": "combobox",
+      "tag": "input",
+      "xpath": "/html/body/div[16]/div[1]/div[1]/div[2]/div[2]/div[1]/div[1]/form[1]/section[1]/div[1]/div[1]/input[1]"
+     },
+     "state": "transactions.filter-date-presets"
+    }
+   ],
+   "evidenceHash": "f2251395ef5b7da16fcbc5a72395f5ac2f30328246dbec01192108fd9aa190f9",
+   "facts": {
+    "criterion": "2.4.3",
+    "criterionName": "Focus Order",
+    "element": "combobox \"Show transactions for\"",
+    "focus": "page body",
+    "overlay": "unnamed listbox",
+    "screen": "Date preset dropdown"
+   },
+   "family": "dialog-focus",
+   "guidance": "High when controls inside are unreachable.",
+   "issueId": null,
+   "key": "dialog-focus:dialog-focus-not-returned:f3aec8c8c74f",
+   "measured": false,
+   "primary": "transactions.filter-date-presets",
+   "proposals": [],
+   "rule": "dialog-focus-not-returned",
+   "screens": 1,
+   "severityDefault": "low",
+   "source": "scanner",
+   "states": [
+    "transactions.filter-date-presets"
+   ],
+   "summary": "Esc closed the unnamed listbox and focus went to the page body, not back to the combobox \"Show transactions for\".",
+   "title": "Focus lost after closing unnamed listbox"
+  }
+ ],
+ "primaries": [
+  "transactions.filter-date-presets"
+ ],
+ "reach": {
+  "baseUrl": "https://demo.mercury.com",
+  "data": "data",
+  "map": "build/map.json",
+  "run": "2026-10-03-1525",
+  "workspace": "a11y"
+ },
+ "run": "2026-10-03-1525"
+}

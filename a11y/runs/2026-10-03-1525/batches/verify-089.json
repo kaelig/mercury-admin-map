@@ -1,0 +1,409 @@
+{
+ "area": "billpay",
+ "batch": "verify-089",
+ "findings": [
+  {
+   "attachments": [],
+   "attempt": 1,
+   "basis": "failure",
+   "criteria": [
+    "2.4.3"
+   ],
+   "evidence": [
+    {
+     "evidence": {
+      "closedBy": "escape",
+      "focus": "body",
+      "stops": 3,
+      "trace": [
+       {
+        "focus": {
+         "label": "",
+         "tag": "input",
+         "xpath": "/html/body/div[1]/main[1]/div[1]/div[1]/div[4]/div[1]/div[2]/div[3]/div[2]/aside[1]/div[1]/div[1]/section[1]/div[1]/div[1]/div[1]/div[2]/div[1]/input[1]"
+        },
+        "key": "start",
+        "where": "outside"
+       },
+       {
+        "focus": {
+         "label": "Add condition",
+         "tag": "button",
+         "xpath": "/html/body/div[1]/main[1]/div[1]/div[1]/div[4]/div[1]/div[2]/div[3]/div[2]/aside[1]/div[1]/div[1]/section[1]/div[1]/button[1]"
+        },
+        "key": "Tab",
+        "where": "outside"
+       },
+       {
+        "focus": {
+         "label": "",
+         "tag": "button",
+         "xpath": "/html/body/div[1]/main[1]/div[1]/div[1]/div[4]/div[1]/div[2]/div[3]/div[2]/aside[1]/div[1]/div[1]/section[1]/div[1]/div[2]/div[2]/div[1]/div[1]/button[1]"
+        },
+        "key": "Tab",
+        "where": "trigger"
+       },
+       {
+        "focus": {
+         "label": "GL code Mercury category Exclude from review",
+         "tag": "div",
+         "xpath": "/html/body/div[1]/main[1]/div[1]/div[1]/div[4]/div[1]/div[2]/div[3]/div[2]/aside[1]/div[1]/div[1]/section[1]/div[1]/div[2]/div[2]/div[1]/div[1]/div[2]/div[1]"
+        },
+        "key": "Enter",
+        "where": "outside"
+       },
+       {
+        "focus": {
+         "label": "GL code Mercury category Exclude from review",
+         "tag": "div",
+         "xpath": "/html/body/div[1]/main[1]/div[1]/div[1]/div[4]/div[1]/div[2]/div[3]/div[2]/aside[1]/div[1]/div[1]/section[1]/div[1]/div[2]/div[2]/div[1]/div[1]/div[2]/div[1]"
+        },
+        "key": "settle",
+        "where": "inside"
+       },
+       {
+        "focus": "body",
+        "key": "Escape",
+        "where": "body"
+       },
+       {
+        "focus": "body",
+        "key": "settle",
+        "where": "body"
+       },
+       {
+        "focus": {
+         "label": "GL code Mercury category Exclude from review",
+         "tag": "div",
+         "xpath": "/html/body/div[1]/main[1]/div[1]/div[1]/div[4]/div[1]/div[2]/div[3]/div[2]/aside[1]/div[1]/div[1]/section[1]/div[1]/div[2]/div[2]/div[1]/div[1]/div[2]/div[1]"
+        },
+        "key": "Enter",
+        "where": "inside"
+       },
+       {
+        "focus": {
+         "label": "Close detail panel",
+         "tag": "button",
+         "xpath": "/html/body/div[1]/main[1]/div[1]/div[1]/div[4]/div[1]/div[2]/div[3]/div[2]/aside[2]/div[1]/section[1]/div[2]/span[1]/button[1]"
+        },
+        "key": "Tab",
+        "where": "outside"
+       }
+      ]
+     },
+     "occurrence": {
+      "ancestors": [
+       [
+        "_selectWrapper_1m31o_7"
+       ],
+       [
+        "_enrichmentSelect_16juw_78"
+       ],
+       [
+        "_enrichmentRow_16juw_67"
+       ],
+       [
+        "_enrichment_16juw_60"
+       ],
+       [
+        "_container_16juw_6"
+       ],
+       [
+        "_panelSection_d3i56_148"
+       ],
+       [
+        "_panelBody_d3i56_64",
+        "_body_16juw_1"
+       ],
+       [
+        "_large_kwlx6_9",
+        "_noHover_3n0se_28",
+        "_shadow_3n0se_25",
+        "_raisedBackground_3n0se_45",
+        "_panel_d3i56_55"
+       ]
+      ],
+      "classes": [
+       "_select_1m31o_7"
+      ],
+      "data": {},
+      "heading": "Accounting Settings",
+      "landmark": {
+       "name": "",
+       "role": "complementary"
+      },
+      "layer": "document",
+      "name": "Outcome",
+      "rect": [
+       970,
+       540,
+       320,
+       40
+      ],
+      "role": "combobox",
+      "tag": "button",
+      "xpath": "/html/body/div[1]/main[1]/div[1]/div[1]/div[4]/div[1]/div[2]/div[3]/div[2]/aside[1]/div[1]/div[1]/section[1]/div[1]/div[2]/div[2]/div[1]/div[1]/button[1]"
+     },
+     "state": "billpay.rule-outcome-menu"
+    }
+   ],
+   "evidenceHash": "9a5462a55a645dcbf1c7d61646335b138a57202848080a864c4b235ad2a35913",
+   "facts": {
+    "criterion": "2.4.3",
+    "criterionName": "Focus Order",
+    "element": "combobox \"Outcome\"",
+    "focus": "page body",
+    "overlay": "listbox \"Outcome\"",
+    "screen": "Rule outcome menu"
+   },
+   "family": "dialog-focus",
+   "guidance": "High when controls inside are unreachable.",
+   "issueId": null,
+   "key": "dialog-focus:dialog-focus-not-returned:e548a8a5d6a9",
+   "measured": false,
+   "primary": "billpay.rule-outcome-menu",
+   "proposals": [],
+   "rule": "dialog-focus-not-returned",
+   "screens": 1,
+   "severityDefault": "low",
+   "source": "scanner",
+   "states": [
+    "billpay.rule-outcome-menu"
+   ],
+   "summary": "Esc closed the listbox \"Outcome\" and focus went to the page body, not back to the combobox \"Outcome\".",
+   "title": "Focus lost after closing listbox \"Outcome\""
+  },
+  {
+   "attachments": [],
+   "attempt": 1,
+   "basis": "failure",
+   "criteria": [
+    "2.4.3"
+   ],
+   "evidence": [
+    {
+     "evidence": {
+      "focus": {
+       "ancestors": [
+        [],
+        [
+         "_selectWrapper_1m31o_7"
+        ],
+        [
+         "_enrichmentSelect_16juw_78"
+        ],
+        [
+         "_enrichmentRow_16juw_67"
+        ],
+        [
+         "_enrichment_16juw_60"
+        ],
+        [
+         "_container_16juw_6"
+        ],
+        [
+         "_panelSection_d3i56_148"
+        ],
+        [
+         "_panelBody_d3i56_64",
+         "_body_16juw_1"
+        ]
+       ],
+       "classes": [
+        "_selectPopover_1m31o_129"
+       ],
+       "data": {
+        "data-dialog": "",
+        "data-enter": "true",
+        "data-focus-visible": "true",
+        "data-open": "true"
+       },
+       "heading": "",
+       "landmark": {
+        "name": "",
+        "role": "complementary"
+       },
+       "layer": "top",
+       "name": "Outcome",
+       "rect": [
+        970,
+        586,
+        320,
+        128
+       ],
+       "role": "listbox",
+       "tag": "div",
+       "xpath": "/html/body/div[1]/main[1]/div[1]/div[1]/div[4]/div[1]/div[2]/div[3]/div[2]/aside[1]/div[1]/div[1]/section[1]/div[1]/div[2]/div[2]/div[1]/div[1]/div[2]/div[1]"
+      },
+      "nextTabInside": false,
+      "stops": 3,
+      "trace": [
+       {
+        "focus": {
+         "label": "",
+         "tag": "input",
+         "xpath": "/html/body/div[1]/main[1]/div[1]/div[1]/div[4]/div[1]/div[2]/div[3]/div[2]/aside[1]/div[1]/div[1]/section[1]/div[1]/div[1]/div[1]/div[2]/div[1]/input[1]"
+        },
+        "key": "start",
+        "where": "outside"
+       },
+       {
+        "focus": {
+         "label": "Add condition",
+         "tag": "button",
+         "xpath": "/html/body/div[1]/main[1]/div[1]/div[1]/div[4]/div[1]/div[2]/div[3]/div[2]/aside[1]/div[1]/div[1]/section[1]/div[1]/button[1]"
+        },
+        "key": "Tab",
+        "where": "outside"
+       },
+       {
+        "focus": {
+         "label": "",
+         "tag": "button",
+         "xpath": "/html/body/div[1]/main[1]/div[1]/div[1]/div[4]/div[1]/div[2]/div[3]/div[2]/aside[1]/div[1]/div[1]/section[1]/div[1]/div[2]/div[2]/div[1]/div[1]/button[1]"
+        },
+        "key": "Tab",
+        "where": "trigger"
+       },
+       {
+        "focus": {
+         "label": "GL code Mercury category Exclude from review",
+         "tag": "div",
+         "xpath": "/html/body/div[1]/main[1]/div[1]/div[1]/div[4]/div[1]/div[2]/div[3]/div[2]/aside[1]/div[1]/div[1]/section[1]/div[1]/div[2]/div[2]/div[1]/div[1]/div[2]/div[1]"
+        },
+        "key": "Enter",
+        "where": "outside"
+       },
+       {
+        "focus": {
+         "label": "GL code Mercury category Exclude from review",
+         "tag": "div",
+         "xpath": "/html/body/div[1]/main[1]/div[1]/div[1]/div[4]/div[1]/div[2]/div[3]/div[2]/aside[1]/div[1]/div[1]/section[1]/div[1]/div[2]/div[2]/div[1]/div[1]/div[2]/div[1]"
+        },
+        "key": "settle",
+        "where": "inside"
+       },
+       {
+        "focus": "body",
+        "key": "Escape",
+        "where": "body"
+       },
+       {
+        "focus": "body",
+        "key": "settle",
+        "where": "body"
+       },
+       {
+        "focus": {
+         "label": "GL code Mercury category Exclude from review",
+         "tag": "div",
+         "xpath": "/html/body/div[1]/main[1]/div[1]/div[1]/div[4]/div[1]/div[2]/div[3]/div[2]/aside[1]/div[1]/div[1]/section[1]/div[1]/div[2]/div[2]/div[1]/div[1]/div[2]/div[1]"
+        },
+        "key": "Enter",
+        "where": "inside"
+       },
+       {
+        "focus": {
+         "label": "Close detail panel",
+         "tag": "button",
+         "xpath": "/html/body/div[1]/main[1]/div[1]/div[1]/div[4]/div[1]/div[2]/div[3]/div[2]/aside[2]/div[1]/section[1]/div[2]/span[1]/button[1]"
+        },
+        "key": "Tab",
+        "where": "outside"
+       }
+      ]
+     },
+     "occurrence": {
+      "ancestors": [
+       [],
+       [
+        "_selectWrapper_1m31o_7"
+       ],
+       [
+        "_enrichmentSelect_16juw_78"
+       ],
+       [
+        "_enrichmentRow_16juw_67"
+       ],
+       [
+        "_enrichment_16juw_60"
+       ],
+       [
+        "_container_16juw_6"
+       ],
+       [
+        "_panelSection_d3i56_148"
+       ],
+       [
+        "_panelBody_d3i56_64",
+        "_body_16juw_1"
+       ]
+      ],
+      "classes": [
+       "_selectPopover_1m31o_129"
+      ],
+      "data": {
+       "data-dialog": "",
+       "data-enter": "true",
+       "data-focus-visible": "true",
+       "data-open": "true"
+      },
+      "heading": "",
+      "landmark": {
+       "name": "",
+       "role": "complementary"
+      },
+      "layer": "top",
+      "name": "Outcome",
+      "rect": [
+       970,
+       586,
+       320,
+       128
+      ],
+      "role": "listbox",
+      "tag": "div",
+      "xpath": "/html/body/div[1]/main[1]/div[1]/div[1]/div[4]/div[1]/div[2]/div[3]/div[2]/aside[1]/div[1]/div[1]/section[1]/div[1]/div[2]/div[2]/div[1]/div[1]/div[2]/div[1]"
+     },
+     "state": "billpay.rule-outcome-menu"
+    }
+   ],
+   "evidenceHash": "29807d0ec1ed213efeaf961843452ec660d7d72c571eb28d1cc2b221f9704b33",
+   "facts": {
+    "criterion": "2.4.3",
+    "criterionName": "Focus Order",
+    "element": "listbox \"Outcome\"",
+    "focus": "listbox \"Outcome\"",
+    "overlay": "listbox \"Outcome\"",
+    "screen": "Rule outcome menu"
+   },
+   "family": "dialog-focus",
+   "guidance": "High when controls inside are unreachable.",
+   "issueId": null,
+   "key": "dialog-focus:menu-focus-not-moved:d61eb62cf75b",
+   "measured": false,
+   "primary": "billpay.rule-outcome-menu",
+   "proposals": [],
+   "rule": "menu-focus-not-moved",
+   "screens": 1,
+   "severityDefault": "medium",
+   "source": "scanner",
+   "states": [
+    "billpay.rule-outcome-menu"
+   ],
+   "summary": "After the listbox \"Outcome\" opened the listbox \"Outcome\", focus was on the listbox \"Outcome\", not its first item.",
+   "title": "Focus not on first item of listbox \"Outcome\""
+  }
+ ],
+ "primaries": [
+  "billpay.rule-outcome-menu"
+ ],
+ "reach": {
+  "baseUrl": "https://demo.mercury.com",
+  "data": "data",
+  "map": "build/map.json",
+  "run": "2026-10-03-1525",
+  "workspace": "a11y"
+ },
+ "run": "2026-10-03-1525"
+}

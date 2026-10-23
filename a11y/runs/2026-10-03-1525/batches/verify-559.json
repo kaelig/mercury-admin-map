@@ -1,0 +1,114 @@
+{
+ "area": "transactions",
+ "batch": "verify-559",
+ "findings": [
+  {
+   "attachments": [],
+   "attempt": 1,
+   "basis": "candidate",
+   "criteria": [
+    "4.1.2"
+   ],
+   "evidence": [
+    {
+     "evidence": {
+      "description": "",
+      "name": "Show stacked bar chart",
+      "role": "button",
+      "states": {},
+      "template": "button \"Show stacked bar chart\""
+     },
+     "occurrence": {
+      "ancestors": [
+       [
+        "_buttonWithDivider_1xt6d_80"
+       ],
+       [
+        "_container_1xt6d_3",
+        "_small_1xt6d_4",
+        "_segmentWrapper_1m7e5_1"
+       ],
+       [
+        "_insightsIntervalSelectorWrapper_snsic_70"
+       ],
+       [
+        "_headlinesWrapper_snsic_60"
+       ],
+       [
+        "_recapAndInsightsGraphContainer_snsic_9"
+       ],
+       [
+        "_overviewContainer_snsic_3"
+       ],
+       [
+        "_tabContent_almxf_77"
+       ],
+       [
+        "_insightsPageDashboardWrapper_almxf_4"
+       ]
+      ],
+      "classes": [
+       "_segment_1xt6d_7",
+       "_selected_1xt6d_60"
+      ],
+      "data": {},
+      "heading": "Insights",
+      "landmark": {
+       "name": "",
+       "role": "main"
+      },
+      "layer": "document",
+      "name": "Show stacked bar chart",
+      "rect": [
+       1338,
+       355,
+       39,
+       32
+      ],
+      "role": "button",
+      "tag": "button",
+      "xpath": "/html/body/div[1]/main[1]/div[1]/div[1]/div[4]/div[1]/div[2]/div[3]/div[1]/div[1]/div[1]/div[1]/div[3]/div[3]/button[1]"
+     },
+     "state": "transactions.insights-stacked-bar"
+    }
+   ],
+   "evidenceHash": "ba94b419c6e99ff7d329ed849a9973dbc3c4ab2ead90b17e0e27fb6509d39424",
+   "facts": {
+    "announced": "button \"Show stacked bar chart\"",
+    "axeSummary": "",
+    "criterion": "4.1.2",
+    "criterionName": "Name, Role, Value",
+    "element": "button \"Show stacked bar chart\"",
+    "rule": "announced-as",
+    "screen": "Stacked bar mode"
+   },
+   "family": "role-state",
+   "guidance": "Low for optional ARIA or an invalid autocomplete token; high when aria-hidden hides the whole page.",
+   "issueId": null,
+   "key": "role-state:announced-as:0b5da03e02a2",
+   "measured": false,
+   "primary": "transactions.insights-stacked-bar",
+   "proposals": [],
+   "rule": "announced-as",
+   "screens": 1,
+   "severityDefault": "medium",
+   "source": "scanner",
+   "states": [
+    "transactions.insights-stacked-bar"
+   ],
+   "summary": "announced-as: announced as button \"Show stacked bar chart\".",
+   "title": "Wrong role or state: button \"Show stacked bar chart\""
+  }
+ ],
+ "primaries": [
+  "transactions.insights-stacked-bar"
+ ],
+ "reach": {
+  "baseUrl": "https://demo.mercury.com",
+  "data": "data",
+  "map": "build/map.json",
+  "run": "2026-10-03-1525",
+  "workspace": "a11y"
+ },
+ "run": "2026-10-03-1525"
+}

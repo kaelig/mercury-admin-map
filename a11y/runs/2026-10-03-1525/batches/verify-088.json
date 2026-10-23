@@ -1,0 +1,113 @@
+{
+ "area": "billpay",
+ "batch": "verify-088",
+ "findings": [
+  {
+   "attachments": [],
+   "attempt": 1,
+   "basis": "violation",
+   "criteria": [
+    "4.1.2"
+   ],
+   "evidence": [
+    {
+     "evidence": {
+      "aria-errormessage": [
+       "electronicroutingnumber-mercury-utils-id-46-errormessage"
+      ],
+      "failureSummary": "Fix all of the following:\n  aria-errormessage value `electronicroutingnumber-mercury-utils-id-46-errormessage` must use a technique to announce the message (e.g., aria-live, aria-describedby, role=alert, etc.)"
+     },
+     "occurrence": {
+      "ancestors": [
+       [
+        "_inputBox_q7hf7_93",
+        "_hasValue_q7hf7_171",
+        "_error_q7hf7_41"
+       ],
+       [
+        "_inputBoxWrapper_q7hf7_93"
+       ],
+       [
+        "_textInputWrapper_q7hf7_24"
+       ],
+       [
+        "_provideDSTextInput_q7hf7_6",
+        "_addWrapperMargin_q7hf7_19",
+        "session-replay-mask"
+       ],
+       [
+        "_routing-num-input-wrapper_1g0kg_2",
+        "_fullPage_1g0kg_28"
+       ],
+       [],
+       [
+        "_inputFields_196na_25"
+       ],
+       [
+        "_formWrapper_17xei_3"
+       ]
+      ],
+      "classes": [
+       "_input_q7hf7_93"
+      ],
+      "data": {},
+      "heading": "Recipient",
+      "landmark": {
+       "name": "",
+       "role": "form"
+      },
+      "layer": "document",
+      "name": "Routing number",
+      "rect": [
+       110,
+       659,
+       500,
+       24
+      ],
+      "role": "textbox",
+      "tag": "input",
+      "xpath": "/html/body/div[1]/main[1]/div[1]/div[2]/div[2]/div[1]/div[2]/section[2]/div[1]/div[1]/form[1]/div[1]/div[4]/div[1]/div[1]/div[1]/div[1]/div[1]/div[1]/input[1]"
+     },
+     "state": "billpay.routing-number-error"
+    }
+   ],
+   "evidenceHash": "aae6ef87185cb64db1bc09382cd9a7624a91c8f928563a76e766c3094467368e",
+   "facts": {
+    "announced": "textbox \"Routing number\" [invalid=true, errormessage=Routing # should be a <n>-…",
+    "axeSummary": "aria-errormessage value `electronicroutingnumber-mercury-utils-id-46-errormessage` must use a technique to announce the message (e.g., aria-live, aria-describe…",
+    "criterion": "4.1.2",
+    "criterionName": "Name, Role, Value",
+    "element": "textbox \"Routing number\"",
+    "rule": "aria-valid-attr-value",
+    "screen": "Routing number error"
+   },
+   "family": "role-state",
+   "guidance": "Low for optional ARIA or an invalid autocomplete token; high when aria-hidden hides the whole page.",
+   "issueId": null,
+   "key": "role-state:aria-valid-attr-value:a84b6624e52b",
+   "measured": false,
+   "primary": "billpay.routing-number-error",
+   "proposals": [],
+   "rule": "aria-valid-attr-value",
+   "screens": 1,
+   "severityDefault": "medium",
+   "source": "scanner",
+   "states": [
+    "billpay.routing-number-error"
+   ],
+   "summary": "aria-valid-attr-value: announced as textbox \"Routing number\" [invalid=true, errormessage=Routing # should be a <n>-…. aria-errormessage value `electronicroutingnumber-mercury-utils-id-46-errormessage` must use a technique to announce the message (e.g., aria-live, aria-describe…",
+   "title": "Wrong role or state: textbox \"Routing number\""
+  }
+ ],
+ "primaries": [
+  "billpay.routing-number-error"
+ ],
+ "reach": {
+  "baseUrl": "https://demo.mercury.com",
+  "data": "data",
+  "map": "build/map.json",
+  "run": "2026-10-03-1525",
+  "workspace": "a11y"
+ },
+ "run": "2026-10-03-1525"
+}

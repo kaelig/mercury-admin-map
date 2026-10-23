@@ -1,0 +1,195 @@
+{
+ "batch": "record-013",
+ "reach": {
+  "baseUrl": "https://demo.mercury.com",
+  "data": "data",
+  "map": "build/map.json",
+  "run": "2026-10-02-1349",
+  "workspace": "a11y"
+ },
+ "run": "2026-10-02-1349",
+ "states": [
+  {
+   "area": "cards",
+   "draft": "not drafted: its parent had no accepted recipe when the drafter ran; the conductor rejected the previous recipe: extra layer: the filter menu is still open over the list; the capture shows the filtered list with the menu closed",
+   "image": "screens/cards/32-filter-virtual.png",
+   "kind": "form-state",
+   "labels": [
+    "Click Add filter",
+    "Choose Virtual only"
+   ],
+   "mutates": false,
+   "note": "Card list with a removable 'Virtual Cards' filter chip, showing only virtual cards including Pending and Agent Card badges; the previously opened physical card panel stays open.",
+   "parent": "cards.filter-menu",
+   "state": "cards.filtered-virtual",
+   "title": "Cards filtered to virtual"
+  },
+  {
+   "area": "cards",
+   "draft": "cannot parse \"Clear nickname\"",
+   "image": "screens/cards/36-issue-card-errors.png",
+   "kind": "validation-error",
+   "labels": [
+    "Clear nickname, click Create card"
+   ],
+   "mutates": true,
+   "note": "Create card submitted with nickname cleared and no control type: only Control type errors ('Please complete this field'); nickname is optional and shows placeholder e.g. Lunch Card.",
+   "parent": "cards.issue-card",
+   "state": "cards.issue-card-error",
+   "title": "Create a card: missing control type"
+  },
+  {
+   "area": "cards",
+   "draft": "cannot parse \"Type new nickname\"",
+   "image": "screens/cards/17-nickname-saved.png",
+   "kind": "confirmation",
+   "labels": [
+    "Click a virtual card row",
+    "Click More",
+    "Click Edit nickname",
+    "Type new nickname, click Save"
+   ],
+   "mutates": true,
+   "note": "Card renamed to Meta ads in both the list row and the panel header; no toast.",
+   "parent": "cards.edit-nickname",
+   "state": "cards.nickname-saved",
+   "title": "Nickname saved"
+  },
+  {
+   "area": "cards",
+   "draft": "nothing on cards.issue-card-ship-address matches {\"click\":{\"name\":\"Edit on the personal address\"}}",
+   "image": "screens/cards/78-personal-address-edit.png",
+   "kind": "modal",
+   "labels": [
+    "Choose Debit and Physical",
+    "Click Use a different address",
+    "Click Edit on the personal address"
+   ],
+   "mutates": false,
+   "note": "Edit your personal mailing address dialog: info note that edits are saved to your profile, Country (Canada), address lines, City, Province, Postal code; Go back and a disabled Save address.",
+   "parent": "cards.issue-card-ship-address",
+   "state": "cards.personal-address-edit",
+   "title": "Edit personal mailing address"
+  },
+  {
+   "area": "cards",
+   "draft": "nothing on cards.policies-reimbursements matches {\"click\":{\"name\":\"Disable on Notes requirement\"}}",
+   "image": "screens/cards/74-policy-disable-confirm.png",
+   "kind": "modal",
+   "labels": [
+    "Click Disable on Notes requirement"
+   ],
+   "mutates": true,
+   "note": "Disable rule? dialog: 'You can always enable it again if you wish.' with Go back and a pink 'Yes, disable'.",
+   "parent": "cards.policies-reimbursements",
+   "state": "cards.policy-disable-confirm",
+   "title": "Disable rule confirmation"
+  },
+  {
+   "area": "cards",
+   "draft": "cannot parse \"Clear amount\"",
+   "image": "screens/cards/71-policy-receipt-error.png",
+   "kind": "validation-error",
+   "labels": [
+    "Click Edit on Receipt requirement",
+    "Clear amount, click Save"
+   ],
+   "mutates": true,
+   "note": "Amount cleared: the input shows a warning icon and a 'Please complete this field' tooltip above it; Save disabled.",
+   "parent": "cards.policy-receipt-edit",
+   "state": "cards.policy-receipt-error",
+   "title": "Receipt threshold required"
+  },
+  {
+   "area": "cards",
+   "draft": "check {\"role\":\"option\",\"name\":\"Airlines\"}: locator.check: Clicking the checkbox did not change its state",
+   "image": "screens/cards/93-policy-spend-controls-saved.png",
+   "kind": "confirmation",
+   "labels": [
+    "Click Edit on Spend controls",
+    "Open Merchant types to block",
+    "Check Airlines, click Save"
+   ],
+   "mutates": true,
+   "note": "Rule saved without a toast: the Spend controls row now lists Blocked merchant types Alcohol and Bars, Gambling, Airlines.",
+   "parent": "cards.policy-merchant-types-menu",
+   "state": "cards.policy-spend-controls-saved",
+   "title": "Spend controls saved"
+  },
+  {
+   "area": "cards",
+   "draft": "cannot parse \"Type 2 digits\"",
+   "image": "screens/cards/19-reset-pin-invalid.png",
+   "kind": "validation-error",
+   "labels": [
+    "Type 2 digits, click save"
+   ],
+   "mutates": true,
+   "note": "Two digits entered and saved: pink underline and 'Must be 4 digits' error below the PIN input.",
+   "parent": "cards.reset-pin",
+   "state": "cards.reset-pin-error",
+   "title": "Change PIN: too short"
+  },
+  {
+   "area": "cards",
+   "draft": "nothing on cards.policies-reimbursements matches {\"click\":{\"name\":\"Enable on Self-approval\"}}",
+   "image": "screens/cards/99-self-approval-enabled.png",
+   "kind": "confirmation",
+   "labels": [
+    "Click Enable on Self-approval"
+   ],
+   "mutates": true,
+   "note": "Clicking Enable on Self-approval flips it on immediately: no confirmation dialog and no toast, the button just becomes a pink Disable.",
+   "parent": "cards.policies-reimbursements",
+   "state": "cards.self-approval-enabled",
+   "title": "Self-approval enabled"
+  },
+  {
+   "area": "cards",
+   "draft": "nothing on cards.submit-expense matches {\"click\":{\"name\":\"Review with empty form\"}}",
+   "image": "screens/cards/65-submit-expense-errors.png",
+   "kind": "validation-error",
+   "labels": [
+    "Click Submit expense",
+    "Click Review with empty form"
+   ],
+   "mutates": true,
+   "note": "Review pressed with an empty form: Amount shows 'Must be a dollar value.' and Merchant 'Please complete this field'; budget and category are not required.",
+   "parent": "cards.submit-expense",
+   "state": "cards.submit-expense-errors",
+   "title": "Submit expense: required fields"
+  },
+  {
+   "area": "cards",
+   "draft": "cannot parse \"Turn on Include non-budget spend\"",
+   "image": "screens/cards/83-team-spend-non-budget.png",
+   "kind": "form-state",
+   "labels": [
+    "Click ... next to the period",
+    "Turn on Include non-budget spend"
+   ],
+   "mutates": false,
+   "note": "With 'Include non-budget spend' on, the summary jumps from $4,593.84 to $790,439.02 and a grey 'Non budget spend' segment fills most of the bar.",
+   "parent": "cards.team-spend-display-options",
+   "state": "cards.team-spend-non-budget",
+   "title": "Spend summary with non-budget spend"
+  },
+  {
+   "area": "cards",
+   "draft": "nothing on cards.transfer-card matches {\"click\":{\"name\":\"Transfer with no recipient\"}}",
+   "image": "screens/cards/21-transfer-card-error.png",
+   "kind": "validation-error",
+   "labels": [
+    "Click a virtual card row",
+    "Click More",
+    "Click Transfer card",
+    "Click Transfer with no recipient"
+   ],
+   "mutates": true,
+   "note": "Transfer card? dialog submitted without a recipient: pink Transfer to label and border with 'Please complete this field' and a warning icon.",
+   "parent": "cards.transfer-card",
+   "state": "cards.transfer-card-error",
+   "title": "Transfer card: no recipient"
+  }
+ ]
+}

@@ -1,0 +1,722 @@
+{
+ "area": "billpay",
+ "batch": "verify-069",
+ "findings": [
+  {
+   "attachments": [],
+   "attempt": 1,
+   "basis": "failure",
+   "criteria": [
+    "2.5.3"
+   ],
+   "evidence": [],
+   "evidenceHash": "15bae872ee57e66a6ee774ee349bc4a33510f955973c741381f87acb8e17f609",
+   "facts": {},
+   "family": "name",
+   "guidance": "High for an unnamed form control or the sole primary action.",
+   "issueId": "billpay.i-date-input-label",
+   "key": "hand:billpay.i-date-input-label",
+   "measured": false,
+   "primary": "billpay.bill-panel-edit",
+   "proposals": [
+    {
+     "family": "name",
+     "finding": "name:button-name:b9268695c292",
+     "handFound": "billpay.i-date-input-label",
+     "id": "bd782f881483dbda7506dc9ceca0fe90e491122235c00c1ff70274dbff60853e",
+     "overlap": 1
+    },
+    {
+     "family": "name",
+     "finding": "name:button-name:e440427419da",
+     "handFound": "billpay.i-date-input-label",
+     "id": "36b084a35156ae3458be6ce6c8329bcfacedfef36f85cd27b9a139e72a4a7b26",
+     "overlap": 1
+    },
+    {
+     "family": "name",
+     "finding": "name:button-name:fe45f7d639a6",
+     "handFound": "billpay.i-date-input-label",
+     "id": "35f512977059f83a710e305471a98c04d2398a62d6853d6fccace759ffdcd923",
+     "overlap": 1
+    },
+    {
+     "family": "name",
+     "finding": "name:label:0301c256f732",
+     "handFound": "billpay.i-date-input-label",
+     "id": "1dd3332443f9dc2af56ca3962affc19228f607aefa90ca85578f409a02fdcb56",
+     "overlap": 1
+    },
+    {
+     "family": "name",
+     "finding": "name:label:50f8f0d5c53f",
+     "handFound": "billpay.i-date-input-label",
+     "id": "8a4e8842513bcf96e8596102eb587bf62a4eb767c6c87645b5006d9b7f61fda5",
+     "overlap": 1
+    },
+    {
+     "family": "name",
+     "finding": "name:label:5eaa5fabbc13",
+     "handFound": "billpay.i-date-input-label",
+     "id": "55bd0343a100cc9c4507070ed56f5c5edc8c2d6b655a436392de2bcc9f154dcf",
+     "overlap": 1
+    },
+    {
+     "family": "name",
+     "finding": "name:label:a44fe9d11b9a",
+     "handFound": "billpay.i-date-input-label",
+     "id": "8ac4ac49df15430c1e1f6613d2693c26b6c30037918619a1333c5aa2da41d756",
+     "overlap": 1
+    }
+   ],
+   "rule": "hand-found",
+   "screens": 1,
+   "severityDefault": "low",
+   "source": "hand-found",
+   "states": [
+    "billpay.bill-panel-edit"
+   ],
+   "summary": "Edit-mode inputs: input[placeholder='Select due date'] value 'Apr 19, 2025' (Due date) and input[placeholder='Select due date'] value 'Apr 18, 2025' (Invoice date); amount input named only by placeholder '0.00'.",
+   "title": "Invoice date input labeled as due date"
+  },
+  {
+   "attachments": [],
+   "attempt": 1,
+   "basis": "violation",
+   "criteria": [
+    "4.1.2"
+   ],
+   "evidence": [
+    {
+     "evidence": {
+      "failureSummary": "Fix any of the following:\n  Element does not have an implicit (wrapped) <label>\n  Element does not have an explicit <label>\n  aria-label attribute does not exist or is empty\n  aria-labelledby attribute does not exist, references elements that do not exist or references elements that are empty\n  Element has no title attribute\n  Element has no placeholder attribute\n  Element's default semantics were not overridden with role=\"none\" or role=\"presentation\"",
+      "messageKey": "noAttr"
+     },
+     "occurrence": {
+      "ancestors": [
+       [
+        "_inputBox_q7hf7_93",
+        "_inline_q7hf7_201",
+        "_hasValue_q7hf7_171"
+       ],
+       [
+        "_inputBoxWrapper_q7hf7_93"
+       ],
+       [
+        "_textInputWrapper_q7hf7_24"
+       ],
+       [
+        "_provideDSTextInput_q7hf7_6"
+       ],
+       [
+        "_editComponent_1isei_40"
+       ],
+       [
+        "_detailRow_1isei_10",
+        "_editing_1isei_30",
+        "_unstyledButtonWithoutFocus_1isei_102"
+       ],
+       [
+        "_container_1isei_4"
+       ],
+       [
+        "_panelSection_d3i56_148"
+       ]
+      ],
+      "classes": [
+       "_input_q7hf7_93"
+      ],
+      "data": {},
+      "heading": "Due in next 7 days",
+      "landmark": {
+       "name": "",
+       "role": "complementary"
+      },
+      "layer": "document",
+      "name": "",
+      "rect": [
+       1154,
+       752,
+       128,
+       24
+      ],
+      "role": "textbox",
+      "tag": "input",
+      "xpath": "/html/body/div[1]/main[1]/div[1]/div[1]/div[4]/div[1]/div[2]/div[2]/div[2]/div[2]/div[2]/div[1]/form[1]/aside[1]/div[1]/div[1]/section[2]/div[1]/button[3]/div[1]/div[1]/div[1]/div[1]/div[1]/input[1]"
+     },
+     "state": "billpay.bill-panel-edit"
+    },
+    {
+     "evidence": {
+      "failureSummary": "Fix any of the following:\n  Element does not have an implicit (wrapped) <label>\n  Element does not have an explicit <label>\n  aria-label attribute does not exist or is empty\n  aria-labelledby attribute does not exist, references elements that do not exist or references elements that are empty\n  Element has no title attribute\n  Element has no placeholder attribute\n  Element's default semantics were not overridden with role=\"none\" or role=\"presentation\"",
+      "messageKey": "noAttr"
+     },
+     "occurrence": {
+      "ancestors": [
+       [
+        "_inputBox_q7hf7_93",
+        "_inline_q7hf7_201",
+        "_hasValue_q7hf7_171"
+       ],
+       [
+        "_inputBoxWrapper_q7hf7_93"
+       ],
+       [
+        "_textInputWrapper_q7hf7_24"
+       ],
+       [
+        "_provideDSTextInput_q7hf7_6"
+       ],
+       [
+        "_editComponent_1isei_40"
+       ],
+       [
+        "_detailRow_1isei_10",
+        "_editing_1isei_30",
+        "_unstyledButtonWithoutFocus_1isei_102"
+       ],
+       [
+        "_container_1isei_4"
+       ],
+       [
+        "_panelSection_d3i56_148"
+       ]
+      ],
+      "classes": [
+       "_input_q7hf7_93"
+      ],
+      "data": {},
+      "heading": "Due in next 7 days",
+      "landmark": {
+       "name": "",
+       "role": "complementary"
+      },
+      "layer": "document",
+      "name": "",
+      "rect": [
+       1154,
+       776,
+       128,
+       24
+      ],
+      "role": "textbox",
+      "tag": "input",
+      "xpath": "/html/body/div[1]/main[1]/div[1]/div[1]/div[4]/div[1]/div[2]/div[2]/div[2]/div[2]/div[2]/div[1]/form[1]/aside[1]/div[1]/div[1]/section[2]/div[1]/button[3]/div[1]/div[1]/div[1]/div[1]/div[1]/input[1]"
+     },
+     "state": "billpay.bill-edit-amount-error"
+    }
+   ],
+   "evidenceHash": "e53cf96292e72b449cab7a969a5c562c3674cb2701c7e3a7a0d9793824d90bcd",
+   "facts": {
+    "announced": "textbox \"\"",
+    "axeSummary": "Element does not have an implicit (wrapped) <label>; Element does not have an explicit <label>; aria-label attribute does not exist or is empty; aria-labelledb…",
+    "criterion": "4.1.2",
+    "criterionName": "Name, Role, Value",
+    "element": "textbox in \"Due in next <n> days\"",
+    "rule": "label",
+    "screen": "Bill panel edit mode"
+   },
+   "family": "name",
+   "guidance": "High for an unnamed form control or the sole primary action.",
+   "issueId": null,
+   "key": "name:label:a44fe9d11b9a",
+   "measured": false,
+   "primary": "billpay.bill-panel-edit",
+   "proposals": [
+    {
+     "family": "name",
+     "finding": "name:label:a44fe9d11b9a",
+     "handFound": "billpay.i-date-input-label",
+     "id": "8ac4ac49df15430c1e1f6613d2693c26b6c30037918619a1333c5aa2da41d756",
+     "overlap": 1
+    }
+   ],
+   "rule": "label",
+   "screens": 2,
+   "severityDefault": "medium",
+   "source": "scanner",
+   "states": [
+    "billpay.bill-panel-edit",
+    "billpay.bill-edit-amount-error"
+   ],
+   "summary": "label: announced as textbox \"\". Element does not have an implicit (wrapped) <label>; Element does not have an explicit <label>; aria-label attribute does not exist or is empty; aria-labelledb…",
+   "title": "Missing or unclear name: textbox in \"Due in next <n> days\""
+  },
+  {
+   "attachments": [],
+   "attempt": 1,
+   "basis": "violation",
+   "criteria": [
+    "4.1.2"
+   ],
+   "evidence": [
+    {
+     "evidence": {
+      "failureSummary": "Fix any of the following:\n  Element has focusable descendants"
+     },
+     "occurrence": {
+      "ancestors": [
+       [
+        "_container_1isei_4"
+       ],
+       [
+        "_panelSection_d3i56_148"
+       ],
+       [
+        "_panelBody_d3i56_64"
+       ],
+       [
+        "_large_kwlx6_9",
+        "_noHover_3n0se_28",
+        "_shadow_3n0se_25",
+        "_raisedBackground_3n0se_45",
+        "_panel_d3i56_55"
+       ],
+       [
+        "_transitionWrapper_d3i56_5",
+        "_visible_d3i56_19",
+        "_draftCardWrapper_nfv0v_7"
+       ],
+       [],
+       [
+        "_draftsTableContainer_1o7vl_1",
+        "_isTableCondensed_1o7vl_24"
+       ],
+       []
+      ],
+      "classes": [
+       "_detailRow_1isei_10",
+       "_editing_1isei_30",
+       "_unstyledButtonWithoutFocus_1isei_102"
+      ],
+      "data": {},
+      "heading": "Due in next 7 days",
+      "landmark": {
+       "name": "",
+       "role": "complementary"
+      },
+      "layer": "document",
+      "name": "Invoice date Apr 18, 2025",
+      "rect": [
+       946,
+       708,
+       344,
+       32
+      ],
+      "role": "button",
+      "tag": "button",
+      "xpath": "/html/body/div[1]/main[1]/div[1]/div[1]/div[4]/div[1]/div[2]/div[2]/div[2]/div[2]/div[2]/div[1]/form[1]/aside[1]/div[1]/div[1]/section[2]/div[1]/button[2]"
+     },
+     "state": "billpay.bill-panel-edit"
+    },
+    {
+     "evidence": {
+      "failureSummary": "Fix any of the following:\n  Element has focusable descendants"
+     },
+     "occurrence": {
+      "ancestors": [
+       [
+        "_container_1isei_4"
+       ],
+       [
+        "_panelSection_d3i56_148"
+       ],
+       [
+        "_panelBody_d3i56_64"
+       ],
+       [
+        "_large_kwlx6_9",
+        "_noHover_3n0se_28",
+        "_shadow_3n0se_25",
+        "_raisedBackground_3n0se_45",
+        "_panel_d3i56_55"
+       ],
+       [
+        "_transitionWrapper_d3i56_5",
+        "_visible_d3i56_19",
+        "_draftCardWrapper_nfv0v_7"
+       ],
+       [],
+       [
+        "_draftsTableContainer_1o7vl_1",
+        "_isTableCondensed_1o7vl_24"
+       ],
+       []
+      ],
+      "classes": [
+       "_detailRow_1isei_10",
+       "_editing_1isei_30",
+       "_unstyledButtonWithoutFocus_1isei_102"
+      ],
+      "data": {},
+      "heading": "Due in next 7 days",
+      "landmark": {
+       "name": "",
+       "role": "complementary"
+      },
+      "layer": "document",
+      "name": "Invoice date Apr 18, 2025",
+      "rect": [
+       946,
+       732,
+       344,
+       32
+      ],
+      "role": "button",
+      "tag": "button",
+      "xpath": "/html/body/div[1]/main[1]/div[1]/div[1]/div[4]/div[1]/div[2]/div[2]/div[2]/div[2]/div[2]/div[1]/form[1]/aside[1]/div[1]/div[1]/section[2]/div[1]/button[2]"
+     },
+     "state": "billpay.bill-edit-amount-error"
+    }
+   ],
+   "evidenceHash": "3f8ad16c166f5fb8da07d9c94d27b66bf796f06d59f494fff37995a41f7146e1",
+   "facts": {
+    "announced": "button \"Invoice date <date>\"",
+    "axeSummary": "Element has focusable descendants",
+    "criterion": "4.1.2",
+    "criterionName": "Name, Role, Value",
+    "element": "button \"Invoice date <date>\"",
+    "rule": "nested-interactive",
+    "screen": "Bill panel edit mode"
+   },
+   "family": "role-state",
+   "guidance": "Low for optional ARIA or an invalid autocomplete token; high when aria-hidden hides the whole page.",
+   "issueId": null,
+   "key": "role-state:nested-interactive:17889f5e68cd",
+   "measured": false,
+   "primary": "billpay.bill-panel-edit",
+   "proposals": [],
+   "rule": "nested-interactive",
+   "screens": 2,
+   "severityDefault": "medium",
+   "source": "scanner",
+   "states": [
+    "billpay.bill-panel-edit",
+    "billpay.bill-edit-amount-error"
+   ],
+   "summary": "nested-interactive: announced as button \"Invoice date <date>\". Element has focusable descendants",
+   "title": "Control nested in a control: button \"Invoice date <date>\""
+  },
+  {
+   "attachments": [],
+   "attempt": 1,
+   "basis": "violation",
+   "criteria": [
+    "4.1.2"
+   ],
+   "evidence": [
+    {
+     "evidence": {
+      "failureSummary": "Fix any of the following:\n  Element has focusable descendants"
+     },
+     "occurrence": {
+      "ancestors": [
+       [
+        "_container_1isei_4"
+       ],
+       [
+        "_panelSection_d3i56_148"
+       ],
+       [
+        "_panelBody_d3i56_64"
+       ],
+       [
+        "_large_kwlx6_9",
+        "_noHover_3n0se_28",
+        "_shadow_3n0se_25",
+        "_raisedBackground_3n0se_45",
+        "_panel_d3i56_55"
+       ],
+       [
+        "_transitionWrapper_d3i56_5",
+        "_visible_d3i56_19",
+        "_draftCardWrapper_nfv0v_7"
+       ],
+       [],
+       [
+        "_draftsTableContainer_1o7vl_1",
+        "_isTableCondensed_1o7vl_24"
+       ],
+       []
+      ],
+      "classes": [
+       "_detailRow_1isei_10",
+       "_editing_1isei_30",
+       "_unstyledButtonWithoutFocus_1isei_102"
+      ],
+      "data": {},
+      "heading": "Due in next 7 days",
+      "landmark": {
+       "name": "",
+       "role": "complementary"
+      },
+      "layer": "document",
+      "name": "Due date Apr 19, 2025",
+      "rect": [
+       946,
+       668,
+       344,
+       32
+      ],
+      "role": "button",
+      "tag": "button",
+      "xpath": "/html/body/div[1]/main[1]/div[1]/div[1]/div[4]/div[1]/div[2]/div[2]/div[2]/div[2]/div[2]/div[1]/form[1]/aside[1]/div[1]/div[1]/section[2]/div[1]/button[1]"
+     },
+     "state": "billpay.bill-panel-edit"
+    },
+    {
+     "evidence": {
+      "failureSummary": "Fix any of the following:\n  Element has focusable descendants"
+     },
+     "occurrence": {
+      "ancestors": [
+       [
+        "_container_1isei_4"
+       ],
+       [
+        "_panelSection_d3i56_148"
+       ],
+       [
+        "_panelBody_d3i56_64"
+       ],
+       [
+        "_large_kwlx6_9",
+        "_noHover_3n0se_28",
+        "_shadow_3n0se_25",
+        "_raisedBackground_3n0se_45",
+        "_panel_d3i56_55"
+       ],
+       [
+        "_transitionWrapper_d3i56_5",
+        "_visible_d3i56_19",
+        "_draftCardWrapper_nfv0v_7"
+       ],
+       [],
+       [
+        "_draftsTableContainer_1o7vl_1",
+        "_isTableCondensed_1o7vl_24"
+       ],
+       []
+      ],
+      "classes": [
+       "_detailRow_1isei_10",
+       "_editing_1isei_30",
+       "_unstyledButtonWithoutFocus_1isei_102"
+      ],
+      "data": {},
+      "heading": "Due in next 7 days",
+      "landmark": {
+       "name": "",
+       "role": "complementary"
+      },
+      "layer": "document",
+      "name": "Due date Apr 19, 2025",
+      "rect": [
+       946,
+       692,
+       344,
+       32
+      ],
+      "role": "button",
+      "tag": "button",
+      "xpath": "/html/body/div[1]/main[1]/div[1]/div[1]/div[4]/div[1]/div[2]/div[2]/div[2]/div[2]/div[2]/div[1]/form[1]/aside[1]/div[1]/div[1]/section[2]/div[1]/button[1]"
+     },
+     "state": "billpay.bill-edit-amount-error"
+    }
+   ],
+   "evidenceHash": "3f8ad16c166f5fb8da07d9c94d27b66bf796f06d59f494fff37995a41f7146e1",
+   "facts": {
+    "announced": "button \"Due date <date>\"",
+    "axeSummary": "Element has focusable descendants",
+    "criterion": "4.1.2",
+    "criterionName": "Name, Role, Value",
+    "element": "button \"Due date <date>\"",
+    "rule": "nested-interactive",
+    "screen": "Bill panel edit mode"
+   },
+   "family": "role-state",
+   "guidance": "Low for optional ARIA or an invalid autocomplete token; high when aria-hidden hides the whole page.",
+   "issueId": null,
+   "key": "role-state:nested-interactive:357668c4d7e7",
+   "measured": false,
+   "primary": "billpay.bill-panel-edit",
+   "proposals": [],
+   "rule": "nested-interactive",
+   "screens": 2,
+   "severityDefault": "medium",
+   "source": "scanner",
+   "states": [
+    "billpay.bill-panel-edit",
+    "billpay.bill-edit-amount-error"
+   ],
+   "summary": "nested-interactive: announced as button \"Due date <date>\". Element has focusable descendants",
+   "title": "Control nested in a control: button \"Due date <date>\""
+  },
+  {
+   "attachments": [],
+   "attempt": 1,
+   "basis": "violation",
+   "criteria": [
+    "4.1.2"
+   ],
+   "evidence": [
+    {
+     "evidence": {
+      "failureSummary": "Fix any of the following:\n  Element has focusable descendants"
+     },
+     "occurrence": {
+      "ancestors": [
+       [
+        "_container_1isei_4"
+       ],
+       [
+        "_panelSection_d3i56_148"
+       ],
+       [
+        "_panelBody_d3i56_64"
+       ],
+       [
+        "_large_kwlx6_9",
+        "_noHover_3n0se_28",
+        "_shadow_3n0se_25",
+        "_raisedBackground_3n0se_45",
+        "_panel_d3i56_55"
+       ],
+       [
+        "_transitionWrapper_d3i56_5",
+        "_visible_d3i56_19",
+        "_draftCardWrapper_nfv0v_7"
+       ],
+       [],
+       [
+        "_draftsTableContainer_1o7vl_1",
+        "_isTableCondensed_1o7vl_24"
+       ],
+       []
+      ],
+      "classes": [
+       "_detailRow_1isei_10",
+       "_editing_1isei_30",
+       "_unstyledButtonWithoutFocus_1isei_102"
+      ],
+      "data": {},
+      "heading": "Due in next 7 days",
+      "landmark": {
+       "name": "",
+       "role": "complementary"
+      },
+      "layer": "document",
+      "name": "Invoice no. INV-902",
+      "rect": [
+       946,
+       748,
+       344,
+       32
+      ],
+      "role": "button",
+      "tag": "button",
+      "xpath": "/html/body/div[1]/main[1]/div[1]/div[1]/div[4]/div[1]/div[2]/div[2]/div[2]/div[2]/div[2]/div[1]/form[1]/aside[1]/div[1]/div[1]/section[2]/div[1]/button[3]"
+     },
+     "state": "billpay.bill-panel-edit"
+    },
+    {
+     "evidence": {
+      "failureSummary": "Fix any of the following:\n  Element has focusable descendants"
+     },
+     "occurrence": {
+      "ancestors": [
+       [
+        "_container_1isei_4"
+       ],
+       [
+        "_panelSection_d3i56_148"
+       ],
+       [
+        "_panelBody_d3i56_64"
+       ],
+       [
+        "_large_kwlx6_9",
+        "_noHover_3n0se_28",
+        "_shadow_3n0se_25",
+        "_raisedBackground_3n0se_45",
+        "_panel_d3i56_55"
+       ],
+       [
+        "_transitionWrapper_d3i56_5",
+        "_visible_d3i56_19",
+        "_draftCardWrapper_nfv0v_7"
+       ],
+       [],
+       [
+        "_draftsTableContainer_1o7vl_1",
+        "_isTableCondensed_1o7vl_24"
+       ],
+       []
+      ],
+      "classes": [
+       "_detailRow_1isei_10",
+       "_editing_1isei_30",
+       "_unstyledButtonWithoutFocus_1isei_102"
+      ],
+      "data": {},
+      "heading": "Due in next 7 days",
+      "landmark": {
+       "name": "",
+       "role": "complementary"
+      },
+      "layer": "document",
+      "name": "Invoice no. INV-902",
+      "rect": [
+       946,
+       772,
+       344,
+       32
+      ],
+      "role": "button",
+      "tag": "button",
+      "xpath": "/html/body/div[1]/main[1]/div[1]/div[1]/div[4]/div[1]/div[2]/div[2]/div[2]/div[2]/div[2]/div[1]/form[1]/aside[1]/div[1]/div[1]/section[2]/div[1]/button[3]"
+     },
+     "state": "billpay.bill-edit-amount-error"
+    }
+   ],
+   "evidenceHash": "3f8ad16c166f5fb8da07d9c94d27b66bf796f06d59f494fff37995a41f7146e1",
+   "facts": {
+    "announced": "button \"Invoice no. INV-<n>\"",
+    "axeSummary": "Element has focusable descendants",
+    "criterion": "4.1.2",
+    "criterionName": "Name, Role, Value",
+    "element": "button \"Invoice no. INV-<n>\"",
+    "rule": "nested-interactive",
+    "screen": "Bill panel edit mode"
+   },
+   "family": "role-state",
+   "guidance": "Low for optional ARIA or an invalid autocomplete token; high when aria-hidden hides the whole page.",
+   "issueId": null,
+   "key": "role-state:nested-interactive:5ff977b3f151",
+   "measured": false,
+   "primary": "billpay.bill-panel-edit",
+   "proposals": [],
+   "rule": "nested-interactive",
+   "screens": 2,
+   "severityDefault": "medium",
+   "source": "scanner",
+   "states": [
+    "billpay.bill-panel-edit",
+    "billpay.bill-edit-amount-error"
+   ],
+   "summary": "nested-interactive: announced as button \"Invoice no. INV-<n>\". Element has focusable descendants",
+   "title": "Control nested in a control: button \"Invoice no. INV-<n>\""
+  }
+ ],
+ "primaries": [
+  "billpay.bill-panel-edit"
+ ],
+ "reach": {
+  "baseUrl": "https://demo.mercury.com",
+  "data": "data",
+  "map": "build/map.json",
+  "run": "2026-10-03-1525",
+  "workspace": "a11y"
+ },
+ "run": "2026-10-03-1525"
+}

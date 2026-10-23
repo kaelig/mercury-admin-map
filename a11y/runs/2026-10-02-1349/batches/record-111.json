@@ -1,0 +1,29 @@
+{
+ "batch": "record-111",
+ "reach": {
+  "baseUrl": "https://demo.mercury.com",
+  "data": "data",
+  "map": "build/map.json",
+  "run": "2026-10-02-1349",
+  "workspace": "a11y"
+ },
+ "run": "2026-10-02-1349",
+ "states": [
+  {
+   "area": "home",
+   "draft": "not drafted: its parent had no accepted recipe when the drafter ran; a previous recorder failed: previous recorders reported policy before policy.fixtureValues gained the value this label types; it is there now (check with jq)",
+   "image": "screens/home/28-search-no-results.png",
+   "kind": "empty-state",
+   "labels": [
+    "Click 'Search for anything' (or Cmd+K)",
+    "Type 'Google'",
+    "Replace query with gibberish"
+   ],
+   "mutates": false,
+   "note": "A nonsense query shows only 'Search all transactions for \"zzqxnothing\"' with no 'no results' message.",
+   "parent": "home.search-results",
+   "state": "home.search-no-results",
+   "title": "Search: no matches"
+  }
+ ]
+}

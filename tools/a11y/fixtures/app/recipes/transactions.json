@@ -1,0 +1,137 @@
+{
+ "transactions.card-payments": {
+  "fingerprint": {
+   "controls": [
+    "Blue Bottle Coffee Paid <date> <amount>",
+    "Cards",
+    "Dashboard",
+    "Delta Air Lines Paid <date> <amount>",
+    "Filters",
+    "Logout",
+    "Reports",
+    "Transactions"
+   ],
+   "headings": [
+    "Transactions",
+    "Card payments"
+   ],
+   "path": "/app/transactions",
+   "structure": "document",
+   "top": {
+    "name": "",
+    "role": "document"
+   }
+  },
+  "hop": [
+   {
+    "click": {
+     "name": "Card payments",
+     "role": "menuitem"
+    }
+   }
+  ],
+  "mutates": false,
+  "parent": "transactions.filters-menu",
+  "recordedBy": "hand",
+  "review": null,
+  "similarity": null,
+  "source": "4235b87aca4186eea14113ed2b2c9bad8b7cfcbe",
+  "status": "accepted"
+ },
+ "transactions.drawer": {
+  "fingerprint": {
+   "controls": [
+    "Close",
+    "Download receipt"
+   ],
+   "headings": [
+    "Blue Bottle Coffee"
+   ],
+   "path": "/app/transactions",
+   "structure": "dialog",
+   "top": {
+    "name": "",
+    "role": "complementary"
+   }
+  },
+  "hop": [
+   {
+    "click": {
+     "name": "Blue Bottle Coffee Paid <date> <amount>",
+     "role": "button"
+    }
+   }
+  ],
+  "mutates": false,
+  "parent": "transactions.card-payments",
+  "recordedBy": "hand",
+  "review": null,
+  "similarity": null,
+  "source": "629962fd8db28a1d16cfd1e6681a169d6e67d26f",
+  "status": "accepted"
+ },
+ "transactions.filters-menu": {
+  "fingerprint": {
+   "controls": [
+    "Card payments",
+    "Deposits",
+    "Transfers"
+   ],
+   "headings": [],
+   "path": "/app/transactions",
+   "structure": "menu",
+   "top": {
+    "name": "Filters",
+    "role": "menu"
+   }
+  },
+  "hop": [
+   {
+    "click": {
+     "name": "Filters",
+     "role": "button"
+    }
+   }
+  ],
+  "mutates": false,
+  "parent": "transactions.index",
+  "recordedBy": "hand",
+  "review": null,
+  "similarity": null,
+  "source": "fdb5c38c2f626f29c3bf8982f12ead152d86ed8a",
+  "status": "accepted"
+ },
+ "transactions.index": {
+  "fingerprint": {
+   "controls": [
+    "Acme Payroll Paid <date> <amount>",
+    "Blue Bottle Coffee Paid <date> <amount>",
+    "Cards",
+    "Dashboard",
+    "Delta Air Lines Paid <date> <amount>",
+    "Filters",
+    "Logout",
+    "Reports",
+    "Stripe payout Paid <date> <amount>",
+    "Transactions"
+   ],
+   "headings": [
+    "Transactions"
+   ],
+   "path": "/app/transactions",
+   "structure": "document",
+   "top": {
+    "name": "",
+    "role": "document"
+   }
+  },
+  "hop": [],
+  "mutates": false,
+  "parent": "/app/transactions",
+  "recordedBy": "hand",
+  "review": null,
+  "similarity": null,
+  "source": "97d170e1550eee4afc0af065b78cda302a97674c",
+  "status": "accepted"
+ }
+}

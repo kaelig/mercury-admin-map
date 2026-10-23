@@ -1,0 +1,88 @@
+{
+ "area": "invoicing",
+ "batch": "verify-254",
+ "findings": [
+  {
+   "attachments": [],
+   "attempt": 1,
+   "basis": "violation",
+   "criteria": [
+    "1.3.1"
+   ],
+   "evidence": [
+    {
+     "evidence": {
+      "failureSummary": "Fix any of the following:\n  Element has children which are not allowed: input[aria-describedby]",
+      "messageKey": "unallowed",
+      "values": "input[aria-describedby]"
+     },
+     "occurrence": {
+      "ancestors": [
+       [],
+       []
+      ],
+      "classes": [
+       "_menu_14lgn_4"
+      ],
+      "data": {
+       "data-dialog": "",
+       "data-enter": "true",
+       "data-open": "true"
+      },
+      "heading": "",
+      "landmark": null,
+      "layer": "top",
+      "name": "Status",
+      "rect": [
+       441,
+       384,
+       407,
+       400
+      ],
+      "role": "menu",
+      "tag": "div",
+      "xpath": "/html/body/div[9]/div[1]/div[1]"
+     },
+     "state": "invoicing.status-filter-menu"
+    }
+   ],
+   "evidenceHash": "b81c993847e8627bca2b53a3f0b09a84fb6c77b6787688d968482bc85f613095",
+   "facts": {
+    "announced": "menu \"Status\"",
+    "axeSummary": "Element has children which are not allowed: input[aria-describedby]",
+    "criterion": "1.3.1",
+    "criterionName": "Info and Relationships",
+    "element": "menu \"Status\"",
+    "rule": "aria-required-children",
+    "screen": "Status filter menu"
+   },
+   "family": "role-state",
+   "guidance": "Low for optional ARIA or an invalid autocomplete token; high when aria-hidden hides the whole page.",
+   "issueId": null,
+   "key": "role-state:aria-required-children:cc6f86561a58",
+   "measured": false,
+   "primary": "invoicing.status-filter-menu",
+   "proposals": [],
+   "rule": "aria-required-children",
+   "screens": 1,
+   "severityDefault": "medium",
+   "source": "scanner",
+   "states": [
+    "invoicing.status-filter-menu"
+   ],
+   "summary": "aria-required-children: announced as menu \"Status\". Element has children which are not allowed: input[aria-describedby]",
+   "title": "Wrong role or state: menu \"Status\""
+  }
+ ],
+ "primaries": [
+  "invoicing.status-filter-menu"
+ ],
+ "reach": {
+  "baseUrl": "https://demo.mercury.com",
+  "data": "data",
+  "map": "build/map.json",
+  "run": "2026-10-03-1525",
+  "workspace": "a11y"
+ },
+ "run": "2026-10-03-1525"
+}

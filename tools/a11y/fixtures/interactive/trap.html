@@ -1,0 +1,24 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><title>Keyboard trap</title>
+<style>body { font: 16px/1.4 sans-serif; margin: 24px; color: #111; background: #fff; } button { font: inherit; margin: 8px; }</style></head>
+<body>
+<main>
+  <h1>Transactions</h1>
+  <button>Before</button>
+  <!-- A non-modal filter bar that keeps Tab and Shift+Tab inside itself and ignores Esc. -->
+  <div role="group" aria-label="Filters" id="filters">
+    <button>Status</button><button>Amount</button><button>Date</button>
+  </div>
+  <button>After</button>
+</main>
+<script>
+  const bar = document.getElementById('filters');
+  bar.addEventListener('keydown', (e) => {
+    if (e.key !== 'Tab') return;
+    e.preventDefault();
+    const items = [...bar.querySelectorAll('button')];
+    const i = items.indexOf(document.activeElement);
+    items[(i + (e.shiftKey ? items.length - 1 : 1)) % items.length].focus();
+  });
+</script>
+</body></html>

@@ -1,0 +1,465 @@
+{
+ "area": "settings",
+ "batch": "verify-323",
+ "findings": [
+  {
+   "attachments": [],
+   "attempt": 1,
+   "basis": "violation",
+   "criteria": [
+    "4.1.2"
+   ],
+   "evidence": [
+    {
+     "evidence": {
+      "aria-errormessage": [
+       "url-mercury-utils-id-25-errormessage"
+      ],
+      "failureSummary": "Fix all of the following:\n  aria-errormessage value `url-mercury-utils-id-25-errormessage` must use a technique to announce the message (e.g., aria-live, aria-describedby, role=alert, etc.)"
+     },
+     "occurrence": {
+      "ancestors": [
+       [
+        "_inputBox_q7hf7_93",
+        "_hasValue_q7hf7_171",
+        "_error_q7hf7_41"
+       ],
+       [
+        "_inputBoxWrapper_q7hf7_93"
+       ],
+       [
+        "_textInputWrapper_q7hf7_24"
+       ],
+       [
+        "_provideDSTextInput_q7hf7_6"
+       ],
+       [
+        "_formSection_1omh8_1"
+       ],
+       [],
+       [],
+       [
+        "_large_kwlx6_9",
+        "_noHover_3n0se_28",
+        "_shadow_3n0se_25",
+        "_raisedBackground_3n0se_45",
+        "_card_lo4oy_4",
+        "_defaultPadding_lo4oy_27",
+        "_small_lo4oy_11"
+       ]
+      ],
+      "classes": [
+       "_input_q7hf7_93"
+      ],
+      "data": {},
+      "heading": "Create a webhook endpoint",
+      "landmark": {
+       "name": "",
+       "role": "form"
+      },
+      "layer": "top",
+      "name": "Endpoint URL",
+      "rect": [
+       549,
+       355,
+       342,
+       24
+      ],
+      "role": "textbox",
+      "tag": "input",
+      "xpath": "/html/body/div[10]/div[1]/div[1]/div[1]/form[1]/div[1]/section[1]/div[1]/div[1]/div[1]/div[1]/input[1]"
+     },
+     "state": "settings.create-webhook-http-error"
+    },
+    {
+     "evidence": {
+      "aria-errormessage": [
+       "url-mercury-utils-id-25-errormessage"
+      ],
+      "failureSummary": "Fix all of the following:\n  aria-errormessage value `url-mercury-utils-id-25-errormessage` must use a technique to announce the message (e.g., aria-live, aria-describedby, role=alert, etc.)"
+     },
+     "occurrence": {
+      "ancestors": [
+       [
+        "_inputBox_q7hf7_93",
+        "_hasValue_q7hf7_171",
+        "_error_q7hf7_41"
+       ],
+       [
+        "_inputBoxWrapper_q7hf7_93"
+       ],
+       [
+        "_textInputWrapper_q7hf7_24"
+       ],
+       [
+        "_provideDSTextInput_q7hf7_6"
+       ],
+       [
+        "_formSection_1omh8_1"
+       ],
+       [],
+       [],
+       [
+        "_large_kwlx6_9",
+        "_noHover_3n0se_28",
+        "_shadow_3n0se_25",
+        "_raisedBackground_3n0se_45",
+        "_card_lo4oy_4",
+        "_defaultPadding_lo4oy_27",
+        "_small_lo4oy_11"
+       ]
+      ],
+      "classes": [
+       "_input_q7hf7_93"
+      ],
+      "data": {},
+      "heading": "Edit webhook endpoint",
+      "landmark": {
+       "name": "",
+       "role": "form"
+      },
+      "layer": "top",
+      "name": "Endpoint URL",
+      "rect": [
+       549,
+       331,
+       342,
+       24
+      ],
+      "role": "textbox",
+      "tag": "input",
+      "xpath": "/html/body/div[10]/div[1]/div[1]/div[1]/form[1]/div[1]/section[1]/div[1]/div[1]/div[1]/div[1]/input[1]"
+     },
+     "state": "settings.edit-webhook-invalid"
+    }
+   ],
+   "evidenceHash": "b0ab7436afda8fcd2ae8e40678da81410fa2df6d1b2e3add36d5006ca2e20602",
+   "facts": {
+    "announced": "textbox \"Endpoint URL\" [invalid=true, errormessage=Please enter a valid HTTPS U…",
+    "axeSummary": "aria-errormessage value `url-mercury-utils-id-25-errormessage` must use a technique to announce the message (e.g., aria-live, aria-describedby, role=alert, etc…",
+    "criterion": "4.1.2",
+    "criterionName": "Name, Role, Value",
+    "element": "textbox \"Endpoint URL\"",
+    "rule": "aria-valid-attr-value",
+    "screen": "Create webhook — http URL rejected"
+   },
+   "family": "role-state",
+   "guidance": "Low for optional ARIA or an invalid autocomplete token; high when aria-hidden hides the whole page.",
+   "issueId": null,
+   "key": "role-state:aria-valid-attr-value:7f4a42500395",
+   "measured": false,
+   "primary": "settings.create-webhook-http-error",
+   "proposals": [],
+   "rule": "aria-valid-attr-value",
+   "screens": 2,
+   "severityDefault": "medium",
+   "source": "scanner",
+   "states": [
+    "settings.create-webhook-http-error",
+    "settings.edit-webhook-invalid"
+   ],
+   "summary": "aria-valid-attr-value: announced as textbox \"Endpoint URL\" [invalid=true, errormessage=Please enter a valid HTTPS U…. aria-errormessage value `url-mercury-utils-id-25-errormessage` must use a technique to announce the message (e.g., aria-live, aria-describedby, role=alert, etc…",
+   "title": "Wrong role or state: textbox \"Endpoint URL\""
+  },
+  {
+   "attachments": [],
+   "attempt": 1,
+   "basis": "failure",
+   "criteria": [
+    "4.1.3"
+   ],
+   "evidence": [
+    {
+     "evidence": {
+      "focus": {
+       "ancestors": [
+        [
+         "_inputWrapper_11c85_6"
+        ],
+        [
+         "_wrapper_1xgdp_8"
+        ],
+        [
+         "_formSection_1omh8_1"
+        ],
+        [],
+        [],
+        [
+         "_large_kwlx6_9",
+         "_noHover_3n0se_28",
+         "_shadow_3n0se_25",
+         "_raisedBackground_3n0se_45",
+         "_card_lo4oy_4",
+         "_defaultPadding_lo4oy_27",
+         "_small_lo4oy_11"
+        ],
+        [
+         "ReactModal__Content",
+         "ReactModal__Content--after-open",
+         "_modal_lo4oy_73"
+        ],
+        [
+         "ReactModal__Overlay",
+         "ReactModal__Overlay--after-open",
+         "_overlay_lo4oy_89",
+         "_backgroundColor_lo4oy_103"
+        ]
+       ],
+       "classes": [
+        "_input_11c85_6"
+       ],
+       "data": {
+        "data-1p-ignore": "true",
+        "data-active-item": "true",
+        "data-bwignore": "true",
+        "data-focus-visible": "true",
+        "data-lpignore": "true"
+       },
+       "heading": "Create a webhook endpoint",
+       "landmark": {
+        "name": "",
+        "role": "form"
+       },
+       "layer": "top",
+       "name": "Event types",
+       "rect": [
+        536,
+        517,
+        335,
+        40
+       ],
+       "role": "combobox",
+       "tag": "input",
+       "xpath": "/html/body/div[10]/div[1]/div[1]/div[1]/form[1]/div[1]/section[2]/div[1]/div[1]/input[1]"
+      },
+      "focused": false,
+      "message": "Please enter a valid HTTPS URL (e.g. https://example.com/webhook)",
+      "region": null
+     },
+     "occurrence": {
+      "ancestors": [
+       [
+        "_textInputWrapper_q7hf7_24"
+       ],
+       [
+        "_provideDSTextInput_q7hf7_6"
+       ],
+       [
+        "_formSection_1omh8_1"
+       ],
+       [],
+       [],
+       [
+        "_large_kwlx6_9",
+        "_noHover_3n0se_28",
+        "_shadow_3n0se_25",
+        "_raisedBackground_3n0se_45",
+        "_card_lo4oy_4",
+        "_defaultPadding_lo4oy_27",
+        "_small_lo4oy_11"
+       ],
+       [
+        "ReactModal__Content",
+        "ReactModal__Content--after-open",
+        "_modal_lo4oy_73"
+       ],
+       [
+        "ReactModal__Overlay",
+        "ReactModal__Overlay--after-open",
+        "_overlay_lo4oy_89",
+        "_backgroundColor_lo4oy_103"
+       ]
+      ],
+      "classes": [
+       "_defaultErrorContainer_1tnh5_1",
+       "_errorMessage_q7hf7_303"
+      ],
+      "data": {
+       "data-session-replay-unmask": "true"
+      },
+      "heading": "Create a webhook endpoint",
+      "landmark": {
+       "name": "",
+       "role": "form"
+      },
+      "layer": "top",
+      "name": "",
+      "rect": [
+       536,
+       391,
+       368,
+       38
+      ],
+      "role": "",
+      "tag": "div",
+      "xpath": "/html/body/div[10]/div[1]/div[1]/div[1]/form[1]/div[1]/section[1]/div[1]/div[1]/div[2]"
+     },
+     "state": "settings.create-webhook-http-error"
+    },
+    {
+     "evidence": {
+      "focus": {
+       "ancestors": [
+        [
+         "_inputWrapper_11c85_6"
+        ],
+        [
+         "_wrapper_1xgdp_8"
+        ],
+        [
+         "_formSection_1omh8_1"
+        ],
+        [],
+        [],
+        [
+         "_large_kwlx6_9",
+         "_noHover_3n0se_28",
+         "_shadow_3n0se_25",
+         "_raisedBackground_3n0se_45",
+         "_card_lo4oy_4",
+         "_defaultPadding_lo4oy_27",
+         "_small_lo4oy_11"
+        ],
+        [
+         "ReactModal__Content",
+         "ReactModal__Content--after-open",
+         "_modal_lo4oy_73"
+        ],
+        [
+         "ReactModal__Overlay",
+         "ReactModal__Overlay--after-open",
+         "_overlay_lo4oy_89",
+         "_backgroundColor_lo4oy_103"
+        ]
+       ],
+       "classes": [
+        "_input_11c85_6"
+       ],
+       "data": {
+        "data-1p-ignore": "true",
+        "data-active-item": "true",
+        "data-bwignore": "true",
+        "data-focus-visible": "true",
+        "data-lpignore": "true"
+       },
+       "heading": "Edit webhook endpoint",
+       "landmark": {
+        "name": "",
+        "role": "form"
+       },
+       "layer": "top",
+       "name": "Event types",
+       "rect": [
+        536,
+        493,
+        335,
+        40
+       ],
+       "role": "combobox",
+       "tag": "input",
+       "xpath": "/html/body/div[10]/div[1]/div[1]/div[1]/form[1]/div[1]/section[2]/div[1]/div[1]/input[1]"
+      },
+      "focused": false,
+      "message": "Please enter a valid HTTPS URL (e.g. https://example.com/webhook)",
+      "region": null
+     },
+     "occurrence": {
+      "ancestors": [
+       [
+        "_textInputWrapper_q7hf7_24"
+       ],
+       [
+        "_provideDSTextInput_q7hf7_6"
+       ],
+       [
+        "_formSection_1omh8_1"
+       ],
+       [],
+       [],
+       [
+        "_large_kwlx6_9",
+        "_noHover_3n0se_28",
+        "_shadow_3n0se_25",
+        "_raisedBackground_3n0se_45",
+        "_card_lo4oy_4",
+        "_defaultPadding_lo4oy_27",
+        "_small_lo4oy_11"
+       ],
+       [
+        "ReactModal__Content",
+        "ReactModal__Content--after-open",
+        "_modal_lo4oy_73"
+       ],
+       [
+        "ReactModal__Overlay",
+        "ReactModal__Overlay--after-open",
+        "_overlay_lo4oy_89",
+        "_backgroundColor_lo4oy_103"
+       ]
+      ],
+      "classes": [
+       "_defaultErrorContainer_1tnh5_1",
+       "_errorMessage_q7hf7_303"
+      ],
+      "data": {
+       "data-session-replay-unmask": "true"
+      },
+      "heading": "Edit webhook endpoint",
+      "landmark": {
+       "name": "",
+       "role": "form"
+      },
+      "layer": "top",
+      "name": "",
+      "rect": [
+       536,
+       367,
+       368,
+       38
+      ],
+      "role": "",
+      "tag": "div",
+      "xpath": "/html/body/div[10]/div[1]/div[1]/div[1]/form[1]/div[1]/section[1]/div[1]/div[1]/div[2]"
+     },
+     "state": "settings.edit-webhook-invalid"
+    }
+   ],
+   "evidenceHash": "6ff8f66cd44701c99d59b2a858ea218cb1d1add92ff711cd1af8edc1661c2f75",
+   "facts": {
+    "criterion": "4.1.3",
+    "criterionName": "Status Messages",
+    "focus": "combobox \"Event types\"",
+    "message": "\"Please enter a valid HTTPS URL (e.g. https://ex…\"",
+    "screen": "Create webhook — http URL rejected"
+   },
+   "family": "status-message",
+   "guidance": "High when it is the only confirmation of a money movement.",
+   "issueId": null,
+   "key": "status-message:status-not-announced:0c75a35b8599",
+   "measured": false,
+   "primary": "settings.create-webhook-http-error",
+   "proposals": [],
+   "rule": "status-not-announced",
+   "screens": 2,
+   "severityDefault": "medium",
+   "source": "scanner",
+   "states": [
+    "settings.create-webhook-http-error",
+    "settings.edit-webhook-invalid"
+   ],
+   "summary": "\"Please enter a valid HTTPS URL (e.g. https://ex…\" appeared outside any live region, alert or status role that existed before it, and focus stayed on the combobox \"Event types\".",
+   "title": "Status message not announced: \"Please enter a valid HTTPS URL (e.g. https://ex…\""
+  }
+ ],
+ "primaries": [
+  "settings.create-webhook-http-error"
+ ],
+ "reach": {
+  "baseUrl": "https://demo.mercury.com",
+  "data": "data",
+  "map": "build/map.json",
+  "run": "2026-10-03-1525",
+  "workspace": "a11y"
+ },
+ "run": "2026-10-03-1525"
+}

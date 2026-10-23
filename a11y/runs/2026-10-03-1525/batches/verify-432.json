@@ -1,0 +1,112 @@
+{
+ "area": "books",
+ "batch": "verify-432",
+ "findings": [
+  {
+   "attachments": [],
+   "attempt": 1,
+   "basis": "candidate",
+   "criteria": [
+    "4.1.2"
+   ],
+   "evidence": [
+    {
+     "evidence": {
+      "description": "",
+      "name": "Q1",
+      "role": "button",
+      "states": {},
+      "template": "button \"Q<n>\""
+     },
+     "occurrence": {
+      "ancestors": [
+       [
+        "_tagsContainer_iv194_68"
+       ],
+       [
+        "_tagsScrollWrapper_iv194_60"
+       ],
+       [
+        "_inputContainer_iv194_3"
+       ],
+       [
+        "_customStickyHeader_7rfk9_63"
+       ],
+       [
+        "_externalStickyHeaderContent_7rfk9_57"
+       ],
+       [
+        "_stickyHeader_7rfk9_50"
+       ],
+       [
+        "_virtualizerContainer_7rfk9_25"
+       ],
+       [
+        "_grid_7rfk9_1"
+       ]
+      ],
+      "classes": [
+       "_tag_gfecw_3",
+       "_selected_gfecw_8"
+      ],
+      "data": {},
+      "heading": "Add other bank or credit accounts",
+      "landmark": {
+       "name": "",
+       "role": "main"
+      },
+      "layer": "document",
+      "name": "Q1",
+      "rect": [
+       639,
+       400,
+       42,
+       32
+      ],
+      "role": "button",
+      "tag": "button",
+      "xpath": "/html/body/div[1]/main[1]/div[1]/div[1]/div[1]/div[4]/div[1]/div[1]/div[2]/div[1]/div[1]/div[1]/div[1]/div[1]/div[2]/div[1]/div[1]/div[1]/div[6]/div[1]/button[1]"
+     },
+     "state": "books.balance-sheet-quarterly"
+    }
+   ],
+   "evidenceHash": "16f6b6e48ed35d9b9ae6f4d03653b0bf264720288765fd3746153bc3336cb7f2",
+   "facts": {
+    "announced": "button \"Q<n>\"",
+    "axeSummary": "",
+    "criterion": "4.1.2",
+    "criterionName": "Name, Role, Value",
+    "element": "button \"Q<n>\"",
+    "rule": "announced-as",
+    "screen": "Balance Sheet by quarter"
+   },
+   "family": "role-state",
+   "guidance": "Low for optional ARIA or an invalid autocomplete token; high when aria-hidden hides the whole page.",
+   "issueId": null,
+   "key": "role-state:announced-as:b57b304f7c79",
+   "measured": false,
+   "primary": "books.balance-sheet-quarterly",
+   "proposals": [],
+   "rule": "announced-as",
+   "screens": 1,
+   "severityDefault": "medium",
+   "source": "scanner",
+   "states": [
+    "books.balance-sheet-quarterly"
+   ],
+   "summary": "announced-as: announced as button \"Q<n>\".",
+   "title": "Wrong role or state: button \"Q<n>\""
+  }
+ ],
+ "primaries": [
+  "books.balance-sheet-quarterly"
+ ],
+ "reach": {
+  "baseUrl": "https://demo.mercury.com",
+  "data": "data",
+  "map": "build/map.json",
+  "run": "2026-10-03-1525",
+  "workspace": "a11y"
+ },
+ "run": "2026-10-03-1525"
+}

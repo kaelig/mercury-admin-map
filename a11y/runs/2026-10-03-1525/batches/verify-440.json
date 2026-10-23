@@ -1,0 +1,425 @@
+{
+ "area": "books",
+ "batch": "verify-440",
+ "findings": [
+  {
+   "attachments": [],
+   "attempt": 1,
+   "basis": "candidate",
+   "criteria": [
+    "4.1.2"
+   ],
+   "evidence": [
+    {
+     "evidence": {
+      "description": "",
+      "name": "Ledgers",
+      "role": "button",
+      "states": {},
+      "template": "button \"Ledgers\""
+     },
+     "occurrence": {
+      "ancestors": [
+       [
+        "_chip_1xw00_8",
+        "_inactive_1xw00_119",
+        "_truncateText_1xw00_16"
+       ],
+       [],
+       [
+        "_facets_4ah12_118"
+       ],
+       [
+        "_filterScrollContent_4ah12_19"
+       ],
+       [
+        "_filterScrollContainer_4ah12_12"
+       ],
+       [
+        "_filterChipsContainer_4ah12_2"
+       ],
+       [
+        "_inputAndResultsContainer_16edb_80"
+       ],
+       [
+        "_large_kwlx6_9",
+        "_noHover_3n0se_28",
+        "_shadow_3n0se_25",
+        "_raisedBackground_3n0se_45",
+        "_card_lo4oy_4",
+        "_omnisearchCard_16edb_36"
+       ]
+      ],
+      "classes": [
+       "_mainElement_1xw00_24",
+       "_interactive_1xw00_134"
+      ],
+      "data": {
+       "data-filter-id": "ledgers"
+      },
+      "heading": "",
+      "landmark": {
+       "name": "",
+       "role": "dialog"
+      },
+      "layer": "top",
+      "name": "Ledgers",
+      "rect": [
+       559,
+       196,
+       78,
+       32
+      ],
+      "role": "button",
+      "tag": "button",
+      "xpath": "/html/body/div[9]/div[1]/div[1]/div[1]/div[2]/div[2]/div[1]/div[2]/span[1]/span[4]/span[1]/button[1]"
+     },
+     "state": "books.search"
+    }
+   ],
+   "evidenceHash": "06d5e1a3865c60c8835b9cc4cf8bfb7096213678fe8460112edb7abf8c77835b",
+   "facts": {
+    "announced": "button \"Ledgers\"",
+    "axeSummary": "",
+    "criterion": "4.1.2",
+    "criterionName": "Name, Role, Value",
+    "element": "button \"Ledgers\"",
+    "rule": "announced-as",
+    "screen": "Search or jump to"
+   },
+   "family": "role-state",
+   "guidance": "Low for optional ARIA or an invalid autocomplete token; high when aria-hidden hides the whole page.",
+   "issueId": null,
+   "key": "role-state:announced-as:71f8ae0371aa",
+   "measured": false,
+   "primary": "books.search",
+   "proposals": [],
+   "rule": "announced-as",
+   "screens": 1,
+   "severityDefault": "medium",
+   "source": "scanner",
+   "states": [
+    "books.search"
+   ],
+   "summary": "announced-as: announced as button \"Ledgers\".",
+   "title": "Wrong role or state: button \"Ledgers\""
+  },
+  {
+   "attachments": [],
+   "attempt": 1,
+   "basis": "candidate",
+   "criteria": [
+    "4.1.2"
+   ],
+   "evidence": [
+    {
+     "evidence": {
+      "description": "",
+      "name": "Journal entries",
+      "role": "button",
+      "states": {},
+      "template": "button \"Journal entries\""
+     },
+     "occurrence": {
+      "ancestors": [
+       [
+        "_chip_1xw00_8",
+        "_inactive_1xw00_119",
+        "_truncateText_1xw00_16"
+       ],
+       [],
+       [
+        "_facets_4ah12_118"
+       ],
+       [
+        "_filterScrollContent_4ah12_19"
+       ],
+       [
+        "_filterScrollContainer_4ah12_12"
+       ],
+       [
+        "_filterChipsContainer_4ah12_2"
+       ],
+       [
+        "_inputAndResultsContainer_16edb_80"
+       ],
+       [
+        "_large_kwlx6_9",
+        "_noHover_3n0se_28",
+        "_shadow_3n0se_25",
+        "_raisedBackground_3n0se_45",
+        "_card_lo4oy_4",
+        "_omnisearchCard_16edb_36"
+       ]
+      ],
+      "classes": [
+       "_mainElement_1xw00_24",
+       "_interactive_1xw00_134"
+      ],
+      "data": {
+       "data-filter-id": "journalEntries"
+      },
+      "heading": "",
+      "landmark": {
+       "name": "",
+       "role": "dialog"
+      },
+      "layer": "top",
+      "name": "Journal entries",
+      "rect": [
+       769,
+       196,
+       127,
+       32
+      ],
+      "role": "button",
+      "tag": "button",
+      "xpath": "/html/body/div[9]/div[1]/div[1]/div[1]/div[2]/div[2]/div[1]/div[2]/span[1]/span[6]/span[1]/button[1]"
+     },
+     "state": "books.search"
+    }
+   ],
+   "evidenceHash": "d0a1ad024f150920e70c37e1df7fa8f68541efc665006e8cbcccbc0d3568b529",
+   "facts": {
+    "announced": "button \"Journal entries\"",
+    "axeSummary": "",
+    "criterion": "4.1.2",
+    "criterionName": "Name, Role, Value",
+    "element": "button \"Journal entries\"",
+    "rule": "announced-as",
+    "screen": "Search or jump to"
+   },
+   "family": "role-state",
+   "guidance": "Low for optional ARIA or an invalid autocomplete token; high when aria-hidden hides the whole page.",
+   "issueId": null,
+   "key": "role-state:announced-as:74abff40106a",
+   "measured": false,
+   "primary": "books.search",
+   "proposals": [],
+   "rule": "announced-as",
+   "screens": 1,
+   "severityDefault": "medium",
+   "source": "scanner",
+   "states": [
+    "books.search"
+   ],
+   "summary": "announced-as: announced as button \"Journal entries\".",
+   "title": "Wrong role or state: button \"Journal entries\""
+  },
+  {
+   "attachments": [],
+   "attempt": 1,
+   "basis": "candidate",
+   "criteria": [
+    "4.1.2"
+   ],
+   "evidence": [
+    {
+     "evidence": {
+      "description": "",
+      "name": "Bills",
+      "role": "button",
+      "states": {},
+      "template": "button \"Bills\""
+     },
+     "occurrence": {
+      "ancestors": [
+       [
+        "_chip_1xw00_8",
+        "_inactive_1xw00_119",
+        "_truncateText_1xw00_16"
+       ],
+       [],
+       [
+        "_facets_4ah12_118"
+       ],
+       [
+        "_filterScrollContent_4ah12_19"
+       ],
+       [
+        "_filterScrollContainer_4ah12_12"
+       ],
+       [
+        "_filterChipsContainer_4ah12_2"
+       ],
+       [
+        "_inputAndResultsContainer_16edb_80"
+       ],
+       [
+        "_large_kwlx6_9",
+        "_noHover_3n0se_28",
+        "_shadow_3n0se_25",
+        "_raisedBackground_3n0se_45",
+        "_card_lo4oy_4",
+        "_omnisearchCard_16edb_36"
+       ]
+      ],
+      "classes": [
+       "_mainElement_1xw00_24",
+       "_interactive_1xw00_134"
+      ],
+      "data": {
+       "data-filter-id": "bills"
+      },
+      "heading": "",
+      "landmark": {
+       "name": "",
+       "role": "dialog"
+      },
+      "layer": "top",
+      "name": "Bills",
+      "rect": [
+       996,
+       196,
+       52,
+       32
+      ],
+      "role": "button",
+      "tag": "button",
+      "xpath": "/html/body/div[9]/div[1]/div[1]/div[1]/div[2]/div[2]/div[1]/div[2]/span[1]/span[8]/span[1]/button[1]"
+     },
+     "state": "books.search"
+    }
+   ],
+   "evidenceHash": "dcd8b70c98aedb073f58da3e308152bdb706271f67a26ba93d72fab559e4ee82",
+   "facts": {
+    "announced": "button \"Bills\"",
+    "axeSummary": "",
+    "criterion": "4.1.2",
+    "criterionName": "Name, Role, Value",
+    "element": "button \"Bills\"",
+    "rule": "announced-as",
+    "screen": "Search or jump to"
+   },
+   "family": "role-state",
+   "guidance": "Low for optional ARIA or an invalid autocomplete token; high when aria-hidden hides the whole page.",
+   "issueId": null,
+   "key": "role-state:announced-as:97b5b815536c",
+   "measured": false,
+   "primary": "books.search",
+   "proposals": [],
+   "rule": "announced-as",
+   "screens": 1,
+   "severityDefault": "medium",
+   "source": "scanner",
+   "states": [
+    "books.search"
+   ],
+   "summary": "announced-as: announced as button \"Bills\".",
+   "title": "Wrong role or state: button \"Bills\""
+  },
+  {
+   "attachments": [],
+   "attempt": 1,
+   "basis": "candidate",
+   "criteria": [
+    "4.1.2"
+   ],
+   "evidence": [
+    {
+     "evidence": {
+      "description": "",
+      "name": "Invoices",
+      "role": "button",
+      "states": {},
+      "template": "button \"Invoices\""
+     },
+     "occurrence": {
+      "ancestors": [
+       [
+        "_chip_1xw00_8",
+        "_inactive_1xw00_119",
+        "_truncateText_1xw00_16"
+       ],
+       [],
+       [
+        "_facets_4ah12_118"
+       ],
+       [
+        "_filterScrollContent_4ah12_19"
+       ],
+       [
+        "_filterScrollContainer_4ah12_12"
+       ],
+       [
+        "_filterChipsContainer_4ah12_2"
+       ],
+       [
+        "_inputAndResultsContainer_16edb_80"
+       ],
+       [
+        "_large_kwlx6_9",
+        "_noHover_3n0se_28",
+        "_shadow_3n0se_25",
+        "_raisedBackground_3n0se_45",
+        "_card_lo4oy_4",
+        "_omnisearchCard_16edb_36"
+       ]
+      ],
+      "classes": [
+       "_mainElement_1xw00_24",
+       "_interactive_1xw00_134"
+      ],
+      "data": {
+       "data-filter-id": "invoices"
+      },
+      "heading": "",
+      "landmark": {
+       "name": "",
+       "role": "dialog"
+      },
+      "layer": "top",
+      "name": "Invoices",
+      "rect": [
+       906,
+       196,
+       81,
+       32
+      ],
+      "role": "button",
+      "tag": "button",
+      "xpath": "/html/body/div[9]/div[1]/div[1]/div[1]/div[2]/div[2]/div[1]/div[2]/span[1]/span[7]/span[1]/button[1]"
+     },
+     "state": "books.search"
+    }
+   ],
+   "evidenceHash": "5aa9116d672d02b388fa942ce2771352dfbb2b164dd2a9ed4920082e4b38a87b",
+   "facts": {
+    "announced": "button \"Invoices\"",
+    "axeSummary": "",
+    "criterion": "4.1.2",
+    "criterionName": "Name, Role, Value",
+    "element": "button \"Invoices\"",
+    "rule": "announced-as",
+    "screen": "Search or jump to"
+   },
+   "family": "role-state",
+   "guidance": "Low for optional ARIA or an invalid autocomplete token; high when aria-hidden hides the whole page.",
+   "issueId": null,
+   "key": "role-state:announced-as:b85175883f14",
+   "measured": false,
+   "primary": "books.search",
+   "proposals": [],
+   "rule": "announced-as",
+   "screens": 1,
+   "severityDefault": "medium",
+   "source": "scanner",
+   "states": [
+    "books.search"
+   ],
+   "summary": "announced-as: announced as button \"Invoices\".",
+   "title": "Wrong role or state: button \"Invoices\""
+  }
+ ],
+ "primaries": [
+  "books.search"
+ ],
+ "reach": {
+  "baseUrl": "https://demo.mercury.com",
+  "data": "data",
+  "map": "build/map.json",
+  "run": "2026-10-03-1525",
+  "workspace": "a11y"
+ },
+ "run": "2026-10-03-1525"
+}

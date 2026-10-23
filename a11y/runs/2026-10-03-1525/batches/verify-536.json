@@ -1,0 +1,184 @@
+{
+ "area": "settings",
+ "batch": "verify-536",
+ "findings": [
+  {
+   "attachments": [],
+   "attempt": 1,
+   "basis": "candidate",
+   "criteria": [
+    "4.1.2"
+   ],
+   "evidence": [
+    {
+     "evidence": {
+      "description": "",
+      "name": "",
+      "role": "button",
+      "states": {},
+      "template": "button \"\""
+     },
+     "occurrence": {
+      "ancestors": [
+       [],
+       [
+        "_kebab_166u7_111"
+       ],
+       [
+        "_iconRow_166u7_20"
+       ],
+       [
+        "_tableData_1u4jr_5",
+        "_alignmentStart_1u4jr_12"
+       ],
+       [
+        "_tableRow_137xu_3",
+        "_tokenRow_166u7_11"
+       ],
+       [
+        "_tableBody_1cp5b_1"
+       ],
+       [
+        "_table_1acga_4"
+       ],
+       [
+        "_tokenTableWrapper_166u7_60",
+        "_tableWrapper_1acga_4"
+       ]
+      ],
+      "classes": [
+       "_button_r6b2u_20",
+       "_small_r6b2u_72",
+       "_secondary_r6b2u_126"
+      ],
+      "data": {},
+      "heading": "API Tokens",
+      "landmark": {
+       "name": "",
+       "role": "main"
+      },
+      "layer": "document",
+      "name": "",
+      "rect": [
+       1192,
+       302,
+       45,
+       32
+      ],
+      "role": "button",
+      "tag": "button",
+      "xpath": "/html/body/div[1]/main[1]/div[1]/div[1]/div[4]/div[1]/div[2]/div[2]/div[2]/div[1]/table[1]/tbody[1]/tr[1]/td[7]/div[1]/div[1]/span[1]/button[1]"
+     },
+     "state": "settings.tokens"
+    },
+    {
+     "evidence": {
+      "description": "",
+      "name": "",
+      "role": "button",
+      "states": {},
+      "template": "button \"\""
+     },
+     "occurrence": {
+      "ancestors": [
+       [],
+       [
+        "_kebab_166u7_111"
+       ],
+       [
+        "_iconRow_166u7_20"
+       ],
+       [
+        "_tableData_1u4jr_5",
+        "_alignmentStart_1u4jr_12"
+       ],
+       [
+        "_tableRow_137xu_3",
+        "_tokenRow_166u7_11"
+       ],
+       [
+        "_tableBody_1cp5b_1"
+       ],
+       [
+        "_table_1acga_4"
+       ],
+       [
+        "_tokenTableWrapper_166u7_60",
+        "_tableWrapper_1acga_4"
+       ]
+      ],
+      "classes": [
+       "_button_r6b2u_20",
+       "_small_r6b2u_72",
+       "_secondary_r6b2u_126"
+      ],
+      "data": {},
+      "heading": "API Tokens",
+      "landmark": {
+       "name": "",
+       "role": "main"
+      },
+      "layer": "document",
+      "name": "",
+      "rect": [
+       1192,
+       302,
+       45,
+       32
+      ],
+      "role": "button",
+      "tag": "button",
+      "xpath": "/html/body/div[1]/main[1]/div[1]/div[1]/div[4]/div[1]/div[2]/div[2]/div[2]/div[1]/table[1]/tbody[1]/tr[1]/td[7]/div[1]/div[1]/span[1]/button[1]"
+     },
+     "state": "settings.tokens-new-row"
+    }
+   ],
+   "evidenceHash": "21324a48845fdbe6ccc231a89be9f07f867fb8d20e407c7e50f8fd02a6e7d522",
+   "facts": {
+    "announced": "button \"\"",
+    "axeSummary": "",
+    "criterion": "4.1.2",
+    "criterionName": "Name, Role, Value",
+    "element": "button in \"API Tokens\"",
+    "rule": "announced-as",
+    "screen": "API Tokens"
+   },
+   "family": "name",
+   "guidance": "High for an unnamed form control or the sole primary action.",
+   "issueId": null,
+   "key": "name:announced-as:b88f86a4d47f",
+   "measured": false,
+   "primary": "settings.tokens",
+   "proposals": [
+    {
+     "family": "name",
+     "finding": "name:announced-as:b88f86a4d47f",
+     "handFound": "settings.i-unnamed-row-buttons",
+     "id": "aac289e974dac127123fdc478400cd62eb272056616b322c9738294e9d24705c",
+     "overlap": 0.5
+    }
+   ],
+   "rule": "announced-as",
+   "screens": 2,
+   "severityDefault": "medium",
+   "source": "scanner",
+   "states": [
+    "settings.tokens",
+    "settings.tokens-new-row"
+   ],
+   "summary": "announced-as: announced as button \"\".",
+   "title": "Missing or unclear name: button in \"API Tokens\""
+  }
+ ],
+ "primaries": [
+  "settings.tokens"
+ ],
+ "reach": {
+  "baseUrl": "https://demo.mercury.com",
+  "data": "data",
+  "map": "build/map.json",
+  "run": "2026-10-03-1525",
+  "workspace": "a11y"
+ },
+ "run": "2026-10-03-1525"
+}

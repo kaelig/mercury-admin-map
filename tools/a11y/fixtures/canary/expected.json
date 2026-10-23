@@ -1,0 +1,26 @@
+{
+ "contrast:color-contrast:08b19f94d746": {
+  "expected": "confirm",
+  "why": "Seeded: the muted timestamp measures 3.6:1 where AA needs 4.5:1; secondary text, so medium."
+ },
+ "contrast:color-contrast:0f3893042bc0": {
+  "expected": "drop",
+  "why": "Trap: axe could not compute white text over a gradient; it measures at least 9.7:1 against the lightest stop."
+ },
+ "hand:canary.i-tabs-clickable-divs": {
+  "expected": "rerate:high",
+  "why": "AE7: Tab never reaches the clickable-div tabs, so keyboard users cannot open the Treasury or Credit panels at all."
+ },
+ "name:button-name:308a5e0e10fb": {
+  "expected": "rerate:low",
+  "why": "AE3: the icon button has no name, but the visible label Export CSV sits next to it inside the same clickable control."
+ },
+ "name:button-name:ee11775fbc23": {
+  "expected": "confirm",
+  "why": "Seeded: an icon-only row menu with no accessible name and no visible label."
+ },
+ "target-size:target-size:1fe561542e17": {
+  "expected": "confirm",
+  "why": "Seeded: 16 by 16 formatting buttons 2px apart; not next to a destructive or financial control, so low."
+ }
+}

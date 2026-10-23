@@ -1,0 +1,217 @@
+{
+ "area": "accounts",
+ "batch": "verify-005",
+ "findings": [
+  {
+   "attachments": [],
+   "attempt": 1,
+   "basis": "violation",
+   "criteria": [
+    "1.3.5"
+   ],
+   "evidence": [
+    {
+     "evidence": {
+      "failureSummary": "Fix all of the following:\n  the autocomplete attribute is incorrectly formatted"
+     },
+     "occurrence": {
+      "ancestors": [
+       [
+        "_inputWrapper_11c85_6"
+       ],
+       [
+        "_wrapper_1xgdp_8"
+       ],
+       [
+        "_sectionContent_1xibc_61"
+       ],
+       [
+        "_customerDetailsSection_1xibc_53"
+       ],
+       [
+        "_inputGroup_1xibc_45"
+       ],
+       [
+        "_formContainer_1xibc_11"
+       ],
+       [],
+       [
+        "_large_kwlx6_9",
+        "_noHover_3n0se_28",
+        "_shadow_3n0se_25",
+        "_raisedBackground_3n0se_45",
+        "_card_lo4oy_4",
+        "_defaultPadding_lo4oy_27",
+        "_modalContainer_1xibc_1",
+        "_small_lo4oy_11"
+       ]
+      ],
+      "classes": [
+       "_input_11c85_6"
+      ],
+      "data": {
+       "data-1p-ignore": "true",
+       "data-active-item": "true",
+       "data-bwignore": "true",
+       "data-lpignore": "true"
+      },
+      "heading": "Customer details",
+      "landmark": {
+       "name": "",
+       "role": "form"
+      },
+      "layer": "top",
+      "name": "Business name",
+      "rect": [
+       616,
+       262,
+       318,
+       40
+      ],
+      "role": "combobox",
+      "tag": "input",
+      "xpath": "/html/body/div[10]/div[1]/div[1]/div[1]/form[1]/div[1]/div[2]/div[1]/div[2]/div[1]/div[1]/input[1]"
+     },
+     "state": "accounts.bank-letter-customize"
+    }
+   ],
+   "evidenceHash": "bf23289273883e3aeec40582035d74b32607acc48f578978d8ede6e6eb8a138b",
+   "facts": {
+    "announced": "combobox \"Business name\" [expanded=false, haspopup=listbox]",
+    "axeSummary": "the autocomplete attribute is incorrectly formatted",
+    "criterion": "1.3.5",
+    "criterionName": "Identify Input Purpose",
+    "element": "combobox \"Business name\"",
+    "rule": "autocomplete-valid",
+    "screen": "Custom bank letter editor"
+   },
+   "family": "role-state",
+   "guidance": "Low for optional ARIA or an invalid autocomplete token; high when aria-hidden hides the whole page.",
+   "issueId": null,
+   "key": "role-state:autocomplete-valid:1db2772c73af",
+   "measured": false,
+   "primary": "accounts.bank-letter-customize",
+   "proposals": [],
+   "rule": "autocomplete-valid",
+   "screens": 1,
+   "severityDefault": "medium",
+   "source": "scanner",
+   "states": [
+    "accounts.bank-letter-customize"
+   ],
+   "summary": "autocomplete-valid: announced as combobox \"Business name\" [expanded=false, haspopup=listbox]. the autocomplete attribute is incorrectly formatted",
+   "title": "Invalid autocomplete value: combobox \"Business name\""
+  },
+  {
+   "attachments": [],
+   "attempt": 1,
+   "basis": "violation",
+   "criteria": [
+    "1.3.5"
+   ],
+   "evidence": [
+    {
+     "evidence": {
+      "failureSummary": "Fix all of the following:\n  the autocomplete attribute is incorrectly formatted"
+     },
+     "occurrence": {
+      "ancestors": [
+       [
+        "_inputWrapper_11c85_6"
+       ],
+       [
+        "_wrapper_1xgdp_8"
+       ],
+       [
+        "_sectionContent_1xibc_61"
+       ],
+       [
+        "_customerDetailsSection_1xibc_53"
+       ],
+       [
+        "_inputGroup_1xibc_45"
+       ],
+       [
+        "_formContainer_1xibc_11"
+       ],
+       [],
+       [
+        "_large_kwlx6_9",
+        "_noHover_3n0se_28",
+        "_shadow_3n0se_25",
+        "_raisedBackground_3n0se_45",
+        "_card_lo4oy_4",
+        "_defaultPadding_lo4oy_27",
+        "_modalContainer_1xibc_1",
+        "_small_lo4oy_11"
+       ]
+      ],
+      "classes": [
+       "_input_11c85_6"
+      ],
+      "data": {
+       "data-1p-ignore": "true",
+       "data-active-item": "true",
+       "data-bwignore": "true",
+       "data-lpignore": "true"
+      },
+      "heading": "Customer details",
+      "landmark": {
+       "name": "",
+       "role": "form"
+      },
+      "layer": "top",
+      "name": "Account signatories",
+      "rect": [
+       616,
+       338,
+       318,
+       40
+      ],
+      "role": "combobox",
+      "tag": "input",
+      "xpath": "/html/body/div[10]/div[1]/div[1]/div[1]/form[1]/div[1]/div[2]/div[1]/div[2]/div[2]/div[1]/input[1]"
+     },
+     "state": "accounts.bank-letter-customize"
+    }
+   ],
+   "evidenceHash": "bf23289273883e3aeec40582035d74b32607acc48f578978d8ede6e6eb8a138b",
+   "facts": {
+    "announced": "combobox \"Account signatories\" [expanded=false, haspopup=listbox] (Used to veri…",
+    "axeSummary": "the autocomplete attribute is incorrectly formatted",
+    "criterion": "1.3.5",
+    "criterionName": "Identify Input Purpose",
+    "element": "combobox \"Account signatories\"",
+    "rule": "autocomplete-valid",
+    "screen": "Custom bank letter editor"
+   },
+   "family": "role-state",
+   "guidance": "Low for optional ARIA or an invalid autocomplete token; high when aria-hidden hides the whole page.",
+   "issueId": null,
+   "key": "role-state:autocomplete-valid:f8a7150084c4",
+   "measured": false,
+   "primary": "accounts.bank-letter-customize",
+   "proposals": [],
+   "rule": "autocomplete-valid",
+   "screens": 1,
+   "severityDefault": "medium",
+   "source": "scanner",
+   "states": [
+    "accounts.bank-letter-customize"
+   ],
+   "summary": "autocomplete-valid: announced as combobox \"Account signatories\" [expanded=false, haspopup=listbox] (Used to veri…. the autocomplete attribute is incorrectly formatted",
+   "title": "Invalid autocomplete value: combobox \"Account signatories\""
+  }
+ ],
+ "primaries": [
+  "accounts.bank-letter-customize"
+ ],
+ "reach": {
+  "baseUrl": "https://demo.mercury.com",
+  "data": "data",
+  "map": "build/map.json",
+  "run": "2026-10-03-1525",
+  "workspace": "a11y"
+ },
+ "run": "2026-10-03-1525"
+}

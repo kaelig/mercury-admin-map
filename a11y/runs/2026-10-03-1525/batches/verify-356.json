@@ -1,0 +1,179 @@
+{
+ "area": "settings",
+ "batch": "verify-356",
+ "findings": [
+  {
+   "attachments": [],
+   "attempt": 1,
+   "basis": "candidate",
+   "criteria": [
+    "2.4.3",
+    "1.3.2"
+   ],
+   "evidence": [
+    {
+     "evidence": {
+      "band": 76,
+      "overlay": "settings.user-detail.tabstops.png",
+      "previous": {
+       "ancestors": [
+        [
+         "_budgetAwareCardsRow_xolpa_171",
+         "_text-emphasized_12t49_1"
+        ],
+        [
+         "_cardRowsContainer_xolpa_148"
+        ],
+        [
+         "_noPaddingCardsContainer_1mstp_23"
+        ],
+        [
+         "_panelSection_d3i56_148"
+        ],
+        [
+         "_panelBody_d3i56_64"
+        ],
+        [
+         "_large_kwlx6_9",
+         "_noHover_3n0se_28",
+         "_shadow_3n0se_25",
+         "_raisedBackground_3n0se_45",
+         "_panel_d3i56_55"
+        ],
+        [
+         "_transitionWrapper_d3i56_5",
+         "_visible_d3i56_19"
+        ],
+        [
+         "_detailsWrapper_1u40e_339"
+        ]
+       ],
+       "classes": [
+        "_cardsRowInner_xolpa_252",
+        "_link_ual8v_4",
+        "_underlineNever_ual8v_7"
+       ],
+       "data": {
+        "data-discover": "true"
+       },
+       "heading": "Alice Chen",
+       "landmark": {
+        "name": "",
+        "role": "complementary"
+       },
+       "layer": "top",
+       "name": "Office Card Card ending with: 1234",
+       "rect": [
+        946,
+        808,
+        344,
+        76
+       ],
+       "role": "link",
+       "tag": "a",
+       "xpath": "/html/body/div[1]/main[1]/div[1]/div[1]/div[4]/div[1]/div[2]/div[2]/div[1]/div[2]/div[2]/div[1]/aside[1]/div[1]/div[1]/section[4]/div[1]/div[1]/div[1]/a[1]"
+      },
+      "rise": 132,
+      "stop": 13,
+      "stops": 15
+     },
+     "occurrence": {
+      "ancestors": [
+       [
+        "_budgetAwareCardsRow_xolpa_171",
+        "_text-emphasized_12t49_1"
+       ],
+       [
+        "_cardRowsContainer_xolpa_148"
+       ],
+       [
+        "_noPaddingCardsContainer_1mstp_23"
+       ],
+       [
+        "_panelSection_d3i56_148"
+       ],
+       [
+        "_panelBody_d3i56_64"
+       ],
+       [
+        "_large_kwlx6_9",
+        "_noHover_3n0se_28",
+        "_shadow_3n0se_25",
+        "_raisedBackground_3n0se_45",
+        "_panel_d3i56_55"
+       ],
+       [
+        "_transitionWrapper_d3i56_5",
+        "_visible_d3i56_19"
+       ],
+       [
+        "_detailsWrapper_1u40e_339"
+       ]
+      ],
+      "classes": [
+       "_cardsRowInner_xolpa_252",
+       "_link_ual8v_4",
+       "_underlineNever_ual8v_7"
+      ],
+      "data": {
+       "data-discover": "true"
+      },
+      "heading": "Alice Chen",
+      "landmark": {
+       "name": "",
+       "role": "complementary"
+      },
+      "layer": "top",
+      "name": "Card ending with: 7840",
+      "rect": [
+       946,
+       676,
+       344,
+       54
+      ],
+      "role": "link",
+      "tag": "a",
+      "xpath": "/html/body/div[1]/main[1]/div[1]/div[1]/div[4]/div[1]/div[2]/div[2]/div[1]/div[2]/div[2]/div[1]/aside[1]/div[1]/div[1]/section[4]/div[1]/div[1]/div[2]/a[1]"
+     },
+     "state": "settings.user-detail"
+    }
+   ],
+   "evidenceHash": "a4f2d36c0c22ac9eaed4613de62edd68ad6f4384ad922b465adc7fca55abf5d2",
+   "facts": {
+    "criterion": "2.4.3",
+    "criterionName": "Focus Order",
+    "element": "link \"Card ending with: <n>\"",
+    "previous": "link \"Office Card Card ending with: <n>\"",
+    "screen": "Team member detail panel",
+    "stop": "13"
+   },
+   "family": "focus-order",
+   "guidance": "High if the order skips a required control.",
+   "issueId": null,
+   "key": "focus-order:backward-jump:ce5b06ffbfa1",
+   "measured": false,
+   "primary": "settings.user-detail",
+   "proposals": [],
+   "rule": "backward-jump",
+   "screens": 1,
+   "severityDefault": "medium",
+   "source": "scanner",
+   "states": [
+    "settings.user-detail"
+   ],
+   "summary": "Tab stop 13 jumped backward on screen, from the link \"Office Card Card ending with: <n>\" to the link \"Card ending with: <n>\".",
+   "title": "Tab order jumps backward at link \"Card ending with: <n>\""
+  }
+ ],
+ "primaries": [
+  "settings.user-detail"
+ ],
+ "reach": {
+  "baseUrl": "https://demo.mercury.com",
+  "data": "data",
+  "map": "build/map.json",
+  "run": "2026-10-03-1525",
+  "workspace": "a11y"
+ },
+ "run": "2026-10-03-1525"
+}

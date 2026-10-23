@@ -1,0 +1,104 @@
+{
+ "area": "home",
+ "batch": "verify-480",
+ "findings": [
+  {
+   "attachments": [],
+   "attempt": 1,
+   "basis": "candidate",
+   "criteria": [
+    "4.1.2"
+   ],
+   "evidence": [
+    {
+     "evidence": {
+      "description": "",
+      "name": "",
+      "role": "menuitem",
+      "states": {
+       "disabled": true
+      },
+      "template": "menuitem \"\" [disabled=true]"
+     },
+     "occurrence": {
+      "ancestors": [
+       [
+        "_updatesControls_ffzkb_120"
+       ],
+       [
+        "_header_ffzkb_107",
+        "session-replay-unmask"
+       ],
+       [
+        "_menu_ffzkb_4",
+        "_updatesMenu_ffzkb_81"
+       ],
+       [],
+       []
+      ],
+      "classes": [
+       "_button_r6b2u_20",
+       "_small_r6b2u_72",
+       "_secondary_r6b2u_126",
+       "_appearDisabled_r6b2u_16",
+       "_tooltipAnchor_18bac_4",
+       "_dismissAllItem_ffzkb_124"
+      ],
+      "data": {},
+      "heading": "",
+      "landmark": null,
+      "layer": "top",
+      "name": "",
+      "rect": [
+       1328,
+       116,
+       32,
+       32
+      ],
+      "role": "menuitem",
+      "tag": "button",
+      "xpath": "/html/body/div[5]/div[1]/div[1]/div[1]/div[1]/button[1]"
+     },
+     "state": "home.updates-popover"
+    }
+   ],
+   "evidenceHash": "41ffcfac114efe1a56bdd1987dc9f4f46fed2519295fd71f7e895c930a843280",
+   "facts": {
+    "announced": "menuitem \"\" [disabled=true]",
+    "axeSummary": "",
+    "criterion": "4.1.2",
+    "criterionName": "Name, Role, Value",
+    "element": "menuitem",
+    "rule": "announced-as",
+    "screen": "Updates popover"
+   },
+   "family": "name",
+   "guidance": "High for an unnamed form control or the sole primary action.",
+   "issueId": null,
+   "key": "name:announced-as:08d292cab764",
+   "measured": false,
+   "primary": "home.updates-popover",
+   "proposals": [],
+   "rule": "announced-as",
+   "screens": 1,
+   "severityDefault": "medium",
+   "source": "scanner",
+   "states": [
+    "home.updates-popover"
+   ],
+   "summary": "announced-as: announced as menuitem \"\" [disabled=true].",
+   "title": "Missing or unclear name: menuitem"
+  }
+ ],
+ "primaries": [
+  "home.updates-popover"
+ ],
+ "reach": {
+  "baseUrl": "https://demo.mercury.com",
+  "data": "data",
+  "map": "build/map.json",
+  "run": "2026-10-03-1525",
+  "workspace": "a11y"
+ },
+ "run": "2026-10-03-1525"
+}

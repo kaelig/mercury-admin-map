@@ -1,0 +1,110 @@
+{
+ "area": "invoicing",
+ "batch": "verify-216",
+ "findings": [
+  {
+   "attachments": [],
+   "attempt": 1,
+   "basis": "violation",
+   "criteria": [
+    "1.3.5"
+   ],
+   "evidence": [
+    {
+     "evidence": {
+      "failureSummary": "Fix all of the following:\n  the autocomplete attribute is incorrectly formatted"
+     },
+     "occurrence": {
+      "ancestors": [
+       [
+        "_inputBox_q7hf7_93",
+        "_hasValue_q7hf7_171"
+       ],
+       [
+        "_inputBoxWrapper_q7hf7_93"
+       ],
+       [
+        "_textInputWrapper_q7hf7_24"
+       ],
+       [
+        "_provideDSTextInput_q7hf7_6",
+        "_calendarDateInput_1ml1o_5",
+        "_fullWidthInput_1ml1o_54"
+       ],
+       [
+        "_calendarInputWrapper_1ml1o_11"
+       ],
+       [
+        "_calendarDateInputContainer_1ml1o_5"
+       ],
+       [
+        "_inputWrapper_11i9h_30"
+       ],
+       [
+        "_section_11i9h_7"
+       ]
+      ],
+      "classes": [
+       "_input_q7hf7_93"
+      ],
+      "data": {},
+      "heading": "Review and send",
+      "landmark": {
+       "name": "",
+       "role": "main"
+      },
+      "layer": "document",
+      "name": "Send date",
+      "rect": [
+       158,
+       715,
+       404,
+       24
+      ],
+      "role": "textbox",
+      "tag": "input",
+      "xpath": "/html/body/div[1]/main[1]/div[1]/div[2]/div[2]/div[3]/div[1]/div[1]/div[1]/div[1]/div[1]/div[1]/div[2]/div[5]/div[1]/div[1]/div[2]/div[1]/div[1]/div[1]/div[1]/div[1]/div[1]/input[1]"
+     },
+     "state": "invoicing.create-schedule-send"
+    }
+   ],
+   "evidenceHash": "e201d58e61e09ff911747202b1fe0e3736432aab8246057be58098b1d03eeb64",
+   "facts": {
+    "announced": "textbox \"Send date\"",
+    "axeSummary": "the autocomplete attribute is incorrectly formatted",
+    "criterion": "1.3.5",
+    "criterionName": "Identify Input Purpose",
+    "element": "textbox \"Send date\"",
+    "rule": "autocomplete-valid",
+    "screen": "Review: schedule send on"
+   },
+   "family": "role-state",
+   "guidance": "Low for optional ARIA or an invalid autocomplete token; high when aria-hidden hides the whole page.",
+   "issueId": null,
+   "key": "role-state:autocomplete-valid:e4955b917803",
+   "measured": false,
+   "primary": "invoicing.create-schedule-send",
+   "proposals": [],
+   "rule": "autocomplete-valid",
+   "screens": 1,
+   "severityDefault": "medium",
+   "source": "scanner",
+   "states": [
+    "invoicing.create-schedule-send"
+   ],
+   "summary": "autocomplete-valid: announced as textbox \"Send date\". the autocomplete attribute is incorrectly formatted",
+   "title": "Invalid autocomplete value: textbox \"Send date\""
+  }
+ ],
+ "primaries": [
+  "invoicing.create-schedule-send"
+ ],
+ "reach": {
+  "baseUrl": "https://demo.mercury.com",
+  "data": "data",
+  "map": "build/map.json",
+  "run": "2026-10-03-1525",
+  "workspace": "a11y"
+ },
+ "run": "2026-10-03-1525"
+}

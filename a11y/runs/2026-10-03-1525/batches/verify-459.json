@@ -1,0 +1,450 @@
+{
+ "area": "cards",
+ "batch": "verify-459",
+ "findings": [
+  {
+   "attachments": [],
+   "attempt": 1,
+   "basis": "candidate",
+   "criteria": [
+    "4.1.2"
+   ],
+   "evidence": [
+    {
+     "evidence": {
+      "description": "",
+      "name": "",
+      "role": "link",
+      "states": {},
+      "template": "link \"\""
+     },
+     "occurrence": {
+      "ancestors": [
+       [],
+       [
+        "_tooltipAnchor_18bac_4",
+        "_roundTooltipWrapper_fhqdr_95"
+       ],
+       [
+        "_tableCell_1waxt_102",
+        "_collapsible_1waxt_24",
+        "_actionsCell_fhqdr_70",
+        "_notFirstRow_1waxt_142"
+       ],
+       [
+        "_tableRow_1waxt_94"
+       ],
+       [
+        "_cardTable_1waxt_4"
+       ],
+       [
+        "_tableAndLoadingStateWrapper_1waxt_313"
+       ],
+       [
+        "_tableWrapper_1waxt_304",
+        "_tableWrapper_fhqdr_113"
+       ],
+       [
+        "_pageContent_809q8_151",
+        "_pageContentWidth_809q8_184",
+        "_footerPadding_809q8_115"
+       ]
+      ],
+      "classes": [
+       "_button_r6b2u_20",
+       "_small_r6b2u_72",
+       "_secondary_r6b2u_126",
+       "_link_ual8v_4",
+       "_underlineNever_ual8v_7"
+      ],
+      "data": {},
+      "heading": "Cards",
+      "landmark": {
+       "name": "",
+       "role": "main"
+      },
+      "layer": "document",
+      "name": "",
+      "rect": [
+       1232,
+       1026,
+       32,
+       32
+      ],
+      "role": "link",
+      "tag": "a",
+      "xpath": "/html/body/div[1]/main[1]/div[1]/div[1]/div[4]/div[1]/div[2]/div[5]/div[1]/div[1]/div[10]/div[4]/div[1]/span[1]/a[1]"
+     },
+     "state": "cards.subscriptions"
+    }
+   ],
+   "evidenceHash": "b9c1d3b5e37d1979ce540eb387d431c4556bdf0331500cc7b5e8960877ed92a1",
+   "facts": {
+    "announced": "link \"\"",
+    "axeSummary": "",
+    "criterion": "4.1.2",
+    "criterionName": "Name, Role, Value",
+    "element": "link in \"Cards\"",
+    "rule": "announced-as",
+    "screen": "Subscriptions tab"
+   },
+   "family": "name",
+   "guidance": "High for an unnamed form control or the sole primary action.",
+   "issueId": null,
+   "key": "name:announced-as:126ad51b8443",
+   "measured": false,
+   "primary": "cards.subscriptions",
+   "proposals": [
+    {
+     "family": "name",
+     "finding": "name:announced-as:126ad51b8443",
+     "handFound": "cards.i-subscription-actions-unlabeled",
+     "id": "7d49741be055ee7b0e3dfbac995339d33ddc982e80777b11686f067762befc3e",
+     "overlap": 1
+    }
+   ],
+   "rule": "announced-as",
+   "screens": 1,
+   "severityDefault": "medium",
+   "source": "scanner",
+   "states": [
+    "cards.subscriptions"
+   ],
+   "summary": "announced-as: announced as link \"\".",
+   "title": "Missing or unclear name: link in \"Cards\""
+  },
+  {
+   "attachments": [],
+   "attempt": 1,
+   "basis": "candidate",
+   "criteria": [
+    "4.1.2"
+   ],
+   "evidence": [
+    {
+     "evidence": {
+      "description": "",
+      "name": "",
+      "role": "button",
+      "states": {},
+      "template": "button \"\""
+     },
+     "occurrence": {
+      "ancestors": [
+       [
+        "_tooltipAnchor_18bac_4",
+        "_roundTooltipWrapper_fhqdr_95"
+       ],
+       [
+        "_tableCell_1waxt_102",
+        "_collapsible_1waxt_24",
+        "_actionsCell_fhqdr_70",
+        "_notFirstRow_1waxt_142"
+       ],
+       [
+        "_tableRow_1waxt_94"
+       ],
+       [
+        "_cardTable_1waxt_4"
+       ],
+       [
+        "_tableAndLoadingStateWrapper_1waxt_313"
+       ],
+       [
+        "_tableWrapper_1waxt_304",
+        "_tableWrapper_fhqdr_113"
+       ],
+       [
+        "_pageContent_809q8_151",
+        "_pageContentWidth_809q8_184",
+        "_footerPadding_809q8_115"
+       ],
+       [
+        "_dashboardContent_809q8_29"
+       ]
+      ],
+      "classes": [
+       "_button_r6b2u_20",
+       "_small_r6b2u_72",
+       "_secondary_r6b2u_126",
+       "_cancelButton_fhqdr_82"
+      ],
+      "data": {},
+      "heading": "Cards",
+      "landmark": {
+       "name": "",
+       "role": "main"
+      },
+      "layer": "document",
+      "name": "",
+      "rect": [
+       1272,
+       1306,
+       32,
+       32
+      ],
+      "role": "button",
+      "tag": "button",
+      "xpath": "/html/body/div[1]/main[1]/div[1]/div[1]/div[4]/div[1]/div[2]/div[5]/div[1]/div[1]/div[14]/div[4]/div[2]/button[1]"
+     },
+     "state": "cards.subscriptions"
+    }
+   ],
+   "evidenceHash": "7016fdfe483fc60f7439ead80414332ccdb2ba245522ebc742fc1fe2580cb41b",
+   "facts": {
+    "announced": "button \"\"",
+    "axeSummary": "",
+    "criterion": "4.1.2",
+    "criterionName": "Name, Role, Value",
+    "element": "button in \"Cards\"",
+    "rule": "announced-as",
+    "screen": "Subscriptions tab"
+   },
+   "family": "name",
+   "guidance": "High for an unnamed form control or the sole primary action.",
+   "issueId": null,
+   "key": "name:announced-as:2bf40bf1c032",
+   "measured": false,
+   "primary": "cards.subscriptions",
+   "proposals": [
+    {
+     "family": "name",
+     "finding": "name:announced-as:2bf40bf1c032",
+     "handFound": "cards.i-subscription-actions-unlabeled",
+     "id": "6b3a75f38b656bde12db1d335447c358081a490ffbf0373bbb562f9a9202850d",
+     "overlap": 1
+    }
+   ],
+   "rule": "announced-as",
+   "screens": 1,
+   "severityDefault": "medium",
+   "source": "scanner",
+   "states": [
+    "cards.subscriptions"
+   ],
+   "summary": "announced-as: announced as button \"\".",
+   "title": "Missing or unclear name: button in \"Cards\""
+  },
+  {
+   "attachments": [],
+   "attempt": 1,
+   "basis": "candidate",
+   "criteria": [
+    "4.1.2"
+   ],
+   "evidence": [
+    {
+     "evidence": {
+      "description": "",
+      "name": "",
+      "role": "button",
+      "states": {},
+      "template": "button \"\""
+     },
+     "occurrence": {
+      "ancestors": [
+       [
+        "_ctaDismissButton_12cah_32"
+       ],
+       [
+        "_large_kwlx6_9",
+        "_shadow_3n0se_25",
+        "_raisedBackground_3n0se_45",
+        "_ctaCard_12cah_1"
+       ],
+       [
+        "_ctaContainer_12cah_36"
+       ],
+       [
+        "_pageContent_809q8_151",
+        "_pageContentWidth_809q8_184",
+        "_footerPadding_809q8_115"
+       ],
+       [
+        "_dashboardContent_809q8_29"
+       ],
+       [
+        "_layout_809q8_18"
+       ],
+       [
+        "_wrapper_809q8_3"
+       ],
+       []
+      ],
+      "classes": [
+       "_ctaDismissButton_12cah_32"
+      ],
+      "data": {},
+      "heading": "Cards",
+      "landmark": {
+       "name": "",
+       "role": "main"
+      },
+      "layer": "document",
+      "name": "",
+      "rect": [
+       1266,
+       276,
+       24,
+       27
+      ],
+      "role": "button",
+      "tag": "button",
+      "xpath": "/html/body/div[1]/main[1]/div[1]/div[1]/div[4]/div[1]/div[2]/div[3]/div[2]/div[2]/button[1]"
+     },
+     "state": "cards.subscriptions"
+    }
+   ],
+   "evidenceHash": "7016fdfe483fc60f7439ead80414332ccdb2ba245522ebc742fc1fe2580cb41b",
+   "facts": {
+    "announced": "button \"\"",
+    "axeSummary": "",
+    "criterion": "4.1.2",
+    "criterionName": "Name, Role, Value",
+    "element": "button in \"Cards\"",
+    "rule": "announced-as",
+    "screen": "Subscriptions tab"
+   },
+   "family": "name",
+   "guidance": "High for an unnamed form control or the sole primary action.",
+   "issueId": null,
+   "key": "name:announced-as:d2ced127cee6",
+   "measured": false,
+   "primary": "cards.subscriptions",
+   "proposals": [
+    {
+     "family": "name",
+     "finding": "name:announced-as:d2ced127cee6",
+     "handFound": "cards.i-subscription-actions-unlabeled",
+     "id": "c3cc67440aaba1c016c9e550c0b7447728c6a010dd9b2aeac1037c718ee3835c",
+     "overlap": 1
+    }
+   ],
+   "rule": "announced-as",
+   "screens": 1,
+   "severityDefault": "medium",
+   "source": "scanner",
+   "states": [
+    "cards.subscriptions"
+   ],
+   "summary": "announced-as: announced as button \"\".",
+   "title": "Missing or unclear name: button in \"Cards\""
+  },
+  {
+   "attachments": [],
+   "attempt": 1,
+   "basis": "candidate",
+   "criteria": [
+    "4.1.2"
+   ],
+   "evidence": [
+    {
+     "evidence": {
+      "description": "",
+      "name": "",
+      "role": "button",
+      "states": {},
+      "template": "button \"\""
+     },
+     "occurrence": {
+      "ancestors": [
+       [
+        "_tableRow_1waxt_94"
+       ],
+       [
+        "_cardTable_1waxt_4"
+       ],
+       [
+        "_tableAndLoadingStateWrapper_1waxt_313"
+       ],
+       [
+        "_tableWrapper_1waxt_304",
+        "_tableWrapper_fhqdr_113"
+       ],
+       [
+        "_pageContent_809q8_151",
+        "_pageContentWidth_809q8_184",
+        "_footerPadding_809q8_115"
+       ],
+       [
+        "_dashboardContent_809q8_29"
+       ],
+       [
+        "_layout_809q8_18"
+       ],
+       [
+        "_wrapper_809q8_3"
+       ]
+      ],
+      "classes": [
+       "_arrow_1waxt_173"
+      ],
+      "data": {},
+      "heading": "Cards",
+      "landmark": {
+       "name": "",
+       "role": "main"
+      },
+      "layer": "document",
+      "name": "",
+      "rect": [
+       858,
+       1007,
+       32,
+       70
+      ],
+      "role": "button",
+      "tag": "button",
+      "xpath": "/html/body/div[1]/main[1]/div[1]/div[1]/div[4]/div[1]/div[2]/div[5]/div[1]/div[1]/div[10]/button[1]"
+     },
+     "state": "cards.subscriptions"
+    }
+   ],
+   "evidenceHash": "7016fdfe483fc60f7439ead80414332ccdb2ba245522ebc742fc1fe2580cb41b",
+   "facts": {
+    "announced": "button \"\"",
+    "axeSummary": "",
+    "criterion": "4.1.2",
+    "criterionName": "Name, Role, Value",
+    "element": "button in \"Cards\"",
+    "rule": "announced-as",
+    "screen": "Subscriptions tab"
+   },
+   "family": "name",
+   "guidance": "High for an unnamed form control or the sole primary action.",
+   "issueId": null,
+   "key": "name:announced-as:d3dec8a3f1f0",
+   "measured": false,
+   "primary": "cards.subscriptions",
+   "proposals": [
+    {
+     "family": "name",
+     "finding": "name:announced-as:d3dec8a3f1f0",
+     "handFound": "cards.i-subscription-actions-unlabeled",
+     "id": "50ef888c4c02c54a8f767e99057846c01db28fe97e9e8554576fd6490cec9d08",
+     "overlap": 1
+    }
+   ],
+   "rule": "announced-as",
+   "screens": 1,
+   "severityDefault": "medium",
+   "source": "scanner",
+   "states": [
+    "cards.subscriptions"
+   ],
+   "summary": "announced-as: announced as button \"\".",
+   "title": "Missing or unclear name: button in \"Cards\""
+  }
+ ],
+ "primaries": [
+  "cards.subscriptions"
+ ],
+ "reach": {
+  "baseUrl": "https://demo.mercury.com",
+  "data": "data",
+  "map": "build/map.json",
+  "run": "2026-10-03-1525",
+  "workspace": "a11y"
+ },
+ "run": "2026-10-03-1525"
+}

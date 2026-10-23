@@ -1,0 +1,882 @@
+{
+ "area": "payments",
+ "batch": "verify-283",
+ "findings": [
+  {
+   "attachments": [],
+   "attempt": 1,
+   "basis": "violation",
+   "criteria": [
+    "1.4.3"
+   ],
+   "evidence": [
+    {
+     "evidence": {
+      "bgColor": "#ffffff",
+      "contrastRatio": 2.68,
+      "expectedContrastRatio": "4.5:1",
+      "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 2.68 (foreground color: #9d9da8, background color: #ffffff, font size: 10.5pt (14px), font weight: normal). Expected contrast ratio of 4.5:1",
+      "fgColor": "#9d9da8",
+      "fontSize": "10.5pt (14px)",
+      "fontWeight": "normal",
+      "messageKey": null
+     },
+     "occurrence": {
+      "ancestors": [
+       [
+        "_calendarDaysWrapper_1ml1o_199"
+       ],
+       [
+        "_calendarWrapper_1ml1o_172"
+       ],
+       [
+        "_calendarPopupWrapper_1ml1o_59",
+        "_visible_1ml1o_109"
+       ],
+       [
+        "_calendarInputWrapper_1ml1o_11",
+        "_open_1ml1o_15",
+        "_calendarInput_17brw_73"
+       ],
+       [
+        "_calendarDateInputContainer_1ml1o_5",
+        "_calendarInput_17brw_73"
+       ],
+       [
+        "_startDayWithTooltip_17brw_82"
+       ],
+       [
+        "_helpTextWrapper_17brw_90"
+       ],
+       [
+        "_label_fn75q_3"
+       ]
+      ],
+      "classes": [
+       "_calendarDay_1ml1o_199",
+       "_unselectableDay_1ml1o_232"
+      ],
+      "data": {},
+      "heading": "",
+      "landmark": {
+       "name": "",
+       "role": "form"
+      },
+      "layer": "top",
+      "name": "",
+      "rect": [
+       440,
+       668,
+       46,
+       24
+      ],
+      "role": "generic",
+      "tag": "div",
+      "xpath": "/html/body/div[1]/main[1]/div[1]/div[2]/div[2]/div[1]/div[2]/section[2]/div[1]/div[1]/div[1]/form[1]/div[3]/div[1]/div[1]/div[1]/div[1]/div[2]/div[2]/div[2]/div[15]"
+     },
+     "state": "payments.send-date-picker"
+    },
+    {
+     "evidence": {
+      "bgColor": "#ffffff",
+      "contrastRatio": 2.68,
+      "expectedContrastRatio": "4.5:1",
+      "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 2.68 (foreground color: #9d9da8, background color: #ffffff, font size: 10.5pt (14px), font weight: normal). Expected contrast ratio of 4.5:1",
+      "fgColor": "#9d9da8",
+      "fontSize": "10.5pt (14px)",
+      "fontWeight": "normal",
+      "messageKey": null
+     },
+     "occurrence": {
+      "ancestors": [
+       [
+        "_calendarDaysWrapper_1ml1o_199"
+       ],
+       [
+        "_calendarWrapper_1ml1o_172"
+       ],
+       [
+        "_calendarPopupWrapper_1ml1o_59",
+        "_visible_1ml1o_109"
+       ],
+       [
+        "_calendarInputWrapper_1ml1o_11",
+        "_open_1ml1o_15",
+        "_calendarInput_17brw_73"
+       ],
+       [
+        "_calendarDateInputContainer_1ml1o_5",
+        "_calendarInput_17brw_73"
+       ],
+       [
+        "_startDayWithTooltip_17brw_82"
+       ],
+       [
+        "_helpTextWrapper_17brw_90"
+       ],
+       [
+        "_label_fn75q_3"
+       ]
+      ],
+      "classes": [
+       "_calendarDay_1ml1o_199",
+       "_unselectableDay_1ml1o_232"
+      ],
+      "data": {},
+      "heading": "",
+      "landmark": {
+       "name": "",
+       "role": "form"
+      },
+      "layer": "top",
+      "name": "",
+      "rect": [
+       126,
+       668,
+       46,
+       24
+      ],
+      "role": "generic",
+      "tag": "div",
+      "xpath": "/html/body/div[1]/main[1]/div[1]/div[2]/div[2]/div[1]/div[2]/section[2]/div[1]/div[1]/div[1]/form[1]/div[3]/div[1]/div[1]/div[1]/div[1]/div[2]/div[2]/div[2]/div[16]"
+     },
+     "state": "billpay.send-on-date-picker"
+    }
+   ],
+   "evidenceHash": "33190deaa8970d582bbf660127a0bf272c24773343822374577da1eb4f2af90c",
+   "facts": {
+    "bg": "#ffffff",
+    "criterion": "1.4.3",
+    "criterionName": "Contrast (Minimum)",
+    "element": "text in the form landmark",
+    "fg": "#9d9da8",
+    "ratio": "2.68",
+    "required": "4.5",
+    "rule": "color-contrast",
+    "screen": "Send: Send on calendar",
+    "screens": 2
+   },
+   "family": "contrast",
+   "guidance": "High under 2:1, or under 3:1 for essential text.",
+   "issueId": null,
+   "key": "contrast:color-contrast:ae7b42ead295",
+   "measured": true,
+   "primary": "payments.send-date-picker",
+   "proposals": [],
+   "rule": "color-contrast",
+   "screens": 2,
+   "severityDefault": "medium",
+   "source": "scanner",
+   "states": [
+    "payments.send-date-picker",
+    "billpay.send-on-date-picker"
+   ],
+   "summary": "axe color-contrast: #9d9da8 on #ffffff measures 2.68:1; AA needs 4.5:1.",
+   "title": "Low contrast: text in the form landmark"
+  },
+  {
+   "attachments": [],
+   "attempt": 1,
+   "basis": "violation",
+   "criteria": [
+    "1.4.3"
+   ],
+   "evidence": [
+    {
+     "evidence": {
+      "bgColor": "#ffffff",
+      "contrastRatio": 2.68,
+      "expectedContrastRatio": "4.5:1",
+      "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 2.68 (foreground color: #9d9da8, background color: #ffffff, font size: 10.5pt (14px), font weight: normal). Expected contrast ratio of 4.5:1",
+      "fgColor": "#9d9da8",
+      "fontSize": "10.5pt (14px)",
+      "fontWeight": "normal",
+      "messageKey": null
+     },
+     "occurrence": {
+      "ancestors": [
+       [
+        "_calendarDaysWrapper_1ml1o_199"
+       ],
+       [
+        "_calendarWrapper_1ml1o_172"
+       ],
+       [
+        "_calendarPopupWrapper_1ml1o_59",
+        "_visible_1ml1o_109"
+       ],
+       [
+        "_calendarInputWrapper_1ml1o_11",
+        "_open_1ml1o_15",
+        "_calendarInput_17brw_73"
+       ],
+       [
+        "_calendarDateInputContainer_1ml1o_5",
+        "_calendarInput_17brw_73"
+       ],
+       [
+        "_startDayWithTooltip_17brw_82"
+       ],
+       [
+        "_helpTextWrapper_17brw_90"
+       ],
+       [
+        "_label_fn75q_3"
+       ]
+      ],
+      "classes": [
+       "_calendarDay_1ml1o_199",
+       "_unselectableDay_1ml1o_232",
+       "_calendarDayLastMonth_1ml1o_227"
+      ],
+      "data": {},
+      "heading": "",
+      "landmark": {
+       "name": "",
+       "role": "form"
+      },
+      "layer": "top",
+      "name": "",
+      "rect": [
+       440,
+       580,
+       46,
+       24
+      ],
+      "role": "generic",
+      "tag": "div",
+      "xpath": "/html/body/div[1]/main[1]/div[1]/div[2]/div[2]/div[1]/div[2]/section[2]/div[1]/div[1]/div[1]/form[1]/div[3]/div[1]/div[1]/div[1]/div[1]/div[2]/div[2]/div[2]/div[1]"
+     },
+     "state": "payments.send-date-picker"
+    },
+    {
+     "evidence": {
+      "bgColor": "#ffffff",
+      "contrastRatio": 2.68,
+      "expectedContrastRatio": "4.5:1",
+      "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 2.68 (foreground color: #9d9da8, background color: #ffffff, font size: 10.5pt (14px), font weight: normal). Expected contrast ratio of 4.5:1",
+      "fgColor": "#9d9da8",
+      "fontSize": "10.5pt (14px)",
+      "fontWeight": "normal",
+      "messageKey": null
+     },
+     "occurrence": {
+      "ancestors": [
+       [
+        "_calendarDaysWrapper_1ml1o_199"
+       ],
+       [
+        "_calendarWrapper_1ml1o_172"
+       ],
+       [
+        "_calendarPopupWrapper_1ml1o_59",
+        "_visible_1ml1o_109"
+       ],
+       [
+        "_calendarInputWrapper_1ml1o_11",
+        "_open_1ml1o_15",
+        "_calendarInput_17brw_73"
+       ],
+       [
+        "_calendarDateInputContainer_1ml1o_5",
+        "_calendarInput_17brw_73"
+       ],
+       [
+        "_startDayWithTooltip_17brw_82"
+       ],
+       [
+        "_helpTextWrapper_17brw_90"
+       ],
+       [
+        "_label_fn75q_3"
+       ]
+      ],
+      "classes": [
+       "_calendarDay_1ml1o_199",
+       "_unselectableDay_1ml1o_232",
+       "_calendarDayLastMonth_1ml1o_227"
+      ],
+      "data": {},
+      "heading": "",
+      "landmark": {
+       "name": "",
+       "role": "form"
+      },
+      "layer": "top",
+      "name": "",
+      "rect": [
+       126,
+       580,
+       46,
+       24
+      ],
+      "role": "generic",
+      "tag": "div",
+      "xpath": "/html/body/div[1]/main[1]/div[1]/div[2]/div[2]/div[1]/div[2]/section[2]/div[1]/div[1]/div[1]/form[1]/div[3]/div[1]/div[1]/div[1]/div[1]/div[2]/div[2]/div[2]/div[2]"
+     },
+     "state": "billpay.send-on-date-picker"
+    }
+   ],
+   "evidenceHash": "33190deaa8970d582bbf660127a0bf272c24773343822374577da1eb4f2af90c",
+   "facts": {
+    "bg": "#ffffff",
+    "criterion": "1.4.3",
+    "criterionName": "Contrast (Minimum)",
+    "element": "text in the form landmark",
+    "fg": "#9d9da8",
+    "ratio": "2.68",
+    "required": "4.5",
+    "rule": "color-contrast",
+    "screen": "Send: Send on calendar",
+    "screens": 2
+   },
+   "family": "contrast",
+   "guidance": "High under 2:1, or under 3:1 for essential text.",
+   "issueId": null,
+   "key": "contrast:color-contrast:e0d8cc2ef733",
+   "measured": true,
+   "primary": "payments.send-date-picker",
+   "proposals": [],
+   "rule": "color-contrast",
+   "screens": 2,
+   "severityDefault": "medium",
+   "source": "scanner",
+   "states": [
+    "payments.send-date-picker",
+    "billpay.send-on-date-picker"
+   ],
+   "summary": "axe color-contrast: #9d9da8 on #ffffff measures 2.68:1; AA needs 4.5:1.",
+   "title": "Low contrast: text in the form landmark"
+  },
+  {
+   "attachments": [],
+   "attempt": 1,
+   "basis": "failure",
+   "criteria": [
+    "2.1.1"
+   ],
+   "evidence": [
+    {
+     "evidence": {
+      "focus": {
+       "ancestors": [
+        [
+         "_inputBox_q7hf7_93"
+        ],
+        [
+         "_inputBoxWrapper_q7hf7_93"
+        ],
+        [
+         "_textInputWrapper_q7hf7_24"
+        ],
+        [
+         "_provideDSTextInput_q7hf7_6",
+         "_calendarDateInput_1ml1o_5"
+        ],
+        [
+         "_calendarInputWrapper_1ml1o_11",
+         "_open_1ml1o_15",
+         "_calendarInput_17brw_73"
+        ],
+        [
+         "_calendarDateInputContainer_1ml1o_5",
+         "_calendarInput_17brw_73"
+        ],
+        [
+         "_startDayWithTooltip_17brw_82"
+        ],
+        [
+         "_helpTextWrapper_17brw_90"
+        ]
+       ],
+       "classes": [
+        "_input_q7hf7_93"
+       ],
+       "data": {},
+       "heading": "Amount",
+       "landmark": {
+        "name": "",
+        "role": "form"
+       },
+       "layer": "document",
+       "name": "Send on",
+       "rect": [
+        453,
+        492,
+        96,
+        24
+       ],
+       "role": "textbox",
+       "tag": "input",
+       "xpath": "/html/body/div[1]/main[1]/div[1]/div[2]/div[2]/div[1]/div[2]/section[2]/div[1]/div[1]/div[1]/form[1]/div[3]/div[1]/div[1]/div[1]/div[1]/div[1]/div[1]/div[1]/div[1]/input[1]"
+      },
+      "stops": 2,
+      "trace": [
+       {
+        "focus": {
+         "label": "",
+         "tag": "input",
+         "xpath": "/html/body/div[1]/main[1]/div[1]/div[2]/div[2]/div[1]/div[2]/section[2]/div[1]/div[1]/div[1]/form[1]/div[1]/div[1]/div[1]/div[1]/input[1]"
+        },
+        "key": "start",
+        "where": "outside"
+       },
+       {
+        "focus": {
+         "label": "Ops / Payroll $2,023,267.12 / Checking ••1038",
+         "tag": "button",
+         "xpath": "/html/body/div[1]/main[1]/div[1]/div[2]/div[2]/div[1]/div[2]/section[2]/div[1]/div[1]/div[1]/form[1]/div[2]/button[1]"
+        },
+        "key": "Tab",
+        "where": "outside"
+       },
+       {
+        "focus": {
+         "label": "Oct 5, 2026",
+         "tag": "input",
+         "xpath": "/html/body/div[1]/main[1]/div[1]/div[2]/div[2]/div[1]/div[2]/section[2]/div[1]/div[1]/div[1]/form[1]/div[3]/div[1]/div[1]/div[1]/div[1]/div[1]/div[1]/div[1]/div[1]/input[1]"
+        },
+        "key": "Tab",
+        "where": "trigger"
+       },
+       {
+        "focus": {
+         "label": "Oct 5, 2026",
+         "tag": "input",
+         "xpath": "/html/body/div[1]/main[1]/div[1]/div[2]/div[2]/div[1]/div[2]/section[2]/div[1]/div[1]/div[1]/form[1]/div[3]/div[1]/div[1]/div[1]/div[1]/div[1]/div[1]/div[1]/div[1]/input[1]"
+        },
+        "key": "Enter",
+        "where": "trigger"
+       },
+       {
+        "focus": {
+         "label": "",
+         "tag": "input",
+         "xpath": "/html/body/div[1]/main[1]/div[1]/div[2]/div[2]/div[1]/div[2]/section[2]/div[1]/div[1]/div[1]/form[1]/div[3]/div[1]/div[1]/div[1]/div[1]/div[1]/div[1]/div[1]/div[1]/input[1]"
+        },
+        "key": "Space",
+        "where": "trigger"
+       }
+      ]
+     },
+     "occurrence": {
+      "ancestors": [
+       [
+        "_inputBox_q7hf7_93",
+        "_hasValue_q7hf7_171"
+       ],
+       [
+        "_inputBoxWrapper_q7hf7_93"
+       ],
+       [
+        "_textInputWrapper_q7hf7_24"
+       ],
+       [
+        "_provideDSTextInput_q7hf7_6",
+        "_calendarDateInput_1ml1o_5",
+        "_fullWidthInput_1ml1o_54"
+       ],
+       [
+        "_calendarInputWrapper_1ml1o_11",
+        "_fullWidthCalendarInput_17brw_77"
+       ],
+       [
+        "_calendarDateInputContainer_1ml1o_5",
+        "_fullWidthCalendarInput_17brw_77"
+       ],
+       [
+        "_startDayWithTooltip_17brw_82"
+       ],
+       [
+        "_helpTextWrapper_17brw_90"
+       ]
+      ],
+      "classes": [
+       "_input_q7hf7_93"
+      ],
+      "data": {},
+      "heading": "Amount",
+      "landmark": {
+       "name": "",
+       "role": "form"
+      },
+      "layer": "document",
+      "name": "Send on",
+      "rect": [
+       453,
+       492,
+       534,
+       24
+      ],
+      "role": "textbox",
+      "tag": "input",
+      "xpath": "/html/body/div[1]/main[1]/div[1]/div[2]/div[2]/div[1]/div[2]/section[2]/div[1]/div[1]/div[1]/form[1]/div[3]/div[1]/div[1]/div[1]/div[1]/div[1]/div[1]/div[1]/div[1]/input[1]"
+     },
+     "state": "payments.send-date-picker"
+    }
+   ],
+   "evidenceHash": "00abb5062cbbd30513fb655c61375810cc7809ae75c9f73ff194923c6e749c8b",
+   "facts": {
+    "criterion": "2.1.1",
+    "criterionName": "Keyboard",
+    "element": "textbox \"Send on\"",
+    "overlay": "unnamed generic",
+    "screen": "Send: Send on calendar",
+    "stops": "2"
+   },
+   "family": "dialog-trigger",
+   "guidance": "Lower only when an equivalent keyboard path exists.",
+   "issueId": null,
+   "key": "dialog-trigger:dialog-trigger-not-operable:63b7bdef3278",
+   "measured": false,
+   "primary": "payments.send-date-picker",
+   "proposals": [],
+   "rule": "dialog-trigger-not-operable",
+   "screens": 1,
+   "severityDefault": "high",
+   "source": "scanner",
+   "states": [
+    "payments.send-date-picker"
+   ],
+   "summary": "Tab focused the textbox \"Send on\", but neither Enter nor Space opened the unnamed generic.",
+   "title": "Opens only with a mouse: textbox \"Send on\""
+  },
+  {
+   "attachments": [],
+   "attempt": 1,
+   "basis": "violation",
+   "criteria": [
+    "4.1.2"
+   ],
+   "evidence": [
+    {
+     "evidence": {
+      "failureSummary": "Fix any of the following:\n  Element does not have inner text that is visible to screen readers\n  aria-label attribute does not exist or is empty\n  aria-labelledby attribute does not exist, references elements that do not exist or references elements that are empty\n  Element has no title attribute\n  Element does not have an implicit (wrapped) <label>\n  Element does not have an explicit <label>\n  Element's default semantics were not overridden with role=\"none\" or role=\"presentation\"",
+      "messageKey": "noAttr"
+     },
+     "occurrence": {
+      "ancestors": [
+       [
+        "_topRow_1ml1o_114",
+        "_topRowExtraPadding_1ml1o_137"
+       ],
+       [
+        "_calendarPopupWrapper_1ml1o_59",
+        "_visible_1ml1o_109"
+       ],
+       [
+        "_calendarInputWrapper_1ml1o_11",
+        "_open_1ml1o_15",
+        "_calendarInput_17brw_73"
+       ],
+       [
+        "_calendarDateInputContainer_1ml1o_5",
+        "_calendarInput_17brw_73"
+       ],
+       [
+        "_startDayWithTooltip_17brw_82"
+       ],
+       [
+        "_helpTextWrapper_17brw_90"
+       ],
+       [
+        "_label_fn75q_3"
+       ],
+       []
+      ],
+      "classes": [
+       "_button-wrapper_1rzdg_13",
+       "_button_1rzdg_13",
+       "_tertiary-with-icon_1rzdg_76",
+       "_disabled_1rzdg_20",
+       "undefined",
+       "_monthArrowBtn_1ml1o_145",
+       "_left_1ml1o_5"
+      ],
+      "data": {},
+      "heading": "",
+      "landmark": {
+       "name": "",
+       "role": "form"
+      },
+      "layer": "top",
+      "name": "",
+      "rect": [
+       702,
+       489,
+       28,
+       28
+      ],
+      "role": "button",
+      "tag": "button",
+      "xpath": "/html/body/div[1]/main[1]/div[1]/div[2]/div[2]/div[1]/div[2]/section[2]/div[1]/div[1]/div[1]/form[1]/div[3]/div[1]/div[1]/div[1]/div[1]/div[2]/div[1]/button[1]"
+     },
+     "state": "payments.send-date-picker"
+    },
+    {
+     "evidence": {
+      "failureSummary": "Fix any of the following:\n  Element does not have inner text that is visible to screen readers\n  aria-label attribute does not exist or is empty\n  aria-labelledby attribute does not exist, references elements that do not exist or references elements that are empty\n  Element has no title attribute\n  Element does not have an implicit (wrapped) <label>\n  Element does not have an explicit <label>\n  Element's default semantics were not overridden with role=\"none\" or role=\"presentation\"",
+      "messageKey": "noAttr"
+     },
+     "occurrence": {
+      "ancestors": [
+       [
+        "_topRow_1ml1o_114",
+        "_topRowExtraPadding_1ml1o_137"
+       ],
+       [
+        "_calendarPopupWrapper_1ml1o_59",
+        "_visible_1ml1o_109"
+       ],
+       [
+        "_calendarInputWrapper_1ml1o_11",
+        "_open_1ml1o_15",
+        "_calendarInput_17brw_73"
+       ],
+       [
+        "_calendarDateInputContainer_1ml1o_5",
+        "_calendarInput_17brw_73"
+       ],
+       [
+        "_startDayWithTooltip_17brw_82"
+       ],
+       [
+        "_helpTextWrapper_17brw_90"
+       ],
+       [
+        "_label_fn75q_3"
+       ],
+       []
+      ],
+      "classes": [
+       "_button-wrapper_1rzdg_13",
+       "_button_1rzdg_13",
+       "_tertiary-with-icon_1rzdg_76",
+       "_disabled_1rzdg_20",
+       "undefined",
+       "_monthArrowBtn_1ml1o_145",
+       "_left_1ml1o_5"
+      ],
+      "data": {},
+      "heading": "",
+      "landmark": {
+       "name": "",
+       "role": "form"
+      },
+      "layer": "top",
+      "name": "",
+      "rect": [
+       342,
+       489,
+       28,
+       28
+      ],
+      "role": "button",
+      "tag": "button",
+      "xpath": "/html/body/div[1]/main[1]/div[1]/div[2]/div[2]/div[1]/div[2]/section[2]/div[1]/div[1]/div[1]/form[1]/div[3]/div[1]/div[1]/div[1]/div[1]/div[2]/div[1]/button[1]"
+     },
+     "state": "billpay.send-on-date-picker"
+    }
+   ],
+   "evidenceHash": "508199797be322fe1c871c39aecf9a754ba5a832e7b7cbef951e4fc996b10890",
+   "facts": {
+    "announced": "button \"\" [disabled=true]",
+    "axeSummary": "Element does not have inner text that is visible to screen readers; aria-label attribute does not exist or is empty; aria-labelledby attribute does not exist,…",
+    "criterion": "4.1.2",
+    "criterionName": "Name, Role, Value",
+    "element": "button in the form landmark",
+    "rule": "button-name",
+    "screen": "Send: Send on calendar"
+   },
+   "family": "name",
+   "guidance": "High for an unnamed form control or the sole primary action.",
+   "issueId": null,
+   "key": "name:button-name:a0744a435d74",
+   "measured": false,
+   "primary": "payments.send-date-picker",
+   "proposals": [],
+   "rule": "button-name",
+   "screens": 2,
+   "severityDefault": "medium",
+   "source": "scanner",
+   "states": [
+    "payments.send-date-picker",
+    "billpay.send-on-date-picker"
+   ],
+   "summary": "button-name: announced as button \"\" [disabled=true]. Element does not have inner text that is visible to screen readers; aria-label attribute does not exist or is empty; aria-labelledby attribute does not exist,…",
+   "title": "Missing or unclear name: button in the form landmark"
+  },
+  {
+   "attachments": [],
+   "attempt": 1,
+   "basis": "violation",
+   "criteria": [
+    "4.1.2"
+   ],
+   "evidence": [
+    {
+     "evidence": {
+      "failureSummary": "Fix any of the following:\n  Element does not have inner text that is visible to screen readers\n  aria-label attribute does not exist or is empty\n  aria-labelledby attribute does not exist, references elements that do not exist or references elements that are empty\n  Element has no title attribute\n  Element does not have an implicit (wrapped) <label>\n  Element does not have an explicit <label>\n  Element's default semantics were not overridden with role=\"none\" or role=\"presentation\"",
+      "messageKey": "noAttr"
+     },
+     "occurrence": {
+      "ancestors": [
+       [
+        "_topRow_1ml1o_114",
+        "_topRowExtraPadding_1ml1o_137"
+       ],
+       [
+        "_calendarPopupWrapper_1ml1o_59",
+        "_visible_1ml1o_109"
+       ],
+       [
+        "_calendarInputWrapper_1ml1o_11",
+        "_open_1ml1o_15",
+        "_calendarInput_17brw_73"
+       ],
+       [
+        "_calendarDateInputContainer_1ml1o_5",
+        "_calendarInput_17brw_73"
+       ],
+       [
+        "_startDayWithTooltip_17brw_82"
+       ],
+       [
+        "_helpTextWrapper_17brw_90"
+       ],
+       [
+        "_label_fn75q_3"
+       ],
+       []
+      ],
+      "classes": [
+       "_button-wrapper_1rzdg_13",
+       "_button_1rzdg_13",
+       "_tertiary-with-icon_1rzdg_76",
+       "undefined",
+       "_monthArrowBtn_1ml1o_145"
+      ],
+      "data": {},
+      "heading": "",
+      "landmark": {
+       "name": "",
+       "role": "form"
+      },
+      "layer": "top",
+      "name": "",
+      "rect": [
+       734,
+       489,
+       28,
+       28
+      ],
+      "role": "button",
+      "tag": "button",
+      "xpath": "/html/body/div[1]/main[1]/div[1]/div[2]/div[2]/div[1]/div[2]/section[2]/div[1]/div[1]/div[1]/form[1]/div[3]/div[1]/div[1]/div[1]/div[1]/div[2]/div[1]/button[2]"
+     },
+     "state": "payments.send-date-picker"
+    },
+    {
+     "evidence": {
+      "failureSummary": "Fix any of the following:\n  Element does not have inner text that is visible to screen readers\n  aria-label attribute does not exist or is empty\n  aria-labelledby attribute does not exist, references elements that do not exist or references elements that are empty\n  Element has no title attribute\n  Element does not have an implicit (wrapped) <label>\n  Element does not have an explicit <label>\n  Element's default semantics were not overridden with role=\"none\" or role=\"presentation\"",
+      "messageKey": "noAttr"
+     },
+     "occurrence": {
+      "ancestors": [
+       [
+        "_topRow_1ml1o_114",
+        "_topRowExtraPadding_1ml1o_137"
+       ],
+       [
+        "_calendarPopupWrapper_1ml1o_59",
+        "_visible_1ml1o_109"
+       ],
+       [
+        "_calendarInputWrapper_1ml1o_11",
+        "_open_1ml1o_15",
+        "_calendarInput_17brw_73"
+       ],
+       [
+        "_calendarDateInputContainer_1ml1o_5",
+        "_calendarInput_17brw_73"
+       ],
+       [
+        "_startDayWithTooltip_17brw_82"
+       ],
+       [
+        "_helpTextWrapper_17brw_90"
+       ],
+       [
+        "_label_fn75q_3"
+       ],
+       []
+      ],
+      "classes": [
+       "_button-wrapper_1rzdg_13",
+       "_button_1rzdg_13",
+       "_tertiary-with-icon_1rzdg_76",
+       "undefined",
+       "_monthArrowBtn_1ml1o_145"
+      ],
+      "data": {},
+      "heading": "",
+      "landmark": {
+       "name": "",
+       "role": "form"
+      },
+      "layer": "top",
+      "name": "",
+      "rect": [
+       374,
+       489,
+       28,
+       28
+      ],
+      "role": "button",
+      "tag": "button",
+      "xpath": "/html/body/div[1]/main[1]/div[1]/div[2]/div[2]/div[1]/div[2]/section[2]/div[1]/div[1]/div[1]/form[1]/div[3]/div[1]/div[1]/div[1]/div[1]/div[2]/div[1]/button[2]"
+     },
+     "state": "billpay.send-on-date-picker"
+    }
+   ],
+   "evidenceHash": "508199797be322fe1c871c39aecf9a754ba5a832e7b7cbef951e4fc996b10890",
+   "facts": {
+    "announced": "button \"\"",
+    "axeSummary": "Element does not have inner text that is visible to screen readers; aria-label attribute does not exist or is empty; aria-labelledby attribute does not exist,…",
+    "criterion": "4.1.2",
+    "criterionName": "Name, Role, Value",
+    "element": "button in the form landmark",
+    "rule": "button-name",
+    "screen": "Send: Send on calendar"
+   },
+   "family": "name",
+   "guidance": "High for an unnamed form control or the sole primary action.",
+   "issueId": null,
+   "key": "name:button-name:f43d19fe35ec",
+   "measured": false,
+   "primary": "payments.send-date-picker",
+   "proposals": [],
+   "rule": "button-name",
+   "screens": 2,
+   "severityDefault": "medium",
+   "source": "scanner",
+   "states": [
+    "payments.send-date-picker",
+    "billpay.send-on-date-picker"
+   ],
+   "summary": "button-name: announced as button \"\". Element does not have inner text that is visible to screen readers; aria-label attribute does not exist or is empty; aria-labelledby attribute does not exist,…",
+   "title": "Missing or unclear name: button in the form landmark"
+  }
+ ],
+ "primaries": [
+  "payments.send-date-picker"
+ ],
+ "reach": {
+  "baseUrl": "https://demo.mercury.com",
+  "data": "data",
+  "map": "build/map.json",
+  "run": "2026-10-03-1525",
+  "workspace": "a11y"
+ },
+ "run": "2026-10-03-1525"
+}

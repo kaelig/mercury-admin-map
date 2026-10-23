@@ -1,0 +1,47 @@
+{
+ "batch": "record-121",
+ "reach": {
+  "baseUrl": "https://demo.mercury.com",
+  "data": "data",
+  "map": "build/map.json",
+  "run": "2026-10-02-1349",
+  "workspace": "a11y"
+ },
+ "run": "2026-10-02-1349",
+ "states": [
+  {
+   "area": "settings",
+   "draft": "not drafted: its parent had no accepted recipe when the drafter ran",
+   "image": "screens/settings/96-token-scopes-list.png",
+   "kind": "menu",
+   "labels": [
+    "Click + Create an API token",
+    "Click Create token with the form empty",
+    "Enter a nickname and open Permissions",
+    "Choose Custom Scopes",
+    "Open the Scopes combobox"
+   ],
+   "mutates": true,
+   "note": "28 Title Case scopes grouped by resource (Accounts, Cards, Categories, Invoices, Recipients, Transactions, Webhooks\u2026); asterisked ones need an IP whitelist and one carries an 'Experimental' tag. The list opens upward, spills out of the modal and its top slides under the demo banner.",
+   "parent": "settings.token-custom-scopes",
+   "state": "settings.token-scopes-list",
+   "title": "Custom scopes list"
+  },
+  {
+   "area": "settings",
+   "draft": "not drafted: its parent had no accepted recipe when the drafter ran",
+   "image": "screens/settings/84-webhook-verify-endpoint.png",
+   "kind": "form-state",
+   "labels": [
+    "Click + Create webhook",
+    "Enter an http:// URL and tab away",
+    "Switch to https:// and click Verify endpoint"
+   ],
+   "mutates": true,
+   "note": "After entering an https URL and clicking Verify endpoint, the button is replaced by a green check and 'Verified'. Create endpoint only enables after verification.",
+   "parent": "settings.create-webhook-http-error",
+   "state": "settings.webhook-verified",
+   "title": "Create webhook \u2014 endpoint verified"
+  }
+ ]
+}

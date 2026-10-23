@@ -1,0 +1,46 @@
+{
+ "batch": "record-072",
+ "reach": {
+  "baseUrl": "https://demo.mercury.com",
+  "data": "data",
+  "map": "build/map.json",
+  "run": "2026-10-02-1349",
+  "workspace": "a11y"
+ },
+ "run": "2026-10-02-1349",
+ "states": [
+  {
+   "area": "transactions",
+   "draft": "not drafted: its parent had no accepted recipe when the drafter ran; the conductor rejected the previous recipe: extra layer: the Keyword suggestion popover is still open over the filtered table, with Google ticked; the capture shows it closed, with the 'Google x' chip, Filters (1) and Create view",
+   "image": "screens/transactions/22-keyword-filtered-results.png",
+   "kind": "page",
+   "labels": [
+    "Open Keyword and type \"Google\"",
+    "Tick a Google suggestion"
+   ],
+   "mutates": false,
+   "note": "After ticking a Google suggestion the chip becomes \"Google x\", Filters (1) and Create view appear, and the table is filtered to Google transactions with Net change/Money in/Money out recomputed.",
+   "parent": "transactions.keyword-suggestions",
+   "state": "transactions.keyword-results",
+   "title": "Keyword filtered results"
+  },
+  {
+   "area": "transactions",
+   "draft": "nothing on transactions.filter-amount matches {\"click\":{\"name\":\"Save\",\"role\":\"button\"}}; the conductor rejected the previous recipe: missing layer: the hop clicks Filters (3), which closes the Filters panel, then opens the toolbar Save menu; the capture shows the Save split menu inside the open Filters panel. The replay's Create New View item is also hidden under the 'We categorized' tip",
+   "image": "screens/transactions/16-save-view-menu.png",
+   "kind": "menu",
+   "labels": [
+    "Click Saved views",
+    "Choose Monthly money out",
+    "Click Filters (3)",
+    "Click Amount tab",
+    "Open Save menu"
+   ],
+   "mutates": true,
+   "note": "Save split button opened on an edited saved view, offering Create New View.",
+   "parent": "transactions.filter-amount",
+   "state": "transactions.save-view-menu",
+   "title": "Save view split menu"
+  }
+ ]
+}

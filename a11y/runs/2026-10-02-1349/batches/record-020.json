@@ -1,0 +1,128 @@
+{
+ "batch": "record-020",
+ "reach": {
+  "baseUrl": "https://demo.mercury.com",
+  "data": "data",
+  "map": "build/map.json",
+  "run": "2026-10-02-1349",
+  "workspace": "a11y"
+ },
+ "run": "2026-10-02-1349",
+ "states": [
+  {
+   "area": "invoicing",
+   "draft": "nothing on invoicing.create-series-step1 matches {\"click\":{\"name\":\"a customer\"}}",
+   "image": "screens/invoicing/45-create-series-setup.png",
+   "kind": "page",
+   "labels": [
+    "Click Create series",
+    "Pick a customer and click Next"
+   ],
+   "mutates": true,
+   "note": "Series step 2: customer card, invoice prefix INV, currency, one line item (Monthly design retainer, $4,000), payer memo, with a stacked-invoice preview showing 'Invoice no. INV-1'.",
+   "parent": "invoicing.create-series-step1",
+   "state": "invoicing.create-series-setup",
+   "title": "Recurring series set up"
+  },
+  {
+   "area": "invoicing",
+   "draft": "nothing on invoicing.create-step1 matches {\"click\":{\"name\":\"Next with no customer\"}}",
+   "image": "screens/invoicing/08-create-step1-next-empty.png",
+   "kind": "validation-error",
+   "labels": [
+    "Click Request money",
+    "Click Next with no customer"
+   ],
+   "mutates": false,
+   "note": "Clicking Next with no customer turns the Name field red with 'Please complete this field'.",
+   "parent": "invoicing.create-step1",
+   "state": "invoicing.create-step1-error",
+   "title": "Request money: customer required"
+  },
+  {
+   "area": "invoicing",
+   "draft": "cannot parse \"Scroll down the table\"",
+   "image": "screens/invoicing/02-index-paid-rows.png",
+   "kind": "page",
+   "labels": [
+    "Scroll down the table"
+   ],
+   "mutates": false,
+   "note": "Lower part of the invoice table showing Processing and Paid status badges, payment links and recurring series sub-labels (Series complete/canceled).",
+   "parent": "invoicing.index",
+   "state": "invoicing.index-paid-rows",
+   "title": "Invoice list (processing & paid rows)"
+  },
+  {
+   "area": "invoicing",
+   "draft": "nothing on invoicing.index matches {\"click\":{\"name\":\"Paid summary card\"}}",
+   "image": "screens/invoicing/89-paid-card-filter.png",
+   "kind": "form-state",
+   "labels": [
+    "Click the Paid summary card"
+   ],
+   "mutates": false,
+   "note": "Clicking the Paid summary card outlines it and filters the table to Paid rows with a 'Paid \u00d7' chip.",
+   "parent": "invoicing.index",
+   "state": "invoicing.paid-card-filter",
+   "title": "Paid card filter"
+  },
+  {
+   "area": "invoicing",
+   "draft": "nothing on invoicing.series-detail matches {\"click\":{\"name\":\"\u2026 on the queued invoice\"}}",
+   "image": "screens/invoicing/42-series-queued-actions.png",
+   "kind": "menu",
+   "labels": [
+    "Click the \u2026 on the queued invoice"
+   ],
+   "mutates": false,
+   "note": "'\u2026' menu on the queued invoice row: Edit queued invoice, Send now, Skip invoice.",
+   "parent": "invoicing.series-detail",
+   "state": "invoicing.series-queued-menu",
+   "title": "Queued invoice actions"
+  },
+  {
+   "area": "invoicing",
+   "draft": "nothing on invoicing.settings-branding matches {\"click\":{\"name\":\"a color swatch\"}}",
+   "image": "screens/invoicing/70-invoice-settings-branding-blue.png",
+   "kind": "form-state",
+   "labels": [
+    "Click the Branding tab",
+    "Pick a color swatch"
+   ],
+   "mutates": false,
+   "note": "Selecting the blue/teal swatch retints the invoice preview background.",
+   "parent": "invoicing.settings-branding",
+   "state": "invoicing.settings-branding-blue",
+   "title": "Branding: color changed"
+  },
+  {
+   "area": "invoicing",
+   "draft": "nothing on invoicing.index matches {\"click\":{\"name\":\"Amount column header\"}}",
+   "image": "screens/invoicing/87-sorted-by-amount.png",
+   "kind": "form-state",
+   "labels": [
+    "Click the Amount column header"
+   ],
+   "mutates": false,
+   "note": "Clicking the Amount header sorts ascending ($750.00 first) and moves the sort arrow from Status to Amount.",
+   "parent": "invoicing.index",
+   "state": "invoicing.sorted-by-amount",
+   "title": "Sorted by amount"
+  },
+  {
+   "area": "invoicing",
+   "draft": "cannot parse \"Hover the info icon on Total open\"",
+   "image": "screens/invoicing/88-total-open-tooltip.png",
+   "kind": "popover",
+   "labels": [
+    "Hover the info icon on Total open"
+   ],
+   "mutates": false,
+   "note": "Hovering the info icon on Total open: 'Open includes all items that are not paid or canceled.'",
+   "parent": "invoicing.index",
+   "state": "invoicing.total-open-tooltip",
+   "title": "Total open tooltip"
+  }
+ ]
+}

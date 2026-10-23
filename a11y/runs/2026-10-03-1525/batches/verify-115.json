@@ -1,0 +1,283 @@
+{
+ "area": "cards",
+ "batch": "verify-115",
+ "findings": [
+  {
+   "attachments": [],
+   "attempt": 1,
+   "basis": "failure",
+   "criteria": [
+    "2.1.1"
+   ],
+   "evidence": [
+    {
+     "evidence": {
+      "focus": "body",
+      "stops": 4,
+      "trace": [
+       {
+        "focus": {
+         "label": "Assign Team Lunch Select team members Abigail Kyte Import a CSV list Cancel Next",
+         "tag": "div",
+         "xpath": "/html/body/div[11]/div[1]/div[1]"
+        },
+        "key": "start",
+        "where": "trigger"
+       },
+       {
+        "focus": {
+         "label": "",
+         "tag": "input",
+         "xpath": "/html/body/div[11]/div[1]/div[1]/div[1]/div[2]/div[1]/div[1]/div[1]/div[1]/input[1]"
+        },
+        "key": "Tab",
+        "where": "outside"
+       },
+       {
+        "focus": {
+         "label": "Import a CSV list",
+         "tag": "button",
+         "xpath": "/html/body/div[11]/div[1]/div[1]/div[1]/div[2]/div[1]/button[1]"
+        },
+        "key": "Tab",
+        "where": "outside"
+       },
+       {
+        "focus": {
+         "label": "Cancel",
+         "tag": "button",
+         "xpath": "/html/body/div[11]/div[1]/div[1]/div[1]/div[3]/button[1]"
+        },
+        "key": "Tab",
+        "where": "outside"
+       },
+       {
+        "focus": {
+         "label": "Next",
+         "tag": "button",
+         "xpath": "/html/body/div[11]/div[1]/div[1]/div[1]/div[3]/button[2]"
+        },
+        "key": "Tab",
+        "where": "trigger"
+       },
+       {
+        "focus": "body",
+        "key": "Enter",
+        "where": "body"
+       },
+       {
+        "focus": "body",
+        "key": "focus",
+        "where": "body"
+       },
+       {
+        "focus": "body",
+        "key": "Space",
+        "where": "body"
+       }
+      ]
+     },
+     "occurrence": {
+      "ancestors": [
+       [
+        "_container_1ieyt_1",
+        "_rightAlign_1ieyt_9",
+        "_footer_10n5e_27"
+       ],
+       [
+        "_large_kwlx6_9",
+        "_noHover_3n0se_28",
+        "_shadow_3n0se_25",
+        "_raisedBackground_3n0se_45",
+        "_card_lo4oy_4",
+        "_defaultPadding_lo4oy_27",
+        "_small_lo4oy_11"
+       ],
+       [
+        "ReactModal__Content",
+        "ReactModal__Content--after-open",
+        "_modal_lo4oy_73"
+       ],
+       [
+        "ReactModal__Overlay",
+        "ReactModal__Overlay--after-open",
+        "_overlay_lo4oy_89",
+        "_backgroundColor_lo4oy_103"
+       ],
+       [
+        "ReactModalPortal"
+       ]
+      ],
+      "classes": [
+       "_button_r6b2u_20",
+       "_large_r6b2u_88",
+       "_primary_r6b2u_104",
+       "session-replay-unmask"
+      ],
+      "data": {},
+      "heading": "Assign Team Lunch",
+      "landmark": {
+       "name": "",
+       "role": "dialog"
+      },
+      "layer": "document",
+      "name": "Next",
+      "rect": [
+       807,
+       521,
+       97,
+       40
+      ],
+      "role": "button",
+      "tag": "button",
+      "xpath": "/html/body/div[11]/div[1]/div[1]/div[1]/div[3]/button[2]"
+     },
+     "state": "cards.assign-budget-cards"
+    }
+   ],
+   "evidenceHash": "881ef7550438b20699b2dc6e1caf3638d98bd73a0976efd0567a1556715e4a5c",
+   "facts": {
+    "criterion": "2.1.1",
+    "criterionName": "Keyboard",
+    "element": "button \"Next\"",
+    "overlay": "unnamed dialog",
+    "screen": "Set up budget cards",
+    "stops": "4"
+   },
+   "family": "dialog-trigger",
+   "guidance": "Lower only when an equivalent keyboard path exists.",
+   "issueId": null,
+   "key": "dialog-trigger:dialog-trigger-not-operable:b7683869a0fc",
+   "measured": false,
+   "primary": "cards.assign-budget-cards",
+   "proposals": [],
+   "rule": "dialog-trigger-not-operable",
+   "screens": 1,
+   "severityDefault": "high",
+   "source": "scanner",
+   "states": [
+    "cards.assign-budget-cards"
+   ],
+   "summary": "Tab focused the button \"Next\", but neither Enter nor Space opened the unnamed dialog.",
+   "title": "Opens only with a mouse: button \"Next\""
+  },
+  {
+   "attachments": [],
+   "attempt": 1,
+   "basis": "violation",
+   "criteria": [
+    "1.3.5"
+   ],
+   "evidence": [
+    {
+     "evidence": {
+      "failureSummary": "Fix all of the following:\n  the autocomplete attribute is incorrectly formatted"
+     },
+     "occurrence": {
+      "ancestors": [
+       [
+        "_inputWrapper_11c85_6"
+       ],
+       [
+        "_wrapper_1xgdp_8",
+        "_cardCombobox_1pwxo_59"
+       ],
+       [
+        "_row_1pwxo_21"
+       ],
+       [
+        "_rowList_1pwxo_21"
+       ],
+       [
+        "_content_1pwxo_1"
+       ],
+       [
+        "_large_kwlx6_9",
+        "_noHover_3n0se_28",
+        "_shadow_3n0se_25",
+        "_raisedBackground_3n0se_45",
+        "_card_lo4oy_4",
+        "_defaultPadding_lo4oy_27",
+        "_medium_lo4oy_15"
+       ],
+       [
+        "ReactModal__Content",
+        "ReactModal__Content--after-open",
+        "_modal_lo4oy_73"
+       ],
+       [
+        "ReactModal__Overlay",
+        "ReactModal__Overlay--after-open",
+        "_overlay_lo4oy_89",
+        "_backgroundColor_lo4oy_103"
+       ]
+      ],
+      "classes": [
+       "_input_11c85_6"
+      ],
+      "data": {
+       "data-1p-ignore": "true",
+       "data-active-item": "true",
+       "data-bwignore": "true",
+       "data-lpignore": "true"
+      },
+      "heading": "Choose the card each team member’s budget spend comes from.",
+      "landmark": {
+       "name": "",
+       "role": "dialog"
+      },
+      "layer": "top",
+      "name": "Abigail Kyte",
+      "rect": [
+       472,
+       444,
+       463,
+       40
+      ],
+      "role": "combobox",
+      "tag": "input",
+      "xpath": "/html/body/div[11]/div[1]/div[1]/div[1]/div[2]/div[1]/div[1]/div[1]/div[1]/input[1]"
+     },
+     "state": "cards.assign-budget-cards"
+    }
+   ],
+   "evidenceHash": "ae47ebd291f0647392733baee46055c4c8c7719693e29a8f135a8f797d18a84d",
+   "facts": {
+    "announced": "combobox \"Abigail Kyte\" [expanded=false, haspopup=listbox]",
+    "axeSummary": "the autocomplete attribute is incorrectly formatted",
+    "criterion": "1.3.5",
+    "criterionName": "Identify Input Purpose",
+    "element": "combobox \"Abigail Kyte\"",
+    "rule": "autocomplete-valid",
+    "screen": "Set up budget cards"
+   },
+   "family": "role-state",
+   "guidance": "Low for optional ARIA or an invalid autocomplete token; high when aria-hidden hides the whole page.",
+   "issueId": null,
+   "key": "role-state:autocomplete-valid:68f8f953508f",
+   "measured": false,
+   "primary": "cards.assign-budget-cards",
+   "proposals": [],
+   "rule": "autocomplete-valid",
+   "screens": 1,
+   "severityDefault": "medium",
+   "source": "scanner",
+   "states": [
+    "cards.assign-budget-cards"
+   ],
+   "summary": "autocomplete-valid: announced as combobox \"Abigail Kyte\" [expanded=false, haspopup=listbox]. the autocomplete attribute is incorrectly formatted",
+   "title": "Invalid autocomplete value: combobox \"Abigail Kyte\""
+  }
+ ],
+ "primaries": [
+  "cards.assign-budget-cards"
+ ],
+ "reach": {
+  "baseUrl": "https://demo.mercury.com",
+  "data": "data",
+  "map": "build/map.json",
+  "run": "2026-10-03-1525",
+  "workspace": "a11y"
+ },
+ "run": "2026-10-03-1525"
+}

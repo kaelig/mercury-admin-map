@@ -1,0 +1,115 @@
+{
+ "area": "transactions",
+ "batch": "verify-560",
+ "findings": [
+  {
+   "attachments": [],
+   "attempt": 1,
+   "basis": "candidate",
+   "criteria": [
+    "4.1.2"
+   ],
+   "evidence": [
+    {
+     "evidence": {
+      "description": "",
+      "name": "Keyword",
+      "role": "menuitem",
+      "states": {
+       "expanded": true,
+       "haspopup": "menu"
+      },
+      "template": "menuitem \"Keyword\" [expanded=true, haspopup=menu]"
+     },
+     "occurrence": {
+      "ancestors": [
+       [
+        "_chip_1xw00_8",
+        "_inactive_1xw00_119"
+       ],
+       [],
+       [
+        "_filters_grqat_29"
+       ],
+       [
+        "_tableViewsAndFilters_grqat_82"
+       ],
+       [
+        "_toolbarContainer_grqat_4"
+       ],
+       [
+        "_filtersAndExportButton_1ow20_72"
+       ],
+       [
+        "_topContent_1ow20_3"
+       ],
+       [
+        "_transactionsPageDashboardWrapper_1ow20_48"
+       ]
+      ],
+      "classes": [
+       "_mainElement_1xw00_24",
+       "_interactive_1xw00_134",
+       "_dropdownChip_r52w9_7"
+      ],
+      "data": {},
+      "heading": "Transactions",
+      "landmark": {
+       "name": "",
+       "role": "main"
+      },
+      "layer": "document",
+      "name": "Keyword",
+      "rect": [
+       591,
+       184,
+       104,
+       32
+      ],
+      "role": "menuitem",
+      "tag": "button",
+      "xpath": "/html/body/div[1]/main[1]/div[1]/div[1]/div[4]/div[1]/div[2]/div[2]/div[1]/div[1]/span[1]/span[4]/span[2]/span[1]/button[1]"
+     },
+     "state": "transactions.keyword-no-matches"
+    }
+   ],
+   "evidenceHash": "796e7d04dcbecbfdc05b10119059a2bbed574a09af9da5eab3c5fc30c55c952f",
+   "facts": {
+    "announced": "menuitem \"Keyword\" [expanded=true, haspopup=menu]",
+    "axeSummary": "",
+    "criterion": "4.1.2",
+    "criterionName": "Name, Role, Value",
+    "element": "menuitem \"Keyword\"",
+    "rule": "announced-as",
+    "screen": "Keyword search: no matches"
+   },
+   "family": "role-state",
+   "guidance": "Low for optional ARIA or an invalid autocomplete token; high when aria-hidden hides the whole page.",
+   "issueId": null,
+   "key": "role-state:announced-as:6021987f14b6",
+   "measured": false,
+   "primary": "transactions.keyword-no-matches",
+   "proposals": [],
+   "rule": "announced-as",
+   "screens": 1,
+   "severityDefault": "medium",
+   "source": "scanner",
+   "states": [
+    "transactions.keyword-no-matches"
+   ],
+   "summary": "announced-as: announced as menuitem \"Keyword\" [expanded=true, haspopup=menu].",
+   "title": "Wrong role or state: menuitem \"Keyword\""
+  }
+ ],
+ "primaries": [
+  "transactions.keyword-no-matches"
+ ],
+ "reach": {
+  "baseUrl": "https://demo.mercury.com",
+  "data": "data",
+  "map": "build/map.json",
+  "run": "2026-10-03-1525",
+  "workspace": "a11y"
+ },
+ "run": "2026-10-03-1525"
+}

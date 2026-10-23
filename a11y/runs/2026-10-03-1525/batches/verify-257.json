@@ -1,0 +1,576 @@
+{
+ "area": "payments",
+ "batch": "verify-257",
+ "findings": [
+  {
+   "attachments": [],
+   "attempt": 1,
+   "basis": "violation",
+   "criteria": [
+    "1.3.1"
+   ],
+   "evidence": [
+    {
+     "evidence": {
+      "failureSummary": "Fix any of the following:\n  Element has children which are not allowed: li",
+      "messageKey": "unallowed",
+      "values": "li"
+     },
+     "occurrence": {
+      "ancestors": [
+       [
+        "_selectWrapper_1a7mr_150"
+       ],
+       [
+        "_comboboxWrapper_1a7mr_6",
+        "_focus_1a7mr_178",
+        "session-replay-block"
+       ],
+       [
+        "_mainContent_1thwe_8"
+       ],
+       [],
+       [
+        "_contactDetailsWrapper_1thwe_40"
+       ],
+       [],
+       [
+        "_contentDiv_bcpsw_53",
+        "_contentDivHeightPreset_bcpsw_62",
+        "_wrapper_1thwe_1"
+       ],
+       [
+        "_fullScreenWorkspaceLayout_bcpsw_14",
+        "_fullScreenWorkspaceLayoutBackground_bcpsw_32"
+       ]
+      ],
+      "classes": [
+       "_listbox_1a7mr_18",
+       "_dropShadow_1a7mr_197",
+       "_listboxOpen_1a7mr_377"
+      ],
+      "data": {},
+      "heading": "",
+      "landmark": {
+       "name": "",
+       "role": "form"
+      },
+      "layer": "document",
+      "name": "Options",
+      "rect": [
+       459,
+       320,
+       522,
+       400
+      ],
+      "role": "listbox",
+      "tag": "ul",
+      "xpath": "/html/body/div[1]/main[1]/div[1]/div[2]/div[2]/div[3]/div[1]/div[1]/form[1]/div[1]/div[1]/div[1]/ul[1]"
+     },
+     "state": "payments.ach-add"
+    }
+   ],
+   "evidenceHash": "7d8cbdd81ab9fcb5e61d4690aa5a6679ad141df8dcd039839a96d0022444a945",
+   "facts": {
+    "announced": "listbox \"Options\"",
+    "axeSummary": "Element has children which are not allowed: li",
+    "criterion": "1.3.1",
+    "criterionName": "Info and Relationships",
+    "element": "listbox \"Options\"",
+    "rule": "aria-required-children",
+    "screen": "Add ACH authorization"
+   },
+   "family": "role-state",
+   "guidance": "Low for optional ARIA or an invalid autocomplete token; high when aria-hidden hides the whole page.",
+   "issueId": null,
+   "key": "role-state:aria-required-children:91738df103a3",
+   "measured": false,
+   "primary": "payments.ach-add",
+   "proposals": [],
+   "rule": "aria-required-children",
+   "screens": 1,
+   "severityDefault": "medium",
+   "source": "scanner",
+   "states": [
+    "payments.ach-add"
+   ],
+   "summary": "aria-required-children: announced as listbox \"Options\". Element has children which are not allowed: li",
+   "title": "Wrong role or state: listbox \"Options\""
+  },
+  {
+   "attachments": [],
+   "attempt": 1,
+   "basis": "violation",
+   "criteria": [
+    "1.3.1"
+   ],
+   "evidence": [
+    {
+     "evidence": {
+      "aria-required-parent": [
+       "group",
+       "listbox"
+      ],
+      "failureSummary": "Fix any of the following:\n  Required ARIA parents role not present: group, listbox"
+     },
+     "occurrence": {
+      "ancestors": [
+       [],
+       [
+        "_subsection_1a7mr_416"
+       ],
+       [
+        "_listbox_1a7mr_18",
+        "_dropShadow_1a7mr_197",
+        "_listboxOpen_1a7mr_377"
+       ],
+       [
+        "_selectWrapper_1a7mr_150"
+       ],
+       [
+        "_comboboxWrapper_1a7mr_6",
+        "_focus_1a7mr_178",
+        "session-replay-block"
+       ],
+       [
+        "_mainContent_1thwe_8"
+       ],
+       [],
+       [
+        "_contactDetailsWrapper_1thwe_40"
+       ]
+      ],
+      "classes": [
+       "_optionWrapper_1a7mr_34"
+      ],
+      "data": {},
+      "heading": "",
+      "landmark": {
+       "name": "",
+       "role": "form"
+      },
+      "layer": "document",
+      "name": "",
+      "rect": [
+       460,
+       444,
+       520,
+       52
+      ],
+      "role": "listitem",
+      "tag": "li",
+      "xpath": "/html/body/div[1]/main[1]/div[1]/div[2]/div[2]/div[3]/div[1]/div[1]/form[1]/div[1]/div[1]/div[1]/ul[1]/li[2]/ul[1]/li[2]"
+     },
+     "state": "payments.ach-add"
+    }
+   ],
+   "evidenceHash": "45e3189e0281215da924f38e9cac0081ab93ca953897b8090dbb7e2f442a2575",
+   "facts": {
+    "announced": "listitem \"\"",
+    "axeSummary": "Required ARIA parents role not present: group, listbox",
+    "criterion": "1.3.1",
+    "criterionName": "Info and Relationships",
+    "element": "listitem in the form landmark",
+    "rule": "aria-required-parent",
+    "screen": "Add ACH authorization"
+   },
+   "family": "role-state",
+   "guidance": "Low for optional ARIA or an invalid autocomplete token; high when aria-hidden hides the whole page.",
+   "issueId": null,
+   "key": "role-state:aria-required-parent:6f5c7a06714c",
+   "measured": false,
+   "primary": "payments.ach-add",
+   "proposals": [],
+   "rule": "aria-required-parent",
+   "screens": 1,
+   "severityDefault": "medium",
+   "source": "scanner",
+   "states": [
+    "payments.ach-add"
+   ],
+   "summary": "aria-required-parent: announced as listitem \"\". Required ARIA parents role not present: group, listbox",
+   "title": "Wrong role or state: listitem in the form landmark"
+  },
+  {
+   "attachments": [],
+   "attempt": 1,
+   "basis": "violation",
+   "criteria": [
+    "1.3.1"
+   ],
+   "evidence": [
+    {
+     "evidence": {
+      "aria-required-parent": [
+       "group",
+       "listbox"
+      ],
+      "failureSummary": "Fix any of the following:\n  Required ARIA parents role not present: group, listbox"
+     },
+     "occurrence": {
+      "ancestors": [
+       [],
+       [
+        "_subsection_1a7mr_416"
+       ],
+       [
+        "_listbox_1a7mr_18",
+        "_dropShadow_1a7mr_197",
+        "_listboxOpen_1a7mr_377"
+       ],
+       [
+        "_selectWrapper_1a7mr_150"
+       ],
+       [
+        "_comboboxWrapper_1a7mr_6",
+        "_focus_1a7mr_178",
+        "session-replay-block"
+       ],
+       [
+        "_mainContent_1thwe_8"
+       ],
+       [],
+       [
+        "_contactDetailsWrapper_1thwe_40"
+       ]
+      ],
+      "classes": [
+       "_optionWrapper_1a7mr_34",
+       "_showDefaultSelectHighlight_1a7mr_63"
+      ],
+      "data": {},
+      "heading": "",
+      "landmark": {
+       "name": "",
+       "role": "form"
+      },
+      "layer": "document",
+      "name": "",
+      "rect": [
+       460,
+       392,
+       520,
+       52
+      ],
+      "role": "listitem",
+      "tag": "li",
+      "xpath": "/html/body/div[1]/main[1]/div[1]/div[2]/div[2]/div[3]/div[1]/div[1]/form[1]/div[1]/div[1]/div[1]/ul[1]/li[2]/ul[1]/li[1]"
+     },
+     "state": "payments.ach-add"
+    }
+   ],
+   "evidenceHash": "45e3189e0281215da924f38e9cac0081ab93ca953897b8090dbb7e2f442a2575",
+   "facts": {
+    "announced": "listitem \"\"",
+    "axeSummary": "Required ARIA parents role not present: group, listbox",
+    "criterion": "1.3.1",
+    "criterionName": "Info and Relationships",
+    "element": "listitem in the form landmark",
+    "rule": "aria-required-parent",
+    "screen": "Add ACH authorization"
+   },
+   "family": "role-state",
+   "guidance": "Low for optional ARIA or an invalid autocomplete token; high when aria-hidden hides the whole page.",
+   "issueId": null,
+   "key": "role-state:aria-required-parent:be25c9c7a15c",
+   "measured": false,
+   "primary": "payments.ach-add",
+   "proposals": [],
+   "rule": "aria-required-parent",
+   "screens": 1,
+   "severityDefault": "medium",
+   "source": "scanner",
+   "states": [
+    "payments.ach-add"
+   ],
+   "summary": "aria-required-parent: announced as listitem \"\". Required ARIA parents role not present: group, listbox",
+   "title": "Wrong role or state: listitem in the form landmark"
+  },
+  {
+   "attachments": [],
+   "attempt": 1,
+   "basis": "violation",
+   "criteria": [
+    "1.3.5"
+   ],
+   "evidence": [
+    {
+     "evidence": {
+      "failureSummary": "Fix all of the following:\n  the autocomplete attribute is incorrectly formatted"
+     },
+     "occurrence": {
+      "ancestors": [
+       [
+        "_textboxWrapper_1a7mr_158",
+        "_focus_1a7mr_178"
+       ],
+       [
+        "_selectWrapper_1a7mr_150"
+       ],
+       [
+        "_comboboxWrapper_1a7mr_6",
+        "_focus_1a7mr_178",
+        "session-replay-block"
+       ],
+       [
+        "_mainContent_1thwe_8"
+       ],
+       [],
+       [
+        "_contactDetailsWrapper_1thwe_40"
+       ],
+       [],
+       [
+        "_contentDiv_bcpsw_53",
+        "_contentDivHeightPreset_bcpsw_62",
+        "_wrapper_1thwe_1"
+       ]
+      ],
+      "classes": [
+       "_textboxInput_1a7mr_250",
+       "_focus_1a7mr_178",
+       "_selectedPlaceholder_1a7mr_293"
+      ],
+      "data": {},
+      "heading": "",
+      "landmark": {
+       "name": "",
+       "role": "form"
+      },
+      "layer": "document",
+      "name": "Vendor",
+      "rect": [
+       460,
+       281,
+       520,
+       37
+      ],
+      "role": "combobox",
+      "tag": "input",
+      "xpath": "/html/body/div[1]/main[1]/div[1]/div[2]/div[2]/div[3]/div[1]/div[1]/form[1]/div[1]/div[1]/div[1]/div[1]/input[1]"
+     },
+     "state": "payments.ach-add"
+    }
+   ],
+   "evidenceHash": "81c997ad6f62b6d4da4023d95b77d37ddec1791839e50531791131780f33d612",
+   "facts": {
+    "announced": "combobox \"Vendor\" [expanded=true, haspopup=listbox]",
+    "axeSummary": "the autocomplete attribute is incorrectly formatted",
+    "criterion": "1.3.5",
+    "criterionName": "Identify Input Purpose",
+    "element": "combobox \"Vendor\"",
+    "rule": "autocomplete-valid",
+    "screen": "Add ACH authorization"
+   },
+   "family": "role-state",
+   "guidance": "Low for optional ARIA or an invalid autocomplete token; high when aria-hidden hides the whole page.",
+   "issueId": null,
+   "key": "role-state:autocomplete-valid:1ed2dc96ec0c",
+   "measured": false,
+   "primary": "payments.ach-add",
+   "proposals": [],
+   "rule": "autocomplete-valid",
+   "screens": 1,
+   "severityDefault": "medium",
+   "source": "scanner",
+   "states": [
+    "payments.ach-add"
+   ],
+   "summary": "autocomplete-valid: announced as combobox \"Vendor\" [expanded=true, haspopup=listbox]. the autocomplete attribute is incorrectly formatted",
+   "title": "Invalid autocomplete value: combobox \"Vendor\""
+  },
+  {
+   "attachments": [],
+   "attempt": 1,
+   "basis": "violation",
+   "criteria": [
+    "1.3.1"
+   ],
+   "evidence": [
+    {
+     "evidence": {
+      "failureSummary": "Fix all of the following:\n  List element has direct children that are not allowed: [role=option]",
+      "values": "[role=option]"
+     },
+     "occurrence": {
+      "ancestors": [
+       [
+        "_subsection_1a7mr_416"
+       ],
+       [
+        "_listbox_1a7mr_18",
+        "_dropShadow_1a7mr_197",
+        "_listboxOpen_1a7mr_377"
+       ],
+       [
+        "_selectWrapper_1a7mr_150"
+       ],
+       [
+        "_comboboxWrapper_1a7mr_6",
+        "_focus_1a7mr_178",
+        "session-replay-block"
+       ],
+       [
+        "_mainContent_1thwe_8"
+       ],
+       [],
+       [
+        "_contactDetailsWrapper_1thwe_40"
+       ],
+       []
+      ],
+      "classes": [],
+      "data": {},
+      "heading": "",
+      "landmark": {
+       "name": "",
+       "role": "form"
+      },
+      "layer": "document",
+      "name": "",
+      "rect": [
+       460,
+       392,
+       520,
+       420
+      ],
+      "role": "list",
+      "tag": "ul",
+      "xpath": "/html/body/div[1]/main[1]/div[1]/div[2]/div[2]/div[3]/div[1]/div[1]/form[1]/div[1]/div[1]/div[1]/ul[1]/li[2]/ul[1]"
+     },
+     "state": "payments.ach-add"
+    }
+   ],
+   "evidenceHash": "f99d10dd8d8aa6cc7d97c063fa383fc5f678623845533ada9b83cffc7eabba4e",
+   "facts": {
+    "announced": "list \"\"",
+    "axeSummary": "List element has direct children that are not allowed: [role=option]",
+    "criterion": "1.3.1",
+    "criterionName": "Info and Relationships",
+    "element": "list in the form landmark",
+    "rule": "list",
+    "screen": "Add ACH authorization"
+   },
+   "family": "structure",
+   "guidance": "Medium when a data table's headers do not reach its cells, or when structure is the only way to tell sections or steps apart.",
+   "issueId": null,
+   "key": "structure:list:aed47eb7cc92",
+   "measured": false,
+   "primary": "payments.ach-add",
+   "proposals": [],
+   "rule": "list",
+   "screens": 1,
+   "severityDefault": "low",
+   "source": "scanner",
+   "states": [
+    "payments.ach-add"
+   ],
+   "summary": "list: announced as list \"\". List element has direct children that are not allowed: [role=option]",
+   "title": "Markup misstates structure: list in the form landmark"
+  },
+  {
+   "attachments": [],
+   "attempt": 1,
+   "basis": "violation",
+   "criteria": [
+    "1.3.1"
+   ],
+   "evidence": [
+    {
+     "evidence": {
+      "failureSummary": "Fix any of the following:\n  List item parent element has a role that is not role=\"list\"",
+      "messageKey": "roleNotValid"
+     },
+     "occurrence": {
+      "ancestors": [
+       [
+        "_listbox_1a7mr_18",
+        "_dropShadow_1a7mr_197",
+        "_listboxOpen_1a7mr_377"
+       ],
+       [
+        "_selectWrapper_1a7mr_150"
+       ],
+       [
+        "_comboboxWrapper_1a7mr_6",
+        "_focus_1a7mr_178",
+        "session-replay-block"
+       ],
+       [
+        "_mainContent_1thwe_8"
+       ],
+       [],
+       [
+        "_contactDetailsWrapper_1thwe_40"
+       ],
+       [],
+       [
+        "_contentDiv_bcpsw_53",
+        "_contentDivHeightPreset_bcpsw_62",
+        "_wrapper_1thwe_1"
+       ]
+      ],
+      "classes": [
+       "_subsection_1a7mr_416"
+      ],
+      "data": {},
+      "heading": "",
+      "landmark": {
+       "name": "",
+       "role": "form"
+      },
+      "layer": "document",
+      "name": "",
+      "rect": [
+       460,
+       356,
+       520,
+       456
+      ],
+      "role": "",
+      "tag": "li",
+      "xpath": "/html/body/div[1]/main[1]/div[1]/div[2]/div[2]/div[3]/div[1]/div[1]/form[1]/div[1]/div[1]/div[1]/ul[1]/li[2]"
+     },
+     "state": "payments.ach-add"
+    }
+   ],
+   "evidenceHash": "10b493c3e86260a01f1c6e10d67bbcaad9d0276606bb2ea6c6b04db127e9236d",
+   "facts": {
+    "announced": " \"\"",
+    "axeSummary": "List item parent element has a role that is not role=\"list\"",
+    "criterion": "1.3.1",
+    "criterionName": "Info and Relationships",
+    "element": "text in the form landmark",
+    "rule": "listitem",
+    "screen": "Add ACH authorization"
+   },
+   "family": "structure",
+   "guidance": "Medium when a data table's headers do not reach its cells, or when structure is the only way to tell sections or steps apart.",
+   "issueId": null,
+   "key": "structure:listitem:9ab959856812",
+   "measured": false,
+   "primary": "payments.ach-add",
+   "proposals": [],
+   "rule": "listitem",
+   "screens": 1,
+   "severityDefault": "low",
+   "source": "scanner",
+   "states": [
+    "payments.ach-add"
+   ],
+   "summary": "listitem: announced as  \"\". List item parent element has a role that is not role=\"list\"",
+   "title": "Markup misstates structure: text in the form landmark"
+  }
+ ],
+ "primaries": [
+  "payments.ach-add"
+ ],
+ "reach": {
+  "baseUrl": "https://demo.mercury.com",
+  "data": "data",
+  "map": "build/map.json",
+  "run": "2026-10-03-1525",
+  "workspace": "a11y"
+ },
+ "run": "2026-10-03-1525"
+}

@@ -1,0 +1,624 @@
+{
+ "area": "settings",
+ "batch": "verify-340",
+ "findings": [
+  {
+   "attachments": [],
+   "attempt": 1,
+   "basis": "violation",
+   "criteria": [
+    "1.4.3"
+   ],
+   "evidence": [
+    {
+     "evidence": {
+      "bgColor": "#ffffff",
+      "contrastRatio": 2.45,
+      "expectedContrastRatio": "4.5:1",
+      "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 2.45 (foreground color: #a5a5aa, background color: #ffffff, font size: 11.3pt (15px), font weight: normal). Expected contrast ratio of 4.5:1",
+      "fgColor": "#a5a5aa",
+      "fontSize": "11.3pt (15px)",
+      "fontWeight": "normal",
+      "messageKey": null
+     },
+     "occurrence": {
+      "ancestors": [
+       [
+        "_nameAndMaybeEmail_kqdyx_8",
+        "_overflowHidden_kqdyx_13"
+       ],
+       [
+        "_wrapper_kqdyx_1"
+       ],
+       [
+        "_tooltipAnchor_18bac_4",
+        "_overflowHidden_kqdyx_13"
+       ],
+       [
+        "_orgNameAndBadge_2f0es_60",
+        "_grayedOut_2f0es_1"
+       ],
+       [
+        "_tableCell_1waxt_102",
+        "_notCollapsible_1waxt_40",
+        "_cellOrgName_2f0es_51"
+       ],
+       [
+        "_tableRow_2f0es_21",
+        "_tableRow_1waxt_94",
+        "_hoverDisabled_1waxt_108",
+        "_selectDisabled_1waxt_106"
+       ],
+       [
+        "_cardTable_1waxt_4"
+       ],
+       [
+        "_tableAndLoadingStateWrapper_1waxt_313"
+       ]
+      ],
+      "classes": [
+       "_bodyDefault_qaod7_40",
+       "_ellipsis_qaod7_116"
+      ],
+      "data": {},
+      "heading": "6 accounts",
+      "landmark": {
+       "name": "",
+       "role": "main"
+      },
+      "layer": "document",
+      "name": "",
+      "rect": [
+       292,
+       264,
+       96,
+       24
+      ],
+      "role": "",
+      "tag": "span",
+      "xpath": "/html/body/div[1]/main[1]/div[1]/div[1]/div[4]/div[1]/div[1]/div[3]/div[1]/div[1]/div[1]/div[3]/div[1]/div[1]/div[1]/div[1]/div[2]/span[1]"
+     },
+     "state": "settings.panorama"
+    }
+   ],
+   "evidenceHash": "f73583c946fdd3a6d04da56c7d4c263b7b2ce09c5a3432fb74888f7b5ef58df1",
+   "facts": {
+    "bg": "#ffffff",
+    "criterion": "1.4.3",
+    "criterionName": "Contrast (Minimum)",
+    "element": "text in \"<n> accounts\"",
+    "fg": "#a5a5aa",
+    "ratio": "2.45",
+    "required": "4.5",
+    "rule": "color-contrast",
+    "screen": "All Accounts (panorama)",
+    "screens": 1
+   },
+   "family": "contrast",
+   "guidance": "High under 2:1, or under 3:1 for essential text.",
+   "issueId": null,
+   "key": "contrast:color-contrast:143e041394b4",
+   "measured": true,
+   "primary": "settings.panorama",
+   "proposals": [],
+   "rule": "color-contrast",
+   "screens": 1,
+   "severityDefault": "medium",
+   "source": "scanner",
+   "states": [
+    "settings.panorama"
+   ],
+   "summary": "axe color-contrast: #a5a5aa on #ffffff measures 2.45:1; AA needs 4.5:1.",
+   "title": "Low contrast: text in \"<n> accounts\""
+  },
+  {
+   "attachments": [],
+   "attempt": 1,
+   "basis": "violation",
+   "criteria": [
+    "1.4.3"
+   ],
+   "evidence": [
+    {
+     "evidence": {
+      "bgColor": "#ffffff",
+      "contrastRatio": 2.18,
+      "expectedContrastRatio": "4.5:1",
+      "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 2.18 (foreground color: #afafb4, background color: #ffffff, font size: 9.0pt (12px), font weight: normal). Expected contrast ratio of 4.5:1",
+      "fgColor": "#afafb4",
+      "fontSize": "9.0pt (12px)",
+      "fontWeight": "normal",
+      "messageKey": null
+     },
+     "occurrence": {
+      "ancestors": [
+       [
+        "_badge_1u6of_4",
+        "_userRole_1u6of_169"
+       ],
+       [
+        "_orgNameAndBadge_2f0es_60",
+        "_grayedOut_2f0es_1"
+       ],
+       [
+        "_tableCell_1waxt_102",
+        "_notCollapsible_1waxt_40",
+        "_cellOrgName_2f0es_51"
+       ],
+       [
+        "_tableRow_2f0es_21",
+        "_tableRow_1waxt_94",
+        "_hoverDisabled_1waxt_108",
+        "_selectDisabled_1waxt_106"
+       ],
+       [
+        "_cardTable_1waxt_4"
+       ],
+       [
+        "_tableAndLoadingStateWrapper_1waxt_313"
+       ],
+       [
+        "_tableWrapper_1waxt_304",
+        "_tableAndCardWrapper_2f0es_27"
+       ],
+       [
+        "_contents_2f0es_11"
+       ]
+      ],
+      "classes": [
+       "_tiny_qaod7_67"
+      ],
+      "data": {},
+      "heading": "6 accounts",
+      "landmark": {
+       "name": "",
+       "role": "main"
+      },
+      "layer": "document",
+      "name": "",
+      "rect": [
+       405,
+       266,
+       57,
+       20
+      ],
+      "role": "",
+      "tag": "span",
+      "xpath": "/html/body/div[1]/main[1]/div[1]/div[1]/div[4]/div[1]/div[1]/div[3]/div[1]/div[1]/div[1]/div[3]/div[1]/div[1]/span[1]/span[1]"
+     },
+     "state": "settings.panorama"
+    }
+   ],
+   "evidenceHash": "d5385b7aa9ae15ac8d1862e03f01bb787b8b90cf5814af8ed4e4b3778cfbd37e",
+   "facts": {
+    "bg": "#ffffff",
+    "criterion": "1.4.3",
+    "criterionName": "Contrast (Minimum)",
+    "element": "text in \"<n> accounts\"",
+    "fg": "#afafb4",
+    "ratio": "2.18",
+    "required": "4.5",
+    "rule": "color-contrast",
+    "screen": "All Accounts (panorama)",
+    "screens": 1
+   },
+   "family": "contrast",
+   "guidance": "High under 2:1, or under 3:1 for essential text.",
+   "issueId": null,
+   "key": "contrast:color-contrast:407aca172af3",
+   "measured": true,
+   "primary": "settings.panorama",
+   "proposals": [],
+   "rule": "color-contrast",
+   "screens": 1,
+   "severityDefault": "medium",
+   "source": "scanner",
+   "states": [
+    "settings.panorama"
+   ],
+   "summary": "axe color-contrast: #afafb4 on #ffffff measures 2.18:1; AA needs 4.5:1.",
+   "title": "Low contrast: text in \"<n> accounts\""
+  },
+  {
+   "attachments": [],
+   "attempt": 1,
+   "basis": "candidate",
+   "criteria": [
+    "2.1.1"
+   ],
+   "evidence": [
+    {
+     "evidence": {
+      "end": "body",
+      "focusable": false,
+      "source": "pointer",
+      "stops": 28
+     },
+     "occurrence": {
+      "ancestors": [
+       [
+        "_tiny_qaod7_67",
+        "_text-tertiary_12t49_1",
+        "_tableHeader_1waxt_60",
+        "_notCollapsible_1waxt_40",
+        "_cellOrgName_2f0es_51"
+       ],
+       [
+        "_tableHeaders_1waxt_60",
+        "_tableHeader_2f0es_15"
+       ],
+       [
+        "_cardTable_1waxt_4"
+       ],
+       [
+        "_tableAndLoadingStateWrapper_1waxt_313"
+       ],
+       [
+        "_tableWrapper_1waxt_304",
+        "_tableAndCardWrapper_2f0es_27"
+       ],
+       [
+        "_contents_2f0es_11"
+       ],
+       [
+        "_page_15h2q_38"
+       ],
+       [
+        "_dashboardContent_15h2q_45"
+       ]
+      ],
+      "classes": [
+       "_tiny_qaod7_67",
+       "_text-tertiary_12t49_1",
+       "_header_1uc6n_1"
+      ],
+      "data": {},
+      "heading": "6 accounts",
+      "landmark": {
+       "name": "",
+       "role": "main"
+      },
+      "layer": "document",
+      "name": "",
+      "rect": [
+       252,
+       226,
+       66,
+       20
+      ],
+      "role": "generic",
+      "tag": "div",
+      "xpath": "/html/body/div[1]/main[1]/div[1]/div[1]/div[4]/div[1]/div[1]/div[3]/div[1]/div[1]/div[1]/div[2]/div[1]/div[1]"
+     },
+     "state": "settings.panorama"
+    }
+   ],
+   "evidenceHash": "2ad439814915d4cdcd3df8d4866ba127de3e160183464aed557e818fd958ef34",
+   "facts": {
+    "axeSummary": "",
+    "criterion": "2.1.1",
+    "criterionName": "Keyboard",
+    "element": "text in \"<n> accounts\"",
+    "rule": "not-reached",
+    "screen": "All Accounts (panorama)",
+    "stops": "28"
+   },
+   "family": "keyboard",
+   "guidance": "High if a task cannot be completed without a mouse.",
+   "issueId": null,
+   "key": "keyboard:not-reached:f9fa8d95a684",
+   "measured": false,
+   "primary": "settings.panorama",
+   "proposals": [],
+   "rule": "not-reached",
+   "screens": 1,
+   "severityDefault": "medium",
+   "source": "scanner",
+   "states": [
+    "settings.panorama"
+   ],
+   "summary": "The Tab walk visited 28 stops and never reached the text in \"<n> accounts\", which responds to a click.",
+   "title": "Not reachable by keyboard: text in \"<n> accounts\""
+  },
+  {
+   "attachments": [],
+   "attempt": 1,
+   "basis": "candidate",
+   "criteria": [
+    "2.1.1"
+   ],
+   "evidence": [
+    {
+     "evidence": {
+      "end": "body",
+      "focusable": false,
+      "source": "pointer",
+      "stops": 28
+     },
+     "occurrence": {
+      "ancestors": [
+       [
+        "_tiny_qaod7_67",
+        "_text-tertiary_12t49_1",
+        "_tableHeader_1waxt_60",
+        "_notCollapsible_1waxt_40",
+        "_cellBalance_2f0es_68"
+       ],
+       [
+        "_tableHeaders_1waxt_60",
+        "_tableHeader_2f0es_15"
+       ],
+       [
+        "_cardTable_1waxt_4"
+       ],
+       [
+        "_tableAndLoadingStateWrapper_1waxt_313"
+       ],
+       [
+        "_tableWrapper_1waxt_304",
+        "_tableAndCardWrapper_2f0es_27"
+       ],
+       [
+        "_contents_2f0es_11"
+       ],
+       [
+        "_page_15h2q_38"
+       ],
+       [
+        "_dashboardContent_15h2q_45"
+       ]
+      ],
+      "classes": [
+       "_tiny_qaod7_67",
+       "_text-tertiary_12t49_1",
+       "_header_1uc6n_1"
+      ],
+      "data": {},
+      "heading": "6 accounts",
+      "landmark": {
+       "name": "",
+       "role": "main"
+      },
+      "layer": "document",
+      "name": "",
+      "rect": [
+       723,
+       226,
+       45,
+       20
+      ],
+      "role": "generic",
+      "tag": "div",
+      "xpath": "/html/body/div[1]/main[1]/div[1]/div[1]/div[4]/div[1]/div[1]/div[3]/div[1]/div[1]/div[1]/div[2]/div[2]/div[1]"
+     },
+     "state": "settings.panorama"
+    }
+   ],
+   "evidenceHash": "2ad439814915d4cdcd3df8d4866ba127de3e160183464aed557e818fd958ef34",
+   "facts": {
+    "axeSummary": "",
+    "criterion": "2.1.1",
+    "criterionName": "Keyboard",
+    "element": "text in \"<n> accounts\"",
+    "rule": "not-reached",
+    "screen": "All Accounts (panorama)",
+    "stops": "28"
+   },
+   "family": "keyboard",
+   "guidance": "High if a task cannot be completed without a mouse.",
+   "issueId": null,
+   "key": "keyboard:not-reached:ffbfe986aadc",
+   "measured": false,
+   "primary": "settings.panorama",
+   "proposals": [],
+   "rule": "not-reached",
+   "screens": 1,
+   "severityDefault": "medium",
+   "source": "scanner",
+   "states": [
+    "settings.panorama"
+   ],
+   "summary": "The Tab walk visited 28 stops and never reached the text in \"<n> accounts\", which responds to a click.",
+   "title": "Not reachable by keyboard: text in \"<n> accounts\""
+  },
+  {
+   "attachments": [],
+   "attempt": 1,
+   "basis": "violation",
+   "criteria": [
+    "4.1.2"
+   ],
+   "evidence": [
+    {
+     "evidence": {
+      "failureSummary": "Fix any of the following:\n  Element does not have inner text that is visible to screen readers\n  aria-label attribute does not exist or is empty\n  aria-labelledby attribute does not exist, references elements that do not exist or references elements that are empty\n  Element has no title attribute\n  Element does not have an implicit (wrapped) <label>\n  Element does not have an explicit <label>\n  Element's default semantics were not overridden with role=\"none\" or role=\"presentation\"",
+      "messageKey": "noAttr"
+     },
+     "occurrence": {
+      "ancestors": [
+       [
+        "_tableRow_2f0es_21",
+        "_tableRow_1waxt_94",
+        "_hoverDisabled_1waxt_108",
+        "_selectDisabled_1waxt_106"
+       ],
+       [
+        "_cardTable_1waxt_4"
+       ],
+       [
+        "_tableAndLoadingStateWrapper_1waxt_313"
+       ],
+       [
+        "_tableWrapper_1waxt_304",
+        "_tableAndCardWrapper_2f0es_27"
+       ],
+       [
+        "_contents_2f0es_11"
+       ],
+       [
+        "_page_15h2q_38"
+       ],
+       [
+        "_dashboardContent_15h2q_45"
+       ],
+       [
+        "_layout_15h2q_18"
+       ]
+      ],
+      "classes": [
+       "_arrow_1waxt_173"
+      ],
+      "data": {},
+      "heading": "6 accounts",
+      "landmark": {
+       "name": "",
+       "role": "main"
+      },
+      "layer": "document",
+      "name": "",
+      "rect": [
+       748,
+       252,
+       32,
+       48
+      ],
+      "role": "button",
+      "tag": "button",
+      "xpath": "/html/body/div[1]/main[1]/div[1]/div[1]/div[4]/div[1]/div[1]/div[3]/div[1]/div[1]/div[1]/div[3]/button[1]"
+     },
+     "state": "settings.panorama"
+    }
+   ],
+   "evidenceHash": "fbfb770a48a3a3534e8c690617ca3c0e628f380f31b7cd8f1674a630d77a66ef",
+   "facts": {
+    "announced": "button \"\"",
+    "axeSummary": "Element does not have inner text that is visible to screen readers; aria-label attribute does not exist or is empty; aria-labelledby attribute does not exist,…",
+    "criterion": "4.1.2",
+    "criterionName": "Name, Role, Value",
+    "element": "button in \"<n> accounts\"",
+    "rule": "button-name",
+    "screen": "All Accounts (panorama)"
+   },
+   "family": "name",
+   "guidance": "High for an unnamed form control or the sole primary action.",
+   "issueId": null,
+   "key": "name:button-name:a6c6bb654050",
+   "measured": false,
+   "primary": "settings.panorama",
+   "proposals": [],
+   "rule": "button-name",
+   "screens": 1,
+   "severityDefault": "medium",
+   "source": "scanner",
+   "states": [
+    "settings.panorama"
+   ],
+   "summary": "button-name: announced as button \"\". Element does not have inner text that is visible to screen readers; aria-label attribute does not exist or is empty; aria-labelledby attribute does not exist,…",
+   "title": "Missing or unclear name: button in \"<n> accounts\""
+  },
+  {
+   "attachments": [],
+   "attempt": 1,
+   "basis": "violation",
+   "criteria": [
+    "4.1.2"
+   ],
+   "evidence": [
+    {
+     "evidence": {
+      "failureSummary": "Fix any of the following:\n  Element does not have inner text that is visible to screen readers\n  aria-label attribute does not exist or is empty\n  aria-labelledby attribute does not exist, references elements that do not exist or references elements that are empty\n  Element has no title attribute\n  Element does not have an implicit (wrapped) <label>\n  Element does not have an explicit <label>\n  Element's default semantics were not overridden with role=\"none\" or role=\"presentation\"",
+      "messageKey": "noAttr"
+     },
+     "occurrence": {
+      "ancestors": [
+       [
+        "_tableRow_2f0es_21",
+        "_tableRow_1waxt_94"
+       ],
+       [
+        "_cardTable_1waxt_4"
+       ],
+       [
+        "_tableAndLoadingStateWrapper_1waxt_313"
+       ],
+       [
+        "_tableWrapper_1waxt_304",
+        "_tableAndCardWrapper_2f0es_27"
+       ],
+       [
+        "_contents_2f0es_11"
+       ],
+       [
+        "_page_15h2q_38"
+       ],
+       [
+        "_dashboardContent_15h2q_45"
+       ],
+       [
+        "_layout_15h2q_18"
+       ]
+      ],
+      "classes": [
+       "_arrow_1waxt_173"
+      ],
+      "data": {},
+      "heading": "6 accounts",
+      "landmark": {
+       "name": "",
+       "role": "main"
+      },
+      "layer": "document",
+      "name": "",
+      "rect": [
+       748,
+       300,
+       32,
+       48
+      ],
+      "role": "button",
+      "tag": "button",
+      "xpath": "/html/body/div[1]/main[1]/div[1]/div[1]/div[4]/div[1]/div[1]/div[3]/div[1]/div[1]/div[1]/div[4]/button[1]"
+     },
+     "state": "settings.panorama"
+    }
+   ],
+   "evidenceHash": "fbfb770a48a3a3534e8c690617ca3c0e628f380f31b7cd8f1674a630d77a66ef",
+   "facts": {
+    "announced": "button \"\"",
+    "axeSummary": "Element does not have inner text that is visible to screen readers; aria-label attribute does not exist or is empty; aria-labelledby attribute does not exist,…",
+    "criterion": "4.1.2",
+    "criterionName": "Name, Role, Value",
+    "element": "button in \"<n> accounts\"",
+    "rule": "button-name",
+    "screen": "All Accounts (panorama)"
+   },
+   "family": "name",
+   "guidance": "High for an unnamed form control or the sole primary action.",
+   "issueId": null,
+   "key": "name:button-name:c3938d54b464",
+   "measured": false,
+   "primary": "settings.panorama",
+   "proposals": [],
+   "rule": "button-name",
+   "screens": 1,
+   "severityDefault": "medium",
+   "source": "scanner",
+   "states": [
+    "settings.panorama"
+   ],
+   "summary": "button-name: announced as button \"\". Element does not have inner text that is visible to screen readers; aria-label attribute does not exist or is empty; aria-labelledby attribute does not exist,…",
+   "title": "Missing or unclear name: button in \"<n> accounts\""
+  }
+ ],
+ "primaries": [
+  "settings.panorama"
+ ],
+ "reach": {
+  "baseUrl": "https://demo.mercury.com",
+  "data": "data",
+  "map": "build/map.json",
+  "run": "2026-10-03-1525",
+  "workspace": "a11y"
+ },
+ "run": "2026-10-03-1525"
+}

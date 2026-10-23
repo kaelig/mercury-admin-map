@@ -1,0 +1,20 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Native checkboxes</title>
+<style>
+  body { font: 16px/1.5 Arial, sans-serif; color: #1a1a1a; background: #ffffff; margin: 24px; }
+  .opt { height: 16px; line-height: 16px; }
+</style>
+</head>
+<body>
+<main>
+  <h1>Notifications</h1>
+  <!-- Two default (user-agent sized) checkboxes 16 px apart: the circles overlap, but the user-agent
+     control exception may apply, so each is a candidate rather than a failure. -->
+  <div class="opt"><input type="checkbox" aria-label="Email"></div>
+  <div class="opt"><input type="checkbox" aria-label="SMS"></div>
+</main>
+</body>
+</html>

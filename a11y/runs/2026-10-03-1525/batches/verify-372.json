@@ -1,0 +1,211 @@
+{
+ "area": "transactions",
+ "batch": "verify-372",
+ "findings": [
+  {
+   "attachments": [],
+   "attempt": 1,
+   "basis": "violation",
+   "criteria": [
+    "1.3.5"
+   ],
+   "evidence": [
+    {
+     "evidence": {
+      "failureSummary": "Fix all of the following:\n  the autocomplete attribute is incorrectly formatted"
+     },
+     "occurrence": {
+      "ancestors": [
+       [
+        "_inputWrapper_11c85_6"
+       ],
+       [
+        "_wrapper_1xgdp_8",
+        "_inactiveGlCombobox_16rxx_43"
+       ],
+       [
+        "_wrapper_16rxx_1"
+       ],
+       [
+        "_tooltipAnchor_18bac_4"
+       ],
+       [
+        "_accountingCategorizationSelectComboboxWrapper_lz19l_1"
+       ],
+       [
+        "_panelSection_d3i56_148"
+       ],
+       [
+        "_panelBody_d3i56_64"
+       ],
+       [
+        "_large_kwlx6_9",
+        "_noHover_3n0se_28",
+        "_shadow_3n0se_25",
+        "_raisedBackground_3n0se_45",
+        "_panel_d3i56_55",
+        "_detailsCardPanel_15kl9_287"
+       ]
+      ],
+      "classes": [
+       "_input_11c85_6"
+      ],
+      "data": {
+       "data-1p-ignore": "true",
+       "data-active-item": "true",
+       "data-bwignore": "true",
+       "data-lpignore": "true"
+      },
+      "heading": "",
+      "landmark": {
+       "name": "",
+       "role": "complementary"
+      },
+      "layer": "top",
+      "name": "GL Code",
+      "rect": [
+       1012,
+       647,
+       343,
+       40
+      ],
+      "role": "combobox",
+      "tag": "input",
+      "xpath": "/html/body/div[4]/aside[1]/div[1]/div[1]/section[2]/div[4]/div[1]/div[1]/div[1]/div[1]/input[1]"
+     },
+     "state": "transactions.detail-pending-deposit"
+    }
+   ],
+   "evidenceHash": "3e73150786597140e5d05e503776c869c4e89acb07b638b5b847c2d48c9b0549",
+   "facts": {
+    "announced": "combobox \"GL Code\" [expanded=false, haspopup=listbox]",
+    "axeSummary": "the autocomplete attribute is incorrectly formatted",
+    "criterion": "1.3.5",
+    "criterionName": "Identify Input Purpose",
+    "element": "combobox \"GL Code\"",
+    "rule": "autocomplete-valid",
+    "screen": "Pending check deposit detail"
+   },
+   "family": "role-state",
+   "guidance": "Low for optional ARIA or an invalid autocomplete token; high when aria-hidden hides the whole page.",
+   "issueId": null,
+   "key": "role-state:autocomplete-valid:02800d4622ac",
+   "measured": false,
+   "primary": "transactions.detail-pending-deposit",
+   "proposals": [],
+   "rule": "autocomplete-valid",
+   "screens": 1,
+   "severityDefault": "medium",
+   "source": "scanner",
+   "states": [
+    "transactions.detail-pending-deposit"
+   ],
+   "summary": "autocomplete-valid: announced as combobox \"GL Code\" [expanded=false, haspopup=listbox]. the autocomplete attribute is incorrectly formatted",
+   "title": "Invalid autocomplete value: combobox \"GL Code\""
+  },
+  {
+   "attachments": [],
+   "attempt": 1,
+   "basis": "violation",
+   "criteria": [
+    "1.3.1"
+   ],
+   "evidence": [
+    {
+     "evidence": {
+      "failureSummary": "Fix any of the following:\n  Description list item does not have a <dl> parent element"
+     },
+     "occurrence": {
+      "ancestors": [
+       [
+        "_container_16ibf_1"
+       ],
+       [
+        "_panelSection_d3i56_148"
+       ],
+       [
+        "_panelBody_d3i56_64"
+       ],
+       [
+        "_large_kwlx6_9",
+        "_noHover_3n0se_28",
+        "_shadow_3n0se_25",
+        "_raisedBackground_3n0se_45",
+        "_panel_d3i56_55",
+        "_detailsCardPanel_15kl9_287"
+       ],
+       [
+        "_transitionWrapper_d3i56_5",
+        "_visible_d3i56_19",
+        "_detailsCardWrapper_15kl9_247"
+       ],
+       [
+        "_drawerRoot_15kl9_6"
+       ]
+      ],
+      "classes": [
+       "_tiny_qaod7_67",
+       "_text-tertiary_12t49_1",
+       "_leftSide_16ibf_13"
+      ],
+      "data": {},
+      "heading": "",
+      "landmark": {
+       "name": "",
+       "role": "complementary"
+      },
+      "layer": "top",
+      "name": "Check images",
+      "rect": [
+       1012,
+       380,
+       79,
+       20
+      ],
+      "role": "term",
+      "tag": "dt",
+      "xpath": "/html/body/div[4]/aside[1]/div[1]/div[1]/section[2]/div[1]/dt[1]"
+     },
+     "state": "transactions.detail-pending-deposit"
+    }
+   ],
+   "evidenceHash": "a504fb76484d7436f17cf442baaae1ac9e14f6891075b37a2d93445be9a7681d",
+   "facts": {
+    "announced": "term \"Check images\"",
+    "axeSummary": "Description list item does not have a <dl> parent element",
+    "criterion": "1.3.1",
+    "criterionName": "Info and Relationships",
+    "element": "term \"Check images\"",
+    "rule": "dlitem",
+    "screen": "Pending check deposit detail"
+   },
+   "family": "structure",
+   "guidance": "Medium when a data table's headers do not reach its cells, or when structure is the only way to tell sections or steps apart.",
+   "issueId": null,
+   "key": "structure:dlitem:ac67048749d2",
+   "measured": false,
+   "primary": "transactions.detail-pending-deposit",
+   "proposals": [],
+   "rule": "dlitem",
+   "screens": 1,
+   "severityDefault": "low",
+   "source": "scanner",
+   "states": [
+    "transactions.detail-pending-deposit"
+   ],
+   "summary": "dlitem: announced as term \"Check images\". Description list item does not have a <dl> parent element",
+   "title": "Markup misstates structure: term \"Check images\""
+  }
+ ],
+ "primaries": [
+  "transactions.detail-pending-deposit"
+ ],
+ "reach": {
+  "baseUrl": "https://demo.mercury.com",
+  "data": "data",
+  "map": "build/map.json",
+  "run": "2026-10-03-1525",
+  "workspace": "a11y"
+ },
+ "run": "2026-10-03-1525"
+}

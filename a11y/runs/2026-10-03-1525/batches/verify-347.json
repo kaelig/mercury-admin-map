@@ -1,0 +1,193 @@
+{
+ "area": "settings",
+ "batch": "verify-347",
+ "findings": [
+  {
+   "attachments": [],
+   "attempt": 1,
+   "basis": "candidate",
+   "criteria": [
+    "2.5.8"
+   ],
+   "evidence": [
+    {
+     "evidence": {
+      "agree": false,
+      "axe": "pass",
+      "exception": null,
+      "height": 15,
+      "offset": 0,
+      "own": "fail",
+      "passedBy": null,
+      "width": 168.11
+     },
+     "occurrence": {
+      "ancestors": [
+       [],
+       [
+        "_stack_il1fi_18",
+        "_direction-column_il1fi_24",
+        "_gap-space-100_il1fi_1"
+       ],
+       [
+        "_roleAccessSummary_ah60d_3"
+       ],
+       [
+        "_accordionItemBody_1q1xu_17",
+        "_accordionItemBody_bnhk7_6"
+       ],
+       [
+        "_content_1q1xu_133"
+       ],
+       [
+        "_expandable_1q1xu_10"
+       ],
+       [
+        "_accordionWrapper_1q1xu_3",
+        "_accordionBorder_1q1xu_7",
+        "_accordionWrapper_bnhk7_1"
+       ],
+       [
+        "_radioGroup_phe2n_23",
+        "_radioGroup_9dnjl_1",
+        "_columnLayout_phe2n_28"
+       ]
+      ],
+      "classes": [
+       "_link_ah60d_11",
+       "_link_ual8v_4",
+       "_variantPrimary_ual8v_33"
+      ],
+      "data": {},
+      "disabled": false,
+      "heading": "Permissions",
+      "landmark": {
+       "name": "Employee Can be issued cards, but cannot view sensitive bank account info",
+       "role": "region"
+      },
+      "layer": "document",
+      "name": "View all Employee details",
+      "rect": [
+       551,
+       484,
+       168,
+       15
+      ],
+      "role": "link",
+      "tag": "a",
+      "xpath": "/html/body/div[1]/main[1]/div[1]/div[2]/div[2]/div[3]/form[1]/section[1]/div[2]/fieldset[1]/div[1]/div[1]/div[1]/div[1]/div[1]/div[2]/span[1]/a[1]"
+     },
+     "state": "settings.role-accountant"
+    },
+    {
+     "evidence": {
+      "agree": false,
+      "axe": "pass",
+      "exception": null,
+      "height": 15,
+      "offset": 0,
+      "own": "fail",
+      "passedBy": null,
+      "width": 168.11
+     },
+     "occurrence": {
+      "ancestors": [
+       [],
+       [
+        "_stack_il1fi_18",
+        "_direction-column_il1fi_24",
+        "_gap-space-100_il1fi_1"
+       ],
+       [
+        "_roleAccessSummary_ah60d_3"
+       ],
+       [
+        "_accordionItemBody_1q1xu_17",
+        "_accordionItemBody_bnhk7_6"
+       ],
+       [
+        "_content_1q1xu_133"
+       ],
+       [
+        "_expandable_1q1xu_10"
+       ],
+       [
+        "_accordionWrapper_1q1xu_3",
+        "_accordionBorder_1q1xu_7",
+        "_accordionWrapper_bnhk7_1"
+       ],
+       [
+        "_radioGroup_phe2n_23",
+        "_radioGroup_9dnjl_1",
+        "_columnLayout_phe2n_28"
+       ]
+      ],
+      "classes": [
+       "_link_ah60d_11",
+       "_link_ual8v_4",
+       "_variantPrimary_ual8v_33"
+      ],
+      "data": {},
+      "disabled": false,
+      "heading": "Permissions",
+      "landmark": {
+       "name": "Employee Can be issued cards, but cannot view sensitive bank account info",
+       "role": "region"
+      },
+      "layer": "document",
+      "name": "View all Employee details",
+      "rect": [
+       551,
+       484,
+       168,
+       15
+      ],
+      "role": "link",
+      "tag": "a",
+      "xpath": "/html/body/div[1]/main[1]/div[1]/div[2]/div[2]/div[3]/form[1]/section[1]/div[2]/fieldset[1]/div[1]/div[1]/div[1]/div[1]/div[1]/div[2]/span[1]/a[1]"
+     },
+     "state": "settings.role-finance-lead"
+    }
+   ],
+   "evidenceHash": "a4a439caa3712676021fc3fd576f45c6d24f26926c72ce950fc8d85a734eb3d3",
+   "facts": {
+    "criterion": "2.5.8",
+    "criterionName": "Target Size (Minimum)",
+    "element": "link \"View all Employee details\"",
+    "offset": "0",
+    "rule": "target-size-own",
+    "screen": "Assign Role — Accountant",
+    "screens": 5,
+    "size": "168×15"
+   },
+   "family": "target-size",
+   "guidance": "Medium next to destructive or financial controls.",
+   "issueId": null,
+   "key": "target-size:target-size-own:13e57df1977d",
+   "measured": true,
+   "primary": "settings.role-accountant",
+   "proposals": [],
+   "rule": "target-size-own",
+   "screens": 5,
+   "severityDefault": "low",
+   "source": "scanner",
+   "states": [
+    "settings.role-accountant",
+    "settings.role-finance-lead"
+   ],
+   "summary": "target-size-own: 168×15 px; the widest circle centered on it that clears other targets is 0 px, and the spacing exception needs 24 px.",
+   "title": "Target under 24×24 px: link \"View all Employee details\""
+  }
+ ],
+ "primaries": [
+  "settings.role-accountant"
+ ],
+ "reach": {
+  "baseUrl": "https://demo.mercury.com",
+  "data": "data",
+  "map": "build/map.json",
+  "run": "2026-10-03-1525",
+  "workspace": "a11y"
+ },
+ "run": "2026-10-03-1525"
+}

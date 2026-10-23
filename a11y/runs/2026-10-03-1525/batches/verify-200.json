@@ -1,0 +1,221 @@
+{
+ "area": "home",
+ "batch": "verify-200",
+ "findings": [
+  {
+   "attachments": [],
+   "attempt": 1,
+   "basis": "failure",
+   "criteria": [
+    "2.4.7",
+    "2.4.3"
+   ],
+   "evidence": [
+    {
+     "evidence": {
+      "box": [
+       1236,
+       289,
+       91,
+       24
+      ],
+      "focus": {
+       "ancestors": [
+        [
+         "_bodyDefault_qaod7_40",
+         "_label_3k8xy_58",
+         "_hidden_3k8xy_75"
+        ],
+        [
+         "_dsToggleSwitchWrapper_3k8xy_3",
+         "_rightLabel_3k8xy_34"
+        ],
+        [
+         "_tooltipAnchor_18bac_4"
+        ],
+        [
+         "_toggle_1dkig_32"
+        ],
+        [
+         "_policyToggle_1dkig_1"
+        ],
+        [
+         "_policyToggleContainer_1dkig_1"
+        ],
+        [],
+        [
+         "_approvalsSection_w1wbn_19"
+        ]
+       ],
+       "classes": [
+        "_text-link_12t49_1",
+        "_helpMenuButton_gz38q_1",
+        "_link_ual8v_4",
+        "_underlineOnHover_ual8v_15"
+       ],
+       "data": {},
+       "heading": "Approval Rules",
+       "landmark": {
+        "name": "",
+        "role": "main"
+       },
+       "layer": "document",
+       "name": "Learn more",
+       "rect": [
+        1236,
+        289,
+        91,
+        24
+       ],
+       "role": "button",
+       "tag": "span",
+       "xpath": "/html/body/div[1]/main[1]/div[1]/div[1]/div[4]/div[1]/div[2]/div[2]/div[1]/div[1]/div[1]/div[2]/div[1]/div[3]/div[1]/div[1]/label[1]/span[1]"
+      },
+      "hidden": "clipped",
+      "previous": {
+       "ancestors": [
+        [
+         "_toggle_1dkig_32"
+        ],
+        [
+         "_policyToggle_1dkig_1"
+        ],
+        [
+         "_policyToggleContainer_1dkig_1"
+        ],
+        [],
+        [
+         "_approvalsSection_w1wbn_19"
+        ],
+        [
+         "_approvalsPageContent_w1wbn_10"
+        ],
+        [
+         "_approvalsPageWrapper_w1wbn_1"
+        ],
+        [
+         "_pageContent_809q8_151",
+         "_pageContentWidth_809q8_184",
+         "_footerPadding_809q8_115"
+        ]
+       ],
+       "classes": [
+        "_tooltipAnchor_18bac_4"
+       ],
+       "data": {
+        "data-focus-visible": "true"
+       },
+       "heading": "Approval Rules",
+       "landmark": {
+        "name": "",
+        "role": "main"
+       },
+       "layer": "document",
+       "name": "Dual admin approval requires a second admin to approve sensitive actions—such as payments exceeding the daily maximum (if enabled), inviting users with Admin or money movement access, resetting 2FA, or editing sensitive policies. Learn more",
+       "rect": [
+        1241,
+        279,
+        40,
+        20
+       ],
+       "role": "generic",
+       "tag": "div",
+       "xpath": "/html/body/div[1]/main[1]/div[1]/div[1]/div[4]/div[1]/div[2]/div[2]/div[1]/div[1]/div[1]/div[2]/div[1]/div[3]/div[1]"
+      },
+      "stop": 36,
+      "stops": 40
+     },
+     "occurrence": {
+      "ancestors": [
+       [
+        "_bodyDefault_qaod7_40",
+        "_label_3k8xy_58",
+        "_hidden_3k8xy_75"
+       ],
+       [
+        "_dsToggleSwitchWrapper_3k8xy_3",
+        "_rightLabel_3k8xy_34"
+       ],
+       [
+        "_tooltipAnchor_18bac_4"
+       ],
+       [
+        "_toggle_1dkig_32"
+       ],
+       [
+        "_policyToggle_1dkig_1"
+       ],
+       [
+        "_policyToggleContainer_1dkig_1"
+       ],
+       [],
+       [
+        "_approvalsSection_w1wbn_19"
+       ]
+      ],
+      "classes": [
+       "_text-link_12t49_1",
+       "_helpMenuButton_gz38q_1",
+       "_link_ual8v_4",
+       "_underlineOnHover_ual8v_15"
+      ],
+      "data": {},
+      "heading": "Approval Rules",
+      "landmark": {
+       "name": "",
+       "role": "main"
+      },
+      "layer": "document",
+      "name": "Learn more",
+      "rect": [
+       1236,
+       289,
+       91,
+       24
+      ],
+      "role": "button",
+      "tag": "span",
+      "xpath": "/html/body/div[1]/main[1]/div[1]/div[1]/div[4]/div[1]/div[2]/div[2]/div[1]/div[1]/div[1]/div[2]/div[1]/div[3]/div[1]/div[1]/label[1]/span[1]"
+     },
+     "state": "home.task-dual-admin"
+    }
+   ],
+   "evidenceHash": "5fd2e2ae8e1dac53d0c1a0502b693a85748f94dcb665872d89d1cfc16d8499a8",
+   "facts": {
+    "criterion": "2.4.7",
+    "criterionName": "Focus Visible",
+    "element": "button \"Learn more\"",
+    "screen": "Task — dual admin policy",
+    "screens": 1,
+    "stop": "36"
+   },
+   "family": "focus-visible",
+   "guidance": "High on shared components on primary paths.",
+   "issueId": null,
+   "key": "focus-visible:focus-hidden:6c0bf4dcd106",
+   "measured": true,
+   "primary": "home.task-dual-admin",
+   "proposals": [],
+   "rule": "focus-hidden",
+   "screens": 1,
+   "severityDefault": "medium",
+   "source": "scanner",
+   "states": [
+    "home.task-dual-admin"
+   ],
+   "summary": "Tab stop 36 focused the button \"Learn more\", which is invisible, has no size, or sits off screen.",
+   "title": "Tab stops on hidden element: button \"Learn more\""
+  }
+ ],
+ "primaries": [
+  "home.task-dual-admin"
+ ],
+ "reach": {
+  "baseUrl": "https://demo.mercury.com",
+  "data": "data",
+  "map": "build/map.json",
+  "run": "2026-10-03-1525",
+  "workspace": "a11y"
+ },
+ "run": "2026-10-03-1525"
+}

@@ -1,0 +1,1484 @@
+{
+ "area": "invoicing",
+ "batch": "verify-223",
+ "findings": [
+  {
+   "attachments": [],
+   "attempt": 1,
+   "basis": "candidate",
+   "criteria": [
+    "2.1.1"
+   ],
+   "evidence": [
+    {
+     "evidence": {
+      "end": "body",
+      "focusable": true,
+      "source": "ax",
+      "stops": 9
+     },
+     "occurrence": {
+      "ancestors": [
+       [
+        "_inputBox_q7hf7_93"
+       ],
+       [
+        "_inputBoxWrapper_q7hf7_93"
+       ],
+       [
+        "_textInputWrapper_q7hf7_24"
+       ],
+       [
+        "_provideDSTextInput_q7hf7_6"
+       ],
+       [],
+       [
+        "_row_2qrq0_16"
+       ],
+       [],
+       []
+      ],
+      "classes": [
+       "_input_q7hf7_93",
+       "_rightAlignedInput_2qrq0_87"
+      ],
+      "data": {},
+      "heading": "Recurring series set up",
+      "landmark": {
+       "name": "",
+       "role": "main"
+      },
+      "layer": "document",
+      "name": "0.00",
+      "rect": [
+       454,
+       543,
+       133,
+       24
+      ],
+      "role": "textbox",
+      "tag": "input",
+      "xpath": "/html/body/div[1]/main[1]/div[1]/div[2]/div[2]/div[3]/div[1]/div[1]/div[1]/div[1]/div[1]/div[1]/div[2]/div[2]/div[3]/div[2]/div[1]/div[1]/div[1]/div[1]/div[3]/div[1]/div[1]/div[1]/div[1]/input[1]"
+     },
+     "state": "invoicing.create-series-setup"
+    },
+    {
+     "evidence": {
+      "end": "body",
+      "focusable": true,
+      "source": "ax",
+      "stops": 7
+     },
+     "occurrence": {
+      "ancestors": [
+       [
+        "_inputBox_q7hf7_93"
+       ],
+       [
+        "_inputBoxWrapper_q7hf7_93"
+       ],
+       [
+        "_textInputWrapper_q7hf7_24"
+       ],
+       [
+        "_provideDSTextInput_q7hf7_6"
+       ],
+       [],
+       [
+        "_row_2qrq0_16"
+       ],
+       [],
+       []
+      ],
+      "classes": [
+       "_input_q7hf7_93",
+       "_rightAlignedInput_2qrq0_87"
+      ],
+      "data": {},
+      "heading": "Invoice set up",
+      "landmark": {
+       "name": "",
+       "role": "main"
+      },
+      "layer": "document",
+      "name": "0.00",
+      "rect": [
+       454,
+       450,
+       133,
+       24
+      ],
+      "role": "textbox",
+      "tag": "input",
+      "xpath": "/html/body/div[1]/main[1]/div[1]/div[2]/div[2]/div[3]/div[1]/div[1]/div[1]/div[1]/div[1]/div[1]/div[2]/div[2]/div[2]/div[2]/div[1]/div[1]/div[1]/div[1]/div[3]/div[1]/div[1]/div[1]/div[1]/input[1]"
+     },
+     "state": "invoicing.create-setup"
+    }
+   ],
+   "evidenceHash": "c0f90edefad1faa5f5747d8733f8d5a82cb23c44aa58b6ac69a3ca313dd3ee34",
+   "facts": {
+    "axeSummary": "",
+    "criterion": "2.1.1",
+    "criterionName": "Keyboard",
+    "element": "textbox \"<amount>\"",
+    "rule": "not-reached",
+    "screen": "Recurring series set up",
+    "stops": "9"
+   },
+   "family": "keyboard",
+   "guidance": "High if a task cannot be completed without a mouse.",
+   "issueId": null,
+   "key": "keyboard:not-reached:01a7fba08b6b",
+   "measured": false,
+   "primary": "invoicing.create-series-setup",
+   "proposals": [],
+   "rule": "not-reached",
+   "screens": 2,
+   "severityDefault": "medium",
+   "source": "scanner",
+   "states": [
+    "invoicing.create-series-setup",
+    "invoicing.create-setup"
+   ],
+   "summary": "The Tab walk visited 9 stops and never reached the textbox \"<amount>\", which responds to a click.",
+   "title": "Not reachable by keyboard: textbox \"<amount>\""
+  },
+  {
+   "attachments": [],
+   "attempt": 1,
+   "basis": "candidate",
+   "criteria": [
+    "2.1.1"
+   ],
+   "evidence": [
+    {
+     "evidence": {
+      "end": "body",
+      "focusable": true,
+      "source": "ax",
+      "stops": 9
+     },
+     "occurrence": {
+      "ancestors": [
+       [
+        "_actions_2qrq0_59"
+       ],
+       [
+        "_bottomRows_2qrq0_9"
+       ],
+       [
+        "_lineItems_2qrq0_4"
+       ],
+       [],
+       [
+        "_contentWrapper_1w7vj_1"
+       ],
+       [
+        "_wrapper_1ojdq_8"
+       ],
+       [],
+       [
+        "_leftInnerContainer_12jyu_3"
+       ]
+      ],
+      "classes": [
+       "_button_r6b2u_20",
+       "_small_r6b2u_72",
+       "_secondary_r6b2u_126"
+      ],
+      "data": {},
+      "heading": "Recurring series set up",
+      "landmark": {
+       "name": "",
+       "role": "main"
+      },
+      "layer": "document",
+      "name": "Add line item",
+      "rect": [
+       120,
+       591,
+       136,
+       32
+      ],
+      "role": "button",
+      "tag": "button",
+      "xpath": "/html/body/div[1]/main[1]/div[1]/div[2]/div[2]/div[3]/div[1]/div[1]/div[1]/div[1]/div[1]/div[1]/div[2]/div[2]/div[3]/div[2]/div[4]/div[1]/button[1]"
+     },
+     "state": "invoicing.create-series-setup"
+    },
+    {
+     "evidence": {
+      "end": "body",
+      "focusable": true,
+      "source": "ax",
+      "stops": 7
+     },
+     "occurrence": {
+      "ancestors": [
+       [
+        "_actions_2qrq0_59"
+       ],
+       [
+        "_bottomRows_2qrq0_9"
+       ],
+       [
+        "_lineItems_2qrq0_4"
+       ],
+       [],
+       [
+        "_contentWrapper_kogp0_1"
+       ],
+       [
+        "_wrapper_1ojdq_8"
+       ],
+       [],
+       [
+        "_leftInnerContainer_12jyu_3"
+       ]
+      ],
+      "classes": [
+       "_button_r6b2u_20",
+       "_small_r6b2u_72",
+       "_secondary_r6b2u_126"
+      ],
+      "data": {},
+      "heading": "Invoice set up",
+      "landmark": {
+       "name": "",
+       "role": "main"
+      },
+      "layer": "document",
+      "name": "Add line item",
+      "rect": [
+       120,
+       498,
+       136,
+       32
+      ],
+      "role": "button",
+      "tag": "button",
+      "xpath": "/html/body/div[1]/main[1]/div[1]/div[2]/div[2]/div[3]/div[1]/div[1]/div[1]/div[1]/div[1]/div[1]/div[2]/div[2]/div[2]/div[2]/div[4]/div[1]/button[1]"
+     },
+     "state": "invoicing.create-setup"
+    }
+   ],
+   "evidenceHash": "c0f90edefad1faa5f5747d8733f8d5a82cb23c44aa58b6ac69a3ca313dd3ee34",
+   "facts": {
+    "axeSummary": "",
+    "criterion": "2.1.1",
+    "criterionName": "Keyboard",
+    "element": "button \"Add line item\"",
+    "rule": "not-reached",
+    "screen": "Recurring series set up",
+    "stops": "9"
+   },
+   "family": "keyboard",
+   "guidance": "High if a task cannot be completed without a mouse.",
+   "issueId": null,
+   "key": "keyboard:not-reached:0694f0476db6",
+   "measured": false,
+   "primary": "invoicing.create-series-setup",
+   "proposals": [],
+   "rule": "not-reached",
+   "screens": 2,
+   "severityDefault": "medium",
+   "source": "scanner",
+   "states": [
+    "invoicing.create-series-setup",
+    "invoicing.create-setup"
+   ],
+   "summary": "The Tab walk visited 9 stops and never reached the button \"Add line item\", which responds to a click.",
+   "title": "Not reachable by keyboard: button \"Add line item\""
+  },
+  {
+   "attachments": [],
+   "attempt": 1,
+   "basis": "candidate",
+   "criteria": [
+    "2.1.1"
+   ],
+   "evidence": [
+    {
+     "evidence": {
+      "end": "body",
+      "focusable": true,
+      "source": "ax",
+      "stops": 9
+     },
+     "occurrence": {
+      "ancestors": [
+       [
+        "_textareaWrapper_54wwi_16",
+        "_rowSizing_54wwi_149"
+       ],
+       [
+        "_textareaProgressWrapper_54wwi_28"
+       ],
+       [
+        "_textareaBoundingWrapper_54wwi_7"
+       ],
+       [],
+       [
+        "_contentWrapper_1w7vj_1"
+       ],
+       [
+        "_wrapper_1ojdq_8"
+       ],
+       [],
+       [
+        "_leftInnerContainer_12jyu_3"
+       ]
+      ],
+      "classes": [
+       "_textarea_54wwi_7"
+      ],
+      "data": {
+       "data-session-replay-mask": "true"
+      },
+      "heading": "Invoice totals",
+      "landmark": {
+       "name": "",
+       "role": "main"
+      },
+      "layer": "document",
+      "name": "Payer memo (optional)",
+      "rect": [
+       121,
+       726,
+       478,
+       64
+      ],
+      "role": "textbox",
+      "tag": "textarea",
+      "xpath": "/html/body/div[1]/main[1]/div[1]/div[2]/div[2]/div[3]/div[1]/div[1]/div[1]/div[1]/div[1]/div[1]/div[2]/div[2]/div[4]/div[1]/div[1]/div[1]/textarea[1]"
+     },
+     "state": "invoicing.create-series-setup"
+    },
+    {
+     "evidence": {
+      "end": "body",
+      "focusable": true,
+      "source": "ax",
+      "stops": 7
+     },
+     "occurrence": {
+      "ancestors": [
+       [
+        "_textareaWrapper_54wwi_16",
+        "_rowSizing_54wwi_149"
+       ],
+       [
+        "_textareaProgressWrapper_54wwi_28"
+       ],
+       [
+        "_textareaBoundingWrapper_54wwi_7"
+       ],
+       [],
+       [
+        "_contentWrapper_kogp0_1"
+       ],
+       [
+        "_wrapper_1ojdq_8"
+       ],
+       [],
+       [
+        "_leftInnerContainer_12jyu_3"
+       ]
+      ],
+      "classes": [
+       "_textarea_54wwi_7"
+      ],
+      "data": {
+       "data-session-replay-mask": "true"
+      },
+      "heading": "Invoice totals",
+      "landmark": {
+       "name": "",
+       "role": "main"
+      },
+      "layer": "document",
+      "name": "Payer memo (optional)",
+      "rect": [
+       121,
+       633,
+       478,
+       64
+      ],
+      "role": "textbox",
+      "tag": "textarea",
+      "xpath": "/html/body/div[1]/main[1]/div[1]/div[2]/div[2]/div[3]/div[1]/div[1]/div[1]/div[1]/div[1]/div[1]/div[2]/div[2]/div[3]/div[1]/div[1]/div[1]/textarea[1]"
+     },
+     "state": "invoicing.create-setup"
+    }
+   ],
+   "evidenceHash": "c0f90edefad1faa5f5747d8733f8d5a82cb23c44aa58b6ac69a3ca313dd3ee34",
+   "facts": {
+    "axeSummary": "",
+    "criterion": "2.1.1",
+    "criterionName": "Keyboard",
+    "element": "textbox \"Payer memo (optional)\"",
+    "rule": "not-reached",
+    "screen": "Recurring series set up",
+    "stops": "9"
+   },
+   "family": "keyboard",
+   "guidance": "High if a task cannot be completed without a mouse.",
+   "issueId": null,
+   "key": "keyboard:not-reached:286264446182",
+   "measured": false,
+   "primary": "invoicing.create-series-setup",
+   "proposals": [],
+   "rule": "not-reached",
+   "screens": 2,
+   "severityDefault": "medium",
+   "source": "scanner",
+   "states": [
+    "invoicing.create-series-setup",
+    "invoicing.create-setup"
+   ],
+   "summary": "The Tab walk visited 9 stops and never reached the textbox \"Payer memo (optional)\", which responds to a click.",
+   "title": "Not reachable by keyboard: textbox \"Payer memo (optional)\""
+  },
+  {
+   "attachments": [],
+   "attempt": 1,
+   "basis": "candidate",
+   "criteria": [
+    "2.1.1"
+   ],
+   "evidence": [
+    {
+     "evidence": {
+      "end": "body",
+      "focusable": true,
+      "source": "ax",
+      "stops": 9
+     },
+     "occurrence": {
+      "ancestors": [
+       [
+        "_escapeDiv_bcpsw_46",
+        "_fullWidthEscapeDiv_bcpsw_36"
+       ],
+       [
+        "_fullScreenWorkspaceLayout_bcpsw_14",
+        "_fullScreenWorkspaceLayoutBackground_bcpsw_32",
+        "_noScrollbar_bcpsw_27"
+       ],
+       [
+        "_wrapper_bcpsw_3"
+       ],
+       [],
+       [
+        "_main_1gb3b_1"
+       ],
+       [
+        "mercury-root"
+       ]
+      ],
+      "classes": [
+       "_escapeButton_1i6e3_3",
+       "_navigationControl_bcpsw_67"
+      ],
+      "data": {},
+      "heading": "Memo",
+      "landmark": {
+       "name": "",
+       "role": "main"
+      },
+      "layer": "document",
+      "name": "Close",
+      "rect": [
+       1360,
+       102,
+       26,
+       26
+      ],
+      "role": "button",
+      "tag": "button",
+      "xpath": "/html/body/div[1]/main[1]/div[1]/div[2]/div[2]/div[4]/button[1]"
+     },
+     "state": "invoicing.create-series-setup"
+    },
+    {
+     "evidence": {
+      "end": "body",
+      "focusable": true,
+      "source": "ax",
+      "stops": 7
+     },
+     "occurrence": {
+      "ancestors": [
+       [
+        "_escapeDiv_bcpsw_46",
+        "_fullWidthEscapeDiv_bcpsw_36"
+       ],
+       [
+        "_fullScreenWorkspaceLayout_bcpsw_14",
+        "_fullScreenWorkspaceLayoutBackground_bcpsw_32",
+        "_noScrollbar_bcpsw_27"
+       ],
+       [
+        "_wrapper_bcpsw_3"
+       ],
+       [],
+       [
+        "_main_1gb3b_1"
+       ],
+       [
+        "mercury-root"
+       ]
+      ],
+      "classes": [
+       "_escapeButton_1i6e3_3",
+       "_navigationControl_bcpsw_67"
+      ],
+      "data": {},
+      "heading": "Memo",
+      "landmark": {
+       "name": "",
+       "role": "main"
+      },
+      "layer": "document",
+      "name": "Close",
+      "rect": [
+       1360,
+       102,
+       26,
+       26
+      ],
+      "role": "button",
+      "tag": "button",
+      "xpath": "/html/body/div[1]/main[1]/div[1]/div[2]/div[2]/div[4]/button[1]"
+     },
+     "state": "invoicing.create-setup"
+    }
+   ],
+   "evidenceHash": "c0f90edefad1faa5f5747d8733f8d5a82cb23c44aa58b6ac69a3ca313dd3ee34",
+   "facts": {
+    "axeSummary": "",
+    "criterion": "2.1.1",
+    "criterionName": "Keyboard",
+    "element": "button \"Close\"",
+    "rule": "not-reached",
+    "screen": "Recurring series set up",
+    "stops": "9"
+   },
+   "family": "keyboard",
+   "guidance": "High if a task cannot be completed without a mouse.",
+   "issueId": null,
+   "key": "keyboard:not-reached:2b84c061dbb1",
+   "measured": false,
+   "primary": "invoicing.create-series-setup",
+   "proposals": [],
+   "rule": "not-reached",
+   "screens": 2,
+   "severityDefault": "medium",
+   "source": "scanner",
+   "states": [
+    "invoicing.create-series-setup",
+    "invoicing.create-setup"
+   ],
+   "summary": "The Tab walk visited 9 stops and never reached the button \"Close\", which responds to a click.",
+   "title": "Not reachable by keyboard: button \"Close\""
+  },
+  {
+   "attachments": [],
+   "attempt": 1,
+   "basis": "candidate",
+   "criteria": [
+    "2.1.1"
+   ],
+   "evidence": [
+    {
+     "evidence": {
+      "end": "body",
+      "focusable": true,
+      "source": "ax",
+      "stops": 9
+     },
+     "occurrence": {
+      "ancestors": [
+       [
+        "_row_2qrq0_16"
+       ],
+       [],
+       [],
+       [],
+       [
+        "_lineItems_2qrq0_4"
+       ],
+       [],
+       [
+        "_contentWrapper_1w7vj_1"
+       ],
+       [
+        "_wrapper_1ojdq_8"
+       ]
+      ],
+      "classes": [
+       "_button_r6b2u_20",
+       "_small_r6b2u_72",
+       "_tertiary_r6b2u_153",
+       "_removeButton_2qrq0_42"
+      ],
+      "data": {},
+      "heading": "Recurring series set up",
+      "landmark": {
+       "name": "",
+       "role": "main"
+      },
+      "layer": "document",
+      "name": "Remove line item",
+      "rect": [
+       608,
+       539,
+       32,
+       32
+      ],
+      "role": "button",
+      "tag": "button",
+      "xpath": "/html/body/div[1]/main[1]/div[1]/div[2]/div[2]/div[3]/div[1]/div[1]/div[1]/div[1]/div[1]/div[1]/div[2]/div[2]/div[3]/div[2]/div[1]/div[1]/div[1]/div[1]/button[1]"
+     },
+     "state": "invoicing.create-series-setup"
+    },
+    {
+     "evidence": {
+      "end": "body",
+      "focusable": true,
+      "source": "ax",
+      "stops": 7
+     },
+     "occurrence": {
+      "ancestors": [
+       [
+        "_row_2qrq0_16"
+       ],
+       [],
+       [],
+       [],
+       [
+        "_lineItems_2qrq0_4"
+       ],
+       [],
+       [
+        "_contentWrapper_kogp0_1"
+       ],
+       [
+        "_wrapper_1ojdq_8"
+       ]
+      ],
+      "classes": [
+       "_button_r6b2u_20",
+       "_small_r6b2u_72",
+       "_tertiary_r6b2u_153",
+       "_removeButton_2qrq0_42"
+      ],
+      "data": {},
+      "heading": "Invoice set up",
+      "landmark": {
+       "name": "",
+       "role": "main"
+      },
+      "layer": "document",
+      "name": "Remove line item",
+      "rect": [
+       608,
+       446,
+       32,
+       32
+      ],
+      "role": "button",
+      "tag": "button",
+      "xpath": "/html/body/div[1]/main[1]/div[1]/div[2]/div[2]/div[3]/div[1]/div[1]/div[1]/div[1]/div[1]/div[1]/div[2]/div[2]/div[2]/div[2]/div[1]/div[1]/div[1]/div[1]/button[1]"
+     },
+     "state": "invoicing.create-setup"
+    }
+   ],
+   "evidenceHash": "c0f90edefad1faa5f5747d8733f8d5a82cb23c44aa58b6ac69a3ca313dd3ee34",
+   "facts": {
+    "axeSummary": "",
+    "criterion": "2.1.1",
+    "criterionName": "Keyboard",
+    "element": "button \"Remove line item\"",
+    "rule": "not-reached",
+    "screen": "Recurring series set up",
+    "stops": "9"
+   },
+   "family": "keyboard",
+   "guidance": "High if a task cannot be completed without a mouse.",
+   "issueId": null,
+   "key": "keyboard:not-reached:41c7c3f5bee8",
+   "measured": false,
+   "primary": "invoicing.create-series-setup",
+   "proposals": [],
+   "rule": "not-reached",
+   "screens": 2,
+   "severityDefault": "medium",
+   "source": "scanner",
+   "states": [
+    "invoicing.create-series-setup",
+    "invoicing.create-setup"
+   ],
+   "summary": "The Tab walk visited 9 stops and never reached the button \"Remove line item\", which responds to a click.",
+   "title": "Not reachable by keyboard: button \"Remove line item\""
+  },
+  {
+   "attachments": [],
+   "attempt": 1,
+   "basis": "candidate",
+   "criteria": [
+    "2.1.1"
+   ],
+   "evidence": [
+    {
+     "evidence": {
+      "end": "body",
+      "focusable": true,
+      "source": "ax",
+      "stops": 9
+     },
+     "occurrence": {
+      "ancestors": [
+       [
+        "_inputBox_q7hf7_93",
+        "_hasValue_q7hf7_171"
+       ],
+       [
+        "_inputBoxWrapper_q7hf7_93"
+       ],
+       [
+        "_textInputWrapper_q7hf7_24"
+       ],
+       [
+        "_provideDSTextInput_q7hf7_6"
+       ],
+       [],
+       [
+        "_row_2qrq0_16"
+       ],
+       [],
+       []
+      ],
+      "classes": [
+       "_input_q7hf7_93",
+       "_rightAlignedInput_2qrq0_87"
+      ],
+      "data": {},
+      "heading": "Recurring series set up",
+      "landmark": {
+       "name": "",
+       "role": "main"
+      },
+      "layer": "document",
+      "name": "1",
+      "rect": [
+       373,
+       543,
+       32,
+       24
+      ],
+      "role": "textbox",
+      "tag": "input",
+      "xpath": "/html/body/div[1]/main[1]/div[1]/div[2]/div[2]/div[3]/div[1]/div[1]/div[1]/div[1]/div[1]/div[1]/div[2]/div[2]/div[3]/div[2]/div[1]/div[1]/div[1]/div[1]/div[2]/div[1]/div[1]/div[1]/div[1]/input[1]"
+     },
+     "state": "invoicing.create-series-setup"
+    },
+    {
+     "evidence": {
+      "end": "body",
+      "focusable": true,
+      "source": "ax",
+      "stops": 7
+     },
+     "occurrence": {
+      "ancestors": [
+       [
+        "_inputBox_q7hf7_93",
+        "_hasValue_q7hf7_171"
+       ],
+       [
+        "_inputBoxWrapper_q7hf7_93"
+       ],
+       [
+        "_textInputWrapper_q7hf7_24"
+       ],
+       [
+        "_provideDSTextInput_q7hf7_6"
+       ],
+       [],
+       [
+        "_row_2qrq0_16"
+       ],
+       [],
+       []
+      ],
+      "classes": [
+       "_input_q7hf7_93",
+       "_rightAlignedInput_2qrq0_87"
+      ],
+      "data": {},
+      "heading": "Invoice set up",
+      "landmark": {
+       "name": "",
+       "role": "main"
+      },
+      "layer": "document",
+      "name": "1",
+      "rect": [
+       373,
+       450,
+       32,
+       24
+      ],
+      "role": "textbox",
+      "tag": "input",
+      "xpath": "/html/body/div[1]/main[1]/div[1]/div[2]/div[2]/div[3]/div[1]/div[1]/div[1]/div[1]/div[1]/div[1]/div[2]/div[2]/div[2]/div[2]/div[1]/div[1]/div[1]/div[1]/div[2]/div[1]/div[1]/div[1]/div[1]/input[1]"
+     },
+     "state": "invoicing.create-setup"
+    }
+   ],
+   "evidenceHash": "c0f90edefad1faa5f5747d8733f8d5a82cb23c44aa58b6ac69a3ca313dd3ee34",
+   "facts": {
+    "axeSummary": "",
+    "criterion": "2.1.1",
+    "criterionName": "Keyboard",
+    "element": "textbox \"<n>\"",
+    "rule": "not-reached",
+    "screen": "Recurring series set up",
+    "stops": "9"
+   },
+   "family": "keyboard",
+   "guidance": "High if a task cannot be completed without a mouse.",
+   "issueId": null,
+   "key": "keyboard:not-reached:73fa250f1788",
+   "measured": false,
+   "primary": "invoicing.create-series-setup",
+   "proposals": [],
+   "rule": "not-reached",
+   "screens": 2,
+   "severityDefault": "medium",
+   "source": "scanner",
+   "states": [
+    "invoicing.create-series-setup",
+    "invoicing.create-setup"
+   ],
+   "summary": "The Tab walk visited 9 stops and never reached the textbox \"<n>\", which responds to a click.",
+   "title": "Not reachable by keyboard: textbox \"<n>\""
+  },
+  {
+   "attachments": [],
+   "attempt": 1,
+   "basis": "candidate",
+   "criteria": [
+    "2.1.1"
+   ],
+   "evidence": [
+    {
+     "evidence": {
+      "end": "body",
+      "focusable": true,
+      "source": "ax",
+      "stops": 9
+     },
+     "occurrence": {
+      "ancestors": [
+       [
+        "_buttonWrapper_1a350_1",
+        "_buttonGroup_16t7w_1",
+        "_horizontal_16t7w_11"
+       ],
+       [
+        "_formNavigationButtonsWrapper_1a350_15"
+       ],
+       [
+        "_bottom_yg1rf_99"
+       ],
+       [
+        "_bottomContainer_yg1rf_99",
+        "_mobileStickyBottom_12jyu_16"
+       ],
+       [
+        "_leftContainer_yg1rf_39",
+        "_splitVariant_yg1rf_82",
+        "_leftBoxShadow_12jyu_10"
+       ],
+       [
+        "_containerBase_yg1rf_1",
+        "_container_yg1rf_1",
+        "_containerWithBanner_yg1rf_12"
+       ],
+       [
+        "_contentDiv_bcpsw_53",
+        "_contentDivHeightPreset_bcpsw_62",
+        "_layout_uyfdj_1",
+        "_fullWidthContentDiv_bcpsw_40"
+       ],
+       [
+        "_fullScreenWorkspaceLayout_bcpsw_14",
+        "_fullScreenWorkspaceLayoutBackground_bcpsw_32",
+        "_noScrollbar_bcpsw_27"
+       ]
+      ],
+      "classes": [
+       "_button_r6b2u_20",
+       "_large_r6b2u_88",
+       "_secondary_r6b2u_126"
+      ],
+      "data": {},
+      "heading": "Invoice totals",
+      "landmark": {
+       "name": "",
+       "role": "main"
+      },
+      "layer": "document",
+      "name": "Back",
+      "rect": [
+       369,
+       836,
+       110,
+       40
+      ],
+      "role": "button",
+      "tag": "button",
+      "xpath": "/html/body/div[1]/main[1]/div[1]/div[2]/div[2]/div[3]/div[1]/div[1]/div[2]/div[1]/div[1]/div[1]/button[1]"
+     },
+     "state": "invoicing.create-series-setup"
+    },
+    {
+     "evidence": {
+      "end": "body",
+      "focusable": true,
+      "source": "ax",
+      "stops": 7
+     },
+     "occurrence": {
+      "ancestors": [
+       [
+        "_buttonWrapper_1a350_1",
+        "_buttonGroup_16t7w_1",
+        "_horizontal_16t7w_11"
+       ],
+       [
+        "_formNavigationButtonsWrapper_1a350_15"
+       ],
+       [
+        "_bottom_yg1rf_99"
+       ],
+       [
+        "_bottomContainer_yg1rf_99",
+        "_mobileStickyBottom_12jyu_16"
+       ],
+       [
+        "_leftContainer_yg1rf_39",
+        "_splitVariant_yg1rf_82",
+        "_leftBoxShadow_12jyu_10"
+       ],
+       [
+        "_containerBase_yg1rf_1",
+        "_container_yg1rf_1",
+        "_containerWithBanner_yg1rf_12"
+       ],
+       [
+        "_contentDiv_bcpsw_53",
+        "_contentDivHeightPreset_bcpsw_62",
+        "_layout_uyfdj_1",
+        "_fullWidthContentDiv_bcpsw_40"
+       ],
+       [
+        "_fullScreenWorkspaceLayout_bcpsw_14",
+        "_fullScreenWorkspaceLayoutBackground_bcpsw_32",
+        "_noScrollbar_bcpsw_27"
+       ]
+      ],
+      "classes": [
+       "_button_r6b2u_20",
+       "_large_r6b2u_88",
+       "_secondary_r6b2u_126"
+      ],
+      "data": {},
+      "heading": "Invoice totals",
+      "landmark": {
+       "name": "",
+       "role": "main"
+      },
+      "layer": "document",
+      "name": "Back",
+      "rect": [
+       369,
+       836,
+       110,
+       40
+      ],
+      "role": "button",
+      "tag": "button",
+      "xpath": "/html/body/div[1]/main[1]/div[1]/div[2]/div[2]/div[3]/div[1]/div[1]/div[2]/div[1]/div[1]/div[1]/button[1]"
+     },
+     "state": "invoicing.create-setup"
+    }
+   ],
+   "evidenceHash": "c0f90edefad1faa5f5747d8733f8d5a82cb23c44aa58b6ac69a3ca313dd3ee34",
+   "facts": {
+    "axeSummary": "",
+    "criterion": "2.1.1",
+    "criterionName": "Keyboard",
+    "element": "button \"Back\"",
+    "rule": "not-reached",
+    "screen": "Recurring series set up",
+    "stops": "9"
+   },
+   "family": "keyboard",
+   "guidance": "High if a task cannot be completed without a mouse.",
+   "issueId": null,
+   "key": "keyboard:not-reached:970518c9e86a",
+   "measured": false,
+   "primary": "invoicing.create-series-setup",
+   "proposals": [],
+   "rule": "not-reached",
+   "screens": 2,
+   "severityDefault": "medium",
+   "source": "scanner",
+   "states": [
+    "invoicing.create-series-setup",
+    "invoicing.create-setup"
+   ],
+   "summary": "The Tab walk visited 9 stops and never reached the button \"Back\", which responds to a click.",
+   "title": "Not reachable by keyboard: button \"Back\""
+  },
+  {
+   "attachments": [],
+   "attempt": 1,
+   "basis": "candidate",
+   "criteria": [
+    "2.1.1"
+   ],
+   "evidence": [
+    {
+     "evidence": {
+      "end": "body",
+      "focusable": true,
+      "source": "ax",
+      "stops": 9
+     },
+     "occurrence": {
+      "ancestors": [
+       [
+        "_actions_2qrq0_59"
+       ],
+       [
+        "_bottomRows_2qrq0_9"
+       ],
+       [
+        "_lineItems_2qrq0_4"
+       ],
+       [],
+       [
+        "_contentWrapper_1w7vj_1"
+       ],
+       [
+        "_wrapper_1ojdq_8"
+       ],
+       [],
+       [
+        "_leftInnerContainer_12jyu_3"
+       ]
+      ],
+      "classes": [
+       "_button_r6b2u_20",
+       "_small_r6b2u_72",
+       "_tertiary_r6b2u_153"
+      ],
+      "data": {},
+      "heading": "Recurring series set up",
+      "landmark": {
+       "name": "",
+       "role": "main"
+      },
+      "layer": "document",
+      "name": "Add sales tax",
+      "rect": [
+       268,
+       591,
+       124,
+       32
+      ],
+      "role": "button",
+      "tag": "button",
+      "xpath": "/html/body/div[1]/main[1]/div[1]/div[2]/div[2]/div[3]/div[1]/div[1]/div[1]/div[1]/div[1]/div[1]/div[2]/div[2]/div[3]/div[2]/div[4]/div[1]/button[2]"
+     },
+     "state": "invoicing.create-series-setup"
+    },
+    {
+     "evidence": {
+      "end": "body",
+      "focusable": true,
+      "source": "ax",
+      "stops": 7
+     },
+     "occurrence": {
+      "ancestors": [
+       [
+        "_actions_2qrq0_59"
+       ],
+       [
+        "_bottomRows_2qrq0_9"
+       ],
+       [
+        "_lineItems_2qrq0_4"
+       ],
+       [],
+       [
+        "_contentWrapper_kogp0_1"
+       ],
+       [
+        "_wrapper_1ojdq_8"
+       ],
+       [],
+       [
+        "_leftInnerContainer_12jyu_3"
+       ]
+      ],
+      "classes": [
+       "_button_r6b2u_20",
+       "_small_r6b2u_72",
+       "_tertiary_r6b2u_153"
+      ],
+      "data": {},
+      "heading": "Invoice set up",
+      "landmark": {
+       "name": "",
+       "role": "main"
+      },
+      "layer": "document",
+      "name": "Add sales tax",
+      "rect": [
+       268,
+       498,
+       124,
+       32
+      ],
+      "role": "button",
+      "tag": "button",
+      "xpath": "/html/body/div[1]/main[1]/div[1]/div[2]/div[2]/div[3]/div[1]/div[1]/div[1]/div[1]/div[1]/div[1]/div[2]/div[2]/div[2]/div[2]/div[4]/div[1]/button[2]"
+     },
+     "state": "invoicing.create-setup"
+    }
+   ],
+   "evidenceHash": "c0f90edefad1faa5f5747d8733f8d5a82cb23c44aa58b6ac69a3ca313dd3ee34",
+   "facts": {
+    "axeSummary": "",
+    "criterion": "2.1.1",
+    "criterionName": "Keyboard",
+    "element": "button \"Add sales tax\"",
+    "rule": "not-reached",
+    "screen": "Recurring series set up",
+    "stops": "9"
+   },
+   "family": "keyboard",
+   "guidance": "High if a task cannot be completed without a mouse.",
+   "issueId": null,
+   "key": "keyboard:not-reached:aaf4ebe08077",
+   "measured": false,
+   "primary": "invoicing.create-series-setup",
+   "proposals": [],
+   "rule": "not-reached",
+   "screens": 2,
+   "severityDefault": "medium",
+   "source": "scanner",
+   "states": [
+    "invoicing.create-series-setup",
+    "invoicing.create-setup"
+   ],
+   "summary": "The Tab walk visited 9 stops and never reached the button \"Add sales tax\", which responds to a click.",
+   "title": "Not reachable by keyboard: button \"Add sales tax\""
+  },
+  {
+   "attachments": [],
+   "attempt": 1,
+   "basis": "candidate",
+   "criteria": [
+    "2.1.1"
+   ],
+   "evidence": [
+    {
+     "evidence": {
+      "end": "body",
+      "focusable": true,
+      "source": "ax",
+      "stops": 9
+     },
+     "occurrence": {
+      "ancestors": [
+       [
+        "_buttonWrapper_1a350_1",
+        "_buttonGroup_16t7w_1",
+        "_horizontal_16t7w_11"
+       ],
+       [
+        "_formNavigationButtonsWrapper_1a350_15"
+       ],
+       [
+        "_bottom_yg1rf_99"
+       ],
+       [
+        "_bottomContainer_yg1rf_99",
+        "_mobileStickyBottom_12jyu_16"
+       ],
+       [
+        "_leftContainer_yg1rf_39",
+        "_splitVariant_yg1rf_82",
+        "_leftBoxShadow_12jyu_10"
+       ],
+       [
+        "_containerBase_yg1rf_1",
+        "_container_yg1rf_1",
+        "_containerWithBanner_yg1rf_12"
+       ],
+       [
+        "_contentDiv_bcpsw_53",
+        "_contentDivHeightPreset_bcpsw_62",
+        "_layout_uyfdj_1",
+        "_fullWidthContentDiv_bcpsw_40"
+       ],
+       [
+        "_fullScreenWorkspaceLayout_bcpsw_14",
+        "_fullScreenWorkspaceLayoutBackground_bcpsw_32",
+        "_noScrollbar_bcpsw_27"
+       ]
+      ],
+      "classes": [
+       "_button_r6b2u_20",
+       "_large_r6b2u_88",
+       "_primary_r6b2u_104",
+       "_appearDisabled_r6b2u_16",
+       "session-replay-unmask"
+      ],
+      "data": {},
+      "heading": "Invoice totals",
+      "landmark": {
+       "name": "",
+       "role": "main"
+      },
+      "layer": "document",
+      "name": "Next",
+      "rect": [
+       491,
+       836,
+       109,
+       40
+      ],
+      "role": "button",
+      "tag": "button",
+      "xpath": "/html/body/div[1]/main[1]/div[1]/div[2]/div[2]/div[3]/div[1]/div[1]/div[2]/div[1]/div[1]/div[1]/button[2]"
+     },
+     "state": "invoicing.create-series-setup"
+    },
+    {
+     "evidence": {
+      "end": "body",
+      "focusable": true,
+      "source": "ax",
+      "stops": 7
+     },
+     "occurrence": {
+      "ancestors": [
+       [
+        "_buttonWrapper_1a350_1",
+        "_buttonGroup_16t7w_1",
+        "_horizontal_16t7w_11"
+       ],
+       [
+        "_formNavigationButtonsWrapper_1a350_15"
+       ],
+       [
+        "_bottom_yg1rf_99"
+       ],
+       [
+        "_bottomContainer_yg1rf_99",
+        "_mobileStickyBottom_12jyu_16"
+       ],
+       [
+        "_leftContainer_yg1rf_39",
+        "_splitVariant_yg1rf_82",
+        "_leftBoxShadow_12jyu_10"
+       ],
+       [
+        "_containerBase_yg1rf_1",
+        "_container_yg1rf_1",
+        "_containerWithBanner_yg1rf_12"
+       ],
+       [
+        "_contentDiv_bcpsw_53",
+        "_contentDivHeightPreset_bcpsw_62",
+        "_layout_uyfdj_1",
+        "_fullWidthContentDiv_bcpsw_40"
+       ],
+       [
+        "_fullScreenWorkspaceLayout_bcpsw_14",
+        "_fullScreenWorkspaceLayoutBackground_bcpsw_32",
+        "_noScrollbar_bcpsw_27"
+       ]
+      ],
+      "classes": [
+       "_button_r6b2u_20",
+       "_large_r6b2u_88",
+       "_primary_r6b2u_104",
+       "_appearDisabled_r6b2u_16",
+       "session-replay-unmask"
+      ],
+      "data": {},
+      "heading": "Invoice totals",
+      "landmark": {
+       "name": "",
+       "role": "main"
+      },
+      "layer": "document",
+      "name": "Next",
+      "rect": [
+       491,
+       836,
+       109,
+       40
+      ],
+      "role": "button",
+      "tag": "button",
+      "xpath": "/html/body/div[1]/main[1]/div[1]/div[2]/div[2]/div[3]/div[1]/div[1]/div[2]/div[1]/div[1]/div[1]/button[2]"
+     },
+     "state": "invoicing.create-setup"
+    }
+   ],
+   "evidenceHash": "c0f90edefad1faa5f5747d8733f8d5a82cb23c44aa58b6ac69a3ca313dd3ee34",
+   "facts": {
+    "axeSummary": "",
+    "criterion": "2.1.1",
+    "criterionName": "Keyboard",
+    "element": "button \"Next\"",
+    "rule": "not-reached",
+    "screen": "Recurring series set up",
+    "stops": "9"
+   },
+   "family": "keyboard",
+   "guidance": "High if a task cannot be completed without a mouse.",
+   "issueId": null,
+   "key": "keyboard:not-reached:ad0077d6ece0",
+   "measured": false,
+   "primary": "invoicing.create-series-setup",
+   "proposals": [],
+   "rule": "not-reached",
+   "screens": 2,
+   "severityDefault": "medium",
+   "source": "scanner",
+   "states": [
+    "invoicing.create-series-setup",
+    "invoicing.create-setup"
+   ],
+   "summary": "The Tab walk visited 9 stops and never reached the button \"Next\", which responds to a click.",
+   "title": "Not reachable by keyboard: button \"Next\""
+  },
+  {
+   "attachments": [],
+   "attempt": 1,
+   "basis": "candidate",
+   "criteria": [
+    "2.1.1"
+   ],
+   "evidence": [
+    {
+     "evidence": {
+      "end": "body",
+      "focusable": true,
+      "source": "ax",
+      "stops": 9
+     },
+     "occurrence": {
+      "ancestors": [
+       [
+        "_textareaWrapper_54wwi_16",
+        "_rowSizing_54wwi_149"
+       ],
+       [
+        "_textareaProgressWrapper_54wwi_28"
+       ],
+       [
+        "_textareaBoundingWrapper_54wwi_7"
+       ],
+       [
+        "_wrapper_1ygkv_1"
+       ],
+       [
+        "_contentWrapper_1w7vj_1"
+       ],
+       [
+        "_wrapper_1ojdq_8"
+       ],
+       [],
+       [
+        "_leftInnerContainer_12jyu_3"
+       ]
+      ],
+      "classes": [
+       "_textarea_54wwi_7"
+      ],
+      "data": {
+       "data-session-replay-mask": "true"
+      },
+      "heading": "Invoice totals",
+      "landmark": {
+       "name": "",
+       "role": "main"
+      },
+      "layer": "document",
+      "name": "Internal note (optional)",
+      "rect": [
+       121,
+       932,
+       478,
+       64
+      ],
+      "role": "textbox",
+      "tag": "textarea",
+      "xpath": "/html/body/div[1]/main[1]/div[1]/div[2]/div[2]/div[3]/div[1]/div[1]/div[1]/div[1]/div[1]/div[1]/div[2]/div[2]/div[5]/div[2]/div[1]/div[1]/textarea[1]"
+     },
+     "state": "invoicing.create-series-setup"
+    }
+   ],
+   "evidenceHash": "ba71fc435ee3b078111b22c6c952ef55452ef915a432d1cc86eac915c160e296",
+   "facts": {
+    "axeSummary": "",
+    "criterion": "2.1.1",
+    "criterionName": "Keyboard",
+    "element": "textbox \"Internal note (optional)\"",
+    "rule": "not-reached",
+    "screen": "Recurring series set up",
+    "stops": "9"
+   },
+   "family": "keyboard",
+   "guidance": "High if a task cannot be completed without a mouse.",
+   "issueId": null,
+   "key": "keyboard:not-reached:b5b578d8d994",
+   "measured": false,
+   "primary": "invoicing.create-series-setup",
+   "proposals": [],
+   "rule": "not-reached",
+   "screens": 1,
+   "severityDefault": "medium",
+   "source": "scanner",
+   "states": [
+    "invoicing.create-series-setup"
+   ],
+   "summary": "The Tab walk visited 9 stops and never reached the textbox \"Internal note (optional)\", which responds to a click.",
+   "title": "Not reachable by keyboard: textbox \"Internal note (optional)\""
+  }
+ ],
+ "primaries": [
+  "invoicing.create-series-setup"
+ ],
+ "reach": {
+  "baseUrl": "https://demo.mercury.com",
+  "data": "data",
+  "map": "build/map.json",
+  "run": "2026-10-03-1525",
+  "workspace": "a11y"
+ },
+ "run": "2026-10-03-1525"
+}

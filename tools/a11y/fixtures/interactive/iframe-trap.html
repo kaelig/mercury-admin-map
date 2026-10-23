@@ -1,0 +1,12 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><title>Embedded editor</title>
+<style>body { font: 16px/1.4 sans-serif; margin: 24px; color: #111; background: #fff; } button { font: inherit; margin: 8px; } iframe { display: block; border: 1px solid #ccc; }</style></head>
+<body>
+<main>
+  <h1>Notes</h1>
+  <button>Before frame</button>
+  <!-- A cross-origin frame that keeps every Tab press inside itself. -->
+  <iframe src="{{origin2}}/interactive/frame-trap.html" title="Note editor" width="420" height="120"></iframe>
+  <button>After frame</button>
+</main>
+</body></html>

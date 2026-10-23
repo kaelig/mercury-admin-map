@@ -1,0 +1,181 @@
+{
+ "area": "payments",
+ "batch": "second-047",
+ "findings": [
+  {
+   "attachments": [],
+   "attempt": 1,
+   "basis": "violation",
+   "criteria": [
+    "1.3.5"
+   ],
+   "evidence": [
+    {
+     "evidence": {
+      "failureSummary": "Fix all of the following:\n  the autocomplete attribute is incorrectly formatted"
+     },
+     "occurrence": {
+      "ancestors": [
+       [
+        "_inputWrapper_11c85_6"
+       ],
+       [
+        "_wrapper_1xgdp_8"
+       ],
+       [
+        "_wrapper_16rxx_1"
+       ],
+       [
+        "_singleLineFieldStack_1dxer_10"
+       ],
+       [
+        "_bodySecondary_qaod7_51",
+        "_text-default_12t49_1",
+        "_valueText_1gwax_61",
+        "_allowOverflow_1gwax_83"
+       ],
+       [
+        "_detailRow_1gwax_55"
+       ],
+       [
+        "_panelSection_d3i56_148",
+        "_detailSection_1gwax_47",
+        "_vertical_1gwax_51"
+       ],
+       [
+        "_panelBody_d3i56_64"
+       ]
+      ],
+      "classes": [
+       "_input_11c85_6"
+      ],
+      "data": {
+       "data-1p-ignore": "true",
+       "data-active-item": "true",
+       "data-bwignore": "true",
+       "data-lpignore": "true"
+      },
+      "heading": "",
+      "landmark": {
+       "name": "",
+       "role": "complementary"
+      },
+      "layer": "top",
+      "name": "GL Code",
+      "rect": [
+       946,
+       1122,
+       311,
+       40
+      ],
+      "role": "combobox",
+      "tag": "input",
+      "xpath": "/html/body/div[1]/main[1]/div[1]/div[1]/div[4]/div[1]/div[2]/div[3]/div[2]/div[2]/aside[1]/div[1]/div[1]/section[4]/div[1]/span[2]/div[1]/div[1]/div[1]/div[1]/input[1]"
+     },
+     "state": "payments.scheduled-detail"
+    },
+    {
+     "evidence": {
+      "failureSummary": "Fix all of the following:\n  the autocomplete attribute is incorrectly formatted"
+     },
+     "occurrence": {
+      "ancestors": [
+       [
+        "_inputWrapper_11c85_6"
+       ],
+       [
+        "_wrapper_1xgdp_8"
+       ],
+       [
+        "_wrapper_16rxx_1",
+        "_tooltipAnchor_18bac_4"
+       ],
+       [
+        "_comboboxContainer_1diig_6"
+       ],
+       [
+        "_actionButtons_1pbh4_58"
+       ],
+       [
+        "_contentContainer_1pbh4_46"
+       ],
+       [
+        "_floatingBulkActionsInnerContainer_1pbh4_35"
+       ],
+       [
+        "_floatingBulkActionsOuterContainer_1pbh4_4",
+        "_islandContainer_1diig_1",
+        "_visible_1pbh4_30"
+       ]
+      ],
+      "classes": [
+       "_input_11c85_6"
+      ],
+      "data": {
+       "data-1p-ignore": "true",
+       "data-active-item": "true",
+       "data-bwignore": "true",
+       "data-focus-visible": "true",
+       "data-lpignore": "true"
+      },
+      "heading": "",
+      "landmark": {
+       "name": "2 selected",
+       "role": "dialog"
+      },
+      "layer": "top",
+      "name": "GL Code",
+      "rect": [
+       724,
+       802,
+       237,
+       40
+      ],
+      "role": "combobox",
+      "tag": "input",
+      "xpath": "/html/body/dialog[1]/div[1]/div[1]/div[2]/div[2]/div[1]/div[1]/div[1]/input[1]"
+     },
+     "state": "transactions.bulk-gl-code-applied"
+    }
+   ],
+   "evidenceHash": "87e59d9b868c450a5f38e0730e9c8ed1b2cdde0c993e9b0ddd6a36eb9d8244b9",
+   "facts": {
+    "announced": "combobox \"GL Code\" [expanded=false, haspopup=listbox]",
+    "axeSummary": "the autocomplete attribute is incorrectly formatted",
+    "criterion": "1.3.5",
+    "criterionName": "Identify Input Purpose",
+    "element": "combobox \"GL Code\"",
+    "rule": "autocomplete-valid",
+    "screen": "Scheduled payment panel"
+   },
+   "family": "role-state",
+   "guidance": "Low for optional ARIA or an invalid autocomplete token; high when aria-hidden hides the whole page.",
+   "issueId": null,
+   "key": "role-state:autocomplete-valid:999d0da13709",
+   "measured": false,
+   "primary": "payments.scheduled-detail",
+   "proposals": [],
+   "rule": "autocomplete-valid",
+   "screens": 12,
+   "severityDefault": "medium",
+   "source": "scanner",
+   "states": [
+    "payments.scheduled-detail",
+    "transactions.bulk-gl-code-applied"
+   ],
+   "summary": "autocomplete-valid: announced as combobox \"GL Code\" [expanded=false, haspopup=listbox]. the autocomplete attribute is incorrectly formatted",
+   "title": "Invalid autocomplete value: combobox \"GL Code\""
+  }
+ ],
+ "primaries": [
+  "payments.scheduled-detail"
+ ],
+ "reach": {
+  "baseUrl": "https://demo.mercury.com",
+  "data": "data",
+  "map": "build/map.json",
+  "run": "2026-10-03-1525",
+  "workspace": "a11y"
+ },
+ "run": "2026-10-03-1525"
+}

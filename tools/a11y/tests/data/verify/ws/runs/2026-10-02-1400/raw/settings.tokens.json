@@ -1,0 +1,133 @@
+{
+ "build": "b1d2e3",
+ "checks": {},
+ "env": {
+  "axe": "4.13.0",
+  "chromium": "151.0.7000.0",
+  "colorScheme": "light",
+  "dpr": 1,
+  "locale": "en-US",
+  "playwright": "1.62.1",
+  "reducedMotion": "reduce",
+  "timezone": "America/Los_Angeles",
+  "viewport": [
+   1440,
+   900
+  ]
+ },
+ "families": {
+  "completed": [
+   "axe",
+   "records",
+   "interactive",
+   "target"
+  ],
+  "incomplete": []
+ },
+ "frames": [],
+ "harness": "0000000000000000",
+ "kind": "page",
+ "layer": {
+  "name": "",
+  "role": "document",
+  "scope": "document",
+  "xpath": "/html"
+ },
+ "reason": null,
+ "reasonDetail": null,
+ "recipeHash": "0000000000000000000000000000000000000000000000000000000000000000",
+ "records": [],
+ "results": [
+  {
+   "basis": "violation",
+   "check": "axe",
+   "criteria": [
+    "1.4.3"
+   ],
+   "evidence": {
+    "bgColor": "#ffffff",
+    "contrastRatio": 2.85,
+    "expectedContrastRatio": "4.5:1",
+    "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 2.85",
+    "fgColor": "#9d9da8",
+    "fontSize": "10.5pt (14px)",
+    "fontWeight": "normal"
+   },
+   "messageKey": null,
+   "occurrence": {
+    "ancestors": [
+     [
+      "_cell_tb001_8"
+     ]
+    ],
+    "classes": [
+     "_muted_ab12c_3"
+    ],
+    "data": {},
+    "heading": "",
+    "landmark": {
+     "name": "",
+     "role": "main"
+    },
+    "layer": "document",
+    "name": "Pending",
+    "rect": [
+     400,
+     300,
+     52,
+     16
+    ],
+    "role": "",
+    "tag": "span",
+    "xpath": "/html/body/div/main/table/tbody/tr[2]/td[2]/span"
+   },
+   "rule": "color-contrast"
+  },
+  {
+   "basis": "violation",
+   "check": "axe",
+   "criteria": [
+    "4.1.2"
+   ],
+   "evidence": {
+    "failureSummary": "Fix any of the following:\n  Element does not have inner text that is visible to screen readers"
+   },
+   "messageKey": null,
+   "occurrence": {
+    "ancestors": [
+     [
+      "_rowActions_tok22_14"
+     ],
+     [
+      "_tokensTable_tok22_2"
+     ]
+    ],
+    "classes": [
+     "_iconButton_btn01_5"
+    ],
+    "data": {},
+    "heading": "API Tokens",
+    "landmark": {
+     "name": "",
+     "role": "main"
+    },
+    "layer": "document",
+    "name": "",
+    "rect": [
+     1300,
+     210,
+     16,
+     16
+    ],
+    "role": "button",
+    "tag": "button",
+    "xpath": "/html/body/div/main/table/tbody/tr[1]/td[4]/button"
+   },
+   "rule": "button-name"
+  }
+ ],
+ "schema": 1,
+ "state": "settings.tokens",
+ "status": "audited",
+ "url": "/settings/tokens"
+}

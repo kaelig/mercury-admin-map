@@ -1,0 +1,1880 @@
+{
+ "area": "accounts",
+ "batch": "verify-006",
+ "findings": [
+  {
+   "attachments": [],
+   "attempt": 1,
+   "basis": "incomplete",
+   "criteria": [
+    "1.4.3"
+   ],
+   "evidence": [
+    {
+     "evidence": {
+      "contrastRatio": 0,
+      "expectedContrastRatio": "4.5:1",
+      "failureSummary": "Fix any of the following:\n  Element's background color could not be determined because it's partially obscured by another element",
+      "fontSize": "11.3pt (15px)",
+      "fontWeight": "normal",
+      "messageKey": "elmPartiallyObscured"
+     },
+     "occurrence": {
+      "ancestors": [
+       [
+        "_settingsLink_t98jp_3",
+        "_link_ual8v_4",
+        "_underlineNever_ual8v_7"
+       ],
+       [],
+       [],
+       [
+        "_section_szluv_11"
+       ],
+       [
+        "_navContainer_szluv_1"
+       ],
+       [
+        "_sidebar_11y1x_4",
+        "_narrowSidebar_184ve_7"
+       ],
+       [
+        "_layout_809q8_18"
+       ],
+       [
+        "_wrapper_809q8_3"
+       ]
+      ],
+      "classes": [
+       "_bodyDefault_qaod7_40",
+       "_text-secondary_12t49_1",
+       "session-replay-unmask"
+      ],
+      "data": {},
+      "heading": "",
+      "landmark": {
+       "name": "",
+       "role": "navigation"
+      },
+      "layer": "document",
+      "name": "",
+      "rect": [
+       20,
+       989,
+       38,
+       24
+      ],
+      "role": "",
+      "tag": "span",
+      "xpath": "/html/body/div[1]/main[1]/div[1]/div[1]/div[4]/nav[1]/div[2]/div[6]/div[2]/span[1]/a[1]/span[1]"
+     },
+     "state": "accounts.bank-letters"
+    },
+    {
+     "evidence": {
+      "contrastRatio": 0,
+      "expectedContrastRatio": "4.5:1",
+      "failureSummary": "Fix any of the following:\n  Element's background color could not be determined because it's partially obscured by another element",
+      "fontSize": "10.5pt (14px)",
+      "fontWeight": "normal",
+      "messageKey": "elmPartiallyObscured"
+     },
+     "occurrence": {
+      "ancestors": [
+       [
+        "_detailRow_1gwax_55"
+       ],
+       [
+        "_panelSection_d3i56_148",
+        "_detailSection_1gwax_47",
+        "_vertical_1gwax_51"
+       ],
+       [
+        "_panelBody_d3i56_64"
+       ],
+       [
+        "_large_kwlx6_9",
+        "_noHover_3n0se_28",
+        "_shadow_3n0se_25",
+        "_raisedBackground_3n0se_45",
+        "_panel_d3i56_55"
+       ],
+       [
+        "_transitionWrapper_d3i56_5",
+        "_visible_d3i56_19",
+        "_wrapperContainer_rrj6q_1"
+       ],
+       [],
+       [],
+       [
+        "_tabContent_a2zac_49"
+       ]
+      ],
+      "classes": [
+       "_bodySecondary_qaod7_51",
+       "_text-default_12t49_1",
+       "_valueText_1gwax_61"
+      ],
+      "data": {},
+      "heading": "",
+      "landmark": {
+       "name": "",
+       "role": "complementary"
+      },
+      "layer": "top",
+      "name": "",
+      "rect": [
+       946,
+       1087,
+       344,
+       40
+      ],
+      "role": "",
+      "tag": "span",
+      "xpath": "/html/body/div[1]/main[1]/div[1]/div[1]/div[4]/div[1]/div[2]/div[2]/div[2]/div[2]/div[2]/aside[1]/div[1]/div[1]/section[3]/div[1]/span[2]"
+     },
+     "state": "billpay.approval-panel"
+    }
+   ],
+   "evidenceHash": "8892b1d1434d34246435147fd50a62c21a214512802db372571021752d37438b",
+   "facts": {
+    "criterion": "1.4.3",
+    "criterionName": "Contrast (Minimum)",
+    "elements": "70 elements",
+    "messageKey": "elmPartiallyObscured",
+    "rule": "color-contrast",
+    "screen": "Bank letters",
+    "why": "another element partly covers it"
+   },
+   "family": "contrast",
+   "guidance": "High under 2:1, or under 3:1 for essential text.",
+   "issueId": null,
+   "key": "contrast:color-contrast:b3d93755dd21",
+   "measured": true,
+   "primary": "accounts.bank-letters",
+   "proposals": [
+    {
+     "family": "contrast",
+     "finding": "contrast:color-contrast:b3d93755dd21",
+     "handFound": "billpay.i-manage-link",
+     "id": "b44ddc58d2a0871e07f5d784f55c99d58d58ebcc9aee31bc098f5ddf2840d4d9",
+     "overlap": 1
+    }
+   ],
+   "rule": "color-contrast",
+   "screens": 149,
+   "severityDefault": "medium",
+   "source": "scanner",
+   "states": [
+    "accounts.bank-letters",
+    "billpay.approval-panel"
+   ],
+   "summary": "axe color-contrast could not decide 70 elements (elmPartiallyObscured): another element partly covers it.",
+   "title": "Needs review: color-contrast, another element partly covers it"
+  },
+  {
+   "attachments": [],
+   "attempt": 1,
+   "basis": "candidate",
+   "criteria": [
+    "2.4.3",
+    "1.3.2"
+   ],
+   "evidence": [
+    {
+     "evidence": {
+      "band": 30,
+      "overlay": "accounts.bank-letters.tabstops.png",
+      "previous": {
+       "ancestors": [
+        [],
+        [
+         "_section_szluv_11"
+        ],
+        [
+         "_navContainer_szluv_1"
+        ],
+        [
+         "_sidebar_11y1x_4",
+         "_narrowSidebar_184ve_7"
+        ],
+        [
+         "_layout_809q8_18"
+        ],
+        [
+         "_wrapper_809q8_3"
+        ],
+        [],
+        [
+         "_main_1gb3b_1"
+        ]
+       ],
+       "classes": [
+        "_settingsLink_t98jp_3",
+        "_settingsLinkHovered_t98jp_22",
+        "_noStyleLink_njx8v_1"
+       ],
+       "data": {
+        "data-discover": "true"
+       },
+       "heading": "",
+       "landmark": {
+        "name": "",
+        "role": "navigation"
+       },
+       "layer": "document",
+       "name": "Notifications",
+       "rect": [
+        8,
+        870,
+        203,
+        30
+       ],
+       "role": "link",
+       "tag": "a",
+       "xpath": "/html/body/div[1]/main[1]/div[1]/div[1]/div[4]/nav[1]/div[2]/div[5]/div[3]/a[1]"
+      },
+      "rise": 128,
+      "stop": 22,
+      "stops": 63
+     },
+     "occurrence": {
+      "ancestors": [
+       [],
+       [
+        "_section_szluv_11"
+       ],
+       [
+        "_navContainer_szluv_1"
+       ],
+       [
+        "_sidebar_11y1x_4",
+        "_narrowSidebar_184ve_7"
+       ],
+       [
+        "_layout_809q8_18"
+       ],
+       [
+        "_wrapper_809q8_3"
+       ],
+       [],
+       [
+        "_main_1gb3b_1"
+       ]
+      ],
+      "classes": [
+       "_settingsLink_t98jp_3",
+       "_settingsLinkHovered_t98jp_22",
+       "_noStyleLink_njx8v_1"
+      ],
+      "data": {
+       "data-discover": "true"
+      },
+      "heading": "",
+      "landmark": {
+       "name": "",
+       "role": "navigation"
+      },
+      "layer": "document",
+      "name": "Security",
+      "rect": [
+       8,
+       742,
+       203,
+       30
+      ],
+      "role": "link",
+      "tag": "a",
+      "xpath": "/html/body/div[1]/main[1]/div[1]/div[1]/div[4]/nav[1]/div[2]/div[5]/div[4]/a[1]"
+     },
+     "state": "accounts.bank-letters"
+    },
+    {
+     "evidence": {
+      "band": 30,
+      "overlay": "home.task-daily-maximum.tabstops.png",
+      "previous": {
+       "ancestors": [
+        [],
+        [
+         "_section_szluv_11"
+        ],
+        [
+         "_navContainer_szluv_1"
+        ],
+        [
+         "_sidebar_11y1x_4",
+         "_narrowSidebar_184ve_7"
+        ],
+        [
+         "_layout_809q8_18"
+        ],
+        [
+         "_wrapper_809q8_3"
+        ],
+        [],
+        [
+         "_main_1gb3b_1"
+        ]
+       ],
+       "classes": [
+        "_settingsLink_t98jp_3",
+        "_settingsLinkHovered_t98jp_22",
+        "_noStyleLink_njx8v_1"
+       ],
+       "data": {
+        "data-discover": "true"
+       },
+       "heading": "",
+       "landmark": {
+        "name": "",
+        "role": "navigation"
+       },
+       "layer": "document",
+       "name": "Notifications",
+       "rect": [
+        8,
+        870,
+        203,
+        30
+       ],
+       "role": "link",
+       "tag": "a",
+       "xpath": "/html/body/div[1]/main[1]/div[1]/div[1]/div[4]/nav[1]/div[2]/div[5]/div[3]/a[1]"
+      },
+      "rise": 128,
+      "stop": 22,
+      "stops": 36
+     },
+     "occurrence": {
+      "ancestors": [
+       [],
+       [
+        "_section_szluv_11"
+       ],
+       [
+        "_navContainer_szluv_1"
+       ],
+       [
+        "_sidebar_11y1x_4",
+        "_narrowSidebar_184ve_7"
+       ],
+       [
+        "_layout_809q8_18"
+       ],
+       [
+        "_wrapper_809q8_3"
+       ],
+       [],
+       [
+        "_main_1gb3b_1"
+       ]
+      ],
+      "classes": [
+       "_settingsLink_t98jp_3",
+       "_settingsLinkHovered_t98jp_22",
+       "_noStyleLink_njx8v_1"
+      ],
+      "data": {
+       "data-discover": "true"
+      },
+      "heading": "",
+      "landmark": {
+       "name": "",
+       "role": "navigation"
+      },
+      "layer": "document",
+      "name": "Security",
+      "rect": [
+       8,
+       742,
+       203,
+       30
+      ],
+      "role": "link",
+      "tag": "a",
+      "xpath": "/html/body/div[1]/main[1]/div[1]/div[1]/div[4]/nav[1]/div[2]/div[5]/div[4]/a[1]"
+     },
+     "state": "home.task-daily-maximum"
+    }
+   ],
+   "evidenceHash": "2b16172b6cf9493a8131049dd2ad395a4d637bf45db75f4bd0add0d6fc10f474",
+   "facts": {
+    "criterion": "2.4.3",
+    "criterionName": "Focus Order",
+    "element": "link \"Security\"",
+    "previous": "link \"Notifications\"",
+    "screen": "Bank letters",
+    "stop": "22"
+   },
+   "family": "focus-order",
+   "guidance": "High if the order skips a required control.",
+   "issueId": null,
+   "key": "focus-order:backward-jump:1d4676ad739d",
+   "measured": false,
+   "primary": "accounts.bank-letters",
+   "proposals": [],
+   "rule": "backward-jump",
+   "screens": 31,
+   "severityDefault": "medium",
+   "source": "scanner",
+   "states": [
+    "accounts.bank-letters",
+    "home.task-daily-maximum"
+   ],
+   "summary": "Tab stop 22 jumped backward on screen, from the link \"Notifications\" to the link \"Security\".",
+   "title": "Tab order jumps backward at link \"Security\""
+  },
+  {
+   "attachments": [],
+   "attempt": 1,
+   "basis": "candidate",
+   "criteria": [
+    "2.4.3",
+    "1.3.2"
+   ],
+   "evidence": [
+    {
+     "evidence": {
+      "band": 36,
+      "overlay": "accounts.bank-letters.tabstops.png",
+      "previous": {
+       "ancestors": [
+        [],
+        [],
+        [
+         "_subNavWrapper_19y5b_3",
+         "_subNavWrapper_7ux9c_36",
+         "session-replay-unmask"
+        ],
+        [
+         "_documentsRoot_7ux9c_6"
+        ],
+        [],
+        [
+         "_documentsPageContent_7ux9c_1",
+         "_pageContent_809q8_151",
+         "_footerPadding_809q8_115"
+        ],
+        [
+         "_dashboardContent_809q8_29"
+        ],
+        [
+         "_layout_809q8_18"
+        ]
+       ],
+       "classes": [
+        "_subNavItem_1kjbw_3",
+        "_noStyleLink_njx8v_1"
+       ],
+       "data": {
+        "data-discover": "true"
+       },
+       "heading": "Documents & Data",
+       "landmark": {
+        "name": "Documents Sub Nav",
+        "role": "navigation"
+       },
+       "layer": "document",
+       "name": "Other",
+       "rect": [
+        346,
+        672,
+        183,
+        36
+       ],
+       "role": "link",
+       "tag": "a",
+       "xpath": "/html/body/div[1]/main[1]/div[1]/div[1]/div[4]/div[1]/div[2]/div[2]/div[2]/nav[1]/ul[1]/li[13]/a[1]"
+      },
+      "rise": 301,
+      "stop": 51,
+      "stops": 63
+     },
+     "occurrence": {
+      "ancestors": [
+       [],
+       [
+        "_downloadPdfContainer_cz562_136"
+       ],
+       [
+        "_documentActions_cz562_45"
+       ],
+       [
+        "_descriptionContent_cz562_105"
+       ],
+       [
+        "_descriptionColumn_cz562_101"
+       ],
+       [],
+       [],
+       [
+        "_table_cz562_1"
+       ]
+      ],
+      "classes": [
+       "_link_ual8v_4",
+       "_underlineOnHover_ual8v_15"
+      ],
+      "data": {},
+      "heading": "Documents & Data",
+      "landmark": {
+       "name": "",
+       "role": "main"
+      },
+      "layer": "document",
+      "name": "",
+      "rect": [
+       1274,
+       371,
+       24,
+       19
+      ],
+      "role": "link",
+      "tag": "a",
+      "xpath": "/html/body/div[1]/main[1]/div[1]/div[1]/div[4]/div[1]/div[2]/div[2]/div[2]/div[1]/table[1]/tbody[1]/tr[1]/td[2]/div[1]/div[1]/div[1]/span[1]/a[1]"
+     },
+     "state": "accounts.bank-letters"
+    },
+    {
+     "evidence": {
+      "band": 36,
+      "overlay": "accounts.wire-details.tabstops.png",
+      "previous": {
+       "ancestors": [
+        [],
+        [],
+        [
+         "_subNavWrapper_19y5b_3",
+         "_subNavWrapper_7ux9c_36",
+         "session-replay-unmask"
+        ],
+        [
+         "_documentsRoot_7ux9c_6"
+        ],
+        [],
+        [
+         "_documentsPageContent_7ux9c_1",
+         "_pageContent_809q8_151",
+         "_footerPadding_809q8_115"
+        ],
+        [
+         "_dashboardContent_809q8_29"
+        ],
+        [
+         "_layout_809q8_18"
+        ]
+       ],
+       "classes": [
+        "_subNavItem_1kjbw_3",
+        "_noStyleLink_njx8v_1"
+       ],
+       "data": {
+        "data-discover": "true"
+       },
+       "heading": "Documents & Data",
+       "landmark": {
+        "name": "Documents Sub Nav",
+        "role": "navigation"
+       },
+       "layer": "document",
+       "name": "Other",
+       "rect": [
+        346,
+        672,
+        183,
+        36
+       ],
+       "role": "link",
+       "tag": "a",
+       "xpath": "/html/body/div[1]/main[1]/div[1]/div[1]/div[4]/div[1]/div[2]/div[2]/div[2]/nav[1]/ul[1]/li[13]/a[1]"
+      },
+      "rise": 301,
+      "stop": 51,
+      "stops": 62
+     },
+     "occurrence": {
+      "ancestors": [
+       [],
+       [
+        "_downloadPdfContainer_cz562_136"
+       ],
+       [
+        "_documentActions_cz562_45"
+       ],
+       [
+        "_descriptionContent_cz562_105"
+       ],
+       [
+        "_descriptionColumn_cz562_101"
+       ],
+       [],
+       [],
+       [
+        "_table_cz562_1"
+       ]
+      ],
+      "classes": [
+       "_link_ual8v_4",
+       "_underlineOnHover_ual8v_15"
+      ],
+      "data": {},
+      "heading": "Documents & Data",
+      "landmark": {
+       "name": "",
+       "role": "main"
+      },
+      "layer": "document",
+      "name": "",
+      "rect": [
+       1274,
+       371,
+       24,
+       19
+      ],
+      "role": "link",
+      "tag": "a",
+      "xpath": "/html/body/div[1]/main[1]/div[1]/div[1]/div[4]/div[1]/div[2]/div[2]/div[2]/div[1]/table[1]/tbody[1]/tr[1]/td[2]/div[1]/div[1]/div[1]/span[1]/a[1]"
+     },
+     "state": "accounts.wire-details"
+    }
+   ],
+   "evidenceHash": "c7646a6a6c0e82058c120d9c6d6e3af04f61b52f7667aafac6ed954d6d46759a",
+   "facts": {
+    "criterion": "2.4.3",
+    "criterionName": "Focus Order",
+    "element": "link in \"Documents & Data\"",
+    "previous": "link \"Other\"",
+    "screen": "Bank letters",
+    "stop": "51"
+   },
+   "family": "focus-order",
+   "guidance": "High if the order skips a required control.",
+   "issueId": null,
+   "key": "focus-order:backward-jump:81934707b327",
+   "measured": false,
+   "primary": "accounts.bank-letters",
+   "proposals": [],
+   "rule": "backward-jump",
+   "screens": 2,
+   "severityDefault": "medium",
+   "source": "scanner",
+   "states": [
+    "accounts.bank-letters",
+    "accounts.wire-details"
+   ],
+   "summary": "Tab stop 51 jumped backward on screen, from the link \"Other\" to the link in \"Documents & Data\".",
+   "title": "Tab order jumps backward at link in \"Documents & Data\""
+  },
+  {
+   "attachments": [],
+   "attempt": 1,
+   "basis": "candidate",
+   "criteria": [
+    "2.4.3",
+    "1.3.2"
+   ],
+   "evidence": [
+    {
+     "evidence": {
+      "band": 32,
+      "overlay": "accounts.bank-letters.tabstops.png",
+      "previous": {
+       "ancestors": [
+        [],
+        [
+         "_section_szluv_11"
+        ],
+        [
+         "_navContainer_szluv_1"
+        ],
+        [
+         "_sidebar_11y1x_4",
+         "_narrowSidebar_184ve_7"
+        ],
+        [
+         "_layout_809q8_18"
+        ],
+        [
+         "_wrapper_809q8_3"
+        ],
+        [],
+        [
+         "_main_1gb3b_1"
+        ]
+       ],
+       "classes": [
+        "_settingsLink_t98jp_3",
+        "_settingsLinkHovered_t98jp_22",
+        "_noStyleLink_njx8v_1"
+       ],
+       "data": {
+        "data-discover": "true"
+       },
+       "heading": "",
+       "landmark": {
+        "name": "",
+        "role": "navigation"
+       },
+       "layer": "document",
+       "name": "Referrals",
+       "rect": [
+        8,
+        854,
+        203,
+        30
+       ],
+       "role": "link",
+       "tag": "a",
+       "xpath": "/html/body/div[1]/main[1]/div[1]/div[1]/div[4]/nav[1]/div[2]/div[6]/div[3]/a[1]"
+      },
+      "rise": 790,
+      "stop": 25,
+      "stops": 63
+     },
+     "occurrence": {
+      "ancestors": [
+       [
+        "_leftSide_w61dd_45"
+       ],
+       [
+        "_wrapper_w61dd_28"
+       ],
+       [
+        "_fullWidthTopBar_w61dd_4"
+       ],
+       [
+        "_dashboardContent_809q8_29"
+       ],
+       [
+        "_layout_809q8_18"
+       ],
+       [
+        "_wrapper_809q8_3"
+       ],
+       [],
+       [
+        "_main_1gb3b_1"
+       ]
+      ],
+      "classes": [
+       "_button_r6b2u_20",
+       "_small_r6b2u_72",
+       "_tertiary_r6b2u_153",
+       "_tooltipAnchor_18bac_4",
+       "_omniSearchCTATooltipWrapper_1qi1i_50"
+      ],
+      "data": {},
+      "heading": "",
+      "landmark": {
+       "name": "",
+       "role": "main"
+      },
+      "layer": "document",
+      "name": "Search for anything",
+      "rect": [
+       232,
+       64,
+       180,
+       32
+      ],
+      "role": "button",
+      "tag": "button",
+      "xpath": "/html/body/div[1]/main[1]/div[1]/div[1]/div[4]/div[1]/div[1]/div[1]/div[1]/button[1]"
+     },
+     "state": "accounts.bank-letters"
+    },
+    {
+     "evidence": {
+      "band": 32,
+      "overlay": "billpay.accounting-index.tabstops.png",
+      "previous": {
+       "ancestors": [
+        [
+         "_bookmarkWrapper_1irs1_6"
+        ],
+        [
+         "_list_1l8yn_1"
+        ],
+        [
+         "_bookmarksSection_184ve_46"
+        ],
+        [
+         "_navContainer_184ve_12"
+        ],
+        [
+         "_sidebar_11y1x_4",
+         "_narrowSidebar_184ve_7"
+        ],
+        [
+         "_layout_809q8_18"
+        ],
+        [
+         "_wrapper_809q8_3"
+        ],
+        []
+       ],
+       "classes": [
+        "_bookmarkRemoveButton_1irs1_42"
+       ],
+       "data": {},
+       "heading": "",
+       "landmark": {
+        "name": "",
+        "role": "navigation"
+       },
+       "layer": "document",
+       "name": "Remove bookmark",
+       "rect": [
+        183,
+        738,
+        20,
+        20
+       ],
+       "role": "button",
+       "tag": "button",
+       "xpath": "/html/body/div[1]/main[1]/div[1]/div[1]/div[4]/nav[1]/div[2]/div[4]/ul[1]/li[4]/button[2]"
+      },
+      "rise": 674,
+      "stop": 30,
+      "stops": 41
+     },
+     "occurrence": {
+      "ancestors": [
+       [
+        "_leftSide_w61dd_45"
+       ],
+       [
+        "_wrapper_w61dd_28"
+       ],
+       [
+        "_fullWidthTopBar_w61dd_4"
+       ],
+       [
+        "_dashboardContent_809q8_29",
+        "_fullHeight_809q8_128",
+        "_hasMobileDesigns_809q8_136"
+       ],
+       [
+        "_layout_809q8_18"
+       ],
+       [
+        "_wrapper_809q8_3"
+       ],
+       [],
+       [
+        "_main_1gb3b_1"
+       ]
+      ],
+      "classes": [
+       "_button_r6b2u_20",
+       "_small_r6b2u_72",
+       "_tertiary_r6b2u_153",
+       "_tooltipAnchor_18bac_4",
+       "_omniSearchCTATooltipWrapper_1qi1i_50"
+      ],
+      "data": {},
+      "heading": "",
+      "landmark": {
+       "name": "",
+       "role": "main"
+      },
+      "layer": "document",
+      "name": "Search for anything",
+      "rect": [
+       232,
+       64,
+       180,
+       32
+      ],
+      "role": "button",
+      "tag": "button",
+      "xpath": "/html/body/div[1]/main[1]/div[1]/div[1]/div[4]/div[1]/div[1]/div[1]/div[1]/button[1]"
+     },
+     "state": "billpay.accounting-index"
+    }
+   ],
+   "evidenceHash": "9ed8c4d5593121fe7b0386bc1cb2cedf9a7ea59c589c334fda06ccc720a280be",
+   "facts": {
+    "criterion": "2.4.3",
+    "criterionName": "Focus Order",
+    "element": "button \"Search for anything\"",
+    "previous": "link \"Referrals\"",
+    "screen": "Bank letters",
+    "stop": "25"
+   },
+   "family": "focus-order",
+   "guidance": "High if the order skips a required control.",
+   "issueId": null,
+   "key": "focus-order:backward-jump:cac0d81a77f6",
+   "measured": false,
+   "primary": "accounts.bank-letters",
+   "proposals": [],
+   "rule": "backward-jump",
+   "screens": 118,
+   "severityDefault": "medium",
+   "source": "scanner",
+   "states": [
+    "accounts.bank-letters",
+    "billpay.accounting-index"
+   ],
+   "summary": "Tab stop 25 jumped backward on screen, from the link \"Referrals\" to the button \"Search for anything\".",
+   "title": "Tab order jumps backward at button \"Search for anything\""
+  },
+  {
+   "attachments": [],
+   "attempt": 1,
+   "basis": "failure",
+   "criteria": [
+    "2.4.7",
+    "2.4.3"
+   ],
+   "evidence": [
+    {
+     "evidence": {
+      "box": [
+       591,
+       323,
+       18,
+       18
+      ],
+      "focus": {
+       "ancestors": [
+        [
+         "_checkboxHeightFix_1wfxj_6",
+         "_checkboxWrapper_1758n_62",
+         "_defaultCheckboxWrapper_1km7i_14"
+        ],
+        [],
+        [],
+        [],
+        [
+         "_table_cz562_1"
+        ],
+        [],
+        [
+         "_documentsRoot_7ux9c_6"
+        ],
+        []
+       ],
+       "classes": [
+        "_input_1758n_13",
+        "_defaultInput_1km7i_44"
+       ],
+       "data": {},
+       "heading": "Documents & Data",
+       "landmark": {
+        "name": "",
+        "role": "main"
+       },
+       "layer": "document",
+       "name": "",
+       "rect": [
+        591,
+        323,
+        18,
+        18
+       ],
+       "role": "checkbox",
+       "tag": "input",
+       "xpath": "/html/body/div[1]/main[1]/div[1]/div[1]/div[4]/div[1]/div[2]/div[2]/div[2]/div[1]/table[1]/thead[1]/tr[1]/td[1]/div[1]/input[1]"
+      },
+      "hidden": "invisible",
+      "previous": {
+       "ancestors": [
+        [],
+        [],
+        [
+         "_subNavWrapper_19y5b_3",
+         "_subNavWrapper_7ux9c_36",
+         "session-replay-unmask"
+        ],
+        [
+         "_documentsRoot_7ux9c_6"
+        ],
+        [],
+        [
+         "_documentsPageContent_7ux9c_1",
+         "_pageContent_809q8_151",
+         "_footerPadding_809q8_115"
+        ],
+        [
+         "_dashboardContent_809q8_29"
+        ],
+        [
+         "_layout_809q8_18"
+        ]
+       ],
+       "classes": [
+        "_subNavItem_1kjbw_3",
+        "_noStyleLink_njx8v_1"
+       ],
+       "data": {
+        "data-discover": "true"
+       },
+       "heading": "Documents & Data",
+       "landmark": {
+        "name": "Documents Sub Nav",
+        "role": "navigation"
+       },
+       "layer": "document",
+       "name": "Other",
+       "rect": [
+        346,
+        672,
+        183,
+        36
+       ],
+       "role": "link",
+       "tag": "a",
+       "xpath": "/html/body/div[1]/main[1]/div[1]/div[1]/div[4]/div[1]/div[2]/div[2]/div[2]/nav[1]/ul[1]/li[13]/a[1]"
+      },
+      "stop": 49,
+      "stops": 63
+     },
+     "occurrence": {
+      "ancestors": [
+       [
+        "_checkboxHeightFix_1wfxj_6",
+        "_checkboxWrapper_1758n_62",
+        "_defaultCheckboxWrapper_1km7i_14"
+       ],
+       [],
+       [],
+       [],
+       [
+        "_table_cz562_1"
+       ],
+       [],
+       [
+        "_documentsRoot_7ux9c_6"
+       ],
+       []
+      ],
+      "classes": [
+       "_input_1758n_13",
+       "_defaultInput_1km7i_44"
+      ],
+      "data": {},
+      "heading": "Documents & Data",
+      "landmark": {
+       "name": "",
+       "role": "main"
+      },
+      "layer": "document",
+      "name": "",
+      "rect": [
+       591,
+       323,
+       18,
+       18
+      ],
+      "role": "checkbox",
+      "tag": "input",
+      "xpath": "/html/body/div[1]/main[1]/div[1]/div[1]/div[4]/div[1]/div[2]/div[2]/div[2]/div[1]/table[1]/thead[1]/tr[1]/td[1]/div[1]/input[1]"
+     },
+     "state": "accounts.bank-letters"
+    },
+    {
+     "evidence": {
+      "box": [
+       493,
+       433,
+       18,
+       18
+      ],
+      "focus": {
+       "ancestors": [
+        [
+         "_checkboxHeightFix_1wfxj_6",
+         "_checkboxWrapper_1758n_62",
+         "_defaultCheckboxWrapper_1km7i_14"
+        ],
+        [
+         "_sharedStatement_1baup_15"
+        ],
+        [
+         "_sharedStatements_1baup_15"
+        ],
+        [
+         "_large_kwlx6_9",
+         "_noHover_3n0se_28",
+         "_shadow_3n0se_25",
+         "_raisedBackground_3n0se_45",
+         "_card_lo4oy_4",
+         "_defaultPadding_lo4oy_27",
+         "_statementsModal_1baup_1",
+         "_small_lo4oy_11"
+        ],
+        [
+         "ReactModal__Content",
+         "ReactModal__Content--after-open",
+         "_modal_lo4oy_73"
+        ],
+        [
+         "ReactModal__Overlay",
+         "ReactModal__Overlay--after-open",
+         "_overlay_lo4oy_89",
+         "_backgroundColor_lo4oy_103"
+        ],
+        [
+         "ReactModalPortal"
+        ]
+       ],
+       "classes": [
+        "_input_1758n_13",
+        "_defaultInput_1km7i_44"
+       ],
+       "data": {},
+       "heading": "",
+       "landmark": {
+        "name": "",
+        "role": "dialog"
+       },
+       "layer": "top",
+       "name": "rotem@gmail.com 4 documents shared",
+       "rect": [
+        493,
+        433,
+        18,
+        18
+       ],
+       "role": "checkbox",
+       "tag": "input",
+       "xpath": "/html/body/div[10]/div[1]/div[1]/div[1]/div[2]/label[1]/div[1]/input[1]"
+      },
+      "hidden": "invisible",
+      "previous": null,
+      "stop": 1,
+      "stops": 3
+     },
+     "occurrence": {
+      "ancestors": [
+       [
+        "_checkboxHeightFix_1wfxj_6",
+        "_checkboxWrapper_1758n_62",
+        "_defaultCheckboxWrapper_1km7i_14"
+       ],
+       [
+        "_sharedStatement_1baup_15"
+       ],
+       [
+        "_sharedStatements_1baup_15"
+       ],
+       [
+        "_large_kwlx6_9",
+        "_noHover_3n0se_28",
+        "_shadow_3n0se_25",
+        "_raisedBackground_3n0se_45",
+        "_card_lo4oy_4",
+        "_defaultPadding_lo4oy_27",
+        "_statementsModal_1baup_1",
+        "_small_lo4oy_11"
+       ],
+       [
+        "ReactModal__Content",
+        "ReactModal__Content--after-open",
+        "_modal_lo4oy_73"
+       ],
+       [
+        "ReactModal__Overlay",
+        "ReactModal__Overlay--after-open",
+        "_overlay_lo4oy_89",
+        "_backgroundColor_lo4oy_103"
+       ],
+       [
+        "ReactModalPortal"
+       ]
+      ],
+      "classes": [
+       "_input_1758n_13",
+       "_defaultInput_1km7i_44"
+      ],
+      "data": {},
+      "heading": "",
+      "landmark": {
+       "name": "",
+       "role": "dialog"
+      },
+      "layer": "top",
+      "name": "rotem@gmail.com 4 documents shared",
+      "rect": [
+       493,
+       433,
+       18,
+       18
+      ],
+      "role": "checkbox",
+      "tag": "input",
+      "xpath": "/html/body/div[10]/div[1]/div[1]/div[1]/div[2]/label[1]/div[1]/input[1]"
+     },
+     "state": "settings.manage-shared-docs"
+    }
+   ],
+   "evidenceHash": "c6ed513ab199f3eaad4960145d29b1c289de0007da3a30a99eb84dc7d3e4ece3",
+   "facts": {
+    "criterion": "2.4.7",
+    "criterionName": "Focus Visible",
+    "element": "checkbox in \"Documents & Data\"",
+    "screen": "Bank letters",
+    "screens": 35,
+    "stop": "49"
+   },
+   "family": "focus-visible",
+   "guidance": "High on shared components on primary paths.",
+   "issueId": null,
+   "key": "focus-visible:focus-hidden:13e73d846583",
+   "measured": true,
+   "primary": "accounts.bank-letters",
+   "proposals": [],
+   "rule": "focus-hidden",
+   "screens": 35,
+   "severityDefault": "medium",
+   "source": "scanner",
+   "states": [
+    "accounts.bank-letters",
+    "settings.manage-shared-docs"
+   ],
+   "summary": "Tab stop 49 focused the checkbox in \"Documents & Data\", which is invisible, has no size, or sits off screen.",
+   "title": "Tab stops on hidden element: checkbox in \"Documents & Data\""
+  },
+  {
+   "attachments": [],
+   "attempt": 1,
+   "basis": "violation",
+   "criteria": [
+    "4.1.2"
+   ],
+   "evidence": [
+    {
+     "evidence": {
+      "failureSummary": "Fix any of the following:\n  Element does not have inner text that is visible to screen readers\n  aria-label attribute does not exist or is empty\n  aria-labelledby attribute does not exist, references elements that do not exist or references elements that are empty\n  Element has no title attribute\n  Element does not have an implicit (wrapped) <label>\n  Element does not have an explicit <label>\n  Element's default semantics were not overridden with role=\"none\" or role=\"presentation\"",
+      "messageKey": "noAttr"
+     },
+     "occurrence": {
+      "ancestors": [
+       [
+        "_wrapper_ko7ja_5"
+       ],
+       [
+        "_menus_w61dd_40"
+       ],
+       [
+        "_wrapper_w61dd_28"
+       ],
+       [
+        "_fullWidthTopBar_w61dd_4"
+       ],
+       [
+        "_dashboardContent_809q8_29"
+       ],
+       [
+        "_layout_809q8_18"
+       ],
+       [
+        "_wrapper_809q8_3"
+       ],
+       []
+      ],
+      "classes": [
+       "_menuButton_ko7ja_21"
+      ],
+      "data": {},
+      "heading": "",
+      "landmark": {
+       "name": "",
+       "role": "main"
+      },
+      "layer": "document",
+      "name": "",
+      "rect": [
+       1384,
+       64,
+       32,
+       32
+      ],
+      "role": "button",
+      "tag": "button",
+      "xpath": "/html/body/div[1]/main[1]/div[1]/div[1]/div[4]/div[1]/div[1]/div[1]/div[3]/div[2]/button[1]"
+     },
+     "state": "accounts.bank-letters"
+    },
+    {
+     "evidence": {
+      "failureSummary": "Fix any of the following:\n  Element does not have inner text that is visible to screen readers\n  aria-label attribute does not exist or is empty\n  aria-labelledby attribute does not exist, references elements that do not exist or references elements that are empty\n  Element has no title attribute\n  Element does not have an implicit (wrapped) <label>\n  Element does not have an explicit <label>\n  Element's default semantics were not overridden with role=\"none\" or role=\"presentation\"",
+      "messageKey": "noAttr"
+     },
+     "occurrence": {
+      "ancestors": [
+       [
+        "_wrapper_ko7ja_5"
+       ],
+       [
+        "_menus_w61dd_40"
+       ],
+       [
+        "_wrapper_w61dd_28"
+       ],
+       [
+        "_fullWidthTopBar_w61dd_4"
+       ],
+       [
+        "_dashboardContent_809q8_29",
+        "_hasMobileDesigns_809q8_136"
+       ],
+       [
+        "_layout_809q8_18",
+        "_homeLayout_ct6b5_100"
+       ],
+       [
+        "_wrapper_809q8_3"
+       ],
+       []
+      ],
+      "classes": [
+       "_menuButton_ko7ja_21"
+      ],
+      "data": {},
+      "heading": "",
+      "landmark": {
+       "name": "",
+       "role": "main"
+      },
+      "layer": "document",
+      "name": "",
+      "rect": [
+       1384,
+       64,
+       32,
+       32
+      ],
+      "role": "button",
+      "tag": "button",
+      "xpath": "/html/body/div[1]/main[1]/div[1]/div[1]/div[4]/div[1]/div[1]/div[1]/div[3]/div[2]/button[1]"
+     },
+     "state": "home.balance-graph-hover"
+    }
+   ],
+   "evidenceHash": "2c405e6a38f2cd60e774b0b5ae50463300a48895cfff170bd1a9f39f988434b4",
+   "facts": {
+    "announced": "button \"\" [expanded=false, haspopup=menu]",
+    "axeSummary": "Element does not have inner text that is visible to screen readers; aria-label attribute does not exist or is empty; aria-labelledby attribute does not exist,…",
+    "criterion": "4.1.2",
+    "criterionName": "Name, Role, Value",
+    "element": "button in the main landmark",
+    "rule": "button-name",
+    "screen": "Bank letters"
+   },
+   "family": "name",
+   "guidance": "High for an unnamed form control or the sole primary action.",
+   "issueId": null,
+   "key": "name:button-name:b9268695c292",
+   "measured": false,
+   "primary": "accounts.bank-letters",
+   "proposals": [
+    {
+     "family": "name",
+     "finding": "name:button-name:b9268695c292",
+     "handFound": "accounts.i-rule-cards-hidden-period",
+     "id": "8f8496d46333b809096836d9528cd2639a4e373bef0837e9c10d198955f61daa",
+     "overlap": 1
+    },
+    {
+     "family": "name",
+     "finding": "name:button-name:b9268695c292",
+     "handFound": "billpay.i-date-input-label",
+     "id": "bd782f881483dbda7506dc9ceca0fe90e491122235c00c1ff70274dbff60853e",
+     "overlap": 1
+    },
+    {
+     "family": "name",
+     "finding": "name:button-name:b9268695c292",
+     "handFound": "billpay.i-unlabeled-controls",
+     "id": "db3e7ac88a52e7329977183a94dadf49443bd03b569c7ecdd2a8a1d925423697",
+     "overlap": 0.6667
+    },
+    {
+     "family": "name",
+     "finding": "name:button-name:b9268695c292",
+     "handFound": "cards.i-subscription-actions-unlabeled",
+     "id": "fc6e2300e1171c6f6c50f4407734bb6e373c6f34bdf0e9930e737bb5890bd238",
+     "overlap": 1
+    },
+    {
+     "family": "name",
+     "finding": "name:button-name:b9268695c292",
+     "handFound": "invoicing.i-unlabeled-controls",
+     "id": "44ea6ae3fdf0fab6a9f03f0bcbde5bda89b0a973ec680c93a790dad6363d155b",
+     "overlap": 0.5
+    },
+    {
+     "family": "name",
+     "finding": "name:button-name:b9268695c292",
+     "handFound": "payments.i-icon-links-a11y",
+     "id": "123c1bac801dcdd3c9c0bd3d115d993f816feee09354428f33735e9eed5d6897",
+     "overlap": 1
+    },
+    {
+     "family": "name",
+     "finding": "name:button-name:b9268695c292",
+     "handFound": "settings.i-unnamed-row-buttons",
+     "id": "482af33155155b71dcd284a978818083400fa8448acceb6739236c781e85c664",
+     "overlap": 0.5
+    }
+   ],
+   "rule": "button-name",
+   "screens": 170,
+   "severityDefault": "medium",
+   "source": "scanner",
+   "states": [
+    "accounts.bank-letters",
+    "home.balance-graph-hover"
+   ],
+   "summary": "button-name: announced as button \"\" [expanded=false, haspopup=menu]. Element does not have inner text that is visible to screen readers; aria-label attribute does not exist or is empty; aria-labelledby attribute does not exist,…",
+   "title": "Missing or unclear name: button in the main landmark"
+  },
+  {
+   "attachments": [],
+   "attempt": 1,
+   "basis": "violation",
+   "criteria": [
+    "4.1.2"
+   ],
+   "evidence": [
+    {
+     "evidence": {
+      "failureSummary": "Fix any of the following:\n  Element does not have an implicit (wrapped) <label>\n  Element does not have an explicit <label>\n  aria-label attribute does not exist or is empty\n  aria-labelledby attribute does not exist, references elements that do not exist or references elements that are empty\n  Element has no title attribute\n  Element has no placeholder attribute\n  Element's default semantics were not overridden with role=\"none\" or role=\"presentation\"",
+      "implicitLabel": "",
+      "messageKey": "noAttr"
+     },
+     "occurrence": {
+      "ancestors": [
+       [
+        "_checkboxHeightFix_1wfxj_6",
+        "_checkboxWrapper_1758n_62",
+        "_defaultCheckboxWrapper_1km7i_14"
+       ],
+       [],
+       [
+        "_checkboxColumn_cz562_71"
+       ],
+       [],
+       [],
+       [
+        "_table_cz562_1"
+       ],
+       [],
+       [
+        "_documentsRoot_7ux9c_6"
+       ]
+      ],
+      "classes": [
+       "_input_1758n_13",
+       "_defaultInput_1km7i_44"
+      ],
+      "data": {},
+      "heading": "Documents & Data",
+      "landmark": {
+       "name": "",
+       "role": "main"
+      },
+      "layer": "document",
+      "name": "",
+      "rect": [
+       591,
+       372,
+       18,
+       18
+      ],
+      "role": "checkbox",
+      "tag": "input",
+      "xpath": "/html/body/div[1]/main[1]/div[1]/div[1]/div[4]/div[1]/div[2]/div[2]/div[2]/div[1]/table[1]/tbody[1]/tr[1]/td[1]/label[1]/div[1]/input[1]"
+     },
+     "state": "accounts.bank-letters"
+    },
+    {
+     "evidence": {
+      "failureSummary": "Fix any of the following:\n  Element does not have an implicit (wrapped) <label>\n  Element does not have an explicit <label>\n  aria-label attribute does not exist or is empty\n  aria-labelledby attribute does not exist, references elements that do not exist or references elements that are empty\n  Element has no title attribute\n  Element has no placeholder attribute\n  Element's default semantics were not overridden with role=\"none\" or role=\"presentation\"",
+      "messageKey": "noAttr"
+     },
+     "occurrence": {
+      "ancestors": [
+       [
+        "_checkboxHeightFix_1wfxj_6",
+        "_checkboxWrapper_1758n_62",
+        "_defaultCheckboxWrapper_1km7i_14"
+       ],
+       [
+        "_tiny_qaod7_67",
+        "_text-tertiary_12t49_1",
+        "_tableHeaderCell_1xxbu_61"
+       ],
+       [
+        "_tableHeader_1xxbu_13"
+       ],
+       [
+        "_table_1xxbu_9"
+       ],
+       [
+        "_flaggedPaymentsContent_m3jke_14"
+       ],
+       [],
+       [],
+       [
+        "_pageContent_809q8_151",
+        "_pageContentWidth_809q8_184",
+        "_footerPadding_809q8_115"
+       ]
+      ],
+      "classes": [
+       "_input_1758n_13",
+       "_defaultInput_1km7i_44"
+      ],
+      "data": {},
+      "heading": "ACH Authorizations",
+      "landmark": {
+       "name": "",
+       "role": "main"
+      },
+      "layer": "document",
+      "name": "",
+      "rect": [
+       354,
+       306,
+       18,
+       18
+      ],
+      "role": "checkbox",
+      "tag": "input",
+      "xpath": "/html/body/div[1]/main[1]/div[1]/div[1]/div[4]/div[1]/div[2]/div[2]/div[2]/div[1]/div[1]/div[1]/div[1]/div[1]/input[1]"
+     },
+     "state": "payments.ach-flagged"
+    }
+   ],
+   "evidenceHash": "3c718e0d0d802a3a3591e63c1afeee7fcc585240a9c71414d60e2d022b3c0798",
+   "facts": {
+    "announced": "checkbox \"\" [checked=true]",
+    "axeSummary": "Element does not have an implicit (wrapped) <label>; Element does not have an explicit <label>; aria-label attribute does not exist or is empty; aria-labelledb…",
+    "criterion": "4.1.2",
+    "criterionName": "Name, Role, Value",
+    "element": "checkbox in \"Documents & Data\"",
+    "rule": "label",
+    "screen": "Bank letters"
+   },
+   "family": "name",
+   "guidance": "High for an unnamed form control or the sole primary action.",
+   "issueId": null,
+   "key": "name:label:2c37ebdf9af6",
+   "measured": false,
+   "primary": "accounts.bank-letters",
+   "proposals": [],
+   "rule": "label",
+   "screens": 8,
+   "severityDefault": "medium",
+   "source": "scanner",
+   "states": [
+    "accounts.bank-letters",
+    "payments.ach-flagged"
+   ],
+   "summary": "label: announced as checkbox \"\" [checked=true]. Element does not have an implicit (wrapped) <label>; Element does not have an explicit <label>; aria-label attribute does not exist or is empty; aria-labelledb…",
+   "title": "Missing or unclear name: checkbox in \"Documents & Data\""
+  },
+  {
+   "attachments": [],
+   "attempt": 1,
+   "basis": "violation",
+   "criteria": [
+    "4.1.2",
+    "2.4.4"
+   ],
+   "evidence": [
+    {
+     "evidence": {
+      "failureSummary": "Fix all of the following:\n  Element is in tab order and does not have accessible text\n\nFix any of the following:\n  Element does not have text that is visible to screen readers\n  aria-label attribute does not exist or is empty\n  aria-labelledby attribute does not exist, references elements that do not exist or references elements that are empty\n  Element has no title attribute",
+      "messageKey": "noAttr"
+     },
+     "occurrence": {
+      "ancestors": [
+       [],
+       [
+        "_downloadPdfContainer_cz562_136"
+       ],
+       [
+        "_documentActions_cz562_45"
+       ],
+       [
+        "_descriptionContent_cz562_105"
+       ],
+       [
+        "_descriptionColumn_cz562_101"
+       ],
+       [],
+       [],
+       [
+        "_table_cz562_1"
+       ]
+      ],
+      "classes": [
+       "_link_ual8v_4",
+       "_underlineOnHover_ual8v_15"
+      ],
+      "data": {},
+      "heading": "Documents & Data",
+      "landmark": {
+       "name": "",
+       "role": "main"
+      },
+      "layer": "document",
+      "name": "",
+      "rect": [
+       1274,
+       371,
+       24,
+       19
+      ],
+      "role": "link",
+      "tag": "a",
+      "xpath": "/html/body/div[1]/main[1]/div[1]/div[1]/div[4]/div[1]/div[2]/div[2]/div[2]/div[1]/table[1]/tbody[1]/tr[1]/td[2]/div[1]/div[1]/div[1]/span[1]/a[1]"
+     },
+     "state": "accounts.bank-letters"
+    },
+    {
+     "evidence": {
+      "failureSummary": "Fix all of the following:\n  Element is in tab order and does not have accessible text\n\nFix any of the following:\n  Element does not have text that is visible to screen readers\n  aria-label attribute does not exist or is empty\n  aria-labelledby attribute does not exist, references elements that do not exist or references elements that are empty\n  Element has no title attribute",
+      "messageKey": "noAttr"
+     },
+     "occurrence": {
+      "ancestors": [
+       [],
+       [
+        "_downloadPdfContainer_cz562_136"
+       ],
+       [
+        "_documentActions_cz562_45"
+       ],
+       [
+        "_descriptionContent_cz562_105"
+       ],
+       [
+        "_descriptionColumn_cz562_101"
+       ],
+       [],
+       [],
+       [
+        "_table_cz562_1"
+       ]
+      ],
+      "classes": [
+       "_link_ual8v_4",
+       "_underlineOnHover_ual8v_15"
+      ],
+      "data": {},
+      "heading": "Documents & Data",
+      "landmark": {
+       "name": "",
+       "role": "main"
+      },
+      "layer": "document",
+      "name": "",
+      "rect": [
+       1274,
+       371,
+       24,
+       19
+      ],
+      "role": "link",
+      "tag": "a",
+      "xpath": "/html/body/div[1]/main[1]/div[1]/div[1]/div[4]/div[1]/div[2]/div[2]/div[2]/div[1]/table[1]/tbody[1]/tr[1]/td[2]/div[1]/div[1]/div[1]/span[1]/a[1]"
+     },
+     "state": "accounts.wire-details"
+    }
+   ],
+   "evidenceHash": "322f5718b3f6c74d28bfcabf7440f2da50def039984706458dd9f976f6f7090d",
+   "facts": {
+    "announced": "link \"\"",
+    "axeSummary": "Element is in tab order and does not have accessible text; Element does not have text that is visible to screen readers; aria-label attribute does not exist or…",
+    "criterion": "4.1.2",
+    "criterionName": "Name, Role, Value",
+    "element": "link in \"Documents & Data\"",
+    "rule": "link-name",
+    "screen": "Bank letters"
+   },
+   "family": "name",
+   "guidance": "High for an unnamed form control or the sole primary action.",
+   "issueId": null,
+   "key": "name:link-name:1e3343909ede",
+   "measured": false,
+   "primary": "accounts.bank-letters",
+   "proposals": [],
+   "rule": "link-name",
+   "screens": 2,
+   "severityDefault": "medium",
+   "source": "scanner",
+   "states": [
+    "accounts.bank-letters",
+    "accounts.wire-details"
+   ],
+   "summary": "link-name: announced as link \"\". Element is in tab order and does not have accessible text; Element does not have text that is visible to screen readers; aria-label attribute does not exist or…",
+   "title": "Missing or unclear name: link in \"Documents & Data\""
+  },
+  {
+   "attachments": [],
+   "attempt": 1,
+   "basis": "incomplete",
+   "criteria": [
+    "4.1.2"
+   ],
+   "evidence": [
+    {
+     "evidence": {
+      "failureSummary": "Fix all of the following:\n  ARIA attribute element ID does not exist on the page: aria-describedby=\"bulk-action-island-description\"",
+      "messageKey": "noId",
+      "needsReview": "aria-describedby=\"bulk-action-island-description\""
+     },
+     "occurrence": {
+      "ancestors": [
+       [],
+       [
+        "_documentsRoot_7ux9c_6"
+       ],
+       [],
+       [
+        "_documentsPageContent_7ux9c_1",
+        "_pageContent_809q8_151",
+        "_footerPadding_809q8_115"
+       ],
+       [
+        "_dashboardContent_809q8_29"
+       ],
+       [
+        "_layout_809q8_18"
+       ],
+       [
+        "_wrapper_809q8_3"
+       ],
+       []
+      ],
+      "classes": [
+       "_floatingBulkActionsOuterContainer_1pbh4_4",
+       "_visible_1pbh4_30"
+      ],
+      "data": {},
+      "heading": "Documents & Data",
+      "landmark": {
+       "name": "",
+       "role": "main"
+      },
+      "layer": "document",
+      "name": "1 document selected",
+      "rect": [
+       592,
+       756,
+       476,
+       84
+      ],
+      "role": "dialog",
+      "tag": "dialog",
+      "xpath": "/html/body/div[1]/main[1]/div[1]/div[1]/div[4]/div[1]/div[2]/div[2]/div[2]/div[1]/dialog[1]"
+     },
+     "state": "accounts.bank-letters"
+    },
+    {
+     "evidence": {
+      "failureSummary": "Fix all of the following:\n  ARIA attribute element ID does not exist on the page: aria-describedby=\"amount-mercury-utils-id-25-helptext\"",
+      "messageKey": "noId",
+      "needsReview": "aria-describedby=\"amount-mercury-utils-id-25-helptext\""
+     },
+     "occurrence": {
+      "ancestors": [
+       [
+        "_inputBox_q7hf7_93",
+        "_hasValue_q7hf7_171"
+       ],
+       [
+        "_inputBoxWrapper_q7hf7_93"
+       ],
+       [
+        "_textInputWrapper_q7hf7_24"
+       ],
+       [
+        "_provideDSTextInput_q7hf7_6",
+        "_flexField_112ku_49"
+       ],
+       [
+        "_row_112ku_33"
+       ],
+       [
+        "_fieldGroup_112ku_27"
+       ],
+       [
+        "_fields_112ku_18"
+       ],
+       [
+        "_formContent_112ku_3"
+       ]
+      ],
+      "classes": [
+       "_input_q7hf7_93"
+      ],
+      "data": {},
+      "heading": "Edit budget",
+      "landmark": {
+       "name": "",
+       "role": "main"
+      },
+      "layer": "document",
+      "name": "Spend limit per person",
+      "rect": [
+       128,
+       375,
+       213,
+       24
+      ],
+      "role": "textbox",
+      "tag": "input",
+      "xpath": "/html/body/div[1]/main[1]/div[1]/div[2]/div[2]/div[3]/div[1]/div[1]/div[1]/div[2]/div[1]/div[2]/div[1]/div[2]/div[1]/div[1]/div[1]/div[1]/input[1]"
+     },
+     "state": "cards.budget-edit-error"
+    }
+   ],
+   "evidenceHash": "0767eaf1fd34aec0be35504e0ad03055d1d85acff917bf64262ded0ac8cbd494",
+   "facts": {
+    "criterion": "4.1.2",
+    "criterionName": "Name, Role, Value",
+    "elements": "140 elements",
+    "messageKey": "noId",
+    "rule": "aria-valid-attr-value",
+    "screen": "Bank letters",
+    "why": "an ARIA attribute names a missing id"
+   },
+   "family": "role-state",
+   "guidance": "Low for optional ARIA or an invalid autocomplete token; high when aria-hidden hides the whole page.",
+   "issueId": null,
+   "key": "role-state:aria-valid-attr-value:ed09b824e8a3",
+   "measured": false,
+   "primary": "accounts.bank-letters",
+   "proposals": [],
+   "rule": "aria-valid-attr-value",
+   "screens": 186,
+   "severityDefault": "medium",
+   "source": "scanner",
+   "states": [
+    "accounts.bank-letters",
+    "cards.budget-edit-error"
+   ],
+   "summary": "axe aria-valid-attr-value could not decide 140 elements (noId): an ARIA attribute names a missing id.",
+   "title": "Needs review: aria-valid-attr-value, an ARIA attribute names a missing id"
+  }
+ ],
+ "primaries": [
+  "accounts.bank-letters"
+ ],
+ "reach": {
+  "baseUrl": "https://demo.mercury.com",
+  "data": "data",
+  "map": "build/map.json",
+  "run": "2026-10-03-1525",
+  "workspace": "a11y"
+ },
+ "run": "2026-10-03-1525"
+}

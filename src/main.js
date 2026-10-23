@@ -2,6 +2,7 @@ import { CARD_W, CARD_H, LABEL_W, prepare } from "./layout.js";
 import { Renderer, buildScene, AREA_COLORS, FLAGS } from "./render.js";
 import { ImageStore } from "./images.js";
 import { createLightbox } from "./lightbox.js";
+import { zoomTool } from "./zoomtool.js";
 
 const $ = (s) => document.querySelector(s);
 const EXT_ICON = `<svg viewBox="0 0 16 16" width="11" height="11" aria-hidden="true"><path d="M6.5 3.5H3.5v9h9v-3M9.5 3.5h3v3M12.5 3.5 7 9" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" fill="none"/></svg>`;
@@ -137,6 +138,8 @@ function hit(clientX, clientY) {
 }
 
 let drag = null; const pointers = new Map();
+const Z_STEP = 2; // per Z-click, like the Figma and Photoshop zoom tools
+zoomTool.bindCursor(stage);
 canvas.addEventListener("pointerdown", (e) => {
   pointers.set(e.pointerId, { x: e.clientX, y: e.clientY });
   canvas.setPointerCapture(e.pointerId);
@@ -144,6 +147,7 @@ canvas.addEventListener("pointerdown", (e) => {
   if (pointers.size === 2) { const [p, q] = [...pointers.values()]; drag.pinch = { d: Math.hypot(p.x - q.x, p.y - q.y), k: T.k }; }
 });
 canvas.addEventListener("pointermove", (e) => {
+  zoomTool.syncAlt(e.altKey);
   if (!drag) { // hover
     const c = e.pointerType === "mouse" ? hit(e.clientX, e.clientY) : null;
     if (c !== hover) { hover = c; canvas.style.cursor = c ? "pointer" : ""; invalidate(); }
@@ -164,8 +168,9 @@ const end = (e) => {
   if (!drag) return;
   stage.classList.remove("panning");
   if (!drag.moved && pointers.size === 0 && e.type === "pointerup") {
-    const c = hit(e.clientX, e.clientY);
-    if (c) openNode(c.id, false, c.lane);
+    // Z+click zooms in, Z+Option+click zooms out, centred on the click. It never opens the screen underneath.
+    if (zoomTool.on) zoomAt(zoomTool.out ? 1 / Z_STEP : Z_STEP, e.clientX - SR.left, e.clientY - SR.top);
+    else { const c = hit(e.clientX, e.clientY); if (c) openNode(c.id, false, c.lane); }
   }
   if (pointers.size === 0) drag = null;
 };
@@ -260,6 +265,8 @@ function applyFocus() {
   if (focus) {
     b.hidden = false;
     $("#banner-t").textContent = focus.type === "journey" ? `Journey: ${j?.name}` : focus.type === "issue" ? `Issue: ${issueById.get(focus.id)?.title}` : focus.type === "pattern" ? `Pattern: ${patternById.get(focus.id)?.title} · ${ids.size} screens` : `${ids.size} screens match “${query}”`;
+    const iss = focus.type === "issue" && issueById.get(focus.id);
+    $("#banner-link").innerHTML = iss ? ticketLink(iss.id, "banner-a") : "";
   } else b.hidden = true;
   renderList();
   invalidate();
@@ -323,8 +330,10 @@ function openNode(id, frameIt, lane, highlightIssue) {
   syncUrl();
 }
 function linkHTML(id, label) { const n = nodes.get(id); if (!n) return ""; return `<button data-node="${esc(id)}"><span>${esc(n.title)}</span><small>${esc(label || "")} · ${esc(areaOf.get(id).title)}</small></button>`; }
+const ticketHref = (id) => "agent/tickets/" + encodeURIComponent(id) + ".md";
+const ticketLink = (id, cls) => `<a class="${cls}" href="${esc(ticketHref(id))}" target="_blank" rel="noopener" title="Open the Markdown ticket for coding agents (new tab)">Agent instructions${EXT_ICON}<span class="sr">(opens in a new tab)</span></a>`;
 function issueHTML(i, hi) {
-  return `<div class="issue" ${hi ? 'style="border-color:var(--accent)"' : ""}><div class="meta"><span class="sev ${esc(i.severity)}">${esc(i.severity)}</span><span>${esc(i.category)}</span>${i.nodeIds.length > 1 ? `<button class="chip" data-issue="${esc(i.id)}">Show all ${i.nodeIds.length} screens</button>` : ""}</div><b>${esc(i.title)}</b><p>${esc(i.detail)}</p>${i.evidence ? `<code>${esc(i.evidence)}</code>` : ""}</div>`;
+  return `<div class="issue" ${hi ? 'style="border-color:var(--accent)"' : ""}><div class="meta"><span class="sev ${esc(i.severity)}">${esc(i.severity)}</span><span>${esc(i.category)}</span>${i.nodeIds.length > 1 ? `<button class="chip" data-issue="${esc(i.id)}">Show all ${i.nodeIds.length} screens</button>` : ""}${ticketLink(i.id, "ticket")}</div><b>${esc(i.title)}</b><p>${esc(i.detail)}</p>${i.evidence ? `<code>${esc(i.evidence)}</code>` : ""}</div>`;
 }
 function stepJourney(dir) {
   const j = drawerLane && journeyById.get(drawerLane); if (!j) return;

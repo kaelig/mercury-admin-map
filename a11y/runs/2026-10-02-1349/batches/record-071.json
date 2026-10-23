@@ -1,0 +1,251 @@
+{
+ "batch": "record-071",
+ "reach": {
+  "baseUrl": "https://demo.mercury.com",
+  "data": "data",
+  "map": "build/map.json",
+  "run": "2026-10-02-1349",
+  "workspace": "a11y"
+ },
+ "run": "2026-10-02-1349",
+ "states": [
+  {
+   "area": "transactions",
+   "draft": "not drafted: its parent had no accepted recipe when the drafter ran; a previous recorder failed: step-failed transactions.detail-card hop 0: click {\"index\":2,\"text\":\"Office Stop Co.\"}: Timeout 5000ms exceeded (parent recipe now fails in reach; one earlier attempt gave structure-missing: a drawer needs an open layer)",
+   "image": "screens/transactions/34-detail-card-notes-attachments.png",
+   "kind": "drawer",
+   "labels": [
+    "Click a card transaction row",
+    "Scroll panel"
+   ],
+   "mutates": false,
+   "note": "Lower part of the card panel: Department, Notes, Attachments dropzone (PDF, PNG, JPEG), Find using Gmail, Bank description.",
+   "parent": "transactions.detail-card",
+   "state": "transactions.detail-card-lower",
+   "title": "Card detail: notes & attachments"
+  },
+  {
+   "area": "transactions",
+   "draft": "not drafted: its parent had no accepted recipe when the drafter ran",
+   "image": "screens/transactions/35-attachment-uploaded-toast.png",
+   "kind": "toast",
+   "labels": [
+    "Click a card transaction row",
+    "Scroll panel",
+    "Upload a file"
+   ],
+   "mutates": true,
+   "note": "\"Attachment uploaded\" toast; the row's attachment column switches from + to a paperclip.",
+   "parent": "transactions.detail-card-lower",
+   "state": "transactions.attachment-toast",
+   "title": "Attachment uploaded toast"
+  },
+  {
+   "area": "transactions",
+   "draft": "not drafted: its parent had no accepted recipe when the drafter ran",
+   "image": "screens/transactions/92-detail-note-saved.png",
+   "kind": "confirmation",
+   "labels": [
+    "Click a card transaction row",
+    "Scroll panel",
+    "Edit Notes and tab out"
+   ],
+   "mutates": false,
+   "note": "Editing Notes on a debit card charge and tabbing out shows a green \"Saved\" check in the panel header.",
+   "parent": "transactions.detail-card-lower",
+   "state": "transactions.detail-note-saved",
+   "title": "Note saved"
+  },
+  {
+   "area": "transactions",
+   "draft": "not drafted: its parent had no accepted recipe when the drafter ran",
+   "image": "screens/transactions/93-attachment-menu.png",
+   "kind": "menu",
+   "labels": [
+    "Click a card transaction row",
+    "Scroll panel",
+    "Edit Notes and tab out",
+    "Click the attachment chevron"
+   ],
+   "mutates": false,
+   "note": "Chevron next to an attachment opens Receipt / Bill / Other type options and a destructive Remove.",
+   "parent": "transactions.detail-note-saved",
+   "state": "transactions.attachment-menu",
+   "title": "Attachment type menu"
+  },
+  {
+   "area": "transactions",
+   "draft": "not drafted: its parent had no accepted recipe when the drafter ran",
+   "image": "screens/transactions/94-attachment-preview.png",
+   "kind": "modal",
+   "labels": [
+    "Click a card transaction row",
+    "Scroll panel",
+    "Edit Notes and tab out",
+    "Click the attachment name"
+   ],
+   "mutates": false,
+   "note": "Clicking the attachment name opens a document viewer with page (1 of 3), zoom, Reset, open-in-new-tab and download controls, beside the transaction summary and Close.",
+   "parent": "transactions.detail-note-saved",
+   "state": "transactions.attachment-preview",
+   "title": "Attachment preview"
+  },
+  {
+   "area": "transactions",
+   "draft": "not drafted: its parent had no accepted recipe when the drafter ran",
+   "image": "screens/transactions/36-detail-receipt-attached.png",
+   "kind": "confirmation",
+   "labels": [
+    "Click a card transaction row",
+    "Scroll panel",
+    "Drop receipt on Attachments"
+   ],
+   "mutates": false,
+   "note": "Attachments list shows the uploaded receipt with a green check (named receipt.pdf although a PNG was uploaded).",
+   "parent": "transactions.detail-card-lower",
+   "state": "transactions.detail-receipt-attached",
+   "title": "Receipt attached"
+  },
+  {
+   "area": "transactions",
+   "draft": "not drafted: its parent had no accepted recipe when the drafter ran",
+   "image": "screens/transactions/81-insights-compare-to-menu.png",
+   "kind": "menu",
+   "labels": [
+    "Click date chip",
+    "Pick August, open Compare to"
+   ],
+   "mutates": false,
+   "note": "With a single month (August 2026) selected, Compare to becomes active and offers No comparison or Previous month.",
+   "parent": "transactions.insights-date-menu",
+   "state": "transactions.insights-compare-menu",
+   "title": "Compare to menu"
+  },
+  {
+   "area": "transactions",
+   "draft": "not drafted: its parent had no accepted recipe when the drafter ran",
+   "image": "screens/transactions/82-insights-compare-previous-month.png",
+   "kind": "page",
+   "labels": [
+    "Click date chip",
+    "Pick August, open Compare to",
+    "Choose Previous month"
+   ],
+   "mutates": false,
+   "note": "Previous month comparison: Net cashflow vs. previous month with a 30% delta chip, Money out 81% chip, daily chart with the prior month drawn as a second series and a 2 notable transactions note.",
+   "parent": "transactions.insights-compare-menu",
+   "state": "transactions.insights-compare",
+   "title": "Compared to previous month"
+  },
+  {
+   "area": "transactions",
+   "draft": "cannot parse \"Search Deli 77\"; a previous recorder failed: Last: step-failed transactions.insights-filters hop 0: click {\"name\":\"Filters\",\"role\":\"menuitem\"}: Timeout 5000ms. Replays were flaky: the parent chain and the row-tick clicks timed out intermittently. By hand, fill Search with Deli 77 then click two 'This transaction' cells worked.",
+   "image": "screens/transactions/86-insights-exclusion-selected.png",
+   "kind": "form-state",
+   "labels": [
+    "Click Filters",
+    "Click Exclusions",
+    "Search Deli 77 and tick rows"
+   ],
+   "mutates": false,
+   "note": "Searching \"Deli 77\" lists matching transactions; two rows are ticked and Exclude becomes active next to Cancel.",
+   "parent": "transactions.insights-exclusions",
+   "state": "transactions.insights-exclusion-selected",
+   "title": "Exclusions: transactions selected"
+  },
+  {
+   "area": "transactions",
+   "draft": "not drafted: its parent had no accepted recipe when the drafter ran",
+   "image": "screens/transactions/87-insights-transactions-excluded.png",
+   "kind": "toast",
+   "labels": [
+    "Click Filters",
+    "Click Exclusions",
+    "Search Deli 77 and tick rows",
+    "Click Exclude"
+   ],
+   "mutates": true,
+   "note": "The two rows move into the exclusions table, the header reads \"2 transactions excluded\" and a matching toast appears.",
+   "parent": "transactions.insights-exclusion-selected",
+   "state": "transactions.insights-excluded",
+   "title": "Transactions excluded"
+  },
+  {
+   "area": "transactions",
+   "draft": "not drafted: its parent had no accepted recipe when the drafter ran",
+   "image": "screens/transactions/47-category-created.png",
+   "kind": "toast",
+   "labels": [
+    "Click a Wire In row",
+    "Click Category field",
+    "Click Create category",
+    "Type a name and click Create category"
+   ],
+   "mutates": true,
+   "note": "New \"Consulting Income\" category is applied, the panel header shows \"Saved\", and a toast reads \"Category created and applied to transaction\".",
+   "parent": "transactions.create-category-modal",
+   "state": "transactions.category-created",
+   "title": "Category created"
+  },
+  {
+   "area": "transactions",
+   "draft": "not drafted: its parent had no accepted recipe when the drafter ran; a previous recorder failed: reach transactions.detail-ach failed twice: step-failed hop 0: click {\"text\":\"Lighthouse Properties #<n>\"}: Timeout 5000ms",
+   "image": "screens/transactions/41-detail-ach-comments.png",
+   "kind": "drawer",
+   "labels": [
+    "Click an ACH payment row",
+    "Click 1 Unread Comment"
+   ],
+   "mutates": false,
+   "note": "ACH panel scrolled to the attached bill, bank description, Mercury-generated receipt and an existing comment thread.",
+   "parent": "transactions.detail-ach",
+   "state": "transactions.detail-ach-comments",
+   "title": "ACH detail: attachments & comments"
+  },
+  {
+   "area": "transactions",
+   "draft": "not drafted: its parent had no accepted recipe when the drafter ran; a previous recorder failed: reach transactions.detail-ach failed twice: step-failed hop 0: click {\"text\":\"Lighthouse Properties #<n>\"}: Timeout 5000ms",
+   "image": "screens/transactions/42-detail-ach-more-menu.png",
+   "kind": "menu",
+   "labels": [
+    "Click an ACH payment row",
+    "Click ... in panel footer"
+   ],
+   "mutates": false,
+   "note": "Footer overflow menu for an ACH payment: View Recipient, Nickname recipient.",
+   "parent": "transactions.detail-ach",
+   "state": "transactions.detail-ach-more-menu",
+   "title": "ACH detail more menu"
+  },
+  {
+   "area": "transactions",
+   "draft": "not drafted: its parent had no accepted recipe when the drafter ran; a previous recorder failed: step-failed transactions.detail-card hop 0: click {\"index\":2,\"text\":\"Office Stop Co.\"}: Timeout 5000ms exceeded (parent recipe is broken)",
+   "image": "screens/transactions/39-detail-more-menu.png",
+   "kind": "menu",
+   "labels": [
+    "Click a card transaction row",
+    "Click ... in panel footer"
+   ],
+   "mutates": false,
+   "note": "Panel footer overflow menu for a card transaction: Nickname sender.",
+   "parent": "transactions.detail-card",
+   "state": "transactions.detail-more-menu",
+   "title": "Card detail more menu"
+  },
+  {
+   "area": "transactions",
+   "draft": "not drafted: its parent had no accepted recipe when the drafter ran",
+   "image": "screens/transactions/62-insights-settings-modal.png",
+   "kind": "modal",
+   "labels": [
+    "Click sliders icon",
+    "Click Settings"
+   ],
+   "mutates": false,
+   "note": "Insights Settings: notification link, Runway toggle with 3M/6M/12M timeframe, linked-transfer toggle and a transaction exclusions search table.",
+   "parent": "transactions.insights-settings-menu",
+   "state": "transactions.insights-settings-modal",
+   "title": "Insights Settings modal"
+  }
+ ]
+}

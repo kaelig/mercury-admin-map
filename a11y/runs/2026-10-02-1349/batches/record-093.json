@@ -1,0 +1,85 @@
+{
+ "batch": "record-093",
+ "reach": {
+  "baseUrl": "https://demo.mercury.com",
+  "data": "data",
+  "map": "build/map.json",
+  "run": "2026-10-02-1349",
+  "workspace": "a11y"
+ },
+ "run": "2026-10-02-1349",
+ "states": [
+  {
+   "area": "settings",
+   "draft": "not drafted: its parent had no accepted recipe when the drafter ran; a previous recorder failed: a previous attempt failed with structure-missing on a drawer the parent opened; the harness now accepts that open drawer (fixed 2026-10-03), so a scroll or wait hop inside it works",
+   "image": "screens/settings/45-invite-issue-card.png",
+   "kind": "page",
+   "labels": [
+    "Open Job title select",
+    "Pick a title, fill name/email, click Next",
+    "Select Money Mover",
+    "Click Next"
+   ],
+   "mutates": false,
+   "note": "Money Mover adds an Issue Card step: nickname, usage note, Credit/Debit and Virtual/Physical radio tiles, spend controls; 'Or, skip issuing card'.",
+   "parent": "settings.role-money-mover",
+   "state": "settings.invite-issue-card",
+   "title": "Invite a user \u2014 Issue Card"
+  },
+  {
+   "area": "settings",
+   "draft": "not drafted: its parent had no accepted recipe when the drafter ran",
+   "image": "screens/settings/46-invite-issue-card-errors.png",
+   "kind": "validation-error",
+   "labels": [
+    "Open Job title select",
+    "Pick a title, fill name/email, click Next",
+    "Select Money Mover",
+    "Click Next",
+    "Click Next without a control type"
+   ],
+   "mutates": false,
+   "note": "Next without a spend Control type shows 'Please complete this field' under the Control type select.",
+   "parent": "settings.invite-issue-card",
+   "state": "settings.invite-issue-card-error",
+   "title": "Issue Card \u2014 control type required"
+  },
+  {
+   "area": "settings",
+   "draft": "not drafted: its parent had no accepted recipe when the drafter ran",
+   "image": "screens/settings/47-invite-review.png",
+   "kind": "page",
+   "labels": [
+    "Open Job title select",
+    "Pick a title, fill name/email, click Next",
+    "Select Money Mover",
+    "Click Next",
+    "Click 'Or, skip issuing card'"
+   ],
+   "mutates": false,
+   "note": "Summary of Riley Park (email, job title) and the Money Mover role with Back / Send invite.",
+   "parent": "settings.invite-issue-card",
+   "state": "settings.invite-review",
+   "title": "Invite a user \u2014 Review & Send"
+  },
+  {
+   "area": "settings",
+   "draft": "not drafted: its parent had no accepted recipe when the drafter ran",
+   "image": "screens/settings/48-invite-sent.png",
+   "kind": "confirmation",
+   "labels": [
+    "Open Job title select",
+    "Pick a title, fill name/email, click Next",
+    "Select Money Mover",
+    "Click Next",
+    "Click 'Or, skip issuing card'",
+    "Click Send invite"
+   ],
+   "mutates": true,
+   "note": "Full-screen 'Invite sent' page with card-grid illustration, Done inviting / Invite your team; the demo banner is absent here.",
+   "parent": "settings.invite-review",
+   "state": "settings.invite-sent",
+   "title": "Invite sent"
+  }
+ ]
+}

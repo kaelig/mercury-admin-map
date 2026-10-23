@@ -1,0 +1,145 @@
+{
+ "batch": "record-005",
+ "reach": {
+  "baseUrl": "https://demo.mercury.com",
+  "data": "data",
+  "map": "build/map.json",
+  "run": "2026-10-02-1349",
+  "workspace": "a11y"
+ },
+ "run": "2026-10-02-1349",
+ "states": [
+  {
+   "area": "accounts",
+   "draft": "nothing on accounts.linked-accounts matches {\"click\":{\"name\":\"Transfer on a linked account\"}}",
+   "image": "screens/accounts/68-linked-transfer-menu.png",
+   "kind": "menu",
+   "labels": [
+    "Click Transfer on a linked account"
+   ],
+   "mutates": true,
+   "note": "Transfer in / Transfer out for an external account.",
+   "parent": "accounts.linked-accounts",
+   "state": "accounts.linked-transfer-menu",
+   "title": "Linked account Transfer menu"
+  },
+  {
+   "area": "accounts",
+   "draft": "cannot parse \"Type new name\"",
+   "image": "screens/accounts/73-nickname-saved.png",
+   "kind": "toast",
+   "labels": [
+    "Open AP row, click the title",
+    "Type new name, press Enter"
+   ],
+   "mutates": false,
+   "note": "Title reads \"AP / Vendors\" with an \"Account nickname updated\" toast.",
+   "parent": "accounts.nickname-edit",
+   "state": "accounts.nickname-saved",
+   "title": "Nickname updated"
+  },
+  {
+   "area": "accounts",
+   "draft": "cannot parse \"enter amount above balance\"; the conductor rejected the previous recipe: missing state: 250,000 is typed but the 'Must be <= $12,505.87' error never shows; it likely needs a blur (Tab) after the fill",
+   "image": "screens/accounts/30-pay-credit-validation.png",
+   "kind": "validation-error",
+   "labels": [
+    "Click Pay",
+    "Click Review",
+    "Click Edit and enter amount above balance"
+   ],
+   "mutates": false,
+   "note": "Amount above the balance shows \"Must be <= $12,505.87\" and disables Review.",
+   "parent": "accounts.pay-credit-review",
+   "state": "accounts.pay-credit-error",
+   "title": "Credit payment \u2014 amount too high"
+  },
+  {
+   "area": "accounts",
+   "draft": "nothing on accounts.safes matches {\"click\":{\"name\":\"Cancelled filter\"}}",
+   "image": "screens/accounts/109-safe-filter-cancelled.png",
+   "kind": "empty-state",
+   "labels": [
+    "Click Cancelled filter"
+   ],
+   "mutates": false,
+   "note": "Cancelled filter leaves the table headers and \"No SAFE requests match your filters\"; the summary still counts 3 SAFEs.",
+   "parent": "accounts.safes",
+   "state": "accounts.safe-filter-cancelled",
+   "title": "SAFEs filtered to Cancelled"
+  },
+  {
+   "area": "accounts",
+   "draft": "fingerprint-mismatch: second replay: accounts.statement-shared: controls overlap 0.00, below 0.6",
+   "image": "screens/accounts/118-statement-shared.png",
+   "kind": "confirmation",
+   "labels": [
+    "Tick a statement row",
+    "Click Share document",
+    "Open Recipient emails",
+    "Pick jason@green.com, click Share via email"
+   ],
+   "mutates": true,
+   "note": "\"Email sent\" page with the shared document, an Invite-your-accountant upsell and Return to documents & data.",
+   "parent": "accounts.share-recipient-menu",
+   "state": "accounts.statement-shared",
+   "title": "Statement shared"
+  },
+  {
+   "area": "accounts",
+   "draft": "nothing on accounts.checking-detail matches {\"click\":{\"name\":\"Transfer chevron\"}}",
+   "image": "screens/accounts/25-transfer-split-menu.png",
+   "kind": "menu",
+   "labels": [
+    "Click Transfer chevron"
+   ],
+   "mutates": true,
+   "note": "Chevron on the Transfer button opens Transfer in / Transfer out.",
+   "parent": "accounts.checking-detail",
+   "state": "accounts.transfer-split-menu",
+   "title": "Transfer split-button menu"
+  },
+  {
+   "area": "accounts",
+   "draft": "nothing on accounts.treasury matches {\"click\":{\"name\":\"August net return\"}}",
+   "image": "screens/accounts/98-treasury-net-return.png",
+   "kind": "modal",
+   "labels": [
+    "Click August net return row"
+   ],
+   "mutates": false,
+   "note": "\"August 2026 net return\": MCRYX and MRGXX dividends minus the $25 Treasury fee, net $1,284.99, dismissed with a secondary Done.",
+   "parent": "accounts.treasury",
+   "state": "accounts.treasury-net-return",
+   "title": "Monthly net return breakdown"
+  },
+  {
+   "area": "accounts",
+   "draft": "not drafted: its parent had no accepted recipe when the drafter ran; the conductor rejected the previous recipe: different screen: the hop clicks the 'Edit portfolio' link; the label means the Portfolio tab",
+   "image": "screens/accounts/40-treasury-portfolio.png",
+   "kind": "page",
+   "labels": [
+    "Click Portfolio tab"
+   ],
+   "mutates": false,
+   "note": "Fund cards for MRGXX and MCRYX with description, ticker, net yield, shares, fund type and prospectus link.",
+   "parent": "accounts.treasury",
+   "state": "accounts.treasury-portfolio",
+   "title": "Treasury \u2014 Portfolio tab"
+  },
+  {
+   "area": "accounts",
+   "draft": "nothing on accounts.treasury matches {\"click\":{\"name\":\"Transfer funds chevron\"}}",
+   "image": "screens/accounts/41-treasury-transfer-menu.png",
+   "kind": "menu",
+   "labels": [
+    "Click Transfer funds chevron"
+   ],
+   "mutates": true,
+   "note": "Transfer funds split button menu: Transfer in (invest) and Transfer out (withdraw).",
+   "parent": "accounts.treasury",
+   "state": "accounts.treasury-transfer-menu",
+   "title": "Treasury transfer menu"
+  }
+ ]
+}

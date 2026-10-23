@@ -1,0 +1,146 @@
+{
+ "build": "fixture",
+ "checks": {
+  "axe": {
+   "inapplicable": [],
+   "rulesRan": [
+    "button-name",
+    "color-contrast"
+   ]
+  }
+ },
+ "env": {
+  "axe": "4.13.0",
+  "chromium": "fixture",
+  "colorScheme": "light",
+  "dpr": 1,
+  "locale": "en-US",
+  "playwright": "1.62.1",
+  "reducedMotion": "reduce",
+  "timezone": "America/Los_Angeles",
+  "viewport": [
+   1440,
+   900
+  ]
+ },
+ "families": {
+  "completed": [
+   "axe",
+   "records",
+   "interactive",
+   "target"
+  ],
+  "incomplete": []
+ },
+ "frames": [],
+ "harness": "0000000000000000",
+ "kind": "modal",
+ "layer": {
+  "name": "Edit card limits",
+  "role": "dialog",
+  "scope": "top",
+  "xpath": "/html/body/div[4]"
+ },
+ "reason": null,
+ "reasonDetail": null,
+ "recipeHash": "0000000000000000000000000000000000000000000000000000000000000000",
+ "records": [],
+ "results": [
+  {
+   "basis": "failure",
+   "check": "dialog",
+   "criteria": [
+    "2.4.3"
+   ],
+   "evidence": {
+    "focus": null,
+    "opened": "enter"
+   },
+   "messageKey": null,
+   "occurrence": {
+    "ancestors": [
+     [
+      "_limits_crd11_8"
+     ],
+     [
+      "_cardDetail_crd11_2"
+     ]
+    ],
+    "classes": [
+     "_button_btn01_5",
+     "_ghost_btn01_9"
+    ],
+    "data": {},
+    "heading": "Card limits",
+    "landmark": {
+     "name": "",
+     "role": "main"
+    },
+    "layer": "document",
+    "name": "Edit limits",
+    "rect": [
+     10,
+     10,
+     24,
+     24
+    ],
+    "role": "button",
+    "tag": "button",
+    "xpath": "/html/body/div[2]/main/section[2]/button[1]"
+   },
+   "rule": "dialog-focus-not-moved"
+  },
+  {
+   "basis": "violation",
+   "check": "axe",
+   "criteria": [
+    "1.4.3"
+   ],
+   "evidence": {
+    "bgColor": "#ffffff",
+    "contrastRatio": 2.85,
+    "expectedContrastRatio": "4.5:1",
+    "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 2.85 (foreground color: #9d9da8, background color: #ffffff, font size: 10.5pt (14px), font weight: normal). Expected contrast ratio of 4.5:1",
+    "fgColor": "#9d9da8",
+    "fontSize": "10.5pt (14px)",
+    "fontWeight": "normal"
+   },
+   "messageKey": null,
+   "occurrence": {
+    "ancestors": [
+     [
+      "_body_mdl55_3"
+     ],
+     [
+      "_modal_mdl55_1"
+     ]
+    ],
+    "classes": [
+     "_muted_ab12c_3"
+    ],
+    "data": {},
+    "heading": "",
+    "landmark": {
+     "name": "",
+     "role": "main"
+    },
+    "layer": "document",
+    "name": "Pending",
+    "rect": [
+     300,
+     200,
+     52,
+     17
+    ],
+    "role": "",
+    "tag": "span",
+    "xpath": "/html/body/div[4]/div/span[1]"
+   },
+   "rule": "color-contrast"
+  }
+ ],
+ "schema": 1,
+ "state": "cards.edit-limit-modal",
+ "status": "audited",
+ "url": "/cards/<id>"
+}

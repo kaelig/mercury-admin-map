@@ -1,0 +1,62 @@
+{
+ "batch": "record-098",
+ "reach": {
+  "baseUrl": "https://demo.mercury.com",
+  "data": "data",
+  "map": "build/map.json",
+  "run": "2026-10-02-1349",
+  "workspace": "a11y"
+ },
+ "run": "2026-10-02-1349",
+ "states": [
+  {
+   "area": "cards",
+   "draft": "not drafted: its parent had no accepted recipe when the drafter ran",
+   "image": "screens/cards/88-assign-budget-cards.png",
+   "kind": "modal",
+   "labels": [
+    "Click Assign budget to employees on a row",
+    "Open Select team members",
+    "Search and pick Abigail Kyte",
+    "Click Next"
+   ],
+   "mutates": true,
+   "note": "Step 2 'Set up budget cards': choose the card each member's budget spend comes from (Abigail Kyte -> New virtual credit card); Back and Assign.",
+   "parent": "cards.assign-budget-selected",
+   "state": "cards.assign-budget-cards",
+   "title": "Set up budget cards"
+  },
+  {
+   "area": "cards",
+   "draft": "cannot parse \"Clear amount\"; the conductor rejected the previous recipe: missing validation error: the amount is cleared and the input focused, but there is no warning icon and no 'Please complete this field' tooltip. The hop only clears the field; it never clicks Save or blurs.; a previous recorder failed: policy (now retry: policy.fixtureValues gained empty \"\", 2000000, 10000, 2500, 500, 150, card, a, zzqxnothing, Lunch, Deli 77, 12/31/2099, http://example.invalid/a11y-audit): Needs clearing the amount (typing an empty value); the replay refuses \"\" because it is not a policy.fixtureValues entry.",
+   "image": "screens/cards/71-policy-receipt-error.png",
+   "kind": "validation-error",
+   "labels": [
+    "Click Edit on Receipt requirement",
+    "Clear amount, click Save"
+   ],
+   "mutates": true,
+   "note": "Amount cleared: the input shows a warning icon and a 'Please complete this field' tooltip above it; Save disabled.",
+   "parent": "cards.policy-receipt-edit",
+   "state": "cards.policy-receipt-error",
+   "title": "Receipt threshold required"
+  },
+  {
+   "area": "cards",
+   "draft": "not drafted: its parent had no accepted recipe when the drafter ran; the conductor rejected the previous recipe: missing warning: same Review expense step with Back and Submit, but the 'Expense is missing a category' alert the capture shows is absent from the replay; the $1.00/Google fixture from the accepted parent probably skips the category policy, so fix it upstream",
+   "image": "screens/cards/67-submit-expense-review.png",
+   "kind": "form-state",
+   "labels": [
+    "Click Submit expense",
+    "Click Review with empty form",
+    "Fill amount, merchant and notes",
+    "Click Review"
+   ],
+   "mutates": true,
+   "note": "Step 2 Review expense: $42.50, a warning that the expense is missing a category, summary rows (Date September 24, 2026, merchant, participants, notes), Back and Submit.",
+   "parent": "cards.submit-expense-filled",
+   "state": "cards.submit-expense-review",
+   "title": "Review expense"
+  }
+ ]
+}

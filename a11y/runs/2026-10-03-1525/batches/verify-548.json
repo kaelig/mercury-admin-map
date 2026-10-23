@@ -1,0 +1,114 @@
+{
+ "area": "transactions",
+ "batch": "verify-548",
+ "findings": [
+  {
+   "attachments": [],
+   "attempt": 1,
+   "basis": "candidate",
+   "criteria": [
+    "4.1.2"
+   ],
+   "evidence": [
+    {
+     "evidence": {
+      "description": "",
+      "name": "",
+      "role": "listbox",
+      "states": {},
+      "template": "listbox \"\""
+     },
+     "occurrence": {
+      "ancestors": [
+       [],
+       [
+        "_timeframeSticky_almxf_50"
+       ],
+       [
+        "_timeframeWrapper_almxf_45"
+       ],
+       [
+        "_tabBar_almxf_27"
+       ],
+       [
+        "_stickyControlsAndTimeline_almxf_14"
+       ],
+       [
+        "_insightsPageDashboardWrapper_almxf_4"
+       ],
+       [
+        "_dashboardContent_809q8_29",
+        "_scrollContainer_809q8_29"
+       ],
+       [
+        "_layout_809q8_18"
+       ]
+      ],
+      "classes": [
+       "_timeframePopoverBase_1apwv_64"
+      ],
+      "data": {
+       "data-dialog": "",
+       "data-enter": "true",
+       "data-open": "true"
+      },
+      "heading": "",
+      "landmark": {
+       "name": "",
+       "role": "main"
+      },
+      "layer": "top",
+      "name": "",
+      "rect": [
+       1227,
+       232,
+       151,
+       88
+      ],
+      "role": "listbox",
+      "tag": "div",
+      "xpath": "/html/body/div[1]/main[1]/div[1]/div[1]/div[4]/div[1]/div[2]/div[2]/div[1]/div[2]/div[1]/div[1]/div[1]"
+     },
+     "state": "transactions.insights-compare-menu"
+    }
+   ],
+   "evidenceHash": "96d3ef078f7fc2282470d3855d90cca6a1b9132fed6a44943bd3c94160af1b67",
+   "facts": {
+    "announced": "listbox \"\"",
+    "axeSummary": "",
+    "criterion": "4.1.2",
+    "criterionName": "Name, Role, Value",
+    "element": "listbox in the main landmark",
+    "rule": "announced-as",
+    "screen": "Compare to menu"
+   },
+   "family": "name",
+   "guidance": "High for an unnamed form control or the sole primary action.",
+   "issueId": null,
+   "key": "name:announced-as:3fce66940892",
+   "measured": false,
+   "primary": "transactions.insights-compare-menu",
+   "proposals": [],
+   "rule": "announced-as",
+   "screens": 1,
+   "severityDefault": "medium",
+   "source": "scanner",
+   "states": [
+    "transactions.insights-compare-menu"
+   ],
+   "summary": "announced-as: announced as listbox \"\".",
+   "title": "Missing or unclear name: listbox in the main landmark"
+  }
+ ],
+ "primaries": [
+  "transactions.insights-compare-menu"
+ ],
+ "reach": {
+  "baseUrl": "https://demo.mercury.com",
+  "data": "data",
+  "map": "build/map.json",
+  "run": "2026-10-03-1525",
+  "workspace": "a11y"
+ },
+ "run": "2026-10-03-1525"
+}

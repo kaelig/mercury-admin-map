@@ -1,0 +1,176 @@
+{
+ "area": "home",
+ "batch": "verify-175",
+ "findings": [
+  {
+   "attachments": [],
+   "attempt": 1,
+   "basis": "candidate",
+   "criteria": [
+    "2.1.1"
+   ],
+   "evidence": [
+    {
+     "evidence": {
+      "end": "body",
+      "focusable": true,
+      "source": "ax",
+      "stops": 14
+     },
+     "occurrence": {
+      "ancestors": [
+       [
+        "_buttonWithDivider_1xt6d_80"
+       ],
+       [
+        "_container_1xt6d_3",
+        "_large_1xt6d_15"
+       ],
+       [
+        "_field_97ueq_49"
+       ],
+       [
+        "_formFields_97ueq_37"
+       ],
+       [
+        "_form_97ueq_24"
+       ],
+       [
+        "_page_97ueq_1",
+        "_signupFormTransparent_lb7tt_16"
+       ],
+       [
+        "_heroHalo_lb7tt_93"
+       ],
+       [
+        "_signupFormOverlay_lb7tt_64"
+       ]
+      ],
+      "classes": [
+       "_segment_1xt6d_7",
+       "_selected_1xt6d_60",
+       "_first_1xt6d_73"
+      ],
+      "data": {},
+      "heading": "Intelligent accounting built into Mercury",
+      "landmark": {
+       "name": "",
+       "role": "form"
+      },
+      "layer": "document",
+      "name": "Cash",
+      "rect": [
+       284,
+       512,
+       61,
+       40
+      ],
+      "role": "button",
+      "tag": "button",
+      "xpath": "/html/body/div[1]/main[1]/div[1]/div[1]/div[1]/div[4]/div[1]/div[3]/div[1]/div[2]/form[1]/div[1]/div[1]/div[2]/div[1]/button[1]"
+     },
+     "state": "home.books-toggle"
+    },
+    {
+     "evidence": {
+      "end": "body",
+      "focusable": true,
+      "source": "ax",
+      "stops": 14
+     },
+     "occurrence": {
+      "ancestors": [
+       [
+        "_buttonWithDivider_1xt6d_80"
+       ],
+       [
+        "_container_1xt6d_3",
+        "_large_1xt6d_15"
+       ],
+       [
+        "_field_97ueq_49"
+       ],
+       [
+        "_formFields_97ueq_37"
+       ],
+       [
+        "_form_97ueq_24"
+       ],
+       [
+        "_page_97ueq_1",
+        "_signupFormTransparent_lb7tt_16"
+       ],
+       [
+        "_heroHalo_lb7tt_93"
+       ],
+       [
+        "_signupFormOverlay_lb7tt_64"
+       ]
+      ],
+      "classes": [
+       "_segment_1xt6d_7",
+       "_selected_1xt6d_60",
+       "_first_1xt6d_73"
+      ],
+      "data": {},
+      "heading": "Intelligent accounting built into Mercury",
+      "landmark": {
+       "name": "",
+       "role": "form"
+      },
+      "layer": "document",
+      "name": "Cash",
+      "rect": [
+       284,
+       512,
+       61,
+       40
+      ],
+      "role": "button",
+      "tag": "button",
+      "xpath": "/html/body/div[1]/main[1]/div[1]/div[1]/div[1]/div[4]/div[1]/div[3]/div[1]/div[2]/form[1]/div[1]/div[1]/div[2]/div[1]/button[1]"
+     },
+     "state": "billpay.books-signup"
+    }
+   ],
+   "evidenceHash": "afcc02637f727e2116e24bb4395877f3a87bb0b60533073aa4ede418e47d9ada",
+   "facts": {
+    "axeSummary": "",
+    "criterion": "2.1.1",
+    "criterionName": "Keyboard",
+    "element": "button \"Cash\"",
+    "rule": "not-reached",
+    "screen": "Banking/Books toggle: Books",
+    "stops": "14"
+   },
+   "family": "keyboard",
+   "guidance": "High if a task cannot be completed without a mouse.",
+   "issueId": null,
+   "key": "keyboard:not-reached:073c852d5900",
+   "measured": false,
+   "primary": "home.books-toggle",
+   "proposals": [],
+   "rule": "not-reached",
+   "screens": 3,
+   "severityDefault": "medium",
+   "source": "scanner",
+   "states": [
+    "home.books-toggle",
+    "billpay.books-signup"
+   ],
+   "summary": "The Tab walk visited 14 stops and never reached the button \"Cash\", which responds to a click.",
+   "title": "Not reachable by keyboard: button \"Cash\""
+  }
+ ],
+ "primaries": [
+  "home.books-toggle"
+ ],
+ "reach": {
+  "baseUrl": "https://demo.mercury.com",
+  "data": "data",
+  "map": "build/map.json",
+  "run": "2026-10-03-1525",
+  "workspace": "a11y"
+ },
+ "run": "2026-10-03-1525"
+}

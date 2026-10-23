@@ -1,0 +1,114 @@
+{
+ "area": "transactions",
+ "batch": "verify-543",
+ "findings": [
+  {
+   "attachments": [],
+   "attempt": 1,
+   "basis": "candidate",
+   "criteria": [
+    "4.1.2"
+   ],
+   "evidence": [
+    {
+     "evidence": {
+      "description": "",
+      "name": "Show graphs Net change this month $ 1 7 , 6 3 5 . 0 7 Money in $ 2 9 5 , 9 6 7 . 2 1 Money out −$ 2 7 8 , 3 3 2 . 1 4",
+      "role": "button",
+      "states": {},
+      "template": "button \"Show graphs Net change this month <amount> <n> Money in <amount> <n> Money out <amount> <n>\""
+     },
+     "occurrence": {
+      "ancestors": [
+       [
+        "_topContent_1ow20_3"
+       ],
+       [
+        "_transactionsPageDashboardWrapper_1ow20_48"
+       ],
+       [
+        "_dashboardContent_809q8_29",
+        "_scrollContainer_809q8_29"
+       ],
+       [
+        "_layout_809q8_18"
+       ],
+       [
+        "_wrapper_809q8_3"
+       ],
+       [],
+       [
+        "_main_1gb3b_1"
+       ],
+       [
+        "mercury-root"
+       ]
+      ],
+      "classes": [
+       "_wrapper_1apo0_1",
+       "session-replay-block",
+       "_collapsed_1apo0_24",
+       "_clickableWhenCollapsed_1apo0_109",
+       "_noBottomBorder_1apo0_9"
+      ],
+      "data": {},
+      "heading": "Transactions",
+      "landmark": {
+       "name": "",
+       "role": "main"
+      },
+      "layer": "document",
+      "name": "Show graphs Net change this month $ 1 7 , 6 3 5 . 0 7 Money in $ 2 9 5 , 9 6 7 . 2 1 Money out −$ 2 7 8 , 3 3 2 . 1 4",
+      "rect": [
+       220,
+       232,
+       1220,
+       76
+      ],
+      "role": "button",
+      "tag": "div",
+      "xpath": "/html/body/div[1]/main[1]/div[1]/div[1]/div[4]/div[1]/div[2]/div[2]/div[2]"
+     },
+     "state": "transactions.grouped-by-category"
+    }
+   ],
+   "evidenceHash": "699a51bbcc442b6399efbd10f6df8089bf9a19b3baae0c457317f19ff9b2ea20",
+   "facts": {
+    "announced": "button \"Show graphs Net change this month <amount> <n> Money in <amount> <n> Mo…",
+    "axeSummary": "",
+    "criterion": "4.1.2",
+    "criterionName": "Name, Role, Value",
+    "element": "button \"Show graphs Net change this month <amoun…\"",
+    "rule": "announced-as",
+    "screen": "Grouped by category"
+   },
+   "family": "role-state",
+   "guidance": "Low for optional ARIA or an invalid autocomplete token; high when aria-hidden hides the whole page.",
+   "issueId": null,
+   "key": "role-state:announced-as:51d69c8c9ca4",
+   "measured": false,
+   "primary": "transactions.grouped-by-category",
+   "proposals": [],
+   "rule": "announced-as",
+   "screens": 1,
+   "severityDefault": "medium",
+   "source": "scanner",
+   "states": [
+    "transactions.grouped-by-category"
+   ],
+   "summary": "announced-as: announced as button \"Show graphs Net change this month <amount> <n> Money in <amount> <n> Mo….",
+   "title": "Wrong role or state: button \"Show graphs Net change this month <amoun…\""
+  }
+ ],
+ "primaries": [
+  "transactions.grouped-by-category"
+ ],
+ "reach": {
+  "baseUrl": "https://demo.mercury.com",
+  "data": "data",
+  "map": "build/map.json",
+  "run": "2026-10-03-1525",
+  "workspace": "a11y"
+ },
+ "run": "2026-10-03-1525"
+}

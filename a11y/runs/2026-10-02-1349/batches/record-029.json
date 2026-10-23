@@ -1,0 +1,218 @@
+{
+ "batch": "record-029",
+ "reach": {
+  "baseUrl": "https://demo.mercury.com",
+  "data": "data",
+  "map": "build/map.json",
+  "run": "2026-10-02-1349",
+  "workspace": "a11y"
+ },
+ "run": "2026-10-02-1349",
+ "states": [
+  {
+   "area": "settings",
+   "draft": "nothing on settings.my-profile matches {\"click\":{\"name\":\"Edit under Preferred name\"}}",
+   "image": "screens/settings/102-edit-preferred-name.png",
+   "kind": "modal",
+   "labels": [
+    "Click Edit under Preferred name"
+   ],
+   "mutates": false,
+   "note": "Preferred first name / Preferred last name fields with Cancel and 'Update'.",
+   "parent": "settings.my-profile",
+   "state": "settings.edit-preferred-name",
+   "title": "Edit preferred name modal"
+  },
+  {
+   "area": "settings",
+   "draft": "not drafted: its parent had no accepted recipe when the drafter ran",
+   "image": "screens/settings/105-preferred-name-empty-error.png",
+   "kind": "validation-error",
+   "labels": [
+    "Click Edit under Preferred name",
+    "Clear the first name and click Update"
+   ],
+   "mutates": true,
+   "note": "Clearing Preferred first name and pressing Update shows 'This field is required'.",
+   "parent": "settings.edit-preferred-name",
+   "state": "settings.preferred-name-required",
+   "title": "Preferred name \u2014 first name required"
+  },
+  {
+   "area": "settings",
+   "draft": "not drafted: its parent had no accepted recipe when the drafter ran",
+   "image": "screens/settings/103-preferred-name-updated.png",
+   "kind": "toast",
+   "labels": [
+    "Click Edit under Preferred name",
+    "Change the name and click Update"
+   ],
+   "mutates": true,
+   "note": "Update closes the modal, the h1 and row change immediately and a toast reads 'Your preferred name has been updated.'",
+   "parent": "settings.edit-preferred-name",
+   "state": "settings.preferred-name-updated",
+   "title": "Preferred name updated toast"
+  },
+  {
+   "area": "settings",
+   "draft": "cannot parse \"Scroll the General Updates list\"",
+   "image": "screens/settings/111-notifications-general.png",
+   "kind": "page",
+   "labels": [
+    "Scroll the General Updates list"
+   ],
+   "mutates": false,
+   "note": "Lower list: Accounting, Bill pay, Check payments, Collaboration, Credit account, Invoicing, Mercury subscription, Reimbursements, Transfers ('Off' tag) and User management.",
+   "parent": "settings.notifications",
+   "state": "settings.notifications-general",
+   "title": "Notifications \u2014 General Updates list"
+  },
+  {
+   "area": "settings",
+   "draft": "not drafted: its parent had no accepted recipe when the drafter ran",
+   "image": "screens/settings/114-transfers-notifications.png",
+   "kind": "modal",
+   "labels": [
+    "Scroll the General Updates list",
+    "Click the Transfers row"
+   ],
+   "mutates": false,
+   "note": "A single Email switch, 'Updates to auto transfer rules', off by default.",
+   "parent": "settings.notifications-general",
+   "state": "settings.transfers-notifications",
+   "title": "Transfers notification settings"
+  },
+  {
+   "area": "settings",
+   "draft": "not drafted: its parent had no accepted recipe when the drafter ran",
+   "image": "screens/settings/115-transfers-email-on.png",
+   "kind": "form-state",
+   "labels": [
+    "Scroll the General Updates list",
+    "Click the Transfers row",
+    "Switch on the email alert and click Done"
+   ],
+   "mutates": false,
+   "note": "After switching it on and pressing Done, the Transfers row's 'Off' tag becomes an 'Email' tag.",
+   "parent": "settings.transfers-notifications",
+   "state": "settings.transfers-email-on",
+   "title": "Transfers \u2014 Email enabled"
+  },
+  {
+   "area": "settings",
+   "draft": "nothing on settings.approval-policy-edit matches {\"click\":{\"name\":\"\u2022\u2022\u2022 on a rule\"}}",
+   "image": "screens/settings/65-approval-rule-menu.png",
+   "kind": "menu",
+   "labels": [
+    "Click \u2022\u2022\u2022 on a rule"
+   ],
+   "mutates": false,
+   "note": "Rule \u2022\u2022\u2022 menu with Edit rule and Delete rule.",
+   "parent": "settings.approval-policy-edit",
+   "state": "settings.approval-rule-menu",
+   "title": "Approval rule menu"
+  },
+  {
+   "area": "settings",
+   "draft": "not drafted: its parent had no accepted recipe when the drafter ran",
+   "image": "screens/settings/66-edit-approval-rule.png",
+   "kind": "form-state",
+   "labels": [
+    "Click \u2022\u2022\u2022 on a rule",
+    "Click Edit rule"
+   ],
+   "mutates": false,
+   "note": "Rule card becomes inline inputs: amount range ($ 0.00 \u2013 $ 100), approver multi-select (Any admin), 'Add another approver', Cancel / Save.",
+   "parent": "settings.approval-rule-menu",
+   "state": "settings.approval-rule-editing",
+   "title": "Editing an approval rule"
+  },
+  {
+   "area": "settings",
+   "draft": "nothing on settings.notifications matches {\"click\":{\"name\":\"Edit on the Cash flow card\"}}",
+   "image": "screens/settings/112-cash-flow-notifications.png",
+   "kind": "modal",
+   "labels": [
+    "Click Edit on the Cash flow card"
+   ],
+   "mutates": false,
+   "note": "Email and Push sections of switches: incoming / outgoing transactions that exceed an amount ($1,000 / $500 inputs), End-of-month cash flow digest, Cash flow insights. A secondary 'Done' button closes it.",
+   "parent": "settings.notifications",
+   "state": "settings.cash-flow-notifications",
+   "title": "Cash flow notification settings"
+  },
+  {
+   "area": "settings",
+   "draft": "not drafted: its parent had no accepted recipe when the drafter ran",
+   "image": "screens/settings/113-cash-flow-toggled.png",
+   "kind": "form-state",
+   "labels": [
+    "Click Edit on the Cash flow card",
+    "Toggle a switch and change a threshold"
+   ],
+   "mutates": false,
+   "note": "Turning off Push \u203a Outgoing hides its amount input; the Email incoming threshold accepts '$0' with no validation. Done saves silently, with no toast.",
+   "parent": "settings.cash-flow-notifications",
+   "state": "settings.cash-flow-edited",
+   "title": "Cash flow settings \u2014 edited"
+  },
+  {
+   "area": "settings",
+   "draft": "nothing on settings.index matches {\"click\":{\"name\":\"Edit under Company name\"}}",
+   "image": "screens/settings/02-edit-company-name-modal.png",
+   "kind": "modal",
+   "labels": [
+    "Click Edit under Company name"
+   ],
+   "mutates": false,
+   "note": "Single-field modal; Update stays disabled until the value changes (clearing the field just keeps it disabled, no error).",
+   "parent": "settings.index",
+   "state": "settings.edit-company-name",
+   "title": "Edit company name modal"
+  },
+  {
+   "area": "settings",
+   "draft": "not drafted: its parent had no accepted recipe when the drafter ran",
+   "image": "screens/settings/03-company-name-updated.png",
+   "kind": "toast",
+   "labels": [
+    "Click Edit under Company name",
+    "Change name and click Update"
+   ],
+   "mutates": true,
+   "note": "After Update, page header and sidebar switcher show the new name and a toast confirms 'Your company name has been updated.'",
+   "parent": "settings.edit-company-name",
+   "state": "settings.company-name-updated",
+   "title": "Company name updated toast"
+  },
+  {
+   "area": "settings",
+   "draft": "nothing on settings.index matches {\"click\":{\"name\":\"Edit under Company mailing address\"}}",
+   "image": "screens/settings/05-edit-mailing-address.png",
+   "kind": "modal",
+   "labels": [
+    "Click Edit under Company mailing address"
+   ],
+   "mutates": false,
+   "note": "Address form: country and state comboboxes, address lines, city, ZIP, a 'Copy from legal address' shortcut, Cancel/Update.",
+   "parent": "settings.index",
+   "state": "settings.edit-mailing-address",
+   "title": "Edit company mailing address modal"
+  },
+  {
+   "area": "settings",
+   "draft": "not drafted: its parent had no accepted recipe when the drafter ran",
+   "image": "screens/settings/06-mailing-address-errors.png",
+   "kind": "validation-error",
+   "labels": [
+    "Click Edit under Company mailing address",
+    "Enter a 2-digit ZIP and click Update"
+   ],
+   "mutates": true,
+   "note": "Submitting ZIP '12' flags the ZIP field in red with 'Must be a valid 5-digit number' and disables Update.",
+   "parent": "settings.edit-mailing-address",
+   "state": "settings.mailing-address-zip-error",
+   "title": "Mailing address \u2014 invalid ZIP"
+  }
+ ]
+}

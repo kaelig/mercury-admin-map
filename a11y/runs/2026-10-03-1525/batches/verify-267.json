@@ -1,0 +1,882 @@
+{
+ "area": "payments",
+ "batch": "verify-267",
+ "findings": [
+  {
+   "attachments": [],
+   "attempt": 1,
+   "basis": "violation",
+   "criteria": [
+    "1.3.5"
+   ],
+   "evidence": [
+    {
+     "evidence": {
+      "failureSummary": "Fix all of the following:\n  the autocomplete attribute is incorrectly formatted"
+     },
+     "occurrence": {
+      "ancestors": [
+       [
+        "_inputBox_q7hf7_93"
+       ],
+       [
+        "_inputBoxWrapper_q7hf7_93"
+       ],
+       [
+        "_textInputWrapper_q7hf7_24"
+       ],
+       [
+        "_provideDSTextInput_q7hf7_6",
+        "_addWrapperMargin_q7hf7_19",
+        "session-replay-mask"
+       ],
+       [
+        "_mainContent_162lh_37"
+       ],
+       [
+        "_sectionContent_162lh_19",
+        "_sectionContentAfterRequestTaxDoc_162lh_46"
+       ],
+       [
+        "_sectionWrapper_162lh_13"
+       ],
+       []
+      ],
+      "classes": [
+       "_input_q7hf7_93"
+      ],
+      "data": {},
+      "heading": "Address",
+      "landmark": {
+       "name": "",
+       "role": "main"
+      },
+      "layer": "document",
+      "name": "Apartment, suite, floor (optional)",
+      "rect": [
+       441,
+       996,
+       558,
+       24
+      ],
+      "role": "textbox",
+      "tag": "input",
+      "xpath": "/html/body/div[1]/main[1]/div[1]/div[2]/div[2]/div[3]/div[1]/div[1]/div[1]/section[2]/div[1]/div[3]/div[1]/div[1]/div[1]/input[1]"
+     },
+     "state": "payments.recipient-create"
+    },
+    {
+     "evidence": {
+      "failureSummary": "Fix all of the following:\n  the autocomplete attribute is incorrectly formatted"
+     },
+     "occurrence": {
+      "ancestors": [
+       [
+        "_inputBox_q7hf7_93",
+        "_hasValue_q7hf7_171"
+       ],
+       [
+        "_inputBoxWrapper_q7hf7_93"
+       ],
+       [
+        "_textInputWrapper_q7hf7_24"
+       ],
+       [
+        "_provideDSTextInput_q7hf7_6",
+        "_addWrapperMargin_q7hf7_19",
+        "session-replay-mask"
+       ],
+       [
+        "_mainContent_162lh_37"
+       ],
+       [
+        "_sectionContent_162lh_19"
+       ],
+       [
+        "_sectionWrapper_162lh_13"
+       ],
+       []
+      ],
+      "classes": [
+       "_input_q7hf7_93"
+      ],
+      "data": {},
+      "heading": "Address",
+      "landmark": null,
+      "layer": "document",
+      "name": "Apartment, suite, floor (optional)",
+      "rect": [
+       441,
+       2638,
+       558,
+       24
+      ],
+      "role": "textbox",
+      "tag": "input",
+      "xpath": "/html/body/div[7]/div[1]/div[1]/div[3]/div[1]/div[1]/div[1]/section[2]/div[1]/div[3]/div[1]/div[1]/div[1]/input[1]"
+     },
+     "state": "billpay.routing-number-error"
+    }
+   ],
+   "evidenceHash": "482c402a3d047aae6f5a1b26752bc81af134e2c6a352c2a3cffc34f11fcf39a9",
+   "facts": {
+    "announced": "textbox \"Apartment, suite, floor (optional)\"",
+    "axeSummary": "the autocomplete attribute is incorrectly formatted",
+    "criterion": "1.3.5",
+    "criterionName": "Identify Input Purpose",
+    "element": "textbox \"Apartment, suite, floor (optional)\"",
+    "rule": "autocomplete-valid",
+    "screen": "Create recipient"
+   },
+   "family": "role-state",
+   "guidance": "Low for optional ARIA or an invalid autocomplete token; high when aria-hidden hides the whole page.",
+   "issueId": null,
+   "key": "role-state:autocomplete-valid:43ff35c2ac1f",
+   "measured": false,
+   "primary": "payments.recipient-create",
+   "proposals": [],
+   "rule": "autocomplete-valid",
+   "screens": 11,
+   "severityDefault": "medium",
+   "source": "scanner",
+   "states": [
+    "payments.recipient-create",
+    "billpay.routing-number-error"
+   ],
+   "summary": "autocomplete-valid: announced as textbox \"Apartment, suite, floor (optional)\". the autocomplete attribute is incorrectly formatted",
+   "title": "Invalid autocomplete value: textbox \"Apartment, suite, floor (optional)\""
+  },
+  {
+   "attachments": [],
+   "attempt": 1,
+   "basis": "violation",
+   "criteria": [
+    "1.3.5"
+   ],
+   "evidence": [
+    {
+     "evidence": {
+      "failureSummary": "Fix all of the following:\n  the autocomplete attribute is incorrectly formatted"
+     },
+     "occurrence": {
+      "ancestors": [
+       [
+        "_inputBox_q7hf7_93"
+       ],
+       [
+        "_inputBoxWrapper_q7hf7_93"
+       ],
+       [
+        "_textInputWrapper_q7hf7_24"
+       ],
+       [
+        "_provideDSTextInput_q7hf7_6",
+        "_addWrapperMargin_q7hf7_19"
+       ],
+       [
+        "_mainContent_162lh_37"
+       ],
+       [
+        "_sectionContent_162lh_19"
+       ],
+       [
+        "_sectionWrapper_162lh_13"
+       ],
+       []
+      ],
+      "classes": [
+       "_input_q7hf7_93"
+      ],
+      "data": {},
+      "heading": "Profile",
+      "landmark": {
+       "name": "",
+       "role": "main"
+      },
+      "layer": "document",
+      "name": "Nickname (optional)",
+      "rect": [
+       441,
+       634,
+       558,
+       24
+      ],
+      "role": "textbox",
+      "tag": "input",
+      "xpath": "/html/body/div[1]/main[1]/div[1]/div[2]/div[2]/div[3]/div[1]/div[1]/div[1]/section[1]/div[1]/div[4]/div[1]/div[1]/div[1]/input[1]"
+     },
+     "state": "payments.recipient-create"
+    },
+    {
+     "evidence": {
+      "failureSummary": "Fix all of the following:\n  the autocomplete attribute is incorrectly formatted"
+     },
+     "occurrence": {
+      "ancestors": [
+       [
+        "_inputBox_q7hf7_93"
+       ],
+       [
+        "_inputBoxWrapper_q7hf7_93"
+       ],
+       [
+        "_textInputWrapper_q7hf7_24"
+       ],
+       [
+        "_provideDSTextInput_q7hf7_6",
+        "_addWrapperMargin_q7hf7_19"
+       ],
+       [
+        "_mainContent_162lh_37"
+       ],
+       [
+        "_sectionContent_162lh_19"
+       ],
+       [
+        "_sectionWrapper_162lh_13"
+       ],
+       []
+      ],
+      "classes": [
+       "_input_q7hf7_93"
+      ],
+      "data": {},
+      "heading": "Profile",
+      "landmark": null,
+      "layer": "document",
+      "name": "Nickname (optional)",
+      "rect": [
+       441,
+       2314,
+       558,
+       24
+      ],
+      "role": "textbox",
+      "tag": "input",
+      "xpath": "/html/body/div[7]/div[1]/div[1]/div[3]/div[1]/div[1]/div[1]/section[1]/div[1]/div[4]/div[1]/div[1]/div[1]/input[1]"
+     },
+     "state": "billpay.routing-number-error"
+    }
+   ],
+   "evidenceHash": "482c402a3d047aae6f5a1b26752bc81af134e2c6a352c2a3cffc34f11fcf39a9",
+   "facts": {
+    "announced": "textbox \"Nickname (optional)\" (For your reference only - not visible to the rec…",
+    "axeSummary": "the autocomplete attribute is incorrectly formatted",
+    "criterion": "1.3.5",
+    "criterionName": "Identify Input Purpose",
+    "element": "textbox \"Nickname (optional)\"",
+    "rule": "autocomplete-valid",
+    "screen": "Create recipient"
+   },
+   "family": "role-state",
+   "guidance": "Low for optional ARIA or an invalid autocomplete token; high when aria-hidden hides the whole page.",
+   "issueId": null,
+   "key": "role-state:autocomplete-valid:549a2a5bcba9",
+   "measured": false,
+   "primary": "payments.recipient-create",
+   "proposals": [],
+   "rule": "autocomplete-valid",
+   "screens": 11,
+   "severityDefault": "medium",
+   "source": "scanner",
+   "states": [
+    "payments.recipient-create",
+    "billpay.routing-number-error"
+   ],
+   "summary": "autocomplete-valid: announced as textbox \"Nickname (optional)\" (For your reference only - not visible to the rec…. the autocomplete attribute is incorrectly formatted",
+   "title": "Invalid autocomplete value: textbox \"Nickname (optional)\""
+  },
+  {
+   "attachments": [],
+   "attempt": 1,
+   "basis": "violation",
+   "criteria": [
+    "1.3.5"
+   ],
+   "evidence": [
+    {
+     "evidence": {
+      "failureSummary": "Fix all of the following:\n  the autocomplete attribute is incorrectly formatted"
+     },
+     "occurrence": {
+      "ancestors": [
+       [
+        "_inputBox_q7hf7_93"
+       ],
+       [
+        "_inputBoxWrapper_q7hf7_93"
+       ],
+       [
+        "_textInputWrapper_q7hf7_24"
+       ],
+       [
+        "_provideDSTextInput_q7hf7_6",
+        "_addWrapperMargin_q7hf7_19",
+        "session-replay-mask"
+       ],
+       [
+        "_mainContent_162lh_37"
+       ],
+       [
+        "_sectionContent_162lh_19",
+        "_sectionContentAfterRequestTaxDoc_162lh_46"
+       ],
+       [
+        "_sectionWrapper_162lh_13"
+       ],
+       []
+      ],
+      "classes": [
+       "_input_q7hf7_93"
+      ],
+      "data": {
+       "data-testid": "send-money-check-postal"
+      },
+      "heading": "Address",
+      "landmark": {
+       "name": "",
+       "role": "main"
+      },
+      "layer": "document",
+      "name": "Postal / ZIP code",
+      "rect": [
+       441,
+       1224,
+       558,
+       24
+      ],
+      "role": "textbox",
+      "tag": "input",
+      "xpath": "/html/body/div[1]/main[1]/div[1]/div[2]/div[2]/div[3]/div[1]/div[1]/div[1]/section[2]/div[1]/div[6]/div[1]/div[1]/div[1]/input[1]"
+     },
+     "state": "payments.recipient-create"
+    },
+    {
+     "evidence": {
+      "failureSummary": "Fix all of the following:\n  the autocomplete attribute is incorrectly formatted"
+     },
+     "occurrence": {
+      "ancestors": [
+       [
+        "_inputBox_q7hf7_93",
+        "_hasValue_q7hf7_171"
+       ],
+       [
+        "_inputBoxWrapper_q7hf7_93"
+       ],
+       [
+        "_textInputWrapper_q7hf7_24"
+       ],
+       [
+        "_provideDSTextInput_q7hf7_6",
+        "_addWrapperMargin_q7hf7_19",
+        "session-replay-mask"
+       ],
+       [
+        "_mainContent_162lh_37"
+       ],
+       [
+        "_sectionContent_162lh_19"
+       ],
+       [
+        "_sectionWrapper_162lh_13"
+       ],
+       []
+      ],
+      "classes": [
+       "_input_q7hf7_93"
+      ],
+      "data": {
+       "data-testid": "send-money-check-postal"
+      },
+      "heading": "Address",
+      "landmark": null,
+      "layer": "document",
+      "name": "Postal / ZIP code",
+      "rect": [
+       441,
+       2866,
+       558,
+       24
+      ],
+      "role": "textbox",
+      "tag": "input",
+      "xpath": "/html/body/div[7]/div[1]/div[1]/div[3]/div[1]/div[1]/div[1]/section[2]/div[1]/div[6]/div[1]/div[1]/div[1]/input[1]"
+     },
+     "state": "billpay.routing-number-error"
+    }
+   ],
+   "evidenceHash": "482c402a3d047aae6f5a1b26752bc81af134e2c6a352c2a3cffc34f11fcf39a9",
+   "facts": {
+    "announced": "textbox \"Postal / ZIP code\"",
+    "axeSummary": "the autocomplete attribute is incorrectly formatted",
+    "criterion": "1.3.5",
+    "criterionName": "Identify Input Purpose",
+    "element": "textbox \"Postal / ZIP code\"",
+    "rule": "autocomplete-valid",
+    "screen": "Create recipient"
+   },
+   "family": "role-state",
+   "guidance": "Low for optional ARIA or an invalid autocomplete token; high when aria-hidden hides the whole page.",
+   "issueId": null,
+   "key": "role-state:autocomplete-valid:65e3532695ef",
+   "measured": false,
+   "primary": "payments.recipient-create",
+   "proposals": [],
+   "rule": "autocomplete-valid",
+   "screens": 11,
+   "severityDefault": "medium",
+   "source": "scanner",
+   "states": [
+    "payments.recipient-create",
+    "billpay.routing-number-error"
+   ],
+   "summary": "autocomplete-valid: announced as textbox \"Postal / ZIP code\". the autocomplete attribute is incorrectly formatted",
+   "title": "Invalid autocomplete value: textbox \"Postal / ZIP code\""
+  },
+  {
+   "attachments": [],
+   "attempt": 1,
+   "basis": "violation",
+   "criteria": [
+    "1.3.5"
+   ],
+   "evidence": [
+    {
+     "evidence": {
+      "failureSummary": "Fix all of the following:\n  the autocomplete attribute is incorrectly formatted"
+     },
+     "occurrence": {
+      "ancestors": [
+       [
+        "_inputBox_q7hf7_93"
+       ],
+       [
+        "_inputBoxWrapper_q7hf7_93"
+       ],
+       [
+        "_textInputWrapper_q7hf7_24"
+       ],
+       [
+        "_provideDSTextInput_q7hf7_6",
+        "_addWrapperMargin_q7hf7_19",
+        "session-replay-mask"
+       ],
+       [
+        "_mainContent_162lh_37"
+       ],
+       [
+        "_sectionContent_162lh_19",
+        "_sectionContentAfterRequestTaxDoc_162lh_46"
+       ],
+       [
+        "_sectionWrapper_162lh_13"
+       ],
+       []
+      ],
+      "classes": [
+       "_input_q7hf7_93"
+      ],
+      "data": {
+       "data-testid": "send-money-check-city"
+      },
+      "heading": "Address",
+      "landmark": {
+       "name": "",
+       "role": "main"
+      },
+      "layer": "document",
+      "name": "City",
+      "rect": [
+       441,
+       1072,
+       558,
+       24
+      ],
+      "role": "textbox",
+      "tag": "input",
+      "xpath": "/html/body/div[1]/main[1]/div[1]/div[2]/div[2]/div[3]/div[1]/div[1]/div[1]/section[2]/div[1]/div[4]/div[1]/div[1]/div[1]/input[1]"
+     },
+     "state": "payments.recipient-create"
+    },
+    {
+     "evidence": {
+      "failureSummary": "Fix all of the following:\n  the autocomplete attribute is incorrectly formatted"
+     },
+     "occurrence": {
+      "ancestors": [
+       [
+        "_inputBox_q7hf7_93",
+        "_hasValue_q7hf7_171"
+       ],
+       [
+        "_inputBoxWrapper_q7hf7_93"
+       ],
+       [
+        "_textInputWrapper_q7hf7_24"
+       ],
+       [
+        "_provideDSTextInput_q7hf7_6",
+        "_addWrapperMargin_q7hf7_19",
+        "session-replay-mask"
+       ],
+       [
+        "_mainContent_162lh_37"
+       ],
+       [
+        "_sectionContent_162lh_19"
+       ],
+       [
+        "_sectionWrapper_162lh_13"
+       ],
+       []
+      ],
+      "classes": [
+       "_input_q7hf7_93"
+      ],
+      "data": {
+       "data-testid": "send-money-check-city"
+      },
+      "heading": "Address",
+      "landmark": null,
+      "layer": "document",
+      "name": "City",
+      "rect": [
+       441,
+       2714,
+       558,
+       24
+      ],
+      "role": "textbox",
+      "tag": "input",
+      "xpath": "/html/body/div[7]/div[1]/div[1]/div[3]/div[1]/div[1]/div[1]/section[2]/div[1]/div[4]/div[1]/div[1]/div[1]/input[1]"
+     },
+     "state": "billpay.routing-number-error"
+    }
+   ],
+   "evidenceHash": "482c402a3d047aae6f5a1b26752bc81af134e2c6a352c2a3cffc34f11fcf39a9",
+   "facts": {
+    "announced": "textbox \"City\"",
+    "axeSummary": "the autocomplete attribute is incorrectly formatted",
+    "criterion": "1.3.5",
+    "criterionName": "Identify Input Purpose",
+    "element": "textbox \"City\"",
+    "rule": "autocomplete-valid",
+    "screen": "Create recipient"
+   },
+   "family": "role-state",
+   "guidance": "Low for optional ARIA or an invalid autocomplete token; high when aria-hidden hides the whole page.",
+   "issueId": null,
+   "key": "role-state:autocomplete-valid:78288b7da475",
+   "measured": false,
+   "primary": "payments.recipient-create",
+   "proposals": [],
+   "rule": "autocomplete-valid",
+   "screens": 11,
+   "severityDefault": "medium",
+   "source": "scanner",
+   "states": [
+    "payments.recipient-create",
+    "billpay.routing-number-error"
+   ],
+   "summary": "autocomplete-valid: announced as textbox \"City\". the autocomplete attribute is incorrectly formatted",
+   "title": "Invalid autocomplete value: textbox \"City\""
+  },
+  {
+   "attachments": [],
+   "attempt": 1,
+   "basis": "violation",
+   "criteria": [
+    "1.3.5"
+   ],
+   "evidence": [
+    {
+     "evidence": {
+      "failureSummary": "Fix all of the following:\n  the autocomplete attribute is incorrectly formatted"
+     },
+     "occurrence": {
+      "ancestors": [
+       [
+        "_inputBox_q7hf7_93"
+       ],
+       [
+        "_inputBoxWrapper_q7hf7_93"
+       ],
+       [
+        "_textInputWrapper_q7hf7_24"
+       ],
+       [
+        "_provideDSTextInput_q7hf7_6",
+        "_addWrapperMargin_q7hf7_19",
+        "session-replay-mask"
+       ],
+       [
+        "_mainContent_162lh_37"
+       ],
+       [
+        "_sectionContent_162lh_19"
+       ],
+       [
+        "_sectionWrapper_162lh_13"
+       ],
+       []
+      ],
+      "classes": [
+       "_input_q7hf7_93"
+      ],
+      "data": {},
+      "heading": "Profile",
+      "landmark": {
+       "name": "",
+       "role": "main"
+      },
+      "layer": "document",
+      "name": "Email (optional)",
+      "rect": [
+       441,
+       534,
+       558,
+       24
+      ],
+      "role": "textbox",
+      "tag": "input",
+      "xpath": "/html/body/div[1]/main[1]/div[1]/div[2]/div[2]/div[3]/div[1]/div[1]/div[1]/section[1]/div[1]/div[3]/div[1]/div[1]/div[1]/input[1]"
+     },
+     "state": "payments.recipient-create"
+    },
+    {
+     "evidence": {
+      "failureSummary": "Fix all of the following:\n  the autocomplete attribute is incorrectly formatted"
+     },
+     "occurrence": {
+      "ancestors": [
+       [
+        "_inputBox_q7hf7_93"
+       ],
+       [
+        "_inputBoxWrapper_q7hf7_93"
+       ],
+       [
+        "_textInputWrapper_q7hf7_24"
+       ],
+       [
+        "_provideDSTextInput_q7hf7_6",
+        "_addWrapperMargin_q7hf7_19",
+        "session-replay-mask"
+       ],
+       [
+        "_mainContent_162lh_37"
+       ],
+       [
+        "_sectionContent_162lh_19"
+       ],
+       [
+        "_sectionWrapper_162lh_13"
+       ],
+       []
+      ],
+      "classes": [
+       "_input_q7hf7_93"
+      ],
+      "data": {},
+      "heading": "Profile",
+      "landmark": null,
+      "layer": "document",
+      "name": "Email (optional)",
+      "rect": [
+       441,
+       2214,
+       558,
+       24
+      ],
+      "role": "textbox",
+      "tag": "input",
+      "xpath": "/html/body/div[7]/div[1]/div[1]/div[3]/div[1]/div[1]/div[1]/section[1]/div[1]/div[3]/div[1]/div[1]/div[1]/input[1]"
+     },
+     "state": "billpay.routing-number-error"
+    }
+   ],
+   "evidenceHash": "482c402a3d047aae6f5a1b26752bc81af134e2c6a352c2a3cffc34f11fcf39a9",
+   "facts": {
+    "announced": "textbox \"Email (optional)\" (For payment receipts)",
+    "axeSummary": "the autocomplete attribute is incorrectly formatted",
+    "criterion": "1.3.5",
+    "criterionName": "Identify Input Purpose",
+    "element": "textbox \"Email (optional)\"",
+    "rule": "autocomplete-valid",
+    "screen": "Create recipient"
+   },
+   "family": "role-state",
+   "guidance": "Low for optional ARIA or an invalid autocomplete token; high when aria-hidden hides the whole page.",
+   "issueId": null,
+   "key": "role-state:autocomplete-valid:90dcd4fe9cc2",
+   "measured": false,
+   "primary": "payments.recipient-create",
+   "proposals": [],
+   "rule": "autocomplete-valid",
+   "screens": 11,
+   "severityDefault": "medium",
+   "source": "scanner",
+   "states": [
+    "payments.recipient-create",
+    "billpay.routing-number-error"
+   ],
+   "summary": "autocomplete-valid: announced as textbox \"Email (optional)\" (For payment receipts). the autocomplete attribute is incorrectly formatted",
+   "title": "Invalid autocomplete value: textbox \"Email (optional)\""
+  },
+  {
+   "attachments": [],
+   "attempt": 1,
+   "basis": "violation",
+   "criteria": [
+    "1.3.5"
+   ],
+   "evidence": [
+    {
+     "evidence": {
+      "failureSummary": "Fix all of the following:\n  the autocomplete attribute is incorrectly formatted"
+     },
+     "occurrence": {
+      "ancestors": [
+       [
+        "_inputBox_q7hf7_93"
+       ],
+       [
+        "_inputBoxWrapper_q7hf7_93"
+       ],
+       [
+        "_textInputWrapper_q7hf7_24"
+       ],
+       [
+        "_provideDSTextInput_q7hf7_6",
+        "_addWrapperMargin_q7hf7_19",
+        "session-replay-mask"
+       ],
+       [
+        "_mainContent_162lh_37"
+       ],
+       [
+        "_sectionContent_162lh_19"
+       ],
+       [
+        "_sectionWrapper_162lh_13"
+       ],
+       []
+      ],
+      "classes": [
+       "_input_q7hf7_93"
+      ],
+      "data": {},
+      "heading": "Profile",
+      "landmark": {
+       "name": "",
+       "role": "main"
+      },
+      "layer": "document",
+      "name": "Legal name",
+      "rect": [
+       441,
+       458,
+       558,
+       24
+      ],
+      "role": "textbox",
+      "tag": "input",
+      "xpath": "/html/body/div[1]/main[1]/div[1]/div[2]/div[2]/div[3]/div[1]/div[1]/div[1]/section[1]/div[1]/div[2]/div[1]/div[1]/div[1]/input[1]"
+     },
+     "state": "payments.recipient-create"
+    },
+    {
+     "evidence": {
+      "failureSummary": "Fix all of the following:\n  the autocomplete attribute is incorrectly formatted"
+     },
+     "occurrence": {
+      "ancestors": [
+       [
+        "_inputBox_q7hf7_93",
+        "_hasValue_q7hf7_171"
+       ],
+       [
+        "_inputBoxWrapper_q7hf7_93"
+       ],
+       [
+        "_textInputWrapper_q7hf7_24"
+       ],
+       [
+        "_provideDSTextInput_q7hf7_6",
+        "_addWrapperMargin_q7hf7_19",
+        "session-replay-mask"
+       ],
+       [
+        "_mainContent_162lh_37"
+       ],
+       [
+        "_sectionContent_162lh_19"
+       ],
+       [
+        "_sectionWrapper_162lh_13"
+       ],
+       []
+      ],
+      "classes": [
+       "_input_q7hf7_93"
+      ],
+      "data": {},
+      "heading": "Profile",
+      "landmark": null,
+      "layer": "document",
+      "name": "Legal name",
+      "rect": [
+       441,
+       2138,
+       558,
+       24
+      ],
+      "role": "textbox",
+      "tag": "input",
+      "xpath": "/html/body/div[7]/div[1]/div[1]/div[3]/div[1]/div[1]/div[1]/section[1]/div[1]/div[2]/div[1]/div[1]/div[1]/input[1]"
+     },
+     "state": "billpay.routing-number-error"
+    }
+   ],
+   "evidenceHash": "482c402a3d047aae6f5a1b26752bc81af134e2c6a352c2a3cffc34f11fcf39a9",
+   "facts": {
+    "announced": "textbox \"Legal name\"",
+    "axeSummary": "the autocomplete attribute is incorrectly formatted",
+    "criterion": "1.3.5",
+    "criterionName": "Identify Input Purpose",
+    "element": "textbox \"Legal name\"",
+    "rule": "autocomplete-valid",
+    "screen": "Create recipient"
+   },
+   "family": "role-state",
+   "guidance": "Low for optional ARIA or an invalid autocomplete token; high when aria-hidden hides the whole page.",
+   "issueId": null,
+   "key": "role-state:autocomplete-valid:d057d7cbefd6",
+   "measured": false,
+   "primary": "payments.recipient-create",
+   "proposals": [],
+   "rule": "autocomplete-valid",
+   "screens": 11,
+   "severityDefault": "medium",
+   "source": "scanner",
+   "states": [
+    "payments.recipient-create",
+    "billpay.routing-number-error"
+   ],
+   "summary": "autocomplete-valid: announced as textbox \"Legal name\". the autocomplete attribute is incorrectly formatted",
+   "title": "Invalid autocomplete value: textbox \"Legal name\""
+  }
+ ],
+ "primaries": [
+  "payments.recipient-create"
+ ],
+ "reach": {
+  "baseUrl": "https://demo.mercury.com",
+  "data": "data",
+  "map": "build/map.json",
+  "run": "2026-10-03-1525",
+  "workspace": "a11y"
+ },
+ "run": "2026-10-03-1525"
+}
