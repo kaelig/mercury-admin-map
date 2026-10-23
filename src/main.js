@@ -195,7 +195,7 @@ $("#q").setAttribute("aria-keyshortcuts", MAC ? "Meta+K" : "Control+K"); $("#q-k
 addEventListener("keydown", (e) => {
   if (lightbox.isOpen()) return; // the modal makes the sidebar inert
   if ((MAC ? e.metaKey : e.ctrlKey) && !e.altKey && !e.shiftKey && e.key.toLowerCase() === "k") { e.preventDefault(); $("#q").focus(); $("#q").select(); return; }
-  if (e.target.matches("input, textarea")) return;
+  if (e.target.matches("input:not([type=checkbox]), textarea")) return;
   if (e.metaKey || e.ctrlKey || e.altKey) return;
   if (e.key === "f" || e.key === "F") fit();
   if ((e.key === "c" || e.key === "C") && current) centerSelected();
@@ -203,8 +203,8 @@ addEventListener("keydown", (e) => {
   if (e.key === "+" || e.key === "=") $("#zin").click();
   if (e.key === "-") $("#zout").click();
   // Match the digit or its key, so AZERTY layouts (where the unshifted key types "&" or "é") work too.
-  if (e.key === "1" || e.code === "Digit1") setView("journeys");
-  if (e.key === "2" || e.code === "Digit2") setView("graph");
+  if (e.key === "1" || (!e.shiftKey && e.code === "Digit1")) setView("journeys");
+  if (e.key === "2" || (!e.shiftKey && e.code === "Digit2")) setView("graph");
   if (drawerOpen() && (e.key === "ArrowRight" || e.key === "ArrowLeft")) stepJourney(e.key === "ArrowRight" ? 1 : -1);
 });
 
@@ -399,6 +399,7 @@ function setDev(on, save = true) {
   dev = on; $("#dev").checked = on;
   if (save) try { localStorage.setItem(DEV_KEY, on ? "1" : "0"); } catch {}
   $("#t-i").hidden = $("#agent-link").hidden = !on;
+  const td = $(".test-data"); if (td) td.hidden = !on; // the test-data strip only explains findings Dev mode shows
   $("#q").placeholder = on ? "Search screens, URLs, issues" : "Search screens and URLs";
   R.setIssues(on); $("#drawer .d-issues")?.toggleAttribute("hidden", !on);
   if (!on) { if (tab === "i") setTab("j", true); if (focus?.type === "issue" || focus?.type === "pattern") focus = null; document.querySelectorAll("#drawer .d-issues .issue[style]").forEach((el) => el.removeAttribute("style")); }
