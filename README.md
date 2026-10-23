@@ -8,13 +8,13 @@ Live at <https://mercury-admin-map.netlify.app> (public, `noindex`). Locally, op
 
 - **Journeys** view: each journey is a row of numbered screenshots joined by the action that leads to the next screen. States outside any journey sit under "Other screens" in each area.
 - **Flow graph** view: every screen and link in an area, laid out as a graph.
-- Click a screen to open its full screenshot, notes, issues, and where it leads to and comes from. Arrow keys step through a journey.
-- **Audit** tab: 14 patterns that recur across areas come first, then every issue by category and severity. Clicking one highlights the screens where it shows up.
+- Click a screen to open its full screenshot, notes, and where it leads to and comes from (plus its design issues in Dev mode). Arrow keys step through a journey.
+- **Dev mode** (switch at the bottom of the sidebar, off by default, remembered per browser) shows the design-system audit: issue badges on the cards, each screen's issues in the panel, the **Data for agents** link, and the **Audit** tab, where 14 patterns that recur across areas come first, then every issue by category and severity. Clicking one highlights the screens where it shows up.
 - Drag to pan; scroll, pinch or Shift+scroll to zoom; F to fit. Zoom in, up to 800%, and sharper screenshots load in place of thumbnails, up to the lossless original.
-- **Links**: the URL always describes what is on screen, so any view can be shared or bookmarked, and Back/Forward step through selections. Parameters: `view=graph`, `q=<search>`, `journey=`, `issue=` or `pattern=<id>` (highlight), `screen=<nodeId>` (open screen), `lane=<journeyId>` (which journey row that screen sits in), `at=<x>,<y>,<zoom>` (viewport centre in map units; added once you pan or zoom). Example: `?view=graph&journey=home.j-clear-approvals&screen=home.task-invite-review`. Old `#<nodeId>` links still work.
+- **Links**: the URL always describes what is on screen, so any view can be shared or bookmarked, and Back/Forward step through selections. Parameters: `view=graph`, `q=<search>`, `journey=`, `issue=` or `pattern=<id>` (highlight; `issue=` and `pattern=` links turn Dev mode on), `screen=<nodeId>` (open screen), `lane=<journeyId>` (which journey row that screen sits in), `at=<x>,<y>,<zoom>` (viewport centre in map units; added once you pan or zoom). Example: `?view=graph&journey=home.j-clear-approvals&screen=home.task-invite-review`. Old `#<nodeId>` links still work.
 - **⌘K** (Ctrl+K on Windows and Linux) jumps to search. **C** centres the selected screen; **Esc** closes the panel, then clears the highlight.
 - Click the screenshot in the panel to view it full screen: click, scroll, pinch or **+**/**−** to zoom, drag or arrow keys to pan, **0** to fit, **Esc** to close. Cmd/Ctrl-click or middle-click opens the image in a new tab. The path under the title opens that page on demo.mercury.com.
-- **Data for agents**: `agent/README.md` (also `llms.txt` at the root) explains the ticket-ready export. It is a black-box audit; findings must be verified against Mercury's internal conventions before anyone files them.
+- **Data for agents** (Dev mode): `agent/README.md` (also `llms.txt` at the root) explains the ticket-ready export. It is a black-box audit; findings must be verified against Mercury's internal conventions before anyone files them.
 
 ## Files
 

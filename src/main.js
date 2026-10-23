@@ -32,6 +32,9 @@ const M = { nodes, areaByKey, issuesByNode, journeyById };
 // ---------- state ----------
 let view = "journeys"; // set from the URL at boot
 let tab = "j", query = "", sevFilter = new Set(["high", "medium", "low"]);
+// Dev mode shows the design-system audit (Audit tab, issue badges, per-screen issues). Per-viewer, remembered locally.
+const DEV_KEY = "map.dev";
+let dev = false; try { dev = localStorage.getItem(DEV_KEY) === "1"; } catch {}
 const T = { x: 0, y: 0, k: 0.2 };
 let focus = null, current = null, hover = null, drawerLane = null;
 let scene, focusIdsCache = null, gSteps = new Map(), lastMove = 0;
@@ -292,7 +295,7 @@ function openNode(id, frameIt, lane, highlightIssue) {
       ${j ? `<div class="jnav"><button id="j-prev" ${j.steps.indexOf(id) === 0 ? "disabled" : ""}>← Prev</button><span>Step ${j.steps.indexOf(id) + 1} of ${j.steps.length} · ${esc(j.name)}</span><button id="j-next" ${j.steps.indexOf(id) === j.steps.length - 1 ? "disabled" : ""}>Next →</button></div>` : ""}
       <a class="full" href="${esc(n.full)}" target="_blank" rel="noopener" title="View full screen" style="aspect-ratio:${n.w}/${n.h}"><img alt="${esc(n.title)} screenshot" decoding="async" src="${esc(n.thumb)}" data-full="${esc(n.full)}" width="${n.w}" height="${n.h}"></a>
       ${n.note ? `<p class="note">${esc(n.note)}</p>` : ""}
-      ${iss.length ? `<div><h4>Design issues on this screen</h4><div class="links">${iss.map((i) => issueHTML(i, i.id === highlightIssue)).join("")}</div></div>` : ""}
+      ${dev && iss.length ? `<div><h4>Design issues on this screen</h4><div class="links">${iss.map((i) => issueHTML(i, i.id === highlightIssue)).join("")}</div></div>` : ""}
       ${outs.length ? `<div><h4>Leads to</h4><div class="links">${outs.map((e) => linkHTML(e.to, e.label)).join("")}</div></div>` : ""}
       ${ins.length ? `<div><h4>Reached from</h4><div class="links">${ins.map((e) => linkHTML(e.from, e.label)).join("")}</div></div>` : ""}
       ${js.length ? `<div><h4>Part of journeys</h4><div class="links">${js.map((j) => `<button data-journey="${esc(j.id)}"><span>${esc(j.name)}</span><small>step ${j.steps.indexOf(id) + 1} of ${j.steps.length}</small></button>`).join("")}</div></div>` : ""}
@@ -377,8 +380,18 @@ $("#list").addEventListener("click", (e) => {
   else if (b.dataset.p) focusPattern(b.dataset.p);
   else if (b.dataset.sev) { sevFilter.has(b.dataset.sev) ? sevFilter.delete(b.dataset.sev) : sevFilter.add(b.dataset.sev); renderList(); }
 });
-function setTab(t) { tab = t; ["j", "s", "i"].forEach((x) => $("#t-" + x).setAttribute("aria-selected", x === t)); renderList(); }
+function setTab(t, quiet) { tab = t; ["j", "s", "i"].forEach((x) => $("#t-" + x).setAttribute("aria-selected", x === t)); if (!quiet) renderList(); }
 $("#t-j").onclick = () => setTab("j"); $("#t-s").onclick = () => setTab("s"); $("#t-i").onclick = () => setTab("i");
+// Updates state only; callers re-render (applyFocus) and sync the URL.
+function setDev(on, save = true) {
+  dev = on; $("#dev").checked = on;
+  if (save) try { localStorage.setItem(DEV_KEY, on ? "1" : "0"); } catch {}
+  $("#t-i").hidden = $("#agent-link").hidden = !on;
+  $("#q").placeholder = on ? "Search screens, URLs, issues" : "Search screens and URLs";
+  R.setIssues(on);
+  if (!on) { if (tab === "i") setTab("j", true); if (focus?.type === "issue" || focus?.type === "pattern") focus = null; }
+}
+$("#dev").onchange = (e) => { setDev(e.target.checked); applyFocus(); if (current) openNode(current, false, drawerLane); syncUrl(); };
 function searchFocus() { return { type: "search", ids: new Set([...nodes.values()].filter((n) => matches(n.title, n.url, n.note)).map((n) => n.id)) }; }
 function runSearch() {
   query = $("#q").value.trim().toLowerCase();
@@ -408,6 +421,7 @@ $("#v-journeys").onclick = () => setView("journeys"); $("#v-graph").onclick = ()
 
 // ---------- URL state ----------
 // ?view=graph  &q=search  &journey= | &issue= | &pattern=  &screen=<node>&lane=<journey row>  &at=x,y,zoom
+// An issue= or pattern= link turns dev mode on (and remembers it), so shared audit links keep working.
 // Discrete navigation (select, close, focus, switch view) pushes a history entry so Back/Forward work;
 // typing and panning replace the current one. Old #<nodeId> links still open that screen.
 let urlPending = null, urlQueued = false, urlSuppress = false;
@@ -446,6 +460,7 @@ function applyUrl() {
     $("#q").value = p.get("q") || ""; syncClear();
     query = $("#q").value.trim().toLowerCase();
     const has = (k, m) => p.get(k) && m.has(p.get(k));
+    if (!dev && (has("issue", issueById) || has("pattern", patternById))) setDev(true);
     focus = has("journey", journeyById) ? { type: "journey", id: p.get("journey") }
       : has("issue", issueById) ? { type: "issue", id: p.get("issue") }
       : has("pattern", patternById) ? { type: "pattern", id: p.get("pattern") }
@@ -496,6 +511,7 @@ window.__map = {
 // ---------- boot ----------
 $("#c-j").textContent = MAP.journeys.length; $("#c-s").textContent = nodes.size; $("#c-i").textContent = MAP.issues.length;
 R.setTheme(getComputedStyle(document.documentElement)); themeColors();
+setDev(dev, false);
 resize(); applyUrl();
 zlabel.textContent = Math.round(T.k * 100) + "%";
 // Canvas text never triggers a webfont load by itself: request the faces explicitly, then

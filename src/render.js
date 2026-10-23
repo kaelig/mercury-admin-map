@@ -21,8 +21,10 @@ export class Renderer {
     this.fitCache = new Map();
     this.wrapCache = new Map();
     this.version = 0; this.layers = new Map();
+    this.issues = false; // dev mode: draw design-issue badges
   }
   bump() { this.version++; }
+  setIssues(on) { this.issues = on; this.version++; }
   resize(w, h, dpr) {
     this.W = w; this.H = h; this.dpr = dpr;
     this.canvas.width = Math.max(1, Math.round(w * dpr));
@@ -274,7 +276,7 @@ export class Renderer {
       const ring = Math.max(3, px), numbers = screenW > 70;
       const badges = [], steps = [];
       for (const c of list) {
-        if (c.iss) badges.push(c);
+        if (c.iss && this.issues) badges.push(c);
         const st = c.step || S.gSteps.get(c.id);
         if (st) steps.push([c, st]);
       }
